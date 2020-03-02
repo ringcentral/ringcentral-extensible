@@ -1,0 +1,9 @@
+{
+  "name": "ringcentral-typescript",
+  "version": "0.1.0",
+  "description": "RingCentral TypeScript SDK",
+  "main": "index.js",
+  "repository": "git@github.com:tylerlong/ringcentral-typescript.git",
+  "author": "Tyler Long <tyler4long@gmail.com>",
+  "license": "MIT"
+}
