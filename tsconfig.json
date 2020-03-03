@@ -1,0 +1,9 @@
+{
+    "compilerOptions": {
+        "target": "ES5",
+        "lib": ["ES6", "DOM"]
+    },
+    "files":[
+        "./index.ts"
+    ]
+}
