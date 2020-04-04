@@ -7,12 +7,19 @@
   "author": "Tyler Long <tyler4long@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "test": "tsc -b tsconfig.json && node index.js"
+    "test": "tsc -b tsconfig.json && node index.js",
+    "definitions": "rm -rf ../definitions/* && node -r @babel/register code-generator/definitions.js"
   },
   "dependencies": {
     "axios": "^0.19.2"
   },
   "devDependencies": {
-    "typescript": "^3.8.3"
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.0",
+    "@babel/register": "^7.9.0",
+    "change-case": "^4.1.1",
+    "standard": "^14.3.3",
+    "typescript": "^3.8.3",
+    "yarn-upgrade-all": "^0.5.2"
   }
 }
