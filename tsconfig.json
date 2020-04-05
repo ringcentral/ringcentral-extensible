@@ -1,7 +1,9 @@
 {
     "compilerOptions": {
         "target": "ES5",
-        "lib": ["ES6", "DOM"]
+        "lib": ["ES6", "DOM"],
+        "resolveJsonModule": true,
+        "esModuleInterop": true
     },
     "files":[
         "./index.ts"

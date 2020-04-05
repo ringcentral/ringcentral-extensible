@@ -11,7 +11,8 @@
     "definitions": "rm -rf ../definitions/* && node -r @babel/register code-generator/definitions.js"
   },
   "dependencies": {
-    "axios": "^0.19.2"
+    "axios": "^0.19.2",
+    "qs": "^6.9.3"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",
