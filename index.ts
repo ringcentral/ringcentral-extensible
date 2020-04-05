@@ -47,8 +47,7 @@ class RestClient {
                 password: this.clientSecret
             }
         })
-        console.log(r.data)
-        return null
+        return r.data
     }
 } 
 
