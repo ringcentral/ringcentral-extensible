@@ -15,6 +15,7 @@ class RestClient {
   appName = "Unknown"
   appVersion = "0.0.1"
   httpClient: AxiosInstance
+  token?: TokenInfo
 
   constructor(clientId: string, clientSecret: string, server: string, appName = "Unknown", appVersion = "0.0.1") {
     this.clientId = clientId
@@ -51,7 +52,20 @@ class RestClient {
         password: this.clientSecret
       }
     })
-    return r.data
+    this.token = r.data
+    return this.token
+  }
+
+  async refresh(refreshToken?: string): Promise<TokenInfo> {
+    const tokenToRefresh = refreshToken ?? this.token?.refresh_token;
+    if (!tokenToRefresh)
+    {
+        return null
+    }
+    const getTokenRequest = new GetTokenRequest()
+    getTokenRequest.grant_type = "refresh_token"
+    getTokenRequest.refresh_token = tokenToRefresh
+    return this.authorize(getTokenRequest);
   }
 }
 
