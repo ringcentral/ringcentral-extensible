@@ -4,30 +4,30 @@ class PrivateIpRangeInfoRequest
 {
     /**
      */
-    id: string
+    id?: string
 
     /**
      */
-    startIp: string
+    startIp?: string
 
     /**
      */
-    endIp: string
+    endIp?: string
 
     /**
      * Network name
      */
-    name: string
+    name?: string
 
     /**
      * Emergency address information. Only one of a pair `emergencyAddress` or `emergencyLocationId` should be specified, otherwise the error is returned
      */
-    emergencyAddress: LocationUpdatesEmergencyAddressInfoRequest
+    emergencyAddress?: LocationUpdatesEmergencyAddressInfoRequest
 
     /**
      * Emergency response location (address) internal identifier. Only one of a pair `emergencyAddress` or `emergencyLocationId` should be specified, otherwise the error is returned
      */
-    emergencyLocationId: string
+    emergencyLocationId?: string
 }
 
 export default PrivateIpRangeInfoRequest

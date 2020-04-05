@@ -7,20 +7,20 @@ class UserAnsweringRuleList
     /**
      * Canonical URI of an answering rule list resource
      */
-    uri: string
+    uri?: string
 
     /**
      * List of answering rules
      */
-    records: UserAnsweringRuleListRecord[]
+    records?: UserAnsweringRuleListRecord[]
 
     /**
      */
-    paging: UserAnsweringRuleListPaging
+    paging?: UserAnsweringRuleListPaging
 
     /**
      */
-    navigation: UserAnsweringRuleListNavigation
+    navigation?: UserAnsweringRuleListNavigation
 }
 
 export default UserAnsweringRuleList

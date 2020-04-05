@@ -4,27 +4,27 @@ class FederatedAccountResource
 {
     /**
      */
-    companyName: string
+    companyName?: string
 
     /**
      */
-    conflictCount: number
+    conflictCount?: number
 
     /**
      */
-    federatedName: string
+    federatedName?: string
 
     /**
      */
-    id: string
+    id?: string
 
     /**
      */
-    linkCreationTime: string
+    linkCreationTime?: string
 
     /**
      */
-    mainNumber: PhoneNumberResource
+    mainNumber?: PhoneNumberResource
 }
 
 export default FederatedAccountResource

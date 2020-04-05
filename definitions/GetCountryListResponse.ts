@@ -7,25 +7,25 @@ class GetCountryListResponse
     /**
      * Link to the list of countries supported
      */
-    uri: string
+    uri?: string
 
     /**
      * List of countries with the country data
      * Required
      */
-    records: GetCountryInfoDictionaryResponse[]
+    records?: GetCountryInfoDictionaryResponse[]
 
     /**
      * Information on navigation
      * Required
      */
-    navigation: ProvisioningNavigationInfo
+    navigation?: ProvisioningNavigationInfo
 
     /**
      * Information on paging
      * Required
      */
-    paging: ProvisioningPagingInfo
+    paging?: ProvisioningPagingInfo
 }
 
 export default GetCountryListResponse

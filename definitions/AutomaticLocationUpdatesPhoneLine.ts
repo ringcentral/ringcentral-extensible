@@ -5,11 +5,11 @@ class AutomaticLocationUpdatesPhoneLine
     /**
      * Enum: Unknown, Standalone, StandaloneFree, BlaPrimary, BlaSecondary, BLF
      */
-    lineType: string
+    lineType?: string
 
     /**
      */
-    phoneInfo: AutomaticLocationUpdatesPhoneNumberInfo
+    phoneInfo?: AutomaticLocationUpdatesPhoneNumberInfo
 }
 
 export default AutomaticLocationUpdatesPhoneLine

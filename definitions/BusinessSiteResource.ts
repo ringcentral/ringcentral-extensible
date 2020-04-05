@@ -2,15 +2,15 @@ class BusinessSiteResource
 {
     /**
      */
-    id: string
+    id?: string
 
     /**
      */
-    name: string
+    name?: string
 
     /**
      */
-    code: string
+    code?: string
 }
 
 export default BusinessSiteResource

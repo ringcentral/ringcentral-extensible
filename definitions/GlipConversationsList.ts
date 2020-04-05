@@ -7,11 +7,11 @@ class GlipConversationsList
      * List of conversations
      * Required
      */
-    records: GlipConversationInfo[]
+    records?: GlipConversationInfo[]
 
     /**
      */
-    navigation: GlipNavigationInfo
+    navigation?: GlipNavigationInfo
 }
 
 export default GlipConversationsList

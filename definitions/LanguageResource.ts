@@ -2,15 +2,15 @@ class LanguageResource
 {
     /**
      */
-    id: string
+    id?: string
 
     /**
      */
-    name: string
+    name?: string
 
     /**
      */
-    localeCode: string
+    localeCode?: string
 }
 
 export default LanguageResource

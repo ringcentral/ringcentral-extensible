@@ -4,7 +4,7 @@ class UpdateMultipleWirelessPointsRequest
 {
     /**
      */
-    records: UpdateWirelessPoint[]
+    records?: UpdateWirelessPoint[]
 }
 
 export default UpdateMultipleWirelessPointsRequest

@@ -4,7 +4,7 @@ class ValidateMultipleSwitchesRequest
 {
     /**
      */
-    records: SwitchInfo[]
+    records?: SwitchInfo[]
 }
 
 export default ValidateMultipleSwitchesRequest

@@ -6,37 +6,37 @@ class SwitchInfo
     /**
      * Link to the network switch resource
      */
-    uri: string
+    uri?: string
 
     /**
      * Internal identifier of a network switch
      */
-    id: string
+    id?: string
 
     /**
      * Unique identifier of a network switch
      */
-    chassisId: string
+    chassisId?: string
 
     /**
      * Name of a network switch
      */
-    name: string
+    name?: string
 
     /**
      * Site data
      */
-    site: SwitchSiteInfo
+    site?: SwitchSiteInfo
 
     /**
      * Emergency address assigned to the switch. Only one of a pair `emergencyAddress` or `emergencyLocationId` should be specified, otherwise the error is returned
      */
-    emergencyAddress: LocationUpdatesEmergencyAddressInfo
+    emergencyAddress?: LocationUpdatesEmergencyAddressInfo
 
     /**
      * Emergency response location (address) internal identifier. Only one of a pair `emergencyAddress` or `emergencyLocationId` should be specified, otherwise the error is returned
      */
-    emergencyLocationId: string
+    emergencyLocationId?: string
 }
 
 export default SwitchInfo

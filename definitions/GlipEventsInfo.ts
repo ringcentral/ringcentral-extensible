@@ -6,11 +6,11 @@ class GlipEventsInfo
     /**
      * List of events created by the current user
      */
-    records: GlipEventInfo[]
+    records?: GlipEventInfo[]
 
     /**
      */
-    navigation: GlipNavigationInfo
+    navigation?: GlipNavigationInfo
 }
 
 export default GlipEventsInfo

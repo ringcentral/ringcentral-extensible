@@ -4,12 +4,12 @@ class FixedOrderAgents
 {
     /**
      */
-    extension: ExtensionInfo
+    extension?: ExtensionInfo
 
     /**
      * Ordinal of an agent (call queue member)
      */
-    index: number
+    index?: number
 }
 
 export default FixedOrderAgents

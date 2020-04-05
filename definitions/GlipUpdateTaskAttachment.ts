@@ -3,7 +3,7 @@ class GlipUpdateTaskAttachment
     /**
      * Internal identifier of a task
      */
-    id: string
+    id?: string
 }
 
 export default GlipUpdateTaskAttachment

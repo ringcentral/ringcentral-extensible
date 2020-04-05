@@ -10,61 +10,61 @@ class ExtensionCreationRequest
      * Contact Information
      * Required
      */
-    contact: ContactInfoCreationRequest
+    contact?: ContactInfoCreationRequest
 
     /**
      * Number of extension
      */
-    extensionNumber: string
+    extensionNumber?: string
 
     /**
      * Password for extension. If not specified, the password is auto-generated
      */
-    password: string
+    password?: string
 
     /**
      * List of non-RC internal identifiers assigned to an extension
      */
-    references: ReferenceInfo[]
+    references?: ReferenceInfo[]
 
     /**
      */
-    roles: Roles[]
+    roles?: Roles[]
 
     /**
      * Extension region data (timezone, home country, language)
      */
-    regionalSettings: RegionalSettings
+    regionalSettings?: RegionalSettings
 
     /**
      * Specifies extension configuration wizard state (web service setup).
      * Default: NotStarted
      * Enum: NotStarted, Incomplete, Completed
      */
-    setupWizardState: string
+    setupWizardState?: string
 
     /**
      * Extension current state
      * Enum: Enabled, Disabled, NotActivated, Unassigned
      */
-    status: string
+    status?: string
 
     /**
      * Status information (reason, comment). For 'Disabled' status only
      */
-    statusInfo: ExtensionStatusInfo
+    statusInfo?: ExtensionStatusInfo
 
     /**
      * Extension type
      * Required
      * Enum: User, VirtualUser, DigitalUser, Department, Announcement, Voicemail, SharedLinesGroup, PagingOnly, ParkLocation
      */
-    type: string
+    type?: string
 
     /**
      * Hides extension from showing in company directory. Supported for extensions of User type only. For unassigned extensions the value is set to 'True' by default. For assigned extensions the value is set to 'False' by default
      */
-    hidden: boolean
+    hidden?: boolean
 }
 
 export default ExtensionCreationRequest

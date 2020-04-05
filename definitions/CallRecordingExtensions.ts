@@ -7,21 +7,21 @@ class CallRecordingExtensions
     /**
      * Link to call recording extension list resource
      */
-    uri: string
+    uri?: string
 
     /**
      */
-    records: CallRecordingExtensionInfo[]
+    records?: CallRecordingExtensionInfo[]
 
     /**
      * Information on navigation
      */
-    navigation: CallHandlingNavigationInfo
+    navigation?: CallHandlingNavigationInfo
 
     /**
      * Information on paging
      */
-    paging: CallHandlingPagingInfo
+    paging?: CallHandlingPagingInfo
 }
 
 export default CallRecordingExtensions

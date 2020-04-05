@@ -4,7 +4,7 @@ class FeatureList
 {
     /**
      */
-    records: FeatureInfo[]
+    records?: FeatureInfo[]
 }
 
 export default FeatureList

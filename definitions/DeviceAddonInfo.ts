@@ -2,15 +2,15 @@ class DeviceAddonInfo
 {
     /**
      */
-    id: string
+    id?: string
 
     /**
      */
-    name: string
+    name?: string
 
     /**
      */
-    count: string
+    count?: string
 }
 
 export default DeviceAddonInfo

@@ -3,7 +3,7 @@ class CreateForwardingNumberDeviceInfo
     /**
      * Internal identifier of the other extension device
      */
-    id: string
+    id?: string
 }
 
 export default CreateForwardingNumberDeviceInfo

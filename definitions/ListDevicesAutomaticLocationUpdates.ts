@@ -7,20 +7,20 @@ class ListDevicesAutomaticLocationUpdates
     /**
      * Link to devices resource
      */
-    uri: string
+    uri?: string
 
     /**
      * List of users' devices with the current status of Emergency Address Auto Update Feature
      */
-    records: AutomaticLocationUpdatesDeviceInfo[]
+    records?: AutomaticLocationUpdatesDeviceInfo[]
 
     /**
      */
-    navigation: ProvisioningNavigationInfo
+    navigation?: ProvisioningNavigationInfo
 
     /**
      */
-    paging: ProvisioningPagingInfo
+    paging?: ProvisioningPagingInfo
 }
 
 export default ListDevicesAutomaticLocationUpdates

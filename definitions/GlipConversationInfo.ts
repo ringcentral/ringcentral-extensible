@@ -5,28 +5,28 @@ class GlipConversationInfo
     /**
      * Internal identifier of a conversation
      */
-    id: string
+    id?: string
 
     /**
      * Type of a conversation
      * Enum: Direct, Personal, Group
      */
-    type: string
+    type?: string
 
     /**
      * Conversation creation datetime in ISO 8601 format
      */
-    creationTime: string
+    creationTime?: string
 
     /**
      * Conversation last change datetime in ISO 8601 format
      */
-    lastModifiedTime: string
+    lastModifiedTime?: string
 
     /**
      * List of glip members
      */
-    members: CreateGlipMember[]
+    members?: CreateGlipMember[]
 }
 
 export default GlipConversationInfo

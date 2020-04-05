@@ -42,9 +42,9 @@ const normalizeField = f => {
 const generateField = (m, f) => {
   let p = ''
   if (f.name.includes('-') || f.name.includes(':') || f.name.includes('.')) {
-    p = `"${f.name}": ${f.type}`
+    p = `"${f.name}"?: ${f.type}`
   } else {
-    p = `${f.name}: ${f.type}`
+    p = `${f.name}?: ${f.type}`
   }
 
   p = ` */\n    ${p}`

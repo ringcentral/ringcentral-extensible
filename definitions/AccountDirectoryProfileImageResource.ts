@@ -2,11 +2,11 @@ class AccountDirectoryProfileImageResource
 {
     /**
      */
-    etag: string
+    etag?: string
 
     /**
      */
-    uri: string
+    uri?: string
 }
 
 export default AccountDirectoryProfileImageResource

@@ -5,12 +5,12 @@ class ExtensionCallQueueUpdatePresence
     /**
      * Call queue information
      */
-    callQueue: CallQueueId
+    callQueue?: CallQueueId
 
     /**
      * Call queue agent availability for calls of this queue
      */
-    acceptCalls: boolean
+    acceptCalls?: boolean
 }
 
 export default ExtensionCallQueueUpdatePresence

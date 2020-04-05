@@ -3,7 +3,7 @@ class MakeRingOutCoutryInfo
     /**
      * Dialing plan country identifier
      */
-    id: string
+    id?: string
 }
 
 export default MakeRingOutCoutryInfo

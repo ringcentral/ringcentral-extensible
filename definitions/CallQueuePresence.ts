@@ -4,7 +4,7 @@ class CallQueuePresence
 {
     /**
      */
-    records: CallQueueMemberPresence[]
+    records?: CallQueueMemberPresence[]
 }
 
 export default CallQueuePresence

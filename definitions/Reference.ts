@@ -3,11 +3,11 @@ class Reference
     /**
      * Enum: PartnerId, CustomerDirectoryId
      */
-    type: string
+    type?: string
 
     /**
      */
-    ref: string
+    ref?: string
 }
 
 export default Reference

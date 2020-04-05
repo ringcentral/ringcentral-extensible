@@ -3,12 +3,12 @@ class CompanyAnsweringRuleCallersInfoRequest
     /**
      * Phone number of a caller
      */
-    callerId: string
+    callerId?: string
 
     /**
      * Displayed name for a caller ID
      */
-    name: string
+    name?: string
 }
 
 export default CompanyAnsweringRuleCallersInfoRequest

@@ -4,7 +4,7 @@ class TransferredExtensionInfo
 {
     /**
      */
-    extension: ExtensionInfo
+    extension?: ExtensionInfo
 }
 
 export default TransferredExtensionInfo

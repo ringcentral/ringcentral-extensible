@@ -6,56 +6,56 @@ class ContactInfoCreationRequest
     /**
      * For User extension type only. Extension user first name
      */
-    firstName: string
+    firstName?: string
 
     /**
      * For User extension type only. Extension user last name
      * Required
      */
-    lastName: string
+    lastName?: string
 
     /**
      * Extension user company name
      */
-    company: string
+    company?: string
 
     /**
      */
-    jobTitle: string
+    jobTitle?: string
 
     /**
      * Email of extension user
      * Required
      */
-    email: string
+    email?: string
 
     /**
      * Extension user contact phone number in [E.164](https://www.itu.int/rec/T-REC-E.164-201011-I) format
      */
-    businessPhone: string
+    businessPhone?: string
 
     /**
      * Extension user mobile (**non** Toll Free) phone number in [E.164](https://www.itu.int/rec/T-REC-E.164-201011-I) (with '+' sign) format
      */
-    mobilePhone: string
+    mobilePhone?: string
 
     /**
      */
-    businessAddress: ContactBusinessAddressInfo
+    businessAddress?: ContactBusinessAddressInfo
 
     /**
      * If 'True' then contact email is enabled as login name for this user. Please note that email should be unique in this case. The default value is 'False'
      */
-    emailAsLoginName: boolean
+    emailAsLoginName?: boolean
 
     /**
      */
-    pronouncedName: PronouncedNameInfo
+    pronouncedName?: PronouncedNameInfo
 
     /**
      * Extension user department, if any
      */
-    department: string
+    department?: string
 }
 
 export default ContactInfoCreationRequest

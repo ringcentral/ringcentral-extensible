@@ -3,7 +3,7 @@ class DeviceUpdateExtensionInfo
     /**
      * Internal identifier of an extension
      */
-    id: string
+    id?: string
 }
 
 export default DeviceUpdateExtensionInfo

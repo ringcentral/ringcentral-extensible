@@ -6,12 +6,12 @@ class UserPatch
      * patch operations list
      * Required
      */
-    Operations: PatchOperation[]
+    Operations?: PatchOperation[]
 
     /**
      * Required
      */
-    schemas: string[]
+    schemas?: string[]
 }
 
 export default UserPatch

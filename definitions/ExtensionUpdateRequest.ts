@@ -9,63 +9,63 @@ class ExtensionUpdateRequest
     /**
      * Enum: Disabled, Enabled, NotActivated
      */
-    status: string
+    status?: string
 
     /**
      */
-    statusInfo: ExtensionStatusInfo
+    statusInfo?: ExtensionStatusInfo
 
     /**
      * Type of suspension
      */
-    reason: string
+    reason?: string
 
     /**
      * Free Form user comment
      */
-    comment: string
+    comment?: string
 
     /**
      * Extension number available
      */
-    extensionNumber: string
+    extensionNumber?: string
 
     /**
      */
-    contact: ContactInfoUpdateRequest
+    contact?: ContactInfoUpdateRequest
 
     /**
      */
-    regionalSettings: ExtensionRegionalSettingRequest
+    regionalSettings?: ExtensionRegionalSettingRequest
 
     /**
      * Enum: NotStarted, Incomplete, Completed
      */
-    setupWizardState: string
+    setupWizardState?: string
 
     /**
      * Extension partner identifier
      */
-    partnerId: string
+    partnerId?: string
 
     /**
      * IVR PIN
      */
-    ivrPin: string
+    ivrPin?: string
 
     /**
      * Password for extension
      */
-    password: string
+    password?: string
 
     /**
      * For Department extension type only. Call queue settings
      */
-    callQueueInfo: CallQueueInfoRequest
+    callQueueInfo?: CallQueueInfoRequest
 
     /**
      */
-    transition: UserTransitionInfo[]
+    transition?: UserTransitionInfo[]
 }
 
 export default ExtensionUpdateRequest

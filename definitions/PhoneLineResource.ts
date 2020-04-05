@@ -6,15 +6,15 @@ class PhoneLineResource
     /**
      * Enum: Unknown, Standalone, StandaloneFree, BlaPrimary, BlaSecondary, BLF
      */
-    lineType: string
+    lineType?: string
 
     /**
      */
-    phoneInfo: PhoneNumberResourceIntId
+    phoneInfo?: PhoneNumberResourceIntId
 
     /**
      */
-    emergencyAddress: EmergencyAddress
+    emergencyAddress?: EmergencyAddress
 }
 
 export default PhoneLineResource

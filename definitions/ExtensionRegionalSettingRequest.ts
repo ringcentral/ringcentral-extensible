@@ -8,30 +8,30 @@ class ExtensionRegionalSettingRequest
 {
     /**
      */
-    homeCountry: ExtensionCountryInfoRequest
+    homeCountry?: ExtensionCountryInfoRequest
 
     /**
      */
-    timezone: ExtensionTimezoneInfoRequest
+    timezone?: ExtensionTimezoneInfoRequest
 
     /**
      */
-    language: ExtensionLanguageInfoRequest
+    language?: ExtensionLanguageInfoRequest
 
     /**
      */
-    greetingLanguage: ExtensionGreetingLanguageInfoRequest
+    greetingLanguage?: ExtensionGreetingLanguageInfoRequest
 
     /**
      */
-    formattingLocale: ExtensionFormattingLocaleInfoRequest
+    formattingLocale?: ExtensionFormattingLocaleInfoRequest
 
     /**
      * Time format setting
      * Default: 12h
      * Enum: 12h, 24h
      */
-    timeFormat: string
+    timeFormat?: string
 }
 
 export default ExtensionRegionalSettingRequest

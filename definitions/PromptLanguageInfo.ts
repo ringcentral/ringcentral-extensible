@@ -3,22 +3,22 @@ class PromptLanguageInfo
     /**
      * Link to a prompt language
      */
-    uri: string
+    uri?: string
 
     /**
      * Internal identifier of a language
      */
-    id: string
+    id?: string
 
     /**
      * Language name
      */
-    name: string
+    name?: string
 
     /**
      * Language locale code
      */
-    localeCode: string
+    localeCode?: string
 }
 
 export default PromptLanguageInfo

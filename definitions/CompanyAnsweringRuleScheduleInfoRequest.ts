@@ -6,18 +6,18 @@ class CompanyAnsweringRuleScheduleInfoRequest
     /**
      * Weekly schedule. If specified, ranges cannot be specified
      */
-    weeklyRanges: CompanyAnsweringRuleWeeklyScheduleInfoRequest
+    weeklyRanges?: CompanyAnsweringRuleWeeklyScheduleInfoRequest
 
     /**
      * Specific data ranges. If specified, weeklyRanges cannot be specified
      */
-    ranges: RangesInfo[]
+    ranges?: RangesInfo[]
 
     /**
      * Reference to Business Hours or After Hours schedule
      * Enum: BusinessHours, AfterHours
      */
-    ref: string
+    ref?: string
 }
 
 export default CompanyAnsweringRuleScheduleInfoRequest

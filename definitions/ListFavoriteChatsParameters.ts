@@ -5,7 +5,7 @@ class ListFavoriteChatsParameters
      * Maximum: 250
      * Default: 30
      */
-    recordCount: number
+    recordCount?: number
 }
 
 export default ListFavoriteChatsParameters

@@ -3,17 +3,17 @@ class CreatorInfo
     /**
      * Internal identifier of a user
      */
-    id: string
+    id?: string
 
     /**
      * First name of a user
      */
-    firstName: string
+    firstName?: string
 
     /**
      * Last name of a user
      */
-    lastName: string
+    lastName?: string
 }
 
 export default CreatorInfo

@@ -2,12 +2,12 @@ class Roles
 {
     /**
      */
-    uri: string
+    uri?: string
 
     /**
      * Internal identifier of a role
      */
-    id: string
+    id?: string
 }
 
 export default Roles

@@ -5,11 +5,11 @@ class CallerIdByDevice
 {
     /**
      */
-    device: CallerIdDeviceInfo
+    device?: CallerIdDeviceInfo
 
     /**
      */
-    callerId: CallerIdByDeviceInfo
+    callerId?: CallerIdByDeviceInfo
 }
 
 export default CallerIdByDevice

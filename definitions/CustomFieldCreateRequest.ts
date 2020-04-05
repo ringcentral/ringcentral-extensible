@@ -4,12 +4,12 @@ class CustomFieldCreateRequest
      * Object category to attach custom fields
      * Enum: User
      */
-    category: string
+    category?: string
 
     /**
      * Custom field display name
      */
-    displayName: string
+    displayName?: string
 }
 
 export default CustomFieldCreateRequest

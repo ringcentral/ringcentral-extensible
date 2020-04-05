@@ -3,27 +3,27 @@ class CountryInfo
     /**
      * Internal identifier of a home country
      */
-    id: string
+    id?: string
 
     /**
      * Canonical URI of a home country
      */
-    uri: string
+    uri?: string
 
     /**
      * Official name of a home country
      */
-    name: string
+    name?: string
 
     /**
      * ISO code of a country
      */
-    isoCode: string
+    isoCode?: string
 
     /**
      * Calling code of a country
      */
-    callingCode: string
+    callingCode?: string
 }
 
 export default CountryInfo

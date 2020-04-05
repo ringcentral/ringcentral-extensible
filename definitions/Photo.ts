@@ -4,12 +4,12 @@ class Photo
      * Required
      * Enum: photo
      */
-    type: string
+    type?: string
 
     /**
      * Required
      */
-    value: string
+    value?: string
 }
 
 export default Photo

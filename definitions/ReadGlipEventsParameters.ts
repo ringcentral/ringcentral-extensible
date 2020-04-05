@@ -5,12 +5,12 @@ class ReadGlipEventsParameters
      * Maximum: 250
      * Default: 30
      */
-    recordCount: number
+    recordCount?: number
 
     /**
      * Token of a page to be returned
      */
-    pageToken: string
+    pageToken?: string
 }
 
 export default ReadGlipEventsParameters

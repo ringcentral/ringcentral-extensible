@@ -2,11 +2,11 @@ class CheckUserPermissionParameters
 {
     /**
      */
-    permissionId: string
+    permissionId?: string
 
     /**
      */
-    targetExtensionId: string
+    targetExtensionId?: string
 }
 
 export default CheckUserPermissionParameters

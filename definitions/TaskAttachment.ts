@@ -3,23 +3,23 @@ class TaskAttachment
     /**
      * Internal identifier of a file
      */
-    id: string
+    id?: string
 
     /**
      * Attachment type (currently only `File` value is supported).
      * Enum: File
      */
-    type: string
+    type?: string
 
     /**
      * Name of the attached file (including extension name).
      */
-    name: string
+    name?: string
 
     /**
      * Link to an attachment content
      */
-    contentUri: string
+    contentUri?: string
 }
 
 export default TaskAttachment

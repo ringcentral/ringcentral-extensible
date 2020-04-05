@@ -1,4 +1,5 @@
 import axios from 'axios'
+import GetTokenRequest from './definitions/GetTokenRequest'
 
 class RestClient {
     static sandboxServer = "https://platform.devtest.ringcentral.com"
@@ -19,7 +20,7 @@ class RestClient {
         this.appVersion = appVersion
     }
 
-    authorize(getTokenRequest: number): number
+    authorize(getTokenRequest: GetTokenRequest): number
     authorize(username: string, extension: string, password: string): number
     authorize(arg1: any, extension?: string, password?: string): number
     {

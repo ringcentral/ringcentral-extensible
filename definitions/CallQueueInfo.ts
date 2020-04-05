@@ -3,22 +3,22 @@ class CallQueueInfo
     /**
      * Internal identifier of a call queue
      */
-    id: string
+    id?: string
 
     /**
      * Name of a call queue
      */
-    name: string
+    name?: string
 
     /**
      * Extension number of a call queue
      */
-    extensionNumber: string
+    extensionNumber?: string
 
     /**
      * Flag allow members to change their queue status
      */
-    editableMemberStatus: boolean
+    editableMemberStatus?: boolean
 }
 
 export default CallQueueInfo

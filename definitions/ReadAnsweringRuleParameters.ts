@@ -3,7 +3,7 @@ class ReadAnsweringRuleParameters
     /**
      * Indicates whether inactive numbers should be returned or not
      */
-    showInactiveNumbers: boolean
+    showInactiveNumbers?: boolean
 }
 
 export default ReadAnsweringRuleParameters

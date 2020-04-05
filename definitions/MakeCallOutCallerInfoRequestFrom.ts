@@ -4,7 +4,7 @@ class MakeCallOutCallerInfoRequestFrom
     /**
      * Internal identifier of a device
      */
-    deviceId: string
+    deviceId?: string
 }
 
 export default MakeCallOutCallerInfoRequestFrom

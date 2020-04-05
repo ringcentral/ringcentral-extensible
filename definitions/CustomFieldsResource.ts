@@ -4,7 +4,7 @@ class CustomFieldsResource
 {
     /**
      */
-    records: CustomFieldResource[]
+    records?: CustomFieldResource[]
 }
 
 export default CustomFieldsResource

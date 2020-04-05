@@ -5,23 +5,23 @@ class UserSearchResponse
     /**
      * user list
      */
-    Resources: UserResponse[]
+    Resources?: UserResponse[]
 
     /**
      */
-    itemsPerPage: number
+    itemsPerPage?: number
 
     /**
      */
-    schemas: string[]
+    schemas?: string[]
 
     /**
      */
-    startIndex: number
+    startIndex?: number
 
     /**
      */
-    totalResults: number
+    totalResults?: number
 }
 
 export default UserSearchResponse

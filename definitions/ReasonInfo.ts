@@ -4,12 +4,12 @@ class ReasonInfo
      * Reason code
      * Enum: ServicePlanLimitation, AccountLimitation, ExtensionTypeLimitation, ExtensionLimitation, InsufficientPermissions, ConfigurationLimitation
      */
-    code: string
+    code?: string
 
     /**
      * Reason description
      */
-    message: string
+    message?: string
 }
 
 export default ReasonInfo

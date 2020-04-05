@@ -3,22 +3,22 @@ class GetVersionResponse
     /**
      * Canonical URI of the version info resource
      */
-    uri: string
+    uri?: string
 
     /**
      * Version of the RingCentral REST API
      */
-    versionString: string
+    versionString?: string
 
     /**
      * Release date of this version
      */
-    releaseDate: string
+    releaseDate?: string
 
     /**
      * URI part determining the current version
      */
-    uriString: string
+    uriString?: string
 }
 
 export default GetVersionResponse

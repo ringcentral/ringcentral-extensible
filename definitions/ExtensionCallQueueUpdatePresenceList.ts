@@ -4,7 +4,7 @@ class ExtensionCallQueueUpdatePresenceList
 {
     /**
      */
-    records: ExtensionCallQueueUpdatePresence[]
+    records?: ExtensionCallQueueUpdatePresence[]
 }
 
 export default ExtensionCallQueueUpdatePresenceList

@@ -5,33 +5,33 @@ class CallQueueDetails
     /**
      * Internal identifier of a call queue
      */
-    id: string
+    id?: string
 
     /**
      * Call queue name
      */
-    name: string
+    name?: string
 
     /**
      * Call queue extension number
      */
-    extensionNumber: string
+    extensionNumber?: string
 
     /**
      * Call queue status
      * Enum: Enabled, Disabled, NotActivated
      */
-    status: string
+    status?: string
 
     /**
      * Call queue service level settings
      */
-    serviceLevelSettings: CallQueueServiceLevelSettings
+    serviceLevelSettings?: CallQueueServiceLevelSettings
 
     /**
      * Allows members to change their queue status
      */
-    editableMemberStatus: boolean
+    editableMemberStatus?: boolean
 }
 
 export default CallQueueDetails

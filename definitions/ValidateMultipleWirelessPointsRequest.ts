@@ -4,7 +4,7 @@ class ValidateMultipleWirelessPointsRequest
 {
     /**
      */
-    records: WirelessPointInfoRequest[]
+    records?: WirelessPointInfoRequest[]
 }
 
 export default ValidateMultipleWirelessPointsRequest

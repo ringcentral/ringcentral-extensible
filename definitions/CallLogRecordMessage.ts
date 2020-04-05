@@ -4,17 +4,17 @@ class CallLogRecordMessage
     /**
      * Internal identifier of a message
      */
-    id: string
+    id?: string
 
     /**
      * Type of a message
      */
-    type: string
+    type?: string
 
     /**
      * Link to a message resource
      */
-    uri: string
+    uri?: string
 }
 
 export default CallLogRecordMessage

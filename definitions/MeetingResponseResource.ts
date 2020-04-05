@@ -6,64 +6,64 @@ class MeetingResponseResource
 {
     /**
      */
-    uri: string
+    uri?: string
 
     /**
      */
-    uuid: string
+    uuid?: string
 
     /**
      */
-    id: string
+    id?: string
 
     /**
      */
-    topic: string
+    topic?: string
 
     /**
      * Enum: Scheduled, Instant, Recurring
      */
-    meetingType: string
+    meetingType?: string
 
     /**
      */
-    password: string
+    password?: string
 
     /**
      */
-    h323Password: string
+    h323Password?: string
 
     /**
      */
-    status: string
+    status?: string
 
     /**
      */
-    links: MeetingLinks
+    links?: MeetingLinks
 
     /**
      */
-    schedule: MeetingScheduleResource
+    schedule?: MeetingScheduleResource
 
     /**
      */
-    host: HostInfoRequest
+    host?: HostInfoRequest
 
     /**
      */
-    allowJoinBeforeHost: boolean
+    allowJoinBeforeHost?: boolean
 
     /**
      */
-    startHostVideo: boolean
+    startHostVideo?: boolean
 
     /**
      */
-    startParticipantsVideo: boolean
+    startParticipantsVideo?: boolean
 
     /**
      */
-    audioOptions: string[]
+    audioOptions?: string[]
 }
 
 export default MeetingResponseResource

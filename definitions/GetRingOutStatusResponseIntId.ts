@@ -5,16 +5,16 @@ class GetRingOutStatusResponseIntId
     /**
      * Internal identifier of a RingOut call
      */
-    id: number
+    id?: number
 
     /**
      */
-    uri: string
+    uri?: string
 
     /**
      * RingOut status information
      */
-    status: RingOutStatusInfo
+    status?: RingOutStatusInfo
 }
 
 export default GetRingOutStatusResponseIntId

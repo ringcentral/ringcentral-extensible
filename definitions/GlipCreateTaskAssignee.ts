@@ -3,7 +3,7 @@ class GlipCreateTaskAssignee
     /**
      * Assignee Id
      */
-    id: string
+    id?: string
 }
 
 export default GlipCreateTaskAssignee

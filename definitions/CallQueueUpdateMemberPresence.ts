@@ -5,12 +5,12 @@ class CallQueueUpdateMemberPresence
     /**
      * Call queue member information
      */
-    member: CallQueueMemberId
+    member?: CallQueueMemberId
 
     /**
      * Call queue member availability for calls of this queue
      */
-    acceptCurrentQueueCalls: boolean
+    acceptCurrentQueueCalls?: boolean
 }
 
 export default CallQueueUpdateMemberPresence

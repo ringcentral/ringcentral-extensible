@@ -2,11 +2,11 @@ class FilterSupported
 {
     /**
      */
-    maxResults: number
+    maxResults?: number
 
     /**
      */
-    supported: boolean
+    supported?: boolean
 }
 
 export default FilterSupported

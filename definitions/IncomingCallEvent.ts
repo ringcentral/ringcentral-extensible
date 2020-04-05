@@ -5,103 +5,103 @@ class IncomingCallEvent
     /**
      * Apple Push Notification Service Info
      */
-    aps: APSInfo
+    aps?: APSInfo
 
     /**
      * Event filter URI
      */
-    event: string
+    event?: string
 
     /**
      * Universally unique identifier of a notification
      */
-    uuid: string
+    uuid?: string
 
     /**
      * Internal identifier of a subscription
      */
-    subscriptionId: string
+    subscriptionId?: string
 
     /**
      * The datetime of a call action in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format including timezone, for example 2016-03-10T18:07:52.534Z
      */
-    timestamp: string
+    timestamp?: string
 
     /**
      * Internal identifier of an extension
      * Default: ~
      */
-    extensionId: string
+    extensionId?: string
 
     /**
      * Calling action, for example 'StartRing'
      */
-    action: string
+    action?: string
 
     /**
      * Identifier of a call session
      */
-    sessionId: string
+    sessionId?: string
 
     /**
      * Identifier of a server
      */
-    serverId: string
+    serverId?: string
 
     /**
      * Phone number of a caller. For GCM transport type '_from' property should be used
      */
-    from: string
+    from?: string
 
     /**
      * Caller name
      */
-    fromName: string
+    fromName?: string
 
     /**
      * Phone number of a callee
      */
-    to: string
+    to?: string
 
     /**
      * Callee name
      */
-    toName: string
+    toName?: string
 
     /**
      * Unique identifier of a session
      */
-    sid: string
+    sid?: string
 
     /**
      * SIP proxy registration name
      */
-    toUrl: string
+    toUrl?: string
 
     /**
      * User data
      */
-    srvLvl: string
+    srvLvl?: string
 
     /**
      * User data
      */
-    srvLvlExt: string
+    srvLvlExt?: string
 
     /**
      * File containing recorded caller name
      */
-    recUrl: string
+    recUrl?: string
 
     /**
      * Notification lifetime value in seconds, the default value is 30 seconds
      */
-    pn_ttl: number
+    pn_ttl?: number
 
     /**
      * Internal identifier of a subscription owner extension
      */
-    ownerId: string
+    ownerId?: string
 }
 
 export default IncomingCallEvent

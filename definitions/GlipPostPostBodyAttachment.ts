@@ -3,12 +3,12 @@ class GlipPostPostBodyAttachment
     /**
      * Internal identifier of an attachment
      */
-    id: string
+    id?: string
 
     /**
      * Attachment type
      */
-    type: string
+    type?: string
 }
 
 export default GlipPostPostBodyAttachment

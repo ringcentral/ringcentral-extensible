@@ -3,7 +3,7 @@ class CompanyAnsweringRuleCalledNumberInfo
     /**
      * Internal identifier of an account phone number
      */
-    id: string
+    id?: string
 }
 
 export default CompanyAnsweringRuleCalledNumberInfo

@@ -6,43 +6,43 @@ class DataExportTask
     /**
      * Canonical URI of a task
      */
-    uri: string
+    uri?: string
 
     /**
      * Internal identifier of a task
      */
-    id: string
+    id?: string
 
     /**
      * Task creation datetime
      */
-    creationTime: string
+    creationTime?: string
 
     /**
      * Task last modification datetime
      */
-    lastModifiedTime: string
+    lastModifiedTime?: string
 
     /**
      * Task status
      * Enum: Accepted, InProgress, Completed, Failed, Canceled
      */
-    status: string
+    status?: string
 
     /**
      * Internal identifier of a user
      */
-    creator: string
+    creator?: string
 
     /**
      * Information specififed in request
      */
-    specific: SpecificInfo
+    specific?: SpecificInfo
 
     /**
      * Data collection sets. Returned by task ID
      */
-    datasets: ExportTaskResultInfo[]
+    datasets?: ExportTaskResultInfo[]
 }
 
 export default DataExportTask

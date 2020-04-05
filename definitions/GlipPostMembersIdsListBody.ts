@@ -6,7 +6,7 @@ class GlipPostMembersIdsListBody
      * Identifier(s) of chat members.
      * Required
      */
-    members: GlipMemberInfo[]
+    members?: GlipMemberInfo[]
 }
 
 export default GlipPostMembersIdsListBody

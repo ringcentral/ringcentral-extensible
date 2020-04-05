@@ -3,12 +3,12 @@ class CallLogRecordDeviceInfo
     /**
      * Internal identifier of a device
      */
-    id: string
+    id?: string
 
     /**
      * string to a device
      */
-    uri: string
+    uri?: string
 }
 
 export default CallLogRecordDeviceInfo

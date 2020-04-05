@@ -8,3 +8,7 @@ This SDK is modelled after the [RingCentral.NET](https://github.com/ringcentral/
 ```
 yarn test
 ```
+
+## Todo
+
+- Enum type: `type?: 'Voice' | 'Fax'`

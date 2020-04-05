@@ -4,7 +4,7 @@ class GlipWebhookList
 {
     /**
      */
-    records: GlipWebhookInfo[]
+    records?: GlipWebhookInfo[]
 }
 
 export default GlipWebhookList

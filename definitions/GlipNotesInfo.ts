@@ -5,11 +5,11 @@ class GlipNotesInfo
 {
     /**
      */
-    records: GlipNoteInfo[]
+    records?: GlipNoteInfo[]
 
     /**
      */
-    navigation: GlipNavigationInfo
+    navigation?: GlipNavigationInfo
 }
 
 export default GlipNotesInfo

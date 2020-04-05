@@ -5,23 +5,23 @@ class ModifyAccountBusinessAddressRequest
     /**
      * Company business name
      */
-    company: string
+    company?: string
 
     /**
      * Company business email address
      */
-    email: string
+    email?: string
 
     /**
      * Company business address
      * Required
      */
-    businessAddress: BusinessAddressInfo
+    businessAddress?: BusinessAddressInfo
 
     /**
      * Custom site name
      */
-    mainSiteName: string
+    mainSiteName?: string
 }
 
 export default ModifyAccountBusinessAddressRequest

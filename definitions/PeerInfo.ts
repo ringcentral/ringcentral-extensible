@@ -3,15 +3,15 @@ class PeerInfo
 {
     /**
      */
-    sessionId: string
+    sessionId?: string
 
     /**
      */
-    telephonySessionId: string
+    telephonySessionId?: string
 
     /**
      */
-    partyId: string
+    partyId?: string
 }
 
 export default PeerInfo

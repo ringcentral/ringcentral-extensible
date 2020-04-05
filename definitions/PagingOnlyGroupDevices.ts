@@ -7,22 +7,22 @@ class PagingOnlyGroupDevices
     /**
      * Link to the list of devices assigned to the paging only group
      */
-    uri: string
+    uri?: string
 
     /**
      * List of paging devices assigned to this group
      */
-    records: PagingDeviceInfo[]
+    records?: PagingDeviceInfo[]
 
     /**
      * Information on navigation
      */
-    navigation: ProvisioningNavigationInfo
+    navigation?: ProvisioningNavigationInfo
 
     /**
      * Information on paging
      */
-    paging: ProvisioningPagingInfo
+    paging?: ProvisioningPagingInfo
 }
 
 export default PagingOnlyGroupDevices

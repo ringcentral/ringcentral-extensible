@@ -3,13 +3,13 @@ class ReferenceInfo
     /**
      * Non-RC identifier of an extension
      */
-    ref: string
+    ref?: string
 
     /**
      * Type of external identifier
      * Enum: PartnerId, CustomerDirectoryId
      */
-    type: string
+    type?: string
 }
 
 export default ReferenceInfo

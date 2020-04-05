@@ -5,7 +5,7 @@ class UserBusinessHoursScheduleInfo
     /**
      * Weekly schedule
      */
-    weeklyRanges: WeeklyScheduleInfo
+    weeklyRanges?: WeeklyScheduleInfo
 }
 
 export default UserBusinessHoursScheduleInfo

@@ -7,25 +7,25 @@ class CompanyActiveCallsResponse
     /**
      * Link to the list of company active call records
      */
-    uri: string
+    uri?: string
 
     /**
      * List of call log records
      * Required
      */
-    records: CompanyCallLogRecord[]
+    records?: CompanyCallLogRecord[]
 
     /**
      * Information on navigation
      * Required
      */
-    navigation: CallLogNavigationInfo
+    navigation?: CallLogNavigationInfo
 
     /**
      * Information on paging
      * Required
      */
-    paging: CallLogPagingInfo
+    paging?: CallLogPagingInfo
 }
 
 export default CompanyActiveCallsResponse

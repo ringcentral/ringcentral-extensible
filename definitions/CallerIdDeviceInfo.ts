@@ -3,17 +3,17 @@ class CallerIdDeviceInfo
     /**
      * Internal identifier of a device
      */
-    id: string
+    id?: string
 
     /**
      * Link to a device resource
      */
-    uri: string
+    uri?: string
 
     /**
      * Name of a device
      */
-    name: string
+    name?: string
 }
 
 export default CallerIdDeviceInfo

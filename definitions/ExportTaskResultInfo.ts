@@ -3,17 +3,17 @@ class ExportTaskResultInfo
     /**
      * Internal identifier of a dataset
      */
-    id: string
+    id?: string
 
     /**
      * Link for downloading a dataset
      */
-    uri: string
+    uri?: string
 
     /**
      * Size of ta dataset in bytes
      */
-    size: number
+    size?: number
 }
 
 export default ExportTaskResultInfo

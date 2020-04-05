@@ -5,11 +5,11 @@ class CallPartyReply
     /**
      * Text to reply
      */
-    replyWithText: string
+    replyWithText?: string
 
     /**
      */
-    replyWithPattern: ReplyWithPattern
+    replyWithPattern?: ReplyWithPattern
 }
 
 export default CallPartyReply

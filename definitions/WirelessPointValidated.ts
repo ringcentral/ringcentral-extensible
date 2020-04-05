@@ -5,22 +5,22 @@ class WirelessPointValidated
     /**
      * Internal identifier of a wireless point
      */
-    id: string
+    id?: string
 
     /**
      * Unique 48-bit identifier of the wireless access point complying with MAC address conventions
      */
-    bssid: string
+    bssid?: string
 
     /**
      * Validation result status
      * Enum: Valid, Invalid
      */
-    status: string
+    status?: string
 
     /**
      */
-    errors: ValidationError[]
+    errors?: ValidationError[]
 }
 
 export default WirelessPointValidated

@@ -7,22 +7,22 @@ class DepartmentMemberList
     /**
      * Link to the list of department members
      */
-    uri: string
+    uri?: string
 
     /**
      * List of department members extensions
      */
-    records: ExtensionInfo[]
+    records?: ExtensionInfo[]
 
     /**
      * Information on navigation
      */
-    navigation: ProvisioningNavigationInfo
+    navigation?: ProvisioningNavigationInfo
 
     /**
      * Information on paging
      */
-    paging: ProvisioningPagingInfo
+    paging?: ProvisioningPagingInfo
 }
 
 export default DepartmentMemberList

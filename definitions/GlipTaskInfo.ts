@@ -8,94 +8,94 @@ class GlipTaskInfo
     /**
      * Internal identifier of a task
      */
-    id: string
+    id?: string
 
     /**
      * Datetime of the task creation in UTC time zone.
      */
-    creationTime: string
+    creationTime?: string
 
     /**
      * Datetime of the last modification of the task in UTC time zone.
      */
-    lastModifiedTime: string
+    lastModifiedTime?: string
 
     /**
      * Type of a task
      * Enum: Task
      */
-    type: string
+    type?: string
 
     /**
      */
-    creator: GlipTaskInfoCreator
+    creator?: GlipTaskInfoCreator
 
     /**
      * Chat IDs where the task is posted or shared.
      */
-    chatIds: string[]
+    chatIds?: string[]
 
     /**
      * Status of task execution
      * Enum: Pending, InProgress, Completed
      */
-    status: string
+    status?: string
 
     /**
      * Name/subject of a task
      */
-    subject: string
+    subject?: string
 
     /**
      * Task name/subject
      */
-    assignees: GlipTaskInfoAssignee[]
+    assignees?: GlipTaskInfoAssignee[]
 
     /**
      * Specifies how to determine task completeness
      * Enum: Simple, AllAssignees, Percentage
      */
-    completenessCondition: string
+    completenessCondition?: string
 
     /**
      * Current completeness percentage of the task with the specified percentage completeness condition
      * Maximum: 100
      */
-    completenessPercentage: number
+    completenessPercentage?: number
 
     /**
      * Task start date
      */
-    startDate: string
+    startDate?: string
 
     /**
      * Task due date/time
      */
-    dueDate: string
+    dueDate?: string
 
     /**
      * Font color of a post with the current task
      * Enum: Black, Red, Orange, Yellow, Green, Blue, Purple, Magenta
      */
-    color: string
+    color?: string
 
     /**
      * Task section to group/search by
      */
-    section: string
+    section?: string
 
     /**
      * Task details
      */
-    description: string
+    description?: string
 
     /**
      */
-    recurrence: GlipTaskRecurrenceInfo
+    recurrence?: GlipTaskRecurrenceInfo
 
     /**
      */
-    attachments: TaskAttachment[]
+    attachments?: TaskAttachment[]
 }
 
 export default GlipTaskInfo

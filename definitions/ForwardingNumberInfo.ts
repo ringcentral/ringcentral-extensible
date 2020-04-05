@@ -5,43 +5,43 @@ class ForwardingNumberInfo
     /**
      * Internal identifier of a forwarding/call flip phone number
      */
-    id: string
+    id?: string
 
     /**
      * Canonical URI of a forwarding/call flip phone number
      */
-    uri: string
+    uri?: string
 
     /**
      * Forwarding/Call flip phone number
      */
-    phoneNumber: string
+    phoneNumber?: string
 
     /**
      * Forwarding/Call flip number title
      */
-    label: string
+    label?: string
 
     /**
      * Type of option this phone number is used for. Multiple values are accepted
      */
-    features: string[]
+    features?: string[]
 
     /**
      * Number assigned to the call flip phone number, corresponds to the shortcut dial number
      */
-    flipNumber: string
+    flipNumber?: string
 
     /**
      * Forwarding device information
      */
-    device: CreateForwardingNumberDeviceInfo
+    device?: CreateForwardingNumberDeviceInfo
 
     /**
      * Forwarding phone number type
      * Enum: Home, Mobile, Work, PhoneLine, Outage, Other
      */
-    type: string
+    type?: string
 }
 
 export default ForwardingNumberInfo

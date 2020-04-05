@@ -4,24 +4,24 @@ class AccountBusinessAddressResource
 {
     /**
      */
-    uri: string
+    uri?: string
 
     /**
      */
-    businessAddress: ContactBusinessAddressInfo
+    businessAddress?: ContactBusinessAddressInfo
 
     /**
      */
-    company: string
+    company?: string
 
     /**
      */
-    email: string
+    email?: string
 
     /**
      * Custom site name
      */
-    mainSiteName: string
+    mainSiteName?: string
 }
 
 export default AccountBusinessAddressResource

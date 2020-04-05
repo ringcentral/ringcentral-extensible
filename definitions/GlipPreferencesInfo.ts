@@ -4,7 +4,7 @@ class GlipPreferencesInfo
 {
     /**
      */
-    chats: GlipPreferencesChats
+    chats?: GlipPreferencesChats
 }
 
 export default GlipPreferencesInfo

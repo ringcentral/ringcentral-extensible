@@ -6,19 +6,19 @@ class NetworkInfo
 {
     /**
      */
-    name: string
+    name?: string
 
     /**
      */
-    site: AutomaticLocationUpdatesSiteInfo
+    site?: AutomaticLocationUpdatesSiteInfo
 
     /**
      */
-    publicIpRanges: PublicIpRangeInfo[]
+    publicIpRanges?: PublicIpRangeInfo[]
 
     /**
      */
-    privateIpRanges: PrivateIpRangeInfo[]
+    privateIpRanges?: PrivateIpRangeInfo[]
 }
 
 export default NetworkInfo

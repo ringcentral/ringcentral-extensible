@@ -3,7 +3,7 @@ class ListCallRecordingCustomGreetingsParameters
     /**
      * Enum: StartRecording, StopRecording, AutomaticRecording
      */
-    type: string
+    type?: string
 }
 
 export default ListCallRecordingCustomGreetingsParameters

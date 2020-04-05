@@ -10,49 +10,49 @@ class CreateUser
     /**
      * User status
      */
-    active: boolean
+    active?: boolean
 
     /**
      */
-    addresses: UserAddress[]
+    addresses?: UserAddress[]
 
     /**
      * Required
      */
-    emails: Email[]
+    emails?: Email[]
 
     /**
      * external unique resource id defined by provisioning client
      */
-    externalId: string
+    externalId?: string
 
     /**
      * Required
      */
-    name: Name
+    name?: Name
 
     /**
      */
-    phoneNumbers: PhoneNumber[]
+    phoneNumbers?: PhoneNumber[]
 
     /**
      */
-    photos: Photo[]
+    photos?: Photo[]
 
     /**
      * Required
      */
-    schemas: string[]
+    schemas?: string[]
 
     /**
      */
-    "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User": EnterpriseUser
+    "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User"?: EnterpriseUser
 
     /**
      * MUST be same as work type email address
      * Required
      */
-    userName: string
+    userName?: string
 }
 
 export default CreateUser

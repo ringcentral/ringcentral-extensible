@@ -3,12 +3,12 @@ class CallersInfo
     /**
      * Phone number of a caller
      */
-    callerId: string
+    callerId?: string
 
     /**
      * Contact name of a caller
      */
-    name: string
+    name?: string
 }
 
 export default CallersInfo

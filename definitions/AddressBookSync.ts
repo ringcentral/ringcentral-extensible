@@ -5,23 +5,23 @@ class AddressBookSync
 {
     /**
      */
-    uri: string
+    uri?: string
 
     /**
      */
-    records: PersonalContactResource[]
+    records?: PersonalContactResource[]
 
     /**
      */
-    syncInfo: SyncInfo
+    syncInfo?: SyncInfo
 
     /**
      */
-    nextPageId: number
+    nextPageId?: number
 
     /**
      */
-    nextPageUri: string
+    nextPageUri?: string
 }
 
 export default AddressBookSync

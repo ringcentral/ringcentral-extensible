@@ -5,16 +5,16 @@ class GetMessageInfoMultiResponse
     /**
      * Internal identifier of a resource
      */
-    resourceId: string
+    resourceId?: string
 
     /**
      * Status code of resource retrieval
      */
-    status: number
+    status?: number
 
     /**
      */
-    body: MessageBody
+    body?: MessageBody
 }
 
 export default GetMessageInfoMultiResponse

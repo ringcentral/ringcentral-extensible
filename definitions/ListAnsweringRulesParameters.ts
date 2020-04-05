@@ -4,22 +4,22 @@ class ListAnsweringRulesParameters
      * Default: Simple
      * Enum: Detailed, Simple
      */
-    view: string
+    view?: string
 
     /**
      * If true, then only active call handling rules are returned
      */
-    enabledOnly: boolean
+    enabledOnly?: boolean
 
     /**
      * Default: 1
      */
-    page: string
+    page?: string
 
     /**
      * Default: 100
      */
-    perPage: string
+    perPage?: string
 }
 
 export default ListAnsweringRulesParameters

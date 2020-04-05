@@ -3,17 +3,17 @@ class DepartmentInfo
     /**
      * Internal identifier of a department extension
      */
-    id: string
+    id?: string
 
     /**
      * Canonical URI of a department extension
      */
-    uri: string
+    uri?: string
 
     /**
      * Number of a department extension
      */
-    extensionNumber: string
+    extensionNumber?: string
 }
 
 export default DepartmentInfo

@@ -2,15 +2,15 @@ class CallerInfoFrom
 {
     /**
      */
-    phoneNumber: string
+    phoneNumber?: string
 
     /**
      */
-    name: string
+    name?: string
 
     /**
      */
-    location: string
+    location?: string
 }
 
 export default CallerInfoFrom

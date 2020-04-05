@@ -8,19 +8,19 @@ class UnifiedPresence
      * Aggregated presence status of the user
      * Enum: Available, Offline, DND, Busy
      */
-    status: string
+    status?: string
 
     /**
      */
-    glip: UnifiedPresenceGlip
+    glip?: UnifiedPresenceGlip
 
     /**
      */
-    telephony: UnifiedPresenceTelephony
+    telephony?: UnifiedPresenceTelephony
 
     /**
      */
-    meeting: UnifiedPresenceMeeting
+    meeting?: UnifiedPresenceMeeting
 }
 
 export default UnifiedPresence

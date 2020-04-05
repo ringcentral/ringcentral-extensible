@@ -6,7 +6,7 @@ class ErrorResponse
     /**
      * Collection of all gathered errors
      */
-    errors: Error[]
+    errors?: Error[]
 }
 
 export default ErrorResponse

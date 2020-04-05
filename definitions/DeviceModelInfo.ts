@@ -5,23 +5,23 @@ class DeviceModelInfo
     /**
      * Addon identifier. For HardPhones of certain types, which are compatible with this addon identifier
      */
-    id: string
+    id?: string
 
     /**
      * Device name
      */
-    name: string
+    name?: string
 
     /**
      * Addons description
      * Required
      */
-    addons: DeviceAddonInfo[]
+    addons?: DeviceAddonInfo[]
 
     /**
      * Device feature or multiple features supported
      */
-    features: string[]
+    features?: string[]
 }
 
 export default DeviceModelInfo

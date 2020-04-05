@@ -3,7 +3,7 @@ class UpdateDevicePhoneInfo
     /**
      * Internal identifier of a phone number
      */
-    id: string
+    id?: string
 }
 
 export default UpdateDevicePhoneInfo

@@ -8,25 +8,25 @@ class GetStateListResponse
      * Link to the states list resource
      * Required
      */
-    uri: string
+    uri?: string
 
     /**
      * List of states
      * Required
      */
-    records: GetStateInfoResponse[]
+    records?: GetStateInfoResponse[]
 
     /**
      * Information on navigation
      * Required
      */
-    navigation: ProvisioningNavigationInfo
+    navigation?: ProvisioningNavigationInfo
 
     /**
      * Information on paging
      * Required
      */
-    paging: ProvisioningPagingInfo
+    paging?: ProvisioningPagingInfo
 }
 
 export default GetStateListResponse

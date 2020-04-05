@@ -7,25 +7,25 @@ class GetExtensionDevicesResponse
     /**
      * Link to the list of extension devices
      */
-    uri: string
+    uri?: string
 
     /**
      * List of extension devices
      * Required
      */
-    records: ExtensionDeviceResponse[]
+    records?: ExtensionDeviceResponse[]
 
     /**
      * Information on navigation
      * Required
      */
-    navigation: DeviceProvisioningNavigationInfo
+    navigation?: DeviceProvisioningNavigationInfo
 
     /**
      * Information on paging
      * Required
      */
-    paging: DeviceProvisioningPagingInfo
+    paging?: DeviceProvisioningPagingInfo
 }
 
 export default GetExtensionDevicesResponse

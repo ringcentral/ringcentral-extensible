@@ -3,27 +3,27 @@ class BusinessAddressInfo
     /**
      * Name of a country
      */
-    country: string
+    country?: string
 
     /**
      * Name of a state/province
      */
-    state: string
+    state?: string
 
     /**
      * Name of a city
      */
-    city: string
+    city?: string
 
     /**
      * Street address
      */
-    street: string
+    street?: string
 
     /**
      * Zip code
      */
-    zip: string
+    zip?: string
 }
 
 export default BusinessAddressInfo

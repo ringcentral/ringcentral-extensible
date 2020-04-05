@@ -6,12 +6,12 @@ class ExtensionPermissions
     /**
      * Admin permission
      */
-    admin: PermissionInfo
+    admin?: PermissionInfo
 
     /**
      * International Calling permission
      */
-    internationalCalling: PermissionInfo
+    internationalCalling?: PermissionInfo
 }
 
 export default ExtensionPermissions

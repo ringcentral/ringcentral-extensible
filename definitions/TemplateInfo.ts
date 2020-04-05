@@ -3,32 +3,32 @@ class TemplateInfo
     /**
      * Link to a template
      */
-    uri: string
+    uri?: string
 
     /**
      * Internal identifier of a template
      */
-    id: string
+    id?: string
 
     /**
      * Enum: UserSettings, CallHandling
      */
-    type: string
+    type?: string
 
     /**
      * Name of a template
      */
-    name: string
+    name?: string
 
     /**
      * Time of a template creation
      */
-    creationTime: string
+    creationTime?: string
 
     /**
      * Time of the last template modification
      */
-    lastModifiedTime: string
+    lastModifiedTime?: string
 }
 
 export default TemplateInfo

@@ -3,7 +3,7 @@ class CallQueueMemberId
     /**
      * Internal identifier of an extension - queue member
      */
-    id: string
+    id?: string
 }
 
 export default CallQueueMemberId

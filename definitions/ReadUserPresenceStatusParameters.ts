@@ -3,12 +3,12 @@ class ReadUserPresenceStatusParameters
     /**
      * Whether to return detailed telephony state
      */
-    detailedTelephonyState: boolean
+    detailedTelephonyState?: boolean
 
     /**
      * Whether to return SIP data
      */
-    sipData: boolean
+    sipData?: boolean
 }
 
 export default ReadUserPresenceStatusParameters

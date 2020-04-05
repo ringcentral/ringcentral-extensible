@@ -3,17 +3,17 @@ class AutomaticLocationUpdatesModelInfo
     /**
      * Device model identifier
      */
-    id: string
+    id?: string
 
     /**
      * Device name
      */
-    name: string
+    name?: string
 
     /**
      * Device feature or multiple features supported
      */
-    features: string[]
+    features?: string[]
 }
 
 export default AutomaticLocationUpdatesModelInfo

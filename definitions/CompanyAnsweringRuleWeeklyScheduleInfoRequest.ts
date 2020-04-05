@@ -5,37 +5,37 @@ class CompanyAnsweringRuleWeeklyScheduleInfoRequest
     /**
      * Time interval for a particular day
      */
-    monday: CompanyAnsweringRuleTimeIntervalRequest[]
+    monday?: CompanyAnsweringRuleTimeIntervalRequest[]
 
     /**
      * Time interval for a particular day
      */
-    tuesday: CompanyAnsweringRuleTimeIntervalRequest[]
+    tuesday?: CompanyAnsweringRuleTimeIntervalRequest[]
 
     /**
      * Time interval for a particular day
      */
-    wednesday: CompanyAnsweringRuleTimeIntervalRequest[]
+    wednesday?: CompanyAnsweringRuleTimeIntervalRequest[]
 
     /**
      * Time interval for a particular day
      */
-    thursday: CompanyAnsweringRuleTimeIntervalRequest[]
+    thursday?: CompanyAnsweringRuleTimeIntervalRequest[]
 
     /**
      * Time interval for a particular day
      */
-    friday: CompanyAnsweringRuleTimeIntervalRequest[]
+    friday?: CompanyAnsweringRuleTimeIntervalRequest[]
 
     /**
      * Time interval for a particular day
      */
-    saturday: CompanyAnsweringRuleTimeIntervalRequest[]
+    saturday?: CompanyAnsweringRuleTimeIntervalRequest[]
 
     /**
      * Time interval for a particular day
      */
-    sunday: CompanyAnsweringRuleTimeIntervalRequest[]
+    sunday?: CompanyAnsweringRuleTimeIntervalRequest[]
 }
 
 export default CompanyAnsweringRuleWeeklyScheduleInfoRequest

@@ -5,27 +5,27 @@ class NotificationInfo
     /**
      * Alert information
      */
-    alert: AlertInfo
+    alert?: AlertInfo
 
     /**
      * Number of incoming messages
      */
-    badge: string
+    badge?: string
 
     /**
      * Message sound
      */
-    sound: string
+    sound?: string
 
     /**
      * Content availability
      */
-    "content-available": string
+    "content-available"?: string
 
     /**
      * Category of a message
      */
-    category: string
+    category?: string
 }
 
 export default NotificationInfo

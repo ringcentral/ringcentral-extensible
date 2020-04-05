@@ -4,19 +4,19 @@ class AccountResource
 {
     /**
      */
-    companyName: string
+    companyName?: string
 
     /**
      */
-    federatedName: string
+    federatedName?: string
 
     /**
      */
-    id: string
+    id?: string
 
     /**
      */
-    mainNumber: PhoneNumberResource
+    mainNumber?: PhoneNumberResource
 }
 
 export default AccountResource

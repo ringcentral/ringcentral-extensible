@@ -3,48 +3,48 @@ class NotificationDeliveryMode
     /**
      * Optional parameter. Specifies if the message will be encrypted or not
      */
-    encryption: boolean
+    encryption?: boolean
 
     /**
      * PubNub channel name
      */
-    address: string
+    address?: string
 
     /**
      * PubNub subscriber credentials required to subscribe to the channel
      */
-    subscriberKey: string
+    subscriberKey?: string
 
     /**
      * PubNub subscriber credentials required to subscribe to the channel. Optional (for PubNub transport type only)
      */
-    secretKey: string
+    secretKey?: string
 
     /**
      * Encryption algorithm 'AES' (for PubNub transport type only)
      */
-    encryptionAlgorithm: string
+    encryptionAlgorithm?: string
 
     /**
      * Key for notification message decryption (for PubNub transport type only)
      */
-    encryptionKey: string
+    encryptionKey?: string
 
     /**
      * Notifications transportation provider name
      * Enum: PubNub, WebHook, RC/APNS, RC/GCM
      */
-    transportType: string
+    transportType?: string
 
     /**
      * Name of a certificate. Supported for 'RC/APNS' and 'RC/GCM' transport types
      */
-    certificateName: string
+    certificateName?: string
 
     /**
      * Identifier of a registration. Supported for 'RC/APNS' and 'RC/GCM' transport types
      */
-    registrationId: string
+    registrationId?: string
 }
 
 export default NotificationDeliveryMode

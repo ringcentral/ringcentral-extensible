@@ -7,16 +7,16 @@ class DevicePhoneLinesInfo
      * Type of phone line
      * Enum: Standalone, StandaloneFree, BlaPrimary, BlaSecondary
      */
-    lineType: string
+    lineType?: string
 
     /**
      */
-    emergencyAddress: DevicePhoneLinesEmergencyAddressInfo
+    emergencyAddress?: DevicePhoneLinesEmergencyAddressInfo
 
     /**
      * Phone number information
      */
-    phoneInfo: DevicePhoneNumberInfo
+    phoneInfo?: DevicePhoneNumberInfo
 }
 
 export default DevicePhoneLinesInfo

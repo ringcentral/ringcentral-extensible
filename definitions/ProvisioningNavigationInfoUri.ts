@@ -2,7 +2,7 @@ class ProvisioningNavigationInfoUri
 {
     /**
      */
-    uri: string
+    uri?: string
 }
 
 export default ProvisioningNavigationInfoUri

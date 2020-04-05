@@ -3,7 +3,7 @@ class GlipCreateTaskAttachment
     /**
      * Internal identifier of a file
      */
-    id: string
+    id?: string
 }
 
 export default GlipCreateTaskAttachment

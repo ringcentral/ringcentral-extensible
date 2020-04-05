@@ -5,7 +5,7 @@ class CreateMultipleSwitchesResponse
 {
     /**
      */
-    task: BulkTaskInfo
+    task?: BulkTaskInfo
 }
 
 export default CreateMultipleSwitchesResponse

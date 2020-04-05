@@ -5,7 +5,7 @@ class PartyUpdateRequest
     /**
      * Party update data
      */
-    party: PartyUpdateInfo
+    party?: PartyUpdateInfo
 }
 
 export default PartyUpdateRequest

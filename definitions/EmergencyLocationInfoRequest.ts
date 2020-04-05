@@ -5,11 +5,11 @@ class EmergencyLocationInfoRequest
     /**
      * Internal identifier of the emergency response location
      */
-    id: string
+    id?: string
 
     /**
      */
-    address: EmergencyLocationAddressInfoRequest
+    address?: EmergencyLocationAddressInfoRequest
 }
 
 export default EmergencyLocationInfoRequest

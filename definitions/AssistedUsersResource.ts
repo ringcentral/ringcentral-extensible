@@ -4,7 +4,7 @@ class AssistedUsersResource
 {
     /**
      */
-    records: AssistedUserResource[]
+    records?: AssistedUserResource[]
 }
 
 export default AssistedUsersResource

@@ -4,15 +4,15 @@ class AuthProfileCheckResource
 {
     /**
      */
-    uri: string
+    uri?: string
 
     /**
      */
-    successful: boolean
+    successful?: boolean
 
     /**
      */
-    details: ActivePermissionResource
+    details?: ActivePermissionResource
 }
 
 export default AuthProfileCheckResource

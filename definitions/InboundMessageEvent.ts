@@ -5,32 +5,32 @@ class InboundMessageEvent
     /**
      * Information on a notification
      */
-    aps: NotificationInfo
+    aps?: NotificationInfo
 
     /**
      * Internal identifier of a message
      */
-    messageId: string
+    messageId?: string
 
     /**
      * Internal identifier of an conversation
      */
-    conversationId: string
+    conversationId?: string
 
     /**
      * Sender phone number. For GCM transport type '_from' property should be used
      */
-    from: string
+    from?: string
 
     /**
      * Receiver phone number
      */
-    to: string
+    to?: string
 
     /**
      * Internal identifier of a subscription owner extension
      */
-    ownerId: string
+    ownerId?: string
 }
 
 export default InboundMessageEvent

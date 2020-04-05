@@ -3,18 +3,18 @@ class GlipMentionsInfo
     /**
      * Internal identifier of a user
      */
-    id: string
+    id?: string
 
     /**
      * Type of mentions
      * Enum: Person, Team, File, Link, Event, Task, Note, Card
      */
-    type: string
+    type?: string
 
     /**
      * Name of a user
      */
-    name: string
+    name?: string
 }
 
 export default GlipMentionsInfo

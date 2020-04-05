@@ -3,17 +3,17 @@ class ValidationError
     /**
      * Error code
      */
-    errorCode: string
+    errorCode?: string
 
     /**
      * Error message
      */
-    message: string
+    message?: string
 
     /**
      * Name of invalid parameter
      */
-    parameterName: string
+    parameterName?: string
 }
 
 export default ValidationError

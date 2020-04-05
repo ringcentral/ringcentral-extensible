@@ -5,7 +5,7 @@ class CallSession
     /**
      * Call session information
      */
-    session: CallSessionObject
+    session?: CallSessionObject
 }
 
 export default CallSession

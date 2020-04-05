@@ -3,23 +3,23 @@ class BulkTaskInfo
     /**
      * Internal identifier of a task for multiple switches creation
      */
-    id: string
+    id?: string
 
     /**
      * Status of a task
      * Enum: Accepted, Failed
      */
-    status: string
+    status?: string
 
     /**
      * Task creation time
      */
-    creationTime: string
+    creationTime?: string
 
     /**
      * Time of the task latest modification
      */
-    lastModifiedTime: string
+    lastModifiedTime?: string
 }
 
 export default BulkTaskInfo

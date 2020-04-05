@@ -4,15 +4,15 @@ class MeetingScheduleResource
 {
     /**
      */
-    startTime: string
+    startTime?: string
 
     /**
      */
-    durationInMinutes: number
+    durationInMinutes?: number
 
     /**
      */
-    timeZone: TimezoneResource
+    timeZone?: TimezoneResource
 }
 
 export default MeetingScheduleResource

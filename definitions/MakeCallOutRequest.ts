@@ -6,12 +6,12 @@ class MakeCallOutRequest
     /**
      * Required
      */
-    from: MakeCallOutCallerInfoRequestFrom
+    from?: MakeCallOutCallerInfoRequestFrom
 
     /**
      * Required
      */
-    to: MakeCallOutCallerInfoRequestTo
+    to?: MakeCallOutCallerInfoRequestTo
 }
 
 export default MakeCallOutRequest

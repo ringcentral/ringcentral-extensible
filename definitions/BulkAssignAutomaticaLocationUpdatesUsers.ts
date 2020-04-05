@@ -2,11 +2,11 @@ class BulkAssignAutomaticaLocationUpdatesUsers
 {
     /**
      */
-    enabledUserIds: string[]
+    enabledUserIds?: string[]
 
     /**
      */
-    disabledUserIds: string[]
+    disabledUserIds?: string[]
 }
 
 export default BulkAssignAutomaticaLocationUpdatesUsers

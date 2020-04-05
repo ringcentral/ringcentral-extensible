@@ -6,15 +6,15 @@ class DataExportTaskList
 {
     /**
      */
-    tasks: DataExportTask[]
+    tasks?: DataExportTask[]
 
     /**
      */
-    navigation: GlipDataExportNavigationInfo
+    navigation?: GlipDataExportNavigationInfo
 
     /**
      */
-    paging: GlipDataExportPagingInfo
+    paging?: GlipDataExportPagingInfo
 }
 
 export default DataExportTaskList

@@ -4,7 +4,7 @@ class UpdateUserProfileImageRequest
 {
     /**
      */
-    image: Attachment
+    image?: Attachment
 }
 
 export default UpdateUserProfileImageRequest

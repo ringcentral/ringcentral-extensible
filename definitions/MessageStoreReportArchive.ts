@@ -4,7 +4,7 @@ class MessageStoreReportArchive
 {
     /**
      */
-    records: ArchiveInfo[]
+    records?: ArchiveInfo[]
 }
 
 export default MessageStoreReportArchive

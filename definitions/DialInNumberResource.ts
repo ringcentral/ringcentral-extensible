@@ -4,19 +4,19 @@ class DialInNumberResource
 {
     /**
      */
-    phoneNumber: string
+    phoneNumber?: string
 
     /**
      */
-    formattedNumber: string
+    formattedNumber?: string
 
     /**
      */
-    location: string
+    location?: string
 
     /**
      */
-    country: CountryResource
+    country?: CountryResource
 }
 
 export default DialInNumberResource

@@ -2,15 +2,15 @@ class StatusInfo
 {
     /**
      */
-    reason: string
+    reason?: string
 
     /**
      */
-    till: string
+    till?: string
 
     /**
      */
-    comment: string
+    comment?: string
 }
 
 export default StatusInfo

@@ -6,17 +6,17 @@ class CallRecordingCustomGreeting
     /**
      * Enum: StartRecording, StopRecording, AutomaticRecording
      */
-    type: string
+    type?: string
 
     /**
      * Custom greeting data
      */
-    custom: CallRecordingCustomGreetingData
+    custom?: CallRecordingCustomGreetingData
 
     /**
      * Custom greeting language
      */
-    language: CallRecordingCustomGreetingLanguage
+    language?: CallRecordingCustomGreetingLanguage
 }
 
 export default CallRecordingCustomGreeting

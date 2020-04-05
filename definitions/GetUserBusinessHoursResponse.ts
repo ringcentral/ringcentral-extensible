@@ -5,12 +5,12 @@ class GetUserBusinessHoursResponse
     /**
      * Canonical URI of a business-hours resource
      */
-    uri: string
+    uri?: string
 
     /**
      * Schedule when an answering rule is applied
      */
-    schedule: ScheduleInfoUserBusinessHours
+    schedule?: ScheduleInfoUserBusinessHours
 }
 
 export default GetUserBusinessHoursResponse

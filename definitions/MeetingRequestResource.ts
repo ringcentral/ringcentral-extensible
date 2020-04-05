@@ -5,44 +5,44 @@ class MeetingRequestResource
 {
     /**
      */
-    topic: string
+    topic?: string
 
     /**
      * Enum: Scheduled, Instant, Recurring
      */
-    meetingType: string
+    meetingType?: string
 
     /**
      */
-    schedule: MeetingScheduleResource
+    schedule?: MeetingScheduleResource
 
     /**
      */
-    password: string
+    password?: string
 
     /**
      */
-    host: HostInfoRequest
+    host?: HostInfoRequest
 
     /**
      */
-    allowJoinBeforeHost: boolean
+    allowJoinBeforeHost?: boolean
 
     /**
      */
-    startHostVideo: boolean
+    startHostVideo?: boolean
 
     /**
      */
-    startParticipantsVideo: boolean
+    startParticipantsVideo?: boolean
 
     /**
      */
-    usePersonalMeetingId: boolean
+    usePersonalMeetingId?: boolean
 
     /**
      */
-    audioOptions: string[]
+    audioOptions?: string[]
 }
 
 export default MeetingRequestResource

@@ -5,7 +5,7 @@ class ReadCompanyCallRecordParameters
      * Default: Simple
      * Enum: Simple, Detailed
      */
-    view: string
+    view?: string
 }
 
 export default ReadCompanyCallRecordParameters

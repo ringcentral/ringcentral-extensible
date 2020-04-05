@@ -5,7 +5,7 @@ class UpdateMultipleWirelessPointsResponse
     /**
      * Information on the task for multiple wireless points update
      */
-    task: BulkTaskInfo
+    task?: BulkTaskInfo
 }
 
 export default UpdateMultipleWirelessPointsResponse

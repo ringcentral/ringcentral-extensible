@@ -6,23 +6,23 @@ class RegionalSettingsInfo
 {
     /**
      */
-    timezone: TimezoneResource
+    timezone?: TimezoneResource
 
     /**
      */
-    homeCountry: CountryResource
+    homeCountry?: CountryResource
 
     /**
      */
-    language: LanguageResource
+    language?: LanguageResource
 
     /**
      */
-    greetingLanguage: LanguageResource
+    greetingLanguage?: LanguageResource
 
     /**
      */
-    formattingLocale: LanguageResource
+    formattingLocale?: LanguageResource
 }
 
 export default RegionalSettingsInfo

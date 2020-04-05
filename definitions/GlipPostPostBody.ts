@@ -6,12 +6,12 @@ class GlipPostPostBody
      * Post text.
      * Required
      */
-    text: string
+    text?: string
 
     /**
      * Identifier(s) of attachments.
      */
-    attachments: GlipPostPostBodyAttachment[]
+    attachments?: GlipPostPostBodyAttachment[]
 }
 
 export default GlipPostPostBody

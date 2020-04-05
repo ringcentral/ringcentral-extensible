@@ -4,12 +4,12 @@ class Email
      * Required
      * Enum: work
      */
-    type: string
+    type?: string
 
     /**
      * Required
      */
-    value: string
+    value?: string
 }
 
 export default Email

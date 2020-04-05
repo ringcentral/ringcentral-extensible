@@ -3,12 +3,12 @@ class ArchiveInfo
     /**
      * Archive size in bytes
      */
-    size: number
+    size?: number
 
     /**
      * Link for archive download
      */
-    uri: string
+    uri?: string
 }
 
 export default ArchiveInfo

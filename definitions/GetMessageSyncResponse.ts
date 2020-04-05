@@ -6,19 +6,19 @@ class GetMessageSyncResponse
     /**
      * Link to the message sync resource
      */
-    uri: string
+    uri?: string
 
     /**
      * List of message records with synchronization information
      * Required
      */
-    records: GetMessageInfoResponse[]
+    records?: GetMessageInfoResponse[]
 
     /**
      * Sync type, token and time
      * Required
      */
-    syncInfo: SyncInfoMessages
+    syncInfo?: SyncInfoMessages
 }
 
 export default GetMessageSyncResponse

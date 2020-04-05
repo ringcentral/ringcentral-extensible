@@ -3,12 +3,12 @@ class TimeInterval
     /**
      * Time in format hh:mm
      */
-    from: string
+    from?: string
 
     /**
      * Time in format hh:mm
      */
-    to: string
+    to?: string
 }
 
 export default TimeInterval

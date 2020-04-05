@@ -6,39 +6,39 @@ class CustomCompanyGreetingInfo
     /**
      * Link to an extension custom greeting
      */
-    uri: string
+    uri?: string
 
     /**
      * Internal identifier of an answering rule
      */
-    id: string
+    id?: string
 
     /**
      * Type of a company greeting
      * Enum: Company, StartRecording, StopRecording, AutomaticRecording
      */
-    type: string
+    type?: string
 
     /**
      * Content media type
      * Enum: audio/mpeg, audio/wav
      */
-    contentType: string
+    contentType?: string
 
     /**
      * Link to a greeting content (audio file)
      */
-    contentUri: string
+    contentUri?: string
 
     /**
      * Information on an answering rule that the greeting is applied to
      */
-    answeringRule: CustomGreetingAnsweringRuleInfo
+    answeringRule?: CustomGreetingAnsweringRuleInfo
 
     /**
      * Information on a greeting language. Supported for types 'StopRecording', 'StartRecording', 'AutomaticRecording'
      */
-    language: CustomCompanyGreetingLanguageInfo
+    language?: CustomCompanyGreetingLanguageInfo
 }
 
 export default CustomCompanyGreetingInfo

@@ -4,12 +4,12 @@ class OwnerInfo
     /**
      * Internal identifier of an account that monitors a call
      */
-    accountId: string
+    accountId?: string
 
     /**
      * Internal identifier of an extension that monitors a call
      */
-    extensionId: string
+    extensionId?: string
 }
 
 export default OwnerInfo

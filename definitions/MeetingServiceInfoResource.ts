@@ -5,23 +5,23 @@ class MeetingServiceInfoResource
 {
     /**
      */
-    uri: string
+    uri?: string
 
     /**
      */
-    supportUri: string
+    supportUri?: string
 
     /**
      */
-    intlDialInNumbersUri: string
+    intlDialInNumbersUri?: string
 
     /**
      */
-    externalUserInfo: MeetingExternalUserInfoResource
+    externalUserInfo?: MeetingExternalUserInfoResource
 
     /**
      */
-    dialInNumbers: DialInNumberResource[]
+    dialInNumbers?: DialInNumberResource[]
 }
 
 export default MeetingServiceInfoResource

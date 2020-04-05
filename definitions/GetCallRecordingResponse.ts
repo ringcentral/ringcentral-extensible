@@ -3,22 +3,22 @@ class GetCallRecordingResponse
     /**
      * Internal identifier of a call recording
      */
-    id: string
+    id?: string
 
     /**
      * Link to a call recording binary content
      */
-    contentUri: string
+    contentUri?: string
 
     /**
      * Call recording file format. Supported format is audio/x-wav
      */
-    contentType: string
+    contentType?: string
 
     /**
      * Recorded call duration
      */
-    duration: number
+    duration?: number
 }
 
 export default GetCallRecordingResponse

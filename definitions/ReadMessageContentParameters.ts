@@ -5,7 +5,7 @@ class ReadMessageContentParameters
      * Default: Inline
      * Enum: Inline, Attachment
      */
-    contentDisposition: string
+    contentDisposition?: string
 }
 
 export default ReadMessageContentParameters

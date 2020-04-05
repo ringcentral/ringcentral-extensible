@@ -2,7 +2,7 @@ class MeetingRecordingsNavigationInfoUri
 {
     /**
      */
-    uri: string
+    uri?: string
 }
 
 export default MeetingRecordingsNavigationInfoUri

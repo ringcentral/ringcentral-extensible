@@ -2,29 +2,29 @@ class UserAddress
 {
     /**
      */
-    country: string
+    country?: string
 
     /**
      */
-    locality: string
+    locality?: string
 
     /**
      */
-    postalCode: string
+    postalCode?: string
 
     /**
      */
-    region: string
+    region?: string
 
     /**
      */
-    streetAddress: string
+    streetAddress?: string
 
     /**
      * Required
      * Enum: work
      */
-    type: string
+    type?: string
 }
 
 export default UserAddress

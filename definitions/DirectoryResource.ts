@@ -5,11 +5,11 @@ class DirectoryResource
 {
     /**
      */
-    paging: CompanyContactsPagingInfo
+    paging?: CompanyContactsPagingInfo
 
     /**
      */
-    records: ContactResource[]
+    records?: ContactResource[]
 }
 
 export default DirectoryResource

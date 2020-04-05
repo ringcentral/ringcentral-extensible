@@ -5,15 +5,15 @@ class ActivePermissionResource
 {
     /**
      */
-    permission: PermissionIdResource
+    permission?: PermissionIdResource
 
     /**
      */
-    effectiveRole: RoleIdResource
+    effectiveRole?: RoleIdResource
 
     /**
      */
-    scopes: string[]
+    scopes?: string[]
 }
 
 export default ActivePermissionResource

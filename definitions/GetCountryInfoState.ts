@@ -3,12 +3,12 @@ class GetCountryInfoState
     /**
      * Internal identifier of a state
      */
-    id: string
+    id?: string
 
     /**
      * Canonical URI of a state
      */
-    uri: string
+    uri?: string
 }
 
 export default GetCountryInfoState

@@ -3,17 +3,17 @@ class GetPresenceExtensionInfo
     /**
      * Internal identifier of an extension
      */
-    id: number
+    id?: number
 
     /**
      * Canonical URI of an extension
      */
-    uri: string
+    uri?: string
 
     /**
      * Extension number (usually 3 or 4 digits)
      */
-    extensionNumber: string
+    extensionNumber?: string
 }
 
 export default GetPresenceExtensionInfo

@@ -2,7 +2,7 @@ class PronouncedNamePromptInfo
 {
     /**
      */
-    id: string
+    id?: string
 }
 
 export default PronouncedNamePromptInfo

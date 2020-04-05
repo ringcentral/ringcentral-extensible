@@ -2,7 +2,7 @@ class CustomCompanyGreetingAnsweringRuleInfo
 {
     /**
      */
-    id: string
+    id?: string
 }
 
 export default CustomCompanyGreetingAnsweringRuleInfo

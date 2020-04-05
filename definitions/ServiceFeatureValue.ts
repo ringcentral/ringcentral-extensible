@@ -2,16 +2,16 @@ class ServiceFeatureValue
 {
     /**
      */
-    featureName: string
+    featureName?: string
 
     /**
      */
-    enabled: boolean
+    enabled?: boolean
 
     /**
      * Enum: Available, AccountTypeLimitation, ExtensionTypeLimitation, AccountLimitation, ExtensionLimitation, InsufficientPermissions, ApplicationLimitation
      */
-    reason: string
+    reason?: string
 }
 
 export default ServiceFeatureValue

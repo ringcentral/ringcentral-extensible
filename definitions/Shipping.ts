@@ -5,23 +5,23 @@ class Shipping
 {
     /**
      */
-    address: DeviceEmergencyServiceAddressResource
+    address?: DeviceEmergencyServiceAddressResource
 
     /**
      */
-    method: MethodResource
+    method?: MethodResource
 
     /**
      */
-    status: string
+    status?: string
 
     /**
      */
-    carrier: string
+    carrier?: string
 
     /**
      */
-    trackingNumber: string
+    trackingNumber?: string
 }
 
 export default Shipping

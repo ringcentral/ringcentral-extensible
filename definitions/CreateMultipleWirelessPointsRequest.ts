@@ -4,7 +4,7 @@ class CreateMultipleWirelessPointsRequest
 {
     /**
      */
-    records: CreateWirelessPoint[]
+    records?: CreateWirelessPoint[]
 }
 
 export default CreateMultipleWirelessPointsRequest

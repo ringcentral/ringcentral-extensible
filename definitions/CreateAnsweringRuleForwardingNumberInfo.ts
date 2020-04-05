@@ -3,7 +3,7 @@ class CreateAnsweringRuleForwardingNumberInfo
     /**
      * Internal identifier of a forwarding number
      */
-    id: string
+    id?: string
 }
 
 export default CreateAnsweringRuleForwardingNumberInfo

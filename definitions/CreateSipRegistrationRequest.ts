@@ -6,12 +6,12 @@ class CreateSipRegistrationRequest
     /**
      * Device unique description
      */
-    device: DeviceInfoRequest
+    device?: DeviceInfoRequest
 
     /**
      * SIP settings for device
      */
-    sipInfo: SIPInfoRequest[]
+    sipInfo?: SIPInfoRequest[]
 }
 
 export default CreateSipRegistrationRequest

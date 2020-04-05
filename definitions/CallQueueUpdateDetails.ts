@@ -5,12 +5,12 @@ class CallQueueUpdateDetails
     /**
      * Call queue service level settings
      */
-    serviceLevelSettings: CallQueueServiceLevelSettings
+    serviceLevelSettings?: CallQueueServiceLevelSettings
 
     /**
      * Allows members to change their queue status
      */
-    editableMemberStatus: boolean
+    editableMemberStatus?: boolean
 }
 
 export default CallQueueUpdateDetails

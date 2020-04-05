@@ -7,58 +7,58 @@ class GlipNoteInfo
     /**
      * Internal identifier of a note
      */
-    id: string
+    id?: string
 
     /**
      * Title of a note
      */
-    title: string
+    title?: string
 
     /**
      * Internal identifiers of the chat(s) where the note is posted or shared.
      */
-    chatIds: string[]
+    chatIds?: string[]
 
     /**
      * Preview of a note (first 150 characters of a body)
      */
-    preview: string
+    preview?: string
 
     /**
      * Note creator information
      */
-    creator: NoteCreatorInfo
+    creator?: NoteCreatorInfo
 
     /**
      * Note last modification information
      */
-    lastModifiedBy: LastModifiedByInfo
+    lastModifiedBy?: LastModifiedByInfo
 
     /**
      * Returned for the note being edited (locked) at the current moment. Information on the user editing the note
      */
-    lockedBy: LockedByInfo
+    lockedBy?: LockedByInfo
 
     /**
      * Note publishing status. Any note is created in 'Draft' status. After it is posted it becomes 'Active'
      * Enum: Active, Draft
      */
-    status: string
+    status?: string
 
     /**
      * Creation time
      */
-    creationTime: string
+    creationTime?: string
 
     /**
      * Datetime of the note last update
      */
-    lastModifiedTime: string
+    lastModifiedTime?: string
 
     /**
      * Enum: Note
      */
-    type: string
+    type?: string
 }
 
 export default GlipNoteInfo

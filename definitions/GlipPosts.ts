@@ -7,11 +7,11 @@ class GlipPosts
      * List of posts
      * Required
      */
-    records: GlipPostInfo[]
+    records?: GlipPostInfo[]
 
     /**
      */
-    navigation: GlipNavigationInfo
+    navigation?: GlipNavigationInfo
 }
 
 export default GlipPosts

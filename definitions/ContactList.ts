@@ -8,27 +8,27 @@ class ContactList
     /**
      * link to the list of user personal contacts
      */
-    uri: string
+    uri?: string
 
     /**
      * List of personal contacts from the extension address book
      */
-    records: PersonalContactResource[]
+    records?: PersonalContactResource[]
 
     /**
      * Information on navigation
      */
-    navigation: UserContactsNavigationInfo
+    navigation?: UserContactsNavigationInfo
 
     /**
      * Information on paging
      */
-    paging: UserContactsPagingInfo
+    paging?: UserContactsPagingInfo
 
     /**
      * Information on address book groups
      */
-    groups: UserContactsGroupsInfo
+    groups?: UserContactsGroupsInfo
 }
 
 export default ContactList

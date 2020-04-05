@@ -6,63 +6,63 @@ class ActiveCallInfo
 {
     /**
      */
-    id: string
+    id?: string
 
     /**
      * Enum: Inbound, Outbound
      */
-    direction: string
+    direction?: string
 
     /**
      * Phone number or extension number of a caller. For GCM transport type '_from' property should be used
      */
-    from: string
+    from?: string
 
     /**
      * Name of a caller
      */
-    fromName: string
+    fromName?: string
 
     /**
      * Phone number or extension number of a callee
      */
-    to: string
+    to?: string
 
     /**
      * Name of a callee
      */
-    toName: string
+    toName?: string
 
     /**
      * Time when the call is actually started
      */
-    startTime: string
+    startTime?: string
 
     /**
      */
-    telephonyStatus: string
+    telephonyStatus?: string
 
     /**
      */
-    sipData: DetailedCallInfo
+    sipData?: DetailedCallInfo
 
     /**
      */
-    sessionId: string
+    sessionId?: string
 
     /**
      */
-    terminationType: string
+    terminationType?: string
 
     /**
      * Primary call session information. Supported for Call Queues only
      */
-    primary: PrimaryCQInfo
+    primary?: PrimaryCQInfo
 
     /**
      * Additional call session information. Supported for Call Queues only
      */
-    additional: AdditionalCQInfo
+    additional?: AdditionalCQInfo
 }
 
 export default ActiveCallInfo

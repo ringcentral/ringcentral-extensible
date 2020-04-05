@@ -5,19 +5,19 @@ class PartySuperviseRequest
      * Required
      * Enum: Listen
      */
-    mode: string
+    mode?: string
 
     /**
      * Internal identifier of a supervisor's device
      * Required
      */
-    supervisorDeviceId: string
+    supervisorDeviceId?: string
 
     /**
      * Mailbox ID of a user that will be monitored
      * Required
      */
-    agentExtensionId: string
+    agentExtensionId?: string
 }
 
 export default PartySuperviseRequest

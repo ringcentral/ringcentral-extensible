@@ -3,12 +3,12 @@ class ParamsInfo
     /**
      * Parameter name
      */
-    name: string
+    name?: string
 
     /**
      * Parameter value
      */
-    value: string
+    value?: string
 }
 
 export default ParamsInfo

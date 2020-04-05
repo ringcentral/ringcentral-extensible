@@ -6,55 +6,55 @@ class PhoneNumberInfoIntId
     /**
      * Internal identifier of a phone number
      */
-    id: number
+    id?: number
 
     /**
      * Brief information on a phone number country
      */
-    country: PhoneNumberCountryInfo
+    country?: PhoneNumberCountryInfo
 
     /**
      * Information on the extension, to which the phone number is assigned. Returned only for the request of Account phone number list
      */
-    extension: DeviceProvisioningExtensionInfo
+    extension?: DeviceProvisioningExtensionInfo
 
     /**
      * Custom user name of a phone number, if any
      */
-    label: string
+    label?: string
 
     /**
      * Location (City, State). Filled for local US numbers
      */
-    location: string
+    location?: string
 
     /**
      * Payment type. 'External' is returned for forwarded numbers which are not terminated in the RingCentral phone system
      * Enum: External, TollFree, Local
      */
-    paymentType: string
+    paymentType?: string
 
     /**
      * Phone number
      */
-    phoneNumber: string
+    phoneNumber?: string
 
     /**
      * Status of a phone number. If the value is 'Normal', the phone number is ready to be used. Otherwise it is an external number not yet ported to RingCentral
      */
-    status: string
+    status?: string
 
     /**
      * Phone number type
      * Enum: VoiceFax, FaxOnly, VoiceOnly
      */
-    type: string
+    type?: string
 
     /**
      * Usage type of the phone number
      * Enum: MainCompanyNumber, AdditionalCompanyNumber, CompanyNumber, DirectNumber, CompanyFaxNumber, ForwardedNumber, ForwardedCompanyNumber, ContactCenterNumber
      */
-    usageType: string
+    usageType?: string
 }
 
 export default PhoneNumberInfoIntId

@@ -5,7 +5,7 @@ class TaskResultInfo
     /**
      * Detailed task results by elements from initial request
      */
-    records: TaskResultRecord[]
+    records?: TaskResultRecord[]
 }
 
 export default TaskResultInfo

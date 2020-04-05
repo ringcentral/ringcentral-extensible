@@ -10,45 +10,45 @@ class GetServiceInfoResponse
     /**
      * Canonical URI of the account Service Info resource
      */
-    uri: string
+    uri?: string
 
     /**
      * Account Service Plan name
      */
-    servicePlanName: string
+    servicePlanName?: string
 
     /**
      * Information on account brand
      */
-    brand: BrandInfo
+    brand?: BrandInfo
 
     /**
      * Information on account service plan
      */
-    servicePlan: ServicePlanInfo
+    servicePlan?: ServicePlanInfo
 
     /**
      */
-    targetServicePlan: ServicePlanInfo
+    targetServicePlan?: ServicePlanInfo
 
     /**
      * Information on account billing plan
      */
-    billingPlan: BillingPlanInfo
+    billingPlan?: BillingPlanInfo
 
     /**
      * Service features information, see Service Feature List
      */
-    serviceFeatures: ServiceFeatureInfo[]
+    serviceFeatures?: ServiceFeatureInfo[]
 
     /**
      * Limits which are effective for the account
      */
-    limits: AccountLimits
+    limits?: AccountLimits
 
     /**
      */
-    package: PackageInfo
+    package?: PackageInfo
 }
 
 export default GetServiceInfoResponse

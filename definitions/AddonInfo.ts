@@ -2,15 +2,15 @@ class AddonInfo
 {
     /**
      */
-    id: string
+    id?: string
 
     /**
      */
-    name: string
+    name?: string
 
     /**
      */
-    count: number
+    count?: number
 }
 
 export default AddonInfo

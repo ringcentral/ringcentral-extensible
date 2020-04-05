@@ -2,7 +2,7 @@ class MessagingNavigationInfoURI
 {
     /**
      */
-    uri: string
+    uri?: string
 }
 
 export default MessagingNavigationInfoURI

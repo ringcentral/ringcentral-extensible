@@ -3,37 +3,37 @@ class AutomaticLocationUpdatesUserInfo
     /**
      * Internal identifier of a device
      */
-    id: string
+    id?: string
 
     /**
      * User name
      */
-    fullName: string
+    fullName?: string
 
     /**
      */
-    extensionNumber: string
+    extensionNumber?: string
 
     /**
      * Specifies if Automatic Location Updates feature is enabled
      */
-    featureEnabled: boolean
+    featureEnabled?: boolean
 
     /**
      * User extension type
      * Enum: User, Limited
      */
-    type: string
+    type?: string
 
     /**
      * Site data
      */
-    site: string
+    site?: string
 
     /**
      * Department name
      */
-    department: string
+    department?: string
 }
 
 export default AutomaticLocationUpdatesUserInfo

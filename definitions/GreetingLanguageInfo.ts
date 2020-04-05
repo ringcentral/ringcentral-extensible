@@ -3,17 +3,17 @@ class GreetingLanguageInfo
     /**
      * Internal identifier of a greeting language
      */
-    id: string
+    id?: string
 
     /**
      * Localization code of a greeting language
      */
-    localeCode: string
+    localeCode?: string
 
     /**
      * Official name of a greeting language
      */
-    name: string
+    name?: string
 }
 
 export default GreetingLanguageInfo

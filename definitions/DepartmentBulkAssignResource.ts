@@ -4,7 +4,7 @@ class DepartmentBulkAssignResource
 {
     /**
      */
-    items: BulkAssignItem[]
+    items?: BulkAssignItem[]
 }
 
 export default DepartmentBulkAssignResource

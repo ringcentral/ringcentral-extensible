@@ -5,7 +5,7 @@ class APNSInfo
     /**
      * Notification priority data
      */
-    aps: APSInfo
+    aps?: APSInfo
 }
 
 export default APNSInfo

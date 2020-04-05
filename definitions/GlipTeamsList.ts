@@ -7,11 +7,11 @@ class GlipTeamsList
      * List of teams
      * Required
      */
-    records: GlipTeamInfo[]
+    records?: GlipTeamInfo[]
 
     /**
      */
-    navigation: GlipNavigationInfo
+    navigation?: GlipNavigationInfo
 }
 
 export default GlipTeamsList

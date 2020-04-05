@@ -4,44 +4,44 @@ class ListChatTasksParameters
      * The end datetime for resulting records in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format including timezone, e.g. 2019-03-10T18:23:45Z
      * Default: now
      */
-    creationTimeTo: string
+    creationTimeTo?: string
 
     /**
      * The start datetime for resulting records in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format including timezone, e.g. 2016-02-23T00:00:00
      */
-    creationTimeFrom: string
+    creationTimeFrom?: string
 
     /**
      * Internal identifier of a task creator
      */
-    creatorId: string[]
+    creatorId?: string[]
 
     /**
      * Task execution status
      */
-    status: string[]
+    status?: string[]
 
     /**
      * Task assignment status
      * Enum: Unassigned, Assigned
      */
-    assignmentStatus: string
+    assignmentStatus?: string
 
     /**
      * Internal identifier of a task assignee
      */
-    assigneeId: string[]
+    assigneeId?: string[]
 
     /**
      * Task execution status by assignee(-s) specified in assigneeId
      * Enum: Pending, Completed
      */
-    assigneeStatus: string
+    assigneeStatus?: string
 
     /**
      * Token of the current page. If token is omitted then the first page should be returned
      */
-    pageToken: string
+    pageToken?: string
 
     /**
      * Number of records to be returned per screen
@@ -49,7 +49,7 @@ class ListChatTasksParameters
      * Minimum: 1
      * Default: 30
      */
-    recordCount: number
+    recordCount?: number
 }
 
 export default ListChatTasksParameters

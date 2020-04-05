@@ -3,13 +3,13 @@ class ForwardingNumberInfoRulesCreateRuleRequest
     /**
      * Internal identifier of a forwarding number
      */
-    id: string
+    id?: string
 
     /**
      * Forwarding phone number type
      * Enum: Home, Mobile, Work, PhoneLine, Outage, Other
      */
-    type: string
+    type?: string
 }
 
 export default ForwardingNumberInfoRulesCreateRuleRequest

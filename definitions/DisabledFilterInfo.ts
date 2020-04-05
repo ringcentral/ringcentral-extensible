@@ -3,17 +3,17 @@ class DisabledFilterInfo
     /**
      * Event filter that is disabled for the user
      */
-    filter: string
+    filter?: string
 
     /**
      * Reason why the filter is disabled for the user
      */
-    reason: string
+    reason?: string
 
     /**
      * Error message
      */
-    message: string
+    message?: string
 }
 
 export default DisabledFilterInfo

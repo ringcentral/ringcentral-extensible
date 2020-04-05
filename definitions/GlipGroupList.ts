@@ -7,11 +7,11 @@ class GlipGroupList
      * List of groups/teams/private chats
      * Required
      */
-    records: GlipGroupInfo[]
+    records?: GlipGroupInfo[]
 
     /**
      */
-    navigation: GlipNavigationInfo
+    navigation?: GlipNavigationInfo
 }
 
 export default GlipGroupList

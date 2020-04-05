@@ -5,22 +5,22 @@ class ProvisioningNavigationInfo
     /**
      * Canonical URI for the first page of the list
      */
-    firstPage: ProvisioningNavigationInfoUri
+    firstPage?: ProvisioningNavigationInfoUri
 
     /**
      * Canonical URI for the next page of the list
      */
-    nextPage: ProvisioningNavigationInfoUri
+    nextPage?: ProvisioningNavigationInfoUri
 
     /**
      * Canonical URI for the previous page of the list
      */
-    previousPage: ProvisioningNavigationInfoUri
+    previousPage?: ProvisioningNavigationInfoUri
 
     /**
      * Canonical URI for the last page of the list
      */
-    lastPage: ProvisioningNavigationInfoUri
+    lastPage?: ProvisioningNavigationInfoUri
 }
 
 export default ProvisioningNavigationInfo

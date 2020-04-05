@@ -3,19 +3,19 @@ class SyncInfo
     /**
      * Enum: FSync, ISync
      */
-    syncType: string
+    syncType?: string
 
     /**
      */
-    syncToken: string
+    syncToken?: string
 
     /**
      */
-    syncTime: string
+    syncTime?: string
 
     /**
      */
-    olderRecordsExist: boolean
+    olderRecordsExist?: boolean
 }
 
 export default SyncInfo

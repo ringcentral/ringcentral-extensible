@@ -3,12 +3,12 @@ class ContactCenterProvider
     /**
      * Internal identifier of the provider
      */
-    id: string
+    id?: string
 
     /**
      * Provider's name
      */
-    name: string
+    name?: string
 }
 
 export default ContactCenterProvider

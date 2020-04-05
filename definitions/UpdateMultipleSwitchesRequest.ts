@@ -4,7 +4,7 @@ class UpdateMultipleSwitchesRequest
 {
     /**
      */
-    records: UpdateSwitchInfo[]
+    records?: UpdateSwitchInfo[]
 }
 
 export default UpdateMultipleSwitchesRequest

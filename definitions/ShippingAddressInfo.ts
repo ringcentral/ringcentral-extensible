@@ -3,97 +3,97 @@ class ShippingAddressInfo
     /**
      * Name of a primary contact person (receiver)
      */
-    customerName: string
+    customerName?: string
 
     /**
      * Name of an additional contact person. Should be specified for countries except the US, Canada, the UK and Australia.
      */
-    additionalCustomerName: string
+    additionalCustomerName?: string
 
     /**
      * Email of a primary contact person (receiver). Should be specified for countries except the US, Canada, the UK and Australia.
      */
-    customerEmail: string
+    customerEmail?: string
 
     /**
      * Email of an additional contact person. Should be specified for countries except the US, Canada, the UK and Australia.
      */
-    additionalCustomerEmail: string
+    additionalCustomerEmail?: string
 
     /**
      * Phone number of a primary contact person (receiver). Should be specified for countries except the US, Canada, the UK and Australia
      */
-    customerPhone: string
+    customerPhone?: string
 
     /**
      * Phone number of an additional contact person. Should be specified for countries except the US, Canada, the UK & Australia.
      */
-    additionalCustomerPhone: string
+    additionalCustomerPhone?: string
 
     /**
      * Street address, line 1 - street address, P.O. box, company name, c/o
      */
-    street: string
+    street?: string
 
     /**
      * Street address, line 2 - apartment, suite, unit, building, floor, etc.
      */
-    street2: string
+    street2?: string
 
     /**
      * City name
      */
-    city: string
+    city?: string
 
     /**
      * State/province name
      */
-    state: string
+    state?: string
 
     /**
      * Internal identifier of a state
      */
-    stateId: string
+    stateId?: string
 
     /**
      * ISO code of a state
      */
-    stateIsoCode: string
+    stateIsoCode?: string
 
     /**
      * Full name of a state
      */
-    stateName: string
+    stateName?: string
 
     /**
      * Internal identifier of a country
      */
-    countryId: string
+    countryId?: string
 
     /**
      * ISO code of a country
      */
-    countryIsoCode: string
+    countryIsoCode?: string
 
     /**
      * Country name
      */
-    country: string
+    country?: string
 
     /**
      * Full name of a country
      */
-    countryName: string
+    countryName?: string
 
     /**
      * Zip code
      */
-    zip: string
+    zip?: string
 
     /**
      * National taxpayer identification number. Should be specified for Brazil (CNPJ/CPF number) and Argentina (CUIT number).
      */
-    taxId: string
+    taxId?: string
 }
 
 export default ShippingAddressInfo

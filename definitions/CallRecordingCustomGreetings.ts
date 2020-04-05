@@ -5,7 +5,7 @@ class CallRecordingCustomGreetings
 {
     /**
      */
-    records: CallRecordingCustomGreeting[]
+    records?: CallRecordingCustomGreeting[]
 }
 
 export default CallRecordingCustomGreetings

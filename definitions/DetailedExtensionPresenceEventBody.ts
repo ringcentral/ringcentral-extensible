@@ -6,72 +6,72 @@ class DetailedExtensionPresenceEventBody
      * Internal identifier of an extension
      * Default: ~
      */
-    extensionId: string
+    extensionId?: string
 
     /**
      * Telephony presence status. Returned if telephony status is changed.
      * Enum: NoCall, CallConnected, Ringing, OnHold, ParkedCall
      */
-    telephonyStatus: string
+    telephonyStatus?: string
 
     /**
      * List of the latest 7 active calls on extension
      */
-    activeCalls: ActiveCallInfoWithoutSIP[]
+    activeCalls?: ActiveCallInfoWithoutSIP[]
 
     /**
      * Order number of a notification to state the chronology
      */
-    sequence: number
+    sequence?: number
 
     /**
      * Aggregated presence status, calculated from a number of sources
      * Enum: Offline, Busy, Available
      */
-    presenceStatus: string
+    presenceStatus?: string
 
     /**
      * User-defined presence status (as previously published by the user)
      * Enum: Offline, Busy, Available
      */
-    userStatus: string
+    userStatus?: string
 
     /**
      * Meetings presence status
      * Enum: Connected, Disconnected
      */
-    meetingStatus: string
+    meetingStatus?: string
 
     /**
      * Extended DnD (Do not Disturb) status
      * Enum: TakeAllCalls, DoNotAcceptAnyCalls, DoNotAcceptDepartmentCalls, TakeDepartmentCallsOnly
      */
-    dndStatus: string
+    dndStatus?: string
 
     /**
      * If 'True' enables other extensions to see the extension presence status
      */
-    allowSeeMyPresence: boolean
+    allowSeeMyPresence?: boolean
 
     /**
      * If 'True' enables to ring extension phone, if any user monitored by this extension is ringing
      */
-    ringOnMonitoredCall: boolean
+    ringOnMonitoredCall?: boolean
 
     /**
      * If 'True' enables the extension user to pick up a monitored line on hold
      */
-    pickUpCallsOnHold: boolean
+    pickUpCallsOnHold?: boolean
 
     /**
      * Total number of active calls on extension at the present moment
      */
-    totalActiveCalls: number
+    totalActiveCalls?: number
 
     /**
      * Internal identifier of a subscription owner extension
      */
-    ownerId: string
+    ownerId?: string
 }
 
 export default DetailedExtensionPresenceEventBody

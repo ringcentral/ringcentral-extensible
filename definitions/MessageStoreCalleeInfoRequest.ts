@@ -3,12 +3,12 @@ class MessageStoreCalleeInfoRequest
     /**
      * Phone number in E.164 format
      */
-    phoneNumber: string
+    phoneNumber?: string
 
     /**
      * Name of the callee
      */
-    name: string
+    name?: string
 }
 
 export default MessageStoreCalleeInfoRequest

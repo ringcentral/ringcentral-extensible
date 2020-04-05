@@ -8,25 +8,25 @@ class CallMonitoringGroups
      * Link to a call monitoring groups resource
      * Required
      */
-    uri: string
+    uri?: string
 
     /**
      * List of call monitoring group members
      * Required
      */
-    records: CallMonitoringGroup[]
+    records?: CallMonitoringGroup[]
 
     /**
      * Information on navigation
      * Required
      */
-    navigation: ProvisioningNavigationInfo
+    navigation?: ProvisioningNavigationInfo
 
     /**
      * Information on paging
      * Required
      */
-    paging: ProvisioningPagingInfo
+    paging?: ProvisioningPagingInfo
 }
 
 export default CallMonitoringGroups

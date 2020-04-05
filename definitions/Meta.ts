@@ -3,21 +3,21 @@ class Meta
 {
     /**
      */
-    created: string
+    created?: string
 
     /**
      */
-    lastModified: string
+    lastModified?: string
 
     /**
      * resource location URI
      */
-    location: string
+    location?: string
 
     /**
      * Enum: User, Group
      */
-    resourceType: string
+    resourceType?: string
 }
 
 export default Meta

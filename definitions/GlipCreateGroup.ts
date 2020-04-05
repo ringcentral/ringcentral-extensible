@@ -7,27 +7,27 @@ class GlipCreateGroup
      * Required
      * Enum: PrivateChat, Team
      */
-    type: string
+    type?: string
 
     /**
      * For 'Team' group type only. Team access level
      */
-    isPublic: boolean
+    isPublic?: boolean
 
     /**
      * For 'Team' group type only. Team name
      */
-    name: string
+    name?: string
 
     /**
      * For 'Team' group type only. Team description
      */
-    description: string
+    description?: string
 
     /**
      * “List of glip members. For 'PrivateChat' group type 2 members only are supported”
      */
-    members: GlipMemberInfo[]
+    members?: GlipMemberInfo[]
 }
 
 export default GlipCreateGroup

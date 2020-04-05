@@ -4,16 +4,16 @@ class FormattingLocaleInfo
     /**
      * Internal identifier of a formatting language
      */
-    id: string
+    id?: string
 
     /**
      * Localization code of a formatting language
      */
-    localeCode: string
+    localeCode?: string
 
     /**
      */
-    name: string
+    name?: string
 }
 
 export default FormattingLocaleInfo

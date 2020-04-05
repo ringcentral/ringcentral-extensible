@@ -7,25 +7,25 @@ class GetExtensionPhoneNumbersResponse
     /**
      * Link to the user's phone number list resource
      */
-    uri: string
+    uri?: string
 
     /**
      * List of phone numbers
      * Required
      */
-    records: UserPhoneNumberInfo[]
+    records?: UserPhoneNumberInfo[]
 
     /**
      * Information on navigation
      * Required
      */
-    navigation: ProvisioningNavigationInfo
+    navigation?: ProvisioningNavigationInfo
 
     /**
      * Information on paging
      * Required
      */
-    paging: ProvisioningPagingInfo
+    paging?: ProvisioningPagingInfo
 }
 
 export default GetExtensionPhoneNumbersResponse

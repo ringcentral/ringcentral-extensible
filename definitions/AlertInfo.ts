@@ -3,12 +3,12 @@ class AlertInfo
     /**
      * Title of a message
      */
-    title: string
+    title?: string
 
     /**
      * Message Description
      */
-    body: string
+    body?: string
 }
 
 export default AlertInfo

@@ -4,7 +4,7 @@ class MeetingServiceInfoRequest
 {
     /**
      */
-    externalUserInfo: MeetingExternalUserInfoResource
+    externalUserInfo?: MeetingExternalUserInfoResource
 }
 
 export default MeetingServiceInfoRequest

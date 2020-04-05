@@ -7,22 +7,22 @@ class AccountPresenceInfo
     /**
      * Canonical URI of account presence resource
      */
-    uri: string
+    uri?: string
 
     /**
      * List of Prompts
      */
-    records: GetPresenceInfo[]
+    records?: GetPresenceInfo[]
 
     /**
      * Information on navigation
      */
-    navigation: PresenceNavigationInfo
+    navigation?: PresenceNavigationInfo
 
     /**
      * Information on paging
      */
-    paging: PresencePagingInfo
+    paging?: PresencePagingInfo
 }
 
 export default AccountPresenceInfo

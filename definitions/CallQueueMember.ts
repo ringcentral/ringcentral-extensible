@@ -5,22 +5,22 @@ class CallQueueMember
     /**
      * Internal identifier of an extension
      */
-    id: string
+    id?: string
 
     /**
      * Extension full name
      */
-    name: string
+    name?: string
 
     /**
      * Extension number
      */
-    extensionNumber: string
+    extensionNumber?: string
 
     /**
      * Extension site
      */
-    site: SiteResource
+    site?: SiteResource
 }
 
 export default CallQueueMember

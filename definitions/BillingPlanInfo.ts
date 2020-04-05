@@ -3,34 +3,34 @@ class BillingPlanInfo
     /**
      * Internal identifier of a billing plan
      */
-    id: string
+    id?: string
 
     /**
      * Billing plan name
      */
-    name: string
+    name?: string
 
     /**
      * Duration period
      * Enum: Month, Day
      */
-    durationUnit: string
+    durationUnit?: string
 
     /**
      * Number of duration units
      */
-    duration: number
+    duration?: number
 
     /**
      * Billing plan type
      * Enum: Initial, Regular, Suspended, Trial, TrialNoCC, Free
      */
-    type: string
+    type?: string
 
     /**
      * Included digital lines count
      */
-    includedPhoneLines: number
+    includedPhoneLines?: number
 }
 
 export default BillingPlanInfo

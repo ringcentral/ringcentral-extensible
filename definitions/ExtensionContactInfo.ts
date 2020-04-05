@@ -5,32 +5,32 @@ class ExtensionContactInfo
     /**
      * For User extension type only. Extension user first name
      */
-    firstName: string
+    firstName?: string
 
     /**
      * For User extension type only. Extension user last name
      */
-    lastName: string
+    lastName?: string
 
     /**
      * Extension user company name
      */
-    company: string
+    company?: string
 
     /**
      * Email of extension user
      */
-    email: string
+    email?: string
 
     /**
      * Extension user contact phone number
      */
-    businessPhone: string
+    businessPhone?: string
 
     /**
      * Business address of extension user company
      */
-    businessAddress: ContactAddressInfoDevices
+    businessAddress?: ContactAddressInfoDevices
 }
 
 export default ExtensionContactInfo

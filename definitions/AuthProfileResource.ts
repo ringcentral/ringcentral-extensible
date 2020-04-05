@@ -4,11 +4,11 @@ class AuthProfileResource
 {
     /**
      */
-    uri: string
+    uri?: string
 
     /**
      */
-    permissions: ActivePermissionResource[]
+    permissions?: ActivePermissionResource[]
 }
 
 export default AuthProfileResource

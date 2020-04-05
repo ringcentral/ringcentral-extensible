@@ -4,16 +4,16 @@ class PatchOperation
      * Required
      * Enum: add, replace, remove
      */
-    op: string
+    op?: string
 
     /**
      */
-    path: string
+    path?: string
 
     /**
      * corresponding 'value' of that field specified by 'path'
      */
-    value: string
+    value?: string
 }
 
 export default PatchOperation

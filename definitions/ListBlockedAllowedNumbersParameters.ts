@@ -2,16 +2,16 @@ class ListBlockedAllowedNumbersParameters
 {
     /**
      */
-    page: number
+    page?: number
 
     /**
      */
-    perPage: number
+    perPage?: number
 
     /**
      * Enum: Blocked, Allowed
      */
-    status: string
+    status?: string
 }
 
 export default ListBlockedAllowedNumbersParameters

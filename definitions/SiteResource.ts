@@ -3,12 +3,12 @@ class SiteResource
     /**
      * Site extension identifier
      */
-    id: string
+    id?: string
 
     /**
      * Site extension name
      */
-    name: string
+    name?: string
 }
 
 export default SiteResource

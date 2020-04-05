@@ -4,7 +4,7 @@ class CreateMultipleSwitchesRequest
 {
     /**
      */
-    records: CreateSwitchInfo[]
+    records?: CreateSwitchInfo[]
 }
 
 export default CreateMultipleSwitchesRequest

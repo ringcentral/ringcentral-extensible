@@ -3,13 +3,13 @@ class GlipPreferencesChats
     /**
      * Default: 10
      */
-    maxCount: number
+    maxCount?: number
 
     /**
      * Default: CombineAllChatTypes
      * Enum: SeparateAllChatTypes, SeparateConversationsAndTeams, CombineAllChatTypes
      */
-    leftRailMode: string
+    leftRailMode?: string
 }
 
 export default GlipPreferencesChats

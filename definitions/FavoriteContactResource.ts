@@ -2,19 +2,19 @@ class FavoriteContactResource
 {
     /**
      */
-    id: string
+    id?: string
 
     /**
      */
-    extensionId: string
+    extensionId?: string
 
     /**
      */
-    accountId: string
+    accountId?: string
 
     /**
      */
-    contactId: string
+    contactId?: string
 }
 
 export default FavoriteContactResource

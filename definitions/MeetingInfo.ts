@@ -2,15 +2,15 @@ class MeetingInfo
 {
     /**
      */
-    id: string
+    id?: string
 
     /**
      */
-    topic: string
+    topic?: string
 
     /**
      */
-    startTime: string
+    startTime?: string
 }
 
 export default MeetingInfo

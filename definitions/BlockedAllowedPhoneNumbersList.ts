@@ -8,21 +8,21 @@ class BlockedAllowedPhoneNumbersList
     /**
      * Link to a list of blocked/allowed phone numbers resource
      */
-    uri: string
+    uri?: string
 
     /**
      */
-    records: BlockedAllowedPhoneNumberInfo[]
+    records?: BlockedAllowedPhoneNumberInfo[]
 
     /**
      * Information on navigation
      */
-    navigation: CallHandlingNavigationInfo
+    navigation?: CallHandlingNavigationInfo
 
     /**
      * Information on paging
      */
-    paging: CallHandlingPagingInfo
+    paging?: CallHandlingPagingInfo
 }
 
 export default BlockedAllowedPhoneNumbersList

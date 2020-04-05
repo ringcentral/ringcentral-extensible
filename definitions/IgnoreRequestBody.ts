@@ -4,7 +4,7 @@ class IgnoreRequestBody
      * Internal device identifier
      * Required
      */
-    deviceId: string
+    deviceId?: string
 }
 
 export default IgnoreRequestBody

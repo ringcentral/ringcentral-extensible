@@ -3,17 +3,17 @@ class CallQueuePresenceEventBody
     /**
      * Agent extension ID
      */
-    extensionId: string
+    extensionId?: string
 
     /**
      * Call queue extension ID
      */
-    callQueueId: string
+    callQueueId?: string
 
     /**
      * Call queue agent availability for calls of this queue
      */
-    acceptCalls: boolean
+    acceptCalls?: boolean
 }
 
 export default CallQueuePresenceEventBody

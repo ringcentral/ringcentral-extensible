@@ -5,7 +5,7 @@ class ReadUserCallRecordParameters
      * Default: Simple
      * Enum: Simple, Detailed
      */
-    view: string
+    view?: string
 }
 
 export default ReadUserCallRecordParameters

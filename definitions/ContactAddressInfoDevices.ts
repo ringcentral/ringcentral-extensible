@@ -3,27 +3,27 @@ class ContactAddressInfoDevices
     /**
      * Country name of extension user company. Not returned for Address Book
      */
-    country: string
+    country?: string
 
     /**
      * State/province name of extension user company
      */
-    state: string
+    state?: string
 
     /**
      * City name of extension user company
      */
-    city: string
+    city?: string
 
     /**
      * Street address of extension user company
      */
-    street: string
+    street?: string
 
     /**
      * Zip code of extension user company
      */
-    zip: string
+    zip?: string
 }
 
 export default ContactAddressInfoDevices

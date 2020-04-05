@@ -2,7 +2,7 @@ class UserContactsNavigationInfoUri
 {
     /**
      */
-    uri: string
+    uri?: string
 }
 
 export default UserContactsNavigationInfoUri

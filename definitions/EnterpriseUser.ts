@@ -2,7 +2,7 @@ class EnterpriseUser
 {
     /**
      */
-    department: string
+    department?: string
 }
 
 export default EnterpriseUser

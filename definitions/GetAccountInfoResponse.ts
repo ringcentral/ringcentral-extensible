@@ -10,85 +10,85 @@ class GetAccountInfoResponse
     /**
      * Internal identifier of an account
      */
-    id: number
+    id?: number
 
     /**
      * Canonical URI of an account
      */
-    uri: string
+    uri?: string
 
     /**
      * Internal identifier of an account in the billing system
      */
-    bsid: string
+    bsid?: string
 
     /**
      * Main phone number of the current account
      */
-    mainNumber: string
+    mainNumber?: string
 
     /**
      * Operator's extension information. This extension will receive all calls and messages intended for the operator
      */
-    operator: GetExtensionInfoResponse
+    operator?: GetExtensionInfoResponse
 
     /**
      * Additional account identifier, developed and applied by the client
      */
-    partnerId: string
+    partnerId?: string
 
     /**
      * Account service information, including brand, service plan and billing plan
      */
-    serviceInfo: ServiceInfo
+    serviceInfo?: ServiceInfo
 
     /**
      * Specifies account configuration wizard state (web service setup)
      * Default: NotStarted
      * Enum: NotStarted, Incomplete, Completed
      */
-    setupWizardState: string
+    setupWizardState?: string
 
     /**
      * Account sign up data
      */
-    signupInfo: SignupInfoResource
+    signupInfo?: SignupInfoResource
 
     /**
      * Status of the current account
      * Enum: Initial, Confirmed, Unconfirmed, Disabled
      */
-    status: string
+    status?: string
 
     /**
      * Status information (reason, comment, lifetime). Returned for 'Disabled' status only
      */
-    statusInfo: AccountStatusInfo
+    statusInfo?: AccountStatusInfo
 
     /**
      * Account level region data (web service Auto-Receptionist settings)
      */
-    regionalSettings: RegionalSettings
+    regionalSettings?: RegionalSettings
 
     /**
      * Specifies whether an account is included into any federation of accounts or not
      */
-    federated: boolean
+    federated?: boolean
 
     /**
      * If outbound call prefix is not specified, or set to null (0), then the parameter is not returned; the supported value range is 2-9
      */
-    outboundCallPrefix: number
+    outboundCallPrefix?: number
 
     /**
      * Customer facing identifier. Returned for accounts with the turned off PBX features. Equals to main company number in [E.164](https://www.itu.int/rec/T-REC-E.164-201011-I) (without '+' sign)format
      */
-    cfid: string
+    cfid?: string
 
     /**
      * Limits which are effective for the account
      */
-    limits: AccountLimits
+    limits?: AccountLimits
 }
 
 export default GetAccountInfoResponse

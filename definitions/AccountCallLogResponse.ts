@@ -7,22 +7,22 @@ class AccountCallLogResponse
     /**
      * Link to the list of company call log records
      */
-    uri: string
+    uri?: string
 
     /**
      * List of call log records
      */
-    records: CompanyCallLogRecord[]
+    records?: CompanyCallLogRecord[]
 
     /**
      * Information on navigation
      */
-    navigation: CallLogNavigationInfo
+    navigation?: CallLogNavigationInfo
 
     /**
      * Information on paging
      */
-    paging: CallLogPagingInfo
+    paging?: CallLogPagingInfo
 }
 
 export default AccountCallLogResponse

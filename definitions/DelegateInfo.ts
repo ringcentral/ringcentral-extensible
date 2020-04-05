@@ -3,12 +3,12 @@ class DelegateInfo
     /**
      * Internal identifier of a Secretary extension
      */
-    id: string
+    id?: string
 
     /**
      * Custom name of a Secretary extension
      */
-    name: string
+    name?: string
 }
 
 export default DelegateInfo

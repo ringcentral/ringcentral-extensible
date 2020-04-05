@@ -3,22 +3,22 @@ class VersionInfo
     /**
      * Canonical URI of API versions
      */
-    uri: string
+    uri?: string
 
     /**
      * Version of the RingCentral REST API
      */
-    versionString: string
+    versionString?: string
 
     /**
      * Release date of this version
      */
-    releaseDate: string
+    releaseDate?: string
 
     /**
      * URI part determining the current version
      */
-    uriString: string
+    uriString?: string
 }
 
 export default VersionInfo
