@@ -29,10 +29,20 @@ class RestClient {
     })
   }
 
+  async get(endpoint: string, params?: {}) : Promise<{}> {
+    const r = await this.httpClient.get(endpoint, {
+      params,
+      headers: {
+        Authorization: `Bearer ${this.token.access_token}`
+      }
+    })
+    return r.data
+  }
+
   async authorize(getTokenRequest: GetTokenRequest): Promise<TokenInfo>
   async authorize(username: string, extension: string, password: string): Promise<TokenInfo>
   async authorize(authCode: string, redirectUri: string): Promise<TokenInfo>
-  async authorize(arg1: any, arg2?: string, arg3?: string): Promise<TokenInfo> {
+  async authorize(arg1: (string | GetTokenRequest), arg2?: string, arg3?: string): Promise<TokenInfo> {
     let getTokenRequest = new GetTokenRequest()
     if (arg1 instanceof GetTokenRequest) {
       getTokenRequest = arg1
