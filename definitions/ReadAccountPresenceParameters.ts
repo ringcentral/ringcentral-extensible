@@ -1,23 +1,23 @@
 class ReadAccountPresenceParameters
 {
-    /// <summary>
-    /// Whether to return detailed telephony state
-    /// </summary>
+    /**
+     * Whether to return detailed telephony state
+     */
     detailedTelephonyState: boolean
 
-    /// <summary>
-    /// Whether to return SIP data
-    /// </summary>
+    /**
+     * Whether to return SIP data
+     */
     sipData: boolean
 
-    /// <summary>
-    /// Page number for account presence information
-    /// </summary>
+    /**
+     * Page number for account presence information
+     */
     page: number
 
-    /// <summary>
-    /// Number for account presence information items per page
-    /// </summary>
+    /**
+     * Number for account presence information items per page
+     */
     perPage: number
 }
 

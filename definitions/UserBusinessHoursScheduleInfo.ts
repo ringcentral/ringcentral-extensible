@@ -2,9 +2,9 @@ import WeeklyScheduleInfo from './WeeklyScheduleInfo'
 
 class UserBusinessHoursScheduleInfo
 {
-    /// <summary>
-    /// Weekly schedule
-    /// </summary>
+    /**
+     * Weekly schedule
+     */
     weeklyRanges: WeeklyScheduleInfo
 }
 

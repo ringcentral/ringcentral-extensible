@@ -1,13 +1,13 @@
 class ExtensionGrantListEventBody
 {
-    /// <summary>
-    /// Internal identifier of an extension
-    /// </summary>
+    /**
+     * Internal identifier of an extension
+     */
     extensionId: string
 
-    /// <summary>
-    /// Internal identifier of a subscription owner extension
-    /// </summary>
+    /**
+     * Internal identifier of a subscription owner extension
+     */
     ownerId: string
 }
 

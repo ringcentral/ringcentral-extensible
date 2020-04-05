@@ -4,72 +4,72 @@ import NotificationBlacklistedData from './NotificationBlacklistedData'
 
 class SubscriptionInfo
 {
-    /// <summary>
-    /// Internal identifier of a subscription
-    /// </summary>
+    /**
+     * Internal identifier of a subscription
+     */
     id: string
 
-    /// <summary>
-    /// Canonical URI of a subscription
-    /// </summary>
+    /**
+     * Canonical URI of a subscription
+     */
     uri: string
 
-    /// <summary>
-    /// Collection of API resources (message-store/presence/detailed presence) corresponding to events the user is subscribed to
-    /// </summary>
+    /**
+     * Collection of API resources (message-store/presence/detailed presence) corresponding to events the user is subscribed to
+     */
     eventFilters: string[]
 
-    /// <summary>
-    /// Collection of API resources (message-store/presence/detailed presence) corresponding to events the user is not subscribed to due to certain limitations
-    /// </summary>
+    /**
+     * Collection of API resources (message-store/presence/detailed presence) corresponding to events the user is not subscribed to due to certain limitations
+     */
     disabledFilters: DisabledFilterInfo[]
 
-    /// <summary>
-    /// Subscription expiration datetime in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format including timezone, for example 2016-03-10T18:07:52.534Z
-    /// </summary>
+    /**
+     * Subscription expiration datetime in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format including timezone, for example 2016-03-10T18:07:52.534Z
+     */
     expirationTime: string
 
-    /// <summary>
-    /// Subscription lifetime in seconds
-    /// Default: 900
-    /// </summary>
+    /**
+     * Subscription lifetime in seconds
+     * Default: 900
+     */
     expiresIn: number
 
-    /// <summary>
-    /// Subscription status
-    /// Enum: Active, Suspended, Blacklisted
-    /// </summary>
+    /**
+     * Subscription status
+     * Enum: Active, Suspended, Blacklisted
+     */
     status: string
 
-    /// <summary>
-    /// Subscription creation datetime in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format including timezone, for example 2016-03-10T18:07:52.534Z
-    /// </summary>
+    /**
+     * Subscription creation datetime in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format including timezone, for example 2016-03-10T18:07:52.534Z
+     */
     creationTime: string
 
-    /// <summary>
-    /// Delivery mode data
-    /// Required
-    /// </summary>
+    /**
+     * Delivery mode data
+     * Required
+     */
     deliveryMode: NotificationDeliveryMode
 
-    /// <summary>
-    /// </summary>
+    /**
+     */
     blacklistedData: NotificationBlacklistedData
 
-    /// <summary>
-    /// Notifications transportation provider name
-    /// Enum: PubNub, WebHook, RC/APNS, RC/GCM
-    /// </summary>
+    /**
+     * Notifications transportation provider name
+     * Enum: PubNub, WebHook, RC/APNS, RC/GCM
+     */
     transportType: string
 
-    /// <summary>
-    /// Name of a certificate. Supported for 'RC/APNS' and 'RC/GCM' transport types
-    /// </summary>
+    /**
+     * Name of a certificate. Supported for 'RC/APNS' and 'RC/GCM' transport types
+     */
     certificateName: string
 
-    /// <summary>
-    /// Identifier of a registration. Supported for 'RC/APNS' and 'RC/GCM' transport types
-    /// </summary>
+    /**
+     * Identifier of a registration. Supported for 'RC/APNS' and 'RC/GCM' transport types
+     */
     registrationId: string
 }
 

@@ -1,13 +1,13 @@
 class DataExportTaskContactInfo
 {
-    /// <summary>
-    /// Internal identifier of a contact
-    /// </summary>
+    /**
+     * Internal identifier of a contact
+     */
     id: string
 
-    /// <summary>
-    /// Email address of a contact
-    /// </summary>
+    /**
+     * Email address of a contact
+     */
     email: string
 }
 

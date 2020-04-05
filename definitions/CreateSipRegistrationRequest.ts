@@ -3,14 +3,14 @@ import SIPInfoRequest from './SIPInfoRequest'
 
 class CreateSipRegistrationRequest
 {
-    /// <summary>
-    /// Device unique description
-    /// </summary>
+    /**
+     * Device unique description
+     */
     device: DeviceInfoRequest
 
-    /// <summary>
-    /// SIP settings for device
-    /// </summary>
+    /**
+     * SIP settings for device
+     */
     sipInfo: SIPInfoRequest[]
 }
 

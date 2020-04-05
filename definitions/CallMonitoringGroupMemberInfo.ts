@@ -1,22 +1,22 @@
 class CallMonitoringGroupMemberInfo
 {
-    /// <summary>
-    /// Link to a call monitoring group member
-    /// </summary>
+    /**
+     * Link to a call monitoring group member
+     */
     uri: string
 
-    /// <summary>
-    /// Internal identifier of a call monitoring group member
-    /// </summary>
+    /**
+     * Internal identifier of a call monitoring group member
+     */
     id: string
 
-    /// <summary>
-    /// Extension number of a call monitoring group member
-    /// </summary>
+    /**
+     * Extension number of a call monitoring group member
+     */
     extensionNumber: string
 
-    /// <summary>
-    /// </summary>
+    /**
+     */
     permissions: string[]
 }
 

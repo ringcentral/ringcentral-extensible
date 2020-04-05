@@ -1,18 +1,18 @@
 class DepartmentInfo
 {
-    /// <summary>
-    /// Internal identifier of a department extension
-    /// </summary>
+    /**
+     * Internal identifier of a department extension
+     */
     id: string
 
-    /// <summary>
-    /// Canonical URI of a department extension
-    /// </summary>
+    /**
+     * Canonical URI of a department extension
+     */
     uri: string
 
-    /// <summary>
-    /// Number of a department extension
-    /// </summary>
+    /**
+     * Number of a department extension
+     */
     extensionNumber: string
 }
 

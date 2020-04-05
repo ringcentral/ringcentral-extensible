@@ -1,13 +1,13 @@
 class CallLogRecordDeviceInfo
 {
-    /// <summary>
-    /// Internal identifier of a device
-    /// </summary>
+    /**
+     * Internal identifier of a device
+     */
     id: string
 
-    /// <summary>
-    /// string to a device
-    /// </summary>
+    /**
+     * string to a device
+     */
     uri: string
 }
 

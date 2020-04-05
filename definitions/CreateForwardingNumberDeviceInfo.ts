@@ -1,8 +1,8 @@
 class CreateForwardingNumberDeviceInfo
 {
-    /// <summary>
-    /// Internal identifier of the other extension device
-    /// </summary>
+    /**
+     * Internal identifier of the other extension device
+     */
     id: string
 }
 

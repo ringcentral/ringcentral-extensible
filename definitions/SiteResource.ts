@@ -1,13 +1,13 @@
 class SiteResource
 {
-    /// <summary>
-    /// Site extension identifier
-    /// </summary>
+    /**
+     * Site extension identifier
+     */
     id: string
 
-    /// <summary>
-    /// Site extension name
-    /// </summary>
+    /**
+     * Site extension name
+     */
     name: string
 }
 

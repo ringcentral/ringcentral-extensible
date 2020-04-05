@@ -1,7 +1,7 @@
 class PronouncedNamePromptInfo
 {
-    /// <summary>
-    /// </summary>
+    /**
+     */
     id: string
 }
 

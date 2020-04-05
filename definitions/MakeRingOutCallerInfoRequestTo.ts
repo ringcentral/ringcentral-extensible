@@ -1,8 +1,8 @@
 class MakeRingOutCallerInfoRequestTo
 {
-    /// <summary>
-    /// Phone number in E.164 format
-    /// </summary>
+    /**
+     * Phone number in E.164 format
+     */
     phoneNumber: string
 }
 

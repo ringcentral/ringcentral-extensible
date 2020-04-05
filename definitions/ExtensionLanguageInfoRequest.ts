@@ -1,8 +1,8 @@
 class ExtensionLanguageInfoRequest
 {
-    /// <summary>
-    /// internal Identifier of a language
-    /// </summary>
+    /**
+     * internal Identifier of a language
+     */
     id: string
 }
 

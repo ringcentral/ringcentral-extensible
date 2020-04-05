@@ -1,13 +1,13 @@
 class AlertInfo
 {
-    /// <summary>
-    /// Title of a message
-    /// </summary>
+    /**
+     * Title of a message
+     */
     title: string
 
-    /// <summary>
-    /// Message Description
-    /// </summary>
+    /**
+     * Message Description
+     */
     body: string
 }
 

@@ -3,14 +3,14 @@ import GlipNavigationInfo from './GlipNavigationInfo'
 
 class GlipPosts
 {
-    /// <summary>
-    /// List of posts
-    /// Required
-    /// </summary>
+    /**
+     * List of posts
+     * Required
+     */
     records: GlipPostInfo[]
 
-    /// <summary>
-    /// </summary>
+    /**
+     */
     navigation: GlipNavigationInfo
 }
 

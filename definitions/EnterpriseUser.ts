@@ -1,7 +1,7 @@
 class EnterpriseUser
 {
-    /// <summary>
-    /// </summary>
+    /**
+     */
     department: string
 }
 

@@ -1,7 +1,7 @@
 class UserAnsweringRuleListNavigationPage
 {
-    /// <summary>
-    /// </summary>
+    /**
+     */
     uri: string
 }
 

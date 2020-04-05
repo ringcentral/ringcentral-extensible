@@ -1,34 +1,34 @@
 class GlipEveryoneInfo
 {
-    /// <summary>
-    /// Internal identifier of a chat
-    /// </summary>
+    /**
+     * Internal identifier of a chat
+     */
     id: string
 
-    /// <summary>
-    /// Type of a chat
-    /// Enum: Everyone
-    /// </summary>
+    /**
+     * Type of a chat
+     * Enum: Everyone
+     */
     type: string
 
-    /// <summary>
-    /// Chat name
-    /// </summary>
+    /**
+     * Chat name
+     */
     name: string
 
-    /// <summary>
-    /// Chat description
-    /// </summary>
+    /**
+     * Chat description
+     */
     description: string
 
-    /// <summary>
-    /// Chat creation datetime in ISO 8601 format
-    /// </summary>
+    /**
+     * Chat creation datetime in ISO 8601 format
+     */
     creationTime: string
 
-    /// <summary>
-    /// Chat last change datetime in ISO 8601 format
-    /// </summary>
+    /**
+     * Chat last change datetime in ISO 8601 format
+     */
     lastModifiedTime: string
 }
 

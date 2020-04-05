@@ -1,28 +1,28 @@
 class BusinessAddressInfo
 {
-    /// <summary>
-    /// Name of a country
-    /// </summary>
+    /**
+     * Name of a country
+     */
     country: string
 
-    /// <summary>
-    /// Name of a state/province
-    /// </summary>
+    /**
+     * Name of a state/province
+     */
     state: string
 
-    /// <summary>
-    /// Name of a city
-    /// </summary>
+    /**
+     * Name of a city
+     */
     city: string
 
-    /// <summary>
-    /// Street address
-    /// </summary>
+    /**
+     * Street address
+     */
     street: string
 
-    /// <summary>
-    /// Zip code
-    /// </summary>
+    /**
+     * Zip code
+     */
     zip: string
 }
 

@@ -4,27 +4,27 @@ import ProvisioningPagingInfo from './ProvisioningPagingInfo'
 
 class UserTemplates
 {
-    /// <summary>
-    /// Link to user templates resource
-    /// </summary>
+    /**
+     * Link to user templates resource
+     */
     uri: string
 
-    /// <summary>
-    /// List of user templates
-    /// Required
-    /// </summary>
+    /**
+     * List of user templates
+     * Required
+     */
     records: TemplateInfo[]
 
-    /// <summary>
-    /// Information on navigation
-    /// Required
-    /// </summary>
+    /**
+     * Information on navigation
+     * Required
+     */
     navigation: ProvisioningNavigationInfo
 
-    /// <summary>
-    /// Information on paging
-    /// Required
-    /// </summary>
+    /**
+     * Information on paging
+     * Required
+     */
     paging: ProvisioningPagingInfo
 }
 

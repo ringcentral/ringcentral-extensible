@@ -3,19 +3,19 @@ import CallRecordingCustomGreetingLanguage from './CallRecordingCustomGreetingLa
 
 class CallRecordingCustomGreeting
 {
-    /// <summary>
-    /// Enum: StartRecording, StopRecording, AutomaticRecording
-    /// </summary>
+    /**
+     * Enum: StartRecording, StopRecording, AutomaticRecording
+     */
     type: string
 
-    /// <summary>
-    /// Custom greeting data
-    /// </summary>
+    /**
+     * Custom greeting data
+     */
     custom: CallRecordingCustomGreetingData
 
-    /// <summary>
-    /// Custom greeting language
-    /// </summary>
+    /**
+     * Custom greeting language
+     */
     language: CallRecordingCustomGreetingLanguage
 }
 

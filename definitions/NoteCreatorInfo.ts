@@ -1,8 +1,8 @@
 class NoteCreatorInfo
 {
-    /// <summary>
-    /// Internal identifier of the user who created the note
-    /// </summary>
+    /**
+     * Internal identifier of the user who created the note
+     */
     id: string
 }
 

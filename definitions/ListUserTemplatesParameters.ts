@@ -1,16 +1,16 @@
 class ListUserTemplatesParameters
 {
-    /// <summary>
-    /// Enum: UserSettings, CallHandling
-    /// </summary>
+    /**
+     * Enum: UserSettings, CallHandling
+     */
     type: string
 
-    /// <summary>
-    /// </summary>
+    /**
+     */
     page: string
 
-    /// <summary>
-    /// </summary>
+    /**
+     */
     perPage: string
 }
 

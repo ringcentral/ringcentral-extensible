@@ -1,20 +1,20 @@
 class SyncInfo
 {
-    /// <summary>
-    /// Enum: FSync, ISync
-    /// </summary>
+    /**
+     * Enum: FSync, ISync
+     */
     syncType: string
 
-    /// <summary>
-    /// </summary>
+    /**
+     */
     syncToken: string
 
-    /// <summary>
-    /// </summary>
+    /**
+     */
     syncTime: string
 
-    /// <summary>
-    /// </summary>
+    /**
+     */
     olderRecordsExist: boolean
 }
 

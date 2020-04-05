@@ -1,37 +1,37 @@
 class SIPFlagsResponse
 {
-    /// <summary>
-    /// If 'True' VoIP calling feature is enabled
-    /// Enum: True, False
-    /// </summary>
+    /**
+     * If 'True' VoIP calling feature is enabled
+     * Enum: True, False
+     */
     voipFeatureEnabled: string
 
-    /// <summary>
-    /// If 'True' the request is sent from IP address of a country blocked for VoIP calling
-    /// Enum: True, False
-    /// </summary>
+    /**
+     * If 'True' the request is sent from IP address of a country blocked for VoIP calling
+     * Enum: True, False
+     */
     voipCountryBlocked: string
 
-    /// <summary>
-    /// If 'True' outbound calls are enabled
-    /// Enum: True, False
-    /// </summary>
+    /**
+     * If 'True' outbound calls are enabled
+     * Enum: True, False
+     */
     outboundCallsEnabled: string
 
-    /// <summary>
-    /// </summary>
+    /**
+     */
     dscpEnabled: boolean
 
-    /// <summary>
-    /// </summary>
+    /**
+     */
     dscpSignaling: number
 
-    /// <summary>
-    /// </summary>
+    /**
+     */
     dscpVoice: number
 
-    /// <summary>
-    /// </summary>
+    /**
+     */
     dscpVideo: number
 }
 

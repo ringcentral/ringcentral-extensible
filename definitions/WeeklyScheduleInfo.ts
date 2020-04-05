@@ -2,39 +2,39 @@ import TimeInterval from './TimeInterval'
 
 class WeeklyScheduleInfo
 {
-    /// <summary>
-    /// Time intervals for a particular day
-    /// </summary>
+    /**
+     * Time intervals for a particular day
+     */
     monday: TimeInterval[]
 
-    /// <summary>
-    /// Time intervals for a particular day
-    /// </summary>
+    /**
+     * Time intervals for a particular day
+     */
     tuesday: TimeInterval[]
 
-    /// <summary>
-    /// Time intervals for a particular day
-    /// </summary>
+    /**
+     * Time intervals for a particular day
+     */
     wednesday: TimeInterval[]
 
-    /// <summary>
-    /// Time intervals for a particular day
-    /// </summary>
+    /**
+     * Time intervals for a particular day
+     */
     thursday: TimeInterval[]
 
-    /// <summary>
-    /// Time intervals for a particular day
-    /// </summary>
+    /**
+     * Time intervals for a particular day
+     */
     friday: TimeInterval[]
 
-    /// <summary>
-    /// Time intervals for a particular day
-    /// </summary>
+    /**
+     * Time intervals for a particular day
+     */
     saturday: TimeInterval[]
 
-    /// <summary>
-    /// Time intervals for a particular day
-    /// </summary>
+    /**
+     * Time intervals for a particular day
+     */
     sunday: TimeInterval[]
 }
 

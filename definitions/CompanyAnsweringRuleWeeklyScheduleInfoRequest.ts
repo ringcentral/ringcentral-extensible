@@ -2,39 +2,39 @@ import CompanyAnsweringRuleTimeIntervalRequest from './CompanyAnsweringRuleTimeI
 
 class CompanyAnsweringRuleWeeklyScheduleInfoRequest
 {
-    /// <summary>
-    /// Time interval for a particular day
-    /// </summary>
+    /**
+     * Time interval for a particular day
+     */
     monday: CompanyAnsweringRuleTimeIntervalRequest[]
 
-    /// <summary>
-    /// Time interval for a particular day
-    /// </summary>
+    /**
+     * Time interval for a particular day
+     */
     tuesday: CompanyAnsweringRuleTimeIntervalRequest[]
 
-    /// <summary>
-    /// Time interval for a particular day
-    /// </summary>
+    /**
+     * Time interval for a particular day
+     */
     wednesday: CompanyAnsweringRuleTimeIntervalRequest[]
 
-    /// <summary>
-    /// Time interval for a particular day
-    /// </summary>
+    /**
+     * Time interval for a particular day
+     */
     thursday: CompanyAnsweringRuleTimeIntervalRequest[]
 
-    /// <summary>
-    /// Time interval for a particular day
-    /// </summary>
+    /**
+     * Time interval for a particular day
+     */
     friday: CompanyAnsweringRuleTimeIntervalRequest[]
 
-    /// <summary>
-    /// Time interval for a particular day
-    /// </summary>
+    /**
+     * Time interval for a particular day
+     */
     saturday: CompanyAnsweringRuleTimeIntervalRequest[]
 
-    /// <summary>
-    /// Time interval for a particular day
-    /// </summary>
+    /**
+     * Time interval for a particular day
+     */
     sunday: CompanyAnsweringRuleTimeIntervalRequest[]
 }
 

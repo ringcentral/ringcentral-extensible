@@ -1,12 +1,12 @@
 class Roles
 {
-    /// <summary>
-    /// </summary>
+    /**
+     */
     uri: string
 
-    /// <summary>
-    /// Internal identifier of a role
-    /// </summary>
+    /**
+     * Internal identifier of a role
+     */
     id: string
 }
 

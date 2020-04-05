@@ -1,19 +1,19 @@
 class ListExtensionGrantsParameters
 {
-    /// <summary>
-    /// Type of extension to be returned. Multiple values are supported
-    /// Enum: User, FaxUser, VirtualUser, DigitalUser, Department, Announcement, Voicemail, SharedLinesGroup, PagingOnly, IvrMenu, ApplicationExtension, ParkLocation, Limited, Bot
-    /// </summary>
+    /**
+     * Type of extension to be returned. Multiple values are supported
+     * Enum: User, FaxUser, VirtualUser, DigitalUser, Department, Announcement, Voicemail, SharedLinesGroup, PagingOnly, IvrMenu, ApplicationExtension, ParkLocation, Limited, Bot
+     */
     extensionType: string
 
-    /// <summary>
-    /// Default: 1
-    /// </summary>
+    /**
+     * Default: 1
+     */
     page: string
 
-    /// <summary>
-    /// Default: 100
-    /// </summary>
+    /**
+     * Default: 100
+     */
     perPage: string
 }
 

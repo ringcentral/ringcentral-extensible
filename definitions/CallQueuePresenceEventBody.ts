@@ -1,18 +1,18 @@
 class CallQueuePresenceEventBody
 {
-    /// <summary>
-    /// Agent extension ID
-    /// </summary>
+    /**
+     * Agent extension ID
+     */
     extensionId: string
 
-    /// <summary>
-    /// Call queue extension ID
-    /// </summary>
+    /**
+     * Call queue extension ID
+     */
     callQueueId: string
 
-    /// <summary>
-    /// Call queue agent availability for calls of this queue
-    /// </summary>
+    /**
+     * Call queue agent availability for calls of this queue
+     */
     acceptCalls: boolean
 }
 

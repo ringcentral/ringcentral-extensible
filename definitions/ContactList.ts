@@ -5,29 +5,29 @@ import UserContactsGroupsInfo from './UserContactsGroupsInfo'
 
 class ContactList
 {
-    /// <summary>
-    /// link to the list of user personal contacts
-    /// </summary>
+    /**
+     * link to the list of user personal contacts
+     */
     uri: string
 
-    /// <summary>
-    /// List of personal contacts from the extension address book
-    /// </summary>
+    /**
+     * List of personal contacts from the extension address book
+     */
     records: PersonalContactResource[]
 
-    /// <summary>
-    /// Information on navigation
-    /// </summary>
+    /**
+     * Information on navigation
+     */
     navigation: UserContactsNavigationInfo
 
-    /// <summary>
-    /// Information on paging
-    /// </summary>
+    /**
+     * Information on paging
+     */
     paging: UserContactsPagingInfo
 
-    /// <summary>
-    /// Information on address book groups
-    /// </summary>
+    /**
+     * Information on address book groups
+     */
     groups: UserContactsGroupsInfo
 }
 

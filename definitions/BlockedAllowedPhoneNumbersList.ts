@@ -5,23 +5,23 @@ import CallHandlingPagingInfo from './CallHandlingPagingInfo'
     // List of blocked or allowed phone numbers
 class BlockedAllowedPhoneNumbersList
 {
-    /// <summary>
-    /// Link to a list of blocked/allowed phone numbers resource
-    /// </summary>
+    /**
+     * Link to a list of blocked/allowed phone numbers resource
+     */
     uri: string
 
-    /// <summary>
-    /// </summary>
+    /**
+     */
     records: BlockedAllowedPhoneNumberInfo[]
 
-    /// <summary>
-    /// Information on navigation
-    /// </summary>
+    /**
+     * Information on navigation
+     */
     navigation: CallHandlingNavigationInfo
 
-    /// <summary>
-    /// Information on paging
-    /// </summary>
+    /**
+     * Information on paging
+     */
     paging: CallHandlingPagingInfo
 }
 

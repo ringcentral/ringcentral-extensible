@@ -2,13 +2,13 @@ import AutomaticLocationUpdatesPhoneNumberInfo from './AutomaticLocationUpdatesP
 
 class AutomaticLocationUpdatesPhoneLine
 {
-    /// <summary>
-    /// Enum: Unknown, Standalone, StandaloneFree, BlaPrimary, BlaSecondary, BLF
-    /// </summary>
+    /**
+     * Enum: Unknown, Standalone, StandaloneFree, BlaPrimary, BlaSecondary, BLF
+     */
     lineType: string
 
-    /// <summary>
-    /// </summary>
+    /**
+     */
     phoneInfo: AutomaticLocationUpdatesPhoneNumberInfo
 }
 

@@ -1,21 +1,21 @@
 class ListDataExportTasksParameters
 {
-    /// <summary>
-    /// Status of the task(s) to be returned. Multiple values supported
-    /// Enum: Accepted, InProgress, Completed, Failed, Canceled
-    /// </summary>
+    /**
+     * Status of the task(s) to be returned. Multiple values supported
+     * Enum: Accepted, InProgress, Completed, Failed, Canceled
+     */
     status: string
 
-    /// <summary>
-    /// Page number to be retrieved; value range is > 0
-    /// Default: 1
-    /// </summary>
+    /**
+     * Page number to be retrieved; value range is > 0
+     * Default: 1
+     */
     page: number
 
-    /// <summary>
-    /// Number of records to be returned per page; value range is 1 - 250
-    /// Default: 30
-    /// </summary>
+    /**
+     * Number of records to be returned per page; value range is 1 - 250
+     * Default: 30
+     */
     perPage: number
 }
 

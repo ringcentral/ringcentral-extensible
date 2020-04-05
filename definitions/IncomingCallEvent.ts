@@ -2,105 +2,105 @@ import APSInfo from './APSInfo'
 
 class IncomingCallEvent
 {
-    /// <summary>
-    /// Apple Push Notification Service Info
-    /// </summary>
+    /**
+     * Apple Push Notification Service Info
+     */
     aps: APSInfo
 
-    /// <summary>
-    /// Event filter URI
-    /// </summary>
+    /**
+     * Event filter URI
+     */
     event: string
 
-    /// <summary>
-    /// Universally unique identifier of a notification
-    /// </summary>
+    /**
+     * Universally unique identifier of a notification
+     */
     uuid: string
 
-    /// <summary>
-    /// Internal identifier of a subscription
-    /// </summary>
+    /**
+     * Internal identifier of a subscription
+     */
     subscriptionId: string
 
-    /// <summary>
-    /// The datetime of a call action in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format including timezone, for example 2016-03-10T18:07:52.534Z
-    /// </summary>
+    /**
+     * The datetime of a call action in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format including timezone, for example 2016-03-10T18:07:52.534Z
+     */
     timestamp: string
 
-    /// <summary>
-    /// Internal identifier of an extension
-    /// Default: ~
-    /// </summary>
+    /**
+     * Internal identifier of an extension
+     * Default: ~
+     */
     extensionId: string
 
-    /// <summary>
-    /// Calling action, for example 'StartRing'
-    /// </summary>
+    /**
+     * Calling action, for example 'StartRing'
+     */
     action: string
 
-    /// <summary>
-    /// Identifier of a call session
-    /// </summary>
+    /**
+     * Identifier of a call session
+     */
     sessionId: string
 
-    /// <summary>
-    /// Identifier of a server
-    /// </summary>
+    /**
+     * Identifier of a server
+     */
     serverId: string
 
-    /// <summary>
-    /// Phone number of a caller. For GCM transport type '_from' property should be used
-    /// </summary>
+    /**
+     * Phone number of a caller. For GCM transport type '_from' property should be used
+     */
     from: string
 
-    /// <summary>
-    /// Caller name
-    /// </summary>
+    /**
+     * Caller name
+     */
     fromName: string
 
-    /// <summary>
-    /// Phone number of a callee
-    /// </summary>
+    /**
+     * Phone number of a callee
+     */
     to: string
 
-    /// <summary>
-    /// Callee name
-    /// </summary>
+    /**
+     * Callee name
+     */
     toName: string
 
-    /// <summary>
-    /// Unique identifier of a session
-    /// </summary>
+    /**
+     * Unique identifier of a session
+     */
     sid: string
 
-    /// <summary>
-    /// SIP proxy registration name
-    /// </summary>
+    /**
+     * SIP proxy registration name
+     */
     toUrl: string
 
-    /// <summary>
-    /// User data
-    /// </summary>
+    /**
+     * User data
+     */
     srvLvl: string
 
-    /// <summary>
-    /// User data
-    /// </summary>
+    /**
+     * User data
+     */
     srvLvlExt: string
 
-    /// <summary>
-    /// File containing recorded caller name
-    /// </summary>
+    /**
+     * File containing recorded caller name
+     */
     recUrl: string
 
-    /// <summary>
-    /// Notification lifetime value in seconds, the default value is 30 seconds
-    /// </summary>
+    /**
+     * Notification lifetime value in seconds, the default value is 30 seconds
+     */
     pn_ttl: number
 
-    /// <summary>
-    /// Internal identifier of a subscription owner extension
-    /// </summary>
+    /**
+     * Internal identifier of a subscription owner extension
+     */
     ownerId: string
 }
 

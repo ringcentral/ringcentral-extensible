@@ -2,8 +2,8 @@ import ExtensionCallQueuePresence from './ExtensionCallQueuePresence'
 
 class ExtensionCallQueuePresenceList
 {
-    /// <summary>
-    /// </summary>
+    /**
+     */
     records: ExtensionCallQueuePresence[]
 }
 

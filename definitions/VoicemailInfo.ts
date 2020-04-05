@@ -2,14 +2,14 @@ import RecipientInfo from './RecipientInfo'
 
 class VoicemailInfo
 {
-    /// <summary>
-    /// If 'True' then voicemails are allowed to be received
-    /// </summary>
+    /**
+     * If 'True' then voicemails are allowed to be received
+     */
     enabled: boolean
 
-    /// <summary>
-    /// Recipient data
-    /// </summary>
+    /**
+     * Recipient data
+     */
     recipient: RecipientInfo
 }
 

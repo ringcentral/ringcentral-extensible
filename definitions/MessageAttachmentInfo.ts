@@ -1,49 +1,49 @@
 class MessageAttachmentInfo
 {
-    /// <summary>
-    /// Internal identifier of a message attachment
-    /// </summary>
+    /**
+     * Internal identifier of a message attachment
+     */
     id: number
 
-    /// <summary>
-    /// Canonical URI of a message attachment
-    /// </summary>
+    /**
+     * Canonical URI of a message attachment
+     */
     uri: string
 
-    /// <summary>
-    /// Type of message attachment
-    /// Enum: AudioRecording, AudioTranscription, Text, SourceDocument, RenderedDocument, MmsAttachment
-    /// </summary>
+    /**
+     * Type of message attachment
+     * Enum: AudioRecording, AudioTranscription, Text, SourceDocument, RenderedDocument, MmsAttachment
+     */
     type: string
 
-    /// <summary>
-    /// MIME type for a given attachment, for instance 'audio/wav'
-    /// </summary>
+    /**
+     * MIME type for a given attachment, for instance 'audio/wav'
+     */
     contentType: string
 
-    /// <summary>
-    /// Supported for `Voicemail` only. Duration of a voicemail in seconds
-    /// </summary>
+    /**
+     * Supported for `Voicemail` only. Duration of a voicemail in seconds
+     */
     vmDuration: number
 
-    /// <summary>
-    /// Name of a file attached
-    /// </summary>
+    /**
+     * Name of a file attached
+     */
     fileName: string
 
-    /// <summary>
-    /// Size of attachment in bytes
-    /// </summary>
+    /**
+     * Size of attachment in bytes
+     */
     size: number
 
-    /// <summary>
-    /// Attachment height in pixels if available
-    /// </summary>
+    /**
+     * Attachment height in pixels if available
+     */
     height: number
 
-    /// <summary>
-    /// Attachment width in pixels if available
-    /// </summary>
+    /**
+     * Attachment width in pixels if available
+     */
     width: number
 }
 

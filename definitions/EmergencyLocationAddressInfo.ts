@@ -1,63 +1,63 @@
 class EmergencyLocationAddressInfo
 {
-    /// <summary>
-    /// Country name
-    /// </summary>
+    /**
+     * Country name
+     */
     country: string
 
-    /// <summary>
-    /// Internal identifier of a country
-    /// </summary>
+    /**
+     * Internal identifier of a country
+     */
     countryId: string
 
-    /// <summary>
-    /// ISO code of a country
-    /// </summary>
+    /**
+     * ISO code of a country
+     */
     countryIsoCode: string
 
-    /// <summary>
-    /// Full name of a country
-    /// </summary>
+    /**
+     * Full name of a country
+     */
     countryName: string
 
-    /// <summary>
-    /// State/Province name. Mandatory for the USA, the UK and Canada
-    /// </summary>
+    /**
+     * State/Province name. Mandatory for the USA, the UK and Canada
+     */
     state: string
 
-    /// <summary>
-    /// Internal identifier of a state
-    /// </summary>
+    /**
+     * Internal identifier of a state
+     */
     stateId: string
 
-    /// <summary>
-    /// ISO code of a state
-    /// </summary>
+    /**
+     * ISO code of a state
+     */
     stateIsoCode: string
 
-    /// <summary>
-    /// Full name of a state
-    /// </summary>
+    /**
+     * Full name of a state
+     */
     stateName: string
 
-    /// <summary>
-    /// City name
-    /// </summary>
+    /**
+     * City name
+     */
     city: string
 
-    /// <summary>
-    /// First line address
-    /// </summary>
+    /**
+     * First line address
+     */
     street: string
 
-    /// <summary>
-    /// Second line address (apartment, suite, unit, building, floor, etc.)
-    /// </summary>
+    /**
+     * Second line address (apartment, suite, unit, building, floor, etc.)
+     */
     street2: string
 
-    /// <summary>
-    /// Postal (Zip) code
-    /// </summary>
+    /**
+     * Postal (Zip) code
+     */
     zip: string
 }
 

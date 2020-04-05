@@ -1,9 +1,9 @@
 class OriginInfo
 {
-    /// <summary>
-    /// Session origin type
-    /// Enum: Call, RingOut, RingMe, Conference, GreetingsRecording, VerificationCall, Zoom, CallOut
-    /// </summary>
+    /**
+     * Session origin type
+     * Enum: Call, RingOut, RingMe, Conference, GreetingsRecording, VerificationCall, Zoom, CallOut
+     */
     type: string
 }
 

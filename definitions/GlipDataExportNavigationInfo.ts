@@ -2,24 +2,24 @@ import GlipDataExportNavigationInfoUri from './GlipDataExportNavigationInfoUri'
 
 class GlipDataExportNavigationInfo
 {
-    /// <summary>
-    /// Canonical URI for the first page of the list
-    /// </summary>
+    /**
+     * Canonical URI for the first page of the list
+     */
     firstPage: GlipDataExportNavigationInfoUri
 
-    /// <summary>
-    /// Canonical URI for the next page of the list
-    /// </summary>
+    /**
+     * Canonical URI for the next page of the list
+     */
     nextPage: GlipDataExportNavigationInfoUri
 
-    /// <summary>
-    /// Canonical URI for the previous page of the list
-    /// </summary>
+    /**
+     * Canonical URI for the previous page of the list
+     */
     previousPage: GlipDataExportNavigationInfoUri
 
-    /// <summary>
-    /// Canonical URI for the last page of the list
-    /// </summary>
+    /**
+     * Canonical URI for the last page of the list
+     */
     lastPage: GlipDataExportNavigationInfoUri
 }
 

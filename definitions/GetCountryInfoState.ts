@@ -1,13 +1,13 @@
 class GetCountryInfoState
 {
-    /// <summary>
-    /// Internal identifier of a state
-    /// </summary>
+    /**
+     * Internal identifier of a state
+     */
     id: string
 
-    /// <summary>
-    /// Canonical URI of a state
-    /// </summary>
+    /**
+     * Canonical URI of a state
+     */
     uri: string
 }
 

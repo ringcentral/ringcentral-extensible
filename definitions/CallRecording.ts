@@ -1,13 +1,13 @@
 class CallRecording
 {
-    /// <summary>
-    /// Internal identifier of a call recording
-    /// </summary>
+    /**
+     * Internal identifier of a call recording
+     */
     id: string
 
-    /// <summary>
-    /// Call recording status
-    /// </summary>
+    /**
+     * Call recording status
+     */
     active: boolean
 }
 

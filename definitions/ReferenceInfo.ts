@@ -1,14 +1,14 @@
 class ReferenceInfo
 {
-    /// <summary>
-    /// Non-RC identifier of an extension
-    /// </summary>
+    /**
+     * Non-RC identifier of an extension
+     */
     ref: string
 
-    /// <summary>
-    /// Type of external identifier
-    /// Enum: PartnerId, CustomerDirectoryId
-    /// </summary>
+    /**
+     * Type of external identifier
+     * Enum: PartnerId, CustomerDirectoryId
+     */
     type: string
 }
 

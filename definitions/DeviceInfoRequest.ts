@@ -1,23 +1,23 @@
 class DeviceInfoRequest
 {
-    /// <summary>
-    /// Device unique identifier, retrieved on previous session (if any)
-    /// </summary>
+    /**
+     * Device unique identifier, retrieved on previous session (if any)
+     */
     id: string
 
-    /// <summary>
-    /// Supported for iOS devices only. Certificate name (used by iOS applications for APNS subscription)
-    /// </summary>
+    /**
+     * Supported for iOS devices only. Certificate name (used by iOS applications for APNS subscription)
+     */
     appExternalId: string
 
-    /// <summary>
-    /// Supported for SoftPhone only. Computer name
-    /// </summary>
+    /**
+     * Supported for SoftPhone only. Computer name
+     */
     computerName: string
 
-    /// <summary>
-    /// Serial number for HardPhone; endpoint_id for softphone and mobile applications. Returned only when the phone is shipped and provisioned
-    /// </summary>
+    /**
+     * Serial number for HardPhone; endpoint_id for softphone and mobile applications. Returned only when the phone is shipped and provisioned
+     */
     serial: string
 }
 

@@ -2,19 +2,19 @@ import CountryInfo from './CountryInfo'
 
 class BrandInfo
 {
-    /// <summary>
-    /// Internal identifier of a brand
-    /// </summary>
+    /**
+     * Internal identifier of a brand
+     */
     id: string
 
-    /// <summary>
-    /// Brand name, for example  RingCentral UK ,  ClearFax
-    /// </summary>
+    /**
+     * Brand name, for example  RingCentral UK ,  ClearFax
+     */
     name: string
 
-    /// <summary>
-    /// Home country information
-    /// </summary>
+    /**
+     * Home country information
+     */
     homeCountry: CountryInfo
 }
 

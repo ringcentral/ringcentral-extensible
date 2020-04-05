@@ -3,39 +3,39 @@ import LocationUpdatesEmergencyAddressInfo from './LocationUpdatesEmergencyAddre
 
 class SwitchInfo
 {
-    /// <summary>
-    /// Link to the network switch resource
-    /// </summary>
+    /**
+     * Link to the network switch resource
+     */
     uri: string
 
-    /// <summary>
-    /// Internal identifier of a network switch
-    /// </summary>
+    /**
+     * Internal identifier of a network switch
+     */
     id: string
 
-    /// <summary>
-    /// Unique identifier of a network switch
-    /// </summary>
+    /**
+     * Unique identifier of a network switch
+     */
     chassisId: string
 
-    /// <summary>
-    /// Name of a network switch
-    /// </summary>
+    /**
+     * Name of a network switch
+     */
     name: string
 
-    /// <summary>
-    /// Site data
-    /// </summary>
+    /**
+     * Site data
+     */
     site: SwitchSiteInfo
 
-    /// <summary>
-    /// Emergency address assigned to the switch. Only one of a pair `emergencyAddress` or `emergencyLocationId` should be specified, otherwise the error is returned
-    /// </summary>
+    /**
+     * Emergency address assigned to the switch. Only one of a pair `emergencyAddress` or `emergencyLocationId` should be specified, otherwise the error is returned
+     */
     emergencyAddress: LocationUpdatesEmergencyAddressInfo
 
-    /// <summary>
-    /// Emergency response location (address) internal identifier. Only one of a pair `emergencyAddress` or `emergencyLocationId` should be specified, otherwise the error is returned
-    /// </summary>
+    /**
+     * Emergency response location (address) internal identifier. Only one of a pair `emergencyAddress` or `emergencyLocationId` should be specified, otherwise the error is returned
+     */
     emergencyLocationId: string
 }
 

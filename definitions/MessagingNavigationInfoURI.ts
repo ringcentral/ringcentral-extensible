@@ -1,7 +1,7 @@
 class MessagingNavigationInfoURI
 {
-    /// <summary>
-    /// </summary>
+    /**
+     */
     uri: string
 }
 

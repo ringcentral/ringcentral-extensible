@@ -1,18 +1,18 @@
 class CreatorInfo
 {
-    /// <summary>
-    /// Internal identifier of a user
-    /// </summary>
+    /**
+     * Internal identifier of a user
+     */
     id: string
 
-    /// <summary>
-    /// First name of a user
-    /// </summary>
+    /**
+     * First name of a user
+     */
     firstName: string
 
-    /// <summary>
-    /// Last name of a user
-    /// </summary>
+    /**
+     * Last name of a user
+     */
     lastName: string
 }
 

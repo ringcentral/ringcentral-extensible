@@ -1,7 +1,7 @@
 class Supported
 {
-    /// <summary>
-    /// </summary>
+    /**
+     */
     supported: boolean
 }
 

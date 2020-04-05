@@ -1,18 +1,18 @@
 class PhoneNumberCountryInfo
 {
-    /// <summary>
-    /// Internal identifier of a home country
-    /// </summary>
+    /**
+     * Internal identifier of a home country
+     */
     id: string
 
-    /// <summary>
-    /// Canonical URI of a home country
-    /// </summary>
+    /**
+     * Canonical URI of a home country
+     */
     uri: string
 
-    /// <summary>
-    /// Official name of a home country
-    /// </summary>
+    /**
+     * Official name of a home country
+     */
     name: string
 }
 

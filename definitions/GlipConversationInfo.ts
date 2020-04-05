@@ -2,30 +2,30 @@ import CreateGlipMember from './CreateGlipMember'
 
 class GlipConversationInfo
 {
-    /// <summary>
-    /// Internal identifier of a conversation
-    /// </summary>
+    /**
+     * Internal identifier of a conversation
+     */
     id: string
 
-    /// <summary>
-    /// Type of a conversation
-    /// Enum: Direct, Personal, Group
-    /// </summary>
+    /**
+     * Type of a conversation
+     * Enum: Direct, Personal, Group
+     */
     type: string
 
-    /// <summary>
-    /// Conversation creation datetime in ISO 8601 format
-    /// </summary>
+    /**
+     * Conversation creation datetime in ISO 8601 format
+     */
     creationTime: string
 
-    /// <summary>
-    /// Conversation last change datetime in ISO 8601 format
-    /// </summary>
+    /**
+     * Conversation last change datetime in ISO 8601 format
+     */
     lastModifiedTime: string
 
-    /// <summary>
-    /// List of glip members
-    /// </summary>
+    /**
+     * List of glip members
+     */
     members: CreateGlipMember[]
 }
 

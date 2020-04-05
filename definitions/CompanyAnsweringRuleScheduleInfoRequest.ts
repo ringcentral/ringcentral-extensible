@@ -3,20 +3,20 @@ import RangesInfo from './RangesInfo'
 
 class CompanyAnsweringRuleScheduleInfoRequest
 {
-    /// <summary>
-    /// Weekly schedule. If specified, ranges cannot be specified
-    /// </summary>
+    /**
+     * Weekly schedule. If specified, ranges cannot be specified
+     */
     weeklyRanges: CompanyAnsweringRuleWeeklyScheduleInfoRequest
 
-    /// <summary>
-    /// Specific data ranges. If specified, weeklyRanges cannot be specified
-    /// </summary>
+    /**
+     * Specific data ranges. If specified, weeklyRanges cannot be specified
+     */
     ranges: RangesInfo[]
 
-    /// <summary>
-    /// Reference to Business Hours or After Hours schedule
-    /// Enum: BusinessHours, AfterHours
-    /// </summary>
+    /**
+     * Reference to Business Hours or After Hours schedule
+     * Enum: BusinessHours, AfterHours
+     */
     ref: string
 }
 

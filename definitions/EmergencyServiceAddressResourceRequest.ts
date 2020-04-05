@@ -1,43 +1,43 @@
 class EmergencyServiceAddressResourceRequest
 {
-    /// <summary>
-    /// </summary>
+    /**
+     */
     street: string
 
-    /// <summary>
-    /// </summary>
+    /**
+     */
     street2: string
 
-    /// <summary>
-    /// </summary>
+    /**
+     */
     city: string
 
-    /// <summary>
-    /// </summary>
+    /**
+     */
     zip: string
 
-    /// <summary>
-    /// </summary>
+    /**
+     */
     customerName: string
 
-    /// <summary>
-    /// State/province name
-    /// </summary>
+    /**
+     * State/province name
+     */
     state: string
 
-    /// <summary>
-    /// Internal identifier of a state
-    /// </summary>
+    /**
+     * Internal identifier of a state
+     */
     stateId: string
 
-    /// <summary>
-    /// Country name
-    /// </summary>
+    /**
+     * Country name
+     */
     country: string
 
-    /// <summary>
-    /// Internal identifier of a country
-    /// </summary>
+    /**
+     * Internal identifier of a country
+     */
     countryId: string
 }
 

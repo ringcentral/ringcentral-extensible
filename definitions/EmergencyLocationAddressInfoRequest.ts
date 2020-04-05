@@ -1,33 +1,33 @@
 class EmergencyLocationAddressInfoRequest
 {
-    /// <summary>
-    /// Country name
-    /// </summary>
+    /**
+     * Country name
+     */
     country: string
 
-    /// <summary>
-    /// State/Province name. Mandatory for the USA, the UK and Canada
-    /// </summary>
+    /**
+     * State/Province name. Mandatory for the USA, the UK and Canada
+     */
     state: string
 
-    /// <summary>
-    /// City name
-    /// </summary>
+    /**
+     * City name
+     */
     city: string
 
-    /// <summary>
-    /// First line address
-    /// </summary>
+    /**
+     * First line address
+     */
     street: string
 
-    /// <summary>
-    /// Second line address (apartment, suite, unit, building, floor, etc.)
-    /// </summary>
+    /**
+     * Second line address (apartment, suite, unit, building, floor, etc.)
+     */
     street2: string
 
-    /// <summary>
-    /// Postal (Zip) code
-    /// </summary>
+    /**
+     * Postal (Zip) code
+     */
     zip: string
 }
 

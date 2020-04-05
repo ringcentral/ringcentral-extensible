@@ -4,21 +4,21 @@ import ProvisioningPagingInfo from './ProvisioningPagingInfo'
 
 class AutomaticLocationUpdatesUserList
 {
-    /// <summary>
-    /// Link to the users list resource
-    /// </summary>
+    /**
+     * Link to the users list resource
+     */
     uri: string
 
-    /// <summary>
-    /// </summary>
+    /**
+     */
     records: AutomaticLocationUpdatesUserInfo[]
 
-    /// <summary>
-    /// </summary>
+    /**
+     */
     navigation: ProvisioningNavigationInfo
 
-    /// <summary>
-    /// </summary>
+    /**
+     */
     paging: ProvisioningPagingInfo
 }
 

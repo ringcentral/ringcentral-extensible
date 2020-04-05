@@ -1,8 +1,8 @@
 class UpdateIVRPromptRequest
 {
-    /// <summary>
-    /// Name of a file to be uploaded as a prompt
-    /// </summary>
+    /**
+     * Name of a file to be uploaded as a prompt
+     */
     filename: string
 }
 

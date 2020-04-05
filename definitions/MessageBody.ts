@@ -5,127 +5,127 @@ import MessageRecipientInfo from './MessageRecipientInfo'
 
 class MessageBody
 {
-    /// <summary>
-    /// Canonical URI of a message
-    /// </summary>
+    /**
+     * Canonical URI of a message
+     */
     uri: string
 
-    /// <summary>
-    /// Internal identifier of a message
-    /// </summary>
+    /**
+     * Internal identifier of a message
+     */
     id: string
 
-    /// <summary>
-    /// The list of message attachments
-    /// </summary>
+    /**
+     * The list of message attachments
+     */
     attachments: MessageAttachmentInfo[]
 
-    /// <summary>
-    /// Message availability status. Message in 'Deleted' state is still preserved with all its attachments and can be restored. 'Purged' means that all attachments are already deleted and the message itself is about to be physically deleted shortly
-    /// Enum: Alive, Deleted, Purged
-    /// </summary>
+    /**
+     * Message availability status. Message in 'Deleted' state is still preserved with all its attachments and can be restored. 'Purged' means that all attachments are already deleted and the message itself is about to be physically deleted shortly
+     * Enum: Alive, Deleted, Purged
+     */
     availability: string
 
-    /// <summary>
-    /// SMS and Pager only. Identifier of a conversation the message belongs to
-    /// </summary>
+    /**
+     * SMS and Pager only. Identifier of a conversation the message belongs to
+     */
     conversationId: number
 
-    /// <summary>
-    /// SMS and Pager only. Identifier of a conversation the message belongs to
-    /// </summary>
+    /**
+     * SMS and Pager only. Identifier of a conversation the message belongs to
+     */
     conversation: ConversationInfo
 
-    /// <summary>
-    /// Message creation datetime in ISO 8601 format including timezone, for example 2016-03-10T18:07:52.534Z
-    /// </summary>
+    /**
+     * Message creation datetime in ISO 8601 format including timezone, for example 2016-03-10T18:07:52.534Z
+     */
     creationTime: string
 
-    /// <summary>
-    /// SMS only. Delivery error code returned by gateway
-    /// </summary>
+    /**
+     * SMS only. Delivery error code returned by gateway
+     */
     deliveryErrorCode: string
 
-    /// <summary>
-    /// Message direction. Note that for some message types not all directions are allowed. For example voicemail messages can be only inbound
-    /// Enum: Inbound, Outbound
-    /// </summary>
+    /**
+     * Message direction. Note that for some message types not all directions are allowed. For example voicemail messages can be only inbound
+     * Enum: Inbound, Outbound
+     */
     direction: string
 
-    /// <summary>
-    /// Fax only. Page count in a fax message
-    /// </summary>
+    /**
+     * Fax only. Page count in a fax message
+     */
     faxPageCount: number
 
-    /// <summary>
-    /// Fax only. Resolution of a fax message. 'High' for black and white image scanned at 200 dpi, 'Low' for black and white image scanned at 100 dpi
-    /// Enum: High, Low
-    /// </summary>
+    /**
+     * Fax only. Resolution of a fax message. 'High' for black and white image scanned at 200 dpi, 'Low' for black and white image scanned at 100 dpi
+     * Enum: High, Low
+     */
     faxResolution: string
 
-    /// <summary>
-    /// Sender information
-    /// </summary>
+    /**
+     * Sender information
+     */
     from: MessageSenderInfo
 
-    /// <summary>
-    /// The datetime when the message was modified on server in ISO 8601 format including timezone, for example 2016-03-10T18:07:52.534Z
-    /// </summary>
+    /**
+     * The datetime when the message was modified on server in ISO 8601 format including timezone, for example 2016-03-10T18:07:52.534Z
+     */
     lastModifiedTime: string
 
-    /// <summary>
-    /// Message status. Different message types may have different allowed status values.For outbound faxes the aggregated message status is returned: If status for at least one recipient is 'Queued', then 'Queued' value is returned If status for at least one recipient is 'SendingFailed', then 'SendingFailed' value is returned In other cases Sent status is returned
-    /// Enum: Queued, Sent, Delivered, DeliveryFailed, SendingFailed, Received
-    /// </summary>
+    /**
+     * Message status. Different message types may have different allowed status values.For outbound faxes the aggregated message status is returned: If status for at least one recipient is 'Queued', then 'Queued' value is returned If status for at least one recipient is 'SendingFailed', then 'SendingFailed' value is returned In other cases Sent status is returned
+     * Enum: Queued, Sent, Delivered, DeliveryFailed, SendingFailed, Received
+     */
     messageStatus: string
 
-    /// <summary>
-    /// 'Pager' only. 'True' if at least one of the message recipients is 'Department' extension
-    /// </summary>
+    /**
+     * 'Pager' only. 'True' if at least one of the message recipients is 'Department' extension
+     */
     pgToDepartment: boolean
 
-    /// <summary>
-    /// Message priority
-    /// Enum: Normal, High
-    /// </summary>
+    /**
+     * Message priority
+     * Enum: Normal, High
+     */
     priority: string
 
-    /// <summary>
-    /// Message read status
-    /// Enum: Read, Unread
-    /// </summary>
+    /**
+     * Message read status
+     * Enum: Read, Unread
+     */
     readStatus: string
 
-    /// <summary>
-    /// SMS only. The datetime when outbound SMS was delivered to recipient's handset in ISO 8601 format including timezone, for example 2016-03-10T18:07:52.534Z. It is filled only if the carrier sends a delivery receipt to RingCentral
-    /// </summary>
+    /**
+     * SMS only. The datetime when outbound SMS was delivered to recipient's handset in ISO 8601 format including timezone, for example 2016-03-10T18:07:52.534Z. It is filled only if the carrier sends a delivery receipt to RingCentral
+     */
     smsDeliveryTime: string
 
-    /// <summary>
-    /// SMS only. Number of attempts made to send an outbound SMS to the gateway (if gateway is temporary unavailable)
-    /// </summary>
+    /**
+     * SMS only. Number of attempts made to send an outbound SMS to the gateway (if gateway is temporary unavailable)
+     */
     smsSendingAttemptsCount: number
 
-    /// <summary>
-    /// Message subject. For SMS and Pager messages it replicates message text which is also returned as an attachment
-    /// </summary>
+    /**
+     * Message subject. For SMS and Pager messages it replicates message text which is also returned as an attachment
+     */
     subject: string
 
-    /// <summary>
-    /// Recipient information
-    /// </summary>
+    /**
+     * Recipient information
+     */
     to: MessageRecipientInfo[]
 
-    /// <summary>
-    /// Message type
-    /// Enum: Fax, SMS, VoiceMail, Pager, Text
-    /// </summary>
+    /**
+     * Message type
+     * Enum: Fax, SMS, VoiceMail, Pager, Text
+     */
     type: string
 
-    /// <summary>
-    /// Voicemail only. Status of voicemail to text transcription. If VoicemailToText feature is not activated for account, the 'NotAvailable' value is returned
-    /// Enum: NotAvailable, InProgress, TimedOut, Completed, CompletedPartially, Failed
-    /// </summary>
+    /**
+     * Voicemail only. Status of voicemail to text transcription. If VoicemailToText feature is not activated for account, the 'NotAvailable' value is returned
+     * Enum: NotAvailable, InProgress, TimedOut, Completed, CompletedPartially, Failed
+     */
     vmTranscriptionStatus: string
 }
 

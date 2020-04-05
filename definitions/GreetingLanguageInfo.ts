@@ -1,18 +1,18 @@
 class GreetingLanguageInfo
 {
-    /// <summary>
-    /// Internal identifier of a greeting language
-    /// </summary>
+    /**
+     * Internal identifier of a greeting language
+     */
     id: string
 
-    /// <summary>
-    /// Localization code of a greeting language
-    /// </summary>
+    /**
+     * Localization code of a greeting language
+     */
     localeCode: string
 
-    /// <summary>
-    /// Official name of a greeting language
-    /// </summary>
+    /**
+     * Official name of a greeting language
+     */
     name: string
 }
 

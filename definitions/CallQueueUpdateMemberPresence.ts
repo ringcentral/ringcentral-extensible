@@ -2,14 +2,14 @@ import CallQueueMemberId from './CallQueueMemberId'
 
 class CallQueueUpdateMemberPresence
 {
-    /// <summary>
-    /// Call queue member information
-    /// </summary>
+    /**
+     * Call queue member information
+     */
     member: CallQueueMemberId
 
-    /// <summary>
-    /// Call queue member availability for calls of this queue
-    /// </summary>
+    /**
+     * Call queue member availability for calls of this queue
+     */
     acceptCurrentQueueCalls: boolean
 }
 

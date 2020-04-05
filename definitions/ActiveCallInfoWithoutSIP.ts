@@ -1,56 +1,56 @@
 class ActiveCallInfoWithoutSIP
 {
-    /// <summary>
-    /// Internal identifier of a call
-    /// </summary>
+    /**
+     * Internal identifier of a call
+     */
     id: string
 
-    /// <summary>
-    /// Call direction
-    /// Enum: Inbound, Outbound
-    /// </summary>
+    /**
+     * Call direction
+     * Enum: Inbound, Outbound
+     */
     direction: string
 
-    /// <summary>
-    /// Phone number or extension number of a caller. For GCM transport type '_from' property should be used
-    /// </summary>
+    /**
+     * Phone number or extension number of a caller. For GCM transport type '_from' property should be used
+     */
     from: string
 
-    /// <summary>
-    /// Name of a caller
-    /// </summary>
+    /**
+     * Name of a caller
+     */
     fromName: string
 
-    /// <summary>
-    /// Phone number or extension number of a callee
-    /// </summary>
+    /**
+     * Phone number or extension number of a callee
+     */
     to: string
 
-    /// <summary>
-    /// Name of a callee
-    /// </summary>
+    /**
+     * Name of a callee
+     */
     toName: string
 
-    /// <summary>
-    /// Time when the call is actually started
-    /// </summary>
+    /**
+     * Time when the call is actually started
+     */
     startTime: string
 
-    /// <summary>
-    /// Telephony call status
-    /// Enum: NoCall, CallConnected, Ringing, OnHold, ParkedCall
-    /// </summary>
+    /**
+     * Telephony call status
+     * Enum: NoCall, CallConnected, Ringing, OnHold, ParkedCall
+     */
     telephonyStatus: string
 
-    /// <summary>
-    /// Internal identifier of a call session
-    /// </summary>
+    /**
+     * Internal identifier of a call session
+     */
     sessionId: string
 
-    /// <summary>
-    /// Type of call termination. Supported for calls in 'NoCall' status. If the returned termination type is 'intermediate' it means the call is not actually ended, the connection is established on one of the devices
-    /// Enum: final, intermediate
-    /// </summary>
+    /**
+     * Type of call termination. Supported for calls in 'NoCall' status. If the returned termination type is 'intermediate' it means the call is not actually ended, the connection is established on one of the devices
+     * Enum: final, intermediate
+     */
     terminationType: string
 }
 

@@ -1,18 +1,18 @@
 class CallerIdPhoneInfo
 {
-    /// <summary>
-    /// Internal identifier of a phone number
-    /// </summary>
+    /**
+     * Internal identifier of a phone number
+     */
     id: string
 
-    /// <summary>
-    /// Link to a phone number resource
-    /// </summary>
+    /**
+     * Link to a phone number resource
+     */
     uri: string
 
-    /// <summary>
-    /// Phone number in [E.164](https://www.itu.int/rec/T-REC-E.164-201011-I) (with '+' sign) format
-    /// </summary>
+    /**
+     * Phone number in [E.164](https://www.itu.int/rec/T-REC-E.164-201011-I) (with '+' sign) format
+     */
     phoneNumber: string
 }
 

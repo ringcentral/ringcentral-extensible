@@ -1,18 +1,18 @@
 // Official name of a formatting language
 class FormattingLocaleInfo
 {
-    /// <summary>
-    /// Internal identifier of a formatting language
-    /// </summary>
+    /**
+     * Internal identifier of a formatting language
+     */
     id: string
 
-    /// <summary>
-    /// Localization code of a formatting language
-    /// </summary>
+    /**
+     * Localization code of a formatting language
+     */
     localeCode: string
 
-    /// <summary>
-    /// </summary>
+    /**
+     */
     name: string
 }
 

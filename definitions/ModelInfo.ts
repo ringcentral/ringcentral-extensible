@@ -2,30 +2,30 @@ import AddonInfo from './AddonInfo'
 
 class ModelInfo
 {
-    /// <summary>
-    /// Addon identifier. For HardPhones of certain types, which are compatible with this addon identifier
-    /// </summary>
+    /**
+     * Addon identifier. For HardPhones of certain types, which are compatible with this addon identifier
+     */
     id: string
 
-    /// <summary>
-    /// Device name
-    /// </summary>
+    /**
+     * Device name
+     */
     name: string
 
-    /// <summary>
-    /// Addons description
-    /// Required
-    /// </summary>
+    /**
+     * Addons description
+     * Required
+     */
     addons: AddonInfo[]
 
-    /// <summary>
-    /// Device feature or multiple features supported
-    /// </summary>
+    /**
+     * Device feature or multiple features supported
+     */
     features: string[]
 
-    /// <summary>
-    /// Max supported count of phone lines
-    /// </summary>
+    /**
+     * Max supported count of phone lines
+     */
     lineCount: number
 }
 

@@ -1,23 +1,23 @@
 class CallQueueInfo
 {
-    /// <summary>
-    /// Internal identifier of a call queue
-    /// </summary>
+    /**
+     * Internal identifier of a call queue
+     */
     id: string
 
-    /// <summary>
-    /// Name of a call queue
-    /// </summary>
+    /**
+     * Name of a call queue
+     */
     name: string
 
-    /// <summary>
-    /// Extension number of a call queue
-    /// </summary>
+    /**
+     * Extension number of a call queue
+     */
     extensionNumber: string
 
-    /// <summary>
-    /// Flag allow members to change their queue status
-    /// </summary>
+    /**
+     * Flag allow members to change their queue status
+     */
     editableMemberStatus: boolean
 }
 

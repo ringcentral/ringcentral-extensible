@@ -1,18 +1,18 @@
 class DeviceExtensionInfo
 {
-    /// <summary>
-    /// Internal identifier of an extension
-    /// </summary>
+    /**
+     * Internal identifier of an extension
+     */
     id: number
 
-    /// <summary>
-    /// Link to an extension resource
-    /// </summary>
+    /**
+     * Link to an extension resource
+     */
     uri: string
 
-    /// <summary>
-    /// Number of extension
-    /// </summary>
+    /**
+     * Number of extension
+     */
     extensionNumber: string
 }
 

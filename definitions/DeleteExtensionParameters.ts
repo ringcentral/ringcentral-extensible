@@ -1,11 +1,11 @@
 class DeleteExtensionParameters
 {
-    /// <summary>
-    /// </summary>
+    /**
+     */
     savePhoneLines: boolean
 
-    /// <summary>
-    /// </summary>
+    /**
+     */
     savePhoneNumbers: boolean
 }
 

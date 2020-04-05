@@ -1,35 +1,35 @@
 class MeetingRecordingInfo
 {
-    /// <summary>
-    /// </summary>
+    /**
+     */
     id: string
 
-    /// <summary>
-    /// </summary>
+    /**
+     */
     contentDownloadUri: string
 
-    /// <summary>
-    /// Enum: video/mp4, audio/m4a, text/vtt
-    /// </summary>
+    /**
+     * Enum: video/mp4, audio/m4a, text/vtt
+     */
     contentType: string
 
-    /// <summary>
-    /// </summary>
+    /**
+     */
     size: number
 
-    /// <summary>
-    /// Starting time of a recording
-    /// </summary>
+    /**
+     * Starting time of a recording
+     */
     startTime: string
 
-    /// <summary>
-    /// Ending time of a recording
-    /// </summary>
+    /**
+     * Ending time of a recording
+     */
     endTime: string
 
-    /// <summary>
-    /// Enum: Completed, Processing
-    /// </summary>
+    /**
+     * Enum: Completed, Processing
+     */
     status: string
 }
 

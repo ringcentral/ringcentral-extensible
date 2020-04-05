@@ -1,8 +1,8 @@
 class CallRecordingUpdate
 {
-    /// <summary>
-    /// Recording status
-    /// </summary>
+    /**
+     * Recording status
+     */
     active: boolean
 }
 

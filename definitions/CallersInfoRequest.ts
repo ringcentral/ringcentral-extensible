@@ -1,13 +1,13 @@
 class CallersInfoRequest
 {
-    /// <summary>
-    /// Phone number of a caller
-    /// </summary>
+    /**
+     * Phone number of a caller
+     */
     callerId: string
 
-    /// <summary>
-    /// Contact name of a caller
-    /// </summary>
+    /**
+     * Contact name of a caller
+     */
     name: string
 }
 

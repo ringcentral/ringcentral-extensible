@@ -3,21 +3,21 @@ import SyncInfoMessages from './SyncInfoMessages'
 
 class GetMessageSyncResponse
 {
-    /// <summary>
-    /// Link to the message sync resource
-    /// </summary>
+    /**
+     * Link to the message sync resource
+     */
     uri: string
 
-    /// <summary>
-    /// List of message records with synchronization information
-    /// Required
-    /// </summary>
+    /**
+     * List of message records with synchronization information
+     * Required
+     */
     records: GetMessageInfoResponse[]
 
-    /// <summary>
-    /// Sync type, token and time
-    /// Required
-    /// </summary>
+    /**
+     * Sync type, token and time
+     * Required
+     */
     syncInfo: SyncInfoMessages
 }
 

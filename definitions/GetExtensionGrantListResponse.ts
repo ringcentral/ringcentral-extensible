@@ -4,27 +4,27 @@ import ProvisioningPagingInfo from './ProvisioningPagingInfo'
 
 class GetExtensionGrantListResponse
 {
-    /// <summary>
-    /// Link to the list of extension grants
-    /// </summary>
+    /**
+     * Link to the list of extension grants
+     */
     uri: string
 
-    /// <summary>
-    /// List of extension grants with details
-    /// Required
-    /// </summary>
+    /**
+     * List of extension grants with details
+     * Required
+     */
     records: GrantInfo[]
 
-    /// <summary>
-    /// Information on navigation
-    /// Required
-    /// </summary>
+    /**
+     * Information on navigation
+     * Required
+     */
     navigation: ProvisioningNavigationInfo
 
-    /// <summary>
-    /// Information on paging
-    /// Required
-    /// </summary>
+    /**
+     * Information on paging
+     * Required
+     */
     paging: ProvisioningPagingInfo
 }
 

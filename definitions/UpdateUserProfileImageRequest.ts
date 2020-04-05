@@ -2,8 +2,8 @@ import Attachment from './Attachment'
 
 class UpdateUserProfileImageRequest
 {
-    /// <summary>
-    /// </summary>
+    /**
+     */
     image: Attachment
 }
 

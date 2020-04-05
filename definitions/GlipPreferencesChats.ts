@@ -1,14 +1,14 @@
 class GlipPreferencesChats
 {
-    /// <summary>
-    /// Default: 10
-    /// </summary>
+    /**
+     * Default: 10
+     */
     maxCount: number
 
-    /// <summary>
-    /// Default: CombineAllChatTypes
-    /// Enum: SeparateAllChatTypes, SeparateConversationsAndTeams, CombineAllChatTypes
-    /// </summary>
+    /**
+     * Default: CombineAllChatTypes
+     * Enum: SeparateAllChatTypes, SeparateConversationsAndTeams, CombineAllChatTypes
+     */
     leftRailMode: string
 }
 

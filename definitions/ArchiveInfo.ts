@@ -1,13 +1,13 @@
 class ArchiveInfo
 {
-    /// <summary>
-    /// Archive size in bytes
-    /// </summary>
+    /**
+     * Archive size in bytes
+     */
     size: number
 
-    /// <summary>
-    /// Link for archive download
-    /// </summary>
+    /**
+     * Link for archive download
+     */
     uri: string
 }
 

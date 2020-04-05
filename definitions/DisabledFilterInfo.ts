@@ -1,18 +1,18 @@
 class DisabledFilterInfo
 {
-    /// <summary>
-    /// Event filter that is disabled for the user
-    /// </summary>
+    /**
+     * Event filter that is disabled for the user
+     */
     filter: string
 
-    /// <summary>
-    /// Reason why the filter is disabled for the user
-    /// </summary>
+    /**
+     * Reason why the filter is disabled for the user
+     */
     reason: string
 
-    /// <summary>
-    /// Error message
-    /// </summary>
+    /**
+     * Error message
+     */
     message: string
 }
 

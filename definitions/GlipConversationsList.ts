@@ -3,14 +3,14 @@ import GlipNavigationInfo from './GlipNavigationInfo'
 
 class GlipConversationsList
 {
-    /// <summary>
-    /// List of conversations
-    /// Required
-    /// </summary>
+    /**
+     * List of conversations
+     * Required
+     */
     records: GlipConversationInfo[]
 
-    /// <summary>
-    /// </summary>
+    /**
+     */
     navigation: GlipNavigationInfo
 }
 

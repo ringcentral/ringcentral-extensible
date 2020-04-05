@@ -2,14 +2,14 @@ import ScheduleInfoUserBusinessHours from './ScheduleInfoUserBusinessHours'
 
 class GetUserBusinessHoursResponse
 {
-    /// <summary>
-    /// Canonical URI of a business-hours resource
-    /// </summary>
+    /**
+     * Canonical URI of a business-hours resource
+     */
     uri: string
 
-    /// <summary>
-    /// Schedule when an answering rule is applied
-    /// </summary>
+    /**
+     * Schedule when an answering rule is applied
+     */
     schedule: ScheduleInfoUserBusinessHours
 }
 

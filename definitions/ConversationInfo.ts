@@ -1,13 +1,13 @@
 class ConversationInfo
 {
-    /// <summary>
-    /// Internal identifier of a conversation
-    /// </summary>
+    /**
+     * Internal identifier of a conversation
+     */
     id: string
 
-    /// <summary>
-    /// Deprecated. Link to a conversation resource
-    /// </summary>
+    /**
+     * Deprecated. Link to a conversation resource
+     */
     uri: string
 }
 

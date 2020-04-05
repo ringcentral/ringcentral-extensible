@@ -1,68 +1,68 @@
 class DeviceEmergencyServiceAddressResource
 {
-    /// <summary>
-    /// </summary>
+    /**
+     */
     street: string
 
-    /// <summary>
-    /// </summary>
+    /**
+     */
     street2: string
 
-    /// <summary>
-    /// </summary>
+    /**
+     */
     city: string
 
-    /// <summary>
-    /// </summary>
+    /**
+     */
     zip: string
 
-    /// <summary>
-    /// </summary>
+    /**
+     */
     customerName: string
 
-    /// <summary>
-    /// State/province name
-    /// </summary>
+    /**
+     * State/province name
+     */
     state: string
 
-    /// <summary>
-    /// Internal identifier of a state
-    /// </summary>
+    /**
+     * Internal identifier of a state
+     */
     stateId: string
 
-    /// <summary>
-    /// ISO code of a state
-    /// </summary>
+    /**
+     * ISO code of a state
+     */
     stateIsoCode: string
 
-    /// <summary>
-    /// Full name of a state
-    /// </summary>
+    /**
+     * Full name of a state
+     */
     stateName: string
 
-    /// <summary>
-    /// Internal identifier of a country
-    /// </summary>
+    /**
+     * Internal identifier of a country
+     */
     countryId: string
 
-    /// <summary>
-    /// ISO code of a country
-    /// </summary>
+    /**
+     * ISO code of a country
+     */
     countryIsoCode: string
 
-    /// <summary>
-    /// Country name
-    /// </summary>
+    /**
+     * Country name
+     */
     country: string
 
-    /// <summary>
-    /// Full name of a country
-    /// </summary>
+    /**
+     * Full name of a country
+     */
     countryName: string
 
-    /// <summary>
-    /// Specifies if emergency address is out of country
-    /// </summary>
+    /**
+     * Specifies if emergency address is out of country
+     */
     outOfCountry: boolean
 }
 

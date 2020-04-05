@@ -1,7 +1,7 @@
 class Permission
 {
-    /// <summary>
-    /// </summary>
+    /**
+     */
     enabled: boolean
 }
 

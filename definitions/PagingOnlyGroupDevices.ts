@@ -4,24 +4,24 @@ import ProvisioningPagingInfo from './ProvisioningPagingInfo'
 
 class PagingOnlyGroupDevices
 {
-    /// <summary>
-    /// Link to the list of devices assigned to the paging only group
-    /// </summary>
+    /**
+     * Link to the list of devices assigned to the paging only group
+     */
     uri: string
 
-    /// <summary>
-    /// List of paging devices assigned to this group
-    /// </summary>
+    /**
+     * List of paging devices assigned to this group
+     */
     records: PagingDeviceInfo[]
 
-    /// <summary>
-    /// Information on navigation
-    /// </summary>
+    /**
+     * Information on navigation
+     */
     navigation: ProvisioningNavigationInfo
 
-    /// <summary>
-    /// Information on paging
-    /// </summary>
+    /**
+     * Information on paging
+     */
     paging: ProvisioningPagingInfo
 }
 

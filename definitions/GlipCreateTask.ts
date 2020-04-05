@@ -4,55 +4,55 @@ import GlipCreateTaskAttachment from './GlipCreateTaskAttachment'
 
 class GlipCreateTask
 {
-    /// <summary>
-    /// Task name/subject. Max allowed length is 250 characters.
-    /// Required
-    /// </summary>
+    /**
+     * Task name/subject. Max allowed length is 250 characters.
+     * Required
+     */
     subject: string
 
-    /// <summary>
-    /// Required
-    /// </summary>
+    /**
+     * Required
+     */
     assignees: GlipCreateTaskAssignee[]
 
-    /// <summary>
-    /// Default: Simple
-    /// Enum: Simple, AllAssignees, Percentage
-    /// </summary>
+    /**
+     * Default: Simple
+     * Enum: Simple, AllAssignees, Percentage
+     */
     completenessCondition: string
 
-    /// <summary>
-    /// Task start date in UTC time zone.
-    /// </summary>
+    /**
+     * Task start date in UTC time zone.
+     */
     startDate: string
 
-    /// <summary>
-    /// Task due date/time in UTC time zone.
-    /// </summary>
+    /**
+     * Task due date/time in UTC time zone.
+     */
     dueDate: string
 
-    /// <summary>
-    /// Default: Black
-    /// Enum: Black, Red, Orange, Yellow, Green, Blue, Purple, Magenta
-    /// </summary>
+    /**
+     * Default: Black
+     * Enum: Black, Red, Orange, Yellow, Green, Blue, Purple, Magenta
+     */
     color: string
 
-    /// <summary>
-    /// Task section to group / search by. Max allowed legth is 100 characters.
-    /// </summary>
+    /**
+     * Task section to group / search by. Max allowed legth is 100 characters.
+     */
     section: string
 
-    /// <summary>
-    /// Task details. Max allowed legth is 102400 characters (100kB).
-    /// </summary>
+    /**
+     * Task details. Max allowed legth is 102400 characters (100kB).
+     */
     description: string
 
-    /// <summary>
-    /// </summary>
+    /**
+     */
     recurrence: GlipTaskRecurrenceInfo
 
-    /// <summary>
-    /// </summary>
+    /**
+     */
     attachments: GlipCreateTaskAttachment[]
 }
 

@@ -1,8 +1,8 @@
 class ParkInfo
 {
-    /// <summary>
-    /// Call park identifier
-    /// </summary>
+    /**
+     * Call park identifier
+     */
     id: string
 }
 

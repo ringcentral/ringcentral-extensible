@@ -1,27 +1,27 @@
 class TimezoneInfo
 {
-    /// <summary>
-    /// Internal identifier of a timezone
-    /// </summary>
+    /**
+     * Internal identifier of a timezone
+     */
     id: string
 
-    /// <summary>
-    /// Canonical URI of a timezone
-    /// </summary>
+    /**
+     * Canonical URI of a timezone
+     */
     uri: string
 
-    /// <summary>
-    /// Short name of a timezone
-    /// </summary>
+    /**
+     * Short name of a timezone
+     */
     name: string
 
-    /// <summary>
-    /// Meaningful description of the timezone
-    /// </summary>
+    /**
+     * Meaningful description of the timezone
+     */
     description: string
 
-    /// <summary>
-    /// </summary>
+    /**
+     */
     bias: string
 }
 

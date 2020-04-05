@@ -3,19 +3,19 @@ import DevicePhoneNumberInfo from './DevicePhoneNumberInfo'
 
 class DevicePhoneLinesInfo
 {
-    /// <summary>
-    /// Type of phone line
-    /// Enum: Standalone, StandaloneFree, BlaPrimary, BlaSecondary
-    /// </summary>
+    /**
+     * Type of phone line
+     * Enum: Standalone, StandaloneFree, BlaPrimary, BlaSecondary
+     */
     lineType: string
 
-    /// <summary>
-    /// </summary>
+    /**
+     */
     emergencyAddress: DevicePhoneLinesEmergencyAddressInfo
 
-    /// <summary>
-    /// Phone number information
-    /// </summary>
+    /**
+     * Phone number information
+     */
     phoneInfo: DevicePhoneNumberInfo
 }
 

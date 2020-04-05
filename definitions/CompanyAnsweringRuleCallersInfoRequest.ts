@@ -1,13 +1,13 @@
 class CompanyAnsweringRuleCallersInfoRequest
 {
-    /// <summary>
-    /// Phone number of a caller
-    /// </summary>
+    /**
+     * Phone number of a caller
+     */
     callerId: string
 
-    /// <summary>
-    /// Displayed name for a caller ID
-    /// </summary>
+    /**
+     * Displayed name for a caller ID
+     */
     name: string
 }
 

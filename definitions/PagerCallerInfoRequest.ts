@@ -1,13 +1,13 @@
 class PagerCallerInfoRequest
 {
-    /// <summary>
-    /// Extension identifier
-    /// </summary>
+    /**
+     * Extension identifier
+     */
     extensionId: string
 
-    /// <summary>
-    /// Extension number
-    /// </summary>
+    /**
+     * Extension number
+     */
     extensionNumber: string
 }
 

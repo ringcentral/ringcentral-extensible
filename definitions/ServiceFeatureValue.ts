@@ -1,16 +1,16 @@
 class ServiceFeatureValue
 {
-    /// <summary>
-    /// </summary>
+    /**
+     */
     featureName: string
 
-    /// <summary>
-    /// </summary>
+    /**
+     */
     enabled: boolean
 
-    /// <summary>
-    /// Enum: Available, AccountTypeLimitation, ExtensionTypeLimitation, AccountLimitation, ExtensionLimitation, InsufficientPermissions, ApplicationLimitation
-    /// </summary>
+    /**
+     * Enum: Available, AccountTypeLimitation, ExtensionTypeLimitation, AccountLimitation, ExtensionLimitation, InsufficientPermissions, ApplicationLimitation
+     */
     reason: string
 }
 

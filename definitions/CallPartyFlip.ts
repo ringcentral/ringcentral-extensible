@@ -1,8 +1,8 @@
 class CallPartyFlip
 {
-    /// <summary>
-    /// Call flip id
-    /// </summary>
+    /**
+     * Call flip id
+     */
     callFlipId: string
 }
 

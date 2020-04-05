@@ -2,9 +2,9 @@ import PartyUpdateInfo from './PartyUpdateInfo'
 
 class PartyUpdateRequest
 {
-    /// <summary>
-    /// Party update data
-    /// </summary>
+    /**
+     * Party update data
+     */
     party: PartyUpdateInfo
 }
 

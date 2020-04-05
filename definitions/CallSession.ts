@@ -2,9 +2,9 @@ import CallSessionObject from './CallSessionObject'
 
 class CallSession
 {
-    /// <summary>
-    /// Call session information
-    /// </summary>
+    /**
+     * Call session information
+     */
     session: CallSessionObject
 }
 

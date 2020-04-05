@@ -1,8 +1,8 @@
 class GlipPatchPostBody
 {
-    /// <summary>
-    /// Post text.
-    /// </summary>
+    /**
+     * Post text.
+     */
     text: string
 }
 

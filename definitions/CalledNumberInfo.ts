@@ -1,8 +1,8 @@
 class CalledNumberInfo
 {
-    /// <summary>
-    /// Called phone number
-    /// </summary>
+    /**
+     * Called phone number
+     */
     phoneNumber: string
 }
 

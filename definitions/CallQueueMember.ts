@@ -2,24 +2,24 @@ import SiteResource from './SiteResource'
 
 class CallQueueMember
 {
-    /// <summary>
-    /// Internal identifier of an extension
-    /// </summary>
+    /**
+     * Internal identifier of an extension
+     */
     id: string
 
-    /// <summary>
-    /// Extension full name
-    /// </summary>
+    /**
+     * Extension full name
+     */
     name: string
 
-    /// <summary>
-    /// Extension number
-    /// </summary>
+    /**
+     * Extension number
+     */
     extensionNumber: string
 
-    /// <summary>
-    /// Extension site
-    /// </summary>
+    /**
+     * Extension site
+     */
     site: SiteResource
 }
 

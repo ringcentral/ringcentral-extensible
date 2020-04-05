@@ -1,23 +1,23 @@
 class EditPagingGroupRequest
 {
-    /// <summary>
-    /// List of users that will be allowed to page a group specified
-    /// </summary>
+    /**
+     * List of users that will be allowed to page a group specified
+     */
     addedUserIds: string[]
 
-    /// <summary>
-    /// List of users that will be unallowed to page a group specified
-    /// </summary>
+    /**
+     * List of users that will be unallowed to page a group specified
+     */
     removedUserIds: string[]
 
-    /// <summary>
-    /// List of account devices that will be assigned to a paging group specified
-    /// </summary>
+    /**
+     * List of account devices that will be assigned to a paging group specified
+     */
     addedDeviceIds: string[]
 
-    /// <summary>
-    /// List of account devices that will be unassigned from a paging group specified
-    /// </summary>
+    /**
+     * List of account devices that will be unassigned from a paging group specified
+     */
     removedDeviceIds: string[]
 }
 

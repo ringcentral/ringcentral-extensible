@@ -1,13 +1,13 @@
 class LocationStateInfo
 {
-    /// <summary>
-    /// Internal identifier of a state
-    /// </summary>
+    /**
+     * Internal identifier of a state
+     */
     id: string
 
-    /// <summary>
-    /// Link to a state resource
-    /// </summary>
+    /**
+     * Link to a state resource
+     */
     uri: string
 }
 

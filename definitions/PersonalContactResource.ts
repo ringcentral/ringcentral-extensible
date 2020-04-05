@@ -2,152 +2,152 @@ import ContactAddressInfo from './ContactAddressInfo'
 
 class PersonalContactResource
 {
-    /// <summary>
-    /// Canonical URI of the contact
-    /// </summary>
+    /**
+     * Canonical URI of the contact
+     */
     uri: string
 
-    /// <summary>
-    /// This property has a special meaning only on Address Book Sync (e.g. a contact can be `Deleted`). For simple contact list reading it has always the default value - `Alive`
-    /// Enum: Alive, Deleted, Purged
-    /// </summary>
+    /**
+     * This property has a special meaning only on Address Book Sync (e.g. a contact can be `Deleted`). For simple contact list reading it has always the default value - `Alive`
+     * Enum: Alive, Deleted, Purged
+     */
     availability: string
 
-    /// <summary>
-    /// Email of the contact
-    /// </summary>
+    /**
+     * Email of the contact
+     */
     email: string
 
-    /// <summary>
-    /// Internal identifier of the contact
-    /// </summary>
+    /**
+     * Internal identifier of the contact
+     */
     id: number
 
-    /// <summary>
-    /// Notes for the contact
-    /// </summary>
+    /**
+     * Notes for the contact
+     */
     notes: string
 
-    /// <summary>
-    /// Company name of the contact
-    /// </summary>
+    /**
+     * Company name of the contact
+     */
     company: string
 
-    /// <summary>
-    /// First name of the contact
-    /// </summary>
+    /**
+     * First name of the contact
+     */
     firstName: string
 
-    /// <summary>
-    /// Last name of the contact
-    /// </summary>
+    /**
+     * Last name of the contact
+     */
     lastName: string
 
-    /// <summary>
-    /// Job title of the contact
-    /// </summary>
+    /**
+     * Job title of the contact
+     */
     jobTitle: string
 
-    /// <summary>
-    /// Date of birth of the contact
-    /// </summary>
+    /**
+     * Date of birth of the contact
+     */
     birthday: string
 
-    /// <summary>
-    /// The contact home page URL
-    /// </summary>
+    /**
+     * The contact home page URL
+     */
     webPage: string
 
-    /// <summary>
-    /// Middle name of the contact
-    /// </summary>
+    /**
+     * Middle name of the contact
+     */
     middleName: string
 
-    /// <summary>
-    /// Nick name of the contact
-    /// </summary>
+    /**
+     * Nick name of the contact
+     */
     nickName: string
 
-    /// <summary>
-    /// 2nd email of the contact
-    /// </summary>
+    /**
+     * 2nd email of the contact
+     */
     email2: string
 
-    /// <summary>
-    /// 3rd email of the contact
-    /// </summary>
+    /**
+     * 3rd email of the contact
+     */
     email3: string
 
-    /// <summary>
-    /// Home phone number of the contact in e.164 (with "+") format
-    /// </summary>
+    /**
+     * Home phone number of the contact in e.164 (with "+") format
+     */
     homePhone: string
 
-    /// <summary>
-    /// 2nd home phone number of the contact in e.164 (with "+") format
-    /// </summary>
+    /**
+     * 2nd home phone number of the contact in e.164 (with "+") format
+     */
     homePhone2: string
 
-    /// <summary>
-    /// Business phone of the contact in e.164 (with "+") format
-    /// </summary>
+    /**
+     * Business phone of the contact in e.164 (with "+") format
+     */
     businessPhone: string
 
-    /// <summary>
-    /// 2nd business phone of the contact in e.164 (with "+") format
-    /// </summary>
+    /**
+     * 2nd business phone of the contact in e.164 (with "+") format
+     */
     businessPhone2: string
 
-    /// <summary>
-    /// Mobile phone of the contact in e.164 (with "+") format
-    /// </summary>
+    /**
+     * Mobile phone of the contact in e.164 (with "+") format
+     */
     mobilePhone: string
 
-    /// <summary>
-    /// Business fax number of the contact in e.164 (with "+") format
-    /// </summary>
+    /**
+     * Business fax number of the contact in e.164 (with "+") format
+     */
     businessFax: string
 
-    /// <summary>
-    /// Company number of the contact in e.164 (with "+") format
-    /// </summary>
+    /**
+     * Company number of the contact in e.164 (with "+") format
+     */
     companyPhone: string
 
-    /// <summary>
-    /// Phone number of the contact assistant in e.164 (with "+") format
-    /// </summary>
+    /**
+     * Phone number of the contact assistant in e.164 (with "+") format
+     */
     assistantPhone: string
 
-    /// <summary>
-    /// Car phone number of the contact in e.164 (with "+") format
-    /// </summary>
+    /**
+     * Car phone number of the contact in e.164 (with "+") format
+     */
     carPhone: string
 
-    /// <summary>
-    /// Other phone number of the contact in e.164 (with "+") format
-    /// </summary>
+    /**
+     * Other phone number of the contact in e.164 (with "+") format
+     */
     otherPhone: string
 
-    /// <summary>
-    /// Other fax number of the contact in e.164 (with "+") format
-    /// </summary>
+    /**
+     * Other fax number of the contact in e.164 (with "+") format
+     */
     otherFax: string
 
-    /// <summary>
-    /// Callback phone number of the contact in e.164 (with "+") format
-    /// </summary>
+    /**
+     * Callback phone number of the contact in e.164 (with "+") format
+     */
     callbackPhone: string
 
-    /// <summary>
-    /// </summary>
+    /**
+     */
     businessAddress: ContactAddressInfo
 
-    /// <summary>
-    /// </summary>
+    /**
+     */
     homeAddress: ContactAddressInfo
 
-    /// <summary>
-    /// </summary>
+    /**
+     */
     otherAddress: ContactAddressInfo
 }
 

@@ -1,19 +1,19 @@
 class DeleteMessageByFilterParameters
 {
-    /// <summary>
-    /// </summary>
+    /**
+     */
     conversationId: string[]
 
-    /// <summary>
-    /// Messages received earlier then the date specified will be deleted. The default value is current datetime
-    /// </summary>
+    /**
+     * Messages received earlier then the date specified will be deleted. The default value is current datetime
+     */
     dateTo: string
 
-    /// <summary>
-    /// Type of messages to be deleted
-    /// Default: All
-    /// Enum: Fax, SMS, VoiceMail, Pager, Text, All
-    /// </summary>
+    /**
+     * Type of messages to be deleted
+     * Default: All
+     * Enum: Fax, SMS, VoiceMail, Pager, Text, All
+     */
     type: string
 }
 

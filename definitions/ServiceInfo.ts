@@ -5,29 +5,29 @@ import TargetServicePlanInfo from './TargetServicePlanInfo'
 
 class ServiceInfo
 {
-    /// <summary>
-    /// Canonical URI of a service info resource
-    /// </summary>
+    /**
+     * Canonical URI of a service info resource
+     */
     uri: string
 
-    /// <summary>
-    /// Information on account billing plan
-    /// </summary>
+    /**
+     * Information on account billing plan
+     */
     billingPlan: BillingPlanInfo
 
-    /// <summary>
-    /// Information on account brand
-    /// </summary>
+    /**
+     * Information on account brand
+     */
     brand: BrandInfo
 
-    /// <summary>
-    /// Information on account service plan
-    /// </summary>
+    /**
+     * Information on account service plan
+     */
     servicePlan: ServicePlanInfo
 
-    /// <summary>
-    /// Information on account target service plan
-    /// </summary>
+    /**
+     * Information on account target service plan
+     */
     targetServicePlan: TargetServicePlanInfo
 }
 

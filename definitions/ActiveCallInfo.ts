@@ -4,64 +4,64 @@ import AdditionalCQInfo from './AdditionalCQInfo'
 
 class ActiveCallInfo
 {
-    /// <summary>
-    /// </summary>
+    /**
+     */
     id: string
 
-    /// <summary>
-    /// Enum: Inbound, Outbound
-    /// </summary>
+    /**
+     * Enum: Inbound, Outbound
+     */
     direction: string
 
-    /// <summary>
-    /// Phone number or extension number of a caller. For GCM transport type '_from' property should be used
-    /// </summary>
+    /**
+     * Phone number or extension number of a caller. For GCM transport type '_from' property should be used
+     */
     from: string
 
-    /// <summary>
-    /// Name of a caller
-    /// </summary>
+    /**
+     * Name of a caller
+     */
     fromName: string
 
-    /// <summary>
-    /// Phone number or extension number of a callee
-    /// </summary>
+    /**
+     * Phone number or extension number of a callee
+     */
     to: string
 
-    /// <summary>
-    /// Name of a callee
-    /// </summary>
+    /**
+     * Name of a callee
+     */
     toName: string
 
-    /// <summary>
-    /// Time when the call is actually started
-    /// </summary>
+    /**
+     * Time when the call is actually started
+     */
     startTime: string
 
-    /// <summary>
-    /// </summary>
+    /**
+     */
     telephonyStatus: string
 
-    /// <summary>
-    /// </summary>
+    /**
+     */
     sipData: DetailedCallInfo
 
-    /// <summary>
-    /// </summary>
+    /**
+     */
     sessionId: string
 
-    /// <summary>
-    /// </summary>
+    /**
+     */
     terminationType: string
 
-    /// <summary>
-    /// Primary call session information. Supported for Call Queues only
-    /// </summary>
+    /**
+     * Primary call session information. Supported for Call Queues only
+     */
     primary: PrimaryCQInfo
 
-    /// <summary>
-    /// Additional call session information. Supported for Call Queues only
-    /// </summary>
+    /**
+     * Additional call session information. Supported for Call Queues only
+     */
     additional: AdditionalCQInfo
 }
 

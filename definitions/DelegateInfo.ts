@@ -1,13 +1,13 @@
 class DelegateInfo
 {
-    /// <summary>
-    /// Internal identifier of a Secretary extension
-    /// </summary>
+    /**
+     * Internal identifier of a Secretary extension
+     */
     id: string
 
-    /// <summary>
-    /// Custom name of a Secretary extension
-    /// </summary>
+    /**
+     * Custom name of a Secretary extension
+     */
     name: string
 }
 

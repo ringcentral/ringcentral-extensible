@@ -4,24 +4,24 @@ import CallLogPagingInfo from './CallLogPagingInfo'
 
 class AccountCallLogResponse
 {
-    /// <summary>
-    /// Link to the list of company call log records
-    /// </summary>
+    /**
+     * Link to the list of company call log records
+     */
     uri: string
 
-    /// <summary>
-    /// List of call log records
-    /// </summary>
+    /**
+     * List of call log records
+     */
     records: CompanyCallLogRecord[]
 
-    /// <summary>
-    /// Information on navigation
-    /// </summary>
+    /**
+     * Information on navigation
+     */
     navigation: CallLogNavigationInfo
 
-    /// <summary>
-    /// Information on paging
-    /// </summary>
+    /**
+     * Information on paging
+     */
     paging: CallLogPagingInfo
 }
 

@@ -2,24 +2,24 @@ import VersionInfo from './VersionInfo'
 
 class GetVersionsResponse
 {
-    /// <summary>
-    /// Canonical URI of the API version
-    /// </summary>
+    /**
+     * Canonical URI of the API version
+     */
     uri: string
 
-    /// <summary>
-    /// Full API version information: uri, number, release date
-    /// </summary>
+    /**
+     * Full API version information: uri, number, release date
+     */
     apiVersions: VersionInfo[]
 
-    /// <summary>
-    /// Server version
-    /// </summary>
+    /**
+     * Server version
+     */
     serverVersion: string
 
-    /// <summary>
-    /// Server revision
-    /// </summary>
+    /**
+     * Server revision
+     */
     serverRevision: string
 }
 

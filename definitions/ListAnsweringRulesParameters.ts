@@ -1,24 +1,24 @@
 class ListAnsweringRulesParameters
 {
-    /// <summary>
-    /// Default: Simple
-    /// Enum: Detailed, Simple
-    /// </summary>
+    /**
+     * Default: Simple
+     * Enum: Detailed, Simple
+     */
     view: string
 
-    /// <summary>
-    /// If true, then only active call handling rules are returned
-    /// </summary>
+    /**
+     * If true, then only active call handling rules are returned
+     */
     enabledOnly: boolean
 
-    /// <summary>
-    /// Default: 1
-    /// </summary>
+    /**
+     * Default: 1
+     */
     page: string
 
-    /// <summary>
-    /// Default: 100
-    /// </summary>
+    /**
+     * Default: 100
+     */
     perPage: string
 }
 

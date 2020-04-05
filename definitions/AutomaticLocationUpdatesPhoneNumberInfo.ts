@@ -1,13 +1,13 @@
 class AutomaticLocationUpdatesPhoneNumberInfo
 {
-    /// <summary>
-    /// Internal identifier of a phone number
-    /// </summary>
+    /**
+     * Internal identifier of a phone number
+     */
     id: number
 
-    /// <summary>
-    /// Phone number
-    /// </summary>
+    /**
+     * Phone number
+     */
     phoneNumber: string
 }
 

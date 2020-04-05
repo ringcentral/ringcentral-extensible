@@ -1,13 +1,13 @@
 class AudioPromptInfo
 {
-    /// <summary>
-    /// Link to a prompt audio file
-    /// </summary>
+    /**
+     * Link to a prompt audio file
+     */
     uri: string
 
-    /// <summary>
-    /// Internal identifier of a prompt
-    /// </summary>
+    /**
+     * Internal identifier of a prompt
+     */
     id: string
 }
 

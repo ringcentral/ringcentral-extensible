@@ -3,27 +3,27 @@ import CallerIdByFeature from './CallerIdByFeature'
 
 class ExtensionCallerIdInfo
 {
-    /// <summary>
-    /// Canonical URL of a caller ID resource
-    /// </summary>
+    /**
+     * Canonical URL of a caller ID resource
+     */
     uri: string
 
-    /// <summary>
-    /// </summary>
+    /**
+     */
     byDevice: CallerIdByDevice[]
 
-    /// <summary>
-    /// </summary>
+    /**
+     */
     byFeature: CallerIdByFeature[]
 
-    /// <summary>
-    /// If 'True', then user first name and last name will be used as caller ID when making outbound calls from extension
-    /// </summary>
+    /**
+     * If 'True', then user first name and last name will be used as caller ID when making outbound calls from extension
+     */
     extensionNameForOutboundCalls: boolean
 
-    /// <summary>
-    /// If 'True', then extension number will be used as caller ID when making internal calls
-    /// </summary>
+    /**
+     * If 'True', then extension number will be used as caller ID when making internal calls
+     */
     extensionNumberForInternalCalls: boolean
 }
 

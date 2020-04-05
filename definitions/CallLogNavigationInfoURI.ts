@@ -1,7 +1,7 @@
 class CallLogNavigationInfoURI
 {
-    /// <summary>
-    /// </summary>
+    /**
+     */
     uri: string
 }
 

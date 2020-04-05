@@ -1,13 +1,13 @@
 class RecipientInfo
 {
-    /// <summary>
-    /// Link to a recipient extension resource
-    /// </summary>
+    /**
+     * Link to a recipient extension resource
+     */
     uri: string
 
-    /// <summary>
-    /// Internal identifier of a recipient extension
-    /// </summary>
+    /**
+     * Internal identifier of a recipient extension
+     */
     id: number
 }
 

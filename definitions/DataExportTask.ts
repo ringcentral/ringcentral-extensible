@@ -3,45 +3,45 @@ import ExportTaskResultInfo from './ExportTaskResultInfo'
 
 class DataExportTask
 {
-    /// <summary>
-    /// Canonical URI of a task
-    /// </summary>
+    /**
+     * Canonical URI of a task
+     */
     uri: string
 
-    /// <summary>
-    /// Internal identifier of a task
-    /// </summary>
+    /**
+     * Internal identifier of a task
+     */
     id: string
 
-    /// <summary>
-    /// Task creation datetime
-    /// </summary>
+    /**
+     * Task creation datetime
+     */
     creationTime: string
 
-    /// <summary>
-    /// Task last modification datetime
-    /// </summary>
+    /**
+     * Task last modification datetime
+     */
     lastModifiedTime: string
 
-    /// <summary>
-    /// Task status
-    /// Enum: Accepted, InProgress, Completed, Failed, Canceled
-    /// </summary>
+    /**
+     * Task status
+     * Enum: Accepted, InProgress, Completed, Failed, Canceled
+     */
     status: string
 
-    /// <summary>
-    /// Internal identifier of a user
-    /// </summary>
+    /**
+     * Internal identifier of a user
+     */
     creator: string
 
-    /// <summary>
-    /// Information specififed in request
-    /// </summary>
+    /**
+     * Information specififed in request
+     */
     specific: SpecificInfo
 
-    /// <summary>
-    /// Data collection sets. Returned by task ID
-    /// </summary>
+    /**
+     * Data collection sets. Returned by task ID
+     */
     datasets: ExportTaskResultInfo[]
 }
 

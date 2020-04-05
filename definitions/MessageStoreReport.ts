@@ -1,49 +1,49 @@
 class MessageStoreReport
 {
-    /// <summary>
-    /// Internal identifier of a message store report task
-    /// </summary>
+    /**
+     * Internal identifier of a message store report task
+     */
     id: string
 
-    /// <summary>
-    /// Link to a task
-    /// </summary>
+    /**
+     * Link to a task
+     */
     uri: string
 
-    /// <summary>
-    /// Status of a message store report task
-    /// Enum: Accepted, Pending, InProgress, AttemptFailed, Failed, Completed, Cancelled
-    /// </summary>
+    /**
+     * Status of a message store report task
+     * Enum: Accepted, Pending, InProgress, AttemptFailed, Failed, Completed, Cancelled
+     */
     status: string
 
-    /// <summary>
-    /// Internal identifier of an account
-    /// </summary>
+    /**
+     * Internal identifier of an account
+     */
     accountId: string
 
-    /// <summary>
-    /// Internal identifier of an extension
-    /// </summary>
+    /**
+     * Internal identifier of an extension
+     */
     extensionId: string
 
-    /// <summary>
-    /// Task creation time
-    /// </summary>
+    /**
+     * Task creation time
+     */
     creationTime: string
 
-    /// <summary>
-    /// Time of the last task modification
-    /// </summary>
+    /**
+     * Time of the last task modification
+     */
     lastModifiedTime: string
 
-    /// <summary>
-    /// Ending time for collecting messages
-    /// </summary>
+    /**
+     * Ending time for collecting messages
+     */
     dateTo: string
 
-    /// <summary>
-    /// Starting time for collecting messages
-    /// </summary>
+    /**
+     * Starting time for collecting messages
+     */
     dateFrom: string
 }
 

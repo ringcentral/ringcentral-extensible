@@ -1,22 +1,22 @@
 // resource metadata
 class Meta
 {
-    /// <summary>
-    /// </summary>
+    /**
+     */
     created: string
 
-    /// <summary>
-    /// </summary>
+    /**
+     */
     lastModified: string
 
-    /// <summary>
-    /// resource location URI
-    /// </summary>
+    /**
+     * resource location URI
+     */
     location: string
 
-    /// <summary>
-    /// Enum: User, Group
-    /// </summary>
+    /**
+     * Enum: User, Group
+     */
     resourceType: string
 }
 

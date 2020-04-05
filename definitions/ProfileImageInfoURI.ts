@@ -1,7 +1,7 @@
 class ProfileImageInfoURI
 {
-    /// <summary>
-    /// </summary>
+    /**
+     */
     uri: string
 }
 

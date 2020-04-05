@@ -1,13 +1,13 @@
 class CreateGlipMember
 {
-    /// <summary>
-    /// Internal identifier of a user
-    /// </summary>
+    /**
+     * Internal identifier of a user
+     */
     id: string
 
-    /// <summary>
-    /// Email of a user
-    /// </summary>
+    /**
+     * Email of a user
+     */
     email: string
 }
 

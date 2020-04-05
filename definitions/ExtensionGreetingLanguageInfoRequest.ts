@@ -1,8 +1,8 @@
 class ExtensionGreetingLanguageInfoRequest
 {
-    /// <summary>
-    /// internal Identifier of a greeting language
-    /// </summary>
+    /**
+     * internal Identifier of a greeting language
+     */
     id: string
 }
 

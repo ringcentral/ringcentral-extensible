@@ -1,23 +1,23 @@
 class CallRecordingExtensionInfo
 {
-    /// <summary>
-    /// Internal identifier of an extension
-    /// </summary>
+    /**
+     * Internal identifier of an extension
+     */
     id: string
 
-    /// <summary>
-    /// Link to an extension resource
-    /// </summary>
+    /**
+     * Link to an extension resource
+     */
     uri: string
 
-    /// <summary>
-    /// Number of an extension
-    /// </summary>
+    /**
+     * Number of an extension
+     */
     extensionNumber: string
 
-    /// <summary>
-    /// Name of an extension
-    /// </summary>
+    /**
+     * Name of an extension
+     */
     name: string
 }
 

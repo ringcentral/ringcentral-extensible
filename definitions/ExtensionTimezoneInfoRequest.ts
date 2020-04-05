@@ -1,8 +1,8 @@
 class ExtensionTimezoneInfoRequest
 {
-    /// <summary>
-    /// internal Identifier of a timezone
-    /// </summary>
+    /**
+     * internal Identifier of a timezone
+     */
     id: string
 }
 

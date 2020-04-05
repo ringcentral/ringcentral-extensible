@@ -2,18 +2,18 @@ import UnifiedPresence from './UnifiedPresence'
 
 class UnifiedPresenceListEntry
 {
-    /// <summary>
-    /// Internal identifier of the resource
-    /// </summary>
+    /**
+     * Internal identifier of the resource
+     */
     resourceId: string
 
-    /// <summary>
-    /// Status code of resource retrieval
-    /// </summary>
+    /**
+     * Status code of resource retrieval
+     */
     status: number
 
-    /// <summary>
-    /// </summary>
+    /**
+     */
     body: UnifiedPresence
 }
 

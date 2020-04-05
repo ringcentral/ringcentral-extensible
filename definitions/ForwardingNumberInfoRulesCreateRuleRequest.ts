@@ -1,14 +1,14 @@
 class ForwardingNumberInfoRulesCreateRuleRequest
 {
-    /// <summary>
-    /// Internal identifier of a forwarding number
-    /// </summary>
+    /**
+     * Internal identifier of a forwarding number
+     */
     id: string
 
-    /// <summary>
-    /// Forwarding phone number type
-    /// Enum: Home, Mobile, Work, PhoneLine, Outage, Other
-    /// </summary>
+    /**
+     * Forwarding phone number type
+     * Enum: Home, Mobile, Work, PhoneLine, Outage, Other
+     */
     type: string
 }
 

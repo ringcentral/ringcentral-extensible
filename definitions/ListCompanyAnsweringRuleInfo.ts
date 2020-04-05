@@ -3,40 +3,40 @@ import CompanyAnsweringRuleExtensionInfo from './CompanyAnsweringRuleExtensionIn
 
 class ListCompanyAnsweringRuleInfo
 {
-    /// <summary>
-    /// Internal identifier of an answering rule
-    /// </summary>
+    /**
+     * Internal identifier of an answering rule
+     */
     id: string
 
-    /// <summary>
-    /// Canonical URI of an answering rule
-    /// </summary>
+    /**
+     * Canonical URI of an answering rule
+     */
     uri: string
 
-    /// <summary>
-    /// Specifies if the rule is active or inactive. The default value is 'True'
-    /// Default: true
-    /// </summary>
+    /**
+     * Specifies if the rule is active or inactive. The default value is 'True'
+     * Default: true
+     */
     enabled: boolean
 
-    /// <summary>
-    /// Type of an answering rule, the default value is 'Custom' = ['BusinessHours', 'AfterHours', 'Custom']
-    /// Enum: BusinessHours, AfterHours, Custom
-    /// </summary>
+    /**
+     * Type of an answering rule, the default value is 'Custom' = ['BusinessHours', 'AfterHours', 'Custom']
+     * Enum: BusinessHours, AfterHours, Custom
+     */
     type: string
 
-    /// <summary>
-    /// Name of an answering rule specified by user. Max number of symbols is 30. The default value is 'My Rule N' where 'N' is the first free number
-    /// </summary>
+    /**
+     * Name of an answering rule specified by user. Max number of symbols is 30. The default value is 'My Rule N' where 'N' is the first free number
+     */
     name: string
 
-    /// <summary>
-    /// Answering rules are applied when calling to selected number(s)
-    /// </summary>
+    /**
+     * Answering rules are applied when calling to selected number(s)
+     */
     calledNumbers: CalledNumberInfo[]
 
-    /// <summary>
-    /// </summary>
+    /**
+     */
     extension: CompanyAnsweringRuleExtensionInfo
 }
 

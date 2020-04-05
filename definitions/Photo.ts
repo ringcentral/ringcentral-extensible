@@ -1,14 +1,14 @@
 class Photo
 {
-    /// <summary>
-    /// Required
-    /// Enum: photo
-    /// </summary>
+    /**
+     * Required
+     * Enum: photo
+     */
     type: string
 
-    /// <summary>
-    /// Required
-    /// </summary>
+    /**
+     * Required
+     */
     value: string
 }
 

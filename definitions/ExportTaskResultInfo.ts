@@ -1,18 +1,18 @@
 class ExportTaskResultInfo
 {
-    /// <summary>
-    /// Internal identifier of a dataset
-    /// </summary>
+    /**
+     * Internal identifier of a dataset
+     */
     id: string
 
-    /// <summary>
-    /// Link for downloading a dataset
-    /// </summary>
+    /**
+     * Link for downloading a dataset
+     */
     uri: string
 
-    /// <summary>
-    /// Size of ta dataset in bytes
-    /// </summary>
+    /**
+     * Size of ta dataset in bytes
+     */
     size: number
 }
 

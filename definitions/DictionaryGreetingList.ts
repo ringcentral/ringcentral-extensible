@@ -4,24 +4,24 @@ import CallHandlingPagingInfo from './CallHandlingPagingInfo'
 
 class DictionaryGreetingList
 {
-    /// <summary>
-    /// Canonical URI of greetings list resource
-    /// </summary>
+    /**
+     * Canonical URI of greetings list resource
+     */
     uri: string
 
-    /// <summary>
-    /// List of greetings
-    /// </summary>
+    /**
+     * List of greetings
+     */
     records: DictionaryGreetingInfo[]
 
-    /// <summary>
-    /// Information on navigation
-    /// </summary>
+    /**
+     * Information on navigation
+     */
     navigation: CallHandlingNavigationInfo
 
-    /// <summary>
-    /// Information on paging
-    /// </summary>
+    /**
+     * Information on paging
+     */
     paging: CallHandlingPagingInfo
 }
 

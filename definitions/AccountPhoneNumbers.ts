@@ -4,24 +4,24 @@ import ProvisioningPagingInfo from './ProvisioningPagingInfo'
 
 class AccountPhoneNumbers
 {
-    /// <summary>
-    /// Link to the list of account phone numbers
-    /// </summary>
+    /**
+     * Link to the list of account phone numbers
+     */
     uri: string
 
-    /// <summary>
-    /// List of account phone numbers
-    /// </summary>
+    /**
+     * List of account phone numbers
+     */
     records: CompanyPhoneNumberInfo[]
 
-    /// <summary>
-    /// Information on navigation
-    /// </summary>
+    /**
+     * Information on navigation
+     */
     navigation: ProvisioningNavigationInfo
 
-    /// <summary>
-    /// Information on paging
-    /// </summary>
+    /**
+     * Information on paging
+     */
     paging: ProvisioningPagingInfo
 }
 

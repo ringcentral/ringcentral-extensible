@@ -1,26 +1,26 @@
 class SuperviseCallSessionRequest
 {
-    /// <summary>
-    /// Supervising mode
-    /// Required
-    /// Enum: Listen
-    /// </summary>
+    /**
+     * Supervising mode
+     * Required
+     * Enum: Listen
+     */
     mode: string
 
-    /// <summary>
-    /// Internal identifier of a supervisor's device which will be used for call session monitoring
-    /// Required
-    /// </summary>
+    /**
+     * Internal identifier of a supervisor's device which will be used for call session monitoring
+     * Required
+     */
     supervisorDeviceId: string
 
-    /// <summary>
-    /// Extension number of the user that will be monitored
-    /// </summary>
+    /**
+     * Extension number of the user that will be monitored
+     */
     agentExtensionNumber: string
 
-    /// <summary>
-    /// Extension identifier of the user that will be monitored
-    /// </summary>
+    /**
+     * Extension identifier of the user that will be monitored
+     */
     agentExtensionId: string
 }
 

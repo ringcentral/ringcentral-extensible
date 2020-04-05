@@ -2,13 +2,13 @@ import PresetInfo from './PresetInfo'
 
 class BlockedCallerGreetingInfo
 {
-    /// <summary>
-    /// Type of a greeting
-    /// </summary>
+    /**
+     * Type of a greeting
+     */
     type: string
 
-    /// <summary>
-    /// </summary>
+    /**
+     */
     preset: PresetInfo
 }
 

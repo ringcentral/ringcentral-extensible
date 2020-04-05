@@ -1,13 +1,13 @@
 class DevicePhoneLinesEmergencyAddressInfo
 {
-    /// <summary>
-    /// 'True' if specifying of emergency address is required
-    /// </summary>
+    /**
+     * 'True' if specifying of emergency address is required
+     */
     required: boolean
 
-    /// <summary>
-    /// 'True' if only local emergency address can be specified
-    /// </summary>
+    /**
+     * 'True' if only local emergency address can be specified
+     */
     localOnly: boolean
 }
 

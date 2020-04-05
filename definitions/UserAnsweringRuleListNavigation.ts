@@ -2,20 +2,20 @@ import UserAnsweringRuleListNavigationPage from './UserAnsweringRuleListNavigati
 
 class UserAnsweringRuleListNavigation
 {
-    /// <summary>
-    /// </summary>
+    /**
+     */
     firstPage: UserAnsweringRuleListNavigationPage
 
-    /// <summary>
-    /// </summary>
+    /**
+     */
     nextPage: UserAnsweringRuleListNavigationPage
 
-    /// <summary>
-    /// </summary>
+    /**
+     */
     previousPage: UserAnsweringRuleListNavigationPage
 
-    /// <summary>
-    /// </summary>
+    /**
+     */
     lastPage: UserAnsweringRuleListNavigationPage
 }
 

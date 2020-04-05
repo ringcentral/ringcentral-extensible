@@ -4,28 +4,28 @@ import ProvisioningPagingInfo from './ProvisioningPagingInfo'
 
 class CallMonitoringGroups
 {
-    /// <summary>
-    /// Link to a call monitoring groups resource
-    /// Required
-    /// </summary>
+    /**
+     * Link to a call monitoring groups resource
+     * Required
+     */
     uri: string
 
-    /// <summary>
-    /// List of call monitoring group members
-    /// Required
-    /// </summary>
+    /**
+     * List of call monitoring group members
+     * Required
+     */
     records: CallMonitoringGroup[]
 
-    /// <summary>
-    /// Information on navigation
-    /// Required
-    /// </summary>
+    /**
+     * Information on navigation
+     * Required
+     */
     navigation: ProvisioningNavigationInfo
 
-    /// <summary>
-    /// Information on paging
-    /// Required
-    /// </summary>
+    /**
+     * Information on paging
+     * Required
+     */
     paging: ProvisioningPagingInfo
 }
 

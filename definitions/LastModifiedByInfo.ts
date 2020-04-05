@@ -1,8 +1,8 @@
 class LastModifiedByInfo
 {
-    /// <summary>
-    /// Internal identifier of the user who last updated the note
-    /// </summary>
+    /**
+     * Internal identifier of the user who last updated the note
+     */
     id: string
 }
 

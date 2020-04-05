@@ -4,27 +4,27 @@ import MessagingPagingInfo from './MessagingPagingInfo'
 
 class GetMessageList
 {
-    /// <summary>
-    /// Link to the list of user messages
-    /// </summary>
+    /**
+     * Link to the list of user messages
+     */
     uri: string
 
-    /// <summary>
-    /// List of records with message information
-    /// Required
-    /// </summary>
+    /**
+     * List of records with message information
+     * Required
+     */
     records: GetMessageInfoResponse[]
 
-    /// <summary>
-    /// Information on navigation
-    /// Required
-    /// </summary>
+    /**
+     * Information on navigation
+     * Required
+     */
     navigation: MessagingNavigationInfo
 
-    /// <summary>
-    /// Information on paging
-    /// Required
-    /// </summary>
+    /**
+     * Information on paging
+     * Required
+     */
     paging: MessagingPagingInfo
 }
 

@@ -1,35 +1,35 @@
 class ListExtensionsParameters
 {
-    /// <summary>
-    /// Extension number to retrieve
-    /// </summary>
+    /**
+     * Extension number to retrieve
+     */
     extensionId: string
 
-    /// <summary>
-    /// Extension email address
-    /// </summary>
+    /**
+     * Extension email address
+     */
     email: string
 
-    /// <summary>
-    /// Indicates the page number to retrieve. Only positive number values are allowed
-    /// Default: 1
-    /// </summary>
+    /**
+     * Indicates the page number to retrieve. Only positive number values are allowed
+     * Default: 1
+     */
     page: number
 
-    /// <summary>
-    /// Indicates the page size (number of items)
-    /// Default: 100
-    /// </summary>
+    /**
+     * Indicates the page size (number of items)
+     * Default: 100
+     */
     perPage: number
 
-    /// <summary>
-    /// Extension current state. Multiple values are supported. If 'Unassigned' is specified, then extensions without `extensionNumber` attribute are returned. If not specified, then all extensions are returned.
-    /// </summary>
+    /**
+     * Extension current state. Multiple values are supported. If 'Unassigned' is specified, then extensions without `extensionNumber` attribute are returned. If not specified, then all extensions are returned.
+     */
     status: string[]
 
-    /// <summary>
-    /// Extension type. Multiple values are supported
-    /// </summary>
+    /**
+     * Extension type. Multiple values are supported
+     */
     type: string[]
 }
 

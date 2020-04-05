@@ -2,36 +2,36 @@ import TaskResultInfo from './TaskResultInfo'
 
 class AutomaticLocationUpdatesTaskInfo
 {
-    /// <summary>
-    /// Internal identifier of a task
-    /// </summary>
+    /**
+     * Internal identifier of a task
+     */
     id: string
 
-    /// <summary>
-    /// Status of a task
-    /// Enum: Accepted, InProgress, Completed, Failed
-    /// </summary>
+    /**
+     * Status of a task
+     * Enum: Accepted, InProgress, Completed, Failed
+     */
     status: string
 
-    /// <summary>
-    /// Task creation time
-    /// </summary>
+    /**
+     * Task creation time
+     */
     creationTime: string
 
-    /// <summary>
-    /// Time of the task latest modification
-    /// </summary>
+    /**
+     * Time of the task latest modification
+     */
     lastModifiedTime: string
 
-    /// <summary>
-    /// Type of a task
-    /// Enum: WirelessPointsBulkCreate, WirelessPointsBulkUpdate, SwitchesBulkCreate, SwitchesBulkUpdate
-    /// </summary>
+    /**
+     * Type of a task
+     * Enum: WirelessPointsBulkCreate, WirelessPointsBulkUpdate, SwitchesBulkCreate, SwitchesBulkUpdate
+     */
     type: string
 
-    /// <summary>
-    /// Task detailed result. Returned for failed and completed tasks
-    /// </summary>
+    /**
+     * Task detailed result. Returned for failed and completed tasks
+     */
     result: TaskResultInfo
 }
 

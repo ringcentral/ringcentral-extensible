@@ -1,44 +1,44 @@
 class SIPInfoResponse
 {
-    /// <summary>
-    /// User credentials
-    /// </summary>
+    /**
+     * User credentials
+     */
     username: string
 
-    /// <summary>
-    /// User password
-    /// </summary>
+    /**
+     * User password
+     */
     password: string
 
-    /// <summary>
-    /// Identifier for SIP authorization
-    /// </summary>
+    /**
+     * Identifier for SIP authorization
+     */
     authorizationId: string
 
-    /// <summary>
-    /// SIP domain
-    /// </summary>
+    /**
+     * SIP domain
+     */
     domain: string
 
-    /// <summary>
-    /// SIP outbound proxy
-    /// </summary>
+    /**
+     * SIP outbound proxy
+     */
     outboundProxy: string
 
-    /// <summary>
-    /// Preferred transport. SIP info will be returned for this transport if supported
-    /// Enum: UDP, TCP, TLS, WS, WSS
-    /// </summary>
+    /**
+     * Preferred transport. SIP info will be returned for this transport if supported
+     * Enum: UDP, TCP, TLS, WS, WSS
+     */
     transport: string
 
-    /// <summary>
-    /// For TLS transport only Base64 encoded certificate
-    /// </summary>
+    /**
+     * For TLS transport only Base64 encoded certificate
+     */
     certificate: string
 
-    /// <summary>
-    /// The interval in seconds after which the app must try to switch back to primary proxy if it was previously switched to backup. If this parameter is not returned, the app must stay on backup proxy and try to switch to primary proxy after the next SIP-provision call.
-    /// </summary>
+    /**
+     * The interval in seconds after which the app must try to switch back to primary proxy if it was previously switched to backup. If this parameter is not returned, the app must stay on backup proxy and try to switch to primary proxy after the next SIP-provision call.
+     */
     switchBackInterval: number
 }
 

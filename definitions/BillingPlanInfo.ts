@@ -1,35 +1,35 @@
 class BillingPlanInfo
 {
-    /// <summary>
-    /// Internal identifier of a billing plan
-    /// </summary>
+    /**
+     * Internal identifier of a billing plan
+     */
     id: string
 
-    /// <summary>
-    /// Billing plan name
-    /// </summary>
+    /**
+     * Billing plan name
+     */
     name: string
 
-    /// <summary>
-    /// Duration period
-    /// Enum: Month, Day
-    /// </summary>
+    /**
+     * Duration period
+     * Enum: Month, Day
+     */
     durationUnit: string
 
-    /// <summary>
-    /// Number of duration units
-    /// </summary>
+    /**
+     * Number of duration units
+     */
     duration: number
 
-    /// <summary>
-    /// Billing plan type
-    /// Enum: Initial, Regular, Suspended, Trial, TrialNoCC, Free
-    /// </summary>
+    /**
+     * Billing plan type
+     * Enum: Initial, Regular, Suspended, Trial, TrialNoCC, Free
+     */
     type: string
 
-    /// <summary>
-    /// Included digital lines count
-    /// </summary>
+    /**
+     * Included digital lines count
+     */
     includedPhoneLines: number
 }
 

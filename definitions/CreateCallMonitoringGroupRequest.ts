@@ -1,9 +1,9 @@
 class CreateCallMonitoringGroupRequest
 {
-    /// <summary>
-    /// Name of a group
-    /// Required
-    /// </summary>
+    /**
+     * Name of a group
+     * Required
+     */
     name: string
 }
 

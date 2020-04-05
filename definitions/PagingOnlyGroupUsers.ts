@@ -4,24 +4,24 @@ import ProvisioningPagingInfo from './ProvisioningPagingInfo'
 
 class PagingOnlyGroupUsers
 {
-    /// <summary>
-    /// Link to the list of users allowed to page the Paging Only group
-    /// </summary>
+    /**
+     * Link to the list of users allowed to page the Paging Only group
+     */
     uri: string
 
-    /// <summary>
-    /// List of users allowed to page the Paging Only group
-    /// </summary>
+    /**
+     * List of users allowed to page the Paging Only group
+     */
     records: PagingGroupExtensionInfo[]
 
-    /// <summary>
-    /// Information on navigation
-    /// </summary>
+    /**
+     * Information on navigation
+     */
     navigation: ProvisioningNavigationInfo
 
-    /// <summary>
-    /// Information on paging
-    /// </summary>
+    /**
+     * Information on paging
+     */
     paging: ProvisioningPagingInfo
 }
 

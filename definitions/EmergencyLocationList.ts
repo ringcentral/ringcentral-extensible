@@ -4,18 +4,18 @@ import ProvisioningPagingInfo from './ProvisioningPagingInfo'
 
 class EmergencyLocationList
 {
-    /// <summary>
-    /// </summary>
+    /**
+     */
     records: EmergencyLocationInfo[]
 
-    /// <summary>
-    /// Information on navigation
-    /// </summary>
+    /**
+     * Information on navigation
+     */
     navigation: ProvisioningNavigationInfo
 
-    /// <summary>
-    /// Information on paging
-    /// </summary>
+    /**
+     * Information on paging
+     */
     paging: ProvisioningPagingInfo
 }
 

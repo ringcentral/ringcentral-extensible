@@ -1,27 +1,27 @@
 class GetTimezoneInfoResponse
 {
-    /// <summary>
-    /// Internal identifier of a timezone
-    /// </summary>
+    /**
+     * Internal identifier of a timezone
+     */
     id: string
 
-    /// <summary>
-    /// Canonical URI of a timezone
-    /// </summary>
+    /**
+     * Canonical URI of a timezone
+     */
     uri: string
 
-    /// <summary>
-    /// Short name of a timezone
-    /// </summary>
+    /**
+     * Short name of a timezone
+     */
     name: string
 
-    /// <summary>
-    /// Description of a timezone
-    /// </summary>
+    /**
+     * Description of a timezone
+     */
     description: string
 
-    /// <summary>
-    /// </summary>
+    /**
+     */
     bias: string
 }
 

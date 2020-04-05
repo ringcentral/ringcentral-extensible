@@ -1,18 +1,18 @@
 class CallMonitoringGroup
 {
-    /// <summary>
-    /// Link to a call monitoring group resource
-    /// </summary>
+    /**
+     * Link to a call monitoring group resource
+     */
     uri: string
 
-    /// <summary>
-    /// Internal identifier of a group
-    /// </summary>
+    /**
+     * Internal identifier of a group
+     */
     id: string
 
-    /// <summary>
-    /// Name of a group
-    /// </summary>
+    /**
+     * Name of a group
+     */
     name: string
 }
 

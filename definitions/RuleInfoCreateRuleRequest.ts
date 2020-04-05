@@ -2,24 +2,24 @@ import ForwardingNumberInfoRulesCreateRuleRequest from './ForwardingNumberInfoRu
 
 class RuleInfoCreateRuleRequest
 {
-    /// <summary>
-    /// Forwarding number (or group) ordinal. Not returned for inactive numbers
-    /// </summary>
+    /**
+     * Forwarding number (or group) ordinal. Not returned for inactive numbers
+     */
     index: number
 
-    /// <summary>
-    /// Number of rings for a forwarding number (or group). For inactive numbers the default value ('4') is returned
-    /// </summary>
+    /**
+     * Number of rings for a forwarding number (or group). For inactive numbers the default value ('4') is returned
+     */
     ringCount: number
 
-    /// <summary>
-    /// Phone number status
-    /// </summary>
+    /**
+     * Phone number status
+     */
     enabled: boolean
 
-    /// <summary>
-    /// Forwarding number (or group) data
-    /// </summary>
+    /**
+     * Forwarding number (or group) data
+     */
     forwardingNumbers: ForwardingNumberInfoRulesCreateRuleRequest[]
 }
 

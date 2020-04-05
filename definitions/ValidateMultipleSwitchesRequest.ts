@@ -2,8 +2,8 @@ import SwitchInfo from './SwitchInfo'
 
 class ValidateMultipleSwitchesRequest
 {
-    /// <summary>
-    /// </summary>
+    /**
+     */
     records: SwitchInfo[]
 }
 

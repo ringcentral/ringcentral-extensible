@@ -1,18 +1,18 @@
 class GetPresenceExtensionInfo
 {
-    /// <summary>
-    /// Internal identifier of an extension
-    /// </summary>
+    /**
+     * Internal identifier of an extension
+     */
     id: number
 
-    /// <summary>
-    /// Canonical URI of an extension
-    /// </summary>
+    /**
+     * Canonical URI of an extension
+     */
     uri: string
 
-    /// <summary>
-    /// Extension number (usually 3 or 4 digits)
-    /// </summary>
+    /**
+     * Extension number (usually 3 or 4 digits)
+     */
     extensionNumber: string
 }
 

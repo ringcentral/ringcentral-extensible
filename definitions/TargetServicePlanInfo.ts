@@ -1,18 +1,18 @@
 class TargetServicePlanInfo
 {
-    /// <summary>
-    /// Internal identifier of a target service plan
-    /// </summary>
+    /**
+     * Internal identifier of a target service plan
+     */
     id: string
 
-    /// <summary>
-    /// Name of a target service plan
-    /// </summary>
+    /**
+     * Name of a target service plan
+     */
     name: string
 
-    /// <summary>
-    /// Edition of a service plan
-    /// </summary>
+    /**
+     * Edition of a service plan
+     */
     edition: string
 }
 

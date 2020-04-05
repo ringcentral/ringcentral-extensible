@@ -1,14 +1,14 @@
 class PhoneNumber
 {
-    /// <summary>
-    /// Required
-    /// Enum: work, mobile, other
-    /// </summary>
+    /**
+     * Required
+     * Enum: work, mobile, other
+     */
     type: string
 
-    /// <summary>
-    /// Required
-    /// </summary>
+    /**
+     * Required
+     */
     value: string
 }
 

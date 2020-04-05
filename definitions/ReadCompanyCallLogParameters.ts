@@ -1,68 +1,68 @@
 class ReadCompanyCallLogParameters
 {
-    /// <summary>
-    /// Extension number of a user. If specified, returns call log for a particular extension only
-    /// </summary>
+    /**
+     * Extension number of a user. If specified, returns call log for a particular extension only
+     */
     extensionNumber: string
 
-    /// <summary>
-    /// Phone number of a caller/call recipient. If specified, returns all calls (both incoming and outcoming) with the phone number specified. Cannot be specified together with the extensionNumber filter
-    /// </summary>
+    /**
+     * Phone number of a caller/call recipient. If specified, returns all calls (both incoming and outcoming) with the phone number specified. Cannot be specified together with the extensionNumber filter
+     */
     phoneNumber: string
 
-    /// <summary>
-    /// The direction for the result records. If not specified, both inbound and outbound records are returned. Multiple values are accepted
-    /// </summary>
+    /**
+     * The direction for the result records. If not specified, both inbound and outbound records are returned. Multiple values are accepted
+     */
     direction: string[]
 
-    /// <summary>
-    /// Call type of a record. If not specified, all call types are returned. Multiple values are accepted
-    /// </summary>
+    /**
+     * Call type of a record. If not specified, all call types are returned. Multiple values are accepted
+     */
     type: string[]
 
-    /// <summary>
-    /// View of call records. The same view parameter specified for FSync will be applied for ISync, the view cannot be changed for ISync
-    /// Default: Simple
-    /// Enum: Simple, Detailed
-    /// </summary>
+    /**
+     * View of call records. The same view parameter specified for FSync will be applied for ISync, the view cannot be changed for ISync
+     * Default: Simple
+     * Enum: Simple, Detailed
+     */
     view: string
 
-    /// <summary>
-    /// **Deprecated**. Supported for compatibility reasons only. `true` if only recorded calls are returned. The default value is `false`. If both `withRecording` and `recordingType` are specified, `withRecording` is ignored
-    /// </summary>
+    /**
+     * **Deprecated**. Supported for compatibility reasons only. `true` if only recorded calls are returned. The default value is `false`. If both `withRecording` and `recordingType` are specified, `withRecording` is ignored
+     */
     withRecording: boolean
 
-    /// <summary>
-    /// Type of a call recording. If not specified, then calls without recordings are also returned
-    /// Enum: Automatic, OnDemand, All
-    /// </summary>
+    /**
+     * Type of a call recording. If not specified, then calls without recordings are also returned
+     * Enum: Automatic, OnDemand, All
+     */
     recordingType: string
 
-    /// <summary>
-    /// The start datetime for resulting records in (ISO 8601)[https://en.wikipedia.org/wiki/ISO_8601]  format including timezone, for example 2016-03-10T18:07:52.534Z. The default value is dateTo minus 24 hours
-    /// </summary>
+    /**
+     * The start datetime for resulting records in (ISO 8601)[https://en.wikipedia.org/wiki/ISO_8601]  format including timezone, for example 2016-03-10T18:07:52.534Z. The default value is dateTo minus 24 hours
+     */
     dateFrom: string
 
-    /// <summary>
-    /// The end datetime for resulting records in (ISO 8601)[https://en.wikipedia.org/wiki/ISO_8601]  format including timezone, for example 2016-03-10T18:07:52.534Z. The default value is current time
-    /// </summary>
+    /**
+     * The end datetime for resulting records in (ISO 8601)[https://en.wikipedia.org/wiki/ISO_8601]  format including timezone, for example 2016-03-10T18:07:52.534Z. The default value is current time
+     */
     dateTo: string
 
-    /// <summary>
-    /// Indicates the page number to retrieve. Only positive number values are accepted
-    /// Default: 1
-    /// </summary>
+    /**
+     * Indicates the page number to retrieve. Only positive number values are accepted
+     * Default: 1
+     */
     page: number
 
-    /// <summary>
-    /// Indicates the page size (number of items)
-    /// Default: 100
-    /// </summary>
+    /**
+     * Indicates the page size (number of items)
+     * Default: 100
+     */
     perPage: number
 
-    /// <summary>
-    /// Internal identifier of a call session
-    /// </summary>
+    /**
+     * Internal identifier of a call session
+     */
     sessionId: string
 }
 

@@ -4,54 +4,54 @@ import CallStatusInfo from './CallStatusInfo'
 
 class PartySuperviseResponse
 {
-    /// <summary>
-    /// Information about a call party that monitors a call
-    /// </summary>
+    /**
+     * Information about a call party that monitors a call
+     */
     from: PartyInfo
 
-    /// <summary>
-    /// Information about a call party that is monitored
-    /// </summary>
+    /**
+     * Information about a call party that is monitored
+     */
     to: PartyInfo
 
-    /// <summary>
-    /// Direction of a call
-    /// Enum: Outbound, Inbound
-    /// </summary>
+    /**
+     * Direction of a call
+     * Enum: Outbound, Inbound
+     */
     direction: string
 
-    /// <summary>
-    /// Internal identifier of a party that monitors a call
-    /// </summary>
+    /**
+     * Internal identifier of a party that monitors a call
+     */
     id: string
 
-    /// <summary>
-    /// Internal identifier of an account that monitors a call
-    /// </summary>
+    /**
+     * Internal identifier of an account that monitors a call
+     */
     accountId: string
 
-    /// <summary>
-    /// Internal identifier of an extension that monitors a call
-    /// </summary>
+    /**
+     * Internal identifier of an extension that monitors a call
+     */
     extensionId: string
 
-    /// <summary>
-    /// Specifies if a call party is muted
-    /// </summary>
+    /**
+     * Specifies if a call party is muted
+     */
     muted: boolean
 
-    /// <summary>
-    /// Deprecated. Infromation a call owner
-    /// </summary>
+    /**
+     * Deprecated. Infromation a call owner
+     */
     owner: OwnerInfo
 
-    /// <summary>
-    /// Specifies if a device is stand-alone
-    /// </summary>
+    /**
+     * Specifies if a device is stand-alone
+     */
     standAlone: boolean
 
-    /// <summary>
-    /// </summary>
+    /**
+     */
     status: CallStatusInfo
 }
 

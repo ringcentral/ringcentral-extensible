@@ -2,19 +2,19 @@ import CallQueueMember from './CallQueueMember'
 
 class CallQueueMemberPresence
 {
-    /// <summary>
-    /// Call queue member information
-    /// </summary>
+    /**
+     * Call queue member information
+     */
     member: CallQueueMember
 
-    /// <summary>
-    /// Private member telephony availability status applied to calls of all queues
-    /// </summary>
+    /**
+     * Private member telephony availability status applied to calls of all queues
+     */
     acceptQueueCalls: boolean
 
-    /// <summary>
-    /// Call queue member availability in this particular queue
-    /// </summary>
+    /**
+     * Call queue member availability in this particular queue
+     */
     acceptCurrentQueueCalls: boolean
 }
 

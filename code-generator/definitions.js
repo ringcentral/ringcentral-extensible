@@ -47,26 +47,26 @@ const generateField = (m, f) => {
     p = `${f.name}: ${f.type}`
   }
 
-  p = `/// </summary>\n    ${p}`
+  p = ` */\n    ${p}`
   if (f.enum) {
-    p = `/// Enum: ${f.enum.join(', ')}\n    ${p}`
+    p = ` * Enum: ${f.enum.join(', ')}\n    ${p}`
   }
   if (f.default) {
-    p = `/// Default: ${f.default}\n    ${p}`
+    p = ` * Default: ${f.default}\n    ${p}`
   }
   if (f.minimum) {
-    p = `/// Minimum: ${f.minimum}\n    ${p}`
+    p = ` * Minimum: ${f.minimum}\n    ${p}`
   }
   if (f.maximum) {
-    p = `/// Maximum: ${f.maximum}\n    ${p}`
+    p = ` * Maximum: ${f.maximum}\n    ${p}`
   }
   if (m.required && m.required.includes(f.name)) {
-    p = `/// Required\n    ${p}`
+    p = ` * Required\n    ${p}`
   }
   if (f.description) {
-    p = `${f.description.trim().split('\n').map(l => `/// ${l}`).join('\n')}\n    ${p}`
+    p = `${f.description.trim().split('\n').map(l => ` * ${l}`).join('\n')}\n    ${p}`
   }
-  p = `/// <summary>\n    ${p}`
+  p = `/**\n    ${p}`
   return p
 }
 
@@ -135,19 +135,19 @@ Object.keys(doc.paths).forEach(p => {
 // Generate Attachment
 fs.writeFileSync(path.join(outputDir, 'Attachment.ts'), `class Attachment
 {
-    /// <summary>
-    /// File name with extension, such as "example.png"
-    /// </summary>
+    /**
+     * File name with extension, such as "example.png"
+     */
     fileName: string
 
-    /// <summary>
-    /// Binary content of the file
-    /// </summary>
+    /**
+     * Binary content of the file
+     */
     bytes: Buffer | Blob
 
-    /// <summary>
-    /// Content tyle of the file, such as "image/png"
-    /// </summary>
+    /**
+     * Content tyle of the file, such as "image/png"
+     */
     contentType: string
 }
 

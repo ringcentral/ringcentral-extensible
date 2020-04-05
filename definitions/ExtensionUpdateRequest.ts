@@ -6,65 +6,65 @@ import UserTransitionInfo from './UserTransitionInfo'
 
 class ExtensionUpdateRequest
 {
-    /// <summary>
-    /// Enum: Disabled, Enabled, NotActivated
-    /// </summary>
+    /**
+     * Enum: Disabled, Enabled, NotActivated
+     */
     status: string
 
-    /// <summary>
-    /// </summary>
+    /**
+     */
     statusInfo: ExtensionStatusInfo
 
-    /// <summary>
-    /// Type of suspension
-    /// </summary>
+    /**
+     * Type of suspension
+     */
     reason: string
 
-    /// <summary>
-    /// Free Form user comment
-    /// </summary>
+    /**
+     * Free Form user comment
+     */
     comment: string
 
-    /// <summary>
-    /// Extension number available
-    /// </summary>
+    /**
+     * Extension number available
+     */
     extensionNumber: string
 
-    /// <summary>
-    /// </summary>
+    /**
+     */
     contact: ContactInfoUpdateRequest
 
-    /// <summary>
-    /// </summary>
+    /**
+     */
     regionalSettings: ExtensionRegionalSettingRequest
 
-    /// <summary>
-    /// Enum: NotStarted, Incomplete, Completed
-    /// </summary>
+    /**
+     * Enum: NotStarted, Incomplete, Completed
+     */
     setupWizardState: string
 
-    /// <summary>
-    /// Extension partner identifier
-    /// </summary>
+    /**
+     * Extension partner identifier
+     */
     partnerId: string
 
-    /// <summary>
-    /// IVR PIN
-    /// </summary>
+    /**
+     * IVR PIN
+     */
     ivrPin: string
 
-    /// <summary>
-    /// Password for extension
-    /// </summary>
+    /**
+     * Password for extension
+     */
     password: string
 
-    /// <summary>
-    /// For Department extension type only. Call queue settings
-    /// </summary>
+    /**
+     * For Department extension type only. Call queue settings
+     */
     callQueueInfo: CallQueueInfoRequest
 
-    /// <summary>
-    /// </summary>
+    /**
+     */
     transition: UserTransitionInfo[]
 }
 

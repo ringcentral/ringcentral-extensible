@@ -1,12 +1,12 @@
 class Reference
 {
-    /// <summary>
-    /// Enum: PartnerId, CustomerDirectoryId
-    /// </summary>
+    /**
+     * Enum: PartnerId, CustomerDirectoryId
+     */
     type: string
 
-    /// <summary>
-    /// </summary>
+    /**
+     */
     ref: string
 }
 

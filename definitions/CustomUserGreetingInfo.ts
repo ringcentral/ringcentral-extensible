@@ -2,36 +2,36 @@ import CustomGreetingAnsweringRuleInfo from './CustomGreetingAnsweringRuleInfo'
 
 class CustomUserGreetingInfo
 {
-    /// <summary>
-    /// Link to a custom user greeting
-    /// </summary>
+    /**
+     * Link to a custom user greeting
+     */
     uri: string
 
-    /// <summary>
-    /// Internal identifier of a custom user greeting
-    /// </summary>
+    /**
+     * Internal identifier of a custom user greeting
+     */
     id: string
 
-    /// <summary>
-    /// Type of a custom user greeting
-    /// Enum: Introductory, Announcement, InterruptPrompt, ConnectingAudio, ConnectingMessage, Voicemail, Unavailable, HoldMusic, PronouncedName
-    /// </summary>
+    /**
+     * Type of a custom user greeting
+     * Enum: Introductory, Announcement, InterruptPrompt, ConnectingAudio, ConnectingMessage, Voicemail, Unavailable, HoldMusic, PronouncedName
+     */
     type: string
 
-    /// <summary>
-    /// Content media type
-    /// Enum: audio/mpeg, audio/wav
-    /// </summary>
+    /**
+     * Content media type
+     * Enum: audio/mpeg, audio/wav
+     */
     contentType: string
 
-    /// <summary>
-    /// Link to a greeting content (audio file)
-    /// </summary>
+    /**
+     * Link to a greeting content (audio file)
+     */
     contentUri: string
 
-    /// <summary>
-    /// Information on an answering rule that the greeting is applied to
-    /// </summary>
+    /**
+     * Information on an answering rule that the greeting is applied to
+     */
     answeringRule: CustomGreetingAnsweringRuleInfo
 }
 

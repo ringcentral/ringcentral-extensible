@@ -4,22 +4,22 @@ import MessagingPagingInfo from './MessagingPagingInfo'
 
 class ListFaxCoverPagesResponse
 {
-    /// <summary>
-    /// </summary>
+    /**
+     */
     uri: string
 
-    /// <summary>
-    /// </summary>
+    /**
+     */
     records: FaxCoverPageInfo[]
 
-    /// <summary>
-    /// Information on navigation
-    /// </summary>
+    /**
+     * Information on navigation
+     */
     navigation: MessagingNavigationInfo
 
-    /// <summary>
-    /// Information on paging
-    /// </summary>
+    /**
+     * Information on paging
+     */
     paging: MessagingPagingInfo
 }
 

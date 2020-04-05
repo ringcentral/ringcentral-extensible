@@ -2,24 +2,24 @@ import ValidationError from './ValidationError'
 
 class WirelessPointValidated
 {
-    /// <summary>
-    /// Internal identifier of a wireless point
-    /// </summary>
+    /**
+     * Internal identifier of a wireless point
+     */
     id: string
 
-    /// <summary>
-    /// Unique 48-bit identifier of the wireless access point complying with MAC address conventions
-    /// </summary>
+    /**
+     * Unique 48-bit identifier of the wireless access point complying with MAC address conventions
+     */
     bssid: string
 
-    /// <summary>
-    /// Validation result status
-    /// Enum: Valid, Invalid
-    /// </summary>
+    /**
+     * Validation result status
+     * Enum: Valid, Invalid
+     */
     status: string
 
-    /// <summary>
-    /// </summary>
+    /**
+     */
     errors: ValidationError[]
 }
 

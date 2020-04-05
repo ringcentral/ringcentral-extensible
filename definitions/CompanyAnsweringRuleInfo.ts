@@ -5,63 +5,63 @@ import GreetingInfo from './GreetingInfo'
 
 class CompanyAnsweringRuleInfo
 {
-    /// <summary>
-    /// Internal identifier of an answering rule
-    /// </summary>
+    /**
+     * Internal identifier of an answering rule
+     */
     id: string
 
-    /// <summary>
-    /// Canonical URI of an answering rule
-    /// </summary>
+    /**
+     * Canonical URI of an answering rule
+     */
     uri: string
 
-    /// <summary>
-    /// Specifies if the rule is active or inactive. The default value is 'True'
-    /// Default: true
-    /// </summary>
+    /**
+     * Specifies if the rule is active or inactive. The default value is 'True'
+     * Default: true
+     */
     enabled: boolean
 
-    /// <summary>
-    /// Type of an answering rule
-    /// Default: Custom
-    /// Enum: BusinessHours, AfterHours, Custom
-    /// </summary>
+    /**
+     * Type of an answering rule
+     * Default: Custom
+     * Enum: BusinessHours, AfterHours, Custom
+     */
     type: string
 
-    /// <summary>
-    /// Name of an answering rule specified by user. Max number of symbols is 30. The default value is 'My Rule N' where 'N' is the first free number
-    /// </summary>
+    /**
+     * Name of an answering rule specified by user. Max number of symbols is 30. The default value is 'My Rule N' where 'N' is the first free number
+     */
     name: string
 
-    /// <summary>
-    /// Answering rule will be applied when calls are received from the specified caller(s)
-    /// </summary>
+    /**
+     * Answering rule will be applied when calls are received from the specified caller(s)
+     */
     callers: CompanyAnsweringRuleCallersInfoRequest[]
 
-    /// <summary>
-    /// Answering rule will be applied when calling the specified number(s)
-    /// </summary>
+    /**
+     * Answering rule will be applied when calling the specified number(s)
+     */
     calledNumbers: CompanyAnsweringRuleCalledNumberInfoRequest[]
 
-    /// <summary>
-    /// Schedule when an answering rule should be applied
-    /// </summary>
+    /**
+     * Schedule when an answering rule should be applied
+     */
     schedule: CompanyAnsweringRuleScheduleInfo
 
-    /// <summary>
-    /// Specifies how incoming calls are forwarded. The default value is 'Operator' 'Operator' - play company greeting and forward to operator extension 'Disconnect' - play company greeting and disconnect 'Bypass' - bypass greeting to go to selected extension = ['Operator', 'Disconnect', 'Bypass']
-    /// Enum: Operator, Disconnect, Bypass
-    /// </summary>
+    /**
+     * Specifies how incoming calls are forwarded. The default value is 'Operator' 'Operator' - play company greeting and forward to operator extension 'Disconnect' - play company greeting and disconnect 'Bypass' - bypass greeting to go to selected extension = ['Operator', 'Disconnect', 'Bypass']
+     * Enum: Operator, Disconnect, Bypass
+     */
     callHandlingAction: string
 
-    /// <summary>
-    /// Extension to which the call is forwarded in 'Bypass' mode
-    /// </summary>
+    /**
+     * Extension to which the call is forwarded in 'Bypass' mode
+     */
     extension: CompanyAnsweringRuleCallersInfoRequest
 
-    /// <summary>
-    /// Greetings applied for an answering rule; only predefined greetings can be applied, see Dictionary Greeting List
-    /// </summary>
+    /**
+     * Greetings applied for an answering rule; only predefined greetings can be applied, see Dictionary Greeting List
+     */
     greetings: GreetingInfo[]
 }
 

@@ -2,24 +2,24 @@ import ValidationError from './ValidationError'
 
 class SwitchValidated
 {
-    /// <summary>
-    /// Internal identifier of a switch
-    /// </summary>
+    /**
+     * Internal identifier of a switch
+     */
     id: string
 
-    /// <summary>
-    /// Unique identifier of a network switch
-    /// </summary>
+    /**
+     * Unique identifier of a network switch
+     */
     chassisId: string
 
-    /// <summary>
-    /// Validation result status
-    /// Enum: Valid, Invalid
-    /// </summary>
+    /**
+     * Validation result status
+     * Enum: Valid, Invalid
+     */
     status: string
 
-    /// <summary>
-    /// </summary>
+    /**
+     */
     errors: ValidationError[]
 }
 

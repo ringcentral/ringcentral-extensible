@@ -1,28 +1,28 @@
 class PromptInfo
 {
-    /// <summary>
-    /// Internal identifier of a prompt
-    /// </summary>
+    /**
+     * Internal identifier of a prompt
+     */
     uri: string
 
-    /// <summary>
-    /// Link to a prompt metadata
-    /// </summary>
+    /**
+     * Link to a prompt metadata
+     */
     id: string
 
-    /// <summary>
-    /// Type of a prompt media content
-    /// </summary>
+    /**
+     * Type of a prompt media content
+     */
     contentType: string
 
-    /// <summary>
-    /// Link to a prompt media content
-    /// </summary>
+    /**
+     * Link to a prompt media content
+     */
     contentUri: string
 
-    /// <summary>
-    /// Name of a prompt
-    /// </summary>
+    /**
+     * Name of a prompt
+     */
     filename: string
 }
 

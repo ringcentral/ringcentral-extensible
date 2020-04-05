@@ -1,23 +1,23 @@
 class PagingGroupExtensionInfo
 {
-    /// <summary>
-    /// Internal identifier of a paging group user extension
-    /// </summary>
+    /**
+     * Internal identifier of a paging group user extension
+     */
     id: string
 
-    /// <summary>
-    /// Link to a paging group user extension
-    /// </summary>
+    /**
+     * Link to a paging group user extension
+     */
     uri: string
 
-    /// <summary>
-    /// Extension number of a paging group user
-    /// </summary>
+    /**
+     * Extension number of a paging group user
+     */
     extensionNumber: string
 
-    /// <summary>
-    /// Name of a paging group user
-    /// </summary>
+    /**
+     * Name of a paging group user
+     */
     name: string
 }
 

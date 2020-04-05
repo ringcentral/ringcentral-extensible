@@ -4,22 +4,22 @@ import UserAnsweringRuleListNavigation from './UserAnsweringRuleListNavigation'
 
 class UserAnsweringRuleList
 {
-    /// <summary>
-    /// Canonical URI of an answering rule list resource
-    /// </summary>
+    /**
+     * Canonical URI of an answering rule list resource
+     */
     uri: string
 
-    /// <summary>
-    /// List of answering rules
-    /// </summary>
+    /**
+     * List of answering rules
+     */
     records: UserAnsweringRuleListRecord[]
 
-    /// <summary>
-    /// </summary>
+    /**
+     */
     paging: UserAnsweringRuleListPaging
 
-    /// <summary>
-    /// </summary>
+    /**
+     */
     navigation: UserAnsweringRuleListNavigation
 }
 

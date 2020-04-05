@@ -2,24 +2,24 @@ import UserContactsNavigationInfoUri from './UserContactsNavigationInfoUri'
 
 class UserContactsNavigationInfo
 {
-    /// <summary>
-    /// Canonical URI for the first page of the list
-    /// </summary>
+    /**
+     * Canonical URI for the first page of the list
+     */
     firstPage: UserContactsNavigationInfoUri
 
-    /// <summary>
-    /// Canonical URI for the next page of the list
-    /// </summary>
+    /**
+     * Canonical URI for the next page of the list
+     */
     nextPage: UserContactsNavigationInfoUri
 
-    /// <summary>
-    /// Canonical URI for the previous page of the list
-    /// </summary>
+    /**
+     * Canonical URI for the previous page of the list
+     */
     previousPage: UserContactsNavigationInfoUri
 
-    /// <summary>
-    /// Canonical URI for the last page of the list
-    /// </summary>
+    /**
+     * Canonical URI for the last page of the list
+     */
     lastPage: UserContactsNavigationInfoUri
 }
 

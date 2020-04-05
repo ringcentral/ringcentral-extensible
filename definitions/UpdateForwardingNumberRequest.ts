@@ -1,24 +1,24 @@
 class UpdateForwardingNumberRequest
 {
-    /// <summary>
-    /// Forwarding/Call flip phone number
-    /// </summary>
+    /**
+     * Forwarding/Call flip phone number
+     */
     phoneNumber: string
 
-    /// <summary>
-    /// Forwarding/Call flip number title
-    /// </summary>
+    /**
+     * Forwarding/Call flip number title
+     */
     label: string
 
-    /// <summary>
-    /// Number assigned to the call flip phone number, corresponds to the shortcut dial number
-    /// </summary>
+    /**
+     * Number assigned to the call flip phone number, corresponds to the shortcut dial number
+     */
     flipNumber: string
 
-    /// <summary>
-    /// Forwarding phone number type
-    /// Enum: Home, Mobile, Work, PhoneLine, Outage, Other
-    /// </summary>
+    /**
+     * Forwarding phone number type
+     * Enum: Home, Mobile, Work, PhoneLine, Outage, Other
+     */
     type: string
 }
 

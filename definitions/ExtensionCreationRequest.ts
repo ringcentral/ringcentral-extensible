@@ -6,64 +6,64 @@ import ExtensionStatusInfo from './ExtensionStatusInfo'
 
 class ExtensionCreationRequest
 {
-    /// <summary>
-    /// Contact Information
-    /// Required
-    /// </summary>
+    /**
+     * Contact Information
+     * Required
+     */
     contact: ContactInfoCreationRequest
 
-    /// <summary>
-    /// Number of extension
-    /// </summary>
+    /**
+     * Number of extension
+     */
     extensionNumber: string
 
-    /// <summary>
-    /// Password for extension. If not specified, the password is auto-generated
-    /// </summary>
+    /**
+     * Password for extension. If not specified, the password is auto-generated
+     */
     password: string
 
-    /// <summary>
-    /// List of non-RC internal identifiers assigned to an extension
-    /// </summary>
+    /**
+     * List of non-RC internal identifiers assigned to an extension
+     */
     references: ReferenceInfo[]
 
-    /// <summary>
-    /// </summary>
+    /**
+     */
     roles: Roles[]
 
-    /// <summary>
-    /// Extension region data (timezone, home country, language)
-    /// </summary>
+    /**
+     * Extension region data (timezone, home country, language)
+     */
     regionalSettings: RegionalSettings
 
-    /// <summary>
-    /// Specifies extension configuration wizard state (web service setup).
-    /// Default: NotStarted
-    /// Enum: NotStarted, Incomplete, Completed
-    /// </summary>
+    /**
+     * Specifies extension configuration wizard state (web service setup).
+     * Default: NotStarted
+     * Enum: NotStarted, Incomplete, Completed
+     */
     setupWizardState: string
 
-    /// <summary>
-    /// Extension current state
-    /// Enum: Enabled, Disabled, NotActivated, Unassigned
-    /// </summary>
+    /**
+     * Extension current state
+     * Enum: Enabled, Disabled, NotActivated, Unassigned
+     */
     status: string
 
-    /// <summary>
-    /// Status information (reason, comment). For 'Disabled' status only
-    /// </summary>
+    /**
+     * Status information (reason, comment). For 'Disabled' status only
+     */
     statusInfo: ExtensionStatusInfo
 
-    /// <summary>
-    /// Extension type
-    /// Required
-    /// Enum: User, VirtualUser, DigitalUser, Department, Announcement, Voicemail, SharedLinesGroup, PagingOnly, ParkLocation
-    /// </summary>
+    /**
+     * Extension type
+     * Required
+     * Enum: User, VirtualUser, DigitalUser, Department, Announcement, Voicemail, SharedLinesGroup, PagingOnly, ParkLocation
+     */
     type: string
 
-    /// <summary>
-    /// Hides extension from showing in company directory. Supported for extensions of User type only. For unassigned extensions the value is set to 'True' by default. For assigned extensions the value is set to 'False' by default
-    /// </summary>
+    /**
+     * Hides extension from showing in company directory. Supported for extensions of User type only. For unassigned extensions the value is set to 'True' by default. For assigned extensions the value is set to 'False' by default
+     */
     hidden: boolean
 }
 

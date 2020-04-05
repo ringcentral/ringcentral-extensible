@@ -1,8 +1,8 @@
 class AnswerTarget
 {
-    /// <summary>
-    /// Device identifier that is used to answer the incoming call.
-    /// </summary>
+    /**
+     * Device identifier that is used to answer the incoming call.
+     */
     deviceId: string
 }
 

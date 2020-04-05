@@ -2,29 +2,29 @@ import AlertInfo from './AlertInfo'
 
 class NotificationInfo
 {
-    /// <summary>
-    /// Alert information
-    /// </summary>
+    /**
+     * Alert information
+     */
     alert: AlertInfo
 
-    /// <summary>
-    /// Number of incoming messages
-    /// </summary>
+    /**
+     * Number of incoming messages
+     */
     badge: string
 
-    /// <summary>
-    /// Message sound
-    /// </summary>
+    /**
+     * Message sound
+     */
     sound: string
 
-    /// <summary>
-    /// Content availability
-    /// </summary>
+    /**
+     * Content availability
+     */
     "content-available": string
 
-    /// <summary>
-    /// Category of a message
-    /// </summary>
+    /**
+     * Category of a message
+     */
     category: string
 }
 

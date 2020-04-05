@@ -2,15 +2,15 @@ import PatchOperation from './PatchOperation'
 
 class UserPatch
 {
-    /// <summary>
-    /// patch operations list
-    /// Required
-    /// </summary>
+    /**
+     * patch operations list
+     * Required
+     */
     Operations: PatchOperation[]
 
-    /// <summary>
-    /// Required
-    /// </summary>
+    /**
+     * Required
+     */
     schemas: string[]
 }
 

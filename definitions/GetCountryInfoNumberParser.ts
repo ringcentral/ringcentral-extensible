@@ -1,33 +1,33 @@
 class GetCountryInfoNumberParser
 {
-    /// <summary>
-    /// Internal identifier of a country
-    /// </summary>
+    /**
+     * Internal identifier of a country
+     */
     id: string
 
-    /// <summary>
-    /// Canonical URI of a country
-    /// </summary>
+    /**
+     * Canonical URI of a country
+     */
     uri: string
 
-    /// <summary>
-    /// Country calling code defined by ITU-T recommendations E.123 and E.164, see Calling Codes
-    /// </summary>
+    /**
+     * Country calling code defined by ITU-T recommendations E.123 and E.164, see Calling Codes
+     */
     callingCode: string
 
-    /// <summary>
-    /// Emergency calling feature availability/emergency address requirement indicator
-    /// </summary>
+    /**
+     * Emergency calling feature availability/emergency address requirement indicator
+     */
     emergencyCalling: boolean
 
-    /// <summary>
-    /// Country code according to the ISO standard, see ISO 3166
-    /// </summary>
+    /**
+     * Country code according to the ISO standard, see ISO 3166
+     */
     isoCode: string
 
-    /// <summary>
-    /// Official name of a country
-    /// </summary>
+    /**
+     * Official name of a country
+     */
     name: string
 }
 

@@ -3,12 +3,12 @@ import MeetingRecordingInfo from './MeetingRecordingInfo'
 
 class MeetingRecordings
 {
-    /// <summary>
-    /// </summary>
+    /**
+     */
     meeting: MeetingInfo
 
-    /// <summary>
-    /// </summary>
+    /**
+     */
     recordings: MeetingRecordingInfo[]
 }
 

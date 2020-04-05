@@ -1,13 +1,13 @@
 class RecordingInfo
 {
-    /// <summary>
-    /// Internal identifier of a Recording resource
-    /// </summary>
+    /**
+     * Internal identifier of a Recording resource
+     */
     id: string
 
-    /// <summary>
-    /// True if the recording is active. False if the recording is paused.
-    /// </summary>
+    /**
+     * True if the recording is active. False if the recording is paused.
+     */
     active: boolean
 }
 

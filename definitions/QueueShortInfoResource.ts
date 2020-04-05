@@ -1,13 +1,13 @@
 class QueueShortInfoResource
 {
-    /// <summary>
-    /// Call queue extension identifier
-    /// </summary>
+    /**
+     * Call queue extension identifier
+     */
     id: string
 
-    /// <summary>
-    /// Call queue name (read-only)
-    /// </summary>
+    /**
+     * Call queue name (read-only)
+     */
     name: string
 }
 

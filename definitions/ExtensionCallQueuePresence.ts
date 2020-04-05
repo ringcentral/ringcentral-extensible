@@ -2,14 +2,14 @@ import CallQueueInfo from './CallQueueInfo'
 
 class ExtensionCallQueuePresence
 {
-    /// <summary>
-    /// Call queue information
-    /// </summary>
+    /**
+     * Call queue information
+     */
     callQueue: CallQueueInfo
 
-    /// <summary>
-    /// Call queue agent availability for calls of this queue
-    /// </summary>
+    /**
+     * Call queue agent availability for calls of this queue
+     */
     acceptCalls: boolean
 }
 

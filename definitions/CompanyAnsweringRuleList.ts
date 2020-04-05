@@ -4,24 +4,24 @@ import CallHandlingNavigationInfo from './CallHandlingNavigationInfo'
 
 class CompanyAnsweringRuleList
 {
-    /// <summary>
-    /// Link to an answering rule resource
-    /// </summary>
+    /**
+     * Link to an answering rule resource
+     */
     uri: string
 
-    /// <summary>
-    /// List of company answering rules
-    /// </summary>
+    /**
+     * List of company answering rules
+     */
     records: ListCompanyAnsweringRuleInfo[]
 
-    /// <summary>
-    /// Information on paging
-    /// </summary>
+    /**
+     * Information on paging
+     */
     paging: CallHandlingPagingInfo
 
-    /// <summary>
-    /// Information on navigation
-    /// </summary>
+    /**
+     * Information on navigation
+     */
     navigation: CallHandlingNavigationInfo
 }
 

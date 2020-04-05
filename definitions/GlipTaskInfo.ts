@@ -5,96 +5,96 @@ import TaskAttachment from './TaskAttachment'
 
 class GlipTaskInfo
 {
-    /// <summary>
-    /// Internal identifier of a task
-    /// </summary>
+    /**
+     * Internal identifier of a task
+     */
     id: string
 
-    /// <summary>
-    /// Datetime of the task creation in UTC time zone.
-    /// </summary>
+    /**
+     * Datetime of the task creation in UTC time zone.
+     */
     creationTime: string
 
-    /// <summary>
-    /// Datetime of the last modification of the task in UTC time zone.
-    /// </summary>
+    /**
+     * Datetime of the last modification of the task in UTC time zone.
+     */
     lastModifiedTime: string
 
-    /// <summary>
-    /// Type of a task
-    /// Enum: Task
-    /// </summary>
+    /**
+     * Type of a task
+     * Enum: Task
+     */
     type: string
 
-    /// <summary>
-    /// </summary>
+    /**
+     */
     creator: GlipTaskInfoCreator
 
-    /// <summary>
-    /// Chat IDs where the task is posted or shared.
-    /// </summary>
+    /**
+     * Chat IDs where the task is posted or shared.
+     */
     chatIds: string[]
 
-    /// <summary>
-    /// Status of task execution
-    /// Enum: Pending, InProgress, Completed
-    /// </summary>
+    /**
+     * Status of task execution
+     * Enum: Pending, InProgress, Completed
+     */
     status: string
 
-    /// <summary>
-    /// Name/subject of a task
-    /// </summary>
+    /**
+     * Name/subject of a task
+     */
     subject: string
 
-    /// <summary>
-    /// Task name/subject
-    /// </summary>
+    /**
+     * Task name/subject
+     */
     assignees: GlipTaskInfoAssignee[]
 
-    /// <summary>
-    /// Specifies how to determine task completeness
-    /// Enum: Simple, AllAssignees, Percentage
-    /// </summary>
+    /**
+     * Specifies how to determine task completeness
+     * Enum: Simple, AllAssignees, Percentage
+     */
     completenessCondition: string
 
-    /// <summary>
-    /// Current completeness percentage of the task with the specified percentage completeness condition
-    /// Maximum: 100
-    /// </summary>
+    /**
+     * Current completeness percentage of the task with the specified percentage completeness condition
+     * Maximum: 100
+     */
     completenessPercentage: number
 
-    /// <summary>
-    /// Task start date
-    /// </summary>
+    /**
+     * Task start date
+     */
     startDate: string
 
-    /// <summary>
-    /// Task due date/time
-    /// </summary>
+    /**
+     * Task due date/time
+     */
     dueDate: string
 
-    /// <summary>
-    /// Font color of a post with the current task
-    /// Enum: Black, Red, Orange, Yellow, Green, Blue, Purple, Magenta
-    /// </summary>
+    /**
+     * Font color of a post with the current task
+     * Enum: Black, Red, Orange, Yellow, Green, Blue, Purple, Magenta
+     */
     color: string
 
-    /// <summary>
-    /// Task section to group/search by
-    /// </summary>
+    /**
+     * Task section to group/search by
+     */
     section: string
 
-    /// <summary>
-    /// Task details
-    /// </summary>
+    /**
+     * Task details
+     */
     description: string
 
-    /// <summary>
-    /// </summary>
+    /**
+     */
     recurrence: GlipTaskRecurrenceInfo
 
-    /// <summary>
-    /// </summary>
+    /**
+     */
     attachments: TaskAttachment[]
 }
 

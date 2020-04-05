@@ -1,13 +1,13 @@
 class Name
 {
-    /// <summary>
-    /// Required
-    /// </summary>
+    /**
+     * Required
+     */
     familyName: string
 
-    /// <summary>
-    /// Required
-    /// </summary>
+    /**
+     * Required
+     */
     givenName: string
 }
 

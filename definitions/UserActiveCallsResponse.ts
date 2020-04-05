@@ -4,27 +4,27 @@ import CallLogPagingInfo from './CallLogPagingInfo'
 
 class UserActiveCallsResponse
 {
-    /// <summary>
-    /// Link to the list of user active call records
-    /// </summary>
+    /**
+     * Link to the list of user active call records
+     */
     uri: string
 
-    /// <summary>
-    /// List of call log records
-    /// Required
-    /// </summary>
+    /**
+     * List of call log records
+     * Required
+     */
     records: UserCallLogRecord[]
 
-    /// <summary>
-    /// Information on navigation
-    /// Required
-    /// </summary>
+    /**
+     * Information on navigation
+     * Required
+     */
     navigation: CallLogNavigationInfo
 
-    /// <summary>
-    /// Information on paging
-    /// Required
-    /// </summary>
+    /**
+     * Information on paging
+     * Required
+     */
     paging: CallLogPagingInfo
 }
 

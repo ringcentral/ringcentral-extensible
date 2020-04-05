@@ -1,33 +1,33 @@
 class GetCountryInfoConferencing
 {
-    /// <summary>
-    /// Internal identifier of a country
-    /// </summary>
+    /**
+     * Internal identifier of a country
+     */
     id: string
 
-    /// <summary>
-    /// Canonical URI of a country
-    /// </summary>
+    /**
+     * Canonical URI of a country
+     */
     uri: string
 
-    /// <summary>
-    /// Country calling code defined by ITU-T recommendations [E.123](https://www.itu.int/rec/T-REC-E.123-200102-I/en) and [E.164](https://www.itu.int/rec/T-REC-E.164-201011-I)
-    /// </summary>
+    /**
+     * Country calling code defined by ITU-T recommendations [E.123](https://www.itu.int/rec/T-REC-E.123-200102-I/en) and [E.164](https://www.itu.int/rec/T-REC-E.164-201011-I)
+     */
     callingCode: string
 
-    /// <summary>
-    /// Emergency calling feature availability/emergency address requirement indicator
-    /// </summary>
+    /**
+     * Emergency calling feature availability/emergency address requirement indicator
+     */
     emergencyCalling: boolean
 
-    /// <summary>
-    /// Country code according to the ISO standard, see [ISO 3166](https://www.iso.org/iso-3166-country-codes.html)
-    /// </summary>
+    /**
+     * Country code according to the ISO standard, see [ISO 3166](https://www.iso.org/iso-3166-country-codes.html)
+     */
     isoCode: string
 
-    /// <summary>
-    /// Official name of a country
-    /// </summary>
+    /**
+     * Official name of a country
+     */
     name: string
 }
 

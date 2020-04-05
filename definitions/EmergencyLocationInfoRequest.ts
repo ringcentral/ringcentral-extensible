@@ -2,13 +2,13 @@ import EmergencyLocationAddressInfoRequest from './EmergencyLocationAddressInfoR
 
 class EmergencyLocationInfoRequest
 {
-    /// <summary>
-    /// Internal identifier of the emergency response location
-    /// </summary>
+    /**
+     * Internal identifier of the emergency response location
+     */
     id: string
 
-    /// <summary>
-    /// </summary>
+    /**
+     */
     address: EmergencyLocationAddressInfoRequest
 }
 

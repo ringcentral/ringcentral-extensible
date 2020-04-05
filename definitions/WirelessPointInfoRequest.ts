@@ -3,34 +3,34 @@ import LocationUpdatesEmergencyAddressInfoRequest from './LocationUpdatesEmergen
 
 class WirelessPointInfoRequest
 {
-    /// <summary>
-    /// Internal identifier of a wireless point
-    /// </summary>
+    /**
+     * Internal identifier of a wireless point
+     */
     id: string
 
-    /// <summary>
-    /// Unique 48-bit identifier of the wireless access point complying with MAC address conventions
-    /// </summary>
+    /**
+     * Unique 48-bit identifier of the wireless access point complying with MAC address conventions
+     */
     bssid: string
 
-    /// <summary>
-    /// Wireless access point name
-    /// </summary>
+    /**
+     * Wireless access point name
+     */
     name: string
 
-    /// <summary>
-    /// Site data (internal identifier and custom name of a site)
-    /// </summary>
+    /**
+     * Site data (internal identifier and custom name of a site)
+     */
     site: AutomaticLocationUpdatesSiteInfo
 
-    /// <summary>
-    /// Emergency address assigned to the wireless point. Only one of a pair `emergencyAddress` or `emergencyLocationId` should be specified, otherwise the error is returned
-    /// </summary>
+    /**
+     * Emergency address assigned to the wireless point. Only one of a pair `emergencyAddress` or `emergencyLocationId` should be specified, otherwise the error is returned
+     */
     emergencyAddress: LocationUpdatesEmergencyAddressInfoRequest
 
-    /// <summary>
-    /// Emergency response location (address) internal identifier. Only one of a pair `emergencyAddress` or `emergencyLocationId` should be specified, otherwise the error is returned
-    /// </summary>
+    /**
+     * Emergency response location (address) internal identifier. Only one of a pair `emergencyAddress` or `emergencyLocationId` should be specified, otherwise the error is returned
+     */
     emergencyLocationId: string
 }
 

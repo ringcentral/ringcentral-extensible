@@ -1,18 +1,18 @@
 class CallerIdDeviceInfo
 {
-    /// <summary>
-    /// Internal identifier of a device
-    /// </summary>
+    /**
+     * Internal identifier of a device
+     */
     id: string
 
-    /// <summary>
-    /// Link to a device resource
-    /// </summary>
+    /**
+     * Link to a device resource
+     */
     uri: string
 
-    /// <summary>
-    /// Name of a device
-    /// </summary>
+    /**
+     * Name of a device
+     */
     name: string
 }
 

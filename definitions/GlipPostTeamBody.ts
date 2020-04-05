@@ -2,25 +2,25 @@ import CreateGlipMember from './CreateGlipMember'
 
 class GlipPostTeamBody
 {
-    /// <summary>
-    /// Team access level.
-    /// </summary>
+    /**
+     * Team access level.
+     */
     public: boolean
 
-    /// <summary>
-    /// Team name.
-    /// Required
-    /// </summary>
+    /**
+     * Team name.
+     * Required
+     */
     name: string
 
-    /// <summary>
-    /// Team description.
-    /// </summary>
+    /**
+     * Team description.
+     */
     description: string
 
-    /// <summary>
-    /// List of glip members
-    /// </summary>
+    /**
+     * List of glip members
+     */
     members: CreateGlipMember[]
 }
 

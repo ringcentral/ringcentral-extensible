@@ -1,19 +1,19 @@
 // Linked message (Fax/Voicemail)
 class CallLogRecordMessage
 {
-    /// <summary>
-    /// Internal identifier of a message
-    /// </summary>
+    /**
+     * Internal identifier of a message
+     */
     id: string
 
-    /// <summary>
-    /// Type of a message
-    /// </summary>
+    /**
+     * Type of a message
+     */
     type: string
 
-    /// <summary>
-    /// Link to a message resource
-    /// </summary>
+    /**
+     * Link to a message resource
+     */
     uri: string
 }
 

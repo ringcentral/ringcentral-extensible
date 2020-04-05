@@ -3,46 +3,46 @@ import AutomaticLocationUpdatesPhoneLine from './AutomaticLocationUpdatesPhoneLi
 
 class AutomaticLocationUpdatesDeviceInfo
 {
-    /// <summary>
-    /// Internal identifier of a device
-    /// </summary>
+    /**
+     * Internal identifier of a device
+     */
     id: string
 
-    /// <summary>
-    /// Device type
-    /// Default: HardPhone
-    /// Enum: HardPhone, SoftPhone, OtherPhone
-    /// </summary>
+    /**
+     * Device type
+     * Default: HardPhone
+     * Enum: HardPhone, SoftPhone, OtherPhone
+     */
     type: string
 
-    /// <summary>
-    /// Serial number for HardPhone (is returned only when the phone is shipped and provisioned)
-    /// </summary>
+    /**
+     * Serial number for HardPhone (is returned only when the phone is shipped and provisioned)
+     */
     serial: string
 
-    /// <summary>
-    /// Specifies if Automatic Location Updates feature is enabled
-    /// </summary>
+    /**
+     * Specifies if Automatic Location Updates feature is enabled
+     */
     featureEnabled: boolean
 
-    /// <summary>
-    /// Device name
-    /// </summary>
+    /**
+     * Device name
+     */
     name: string
 
-    /// <summary>
-    /// HardPhone model information
-    /// </summary>
+    /**
+     * HardPhone model information
+     */
     model: AutomaticLocationUpdatesModelInfo
 
-    /// <summary>
-    /// Site data
-    /// </summary>
+    /**
+     * Site data
+     */
     site: string
 
-    /// <summary>
-    /// Phone lines information
-    /// </summary>
+    /**
+     * Phone lines information
+     */
     phoneLines: AutomaticLocationUpdatesPhoneLine[]
 }
 

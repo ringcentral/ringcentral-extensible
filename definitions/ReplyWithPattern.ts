@@ -1,20 +1,20 @@
 class ReplyWithPattern
 {
-    /// <summary>
-    /// Predefined reply pattern name.
-    /// Enum: WillCallYouBack, CallMeBack, OnMyWay, OnTheOtherLine, WillCallYouBackLater, CallMeBackLater, InAMeeting, OnTheOtherLineNoCall
-    /// </summary>
+    /**
+     * Predefined reply pattern name.
+     * Enum: WillCallYouBack, CallMeBack, OnMyWay, OnTheOtherLine, WillCallYouBackLater, CallMeBackLater, InAMeeting, OnTheOtherLineNoCall
+     */
     pattern: string
 
-    /// <summary>
-    /// Number of time units. Applicable only to WillCallYouBack, CallMeBack patterns.
-    /// </summary>
+    /**
+     * Number of time units. Applicable only to WillCallYouBack, CallMeBack patterns.
+     */
     time: number
 
-    /// <summary>
-    /// Time unit name.
-    /// Enum: Minute, Hour, Day
-    /// </summary>
+    /**
+     * Time unit name.
+     * Enum: Minute, Hour, Day
+     */
     timeUnit: string
 }
 

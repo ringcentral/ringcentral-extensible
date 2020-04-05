@@ -1,13 +1,13 @@
 class MessageStoreCalleeInfoRequest
 {
-    /// <summary>
-    /// Phone number in E.164 format
-    /// </summary>
+    /**
+     * Phone number in E.164 format
+     */
     phoneNumber: string
 
-    /// <summary>
-    /// Name of the callee
-    /// </summary>
+    /**
+     * Name of the callee
+     */
     name: string
 }
 

@@ -4,60 +4,60 @@ import LockedByInfo from './LockedByInfo'
 
 class GlipNoteInfo
 {
-    /// <summary>
-    /// Internal identifier of a note
-    /// </summary>
+    /**
+     * Internal identifier of a note
+     */
     id: string
 
-    /// <summary>
-    /// Title of a note
-    /// </summary>
+    /**
+     * Title of a note
+     */
     title: string
 
-    /// <summary>
-    /// Internal identifiers of the chat(s) where the note is posted or shared.
-    /// </summary>
+    /**
+     * Internal identifiers of the chat(s) where the note is posted or shared.
+     */
     chatIds: string[]
 
-    /// <summary>
-    /// Preview of a note (first 150 characters of a body)
-    /// </summary>
+    /**
+     * Preview of a note (first 150 characters of a body)
+     */
     preview: string
 
-    /// <summary>
-    /// Note creator information
-    /// </summary>
+    /**
+     * Note creator information
+     */
     creator: NoteCreatorInfo
 
-    /// <summary>
-    /// Note last modification information
-    /// </summary>
+    /**
+     * Note last modification information
+     */
     lastModifiedBy: LastModifiedByInfo
 
-    /// <summary>
-    /// Returned for the note being edited (locked) at the current moment. Information on the user editing the note
-    /// </summary>
+    /**
+     * Returned for the note being edited (locked) at the current moment. Information on the user editing the note
+     */
     lockedBy: LockedByInfo
 
-    /// <summary>
-    /// Note publishing status. Any note is created in 'Draft' status. After it is posted it becomes 'Active'
-    /// Enum: Active, Draft
-    /// </summary>
+    /**
+     * Note publishing status. Any note is created in 'Draft' status. After it is posted it becomes 'Active'
+     * Enum: Active, Draft
+     */
     status: string
 
-    /// <summary>
-    /// Creation time
-    /// </summary>
+    /**
+     * Creation time
+     */
     creationTime: string
 
-    /// <summary>
-    /// Datetime of the note last update
-    /// </summary>
+    /**
+     * Datetime of the note last update
+     */
     lastModifiedTime: string
 
-    /// <summary>
-    /// Enum: Note
-    /// </summary>
+    /**
+     * Enum: Note
+     */
     type: string
 }
 

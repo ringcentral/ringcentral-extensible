@@ -1,22 +1,22 @@
 class SearchRequest
 {
-    /// <summary>
-    /// page size
-    /// </summary>
+    /**
+     * page size
+     */
     count: number
 
-    /// <summary>
-    /// only support 'userName' or 'email' filter expressions for now
-    /// </summary>
+    /**
+     * only support 'userName' or 'email' filter expressions for now
+     */
     filter: string
 
-    /// <summary>
-    /// </summary>
+    /**
+     */
     schemas: string[]
 
-    /// <summary>
-    /// start index (1-based)
-    /// </summary>
+    /**
+     * start index (1-based)
+     */
     startIndex: number
 }
 

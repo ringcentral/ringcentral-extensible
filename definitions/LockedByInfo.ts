@@ -1,8 +1,8 @@
 class LockedByInfo
 {
-    /// <summary>
-    /// Internal identifier of the user editing the note
-    /// </summary>
+    /**
+     * Internal identifier of the user editing the note
+     */
     id: string
 }
 

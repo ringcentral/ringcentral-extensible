@@ -1,49 +1,49 @@
 class NotificationDeliveryMode
 {
-    /// <summary>
-    /// Optional parameter. Specifies if the message will be encrypted or not
-    /// </summary>
+    /**
+     * Optional parameter. Specifies if the message will be encrypted or not
+     */
     encryption: boolean
 
-    /// <summary>
-    /// PubNub channel name
-    /// </summary>
+    /**
+     * PubNub channel name
+     */
     address: string
 
-    /// <summary>
-    /// PubNub subscriber credentials required to subscribe to the channel
-    /// </summary>
+    /**
+     * PubNub subscriber credentials required to subscribe to the channel
+     */
     subscriberKey: string
 
-    /// <summary>
-    /// PubNub subscriber credentials required to subscribe to the channel. Optional (for PubNub transport type only)
-    /// </summary>
+    /**
+     * PubNub subscriber credentials required to subscribe to the channel. Optional (for PubNub transport type only)
+     */
     secretKey: string
 
-    /// <summary>
-    /// Encryption algorithm 'AES' (for PubNub transport type only)
-    /// </summary>
+    /**
+     * Encryption algorithm 'AES' (for PubNub transport type only)
+     */
     encryptionAlgorithm: string
 
-    /// <summary>
-    /// Key for notification message decryption (for PubNub transport type only)
-    /// </summary>
+    /**
+     * Key for notification message decryption (for PubNub transport type only)
+     */
     encryptionKey: string
 
-    /// <summary>
-    /// Notifications transportation provider name
-    /// Enum: PubNub, WebHook, RC/APNS, RC/GCM
-    /// </summary>
+    /**
+     * Notifications transportation provider name
+     * Enum: PubNub, WebHook, RC/APNS, RC/GCM
+     */
     transportType: string
 
-    /// <summary>
-    /// Name of a certificate. Supported for 'RC/APNS' and 'RC/GCM' transport types
-    /// </summary>
+    /**
+     * Name of a certificate. Supported for 'RC/APNS' and 'RC/GCM' transport types
+     */
     certificateName: string
 
-    /// <summary>
-    /// Identifier of a registration. Supported for 'RC/APNS' and 'RC/GCM' transport types
-    /// </summary>
+    /**
+     * Identifier of a registration. Supported for 'RC/APNS' and 'RC/GCM' transport types
+     */
     registrationId: string
 }
 

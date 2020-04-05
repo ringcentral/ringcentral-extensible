@@ -1,7 +1,7 @@
 class PresenceNavigationInfoURI
 {
-    /// <summary>
-    /// </summary>
+    /**
+     */
     uri: string
 }
 

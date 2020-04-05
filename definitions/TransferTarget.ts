@@ -1,18 +1,18 @@
 class TransferTarget
 {
-    /// <summary>
-    /// Phone number
-    /// </summary>
+    /**
+     * Phone number
+     */
     phoneNumber: string
 
-    /// <summary>
-    /// Voicemail owner extension identifier
-    /// </summary>
+    /**
+     * Voicemail owner extension identifier
+     */
     voicemail: string
 
-    /// <summary>
-    /// Park orbit identifier
-    /// </summary>
+    /**
+     * Park orbit identifier
+     */
     parkOrbit: string
 }
 

@@ -1,13 +1,13 @@
 class ContactCenterProvider
 {
-    /// <summary>
-    /// Internal identifier of the provider
-    /// </summary>
+    /**
+     * Internal identifier of the provider
+     */
     id: string
 
-    /// <summary>
-    /// Provider's name
-    /// </summary>
+    /**
+     * Provider's name
+     */
     name: string
 }
 

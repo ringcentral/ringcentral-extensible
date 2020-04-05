@@ -7,51 +7,51 @@ import EnterpriseUser from './EnterpriseUser'
 
 class CreateUser
 {
-    /// <summary>
-    /// User status
-    /// </summary>
+    /**
+     * User status
+     */
     active: boolean
 
-    /// <summary>
-    /// </summary>
+    /**
+     */
     addresses: UserAddress[]
 
-    /// <summary>
-    /// Required
-    /// </summary>
+    /**
+     * Required
+     */
     emails: Email[]
 
-    /// <summary>
-    /// external unique resource id defined by provisioning client
-    /// </summary>
+    /**
+     * external unique resource id defined by provisioning client
+     */
     externalId: string
 
-    /// <summary>
-    /// Required
-    /// </summary>
+    /**
+     * Required
+     */
     name: Name
 
-    /// <summary>
-    /// </summary>
+    /**
+     */
     phoneNumbers: PhoneNumber[]
 
-    /// <summary>
-    /// </summary>
+    /**
+     */
     photos: Photo[]
 
-    /// <summary>
-    /// Required
-    /// </summary>
+    /**
+     * Required
+     */
     schemas: string[]
 
-    /// <summary>
-    /// </summary>
+    /**
+     */
     "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User": EnterpriseUser
 
-    /// <summary>
-    /// MUST be same as work type email address
-    /// Required
-    /// </summary>
+    /**
+     * MUST be same as work type email address
+     * Required
+     */
     userName: string
 }
 

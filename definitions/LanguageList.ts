@@ -4,24 +4,24 @@ import ProvisioningPagingInfo from './ProvisioningPagingInfo'
 
 class LanguageList
 {
-    /// <summary>
-    /// Canonical URI of the language list resource
-    /// </summary>
+    /**
+     * Canonical URI of the language list resource
+     */
     uri: string
 
-    /// <summary>
-    /// Language data
-    /// </summary>
+    /**
+     * Language data
+     */
     records: LanguageInfo[]
 
-    /// <summary>
-    /// Information on navigation
-    /// </summary>
+    /**
+     * Information on navigation
+     */
     navigation: ProvisioningNavigationInfo
 
-    /// <summary>
-    /// Information on paging
-    /// </summary>
+    /**
+     * Information on paging
+     */
     paging: ProvisioningPagingInfo
 }
 

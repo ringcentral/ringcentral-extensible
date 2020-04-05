@@ -1,13 +1,13 @@
 class GetExtensionAccountInfo
 {
-    /// <summary>
-    /// Internal identifier of an account
-    /// </summary>
+    /**
+     * Internal identifier of an account
+     */
     id: string
 
-    /// <summary>
-    /// Canonical URI of an account
-    /// </summary>
+    /**
+     * Canonical URI of an account
+     */
     uri: string
 }
 

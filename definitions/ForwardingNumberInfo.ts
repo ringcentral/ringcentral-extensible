@@ -2,45 +2,45 @@ import CreateForwardingNumberDeviceInfo from './CreateForwardingNumberDeviceInfo
 
 class ForwardingNumberInfo
 {
-    /// <summary>
-    /// Internal identifier of a forwarding/call flip phone number
-    /// </summary>
+    /**
+     * Internal identifier of a forwarding/call flip phone number
+     */
     id: string
 
-    /// <summary>
-    /// Canonical URI of a forwarding/call flip phone number
-    /// </summary>
+    /**
+     * Canonical URI of a forwarding/call flip phone number
+     */
     uri: string
 
-    /// <summary>
-    /// Forwarding/Call flip phone number
-    /// </summary>
+    /**
+     * Forwarding/Call flip phone number
+     */
     phoneNumber: string
 
-    /// <summary>
-    /// Forwarding/Call flip number title
-    /// </summary>
+    /**
+     * Forwarding/Call flip number title
+     */
     label: string
 
-    /// <summary>
-    /// Type of option this phone number is used for. Multiple values are accepted
-    /// </summary>
+    /**
+     * Type of option this phone number is used for. Multiple values are accepted
+     */
     features: string[]
 
-    /// <summary>
-    /// Number assigned to the call flip phone number, corresponds to the shortcut dial number
-    /// </summary>
+    /**
+     * Number assigned to the call flip phone number, corresponds to the shortcut dial number
+     */
     flipNumber: string
 
-    /// <summary>
-    /// Forwarding device information
-    /// </summary>
+    /**
+     * Forwarding device information
+     */
     device: CreateForwardingNumberDeviceInfo
 
-    /// <summary>
-    /// Forwarding phone number type
-    /// Enum: Home, Mobile, Work, PhoneLine, Outage, Other
-    /// </summary>
+    /**
+     * Forwarding phone number type
+     * Enum: Home, Mobile, Work, PhoneLine, Outage, Other
+     */
     type: string
 }
 

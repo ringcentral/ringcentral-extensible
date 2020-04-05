@@ -1,13 +1,13 @@
 class BillingInfo
 {
-    /// <summary>
-    /// Cost per minute, paid and already included in your RingCentral Plan. For example International Calls
-    /// </summary>
+    /**
+     * Cost per minute, paid and already included in your RingCentral Plan. For example International Calls
+     */
     costIncluded: number
 
-    /// <summary>
-    /// Cost per minute, paid and not included in your RingCentral Plan
-    /// </summary>
+    /**
+     * Cost per minute, paid and not included in your RingCentral Plan
+     */
     costPurchased: number
 }
 

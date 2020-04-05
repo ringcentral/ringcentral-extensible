@@ -1,8 +1,8 @@
 class ReadDeviceParameters
 {
-    /// <summary>
-    /// Specifies if emergency address should be synchronized or not
-    /// </summary>
+    /**
+     * Specifies if emergency address should be synchronized or not
+     */
     syncEmergencyAddress: boolean
 }
 

@@ -1,7 +1,7 @@
 class ProvisioningNavigationInfoUri
 {
-    /// <summary>
-    /// </summary>
+    /**
+     */
     uri: string
 }
 

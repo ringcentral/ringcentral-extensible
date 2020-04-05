@@ -2,35 +2,35 @@ import CallQueueServiceLevelSettings from './CallQueueServiceLevelSettings'
 
 class CallQueueDetails
 {
-    /// <summary>
-    /// Internal identifier of a call queue
-    /// </summary>
+    /**
+     * Internal identifier of a call queue
+     */
     id: string
 
-    /// <summary>
-    /// Call queue name
-    /// </summary>
+    /**
+     * Call queue name
+     */
     name: string
 
-    /// <summary>
-    /// Call queue extension number
-    /// </summary>
+    /**
+     * Call queue extension number
+     */
     extensionNumber: string
 
-    /// <summary>
-    /// Call queue status
-    /// Enum: Enabled, Disabled, NotActivated
-    /// </summary>
+    /**
+     * Call queue status
+     * Enum: Enabled, Disabled, NotActivated
+     */
     status: string
 
-    /// <summary>
-    /// Call queue service level settings
-    /// </summary>
+    /**
+     * Call queue service level settings
+     */
     serviceLevelSettings: CallQueueServiceLevelSettings
 
-    /// <summary>
-    /// Allows members to change their queue status
-    /// </summary>
+    /**
+     * Allows members to change their queue status
+     */
     editableMemberStatus: boolean
 }
 

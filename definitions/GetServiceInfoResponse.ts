@@ -7,47 +7,47 @@ import PackageInfo from './PackageInfo'
 
 class GetServiceInfoResponse
 {
-    /// <summary>
-    /// Canonical URI of the account Service Info resource
-    /// </summary>
+    /**
+     * Canonical URI of the account Service Info resource
+     */
     uri: string
 
-    /// <summary>
-    /// Account Service Plan name
-    /// </summary>
+    /**
+     * Account Service Plan name
+     */
     servicePlanName: string
 
-    /// <summary>
-    /// Information on account brand
-    /// </summary>
+    /**
+     * Information on account brand
+     */
     brand: BrandInfo
 
-    /// <summary>
-    /// Information on account service plan
-    /// </summary>
+    /**
+     * Information on account service plan
+     */
     servicePlan: ServicePlanInfo
 
-    /// <summary>
-    /// </summary>
+    /**
+     */
     targetServicePlan: ServicePlanInfo
 
-    /// <summary>
-    /// Information on account billing plan
-    /// </summary>
+    /**
+     * Information on account billing plan
+     */
     billingPlan: BillingPlanInfo
 
-    /// <summary>
-    /// Service features information, see Service Feature List
-    /// </summary>
+    /**
+     * Service features information, see Service Feature List
+     */
     serviceFeatures: ServiceFeatureInfo[]
 
-    /// <summary>
-    /// Limits which are effective for the account
-    /// </summary>
+    /**
+     * Limits which are effective for the account
+     */
     limits: AccountLimits
 
-    /// <summary>
-    /// </summary>
+    /**
+     */
     package: PackageInfo
 }
 

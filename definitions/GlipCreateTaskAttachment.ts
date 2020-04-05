@@ -1,8 +1,8 @@
 class GlipCreateTaskAttachment
 {
-    /// <summary>
-    /// Internal identifier of a file
-    /// </summary>
+    /**
+     * Internal identifier of a file
+     */
     id: string
 }
 

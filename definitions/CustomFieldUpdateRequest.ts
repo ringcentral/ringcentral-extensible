@@ -1,8 +1,8 @@
 class CustomFieldUpdateRequest
 {
-    /// <summary>
-    /// Custom field display name
-    /// </summary>
+    /**
+     * Custom field display name
+     */
     displayName: string
 }
 

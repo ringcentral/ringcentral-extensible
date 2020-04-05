@@ -2,36 +2,36 @@ import RuleInfoCreateRuleRequest from './RuleInfoCreateRuleRequest'
 
 class ForwardingInfoCreateRuleRequest
 {
-    /// <summary>
-    /// Specifies if the first ring on desktop/mobile apps is enabled. The default value is 'True'
-    /// </summary>
+    /**
+     * Specifies if the first ring on desktop/mobile apps is enabled. The default value is 'True'
+     */
     notifyMySoftPhones: boolean
 
-    /// <summary>
-    /// Specifies if the administrator's softphone (desktop application) is notified before forwarding the incoming call to desk phones and forwarding numbers. The default value is 'True'
-    /// </summary>
+    /**
+     * Specifies if the administrator's softphone (desktop application) is notified before forwarding the incoming call to desk phones and forwarding numbers. The default value is 'True'
+     */
     notifyAdminSoftPhones: boolean
 
-    /// <summary>
-    /// Specifies delay between ring on apps and starting of a call forwarding
-    /// Default: 1
-    /// </summary>
+    /**
+     * Specifies delay between ring on apps and starting of a call forwarding
+     * Default: 1
+     */
     softPhonesRingCount: number
 
-    /// <summary>
-    /// Specifies the order in which forwarding numbers ring. 'Sequentially' means that forwarding numbers are ringing one at a time, in order of priority. 'Simultaneously' means that forwarding numbers are ringing all at the same time. The default value is 'Sequentially'
-    /// Enum: Sequentially, Simultaneously
-    /// </summary>
+    /**
+     * Specifies the order in which forwarding numbers ring. 'Sequentially' means that forwarding numbers are ringing one at a time, in order of priority. 'Simultaneously' means that forwarding numbers are ringing all at the same time. The default value is 'Sequentially'
+     * Enum: Sequentially, Simultaneously
+     */
     ringingMode: string
 
-    /// <summary>
-    /// Information on a call forwarding rule
-    /// </summary>
+    /**
+     * Information on a call forwarding rule
+     */
     rules: RuleInfoCreateRuleRequest[]
 
-    /// <summary>
-    /// Specifies if mobile timeout is activated for the rule
-    /// </summary>
+    /**
+     * Specifies if mobile timeout is activated for the rule
+     */
     mobileTimeout: boolean
 }
 

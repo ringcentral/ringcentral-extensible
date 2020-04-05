@@ -2,24 +2,24 @@ import MeetingRecordingsNavigationInfoUri from './MeetingRecordingsNavigationInf
 
 class MeetingRecordingsNavigationInfo
 {
-    /// <summary>
-    /// Canonical URI for the first page of the list
-    /// </summary>
+    /**
+     * Canonical URI for the first page of the list
+     */
     firstPage: MeetingRecordingsNavigationInfoUri
 
-    /// <summary>
-    /// Canonical URI for the next page of the list
-    /// </summary>
+    /**
+     * Canonical URI for the next page of the list
+     */
     nextPage: MeetingRecordingsNavigationInfoUri
 
-    /// <summary>
-    /// Canonical URI for the previous page of the list
-    /// </summary>
+    /**
+     * Canonical URI for the previous page of the list
+     */
     previousPage: MeetingRecordingsNavigationInfoUri
 
-    /// <summary>
-    /// Canonical URI for the last page of the list
-    /// </summary>
+    /**
+     * Canonical URI for the last page of the list
+     */
     lastPage: MeetingRecordingsNavigationInfoUri
 }
 

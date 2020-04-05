@@ -3,21 +3,21 @@ import PhoneNumberInfoNumberParser from './PhoneNumberInfoNumberParser'
 
 class ParsePhoneNumberResponse
 {
-    /// <summary>
-    /// Canonical URI of a resource
-    /// </summary>
+    /**
+     * Canonical URI of a resource
+     */
     uri: string
 
-    /// <summary>
-    /// Information on a user home country
-    /// Required
-    /// </summary>
+    /**
+     * Information on a user home country
+     * Required
+     */
     homeCountry: GetCountryInfoNumberParser
 
-    /// <summary>
-    /// Parsed phone numbers data
-    /// Required
-    /// </summary>
+    /**
+     * Parsed phone numbers data
+     * Required
+     */
     phoneNumbers: PhoneNumberInfoNumberParser[]
 }
 

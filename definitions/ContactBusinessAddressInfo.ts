@@ -1,28 +1,28 @@
 class ContactBusinessAddressInfo
 {
-    /// <summary>
-    /// Country name of an extension user company
-    /// </summary>
+    /**
+     * Country name of an extension user company
+     */
     country: string
 
-    /// <summary>
-    /// State/province name of an extension user company. Mandatory for the USA, UK and Canada
-    /// </summary>
+    /**
+     * State/province name of an extension user company. Mandatory for the USA, UK and Canada
+     */
     state: string
 
-    /// <summary>
-    /// City name of an extension user company
-    /// </summary>
+    /**
+     * City name of an extension user company
+     */
     city: string
 
-    /// <summary>
-    /// Street address of an extension user company
-    /// </summary>
+    /**
+     * Street address of an extension user company
+     */
     street: string
 
-    /// <summary>
-    /// Zip code of an extension user company
-    /// </summary>
+    /**
+     * Zip code of an extension user company
+     */
     zip: string
 }
 

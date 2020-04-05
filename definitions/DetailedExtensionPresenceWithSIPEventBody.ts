@@ -2,75 +2,75 @@ import ActiveCallInfo from './ActiveCallInfo'
 
 class DetailedExtensionPresenceWithSIPEventBody
 {
-    /// <summary>
-    /// Internal identifier of an extension
-    /// Default: ~
-    /// </summary>
+    /**
+     * Internal identifier of an extension
+     * Default: ~
+     */
     extensionId: string
 
-    /// <summary>
-    /// Telephony presence status. Returned if telephony status is changed.
-    /// Enum: NoCall, CallConnected, Ringing, OnHold, ParkedCall
-    /// </summary>
+    /**
+     * Telephony presence status. Returned if telephony status is changed.
+     * Enum: NoCall, CallConnected, Ringing, OnHold, ParkedCall
+     */
     telephonyStatus: string
 
-    /// <summary>
-    /// List of the latest 7 active calls on extension
-    /// </summary>
+    /**
+     * List of the latest 7 active calls on extension
+     */
     activeCalls: ActiveCallInfo[]
 
-    /// <summary>
-    /// Order number of a notification to state the chronology
-    /// </summary>
+    /**
+     * Order number of a notification to state the chronology
+     */
     sequence: number
 
-    /// <summary>
-    /// Aggregated presence status, calculated from a number of sources
-    /// Enum: Offline, Busy, Available
-    /// </summary>
+    /**
+     * Aggregated presence status, calculated from a number of sources
+     * Enum: Offline, Busy, Available
+     */
     presenceStatus: string
 
-    /// <summary>
-    /// User-defined presence status (as previously published by the user)
-    /// Enum: Offline, Busy, Available
-    /// </summary>
+    /**
+     * User-defined presence status (as previously published by the user)
+     * Enum: Offline, Busy, Available
+     */
     userStatus: string
 
-    /// <summary>
-    /// Meetings presence status
-    /// Enum: Connected, Disconnected
-    /// </summary>
+    /**
+     * Meetings presence status
+     * Enum: Connected, Disconnected
+     */
     meetingStatus: string
 
-    /// <summary>
-    /// Extended DnD (Do not Disturb) status
-    /// Enum: TakeAllCalls, DoNotAcceptAnyCalls, DoNotAcceptDepartmentCalls, TakeDepartmentCallsOnly
-    /// </summary>
+    /**
+     * Extended DnD (Do not Disturb) status
+     * Enum: TakeAllCalls, DoNotAcceptAnyCalls, DoNotAcceptDepartmentCalls, TakeDepartmentCallsOnly
+     */
     dndStatus: string
 
-    /// <summary>
-    /// If 'True' enables other extensions to see the extension presence status
-    /// </summary>
+    /**
+     * If 'True' enables other extensions to see the extension presence status
+     */
     allowSeeMyPresence: boolean
 
-    /// <summary>
-    /// If 'True' enables to ring extension phone, if any user monitored by this extension is ringing
-    /// </summary>
+    /**
+     * If 'True' enables to ring extension phone, if any user monitored by this extension is ringing
+     */
     ringOnMonitoredCall: boolean
 
-    /// <summary>
-    /// If 'True' enables the extension user to pick up a monitored line on hold
-    /// </summary>
+    /**
+     * If 'True' enables the extension user to pick up a monitored line on hold
+     */
     pickUpCallsOnHold: boolean
 
-    /// <summary>
-    /// Total number of active calls on extension at the present moment
-    /// </summary>
+    /**
+     * Total number of active calls on extension at the present moment
+     */
     totalActiveCalls: number
 
-    /// <summary>
-    /// Internal identifier of a subscription owner extension
-    /// </summary>
+    /**
+     * Internal identifier of a subscription owner extension
+     */
     ownerId: string
 }
 

@@ -1,10 +1,10 @@
 // Returned if *Meetings* feature is switched on
 class UnifiedPresenceMeeting
 {
-    /// <summary>
-    /// Meeting status calculated from all user`s meetings
-    /// Enum: NoMeeting, InMeeting
-    /// </summary>
+    /**
+     * Meeting status calculated from all user`s meetings
+     * Enum: NoMeeting, InMeeting
+     */
     status: string
 }
 

@@ -1,13 +1,13 @@
 class CallRecordingCustomGreetingData
 {
-    /// <summary>
-    /// Link to a custom company greeting
-    /// </summary>
+    /**
+     * Link to a custom company greeting
+     */
     uri: string
 
-    /// <summary>
-    /// Internal identifier of a custom company greeting
-    /// </summary>
+    /**
+     * Internal identifier of a custom company greeting
+     */
     id: string
 }
 

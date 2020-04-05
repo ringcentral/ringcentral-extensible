@@ -3,41 +3,41 @@ import CustomCompanyGreetingLanguageInfo from './CustomCompanyGreetingLanguageIn
 
 class CustomCompanyGreetingInfo
 {
-    /// <summary>
-    /// Link to an extension custom greeting
-    /// </summary>
+    /**
+     * Link to an extension custom greeting
+     */
     uri: string
 
-    /// <summary>
-    /// Internal identifier of an answering rule
-    /// </summary>
+    /**
+     * Internal identifier of an answering rule
+     */
     id: string
 
-    /// <summary>
-    /// Type of a company greeting
-    /// Enum: Company, StartRecording, StopRecording, AutomaticRecording
-    /// </summary>
+    /**
+     * Type of a company greeting
+     * Enum: Company, StartRecording, StopRecording, AutomaticRecording
+     */
     type: string
 
-    /// <summary>
-    /// Content media type
-    /// Enum: audio/mpeg, audio/wav
-    /// </summary>
+    /**
+     * Content media type
+     * Enum: audio/mpeg, audio/wav
+     */
     contentType: string
 
-    /// <summary>
-    /// Link to a greeting content (audio file)
-    /// </summary>
+    /**
+     * Link to a greeting content (audio file)
+     */
     contentUri: string
 
-    /// <summary>
-    /// Information on an answering rule that the greeting is applied to
-    /// </summary>
+    /**
+     * Information on an answering rule that the greeting is applied to
+     */
     answeringRule: CustomGreetingAnsweringRuleInfo
 
-    /// <summary>
-    /// Information on a greeting language. Supported for types 'StopRecording', 'StartRecording', 'AutomaticRecording'
-    /// </summary>
+    /**
+     * Information on a greeting language. Supported for types 'StopRecording', 'StartRecording', 'AutomaticRecording'
+     */
     language: CustomCompanyGreetingLanguageInfo
 }
 

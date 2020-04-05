@@ -4,28 +4,28 @@ import ProvisioningPagingInfo from './ProvisioningPagingInfo'
 
 class GetStateListResponse
 {
-    /// <summary>
-    /// Link to the states list resource
-    /// Required
-    /// </summary>
+    /**
+     * Link to the states list resource
+     * Required
+     */
     uri: string
 
-    /// <summary>
-    /// List of states
-    /// Required
-    /// </summary>
+    /**
+     * List of states
+     * Required
+     */
     records: GetStateInfoResponse[]
 
-    /// <summary>
-    /// Information on navigation
-    /// Required
-    /// </summary>
+    /**
+     * Information on navigation
+     * Required
+     */
     navigation: ProvisioningNavigationInfo
 
-    /// <summary>
-    /// Information on paging
-    /// Required
-    /// </summary>
+    /**
+     * Information on paging
+     * Required
+     */
     paging: ProvisioningPagingInfo
 }
 

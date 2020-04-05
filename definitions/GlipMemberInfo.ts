@@ -1,8 +1,8 @@
 class GlipMemberInfo
 {
-    /// <summary>
-    /// Internal identifier of a user
-    /// </summary>
+    /**
+     * Internal identifier of a user
+     */
     id: string
 }
 

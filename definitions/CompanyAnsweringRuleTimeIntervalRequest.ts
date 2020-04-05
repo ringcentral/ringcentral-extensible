@@ -1,13 +1,13 @@
 class CompanyAnsweringRuleTimeIntervalRequest
 {
-    /// <summary>
-    /// Time in format hh:mm
-    /// </summary>
+    /**
+     * Time in format hh:mm
+     */
     from: string
 
-    /// <summary>
-    /// Time in format hh:mm
-    /// </summary>
+    /**
+     * Time in format hh:mm
+     */
     to: string
 }
 

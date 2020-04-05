@@ -1,8 +1,8 @@
 class UpdateDevicePhoneInfo
 {
-    /// <summary>
-    /// Internal identifier of a phone number
-    /// </summary>
+    /**
+     * Internal identifier of a phone number
+     */
     id: string
 }
 

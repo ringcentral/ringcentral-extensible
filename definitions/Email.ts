@@ -1,14 +1,14 @@
 class Email
 {
-    /// <summary>
-    /// Required
-    /// Enum: work
-    /// </summary>
+    /**
+     * Required
+     * Enum: work
+     */
     type: string
 
-    /// <summary>
-    /// Required
-    /// </summary>
+    /**
+     * Required
+     */
     value: string
 }
 

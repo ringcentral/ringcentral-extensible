@@ -1,8 +1,8 @@
 class GlipCreateTaskAssignee
 {
-    /// <summary>
-    /// Assignee Id
-    /// </summary>
+    /**
+     * Assignee Id
+     */
     id: string
 }
 

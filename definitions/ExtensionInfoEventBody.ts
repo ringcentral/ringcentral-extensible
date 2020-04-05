@@ -1,24 +1,24 @@
 class ExtensionInfoEventBody
 {
-    /// <summary>
-    /// Internal identifier of an extension
-    /// </summary>
+    /**
+     * Internal identifier of an extension
+     */
     extensionId: string
 
-    /// <summary>
-    /// Type of extension info change
-    /// Enum: Update, Delete
-    /// </summary>
+    /**
+     * Type of extension info change
+     * Enum: Update, Delete
+     */
     eventType: string
 
-    /// <summary>
-    /// Returned for 'Update' event type only. The possible values are: /nAccountInfo - change of account parameters/nExtensionInfo - change of contact info, service features, departments, status/nPhoneNumber - change of phone numbers/nRole - change of permissions/nProfileImage - change of profile image
-    /// </summary>
+    /**
+     * Returned for 'Update' event type only. The possible values are: /nAccountInfo - change of account parameters/nExtensionInfo - change of contact info, service features, departments, status/nPhoneNumber - change of phone numbers/nRole - change of permissions/nProfileImage - change of profile image
+     */
     hints: string[]
 
-    /// <summary>
-    /// Internal identifier of a subscription owner extension
-    /// </summary>
+    /**
+     * Internal identifier of a subscription owner extension
+     */
     ownerId: string
 }
 

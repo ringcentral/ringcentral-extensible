@@ -3,19 +3,19 @@ import CustomGreetingAnsweringRuleInfoRequest from './CustomGreetingAnsweringRul
 
 class CreateCustomUserGreetingRequest
 {
-    /// <summary>
-    /// Type of a greeting, specifying the case when the greeting is played.
-    /// Enum: Introductory, Announcement, ConnectingMessage, ConnectingAudio, Voicemail, Unavailable, HoldMusic
-    /// </summary>
+    /**
+     * Type of a greeting, specifying the case when the greeting is played.
+     * Enum: Introductory, Announcement, ConnectingMessage, ConnectingAudio, Voicemail, Unavailable, HoldMusic
+     */
     type: string
 
-    /// <summary>
-    /// Meida file to upload
-    /// </summary>
+    /**
+     * Meida file to upload
+     */
     binary: Attachment
 
-    /// <summary>
-    /// </summary>
+    /**
+     */
     answeringRule: CustomGreetingAnsweringRuleInfoRequest
 }
 

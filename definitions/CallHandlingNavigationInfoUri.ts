@@ -1,7 +1,7 @@
 class CallHandlingNavigationInfoUri
 {
-    /// <summary>
-    /// </summary>
+    /**
+     */
     uri: string
 }
 

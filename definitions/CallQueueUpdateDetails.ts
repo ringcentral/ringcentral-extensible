@@ -2,14 +2,14 @@ import CallQueueServiceLevelSettings from './CallQueueServiceLevelSettings'
 
 class CallQueueUpdateDetails
 {
-    /// <summary>
-    /// Call queue service level settings
-    /// </summary>
+    /**
+     * Call queue service level settings
+     */
     serviceLevelSettings: CallQueueServiceLevelSettings
 
-    /// <summary>
-    /// Allows members to change their queue status
-    /// </summary>
+    /**
+     * Allows members to change their queue status
+     */
     editableMemberStatus: boolean
 }
 

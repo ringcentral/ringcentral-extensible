@@ -6,31 +6,31 @@ import ExtensionFormattingLocaleInfoRequest from './ExtensionFormattingLocaleInf
 
 class ExtensionRegionalSettingRequest
 {
-    /// <summary>
-    /// </summary>
+    /**
+     */
     homeCountry: ExtensionCountryInfoRequest
 
-    /// <summary>
-    /// </summary>
+    /**
+     */
     timezone: ExtensionTimezoneInfoRequest
 
-    /// <summary>
-    /// </summary>
+    /**
+     */
     language: ExtensionLanguageInfoRequest
 
-    /// <summary>
-    /// </summary>
+    /**
+     */
     greetingLanguage: ExtensionGreetingLanguageInfoRequest
 
-    /// <summary>
-    /// </summary>
+    /**
+     */
     formattingLocale: ExtensionFormattingLocaleInfoRequest
 
-    /// <summary>
-    /// Time format setting
-    /// Default: 12h
-    /// Enum: 12h, 24h
-    /// </summary>
+    /**
+     * Time format setting
+     * Default: 12h
+     * Enum: 12h, 24h
+     */
     timeFormat: string
 }
 

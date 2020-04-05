@@ -1,13 +1,13 @@
 class ParamsInfo
 {
-    /// <summary>
-    /// Parameter name
-    /// </summary>
+    /**
+     * Parameter name
+     */
     name: string
 
-    /// <summary>
-    /// Parameter value
-    /// </summary>
+    /**
+     * Parameter value
+     */
     value: string
 }
 

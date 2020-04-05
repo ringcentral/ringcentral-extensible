@@ -1,73 +1,73 @@
 class GlipEventInfo
 {
-    /// <summary>
-    /// Internal identifier of an event
-    /// </summary>
+    /**
+     * Internal identifier of an event
+     */
     id: string
 
-    /// <summary>
-    /// Internal identifier of a person created an event
-    /// </summary>
+    /**
+     * Internal identifier of a person created an event
+     */
     creatorId: string
 
-    /// <summary>
-    /// Event title
-    /// </summary>
+    /**
+     * Event title
+     */
     title: string
 
-    /// <summary>
-    /// Datetime of starting an event
-    /// </summary>
+    /**
+     * Datetime of starting an event
+     */
     startTime: string
 
-    /// <summary>
-    /// Datetime of ending an event
-    /// </summary>
+    /**
+     * Datetime of ending an event
+     */
     endTime: string
 
-    /// <summary>
-    /// Indicates whether an event has some specific time slot or lasts for the whole day(s)
-    /// </summary>
+    /**
+     * Indicates whether an event has some specific time slot or lasts for the whole day(s)
+     */
     allDay: boolean
 
-    /// <summary>
-    /// Event recurrence settings
-    /// Enum: None, Day, Weekday, Week, Month, Year
-    /// </summary>
+    /**
+     * Event recurrence settings
+     * Enum: None, Day, Weekday, Week, Month, Year
+     */
     recurrence: string
 
-    /// <summary>
-    /// Condition of ending
-    /// </summary>
+    /**
+     * Condition of ending
+     */
     endingCondition: string
 
-    /// <summary>
-    /// Count of iterations. For periodic events only
-    /// </summary>
+    /**
+     * Count of iterations. For periodic events only
+     */
     endingAfter: number
 
-    /// <summary>
-    /// Iterations end datetime for periodic events
-    /// Default: None
-    /// Enum: None, Count, Date
-    /// </summary>
+    /**
+     * Iterations end datetime for periodic events
+     * Default: None
+     * Enum: None, Count, Date
+     */
     endingOn: string
 
-    /// <summary>
-    /// Color of Event title (including its presentation in Calendar)
-    /// Default: Black
-    /// Enum: Black, Red, Orange, Yellow, Green, Blue, Purple, Magenta
-    /// </summary>
+    /**
+     * Color of Event title (including its presentation in Calendar)
+     * Default: Black
+     * Enum: Black, Red, Orange, Yellow, Green, Blue, Purple, Magenta
+     */
     color: string
 
-    /// <summary>
-    /// Event location
-    /// </summary>
+    /**
+     * Event location
+     */
     location: string
 
-    /// <summary>
-    /// Event details
-    /// </summary>
+    /**
+     * Event details
+     */
     description: string
 }
 

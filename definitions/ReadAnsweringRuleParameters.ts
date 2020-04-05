@@ -1,8 +1,8 @@
 class ReadAnsweringRuleParameters
 {
-    /// <summary>
-    /// Indicates whether inactive numbers should be returned or not
-    /// </summary>
+    /**
+     * Indicates whether inactive numbers should be returned or not
+     */
     showInactiveNumbers: boolean
 }
 

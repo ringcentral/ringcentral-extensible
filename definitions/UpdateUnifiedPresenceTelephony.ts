@@ -1,9 +1,9 @@
 class UpdateUnifiedPresenceTelephony
 {
-    /// <summary>
-    /// Telephony DND status
-    /// Enum: TakeAllCalls, DoNotAcceptAnyCalls, DoNotAcceptQueueCalls
-    /// </summary>
+    /**
+     * Telephony DND status
+     * Enum: TakeAllCalls, DoNotAcceptAnyCalls, DoNotAcceptQueueCalls
+     */
     availability: string
 }
 

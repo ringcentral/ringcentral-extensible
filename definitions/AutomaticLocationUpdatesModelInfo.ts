@@ -1,18 +1,18 @@
 class AutomaticLocationUpdatesModelInfo
 {
-    /// <summary>
-    /// Device model identifier
-    /// </summary>
+    /**
+     * Device model identifier
+     */
     id: string
 
-    /// <summary>
-    /// Device name
-    /// </summary>
+    /**
+     * Device name
+     */
     name: string
 
-    /// <summary>
-    /// Device feature or multiple features supported
-    /// </summary>
+    /**
+     * Device feature or multiple features supported
+     */
     features: string[]
 }
 

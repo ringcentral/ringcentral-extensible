@@ -3,25 +3,25 @@ import PromptLanguageInfo from './PromptLanguageInfo'
 
 class IVRMenuPromptInfo
 {
-    /// <summary>
-    /// Prompt mode: custom media or text
-    /// Enum: Audio, TextToSpeech
-    /// </summary>
+    /**
+     * Prompt mode: custom media or text
+     * Enum: Audio, TextToSpeech
+     */
     mode: string
 
-    /// <summary>
-    /// For 'Audio' mode only. Prompt media reference
-    /// </summary>
+    /**
+     * For 'Audio' mode only. Prompt media reference
+     */
     audio: AudioPromptInfo
 
-    /// <summary>
-    /// For 'TextToSpeech' mode only. Prompt text
-    /// </summary>
+    /**
+     * For 'TextToSpeech' mode only. Prompt text
+     */
     text: string
 
-    /// <summary>
-    /// For 'TextToSpeech' mode only. Prompt language metadata
-    /// </summary>
+    /**
+     * For 'TextToSpeech' mode only. Prompt language metadata
+     */
     language: PromptLanguageInfo
 }
 

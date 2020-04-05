@@ -4,27 +4,27 @@ import ProvisioningPagingInfo from './ProvisioningPagingInfo'
 
 class GetCountryListResponse
 {
-    /// <summary>
-    /// Link to the list of countries supported
-    /// </summary>
+    /**
+     * Link to the list of countries supported
+     */
     uri: string
 
-    /// <summary>
-    /// List of countries with the country data
-    /// Required
-    /// </summary>
+    /**
+     * List of countries with the country data
+     * Required
+     */
     records: GetCountryInfoDictionaryResponse[]
 
-    /// <summary>
-    /// Information on navigation
-    /// Required
-    /// </summary>
+    /**
+     * Information on navigation
+     * Required
+     */
     navigation: ProvisioningNavigationInfo
 
-    /// <summary>
-    /// Information on paging
-    /// Required
-    /// </summary>
+    /**
+     * Information on paging
+     * Required
+     */
     paging: ProvisioningPagingInfo
 }
 

@@ -3,40 +3,40 @@ import MessageStoreCalleeInfoRequest from './MessageStoreCalleeInfoRequest'
 
 class CreateFaxMessageRequest
 {
-    /// <summary>
-    /// File to upload
-    /// </summary>
+    /**
+     * File to upload
+     */
     attachments: Attachment[]
 
-    /// <summary>
-    /// Resolution of Fax
-    /// Enum: High, Low
-    /// </summary>
+    /**
+     * Resolution of Fax
+     * Enum: High, Low
+     */
     faxResolution: string
 
-    /// <summary>
-    /// To Phone Number
-    /// </summary>
+    /**
+     * To Phone Number
+     */
     to: MessageStoreCalleeInfoRequest[]
 
-    /// <summary>
-    /// Timestamp to send fax at. If not specified (current or the past), the fax is sent immediately
-    /// </summary>
+    /**
+     * Timestamp to send fax at. If not specified (current or the past), the fax is sent immediately
+     */
     sendTime: string
 
-    /// <summary>
-    /// ISO Code. e.g UK
-    /// </summary>
+    /**
+     * ISO Code. e.g UK
+     */
     isoCode: string
 
-    /// <summary>
-    /// Cover page identifier. For the list of available cover page identifiers please call the method Fax Cover Pages. If not specified, the default cover page which is configured in 'Outbound Fax Settings' is attached
-    /// </summary>
+    /**
+     * Cover page identifier. For the list of available cover page identifiers please call the method Fax Cover Pages. If not specified, the default cover page which is configured in 'Outbound Fax Settings' is attached
+     */
     coverIndex: number
 
-    /// <summary>
-    /// Cover page text, entered by the fax sender and printed on the cover page. Maximum length is limited to 1024 symbols
-    /// </summary>
+    /**
+     * Cover page text, entered by the fax sender and printed on the cover page. Maximum length is limited to 1024 symbols
+     */
     coverPageText: string
 }
 

@@ -1,39 +1,39 @@
 class GlipWebhookInfo
 {
-    /// <summary>
-    /// Internal identifier of a webhook
-    /// </summary>
+    /**
+     * Internal identifier of a webhook
+     */
     id: string
 
-    /// <summary>
-    /// Internal identifier of the user who created a webhook
-    /// </summary>
+    /**
+     * Internal identifier of the user who created a webhook
+     */
     creatorId: string
 
-    /// <summary>
-    /// Internal identifiers of groups where a webhook has been created
-    /// </summary>
+    /**
+     * Internal identifiers of groups where a webhook has been created
+     */
     groupIds: string[]
 
-    /// <summary>
-    /// Webhook creation time in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format
-    /// </summary>
+    /**
+     * Webhook creation time in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format
+     */
     creationTime: string
 
-    /// <summary>
-    /// Webhook last update time in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format
-    /// </summary>
+    /**
+     * Webhook last update time in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format
+     */
     lastModifiedTime: string
 
-    /// <summary>
-    /// Public link to send a webhook payload
-    /// </summary>
+    /**
+     * Public link to send a webhook payload
+     */
     uri: string
 
-    /// <summary>
-    /// Current status of a webhook
-    /// Enum: Active, Suspended, Deleted
-    /// </summary>
+    /**
+     * Current status of a webhook
+     * Enum: Active, Suspended, Deleted
+     */
     status: string
 }
 

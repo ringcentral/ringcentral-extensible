@@ -4,27 +4,27 @@ import ProvisioningPagingInfo from './ProvisioningPagingInfo'
 
 class GetTimezoneListResponse
 {
-    /// <summary>
-    /// Link to the timezone list resource
-    /// </summary>
+    /**
+     * Link to the timezone list resource
+     */
     uri: string
 
-    /// <summary>
-    /// List of timezones
-    /// Required
-    /// </summary>
+    /**
+     * List of timezones
+     * Required
+     */
     records: GetTimezoneInfoResponse[]
 
-    /// <summary>
-    /// Information on navigation
-    /// Required
-    /// </summary>
+    /**
+     * Information on navigation
+     * Required
+     */
     navigation: ProvisioningNavigationInfo
 
-    /// <summary>
-    /// Information on paging
-    /// Required
-    /// </summary>
+    /**
+     * Information on paging
+     * Required
+     */
     paging: ProvisioningPagingInfo
 }
 

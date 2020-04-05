@@ -3,27 +3,27 @@ import BlockedCallerGreetingInfo from './BlockedCallerGreetingInfo'
     // Returns the lists of blocked and allowed phone numbers
 class CallerBlockingSettings
 {
-    /// <summary>
-    /// Call blocking options: either specific or all calls and faxes
-    /// Enum: Specific, All
-    /// </summary>
+    /**
+     * Call blocking options: either specific or all calls and faxes
+     * Enum: Specific, All
+     */
     mode: string
 
-    /// <summary>
-    /// Determines how to handle calls with no caller ID in 'Specific' mode
-    /// Enum: BlockCallsAndFaxes, BlockFaxes, Allow
-    /// </summary>
+    /**
+     * Determines how to handle calls with no caller ID in 'Specific' mode
+     * Enum: BlockCallsAndFaxes, BlockFaxes, Allow
+     */
     noCallerId: string
 
-    /// <summary>
-    /// Blocking settings for pay phones
-    /// Enum: Block, Allow
-    /// </summary>
+    /**
+     * Blocking settings for pay phones
+     * Enum: Block, Allow
+     */
     payPhones: string
 
-    /// <summary>
-    /// List of greetings played for blocked callers
-    /// </summary>
+    /**
+     * List of greetings played for blocked callers
+     */
     greetings: BlockedCallerGreetingInfo[]
 }
 

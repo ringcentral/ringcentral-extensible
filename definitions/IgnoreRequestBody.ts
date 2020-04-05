@@ -1,9 +1,9 @@
 class IgnoreRequestBody
 {
-    /// <summary>
-    /// Internal device identifier
-    /// Required
-    /// </summary>
+    /**
+     * Internal device identifier
+     * Required
+     */
     deviceId: string
 }
 

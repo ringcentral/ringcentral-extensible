@@ -1,38 +1,38 @@
 class VoicemailsInfo
 {
-    /// <summary>
-    /// Email notification flag
-    /// </summary>
+    /**
+     * Email notification flag
+     */
     notifyByEmail: boolean
 
-    /// <summary>
-    /// SMS notification flag
-    /// </summary>
+    /**
+     * SMS notification flag
+     */
     notifyBySms: boolean
 
-    /// <summary>
-    /// List of recipient email addresses for voicemail notifications. Returned if specified, in both modes (advanced/basic). Applied in advanced mode only
-    /// </summary>
+    /**
+     * List of recipient email addresses for voicemail notifications. Returned if specified, in both modes (advanced/basic). Applied in advanced mode only
+     */
     advancedEmailAddresses: string[]
 
-    /// <summary>
-    /// List of recipient phone numbers for voicemail notifications. Returned if specified, in both modes (advanced/basic). Applied in advanced mode only
-    /// </summary>
+    /**
+     * List of recipient phone numbers for voicemail notifications. Returned if specified, in both modes (advanced/basic). Applied in advanced mode only
+     */
     advancedSmsEmailAddresses: string[]
 
-    /// <summary>
-    /// Indicates whether voicemail should be attached to email
-    /// </summary>
+    /**
+     * Indicates whether voicemail should be attached to email
+     */
     includeAttachment: boolean
 
-    /// <summary>
-    /// Specifies whether to add voicemail transcription or not
-    /// </summary>
+    /**
+     * Specifies whether to add voicemail transcription or not
+     */
     includeTranscription: boolean
 
-    /// <summary>
-    /// Indicates whether a voicemail should be automatically marked as read
-    /// </summary>
+    /**
+     * Indicates whether a voicemail should be automatically marked as read
+     */
     markAsRead: boolean
 }
 

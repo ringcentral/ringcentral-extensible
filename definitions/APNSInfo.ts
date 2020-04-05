@@ -2,9 +2,9 @@ import APSInfo from './APSInfo'
 
 class APNSInfo
 {
-    /// <summary>
-    /// Notification priority data
-    /// </summary>
+    /**
+     * Notification priority data
+     */
     aps: APSInfo
 }
 

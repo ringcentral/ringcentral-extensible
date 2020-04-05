@@ -1,18 +1,18 @@
 class PresetInfo
 {
-    /// <summary>
-    /// Link to a greeting resource
-    /// </summary>
+    /**
+     * Link to a greeting resource
+     */
     uri: string
 
-    /// <summary>
-    /// Internal identifier of a greeting
-    /// </summary>
+    /**
+     * Internal identifier of a greeting
+     */
     id: string
 
-    /// <summary>
-    /// Name of a greeting
-    /// </summary>
+    /**
+     * Name of a greeting
+     */
     name: string
 }
 

@@ -2,9 +2,9 @@ import UserBusinessHoursScheduleInfo from './UserBusinessHoursScheduleInfo'
 
 class UserBusinessHoursUpdateRequest
 {
-    /// <summary>
-    /// Schedule when an answering rule is applied
-    /// </summary>
+    /**
+     * Schedule when an answering rule is applied
+     */
     schedule: UserBusinessHoursScheduleInfo
 }
 

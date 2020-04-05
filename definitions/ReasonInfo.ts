@@ -1,14 +1,14 @@
 class ReasonInfo
 {
-    /// <summary>
-    /// Reason code
-    /// Enum: ServicePlanLimitation, AccountLimitation, ExtensionTypeLimitation, ExtensionLimitation, InsufficientPermissions, ConfigurationLimitation
-    /// </summary>
+    /**
+     * Reason code
+     * Enum: ServicePlanLimitation, AccountLimitation, ExtensionTypeLimitation, ExtensionLimitation, InsufficientPermissions, ConfigurationLimitation
+     */
     code: string
 
-    /// <summary>
-    /// Reason description
-    /// </summary>
+    /**
+     * Reason description
+     */
     message: string
 }
 

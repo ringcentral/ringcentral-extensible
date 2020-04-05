@@ -1,8 +1,8 @@
 class CallQueueMemberId
 {
-    /// <summary>
-    /// Internal identifier of an extension - queue member
-    /// </summary>
+    /**
+     * Internal identifier of an extension - queue member
+     */
     id: string
 }
 

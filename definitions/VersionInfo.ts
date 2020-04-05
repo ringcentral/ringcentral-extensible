@@ -1,23 +1,23 @@
 class VersionInfo
 {
-    /// <summary>
-    /// Canonical URI of API versions
-    /// </summary>
+    /**
+     * Canonical URI of API versions
+     */
     uri: string
 
-    /// <summary>
-    /// Version of the RingCentral REST API
-    /// </summary>
+    /**
+     * Version of the RingCentral REST API
+     */
     versionString: string
 
-    /// <summary>
-    /// Release date of this version
-    /// </summary>
+    /**
+     * Release date of this version
+     */
     releaseDate: string
 
-    /// <summary>
-    /// URI part determining the current version
-    /// </summary>
+    /**
+     * URI part determining the current version
+     */
     uriString: string
 }
 

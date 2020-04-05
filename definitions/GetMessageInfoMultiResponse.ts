@@ -2,18 +2,18 @@ import MessageBody from './MessageBody'
 
 class GetMessageInfoMultiResponse
 {
-    /// <summary>
-    /// Internal identifier of a resource
-    /// </summary>
+    /**
+     * Internal identifier of a resource
+     */
     resourceId: string
 
-    /// <summary>
-    /// Status code of resource retrieval
-    /// </summary>
+    /**
+     * Status code of resource retrieval
+     */
     status: number
 
-    /// <summary>
-    /// </summary>
+    /**
+     */
     body: MessageBody
 }
 

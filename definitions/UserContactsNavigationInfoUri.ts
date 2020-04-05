@@ -1,7 +1,7 @@
 class UserContactsNavigationInfoUri
 {
-    /// <summary>
-    /// </summary>
+    /**
+     */
     uri: string
 }
 

@@ -4,24 +4,24 @@ import ProvisioningPagingInfo from './ProvisioningPagingInfo'
 
 class DepartmentMemberList
 {
-    /// <summary>
-    /// Link to the list of department members
-    /// </summary>
+    /**
+     * Link to the list of department members
+     */
     uri: string
 
-    /// <summary>
-    /// List of department members extensions
-    /// </summary>
+    /**
+     * List of department members extensions
+     */
     records: ExtensionInfo[]
 
-    /// <summary>
-    /// Information on navigation
-    /// </summary>
+    /**
+     * Information on navigation
+     */
     navigation: ProvisioningNavigationInfo
 
-    /// <summary>
-    /// Information on paging
-    /// </summary>
+    /**
+     * Information on paging
+     */
     paging: ProvisioningPagingInfo
 }
 

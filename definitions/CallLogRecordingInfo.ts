@@ -1,24 +1,24 @@
 class CallLogRecordingInfo
 {
-    /// <summary>
-    /// Internal identifier of the call recording
-    /// </summary>
+    /**
+     * Internal identifier of the call recording
+     */
     id: string
 
-    /// <summary>
-    /// Link to the call recording metadata resource
-    /// </summary>
+    /**
+     * Link to the call recording metadata resource
+     */
     uri: string
 
-    /// <summary>
-    /// Indicates recording mode used
-    /// Enum: Automatic, OnDemand
-    /// </summary>
+    /**
+     * Indicates recording mode used
+     * Enum: Automatic, OnDemand
+     */
     type: string
 
-    /// <summary>
-    /// Link to the call recording binary content
-    /// </summary>
+    /**
+     * Link to the call recording binary content
+     */
     contentUri: string
 }
 

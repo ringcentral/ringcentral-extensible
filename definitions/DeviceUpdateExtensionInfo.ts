@@ -1,8 +1,8 @@
 class DeviceUpdateExtensionInfo
 {
-    /// <summary>
-    /// Internal identifier of an extension
-    /// </summary>
+    /**
+     * Internal identifier of an extension
+     */
     id: string
 }
 

@@ -1,18 +1,18 @@
 class PatchOperation
 {
-    /// <summary>
-    /// Required
-    /// Enum: add, replace, remove
-    /// </summary>
+    /**
+     * Required
+     * Enum: add, replace, remove
+     */
     op: string
 
-    /// <summary>
-    /// </summary>
+    /**
+     */
     path: string
 
-    /// <summary>
-    /// corresponding 'value' of that field specified by 'path'
-    /// </summary>
+    /**
+     * corresponding 'value' of that field specified by 'path'
+     */
     value: string
 }
 

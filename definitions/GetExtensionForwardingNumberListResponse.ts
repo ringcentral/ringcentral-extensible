@@ -4,24 +4,24 @@ import CallHandlingPagingInfo from './CallHandlingPagingInfo'
 
 class GetExtensionForwardingNumberListResponse
 {
-    /// <summary>
-    /// Link to the forwarding number list resource
-    /// </summary>
+    /**
+     * Link to the forwarding number list resource
+     */
     uri: string
 
-    /// <summary>
-    /// List of forwarding phone numbers
-    /// </summary>
+    /**
+     * List of forwarding phone numbers
+     */
     records: ForwardingNumberInfo[]
 
-    /// <summary>
-    /// Information on navigation
-    /// </summary>
+    /**
+     * Information on navigation
+     */
     navigation: CallHandlingNavigationInfo
 
-    /// <summary>
-    /// Information on paging
-    /// </summary>
+    /**
+     * Information on paging
+     */
     paging: CallHandlingPagingInfo
 }
 

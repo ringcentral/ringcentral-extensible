@@ -1,23 +1,23 @@
 class GetCallRecordingResponse
 {
-    /// <summary>
-    /// Internal identifier of a call recording
-    /// </summary>
+    /**
+     * Internal identifier of a call recording
+     */
     id: string
 
-    /// <summary>
-    /// Link to a call recording binary content
-    /// </summary>
+    /**
+     * Link to a call recording binary content
+     */
     contentUri: string
 
-    /// <summary>
-    /// Call recording file format. Supported format is audio/x-wav
-    /// </summary>
+    /**
+     * Call recording file format. Supported format is audio/x-wav
+     */
     contentType: string
 
-    /// <summary>
-    /// Recorded call duration
-    /// </summary>
+    /**
+     * Recorded call duration
+     */
     duration: number
 }
 

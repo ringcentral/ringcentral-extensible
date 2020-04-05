@@ -4,28 +4,28 @@ import ProvisioningPagingInfo from './ProvisioningPagingInfo'
 
 class CallQueues
 {
-    /// <summary>
-    /// Link to a call queues resource
-    /// Required
-    /// </summary>
+    /**
+     * Link to a call queues resource
+     * Required
+     */
     uri: string
 
-    /// <summary>
-    /// List of call queues
-    /// Required
-    /// </summary>
+    /**
+     * List of call queues
+     * Required
+     */
     records: CallQueueInfo[]
 
-    /// <summary>
-    /// Information on navigation
-    /// Required
-    /// </summary>
+    /**
+     * Information on navigation
+     * Required
+     */
     navigation: ProvisioningNavigationInfo
 
-    /// <summary>
-    /// Information on paging
-    /// Required
-    /// </summary>
+    /**
+     * Information on paging
+     * Required
+     */
     paging: ProvisioningPagingInfo
 }
 

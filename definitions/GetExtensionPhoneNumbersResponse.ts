@@ -4,27 +4,27 @@ import ProvisioningPagingInfo from './ProvisioningPagingInfo'
 
 class GetExtensionPhoneNumbersResponse
 {
-    /// <summary>
-    /// Link to the user's phone number list resource
-    /// </summary>
+    /**
+     * Link to the user's phone number list resource
+     */
     uri: string
 
-    /// <summary>
-    /// List of phone numbers
-    /// Required
-    /// </summary>
+    /**
+     * List of phone numbers
+     * Required
+     */
     records: UserPhoneNumberInfo[]
 
-    /// <summary>
-    /// Information on navigation
-    /// Required
-    /// </summary>
+    /**
+     * Information on navigation
+     * Required
+     */
     navigation: ProvisioningNavigationInfo
 
-    /// <summary>
-    /// Information on paging
-    /// Required
-    /// </summary>
+    /**
+     * Information on paging
+     * Required
+     */
     paging: ProvisioningPagingInfo
 }
 

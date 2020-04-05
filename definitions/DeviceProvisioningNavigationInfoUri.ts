@@ -1,7 +1,7 @@
 class DeviceProvisioningNavigationInfoUri
 {
-    /// <summary>
-    /// </summary>
+    /**
+     */
     uri: string
 }
 

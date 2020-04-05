@@ -1,8 +1,8 @@
 class CallQueueId
 {
-    /// <summary>
-    /// Internal identifier of a call queue
-    /// </summary>
+    /**
+     * Internal identifier of a call queue
+     */
     id: string
 }
 

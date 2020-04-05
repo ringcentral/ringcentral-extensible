@@ -4,26 +4,26 @@ import ProvisioningPagingInfo from './ProvisioningPagingInfo'
 
 class GetLocationListResponse
 {
-    /// <summary>
-    /// Link to the location list resource
-    /// </summary>
+    /**
+     * Link to the location list resource
+     */
     uri: string
 
-    /// <summary>
-    /// List of locations
-    /// </summary>
+    /**
+     * List of locations
+     */
     records: LocationInfo[]
 
-    /// <summary>
-    /// Information on navigation
-    /// Required
-    /// </summary>
+    /**
+     * Information on navigation
+     * Required
+     */
     navigation: ProvisioningNavigationInfo
 
-    /// <summary>
-    /// Information on paging
-    /// Required
-    /// </summary>
+    /**
+     * Information on paging
+     * Required
+     */
     paging: ProvisioningPagingInfo
 }
 

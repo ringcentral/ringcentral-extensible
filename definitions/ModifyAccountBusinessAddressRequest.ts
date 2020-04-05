@@ -2,25 +2,25 @@ import BusinessAddressInfo from './BusinessAddressInfo'
 
 class ModifyAccountBusinessAddressRequest
 {
-    /// <summary>
-    /// Company business name
-    /// </summary>
+    /**
+     * Company business name
+     */
     company: string
 
-    /// <summary>
-    /// Company business email address
-    /// </summary>
+    /**
+     * Company business email address
+     */
     email: string
 
-    /// <summary>
-    /// Company business address
-    /// Required
-    /// </summary>
+    /**
+     * Company business address
+     * Required
+     */
     businessAddress: BusinessAddressInfo
 
-    /// <summary>
-    /// Custom site name
-    /// </summary>
+    /**
+     * Custom site name
+     */
     mainSiteName: string
 }
 

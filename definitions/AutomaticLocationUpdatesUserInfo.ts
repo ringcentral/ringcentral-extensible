@@ -1,38 +1,38 @@
 class AutomaticLocationUpdatesUserInfo
 {
-    /// <summary>
-    /// Internal identifier of a device
-    /// </summary>
+    /**
+     * Internal identifier of a device
+     */
     id: string
 
-    /// <summary>
-    /// User name
-    /// </summary>
+    /**
+     * User name
+     */
     fullName: string
 
-    /// <summary>
-    /// </summary>
+    /**
+     */
     extensionNumber: string
 
-    /// <summary>
-    /// Specifies if Automatic Location Updates feature is enabled
-    /// </summary>
+    /**
+     * Specifies if Automatic Location Updates feature is enabled
+     */
     featureEnabled: boolean
 
-    /// <summary>
-    /// User extension type
-    /// Enum: User, Limited
-    /// </summary>
+    /**
+     * User extension type
+     * Enum: User, Limited
+     */
     type: string
 
-    /// <summary>
-    /// Site data
-    /// </summary>
+    /**
+     * Site data
+     */
     site: string
 
-    /// <summary>
-    /// Department name
-    /// </summary>
+    /**
+     * Department name
+     */
     department: string
 }
 

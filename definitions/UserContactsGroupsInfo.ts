@@ -1,8 +1,8 @@
 class UserContactsGroupsInfo
 {
-    /// <summary>
-    /// Link to the list of address book groups
-    /// </summary>
+    /**
+     * Link to the list of address book groups
+     */
     uri: string
 }
 

@@ -1,13 +1,13 @@
 class CustomGreetingAnsweringRuleInfo
 {
-    /// <summary>
-    /// Canonical URI of an answering rule
-    /// </summary>
+    /**
+     * Canonical URI of an answering rule
+     */
     uri: string
 
-    /// <summary>
-    /// Internal identifier of an answering rule
-    /// </summary>
+    /**
+     * Internal identifier of an answering rule
+     */
     id: string
 }
 

@@ -1,23 +1,23 @@
 class PromptLanguageInfo
 {
-    /// <summary>
-    /// Link to a prompt language
-    /// </summary>
+    /**
+     * Link to a prompt language
+     */
     uri: string
 
-    /// <summary>
-    /// Internal identifier of a language
-    /// </summary>
+    /**
+     * Internal identifier of a language
+     */
     id: string
 
-    /// <summary>
-    /// Language name
-    /// </summary>
+    /**
+     * Language name
+     */
     name: string
 
-    /// <summary>
-    /// Language locale code
-    /// </summary>
+    /**
+     * Language locale code
+     */
     localeCode: string
 }
 

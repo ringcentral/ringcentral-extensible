@@ -2,25 +2,25 @@ import GlipMessageAttachmentInfoRequest from './GlipMessageAttachmentInfoRequest
 
 class GlipCreatePost
 {
-    /// <summary>
-    /// Title of a message. (Can be set for bot's messages only).
-    /// </summary>
+    /**
+     * Title of a message. (Can be set for bot's messages only).
+     */
     title: string
 
-    /// <summary>
-    /// Text of a post
-    /// Maximum: 1000
-    /// </summary>
+    /**
+     * Text of a post
+     * Maximum: 1000
+     */
     text: string
 
-    /// <summary>
-    /// Internal identifier of a group
-    /// </summary>
+    /**
+     * Internal identifier of a group
+     */
     groupId: string
 
-    /// <summary>
-    /// List of attachments to be posted
-    /// </summary>
+    /**
+     * List of attachments to be posted
+     */
     attachments: GlipMessageAttachmentInfoRequest[]
 }
 

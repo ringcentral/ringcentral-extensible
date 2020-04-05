@@ -1,45 +1,45 @@
 class GlipTeamInfo
 {
-    /// <summary>
-    /// Internal identifier of a team
-    /// </summary>
+    /**
+     * Internal identifier of a team
+     */
     id: string
 
-    /// <summary>
-    /// Type of a chat
-    /// Enum: Team
-    /// </summary>
+    /**
+     * Type of a chat
+     * Enum: Team
+     */
     type: string
 
-    /// <summary>
-    /// Team access level
-    /// </summary>
+    /**
+     * Team access level
+     */
     public: boolean
 
-    /// <summary>
-    /// Team name
-    /// </summary>
+    /**
+     * Team name
+     */
     name: string
 
-    /// <summary>
-    /// Team description
-    /// </summary>
+    /**
+     * Team description
+     */
     description: string
 
-    /// <summary>
-    /// Team status
-    /// Enum: Active, Archived
-    /// </summary>
+    /**
+     * Team status
+     * Enum: Active, Archived
+     */
     status: string
 
-    /// <summary>
-    /// Team creation datetime in ISO 8601 format
-    /// </summary>
+    /**
+     * Team creation datetime in ISO 8601 format
+     */
     creationTime: string
 
-    /// <summary>
-    /// Team last change datetime in ISO 8601 format
-    /// </summary>
+    /**
+     * Team last change datetime in ISO 8601 format
+     */
     lastModifiedTime: string
 }
 

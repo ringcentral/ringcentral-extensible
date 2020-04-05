@@ -4,24 +4,24 @@ import CallHandlingPagingInfo from './CallHandlingPagingInfo'
 
 class IVRPrompts
 {
-    /// <summary>
-    /// Link to prompts library resource
-    /// </summary>
+    /**
+     * Link to prompts library resource
+     */
     uri: string
 
-    /// <summary>
-    /// List of Prompts
-    /// </summary>
+    /**
+     * List of Prompts
+     */
     records: PromptInfo[]
 
-    /// <summary>
-    /// Information on navigation
-    /// </summary>
+    /**
+     * Information on navigation
+     */
     navigation: CallHandlingNavigationInfo
 
-    /// <summary>
-    /// Information on paging
-    /// </summary>
+    /**
+     * Information on paging
+     */
     paging: CallHandlingPagingInfo
 }
 

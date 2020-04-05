@@ -6,117 +6,117 @@ import BillingInfo from './BillingInfo'
 
 class CompanyCallLogRecord
 {
-    /// <summary>
-    /// Internal identifier of a cal log record
-    /// </summary>
+    /**
+     * Internal identifier of a cal log record
+     */
     id: string
 
-    /// <summary>
-    /// Canonical URI of a call log record
-    /// </summary>
+    /**
+     * Canonical URI of a call log record
+     */
     uri: string
 
-    /// <summary>
-    /// Internal identifier of a call session
-    /// </summary>
+    /**
+     * Internal identifier of a call session
+     */
     sessionId: string
 
-    /// <summary>
-    /// </summary>
+    /**
+     */
     extension: ExtensionInfoCallLog
 
-    /// <summary>
-    /// Telephony identifier of a call session
-    /// </summary>
+    /**
+     * Telephony identifier of a call session
+     */
     telephonySessionId: string
 
-    /// <summary>
-    /// Call transport
-    /// Enum: PSTN, VoIP
-    /// </summary>
+    /**
+     * Call transport
+     * Enum: PSTN, VoIP
+     */
     transport: string
 
-    /// <summary>
-    /// Caller information
-    /// </summary>
+    /**
+     * Caller information
+     */
     from: CallLogCallerInfo
 
-    /// <summary>
-    /// Callee information
-    /// </summary>
+    /**
+     * Callee information
+     */
     to: CallLogCallerInfo
 
-    /// <summary>
-    /// Call type
-    /// Enum: Voice, Fax
-    /// </summary>
+    /**
+     * Call type
+     * Enum: Voice, Fax
+     */
     type: string
 
-    /// <summary>
-    /// Call direction
-    /// Enum: Inbound, Outbound
-    /// </summary>
+    /**
+     * Call direction
+     * Enum: Inbound, Outbound
+     */
     direction: string
 
-    /// <summary>
-    /// Indicates whether the record is deleted. Returned for deleted records, for ISync requests
-    /// </summary>
+    /**
+     * Indicates whether the record is deleted. Returned for deleted records, for ISync requests
+     */
     deleted: boolean
 
-    /// <summary>
-    /// Action description of the call operation
-    /// Enum: Unknown, Phone Login, Calling Card, VoIP Call, Phone Call, Paging, Hunting, Call Park, Monitoring, Text Relay, External Application, Park Location, CallOut-CallMe, Conference Call, Move, RC Meetings, Accept Call, FindMe, FollowMe, RingMe, Transfer, Call Return, Ring Directly, RingOut Web, RingOut PC, RingOut Mobile, Emergency, E911 Update, Support, Incoming Fax, Outgoing Fax
-    /// </summary>
+    /**
+     * Action description of the call operation
+     * Enum: Unknown, Phone Login, Calling Card, VoIP Call, Phone Call, Paging, Hunting, Call Park, Monitoring, Text Relay, External Application, Park Location, CallOut-CallMe, Conference Call, Move, RC Meetings, Accept Call, FindMe, FollowMe, RingMe, Transfer, Call Return, Ring Directly, RingOut Web, RingOut PC, RingOut Mobile, Emergency, E911 Update, Support, Incoming Fax, Outgoing Fax
+     */
     action: string
 
-    /// <summary>
-    /// Status description of the call operation
-    /// Enum: Unknown, Accepted, Call connected, In Progress, Voicemail, Reply, Missed, Busy, Rejected, No Answer, Hang Up, Blocked, Suspended account, Call Failed, Call Failure, Internal Error, IP Phone Offline, No Calling Credit, Restricted Number, Wrong Number, Answered Not Accepted, Stopped, International Disabled, International Restricted, Abandoned, Declined, Received, Fax on Demand, Partial Receive, Receive Error, Fax Receipt Error, Sent, Fax Partially Sent, Send Error, Fax Not Sent, Fax Poor Line
-    /// </summary>
+    /**
+     * Status description of the call operation
+     * Enum: Unknown, Accepted, Call connected, In Progress, Voicemail, Reply, Missed, Busy, Rejected, No Answer, Hang Up, Blocked, Suspended account, Call Failed, Call Failure, Internal Error, IP Phone Offline, No Calling Credit, Restricted Number, Wrong Number, Answered Not Accepted, Stopped, International Disabled, International Restricted, Abandoned, Declined, Received, Fax on Demand, Partial Receive, Receive Error, Fax Receipt Error, Sent, Fax Partially Sent, Send Error, Fax Not Sent, Fax Poor Line
+     */
     result: string
 
-    /// <summary>
-    /// Enum: Accepted, Connected, line Busy, Not Answered, No Answer, Hang Up, Stopped, Internal Error, No Credit, Restricted Number, Wrong Number, International Disabled, International Restricted, Bad Number, Info 411 Restricted, Customer 611 Restricted, No Digital Line, Failed Try Again, Max Call Limit, Too Many Calls, Calls Not Accepted, Number Not Allowed, Number Blocked, Number Disabled, Resource Error, Call Loop, Fax Not Received, Fax Partially Sent, Fax Not Sent, Fax Poor Line, Fax Prepare Error, Fax Save Error, Fax Send Error
-    /// </summary>
+    /**
+     * Enum: Accepted, Connected, line Busy, Not Answered, No Answer, Hang Up, Stopped, Internal Error, No Credit, Restricted Number, Wrong Number, International Disabled, International Restricted, Bad Number, Info 411 Restricted, Customer 611 Restricted, No Digital Line, Failed Try Again, Max Call Limit, Too Many Calls, Calls Not Accepted, Number Not Allowed, Number Blocked, Number Disabled, Resource Error, Call Loop, Fax Not Received, Fax Partially Sent, Fax Not Sent, Fax Poor Line, Fax Prepare Error, Fax Save Error, Fax Send Error
+     */
     reason: string
 
-    /// <summary>
-    /// </summary>
+    /**
+     */
     reasonDescription: string
 
-    /// <summary>
-    /// The call start datetime in (ISO 8601)[https://en.wikipedia.org/wiki/ISO_8601] format including timezone, for example 2016-03-10T18:07:52.534Z
-    /// </summary>
+    /**
+     * The call start datetime in (ISO 8601)[https://en.wikipedia.org/wiki/ISO_8601] format including timezone, for example 2016-03-10T18:07:52.534Z
+     */
     startTime: string
 
-    /// <summary>
-    /// Call duration in seconds
-    /// </summary>
+    /**
+     * Call duration in seconds
+     */
     duration: number
 
-    /// <summary>
-    /// Call recording data. Returned if a call is recorded
-    /// </summary>
+    /**
+     * Call recording data. Returned if a call is recorded
+     */
     recording: CallLogRecordingInfo
 
-    /// <summary>
-    /// Indicates that the recording is too short and therefore wouldn't be returned. The flag is not returned if the value is false
-    /// </summary>
+    /**
+     * Indicates that the recording is too short and therefore wouldn't be returned. The flag is not returned if the value is false
+     */
     shortRecording: boolean
 
-    /// <summary>
-    /// For 'Detailed' view only. Leg description
-    /// </summary>
+    /**
+     * For 'Detailed' view only. Leg description
+     */
     legs: CallLogRecordLegInfo[]
 
-    /// <summary>
-    /// Billing information related to the call. Returned for 'Detailed' view only
-    /// </summary>
+    /**
+     * Billing information related to the call. Returned for 'Detailed' view only
+     */
     billing: BillingInfo
 
-    /// <summary>
-    /// For 'Detailed' view only. The datetime when the call log record was modified in (ISO 8601)[https://en.wikipedia.org/wiki/ISO_8601] format including timezone, for example 2016-03-10T18:07:52.534Z
-    /// </summary>
+    /**
+     * For 'Detailed' view only. The datetime when the call log record was modified in (ISO 8601)[https://en.wikipedia.org/wiki/ISO_8601] format including timezone, for example 2016-03-10T18:07:52.534Z
+     */
     lastModifiedTime: string
 }
 

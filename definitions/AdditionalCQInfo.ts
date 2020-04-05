@@ -1,14 +1,14 @@
 class AdditionalCQInfo
 {
-    /// <summary>
-    /// Call information to be displayed as 'Line 2' for a call queue call session
-    /// Enum: PhoneNumberLabel, PhoneNumber, QueueExtension, QueueName, CallerIdName, CallerIdNumber, None
-    /// </summary>
+    /**
+     * Call information to be displayed as 'Line 2' for a call queue call session
+     * Enum: PhoneNumberLabel, PhoneNumber, QueueExtension, QueueName, CallerIdName, CallerIdNumber, None
+     */
     type: string
 
-    /// <summary>
-    /// Call information value
-    /// </summary>
+    /**
+     * Call information value
+     */
     value: string
 }
 

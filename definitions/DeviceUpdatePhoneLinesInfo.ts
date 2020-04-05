@@ -2,9 +2,9 @@ import UpdateDevicePhoneInfo from './UpdateDevicePhoneInfo'
 
 class DeviceUpdatePhoneLinesInfo
 {
-    /// <summary>
-    /// Information on phone lines added to a device
-    /// </summary>
+    /**
+     * Information on phone lines added to a device
+     */
     phoneLines: UpdateDevicePhoneInfo[]
 }
 

@@ -1,13 +1,13 @@
 class GlipPostPostBodyAttachment
 {
-    /// <summary>
-    /// Internal identifier of an attachment
-    /// </summary>
+    /**
+     * Internal identifier of an attachment
+     */
     id: string
 
-    /// <summary>
-    /// Attachment type
-    /// </summary>
+    /**
+     * Attachment type
+     */
     type: string
 }
 

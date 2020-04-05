@@ -1,33 +1,33 @@
 class TemplateInfo
 {
-    /// <summary>
-    /// Link to a template
-    /// </summary>
+    /**
+     * Link to a template
+     */
     uri: string
 
-    /// <summary>
-    /// Internal identifier of a template
-    /// </summary>
+    /**
+     * Internal identifier of a template
+     */
     id: string
 
-    /// <summary>
-    /// Enum: UserSettings, CallHandling
-    /// </summary>
+    /**
+     * Enum: UserSettings, CallHandling
+     */
     type: string
 
-    /// <summary>
-    /// Name of a template
-    /// </summary>
+    /**
+     * Name of a template
+     */
     name: string
 
-    /// <summary>
-    /// Time of a template creation
-    /// </summary>
+    /**
+     * Time of a template creation
+     */
     creationTime: string
 
-    /// <summary>
-    /// Time of the last template modification
-    /// </summary>
+    /**
+     * Time of the last template modification
+     */
     lastModifiedTime: string
 }
 

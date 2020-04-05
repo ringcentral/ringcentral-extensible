@@ -4,22 +4,22 @@ import ProvisioningPagingInfo from './ProvisioningPagingInfo'
 
 class ListDevicesAutomaticLocationUpdates
 {
-    /// <summary>
-    /// Link to devices resource
-    /// </summary>
+    /**
+     * Link to devices resource
+     */
     uri: string
 
-    /// <summary>
-    /// List of users' devices with the current status of Emergency Address Auto Update Feature
-    /// </summary>
+    /**
+     * List of users' devices with the current status of Emergency Address Auto Update Feature
+     */
     records: AutomaticLocationUpdatesDeviceInfo[]
 
-    /// <summary>
-    /// </summary>
+    /**
+     */
     navigation: ProvisioningNavigationInfo
 
-    /// <summary>
-    /// </summary>
+    /**
+     */
     paging: ProvisioningPagingInfo
 }
 

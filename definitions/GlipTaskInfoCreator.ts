@@ -1,8 +1,8 @@
 class GlipTaskInfoCreator
 {
-    /// <summary>
-    /// Internal identifier of a task
-    /// </summary>
+    /**
+     * Internal identifier of a task
+     */
     id: string
 }
 

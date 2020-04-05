@@ -1,23 +1,23 @@
 class GetVersionResponse
 {
-    /// <summary>
-    /// Canonical URI of the version info resource
-    /// </summary>
+    /**
+     * Canonical URI of the version info resource
+     */
     uri: string
 
-    /// <summary>
-    /// Version of the RingCentral REST API
-    /// </summary>
+    /**
+     * Version of the RingCentral REST API
+     */
     versionString: string
 
-    /// <summary>
-    /// Release date of this version
-    /// </summary>
+    /**
+     * Release date of this version
+     */
     releaseDate: string
 
-    /// <summary>
-    /// URI part determining the current version
-    /// </summary>
+    /**
+     * URI part determining the current version
+     */
     uriString: string
 }
 

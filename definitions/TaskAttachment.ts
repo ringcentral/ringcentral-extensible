@@ -1,24 +1,24 @@
 class TaskAttachment
 {
-    /// <summary>
-    /// Internal identifier of a file
-    /// </summary>
+    /**
+     * Internal identifier of a file
+     */
     id: string
 
-    /// <summary>
-    /// Attachment type (currently only `File` value is supported).
-    /// Enum: File
-    /// </summary>
+    /**
+     * Attachment type (currently only `File` value is supported).
+     * Enum: File
+     */
     type: string
 
-    /// <summary>
-    /// Name of the attached file (including extension name).
-    /// </summary>
+    /**
+     * Name of the attached file (including extension name).
+     */
     name: string
 
-    /// <summary>
-    /// Link to an attachment content
-    /// </summary>
+    /**
+     * Link to an attachment content
+     */
     contentUri: string
 }
 

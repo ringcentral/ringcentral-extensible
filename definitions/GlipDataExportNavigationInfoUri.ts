@@ -1,7 +1,7 @@
 class GlipDataExportNavigationInfoUri
 {
-    /// <summary>
-    /// </summary>
+    /**
+     */
     uri: string
 }
 

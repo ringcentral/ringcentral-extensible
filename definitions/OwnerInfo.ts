@@ -1,14 +1,14 @@
 // Deprecated. Information on call owner
 class OwnerInfo
 {
-    /// <summary>
-    /// Internal identifier of an account that monitors a call
-    /// </summary>
+    /**
+     * Internal identifier of an account that monitors a call
+     */
     accountId: string
 
-    /// <summary>
-    /// Internal identifier of an extension that monitors a call
-    /// </summary>
+    /**
+     * Internal identifier of an extension that monitors a call
+     */
     extensionId: string
 }
 

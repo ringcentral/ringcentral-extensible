@@ -1,23 +1,23 @@
 class ContactAddressInfo
 {
-    /// <summary>
-    /// Street address
-    /// </summary>
+    /**
+     * Street address
+     */
     street: string
 
-    /// <summary>
-    /// City name
-    /// </summary>
+    /**
+     * City name
+     */
     city: string
 
-    /// <summary>
-    /// State/province name
-    /// </summary>
+    /**
+     * State/province name
+     */
     state: string
 
-    /// <summary>
-    /// Zip/Postal code
-    /// </summary>
+    /**
+     * Zip/Postal code
+     */
     zip: string
 }
 

@@ -1,7 +1,7 @@
 class CustomCompanyGreetingAnsweringRuleInfo
 {
-    /// <summary>
-    /// </summary>
+    /**
+     */
     id: string
 }
 

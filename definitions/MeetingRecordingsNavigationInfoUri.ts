@@ -1,7 +1,7 @@
 class MeetingRecordingsNavigationInfoUri
 {
-    /// <summary>
-    /// </summary>
+    /**
+     */
     uri: string
 }
 

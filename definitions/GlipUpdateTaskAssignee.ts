@@ -1,8 +1,8 @@
 class GlipUpdateTaskAssignee
 {
-    /// <summary>
-    /// Internal identifier of an assignee
-    /// </summary>
+    /**
+     * Internal identifier of an assignee
+     */
     id: string
 }
 

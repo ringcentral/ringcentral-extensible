@@ -1,8 +1,8 @@
 class ExtensionCountryInfoRequest
 {
-    /// <summary>
-    /// internal Identifier of a country
-    /// </summary>
+    /**
+     * internal Identifier of a country
+     */
     id: string
 }
 

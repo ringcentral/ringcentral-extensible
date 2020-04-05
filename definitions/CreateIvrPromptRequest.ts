@@ -2,14 +2,14 @@ import Attachment from './Attachment'
 
 class CreateIvrPromptRequest
 {
-    /// <summary>
-    /// Audio file that will be used as a prompt. Attachment cannot be empty, only audio files are supported
-    /// </summary>
+    /**
+     * Audio file that will be used as a prompt. Attachment cannot be empty, only audio files are supported
+     */
     attachment: Attachment
 
-    /// <summary>
-    /// Description of file contents.
-    /// </summary>
+    /**
+     * Description of file contents.
+     */
     name: string
 }
 

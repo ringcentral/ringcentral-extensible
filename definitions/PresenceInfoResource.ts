@@ -2,34 +2,34 @@ import ActiveCallInfo from './ActiveCallInfo'
 
 class PresenceInfoResource
 {
-    /// <summary>
-    /// Enum: Offline, Busy, Available
-    /// </summary>
+    /**
+     * Enum: Offline, Busy, Available
+     */
     userStatus: string
 
-    /// <summary>
-    /// Enum: TakeAllCalls, DoNotAcceptDepartmentCalls, TakeDepartmentCallsOnly, DoNotAcceptAnyCalls, Unknown
-    /// </summary>
+    /**
+     * Enum: TakeAllCalls, DoNotAcceptDepartmentCalls, TakeDepartmentCallsOnly, DoNotAcceptAnyCalls, Unknown
+     */
     dndStatus: string
 
-    /// <summary>
-    /// </summary>
+    /**
+     */
     message: string
 
-    /// <summary>
-    /// </summary>
+    /**
+     */
     allowSeeMyPresence: boolean
 
-    /// <summary>
-    /// </summary>
+    /**
+     */
     ringOnMonitoredCall: boolean
 
-    /// <summary>
-    /// </summary>
+    /**
+     */
     pickUpCallsOnHold: boolean
 
-    /// <summary>
-    /// </summary>
+    /**
+     */
     activeCalls: ActiveCallInfo[]
 }
 

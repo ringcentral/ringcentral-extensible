@@ -4,95 +4,95 @@ import MessageAttachmentInfoIntId from './MessageAttachmentInfoIntId'
 
 class FaxResponse
 {
-    /// <summary>
-    /// Internal identifier of a message
-    /// </summary>
+    /**
+     * Internal identifier of a message
+     */
     id: number
 
-    /// <summary>
-    /// Canonical URI of a message
-    /// </summary>
+    /**
+     * Canonical URI of a message
+     */
     uri: string
 
-    /// <summary>
-    /// Message type - 'Fax'
-    /// </summary>
+    /**
+     * Message type - 'Fax'
+     */
     type: string
 
-    /// <summary>
-    /// Sender information
-    /// </summary>
+    /**
+     * Sender information
+     */
     from: CallerInfoFrom
 
-    /// <summary>
-    /// Recipient information
-    /// </summary>
+    /**
+     * Recipient information
+     */
     to: CallerInfoTo[]
 
-    /// <summary>
-    /// Message creation datetime in ISO 8601 format including timezone, for example 2016-03-10T18:07:52.534Z
-    /// </summary>
+    /**
+     * Message creation datetime in ISO 8601 format including timezone, for example 2016-03-10T18:07:52.534Z
+     */
     creationTime: string
 
-    /// <summary>
-    /// Message read status
-    /// Enum: Read, Unread
-    /// </summary>
+    /**
+     * Message read status
+     * Enum: Read, Unread
+     */
     readStatus: string
 
-    /// <summary>
-    /// Message priority
-    /// Enum: Normal, High
-    /// </summary>
+    /**
+     * Message priority
+     * Enum: Normal, High
+     */
     priority: string
 
-    /// <summary>
-    /// The list of message attachments
-    /// </summary>
+    /**
+     * The list of message attachments
+     */
     attachments: MessageAttachmentInfoIntId[]
 
-    /// <summary>
-    /// Message direction
-    /// Enum: Inbound, Outbound
-    /// </summary>
+    /**
+     * Message direction
+     * Enum: Inbound, Outbound
+     */
     direction: string
 
-    /// <summary>
-    /// Message availability status. Message in 'Deleted' state is still preserved with all its attachments and can be restored. 'Purged' means that all attachments are already deleted and the message itself is about to be physically deleted shortly
-    /// Enum: Alive, Deleted, Purged
-    /// </summary>
+    /**
+     * Message availability status. Message in 'Deleted' state is still preserved with all its attachments and can be restored. 'Purged' means that all attachments are already deleted and the message itself is about to be physically deleted shortly
+     * Enum: Alive, Deleted, Purged
+     */
     availability: string
 
-    /// <summary>
-    /// Message status. 'Queued' - the message is queued for sending; 'Sent' - a message is successfully sent; 'SendingFailed' - a message sending attempt has failed; 'Received' - a message is received (inbound messages have this status by default)
-    /// Enum: Queued, Sent, SendingFailed, Received
-    /// </summary>
+    /**
+     * Message status. 'Queued' - the message is queued for sending; 'Sent' - a message is successfully sent; 'SendingFailed' - a message sending attempt has failed; 'Received' - a message is received (inbound messages have this status by default)
+     * Enum: Queued, Sent, SendingFailed, Received
+     */
     messageStatus: string
 
-    /// <summary>
-    /// Resolution of a fax message. ('High' for black and white image scanned at 200 dpi, 'Low' for black and white image scanned at 100 dpi)
-    /// Enum: High, Low
-    /// </summary>
+    /**
+     * Resolution of a fax message. ('High' for black and white image scanned at 200 dpi, 'Low' for black and white image scanned at 100 dpi)
+     * Enum: High, Low
+     */
     faxResolution: string
 
-    /// <summary>
-    /// Page count in a fax message
-    /// </summary>
+    /**
+     * Page count in a fax message
+     */
     faxPageCount: number
 
-    /// <summary>
-    /// Datetime when the message was modified on server in ISO 8601 format including timezone, for example 2016-03-10T18:07:52.534Z
-    /// </summary>
+    /**
+     * Datetime when the message was modified on server in ISO 8601 format including timezone, for example 2016-03-10T18:07:52.534Z
+     */
     lastModifiedTime: string
 
-    /// <summary>
-    /// Cover page identifier. For the list of available cover page identifiers please call the Fax Cover Pages method
-    /// </summary>
+    /**
+     * Cover page identifier. For the list of available cover page identifiers please call the Fax Cover Pages method
+     */
     coverIndex: number
 
-    /// <summary>
-    /// Cover page text, entered by the fax sender and printed on the cover page. Maximum length is limited to 1024 symbols
-    /// </summary>
+    /**
+     * Cover page text, entered by the fax sender and printed on the cover page. Maximum length is limited to 1024 symbols
+     */
     coverPageText: string
 }
 

@@ -1,18 +1,18 @@
 class ValidationError
 {
-    /// <summary>
-    /// Error code
-    /// </summary>
+    /**
+     * Error code
+     */
     errorCode: string
 
-    /// <summary>
-    /// Error message
-    /// </summary>
+    /**
+     * Error message
+     */
     message: string
 
-    /// <summary>
-    /// Name of invalid parameter
-    /// </summary>
+    /**
+     * Name of invalid parameter
+     */
     parameterName: string
 }
 

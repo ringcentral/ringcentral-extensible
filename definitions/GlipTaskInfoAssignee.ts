@@ -1,14 +1,14 @@
 class GlipTaskInfoAssignee
 {
-    /// <summary>
-    /// Internal identifier of an assignee
-    /// </summary>
+    /**
+     * Internal identifier of an assignee
+     */
     id: string
 
-    /// <summary>
-    /// Status of the task execution by assignee
-    /// Enum: Pending, Completed
-    /// </summary>
+    /**
+     * Status of the task execution by assignee
+     * Enum: Pending, Completed
+     */
     status: string
 }
 

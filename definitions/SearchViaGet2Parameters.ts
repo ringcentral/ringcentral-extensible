@@ -1,20 +1,20 @@
 class SearchViaGet2Parameters
 {
-    /// <summary>
-    /// only support 'userName' or 'email' filter expressions for now
-    /// </summary>
+    /**
+     * only support 'userName' or 'email' filter expressions for now
+     */
     filter: string
 
-    /// <summary>
-    /// start index (1-based)
-    /// Default: 1
-    /// </summary>
+    /**
+     * start index (1-based)
+     * Default: 1
+     */
     startIndex: number
 
-    /// <summary>
-    /// page size
-    /// Default: 100
-    /// </summary>
+    /**
+     * page size
+     * Default: 100
+     */
     count: number
 }
 

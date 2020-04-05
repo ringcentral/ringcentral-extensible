@@ -1,98 +1,98 @@
 class ShippingAddressInfo
 {
-    /// <summary>
-    /// Name of a primary contact person (receiver)
-    /// </summary>
+    /**
+     * Name of a primary contact person (receiver)
+     */
     customerName: string
 
-    /// <summary>
-    /// Name of an additional contact person. Should be specified for countries except the US, Canada, the UK and Australia.
-    /// </summary>
+    /**
+     * Name of an additional contact person. Should be specified for countries except the US, Canada, the UK and Australia.
+     */
     additionalCustomerName: string
 
-    /// <summary>
-    /// Email of a primary contact person (receiver). Should be specified for countries except the US, Canada, the UK and Australia.
-    /// </summary>
+    /**
+     * Email of a primary contact person (receiver). Should be specified for countries except the US, Canada, the UK and Australia.
+     */
     customerEmail: string
 
-    /// <summary>
-    /// Email of an additional contact person. Should be specified for countries except the US, Canada, the UK and Australia.
-    /// </summary>
+    /**
+     * Email of an additional contact person. Should be specified for countries except the US, Canada, the UK and Australia.
+     */
     additionalCustomerEmail: string
 
-    /// <summary>
-    /// Phone number of a primary contact person (receiver). Should be specified for countries except the US, Canada, the UK and Australia
-    /// </summary>
+    /**
+     * Phone number of a primary contact person (receiver). Should be specified for countries except the US, Canada, the UK and Australia
+     */
     customerPhone: string
 
-    /// <summary>
-    /// Phone number of an additional contact person. Should be specified for countries except the US, Canada, the UK & Australia.
-    /// </summary>
+    /**
+     * Phone number of an additional contact person. Should be specified for countries except the US, Canada, the UK & Australia.
+     */
     additionalCustomerPhone: string
 
-    /// <summary>
-    /// Street address, line 1 - street address, P.O. box, company name, c/o
-    /// </summary>
+    /**
+     * Street address, line 1 - street address, P.O. box, company name, c/o
+     */
     street: string
 
-    /// <summary>
-    /// Street address, line 2 - apartment, suite, unit, building, floor, etc.
-    /// </summary>
+    /**
+     * Street address, line 2 - apartment, suite, unit, building, floor, etc.
+     */
     street2: string
 
-    /// <summary>
-    /// City name
-    /// </summary>
+    /**
+     * City name
+     */
     city: string
 
-    /// <summary>
-    /// State/province name
-    /// </summary>
+    /**
+     * State/province name
+     */
     state: string
 
-    /// <summary>
-    /// Internal identifier of a state
-    /// </summary>
+    /**
+     * Internal identifier of a state
+     */
     stateId: string
 
-    /// <summary>
-    /// ISO code of a state
-    /// </summary>
+    /**
+     * ISO code of a state
+     */
     stateIsoCode: string
 
-    /// <summary>
-    /// Full name of a state
-    /// </summary>
+    /**
+     * Full name of a state
+     */
     stateName: string
 
-    /// <summary>
-    /// Internal identifier of a country
-    /// </summary>
+    /**
+     * Internal identifier of a country
+     */
     countryId: string
 
-    /// <summary>
-    /// ISO code of a country
-    /// </summary>
+    /**
+     * ISO code of a country
+     */
     countryIsoCode: string
 
-    /// <summary>
-    /// Country name
-    /// </summary>
+    /**
+     * Country name
+     */
     country: string
 
-    /// <summary>
-    /// Full name of a country
-    /// </summary>
+    /**
+     * Full name of a country
+     */
     countryName: string
 
-    /// <summary>
-    /// Zip code
-    /// </summary>
+    /**
+     * Zip code
+     */
     zip: string
 
-    /// <summary>
-    /// National taxpayer identification number. Should be specified for Brazil (CNPJ/CPF number) and Argentina (CUIT number).
-    /// </summary>
+    /**
+     * National taxpayer identification number. Should be specified for Brazil (CNPJ/CPF number) and Argentina (CUIT number).
+     */
     taxId: string
 }
 

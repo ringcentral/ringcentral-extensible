@@ -2,29 +2,29 @@ import GetCountryInfoState from './GetCountryInfoState'
 
 class GetStateInfoResponse
 {
-    /// <summary>
-    /// Internal identifier of a state
-    /// </summary>
+    /**
+     * Internal identifier of a state
+     */
     id: string
 
-    /// <summary>
-    /// Canonical URI of a state
-    /// </summary>
+    /**
+     * Canonical URI of a state
+     */
     uri: string
 
-    /// <summary>
-    /// Information on a country the state belongs to
-    /// </summary>
+    /**
+     * Information on a country the state belongs to
+     */
     country: GetCountryInfoState
 
-    /// <summary>
-    /// Short code for a state (2-letter usually)
-    /// </summary>
+    /**
+     * Short code for a state (2-letter usually)
+     */
     isoCode: string
 
-    /// <summary>
-    /// Official name of a state
-    /// </summary>
+    /**
+     * Official name of a state
+     */
     name: string
 }
 

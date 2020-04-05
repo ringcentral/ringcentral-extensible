@@ -1,13 +1,13 @@
 class DeviceSiteInfo
 {
-    /// <summary>
-    /// Internal identifier of a site
-    /// </summary>
+    /**
+     * Internal identifier of a site
+     */
     id: string
 
-    /// <summary>
-    /// Name of a site
-    /// </summary>
+    /**
+     * Name of a site
+     */
     name: string
 }
 

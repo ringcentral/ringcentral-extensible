@@ -2,50 +2,50 @@ import GlipMemberInfo from './GlipMemberInfo'
 
 class GlipChatInfo
 {
-    /// <summary>
-    /// Internal identifier of a chat
-    /// </summary>
+    /**
+     * Internal identifier of a chat
+     */
     id: string
 
-    /// <summary>
-    /// Type of a chat
-    /// Enum: Everyone, Team, Group, Direct, Personal
-    /// </summary>
+    /**
+     * Type of a chat
+     * Enum: Everyone, Team, Group, Direct, Personal
+     */
     type: string
 
-    /// <summary>
-    /// For 'Team' chat type only. Team access level.
-    /// </summary>
+    /**
+     * For 'Team' chat type only. Team access level.
+     */
     public: boolean
 
-    /// <summary>
-    /// For 'Team','Everyone' chats types only. Chat name.
-    /// </summary>
+    /**
+     * For 'Team','Everyone' chats types only. Chat name.
+     */
     name: string
 
-    /// <summary>
-    /// For 'Team','Everyone' chats types only. Chat description.
-    /// </summary>
+    /**
+     * For 'Team','Everyone' chats types only. Chat description.
+     */
     description: string
 
-    /// <summary>
-    /// For 'Team' chat type only. Team status.
-    /// Enum: Active, Archived
-    /// </summary>
+    /**
+     * For 'Team' chat type only. Team status.
+     * Enum: Active, Archived
+     */
     status: string
 
-    /// <summary>
-    /// Chat creation datetime in ISO 8601 format
-    /// </summary>
+    /**
+     * Chat creation datetime in ISO 8601 format
+     */
     creationTime: string
 
-    /// <summary>
-    /// Chat last change datetime in ISO 8601 format
-    /// </summary>
+    /**
+     * Chat last change datetime in ISO 8601 format
+     */
     lastModifiedTime: string
 
-    /// <summary>
-    /// </summary>
+    /**
+     */
     members: GlipMemberInfo[]
 }
 

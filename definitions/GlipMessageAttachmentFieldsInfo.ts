@@ -1,20 +1,20 @@
 class GlipMessageAttachmentFieldsInfo
 {
-    /// <summary>
-    /// Title of an individual field
-    /// </summary>
+    /**
+     * Title of an individual field
+     */
     title: string
 
-    /// <summary>
-    /// Value of an individual field (supports Markdown)
-    /// </summary>
+    /**
+     * Value of an individual field (supports Markdown)
+     */
     value: string
 
-    /// <summary>
-    /// Style of width span applied to a field
-    /// Default: Short
-    /// Enum: Short, Long
-    /// </summary>
+    /**
+     * Style of width span applied to a field
+     * Default: Short
+     * Enum: Short, Long
+     */
     style: string
 }
 

@@ -1,23 +1,23 @@
 class CustomCompanyGreetingLanguageInfo
 {
-    /// <summary>
-    /// Internal identifier of a greeting language
-    /// </summary>
+    /**
+     * Internal identifier of a greeting language
+     */
     id: string
 
-    /// <summary>
-    /// Link to a greeting language
-    /// </summary>
+    /**
+     * Link to a greeting language
+     */
     uri: string
 
-    /// <summary>
-    /// Name of a greeting language
-    /// </summary>
+    /**
+     * Name of a greeting language
+     */
     name: string
 
-    /// <summary>
-    /// Locale code of a greeting language
-    /// </summary>
+    /**
+     * Locale code of a greeting language
+     */
     localeCode: string
 }
 

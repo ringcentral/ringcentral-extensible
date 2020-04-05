@@ -1,23 +1,23 @@
 class CallRecordingCustomGreetingLanguage
 {
-    /// <summary>
-    /// Link to a language
-    /// </summary>
+    /**
+     * Link to a language
+     */
     uri: string
 
-    /// <summary>
-    /// Internal identifier of a language
-    /// </summary>
+    /**
+     * Internal identifier of a language
+     */
     id: string
 
-    /// <summary>
-    /// Language name
-    /// </summary>
+    /**
+     * Language name
+     */
     name: string
 
-    /// <summary>
-    /// Language locale code
-    /// </summary>
+    /**
+     * Language locale code
+     */
     localeCode: string
 }
 

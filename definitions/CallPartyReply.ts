@@ -2,13 +2,13 @@ import ReplyWithPattern from './ReplyWithPattern'
 
 class CallPartyReply
 {
-    /// <summary>
-    /// Text to reply
-    /// </summary>
+    /**
+     * Text to reply
+     */
     replyWithText: string
 
-    /// <summary>
-    /// </summary>
+    /**
+     */
     replyWithPattern: ReplyWithPattern
 }
 

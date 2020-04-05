@@ -1,13 +1,13 @@
 class UpdateGlipEveryoneRequest
 {
-    /// <summary>
-    /// Everyone chat name. Maximum number of characters supported is 250
-    /// </summary>
+    /**
+     * Everyone chat name. Maximum number of characters supported is 250
+     */
     name: number
 
-    /// <summary>
-    /// Everyone chat description. Maximum number of characters supported is 1000
-    /// </summary>
+    /**
+     * Everyone chat description. Maximum number of characters supported is 1000
+     */
     description: string
 }
 

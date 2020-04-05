@@ -4,25 +4,25 @@ import ProvisioningPagingInfo from './ProvisioningPagingInfo'
 
 class GetExtensionListResponse
 {
-    /// <summary>
-    /// Link to the extension list resource
-    /// </summary>
+    /**
+     * Link to the extension list resource
+     */
     uri: string
 
-    /// <summary>
-    /// List of extensions with extension information
-    /// Required
-    /// </summary>
+    /**
+     * List of extensions with extension information
+     * Required
+     */
     records: GetExtensionInfoResponse[]
 
-    /// <summary>
-    /// Information on navigation
-    /// </summary>
+    /**
+     * Information on navigation
+     */
     navigation: ProvisioningNavigationInfo
 
-    /// <summary>
-    /// Information on paging
-    /// </summary>
+    /**
+     * Information on paging
+     */
     paging: ProvisioningPagingInfo
 }
 

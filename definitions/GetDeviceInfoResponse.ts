@@ -7,103 +7,103 @@ import DeviceSiteInfo from './DeviceSiteInfo'
 
 class GetDeviceInfoResponse
 {
-    /// <summary>
-    /// Internal identifier of a device
-    /// </summary>
+    /**
+     * Internal identifier of a device
+     */
     id: string
 
-    /// <summary>
-    /// Canonical URI of a device
-    /// </summary>
+    /**
+     * Canonical URI of a device
+     */
     uri: string
 
-    /// <summary>
-    /// Device identification number (stock keeping unit) in the format TP-ID [-AT-AC], where TP is device type (HP for RC HardPhone, DV for all other devices including softphone); ID - device model ID; AT -addon type ID; AC - addon count (if any). For example 'HP-56-2-2'
-    /// </summary>
+    /**
+     * Device identification number (stock keeping unit) in the format TP-ID [-AT-AC], where TP is device type (HP for RC HardPhone, DV for all other devices including softphone); ID - device model ID; AT -addon type ID; AC - addon count (if any). For example 'HP-56-2-2'
+     */
     sku: string
 
-    /// <summary>
-    /// Device type
-    /// Default: HardPhone
-    /// Enum: BLA, SoftPhone, OtherPhone, HardPhone, WebPhone, Paging
-    /// </summary>
+    /**
+     * Device type
+     * Default: HardPhone
+     * Enum: BLA, SoftPhone, OtherPhone, HardPhone, WebPhone, Paging
+     */
     type: string
 
-    /// <summary>
-    /// Device name. Mandatory if ordering  SoftPhone  or  OtherPhone. Optional for  HardPhone. If not specified for HardPhone, then device model name is used as device name
-    /// </summary>
+    /**
+     * Device name. Mandatory if ordering  SoftPhone  or  OtherPhone. Optional for  HardPhone. If not specified for HardPhone, then device model name is used as device name
+     */
     name: string
 
-    /// <summary>
-    /// Serial number for HardPhone (is returned only when the phone is shipped and provisioned); endpoint_id for softphone and mobile applications
-    /// </summary>
+    /**
+     * Serial number for HardPhone (is returned only when the phone is shipped and provisioned); endpoint_id for softphone and mobile applications
+     */
     serial: string
 
-    /// <summary>
-    /// Device status
-    /// Enum: Offline, Online
-    /// </summary>
+    /**
+     * Device status
+     * Enum: Offline, Online
+     */
     status: string
 
-    /// <summary>
-    /// PC name for softphone
-    /// </summary>
+    /**
+     * PC name for softphone
+     */
     computerName: string
 
-    /// <summary>
-    /// HardPhone model information
-    /// </summary>
+    /**
+     * HardPhone model information
+     */
     model: ModelInfo
 
-    /// <summary>
-    /// This attribute can be omitted for unassigned devices
-    /// </summary>
+    /**
+     * This attribute can be omitted for unassigned devices
+     */
     extension: ExtensionInfoIntId
 
-    /// <summary>
-    /// Address for emergency cases. The same emergency address is assigned to all the numbers of one device
-    /// </summary>
+    /**
+     * Address for emergency cases. The same emergency address is assigned to all the numbers of one device
+     */
     emergencyServiceAddress: EmergencyServiceAddressResource
 
-    /// <summary>
-    /// Phone lines information
-    /// </summary>
+    /**
+     * Phone lines information
+     */
     phoneLines: PhoneLinesInfo[]
 
-    /// <summary>
-    /// Shipping information, according to which devices (in case of  HardPhone ) or e911 stickers (in case of  SoftPhone  and  OtherPhone ) will be delivered to the customer
-    /// </summary>
+    /**
+     * Shipping information, according to which devices (in case of  HardPhone ) or e911 stickers (in case of  SoftPhone  and  OtherPhone ) will be delivered to the customer
+     */
     shipping: ShippingInfo
 
-    /// <summary>
-    /// Box billing identifier of a device. Applicable only for HardPhones. It is an alternative way to identify the device to be ordered. EitherT? model  structure, or  boxBillingId  must be specified forT?HardPhone
-    /// </summary>
+    /**
+     * Box billing identifier of a device. Applicable only for HardPhones. It is an alternative way to identify the device to be ordered. EitherT? model  structure, or  boxBillingId  must be specified forT?HardPhone
+     */
     boxBillingId: number
 
-    /// <summary>
-    /// Supported only for devices assigned to Limited extensions. If true, enables users to log in to this phone as a common phone.
-    /// </summary>
+    /**
+     * Supported only for devices assigned to Limited extensions. If true, enables users to log in to this phone as a common phone.
+     */
     useAsCommonPhone: boolean
 
-    /// <summary>
-    /// Network location status. 'True' if the device is located in the configured corporate network (On-Net); 'False' for Off-Net location. Parameter is not returned if `EmergencyAddressAutoUpdate` feature is not enabled for the account/user, or if device network location is not determined
-    /// </summary>
+    /**
+     * Network location status. 'True' if the device is located in the configured corporate network (On-Net); 'False' for Off-Net location. Parameter is not returned if `EmergencyAddressAutoUpdate` feature is not enabled for the account/user, or if device network location is not determined
+     */
     inCompanyNet: boolean
 
-    /// <summary>
-    /// Site data
-    /// </summary>
+    /**
+     * Site data
+     */
     site: DeviceSiteInfo
 
-    /// <summary>
-    /// Datetime of receiving last location report in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format including timezone, for example *2016-03-10T18:07:52.534Z
-    /// </summary>
+    /**
+     * Datetime of receiving last location report in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format including timezone, for example *2016-03-10T18:07:52.534Z
+     */
     lastLocationReportTime: string
 
-    /// <summary>
-    /// Pooling type of a deviceHost - device with standalone paid phone line which can be linked to Glip/Softphone instanceGuest - device with a linked phone lineNone - device without a phone line or with specific line (free, BLA, etc.) = ['Host', 'Guest', 'None']
-    /// Enum: Host, Guest, None
-    /// </summary>
+    /**
+     * Pooling type of a deviceHost - device with standalone paid phone line which can be linked to Glip/Softphone instanceGuest - device with a linked phone lineNone - device without a phone line or with specific line (free, BLA, etc.) = ['Host', 'Guest', 'None']
+     * Enum: Host, Guest, None
+     */
     linePooling: string
 }
 

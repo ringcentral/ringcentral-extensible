@@ -1,18 +1,18 @@
 class PagingDeviceInfo
 {
-    /// <summary>
-    /// Internal identifier of a paging device
-    /// </summary>
+    /**
+     * Internal identifier of a paging device
+     */
     id: string
 
-    /// <summary>
-    /// Link to a paging device resource
-    /// </summary>
+    /**
+     * Link to a paging device resource
+     */
     uri: string
 
-    /// <summary>
-    /// Name of a paging device
-    /// </summary>
+    /**
+     * Name of a paging device
+     */
     name: string
 }
 

@@ -2,34 +2,34 @@ import NotificationInfo from './NotificationInfo'
 
 class InboundMessageEvent
 {
-    /// <summary>
-    /// Information on a notification
-    /// </summary>
+    /**
+     * Information on a notification
+     */
     aps: NotificationInfo
 
-    /// <summary>
-    /// Internal identifier of a message
-    /// </summary>
+    /**
+     * Internal identifier of a message
+     */
     messageId: string
 
-    /// <summary>
-    /// Internal identifier of an conversation
-    /// </summary>
+    /**
+     * Internal identifier of an conversation
+     */
     conversationId: string
 
-    /// <summary>
-    /// Sender phone number. For GCM transport type '_from' property should be used
-    /// </summary>
+    /**
+     * Sender phone number. For GCM transport type '_from' property should be used
+     */
     from: string
 
-    /// <summary>
-    /// Receiver phone number
-    /// </summary>
+    /**
+     * Receiver phone number
+     */
     to: string
 
-    /// <summary>
-    /// Internal identifier of a subscription owner extension
-    /// </summary>
+    /**
+     * Internal identifier of a subscription owner extension
+     */
     ownerId: string
 }
 

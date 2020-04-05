@@ -1,13 +1,13 @@
 class CustomGreetingInfo
 {
-    /// <summary>
-    /// Link to a custom user greeting
-    /// </summary>
+    /**
+     * Link to a custom user greeting
+     */
     uri: string
 
-    /// <summary>
-    /// Internal identifier of a custom user greeting
-    /// </summary>
+    /**
+     * Internal identifier of a custom user greeting
+     */
     id: string
 }
 

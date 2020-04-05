@@ -2,24 +2,24 @@ import DeviceProvisioningNavigationInfoUri from './DeviceProvisioningNavigationI
 
 class DeviceProvisioningNavigationInfo
 {
-    /// <summary>
-    /// Canonical URI for the first page of the list
-    /// </summary>
+    /**
+     * Canonical URI for the first page of the list
+     */
     firstPage: DeviceProvisioningNavigationInfoUri
 
-    /// <summary>
-    /// Canonical URI for the next page of the list
-    /// </summary>
+    /**
+     * Canonical URI for the next page of the list
+     */
     nextPage: DeviceProvisioningNavigationInfoUri
 
-    /// <summary>
-    /// Canonical URI for the previous page of the list
-    /// </summary>
+    /**
+     * Canonical URI for the previous page of the list
+     */
     previousPage: DeviceProvisioningNavigationInfoUri
 
-    /// <summary>
-    /// Canonical URI for the last page of the list
-    /// </summary>
+    /**
+     * Canonical URI for the last page of the list
+     */
     lastPage: DeviceProvisioningNavigationInfoUri
 }
 

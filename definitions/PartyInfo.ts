@@ -1,23 +1,23 @@
 class PartyInfo
 {
-    /// <summary>
-    /// Phone number of a party
-    /// </summary>
+    /**
+     * Phone number of a party
+     */
     phoneNumber: string
 
-    /// <summary>
-    /// Displayed name of a party
-    /// </summary>
+    /**
+     * Displayed name of a party
+     */
     name: string
 
-    /// <summary>
-    /// Internal identifier of a device
-    /// </summary>
+    /**
+     * Internal identifier of a device
+     */
     deviceId: string
 
-    /// <summary>
-    /// Internal identifier of an extension
-    /// </summary>
+    /**
+     * Internal identifier of an extension
+     */
     extensionId: string
 }
 

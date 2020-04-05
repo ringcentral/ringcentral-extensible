@@ -6,39 +6,39 @@ import FormattingLocaleInfo from './FormattingLocaleInfo'
 
 class RegionalSettings
 {
-    /// <summary>
-    /// Extension country information
-    /// </summary>
+    /**
+     * Extension country information
+     */
     homeCountry: CountryInfo
 
-    /// <summary>
-    /// Extension timezone information
-    /// </summary>
+    /**
+     * Extension timezone information
+     */
     timezone: TimezoneInfo
 
-    /// <summary>
-    /// User interface language data
-    /// </summary>
+    /**
+     * User interface language data
+     */
     language: LanguageInfo
 
-    /// <summary>
-    /// Information on language used for telephony greetings
-    /// </summary>
+    /**
+     * Information on language used for telephony greetings
+     */
     greetingLanguage: GreetingLanguageInfo
 
-    /// <summary>
-    /// Formatting language preferences for numbers, dates and currencies
-    /// </summary>
+    /**
+     * Formatting language preferences for numbers, dates and currencies
+     */
     formattingLocale: FormattingLocaleInfo
 
-    /// <summary>
-    /// Time format setting. The default value is '12h' = ['12h', '24h']
-    /// Enum: 12h, 24h
-    /// </summary>
+    /**
+     * Time format setting. The default value is '12h' = ['12h', '24h']
+     * Enum: 12h, 24h
+     */
     timeFormat: string
 
-    /// <summary>
-    /// </summary>
+    /**
+     */
     bias: string
 }
 

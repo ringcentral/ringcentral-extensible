@@ -1,15 +1,15 @@
 class ListPagingGroupDevicesParameters
 {
-    /// <summary>
-    /// Indicates the page number to retrieve. Only positive number values are accepted
-    /// Default: 1
-    /// </summary>
+    /**
+     * Indicates the page number to retrieve. Only positive number values are accepted
+     * Default: 1
+     */
     page: number
 
-    /// <summary>
-    /// Indicates the page size (number of items)
-    /// Default: 100
-    /// </summary>
+    /**
+     * Indicates the page size (number of items)
+     * Default: 100
+     */
     perPage: number
 }
 

@@ -2,36 +2,36 @@ import DevicePhoneNumberCountryInfo from './DevicePhoneNumberCountryInfo'
 
 class DevicePhoneNumberInfo
 {
-    /// <summary>
-    /// Internal identifier of a phone number
-    /// </summary>
+    /**
+     * Internal identifier of a phone number
+     */
     id: number
 
-    /// <summary>
-    /// Brief information on a phone number country
-    /// </summary>
+    /**
+     * Brief information on a phone number country
+     */
     country: DevicePhoneNumberCountryInfo
 
-    /// <summary>
-    /// Payment type. 'External' is returned for forwarded numbers which are not terminated in the RingCentral phone system = ['External', 'TollFree', 'Local'],
-    /// Enum: External, TollFree, Local
-    /// </summary>
+    /**
+     * Payment type. 'External' is returned for forwarded numbers which are not terminated in the RingCentral phone system = ['External', 'TollFree', 'Local'],
+     * Enum: External, TollFree, Local
+     */
     paymentType: string
 
-    /// <summary>
-    /// Phone number
-    /// </summary>
+    /**
+     * Phone number
+     */
     phoneNumber: string
 
-    /// <summary>
-    /// Enum: CompanyNumber, MainCompanyNumber, AdditionalCompanyNumber, DirectNumber, CompanyFaxNumber, ForwardedNumber, ForwardedCompanyNumber, ContactCenterNumber
-    /// </summary>
+    /**
+     * Enum: CompanyNumber, MainCompanyNumber, AdditionalCompanyNumber, DirectNumber, CompanyFaxNumber, ForwardedNumber, ForwardedCompanyNumber, ContactCenterNumber
+     */
     usageType: string
 
-    /// <summary>
-    /// Type of a phone number
-    /// Enum: VoiceFax, FaxOnly, VoiceOnly
-    /// </summary>
+    /**
+     * Type of a phone number
+     * Enum: VoiceFax, FaxOnly, VoiceOnly
+     */
     type: string
 }
 

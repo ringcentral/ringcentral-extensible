@@ -1,14 +1,14 @@
 class CustomFieldCreateRequest
 {
-    /// <summary>
-    /// Object category to attach custom fields
-    /// Enum: User
-    /// </summary>
+    /**
+     * Object category to attach custom fields
+     * Enum: User
+     */
     category: string
 
-    /// <summary>
-    /// Custom field display name
-    /// </summary>
+    /**
+     * Custom field display name
+     */
     displayName: string
 }
 

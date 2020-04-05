@@ -1,18 +1,18 @@
 class GlipPatchTeamBody
 {
-    /// <summary>
-    /// Team access level
-    /// </summary>
+    /**
+     * Team access level
+     */
     public: boolean
 
-    /// <summary>
-    /// Team name. Maximum number of characters supported is 250
-    /// </summary>
+    /**
+     * Team name. Maximum number of characters supported is 250
+     */
     name: string
 
-    /// <summary>
-    /// Team description. Maximum number of characters supported is 1000
-    /// </summary>
+    /**
+     * Team description. Maximum number of characters supported is 1000
+     */
     description: string
 }
 

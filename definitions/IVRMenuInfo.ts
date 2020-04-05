@@ -3,34 +3,34 @@ import IVRMenuActionsInfo from './IVRMenuActionsInfo'
 
 class IVRMenuInfo
 {
-    /// <summary>
-    /// Internal identifier of an IVR Menu extension
-    /// </summary>
+    /**
+     * Internal identifier of an IVR Menu extension
+     */
     id: string
 
-    /// <summary>
-    /// Link to an IVR Menu extension resource
-    /// </summary>
+    /**
+     * Link to an IVR Menu extension resource
+     */
     uri: string
 
-    /// <summary>
-    /// First name of an IVR Menu user
-    /// </summary>
+    /**
+     * First name of an IVR Menu user
+     */
     name: string
 
-    /// <summary>
-    /// Number of an IVR Menu extension
-    /// </summary>
+    /**
+     * Number of an IVR Menu extension
+     */
     extensionNumber: string
 
-    /// <summary>
-    /// Prompt metadata
-    /// </summary>
+    /**
+     * Prompt metadata
+     */
     prompt: IVRMenuPromptInfo
 
-    /// <summary>
-    /// Keys handling settings
-    /// </summary>
+    /**
+     * Keys handling settings
+     */
     actions: IVRMenuActionsInfo[]
 }
 

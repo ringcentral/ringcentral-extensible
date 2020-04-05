@@ -3,12 +3,12 @@ import ContactResource from './ContactResource'
 
 class DirectoryResource
 {
-    /// <summary>
-    /// </summary>
+    /**
+     */
     paging: CompanyContactsPagingInfo
 
-    /// <summary>
-    /// </summary>
+    /**
+     */
     records: ContactResource[]
 }
 

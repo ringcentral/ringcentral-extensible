@@ -2,18 +2,18 @@ import RingOutStatusInfo from './RingOutStatusInfo'
 
 class GetRingOutStatusResponseIntId
 {
-    /// <summary>
-    /// Internal identifier of a RingOut call
-    /// </summary>
+    /**
+     * Internal identifier of a RingOut call
+     */
     id: number
 
-    /// <summary>
-    /// </summary>
+    /**
+     */
     uri: string
 
-    /// <summary>
-    /// RingOut status information
-    /// </summary>
+    /**
+     * RingOut status information
+     */
     status: RingOutStatusInfo
 }
 
