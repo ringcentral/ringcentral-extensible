@@ -2,6 +2,7 @@ import yaml from 'js-yaml'
 import fs from 'fs'
 import path from 'path'
 import { pascalCase } from 'change-case'
+import * as R from 'ramda'
 
 const outputDir = path.join(__dirname, '..', 'definitions')
 
@@ -35,20 +36,11 @@ const normalizeType = f => {
 
 const normalizeField = f => {
   f.type = normalizeType(f)
-  // if (['event', 'delegate', 'ref', 'default', 'operator', 'public', 'params'].includes(f.name)) {
-  //   f.name = `@${f.name}`
-  // }
   return f
 }
 
 const generateField = (m, f) => {
   let p = ''
-  // if (f.name.includes('-')) {
-  //   p += `[JsonProperty("${f.name}")]`
-  //   p += `\n    ${f.type} ${f.name.replace(/-([a-z])/g, (match, p1) => p1.toUpperCase())}`
-  // } else if (f.name.includes(':') || f.name.includes('.')) {
-  //   p += `[JsonProperty("${f.name}")]`
-  //   p += `\n    ${f.type} ${f.name.replace(/[:.](\w)/g, '_$1')}`
   if (f.name.includes('-') || f.name.includes(':') || f.name.includes('.')) {
     p = `"${f.name}": ${f.type}`
   } else {
@@ -86,12 +78,9 @@ class ${m.name}
 }
 
 export default ${m.name}`
-  // if (code.includes('[JsonProperty(')) {
-  //   code = 'using Newtonsoft.Json\n\n' + code
-  // }
-  const match = code.match(/\: [A-Z][A-Za-z]+?\b/g)
+  const match = code.match(/(?<=^[ ]{4}\S+?: )[A-Z][A-Za-z]+?\b/gm)
   if (match != null) {
-    code = match.map(m => m.substring(2)).map(d => `import ${d} from './${d}'`).join('\n') + '\n' + code
+    code = R.uniq(match).map(d => `import ${d} from './${d}'`).join('\n') + '\n' + code
   }
   return code
 }
@@ -154,7 +143,7 @@ fs.writeFileSync(path.join(outputDir, 'Attachment.ts'), `class Attachment
     /// <summary>
     /// Binary content of the file
     /// </summary>
-    bytes: byte[]
+    bytes: Buffer | Blob
 
     /// <summary>
     /// Content tyle of the file, such as "image/png"

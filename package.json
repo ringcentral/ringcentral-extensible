@@ -17,7 +17,9 @@
     "@babel/core": "^7.9.0",
     "@babel/preset-env": "^7.9.0",
     "@babel/register": "^7.9.0",
+    "@types/node": "^13.11.0",
     "change-case": "^4.1.1",
+    "ramda": "^0.27.0",
     "standard": "^14.3.3",
     "typescript": "^3.8.3",
     "yarn-upgrade-all": "^0.5.2"
