@@ -4,7 +4,7 @@ import path from 'path'
 import { pascalCase } from 'change-case'
 import * as R from 'ramda'
 
-const outputDir = path.join(__dirname, '..', 'definitions')
+const outputDir = path.join(__dirname, '..', 'src', 'definitions')
 
 const doc = yaml.safeLoad(fs.readFileSync('/Users/tyler.liu/src/dotnet/RingCentral.Net/code-generator/rc-platform-adjusted.yml', 'utf8'))
 const definitions = doc.definitions

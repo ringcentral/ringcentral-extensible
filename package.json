@@ -7,8 +7,8 @@
   "author": "Tyler Long <tyler4long@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "test": "tsc -b tsconfig.json && node index.js",
-    "definitions": "rm -rf ../definitions/* && node -r @babel/register code-generator/definitions.js"
+    "test": "tsc -b tsconfig.json && node ./src/index.js",
+    "definitions": "rm -rf ./src/definitions/* && node -r @babel/register ./code-generator/definitions.js"
   },
   "dependencies": {
     "axios": "^0.19.2",

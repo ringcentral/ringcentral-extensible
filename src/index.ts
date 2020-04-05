@@ -1,7 +1,7 @@
 import axios, { AxiosInstance } from 'axios'
 import GetTokenRequest from './definitions/GetTokenRequest'
 import TokenInfo from './definitions/TokenInfo'
-import pkg from './package.json'
+import pkg from '../package.json'
 import qs from 'qs'
 
 class RestClient {
