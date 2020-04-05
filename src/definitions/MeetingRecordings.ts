@@ -3,13 +3,13 @@ import MeetingRecordingInfo from './MeetingRecordingInfo'
 
 class MeetingRecordings
 {
-    /**
-     */
-    meeting?: MeetingInfo
+  /**
+   */
+  meeting?: MeetingInfo
 
-    /**
-     */
-    recordings?: MeetingRecordingInfo[]
+  /**
+   */
+  recordings?: MeetingRecordingInfo[]
 }
 
 export default MeetingRecordings

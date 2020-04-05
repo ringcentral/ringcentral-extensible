@@ -4,25 +4,25 @@ import CallHandlingNavigationInfo from './CallHandlingNavigationInfo'
 
 class CompanyAnsweringRuleList
 {
-    /**
-     * Link to an answering rule resource
-     */
-    uri?: string
+  /**
+   * Link to an answering rule resource
+   */
+  uri?: string
 
-    /**
-     * List of company answering rules
-     */
-    records?: ListCompanyAnsweringRuleInfo[]
+  /**
+   * List of company answering rules
+   */
+  records?: ListCompanyAnsweringRuleInfo[]
 
-    /**
-     * Information on paging
-     */
-    paging?: CallHandlingPagingInfo
+  /**
+   * Information on paging
+   */
+  paging?: CallHandlingPagingInfo
 
-    /**
-     * Information on navigation
-     */
-    navigation?: CallHandlingNavigationInfo
+  /**
+   * Information on navigation
+   */
+  navigation?: CallHandlingNavigationInfo
 }
 
 export default CompanyAnsweringRuleList

@@ -4,23 +4,23 @@ import UnifiedPresenceMeeting from './UnifiedPresenceMeeting'
 
 class UnifiedPresence
 {
-    /**
-     * Aggregated presence status of the user
-     * Enum: Available, Offline, DND, Busy
-     */
-    status?: string
+  /**
+   * Aggregated presence status of the user
+   * Enum: Available, Offline, DND, Busy
+   */
+  status?: string
 
-    /**
-     */
-    glip?: UnifiedPresenceGlip
+  /**
+   */
+  glip?: UnifiedPresenceGlip
 
-    /**
-     */
-    telephony?: UnifiedPresenceTelephony
+  /**
+   */
+  telephony?: UnifiedPresenceTelephony
 
-    /**
-     */
-    meeting?: UnifiedPresenceMeeting
+  /**
+   */
+  meeting?: UnifiedPresenceMeeting
 }
 
 export default UnifiedPresence

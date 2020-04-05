@@ -2,9 +2,9 @@ import WeeklyScheduleInfo from './WeeklyScheduleInfo'
 
 class CompanyBusinessHoursScheduleInfo
 {
-    /**
-     */
-    weeklyRanges?: WeeklyScheduleInfo
+  /**
+   */
+  weeklyRanges?: WeeklyScheduleInfo
 }
 
 export default CompanyBusinessHoursScheduleInfo

@@ -2,9 +2,9 @@ import FeatureInfo from './FeatureInfo'
 
 class FeatureList
 {
-    /**
-     */
-    records?: FeatureInfo[]
+  /**
+   */
+  records?: FeatureInfo[]
 }
 
 export default FeatureList

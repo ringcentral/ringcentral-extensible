@@ -47,38 +47,38 @@ const generateField = (m, f) => {
     p = `${f.name}?: ${f.type}`
   }
 
-  p = ` */\n    ${p}`
+  p = ` */\n  ${p}`
   if (f.enum) {
-    p = ` * Enum: ${f.enum.join(', ')}\n    ${p}`
+    p = ` * Enum: ${f.enum.join(', ')}\n  ${p}`
   }
   if (f.default) {
-    p = ` * Default: ${f.default}\n    ${p}`
+    p = ` * Default: ${f.default}\n  ${p}`
   }
   if (f.minimum) {
-    p = ` * Minimum: ${f.minimum}\n    ${p}`
+    p = ` * Minimum: ${f.minimum}\n  ${p}`
   }
   if (f.maximum) {
-    p = ` * Maximum: ${f.maximum}\n    ${p}`
+    p = ` * Maximum: ${f.maximum}\n  ${p}`
   }
   if (m.required && m.required.includes(f.name)) {
-    p = ` * Required\n    ${p}`
+    p = ` * Required\n  ${p}`
   }
   if (f.description) {
-    p = `${f.description.trim().split('\n').map(l => ` * ${l}`).join('\n')}\n    ${p}`
+    p = `${f.description.trim().split('\n').map(l => ` * ${l}`).join('\n')}\n  ${p}`
   }
-  p = `/**\n    ${p}`
+  p = `/**\n  ${p}`
   return p
 }
 
 const generateCode = (m, fields) => {
-  let code = `${m.description ? '\n    // ' + m.description : ''}
+  let code = `${m.description ? '\n  // ' + m.description : ''}
 class ${m.name}
 {
-    ${fields.join('\n\n    ')}
+  ${fields.join('\n\n  ')}
 }
 
 export default ${m.name}`
-  const match = code.match(/(?<=^[ ]{4}\S+?: )[A-Z][A-Za-z]+?\b/gm)
+  const match = code.match(/(?<=^ {2}\S+?: )[A-Z][A-Za-z]+?\b/gm)
   if (match != null) {
     code = R.uniq(match).map(d => `import ${d} from './${d}'`).join('\n') + '\n' + code
   }
@@ -92,7 +92,7 @@ models.forEach(m => {
     .map(k => ({ name: k, ...properties[k] }))
     .map(f => normalizeField(f))
     .map(f => generateField(m, f))
-  fs.writeFileSync(path.join(outputDir, `${m.name}.ts`), generateCode(m, fields).trim())
+  fs.writeFileSync(path.join(outputDir, `${m.name}.ts`), generateCode(m, fields).trim() + '\n')
 })
 
 // generate models for form-data objects
@@ -110,7 +110,7 @@ Object.keys(doc.paths).forEach(p => {
           }
           return generateField({}, p)
         })
-      fs.writeFileSync(path.join(outputDir, `${className}.ts`), generateCode({ name: className }, fields).trim())
+      fs.writeFileSync(path.join(outputDir, `${className}.ts`), generateCode({ name: className }, fields).trim() + '\n')
     }
   })
 })
@@ -127,7 +127,7 @@ Object.keys(doc.paths).forEach(p => {
           p = normalizeField(p)
           return generateField({}, p)
         })
-      fs.writeFileSync(path.join(outputDir, `${className}.ts`), generateCode({ name: className }, fields).trim())
+      fs.writeFileSync(path.join(outputDir, `${className}.ts`), generateCode({ name: className }, fields).trim() + '\n')
     }
   })
 })
@@ -135,20 +135,21 @@ Object.keys(doc.paths).forEach(p => {
 // Generate Attachment
 fs.writeFileSync(path.join(outputDir, 'Attachment.ts'), `class Attachment
 {
-    /**
-     * File name with extension, such as "example.png"
-     */
-    fileName: string
+  /**
+   * File name with extension, such as "example.png"
+   */
+  fileName: string
 
-    /**
-     * Binary content of the file
-     */
-    bytes: Buffer | Blob
+  /**
+   * Binary content of the file
+   */
+  bytes: Buffer | Blob
 
-    /**
-     * Content tyle of the file, such as "image/png"
-     */
-    contentType: string
+  /**
+   * Content tyle of the file, such as "image/png"
+   */
+  contentType: string
 }
 
-export default Attachment`)
+export default Attachment
+`)

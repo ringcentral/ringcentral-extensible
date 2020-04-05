@@ -1,59 +1,59 @@
 class ExtensionPresenceEventBody
 {
-    /**
-     * Internal identifier of an extension. Optional parameter
-     * Default: ~
-     */
-    extensionId?: string
+  /**
+   * Internal identifier of an extension. Optional parameter
+   * Default: ~
+   */
+  extensionId?: string
 
-    /**
-     * Telephony presence status. Returned if telephony status is changed.
-     * Enum: NoCall, CallConnected, Ringing, OnHold, ParkedCall
-     */
-    telephonyStatus?: string
+  /**
+   * Telephony presence status. Returned if telephony status is changed.
+   * Enum: NoCall, CallConnected, Ringing, OnHold, ParkedCall
+   */
+  telephonyStatus?: string
 
-    /**
-     * Order number of a notification to state the chronology
-     */
-    sequence?: number
+  /**
+   * Order number of a notification to state the chronology
+   */
+  sequence?: number
 
-    /**
-     * Aggregated presence status, calculated from a number of sources
-     * Enum: Offline, Busy, Available
-     */
-    presenceStatus?: string
+  /**
+   * Aggregated presence status, calculated from a number of sources
+   * Enum: Offline, Busy, Available
+   */
+  presenceStatus?: string
 
-    /**
-     * User-defined presence status (as previously published by the user)
-     * Enum: Offline, Busy, Available
-     */
-    userStatus?: string
+  /**
+   * User-defined presence status (as previously published by the user)
+   * Enum: Offline, Busy, Available
+   */
+  userStatus?: string
 
-    /**
-     * Extended DnD (Do not Disturb) status
-     * Enum: TakeAllCalls, DoNotAcceptAnyCalls, DoNotAcceptDepartmentCalls, TakeDepartmentCallsOnly
-     */
-    dndStatus?: string
+  /**
+   * Extended DnD (Do not Disturb) status
+   * Enum: TakeAllCalls, DoNotAcceptAnyCalls, DoNotAcceptDepartmentCalls, TakeDepartmentCallsOnly
+   */
+  dndStatus?: string
 
-    /**
-     * If 'True' enables other extensions to see the extension presence status
-     */
-    allowSeeMyPresence?: boolean
+  /**
+   * If 'True' enables other extensions to see the extension presence status
+   */
+  allowSeeMyPresence?: boolean
 
-    /**
-     * If 'True' enables to ring extension phone, if any user monitored by this extension is ringing
-     */
-    ringOnMonitoredCall?: boolean
+  /**
+   * If 'True' enables to ring extension phone, if any user monitored by this extension is ringing
+   */
+  ringOnMonitoredCall?: boolean
 
-    /**
-     * If 'True' enables the extension user to pick up a monitored line on hold
-     */
-    pickUpCallsOnHold?: boolean
+  /**
+   * If 'True' enables the extension user to pick up a monitored line on hold
+   */
+  pickUpCallsOnHold?: boolean
 
-    /**
-     * Internal identifier of a subscription owner extension
-     */
-    ownerId?: string
+  /**
+   * Internal identifier of a subscription owner extension
+   */
+  ownerId?: string
 }
 
 export default ExtensionPresenceEventBody

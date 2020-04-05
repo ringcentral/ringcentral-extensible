@@ -1,21 +1,21 @@
 class SyncInfo
 {
-    /**
-     * Enum: FSync, ISync
-     */
-    syncType?: string
+  /**
+   * Enum: FSync, ISync
+   */
+  syncType?: string
 
-    /**
-     */
-    syncToken?: string
+  /**
+   */
+  syncToken?: string
 
-    /**
-     */
-    syncTime?: string
+  /**
+   */
+  syncTime?: string
 
-    /**
-     */
-    olderRecordsExist?: boolean
+  /**
+   */
+  olderRecordsExist?: boolean
 }
 
 export default SyncInfo

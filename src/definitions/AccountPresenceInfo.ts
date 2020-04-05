@@ -4,25 +4,25 @@ import PresencePagingInfo from './PresencePagingInfo'
 
 class AccountPresenceInfo
 {
-    /**
-     * Canonical URI of account presence resource
-     */
-    uri?: string
+  /**
+   * Canonical URI of account presence resource
+   */
+  uri?: string
 
-    /**
-     * List of Prompts
-     */
-    records?: GetPresenceInfo[]
+  /**
+   * List of Prompts
+   */
+  records?: GetPresenceInfo[]
 
-    /**
-     * Information on navigation
-     */
-    navigation?: PresenceNavigationInfo
+  /**
+   * Information on navigation
+   */
+  navigation?: PresenceNavigationInfo
 
-    /**
-     * Information on paging
-     */
-    paging?: PresencePagingInfo
+  /**
+   * Information on paging
+   */
+  paging?: PresencePagingInfo
 }
 
 export default AccountPresenceInfo

@@ -1,69 +1,69 @@
 class EmergencyServiceAddressResource
 {
-    /**
-     */
-    street?: string
+  /**
+   */
+  street?: string
 
-    /**
-     */
-    street2?: string
+  /**
+   */
+  street2?: string
 
-    /**
-     */
-    city?: string
+  /**
+   */
+  city?: string
 
-    /**
-     */
-    zip?: string
+  /**
+   */
+  zip?: string
 
-    /**
-     */
-    customerName?: string
+  /**
+   */
+  customerName?: string
 
-    /**
-     * State/province name
-     */
-    state?: string
+  /**
+   * State/province name
+   */
+  state?: string
 
-    /**
-     * Internal identifier of a state
-     */
-    stateId?: string
+  /**
+   * Internal identifier of a state
+   */
+  stateId?: string
 
-    /**
-     * ISO code of a state
-     */
-    stateIsoCode?: string
+  /**
+   * ISO code of a state
+   */
+  stateIsoCode?: string
 
-    /**
-     * Full name of a state
-     */
-    stateName?: string
+  /**
+   * Full name of a state
+   */
+  stateName?: string
 
-    /**
-     * Internal identifier of a country
-     */
-    countryId?: string
+  /**
+   * Internal identifier of a country
+   */
+  countryId?: string
 
-    /**
-     * ISO code of a country
-     */
-    countryIsoCode?: string
+  /**
+   * ISO code of a country
+   */
+  countryIsoCode?: string
 
-    /**
-     * Country name
-     */
-    country?: string
+  /**
+   * Country name
+   */
+  country?: string
 
-    /**
-     * Full name of a country
-     */
-    countryName?: string
+  /**
+   * Full name of a country
+   */
+  countryName?: string
 
-    /**
-     * Specifies if emergency address is out of country
-     */
-    outOfCountry?: boolean
+  /**
+   * Specifies if emergency address is out of country
+   */
+  outOfCountry?: boolean
 }
 
 export default EmergencyServiceAddressResource

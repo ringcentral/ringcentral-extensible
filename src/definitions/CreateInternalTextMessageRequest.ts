@@ -2,27 +2,27 @@ import PagerCallerInfoRequest from './PagerCallerInfoRequest'
 
 class CreateInternalTextMessageRequest
 {
-    /**
-     * Sender of a pager message.
-     * Required
-     */
-    from?: PagerCallerInfoRequest
+  /**
+   * Sender of a pager message.
+   * Required
+   */
+  from?: PagerCallerInfoRequest
 
-    /**
-     * Internal identifier of a message this message replies to
-     */
-    replyOn?: number
+  /**
+   * Internal identifier of a message this message replies to
+   */
+  replyOn?: number
 
-    /**
-     * Text of a pager message. Max length is 1024 symbols (2-byte UTF-16 encoded). If a character is encoded in 4 bytes in UTF-16 it is treated as 2 characters, thus restricting the maximum message length to 512 symbols
-     * Required
-     */
-    text?: string
+  /**
+   * Text of a pager message. Max length is 1024 symbols (2-byte UTF-16 encoded). If a character is encoded in 4 bytes in UTF-16 it is treated as 2 characters, thus restricting the maximum message length to 512 symbols
+   * Required
+   */
+  text?: string
 
-    /**
-     * Optional if replyOn parameter is specified. Receiver of a pager message.
-     */
-    to?: PagerCallerInfoRequest[]
+  /**
+   * Optional if replyOn parameter is specified. Receiver of a pager message.
+   */
+  to?: PagerCallerInfoRequest[]
 }
 
 export default CreateInternalTextMessageRequest

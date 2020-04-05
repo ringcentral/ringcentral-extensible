@@ -4,23 +4,23 @@ import ProvisioningPagingInfo from './ProvisioningPagingInfo'
 
 class ListDevicesAutomaticLocationUpdates
 {
-    /**
-     * Link to devices resource
-     */
-    uri?: string
+  /**
+   * Link to devices resource
+   */
+  uri?: string
 
-    /**
-     * List of users' devices with the current status of Emergency Address Auto Update Feature
-     */
-    records?: AutomaticLocationUpdatesDeviceInfo[]
+  /**
+   * List of users' devices with the current status of Emergency Address Auto Update Feature
+   */
+  records?: AutomaticLocationUpdatesDeviceInfo[]
 
-    /**
-     */
-    navigation?: ProvisioningNavigationInfo
+  /**
+   */
+  navigation?: ProvisioningNavigationInfo
 
-    /**
-     */
-    paging?: ProvisioningPagingInfo
+  /**
+   */
+  paging?: ProvisioningPagingInfo
 }
 
 export default ListDevicesAutomaticLocationUpdates

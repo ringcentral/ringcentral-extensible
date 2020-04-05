@@ -4,22 +4,22 @@ import ProvisioningPagingInfo from './ProvisioningPagingInfo'
 
 class NetworksList
 {
-    /**
-     * Link to a networks resource
-     */
-    uri?: string
+  /**
+   * Link to a networks resource
+   */
+  uri?: string
 
-    /**
-     */
-    records?: NetworkInfo[]
+  /**
+   */
+  records?: NetworkInfo[]
 
-    /**
-     */
-    navigation?: ProvisioningNavigationInfo
+  /**
+   */
+  navigation?: ProvisioningNavigationInfo
 
-    /**
-     */
-    paging?: ProvisioningPagingInfo
+  /**
+   */
+  paging?: ProvisioningPagingInfo
 }
 
 export default NetworksList

@@ -2,14 +2,14 @@ import EmergencyLocationAddressInfoRequest from './EmergencyLocationAddressInfoR
 
 class EmergencyLocationInfoRequest
 {
-    /**
-     * Internal identifier of the emergency response location
-     */
-    id?: string
+  /**
+   * Internal identifier of the emergency response location
+   */
+  id?: string
 
-    /**
-     */
-    address?: EmergencyLocationAddressInfoRequest
+  /**
+   */
+  address?: EmergencyLocationAddressInfoRequest
 }
 
 export default EmergencyLocationInfoRequest

@@ -4,18 +4,18 @@ import GreetingResource from './GreetingResource'
 
 class CallRecordingSettingsResource
 {
-    /**
-     */
-    onDemand?: OnDemandResource
+  /**
+   */
+  onDemand?: OnDemandResource
 
-    /**
-     */
-    automatic?: AutomaticRecordingResource
+  /**
+   */
+  automatic?: AutomaticRecordingResource
 
-    /**
-     * Collection of Greeting Info
-     */
-    greetings?: GreetingResource[]
+  /**
+   * Collection of Greeting Info
+   */
+  greetings?: GreetingResource[]
 }
 
 export default CallRecordingSettingsResource

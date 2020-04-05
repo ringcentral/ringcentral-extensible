@@ -1,8 +1,8 @@
 class CallHandlingNavigationInfoUri
 {
-    /**
-     */
-    uri?: string
+  /**
+   */
+  uri?: string
 }
 
 export default CallHandlingNavigationInfoUri

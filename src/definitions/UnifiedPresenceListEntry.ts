@@ -2,19 +2,19 @@ import UnifiedPresence from './UnifiedPresence'
 
 class UnifiedPresenceListEntry
 {
-    /**
-     * Internal identifier of the resource
-     */
-    resourceId?: string
+  /**
+   * Internal identifier of the resource
+   */
+  resourceId?: string
 
-    /**
-     * Status code of resource retrieval
-     */
-    status?: number
+  /**
+   * Status code of resource retrieval
+   */
+  status?: number
 
-    /**
-     */
-    body?: UnifiedPresence
+  /**
+   */
+  body?: UnifiedPresence
 }
 
 export default UnifiedPresenceListEntry

@@ -6,45 +6,45 @@ import MissedCallsInfo from './MissedCallsInfo'
 
 class NotificationSettings
 {
-    /**
-     * Canonical URI of notifications settings resource
-     */
-    uri?: string
+  /**
+   * Canonical URI of notifications settings resource
+   */
+  uri?: string
 
-    /**
-     * List of notification recipient email addresses
-     */
-    emailAddresses?: string[]
+  /**
+   * List of notification recipient email addresses
+   */
+  emailAddresses?: string[]
 
-    /**
-     * List of notification recipient email addresses
-     */
-    smsEmailAddresses?: string[]
+  /**
+   * List of notification recipient email addresses
+   */
+  smsEmailAddresses?: string[]
 
-    /**
-     * Specifies notifications settings mode. If 'True' then advanced mode is on, it allows using different emails and/or phone numbers for each notification type. If 'False' then basic mode is on. Advanced mode settings are returned in both modes, if specified once, but if basic mode is switched on, they are not applied
-     */
-    advancedMode?: boolean
+  /**
+   * Specifies notifications settings mode. If 'True' then advanced mode is on, it allows using different emails and/or phone numbers for each notification type. If 'False' then basic mode is on. Advanced mode settings are returned in both modes, if specified once, but if basic mode is switched on, they are not applied
+   */
+  advancedMode?: boolean
 
-    /**
-     */
-    voicemails?: VoicemailsInfo
+  /**
+   */
+  voicemails?: VoicemailsInfo
 
-    /**
-     */
-    inboundFaxes?: InboundFaxesInfo
+  /**
+   */
+  inboundFaxes?: InboundFaxesInfo
 
-    /**
-     */
-    outboundFaxes?: OutboundFaxesInfo
+  /**
+   */
+  outboundFaxes?: OutboundFaxesInfo
 
-    /**
-     */
-    inboundTexts?: InboundTextsInfo
+  /**
+   */
+  inboundTexts?: InboundTextsInfo
 
-    /**
-     */
-    missedCalls?: MissedCallsInfo
+  /**
+   */
+  missedCalls?: MissedCallsInfo
 }
 
 export default NotificationSettings

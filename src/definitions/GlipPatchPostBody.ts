@@ -1,9 +1,9 @@
 class GlipPatchPostBody
 {
-    /**
-     * Post text.
-     */
-    text?: string
+  /**
+   * Post text.
+   */
+  text?: string
 }
 
 export default GlipPatchPostBody

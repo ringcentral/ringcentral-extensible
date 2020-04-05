@@ -3,15 +3,15 @@ import GlipNavigationInfo from './GlipNavigationInfo'
 
 class GlipGroupList
 {
-    /**
-     * List of groups/teams/private chats
-     * Required
-     */
-    records?: GlipGroupInfo[]
+  /**
+   * List of groups/teams/private chats
+   * Required
+   */
+  records?: GlipGroupInfo[]
 
-    /**
-     */
-    navigation?: GlipNavigationInfo
+  /**
+   */
+  navigation?: GlipNavigationInfo
 }
 
 export default GlipGroupList

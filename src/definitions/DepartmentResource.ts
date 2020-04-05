@@ -1,16 +1,16 @@
 class DepartmentResource
 {
-    /**
-     */
-    uri?: string
+  /**
+   */
+  uri?: string
 
-    /**
-     */
-    id?: string
+  /**
+   */
+  id?: string
 
-    /**
-     */
-    extensionNumber?: string
+  /**
+   */
+  extensionNumber?: string
 }
 
 export default DepartmentResource

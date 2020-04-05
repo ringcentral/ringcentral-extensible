@@ -1,12 +1,12 @@
 class AssignMultipleDevicesAutomaticLocationUpdates
 {
-    /**
-     */
-    enabledDeviceIds?: string[]
+  /**
+   */
+  enabledDeviceIds?: string[]
 
-    /**
-     */
-    disabledDeviceIds?: string[]
+  /**
+   */
+  disabledDeviceIds?: string[]
 }
 
 export default AssignMultipleDevicesAutomaticLocationUpdates

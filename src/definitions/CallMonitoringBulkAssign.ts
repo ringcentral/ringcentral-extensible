@@ -2,17 +2,17 @@ import CallMonitoringExtensionInfo from './CallMonitoringExtensionInfo'
 
 class CallMonitoringBulkAssign
 {
-    /**
-     */
-    addedExtensions?: CallMonitoringExtensionInfo[]
+  /**
+   */
+  addedExtensions?: CallMonitoringExtensionInfo[]
 
-    /**
-     */
-    updatedExtensions?: CallMonitoringExtensionInfo[]
+  /**
+   */
+  updatedExtensions?: CallMonitoringExtensionInfo[]
 
-    /**
-     */
-    removedExtensions?: CallMonitoringExtensionInfo[]
+  /**
+   */
+  removedExtensions?: CallMonitoringExtensionInfo[]
 }
 
 export default CallMonitoringBulkAssign

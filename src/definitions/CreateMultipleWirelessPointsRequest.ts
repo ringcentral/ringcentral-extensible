@@ -2,9 +2,9 @@ import CreateWirelessPoint from './CreateWirelessPoint'
 
 class CreateMultipleWirelessPointsRequest
 {
-    /**
-     */
-    records?: CreateWirelessPoint[]
+  /**
+   */
+  records?: CreateWirelessPoint[]
 }
 
 export default CreateMultipleWirelessPointsRequest

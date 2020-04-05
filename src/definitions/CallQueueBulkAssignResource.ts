@@ -1,12 +1,12 @@
 class CallQueueBulkAssignResource
 {
-    /**
-     */
-    addedExtensionIds?: string[]
+  /**
+   */
+  addedExtensionIds?: string[]
 
-    /**
-     */
-    removedExtensionIds?: string[]
+  /**
+   */
+  removedExtensionIds?: string[]
 }
 
 export default CallQueueBulkAssignResource

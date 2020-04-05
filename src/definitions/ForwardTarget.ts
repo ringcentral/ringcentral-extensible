@@ -1,14 +1,14 @@
 class ForwardTarget
 {
-    /**
-     * Phone number
-     */
-    phoneNumber?: string
+  /**
+   * Phone number
+   */
+  phoneNumber?: string
 
-    /**
-     * Voicemail owner extension identifier
-     */
-    voicemail?: string
+  /**
+   * Voicemail owner extension identifier
+   */
+  voicemail?: string
 }
 
 export default ForwardTarget

@@ -2,13 +2,13 @@ import SubscriptionInfo from './SubscriptionInfo'
 
 class RecordsCollectionResourceSubscriptionResponse
 {
-    /**
-     */
-    uri?: string
+  /**
+   */
+  uri?: string
 
-    /**
-     */
-    records?: SubscriptionInfo[]
+  /**
+   */
+  records?: SubscriptionInfo[]
 }
 
 export default RecordsCollectionResourceSubscriptionResponse

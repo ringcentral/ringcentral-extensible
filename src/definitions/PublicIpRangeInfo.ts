@@ -1,16 +1,16 @@
 class PublicIpRangeInfo
 {
-    /**
-     */
-    id?: string
+  /**
+   */
+  id?: string
 
-    /**
-     */
-    startIp?: string
+  /**
+   */
+  startIp?: string
 
-    /**
-     */
-    endIp?: string
+  /**
+   */
+  endIp?: string
 }
 
 export default PublicIpRangeInfo

@@ -4,52 +4,52 @@ import GlipUpdateTaskAttachment from './GlipUpdateTaskAttachment'
 
 class GlipUpdateTask
 {
-    /**
-     * Task name/subject. Max allowed length is 250 characters.
-     */
-    subject?: string
+  /**
+   * Task name/subject. Max allowed length is 250 characters.
+   */
+  subject?: string
 
-    /**
-     */
-    assignees?: GlipUpdateTaskAssignee[]
+  /**
+   */
+  assignees?: GlipUpdateTaskAssignee[]
 
-    /**
-     * Enum: Simple, AllAssignees, Percentage
-     */
-    completenessCondition?: string
+  /**
+   * Enum: Simple, AllAssignees, Percentage
+   */
+  completenessCondition?: string
 
-    /**
-     * Task start date in UTC time zone
-     */
-    startDate?: string
+  /**
+   * Task start date in UTC time zone
+   */
+  startDate?: string
 
-    /**
-     * Task due date/time in UTC time zone
-     */
-    dueDate?: string
+  /**
+   * Task due date/time in UTC time zone
+   */
+  dueDate?: string
 
-    /**
-     * Enum: Black, Red, Orange, Yellow, Green, Blue, Purple, Magenta
-     */
-    color?: string
+  /**
+   * Enum: Black, Red, Orange, Yellow, Green, Blue, Purple, Magenta
+   */
+  color?: string
 
-    /**
-     * Task section to group/search by. Max allowed legth is 100 characters
-     */
-    section?: string
+  /**
+   * Task section to group/search by. Max allowed legth is 100 characters
+   */
+  section?: string
 
-    /**
-     * Task details. Max allowed legth is 102400 characters (100kB)
-     */
-    description?: string
+  /**
+   * Task details. Max allowed legth is 102400 characters (100kB)
+   */
+  description?: string
 
-    /**
-     */
-    recurrence?: GlipTaskRecurrenceInfo
+  /**
+   */
+  recurrence?: GlipTaskRecurrenceInfo
 
-    /**
-     */
-    attachments?: GlipUpdateTaskAttachment[]
+  /**
+   */
+  attachments?: GlipUpdateTaskAttachment[]
 }
 
 export default GlipUpdateTask

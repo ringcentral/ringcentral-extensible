@@ -1,9 +1,9 @@
 class UserContactsGroupsInfo
 {
-    /**
-     * Link to the list of address book groups
-     */
-    uri?: string
+  /**
+   * Link to the list of address book groups
+   */
+  uri?: string
 }
 
 export default UserContactsGroupsInfo

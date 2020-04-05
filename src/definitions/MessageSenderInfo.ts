@@ -1,16 +1,16 @@
 class MessageSenderInfo
 {
-    /**
-     */
-    extensionNumber?: string
+  /**
+   */
+  extensionNumber?: string
 
-    /**
-     */
-    extensionId?: string
+  /**
+   */
+  extensionId?: string
 
-    /**
-     */
-    name?: string
+  /**
+   */
+  name?: string
 }
 
 export default MessageSenderInfo

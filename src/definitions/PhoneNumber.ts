@@ -1,15 +1,15 @@
 class PhoneNumber
 {
-    /**
-     * Required
-     * Enum: work, mobile, other
-     */
-    type?: string
+  /**
+   * Required
+   * Enum: work, mobile, other
+   */
+  type?: string
 
-    /**
-     * Required
-     */
-    value?: string
+  /**
+   * Required
+   */
+  value?: string
 }
 
 export default PhoneNumber

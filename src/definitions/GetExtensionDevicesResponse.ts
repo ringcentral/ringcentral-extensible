@@ -4,28 +4,28 @@ import DeviceProvisioningPagingInfo from './DeviceProvisioningPagingInfo'
 
 class GetExtensionDevicesResponse
 {
-    /**
-     * Link to the list of extension devices
-     */
-    uri?: string
+  /**
+   * Link to the list of extension devices
+   */
+  uri?: string
 
-    /**
-     * List of extension devices
-     * Required
-     */
-    records?: ExtensionDeviceResponse[]
+  /**
+   * List of extension devices
+   * Required
+   */
+  records?: ExtensionDeviceResponse[]
 
-    /**
-     * Information on navigation
-     * Required
-     */
-    navigation?: DeviceProvisioningNavigationInfo
+  /**
+   * Information on navigation
+   * Required
+   */
+  navigation?: DeviceProvisioningNavigationInfo
 
-    /**
-     * Information on paging
-     * Required
-     */
-    paging?: DeviceProvisioningPagingInfo
+  /**
+   * Information on paging
+   * Required
+   */
+  paging?: DeviceProvisioningPagingInfo
 }
 
 export default GetExtensionDevicesResponse

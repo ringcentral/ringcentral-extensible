@@ -3,41 +3,41 @@ import CompanyAnsweringRuleExtensionInfo from './CompanyAnsweringRuleExtensionIn
 
 class ListCompanyAnsweringRuleInfo
 {
-    /**
-     * Internal identifier of an answering rule
-     */
-    id?: string
+  /**
+   * Internal identifier of an answering rule
+   */
+  id?: string
 
-    /**
-     * Canonical URI of an answering rule
-     */
-    uri?: string
+  /**
+   * Canonical URI of an answering rule
+   */
+  uri?: string
 
-    /**
-     * Specifies if the rule is active or inactive. The default value is 'True'
-     * Default: true
-     */
-    enabled?: boolean
+  /**
+   * Specifies if the rule is active or inactive. The default value is 'True'
+   * Default: true
+   */
+  enabled?: boolean
 
-    /**
-     * Type of an answering rule, the default value is 'Custom' = ['BusinessHours', 'AfterHours', 'Custom']
-     * Enum: BusinessHours, AfterHours, Custom
-     */
-    type?: string
+  /**
+   * Type of an answering rule, the default value is 'Custom' = ['BusinessHours', 'AfterHours', 'Custom']
+   * Enum: BusinessHours, AfterHours, Custom
+   */
+  type?: string
 
-    /**
-     * Name of an answering rule specified by user. Max number of symbols is 30. The default value is 'My Rule N' where 'N' is the first free number
-     */
-    name?: string
+  /**
+   * Name of an answering rule specified by user. Max number of symbols is 30. The default value is 'My Rule N' where 'N' is the first free number
+   */
+  name?: string
 
-    /**
-     * Answering rules are applied when calling to selected number(s)
-     */
-    calledNumbers?: CalledNumberInfo[]
+  /**
+   * Answering rules are applied when calling to selected number(s)
+   */
+  calledNumbers?: CalledNumberInfo[]
 
-    /**
-     */
-    extension?: CompanyAnsweringRuleExtensionInfo
+  /**
+   */
+  extension?: CompanyAnsweringRuleExtensionInfo
 }
 
 export default ListCompanyAnsweringRuleInfo

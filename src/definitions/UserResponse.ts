@@ -8,61 +8,61 @@ import Meta from './Meta'
 
 class UserResponse
 {
-    /**
-     * user status
-     */
-    active?: boolean
+  /**
+   * user status
+   */
+  active?: boolean
 
-    /**
-     */
-    addresses?: UserAddress[]
+  /**
+   */
+  addresses?: UserAddress[]
 
-    /**
-     * Required
-     */
-    emails?: Email[]
+  /**
+   * Required
+   */
+  emails?: Email[]
 
-    /**
-     * external unique resource id defined by provisioning client
-     */
-    externalId?: string
+  /**
+   * external unique resource id defined by provisioning client
+   */
+  externalId?: string
 
-    /**
-     * unique resource id defined by RingCentral
-     */
-    id?: string
+  /**
+   * unique resource id defined by RingCentral
+   */
+  id?: string
 
-    /**
-     * Required
-     */
-    name?: Name
+  /**
+   * Required
+   */
+  name?: Name
 
-    /**
-     */
-    phoneNumbers?: PhoneNumber[]
+  /**
+   */
+  phoneNumbers?: PhoneNumber[]
 
-    /**
-     */
-    photos?: Photo[]
+  /**
+   */
+  photos?: Photo[]
 
-    /**
-     * Required
-     */
-    schemas?: string[]
+  /**
+   * Required
+   */
+  schemas?: string[]
 
-    /**
-     */
-    "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User"?: EnterpriseUser
+  /**
+   */
+  "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User"?: EnterpriseUser
 
-    /**
-     * MUST be same as work type email address
-     * Required
-     */
-    userName?: string
+  /**
+   * MUST be same as work type email address
+   * Required
+   */
+  userName?: string
 
-    /**
-     */
-    meta?: Meta
+  /**
+   */
+  meta?: Meta
 }
 
 export default UserResponse

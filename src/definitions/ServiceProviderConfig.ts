@@ -5,41 +5,41 @@ import FilterSupported from './FilterSupported'
 
 class ServiceProviderConfig
 {
-    /**
-     */
-    authenticationSchemes?: AuthenticationScheme[]
+  /**
+   */
+  authenticationSchemes?: AuthenticationScheme[]
 
-    /**
-     */
-    bulk?: BulkSupported
+  /**
+   */
+  bulk?: BulkSupported
 
-    /**
-     */
-    changePassword?: Supported
+  /**
+   */
+  changePassword?: Supported
 
-    /**
-     */
-    etag?: Supported
+  /**
+   */
+  etag?: Supported
 
-    /**
-     */
-    filter?: FilterSupported
+  /**
+   */
+  filter?: FilterSupported
 
-    /**
-     */
-    patch?: Supported
+  /**
+   */
+  patch?: Supported
 
-    /**
-     */
-    schemas?: string[]
+  /**
+   */
+  schemas?: string[]
 
-    /**
-     */
-    sort?: Supported
+  /**
+   */
+  sort?: Supported
 
-    /**
-     */
-    xmlDataFormat?: Supported
+  /**
+   */
+  xmlDataFormat?: Supported
 }
 
 export default ServiceProviderConfig

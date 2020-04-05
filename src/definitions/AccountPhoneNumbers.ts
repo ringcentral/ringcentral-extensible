@@ -4,25 +4,25 @@ import ProvisioningPagingInfo from './ProvisioningPagingInfo'
 
 class AccountPhoneNumbers
 {
-    /**
-     * Link to the list of account phone numbers
-     */
-    uri?: string
+  /**
+   * Link to the list of account phone numbers
+   */
+  uri?: string
 
-    /**
-     * List of account phone numbers
-     */
-    records?: CompanyPhoneNumberInfo[]
+  /**
+   * List of account phone numbers
+   */
+  records?: CompanyPhoneNumberInfo[]
 
-    /**
-     * Information on navigation
-     */
-    navigation?: ProvisioningNavigationInfo
+  /**
+   * Information on navigation
+   */
+  navigation?: ProvisioningNavigationInfo
 
-    /**
-     * Information on paging
-     */
-    paging?: ProvisioningPagingInfo
+  /**
+   * Information on paging
+   */
+  paging?: ProvisioningPagingInfo
 }
 
 export default AccountPhoneNumbers

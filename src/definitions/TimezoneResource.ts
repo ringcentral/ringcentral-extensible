@@ -1,20 +1,20 @@
 class TimezoneResource
 {
-    /**
-     */
-    uri?: string
+  /**
+   */
+  uri?: string
 
-    /**
-     */
-    id?: string
+  /**
+   */
+  id?: string
 
-    /**
-     */
-    name?: string
+  /**
+   */
+  name?: string
 
-    /**
-     */
-    description?: string
+  /**
+   */
+  description?: string
 }
 
 export default TimezoneResource

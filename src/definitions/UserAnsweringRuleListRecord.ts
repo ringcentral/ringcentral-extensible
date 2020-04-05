@@ -1,30 +1,30 @@
 class UserAnsweringRuleListRecord
 {
-    /**
-     * Canonical URI to an answering rule resource
-     */
-    uri?: string
+  /**
+   * Canonical URI to an answering rule resource
+   */
+  uri?: string
 
-    /**
-     * Internal identifier of an asnwering rule
-     */
-    id?: string
+  /**
+   * Internal identifier of an asnwering rule
+   */
+  id?: string
 
-    /**
-     * Type of an answering rule
-     * Enum: BusinessHours, AfterHours, Custom
-     */
-    type?: string
+  /**
+   * Type of an answering rule
+   * Enum: BusinessHours, AfterHours, Custom
+   */
+  type?: string
 
-    /**
-     * Name of an answering rule specified by user
-     */
-    name?: string
+  /**
+   * Name of an answering rule specified by user
+   */
+  name?: string
 
-    /**
-     * Specifies if an answering rule is active or inactive
-     */
-    enabled?: boolean
+  /**
+   * Specifies if an answering rule is active or inactive
+   */
+  enabled?: boolean
 }
 
 export default UserAnsweringRuleListRecord

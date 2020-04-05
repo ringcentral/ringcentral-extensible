@@ -13,114 +13,114 @@ import AutomaticLocationUpdatesSiteInfo from './AutomaticLocationUpdatesSiteInfo
 
 class GetExtensionInfoResponse
 {
-    /**
-     * Internal identifier of an extension
-     * Required
-     */
-    id?: number
+  /**
+   * Internal identifier of an extension
+   * Required
+   */
+  id?: number
 
-    /**
-     * Canonical URI of an extension
-     * Required
-     */
-    uri?: string
+  /**
+   * Canonical URI of an extension
+   * Required
+   */
+  uri?: string
 
-    /**
-     * Account information
-     */
-    account?: GetExtensionAccountInfo
+  /**
+   * Account information
+   */
+  account?: GetExtensionAccountInfo
 
-    /**
-     * Contact detailed information
-     */
-    contact?: ContactInfo
+  /**
+   * Contact detailed information
+   */
+  contact?: ContactInfo
 
-    /**
-     * Information on department extension(s), to which the requested extension belongs. Returned only for user extensions, members of department, requested by single extensionId
-     */
-    departments?: DepartmentInfo[]
+  /**
+   * Information on department extension(s), to which the requested extension belongs. Returned only for user extensions, members of department, requested by single extensionId
+   */
+  departments?: DepartmentInfo[]
 
-    /**
-     * Number of department extension
-     */
-    extensionNumber?: string
+  /**
+   * Number of department extension
+   */
+  extensionNumber?: string
 
-    /**
-     * Extension name. For user extension types the value is a combination of the specified first name and last name
-     */
-    name?: string
+  /**
+   * Extension name. For user extension types the value is a combination of the specified first name and last name
+   */
+  name?: string
 
-    /**
-     * For Partner Applications Internal identifier of an extension created by partner. The RingCentral supports the mapping of accounts and stores the corresponding account ID/extension ID for each partner ID of a client application. In request URIs partner IDs are accepted instead of regular RingCentral native IDs as path parameters using pid = XXX clause. Though in response URIs contain the corresponding account IDs and extension IDs. In all request and response bodies these values are reflected via partnerId attributes of account and extension
-     */
-    partnerId?: string
+  /**
+   * For Partner Applications Internal identifier of an extension created by partner. The RingCentral supports the mapping of accounts and stores the corresponding account ID/extension ID for each partner ID of a client application. In request URIs partner IDs are accepted instead of regular RingCentral native IDs as path parameters using pid = XXX clause. Though in response URIs contain the corresponding account IDs and extension IDs. In all request and response bodies these values are reflected via partnerId attributes of account and extension
+   */
+  partnerId?: string
 
-    /**
-     */
-    permissions?: ExtensionPermissions
+  /**
+   */
+  permissions?: ExtensionPermissions
 
-    /**
-     * Information on profile image
-     */
-    profileImage?: ProfileImageInfo
+  /**
+   * Information on profile image
+   */
+  profileImage?: ProfileImageInfo
 
-    /**
-     * List of non-RC internal identifiers assigned to an extension
-     */
-    references?: ReferenceInfo[]
+  /**
+   * List of non-RC internal identifiers assigned to an extension
+   */
+  references?: ReferenceInfo[]
 
-    /**
-     */
-    roles?: Roles[]
+  /**
+   */
+  roles?: Roles[]
 
-    /**
-     * Extension region data (timezone, home country, language)
-     */
-    regionalSettings?: RegionalSettings
+  /**
+   * Extension region data (timezone, home country, language)
+   */
+  regionalSettings?: RegionalSettings
 
-    /**
-     * Extension service features returned in response only when the logged-in user requests his/her own extension info, see also Extension Service Features
-     */
-    serviceFeatures?: ExtensionServiceFeatureInfo[]
+  /**
+   * Extension service features returned in response only when the logged-in user requests his/her own extension info, see also Extension Service Features
+   */
+  serviceFeatures?: ExtensionServiceFeatureInfo[]
 
-    /**
-     * Specifies extension configuration wizard state (web service setup).
-     * Default: NotStarted
-     * Enum: NotStarted, Incomplete, Completed
-     */
-    setupWizardState?: string
+  /**
+   * Specifies extension configuration wizard state (web service setup).
+   * Default: NotStarted
+   * Enum: NotStarted, Incomplete, Completed
+   */
+  setupWizardState?: string
 
-    /**
-     * Extension current state. If 'Unassigned' is specified, then extensions without ‘extensionNumber’ are returned. If not specified, then all extensions are returned
-     * Enum: Enabled, Disabled, Frozen, NotActivated, Unassigned
-     */
-    status?: string
+  /**
+   * Extension current state. If 'Unassigned' is specified, then extensions without ‘extensionNumber’ are returned. If not specified, then all extensions are returned
+   * Enum: Enabled, Disabled, Frozen, NotActivated, Unassigned
+   */
+  status?: string
 
-    /**
-     * Status information (reason, comment). Returned for 'Disabled' status only
-     */
-    statusInfo?: ExtensionStatusInfo
+  /**
+   * Status information (reason, comment). Returned for 'Disabled' status only
+   */
+  statusInfo?: ExtensionStatusInfo
 
-    /**
-     * Extension type
-     * Enum: User, FaxUser, VirtualUser, DigitalUser, Department, Announcement, Voicemail, SharedLinesGroup, PagingOnly, IvrMenu, ApplicationExtension, ParkLocation, Bot, Room, Limited, Site
-     */
-    type?: string
+  /**
+   * Extension type
+   * Enum: User, FaxUser, VirtualUser, DigitalUser, Department, Announcement, Voicemail, SharedLinesGroup, PagingOnly, IvrMenu, ApplicationExtension, ParkLocation, Bot, Room, Limited, Site
+   */
+  type?: string
 
-    /**
-     * For Department extension type only. Call queue settings
-     */
-    callQueueInfo?: CallQueueExtensionInfo
+  /**
+   * For Department extension type only. Call queue settings
+   */
+  callQueueInfo?: CallQueueExtensionInfo
 
-    /**
-     * Hides extension from showing in company directory. Supported for extensions of User type only
-     */
-    hidden?: boolean
+  /**
+   * Hides extension from showing in company directory. Supported for extensions of User type only
+   */
+  hidden?: boolean
 
-    /**
-     * Site data. If multi-site feature is turned on for the account, then internal identifier of a site must be specified. To assign the wireless point to the main site (company) set site ID to `main-site`
-     */
-    site?: AutomaticLocationUpdatesSiteInfo
+  /**
+   * Site data. If multi-site feature is turned on for the account, then internal identifier of a site must be specified. To assign the wireless point to the main site (company) set site ID to `main-site`
+   */
+  site?: AutomaticLocationUpdatesSiteInfo
 }
 
 export default GetExtensionInfoResponse

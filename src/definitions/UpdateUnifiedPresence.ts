@@ -3,13 +3,13 @@ import UpdateUnifiedPresenceTelephony from './UpdateUnifiedPresenceTelephony'
 
 class UpdateUnifiedPresence
 {
-    /**
-     */
-    glip?: UpdateUnifiedPresenceGlip
+  /**
+   */
+  glip?: UpdateUnifiedPresenceGlip
 
-    /**
-     */
-    telephony?: UpdateUnifiedPresenceTelephony
+  /**
+   */
+  telephony?: UpdateUnifiedPresenceTelephony
 }
 
 export default UpdateUnifiedPresence

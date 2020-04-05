@@ -4,30 +4,30 @@ import SIPFlagsResponse from './SIPFlagsResponse'
 
 class CreateSipRegistrationResponse
 {
-    /**
-     */
-    device?: SipRegistrationDeviceInfo
+  /**
+   */
+  device?: SipRegistrationDeviceInfo
 
-    /**
-     * SIP settings for device
-     * Required
-     */
-    sipInfo?: SIPInfoResponse[]
+  /**
+   * SIP settings for device
+   * Required
+   */
+  sipInfo?: SIPInfoResponse[]
 
-    /**
-     * SIP PSTN settings for device
-     */
-    sipInfoPstn?: SIPInfoResponse[]
+  /**
+   * SIP PSTN settings for device
+   */
+  sipInfoPstn?: SIPInfoResponse[]
 
-    /**
-     * SIP flags data
-     * Required
-     */
-    sipFlags?: SIPFlagsResponse[]
+  /**
+   * SIP flags data
+   * Required
+   */
+  sipFlags?: SIPFlagsResponse[]
 
-    /**
-     */
-    sipErrorCodes?: string[]
+  /**
+   */
+  sipErrorCodes?: string[]
 }
 
 export default CreateSipRegistrationResponse

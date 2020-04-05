@@ -1,44 +1,44 @@
 class EmergencyServiceAddressResourceRequest
 {
-    /**
-     */
-    street?: string
+  /**
+   */
+  street?: string
 
-    /**
-     */
-    street2?: string
+  /**
+   */
+  street2?: string
 
-    /**
-     */
-    city?: string
+  /**
+   */
+  city?: string
 
-    /**
-     */
-    zip?: string
+  /**
+   */
+  zip?: string
 
-    /**
-     */
-    customerName?: string
+  /**
+   */
+  customerName?: string
 
-    /**
-     * State/province name
-     */
-    state?: string
+  /**
+   * State/province name
+   */
+  state?: string
 
-    /**
-     * Internal identifier of a state
-     */
-    stateId?: string
+  /**
+   * Internal identifier of a state
+   */
+  stateId?: string
 
-    /**
-     * Country name
-     */
-    country?: string
+  /**
+   * Country name
+   */
+  country?: string
 
-    /**
-     * Internal identifier of a country
-     */
-    countryId?: string
+  /**
+   * Internal identifier of a country
+   */
+  countryId?: string
 }
 
 export default EmergencyServiceAddressResourceRequest

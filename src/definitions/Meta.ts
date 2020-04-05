@@ -1,23 +1,23 @@
 // resource metadata
 class Meta
 {
-    /**
-     */
-    created?: string
+  /**
+   */
+  created?: string
 
-    /**
-     */
-    lastModified?: string
+  /**
+   */
+  lastModified?: string
 
-    /**
-     * resource location URI
-     */
-    location?: string
+  /**
+   * resource location URI
+   */
+  location?: string
 
-    /**
-     * Enum: User, Group
-     */
-    resourceType?: string
+  /**
+   * Enum: User, Group
+   */
+  resourceType?: string
 }
 
 export default Meta

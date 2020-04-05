@@ -1,24 +1,24 @@
 class ContactAddressInfo
 {
-    /**
-     * Street address
-     */
-    street?: string
+  /**
+   * Street address
+   */
+  street?: string
 
-    /**
-     * City name
-     */
-    city?: string
+  /**
+   * City name
+   */
+  city?: string
 
-    /**
-     * State/province name
-     */
-    state?: string
+  /**
+   * State/province name
+   */
+  state?: string
 
-    /**
-     * Zip/Postal code
-     */
-    zip?: string
+  /**
+   * Zip/Postal code
+   */
+  zip?: string
 }
 
 export default ContactAddressInfo

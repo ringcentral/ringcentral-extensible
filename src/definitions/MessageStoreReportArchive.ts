@@ -2,9 +2,9 @@ import ArchiveInfo from './ArchiveInfo'
 
 class MessageStoreReportArchive
 {
-    /**
-     */
-    records?: ArchiveInfo[]
+  /**
+   */
+  records?: ArchiveInfo[]
 }
 
 export default MessageStoreReportArchive

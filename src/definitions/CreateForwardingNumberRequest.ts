@@ -2,31 +2,31 @@ import CreateForwardingNumberDeviceInfo from './CreateForwardingNumberDeviceInfo
 
 class CreateForwardingNumberRequest
 {
-    /**
-     * Number assigned to the call flip phone number, corresponds to the shortcut dial number
-     */
-    flipNumber?: number
+  /**
+   * Number assigned to the call flip phone number, corresponds to the shortcut dial number
+   */
+  flipNumber?: number
 
-    /**
-     * Forwarding/Call flip phone number
-     */
-    phoneNumber?: string
+  /**
+   * Forwarding/Call flip phone number
+   */
+  phoneNumber?: string
 
-    /**
-     * Forwarding/Call flip number title
-     */
-    label?: string
+  /**
+   * Forwarding/Call flip number title
+   */
+  label?: string
 
-    /**
-     * Forwarding/Call flip phone type. If specified, 'label' attribute value is ignored. The default value is 'Other'
-     * Enum: PhoneLine, Home, Mobile, Work, Other
-     */
-    type?: string
+  /**
+   * Forwarding/Call flip phone type. If specified, 'label' attribute value is ignored. The default value is 'Other'
+   * Enum: PhoneLine, Home, Mobile, Work, Other
+   */
+  type?: string
 
-    /**
-     * Reference to the other extension device. Applicable for 'PhoneLine' type only. Cannot be specified together with 'phoneNumber' parameter.
-     */
-    device?: CreateForwardingNumberDeviceInfo
+  /**
+   * Reference to the other extension device. Applicable for 'PhoneLine' type only. Cannot be specified together with 'phoneNumber' parameter.
+   */
+  device?: CreateForwardingNumberDeviceInfo
 }
 
 export default CreateForwardingNumberRequest

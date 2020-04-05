@@ -4,21 +4,21 @@ import MeetingsNavigationInfo from './MeetingsNavigationInfo'
 
 class MeetingsResource
 {
-    /**
-     */
-    uri?: string
+  /**
+   */
+  uri?: string
 
-    /**
-     */
-    records?: MeetingResponseResource[]
+  /**
+   */
+  records?: MeetingResponseResource[]
 
-    /**
-     */
-    paging?: MeetingsPagingInfo
+  /**
+   */
+  paging?: MeetingsPagingInfo
 
-    /**
-     */
-    navigation?: MeetingsNavigationInfo
+  /**
+   */
+  navigation?: MeetingsNavigationInfo
 }
 
 export default MeetingsResource

@@ -2,17 +2,17 @@ import CallRecordingExtensionResource from './CallRecordingExtensionResource'
 
 class BulkAccountCallRecordingsResource
 {
-    /**
-     */
-    addedExtensions?: CallRecordingExtensionResource[]
+  /**
+   */
+  addedExtensions?: CallRecordingExtensionResource[]
 
-    /**
-     */
-    updatedExtensions?: CallRecordingExtensionResource[]
+  /**
+   */
+  updatedExtensions?: CallRecordingExtensionResource[]
 
-    /**
-     */
-    removedExtensions?: CallRecordingExtensionResource[]
+  /**
+   */
+  removedExtensions?: CallRecordingExtensionResource[]
 }
 
 export default BulkAccountCallRecordingsResource

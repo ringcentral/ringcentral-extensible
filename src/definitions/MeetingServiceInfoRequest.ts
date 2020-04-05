@@ -2,9 +2,9 @@ import MeetingExternalUserInfoResource from './MeetingExternalUserInfoResource'
 
 class MeetingServiceInfoRequest
 {
-    /**
-     */
-    externalUserInfo?: MeetingExternalUserInfoResource
+  /**
+   */
+  externalUserInfo?: MeetingExternalUserInfoResource
 }
 
 export default MeetingServiceInfoRequest

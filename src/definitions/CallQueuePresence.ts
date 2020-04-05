@@ -2,9 +2,9 @@ import CallQueueMemberPresence from './CallQueueMemberPresence'
 
 class CallQueuePresence
 {
-    /**
-     */
-    records?: CallQueueMemberPresence[]
+  /**
+   */
+  records?: CallQueueMemberPresence[]
 }
 
 export default CallQueuePresence

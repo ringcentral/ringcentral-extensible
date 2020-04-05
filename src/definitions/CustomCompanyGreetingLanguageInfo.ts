@@ -1,24 +1,24 @@
 class CustomCompanyGreetingLanguageInfo
 {
-    /**
-     * Internal identifier of a greeting language
-     */
-    id?: string
+  /**
+   * Internal identifier of a greeting language
+   */
+  id?: string
 
-    /**
-     * Link to a greeting language
-     */
-    uri?: string
+  /**
+   * Link to a greeting language
+   */
+  uri?: string
 
-    /**
-     * Name of a greeting language
-     */
-    name?: string
+  /**
+   * Name of a greeting language
+   */
+  name?: string
 
-    /**
-     * Locale code of a greeting language
-     */
-    localeCode?: string
+  /**
+   * Locale code of a greeting language
+   */
+  localeCode?: string
 }
 
 export default CustomCompanyGreetingLanguageInfo

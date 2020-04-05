@@ -3,25 +3,25 @@ import MethodResource from './MethodResource'
 
 class ShippingResource
 {
-    /**
-     */
-    address?: ShippingAddressInfo
+  /**
+   */
+  address?: ShippingAddressInfo
 
-    /**
-     */
-    method?: MethodResource
+  /**
+   */
+  method?: MethodResource
 
-    /**
-     */
-    status?: string
+  /**
+   */
+  status?: string
 
-    /**
-     */
-    carrier?: string
+  /**
+   */
+  carrier?: string
 
-    /**
-     */
-    trackingNumber?: string
+  /**
+   */
+  trackingNumber?: string
 }
 
 export default ShippingResource

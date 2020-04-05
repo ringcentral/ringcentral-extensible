@@ -1,19 +1,19 @@
 class GreetingLanguageInfo
 {
-    /**
-     * Internal identifier of a greeting language
-     */
-    id?: string
+  /**
+   * Internal identifier of a greeting language
+   */
+  id?: string
 
-    /**
-     * Localization code of a greeting language
-     */
-    localeCode?: string
+  /**
+   * Localization code of a greeting language
+   */
+  localeCode?: string
 
-    /**
-     * Official name of a greeting language
-     */
-    name?: string
+  /**
+   * Official name of a greeting language
+   */
+  name?: string
 }
 
 export default GreetingLanguageInfo

@@ -2,15 +2,15 @@ import CallQueueId from './CallQueueId'
 
 class ExtensionCallQueueUpdatePresence
 {
-    /**
-     * Call queue information
-     */
-    callQueue?: CallQueueId
+  /**
+   * Call queue information
+   */
+  callQueue?: CallQueueId
 
-    /**
-     * Call queue agent availability for calls of this queue
-     */
-    acceptCalls?: boolean
+  /**
+   * Call queue agent availability for calls of this queue
+   */
+  acceptCalls?: boolean
 }
 
 export default ExtensionCallQueueUpdatePresence

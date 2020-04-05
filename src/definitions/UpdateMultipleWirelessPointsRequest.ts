@@ -2,9 +2,9 @@ import UpdateWirelessPoint from './UpdateWirelessPoint'
 
 class UpdateMultipleWirelessPointsRequest
 {
-    /**
-     */
-    records?: UpdateWirelessPoint[]
+  /**
+   */
+  records?: UpdateWirelessPoint[]
 }
 
 export default UpdateMultipleWirelessPointsRequest

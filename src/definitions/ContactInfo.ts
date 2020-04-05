@@ -3,60 +3,60 @@ import PronouncedNameInfo from './PronouncedNameInfo'
 
 class ContactInfo
 {
-    /**
-     * For User extension type only. Extension user first name
-     * Required
-     */
-    firstName?: string
+  /**
+   * For User extension type only. Extension user first name
+   * Required
+   */
+  firstName?: string
 
-    /**
-     * For User extension type only. Extension user last name
-     */
-    lastName?: string
+  /**
+   * For User extension type only. Extension user last name
+   */
+  lastName?: string
 
-    /**
-     * Extension user company name
-     */
-    company?: string
+  /**
+   * Extension user company name
+   */
+  company?: string
 
-    /**
-     */
-    jobTitle?: string
+  /**
+   */
+  jobTitle?: string
 
-    /**
-     * Email of extension user
-     */
-    email?: string
+  /**
+   * Email of extension user
+   */
+  email?: string
 
-    /**
-     * Extension user contact phone number in [E.164](https://www.itu.int/rec/T-REC-E.164-201011-I) (with '+' sign) format
-     */
-    businessPhone?: string
+  /**
+   * Extension user contact phone number in [E.164](https://www.itu.int/rec/T-REC-E.164-201011-I) (with '+' sign) format
+   */
+  businessPhone?: string
 
-    /**
-     * Extension user mobile (**non** Toll Free) phone number in [E.164](https://www.itu.int/rec/T-REC-E.164-201011-I) (with '+' sign) format
-     */
-    mobilePhone?: string
+  /**
+   * Extension user mobile (**non** Toll Free) phone number in [E.164](https://www.itu.int/rec/T-REC-E.164-201011-I) (with '+' sign) format
+   */
+  mobilePhone?: string
 
-    /**
-     * Business address of extension user company
-     */
-    businessAddress?: ContactBusinessAddressInfo
+  /**
+   * Business address of extension user company
+   */
+  businessAddress?: ContactBusinessAddressInfo
 
-    /**
-     * If 'True' then contact email is enabled as login name for this user. Please note that email should be unique in this case.
-     * Default: False
-     */
-    emailAsLoginName?: boolean
+  /**
+   * If 'True' then contact email is enabled as login name for this user. Please note that email should be unique in this case.
+   * Default: False
+   */
+  emailAsLoginName?: boolean
 
-    /**
-     */
-    pronouncedName?: PronouncedNameInfo
+  /**
+   */
+  pronouncedName?: PronouncedNameInfo
 
-    /**
-     * Extension user department, if any
-     */
-    department?: string
+  /**
+   * Extension user department, if any
+   */
+  department?: string
 }
 
 export default ContactInfo

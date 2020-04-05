@@ -2,9 +2,9 @@ import GlipWebhookInfo from './GlipWebhookInfo'
 
 class GlipWebhookList
 {
-    /**
-     */
-    records?: GlipWebhookInfo[]
+  /**
+   */
+  records?: GlipWebhookInfo[]
 }
 
 export default GlipWebhookList

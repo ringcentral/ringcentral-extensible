@@ -2,9 +2,9 @@ import ExtensionInfo from './ExtensionInfo'
 
 class TransferredExtensionInfo
 {
-    /**
-     */
-    extension?: ExtensionInfo
+  /**
+   */
+  extension?: ExtensionInfo
 }
 
 export default TransferredExtensionInfo

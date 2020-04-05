@@ -3,15 +3,15 @@ import GlipNavigationInfo from './GlipNavigationInfo'
 
 class GlipConversationsList
 {
-    /**
-     * List of conversations
-     * Required
-     */
-    records?: GlipConversationInfo[]
+  /**
+   * List of conversations
+   * Required
+   */
+  records?: GlipConversationInfo[]
 
-    /**
-     */
-    navigation?: GlipNavigationInfo
+  /**
+   */
+  navigation?: GlipNavigationInfo
 }
 
 export default GlipConversationsList

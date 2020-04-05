@@ -4,25 +4,25 @@ import CallHandlingPagingInfo from './CallHandlingPagingInfo'
 
 class IVRPrompts
 {
-    /**
-     * Link to prompts library resource
-     */
-    uri?: string
+  /**
+   * Link to prompts library resource
+   */
+  uri?: string
 
-    /**
-     * List of Prompts
-     */
-    records?: PromptInfo[]
+  /**
+   * List of Prompts
+   */
+  records?: PromptInfo[]
 
-    /**
-     * Information on navigation
-     */
-    navigation?: CallHandlingNavigationInfo
+  /**
+   * Information on navigation
+   */
+  navigation?: CallHandlingNavigationInfo
 
-    /**
-     * Information on paging
-     */
-    paging?: CallHandlingPagingInfo
+  /**
+   * Information on paging
+   */
+  paging?: CallHandlingPagingInfo
 }
 
 export default IVRPrompts

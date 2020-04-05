@@ -1,17 +1,17 @@
 class ListUserTemplatesParameters
 {
-    /**
-     * Enum: UserSettings, CallHandling
-     */
-    type?: string
+  /**
+   * Enum: UserSettings, CallHandling
+   */
+  type?: string
 
-    /**
-     */
-    page?: string
+  /**
+   */
+  page?: string
 
-    /**
-     */
-    perPage?: string
+  /**
+   */
+  perPage?: string
 }
 
 export default ListUserTemplatesParameters

@@ -2,14 +2,14 @@ import AutomaticLocationUpdatesPhoneNumberInfo from './AutomaticLocationUpdatesP
 
 class AutomaticLocationUpdatesPhoneLine
 {
-    /**
-     * Enum: Unknown, Standalone, StandaloneFree, BlaPrimary, BlaSecondary, BLF
-     */
-    lineType?: string
+  /**
+   * Enum: Unknown, Standalone, StandaloneFree, BlaPrimary, BlaSecondary, BLF
+   */
+  lineType?: string
 
-    /**
-     */
-    phoneInfo?: AutomaticLocationUpdatesPhoneNumberInfo
+  /**
+   */
+  phoneInfo?: AutomaticLocationUpdatesPhoneNumberInfo
 }
 
 export default AutomaticLocationUpdatesPhoneLine

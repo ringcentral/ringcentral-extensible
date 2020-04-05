@@ -2,9 +2,9 @@ import WirelessPointInfoRequest from './WirelessPointInfoRequest'
 
 class ValidateMultipleWirelessPointsRequest
 {
-    /**
-     */
-    records?: WirelessPointInfoRequest[]
+  /**
+   */
+  records?: WirelessPointInfoRequest[]
 }
 
 export default ValidateMultipleWirelessPointsRequest

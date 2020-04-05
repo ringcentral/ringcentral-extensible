@@ -1,21 +1,21 @@
 class CallQueueInfoRequest
 {
-    /**
-     * Target percentage of calls that must be answered by agents within the service level time threshold
-     */
-    slaGoal?: number
+  /**
+   * Target percentage of calls that must be answered by agents within the service level time threshold
+   */
+  slaGoal?: number
 
-    /**
-     */
-    slaThresholdSeconds?: number
+  /**
+   */
+  slaThresholdSeconds?: number
 
-    /**
-     */
-    includeAbandonedCalls?: boolean
+  /**
+   */
+  includeAbandonedCalls?: boolean
 
-    /**
-     */
-    abandonedThresholdSeconds?: number
+  /**
+   */
+  abandonedThresholdSeconds?: number
 }
 
 export default CallQueueInfoRequest

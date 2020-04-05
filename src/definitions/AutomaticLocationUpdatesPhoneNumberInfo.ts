@@ -1,14 +1,14 @@
 class AutomaticLocationUpdatesPhoneNumberInfo
 {
-    /**
-     * Internal identifier of a phone number
-     */
-    id?: number
+  /**
+   * Internal identifier of a phone number
+   */
+  id?: number
 
-    /**
-     * Phone number
-     */
-    phoneNumber?: string
+  /**
+   * Phone number
+   */
+  phoneNumber?: string
 }
 
 export default AutomaticLocationUpdatesPhoneNumberInfo

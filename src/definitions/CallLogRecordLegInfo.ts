@@ -7,68 +7,68 @@ import CallLogRecordMessage from './CallLogRecordMessage'
 
 class CallLogRecordLegInfo
 {
-    /**
-     * Action description of the call operation
-     * Enum: Unknown, Phone Call, Phone Login, Incoming Fax, Accept Call, External Application, FindMe, FollowMe, Outgoing Fax, CallOut-CallMe, Call Return, Calling Card, Monitoring, Ring Directly, RingOut Web, Text Relay, VoIP Call, RingOut PC, RingMe, Transfer, 411 Info, Emergency, E911 Update, Support, RingOut Mobile
-     */
-    action?: string
+  /**
+   * Action description of the call operation
+   * Enum: Unknown, Phone Call, Phone Login, Incoming Fax, Accept Call, External Application, FindMe, FollowMe, Outgoing Fax, CallOut-CallMe, Call Return, Calling Card, Monitoring, Ring Directly, RingOut Web, Text Relay, VoIP Call, RingOut PC, RingMe, Transfer, 411 Info, Emergency, E911 Update, Support, RingOut Mobile
+   */
+  action?: string
 
-    /**
-     * Call direction
-     * Enum: Inbound, Outbound
-     */
-    direction?: string
+  /**
+   * Call direction
+   * Enum: Inbound, Outbound
+   */
+  direction?: string
 
-    /**
-     * Billing information related to the call
-     */
-    billing?: BillingInfo
+  /**
+   * Billing information related to the call
+   */
+  billing?: BillingInfo
 
-    /**
-     * Information on a delegate extension that actually implemented a call action. For Secretary call log the field is returned if the current extension implemented a call. For Boss call log the field contains information on a Secretary extension which actually implemented a call on behalf of the current extension
-     */
-    delegate?: DelegateInfo
+  /**
+   * Information on a delegate extension that actually implemented a call action. For Secretary call log the field is returned if the current extension implemented a call. For Boss call log the field contains information on a Secretary extension which actually implemented a call on behalf of the current extension
+   */
+  delegate?: DelegateInfo
 
-    /**
-     * Internal identifier of an extension
-     */
-    extensionId?: string
+  /**
+   * Internal identifier of an extension
+   */
+  extensionId?: string
 
-    /**
-     * Call duration in seconds
-     */
-    duration?: number
+  /**
+   * Call duration in seconds
+   */
+  duration?: number
 
-    /**
-     * Information on extension
-     */
-    extension?: ExtensionInfoCallLog
+  /**
+   * Information on extension
+   */
+  extension?: ExtensionInfoCallLog
 
-    /**
-     * Leg type
-     * Enum: SipForwarding, ServiceMinus2, ServiceMinus3, PstnToSip, Accept, FindMe, FollowMe, TestCall, FaxSent, CallBack, CallingCard, RingDirectly, RingOutWebToSubscriber, RingOutWebToCaller, SipToPstnMetered, RingOutClientToSubscriber, RingOutClientToCaller, RingMe, TransferCall, SipToPstnUnmetered, RingOutDeviceToSubscriber, RingOutDeviceToCaller, RingOutOneLegToCaller, ExtensionToExtension, CallPark, PagingServer, Hunting, OutgoingFreeSpDl, ParkLocation, ConferenceCall, MobileApp, Monitoring, MoveToConference, Unknown
-     */
-    legType?: string
+  /**
+   * Leg type
+   * Enum: SipForwarding, ServiceMinus2, ServiceMinus3, PstnToSip, Accept, FindMe, FollowMe, TestCall, FaxSent, CallBack, CallingCard, RingDirectly, RingOutWebToSubscriber, RingOutWebToCaller, SipToPstnMetered, RingOutClientToSubscriber, RingOutClientToCaller, RingMe, TransferCall, SipToPstnUnmetered, RingOutDeviceToSubscriber, RingOutDeviceToCaller, RingOutOneLegToCaller, ExtensionToExtension, CallPark, PagingServer, Hunting, OutgoingFreeSpDl, ParkLocation, ConferenceCall, MobileApp, Monitoring, MoveToConference, Unknown
+   */
+  legType?: string
 
-    /**
-     * The call start datetime in (ISO 8601)[https://en.wikipedia.org/wiki/ISO_8601] format including timezone, for example 2016-03-10T18:07:52.534Z
-     */
-    startTime?: string
+  /**
+   * The call start datetime in (ISO 8601)[https://en.wikipedia.org/wiki/ISO_8601] format including timezone, for example 2016-03-10T18:07:52.534Z
+   */
+  startTime?: string
 
-    /**
-     * Call type
-     * Enum: Voice, Fax
-     */
-    type?: string
+  /**
+   * Call type
+   * Enum: Voice, Fax
+   */
+  type?: string
 
-    /**
-     * Status description of the call operation
-     * Enum: Unknown, Accepted, Call connected, In Progress, Voicemail, Reply, Missed, Busy, Rejected, No Answer, Hang Up, Blocked, Suspended account, Call Failed, Call Failure, Internal Error, IP Phone Offline, No Calling Credit, Not Allowed, Restricted Number, Wrong Number, Answered Not Accepted, Stopped, International Disabled, International Restricted, Abandoned, Declined, Received, Fax on Demand, Partial Receive, Receive Error, Fax Receipt Error, Sent, Fax Partially Sent, Send Error, Fax Not Sent, Fax Poor Line
-     */
-    result?: string
+  /**
+   * Status description of the call operation
+   * Enum: Unknown, Accepted, Call connected, In Progress, Voicemail, Reply, Missed, Busy, Rejected, No Answer, Hang Up, Blocked, Suspended account, Call Failed, Call Failure, Internal Error, IP Phone Offline, No Calling Credit, Not Allowed, Restricted Number, Wrong Number, Answered Not Accepted, Stopped, International Disabled, International Restricted, Abandoned, Declined, Received, Fax on Demand, Partial Receive, Receive Error, Fax Receipt Error, Sent, Fax Partially Sent, Send Error, Fax Not Sent, Fax Poor Line
+   */
+  result?: string
 
-    /**
-     * Reason of a call result:
+  /**
+   * Reason of a call result:
  *  * `Accepted` - The call was connected to and accepted by this number
  *  * `Connected` - The call was answered, but there was no response on how to handle the call (for example, a voice mail system answered the call and did not push "1" to accept)
  *  * `Line Busy` - The phone number you dialed was busy
@@ -102,48 +102,48 @@ class CallLogRecordLegInfo
  *  * `Fax Prepare Error` - An internal error occurred when preparing the fax. Please try again
  *  * `Fax Save Error` - An internal error occurred when saving the fax. Please try again
  *  * `Fax Send Error` - An error occurred when sending the fax. Please try again
-     * Enum: Accepted, Connected, line Busy, Not Answered, No Answer, Hang Up, Stopped, Internal Error, No Credit, Restricted Number, Wrong Number, International Disabled, International Restricted, Bad Number, Info 411 Restricted, Customer 611 Restricted, No Digital Line, Failed Try Again, Max Call Limit, Too Many Calls, Calls Not Accepted, Number Not Allowed, Number Blocked, Number Disabled, Not Allowed, Resource Error, Call Loop, Fax Not Received, Fax Partially Sent, Fax Not Sent, Fax Poor Line, Fax Prepare Error, Fax Save Error, Fax Send Error
-     */
-    reason?: string
+   * Enum: Accepted, Connected, line Busy, Not Answered, No Answer, Hang Up, Stopped, Internal Error, No Credit, Restricted Number, Wrong Number, International Disabled, International Restricted, Bad Number, Info 411 Restricted, Customer 611 Restricted, No Digital Line, Failed Try Again, Max Call Limit, Too Many Calls, Calls Not Accepted, Number Not Allowed, Number Blocked, Number Disabled, Not Allowed, Resource Error, Call Loop, Fax Not Received, Fax Partially Sent, Fax Not Sent, Fax Poor Line, Fax Prepare Error, Fax Save Error, Fax Send Error
+   */
+  reason?: string
 
-    /**
-     */
-    reasonDescription?: string
+  /**
+   */
+  reasonDescription?: string
 
-    /**
-     * Caller information
-     */
-    from?: CallLogCallerInfo
+  /**
+   * Caller information
+   */
+  from?: CallLogCallerInfo
 
-    /**
-     * Callee information
-     */
-    to?: CallLogCallerInfo
+  /**
+   * Callee information
+   */
+  to?: CallLogCallerInfo
 
-    /**
-     * Call transport
-     * Enum: PSTN, VoIP
-     */
-    transport?: string
+  /**
+   * Call transport
+   * Enum: PSTN, VoIP
+   */
+  transport?: string
 
-    /**
-     * Call recording data. Returned if the call is recorded
-     */
-    recording?: CallLogRecordingInfo
+  /**
+   * Call recording data. Returned if the call is recorded
+   */
+  recording?: CallLogRecordingInfo
 
-    /**
-     * Indicates that the recording is too short and therefore wouldn't be returned. The flag is not returned if the value is false
-     */
-    shortRecording?: boolean
+  /**
+   * Indicates that the recording is too short and therefore wouldn't be returned. The flag is not returned if the value is false
+   */
+  shortRecording?: boolean
 
-    /**
-     * Returned for 'Detailed' call log. Specifies if the leg is master-leg
-     */
-    master?: boolean
+  /**
+   * Returned for 'Detailed' call log. Specifies if the leg is master-leg
+   */
+  master?: boolean
 
-    /**
-     */
-    message?: CallLogRecordMessage
+  /**
+   */
+  message?: CallLogRecordMessage
 }
 
 export default CallLogRecordLegInfo

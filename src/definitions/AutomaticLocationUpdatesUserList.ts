@@ -4,22 +4,22 @@ import ProvisioningPagingInfo from './ProvisioningPagingInfo'
 
 class AutomaticLocationUpdatesUserList
 {
-    /**
-     * Link to the users list resource
-     */
-    uri?: string
+  /**
+   * Link to the users list resource
+   */
+  uri?: string
 
-    /**
-     */
-    records?: AutomaticLocationUpdatesUserInfo[]
+  /**
+   */
+  records?: AutomaticLocationUpdatesUserInfo[]
 
-    /**
-     */
-    navigation?: ProvisioningNavigationInfo
+  /**
+   */
+  navigation?: ProvisioningNavigationInfo
 
-    /**
-     */
-    paging?: ProvisioningPagingInfo
+  /**
+   */
+  paging?: ProvisioningPagingInfo
 }
 
 export default AutomaticLocationUpdatesUserList

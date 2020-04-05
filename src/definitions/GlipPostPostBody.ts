@@ -2,16 +2,16 @@ import GlipPostPostBodyAttachment from './GlipPostPostBodyAttachment'
 
 class GlipPostPostBody
 {
-    /**
-     * Post text.
-     * Required
-     */
-    text?: string
+  /**
+   * Post text.
+   * Required
+   */
+  text?: string
 
-    /**
-     * Identifier(s) of attachments.
-     */
-    attachments?: GlipPostPostBodyAttachment[]
+  /**
+   * Identifier(s) of attachments.
+   */
+  attachments?: GlipPostPostBodyAttachment[]
 }
 
 export default GlipPostPostBody

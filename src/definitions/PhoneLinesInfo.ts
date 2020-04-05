@@ -3,25 +3,25 @@ import EmergencyAddress from './EmergencyAddress'
 
 class PhoneLinesInfo
 {
-    /**
-     * Internal identifier of a phone line
-     */
-    id?: string
+  /**
+   * Internal identifier of a phone line
+   */
+  id?: string
 
-    /**
-     * Type of phone line
-     * Enum: Standalone, StandaloneFree, BlaPrimary, BlaSecondary
-     */
-    lineType?: string
+  /**
+   * Type of phone line
+   * Enum: Standalone, StandaloneFree, BlaPrimary, BlaSecondary
+   */
+  lineType?: string
 
-    /**
-     * Phone number information
-     */
-    phoneInfo?: PhoneNumberInfoIntId
+  /**
+   * Phone number information
+   */
+  phoneInfo?: PhoneNumberInfoIntId
 
-    /**
-     */
-    emergencyAddress?: EmergencyAddress
+  /**
+   */
+  emergencyAddress?: EmergencyAddress
 }
 
 export default PhoneLinesInfo

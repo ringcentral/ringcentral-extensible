@@ -4,23 +4,23 @@ import ProvisioningPagingInfo from './ProvisioningPagingInfo'
 
 class SwitchesList
 {
-    /**
-     * Link to the switches list resource
-     */
-    uri?: string
+  /**
+   * Link to the switches list resource
+   */
+  uri?: string
 
-    /**
-     * Switches map
-     */
-    records?: SwitchInfo[]
+  /**
+   * Switches map
+   */
+  records?: SwitchInfo[]
 
-    /**
-     */
-    navigation?: ProvisioningNavigationInfo
+  /**
+   */
+  navigation?: ProvisioningNavigationInfo
 
-    /**
-     */
-    paging?: ProvisioningPagingInfo
+  /**
+   */
+  paging?: ProvisioningPagingInfo
 }
 
 export default SwitchesList

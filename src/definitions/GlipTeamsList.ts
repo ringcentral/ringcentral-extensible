@@ -3,15 +3,15 @@ import GlipNavigationInfo from './GlipNavigationInfo'
 
 class GlipTeamsList
 {
-    /**
-     * List of teams
-     * Required
-     */
-    records?: GlipTeamInfo[]
+  /**
+   * List of teams
+   * Required
+   */
+  records?: GlipTeamInfo[]
 
-    /**
-     */
-    navigation?: GlipNavigationInfo
+  /**
+   */
+  navigation?: GlipNavigationInfo
 }
 
 export default GlipTeamsList

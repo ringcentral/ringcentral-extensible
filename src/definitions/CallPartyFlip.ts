@@ -1,9 +1,9 @@
 class CallPartyFlip
 {
-    /**
-     * Call flip id
-     */
-    callFlipId?: string
+  /**
+   * Call flip id
+   */
+  callFlipId?: string
 }
 
 export default CallPartyFlip

@@ -2,9 +2,9 @@ import Attachment from './Attachment'
 
 class CreateUserProfileImageRequest
 {
-    /**
-     */
-    image?: Attachment
+  /**
+   */
+  image?: Attachment
 }
 
 export default CreateUserProfileImageRequest

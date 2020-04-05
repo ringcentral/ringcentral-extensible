@@ -2,9 +2,9 @@ import WirelessPointValidated from './WirelessPointValidated'
 
 class ValidateMultipleWirelessPointsResponse
 {
-    /**
-     */
-    records?: WirelessPointValidated[]
+  /**
+   */
+  records?: WirelessPointValidated[]
 }
 
 export default ValidateMultipleWirelessPointsResponse

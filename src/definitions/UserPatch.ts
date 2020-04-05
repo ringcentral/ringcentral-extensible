@@ -2,16 +2,16 @@ import PatchOperation from './PatchOperation'
 
 class UserPatch
 {
-    /**
-     * patch operations list
-     * Required
-     */
-    Operations?: PatchOperation[]
+  /**
+   * patch operations list
+   * Required
+   */
+  Operations?: PatchOperation[]
 
-    /**
-     * Required
-     */
-    schemas?: string[]
+  /**
+   * Required
+   */
+  schemas?: string[]
 }
 
 export default UserPatch

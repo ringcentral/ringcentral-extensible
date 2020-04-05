@@ -1,9 +1,9 @@
 class ReadAnsweringRuleParameters
 {
-    /**
-     * Indicates whether inactive numbers should be returned or not
-     */
-    showInactiveNumbers?: boolean
+  /**
+   * Indicates whether inactive numbers should be returned or not
+   */
+  showInactiveNumbers?: boolean
 }
 
 export default ReadAnsweringRuleParameters

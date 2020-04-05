@@ -1,23 +1,23 @@
 class CallMonitoringGroupMemberInfo
 {
-    /**
-     * Link to a call monitoring group member
-     */
-    uri?: string
+  /**
+   * Link to a call monitoring group member
+   */
+  uri?: string
 
-    /**
-     * Internal identifier of a call monitoring group member
-     */
-    id?: string
+  /**
+   * Internal identifier of a call monitoring group member
+   */
+  id?: string
 
-    /**
-     * Extension number of a call monitoring group member
-     */
-    extensionNumber?: string
+  /**
+   * Extension number of a call monitoring group member
+   */
+  extensionNumber?: string
 
-    /**
-     */
-    permissions?: string[]
+  /**
+   */
+  permissions?: string[]
 }
 
 export default CallMonitoringGroupMemberInfo

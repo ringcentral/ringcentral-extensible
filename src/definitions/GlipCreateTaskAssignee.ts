@@ -1,9 +1,9 @@
 class GlipCreateTaskAssignee
 {
-    /**
-     * Assignee Id
-     */
-    id?: string
+  /**
+   * Assignee Id
+   */
+  id?: string
 }
 
 export default GlipCreateTaskAssignee

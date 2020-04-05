@@ -1,8 +1,8 @@
 class Permission
 {
-    /**
-     */
-    enabled?: boolean
+  /**
+   */
+  enabled?: boolean
 }
 
 export default Permission

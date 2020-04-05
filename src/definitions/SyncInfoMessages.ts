@@ -1,24 +1,24 @@
 class SyncInfoMessages
 {
-    /**
-     * Type of synchronization
-     * Enum: FSync, ISync
-     */
-    syncType?: string
+  /**
+   * Type of synchronization
+   * Enum: FSync, ISync
+   */
+  syncType?: string
 
-    /**
-     * Synchronization token
-     */
-    syncToken?: string
+  /**
+   * Synchronization token
+   */
+  syncToken?: string
 
-    /**
-     * Last synchronization datetime in ISO 8601 format including timezone, for example 2016-03-10T18:07:52.534Z
-     */
-    syncTime?: string
+  /**
+   * Last synchronization datetime in ISO 8601 format including timezone, for example 2016-03-10T18:07:52.534Z
+   */
+  syncTime?: string
 
-    /**
-     */
-    olderRecordsExist?: boolean
+  /**
+   */
+  olderRecordsExist?: boolean
 }
 
 export default SyncInfoMessages

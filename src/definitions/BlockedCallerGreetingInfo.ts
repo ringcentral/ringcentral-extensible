@@ -2,14 +2,14 @@ import PresetInfo from './PresetInfo'
 
 class BlockedCallerGreetingInfo
 {
-    /**
-     * Type of a greeting
-     */
-    type?: string
+  /**
+   * Type of a greeting
+   */
+  type?: string
 
-    /**
-     */
-    preset?: PresetInfo
+  /**
+   */
+  preset?: PresetInfo
 }
 
 export default BlockedCallerGreetingInfo

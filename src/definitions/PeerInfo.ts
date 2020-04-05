@@ -1,17 +1,17 @@
 // Peer session / party data. Valid in Gone state only
 class PeerInfo
 {
-    /**
-     */
-    sessionId?: string
+  /**
+   */
+  sessionId?: string
 
-    /**
-     */
-    telephonySessionId?: string
+  /**
+   */
+  telephonySessionId?: string
 
-    /**
-     */
-    partyId?: string
+  /**
+   */
+  partyId?: string
 }
 
 export default PeerInfo

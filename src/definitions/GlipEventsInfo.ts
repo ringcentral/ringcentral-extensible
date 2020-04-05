@@ -3,14 +3,14 @@ import GlipNavigationInfo from './GlipNavigationInfo'
 
 class GlipEventsInfo
 {
-    /**
-     * List of events created by the current user
-     */
-    records?: GlipEventInfo[]
+  /**
+   * List of events created by the current user
+   */
+  records?: GlipEventInfo[]
 
-    /**
-     */
-    navigation?: GlipNavigationInfo
+  /**
+   */
+  navigation?: GlipNavigationInfo
 }
 
 export default GlipEventsInfo

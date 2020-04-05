@@ -2,25 +2,25 @@ import ValidationError from './ValidationError'
 
 class SwitchValidated
 {
-    /**
-     * Internal identifier of a switch
-     */
-    id?: string
+  /**
+   * Internal identifier of a switch
+   */
+  id?: string
 
-    /**
-     * Unique identifier of a network switch
-     */
-    chassisId?: string
+  /**
+   * Unique identifier of a network switch
+   */
+  chassisId?: string
 
-    /**
-     * Validation result status
-     * Enum: Valid, Invalid
-     */
-    status?: string
+  /**
+   * Validation result status
+   * Enum: Valid, Invalid
+   */
+  status?: string
 
-    /**
-     */
-    errors?: ValidationError[]
+  /**
+   */
+  errors?: ValidationError[]
 }
 
 export default SwitchValidated

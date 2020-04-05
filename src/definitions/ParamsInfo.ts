@@ -1,14 +1,14 @@
 class ParamsInfo
 {
-    /**
-     * Parameter name
-     */
-    name?: string
+  /**
+   * Parameter name
+   */
+  name?: string
 
-    /**
-     * Parameter value
-     */
-    value?: string
+  /**
+   * Parameter value
+   */
+  value?: string
 }
 
 export default ParamsInfo

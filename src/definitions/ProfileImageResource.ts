@@ -2,25 +2,25 @@ import ScaledProfileImageResource from './ScaledProfileImageResource'
 
 class ProfileImageResource
 {
-    /**
-     */
-    uri?: string
+  /**
+   */
+  uri?: string
 
-    /**
-     */
-    etag?: string
+  /**
+   */
+  etag?: string
 
-    /**
-     */
-    contentType?: string
+  /**
+   */
+  contentType?: string
 
-    /**
-     */
-    lastModified?: string
+  /**
+   */
+  lastModified?: string
 
-    /**
-     */
-    scales?: ScaledProfileImageResource[]
+  /**
+   */
+  scales?: ScaledProfileImageResource[]
 }
 
 export default ProfileImageResource

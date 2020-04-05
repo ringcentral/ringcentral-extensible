@@ -1,11 +1,11 @@
 import CallRecordingCustomGreeting from './CallRecordingCustomGreeting'
 
-    // Returns data on call recording custom greetings.
+  // Returns data on call recording custom greetings.
 class CallRecordingCustomGreetings
 {
-    /**
-     */
-    records?: CallRecordingCustomGreeting[]
+  /**
+   */
+  records?: CallRecordingCustomGreeting[]
 }
 
 export default CallRecordingCustomGreetings

@@ -3,15 +3,15 @@ import MakeCallOutCallerInfoRequestTo from './MakeCallOutCallerInfoRequestTo'
 
 class MakeCallOutRequest
 {
-    /**
-     * Required
-     */
-    from?: MakeCallOutCallerInfoRequestFrom
+  /**
+   * Required
+   */
+  from?: MakeCallOutCallerInfoRequestFrom
 
-    /**
-     * Required
-     */
-    to?: MakeCallOutCallerInfoRequestTo
+  /**
+   * Required
+   */
+  to?: MakeCallOutCallerInfoRequestTo
 }
 
 export default MakeCallOutRequest

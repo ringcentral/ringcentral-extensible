@@ -1,27 +1,27 @@
 class CallRecordingExtensionResource
 {
-    /**
-     * Internal identifier of an extension
-     */
-    id?: string
+  /**
+   * Internal identifier of an extension
+   */
+  id?: string
 
-    /**
-     */
-    uri?: string
+  /**
+   */
+  uri?: string
 
-    /**
-     */
-    extensionNumber?: string
+  /**
+   */
+  extensionNumber?: string
 
-    /**
-     */
-    type?: string
+  /**
+   */
+  type?: string
 
-    /**
-     * Direction of call
-     * Enum: Outbound, Inbound, All
-     */
-    callDirection?: string
+  /**
+   * Direction of call
+   * Enum: Outbound, Inbound, All
+   */
+  callDirection?: string
 }
 
 export default CallRecordingExtensionResource

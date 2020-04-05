@@ -1,23 +1,23 @@
 class SearchRequest
 {
-    /**
-     * page size
-     */
-    count?: number
+  /**
+   * page size
+   */
+  count?: number
 
-    /**
-     * only support 'userName' or 'email' filter expressions for now
-     */
-    filter?: string
+  /**
+   * only support 'userName' or 'email' filter expressions for now
+   */
+  filter?: string
 
-    /**
-     */
-    schemas?: string[]
+  /**
+   */
+  schemas?: string[]
 
-    /**
-     * start index (1-based)
-     */
-    startIndex?: number
+  /**
+   * start index (1-based)
+   */
+  startIndex?: number
 }
 
 export default SearchRequest

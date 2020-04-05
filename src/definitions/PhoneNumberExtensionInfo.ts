@@ -9,84 +9,84 @@ import ProfileImageResource from './ProfileImageResource'
 
 class PhoneNumberExtensionInfo
 {
-    /**
-     */
-    uri?: string
+  /**
+   */
+  uri?: string
 
-    /**
-     */
-    id?: string
+  /**
+   */
+  id?: string
 
-    /**
-     */
-    partnerId?: string
+  /**
+   */
+  partnerId?: string
 
-    /**
-     */
-    extensionNumber?: string
+  /**
+   */
+  extensionNumber?: string
 
-    /**
-     */
-    loginName?: string
+  /**
+   */
+  loginName?: string
 
-    /**
-     */
-    contact?: ExtensionContactInfo
+  /**
+   */
+  contact?: ExtensionContactInfo
 
-    /**
-     */
-    references?: Reference[]
+  /**
+   */
+  references?: Reference[]
 
-    /**
-     */
-    name?: string
+  /**
+   */
+  name?: string
 
-    /**
-     * Enum: Unknown, User, Department, Announcement, Voicemail, DigitalUser, VirtualUser, FaxUser, PagingOnly, SharedLinesGroup, IvrMenu, ApplicationExtension, ParkLocation
-     */
-    type?: string
+  /**
+   * Enum: Unknown, User, Department, Announcement, Voicemail, DigitalUser, VirtualUser, FaxUser, PagingOnly, SharedLinesGroup, IvrMenu, ApplicationExtension, ParkLocation
+   */
+  type?: string
 
-    /**
-     * Enum: Enabled, Disabled, Frozen, NotActivated, Unassigned
-     */
-    status?: string
+  /**
+   * Enum: Enabled, Disabled, Frozen, NotActivated, Unassigned
+   */
+  status?: string
 
-    /**
-     */
-    statusInfo?: StatusInfo
+  /**
+   */
+  statusInfo?: StatusInfo
 
-    /**
-     */
-    departments?: DepartmentResource[]
+  /**
+   */
+  departments?: DepartmentResource[]
 
-    /**
-     */
-    serviceFeatures?: ServiceFeatureValue[]
+  /**
+   */
+  serviceFeatures?: ServiceFeatureValue[]
 
-    /**
-     */
-    regionalSettings?: RegionalSettingsInfo
+  /**
+   */
+  regionalSettings?: RegionalSettingsInfo
 
-    /**
-     * Enum: NotStarted, Incomplete, Completed, Unknown
-     */
-    setupWizardState?: string
+  /**
+   * Enum: NotStarted, Incomplete, Completed, Unknown
+   */
+  setupWizardState?: string
 
-    /**
-     */
-    permissions?: ExtensionPermissionsResource
+  /**
+   */
+  permissions?: ExtensionPermissionsResource
 
-    /**
-     */
-    password?: string
+  /**
+   */
+  password?: string
 
-    /**
-     */
-    ivrPin?: string
+  /**
+   */
+  ivrPin?: string
 
-    /**
-     */
-    profileImage?: ProfileImageResource
+  /**
+   */
+  profileImage?: ProfileImageResource
 }
 
 export default PhoneNumberExtensionInfo

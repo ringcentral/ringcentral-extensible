@@ -1,9 +1,9 @@
 class GlipMemberInfo
 {
-    /**
-     * Internal identifier of a user
-     */
-    id?: string
+  /**
+   * Internal identifier of a user
+   */
+  id?: string
 }
 
 export default GlipMemberInfo

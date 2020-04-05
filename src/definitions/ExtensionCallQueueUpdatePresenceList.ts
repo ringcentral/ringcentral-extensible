@@ -2,9 +2,9 @@ import ExtensionCallQueueUpdatePresence from './ExtensionCallQueueUpdatePresence
 
 class ExtensionCallQueueUpdatePresenceList
 {
-    /**
-     */
-    records?: ExtensionCallQueueUpdatePresence[]
+  /**
+   */
+  records?: ExtensionCallQueueUpdatePresence[]
 }
 
 export default ExtensionCallQueueUpdatePresenceList

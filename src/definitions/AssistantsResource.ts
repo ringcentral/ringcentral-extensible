@@ -2,9 +2,9 @@ import AssistantResource from './AssistantResource'
 
 class AssistantsResource
 {
-    /**
-     */
-    records?: AssistantResource[]
+  /**
+   */
+  records?: AssistantResource[]
 }
 
 export default AssistantsResource

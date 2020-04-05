@@ -2,35 +2,35 @@ import ActiveCallInfo from './ActiveCallInfo'
 
 class PresenceInfoResource
 {
-    /**
-     * Enum: Offline, Busy, Available
-     */
-    userStatus?: string
+  /**
+   * Enum: Offline, Busy, Available
+   */
+  userStatus?: string
 
-    /**
-     * Enum: TakeAllCalls, DoNotAcceptDepartmentCalls, TakeDepartmentCallsOnly, DoNotAcceptAnyCalls, Unknown
-     */
-    dndStatus?: string
+  /**
+   * Enum: TakeAllCalls, DoNotAcceptDepartmentCalls, TakeDepartmentCallsOnly, DoNotAcceptAnyCalls, Unknown
+   */
+  dndStatus?: string
 
-    /**
-     */
-    message?: string
+  /**
+   */
+  message?: string
 
-    /**
-     */
-    allowSeeMyPresence?: boolean
+  /**
+   */
+  allowSeeMyPresence?: boolean
 
-    /**
-     */
-    ringOnMonitoredCall?: boolean
+  /**
+   */
+  ringOnMonitoredCall?: boolean
 
-    /**
-     */
-    pickUpCallsOnHold?: boolean
+  /**
+   */
+  pickUpCallsOnHold?: boolean
 
-    /**
-     */
-    activeCalls?: ActiveCallInfo[]
+  /**
+   */
+  activeCalls?: ActiveCallInfo[]
 }
 
 export default PresenceInfoResource

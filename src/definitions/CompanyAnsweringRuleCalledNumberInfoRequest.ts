@@ -1,9 +1,9 @@
 class CompanyAnsweringRuleCalledNumberInfoRequest
 {
-    /**
-     * Internal identifier of an account phone number
-     */
-    id?: string
+  /**
+   * Internal identifier of an account phone number
+   */
+  id?: string
 }
 
 export default CompanyAnsweringRuleCalledNumberInfoRequest

@@ -6,32 +6,32 @@ import ExtensionFormattingLocaleInfoRequest from './ExtensionFormattingLocaleInf
 
 class ExtensionRegionalSettingRequest
 {
-    /**
-     */
-    homeCountry?: ExtensionCountryInfoRequest
+  /**
+   */
+  homeCountry?: ExtensionCountryInfoRequest
 
-    /**
-     */
-    timezone?: ExtensionTimezoneInfoRequest
+  /**
+   */
+  timezone?: ExtensionTimezoneInfoRequest
 
-    /**
-     */
-    language?: ExtensionLanguageInfoRequest
+  /**
+   */
+  language?: ExtensionLanguageInfoRequest
 
-    /**
-     */
-    greetingLanguage?: ExtensionGreetingLanguageInfoRequest
+  /**
+   */
+  greetingLanguage?: ExtensionGreetingLanguageInfoRequest
 
-    /**
-     */
-    formattingLocale?: ExtensionFormattingLocaleInfoRequest
+  /**
+   */
+  formattingLocale?: ExtensionFormattingLocaleInfoRequest
 
-    /**
-     * Time format setting
-     * Default: 12h
-     * Enum: 12h, 24h
-     */
-    timeFormat?: string
+  /**
+   * Time format setting
+   * Default: 12h
+   * Enum: 12h, 24h
+   */
+  timeFormat?: string
 }
 
 export default ExtensionRegionalSettingRequest

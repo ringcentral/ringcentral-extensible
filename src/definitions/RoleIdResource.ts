@@ -1,12 +1,12 @@
 class RoleIdResource
 {
-    /**
-     */
-    uri?: string
+  /**
+   */
+  uri?: string
 
-    /**
-     */
-    id?: string
+  /**
+   */
+  id?: string
 }
 
 export default RoleIdResource

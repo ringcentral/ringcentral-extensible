@@ -2,9 +2,9 @@ import SwitchValidated from './SwitchValidated'
 
 class ValidateMultipleSwitchesResponse
 {
-    /**
-     */
-    records?: SwitchValidated[]
+  /**
+   */
+  records?: SwitchValidated[]
 }
 
 export default ValidateMultipleSwitchesResponse

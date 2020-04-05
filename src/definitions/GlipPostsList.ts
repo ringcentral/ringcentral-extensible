@@ -3,15 +3,15 @@ import GlipNavigationInfo from './GlipNavigationInfo'
 
 class GlipPostsList
 {
-    /**
-     * List of posts
-     * Required
-     */
-    records?: GlipPostInfo[]
+  /**
+   * List of posts
+   * Required
+   */
+  records?: GlipPostInfo[]
 
-    /**
-     */
-    navigation?: GlipNavigationInfo
+  /**
+   */
+  navigation?: GlipNavigationInfo
 }
 
 export default GlipPostsList

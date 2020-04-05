@@ -2,21 +2,21 @@ import Permission from './Permission'
 
 class ExtensionPermissionsResource
 {
-    /**
-     */
-    uri?: string
+  /**
+   */
+  uri?: string
 
-    /**
-     */
-    admin?: Permission
+  /**
+   */
+  admin?: Permission
 
-    /**
-     */
-    internationalCalling?: Permission
+  /**
+   */
+  internationalCalling?: Permission
 
-    /**
-     */
-    freeSoftPhoneDigitalLine?: Permission
+  /**
+   */
+  freeSoftPhoneDigitalLine?: Permission
 }
 
 export default ExtensionPermissionsResource

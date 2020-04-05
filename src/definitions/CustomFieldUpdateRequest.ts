@@ -1,9 +1,9 @@
 class CustomFieldUpdateRequest
 {
-    /**
-     * Custom field display name
-     */
-    displayName?: string
+  /**
+   * Custom field display name
+   */
+  displayName?: string
 }
 
 export default CustomFieldUpdateRequest

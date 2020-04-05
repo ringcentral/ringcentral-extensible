@@ -1,12 +1,12 @@
 class DeleteExtensionParameters
 {
-    /**
-     */
-    savePhoneLines?: boolean
+  /**
+   */
+  savePhoneLines?: boolean
 
-    /**
-     */
-    savePhoneNumbers?: boolean
+  /**
+   */
+  savePhoneNumbers?: boolean
 }
 
 export default DeleteExtensionParameters

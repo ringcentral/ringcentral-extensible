@@ -4,17 +4,17 @@ import MeetingRecordingsNavigationInfo from './MeetingRecordingsNavigationInfo'
 
 class ListMeetingRecordingsResponse
 {
-    /**
-     */
-    records?: MeetingRecordings[]
+  /**
+   */
+  records?: MeetingRecordings[]
 
-    /**
-     */
-    paging?: MeetingRecordingsPagingInfo
+  /**
+   */
+  paging?: MeetingRecordingsPagingInfo
 
-    /**
-     */
-    navigation?: MeetingRecordingsNavigationInfo
+  /**
+   */
+  navigation?: MeetingRecordingsNavigationInfo
 }
 
 export default ListMeetingRecordingsResponse

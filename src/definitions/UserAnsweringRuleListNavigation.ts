@@ -2,21 +2,21 @@ import UserAnsweringRuleListNavigationPage from './UserAnsweringRuleListNavigati
 
 class UserAnsweringRuleListNavigation
 {
-    /**
-     */
-    firstPage?: UserAnsweringRuleListNavigationPage
+  /**
+   */
+  firstPage?: UserAnsweringRuleListNavigationPage
 
-    /**
-     */
-    nextPage?: UserAnsweringRuleListNavigationPage
+  /**
+   */
+  nextPage?: UserAnsweringRuleListNavigationPage
 
-    /**
-     */
-    previousPage?: UserAnsweringRuleListNavigationPage
+  /**
+   */
+  previousPage?: UserAnsweringRuleListNavigationPage
 
-    /**
-     */
-    lastPage?: UserAnsweringRuleListNavigationPage
+  /**
+   */
+  lastPage?: UserAnsweringRuleListNavigationPage
 }
 
 export default UserAnsweringRuleListNavigation

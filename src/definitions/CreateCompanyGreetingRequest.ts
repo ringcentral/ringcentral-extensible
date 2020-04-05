@@ -3,25 +3,25 @@ import CustomCompanyGreetingAnsweringRuleInfo from './CustomCompanyGreetingAnswe
 
 class CreateCompanyGreetingRequest
 {
-    /**
-     * Type of a greeting, specifying the case when the greeting is played.
-     * Enum: Company, StartRecording, StopRecording, AutomaticRecording
-     */
-    type?: string
+  /**
+   * Type of a greeting, specifying the case when the greeting is played.
+   * Enum: Company, StartRecording, StopRecording, AutomaticRecording
+   */
+  type?: string
 
-    /**
-     * Internal identifier of a language. See Get Language List
-     */
-    languageId?: string
+  /**
+   * Internal identifier of a language. See Get Language List
+   */
+  languageId?: string
 
-    /**
-     * Meida file to upload
-     */
-    binary?: Attachment
+  /**
+   * Meida file to upload
+   */
+  binary?: Attachment
 
-    /**
-     */
-    answeringRule?: CustomCompanyGreetingAnsweringRuleInfo
+  /**
+   */
+  answeringRule?: CustomCompanyGreetingAnsweringRuleInfo
 }
 
 export default CreateCompanyGreetingRequest

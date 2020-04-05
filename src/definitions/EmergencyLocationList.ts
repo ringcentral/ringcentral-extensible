@@ -4,19 +4,19 @@ import ProvisioningPagingInfo from './ProvisioningPagingInfo'
 
 class EmergencyLocationList
 {
-    /**
-     */
-    records?: EmergencyLocationInfo[]
+  /**
+   */
+  records?: EmergencyLocationInfo[]
 
-    /**
-     * Information on navigation
-     */
-    navigation?: ProvisioningNavigationInfo
+  /**
+   * Information on navigation
+   */
+  navigation?: ProvisioningNavigationInfo
 
-    /**
-     * Information on paging
-     */
-    paging?: ProvisioningPagingInfo
+  /**
+   * Information on paging
+   */
+  paging?: ProvisioningPagingInfo
 }
 
 export default EmergencyLocationList

@@ -1,8 +1,8 @@
 class ScaledProfileImageResource
 {
-    /**
-     */
-    uri?: string
+  /**
+   */
+  uri?: string
 }
 
 export default ScaledProfileImageResource

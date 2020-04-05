@@ -4,24 +4,24 @@ import CallHandlingPagingInfo from './CallHandlingPagingInfo'
 
 class CallRecordingExtensions
 {
-    /**
-     * Link to call recording extension list resource
-     */
-    uri?: string
+  /**
+   * Link to call recording extension list resource
+   */
+  uri?: string
 
-    /**
-     */
-    records?: CallRecordingExtensionInfo[]
+  /**
+   */
+  records?: CallRecordingExtensionInfo[]
 
-    /**
-     * Information on navigation
-     */
-    navigation?: CallHandlingNavigationInfo
+  /**
+   * Information on navigation
+   */
+  navigation?: CallHandlingNavigationInfo
 
-    /**
-     * Information on paging
-     */
-    paging?: CallHandlingPagingInfo
+  /**
+   * Information on paging
+   */
+  paging?: CallHandlingPagingInfo
 }
 
 export default CallRecordingExtensions

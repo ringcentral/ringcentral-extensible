@@ -2,9 +2,9 @@ import FavoriteContactResource from './FavoriteContactResource'
 
 class FavoriteCollection
 {
-    /**
-     */
-    records?: FavoriteContactResource[]
+  /**
+   */
+  records?: FavoriteContactResource[]
 }
 
 export default FavoriteCollection

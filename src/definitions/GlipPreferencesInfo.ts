@@ -2,9 +2,9 @@ import GlipPreferencesChats from './GlipPreferencesChats'
 
 class GlipPreferencesInfo
 {
-    /**
-     */
-    chats?: GlipPreferencesChats
+  /**
+   */
+  chats?: GlipPreferencesChats
 }
 
 export default GlipPreferencesInfo
