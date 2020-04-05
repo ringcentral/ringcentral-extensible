@@ -1,8 +1,9 @@
 import axios, { AxiosInstance } from 'axios'
+import qs from 'qs'
+
 import GetTokenRequest from './definitions/GetTokenRequest'
 import TokenInfo from './definitions/TokenInfo'
 import pkg from '../package.json'
-import qs from 'qs'
 
 class RestClient {
     static sandboxServer = "https://platform.devtest.ringcentral.com"
@@ -49,9 +50,6 @@ class RestClient {
         })
         return r.data
     }
-} 
+}
 
-;(async () => {
-    const rc =  new RestClient(process.env.RINGCENTRAL_CLIENT_ID, process.env.RINGCENTRAL_CLIENT_SECRET, process.env.RINGCENTRAL_SERVER_URL)
-    await rc.authorize(process.env.RINGCENTRAL_USERNAME,process.env.RINGCENTRAL_EXTENSION,process.env.RINGCENTRAL_PASSWORD)
-})()
+export default RestClient

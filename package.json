@@ -7,7 +7,8 @@
   "author": "Tyler Long <tyler4long@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "test": "tsc -b tsconfig.json && node ./src/index.js",
+    "watch": "tsc -b tsconfig.json -w",
+    "test": "jest test/*",
     "definitions": "rm -rf ./src/definitions/* && node -r @babel/register ./code-generator/definitions.js"
   },
   "dependencies": {
@@ -20,6 +21,7 @@
     "@babel/register": "^7.9.0",
     "@types/node": "^13.11.0",
     "change-case": "^4.1.1",
+    "jest": "^25.2.7",
     "ramda": "^0.27.0",
     "standard": "^14.3.3",
     "typescript": "^3.8.3",
