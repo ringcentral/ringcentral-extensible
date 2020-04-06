@@ -16,7 +16,7 @@ describe('HTTP POST', () => {
       }],
       text: 'hello world'
     })
-    expect(messageInfo).not.toBeNull()
-    expect(messageInfo.id).not.toBeNull()
+    expect(messageInfo).not.toBeUndefined()
+    expect(messageInfo.id).not.toBeUndefined()
   })
 })
