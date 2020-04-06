@@ -1,4 +1,4 @@
-import axios, { AxiosInstance } from 'axios'
+import axios, { AxiosInstance, Method } from 'axios'
 import qs from 'qs'
 
 import GetTokenRequest from './definitions/GetTokenRequest'
@@ -29,8 +29,11 @@ class RestClient {
     })
   }
 
-  async get(endpoint: string, queryParams?: {}) : Promise<{}> {
-    const r = await this.httpClient.get(endpoint, {
+  async request(httpMethod: Method, endpoint: string, content?: {}, queryParams?: {}):  Promise<{}>{
+    const r = await this.httpClient.request({
+      method: httpMethod,
+      url: endpoint,
+      data: content,
       params: queryParams,
       headers: {
         Authorization: `Bearer ${this.token.access_token}`
@@ -38,15 +41,20 @@ class RestClient {
     })
     return r.data
   }
-
+  async get(endpoint: string, queryParams?: {}): Promise<{}> {
+    return this.request('GET', endpoint, undefined, queryParams)
+  }
+  async delete(endpoint: string, queryParams?: {}): Promise<{}> {
+    return this.request('DELETE', endpoint, undefined, queryParams)
+  }
   async post(endpoint: string, content: {}, queryParams?: {}) : Promise<{}> {
-    const r = await this.httpClient.post(endpoint, content, {
-      params: queryParams,
-      headers: {
-        Authorization: `Bearer ${this.token.access_token}`
-      }
-    })
-    return r.data
+    return this.request('POST', endpoint, content, queryParams)
+  }
+  async put(endpoint: string, content: {}, queryParams?: {}) : Promise<{}> {
+    return this.request('PUT', endpoint, content, queryParams)
+  }
+  async patch(endpoint: string, content: {}, queryParams?: {}) : Promise<{}> {
+    return this.request('PATCH', endpoint, content, queryParams)
   }
 
   async authorize(getTokenRequest: GetTokenRequest): Promise<TokenInfo>
