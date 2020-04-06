@@ -85,7 +85,7 @@ class RestClient {
   }
 
   async refresh(refreshToken?: string): Promise<TokenInfo> {
-    const tokenToRefresh = refreshToken ?? this.token?.refresh_token;
+    const tokenToRefresh = refreshToken ?? this.token?.refresh_token
     if (!tokenToRefresh)
     {
         return null
@@ -93,7 +93,23 @@ class RestClient {
     const getTokenRequest = new GetTokenRequest()
     getTokenRequest.grant_type = "refresh_token"
     getTokenRequest.refresh_token = tokenToRefresh
-    return this.authorize(getTokenRequest);
+    return this.authorize(getTokenRequest)
+  }
+
+  async revoke(tokenToRevoke?: string) {
+    if (!tokenToRevoke && !this.token) { // nothing to revoke
+      return
+    }
+    tokenToRevoke = tokenToRevoke ?? this.token.access_token ?? this.token.refresh_token
+    await this.httpClient.post('/restapi/oauth/revoke', qs.stringify({
+      token: tokenToRevoke
+    }), {
+      auth: {
+        username: this.clientId,
+        password: this.clientSecret
+      }
+    })
+    this.token = undefined
   }
 }
 
