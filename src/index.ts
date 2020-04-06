@@ -29,9 +29,19 @@ class RestClient {
     })
   }
 
-  async get(endpoint: string, params?: {}) : Promise<{}> {
+  async get(endpoint: string, queryParams?: {}) : Promise<{}> {
     const r = await this.httpClient.get(endpoint, {
-      params,
+      params: queryParams,
+      headers: {
+        Authorization: `Bearer ${this.token.access_token}`
+      }
+    })
+    return r.data
+  }
+
+  async post(endpoint: string, content: {}, queryParams?: {}) : Promise<{}> {
+    const r = await this.httpClient.post(endpoint, content, {
+      params: queryParams,
       headers: {
         Authorization: `Bearer ${this.token.access_token}`
       }
