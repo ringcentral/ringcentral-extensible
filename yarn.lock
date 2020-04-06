@@ -1789,6 +1789,11 @@ dot-case@^3.0.3:
     no-case "^3.0.3"
     tslib "^1.10.0"
 
+dotenv-override-true@^6.2.0:
+  version "6.2.0"
+  resolved "https://registry.yarnpkg.com/dotenv-override-true/-/dotenv-override-true-6.2.0.tgz#4205a7e4e9161eda299d3e242f53b9b4902a2570"
+  integrity sha512-g2EEXx8eY0vy9OWlCUTg7YEHTMoKExXblryNYv/9hN7I7Q3XWMJ9VNEUQppnL/nkZ9dtVq2fKTFcs1HVMHYikg==
+
 ecc-jsbn@~0.1.1:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/ecc-jsbn/-/ecc-jsbn-0.1.2.tgz#3a83a904e54353287874c564b7549386849a98c9"

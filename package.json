@@ -21,10 +21,16 @@
     "@babel/register": "^7.9.0",
     "@types/node": "^13.11.0",
     "change-case": "^4.1.1",
+    "dotenv-override-true": "^6.2.0",
     "jest": "^25.2.7",
     "ramda": "^0.27.0",
     "standard": "^14.3.3",
     "typescript": "^3.8.3",
     "yarn-upgrade-all": "^0.5.2"
+  },
+  "jest": {
+    "setupFiles": [
+      "dotenv-override-true/config"
+    ]
   }
 }
