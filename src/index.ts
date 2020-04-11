@@ -4,6 +4,7 @@ import qs from 'qs'
 import GetTokenRequest from './definitions/GetTokenRequest'
 import TokenInfo from './definitions/TokenInfo'
 import pkg from '../package.json'
+import RestException from './RestException'
 
 class RestClient {
   static sandboxServer = "https://platform.devtest.ringcentral.com"
@@ -25,7 +26,10 @@ class RestClient {
     this.appVersion = appVersion
     this.httpClient = axios.create({
       baseURL: this.server,
-      headers: { "X-User-Agent": `${appName}/${appVersion} tylerlong/ringcentral-typescript/${pkg.version}` }
+      headers: { "X-User-Agent": `${appName}/${appVersion} tylerlong/ringcentral-typescript/${pkg.version}` },
+      validateStatus: status => {
+        return true
+      }
     })
   }
 
@@ -39,6 +43,9 @@ class RestClient {
         Authorization: `Bearer ${this.token.access_token}`
       }
     })
+    if(r.status < 200 || r.status > 299) {
+      throw new RestException(r)
+    }
     return r.data
   }
   async get(endpoint: string, queryParams?: {}): Promise<{}> {
