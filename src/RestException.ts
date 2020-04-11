@@ -24,7 +24,14 @@ class RestException extends Error {
     const response = R.pick(['data', 'status', 'statusText', 'headers'], r)
     const request = R.pick(['method', 'baseURL', 'url', 'data', 'headers'], r.config)
     let message = r.data.message
-    message = `${r.status} ${r.statusText}${R.isNil(message) ? '' : ` - ${message}`}`
+    message = `HTTP ${r.status} ${r.statusText}${R.isNil(message) ? '' : ` - ${message}`}
+
+Response:
+${JSON.stringify(response, null, 2)}
+
+Request:
+${JSON.stringify(request, null, 2)}
+`
     super(message)
     Object.setPrototypeOf(this, RestException.prototype)
     this.response = response

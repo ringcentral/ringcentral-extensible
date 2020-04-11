@@ -31,6 +31,7 @@
   "jest": {
     "setupFiles": [
       "dotenv-override-true/config"
-    ]
+    ],
+    "testEnvironment": "node"
   }
 }
