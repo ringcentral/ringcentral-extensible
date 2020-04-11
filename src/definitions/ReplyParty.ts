@@ -47,9 +47,8 @@ class ReplyParty
 
   /**
    * Direction of a call
-   * Enum: Inbound, Outbound
    */
-  direction?: string
+  direction?: ('Inbound' | 'Outbound')
 }
 
 export default ReplyParty

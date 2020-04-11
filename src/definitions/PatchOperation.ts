@@ -2,9 +2,8 @@ class PatchOperation
 {
   /**
    * Required
-   * Enum: add, replace, remove
    */
-  op?: string
+  op?: ('add' | 'replace' | 'remove')
 
   /**
    */

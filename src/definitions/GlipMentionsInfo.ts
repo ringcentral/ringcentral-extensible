@@ -7,9 +7,8 @@ class GlipMentionsInfo
 
   /**
    * Type of mentions
-   * Enum: Person, Team, File, Link, Event, Task, Note, Card
    */
-  type?: string
+  type?: ('Person' | 'Team' | 'File' | 'Link' | 'Event' | 'Task' | 'Note' | 'Card')
 
   /**
    * Name of a user

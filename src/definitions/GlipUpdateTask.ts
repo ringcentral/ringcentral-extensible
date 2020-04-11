@@ -14,9 +14,8 @@ class GlipUpdateTask
   assignees?: GlipUpdateTaskAssignee[]
 
   /**
-   * Enum: Simple, AllAssignees, Percentage
    */
-  completenessCondition?: string
+  completenessCondition?: ('Simple' | 'AllAssignees' | 'Percentage')
 
   /**
    * Task start date in UTC time zone
@@ -29,9 +28,8 @@ class GlipUpdateTask
   dueDate?: string
 
   /**
-   * Enum: Black, Red, Orange, Yellow, Green, Blue, Purple, Magenta
    */
-  color?: string
+  color?: ('Black' | 'Red' | 'Orange' | 'Yellow' | 'Green' | 'Blue' | 'Purple' | 'Magenta')
 
   /**
    * Task section to group/search by. Max allowed legth is 100 characters

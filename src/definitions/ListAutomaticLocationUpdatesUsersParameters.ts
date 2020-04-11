@@ -2,9 +2,8 @@ class ListAutomaticLocationUpdatesUsersParameters
 {
   /**
    * Extension type. Multiple values are supported
-   * Enum: User, Limited
    */
-  type?: string
+  type?: ('User' | 'Limited')
 
   /**
    * Filters entries containing the specified substring in user name, extension or department. The characters range is 0-64; not case-sensitive. If empty then the filter is ignored

@@ -21,7 +21,7 @@ class ModelInfo
   /**
    * Device feature or multiple features supported
    */
-  features?: string[]
+  features?: ('BLA' | 'Intercom' | 'Paging' | 'HELD')[]
 
   /**
    * Max supported count of phone lines

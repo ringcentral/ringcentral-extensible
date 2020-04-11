@@ -9,15 +9,13 @@ class CallLogRecordLegInfo
 {
   /**
    * Action description of the call operation
-   * Enum: Unknown, Phone Call, Phone Login, Incoming Fax, Accept Call, External Application, FindMe, FollowMe, Outgoing Fax, CallOut-CallMe, Call Return, Calling Card, Monitoring, Ring Directly, RingOut Web, Text Relay, VoIP Call, RingOut PC, RingMe, Transfer, 411 Info, Emergency, E911 Update, Support, RingOut Mobile
    */
-  action?: string
+  action?: ('Unknown' | 'Phone Call' | 'Phone Login' | 'Incoming Fax' | 'Accept Call' | 'External Application' | 'FindMe' | 'FollowMe' | 'Outgoing Fax' | 'CallOut-CallMe' | 'Call Return' | 'Calling Card' | 'Monitoring' | 'Ring Directly' | 'RingOut Web' | 'Text Relay' | 'VoIP Call' | 'RingOut PC' | 'RingMe' | 'Transfer' | '411 Info' | 'Emergency' | 'E911 Update' | 'Support' | 'RingOut Mobile')
 
   /**
    * Call direction
-   * Enum: Inbound, Outbound
    */
-  direction?: string
+  direction?: ('Inbound' | 'Outbound')
 
   /**
    * Billing information related to the call
@@ -46,9 +44,8 @@ class CallLogRecordLegInfo
 
   /**
    * Leg type
-   * Enum: SipForwarding, ServiceMinus2, ServiceMinus3, PstnToSip, Accept, FindMe, FollowMe, TestCall, FaxSent, CallBack, CallingCard, RingDirectly, RingOutWebToSubscriber, RingOutWebToCaller, SipToPstnMetered, RingOutClientToSubscriber, RingOutClientToCaller, RingMe, TransferCall, SipToPstnUnmetered, RingOutDeviceToSubscriber, RingOutDeviceToCaller, RingOutOneLegToCaller, ExtensionToExtension, CallPark, PagingServer, Hunting, OutgoingFreeSpDl, ParkLocation, ConferenceCall, MobileApp, Monitoring, MoveToConference, Unknown
    */
-  legType?: string
+  legType?: ('SipForwarding' | 'ServiceMinus2' | 'ServiceMinus3' | 'PstnToSip' | 'Accept' | 'FindMe' | 'FollowMe' | 'TestCall' | 'FaxSent' | 'CallBack' | 'CallingCard' | 'RingDirectly' | 'RingOutWebToSubscriber' | 'RingOutWebToCaller' | 'SipToPstnMetered' | 'RingOutClientToSubscriber' | 'RingOutClientToCaller' | 'RingMe' | 'TransferCall' | 'SipToPstnUnmetered' | 'RingOutDeviceToSubscriber' | 'RingOutDeviceToCaller' | 'RingOutOneLegToCaller' | 'ExtensionToExtension' | 'CallPark' | 'PagingServer' | 'Hunting' | 'OutgoingFreeSpDl' | 'ParkLocation' | 'ConferenceCall' | 'MobileApp' | 'Monitoring' | 'MoveToConference' | 'Unknown')
 
   /**
    * The call start datetime in (ISO 8601)[https://en.wikipedia.org/wiki/ISO_8601] format including timezone, for example 2016-03-10T18:07:52.534Z
@@ -57,15 +54,13 @@ class CallLogRecordLegInfo
 
   /**
    * Call type
-   * Enum: Voice, Fax
    */
-  type?: string
+  type?: ('Voice' | 'Fax')
 
   /**
    * Status description of the call operation
-   * Enum: Unknown, Accepted, Call connected, In Progress, Voicemail, Reply, Missed, Busy, Rejected, No Answer, Hang Up, Blocked, Suspended account, Call Failed, Call Failure, Internal Error, IP Phone Offline, No Calling Credit, Not Allowed, Restricted Number, Wrong Number, Answered Not Accepted, Stopped, International Disabled, International Restricted, Abandoned, Declined, Received, Fax on Demand, Partial Receive, Receive Error, Fax Receipt Error, Sent, Fax Partially Sent, Send Error, Fax Not Sent, Fax Poor Line
    */
-  result?: string
+  result?: ('Unknown' | 'Accepted' | 'Call connected' | 'In Progress' | 'Voicemail' | 'Reply' | 'Missed' | 'Busy' | 'Rejected' | 'No Answer' | 'Hang Up' | 'Blocked' | 'Suspended account' | 'Call Failed' | 'Call Failure' | 'Internal Error' | 'IP Phone Offline' | 'No Calling Credit' | 'Not Allowed' | 'Restricted Number' | 'Wrong Number' | 'Answered Not Accepted' | 'Stopped' | 'International Disabled' | 'International Restricted' | 'Abandoned' | 'Declined' | 'Received' | 'Fax on Demand' | 'Partial Receive' | 'Receive Error' | 'Fax Receipt Error' | 'Sent' | 'Fax Partially Sent' | 'Send Error' | 'Fax Not Sent' | 'Fax Poor Line')
 
   /**
    * Reason of a call result:
@@ -102,9 +97,8 @@ class CallLogRecordLegInfo
  *  * `Fax Prepare Error` - An internal error occurred when preparing the fax. Please try again
  *  * `Fax Save Error` - An internal error occurred when saving the fax. Please try again
  *  * `Fax Send Error` - An error occurred when sending the fax. Please try again
-   * Enum: Accepted, Connected, line Busy, Not Answered, No Answer, Hang Up, Stopped, Internal Error, No Credit, Restricted Number, Wrong Number, International Disabled, International Restricted, Bad Number, Info 411 Restricted, Customer 611 Restricted, No Digital Line, Failed Try Again, Max Call Limit, Too Many Calls, Calls Not Accepted, Number Not Allowed, Number Blocked, Number Disabled, Not Allowed, Resource Error, Call Loop, Fax Not Received, Fax Partially Sent, Fax Not Sent, Fax Poor Line, Fax Prepare Error, Fax Save Error, Fax Send Error
    */
-  reason?: string
+  reason?: ('Accepted' | 'Connected' | 'line Busy' | 'Not Answered' | 'No Answer' | 'Hang Up' | 'Stopped' | 'Internal Error' | 'No Credit' | 'Restricted Number' | 'Wrong Number' | 'International Disabled' | 'International Restricted' | 'Bad Number' | 'Info 411 Restricted' | 'Customer 611 Restricted' | 'No Digital Line' | 'Failed Try Again' | 'Max Call Limit' | 'Too Many Calls' | 'Calls Not Accepted' | 'Number Not Allowed' | 'Number Blocked' | 'Number Disabled' | 'Not Allowed' | 'Resource Error' | 'Call Loop' | 'Fax Not Received' | 'Fax Partially Sent' | 'Fax Not Sent' | 'Fax Poor Line' | 'Fax Prepare Error' | 'Fax Save Error' | 'Fax Send Error')
 
   /**
    */
@@ -122,9 +116,8 @@ class CallLogRecordLegInfo
 
   /**
    * Call transport
-   * Enum: PSTN, VoIP
    */
-  transport?: string
+  transport?: ('PSTN' | 'VoIP')
 
   /**
    * Call recording data. Returned if the call is recorded

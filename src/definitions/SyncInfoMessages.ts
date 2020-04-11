@@ -2,9 +2,8 @@ class SyncInfoMessages
 {
   /**
    * Type of synchronization
-   * Enum: FSync, ISync
    */
-  syncType?: string
+  syncType?: ('FSync' | 'ISync')
 
   /**
    * Synchronization token

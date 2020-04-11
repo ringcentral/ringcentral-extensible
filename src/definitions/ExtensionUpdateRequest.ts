@@ -7,9 +7,8 @@ import UserTransitionInfo from './UserTransitionInfo'
 class ExtensionUpdateRequest
 {
   /**
-   * Enum: Disabled, Enabled, NotActivated
    */
-  status?: string
+  status?: ('Disabled' | 'Enabled' | 'NotActivated')
 
   /**
    */
@@ -39,9 +38,8 @@ class ExtensionUpdateRequest
   regionalSettings?: ExtensionRegionalSettingRequest
 
   /**
-   * Enum: NotStarted, Incomplete, Completed
    */
-  setupWizardState?: string
+  setupWizardState?: ('NotStarted' | 'Incomplete' | 'Completed')
 
   /**
    * Extension partner identifier

@@ -15,9 +15,8 @@ class ScheduleInfo
 
   /**
    * The user's schedule specified for business hours or after hours; it can also be set/retrieved calling the corresponding method
-   * Enum: BusinessHours, AfterHours
    */
-  ref?: string
+  ref?: ('BusinessHours' | 'AfterHours')
 }
 
 export default ScheduleInfo

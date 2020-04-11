@@ -14,9 +14,8 @@ class AddBlockedAllowedPhoneNumber
   /**
    * Status of a phone number
    * Default: Blocked
-   * Enum: Blocked, Allowed
    */
-  status?: string
+  status?: ('Blocked' | 'Allowed')
 }
 
 export default AddBlockedAllowedPhoneNumber

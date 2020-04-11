@@ -12,9 +12,8 @@ class DeleteMessageByFilterParameters
   /**
    * Type of messages to be deleted
    * Default: All
-   * Enum: Fax, SMS, VoiceMail, Pager, Text, All
    */
-  type?: string
+  type?: ('Fax' | 'SMS' | 'VoiceMail' | 'Pager' | 'Text' | 'All')
 }
 
 export default DeleteMessageByFilterParameters

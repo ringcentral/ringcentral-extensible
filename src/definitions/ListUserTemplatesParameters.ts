@@ -1,9 +1,8 @@
 class ListUserTemplatesParameters
 {
   /**
-   * Enum: UserSettings, CallHandling
    */
-  type?: string
+  type?: ('UserSettings' | 'CallHandling')
 
   /**
    */

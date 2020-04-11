@@ -7,9 +7,8 @@ class GlipTaskInfoAssignee
 
   /**
    * Status of the task execution by assignee
-   * Enum: Pending, Completed
    */
-  status?: string
+  status?: ('Pending' | 'Completed')
 }
 
 export default GlipTaskInfoAssignee

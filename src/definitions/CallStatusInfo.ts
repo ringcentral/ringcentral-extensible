@@ -4,9 +4,8 @@ class CallStatusInfo
 {
   /**
    * Status code of a call
-   * Enum: Setup, Proceeding, Answered, Disconnected, Gone, Parked, Hold, VoiceMail, FaxReceive, VoiceMailScreening
    */
-  code?: string
+  code?: ('Setup' | 'Proceeding' | 'Answered' | 'Disconnected' | 'Gone' | 'Parked' | 'Hold' | 'VoiceMail' | 'FaxReceive' | 'VoiceMailScreening')
 
   /**
    * Peer session / party data.'Gone'state only
@@ -15,9 +14,8 @@ class CallStatusInfo
 
   /**
    * Reason of call termination. For 'Disconnected' code only
-   * Enum: Pickup, Supervising, TakeOver, Timeout, BlindTransfer, RccTransfer, AttendedTransfer, CallerInputRedirect, CallFlip, ParkLocation, DtmfTransfer, AgentAnswered, AgentDropped, Rejected, Cancelled, InternalError, NoAnswer, TargetBusy, InvalidNumber, InternationalDisabled, DestinationBlocked, NotEnoughFunds, NoSuchUser, CallRedirected, CallReplied, CallFinished, CallDropped
    */
-  reason?: string
+  reason?: ('Pickup' | 'Supervising' | 'TakeOver' | 'Timeout' | 'BlindTransfer' | 'RccTransfer' | 'AttendedTransfer' | 'CallerInputRedirect' | 'CallFlip' | 'ParkLocation' | 'DtmfTransfer' | 'AgentAnswered' | 'AgentDropped' | 'Rejected' | 'Cancelled' | 'InternalError' | 'NoAnswer' | 'TargetBusy' | 'InvalidNumber' | 'InternationalDisabled' | 'DestinationBlocked' | 'NotEnoughFunds' | 'NoSuchUser' | 'CallRedirected' | 'CallReplied' | 'CallFinished' | 'CallDropped')
 
   /**
    * Optional message

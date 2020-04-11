@@ -7,9 +7,8 @@ class TaskAttachment
 
   /**
    * Attachment type (currently only `File` value is supported).
-   * Enum: File
    */
-  type?: string
+  type?: ('File')
 
   /**
    * Name of the attached file (including extension name).

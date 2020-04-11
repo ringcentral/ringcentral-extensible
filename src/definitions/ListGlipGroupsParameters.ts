@@ -2,9 +2,8 @@ class ListGlipGroupsParameters
 {
   /**
    * Type of groups to be fetched (by default all type of groups will be fetched)
-   * Enum: Group, Team, PrivateChat, PersonalChat
    */
-  type?: string
+  type?: ('Group' | 'Team' | 'PrivateChat' | 'PersonalChat')
 
   /**
    * Number of groups to be fetched by one request. The maximum value is 250, by default - 30

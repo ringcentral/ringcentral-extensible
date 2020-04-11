@@ -19,9 +19,8 @@ class ForwardingInfo
 
   /**
    * Specifies the order in which forwarding numbers ring. 'Sequentially' means that forwarding numbers are ringing one at a time, in order of priority. 'Simultaneously' means that forwarding numbers are ring all at the same time
-   * Enum: Sequentially, Simultaneously
    */
-  ringingMode?: string
+  ringingMode?: ('Sequentially' | 'Simultaneously')
 
   /**
    * Information on a call forwarding rule

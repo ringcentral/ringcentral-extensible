@@ -8,7 +8,7 @@ class CallMonitoringExtensionInfo
   /**
    * Set of call monitoring group permissions granted to the specified extension. In order to remove the specified extension from a call monitoring group use an empty value
    */
-  permissions?: string[]
+  permissions?: ('Monitoring' | 'Monitored')[]
 }
 
 export default CallMonitoringExtensionInfo

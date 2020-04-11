@@ -7,9 +7,8 @@ class AccountStatusInfo
 
   /**
    * Type of suspension
-   * Enum: SuspendedVoluntarily, SuspendedInvoluntarily, UserResumed
    */
-  reason?: string
+  reason?: ('SuspendedVoluntarily' | 'SuspendedInvoluntarily' | 'UserResumed')
 
   /**
    * Date until which the account will get deleted. The default value is 30 days since current date

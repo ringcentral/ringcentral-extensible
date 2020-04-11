@@ -7,9 +7,8 @@ class BulkTaskInfo
 
   /**
    * Status of a task
-   * Enum: Accepted, Failed
    */
-  status?: string
+  status?: ('Accepted' | 'Failed')
 
   /**
    * Task creation time

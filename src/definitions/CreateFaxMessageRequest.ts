@@ -10,9 +10,8 @@ class CreateFaxMessageRequest
 
   /**
    * Resolution of Fax
-   * Enum: High, Low
    */
-  faxResolution?: string
+  faxResolution?: ('High' | 'Low')
 
   /**
    * To Phone Number

@@ -3,9 +3,8 @@ class SuperviseCallSessionRequest
   /**
    * Supervising mode
    * Required
-   * Enum: Listen
    */
-  mode?: string
+  mode?: ('Listen')
 
   /**
    * Internal identifier of a supervisor's device which will be used for call session monitoring

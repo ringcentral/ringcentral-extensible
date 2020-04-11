@@ -2,15 +2,13 @@ class UpdateUnifiedPresenceGlip
 {
   /**
    * Visibility setting allowing other users to see Glip presence status
-   * Enum: Visible, Invisible
    */
-  visibility?: string
+  visibility?: ('Visible' | 'Invisible')
 
   /**
    * Availability setting specifing whether to receive Glip notifications or not
-   * Enum: Available, DND
    */
-  availability?: string
+  availability?: ('Available' | 'DND')
 }
 
 export default UpdateUnifiedPresenceGlip

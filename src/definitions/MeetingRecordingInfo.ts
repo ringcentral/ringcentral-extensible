@@ -9,9 +9,8 @@ class MeetingRecordingInfo
   contentDownloadUri?: string
 
   /**
-   * Enum: video/mp4, audio/m4a, text/vtt
    */
-  contentType?: string
+  contentType?: ('video/mp4' | 'audio/m4a' | 'text/vtt')
 
   /**
    */
@@ -28,9 +27,8 @@ class MeetingRecordingInfo
   endTime?: string
 
   /**
-   * Enum: Completed, Processing
    */
-  status?: string
+  status?: ('Completed' | 'Processing')
 }
 
 export default MeetingRecordingInfo

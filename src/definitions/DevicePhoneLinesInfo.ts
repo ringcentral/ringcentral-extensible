@@ -5,9 +5,8 @@ class DevicePhoneLinesInfo
 {
   /**
    * Type of phone line
-   * Enum: Standalone, StandaloneFree, BlaPrimary, BlaSecondary
    */
-  lineType?: string
+  lineType?: ('Standalone' | 'StandaloneFree' | 'BlaPrimary' | 'BlaSecondary')
 
   /**
    */

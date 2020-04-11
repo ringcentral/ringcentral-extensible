@@ -25,12 +25,12 @@ class ListExtensionsParameters
   /**
    * Extension current state. Multiple values are supported. If 'Unassigned' is specified, then extensions without `extensionNumber` attribute are returned. If not specified, then all extensions are returned.
    */
-  status?: string[]
+  status?: ('Enabled' | 'Disabled' | 'NotActivated' | 'Unassigned')[]
 
   /**
    * Extension type. Multiple values are supported
    */
-  type?: string[]
+  type?: ('User' | 'FaxUser' | 'VirtualUser' | 'DigitalUser' | 'Department' | 'Announcement' | 'Voicemail' | 'SharedLinesGroup' | 'PagingOnly' | 'IvrMenu' | 'ApplicationExtension' | 'ParkLocation' | 'Limited' | 'Bot')[]
 }
 
 export default ListExtensionsParameters

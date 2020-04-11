@@ -25,9 +25,8 @@ class DataExportTask
 
   /**
    * Task status
-   * Enum: Accepted, InProgress, Completed, Failed, Canceled
    */
-  status?: string
+  status?: ('Accepted' | 'InProgress' | 'Completed' | 'Failed' | 'Canceled')
 
   /**
    * Internal identifier of a user

@@ -45,9 +45,8 @@ class GetAccountInfoResponse
   /**
    * Specifies account configuration wizard state (web service setup)
    * Default: NotStarted
-   * Enum: NotStarted, Incomplete, Completed
    */
-  setupWizardState?: string
+  setupWizardState?: ('NotStarted' | 'Incomplete' | 'Completed')
 
   /**
    * Account sign up data
@@ -56,9 +55,8 @@ class GetAccountInfoResponse
 
   /**
    * Status of the current account
-   * Enum: Initial, Confirmed, Unconfirmed, Disabled
    */
-  status?: string
+  status?: ('Initial' | 'Confirmed' | 'Unconfirmed' | 'Disabled')
 
   /**
    * Status information (reason, comment, lifetime). Returned for 'Disabled' status only

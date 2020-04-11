@@ -15,15 +15,13 @@ class CustomCompanyGreetingInfo
 
   /**
    * Type of a company greeting
-   * Enum: Company, StartRecording, StopRecording, AutomaticRecording
    */
-  type?: string
+  type?: ('Company' | 'StartRecording' | 'StopRecording' | 'AutomaticRecording')
 
   /**
    * Content media type
-   * Enum: audio/mpeg, audio/wav
    */
-  contentType?: string
+  contentType?: ('audio/mpeg' | 'audio/wav')
 
   /**
    * Link to a greeting content (audio file)

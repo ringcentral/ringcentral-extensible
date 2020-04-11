@@ -39,15 +39,13 @@ class ExtensionCreationRequest
   /**
    * Specifies extension configuration wizard state (web service setup).
    * Default: NotStarted
-   * Enum: NotStarted, Incomplete, Completed
    */
-  setupWizardState?: string
+  setupWizardState?: ('NotStarted' | 'Incomplete' | 'Completed')
 
   /**
    * Extension current state
-   * Enum: Enabled, Disabled, NotActivated, Unassigned
    */
-  status?: string
+  status?: ('Enabled' | 'Disabled' | 'NotActivated' | 'Unassigned')
 
   /**
    * Status information (reason, comment). For 'Disabled' status only
@@ -57,9 +55,8 @@ class ExtensionCreationRequest
   /**
    * Extension type
    * Required
-   * Enum: User, VirtualUser, DigitalUser, Department, Announcement, Voicemail, SharedLinesGroup, PagingOnly, ParkLocation
    */
-  type?: string
+  type?: ('User' | 'VirtualUser' | 'DigitalUser' | 'Department' | 'Announcement' | 'Voicemail' | 'SharedLinesGroup' | 'PagingOnly' | 'ParkLocation')
 
   /**
    * Hides extension from showing in company directory. Supported for extensions of User type only. For unassigned extensions the value is set to 'True' by default. For assigned extensions the value is set to 'False' by default

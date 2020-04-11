@@ -32,9 +32,8 @@ class NotificationDeliveryMode
 
   /**
    * Notifications transportation provider name
-   * Enum: PubNub, WebHook, RC/APNS, RC/GCM
    */
-  transportType?: string
+  transportType?: ('PubNub' | 'WebHook' | 'RC/APNS' | 'RC/GCM')
 
   /**
    * Name of a certificate. Supported for 'RC/APNS' and 'RC/GCM' transport types

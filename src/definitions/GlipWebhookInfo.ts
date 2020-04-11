@@ -32,9 +32,8 @@ class GlipWebhookInfo
 
   /**
    * Current status of a webhook
-   * Enum: Active, Suspended, Deleted
    */
-  status?: string
+  status?: ('Active' | 'Suspended' | 'Deleted')
 }
 
 export default GlipWebhookInfo

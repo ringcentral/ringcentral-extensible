@@ -6,9 +6,8 @@ class UnifiedPresence
 {
   /**
    * Aggregated presence status of the user
-   * Enum: Available, Offline, DND, Busy
    */
-  status?: string
+  status?: ('Available' | 'Offline' | 'DND' | 'Busy')
 
   /**
    */

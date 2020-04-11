@@ -9,9 +9,8 @@ class AutomaticLocationUpdatesTaskInfo
 
   /**
    * Status of a task
-   * Enum: Accepted, InProgress, Completed, Failed
    */
-  status?: string
+  status?: ('Accepted' | 'InProgress' | 'Completed' | 'Failed')
 
   /**
    * Task creation time
@@ -25,9 +24,8 @@ class AutomaticLocationUpdatesTaskInfo
 
   /**
    * Type of a task
-   * Enum: WirelessPointsBulkCreate, WirelessPointsBulkUpdate, SwitchesBulkCreate, SwitchesBulkUpdate
    */
-  type?: string
+  type?: ('WirelessPointsBulkCreate' | 'WirelessPointsBulkUpdate' | 'SwitchesBulkCreate' | 'SwitchesBulkUpdate')
 
   /**
    * Task detailed result. Returned for failed and completed tasks

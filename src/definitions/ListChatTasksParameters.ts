@@ -19,13 +19,12 @@ class ListChatTasksParameters
   /**
    * Task execution status
    */
-  status?: string[]
+  status?: ('Pending' | 'InProgress' | 'Completed')[]
 
   /**
    * Task assignment status
-   * Enum: Unassigned, Assigned
    */
-  assignmentStatus?: string
+  assignmentStatus?: ('Unassigned' | 'Assigned')
 
   /**
    * Internal identifier of a task assignee
@@ -34,9 +33,8 @@ class ListChatTasksParameters
 
   /**
    * Task execution status by assignee(-s) specified in assigneeId
-   * Enum: Pending, Completed
    */
-  assigneeStatus?: string
+  assigneeStatus?: ('Pending' | 'Completed')
 
   /**
    * Token of the current page. If token is omitted then the first page should be returned

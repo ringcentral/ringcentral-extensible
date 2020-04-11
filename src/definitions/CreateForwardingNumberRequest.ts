@@ -19,9 +19,8 @@ class CreateForwardingNumberRequest
 
   /**
    * Forwarding/Call flip phone type. If specified, 'label' attribute value is ignored. The default value is 'Other'
-   * Enum: PhoneLine, Home, Mobile, Work, Other
    */
-  type?: string
+  type?: ('PhoneLine' | 'Home' | 'Mobile' | 'Work' | 'Other')
 
   /**
    * Reference to the other extension device. Applicable for 'PhoneLine' type only. Cannot be specified together with 'phoneNumber' parameter.

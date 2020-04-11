@@ -10,9 +10,8 @@ class PhoneLinesInfo
 
   /**
    * Type of phone line
-   * Enum: Standalone, StandaloneFree, BlaPrimary, BlaSecondary
    */
-  lineType?: string
+  lineType?: ('Standalone' | 'StandaloneFree' | 'BlaPrimary' | 'BlaSecondary')
 
   /**
    * Phone number information

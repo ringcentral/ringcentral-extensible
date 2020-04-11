@@ -15,9 +15,8 @@ class Meta
   location?: string
 
   /**
-   * Enum: User, Group
    */
-  resourceType?: string
+  resourceType?: ('User' | 'Group')
 }
 
 export default Meta

@@ -3,9 +3,8 @@ import CallerIdByFeatureInfo from './CallerIdByFeatureInfo'
 class CallerIdByFeature
 {
   /**
-   * Enum: RingOut, RingMe, CallFlip, FaxNumber, AdditionalSoftphone, Alternate, CommonPhone, MobileApp, Delegated
    */
-  feature?: string
+  feature?: ('RingOut' | 'RingMe' | 'CallFlip' | 'FaxNumber' | 'AdditionalSoftphone' | 'Alternate' | 'CommonPhone' | 'MobileApp' | 'Delegated')
 
   /**
    */

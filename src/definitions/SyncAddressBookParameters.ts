@@ -3,7 +3,7 @@ class SyncAddressBookParameters
   /**
    * Type of synchronization
    */
-  syncType?: string[]
+  syncType?: ('FSync' | 'ISync')[]
 
   /**
    * Value of syncToken property of the last sync request response

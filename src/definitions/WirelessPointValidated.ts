@@ -14,9 +14,8 @@ class WirelessPointValidated
 
   /**
    * Validation result status
-   * Enum: Valid, Invalid
    */
-  status?: string
+  status?: ('Valid' | 'Invalid')
 
   /**
    */

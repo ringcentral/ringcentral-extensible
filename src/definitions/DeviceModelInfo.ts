@@ -21,7 +21,7 @@ class DeviceModelInfo
   /**
    * Device feature or multiple features supported
    */
-  features?: string[]
+  features?: ('BLA' | 'Intercom' | 'Paging' | 'HELD')[]
 }
 
 export default DeviceModelInfo

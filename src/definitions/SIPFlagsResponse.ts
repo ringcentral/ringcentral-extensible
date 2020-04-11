@@ -2,21 +2,18 @@ class SIPFlagsResponse
 {
   /**
    * If 'True' VoIP calling feature is enabled
-   * Enum: True, False
    */
-  voipFeatureEnabled?: string
+  voipFeatureEnabled?: ('True' | 'False')
 
   /**
    * If 'True' the request is sent from IP address of a country blocked for VoIP calling
-   * Enum: True, False
    */
-  voipCountryBlocked?: string
+  voipCountryBlocked?: ('True' | 'False')
 
   /**
    * If 'True' outbound calls are enabled
-   * Enum: True, False
    */
-  outboundCallsEnabled?: string
+  outboundCallsEnabled?: ('True' | 'False')
 
   /**
    */

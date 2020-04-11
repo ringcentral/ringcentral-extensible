@@ -19,9 +19,8 @@ class CompanyAnsweringRuleRequest
 
   /**
    * Type of an answering rule, the default value is 'Custom' = ['BusinessHours', 'AfterHours', 'Custom']
-   * Enum: BusinessHours, AfterHours, Custom
    */
-  type?: string
+  type?: ('BusinessHours' | 'AfterHours' | 'Custom')
 
   /**
    * Answering rule will be applied when calls are received from the specified caller(s)
@@ -40,9 +39,8 @@ class CompanyAnsweringRuleRequest
 
   /**
    * Specifies how incoming calls are forwarded. The default value is 'Operator' 'Operator' - play company greeting and forward to operator extension 'Disconnect' - play company greeting and disconnect 'Bypass' - bypass greeting to go to selected extension = ['Operator', 'Disconnect', 'Bypass']
-   * Enum: Operator, Disconnect, Bypass
    */
-  callHandlingAction?: string
+  callHandlingAction?: ('Operator' | 'Disconnect' | 'Bypass')
 
   /**
    * Extension to which the call is forwarded in 'Bypass' mode

@@ -10,9 +10,8 @@ class PermissionIdResource
 
   /**
    * Site compatibility flag set for permission
-   * Enum: Compatible, Incompatible, Independent
    */
-  siteCompatible?: string
+  siteCompatible?: ('Compatible' | 'Incompatible' | 'Independent')
 
   /**
    * Specifies if the permission is editable on UI (if set to 'True') or not (if set to 'False')

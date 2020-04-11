@@ -11,9 +11,8 @@ class TemplateInfo
   id?: string
 
   /**
-   * Enum: UserSettings, CallHandling
    */
-  type?: string
+  type?: ('UserSettings' | 'CallHandling')
 
   /**
    * Name of a template

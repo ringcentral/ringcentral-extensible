@@ -19,9 +19,8 @@ class CallRecordingExtensionResource
 
   /**
    * Direction of call
-   * Enum: Outbound, Inbound, All
    */
-  callDirection?: string
+  callDirection?: ('Outbound' | 'Inbound' | 'All')
 }
 
 export default CallRecordingExtensionResource

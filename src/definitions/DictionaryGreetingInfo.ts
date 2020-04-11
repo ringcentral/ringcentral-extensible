@@ -20,9 +20,8 @@ class DictionaryGreetingInfo
 
   /**
    * Usage type of a greeting, specifying if the greeting is applied for user extension or department extension.
-   * Enum: UserExtensionAnsweringRule, ExtensionAnsweringRule, DepartmentExtensionAnsweringRule, BlockedCalls, CallRecording, CompanyAnsweringRule, CompanyAfterHoursAnsweringRule, LimitedExtensionAnsweringRule, VoicemailExtensionAnsweringRule, AnnouncementExtensionAnsweringRule
    */
-  usageType?: string
+  usageType?: ('UserExtensionAnsweringRule' | 'ExtensionAnsweringRule' | 'DepartmentExtensionAnsweringRule' | 'BlockedCalls' | 'CallRecording' | 'CompanyAnsweringRule' | 'CompanyAfterHoursAnsweringRule' | 'LimitedExtensionAnsweringRule' | 'VoicemailExtensionAnsweringRule' | 'AnnouncementExtensionAnsweringRule')
 
   /**
    * Text of a greeting, if any
@@ -36,15 +35,13 @@ class DictionaryGreetingInfo
 
   /**
    * Type of a greeting, specifying the case when the greeting is played.
-   * Enum: Introductory, Announcement, AutomaticRecording, BlockedCallersAll, BlockedCallersSpecific, BlockedNoCallerId, BlockedPayPhones, ConnectingMessage, ConnectingAudio, StartRecording, StopRecording, Voicemail, Unavailable, InterruptPrompt, HoldMusic, Company
    */
-  type?: string
+  type?: ('Introductory' | 'Announcement' | 'AutomaticRecording' | 'BlockedCallersAll' | 'BlockedCallersSpecific' | 'BlockedNoCallerId' | 'BlockedPayPhones' | 'ConnectingMessage' | 'ConnectingAudio' | 'StartRecording' | 'StopRecording' | 'Voicemail' | 'Unavailable' | 'InterruptPrompt' | 'HoldMusic' | 'Company')
 
   /**
    * Category of a greeting, specifying data form. The category value 'None' specifies that greetings of a certain type ('Introductory', 'ConnectingAudio', etc.) are switched off for an extension = ['Music', 'Message', 'RingTones', 'None']
-   * Enum: Music, Message, RingTones, None
    */
-  category?: string
+  category?: ('Music' | 'Message' | 'RingTones' | 'None')
 
   /**
    * Information on navigation

@@ -2,9 +2,8 @@ class NotificationDeliveryModeRequest
 {
   /**
    * Notifications transportation provider name
-   * Enum: PubNub, WebHook, RC/APNS, RC/GCM
    */
-  transportType?: string
+  transportType?: ('PubNub' | 'WebHook' | 'RC/APNS' | 'RC/GCM')
 
   /**
    * Mandatory for 'WebHook' transport type, URL of a consumer service (cannot be changed during subscription update)

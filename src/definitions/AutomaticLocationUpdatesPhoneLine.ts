@@ -3,9 +3,8 @@ import AutomaticLocationUpdatesPhoneNumberInfo from './AutomaticLocationUpdatesP
 class AutomaticLocationUpdatesPhoneLine
 {
   /**
-   * Enum: Unknown, Standalone, StandaloneFree, BlaPrimary, BlaSecondary, BLF
    */
-  lineType?: string
+  lineType?: ('Unknown' | 'Standalone' | 'StandaloneFree' | 'BlaPrimary' | 'BlaSecondary' | 'BLF')
 
   /**
    */

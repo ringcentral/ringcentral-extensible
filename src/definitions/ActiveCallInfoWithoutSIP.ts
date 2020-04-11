@@ -7,9 +7,8 @@ class ActiveCallInfoWithoutSIP
 
   /**
    * Call direction
-   * Enum: Inbound, Outbound
    */
-  direction?: string
+  direction?: ('Inbound' | 'Outbound')
 
   /**
    * Phone number or extension number of a caller. For GCM transport type '_from' property should be used
@@ -38,9 +37,8 @@ class ActiveCallInfoWithoutSIP
 
   /**
    * Telephony call status
-   * Enum: NoCall, CallConnected, Ringing, OnHold, ParkedCall
    */
-  telephonyStatus?: string
+  telephonyStatus?: ('NoCall' | 'CallConnected' | 'Ringing' | 'OnHold' | 'ParkedCall')
 
   /**
    * Internal identifier of a call session
@@ -49,9 +47,8 @@ class ActiveCallInfoWithoutSIP
 
   /**
    * Type of call termination. Supported for calls in 'NoCall' status. If the returned termination type is 'intermediate' it means the call is not actually ended, the connection is established on one of the devices
-   * Enum: final, intermediate
    */
-  terminationType?: string
+  terminationType?: ('final' | 'intermediate')
 }
 
 export default ActiveCallInfoWithoutSIP

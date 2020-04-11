@@ -25,15 +25,13 @@ class DeviceResource
   /**
    * Device type
    * Default: HardPhone
-   * Enum: BLA, HardPhone, SoftPhone, OtherPhone, Paging, WebPhone
    */
-  type?: string
+  type?: ('BLA' | 'HardPhone' | 'SoftPhone' | 'OtherPhone' | 'Paging' | 'WebPhone')
 
   /**
    * Status of a device
-   * Enum: Online, Offline
    */
-  status?: string
+  status?: ('Online' | 'Offline')
 
   /**
    * Site data
@@ -87,9 +85,8 @@ class DeviceResource
 
   /**
    * Pooling type of a deviceHost - device with standalone paid phone line which can be linked to Glip/Softphone instanceGuest - device with a linked phone lineNone - device without a phone line or with specific line (free, BLA, etc.) = ['Host', 'Guest', 'None']
-   * Enum: Host, Guest, None
    */
-  linePooling?: string
+  linePooling?: ('Host' | 'Guest' | 'None')
 
   /**
    * Supported only for devices assigned to Limited extensions. If true, enables users to log in to this phone as a common phone.

@@ -14,15 +14,13 @@ class CustomUserGreetingInfo
 
   /**
    * Type of a custom user greeting
-   * Enum: Introductory, Announcement, InterruptPrompt, ConnectingAudio, ConnectingMessage, Voicemail, Unavailable, HoldMusic, PronouncedName
    */
-  type?: string
+  type?: ('Introductory' | 'Announcement' | 'InterruptPrompt' | 'ConnectingAudio' | 'ConnectingMessage' | 'Voicemail' | 'Unavailable' | 'HoldMusic' | 'PronouncedName')
 
   /**
    * Content media type
-   * Enum: audio/mpeg, audio/wav
    */
-  contentType?: string
+  contentType?: ('audio/mpeg' | 'audio/wav')
 
   /**
    * Link to a greeting content (audio file)

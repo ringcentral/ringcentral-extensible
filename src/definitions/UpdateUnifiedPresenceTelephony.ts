@@ -2,9 +2,8 @@ class UpdateUnifiedPresenceTelephony
 {
   /**
    * Telephony DND status
-   * Enum: TakeAllCalls, DoNotAcceptAnyCalls, DoNotAcceptQueueCalls
    */
-  availability?: string
+  availability?: ('TakeAllCalls' | 'DoNotAcceptAnyCalls' | 'DoNotAcceptQueueCalls')
 }
 
 export default UpdateUnifiedPresenceTelephony

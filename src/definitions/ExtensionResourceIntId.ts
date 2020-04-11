@@ -42,14 +42,12 @@ class ExtensionResourceIntId
   name?: string
 
   /**
-   * Enum: Unknown, User, Department, Announcement, Voicemail, DigitalUser, VirtualUser, FaxUser, PagingOnly, SharedLinesGroup, IvrMenu, ApplicationExtension, ParkLocation
    */
-  type?: string
+  type?: ('Unknown' | 'User' | 'Department' | 'Announcement' | 'Voicemail' | 'DigitalUser' | 'VirtualUser' | 'FaxUser' | 'PagingOnly' | 'SharedLinesGroup' | 'IvrMenu' | 'ApplicationExtension' | 'ParkLocation')
 
   /**
-   * Enum: Enabled, Disabled, Frozen, NotActivated, Unassigned
    */
-  status?: string
+  status?: ('Enabled' | 'Disabled' | 'Frozen' | 'NotActivated' | 'Unassigned')
 
   /**
    */
@@ -68,9 +66,8 @@ class ExtensionResourceIntId
   regionalSettings?: RegionalSettingsInfo
 
   /**
-   * Enum: NotStarted, Incomplete, Completed, Unknown
    */
-  setupWizardState?: string
+  setupWizardState?: ('NotStarted' | 'Incomplete' | 'Completed' | 'Unknown')
 
   /**
    */

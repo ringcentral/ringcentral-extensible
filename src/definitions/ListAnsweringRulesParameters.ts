@@ -2,9 +2,8 @@ class ListAnsweringRulesParameters
 {
   /**
    * Default: Simple
-   * Enum: Detailed, Simple
    */
-  view?: string
+  view?: ('Detailed' | 'Simple')
 
   /**
    * If true, then only active call handling rules are returned

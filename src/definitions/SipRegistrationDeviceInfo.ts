@@ -19,9 +19,8 @@ class SipRegistrationDeviceInfo
 
   /**
    * Device type
-   * Enum: HardPhone, SoftPhone, OtherPhone, Paging, WebPhone
    */
-  type?: string
+  type?: ('HardPhone' | 'SoftPhone' | 'OtherPhone' | 'Paging' | 'WebPhone')
 
   /**
    * Device identification number (stock keeping unit) in the format TP-ID [-AT-AC], where TP is device type (HP for RC HardPhone, DV for all other devices including softphone); ID - device model ID; AT -addon type ID; AC - addon count (if any). For example 'HP-56-2-2'
@@ -29,9 +28,8 @@ class SipRegistrationDeviceInfo
   sku?: string
 
   /**
-   * Enum: Online, Offline
    */
-  status?: string
+  status?: ('Online' | 'Offline')
 
   /**
    * Device name. Mandatory if ordering  SoftPhone or OtherPhone. Optional for  HardPhone. If not specified for HardPhone, then device  model  name is used as device  name
@@ -85,9 +83,8 @@ class SipRegistrationDeviceInfo
 
   /**
    * Pooling type of a deviceHost - device with standalone paid phone line which can be linked to Glip/Softphone instanceGuest - device with a linked phone lineNone - device without a phone line or with specific line (free, BLA, etc.) = ['Host', 'Guest', 'None']
-   * Enum: Host, Guest, None
    */
-  linePooling?: string
+  linePooling?: ('Host' | 'Guest' | 'None')
 
   /**
    * Network location status. 'True' if the device is located in the configured corporate network (On-Net); 'False' for Off-Net location. Parameter is not returned if `EmergencyAddressAutoUpdate` feature is not enabled for the account/user, or if device network location is not determined

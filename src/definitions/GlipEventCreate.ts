@@ -35,9 +35,8 @@ class GlipEventCreate
 
   /**
    * Event recurrence settings. For non-periodic events the value is 'None'. Must be greater or equal to event duration: 1- Day/Weekday; 7 - Week; 28 - Month; 365 - Year
-   * Enum: None, Day, Weekday, Week, Month, Year
    */
-  recurrence?: string
+  recurrence?: ('None' | 'Day' | 'Weekday' | 'Week' | 'Month' | 'Year')
 
   /**
    * Condition of ending
@@ -52,16 +51,14 @@ class GlipEventCreate
   /**
    * Iterations end datetime for periodic events.
    * Default: None
-   * Enum: None, Count, Date
    */
-  endingOn?: string
+  endingOn?: ('None' | 'Count' | 'Date')
 
   /**
    * Color of Event title (including its presentation in Calendar)
    * Default: Black
-   * Enum: Black, Red, Orange, Yellow, Green, Blue, Purple, Magenta
    */
-  color?: string
+  color?: ('Black' | 'Red' | 'Orange' | 'Yellow' | 'Green' | 'Blue' | 'Purple' | 'Magenta')
 
   /**
    * Event location

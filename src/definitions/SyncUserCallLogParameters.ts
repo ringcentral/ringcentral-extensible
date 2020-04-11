@@ -3,7 +3,7 @@ class SyncUserCallLogParameters
   /**
    * Type of synchronization
    */
-  syncType?: string[]
+  syncType?: ('FSync' | 'ISync')[]
 
   /**
    * Value of syncToken property of last sync request response
@@ -23,14 +23,13 @@ class SyncUserCallLogParameters
   /**
    * Type of calls to be returned. The default value is 'All'
    */
-  statusGroup?: string[]
+  statusGroup?: ('Missed' | 'All')[]
 
   /**
    * View of call records. The same view parameter specified for FSync will be applied for ISync, the view cannot be changed for ISync
    * Default: Simple
-   * Enum: Simple, Detailed
    */
-  view?: string
+  view?: ('Simple' | 'Detailed')
 
   /**
    * Supported for ISync. If 'True' then deleted call records are returned

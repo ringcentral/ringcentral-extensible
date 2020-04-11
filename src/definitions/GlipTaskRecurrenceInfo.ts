@@ -2,15 +2,13 @@ class GlipTaskRecurrenceInfo
 {
   /**
    * Task recurrence settings. For non-periodic tasks the value is 'None'
-   * Enum: None, Daily, Weekdays, Weekly, Monthly, Yearly
    */
-  schedule?: string
+  schedule?: ('None' | 'Daily' | 'Weekdays' | 'Weekly' | 'Monthly' | 'Yearly')
 
   /**
    * Task ending condition
-   * Enum: None, Count, Date
    */
-  endingCondition?: string
+  endingCondition?: ('None' | 'Count' | 'Date')
 
   /**
    * Count of iterations of periodic tasks

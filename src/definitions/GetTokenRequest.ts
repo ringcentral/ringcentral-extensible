@@ -18,9 +18,8 @@ class GetTokenRequest
   /**
    * Grant type
    * Default: password
-   * Enum: authorization_code, password, refresh_token, client_credentials
    */
-  grant_type?: string
+  grant_type?: ('authorization_code' | 'password' | 'refresh_token' | 'client_credentials')
 
   /**
    * Authorization code

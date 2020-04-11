@@ -9,9 +9,8 @@ class ActiveCallInfo
   id?: string
 
   /**
-   * Enum: Inbound, Outbound
    */
-  direction?: string
+  direction?: ('Inbound' | 'Outbound')
 
   /**
    * Phone number or extension number of a caller. For GCM transport type '_from' property should be used

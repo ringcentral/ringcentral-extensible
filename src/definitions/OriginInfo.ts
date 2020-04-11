@@ -2,9 +2,8 @@ class OriginInfo
 {
   /**
    * Session origin type
-   * Enum: Call, RingOut, RingMe, Conference, GreetingsRecording, VerificationCall, Zoom, CallOut
    */
-  type?: string
+  type?: ('Call' | 'RingOut' | 'RingMe' | 'Conference' | 'GreetingsRecording' | 'VerificationCall' | 'Zoom' | 'CallOut')
 }
 
 export default OriginInfo

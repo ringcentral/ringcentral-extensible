@@ -7,9 +7,8 @@ class GlipMessageAttachmentInfoRequest
   /**
    * Type of attachment
    * Default: Card
-   * Enum: Card, Event, Note
    */
-  type?: string
+  type?: ('Card' | 'Event' | 'Note')
 
   /**
    * Attachment title
@@ -78,9 +77,8 @@ class GlipMessageAttachmentInfoRequest
 
   /**
    * Event recurrence settings. For non-periodic events the value is 'None'. Must be greater or equal to event duration: 1- Day/Weekday; 7 - Week; 28 - Month; 365 - Year
-   * Enum: None, Day, Weekday, Week, Month, Year
    */
-  recurrence?: string
+  recurrence?: ('None' | 'Day' | 'Weekday' | 'Week' | 'Month' | 'Year')
 
   /**
    * Condition of ending an event

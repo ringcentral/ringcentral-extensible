@@ -11,9 +11,8 @@ class AutomaticLocationUpdatesDeviceInfo
   /**
    * Device type
    * Default: HardPhone
-   * Enum: HardPhone, SoftPhone, OtherPhone
    */
-  type?: string
+  type?: ('HardPhone' | 'SoftPhone' | 'OtherPhone')
 
   /**
    * Serial number for HardPhone (is returned only when the phone is shipped and provisioned)

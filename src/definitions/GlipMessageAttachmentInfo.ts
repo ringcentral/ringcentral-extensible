@@ -12,9 +12,8 @@ class GlipMessageAttachmentInfo
   /**
    * Type of an attachment
    * Default: Card
-   * Enum: Card, Event, Note
    */
-  type?: string
+  type?: ('Card' | 'Event' | 'Note')
 
   /**
    * A string of default text that will be rendered in the case that the client does not support Interactive Messages
@@ -83,9 +82,8 @@ class GlipMessageAttachmentInfo
 
   /**
    * Event recurrence settings.
-   * Enum: None, Day, Weekday, Week, Month, Year
    */
-  recurrence?: string
+  recurrence?: ('None' | 'Day' | 'Weekday' | 'Week' | 'Month' | 'Year')
 
   /**
    * Condition of ending
@@ -100,16 +98,14 @@ class GlipMessageAttachmentInfo
   /**
    * Iterations end datetime for periodic events
    * Default: None
-   * Enum: None, Count, Date
    */
-  endingOn?: string
+  endingOn?: ('None' | 'Count' | 'Date')
 
   /**
    * Color of Event title, including its presentation in Calendar; or the color of the side border of an interactive message of a Card
    * Default: Black
-   * Enum: Black, Red, Orange, Yellow, Green, Blue, Purple, Magenta
    */
-  color?: string
+  color?: ('Black' | 'Red' | 'Orange' | 'Yellow' | 'Green' | 'Blue' | 'Purple' | 'Magenta')
 
   /**
    * Event location

@@ -7,9 +7,8 @@ class GlipTeamInfo
 
   /**
    * Type of a chat
-   * Enum: Team
    */
-  type?: string
+  type?: ('Team')
 
   /**
    * Team access level
@@ -28,9 +27,8 @@ class GlipTeamInfo
 
   /**
    * Team status
-   * Enum: Active, Archived
    */
-  status?: string
+  status?: ('Active' | 'Archived')
 
   /**
    * Team creation datetime in ISO 8601 format

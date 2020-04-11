@@ -8,9 +8,8 @@ class ExtensionPresenceEventBody
 
   /**
    * Telephony presence status. Returned if telephony status is changed.
-   * Enum: NoCall, CallConnected, Ringing, OnHold, ParkedCall
    */
-  telephonyStatus?: string
+  telephonyStatus?: ('NoCall' | 'CallConnected' | 'Ringing' | 'OnHold' | 'ParkedCall')
 
   /**
    * Order number of a notification to state the chronology
@@ -19,21 +18,18 @@ class ExtensionPresenceEventBody
 
   /**
    * Aggregated presence status, calculated from a number of sources
-   * Enum: Offline, Busy, Available
    */
-  presenceStatus?: string
+  presenceStatus?: ('Offline' | 'Busy' | 'Available')
 
   /**
    * User-defined presence status (as previously published by the user)
-   * Enum: Offline, Busy, Available
    */
-  userStatus?: string
+  userStatus?: ('Offline' | 'Busy' | 'Available')
 
   /**
    * Extended DnD (Do not Disturb) status
-   * Enum: TakeAllCalls, DoNotAcceptAnyCalls, DoNotAcceptDepartmentCalls, TakeDepartmentCallsOnly
    */
-  dndStatus?: string
+  dndStatus?: ('TakeAllCalls' | 'DoNotAcceptAnyCalls' | 'DoNotAcceptDepartmentCalls' | 'TakeDepartmentCallsOnly')
 
   /**
    * If 'True' enables other extensions to see the extension presence status

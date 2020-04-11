@@ -2,9 +2,8 @@ class Photo
 {
   /**
    * Required
-   * Enum: photo
    */
-  type?: string
+  type?: ('photo')
 
   /**
    * Required

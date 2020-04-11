@@ -3,14 +3,12 @@ import ActiveCallInfo from './ActiveCallInfo'
 class PresenceInfoResource
 {
   /**
-   * Enum: Offline, Busy, Available
    */
-  userStatus?: string
+  userStatus?: ('Offline' | 'Busy' | 'Available')
 
   /**
-   * Enum: TakeAllCalls, DoNotAcceptDepartmentCalls, TakeDepartmentCallsOnly, DoNotAcceptAnyCalls, Unknown
    */
-  dndStatus?: string
+  dndStatus?: ('TakeAllCalls' | 'DoNotAcceptDepartmentCalls' | 'TakeDepartmentCallsOnly' | 'DoNotAcceptAnyCalls' | 'Unknown')
 
   /**
    */

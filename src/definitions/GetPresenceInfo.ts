@@ -15,9 +15,8 @@ class GetPresenceInfo
 
   /**
    * Extended DnD (Do not Disturb) status. Cannot be set for Department/Announcement/Voicemail (Take Messages Only)/Fax User/Shared Lines Group/Paging Only Group/IVR Menu/Application Extension/Park Location extensions. The 'DoNotAcceptDepartmentCalls' and 'TakeDepartmentCallsOnly' values are applicable only for extensions - members of a Department; if these values are set for department outsiders, the 400 Bad Request error code is returned. The 'TakeDepartmentCallsOnly' status can be set through the old RingCentral user interface and is available for some migrated accounts only.
-   * Enum: TakeAllCalls, DoNotAcceptAnyCalls, DoNotAcceptDepartmentCalls, TakeDepartmentCallsOnly
    */
-  dndStatus?: string
+  dndStatus?: ('TakeAllCalls' | 'DoNotAcceptAnyCalls' | 'DoNotAcceptDepartmentCalls' | 'TakeDepartmentCallsOnly')
 
   /**
    * Information on extension, for which this presence data is returned
@@ -36,9 +35,8 @@ class GetPresenceInfo
 
   /**
    * Aggregated presence status, calculated from a number of sources
-   * Enum: Offline, Busy, Available
    */
-  presenceStatus?: string
+  presenceStatus?: ('Offline' | 'Busy' | 'Available')
 
   /**
    * If 'True' enables to ring extension phone, if any user monitored by this extension is ringing
@@ -47,21 +45,18 @@ class GetPresenceInfo
 
   /**
    * Telephony presence status
-   * Enum: NoCall, CallConnected, Ringing, OnHold, ParkedCall
    */
-  telephonyStatus?: string
+  telephonyStatus?: ('NoCall' | 'CallConnected' | 'Ringing' | 'OnHold' | 'ParkedCall')
 
   /**
    * User-defined presence status (as previously published by the user)
-   * Enum: Offline, Busy, Available
    */
-  userStatus?: string
+  userStatus?: ('Offline' | 'Busy' | 'Available')
 
   /**
    * RingCentral Meetings presence
-   * Enum: Connected, Disconnected
    */
-  meetingStatus?: string
+  meetingStatus?: ('Connected' | 'Disconnected')
 
   /**
    * Information on active calls

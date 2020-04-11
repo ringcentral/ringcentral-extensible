@@ -7,9 +7,8 @@ class ForwardingNumberInfoRulesCreateRuleRequest
 
   /**
    * Forwarding phone number type
-   * Enum: Home, Mobile, Work, PhoneLine, Outage, Other
    */
-  type?: string
+  type?: ('Home' | 'Mobile' | 'Work' | 'PhoneLine' | 'Outage' | 'Other')
 }
 
 export default ForwardingNumberInfoRulesCreateRuleRequest

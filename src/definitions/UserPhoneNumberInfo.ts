@@ -41,9 +41,8 @@ class UserPhoneNumberInfo
 
   /**
    * Payment type. 'External' is returned for forwarded numbers which are not terminated in the RingCentral phone system
-   * Enum: External, TollFree, Local
    */
-  paymentType?: string
+  paymentType?: ('External' | 'TollFree' | 'Local')
 
   /**
    * Phone number
@@ -57,20 +56,18 @@ class UserPhoneNumberInfo
 
   /**
    * Phone number type
-   * Enum: VoiceFax, FaxOnly, VoiceOnly
    */
-  type?: string
+  type?: ('VoiceFax' | 'FaxOnly' | 'VoiceOnly')
 
   /**
    * Usage type of a phone number. Numbers of 'NumberPool' type wont't be returned for phone number list requests
-   * Enum: MainCompanyNumber, AdditionalCompanyNumber, CompanyNumber, DirectNumber, CompanyFaxNumber, ForwardedNumber, ForwardedCompanyNumber, ContactCenterNumber, ConferencingNumber, NumberPool
    */
-  usageType?: string
+  usageType?: ('MainCompanyNumber' | 'AdditionalCompanyNumber' | 'CompanyNumber' | 'DirectNumber' | 'CompanyFaxNumber' | 'ForwardedNumber' | 'ForwardedCompanyNumber' | 'ContactCenterNumber' | 'ConferencingNumber' | 'NumberPool')
 
   /**
    * List of features of a phone number
    */
-  features?: string[]
+  features?: ('CallerId' | 'SmsSender' | 'MmsSender' | 'InternationalSmsSender' | 'Delegated')[]
 }
 
 export default UserPhoneNumberInfo

@@ -25,9 +25,8 @@ class GetDeviceInfoResponse
   /**
    * Device type
    * Default: HardPhone
-   * Enum: BLA, SoftPhone, OtherPhone, HardPhone, WebPhone, Paging
    */
-  type?: string
+  type?: ('BLA' | 'SoftPhone' | 'OtherPhone' | 'HardPhone' | 'WebPhone' | 'Paging')
 
   /**
    * Device name. Mandatory if ordering  SoftPhone  or  OtherPhone. Optional for  HardPhone. If not specified for HardPhone, then device model name is used as device name
@@ -41,9 +40,8 @@ class GetDeviceInfoResponse
 
   /**
    * Device status
-   * Enum: Offline, Online
    */
-  status?: string
+  status?: ('Offline' | 'Online')
 
   /**
    * PC name for softphone
@@ -102,9 +100,8 @@ class GetDeviceInfoResponse
 
   /**
    * Pooling type of a deviceHost - device with standalone paid phone line which can be linked to Glip/Softphone instanceGuest - device with a linked phone lineNone - device without a phone line or with specific line (free, BLA, etc.) = ['Host', 'Guest', 'None']
-   * Enum: Host, Guest, None
    */
-  linePooling?: string
+  linePooling?: ('Host' | 'Guest' | 'None')
 }
 
 export default GetDeviceInfoResponse

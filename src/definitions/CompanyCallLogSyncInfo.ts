@@ -2,9 +2,8 @@ class CompanyCallLogSyncInfo
 {
   /**
    * Type of synchronization
-   * Enum: Fsync, ISync
    */
-  syncType?: string
+  syncType?: ('Fsync' | 'ISync')
 
   /**
    * Synchronization token

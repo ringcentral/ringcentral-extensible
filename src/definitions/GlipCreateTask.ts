@@ -17,9 +17,8 @@ class GlipCreateTask
 
   /**
    * Default: Simple
-   * Enum: Simple, AllAssignees, Percentage
    */
-  completenessCondition?: string
+  completenessCondition?: ('Simple' | 'AllAssignees' | 'Percentage')
 
   /**
    * Task start date in UTC time zone.
@@ -33,9 +32,8 @@ class GlipCreateTask
 
   /**
    * Default: Black
-   * Enum: Black, Red, Orange, Yellow, Green, Blue, Purple, Magenta
    */
-  color?: string
+  color?: ('Black' | 'Red' | 'Orange' | 'Yellow' | 'Green' | 'Blue' | 'Purple' | 'Magenta')
 
   /**
    * Task section to group / search by. Max allowed legth is 100 characters.

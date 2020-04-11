@@ -21,9 +21,8 @@ class VoicemailMessageEventBody
 
   /**
    * Type of a message
-   * Enum: Voicemail
    */
-  type?: string
+  type?: ('Voicemail')
 
   /**
    * Message creation datetime in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format including timezone, for example *2019-03-10T18:07:52.534Z*
@@ -55,9 +54,8 @@ class VoicemailMessageEventBody
   /**
    * Message direction
    * Default: Inbound
-   * Enum: Inbound, Outbound
    */
-  direction?: string
+  direction?: ('Inbound' | 'Outbound')
 
   /**
    * Message availability status

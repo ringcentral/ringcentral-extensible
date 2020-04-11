@@ -5,21 +5,18 @@ class CallerBlockingSettingsUpdate
 {
   /**
    * Call blocking options: either specific or all calls and faxes
-   * Enum: Specific, All
    */
-  mode?: string
+  mode?: ('Specific' | 'All')
 
   /**
    * Determines how to handle calls with no caller ID in 'Specific' mode
-   * Enum: BlockCallsAndFaxes, BlockFaxes, Allow
    */
-  noCallerId?: string
+  noCallerId?: ('BlockCallsAndFaxes' | 'BlockFaxes' | 'Allow')
 
   /**
    * Blocking settings for pay phones
-   * Enum: Block, Allow
    */
-  payPhones?: string
+  payPhones?: ('Block' | 'Allow')
 
   /**
    * List of greetings played for blocked callers

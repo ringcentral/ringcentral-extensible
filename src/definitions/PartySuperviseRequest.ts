@@ -3,9 +3,8 @@ class PartySuperviseRequest
   /**
    * Supervising mode
    * Required
-   * Enum: Listen
    */
-  mode?: string
+  mode?: ('Listen')
 
   /**
    * Internal identifier of a supervisor's device

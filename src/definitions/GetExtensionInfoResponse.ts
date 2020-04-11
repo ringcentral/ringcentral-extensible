@@ -86,15 +86,13 @@ class GetExtensionInfoResponse
   /**
    * Specifies extension configuration wizard state (web service setup).
    * Default: NotStarted
-   * Enum: NotStarted, Incomplete, Completed
    */
-  setupWizardState?: string
+  setupWizardState?: ('NotStarted' | 'Incomplete' | 'Completed')
 
   /**
    * Extension current state. If 'Unassigned' is specified, then extensions without ‘extensionNumber’ are returned. If not specified, then all extensions are returned
-   * Enum: Enabled, Disabled, Frozen, NotActivated, Unassigned
    */
-  status?: string
+  status?: ('Enabled' | 'Disabled' | 'Frozen' | 'NotActivated' | 'Unassigned')
 
   /**
    * Status information (reason, comment). Returned for 'Disabled' status only
@@ -103,9 +101,8 @@ class GetExtensionInfoResponse
 
   /**
    * Extension type
-   * Enum: User, FaxUser, VirtualUser, DigitalUser, Department, Announcement, Voicemail, SharedLinesGroup, PagingOnly, IvrMenu, ApplicationExtension, ParkLocation, Bot, Room, Limited, Site
    */
-  type?: string
+  type?: ('User' | 'FaxUser' | 'VirtualUser' | 'DigitalUser' | 'Department' | 'Announcement' | 'Voicemail' | 'SharedLinesGroup' | 'PagingOnly' | 'IvrMenu' | 'ApplicationExtension' | 'ParkLocation' | 'Bot' | 'Room' | 'Limited' | 'Site')
 
   /**
    * For Department extension type only. Call queue settings

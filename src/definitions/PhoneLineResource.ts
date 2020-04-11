@@ -4,9 +4,8 @@ import EmergencyAddress from './EmergencyAddress'
 class PhoneLineResource
 {
   /**
-   * Enum: Unknown, Standalone, StandaloneFree, BlaPrimary, BlaSecondary, BLF
    */
-  lineType?: string
+  lineType?: ('Unknown' | 'Standalone' | 'StandaloneFree' | 'BlaPrimary' | 'BlaSecondary' | 'BLF')
 
   /**
    */

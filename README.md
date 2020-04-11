@@ -18,5 +18,3 @@ yarn test
 
 
 ## Todo
-
-- Enum type: `type?: 'Voice' | 'Fax'`

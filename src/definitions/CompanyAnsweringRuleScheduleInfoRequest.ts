@@ -15,9 +15,8 @@ class CompanyAnsweringRuleScheduleInfoRequest
 
   /**
    * Reference to Business Hours or After Hours schedule
-   * Enum: BusinessHours, AfterHours
    */
-  ref?: string
+  ref?: ('BusinessHours' | 'AfterHours')
 }
 
 export default CompanyAnsweringRuleScheduleInfoRequest

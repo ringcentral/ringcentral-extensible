@@ -28,7 +28,11 @@ const normalizeType = f => {
   } else if (f.type === 'file') {
     return 'Attachment'
   } else if (f.type === 'string') {
-    return 'string'
+    if (f.enum) {
+      return `(${f.enum.map(i => `'${i.replace(/'/g, "\\'")}'`).join(' | ')})`
+    } else {
+      return 'string'
+    }
   } else {
     throw new Error(`Unknown type ${f.type}`)
   }
@@ -48,9 +52,6 @@ const generateField = (m, f) => {
   }
 
   p = ` */\n  ${p}`
-  if (f.enum) {
-    p = ` * Enum: ${f.enum.join(', ')}\n  ${p}`
-  }
   if (f.default) {
     p = ` * Default: ${f.default}\n  ${p}`
   }

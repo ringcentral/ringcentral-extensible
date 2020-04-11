@@ -12,9 +12,8 @@ class BillingPlanInfo
 
   /**
    * Duration period
-   * Enum: Month, Day
    */
-  durationUnit?: string
+  durationUnit?: ('Month' | 'Day')
 
   /**
    * Number of duration units
@@ -23,9 +22,8 @@ class BillingPlanInfo
 
   /**
    * Billing plan type
-   * Enum: Initial, Regular, Suspended, Trial, TrialNoCC, Free
    */
-  type?: string
+  type?: ('Initial' | 'Regular' | 'Suspended' | 'Trial' | 'TrialNoCC' | 'Free')
 
   /**
    * Included digital lines count

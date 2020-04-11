@@ -22,9 +22,8 @@ class GlipTaskInfo
 
   /**
    * Type of a task
-   * Enum: Task
    */
-  type?: string
+  type?: ('Task')
 
   /**
    */
@@ -37,9 +36,8 @@ class GlipTaskInfo
 
   /**
    * Status of task execution
-   * Enum: Pending, InProgress, Completed
    */
-  status?: string
+  status?: ('Pending' | 'InProgress' | 'Completed')
 
   /**
    * Name/subject of a task
@@ -53,9 +51,8 @@ class GlipTaskInfo
 
   /**
    * Specifies how to determine task completeness
-   * Enum: Simple, AllAssignees, Percentage
    */
-  completenessCondition?: string
+  completenessCondition?: ('Simple' | 'AllAssignees' | 'Percentage')
 
   /**
    * Current completeness percentage of the task with the specified percentage completeness condition
@@ -75,9 +72,8 @@ class GlipTaskInfo
 
   /**
    * Font color of a post with the current task
-   * Enum: Black, Red, Orange, Yellow, Green, Blue, Purple, Magenta
    */
-  color?: string
+  color?: ('Black' | 'Red' | 'Orange' | 'Yellow' | 'Green' | 'Blue' | 'Purple' | 'Magenta')
 
   /**
    * Task section to group/search by

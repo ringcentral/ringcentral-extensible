@@ -12,9 +12,8 @@ class CallLogRecordingInfo
 
   /**
    * Indicates recording mode used
-   * Enum: Automatic, OnDemand
    */
-  type?: string
+  type?: ('Automatic' | 'OnDemand')
 
   /**
    * Link to the call recording binary content

@@ -9,9 +9,8 @@ class GlipPostEvent
 
   /**
    * Type of a post event
-   * Enum: PostAdded, PostChanged, PostRemoved
    */
-  eventType?: string
+  eventType?: ('PostAdded' | 'PostChanged' | 'PostRemoved')
 
   /**
    * Internal identifier of a group a post belongs to
@@ -20,9 +19,8 @@ class GlipPostEvent
 
   /**
    * Type of a post. 'TextMessage' - an incoming text message; 'PersonJoined' - a message notifying that person has joined a conversation; 'PersonsAdded' - a message notifying that a person(s) were added to a conversation
-   * Enum: TextMessage, PersonJoined, PersonsAdded, Card
    */
-  type?: string
+  type?: ('TextMessage' | 'PersonJoined' | 'PersonsAdded' | 'Card')
 
   /**
    * For 'TextMessage' post type only. Message text

@@ -2,9 +2,8 @@ class MessageChanges
 {
   /**
    * Message type
-   * Enum: Voicemail, SMS, Fax, Pager
    */
-  type?: string
+  type?: ('Voicemail' | 'SMS' | 'Fax' | 'Pager')
 
   /**
    * The number of new messages. Can be omitted if the value is zero

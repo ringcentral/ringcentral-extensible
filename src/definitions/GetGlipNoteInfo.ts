@@ -46,9 +46,8 @@ class GetGlipNoteInfo
 
   /**
    * Note publishing status. Any note is created in 'Draft' status. After it is posted it becomes 'Active'
-   * Enum: Active, Draft
    */
-  status?: string
+  status?: ('Active' | 'Draft')
 
   /**
    * Creation time
@@ -61,9 +60,8 @@ class GetGlipNoteInfo
   lastModifiedTime?: string
 
   /**
-   * Enum: Note
    */
-  type?: string
+  type?: ('Note')
 }
 
 export default GetGlipNoteInfo

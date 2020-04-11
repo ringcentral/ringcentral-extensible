@@ -2,9 +2,8 @@ class ListDataExportTasksParameters
 {
   /**
    * Status of the task(s) to be returned. Multiple values supported
-   * Enum: Accepted, InProgress, Completed, Failed, Canceled
    */
-  status?: string
+  status?: ('Accepted' | 'InProgress' | 'Completed' | 'Failed' | 'Canceled')
 
   /**
    * Page number to be retrieved; value range is > 0

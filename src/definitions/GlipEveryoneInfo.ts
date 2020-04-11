@@ -7,9 +7,8 @@ class GlipEveryoneInfo
 
   /**
    * Type of a chat
-   * Enum: Everyone
    */
-  type?: string
+  type?: ('Everyone')
 
   /**
    * Chat name

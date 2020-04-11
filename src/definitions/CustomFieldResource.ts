@@ -7,9 +7,8 @@ class CustomFieldResource
 
   /**
    * Object category to attach custom fields
-   * Enum: User
    */
-  category?: string
+  category?: ('User')
 
   /**
    * Custom field display name

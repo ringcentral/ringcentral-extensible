@@ -4,9 +4,8 @@ class QueueInfo
 {
   /**
    * Specifies how calls are transferred to group members
-   * Enum: Rotating, Simultaneous, FixedOrder
    */
-  transferMode?: string
+  transferMode?: ('Rotating' | 'Simultaneous' | 'FixedOrder')
 
   /**
    * Information on a call forwarding rule
@@ -15,9 +14,8 @@ class QueueInfo
 
   /**
    * Connecting audio interruption mode
-   * Enum: Never, WhenMusicEnds, Periodically
    */
-  holdAudioInterruptionMode?: string
+  holdAudioInterruptionMode?: ('Never' | 'WhenMusicEnds' | 'Periodically')
 
   /**
    * Connecting audio interruption message period in seconds
@@ -27,9 +25,8 @@ class QueueInfo
   /**
    * Specifies the type of action to be taken after the hold time (waiting for an available call queue member) expires. If 'TransferToExtension' option is selected, the extension specified in `transfer` field is used
    * Default: Voicemail
-   * Enum: TransferToExtension, Voicemail
    */
-  holdTimeExpirationAction?: string
+  holdTimeExpirationAction?: ('TransferToExtension' | 'Voicemail')
 
   /**
    * Maximum time in seconds to wait for a call queue member before trying the next member
@@ -53,9 +50,8 @@ class QueueInfo
 
   /**
    * Action which should be taken if count of callers on hold exceeds the maximum
-   * Enum: Voicemail, Announcement
    */
-  maxCallersAction?: string
+  maxCallersAction?: ('Voicemail' | 'Announcement')
 }
 
 export default QueueInfo

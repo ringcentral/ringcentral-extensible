@@ -70,9 +70,8 @@ class ExtensionCreationResponse
 
   /**
    * Specifies extension configuration wizard state (web service setup). The default value is 'NotStarted'
-   * Enum: NotStarted, Incomplete, Completed
    */
-  setupWizardState?: string
+  setupWizardState?: ('NotStarted' | 'Incomplete' | 'Completed')
 
   /**
    * Site data. If multi-site feature is turned on for the account, then internal identifier of a site must be specified. To assign the wireless point to the main site (company) set site ID to `main-site`
@@ -81,9 +80,8 @@ class ExtensionCreationResponse
 
   /**
    * Extension current state. If 'Unassigned' is specified, then extensions without ‘extensionNumber’ are returned. If not specified, then all extensions are returned
-   * Enum: Enabled, Disabled, Frozen, NotActivated, Unassigned
    */
-  status?: string
+  status?: ('Enabled' | 'Disabled' | 'Frozen' | 'NotActivated' | 'Unassigned')
 
   /**
    * Status information (reason, comment). Returned for 'Disabled' status only
@@ -92,9 +90,8 @@ class ExtensionCreationResponse
 
   /**
    * Extension type
-   * Enum: User, VirtualUser, DigitalUser, Department, Announcement, Voicemail, SharedLinesGroup, PagingOnly, ParkLocation, Limited
    */
-  type?: string
+  type?: ('User' | 'VirtualUser' | 'DigitalUser' | 'Department' | 'Announcement' | 'Voicemail' | 'SharedLinesGroup' | 'PagingOnly' | 'ParkLocation' | 'Limited')
 
   /**
    * Hides extension from showing in company directory. Supported for extensions of User type only

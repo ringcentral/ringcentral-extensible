@@ -5,9 +5,8 @@ class IVRMenuPromptInfo
 {
   /**
    * Prompt mode: custom media or text
-   * Enum: Audio, TextToSpeech
    */
-  mode?: string
+  mode?: ('Audio' | 'TextToSpeech')
 
   /**
    * For 'Audio' mode only. Prompt media reference

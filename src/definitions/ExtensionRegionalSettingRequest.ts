@@ -29,9 +29,8 @@ class ExtensionRegionalSettingRequest
   /**
    * Time format setting
    * Default: 12h
-   * Enum: 12h, 24h
    */
-  timeFormat?: string
+  timeFormat?: ('12h' | '24h')
 }
 
 export default ExtensionRegionalSettingRequest

@@ -1,9 +1,8 @@
 class Reference
 {
   /**
-   * Enum: PartnerId, CustomerDirectoryId
    */
-  type?: string
+  type?: ('PartnerId' | 'CustomerDirectoryId')
 
   /**
    */

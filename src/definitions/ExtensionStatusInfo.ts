@@ -7,9 +7,8 @@ class ExtensionStatusInfo
 
   /**
    * Type of suspension
-   * Enum: Voluntarily, Involuntarily, SuspendedVoluntarily
    */
-  reason?: string
+  reason?: ('Voluntarily' | 'Involuntarily' | 'SuspendedVoluntarily')
 }
 
 export default ExtensionStatusInfo

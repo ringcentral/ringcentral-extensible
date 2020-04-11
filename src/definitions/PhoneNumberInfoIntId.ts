@@ -30,9 +30,8 @@ class PhoneNumberInfoIntId
 
   /**
    * Payment type. 'External' is returned for forwarded numbers which are not terminated in the RingCentral phone system
-   * Enum: External, TollFree, Local
    */
-  paymentType?: string
+  paymentType?: ('External' | 'TollFree' | 'Local')
 
   /**
    * Phone number
@@ -46,15 +45,13 @@ class PhoneNumberInfoIntId
 
   /**
    * Phone number type
-   * Enum: VoiceFax, FaxOnly, VoiceOnly
    */
-  type?: string
+  type?: ('VoiceFax' | 'FaxOnly' | 'VoiceOnly')
 
   /**
    * Usage type of the phone number
-   * Enum: MainCompanyNumber, AdditionalCompanyNumber, CompanyNumber, DirectNumber, CompanyFaxNumber, ForwardedNumber, ForwardedCompanyNumber, ContactCenterNumber
    */
-  usageType?: string
+  usageType?: ('MainCompanyNumber' | 'AdditionalCompanyNumber' | 'CompanyNumber' | 'DirectNumber' | 'CompanyFaxNumber' | 'ForwardedNumber' | 'ForwardedCompanyNumber' | 'ContactCenterNumber')
 }
 
 export default PhoneNumberInfoIntId

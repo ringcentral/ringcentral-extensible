@@ -8,9 +8,8 @@ class ListDirectoryEntriesParameters
 
   /**
    * Type of an extension
-   * Enum: User, Department, Announcement, Voicemail, SharedLinesGroup, PagingOnly, IvrMenu, ParkLocation, Limited
    */
-  type?: string
+  type?: ('User' | 'Department' | 'Announcement' | 'Voicemail' | 'SharedLinesGroup' | 'PagingOnly' | 'IvrMenu' | 'ParkLocation' | 'Limited')
 
   /**
    * Page number

@@ -9,9 +9,8 @@ class ListBlockedAllowedNumbersParameters
   perPage?: number
 
   /**
-   * Enum: Blocked, Allowed
    */
-  status?: string
+  status?: ('Blocked' | 'Allowed')
 }
 
 export default ListBlockedAllowedNumbersParameters

@@ -33,9 +33,8 @@ class RegionalSettings
 
   /**
    * Time format setting. The default value is '12h' = ['12h', '24h']
-   * Enum: 12h, 24h
    */
-  timeFormat?: string
+  timeFormat?: ('12h' | '24h')
 
   /**
    */

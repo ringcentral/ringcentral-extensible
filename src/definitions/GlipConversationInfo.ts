@@ -9,9 +9,8 @@ class GlipConversationInfo
 
   /**
    * Type of a conversation
-   * Enum: Direct, Personal, Group
    */
-  type?: string
+  type?: ('Direct' | 'Personal' | 'Group')
 
   /**
    * Conversation creation datetime in ISO 8601 format

@@ -2,9 +2,8 @@ class AuthorizeRequest
 {
   /**
    * Determines authorization flow: **code** - Authorization Code, **token** - Implicit Grant
-   * Enum: code, token
    */
-  response_type?: string
+  response_type?: ('code' | 'token')
 
   /**
    * This is a callback URI which determines where the response is sent. The value of this parameter must exactly match one of the URIs you have provided for your app upon registration
@@ -28,15 +27,13 @@ class AuthorizeRequest
 
   /**
    * Style of login form. The default value is 'page'. The 'popup' and 'touch' values are featured for mobile applications
-   * Enum: page, popup, touch, mobile
    */
-  display?: string
+  display?: ('page' | 'popup' | 'touch' | 'mobile')
 
   /**
    * Specifies which login form will be displayed. Space-separated set of the following values: 'login' - official RingCentral login form, 'sso' - Single Sign-On login form, 'consent' - form to show the requested scope and prompt user for consent. Either 'login' or 'sso' (or both) must be specified. The default value is 'login&sso'
-   * Enum: login, sso, consent
    */
-  prompt?: string
+  prompt?: ('login' | 'sso' | 'consent')
 
   /**
    * Localization code of a language. Overwrites 'Accept-Language' header value
@@ -50,9 +47,8 @@ class AuthorizeRequest
 
   /**
    * User interface options data
-   * Enum: hide_logo, hide_tos, hide_remember_me, external_popup, old_ui
    */
-  ui_options?: string
+  ui_options?: ('hide_logo' | 'hide_tos' | 'hide_remember_me' | 'external_popup' | 'old_ui')
 
   /**
    */

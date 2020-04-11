@@ -25,7 +25,7 @@ class ForwardingNumberInfo
   /**
    * Type of option this phone number is used for. Multiple values are accepted
    */
-  features?: string[]
+  features?: ('CallFlip' | 'CallForwarding')[]
 
   /**
    * Number assigned to the call flip phone number, corresponds to the shortcut dial number
@@ -39,9 +39,8 @@ class ForwardingNumberInfo
 
   /**
    * Forwarding phone number type
-   * Enum: Home, Mobile, Work, PhoneLine, Outage, Other
    */
-  type?: string
+  type?: ('Home' | 'Mobile' | 'Work' | 'PhoneLine' | 'Outage' | 'Other')
 }
 
 export default ForwardingNumberInfo

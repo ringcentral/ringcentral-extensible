@@ -3,7 +3,7 @@ class ListMessagesParameters
   /**
    * Specifies the availability status for the resulting messages. Multiple values are accepted
    */
-  availability?: string[]
+  availability?: ('Alive' | 'Deleted' | 'Purged')[]
 
   /**
    * Specifies the conversation identifier for the resulting messages
@@ -23,7 +23,7 @@ class ListMessagesParameters
   /**
    * The direction for the resulting messages. If not specified, both inbound and outbound messages are returned. Multiple values are accepted
    */
-  direction?: string[]
+  direction?: ('Inbound' | 'Outbound')[]
 
   /**
    * If 'True', then the latest messages per every conversation ID are returned
@@ -33,12 +33,12 @@ class ListMessagesParameters
   /**
    * The type of the resulting messages. If not specified, all messages without message type filtering are returned. Multiple values are accepted
    */
-  messageType?: string[]
+  messageType?: ('Fax' | 'SMS' | 'VoiceMail' | 'Pager' | 'Text')[]
 
   /**
    * The read status for the resulting messages. Multiple values are accepted
    */
-  readStatus?: string[]
+  readStatus?: ('Read' | 'Unread')[]
 
   /**
    * Indicates the page number to retrieve. Only positive number values are accepted

@@ -7,15 +7,13 @@ class OrderBy
 
   /**
    * Field name by which to sort the contacts
-   * Enum: firstName, lastName, extensionNumber, phoneNumber, email
    */
-  fieldName?: string
+  fieldName?: ('firstName' | 'lastName' | 'extensionNumber' | 'phoneNumber' | 'email')
 
   /**
    * Sorting direction
-   * Enum: Asc, Desc
    */
-  direction?: string
+  direction?: ('Asc' | 'Desc')
 }
 
 export default OrderBy

@@ -48,27 +48,23 @@ class CallParty
 
   /**
    * Direction of a call
-   * Enum: Inbound, Outbound
    */
-  direction?: string
+  direction?: ('Inbound' | 'Outbound')
 
   /**
    * A party's role in the conference scenarios. For calls of 'Conference' type only
-   * Enum: Host, Participant
    */
-  conferenceRole?: string
+  conferenceRole?: ('Host' | 'Participant')
 
   /**
    * A party's role in 'Ring Me'/'RingOut' scenarios. For calls of 'Ringout' type only
-   * Enum: Initiator, Target
    */
-  ringOutRole?: string
+  ringOutRole?: ('Initiator' | 'Target')
 
   /**
    * A party's role in 'Ring Me'/'RingOut' scenarios. For calls of 'Ringme' type only
-   * Enum: Initiator, Target
    */
-  ringMeRole?: string
+  ringMeRole?: ('Initiator' | 'Target')
 
   /**
    * Active recordings list

@@ -2,9 +2,8 @@ class ReasonInfo
 {
   /**
    * Reason code
-   * Enum: ServicePlanLimitation, AccountLimitation, ExtensionTypeLimitation, ExtensionLimitation, InsufficientPermissions, ConfigurationLimitation
    */
-  code?: string
+  code?: ('ServicePlanLimitation' | 'AccountLimitation' | 'ExtensionTypeLimitation' | 'ExtensionLimitation' | 'InsufficientPermissions' | 'ConfigurationLimitation')
 
   /**
    * Reason description

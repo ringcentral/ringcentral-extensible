@@ -17,7 +17,7 @@ class CallMonitoringGroupMemberInfo
 
   /**
    */
-  permissions?: string[]
+  permissions?: ('Monitoring' | 'Monitored')[]
 }
 
 export default CallMonitoringGroupMemberInfo

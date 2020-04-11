@@ -13,14 +13,12 @@ class CallerInfoTo
   location?: string
 
   /**
-   * Enum: Sent, SendingFailed, Queued
    */
-  messageStatus?: string
+  messageStatus?: ('Sent' | 'SendingFailed' | 'Queued')
 
   /**
-   * Enum: Undefined, NoFaxSendPermission, NoInternationalPermission, NoFaxMachine, NoAnswer, LineBusy, CallerHungUp, NotEnoughCredits, SentPartially, InternationalCallingDisabled, DestinationCountryDisabled, UnknownCountryCode, NotAccepted, InvalidNumber, CallDeclined, TooManyCallsPerLine, CallFailed, RenderingFailed, TooManyPages, ReturnToDBQueue, NoCallTime, WrongNumber, ProhibitedNumber, InternalError, FaxSendingProhibited, ThePhoneIsBlacklisted, UserNotFound, ConvertError, DBGeneralError, SkypeBillingFailed, AccountSuspended, ProhibitedDestination, InternationalDisabled
    */
-  faxErrorCode?: string
+  faxErrorCode?: ('Undefined' | 'NoFaxSendPermission' | 'NoInternationalPermission' | 'NoFaxMachine' | 'NoAnswer' | 'LineBusy' | 'CallerHungUp' | 'NotEnoughCredits' | 'SentPartially' | 'InternationalCallingDisabled' | 'DestinationCountryDisabled' | 'UnknownCountryCode' | 'NotAccepted' | 'InvalidNumber' | 'CallDeclined' | 'TooManyCallsPerLine' | 'CallFailed' | 'RenderingFailed' | 'TooManyPages' | 'ReturnToDBQueue' | 'NoCallTime' | 'WrongNumber' | 'ProhibitedNumber' | 'InternalError' | 'FaxSendingProhibited' | 'ThePhoneIsBlacklisted' | 'UserNotFound' | 'ConvertError' | 'DBGeneralError' | 'SkypeBillingFailed' | 'AccountSuspended' | 'ProhibitedDestination' | 'InternationalDisabled')
 }
 
 export default CallerInfoTo

@@ -19,9 +19,8 @@ class PhoneNumberResource
 
   /**
    * Usage type of a phone number
-   * Enum: MobileNumber, ContactNumber, DirectNumber, ForwardedNumber
    */
-  usageType?: string
+  usageType?: ('MobileNumber' | 'ContactNumber' | 'DirectNumber' | 'ForwardedNumber')
 }
 
 export default PhoneNumberResource

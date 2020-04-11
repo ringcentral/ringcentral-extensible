@@ -15,9 +15,8 @@ class GlipPostInfo
 
   /**
    * Type of a post
-   * Enum: TextMessage, PersonJoined, PersonsAdded
    */
-  type?: string
+  type?: ('TextMessage' | 'PersonJoined' | 'PersonsAdded')
 
   /**
    * For 'TextMessage' post type only. Text of a message

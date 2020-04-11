@@ -3,7 +3,7 @@ class ListRecentChatsParameters
   /**
    * Type of chats to be fetched. By default all chat types are returned
    */
-  type?: string[]
+  type?: ('Everyone' | 'Group' | 'Personal' | 'Direct' | 'Team')[]
 
   /**
    * Max number of chats to be fetched by one request (Not more than 250).

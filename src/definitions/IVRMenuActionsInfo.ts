@@ -9,9 +9,8 @@ class IVRMenuActionsInfo
 
   /**
    * Internal identifier of an answering rule
-   * Enum: Connect, Voicemail, DialByName, Transfer, Repeat, ReturnToRoot, ReturnToPrevious, Disconnect
    */
-  action?: string
+  action?: ('Connect' | 'Voicemail' | 'DialByName' | 'Transfer' | 'Repeat' | 'ReturnToRoot' | 'ReturnToPrevious' | 'Disconnect')
 
   /**
    * For 'Connect' or 'Voicemail' actions only. Extension reference

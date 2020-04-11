@@ -2,9 +2,8 @@ class PhoneNumber
 {
   /**
    * Required
-   * Enum: work, mobile, other
    */
-  type?: string
+  type?: ('work' | 'mobile' | 'other')
 
   /**
    * Required

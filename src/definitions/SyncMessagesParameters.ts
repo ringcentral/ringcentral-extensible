@@ -18,7 +18,7 @@ class SyncMessagesParameters
   /**
    * Direction for the resulting messages. If not specified, both inbound and outbound messages are returned. Multiple values are accepted
    */
-  direction?: string[]
+  direction?: ('Inbound' | 'Outbound')[]
 
   /**
    * If 'True', then the latest messages per every conversation ID are returned
@@ -28,7 +28,7 @@ class SyncMessagesParameters
   /**
    * Type for the resulting messages. If not specified, all types of messages are returned. Multiple values are accepted
    */
-  messageType?: string[]
+  messageType?: ('Fax' | 'SMS' | 'VoiceMail' | 'Pager' | 'Text')[]
 
   /**
    * Limits the number of records to be returned (works in combination with dateFrom and dateTo if specified)
@@ -43,7 +43,7 @@ class SyncMessagesParameters
   /**
    * Type of message synchronization
    */
-  syncType?: string[]
+  syncType?: ('FSync' | 'ISync')[]
 }
 
 export default SyncMessagesParameters

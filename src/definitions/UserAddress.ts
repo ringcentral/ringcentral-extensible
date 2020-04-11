@@ -22,9 +22,8 @@ class UserAddress
 
   /**
    * Required
-   * Enum: work
    */
-  type?: string
+  type?: ('work')
 }
 
 export default UserAddress

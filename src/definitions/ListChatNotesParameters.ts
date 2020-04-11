@@ -17,9 +17,8 @@ class ListChatNotesParameters
 
   /**
    * Status of notes to be fetched; if not specified all notes are fetched by default.
-   * Enum: Active, Draft
    */
-  status?: string
+  status?: ('Active' | 'Draft')
 
   /**
    * Pagination token

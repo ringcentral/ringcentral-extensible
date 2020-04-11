@@ -12,9 +12,8 @@ class MessageAttachmentInfoIntId
 
   /**
    * Type of message attachment
-   * Enum: AudioRecording, AudioTranscription, Text, SourceDocument, RenderedDocument, MmsAttachment
    */
-  type?: string
+  type?: ('AudioRecording' | 'AudioTranscription' | 'Text' | 'SourceDocument' | 'RenderedDocument' | 'MmsAttachment')
 
   /**
    * MIME type for a given attachment, for instance 'audio/wav'

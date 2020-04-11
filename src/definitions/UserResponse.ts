@@ -48,7 +48,7 @@ class UserResponse
   /**
    * Required
    */
-  schemas?: string[]
+  schemas?: ('urn:ietf:params:scim:schemas:core:2.0:User')[]
 
   /**
    */

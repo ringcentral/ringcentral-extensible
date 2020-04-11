@@ -7,9 +7,8 @@ class ReferenceInfo
 
   /**
    * Type of external identifier
-   * Enum: PartnerId, CustomerDirectoryId
    */
-  type?: string
+  type?: ('PartnerId' | 'CustomerDirectoryId')
 }
 
 export default ReferenceInfo

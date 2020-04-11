@@ -15,11 +15,11 @@ class DeleteUserCallLogParameters
 
   /**
    */
-  type?: string[]
+  type?: ('Voice' | 'Fax')[]
 
   /**
    */
-  direction?: string[]
+  direction?: ('Inbound' | 'Outbound')[]
 
   /**
    */

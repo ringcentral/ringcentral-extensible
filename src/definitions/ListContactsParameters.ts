@@ -8,7 +8,7 @@ class ListContactsParameters
   /**
    * Sorts results by the specified property
    */
-  sortBy?: string[]
+  sortBy?: ('FirstName' | 'LastName' | 'Company')[]
 
   /**
    * Indicates the page number to retrieve. Only positive number values are accepted

@@ -7,9 +7,8 @@ class ExtensionListEventBody
 
   /**
    * Type of extension info change
-   * Enum: Create, Update, Delete
    */
-  eventType?: string
+  eventType?: ('Create' | 'Update' | 'Delete')
 
   /**
    * Internal identifier of a subscription owner extension

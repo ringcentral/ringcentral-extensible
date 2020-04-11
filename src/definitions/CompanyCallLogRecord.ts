@@ -32,9 +32,8 @@ class CompanyCallLogRecord
 
   /**
    * Call transport
-   * Enum: PSTN, VoIP
    */
-  transport?: string
+  transport?: ('PSTN' | 'VoIP')
 
   /**
    * Caller information
@@ -48,15 +47,13 @@ class CompanyCallLogRecord
 
   /**
    * Call type
-   * Enum: Voice, Fax
    */
-  type?: string
+  type?: ('Voice' | 'Fax')
 
   /**
    * Call direction
-   * Enum: Inbound, Outbound
    */
-  direction?: string
+  direction?: ('Inbound' | 'Outbound')
 
   /**
    * Indicates whether the record is deleted. Returned for deleted records, for ISync requests
@@ -65,20 +62,17 @@ class CompanyCallLogRecord
 
   /**
    * Action description of the call operation
-   * Enum: Unknown, Phone Login, Calling Card, VoIP Call, Phone Call, Paging, Hunting, Call Park, Monitoring, Text Relay, External Application, Park Location, CallOut-CallMe, Conference Call, Move, RC Meetings, Accept Call, FindMe, FollowMe, RingMe, Transfer, Call Return, Ring Directly, RingOut Web, RingOut PC, RingOut Mobile, Emergency, E911 Update, Support, Incoming Fax, Outgoing Fax
    */
-  action?: string
+  action?: ('Unknown' | 'Phone Login' | 'Calling Card' | 'VoIP Call' | 'Phone Call' | 'Paging' | 'Hunting' | 'Call Park' | 'Monitoring' | 'Text Relay' | 'External Application' | 'Park Location' | 'CallOut-CallMe' | 'Conference Call' | 'Move' | 'RC Meetings' | 'Accept Call' | 'FindMe' | 'FollowMe' | 'RingMe' | 'Transfer' | 'Call Return' | 'Ring Directly' | 'RingOut Web' | 'RingOut PC' | 'RingOut Mobile' | 'Emergency' | 'E911 Update' | 'Support' | 'Incoming Fax' | 'Outgoing Fax')
 
   /**
    * Status description of the call operation
-   * Enum: Unknown, Accepted, Call connected, In Progress, Voicemail, Reply, Missed, Busy, Rejected, No Answer, Hang Up, Blocked, Suspended account, Call Failed, Call Failure, Internal Error, IP Phone Offline, No Calling Credit, Restricted Number, Wrong Number, Answered Not Accepted, Stopped, International Disabled, International Restricted, Abandoned, Declined, Received, Fax on Demand, Partial Receive, Receive Error, Fax Receipt Error, Sent, Fax Partially Sent, Send Error, Fax Not Sent, Fax Poor Line
    */
-  result?: string
+  result?: ('Unknown' | 'Accepted' | 'Call connected' | 'In Progress' | 'Voicemail' | 'Reply' | 'Missed' | 'Busy' | 'Rejected' | 'No Answer' | 'Hang Up' | 'Blocked' | 'Suspended account' | 'Call Failed' | 'Call Failure' | 'Internal Error' | 'IP Phone Offline' | 'No Calling Credit' | 'Restricted Number' | 'Wrong Number' | 'Answered Not Accepted' | 'Stopped' | 'International Disabled' | 'International Restricted' | 'Abandoned' | 'Declined' | 'Received' | 'Fax on Demand' | 'Partial Receive' | 'Receive Error' | 'Fax Receipt Error' | 'Sent' | 'Fax Partially Sent' | 'Send Error' | 'Fax Not Sent' | 'Fax Poor Line')
 
   /**
-   * Enum: Accepted, Connected, line Busy, Not Answered, No Answer, Hang Up, Stopped, Internal Error, No Credit, Restricted Number, Wrong Number, International Disabled, International Restricted, Bad Number, Info 411 Restricted, Customer 611 Restricted, No Digital Line, Failed Try Again, Max Call Limit, Too Many Calls, Calls Not Accepted, Number Not Allowed, Number Blocked, Number Disabled, Resource Error, Call Loop, Fax Not Received, Fax Partially Sent, Fax Not Sent, Fax Poor Line, Fax Prepare Error, Fax Save Error, Fax Send Error
    */
-  reason?: string
+  reason?: ('Accepted' | 'Connected' | 'line Busy' | 'Not Answered' | 'No Answer' | 'Hang Up' | 'Stopped' | 'Internal Error' | 'No Credit' | 'Restricted Number' | 'Wrong Number' | 'International Disabled' | 'International Restricted' | 'Bad Number' | 'Info 411 Restricted' | 'Customer 611 Restricted' | 'No Digital Line' | 'Failed Try Again' | 'Max Call Limit' | 'Too Many Calls' | 'Calls Not Accepted' | 'Number Not Allowed' | 'Number Blocked' | 'Number Disabled' | 'Resource Error' | 'Call Loop' | 'Fax Not Received' | 'Fax Partially Sent' | 'Fax Not Sent' | 'Fax Poor Line' | 'Fax Prepare Error' | 'Fax Save Error' | 'Fax Send Error')
 
   /**
    */

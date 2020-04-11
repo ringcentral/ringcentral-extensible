@@ -2,15 +2,13 @@ class ListExtensionDevicesParameters
 {
   /**
    * Pooling type of a device
-   * Enum: Host, Guest, None
    */
-  linePooling?: string
+  linePooling?: ('Host' | 'Guest' | 'None')
 
   /**
    * Device feature or multiple features supported
-   * Enum: Intercom, Paging, BLA, HELD
    */
-  feature?: string
+  feature?: ('Intercom' | 'Paging' | 'BLA' | 'HELD')
 }
 
 export default ListExtensionDevicesParameters

@@ -36,15 +36,13 @@ class FaxResponse
 
   /**
    * Message read status
-   * Enum: Read, Unread
    */
-  readStatus?: string
+  readStatus?: ('Read' | 'Unread')
 
   /**
    * Message priority
-   * Enum: Normal, High
    */
-  priority?: string
+  priority?: ('Normal' | 'High')
 
   /**
    * The list of message attachments
@@ -53,27 +51,23 @@ class FaxResponse
 
   /**
    * Message direction
-   * Enum: Inbound, Outbound
    */
-  direction?: string
+  direction?: ('Inbound' | 'Outbound')
 
   /**
    * Message availability status. Message in 'Deleted' state is still preserved with all its attachments and can be restored. 'Purged' means that all attachments are already deleted and the message itself is about to be physically deleted shortly
-   * Enum: Alive, Deleted, Purged
    */
-  availability?: string
+  availability?: ('Alive' | 'Deleted' | 'Purged')
 
   /**
    * Message status. 'Queued' - the message is queued for sending; 'Sent' - a message is successfully sent; 'SendingFailed' - a message sending attempt has failed; 'Received' - a message is received (inbound messages have this status by default)
-   * Enum: Queued, Sent, SendingFailed, Received
    */
-  messageStatus?: string
+  messageStatus?: ('Queued' | 'Sent' | 'SendingFailed' | 'Received')
 
   /**
    * Resolution of a fax message. ('High' for black and white image scanned at 200 dpi, 'Low' for black and white image scanned at 100 dpi)
-   * Enum: High, Low
    */
-  faxResolution?: string
+  faxResolution?: ('High' | 'Low')
 
   /**
    * Page count in a fax message

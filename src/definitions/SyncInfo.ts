@@ -1,9 +1,8 @@
 class SyncInfo
 {
   /**
-   * Enum: FSync, ISync
    */
-  syncType?: string
+  syncType?: ('FSync' | 'ISync')
 
   /**
    */

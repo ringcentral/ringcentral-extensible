@@ -25,9 +25,8 @@ class ExtensionDeviceResponse
   /**
    * Device type
    * Default: HardPhone
-   * Enum: SoftPhone, OtherPhone, HardPhone, Paging
    */
-  type?: string
+  type?: ('SoftPhone' | 'OtherPhone' | 'HardPhone' | 'Paging')
 
   /**
    * Device name. Mandatory if ordering  SoftPhone  or  OtherPhone. Optional for  HardPhone. If not specified for HardPhone, then device model name is used as device name
@@ -36,9 +35,8 @@ class ExtensionDeviceResponse
 
   /**
    * Device status
-   * Enum: Offline, Online
    */
-  status?: string
+  status?: ('Offline' | 'Online')
 
   /**
    * Serial number for HardPhone (is returned only when the phone is shipped and provisioned); endpoint_id for softphone and mobile applications
@@ -87,9 +85,8 @@ class ExtensionDeviceResponse
 
   /**
    * Pooling type of a deviceHost - device with standalone paid phone line which can be linked to Glip/Softphone instanceGuest - device with a linked phone lineNone - device without a phone line or with specific line (free, BLA, etc.) = ['Host', 'Guest', 'None']
-   * Enum: Host, Guest, None
    */
-  linePooling?: string
+  linePooling?: ('Host' | 'Guest' | 'None')
 
   /**
    * Network location status. 'True' if the device is located in the configured corporate network (On-Net); 'False' for Off-Net location. Parameter is not returned if `EmergencyAddressAutoUpdate` feature is not enabled for the account/user, or if device network location is not determined

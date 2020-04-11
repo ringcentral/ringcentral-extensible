@@ -19,9 +19,8 @@ class CallQueueDetails
 
   /**
    * Call queue status
-   * Enum: Enabled, Disabled, NotActivated
    */
-  status?: string
+  status?: ('Enabled' | 'Disabled' | 'NotActivated')
 
   /**
    * Call queue service level settings

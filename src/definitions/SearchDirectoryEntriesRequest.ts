@@ -15,9 +15,8 @@ class SearchDirectoryEntriesRequest
 
   /**
    * Type of extension to filter the contacts
-   * Enum: User, Department, Announcement, Voicemail, SharedLinesGroup, PagingOnly, ParkLocation, IvrMenu, Limited, ApplicationExtension, Site, Bot
    */
-  extensionType?: string
+  extensionType?: ('User' | 'Department' | 'Announcement' | 'Voicemail' | 'SharedLinesGroup' | 'PagingOnly' | 'ParkLocation' | 'IvrMenu' | 'Limited' | 'ApplicationExtension' | 'Site' | 'Bot')
 
   /**
    * Sorting settings

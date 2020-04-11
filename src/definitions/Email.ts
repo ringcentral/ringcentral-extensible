@@ -2,9 +2,8 @@ class Email
 {
   /**
    * Required
-   * Enum: work
    */
-  type?: string
+  type?: ('work')
 
   /**
    * Required

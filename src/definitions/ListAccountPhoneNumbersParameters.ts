@@ -15,13 +15,12 @@ class ListAccountPhoneNumbersParameters
   /**
    * Usage type of a phone number
    */
-  usageType?: string[]
+  usageType?: ('MainCompanyNumber' | 'AdditionalCompanyNumber' | 'CompanyNumber' | 'DirectNumber' | 'CompanyFaxNumber' | 'ForwardedNumber' | 'ForwardedCompanyNumber' | 'ContactCenterNumber' | 'ConferencingNumber' | 'MeetingsNumber')[]
 
   /**
    * Status of a phone number. Multiple values are supported
-   * Enum: Normal, Pending, PortedIn, Temporary
    */
-  status?: string
+  status?: ('Normal' | 'Pending' | 'PortedIn' | 'Temporary')
 }
 
 export default ListAccountPhoneNumbersParameters

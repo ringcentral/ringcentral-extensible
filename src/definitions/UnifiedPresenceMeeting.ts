@@ -3,9 +3,8 @@ class UnifiedPresenceMeeting
 {
   /**
    * Meeting status calculated from all user`s meetings
-   * Enum: NoMeeting, InMeeting
    */
-  status?: string
+  status?: ('NoMeeting' | 'InMeeting')
 }
 
 export default UnifiedPresenceMeeting

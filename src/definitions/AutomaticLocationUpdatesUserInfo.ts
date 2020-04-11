@@ -21,9 +21,8 @@ class AutomaticLocationUpdatesUserInfo
 
   /**
    * User extension type
-   * Enum: User, Limited
    */
-  type?: string
+  type?: ('User' | 'Limited')
 
   /**
    * Site data

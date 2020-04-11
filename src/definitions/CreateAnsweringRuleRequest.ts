@@ -44,9 +44,8 @@ class CreateAnsweringRuleRequest
 
   /**
    * Specifies how incoming calls are forwarded
-   * Enum: ForwardCalls, UnconditionalForwarding, AgentQueue, TransferToExtension, TakeMessagesOnly, PlayAnnouncementOnly
    */
-  callHandlingAction?: string
+  callHandlingAction?: ('ForwardCalls' | 'UnconditionalForwarding' | 'AgentQueue' | 'TransferToExtension' | 'TakeMessagesOnly' | 'PlayAnnouncementOnly')
 
   /**
    * Forwarding parameters. Returned if 'ForwardCalls' is specified in 'callHandlingAction'. These settings determine the forwarding numbers to which the call will be forwarded
@@ -80,9 +79,8 @@ class CreateAnsweringRuleRequest
 
   /**
    * Call screening status. 'Off' - no call screening; 'NoCallerId' - if caller ID is missing, then callers are asked to say their name before connecting; 'UnknownCallerId' - if caller ID is not in contact list, then callers are asked to say their name before connecting; 'Always' - the callers are always asked to say their name before connecting. The default value is 'Off'
-   * Enum: Off, NoCallerId, UnknownCallerId, Always
    */
-  screening?: string
+  screening?: ('Off' | 'NoCallerId' | 'UnknownCallerId' | 'Always')
 }
 
 export default CreateAnsweringRuleRequest

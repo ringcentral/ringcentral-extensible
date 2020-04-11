@@ -9,9 +9,8 @@ class ServiceFeatureValue
   enabled?: boolean
 
   /**
-   * Enum: Available, AccountTypeLimitation, ExtensionTypeLimitation, AccountLimitation, ExtensionLimitation, InsufficientPermissions, ApplicationLimitation
    */
-  reason?: string
+  reason?: ('Available' | 'AccountTypeLimitation' | 'ExtensionTypeLimitation' | 'AccountLimitation' | 'ExtensionLimitation' | 'InsufficientPermissions' | 'ApplicationLimitation')
 }
 
 export default ServiceFeatureValue

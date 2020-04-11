@@ -37,9 +37,8 @@ class CompanyPhoneNumberInfo
 
   /**
    * Payment type. 'External' is returned for forwarded numbers which are not terminated in the RingCentral phone system
-   * Enum: External, TollFree, Local
    */
-  paymentType?: string
+  paymentType?: ('External' | 'TollFree' | 'Local')
 
   /**
    * Phone number
@@ -53,15 +52,13 @@ class CompanyPhoneNumberInfo
 
   /**
    * Phone number type
-   * Enum: VoiceFax, FaxOnly, VoiceOnly
    */
-  type?: string
+  type?: ('VoiceFax' | 'FaxOnly' | 'VoiceOnly')
 
   /**
    * Usage type of a phone number. Usage type of a phone number. Numbers of 'NumberPool' type wont't be returned for phone number list requests
-   * Enum: MainCompanyNumber, AdditionalCompanyNumber, CompanyNumber, DirectNumber, CompanyFaxNumber, ForwardedNumber, ForwardedCompanyNumber, ContactCenterNumber, ConferencingNumber, MeetingsNumber, NumberPool
    */
-  usageType?: string
+  usageType?: ('MainCompanyNumber' | 'AdditionalCompanyNumber' | 'CompanyNumber' | 'DirectNumber' | 'CompanyFaxNumber' | 'ForwardedNumber' | 'ForwardedCompanyNumber' | 'ContactCenterNumber' | 'ConferencingNumber' | 'MeetingsNumber' | 'NumberPool')
 
   /**
    * Temporary phone number, if any. Returned for phone numbers in `Pending` porting status only

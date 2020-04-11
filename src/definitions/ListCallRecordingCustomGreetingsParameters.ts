@@ -1,9 +1,8 @@
 class ListCallRecordingCustomGreetingsParameters
 {
   /**
-   * Enum: StartRecording, StopRecording, AutomaticRecording
    */
-  type?: string
+  type?: ('StartRecording' | 'StopRecording' | 'AutomaticRecording')
 }
 
 export default ListCallRecordingCustomGreetingsParameters

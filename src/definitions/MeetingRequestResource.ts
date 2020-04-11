@@ -8,9 +8,8 @@ class MeetingRequestResource
   topic?: string
 
   /**
-   * Enum: Scheduled, Instant, Recurring
    */
-  meetingType?: string
+  meetingType?: ('Scheduled' | 'Instant' | 'Recurring')
 
   /**
    */

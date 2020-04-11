@@ -13,9 +13,8 @@ class GlipMessageAttachmentFieldsInfo
   /**
    * Style of width span applied to a field
    * Default: Short
-   * Enum: Short, Long
    */
-  style?: string
+  style?: ('Short' | 'Long')
 }
 
 export default GlipMessageAttachmentFieldsInfo

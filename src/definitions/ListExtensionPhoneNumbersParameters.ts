@@ -2,14 +2,13 @@ class ListExtensionPhoneNumbersParameters
 {
   /**
    * Status of a phone number. Multiple values are supported
-   * Enum: Normal, Pending, PortedIn, Temporary
    */
-  status?: string
+  status?: ('Normal' | 'Pending' | 'PortedIn' | 'Temporary')
 
   /**
    * Usage type of a phone number
    */
-  usageType?: string[]
+  usageType?: ('MainCompanyNumber' | 'AdditionalCompanyNumber' | 'CompanyNumber' | 'DirectNumber' | 'CompanyFaxNumber' | 'ForwardedNumber' | 'ForwardedCompanyNumber')[]
 
   /**
    * Indicates the page number to retrieve. Only positive number values are allowed. Default value is '1'

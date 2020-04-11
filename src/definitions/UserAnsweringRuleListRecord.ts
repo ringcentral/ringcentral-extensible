@@ -12,9 +12,8 @@ class UserAnsweringRuleListRecord
 
   /**
    * Type of an answering rule
-   * Enum: BusinessHours, AfterHours, Custom
    */
-  type?: string
+  type?: ('BusinessHours' | 'AfterHours' | 'Custom')
 
   /**
    * Name of an answering rule specified by user
