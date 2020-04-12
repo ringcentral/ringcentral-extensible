@@ -9,7 +9,8 @@
   "scripts": {
     "watch": "tsc -b tsconfig.json -w",
     "test": "jest -w 1",
-    "definitions": "rm -rf ./src/definitions/* && node -r @babel/register ./code-generator/definitions.js"
+    "definitions": "rm -rf ./src/definitions/* && node -r @babel/register ./code-generator/definitions.js",
+    "paths": "rm -rf ./src/paths/* && node -r @babel/register ./code-generator/paths.js"
   },
   "dependencies": {
     "axios": "^0.19.2",
@@ -23,6 +24,7 @@
     "change-case": "^4.1.1",
     "dotenv-override-true": "^6.2.0",
     "jest": "^25.2.7",
+    "lower-case-first": "^2.0.1",
     "ramda": "^0.27.0",
     "standard": "^14.3.3",
     "typescript": "^3.8.3",
