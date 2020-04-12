@@ -201,10 +201,10 @@ const generate = (prefix = '/') => {
       }
       code += `
 
-  /// <summary>
-  /// Operation: ${operation.detail.summary || titleCase(operation.detail.operationId)}
-  /// Http ${method} ${operation.endpoint}
-  /// </summary>
+  /**
+   * Operation: ${operation.detail.summary || titleCase(operation.detail.operationId)}
+   * Http ${method} ${operation.endpoint}
+   */
   public async Task<${responseType}> ${smartMethod}(${methodParams.join(', ')}) {${withParam ? `
     if (this.${paramName} == null) {
       throw new System.ArgumentNullException("${paramName}")
