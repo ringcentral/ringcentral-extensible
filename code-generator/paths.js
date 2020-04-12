@@ -90,7 +90,7 @@ class Index {
     if (paramName) {
       code += `
 
-  Index(${routes.length > 1 ? `${R.init(routes).join('.')}.Index parent` : 'RestClient rc'}, string ${paramName} = ${defaultParamValue ? `"${defaultParamValue}"` : null}) {
+  constructor(${routes.length > 1 ? `parent: ${R.init(routes).join('.')}.Index` : 'rc: RestClient'}, ${paramName}: string = ${defaultParamValue ? `"${defaultParamValue}"` : null}) {
     ${routes.length > 1 ? `this.parent = parent
     this.rc = parent.rc` : 'this.rc = rc'}
     this.${paramName} = ${paramName}
@@ -107,18 +107,18 @@ class Index {
     if (paramName) {
       code += `
 
-  string Path(bool withParameter = true) {
-    if (withParameter && ${paramName} != null) {
-      return $"${routes.length > 1 ? '{parent.Path()}' : ''}/${name}/{${paramName}}"
+  path(withParameter: boolean = true): string {
+    if (withParameter && this.${paramName} != null) {
+      return $"${routes.length > 1 ? '{parent.path()}' : ''}/${name}/{this.${paramName}}"
     }
 
-    return ${routes.length > 1 ? '$"{parent.Path()}' : '"'}/${name}"
+    return ${routes.length > 1 ? '$"{parent.path()}' : '"'}/${name}"
   }`
     } else {
       code += `
 
-  string Path() {
-    return ${routes.length > 1 ? '$"{parent.Path()}' : '"'}/${name.replace('dotSearch', '.search')}"
+  string path() {
+    return ${routes.length > 1 ? '$"{parent.path()}' : '"'}/${name.replace('dotSearch', '.search')}"
   }`
     }
 
@@ -220,16 +220,16 @@ class Index {
     var dict = new System.Collections.Generic.Dictionary<string, string>()
     RingCentral.Utils.GetPairs(${bodyParam})
       .ToList().ForEach(t => dict.Add(t.name, t.value.ToString()))
-    return await rc.Post<${responseType}>(this.Path(${(!withParam && paramName) ? 'false' : ''}), new FormUrlEncodedContent(dict)${queryParams.length > 0 ? ', queryParams' : ''})
+    return await rc.Post<${responseType}>(this.path(${(!withParam && paramName) ? 'false' : ''}), new FormUrlEncodedContent(dict)${queryParams.length > 0 ? ', queryParams' : ''})
   }`
       } else if (multipart) {
         code += `
     var multipartFormDataContent = Utils.GetMultipartFormDataContent(${bodyParam})
-    return await rc.Post<${responseType}>(this.Path(${(!withParam && paramName) ? 'false' : ''}), multipartFormDataContent${queryParams.length > 0 ? ', queryParams' : ''})
+    return await rc.Post<${responseType}>(this.path(${(!withParam && paramName) ? 'false' : ''}), multipartFormDataContent${queryParams.length > 0 ? ', queryParams' : ''})
   }`
       } else {
         code += `
-    return await rc.${method}<${responseType}>(this.Path(${(!withParam && paramName) ? 'false' : ''})${bodyParam ? `, ${bodyParam}` : ''}${queryParams.length > 0 ? ', queryParams' : ''})
+    return await rc.${method}<${responseType}>(this.path(${(!withParam && paramName) ? 'false' : ''})${bodyParam ? `, ${bodyParam}` : ''}${queryParams.length > 0 ? ', queryParams' : ''})
   }`
       }
     })
