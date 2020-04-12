@@ -246,7 +246,7 @@ class Index {
   }
 }`
     }
-    fs.writeFileSync(path.join(folderPath, 'index.ts'), code)
+    fs.writeFileSync(path.join(folderPath, 'index.ts'), code.trim() + '\n\nexport default Index\n')
 
     generate(`${prefix}${name}/`)
     if (paramName) {
