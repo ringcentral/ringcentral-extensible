@@ -238,15 +238,9 @@ class Index {
 }`
 
     if (routes.length === 1) { // top level path, such as /restapi & /scim
-      console.log(`Top level path: ${R.last(routes)}`)
+      console.log(`Todo: top level path: ${R.last(routes)}`)
     } else {
-      code = `${code}
-
-class Index {
-  ${routes.join('.')}.Index ${R.last(routes)}(${paramName ? `string ${paramName} = ${defaultParamValue ? `"${defaultParamValue}"` : 'null'}` : ''}) {
-    return new ${routes.join('.')}.Index(this${paramName ? `, ${paramName}` : ''})
-  }
-}`
+      console.log(`Todo: add chain methods for ${routes.join('/')}`)
     }
     fs.writeFileSync(path.join(folderPath, 'index.ts'), code.trim() + '\n\nexport default Index\n')
 
