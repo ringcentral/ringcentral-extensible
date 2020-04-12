@@ -151,11 +151,11 @@ const generate = (prefix = '/') => {
         })
       }
     })
-    if (operations.length > 0) {
-      code = `using System.Threading.Tasks;
+    //     if (operations.length > 0) {
+    //       code = `using System.Threading.Tasks;
 
-${code}`
-    }
+    // ${code}`
+    //     }
 
     operations.forEach(operation => {
       const method = pascalCase(operation.method)
@@ -221,9 +221,9 @@ ${code}`
           }
 ` : ''}`
       if (formUrlEncoded) {
-        code = `using System.Linq;
-using System.Net.Http;
-${code}`
+        //         code = `using System.Linq;
+        // using System.Net.Http;
+        // ${code}`
         code += `
           var dict = new System.Collections.Generic.Dictionary<string, string>();
           RingCentral.Utils.GetPairs(${bodyParam})
