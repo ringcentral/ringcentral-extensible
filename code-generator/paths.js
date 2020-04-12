@@ -109,7 +109,7 @@ class Index {
 
   path(withParameter: boolean = true): string {
     if (withParameter && this.${paramName} != null) {
-      return $"${routes.length > 1 ? '{parent.path()}' : ''}/${name}/{this.${paramName}}"
+      return \`${routes.length > 1 ? '$' + '{parent.path()}' : ''}/${name}/\${this.${paramName}}\`
     }
 
     return ${routes.length > 1 ? '$"{parent.path()}' : '"'}/${name}"
@@ -152,9 +152,8 @@ class Index {
     //     }
 
     operations.forEach(operation => {
-      const method = pascalCase(operation.method)
       const smartMethod = (operation.method === 'get' && !operation.endpoint.endsWith('}') &&
-        R.any(o => o.method === 'get' && o.endpoint === operation.endpoint + `/{${paramName}}`)(operations)) ? 'List' : method
+        R.any(o => o.method === 'get' && o.endpoint === operation.endpoint + `/{${paramName}}`)(operations)) ? 'list' : operation.method
       const responses = operation.detail.responses
       let responseType = getResponseType(responses)
       if (!responseType) {
@@ -205,9 +204,9 @@ class Index {
 
   /**
    * Operation: ${operation.detail.summary || titleCase(operation.detail.operationId)}
-   * Http ${method} ${operation.endpoint}
+   * Http ${operation.method} ${operation.endpoint}
    */
-  async Task<${responseType}> ${smartMethod}(${methodParams.join(', ')}) {${withParam ? `
+  async ${smartMethod}(${methodParams.join(', ')}): Promise<${responseType}> {${withParam ? `
     if (this.${paramName} == null) {
       throw new System.ArgumentNullException("${paramName}")
     }
@@ -220,16 +219,16 @@ class Index {
     var dict = new System.Collections.Generic.Dictionary<string, string>()
     RingCentral.Utils.GetPairs(${bodyParam})
       .ToList().ForEach(t => dict.Add(t.name, t.value.ToString()))
-    return await rc.Post<${responseType}>(this.path(${(!withParam && paramName) ? 'false' : ''}), new FormUrlEncodedContent(dict)${queryParams.length > 0 ? ', queryParams' : ''})
+    return await this.rc.Post<${responseType}>(this.path(${(!withParam && paramName) ? 'false' : ''}), new FormUrlEncodedContent(dict)${queryParams.length > 0 ? ', queryParams' : ''})
   }`
       } else if (multipart) {
         code += `
     var multipartFormDataContent = Utils.GetMultipartFormDataContent(${bodyParam})
-    return await rc.Post<${responseType}>(this.path(${(!withParam && paramName) ? 'false' : ''}), multipartFormDataContent${queryParams.length > 0 ? ', queryParams' : ''})
+    return await this.rc.Post<${responseType}>(this.path(${(!withParam && paramName) ? 'false' : ''}), multipartFormDataContent${queryParams.length > 0 ? ', queryParams' : ''})
   }`
       } else {
         code += `
-    return await rc.${method}<${responseType}>(this.path(${(!withParam && paramName) ? 'false' : ''})${bodyParam ? `, ${bodyParam}` : ''}${queryParams.length > 0 ? ', queryParams' : ''})
+    return await this.rc.${operation.method}<${responseType}>(this.path(${(!withParam && paramName) ? 'false' : ''})${bodyParam ? `, ${bodyParam}` : ''}${queryParams.length > 0 ? ', queryParams' : ''})
   }`
       }
     })
