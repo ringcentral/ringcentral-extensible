@@ -274,7 +274,7 @@ namespace RingCentral.Paths.${R.init(routes).join('.')}
     }
 }`
     }
-    fs.writeFileSync(path.join(folderPath, 'Index.ts'), code)
+    fs.writeFileSync(path.join(folderPath, 'index.ts'), code)
 
     generate(`${prefix}${name}/`)
     if (paramName) {
