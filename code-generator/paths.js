@@ -74,21 +74,21 @@ const generate = (prefix = '/') => {
     }
 
     let code = `class Index {
-  public RestClient rc`
+  RestClient rc`
 
     if (paramName) {
       code += `
-  public string ${paramName}`
+  string ${paramName}`
     }
     if (routes.length > 1) {
       code += `
-  public ${R.init(routes).join('.')}.Index parent`
+  ${R.init(routes).join('.')}.Index parent`
     }
 
     if (paramName) {
       code += `
 
-  public Index(${routes.length > 1 ? `${R.init(routes).join('.')}.Index parent` : 'RestClient rc'}, string ${paramName} = ${defaultParamValue ? `"${defaultParamValue}"` : null}) {
+  Index(${routes.length > 1 ? `${R.init(routes).join('.')}.Index parent` : 'RestClient rc'}, string ${paramName} = ${defaultParamValue ? `"${defaultParamValue}"` : null}) {
     ${routes.length > 1 ? `this.parent = parent
     this.rc = parent.rc` : 'this.rc = rc'}
     this.${paramName} = ${paramName}
@@ -96,7 +96,7 @@ const generate = (prefix = '/') => {
     } else {
       code += `
 
-  public Index(${routes.length > 1 ? `${R.init(routes).join('.')}.Index parent` : 'RestClient rc'}) {
+  Index(${routes.length > 1 ? `${R.init(routes).join('.')}.Index parent` : 'RestClient rc'}) {
     ${routes.length > 1 ? `this.parent = parent
     this.rc = parent.rc` : 'this.rc = rc'}
   }`
@@ -105,7 +105,7 @@ const generate = (prefix = '/') => {
     if (paramName) {
       code += `
 
-  public string Path(bool withParameter = true) {
+  string Path(bool withParameter = true) {
     if (withParameter && ${paramName} != null) {
       return $"${routes.length > 1 ? '{parent.Path()}' : ''}/${name}/{${paramName}}"
     }
@@ -115,7 +115,7 @@ const generate = (prefix = '/') => {
     } else {
       code += `
 
-  public string Path() {
+  string Path() {
     return ${routes.length > 1 ? '$"{parent.Path()}' : '"'}/${name.replace('dotSearch', '.search')}"
   }`
     }
@@ -205,7 +205,7 @@ const generate = (prefix = '/') => {
    * Operation: ${operation.detail.summary || titleCase(operation.detail.operationId)}
    * Http ${method} ${operation.endpoint}
    */
-  public async Task<${responseType}> ${smartMethod}(${methodParams.join(', ')}) {${withParam ? `
+  async Task<${responseType}> ${smartMethod}(${methodParams.join(', ')}) {${withParam ? `
     if (this.${paramName} == null) {
       throw new System.ArgumentNullException("${paramName}")
     }
@@ -241,7 +241,7 @@ const generate = (prefix = '/') => {
       code = `${code}
 
 class Index {
-  public ${routes.join('.')}.Index ${R.last(routes)}(${paramName ? `string ${paramName} = ${defaultParamValue ? `"${defaultParamValue}"` : 'null'}` : ''}) {
+  ${routes.join('.')}.Index ${R.last(routes)}(${paramName ? `string ${paramName} = ${defaultParamValue ? `"${defaultParamValue}"` : 'null'}` : ''}) {
     return new ${routes.join('.')}.Index(this${paramName ? `, ${paramName}` : ''})
   }
 }`
