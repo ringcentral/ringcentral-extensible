@@ -73,16 +73,18 @@ const generate = (prefix = '/') => {
       defaultParamValue = '~'
     }
 
-    let code = `class Index {
-  RestClient rc`
+    let code = `import RestClient from '${Array(routes.length + 1).fill('..').join('/')}'
+
+class Index {
+  rc: RestClient`
 
     if (paramName) {
       code += `
-  string ${paramName}`
+  ${paramName}: string`
     }
     if (routes.length > 1) {
       code += `
-  ${R.init(routes).join('.')}.Index parent`
+  parent: ${R.init(routes).join('.')}.Index`
     }
 
     if (paramName) {
