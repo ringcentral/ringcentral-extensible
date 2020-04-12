@@ -73,57 +73,51 @@ const generate = (prefix = '/') => {
       defaultParamValue = '~'
     }
 
-    let code = `class Index
-{
-    public RestClient rc;`
+    let code = `class Index {
+  public RestClient rc`
 
     if (paramName) {
       code += `
-    public string ${paramName};`
+  public string ${paramName}`
     }
     if (routes.length > 1) {
       code += `
-    public ${R.init(routes).join('.')}.Index parent;`
+  public ${R.init(routes).join('.')}.Index parent`
     }
 
     if (paramName) {
       code += `
 
-    public Index(${routes.length > 1 ? `${R.init(routes).join('.')}.Index parent` : 'RestClient rc'}, string ${paramName} = ${defaultParamValue ? `"${defaultParamValue}"` : null})
-    {
-      ${routes.length > 1 ? `  this.parent = parent;
-        this.rc = parent.rc;` : '  this.rc = rc;'}
-        this.${paramName} = ${paramName};
-    }`
+  public Index(${routes.length > 1 ? `${R.init(routes).join('.')}.Index parent` : 'RestClient rc'}, string ${paramName} = ${defaultParamValue ? `"${defaultParamValue}"` : null}) {
+    ${routes.length > 1 ? `this.parent = parent
+    this.rc = parent.rc` : 'this.rc = rc'}
+    this.${paramName} = ${paramName}
+  }`
     } else {
       code += `
 
-    public Index(${routes.length > 1 ? `${R.init(routes).join('.')}.Index parent` : 'RestClient rc'})
-    {
-        ${routes.length > 1 ? `this.parent = parent;
-        this.rc = parent.rc;` : '  this.rc = rc;'}
-    }`
+  public Index(${routes.length > 1 ? `${R.init(routes).join('.')}.Index parent` : 'RestClient rc'}) {
+    ${routes.length > 1 ? `this.parent = parent
+    this.rc = parent.rc` : 'this.rc = rc'}
+  }`
     }
 
     if (paramName) {
       code += `
 
-    public string Path(bool withParameter = true)
-    {
-        if (withParameter && ${paramName} != null)
-        {
-            return $"${routes.length > 1 ? '{parent.Path()}' : ''}/${name}/{${paramName}}";
-        }
+  public string Path(bool withParameter = true) {
+    if (withParameter && ${paramName} != null) {
+      return $"${routes.length > 1 ? '{parent.Path()}' : ''}/${name}/{${paramName}}"
+    }
 
-        return ${routes.length > 1 ? '$"{parent.Path()}' : '"'}/${name}";
-    }`
+    return ${routes.length > 1 ? '$"{parent.Path()}' : '"'}/${name}"
+  }`
     } else {
       code += `
 
-    public string Path()
-    {
-        return ${routes.length > 1 ? '$"{parent.Path()}' : '"'}/${name.replace('dotSearch', '.search')}";
-    }`
+  public string Path() {
+    return ${routes.length > 1 ? '$"{parent.Path()}' : '"'}/${name.replace('dotSearch', '.search')}"
+  }`
     }
 
     let operations = []
@@ -150,7 +144,7 @@ const generate = (prefix = '/') => {
       }
     })
     //     if (operations.length > 0) {
-    //       code = `using System.Threading.Tasks;
+    //       code = `using System.Threading.Tasks
 
     // ${code}`
     //     }
@@ -207,36 +201,34 @@ const generate = (prefix = '/') => {
       }
       code += `
 
-    /// <summary>
-    /// Operation: ${operation.detail.summary || titleCase(operation.detail.operationId)}
-    /// Http ${method} ${operation.endpoint}
-    /// </summary>
-    public async Task<${responseType}> ${smartMethod}(${methodParams.join(', ')})
-    {${withParam ? `
-        if (this.${paramName} == null)
-        {
-            throw new System.ArgumentNullException("${paramName}");
-        }
+  /// <summary>
+  /// Operation: ${operation.detail.summary || titleCase(operation.detail.operationId)}
+  /// Http ${method} ${operation.endpoint}
+  /// </summary>
+  public async Task<${responseType}> ${smartMethod}(${methodParams.join(', ')}) {${withParam ? `
+    if (this.${paramName} == null) {
+      throw new System.ArgumentNullException("${paramName}")
+    }
 ` : ''}`
       if (formUrlEncoded) {
-        //         code = `using System.Linq;
-        // using System.Net.Http;
+        //         code = `using System.Linq
+        // using System.Net.Http
         // ${code}`
         code += `
-        var dict = new System.Collections.Generic.Dictionary<string, string>();
-        RingCentral.Utils.GetPairs(${bodyParam})
-          .ToList().ForEach(t => dict.Add(t.name, t.value.ToString()));
-        return await rc.Post<${responseType}>(this.Path(${(!withParam && paramName) ? 'false' : ''}), new FormUrlEncodedContent(dict)${queryParams.length > 0 ? ', queryParams' : ''});
-    }`
+    var dict = new System.Collections.Generic.Dictionary<string, string>()
+    RingCentral.Utils.GetPairs(${bodyParam})
+      .ToList().ForEach(t => dict.Add(t.name, t.value.ToString()))
+    return await rc.Post<${responseType}>(this.Path(${(!withParam && paramName) ? 'false' : ''}), new FormUrlEncodedContent(dict)${queryParams.length > 0 ? ', queryParams' : ''})
+  }`
       } else if (multipart) {
         code += `
-        var multipartFormDataContent = Utils.GetMultipartFormDataContent(${bodyParam});
-        return await rc.Post<${responseType}>(this.Path(${(!withParam && paramName) ? 'false' : ''}), multipartFormDataContent${queryParams.length > 0 ? ', queryParams' : ''});
-    }`
+    var multipartFormDataContent = Utils.GetMultipartFormDataContent(${bodyParam})
+    return await rc.Post<${responseType}>(this.Path(${(!withParam && paramName) ? 'false' : ''}), multipartFormDataContent${queryParams.length > 0 ? ', queryParams' : ''})
+  }`
       } else {
         code += `
-        return await rc.${method}<${responseType}>(this.Path(${(!withParam && paramName) ? 'false' : ''})${bodyParam ? `, ${bodyParam}` : ''}${queryParams.length > 0 ? ', queryParams' : ''});
-    }`
+    return await rc.${method}<${responseType}>(this.Path(${(!withParam && paramName) ? 'false' : ''})${bodyParam ? `, ${bodyParam}` : ''}${queryParams.length > 0 ? ', queryParams' : ''})
+  }`
       }
     })
 
@@ -248,12 +240,10 @@ const generate = (prefix = '/') => {
     } else {
       code = `${code}
 
-class Index
-{
-    public ${routes.join('.')}.Index ${R.last(routes)}(${paramName ? `string ${paramName} = ${defaultParamValue ? `"${defaultParamValue}"` : 'null'}` : ''})
-    {
-        return new ${routes.join('.')}.Index(this${paramName ? `, ${paramName}` : ''});
-    }
+class Index {
+  public ${routes.join('.')}.Index ${R.last(routes)}(${paramName ? `string ${paramName} = ${defaultParamValue ? `"${defaultParamValue}"` : 'null'}` : ''}) {
+    return new ${routes.join('.')}.Index(this${paramName ? `, ${paramName}` : ''})
+  }
 }`
     }
     fs.writeFileSync(path.join(folderPath, 'index.ts'), code)
