@@ -5,6 +5,8 @@ import GetTokenRequest from './definitions/GetTokenRequest'
 import TokenInfo from './definitions/TokenInfo'
 import pkg from '../package.json'
 import RestException from './RestException'
+import Restapi from './paths/Restapi'
+import Scim from './paths/Scim'
 
 class RestClient {
   static sandboxServer = "https://platform.devtest.ringcentral.com"
@@ -117,6 +119,14 @@ class RestClient {
       }
     })
     this.token = undefined
+  }
+
+  restapi(apiVersion = "v1.0"): Restapi {
+    return new Restapi(this, apiVersion);
+  }
+
+  scim(version = 'v2'): Scim {
+    return new Scim(this, version)
   }
 }
 

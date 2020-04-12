@@ -247,18 +247,19 @@ ${code}`
 }`
 
     if (routes.length === 1) { // top level path, such as /restapi & /scim
-      code = `${code}
+      console.log(`Top level path: ${R.last(routes)}`)
+      //       code = `${code}
 
-namespace RingCentral
-{
-    public partial class RestClient
-    {
-        public Paths.${R.last(routes)}.Index ${R.last(routes)}(${paramName ? `string ${paramName} = ${defaultParamValue ? `"${defaultParamValue}"` : 'null'}` : ''})
-        {
-            return new Paths.${R.last(routes)}.Index(this${paramName ? `, ${paramName}` : ''});
-        }
-    }
-}`
+      // namespace RingCentral
+      // {
+      //     public partial class RestClient
+      //     {
+      //         public Paths.${R.last(routes)}.Index ${R.last(routes)}(${paramName ? `string ${paramName} = ${defaultParamValue ? `"${defaultParamValue}"` : 'null'}` : ''})
+      //         {
+      //             return new Paths.${R.last(routes)}.Index(this${paramName ? `, ${paramName}` : ''});
+      //         }
+      //     }
+      // }`
     } else {
       code = `${code}
 
