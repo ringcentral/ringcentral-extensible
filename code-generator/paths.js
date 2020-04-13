@@ -84,13 +84,13 @@ class Index {
     }
     if (routes.length > 1) {
       code += `
-  parent: ${R.init(routes).join('.')}.Index`
+  parent: Parent`
     }
 
     if (paramName) {
       code += `
 
-  constructor(${routes.length > 1 ? `parent: ${R.init(routes).join('.')}.Index` : 'rc: RestClient'}, ${paramName}: string = ${defaultParamValue ? `"${defaultParamValue}"` : null}) {
+  constructor(${routes.length > 1 ? 'parent: Parent' : 'rc: RestClient'}, ${paramName}: string = ${defaultParamValue ? `"${defaultParamValue}"` : null}) {
     ${routes.length > 1 ? `this.parent = parent
     this.rc = parent.rc` : 'this.rc = rc'}
     this.${paramName} = ${paramName}
@@ -98,10 +98,14 @@ class Index {
     } else {
       code += `
 
-  Index(${routes.length > 1 ? `${R.init(routes).join('.')}.Index parent` : 'RestClient rc'}) {
+  Index(${routes.length > 1 ? 'parent: Parent' : 'rc: RestClient'}) {
     ${routes.length > 1 ? `this.parent = parent
     this.rc = parent.rc` : 'this.rc = rc'}
   }`
+    }
+
+    if (routes.length > 1) {
+      code = `import Parent from '..'\n${code}`
     }
 
     if (paramName) {
@@ -109,16 +113,16 @@ class Index {
 
   path(withParameter: boolean = true): string {
     if (withParameter && this.${paramName} != null) {
-      return \`${routes.length > 1 ? '$' + '{parent.path()}' : ''}/${name}/\${this.${paramName}}\`
+      return \`${routes.length > 1 ? '$' + '{this.parent.path()}' : ''}/${name}/\${this.${paramName}}\`
     }
 
-    return ${routes.length > 1 ? '$"{parent.path()}' : '"'}/${name}"
+    return ${routes.length > 1 ? '$"{this.parent.path()}' : '"'}/${name}"
   }`
     } else {
       code += `
 
   string path() {
-    return ${routes.length > 1 ? '$"{parent.path()}' : '"'}/${name.replace('dotSearch', '.search')}"
+    return ${routes.length > 1 ? '$"{this.parent.path()}' : '"'}/${name.replace('dotSearch', '.search')}"
   }`
     }
 
