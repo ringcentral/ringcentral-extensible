@@ -151,6 +151,7 @@ class Index {
     // ${code}`
     //     }
 
+    const definitionsUsed = new Set()
     operations.forEach(operation => {
       const smartMethod = (operation.method === 'get' && !operation.endpoint.endsWith('}') &&
         R.any(o => o.method === 'get' && o.endpoint === operation.endpoint + `/{${paramName}}`)(operations)) ? 'list' : operation.method
@@ -158,6 +159,8 @@ class Index {
       let responseType = getResponseType(responses)
       if (!responseType) {
         responseType = 'string'
+      } else {
+        definitionsUsed.add(responseType)
       }
 
       let body, bodyClass, bodyParam, formUrlEncoded, multipart
@@ -176,7 +179,8 @@ class Index {
           } else {
             bodyClass = R.last(body.schema.$ref.split('/'))
             bodyParam = lowerCaseFirst(bodyClass)
-            bodyClass = 'RingCentral.' + bodyClass
+            definitionsUsed.add(bodyClass)
+            // bodyClass = 'RingCentral.' + bodyClass
           }
         }
       }
@@ -187,7 +191,8 @@ class Index {
         if (body) {
           bodyClass = R.last(body.schema.$ref.split('/'))
           bodyParam = lowerCaseFirst(bodyClass)
-          bodyClass = 'RingCentral.' + bodyClass
+          definitionsUsed.add(bodyClass)
+          // bodyClass = 'RingCentral.' + bodyClass
         }
       }
 
@@ -207,8 +212,8 @@ class Index {
    * Http ${operation.method} ${operation.endpoint}
    */
   async ${smartMethod}(${methodParams.join(', ')}): Promise<${responseType}> {${withParam ? `
-    if (this.${paramName} == null) {
-      throw new System.ArgumentNullException("${paramName}")
+    if (!this.${paramName} || this.${paramName} === null) {
+      throw new Error("${paramName} must not be undefined or null")
     }
 ` : ''}`
       if (formUrlEncoded) {
@@ -219,19 +224,23 @@ class Index {
     var dict = new System.Collections.Generic.Dictionary<string, string>()
     RingCentral.Utils.GetPairs(${bodyParam})
       .ToList().ForEach(t => dict.Add(t.name, t.value.ToString()))
-    return await this.rc.Post<${responseType}>(this.path(${(!withParam && paramName) ? 'false' : ''}), new FormUrlEncodedContent(dict)${queryParams.length > 0 ? ', queryParams' : ''})
+    return this.rc.Post(this.path(${(!withParam && paramName) ? 'false' : ''}), new FormUrlEncodedContent(dict)${queryParams.length > 0 ? ', queryParams' : ''})
   }`
       } else if (multipart) {
         code += `
     var multipartFormDataContent = Utils.GetMultipartFormDataContent(${bodyParam})
-    return await this.rc.Post<${responseType}>(this.path(${(!withParam && paramName) ? 'false' : ''}), multipartFormDataContent${queryParams.length > 0 ? ', queryParams' : ''})
+    return this.rc.Post(this.path(${(!withParam && paramName) ? 'false' : ''}), multipartFormDataContent${queryParams.length > 0 ? ', queryParams' : ''})
   }`
       } else {
         code += `
-    return await this.rc.${operation.method}<${responseType}>(this.path(${(!withParam && paramName) ? 'false' : ''})${bodyParam ? `, ${bodyParam}` : ''}${queryParams.length > 0 ? ', queryParams' : ''})
+    return this.rc.${operation.method}(this.path(${(!withParam && paramName) ? 'false' : ''})${bodyParam ? `, ${bodyParam}` : ''}${queryParams.length > 0 ? ', queryParams' : ''})
   }`
       }
     })
+
+    for (const definition of definitionsUsed) {
+      code = `import ${definition} from '${Array(routes.length + 1).fill('..').join('/')}/definitions/${definition}'\n${code}`
+    }
 
     code += `
 }`
