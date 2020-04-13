@@ -1,0 +1,36 @@
+import UpdateGlipEveryoneRequest from '../../../../definitions/UpdateGlipEveryoneRequest'
+import GlipEveryoneInfo from '../../../../definitions/GlipEveryoneInfo'
+import Parent from '..'
+import RestClient from '../../../..'
+
+class Index {
+  rc: RestClient
+  parent: Parent
+
+  Index(parent: Parent) {
+    this.parent = parent
+    this.rc = parent.rc
+  }
+
+  string path() {
+    return `${this.parent.path()}/everyone`
+  }
+
+  /**
+   * Operation: Get Everyone Chat
+   * Http get /restapi/v1.0/glip/everyone
+   */
+  async get(): Promise<GlipEveryoneInfo> {
+    return this.rc.get(this.path())
+  }
+
+  /**
+   * Operation: Update Everyone Сhat
+   * Http patch /restapi/v1.0/glip/everyone
+   */
+  async patch(UpdateGlipEveryoneRequest updateGlipEveryoneRequest): Promise<GlipEveryoneInfo> {
+    return this.rc.patch(this.path(), updateGlipEveryoneRequest)
+  }
+}
+
+export default Index

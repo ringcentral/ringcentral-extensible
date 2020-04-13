@@ -116,13 +116,13 @@ class Index {
       return \`${routes.length > 1 ? '$' + '{this.parent.path()}' : ''}/${name}/\${this.${paramName}}\`
     }
 
-    return ${routes.length > 1 ? '$"{this.parent.path()}' : '"'}/${name}"
+    return ${routes.length > 1 ? '`$' + '{this.parent.path()}' : '`'}/${name}\`
   }`
     } else {
       code += `
 
   string path() {
-    return ${routes.length > 1 ? '$"{this.parent.path()}' : '"'}/${name.replace('dotSearch', '.search')}"
+    return ${routes.length > 1 ? '`$' + '{this.parent.path()}' : '`'}/${name.replace('dotSearch', '.search')}\`
   }`
     }
 
