@@ -217,8 +217,8 @@ class Index {
 ` : ''}`
       if (multipart) {
         code += `
-    var multipartFormDataContent = Utils.GetMultipartFormDataContent(${bodyParam})
-    return this.rc.post(this.path(${(!withParam && paramName) ? 'false' : ''}), multipartFormDataContent${queryParams.length > 0 ? ', queryParams' : ''})
+    var formData = Utils.getFormData(${bodyParam})
+    return this.rc.post(this.path(${(!withParam && paramName) ? 'false' : ''}), formData${queryParams.length > 0 ? ', queryParams' : ''})
   }`
       } else {
         code += `
@@ -226,6 +226,10 @@ class Index {
   }`
       }
     })
+
+    if (/\bUtils\./.test(code)) {
+      code = `import Utils from '${Array(routes.length + 1).fill('..').join('/')}/Utils'\n${code}`
+    }
 
     for (const definition of definitionsUsed) {
       code = `import ${definition} from '${Array(routes.length + 1).fill('..').join('/')}/definitions/${definition}'\n${code}`
