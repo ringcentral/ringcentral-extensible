@@ -207,7 +207,9 @@ class Index {
         methodParams.push(`${bodyClass} ${bodyParam}`)
       }
       if (queryParams.length > 0) {
-        methodParams.push(`${pascalCase(operation.detail.operationId)}Parameters queryParams = null`)
+        const queryParamsClass = `${pascalCase(operation.detail.operationId)}Parameters`
+        methodParams.push(`queryParams?: ${queryParamsClass}`)
+        definitionsUsed.add(queryParamsClass)
       }
       code += `
 
