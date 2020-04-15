@@ -144,7 +144,7 @@ fs.writeFileSync(path.join(outputDir, 'Attachment.ts'), `class Attachment
   /**
    * Binary content of the file
    */
-  bytes: Buffer | Blob
+  bytes: string | Buffer | Blob | ReadableStream
 
   /**
    * Content tyle of the file, such as "image/png"
