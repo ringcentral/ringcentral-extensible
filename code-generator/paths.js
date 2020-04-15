@@ -112,7 +112,7 @@ class Index {
       code += `
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.${paramName} != null) {
+    if (withParameter && this.${paramName} !== null) {
       return \`${routes.length > 1 ? '$' + '{this.parent.path()}' : ''}/${name}/\${this.${paramName}}\`
     }
 
@@ -211,7 +211,7 @@ class Index {
    * Http ${operation.method} ${operation.endpoint}
    */
   async ${smartMethod}(${methodParams.join(', ')}): Promise<${responseType}> {${withParam ? `
-    if (!this.${paramName} || this.${paramName} === null) {
+    if (this.${paramName} === undefined || this.${paramName} === null) {
       throw new Error("${paramName} must not be undefined or null")
     }
 ` : ''}`

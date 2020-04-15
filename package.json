@@ -10,7 +10,8 @@
     "watch": "tsc -b tsconfig.json -w",
     "test": "jest -w 1",
     "definitions": "rm -rf ./src/definitions/* && node -r @babel/register ./code-generator/definitions.js",
-    "paths": "rm -rf ./src/paths/* && node -r @babel/register ./code-generator/paths.js"
+    "paths": "rm -rf ./src/paths/* && node -r @babel/register ./code-generator/paths.js",
+    "generate": "yarn definitions && yarn paths"
   },
   "dependencies": {
     "axios": "^0.19.2",
