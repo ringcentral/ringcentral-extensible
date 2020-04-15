@@ -80,7 +80,7 @@ class ${m.name}
 
 export default ${m.name}`
   const match = code.match(/(?<=^ {2}\S+?: )[A-Z][A-Za-z]+?\b/gm)
-  if (match != null) {
+  if (match !== null) {
     code = R.uniq(match).map(d => `import ${d} from './${d}'`).join('\n') + '\n' + code
   }
   return code
@@ -139,12 +139,12 @@ fs.writeFileSync(path.join(outputDir, 'Attachment.ts'), `class Attachment
   /**
    * File name with extension, such as "example.png"
    */
-  fileName: string
+  filename: string
 
   /**
    * Binary content of the file
    */
-  bytes: string | Buffer | Blob | ReadableStream
+  content: string | Buffer | Blob | ReadableStream
 
   /**
    * Content tyle of the file, such as "image/png"

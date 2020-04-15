@@ -3,12 +3,12 @@ class Attachment
   /**
    * File name with extension, such as "example.png"
    */
-  fileName: string
+  filename: string
 
   /**
    * Binary content of the file
    */
-  bytes: string | Buffer | Blob | ReadableStream
+  content: string | Buffer | Blob | ReadableStream
 
   /**
    * Content tyle of the file, such as "image/png"
