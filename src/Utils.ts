@@ -13,10 +13,10 @@ class Utils {
       if(value === undefined || value === null) {
         continue
       }
-      if(value instanceof Attachment) {
+      if(Attachment.isAttachment(value)) {
         attachments.push(value)
       }
-      if (Array.isArray(value) && value[0] instanceof Attachment) {
+      if (Array.isArray(value) && Attachment.isAttachment(value[0])) {
         attachments.push(...value)
       } else {
         jsonRequest[key] = value

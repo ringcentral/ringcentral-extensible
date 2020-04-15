@@ -150,6 +150,13 @@ fs.writeFileSync(path.join(outputDir, 'Attachment.ts'), `class Attachment
    * Content tyle of the file, such as "image/png"
    */
   contentType: string
+
+  /**
+   * Check if an object is considered to be an attachment
+   */
+  static isAttachment(obj: any): boolean {
+    return 'filename' in obj && 'content' in obj
+  }
 }
 
 export default Attachment
