@@ -35,7 +35,7 @@ class RestClient {
     })
   }
 
-  async request(httpMethod: Method, endpoint: string, content?: {}, queryParams?: {}):  Promise<{}>{
+  async request(httpMethod: Method, endpoint: string, content?: {}, queryParams?: {}):  Promise<any>{
     const r = await this.httpClient.request({
       method: httpMethod,
       url: endpoint,
@@ -50,19 +50,19 @@ class RestClient {
     }
     return r.data
   }
-  async get(endpoint: string, queryParams?: {}): Promise<{}> {
+  async get(endpoint: string, queryParams?: {}): Promise<any> {
     return this.request('GET', endpoint, undefined, queryParams)
   }
-  async delete(endpoint: string, queryParams?: {}): Promise<{}> {
+  async delete(endpoint: string, queryParams?: {}): Promise<any> {
     return this.request('DELETE', endpoint, undefined, queryParams)
   }
-  async post(endpoint: string, content: {}, queryParams?: {}) : Promise<{}> {
+  async post(endpoint: string, content: {}, queryParams?: {}) : Promise<any> {
     return this.request('POST', endpoint, content, queryParams)
   }
-  async put(endpoint: string, content: {}, queryParams?: {}) : Promise<{}> {
+  async put(endpoint: string, content: {}, queryParams?: {}) : Promise<any> {
     return this.request('PUT', endpoint, content, queryParams)
   }
-  async patch(endpoint: string, content: {}, queryParams?: {}) : Promise<{}> {
+  async patch(endpoint: string, content: {}, queryParams?: {}) : Promise<any> {
     return this.request('PATCH', endpoint, content, queryParams)
   }
 
