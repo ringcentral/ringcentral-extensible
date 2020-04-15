@@ -149,11 +149,6 @@ class Index {
         })
       }
     })
-    //     if (operations.length > 0) {
-    //       code = `using System.Threading.Tasks
-
-    // ${code}`
-    //     }
 
     const definitionsUsed = new Set()
     operations.forEach(operation => {
@@ -184,7 +179,6 @@ class Index {
             bodyClass = R.last(body.schema.$ref.split('/'))
             bodyParam = lowerCaseFirst(bodyClass)
             definitionsUsed.add(bodyClass)
-            // bodyClass = 'RingCentral.' + bodyClass
           }
         }
       }
@@ -195,7 +189,6 @@ class Index {
         if (body) {
           bodyClass = R.last(body.schema.$ref.split('/'))
           bodyParam = lowerCaseFirst(bodyClass)
-          // bodyClass = 'RingCentral.' + bodyClass
         }
         definitionsUsed.add(bodyClass)
       }
