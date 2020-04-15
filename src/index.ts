@@ -56,7 +56,7 @@ class RestClient {
   async delete(endpoint: string, queryParams?: {}): Promise<any> {
     return this.request('DELETE', endpoint, undefined, queryParams)
   }
-  async post(endpoint: string, content: {}, queryParams?: {}) : Promise<any> {
+  async post(endpoint: string, content?: {}, queryParams?: {}) : Promise<any> {
     return this.request('POST', endpoint, content, queryParams)
   }
   async put(endpoint: string, content: {}, queryParams?: {}) : Promise<any> {
