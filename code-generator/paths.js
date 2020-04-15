@@ -204,7 +204,7 @@ class Index {
       const withParam = paramName && operation.endpoint.endsWith('}')
       const methodParams = []
       if (bodyParam) {
-        methodParams.push(`${bodyClass} ${bodyParam}`)
+        methodParams.push(`${bodyParam}: ${bodyClass}`)
       }
       if (queryParams.length > 0) {
         const queryParamsClass = `${pascalCase(operation.detail.operationId)}Parameters`
