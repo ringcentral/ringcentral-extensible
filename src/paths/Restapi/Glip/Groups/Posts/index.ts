@@ -1,5 +1,6 @@
 import GlipCreatePost from '../../../../../definitions/GlipCreatePost'
 import GlipPostInfo from '../../../../../definitions/GlipPostInfo'
+import ListGlipGroupPostsParameters from '../../../../../definitions/ListGlipGroupPostsParameters'
 import GlipPosts from '../../../../../definitions/GlipPosts'
 import Parent from '..'
 import RestClient from '../../../../..'
@@ -27,7 +28,7 @@ class Index {
    * Operation: Get Group Posts
    * Http get /restapi/v1.0/glip/groups/{groupId}/posts
    */
-  async get(ListGlipGroupPostsParameters queryParams = null): Promise<GlipPosts> {
+  async get(queryParams?: ListGlipGroupPostsParameters): Promise<GlipPosts> {
     return this.rc.get(this.path(false), queryParams)
   }
 
@@ -35,7 +36,7 @@ class Index {
    * Operation: Create Post in Group
    * Http post /restapi/v1.0/glip/groups/{groupId}/posts
    */
-  async post(GlipCreatePost glipCreatePost): Promise<GlipPostInfo> {
+  async post(glipCreatePost: GlipCreatePost): Promise<GlipPostInfo> {
     return this.rc.post(this.path(false), glipCreatePost)
   }
 }

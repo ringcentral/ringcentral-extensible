@@ -12,7 +12,7 @@ class Index {
     this.rc = parent.rc
   }
 
-  string path() {
+  path(): string {
     return `${this.parent.path()}/company-pager`
   }
 
@@ -20,7 +20,7 @@ class Index {
    * Operation: Create Internal Text Message
    * Http post /restapi/v1.0/account/{accountId}/extension/{extensionId}/company-pager
    */
-  async post(CreateInternalTextMessageRequest createInternalTextMessageRequest): Promise<GetMessageInfoResponse> {
+  async post(createInternalTextMessageRequest: CreateInternalTextMessageRequest): Promise<GetMessageInfoResponse> {
     return this.rc.post(this.path(), createInternalTextMessageRequest)
   }
 }

@@ -1,5 +1,7 @@
+import DeleteMessageParameters from '../../../../../definitions/DeleteMessageParameters'
 import UpdateMessageRequest from '../../../../../definitions/UpdateMessageRequest'
 import GetMessageInfoResponse from '../../../../../definitions/GetMessageInfoResponse'
+import ListMessagesParameters from '../../../../../definitions/ListMessagesParameters'
 import GetMessageList from '../../../../../definitions/GetMessageList'
 import Parent from '..'
 import RestClient from '../../../../..'
@@ -27,7 +29,7 @@ class Index {
    * Operation: Get Message List
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store
    */
-  async list(ListMessagesParameters queryParams = null): Promise<GetMessageList> {
+  async list(queryParams?: ListMessagesParameters): Promise<GetMessageList> {
     return this.rc.get(this.path(false), queryParams)
   }
 
@@ -47,7 +49,7 @@ class Index {
    * Operation: Update Message List
    * Http put /restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}
    */
-  async put(UpdateMessageRequest updateMessageRequest): Promise<GetMessageInfoResponse> {
+  async put(updateMessageRequest: UpdateMessageRequest): Promise<GetMessageInfoResponse> {
     if (!this.messageId || this.messageId === null) {
       throw new Error("messageId must not be undefined or null")
     }
@@ -59,7 +61,7 @@ class Index {
    * Operation: Delete Message
    * Http delete /restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}
    */
-  async delete(DeleteMessageParameters queryParams = null): Promise<string> {
+  async delete(queryParams?: DeleteMessageParameters): Promise<string> {
     if (!this.messageId || this.messageId === null) {
       throw new Error("messageId must not be undefined or null")
     }

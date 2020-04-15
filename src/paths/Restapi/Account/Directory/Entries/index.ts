@@ -1,4 +1,5 @@
 import ContactResource from '../../../../../definitions/ContactResource'
+import ListDirectoryEntriesParameters from '../../../../../definitions/ListDirectoryEntriesParameters'
 import DirectoryResource from '../../../../../definitions/DirectoryResource'
 import Parent from '..'
 import RestClient from '../../../../..'
@@ -26,7 +27,7 @@ class Index {
    * Operation: Get Company Directory Entries
    * Http get /restapi/v1.0/account/{accountId}/directory/entries
    */
-  async list(ListDirectoryEntriesParameters queryParams = null): Promise<DirectoryResource> {
+  async list(queryParams?: ListDirectoryEntriesParameters): Promise<DirectoryResource> {
     return this.rc.get(this.path(false), queryParams)
   }
 

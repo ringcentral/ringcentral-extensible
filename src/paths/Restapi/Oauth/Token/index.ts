@@ -1,3 +1,4 @@
+import GetTokenRequest from '../../../../definitions/GetTokenRequest'
 import TokenInfo from '../../../../definitions/TokenInfo'
 import Parent from '..'
 import RestClient from '../../../..'
@@ -11,7 +12,7 @@ class Index {
     this.rc = parent.rc
   }
 
-  string path() {
+  path(): string {
     return `${this.parent.path()}/token`
   }
 
@@ -19,11 +20,11 @@ class Index {
    * Operation: Get Token
    * Http post /restapi/oauth/token
    */
-  async post(GetTokenRequest getTokenRequest): Promise<TokenInfo> {
+  async post(getTokenRequest: GetTokenRequest): Promise<TokenInfo> {
     var dict = new System.Collections.Generic.Dictionary<string, string>()
     RingCentral.Utils.GetPairs(getTokenRequest)
       .ToList().ForEach(t => dict.Add(t.name, t.value.ToString()))
-    return this.rc.Post(this.path(), new FormUrlEncodedContent(dict))
+    return this.rc.post(this.path(), new FormUrlEncodedContent(dict))
   }
 }
 

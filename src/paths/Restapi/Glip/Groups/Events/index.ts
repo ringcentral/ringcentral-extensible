@@ -12,7 +12,7 @@ class Index {
     this.rc = parent.rc
   }
 
-  string path() {
+  path(): string {
     return `${this.parent.path()}/events`
   }
 
@@ -20,7 +20,7 @@ class Index {
    * Operation: Create Event by Group ID
    * Http post /restapi/v1.0/glip/groups/{groupId}/events
    */
-  async post(GlipEventCreate glipEventCreate): Promise<GlipEventInfo> {
+  async post(glipEventCreate: GlipEventCreate): Promise<GlipEventInfo> {
     return this.rc.post(this.path(), glipEventCreate)
   }
 

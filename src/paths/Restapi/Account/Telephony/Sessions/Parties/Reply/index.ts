@@ -12,7 +12,7 @@ class Index {
     this.rc = parent.rc
   }
 
-  string path() {
+  path(): string {
     return `${this.parent.path()}/reply`
   }
 
@@ -20,7 +20,7 @@ class Index {
    * Operation: Reply with Text
    * Http post /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/reply
    */
-  async post(CallPartyReply callPartyReply): Promise<ReplyParty> {
+  async post(callPartyReply: CallPartyReply): Promise<ReplyParty> {
     return this.rc.post(this.path(), callPartyReply)
   }
 }

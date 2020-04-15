@@ -12,7 +12,7 @@ class Index {
     this.rc = parent.rc
   }
 
-  string path() {
+  path(): string {
     return `${this.parent.path()}/sms`
   }
 
@@ -20,7 +20,7 @@ class Index {
    * Operation: Send SMS
    * Http post /restapi/v1.0/account/{accountId}/extension/{extensionId}/sms
    */
-  async post(CreateSMSMessage createSMSMessage): Promise<GetMessageInfoResponse> {
+  async post(createSMSMessage: CreateSMSMessage): Promise<GetMessageInfoResponse> {
     return this.rc.post(this.path(), createSMSMessage)
   }
 }

@@ -1,4 +1,5 @@
 import DictionaryGreetingInfo from '../../../../definitions/DictionaryGreetingInfo'
+import ListStandardGreetingsParameters from '../../../../definitions/ListStandardGreetingsParameters'
 import DictionaryGreetingList from '../../../../definitions/DictionaryGreetingList'
 import Parent from '..'
 import RestClient from '../../../..'
@@ -26,7 +27,7 @@ class Index {
    * Operation: Get Standard Greeting List
    * Http get /restapi/v1.0/dictionary/greeting
    */
-  async list(ListStandardGreetingsParameters queryParams = null): Promise<DictionaryGreetingList> {
+  async list(queryParams?: ListStandardGreetingsParameters): Promise<DictionaryGreetingList> {
     return this.rc.get(this.path(false), queryParams)
   }
 

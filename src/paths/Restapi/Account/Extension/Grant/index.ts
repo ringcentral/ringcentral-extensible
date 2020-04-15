@@ -1,3 +1,4 @@
+import ListExtensionGrantsParameters from '../../../../../definitions/ListExtensionGrantsParameters'
 import GetExtensionGrantListResponse from '../../../../../definitions/GetExtensionGrantListResponse'
 import Parent from '..'
 import RestClient from '../../../../..'
@@ -11,7 +12,7 @@ class Index {
     this.rc = parent.rc
   }
 
-  string path() {
+  path(): string {
     return `${this.parent.path()}/grant`
   }
 
@@ -19,7 +20,7 @@ class Index {
    * Operation: Get Extension Grant List
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/grant
    */
-  async get(ListExtensionGrantsParameters queryParams = null): Promise<GetExtensionGrantListResponse> {
+  async get(queryParams?: ListExtensionGrantsParameters): Promise<GetExtensionGrantListResponse> {
     return this.rc.get(this.path(), queryParams)
   }
 }

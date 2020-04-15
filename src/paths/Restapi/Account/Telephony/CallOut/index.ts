@@ -12,7 +12,7 @@ class Index {
     this.rc = parent.rc
   }
 
-  string path() {
+  path(): string {
     return `${this.parent.path()}/call-out`
   }
 
@@ -20,7 +20,7 @@ class Index {
    * Operation: Make CallOut
    * Http post /restapi/v1.0/account/{accountId}/telephony/call-out
    */
-  async post(MakeCallOutRequest makeCallOutRequest): Promise<CallSession> {
+  async post(makeCallOutRequest: MakeCallOutRequest): Promise<CallSession> {
     return this.rc.post(this.path(), makeCallOutRequest)
   }
 }

@@ -1,3 +1,4 @@
+import SyncMessagesParameters from '../../../../../definitions/SyncMessagesParameters'
 import GetMessageSyncResponse from '../../../../../definitions/GetMessageSyncResponse'
 import Parent from '..'
 import RestClient from '../../../../..'
@@ -11,7 +12,7 @@ class Index {
     this.rc = parent.rc
   }
 
-  string path() {
+  path(): string {
     return `${this.parent.path()}/message-sync`
   }
 
@@ -19,7 +20,7 @@ class Index {
    * Operation: Sync Messages
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/message-sync
    */
-  async get(SyncMessagesParameters queryParams = null): Promise<GetMessageSyncResponse> {
+  async get(queryParams?: SyncMessagesParameters): Promise<GetMessageSyncResponse> {
     return this.rc.get(this.path(), queryParams)
   }
 }

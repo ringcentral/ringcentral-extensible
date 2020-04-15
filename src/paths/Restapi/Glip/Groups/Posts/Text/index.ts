@@ -10,7 +10,7 @@ class Index {
     this.rc = parent.rc
   }
 
-  string path() {
+  path(): string {
     return `${this.parent.path()}/text`
   }
 
@@ -18,7 +18,7 @@ class Index {
    * Operation: Update Post
    * Http put /restapi/v1.0/glip/groups/{groupId}/posts/{postId}/text
    */
-  async put(string body): Promise<string> {
+  async put(body: string): Promise<string> {
     return this.rc.put(this.path(), body)
   }
 }

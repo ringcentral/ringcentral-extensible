@@ -1,4 +1,5 @@
 import UpdateConferencingInfoRequest from '../../../../../definitions/UpdateConferencingInfoRequest'
+import ReadConferencingSettingsParameters from '../../../../../definitions/ReadConferencingSettingsParameters'
 import GetConferencingInfoResponse from '../../../../../definitions/GetConferencingInfoResponse'
 import Parent from '..'
 import RestClient from '../../../../..'
@@ -12,7 +13,7 @@ class Index {
     this.rc = parent.rc
   }
 
-  string path() {
+  path(): string {
     return `${this.parent.path()}/conferencing`
   }
 
@@ -20,7 +21,7 @@ class Index {
    * Operation: Get User Conferencing Settings
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/conferencing
    */
-  async get(ReadConferencingSettingsParameters queryParams = null): Promise<GetConferencingInfoResponse> {
+  async get(queryParams?: ReadConferencingSettingsParameters): Promise<GetConferencingInfoResponse> {
     return this.rc.get(this.path(), queryParams)
   }
 
@@ -28,7 +29,7 @@ class Index {
    * Operation: Update User Conferencing Settings
    * Http put /restapi/v1.0/account/{accountId}/extension/{extensionId}/conferencing
    */
-  async put(UpdateConferencingInfoRequest updateConferencingInfoRequest): Promise<GetConferencingInfoResponse> {
+  async put(updateConferencingInfoRequest: UpdateConferencingInfoRequest): Promise<GetConferencingInfoResponse> {
     return this.rc.put(this.path(), updateConferencingInfoRequest)
   }
 }

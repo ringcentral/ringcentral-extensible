@@ -1,4 +1,5 @@
 import CompanyPhoneNumberInfo from '../../../../definitions/CompanyPhoneNumberInfo'
+import ListAccountPhoneNumbersParameters from '../../../../definitions/ListAccountPhoneNumbersParameters'
 import AccountPhoneNumbers from '../../../../definitions/AccountPhoneNumbers'
 import Parent from '..'
 import RestClient from '../../../..'
@@ -26,7 +27,7 @@ class Index {
    * Operation: Get Company Phone Number List
    * Http get /restapi/v1.0/account/{accountId}/phone-number
    */
-  async list(ListAccountPhoneNumbersParameters queryParams = null): Promise<AccountPhoneNumbers> {
+  async list(queryParams?: ListAccountPhoneNumbersParameters): Promise<AccountPhoneNumbers> {
     return this.rc.get(this.path(false), queryParams)
   }
 

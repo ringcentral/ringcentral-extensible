@@ -1,3 +1,4 @@
+import ListDepartmentMembersParameters from '../../../../../definitions/ListDepartmentMembersParameters'
 import DepartmentMemberList from '../../../../../definitions/DepartmentMemberList'
 import Parent from '..'
 import RestClient from '../../../../..'
@@ -11,7 +12,7 @@ class Index {
     this.rc = parent.rc
   }
 
-  string path() {
+  path(): string {
     return `${this.parent.path()}/members`
   }
 
@@ -19,7 +20,7 @@ class Index {
    * Operation: Get Department Member List
    * Http get /restapi/v1.0/account/{accountId}/department/{departmentId}/members
    */
-  async get(ListDepartmentMembersParameters queryParams = null): Promise<DepartmentMemberList> {
+  async get(queryParams?: ListDepartmentMembersParameters): Promise<DepartmentMemberList> {
     return this.rc.get(this.path(), queryParams)
   }
 }

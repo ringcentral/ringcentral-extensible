@@ -1,3 +1,4 @@
+import ListRecentChatsParameters from '../../../../../definitions/ListRecentChatsParameters'
 import GlipChatsListWithoutNavigation from '../../../../../definitions/GlipChatsListWithoutNavigation'
 import Parent from '..'
 import RestClient from '../../../../..'
@@ -11,7 +12,7 @@ class Index {
     this.rc = parent.rc
   }
 
-  string path() {
+  path(): string {
     return `${this.parent.path()}/chats`
   }
 
@@ -19,7 +20,7 @@ class Index {
    * Operation: Get Recent Chats
    * Http get /restapi/v1.0/glip/recent/chats
    */
-  async get(ListRecentChatsParameters queryParams = null): Promise<GlipChatsListWithoutNavigation> {
+  async get(queryParams?: ListRecentChatsParameters): Promise<GlipChatsListWithoutNavigation> {
     return this.rc.get(this.path(), queryParams)
   }
 }

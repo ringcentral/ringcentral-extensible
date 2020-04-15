@@ -1,5 +1,6 @@
 import AccountDeviceUpdate from '../../../../definitions/AccountDeviceUpdate'
 import DeviceResource from '../../../../definitions/DeviceResource'
+import ReadDeviceParameters from '../../../../definitions/ReadDeviceParameters'
 import GetDeviceInfoResponse from '../../../../definitions/GetDeviceInfoResponse'
 import Parent from '..'
 import RestClient from '../../../..'
@@ -27,7 +28,7 @@ class Index {
    * Operation: Get Device
    * Http get /restapi/v1.0/account/{accountId}/device/{deviceId}
    */
-  async get(ReadDeviceParameters queryParams = null): Promise<GetDeviceInfoResponse> {
+  async get(queryParams?: ReadDeviceParameters): Promise<GetDeviceInfoResponse> {
     if (!this.deviceId || this.deviceId === null) {
       throw new Error("deviceId must not be undefined or null")
     }
@@ -39,7 +40,7 @@ class Index {
    * Operation: Update Device
    * Http put /restapi/v1.0/account/{accountId}/device/{deviceId}
    */
-  async put(AccountDeviceUpdate accountDeviceUpdate): Promise<DeviceResource> {
+  async put(accountDeviceUpdate: AccountDeviceUpdate): Promise<DeviceResource> {
     if (!this.deviceId || this.deviceId === null) {
       throw new Error("deviceId must not be undefined or null")
     }

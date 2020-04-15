@@ -1,5 +1,8 @@
+import UpdateContactParameters from '../../../../../../definitions/UpdateContactParameters'
+import CreateContactParameters from '../../../../../../definitions/CreateContactParameters'
 import PersonalContactRequest from '../../../../../../definitions/PersonalContactRequest'
 import PersonalContactResource from '../../../../../../definitions/PersonalContactResource'
+import ListContactsParameters from '../../../../../../definitions/ListContactsParameters'
 import ContactList from '../../../../../../definitions/ContactList'
 import Parent from '..'
 import RestClient from '../../../../../..'
@@ -27,7 +30,7 @@ class Index {
    * Operation: Get Contact List
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact
    */
-  async list(ListContactsParameters queryParams = null): Promise<ContactList> {
+  async list(queryParams?: ListContactsParameters): Promise<ContactList> {
     return this.rc.get(this.path(false), queryParams)
   }
 
@@ -35,7 +38,7 @@ class Index {
    * Operation: Create Contact
    * Http post /restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact
    */
-  async post(PersonalContactRequest personalContactRequest, CreateContactParameters queryParams = null): Promise<PersonalContactResource> {
+  async post(personalContactRequest: PersonalContactRequest, queryParams?: CreateContactParameters): Promise<PersonalContactResource> {
     return this.rc.post(this.path(false), personalContactRequest, queryParams)
   }
 
@@ -55,7 +58,7 @@ class Index {
    * Operation: Update Contact
    * Http put /restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact/{contactId}
    */
-  async put(PersonalContactRequest personalContactRequest, UpdateContactParameters queryParams = null): Promise<PersonalContactResource> {
+  async put(personalContactRequest: PersonalContactRequest, queryParams?: UpdateContactParameters): Promise<PersonalContactResource> {
     if (!this.contactId || this.contactId === null) {
       throw new Error("contactId must not be undefined or null")
     }

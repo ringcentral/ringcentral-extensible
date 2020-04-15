@@ -1,3 +1,4 @@
+import ReadCallSessionStatusParameters from '../../../../../definitions/ReadCallSessionStatusParameters'
 import CallSession from '../../../../../definitions/CallSession'
 import Parent from '..'
 import RestClient from '../../../../..'
@@ -25,7 +26,7 @@ class Index {
    * Operation: Get Call Session Status
    * Http get /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}
    */
-  async get(ReadCallSessionStatusParameters queryParams = null): Promise<CallSession> {
+  async get(queryParams?: ReadCallSessionStatusParameters): Promise<CallSession> {
     if (!this.telephonySessionId || this.telephonySessionId === null) {
       throw new Error("telephonySessionId must not be undefined or null")
     }

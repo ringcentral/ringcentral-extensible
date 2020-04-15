@@ -1,3 +1,4 @@
+import ListDevicesAutomaticLocationUpdatesParameters from '../../../../../definitions/ListDevicesAutomaticLocationUpdatesParameters'
 import ListDevicesAutomaticLocationUpdates from '../../../../../definitions/ListDevicesAutomaticLocationUpdates'
 import Parent from '..'
 import RestClient from '../../../../..'
@@ -11,7 +12,7 @@ class Index {
     this.rc = parent.rc
   }
 
-  string path() {
+  path(): string {
     return `${this.parent.path()}/devices`
   }
 
@@ -19,7 +20,7 @@ class Index {
    * Operation: Get Device List
    * Http get /restapi/v1.0/account/{accountId}/emergency-address-auto-update/devices
    */
-  async get(ListDevicesAutomaticLocationUpdatesParameters queryParams = null): Promise<ListDevicesAutomaticLocationUpdates> {
+  async get(queryParams?: ListDevicesAutomaticLocationUpdatesParameters): Promise<ListDevicesAutomaticLocationUpdates> {
     return this.rc.get(this.path(), queryParams)
   }
 }

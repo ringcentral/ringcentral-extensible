@@ -1,5 +1,6 @@
 import UpdateIVRPromptRequest from '../../../../definitions/UpdateIVRPromptRequest'
 import IVRPrompts from '../../../../definitions/IVRPrompts'
+import CreateIvrPromptRequest from '../../../../definitions/CreateIvrPromptRequest'
 import PromptInfo from '../../../../definitions/PromptInfo'
 import Parent from '..'
 import RestClient from '../../../..'
@@ -27,9 +28,9 @@ class Index {
    * Operation: Create IVR Prompts
    * Http post /restapi/v1.0/account/{accountId}/ivr-prompts
    */
-  async post(CreateIvrPromptRequest createIVRPromptRequest): Promise<PromptInfo> {
+  async post(createIVRPromptRequest: CreateIvrPromptRequest): Promise<PromptInfo> {
     var multipartFormDataContent = Utils.GetMultipartFormDataContent(createIVRPromptRequest)
-    return this.rc.Post(this.path(false), multipartFormDataContent)
+    return this.rc.post(this.path(false), multipartFormDataContent)
   }
 
   /**
@@ -68,7 +69,7 @@ class Index {
    * Operation: Update IVR Prompt
    * Http put /restapi/v1.0/account/{accountId}/ivr-prompts/{promptId}
    */
-  async put(UpdateIVRPromptRequest updateIVRPromptRequest): Promise<PromptInfo> {
+  async put(updateIVRPromptRequest: UpdateIVRPromptRequest): Promise<PromptInfo> {
     if (!this.promptId || this.promptId === null) {
       throw new Error("promptId must not be undefined or null")
     }

@@ -12,7 +12,7 @@ class Index {
     this.rc = parent.rc
   }
 
-  string path() {
+  path(): string {
     return `${this.parent.path()}/unified-presence`
   }
 
@@ -28,7 +28,7 @@ class Index {
    * Operation: Update Unified Presence
    * Http patch /restapi/v1.0/account/{accountId}/extension/{extensionId}/unified-presence
    */
-  async patch(UpdateUnifiedPresence updateUnifiedPresence): Promise<UnifiedPresence> {
+  async patch(updateUnifiedPresence: UpdateUnifiedPresence): Promise<UnifiedPresence> {
     return this.rc.patch(this.path(), updateUnifiedPresence)
   }
 }

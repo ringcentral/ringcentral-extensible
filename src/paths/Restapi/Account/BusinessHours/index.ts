@@ -12,7 +12,7 @@ class Index {
     this.rc = parent.rc
   }
 
-  string path() {
+  path(): string {
     return `${this.parent.path()}/business-hours`
   }
 
@@ -28,7 +28,7 @@ class Index {
    * Operation: Update Company Business Hours
    * Http put /restapi/v1.0/account/{accountId}/business-hours
    */
-  async put(CompanyBusinessHoursUpdateRequest companyBusinessHoursUpdateRequest): Promise<CompanyBusinessHours> {
+  async put(companyBusinessHoursUpdateRequest: CompanyBusinessHoursUpdateRequest): Promise<CompanyBusinessHours> {
     return this.rc.put(this.path(), companyBusinessHoursUpdateRequest)
   }
 }

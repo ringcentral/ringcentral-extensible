@@ -1,3 +1,4 @@
+import ListDataExportTasksParameters from '../../../../definitions/ListDataExportTasksParameters'
 import DataExportTaskList from '../../../../definitions/DataExportTaskList'
 import CreateDataExportTaskRequest from '../../../../definitions/CreateDataExportTaskRequest'
 import DataExportTask from '../../../../definitions/DataExportTask'
@@ -27,7 +28,7 @@ class Index {
    * Operation: Create Data Export Task
    * Http post /restapi/v1.0/glip/data-export
    */
-  async post(CreateDataExportTaskRequest createDataExportTaskRequest): Promise<DataExportTask> {
+  async post(createDataExportTaskRequest: CreateDataExportTaskRequest): Promise<DataExportTask> {
     return this.rc.post(this.path(false), createDataExportTaskRequest)
   }
 
@@ -35,7 +36,7 @@ class Index {
    * Operation: Get Data Export Task List
    * Http get /restapi/v1.0/glip/data-export
    */
-  async list(ListDataExportTasksParameters queryParams = null): Promise<DataExportTaskList> {
+  async list(queryParams?: ListDataExportTasksParameters): Promise<DataExportTaskList> {
     return this.rc.get(this.path(false), queryParams)
   }
 

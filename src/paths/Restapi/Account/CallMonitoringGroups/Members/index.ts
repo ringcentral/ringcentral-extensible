@@ -1,3 +1,4 @@
+import ListCallMonitoringGroupMembersParameters from '../../../../../definitions/ListCallMonitoringGroupMembersParameters'
 import CallMonitoringGroupMemberList from '../../../../../definitions/CallMonitoringGroupMemberList'
 import Parent from '..'
 import RestClient from '../../../../..'
@@ -11,7 +12,7 @@ class Index {
     this.rc = parent.rc
   }
 
-  string path() {
+  path(): string {
     return `${this.parent.path()}/members`
   }
 
@@ -19,7 +20,7 @@ class Index {
    * Operation: Get Call Monitoring Group Member List
    * Http get /restapi/v1.0/account/{accountId}/call-monitoring-groups/{groupId}/members
    */
-  async get(ListCallMonitoringGroupMembersParameters queryParams = null): Promise<CallMonitoringGroupMemberList> {
+  async get(queryParams?: ListCallMonitoringGroupMembersParameters): Promise<CallMonitoringGroupMemberList> {
     return this.rc.get(this.path(), queryParams)
   }
 }

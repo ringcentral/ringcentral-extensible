@@ -1,4 +1,5 @@
 import TemplateInfo from '../../../../definitions/TemplateInfo'
+import ListUserTemplatesParameters from '../../../../definitions/ListUserTemplatesParameters'
 import UserTemplates from '../../../../definitions/UserTemplates'
 import Parent from '..'
 import RestClient from '../../../..'
@@ -26,7 +27,7 @@ class Index {
    * Operation: Get User Template List
    * Http get /restapi/v1.0/account/{accountId}/templates
    */
-  async list(ListUserTemplatesParameters queryParams = null): Promise<UserTemplates> {
+  async list(queryParams?: ListUserTemplatesParameters): Promise<UserTemplates> {
     return this.rc.get(this.path(false), queryParams)
   }
 

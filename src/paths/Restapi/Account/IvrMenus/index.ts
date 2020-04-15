@@ -25,7 +25,7 @@ class Index {
    * Operation: Create IVR Menu
    * Http post /restapi/v1.0/account/{accountId}/ivr-menus
    */
-  async post(IVRMenuInfo iVRMenuInfo): Promise<IVRMenuInfo> {
+  async post(iVRMenuInfo: IVRMenuInfo): Promise<IVRMenuInfo> {
     return this.rc.post(this.path(false), iVRMenuInfo)
   }
 
@@ -45,7 +45,7 @@ class Index {
    * Operation: Update IVR Menu
    * Http put /restapi/v1.0/account/{accountId}/ivr-menus/{ivrMenuId}
    */
-  async put(IVRMenuInfo iVRMenuInfo): Promise<IVRMenuInfo> {
+  async put(iVRMenuInfo: IVRMenuInfo): Promise<IVRMenuInfo> {
     if (!this.ivrMenuId || this.ivrMenuId === null) {
       throw new Error("ivrMenuId must not be undefined or null")
     }

@@ -2,6 +2,7 @@ import UserPatch from '../../../definitions/UserPatch'
 import User from '../../../definitions/User'
 import CreateUser from '../../../definitions/CreateUser'
 import UserResponse from '../../../definitions/UserResponse'
+import SearchViaGet2Parameters from '../../../definitions/SearchViaGet2Parameters'
 import UserSearchResponse from '../../../definitions/UserSearchResponse'
 import Parent from '..'
 import RestClient from '../../..'
@@ -29,7 +30,7 @@ class Index {
    * Operation: Search/List Users
    * Http get /scim/v2/Users
    */
-  async list(SearchViaGet2Parameters queryParams = null): Promise<UserSearchResponse> {
+  async list(queryParams?: SearchViaGet2Parameters): Promise<UserSearchResponse> {
     return this.rc.get(this.path(false), queryParams)
   }
 
@@ -37,7 +38,7 @@ class Index {
    * Operation: Create User
    * Http post /scim/v2/Users
    */
-  async post(CreateUser createUser): Promise<UserResponse> {
+  async post(createUser: CreateUser): Promise<UserResponse> {
     return this.rc.post(this.path(false), createUser)
   }
 
@@ -57,7 +58,7 @@ class Index {
    * Operation: Update/Replace User
    * Http put /scim/v2/Users/{id}
    */
-  async put(User user): Promise<UserResponse> {
+  async put(user: User): Promise<UserResponse> {
     if (!this.id || this.id === null) {
       throw new Error("id must not be undefined or null")
     }
@@ -81,7 +82,7 @@ class Index {
    * Operation: Update/Patch User
    * Http patch /scim/v2/Users/{id}
    */
-  async patch(UserPatch userPatch): Promise<UserResponse> {
+  async patch(userPatch: UserPatch): Promise<UserResponse> {
     if (!this.id || this.id === null) {
       throw new Error("id must not be undefined or null")
     }

@@ -26,7 +26,7 @@ class Index {
    * Operation: Create Message Store Report
    * Http post /restapi/v1.0/account/{accountId}/message-store-report
    */
-  async post(CreateMessageStoreReportRequest createMessageStoreReportRequest): Promise<MessageStoreReport> {
+  async post(createMessageStoreReportRequest: CreateMessageStoreReportRequest): Promise<MessageStoreReport> {
     return this.rc.post(this.path(false), createMessageStoreReportRequest)
   }
 

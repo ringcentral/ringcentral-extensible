@@ -1,5 +1,6 @@
 import GlipEventCreate from '../../../../definitions/GlipEventCreate'
 import GlipEventInfo from '../../../../definitions/GlipEventInfo'
+import ReadGlipEventsParameters from '../../../../definitions/ReadGlipEventsParameters'
 import GlipEventsInfo from '../../../../definitions/GlipEventsInfo'
 import Parent from '..'
 import RestClient from '../../../..'
@@ -27,7 +28,7 @@ class Index {
    * Operation: Get User Events List
    * Http get /restapi/v1.0/glip/events
    */
-  async list(ReadGlipEventsParameters queryParams = null): Promise<GlipEventsInfo> {
+  async list(queryParams?: ReadGlipEventsParameters): Promise<GlipEventsInfo> {
     return this.rc.get(this.path(false), queryParams)
   }
 
@@ -35,7 +36,7 @@ class Index {
    * Operation: Create Event
    * Http post /restapi/v1.0/glip/events
    */
-  async post(GlipEventCreate glipEventCreate): Promise<GlipEventInfo> {
+  async post(glipEventCreate: GlipEventCreate): Promise<GlipEventInfo> {
     return this.rc.post(this.path(false), glipEventCreate)
   }
 
@@ -55,7 +56,7 @@ class Index {
    * Operation: Update Event
    * Http put /restapi/v1.0/glip/events/{eventId}
    */
-  async put(GlipEventCreate glipEventCreate): Promise<GlipEventInfo> {
+  async put(glipEventCreate: GlipEventCreate): Promise<GlipEventInfo> {
     if (!this.eventId || this.eventId === null) {
       throw new Error("eventId must not be undefined or null")
     }

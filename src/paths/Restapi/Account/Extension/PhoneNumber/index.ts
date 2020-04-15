@@ -1,3 +1,4 @@
+import ListExtensionPhoneNumbersParameters from '../../../../../definitions/ListExtensionPhoneNumbersParameters'
 import GetExtensionPhoneNumbersResponse from '../../../../../definitions/GetExtensionPhoneNumbersResponse'
 import Parent from '..'
 import RestClient from '../../../../..'
@@ -11,7 +12,7 @@ class Index {
     this.rc = parent.rc
   }
 
-  string path() {
+  path(): string {
     return `${this.parent.path()}/phone-number`
   }
 
@@ -19,7 +20,7 @@ class Index {
    * Operation: Get Extension Phone Number List
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/phone-number
    */
-  async get(ListExtensionPhoneNumbersParameters queryParams = null): Promise<GetExtensionPhoneNumbersResponse> {
+  async get(queryParams?: ListExtensionPhoneNumbersParameters): Promise<GetExtensionPhoneNumbersResponse> {
     return this.rc.get(this.path(), queryParams)
   }
 }

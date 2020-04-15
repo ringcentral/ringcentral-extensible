@@ -1,3 +1,4 @@
+import CreateCompanyGreetingRequest from '../../../../definitions/CreateCompanyGreetingRequest'
 import CustomCompanyGreetingInfo from '../../../../definitions/CustomCompanyGreetingInfo'
 import Parent from '..'
 import RestClient from '../../../..'
@@ -11,7 +12,7 @@ class Index {
     this.rc = parent.rc
   }
 
-  string path() {
+  path(): string {
     return `${this.parent.path()}/greeting`
   }
 
@@ -19,9 +20,9 @@ class Index {
    * Operation: Create Company Greeting
    * Http post /restapi/v1.0/account/{accountId}/greeting
    */
-  async post(CreateCompanyGreetingRequest createCompanyGreetingRequest): Promise<CustomCompanyGreetingInfo> {
+  async post(createCompanyGreetingRequest: CreateCompanyGreetingRequest): Promise<CustomCompanyGreetingInfo> {
     var multipartFormDataContent = Utils.GetMultipartFormDataContent(createCompanyGreetingRequest)
-    return this.rc.Post(this.path(), multipartFormDataContent)
+    return this.rc.post(this.path(), multipartFormDataContent)
   }
 }
 

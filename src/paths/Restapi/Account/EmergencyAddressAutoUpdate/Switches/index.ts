@@ -1,6 +1,7 @@
 import UpdateSwitchInfo from '../../../../../definitions/UpdateSwitchInfo'
 import CreateSwitchInfo from '../../../../../definitions/CreateSwitchInfo'
 import SwitchInfo from '../../../../../definitions/SwitchInfo'
+import ListAccountSwitchesParameters from '../../../../../definitions/ListAccountSwitchesParameters'
 import SwitchesList from '../../../../../definitions/SwitchesList'
 import Parent from '..'
 import RestClient from '../../../../..'
@@ -28,7 +29,7 @@ class Index {
    * Operation: Get Account Switch List
    * Http get /restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches
    */
-  async list(ListAccountSwitchesParameters queryParams = null): Promise<SwitchesList> {
+  async list(queryParams?: ListAccountSwitchesParameters): Promise<SwitchesList> {
     return this.rc.get(this.path(false), queryParams)
   }
 
@@ -36,7 +37,7 @@ class Index {
    * Operation: Create Switch
    * Http post /restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches
    */
-  async post(CreateSwitchInfo createSwitchInfo): Promise<SwitchInfo> {
+  async post(createSwitchInfo: CreateSwitchInfo): Promise<SwitchInfo> {
     return this.rc.post(this.path(false), createSwitchInfo)
   }
 
@@ -56,7 +57,7 @@ class Index {
    * Operation: Update Switch
    * Http put /restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches/{switchId}
    */
-  async put(UpdateSwitchInfo updateSwitchInfo): Promise<SwitchInfo> {
+  async put(updateSwitchInfo: UpdateSwitchInfo): Promise<SwitchInfo> {
     if (!this.switchId || this.switchId === null) {
       throw new Error("switchId must not be undefined or null")
     }

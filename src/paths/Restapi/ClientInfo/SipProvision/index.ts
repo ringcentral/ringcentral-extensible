@@ -12,7 +12,7 @@ class Index {
     this.rc = parent.rc
   }
 
-  string path() {
+  path(): string {
     return `${this.parent.path()}/sip-provision`
   }
 
@@ -20,7 +20,7 @@ class Index {
    * Operation: Register SIP Device
    * Http post /restapi/v1.0/client-info/sip-provision
    */
-  async post(CreateSipRegistrationRequest createSipRegistrationRequest): Promise<CreateSipRegistrationResponse> {
+  async post(createSipRegistrationRequest: CreateSipRegistrationRequest): Promise<CreateSipRegistrationResponse> {
     return this.rc.post(this.path(), createSipRegistrationRequest)
   }
 }

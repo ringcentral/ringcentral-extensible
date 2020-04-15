@@ -1,4 +1,5 @@
 import GlipChatInfo from '../../../../definitions/GlipChatInfo'
+import ListGlipChatsParameters from '../../../../definitions/ListGlipChatsParameters'
 import GlipChatsList from '../../../../definitions/GlipChatsList'
 import Parent from '..'
 import RestClient from '../../../..'
@@ -26,7 +27,7 @@ class Index {
    * Operation: Get Chats
    * Http get /restapi/v1.0/glip/chats
    */
-  async list(ListGlipChatsParameters queryParams = null): Promise<GlipChatsList> {
+  async list(queryParams?: ListGlipChatsParameters): Promise<GlipChatsList> {
     return this.rc.get(this.path(false), queryParams)
   }
 

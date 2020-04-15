@@ -1,4 +1,3 @@
-import byte[] from '../../../../../definitions/byte[]'
 import Parent from '..'
 import RestClient from '../../../../..'
 
@@ -11,7 +10,7 @@ class Index {
     this.rc = parent.rc
   }
 
-  string path() {
+  path(): string {
     return `${this.parent.path()}/content`
   }
 
@@ -19,7 +18,7 @@ class Index {
    * Operation: Get Call Recordings Data
    * Http get /restapi/v1.0/account/{accountId}/recording/{recordingId}/content
    */
-  async get(): Promise<byte[]> {
+  async get(): Promise<Buffer> {
     return this.rc.get(this.path())
   }
 }

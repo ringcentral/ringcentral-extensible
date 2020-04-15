@@ -1,3 +1,4 @@
+import ListCallQueueMembersParameters from '../../../../../definitions/ListCallQueueMembersParameters'
 import CallQueueMembers from '../../../../../definitions/CallQueueMembers'
 import Parent from '..'
 import RestClient from '../../../../..'
@@ -11,7 +12,7 @@ class Index {
     this.rc = parent.rc
   }
 
-  string path() {
+  path(): string {
     return `${this.parent.path()}/members`
   }
 
@@ -19,7 +20,7 @@ class Index {
    * Operation: Get Call Queue Members
    * Http get /restapi/v1.0/account/{accountId}/call-queues/{groupId}/members
    */
-  async get(ListCallQueueMembersParameters queryParams = null): Promise<CallQueueMembers> {
+  async get(queryParams?: ListCallQueueMembersParameters): Promise<CallQueueMembers> {
     return this.rc.get(this.path(), queryParams)
   }
 }

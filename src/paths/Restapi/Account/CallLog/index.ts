@@ -1,4 +1,6 @@
+import ReadCompanyCallRecordParameters from '../../../../definitions/ReadCompanyCallRecordParameters'
 import CompanyCallLogRecord from '../../../../definitions/CompanyCallLogRecord'
+import ReadCompanyCallLogParameters from '../../../../definitions/ReadCompanyCallLogParameters'
 import AccountCallLogResponse from '../../../../definitions/AccountCallLogResponse'
 import Parent from '..'
 import RestClient from '../../../..'
@@ -26,7 +28,7 @@ class Index {
    * Operation: Get Company Call Log Records
    * Http get /restapi/v1.0/account/{accountId}/call-log
    */
-  async list(ReadCompanyCallLogParameters queryParams = null): Promise<AccountCallLogResponse> {
+  async list(queryParams?: ReadCompanyCallLogParameters): Promise<AccountCallLogResponse> {
     return this.rc.get(this.path(false), queryParams)
   }
 
@@ -34,7 +36,7 @@ class Index {
    * Operation: Get Company Call Log Record(s)
    * Http get /restapi/v1.0/account/{accountId}/call-log/{callRecordId}
    */
-  async get(ReadCompanyCallRecordParameters queryParams = null): Promise<CompanyCallLogRecord> {
+  async get(queryParams?: ReadCompanyCallRecordParameters): Promise<CompanyCallLogRecord> {
     if (!this.callRecordId || this.callRecordId === null) {
       throw new Error("callRecordId must not be undefined or null")
     }

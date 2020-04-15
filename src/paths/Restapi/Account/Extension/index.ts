@@ -1,7 +1,9 @@
+import DeleteExtensionParameters from '../../../../definitions/DeleteExtensionParameters'
 import ExtensionUpdateRequest from '../../../../definitions/ExtensionUpdateRequest'
 import GetExtensionInfoResponse from '../../../../definitions/GetExtensionInfoResponse'
 import ExtensionCreationRequest from '../../../../definitions/ExtensionCreationRequest'
 import ExtensionCreationResponse from '../../../../definitions/ExtensionCreationResponse'
+import ListExtensionsParameters from '../../../../definitions/ListExtensionsParameters'
 import GetExtensionListResponse from '../../../../definitions/GetExtensionListResponse'
 import Parent from '..'
 import RestClient from '../../../..'
@@ -29,7 +31,7 @@ class Index {
    * Operation: Get Extension List
    * Http get /restapi/v1.0/account/{accountId}/extension
    */
-  async list(ListExtensionsParameters queryParams = null): Promise<GetExtensionListResponse> {
+  async list(queryParams?: ListExtensionsParameters): Promise<GetExtensionListResponse> {
     return this.rc.get(this.path(false), queryParams)
   }
 
@@ -37,7 +39,7 @@ class Index {
    * Operation: Create Extension
    * Http post /restapi/v1.0/account/{accountId}/extension
    */
-  async post(ExtensionCreationRequest extensionCreationRequest): Promise<ExtensionCreationResponse> {
+  async post(extensionCreationRequest: ExtensionCreationRequest): Promise<ExtensionCreationResponse> {
     return this.rc.post(this.path(false), extensionCreationRequest)
   }
 
@@ -57,7 +59,7 @@ class Index {
    * Operation: Update Extension
    * Http put /restapi/v1.0/account/{accountId}/extension/{extensionId}
    */
-  async put(ExtensionUpdateRequest extensionUpdateRequest): Promise<GetExtensionInfoResponse> {
+  async put(extensionUpdateRequest: ExtensionUpdateRequest): Promise<GetExtensionInfoResponse> {
     if (!this.extensionId || this.extensionId === null) {
       throw new Error("extensionId must not be undefined or null")
     }
@@ -69,7 +71,7 @@ class Index {
    * Operation: Delete Extension
    * Http delete /restapi/v1.0/account/{accountId}/extension/{extensionId}
    */
-  async delete(DeleteExtensionParameters queryParams = null): Promise<string> {
+  async delete(queryParams?: DeleteExtensionParameters): Promise<string> {
     if (!this.extensionId || this.extensionId === null) {
       throw new Error("extensionId must not be undefined or null")
     }

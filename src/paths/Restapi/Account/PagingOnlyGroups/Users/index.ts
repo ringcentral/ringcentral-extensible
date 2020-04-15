@@ -1,3 +1,4 @@
+import ListPagingGroupUsersParameters from '../../../../../definitions/ListPagingGroupUsersParameters'
 import PagingOnlyGroupUsers from '../../../../../definitions/PagingOnlyGroupUsers'
 import Parent from '..'
 import RestClient from '../../../../..'
@@ -11,7 +12,7 @@ class Index {
     this.rc = parent.rc
   }
 
-  string path() {
+  path(): string {
     return `${this.parent.path()}/users`
   }
 
@@ -19,7 +20,7 @@ class Index {
    * Operation: Get Paging Group Users
    * Http get /restapi/v1.0/account/{accountId}/paging-only-groups/{pagingOnlyGroupId}/users
    */
-  async get(ListPagingGroupUsersParameters queryParams = null): Promise<PagingOnlyGroupUsers> {
+  async get(queryParams?: ListPagingGroupUsersParameters): Promise<PagingOnlyGroupUsers> {
     return this.rc.get(this.path(), queryParams)
   }
 }

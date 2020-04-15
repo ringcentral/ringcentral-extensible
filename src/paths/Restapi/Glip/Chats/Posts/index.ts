@@ -1,6 +1,7 @@
 import GlipPatchPostBody from '../../../../../definitions/GlipPatchPostBody'
 import GlipPostPostBody from '../../../../../definitions/GlipPostPostBody'
 import GlipPostInfo from '../../../../../definitions/GlipPostInfo'
+import ReadGlipPostsParameters from '../../../../../definitions/ReadGlipPostsParameters'
 import GlipPostsList from '../../../../../definitions/GlipPostsList'
 import Parent from '..'
 import RestClient from '../../../../..'
@@ -28,7 +29,7 @@ class Index {
    * Operation: Get Posts
    * Http get /restapi/v1.0/glip/chats/{chatId}/posts
    */
-  async list(ReadGlipPostsParameters queryParams = null): Promise<GlipPostsList> {
+  async list(queryParams?: ReadGlipPostsParameters): Promise<GlipPostsList> {
     return this.rc.get(this.path(false), queryParams)
   }
 
@@ -36,7 +37,7 @@ class Index {
    * Operation: Create Post
    * Http post /restapi/v1.0/glip/chats/{chatId}/posts
    */
-  async post(GlipPostPostBody glipPostPostBody): Promise<GlipPostInfo> {
+  async post(glipPostPostBody: GlipPostPostBody): Promise<GlipPostInfo> {
     return this.rc.post(this.path(false), glipPostPostBody)
   }
 
@@ -56,7 +57,7 @@ class Index {
    * Operation: Update Post
    * Http patch /restapi/v1.0/glip/chats/{chatId}/posts/{postId}
    */
-  async patch(GlipPatchPostBody glipPatchPostBody): Promise<GlipPostInfo> {
+  async patch(glipPatchPostBody: GlipPatchPostBody): Promise<GlipPostInfo> {
     if (!this.postId || this.postId === null) {
       throw new Error("postId must not be undefined or null")
     }

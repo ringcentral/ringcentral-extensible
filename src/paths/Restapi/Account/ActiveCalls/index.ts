@@ -1,3 +1,4 @@
+import ListCompanyActiveCallsParameters from '../../../../definitions/ListCompanyActiveCallsParameters'
 import CompanyActiveCallsResponse from '../../../../definitions/CompanyActiveCallsResponse'
 import Parent from '..'
 import RestClient from '../../../..'
@@ -11,7 +12,7 @@ class Index {
     this.rc = parent.rc
   }
 
-  string path() {
+  path(): string {
     return `${this.parent.path()}/active-calls`
   }
 
@@ -19,7 +20,7 @@ class Index {
    * Operation: Get Company Active Calls
    * Http get /restapi/v1.0/account/{accountId}/active-calls
    */
-  async get(ListCompanyActiveCallsParameters queryParams = null): Promise<CompanyActiveCallsResponse> {
+  async get(queryParams?: ListCompanyActiveCallsParameters): Promise<CompanyActiveCallsResponse> {
     return this.rc.get(this.path(), queryParams)
   }
 }

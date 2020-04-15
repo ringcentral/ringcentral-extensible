@@ -39,7 +39,7 @@ class Index {
    * Operation: Update Note
    * Http patch /restapi/v1.0/glip/notes/{noteId}
    */
-  async patch(GlipNoteCreate glipNoteCreate): Promise<GlipNoteInfo> {
+  async patch(glipNoteCreate: GlipNoteCreate): Promise<GlipNoteInfo> {
     if (!this.noteId || this.noteId === null) {
       throw new Error("noteId must not be undefined or null")
     }

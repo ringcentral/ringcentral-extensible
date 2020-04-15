@@ -1,3 +1,4 @@
+import ListAccountMeetingRecordingsParameters from '../../../../definitions/ListAccountMeetingRecordingsParameters'
 import ListMeetingRecordingsResponse from '../../../../definitions/ListMeetingRecordingsResponse'
 import Parent from '..'
 import RestClient from '../../../..'
@@ -11,7 +12,7 @@ class Index {
     this.rc = parent.rc
   }
 
-  string path() {
+  path(): string {
     return `${this.parent.path()}/meeting-recordings`
   }
 
@@ -19,7 +20,7 @@ class Index {
    * Operation: Get Account Meeting Recordings List
    * Http get /restapi/v1.0/account/{accountId}/meeting-recordings
    */
-  async get(ListAccountMeetingRecordingsParameters queryParams = null): Promise<ListMeetingRecordingsResponse> {
+  async get(queryParams?: ListAccountMeetingRecordingsParameters): Promise<ListMeetingRecordingsResponse> {
     return this.rc.get(this.path(), queryParams)
   }
 }

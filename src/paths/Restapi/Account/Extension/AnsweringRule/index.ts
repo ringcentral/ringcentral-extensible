@@ -1,7 +1,9 @@
 import UpdateAnsweringRuleRequest from '../../../../../definitions/UpdateAnsweringRuleRequest'
+import ReadAnsweringRuleParameters from '../../../../../definitions/ReadAnsweringRuleParameters'
 import AnsweringRuleInfo from '../../../../../definitions/AnsweringRuleInfo'
 import CreateAnsweringRuleRequest from '../../../../../definitions/CreateAnsweringRuleRequest'
 import CustomAnsweringRuleInfo from '../../../../../definitions/CustomAnsweringRuleInfo'
+import ListAnsweringRulesParameters from '../../../../../definitions/ListAnsweringRulesParameters'
 import UserAnsweringRuleList from '../../../../../definitions/UserAnsweringRuleList'
 import Parent from '..'
 import RestClient from '../../../../..'
@@ -29,7 +31,7 @@ class Index {
    * Operation: Get Call Handling Rules
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/answering-rule
    */
-  async list(ListAnsweringRulesParameters queryParams = null): Promise<UserAnsweringRuleList> {
+  async list(queryParams?: ListAnsweringRulesParameters): Promise<UserAnsweringRuleList> {
     return this.rc.get(this.path(false), queryParams)
   }
 
@@ -37,7 +39,7 @@ class Index {
    * Operation: Create Call Handling Rule
    * Http post /restapi/v1.0/account/{accountId}/extension/{extensionId}/answering-rule
    */
-  async post(CreateAnsweringRuleRequest createAnsweringRuleRequest): Promise<CustomAnsweringRuleInfo> {
+  async post(createAnsweringRuleRequest: CreateAnsweringRuleRequest): Promise<CustomAnsweringRuleInfo> {
     return this.rc.post(this.path(false), createAnsweringRuleRequest)
   }
 
@@ -45,7 +47,7 @@ class Index {
    * Operation: Get Call Handling Rule
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/answering-rule/{ruleId}
    */
-  async get(ReadAnsweringRuleParameters queryParams = null): Promise<AnsweringRuleInfo> {
+  async get(queryParams?: ReadAnsweringRuleParameters): Promise<AnsweringRuleInfo> {
     if (!this.ruleId || this.ruleId === null) {
       throw new Error("ruleId must not be undefined or null")
     }
@@ -57,7 +59,7 @@ class Index {
    * Operation: Update Call Handling Rule
    * Http put /restapi/v1.0/account/{accountId}/extension/{extensionId}/answering-rule/{ruleId}
    */
-  async put(UpdateAnsweringRuleRequest updateAnsweringRuleRequest): Promise<AnsweringRuleInfo> {
+  async put(updateAnsweringRuleRequest: UpdateAnsweringRuleRequest): Promise<AnsweringRuleInfo> {
     if (!this.ruleId || this.ruleId === null) {
       throw new Error("ruleId must not be undefined or null")
     }

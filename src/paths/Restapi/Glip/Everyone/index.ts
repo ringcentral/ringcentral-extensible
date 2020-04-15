@@ -12,7 +12,7 @@ class Index {
     this.rc = parent.rc
   }
 
-  string path() {
+  path(): string {
     return `${this.parent.path()}/everyone`
   }
 
@@ -28,7 +28,7 @@ class Index {
    * Operation: Update Everyone Сhat
    * Http patch /restapi/v1.0/glip/everyone
    */
-  async patch(UpdateGlipEveryoneRequest updateGlipEveryoneRequest): Promise<GlipEveryoneInfo> {
+  async patch(updateGlipEveryoneRequest: UpdateGlipEveryoneRequest): Promise<GlipEveryoneInfo> {
     return this.rc.patch(this.path(), updateGlipEveryoneRequest)
   }
 }

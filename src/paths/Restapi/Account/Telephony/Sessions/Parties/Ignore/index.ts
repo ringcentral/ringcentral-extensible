@@ -11,7 +11,7 @@ class Index {
     this.rc = parent.rc
   }
 
-  string path() {
+  path(): string {
     return `${this.parent.path()}/ignore`
   }
 
@@ -19,7 +19,7 @@ class Index {
    * Operation: Ignore Call in Queue
    * Http post /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/ignore
    */
-  async post(IgnoreRequestBody ignoreRequestBody): Promise<string> {
+  async post(ignoreRequestBody: IgnoreRequestBody): Promise<string> {
     return this.rc.post(this.path(), ignoreRequestBody)
   }
 }

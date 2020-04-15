@@ -1,5 +1,6 @@
 import CallQueueUpdateDetails from '../../../../definitions/CallQueueUpdateDetails'
 import CallQueueDetails from '../../../../definitions/CallQueueDetails'
+import ListCallQueuesParameters from '../../../../definitions/ListCallQueuesParameters'
 import CallQueues from '../../../../definitions/CallQueues'
 import Parent from '..'
 import RestClient from '../../../..'
@@ -27,7 +28,7 @@ class Index {
    * Operation: Get Call Queues
    * Http get /restapi/v1.0/account/{accountId}/call-queues
    */
-  async list(ListCallQueuesParameters queryParams = null): Promise<CallQueues> {
+  async list(queryParams?: ListCallQueuesParameters): Promise<CallQueues> {
     return this.rc.get(this.path(false), queryParams)
   }
 
@@ -47,7 +48,7 @@ class Index {
    * Operation: Update Call Queue
    * Http put /restapi/v1.0/account/{accountId}/call-queues/{groupId}
    */
-  async put(CallQueueUpdateDetails callQueueUpdateDetails): Promise<CallQueueDetails> {
+  async put(callQueueUpdateDetails: CallQueueUpdateDetails): Promise<CallQueueDetails> {
     if (!this.groupId || this.groupId === null) {
       throw new Error("groupId must not be undefined or null")
     }

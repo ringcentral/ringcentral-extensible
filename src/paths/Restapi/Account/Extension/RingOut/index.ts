@@ -26,7 +26,7 @@ class Index {
    * Operation: Make RingOut Call
    * Http post /restapi/v1.0/account/{accountId}/extension/{extensionId}/ring-out
    */
-  async post(MakeRingOutRequest makeRingOutRequest): Promise<GetRingOutStatusResponse> {
+  async post(makeRingOutRequest: MakeRingOutRequest): Promise<GetRingOutStatusResponse> {
     return this.rc.post(this.path(false), makeRingOutRequest)
   }
 

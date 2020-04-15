@@ -11,7 +11,7 @@ class Index {
     this.rc = parent.rc
   }
 
-  string path() {
+  path(): string {
     return `${this.parent.path()}/bulk-assign`
   }
 
@@ -19,7 +19,7 @@ class Index {
    * Operation: Enable Automatic Location Updates for Devices
    * Http post /restapi/v1.0/account/{accountId}/emergency-address-auto-update/devices/bulk-assign
    */
-  async post(AssignMultipleDevicesAutomaticLocationUpdates assignMultipleDevicesAutomaticLocationUpdates): Promise<string> {
+  async post(assignMultipleDevicesAutomaticLocationUpdates: AssignMultipleDevicesAutomaticLocationUpdates): Promise<string> {
     return this.rc.post(this.path(), assignMultipleDevicesAutomaticLocationUpdates)
   }
 }

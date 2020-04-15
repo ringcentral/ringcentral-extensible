@@ -39,7 +39,7 @@ class Index {
    * Operation: Patch Task
    * Http patch /restapi/v1.0/glip/tasks/{taskId}
    */
-  async patch(GlipUpdateTask glipUpdateTask): Promise<GlipTaskList> {
+  async patch(glipUpdateTask: GlipUpdateTask): Promise<GlipTaskList> {
     if (!this.taskId || this.taskId === null) {
       throw new Error("taskId must not be undefined or null")
     }

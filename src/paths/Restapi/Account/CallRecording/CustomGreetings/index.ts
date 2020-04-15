@@ -1,3 +1,4 @@
+import ListCallRecordingCustomGreetingsParameters from '../../../../../definitions/ListCallRecordingCustomGreetingsParameters'
 import CallRecordingCustomGreetings from '../../../../../definitions/CallRecordingCustomGreetings'
 import Parent from '..'
 import RestClient from '../../../../..'
@@ -25,7 +26,7 @@ class Index {
    * Operation: Get Call Recording Custom Greeting List
    * Http get /restapi/v1.0/account/{accountId}/call-recording/custom-greetings
    */
-  async get(ListCallRecordingCustomGreetingsParameters queryParams = null): Promise<CallRecordingCustomGreetings> {
+  async get(queryParams?: ListCallRecordingCustomGreetingsParameters): Promise<CallRecordingCustomGreetings> {
     return this.rc.get(this.path(false), queryParams)
   }
 

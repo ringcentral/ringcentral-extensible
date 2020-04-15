@@ -12,7 +12,7 @@ class Index {
     this.rc = parent.rc
   }
 
-  string path() {
+  path(): string {
     return `${this.parent.path()}/forward`
   }
 
@@ -20,7 +20,7 @@ class Index {
    * Operation: Forward Call Party
    * Http post /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/forward
    */
-  async post(ForwardTarget forwardTarget): Promise<CallParty> {
+  async post(forwardTarget: ForwardTarget): Promise<CallParty> {
     return this.rc.post(this.path(), forwardTarget)
   }
 }

@@ -1,3 +1,4 @@
+import SyncAccountCallLogParameters from '../../../../definitions/SyncAccountCallLogParameters'
 import AccountCallLogSyncResponse from '../../../../definitions/AccountCallLogSyncResponse'
 import Parent from '..'
 import RestClient from '../../../..'
@@ -11,7 +12,7 @@ class Index {
     this.rc = parent.rc
   }
 
-  string path() {
+  path(): string {
     return `${this.parent.path()}/call-log-sync`
   }
 
@@ -19,7 +20,7 @@ class Index {
    * Operation: Sync Company Call Log
    * Http get /restapi/v1.0/account/{accountId}/call-log-sync
    */
-  async get(SyncAccountCallLogParameters queryParams = null): Promise<AccountCallLogSyncResponse> {
+  async get(queryParams?: SyncAccountCallLogParameters): Promise<AccountCallLogSyncResponse> {
     return this.rc.get(this.path(), queryParams)
   }
 }

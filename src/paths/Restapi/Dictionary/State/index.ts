@@ -1,4 +1,5 @@
 import GetStateInfoResponse from '../../../../definitions/GetStateInfoResponse'
+import ListStatesParameters from '../../../../definitions/ListStatesParameters'
 import GetStateListResponse from '../../../../definitions/GetStateListResponse'
 import Parent from '..'
 import RestClient from '../../../..'
@@ -26,7 +27,7 @@ class Index {
    * Operation: Get States List
    * Http get /restapi/v1.0/dictionary/state
    */
-  async list(ListStatesParameters queryParams = null): Promise<GetStateListResponse> {
+  async list(queryParams?: ListStatesParameters): Promise<GetStateListResponse> {
     return this.rc.get(this.path(false), queryParams)
   }
 

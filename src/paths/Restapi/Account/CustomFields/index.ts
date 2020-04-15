@@ -28,7 +28,7 @@ class Index {
    * Operation: Create Custom Field
    * Http post /restapi/v1.0/account/{accountId}/custom-fields
    */
-  async post(CustomFieldCreateRequest customFieldCreateRequest): Promise<CustomFieldResource> {
+  async post(customFieldCreateRequest: CustomFieldCreateRequest): Promise<CustomFieldResource> {
     return this.rc.post(this.path(false), customFieldCreateRequest)
   }
 
@@ -44,7 +44,7 @@ class Index {
    * Operation: Update Сustom Field
    * Http put /restapi/v1.0/account/{accountId}/custom-fields/{fieldId}
    */
-  async put(CustomFieldUpdateRequest customFieldUpdateRequest): Promise<CustomFieldResource> {
+  async put(customFieldUpdateRequest: CustomFieldUpdateRequest): Promise<CustomFieldResource> {
     if (!this.fieldId || this.fieldId === null) {
       throw new Error("fieldId must not be undefined or null")
     }

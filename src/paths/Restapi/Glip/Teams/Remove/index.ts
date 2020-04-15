@@ -11,7 +11,7 @@ class Index {
     this.rc = parent.rc
   }
 
-  string path() {
+  path(): string {
     return `${this.parent.path()}/remove`
   }
 
@@ -19,7 +19,7 @@ class Index {
    * Operation: Remove Team Members
    * Http post /restapi/v1.0/glip/teams/{chatId}/remove
    */
-  async post(GlipPostMembersIdsListBody glipPostMembersIdsListBody): Promise<string> {
+  async post(glipPostMembersIdsListBody: GlipPostMembersIdsListBody): Promise<string> {
     return this.rc.post(this.path(), glipPostMembersIdsListBody)
   }
 }

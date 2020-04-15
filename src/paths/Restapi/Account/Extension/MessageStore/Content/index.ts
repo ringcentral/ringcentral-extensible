@@ -1,4 +1,4 @@
-import byte[] from '../../../../../../definitions/byte[]'
+import ReadMessageContentParameters from '../../../../../../definitions/ReadMessageContentParameters'
 import Parent from '..'
 import RestClient from '../../../../../..'
 
@@ -25,7 +25,7 @@ class Index {
    * Operation: Get Message Content
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}/content/{attachmentId}
    */
-  async get(ReadMessageContentParameters queryParams = null): Promise<byte[]> {
+  async get(queryParams?: ReadMessageContentParameters): Promise<Buffer> {
     if (!this.attachmentId || this.attachmentId === null) {
       throw new Error("attachmentId must not be undefined or null")
     }

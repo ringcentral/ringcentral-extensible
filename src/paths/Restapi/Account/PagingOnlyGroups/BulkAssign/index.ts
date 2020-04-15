@@ -11,7 +11,7 @@ class Index {
     this.rc = parent.rc
   }
 
-  string path() {
+  path(): string {
     return `${this.parent.path()}/bulk-assign`
   }
 
@@ -19,7 +19,7 @@ class Index {
    * Operation: Assign Paging Group Users and Devices
    * Http post /restapi/v1.0/account/{accountId}/paging-only-groups/{pagingOnlyGroupId}/bulk-assign
    */
-  async post(EditPagingGroupRequest editPagingGroupRequest): Promise<string> {
+  async post(editPagingGroupRequest: EditPagingGroupRequest): Promise<string> {
     return this.rc.post(this.path(), editPagingGroupRequest)
   }
 }

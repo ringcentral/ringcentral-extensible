@@ -1,3 +1,4 @@
+import ListLocationsParameters from '../../../../definitions/ListLocationsParameters'
 import GetLocationListResponse from '../../../../definitions/GetLocationListResponse'
 import Parent from '..'
 import RestClient from '../../../..'
@@ -11,7 +12,7 @@ class Index {
     this.rc = parent.rc
   }
 
-  string path() {
+  path(): string {
     return `${this.parent.path()}/location`
   }
 
@@ -19,7 +20,7 @@ class Index {
    * Operation: Get Location List
    * Http get /restapi/v1.0/dictionary/location
    */
-  async get(ListLocationsParameters queryParams = null): Promise<GetLocationListResponse> {
+  async get(queryParams?: ListLocationsParameters): Promise<GetLocationListResponse> {
     return this.rc.get(this.path(), queryParams)
   }
 }

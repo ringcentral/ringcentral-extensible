@@ -1,3 +1,4 @@
+import ListPagingGroupDevicesParameters from '../../../../../definitions/ListPagingGroupDevicesParameters'
 import PagingOnlyGroupDevices from '../../../../../definitions/PagingOnlyGroupDevices'
 import Parent from '..'
 import RestClient from '../../../../..'
@@ -11,7 +12,7 @@ class Index {
     this.rc = parent.rc
   }
 
-  string path() {
+  path(): string {
     return `${this.parent.path()}/devices`
   }
 
@@ -19,7 +20,7 @@ class Index {
    * Operation: Get Paging Group Devices
    * Http get /restapi/v1.0/account/{accountId}/paging-only-groups/{pagingOnlyGroupId}/devices
    */
-  async get(ListPagingGroupDevicesParameters queryParams = null): Promise<PagingOnlyGroupDevices> {
+  async get(queryParams?: ListPagingGroupDevicesParameters): Promise<PagingOnlyGroupDevices> {
     return this.rc.get(this.path(), queryParams)
   }
 }

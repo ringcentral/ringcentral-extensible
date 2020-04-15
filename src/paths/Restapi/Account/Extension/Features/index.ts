@@ -1,3 +1,4 @@
+import ReadUserFeaturesParameters from '../../../../../definitions/ReadUserFeaturesParameters'
 import FeatureList from '../../../../../definitions/FeatureList'
 import Parent from '..'
 import RestClient from '../../../../..'
@@ -11,7 +12,7 @@ class Index {
     this.rc = parent.rc
   }
 
-  string path() {
+  path(): string {
     return `${this.parent.path()}/features`
   }
 
@@ -19,7 +20,7 @@ class Index {
    * Operation: Get User Features
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/features
    */
-  async get(ReadUserFeaturesParameters queryParams = null): Promise<FeatureList> {
+  async get(queryParams?: ReadUserFeaturesParameters): Promise<FeatureList> {
     return this.rc.get(this.path(), queryParams)
   }
 }

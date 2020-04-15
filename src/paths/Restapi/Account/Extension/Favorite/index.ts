@@ -12,7 +12,7 @@ class Index {
     this.rc = parent.rc
   }
 
-  string path() {
+  path(): string {
     return `${this.parent.path()}/favorite`
   }
 
@@ -28,7 +28,7 @@ class Index {
    * Operation: Update Favorite Contact List
    * Http put /restapi/v1.0/account/{accountId}/extension/{extensionId}/favorite
    */
-  async put(FavoriteCollection favoriteCollection): Promise<FavoriteContactList> {
+  async put(favoriteCollection: FavoriteCollection): Promise<FavoriteContactList> {
     return this.rc.put(this.path(), favoriteCollection)
   }
 }

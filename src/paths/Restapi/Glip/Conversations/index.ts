@@ -1,5 +1,6 @@
 import CreateGlipConversationRequest from '../../../../definitions/CreateGlipConversationRequest'
 import GlipConversationInfo from '../../../../definitions/GlipConversationInfo'
+import ListGlipConversationsParameters from '../../../../definitions/ListGlipConversationsParameters'
 import GlipConversationsList from '../../../../definitions/GlipConversationsList'
 import Parent from '..'
 import RestClient from '../../../..'
@@ -27,7 +28,7 @@ class Index {
    * Operation: Get Conversations
    * Http get /restapi/v1.0/glip/conversations
    */
-  async list(ListGlipConversationsParameters queryParams = null): Promise<GlipConversationsList> {
+  async list(queryParams?: ListGlipConversationsParameters): Promise<GlipConversationsList> {
     return this.rc.get(this.path(false), queryParams)
   }
 
@@ -35,7 +36,7 @@ class Index {
    * Operation: Create/Open Conversation
    * Http post /restapi/v1.0/glip/conversations
    */
-  async post(CreateGlipConversationRequest createGlipConversationRequest): Promise<GlipConversationInfo> {
+  async post(createGlipConversationRequest: CreateGlipConversationRequest): Promise<GlipConversationInfo> {
     return this.rc.post(this.path(false), createGlipConversationRequest)
   }
 

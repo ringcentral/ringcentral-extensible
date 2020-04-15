@@ -11,7 +11,7 @@ class Index {
     this.rc = parent.rc
   }
 
-  string path() {
+  path(): string {
     return `${this.parent.path()}/message-store-configuration`
   }
 
@@ -27,7 +27,7 @@ class Index {
    * Operation: Update Message Store Configuration
    * Http put /restapi/v1.0/account/{accountId}/message-store-configuration
    */
-  async put(MessageStoreConfiguration messageStoreConfiguration): Promise<MessageStoreConfiguration> {
+  async put(messageStoreConfiguration: MessageStoreConfiguration): Promise<MessageStoreConfiguration> {
     return this.rc.put(this.path(), messageStoreConfiguration)
   }
 }

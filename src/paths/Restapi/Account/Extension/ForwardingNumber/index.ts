@@ -1,6 +1,7 @@
 import UpdateForwardingNumberRequest from '../../../../../definitions/UpdateForwardingNumberRequest'
 import CreateForwardingNumberRequest from '../../../../../definitions/CreateForwardingNumberRequest'
 import ForwardingNumberInfo from '../../../../../definitions/ForwardingNumberInfo'
+import ListForwardingNumbersParameters from '../../../../../definitions/ListForwardingNumbersParameters'
 import GetExtensionForwardingNumberListResponse from '../../../../../definitions/GetExtensionForwardingNumberListResponse'
 import Parent from '..'
 import RestClient from '../../../../..'
@@ -28,7 +29,7 @@ class Index {
    * Operation: Get Forwarding Number List
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number
    */
-  async list(ListForwardingNumbersParameters queryParams = null): Promise<GetExtensionForwardingNumberListResponse> {
+  async list(queryParams?: ListForwardingNumbersParameters): Promise<GetExtensionForwardingNumberListResponse> {
     return this.rc.get(this.path(false), queryParams)
   }
 
@@ -36,7 +37,7 @@ class Index {
    * Operation: Create Forwarding Number
    * Http post /restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number
    */
-  async post(CreateForwardingNumberRequest createForwardingNumberRequest): Promise<ForwardingNumberInfo> {
+  async post(createForwardingNumberRequest: CreateForwardingNumberRequest): Promise<ForwardingNumberInfo> {
     return this.rc.post(this.path(false), createForwardingNumberRequest)
   }
 
@@ -56,7 +57,7 @@ class Index {
    * Operation: Update Forwarding Number
    * Http put /restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number/{forwardingNumberId}
    */
-  async put(UpdateForwardingNumberRequest updateForwardingNumberRequest): Promise<ForwardingNumberInfo> {
+  async put(updateForwardingNumberRequest: UpdateForwardingNumberRequest): Promise<ForwardingNumberInfo> {
     if (!this.forwardingNumberId || this.forwardingNumberId === null) {
       throw new Error("forwardingNumberId must not be undefined or null")
     }

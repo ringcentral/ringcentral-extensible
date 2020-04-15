@@ -1,3 +1,4 @@
+import ReadAccountPresenceParameters from '../../../../definitions/ReadAccountPresenceParameters'
 import AccountPresenceInfo from '../../../../definitions/AccountPresenceInfo'
 import Parent from '..'
 import RestClient from '../../../..'
@@ -11,7 +12,7 @@ class Index {
     this.rc = parent.rc
   }
 
-  string path() {
+  path(): string {
     return `${this.parent.path()}/presence`
   }
 
@@ -19,7 +20,7 @@ class Index {
    * Operation: Get User Presence Status List
    * Http get /restapi/v1.0/account/{accountId}/presence
    */
-  async get(ReadAccountPresenceParameters queryParams = null): Promise<AccountPresenceInfo> {
+  async get(queryParams?: ReadAccountPresenceParameters): Promise<AccountPresenceInfo> {
     return this.rc.get(this.path(), queryParams)
   }
 }

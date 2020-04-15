@@ -1,3 +1,4 @@
+import ListAutomaticLocationUpdatesUsersParameters from '../../../../../definitions/ListAutomaticLocationUpdatesUsersParameters'
 import AutomaticLocationUpdatesUserList from '../../../../../definitions/AutomaticLocationUpdatesUserList'
 import Parent from '..'
 import RestClient from '../../../../..'
@@ -11,7 +12,7 @@ class Index {
     this.rc = parent.rc
   }
 
-  string path() {
+  path(): string {
     return `${this.parent.path()}/users`
   }
 
@@ -19,7 +20,7 @@ class Index {
    * Operation: Get User List
    * Http get /restapi/v1.0/account/{accountId}/emergency-address-auto-update/users
    */
-  async get(ListAutomaticLocationUpdatesUsersParameters queryParams = null): Promise<AutomaticLocationUpdatesUserList> {
+  async get(queryParams?: ListAutomaticLocationUpdatesUsersParameters): Promise<AutomaticLocationUpdatesUserList> {
     return this.rc.get(this.path(), queryParams)
   }
 }

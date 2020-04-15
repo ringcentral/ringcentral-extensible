@@ -12,7 +12,7 @@ class Index {
     this.rc = parent.rc
   }
 
-  string path() {
+  path(): string {
     return `${this.parent.path()}/wireless-points-bulk-create`
   }
 
@@ -20,7 +20,7 @@ class Index {
    * Operation: Create Multiple Wireless Points
    * Http post /restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points-bulk-create
    */
-  async post(CreateMultipleWirelessPointsRequest createMultipleWirelessPointsRequest): Promise<CreateMultipleWirelessPointsResponse> {
+  async post(createMultipleWirelessPointsRequest: CreateMultipleWirelessPointsRequest): Promise<CreateMultipleWirelessPointsResponse> {
     return this.rc.post(this.path(), createMultipleWirelessPointsRequest)
   }
 }

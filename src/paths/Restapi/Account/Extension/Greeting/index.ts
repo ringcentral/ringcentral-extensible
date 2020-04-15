@@ -1,3 +1,4 @@
+import CreateCustomUserGreetingRequest from '../../../../../definitions/CreateCustomUserGreetingRequest'
 import CustomUserGreetingInfo from '../../../../../definitions/CustomUserGreetingInfo'
 import Parent from '..'
 import RestClient from '../../../../..'
@@ -25,9 +26,9 @@ class Index {
    * Operation: Create Custom User Greeting
    * Http post /restapi/v1.0/account/{accountId}/extension/{extensionId}/greeting
    */
-  async post(CreateCustomUserGreetingRequest createCustomUserGreetingRequest): Promise<CustomUserGreetingInfo> {
+  async post(createCustomUserGreetingRequest: CreateCustomUserGreetingRequest): Promise<CustomUserGreetingInfo> {
     var multipartFormDataContent = Utils.GetMultipartFormDataContent(createCustomUserGreetingRequest)
-    return this.rc.Post(this.path(false), multipartFormDataContent)
+    return this.rc.post(this.path(false), multipartFormDataContent)
   }
 
   /**

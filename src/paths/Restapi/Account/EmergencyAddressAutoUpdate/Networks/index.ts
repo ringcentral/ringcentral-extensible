@@ -36,7 +36,7 @@ class Index {
    * Operation: Create Network
    * Http post /restapi/v1.0/account/{accountId}/emergency-address-auto-update/networks
    */
-  async post(CreateNetworkRequest createNetworkRequest): Promise<NetworkInfo> {
+  async post(createNetworkRequest: CreateNetworkRequest): Promise<NetworkInfo> {
     return this.rc.post(this.path(false), createNetworkRequest)
   }
 
@@ -56,7 +56,7 @@ class Index {
    * Operation: Update Network
    * Http put /restapi/v1.0/account/{accountId}/emergency-address-auto-update/networks/{networkId}
    */
-  async put(UpdateNetworkRequest updateNetworkRequest): Promise<string> {
+  async put(updateNetworkRequest: UpdateNetworkRequest): Promise<string> {
     if (!this.networkId || this.networkId === null) {
       throw new Error("networkId must not be undefined or null")
     }

@@ -12,7 +12,7 @@ class Index {
     this.rc = parent.rc
   }
 
-  string path() {
+  path(): string {
     return `${this.parent.path()}/search`
   }
 
@@ -20,7 +20,7 @@ class Index {
    * Operation: Search Company Directory Entries
    * Http post /restapi/v1.0/account/{accountId}/directory/entries/search
    */
-  async post(SearchDirectoryEntriesRequest searchDirectoryEntriesRequest): Promise<DirectoryResource> {
+  async post(searchDirectoryEntriesRequest: SearchDirectoryEntriesRequest): Promise<DirectoryResource> {
     return this.rc.post(this.path(), searchDirectoryEntriesRequest)
   }
 }

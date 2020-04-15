@@ -35,7 +35,7 @@ class Index {
    * Operation: Create Meetings
    * Http post /restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting
    */
-  async post(MeetingRequestResource meetingRequestResource): Promise<MeetingResponseResource> {
+  async post(meetingRequestResource: MeetingRequestResource): Promise<MeetingResponseResource> {
     return this.rc.post(this.path(false), meetingRequestResource)
   }
 
@@ -55,7 +55,7 @@ class Index {
    * Operation: Update Meeting
    * Http put /restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/{meetingId}
    */
-  async put(MeetingRequestResource meetingRequestResource): Promise<MeetingResponseResource> {
+  async put(meetingRequestResource: MeetingRequestResource): Promise<MeetingResponseResource> {
     if (!this.meetingId || this.meetingId === null) {
       throw new Error("meetingId must not be undefined or null")
     }

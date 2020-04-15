@@ -1,4 +1,5 @@
 import CompanyAnsweringRuleUpdate from '../../../../definitions/CompanyAnsweringRuleUpdate'
+import ListCompanyAnsweringRulesParameters from '../../../../definitions/ListCompanyAnsweringRulesParameters'
 import CompanyAnsweringRuleList from '../../../../definitions/CompanyAnsweringRuleList'
 import CompanyAnsweringRuleRequest from '../../../../definitions/CompanyAnsweringRuleRequest'
 import CompanyAnsweringRuleInfo from '../../../../definitions/CompanyAnsweringRuleInfo'
@@ -28,7 +29,7 @@ class Index {
    * Operation: Create Company Call Handling Rule
    * Http post /restapi/v1.0/account/{accountId}/answering-rule
    */
-  async post(CompanyAnsweringRuleRequest companyAnsweringRuleRequest): Promise<CompanyAnsweringRuleInfo> {
+  async post(companyAnsweringRuleRequest: CompanyAnsweringRuleRequest): Promise<CompanyAnsweringRuleInfo> {
     return this.rc.post(this.path(false), companyAnsweringRuleRequest)
   }
 
@@ -36,7 +37,7 @@ class Index {
    * Operation: Get Company Call Handling Rule List
    * Http get /restapi/v1.0/account/{accountId}/answering-rule
    */
-  async list(ListCompanyAnsweringRulesParameters queryParams = null): Promise<CompanyAnsweringRuleList> {
+  async list(queryParams?: ListCompanyAnsweringRulesParameters): Promise<CompanyAnsweringRuleList> {
     return this.rc.get(this.path(false), queryParams)
   }
 
@@ -56,7 +57,7 @@ class Index {
    * Operation: Update Company Call Handling Rule
    * Http put /restapi/v1.0/account/{accountId}/answering-rule/{ruleId}
    */
-  async put(CompanyAnsweringRuleUpdate companyAnsweringRuleUpdate): Promise<CompanyAnsweringRuleInfo> {
+  async put(companyAnsweringRuleUpdate: CompanyAnsweringRuleUpdate): Promise<CompanyAnsweringRuleInfo> {
     if (!this.ruleId || this.ruleId === null) {
       throw new Error("ruleId must not be undefined or null")
     }

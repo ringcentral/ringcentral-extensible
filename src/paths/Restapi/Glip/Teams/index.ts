@@ -1,6 +1,7 @@
 import GlipPatchTeamBody from '../../../../definitions/GlipPatchTeamBody'
 import GlipPostTeamBody from '../../../../definitions/GlipPostTeamBody'
 import GlipTeamInfo from '../../../../definitions/GlipTeamInfo'
+import ListGlipTeamsParameters from '../../../../definitions/ListGlipTeamsParameters'
 import GlipTeamsList from '../../../../definitions/GlipTeamsList'
 import Parent from '..'
 import RestClient from '../../../..'
@@ -28,7 +29,7 @@ class Index {
    * Operation: Get Teams
    * Http get /restapi/v1.0/glip/teams
    */
-  async list(ListGlipTeamsParameters queryParams = null): Promise<GlipTeamsList> {
+  async list(queryParams?: ListGlipTeamsParameters): Promise<GlipTeamsList> {
     return this.rc.get(this.path(false), queryParams)
   }
 
@@ -36,7 +37,7 @@ class Index {
    * Operation: Create Team
    * Http post /restapi/v1.0/glip/teams
    */
-  async post(GlipPostTeamBody glipPostTeamBody): Promise<GlipTeamInfo> {
+  async post(glipPostTeamBody: GlipPostTeamBody): Promise<GlipTeamInfo> {
     return this.rc.post(this.path(false), glipPostTeamBody)
   }
 
@@ -56,7 +57,7 @@ class Index {
    * Operation: Update Team
    * Http patch /restapi/v1.0/glip/teams/{chatId}
    */
-  async patch(GlipPatchTeamBody glipPatchTeamBody): Promise<GlipTeamInfo> {
+  async patch(glipPatchTeamBody: GlipPatchTeamBody): Promise<GlipTeamInfo> {
     if (!this.chatId || this.chatId === null) {
       throw new Error("chatId must not be undefined or null")
     }

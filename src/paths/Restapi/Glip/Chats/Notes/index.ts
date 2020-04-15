@@ -1,3 +1,4 @@
+import ListChatNotesParameters from '../../../../../definitions/ListChatNotesParameters'
 import GlipNotesInfo from '../../../../../definitions/GlipNotesInfo'
 import GlipNoteCreate from '../../../../../definitions/GlipNoteCreate'
 import GlipNoteInfo from '../../../../../definitions/GlipNoteInfo'
@@ -13,7 +14,7 @@ class Index {
     this.rc = parent.rc
   }
 
-  string path() {
+  path(): string {
     return `${this.parent.path()}/notes`
   }
 
@@ -21,7 +22,7 @@ class Index {
    * Operation: Create Note
    * Http post /restapi/v1.0/glip/chats/{chatId}/notes
    */
-  async post(GlipNoteCreate glipNoteCreate): Promise<GlipNoteInfo> {
+  async post(glipNoteCreate: GlipNoteCreate): Promise<GlipNoteInfo> {
     return this.rc.post(this.path(), glipNoteCreate)
   }
 
@@ -29,7 +30,7 @@ class Index {
    * Operation: Get Chat Notes
    * Http get /restapi/v1.0/glip/chats/{chatId}/notes
    */
-  async get(ListChatNotesParameters queryParams = null): Promise<GlipNotesInfo> {
+  async get(queryParams?: ListChatNotesParameters): Promise<GlipNotesInfo> {
     return this.rc.get(this.path(), queryParams)
   }
 }

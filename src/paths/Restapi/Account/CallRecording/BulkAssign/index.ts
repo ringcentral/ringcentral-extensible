@@ -11,7 +11,7 @@ class Index {
     this.rc = parent.rc
   }
 
-  string path() {
+  path(): string {
     return `${this.parent.path()}/bulk-assign`
   }
 
@@ -19,7 +19,7 @@ class Index {
    * Operation: Update Call Recording Extension List
    * Http post /restapi/v1.0/account/{accountId}/call-recording/bulk-assign
    */
-  async post(BulkAccountCallRecordingsResource bulkAccountCallRecordingsResource): Promise<string> {
+  async post(bulkAccountCallRecordingsResource: BulkAccountCallRecordingsResource): Promise<string> {
     return this.rc.post(this.path(), bulkAccountCallRecordingsResource)
   }
 }

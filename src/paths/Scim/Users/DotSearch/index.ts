@@ -12,7 +12,7 @@ class Index {
     this.rc = parent.rc
   }
 
-  string path() {
+  path(): string {
     return `${this.parent.path()}/.search`
   }
 
@@ -20,7 +20,7 @@ class Index {
    * Operation: Search/List Users
    * Http post /scim/v2/Users/.search
    */
-  async post(SearchRequest searchRequest): Promise<UserSearchResponse> {
+  async post(searchRequest: SearchRequest): Promise<UserSearchResponse> {
     return this.rc.post(this.path(), searchRequest)
   }
 }

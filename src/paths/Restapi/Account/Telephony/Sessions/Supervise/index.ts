@@ -12,7 +12,7 @@ class Index {
     this.rc = parent.rc
   }
 
-  string path() {
+  path(): string {
     return `${this.parent.path()}/supervise`
   }
 
@@ -20,7 +20,7 @@ class Index {
    * Operation: Supervise Call Session
    * Http post /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/supervise
    */
-  async post(SuperviseCallSessionRequest superviseCallSessionRequest): Promise<SuperviseCallSession> {
+  async post(superviseCallSessionRequest: SuperviseCallSessionRequest): Promise<SuperviseCallSession> {
     return this.rc.post(this.path(), superviseCallSessionRequest)
   }
 }

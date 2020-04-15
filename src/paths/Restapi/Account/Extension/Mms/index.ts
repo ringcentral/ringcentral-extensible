@@ -12,7 +12,7 @@ class Index {
     this.rc = parent.rc
   }
 
-  string path() {
+  path(): string {
     return `${this.parent.path()}/mms`
   }
 
@@ -20,9 +20,9 @@ class Index {
    * Operation: Create MMS Message
    * Http post /restapi/v1.0/account/{accountId}/extension/{extensionId}/mms
    */
-  async post(CreateSMSMessage createSMSMessage): Promise<GetMessageInfoResponse> {
+  async post(createSMSMessage: CreateSMSMessage): Promise<GetMessageInfoResponse> {
     var multipartFormDataContent = Utils.GetMultipartFormDataContent(createSMSMessage)
-    return this.rc.Post(this.path(), multipartFormDataContent)
+    return this.rc.post(this.path(), multipartFormDataContent)
   }
 }
 

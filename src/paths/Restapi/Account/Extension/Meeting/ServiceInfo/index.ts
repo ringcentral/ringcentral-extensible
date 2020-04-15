@@ -12,7 +12,7 @@ class Index {
     this.rc = parent.rc
   }
 
-  string path() {
+  path(): string {
     return `${this.parent.path()}/service-info`
   }
 
@@ -28,7 +28,7 @@ class Index {
    * Operation: Update Meeting Service Info
    * Http patch /restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/service-info
    */
-  async patch(MeetingServiceInfoRequest meetingServiceInfoRequest): Promise<MeetingServiceInfoResource> {
+  async patch(meetingServiceInfoRequest: MeetingServiceInfoRequest): Promise<MeetingServiceInfoResource> {
     return this.rc.patch(this.path(), meetingServiceInfoRequest)
   }
 }

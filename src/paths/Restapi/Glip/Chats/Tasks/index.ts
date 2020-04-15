@@ -1,5 +1,6 @@
 import GlipCreateTask from '../../../../../definitions/GlipCreateTask'
 import GlipTaskInfo from '../../../../../definitions/GlipTaskInfo'
+import ListChatTasksParameters from '../../../../../definitions/ListChatTasksParameters'
 import GlipTaskList from '../../../../../definitions/GlipTaskList'
 import Parent from '..'
 import RestClient from '../../../../..'
@@ -13,7 +14,7 @@ class Index {
     this.rc = parent.rc
   }
 
-  string path() {
+  path(): string {
     return `${this.parent.path()}/tasks`
   }
 
@@ -21,7 +22,7 @@ class Index {
    * Operation: Get Chat Tasks
    * Http get /restapi/v1.0/glip/chats/{chatId}/tasks
    */
-  async get(ListChatTasksParameters queryParams = null): Promise<GlipTaskList> {
+  async get(queryParams?: ListChatTasksParameters): Promise<GlipTaskList> {
     return this.rc.get(this.path(), queryParams)
   }
 
@@ -29,7 +30,7 @@ class Index {
    * Operation: Create Task
    * Http post /restapi/v1.0/glip/chats/{chatId}/tasks
    */
-  async post(GlipCreateTask glipCreateTask): Promise<GlipTaskInfo> {
+  async post(glipCreateTask: GlipCreateTask): Promise<GlipTaskInfo> {
     return this.rc.post(this.path(), glipCreateTask)
   }
 }

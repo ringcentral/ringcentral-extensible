@@ -12,7 +12,7 @@ class Index {
     this.rc = parent.rc
   }
 
-  string path() {
+  path(): string {
     return `${this.parent.path()}/caller-blocking`
   }
 
@@ -28,7 +28,7 @@ class Index {
    * Operation: Update Caller Blocking Settings
    * Http put /restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking
    */
-  async put(CallerBlockingSettingsUpdate callerBlockingSettingsUpdate): Promise<CallerBlockingSettings> {
+  async put(callerBlockingSettingsUpdate: CallerBlockingSettingsUpdate): Promise<CallerBlockingSettings> {
     return this.rc.put(this.path(), callerBlockingSettingsUpdate)
   }
 }

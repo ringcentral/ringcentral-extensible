@@ -1,3 +1,4 @@
+import CreateGlipCardParameters from '../../../../definitions/CreateGlipCardParameters'
 import GlipMessageAttachmentInfoRequest from '../../../../definitions/GlipMessageAttachmentInfoRequest'
 import GlipMessageAttachmentInfo from '../../../../definitions/GlipMessageAttachmentInfo'
 import Parent from '..'
@@ -26,7 +27,7 @@ class Index {
    * Operation: Create Card
    * Http post /restapi/v1.0/glip/cards
    */
-  async post(GlipMessageAttachmentInfoRequest glipMessageAttachmentInfoRequest, CreateGlipCardParameters queryParams = null): Promise<GlipMessageAttachmentInfo> {
+  async post(glipMessageAttachmentInfoRequest: GlipMessageAttachmentInfoRequest, queryParams?: CreateGlipCardParameters): Promise<GlipMessageAttachmentInfo> {
     return this.rc.post(this.path(false), glipMessageAttachmentInfoRequest, queryParams)
   }
 
@@ -46,7 +47,7 @@ class Index {
    * Operation: Update Card
    * Http put /restapi/v1.0/glip/cards/{cardId}
    */
-  async put(GlipMessageAttachmentInfoRequest glipMessageAttachmentInfoRequest): Promise<string> {
+  async put(glipMessageAttachmentInfoRequest: GlipMessageAttachmentInfoRequest): Promise<string> {
     if (!this.cardId || this.cardId === null) {
       throw new Error("cardId must not be undefined or null")
     }

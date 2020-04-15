@@ -1,3 +1,4 @@
+import UpdateSubscriptionParameters from '../../../definitions/UpdateSubscriptionParameters'
 import ModifySubscriptionRequest from '../../../definitions/ModifySubscriptionRequest'
 import CreateSubscriptionRequest from '../../../definitions/CreateSubscriptionRequest'
 import SubscriptionInfo from '../../../definitions/SubscriptionInfo'
@@ -36,7 +37,7 @@ class Index {
    * Operation: Create Subscription
    * Http post /restapi/v1.0/subscription
    */
-  async post(CreateSubscriptionRequest createSubscriptionRequest): Promise<SubscriptionInfo> {
+  async post(createSubscriptionRequest: CreateSubscriptionRequest): Promise<SubscriptionInfo> {
     return this.rc.post(this.path(false), createSubscriptionRequest)
   }
 
@@ -56,7 +57,7 @@ class Index {
    * Operation: Renew Subscription / Update Event Filters
    * Http put /restapi/v1.0/subscription/{subscriptionId}
    */
-  async put(ModifySubscriptionRequest modifySubscriptionRequest, UpdateSubscriptionParameters queryParams = null): Promise<SubscriptionInfo> {
+  async put(modifySubscriptionRequest: ModifySubscriptionRequest, queryParams?: UpdateSubscriptionParameters): Promise<SubscriptionInfo> {
     if (!this.subscriptionId || this.subscriptionId === null) {
       throw new Error("subscriptionId must not be undefined or null")
     }

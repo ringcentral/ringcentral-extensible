@@ -11,7 +11,7 @@ class Index {
     this.rc = parent.rc
   }
 
-  string path() {
+  path(): string {
     return `${this.parent.path()}/bulk-assign`
   }
 
@@ -19,7 +19,7 @@ class Index {
    * Operation: Assign Multiple Department Members
    * Http post /restapi/v1.0/account/{accountId}/department/bulk-assign
    */
-  async post(DepartmentBulkAssignResource departmentBulkAssignResource): Promise<string> {
+  async post(departmentBulkAssignResource: DepartmentBulkAssignResource): Promise<string> {
     return this.rc.post(this.path(), departmentBulkAssignResource)
   }
 }

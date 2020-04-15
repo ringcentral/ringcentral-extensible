@@ -11,7 +11,7 @@ class Index {
     this.rc = parent.rc
   }
 
-  string path() {
+  path(): string {
     return `${this.parent.path()}/call-queues`
   }
 
@@ -19,7 +19,7 @@ class Index {
    * Operation: Update User Call Queues
    * Http put /restapi/v1.0/account/{accountId}/extension/{extensionId}/call-queues
    */
-  async put(UserCallQueues userCallQueues): Promise<UserCallQueues> {
+  async put(userCallQueues: UserCallQueues): Promise<UserCallQueues> {
     return this.rc.put(this.path(), userCallQueues)
   }
 }

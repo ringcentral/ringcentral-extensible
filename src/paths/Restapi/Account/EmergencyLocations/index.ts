@@ -1,4 +1,5 @@
 import EmergencyLocationInfo from '../../../../definitions/EmergencyLocationInfo'
+import ListEmergencyLocationsParameters from '../../../../definitions/ListEmergencyLocationsParameters'
 import EmergencyLocationList from '../../../../definitions/EmergencyLocationList'
 import EmergencyLocationInfoRequest from '../../../../definitions/EmergencyLocationInfoRequest'
 import Parent from '..'
@@ -27,7 +28,7 @@ class Index {
    * Operation: Add Emergency Location
    * Http post /restapi/v1.0/account/{accountId}/emergency-locations
    */
-  async post(EmergencyLocationInfoRequest emergencyLocationInfoRequest): Promise<string> {
+  async post(emergencyLocationInfoRequest: EmergencyLocationInfoRequest): Promise<string> {
     return this.rc.post(this.path(false), emergencyLocationInfoRequest)
   }
 
@@ -35,7 +36,7 @@ class Index {
    * Operation: Get Emergency Location List
    * Http get /restapi/v1.0/account/{accountId}/emergency-locations
    */
-  async list(ListEmergencyLocationsParameters queryParams = null): Promise<EmergencyLocationList> {
+  async list(queryParams?: ListEmergencyLocationsParameters): Promise<EmergencyLocationList> {
     return this.rc.get(this.path(false), queryParams)
   }
 
@@ -55,7 +56,7 @@ class Index {
    * Operation: Update Emergency Location
    * Http put /restapi/v1.0/account/{accountId}/emergency-locations/{locationId}
    */
-  async put(EmergencyLocationInfoRequest emergencyLocationInfoRequest): Promise<EmergencyLocationInfo> {
+  async put(emergencyLocationInfoRequest: EmergencyLocationInfoRequest): Promise<EmergencyLocationInfo> {
     if (!this.locationId || this.locationId === null) {
       throw new Error("locationId must not be undefined or null")
     }

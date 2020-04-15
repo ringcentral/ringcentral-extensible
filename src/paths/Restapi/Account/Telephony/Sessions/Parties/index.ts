@@ -38,7 +38,7 @@ class Index {
    * Operation: Update Call Party
    * Http patch /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}
    */
-  async patch(PartyUpdateRequest partyUpdateRequest): Promise<CallParty> {
+  async patch(partyUpdateRequest: PartyUpdateRequest): Promise<CallParty> {
     if (!this.partyId || this.partyId === null) {
       throw new Error("partyId must not be undefined or null")
     }

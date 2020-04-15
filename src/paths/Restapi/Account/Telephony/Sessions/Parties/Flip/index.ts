@@ -11,7 +11,7 @@ class Index {
     this.rc = parent.rc
   }
 
-  string path() {
+  path(): string {
     return `${this.parent.path()}/flip`
   }
 
@@ -19,7 +19,7 @@ class Index {
    * Operation: Call Flip on Party
    * Http post /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/flip
    */
-  async post(CallPartyFlip callPartyFlip): Promise<string> {
+  async post(callPartyFlip: CallPartyFlip): Promise<string> {
     return this.rc.post(this.path(), callPartyFlip)
   }
 }

@@ -1,5 +1,6 @@
 import GlipCreateGroup from '../../../../definitions/GlipCreateGroup'
 import GlipGroupInfo from '../../../../definitions/GlipGroupInfo'
+import ListGlipGroupsParameters from '../../../../definitions/ListGlipGroupsParameters'
 import GlipGroupList from '../../../../definitions/GlipGroupList'
 import Parent from '..'
 import RestClient from '../../../..'
@@ -27,7 +28,7 @@ class Index {
    * Operation: Get User Groups
    * Http get /restapi/v1.0/glip/groups
    */
-  async list(ListGlipGroupsParameters queryParams = null): Promise<GlipGroupList> {
+  async list(queryParams?: ListGlipGroupsParameters): Promise<GlipGroupList> {
     return this.rc.get(this.path(false), queryParams)
   }
 
@@ -35,7 +36,7 @@ class Index {
    * Operation: Create Group
    * Http post /restapi/v1.0/glip/groups
    */
-  async post(GlipCreateGroup glipCreateGroup): Promise<GlipGroupInfo> {
+  async post(glipCreateGroup: GlipCreateGroup): Promise<GlipGroupInfo> {
     return this.rc.post(this.path(false), glipCreateGroup)
   }
 

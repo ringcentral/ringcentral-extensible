@@ -1,4 +1,5 @@
 import GetCountryInfoDictionaryResponse from '../../../../definitions/GetCountryInfoDictionaryResponse'
+import ListCountriesParameters from '../../../../definitions/ListCountriesParameters'
 import GetCountryListResponse from '../../../../definitions/GetCountryListResponse'
 import Parent from '..'
 import RestClient from '../../../..'
@@ -26,7 +27,7 @@ class Index {
    * Operation: Get Country List
    * Http get /restapi/v1.0/dictionary/country
    */
-  async list(ListCountriesParameters queryParams = null): Promise<GetCountryListResponse> {
+  async list(queryParams?: ListCountriesParameters): Promise<GetCountryListResponse> {
     return this.rc.get(this.path(false), queryParams)
   }
 

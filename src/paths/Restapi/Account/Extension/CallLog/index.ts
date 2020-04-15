@@ -1,4 +1,7 @@
+import ReadUserCallRecordParameters from '../../../../../definitions/ReadUserCallRecordParameters'
 import UserCallLogRecord from '../../../../../definitions/UserCallLogRecord'
+import DeleteUserCallLogParameters from '../../../../../definitions/DeleteUserCallLogParameters'
+import ReadUserCallLogParameters from '../../../../../definitions/ReadUserCallLogParameters'
 import UserCallLogResponse from '../../../../../definitions/UserCallLogResponse'
 import Parent from '..'
 import RestClient from '../../../../..'
@@ -26,7 +29,7 @@ class Index {
    * Operation: Get User Call Log Records
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log
    */
-  async list(ReadUserCallLogParameters queryParams = null): Promise<UserCallLogResponse> {
+  async list(queryParams?: ReadUserCallLogParameters): Promise<UserCallLogResponse> {
     return this.rc.get(this.path(false), queryParams)
   }
 
@@ -34,7 +37,7 @@ class Index {
    * Operation: Delete User Call Log
    * Http delete /restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log
    */
-  async delete(DeleteUserCallLogParameters queryParams = null): Promise<string> {
+  async delete(queryParams?: DeleteUserCallLogParameters): Promise<string> {
     return this.rc.delete(this.path(false), queryParams)
   }
 
@@ -42,7 +45,7 @@ class Index {
    * Operation: Get User Call Record
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log/{callRecordId}
    */
-  async get(ReadUserCallRecordParameters queryParams = null): Promise<UserCallLogRecord> {
+  async get(queryParams?: ReadUserCallRecordParameters): Promise<UserCallLogRecord> {
     if (!this.callRecordId || this.callRecordId === null) {
       throw new Error("callRecordId must not be undefined or null")
     }

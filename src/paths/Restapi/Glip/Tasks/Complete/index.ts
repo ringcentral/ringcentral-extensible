@@ -11,7 +11,7 @@ class Index {
     this.rc = parent.rc
   }
 
-  string path() {
+  path(): string {
     return `${this.parent.path()}/complete`
   }
 
@@ -19,7 +19,7 @@ class Index {
    * Operation: Complete Task
    * Http post /restapi/v1.0/glip/tasks/{taskId}/complete
    */
-  async post(GlipCompleteTask glipCompleteTask): Promise<string> {
+  async post(glipCompleteTask: GlipCompleteTask): Promise<string> {
     return this.rc.post(this.path(), glipCompleteTask)
   }
 }

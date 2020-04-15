@@ -1,4 +1,3 @@
-import byte[] from '../../../../../definitions/byte[]'
 import Parent from '..'
 import RestClient from '../../../../..'
 
@@ -25,7 +24,7 @@ class Index {
    * Operation: Get Data Export Task Dataset
    * Http get /restapi/v1.0/glip/data-export/{taskId}/datasets/{datasetId}
    */
-  async get(): Promise<byte[]> {
+  async get(): Promise<Buffer> {
     if (!this.datasetId || this.datasetId === null) {
       throw new Error("datasetId must not be undefined or null")
     }

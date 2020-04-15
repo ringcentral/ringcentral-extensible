@@ -12,7 +12,7 @@ class Index {
     this.rc = parent.rc
   }
 
-  string path() {
+  path(): string {
     return `${this.parent.path()}/notification-settings`
   }
 
@@ -28,7 +28,7 @@ class Index {
    * Operation: Update Notification Settings
    * Http put /restapi/v1.0/account/{accountId}/extension/{extensionId}/notification-settings
    */
-  async put(NotificationSettingsUpdateRequest notificationSettingsUpdateRequest): Promise<NotificationSettings> {
+  async put(notificationSettingsUpdateRequest: NotificationSettingsUpdateRequest): Promise<NotificationSettings> {
     return this.rc.put(this.path(), notificationSettingsUpdateRequest)
   }
 }

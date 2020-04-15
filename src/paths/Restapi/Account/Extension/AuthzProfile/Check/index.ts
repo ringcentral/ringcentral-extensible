@@ -1,3 +1,4 @@
+import CheckUserPermissionParameters from '../../../../../../definitions/CheckUserPermissionParameters'
 import AuthProfileCheckResource from '../../../../../../definitions/AuthProfileCheckResource'
 import Parent from '..'
 import RestClient from '../../../../../..'
@@ -11,7 +12,7 @@ class Index {
     this.rc = parent.rc
   }
 
-  string path() {
+  path(): string {
     return `${this.parent.path()}/check`
   }
 
@@ -19,7 +20,7 @@ class Index {
    * Operation: Check User Permission
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/authz-profile/check
    */
-  async get(CheckUserPermissionParameters queryParams = null): Promise<AuthProfileCheckResource> {
+  async get(queryParams?: CheckUserPermissionParameters): Promise<AuthProfileCheckResource> {
     return this.rc.get(this.path(), queryParams)
   }
 }

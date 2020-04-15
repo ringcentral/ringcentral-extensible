@@ -12,7 +12,7 @@ class Index {
     this.rc = parent.rc
   }
 
-  string path() {
+  path(): string {
     return `${this.parent.path()}/bulk-assign`
   }
 
@@ -20,7 +20,7 @@ class Index {
    * Operation: Edit Group Members
    * Http post /restapi/v1.0/glip/groups/{groupId}/bulk-assign
    */
-  async post(EditGroupRequest editGroupRequest): Promise<GlipGroupInfo> {
+  async post(editGroupRequest: EditGroupRequest): Promise<GlipGroupInfo> {
     return this.rc.post(this.path(), editGroupRequest)
   }
 }

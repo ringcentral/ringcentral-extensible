@@ -1,3 +1,4 @@
+import ListCallMonitoringGroupsParameters from '../../../../definitions/ListCallMonitoringGroupsParameters'
 import CallMonitoringGroups from '../../../../definitions/CallMonitoringGroups'
 import CreateCallMonitoringGroupRequest from '../../../../definitions/CreateCallMonitoringGroupRequest'
 import CallMonitoringGroup from '../../../../definitions/CallMonitoringGroup'
@@ -27,7 +28,7 @@ class Index {
    * Operation: Create Call Monitoring Group
    * Http post /restapi/v1.0/account/{accountId}/call-monitoring-groups
    */
-  async post(CreateCallMonitoringGroupRequest createCallMonitoringGroupRequest): Promise<CallMonitoringGroup> {
+  async post(createCallMonitoringGroupRequest: CreateCallMonitoringGroupRequest): Promise<CallMonitoringGroup> {
     return this.rc.post(this.path(false), createCallMonitoringGroupRequest)
   }
 
@@ -35,7 +36,7 @@ class Index {
    * Operation: Get Call Monitoring Groups List
    * Http get /restapi/v1.0/account/{accountId}/call-monitoring-groups
    */
-  async get(ListCallMonitoringGroupsParameters queryParams = null): Promise<CallMonitoringGroups> {
+  async get(queryParams?: ListCallMonitoringGroupsParameters): Promise<CallMonitoringGroups> {
     return this.rc.get(this.path(false), queryParams)
   }
 
@@ -43,7 +44,7 @@ class Index {
    * Operation: Updates Call Monitoring Group
    * Http put /restapi/v1.0/account/{accountId}/call-monitoring-groups/{groupId}
    */
-  async put(CreateCallMonitoringGroupRequest createCallMonitoringGroupRequest): Promise<CallMonitoringGroup> {
+  async put(createCallMonitoringGroupRequest: CreateCallMonitoringGroupRequest): Promise<CallMonitoringGroup> {
     if (!this.groupId || this.groupId === null) {
       throw new Error("groupId must not be undefined or null")
     }

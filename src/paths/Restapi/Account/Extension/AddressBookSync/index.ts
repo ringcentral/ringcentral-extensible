@@ -1,3 +1,4 @@
+import SyncAddressBookParameters from '../../../../../definitions/SyncAddressBookParameters'
 import AddressBookSync from '../../../../../definitions/AddressBookSync'
 import Parent from '..'
 import RestClient from '../../../../..'
@@ -11,7 +12,7 @@ class Index {
     this.rc = parent.rc
   }
 
-  string path() {
+  path(): string {
     return `${this.parent.path()}/address-book-sync`
   }
 
@@ -19,7 +20,7 @@ class Index {
    * Operation: Address Book Synchronization
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book-sync
    */
-  async get(SyncAddressBookParameters queryParams = null): Promise<AddressBookSync> {
+  async get(queryParams?: SyncAddressBookParameters): Promise<AddressBookSync> {
     return this.rc.get(this.path(), queryParams)
   }
 }

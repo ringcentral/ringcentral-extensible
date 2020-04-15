@@ -11,7 +11,7 @@ class Index {
     this.rc = parent.rc
   }
 
-  string path() {
+  path(): string {
     return `${this.parent.path()}/bulk-assign`
   }
 
@@ -19,7 +19,7 @@ class Index {
    * Operation: Update Call Monitoring Group List
    * Http post /restapi/v1.0/account/{accountId}/call-monitoring-groups/{groupId}/bulk-assign
    */
-  async post(CallMonitoringBulkAssign callMonitoringBulkAssign): Promise<string> {
+  async post(callMonitoringBulkAssign: CallMonitoringBulkAssign): Promise<string> {
     return this.rc.post(this.path(), callMonitoringBulkAssign)
   }
 }

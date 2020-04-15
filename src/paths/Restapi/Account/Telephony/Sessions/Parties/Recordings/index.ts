@@ -1,3 +1,4 @@
+import PauseResumeCallRecordingParameters from '../../../../../../../definitions/PauseResumeCallRecordingParameters'
 import CallRecordingUpdate from '../../../../../../../definitions/CallRecordingUpdate'
 import CallRecording from '../../../../../../../definitions/CallRecording'
 import Parent from '..'
@@ -34,7 +35,7 @@ class Index {
    * Operation: Pause/Resume Recording
    * Http patch /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/recordings/{recordingId}
    */
-  async patch(CallRecordingUpdate callRecordingUpdate, PauseResumeCallRecordingParameters queryParams = null): Promise<CallRecording> {
+  async patch(callRecordingUpdate: CallRecordingUpdate, queryParams?: PauseResumeCallRecordingParameters): Promise<CallRecording> {
     if (!this.recordingId || this.recordingId === null) {
       throw new Error("recordingId must not be undefined or null")
     }

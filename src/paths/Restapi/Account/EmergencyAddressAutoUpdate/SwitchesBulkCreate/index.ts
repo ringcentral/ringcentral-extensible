@@ -12,7 +12,7 @@ class Index {
     this.rc = parent.rc
   }
 
-  string path() {
+  path(): string {
     return `${this.parent.path()}/switches-bulk-create`
   }
 
@@ -20,7 +20,7 @@ class Index {
    * Operation: Create Multiple Switches
    * Http post /restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches-bulk-create
    */
-  async post(CreateMultipleSwitchesRequest createMultipleSwitchesRequest): Promise<CreateMultipleSwitchesResponse> {
+  async post(createMultipleSwitchesRequest: CreateMultipleSwitchesRequest): Promise<CreateMultipleSwitchesResponse> {
     return this.rc.post(this.path(), createMultipleSwitchesRequest)
   }
 }
