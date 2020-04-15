@@ -36,15 +36,24 @@ class RestClient {
   }
 
   async request(httpMethod: Method, endpoint: string, content?: {}, queryParams?: {}):  Promise<any>{
-    const r = await this.httpClient.request({
+    const config = {
       method: httpMethod,
       url: endpoint,
       data: content,
       params: queryParams,
-      headers: {
+    }
+    if(endpoint.startsWith('/restapi/oauth/')) { // basic token
+      config['auth'] = {
+        username: this.clientId,
+        password: this.clientSecret
+      }
+      config.data = qs.stringify(config.data)
+    } else { // bearer token
+      config['headers'] = {
         Authorization: `Bearer ${this.token.access_token}`
       }
-    })
+    }
+    const r = await this.httpClient.request(config)
     if(r.status < 200 || r.status > 299) {
       throw new RestException(r)
     }
@@ -83,20 +92,13 @@ class RestClient {
       getTokenRequest.code = arg1
       getTokenRequest.redirect_uri = arg2
     }
-    const r = await this.httpClient.post('/restapi/oauth/token', qs.stringify(getTokenRequest), {
-      auth: {
-        username: this.clientId,
-        password: this.clientSecret
-      }
-    })
-    this.token = r.data
+    this.token = await this.post('/restapi/oauth/token', getTokenRequest)
     return this.token
   }
 
   async refresh(refreshToken?: string): Promise<TokenInfo> {
     const tokenToRefresh = refreshToken ?? this.token?.refresh_token
-    if (!tokenToRefresh)
-    {
+    if (!tokenToRefresh) {
         return null
     }
     const getTokenRequest = new GetTokenRequest()
@@ -110,14 +112,7 @@ class RestClient {
       return
     }
     tokenToRevoke = tokenToRevoke ?? this.token.access_token ?? this.token.refresh_token
-    await this.httpClient.post('/restapi/oauth/revoke', qs.stringify({
-      token: tokenToRevoke
-    }), {
-      auth: {
-        username: this.clientId,
-        password: this.clientSecret
-      }
-    })
+    await this.post('/restapi/oauth/revoke', { token: tokenToRevoke })
     this.token = undefined
   }
 
