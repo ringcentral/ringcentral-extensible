@@ -23,7 +23,7 @@ class Index {
    */
   async post(createFaxMessageRequest: CreateFaxMessageRequest): Promise<FaxResponse> {
     var formData = Utils.getFormData(createFaxMessageRequest)
-    return this.rc.post(this.path(), formData)
+    return this.rc.post(this.path(), formData, undefined, formData.getHeaders())
   }
 }
 

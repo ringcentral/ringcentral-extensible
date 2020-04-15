@@ -29,7 +29,7 @@ class Index {
    */
   async post(createCustomUserGreetingRequest: CreateCustomUserGreetingRequest): Promise<CustomUserGreetingInfo> {
     var formData = Utils.getFormData(createCustomUserGreetingRequest)
-    return this.rc.post(this.path(false), formData)
+    return this.rc.post(this.path(false), formData, undefined, formData.getHeaders())
   }
 
   /**

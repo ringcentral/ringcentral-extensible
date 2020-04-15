@@ -37,7 +37,7 @@ class Index {
    */
   async post(createUserProfileImageRequest: CreateUserProfileImageRequest): Promise<string> {
     var formData = Utils.getFormData(createUserProfileImageRequest)
-    return this.rc.post(this.path(false), formData)
+    return this.rc.post(this.path(false), formData, undefined, formData.getHeaders())
   }
 
   /**
@@ -46,7 +46,7 @@ class Index {
    */
   async put(updateUserProfileImageRequest: UpdateUserProfileImageRequest): Promise<string> {
     var formData = Utils.getFormData(updateUserProfileImageRequest)
-    return this.rc.post(this.path(false), formData)
+    return this.rc.post(this.path(false), formData, undefined, formData.getHeaders())
   }
 
   /**

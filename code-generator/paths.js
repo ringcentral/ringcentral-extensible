@@ -218,7 +218,7 @@ class Index {
       if (multipart) {
         code += `
     var formData = Utils.getFormData(${bodyParam})
-    return this.rc.post(this.path(${(!withParam && paramName) ? 'false' : ''}), formData${queryParams.length > 0 ? ', queryParams' : ''})
+    return this.rc.post(this.path(${(!withParam && paramName) ? 'false' : ''}), formData, ${queryParams.length > 0 ? 'queryParams' : 'undefined'}, formData.getHeaders())
   }`
       } else {
         code += `

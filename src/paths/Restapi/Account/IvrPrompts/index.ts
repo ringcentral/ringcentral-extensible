@@ -31,7 +31,7 @@ class Index {
    */
   async post(createIVRPromptRequest: CreateIvrPromptRequest): Promise<PromptInfo> {
     var formData = Utils.getFormData(createIVRPromptRequest)
-    return this.rc.post(this.path(false), formData)
+    return this.rc.post(this.path(false), formData, undefined, formData.getHeaders())
   }
 
   /**

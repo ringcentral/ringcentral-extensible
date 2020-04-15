@@ -23,7 +23,7 @@ class Index {
    */
   async post(createSMSMessage: CreateSMSMessage): Promise<GetMessageInfoResponse> {
     var formData = Utils.getFormData(createSMSMessage)
-    return this.rc.post(this.path(), formData)
+    return this.rc.post(this.path(), formData, undefined, formData.getHeaders())
   }
 }
 
