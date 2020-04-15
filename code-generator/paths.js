@@ -195,9 +195,9 @@ class Index {
         if (body) {
           bodyClass = R.last(body.schema.$ref.split('/'))
           bodyParam = lowerCaseFirst(bodyClass)
-          definitionsUsed.add(bodyClass)
           // bodyClass = 'RingCentral.' + bodyClass
         }
+        definitionsUsed.add(bodyClass)
       }
 
       const queryParams = (operation.detail.parameters || []).filter(p => p.in === 'query')
@@ -230,12 +230,12 @@ class Index {
     var dict = new System.Collections.Generic.Dictionary<string, string>()
     RingCentral.Utils.GetPairs(${bodyParam})
       .ToList().ForEach(t => dict.Add(t.name, t.value.ToString()))
-    return this.rc.Post(this.path(${(!withParam && paramName) ? 'false' : ''}), new FormUrlEncodedContent(dict)${queryParams.length > 0 ? ', queryParams' : ''})
+    return this.rc.post(this.path(${(!withParam && paramName) ? 'false' : ''}), new FormUrlEncodedContent(dict)${queryParams.length > 0 ? ', queryParams' : ''})
   }`
       } else if (multipart) {
         code += `
     var multipartFormDataContent = Utils.GetMultipartFormDataContent(${bodyParam})
-    return this.rc.Post(this.path(${(!withParam && paramName) ? 'false' : ''}), multipartFormDataContent${queryParams.length > 0 ? ', queryParams' : ''})
+    return this.rc.post(this.path(${(!withParam && paramName) ? 'false' : ''}), multipartFormDataContent${queryParams.length > 0 ? ', queryParams' : ''})
   }`
       } else {
         code += `
