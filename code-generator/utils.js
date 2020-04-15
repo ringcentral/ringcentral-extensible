@@ -19,7 +19,7 @@ export const getResponseType = responses => {
   let responseType
   if (responseSchema) {
     if (responseSchema.type === 'string' && responseSchema.format === 'binary') {
-      responseType = 'byte[]'
+      responseType = 'Buffer'
     } else if (responseSchema.$ref) {
       responseType = R.last(responseSchema.$ref.split('/'))
     }
