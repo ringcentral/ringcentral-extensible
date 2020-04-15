@@ -121,7 +121,7 @@ class Index {
     } else {
       code += `
 
-  string path() {
+  path(): string {
     return ${routes.length > 1 ? '`$' + '{this.parent.path()}' : '`'}/${name.replace('dotSearch', '.search')}\`
   }`
     }
