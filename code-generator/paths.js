@@ -163,7 +163,7 @@ class Index {
       let responseType = getResponseType(responses)
       if (!responseType) {
         responseType = 'string'
-      } else {
+      } else if (responseType !== 'Buffer') {
         definitionsUsed.add(responseType)
       }
 
