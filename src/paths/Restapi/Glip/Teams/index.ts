@@ -18,7 +18,7 @@ class Index {
   }
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.chatId != null) {
+    if (withParameter && this.chatId !== null) {
       return `${this.parent.path()}/teams/${this.chatId}`
     }
 
@@ -46,7 +46,7 @@ class Index {
    * Http get /restapi/v1.0/glip/teams/{chatId}
    */
   async get(): Promise<GlipTeamInfo> {
-    if (!this.chatId || this.chatId === null) {
+    if (this.chatId === undefined || this.chatId === null) {
       throw new Error("chatId must not be undefined or null")
     }
 
@@ -58,7 +58,7 @@ class Index {
    * Http patch /restapi/v1.0/glip/teams/{chatId}
    */
   async patch(glipPatchTeamBody: GlipPatchTeamBody): Promise<GlipTeamInfo> {
-    if (!this.chatId || this.chatId === null) {
+    if (this.chatId === undefined || this.chatId === null) {
       throw new Error("chatId must not be undefined or null")
     }
 
@@ -70,7 +70,7 @@ class Index {
    * Http delete /restapi/v1.0/glip/teams/{chatId}
    */
   async delete(): Promise<string> {
-    if (!this.chatId || this.chatId === null) {
+    if (this.chatId === undefined || this.chatId === null) {
       throw new Error("chatId must not be undefined or null")
     }
 

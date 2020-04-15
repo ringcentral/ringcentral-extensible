@@ -16,7 +16,7 @@ class Index {
   }
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.entryId != null) {
+    if (withParameter && this.entryId !== null) {
       return `${this.parent.path()}/entries/${this.entryId}`
     }
 
@@ -36,7 +36,7 @@ class Index {
    * Http get /restapi/v1.0/account/{accountId}/directory/entries/{entryId}
    */
   async get(): Promise<ContactResource> {
-    if (!this.entryId || this.entryId === null) {
+    if (this.entryId === undefined || this.entryId === null) {
       throw new Error("entryId must not be undefined or null")
     }
 

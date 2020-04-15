@@ -2,6 +2,7 @@ import UpdateIVRPromptRequest from '../../../../definitions/UpdateIVRPromptReque
 import IVRPrompts from '../../../../definitions/IVRPrompts'
 import CreateIvrPromptRequest from '../../../../definitions/CreateIvrPromptRequest'
 import PromptInfo from '../../../../definitions/PromptInfo'
+import Utils from '../../../../Utils'
 import Parent from '..'
 import RestClient from '../../../..'
 
@@ -17,7 +18,7 @@ class Index {
   }
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.promptId != null) {
+    if (withParameter && this.promptId !== null) {
       return `${this.parent.path()}/ivr-prompts/${this.promptId}`
     }
 
@@ -29,8 +30,8 @@ class Index {
    * Http post /restapi/v1.0/account/{accountId}/ivr-prompts
    */
   async post(createIVRPromptRequest: CreateIvrPromptRequest): Promise<PromptInfo> {
-    var multipartFormDataContent = Utils.GetMultipartFormDataContent(createIVRPromptRequest)
-    return this.rc.post(this.path(false), multipartFormDataContent)
+    var formData = Utils.getFormData(createIVRPromptRequest)
+    return this.rc.post(this.path(false), formData)
   }
 
   /**
@@ -46,7 +47,7 @@ class Index {
    * Http get /restapi/v1.0/account/{accountId}/ivr-prompts/{promptId}
    */
   async get(): Promise<PromptInfo> {
-    if (!this.promptId || this.promptId === null) {
+    if (this.promptId === undefined || this.promptId === null) {
       throw new Error("promptId must not be undefined or null")
     }
 
@@ -58,7 +59,7 @@ class Index {
    * Http delete /restapi/v1.0/account/{accountId}/ivr-prompts/{promptId}
    */
   async delete(): Promise<string> {
-    if (!this.promptId || this.promptId === null) {
+    if (this.promptId === undefined || this.promptId === null) {
       throw new Error("promptId must not be undefined or null")
     }
 
@@ -70,7 +71,7 @@ class Index {
    * Http put /restapi/v1.0/account/{accountId}/ivr-prompts/{promptId}
    */
   async put(updateIVRPromptRequest: UpdateIVRPromptRequest): Promise<PromptInfo> {
-    if (!this.promptId || this.promptId === null) {
+    if (this.promptId === undefined || this.promptId === null) {
       throw new Error("promptId must not be undefined or null")
     }
 

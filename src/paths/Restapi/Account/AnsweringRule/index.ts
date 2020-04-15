@@ -18,7 +18,7 @@ class Index {
   }
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.ruleId != null) {
+    if (withParameter && this.ruleId !== null) {
       return `${this.parent.path()}/answering-rule/${this.ruleId}`
     }
 
@@ -46,7 +46,7 @@ class Index {
    * Http get /restapi/v1.0/account/{accountId}/answering-rule/{ruleId}
    */
   async get(): Promise<CompanyAnsweringRuleInfo> {
-    if (!this.ruleId || this.ruleId === null) {
+    if (this.ruleId === undefined || this.ruleId === null) {
       throw new Error("ruleId must not be undefined or null")
     }
 
@@ -58,7 +58,7 @@ class Index {
    * Http put /restapi/v1.0/account/{accountId}/answering-rule/{ruleId}
    */
   async put(companyAnsweringRuleUpdate: CompanyAnsweringRuleUpdate): Promise<CompanyAnsweringRuleInfo> {
-    if (!this.ruleId || this.ruleId === null) {
+    if (this.ruleId === undefined || this.ruleId === null) {
       throw new Error("ruleId must not be undefined or null")
     }
 
@@ -70,7 +70,7 @@ class Index {
    * Http delete /restapi/v1.0/account/{accountId}/answering-rule/{ruleId}
    */
   async delete(): Promise<string> {
-    if (!this.ruleId || this.ruleId === null) {
+    if (this.ruleId === undefined || this.ruleId === null) {
       throw new Error("ruleId must not be undefined or null")
     }
 

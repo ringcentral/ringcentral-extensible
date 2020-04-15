@@ -13,7 +13,7 @@ class Index {
   }
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.datasetId != null) {
+    if (withParameter && this.datasetId !== null) {
       return `${this.parent.path()}/datasets/${this.datasetId}`
     }
 
@@ -25,7 +25,7 @@ class Index {
    * Http get /restapi/v1.0/glip/data-export/{taskId}/datasets/{datasetId}
    */
   async get(): Promise<Buffer> {
-    if (!this.datasetId || this.datasetId === null) {
+    if (this.datasetId === undefined || this.datasetId === null) {
       throw new Error("datasetId must not be undefined or null")
     }
 

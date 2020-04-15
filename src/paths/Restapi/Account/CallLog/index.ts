@@ -17,7 +17,7 @@ class Index {
   }
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.callRecordId != null) {
+    if (withParameter && this.callRecordId !== null) {
       return `${this.parent.path()}/call-log/${this.callRecordId}`
     }
 
@@ -37,7 +37,7 @@ class Index {
    * Http get /restapi/v1.0/account/{accountId}/call-log/{callRecordId}
    */
   async get(queryParams?: ReadCompanyCallRecordParameters): Promise<CompanyCallLogRecord> {
-    if (!this.callRecordId || this.callRecordId === null) {
+    if (this.callRecordId === undefined || this.callRecordId === null) {
       throw new Error("callRecordId must not be undefined or null")
     }
 

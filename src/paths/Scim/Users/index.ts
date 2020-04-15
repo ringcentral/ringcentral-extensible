@@ -19,7 +19,7 @@ class Index {
   }
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.id != null) {
+    if (withParameter && this.id !== null) {
       return `${this.parent.path()}/Users/${this.id}`
     }
 
@@ -47,7 +47,7 @@ class Index {
    * Http get /scim/v2/Users/{id}
    */
   async get(): Promise<UserResponse> {
-    if (!this.id || this.id === null) {
+    if (this.id === undefined || this.id === null) {
       throw new Error("id must not be undefined or null")
     }
 
@@ -59,7 +59,7 @@ class Index {
    * Http put /scim/v2/Users/{id}
    */
   async put(user: User): Promise<UserResponse> {
-    if (!this.id || this.id === null) {
+    if (this.id === undefined || this.id === null) {
       throw new Error("id must not be undefined or null")
     }
 
@@ -71,7 +71,7 @@ class Index {
    * Http delete /scim/v2/Users/{id}
    */
   async delete(): Promise<string> {
-    if (!this.id || this.id === null) {
+    if (this.id === undefined || this.id === null) {
       throw new Error("id must not be undefined or null")
     }
 
@@ -83,7 +83,7 @@ class Index {
    * Http patch /scim/v2/Users/{id}
    */
   async patch(userPatch: UserPatch): Promise<UserResponse> {
-    if (!this.id || this.id === null) {
+    if (this.id === undefined || this.id === null) {
       throw new Error("id must not be undefined or null")
     }
 

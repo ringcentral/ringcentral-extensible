@@ -18,7 +18,7 @@ class Index {
   }
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.pointId != null) {
+    if (withParameter && this.pointId !== null) {
       return `${this.parent.path()}/wireless-points/${this.pointId}`
     }
 
@@ -46,7 +46,7 @@ class Index {
    * Http get /restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points/{pointId}
    */
   async get(): Promise<WirelessPointInfo> {
-    if (!this.pointId || this.pointId === null) {
+    if (this.pointId === undefined || this.pointId === null) {
       throw new Error("pointId must not be undefined or null")
     }
 
@@ -58,7 +58,7 @@ class Index {
    * Http put /restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points/{pointId}
    */
   async put(updateWirelessPoint: UpdateWirelessPoint): Promise<WirelessPointInfo> {
-    if (!this.pointId || this.pointId === null) {
+    if (this.pointId === undefined || this.pointId === null) {
       throw new Error("pointId must not be undefined or null")
     }
 
@@ -70,7 +70,7 @@ class Index {
    * Http delete /restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points/{pointId}
    */
   async delete(): Promise<string> {
-    if (!this.pointId || this.pointId === null) {
+    if (this.pointId === undefined || this.pointId === null) {
       throw new Error("pointId must not be undefined or null")
     }
 

@@ -20,7 +20,7 @@ class Index {
   }
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.extensionId != null) {
+    if (withParameter && this.extensionId !== null) {
       return `${this.parent.path()}/extension/${this.extensionId}`
     }
 
@@ -48,7 +48,7 @@ class Index {
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}
    */
   async get(): Promise<GetExtensionInfoResponse> {
-    if (!this.extensionId || this.extensionId === null) {
+    if (this.extensionId === undefined || this.extensionId === null) {
       throw new Error("extensionId must not be undefined or null")
     }
 
@@ -60,7 +60,7 @@ class Index {
    * Http put /restapi/v1.0/account/{accountId}/extension/{extensionId}
    */
   async put(extensionUpdateRequest: ExtensionUpdateRequest): Promise<GetExtensionInfoResponse> {
-    if (!this.extensionId || this.extensionId === null) {
+    if (this.extensionId === undefined || this.extensionId === null) {
       throw new Error("extensionId must not be undefined or null")
     }
 
@@ -72,7 +72,7 @@ class Index {
    * Http delete /restapi/v1.0/account/{accountId}/extension/{extensionId}
    */
   async delete(queryParams?: DeleteExtensionParameters): Promise<string> {
-    if (!this.extensionId || this.extensionId === null) {
+    if (this.extensionId === undefined || this.extensionId === null) {
       throw new Error("extensionId must not be undefined or null")
     }
 

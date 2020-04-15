@@ -17,7 +17,7 @@ class Index {
   }
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.deviceId != null) {
+    if (withParameter && this.deviceId !== null) {
       return `${this.parent.path()}/device/${this.deviceId}`
     }
 
@@ -29,7 +29,7 @@ class Index {
    * Http get /restapi/v1.0/account/{accountId}/device/{deviceId}
    */
   async get(queryParams?: ReadDeviceParameters): Promise<GetDeviceInfoResponse> {
-    if (!this.deviceId || this.deviceId === null) {
+    if (this.deviceId === undefined || this.deviceId === null) {
       throw new Error("deviceId must not be undefined or null")
     }
 
@@ -41,7 +41,7 @@ class Index {
    * Http put /restapi/v1.0/account/{accountId}/device/{deviceId}
    */
   async put(accountDeviceUpdate: AccountDeviceUpdate): Promise<DeviceResource> {
-    if (!this.deviceId || this.deviceId === null) {
+    if (this.deviceId === undefined || this.deviceId === null) {
       throw new Error("deviceId must not be undefined or null")
     }
 

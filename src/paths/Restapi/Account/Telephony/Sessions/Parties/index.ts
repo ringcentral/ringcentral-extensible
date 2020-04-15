@@ -15,7 +15,7 @@ class Index {
   }
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.partyId != null) {
+    if (withParameter && this.partyId !== null) {
       return `${this.parent.path()}/parties/${this.partyId}`
     }
 
@@ -27,7 +27,7 @@ class Index {
    * Http get /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}
    */
   async get(): Promise<CallParty> {
-    if (!this.partyId || this.partyId === null) {
+    if (this.partyId === undefined || this.partyId === null) {
       throw new Error("partyId must not be undefined or null")
     }
 
@@ -39,7 +39,7 @@ class Index {
    * Http patch /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}
    */
   async patch(partyUpdateRequest: PartyUpdateRequest): Promise<CallParty> {
-    if (!this.partyId || this.partyId === null) {
+    if (this.partyId === undefined || this.partyId === null) {
       throw new Error("partyId must not be undefined or null")
     }
 

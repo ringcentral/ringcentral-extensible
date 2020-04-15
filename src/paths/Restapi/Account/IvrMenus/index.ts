@@ -14,7 +14,7 @@ class Index {
   }
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.ivrMenuId != null) {
+    if (withParameter && this.ivrMenuId !== null) {
       return `${this.parent.path()}/ivr-menus/${this.ivrMenuId}`
     }
 
@@ -34,7 +34,7 @@ class Index {
    * Http get /restapi/v1.0/account/{accountId}/ivr-menus/{ivrMenuId}
    */
   async get(): Promise<IVRMenuInfo> {
-    if (!this.ivrMenuId || this.ivrMenuId === null) {
+    if (this.ivrMenuId === undefined || this.ivrMenuId === null) {
       throw new Error("ivrMenuId must not be undefined or null")
     }
 
@@ -46,7 +46,7 @@ class Index {
    * Http put /restapi/v1.0/account/{accountId}/ivr-menus/{ivrMenuId}
    */
   async put(iVRMenuInfo: IVRMenuInfo): Promise<IVRMenuInfo> {
-    if (!this.ivrMenuId || this.ivrMenuId === null) {
+    if (this.ivrMenuId === undefined || this.ivrMenuId === null) {
       throw new Error("ivrMenuId must not be undefined or null")
     }
 

@@ -17,7 +17,7 @@ class Index {
   }
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.locationId != null) {
+    if (withParameter && this.locationId !== null) {
       return `${this.parent.path()}/emergency-locations/${this.locationId}`
     }
 
@@ -45,7 +45,7 @@ class Index {
    * Http get /restapi/v1.0/account/{accountId}/emergency-locations/{locationId}
    */
   async get(): Promise<EmergencyLocationInfo> {
-    if (!this.locationId || this.locationId === null) {
+    if (this.locationId === undefined || this.locationId === null) {
       throw new Error("locationId must not be undefined or null")
     }
 
@@ -57,7 +57,7 @@ class Index {
    * Http put /restapi/v1.0/account/{accountId}/emergency-locations/{locationId}
    */
   async put(emergencyLocationInfoRequest: EmergencyLocationInfoRequest): Promise<EmergencyLocationInfo> {
-    if (!this.locationId || this.locationId === null) {
+    if (this.locationId === undefined || this.locationId === null) {
       throw new Error("locationId must not be undefined or null")
     }
 

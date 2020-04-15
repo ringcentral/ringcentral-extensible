@@ -14,7 +14,7 @@ class Index {
   }
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.attachmentId != null) {
+    if (withParameter && this.attachmentId !== null) {
       return `${this.parent.path()}/content/${this.attachmentId}`
     }
 
@@ -26,7 +26,7 @@ class Index {
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}/content/{attachmentId}
    */
   async get(queryParams?: ReadMessageContentParameters): Promise<Buffer> {
-    if (!this.attachmentId || this.attachmentId === null) {
+    if (this.attachmentId === undefined || this.attachmentId === null) {
       throw new Error("attachmentId must not be undefined or null")
     }
 

@@ -19,7 +19,7 @@ class Index {
   }
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.contactId != null) {
+    if (withParameter && this.contactId !== null) {
       return `${this.parent.path()}/contact/${this.contactId}`
     }
 
@@ -47,7 +47,7 @@ class Index {
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact/{contactId}
    */
   async get(): Promise<PersonalContactResource> {
-    if (!this.contactId || this.contactId === null) {
+    if (this.contactId === undefined || this.contactId === null) {
       throw new Error("contactId must not be undefined or null")
     }
 
@@ -59,7 +59,7 @@ class Index {
    * Http put /restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact/{contactId}
    */
   async put(personalContactRequest: PersonalContactRequest, queryParams?: UpdateContactParameters): Promise<PersonalContactResource> {
-    if (!this.contactId || this.contactId === null) {
+    if (this.contactId === undefined || this.contactId === null) {
       throw new Error("contactId must not be undefined or null")
     }
 
@@ -71,7 +71,7 @@ class Index {
    * Http delete /restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact/{contactId}
    */
   async delete(): Promise<string> {
-    if (!this.contactId || this.contactId === null) {
+    if (this.contactId === undefined || this.contactId === null) {
       throw new Error("contactId must not be undefined or null")
     }
 

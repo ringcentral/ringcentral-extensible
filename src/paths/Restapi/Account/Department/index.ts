@@ -13,7 +13,7 @@ class Index {
   }
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.departmentId != null) {
+    if (withParameter && this.departmentId !== null) {
       return `${this.parent.path()}/department/${this.departmentId}`
     }
 

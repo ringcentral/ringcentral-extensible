@@ -17,7 +17,7 @@ class Index {
   }
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.chatId != null) {
+    if (withParameter && this.chatId !== null) {
       return `${this.parent.path()}/conversations/${this.chatId}`
     }
 
@@ -45,7 +45,7 @@ class Index {
    * Http get /restapi/v1.0/glip/conversations/{chatId}
    */
   async get(): Promise<GlipConversationInfo> {
-    if (!this.chatId || this.chatId === null) {
+    if (this.chatId === undefined || this.chatId === null) {
       throw new Error("chatId must not be undefined or null")
     }
 

@@ -13,7 +13,7 @@ class Index {
   }
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.pagingOnlyGroupId != null) {
+    if (withParameter && this.pagingOnlyGroupId !== null) {
       return `${this.parent.path()}/paging-only-groups/${this.pagingOnlyGroupId}`
     }
 

@@ -1,5 +1,6 @@
 import CreateFaxMessageRequest from '../../../../../definitions/CreateFaxMessageRequest'
 import FaxResponse from '../../../../../definitions/FaxResponse'
+import Utils from '../../../../../Utils'
 import Parent from '..'
 import RestClient from '../../../../..'
 
@@ -21,8 +22,8 @@ class Index {
    * Http post /restapi/v1.0/account/{accountId}/extension/{extensionId}/fax
    */
   async post(createFaxMessageRequest: CreateFaxMessageRequest): Promise<FaxResponse> {
-    var multipartFormDataContent = Utils.GetMultipartFormDataContent(createFaxMessageRequest)
-    return this.rc.post(this.path(), multipartFormDataContent)
+    var formData = Utils.getFormData(createFaxMessageRequest)
+    return this.rc.post(this.path(), formData)
   }
 }
 

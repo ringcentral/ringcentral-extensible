@@ -10,7 +10,7 @@ class Index {
   }
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.version != null) {
+    if (withParameter && this.version !== null) {
       return `/scim/${this.version}`
     }
 

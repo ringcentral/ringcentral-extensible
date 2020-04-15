@@ -12,7 +12,7 @@ class Index {
   }
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.apiVersion != null) {
+    if (withParameter && this.apiVersion !== null) {
       return `/restapi/${this.apiVersion}`
     }
 
@@ -32,7 +32,7 @@ class Index {
    * Http get /restapi/{apiVersion}
    */
   async get(): Promise<GetVersionResponse> {
-    if (!this.apiVersion || this.apiVersion === null) {
+    if (this.apiVersion === undefined || this.apiVersion === null) {
       throw new Error("apiVersion must not be undefined or null")
     }
 

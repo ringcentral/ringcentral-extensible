@@ -15,7 +15,7 @@ class Index {
   }
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.greetingId != null) {
+    if (withParameter && this.greetingId !== null) {
       return `${this.parent.path()}/custom-greetings/${this.greetingId}`
     }
 
@@ -35,7 +35,7 @@ class Index {
    * Http delete /restapi/v1.0/account/{accountId}/call-recording/custom-greetings/{greetingId}
    */
   async delete(): Promise<string> {
-    if (!this.greetingId || this.greetingId === null) {
+    if (this.greetingId === undefined || this.greetingId === null) {
       throw new Error("greetingId must not be undefined or null")
     }
 

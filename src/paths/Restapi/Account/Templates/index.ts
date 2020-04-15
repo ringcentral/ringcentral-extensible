@@ -16,7 +16,7 @@ class Index {
   }
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.templateId != null) {
+    if (withParameter && this.templateId !== null) {
       return `${this.parent.path()}/templates/${this.templateId}`
     }
 
@@ -36,7 +36,7 @@ class Index {
    * Http get /restapi/v1.0/account/{accountId}/templates/{templateId}
    */
   async get(): Promise<TemplateInfo> {
-    if (!this.templateId || this.templateId === null) {
+    if (this.templateId === undefined || this.templateId === null) {
       throw new Error("templateId must not be undefined or null")
     }
 

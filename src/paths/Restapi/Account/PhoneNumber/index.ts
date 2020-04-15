@@ -16,7 +16,7 @@ class Index {
   }
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.phoneNumberId != null) {
+    if (withParameter && this.phoneNumberId !== null) {
       return `${this.parent.path()}/phone-number/${this.phoneNumberId}`
     }
 
@@ -36,7 +36,7 @@ class Index {
    * Http get /restapi/v1.0/account/{accountId}/phone-number/{phoneNumberId}
    */
   async get(): Promise<CompanyPhoneNumberInfo> {
-    if (!this.phoneNumberId || this.phoneNumberId === null) {
+    if (this.phoneNumberId === undefined || this.phoneNumberId === null) {
       throw new Error("phoneNumberId must not be undefined or null")
     }
 

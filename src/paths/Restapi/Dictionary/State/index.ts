@@ -16,7 +16,7 @@ class Index {
   }
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.stateId != null) {
+    if (withParameter && this.stateId !== null) {
       return `${this.parent.path()}/state/${this.stateId}`
     }
 
@@ -36,7 +36,7 @@ class Index {
    * Http get /restapi/v1.0/dictionary/state/{stateId}
    */
   async get(): Promise<GetStateInfoResponse> {
-    if (!this.stateId || this.stateId === null) {
+    if (this.stateId === undefined || this.stateId === null) {
       throw new Error("stateId must not be undefined or null")
     }
 

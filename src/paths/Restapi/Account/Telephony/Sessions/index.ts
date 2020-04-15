@@ -15,7 +15,7 @@ class Index {
   }
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.telephonySessionId != null) {
+    if (withParameter && this.telephonySessionId !== null) {
       return `${this.parent.path()}/sessions/${this.telephonySessionId}`
     }
 
@@ -27,7 +27,7 @@ class Index {
    * Http get /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}
    */
   async get(queryParams?: ReadCallSessionStatusParameters): Promise<CallSession> {
-    if (!this.telephonySessionId || this.telephonySessionId === null) {
+    if (this.telephonySessionId === undefined || this.telephonySessionId === null) {
       throw new Error("telephonySessionId must not be undefined or null")
     }
 
@@ -39,7 +39,7 @@ class Index {
    * Http delete /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}
    */
   async delete(): Promise<string> {
-    if (!this.telephonySessionId || this.telephonySessionId === null) {
+    if (this.telephonySessionId === undefined || this.telephonySessionId === null) {
       throw new Error("telephonySessionId must not be undefined or null")
     }
 

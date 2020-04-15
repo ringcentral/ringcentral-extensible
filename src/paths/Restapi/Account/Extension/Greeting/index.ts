@@ -1,5 +1,6 @@
 import CreateCustomUserGreetingRequest from '../../../../../definitions/CreateCustomUserGreetingRequest'
 import CustomUserGreetingInfo from '../../../../../definitions/CustomUserGreetingInfo'
+import Utils from '../../../../../Utils'
 import Parent from '..'
 import RestClient from '../../../../..'
 
@@ -15,7 +16,7 @@ class Index {
   }
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.greetingId != null) {
+    if (withParameter && this.greetingId !== null) {
       return `${this.parent.path()}/greeting/${this.greetingId}`
     }
 
@@ -27,8 +28,8 @@ class Index {
    * Http post /restapi/v1.0/account/{accountId}/extension/{extensionId}/greeting
    */
   async post(createCustomUserGreetingRequest: CreateCustomUserGreetingRequest): Promise<CustomUserGreetingInfo> {
-    var multipartFormDataContent = Utils.GetMultipartFormDataContent(createCustomUserGreetingRequest)
-    return this.rc.post(this.path(false), multipartFormDataContent)
+    var formData = Utils.getFormData(createCustomUserGreetingRequest)
+    return this.rc.post(this.path(false), formData)
   }
 
   /**
@@ -36,7 +37,7 @@ class Index {
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/greeting/{greetingId}
    */
   async get(): Promise<CustomUserGreetingInfo> {
-    if (!this.greetingId || this.greetingId === null) {
+    if (this.greetingId === undefined || this.greetingId === null) {
       throw new Error("greetingId must not be undefined or null")
     }
 

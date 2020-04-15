@@ -1,5 +1,6 @@
 import CreateSMSMessage from '../../../../../definitions/CreateSMSMessage'
 import GetMessageInfoResponse from '../../../../../definitions/GetMessageInfoResponse'
+import Utils from '../../../../../Utils'
 import Parent from '..'
 import RestClient from '../../../../..'
 
@@ -21,8 +22,8 @@ class Index {
    * Http post /restapi/v1.0/account/{accountId}/extension/{extensionId}/mms
    */
   async post(createSMSMessage: CreateSMSMessage): Promise<GetMessageInfoResponse> {
-    var multipartFormDataContent = Utils.GetMultipartFormDataContent(createSMSMessage)
-    return this.rc.post(this.path(), multipartFormDataContent)
+    var formData = Utils.getFormData(createSMSMessage)
+    return this.rc.post(this.path(), formData)
   }
 }
 

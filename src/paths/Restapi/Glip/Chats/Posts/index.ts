@@ -18,7 +18,7 @@ class Index {
   }
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.postId != null) {
+    if (withParameter && this.postId !== null) {
       return `${this.parent.path()}/posts/${this.postId}`
     }
 
@@ -46,7 +46,7 @@ class Index {
    * Http get /restapi/v1.0/glip/chats/{chatId}/posts/{postId}
    */
   async get(): Promise<GlipPostInfo> {
-    if (!this.postId || this.postId === null) {
+    if (this.postId === undefined || this.postId === null) {
       throw new Error("postId must not be undefined or null")
     }
 
@@ -58,7 +58,7 @@ class Index {
    * Http patch /restapi/v1.0/glip/chats/{chatId}/posts/{postId}
    */
   async patch(glipPatchPostBody: GlipPatchPostBody): Promise<GlipPostInfo> {
-    if (!this.postId || this.postId === null) {
+    if (this.postId === undefined || this.postId === null) {
       throw new Error("postId must not be undefined or null")
     }
 
@@ -70,7 +70,7 @@ class Index {
    * Http delete /restapi/v1.0/glip/chats/{chatId}/posts/{postId}
    */
   async delete(): Promise<string> {
-    if (!this.postId || this.postId === null) {
+    if (this.postId === undefined || this.postId === null) {
       throw new Error("postId must not be undefined or null")
     }
 

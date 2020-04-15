@@ -16,7 +16,7 @@ class Index {
   }
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.meetingId != null) {
+    if (withParameter && this.meetingId !== null) {
       return `${this.parent.path()}/meeting/${this.meetingId}`
     }
 
@@ -44,7 +44,7 @@ class Index {
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/{meetingId}
    */
   async get(): Promise<MeetingResponseResource> {
-    if (!this.meetingId || this.meetingId === null) {
+    if (this.meetingId === undefined || this.meetingId === null) {
       throw new Error("meetingId must not be undefined or null")
     }
 
@@ -56,7 +56,7 @@ class Index {
    * Http put /restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/{meetingId}
    */
   async put(meetingRequestResource: MeetingRequestResource): Promise<MeetingResponseResource> {
-    if (!this.meetingId || this.meetingId === null) {
+    if (this.meetingId === undefined || this.meetingId === null) {
       throw new Error("meetingId must not be undefined or null")
     }
 
@@ -68,7 +68,7 @@ class Index {
    * Http delete /restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/{meetingId}
    */
   async delete(): Promise<string> {
-    if (!this.meetingId || this.meetingId === null) {
+    if (this.meetingId === undefined || this.meetingId === null) {
       throw new Error("meetingId must not be undefined or null")
     }
 

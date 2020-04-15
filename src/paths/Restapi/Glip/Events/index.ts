@@ -17,7 +17,7 @@ class Index {
   }
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.eventId != null) {
+    if (withParameter && this.eventId !== null) {
       return `${this.parent.path()}/events/${this.eventId}`
     }
 
@@ -45,7 +45,7 @@ class Index {
    * Http get /restapi/v1.0/glip/events/{eventId}
    */
   async get(): Promise<GlipEventInfo> {
-    if (!this.eventId || this.eventId === null) {
+    if (this.eventId === undefined || this.eventId === null) {
       throw new Error("eventId must not be undefined or null")
     }
 
@@ -57,7 +57,7 @@ class Index {
    * Http put /restapi/v1.0/glip/events/{eventId}
    */
   async put(glipEventCreate: GlipEventCreate): Promise<GlipEventInfo> {
-    if (!this.eventId || this.eventId === null) {
+    if (this.eventId === undefined || this.eventId === null) {
       throw new Error("eventId must not be undefined or null")
     }
 
@@ -69,7 +69,7 @@ class Index {
    * Http delete /restapi/v1.0/glip/events/{eventId}
    */
   async delete(): Promise<string> {
-    if (!this.eventId || this.eventId === null) {
+    if (this.eventId === undefined || this.eventId === null) {
       throw new Error("eventId must not be undefined or null")
     }
 

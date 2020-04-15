@@ -17,7 +17,7 @@ class Index {
   }
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.taskId != null) {
+    if (withParameter && this.taskId !== null) {
       return `${this.parent.path()}/data-export/${this.taskId}`
     }
 
@@ -45,7 +45,7 @@ class Index {
    * Http get /restapi/v1.0/glip/data-export/{taskId}
    */
   async get(): Promise<DataExportTask> {
-    if (!this.taskId || this.taskId === null) {
+    if (this.taskId === undefined || this.taskId === null) {
       throw new Error("taskId must not be undefined or null")
     }
 

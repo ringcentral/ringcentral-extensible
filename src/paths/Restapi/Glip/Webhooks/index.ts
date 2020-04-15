@@ -14,7 +14,7 @@ class Index {
   }
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.webhookId != null) {
+    if (withParameter && this.webhookId !== null) {
       return `${this.parent.path()}/webhooks/${this.webhookId}`
     }
 
@@ -34,7 +34,7 @@ class Index {
    * Http get /restapi/v1.0/glip/webhooks/{webhookId}
    */
   async get(): Promise<GlipWebhookList> {
-    if (!this.webhookId || this.webhookId === null) {
+    if (this.webhookId === undefined || this.webhookId === null) {
       throw new Error("webhookId must not be undefined or null")
     }
 
@@ -46,7 +46,7 @@ class Index {
    * Http delete /restapi/v1.0/glip/webhooks/{webhookId}
    */
   async delete(): Promise<string> {
-    if (!this.webhookId || this.webhookId === null) {
+    if (this.webhookId === undefined || this.webhookId === null) {
       throw new Error("webhookId must not be undefined or null")
     }
 

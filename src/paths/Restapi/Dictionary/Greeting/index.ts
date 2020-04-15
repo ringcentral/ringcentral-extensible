@@ -16,7 +16,7 @@ class Index {
   }
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.greetingId != null) {
+    if (withParameter && this.greetingId !== null) {
       return `${this.parent.path()}/greeting/${this.greetingId}`
     }
 
@@ -36,7 +36,7 @@ class Index {
    * Http get /restapi/v1.0/dictionary/greeting/{greetingId}
    */
   async get(): Promise<DictionaryGreetingInfo> {
-    if (!this.greetingId || this.greetingId === null) {
+    if (this.greetingId === undefined || this.greetingId === null) {
       throw new Error("greetingId must not be undefined or null")
     }
 

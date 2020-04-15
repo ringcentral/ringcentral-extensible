@@ -17,7 +17,7 @@ class Index {
   }
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.networkId != null) {
+    if (withParameter && this.networkId !== null) {
       return `${this.parent.path()}/networks/${this.networkId}`
     }
 
@@ -45,7 +45,7 @@ class Index {
    * Http get /restapi/v1.0/account/{accountId}/emergency-address-auto-update/networks/{networkId}
    */
   async get(): Promise<NetworkInfo> {
-    if (!this.networkId || this.networkId === null) {
+    if (this.networkId === undefined || this.networkId === null) {
       throw new Error("networkId must not be undefined or null")
     }
 
@@ -57,7 +57,7 @@ class Index {
    * Http put /restapi/v1.0/account/{accountId}/emergency-address-auto-update/networks/{networkId}
    */
   async put(updateNetworkRequest: UpdateNetworkRequest): Promise<string> {
-    if (!this.networkId || this.networkId === null) {
+    if (this.networkId === undefined || this.networkId === null) {
       throw new Error("networkId must not be undefined or null")
     }
 
@@ -69,7 +69,7 @@ class Index {
    * Http delete /restapi/v1.0/account/{accountId}/emergency-address-auto-update/networks/{networkId}
    */
   async delete(): Promise<string> {
-    if (!this.networkId || this.networkId === null) {
+    if (this.networkId === undefined || this.networkId === null) {
       throw new Error("networkId must not be undefined or null")
     }
 

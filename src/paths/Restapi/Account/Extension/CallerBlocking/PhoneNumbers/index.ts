@@ -17,7 +17,7 @@ class Index {
   }
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.blockedNumberId != null) {
+    if (withParameter && this.blockedNumberId !== null) {
       return `${this.parent.path()}/phone-numbers/${this.blockedNumberId}`
     }
 
@@ -45,7 +45,7 @@ class Index {
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers/{blockedNumberId}
    */
   async get(): Promise<BlockedAllowedPhoneNumberInfo> {
-    if (!this.blockedNumberId || this.blockedNumberId === null) {
+    if (this.blockedNumberId === undefined || this.blockedNumberId === null) {
       throw new Error("blockedNumberId must not be undefined or null")
     }
 
@@ -57,7 +57,7 @@ class Index {
    * Http delete /restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers/{blockedNumberId}
    */
   async delete(): Promise<string> {
-    if (!this.blockedNumberId || this.blockedNumberId === null) {
+    if (this.blockedNumberId === undefined || this.blockedNumberId === null) {
       throw new Error("blockedNumberId must not be undefined or null")
     }
 
@@ -69,7 +69,7 @@ class Index {
    * Http put /restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers/{blockedNumberId}
    */
   async put(addBlockedAllowedPhoneNumber: AddBlockedAllowedPhoneNumber): Promise<BlockedAllowedPhoneNumberInfo> {
-    if (!this.blockedNumberId || this.blockedNumberId === null) {
+    if (this.blockedNumberId === undefined || this.blockedNumberId === null) {
       throw new Error("blockedNumberId must not be undefined or null")
     }
 

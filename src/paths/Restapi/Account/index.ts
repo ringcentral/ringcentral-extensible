@@ -14,7 +14,7 @@ class Index {
   }
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.accountId != null) {
+    if (withParameter && this.accountId !== null) {
       return `${this.parent.path()}/account/${this.accountId}`
     }
 
@@ -26,7 +26,7 @@ class Index {
    * Http get /restapi/v1.0/account/{accountId}
    */
   async get(): Promise<GetAccountInfoResponse> {
-    if (!this.accountId || this.accountId === null) {
+    if (this.accountId === undefined || this.accountId === null) {
       throw new Error("accountId must not be undefined or null")
     }
 

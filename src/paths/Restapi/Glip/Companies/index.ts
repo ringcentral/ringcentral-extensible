@@ -14,7 +14,7 @@ class Index {
   }
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.companyId != null) {
+    if (withParameter && this.companyId !== null) {
       return `${this.parent.path()}/companies/${this.companyId}`
     }
 
@@ -26,7 +26,7 @@ class Index {
    * Http get /restapi/v1.0/glip/companies/{companyId}
    */
   async get(): Promise<GlipCompany> {
-    if (!this.companyId || this.companyId === null) {
+    if (this.companyId === undefined || this.companyId === null) {
       throw new Error("companyId must not be undefined or null")
     }
 

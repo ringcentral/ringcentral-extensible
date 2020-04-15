@@ -17,7 +17,7 @@ class Index {
   }
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.postId != null) {
+    if (withParameter && this.postId !== null) {
       return `${this.parent.path()}/posts/${this.postId}`
     }
 

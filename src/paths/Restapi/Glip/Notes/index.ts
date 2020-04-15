@@ -16,7 +16,7 @@ class Index {
   }
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.noteId != null) {
+    if (withParameter && this.noteId !== null) {
       return `${this.parent.path()}/notes/${this.noteId}`
     }
 
@@ -28,7 +28,7 @@ class Index {
    * Http get /restapi/v1.0/glip/notes/{noteId}
    */
   async get(): Promise<GetGlipNoteInfo> {
-    if (!this.noteId || this.noteId === null) {
+    if (this.noteId === undefined || this.noteId === null) {
       throw new Error("noteId must not be undefined or null")
     }
 
@@ -40,7 +40,7 @@ class Index {
    * Http patch /restapi/v1.0/glip/notes/{noteId}
    */
   async patch(glipNoteCreate: GlipNoteCreate): Promise<GlipNoteInfo> {
-    if (!this.noteId || this.noteId === null) {
+    if (this.noteId === undefined || this.noteId === null) {
       throw new Error("noteId must not be undefined or null")
     }
 
@@ -52,7 +52,7 @@ class Index {
    * Http delete /restapi/v1.0/glip/notes/{noteId}
    */
   async delete(): Promise<string> {
-    if (!this.noteId || this.noteId === null) {
+    if (this.noteId === undefined || this.noteId === null) {
       throw new Error("noteId must not be undefined or null")
     }
 

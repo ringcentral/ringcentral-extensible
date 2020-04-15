@@ -18,7 +18,7 @@ class Index {
   }
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.messageId != null) {
+    if (withParameter && this.messageId !== null) {
       return `${this.parent.path()}/message-store/${this.messageId}`
     }
 
@@ -38,7 +38,7 @@ class Index {
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}
    */
   async get(): Promise<GetMessageInfoResponse> {
-    if (!this.messageId || this.messageId === null) {
+    if (this.messageId === undefined || this.messageId === null) {
       throw new Error("messageId must not be undefined or null")
     }
 
@@ -50,7 +50,7 @@ class Index {
    * Http put /restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}
    */
   async put(updateMessageRequest: UpdateMessageRequest): Promise<GetMessageInfoResponse> {
-    if (!this.messageId || this.messageId === null) {
+    if (this.messageId === undefined || this.messageId === null) {
       throw new Error("messageId must not be undefined or null")
     }
 
@@ -62,7 +62,7 @@ class Index {
    * Http delete /restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}
    */
   async delete(queryParams?: DeleteMessageParameters): Promise<string> {
-    if (!this.messageId || this.messageId === null) {
+    if (this.messageId === undefined || this.messageId === null) {
       throw new Error("messageId must not be undefined or null")
     }
 

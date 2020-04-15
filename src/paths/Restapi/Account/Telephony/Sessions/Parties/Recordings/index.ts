@@ -16,7 +16,7 @@ class Index {
   }
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.recordingId != null) {
+    if (withParameter && this.recordingId !== null) {
       return `${this.parent.path()}/recordings/${this.recordingId}`
     }
 
@@ -36,7 +36,7 @@ class Index {
    * Http patch /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/recordings/{recordingId}
    */
   async patch(callRecordingUpdate: CallRecordingUpdate, queryParams?: PauseResumeCallRecordingParameters): Promise<CallRecording> {
-    if (!this.recordingId || this.recordingId === null) {
+    if (this.recordingId === undefined || this.recordingId === null) {
       throw new Error("recordingId must not be undefined or null")
     }
 

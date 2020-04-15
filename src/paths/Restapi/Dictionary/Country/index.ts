@@ -16,7 +16,7 @@ class Index {
   }
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.countryId != null) {
+    if (withParameter && this.countryId !== null) {
       return `${this.parent.path()}/country/${this.countryId}`
     }
 
@@ -36,7 +36,7 @@ class Index {
    * Http get /restapi/v1.0/dictionary/country/{countryId}
    */
   async get(): Promise<GetCountryInfoDictionaryResponse> {
-    if (!this.countryId || this.countryId === null) {
+    if (this.countryId === undefined || this.countryId === null) {
       throw new Error("countryId must not be undefined or null")
     }
 

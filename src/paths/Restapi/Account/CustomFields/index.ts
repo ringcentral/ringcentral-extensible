@@ -17,7 +17,7 @@ class Index {
   }
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.fieldId != null) {
+    if (withParameter && this.fieldId !== null) {
       return `${this.parent.path()}/custom-fields/${this.fieldId}`
     }
 
@@ -45,7 +45,7 @@ class Index {
    * Http put /restapi/v1.0/account/{accountId}/custom-fields/{fieldId}
    */
   async put(customFieldUpdateRequest: CustomFieldUpdateRequest): Promise<CustomFieldResource> {
-    if (!this.fieldId || this.fieldId === null) {
+    if (this.fieldId === undefined || this.fieldId === null) {
       throw new Error("fieldId must not be undefined or null")
     }
 
@@ -57,7 +57,7 @@ class Index {
    * Http delete /restapi/v1.0/account/{accountId}/custom-fields/{fieldId}
    */
   async delete(): Promise<string> {
-    if (!this.fieldId || this.fieldId === null) {
+    if (this.fieldId === undefined || this.fieldId === null) {
       throw new Error("fieldId must not be undefined or null")
     }
 

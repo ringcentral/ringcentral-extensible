@@ -17,7 +17,7 @@ class Index {
   }
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.groupId != null) {
+    if (withParameter && this.groupId !== null) {
       return `${this.parent.path()}/call-monitoring-groups/${this.groupId}`
     }
 
@@ -45,7 +45,7 @@ class Index {
    * Http put /restapi/v1.0/account/{accountId}/call-monitoring-groups/{groupId}
    */
   async put(createCallMonitoringGroupRequest: CreateCallMonitoringGroupRequest): Promise<CallMonitoringGroup> {
-    if (!this.groupId || this.groupId === null) {
+    if (this.groupId === undefined || this.groupId === null) {
       throw new Error("groupId must not be undefined or null")
     }
 
@@ -57,7 +57,7 @@ class Index {
    * Http delete /restapi/v1.0/account/{accountId}/call-monitoring-groups/{groupId}
    */
   async delete(): Promise<string> {
-    if (!this.groupId || this.groupId === null) {
+    if (this.groupId === undefined || this.groupId === null) {
       throw new Error("groupId must not be undefined or null")
     }
 

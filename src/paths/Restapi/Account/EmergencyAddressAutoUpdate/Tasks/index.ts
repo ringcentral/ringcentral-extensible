@@ -14,7 +14,7 @@ class Index {
   }
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.taskId != null) {
+    if (withParameter && this.taskId !== null) {
       return `${this.parent.path()}/tasks/${this.taskId}`
     }
 
@@ -26,7 +26,7 @@ class Index {
    * Http get /restapi/v1.0/account/{accountId}/emergency-address-auto-update/tasks/{taskId}
    */
   async get(): Promise<AutomaticLocationUpdatesTaskInfo> {
-    if (!this.taskId || this.taskId === null) {
+    if (this.taskId === undefined || this.taskId === null) {
       throw new Error("taskId must not be undefined or null")
     }
 

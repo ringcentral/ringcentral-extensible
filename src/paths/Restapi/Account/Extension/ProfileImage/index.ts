@@ -1,5 +1,6 @@
 import UpdateUserProfileImageRequest from '../../../../../definitions/UpdateUserProfileImageRequest'
 import CreateUserProfileImageRequest from '../../../../../definitions/CreateUserProfileImageRequest'
+import Utils from '../../../../../Utils'
 import Parent from '..'
 import RestClient from '../../../../..'
 
@@ -15,7 +16,7 @@ class Index {
   }
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.scaleSize != null) {
+    if (withParameter && this.scaleSize !== null) {
       return `${this.parent.path()}/profile-image/${this.scaleSize}`
     }
 
@@ -35,8 +36,8 @@ class Index {
    * Http post /restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image
    */
   async post(createUserProfileImageRequest: CreateUserProfileImageRequest): Promise<string> {
-    var multipartFormDataContent = Utils.GetMultipartFormDataContent(createUserProfileImageRequest)
-    return this.rc.post(this.path(false), multipartFormDataContent)
+    var formData = Utils.getFormData(createUserProfileImageRequest)
+    return this.rc.post(this.path(false), formData)
   }
 
   /**
@@ -44,8 +45,8 @@ class Index {
    * Http put /restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image
    */
   async put(updateUserProfileImageRequest: UpdateUserProfileImageRequest): Promise<string> {
-    var multipartFormDataContent = Utils.GetMultipartFormDataContent(updateUserProfileImageRequest)
-    return this.rc.post(this.path(false), multipartFormDataContent)
+    var formData = Utils.getFormData(updateUserProfileImageRequest)
+    return this.rc.post(this.path(false), formData)
   }
 
   /**
@@ -53,7 +54,7 @@ class Index {
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image/{scaleSize}
    */
   async get(): Promise<Buffer> {
-    if (!this.scaleSize || this.scaleSize === null) {
+    if (this.scaleSize === undefined || this.scaleSize === null) {
       throw new Error("scaleSize must not be undefined or null")
     }
 

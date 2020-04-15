@@ -16,7 +16,7 @@ class Index {
   }
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.cardId != null) {
+    if (withParameter && this.cardId !== null) {
       return `${this.parent.path()}/cards/${this.cardId}`
     }
 
@@ -36,7 +36,7 @@ class Index {
    * Http get /restapi/v1.0/glip/cards/{cardId}
    */
   async get(): Promise<GlipMessageAttachmentInfo> {
-    if (!this.cardId || this.cardId === null) {
+    if (this.cardId === undefined || this.cardId === null) {
       throw new Error("cardId must not be undefined or null")
     }
 
@@ -48,7 +48,7 @@ class Index {
    * Http put /restapi/v1.0/glip/cards/{cardId}
    */
   async put(glipMessageAttachmentInfoRequest: GlipMessageAttachmentInfoRequest): Promise<string> {
-    if (!this.cardId || this.cardId === null) {
+    if (this.cardId === undefined || this.cardId === null) {
       throw new Error("cardId must not be undefined or null")
     }
 
@@ -60,7 +60,7 @@ class Index {
    * Http delete /restapi/v1.0/glip/cards/{cardId}
    */
   async delete(): Promise<string> {
-    if (!this.cardId || this.cardId === null) {
+    if (this.cardId === undefined || this.cardId === null) {
       throw new Error("cardId must not be undefined or null")
     }
 

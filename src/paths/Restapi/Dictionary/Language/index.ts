@@ -15,7 +15,7 @@ class Index {
   }
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.languageId != null) {
+    if (withParameter && this.languageId !== null) {
       return `${this.parent.path()}/language/${this.languageId}`
     }
 
@@ -35,7 +35,7 @@ class Index {
    * Http get /restapi/v1.0/dictionary/language/{languageId}
    */
   async get(): Promise<LanguageInfo> {
-    if (!this.languageId || this.languageId === null) {
+    if (this.languageId === undefined || this.languageId === null) {
       throw new Error("languageId must not be undefined or null")
     }
 

@@ -14,7 +14,7 @@ class Index {
   }
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.archiveId != null) {
+    if (withParameter && this.archiveId !== null) {
       return `${this.parent.path()}/archive/${this.archiveId}`
     }
 
@@ -34,7 +34,7 @@ class Index {
    * Http get /restapi/v1.0/account/{accountId}/message-store-report/{taskId}/archive/{archiveId}
    */
   async get(): Promise<string> {
-    if (!this.archiveId || this.archiveId === null) {
+    if (this.archiveId === undefined || this.archiveId === null) {
       throw new Error("archiveId must not be undefined or null")
     }
 
