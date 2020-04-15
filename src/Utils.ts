@@ -8,7 +8,7 @@ class Utils {
     const obj = Object.assign({}, ...objs)
     const jsonRequest = {}
     const attachments: Attachment[] = []
-    for(const key in Object.keys(obj)) {
+    for(const key of Object.keys(obj)) {
       let value = obj[key]
       if(value === undefined || value === null) {
         continue

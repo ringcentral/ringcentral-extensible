@@ -35,12 +35,13 @@ class RestClient {
     })
   }
 
-  async request(httpMethod: Method, endpoint: string, content?: {}, queryParams?: {}):  Promise<any>{
+  async request(httpMethod: Method, endpoint: string, content?: {}, queryParams?: {}, headers?: {}):  Promise<any>{
     const config = {
       method: httpMethod,
       url: endpoint,
       data: content,
       params: queryParams,
+      headers
     }
     if(endpoint.startsWith('/restapi/oauth/')) { // basic token
       config['auth'] = {
@@ -49,7 +50,8 @@ class RestClient {
       }
       config.data = qs.stringify(config.data)
     } else { // bearer token
-      config['headers'] = {
+      config.headers = {
+        ...config.headers,
         Authorization: `Bearer ${this.token.access_token}`
       }
     }
@@ -65,14 +67,14 @@ class RestClient {
   async delete(endpoint: string, queryParams?: {}): Promise<any> {
     return this.request('DELETE', endpoint, undefined, queryParams)
   }
-  async post(endpoint: string, content?: {}, queryParams?: {}) : Promise<any> {
-    return this.request('POST', endpoint, content, queryParams)
+  async post(endpoint: string, content?: {}, queryParams?: {}, headers?: {}) : Promise<any> {
+    return this.request('POST', endpoint, content, queryParams, headers)
   }
-  async put(endpoint: string, content: {}, queryParams?: {}) : Promise<any> {
-    return this.request('PUT', endpoint, content, queryParams)
+  async put(endpoint: string, content: {}, queryParams?: {}, headers?: {}) : Promise<any> {
+    return this.request('PUT', endpoint, content, queryParams, headers)
   }
-  async patch(endpoint: string, content: {}, queryParams?: {}) : Promise<any> {
-    return this.request('PATCH', endpoint, content, queryParams)
+  async patch(endpoint: string, content: {}, queryParams?: {}, headers?: {}) : Promise<any> {
+    return this.request('PATCH', endpoint, content, queryParams, headers)
   }
 
   async authorize(getTokenRequest: GetTokenRequest): Promise<TokenInfo>
