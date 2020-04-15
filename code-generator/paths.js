@@ -222,17 +222,7 @@ class Index {
       throw new Error("${paramName} must not be undefined or null")
     }
 ` : ''}`
-      if (formUrlEncoded) {
-        //         code = `using System.Linq
-        // using System.Net.Http
-        // ${code}`
-        code += `
-    var dict = new System.Collections.Generic.Dictionary<string, string>()
-    RingCentral.Utils.GetPairs(${bodyParam})
-      .ToList().ForEach(t => dict.Add(t.name, t.value.ToString()))
-    return this.rc.post(this.path(${(!withParam && paramName) ? 'false' : ''}), new FormUrlEncodedContent(dict)${queryParams.length > 0 ? ', queryParams' : ''})
-  }`
-      } else if (multipart) {
+      if (multipart) {
         code += `
     var multipartFormDataContent = Utils.GetMultipartFormDataContent(${bodyParam})
     return this.rc.post(this.path(${(!withParam && paramName) ? 'false' : ''}), multipartFormDataContent${queryParams.length > 0 ? ', queryParams' : ''})

@@ -20,10 +20,7 @@ class Index {
    * Http post /restapi/oauth/revoke
    */
   async post(revokeTokenRequest: RevokeTokenRequest): Promise<string> {
-    var dict = new System.Collections.Generic.Dictionary<string, string>()
-    RingCentral.Utils.GetPairs(revokeTokenRequest)
-      .ToList().ForEach(t => dict.Add(t.name, t.value.ToString()))
-    return this.rc.post(this.path(), new FormUrlEncodedContent(dict))
+    return this.rc.post(this.path(), revokeTokenRequest)
   }
 }
 
