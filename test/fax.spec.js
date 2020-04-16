@@ -9,7 +9,7 @@ import Attachment from '../src/definitions/Attachment'
 jest.setTimeout(16000)
 
 describe('fax', () => {
-  test('default', async () => {
+  test('send fax', async () => {
     const rc = new RestClient(process.env.RINGCENTRAL_CLIENT_ID, process.env.RINGCENTRAL_CLIENT_SECRET, process.env.RINGCENTRAL_SERVER_URL)
     await rc.authorize(process.env.RINGCENTRAL_USERNAME, process.env.RINGCENTRAL_EXTENSION, process.env.RINGCENTRAL_PASSWORD)
     const createFaxMessageRequest = new CreateFaxMessageRequest()
