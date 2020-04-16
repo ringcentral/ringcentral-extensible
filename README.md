@@ -18,3 +18,6 @@ yarn test
 
 
 ## Todo
+
+- `import { ... } from './definitions'`
+- Remove all `null`, use `undefined` instead

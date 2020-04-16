@@ -9,18 +9,18 @@ import Restapi from './paths/Restapi'
 import Scim from './paths/Scim'
 
 class RestClient {
-  static sandboxServer = "https://platform.devtest.ringcentral.com"
-  static productionServer = "https://platform.ringcentral.com"
+  static sandboxServer = 'https://platform.devtest.ringcentral.com'
+  static productionServer = 'https://platform.ringcentral.com'
 
   clientId: string
   clientSecret: string
   server: string
-  appName = "Unknown"
-  appVersion = "0.0.1"
+  appName = 'Unknown'
+  appVersion = '0.0.1'
   httpClient: AxiosInstance
   token?: TokenInfo
 
-  constructor(clientId: string, clientSecret: string, server: string, appName = "Unknown", appVersion = "0.0.1") {
+  constructor(clientId: string, clientSecret: string, server: string, appName = 'Unknown', appVersion = '0.0.1') {
     this.clientId = clientId
     this.clientSecret = clientSecret
     this.server = server
@@ -28,7 +28,7 @@ class RestClient {
     this.appVersion = appVersion
     this.httpClient = axios.create({
       baseURL: this.server,
-      headers: { "X-User-Agent": `${appName}/${appVersion} tylerlong/ringcentral-typescript/${pkg.version}` },
+      headers: { 'X-User-Agent': `${appName}/${appVersion} tylerlong/ringcentral-typescript/${pkg.version}` },
       validateStatus: status => {
         return true
       }
@@ -104,7 +104,7 @@ class RestClient {
         return null
     }
     const getTokenRequest = new GetTokenRequest()
-    getTokenRequest.grant_type = "refresh_token"
+    getTokenRequest.grant_type = 'refresh_token'
     getTokenRequest.refresh_token = tokenToRefresh
     return this.authorize(getTokenRequest)
   }
@@ -118,7 +118,7 @@ class RestClient {
     this.token = undefined
   }
 
-  restapi(apiVersion = "v1.0"): Restapi {
+  restapi(apiVersion = 'v1.0'): Restapi {
     return new Restapi(this, apiVersion);
   }
 
