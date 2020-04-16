@@ -238,9 +238,7 @@ class Index {
     code += `
 }`
 
-    if (routes.length === 1) { // top level path, such as /restapi & /scim
-      console.log(`Todo: top level path: ${R.last(routes)}`)
-    } else {
+    if (routes.length > 1) {
       console.log(`Todo: add chain methods for ${routes.join('/')}`)
     }
     fs.writeFileSync(path.join(folderPath, 'index.ts'), code.trim() + '\n\nexport default Index\n')
