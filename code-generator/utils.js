@@ -1,4 +1,6 @@
 import * as R from 'ramda'
+import fs from 'fs'
+import path from 'path'
 
 export const normalizePath = path => {
   return path
@@ -25,4 +27,17 @@ export const getResponseType = responses => {
     }
   }
   return responseType
+}
+
+export const patchSrcFile = (fileRoutes, imports, extenions) => {
+  const filePath = path.join(__dirname, '..', 'src', ...fileRoutes)
+  let code = fs.readFileSync(filePath, 'utf8')
+  if (imports) {
+    code = `${imports.join('\n')}\n${code}`
+  }
+  if (extenions) {
+    code = code.replace(/^}/m, `\n  ${extenions}\n}`)
+  }
+  console.log(filePath, code)
+  fs.writeFileSync(filePath, code)
 }
