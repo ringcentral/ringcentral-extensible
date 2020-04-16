@@ -5,7 +5,7 @@ import { pascalCase, titleCase } from 'change-case'
 import { lowerCaseFirst } from 'lower-case-first'
 import path from 'path'
 
-import { normalizePath, deNormalizePath, getResponseType } from './utils'
+import { normalizePath, deNormalizePath, getResponseType, patchSrcFile } from './utils'
 
 const outputDir = path.join(__dirname, '..', 'src', 'paths')
 
@@ -98,7 +98,7 @@ class Index {
     } else {
       code += `
 
-  Index(${routes.length > 1 ? 'parent: Parent' : 'rc: RestClient'}) {
+  constructor(${routes.length > 1 ? 'parent: Parent' : 'rc: RestClient'}) {
     ${routes.length > 1 ? `this.parent = parent
     this.rc = parent.rc` : 'this.rc = rc'}
   }`
@@ -238,10 +238,15 @@ class Index {
     code += `
 }`
 
-    if (routes.length > 1) {
-      console.log(`Todo: add chain methods for ${routes.join('/')}`)
-    }
     fs.writeFileSync(path.join(folderPath, 'index.ts'), code.trim() + '\n\nexport default Index\n')
+
+    if (routes.length > 1) {
+      patchSrcFile(['paths', ...R.init(routes), 'index.ts'], [`import ${R.last(routes)} from './${R.last(routes)}'`], `
+  ${lowerCaseFirst(R.last(routes))}(${paramName ? `${paramName}: string = ${defaultParamValue ? `'${defaultParamValue}'` : 'null'}` : ''}): ${R.last(routes)} {
+    return new ${R.last(routes)}(this${paramName ? `, ${paramName}` : ''})
+  }
+`.trim())
+    }
 
     generate(`${prefix}${name}/`)
     if (paramName) {

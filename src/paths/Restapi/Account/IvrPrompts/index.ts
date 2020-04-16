@@ -1,3 +1,4 @@
+import Content from './Content'
 import UpdateIVRPromptRequest from '../../../../definitions/UpdateIVRPromptRequest'
 import IVRPrompts from '../../../../definitions/IVRPrompts'
 import CreateIvrPromptRequest from '../../../../definitions/CreateIvrPromptRequest'
@@ -76,6 +77,10 @@ class Index {
     }
 
     return this.rc.put(this.path(), updateIVRPromptRequest)
+  }
+
+  content(): Content {
+    return new Content(this)
   }
 }
 

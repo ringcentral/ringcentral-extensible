@@ -1,3 +1,4 @@
+import Content from './Content'
 import DeleteMessageParameters from '../../../../../definitions/DeleteMessageParameters'
 import UpdateMessageRequest from '../../../../../definitions/UpdateMessageRequest'
 import GetMessageInfoResponse from '../../../../../definitions/GetMessageInfoResponse'
@@ -67,6 +68,10 @@ class Index {
     }
 
     return this.rc.delete(this.path(), queryParams)
+  }
+
+  content(attachmentId: string = null): Content {
+    return new Content(this, attachmentId)
   }
 }
 

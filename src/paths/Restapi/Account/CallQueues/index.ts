@@ -1,3 +1,6 @@
+import BulkAssign from './BulkAssign'
+import Members from './Members'
+import Presence from './Presence'
 import CallQueueUpdateDetails from '../../../../definitions/CallQueueUpdateDetails'
 import CallQueueDetails from '../../../../definitions/CallQueueDetails'
 import ListCallQueuesParameters from '../../../../definitions/ListCallQueuesParameters'
@@ -54,6 +57,18 @@ class Index {
     }
 
     return this.rc.put(this.path(), callQueueUpdateDetails)
+  }
+
+  presence(): Presence {
+    return new Presence(this)
+  }
+
+  members(): Members {
+    return new Members(this)
+  }
+
+  bulkAssign(): BulkAssign {
+    return new BulkAssign(this)
   }
 }
 

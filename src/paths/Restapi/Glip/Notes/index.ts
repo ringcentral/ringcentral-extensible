@@ -1,3 +1,6 @@
+import Publish from './Publish'
+import Unlock from './Unlock'
+import Lock from './Lock'
 import GlipNoteCreate from '../../../../definitions/GlipNoteCreate'
 import GlipNoteInfo from '../../../../definitions/GlipNoteInfo'
 import GetGlipNoteInfo from '../../../../definitions/GetGlipNoteInfo'
@@ -57,6 +60,18 @@ class Index {
     }
 
     return this.rc.delete(this.path())
+  }
+
+  lock(): Lock {
+    return new Lock(this)
+  }
+
+  unlock(): Unlock {
+    return new Unlock(this)
+  }
+
+  publish(): Publish {
+    return new Publish(this)
   }
 }
 

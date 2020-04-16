@@ -1,3 +1,16 @@
+import Supervise from './Supervise'
+import Recordings from './Recordings'
+import Park from './Park'
+import Flip from './Flip'
+import Reply from './Reply'
+import Forward from './Forward'
+import Pickup from './Pickup'
+import Answer from './Answer'
+import Transfer from './Transfer'
+import Ignore from './Ignore'
+import Reject from './Reject'
+import Unhold from './Unhold'
+import Hold from './Hold'
 import PartyUpdateRequest from '../../../../../../definitions/PartyUpdateRequest'
 import CallParty from '../../../../../../definitions/CallParty'
 import Parent from '..'
@@ -44,6 +57,58 @@ class Index {
     }
 
     return this.rc.patch(this.path(), partyUpdateRequest)
+  }
+
+  hold(): Hold {
+    return new Hold(this)
+  }
+
+  unhold(): Unhold {
+    return new Unhold(this)
+  }
+
+  reject(): Reject {
+    return new Reject(this)
+  }
+
+  ignore(): Ignore {
+    return new Ignore(this)
+  }
+
+  transfer(): Transfer {
+    return new Transfer(this)
+  }
+
+  answer(): Answer {
+    return new Answer(this)
+  }
+
+  pickup(): Pickup {
+    return new Pickup(this)
+  }
+
+  forward(): Forward {
+    return new Forward(this)
+  }
+
+  reply(): Reply {
+    return new Reply(this)
+  }
+
+  flip(): Flip {
+    return new Flip(this)
+  }
+
+  park(): Park {
+    return new Park(this)
+  }
+
+  recordings(recordingId: string = null): Recordings {
+    return new Recordings(this, recordingId)
+  }
+
+  supervise(): Supervise {
+    return new Supervise(this)
   }
 }
 

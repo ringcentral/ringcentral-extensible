@@ -1,3 +1,5 @@
+import Members from './Members'
+import BulkAssign from './BulkAssign'
 import Parent from '..'
 import RestClient from '../../../..'
 
@@ -18,6 +20,14 @@ class Index {
     }
 
     return `${this.parent.path()}/department`
+  }
+
+  bulkAssign(): BulkAssign {
+    return new BulkAssign(this)
+  }
+
+  members(): Members {
+    return new Members(this)
   }
 }
 

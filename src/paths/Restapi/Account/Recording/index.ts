@@ -1,3 +1,4 @@
+import Content from './Content'
 import GetCallRecordingResponse from '../../../../definitions/GetCallRecordingResponse'
 import Parent from '..'
 import RestClient from '../../../..'
@@ -31,6 +32,10 @@ class Index {
     }
 
     return this.rc.get(this.path())
+  }
+
+  content(): Content {
+    return new Content(this)
   }
 }
 

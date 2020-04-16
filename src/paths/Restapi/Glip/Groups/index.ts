@@ -1,3 +1,7 @@
+import BulkAssign from './BulkAssign'
+import Webhooks from './Webhooks'
+import Events from './Events'
+import Posts from './Posts'
 import GlipCreateGroup from '../../../../definitions/GlipCreateGroup'
 import GlipGroupInfo from '../../../../definitions/GlipGroupInfo'
 import ListGlipGroupsParameters from '../../../../definitions/ListGlipGroupsParameters'
@@ -50,6 +54,22 @@ class Index {
     }
 
     return this.rc.get(this.path())
+  }
+
+  posts(postId: string = null): Posts {
+    return new Posts(this, postId)
+  }
+
+  events(): Events {
+    return new Events(this)
+  }
+
+  webhooks(): Webhooks {
+    return new Webhooks(this)
+  }
+
+  bulkAssign(): BulkAssign {
+    return new BulkAssign(this)
   }
 }
 

@@ -1,3 +1,5 @@
+import Suspend from './Suspend'
+import Activate from './Activate'
 import GlipWebhookList from '../../../../definitions/GlipWebhookList'
 import Parent from '..'
 import RestClient from '../../../..'
@@ -51,6 +53,14 @@ class Index {
     }
 
     return this.rc.delete(this.path())
+  }
+
+  activate(): Activate {
+    return new Activate(this)
+  }
+
+  suspend(): Suspend {
+    return new Suspend(this)
   }
 }
 

@@ -1,3 +1,4 @@
+import Renew from './Renew'
 import UpdateSubscriptionParameters from '../../../definitions/UpdateSubscriptionParameters'
 import ModifySubscriptionRequest from '../../../definitions/ModifySubscriptionRequest'
 import CreateSubscriptionRequest from '../../../definitions/CreateSubscriptionRequest'
@@ -75,6 +76,10 @@ class Index {
     }
 
     return this.rc.delete(this.path())
+  }
+
+  renew(): Renew {
+    return new Renew(this)
   }
 }
 

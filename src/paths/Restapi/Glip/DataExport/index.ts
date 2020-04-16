@@ -1,3 +1,4 @@
+import Datasets from './Datasets'
 import ListDataExportTasksParameters from '../../../../definitions/ListDataExportTasksParameters'
 import DataExportTaskList from '../../../../definitions/DataExportTaskList'
 import CreateDataExportTaskRequest from '../../../../definitions/CreateDataExportTaskRequest'
@@ -50,6 +51,10 @@ class Index {
     }
 
     return this.rc.get(this.path())
+  }
+
+  datasets(datasetId: string = null): Datasets {
+    return new Datasets(this, datasetId)
   }
 }
 

@@ -1,3 +1,4 @@
+import Search from './Search'
 import ContactResource from '../../../../../definitions/ContactResource'
 import ListDirectoryEntriesParameters from '../../../../../definitions/ListDirectoryEntriesParameters'
 import DirectoryResource from '../../../../../definitions/DirectoryResource'
@@ -41,6 +42,10 @@ class Index {
     }
 
     return this.rc.get(this.path())
+  }
+
+  search(): Search {
+    return new Search(this)
   }
 }
 

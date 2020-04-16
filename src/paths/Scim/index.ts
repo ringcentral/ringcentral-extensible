@@ -1,3 +1,6 @@
+import Users from './Users'
+import ServiceProviderConfig from './ServiceProviderConfig'
+import Health from './Health'
 import RestClient from '../..'
 
 class Index {
@@ -15,6 +18,18 @@ class Index {
     }
 
     return `/scim`
+  }
+
+  health(): Health {
+    return new Health(this)
+  }
+
+  serviceProviderConfig(): ServiceProviderConfig {
+    return new ServiceProviderConfig(this)
+  }
+
+  users(id: string = null): Users {
+    return new Users(this, id)
   }
 }
 

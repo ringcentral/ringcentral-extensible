@@ -1,3 +1,4 @@
+import Text from './Text'
 import GlipCreatePost from '../../../../../definitions/GlipCreatePost'
 import GlipPostInfo from '../../../../../definitions/GlipPostInfo'
 import ListGlipGroupPostsParameters from '../../../../../definitions/ListGlipGroupPostsParameters'
@@ -38,6 +39,10 @@ class Index {
    */
   async post(glipCreatePost: GlipCreatePost): Promise<GlipPostInfo> {
     return this.rc.post(this.path(false), glipCreatePost)
+  }
+
+  text(): Text {
+    return new Text(this)
   }
 }
 

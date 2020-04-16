@@ -1,3 +1,4 @@
+import DotSearch from './DotSearch'
 import UserPatch from '../../../definitions/UserPatch'
 import User from '../../../definitions/User'
 import CreateUser from '../../../definitions/CreateUser'
@@ -88,6 +89,10 @@ class Index {
     }
 
     return this.rc.patch(this.path(), userPatch)
+  }
+
+  dotSearch(): DotSearch {
+    return new DotSearch(this)
   }
 }
 

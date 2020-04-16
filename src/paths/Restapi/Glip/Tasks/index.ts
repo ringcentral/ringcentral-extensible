@@ -1,3 +1,4 @@
+import Complete from './Complete'
 import GlipUpdateTask from '../../../../definitions/GlipUpdateTask'
 import GlipTaskList from '../../../../definitions/GlipTaskList'
 import GlipTaskInfo from '../../../../definitions/GlipTaskInfo'
@@ -57,6 +58,10 @@ class Index {
     }
 
     return this.rc.delete(this.path())
+  }
+
+  complete(): Complete {
+    return new Complete(this)
   }
 }
 

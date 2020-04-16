@@ -1,3 +1,4 @@
+import Archive from './Archive'
 import CreateMessageStoreReportRequest from '../../../../definitions/CreateMessageStoreReportRequest'
 import MessageStoreReport from '../../../../definitions/MessageStoreReport'
 import Parent from '..'
@@ -40,6 +41,10 @@ class Index {
     }
 
     return this.rc.get(this.path())
+  }
+
+  archive(archiveId: string = null): Archive {
+    return new Archive(this, archiveId)
   }
 }
 

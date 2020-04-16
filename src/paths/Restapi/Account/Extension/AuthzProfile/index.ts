@@ -1,3 +1,4 @@
+import Check from './Check'
 import AuthProfileResource from '../../../../../definitions/AuthProfileResource'
 import Parent from '..'
 import RestClient from '../../../../..'
@@ -6,7 +7,7 @@ class Index {
   rc: RestClient
   parent: Parent
 
-  Index(parent: Parent) {
+  constructor(parent: Parent) {
     this.parent = parent
     this.rc = parent.rc
   }
@@ -21,6 +22,10 @@ class Index {
    */
   async get(): Promise<AuthProfileResource> {
     return this.rc.get(this.path())
+  }
+
+  check(): Check {
+    return new Check(this)
   }
 }
 

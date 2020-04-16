@@ -1,3 +1,5 @@
+import End from './End'
+import ServiceInfo from './ServiceInfo'
 import MeetingRequestResource from '../../../../../definitions/MeetingRequestResource'
 import MeetingResponseResource from '../../../../../definitions/MeetingResponseResource'
 import MeetingsResource from '../../../../../definitions/MeetingsResource'
@@ -73,6 +75,14 @@ class Index {
     }
 
     return this.rc.delete(this.path())
+  }
+
+  serviceInfo(): ServiceInfo {
+    return new ServiceInfo(this)
+  }
+
+  end(): End {
+    return new End(this)
   }
 }
 

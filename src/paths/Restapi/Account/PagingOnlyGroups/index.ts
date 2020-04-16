@@ -1,3 +1,6 @@
+import BulkAssign from './BulkAssign'
+import Devices from './Devices'
+import Users from './Users'
 import Parent from '..'
 import RestClient from '../../../..'
 
@@ -18,6 +21,18 @@ class Index {
     }
 
     return `${this.parent.path()}/paging-only-groups`
+  }
+
+  users(): Users {
+    return new Users(this)
+  }
+
+  devices(): Devices {
+    return new Devices(this)
+  }
+
+  bulkAssign(): BulkAssign {
+    return new BulkAssign(this)
   }
 }
 

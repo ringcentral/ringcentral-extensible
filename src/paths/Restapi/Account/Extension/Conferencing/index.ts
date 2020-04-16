@@ -8,7 +8,7 @@ class Index {
   rc: RestClient
   parent: Parent
 
-  Index(parent: Parent) {
+  constructor(parent: Parent) {
     this.parent = parent
     this.rc = parent.rc
   }

@@ -1,3 +1,10 @@
+import Tasks from './Tasks'
+import Notes from './Notes'
+import Posts from './Posts'
+import Unread from './Unread'
+import Read from './Read'
+import Unfavorite from './Unfavorite'
+import Favorite from './Favorite'
 import GlipChatInfo from '../../../../definitions/GlipChatInfo'
 import ListGlipChatsParameters from '../../../../definitions/ListGlipChatsParameters'
 import GlipChatsList from '../../../../definitions/GlipChatsList'
@@ -41,6 +48,34 @@ class Index {
     }
 
     return this.rc.get(this.path())
+  }
+
+  favorite(): Favorite {
+    return new Favorite(this)
+  }
+
+  unfavorite(): Unfavorite {
+    return new Unfavorite(this)
+  }
+
+  read(): Read {
+    return new Read(this)
+  }
+
+  unread(): Unread {
+    return new Unread(this)
+  }
+
+  posts(postId: string = null): Posts {
+    return new Posts(this, postId)
+  }
+
+  notes(): Notes {
+    return new Notes(this)
+  }
+
+  tasks(): Tasks {
+    return new Tasks(this)
   }
 }
 

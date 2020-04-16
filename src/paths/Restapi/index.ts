@@ -1,3 +1,11 @@
+import NumberParser from './NumberParser'
+import ClientInfo from './ClientInfo'
+import Subscription from './Subscription'
+import Glip from './Glip'
+import Dictionary from './Dictionary'
+import Account from './Account'
+import Status from './Status'
+import Oauth from './Oauth'
 import GetVersionResponse from '../../definitions/GetVersionResponse'
 import GetVersionsResponse from '../../definitions/GetVersionsResponse'
 import RestClient from '../..'
@@ -37,6 +45,38 @@ class Index {
     }
 
     return this.rc.get(this.path())
+  }
+
+  oauth(): Oauth {
+    return new Oauth(this)
+  }
+
+  status(): Status {
+    return new Status(this)
+  }
+
+  account(accountId: string = '~'): Account {
+    return new Account(this, accountId)
+  }
+
+  dictionary(): Dictionary {
+    return new Dictionary(this)
+  }
+
+  glip(): Glip {
+    return new Glip(this)
+  }
+
+  subscription(subscriptionId: string = null): Subscription {
+    return new Subscription(this, subscriptionId)
+  }
+
+  clientInfo(): ClientInfo {
+    return new ClientInfo(this)
+  }
+
+  numberParser(): NumberParser {
+    return new NumberParser(this)
   }
 }
 

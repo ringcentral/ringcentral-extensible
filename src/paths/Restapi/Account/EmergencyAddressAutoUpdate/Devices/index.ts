@@ -1,3 +1,4 @@
+import BulkAssign from './BulkAssign'
 import ListDevicesAutomaticLocationUpdatesParameters from '../../../../../definitions/ListDevicesAutomaticLocationUpdatesParameters'
 import ListDevicesAutomaticLocationUpdates from '../../../../../definitions/ListDevicesAutomaticLocationUpdates'
 import Parent from '..'
@@ -7,7 +8,7 @@ class Index {
   rc: RestClient
   parent: Parent
 
-  Index(parent: Parent) {
+  constructor(parent: Parent) {
     this.parent = parent
     this.rc = parent.rc
   }
@@ -22,6 +23,10 @@ class Index {
    */
   async get(queryParams?: ListDevicesAutomaticLocationUpdatesParameters): Promise<ListDevicesAutomaticLocationUpdates> {
     return this.rc.get(this.path(), queryParams)
+  }
+
+  bulkAssign(): BulkAssign {
+    return new BulkAssign(this)
   }
 }
 

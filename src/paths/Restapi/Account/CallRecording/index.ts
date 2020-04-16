@@ -1,3 +1,6 @@
+import CustomGreetings from './CustomGreetings'
+import BulkAssign from './BulkAssign'
+import Extensions from './Extensions'
 import CallRecordingSettingsResource from '../../../../definitions/CallRecordingSettingsResource'
 import Parent from '..'
 import RestClient from '../../../..'
@@ -6,7 +9,7 @@ class Index {
   rc: RestClient
   parent: Parent
 
-  Index(parent: Parent) {
+  constructor(parent: Parent) {
     this.parent = parent
     this.rc = parent.rc
   }
@@ -29,6 +32,18 @@ class Index {
    */
   async put(callRecordingSettingsResource: CallRecordingSettingsResource): Promise<CallRecordingSettingsResource> {
     return this.rc.put(this.path(), callRecordingSettingsResource)
+  }
+
+  extensions(): Extensions {
+    return new Extensions(this)
+  }
+
+  bulkAssign(): BulkAssign {
+    return new BulkAssign(this)
+  }
+
+  customGreetings(greetingId: string = null): CustomGreetings {
+    return new CustomGreetings(this, greetingId)
   }
 }
 

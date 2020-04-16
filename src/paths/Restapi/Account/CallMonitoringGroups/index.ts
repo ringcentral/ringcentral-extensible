@@ -1,3 +1,5 @@
+import BulkAssign from './BulkAssign'
+import Members from './Members'
 import ListCallMonitoringGroupsParameters from '../../../../definitions/ListCallMonitoringGroupsParameters'
 import CallMonitoringGroups from '../../../../definitions/CallMonitoringGroups'
 import CreateCallMonitoringGroupRequest from '../../../../definitions/CreateCallMonitoringGroupRequest'
@@ -62,6 +64,14 @@ class Index {
     }
 
     return this.rc.delete(this.path())
+  }
+
+  members(): Members {
+    return new Members(this)
+  }
+
+  bulkAssign(): BulkAssign {
+    return new BulkAssign(this)
   }
 }
 

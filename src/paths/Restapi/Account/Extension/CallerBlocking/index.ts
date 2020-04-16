@@ -1,3 +1,4 @@
+import PhoneNumbers from './PhoneNumbers'
 import CallerBlockingSettingsUpdate from '../../../../../definitions/CallerBlockingSettingsUpdate'
 import CallerBlockingSettings from '../../../../../definitions/CallerBlockingSettings'
 import Parent from '..'
@@ -7,7 +8,7 @@ class Index {
   rc: RestClient
   parent: Parent
 
-  Index(parent: Parent) {
+  constructor(parent: Parent) {
     this.parent = parent
     this.rc = parent.rc
   }
@@ -30,6 +31,10 @@ class Index {
    */
   async put(callerBlockingSettingsUpdate: CallerBlockingSettingsUpdate): Promise<CallerBlockingSettings> {
     return this.rc.put(this.path(), callerBlockingSettingsUpdate)
+  }
+
+  phoneNumbers(blockedNumberId: string = null): PhoneNumbers {
+    return new PhoneNumbers(this, blockedNumberId)
   }
 }
 

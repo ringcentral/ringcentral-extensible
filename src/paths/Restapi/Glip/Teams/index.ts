@@ -1,3 +1,9 @@
+import Unarchive from './Unarchive'
+import Archive from './Archive'
+import Remove from './Remove'
+import Add from './Add'
+import Leave from './Leave'
+import Join from './Join'
 import GlipPatchTeamBody from '../../../../definitions/GlipPatchTeamBody'
 import GlipPostTeamBody from '../../../../definitions/GlipPostTeamBody'
 import GlipTeamInfo from '../../../../definitions/GlipTeamInfo'
@@ -75,6 +81,30 @@ class Index {
     }
 
     return this.rc.delete(this.path())
+  }
+
+  join(): Join {
+    return new Join(this)
+  }
+
+  leave(): Leave {
+    return new Leave(this)
+  }
+
+  add(): Add {
+    return new Add(this)
+  }
+
+  remove(): Remove {
+    return new Remove(this)
+  }
+
+  archive(): Archive {
+    return new Archive(this)
+  }
+
+  unarchive(): Unarchive {
+    return new Unarchive(this)
   }
 }
 
