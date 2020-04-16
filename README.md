@@ -25,3 +25,6 @@ yarn test
 - Test MMS
 - PubNub
 - Generate API reference
+- Travis
+- Replace axios with @ringcentral/sdk ?
+- Make it an RingCentral official project
