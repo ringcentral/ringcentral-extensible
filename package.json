@@ -11,7 +11,8 @@
     "test": "jest -w 1",
     "definitions": "rm -rf ./src/definitions/* && node -r @babel/register ./code-generator/definitions.js",
     "paths": "rm -rf ./src/paths/* && node -r @babel/register ./code-generator/paths.js",
-    "generate": "yarn definitions && yarn paths"
+    "generate": "yarn definitions && yarn paths",
+    "prepublishOnly": "yarn test"
   },
   "dependencies": {
     "axios": "^0.19.2",
@@ -19,12 +20,12 @@
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",
-    "@babel/preset-env": "^7.9.0",
+    "@babel/preset-env": "^7.9.5",
     "@babel/register": "^7.9.0",
-    "@types/node": "^13.11.0",
+    "@types/node": "^13.11.1",
     "change-case": "^4.1.1",
     "dotenv-override-true": "^6.2.0",
-    "jest": "^25.2.7",
+    "jest": "^25.3.0",
     "lower-case-first": "^2.0.1",
     "ramda": "^0.27.0",
     "standard": "^14.3.3",
