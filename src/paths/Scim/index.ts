@@ -7,13 +7,13 @@ class Scim {
   rc: RestClient
   version: string
 
-  constructor(rc: RestClient, version: string = "v2") {
+  constructor(rc: RestClient, version: string = 'v2') {
     this.rc = rc
     this.version = version
   }
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.version !== null) {
+    if (withParameter && this.version) {
       return `/scim/${this.version}`
     }
 
@@ -28,7 +28,7 @@ class Scim {
     return new ServiceProviderConfig(this)
   }
 
-  users(id: string = null): Users {
+  users(id: string): Users {
     return new Users(this, id)
   }
 }

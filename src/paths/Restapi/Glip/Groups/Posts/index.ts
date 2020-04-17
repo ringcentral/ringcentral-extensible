@@ -8,14 +8,14 @@ class Posts {
   postId: string
   parent: Parent
 
-  constructor(parent: Parent, postId: string = null) {
+  constructor(parent: Parent, postId: string) {
     this.parent = parent
     this.rc = parent.rc
     this.postId = postId
   }
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.postId !== null) {
+    if (withParameter && this.postId) {
       return `${this.parent.path()}/posts/${this.postId}`
     }
 

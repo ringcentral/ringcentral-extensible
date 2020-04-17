@@ -7,14 +7,14 @@ class Cards {
   cardId: string
   parent: Parent
 
-  constructor(parent: Parent, cardId: string = null) {
+  constructor(parent: Parent, cardId: string) {
     this.parent = parent
     this.rc = parent.rc
     this.cardId = cardId
   }
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.cardId !== null) {
+    if (withParameter && this.cardId) {
       return `${this.parent.path()}/cards/${this.cardId}`
     }
 
@@ -34,8 +34,8 @@ class Cards {
    * Http get /restapi/v1.0/glip/cards/{cardId}
    */
   async get(): Promise<GlipMessageAttachmentInfo> {
-    if (this.cardId === undefined || this.cardId === null) {
-      throw new Error("cardId must not be undefined or null")
+    if (!this.cardId) {
+      throw new Error('cardId must not be undefined')
     }
 
     return this.rc.get(this.path())
@@ -46,8 +46,8 @@ class Cards {
    * Http put /restapi/v1.0/glip/cards/{cardId}
    */
   async put(glipMessageAttachmentInfoRequest: GlipMessageAttachmentInfoRequest): Promise<string> {
-    if (this.cardId === undefined || this.cardId === null) {
-      throw new Error("cardId must not be undefined or null")
+    if (!this.cardId) {
+      throw new Error('cardId must not be undefined')
     }
 
     return this.rc.put(this.path(), glipMessageAttachmentInfoRequest)
@@ -58,8 +58,8 @@ class Cards {
    * Http delete /restapi/v1.0/glip/cards/{cardId}
    */
   async delete(): Promise<string> {
-    if (this.cardId === undefined || this.cardId === null) {
-      throw new Error("cardId must not be undefined or null")
+    if (!this.cardId) {
+      throw new Error('cardId must not be undefined')
     }
 
     return this.rc.delete(this.path())

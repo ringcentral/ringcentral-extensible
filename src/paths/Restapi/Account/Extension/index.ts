@@ -41,14 +41,14 @@ class Extension {
   extensionId: string
   parent: Parent
 
-  constructor(parent: Parent, extensionId: string = "~") {
+  constructor(parent: Parent, extensionId: string = '~') {
     this.parent = parent
     this.rc = parent.rc
     this.extensionId = extensionId
   }
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.extensionId !== null) {
+    if (withParameter && this.extensionId) {
       return `${this.parent.path()}/extension/${this.extensionId}`
     }
 
@@ -76,8 +76,8 @@ class Extension {
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}
    */
   async get(): Promise<GetExtensionInfoResponse> {
-    if (this.extensionId === undefined || this.extensionId === null) {
-      throw new Error("extensionId must not be undefined or null")
+    if (!this.extensionId) {
+      throw new Error('extensionId must not be undefined')
     }
 
     return this.rc.get(this.path())
@@ -88,8 +88,8 @@ class Extension {
    * Http put /restapi/v1.0/account/{accountId}/extension/{extensionId}
    */
   async put(extensionUpdateRequest: ExtensionUpdateRequest): Promise<GetExtensionInfoResponse> {
-    if (this.extensionId === undefined || this.extensionId === null) {
-      throw new Error("extensionId must not be undefined or null")
+    if (!this.extensionId) {
+      throw new Error('extensionId must not be undefined')
     }
 
     return this.rc.put(this.path(), extensionUpdateRequest)
@@ -100,14 +100,14 @@ class Extension {
    * Http delete /restapi/v1.0/account/{accountId}/extension/{extensionId}
    */
   async delete(queryParams?: DeleteExtensionParameters): Promise<string> {
-    if (this.extensionId === undefined || this.extensionId === null) {
-      throw new Error("extensionId must not be undefined or null")
+    if (!this.extensionId) {
+      throw new Error('extensionId must not be undefined')
     }
 
     return this.rc.delete(this.path(), queryParams)
   }
 
-  callLog(callRecordId: string = null): CallLog {
+  callLog(callRecordId: string): CallLog {
     return new CallLog(this, callRecordId)
   }
 
@@ -135,7 +135,7 @@ class Extension {
     return new Fax(this)
   }
 
-  messageStore(messageId: string = null): MessageStore {
+  messageStore(messageId: string): MessageStore {
     return new MessageStore(this, messageId)
   }
 
@@ -143,7 +143,7 @@ class Extension {
     return new MessageSync(this)
   }
 
-  ringOut(ringoutId: string = null): RingOut {
+  ringOut(ringoutId: string): RingOut {
     return new RingOut(this, ringoutId)
   }
 
@@ -171,7 +171,7 @@ class Extension {
     return new UnifiedPresence(this)
   }
 
-  meeting(meetingId: string = null): Meeting {
+  meeting(meetingId: string): Meeting {
     return new Meeting(this, meetingId)
   }
 
@@ -191,15 +191,15 @@ class Extension {
     return new CallerBlocking(this)
   }
 
-  forwardingNumber(forwardingNumberId: string = null): ForwardingNumber {
+  forwardingNumber(forwardingNumberId: string): ForwardingNumber {
     return new ForwardingNumber(this, forwardingNumberId)
   }
 
-  answeringRule(ruleId: string = null): AnsweringRule {
+  answeringRule(ruleId: string): AnsweringRule {
     return new AnsweringRule(this, ruleId)
   }
 
-  greeting(greetingId: string = null): Greeting {
+  greeting(greetingId: string): Greeting {
     return new Greeting(this, greetingId)
   }
 
@@ -219,7 +219,7 @@ class Extension {
     return new NotificationSettings(this)
   }
 
-  profileImage(scaleSize: string = null): ProfileImage {
+  profileImage(scaleSize: string): ProfileImage {
     return new ProfileImage(this, scaleSize)
   }
 

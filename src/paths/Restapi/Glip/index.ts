@@ -31,15 +31,15 @@ class Glip {
     return `${this.parent.path()}/glip`
   }
 
-  chats(chatId: string = null): Chats {
+  chats(chatId: string): Chats {
     return new Chats(this, chatId)
   }
 
-  conversations(chatId: string = null): Conversations {
+  conversations(chatId: string): Conversations {
     return new Conversations(this, chatId)
   }
 
-  teams(chatId: string = null): Teams {
+  teams(chatId: string): Teams {
     return new Teams(this, chatId)
   }
 
@@ -55,35 +55,35 @@ class Glip {
     return new Favorites(this)
   }
 
-  groups(groupId: string = null): Groups {
+  groups(groupId: string): Groups {
     return new Groups(this, groupId)
   }
 
-  cards(cardId: string = null): Cards {
+  cards(cardId: string): Cards {
     return new Cards(this, cardId)
   }
 
-  events(eventId: string = null): Events {
+  events(eventId: string): Events {
     return new Events(this, eventId)
   }
 
-  notes(noteId: string = null): Notes {
+  notes(noteId: string): Notes {
     return new Notes(this, noteId)
   }
 
-  tasks(taskId: string = null): Tasks {
+  tasks(taskId: string): Tasks {
     return new Tasks(this, taskId)
   }
 
-  persons(personId: string = null): Persons {
+  persons(personId: string): Persons {
     return new Persons(this, personId)
   }
 
-  companies(companyId: string = null): Companies {
+  companies(companyId: string): Companies {
     return new Companies(this, companyId)
   }
 
-  webhooks(webhookId: string = null): Webhooks {
+  webhooks(webhookId: string): Webhooks {
     return new Webhooks(this, webhookId)
   }
 
@@ -95,7 +95,7 @@ class Glip {
     return new Posts(this)
   }
 
-  dataExport(taskId: string = null): DataExport {
+  dataExport(taskId: string): DataExport {
     return new DataExport(this, taskId)
   }
 }

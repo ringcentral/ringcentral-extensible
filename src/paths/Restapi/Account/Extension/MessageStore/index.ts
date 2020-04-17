@@ -8,14 +8,14 @@ class MessageStore {
   messageId: string
   parent: Parent
 
-  constructor(parent: Parent, messageId: string = null) {
+  constructor(parent: Parent, messageId: string) {
     this.parent = parent
     this.rc = parent.rc
     this.messageId = messageId
   }
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.messageId !== null) {
+    if (withParameter && this.messageId) {
       return `${this.parent.path()}/message-store/${this.messageId}`
     }
 
@@ -35,8 +35,8 @@ class MessageStore {
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}
    */
   async get(): Promise<GetMessageInfoResponse> {
-    if (this.messageId === undefined || this.messageId === null) {
-      throw new Error("messageId must not be undefined or null")
+    if (!this.messageId) {
+      throw new Error('messageId must not be undefined')
     }
 
     return this.rc.get(this.path())
@@ -47,8 +47,8 @@ class MessageStore {
    * Http put /restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}
    */
   async put(updateMessageRequest: UpdateMessageRequest): Promise<GetMessageInfoResponse> {
-    if (this.messageId === undefined || this.messageId === null) {
-      throw new Error("messageId must not be undefined or null")
+    if (!this.messageId) {
+      throw new Error('messageId must not be undefined')
     }
 
     return this.rc.put(this.path(), updateMessageRequest)
@@ -59,14 +59,14 @@ class MessageStore {
    * Http delete /restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}
    */
   async delete(queryParams?: DeleteMessageParameters): Promise<string> {
-    if (this.messageId === undefined || this.messageId === null) {
-      throw new Error("messageId must not be undefined or null")
+    if (!this.messageId) {
+      throw new Error('messageId must not be undefined')
     }
 
     return this.rc.delete(this.path(), queryParams)
   }
 
-  content(attachmentId: string = null): Content {
+  content(attachmentId: string): Content {
     return new Content(this, attachmentId)
   }
 }

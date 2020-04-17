@@ -9,14 +9,14 @@ class PagingOnlyGroups {
   pagingOnlyGroupId: string
   parent: Parent
 
-  constructor(parent: Parent, pagingOnlyGroupId: string = null) {
+  constructor(parent: Parent, pagingOnlyGroupId: string) {
     this.parent = parent
     this.rc = parent.rc
     this.pagingOnlyGroupId = pagingOnlyGroupId
   }
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.pagingOnlyGroupId !== null) {
+    if (withParameter && this.pagingOnlyGroupId) {
       return `${this.parent.path()}/paging-only-groups/${this.pagingOnlyGroupId}`
     }
 

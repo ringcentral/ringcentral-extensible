@@ -7,14 +7,14 @@ class EmergencyLocations {
   locationId: string
   parent: Parent
 
-  constructor(parent: Parent, locationId: string = null) {
+  constructor(parent: Parent, locationId: string) {
     this.parent = parent
     this.rc = parent.rc
     this.locationId = locationId
   }
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.locationId !== null) {
+    if (withParameter && this.locationId) {
       return `${this.parent.path()}/emergency-locations/${this.locationId}`
     }
 
@@ -42,8 +42,8 @@ class EmergencyLocations {
    * Http get /restapi/v1.0/account/{accountId}/emergency-locations/{locationId}
    */
   async get(): Promise<EmergencyLocationInfo> {
-    if (this.locationId === undefined || this.locationId === null) {
-      throw new Error("locationId must not be undefined or null")
+    if (!this.locationId) {
+      throw new Error('locationId must not be undefined')
     }
 
     return this.rc.get(this.path())
@@ -54,8 +54,8 @@ class EmergencyLocations {
    * Http put /restapi/v1.0/account/{accountId}/emergency-locations/{locationId}
    */
   async put(emergencyLocationInfoRequest: EmergencyLocationInfoRequest): Promise<EmergencyLocationInfo> {
-    if (this.locationId === undefined || this.locationId === null) {
-      throw new Error("locationId must not be undefined or null")
+    if (!this.locationId) {
+      throw new Error('locationId must not be undefined')
     }
 
     return this.rc.put(this.path(), emergencyLocationInfoRequest)

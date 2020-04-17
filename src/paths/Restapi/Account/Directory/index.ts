@@ -16,7 +16,7 @@ class Directory {
     return `${this.parent.path()}/directory`
   }
 
-  entries(entryId: string = null): Entries {
+  entries(entryId: string): Entries {
     return new Entries(this, entryId)
   }
 

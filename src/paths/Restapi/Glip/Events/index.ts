@@ -7,14 +7,14 @@ class Events {
   eventId: string
   parent: Parent
 
-  constructor(parent: Parent, eventId: string = null) {
+  constructor(parent: Parent, eventId: string) {
     this.parent = parent
     this.rc = parent.rc
     this.eventId = eventId
   }
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.eventId !== null) {
+    if (withParameter && this.eventId) {
       return `${this.parent.path()}/events/${this.eventId}`
     }
 
@@ -42,8 +42,8 @@ class Events {
    * Http get /restapi/v1.0/glip/events/{eventId}
    */
   async get(): Promise<GlipEventInfo> {
-    if (this.eventId === undefined || this.eventId === null) {
-      throw new Error("eventId must not be undefined or null")
+    if (!this.eventId) {
+      throw new Error('eventId must not be undefined')
     }
 
     return this.rc.get(this.path())
@@ -54,8 +54,8 @@ class Events {
    * Http put /restapi/v1.0/glip/events/{eventId}
    */
   async put(glipEventCreate: GlipEventCreate): Promise<GlipEventInfo> {
-    if (this.eventId === undefined || this.eventId === null) {
-      throw new Error("eventId must not be undefined or null")
+    if (!this.eventId) {
+      throw new Error('eventId must not be undefined')
     }
 
     return this.rc.put(this.path(), glipEventCreate)
@@ -66,8 +66,8 @@ class Events {
    * Http delete /restapi/v1.0/glip/events/{eventId}
    */
   async delete(): Promise<string> {
-    if (this.eventId === undefined || this.eventId === null) {
-      throw new Error("eventId must not be undefined or null")
+    if (!this.eventId) {
+      throw new Error('eventId must not be undefined')
     }
 
     return this.rc.delete(this.path())

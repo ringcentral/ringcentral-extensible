@@ -42,7 +42,7 @@ class CallRecording {
     return new BulkAssign(this)
   }
 
-  customGreetings(greetingId: string = null): CustomGreetings {
+  customGreetings(greetingId: string): CustomGreetings {
     return new CustomGreetings(this, greetingId)
   }
 }

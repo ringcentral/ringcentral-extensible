@@ -15,7 +15,7 @@ class AddressBook {
     return `${this.parent.path()}/address-book`
   }
 
-  contact(contactId: string = null): Contact {
+  contact(contactId: string): Contact {
     return new Contact(this, contactId)
   }
 }

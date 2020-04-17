@@ -9,14 +9,14 @@ class Webhooks {
   webhookId: string
   parent: Parent
 
-  constructor(parent: Parent, webhookId: string = null) {
+  constructor(parent: Parent, webhookId: string) {
     this.parent = parent
     this.rc = parent.rc
     this.webhookId = webhookId
   }
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.webhookId !== null) {
+    if (withParameter && this.webhookId) {
       return `${this.parent.path()}/webhooks/${this.webhookId}`
     }
 
@@ -36,8 +36,8 @@ class Webhooks {
    * Http get /restapi/v1.0/glip/webhooks/{webhookId}
    */
   async get(): Promise<GlipWebhookList> {
-    if (this.webhookId === undefined || this.webhookId === null) {
-      throw new Error("webhookId must not be undefined or null")
+    if (!this.webhookId) {
+      throw new Error('webhookId must not be undefined')
     }
 
     return this.rc.get(this.path())
@@ -48,8 +48,8 @@ class Webhooks {
    * Http delete /restapi/v1.0/glip/webhooks/{webhookId}
    */
   async delete(): Promise<string> {
-    if (this.webhookId === undefined || this.webhookId === null) {
-      throw new Error("webhookId must not be undefined or null")
+    if (!this.webhookId) {
+      throw new Error('webhookId must not be undefined')
     }
 
     return this.rc.delete(this.path())

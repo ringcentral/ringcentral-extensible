@@ -7,14 +7,14 @@ class CallLog {
   callRecordId: string
   parent: Parent
 
-  constructor(parent: Parent, callRecordId: string = null) {
+  constructor(parent: Parent, callRecordId: string) {
     this.parent = parent
     this.rc = parent.rc
     this.callRecordId = callRecordId
   }
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.callRecordId !== null) {
+    if (withParameter && this.callRecordId) {
       return `${this.parent.path()}/call-log/${this.callRecordId}`
     }
 
@@ -42,8 +42,8 @@ class CallLog {
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log/{callRecordId}
    */
   async get(queryParams?: ReadUserCallRecordParameters): Promise<UserCallLogRecord> {
-    if (this.callRecordId === undefined || this.callRecordId === null) {
-      throw new Error("callRecordId must not be undefined or null")
+    if (!this.callRecordId) {
+      throw new Error('callRecordId must not be undefined')
     }
 
     return this.rc.get(this.path(), queryParams)

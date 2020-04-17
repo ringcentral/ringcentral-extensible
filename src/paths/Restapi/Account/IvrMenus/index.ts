@@ -7,14 +7,14 @@ class IvrMenus {
   ivrMenuId: string
   parent: Parent
 
-  constructor(parent: Parent, ivrMenuId: string = null) {
+  constructor(parent: Parent, ivrMenuId: string) {
     this.parent = parent
     this.rc = parent.rc
     this.ivrMenuId = ivrMenuId
   }
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.ivrMenuId !== null) {
+    if (withParameter && this.ivrMenuId) {
       return `${this.parent.path()}/ivr-menus/${this.ivrMenuId}`
     }
 
@@ -34,8 +34,8 @@ class IvrMenus {
    * Http get /restapi/v1.0/account/{accountId}/ivr-menus/{ivrMenuId}
    */
   async get(): Promise<IVRMenuInfo> {
-    if (this.ivrMenuId === undefined || this.ivrMenuId === null) {
-      throw new Error("ivrMenuId must not be undefined or null")
+    if (!this.ivrMenuId) {
+      throw new Error('ivrMenuId must not be undefined')
     }
 
     return this.rc.get(this.path())
@@ -46,8 +46,8 @@ class IvrMenus {
    * Http put /restapi/v1.0/account/{accountId}/ivr-menus/{ivrMenuId}
    */
   async put(iVRMenuInfo: IVRMenuInfo): Promise<IVRMenuInfo> {
-    if (this.ivrMenuId === undefined || this.ivrMenuId === null) {
-      throw new Error("ivrMenuId must not be undefined or null")
+    if (!this.ivrMenuId) {
+      throw new Error('ivrMenuId must not be undefined')
     }
 
     return this.rc.put(this.path(), iVRMenuInfo)

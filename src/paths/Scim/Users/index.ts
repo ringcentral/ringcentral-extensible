@@ -8,14 +8,14 @@ class Users {
   id: string
   parent: Parent
 
-  constructor(parent: Parent, id: string = null) {
+  constructor(parent: Parent, id: string) {
     this.parent = parent
     this.rc = parent.rc
     this.id = id
   }
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.id !== null) {
+    if (withParameter && this.id) {
       return `${this.parent.path()}/Users/${this.id}`
     }
 
@@ -43,8 +43,8 @@ class Users {
    * Http get /scim/v2/Users/{id}
    */
   async get(): Promise<UserResponse> {
-    if (this.id === undefined || this.id === null) {
-      throw new Error("id must not be undefined or null")
+    if (!this.id) {
+      throw new Error('id must not be undefined')
     }
 
     return this.rc.get(this.path())
@@ -55,8 +55,8 @@ class Users {
    * Http put /scim/v2/Users/{id}
    */
   async put(user: User): Promise<UserResponse> {
-    if (this.id === undefined || this.id === null) {
-      throw new Error("id must not be undefined or null")
+    if (!this.id) {
+      throw new Error('id must not be undefined')
     }
 
     return this.rc.put(this.path(), user)
@@ -67,8 +67,8 @@ class Users {
    * Http delete /scim/v2/Users/{id}
    */
   async delete(): Promise<string> {
-    if (this.id === undefined || this.id === null) {
-      throw new Error("id must not be undefined or null")
+    if (!this.id) {
+      throw new Error('id must not be undefined')
     }
 
     return this.rc.delete(this.path())
@@ -79,8 +79,8 @@ class Users {
    * Http patch /scim/v2/Users/{id}
    */
   async patch(userPatch: UserPatch): Promise<UserResponse> {
-    if (this.id === undefined || this.id === null) {
-      throw new Error("id must not be undefined or null")
+    if (!this.id) {
+      throw new Error('id must not be undefined')
     }
 
     return this.rc.patch(this.path(), userPatch)

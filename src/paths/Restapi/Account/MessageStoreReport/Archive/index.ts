@@ -7,14 +7,14 @@ class Archive {
   archiveId: string
   parent: Parent
 
-  constructor(parent: Parent, archiveId: string = null) {
+  constructor(parent: Parent, archiveId: string) {
     this.parent = parent
     this.rc = parent.rc
     this.archiveId = archiveId
   }
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.archiveId !== null) {
+    if (withParameter && this.archiveId) {
       return `${this.parent.path()}/archive/${this.archiveId}`
     }
 
@@ -34,8 +34,8 @@ class Archive {
    * Http get /restapi/v1.0/account/{accountId}/message-store-report/{taskId}/archive/{archiveId}
    */
   async get(): Promise<string> {
-    if (this.archiveId === undefined || this.archiveId === null) {
-      throw new Error("archiveId must not be undefined or null")
+    if (!this.archiveId) {
+      throw new Error('archiveId must not be undefined')
     }
 
     return this.rc.get(this.path())

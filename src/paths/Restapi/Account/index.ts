@@ -36,14 +36,14 @@ class Account {
   accountId: string
   parent: Parent
 
-  constructor(parent: Parent, accountId: string = "~") {
+  constructor(parent: Parent, accountId: string = '~') {
     this.parent = parent
     this.rc = parent.rc
     this.accountId = accountId
   }
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.accountId !== null) {
+    if (withParameter && this.accountId) {
       return `${this.parent.path()}/account/${this.accountId}`
     }
 
@@ -55,8 +55,8 @@ class Account {
    * Http get /restapi/v1.0/account/{accountId}
    */
   async get(): Promise<GetAccountInfoResponse> {
-    if (this.accountId === undefined || this.accountId === null) {
-      throw new Error("accountId must not be undefined or null")
+    if (!this.accountId) {
+      throw new Error('accountId must not be undefined')
     }
 
     return this.rc.get(this.path())
@@ -66,7 +66,7 @@ class Account {
     return new Extension(this, extensionId)
   }
 
-  callLog(callRecordId: string = null): CallLog {
+  callLog(callRecordId: string): CallLog {
     return new CallLog(this, callRecordId)
   }
 
@@ -78,7 +78,7 @@ class Account {
     return new ActiveCalls(this)
   }
 
-  recording(recordingId: string = null): Recording {
+  recording(recordingId: string): Recording {
     return new Recording(this, recordingId)
   }
 
@@ -94,7 +94,7 @@ class Account {
     return new Presence(this)
   }
 
-  callQueues(groupId: string = null): CallQueues {
+  callQueues(groupId: string): CallQueues {
     return new CallQueues(this, groupId)
   }
 
@@ -102,7 +102,7 @@ class Account {
     return new BusinessHours(this)
   }
 
-  answeringRule(ruleId: string = null): AnsweringRule {
+  answeringRule(ruleId: string): AnsweringRule {
     return new AnsweringRule(this, ruleId)
   }
 
@@ -110,11 +110,11 @@ class Account {
     return new Greeting(this)
   }
 
-  ivrPrompts(promptId: string = null): IvrPrompts {
+  ivrPrompts(promptId: string): IvrPrompts {
     return new IvrPrompts(this, promptId)
   }
 
-  ivrMenus(ivrMenuId: string = null): IvrMenus {
+  ivrMenus(ivrMenuId: string): IvrMenus {
     return new IvrMenus(this, ivrMenuId)
   }
 
@@ -126,7 +126,7 @@ class Account {
     return new EmergencyAddressAutoUpdate(this)
   }
 
-  emergencyLocations(locationId: string = null): EmergencyLocations {
+  emergencyLocations(locationId: string): EmergencyLocations {
     return new EmergencyLocations(this, locationId)
   }
 
@@ -138,27 +138,27 @@ class Account {
     return new ServiceInfo(this)
   }
 
-  phoneNumber(phoneNumberId: string = null): PhoneNumber {
+  phoneNumber(phoneNumberId: string): PhoneNumber {
     return new PhoneNumber(this, phoneNumberId)
   }
 
-  templates(templateId: string = null): Templates {
+  templates(templateId: string): Templates {
     return new Templates(this, templateId)
   }
 
-  department(departmentId: string = null): Department {
+  department(departmentId: string): Department {
     return new Department(this, departmentId)
   }
 
-  pagingOnlyGroups(pagingOnlyGroupId: string = null): PagingOnlyGroups {
+  pagingOnlyGroups(pagingOnlyGroupId: string): PagingOnlyGroups {
     return new PagingOnlyGroups(this, pagingOnlyGroupId)
   }
 
-  callMonitoringGroups(groupId: string = null): CallMonitoringGroups {
+  callMonitoringGroups(groupId: string): CallMonitoringGroups {
     return new CallMonitoringGroups(this, groupId)
   }
 
-  device(deviceId: string = null): Device {
+  device(deviceId: string): Device {
     return new Device(this, deviceId)
   }
 
@@ -166,7 +166,7 @@ class Account {
     return new Telephony(this)
   }
 
-  messageStoreReport(taskId: string = null): MessageStoreReport {
+  messageStoreReport(taskId: string): MessageStoreReport {
     return new MessageStoreReport(this, taskId)
   }
 
@@ -174,7 +174,7 @@ class Account {
     return new MeetingRecordings(this)
   }
 
-  customFields(fieldId: string = null): CustomFields {
+  customFields(fieldId: string): CustomFields {
     return new CustomFields(this, fieldId)
   }
 }

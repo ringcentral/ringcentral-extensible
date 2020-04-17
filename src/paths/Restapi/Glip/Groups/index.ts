@@ -11,14 +11,14 @@ class Groups {
   groupId: string
   parent: Parent
 
-  constructor(parent: Parent, groupId: string = null) {
+  constructor(parent: Parent, groupId: string) {
     this.parent = parent
     this.rc = parent.rc
     this.groupId = groupId
   }
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.groupId !== null) {
+    if (withParameter && this.groupId) {
       return `${this.parent.path()}/groups/${this.groupId}`
     }
 
@@ -46,14 +46,14 @@ class Groups {
    * Http get /restapi/v1.0/glip/groups/{groupId}
    */
   async get(): Promise<GlipGroupInfo> {
-    if (this.groupId === undefined || this.groupId === null) {
-      throw new Error("groupId must not be undefined or null")
+    if (!this.groupId) {
+      throw new Error('groupId must not be undefined')
     }
 
     return this.rc.get(this.path())
   }
 
-  posts(postId: string = null): Posts {
+  posts(postId: string): Posts {
     return new Posts(this, postId)
   }
 

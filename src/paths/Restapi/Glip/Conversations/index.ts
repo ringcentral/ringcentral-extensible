@@ -7,14 +7,14 @@ class Conversations {
   chatId: string
   parent: Parent
 
-  constructor(parent: Parent, chatId: string = null) {
+  constructor(parent: Parent, chatId: string) {
     this.parent = parent
     this.rc = parent.rc
     this.chatId = chatId
   }
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.chatId !== null) {
+    if (withParameter && this.chatId) {
       return `${this.parent.path()}/conversations/${this.chatId}`
     }
 
@@ -42,8 +42,8 @@ class Conversations {
    * Http get /restapi/v1.0/glip/conversations/{chatId}
    */
   async get(): Promise<GlipConversationInfo> {
-    if (this.chatId === undefined || this.chatId === null) {
-      throw new Error("chatId must not be undefined or null")
+    if (!this.chatId) {
+      throw new Error('chatId must not be undefined')
     }
 
     return this.rc.get(this.path())

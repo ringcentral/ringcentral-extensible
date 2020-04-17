@@ -8,14 +8,14 @@ class ProfileImage {
   scaleSize: string
   parent: Parent
 
-  constructor(parent: Parent, scaleSize: string = null) {
+  constructor(parent: Parent, scaleSize: string) {
     this.parent = parent
     this.rc = parent.rc
     this.scaleSize = scaleSize
   }
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.scaleSize !== null) {
+    if (withParameter && this.scaleSize) {
       return `${this.parent.path()}/profile-image/${this.scaleSize}`
     }
 
@@ -53,8 +53,8 @@ class ProfileImage {
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image/{scaleSize}
    */
   async get(): Promise<Buffer> {
-    if (this.scaleSize === undefined || this.scaleSize === null) {
-      throw new Error("scaleSize must not be undefined or null")
+    if (!this.scaleSize) {
+      throw new Error('scaleSize must not be undefined')
     }
 
     return this.rc.get(this.path())

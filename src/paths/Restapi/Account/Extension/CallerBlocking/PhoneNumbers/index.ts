@@ -7,14 +7,14 @@ class PhoneNumbers {
   blockedNumberId: string
   parent: Parent
 
-  constructor(parent: Parent, blockedNumberId: string = null) {
+  constructor(parent: Parent, blockedNumberId: string) {
     this.parent = parent
     this.rc = parent.rc
     this.blockedNumberId = blockedNumberId
   }
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.blockedNumberId !== null) {
+    if (withParameter && this.blockedNumberId) {
       return `${this.parent.path()}/phone-numbers/${this.blockedNumberId}`
     }
 
@@ -42,8 +42,8 @@ class PhoneNumbers {
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers/{blockedNumberId}
    */
   async get(): Promise<BlockedAllowedPhoneNumberInfo> {
-    if (this.blockedNumberId === undefined || this.blockedNumberId === null) {
-      throw new Error("blockedNumberId must not be undefined or null")
+    if (!this.blockedNumberId) {
+      throw new Error('blockedNumberId must not be undefined')
     }
 
     return this.rc.get(this.path())
@@ -54,8 +54,8 @@ class PhoneNumbers {
    * Http delete /restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers/{blockedNumberId}
    */
   async delete(): Promise<string> {
-    if (this.blockedNumberId === undefined || this.blockedNumberId === null) {
-      throw new Error("blockedNumberId must not be undefined or null")
+    if (!this.blockedNumberId) {
+      throw new Error('blockedNumberId must not be undefined')
     }
 
     return this.rc.delete(this.path())
@@ -66,8 +66,8 @@ class PhoneNumbers {
    * Http put /restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers/{blockedNumberId}
    */
   async put(addBlockedAllowedPhoneNumber: AddBlockedAllowedPhoneNumber): Promise<BlockedAllowedPhoneNumberInfo> {
-    if (this.blockedNumberId === undefined || this.blockedNumberId === null) {
-      throw new Error("blockedNumberId must not be undefined or null")
+    if (!this.blockedNumberId) {
+      throw new Error('blockedNumberId must not be undefined')
     }
 
     return this.rc.put(this.path(), addBlockedAllowedPhoneNumber)

@@ -8,14 +8,14 @@ class Tasks {
   taskId: string
   parent: Parent
 
-  constructor(parent: Parent, taskId: string = null) {
+  constructor(parent: Parent, taskId: string) {
     this.parent = parent
     this.rc = parent.rc
     this.taskId = taskId
   }
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.taskId !== null) {
+    if (withParameter && this.taskId) {
       return `${this.parent.path()}/tasks/${this.taskId}`
     }
 
@@ -27,8 +27,8 @@ class Tasks {
    * Http get /restapi/v1.0/glip/tasks/{taskId}
    */
   async get(): Promise<GlipTaskInfo> {
-    if (this.taskId === undefined || this.taskId === null) {
-      throw new Error("taskId must not be undefined or null")
+    if (!this.taskId) {
+      throw new Error('taskId must not be undefined')
     }
 
     return this.rc.get(this.path())
@@ -39,8 +39,8 @@ class Tasks {
    * Http patch /restapi/v1.0/glip/tasks/{taskId}
    */
   async patch(glipUpdateTask: GlipUpdateTask): Promise<GlipTaskList> {
-    if (this.taskId === undefined || this.taskId === null) {
-      throw new Error("taskId must not be undefined or null")
+    if (!this.taskId) {
+      throw new Error('taskId must not be undefined')
     }
 
     return this.rc.patch(this.path(), glipUpdateTask)
@@ -51,8 +51,8 @@ class Tasks {
    * Http delete /restapi/v1.0/glip/tasks/{taskId}
    */
   async delete(): Promise<string> {
-    if (this.taskId === undefined || this.taskId === null) {
-      throw new Error("taskId must not be undefined or null")
+    if (!this.taskId) {
+      throw new Error('taskId must not be undefined')
     }
 
     return this.rc.delete(this.path())

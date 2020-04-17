@@ -7,14 +7,14 @@ class State {
   stateId: string
   parent: Parent
 
-  constructor(parent: Parent, stateId: string = null) {
+  constructor(parent: Parent, stateId: string) {
     this.parent = parent
     this.rc = parent.rc
     this.stateId = stateId
   }
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.stateId !== null) {
+    if (withParameter && this.stateId) {
       return `${this.parent.path()}/state/${this.stateId}`
     }
 
@@ -34,8 +34,8 @@ class State {
    * Http get /restapi/v1.0/dictionary/state/{stateId}
    */
   async get(): Promise<GetStateInfoResponse> {
-    if (this.stateId === undefined || this.stateId === null) {
-      throw new Error("stateId must not be undefined or null")
+    if (!this.stateId) {
+      throw new Error('stateId must not be undefined')
     }
 
     return this.rc.get(this.path())

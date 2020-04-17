@@ -9,14 +9,14 @@ class IvrPrompts {
   promptId: string
   parent: Parent
 
-  constructor(parent: Parent, promptId: string = null) {
+  constructor(parent: Parent, promptId: string) {
     this.parent = parent
     this.rc = parent.rc
     this.promptId = promptId
   }
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.promptId !== null) {
+    if (withParameter && this.promptId) {
       return `${this.parent.path()}/ivr-prompts/${this.promptId}`
     }
 
@@ -45,8 +45,8 @@ class IvrPrompts {
    * Http get /restapi/v1.0/account/{accountId}/ivr-prompts/{promptId}
    */
   async get(): Promise<PromptInfo> {
-    if (this.promptId === undefined || this.promptId === null) {
-      throw new Error("promptId must not be undefined or null")
+    if (!this.promptId) {
+      throw new Error('promptId must not be undefined')
     }
 
     return this.rc.get(this.path())
@@ -57,8 +57,8 @@ class IvrPrompts {
    * Http delete /restapi/v1.0/account/{accountId}/ivr-prompts/{promptId}
    */
   async delete(): Promise<string> {
-    if (this.promptId === undefined || this.promptId === null) {
-      throw new Error("promptId must not be undefined or null")
+    if (!this.promptId) {
+      throw new Error('promptId must not be undefined')
     }
 
     return this.rc.delete(this.path())
@@ -69,8 +69,8 @@ class IvrPrompts {
    * Http put /restapi/v1.0/account/{accountId}/ivr-prompts/{promptId}
    */
   async put(updateIVRPromptRequest: UpdateIVRPromptRequest): Promise<PromptInfo> {
-    if (this.promptId === undefined || this.promptId === null) {
-      throw new Error("promptId must not be undefined or null")
+    if (!this.promptId) {
+      throw new Error('promptId must not be undefined')
     }
 
     return this.rc.put(this.path(), updateIVRPromptRequest)

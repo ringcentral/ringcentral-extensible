@@ -7,14 +7,14 @@ class Language {
   languageId: string
   parent: Parent
 
-  constructor(parent: Parent, languageId: string = null) {
+  constructor(parent: Parent, languageId: string) {
     this.parent = parent
     this.rc = parent.rc
     this.languageId = languageId
   }
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.languageId !== null) {
+    if (withParameter && this.languageId) {
       return `${this.parent.path()}/language/${this.languageId}`
     }
 
@@ -34,8 +34,8 @@ class Language {
    * Http get /restapi/v1.0/dictionary/language/{languageId}
    */
   async get(): Promise<LanguageInfo> {
-    if (this.languageId === undefined || this.languageId === null) {
-      throw new Error("languageId must not be undefined or null")
+    if (!this.languageId) {
+      throw new Error('languageId must not be undefined')
     }
 
     return this.rc.get(this.path())

@@ -9,14 +9,14 @@ class Meeting {
   meetingId: string
   parent: Parent
 
-  constructor(parent: Parent, meetingId: string = null) {
+  constructor(parent: Parent, meetingId: string) {
     this.parent = parent
     this.rc = parent.rc
     this.meetingId = meetingId
   }
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.meetingId !== null) {
+    if (withParameter && this.meetingId) {
       return `${this.parent.path()}/meeting/${this.meetingId}`
     }
 
@@ -44,8 +44,8 @@ class Meeting {
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/{meetingId}
    */
   async get(): Promise<MeetingResponseResource> {
-    if (this.meetingId === undefined || this.meetingId === null) {
-      throw new Error("meetingId must not be undefined or null")
+    if (!this.meetingId) {
+      throw new Error('meetingId must not be undefined')
     }
 
     return this.rc.get(this.path())
@@ -56,8 +56,8 @@ class Meeting {
    * Http put /restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/{meetingId}
    */
   async put(meetingRequestResource: MeetingRequestResource): Promise<MeetingResponseResource> {
-    if (this.meetingId === undefined || this.meetingId === null) {
-      throw new Error("meetingId must not be undefined or null")
+    if (!this.meetingId) {
+      throw new Error('meetingId must not be undefined')
     }
 
     return this.rc.put(this.path(), meetingRequestResource)
@@ -68,8 +68,8 @@ class Meeting {
    * Http delete /restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/{meetingId}
    */
   async delete(): Promise<string> {
-    if (this.meetingId === undefined || this.meetingId === null) {
-      throw new Error("meetingId must not be undefined or null")
+    if (!this.meetingId) {
+      throw new Error('meetingId must not be undefined')
     }
 
     return this.rc.delete(this.path())

@@ -7,14 +7,14 @@ class Device {
   deviceId: string
   parent: Parent
 
-  constructor(parent: Parent, deviceId: string = null) {
+  constructor(parent: Parent, deviceId: string) {
     this.parent = parent
     this.rc = parent.rc
     this.deviceId = deviceId
   }
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.deviceId !== null) {
+    if (withParameter && this.deviceId) {
       return `${this.parent.path()}/device/${this.deviceId}`
     }
 
@@ -26,8 +26,8 @@ class Device {
    * Http get /restapi/v1.0/account/{accountId}/device/{deviceId}
    */
   async get(queryParams?: ReadDeviceParameters): Promise<GetDeviceInfoResponse> {
-    if (this.deviceId === undefined || this.deviceId === null) {
-      throw new Error("deviceId must not be undefined or null")
+    if (!this.deviceId) {
+      throw new Error('deviceId must not be undefined')
     }
 
     return this.rc.get(this.path(), queryParams)
@@ -38,8 +38,8 @@ class Device {
    * Http put /restapi/v1.0/account/{accountId}/device/{deviceId}
    */
   async put(accountDeviceUpdate: AccountDeviceUpdate): Promise<DeviceResource> {
-    if (this.deviceId === undefined || this.deviceId === null) {
-      throw new Error("deviceId must not be undefined or null")
+    if (!this.deviceId) {
+      throw new Error('deviceId must not be undefined')
     }
 
     return this.rc.put(this.path(), accountDeviceUpdate)

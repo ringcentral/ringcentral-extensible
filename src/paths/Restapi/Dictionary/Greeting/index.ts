@@ -7,14 +7,14 @@ class Greeting {
   greetingId: string
   parent: Parent
 
-  constructor(parent: Parent, greetingId: string = null) {
+  constructor(parent: Parent, greetingId: string) {
     this.parent = parent
     this.rc = parent.rc
     this.greetingId = greetingId
   }
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.greetingId !== null) {
+    if (withParameter && this.greetingId) {
       return `${this.parent.path()}/greeting/${this.greetingId}`
     }
 
@@ -34,8 +34,8 @@ class Greeting {
    * Http get /restapi/v1.0/dictionary/greeting/{greetingId}
    */
   async get(): Promise<DictionaryGreetingInfo> {
-    if (this.greetingId === undefined || this.greetingId === null) {
-      throw new Error("greetingId must not be undefined or null")
+    if (!this.greetingId) {
+      throw new Error('greetingId must not be undefined')
     }
 
     return this.rc.get(this.path())

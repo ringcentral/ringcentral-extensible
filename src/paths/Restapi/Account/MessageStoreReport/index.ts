@@ -8,14 +8,14 @@ class MessageStoreReport {
   taskId: string
   parent: Parent
 
-  constructor(parent: Parent, taskId: string = null) {
+  constructor(parent: Parent, taskId: string) {
     this.parent = parent
     this.rc = parent.rc
     this.taskId = taskId
   }
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.taskId !== null) {
+    if (withParameter && this.taskId) {
       return `${this.parent.path()}/message-store-report/${this.taskId}`
     }
 
@@ -35,14 +35,14 @@ class MessageStoreReport {
    * Http get /restapi/v1.0/account/{accountId}/message-store-report/{taskId}
    */
   async get(): Promise<MessageStoreReport> {
-    if (this.taskId === undefined || this.taskId === null) {
-      throw new Error("taskId must not be undefined or null")
+    if (!this.taskId) {
+      throw new Error('taskId must not be undefined')
     }
 
     return this.rc.get(this.path())
   }
 
-  archive(archiveId: string = null): Archive {
+  archive(archiveId: string): Archive {
     return new Archive(this, archiveId)
   }
 }

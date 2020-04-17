@@ -19,7 +19,7 @@ yarn test
 
 ## Todo
 
-- Remove all `null`, use `undefined` instead
+- Replace double quotes with single quote
 - Test MMS
 - PubNub
 - Generate API reference

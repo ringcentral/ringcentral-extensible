@@ -8,14 +8,14 @@ class Entries {
   entryId: string
   parent: Parent
 
-  constructor(parent: Parent, entryId: string = null) {
+  constructor(parent: Parent, entryId: string) {
     this.parent = parent
     this.rc = parent.rc
     this.entryId = entryId
   }
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.entryId !== null) {
+    if (withParameter && this.entryId) {
       return `${this.parent.path()}/entries/${this.entryId}`
     }
 
@@ -35,8 +35,8 @@ class Entries {
    * Http get /restapi/v1.0/account/{accountId}/directory/entries/{entryId}
    */
   async get(): Promise<ContactResource> {
-    if (this.entryId === undefined || this.entryId === null) {
-      throw new Error("entryId must not be undefined or null")
+    if (!this.entryId) {
+      throw new Error('entryId must not be undefined')
     }
 
     return this.rc.get(this.path())

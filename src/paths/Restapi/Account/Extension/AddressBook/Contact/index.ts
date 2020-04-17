@@ -7,14 +7,14 @@ class Contact {
   contactId: string
   parent: Parent
 
-  constructor(parent: Parent, contactId: string = null) {
+  constructor(parent: Parent, contactId: string) {
     this.parent = parent
     this.rc = parent.rc
     this.contactId = contactId
   }
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.contactId !== null) {
+    if (withParameter && this.contactId) {
       return `${this.parent.path()}/contact/${this.contactId}`
     }
 
@@ -42,8 +42,8 @@ class Contact {
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact/{contactId}
    */
   async get(): Promise<PersonalContactResource> {
-    if (this.contactId === undefined || this.contactId === null) {
-      throw new Error("contactId must not be undefined or null")
+    if (!this.contactId) {
+      throw new Error('contactId must not be undefined')
     }
 
     return this.rc.get(this.path())
@@ -54,8 +54,8 @@ class Contact {
    * Http put /restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact/{contactId}
    */
   async put(personalContactRequest: PersonalContactRequest, queryParams?: UpdateContactParameters): Promise<PersonalContactResource> {
-    if (this.contactId === undefined || this.contactId === null) {
-      throw new Error("contactId must not be undefined or null")
+    if (!this.contactId) {
+      throw new Error('contactId must not be undefined')
     }
 
     return this.rc.put(this.path(), personalContactRequest, queryParams)
@@ -66,8 +66,8 @@ class Contact {
    * Http delete /restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact/{contactId}
    */
   async delete(): Promise<string> {
-    if (this.contactId === undefined || this.contactId === null) {
-      throw new Error("contactId must not be undefined or null")
+    if (!this.contactId) {
+      throw new Error('contactId must not be undefined')
     }
 
     return this.rc.delete(this.path())

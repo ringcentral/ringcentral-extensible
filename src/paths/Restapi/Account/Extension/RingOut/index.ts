@@ -7,14 +7,14 @@ class RingOut {
   ringoutId: string
   parent: Parent
 
-  constructor(parent: Parent, ringoutId: string = null) {
+  constructor(parent: Parent, ringoutId: string) {
     this.parent = parent
     this.rc = parent.rc
     this.ringoutId = ringoutId
   }
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.ringoutId !== null) {
+    if (withParameter && this.ringoutId) {
       return `${this.parent.path()}/ring-out/${this.ringoutId}`
     }
 
@@ -34,8 +34,8 @@ class RingOut {
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/ring-out/{ringoutId}
    */
   async get(): Promise<GetRingOutStatusResponse> {
-    if (this.ringoutId === undefined || this.ringoutId === null) {
-      throw new Error("ringoutId must not be undefined or null")
+    if (!this.ringoutId) {
+      throw new Error('ringoutId must not be undefined')
     }
 
     return this.rc.get(this.path())
@@ -46,8 +46,8 @@ class RingOut {
    * Http delete /restapi/v1.0/account/{accountId}/extension/{extensionId}/ring-out/{ringoutId}
    */
   async delete(): Promise<string> {
-    if (this.ringoutId === undefined || this.ringoutId === null) {
-      throw new Error("ringoutId must not be undefined or null")
+    if (!this.ringoutId) {
+      throw new Error('ringoutId must not be undefined')
     }
 
     return this.rc.delete(this.path())

@@ -7,14 +7,14 @@ class Timezone {
   timezoneId: string
   parent: Parent
 
-  constructor(parent: Parent, timezoneId: string = null) {
+  constructor(parent: Parent, timezoneId: string) {
     this.parent = parent
     this.rc = parent.rc
     this.timezoneId = timezoneId
   }
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.timezoneId !== null) {
+    if (withParameter && this.timezoneId) {
       return `${this.parent.path()}/timezone/${this.timezoneId}`
     }
 
@@ -34,8 +34,8 @@ class Timezone {
    * Http get /restapi/v1.0/dictionary/timezone/{timezoneId}
    */
   async get(queryParams?: ReadTimezoneParameters): Promise<GetTimezoneInfoResponse> {
-    if (this.timezoneId === undefined || this.timezoneId === null) {
-      throw new Error("timezoneId must not be undefined or null")
+    if (!this.timezoneId) {
+      throw new Error('timezoneId must not be undefined')
     }
 
     return this.rc.get(this.path(), queryParams)

@@ -8,14 +8,14 @@ class Department {
   departmentId: string
   parent: Parent
 
-  constructor(parent: Parent, departmentId: string = null) {
+  constructor(parent: Parent, departmentId: string) {
     this.parent = parent
     this.rc = parent.rc
     this.departmentId = departmentId
   }
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.departmentId !== null) {
+    if (withParameter && this.departmentId) {
       return `${this.parent.path()}/department/${this.departmentId}`
     }
 

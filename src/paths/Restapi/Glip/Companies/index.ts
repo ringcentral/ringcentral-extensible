@@ -7,14 +7,14 @@ class Companies {
   companyId: string
   parent: Parent
 
-  constructor(parent: Parent, companyId: string = null) {
+  constructor(parent: Parent, companyId: string) {
     this.parent = parent
     this.rc = parent.rc
     this.companyId = companyId
   }
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.companyId !== null) {
+    if (withParameter && this.companyId) {
       return `${this.parent.path()}/companies/${this.companyId}`
     }
 
@@ -26,8 +26,8 @@ class Companies {
    * Http get /restapi/v1.0/glip/companies/{companyId}
    */
   async get(): Promise<GlipCompany> {
-    if (this.companyId === undefined || this.companyId === null) {
-      throw new Error("companyId must not be undefined or null")
+    if (!this.companyId) {
+      throw new Error('companyId must not be undefined')
     }
 
     return this.rc.get(this.path())

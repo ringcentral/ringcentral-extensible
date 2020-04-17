@@ -7,14 +7,14 @@ class ForwardingNumber {
   forwardingNumberId: string
   parent: Parent
 
-  constructor(parent: Parent, forwardingNumberId: string = null) {
+  constructor(parent: Parent, forwardingNumberId: string) {
     this.parent = parent
     this.rc = parent.rc
     this.forwardingNumberId = forwardingNumberId
   }
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.forwardingNumberId !== null) {
+    if (withParameter && this.forwardingNumberId) {
       return `${this.parent.path()}/forwarding-number/${this.forwardingNumberId}`
     }
 
@@ -42,8 +42,8 @@ class ForwardingNumber {
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number/{forwardingNumberId}
    */
   async get(): Promise<ForwardingNumberInfo> {
-    if (this.forwardingNumberId === undefined || this.forwardingNumberId === null) {
-      throw new Error("forwardingNumberId must not be undefined or null")
+    if (!this.forwardingNumberId) {
+      throw new Error('forwardingNumberId must not be undefined')
     }
 
     return this.rc.get(this.path())
@@ -54,8 +54,8 @@ class ForwardingNumber {
    * Http put /restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number/{forwardingNumberId}
    */
   async put(updateForwardingNumberRequest: UpdateForwardingNumberRequest): Promise<ForwardingNumberInfo> {
-    if (this.forwardingNumberId === undefined || this.forwardingNumberId === null) {
-      throw new Error("forwardingNumberId must not be undefined or null")
+    if (!this.forwardingNumberId) {
+      throw new Error('forwardingNumberId must not be undefined')
     }
 
     return this.rc.put(this.path(), updateForwardingNumberRequest)
@@ -66,8 +66,8 @@ class ForwardingNumber {
    * Http delete /restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number/{forwardingNumberId}
    */
   async delete(): Promise<string> {
-    if (this.forwardingNumberId === undefined || this.forwardingNumberId === null) {
-      throw new Error("forwardingNumberId must not be undefined or null")
+    if (!this.forwardingNumberId) {
+      throw new Error('forwardingNumberId must not be undefined')
     }
 
     return this.rc.delete(this.path())

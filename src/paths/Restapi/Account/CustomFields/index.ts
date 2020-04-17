@@ -7,14 +7,14 @@ class CustomFields {
   fieldId: string
   parent: Parent
 
-  constructor(parent: Parent, fieldId: string = null) {
+  constructor(parent: Parent, fieldId: string) {
     this.parent = parent
     this.rc = parent.rc
     this.fieldId = fieldId
   }
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.fieldId !== null) {
+    if (withParameter && this.fieldId) {
       return `${this.parent.path()}/custom-fields/${this.fieldId}`
     }
 
@@ -42,8 +42,8 @@ class CustomFields {
    * Http put /restapi/v1.0/account/{accountId}/custom-fields/{fieldId}
    */
   async put(customFieldUpdateRequest: CustomFieldUpdateRequest): Promise<CustomFieldResource> {
-    if (this.fieldId === undefined || this.fieldId === null) {
-      throw new Error("fieldId must not be undefined or null")
+    if (!this.fieldId) {
+      throw new Error('fieldId must not be undefined')
     }
 
     return this.rc.put(this.path(), customFieldUpdateRequest)
@@ -54,8 +54,8 @@ class CustomFields {
    * Http delete /restapi/v1.0/account/{accountId}/custom-fields/{fieldId}
    */
   async delete(): Promise<string> {
-    if (this.fieldId === undefined || this.fieldId === null) {
-      throw new Error("fieldId must not be undefined or null")
+    if (!this.fieldId) {
+      throw new Error('fieldId must not be undefined')
     }
 
     return this.rc.delete(this.path())

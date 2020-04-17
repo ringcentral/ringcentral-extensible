@@ -8,14 +8,14 @@ class Subscription {
   subscriptionId: string
   parent: Parent
 
-  constructor(parent: Parent, subscriptionId: string = null) {
+  constructor(parent: Parent, subscriptionId: string) {
     this.parent = parent
     this.rc = parent.rc
     this.subscriptionId = subscriptionId
   }
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.subscriptionId !== null) {
+    if (withParameter && this.subscriptionId) {
       return `${this.parent.path()}/subscription/${this.subscriptionId}`
     }
 
@@ -43,8 +43,8 @@ class Subscription {
    * Http get /restapi/v1.0/subscription/{subscriptionId}
    */
   async get(): Promise<SubscriptionInfo> {
-    if (this.subscriptionId === undefined || this.subscriptionId === null) {
-      throw new Error("subscriptionId must not be undefined or null")
+    if (!this.subscriptionId) {
+      throw new Error('subscriptionId must not be undefined')
     }
 
     return this.rc.get(this.path())
@@ -55,8 +55,8 @@ class Subscription {
    * Http put /restapi/v1.0/subscription/{subscriptionId}
    */
   async put(modifySubscriptionRequest: ModifySubscriptionRequest, queryParams?: UpdateSubscriptionParameters): Promise<SubscriptionInfo> {
-    if (this.subscriptionId === undefined || this.subscriptionId === null) {
-      throw new Error("subscriptionId must not be undefined or null")
+    if (!this.subscriptionId) {
+      throw new Error('subscriptionId must not be undefined')
     }
 
     return this.rc.put(this.path(), modifySubscriptionRequest, queryParams)
@@ -67,8 +67,8 @@ class Subscription {
    * Http delete /restapi/v1.0/subscription/{subscriptionId}
    */
   async delete(): Promise<string> {
-    if (this.subscriptionId === undefined || this.subscriptionId === null) {
-      throw new Error("subscriptionId must not be undefined or null")
+    if (!this.subscriptionId) {
+      throw new Error('subscriptionId must not be undefined')
     }
 
     return this.rc.delete(this.path())

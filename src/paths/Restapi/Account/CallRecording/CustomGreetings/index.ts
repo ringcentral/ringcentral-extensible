@@ -7,14 +7,14 @@ class CustomGreetings {
   greetingId: string
   parent: Parent
 
-  constructor(parent: Parent, greetingId: string = null) {
+  constructor(parent: Parent, greetingId: string) {
     this.parent = parent
     this.rc = parent.rc
     this.greetingId = greetingId
   }
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.greetingId !== null) {
+    if (withParameter && this.greetingId) {
       return `${this.parent.path()}/custom-greetings/${this.greetingId}`
     }
 
@@ -34,8 +34,8 @@ class CustomGreetings {
    * Http delete /restapi/v1.0/account/{accountId}/call-recording/custom-greetings/{greetingId}
    */
   async delete(): Promise<string> {
-    if (this.greetingId === undefined || this.greetingId === null) {
-      throw new Error("greetingId must not be undefined or null")
+    if (!this.greetingId) {
+      throw new Error('greetingId must not be undefined')
     }
 
     return this.rc.delete(this.path())

@@ -7,14 +7,14 @@ class PhoneNumber {
   phoneNumberId: string
   parent: Parent
 
-  constructor(parent: Parent, phoneNumberId: string = null) {
+  constructor(parent: Parent, phoneNumberId: string) {
     this.parent = parent
     this.rc = parent.rc
     this.phoneNumberId = phoneNumberId
   }
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.phoneNumberId !== null) {
+    if (withParameter && this.phoneNumberId) {
       return `${this.parent.path()}/phone-number/${this.phoneNumberId}`
     }
 
@@ -34,8 +34,8 @@ class PhoneNumber {
    * Http get /restapi/v1.0/account/{accountId}/phone-number/{phoneNumberId}
    */
   async get(): Promise<CompanyPhoneNumberInfo> {
-    if (this.phoneNumberId === undefined || this.phoneNumberId === null) {
-      throw new Error("phoneNumberId must not be undefined or null")
+    if (!this.phoneNumberId) {
+      throw new Error('phoneNumberId must not be undefined')
     }
 
     return this.rc.get(this.path())

@@ -20,14 +20,14 @@ class Parties {
   partyId: string
   parent: Parent
 
-  constructor(parent: Parent, partyId: string = null) {
+  constructor(parent: Parent, partyId: string) {
     this.parent = parent
     this.rc = parent.rc
     this.partyId = partyId
   }
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.partyId !== null) {
+    if (withParameter && this.partyId) {
       return `${this.parent.path()}/parties/${this.partyId}`
     }
 
@@ -39,8 +39,8 @@ class Parties {
    * Http get /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}
    */
   async get(): Promise<CallParty> {
-    if (this.partyId === undefined || this.partyId === null) {
-      throw new Error("partyId must not be undefined or null")
+    if (!this.partyId) {
+      throw new Error('partyId must not be undefined')
     }
 
     return this.rc.get(this.path())
@@ -51,8 +51,8 @@ class Parties {
    * Http patch /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}
    */
   async patch(partyUpdateRequest: PartyUpdateRequest): Promise<CallParty> {
-    if (this.partyId === undefined || this.partyId === null) {
-      throw new Error("partyId must not be undefined or null")
+    if (!this.partyId) {
+      throw new Error('partyId must not be undefined')
     }
 
     return this.rc.patch(this.path(), partyUpdateRequest)
@@ -102,7 +102,7 @@ class Parties {
     return new Park(this)
   }
 
-  recordings(recordingId: string = null): Recordings {
+  recordings(recordingId: string): Recordings {
     return new Recordings(this, recordingId)
   }
 
