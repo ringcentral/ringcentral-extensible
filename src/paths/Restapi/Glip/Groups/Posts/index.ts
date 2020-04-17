@@ -6,7 +6,7 @@ import GlipPosts from '../../../../../definitions/GlipPosts'
 import Parent from '..'
 import RestClient from '../../../../..'
 
-class Index {
+class Posts {
   rc: RestClient
   postId: string
   parent: Parent
@@ -46,4 +46,4 @@ class Index {
   }
 }
 
-export default Index
+export default Posts

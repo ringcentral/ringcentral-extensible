@@ -3,7 +3,7 @@ import CreateSipRegistrationResponse from '../../../../definitions/CreateSipRegi
 import Parent from '..'
 import RestClient from '../../../..'
 
-class Index {
+class SipProvision {
   rc: RestClient
   parent: Parent
 
@@ -25,4 +25,4 @@ class Index {
   }
 }
 
-export default Index
+export default SipProvision

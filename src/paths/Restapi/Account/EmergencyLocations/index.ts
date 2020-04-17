@@ -5,7 +5,7 @@ import EmergencyLocationInfoRequest from '../../../../definitions/EmergencyLocat
 import Parent from '..'
 import RestClient from '../../../..'
 
-class Index {
+class EmergencyLocations {
   rc: RestClient
   locationId: string
   parent: Parent
@@ -65,4 +65,4 @@ class Index {
   }
 }
 
-export default Index
+export default EmergencyLocations

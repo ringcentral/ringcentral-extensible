@@ -3,7 +3,7 @@ import BulkAssign from './BulkAssign'
 import Parent from '..'
 import RestClient from '../../../..'
 
-class Index {
+class Department {
   rc: RestClient
   departmentId: string
   parent: Parent
@@ -31,4 +31,4 @@ class Index {
   }
 }
 
-export default Index
+export default Department

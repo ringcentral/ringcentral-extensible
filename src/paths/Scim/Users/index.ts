@@ -8,7 +8,7 @@ import UserSearchResponse from '../../../definitions/UserSearchResponse'
 import Parent from '..'
 import RestClient from '../../..'
 
-class Index {
+class Users {
   rc: RestClient
   id: string
   parent: Parent
@@ -96,4 +96,4 @@ class Index {
   }
 }
 
-export default Index
+export default Users

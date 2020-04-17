@@ -2,7 +2,7 @@ import AssistantsResource from '../../../../../../definitions/AssistantsResource
 import Parent from '..'
 import RestClient from '../../../../../..'
 
-class Index {
+class Assistants {
   rc: RestClient
   parent: Parent
 
@@ -24,4 +24,4 @@ class Index {
   }
 }
 
-export default Index
+export default Assistants

@@ -2,7 +2,7 @@ import CallRecordingExtensions from '../../../../../definitions/CallRecordingExt
 import Parent from '..'
 import RestClient from '../../../../..'
 
-class Index {
+class Extensions {
   rc: RestClient
   parent: Parent
 
@@ -24,4 +24,4 @@ class Index {
   }
 }
 
-export default Index
+export default Extensions

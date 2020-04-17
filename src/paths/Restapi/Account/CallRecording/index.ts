@@ -5,7 +5,7 @@ import CallRecordingSettingsResource from '../../../../definitions/CallRecording
 import Parent from '..'
 import RestClient from '../../../..'
 
-class Index {
+class CallRecording {
   rc: RestClient
   parent: Parent
 
@@ -47,4 +47,4 @@ class Index {
   }
 }
 
-export default Index
+export default CallRecording

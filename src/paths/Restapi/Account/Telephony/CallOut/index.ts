@@ -3,7 +3,7 @@ import CallSession from '../../../../../definitions/CallSession'
 import Parent from '..'
 import RestClient from '../../../../..'
 
-class Index {
+class CallOut {
   rc: RestClient
   parent: Parent
 
@@ -25,4 +25,4 @@ class Index {
   }
 }
 
-export default Index
+export default CallOut

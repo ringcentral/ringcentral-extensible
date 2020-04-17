@@ -5,7 +5,7 @@ import GetTimezoneListResponse from '../../../../definitions/GetTimezoneListResp
 import Parent from '..'
 import RestClient from '../../../..'
 
-class Index {
+class Timezone {
   rc: RestClient
   timezoneId: string
   parent: Parent
@@ -45,4 +45,4 @@ class Index {
   }
 }
 
-export default Index
+export default Timezone

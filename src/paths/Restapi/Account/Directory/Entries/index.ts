@@ -5,7 +5,7 @@ import DirectoryResource from '../../../../../definitions/DirectoryResource'
 import Parent from '..'
 import RestClient from '../../../../..'
 
-class Index {
+class Entries {
   rc: RestClient
   entryId: string
   parent: Parent
@@ -49,4 +49,4 @@ class Index {
   }
 }
 
-export default Index
+export default Entries

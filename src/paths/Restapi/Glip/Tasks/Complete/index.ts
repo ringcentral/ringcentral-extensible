@@ -2,7 +2,7 @@ import GlipCompleteTask from '../../../../../definitions/GlipCompleteTask'
 import Parent from '..'
 import RestClient from '../../../../..'
 
-class Index {
+class Complete {
   rc: RestClient
   parent: Parent
 
@@ -24,4 +24,4 @@ class Index {
   }
 }
 
-export default Index
+export default Complete

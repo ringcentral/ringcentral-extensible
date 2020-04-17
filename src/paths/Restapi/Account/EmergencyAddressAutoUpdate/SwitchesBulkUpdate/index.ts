@@ -3,7 +3,7 @@ import UpdateMultipleSwitchesResponse from '../../../../../definitions/UpdateMul
 import Parent from '..'
 import RestClient from '../../../../..'
 
-class Index {
+class SwitchesBulkUpdate {
   rc: RestClient
   parent: Parent
 
@@ -25,4 +25,4 @@ class Index {
   }
 }
 
-export default Index
+export default SwitchesBulkUpdate

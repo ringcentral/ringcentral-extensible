@@ -5,7 +5,7 @@ import GlipTaskList from '../../../../../definitions/GlipTaskList'
 import Parent from '..'
 import RestClient from '../../../../..'
 
-class Index {
+class Tasks {
   rc: RestClient
   parent: Parent
 
@@ -35,4 +35,4 @@ class Index {
   }
 }
 
-export default Index
+export default Tasks

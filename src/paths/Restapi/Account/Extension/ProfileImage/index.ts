@@ -4,7 +4,7 @@ import Utils from '../../../../../Utils'
 import Parent from '..'
 import RestClient from '../../../../..'
 
-class Index {
+class ProfileImage {
   rc: RestClient
   scaleSize: string
   parent: Parent
@@ -62,4 +62,4 @@ class Index {
   }
 }
 
-export default Index
+export default ProfileImage

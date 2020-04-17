@@ -4,7 +4,7 @@ import GlipMessageAttachmentInfo from '../../../../definitions/GlipMessageAttach
 import Parent from '..'
 import RestClient from '../../../..'
 
-class Index {
+class Cards {
   rc: RestClient
   cardId: string
   parent: Parent
@@ -68,4 +68,4 @@ class Index {
   }
 }
 
-export default Index
+export default Cards

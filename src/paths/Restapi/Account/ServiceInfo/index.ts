@@ -2,7 +2,7 @@ import GetServiceInfoResponse from '../../../../definitions/GetServiceInfoRespon
 import Parent from '..'
 import RestClient from '../../../..'
 
-class Index {
+class ServiceInfo {
   rc: RestClient
   parent: Parent
 
@@ -24,4 +24,4 @@ class Index {
   }
 }
 
-export default Index
+export default ServiceInfo

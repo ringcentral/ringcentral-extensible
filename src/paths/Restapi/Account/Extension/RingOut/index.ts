@@ -3,7 +3,7 @@ import GetRingOutStatusResponse from '../../../../../definitions/GetRingOutStatu
 import Parent from '..'
 import RestClient from '../../../../..'
 
-class Index {
+class RingOut {
   rc: RestClient
   ringoutId: string
   parent: Parent
@@ -55,4 +55,4 @@ class Index {
   }
 }
 
-export default Index
+export default RingOut

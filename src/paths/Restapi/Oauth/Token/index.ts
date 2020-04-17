@@ -3,7 +3,7 @@ import TokenInfo from '../../../../definitions/TokenInfo'
 import Parent from '..'
 import RestClient from '../../../..'
 
-class Index {
+class Token {
   rc: RestClient
   parent: Parent
 
@@ -25,4 +25,4 @@ class Index {
   }
 }
 
-export default Index
+export default Token

@@ -75,7 +75,7 @@ const generate = (prefix = '/') => {
 
     let code = `import RestClient from '${Array(routes.length + 1).fill('..').join('/')}'
 
-class Index {
+class ${R.last(routes)} {
   rc: RestClient`
 
     if (paramName) {
@@ -231,6 +231,7 @@ class Index {
       code = `import Utils from '${Array(routes.length + 1).fill('..').join('/')}/Utils'\n${code}`
     }
 
+    definitionsUsed.delete(R.last(routes))
     for (const definition of definitionsUsed) {
       code = `import ${definition} from '${Array(routes.length + 1).fill('..').join('/')}/definitions/${definition}'\n${code}`
     }
@@ -238,7 +239,7 @@ class Index {
     code += `
 }`
 
-    fs.writeFileSync(path.join(folderPath, 'index.ts'), code.trim() + '\n\nexport default Index\n')
+    fs.writeFileSync(path.join(folderPath, 'index.ts'), code.trim() + `\n\nexport default ${R.last(routes)}\n`)
 
     if (routes.length > 1) {
       patchSrcFile(['paths', ...R.init(routes), 'index.ts'], [`import ${R.last(routes)} from './${R.last(routes)}'`], `

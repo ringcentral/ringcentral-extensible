@@ -3,7 +3,7 @@ import GetMessageSyncResponse from '../../../../../definitions/GetMessageSyncRes
 import Parent from '..'
 import RestClient from '../../../../..'
 
-class Index {
+class MessageSync {
   rc: RestClient
   parent: Parent
 
@@ -25,4 +25,4 @@ class Index {
   }
 }
 
-export default Index
+export default MessageSync

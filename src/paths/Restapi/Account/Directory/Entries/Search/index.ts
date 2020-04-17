@@ -3,7 +3,7 @@ import DirectoryResource from '../../../../../../definitions/DirectoryResource'
 import Parent from '..'
 import RestClient from '../../../../../..'
 
-class Index {
+class Search {
   rc: RestClient
   parent: Parent
 
@@ -25,4 +25,4 @@ class Index {
   }
 }
 
-export default Index
+export default Search

@@ -5,7 +5,7 @@ import GetDeviceInfoResponse from '../../../../definitions/GetDeviceInfoResponse
 import Parent from '..'
 import RestClient from '../../../..'
 
-class Index {
+class Device {
   rc: RestClient
   deviceId: string
   parent: Parent
@@ -49,4 +49,4 @@ class Index {
   }
 }
 
-export default Index
+export default Device

@@ -2,7 +2,7 @@ import AutomaticLocationUpdatesTaskInfo from '../../../../../definitions/Automat
 import Parent from '..'
 import RestClient from '../../../../..'
 
-class Index {
+class Tasks {
   rc: RestClient
   taskId: string
   parent: Parent
@@ -34,4 +34,4 @@ class Index {
   }
 }
 
-export default Index
+export default Tasks

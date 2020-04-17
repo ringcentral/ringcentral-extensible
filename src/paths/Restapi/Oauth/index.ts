@@ -3,7 +3,7 @@ import Revoke from './Revoke'
 import Parent from '..'
 import RestClient from '../../..'
 
-class Index {
+class Oauth {
   rc: RestClient
   parent: Parent
 
@@ -25,4 +25,4 @@ class Index {
   }
 }
 
-export default Index
+export default Oauth

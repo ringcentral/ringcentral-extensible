@@ -4,7 +4,7 @@ import Users from './Users'
 import Parent from '..'
 import RestClient from '../../../..'
 
-class Index {
+class PagingOnlyGroups {
   rc: RestClient
   pagingOnlyGroupId: string
   parent: Parent
@@ -36,4 +36,4 @@ class Index {
   }
 }
 
-export default Index
+export default PagingOnlyGroups

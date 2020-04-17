@@ -2,7 +2,7 @@ import ReadMessageContentParameters from '../../../../../../definitions/ReadMess
 import Parent from '..'
 import RestClient from '../../../../../..'
 
-class Index {
+class Content {
   rc: RestClient
   attachmentId: string
   parent: Parent
@@ -34,4 +34,4 @@ class Index {
   }
 }
 
-export default Index
+export default Content

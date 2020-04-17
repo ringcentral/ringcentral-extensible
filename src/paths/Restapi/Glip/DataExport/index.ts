@@ -6,7 +6,7 @@ import DataExportTask from '../../../../definitions/DataExportTask'
 import Parent from '..'
 import RestClient from '../../../..'
 
-class Index {
+class DataExport {
   rc: RestClient
   taskId: string
   parent: Parent
@@ -58,4 +58,4 @@ class Index {
   }
 }
 
-export default Index
+export default DataExport

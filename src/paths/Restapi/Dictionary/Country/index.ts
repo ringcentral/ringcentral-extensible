@@ -4,7 +4,7 @@ import GetCountryListResponse from '../../../../definitions/GetCountryListRespon
 import Parent from '..'
 import RestClient from '../../../..'
 
-class Index {
+class Country {
   rc: RestClient
   countryId: string
   parent: Parent
@@ -44,4 +44,4 @@ class Index {
   }
 }
 
-export default Index
+export default Country

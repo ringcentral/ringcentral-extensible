@@ -1,9 +1,8 @@
 import SyncUserCallLogParameters from '../../../../../definitions/SyncUserCallLogParameters'
-import CallLogSync from '../../../../../definitions/CallLogSync'
 import Parent from '..'
 import RestClient from '../../../../..'
 
-class Index {
+class CallLogSync {
   rc: RestClient
   parent: Parent
 
@@ -25,4 +24,4 @@ class Index {
   }
 }
 
-export default Index
+export default CallLogSync

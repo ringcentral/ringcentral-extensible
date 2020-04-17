@@ -3,7 +3,7 @@ import GlipChatsListWithoutNavigation from '../../../../../definitions/GlipChats
 import Parent from '..'
 import RestClient from '../../../../..'
 
-class Index {
+class Chats {
   rc: RestClient
   parent: Parent
 
@@ -25,4 +25,4 @@ class Index {
   }
 }
 
-export default Index
+export default Chats

@@ -4,7 +4,7 @@ import CallerBlockingSettings from '../../../../../definitions/CallerBlockingSet
 import Parent from '..'
 import RestClient from '../../../../..'
 
-class Index {
+class CallerBlocking {
   rc: RestClient
   parent: Parent
 
@@ -38,4 +38,4 @@ class Index {
   }
 }
 
-export default Index
+export default CallerBlocking

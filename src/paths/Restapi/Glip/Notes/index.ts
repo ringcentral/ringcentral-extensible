@@ -7,7 +7,7 @@ import GetGlipNoteInfo from '../../../../definitions/GetGlipNoteInfo'
 import Parent from '..'
 import RestClient from '../../../..'
 
-class Index {
+class Notes {
   rc: RestClient
   noteId: string
   parent: Parent
@@ -75,4 +75,4 @@ class Index {
   }
 }
 
-export default Index
+export default Notes

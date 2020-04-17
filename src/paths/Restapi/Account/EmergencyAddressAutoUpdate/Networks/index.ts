@@ -5,7 +5,7 @@ import NetworksList from '../../../../../definitions/NetworksList'
 import Parent from '..'
 import RestClient from '../../../../..'
 
-class Index {
+class Networks {
   rc: RestClient
   networkId: string
   parent: Parent
@@ -77,4 +77,4 @@ class Index {
   }
 }
 
-export default Index
+export default Networks

@@ -1,9 +1,8 @@
 import NotificationSettingsUpdateRequest from '../../../../../definitions/NotificationSettingsUpdateRequest'
-import NotificationSettings from '../../../../../definitions/NotificationSettings'
 import Parent from '..'
 import RestClient from '../../../../..'
 
-class Index {
+class NotificationSettings {
   rc: RestClient
   parent: Parent
 
@@ -33,4 +32,4 @@ class Index {
   }
 }
 
-export default Index
+export default NotificationSettings

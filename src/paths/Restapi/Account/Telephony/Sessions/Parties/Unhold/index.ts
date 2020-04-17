@@ -2,7 +2,7 @@ import CallParty from '../../../../../../../definitions/CallParty'
 import Parent from '..'
 import RestClient from '../../../../../../..'
 
-class Index {
+class Unhold {
   rc: RestClient
   parent: Parent
 
@@ -24,4 +24,4 @@ class Index {
   }
 }
 
-export default Index
+export default Unhold

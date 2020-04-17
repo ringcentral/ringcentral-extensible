@@ -2,7 +2,7 @@ import FederationResource from '../../../../../definitions/FederationResource'
 import Parent from '..'
 import RestClient from '../../../../..'
 
-class Index {
+class Federation {
   rc: RestClient
   parent: Parent
 
@@ -24,4 +24,4 @@ class Index {
   }
 }
 
-export default Index
+export default Federation

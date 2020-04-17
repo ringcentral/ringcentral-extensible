@@ -7,7 +7,7 @@ import ContactList from '../../../../../../definitions/ContactList'
 import Parent from '..'
 import RestClient from '../../../../../..'
 
-class Index {
+class Contact {
   rc: RestClient
   contactId: string
   parent: Parent
@@ -79,4 +79,4 @@ class Index {
   }
 }
 
-export default Index
+export default Contact

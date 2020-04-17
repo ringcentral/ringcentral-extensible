@@ -3,7 +3,7 @@ import GetExtensionDevicesResponse from '../../../../../definitions/GetExtension
 import Parent from '..'
 import RestClient from '../../../../..'
 
-class Index {
+class Device {
   rc: RestClient
   parent: Parent
 
@@ -25,4 +25,4 @@ class Index {
   }
 }
 
-export default Index
+export default Device

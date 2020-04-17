@@ -16,7 +16,7 @@ import CallParty from '../../../../../../definitions/CallParty'
 import Parent from '..'
 import RestClient from '../../../../../..'
 
-class Index {
+class Parties {
   rc: RestClient
   partyId: string
   parent: Parent
@@ -112,4 +112,4 @@ class Index {
   }
 }
 
-export default Index
+export default Parties

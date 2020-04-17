@@ -4,11 +4,10 @@ import Presence from './Presence'
 import CallQueueUpdateDetails from '../../../../definitions/CallQueueUpdateDetails'
 import CallQueueDetails from '../../../../definitions/CallQueueDetails'
 import ListCallQueuesParameters from '../../../../definitions/ListCallQueuesParameters'
-import CallQueues from '../../../../definitions/CallQueues'
 import Parent from '..'
 import RestClient from '../../../..'
 
-class Index {
+class CallQueues {
   rc: RestClient
   groupId: string
   parent: Parent
@@ -72,4 +71,4 @@ class Index {
   }
 }
 
-export default Index
+export default CallQueues

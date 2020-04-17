@@ -3,7 +3,7 @@ import AccountPresenceInfo from '../../../../definitions/AccountPresenceInfo'
 import Parent from '..'
 import RestClient from '../../../..'
 
-class Index {
+class Presence {
   rc: RestClient
   parent: Parent
 
@@ -25,4 +25,4 @@ class Index {
   }
 }
 
-export default Index
+export default Presence

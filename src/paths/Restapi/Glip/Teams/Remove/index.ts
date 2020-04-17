@@ -2,7 +2,7 @@ import GlipPostMembersIdsListBody from '../../../../../definitions/GlipPostMembe
 import Parent from '..'
 import RestClient from '../../../../..'
 
-class Index {
+class Remove {
   rc: RestClient
   parent: Parent
 
@@ -24,4 +24,4 @@ class Index {
   }
 }
 
-export default Index
+export default Remove

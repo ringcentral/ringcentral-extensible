@@ -3,7 +3,7 @@ import SuperviseCallSession from '../../../../../../definitions/SuperviseCallSes
 import Parent from '..'
 import RestClient from '../../../../../..'
 
-class Index {
+class Supervise {
   rc: RestClient
   parent: Parent
 
@@ -25,4 +25,4 @@ class Index {
   }
 }
 
-export default Index
+export default Supervise

@@ -2,7 +2,7 @@ import GlipCompany from '../../../../definitions/GlipCompany'
 import Parent from '..'
 import RestClient from '../../../..'
 
-class Index {
+class Companies {
   rc: RestClient
   companyId: string
   parent: Parent
@@ -34,4 +34,4 @@ class Index {
   }
 }
 
-export default Index
+export default Companies

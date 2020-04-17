@@ -2,7 +2,7 @@ import SubscriptionInfo from '../../../../definitions/SubscriptionInfo'
 import Parent from '..'
 import RestClient from '../../../..'
 
-class Index {
+class Renew {
   rc: RestClient
   parent: Parent
 
@@ -24,4 +24,4 @@ class Index {
   }
 }
 
-export default Index
+export default Renew

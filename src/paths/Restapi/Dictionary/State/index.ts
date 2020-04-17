@@ -4,7 +4,7 @@ import GetStateListResponse from '../../../../definitions/GetStateListResponse'
 import Parent from '..'
 import RestClient from '../../../..'
 
-class Index {
+class State {
   rc: RestClient
   stateId: string
   parent: Parent
@@ -44,4 +44,4 @@ class Index {
   }
 }
 
-export default Index
+export default State

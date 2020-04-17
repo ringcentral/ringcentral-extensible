@@ -9,7 +9,7 @@ import GlipGroupList from '../../../../definitions/GlipGroupList'
 import Parent from '..'
 import RestClient from '../../../..'
 
-class Index {
+class Groups {
   rc: RestClient
   groupId: string
   parent: Parent
@@ -73,4 +73,4 @@ class Index {
   }
 }
 
-export default Index
+export default Groups

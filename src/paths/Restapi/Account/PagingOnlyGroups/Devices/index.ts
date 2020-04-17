@@ -3,7 +3,7 @@ import PagingOnlyGroupDevices from '../../../../../definitions/PagingOnlyGroupDe
 import Parent from '..'
 import RestClient from '../../../../..'
 
-class Index {
+class Devices {
   rc: RestClient
   parent: Parent
 
@@ -25,4 +25,4 @@ class Index {
   }
 }
 
-export default Index
+export default Devices

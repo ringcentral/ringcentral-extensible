@@ -2,7 +2,7 @@ import GlipPersonInfo from '../../../../definitions/GlipPersonInfo'
 import Parent from '..'
 import RestClient from '../../../..'
 
-class Index {
+class Persons {
   rc: RestClient
   personId: string
   parent: Parent
@@ -34,4 +34,4 @@ class Index {
   }
 }
 
-export default Index
+export default Persons

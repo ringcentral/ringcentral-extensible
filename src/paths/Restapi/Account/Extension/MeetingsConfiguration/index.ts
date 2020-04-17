@@ -3,7 +3,7 @@ import Assistants from './Assistants'
 import Parent from '..'
 import RestClient from '../../../../..'
 
-class Index {
+class MeetingsConfiguration {
   rc: RestClient
   parent: Parent
 
@@ -25,4 +25,4 @@ class Index {
   }
 }
 
-export default Index
+export default MeetingsConfiguration

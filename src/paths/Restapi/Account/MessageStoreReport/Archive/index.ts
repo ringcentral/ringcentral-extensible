@@ -2,7 +2,7 @@ import MessageStoreReportArchive from '../../../../../definitions/MessageStoreRe
 import Parent from '..'
 import RestClient from '../../../../..'
 
-class Index {
+class Archive {
   rc: RestClient
   archiveId: string
   parent: Parent
@@ -42,4 +42,4 @@ class Index {
   }
 }
 
-export default Index
+export default Archive

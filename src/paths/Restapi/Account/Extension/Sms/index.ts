@@ -3,7 +3,7 @@ import GetMessageInfoResponse from '../../../../../definitions/GetMessageInfoRes
 import Parent from '..'
 import RestClient from '../../../../..'
 
-class Index {
+class Sms {
   rc: RestClient
   parent: Parent
 
@@ -25,4 +25,4 @@ class Index {
   }
 }
 
-export default Index
+export default Sms

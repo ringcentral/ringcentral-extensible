@@ -4,7 +4,7 @@ import UserTemplates from '../../../../definitions/UserTemplates'
 import Parent from '..'
 import RestClient from '../../../..'
 
-class Index {
+class Templates {
   rc: RestClient
   templateId: string
   parent: Parent
@@ -44,4 +44,4 @@ class Index {
   }
 }
 
-export default Index
+export default Templates

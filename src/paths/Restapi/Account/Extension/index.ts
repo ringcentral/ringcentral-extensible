@@ -42,7 +42,7 @@ import GetExtensionListResponse from '../../../../definitions/GetExtensionListRe
 import Parent from '..'
 import RestClient from '../../../..'
 
-class Index {
+class Extension {
   rc: RestClient
   extensionId: string
   parent: Parent
@@ -250,4 +250,4 @@ class Index {
   }
 }
 
-export default Index
+export default Extension

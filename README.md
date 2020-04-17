@@ -21,7 +21,6 @@ yarn test
 
 - `import { ... } from './definitions'`
 - Remove all `null`, use `undefined` instead
-- No class with name `Index`
 - Test MMS
 - PubNub
 - Generate API reference

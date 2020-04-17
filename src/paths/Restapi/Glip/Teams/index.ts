@@ -12,7 +12,7 @@ import GlipTeamsList from '../../../../definitions/GlipTeamsList'
 import Parent from '..'
 import RestClient from '../../../..'
 
-class Index {
+class Teams {
   rc: RestClient
   chatId: string
   parent: Parent
@@ -108,4 +108,4 @@ class Index {
   }
 }
 
-export default Index
+export default Teams

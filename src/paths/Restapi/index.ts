@@ -10,7 +10,7 @@ import GetVersionResponse from '../../definitions/GetVersionResponse'
 import GetVersionsResponse from '../../definitions/GetVersionsResponse'
 import RestClient from '../..'
 
-class Index {
+class Restapi {
   rc: RestClient
   apiVersion: string
 
@@ -80,4 +80,4 @@ class Index {
   }
 }
 
-export default Index
+export default Restapi

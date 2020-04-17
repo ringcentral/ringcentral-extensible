@@ -2,7 +2,7 @@ import RevokeTokenRequest from '../../../../definitions/RevokeTokenRequest'
 import Parent from '..'
 import RestClient from '../../../..'
 
-class Index {
+class Revoke {
   rc: RestClient
   parent: Parent
 
@@ -24,4 +24,4 @@ class Index {
   }
 }
 
-export default Index
+export default Revoke

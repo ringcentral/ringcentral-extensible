@@ -6,7 +6,7 @@ import SwitchesList from '../../../../../definitions/SwitchesList'
 import Parent from '..'
 import RestClient from '../../../../..'
 
-class Index {
+class Switches {
   rc: RestClient
   switchId: string
   parent: Parent
@@ -78,4 +78,4 @@ class Index {
   }
 }
 
-export default Index
+export default Switches

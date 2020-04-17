@@ -5,7 +5,7 @@ import CustomFieldResource from '../../../../definitions/CustomFieldResource'
 import Parent from '..'
 import RestClient from '../../../..'
 
-class Index {
+class CustomFields {
   rc: RestClient
   fieldId: string
   parent: Parent
@@ -65,4 +65,4 @@ class Index {
   }
 }
 
-export default Index
+export default CustomFields

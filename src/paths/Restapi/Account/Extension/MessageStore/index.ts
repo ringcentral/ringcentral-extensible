@@ -7,7 +7,7 @@ import GetMessageList from '../../../../../definitions/GetMessageList'
 import Parent from '..'
 import RestClient from '../../../../..'
 
-class Index {
+class MessageStore {
   rc: RestClient
   messageId: string
   parent: Parent
@@ -75,4 +75,4 @@ class Index {
   }
 }
 
-export default Index
+export default MessageStore

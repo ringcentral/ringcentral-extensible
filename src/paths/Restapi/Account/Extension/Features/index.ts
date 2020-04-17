@@ -3,7 +3,7 @@ import FeatureList from '../../../../../definitions/FeatureList'
 import Parent from '..'
 import RestClient from '../../../../..'
 
-class Index {
+class Features {
   rc: RestClient
   parent: Parent
 
@@ -25,4 +25,4 @@ class Index {
   }
 }
 
-export default Index
+export default Features

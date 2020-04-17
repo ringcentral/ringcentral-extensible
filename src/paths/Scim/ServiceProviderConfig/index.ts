@@ -1,8 +1,7 @@
-import ServiceProviderConfig from '../../../definitions/ServiceProviderConfig'
 import Parent from '..'
 import RestClient from '../../..'
 
-class Index {
+class ServiceProviderConfig {
   rc: RestClient
   parent: Parent
 
@@ -24,4 +23,4 @@ class Index {
   }
 }
 
-export default Index
+export default ServiceProviderConfig

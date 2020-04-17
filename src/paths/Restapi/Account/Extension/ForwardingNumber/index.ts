@@ -6,7 +6,7 @@ import GetExtensionForwardingNumberListResponse from '../../../../../definitions
 import Parent from '..'
 import RestClient from '../../../../..'
 
-class Index {
+class ForwardingNumber {
   rc: RestClient
   forwardingNumberId: string
   parent: Parent
@@ -78,4 +78,4 @@ class Index {
   }
 }
 
-export default Index
+export default ForwardingNumber

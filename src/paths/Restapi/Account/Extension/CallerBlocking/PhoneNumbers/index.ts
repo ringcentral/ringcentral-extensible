@@ -5,7 +5,7 @@ import BlockedAllowedPhoneNumbersList from '../../../../../../definitions/Blocke
 import Parent from '..'
 import RestClient from '../../../../../..'
 
-class Index {
+class PhoneNumbers {
   rc: RestClient
   blockedNumberId: string
   parent: Parent
@@ -77,4 +77,4 @@ class Index {
   }
 }
 
-export default Index
+export default PhoneNumbers

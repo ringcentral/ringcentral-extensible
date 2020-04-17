@@ -3,7 +3,7 @@ import ReplyParty from '../../../../../../../definitions/ReplyParty'
 import Parent from '..'
 import RestClient from '../../../../../../..'
 
-class Index {
+class Reply {
   rc: RestClient
   parent: Parent
 
@@ -25,4 +25,4 @@ class Index {
   }
 }
 
-export default Index
+export default Reply

@@ -1,9 +1,8 @@
 import UpdateUnifiedPresence from '../../../../../definitions/UpdateUnifiedPresence'
-import UnifiedPresence from '../../../../../definitions/UnifiedPresence'
 import Parent from '..'
 import RestClient from '../../../../..'
 
-class Index {
+class UnifiedPresence {
   rc: RestClient
   parent: Parent
 
@@ -33,4 +32,4 @@ class Index {
   }
 }
 
-export default Index
+export default UnifiedPresence

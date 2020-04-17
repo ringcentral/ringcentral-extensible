@@ -4,7 +4,7 @@ import Utils from '../../../../../Utils'
 import Parent from '..'
 import RestClient from '../../../../..'
 
-class Index {
+class Greeting {
   rc: RestClient
   greetingId: string
   parent: Parent
@@ -45,4 +45,4 @@ class Index {
   }
 }
 
-export default Index
+export default Greeting

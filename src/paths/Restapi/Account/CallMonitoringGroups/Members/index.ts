@@ -3,7 +3,7 @@ import CallMonitoringGroupMemberList from '../../../../../definitions/CallMonito
 import Parent from '..'
 import RestClient from '../../../../..'
 
-class Index {
+class Members {
   rc: RestClient
   parent: Parent
 
@@ -25,4 +25,4 @@ class Index {
   }
 }
 
-export default Index
+export default Members

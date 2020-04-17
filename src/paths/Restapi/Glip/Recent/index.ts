@@ -2,7 +2,7 @@ import Chats from './Chats'
 import Parent from '..'
 import RestClient from '../../../..'
 
-class Index {
+class Recent {
   rc: RestClient
   parent: Parent
 
@@ -20,4 +20,4 @@ class Index {
   }
 }
 
-export default Index
+export default Recent

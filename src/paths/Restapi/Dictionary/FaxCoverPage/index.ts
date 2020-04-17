@@ -3,7 +3,7 @@ import ListFaxCoverPagesResponse from '../../../../definitions/ListFaxCoverPages
 import Parent from '..'
 import RestClient from '../../../..'
 
-class Index {
+class FaxCoverPage {
   rc: RestClient
   parent: Parent
 
@@ -25,4 +25,4 @@ class Index {
   }
 }
 
-export default Index
+export default FaxCoverPage

@@ -2,7 +2,7 @@ import GlipPreferencesInfo from '../../../../definitions/GlipPreferencesInfo'
 import Parent from '..'
 import RestClient from '../../../..'
 
-class Index {
+class Preferences {
   rc: RestClient
   parent: Parent
 
@@ -24,4 +24,4 @@ class Index {
   }
 }
 
-export default Index
+export default Preferences

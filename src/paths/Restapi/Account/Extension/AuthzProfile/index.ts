@@ -3,7 +3,7 @@ import AuthProfileResource from '../../../../../definitions/AuthProfileResource'
 import Parent from '..'
 import RestClient from '../../../../..'
 
-class Index {
+class AuthzProfile {
   rc: RestClient
   parent: Parent
 
@@ -29,4 +29,4 @@ class Index {
   }
 }
 
-export default Index
+export default AuthzProfile

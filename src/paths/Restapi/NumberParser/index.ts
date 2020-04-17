@@ -2,7 +2,7 @@ import Parse from './Parse'
 import Parent from '..'
 import RestClient from '../../..'
 
-class Index {
+class NumberParser {
   rc: RestClient
   parent: Parent
 
@@ -20,4 +20,4 @@ class Index {
   }
 }
 
-export default Index
+export default NumberParser

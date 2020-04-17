@@ -3,7 +3,7 @@ import CallRecordingCustomGreetings from '../../../../../definitions/CallRecordi
 import Parent from '..'
 import RestClient from '../../../../..'
 
-class Index {
+class CustomGreetings {
   rc: RestClient
   greetingId: string
   parent: Parent
@@ -43,4 +43,4 @@ class Index {
   }
 }
 
-export default Index
+export default CustomGreetings

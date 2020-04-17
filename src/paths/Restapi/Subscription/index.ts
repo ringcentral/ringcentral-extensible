@@ -7,7 +7,7 @@ import RecordsCollectionResourceSubscriptionResponse from '../../../definitions/
 import Parent from '..'
 import RestClient from '../../..'
 
-class Index {
+class Subscription {
   rc: RestClient
   subscriptionId: string
   parent: Parent
@@ -83,4 +83,4 @@ class Index {
   }
 }
 
-export default Index
+export default Subscription

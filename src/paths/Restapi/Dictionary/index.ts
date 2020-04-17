@@ -8,7 +8,7 @@ import FaxCoverPage from './FaxCoverPage'
 import Parent from '..'
 import RestClient from '../../..'
 
-class Index {
+class Dictionary {
   rc: RestClient
   parent: Parent
 
@@ -50,4 +50,4 @@ class Index {
   }
 }
 
-export default Index
+export default Dictionary

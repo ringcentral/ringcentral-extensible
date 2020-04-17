@@ -2,7 +2,7 @@ import SipProvision from './SipProvision'
 import Parent from '..'
 import RestClient from '../../..'
 
-class Index {
+class ClientInfo {
   rc: RestClient
   parent: Parent
 
@@ -20,4 +20,4 @@ class Index {
   }
 }
 
-export default Index
+export default ClientInfo

@@ -2,7 +2,7 @@ import ExtensionCallerIdInfo from '../../../../../definitions/ExtensionCallerIdI
 import Parent from '..'
 import RestClient from '../../../../..'
 
-class Index {
+class CallerId {
   rc: RestClient
   parent: Parent
 
@@ -32,4 +32,4 @@ class Index {
   }
 }
 
-export default Index
+export default CallerId

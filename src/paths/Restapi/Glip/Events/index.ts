@@ -5,7 +5,7 @@ import GlipEventsInfo from '../../../../definitions/GlipEventsInfo'
 import Parent from '..'
 import RestClient from '../../../..'
 
-class Index {
+class Events {
   rc: RestClient
   eventId: string
   parent: Parent
@@ -77,4 +77,4 @@ class Index {
   }
 }
 
-export default Index
+export default Events

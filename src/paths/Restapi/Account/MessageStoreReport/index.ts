@@ -1,10 +1,9 @@
 import Archive from './Archive'
 import CreateMessageStoreReportRequest from '../../../../definitions/CreateMessageStoreReportRequest'
-import MessageStoreReport from '../../../../definitions/MessageStoreReport'
 import Parent from '..'
 import RestClient from '../../../..'
 
-class Index {
+class MessageStoreReport {
   rc: RestClient
   taskId: string
   parent: Parent
@@ -48,4 +47,4 @@ class Index {
   }
 }
 
-export default Index
+export default MessageStoreReport

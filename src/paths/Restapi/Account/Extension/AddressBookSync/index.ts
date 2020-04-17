@@ -1,9 +1,8 @@
 import SyncAddressBookParameters from '../../../../../definitions/SyncAddressBookParameters'
-import AddressBookSync from '../../../../../definitions/AddressBookSync'
 import Parent from '..'
 import RestClient from '../../../../..'
 
-class Index {
+class AddressBookSync {
   rc: RestClient
   parent: Parent
 
@@ -25,4 +24,4 @@ class Index {
   }
 }
 
-export default Index
+export default AddressBookSync

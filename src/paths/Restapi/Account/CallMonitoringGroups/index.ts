@@ -1,13 +1,12 @@
 import BulkAssign from './BulkAssign'
 import Members from './Members'
 import ListCallMonitoringGroupsParameters from '../../../../definitions/ListCallMonitoringGroupsParameters'
-import CallMonitoringGroups from '../../../../definitions/CallMonitoringGroups'
 import CreateCallMonitoringGroupRequest from '../../../../definitions/CreateCallMonitoringGroupRequest'
 import CallMonitoringGroup from '../../../../definitions/CallMonitoringGroup'
 import Parent from '..'
 import RestClient from '../../../..'
 
-class Index {
+class CallMonitoringGroups {
   rc: RestClient
   groupId: string
   parent: Parent
@@ -75,4 +74,4 @@ class Index {
   }
 }
 
-export default Index
+export default CallMonitoringGroups

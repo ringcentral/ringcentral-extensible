@@ -2,7 +2,7 @@ import IVRMenuInfo from '../../../../definitions/IVRMenuInfo'
 import Parent from '..'
 import RestClient from '../../../..'
 
-class Index {
+class IvrMenus {
   rc: RestClient
   ivrMenuId: string
   parent: Parent
@@ -54,4 +54,4 @@ class Index {
   }
 }
 
-export default Index
+export default IvrMenus

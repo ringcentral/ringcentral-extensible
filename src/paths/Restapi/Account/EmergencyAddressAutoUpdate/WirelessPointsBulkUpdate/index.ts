@@ -3,7 +3,7 @@ import UpdateMultipleWirelessPointsResponse from '../../../../../definitions/Upd
 import Parent from '..'
 import RestClient from '../../../../..'
 
-class Index {
+class WirelessPointsBulkUpdate {
   rc: RestClient
   parent: Parent
 
@@ -25,4 +25,4 @@ class Index {
   }
 }
 
-export default Index
+export default WirelessPointsBulkUpdate

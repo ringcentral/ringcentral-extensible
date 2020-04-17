@@ -3,7 +3,7 @@ import CreateMultipleWirelessPointsResponse from '../../../../../definitions/Cre
 import Parent from '..'
 import RestClient from '../../../../..'
 
-class Index {
+class WirelessPointsBulkCreate {
   rc: RestClient
   parent: Parent
 
@@ -25,4 +25,4 @@ class Index {
   }
 }
 
-export default Index
+export default WirelessPointsBulkCreate

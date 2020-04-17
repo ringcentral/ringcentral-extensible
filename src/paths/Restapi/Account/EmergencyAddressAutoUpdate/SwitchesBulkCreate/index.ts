@@ -3,7 +3,7 @@ import CreateMultipleSwitchesResponse from '../../../../../definitions/CreateMul
 import Parent from '..'
 import RestClient from '../../../../..'
 
-class Index {
+class SwitchesBulkCreate {
   rc: RestClient
   parent: Parent
 
@@ -25,4 +25,4 @@ class Index {
   }
 }
 
-export default Index
+export default SwitchesBulkCreate

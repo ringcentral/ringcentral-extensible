@@ -6,7 +6,7 @@ import MeetingsResource from '../../../../../definitions/MeetingsResource'
 import Parent from '..'
 import RestClient from '../../../../..'
 
-class Index {
+class Meeting {
   rc: RestClient
   meetingId: string
   parent: Parent
@@ -86,4 +86,4 @@ class Index {
   }
 }
 
-export default Index
+export default Meeting

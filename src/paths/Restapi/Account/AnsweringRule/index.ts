@@ -6,7 +6,7 @@ import CompanyAnsweringRuleInfo from '../../../../definitions/CompanyAnsweringRu
 import Parent from '..'
 import RestClient from '../../../..'
 
-class Index {
+class AnsweringRule {
   rc: RestClient
   ruleId: string
   parent: Parent
@@ -78,4 +78,4 @@ class Index {
   }
 }
 
-export default Index
+export default AnsweringRule

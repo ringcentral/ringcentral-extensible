@@ -1,7 +1,7 @@
 import Parent from '..'
 import RestClient from '../../../../..'
 
-class Index {
+class Datasets {
   rc: RestClient
   datasetId: string
   parent: Parent
@@ -33,4 +33,4 @@ class Index {
   }
 }
 
-export default Index
+export default Datasets

@@ -3,7 +3,7 @@ import UserActiveCallsResponse from '../../../../../definitions/UserActiveCallsR
 import Parent from '..'
 import RestClient from '../../../../..'
 
-class Index {
+class ActiveCalls {
   rc: RestClient
   parent: Parent
 
@@ -25,4 +25,4 @@ class Index {
   }
 }
 
-export default Index
+export default ActiveCalls

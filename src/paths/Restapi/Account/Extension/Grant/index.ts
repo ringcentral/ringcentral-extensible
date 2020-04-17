@@ -3,7 +3,7 @@ import GetExtensionGrantListResponse from '../../../../../definitions/GetExtensi
 import Parent from '..'
 import RestClient from '../../../../..'
 
-class Index {
+class Grant {
   rc: RestClient
   parent: Parent
 
@@ -25,4 +25,4 @@ class Index {
   }
 }
 
-export default Index
+export default Grant

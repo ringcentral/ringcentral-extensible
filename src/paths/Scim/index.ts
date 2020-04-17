@@ -3,7 +3,7 @@ import ServiceProviderConfig from './ServiceProviderConfig'
 import Health from './Health'
 import RestClient from '../..'
 
-class Index {
+class Scim {
   rc: RestClient
   version: string
 
@@ -33,4 +33,4 @@ class Index {
   }
 }
 
-export default Index
+export default Scim

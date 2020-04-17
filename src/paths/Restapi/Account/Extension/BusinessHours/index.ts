@@ -4,7 +4,7 @@ import GetUserBusinessHoursResponse from '../../../../../definitions/GetUserBusi
 import Parent from '..'
 import RestClient from '../../../../..'
 
-class Index {
+class BusinessHours {
   rc: RestClient
   parent: Parent
 
@@ -34,4 +34,4 @@ class Index {
   }
 }
 
-export default Index
+export default BusinessHours

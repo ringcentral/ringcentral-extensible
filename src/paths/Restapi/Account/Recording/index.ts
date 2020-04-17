@@ -3,7 +3,7 @@ import GetCallRecordingResponse from '../../../../definitions/GetCallRecordingRe
 import Parent from '..'
 import RestClient from '../../../..'
 
-class Index {
+class Recording {
   rc: RestClient
   recordingId: string
   parent: Parent
@@ -39,4 +39,4 @@ class Index {
   }
 }
 
-export default Index
+export default Recording

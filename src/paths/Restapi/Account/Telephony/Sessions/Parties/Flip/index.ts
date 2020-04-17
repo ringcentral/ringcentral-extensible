@@ -2,7 +2,7 @@ import CallPartyFlip from '../../../../../../../definitions/CallPartyFlip'
 import Parent from '..'
 import RestClient from '../../../../../../..'
 
-class Index {
+class Flip {
   rc: RestClient
   parent: Parent
 
@@ -24,4 +24,4 @@ class Index {
   }
 }
 
-export default Index
+export default Flip

@@ -7,7 +7,7 @@ import Utils from '../../../../Utils'
 import Parent from '..'
 import RestClient from '../../../..'
 
-class Index {
+class IvrPrompts {
   rc: RestClient
   promptId: string
   parent: Parent
@@ -84,4 +84,4 @@ class Index {
   }
 }
 
-export default Index
+export default IvrPrompts

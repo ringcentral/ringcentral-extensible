@@ -31,7 +31,7 @@ import GetAccountInfoResponse from '../../../definitions/GetAccountInfoResponse'
 import Parent from '..'
 import RestClient from '../../..'
 
-class Index {
+class Account {
   rc: RestClient
   accountId: string
   parent: Parent
@@ -179,4 +179,4 @@ class Index {
   }
 }
 
-export default Index
+export default Account

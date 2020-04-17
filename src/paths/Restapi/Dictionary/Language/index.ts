@@ -3,7 +3,7 @@ import LanguageList from '../../../../definitions/LanguageList'
 import Parent from '..'
 import RestClient from '../../../..'
 
-class Index {
+class Language {
   rc: RestClient
   languageId: string
   parent: Parent
@@ -43,4 +43,4 @@ class Index {
   }
 }
 
-export default Index
+export default Language

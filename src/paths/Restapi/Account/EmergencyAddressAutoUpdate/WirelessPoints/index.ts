@@ -6,7 +6,7 @@ import WirelessPointsList from '../../../../../definitions/WirelessPointsList'
 import Parent from '..'
 import RestClient from '../../../../..'
 
-class Index {
+class WirelessPoints {
   rc: RestClient
   pointId: string
   parent: Parent
@@ -78,4 +78,4 @@ class Index {
   }
 }
 
-export default Index
+export default WirelessPoints

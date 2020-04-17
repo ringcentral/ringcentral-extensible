@@ -4,7 +4,7 @@ import Utils from '../../../../../Utils'
 import Parent from '..'
 import RestClient from '../../../../..'
 
-class Index {
+class Mms {
   rc: RestClient
   parent: Parent
 
@@ -27,4 +27,4 @@ class Index {
   }
 }
 
-export default Index
+export default Mms

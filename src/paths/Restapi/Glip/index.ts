@@ -18,7 +18,7 @@ import Chats from './Chats'
 import Parent from '..'
 import RestClient from '../../..'
 
-class Index {
+class Glip {
   rc: RestClient
   parent: Parent
 
@@ -100,4 +100,4 @@ class Index {
   }
 }
 
-export default Index
+export default Glip

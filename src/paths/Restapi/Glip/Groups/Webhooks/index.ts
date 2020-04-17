@@ -3,7 +3,7 @@ import GlipWebhookInfo from '../../../../../definitions/GlipWebhookInfo'
 import Parent from '..'
 import RestClient from '../../../../..'
 
-class Index {
+class Webhooks {
   rc: RestClient
   parent: Parent
 
@@ -33,4 +33,4 @@ class Index {
   }
 }
 
-export default Index
+export default Webhooks

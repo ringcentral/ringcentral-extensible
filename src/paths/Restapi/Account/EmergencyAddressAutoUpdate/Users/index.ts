@@ -4,7 +4,7 @@ import AutomaticLocationUpdatesUserList from '../../../../../definitions/Automat
 import Parent from '..'
 import RestClient from '../../../../..'
 
-class Index {
+class Users {
   rc: RestClient
   parent: Parent
 
@@ -30,4 +30,4 @@ class Index {
   }
 }
 
-export default Index
+export default Users

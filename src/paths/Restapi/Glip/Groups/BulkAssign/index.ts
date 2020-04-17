@@ -3,7 +3,7 @@ import GlipGroupInfo from '../../../../../definitions/GlipGroupInfo'
 import Parent from '..'
 import RestClient from '../../../../..'
 
-class Index {
+class BulkAssign {
   rc: RestClient
   parent: Parent
 
@@ -25,4 +25,4 @@ class Index {
   }
 }
 
-export default Index
+export default BulkAssign

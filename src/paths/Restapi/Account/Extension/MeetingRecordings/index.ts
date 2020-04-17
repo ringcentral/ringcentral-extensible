@@ -3,7 +3,7 @@ import ListMeetingRecordingsResponse from '../../../../../definitions/ListMeetin
 import Parent from '..'
 import RestClient from '../../../../..'
 
-class Index {
+class MeetingRecordings {
   rc: RestClient
   parent: Parent
 
@@ -25,4 +25,4 @@ class Index {
   }
 }
 
-export default Index
+export default MeetingRecordings

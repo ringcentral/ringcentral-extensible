@@ -5,7 +5,7 @@ import CallSession from '../../../../../definitions/CallSession'
 import Parent from '..'
 import RestClient from '../../../../..'
 
-class Index {
+class Sessions {
   rc: RestClient
   telephonySessionId: string
   parent: Parent
@@ -57,4 +57,4 @@ class Index {
   }
 }
 
-export default Index
+export default Sessions

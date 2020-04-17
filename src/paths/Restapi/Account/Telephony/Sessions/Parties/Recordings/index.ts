@@ -4,7 +4,7 @@ import CallRecording from '../../../../../../../definitions/CallRecording'
 import Parent from '..'
 import RestClient from '../../../../../../..'
 
-class Index {
+class Recordings {
   rc: RestClient
   recordingId: string
   parent: Parent
@@ -44,4 +44,4 @@ class Index {
   }
 }
 
-export default Index
+export default Recordings

@@ -5,7 +5,7 @@ import GlipConversationsList from '../../../../definitions/GlipConversationsList
 import Parent from '..'
 import RestClient from '../../../..'
 
-class Index {
+class Conversations {
   rc: RestClient
   chatId: string
   parent: Parent
@@ -53,4 +53,4 @@ class Index {
   }
 }
 
-export default Index
+export default Conversations

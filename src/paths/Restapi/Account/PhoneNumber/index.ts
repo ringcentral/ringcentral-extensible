@@ -4,7 +4,7 @@ import AccountPhoneNumbers from '../../../../definitions/AccountPhoneNumbers'
 import Parent from '..'
 import RestClient from '../../../..'
 
-class Index {
+class PhoneNumber {
   rc: RestClient
   phoneNumberId: string
   parent: Parent
@@ -44,4 +44,4 @@ class Index {
   }
 }
 
-export default Index
+export default PhoneNumber

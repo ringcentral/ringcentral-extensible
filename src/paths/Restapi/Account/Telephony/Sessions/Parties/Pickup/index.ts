@@ -3,7 +3,7 @@ import CallParty from '../../../../../../../definitions/CallParty'
 import Parent from '..'
 import RestClient from '../../../../../../..'
 
-class Index {
+class Pickup {
   rc: RestClient
   parent: Parent
 
@@ -25,4 +25,4 @@ class Index {
   }
 }
 
-export default Index
+export default Pickup

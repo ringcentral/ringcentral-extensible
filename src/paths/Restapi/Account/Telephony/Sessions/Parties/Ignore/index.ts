@@ -2,7 +2,7 @@ import IgnoreRequestBody from '../../../../../../../definitions/IgnoreRequestBod
 import Parent from '..'
 import RestClient from '../../../../../../..'
 
-class Index {
+class Ignore {
   rc: RestClient
   parent: Parent
 
@@ -24,4 +24,4 @@ class Index {
   }
 }
 
-export default Index
+export default Ignore

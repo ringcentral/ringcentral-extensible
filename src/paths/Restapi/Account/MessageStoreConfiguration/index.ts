@@ -1,8 +1,7 @@
-import MessageStoreConfiguration from '../../../../definitions/MessageStoreConfiguration'
 import Parent from '..'
 import RestClient from '../../../..'
 
-class Index {
+class MessageStoreConfiguration {
   rc: RestClient
   parent: Parent
 
@@ -32,4 +31,4 @@ class Index {
   }
 }
 
-export default Index
+export default MessageStoreConfiguration
