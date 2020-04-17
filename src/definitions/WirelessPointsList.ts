@@ -1,6 +1,4 @@
-import WirelessPointInfo from './WirelessPointInfo'
-import ProvisioningNavigationInfo from './ProvisioningNavigationInfo'
-import ProvisioningPagingInfo from './ProvisioningPagingInfo'
+import { WirelessPointInfo, ProvisioningNavigationInfo, ProvisioningPagingInfo } from '.'
 
 class WirelessPointsList
 {

@@ -1,4 +1,4 @@
-import AssistantResource from './AssistantResource'
+import { AssistantResource } from '.'
 
 class AssistantsResource
 {

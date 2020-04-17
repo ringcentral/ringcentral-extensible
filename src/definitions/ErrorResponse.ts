@@ -1,4 +1,4 @@
-import Error from './Error'
+import { Error } from '.'
 
   // Format of response in case that any error occured during request processing
 class ErrorResponse

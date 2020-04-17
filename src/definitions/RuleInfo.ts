@@ -1,4 +1,4 @@
-import CreateAnsweringRuleForwardingNumberInfo from './CreateAnsweringRuleForwardingNumberInfo'
+import { CreateAnsweringRuleForwardingNumberInfo } from '.'
 
 class RuleInfo
 {

@@ -1,4 +1,4 @@
-import PartyUpdateInfo from './PartyUpdateInfo'
+import { PartyUpdateInfo } from '.'
 
 class PartyUpdateRequest
 {

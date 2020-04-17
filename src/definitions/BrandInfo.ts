@@ -1,4 +1,4 @@
-import CountryInfo from './CountryInfo'
+import { CountryInfo } from '.'
 
 class BrandInfo
 {

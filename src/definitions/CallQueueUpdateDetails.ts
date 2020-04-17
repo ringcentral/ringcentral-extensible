@@ -1,4 +1,4 @@
-import CallQueueServiceLevelSettings from './CallQueueServiceLevelSettings'
+import { CallQueueServiceLevelSettings } from '.'
 
 class CallQueueUpdateDetails
 {

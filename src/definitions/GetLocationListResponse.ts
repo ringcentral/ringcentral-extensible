@@ -1,6 +1,4 @@
-import LocationInfo from './LocationInfo'
-import ProvisioningNavigationInfo from './ProvisioningNavigationInfo'
-import ProvisioningPagingInfo from './ProvisioningPagingInfo'
+import { LocationInfo, ProvisioningNavigationInfo, ProvisioningPagingInfo } from '.'
 
 class GetLocationListResponse
 {

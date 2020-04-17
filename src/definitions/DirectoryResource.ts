@@ -1,5 +1,4 @@
-import CompanyContactsPagingInfo from './CompanyContactsPagingInfo'
-import ContactResource from './ContactResource'
+import { CompanyContactsPagingInfo, ContactResource } from '.'
 
 class DirectoryResource
 {

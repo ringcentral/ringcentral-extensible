@@ -1,5 +1,4 @@
-import ParamsInfo from './ParamsInfo'
-import ReasonInfo from './ReasonInfo'
+import { ParamsInfo, ReasonInfo } from '.'
 
 class FeatureInfo
 {

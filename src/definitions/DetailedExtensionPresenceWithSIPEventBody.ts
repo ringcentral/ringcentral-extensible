@@ -1,4 +1,4 @@
-import ActiveCallInfo from './ActiveCallInfo'
+import { ActiveCallInfo } from '.'
 
 class DetailedExtensionPresenceWithSIPEventBody
 {

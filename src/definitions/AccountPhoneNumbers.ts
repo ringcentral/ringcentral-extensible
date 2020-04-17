@@ -1,6 +1,4 @@
-import CompanyPhoneNumberInfo from './CompanyPhoneNumberInfo'
-import ProvisioningNavigationInfo from './ProvisioningNavigationInfo'
-import ProvisioningPagingInfo from './ProvisioningPagingInfo'
+import { CompanyPhoneNumberInfo, ProvisioningNavigationInfo, ProvisioningPagingInfo } from '.'
 
 class AccountPhoneNumbers
 {

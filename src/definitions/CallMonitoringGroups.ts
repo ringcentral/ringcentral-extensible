@@ -1,6 +1,4 @@
-import CallMonitoringGroup from './CallMonitoringGroup'
-import ProvisioningNavigationInfo from './ProvisioningNavigationInfo'
-import ProvisioningPagingInfo from './ProvisioningPagingInfo'
+import { CallMonitoringGroup, ProvisioningNavigationInfo, ProvisioningPagingInfo } from '.'
 
 class CallMonitoringGroups
 {

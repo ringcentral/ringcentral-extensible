@@ -1,4 +1,4 @@
-import WeeklyScheduleInfo from './WeeklyScheduleInfo'
+import { WeeklyScheduleInfo } from '.'
 
 class UserBusinessHoursScheduleInfo
 {

@@ -1,4 +1,4 @@
-import CreateWirelessPoint from './CreateWirelessPoint'
+import { CreateWirelessPoint } from '.'
 
 class CreateMultipleWirelessPointsRequest
 {

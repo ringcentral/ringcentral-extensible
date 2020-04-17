@@ -1,7 +1,4 @@
-import MessageAttachmentInfo from './MessageAttachmentInfo'
-import ConversationInfo from './ConversationInfo'
-import MessageSenderInfo from './MessageSenderInfo'
-import MessageRecipientInfo from './MessageRecipientInfo'
+import { MessageAttachmentInfo, ConversationInfo, MessageSenderInfo, MessageRecipientInfo } from '.'
 
 class MessageBody
 {

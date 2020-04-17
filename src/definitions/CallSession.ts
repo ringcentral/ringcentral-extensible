@@ -1,4 +1,4 @@
-import CallSessionObject from './CallSessionObject'
+import { CallSessionObject } from '.'
 
 class CallSession
 {

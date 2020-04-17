@@ -1,4 +1,4 @@
-import WirelessPointValidated from './WirelessPointValidated'
+import { WirelessPointValidated } from '.'
 
 class ValidateMultipleWirelessPointsResponse
 {

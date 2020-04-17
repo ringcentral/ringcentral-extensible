@@ -1,4 +1,4 @@
-import PhoneNumberResource from './PhoneNumberResource'
+import { PhoneNumberResource } from '.'
 
 class FederatedAccountResource
 {

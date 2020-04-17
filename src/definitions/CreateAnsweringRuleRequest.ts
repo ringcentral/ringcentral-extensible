@@ -1,12 +1,4 @@
-import CallersInfoRequest from './CallersInfoRequest'
-import CalledNumberInfo from './CalledNumberInfo'
-import ScheduleInfo from './ScheduleInfo'
-import ForwardingInfo from './ForwardingInfo'
-import UnconditionalForwardingInfo from './UnconditionalForwardingInfo'
-import QueueInfo from './QueueInfo'
-import TransferredExtensionInfo from './TransferredExtensionInfo'
-import VoicemailInfo from './VoicemailInfo'
-import GreetingInfo from './GreetingInfo'
+import { CallersInfoRequest, CalledNumberInfo, ScheduleInfo, ForwardingInfo, UnconditionalForwardingInfo, QueueInfo, TransferredExtensionInfo, VoicemailInfo, GreetingInfo } from '.'
 
 class CreateAnsweringRuleRequest
 {

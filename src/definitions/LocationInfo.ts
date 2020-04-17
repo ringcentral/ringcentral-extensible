@@ -1,4 +1,4 @@
-import LocationStateInfo from './LocationStateInfo'
+import { LocationStateInfo } from '.'
 
 class LocationInfo
 {

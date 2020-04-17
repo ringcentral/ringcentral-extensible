@@ -1,5 +1,4 @@
-import PhoneNumberCountryInfo from './PhoneNumberCountryInfo'
-import DeviceProvisioningExtensionInfo from './DeviceProvisioningExtensionInfo'
+import { PhoneNumberCountryInfo, DeviceProvisioningExtensionInfo } from '.'
 
 class PhoneNumberInfoIntId
 {

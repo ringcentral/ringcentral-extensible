@@ -1,5 +1,4 @@
-import GetPresenceExtensionInfo from './GetPresenceExtensionInfo'
-import ActiveCallInfo from './ActiveCallInfo'
+import { GetPresenceExtensionInfo, ActiveCallInfo } from '.'
 
 class GetPresenceInfo
 {

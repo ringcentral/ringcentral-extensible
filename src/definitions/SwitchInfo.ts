@@ -1,5 +1,4 @@
-import SwitchSiteInfo from './SwitchSiteInfo'
-import LocationUpdatesEmergencyAddressInfo from './LocationUpdatesEmergencyAddressInfo'
+import { SwitchSiteInfo, LocationUpdatesEmergencyAddressInfo } from '.'
 
 class SwitchInfo
 {

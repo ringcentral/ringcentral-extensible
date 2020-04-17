@@ -1,4 +1,4 @@
-import BulkAssignItem from './BulkAssignItem'
+import { BulkAssignItem } from '.'
 
 class DepartmentBulkAssignResource
 {

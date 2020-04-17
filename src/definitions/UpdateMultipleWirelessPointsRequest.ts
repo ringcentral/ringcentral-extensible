@@ -1,4 +1,4 @@
-import UpdateWirelessPoint from './UpdateWirelessPoint'
+import { UpdateWirelessPoint } from '.'
 
 class UpdateMultipleWirelessPointsRequest
 {

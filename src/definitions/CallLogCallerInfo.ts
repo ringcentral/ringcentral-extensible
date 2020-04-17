@@ -1,4 +1,4 @@
-import CallLogRecordDeviceInfo from './CallLogRecordDeviceInfo'
+import { CallLogRecordDeviceInfo } from '.'
 
 class CallLogCallerInfo
 {

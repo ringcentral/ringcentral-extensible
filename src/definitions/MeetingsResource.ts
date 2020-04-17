@@ -1,6 +1,4 @@
-import MeetingResponseResource from './MeetingResponseResource'
-import MeetingsPagingInfo from './MeetingsPagingInfo'
-import MeetingsNavigationInfo from './MeetingsNavigationInfo'
+import { MeetingResponseResource, MeetingsPagingInfo, MeetingsNavigationInfo } from '.'
 
 class MeetingsResource
 {

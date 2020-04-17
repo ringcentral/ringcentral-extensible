@@ -1,6 +1,4 @@
-import NetworkInfo from './NetworkInfo'
-import ProvisioningNavigationInfo from './ProvisioningNavigationInfo'
-import ProvisioningPagingInfo from './ProvisioningPagingInfo'
+import { NetworkInfo, ProvisioningNavigationInfo, ProvisioningPagingInfo } from '.'
 
 class NetworksList
 {

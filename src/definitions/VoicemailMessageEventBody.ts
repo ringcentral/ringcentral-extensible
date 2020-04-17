@@ -1,6 +1,4 @@
-import NotificationRecipientInfo from './NotificationRecipientInfo'
-import SenderInfo from './SenderInfo'
-import MessageAttachmentInfo from './MessageAttachmentInfo'
+import { NotificationRecipientInfo, SenderInfo, MessageAttachmentInfo } from '.'
 
 class VoicemailMessageEventBody
 {

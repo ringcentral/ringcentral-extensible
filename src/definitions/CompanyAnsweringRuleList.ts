@@ -1,6 +1,4 @@
-import ListCompanyAnsweringRuleInfo from './ListCompanyAnsweringRuleInfo'
-import CallHandlingPagingInfo from './CallHandlingPagingInfo'
-import CallHandlingNavigationInfo from './CallHandlingNavigationInfo'
+import { ListCompanyAnsweringRuleInfo, CallHandlingPagingInfo, CallHandlingNavigationInfo } from '.'
 
 class CompanyAnsweringRuleList
 {

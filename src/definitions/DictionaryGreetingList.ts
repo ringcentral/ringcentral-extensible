@@ -1,6 +1,4 @@
-import DictionaryGreetingInfo from './DictionaryGreetingInfo'
-import CallHandlingNavigationInfo from './CallHandlingNavigationInfo'
-import CallHandlingPagingInfo from './CallHandlingPagingInfo'
+import { DictionaryGreetingInfo, CallHandlingNavigationInfo, CallHandlingPagingInfo } from '.'
 
 class DictionaryGreetingList
 {

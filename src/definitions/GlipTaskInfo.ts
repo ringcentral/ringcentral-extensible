@@ -1,7 +1,4 @@
-import GlipTaskInfoCreator from './GlipTaskInfoCreator'
-import GlipTaskInfoAssignee from './GlipTaskInfoAssignee'
-import GlipTaskRecurrenceInfo from './GlipTaskRecurrenceInfo'
-import TaskAttachment from './TaskAttachment'
+import { GlipTaskInfoCreator, GlipTaskInfoAssignee, GlipTaskRecurrenceInfo, TaskAttachment } from '.'
 
 class GlipTaskInfo
 {

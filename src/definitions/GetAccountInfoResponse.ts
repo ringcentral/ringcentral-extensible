@@ -1,9 +1,4 @@
-import GetExtensionInfoResponse from './GetExtensionInfoResponse'
-import ServiceInfo from './ServiceInfo'
-import SignupInfoResource from './SignupInfoResource'
-import AccountStatusInfo from './AccountStatusInfo'
-import RegionalSettings from './RegionalSettings'
-import AccountLimits from './AccountLimits'
+import { GetExtensionInfoResponse, ServiceInfo, SignupInfoResource, AccountStatusInfo, RegionalSettings, AccountLimits } from '.'
 
 class GetAccountInfoResponse
 {

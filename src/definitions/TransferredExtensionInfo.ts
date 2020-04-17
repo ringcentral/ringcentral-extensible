@@ -1,4 +1,4 @@
-import ExtensionInfo from './ExtensionInfo'
+import { ExtensionInfo } from '.'
 
 class TransferredExtensionInfo
 {

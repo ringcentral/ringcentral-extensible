@@ -1,6 +1,4 @@
-import TimezoneResource from './TimezoneResource'
-import CountryResource from './CountryResource'
-import LanguageResource from './LanguageResource'
+import { TimezoneResource, CountryResource, LanguageResource } from '.'
 
 class RegionalSettingsInfo
 {

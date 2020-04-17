@@ -1,4 +1,4 @@
-import TimeInterval from './TimeInterval'
+import { TimeInterval } from '.'
 
 class WeeklyScheduleInfo
 {

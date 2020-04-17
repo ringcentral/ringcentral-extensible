@@ -1,4 +1,4 @@
-import RecipientInfo from './RecipientInfo'
+import { RecipientInfo } from '.'
 
 class VoicemailInfo
 {

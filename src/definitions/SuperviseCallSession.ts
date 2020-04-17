@@ -1,6 +1,4 @@
-import PartyInfo from './PartyInfo'
-import OwnerInfo from './OwnerInfo'
-import CallStatusInfo from './CallStatusInfo'
+import { PartyInfo, OwnerInfo, CallStatusInfo } from '.'
 
 class SuperviseCallSession
 {

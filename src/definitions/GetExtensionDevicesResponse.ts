@@ -1,6 +1,4 @@
-import ExtensionDeviceResponse from './ExtensionDeviceResponse'
-import DeviceProvisioningNavigationInfo from './DeviceProvisioningNavigationInfo'
-import DeviceProvisioningPagingInfo from './DeviceProvisioningPagingInfo'
+import { ExtensionDeviceResponse, DeviceProvisioningNavigationInfo, DeviceProvisioningPagingInfo } from '.'
 
 class GetExtensionDevicesResponse
 {

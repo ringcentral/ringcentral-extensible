@@ -1,4 +1,4 @@
-import DeviceAddonInfo from './DeviceAddonInfo'
+import { DeviceAddonInfo } from '.'
 
 class DeviceModelInfo
 {

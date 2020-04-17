@@ -1,4 +1,4 @@
-import CountryResource from './CountryResource'
+import { CountryResource } from '.'
 
 class DialInNumberResource
 {

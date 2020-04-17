@@ -1,6 +1,4 @@
-import GrantInfo from './GrantInfo'
-import ProvisioningNavigationInfo from './ProvisioningNavigationInfo'
-import ProvisioningPagingInfo from './ProvisioningPagingInfo'
+import { GrantInfo, ProvisioningNavigationInfo, ProvisioningPagingInfo } from '.'
 
 class GetExtensionGrantListResponse
 {

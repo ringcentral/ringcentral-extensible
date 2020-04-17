@@ -1,5 +1,4 @@
-import DeviceEmergencyServiceAddressResource from './DeviceEmergencyServiceAddressResource'
-import MethodResource from './MethodResource'
+import { DeviceEmergencyServiceAddressResource, MethodResource } from '.'
 
 class Shipping
 {

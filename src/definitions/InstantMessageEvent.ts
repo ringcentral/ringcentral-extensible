@@ -1,4 +1,4 @@
-import InstantMessageEventBody from './InstantMessageEventBody'
+import { InstantMessageEventBody } from '.'
 
 class InstantMessageEvent
 {

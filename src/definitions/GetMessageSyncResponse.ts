@@ -1,5 +1,4 @@
-import GetMessageInfoResponse from './GetMessageInfoResponse'
-import SyncInfoMessages from './SyncInfoMessages'
+import { GetMessageInfoResponse, SyncInfoMessages } from '.'
 
 class GetMessageSyncResponse
 {

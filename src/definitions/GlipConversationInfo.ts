@@ -1,4 +1,4 @@
-import CreateGlipMember from './CreateGlipMember'
+import { CreateGlipMember } from '.'
 
 class GlipConversationInfo
 {

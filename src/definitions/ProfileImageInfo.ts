@@ -1,4 +1,4 @@
-import ProfileImageInfoURI from './ProfileImageInfoURI'
+import { ProfileImageInfoURI } from '.'
 
 class ProfileImageInfo
 {

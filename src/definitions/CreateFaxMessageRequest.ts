@@ -1,5 +1,4 @@
-import Attachment from './Attachment'
-import MessageStoreCalleeInfoRequest from './MessageStoreCalleeInfoRequest'
+import { Attachment, MessageStoreCalleeInfoRequest } from '.'
 
 class CreateFaxMessageRequest
 {

@@ -1,4 +1,4 @@
-import BulkTaskInfo from './BulkTaskInfo'
+import { BulkTaskInfo } from '.'
 
   // Information on the task for multiple switches creation
 class CreateMultipleSwitchesResponse

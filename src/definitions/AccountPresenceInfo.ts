@@ -1,6 +1,4 @@
-import GetPresenceInfo from './GetPresenceInfo'
-import PresenceNavigationInfo from './PresenceNavigationInfo'
-import PresencePagingInfo from './PresencePagingInfo'
+import { GetPresenceInfo, PresenceNavigationInfo, PresencePagingInfo } from '.'
 
 class AccountPresenceInfo
 {

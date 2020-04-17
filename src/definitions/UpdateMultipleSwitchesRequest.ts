@@ -1,4 +1,4 @@
-import UpdateSwitchInfo from './UpdateSwitchInfo'
+import { UpdateSwitchInfo } from '.'
 
 class UpdateMultipleSwitchesRequest
 {

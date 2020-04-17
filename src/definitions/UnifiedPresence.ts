@@ -1,6 +1,4 @@
-import UnifiedPresenceGlip from './UnifiedPresenceGlip'
-import UnifiedPresenceTelephony from './UnifiedPresenceTelephony'
-import UnifiedPresenceMeeting from './UnifiedPresenceMeeting'
+import { UnifiedPresenceGlip, UnifiedPresenceTelephony, UnifiedPresenceMeeting } from '.'
 
 class UnifiedPresence
 {

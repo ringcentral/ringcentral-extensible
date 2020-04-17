@@ -1,4 +1,4 @@
-import GlipCompleteTaskAssignee from './GlipCompleteTaskAssignee'
+import { GlipCompleteTaskAssignee } from '.'
 
 class GlipCompleteTask
 {

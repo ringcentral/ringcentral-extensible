@@ -1,4 +1,4 @@
-import UserAnsweringRuleListNavigationPage from './UserAnsweringRuleListNavigationPage'
+import { UserAnsweringRuleListNavigationPage } from '.'
 
 class UserAnsweringRuleListNavigation
 {

@@ -1,5 +1,4 @@
-import CompanyCallLogRecord from './CompanyCallLogRecord'
-import CompanyCallLogSyncInfo from './CompanyCallLogSyncInfo'
+import { CompanyCallLogRecord, CompanyCallLogSyncInfo } from '.'
 
 class AccountCallLogSyncResponse
 {

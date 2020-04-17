@@ -1,6 +1,4 @@
-import BlockedAllowedPhoneNumberInfo from './BlockedAllowedPhoneNumberInfo'
-import CallHandlingNavigationInfo from './CallHandlingNavigationInfo'
-import CallHandlingPagingInfo from './CallHandlingPagingInfo'
+import { BlockedAllowedPhoneNumberInfo, CallHandlingNavigationInfo, CallHandlingPagingInfo } from '.'
 
   // List of blocked or allowed phone numbers
 class BlockedAllowedPhoneNumbersList

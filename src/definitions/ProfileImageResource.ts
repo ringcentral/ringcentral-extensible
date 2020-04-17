@@ -1,4 +1,4 @@
-import ScaledProfileImageResource from './ScaledProfileImageResource'
+import { ScaledProfileImageResource } from '.'
 
 class ProfileImageResource
 {

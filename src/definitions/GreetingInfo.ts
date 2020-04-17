@@ -1,5 +1,4 @@
-import PresetInfo from './PresetInfo'
-import CustomGreetingInfo from './CustomGreetingInfo'
+import { PresetInfo, CustomGreetingInfo } from '.'
 
 class GreetingInfo
 {

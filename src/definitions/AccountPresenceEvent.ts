@@ -1,4 +1,4 @@
-import AccountPresenceEventBody from './AccountPresenceEventBody'
+import { AccountPresenceEventBody } from '.'
 
 class AccountPresenceEvent
 {

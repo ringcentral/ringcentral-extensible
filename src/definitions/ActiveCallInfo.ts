@@ -1,6 +1,4 @@
-import DetailedCallInfo from './DetailedCallInfo'
-import PrimaryCQInfo from './PrimaryCQInfo'
-import AdditionalCQInfo from './AdditionalCQInfo'
+import { DetailedCallInfo, PrimaryCQInfo, AdditionalCQInfo } from '.'
 
 class ActiveCallInfo
 {

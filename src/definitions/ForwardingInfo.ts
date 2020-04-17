@@ -1,4 +1,4 @@
-import RuleInfo from './RuleInfo'
+import { RuleInfo } from '.'
 
 class ForwardingInfo
 {

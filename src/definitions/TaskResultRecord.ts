@@ -1,4 +1,4 @@
-import TaskResultRecordErrorsInfo from './TaskResultRecordErrorsInfo'
+import { TaskResultRecordErrorsInfo } from '.'
 
 class TaskResultRecord
 {

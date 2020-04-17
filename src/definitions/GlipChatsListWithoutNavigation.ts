@@ -1,4 +1,4 @@
-import GlipChatInfo from './GlipChatInfo'
+import { GlipChatInfo } from '.'
 
 class GlipChatsListWithoutNavigation
 {

@@ -1,6 +1,4 @@
-import CallerInfoFrom from './CallerInfoFrom'
-import CallerInfoTo from './CallerInfoTo'
-import MessageAttachmentInfoIntId from './MessageAttachmentInfoIntId'
+import { CallerInfoFrom, CallerInfoTo, MessageAttachmentInfoIntId } from '.'
 
 class FaxResponse
 {

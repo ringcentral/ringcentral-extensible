@@ -1,4 +1,4 @@
-import CallHandlingNavigationInfoUri from './CallHandlingNavigationInfoUri'
+import { CallHandlingNavigationInfoUri } from '.'
 
 class CallHandlingNavigationInfo
 {

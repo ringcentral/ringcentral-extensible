@@ -1,4 +1,4 @@
-import GetCountryInfoConferencing from './GetCountryInfoConferencing'
+import { GetCountryInfoConferencing } from '.'
 
 class PhoneNumberInfoConferencing
 {

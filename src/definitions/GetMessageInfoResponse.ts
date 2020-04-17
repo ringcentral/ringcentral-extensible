@@ -1,7 +1,4 @@
-import MessageAttachmentInfo from './MessageAttachmentInfo'
-import ConversationInfo from './ConversationInfo'
-import MessageStoreCallerInfoResponseFrom from './MessageStoreCallerInfoResponseFrom'
-import MessageStoreCallerInfoResponseTo from './MessageStoreCallerInfoResponseTo'
+import { MessageAttachmentInfo, ConversationInfo, MessageStoreCallerInfoResponseFrom, MessageStoreCallerInfoResponseTo } from '.'
 
 class GetMessageInfoResponse
 {

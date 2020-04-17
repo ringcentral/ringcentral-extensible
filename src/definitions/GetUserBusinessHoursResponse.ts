@@ -1,4 +1,4 @@
-import ScheduleInfoUserBusinessHours from './ScheduleInfoUserBusinessHours'
+import { ScheduleInfoUserBusinessHours } from '.'
 
 class GetUserBusinessHoursResponse
 {

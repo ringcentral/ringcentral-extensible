@@ -1,5 +1,4 @@
-import CompanyAnsweringRuleWeeklyScheduleInfoRequest from './CompanyAnsweringRuleWeeklyScheduleInfoRequest'
-import RangesInfo from './RangesInfo'
+import { CompanyAnsweringRuleWeeklyScheduleInfoRequest, RangesInfo } from '.'
 
 class CompanyAnsweringRuleScheduleInfo
 {

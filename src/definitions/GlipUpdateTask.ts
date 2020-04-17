@@ -1,6 +1,4 @@
-import GlipUpdateTaskAssignee from './GlipUpdateTaskAssignee'
-import GlipTaskRecurrenceInfo from './GlipTaskRecurrenceInfo'
-import GlipUpdateTaskAttachment from './GlipUpdateTaskAttachment'
+import { GlipUpdateTaskAssignee, GlipTaskRecurrenceInfo, GlipUpdateTaskAttachment } from '.'
 
 class GlipUpdateTask
 {

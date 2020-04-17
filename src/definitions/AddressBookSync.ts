@@ -1,5 +1,4 @@
-import PersonalContactResource from './PersonalContactResource'
-import SyncInfo from './SyncInfo'
+import { PersonalContactResource, SyncInfo } from '.'
 
 class AddressBookSync
 {

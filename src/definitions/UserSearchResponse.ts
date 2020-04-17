@@ -1,4 +1,4 @@
-import UserResponse from './UserResponse'
+import { UserResponse } from '.'
 
 class UserSearchResponse
 {

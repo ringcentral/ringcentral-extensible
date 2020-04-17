@@ -1,4 +1,4 @@
-import GetCountryInfoState from './GetCountryInfoState'
+import { GetCountryInfoState } from '.'
 
 class GetStateInfoResponse
 {

@@ -1,4 +1,4 @@
-import CallRecordingCustomGreeting from './CallRecordingCustomGreeting'
+import { CallRecordingCustomGreeting } from '.'
 
   // Returns data on call recording custom greetings.
 class CallRecordingCustomGreetings

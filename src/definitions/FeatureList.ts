@@ -1,4 +1,4 @@
-import FeatureInfo from './FeatureInfo'
+import { FeatureInfo } from '.'
 
 class FeatureList
 {

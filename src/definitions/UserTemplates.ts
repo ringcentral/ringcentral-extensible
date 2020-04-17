@@ -1,6 +1,4 @@
-import TemplateInfo from './TemplateInfo'
-import ProvisioningNavigationInfo from './ProvisioningNavigationInfo'
-import ProvisioningPagingInfo from './ProvisioningPagingInfo'
+import { TemplateInfo, ProvisioningNavigationInfo, ProvisioningPagingInfo } from '.'
 
 class UserTemplates
 {

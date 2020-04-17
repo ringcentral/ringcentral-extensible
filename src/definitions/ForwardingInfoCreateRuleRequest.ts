@@ -1,4 +1,4 @@
-import RuleInfoCreateRuleRequest from './RuleInfoCreateRuleRequest'
+import { RuleInfoCreateRuleRequest } from '.'
 
 class ForwardingInfoCreateRuleRequest
 {

@@ -1,4 +1,4 @@
-import GlipMessageAttachmentInfoRequest from './GlipMessageAttachmentInfoRequest'
+import { GlipMessageAttachmentInfoRequest } from '.'
 
 class GlipCreatePost
 {

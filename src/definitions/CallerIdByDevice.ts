@@ -1,5 +1,4 @@
-import CallerIdDeviceInfo from './CallerIdDeviceInfo'
-import CallerIdByDeviceInfo from './CallerIdByDeviceInfo'
+import { CallerIdDeviceInfo, CallerIdByDeviceInfo } from '.'
 
 class CallerIdByDevice
 {

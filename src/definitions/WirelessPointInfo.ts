@@ -1,5 +1,4 @@
-import AutomaticLocationUpdatesSiteInfo from './AutomaticLocationUpdatesSiteInfo'
-import LocationUpdatesEmergencyAddressInfo from './LocationUpdatesEmergencyAddressInfo'
+import { AutomaticLocationUpdatesSiteInfo, LocationUpdatesEmergencyAddressInfo } from '.'
 
 class WirelessPointInfo
 {

@@ -1,4 +1,4 @@
-import ConferencePhoneNumberInfo from './ConferencePhoneNumberInfo'
+import { ConferencePhoneNumberInfo } from '.'
 
 class UpdateConferencingInfoRequest
 {

@@ -1,6 +1,4 @@
-import NoteCreatorInfo from './NoteCreatorInfo'
-import LastModifiedByInfo from './LastModifiedByInfo'
-import LockedByInfo from './LockedByInfo'
+import { NoteCreatorInfo, LastModifiedByInfo, LockedByInfo } from '.'
 
 class GetGlipNoteInfo
 {

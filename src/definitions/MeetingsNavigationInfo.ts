@@ -1,4 +1,4 @@
-import MeetingsNavigationInfoUri from './MeetingsNavigationInfoUri'
+import { MeetingsNavigationInfoUri } from '.'
 
 class MeetingsNavigationInfo
 {

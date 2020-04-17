@@ -1,6 +1,4 @@
-import DataExportTask from './DataExportTask'
-import GlipDataExportNavigationInfo from './GlipDataExportNavigationInfo'
-import GlipDataExportPagingInfo from './GlipDataExportPagingInfo'
+import { DataExportTask, GlipDataExportNavigationInfo, GlipDataExportPagingInfo } from '.'
 
 class DataExportTaskList
 {

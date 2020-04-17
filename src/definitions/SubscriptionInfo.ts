@@ -1,6 +1,4 @@
-import DisabledFilterInfo from './DisabledFilterInfo'
-import NotificationDeliveryMode from './NotificationDeliveryMode'
-import NotificationBlacklistedData from './NotificationBlacklistedData'
+import { DisabledFilterInfo, NotificationDeliveryMode, NotificationBlacklistedData } from '.'
 
 class SubscriptionInfo
 {

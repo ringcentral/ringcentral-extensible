@@ -1,6 +1,4 @@
-import ExtensionInfo from './ExtensionInfo'
-import ProvisioningNavigationInfo from './ProvisioningNavigationInfo'
-import ProvisioningPagingInfo from './ProvisioningPagingInfo'
+import { ExtensionInfo, ProvisioningNavigationInfo, ProvisioningPagingInfo } from '.'
 
 class DepartmentMemberList
 {

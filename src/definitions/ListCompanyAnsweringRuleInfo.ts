@@ -1,5 +1,4 @@
-import CalledNumberInfo from './CalledNumberInfo'
-import CompanyAnsweringRuleExtensionInfo from './CompanyAnsweringRuleExtensionInfo'
+import { CalledNumberInfo, CompanyAnsweringRuleExtensionInfo } from '.'
 
 class ListCompanyAnsweringRuleInfo
 {

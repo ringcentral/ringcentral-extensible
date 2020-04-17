@@ -1,6 +1,4 @@
-import AutomaticLocationUpdatesSiteInfo from './AutomaticLocationUpdatesSiteInfo'
-import PublicIpRangeInfo from './PublicIpRangeInfo'
-import PrivateIpRangeInfoRequest from './PrivateIpRangeInfoRequest'
+import { AutomaticLocationUpdatesSiteInfo, PublicIpRangeInfo, PrivateIpRangeInfoRequest } from '.'
 
 class UpdateNetworkRequest
 {

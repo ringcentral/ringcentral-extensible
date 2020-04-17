@@ -1,4 +1,4 @@
-import SiteResource from './SiteResource'
+import { SiteResource } from '.'
 
 class CallQueueMember
 {

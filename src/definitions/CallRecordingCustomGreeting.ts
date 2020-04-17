@@ -1,5 +1,4 @@
-import CallRecordingCustomGreetingData from './CallRecordingCustomGreetingData'
-import CallRecordingCustomGreetingLanguage from './CallRecordingCustomGreetingLanguage'
+import { CallRecordingCustomGreetingData, CallRecordingCustomGreetingLanguage } from '.'
 
 class CallRecordingCustomGreeting
 {

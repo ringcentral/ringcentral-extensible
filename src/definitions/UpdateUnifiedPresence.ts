@@ -1,5 +1,4 @@
-import UpdateUnifiedPresenceGlip from './UpdateUnifiedPresenceGlip'
-import UpdateUnifiedPresenceTelephony from './UpdateUnifiedPresenceTelephony'
+import { UpdateUnifiedPresenceGlip, UpdateUnifiedPresenceTelephony } from '.'
 
 class UpdateUnifiedPresence
 {

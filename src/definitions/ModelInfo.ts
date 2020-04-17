@@ -1,4 +1,4 @@
-import AddonInfo from './AddonInfo'
+import { AddonInfo } from '.'
 
 class ModelInfo
 {

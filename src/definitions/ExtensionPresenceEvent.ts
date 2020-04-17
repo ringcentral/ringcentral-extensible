@@ -1,4 +1,4 @@
-import ExtensionPresenceEventBody from './ExtensionPresenceEventBody'
+import { ExtensionPresenceEventBody } from '.'
 
 class ExtensionPresenceEvent
 {

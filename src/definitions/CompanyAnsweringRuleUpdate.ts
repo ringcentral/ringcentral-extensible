@@ -1,7 +1,4 @@
-import CompanyAnsweringRuleCallersInfoRequest from './CompanyAnsweringRuleCallersInfoRequest'
-import CompanyAnsweringRuleCalledNumberInfo from './CompanyAnsweringRuleCalledNumberInfo'
-import CompanyAnsweringRuleScheduleInfoRequest from './CompanyAnsweringRuleScheduleInfoRequest'
-import GreetingInfo from './GreetingInfo'
+import { CompanyAnsweringRuleCallersInfoRequest, CompanyAnsweringRuleCalledNumberInfo, CompanyAnsweringRuleScheduleInfoRequest, GreetingInfo } from '.'
 
 class CompanyAnsweringRuleUpdate
 {

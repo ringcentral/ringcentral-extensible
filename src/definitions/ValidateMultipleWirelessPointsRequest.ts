@@ -1,4 +1,4 @@
-import WirelessPointInfoRequest from './WirelessPointInfoRequest'
+import { WirelessPointInfoRequest } from '.'
 
 class ValidateMultipleWirelessPointsRequest
 {

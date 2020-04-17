@@ -1,6 +1,4 @@
-import SipRegistrationDeviceInfo from './SipRegistrationDeviceInfo'
-import SIPInfoResponse from './SIPInfoResponse'
-import SIPFlagsResponse from './SIPFlagsResponse'
+import { SipRegistrationDeviceInfo, SIPInfoResponse, SIPFlagsResponse } from '.'
 
 class CreateSipRegistrationResponse
 {

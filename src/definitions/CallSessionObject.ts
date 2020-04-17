@@ -1,5 +1,4 @@
-import OriginInfo from './OriginInfo'
-import CallParty from './CallParty'
+import { OriginInfo, CallParty } from '.'
 
 class CallSessionObject
 {

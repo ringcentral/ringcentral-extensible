@@ -1,4 +1,4 @@
-import UserBusinessHoursScheduleInfo from './UserBusinessHoursScheduleInfo'
+import { UserBusinessHoursScheduleInfo } from '.'
 
 class UserBusinessHoursUpdateRequest
 {

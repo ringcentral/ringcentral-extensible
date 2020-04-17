@@ -1,6 +1,4 @@
-import UserCallLogRecord from './UserCallLogRecord'
-import CallLogNavigationInfo from './CallLogNavigationInfo'
-import CallLogPagingInfo from './CallLogPagingInfo'
+import { UserCallLogRecord, CallLogNavigationInfo, CallLogPagingInfo } from '.'
 
 class UserActiveCallsResponse
 {

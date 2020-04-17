@@ -1,6 +1,4 @@
-import AutomaticLocationUpdatesUserInfo from './AutomaticLocationUpdatesUserInfo'
-import ProvisioningNavigationInfo from './ProvisioningNavigationInfo'
-import ProvisioningPagingInfo from './ProvisioningPagingInfo'
+import { AutomaticLocationUpdatesUserInfo, ProvisioningNavigationInfo, ProvisioningPagingInfo } from '.'
 
 class AutomaticLocationUpdatesUserList
 {

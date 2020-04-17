@@ -1,4 +1,4 @@
-import APSInfo from './APSInfo'
+import { APSInfo } from '.'
 
 class IncomingCallEvent
 {

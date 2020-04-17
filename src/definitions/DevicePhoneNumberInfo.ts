@@ -1,4 +1,4 @@
-import DevicePhoneNumberCountryInfo from './DevicePhoneNumberCountryInfo'
+import { DevicePhoneNumberCountryInfo } from '.'
 
 class DevicePhoneNumberInfo
 {

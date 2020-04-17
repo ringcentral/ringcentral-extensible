@@ -1,7 +1,4 @@
-import AuthenticationScheme from './AuthenticationScheme'
-import BulkSupported from './BulkSupported'
-import Supported from './Supported'
-import FilterSupported from './FilterSupported'
+import { AuthenticationScheme, BulkSupported, Supported, FilterSupported } from '.'
 
 class ServiceProviderConfig
 {

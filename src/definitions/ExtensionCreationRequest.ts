@@ -1,8 +1,4 @@
-import ContactInfoCreationRequest from './ContactInfoCreationRequest'
-import ReferenceInfo from './ReferenceInfo'
-import Roles from './Roles'
-import RegionalSettings from './RegionalSettings'
-import ExtensionStatusInfo from './ExtensionStatusInfo'
+import { ContactInfoCreationRequest, ReferenceInfo, Roles, RegionalSettings, ExtensionStatusInfo } from '.'
 
 class ExtensionCreationRequest
 {

@@ -1,4 +1,4 @@
-import UpdateDevicePhoneInfo from './UpdateDevicePhoneInfo'
+import { UpdateDevicePhoneInfo } from '.'
 
 class DeviceUpdatePhoneLinesInfo
 {

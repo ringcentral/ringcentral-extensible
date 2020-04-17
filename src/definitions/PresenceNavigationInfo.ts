@@ -1,4 +1,4 @@
-import PresenceNavigationInfoURI from './PresenceNavigationInfoURI'
+import { PresenceNavigationInfoURI } from '.'
 
 class PresenceNavigationInfo
 {

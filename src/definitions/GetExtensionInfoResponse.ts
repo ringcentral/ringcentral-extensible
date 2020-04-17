@@ -1,15 +1,4 @@
-import GetExtensionAccountInfo from './GetExtensionAccountInfo'
-import ContactInfo from './ContactInfo'
-import DepartmentInfo from './DepartmentInfo'
-import ExtensionPermissions from './ExtensionPermissions'
-import ProfileImageInfo from './ProfileImageInfo'
-import ReferenceInfo from './ReferenceInfo'
-import Roles from './Roles'
-import RegionalSettings from './RegionalSettings'
-import ExtensionServiceFeatureInfo from './ExtensionServiceFeatureInfo'
-import ExtensionStatusInfo from './ExtensionStatusInfo'
-import CallQueueExtensionInfo from './CallQueueExtensionInfo'
-import AutomaticLocationUpdatesSiteInfo from './AutomaticLocationUpdatesSiteInfo'
+import { GetExtensionAccountInfo, ContactInfo, DepartmentInfo, ExtensionPermissions, ProfileImageInfo, ReferenceInfo, Roles, RegionalSettings, ExtensionServiceFeatureInfo, ExtensionStatusInfo, CallQueueExtensionInfo, AutomaticLocationUpdatesSiteInfo } from '.'
 
 class GetExtensionInfoResponse
 {

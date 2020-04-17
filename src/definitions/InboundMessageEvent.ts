@@ -1,4 +1,4 @@
-import NotificationInfo from './NotificationInfo'
+import { NotificationInfo } from '.'
 
 class InboundMessageEvent
 {

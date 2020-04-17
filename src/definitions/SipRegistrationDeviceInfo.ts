@@ -1,9 +1,4 @@
-import DeviceModelInfo from './DeviceModelInfo'
-import DeviceExtensionInfo from './DeviceExtensionInfo'
-import DeviceEmergencyServiceAddressResource from './DeviceEmergencyServiceAddressResource'
-import Shipping from './Shipping'
-import DevicePhoneLinesInfo from './DevicePhoneLinesInfo'
-import DeviceSiteInfo from './DeviceSiteInfo'
+import { DeviceModelInfo, DeviceExtensionInfo, DeviceEmergencyServiceAddressResource, Shipping, DevicePhoneLinesInfo, DeviceSiteInfo } from '.'
 
 class SipRegistrationDeviceInfo
 {

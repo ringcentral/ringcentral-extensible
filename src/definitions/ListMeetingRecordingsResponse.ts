@@ -1,6 +1,4 @@
-import MeetingRecordings from './MeetingRecordings'
-import MeetingRecordingsPagingInfo from './MeetingRecordingsPagingInfo'
-import MeetingRecordingsNavigationInfo from './MeetingRecordingsNavigationInfo'
+import { MeetingRecordings, MeetingRecordingsPagingInfo, MeetingRecordingsNavigationInfo } from '.'
 
 class ListMeetingRecordingsResponse
 {

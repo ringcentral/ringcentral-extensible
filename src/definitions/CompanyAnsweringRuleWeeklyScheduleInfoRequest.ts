@@ -1,4 +1,4 @@
-import CompanyAnsweringRuleTimeIntervalRequest from './CompanyAnsweringRuleTimeIntervalRequest'
+import { CompanyAnsweringRuleTimeIntervalRequest } from '.'
 
 class CompanyAnsweringRuleWeeklyScheduleInfoRequest
 {

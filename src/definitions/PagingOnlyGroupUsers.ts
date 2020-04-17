@@ -1,6 +1,4 @@
-import PagingGroupExtensionInfo from './PagingGroupExtensionInfo'
-import ProvisioningNavigationInfo from './ProvisioningNavigationInfo'
-import ProvisioningPagingInfo from './ProvisioningPagingInfo'
+import { PagingGroupExtensionInfo, ProvisioningNavigationInfo, ProvisioningPagingInfo } from '.'
 
 class PagingOnlyGroupUsers
 {

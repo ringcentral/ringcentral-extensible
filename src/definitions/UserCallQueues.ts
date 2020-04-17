@@ -1,4 +1,4 @@
-import QueueShortInfoResource from './QueueShortInfoResource'
+import { QueueShortInfoResource } from '.'
 
 class UserCallQueues
 {

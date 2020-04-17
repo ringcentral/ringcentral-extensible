@@ -1,7 +1,4 @@
-import NotificationRecipientInfo from './NotificationRecipientInfo'
-import SenderInfo from './SenderInfo'
-import MessageAttachmentInfo from './MessageAttachmentInfo'
-import ConversationInfo from './ConversationInfo'
+import { NotificationRecipientInfo, SenderInfo, MessageAttachmentInfo, ConversationInfo } from '.'
 
 class InstantMessageEventBody
 {

@@ -1,4 +1,4 @@
-import CustomGreetingAnsweringRuleInfo from './CustomGreetingAnsweringRuleInfo'
+import { CustomGreetingAnsweringRuleInfo } from '.'
 
 class CustomUserGreetingInfo
 {

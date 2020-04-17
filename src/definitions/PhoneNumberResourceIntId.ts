@@ -1,5 +1,4 @@
-import CountryResource from './CountryResource'
-import PhoneNumberExtensionInfo from './PhoneNumberExtensionInfo'
+import { CountryResource, PhoneNumberExtensionInfo } from '.'
 
 class PhoneNumberResourceIntId
 {

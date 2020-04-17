@@ -1,4 +1,4 @@
-import AutomaticLocationUpdatesPhoneNumberInfo from './AutomaticLocationUpdatesPhoneNumberInfo'
+import { AutomaticLocationUpdatesPhoneNumberInfo } from '.'
 
 class AutomaticLocationUpdatesPhoneLine
 {

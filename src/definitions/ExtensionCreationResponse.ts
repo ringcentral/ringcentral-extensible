@@ -1,12 +1,4 @@
-import ContactInfo from './ContactInfo'
-import ExtensionPermissions from './ExtensionPermissions'
-import ProfileImageInfo from './ProfileImageInfo'
-import ReferenceInfo from './ReferenceInfo'
-import Roles from './Roles'
-import RegionalSettings from './RegionalSettings'
-import ExtensionServiceFeatureInfo from './ExtensionServiceFeatureInfo'
-import AutomaticLocationUpdatesSiteInfo from './AutomaticLocationUpdatesSiteInfo'
-import ExtensionStatusInfo from './ExtensionStatusInfo'
+import { ContactInfo, ExtensionPermissions, ProfileImageInfo, ReferenceInfo, Roles, RegionalSettings, ExtensionServiceFeatureInfo, AutomaticLocationUpdatesSiteInfo, ExtensionStatusInfo } from '.'
 
 class ExtensionCreationResponse
 {

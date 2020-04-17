@@ -1,6 +1,4 @@
-import GetMessageInfoResponse from './GetMessageInfoResponse'
-import MessagingNavigationInfo from './MessagingNavigationInfo'
-import MessagingPagingInfo from './MessagingPagingInfo'
+import { GetMessageInfoResponse, MessagingNavigationInfo, MessagingPagingInfo } from '.'
 
 class GetMessageList
 {

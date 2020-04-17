@@ -1,5 +1,4 @@
-import WeeklyScheduleInfo from './WeeklyScheduleInfo'
-import RangesInfo from './RangesInfo'
+import { WeeklyScheduleInfo, RangesInfo } from '.'
 
 class ScheduleInfo
 {

@@ -1,4 +1,4 @@
-import FederatedAccountResource from './FederatedAccountResource'
+import { FederatedAccountResource } from '.'
 
 class FederationResource
 {

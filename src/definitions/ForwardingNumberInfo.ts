@@ -1,4 +1,4 @@
-import CreateForwardingNumberDeviceInfo from './CreateForwardingNumberDeviceInfo'
+import { CreateForwardingNumberDeviceInfo } from '.'
 
 class ForwardingNumberInfo
 {

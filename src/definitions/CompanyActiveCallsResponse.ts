@@ -1,6 +1,4 @@
-import CompanyCallLogRecord from './CompanyCallLogRecord'
-import CallLogNavigationInfo from './CallLogNavigationInfo'
-import CallLogPagingInfo from './CallLogPagingInfo'
+import { CompanyCallLogRecord, CallLogNavigationInfo, CallLogPagingInfo } from '.'
 
 class CompanyActiveCallsResponse
 {

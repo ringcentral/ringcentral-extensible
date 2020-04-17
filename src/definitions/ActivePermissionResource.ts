@@ -1,5 +1,4 @@
-import PermissionIdResource from './PermissionIdResource'
-import RoleIdResource from './RoleIdResource'
+import { PermissionIdResource, RoleIdResource } from '.'
 
 class ActivePermissionResource
 {

@@ -1,6 +1,4 @@
-import EmergencyServiceAddressResourceRequest from './EmergencyServiceAddressResourceRequest'
-import DeviceUpdateExtensionInfo from './DeviceUpdateExtensionInfo'
-import DeviceUpdatePhoneLinesInfo from './DeviceUpdatePhoneLinesInfo'
+import { EmergencyServiceAddressResourceRequest, DeviceUpdateExtensionInfo, DeviceUpdatePhoneLinesInfo } from '.'
 
 class AccountDeviceUpdate
 {

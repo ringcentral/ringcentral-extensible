@@ -1,7 +1,4 @@
-import CountryInfo from './CountryInfo'
-import ExtensionInfo from './ExtensionInfo'
-import TemporaryNumberInfo from './TemporaryNumberInfo'
-import ContactCenterProvider from './ContactCenterProvider'
+import { CountryInfo, ExtensionInfo, TemporaryNumberInfo, ContactCenterProvider } from '.'
 
 class CompanyPhoneNumberInfo
 {

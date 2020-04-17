@@ -1,4 +1,4 @@
-import ExtensionFavoritesEventBody from './ExtensionFavoritesEventBody'
+import { ExtensionFavoritesEventBody } from '.'
 
 class ExtensionFavoritesEvent
 {

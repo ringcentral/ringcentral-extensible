@@ -1,5 +1,4 @@
-import MeetingScheduleResource from './MeetingScheduleResource'
-import HostInfoRequest from './HostInfoRequest'
+import { MeetingScheduleResource, HostInfoRequest } from '.'
 
 class MeetingRequestResource
 {

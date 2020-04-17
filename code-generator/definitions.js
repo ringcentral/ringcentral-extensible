@@ -81,7 +81,7 @@ class ${m.name}
 export default ${m.name}`
   const match = code.match(/(?<=^ {2}\S+?: )[A-Z][A-Za-z]+?\b/gm)
   if (match !== null) {
-    code = R.uniq(match).map(d => `import ${d} from './${d}'`).join('\n') + '\n' + code
+    code = `import { ${R.pipe(R.uniq, R.without([m.name]))(match).join(', ')} } from '.'\n${code}`
   }
   return code
 }
@@ -161,3 +161,8 @@ fs.writeFileSync(path.join(outputDir, 'Attachment.ts'), `class Attachment
 
 export default Attachment
 `)
+
+const defintionFiles = fs.readdirSync(outputDir).map(df => df.substring(0, df.length - 3))
+let code = defintionFiles.map(df => `import ${df} from './${df}'`).join('\n')
+code += `\n\nexport{ ${defintionFiles.join(', ')} }`
+fs.writeFileSync(path.join(outputDir, 'index.ts'), code)

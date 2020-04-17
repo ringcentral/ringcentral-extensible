@@ -1,5 +1,4 @@
-import MeetingInfo from './MeetingInfo'
-import MeetingRecordingInfo from './MeetingRecordingInfo'
+import { MeetingInfo, MeetingRecordingInfo } from '.'
 
 class MeetingRecordings
 {

@@ -1,6 +1,4 @@
-import GetTimezoneInfoResponse from './GetTimezoneInfoResponse'
-import ProvisioningNavigationInfo from './ProvisioningNavigationInfo'
-import ProvisioningPagingInfo from './ProvisioningPagingInfo'
+import { GetTimezoneInfoResponse, ProvisioningNavigationInfo, ProvisioningPagingInfo } from '.'
 
 class GetTimezoneListResponse
 {

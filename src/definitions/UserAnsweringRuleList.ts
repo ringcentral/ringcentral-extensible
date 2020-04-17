@@ -1,6 +1,4 @@
-import UserAnsweringRuleListRecord from './UserAnsweringRuleListRecord'
-import UserAnsweringRuleListPaging from './UserAnsweringRuleListPaging'
-import UserAnsweringRuleListNavigation from './UserAnsweringRuleListNavigation'
+import { UserAnsweringRuleListRecord, UserAnsweringRuleListPaging, UserAnsweringRuleListNavigation } from '.'
 
 class UserAnsweringRuleList
 {

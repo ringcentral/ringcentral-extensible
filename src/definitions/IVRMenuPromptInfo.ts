@@ -1,5 +1,4 @@
-import AudioPromptInfo from './AudioPromptInfo'
-import PromptLanguageInfo from './PromptLanguageInfo'
+import { AudioPromptInfo, PromptLanguageInfo } from '.'
 
 class IVRMenuPromptInfo
 {

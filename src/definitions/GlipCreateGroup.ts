@@ -1,4 +1,4 @@
-import GlipMemberInfo from './GlipMemberInfo'
+import { GlipMemberInfo } from '.'
 
 class GlipCreateGroup
 {

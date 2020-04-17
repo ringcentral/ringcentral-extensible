@@ -1,4 +1,4 @@
-import SwitchValidated from './SwitchValidated'
+import { SwitchValidated } from '.'
 
 class ValidateMultipleSwitchesResponse
 {

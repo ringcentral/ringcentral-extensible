@@ -1,4 +1,4 @@
-import MessagingNavigationInfoURI from './MessagingNavigationInfoURI'
+import { MessagingNavigationInfoURI } from '.'
 
 class MessagingNavigationInfo
 {

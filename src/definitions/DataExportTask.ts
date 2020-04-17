@@ -1,5 +1,4 @@
-import SpecificInfo from './SpecificInfo'
-import ExportTaskResultInfo from './ExportTaskResultInfo'
+import { SpecificInfo, ExportTaskResultInfo } from '.'
 
 class DataExportTask
 {

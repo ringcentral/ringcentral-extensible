@@ -1,4 +1,4 @@
-import LocationUpdatesEmergencyAddressInfo from './LocationUpdatesEmergencyAddressInfo'
+import { LocationUpdatesEmergencyAddressInfo } from '.'
 
 class PrivateIpRangeInfo
 {

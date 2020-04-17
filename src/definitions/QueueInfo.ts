@@ -1,4 +1,4 @@
-import FixedOrderAgents from './FixedOrderAgents'
+import { FixedOrderAgents } from '.'
 
 class QueueInfo
 {

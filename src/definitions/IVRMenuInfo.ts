@@ -1,5 +1,4 @@
-import IVRMenuPromptInfo from './IVRMenuPromptInfo'
-import IVRMenuActionsInfo from './IVRMenuActionsInfo'
+import { IVRMenuPromptInfo, IVRMenuActionsInfo } from '.'
 
 class IVRMenuInfo
 {

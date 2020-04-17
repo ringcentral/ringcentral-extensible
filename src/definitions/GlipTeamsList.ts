@@ -1,5 +1,4 @@
-import GlipTeamInfo from './GlipTeamInfo'
-import GlipNavigationInfo from './GlipNavigationInfo'
+import { GlipTeamInfo, GlipNavigationInfo } from '.'
 
 class GlipTeamsList
 {

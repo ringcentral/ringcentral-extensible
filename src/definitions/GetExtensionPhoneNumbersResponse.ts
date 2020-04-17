@@ -1,6 +1,4 @@
-import UserPhoneNumberInfo from './UserPhoneNumberInfo'
-import ProvisioningNavigationInfo from './ProvisioningNavigationInfo'
-import ProvisioningPagingInfo from './ProvisioningPagingInfo'
+import { UserPhoneNumberInfo, ProvisioningNavigationInfo, ProvisioningPagingInfo } from '.'
 
 class GetExtensionPhoneNumbersResponse
 {

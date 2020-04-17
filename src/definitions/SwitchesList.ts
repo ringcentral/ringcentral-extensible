@@ -1,6 +1,4 @@
-import SwitchInfo from './SwitchInfo'
-import ProvisioningNavigationInfo from './ProvisioningNavigationInfo'
-import ProvisioningPagingInfo from './ProvisioningPagingInfo'
+import { SwitchInfo, ProvisioningNavigationInfo, ProvisioningPagingInfo } from '.'
 
 class SwitchesList
 {

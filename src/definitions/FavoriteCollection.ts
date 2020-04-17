@@ -1,4 +1,4 @@
-import FavoriteContactResource from './FavoriteContactResource'
+import { FavoriteContactResource } from '.'
 
 class FavoriteCollection
 {

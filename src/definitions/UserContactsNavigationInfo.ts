@@ -1,4 +1,4 @@
-import UserContactsNavigationInfoUri from './UserContactsNavigationInfoUri'
+import { UserContactsNavigationInfoUri } from '.'
 
 class UserContactsNavigationInfo
 {

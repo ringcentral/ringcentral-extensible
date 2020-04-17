@@ -1,5 +1,4 @@
-import MethodInfo from './MethodInfo'
-import ShippingAddressInfo from './ShippingAddressInfo'
+import { MethodInfo, ShippingAddressInfo } from '.'
 
 class ShippingInfo
 {

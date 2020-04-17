@@ -1,5 +1,4 @@
-import GlipPostInfo from './GlipPostInfo'
-import GlipNavigationInfo from './GlipNavigationInfo'
+import { GlipPostInfo, GlipNavigationInfo } from '.'
 
 class GlipPosts
 {

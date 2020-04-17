@@ -1,4 +1,4 @@
-import DataExportTaskContactInfo from './DataExportTaskContactInfo'
+import { DataExportTaskContactInfo } from '.'
 
 class SpecificInfo
 {

@@ -1,7 +1,4 @@
-import PersonalContactResource from './PersonalContactResource'
-import UserContactsNavigationInfo from './UserContactsNavigationInfo'
-import UserContactsPagingInfo from './UserContactsPagingInfo'
-import UserContactsGroupsInfo from './UserContactsGroupsInfo'
+import { PersonalContactResource, UserContactsNavigationInfo, UserContactsPagingInfo, UserContactsGroupsInfo } from '.'
 
 class ContactList
 {

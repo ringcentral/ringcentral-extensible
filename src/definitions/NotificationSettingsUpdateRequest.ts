@@ -1,8 +1,4 @@
-import VoicemailsInfo from './VoicemailsInfo'
-import InboundFaxesInfo from './InboundFaxesInfo'
-import OutboundFaxesInfo from './OutboundFaxesInfo'
-import InboundTextsInfo from './InboundTextsInfo'
-import MissedCallsInfo from './MissedCallsInfo'
+import { VoicemailsInfo, InboundFaxesInfo, OutboundFaxesInfo, InboundTextsInfo, MissedCallsInfo } from '.'
 
 class NotificationSettingsUpdateRequest
 {

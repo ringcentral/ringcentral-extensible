@@ -1,4 +1,4 @@
-import RingOutStatusInfo from './RingOutStatusInfo'
+import { RingOutStatusInfo } from '.'
 
 class GetRingOutStatusResponse
 {

@@ -1,6 +1,4 @@
-import CountryInfo from './CountryInfo'
-import ContactCenterProvider from './ContactCenterProvider'
-import UserPhoneNumberExtensionInfo from './UserPhoneNumberExtensionInfo'
+import { CountryInfo, ContactCenterProvider, UserPhoneNumberExtensionInfo } from '.'
 
 class UserPhoneNumberInfo
 {

@@ -1,4 +1,4 @@
-import AssistedUserResource from './AssistedUserResource'
+import { AssistedUserResource } from '.'
 
 class AssistedUsersResource
 {

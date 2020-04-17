@@ -1,9 +1,4 @@
-import BrandInfo from './BrandInfo'
-import ServicePlanInfo from './ServicePlanInfo'
-import BillingPlanInfo from './BillingPlanInfo'
-import ServiceFeatureInfo from './ServiceFeatureInfo'
-import AccountLimits from './AccountLimits'
-import PackageInfo from './PackageInfo'
+import { BrandInfo, ServicePlanInfo, BillingPlanInfo, ServiceFeatureInfo, AccountLimits, PackageInfo } from '.'
 
 class GetServiceInfoResponse
 {

@@ -1,5 +1,4 @@
-import UserCallLogRecord from './UserCallLogRecord'
-import SyncInfoCallLog from './SyncInfoCallLog'
+import { UserCallLogRecord, SyncInfoCallLog } from '.'
 
 class CallLogSync
 {

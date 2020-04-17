@@ -1,6 +1,4 @@
-import LanguageInfo from './LanguageInfo'
-import ProvisioningNavigationInfo from './ProvisioningNavigationInfo'
-import ProvisioningPagingInfo from './ProvisioningPagingInfo'
+import { LanguageInfo, ProvisioningNavigationInfo, ProvisioningPagingInfo } from '.'
 
 class LanguageList
 {

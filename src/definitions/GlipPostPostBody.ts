@@ -1,4 +1,4 @@
-import GlipPostPostBodyAttachment from './GlipPostPostBodyAttachment'
+import { GlipPostPostBodyAttachment } from '.'
 
 class GlipPostPostBody
 {

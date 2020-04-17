@@ -1,7 +1,4 @@
-import AccountResource from './AccountResource'
-import PhoneNumberResource from './PhoneNumberResource'
-import AccountDirectoryProfileImageResource from './AccountDirectoryProfileImageResource'
-import BusinessSiteResource from './BusinessSiteResource'
+import { AccountResource, PhoneNumberResource, AccountDirectoryProfileImageResource, BusinessSiteResource } from '.'
 
 class ContactResource
 {

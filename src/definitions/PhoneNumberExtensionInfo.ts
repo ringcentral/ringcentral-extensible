@@ -1,11 +1,4 @@
-import ExtensionContactInfo from './ExtensionContactInfo'
-import Reference from './Reference'
-import StatusInfo from './StatusInfo'
-import DepartmentResource from './DepartmentResource'
-import ServiceFeatureValue from './ServiceFeatureValue'
-import RegionalSettingsInfo from './RegionalSettingsInfo'
-import ExtensionPermissionsResource from './ExtensionPermissionsResource'
-import ProfileImageResource from './ProfileImageResource'
+import { ExtensionContactInfo, Reference, StatusInfo, DepartmentResource, ServiceFeatureValue, RegionalSettingsInfo, ExtensionPermissionsResource, ProfileImageResource } from '.'
 
 class PhoneNumberExtensionInfo
 {

@@ -1,6 +1,4 @@
-import GetCountryInfoDictionaryResponse from './GetCountryInfoDictionaryResponse'
-import ProvisioningNavigationInfo from './ProvisioningNavigationInfo'
-import ProvisioningPagingInfo from './ProvisioningPagingInfo'
+import { GetCountryInfoDictionaryResponse, ProvisioningNavigationInfo, ProvisioningPagingInfo } from '.'
 
 class GetCountryListResponse
 {

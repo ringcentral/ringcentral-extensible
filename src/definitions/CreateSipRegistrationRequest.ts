@@ -1,5 +1,4 @@
-import DeviceInfoRequest from './DeviceInfoRequest'
-import SIPInfoRequest from './SIPInfoRequest'
+import { DeviceInfoRequest, SIPInfoRequest } from '.'
 
 class CreateSipRegistrationRequest
 {

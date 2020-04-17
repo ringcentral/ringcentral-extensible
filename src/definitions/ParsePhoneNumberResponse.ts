@@ -1,5 +1,4 @@
-import GetCountryInfoNumberParser from './GetCountryInfoNumberParser'
-import PhoneNumberInfoNumberParser from './PhoneNumberInfoNumberParser'
+import { GetCountryInfoNumberParser, PhoneNumberInfoNumberParser } from '.'
 
 class ParsePhoneNumberResponse
 {

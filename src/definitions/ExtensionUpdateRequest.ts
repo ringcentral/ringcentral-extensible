@@ -1,8 +1,4 @@
-import ExtensionStatusInfo from './ExtensionStatusInfo'
-import ContactInfoUpdateRequest from './ContactInfoUpdateRequest'
-import ExtensionRegionalSettingRequest from './ExtensionRegionalSettingRequest'
-import CallQueueInfoRequest from './CallQueueInfoRequest'
-import UserTransitionInfo from './UserTransitionInfo'
+import { ExtensionStatusInfo, ContactInfoUpdateRequest, ExtensionRegionalSettingRequest, CallQueueInfoRequest, UserTransitionInfo } from '.'
 
 class ExtensionUpdateRequest
 {

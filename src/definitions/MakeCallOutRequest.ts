@@ -1,5 +1,4 @@
-import MakeCallOutCallerInfoRequestFrom from './MakeCallOutCallerInfoRequestFrom'
-import MakeCallOutCallerInfoRequestTo from './MakeCallOutCallerInfoRequestTo'
+import { MakeCallOutCallerInfoRequestFrom, MakeCallOutCallerInfoRequestTo } from '.'
 
 class MakeCallOutRequest
 {

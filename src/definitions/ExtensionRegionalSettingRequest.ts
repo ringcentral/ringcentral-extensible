@@ -1,8 +1,4 @@
-import ExtensionCountryInfoRequest from './ExtensionCountryInfoRequest'
-import ExtensionTimezoneInfoRequest from './ExtensionTimezoneInfoRequest'
-import ExtensionLanguageInfoRequest from './ExtensionLanguageInfoRequest'
-import ExtensionGreetingLanguageInfoRequest from './ExtensionGreetingLanguageInfoRequest'
-import ExtensionFormattingLocaleInfoRequest from './ExtensionFormattingLocaleInfoRequest'
+import { ExtensionCountryInfoRequest, ExtensionTimezoneInfoRequest, ExtensionLanguageInfoRequest, ExtensionGreetingLanguageInfoRequest, ExtensionFormattingLocaleInfoRequest } from '.'
 
 class ExtensionRegionalSettingRequest
 {

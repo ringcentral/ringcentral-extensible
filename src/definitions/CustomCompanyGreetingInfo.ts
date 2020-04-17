@@ -1,5 +1,4 @@
-import CustomGreetingAnsweringRuleInfo from './CustomGreetingAnsweringRuleInfo'
-import CustomCompanyGreetingLanguageInfo from './CustomCompanyGreetingLanguageInfo'
+import { CustomGreetingAnsweringRuleInfo, CustomCompanyGreetingLanguageInfo } from '.'
 
 class CustomCompanyGreetingInfo
 {

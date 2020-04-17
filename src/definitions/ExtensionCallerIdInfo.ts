@@ -1,5 +1,4 @@
-import CallerIdByDevice from './CallerIdByDevice'
-import CallerIdByFeature from './CallerIdByFeature'
+import { CallerIdByDevice, CallerIdByFeature } from '.'
 
 class ExtensionCallerIdInfo
 {

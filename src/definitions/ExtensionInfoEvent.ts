@@ -1,4 +1,4 @@
-import ExtensionInfoEventBody from './ExtensionInfoEventBody'
+import { ExtensionInfoEventBody } from '.'
 
 class ExtensionInfoEvent
 {

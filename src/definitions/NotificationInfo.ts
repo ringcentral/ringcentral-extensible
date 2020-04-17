@@ -1,4 +1,4 @@
-import AlertInfo from './AlertInfo'
+import { AlertInfo } from '.'
 
 class NotificationInfo
 {

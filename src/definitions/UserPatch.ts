@@ -1,4 +1,4 @@
-import PatchOperation from './PatchOperation'
+import { PatchOperation } from '.'
 
 class UserPatch
 {

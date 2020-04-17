@@ -1,4 +1,4 @@
-import ProvisioningNavigationInfoUri from './ProvisioningNavigationInfoUri'
+import { ProvisioningNavigationInfoUri } from '.'
 
 class ProvisioningNavigationInfo
 {

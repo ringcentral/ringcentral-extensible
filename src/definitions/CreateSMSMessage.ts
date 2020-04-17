@@ -1,4 +1,4 @@
-import MessageStoreCallerInfoRequest from './MessageStoreCallerInfoRequest'
+import { MessageStoreCallerInfoRequest } from '.'
 
 class CreateSMSMessage
 {

@@ -1,8 +1,4 @@
-import CountryInfo from './CountryInfo'
-import TimezoneInfo from './TimezoneInfo'
-import LanguageInfo from './LanguageInfo'
-import GreetingLanguageInfo from './GreetingLanguageInfo'
-import FormattingLocaleInfo from './FormattingLocaleInfo'
+import { CountryInfo, TimezoneInfo, LanguageInfo, GreetingLanguageInfo, FormattingLocaleInfo } from '.'
 
 class RegionalSettings
 {

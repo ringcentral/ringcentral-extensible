@@ -1,4 +1,4 @@
-import CallQueueInfo from './CallQueueInfo'
+import { CallQueueInfo } from '.'
 
 class ExtensionCallQueuePresence
 {

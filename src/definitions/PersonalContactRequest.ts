@@ -1,4 +1,4 @@
-import ContactAddressInfo from './ContactAddressInfo'
+import { ContactAddressInfo } from '.'
 
 class PersonalContactRequest
 {

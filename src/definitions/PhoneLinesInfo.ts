@@ -1,5 +1,4 @@
-import PhoneNumberInfoIntId from './PhoneNumberInfoIntId'
-import EmergencyAddress from './EmergencyAddress'
+import { PhoneNumberInfoIntId, EmergencyAddress } from '.'
 
 class PhoneLinesInfo
 {

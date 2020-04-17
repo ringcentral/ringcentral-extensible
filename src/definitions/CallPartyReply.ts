@@ -1,4 +1,4 @@
-import ReplyWithPattern from './ReplyWithPattern'
+import { ReplyWithPattern } from '.'
 
 class CallPartyReply
 {

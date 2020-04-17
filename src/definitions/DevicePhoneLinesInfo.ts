@@ -1,5 +1,4 @@
-import DevicePhoneLinesEmergencyAddressInfo from './DevicePhoneLinesEmergencyAddressInfo'
-import DevicePhoneNumberInfo from './DevicePhoneNumberInfo'
+import { DevicePhoneLinesEmergencyAddressInfo, DevicePhoneNumberInfo } from '.'
 
 class DevicePhoneLinesInfo
 {

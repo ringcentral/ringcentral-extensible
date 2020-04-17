@@ -1,4 +1,4 @@
-import PagerCallerInfoRequest from './PagerCallerInfoRequest'
+import { PagerCallerInfoRequest } from '.'
 
 class CreateInternalTextMessageRequest
 {

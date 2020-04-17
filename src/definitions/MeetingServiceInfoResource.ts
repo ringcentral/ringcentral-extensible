@@ -1,5 +1,4 @@
-import MeetingExternalUserInfoResource from './MeetingExternalUserInfoResource'
-import DialInNumberResource from './DialInNumberResource'
+import { MeetingExternalUserInfoResource, DialInNumberResource } from '.'
 
 class MeetingServiceInfoResource
 {

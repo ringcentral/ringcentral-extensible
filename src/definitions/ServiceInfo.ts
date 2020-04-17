@@ -1,7 +1,4 @@
-import BillingPlanInfo from './BillingPlanInfo'
-import BrandInfo from './BrandInfo'
-import ServicePlanInfo from './ServicePlanInfo'
-import TargetServicePlanInfo from './TargetServicePlanInfo'
+import { BillingPlanInfo, BrandInfo, ServicePlanInfo, TargetServicePlanInfo } from '.'
 
 class ServiceInfo
 {

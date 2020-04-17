@@ -1,8 +1,4 @@
-import ExtensionInfoCallLog from './ExtensionInfoCallLog'
-import CallLogCallerInfo from './CallLogCallerInfo'
-import CallLogRecordingInfo from './CallLogRecordingInfo'
-import CallLogRecordLegInfo from './CallLogRecordLegInfo'
-import BillingInfo from './BillingInfo'
+import { ExtensionInfoCallLog, CallLogCallerInfo, CallLogRecordingInfo, CallLogRecordLegInfo, BillingInfo } from '.'
 
 class CompanyCallLogRecord
 {

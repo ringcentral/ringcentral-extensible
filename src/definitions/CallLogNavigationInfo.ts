@@ -1,4 +1,4 @@
-import CallLogNavigationInfoURI from './CallLogNavigationInfoURI'
+import { CallLogNavigationInfoURI } from '.'
 
 class CallLogNavigationInfo
 {

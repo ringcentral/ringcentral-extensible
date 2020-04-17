@@ -1,5 +1,4 @@
-import ShippingAddressInfo from './ShippingAddressInfo'
-import MethodResource from './MethodResource'
+import { ShippingAddressInfo, MethodResource } from '.'
 
 class ShippingResource
 {

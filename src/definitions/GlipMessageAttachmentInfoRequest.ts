@@ -1,6 +1,4 @@
-import GlipMessageAttachmentAuthorInfo from './GlipMessageAttachmentAuthorInfo'
-import GlipMessageAttachmentFieldsInfo from './GlipMessageAttachmentFieldsInfo'
-import GlipMessageAttachmentFootnoteInfo from './GlipMessageAttachmentFootnoteInfo'
+import { GlipMessageAttachmentAuthorInfo, GlipMessageAttachmentFieldsInfo, GlipMessageAttachmentFootnoteInfo } from '.'
 
 class GlipMessageAttachmentInfoRequest
 {

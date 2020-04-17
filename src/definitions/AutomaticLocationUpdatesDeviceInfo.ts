@@ -1,5 +1,4 @@
-import AutomaticLocationUpdatesModelInfo from './AutomaticLocationUpdatesModelInfo'
-import AutomaticLocationUpdatesPhoneLine from './AutomaticLocationUpdatesPhoneLine'
+import { AutomaticLocationUpdatesModelInfo, AutomaticLocationUpdatesPhoneLine } from '.'
 
 class AutomaticLocationUpdatesDeviceInfo
 {

@@ -1,5 +1,4 @@
-import ContactBusinessAddressInfo from './ContactBusinessAddressInfo'
-import PronouncedNameInfo from './PronouncedNameInfo'
+import { ContactBusinessAddressInfo, PronouncedNameInfo } from '.'
 
 class ContactInfoCreationRequest
 {

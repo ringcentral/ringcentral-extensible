@@ -1,6 +1,4 @@
-import CallQueueInfo from './CallQueueInfo'
-import ProvisioningNavigationInfo from './ProvisioningNavigationInfo'
-import ProvisioningPagingInfo from './ProvisioningPagingInfo'
+import { CallQueueInfo, ProvisioningNavigationInfo, ProvisioningPagingInfo } from '.'
 
 class CallQueues
 {

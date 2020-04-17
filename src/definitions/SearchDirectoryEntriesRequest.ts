@@ -1,4 +1,4 @@
-import OrderBy from './OrderBy'
+import { OrderBy } from '.'
 
 class SearchDirectoryEntriesRequest
 {

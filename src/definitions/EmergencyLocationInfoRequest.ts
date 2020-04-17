@@ -1,4 +1,4 @@
-import EmergencyLocationAddressInfoRequest from './EmergencyLocationAddressInfoRequest'
+import { EmergencyLocationAddressInfoRequest } from '.'
 
 class EmergencyLocationInfoRequest
 {

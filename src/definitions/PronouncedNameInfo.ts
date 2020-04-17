@@ -1,4 +1,4 @@
-import PronouncedNamePromptInfo from './PronouncedNamePromptInfo'
+import { PronouncedNamePromptInfo } from '.'
 
 class PronouncedNameInfo
 {

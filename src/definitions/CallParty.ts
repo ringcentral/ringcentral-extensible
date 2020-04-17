@@ -1,8 +1,4 @@
-import CallStatusInfo from './CallStatusInfo'
-import ParkInfo from './ParkInfo'
-import PartyInfo from './PartyInfo'
-import OwnerInfo from './OwnerInfo'
-import RecordingInfo from './RecordingInfo'
+import { CallStatusInfo, ParkInfo, PartyInfo, OwnerInfo, RecordingInfo } from '.'
 
 class CallParty
 {

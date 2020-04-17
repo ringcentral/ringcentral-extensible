@@ -1,4 +1,4 @@
-import DeviceProvisioningNavigationInfoUri from './DeviceProvisioningNavigationInfoUri'
+import { DeviceProvisioningNavigationInfoUri } from '.'
 
 class DeviceProvisioningNavigationInfo
 {

@@ -1,4 +1,4 @@
-import ArchiveInfo from './ArchiveInfo'
+import { ArchiveInfo } from '.'
 
 class MessageStoreReportArchive
 {

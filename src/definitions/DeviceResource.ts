@@ -1,9 +1,4 @@
-import DeviceSiteInfo from './DeviceSiteInfo'
-import ModelInfo from './ModelInfo'
-import ExtensionResourceIntId from './ExtensionResourceIntId'
-import PhoneLineResource from './PhoneLineResource'
-import EmergencyServiceAddressResource from './EmergencyServiceAddressResource'
-import ShippingResource from './ShippingResource'
+import { DeviceSiteInfo, ModelInfo, ExtensionResourceIntId, PhoneLineResource, EmergencyServiceAddressResource, ShippingResource } from '.'
 
 class DeviceResource
 {

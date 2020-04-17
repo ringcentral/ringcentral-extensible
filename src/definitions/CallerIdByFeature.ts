@@ -1,4 +1,4 @@
-import CallerIdByFeatureInfo from './CallerIdByFeatureInfo'
+import { CallerIdByFeatureInfo } from '.'
 
 class CallerIdByFeature
 {

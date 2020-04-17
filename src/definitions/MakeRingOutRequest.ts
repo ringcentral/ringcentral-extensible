@@ -1,6 +1,4 @@
-import MakeRingOutCallerInfoRequestFrom from './MakeRingOutCallerInfoRequestFrom'
-import MakeRingOutCallerInfoRequestTo from './MakeRingOutCallerInfoRequestTo'
-import MakeRingOutCoutryInfo from './MakeRingOutCoutryInfo'
+import { MakeRingOutCallerInfoRequestFrom, MakeRingOutCallerInfoRequestTo, MakeRingOutCoutryInfo } from '.'
 
 class MakeRingOutRequest
 {

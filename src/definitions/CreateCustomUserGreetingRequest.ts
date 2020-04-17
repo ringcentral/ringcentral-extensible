@@ -1,5 +1,4 @@
-import Attachment from './Attachment'
-import CustomGreetingAnsweringRuleInfoRequest from './CustomGreetingAnsweringRuleInfoRequest'
+import { Attachment, CustomGreetingAnsweringRuleInfoRequest } from '.'
 
 class CreateCustomUserGreetingRequest
 {
