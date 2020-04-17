@@ -1,7 +1,7 @@
 class Attachment
 {
   /**
-   * File name with extension, such as "example.png"
+   * File name with extension, such as 'example.png'
    */
   filename: string
 
@@ -11,7 +11,7 @@ class Attachment
   content: string | Buffer | Blob | ReadableStream
 
   /**
-   * Content tyle of the file, such as "image/png"
+   * Content tyle of the file, such as 'image/png'
    */
   contentType: string
 

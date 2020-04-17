@@ -29,7 +29,7 @@ const normalizeType = f => {
     return 'Attachment'
   } else if (f.type === 'string') {
     if (f.enum) {
-      return `(${f.enum.map(i => `'${i.replace(/'/g, "\\'")}'`).join(' | ')})`
+      return `(${f.enum.map(i => `'${i.replace(/'/g, '\\\'')}'`).join(' | ')})`
     } else {
       return 'string'
     }
@@ -46,7 +46,7 @@ const normalizeField = f => {
 const generateField = (m, f) => {
   let p = ''
   if (f.name.includes('-') || f.name.includes(':') || f.name.includes('.')) {
-    p = `"${f.name}"?: ${f.type}`
+    p = `'${f.name}'?: ${f.type}`
   } else {
     p = `${f.name}?: ${f.type}`
   }
@@ -137,7 +137,7 @@ Object.keys(doc.paths).forEach(p => {
 fs.writeFileSync(path.join(outputDir, 'Attachment.ts'), `class Attachment
 {
   /**
-   * File name with extension, such as "example.png"
+   * File name with extension, such as 'example.png'
    */
   filename: string
 
@@ -147,7 +147,7 @@ fs.writeFileSync(path.join(outputDir, 'Attachment.ts'), `class Attachment
   content: string | Buffer | Blob | ReadableStream
 
   /**
-   * Content tyle of the file, such as "image/png"
+   * Content tyle of the file, such as 'image/png'
    */
   contentType: string
 

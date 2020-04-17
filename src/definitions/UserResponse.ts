@@ -46,7 +46,7 @@ class UserResponse
 
   /**
    */
-  "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User"?: EnterpriseUser
+  'urn:ietf:params:scim:schemas:extension:enterprise:2.0:User'?: EnterpriseUser
 
   /**
    * MUST be same as work type email address

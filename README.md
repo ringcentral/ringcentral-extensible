@@ -19,7 +19,6 @@ yarn test
 
 ## Todo
 
-- Replace double quotes with single quote
 - Test MMS
 - PubNub
 - Generate API reference

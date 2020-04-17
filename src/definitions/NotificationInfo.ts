@@ -20,7 +20,7 @@ class NotificationInfo
   /**
    * Content availability
    */
-  "content-available"?: string
+  'content-available'?: string
 
   /**
    * Category of a message
