@@ -163,6 +163,5 @@ export default Attachment
 `)
 
 const defintionFiles = fs.readdirSync(outputDir).map(df => df.substring(0, df.length - 3))
-let code = defintionFiles.map(df => `import ${df} from './${df}'`).join('\n')
-code += `\n\nexport{ ${defintionFiles.join(', ')} }`
+const code = defintionFiles.map(df => `export { default as ${df} } from './${df}'`).join('\n')
 fs.writeFileSync(path.join(outputDir, 'index.ts'), code)
