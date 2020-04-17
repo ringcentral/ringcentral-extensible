@@ -1,8 +1,4 @@
-import UpdateForwardingNumberRequest from '../../../../../definitions/UpdateForwardingNumberRequest'
-import CreateForwardingNumberRequest from '../../../../../definitions/CreateForwardingNumberRequest'
-import ForwardingNumberInfo from '../../../../../definitions/ForwardingNumberInfo'
-import ListForwardingNumbersParameters from '../../../../../definitions/ListForwardingNumbersParameters'
-import GetExtensionForwardingNumberListResponse from '../../../../../definitions/GetExtensionForwardingNumberListResponse'
+import { GetExtensionForwardingNumberListResponse, ListForwardingNumbersParameters, ForwardingNumberInfo, CreateForwardingNumberRequest, UpdateForwardingNumberRequest } from '../../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../../..'
 

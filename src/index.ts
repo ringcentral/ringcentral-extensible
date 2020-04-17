@@ -1,8 +1,7 @@
 import axios, { AxiosInstance, Method } from 'axios'
 import qs from 'qs'
 
-import GetTokenRequest from './definitions/GetTokenRequest'
-import TokenInfo from './definitions/TokenInfo'
+import { GetTokenRequest, TokenInfo } from './definitions'
 import pkg from '../package.json'
 import RestException from './RestException'
 import Restapi from './paths/Restapi'

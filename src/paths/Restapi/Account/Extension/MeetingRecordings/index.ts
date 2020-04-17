@@ -1,5 +1,4 @@
-import ListUserMeetingRecordingsParameters from '../../../../../definitions/ListUserMeetingRecordingsParameters'
-import ListMeetingRecordingsResponse from '../../../../../definitions/ListMeetingRecordingsResponse'
+import { ListMeetingRecordingsResponse, ListUserMeetingRecordingsParameters } from '../../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../../..'
 

@@ -1,4 +1,4 @@
-import BulkAccountCallRecordingsResource from '../../../../../definitions/BulkAccountCallRecordingsResource'
+import { BulkAccountCallRecordingsResource } from '../../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../../..'
 

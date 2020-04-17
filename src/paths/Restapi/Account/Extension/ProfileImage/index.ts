@@ -1,5 +1,4 @@
-import UpdateUserProfileImageRequest from '../../../../../definitions/UpdateUserProfileImageRequest'
-import CreateUserProfileImageRequest from '../../../../../definitions/CreateUserProfileImageRequest'
+import { CreateUserProfileImageRequest, UpdateUserProfileImageRequest } from '../../../../../definitions'
 import Utils from '../../../../../Utils'
 import Parent from '..'
 import RestClient from '../../../../..'

@@ -1,6 +1,4 @@
-import CompanyPhoneNumberInfo from '../../../../definitions/CompanyPhoneNumberInfo'
-import ListAccountPhoneNumbersParameters from '../../../../definitions/ListAccountPhoneNumbersParameters'
-import AccountPhoneNumbers from '../../../../definitions/AccountPhoneNumbers'
+import { AccountPhoneNumbers, ListAccountPhoneNumbersParameters, CompanyPhoneNumberInfo } from '../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../..'
 

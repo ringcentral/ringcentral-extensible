@@ -1,5 +1,4 @@
-import ListExtensionGrantsParameters from '../../../../../definitions/ListExtensionGrantsParameters'
-import GetExtensionGrantListResponse from '../../../../../definitions/GetExtensionGrantListResponse'
+import { GetExtensionGrantListResponse, ListExtensionGrantsParameters } from '../../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../../..'
 

@@ -1,4 +1,4 @@
-import RevokeTokenRequest from '../../../../definitions/RevokeTokenRequest'
+import { RevokeTokenRequest } from '../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../..'
 

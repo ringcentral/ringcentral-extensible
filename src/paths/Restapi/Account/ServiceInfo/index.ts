@@ -1,4 +1,4 @@
-import GetServiceInfoResponse from '../../../../definitions/GetServiceInfoResponse'
+import { GetServiceInfoResponse } from '../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../..'
 

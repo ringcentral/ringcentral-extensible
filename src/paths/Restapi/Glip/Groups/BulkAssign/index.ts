@@ -1,5 +1,4 @@
-import EditGroupRequest from '../../../../../definitions/EditGroupRequest'
-import GlipGroupInfo from '../../../../../definitions/GlipGroupInfo'
+import { GlipGroupInfo, EditGroupRequest } from '../../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../../..'
 

@@ -1,4 +1,4 @@
-import GlipCompleteTask from '../../../../../definitions/GlipCompleteTask'
+import { GlipCompleteTask } from '../../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../../..'
 

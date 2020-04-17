@@ -1,4 +1,4 @@
-import EditPagingGroupRequest from '../../../../../definitions/EditPagingGroupRequest'
+import { EditPagingGroupRequest } from '../../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../../..'
 

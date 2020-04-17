@@ -1,7 +1,4 @@
-import AddBlockedAllowedPhoneNumber from '../../../../../../definitions/AddBlockedAllowedPhoneNumber'
-import BlockedAllowedPhoneNumberInfo from '../../../../../../definitions/BlockedAllowedPhoneNumberInfo'
-import ListBlockedAllowedNumbersParameters from '../../../../../../definitions/ListBlockedAllowedNumbersParameters'
-import BlockedAllowedPhoneNumbersList from '../../../../../../definitions/BlockedAllowedPhoneNumbersList'
+import { BlockedAllowedPhoneNumbersList, ListBlockedAllowedNumbersParameters, BlockedAllowedPhoneNumberInfo, AddBlockedAllowedPhoneNumber } from '../../../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../../../..'
 

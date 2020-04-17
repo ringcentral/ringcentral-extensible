@@ -1,4 +1,4 @@
-import CallRecordingExtensions from '../../../../../definitions/CallRecordingExtensions'
+import { CallRecordingExtensions } from '../../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../../..'
 

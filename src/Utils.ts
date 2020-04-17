@@ -1,6 +1,6 @@
 import FormData from 'form-data'
 
-import Attachment from './definitions/Attachment'
+import { Attachment } from './definitions'
 
 class Utils {
   static getFormData(...objs): FormData {

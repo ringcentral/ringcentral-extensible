@@ -1,8 +1,4 @@
-import ReadUserCallRecordParameters from '../../../../../definitions/ReadUserCallRecordParameters'
-import UserCallLogRecord from '../../../../../definitions/UserCallLogRecord'
-import DeleteUserCallLogParameters from '../../../../../definitions/DeleteUserCallLogParameters'
-import ReadUserCallLogParameters from '../../../../../definitions/ReadUserCallLogParameters'
-import UserCallLogResponse from '../../../../../definitions/UserCallLogResponse'
+import { UserCallLogResponse, ReadUserCallLogParameters, DeleteUserCallLogParameters, UserCallLogRecord, ReadUserCallRecordParameters } from '../../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../../..'
 

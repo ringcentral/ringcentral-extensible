@@ -1,7 +1,4 @@
-import CustomFieldUpdateRequest from '../../../../definitions/CustomFieldUpdateRequest'
-import CustomFieldsResource from '../../../../definitions/CustomFieldsResource'
-import CustomFieldCreateRequest from '../../../../definitions/CustomFieldCreateRequest'
-import CustomFieldResource from '../../../../definitions/CustomFieldResource'
+import { CustomFieldResource, CustomFieldCreateRequest, CustomFieldsResource, CustomFieldUpdateRequest } from '../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../..'
 

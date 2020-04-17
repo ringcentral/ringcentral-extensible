@@ -1,4 +1,4 @@
-import MessageStoreReportArchive from '../../../../../definitions/MessageStoreReportArchive'
+import { MessageStoreReportArchive } from '../../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../../..'
 

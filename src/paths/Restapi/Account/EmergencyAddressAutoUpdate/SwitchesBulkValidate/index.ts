@@ -1,5 +1,4 @@
-import ValidateMultipleSwitchesRequest from '../../../../../definitions/ValidateMultipleSwitchesRequest'
-import ValidateMultipleSwitchesResponse from '../../../../../definitions/ValidateMultipleSwitchesResponse'
+import { ValidateMultipleSwitchesResponse, ValidateMultipleSwitchesRequest } from '../../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../../..'
 

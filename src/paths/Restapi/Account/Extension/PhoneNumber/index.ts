@@ -1,5 +1,4 @@
-import ListExtensionPhoneNumbersParameters from '../../../../../definitions/ListExtensionPhoneNumbersParameters'
-import GetExtensionPhoneNumbersResponse from '../../../../../definitions/GetExtensionPhoneNumbersResponse'
+import { GetExtensionPhoneNumbersResponse, ListExtensionPhoneNumbersParameters } from '../../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../../..'
 

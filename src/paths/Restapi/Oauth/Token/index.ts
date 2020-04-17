@@ -1,5 +1,4 @@
-import GetTokenRequest from '../../../../definitions/GetTokenRequest'
-import TokenInfo from '../../../../definitions/TokenInfo'
+import { TokenInfo, GetTokenRequest } from '../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../..'
 

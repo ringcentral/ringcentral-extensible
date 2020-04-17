@@ -1,6 +1,5 @@
 import BulkAssign from './BulkAssign'
-import ListAutomaticLocationUpdatesUsersParameters from '../../../../../definitions/ListAutomaticLocationUpdatesUsersParameters'
-import AutomaticLocationUpdatesUserList from '../../../../../definitions/AutomaticLocationUpdatesUserList'
+import { AutomaticLocationUpdatesUserList, ListAutomaticLocationUpdatesUsersParameters } from '../../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../../..'
 

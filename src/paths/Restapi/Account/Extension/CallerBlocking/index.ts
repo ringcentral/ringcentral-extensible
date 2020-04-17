@@ -1,6 +1,5 @@
 import PhoneNumbers from './PhoneNumbers'
-import CallerBlockingSettingsUpdate from '../../../../../definitions/CallerBlockingSettingsUpdate'
-import CallerBlockingSettings from '../../../../../definitions/CallerBlockingSettings'
+import { CallerBlockingSettings, CallerBlockingSettingsUpdate } from '../../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../../..'
 

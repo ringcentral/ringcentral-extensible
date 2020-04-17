@@ -1,5 +1,4 @@
-import ListLocationsParameters from '../../../../definitions/ListLocationsParameters'
-import GetLocationListResponse from '../../../../definitions/GetLocationListResponse'
+import { GetLocationListResponse, ListLocationsParameters } from '../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../..'
 

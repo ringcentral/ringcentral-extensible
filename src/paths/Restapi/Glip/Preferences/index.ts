@@ -1,4 +1,4 @@
-import GlipPreferencesInfo from '../../../../definitions/GlipPreferencesInfo'
+import { GlipPreferencesInfo } from '../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../..'
 

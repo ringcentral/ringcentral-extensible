@@ -1,5 +1,4 @@
-import ModifyAccountBusinessAddressRequest from '../../../../definitions/ModifyAccountBusinessAddressRequest'
-import AccountBusinessAddressResource from '../../../../definitions/AccountBusinessAddressResource'
+import { AccountBusinessAddressResource, ModifyAccountBusinessAddressRequest } from '../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../..'
 

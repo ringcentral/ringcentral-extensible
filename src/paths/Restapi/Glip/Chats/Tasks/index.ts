@@ -1,7 +1,4 @@
-import GlipCreateTask from '../../../../../definitions/GlipCreateTask'
-import GlipTaskInfo from '../../../../../definitions/GlipTaskInfo'
-import ListChatTasksParameters from '../../../../../definitions/ListChatTasksParameters'
-import GlipTaskList from '../../../../../definitions/GlipTaskList'
+import { GlipTaskList, ListChatTasksParameters, GlipTaskInfo, GlipCreateTask } from '../../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../../..'
 

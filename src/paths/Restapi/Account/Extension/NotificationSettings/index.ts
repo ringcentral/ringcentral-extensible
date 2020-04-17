@@ -1,4 +1,4 @@
-import NotificationSettingsUpdateRequest from '../../../../../definitions/NotificationSettingsUpdateRequest'
+import { NotificationSettingsUpdateRequest } from '../../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../../..'
 

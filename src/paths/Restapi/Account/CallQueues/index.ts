@@ -1,9 +1,7 @@
 import BulkAssign from './BulkAssign'
 import Members from './Members'
 import Presence from './Presence'
-import CallQueueUpdateDetails from '../../../../definitions/CallQueueUpdateDetails'
-import CallQueueDetails from '../../../../definitions/CallQueueDetails'
-import ListCallQueuesParameters from '../../../../definitions/ListCallQueuesParameters'
+import { ListCallQueuesParameters, CallQueueDetails, CallQueueUpdateDetails } from '../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../..'
 

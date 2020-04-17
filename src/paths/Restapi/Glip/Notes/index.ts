@@ -1,9 +1,7 @@
 import Publish from './Publish'
 import Unlock from './Unlock'
 import Lock from './Lock'
-import GlipNoteCreate from '../../../../definitions/GlipNoteCreate'
-import GlipNoteInfo from '../../../../definitions/GlipNoteInfo'
-import GetGlipNoteInfo from '../../../../definitions/GetGlipNoteInfo'
+import { GetGlipNoteInfo, GlipNoteInfo, GlipNoteCreate } from '../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../..'
 

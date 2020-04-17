@@ -1,5 +1,4 @@
-import ListPagingGroupUsersParameters from '../../../../../definitions/ListPagingGroupUsersParameters'
-import PagingOnlyGroupUsers from '../../../../../definitions/PagingOnlyGroupUsers'
+import { PagingOnlyGroupUsers, ListPagingGroupUsersParameters } from '../../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../../..'
 

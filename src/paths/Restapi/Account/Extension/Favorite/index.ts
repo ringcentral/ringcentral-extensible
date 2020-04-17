@@ -1,5 +1,4 @@
-import FavoriteCollection from '../../../../../definitions/FavoriteCollection'
-import FavoriteContactList from '../../../../../definitions/FavoriteContactList'
+import { FavoriteContactList, FavoriteCollection } from '../../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../../..'
 

@@ -1,6 +1,6 @@
 import Suspend from './Suspend'
 import Activate from './Activate'
-import GlipWebhookList from '../../../../definitions/GlipWebhookList'
+import { GlipWebhookList } from '../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../..'
 

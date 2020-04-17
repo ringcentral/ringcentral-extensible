@@ -1,5 +1,4 @@
-import ValidateMultipleWirelessPointsRequest from '../../../../../definitions/ValidateMultipleWirelessPointsRequest'
-import ValidateMultipleWirelessPointsResponse from '../../../../../definitions/ValidateMultipleWirelessPointsResponse'
+import { ValidateMultipleWirelessPointsResponse, ValidateMultipleWirelessPointsRequest } from '../../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../../..'
 

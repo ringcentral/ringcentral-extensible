@@ -1,7 +1,5 @@
 import Search from './Search'
-import ContactResource from '../../../../../definitions/ContactResource'
-import ListDirectoryEntriesParameters from '../../../../../definitions/ListDirectoryEntriesParameters'
-import DirectoryResource from '../../../../../definitions/DirectoryResource'
+import { DirectoryResource, ListDirectoryEntriesParameters, ContactResource } from '../../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../../..'
 

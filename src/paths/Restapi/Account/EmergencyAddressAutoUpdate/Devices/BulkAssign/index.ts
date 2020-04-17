@@ -1,4 +1,4 @@
-import AssignMultipleDevicesAutomaticLocationUpdates from '../../../../../../definitions/AssignMultipleDevicesAutomaticLocationUpdates'
+import { AssignMultipleDevicesAutomaticLocationUpdates } from '../../../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../../../..'
 

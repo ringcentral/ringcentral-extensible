@@ -1,4 +1,4 @@
-import SubscriptionInfo from '../../../../definitions/SubscriptionInfo'
+import { SubscriptionInfo } from '../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../..'
 

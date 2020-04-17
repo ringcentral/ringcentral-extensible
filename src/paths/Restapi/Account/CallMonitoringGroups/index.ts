@@ -1,8 +1,6 @@
 import BulkAssign from './BulkAssign'
 import Members from './Members'
-import ListCallMonitoringGroupsParameters from '../../../../definitions/ListCallMonitoringGroupsParameters'
-import CreateCallMonitoringGroupRequest from '../../../../definitions/CreateCallMonitoringGroupRequest'
-import CallMonitoringGroup from '../../../../definitions/CallMonitoringGroup'
+import { CallMonitoringGroup, CreateCallMonitoringGroupRequest, ListCallMonitoringGroupsParameters } from '../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../..'
 

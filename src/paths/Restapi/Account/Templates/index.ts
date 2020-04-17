@@ -1,6 +1,4 @@
-import TemplateInfo from '../../../../definitions/TemplateInfo'
-import ListUserTemplatesParameters from '../../../../definitions/ListUserTemplatesParameters'
-import UserTemplates from '../../../../definitions/UserTemplates'
+import { UserTemplates, ListUserTemplatesParameters, TemplateInfo } from '../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../..'
 

@@ -1,10 +1,4 @@
-import UpdateAnsweringRuleRequest from '../../../../../definitions/UpdateAnsweringRuleRequest'
-import ReadAnsweringRuleParameters from '../../../../../definitions/ReadAnsweringRuleParameters'
-import AnsweringRuleInfo from '../../../../../definitions/AnsweringRuleInfo'
-import CreateAnsweringRuleRequest from '../../../../../definitions/CreateAnsweringRuleRequest'
-import CustomAnsweringRuleInfo from '../../../../../definitions/CustomAnsweringRuleInfo'
-import ListAnsweringRulesParameters from '../../../../../definitions/ListAnsweringRulesParameters'
-import UserAnsweringRuleList from '../../../../../definitions/UserAnsweringRuleList'
+import { UserAnsweringRuleList, ListAnsweringRulesParameters, CustomAnsweringRuleInfo, CreateAnsweringRuleRequest, AnsweringRuleInfo, ReadAnsweringRuleParameters, UpdateAnsweringRuleRequest } from '../../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../../..'
 

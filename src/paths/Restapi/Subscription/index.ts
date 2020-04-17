@@ -1,9 +1,5 @@
 import Renew from './Renew'
-import UpdateSubscriptionParameters from '../../../definitions/UpdateSubscriptionParameters'
-import ModifySubscriptionRequest from '../../../definitions/ModifySubscriptionRequest'
-import CreateSubscriptionRequest from '../../../definitions/CreateSubscriptionRequest'
-import SubscriptionInfo from '../../../definitions/SubscriptionInfo'
-import RecordsCollectionResourceSubscriptionResponse from '../../../definitions/RecordsCollectionResourceSubscriptionResponse'
+import { RecordsCollectionResourceSubscriptionResponse, SubscriptionInfo, CreateSubscriptionRequest, ModifySubscriptionRequest, UpdateSubscriptionParameters } from '../../../definitions'
 import Parent from '..'
 import RestClient from '../../..'
 

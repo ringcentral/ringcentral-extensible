@@ -1,5 +1,5 @@
 import Archive from './Archive'
-import CreateMessageStoreReportRequest from '../../../../definitions/CreateMessageStoreReportRequest'
+import { CreateMessageStoreReportRequest } from '../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../..'
 

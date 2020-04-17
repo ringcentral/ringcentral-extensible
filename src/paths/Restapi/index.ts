@@ -6,8 +6,7 @@ import Dictionary from './Dictionary'
 import Account from './Account'
 import Status from './Status'
 import Oauth from './Oauth'
-import GetVersionResponse from '../../definitions/GetVersionResponse'
-import GetVersionsResponse from '../../definitions/GetVersionsResponse'
+import { GetVersionsResponse, GetVersionResponse } from '../../definitions'
 import RestClient from '../..'
 
 class Restapi {

@@ -1,8 +1,4 @@
-import GlipPatchPostBody from '../../../../../definitions/GlipPatchPostBody'
-import GlipPostPostBody from '../../../../../definitions/GlipPostPostBody'
-import GlipPostInfo from '../../../../../definitions/GlipPostInfo'
-import ReadGlipPostsParameters from '../../../../../definitions/ReadGlipPostsParameters'
-import GlipPostsList from '../../../../../definitions/GlipPostsList'
+import { GlipPostsList, ReadGlipPostsParameters, GlipPostInfo, GlipPostPostBody, GlipPatchPostBody } from '../../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../../..'
 

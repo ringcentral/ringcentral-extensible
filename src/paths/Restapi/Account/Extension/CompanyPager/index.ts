@@ -1,5 +1,4 @@
-import CreateInternalTextMessageRequest from '../../../../../definitions/CreateInternalTextMessageRequest'
-import GetMessageInfoResponse from '../../../../../definitions/GetMessageInfoResponse'
+import { GetMessageInfoResponse, CreateInternalTextMessageRequest } from '../../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../../..'
 

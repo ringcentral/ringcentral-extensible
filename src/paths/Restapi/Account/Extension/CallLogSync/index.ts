@@ -1,4 +1,4 @@
-import SyncUserCallLogParameters from '../../../../../definitions/SyncUserCallLogParameters'
+import { SyncUserCallLogParameters } from '../../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../../..'
 

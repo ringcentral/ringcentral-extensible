@@ -1,5 +1,4 @@
-import ListExtensionDevicesParameters from '../../../../../definitions/ListExtensionDevicesParameters'
-import GetExtensionDevicesResponse from '../../../../../definitions/GetExtensionDevicesResponse'
+import { GetExtensionDevicesResponse, ListExtensionDevicesParameters } from '../../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../../..'
 

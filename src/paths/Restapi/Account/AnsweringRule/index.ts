@@ -1,8 +1,4 @@
-import CompanyAnsweringRuleUpdate from '../../../../definitions/CompanyAnsweringRuleUpdate'
-import ListCompanyAnsweringRulesParameters from '../../../../definitions/ListCompanyAnsweringRulesParameters'
-import CompanyAnsweringRuleList from '../../../../definitions/CompanyAnsweringRuleList'
-import CompanyAnsweringRuleRequest from '../../../../definitions/CompanyAnsweringRuleRequest'
-import CompanyAnsweringRuleInfo from '../../../../definitions/CompanyAnsweringRuleInfo'
+import { CompanyAnsweringRuleInfo, CompanyAnsweringRuleRequest, CompanyAnsweringRuleList, ListCompanyAnsweringRulesParameters, CompanyAnsweringRuleUpdate } from '../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../..'
 

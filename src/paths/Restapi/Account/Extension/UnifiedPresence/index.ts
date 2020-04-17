@@ -1,4 +1,4 @@
-import UpdateUnifiedPresence from '../../../../../definitions/UpdateUnifiedPresence'
+import { UpdateUnifiedPresence } from '../../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../../..'
 

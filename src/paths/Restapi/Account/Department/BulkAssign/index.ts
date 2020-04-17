@@ -1,4 +1,4 @@
-import DepartmentBulkAssignResource from '../../../../../definitions/DepartmentBulkAssignResource'
+import { DepartmentBulkAssignResource } from '../../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../../..'
 

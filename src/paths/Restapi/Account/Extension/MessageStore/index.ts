@@ -1,9 +1,5 @@
 import Content from './Content'
-import DeleteMessageParameters from '../../../../../definitions/DeleteMessageParameters'
-import UpdateMessageRequest from '../../../../../definitions/UpdateMessageRequest'
-import GetMessageInfoResponse from '../../../../../definitions/GetMessageInfoResponse'
-import ListMessagesParameters from '../../../../../definitions/ListMessagesParameters'
-import GetMessageList from '../../../../../definitions/GetMessageList'
+import { GetMessageList, ListMessagesParameters, GetMessageInfoResponse, UpdateMessageRequest, DeleteMessageParameters } from '../../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../../..'
 

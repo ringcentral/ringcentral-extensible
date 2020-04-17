@@ -1,5 +1,4 @@
-import UpdateGlipEveryoneRequest from '../../../../definitions/UpdateGlipEveryoneRequest'
-import GlipEveryoneInfo from '../../../../definitions/GlipEveryoneInfo'
+import { GlipEveryoneInfo, UpdateGlipEveryoneRequest } from '../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../..'
 

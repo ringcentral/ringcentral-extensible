@@ -1,5 +1,4 @@
-import MeetingServiceInfoRequest from '../../../../../../definitions/MeetingServiceInfoRequest'
-import MeetingServiceInfoResource from '../../../../../../definitions/MeetingServiceInfoResource'
+import { MeetingServiceInfoResource, MeetingServiceInfoRequest } from '../../../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../../../..'
 

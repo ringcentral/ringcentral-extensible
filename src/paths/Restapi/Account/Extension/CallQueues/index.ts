@@ -1,4 +1,4 @@
-import UserCallQueues from '../../../../../definitions/UserCallQueues'
+import { UserCallQueues } from '../../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../../..'
 

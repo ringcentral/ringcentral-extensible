@@ -1,4 +1,4 @@
-import CallQueueBulkAssignResource from '../../../../../definitions/CallQueueBulkAssignResource'
+import { CallQueueBulkAssignResource } from '../../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../../..'
 

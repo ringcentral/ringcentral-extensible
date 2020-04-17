@@ -1,4 +1,4 @@
-import ReadMessageContentParameters from '../../../../../../definitions/ReadMessageContentParameters'
+import { ReadMessageContentParameters } from '../../../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../../../..'
 

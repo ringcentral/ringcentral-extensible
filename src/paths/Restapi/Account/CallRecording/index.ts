@@ -1,7 +1,7 @@
 import CustomGreetings from './CustomGreetings'
 import BulkAssign from './BulkAssign'
 import Extensions from './Extensions'
-import CallRecordingSettingsResource from '../../../../definitions/CallRecordingSettingsResource'
+import { CallRecordingSettingsResource } from '../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../..'
 

@@ -1,5 +1,5 @@
 import Content from './Content'
-import GetCallRecordingResponse from '../../../../definitions/GetCallRecordingResponse'
+import { GetCallRecordingResponse } from '../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../..'
 

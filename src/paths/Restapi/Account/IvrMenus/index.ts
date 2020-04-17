@@ -1,4 +1,4 @@
-import IVRMenuInfo from '../../../../definitions/IVRMenuInfo'
+import { IVRMenuInfo } from '../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../..'
 

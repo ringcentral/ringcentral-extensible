@@ -1,7 +1,4 @@
-import ReadTimezoneParameters from '../../../../definitions/ReadTimezoneParameters'
-import GetTimezoneInfoResponse from '../../../../definitions/GetTimezoneInfoResponse'
-import ListTimezonesParameters from '../../../../definitions/ListTimezonesParameters'
-import GetTimezoneListResponse from '../../../../definitions/GetTimezoneListResponse'
+import { GetTimezoneListResponse, ListTimezonesParameters, GetTimezoneInfoResponse, ReadTimezoneParameters } from '../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../..'
 

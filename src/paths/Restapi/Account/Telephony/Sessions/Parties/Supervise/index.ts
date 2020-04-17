@@ -1,5 +1,4 @@
-import PartySuperviseRequest from '../../../../../../../definitions/PartySuperviseRequest'
-import PartySuperviseResponse from '../../../../../../../definitions/PartySuperviseResponse'
+import { PartySuperviseResponse, PartySuperviseRequest } from '../../../../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../../../../..'
 

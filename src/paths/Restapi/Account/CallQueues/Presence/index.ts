@@ -1,5 +1,4 @@
-import CallQueueUpdatePresence from '../../../../../definitions/CallQueueUpdatePresence'
-import CallQueuePresence from '../../../../../definitions/CallQueuePresence'
+import { CallQueuePresence, CallQueueUpdatePresence } from '../../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../../..'
 

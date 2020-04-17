@@ -1,6 +1,4 @@
-import GetStateInfoResponse from '../../../../definitions/GetStateInfoResponse'
-import ListStatesParameters from '../../../../definitions/ListStatesParameters'
-import GetStateListResponse from '../../../../definitions/GetStateListResponse'
+import { GetStateListResponse, ListStatesParameters, GetStateInfoResponse } from '../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../..'
 

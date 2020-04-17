@@ -1,5 +1,4 @@
-import CompanyBusinessHoursUpdateRequest from '../../../../definitions/CompanyBusinessHoursUpdateRequest'
-import CompanyBusinessHours from '../../../../definitions/CompanyBusinessHours'
+import { CompanyBusinessHours, CompanyBusinessHoursUpdateRequest } from '../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../..'
 

@@ -1,10 +1,5 @@
 import DotSearch from './DotSearch'
-import UserPatch from '../../../definitions/UserPatch'
-import User from '../../../definitions/User'
-import CreateUser from '../../../definitions/CreateUser'
-import UserResponse from '../../../definitions/UserResponse'
-import SearchViaGet2Parameters from '../../../definitions/SearchViaGet2Parameters'
-import UserSearchResponse from '../../../definitions/UserSearchResponse'
+import { UserSearchResponse, SearchViaGet2Parameters, UserResponse, CreateUser, User, UserPatch } from '../../../definitions'
 import Parent from '..'
 import RestClient from '../../..'
 

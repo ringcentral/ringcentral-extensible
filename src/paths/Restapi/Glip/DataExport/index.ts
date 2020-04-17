@@ -1,8 +1,5 @@
 import Datasets from './Datasets'
-import ListDataExportTasksParameters from '../../../../definitions/ListDataExportTasksParameters'
-import DataExportTaskList from '../../../../definitions/DataExportTaskList'
-import CreateDataExportTaskRequest from '../../../../definitions/CreateDataExportTaskRequest'
-import DataExportTask from '../../../../definitions/DataExportTask'
+import { DataExportTask, CreateDataExportTaskRequest, DataExportTaskList, ListDataExportTasksParameters } from '../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../..'
 

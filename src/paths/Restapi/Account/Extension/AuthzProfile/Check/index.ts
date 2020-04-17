@@ -1,5 +1,4 @@
-import CheckUserPermissionParameters from '../../../../../../definitions/CheckUserPermissionParameters'
-import AuthProfileCheckResource from '../../../../../../definitions/AuthProfileCheckResource'
+import { AuthProfileCheckResource, CheckUserPermissionParameters } from '../../../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../../../..'
 

@@ -1,4 +1,4 @@
-import CallMonitoringBulkAssign from '../../../../../definitions/CallMonitoringBulkAssign'
+import { CallMonitoringBulkAssign } from '../../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../../..'
 

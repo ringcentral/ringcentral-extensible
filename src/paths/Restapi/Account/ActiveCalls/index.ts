@@ -1,5 +1,4 @@
-import ListCompanyActiveCallsParameters from '../../../../definitions/ListCompanyActiveCallsParameters'
-import CompanyActiveCallsResponse from '../../../../definitions/CompanyActiveCallsResponse'
+import { CompanyActiveCallsResponse, ListCompanyActiveCallsParameters } from '../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../..'
 

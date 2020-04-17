@@ -1,6 +1,4 @@
-import GetCountryInfoDictionaryResponse from '../../../../definitions/GetCountryInfoDictionaryResponse'
-import ListCountriesParameters from '../../../../definitions/ListCountriesParameters'
-import GetCountryListResponse from '../../../../definitions/GetCountryListResponse'
+import { GetCountryListResponse, ListCountriesParameters, GetCountryInfoDictionaryResponse } from '../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../..'
 

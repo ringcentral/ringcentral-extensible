@@ -1,5 +1,4 @@
-import TransferTarget from '../../../../../../../definitions/TransferTarget'
-import CallParty from '../../../../../../../definitions/CallParty'
+import { CallParty, TransferTarget } from '../../../../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../../../../..'
 

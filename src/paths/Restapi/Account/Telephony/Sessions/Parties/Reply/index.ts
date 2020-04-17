@@ -1,5 +1,4 @@
-import CallPartyReply from '../../../../../../../definitions/CallPartyReply'
-import ReplyParty from '../../../../../../../definitions/ReplyParty'
+import { ReplyParty, CallPartyReply } from '../../../../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../../../../..'
 

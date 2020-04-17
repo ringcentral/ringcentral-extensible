@@ -1,5 +1,4 @@
-import MakeRingOutRequest from '../../../../../definitions/MakeRingOutRequest'
-import GetRingOutStatusResponse from '../../../../../definitions/GetRingOutStatusResponse'
+import { GetRingOutStatusResponse, MakeRingOutRequest } from '../../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../../..'
 

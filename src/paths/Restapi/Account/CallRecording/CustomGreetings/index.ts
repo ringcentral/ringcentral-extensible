@@ -1,5 +1,4 @@
-import ListCallRecordingCustomGreetingsParameters from '../../../../../definitions/ListCallRecordingCustomGreetingsParameters'
-import CallRecordingCustomGreetings from '../../../../../definitions/CallRecordingCustomGreetings'
+import { CallRecordingCustomGreetings, ListCallRecordingCustomGreetingsParameters } from '../../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../../..'
 

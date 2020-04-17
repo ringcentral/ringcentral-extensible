@@ -1,5 +1,4 @@
-import GlipWebhookList from '../../../../../definitions/GlipWebhookList'
-import GlipWebhookInfo from '../../../../../definitions/GlipWebhookInfo'
+import { GlipWebhookInfo, GlipWebhookList } from '../../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../../..'
 

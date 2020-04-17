@@ -1,5 +1,4 @@
-import ListPagingGroupDevicesParameters from '../../../../../definitions/ListPagingGroupDevicesParameters'
-import PagingOnlyGroupDevices from '../../../../../definitions/PagingOnlyGroupDevices'
+import { PagingOnlyGroupDevices, ListPagingGroupDevicesParameters } from '../../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../../..'
 

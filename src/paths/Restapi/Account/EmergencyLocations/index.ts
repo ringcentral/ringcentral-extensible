@@ -1,7 +1,4 @@
-import EmergencyLocationInfo from '../../../../definitions/EmergencyLocationInfo'
-import ListEmergencyLocationsParameters from '../../../../definitions/ListEmergencyLocationsParameters'
-import EmergencyLocationList from '../../../../definitions/EmergencyLocationList'
-import EmergencyLocationInfoRequest from '../../../../definitions/EmergencyLocationInfoRequest'
+import { EmergencyLocationInfoRequest, EmergencyLocationList, ListEmergencyLocationsParameters, EmergencyLocationInfo } from '../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../..'
 

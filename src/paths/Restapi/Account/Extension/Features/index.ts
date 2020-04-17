@@ -1,5 +1,4 @@
-import ReadUserFeaturesParameters from '../../../../../definitions/ReadUserFeaturesParameters'
-import FeatureList from '../../../../../definitions/FeatureList'
+import { FeatureList, ReadUserFeaturesParameters } from '../../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../../..'
 

@@ -1,7 +1,4 @@
-import ListChatNotesParameters from '../../../../../definitions/ListChatNotesParameters'
-import GlipNotesInfo from '../../../../../definitions/GlipNotesInfo'
-import GlipNoteCreate from '../../../../../definitions/GlipNoteCreate'
-import GlipNoteInfo from '../../../../../definitions/GlipNoteInfo'
+import { GlipNoteInfo, GlipNoteCreate, GlipNotesInfo, ListChatNotesParameters } from '../../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../../..'
 

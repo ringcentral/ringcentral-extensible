@@ -1,4 +1,4 @@
-import BulkAssignAutomaticaLocationUpdatesUsers from '../../../../../../definitions/BulkAssignAutomaticaLocationUpdatesUsers'
+import { BulkAssignAutomaticaLocationUpdatesUsers } from '../../../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../../../..'
 

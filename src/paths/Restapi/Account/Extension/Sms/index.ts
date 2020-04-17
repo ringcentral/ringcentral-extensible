@@ -1,5 +1,4 @@
-import CreateSMSMessage from '../../../../../definitions/CreateSMSMessage'
-import GetMessageInfoResponse from '../../../../../definitions/GetMessageInfoResponse'
+import { GetMessageInfoResponse, CreateSMSMessage } from '../../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../../..'
 

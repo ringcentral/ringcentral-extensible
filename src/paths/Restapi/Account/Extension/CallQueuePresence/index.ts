@@ -1,6 +1,4 @@
-import ExtensionCallQueueUpdatePresenceList from '../../../../../definitions/ExtensionCallQueueUpdatePresenceList'
-import ReadExtensionCallQueuePresenceParameters from '../../../../../definitions/ReadExtensionCallQueuePresenceParameters'
-import ExtensionCallQueuePresenceList from '../../../../../definitions/ExtensionCallQueuePresenceList'
+import { ExtensionCallQueuePresenceList, ReadExtensionCallQueuePresenceParameters, ExtensionCallQueueUpdatePresenceList } from '../../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../../..'
 

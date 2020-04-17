@@ -1,7 +1,4 @@
-import ReadCompanyCallRecordParameters from '../../../../definitions/ReadCompanyCallRecordParameters'
-import CompanyCallLogRecord from '../../../../definitions/CompanyCallLogRecord'
-import ReadCompanyCallLogParameters from '../../../../definitions/ReadCompanyCallLogParameters'
-import AccountCallLogResponse from '../../../../definitions/AccountCallLogResponse'
+import { AccountCallLogResponse, ReadCompanyCallLogParameters, CompanyCallLogRecord, ReadCompanyCallRecordParameters } from '../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../..'
 

@@ -1,5 +1,4 @@
-import CreateSipRegistrationRequest from '../../../../definitions/CreateSipRegistrationRequest'
-import CreateSipRegistrationResponse from '../../../../definitions/CreateSipRegistrationResponse'
+import { CreateSipRegistrationResponse, CreateSipRegistrationRequest } from '../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../..'
 

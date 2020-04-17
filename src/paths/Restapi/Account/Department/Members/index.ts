@@ -1,5 +1,4 @@
-import ListDepartmentMembersParameters from '../../../../../definitions/ListDepartmentMembersParameters'
-import DepartmentMemberList from '../../../../../definitions/DepartmentMemberList'
+import { DepartmentMemberList, ListDepartmentMembersParameters } from '../../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../../..'
 

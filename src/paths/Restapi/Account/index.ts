@@ -27,7 +27,7 @@ import ActiveCalls from './ActiveCalls'
 import CallLogSync from './CallLogSync'
 import CallLog from './CallLog'
 import Extension from './Extension'
-import GetAccountInfoResponse from '../../../definitions/GetAccountInfoResponse'
+import { GetAccountInfoResponse } from '../../../definitions'
 import Parent from '..'
 import RestClient from '../../..'
 

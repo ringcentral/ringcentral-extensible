@@ -1,6 +1,4 @@
-import UpdateConferencingInfoRequest from '../../../../../definitions/UpdateConferencingInfoRequest'
-import ReadConferencingSettingsParameters from '../../../../../definitions/ReadConferencingSettingsParameters'
-import GetConferencingInfoResponse from '../../../../../definitions/GetConferencingInfoResponse'
+import { GetConferencingInfoResponse, ReadConferencingSettingsParameters, UpdateConferencingInfoRequest } from '../../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../../..'
 

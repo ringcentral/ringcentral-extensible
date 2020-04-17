@@ -1,7 +1,4 @@
-import GlipCreatePost from '../../../../definitions/GlipCreatePost'
-import GlipPostInfo from '../../../../definitions/GlipPostInfo'
-import ListGlipPostsParameters from '../../../../definitions/ListGlipPostsParameters'
-import GlipPosts from '../../../../definitions/GlipPosts'
+import { GlipPosts, ListGlipPostsParameters, GlipPostInfo, GlipCreatePost } from '../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../..'
 

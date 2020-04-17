@@ -1,5 +1,4 @@
-import CreateMultipleSwitchesRequest from '../../../../../definitions/CreateMultipleSwitchesRequest'
-import CreateMultipleSwitchesResponse from '../../../../../definitions/CreateMultipleSwitchesResponse'
+import { CreateMultipleSwitchesResponse, CreateMultipleSwitchesRequest } from '../../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../../..'
 

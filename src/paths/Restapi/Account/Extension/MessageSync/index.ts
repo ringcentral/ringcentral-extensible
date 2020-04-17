@@ -1,5 +1,4 @@
-import SyncMessagesParameters from '../../../../../definitions/SyncMessagesParameters'
-import GetMessageSyncResponse from '../../../../../definitions/GetMessageSyncResponse'
+import { GetMessageSyncResponse, SyncMessagesParameters } from '../../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../../..'
 

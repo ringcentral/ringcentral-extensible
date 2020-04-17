@@ -1,8 +1,5 @@
 import Text from './Text'
-import GlipCreatePost from '../../../../../definitions/GlipCreatePost'
-import GlipPostInfo from '../../../../../definitions/GlipPostInfo'
-import ListGlipGroupPostsParameters from '../../../../../definitions/ListGlipGroupPostsParameters'
-import GlipPosts from '../../../../../definitions/GlipPosts'
+import { GlipPosts, ListGlipGroupPostsParameters, GlipPostInfo, GlipCreatePost } from '../../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../../..'
 

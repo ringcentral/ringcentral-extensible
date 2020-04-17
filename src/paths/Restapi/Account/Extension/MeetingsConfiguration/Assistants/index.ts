@@ -1,4 +1,4 @@
-import AssistantsResource from '../../../../../../definitions/AssistantsResource'
+import { AssistantsResource } from '../../../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../../../..'
 

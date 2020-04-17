@@ -1,5 +1,4 @@
-import SearchDirectoryEntriesRequest from '../../../../../../definitions/SearchDirectoryEntriesRequest'
-import DirectoryResource from '../../../../../../definitions/DirectoryResource'
+import { DirectoryResource, SearchDirectoryEntriesRequest } from '../../../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../../../..'
 

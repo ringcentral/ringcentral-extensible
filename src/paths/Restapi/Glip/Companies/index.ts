@@ -1,4 +1,4 @@
-import GlipCompany from '../../../../definitions/GlipCompany'
+import { GlipCompany } from '../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../..'
 

@@ -1,5 +1,4 @@
-import ListFavoriteChatsParameters from '../../../../definitions/ListFavoriteChatsParameters'
-import GlipChatsListWithoutNavigation from '../../../../definitions/GlipChatsListWithoutNavigation'
+import { GlipChatsListWithoutNavigation, ListFavoriteChatsParameters } from '../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../..'
 

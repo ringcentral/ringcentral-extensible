@@ -1,8 +1,4 @@
-import UpdateSwitchInfo from '../../../../../definitions/UpdateSwitchInfo'
-import CreateSwitchInfo from '../../../../../definitions/CreateSwitchInfo'
-import SwitchInfo from '../../../../../definitions/SwitchInfo'
-import ListAccountSwitchesParameters from '../../../../../definitions/ListAccountSwitchesParameters'
-import SwitchesList from '../../../../../definitions/SwitchesList'
+import { SwitchesList, ListAccountSwitchesParameters, SwitchInfo, CreateSwitchInfo, UpdateSwitchInfo } from '../../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../../..'
 

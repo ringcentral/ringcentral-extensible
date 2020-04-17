@@ -1,5 +1,4 @@
-import UpdateMultipleSwitchesRequest from '../../../../../definitions/UpdateMultipleSwitchesRequest'
-import UpdateMultipleSwitchesResponse from '../../../../../definitions/UpdateMultipleSwitchesResponse'
+import { UpdateMultipleSwitchesResponse, UpdateMultipleSwitchesRequest } from '../../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../../..'
 

@@ -1,6 +1,4 @@
-import ParsePhoneNumberParameters from '../../../../definitions/ParsePhoneNumberParameters'
-import ParsePhoneNumberRequest from '../../../../definitions/ParsePhoneNumberRequest'
-import ParsePhoneNumberResponse from '../../../../definitions/ParsePhoneNumberResponse'
+import { ParsePhoneNumberResponse, ParsePhoneNumberRequest, ParsePhoneNumberParameters } from '../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../..'
 

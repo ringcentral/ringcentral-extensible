@@ -1,6 +1,4 @@
-import DictionaryGreetingInfo from '../../../../definitions/DictionaryGreetingInfo'
-import ListStandardGreetingsParameters from '../../../../definitions/ListStandardGreetingsParameters'
-import DictionaryGreetingList from '../../../../definitions/DictionaryGreetingList'
+import { DictionaryGreetingList, ListStandardGreetingsParameters, DictionaryGreetingInfo } from '../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../..'
 

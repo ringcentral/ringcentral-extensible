@@ -232,10 +232,9 @@ class ${R.last(routes)} {
     }
 
     definitionsUsed.delete(R.last(routes))
-    for (const definition of definitionsUsed) {
-      code = `import ${definition} from '${Array(routes.length + 1).fill('..').join('/')}/definitions/${definition}'\n${code}`
+    if (definitionsUsed.size > 0) {
+      code = `import { ${Array.from(definitionsUsed).join(', ')} } from '${Array(routes.length + 1).fill('..').join('/')}/definitions'\n${code}`
     }
-
     code += `
 }`
 

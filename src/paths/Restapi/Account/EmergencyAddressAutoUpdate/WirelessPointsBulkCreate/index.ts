@@ -1,5 +1,4 @@
-import CreateMultipleWirelessPointsRequest from '../../../../../definitions/CreateMultipleWirelessPointsRequest'
-import CreateMultipleWirelessPointsResponse from '../../../../../definitions/CreateMultipleWirelessPointsResponse'
+import { CreateMultipleWirelessPointsResponse, CreateMultipleWirelessPointsRequest } from '../../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../../..'
 

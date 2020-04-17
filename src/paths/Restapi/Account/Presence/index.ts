@@ -1,5 +1,4 @@
-import ReadAccountPresenceParameters from '../../../../definitions/ReadAccountPresenceParameters'
-import AccountPresenceInfo from '../../../../definitions/AccountPresenceInfo'
+import { AccountPresenceInfo, ReadAccountPresenceParameters } from '../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../..'
 

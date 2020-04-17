@@ -1,8 +1,6 @@
 import End from './End'
 import ServiceInfo from './ServiceInfo'
-import MeetingRequestResource from '../../../../../definitions/MeetingRequestResource'
-import MeetingResponseResource from '../../../../../definitions/MeetingResponseResource'
-import MeetingsResource from '../../../../../definitions/MeetingsResource'
+import { MeetingsResource, MeetingResponseResource, MeetingRequestResource } from '../../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../../..'
 

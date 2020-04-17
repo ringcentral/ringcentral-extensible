@@ -1,5 +1,4 @@
-import ListCallQueueMembersParameters from '../../../../../definitions/ListCallQueueMembersParameters'
-import CallQueueMembers from '../../../../../definitions/CallQueueMembers'
+import { CallQueueMembers, ListCallQueueMembersParameters } from '../../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../../..'
 

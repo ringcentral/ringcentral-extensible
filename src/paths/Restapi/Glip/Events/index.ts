@@ -1,7 +1,4 @@
-import GlipEventCreate from '../../../../definitions/GlipEventCreate'
-import GlipEventInfo from '../../../../definitions/GlipEventInfo'
-import ReadGlipEventsParameters from '../../../../definitions/ReadGlipEventsParameters'
-import GlipEventsInfo from '../../../../definitions/GlipEventsInfo'
+import { GlipEventsInfo, ReadGlipEventsParameters, GlipEventInfo, GlipEventCreate } from '../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../..'
 

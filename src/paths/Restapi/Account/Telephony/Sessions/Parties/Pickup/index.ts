@@ -1,5 +1,4 @@
-import PickupTarget from '../../../../../../../definitions/PickupTarget'
-import CallParty from '../../../../../../../definitions/CallParty'
+import { CallParty, PickupTarget } from '../../../../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../../../../..'
 

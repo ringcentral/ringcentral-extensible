@@ -1,5 +1,4 @@
-import ListExtensionActiveCallsParameters from '../../../../../definitions/ListExtensionActiveCallsParameters'
-import UserActiveCallsResponse from '../../../../../definitions/UserActiveCallsResponse'
+import { UserActiveCallsResponse, ListExtensionActiveCallsParameters } from '../../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../../..'
 

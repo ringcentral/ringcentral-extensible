@@ -1,5 +1,4 @@
-import AnswerTarget from '../../../../../../../definitions/AnswerTarget'
-import CallParty from '../../../../../../../definitions/CallParty'
+import { CallParty, AnswerTarget } from '../../../../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../../../../..'
 

@@ -1,4 +1,4 @@
-import GlipPersonInfo from '../../../../definitions/GlipPersonInfo'
+import { GlipPersonInfo } from '../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../..'
 

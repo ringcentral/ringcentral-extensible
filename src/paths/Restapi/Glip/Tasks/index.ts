@@ -1,7 +1,5 @@
 import Complete from './Complete'
-import GlipUpdateTask from '../../../../definitions/GlipUpdateTask'
-import GlipTaskList from '../../../../definitions/GlipTaskList'
-import GlipTaskInfo from '../../../../definitions/GlipTaskInfo'
+import { GlipTaskInfo, GlipTaskList, GlipUpdateTask } from '../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../..'
 

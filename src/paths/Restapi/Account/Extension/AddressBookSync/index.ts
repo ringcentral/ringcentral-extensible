@@ -1,4 +1,4 @@
-import SyncAddressBookParameters from '../../../../../definitions/SyncAddressBookParameters'
+import { SyncAddressBookParameters } from '../../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../../..'
 

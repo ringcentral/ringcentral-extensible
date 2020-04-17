@@ -1,6 +1,4 @@
-import PauseResumeCallRecordingParameters from '../../../../../../../definitions/PauseResumeCallRecordingParameters'
-import CallRecordingUpdate from '../../../../../../../definitions/CallRecordingUpdate'
-import CallRecording from '../../../../../../../definitions/CallRecording'
+import { CallRecording, CallRecordingUpdate, PauseResumeCallRecordingParameters } from '../../../../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../../../../..'
 

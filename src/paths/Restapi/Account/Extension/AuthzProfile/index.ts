@@ -1,5 +1,5 @@
 import Check from './Check'
-import AuthProfileResource from '../../../../../definitions/AuthProfileResource'
+import { AuthProfileResource } from '../../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../../..'
 

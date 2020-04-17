@@ -1,5 +1,4 @@
-import SearchRequest from '../../../../definitions/SearchRequest'
-import UserSearchResponse from '../../../../definitions/UserSearchResponse'
+import { UserSearchResponse, SearchRequest } from '../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../..'
 

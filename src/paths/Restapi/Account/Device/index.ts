@@ -1,7 +1,4 @@
-import AccountDeviceUpdate from '../../../../definitions/AccountDeviceUpdate'
-import DeviceResource from '../../../../definitions/DeviceResource'
-import ReadDeviceParameters from '../../../../definitions/ReadDeviceParameters'
-import GetDeviceInfoResponse from '../../../../definitions/GetDeviceInfoResponse'
+import { GetDeviceInfoResponse, ReadDeviceParameters, DeviceResource, AccountDeviceUpdate } from '../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../..'
 

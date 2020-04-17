@@ -1,5 +1,4 @@
-import LanguageInfo from '../../../../definitions/LanguageInfo'
-import LanguageList from '../../../../definitions/LanguageList'
+import { LanguageList, LanguageInfo } from '../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../..'
 

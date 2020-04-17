@@ -1,4 +1,4 @@
-import GlipPostMembersListBody from '../../../../../definitions/GlipPostMembersListBody'
+import { GlipPostMembersListBody } from '../../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../../..'
 

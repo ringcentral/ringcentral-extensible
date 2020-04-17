@@ -1,5 +1,4 @@
-import MakeCallOutRequest from '../../../../../definitions/MakeCallOutRequest'
-import CallSession from '../../../../../definitions/CallSession'
+import { CallSession, MakeCallOutRequest } from '../../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../../..'
 

@@ -1,4 +1,4 @@
-import AutomaticLocationUpdatesTaskInfo from '../../../../../definitions/AutomaticLocationUpdatesTaskInfo'
+import { AutomaticLocationUpdatesTaskInfo } from '../../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../../..'
 

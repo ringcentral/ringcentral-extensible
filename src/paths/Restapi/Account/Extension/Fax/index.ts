@@ -1,5 +1,4 @@
-import CreateFaxMessageRequest from '../../../../../definitions/CreateFaxMessageRequest'
-import FaxResponse from '../../../../../definitions/FaxResponse'
+import { FaxResponse, CreateFaxMessageRequest } from '../../../../../definitions'
 import Utils from '../../../../../Utils'
 import Parent from '..'
 import RestClient from '../../../../..'

@@ -1,5 +1,4 @@
-import ForwardTarget from '../../../../../../../definitions/ForwardTarget'
-import CallParty from '../../../../../../../definitions/CallParty'
+import { CallParty, ForwardTarget } from '../../../../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../../../../..'
 

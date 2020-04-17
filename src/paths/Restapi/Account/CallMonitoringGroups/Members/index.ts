@@ -1,5 +1,4 @@
-import ListCallMonitoringGroupMembersParameters from '../../../../../definitions/ListCallMonitoringGroupMembersParameters'
-import CallMonitoringGroupMemberList from '../../../../../definitions/CallMonitoringGroupMemberList'
+import { CallMonitoringGroupMemberList, ListCallMonitoringGroupMembersParameters } from '../../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../../..'
 

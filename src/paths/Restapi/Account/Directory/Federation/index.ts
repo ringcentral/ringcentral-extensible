@@ -1,4 +1,4 @@
-import FederationResource from '../../../../../definitions/FederationResource'
+import { FederationResource } from '../../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../../..'
 

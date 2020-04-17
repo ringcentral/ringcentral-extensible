@@ -1,4 +1,4 @@
-import CallParty from '../../../../../../../definitions/CallParty'
+import { CallParty } from '../../../../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../../../../..'
 

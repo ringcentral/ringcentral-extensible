@@ -1,7 +1,6 @@
 import Supervise from './Supervise'
 import Parties from './Parties'
-import ReadCallSessionStatusParameters from '../../../../../definitions/ReadCallSessionStatusParameters'
-import CallSession from '../../../../../definitions/CallSession'
+import { CallSession, ReadCallSessionStatusParameters } from '../../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../../..'
 

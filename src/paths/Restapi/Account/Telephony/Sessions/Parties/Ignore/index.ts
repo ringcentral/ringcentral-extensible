@@ -1,4 +1,4 @@
-import IgnoreRequestBody from '../../../../../../../definitions/IgnoreRequestBody'
+import { IgnoreRequestBody } from '../../../../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../../../../..'
 

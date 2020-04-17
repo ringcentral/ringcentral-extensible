@@ -1,7 +1,4 @@
-import CreateGlipConversationRequest from '../../../../definitions/CreateGlipConversationRequest'
-import GlipConversationInfo from '../../../../definitions/GlipConversationInfo'
-import ListGlipConversationsParameters from '../../../../definitions/ListGlipConversationsParameters'
-import GlipConversationsList from '../../../../definitions/GlipConversationsList'
+import { GlipConversationsList, ListGlipConversationsParameters, GlipConversationInfo, CreateGlipConversationRequest } from '../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../..'
 

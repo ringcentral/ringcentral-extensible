@@ -1,5 +1,4 @@
-import UpdateMultipleWirelessPointsRequest from '../../../../../definitions/UpdateMultipleWirelessPointsRequest'
-import UpdateMultipleWirelessPointsResponse from '../../../../../definitions/UpdateMultipleWirelessPointsResponse'
+import { UpdateMultipleWirelessPointsResponse, UpdateMultipleWirelessPointsRequest } from '../../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../../..'
 

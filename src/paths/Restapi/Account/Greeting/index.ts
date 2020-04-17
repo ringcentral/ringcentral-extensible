@@ -1,5 +1,4 @@
-import CreateCompanyGreetingRequest from '../../../../definitions/CreateCompanyGreetingRequest'
-import CustomCompanyGreetingInfo from '../../../../definitions/CustomCompanyGreetingInfo'
+import { CustomCompanyGreetingInfo, CreateCompanyGreetingRequest } from '../../../../definitions'
 import Utils from '../../../../Utils'
 import Parent from '..'
 import RestClient from '../../../..'

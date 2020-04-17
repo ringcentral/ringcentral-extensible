@@ -1,5 +1,4 @@
-import SuperviseCallSessionRequest from '../../../../../../definitions/SuperviseCallSessionRequest'
-import SuperviseCallSession from '../../../../../../definitions/SuperviseCallSession'
+import { SuperviseCallSession, SuperviseCallSessionRequest } from '../../../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../../../..'
 

@@ -1,5 +1,4 @@
-import CreateCustomUserGreetingRequest from '../../../../../definitions/CreateCustomUserGreetingRequest'
-import CustomUserGreetingInfo from '../../../../../definitions/CustomUserGreetingInfo'
+import { CustomUserGreetingInfo, CreateCustomUserGreetingRequest } from '../../../../../definitions'
 import Utils from '../../../../../Utils'
 import Parent from '..'
 import RestClient from '../../../../..'

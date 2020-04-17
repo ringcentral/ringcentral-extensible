@@ -1,5 +1,4 @@
-import ListRecentChatsParameters from '../../../../../definitions/ListRecentChatsParameters'
-import GlipChatsListWithoutNavigation from '../../../../../definitions/GlipChatsListWithoutNavigation'
+import { GlipChatsListWithoutNavigation, ListRecentChatsParameters } from '../../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../../..'
 

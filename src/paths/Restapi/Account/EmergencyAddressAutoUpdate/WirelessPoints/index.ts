@@ -1,8 +1,4 @@
-import UpdateWirelessPoint from '../../../../../definitions/UpdateWirelessPoint'
-import CreateWirelessPoint from '../../../../../definitions/CreateWirelessPoint'
-import WirelessPointInfo from '../../../../../definitions/WirelessPointInfo'
-import ListWirelessPointsParameters from '../../../../../definitions/ListWirelessPointsParameters'
-import WirelessPointsList from '../../../../../definitions/WirelessPointsList'
+import { WirelessPointsList, ListWirelessPointsParameters, WirelessPointInfo, CreateWirelessPoint, UpdateWirelessPoint } from '../../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../../..'
 

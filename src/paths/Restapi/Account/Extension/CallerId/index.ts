@@ -1,4 +1,4 @@
-import ExtensionCallerIdInfo from '../../../../../definitions/ExtensionCallerIdInfo'
+import { ExtensionCallerIdInfo } from '../../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../../..'
 

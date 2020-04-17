@@ -1,6 +1,4 @@
-import PresenceInfoResource from '../../../../../definitions/PresenceInfoResource'
-import ReadUserPresenceStatusParameters from '../../../../../definitions/ReadUserPresenceStatusParameters'
-import GetPresenceInfo from '../../../../../definitions/GetPresenceInfo'
+import { GetPresenceInfo, ReadUserPresenceStatusParameters, PresenceInfoResource } from '../../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../../..'
 

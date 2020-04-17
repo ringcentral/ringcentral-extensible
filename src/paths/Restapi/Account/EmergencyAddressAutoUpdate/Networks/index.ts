@@ -1,7 +1,4 @@
-import UpdateNetworkRequest from '../../../../../definitions/UpdateNetworkRequest'
-import CreateNetworkRequest from '../../../../../definitions/CreateNetworkRequest'
-import NetworkInfo from '../../../../../definitions/NetworkInfo'
-import NetworksList from '../../../../../definitions/NetworksList'
+import { NetworksList, NetworkInfo, CreateNetworkRequest, UpdateNetworkRequest } from '../../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../../..'
 

@@ -1,4 +1,4 @@
-import CallPartyFlip from '../../../../../../../definitions/CallPartyFlip'
+import { CallPartyFlip } from '../../../../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../../../../..'
 

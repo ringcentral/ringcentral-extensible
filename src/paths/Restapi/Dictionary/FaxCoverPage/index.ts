@@ -1,5 +1,4 @@
-import ListFaxCoverPagesParameters from '../../../../definitions/ListFaxCoverPagesParameters'
-import ListFaxCoverPagesResponse from '../../../../definitions/ListFaxCoverPagesResponse'
+import { ListFaxCoverPagesResponse, ListFaxCoverPagesParameters } from '../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../..'
 

@@ -1,9 +1,4 @@
-import UpdateContactParameters from '../../../../../../definitions/UpdateContactParameters'
-import CreateContactParameters from '../../../../../../definitions/CreateContactParameters'
-import PersonalContactRequest from '../../../../../../definitions/PersonalContactRequest'
-import PersonalContactResource from '../../../../../../definitions/PersonalContactResource'
-import ListContactsParameters from '../../../../../../definitions/ListContactsParameters'
-import ContactList from '../../../../../../definitions/ContactList'
+import { ContactList, ListContactsParameters, PersonalContactResource, PersonalContactRequest, CreateContactParameters, UpdateContactParameters } from '../../../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../../../..'
 

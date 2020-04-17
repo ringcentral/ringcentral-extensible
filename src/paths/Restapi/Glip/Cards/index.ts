@@ -1,6 +1,4 @@
-import CreateGlipCardParameters from '../../../../definitions/CreateGlipCardParameters'
-import GlipMessageAttachmentInfoRequest from '../../../../definitions/GlipMessageAttachmentInfoRequest'
-import GlipMessageAttachmentInfo from '../../../../definitions/GlipMessageAttachmentInfo'
+import { GlipMessageAttachmentInfo, GlipMessageAttachmentInfoRequest, CreateGlipCardParameters } from '../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../..'
 
