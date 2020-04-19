@@ -32,7 +32,7 @@ export const getResponseType = responses => {
 export const patchSrcFile = (fileRoutes, imports, extenions) => {
   const filePath = path.join(__dirname, '..', 'src', ...fileRoutes)
   let code = fs.readFileSync(filePath, 'utf8')
-  if (imports) {
+  if (imports && imports.length > 0) {
     code = `${imports.join('\n')}\n${code}`
   }
   if (extenions) {

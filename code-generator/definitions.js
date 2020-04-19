@@ -17,7 +17,7 @@ models.forEach(m => {
 })
 
 const normalizeType = f => {
-  if (f.type === 'integer') {
+  if (f.type === 'integer' || f.type === 'number') {
     return 'number'
   } else if (f.type === 'array') {
     return `${normalizeType(f.items)}[]`

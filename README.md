@@ -20,8 +20,12 @@ yarn test
 ## Todo
 
 - Test MMS
-- PubNub
 - Generate API reference
+    - go to dotnet SDK
 - Travis
 - Replace axios with @ringcentral/sdk ?
 - Make it an RingCentral official project
+- emit events
+- PubNub
+- Support events
+    - if use @ringcentral/sdk, then no need to implement
