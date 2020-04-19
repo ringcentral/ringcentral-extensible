@@ -1,18 +1,19 @@
 {
   "name": "ringcentral-typescript",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "RingCentral TypeScript SDK",
   "main": "src/index.js",
   "repository": "git@github.com:tylerlong/ringcentral-typescript.git",
   "author": "Tyler Long <tyler.liu@ringcentral.com>",
   "license": "MIT",
   "scripts": {
-    "watch": "tsc -b tsconfig.json -w",
+    "compile": "tsc -b tsconfig.json",
+    "watch": "yarn compile -w",
     "test": "jest -w 1",
     "definitions": "rm -rf ./src/definitions/* && node -r @babel/register ./code-generator/definitions.js",
     "paths": "rm -rf ./src/paths/* && node -r @babel/register ./code-generator/paths.js",
     "generate": "yarn definitions && yarn paths",
-    "prepublishOnly": "yarn test"
+    "prepublishOnly": "yarn compile && yarn test"
   },
   "dependencies": {
     "axios": "^0.19.2",
