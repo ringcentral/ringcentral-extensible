@@ -19,7 +19,6 @@ yarn test
 
 ## Todo
 
-- Test MMS
 - Generate API reference
     - go to dotnet SDK
 - Travis

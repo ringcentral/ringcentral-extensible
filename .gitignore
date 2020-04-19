@@ -2,3 +2,4 @@ node_modules/
 src/**/*.js
 .env
 .env.prod
+test/create_ext.spec.js
