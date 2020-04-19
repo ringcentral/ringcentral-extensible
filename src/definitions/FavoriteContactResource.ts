@@ -2,7 +2,7 @@ class FavoriteContactResource
 {
   /**
    */
-  id?: string
+  id?: number
 
   /**
    */

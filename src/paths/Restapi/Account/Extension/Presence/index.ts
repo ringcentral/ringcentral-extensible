@@ -1,4 +1,4 @@
-import { GetPresenceInfo, ReadUserPresenceStatusParameters, PresenceInfoResource } from '../../../../../definitions'
+import { GetPresenceInfo, ReadUserPresenceStatusParameters, PresenceInfoResponse, PresenceInfoResource } from '../../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../../..'
 
@@ -27,7 +27,7 @@ class Presence {
    * Operation: Update User Presence Status
    * Http put /restapi/v1.0/account/{accountId}/extension/{extensionId}/presence
    */
-  async put(presenceInfoResource: PresenceInfoResource): Promise<PresenceInfoResource> {
+  async put(presenceInfoResource: PresenceInfoResource): Promise<PresenceInfoResponse> {
     return this.rc.put(this.path(), presenceInfoResource)
   }
 }

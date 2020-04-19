@@ -1,7 +1,12 @@
-import { ForwardingInfoCreateRuleRequest, CallersInfoRequest, CalledNumberInfo, ScheduleInfo, UnconditionalForwardingInfo, QueueInfo, VoicemailInfo, GreetingInfo } from '.'
+import { ForwardingInfoCreateRuleRequest, CallersInfoRequest, CalledNumberInfo, ScheduleInfo, UnconditionalForwardingInfo, QueueInfo, VoicemailInfo, GreetingInfo, TransferredExtensionInfo } from '.'
 
 class UpdateAnsweringRuleRequest
 {
+  /**
+   * Identifier of an answering rule
+   */
+  id?: string
+
   /**
    * Forwarding parameters. Returned if 'ForwardCalls' is specified in 'callHandlingAction'. These settings determine the forwarding numbers to which the call will be forwarded
    */
@@ -38,6 +43,11 @@ class UpdateAnsweringRuleRequest
   callHandlingAction?: ('ForwardCalls' | 'UnconditionalForwarding' | 'AgentQueue' | 'TransferToExtension' | 'TakeMessagesOnly' | 'PlayAnnouncementOnly' | 'SharedLines')
 
   /**
+   * Type of an answering rule
+   */
+  type?: ('BusinessHours' | 'AfterHours' | 'Custom')
+
+  /**
    * Unconditional forwarding parameters. Returned if 'UnconditionalForwarding' is specified in 'callHandlingAction'
    */
   unconditionalForwarding?: UnconditionalForwardingInfo
@@ -66,6 +76,11 @@ class UpdateAnsweringRuleRequest
    * Indicates whether inactive numbers should be returned or not
    */
   showInactiveNumbers?: boolean
+
+  /**
+   * Transfer settings applied for department (call queue) extension type, with 'TransferToExtension' call handling action
+   */
+  transfer?: TransferredExtensionInfo
 }
 
 export default UpdateAnsweringRuleRequest

@@ -3,6 +3,16 @@ import { AutomaticLocationUpdatesSiteInfo, PublicIpRangeInfo, PrivateIpRangeInfo
 class NetworkInfo
 {
   /**
+   * Internal identifier of a network
+   */
+  id?: string
+
+  /**
+   * Link to a network resource
+   */
+  uri?: string
+
+  /**
    */
   name?: string
 

@@ -1,4 +1,4 @@
-import { CallLogCallerInfo, ExtensionInfoCallLog, CallLogRecordLegInfo, BillingInfo, CallLogRecordingInfo } from '.'
+import { CallLogCallerInfo, ExtensionInfoCallLog, CallLogRecordLegInfo, BillingInfo, CallLogRecordMessage, DelegateInfo, CallLogRecordingInfo } from '.'
 
 class UserCallLogRecord
 {
@@ -60,9 +60,18 @@ class UserCallLogRecord
   direction?: ('Inbound' | 'Outbound')
 
   /**
+   */
+  message?: CallLogRecordMessage
+
+  /**
    * The call start datetime in (ISO 8601)[https://en.wikipedia.org/wiki/ISO_8601] format including timezone, for example 2016-03-10T18:07:52.534Z
    */
   startTime?: string
+
+  /**
+   * Information on a delegate extension that actually implemented a call action. For Secretary call log the field is returned if the current extension implemented a call. For Boss call log the field contains information on a Secretary extension which actually implemented a call on behalf of the current extension
+   */
+  delegate?: DelegateInfo
 
   /**
    * Indicates whether the record is deleted. Returned for deleted records, for ISync requests

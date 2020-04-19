@@ -17,7 +17,6 @@ import AuthzProfile from './AuthzProfile'
 import MeetingsConfiguration from './MeetingsConfiguration'
 import Meeting from './Meeting'
 import UnifiedPresence from './UnifiedPresence'
-import CallQueuePresence from './CallQueuePresence'
 import Presence from './Presence'
 import Favorite from './Favorite'
 import AddressBookSync from './AddressBookSync'
@@ -161,10 +160,6 @@ class Extension {
 
   presence(): Presence {
     return new Presence(this)
-  }
-
-  callQueuePresence(): CallQueuePresence {
-    return new CallQueuePresence(this)
   }
 
   unifiedPresence(): UnifiedPresence {

@@ -1,10 +1,10 @@
-import { ExtensionInfo } from '.'
+import { FixOrderAgentsExtensionInfo } from '.'
 
 class FixedOrderAgents
 {
   /**
    */
-  extension?: ExtensionInfo
+  extension?: FixOrderAgentsExtensionInfo
 
   /**
    * Ordinal of an agent (call queue member)

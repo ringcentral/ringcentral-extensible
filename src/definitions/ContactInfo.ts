@@ -4,7 +4,6 @@ class ContactInfo
 {
   /**
    * For User extension type only. Extension user first name
-   * Required
    */
   firstName?: string
 

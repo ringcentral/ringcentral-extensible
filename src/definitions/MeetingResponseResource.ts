@@ -1,4 +1,4 @@
-import { MeetingLinks, MeetingScheduleResource, HostInfoRequest } from '.'
+import { MeetingLinks, MeetingScheduleResource, HostInfoRequest, MeetingOccurrenceInfo } from '.'
 
 class MeetingResponseResource
 {
@@ -20,7 +20,7 @@ class MeetingResponseResource
 
   /**
    */
-  meetingType?: ('Scheduled' | 'Instant' | 'Recurring')
+  meetingType?: ('Instant' | 'Scheduled' | 'ScheduledRecurring' | 'Recurring')
 
   /**
    */
@@ -61,6 +61,11 @@ class MeetingResponseResource
   /**
    */
   audioOptions?: string[]
+
+  /**
+   * List of meeting occurrences
+   */
+  occurrences?: MeetingOccurrenceInfo[]
 }
 
 export default MeetingResponseResource

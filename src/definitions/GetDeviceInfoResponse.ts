@@ -1,4 +1,4 @@
-import { ModelInfo, ExtensionInfoIntId, EmergencyServiceAddressResource, PhoneLinesInfo, ShippingInfo, DeviceSiteInfo } from '.'
+import { ModelInfo, ExtensionInfoIntId, DeviceEmergencyInfo, EmergencyServiceAddressResource, PhoneLinesInfo, ShippingInfo, DeviceSiteInfo, BillingStatementInfo } from '.'
 
 class GetDeviceInfoResponse
 {
@@ -54,6 +54,11 @@ class GetDeviceInfoResponse
   extension?: ExtensionInfoIntId
 
   /**
+   * Device emergency settings
+   */
+  emergency?: DeviceEmergencyInfo
+
+  /**
    * Address for emergency cases. The same emergency address is assigned to all the numbers of one device
    */
   emergencyServiceAddress?: EmergencyServiceAddressResource
@@ -97,6 +102,11 @@ class GetDeviceInfoResponse
    * Pooling type of a deviceHost - device with standalone paid phone line which can be linked to Glip/Softphone instanceGuest - device with a linked phone lineNone - device without a phone line or with specific line (free, BLA, etc.) = ['Host', 'Guest', 'None']
    */
   linePooling?: ('Host' | 'Guest' | 'None')
+
+  /**
+   * Billing information. Returned for device update request if `prestatement` query parameter is set to 'true'
+   */
+  billingStatement?: BillingStatementInfo
 }
 
 export default GetDeviceInfoResponse

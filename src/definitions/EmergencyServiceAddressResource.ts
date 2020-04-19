@@ -64,6 +64,11 @@ class EmergencyServiceAddressResource
    * Specifies if emergency address is out of country
    */
   outOfCountry?: boolean
+
+  /**
+   * Resulting status of emergency address synchronization. Returned if `syncEmergencyAddress` parameter is set to 'True'
+   */
+  syncStatus?: ('Verified' | 'Updated' | 'Deleted' | 'NotRequired' | 'Unsupported' | 'Failed')
 }
 
 export default EmergencyServiceAddressResource

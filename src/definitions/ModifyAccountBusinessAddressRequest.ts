@@ -14,7 +14,6 @@ class ModifyAccountBusinessAddressRequest
 
   /**
    * Company business address
-   * Required
    */
   businessAddress?: BusinessAddressInfo
 

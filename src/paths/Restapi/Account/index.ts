@@ -6,6 +6,7 @@ import Device from './Device'
 import CallMonitoringGroups from './CallMonitoringGroups'
 import PagingOnlyGroups from './PagingOnlyGroups'
 import Department from './Department'
+import CallQueues from './CallQueues'
 import Templates from './Templates'
 import PhoneNumber from './PhoneNumber'
 import ServiceInfo from './ServiceInfo'
@@ -18,7 +19,6 @@ import IvrPrompts from './IvrPrompts'
 import Greeting from './Greeting'
 import AnsweringRule from './AnsweringRule'
 import BusinessHours from './BusinessHours'
-import CallQueues from './CallQueues'
 import Presence from './Presence'
 import Directory from './Directory'
 import MessageStoreConfiguration from './MessageStoreConfiguration'
@@ -94,10 +94,6 @@ class Account {
     return new Presence(this)
   }
 
-  callQueues(groupId: string): CallQueues {
-    return new CallQueues(this, groupId)
-  }
-
   businessHours(): BusinessHours {
     return new BusinessHours(this)
   }
@@ -144,6 +140,10 @@ class Account {
 
   templates(templateId: string): Templates {
     return new Templates(this, templateId)
+  }
+
+  callQueues(groupId: string): CallQueues {
+    return new CallQueues(this, groupId)
   }
 
   department(departmentId: string): Department {

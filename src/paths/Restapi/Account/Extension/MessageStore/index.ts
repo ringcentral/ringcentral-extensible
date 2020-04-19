@@ -1,5 +1,5 @@
 import Content from './Content'
-import { GetMessageList, ListMessagesParameters, GetMessageInfoResponse, UpdateMessageRequest, DeleteMessageParameters } from '../../../../../definitions'
+import { GetMessageList, ListMessagesParameters, GetMessageInfoResponse, UpdateMessageRequest, UpdateMessageParameters, DeleteMessageParameters } from '../../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../../..'
 
@@ -46,12 +46,12 @@ class MessageStore {
    * Operation: Update Message List
    * Http put /restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}
    */
-  async put(updateMessageRequest: UpdateMessageRequest): Promise<GetMessageInfoResponse> {
+  async put(updateMessageRequest: UpdateMessageRequest, queryParams?: UpdateMessageParameters): Promise<GetMessageInfoResponse> {
     if (!this.messageId) {
       throw new Error('messageId must not be undefined')
     }
 
-    return this.rc.put(this.path(), updateMessageRequest)
+    return this.rc.put(this.path(), updateMessageRequest, queryParams)
   }
 
   /**

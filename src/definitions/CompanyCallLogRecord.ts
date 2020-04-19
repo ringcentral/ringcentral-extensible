@@ -1,4 +1,4 @@
-import { ExtensionInfoCallLog, CallLogCallerInfo, CallLogRecordingInfo, CallLogRecordLegInfo, BillingInfo } from '.'
+import { ExtensionInfoCallLog, CallLogCallerInfo, DelegateInfo, CallLogRecordingInfo, CallLogRecordLegInfo, BillingInfo } from '.'
 
 class CompanyCallLogRecord
 {
@@ -50,6 +50,11 @@ class CompanyCallLogRecord
    * Call direction
    */
   direction?: ('Inbound' | 'Outbound')
+
+  /**
+   * Information on a delegate extension that actually implemented a call action. For Secretary call log the field is returned if the current extension implemented a call. For Boss call log the field contains information on a Secretary extension which actually implemented a call on behalf of the current extension
+   */
+  delegate?: DelegateInfo
 
   /**
    * Indicates whether the record is deleted. Returned for deleted records, for ISync requests

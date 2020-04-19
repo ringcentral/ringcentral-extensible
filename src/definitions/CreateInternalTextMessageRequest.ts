@@ -4,7 +4,6 @@ class CreateInternalTextMessageRequest
 {
   /**
    * Sender of a pager message.
-   * Required
    */
   from?: PagerCallerInfoRequest
 

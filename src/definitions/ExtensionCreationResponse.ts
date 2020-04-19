@@ -1,4 +1,4 @@
-import { ContactInfo, ExtensionPermissions, ProfileImageInfo, ReferenceInfo, Roles, RegionalSettings, ExtensionServiceFeatureInfo, AutomaticLocationUpdatesSiteInfo, ExtensionStatusInfo } from '.'
+import { ContactInfo, CustomFieldInfo, ExtensionPermissions, ProfileImageInfo, ReferenceInfo, Roles, RegionalSettings, ExtensionServiceFeatureInfo, AutomaticLocationUpdatesSiteInfo, ExtensionStatusInfo } from '.'
 
 class ExtensionCreationResponse
 {
@@ -16,6 +16,10 @@ class ExtensionCreationResponse
    * Contact detailed information
    */
   contact?: ContactInfo
+
+  /**
+   */
+  customFields?: CustomFieldInfo[]
 
   /**
    * Number of department extension

@@ -1,10 +1,10 @@
-import { ExtensionStatusInfo, ContactInfoUpdateRequest, ExtensionRegionalSettingRequest, CallQueueInfoRequest, UserTransitionInfo } from '.'
+import { ExtensionStatusInfo, ContactInfoUpdateRequest, ExtensionRegionalSettingRequest, CallQueueInfoRequest, UserTransitionInfo, CustomFieldInfo, AutomaticLocationUpdatesSiteInfo } from '.'
 
 class ExtensionUpdateRequest
 {
   /**
    */
-  status?: ('Disabled' | 'Enabled' | 'NotActivated')
+  status?: ('Disabled' | 'Enabled' | 'NotActivated' | 'Frozen')
 
   /**
    */
@@ -60,6 +60,25 @@ class ExtensionUpdateRequest
   /**
    */
   transition?: UserTransitionInfo[]
+
+  /**
+   */
+  customFields?: CustomFieldInfo[]
+
+  /**
+   * Hides extension from showing in company directory. Supported for extensions of User type only
+   */
+  hidden?: boolean
+
+  /**
+   * Site data. If multi-site feature is turned on for the account, then internal identifier of a site must be specified. To assign the wireless point to the main site (company) set site ID to `main-site`
+   */
+  site?: AutomaticLocationUpdatesSiteInfo
+
+  /**
+   * Extension type
+   */
+  type?: ('User' | 'Fax User' | 'VirtualUser' | 'DigitalUser' | 'Department' | 'Announcement' | 'Voicemail' | 'SharedLinesGroup' | 'PagingOnly' | 'IvrMenu' | 'ApplicationExtension' | 'ParkLocation')
 }
 
 export default ExtensionUpdateRequest

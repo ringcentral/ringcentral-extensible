@@ -1,4 +1,4 @@
-import { GlipCompleteTaskAssignee } from '.'
+import { AssigneeInfo } from '.'
 
 class GlipCompleteTask
 {
@@ -9,7 +9,7 @@ class GlipCompleteTask
 
   /**
    */
-  assignees?: GlipCompleteTaskAssignee[]
+  assignees?: AssigneeInfo[]
 
   /**
    * Current completeness percentage of a task with the 'Percentage' completeness condition. 'Mandatory' if `completenessCondition` is set to `Percentage`, otherwise 'Optional'

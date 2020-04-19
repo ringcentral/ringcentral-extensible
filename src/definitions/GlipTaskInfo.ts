@@ -1,4 +1,4 @@
-import { GlipTaskInfoCreator, GlipTaskInfoAssignee, GlipTaskRecurrenceInfo, TaskAttachment } from '.'
+import { CreatorInfo, TaskAssigneeInfo, GlipTaskRecurrenceInfo, TaskAttachment } from '.'
 
 class GlipTaskInfo
 {
@@ -24,7 +24,7 @@ class GlipTaskInfo
 
   /**
    */
-  creator?: GlipTaskInfoCreator
+  creator?: CreatorInfo
 
   /**
    * Chat IDs where the task is posted or shared.
@@ -42,9 +42,8 @@ class GlipTaskInfo
   subject?: string
 
   /**
-   * Task name/subject
    */
-  assignees?: GlipTaskInfoAssignee[]
+  assignees?: TaskAssigneeInfo[]
 
   /**
    * Specifies how to determine task completeness

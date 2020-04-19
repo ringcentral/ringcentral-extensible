@@ -1,4 +1,4 @@
-import { GlipPostPostBodyAttachment } from '.'
+import { GlipAttachmentInfoRequest } from '.'
 
 class GlipPostPostBody
 {
@@ -11,7 +11,7 @@ class GlipPostPostBody
   /**
    * Identifier(s) of attachments.
    */
-  attachments?: GlipPostPostBodyAttachment[]
+  attachments?: GlipAttachmentInfoRequest[]
 }
 
 export default GlipPostPostBody

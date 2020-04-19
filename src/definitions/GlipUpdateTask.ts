@@ -1,4 +1,4 @@
-import { GlipUpdateTaskAssignee, GlipTaskRecurrenceInfo, GlipUpdateTaskAttachment } from '.'
+import { AssigneeInfo, GlipTaskRecurrenceInfo, GlipAttachmentInfoRequest } from '.'
 
 class GlipUpdateTask
 {
@@ -9,7 +9,7 @@ class GlipUpdateTask
 
   /**
    */
-  assignees?: GlipUpdateTaskAssignee[]
+  assignees?: AssigneeInfo[]
 
   /**
    */
@@ -45,7 +45,7 @@ class GlipUpdateTask
 
   /**
    */
-  attachments?: GlipUpdateTaskAttachment[]
+  attachments?: GlipAttachmentInfoRequest[]
 }
 
 export default GlipUpdateTask

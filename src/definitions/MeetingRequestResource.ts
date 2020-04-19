@@ -1,4 +1,4 @@
-import { MeetingScheduleResource, HostInfoRequest } from '.'
+import { MeetingScheduleResource, HostInfoRequest, RecurrenceInfo } from '.'
 
 class MeetingRequestResource
 {
@@ -8,7 +8,7 @@ class MeetingRequestResource
 
   /**
    */
-  meetingType?: ('Scheduled' | 'Instant' | 'Recurring')
+  meetingType?: ('Instant' | 'Scheduled' | 'ScheduledRecurring' | 'Recurring')
 
   /**
    */
@@ -41,6 +41,17 @@ class MeetingRequestResource
   /**
    */
   audioOptions?: string[]
+
+  /**
+   * Recurrence settings
+   */
+  recurrence?: RecurrenceInfo
+
+  /**
+   * Automatic record type
+   * Default: local
+   */
+  autoRecordType?: ('local' | 'cloud' | 'none')
 }
 
 export default MeetingRequestResource

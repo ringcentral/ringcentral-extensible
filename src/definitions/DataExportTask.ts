@@ -25,7 +25,7 @@ class DataExportTask
   /**
    * Task status
    */
-  status?: ('Accepted' | 'InProgress' | 'Completed' | 'Failed' | 'Canceled')
+  status?: ('Accepted' | 'InProgress' | 'Completed' | 'Failed' | 'Canceled' | 'Expired')
 
   /**
    * Internal identifier of a user

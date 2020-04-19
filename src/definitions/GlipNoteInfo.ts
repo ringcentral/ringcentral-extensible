@@ -1,4 +1,4 @@
-import { NoteCreatorInfo, LastModifiedByInfo, LockedByInfo } from '.'
+import { CreatorInfo, LastModifiedByInfo, LockedByInfo } from '.'
 
 class GlipNoteInfo
 {
@@ -25,7 +25,7 @@ class GlipNoteInfo
   /**
    * Note creator information
    */
-  creator?: NoteCreatorInfo
+  creator?: CreatorInfo
 
   /**
    * Note last modification information

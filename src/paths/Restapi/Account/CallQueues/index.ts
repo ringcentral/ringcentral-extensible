@@ -1,7 +1,6 @@
 import BulkAssign from './BulkAssign'
 import Members from './Members'
-import Presence from './Presence'
-import { ListCallQueuesParameters, CallQueueDetails, CallQueueUpdateDetails } from '../../../../definitions'
+import { ListCallQueuesParameters } from '../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../..'
 
@@ -25,39 +24,11 @@ class CallQueues {
   }
 
   /**
-   * Operation: Get Call Queues
+   * Operation: Get Call Queue List
    * Http get /restapi/v1.0/account/{accountId}/call-queues
    */
-  async list(queryParams?: ListCallQueuesParameters): Promise<CallQueues> {
+  async get(queryParams?: ListCallQueuesParameters): Promise<CallQueues> {
     return this.rc.get(this.path(false), queryParams)
-  }
-
-  /**
-   * Operation: Get Call Queue
-   * Http get /restapi/v1.0/account/{accountId}/call-queues/{groupId}
-   */
-  async get(): Promise<CallQueueDetails> {
-    if (!this.groupId) {
-      throw new Error('groupId must not be undefined')
-    }
-
-    return this.rc.get(this.path())
-  }
-
-  /**
-   * Operation: Update Call Queue
-   * Http put /restapi/v1.0/account/{accountId}/call-queues/{groupId}
-   */
-  async put(callQueueUpdateDetails: CallQueueUpdateDetails): Promise<CallQueueDetails> {
-    if (!this.groupId) {
-      throw new Error('groupId must not be undefined')
-    }
-
-    return this.rc.put(this.path(), callQueueUpdateDetails)
-  }
-
-  presence(): Presence {
-    return new Presence(this)
   }
 
   members(): Members {

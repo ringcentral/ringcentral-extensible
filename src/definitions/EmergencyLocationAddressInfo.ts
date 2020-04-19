@@ -59,6 +59,11 @@ class EmergencyLocationAddressInfo
    * Postal (Zip) code
    */
   zip?: string
+
+  /**
+   * Customer name
+   */
+  customerName?: string
 }
 
 export default EmergencyLocationAddressInfo

@@ -1,4 +1,4 @@
-import { ModelInfo, ExtensionInfoIntId, EmergencyServiceAddressResource, PhoneLinesInfo, ShippingInfo, DeviceSiteInfo } from '.'
+import { ModelInfo, ExtensionInfoIntId, EmergencyServiceAddressResource, DeviceEmergencyInfo, PhoneLinesInfo, ShippingInfo, DeviceSiteInfo } from '.'
 
 class ExtensionDeviceResponse
 {
@@ -57,6 +57,11 @@ class ExtensionDeviceResponse
    * Address for emergency cases. The same emergency address is assigned to all the numbers of one device
    */
   emergencyServiceAddress?: EmergencyServiceAddressResource
+
+  /**
+   * Device emergency settings
+   */
+  emergency?: DeviceEmergencyInfo
 
   /**
    * Phone lines information

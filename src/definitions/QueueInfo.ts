@@ -1,4 +1,4 @@
-import { FixedOrderAgents } from '.'
+import { TransferInfo, FixedOrderAgents, UnconditionalForwardingInfo } from '.'
 
 class QueueInfo
 {
@@ -6,6 +6,15 @@ class QueueInfo
    * Specifies how calls are transferred to group members
    */
   transferMode?: ('Rotating' | 'Simultaneous' | 'FixedOrder')
+
+  /**
+   * Call transfer information
+   */
+  transfer?: TransferInfo[]
+
+  /**
+   */
+  noAnswerAction?: string
 
   /**
    * Information on a call forwarding rule
@@ -26,7 +35,7 @@ class QueueInfo
    * Specifies the type of action to be taken after the hold time (waiting for an available call queue member) expires. If 'TransferToExtension' option is selected, the extension specified in `transfer` field is used
    * Default: Voicemail
    */
-  holdTimeExpirationAction?: ('TransferToExtension' | 'Voicemail')
+  holdTimeExpirationAction?: ('TransferToExtension' | 'UnconditionalForwarding' | 'Voicemail')
 
   /**
    * Maximum time in seconds to wait for a call queue member before trying the next member
@@ -51,7 +60,11 @@ class QueueInfo
   /**
    * Action which should be taken if count of callers on hold exceeds the maximum
    */
-  maxCallersAction?: ('Voicemail' | 'Announcement')
+  maxCallersAction?: ('Voicemail' | 'Announcement' | 'TransferToExtension' | 'UnconditionalForwarding')
+
+  /**
+   */
+  unconditionalForwarding?: UnconditionalForwardingInfo[]
 }
 
 export default QueueInfo

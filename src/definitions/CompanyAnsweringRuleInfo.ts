@@ -1,4 +1,4 @@
-import { CompanyAnsweringRuleCallersInfoRequest, CompanyAnsweringRuleCalledNumberInfoRequest, CompanyAnsweringRuleScheduleInfo, GreetingInfo } from '.'
+import { CompanyAnsweringRuleCallersInfoRequest, CompanyAnsweringRuleCalledNumberInfoRequest, CompanyAnsweringRuleScheduleInfo, CompanyAnsweringRuleExtensionInfoRequest, GreetingInfo } from '.'
 
 class CompanyAnsweringRuleInfo
 {
@@ -13,7 +13,7 @@ class CompanyAnsweringRuleInfo
   uri?: string
 
   /**
-   * Specifies if the rule is active or inactive. The default value is 'True'
+   * Specifies if the rule is active or inactive
    * Default: true
    */
   enabled?: boolean
@@ -52,7 +52,7 @@ class CompanyAnsweringRuleInfo
   /**
    * Extension to which the call is forwarded in 'Bypass' mode
    */
-  extension?: CompanyAnsweringRuleCallersInfoRequest
+  extension?: CompanyAnsweringRuleExtensionInfoRequest
 
   /**
    * Greetings applied for an answering rule; only predefined greetings can be applied, see Dictionary Greeting List

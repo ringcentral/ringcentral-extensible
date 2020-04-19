@@ -1,11 +1,16 @@
-import { EmergencyServiceAddressResourceRequest, DeviceUpdateExtensionInfo, DeviceUpdatePhoneLinesInfo } from '.'
+import { EmergencyServiceAddressResourceRequest, DeviceEmergencyInfo, DeviceUpdateExtensionInfo, DeviceUpdatePhoneLinesInfo } from '.'
 
 class AccountDeviceUpdate
 {
   /**
-   * Address for emergency cases. The same emergency address is assigned to all numbers of a single device
+   * Address for emergency cases. The same emergency address is assigned to all numbers of a single device. If the emergency address is also specified in `emergency` resource, then this value is ignored
    */
   emergencyServiceAddress?: EmergencyServiceAddressResourceRequest
+
+  /**
+   * Device emergency settings
+   */
+  emergency?: DeviceEmergencyInfo
 
   /**
    * Information on extension that the device is assigned to

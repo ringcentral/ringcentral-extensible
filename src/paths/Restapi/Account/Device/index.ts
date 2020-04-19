@@ -1,4 +1,4 @@
-import { GetDeviceInfoResponse, ReadDeviceParameters, DeviceResource, AccountDeviceUpdate } from '../../../../definitions'
+import { GetDeviceInfoResponse, ReadDeviceParameters, AccountDeviceUpdate, UpdateDeviceParameters } from '../../../../definitions'
 import Parent from '..'
 import RestClient from '../../../..'
 
@@ -37,12 +37,12 @@ class Device {
    * Operation: Update Device
    * Http put /restapi/v1.0/account/{accountId}/device/{deviceId}
    */
-  async put(accountDeviceUpdate: AccountDeviceUpdate): Promise<DeviceResource> {
+  async put(accountDeviceUpdate: AccountDeviceUpdate, queryParams?: UpdateDeviceParameters): Promise<GetDeviceInfoResponse> {
     if (!this.deviceId) {
       throw new Error('deviceId must not be undefined')
     }
 
-    return this.rc.put(this.path(), accountDeviceUpdate)
+    return this.rc.put(this.path(), accountDeviceUpdate, queryParams)
   }
 }
 

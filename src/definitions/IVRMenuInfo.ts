@@ -23,6 +23,11 @@ class IVRMenuInfo
   extensionNumber?: string
 
   /**
+   * Site data
+   */
+  site?: string
+
+  /**
    * Prompt metadata
    */
   prompt?: IVRMenuPromptInfo

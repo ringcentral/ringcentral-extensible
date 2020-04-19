@@ -11,6 +11,11 @@ class ContactAddressInfo
   city?: string
 
   /**
+   * Country name
+   */
+  country?: string
+
+  /**
    * State/province name
    */
   state?: string

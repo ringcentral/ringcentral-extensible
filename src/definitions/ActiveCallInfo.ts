@@ -36,8 +36,9 @@ class ActiveCallInfo
   startTime?: string
 
   /**
+   * Telephony presence status
    */
-  telephonyStatus?: string
+  telephonyStatus?: ('NoCall' | 'CallConnected' | 'Ringing' | 'OnHold' | 'ParkedCall')
 
   /**
    */

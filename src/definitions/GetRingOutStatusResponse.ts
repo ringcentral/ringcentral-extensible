@@ -5,7 +5,7 @@ class GetRingOutStatusResponse
   /**
    * Internal identifier of a RingOut call
    */
-  id?: string
+  id?: number
 
   /**
    */

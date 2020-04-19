@@ -1,16 +1,14 @@
-import { GetExtensionAccountInfo, ContactInfo, DepartmentInfo, ExtensionPermissions, ProfileImageInfo, ReferenceInfo, Roles, RegionalSettings, ExtensionServiceFeatureInfo, ExtensionStatusInfo, CallQueueExtensionInfo, AutomaticLocationUpdatesSiteInfo } from '.'
+import { GetExtensionAccountInfo, ContactInfo, CustomFieldInfo, DepartmentInfo, ExtensionPermissions, ProfileImageInfo, ReferenceInfo, Roles, RegionalSettings, ExtensionServiceFeatureInfo, ExtensionStatusInfo, CallQueueExtensionInfo, AutomaticLocationUpdatesSiteInfo } from '.'
 
 class GetExtensionInfoResponse
 {
   /**
    * Internal identifier of an extension
-   * Required
    */
   id?: number
 
   /**
    * Canonical URI of an extension
-   * Required
    */
   uri?: string
 
@@ -25,6 +23,10 @@ class GetExtensionInfoResponse
   contact?: ContactInfo
 
   /**
+   */
+  customFields?: CustomFieldInfo[]
+
+  /**
    * Information on department extension(s), to which the requested extension belongs. Returned only for user extensions, members of department, requested by single extensionId
    */
   departments?: DepartmentInfo[]
@@ -33,6 +35,10 @@ class GetExtensionInfoResponse
    * Number of department extension
    */
   extensionNumber?: string
+
+  /**
+   */
+  extensionNumbers?: string[]
 
   /**
    * Extension name. For user extension types the value is a combination of the specified first name and last name

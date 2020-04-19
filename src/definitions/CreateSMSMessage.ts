@@ -1,4 +1,4 @@
-import { MessageStoreCallerInfoRequest } from '.'
+import { MessageStoreCallerInfoRequest, SMSCountryInfo } from '.'
 
 class CreateSMSMessage
 {
@@ -19,6 +19,10 @@ class CreateSMSMessage
    * Required
    */
   text?: string
+
+  /**
+   */
+  country?: SMSCountryInfo
 }
 
 export default CreateSMSMessage

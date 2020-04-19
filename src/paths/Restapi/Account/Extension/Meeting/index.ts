@@ -32,7 +32,7 @@ class Meeting {
   }
 
   /**
-   * Operation: Create Meetings
+   * Operation: Create Meeting
    * Http post /restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting
    */
   async post(meetingRequestResource: MeetingRequestResource): Promise<MeetingResponseResource> {

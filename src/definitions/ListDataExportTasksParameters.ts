@@ -1,9 +1,9 @@
 class ListDataExportTasksParameters
 {
   /**
-   * Status of the task(s) to be returned. Multiple values supported
+   * Status of the task(s) to be returned. Multiple values are supported
    */
-  status?: ('Accepted' | 'InProgress' | 'Completed' | 'Failed' | 'Canceled')
+  status?: ('Accepted' | 'InProgress' | 'Completed' | 'Failed' | 'Canceled' | 'Expired')
 
   /**
    * Page number to be retrieved; value range is > 0

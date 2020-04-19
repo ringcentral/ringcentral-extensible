@@ -1,19 +1,9 @@
 class CreatorInfo
 {
   /**
-   * Internal identifier of a user
+   * Internal identifier of a user who created a note/task
    */
   id?: string
-
-  /**
-   * First name of a user
-   */
-  firstName?: string
-
-  /**
-   * Last name of a user
-   */
-  lastName?: string
 }
 
 export default CreatorInfo
