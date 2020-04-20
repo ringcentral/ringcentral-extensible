@@ -1,5 +1,5 @@
 /* eslint-env jest */
-import RestClient from '../src/index'
+import RestClient from '../dist/src/index'
 
 describe('authorize', () => {
   test('password flow', async () => {

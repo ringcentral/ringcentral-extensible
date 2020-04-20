@@ -1,6 +1,6 @@
 /* eslint-env jest */
-import RestClient from '../src/index'
-import RestException from '../src/RestException'
+import RestClient from '../dist/src/index'
+import RestException from '../dist/src/RestException'
 
 jest.setTimeout(16000)
 

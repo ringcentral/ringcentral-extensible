@@ -2,8 +2,8 @@
 import fs from 'fs'
 import path from 'path'
 
-import RestClient from '../src/index'
-import Utils from '../src/Utils'
+import RestClient from '../dist/src/index'
+import Utils from '../dist/src/Utils'
 
 jest.setTimeout(16000)
 

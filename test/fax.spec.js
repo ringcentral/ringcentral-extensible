@@ -2,8 +2,8 @@
 import fs from 'fs'
 import path from 'path'
 
-import RestClient from '../src/index'
-import { CreateFaxMessageRequest, Attachment } from '../src/definitions'
+import RestClient from '../dist/src/index'
+import { CreateFaxMessageRequest, Attachment } from '../dist/src/definitions'
 
 jest.setTimeout(16000)
 
