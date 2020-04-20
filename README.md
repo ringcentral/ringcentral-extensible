@@ -19,6 +19,8 @@ yarn test
 
 ## Todo
 
+- require default
+- do not depend on qs
 - Remove babel
 - Generate API reference
     - go to dotnet SDK
