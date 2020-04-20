@@ -1,5 +1,4 @@
 import { AxiosResponse } from 'axios'
-import * as R from 'ramda'
 
 class RestResponse {
   data: any
@@ -21,10 +20,21 @@ class RestException extends Error {
   request: RestRequest
   message: string
   constructor(r: AxiosResponse) {
-    const response = R.pick(['data', 'status', 'statusText', 'headers'], r)
-    const request = R.pick(['method', 'baseURL', 'url', 'data', 'headers'], r.config)
+    const response = {
+      data: r.data,
+      status: r.status,
+      statusText: r.statusText,
+      headers: r.headers
+    }
+    const request = {
+      method: r.config.method,
+      baseURL: r.config.baseURL,
+      url: r.config.url,
+      data: r.config.data,
+      headers: r.config.headers
+    }
     let message = r.data.message
-    message = `HTTP ${r.status} ${r.statusText}${R.isNil(message) ? '' : ` - ${message}`}
+    message = `HTTP ${r.status} ${r.statusText}${message ? ` - ${message}` : ''}
 
 Response:
 ${JSON.stringify(response, null, 2)}
