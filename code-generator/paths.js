@@ -1,11 +1,11 @@
-import yaml from 'js-yaml'
-import fs from 'fs'
-import * as R from 'ramda'
-import { pascalCase, titleCase } from 'change-case'
-import { lowerCaseFirst } from 'lower-case-first'
-import path from 'path'
+const yaml = require('js-yaml')
+const fs = require('fs')
+const R = require('ramda')
+const { pascalCase, titleCase } = require('change-case')
+const { lowerCaseFirst } = require('lower-case-first')
+const path = require('path')
 
-import { normalizePath, deNormalizePath, getResponseType, patchSrcFile } from './utils'
+const { normalizePath, deNormalizePath, getResponseType, patchSrcFile } = require('./utils')
 
 const outputDir = path.join(__dirname, '..', 'src', 'paths')
 

@@ -10,8 +10,8 @@
   "scripts": {
     "watch": "tsc -w",
     "test": "jest -w 1",
-    "definitions": "rm -rf ./src/definitions/* && node -r @babel/register ./code-generator/definitions.js",
-    "paths": "rm -rf ./src/paths/* && node -r @babel/register ./code-generator/paths.js",
+    "definitions": "rm -rf ./src/definitions/* && node ./code-generator/definitions.js",
+    "paths": "rm -rf ./src/paths/* && node ./code-generator/paths.js",
     "generate": "yarn definitions && yarn paths",
     "prepublishOnly": "tsc && yarn test"
   },
@@ -21,9 +21,6 @@
     "qs": "^6.9.3"
   },
   "devDependencies": {
-    "@babel/core": "^7.9.0",
-    "@babel/preset-env": "^7.9.5",
-    "@babel/register": "^7.9.0",
     "@types/node": "^13.11.1",
     "change-case": "^4.1.1",
     "dotenv-override-true": "^6.2.0",

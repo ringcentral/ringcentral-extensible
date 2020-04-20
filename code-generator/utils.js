@@ -1,22 +1,24 @@
-import * as R from 'ramda'
-import fs from 'fs'
-import path from 'path'
+const R = require('ramda')
+const fs = require('fs')
+const path = require('path')
 
-export const normalizePath = path => {
+const normalizePath = path => {
   return path
     .replace(/\/restapi\/v1\.0\//, '/restapi/{apiVersion}/')
     .replace(/\/scim\/v2/, '/scim/{version}')
     .replace(/\/\.search/, '/dotSearch')
 }
+exports.normalizePath = normalizePath
 
-export const deNormalizePath = path => {
+const deNormalizePath = path => {
   return path
     .replace(/\/restapi\/\{apiVersion\}\//, '/restapi/v1.0/')
     .replace(/\/scim\/\{version\}/, '/scim/v2')
     .replace(/\/dotSearch/, '/.search')
 }
+exports.deNormalizePath = deNormalizePath
 
-export const getResponseType = responses => {
+const getResponseType = responses => {
   const responseSchema = (responses[200] || responses[201] || responses[202] || responses[204] || responses[205] || responses[302] || responses.default).schema
   let responseType
   if (responseSchema) {
@@ -28,8 +30,9 @@ export const getResponseType = responses => {
   }
   return responseType
 }
+exports.getResponseType = getResponseType
 
-export const patchSrcFile = (fileRoutes, imports, extenions) => {
+const patchSrcFile = (fileRoutes, imports, extenions) => {
   const filePath = path.join(__dirname, '..', 'src', ...fileRoutes)
   let code = fs.readFileSync(filePath, 'utf8')
   if (imports && imports.length > 0) {
@@ -41,3 +44,4 @@ export const patchSrcFile = (fileRoutes, imports, extenions) => {
   console.log(filePath, code)
   fs.writeFileSync(filePath, code)
 }
+exports.patchSrcFile = patchSrcFile
