@@ -21,13 +21,13 @@ yarn test
 
 - Generate API reference
     - go to dotnet SDK
-- Dependencies are incorrect: ramda
 - Enable ts strict mode
-    check other tsconfig options as well
+- check other tsconfig options as well
 - Rewrite tests in ts
 - Travis
 - Replace axios with @ringcentral/sdk ?
 - Make it an RingCentral official project
 - PubNub
+    - if use @ringcentral/sdk, then no need to implement
 - Support events
     - if use @ringcentral/sdk, then no need to implement
