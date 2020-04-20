@@ -21,6 +21,9 @@ yarn test
 
 - Generate API reference
     - go to dotnet SDK
+- Dependencies are incorrect: ramda
+- Enable ts strict mode
+    check other tsconfig options as well
 - Travis
 - Replace axios with @ringcentral/sdk ?
 - Make it an RingCentral official project

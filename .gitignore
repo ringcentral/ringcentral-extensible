@@ -1,5 +1,4 @@
 node_modules/
-src/**/*.js
+dist/
 .env
 .env.prod
-test/create_ext.spec.js
