@@ -1,4 +1,4 @@
-import axios, { AxiosInstance, Method } from 'axios'
+import axios, { AxiosInstance, Method, AxiosRequestConfig } from 'axios'
 import qs from 'qs'
 
 import { GetTokenRequest, TokenInfo } from './definitions'
@@ -35,7 +35,7 @@ class RestClient {
   }
 
   async request(httpMethod: Method, endpoint: string, content?: {}, queryParams?: {}, headers?: {}):  Promise<any>{
-    const config = {
+    const config: AxiosRequestConfig = {
       method: httpMethod,
       url: endpoint,
       data: content,
@@ -43,7 +43,7 @@ class RestClient {
       headers
     }
     if(endpoint.startsWith('/restapi/oauth/')) { // basic token
-      config['auth'] = {
+      config.auth = {
         username: this.clientId,
         password: this.clientSecret
       }
@@ -51,7 +51,7 @@ class RestClient {
     } else { // bearer token
       config.headers = {
         ...config.headers,
-        Authorization: `Bearer ${this.token.access_token}`
+        Authorization: `Bearer ${this.token?.access_token}`
       }
     }
     const r = await this.httpClient.request(config)
@@ -93,14 +93,14 @@ class RestClient {
       getTokenRequest.code = arg1
       getTokenRequest.redirect_uri = arg2
     }
-    this.token = await this.post('/restapi/oauth/token', getTokenRequest)
+    this.token = await this.restapi(undefined).oauth().token().post(getTokenRequest)
     return this.token
   }
 
-  async refresh(refreshToken?: string): Promise<TokenInfo> {
+  async refresh(refreshToken?: string): Promise<TokenInfo | void> {
     const tokenToRefresh = refreshToken ?? this.token?.refresh_token
     if (!tokenToRefresh) {
-        return null
+        return
     }
     const getTokenRequest = new GetTokenRequest()
     getTokenRequest.grant_type = 'refresh_token'
@@ -112,8 +112,8 @@ class RestClient {
     if (!tokenToRevoke && !this.token) { // nothing to revoke
       return
     }
-    tokenToRevoke = tokenToRevoke ?? this.token.access_token ?? this.token.refresh_token
-    await this.post('/restapi/oauth/revoke', { token: tokenToRevoke })
+    tokenToRevoke = tokenToRevoke ?? this.token?.access_token ?? this.token?.refresh_token
+    await this.restapi(undefined).oauth().revoke().post({ token: tokenToRevoke })
     this.token = undefined
   }
 

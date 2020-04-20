@@ -1,18 +1,18 @@
 import { AxiosResponse } from 'axios'
 
 class RestResponse {
-  data: any
-  status: number
-  statusText: string
-  headers: any
+  data?: any
+  status?: number
+  statusText?: string
+  headers?: any
 }
 
 class RestRequest {
-  method: string
-  baseURL: string
-  url: string
-  data: string
-  headers: any
+  method?: string
+  baseURL?: string
+  url?: string
+  data?: string
+  headers?: any
 }
 
 class RestException extends Error {
@@ -20,13 +20,13 @@ class RestException extends Error {
   request: RestRequest
   message: string
   constructor(r: AxiosResponse) {
-    const response = {
+    const response: RestResponse = {
       data: r.data,
       status: r.status,
       statusText: r.statusText,
       headers: r.headers
     }
-    const request = {
+    const request: RestRequest = {
       method: r.config.method,
       baseURL: r.config.baseURL,
       url: r.config.url,

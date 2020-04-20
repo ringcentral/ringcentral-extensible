@@ -21,7 +21,6 @@ yarn test
 
 - Generate API reference
     - go to dotnet SDK
-- Enable ts strict mode
 - check other tsconfig options as well
 - Rewrite tests in ts
 - Travis

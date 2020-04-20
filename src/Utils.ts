@@ -3,10 +3,10 @@ import FormData from 'form-data'
 import { Attachment } from './definitions'
 
 class Utils {
-  static getFormData(...objs): FormData {
+  static getFormData(...objs: any[]): FormData {
     const formData = new FormData({})
     const obj = Object.assign({}, ...objs)
-    const jsonRequest = {}
+    const jsonRequest: any = {}
     const attachments: Attachment[] = []
     for(const key of Object.keys(obj)) {
       let value = obj[key]
