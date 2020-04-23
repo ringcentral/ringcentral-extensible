@@ -30,6 +30,8 @@
     "ramda": "^0.27.0",
     "standard": "^14.3.3",
     "ts-jest": "^25.4.0",
+    "tslint": "^6.1.1",
+    "tslint-config-standard": "^9.0.0",
     "typescript": "^3.8.3",
     "yarn-upgrade-all": "^0.5.2"
   }
