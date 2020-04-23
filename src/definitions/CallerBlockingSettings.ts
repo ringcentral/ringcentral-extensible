@@ -1,8 +1,7 @@
 import { BlockedCallerGreetingInfo } from '.'
 
   // Returns the lists of blocked and allowed phone numbers
-class CallerBlockingSettings
-{
+class CallerBlockingSettings {
   /**
    * Call blocking options: either specific or all calls and faxes
    */

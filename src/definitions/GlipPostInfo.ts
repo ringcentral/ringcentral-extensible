@@ -1,7 +1,6 @@
 import { GlipMessageAttachmentInfo, GlipMentionsInfo } from '.'
 
-class GlipPostInfo
-{
+class GlipPostInfo {
   /**
    * Internal identifier of a post
    */

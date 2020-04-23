@@ -1,5 +1,4 @@
-class AccountDirectoryProfileImageResource
-{
+class AccountDirectoryProfileImageResource {
   /**
    */
   etag?: string

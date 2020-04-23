@@ -1,5 +1,4 @@
-class SyncInfoMessages
-{
+class SyncInfoMessages {
   /**
    * Type of synchronization
    */

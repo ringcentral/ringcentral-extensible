@@ -1,7 +1,6 @@
 import { CallStatusInfo, ParkInfo, PartyInfo, OwnerInfo, RecordingInfo } from '.'
 
-class CallParty
-{
+class CallParty {
   /**
    * Internal identifier of a party
    */

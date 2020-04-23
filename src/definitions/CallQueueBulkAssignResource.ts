@@ -1,5 +1,4 @@
-class CallQueueBulkAssignResource
-{
+class CallQueueBulkAssignResource {
   /**
    */
   addedExtensionIds?: string[]

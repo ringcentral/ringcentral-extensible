@@ -1,7 +1,6 @@
 import { PartyUpdateInfo } from '.'
 
-class PartyUpdateRequest
-{
+class PartyUpdateRequest {
   /**
    * Party update data
    */

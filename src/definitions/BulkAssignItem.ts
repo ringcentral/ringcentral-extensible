@@ -1,5 +1,4 @@
-class BulkAssignItem
-{
+class BulkAssignItem {
   /**
    */
   departmentId?: string

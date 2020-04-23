@@ -1,7 +1,6 @@
 import { WeeklyScheduleInfo } from '.'
 
-class CompanyBusinessHoursScheduleInfo
-{
+class CompanyBusinessHoursScheduleInfo {
   /**
    */
   weeklyRanges?: WeeklyScheduleInfo

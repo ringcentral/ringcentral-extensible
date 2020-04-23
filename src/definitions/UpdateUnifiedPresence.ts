@@ -1,7 +1,6 @@
 import { UpdateUnifiedPresenceGlip, UpdateUnifiedPresenceTelephony } from '.'
 
-class UpdateUnifiedPresence
-{
+class UpdateUnifiedPresence {
   /**
    */
   glip?: UpdateUnifiedPresenceGlip

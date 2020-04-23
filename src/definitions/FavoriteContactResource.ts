@@ -1,5 +1,4 @@
-class FavoriteContactResource
-{
+class FavoriteContactResource {
   /**
    */
   id?: number

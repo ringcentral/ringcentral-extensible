@@ -1,5 +1,4 @@
-class GlipDataExportNavigationInfoUri
-{
+class GlipDataExportNavigationInfoUri {
   /**
    */
   uri?: string

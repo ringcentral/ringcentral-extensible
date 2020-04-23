@@ -1,7 +1,6 @@
 import { ContactCenterProvider } from '.'
 
-class UserPhoneNumberExtensionInfo
-{
+class UserPhoneNumberExtensionInfo {
   /**
    * Internal identifier of an extension
    */

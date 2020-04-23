@@ -1,5 +1,4 @@
-class GreetingLanguageInfo
-{
+class GreetingLanguageInfo {
   /**
    * Internal identifier of a greeting language
    */

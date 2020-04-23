@@ -1,7 +1,6 @@
 import { MeetingResponseResource, MeetingsPagingInfo, MeetingsNavigationInfo } from '.'
 
-class MeetingsResource
-{
+class MeetingsResource {
   /**
    */
   uri?: string

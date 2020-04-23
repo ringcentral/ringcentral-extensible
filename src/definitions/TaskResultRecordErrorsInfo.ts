@@ -1,5 +1,4 @@
-class TaskResultRecordErrorsInfo
-{
+class TaskResultRecordErrorsInfo {
   /**
    */
   errorCode?: string

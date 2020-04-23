@@ -1,7 +1,6 @@
 import { ReplyWithPattern } from '.'
 
-class CallPartyReply
-{
+class CallPartyReply {
   /**
    * Text to reply
    */

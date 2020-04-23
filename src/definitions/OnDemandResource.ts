@@ -1,5 +1,4 @@
-class OnDemandResource
-{
+class OnDemandResource {
   /**
    * Flag for controlling OnDemand Call Recording settings
    */

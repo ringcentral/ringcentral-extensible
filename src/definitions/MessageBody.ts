@@ -1,7 +1,6 @@
 import { MessageAttachmentInfo, ConversationInfo, MessageSenderInfo, MessageRecipientInfo } from '.'
 
-class MessageBody
-{
+class MessageBody {
   /**
    * Canonical URI of a message
    */

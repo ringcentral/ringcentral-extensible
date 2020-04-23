@@ -1,7 +1,6 @@
 import { MeetingLinks, MeetingScheduleResource, HostInfoRequest, MeetingOccurrenceInfo } from '.'
 
-class MeetingResponseResource
-{
+class MeetingResponseResource {
   /**
    */
   uri?: string

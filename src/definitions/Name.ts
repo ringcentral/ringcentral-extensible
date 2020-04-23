@@ -1,5 +1,4 @@
-class Name
-{
+class Name {
   /**
    * Required
    */

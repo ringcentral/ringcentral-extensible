@@ -1,5 +1,4 @@
-class MessagingNavigationInfoURI
-{
+class MessagingNavigationInfoURI {
   /**
    */
   uri?: string

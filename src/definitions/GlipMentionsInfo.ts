@@ -1,5 +1,4 @@
-class GlipMentionsInfo
-{
+class GlipMentionsInfo {
   /**
    * Internal identifier of a user
    */

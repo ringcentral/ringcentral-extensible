@@ -1,7 +1,6 @@
 import { GlipGroupInfo, GlipNavigationInfo } from '.'
 
-class GlipGroupList
-{
+class GlipGroupList {
   /**
    * List of groups/teams/private chats
    * Required

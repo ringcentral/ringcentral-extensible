@@ -1,7 +1,6 @@
 import { DictionaryGreetingInfo, CallHandlingNavigationInfo, CallHandlingPagingInfo } from '.'
 
-class DictionaryGreetingList
-{
+class DictionaryGreetingList {
   /**
    * Canonical URI of greetings list resource
    */

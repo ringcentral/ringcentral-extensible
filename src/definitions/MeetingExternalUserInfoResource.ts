@@ -1,5 +1,4 @@
-class MeetingExternalUserInfoResource
-{
+class MeetingExternalUserInfoResource {
   /**
    */
   uri?: string

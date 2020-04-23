@@ -1,7 +1,6 @@
 import { GetPresenceInfo, PresenceNavigationInfo, PresencePagingInfo } from '.'
 
-class AccountPresenceInfo
-{
+class AccountPresenceInfo {
   /**
    * Canonical URI of account presence resource
    */

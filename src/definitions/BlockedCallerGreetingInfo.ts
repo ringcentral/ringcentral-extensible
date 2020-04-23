@@ -1,7 +1,6 @@
 import { PresetInfo } from '.'
 
-class BlockedCallerGreetingInfo
-{
+class BlockedCallerGreetingInfo {
   /**
    * Type of a greeting
    */

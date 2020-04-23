@@ -1,7 +1,6 @@
 import { GetExtensionInfoResponse, ProvisioningNavigationInfo, ProvisioningPagingInfo } from '.'
 
-class GetExtensionListResponse
-{
+class GetExtensionListResponse {
   /**
    * Link to the extension list resource
    */

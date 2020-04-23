@@ -1,7 +1,6 @@
 import { TimezoneResource } from '.'
 
-class MeetingScheduleResource
-{
+class MeetingScheduleResource {
   /**
    */
   startTime?: string

@@ -1,7 +1,6 @@
 import { GetCountryInfoNumberParser, PhoneNumberInfoNumberParser } from '.'
 
-class ParsePhoneNumberResponse
-{
+class ParsePhoneNumberResponse {
   /**
    * Canonical URI of a resource
    */

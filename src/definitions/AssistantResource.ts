@@ -1,5 +1,4 @@
-class AssistantResource
-{
+class AssistantResource {
   /**
    */
   id?: string

@@ -1,7 +1,6 @@
 import { ActiveCallInfoWithoutSIP } from '.'
 
-class DetailedExtensionPresenceEventBody
-{
+class DetailedExtensionPresenceEventBody {
   /**
    * Internal identifier of an extension
    * Default: ~

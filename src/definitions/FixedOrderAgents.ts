@@ -1,7 +1,6 @@
 import { FixOrderAgentsExtensionInfo } from '.'
 
-class FixedOrderAgents
-{
+class FixedOrderAgents {
   /**
    */
   extension?: FixOrderAgentsExtensionInfo

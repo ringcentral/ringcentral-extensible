@@ -1,7 +1,6 @@
 import { LocationInfo, ProvisioningNavigationInfo, ProvisioningPagingInfo } from '.'
 
-class GetLocationListResponse
-{
+class GetLocationListResponse {
   /**
    * Link to the location list resource
    */

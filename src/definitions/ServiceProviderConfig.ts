@@ -1,7 +1,6 @@
 import { AuthenticationScheme, BulkSupported, Supported, FilterSupported } from '.'
 
-class ServiceProviderConfig
-{
+class ServiceProviderConfig {
   /**
    */
   authenticationSchemes?: AuthenticationScheme[]

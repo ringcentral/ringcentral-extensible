@@ -1,7 +1,6 @@
 import { CompanyCallLogRecord, CallLogNavigationInfo, CallLogPagingInfo } from '.'
 
-class AccountCallLogResponse
-{
+class AccountCallLogResponse {
   /**
    * Link to the list of company call log records
    */

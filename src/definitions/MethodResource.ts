@@ -1,5 +1,4 @@
-class MethodResource
-{
+class MethodResource {
   /**
    */
   id?: string

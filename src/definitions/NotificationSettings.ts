@@ -1,7 +1,6 @@
 import { VoicemailsInfo, InboundFaxesInfo, OutboundFaxesInfo, InboundTextsInfo, MissedCallsInfo } from '.'
 
-class NotificationSettings
-{
+class NotificationSettings {
   /**
    * Canonical URI of notifications settings resource
    */

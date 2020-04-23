@@ -1,5 +1,4 @@
-class ExtensionInfoEventBody
-{
+class ExtensionInfoEventBody {
   /**
    * Internal identifier of an extension
    */

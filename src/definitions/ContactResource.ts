@@ -1,7 +1,6 @@
 import { AccountResource, PhoneNumberResource, AccountDirectoryProfileImageResource, BusinessSiteResource } from '.'
 
-class ContactResource
-{
+class ContactResource {
   /**
    */
   account?: AccountResource

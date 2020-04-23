@@ -1,5 +1,4 @@
-class Email
-{
+class Email {
   /**
    * Required
    */

@@ -1,7 +1,6 @@
 import { PartyInfo, OwnerInfo, CallStatusInfo } from '.'
 
-class SuperviseCallSession
-{
+class SuperviseCallSession {
   /**
    * Information about a call party that monitors a call
    */

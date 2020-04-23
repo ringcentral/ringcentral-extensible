@@ -1,7 +1,6 @@
 import { UserAddress, Email, Name, PhoneNumber, Photo, EnterpriseUser, Meta } from '.'
 
-class UserResponse
-{
+class UserResponse {
   /**
    * user status
    */

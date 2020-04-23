@@ -1,7 +1,6 @@
 import { SwitchInfo } from '.'
 
-class ValidateMultipleSwitchesRequest
-{
+class ValidateMultipleSwitchesRequest {
   /**
    */
   records?: SwitchInfo[]

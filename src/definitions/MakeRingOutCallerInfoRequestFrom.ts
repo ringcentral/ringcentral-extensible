@@ -1,5 +1,4 @@
-class MakeRingOutCallerInfoRequestFrom
-{
+class MakeRingOutCallerInfoRequestFrom {
   /**
    * Phone number in E.164 format
    */

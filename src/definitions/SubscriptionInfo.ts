@@ -1,7 +1,6 @@
 import { DisabledFilterInfo, NotificationDeliveryMode, NotificationBlacklistedData } from '.'
 
-class SubscriptionInfo
-{
+class SubscriptionInfo {
   /**
    * Internal identifier of a subscription
    */

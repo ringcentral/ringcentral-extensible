@@ -1,7 +1,6 @@
 import { PatchOperation } from '.'
 
-class UserPatch
-{
+class UserPatch {
   /**
    * patch operations list
    * Required

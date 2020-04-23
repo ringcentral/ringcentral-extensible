@@ -1,7 +1,6 @@
 import { GrantInfo, ProvisioningNavigationInfo, ProvisioningPagingInfo } from '.'
 
-class GetExtensionGrantListResponse
-{
+class GetExtensionGrantListResponse {
   /**
    * Link to the list of extension grants
    */

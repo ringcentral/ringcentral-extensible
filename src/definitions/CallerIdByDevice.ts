@@ -1,7 +1,6 @@
 import { CallerIdDeviceInfo, CallerIdByDeviceInfo } from '.'
 
-class CallerIdByDevice
-{
+class CallerIdByDevice {
   /**
    */
   device?: CallerIdDeviceInfo

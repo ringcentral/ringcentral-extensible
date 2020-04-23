@@ -1,7 +1,6 @@
 import { CallRecordingCustomGreetingData, CallRecordingCustomGreetingLanguage } from '.'
 
-class CallRecordingCustomGreeting
-{
+class CallRecordingCustomGreeting {
   /**
    */
   type?: ('StartRecording' | 'StopRecording' | 'AutomaticRecording')

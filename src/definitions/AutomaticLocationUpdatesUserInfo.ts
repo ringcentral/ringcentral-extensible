@@ -1,5 +1,4 @@
-class AutomaticLocationUpdatesUserInfo
-{
+class AutomaticLocationUpdatesUserInfo {
   /**
    * Internal identifier of a device
    */

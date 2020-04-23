@@ -1,7 +1,6 @@
 import { ActivePermissionResource } from '.'
 
-class AuthProfileCheckResource
-{
+class AuthProfileCheckResource {
   /**
    */
   uri?: string

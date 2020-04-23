@@ -1,5 +1,4 @@
-class AccountStatusInfo
-{
+class AccountStatusInfo {
   /**
    * A free-form user comment, describing the status change reason
    */

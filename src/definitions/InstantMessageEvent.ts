@@ -1,7 +1,6 @@
 import { InstantMessageEventBody } from '.'
 
-class InstantMessageEvent
-{
+class InstantMessageEvent {
   /**
    * Universally unique identifier of a notification
    */

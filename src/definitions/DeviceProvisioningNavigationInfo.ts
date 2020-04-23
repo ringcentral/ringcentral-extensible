@@ -1,7 +1,6 @@
 import { DeviceProvisioningNavigationInfoUri } from '.'
 
-class DeviceProvisioningNavigationInfo
-{
+class DeviceProvisioningNavigationInfo {
   /**
    * Canonical URI for the first page of the list
    */

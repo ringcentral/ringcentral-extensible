@@ -1,7 +1,6 @@
 import { BulkTaskInfo } from '.'
 
-class UpdateMultipleWirelessPointsResponse
-{
+class UpdateMultipleWirelessPointsResponse {
   /**
    * Information on the task for multiple wireless points update
    */

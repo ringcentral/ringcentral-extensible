@@ -1,5 +1,4 @@
-class IgnoreRequestBody
-{
+class IgnoreRequestBody {
   /**
    * Internal device identifier
    * Required

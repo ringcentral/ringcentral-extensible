@@ -1,7 +1,6 @@
 import { MessagingNavigationInfoURI } from '.'
 
-class MessagingNavigationInfo
-{
+class MessagingNavigationInfo {
   /**
    * Canonical URI for the first page of the list
    */

@@ -1,5 +1,4 @@
-class CompanyCallLogSyncInfo
-{
+class CompanyCallLogSyncInfo {
   /**
    * Type of synchronization
    */

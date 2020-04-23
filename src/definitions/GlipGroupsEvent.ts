@@ -1,7 +1,6 @@
 import { GlipMemberInfo } from '.'
 
-class GlipGroupsEvent
-{
+class GlipGroupsEvent {
   /**
    * Internal identifier of a group
    */

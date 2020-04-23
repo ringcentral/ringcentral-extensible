@@ -1,7 +1,6 @@
 import { AutomaticLocationUpdatesDeviceInfo, ProvisioningNavigationInfo, ProvisioningPagingInfo } from '.'
 
-class ListDevicesAutomaticLocationUpdates
-{
+class ListDevicesAutomaticLocationUpdates {
   /**
    * Link to devices resource
    */

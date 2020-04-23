@@ -1,5 +1,4 @@
-class ValidationError
-{
+class ValidationError {
   /**
    * Error code
    */

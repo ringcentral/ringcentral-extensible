@@ -1,5 +1,4 @@
-class ListExtensionsParameters
-{
+class ListExtensionsParameters {
   /**
    * Extension number to retrieve
    */

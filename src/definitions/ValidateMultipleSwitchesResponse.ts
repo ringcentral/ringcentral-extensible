@@ -1,7 +1,6 @@
 import { SwitchValidated } from '.'
 
-class ValidateMultipleSwitchesResponse
-{
+class ValidateMultipleSwitchesResponse {
   /**
    */
   records?: SwitchValidated[]

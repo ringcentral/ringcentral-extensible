@@ -1,8 +1,7 @@
 import { CallRecordingCustomGreeting } from '.'
 
   // Returns data on call recording custom greetings.
-class CallRecordingCustomGreetings
-{
+class CallRecordingCustomGreetings {
   /**
    */
   records?: CallRecordingCustomGreeting[]

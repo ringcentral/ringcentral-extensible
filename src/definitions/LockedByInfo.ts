@@ -1,5 +1,4 @@
-class LockedByInfo
-{
+class LockedByInfo {
   /**
    * Internal identifier of the user editing the note
    */

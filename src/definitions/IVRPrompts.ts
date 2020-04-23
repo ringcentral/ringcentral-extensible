@@ -1,7 +1,6 @@
 import { PromptInfo, CallHandlingNavigationInfo, CallHandlingPagingInfo } from '.'
 
-class IVRPrompts
-{
+class IVRPrompts {
   /**
    * Link to prompts library resource
    */

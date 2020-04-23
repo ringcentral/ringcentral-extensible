@@ -1,5 +1,4 @@
-class DeleteMessageByFilterParameters
-{
+class DeleteMessageByFilterParameters {
   /**
    */
   conversationId?: string[]

@@ -1,5 +1,4 @@
-class ListExtensionPhoneNumbersParameters
-{
+class ListExtensionPhoneNumbersParameters {
   /**
    * Status of a phone number. Multiple values are supported
    */

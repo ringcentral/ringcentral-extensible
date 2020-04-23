@@ -1,5 +1,4 @@
-class CallQueueMemberInfo
-{
+class CallQueueMemberInfo {
   /**
    * Link to a call queue member
    */

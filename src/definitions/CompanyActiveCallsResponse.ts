@@ -1,7 +1,6 @@
 import { CompanyCallLogRecord, CallLogNavigationInfo, CallLogPagingInfo } from '.'
 
-class CompanyActiveCallsResponse
-{
+class CompanyActiveCallsResponse {
   /**
    * Link to the list of company active call records
    */

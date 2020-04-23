@@ -1,5 +1,4 @@
-class DeleteExtensionParameters
-{
+class DeleteExtensionParameters {
   /**
    */
   savePhoneLines?: boolean

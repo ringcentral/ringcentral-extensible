@@ -1,5 +1,4 @@
-class ScimErrorResponse
-{
+class ScimErrorResponse {
   /**
    * detail error message
    */

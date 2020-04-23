@@ -1,5 +1,4 @@
-class MessageStoreReport
-{
+class MessageStoreReport {
   /**
    * Internal identifier of a message store report task
    */

@@ -1,5 +1,4 @@
-class GetPresenceExtensionInfo
-{
+class GetPresenceExtensionInfo {
   /**
    * Internal identifier of an extension
    */

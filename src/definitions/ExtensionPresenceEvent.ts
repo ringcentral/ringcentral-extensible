@@ -1,7 +1,6 @@
 import { ExtensionPresenceEventBody } from '.'
 
-class ExtensionPresenceEvent
-{
+class ExtensionPresenceEvent {
   /**
    * Universally unique identifier of a notification
    */

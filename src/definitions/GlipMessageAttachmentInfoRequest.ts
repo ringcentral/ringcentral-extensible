@@ -1,7 +1,6 @@
 import { GlipMessageAttachmentAuthorInfo, GlipMessageAttachmentFieldsInfo, GlipMessageAttachmentFootnoteInfo } from '.'
 
-class GlipMessageAttachmentInfoRequest
-{
+class GlipMessageAttachmentInfoRequest {
   /**
    * Type of attachment
    * Default: Card

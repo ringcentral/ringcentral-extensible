@@ -1,5 +1,4 @@
-class ListUserTemplatesParameters
-{
+class ListUserTemplatesParameters {
   /**
    */
   type?: ('UserSettings' | 'CallHandling')

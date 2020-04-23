@@ -1,5 +1,4 @@
-class TimeInterval
-{
+class TimeInterval {
   /**
    * Time in format hh:mm
    */

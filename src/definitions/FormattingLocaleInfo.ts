@@ -1,6 +1,5 @@
 // Official name of a formatting language
-class FormattingLocaleInfo
-{
+class FormattingLocaleInfo {
   /**
    * Internal identifier of a formatting language
    */

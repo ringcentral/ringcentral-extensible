@@ -1,5 +1,4 @@
-class ExtensionStatusInfo
-{
+class ExtensionStatusInfo {
   /**
    * A free-form user comment, describing the status change reason
    */

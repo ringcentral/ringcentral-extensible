@@ -1,5 +1,4 @@
-class MessagingPagingInfo
-{
+class MessagingPagingInfo {
   /**
    * The current page number. 1-indexed, so the first page is 1 by default. May be omitted if result is empty (because non-existent page was specified or perPage=0 was requested)
    */

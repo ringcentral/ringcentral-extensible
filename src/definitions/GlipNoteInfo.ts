@@ -1,7 +1,6 @@
 import { CreatorInfo, LastModifiedByInfo, LockedByInfo } from '.'
 
-class GlipNoteInfo
-{
+class GlipNoteInfo {
   /**
    * Internal identifier of a note
    */

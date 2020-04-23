@@ -1,7 +1,6 @@
 import { ValidationError } from '.'
 
-class SwitchValidated
-{
+class SwitchValidated {
   /**
    * Internal identifier of a switch
    */

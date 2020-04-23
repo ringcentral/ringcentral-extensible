@@ -1,5 +1,4 @@
-class ForwardingNumberInfoRulesCreateRuleRequest
-{
+class ForwardingNumberInfoRulesCreateRuleRequest {
   /**
    * Internal identifier of a forwarding number
    */

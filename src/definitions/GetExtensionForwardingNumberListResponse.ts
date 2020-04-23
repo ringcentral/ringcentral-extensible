@@ -1,7 +1,6 @@
 import { ForwardingNumberInfo, CallHandlingNavigationInfo, CallHandlingPagingInfo } from '.'
 
-class GetExtensionForwardingNumberListResponse
-{
+class GetExtensionForwardingNumberListResponse {
   /**
    * Link to the forwarding number list resource
    */

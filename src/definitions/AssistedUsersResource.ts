@@ -1,7 +1,6 @@
 import { AssistedUserResource } from '.'
 
-class AssistedUsersResource
-{
+class AssistedUsersResource {
   /**
    */
   records?: AssistedUserResource[]

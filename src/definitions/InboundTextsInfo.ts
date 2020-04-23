@@ -1,5 +1,4 @@
-class InboundTextsInfo
-{
+class InboundTextsInfo {
   /**
    * Email notification flag
    */

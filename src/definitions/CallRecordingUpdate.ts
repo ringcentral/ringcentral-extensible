@@ -1,5 +1,4 @@
-class CallRecordingUpdate
-{
+class CallRecordingUpdate {
   /**
    * Recording status
    */

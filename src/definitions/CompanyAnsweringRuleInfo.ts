@@ -1,7 +1,6 @@
 import { CompanyAnsweringRuleCallersInfoRequest, CompanyAnsweringRuleCalledNumberInfoRequest, CompanyAnsweringRuleScheduleInfo, CompanyAnsweringRuleExtensionInfoRequest, GreetingInfo } from '.'
 
-class CompanyAnsweringRuleInfo
-{
+class CompanyAnsweringRuleInfo {
   /**
    * Internal identifier of an answering rule
    */

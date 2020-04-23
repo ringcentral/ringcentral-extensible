@@ -1,5 +1,4 @@
-class CreateForwardingNumberDeviceInfo
-{
+class CreateForwardingNumberDeviceInfo {
   /**
    * Internal identifier of the other extension device
    */

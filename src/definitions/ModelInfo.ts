@@ -1,7 +1,6 @@
 import { AddonInfo } from '.'
 
-class ModelInfo
-{
+class ModelInfo {
   /**
    * Addon identifier. For HardPhones of certain types, which are compatible with this addon identifier
    */

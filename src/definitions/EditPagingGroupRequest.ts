@@ -1,5 +1,4 @@
-class EditPagingGroupRequest
-{
+class EditPagingGroupRequest {
   /**
    * List of users that will be allowed to page a group specified
    */

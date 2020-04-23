@@ -1,7 +1,6 @@
 import { UserResponse } from '.'
 
-class UserSearchResponse
-{
+class UserSearchResponse {
   /**
    * user list
    */

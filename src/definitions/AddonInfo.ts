@@ -1,5 +1,4 @@
-class AddonInfo
-{
+class AddonInfo {
   /**
    */
   id?: string

@@ -1,5 +1,4 @@
-class DeviceSiteInfo
-{
+class DeviceSiteInfo {
   /**
    * Internal identifier of a site
    */

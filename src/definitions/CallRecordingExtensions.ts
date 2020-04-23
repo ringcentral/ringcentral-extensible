@@ -1,7 +1,6 @@
 import { CallRecordingExtensionInfo, CallHandlingNavigationInfo, CallHandlingPagingInfo } from '.'
 
-class CallRecordingExtensions
-{
+class CallRecordingExtensions {
   /**
    * Link to call recording extension list resource
    */

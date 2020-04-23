@@ -1,5 +1,4 @@
-class ShortSiteInfo
-{
+class ShortSiteInfo {
   /**
    * Internal idetifier of a site extension
    */

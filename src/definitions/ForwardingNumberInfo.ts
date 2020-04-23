@@ -1,7 +1,6 @@
 import { CreateForwardingNumberDeviceInfo } from '.'
 
-class ForwardingNumberInfo
-{
+class ForwardingNumberInfo {
   /**
    * Internal identifier of a forwarding/call flip phone number
    */

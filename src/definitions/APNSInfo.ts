@@ -1,7 +1,6 @@
 import { APSInfo } from '.'
 
-class APNSInfo
-{
+class APNSInfo {
   /**
    * Notification priority data
    */

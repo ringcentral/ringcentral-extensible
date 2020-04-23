@@ -1,5 +1,4 @@
-class MissedCallsInfo
-{
+class MissedCallsInfo {
   /**
    * Email notification flag
    */

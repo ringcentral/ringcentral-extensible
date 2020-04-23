@@ -1,5 +1,4 @@
-class CompanyContactsPagingInfo
-{
+class CompanyContactsPagingInfo {
   /**
    */
   page?: number

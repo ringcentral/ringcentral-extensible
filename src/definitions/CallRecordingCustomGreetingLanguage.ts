@@ -1,5 +1,4 @@
-class CallRecordingCustomGreetingLanguage
-{
+class CallRecordingCustomGreetingLanguage {
   /**
    * Link to a language
    */

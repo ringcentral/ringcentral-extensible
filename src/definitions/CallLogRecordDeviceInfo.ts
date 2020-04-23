@@ -1,5 +1,4 @@
-class CallLogRecordDeviceInfo
-{
+class CallLogRecordDeviceInfo {
   /**
    * Internal identifier of a device
    */

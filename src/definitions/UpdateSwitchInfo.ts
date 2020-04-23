@@ -1,7 +1,6 @@
 import { SwitchSiteInfo, LocationUpdatesEmergencyAddressInfoRequest } from '.'
 
-class UpdateSwitchInfo
-{
+class UpdateSwitchInfo {
   /**
    * internal identifier of a switch
    */

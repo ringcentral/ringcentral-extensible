@@ -1,7 +1,6 @@
 import { UserBusinessHoursScheduleInfo } from '.'
 
-class UserBusinessHoursUpdateRequest
-{
+class UserBusinessHoursUpdateRequest {
   /**
    * Schedule when an answering rule is applied
    */

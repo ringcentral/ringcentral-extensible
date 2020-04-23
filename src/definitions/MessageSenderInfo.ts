@@ -1,5 +1,4 @@
-class MessageSenderInfo
-{
+class MessageSenderInfo {
   /**
    */
   extensionNumber?: string

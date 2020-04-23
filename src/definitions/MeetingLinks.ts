@@ -1,5 +1,4 @@
-class MeetingLinks
-{
+class MeetingLinks {
   /**
    */
   startUri?: string

@@ -1,5 +1,4 @@
-class BillingStatementCharges
-{
+class BillingStatementCharges {
   /**
    */
   description?: string

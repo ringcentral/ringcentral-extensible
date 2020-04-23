@@ -1,7 +1,6 @@
 import { GetMessageInfoResponse, SyncInfoMessages } from '.'
 
-class GetMessageSyncResponse
-{
+class GetMessageSyncResponse {
   /**
    * Link to the message sync resource
    */

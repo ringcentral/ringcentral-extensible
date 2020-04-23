@@ -1,5 +1,4 @@
-class MessageAttachmentInfo
-{
+class MessageAttachmentInfo {
   /**
    * Internal identifier of a message attachment
    */

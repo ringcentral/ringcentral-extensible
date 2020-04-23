@@ -1,5 +1,4 @@
-class ExtensionInfoGrants
-{
+class ExtensionInfoGrants {
   /**
    * Internal identifier of an extension
    */

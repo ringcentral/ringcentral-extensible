@@ -1,5 +1,4 @@
-class MakeRingOutCoutryInfo
-{
+class MakeRingOutCoutryInfo {
   /**
    * Dialing plan country identifier
    */

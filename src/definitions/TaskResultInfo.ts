@@ -1,7 +1,6 @@
 import { TaskResultRecord } from '.'
 
-class TaskResultInfo
-{
+class TaskResultInfo {
   /**
    * Detailed task results by elements from initial request
    */

@@ -1,5 +1,4 @@
-class SearchRequest
-{
+class SearchRequest {
   /**
    * page size
    */

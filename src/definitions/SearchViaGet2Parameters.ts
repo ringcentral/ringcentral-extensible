@@ -1,5 +1,4 @@
-class SearchViaGet2Parameters
-{
+class SearchViaGet2Parameters {
   /**
    * only support 'userName' or 'email' filter expressions for now
    */

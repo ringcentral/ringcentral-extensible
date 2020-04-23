@@ -1,5 +1,4 @@
-class ListCallQueueMembersParameters
-{
+class ListCallQueueMembersParameters {
   /**
    * Indicates the page number to retrieve. Only positive number values are allowed
    * Default: 1

@@ -1,5 +1,4 @@
-class LanguageInfo
-{
+class LanguageInfo {
   /**
    * Internal identifier of a language
    */

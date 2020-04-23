@@ -1,7 +1,6 @@
 import { GlipAttachmentInfoRequest } from '.'
 
-class GlipPostPostBody
-{
+class GlipPostPostBody {
   /**
    * Post text.
    * Required

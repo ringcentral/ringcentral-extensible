@@ -1,7 +1,6 @@
 import { ContactInfo, CustomFieldInfo, ExtensionPermissions, ProfileImageInfo, ReferenceInfo, Roles, RegionalSettings, ExtensionServiceFeatureInfo, AutomaticLocationUpdatesSiteInfo, ExtensionStatusInfo } from '.'
 
-class ExtensionCreationResponse
-{
+class ExtensionCreationResponse {
   /**
    * Internal identifier of an extension
    */

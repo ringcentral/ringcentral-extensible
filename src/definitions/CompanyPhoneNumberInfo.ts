@@ -1,7 +1,6 @@
 import { CountryInfo, ExtensionInfo, TemporaryNumberInfo, ContactCenterProvider } from '.'
 
-class CompanyPhoneNumberInfo
-{
+class CompanyPhoneNumberInfo {
   /**
    * Link to a company phone number resource
    */

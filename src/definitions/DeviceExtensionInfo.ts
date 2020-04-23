@@ -1,5 +1,4 @@
-class DeviceExtensionInfo
-{
+class DeviceExtensionInfo {
   /**
    * Internal identifier of an extension
    */

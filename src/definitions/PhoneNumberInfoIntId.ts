@@ -1,7 +1,6 @@
 import { PhoneNumberCountryInfo, DeviceProvisioningExtensionInfo } from '.'
 
-class PhoneNumberInfoIntId
-{
+class PhoneNumberInfoIntId {
   /**
    * Internal identifier of a phone number
    */

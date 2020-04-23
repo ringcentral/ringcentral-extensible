@@ -73,8 +73,7 @@ const generateField = (m, f) => {
 
 const generateCode = (m, fields) => {
   let code = `${m.description ? '\n  // ' + m.description : ''}
-class ${m.name}
-{
+class ${m.name} {
   ${fields.join('\n\n  ')}
 }
 
@@ -134,8 +133,7 @@ Object.keys(doc.paths).forEach(p => {
 })
 
 // Generate Attachment
-fs.writeFileSync(path.join(outputDir, 'Attachment.ts'), `class Attachment
-{
+fs.writeFileSync(path.join(outputDir, 'Attachment.ts'), `class Attachment {
   /**
    * File name with extension, such as 'example.png'
    */
@@ -154,7 +152,7 @@ fs.writeFileSync(path.join(outputDir, 'Attachment.ts'), `class Attachment
   /**
    * Check if an object is considered to be an attachment
    */
-  static isAttachment(obj: any): boolean {
+  static isAttachment (obj: any): boolean {
     return 'filename' in obj && 'content' in obj
   }
 }

@@ -1,5 +1,4 @@
-class DataExportTaskContactInfo
-{
+class DataExportTaskContactInfo {
   /**
    * Internal identifier of a contact
    */

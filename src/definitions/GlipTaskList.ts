@@ -1,7 +1,6 @@
 import { GlipTaskInfo } from '.'
 
-class GlipTaskList
-{
+class GlipTaskList {
   /**
    */
   records?: GlipTaskInfo[]

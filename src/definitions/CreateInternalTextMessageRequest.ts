@@ -1,7 +1,6 @@
 import { PagerCallerInfoRequest } from '.'
 
-class CreateInternalTextMessageRequest
-{
+class CreateInternalTextMessageRequest {
   /**
    * Sender of a pager message.
    */

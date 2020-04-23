@@ -1,5 +1,4 @@
-class ListAnsweringRulesParameters
-{
+class ListAnsweringRulesParameters {
   /**
    * Default: Simple
    */

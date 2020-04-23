@@ -1,7 +1,6 @@
 import { DeviceEmergencyServiceAddressResource, MethodResource } from '.'
 
-class Shipping
-{
+class Shipping {
   /**
    */
   address?: DeviceEmergencyServiceAddressResource

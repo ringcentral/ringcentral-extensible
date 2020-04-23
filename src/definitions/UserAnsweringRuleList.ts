@@ -1,7 +1,6 @@
 import { UserAnsweringRuleListRecord, UserAnsweringRuleListPaging, UserAnsweringRuleListNavigation } from '.'
 
-class UserAnsweringRuleList
-{
+class UserAnsweringRuleList {
   /**
    * Canonical URI of an answering rule list resource
    */

@@ -1,5 +1,4 @@
-class PagerCallerInfoRequest
-{
+class PagerCallerInfoRequest {
   /**
    * Extension identifier
    */

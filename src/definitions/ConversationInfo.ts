@@ -1,5 +1,4 @@
-class ConversationInfo
-{
+class ConversationInfo {
   /**
    * Internal identifier of a conversation
    */

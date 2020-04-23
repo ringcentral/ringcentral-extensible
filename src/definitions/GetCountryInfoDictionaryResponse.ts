@@ -1,5 +1,4 @@
-class GetCountryInfoDictionaryResponse
-{
+class GetCountryInfoDictionaryResponse {
   /**
    * Internal identifier of a country
    */

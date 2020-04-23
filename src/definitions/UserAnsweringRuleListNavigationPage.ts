@@ -1,5 +1,4 @@
-class UserAnsweringRuleListNavigationPage
-{
+class UserAnsweringRuleListNavigationPage {
   /**
    */
   uri?: string

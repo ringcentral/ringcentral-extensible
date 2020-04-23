@@ -1,7 +1,6 @@
 import { ArchiveInfo } from '.'
 
-class MessageStoreReportArchive
-{
+class MessageStoreReportArchive {
   /**
    */
   records?: ArchiveInfo[]

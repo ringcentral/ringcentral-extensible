@@ -1,5 +1,4 @@
-class MessageStoreCalleeInfoRequest
-{
+class MessageStoreCalleeInfoRequest {
   /**
    * Phone number in E.164 format
    */

@@ -1,7 +1,6 @@
 import { CallSessionObject } from '.'
 
-class CallSession
-{
+class CallSession {
   /**
    * Call session information
    */

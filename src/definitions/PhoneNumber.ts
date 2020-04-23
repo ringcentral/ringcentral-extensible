@@ -1,5 +1,4 @@
-class PhoneNumber
-{
+class PhoneNumber {
   /**
    * Required
    */

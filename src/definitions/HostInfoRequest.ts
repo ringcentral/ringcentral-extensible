@@ -1,5 +1,4 @@
-class HostInfoRequest
-{
+class HostInfoRequest {
   /**
    * Link to the meeting host resource
    */

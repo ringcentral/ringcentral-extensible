@@ -1,7 +1,6 @@
 import { CallLogCallerInfo, ExtensionInfoCallLog, CallLogRecordLegInfo, BillingInfo, CallLogRecordMessage, DelegateInfo, CallLogRecordingInfo } from '.'
 
-class UserCallLogRecord
-{
+class UserCallLogRecord {
   /**
    * Internal identifier of a cal log record
    */

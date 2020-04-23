@@ -1,5 +1,4 @@
-class QueueShortInfoResource
-{
+class QueueShortInfoResource {
   /**
    * Call queue extension identifier
    */

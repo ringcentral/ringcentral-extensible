@@ -1,7 +1,6 @@
 import { CompanyContactsPagingInfo, ContactResource } from '.'
 
-class DirectoryResource
-{
+class DirectoryResource {
   /**
    */
   paging?: CompanyContactsPagingInfo

@@ -1,5 +1,4 @@
-class ListRecentChatsParameters
-{
+class ListRecentChatsParameters {
   /**
    * Type of chats to be fetched. By default all chat types are returned
    */

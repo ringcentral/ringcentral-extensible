@@ -1,7 +1,6 @@
 import { SubscriptionInfo } from '.'
 
-class RecordsCollectionResourceSubscriptionResponse
-{
+class RecordsCollectionResourceSubscriptionResponse {
   /**
    */
   uri?: string

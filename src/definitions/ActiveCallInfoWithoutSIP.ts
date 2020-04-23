@@ -1,5 +1,4 @@
-class ActiveCallInfoWithoutSIP
-{
+class ActiveCallInfoWithoutSIP {
   /**
    * Internal identifier of a call
    */

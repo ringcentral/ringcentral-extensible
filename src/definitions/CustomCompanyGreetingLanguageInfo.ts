@@ -1,5 +1,4 @@
-class CustomCompanyGreetingLanguageInfo
-{
+class CustomCompanyGreetingLanguageInfo {
   /**
    * Internal identifier of a greeting language
    */

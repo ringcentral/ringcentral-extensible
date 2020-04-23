@@ -1,5 +1,4 @@
-class AssigneeInfo
-{
+class AssigneeInfo {
   /**
    * Internal identifier of an assignee
    */

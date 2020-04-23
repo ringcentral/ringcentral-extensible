@@ -1,7 +1,6 @@
 import { ModelInfo, ExtensionInfoIntId, DeviceEmergencyInfo, EmergencyServiceAddressResource, PhoneLinesInfo, ShippingInfo, DeviceSiteInfo, BillingStatementInfo } from '.'
 
-class GetDeviceInfoResponse
-{
+class GetDeviceInfoResponse {
   /**
    * Internal identifier of a device
    */

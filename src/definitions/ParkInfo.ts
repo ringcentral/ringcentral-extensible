@@ -1,5 +1,4 @@
-class ParkInfo
-{
+class ParkInfo {
   /**
    * Call park identifier
    */

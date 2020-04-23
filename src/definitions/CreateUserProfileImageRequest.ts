@@ -1,7 +1,6 @@
 import { Attachment } from '.'
 
-class CreateUserProfileImageRequest
-{
+class CreateUserProfileImageRequest {
   /**
    */
   image?: Attachment

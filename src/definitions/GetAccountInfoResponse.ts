@@ -1,7 +1,6 @@
 import { GetExtensionInfoResponse, ServiceInfo, SignupInfoResource, AccountStatusInfo, RegionalSettings, AccountLimits } from '.'
 
-class GetAccountInfoResponse
-{
+class GetAccountInfoResponse {
   /**
    * Internal identifier of an account
    */

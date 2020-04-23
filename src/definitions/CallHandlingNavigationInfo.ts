@@ -1,7 +1,6 @@
 import { CallHandlingNavigationInfoUri } from '.'
 
-class CallHandlingNavigationInfo
-{
+class CallHandlingNavigationInfo {
   /**
    * Canonical URI for the first page of the list
    */

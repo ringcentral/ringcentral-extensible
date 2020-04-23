@@ -1,7 +1,6 @@
 import { ExtensionInfoGrants } from '.'
 
-class GrantInfo
-{
+class GrantInfo {
   /**
    * Canonical URI of a grant
    */

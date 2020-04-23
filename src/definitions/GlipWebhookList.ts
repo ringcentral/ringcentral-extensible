@@ -1,7 +1,6 @@
 import { GlipWebhookInfo } from '.'
 
-class GlipWebhookList
-{
+class GlipWebhookList {
   /**
    */
   records?: GlipWebhookInfo[]

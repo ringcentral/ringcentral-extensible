@@ -1,5 +1,4 @@
-class CallLogRecordingInfo
-{
+class CallLogRecordingInfo {
   /**
    * Internal identifier of the call recording
    */

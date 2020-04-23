@@ -1,7 +1,6 @@
 import { ForwardingNumberInfoRulesCreateRuleRequest } from '.'
 
-class RuleInfoCreateRuleRequest
-{
+class RuleInfoCreateRuleRequest {
   /**
    * Forwarding number (or group) ordinal. Not returned for inactive numbers
    */

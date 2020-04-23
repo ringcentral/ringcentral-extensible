@@ -1,7 +1,6 @@
 import { GetCountryInfoState } from '.'
 
-class GetStateInfoResponse
-{
+class GetStateInfoResponse {
   /**
    * Internal identifier of a state
    */

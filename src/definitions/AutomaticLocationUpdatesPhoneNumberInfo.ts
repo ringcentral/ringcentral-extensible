@@ -1,5 +1,4 @@
-class AutomaticLocationUpdatesPhoneNumberInfo
-{
+class AutomaticLocationUpdatesPhoneNumberInfo {
   /**
    * Internal identifier of a phone number
    */

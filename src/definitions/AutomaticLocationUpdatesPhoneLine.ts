@@ -1,7 +1,6 @@
 import { AutomaticLocationUpdatesPhoneNumberInfo } from '.'
 
-class AutomaticLocationUpdatesPhoneLine
-{
+class AutomaticLocationUpdatesPhoneLine {
   /**
    */
   lineType?: ('Unknown' | 'Standalone' | 'StandaloneFree' | 'BlaPrimary' | 'BlaSecondary' | 'BLF')

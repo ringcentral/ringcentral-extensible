@@ -1,7 +1,6 @@
 import { MessageAttachmentInfo, ConversationInfo, MessageStoreCallerInfoResponseFrom, MessageStoreCallerInfoResponseTo } from '.'
 
-class GetMessageInfoResponse
-{
+class GetMessageInfoResponse {
   /**
    * Internal identifier of a message
    */

@@ -1,5 +1,4 @@
-class RevokeTokenRequest
-{
+class RevokeTokenRequest {
   /**
    */
   client_assertion_type?: string

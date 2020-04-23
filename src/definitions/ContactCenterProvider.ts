@@ -1,5 +1,4 @@
-class ContactCenterProvider
-{
+class ContactCenterProvider {
   /**
    * Internal identifier of the provider
    */

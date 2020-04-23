@@ -1,7 +1,6 @@
 import { DeviceModelInfo, DeviceExtensionInfo, DeviceEmergencyServiceAddressResource, Shipping, DevicePhoneLinesInfo, DeviceSiteInfo } from '.'
 
-class SipRegistrationDeviceInfo
-{
+class SipRegistrationDeviceInfo {
   /**
    * Link to a device resource
    */

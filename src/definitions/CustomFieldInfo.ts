@@ -1,5 +1,4 @@
-class CustomFieldInfo
-{
+class CustomFieldInfo {
   /**
    * Internal identifier of a custom field
    */

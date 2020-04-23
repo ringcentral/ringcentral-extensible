@@ -1,7 +1,6 @@
 import { BillingStatementCharges, BillingStatementFees } from '.'
 
-class BillingStatementInfo
-{
+class BillingStatementInfo {
   /**
    * Currency code complying with [ISO-4217](https://en.wikipedia.org/wiki/ISO_4217) standard
    */

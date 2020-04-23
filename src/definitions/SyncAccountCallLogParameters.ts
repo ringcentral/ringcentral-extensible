@@ -1,5 +1,4 @@
-class SyncAccountCallLogParameters
-{
+class SyncAccountCallLogParameters {
   /**
    * Type of synchronization. 'FSync' is a default value
    */

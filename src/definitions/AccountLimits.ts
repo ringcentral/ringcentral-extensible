@@ -1,5 +1,4 @@
-class AccountLimits
-{
+class AccountLimits {
   /**
    * Max number of free softphone phone lines per user extension
    */

@@ -1,7 +1,6 @@
 import { ExtensionFavoritesEventBody } from '.'
 
-class ExtensionFavoritesEvent
-{
+class ExtensionFavoritesEvent {
   /**
    * Universally unique identifier of a notification
    */

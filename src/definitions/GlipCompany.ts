@@ -1,5 +1,4 @@
-class GlipCompany
-{
+class GlipCompany {
   /**
    * Internal identifier of an RC account/Glip company, or tilde (~) to indicate a company the current user belongs to
    * Required

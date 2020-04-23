@@ -1,7 +1,6 @@
 import { ActiveCallInfo, GetPresenceExtensionInfo } from '.'
 
-class PresenceInfoResponse
-{
+class PresenceInfoResponse {
   /**
    * Link to the presence resource
    */

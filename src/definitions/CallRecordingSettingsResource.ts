@@ -1,7 +1,6 @@
 import { OnDemandResource, AutomaticRecordingResource, GreetingResource } from '.'
 
-class CallRecordingSettingsResource
-{
+class CallRecordingSettingsResource {
   /**
    */
   onDemand?: OnDemandResource

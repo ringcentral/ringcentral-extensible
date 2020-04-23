@@ -1,5 +1,4 @@
-class ContactBusinessAddressInfo
-{
+class ContactBusinessAddressInfo {
   /**
    * Country name of an extension user company
    */

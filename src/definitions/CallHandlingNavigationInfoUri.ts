@@ -1,5 +1,4 @@
-class CallHandlingNavigationInfoUri
-{
+class CallHandlingNavigationInfoUri {
   /**
    */
   uri?: string

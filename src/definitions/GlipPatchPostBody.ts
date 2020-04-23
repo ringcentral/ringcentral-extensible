@@ -1,5 +1,4 @@
-class GlipPatchPostBody
-{
+class GlipPatchPostBody {
   /**
    * Post text.
    */

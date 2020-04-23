@@ -1,7 +1,6 @@
 import { GlipMentionsInfo } from '.'
 
-class GlipPostEvent
-{
+class GlipPostEvent {
   /**
    * Internal identifier of a post
    */

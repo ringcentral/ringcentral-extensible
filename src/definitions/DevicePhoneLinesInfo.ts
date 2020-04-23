@@ -1,7 +1,6 @@
 import { DevicePhoneLinesEmergencyAddressInfo, DevicePhoneNumberInfo } from '.'
 
-class DevicePhoneLinesInfo
-{
+class DevicePhoneLinesInfo {
   /**
    * Type of phone line
    */

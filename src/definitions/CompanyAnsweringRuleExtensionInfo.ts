@@ -1,5 +1,4 @@
-class CompanyAnsweringRuleExtensionInfo
-{
+class CompanyAnsweringRuleExtensionInfo {
   /**
    * Internal identifier of an extension
    */

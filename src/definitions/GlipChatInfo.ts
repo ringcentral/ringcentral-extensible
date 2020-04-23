@@ -1,7 +1,6 @@
 import { GlipMemberInfo } from '.'
 
-class GlipChatInfo
-{
+class GlipChatInfo {
   /**
    * Internal identifier of a chat
    */

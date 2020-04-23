@@ -1,5 +1,4 @@
-class ListGlipGroupPostsParameters
-{
+class ListGlipGroupPostsParameters {
   /**
    * Max number of records to be returned
    * Maximum: 250

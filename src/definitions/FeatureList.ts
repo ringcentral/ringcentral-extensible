@@ -1,7 +1,6 @@
 import { FeatureInfo } from '.'
 
-class FeatureList
-{
+class FeatureList {
   /**
    */
   records?: FeatureInfo[]

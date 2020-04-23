@@ -1,5 +1,4 @@
-class UpdateMessageParameters
-{
+class UpdateMessageParameters {
   /**
    */
   dateFrom?: string

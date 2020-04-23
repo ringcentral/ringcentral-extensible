@@ -1,5 +1,4 @@
-class AuthenticationScheme
-{
+class AuthenticationScheme {
   /**
    */
   description?: string

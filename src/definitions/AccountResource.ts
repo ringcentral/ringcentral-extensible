@@ -1,7 +1,6 @@
 import { PhoneNumberResource } from '.'
 
-class AccountResource
-{
+class AccountResource {
   /**
    */
   companyName?: string

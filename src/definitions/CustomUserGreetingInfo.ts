@@ -1,7 +1,6 @@
 import { CustomGreetingAnsweringRuleInfo } from '.'
 
-class CustomUserGreetingInfo
-{
+class CustomUserGreetingInfo {
   /**
    * Link to a custom user greeting
    */

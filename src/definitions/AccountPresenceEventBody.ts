@@ -1,5 +1,4 @@
-class AccountPresenceEventBody
-{
+class AccountPresenceEventBody {
   /**
    * Internal identifier of an extension. Optional parameter
    * Default: ~

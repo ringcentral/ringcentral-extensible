@@ -1,7 +1,6 @@
 import { FavoriteContactResource } from '.'
 
-class FavoriteCollection
-{
+class FavoriteCollection {
   /**
    */
   records?: FavoriteContactResource[]

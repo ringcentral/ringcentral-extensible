@@ -1,7 +1,6 @@
 import { NotificationRecipientInfo, SenderInfo, MessageAttachmentInfo, ConversationInfo } from '.'
 
-class InstantMessageEventBody
-{
+class InstantMessageEventBody {
   /**
    * Internal identifier of a message
    */

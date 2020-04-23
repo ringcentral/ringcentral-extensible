@@ -1,7 +1,6 @@
 import { NotificationInfo } from '.'
 
-class InboundMessageEvent
-{
+class InboundMessageEvent {
   /**
    * Information on a notification
    */

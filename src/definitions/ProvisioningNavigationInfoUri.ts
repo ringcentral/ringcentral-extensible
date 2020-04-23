@@ -1,5 +1,4 @@
-class ProvisioningNavigationInfoUri
-{
+class ProvisioningNavigationInfoUri {
   /**
    */
   uri?: string

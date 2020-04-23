@@ -1,5 +1,4 @@
-class ConferencePhoneNumberInfo
-{
+class ConferencePhoneNumberInfo {
   /**
    * Dial-in phone number to connect to a conference
    */

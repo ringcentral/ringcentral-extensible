@@ -1,5 +1,4 @@
-class ExtensionPresenceEventBody
-{
+class ExtensionPresenceEventBody {
   /**
    * Internal identifier of an extension. Optional parameter
    * Default: ~

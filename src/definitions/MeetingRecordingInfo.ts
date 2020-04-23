@@ -1,5 +1,4 @@
-class MeetingRecordingInfo
-{
+class MeetingRecordingInfo {
   /**
    */
   id?: string

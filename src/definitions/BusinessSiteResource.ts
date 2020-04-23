@@ -1,5 +1,4 @@
-class BusinessSiteResource
-{
+class BusinessSiteResource {
   /**
    */
   id?: string

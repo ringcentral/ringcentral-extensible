@@ -1,7 +1,6 @@
 import { GlipDataExportNavigationInfoUri } from '.'
 
-class GlipDataExportNavigationInfo
-{
+class GlipDataExportNavigationInfo {
   /**
    * Canonical URI for the first page of the list
    */

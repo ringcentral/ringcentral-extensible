@@ -1,5 +1,4 @@
-class PromptLanguageInfo
-{
+class PromptLanguageInfo {
   /**
    * Link to a prompt language
    */

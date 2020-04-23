@@ -1,5 +1,4 @@
-class GlipPreferencesChats
-{
+class GlipPreferencesChats {
   /**
    * Default: 10
    */

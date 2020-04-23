@@ -1,5 +1,4 @@
-class AudioPromptInfo
-{
+class AudioPromptInfo {
   /**
    * Link to a prompt audio file
    */

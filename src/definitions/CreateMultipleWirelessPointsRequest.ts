@@ -1,7 +1,6 @@
 import { CreateWirelessPoint } from '.'
 
-class CreateMultipleWirelessPointsRequest
-{
+class CreateMultipleWirelessPointsRequest {
   /**
    */
   records?: CreateWirelessPoint[]

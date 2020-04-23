@@ -1,5 +1,4 @@
-class UpdateIVRPromptRequest
-{
+class UpdateIVRPromptRequest {
   /**
    * Name of a file to be uploaded as a prompt
    */

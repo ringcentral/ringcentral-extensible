@@ -1,5 +1,4 @@
-class MeetingsNavigationInfoUri
-{
+class MeetingsNavigationInfoUri {
   /**
    */
   uri?: string

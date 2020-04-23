@@ -1,7 +1,6 @@
 import { CreateGlipMember } from '.'
 
-class GlipPostMembersListBody
-{
+class GlipPostMembersListBody {
   /**
    * List of glip members
    * Required

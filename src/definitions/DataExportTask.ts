@@ -1,7 +1,6 @@
 import { SpecificInfo, ExportTaskResultInfo } from '.'
 
-class DataExportTask
-{
+class DataExportTask {
   /**
    * Canonical URI of a task
    */

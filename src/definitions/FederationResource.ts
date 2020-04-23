@@ -1,7 +1,6 @@
 import { FederatedAccountResource } from '.'
 
-class FederationResource
-{
+class FederationResource {
   /**
    */
   accounts?: FederatedAccountResource[]

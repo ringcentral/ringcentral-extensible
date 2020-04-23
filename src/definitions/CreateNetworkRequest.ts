@@ -1,7 +1,6 @@
 import { AutomaticLocationUpdatesSiteInfo, PublicIpRangeInfo, PrivateIpRangeInfoRequest } from '.'
 
-class CreateNetworkRequest
-{
+class CreateNetworkRequest {
   /**
    */
   name?: string

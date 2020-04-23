@@ -1,5 +1,4 @@
-class AssistedUserResource
-{
+class AssistedUserResource {
   /**
    */
   id?: string

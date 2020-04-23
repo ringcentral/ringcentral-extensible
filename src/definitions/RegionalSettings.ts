@@ -1,7 +1,6 @@
 import { CountryInfo, TimezoneInfo, LanguageInfo, GreetingLanguageInfo, FormattingLocaleInfo } from '.'
 
-class RegionalSettings
-{
+class RegionalSettings {
   /**
    * Extension country information
    */

@@ -1,5 +1,4 @@
-class NotificationDeliveryModeRequest
-{
+class NotificationDeliveryModeRequest {
   /**
    * Notifications transportation provider name
    */

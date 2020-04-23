@@ -1,7 +1,6 @@
 import { DetailedExtensionPresenceWithSIPEventBody } from '.'
 
-class DetailedExtensionPresenceWithSIPEvent
-{
+class DetailedExtensionPresenceWithSIPEvent {
   /**
    * Universally unique identifier of a notification
    */

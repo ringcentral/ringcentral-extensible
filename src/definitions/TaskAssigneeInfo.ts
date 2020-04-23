@@ -1,5 +1,4 @@
-class TaskAssigneeInfo
-{
+class TaskAssigneeInfo {
   /**
    * Internal identifier of an assignee
    */

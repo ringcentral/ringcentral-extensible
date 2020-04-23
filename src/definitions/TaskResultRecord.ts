@@ -1,7 +1,6 @@
 import { TaskResultRecordErrorsInfo } from '.'
 
-class TaskResultRecord
-{
+class TaskResultRecord {
   /**
    * Internal identifier of the created/updated element - wireless point or network switch
    */

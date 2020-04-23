@@ -1,6 +1,5 @@
 // Linked message (Fax/Voicemail)
-class CallLogRecordMessage
-{
+class CallLogRecordMessage {
   /**
    * Internal identifier of a message
    */

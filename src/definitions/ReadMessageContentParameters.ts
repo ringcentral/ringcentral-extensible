@@ -1,5 +1,4 @@
-class ReadMessageContentParameters
-{
+class ReadMessageContentParameters {
   /**
    * Content disposition of a response
    * Default: Inline

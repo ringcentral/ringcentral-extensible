@@ -1,7 +1,6 @@
 import { SipRegistrationDeviceInfo, SIPInfoResponse, SIPFlagsResponse } from '.'
 
-class CreateSipRegistrationResponse
-{
+class CreateSipRegistrationResponse {
   /**
    */
   device?: SipRegistrationDeviceInfo

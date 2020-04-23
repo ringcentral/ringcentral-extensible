@@ -1,8 +1,7 @@
 import { BlockedAllowedPhoneNumberInfo, CallHandlingNavigationInfo, CallHandlingPagingInfo } from '.'
 
   // List of blocked or allowed phone numbers
-class BlockedAllowedPhoneNumbersList
-{
+class BlockedAllowedPhoneNumbersList {
   /**
    * Link to a list of blocked/allowed phone numbers resource
    */

@@ -1,5 +1,4 @@
-class ServiceFeatureInfo
-{
+class ServiceFeatureInfo {
   /**
    * Feature name
    */

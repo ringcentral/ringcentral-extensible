@@ -1,7 +1,6 @@
 import { PermissionIdResource, RoleIdResource } from '.'
 
-class ActivePermissionResource
-{
+class ActivePermissionResource {
   /**
    */
   permission?: PermissionIdResource

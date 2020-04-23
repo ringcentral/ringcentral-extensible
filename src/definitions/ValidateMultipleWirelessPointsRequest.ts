@@ -1,7 +1,6 @@
 import { WirelessPointInfoRequest } from '.'
 
-class ValidateMultipleWirelessPointsRequest
-{
+class ValidateMultipleWirelessPointsRequest {
   /**
    */
   records?: WirelessPointInfoRequest[]

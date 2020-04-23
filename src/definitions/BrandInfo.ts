@@ -1,7 +1,6 @@
 import { CountryInfo } from '.'
 
-class BrandInfo
-{
+class BrandInfo {
   /**
    * Internal identifier of a brand
    */

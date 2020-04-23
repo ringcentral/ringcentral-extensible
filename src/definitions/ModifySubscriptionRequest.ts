@@ -1,7 +1,6 @@
 import { NotificationDeliveryModeRequest } from '.'
 
-class ModifySubscriptionRequest
-{
+class ModifySubscriptionRequest {
   /**
    * Collection of URIs to API resources
    * Required

@@ -1,5 +1,4 @@
-class CallLogNavigationInfoURI
-{
+class CallLogNavigationInfoURI {
   /**
    */
   uri?: string

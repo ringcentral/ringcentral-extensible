@@ -1,7 +1,6 @@
 import { AssistantResource } from '.'
 
-class AssistantsResource
-{
+class AssistantsResource {
   /**
    */
   records?: AssistantResource[]

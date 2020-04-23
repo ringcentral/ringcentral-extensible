@@ -1,5 +1,4 @@
-class TemplateInfo
-{
+class TemplateInfo {
   /**
    * Link to a template
    */

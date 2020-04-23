@@ -1,5 +1,4 @@
-class PartyInfo
-{
+class PartyInfo {
   /**
    * Phone number of a party
    */

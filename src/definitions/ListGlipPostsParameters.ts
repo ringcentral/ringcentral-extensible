@@ -1,5 +1,4 @@
-class ListGlipPostsParameters
-{
+class ListGlipPostsParameters {
   /**
    * Identifier of a group to filter posts
    */

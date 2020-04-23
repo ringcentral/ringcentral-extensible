@@ -1,7 +1,6 @@
 import { ContactInfoCreationRequest, ReferenceInfo, Roles, RegionalSettings, ExtensionStatusInfo } from '.'
 
-class ExtensionCreationRequest
-{
+class ExtensionCreationRequest {
   /**
    * Contact Information
    * Required

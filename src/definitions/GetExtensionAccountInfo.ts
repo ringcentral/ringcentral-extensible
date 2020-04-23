@@ -1,5 +1,4 @@
-class GetExtensionAccountInfo
-{
+class GetExtensionAccountInfo {
   /**
    * Internal identifier of an account
    */

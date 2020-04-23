@@ -1,7 +1,6 @@
 import { OrderBy } from '.'
 
-class SearchDirectoryEntriesRequest
-{
+class SearchDirectoryEntriesRequest {
   /**
    * String value to filter the contacts. The value specified is searched through the following fields: `firstName`, `lastName`, `extensionNumber`, `phoneNumber`, `email`
    */

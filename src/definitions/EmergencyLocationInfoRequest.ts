@@ -1,7 +1,6 @@
 import { EmergencyLocationAddressInfoRequest } from '.'
 
-class EmergencyLocationInfoRequest
-{
+class EmergencyLocationInfoRequest {
   /**
    * Internal identifier of the emergency response location
    */

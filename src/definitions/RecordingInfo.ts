@@ -1,5 +1,4 @@
-class RecordingInfo
-{
+class RecordingInfo {
   /**
    * Internal identifier of a Recording resource
    */

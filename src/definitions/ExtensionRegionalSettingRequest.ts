@@ -1,7 +1,6 @@
 import { ExtensionCountryInfoRequest, ExtensionTimezoneInfoRequest, ExtensionLanguageInfoRequest, ExtensionGreetingLanguageInfoRequest, ExtensionFormattingLocaleInfoRequest } from '.'
 
-class ExtensionRegionalSettingRequest
-{
+class ExtensionRegionalSettingRequest {
   /**
    */
   homeCountry?: ExtensionCountryInfoRequest

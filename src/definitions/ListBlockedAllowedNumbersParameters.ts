@@ -1,5 +1,4 @@
-class ListBlockedAllowedNumbersParameters
-{
+class ListBlockedAllowedNumbersParameters {
   /**
    */
   page?: number

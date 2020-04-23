@@ -1,7 +1,6 @@
 import { Attachment, CustomCompanyGreetingAnsweringRuleInfo } from '.'
 
-class CreateCompanyGreetingRequest
-{
+class CreateCompanyGreetingRequest {
   /**
    * Type of a greeting, specifying the case when the greeting is played.
    */

@@ -1,5 +1,4 @@
-class MessageChanges
-{
+class MessageChanges {
   /**
    * Message type
    */

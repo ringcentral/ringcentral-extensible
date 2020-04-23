@@ -1,7 +1,6 @@
 import { FaxCoverPageInfo, MessagingNavigationInfo, MessagingPagingInfo } from '.'
 
-class ListFaxCoverPagesResponse
-{
+class ListFaxCoverPagesResponse {
   /**
    */
   uri?: string

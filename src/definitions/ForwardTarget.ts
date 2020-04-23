@@ -1,5 +1,4 @@
-class ForwardTarget
-{
+class ForwardTarget {
   /**
    * Phone number
    */

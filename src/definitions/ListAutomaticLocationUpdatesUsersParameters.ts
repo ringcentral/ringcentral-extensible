@@ -1,5 +1,4 @@
-class ListAutomaticLocationUpdatesUsersParameters
-{
+class ListAutomaticLocationUpdatesUsersParameters {
   /**
    * Extension type. Multiple values are supported
    */

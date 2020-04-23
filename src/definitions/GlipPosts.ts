@@ -1,7 +1,6 @@
 import { GlipPostInfo, GlipNavigationInfo } from '.'
 
-class GlipPosts
-{
+class GlipPosts {
   /**
    * List of posts
    * Required

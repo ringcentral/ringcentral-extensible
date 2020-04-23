@@ -1,7 +1,6 @@
 import { DataExportTaskContactInfo } from '.'
 
-class SpecificInfo
-{
+class SpecificInfo {
   /**
    * Starting time for data collection
    */

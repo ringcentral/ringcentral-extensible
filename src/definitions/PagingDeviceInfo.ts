@@ -1,5 +1,4 @@
-class PagingDeviceInfo
-{
+class PagingDeviceInfo {
   /**
    * Internal identifier of a paging device
    */

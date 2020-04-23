@@ -1,5 +1,4 @@
-class ArchiveInfo
-{
+class ArchiveInfo {
   /**
    * Archive size in bytes
    */

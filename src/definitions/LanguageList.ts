@@ -1,7 +1,6 @@
 import { LanguageInfo, ProvisioningNavigationInfo, ProvisioningPagingInfo } from '.'
 
-class LanguageList
-{
+class LanguageList {
   /**
    * Canonical URI of the language list resource
    */

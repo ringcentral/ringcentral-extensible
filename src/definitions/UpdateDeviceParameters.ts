@@ -1,5 +1,4 @@
-class UpdateDeviceParameters
-{
+class UpdateDeviceParameters {
   /**
    */
   prestatement?: boolean

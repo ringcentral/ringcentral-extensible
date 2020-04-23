@@ -1,7 +1,6 @@
 import { BrandInfo, ServicePlanInfo, BillingPlanInfo, ServiceFeatureInfo, AccountLimits, PackageInfo } from '.'
 
-class GetServiceInfoResponse
-{
+class GetServiceInfoResponse {
   /**
    * Canonical URI of the account Service Info resource
    */

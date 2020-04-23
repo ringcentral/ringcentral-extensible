@@ -1,5 +1,4 @@
-class CallPartyFlip
-{
+class CallPartyFlip {
   /**
    * Call flip id
    */

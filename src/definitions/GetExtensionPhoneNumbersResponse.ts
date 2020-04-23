@@ -1,7 +1,6 @@
 import { UserPhoneNumberInfo, ProvisioningNavigationInfo, ProvisioningPagingInfo } from '.'
 
-class GetExtensionPhoneNumbersResponse
-{
+class GetExtensionPhoneNumbersResponse {
   /**
    * Link to the user's phone number list resource
    */

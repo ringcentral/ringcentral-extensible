@@ -1,5 +1,4 @@
-class ReadCallSessionStatusParameters
-{
+class ReadCallSessionStatusParameters {
   /**
    * The date and time of a call session latest change
    */

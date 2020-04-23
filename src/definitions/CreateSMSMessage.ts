@@ -1,7 +1,6 @@
 import { MessageStoreCallerInfoRequest, SMSCountryInfo } from '.'
 
-class CreateSMSMessage
-{
+class CreateSMSMessage {
   /**
    * Sender of an SMS message. The phoneNumber property must be filled to correspond to one of the account phone numbers which is allowed to send SMS
    * Required

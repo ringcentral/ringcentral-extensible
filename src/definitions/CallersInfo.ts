@@ -1,5 +1,4 @@
-class CallersInfo
-{
+class CallersInfo {
   /**
    * Phone number of a caller
    */

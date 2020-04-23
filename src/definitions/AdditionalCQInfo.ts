@@ -1,5 +1,4 @@
-class AdditionalCQInfo
-{
+class AdditionalCQInfo {
   /**
    * Call information to be displayed as 'Line 2' for a call queue call session
    */

@@ -1,5 +1,4 @@
-class PatchOperation
-{
+class PatchOperation {
   /**
    * Required
    */

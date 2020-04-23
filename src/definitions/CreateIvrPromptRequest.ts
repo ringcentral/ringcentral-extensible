@@ -1,7 +1,6 @@
 import { Attachment } from '.'
 
-class CreateIvrPromptRequest
-{
+class CreateIvrPromptRequest {
   /**
    * Audio file that will be used as a prompt. Attachment cannot be empty, only audio files are supported
    */

@@ -1,7 +1,6 @@
 import { CompanyAnsweringRuleWeeklyScheduleInfoRequest, RangesInfo } from '.'
 
-class CompanyAnsweringRuleScheduleInfoRequest
-{
+class CompanyAnsweringRuleScheduleInfoRequest {
   /**
    * Weekly schedule. If specified, ranges cannot be specified
    */

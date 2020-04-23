@@ -1,7 +1,6 @@
 import { ParamsInfo, ReasonInfo } from '.'
 
-class FeatureInfo
-{
+class FeatureInfo {
   /**
    * Internal identifier of a feature
    */

@@ -1,5 +1,4 @@
-class TimezoneResource
-{
+class TimezoneResource {
   /**
    */
   uri?: string

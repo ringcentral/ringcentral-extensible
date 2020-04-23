@@ -1,7 +1,6 @@
 import { MeetingRecordings, MeetingRecordingsPagingInfo, MeetingRecordingsNavigationInfo } from '.'
 
-class ListMeetingRecordingsResponse
-{
+class ListMeetingRecordingsResponse {
   /**
    */
   records?: MeetingRecordings[]

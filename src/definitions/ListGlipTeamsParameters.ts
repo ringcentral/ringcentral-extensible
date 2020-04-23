@@ -1,5 +1,4 @@
-class ListGlipTeamsParameters
-{
+class ListGlipTeamsParameters {
   /**
    * Number of teams to be fetched by one request. The maximum value is 250, by default - 30
    * Maximum: 250

@@ -1,7 +1,6 @@
 import { CallMonitoringGroupMemberInfo, ProvisioningNavigationInfo, ProvisioningPagingInfo } from '.'
 
-class CallMonitoringGroupMemberList
-{
+class CallMonitoringGroupMemberList {
   /**
    * Link to a call monitoring group members resource
    * Required

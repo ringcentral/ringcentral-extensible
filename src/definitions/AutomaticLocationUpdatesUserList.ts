@@ -1,7 +1,6 @@
 import { AutomaticLocationUpdatesUserInfo, ProvisioningNavigationInfo, ProvisioningPagingInfo } from '.'
 
-class AutomaticLocationUpdatesUserList
-{
+class AutomaticLocationUpdatesUserList {
   /**
    * Link to the users list resource
    */

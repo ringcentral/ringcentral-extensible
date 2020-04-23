@@ -1,7 +1,6 @@
 import { NotificationRecipientInfo, SenderInfo, MessageAttachmentInfo } from '.'
 
-class VoicemailMessageEventBody
-{
+class VoicemailMessageEventBody {
   /**
    * Internal identifier of a message
    */

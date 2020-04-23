@@ -1,5 +1,4 @@
-class UserAddress
-{
+class UserAddress {
   /**
    */
   country?: string

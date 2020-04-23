@@ -1,5 +1,4 @@
-class CallerIdDeviceInfo
-{
+class CallerIdDeviceInfo {
   /**
    * Internal identifier of a device
    */

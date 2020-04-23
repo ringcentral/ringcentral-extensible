@@ -1,5 +1,4 @@
-class PublicIpRangeInfo
-{
+class PublicIpRangeInfo {
   /**
    */
   id?: string

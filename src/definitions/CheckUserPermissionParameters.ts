@@ -1,5 +1,4 @@
-class CheckUserPermissionParameters
-{
+class CheckUserPermissionParameters {
   /**
    */
   permissionId?: string

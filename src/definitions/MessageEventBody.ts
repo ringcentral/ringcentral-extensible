@@ -1,7 +1,6 @@
 import { MessageChanges } from '.'
 
-class MessageEventBody
-{
+class MessageEventBody {
   /**
    * Internal identifier of an extension
    */

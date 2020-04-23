@@ -1,5 +1,4 @@
-class ListMessagesParameters
-{
+class ListMessagesParameters {
   /**
    * Specifies the availability status for the resulting messages. Multiple values are accepted
    */

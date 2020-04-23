@@ -1,5 +1,4 @@
-class RecipientInfo
-{
+class RecipientInfo {
   /**
    * Link to a recipient extension resource
    */

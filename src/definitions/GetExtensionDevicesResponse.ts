@@ -1,7 +1,6 @@
 import { ExtensionDeviceResponse, DeviceProvisioningNavigationInfo, DeviceProvisioningPagingInfo } from '.'
 
-class GetExtensionDevicesResponse
-{
+class GetExtensionDevicesResponse {
   /**
    * Link to the list of extension devices
    */

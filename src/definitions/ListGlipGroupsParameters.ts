@@ -1,5 +1,4 @@
-class ListGlipGroupsParameters
-{
+class ListGlipGroupsParameters {
   /**
    * Type of groups to be fetched (by default all type of groups will be fetched)
    */

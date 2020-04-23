@@ -1,7 +1,6 @@
 import { CompanyPhoneNumberInfo, ProvisioningNavigationInfo, ProvisioningPagingInfo } from '.'
 
-class AccountPhoneNumbers
-{
+class AccountPhoneNumbers {
   /**
    * Link to the list of account phone numbers
    */

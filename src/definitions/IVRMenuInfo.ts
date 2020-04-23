@@ -1,7 +1,6 @@
 import { IVRMenuPromptInfo, IVRMenuActionsInfo } from '.'
 
-class IVRMenuInfo
-{
+class IVRMenuInfo {
   /**
    * Internal identifier of an IVR Menu extension
    */

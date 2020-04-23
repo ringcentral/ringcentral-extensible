@@ -1,5 +1,4 @@
-class AuthorizeRequest
-{
+class AuthorizeRequest {
   /**
    * Determines authorization flow: **code** - Authorization Code, **token** - Implicit Grant
    */

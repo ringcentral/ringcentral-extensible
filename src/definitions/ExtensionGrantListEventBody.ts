@@ -1,5 +1,4 @@
-class ExtensionGrantListEventBody
-{
+class ExtensionGrantListEventBody {
   /**
    * Internal identifier of an extension
    */

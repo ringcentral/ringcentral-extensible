@@ -1,7 +1,6 @@
 import { MeetingsNavigationInfoUri } from '.'
 
-class MeetingsNavigationInfo
-{
+class MeetingsNavigationInfo {
   /**
    */
   nextPage?: MeetingsNavigationInfoUri

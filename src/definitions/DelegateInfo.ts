@@ -1,5 +1,4 @@
-class DelegateInfo
-{
+class DelegateInfo {
   /**
    * Internal identifier of a Secretary extension
    */

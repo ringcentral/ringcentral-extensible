@@ -1,7 +1,6 @@
 import { ListCompanyAnsweringRuleInfo, CallHandlingPagingInfo, CallHandlingNavigationInfo } from '.'
 
-class CompanyAnsweringRuleList
-{
+class CompanyAnsweringRuleList {
   /**
    * Link to an answering rule resource
    */

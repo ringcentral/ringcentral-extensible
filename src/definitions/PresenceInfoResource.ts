@@ -1,7 +1,6 @@
 import { ActiveCallInfo } from '.'
 
-class PresenceInfoResource
-{
+class PresenceInfoResource {
   /**
    */
   userStatus?: ('Offline' | 'Busy' | 'Available')

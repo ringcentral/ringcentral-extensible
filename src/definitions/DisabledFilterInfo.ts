@@ -1,5 +1,4 @@
-class DisabledFilterInfo
-{
+class DisabledFilterInfo {
   /**
    * Event filter that is disabled for the user
    */

@@ -1,5 +1,4 @@
-class PresenceNavigationInfoURI
-{
+class PresenceNavigationInfoURI {
   /**
    */
   uri?: string

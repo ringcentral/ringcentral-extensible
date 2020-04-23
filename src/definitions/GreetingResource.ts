@@ -1,5 +1,4 @@
-class GreetingResource
-{
+class GreetingResource {
   /**
    */
   type?: ('StartRecording' | 'StopRecording' | 'AutomaticRecording')

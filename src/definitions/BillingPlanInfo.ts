@@ -1,5 +1,4 @@
-class BillingPlanInfo
-{
+class BillingPlanInfo {
   /**
    * Internal identifier of a billing plan
    */

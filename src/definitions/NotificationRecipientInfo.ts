@@ -1,5 +1,4 @@
-class NotificationRecipientInfo
-{
+class NotificationRecipientInfo {
   /**
    * Phone number in E.164 (with '+' sign) format
    */

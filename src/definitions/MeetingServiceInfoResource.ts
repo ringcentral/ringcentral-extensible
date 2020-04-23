@@ -1,7 +1,6 @@
 import { MeetingExternalUserInfoResource, DialInNumberResource } from '.'
 
-class MeetingServiceInfoResource
-{
+class MeetingServiceInfoResource {
   /**
    */
   uri?: string

@@ -1,7 +1,6 @@
 import { GlipTeamInfo, GlipNavigationInfo } from '.'
 
-class GlipTeamsList
-{
+class GlipTeamsList {
   /**
    * List of teams
    * Required

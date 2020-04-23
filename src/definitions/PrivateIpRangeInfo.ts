@@ -1,7 +1,6 @@
 import { LocationUpdatesEmergencyAddressInfo } from '.'
 
-class PrivateIpRangeInfo
-{
+class PrivateIpRangeInfo {
   /**
    */
   id?: string

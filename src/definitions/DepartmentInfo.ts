@@ -1,5 +1,4 @@
-class DepartmentInfo
-{
+class DepartmentInfo {
   /**
    * Internal identifier of a department extension
    */

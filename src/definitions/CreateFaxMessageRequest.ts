@@ -1,7 +1,6 @@
 import { Attachment, MessageStoreCalleeInfoRequest } from '.'
 
-class CreateFaxMessageRequest
-{
+class CreateFaxMessageRequest {
   /**
    * File to upload
    */

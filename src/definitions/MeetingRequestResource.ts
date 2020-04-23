@@ -1,7 +1,6 @@
 import { MeetingScheduleResource, HostInfoRequest, RecurrenceInfo } from '.'
 
-class MeetingRequestResource
-{
+class MeetingRequestResource {
   /**
    */
   topic?: string

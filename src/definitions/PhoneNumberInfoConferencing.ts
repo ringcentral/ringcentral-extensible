@@ -1,7 +1,6 @@
 import { GetCountryInfoConferencing } from '.'
 
-class PhoneNumberInfoConferencing
-{
+class PhoneNumberInfoConferencing {
   /**
    * Information on a home country of a conference phone number
    */

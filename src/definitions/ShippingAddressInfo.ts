@@ -1,5 +1,4 @@
-class ShippingAddressInfo
-{
+class ShippingAddressInfo {
   /**
    * Name of a primary contact person (receiver)
    */

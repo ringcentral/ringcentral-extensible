@@ -1,5 +1,4 @@
-class DeviceProvisioningNavigationInfoUri
-{
+class DeviceProvisioningNavigationInfoUri {
   /**
    */
   uri?: string

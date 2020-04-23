@@ -1,5 +1,4 @@
-class MethodInfo
-{
+class MethodInfo {
   /**
    * Method identifier. The default value is 1 (Ground)
    */

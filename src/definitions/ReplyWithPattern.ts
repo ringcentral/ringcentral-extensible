@@ -1,5 +1,4 @@
-class ReplyWithPattern
-{
+class ReplyWithPattern {
   /**
    * Predefined reply pattern name.
    */

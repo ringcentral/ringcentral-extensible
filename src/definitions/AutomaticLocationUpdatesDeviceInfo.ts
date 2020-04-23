@@ -1,7 +1,6 @@
 import { AutomaticLocationUpdatesModelInfo, AutomaticLocationUpdatesPhoneLine } from '.'
 
-class AutomaticLocationUpdatesDeviceInfo
-{
+class AutomaticLocationUpdatesDeviceInfo {
   /**
    * Internal identifier of a device
    */

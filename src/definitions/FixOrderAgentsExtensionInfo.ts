@@ -1,5 +1,4 @@
-class FixOrderAgentsExtensionInfo
-{
+class FixOrderAgentsExtensionInfo {
   /**
    * Internal identifier of an extension
    */

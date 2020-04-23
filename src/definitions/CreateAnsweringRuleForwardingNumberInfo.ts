@@ -1,5 +1,4 @@
-class CreateAnsweringRuleForwardingNumberInfo
-{
+class CreateAnsweringRuleForwardingNumberInfo {
   /**
    * Internal identifier of a forwarding number
    */

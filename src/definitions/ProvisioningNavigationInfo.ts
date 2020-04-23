@@ -1,7 +1,6 @@
 import { ProvisioningNavigationInfoUri } from '.'
 
-class ProvisioningNavigationInfo
-{
+class ProvisioningNavigationInfo {
   /**
    * Canonical URI for the first page of the list
    */

@@ -1,5 +1,4 @@
-class UserAnsweringRuleListRecord
-{
+class UserAnsweringRuleListRecord {
   /**
    * Canonical URI to an answering rule resource
    */

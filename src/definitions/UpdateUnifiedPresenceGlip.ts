@@ -1,5 +1,4 @@
-class UpdateUnifiedPresenceGlip
-{
+class UpdateUnifiedPresenceGlip {
   /**
    * Visibility setting allowing other users to see Glip presence status
    */

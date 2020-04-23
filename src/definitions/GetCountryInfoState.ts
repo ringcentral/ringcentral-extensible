@@ -1,5 +1,4 @@
-class GetCountryInfoState
-{
+class GetCountryInfoState {
   /**
    * Internal identifier of a state
    */

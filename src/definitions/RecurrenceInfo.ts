@@ -1,5 +1,4 @@
-class RecurrenceInfo
-{
+class RecurrenceInfo {
   /**
    * Recurrence time frame
    */

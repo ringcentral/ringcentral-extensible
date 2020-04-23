@@ -1,7 +1,6 @@
 import { CallerIdByFeatureInfo } from '.'
 
-class CallerIdByFeature
-{
+class CallerIdByFeature {
   /**
    */
   feature?: ('RingOut' | 'RingMe' | 'CallFlip' | 'FaxNumber' | 'AdditionalSoftphone' | 'Alternate' | 'CommonPhone' | 'MobileApp' | 'Delegated')

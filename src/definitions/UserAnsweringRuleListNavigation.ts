@@ -1,7 +1,6 @@
 import { UserAnsweringRuleListNavigationPage } from '.'
 
-class UserAnsweringRuleListNavigation
-{
+class UserAnsweringRuleListNavigation {
   /**
    */
   firstPage?: UserAnsweringRuleListNavigationPage

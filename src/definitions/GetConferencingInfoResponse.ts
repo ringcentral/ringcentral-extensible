@@ -1,7 +1,6 @@
 import { PhoneNumberInfoConferencing } from '.'
 
-class GetConferencingInfoResponse
-{
+class GetConferencingInfoResponse {
   /**
    * Canonical URI of a conferencing
    */

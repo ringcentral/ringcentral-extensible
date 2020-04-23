@@ -1,5 +1,4 @@
-class SMSCountryInfo
-{
+class SMSCountryInfo {
   /**
    * Internal identifier of a country
    */

@@ -1,7 +1,6 @@
 import { UserCallLogRecord, SyncInfoCallLog } from '.'
 
-class CallLogSync
-{
+class CallLogSync {
   /**
    * Link to the list of call log records with sync information
    */

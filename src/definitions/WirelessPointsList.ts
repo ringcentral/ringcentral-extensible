@@ -1,7 +1,6 @@
 import { WirelessPointInfo, ProvisioningNavigationInfo, ProvisioningPagingInfo } from '.'
 
-class WirelessPointsList
-{
+class WirelessPointsList {
   /**
    * Link to the wireless point list resource
    */

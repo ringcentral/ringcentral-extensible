@@ -1,7 +1,6 @@
 import { GlipMessageAttachmentInfoRequest } from '.'
 
-class GlipCreatePost
-{
+class GlipCreatePost {
   /**
    * Title of a message. (Can be set for bot's messages only).
    */

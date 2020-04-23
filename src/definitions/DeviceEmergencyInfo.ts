@@ -1,7 +1,6 @@
 import { DeviceEmergencyAddress, DeviceEmergencyLocationInfo } from '.'
 
-class DeviceEmergencyInfo
-{
+class DeviceEmergencyInfo {
   /**
    */
   address?: DeviceEmergencyAddress

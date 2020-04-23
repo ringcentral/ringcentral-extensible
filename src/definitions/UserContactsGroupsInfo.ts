@@ -1,5 +1,4 @@
-class UserContactsGroupsInfo
-{
+class UserContactsGroupsInfo {
   /**
    * Link to the list of address book groups
    */

@@ -1,5 +1,4 @@
-class CustomGreetingAnsweringRuleInfo
-{
+class CustomGreetingAnsweringRuleInfo {
   /**
    * Canonical URI of an answering rule
    */

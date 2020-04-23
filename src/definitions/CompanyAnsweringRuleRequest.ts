@@ -1,7 +1,6 @@
 import { CompanyAnsweringRuleCallersInfoRequest, CompanyAnsweringRuleCalledNumberInfo, CompanyAnsweringRuleScheduleInfoRequest, GreetingInfo } from '.'
 
-class CompanyAnsweringRuleRequest
-{
+class CompanyAnsweringRuleRequest {
   /**
    * Name of an answering rule specified by user. Max number of symbols is 30. The default value is 'My Rule N' where 'N' is the first free number
    */

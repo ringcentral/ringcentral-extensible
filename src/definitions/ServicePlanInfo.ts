@@ -1,5 +1,4 @@
-class ServicePlanInfo
-{
+class ServicePlanInfo {
   /**
    * Internal identifier of a service plan
    */

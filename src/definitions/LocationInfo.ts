@@ -1,7 +1,6 @@
 import { LocationStateInfo } from '.'
 
-class LocationInfo
-{
+class LocationInfo {
   /**
    * Canonical URI of a location
    */

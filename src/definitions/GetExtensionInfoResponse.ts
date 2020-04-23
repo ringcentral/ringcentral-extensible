@@ -1,7 +1,6 @@
 import { GetExtensionAccountInfo, ContactInfo, CustomFieldInfo, DepartmentInfo, ExtensionPermissions, ProfileImageInfo, ReferenceInfo, Roles, RegionalSettings, ExtensionServiceFeatureInfo, ExtensionStatusInfo, CallQueueExtensionInfo, AutomaticLocationUpdatesSiteInfo } from '.'
 
-class GetExtensionInfoResponse
-{
+class GetExtensionInfoResponse {
   /**
    * Internal identifier of an extension
    */

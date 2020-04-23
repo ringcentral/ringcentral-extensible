@@ -1,7 +1,6 @@
 import { MeetingRecordingsNavigationInfoUri } from '.'
 
-class MeetingRecordingsNavigationInfo
-{
+class MeetingRecordingsNavigationInfo {
   /**
    * Canonical URI for the first page of the list
    */

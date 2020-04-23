@@ -1,5 +1,4 @@
-class ExtensionGreetingLanguageInfoRequest
-{
+class ExtensionGreetingLanguageInfoRequest {
   /**
    * internal Identifier of a greeting language
    */

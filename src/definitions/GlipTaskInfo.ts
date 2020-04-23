@@ -1,7 +1,6 @@
 import { CreatorInfo, TaskAssigneeInfo, GlipTaskRecurrenceInfo, TaskAttachment } from '.'
 
-class GlipTaskInfo
-{
+class GlipTaskInfo {
   /**
    * Internal identifier of a task
    */

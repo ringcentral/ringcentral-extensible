@@ -1,7 +1,6 @@
 import { CallerIdByDevice, CallerIdByFeature } from '.'
 
-class ExtensionCallerIdInfo
-{
+class ExtensionCallerIdInfo {
   /**
    * Canonical URL of a caller ID resource
    */

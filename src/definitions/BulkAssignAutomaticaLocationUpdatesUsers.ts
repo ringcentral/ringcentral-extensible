@@ -1,5 +1,4 @@
-class BulkAssignAutomaticaLocationUpdatesUsers
-{
+class BulkAssignAutomaticaLocationUpdatesUsers {
   /**
    */
   enabledUserIds?: string[]

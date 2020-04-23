@@ -1,7 +1,6 @@
 import { VoicemailsInfo, InboundFaxesInfo, OutboundFaxesInfo, InboundTextsInfo, MissedCallsInfo } from '.'
 
-class NotificationSettingsUpdateRequest
-{
+class NotificationSettingsUpdateRequest {
   /**
    * List of notification recipient email addresses
    */

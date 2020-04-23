@@ -1,5 +1,4 @@
-class UserTransitionInfo
-{
+class UserTransitionInfo {
   /**
    * Specifies if an activation email is automatically sent to new users (Not Activated extensions) or not
    */

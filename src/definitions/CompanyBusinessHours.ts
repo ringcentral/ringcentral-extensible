@@ -1,7 +1,6 @@
 import { CompanyBusinessHoursScheduleInfo } from '.'
 
-class CompanyBusinessHours
-{
+class CompanyBusinessHours {
   /**
    * Canonical URI of a business-hours resource
    */

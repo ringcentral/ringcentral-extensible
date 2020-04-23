@@ -1,5 +1,4 @@
-class GlipAttachmentInfoRequest
-{
+class GlipAttachmentInfoRequest {
   /**
    * Internal identifier of an attachment
    */

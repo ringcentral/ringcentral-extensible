@@ -1,7 +1,6 @@
 import { TimeInterval } from '.'
 
-class WeeklyScheduleInfo
-{
+class WeeklyScheduleInfo {
   /**
    * Time intervals for a particular day
    */

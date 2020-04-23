@@ -1,5 +1,4 @@
-class ReadUserPresenceStatusParameters
-{
+class ReadUserPresenceStatusParameters {
   /**
    * Whether to return detailed telephony state
    */

@@ -1,5 +1,4 @@
-class GlipTeamInfo
-{
+class GlipTeamInfo {
   /**
    * Internal identifier of a team
    */

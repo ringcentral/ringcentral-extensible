@@ -1,5 +1,4 @@
-class UnconditionalForwardingInfo
-{
+class UnconditionalForwardingInfo {
   /**
    * Phone number to which the call is forwarded
    */

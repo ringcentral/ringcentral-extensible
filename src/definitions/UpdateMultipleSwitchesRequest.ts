@@ -1,7 +1,6 @@
 import { UpdateSwitchInfo } from '.'
 
-class UpdateMultipleSwitchesRequest
-{
+class UpdateMultipleSwitchesRequest {
   /**
    */
   records?: UpdateSwitchInfo[]

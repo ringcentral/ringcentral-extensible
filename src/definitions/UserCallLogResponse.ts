@@ -1,7 +1,6 @@
 import { UserCallLogRecord, CallLogNavigationInfo, CallLogPagingInfo } from '.'
 
-class UserCallLogResponse
-{
+class UserCallLogResponse {
   /**
    * List of call log records
    * Required

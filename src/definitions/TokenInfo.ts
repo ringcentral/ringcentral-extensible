@@ -1,5 +1,4 @@
-class TokenInfo
-{
+class TokenInfo {
   /**
    * Access token to pass to subsequent API requests
    */

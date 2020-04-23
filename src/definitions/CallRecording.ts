@@ -1,5 +1,4 @@
-class CallRecording
-{
+class CallRecording {
   /**
    * Internal identifier of a call recording
    */

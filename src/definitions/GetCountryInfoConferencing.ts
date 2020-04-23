@@ -1,5 +1,4 @@
-class GetCountryInfoConferencing
-{
+class GetCountryInfoConferencing {
   /**
    * Internal identifier of a country
    */

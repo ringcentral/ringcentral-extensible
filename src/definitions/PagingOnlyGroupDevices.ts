@@ -1,7 +1,6 @@
 import { PagingDeviceInfo, ProvisioningNavigationInfo, ProvisioningPagingInfo } from '.'
 
-class PagingOnlyGroupDevices
-{
+class PagingOnlyGroupDevices {
   /**
    * Link to the list of devices assigned to the paging only group
    */

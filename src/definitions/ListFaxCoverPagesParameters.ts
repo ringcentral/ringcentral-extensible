@@ -1,5 +1,4 @@
-class ListFaxCoverPagesParameters
-{
+class ListFaxCoverPagesParameters {
   /**
    * Indicates the page number to retrieve. Only positive number values are accepted
    * Default: 1

@@ -1,7 +1,6 @@
 import { ContactBusinessAddressInfo, PronouncedNameInfo } from '.'
 
-class ContactInfoUpdateRequest
-{
+class ContactInfoUpdateRequest {
   /**
    * For User extension type only. Extension user first name
    */

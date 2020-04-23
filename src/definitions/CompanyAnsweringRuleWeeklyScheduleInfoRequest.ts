@@ -1,7 +1,6 @@
 import { CompanyAnsweringRuleTimeIntervalRequest } from '.'
 
-class CompanyAnsweringRuleWeeklyScheduleInfoRequest
-{
+class CompanyAnsweringRuleWeeklyScheduleInfoRequest {
   /**
    * Time interval for a particular day
    */

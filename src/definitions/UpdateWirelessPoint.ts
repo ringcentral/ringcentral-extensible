@@ -1,7 +1,6 @@
 import { AutomaticLocationUpdatesSiteInfo, LocationUpdatesEmergencyAddressInfoRequest } from '.'
 
-class UpdateWirelessPoint
-{
+class UpdateWirelessPoint {
   /**
    * Internal identifier of a wireless point
    */

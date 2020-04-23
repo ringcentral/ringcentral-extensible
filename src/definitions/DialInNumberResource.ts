@@ -1,7 +1,6 @@
 import { CountryResource } from '.'
 
-class DialInNumberResource
-{
+class DialInNumberResource {
   /**
    */
   phoneNumber?: string

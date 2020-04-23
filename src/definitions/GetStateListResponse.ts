@@ -1,7 +1,6 @@
 import { GetStateInfoResponse, ProvisioningNavigationInfo, ProvisioningPagingInfo } from '.'
 
-class GetStateListResponse
-{
+class GetStateListResponse {
   /**
    * Link to the states list resource
    */

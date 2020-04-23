@@ -1,7 +1,6 @@
 import { ExtensionInfo, ProvisioningNavigationInfo, ProvisioningPagingInfo } from '.'
 
-class DepartmentMemberList
-{
+class DepartmentMemberList {
   /**
    * Link to the list of department members
    */

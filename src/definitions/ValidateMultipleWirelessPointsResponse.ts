@@ -1,7 +1,6 @@
 import { WirelessPointValidated } from '.'
 
-class ValidateMultipleWirelessPointsResponse
-{
+class ValidateMultipleWirelessPointsResponse {
   /**
    */
   records?: WirelessPointValidated[]

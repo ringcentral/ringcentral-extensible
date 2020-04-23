@@ -1,7 +1,6 @@
 import { QueueShortInfoResource } from '.'
 
-class UserCallQueues
-{
+class UserCallQueues {
   /**
    * List of the queues where the extension is an agent
    */

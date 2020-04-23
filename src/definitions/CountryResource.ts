@@ -1,5 +1,4 @@
-class CountryResource
-{
+class CountryResource {
   /**
    */
   uri?: string

@@ -1,7 +1,6 @@
 import { GlipMessageAttachmentAuthorInfo, GlipMessageAttachmentFieldsInfo, GlipMessageAttachmentFootnoteInfo } from '.'
 
-class GlipMessageAttachmentInfo
-{
+class GlipMessageAttachmentInfo {
   /**
    * Internal identifier of an attachment
    */

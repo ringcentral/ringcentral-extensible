@@ -1,7 +1,6 @@
 import { TransferInfo, FixedOrderAgents, UnconditionalForwardingInfo } from '.'
 
-class QueueInfo
-{
+class QueueInfo {
   /**
    * Specifies how calls are transferred to group members
    */

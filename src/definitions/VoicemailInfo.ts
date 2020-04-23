@@ -1,7 +1,6 @@
 import { RecipientInfo } from '.'
 
-class VoicemailInfo
-{
+class VoicemailInfo {
   /**
    * If 'True' then voicemails are allowed to be received
    */

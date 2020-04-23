@@ -1,7 +1,6 @@
 import { PersonalContactResource, SyncInfo } from '.'
 
-class AddressBookSync
-{
+class AddressBookSync {
   /**
    */
   uri?: string

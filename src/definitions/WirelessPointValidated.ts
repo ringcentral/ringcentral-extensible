@@ -1,7 +1,6 @@
 import { ValidationError } from '.'
 
-class WirelessPointValidated
-{
+class WirelessPointValidated {
   /**
    * Internal identifier of a wireless point
    */

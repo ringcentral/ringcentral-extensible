@@ -1,5 +1,4 @@
-class ListGlipChatsParameters
-{
+class ListGlipChatsParameters {
   /**
    * Type of chats to be fetched. By default all type of chats will be fetched
    */

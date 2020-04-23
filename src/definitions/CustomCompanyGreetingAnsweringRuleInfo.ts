@@ -1,5 +1,4 @@
-class CustomCompanyGreetingAnsweringRuleInfo
-{
+class CustomCompanyGreetingAnsweringRuleInfo {
   /**
    */
   id?: string

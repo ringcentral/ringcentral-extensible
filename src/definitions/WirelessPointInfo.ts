@@ -1,7 +1,6 @@
 import { AutomaticLocationUpdatesSiteInfo, LocationUpdatesEmergencyAddressInfo } from '.'
 
-class WirelessPointInfo
-{
+class WirelessPointInfo {
   /**
    * Link to the wireless point resource
    */

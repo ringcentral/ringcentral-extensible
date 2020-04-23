@@ -1,7 +1,6 @@
 import { PhoneNumberInfoIntId, EmergencyAddress } from '.'
 
-class PhoneLinesInfo
-{
+class PhoneLinesInfo {
   /**
    * Internal identifier of a phone line
    */

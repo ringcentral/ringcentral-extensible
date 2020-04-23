@@ -1,5 +1,4 @@
-class UserContactsNavigationInfoUri
-{
+class UserContactsNavigationInfoUri {
   /**
    */
   uri?: string

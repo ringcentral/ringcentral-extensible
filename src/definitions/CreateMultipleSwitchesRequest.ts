@@ -1,7 +1,6 @@
 import { CreateSwitchInfo } from '.'
 
-class CreateMultipleSwitchesRequest
-{
+class CreateMultipleSwitchesRequest {
   /**
    */
   records?: CreateSwitchInfo[]

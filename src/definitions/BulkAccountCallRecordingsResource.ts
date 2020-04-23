@@ -1,7 +1,6 @@
 import { CallRecordingExtensionResource } from '.'
 
-class BulkAccountCallRecordingsResource
-{
+class BulkAccountCallRecordingsResource {
   /**
    */
   addedExtensions?: CallRecordingExtensionResource[]

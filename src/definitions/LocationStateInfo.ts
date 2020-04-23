@@ -1,5 +1,4 @@
-class LocationStateInfo
-{
+class LocationStateInfo {
   /**
    * Internal identifier of a state
    */

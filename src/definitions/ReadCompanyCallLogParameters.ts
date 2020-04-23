@@ -1,5 +1,4 @@
-class ReadCompanyCallLogParameters
-{
+class ReadCompanyCallLogParameters {
   /**
    * Extension number of a user. If specified, returns call log for a particular extension only
    */

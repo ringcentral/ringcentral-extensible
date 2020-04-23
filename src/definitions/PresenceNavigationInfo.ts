@@ -1,7 +1,6 @@
 import { PresenceNavigationInfoURI } from '.'
 
-class PresenceNavigationInfo
-{
+class PresenceNavigationInfo {
   /**
    * Canonical URI for the first page of the list
    */

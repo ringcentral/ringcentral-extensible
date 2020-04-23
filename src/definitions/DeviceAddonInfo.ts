@@ -1,5 +1,4 @@
-class DeviceAddonInfo
-{
+class DeviceAddonInfo {
   /**
    */
   id?: string

@@ -1,5 +1,4 @@
-class ExtensionInfoCallLog
-{
+class ExtensionInfoCallLog {
   /**
    * Internal identifier of an extension
    */

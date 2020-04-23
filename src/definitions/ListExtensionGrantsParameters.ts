@@ -1,5 +1,4 @@
-class ListExtensionGrantsParameters
-{
+class ListExtensionGrantsParameters {
   /**
    * Type of extension to be returned. Multiple values are supported
    */

@@ -1,5 +1,4 @@
-class MeetingOccurrenceInfo
-{
+class MeetingOccurrenceInfo {
   /**
    * Identifier of a meeting occurrence
    */

@@ -1,8 +1,7 @@
 import { PermissionInfo } from '.'
 
   // Extension permissions, corresponding to the Service Web permissions 'Admin' and 'InternationalCalling'
-class ExtensionPermissions
-{
+class ExtensionPermissions {
   /**
    * Admin permission
    */

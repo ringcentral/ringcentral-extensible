@@ -1,7 +1,6 @@
 import { AlertInfo } from '.'
 
-class NotificationInfo
-{
+class NotificationInfo {
   /**
    * Alert information
    */

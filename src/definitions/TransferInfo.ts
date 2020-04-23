@@ -1,7 +1,6 @@
 import { TransferExtensionInfo } from '.'
 
-class TransferInfo
-{
+class TransferInfo {
   /**
    */
   extension?: TransferExtensionInfo

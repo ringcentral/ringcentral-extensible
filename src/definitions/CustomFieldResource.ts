@@ -1,5 +1,4 @@
-class CustomFieldResource
-{
+class CustomFieldResource {
   /**
    * Custom field identifier
    */

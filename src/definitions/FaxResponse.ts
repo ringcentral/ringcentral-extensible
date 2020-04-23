@@ -1,7 +1,6 @@
 import { CallerInfoFrom, CallerInfoTo, MessageAttachmentInfoIntId } from '.'
 
-class FaxResponse
-{
+class FaxResponse {
   /**
    * Internal identifier of a message
    */

@@ -1,7 +1,6 @@
 import { FavoriteContactResource } from '.'
 
-class FavoriteContactList
-{
+class FavoriteContactList {
   /**
    */
   uri?: string

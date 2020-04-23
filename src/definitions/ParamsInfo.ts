@@ -1,5 +1,4 @@
-class ParamsInfo
-{
+class ParamsInfo {
   /**
    * Parameter name
    */

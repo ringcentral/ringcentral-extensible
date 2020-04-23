@@ -1,7 +1,6 @@
 import { ContactAddressInfo } from '.'
 
-class PersonalContactResource
-{
+class PersonalContactResource {
   /**
    * Canonical URI of the contact
    */

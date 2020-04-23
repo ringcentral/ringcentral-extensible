@@ -1,7 +1,6 @@
 import { GlipConversationInfo, GlipNavigationInfo } from '.'
 
-class GlipConversationsList
-{
+class GlipConversationsList {
   /**
    * List of conversations
    * Required

@@ -1,7 +1,6 @@
 import { ContactBusinessAddressInfo } from '.'
 
-class AccountBusinessAddressResource
-{
+class AccountBusinessAddressResource {
   /**
    */
   uri?: string

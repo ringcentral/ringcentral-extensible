@@ -1,7 +1,6 @@
 import { DeviceInfoRequest, SIPInfoRequest } from '.'
 
-class CreateSipRegistrationRequest
-{
+class CreateSipRegistrationRequest {
   /**
    * Device unique description
    */

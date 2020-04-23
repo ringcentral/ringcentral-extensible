@@ -1,5 +1,4 @@
-class PronouncedNamePromptInfo
-{
+class PronouncedNamePromptInfo {
   /**
    */
   id?: string

@@ -1,7 +1,6 @@
 import { UserAddress, Email, Name, PhoneNumber, Photo, EnterpriseUser } from '.'
 
-class CreateUser
-{
+class CreateUser {
   /**
    * User status
    */

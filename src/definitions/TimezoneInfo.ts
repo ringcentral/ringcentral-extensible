@@ -1,5 +1,4 @@
-class TimezoneInfo
-{
+class TimezoneInfo {
   /**
    * Internal identifier of a timezone
    */

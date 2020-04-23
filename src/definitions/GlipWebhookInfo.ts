@@ -1,5 +1,4 @@
-class GlipWebhookInfo
-{
+class GlipWebhookInfo {
   /**
    * Internal identifier of a webhook
    */

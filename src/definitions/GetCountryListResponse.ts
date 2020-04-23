@@ -1,7 +1,6 @@
 import { GetCountryInfoDictionaryResponse, ProvisioningNavigationInfo, ProvisioningPagingInfo } from '.'
 
-class GetCountryListResponse
-{
+class GetCountryListResponse {
   /**
    * Link to the list of countries supported
    */

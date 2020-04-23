@@ -1,5 +1,4 @@
-class ReadDeviceParameters
-{
+class ReadDeviceParameters {
   /**
    * Specifies if emergency address should be synchronized or not
    */

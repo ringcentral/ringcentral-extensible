@@ -1,7 +1,6 @@
 import { DataExportTask, GlipDataExportNavigationInfo, GlipDataExportPagingInfo } from '.'
 
-class DataExportTaskList
-{
+class DataExportTaskList {
   /**
    */
   tasks?: DataExportTask[]

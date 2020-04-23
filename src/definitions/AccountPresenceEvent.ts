@@ -1,7 +1,6 @@
 import { AccountPresenceEventBody } from '.'
 
-class AccountPresenceEvent
-{
+class AccountPresenceEvent {
   /**
    * Universally unique identifier of a notification
    */

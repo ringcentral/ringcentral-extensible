@@ -1,7 +1,6 @@
 import { VoicemailMessageEventBody } from '.'
 
-class VoicemailMessageEvent
-{
+class VoicemailMessageEvent {
   /**
    * Universally unique identifier of a notification
    */

@@ -1,5 +1,4 @@
-class BillingInfo
-{
+class BillingInfo {
   /**
    * Cost per minute, paid and already included in your RingCentral Plan. For example International Calls
    */

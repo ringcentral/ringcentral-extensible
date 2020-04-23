@@ -1,7 +1,6 @@
 import { CallQueueMemberInfo, ProvisioningNavigationInfo, ProvisioningPagingInfo } from '.'
 
-class CallQueueMembers
-{
+class CallQueueMembers {
   /**
    * Link to a call queue members resource
    * Required

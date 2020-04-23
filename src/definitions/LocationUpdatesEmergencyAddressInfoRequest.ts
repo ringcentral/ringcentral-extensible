@@ -1,5 +1,4 @@
-class LocationUpdatesEmergencyAddressInfoRequest
-{
+class LocationUpdatesEmergencyAddressInfoRequest {
   /**
    * Country name
    */

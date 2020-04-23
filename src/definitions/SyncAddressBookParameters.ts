@@ -1,5 +1,4 @@
-class SyncAddressBookParameters
-{
+class SyncAddressBookParameters {
   /**
    * Type of synchronization
    */

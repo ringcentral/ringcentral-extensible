@@ -1,7 +1,6 @@
 import { CompanyAnsweringRuleCallersInfoRequest, CompanyAnsweringRuleCalledNumberInfo, CompanyAnsweringRuleScheduleInfoRequest, GreetingInfo } from '.'
 
-class CompanyAnsweringRuleUpdate
-{
+class CompanyAnsweringRuleUpdate {
   /**
    * Specifies if the rule is active or inactive. The default value is 'True'
    * Default: true

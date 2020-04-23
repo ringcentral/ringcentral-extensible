@@ -1,5 +1,4 @@
-class InboundFaxesInfo
-{
+class InboundFaxesInfo {
   /**
    * Email notification flag
    */

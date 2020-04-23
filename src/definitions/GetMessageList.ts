@@ -1,7 +1,6 @@
 import { GetMessageInfoResponse, MessagingNavigationInfo, MessagingPagingInfo } from '.'
 
-class GetMessageList
-{
+class GetMessageList {
   /**
    * Link to the list of user messages
    */

@@ -1,5 +1,4 @@
-class CreateGlipMember
-{
+class CreateGlipMember {
   /**
    * Internal identifier of a user
    */

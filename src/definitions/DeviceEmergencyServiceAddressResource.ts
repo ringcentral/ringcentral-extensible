@@ -1,5 +1,4 @@
-class DeviceEmergencyServiceAddressResource
-{
+class DeviceEmergencyServiceAddressResource {
   /**
    */
   street?: string

@@ -1,5 +1,4 @@
-class RoleIdResource
-{
+class RoleIdResource {
   /**
    */
   uri?: string

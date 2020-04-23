@@ -1,5 +1,4 @@
-class EditGroupRequest
-{
+class EditGroupRequest {
   /**
    * List of users to be added to a team
    */

@@ -1,7 +1,6 @@
 import { DetailedCallInfo, PrimaryCQInfo, AdditionalCQInfo } from '.'
 
-class ActiveCallInfo
-{
+class ActiveCallInfo {
   /**
    */
   id?: string

@@ -1,6 +1,5 @@
 // Returned if *Meetings* feature is switched on
-class UnifiedPresenceMeeting
-{
+class UnifiedPresenceMeeting {
   /**
    * Meeting status calculated from all user`s meetings
    */

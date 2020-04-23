@@ -1,5 +1,4 @@
-class TemporaryNumberInfo
-{
+class TemporaryNumberInfo {
   /**
    * Temporary phone number identifier
    */

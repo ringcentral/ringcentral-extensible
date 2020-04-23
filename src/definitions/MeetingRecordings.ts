@@ -1,7 +1,6 @@
 import { MeetingInfo, MeetingRecordingInfo } from '.'
 
-class MeetingRecordings
-{
+class MeetingRecordings {
   /**
    */
   meeting?: MeetingInfo

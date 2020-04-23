@@ -1,6 +1,5 @@
 // Returned if *BLF* feature is switched on
-class UnifiedPresenceTelephony
-{
+class UnifiedPresenceTelephony {
   /**
    * Telephony status calculated from all user's phone numbers. Returned always for the requester's extension; returned for another users if their telephony visibility is set to 'Visible'
    */

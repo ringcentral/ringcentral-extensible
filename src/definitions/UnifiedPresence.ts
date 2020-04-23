@@ -1,7 +1,6 @@
 import { UnifiedPresenceGlip, UnifiedPresenceTelephony, UnifiedPresenceMeeting } from '.'
 
-class UnifiedPresence
-{
+class UnifiedPresence {
   /**
    * Aggregated presence status of the user
    */

@@ -1,5 +1,4 @@
-class DeviceInfoRequest
-{
+class DeviceInfoRequest {
   /**
    * Device unique identifier, retrieved on previous session (if any)
    */

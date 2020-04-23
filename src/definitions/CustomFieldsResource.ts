@@ -1,7 +1,6 @@
 import { CustomFieldResource } from '.'
 
-class CustomFieldsResource
-{
+class CustomFieldsResource {
   /**
    */
   records?: CustomFieldResource[]

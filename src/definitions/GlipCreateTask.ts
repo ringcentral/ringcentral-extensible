@@ -1,7 +1,6 @@
 import { AssigneeInfo, GlipTaskRecurrenceInfo, GlipAttachmentInfoRequest } from '.'
 
-class GlipCreateTask
-{
+class GlipCreateTask {
   /**
    * Task name/subject. Max allowed length is 250 characters.
    * Required

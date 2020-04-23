@@ -1,7 +1,6 @@
 import { ExtensionStatusInfo, ContactInfoUpdateRequest, ExtensionRegionalSettingRequest, CallQueueInfoRequest, UserTransitionInfo, CustomFieldInfo, AutomaticLocationUpdatesSiteInfo } from '.'
 
-class ExtensionUpdateRequest
-{
+class ExtensionUpdateRequest {
   /**
    */
   status?: ('Disabled' | 'Enabled' | 'NotActivated' | 'Frozen')

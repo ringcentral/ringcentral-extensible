@@ -1,7 +1,6 @@
 import { GetTimezoneInfoResponse, ProvisioningNavigationInfo, ProvisioningPagingInfo } from '.'
 
-class GetTimezoneListResponse
-{
+class GetTimezoneListResponse {
   /**
    * Link to the timezone list resource
    */

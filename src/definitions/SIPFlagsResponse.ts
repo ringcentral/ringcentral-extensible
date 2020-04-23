@@ -1,5 +1,4 @@
-class SIPFlagsResponse
-{
+class SIPFlagsResponse {
   /**
    * If 'True' VoIP calling feature is enabled
    */

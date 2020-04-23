@@ -1,7 +1,6 @@
 import { PeerInfo } from '.'
 
-class CallStatusInfo
-{
+class CallStatusInfo {
   /**
    * Status code of a call
    */

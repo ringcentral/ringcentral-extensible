@@ -1,5 +1,4 @@
-class VersionInfo
-{
+class VersionInfo {
   /**
    * Canonical URI of API versions
    */

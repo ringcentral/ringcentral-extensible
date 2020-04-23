@@ -1,7 +1,6 @@
 import { UnifiedPresence } from '.'
 
-class UnifiedPresenceListEntry
-{
+class UnifiedPresenceListEntry {
   /**
    * Internal identifier of the resource
    */

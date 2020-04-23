@@ -1,5 +1,4 @@
-class MeetingsPagingInfo
-{
+class MeetingsPagingInfo {
   /**
    */
   page?: number

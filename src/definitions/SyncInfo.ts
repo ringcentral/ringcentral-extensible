@@ -1,5 +1,4 @@
-class SyncInfo
-{
+class SyncInfo {
   /**
    */
   syncType?: ('FSync' | 'ISync')

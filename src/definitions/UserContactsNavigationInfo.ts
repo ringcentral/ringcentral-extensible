@@ -1,7 +1,6 @@
 import { UserContactsNavigationInfoUri } from '.'
 
-class UserContactsNavigationInfo
-{
+class UserContactsNavigationInfo {
   /**
    * Canonical URI for the first page of the list
    */

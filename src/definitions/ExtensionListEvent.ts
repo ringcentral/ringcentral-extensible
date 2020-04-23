@@ -1,7 +1,6 @@
 import { ExtensionListEventBody } from '.'
 
-class ExtensionListEvent
-{
+class ExtensionListEvent {
   /**
    * Universally unique identifier of a notification
    */

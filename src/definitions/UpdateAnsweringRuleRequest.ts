@@ -1,7 +1,6 @@
 import { ForwardingInfoCreateRuleRequest, CallersInfoRequest, CalledNumberInfo, ScheduleInfo, UnconditionalForwardingInfo, QueueInfo, VoicemailInfo, GreetingInfo, TransferredExtensionInfo } from '.'
 
-class UpdateAnsweringRuleRequest
-{
+class UpdateAnsweringRuleRequest {
   /**
    * Identifier of an answering rule
    */

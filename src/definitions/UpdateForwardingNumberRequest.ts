@@ -1,5 +1,4 @@
-class UpdateForwardingNumberRequest
-{
+class UpdateForwardingNumberRequest {
   /**
    * Forwarding/Call flip phone number
    */

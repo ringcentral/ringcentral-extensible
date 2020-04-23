@@ -1,5 +1,4 @@
-class ReadUserFeaturesParameters
-{
+class ReadUserFeaturesParameters {
   /**
    */
   availableOnly?: boolean

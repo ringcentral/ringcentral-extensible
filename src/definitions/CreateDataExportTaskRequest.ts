@@ -1,7 +1,6 @@
 import { DataExportTaskContactInfo } from '.'
 
-class CreateDataExportTaskRequest
-{
+class CreateDataExportTaskRequest {
   /**
    * Starting time for data collection. The default value is `timeTo` minus 24 hours. Max allowed time frame between `timeFrom` and `timeTo` is 6 months
    */

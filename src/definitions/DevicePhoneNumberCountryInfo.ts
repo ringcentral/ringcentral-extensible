@@ -1,5 +1,4 @@
-class DevicePhoneNumberCountryInfo
-{
+class DevicePhoneNumberCountryInfo {
   /**
    * Internal identifier of a home country
    */

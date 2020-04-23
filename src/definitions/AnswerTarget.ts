@@ -1,5 +1,4 @@
-class AnswerTarget
-{
+class AnswerTarget {
   /**
    * Device identifier that is used to answer the incoming call.
    */

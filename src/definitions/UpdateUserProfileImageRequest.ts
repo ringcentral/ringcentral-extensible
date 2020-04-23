@@ -1,7 +1,6 @@
 import { Attachment } from '.'
 
-class UpdateUserProfileImageRequest
-{
+class UpdateUserProfileImageRequest {
   /**
    */
   image?: Attachment

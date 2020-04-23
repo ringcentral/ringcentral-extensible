@@ -1,7 +1,6 @@
 import { PhoneNumberResource } from '.'
 
-class FederatedAccountResource
-{
+class FederatedAccountResource {
   /**
    */
   companyName?: string

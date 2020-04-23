@@ -1,7 +1,6 @@
 import { APSInfo } from '.'
 
-class IncomingCallEvent
-{
+class IncomingCallEvent {
   /**
    * Apple Push Notification Service Info
    */

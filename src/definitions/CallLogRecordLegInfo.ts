@@ -1,7 +1,6 @@
 import { BillingInfo, DelegateInfo, ExtensionInfoCallLog, CallLogCallerInfo, CallLogRecordingInfo, CallLogRecordMessage } from '.'
 
-class CallLogRecordLegInfo
-{
+class CallLogRecordLegInfo {
   /**
    * Action description of the call operation
    */

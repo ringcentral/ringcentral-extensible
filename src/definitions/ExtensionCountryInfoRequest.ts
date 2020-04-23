@@ -1,5 +1,4 @@
-class ExtensionCountryInfoRequest
-{
+class ExtensionCountryInfoRequest {
   /**
    * internal Identifier of a country
    */

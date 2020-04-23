@@ -1,7 +1,6 @@
 import { GlipEventInfo, GlipNavigationInfo } from '.'
 
-class GlipEventsInfo
-{
+class GlipEventsInfo {
   /**
    * List of events created by the current user
    */

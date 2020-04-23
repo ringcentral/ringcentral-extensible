@@ -1,7 +1,6 @@
 import { CalledNumberInfo, CompanyAnsweringRuleExtensionInfo } from '.'
 
-class ListCompanyAnsweringRuleInfo
-{
+class ListCompanyAnsweringRuleInfo {
   /**
    * Internal identifier of an answering rule
    */

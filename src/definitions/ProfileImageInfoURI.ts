@@ -1,5 +1,4 @@
-class ProfileImageInfoURI
-{
+class ProfileImageInfoURI {
   /**
    */
   uri?: string

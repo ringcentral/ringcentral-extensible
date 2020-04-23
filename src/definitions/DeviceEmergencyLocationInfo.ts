@@ -1,5 +1,4 @@
-class DeviceEmergencyLocationInfo
-{
+class DeviceEmergencyLocationInfo {
   /**
    * Internal identifier of the emergency response location
    */

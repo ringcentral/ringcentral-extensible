@@ -1,6 +1,5 @@
 // resource metadata
-class Meta
-{
+class Meta {
   /**
    */
   created?: string

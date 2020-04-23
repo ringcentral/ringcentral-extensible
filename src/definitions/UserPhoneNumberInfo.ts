@@ -1,7 +1,6 @@
 import { CountryInfo, ContactCenterProvider, UserPhoneNumberExtensionInfo } from '.'
 
-class UserPhoneNumberInfo
-{
+class UserPhoneNumberInfo {
   /**
    * Link to the user's phone number resource
    */

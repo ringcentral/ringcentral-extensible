@@ -1,5 +1,4 @@
-class CustomGreetingAnsweringRuleInfoRequest
-{
+class CustomGreetingAnsweringRuleInfoRequest {
   /**
    */
   id?: string

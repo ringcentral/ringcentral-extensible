@@ -1,7 +1,6 @@
 import { BillingPlanInfo, BrandInfo, ServicePlanInfo, TargetServicePlanInfo } from '.'
 
-class ServiceInfo
-{
+class ServiceInfo {
   /**
    * Canonical URI of a service info resource
    */

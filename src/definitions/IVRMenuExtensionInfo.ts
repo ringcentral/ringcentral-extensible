@@ -1,5 +1,4 @@
-class IVRMenuExtensionInfo
-{
+class IVRMenuExtensionInfo {
   /**
    * Link to an extension resource
    */

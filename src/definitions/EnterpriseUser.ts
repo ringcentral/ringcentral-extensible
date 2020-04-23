@@ -1,5 +1,4 @@
-class EnterpriseUser
-{
+class EnterpriseUser {
   /**
    */
   department?: string

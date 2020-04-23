@@ -1,5 +1,4 @@
-class ContactAddressInfo
-{
+class ContactAddressInfo {
   /**
    * Street address
    */

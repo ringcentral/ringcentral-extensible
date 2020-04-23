@@ -1,5 +1,4 @@
-class ListDevicesAutomaticLocationUpdatesParameters
-{
+class ListDevicesAutomaticLocationUpdatesParameters {
   /**
    * Internal identifier of a site. To filter devices of Main Site (Company) `main-site` must be specified. Supported only If Multi-Site feature is enabled for the account
    */

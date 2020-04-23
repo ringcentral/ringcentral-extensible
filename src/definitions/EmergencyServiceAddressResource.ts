@@ -1,5 +1,4 @@
-class EmergencyServiceAddressResource
-{
+class EmergencyServiceAddressResource {
   /**
    */
   street?: string

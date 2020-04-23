@@ -1,5 +1,4 @@
-class CallersInfoRequest
-{
+class CallersInfoRequest {
   /**
    * Phone number of a caller
    */

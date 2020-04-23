@@ -1,5 +1,4 @@
-class ListLocationsParameters
-{
+class ListLocationsParameters {
   /**
    * Sorts results by the property specified
    * Default: City

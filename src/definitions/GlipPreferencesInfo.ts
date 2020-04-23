@@ -1,7 +1,6 @@
 import { GlipPreferencesChats } from '.'
 
-class GlipPreferencesInfo
-{
+class GlipPreferencesInfo {
   /**
    */
   chats?: GlipPreferencesChats

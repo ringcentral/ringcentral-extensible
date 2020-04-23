@@ -1,5 +1,4 @@
-class GlipMessageAttachmentFootnoteInfo
-{
+class GlipMessageAttachmentFootnoteInfo {
   /**
    * Text of a footer
    */

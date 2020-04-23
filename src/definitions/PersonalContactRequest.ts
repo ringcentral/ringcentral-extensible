@@ -1,7 +1,6 @@
 import { ContactAddressInfo } from '.'
 
-class PersonalContactRequest
-{
+class PersonalContactRequest {
   /**
    * First name of the contact
    */

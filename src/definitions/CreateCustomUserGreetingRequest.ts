@@ -1,7 +1,6 @@
 import { Attachment, CustomGreetingAnsweringRuleInfoRequest } from '.'
 
-class CreateCustomUserGreetingRequest
-{
+class CreateCustomUserGreetingRequest {
   /**
    * Type of a greeting, specifying the case when the greeting is played.
    */

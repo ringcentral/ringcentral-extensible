@@ -1,5 +1,4 @@
-class PackageInfo
-{
+class PackageInfo {
   /**
    */
   version?: string

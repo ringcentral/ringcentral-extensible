@@ -1,5 +1,4 @@
-class SIPInfoResponse
-{
+class SIPInfoResponse {
   /**
    * User credentials
    */

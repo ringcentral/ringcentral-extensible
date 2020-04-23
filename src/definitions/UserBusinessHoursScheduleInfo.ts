@@ -1,7 +1,6 @@
 import { WeeklyScheduleInfo } from '.'
 
-class UserBusinessHoursScheduleInfo
-{
+class UserBusinessHoursScheduleInfo {
   /**
    * Weekly schedule
    */

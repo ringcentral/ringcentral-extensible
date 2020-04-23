@@ -1,5 +1,4 @@
-class ExtensionServiceFeatureInfo
-{
+class ExtensionServiceFeatureInfo {
   /**
    * Feature status; shows feature availability for an extension
    */

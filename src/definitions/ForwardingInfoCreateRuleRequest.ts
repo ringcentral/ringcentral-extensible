@@ -1,7 +1,6 @@
 import { RuleInfoCreateRuleRequest } from '.'
 
-class ForwardingInfoCreateRuleRequest
-{
+class ForwardingInfoCreateRuleRequest {
   /**
    * Specifies if the first ring on desktop/mobile apps is enabled. The default value is 'True'
    */

@@ -1,5 +1,4 @@
-class CompanyAnsweringRuleCalledNumberInfo
-{
+class CompanyAnsweringRuleCalledNumberInfo {
   /**
    * Internal identifier of an account phone number
    */

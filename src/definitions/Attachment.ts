@@ -1,5 +1,4 @@
-class Attachment
-{
+class Attachment {
   /**
    * File name with extension, such as 'example.png'
    */
@@ -18,7 +17,7 @@ class Attachment
   /**
    * Check if an object is considered to be an attachment
    */
-  static isAttachment(obj: any): boolean {
+  static isAttachment (obj: any): boolean {
     return 'filename' in obj && 'content' in obj
   }
 }

@@ -1,7 +1,6 @@
 import { MessageBody } from '.'
 
-class GetMessageInfoMultiResponse
-{
+class GetMessageInfoMultiResponse {
   /**
    * Internal identifier of a resource
    */

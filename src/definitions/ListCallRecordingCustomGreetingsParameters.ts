@@ -1,5 +1,4 @@
-class ListCallRecordingCustomGreetingsParameters
-{
+class ListCallRecordingCustomGreetingsParameters {
   /**
    */
   type?: ('StartRecording' | 'StopRecording' | 'AutomaticRecording')

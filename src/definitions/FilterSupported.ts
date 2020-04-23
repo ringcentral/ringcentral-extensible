@@ -1,5 +1,4 @@
-class FilterSupported
-{
+class FilterSupported {
   /**
    */
   maxResults?: number

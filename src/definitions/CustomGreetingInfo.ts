@@ -1,5 +1,4 @@
-class CustomGreetingInfo
-{
+class CustomGreetingInfo {
   /**
    * Link to a custom user greeting
    */

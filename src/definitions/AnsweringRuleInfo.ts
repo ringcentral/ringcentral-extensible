@@ -1,7 +1,6 @@
 import { ScheduleInfo, CalledNumberInfo, CallersInfo, ForwardingInfo, UnconditionalForwardingInfo, QueueInfo, TransferredExtensionInfo, VoicemailInfo, GreetingInfo } from '.'
 
-class AnsweringRuleInfo
-{
+class AnsweringRuleInfo {
   /**
    * Canonical URI to an answering rule resource
    */

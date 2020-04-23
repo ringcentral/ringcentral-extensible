@@ -1,5 +1,4 @@
-class CallerIdPhoneInfo
-{
+class CallerIdPhoneInfo {
   /**
    * Internal identifier of a phone number
    */

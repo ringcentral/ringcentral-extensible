@@ -1,7 +1,6 @@
 import { EmergencyLocationInfo, ProvisioningNavigationInfo, ProvisioningPagingInfo } from '.'
 
-class EmergencyLocationList
-{
+class EmergencyLocationList {
   /**
    */
   records?: EmergencyLocationInfo[]

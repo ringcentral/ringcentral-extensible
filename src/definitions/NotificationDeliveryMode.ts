@@ -1,5 +1,4 @@
-class NotificationDeliveryMode
-{
+class NotificationDeliveryMode {
   /**
    * Optional parameter. Specifies if the message will be encrypted or not
    */

@@ -1,5 +1,4 @@
-class ExtensionFavoritesEventBody
-{
+class ExtensionFavoritesEventBody {
   /**
    * Internal identifier of an extension
    */

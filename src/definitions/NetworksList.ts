@@ -1,7 +1,6 @@
 import { NetworkInfo, ProvisioningNavigationInfo, ProvisioningPagingInfo } from '.'
 
-class NetworksList
-{
+class NetworksList {
   /**
    * Link to a networks resource
    */

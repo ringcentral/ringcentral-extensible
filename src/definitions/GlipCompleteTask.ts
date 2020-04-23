@@ -1,7 +1,6 @@
 import { AssigneeInfo } from '.'
 
-class GlipCompleteTask
-{
+class GlipCompleteTask {
   /**
    * Completeness status. 'Mandatory' if `completenessCondition` is set to `Simple`, otherwise 'Optional'
    */

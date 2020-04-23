@@ -1,5 +1,4 @@
-class DetailedCallInfo
-{
+class DetailedCallInfo {
   /**
    */
   callId?: string

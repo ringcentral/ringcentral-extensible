@@ -1,5 +1,4 @@
-class PermissionIdResource
-{
+class PermissionIdResource {
   /**
    */
   uri?: string

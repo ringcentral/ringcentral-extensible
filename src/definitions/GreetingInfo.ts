@@ -1,7 +1,6 @@
 import { PresetInfo, CustomGreetingInfo } from '.'
 
-class GreetingInfo
-{
+class GreetingInfo {
   /**
    * Type of a greeting, specifying the case when the greeting is played.
    */

@@ -1,5 +1,4 @@
-class CreatorInfo
-{
+class CreatorInfo {
   /**
    * Internal identifier of a user who created a note/task
    */

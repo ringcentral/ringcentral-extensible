@@ -1,7 +1,6 @@
 import { SwitchSiteInfo, LocationUpdatesEmergencyAddressInfo } from '.'
 
-class SwitchInfo
-{
+class SwitchInfo {
   /**
    * Link to the network switch resource
    */

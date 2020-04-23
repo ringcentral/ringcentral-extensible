@@ -1,5 +1,4 @@
-class ListCountriesParameters
-{
+class ListCountriesParameters {
   /**
    * Specifies whether login with the phone numbers of this country is enabled or not
    */

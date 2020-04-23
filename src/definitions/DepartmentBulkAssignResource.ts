@@ -1,7 +1,6 @@
 import { BulkAssignItem } from '.'
 
-class DepartmentBulkAssignResource
-{
+class DepartmentBulkAssignResource {
   /**
    */
   items?: BulkAssignItem[]

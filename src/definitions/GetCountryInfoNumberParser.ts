@@ -1,5 +1,4 @@
-class GetCountryInfoNumberParser
-{
+class GetCountryInfoNumberParser {
   /**
    * Internal identifier of a country
    */

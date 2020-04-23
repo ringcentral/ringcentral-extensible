@@ -1,5 +1,4 @@
-class TransferTarget
-{
+class TransferTarget {
   /**
    * Phone number
    */

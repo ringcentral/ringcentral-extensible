@@ -1,5 +1,4 @@
-class ReasonInfo
-{
+class ReasonInfo {
   /**
    * Reason code
    */

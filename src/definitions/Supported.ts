@@ -1,5 +1,4 @@
-class Supported
-{
+class Supported {
   /**
    */
   supported?: boolean

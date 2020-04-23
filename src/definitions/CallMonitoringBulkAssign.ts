@@ -1,7 +1,6 @@
 import { CallMonitoringExtensionInfo } from '.'
 
-class CallMonitoringBulkAssign
-{
+class CallMonitoringBulkAssign {
   /**
    */
   addedExtensions?: CallMonitoringExtensionInfo[]

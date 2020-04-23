@@ -1,5 +1,4 @@
-class GlipGroupInfo
-{
+class GlipGroupInfo {
   /**
    * Internal identifier of a group
    */

@@ -1,7 +1,6 @@
 import { ActiveCallInfo } from '.'
 
-class DetailedExtensionPresenceWithSIPEventBody
-{
+class DetailedExtensionPresenceWithSIPEventBody {
   /**
    * Internal identifier of an extension
    * Default: ~

@@ -1,5 +1,4 @@
-class AutomaticLocationUpdatesSiteInfo
-{
+class AutomaticLocationUpdatesSiteInfo {
   /**
    * Internal identifier of a site
    */

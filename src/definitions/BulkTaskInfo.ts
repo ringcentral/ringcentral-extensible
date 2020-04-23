@@ -1,5 +1,4 @@
-class BulkTaskInfo
-{
+class BulkTaskInfo {
   /**
    * Internal identifier of a task for multiple switches creation
    */

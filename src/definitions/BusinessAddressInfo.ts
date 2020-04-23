@@ -1,5 +1,4 @@
-class BusinessAddressInfo
-{
+class BusinessAddressInfo {
   /**
    * Name of a country
    */

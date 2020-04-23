@@ -1,7 +1,6 @@
 import { OriginInfo, CallParty } from '.'
 
-class CallSessionObject
-{
+class CallSessionObject {
   /**
    * Internal identifier of a call session
    */

@@ -1,7 +1,6 @@
 import { GlipNoteInfo, GlipNavigationInfo } from '.'
 
-class GlipNotesInfo
-{
+class GlipNotesInfo {
   /**
    */
   records?: GlipNoteInfo[]

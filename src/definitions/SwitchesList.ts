@@ -1,7 +1,6 @@
 import { SwitchInfo, ProvisioningNavigationInfo, ProvisioningPagingInfo } from '.'
 
-class SwitchesList
-{
+class SwitchesList {
   /**
    * Link to the switches list resource
    */

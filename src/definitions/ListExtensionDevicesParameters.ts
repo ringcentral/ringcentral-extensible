@@ -1,5 +1,4 @@
-class ListExtensionDevicesParameters
-{
+class ListExtensionDevicesParameters {
   /**
    * Pooling type of a device
    */

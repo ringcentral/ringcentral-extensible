@@ -1,7 +1,6 @@
 import { PersonalContactResource, UserContactsNavigationInfo, UserContactsPagingInfo, UserContactsGroupsInfo } from '.'
 
-class ContactList
-{
+class ContactList {
   /**
    * link to the list of user personal contacts
    */

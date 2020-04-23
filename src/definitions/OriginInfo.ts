@@ -1,5 +1,4 @@
-class OriginInfo
-{
+class OriginInfo {
   /**
    * Session origin type
    */

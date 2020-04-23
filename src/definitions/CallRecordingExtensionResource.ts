@@ -1,5 +1,4 @@
-class CallRecordingExtensionResource
-{
+class CallRecordingExtensionResource {
   /**
    * Internal identifier of an extension
    */

@@ -1,5 +1,4 @@
-class RingOutStatusInfo
-{
+class RingOutStatusInfo {
   /**
    * Status of a call
    */

@@ -1,7 +1,6 @@
 import { UpdateWirelessPoint } from '.'
 
-class UpdateMultipleWirelessPointsRequest
-{
+class UpdateMultipleWirelessPointsRequest {
   /**
    */
   records?: UpdateWirelessPoint[]

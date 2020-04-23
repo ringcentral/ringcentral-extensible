@@ -1,5 +1,4 @@
-class AutomaticRecordingResource
-{
+class AutomaticRecordingResource {
   /**
    * Flag for controling Automatic Call Recording settings
    */

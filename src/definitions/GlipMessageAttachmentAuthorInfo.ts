@@ -1,5 +1,4 @@
-class GlipMessageAttachmentAuthorInfo
-{
+class GlipMessageAttachmentAuthorInfo {
   /**
    * Name of a message author
    */

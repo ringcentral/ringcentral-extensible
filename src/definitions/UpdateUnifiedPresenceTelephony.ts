@@ -1,5 +1,4 @@
-class UpdateUnifiedPresenceTelephony
-{
+class UpdateUnifiedPresenceTelephony {
   /**
    * Telephony DND status
    */

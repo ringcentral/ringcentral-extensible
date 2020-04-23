@@ -1,7 +1,6 @@
 import { CallHandlingNavigationInfo, CallHandlingPagingInfo } from '.'
 
-class DictionaryGreetingInfo
-{
+class DictionaryGreetingInfo {
   /**
    * Internal identifier of a greeting
    */

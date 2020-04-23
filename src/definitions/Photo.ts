@@ -1,5 +1,4 @@
-class Photo
-{
+class Photo {
   /**
    * Required
    */

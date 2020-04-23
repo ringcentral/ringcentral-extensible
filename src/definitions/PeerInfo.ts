@@ -1,6 +1,5 @@
 // Peer session / party data. Valid in Gone state only
-class PeerInfo
-{
+class PeerInfo {
   /**
    */
   sessionId?: string

@@ -1,5 +1,4 @@
-class AlertInfo
-{
+class AlertInfo {
   /**
    * Title of a message
    */

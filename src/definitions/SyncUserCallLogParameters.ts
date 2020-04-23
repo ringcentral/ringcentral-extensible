@@ -1,5 +1,4 @@
-class SyncUserCallLogParameters
-{
+class SyncUserCallLogParameters {
   /**
    * Type of synchronization
    */

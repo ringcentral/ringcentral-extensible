@@ -1,7 +1,6 @@
 import { PagingGroupExtensionInfo, ProvisioningNavigationInfo, ProvisioningPagingInfo } from '.'
 
-class PagingOnlyGroupUsers
-{
+class PagingOnlyGroupUsers {
   /**
    * Link to the list of users allowed to page the Paging Only group
    */

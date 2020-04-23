@@ -1,5 +1,4 @@
-class PagingGroupExtensionInfo
-{
+class PagingGroupExtensionInfo {
   /**
    * Internal identifier of a paging group user extension
    */

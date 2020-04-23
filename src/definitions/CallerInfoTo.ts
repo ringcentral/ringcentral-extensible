@@ -1,5 +1,4 @@
-class CallerInfoTo
-{
+class CallerInfoTo {
   /**
    */
   phoneNumber?: string

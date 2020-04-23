@@ -1,5 +1,4 @@
-class AutomaticLocationUpdatesModelInfo
-{
+class AutomaticLocationUpdatesModelInfo {
   /**
    * Device model identifier
    */

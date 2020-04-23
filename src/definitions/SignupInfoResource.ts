@@ -1,5 +1,4 @@
-class SignupInfoResource
-{
+class SignupInfoResource {
   /**
    */
   tosAccepted?: boolean

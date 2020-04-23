@@ -1,7 +1,6 @@
 import { TemplateInfo, ProvisioningNavigationInfo, ProvisioningPagingInfo } from '.'
 
-class UserTemplates
-{
+class UserTemplates {
   /**
    * Link to user templates resource
    */

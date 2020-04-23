@@ -1,7 +1,6 @@
 import { AutomaticLocationUpdatesSiteInfo, PublicIpRangeInfo, PrivateIpRangeInfo } from '.'
 
-class NetworkInfo
-{
+class NetworkInfo {
   /**
    * Internal identifier of a network
    */
