@@ -4,17 +4,17 @@ import RestClient from '../../../..'
 
 class EmergencyLocations {
   rc: RestClient
-  locationId: string
+  locationId: (string | null)
   parent: Parent
 
-  constructor(parent: Parent, locationId: string) {
+  constructor(parent: Parent, locationId: (string | null) = null) {
     this.parent = parent
     this.rc = parent.rc
     this.locationId = locationId
   }
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.locationId) {
+    if (withParameter && this.locationId !== null) {
       return `${this.parent.path()}/emergency-locations/${this.locationId}`
     }
 
@@ -42,8 +42,8 @@ class EmergencyLocations {
    * Http get /restapi/v1.0/account/{accountId}/emergency-locations/{locationId}
    */
   async get(): Promise<EmergencyLocationInfo> {
-    if (!this.locationId) {
-      throw new Error('locationId must not be undefined')
+    if (this.locationId === null) {
+      throw new Error('locationId must be specified.')
     }
 
     return this.rc.get(this.path())
@@ -54,8 +54,8 @@ class EmergencyLocations {
    * Http put /restapi/v1.0/account/{accountId}/emergency-locations/{locationId}
    */
   async put(emergencyLocationInfoRequest: EmergencyLocationInfoRequest): Promise<EmergencyLocationInfo> {
-    if (!this.locationId) {
-      throw new Error('locationId must not be undefined')
+    if (this.locationId === null) {
+      throw new Error('locationId must be specified.')
     }
 
     return this.rc.put(this.path(), emergencyLocationInfoRequest)

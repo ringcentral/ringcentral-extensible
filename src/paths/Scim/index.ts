@@ -5,15 +5,15 @@ import RestClient from '../..'
 
 class Scim {
   rc: RestClient
-  version: string
+  version: (string | null)
 
-  constructor(rc: RestClient, version: string = 'v2') {
+  constructor(rc: RestClient, version: (string | null) = 'v2') {
     this.rc = rc
     this.version = version
   }
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.version) {
+    if (withParameter && this.version !== null) {
       return `/scim/${this.version}`
     }
 
@@ -28,7 +28,7 @@ class Scim {
     return new ServiceProviderConfig(this)
   }
 
-  users(id: string): Users {
+  users(id: (string | null) = null): Users {
     return new Users(this, id)
   }
 }

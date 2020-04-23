@@ -30,11 +30,11 @@ class EmergencyAddressAutoUpdate {
     return new Users(this)
   }
 
-  wirelessPoints(pointId: string): WirelessPoints {
+  wirelessPoints(pointId: (string | null) = null): WirelessPoints {
     return new WirelessPoints(this, pointId)
   }
 
-  networks(networkId: string): Networks {
+  networks(networkId: (string | null) = null): Networks {
     return new Networks(this, networkId)
   }
 
@@ -42,7 +42,7 @@ class EmergencyAddressAutoUpdate {
     return new Devices(this)
   }
 
-  switches(switchId: string): Switches {
+  switches(switchId: (string | null) = null): Switches {
     return new Switches(this, switchId)
   }
 
@@ -70,7 +70,7 @@ class EmergencyAddressAutoUpdate {
     return new SwitchesBulkValidate(this)
   }
 
-  tasks(taskId: string): Tasks {
+  tasks(taskId: (string | null) = null): Tasks {
     return new Tasks(this, taskId)
   }
 }

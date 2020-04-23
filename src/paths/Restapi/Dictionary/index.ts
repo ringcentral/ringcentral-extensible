@@ -25,15 +25,15 @@ class Dictionary {
     return new FaxCoverPage(this)
   }
 
-  greeting(greetingId: string): Greeting {
+  greeting(greetingId: (string | null) = null): Greeting {
     return new Greeting(this, greetingId)
   }
 
-  language(languageId: string): Language {
+  language(languageId: (string | null) = null): Language {
     return new Language(this, languageId)
   }
 
-  country(countryId: string): Country {
+  country(countryId: (string | null) = null): Country {
     return new Country(this, countryId)
   }
 
@@ -41,11 +41,11 @@ class Dictionary {
     return new Location(this)
   }
 
-  state(stateId: string): State {
+  state(stateId: (string | null) = null): State {
     return new State(this, stateId)
   }
 
-  timezone(timezoneId: string): Timezone {
+  timezone(timezoneId: (string | null) = null): Timezone {
     return new Timezone(this, timezoneId)
   }
 }

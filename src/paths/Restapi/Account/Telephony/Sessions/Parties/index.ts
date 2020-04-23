@@ -17,17 +17,17 @@ import RestClient from '../../../../../..'
 
 class Parties {
   rc: RestClient
-  partyId: string
+  partyId: (string | null)
   parent: Parent
 
-  constructor(parent: Parent, partyId: string) {
+  constructor(parent: Parent, partyId: (string | null) = null) {
     this.parent = parent
     this.rc = parent.rc
     this.partyId = partyId
   }
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.partyId) {
+    if (withParameter && this.partyId !== null) {
       return `${this.parent.path()}/parties/${this.partyId}`
     }
 
@@ -39,8 +39,8 @@ class Parties {
    * Http get /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}
    */
   async get(): Promise<CallParty> {
-    if (!this.partyId) {
-      throw new Error('partyId must not be undefined')
+    if (this.partyId === null) {
+      throw new Error('partyId must be specified.')
     }
 
     return this.rc.get(this.path())
@@ -51,8 +51,8 @@ class Parties {
    * Http patch /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}
    */
   async patch(partyUpdateRequest: PartyUpdateRequest): Promise<CallParty> {
-    if (!this.partyId) {
-      throw new Error('partyId must not be undefined')
+    if (this.partyId === null) {
+      throw new Error('partyId must be specified.')
     }
 
     return this.rc.patch(this.path(), partyUpdateRequest)
@@ -102,7 +102,7 @@ class Parties {
     return new Park(this)
   }
 
-  recordings(recordingId: string): Recordings {
+  recordings(recordingId: (string | null) = null): Recordings {
     return new Recordings(this, recordingId)
   }
 

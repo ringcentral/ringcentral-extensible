@@ -4,17 +4,17 @@ import RestClient from '../../../../..'
 
 class RingOut {
   rc: RestClient
-  ringoutId: string
+  ringoutId: (string | null)
   parent: Parent
 
-  constructor(parent: Parent, ringoutId: string) {
+  constructor(parent: Parent, ringoutId: (string | null) = null) {
     this.parent = parent
     this.rc = parent.rc
     this.ringoutId = ringoutId
   }
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.ringoutId) {
+    if (withParameter && this.ringoutId !== null) {
       return `${this.parent.path()}/ring-out/${this.ringoutId}`
     }
 
@@ -34,8 +34,8 @@ class RingOut {
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/ring-out/{ringoutId}
    */
   async get(): Promise<GetRingOutStatusResponse> {
-    if (!this.ringoutId) {
-      throw new Error('ringoutId must not be undefined')
+    if (this.ringoutId === null) {
+      throw new Error('ringoutId must be specified.')
     }
 
     return this.rc.get(this.path())
@@ -46,8 +46,8 @@ class RingOut {
    * Http delete /restapi/v1.0/account/{accountId}/extension/{extensionId}/ring-out/{ringoutId}
    */
   async delete(): Promise<string> {
-    if (!this.ringoutId) {
-      throw new Error('ringoutId must not be undefined')
+    if (this.ringoutId === null) {
+      throw new Error('ringoutId must be specified.')
     }
 
     return this.rc.delete(this.path())

@@ -4,17 +4,17 @@ import RestClient from '../../../../..'
 
 class CallLog {
   rc: RestClient
-  callRecordId: string
+  callRecordId: (string | null)
   parent: Parent
 
-  constructor(parent: Parent, callRecordId: string) {
+  constructor(parent: Parent, callRecordId: (string | null) = null) {
     this.parent = parent
     this.rc = parent.rc
     this.callRecordId = callRecordId
   }
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.callRecordId) {
+    if (withParameter && this.callRecordId !== null) {
       return `${this.parent.path()}/call-log/${this.callRecordId}`
     }
 
@@ -42,8 +42,8 @@ class CallLog {
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log/{callRecordId}
    */
   async get(queryParams?: ReadUserCallRecordParameters): Promise<UserCallLogRecord> {
-    if (!this.callRecordId) {
-      throw new Error('callRecordId must not be undefined')
+    if (this.callRecordId === null) {
+      throw new Error('callRecordId must be specified.')
     }
 
     return this.rc.get(this.path(), queryParams)

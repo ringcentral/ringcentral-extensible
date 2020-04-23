@@ -6,17 +6,17 @@ import RestClient from '../../../../..'
 
 class Meeting {
   rc: RestClient
-  meetingId: string
+  meetingId: (string | null)
   parent: Parent
 
-  constructor(parent: Parent, meetingId: string) {
+  constructor(parent: Parent, meetingId: (string | null) = null) {
     this.parent = parent
     this.rc = parent.rc
     this.meetingId = meetingId
   }
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.meetingId) {
+    if (withParameter && this.meetingId !== null) {
       return `${this.parent.path()}/meeting/${this.meetingId}`
     }
 
@@ -44,8 +44,8 @@ class Meeting {
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/{meetingId}
    */
   async get(): Promise<MeetingResponseResource> {
-    if (!this.meetingId) {
-      throw new Error('meetingId must not be undefined')
+    if (this.meetingId === null) {
+      throw new Error('meetingId must be specified.')
     }
 
     return this.rc.get(this.path())
@@ -56,8 +56,8 @@ class Meeting {
    * Http put /restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/{meetingId}
    */
   async put(meetingRequestResource: MeetingRequestResource): Promise<MeetingResponseResource> {
-    if (!this.meetingId) {
-      throw new Error('meetingId must not be undefined')
+    if (this.meetingId === null) {
+      throw new Error('meetingId must be specified.')
     }
 
     return this.rc.put(this.path(), meetingRequestResource)
@@ -68,8 +68,8 @@ class Meeting {
    * Http delete /restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/{meetingId}
    */
   async delete(): Promise<string> {
-    if (!this.meetingId) {
-      throw new Error('meetingId must not be undefined')
+    if (this.meetingId === null) {
+      throw new Error('meetingId must be specified.')
     }
 
     return this.rc.delete(this.path())

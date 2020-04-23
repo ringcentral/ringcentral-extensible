@@ -4,17 +4,17 @@ import RestClient from '../../../../..'
 
 class Tasks {
   rc: RestClient
-  taskId: string
+  taskId: (string | null)
   parent: Parent
 
-  constructor(parent: Parent, taskId: string) {
+  constructor(parent: Parent, taskId: (string | null) = null) {
     this.parent = parent
     this.rc = parent.rc
     this.taskId = taskId
   }
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.taskId) {
+    if (withParameter && this.taskId !== null) {
       return `${this.parent.path()}/tasks/${this.taskId}`
     }
 
@@ -26,8 +26,8 @@ class Tasks {
    * Http get /restapi/v1.0/account/{accountId}/emergency-address-auto-update/tasks/{taskId}
    */
   async get(): Promise<AutomaticLocationUpdatesTaskInfo> {
-    if (!this.taskId) {
-      throw new Error('taskId must not be undefined')
+    if (this.taskId === null) {
+      throw new Error('taskId must be specified.')
     }
 
     return this.rc.get(this.path())

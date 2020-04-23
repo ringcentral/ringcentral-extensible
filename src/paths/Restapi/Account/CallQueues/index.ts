@@ -6,17 +6,17 @@ import RestClient from '../../../..'
 
 class CallQueues {
   rc: RestClient
-  groupId: string
+  groupId: (string | null)
   parent: Parent
 
-  constructor(parent: Parent, groupId: string) {
+  constructor(parent: Parent, groupId: (string | null) = null) {
     this.parent = parent
     this.rc = parent.rc
     this.groupId = groupId
   }
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.groupId) {
+    if (withParameter && this.groupId !== null) {
       return `${this.parent.path()}/call-queues/${this.groupId}`
     }
 

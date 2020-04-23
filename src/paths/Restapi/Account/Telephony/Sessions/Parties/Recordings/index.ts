@@ -4,17 +4,17 @@ import RestClient from '../../../../../../..'
 
 class Recordings {
   rc: RestClient
-  recordingId: string
+  recordingId: (string | null)
   parent: Parent
 
-  constructor(parent: Parent, recordingId: string) {
+  constructor(parent: Parent, recordingId: (string | null) = null) {
     this.parent = parent
     this.rc = parent.rc
     this.recordingId = recordingId
   }
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.recordingId) {
+    if (withParameter && this.recordingId !== null) {
       return `${this.parent.path()}/recordings/${this.recordingId}`
     }
 
@@ -34,8 +34,8 @@ class Recordings {
    * Http patch /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/recordings/{recordingId}
    */
   async patch(callRecordingUpdate: CallRecordingUpdate, queryParams?: PauseResumeCallRecordingParameters): Promise<CallRecording> {
-    if (!this.recordingId) {
-      throw new Error('recordingId must not be undefined')
+    if (this.recordingId === null) {
+      throw new Error('recordingId must be specified.')
     }
 
     return this.rc.patch(this.path(), callRecordingUpdate, queryParams)

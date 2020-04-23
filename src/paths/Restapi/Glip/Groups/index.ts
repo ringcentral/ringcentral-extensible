@@ -8,17 +8,17 @@ import RestClient from '../../../..'
 
 class Groups {
   rc: RestClient
-  groupId: string
+  groupId: (string | null)
   parent: Parent
 
-  constructor(parent: Parent, groupId: string) {
+  constructor(parent: Parent, groupId: (string | null) = null) {
     this.parent = parent
     this.rc = parent.rc
     this.groupId = groupId
   }
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.groupId) {
+    if (withParameter && this.groupId !== null) {
       return `${this.parent.path()}/groups/${this.groupId}`
     }
 
@@ -46,14 +46,14 @@ class Groups {
    * Http get /restapi/v1.0/glip/groups/{groupId}
    */
   async get(): Promise<GlipGroupInfo> {
-    if (!this.groupId) {
-      throw new Error('groupId must not be undefined')
+    if (this.groupId === null) {
+      throw new Error('groupId must be specified.')
     }
 
     return this.rc.get(this.path())
   }
 
-  posts(postId: string): Posts {
+  posts(postId: (string | null) = null): Posts {
     return new Posts(this, postId)
   }
 

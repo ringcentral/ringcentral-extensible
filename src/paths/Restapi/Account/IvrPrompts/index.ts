@@ -6,17 +6,17 @@ import RestClient from '../../../..'
 
 class IvrPrompts {
   rc: RestClient
-  promptId: string
+  promptId: (string | null)
   parent: Parent
 
-  constructor(parent: Parent, promptId: string) {
+  constructor(parent: Parent, promptId: (string | null) = null) {
     this.parent = parent
     this.rc = parent.rc
     this.promptId = promptId
   }
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.promptId) {
+    if (withParameter && this.promptId !== null) {
       return `${this.parent.path()}/ivr-prompts/${this.promptId}`
     }
 
@@ -45,8 +45,8 @@ class IvrPrompts {
    * Http get /restapi/v1.0/account/{accountId}/ivr-prompts/{promptId}
    */
   async get(): Promise<PromptInfo> {
-    if (!this.promptId) {
-      throw new Error('promptId must not be undefined')
+    if (this.promptId === null) {
+      throw new Error('promptId must be specified.')
     }
 
     return this.rc.get(this.path())
@@ -57,8 +57,8 @@ class IvrPrompts {
    * Http delete /restapi/v1.0/account/{accountId}/ivr-prompts/{promptId}
    */
   async delete(): Promise<string> {
-    if (!this.promptId) {
-      throw new Error('promptId must not be undefined')
+    if (this.promptId === null) {
+      throw new Error('promptId must be specified.')
     }
 
     return this.rc.delete(this.path())
@@ -69,8 +69,8 @@ class IvrPrompts {
    * Http put /restapi/v1.0/account/{accountId}/ivr-prompts/{promptId}
    */
   async put(updateIVRPromptRequest: UpdateIVRPromptRequest): Promise<PromptInfo> {
-    if (!this.promptId) {
-      throw new Error('promptId must not be undefined')
+    if (this.promptId === null) {
+      throw new Error('promptId must be specified.')
     }
 
     return this.rc.put(this.path(), updateIVRPromptRequest)

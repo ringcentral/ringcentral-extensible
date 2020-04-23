@@ -32,7 +32,7 @@ class CallerBlocking {
     return this.rc.put(this.path(), callerBlockingSettingsUpdate)
   }
 
-  phoneNumbers(blockedNumberId: string): PhoneNumbers {
+  phoneNumbers(blockedNumberId: (string | null) = null): PhoneNumbers {
     return new PhoneNumbers(this, blockedNumberId)
   }
 }

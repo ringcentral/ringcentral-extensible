@@ -3,17 +3,17 @@ import RestClient from '../../../../..'
 
 class Datasets {
   rc: RestClient
-  datasetId: string
+  datasetId: (string | null)
   parent: Parent
 
-  constructor(parent: Parent, datasetId: string) {
+  constructor(parent: Parent, datasetId: (string | null) = null) {
     this.parent = parent
     this.rc = parent.rc
     this.datasetId = datasetId
   }
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.datasetId) {
+    if (withParameter && this.datasetId !== null) {
       return `${this.parent.path()}/datasets/${this.datasetId}`
     }
 
@@ -25,8 +25,8 @@ class Datasets {
    * Http get /restapi/v1.0/glip/data-export/{taskId}/datasets/{datasetId}
    */
   async get(): Promise<Buffer> {
-    if (!this.datasetId) {
-      throw new Error('datasetId must not be undefined')
+    if (this.datasetId === null) {
+      throw new Error('datasetId must be specified.')
     }
 
     return this.rc.get(this.path())

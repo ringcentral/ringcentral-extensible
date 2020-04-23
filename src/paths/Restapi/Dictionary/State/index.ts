@@ -4,17 +4,17 @@ import RestClient from '../../../..'
 
 class State {
   rc: RestClient
-  stateId: string
+  stateId: (string | null)
   parent: Parent
 
-  constructor(parent: Parent, stateId: string) {
+  constructor(parent: Parent, stateId: (string | null) = null) {
     this.parent = parent
     this.rc = parent.rc
     this.stateId = stateId
   }
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.stateId) {
+    if (withParameter && this.stateId !== null) {
       return `${this.parent.path()}/state/${this.stateId}`
     }
 
@@ -34,8 +34,8 @@ class State {
    * Http get /restapi/v1.0/dictionary/state/{stateId}
    */
   async get(): Promise<GetStateInfoResponse> {
-    if (!this.stateId) {
-      throw new Error('stateId must not be undefined')
+    if (this.stateId === null) {
+      throw new Error('stateId must be specified.')
     }
 
     return this.rc.get(this.path())

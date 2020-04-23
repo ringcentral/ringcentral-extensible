@@ -6,17 +6,17 @@ import RestClient from '../../../..'
 
 class PagingOnlyGroups {
   rc: RestClient
-  pagingOnlyGroupId: string
+  pagingOnlyGroupId: (string | null)
   parent: Parent
 
-  constructor(parent: Parent, pagingOnlyGroupId: string) {
+  constructor(parent: Parent, pagingOnlyGroupId: (string | null) = null) {
     this.parent = parent
     this.rc = parent.rc
     this.pagingOnlyGroupId = pagingOnlyGroupId
   }
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.pagingOnlyGroupId) {
+    if (withParameter && this.pagingOnlyGroupId !== null) {
       return `${this.parent.path()}/paging-only-groups/${this.pagingOnlyGroupId}`
     }
 

@@ -5,17 +5,17 @@ import RestClient from '../../..'
 
 class Subscription {
   rc: RestClient
-  subscriptionId: string
+  subscriptionId: (string | null)
   parent: Parent
 
-  constructor(parent: Parent, subscriptionId: string) {
+  constructor(parent: Parent, subscriptionId: (string | null) = null) {
     this.parent = parent
     this.rc = parent.rc
     this.subscriptionId = subscriptionId
   }
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.subscriptionId) {
+    if (withParameter && this.subscriptionId !== null) {
       return `${this.parent.path()}/subscription/${this.subscriptionId}`
     }
 
@@ -43,8 +43,8 @@ class Subscription {
    * Http get /restapi/v1.0/subscription/{subscriptionId}
    */
   async get(): Promise<SubscriptionInfo> {
-    if (!this.subscriptionId) {
-      throw new Error('subscriptionId must not be undefined')
+    if (this.subscriptionId === null) {
+      throw new Error('subscriptionId must be specified.')
     }
 
     return this.rc.get(this.path())
@@ -55,8 +55,8 @@ class Subscription {
    * Http put /restapi/v1.0/subscription/{subscriptionId}
    */
   async put(modifySubscriptionRequest: ModifySubscriptionRequest, queryParams?: UpdateSubscriptionParameters): Promise<SubscriptionInfo> {
-    if (!this.subscriptionId) {
-      throw new Error('subscriptionId must not be undefined')
+    if (this.subscriptionId === null) {
+      throw new Error('subscriptionId must be specified.')
     }
 
     return this.rc.put(this.path(), modifySubscriptionRequest, queryParams)
@@ -67,8 +67,8 @@ class Subscription {
    * Http delete /restapi/v1.0/subscription/{subscriptionId}
    */
   async delete(): Promise<string> {
-    if (!this.subscriptionId) {
-      throw new Error('subscriptionId must not be undefined')
+    if (this.subscriptionId === null) {
+      throw new Error('subscriptionId must be specified.')
     }
 
     return this.rc.delete(this.path())

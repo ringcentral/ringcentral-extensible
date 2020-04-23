@@ -4,17 +4,17 @@ import RestClient from '../../../../..'
 
 class WirelessPoints {
   rc: RestClient
-  pointId: string
+  pointId: (string | null)
   parent: Parent
 
-  constructor(parent: Parent, pointId: string) {
+  constructor(parent: Parent, pointId: (string | null) = null) {
     this.parent = parent
     this.rc = parent.rc
     this.pointId = pointId
   }
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.pointId) {
+    if (withParameter && this.pointId !== null) {
       return `${this.parent.path()}/wireless-points/${this.pointId}`
     }
 
@@ -42,8 +42,8 @@ class WirelessPoints {
    * Http get /restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points/{pointId}
    */
   async get(): Promise<WirelessPointInfo> {
-    if (!this.pointId) {
-      throw new Error('pointId must not be undefined')
+    if (this.pointId === null) {
+      throw new Error('pointId must be specified.')
     }
 
     return this.rc.get(this.path())
@@ -54,8 +54,8 @@ class WirelessPoints {
    * Http put /restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points/{pointId}
    */
   async put(updateWirelessPoint: UpdateWirelessPoint): Promise<WirelessPointInfo> {
-    if (!this.pointId) {
-      throw new Error('pointId must not be undefined')
+    if (this.pointId === null) {
+      throw new Error('pointId must be specified.')
     }
 
     return this.rc.put(this.path(), updateWirelessPoint)
@@ -66,8 +66,8 @@ class WirelessPoints {
    * Http delete /restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points/{pointId}
    */
   async delete(): Promise<string> {
-    if (!this.pointId) {
-      throw new Error('pointId must not be undefined')
+    if (this.pointId === null) {
+      throw new Error('pointId must be specified.')
     }
 
     return this.rc.delete(this.path())

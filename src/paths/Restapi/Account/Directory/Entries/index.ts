@@ -5,17 +5,17 @@ import RestClient from '../../../../..'
 
 class Entries {
   rc: RestClient
-  entryId: string
+  entryId: (string | null)
   parent: Parent
 
-  constructor(parent: Parent, entryId: string) {
+  constructor(parent: Parent, entryId: (string | null) = null) {
     this.parent = parent
     this.rc = parent.rc
     this.entryId = entryId
   }
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.entryId) {
+    if (withParameter && this.entryId !== null) {
       return `${this.parent.path()}/entries/${this.entryId}`
     }
 
@@ -35,8 +35,8 @@ class Entries {
    * Http get /restapi/v1.0/account/{accountId}/directory/entries/{entryId}
    */
   async get(): Promise<ContactResource> {
-    if (!this.entryId) {
-      throw new Error('entryId must not be undefined')
+    if (this.entryId === null) {
+      throw new Error('entryId must be specified.')
     }
 
     return this.rc.get(this.path())

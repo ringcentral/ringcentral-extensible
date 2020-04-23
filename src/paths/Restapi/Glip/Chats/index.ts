@@ -11,17 +11,17 @@ import RestClient from '../../../..'
 
 class Chats {
   rc: RestClient
-  chatId: string
+  chatId: (string | null)
   parent: Parent
 
-  constructor(parent: Parent, chatId: string) {
+  constructor(parent: Parent, chatId: (string | null) = null) {
     this.parent = parent
     this.rc = parent.rc
     this.chatId = chatId
   }
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.chatId) {
+    if (withParameter && this.chatId !== null) {
       return `${this.parent.path()}/chats/${this.chatId}`
     }
 
@@ -41,8 +41,8 @@ class Chats {
    * Http get /restapi/v1.0/glip/chats/{chatId}
    */
   async get(): Promise<GlipChatInfo> {
-    if (!this.chatId) {
-      throw new Error('chatId must not be undefined')
+    if (this.chatId === null) {
+      throw new Error('chatId must be specified.')
     }
 
     return this.rc.get(this.path())
@@ -64,7 +64,7 @@ class Chats {
     return new Unread(this)
   }
 
-  posts(postId: string): Posts {
+  posts(postId: (string | null) = null): Posts {
     return new Posts(this, postId)
   }
 

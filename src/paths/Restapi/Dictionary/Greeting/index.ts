@@ -4,17 +4,17 @@ import RestClient from '../../../..'
 
 class Greeting {
   rc: RestClient
-  greetingId: string
+  greetingId: (string | null)
   parent: Parent
 
-  constructor(parent: Parent, greetingId: string) {
+  constructor(parent: Parent, greetingId: (string | null) = null) {
     this.parent = parent
     this.rc = parent.rc
     this.greetingId = greetingId
   }
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.greetingId) {
+    if (withParameter && this.greetingId !== null) {
       return `${this.parent.path()}/greeting/${this.greetingId}`
     }
 
@@ -34,8 +34,8 @@ class Greeting {
    * Http get /restapi/v1.0/dictionary/greeting/{greetingId}
    */
   async get(): Promise<DictionaryGreetingInfo> {
-    if (!this.greetingId) {
-      throw new Error('greetingId must not be undefined')
+    if (this.greetingId === null) {
+      throw new Error('greetingId must be specified.')
     }
 
     return this.rc.get(this.path())

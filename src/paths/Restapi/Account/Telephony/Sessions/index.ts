@@ -6,17 +6,17 @@ import RestClient from '../../../../..'
 
 class Sessions {
   rc: RestClient
-  telephonySessionId: string
+  telephonySessionId: (string | null)
   parent: Parent
 
-  constructor(parent: Parent, telephonySessionId: string) {
+  constructor(parent: Parent, telephonySessionId: (string | null) = null) {
     this.parent = parent
     this.rc = parent.rc
     this.telephonySessionId = telephonySessionId
   }
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.telephonySessionId) {
+    if (withParameter && this.telephonySessionId !== null) {
       return `${this.parent.path()}/sessions/${this.telephonySessionId}`
     }
 
@@ -28,8 +28,8 @@ class Sessions {
    * Http get /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}
    */
   async get(queryParams?: ReadCallSessionStatusParameters): Promise<CallSession> {
-    if (!this.telephonySessionId) {
-      throw new Error('telephonySessionId must not be undefined')
+    if (this.telephonySessionId === null) {
+      throw new Error('telephonySessionId must be specified.')
     }
 
     return this.rc.get(this.path(), queryParams)
@@ -40,14 +40,14 @@ class Sessions {
    * Http delete /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}
    */
   async delete(): Promise<string> {
-    if (!this.telephonySessionId) {
-      throw new Error('telephonySessionId must not be undefined')
+    if (this.telephonySessionId === null) {
+      throw new Error('telephonySessionId must be specified.')
     }
 
     return this.rc.delete(this.path())
   }
 
-  parties(partyId: string): Parties {
+  parties(partyId: (string | null) = null): Parties {
     return new Parties(this, partyId)
   }
 

@@ -4,17 +4,17 @@ import RestClient from '../../../..'
 
 class AnsweringRule {
   rc: RestClient
-  ruleId: string
+  ruleId: (string | null)
   parent: Parent
 
-  constructor(parent: Parent, ruleId: string) {
+  constructor(parent: Parent, ruleId: (string | null) = null) {
     this.parent = parent
     this.rc = parent.rc
     this.ruleId = ruleId
   }
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.ruleId) {
+    if (withParameter && this.ruleId !== null) {
       return `${this.parent.path()}/answering-rule/${this.ruleId}`
     }
 
@@ -42,8 +42,8 @@ class AnsweringRule {
    * Http get /restapi/v1.0/account/{accountId}/answering-rule/{ruleId}
    */
   async get(): Promise<CompanyAnsweringRuleInfo> {
-    if (!this.ruleId) {
-      throw new Error('ruleId must not be undefined')
+    if (this.ruleId === null) {
+      throw new Error('ruleId must be specified.')
     }
 
     return this.rc.get(this.path())
@@ -54,8 +54,8 @@ class AnsweringRule {
    * Http put /restapi/v1.0/account/{accountId}/answering-rule/{ruleId}
    */
   async put(companyAnsweringRuleUpdate: CompanyAnsweringRuleUpdate): Promise<CompanyAnsweringRuleInfo> {
-    if (!this.ruleId) {
-      throw new Error('ruleId must not be undefined')
+    if (this.ruleId === null) {
+      throw new Error('ruleId must be specified.')
     }
 
     return this.rc.put(this.path(), companyAnsweringRuleUpdate)
@@ -66,8 +66,8 @@ class AnsweringRule {
    * Http delete /restapi/v1.0/account/{accountId}/answering-rule/{ruleId}
    */
   async delete(): Promise<string> {
-    if (!this.ruleId) {
-      throw new Error('ruleId must not be undefined')
+    if (this.ruleId === null) {
+      throw new Error('ruleId must be specified.')
     }
 
     return this.rc.delete(this.path())

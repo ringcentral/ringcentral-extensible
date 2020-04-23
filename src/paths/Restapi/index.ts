@@ -11,15 +11,15 @@ import RestClient from '../..'
 
 class Restapi {
   rc: RestClient
-  apiVersion: string
+  apiVersion: (string | null)
 
-  constructor(rc: RestClient, apiVersion: string = 'v1.0') {
+  constructor(rc: RestClient, apiVersion: (string | null) = 'v1.0') {
     this.rc = rc
     this.apiVersion = apiVersion
   }
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.apiVersion) {
+    if (withParameter && this.apiVersion !== null) {
       return `/restapi/${this.apiVersion}`
     }
 
@@ -39,8 +39,8 @@ class Restapi {
    * Http get /restapi/{apiVersion}
    */
   async get(): Promise<GetVersionResponse> {
-    if (!this.apiVersion) {
-      throw new Error('apiVersion must not be undefined')
+    if (this.apiVersion === null) {
+      throw new Error('apiVersion must be specified.')
     }
 
     return this.rc.get(this.path())
@@ -54,7 +54,7 @@ class Restapi {
     return new Status(this)
   }
 
-  account(accountId: string = '~'): Account {
+  account(accountId: (string | null) = '~'): Account {
     return new Account(this, accountId)
   }
 
@@ -66,7 +66,7 @@ class Restapi {
     return new Glip(this)
   }
 
-  subscription(subscriptionId: string): Subscription {
+  subscription(subscriptionId: (string | null) = null): Subscription {
     return new Subscription(this, subscriptionId)
   }
 

@@ -6,17 +6,17 @@ import RestClient from '../../../..'
 
 class Webhooks {
   rc: RestClient
-  webhookId: string
+  webhookId: (string | null)
   parent: Parent
 
-  constructor(parent: Parent, webhookId: string) {
+  constructor(parent: Parent, webhookId: (string | null) = null) {
     this.parent = parent
     this.rc = parent.rc
     this.webhookId = webhookId
   }
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.webhookId) {
+    if (withParameter && this.webhookId !== null) {
       return `${this.parent.path()}/webhooks/${this.webhookId}`
     }
 
@@ -36,8 +36,8 @@ class Webhooks {
    * Http get /restapi/v1.0/glip/webhooks/{webhookId}
    */
   async get(): Promise<GlipWebhookList> {
-    if (!this.webhookId) {
-      throw new Error('webhookId must not be undefined')
+    if (this.webhookId === null) {
+      throw new Error('webhookId must be specified.')
     }
 
     return this.rc.get(this.path())
@@ -48,8 +48,8 @@ class Webhooks {
    * Http delete /restapi/v1.0/glip/webhooks/{webhookId}
    */
   async delete(): Promise<string> {
-    if (!this.webhookId) {
-      throw new Error('webhookId must not be undefined')
+    if (this.webhookId === null) {
+      throw new Error('webhookId must be specified.')
     }
 
     return this.rc.delete(this.path())

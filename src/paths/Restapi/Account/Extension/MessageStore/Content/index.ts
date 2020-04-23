@@ -4,17 +4,17 @@ import RestClient from '../../../../../..'
 
 class Content {
   rc: RestClient
-  attachmentId: string
+  attachmentId: (string | null)
   parent: Parent
 
-  constructor(parent: Parent, attachmentId: string) {
+  constructor(parent: Parent, attachmentId: (string | null) = null) {
     this.parent = parent
     this.rc = parent.rc
     this.attachmentId = attachmentId
   }
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.attachmentId) {
+    if (withParameter && this.attachmentId !== null) {
       return `${this.parent.path()}/content/${this.attachmentId}`
     }
 
@@ -26,8 +26,8 @@ class Content {
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}/content/{attachmentId}
    */
   async get(queryParams?: ReadMessageContentParameters): Promise<Buffer> {
-    if (!this.attachmentId) {
-      throw new Error('attachmentId must not be undefined')
+    if (this.attachmentId === null) {
+      throw new Error('attachmentId must be specified.')
     }
 
     return this.rc.get(this.path(), queryParams)

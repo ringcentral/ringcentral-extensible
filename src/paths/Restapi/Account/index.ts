@@ -33,17 +33,17 @@ import RestClient from '../../..'
 
 class Account {
   rc: RestClient
-  accountId: string
+  accountId: (string | null)
   parent: Parent
 
-  constructor(parent: Parent, accountId: string = '~') {
+  constructor(parent: Parent, accountId: (string | null) = '~') {
     this.parent = parent
     this.rc = parent.rc
     this.accountId = accountId
   }
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.accountId) {
+    if (withParameter && this.accountId !== null) {
       return `${this.parent.path()}/account/${this.accountId}`
     }
 
@@ -55,18 +55,18 @@ class Account {
    * Http get /restapi/v1.0/account/{accountId}
    */
   async get(): Promise<GetAccountInfoResponse> {
-    if (!this.accountId) {
-      throw new Error('accountId must not be undefined')
+    if (this.accountId === null) {
+      throw new Error('accountId must be specified.')
     }
 
     return this.rc.get(this.path())
   }
 
-  extension(extensionId: string = '~'): Extension {
+  extension(extensionId: (string | null) = '~'): Extension {
     return new Extension(this, extensionId)
   }
 
-  callLog(callRecordId: string): CallLog {
+  callLog(callRecordId: (string | null) = null): CallLog {
     return new CallLog(this, callRecordId)
   }
 
@@ -78,7 +78,7 @@ class Account {
     return new ActiveCalls(this)
   }
 
-  recording(recordingId: string): Recording {
+  recording(recordingId: (string | null) = null): Recording {
     return new Recording(this, recordingId)
   }
 
@@ -98,7 +98,7 @@ class Account {
     return new BusinessHours(this)
   }
 
-  answeringRule(ruleId: string): AnsweringRule {
+  answeringRule(ruleId: (string | null) = null): AnsweringRule {
     return new AnsweringRule(this, ruleId)
   }
 
@@ -106,11 +106,11 @@ class Account {
     return new Greeting(this)
   }
 
-  ivrPrompts(promptId: string): IvrPrompts {
+  ivrPrompts(promptId: (string | null) = null): IvrPrompts {
     return new IvrPrompts(this, promptId)
   }
 
-  ivrMenus(ivrMenuId: string): IvrMenus {
+  ivrMenus(ivrMenuId: (string | null) = null): IvrMenus {
     return new IvrMenus(this, ivrMenuId)
   }
 
@@ -122,7 +122,7 @@ class Account {
     return new EmergencyAddressAutoUpdate(this)
   }
 
-  emergencyLocations(locationId: string): EmergencyLocations {
+  emergencyLocations(locationId: (string | null) = null): EmergencyLocations {
     return new EmergencyLocations(this, locationId)
   }
 
@@ -134,31 +134,31 @@ class Account {
     return new ServiceInfo(this)
   }
 
-  phoneNumber(phoneNumberId: string): PhoneNumber {
+  phoneNumber(phoneNumberId: (string | null) = null): PhoneNumber {
     return new PhoneNumber(this, phoneNumberId)
   }
 
-  templates(templateId: string): Templates {
+  templates(templateId: (string | null) = null): Templates {
     return new Templates(this, templateId)
   }
 
-  callQueues(groupId: string): CallQueues {
+  callQueues(groupId: (string | null) = null): CallQueues {
     return new CallQueues(this, groupId)
   }
 
-  department(departmentId: string): Department {
+  department(departmentId: (string | null) = null): Department {
     return new Department(this, departmentId)
   }
 
-  pagingOnlyGroups(pagingOnlyGroupId: string): PagingOnlyGroups {
+  pagingOnlyGroups(pagingOnlyGroupId: (string | null) = null): PagingOnlyGroups {
     return new PagingOnlyGroups(this, pagingOnlyGroupId)
   }
 
-  callMonitoringGroups(groupId: string): CallMonitoringGroups {
+  callMonitoringGroups(groupId: (string | null) = null): CallMonitoringGroups {
     return new CallMonitoringGroups(this, groupId)
   }
 
-  device(deviceId: string): Device {
+  device(deviceId: (string | null) = null): Device {
     return new Device(this, deviceId)
   }
 
@@ -166,7 +166,7 @@ class Account {
     return new Telephony(this)
   }
 
-  messageStoreReport(taskId: string): MessageStoreReport {
+  messageStoreReport(taskId: (string | null) = null): MessageStoreReport {
     return new MessageStoreReport(this, taskId)
   }
 
@@ -174,7 +174,7 @@ class Account {
     return new MeetingRecordings(this)
   }
 
-  customFields(fieldId: string): CustomFields {
+  customFields(fieldId: (string | null) = null): CustomFields {
     return new CustomFields(this, fieldId)
   }
 }

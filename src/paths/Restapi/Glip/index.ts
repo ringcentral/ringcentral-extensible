@@ -31,15 +31,15 @@ class Glip {
     return `${this.parent.path()}/glip`
   }
 
-  chats(chatId: string): Chats {
+  chats(chatId: (string | null) = null): Chats {
     return new Chats(this, chatId)
   }
 
-  conversations(chatId: string): Conversations {
+  conversations(chatId: (string | null) = null): Conversations {
     return new Conversations(this, chatId)
   }
 
-  teams(chatId: string): Teams {
+  teams(chatId: (string | null) = null): Teams {
     return new Teams(this, chatId)
   }
 
@@ -55,35 +55,35 @@ class Glip {
     return new Favorites(this)
   }
 
-  groups(groupId: string): Groups {
+  groups(groupId: (string | null) = null): Groups {
     return new Groups(this, groupId)
   }
 
-  cards(cardId: string): Cards {
+  cards(cardId: (string | null) = null): Cards {
     return new Cards(this, cardId)
   }
 
-  events(eventId: string): Events {
+  events(eventId: (string | null) = null): Events {
     return new Events(this, eventId)
   }
 
-  notes(noteId: string): Notes {
+  notes(noteId: (string | null) = null): Notes {
     return new Notes(this, noteId)
   }
 
-  tasks(taskId: string): Tasks {
+  tasks(taskId: (string | null) = null): Tasks {
     return new Tasks(this, taskId)
   }
 
-  persons(personId: string): Persons {
+  persons(personId: (string | null) = null): Persons {
     return new Persons(this, personId)
   }
 
-  companies(companyId: string): Companies {
+  companies(companyId: (string | null) = null): Companies {
     return new Companies(this, companyId)
   }
 
-  webhooks(webhookId: string): Webhooks {
+  webhooks(webhookId: (string | null) = null): Webhooks {
     return new Webhooks(this, webhookId)
   }
 
@@ -95,7 +95,7 @@ class Glip {
     return new Posts(this)
   }
 
-  dataExport(taskId: string): DataExport {
+  dataExport(taskId: (string | null) = null): DataExport {
     return new DataExport(this, taskId)
   }
 }

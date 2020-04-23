@@ -20,7 +20,7 @@ class Telephony {
     return new CallOut(this)
   }
 
-  sessions(telephonySessionId: string): Sessions {
+  sessions(telephonySessionId: (string | null) = null): Sessions {
     return new Sessions(this, telephonySessionId)
   }
 }

@@ -6,17 +6,17 @@ import RestClient from '../../../..'
 
 class CallMonitoringGroups {
   rc: RestClient
-  groupId: string
+  groupId: (string | null)
   parent: Parent
 
-  constructor(parent: Parent, groupId: string) {
+  constructor(parent: Parent, groupId: (string | null) = null) {
     this.parent = parent
     this.rc = parent.rc
     this.groupId = groupId
   }
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.groupId) {
+    if (withParameter && this.groupId !== null) {
       return `${this.parent.path()}/call-monitoring-groups/${this.groupId}`
     }
 
@@ -44,8 +44,8 @@ class CallMonitoringGroups {
    * Http put /restapi/v1.0/account/{accountId}/call-monitoring-groups/{groupId}
    */
   async put(createCallMonitoringGroupRequest: CreateCallMonitoringGroupRequest): Promise<CallMonitoringGroup> {
-    if (!this.groupId) {
-      throw new Error('groupId must not be undefined')
+    if (this.groupId === null) {
+      throw new Error('groupId must be specified.')
     }
 
     return this.rc.put(this.path(), createCallMonitoringGroupRequest)
@@ -56,8 +56,8 @@ class CallMonitoringGroups {
    * Http delete /restapi/v1.0/account/{accountId}/call-monitoring-groups/{groupId}
    */
   async delete(): Promise<string> {
-    if (!this.groupId) {
-      throw new Error('groupId must not be undefined')
+    if (this.groupId === null) {
+      throw new Error('groupId must be specified.')
     }
 
     return this.rc.delete(this.path())

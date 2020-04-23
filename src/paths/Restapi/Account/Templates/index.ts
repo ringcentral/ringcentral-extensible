@@ -4,17 +4,17 @@ import RestClient from '../../../..'
 
 class Templates {
   rc: RestClient
-  templateId: string
+  templateId: (string | null)
   parent: Parent
 
-  constructor(parent: Parent, templateId: string) {
+  constructor(parent: Parent, templateId: (string | null) = null) {
     this.parent = parent
     this.rc = parent.rc
     this.templateId = templateId
   }
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.templateId) {
+    if (withParameter && this.templateId !== null) {
       return `${this.parent.path()}/templates/${this.templateId}`
     }
 
@@ -34,8 +34,8 @@ class Templates {
    * Http get /restapi/v1.0/account/{accountId}/templates/{templateId}
    */
   async get(): Promise<TemplateInfo> {
-    if (!this.templateId) {
-      throw new Error('templateId must not be undefined')
+    if (this.templateId === null) {
+      throw new Error('templateId must be specified.')
     }
 
     return this.rc.get(this.path())

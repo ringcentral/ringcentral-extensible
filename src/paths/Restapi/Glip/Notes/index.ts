@@ -7,17 +7,17 @@ import RestClient from '../../../..'
 
 class Notes {
   rc: RestClient
-  noteId: string
+  noteId: (string | null)
   parent: Parent
 
-  constructor(parent: Parent, noteId: string) {
+  constructor(parent: Parent, noteId: (string | null) = null) {
     this.parent = parent
     this.rc = parent.rc
     this.noteId = noteId
   }
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.noteId) {
+    if (withParameter && this.noteId !== null) {
       return `${this.parent.path()}/notes/${this.noteId}`
     }
 
@@ -29,8 +29,8 @@ class Notes {
    * Http get /restapi/v1.0/glip/notes/{noteId}
    */
   async get(): Promise<GetGlipNoteInfo> {
-    if (!this.noteId) {
-      throw new Error('noteId must not be undefined')
+    if (this.noteId === null) {
+      throw new Error('noteId must be specified.')
     }
 
     return this.rc.get(this.path())
@@ -41,8 +41,8 @@ class Notes {
    * Http patch /restapi/v1.0/glip/notes/{noteId}
    */
   async patch(glipNoteCreate: GlipNoteCreate): Promise<GlipNoteInfo> {
-    if (!this.noteId) {
-      throw new Error('noteId must not be undefined')
+    if (this.noteId === null) {
+      throw new Error('noteId must be specified.')
     }
 
     return this.rc.patch(this.path(), glipNoteCreate)
@@ -53,8 +53,8 @@ class Notes {
    * Http delete /restapi/v1.0/glip/notes/{noteId}
    */
   async delete(): Promise<string> {
-    if (!this.noteId) {
-      throw new Error('noteId must not be undefined')
+    if (this.noteId === null) {
+      throw new Error('noteId must be specified.')
     }
 
     return this.rc.delete(this.path())

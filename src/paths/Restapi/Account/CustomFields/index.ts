@@ -4,17 +4,17 @@ import RestClient from '../../../..'
 
 class CustomFields {
   rc: RestClient
-  fieldId: string
+  fieldId: (string | null)
   parent: Parent
 
-  constructor(parent: Parent, fieldId: string) {
+  constructor(parent: Parent, fieldId: (string | null) = null) {
     this.parent = parent
     this.rc = parent.rc
     this.fieldId = fieldId
   }
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.fieldId) {
+    if (withParameter && this.fieldId !== null) {
       return `${this.parent.path()}/custom-fields/${this.fieldId}`
     }
 
@@ -42,8 +42,8 @@ class CustomFields {
    * Http put /restapi/v1.0/account/{accountId}/custom-fields/{fieldId}
    */
   async put(customFieldUpdateRequest: CustomFieldUpdateRequest): Promise<CustomFieldResource> {
-    if (!this.fieldId) {
-      throw new Error('fieldId must not be undefined')
+    if (this.fieldId === null) {
+      throw new Error('fieldId must be specified.')
     }
 
     return this.rc.put(this.path(), customFieldUpdateRequest)
@@ -54,8 +54,8 @@ class CustomFields {
    * Http delete /restapi/v1.0/account/{accountId}/custom-fields/{fieldId}
    */
   async delete(): Promise<string> {
-    if (!this.fieldId) {
-      throw new Error('fieldId must not be undefined')
+    if (this.fieldId === null) {
+      throw new Error('fieldId must be specified.')
     }
 
     return this.rc.delete(this.path())

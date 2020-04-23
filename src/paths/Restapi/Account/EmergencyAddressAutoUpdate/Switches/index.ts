@@ -4,17 +4,17 @@ import RestClient from '../../../../..'
 
 class Switches {
   rc: RestClient
-  switchId: string
+  switchId: (string | null)
   parent: Parent
 
-  constructor(parent: Parent, switchId: string) {
+  constructor(parent: Parent, switchId: (string | null) = null) {
     this.parent = parent
     this.rc = parent.rc
     this.switchId = switchId
   }
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.switchId) {
+    if (withParameter && this.switchId !== null) {
       return `${this.parent.path()}/switches/${this.switchId}`
     }
 
@@ -42,8 +42,8 @@ class Switches {
    * Http get /restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches/{switchId}
    */
   async get(): Promise<SwitchInfo> {
-    if (!this.switchId) {
-      throw new Error('switchId must not be undefined')
+    if (this.switchId === null) {
+      throw new Error('switchId must be specified.')
     }
 
     return this.rc.get(this.path())
@@ -54,8 +54,8 @@ class Switches {
    * Http put /restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches/{switchId}
    */
   async put(updateSwitchInfo: UpdateSwitchInfo): Promise<SwitchInfo> {
-    if (!this.switchId) {
-      throw new Error('switchId must not be undefined')
+    if (this.switchId === null) {
+      throw new Error('switchId must be specified.')
     }
 
     return this.rc.put(this.path(), updateSwitchInfo)
@@ -66,8 +66,8 @@ class Switches {
    * Http delete /restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches/{switchId}
    */
   async delete(): Promise<string> {
-    if (!this.switchId) {
-      throw new Error('switchId must not be undefined')
+    if (this.switchId === null) {
+      throw new Error('switchId must be specified.')
     }
 
     return this.rc.delete(this.path())

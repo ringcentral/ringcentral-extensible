@@ -5,17 +5,17 @@ import RestClient from '../../../..'
 
 class Department {
   rc: RestClient
-  departmentId: string
+  departmentId: (string | null)
   parent: Parent
 
-  constructor(parent: Parent, departmentId: string) {
+  constructor(parent: Parent, departmentId: (string | null) = null) {
     this.parent = parent
     this.rc = parent.rc
     this.departmentId = departmentId
   }
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.departmentId) {
+    if (withParameter && this.departmentId !== null) {
       return `${this.parent.path()}/department/${this.departmentId}`
     }
 

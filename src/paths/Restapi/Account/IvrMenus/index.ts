@@ -4,17 +4,17 @@ import RestClient from '../../../..'
 
 class IvrMenus {
   rc: RestClient
-  ivrMenuId: string
+  ivrMenuId: (string | null)
   parent: Parent
 
-  constructor(parent: Parent, ivrMenuId: string) {
+  constructor(parent: Parent, ivrMenuId: (string | null) = null) {
     this.parent = parent
     this.rc = parent.rc
     this.ivrMenuId = ivrMenuId
   }
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.ivrMenuId) {
+    if (withParameter && this.ivrMenuId !== null) {
       return `${this.parent.path()}/ivr-menus/${this.ivrMenuId}`
     }
 
@@ -34,8 +34,8 @@ class IvrMenus {
    * Http get /restapi/v1.0/account/{accountId}/ivr-menus/{ivrMenuId}
    */
   async get(): Promise<IVRMenuInfo> {
-    if (!this.ivrMenuId) {
-      throw new Error('ivrMenuId must not be undefined')
+    if (this.ivrMenuId === null) {
+      throw new Error('ivrMenuId must be specified.')
     }
 
     return this.rc.get(this.path())
@@ -46,8 +46,8 @@ class IvrMenus {
    * Http put /restapi/v1.0/account/{accountId}/ivr-menus/{ivrMenuId}
    */
   async put(iVRMenuInfo: IVRMenuInfo): Promise<IVRMenuInfo> {
-    if (!this.ivrMenuId) {
-      throw new Error('ivrMenuId must not be undefined')
+    if (this.ivrMenuId === null) {
+      throw new Error('ivrMenuId must be specified.')
     }
 
     return this.rc.put(this.path(), iVRMenuInfo)

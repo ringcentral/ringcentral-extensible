@@ -5,17 +5,17 @@ import RestClient from '../../../../..'
 
 class Posts {
   rc: RestClient
-  postId: string
+  postId: (string | null)
   parent: Parent
 
-  constructor(parent: Parent, postId: string) {
+  constructor(parent: Parent, postId: (string | null) = null) {
     this.parent = parent
     this.rc = parent.rc
     this.postId = postId
   }
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.postId) {
+    if (withParameter && this.postId !== null) {
       return `${this.parent.path()}/posts/${this.postId}`
     }
 

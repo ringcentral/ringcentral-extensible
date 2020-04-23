@@ -4,17 +4,17 @@ import RestClient from '../../../../../..'
 
 class Contact {
   rc: RestClient
-  contactId: string
+  contactId: (string | null)
   parent: Parent
 
-  constructor(parent: Parent, contactId: string) {
+  constructor(parent: Parent, contactId: (string | null) = null) {
     this.parent = parent
     this.rc = parent.rc
     this.contactId = contactId
   }
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.contactId) {
+    if (withParameter && this.contactId !== null) {
       return `${this.parent.path()}/contact/${this.contactId}`
     }
 
@@ -42,8 +42,8 @@ class Contact {
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact/{contactId}
    */
   async get(): Promise<PersonalContactResource> {
-    if (!this.contactId) {
-      throw new Error('contactId must not be undefined')
+    if (this.contactId === null) {
+      throw new Error('contactId must be specified.')
     }
 
     return this.rc.get(this.path())
@@ -54,8 +54,8 @@ class Contact {
    * Http put /restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact/{contactId}
    */
   async put(personalContactRequest: PersonalContactRequest, queryParams?: UpdateContactParameters): Promise<PersonalContactResource> {
-    if (!this.contactId) {
-      throw new Error('contactId must not be undefined')
+    if (this.contactId === null) {
+      throw new Error('contactId must be specified.')
     }
 
     return this.rc.put(this.path(), personalContactRequest, queryParams)
@@ -66,8 +66,8 @@ class Contact {
    * Http delete /restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact/{contactId}
    */
   async delete(): Promise<string> {
-    if (!this.contactId) {
-      throw new Error('contactId must not be undefined')
+    if (this.contactId === null) {
+      throw new Error('contactId must be specified.')
     }
 
     return this.rc.delete(this.path())

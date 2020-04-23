@@ -5,17 +5,17 @@ import RestClient from '../../../../..'
 
 class ProfileImage {
   rc: RestClient
-  scaleSize: string
+  scaleSize: (string | null)
   parent: Parent
 
-  constructor(parent: Parent, scaleSize: string) {
+  constructor(parent: Parent, scaleSize: (string | null) = null) {
     this.parent = parent
     this.rc = parent.rc
     this.scaleSize = scaleSize
   }
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.scaleSize) {
+    if (withParameter && this.scaleSize !== null) {
       return `${this.parent.path()}/profile-image/${this.scaleSize}`
     }
 
@@ -53,8 +53,8 @@ class ProfileImage {
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image/{scaleSize}
    */
   async get(): Promise<Buffer> {
-    if (!this.scaleSize) {
-      throw new Error('scaleSize must not be undefined')
+    if (this.scaleSize === null) {
+      throw new Error('scaleSize must be specified.')
     }
 
     return this.rc.get(this.path())

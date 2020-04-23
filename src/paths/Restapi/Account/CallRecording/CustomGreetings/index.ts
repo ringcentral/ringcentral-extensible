@@ -4,17 +4,17 @@ import RestClient from '../../../../..'
 
 class CustomGreetings {
   rc: RestClient
-  greetingId: string
+  greetingId: (string | null)
   parent: Parent
 
-  constructor(parent: Parent, greetingId: string) {
+  constructor(parent: Parent, greetingId: (string | null) = null) {
     this.parent = parent
     this.rc = parent.rc
     this.greetingId = greetingId
   }
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.greetingId) {
+    if (withParameter && this.greetingId !== null) {
       return `${this.parent.path()}/custom-greetings/${this.greetingId}`
     }
 
@@ -34,8 +34,8 @@ class CustomGreetings {
    * Http delete /restapi/v1.0/account/{accountId}/call-recording/custom-greetings/{greetingId}
    */
   async delete(): Promise<string> {
-    if (!this.greetingId) {
-      throw new Error('greetingId must not be undefined')
+    if (this.greetingId === null) {
+      throw new Error('greetingId must be specified.')
     }
 
     return this.rc.delete(this.path())

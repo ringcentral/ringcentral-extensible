@@ -4,17 +4,17 @@ import RestClient from '../../../..'
 
 class PhoneNumber {
   rc: RestClient
-  phoneNumberId: string
+  phoneNumberId: (string | null)
   parent: Parent
 
-  constructor(parent: Parent, phoneNumberId: string) {
+  constructor(parent: Parent, phoneNumberId: (string | null) = null) {
     this.parent = parent
     this.rc = parent.rc
     this.phoneNumberId = phoneNumberId
   }
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.phoneNumberId) {
+    if (withParameter && this.phoneNumberId !== null) {
       return `${this.parent.path()}/phone-number/${this.phoneNumberId}`
     }
 
@@ -34,8 +34,8 @@ class PhoneNumber {
    * Http get /restapi/v1.0/account/{accountId}/phone-number/{phoneNumberId}
    */
   async get(): Promise<CompanyPhoneNumberInfo> {
-    if (!this.phoneNumberId) {
-      throw new Error('phoneNumberId must not be undefined')
+    if (this.phoneNumberId === null) {
+      throw new Error('phoneNumberId must be specified.')
     }
 
     return this.rc.get(this.path())
