@@ -1,9 +1,5 @@
 /* eslint-env jest */
-import fs from 'fs'
-import path from 'path'
-
 import RestClient from '../src/index'
-import { CreateFaxMessageRequest, Attachment } from '../src/definitions'
 
 jest.setTimeout(16000)
 

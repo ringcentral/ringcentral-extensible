@@ -10,7 +10,8 @@ describe('Exceptions', () => {
     await rc.authorize(process.env.RINGCENTRAL_USERNAME!, process.env.RINGCENTRAL_EXTENSION!, process.env.RINGCENTRAL_PASSWORD!)
     let exception = false
     try {
-      await rc.post('/restapi/v1.0/account/~/extension/~/sms', { text: 'Hello world' })
+      // no to number
+      await rc.restapi().account().extension().sms().post({ text: 'Hello world' })
     } catch (e) {
       exception = true
       expect(e instanceof RestException).toBeTruthy()
@@ -25,7 +26,7 @@ describe('Exceptions', () => {
     await rc.authorize(process.env.RINGCENTRAL_USERNAME!, process.env.RINGCENTRAL_EXTENSION!, process.env.RINGCENTRAL_PASSWORD!!)
     let exception = false
     try {
-      await rc.post('/restapi/v1.0/account/~/extension/~/does-not-exist', { text: 'Hello world' })
+      await rc.post(rc.restapi().account().extension().path(true) + '/does-not-exist', { text: 'Hello world' })
     } catch (e) {
       exception = true
       expect(e instanceof RestException).toBeTruthy()

@@ -3,11 +3,11 @@ import RestClient from '../src/index'
 
 jest.setTimeout(16000)
 
-describe('HTTP POST', () => {
-  test('send sms', async () => {
+describe('SMS', () => {
+  test('send', async () => {
     const rc = new RestClient(process.env.RINGCENTRAL_CLIENT_ID!, process.env.RINGCENTRAL_CLIENT_SECRET!, process.env.RINGCENTRAL_SERVER_URL!)
     await rc.authorize(process.env.RINGCENTRAL_USERNAME!, process.env.RINGCENTRAL_EXTENSION!, process.env.RINGCENTRAL_PASSWORD!)
-    const messageInfo = await rc.post('/restapi/v1.0/account/~/extension/~/sms', {
+    const messageInfo = await rc.restapi().account().extension().sms().post({
       from: {
         phoneNumber: process.env.RINGCENTRAL_USERNAME!
       },
