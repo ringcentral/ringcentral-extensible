@@ -7,8 +7,8 @@ import { CreateFaxMessageRequest, Attachment } from '../src/definitions'
 
 jest.setTimeout(16000)
 
-describe('fax', () => {
-  test('send fax', async () => {
+describe('list meetings', () => {
+  test('default', async () => {
     const rc = new RestClient(process.env.RINGCENTRAL_CLIENT_ID!, process.env.RINGCENTRAL_CLIENT_SECRET!, process.env.RINGCENTRAL_SERVER_URL!)
     await rc.authorize(process.env.RINGCENTRAL_USERNAME!, process.env.RINGCENTRAL_EXTENSION!, process.env.RINGCENTRAL_PASSWORD!)
     const meetingList = await rc.restapi().account().extension().meeting().list()
