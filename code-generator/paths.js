@@ -80,7 +80,7 @@ class ${R.last(routes)} {
 
     if (paramName) {
       code += `
-  ${paramName}: string`
+  ${paramName}: (string | null)`
     }
     if (routes.length > 1) {
       code += `
@@ -90,7 +90,7 @@ class ${R.last(routes)} {
     if (paramName) {
       code += `
 
-  constructor(${routes.length > 1 ? 'parent: Parent' : 'rc: RestClient'}, ${paramName}: string${defaultParamValue ? ` = '${defaultParamValue}'` : ''}) {
+  constructor(${routes.length > 1 ? 'parent: Parent' : 'rc: RestClient'}, ${paramName}: (string | null) = ${defaultParamValue ? `'${defaultParamValue}'` : null}) {
     ${routes.length > 1 ? `this.parent = parent
     this.rc = parent.rc` : 'this.rc = rc'}
     this.${paramName} = ${paramName}
@@ -112,7 +112,7 @@ class ${R.last(routes)} {
       code += `
 
   path(withParameter: boolean = true): string {
-    if (withParameter && this.${paramName}) {
+    if (withParameter && this.${paramName} !== null) {
       return \`${routes.length > 1 ? '$' + '{this.parent.path()}' : ''}/${name}/\${this.${paramName}}\`
     }
 
@@ -211,8 +211,8 @@ class ${R.last(routes)} {
    * Http ${operation.method} ${operation.endpoint}
    */
   async ${smartMethod}(${methodParams.join(', ')}): Promise<${responseType}> {${withParam ? `
-    if (!this.${paramName}) {
-      throw new Error('${paramName} must not be undefined')
+    if (this.${paramName} === null) {
+      throw new Error('${paramName} must be specified.')
     }
 ` : ''}`
       if (multipart) {
@@ -242,7 +242,7 @@ class ${R.last(routes)} {
 
     if (routes.length > 1) {
       patchSrcFile(['paths', ...R.init(routes), 'index.ts'], [`import ${R.last(routes)} from './${R.last(routes)}'`], `
-  ${lowerCaseFirst(R.last(routes))}(${paramName ? `${paramName}: string${defaultParamValue ? ` = '${defaultParamValue}'` : ''}` : ''}): ${R.last(routes)} {
+  ${lowerCaseFirst(R.last(routes))}(${paramName ? `${paramName}: (string | null) = ${defaultParamValue ? `'${defaultParamValue}'` : 'null'}` : ''}): ${R.last(routes)} {
     return new ${R.last(routes)}(this${paramName ? `, ${paramName}` : ''})
   }
 `.trim())
