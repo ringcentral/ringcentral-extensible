@@ -2,15 +2,15 @@
 import fs from 'fs'
 import path from 'path'
 
-import RestClient from '../dist/src/index'
-import Utils from '../dist/src/Utils'
+import RestClient from '../src/index'
+import Utils from '../src/Utils'
 
 jest.setTimeout(16000)
 
 describe('low level API', () => {
   test('fax', async () => {
-    const rc = new RestClient(process.env.RINGCENTRAL_CLIENT_ID, process.env.RINGCENTRAL_CLIENT_SECRET, process.env.RINGCENTRAL_SERVER_URL)
-    await rc.authorize(process.env.RINGCENTRAL_USERNAME, process.env.RINGCENTRAL_EXTENSION, process.env.RINGCENTRAL_PASSWORD)
+    const rc = new RestClient(process.env.RINGCENTRAL_CLIENT_ID!, process.env.RINGCENTRAL_CLIENT_SECRET!, process.env.RINGCENTRAL_SERVER_URL!)
+    await rc.authorize(process.env.RINGCENTRAL_USERNAME!, process.env.RINGCENTRAL_EXTENSION!, process.env.RINGCENTRAL_PASSWORD!)
     const requestBody = {
       to: [{ phoneNumber: process.env.RINGCENTRAL_RECEIVER }],
       attachments: [
