@@ -6,7 +6,7 @@ This SDK is modelled after the [RingCentral.NET](https://github.com/ringcentral/
 ## Compile
 
 ```
-yarn watch
+yarn tsc
 ```
 
 
@@ -19,10 +19,10 @@ yarn test
 
 ## Todo
 
+- sdk version in user agent. adjust project structure before publishing
 - Generate API reference
     - go to dotnet SDK
 - check other tsconfig options as well
-- Rewrite tests in ts
 - Travis
 - Replace axios with @ringcentral/sdk ?
 - Make it an RingCentral official project
