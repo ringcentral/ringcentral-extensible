@@ -8,7 +8,7 @@ class Attachment
   /**
    * Binary content of the file
    */
-  content?: string | Buffer | Blob | ReadableStream
+  content?: string | Buffer | Blob | NodeJS.ReadableStream
 
   /**
    * Content tyle of the file, such as 'image/png'

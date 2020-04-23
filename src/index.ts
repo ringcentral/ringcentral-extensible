@@ -2,7 +2,6 @@ import axios, { AxiosInstance, Method, AxiosRequestConfig } from 'axios'
 import qs from 'qs'
 
 import { GetTokenRequest, TokenInfo } from './definitions'
-import pkg from '../package.json'
 import RestException from './RestException'
 import Restapi from './paths/Restapi'
 import Scim from './paths/Scim'
@@ -27,9 +26,12 @@ class RestClient {
     this.appVersion = appVersion
     this.httpClient = axios.create({
       baseURL: this.server,
-      headers: { 'X-User-Agent': `${appName}/${appVersion} tylerlong/ringcentral-typescript/${pkg.version}` },
+      headers: { 'X-User-Agent': `${appName}/${appVersion} tylerlong/ringcentral-typescript` },
       validateStatus: status => {
         return true
+      },
+      paramsSerializer: params => {
+        return qs.stringify(params, { indices: false })
       }
     })
   }
@@ -93,7 +95,7 @@ class RestClient {
       getTokenRequest.code = arg1
       getTokenRequest.redirect_uri = arg2
     }
-    this.token = await this.restapi(undefined).oauth().token().post(getTokenRequest)
+    this.token = await this.restapi(null).oauth().token().post(getTokenRequest)
     return this.token
   }
 
@@ -113,15 +115,15 @@ class RestClient {
       return
     }
     tokenToRevoke = tokenToRevoke ?? this.token?.access_token ?? this.token?.refresh_token
-    await this.restapi(undefined).oauth().revoke().post({ token: tokenToRevoke })
+    await this.restapi(null).oauth().revoke().post({ token: tokenToRevoke })
     this.token = undefined
   }
 
-  restapi(apiVersion = 'v1.0'): Restapi {
+  restapi(apiVersion: (string | null) = 'v1.0'): Restapi {
     return new Restapi(this, apiVersion);
   }
 
-  scim(version = 'v2'): Scim {
+  scim(version: (string | null) = 'v2'): Scim {
     return new Scim(this, version)
   }
 }
