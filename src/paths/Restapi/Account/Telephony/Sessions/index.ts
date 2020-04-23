@@ -9,13 +9,13 @@ class Sessions {
   telephonySessionId: (string | null)
   parent: Parent
 
-  constructor(parent: Parent, telephonySessionId: (string | null) = null) {
+  constructor (parent: Parent, telephonySessionId: (string | null) = null) {
     this.parent = parent
     this.rc = parent.rc
     this.telephonySessionId = telephonySessionId
   }
 
-  path(withParameter: boolean = true): string {
+  path (withParameter: boolean = true): string {
     if (withParameter && this.telephonySessionId !== null) {
       return `${this.parent.path()}/sessions/${this.telephonySessionId}`
     }
@@ -27,7 +27,7 @@ class Sessions {
    * Operation: Get Call Session Status
    * Http get /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}
    */
-  async get(queryParams?: ReadCallSessionStatusParameters): Promise<CallSession> {
+  async get (queryParams?: ReadCallSessionStatusParameters): Promise<CallSession> {
     if (this.telephonySessionId === null) {
       throw new Error('telephonySessionId must be specified.')
     }
@@ -39,7 +39,7 @@ class Sessions {
    * Operation: Drop Call Session
    * Http delete /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}
    */
-  async delete(): Promise<string> {
+  async delete (): Promise<string> {
     if (this.telephonySessionId === null) {
       throw new Error('telephonySessionId must be specified.')
     }
@@ -47,11 +47,11 @@ class Sessions {
     return this.rc.delete(this.path())
   }
 
-  parties(partyId: (string | null) = null): Parties {
+  parties (partyId: (string | null) = null): Parties {
     return new Parties(this, partyId)
   }
 
-  supervise(): Supervise {
+  supervise (): Supervise {
     return new Supervise(this)
   }
 }

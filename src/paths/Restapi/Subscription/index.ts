@@ -8,13 +8,13 @@ class Subscription {
   subscriptionId: (string | null)
   parent: Parent
 
-  constructor(parent: Parent, subscriptionId: (string | null) = null) {
+  constructor (parent: Parent, subscriptionId: (string | null) = null) {
     this.parent = parent
     this.rc = parent.rc
     this.subscriptionId = subscriptionId
   }
 
-  path(withParameter: boolean = true): string {
+  path (withParameter: boolean = true): string {
     if (withParameter && this.subscriptionId !== null) {
       return `${this.parent.path()}/subscription/${this.subscriptionId}`
     }
@@ -26,7 +26,7 @@ class Subscription {
    * Operation: Get Subscriptions
    * Http get /restapi/v1.0/subscription
    */
-  async list(): Promise<RecordsCollectionResourceSubscriptionResponse> {
+  async list (): Promise<RecordsCollectionResourceSubscriptionResponse> {
     return this.rc.get(this.path(false))
   }
 
@@ -34,7 +34,7 @@ class Subscription {
    * Operation: Create Subscription
    * Http post /restapi/v1.0/subscription
    */
-  async post(createSubscriptionRequest: CreateSubscriptionRequest): Promise<SubscriptionInfo> {
+  async post (createSubscriptionRequest: CreateSubscriptionRequest): Promise<SubscriptionInfo> {
     return this.rc.post(this.path(false), createSubscriptionRequest)
   }
 
@@ -42,7 +42,7 @@ class Subscription {
    * Operation: Get Subscription
    * Http get /restapi/v1.0/subscription/{subscriptionId}
    */
-  async get(): Promise<SubscriptionInfo> {
+  async get (): Promise<SubscriptionInfo> {
     if (this.subscriptionId === null) {
       throw new Error('subscriptionId must be specified.')
     }
@@ -54,7 +54,7 @@ class Subscription {
    * Operation: Renew Subscription / Update Event Filters
    * Http put /restapi/v1.0/subscription/{subscriptionId}
    */
-  async put(modifySubscriptionRequest: ModifySubscriptionRequest, queryParams?: UpdateSubscriptionParameters): Promise<SubscriptionInfo> {
+  async put (modifySubscriptionRequest: ModifySubscriptionRequest, queryParams?: UpdateSubscriptionParameters): Promise<SubscriptionInfo> {
     if (this.subscriptionId === null) {
       throw new Error('subscriptionId must be specified.')
     }
@@ -66,7 +66,7 @@ class Subscription {
    * Operation: Cancel Subscription
    * Http delete /restapi/v1.0/subscription/{subscriptionId}
    */
-  async delete(): Promise<string> {
+  async delete (): Promise<string> {
     if (this.subscriptionId === null) {
       throw new Error('subscriptionId must be specified.')
     }
@@ -74,7 +74,7 @@ class Subscription {
     return this.rc.delete(this.path())
   }
 
-  renew(): Renew {
+  renew (): Renew {
     return new Renew(this)
   }
 }

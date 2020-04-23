@@ -6,12 +6,12 @@ class BusinessHours {
   rc: RestClient
   parent: Parent
 
-  constructor(parent: Parent) {
+  constructor (parent: Parent) {
     this.parent = parent
     this.rc = parent.rc
   }
 
-  path(): string {
+  path (): string {
     return `${this.parent.path()}/business-hours`
   }
 
@@ -19,7 +19,7 @@ class BusinessHours {
    * Operation: Get User Business Hours
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/business-hours
    */
-  async get(): Promise<GetUserBusinessHoursResponse> {
+  async get (): Promise<GetUserBusinessHoursResponse> {
     return this.rc.get(this.path())
   }
 
@@ -27,7 +27,7 @@ class BusinessHours {
    * Operation: Update User Business Hours
    * Http put /restapi/v1.0/account/{accountId}/extension/{extensionId}/business-hours
    */
-  async put(userBusinessHoursUpdateRequest: UserBusinessHoursUpdateRequest): Promise<UserBusinessHoursUpdateResponse> {
+  async put (userBusinessHoursUpdateRequest: UserBusinessHoursUpdateRequest): Promise<UserBusinessHoursUpdateResponse> {
     return this.rc.put(this.path(), userBusinessHoursUpdateRequest)
   }
 }

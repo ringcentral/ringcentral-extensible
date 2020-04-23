@@ -7,13 +7,13 @@ class WirelessPoints {
   pointId: (string | null)
   parent: Parent
 
-  constructor(parent: Parent, pointId: (string | null) = null) {
+  constructor (parent: Parent, pointId: (string | null) = null) {
     this.parent = parent
     this.rc = parent.rc
     this.pointId = pointId
   }
 
-  path(withParameter: boolean = true): string {
+  path (withParameter: boolean = true): string {
     if (withParameter && this.pointId !== null) {
       return `${this.parent.path()}/wireless-points/${this.pointId}`
     }
@@ -25,7 +25,7 @@ class WirelessPoints {
    * Operation: Get Wireless Point List
    * Http get /restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points
    */
-  async list(queryParams?: ListWirelessPointsParameters): Promise<WirelessPointsList> {
+  async list (queryParams?: ListWirelessPointsParameters): Promise<WirelessPointsList> {
     return this.rc.get(this.path(false), queryParams)
   }
 
@@ -33,7 +33,7 @@ class WirelessPoints {
    * Operation: Create Wireless Point
    * Http post /restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points
    */
-  async post(createWirelessPoint: CreateWirelessPoint): Promise<WirelessPointInfo> {
+  async post (createWirelessPoint: CreateWirelessPoint): Promise<WirelessPointInfo> {
     return this.rc.post(this.path(false), createWirelessPoint)
   }
 
@@ -41,7 +41,7 @@ class WirelessPoints {
    * Operation: Get Wireless Point
    * Http get /restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points/{pointId}
    */
-  async get(): Promise<WirelessPointInfo> {
+  async get (): Promise<WirelessPointInfo> {
     if (this.pointId === null) {
       throw new Error('pointId must be specified.')
     }
@@ -53,7 +53,7 @@ class WirelessPoints {
    * Operation: Update Wireless Point
    * Http put /restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points/{pointId}
    */
-  async put(updateWirelessPoint: UpdateWirelessPoint): Promise<WirelessPointInfo> {
+  async put (updateWirelessPoint: UpdateWirelessPoint): Promise<WirelessPointInfo> {
     if (this.pointId === null) {
       throw new Error('pointId must be specified.')
     }
@@ -65,7 +65,7 @@ class WirelessPoints {
    * Operation: Delete Wireless Point
    * Http delete /restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points/{pointId}
    */
-  async delete(): Promise<string> {
+  async delete (): Promise<string> {
     if (this.pointId === null) {
       throw new Error('pointId must be specified.')
     }

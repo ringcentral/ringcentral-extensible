@@ -7,13 +7,13 @@ class Tasks {
   taskId: (string | null)
   parent: Parent
 
-  constructor(parent: Parent, taskId: (string | null) = null) {
+  constructor (parent: Parent, taskId: (string | null) = null) {
     this.parent = parent
     this.rc = parent.rc
     this.taskId = taskId
   }
 
-  path(withParameter: boolean = true): string {
+  path (withParameter: boolean = true): string {
     if (withParameter && this.taskId !== null) {
       return `${this.parent.path()}/tasks/${this.taskId}`
     }
@@ -25,7 +25,7 @@ class Tasks {
    * Operation: Get Emergency Map Configuration Task
    * Http get /restapi/v1.0/account/{accountId}/emergency-address-auto-update/tasks/{taskId}
    */
-  async get(): Promise<AutomaticLocationUpdatesTaskInfo> {
+  async get (): Promise<AutomaticLocationUpdatesTaskInfo> {
     if (this.taskId === null) {
       throw new Error('taskId must be specified.')
     }

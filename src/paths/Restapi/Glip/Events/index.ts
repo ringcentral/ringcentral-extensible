@@ -7,13 +7,13 @@ class Events {
   eventId: (string | null)
   parent: Parent
 
-  constructor(parent: Parent, eventId: (string | null) = null) {
+  constructor (parent: Parent, eventId: (string | null) = null) {
     this.parent = parent
     this.rc = parent.rc
     this.eventId = eventId
   }
 
-  path(withParameter: boolean = true): string {
+  path (withParameter: boolean = true): string {
     if (withParameter && this.eventId !== null) {
       return `${this.parent.path()}/events/${this.eventId}`
     }
@@ -25,7 +25,7 @@ class Events {
    * Operation: Get User Events List
    * Http get /restapi/v1.0/glip/events
    */
-  async list(queryParams?: ReadGlipEventsParameters): Promise<GlipEventsInfo> {
+  async list (queryParams?: ReadGlipEventsParameters): Promise<GlipEventsInfo> {
     return this.rc.get(this.path(false), queryParams)
   }
 
@@ -33,7 +33,7 @@ class Events {
    * Operation: Create Event
    * Http post /restapi/v1.0/glip/events
    */
-  async post(glipEventCreate: GlipEventCreate): Promise<GlipEventInfo> {
+  async post (glipEventCreate: GlipEventCreate): Promise<GlipEventInfo> {
     return this.rc.post(this.path(false), glipEventCreate)
   }
 
@@ -41,7 +41,7 @@ class Events {
    * Operation: Get Event
    * Http get /restapi/v1.0/glip/events/{eventId}
    */
-  async get(): Promise<GlipEventInfo> {
+  async get (): Promise<GlipEventInfo> {
     if (this.eventId === null) {
       throw new Error('eventId must be specified.')
     }
@@ -53,7 +53,7 @@ class Events {
    * Operation: Update Event
    * Http put /restapi/v1.0/glip/events/{eventId}
    */
-  async put(glipEventCreate: GlipEventCreate): Promise<GlipEventInfo> {
+  async put (glipEventCreate: GlipEventCreate): Promise<GlipEventInfo> {
     if (this.eventId === null) {
       throw new Error('eventId must be specified.')
     }
@@ -65,7 +65,7 @@ class Events {
    * Operation: Delete Event
    * Http delete /restapi/v1.0/glip/events/{eventId}
    */
-  async delete(): Promise<string> {
+  async delete (): Promise<string> {
     if (this.eventId === null) {
       throw new Error('eventId must be specified.')
     }

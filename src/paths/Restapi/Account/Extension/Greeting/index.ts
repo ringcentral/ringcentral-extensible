@@ -8,13 +8,13 @@ class Greeting {
   greetingId: (string | null)
   parent: Parent
 
-  constructor(parent: Parent, greetingId: (string | null) = null) {
+  constructor (parent: Parent, greetingId: (string | null) = null) {
     this.parent = parent
     this.rc = parent.rc
     this.greetingId = greetingId
   }
 
-  path(withParameter: boolean = true): string {
+  path (withParameter: boolean = true): string {
     if (withParameter && this.greetingId !== null) {
       return `${this.parent.path()}/greeting/${this.greetingId}`
     }
@@ -26,7 +26,7 @@ class Greeting {
    * Operation: Create Custom User Greeting
    * Http post /restapi/v1.0/account/{accountId}/extension/{extensionId}/greeting
    */
-  async post(createCustomUserGreetingRequest: CreateCustomUserGreetingRequest): Promise<CustomUserGreetingInfo> {
+  async post (createCustomUserGreetingRequest: CreateCustomUserGreetingRequest): Promise<CustomUserGreetingInfo> {
     var formData = Utils.getFormData(createCustomUserGreetingRequest)
     return this.rc.post(this.path(false), formData, undefined, formData.getHeaders())
   }
@@ -35,7 +35,7 @@ class Greeting {
    * Operation: Get Custom Greeting
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/greeting/{greetingId}
    */
-  async get(): Promise<CustomUserGreetingInfo> {
+  async get (): Promise<CustomUserGreetingInfo> {
     if (this.greetingId === null) {
       throw new Error('greetingId must be specified.')
     }

@@ -6,12 +6,12 @@ class AddressBookSync {
   rc: RestClient
   parent: Parent
 
-  constructor(parent: Parent) {
+  constructor (parent: Parent) {
     this.parent = parent
     this.rc = parent.rc
   }
 
-  path(): string {
+  path (): string {
     return `${this.parent.path()}/address-book-sync`
   }
 
@@ -19,7 +19,7 @@ class AddressBookSync {
    * Operation: Address Book Synchronization
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book-sync
    */
-  async get(queryParams?: SyncAddressBookParameters): Promise<AddressBookSync> {
+  async get (queryParams?: SyncAddressBookParameters): Promise<AddressBookSync> {
     return this.rc.get(this.path(), queryParams)
   }
 }

@@ -7,20 +7,20 @@ class MeetingsConfiguration {
   rc: RestClient
   parent: Parent
 
-  constructor(parent: Parent) {
+  constructor (parent: Parent) {
     this.parent = parent
     this.rc = parent.rc
   }
 
-  path(): string {
+  path (): string {
     return `${this.parent.path()}/meetings-configuration`
   }
 
-  assistants(): Assistants {
+  assistants (): Assistants {
     return new Assistants(this)
   }
 
-  assisted(): Assisted {
+  assisted (): Assisted {
     return new Assisted(this)
   }
 }

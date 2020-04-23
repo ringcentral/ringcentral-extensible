@@ -6,12 +6,12 @@ class Revoke {
   rc: RestClient
   parent: Parent
 
-  constructor(parent: Parent) {
+  constructor (parent: Parent) {
     this.parent = parent
     this.rc = parent.rc
   }
 
-  path(): string {
+  path (): string {
     return `${this.parent.path()}/revoke`
   }
 
@@ -19,7 +19,7 @@ class Revoke {
    * Operation: Revoke Token
    * Http post /restapi/oauth/revoke
    */
-  async post(revokeTokenRequest: RevokeTokenRequest): Promise<string> {
+  async post (revokeTokenRequest: RevokeTokenRequest): Promise<string> {
     return this.rc.post(this.path(), revokeTokenRequest)
   }
 }

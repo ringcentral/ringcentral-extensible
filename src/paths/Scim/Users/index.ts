@@ -8,13 +8,13 @@ class Users {
   id: (string | null)
   parent: Parent
 
-  constructor(parent: Parent, id: (string | null) = null) {
+  constructor (parent: Parent, id: (string | null) = null) {
     this.parent = parent
     this.rc = parent.rc
     this.id = id
   }
 
-  path(withParameter: boolean = true): string {
+  path (withParameter: boolean = true): string {
     if (withParameter && this.id !== null) {
       return `${this.parent.path()}/Users/${this.id}`
     }
@@ -26,7 +26,7 @@ class Users {
    * Operation: Search/List Users
    * Http get /scim/v2/Users
    */
-  async list(queryParams?: SearchViaGet2Parameters): Promise<UserSearchResponse> {
+  async list (queryParams?: SearchViaGet2Parameters): Promise<UserSearchResponse> {
     return this.rc.get(this.path(false), queryParams)
   }
 
@@ -34,7 +34,7 @@ class Users {
    * Operation: Create User
    * Http post /scim/v2/Users
    */
-  async post(createUser: CreateUser): Promise<UserResponse> {
+  async post (createUser: CreateUser): Promise<UserResponse> {
     return this.rc.post(this.path(false), createUser)
   }
 
@@ -42,7 +42,7 @@ class Users {
    * Operation: Get User
    * Http get /scim/v2/Users/{id}
    */
-  async get(): Promise<UserResponse> {
+  async get (): Promise<UserResponse> {
     if (this.id === null) {
       throw new Error('id must be specified.')
     }
@@ -54,7 +54,7 @@ class Users {
    * Operation: Update/Replace User
    * Http put /scim/v2/Users/{id}
    */
-  async put(user: User): Promise<UserResponse> {
+  async put (user: User): Promise<UserResponse> {
     if (this.id === null) {
       throw new Error('id must be specified.')
     }
@@ -66,7 +66,7 @@ class Users {
    * Operation: Delete User
    * Http delete /scim/v2/Users/{id}
    */
-  async delete(): Promise<string> {
+  async delete (): Promise<string> {
     if (this.id === null) {
       throw new Error('id must be specified.')
     }
@@ -78,7 +78,7 @@ class Users {
    * Operation: Update/Patch User
    * Http patch /scim/v2/Users/{id}
    */
-  async patch(userPatch: UserPatch): Promise<UserResponse> {
+  async patch (userPatch: UserPatch): Promise<UserResponse> {
     if (this.id === null) {
       throw new Error('id must be specified.')
     }
@@ -86,7 +86,7 @@ class Users {
     return this.rc.patch(this.path(), userPatch)
   }
 
-  dotSearch(): DotSearch {
+  dotSearch (): DotSearch {
     return new DotSearch(this)
   }
 }

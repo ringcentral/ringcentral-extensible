@@ -6,12 +6,12 @@ class CallerId {
   rc: RestClient
   parent: Parent
 
-  constructor(parent: Parent) {
+  constructor (parent: Parent) {
     this.parent = parent
     this.rc = parent.rc
   }
 
-  path(): string {
+  path (): string {
     return `${this.parent.path()}/caller-id`
   }
 
@@ -19,7 +19,7 @@ class CallerId {
    * Operation: Get Extension Caller ID
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-id
    */
-  async get(): Promise<ExtensionCallerIdInfo> {
+  async get (): Promise<ExtensionCallerIdInfo> {
     return this.rc.get(this.path())
   }
 
@@ -27,7 +27,7 @@ class CallerId {
    * Operation: Update Extension Caller ID
    * Http put /restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-id
    */
-  async put(extensionCallerIdInfo: ExtensionCallerIdInfo): Promise<ExtensionCallerIdInfo> {
+  async put (extensionCallerIdInfo: ExtensionCallerIdInfo): Promise<ExtensionCallerIdInfo> {
     return this.rc.put(this.path(), extensionCallerIdInfo)
   }
 }

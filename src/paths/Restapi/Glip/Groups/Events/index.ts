@@ -6,12 +6,12 @@ class Events {
   rc: RestClient
   parent: Parent
 
-  constructor(parent: Parent) {
+  constructor (parent: Parent) {
     this.parent = parent
     this.rc = parent.rc
   }
 
-  path(): string {
+  path (): string {
     return `${this.parent.path()}/events`
   }
 
@@ -19,7 +19,7 @@ class Events {
    * Operation: Create Event by Group ID
    * Http post /restapi/v1.0/glip/groups/{groupId}/events
    */
-  async post(glipEventCreate: GlipEventCreate): Promise<GlipEventInfo> {
+  async post (glipEventCreate: GlipEventCreate): Promise<GlipEventInfo> {
     return this.rc.post(this.path(), glipEventCreate)
   }
 
@@ -27,7 +27,7 @@ class Events {
    * Operation: Get Group Events
    * Http get /restapi/v1.0/glip/groups/{groupId}/events
    */
-  async get(): Promise<GlipEventInfo> {
+  async get (): Promise<GlipEventInfo> {
     return this.rc.get(this.path())
   }
 }

@@ -12,40 +12,40 @@ class Dictionary {
   rc: RestClient
   parent: Parent
 
-  constructor(parent: Parent) {
+  constructor (parent: Parent) {
     this.parent = parent
     this.rc = parent.rc
   }
 
-  path(): string {
+  path (): string {
     return `${this.parent.path()}/dictionary`
   }
 
-  faxCoverPage(): FaxCoverPage {
+  faxCoverPage (): FaxCoverPage {
     return new FaxCoverPage(this)
   }
 
-  greeting(greetingId: (string | null) = null): Greeting {
+  greeting (greetingId: (string | null) = null): Greeting {
     return new Greeting(this, greetingId)
   }
 
-  language(languageId: (string | null) = null): Language {
+  language (languageId: (string | null) = null): Language {
     return new Language(this, languageId)
   }
 
-  country(countryId: (string | null) = null): Country {
+  country (countryId: (string | null) = null): Country {
     return new Country(this, countryId)
   }
 
-  location(): Location {
+  location (): Location {
     return new Location(this)
   }
 
-  state(stateId: (string | null) = null): State {
+  state (stateId: (string | null) = null): State {
     return new State(this, stateId)
   }
 
-  timezone(timezoneId: (string | null) = null): Timezone {
+  timezone (timezoneId: (string | null) = null): Timezone {
     return new Timezone(this, timezoneId)
   }
 }

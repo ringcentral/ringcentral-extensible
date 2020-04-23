@@ -36,13 +36,13 @@ class Account {
   accountId: (string | null)
   parent: Parent
 
-  constructor(parent: Parent, accountId: (string | null) = '~') {
+  constructor (parent: Parent, accountId: (string | null) = '~') {
     this.parent = parent
     this.rc = parent.rc
     this.accountId = accountId
   }
 
-  path(withParameter: boolean = true): string {
+  path (withParameter: boolean = true): string {
     if (withParameter && this.accountId !== null) {
       return `${this.parent.path()}/account/${this.accountId}`
     }
@@ -54,7 +54,7 @@ class Account {
    * Operation: Get Account Info
    * Http get /restapi/v1.0/account/{accountId}
    */
-  async get(): Promise<GetAccountInfoResponse> {
+  async get (): Promise<GetAccountInfoResponse> {
     if (this.accountId === null) {
       throw new Error('accountId must be specified.')
     }
@@ -62,119 +62,119 @@ class Account {
     return this.rc.get(this.path())
   }
 
-  extension(extensionId: (string | null) = '~'): Extension {
+  extension (extensionId: (string | null) = '~'): Extension {
     return new Extension(this, extensionId)
   }
 
-  callLog(callRecordId: (string | null) = null): CallLog {
+  callLog (callRecordId: (string | null) = null): CallLog {
     return new CallLog(this, callRecordId)
   }
 
-  callLogSync(): CallLogSync {
+  callLogSync (): CallLogSync {
     return new CallLogSync(this)
   }
 
-  activeCalls(): ActiveCalls {
+  activeCalls (): ActiveCalls {
     return new ActiveCalls(this)
   }
 
-  recording(recordingId: (string | null) = null): Recording {
+  recording (recordingId: (string | null) = null): Recording {
     return new Recording(this, recordingId)
   }
 
-  messageStoreConfiguration(): MessageStoreConfiguration {
+  messageStoreConfiguration (): MessageStoreConfiguration {
     return new MessageStoreConfiguration(this)
   }
 
-  directory(): Directory {
+  directory (): Directory {
     return new Directory(this)
   }
 
-  presence(): Presence {
+  presence (): Presence {
     return new Presence(this)
   }
 
-  businessHours(): BusinessHours {
+  businessHours (): BusinessHours {
     return new BusinessHours(this)
   }
 
-  answeringRule(ruleId: (string | null) = null): AnsweringRule {
+  answeringRule (ruleId: (string | null) = null): AnsweringRule {
     return new AnsweringRule(this, ruleId)
   }
 
-  greeting(): Greeting {
+  greeting (): Greeting {
     return new Greeting(this)
   }
 
-  ivrPrompts(promptId: (string | null) = null): IvrPrompts {
+  ivrPrompts (promptId: (string | null) = null): IvrPrompts {
     return new IvrPrompts(this, promptId)
   }
 
-  ivrMenus(ivrMenuId: (string | null) = null): IvrMenus {
+  ivrMenus (ivrMenuId: (string | null) = null): IvrMenus {
     return new IvrMenus(this, ivrMenuId)
   }
 
-  callRecording(): CallRecording {
+  callRecording (): CallRecording {
     return new CallRecording(this)
   }
 
-  emergencyAddressAutoUpdate(): EmergencyAddressAutoUpdate {
+  emergencyAddressAutoUpdate (): EmergencyAddressAutoUpdate {
     return new EmergencyAddressAutoUpdate(this)
   }
 
-  emergencyLocations(locationId: (string | null) = null): EmergencyLocations {
+  emergencyLocations (locationId: (string | null) = null): EmergencyLocations {
     return new EmergencyLocations(this, locationId)
   }
 
-  businessAddress(): BusinessAddress {
+  businessAddress (): BusinessAddress {
     return new BusinessAddress(this)
   }
 
-  serviceInfo(): ServiceInfo {
+  serviceInfo (): ServiceInfo {
     return new ServiceInfo(this)
   }
 
-  phoneNumber(phoneNumberId: (string | null) = null): PhoneNumber {
+  phoneNumber (phoneNumberId: (string | null) = null): PhoneNumber {
     return new PhoneNumber(this, phoneNumberId)
   }
 
-  templates(templateId: (string | null) = null): Templates {
+  templates (templateId: (string | null) = null): Templates {
     return new Templates(this, templateId)
   }
 
-  callQueues(groupId: (string | null) = null): CallQueues {
+  callQueues (groupId: (string | null) = null): CallQueues {
     return new CallQueues(this, groupId)
   }
 
-  department(departmentId: (string | null) = null): Department {
+  department (departmentId: (string | null) = null): Department {
     return new Department(this, departmentId)
   }
 
-  pagingOnlyGroups(pagingOnlyGroupId: (string | null) = null): PagingOnlyGroups {
+  pagingOnlyGroups (pagingOnlyGroupId: (string | null) = null): PagingOnlyGroups {
     return new PagingOnlyGroups(this, pagingOnlyGroupId)
   }
 
-  callMonitoringGroups(groupId: (string | null) = null): CallMonitoringGroups {
+  callMonitoringGroups (groupId: (string | null) = null): CallMonitoringGroups {
     return new CallMonitoringGroups(this, groupId)
   }
 
-  device(deviceId: (string | null) = null): Device {
+  device (deviceId: (string | null) = null): Device {
     return new Device(this, deviceId)
   }
 
-  telephony(): Telephony {
+  telephony (): Telephony {
     return new Telephony(this)
   }
 
-  messageStoreReport(taskId: (string | null) = null): MessageStoreReport {
+  messageStoreReport (taskId: (string | null) = null): MessageStoreReport {
     return new MessageStoreReport(this, taskId)
   }
 
-  meetingRecordings(): MeetingRecordings {
+  meetingRecordings (): MeetingRecordings {
     return new MeetingRecordings(this)
   }
 
-  customFields(fieldId: (string | null) = null): CustomFields {
+  customFields (fieldId: (string | null) = null): CustomFields {
     return new CustomFields(this, fieldId)
   }
 }

@@ -8,13 +8,13 @@ class DataExport {
   taskId: (string | null)
   parent: Parent
 
-  constructor(parent: Parent, taskId: (string | null) = null) {
+  constructor (parent: Parent, taskId: (string | null) = null) {
     this.parent = parent
     this.rc = parent.rc
     this.taskId = taskId
   }
 
-  path(withParameter: boolean = true): string {
+  path (withParameter: boolean = true): string {
     if (withParameter && this.taskId !== null) {
       return `${this.parent.path()}/data-export/${this.taskId}`
     }
@@ -26,7 +26,7 @@ class DataExport {
    * Operation: Create Data Export Task
    * Http post /restapi/v1.0/glip/data-export
    */
-  async post(createDataExportTaskRequest: CreateDataExportTaskRequest): Promise<DataExportTask> {
+  async post (createDataExportTaskRequest: CreateDataExportTaskRequest): Promise<DataExportTask> {
     return this.rc.post(this.path(false), createDataExportTaskRequest)
   }
 
@@ -34,7 +34,7 @@ class DataExport {
    * Operation: Get Data Export Task List
    * Http get /restapi/v1.0/glip/data-export
    */
-  async list(queryParams?: ListDataExportTasksParameters): Promise<DataExportTaskList> {
+  async list (queryParams?: ListDataExportTasksParameters): Promise<DataExportTaskList> {
     return this.rc.get(this.path(false), queryParams)
   }
 
@@ -42,7 +42,7 @@ class DataExport {
    * Operation: Get Data Export Task
    * Http get /restapi/v1.0/glip/data-export/{taskId}
    */
-  async get(): Promise<DataExportTask> {
+  async get (): Promise<DataExportTask> {
     if (this.taskId === null) {
       throw new Error('taskId must be specified.')
     }
@@ -50,7 +50,7 @@ class DataExport {
     return this.rc.get(this.path())
   }
 
-  datasets(datasetId: (string | null) = null): Datasets {
+  datasets (datasetId: (string | null) = null): Datasets {
     return new Datasets(this, datasetId)
   }
 }

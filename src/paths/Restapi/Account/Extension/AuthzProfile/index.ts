@@ -7,12 +7,12 @@ class AuthzProfile {
   rc: RestClient
   parent: Parent
 
-  constructor(parent: Parent) {
+  constructor (parent: Parent) {
     this.parent = parent
     this.rc = parent.rc
   }
 
-  path(): string {
+  path (): string {
     return `${this.parent.path()}/authz-profile`
   }
 
@@ -20,11 +20,11 @@ class AuthzProfile {
    * Operation: Get Authorization Profile
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/authz-profile
    */
-  async get(): Promise<AuthProfileResource> {
+  async get (): Promise<AuthProfileResource> {
     return this.rc.get(this.path())
   }
 
-  check(): Check {
+  check (): Check {
     return new Check(this)
   }
 }

@@ -90,7 +90,7 @@ class ${R.last(routes)} {
     if (paramName) {
       code += `
 
-  constructor(${routes.length > 1 ? 'parent: Parent' : 'rc: RestClient'}, ${paramName}: (string | null) = ${defaultParamValue ? `'${defaultParamValue}'` : null}) {
+  constructor (${routes.length > 1 ? 'parent: Parent' : 'rc: RestClient'}, ${paramName}: (string | null) = ${defaultParamValue ? `'${defaultParamValue}'` : null}) {
     ${routes.length > 1 ? `this.parent = parent
     this.rc = parent.rc` : 'this.rc = rc'}
     this.${paramName} = ${paramName}
@@ -98,7 +98,7 @@ class ${R.last(routes)} {
     } else {
       code += `
 
-  constructor(${routes.length > 1 ? 'parent: Parent' : 'rc: RestClient'}) {
+  constructor (${routes.length > 1 ? 'parent: Parent' : 'rc: RestClient'}) {
     ${routes.length > 1 ? `this.parent = parent
     this.rc = parent.rc` : 'this.rc = rc'}
   }`
@@ -111,7 +111,7 @@ class ${R.last(routes)} {
     if (paramName) {
       code += `
 
-  path(withParameter: boolean = true): string {
+  path (withParameter: boolean = true): string {
     if (withParameter && this.${paramName} !== null) {
       return \`${routes.length > 1 ? '$' + '{this.parent.path()}' : ''}/${name}/\${this.${paramName}}\`
     }
@@ -121,7 +121,7 @@ class ${R.last(routes)} {
     } else {
       code += `
 
-  path(): string {
+  path (): string {
     return ${routes.length > 1 ? '`$' + '{this.parent.path()}' : '`'}/${name.replace('dotSearch', '.search')}\`
   }`
     }
@@ -210,7 +210,7 @@ class ${R.last(routes)} {
    * Operation: ${operation.detail.summary || titleCase(operation.detail.operationId)}
    * Http ${operation.method} ${operation.endpoint}
    */
-  async ${smartMethod}(${methodParams.join(', ')}): Promise<${responseType}> {${withParam ? `
+  async ${smartMethod} (${methodParams.join(', ')}): Promise<${responseType}> {${withParam ? `
     if (this.${paramName} === null) {
       throw new Error('${paramName} must be specified.')
     }
@@ -242,7 +242,7 @@ class ${R.last(routes)} {
 
     if (routes.length > 1) {
       patchSrcFile(['paths', ...R.init(routes), 'index.ts'], [`import ${R.last(routes)} from './${R.last(routes)}'`], `
-  ${lowerCaseFirst(R.last(routes))}(${paramName ? `${paramName}: (string | null) = ${defaultParamValue ? `'${defaultParamValue}'` : 'null'}` : ''}): ${R.last(routes)} {
+  ${lowerCaseFirst(R.last(routes))} (${paramName ? `${paramName}: (string | null) = ${defaultParamValue ? `'${defaultParamValue}'` : 'null'}` : ''}): ${R.last(routes)} {
     return new ${R.last(routes)}(this${paramName ? `, ${paramName}` : ''})
   }
 `.trim())

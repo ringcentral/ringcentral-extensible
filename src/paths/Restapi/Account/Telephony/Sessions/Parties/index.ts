@@ -20,13 +20,13 @@ class Parties {
   partyId: (string | null)
   parent: Parent
 
-  constructor(parent: Parent, partyId: (string | null) = null) {
+  constructor (parent: Parent, partyId: (string | null) = null) {
     this.parent = parent
     this.rc = parent.rc
     this.partyId = partyId
   }
 
-  path(withParameter: boolean = true): string {
+  path (withParameter: boolean = true): string {
     if (withParameter && this.partyId !== null) {
       return `${this.parent.path()}/parties/${this.partyId}`
     }
@@ -38,7 +38,7 @@ class Parties {
    * Operation: Get Call Party Status
    * Http get /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}
    */
-  async get(): Promise<CallParty> {
+  async get (): Promise<CallParty> {
     if (this.partyId === null) {
       throw new Error('partyId must be specified.')
     }
@@ -50,7 +50,7 @@ class Parties {
    * Operation: Update Call Party
    * Http patch /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}
    */
-  async patch(partyUpdateRequest: PartyUpdateRequest): Promise<CallParty> {
+  async patch (partyUpdateRequest: PartyUpdateRequest): Promise<CallParty> {
     if (this.partyId === null) {
       throw new Error('partyId must be specified.')
     }
@@ -58,55 +58,55 @@ class Parties {
     return this.rc.patch(this.path(), partyUpdateRequest)
   }
 
-  hold(): Hold {
+  hold (): Hold {
     return new Hold(this)
   }
 
-  unhold(): Unhold {
+  unhold (): Unhold {
     return new Unhold(this)
   }
 
-  reject(): Reject {
+  reject (): Reject {
     return new Reject(this)
   }
 
-  ignore(): Ignore {
+  ignore (): Ignore {
     return new Ignore(this)
   }
 
-  transfer(): Transfer {
+  transfer (): Transfer {
     return new Transfer(this)
   }
 
-  answer(): Answer {
+  answer (): Answer {
     return new Answer(this)
   }
 
-  pickup(): Pickup {
+  pickup (): Pickup {
     return new Pickup(this)
   }
 
-  forward(): Forward {
+  forward (): Forward {
     return new Forward(this)
   }
 
-  reply(): Reply {
+  reply (): Reply {
     return new Reply(this)
   }
 
-  flip(): Flip {
+  flip (): Flip {
     return new Flip(this)
   }
 
-  park(): Park {
+  park (): Park {
     return new Park(this)
   }
 
-  recordings(recordingId: (string | null) = null): Recordings {
+  recordings (recordingId: (string | null) = null): Recordings {
     return new Recordings(this, recordingId)
   }
 
-  supervise(): Supervise {
+  supervise (): Supervise {
     return new Supervise(this)
   }
 }

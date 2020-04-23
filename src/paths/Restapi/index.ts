@@ -13,12 +13,12 @@ class Restapi {
   rc: RestClient
   apiVersion: (string | null)
 
-  constructor(rc: RestClient, apiVersion: (string | null) = 'v1.0') {
+  constructor (rc: RestClient, apiVersion: (string | null) = 'v1.0') {
     this.rc = rc
     this.apiVersion = apiVersion
   }
 
-  path(withParameter: boolean = true): string {
+  path (withParameter: boolean = true): string {
     if (withParameter && this.apiVersion !== null) {
       return `/restapi/${this.apiVersion}`
     }
@@ -30,7 +30,7 @@ class Restapi {
    * Operation: Get API Versions
    * Http get /restapi
    */
-  async list(): Promise<GetVersionsResponse> {
+  async list (): Promise<GetVersionsResponse> {
     return this.rc.get(this.path(false))
   }
 
@@ -38,7 +38,7 @@ class Restapi {
    * Operation: Get Version Info
    * Http get /restapi/{apiVersion}
    */
-  async get(): Promise<GetVersionResponse> {
+  async get (): Promise<GetVersionResponse> {
     if (this.apiVersion === null) {
       throw new Error('apiVersion must be specified.')
     }
@@ -46,35 +46,35 @@ class Restapi {
     return this.rc.get(this.path())
   }
 
-  oauth(): Oauth {
+  oauth (): Oauth {
     return new Oauth(this)
   }
 
-  status(): Status {
+  status (): Status {
     return new Status(this)
   }
 
-  account(accountId: (string | null) = '~'): Account {
+  account (accountId: (string | null) = '~'): Account {
     return new Account(this, accountId)
   }
 
-  dictionary(): Dictionary {
+  dictionary (): Dictionary {
     return new Dictionary(this)
   }
 
-  glip(): Glip {
+  glip (): Glip {
     return new Glip(this)
   }
 
-  subscription(subscriptionId: (string | null) = null): Subscription {
+  subscription (subscriptionId: (string | null) = null): Subscription {
     return new Subscription(this, subscriptionId)
   }
 
-  clientInfo(): ClientInfo {
+  clientInfo (): ClientInfo {
     return new ClientInfo(this)
   }
 
-  numberParser(): NumberParser {
+  numberParser (): NumberParser {
     return new NumberParser(this)
   }
 }

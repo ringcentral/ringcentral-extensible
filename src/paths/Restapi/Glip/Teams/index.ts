@@ -13,13 +13,13 @@ class Teams {
   chatId: (string | null)
   parent: Parent
 
-  constructor(parent: Parent, chatId: (string | null) = null) {
+  constructor (parent: Parent, chatId: (string | null) = null) {
     this.parent = parent
     this.rc = parent.rc
     this.chatId = chatId
   }
 
-  path(withParameter: boolean = true): string {
+  path (withParameter: boolean = true): string {
     if (withParameter && this.chatId !== null) {
       return `${this.parent.path()}/teams/${this.chatId}`
     }
@@ -31,7 +31,7 @@ class Teams {
    * Operation: Get Teams
    * Http get /restapi/v1.0/glip/teams
    */
-  async list(queryParams?: ListGlipTeamsParameters): Promise<GlipTeamsList> {
+  async list (queryParams?: ListGlipTeamsParameters): Promise<GlipTeamsList> {
     return this.rc.get(this.path(false), queryParams)
   }
 
@@ -39,7 +39,7 @@ class Teams {
    * Operation: Create Team
    * Http post /restapi/v1.0/glip/teams
    */
-  async post(glipPostTeamBody: GlipPostTeamBody): Promise<GlipTeamInfo> {
+  async post (glipPostTeamBody: GlipPostTeamBody): Promise<GlipTeamInfo> {
     return this.rc.post(this.path(false), glipPostTeamBody)
   }
 
@@ -47,7 +47,7 @@ class Teams {
    * Operation: Get Team
    * Http get /restapi/v1.0/glip/teams/{chatId}
    */
-  async get(): Promise<GlipTeamInfo> {
+  async get (): Promise<GlipTeamInfo> {
     if (this.chatId === null) {
       throw new Error('chatId must be specified.')
     }
@@ -59,7 +59,7 @@ class Teams {
    * Operation: Update Team
    * Http patch /restapi/v1.0/glip/teams/{chatId}
    */
-  async patch(glipPatchTeamBody: GlipPatchTeamBody): Promise<GlipTeamInfo> {
+  async patch (glipPatchTeamBody: GlipPatchTeamBody): Promise<GlipTeamInfo> {
     if (this.chatId === null) {
       throw new Error('chatId must be specified.')
     }
@@ -71,7 +71,7 @@ class Teams {
    * Operation: Delete Team
    * Http delete /restapi/v1.0/glip/teams/{chatId}
    */
-  async delete(): Promise<string> {
+  async delete (): Promise<string> {
     if (this.chatId === null) {
       throw new Error('chatId must be specified.')
     }
@@ -79,27 +79,27 @@ class Teams {
     return this.rc.delete(this.path())
   }
 
-  join(): Join {
+  join (): Join {
     return new Join(this)
   }
 
-  leave(): Leave {
+  leave (): Leave {
     return new Leave(this)
   }
 
-  add(): Add {
+  add (): Add {
     return new Add(this)
   }
 
-  remove(): Remove {
+  remove (): Remove {
     return new Remove(this)
   }
 
-  archive(): Archive {
+  archive (): Archive {
     return new Archive(this)
   }
 
-  unarchive(): Unarchive {
+  unarchive (): Unarchive {
     return new Unarchive(this)
   }
 }

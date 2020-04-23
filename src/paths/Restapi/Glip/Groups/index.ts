@@ -11,13 +11,13 @@ class Groups {
   groupId: (string | null)
   parent: Parent
 
-  constructor(parent: Parent, groupId: (string | null) = null) {
+  constructor (parent: Parent, groupId: (string | null) = null) {
     this.parent = parent
     this.rc = parent.rc
     this.groupId = groupId
   }
 
-  path(withParameter: boolean = true): string {
+  path (withParameter: boolean = true): string {
     if (withParameter && this.groupId !== null) {
       return `${this.parent.path()}/groups/${this.groupId}`
     }
@@ -29,7 +29,7 @@ class Groups {
    * Operation: Get User Groups
    * Http get /restapi/v1.0/glip/groups
    */
-  async list(queryParams?: ListGlipGroupsParameters): Promise<GlipGroupList> {
+  async list (queryParams?: ListGlipGroupsParameters): Promise<GlipGroupList> {
     return this.rc.get(this.path(false), queryParams)
   }
 
@@ -37,7 +37,7 @@ class Groups {
    * Operation: Create Group
    * Http post /restapi/v1.0/glip/groups
    */
-  async post(glipCreateGroup: GlipCreateGroup): Promise<GlipGroupInfo> {
+  async post (glipCreateGroup: GlipCreateGroup): Promise<GlipGroupInfo> {
     return this.rc.post(this.path(false), glipCreateGroup)
   }
 
@@ -45,7 +45,7 @@ class Groups {
    * Operation: Get Group
    * Http get /restapi/v1.0/glip/groups/{groupId}
    */
-  async get(): Promise<GlipGroupInfo> {
+  async get (): Promise<GlipGroupInfo> {
     if (this.groupId === null) {
       throw new Error('groupId must be specified.')
     }
@@ -53,19 +53,19 @@ class Groups {
     return this.rc.get(this.path())
   }
 
-  posts(postId: (string | null) = null): Posts {
+  posts (postId: (string | null) = null): Posts {
     return new Posts(this, postId)
   }
 
-  events(): Events {
+  events (): Events {
     return new Events(this)
   }
 
-  webhooks(): Webhooks {
+  webhooks (): Webhooks {
     return new Webhooks(this)
   }
 
-  bulkAssign(): BulkAssign {
+  bulkAssign (): BulkAssign {
     return new BulkAssign(this)
   }
 }

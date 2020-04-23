@@ -6,12 +6,12 @@ class CallQueues {
   rc: RestClient
   parent: Parent
 
-  constructor(parent: Parent) {
+  constructor (parent: Parent) {
     this.parent = parent
     this.rc = parent.rc
   }
 
-  path(): string {
+  path (): string {
     return `${this.parent.path()}/call-queues`
   }
 
@@ -19,7 +19,7 @@ class CallQueues {
    * Operation: Update User Call Queues
    * Http put /restapi/v1.0/account/{accountId}/extension/{extensionId}/call-queues
    */
-  async put(userCallQueues: UserCallQueues): Promise<UserCallQueues> {
+  async put (userCallQueues: UserCallQueues): Promise<UserCallQueues> {
     return this.rc.put(this.path(), userCallQueues)
   }
 }

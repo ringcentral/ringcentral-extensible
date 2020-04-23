@@ -7,13 +7,13 @@ class Switches {
   switchId: (string | null)
   parent: Parent
 
-  constructor(parent: Parent, switchId: (string | null) = null) {
+  constructor (parent: Parent, switchId: (string | null) = null) {
     this.parent = parent
     this.rc = parent.rc
     this.switchId = switchId
   }
 
-  path(withParameter: boolean = true): string {
+  path (withParameter: boolean = true): string {
     if (withParameter && this.switchId !== null) {
       return `${this.parent.path()}/switches/${this.switchId}`
     }
@@ -25,7 +25,7 @@ class Switches {
    * Operation: Get Account Switch List
    * Http get /restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches
    */
-  async list(queryParams?: ListAccountSwitchesParameters): Promise<SwitchesList> {
+  async list (queryParams?: ListAccountSwitchesParameters): Promise<SwitchesList> {
     return this.rc.get(this.path(false), queryParams)
   }
 
@@ -33,7 +33,7 @@ class Switches {
    * Operation: Create Switch
    * Http post /restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches
    */
-  async post(createSwitchInfo: CreateSwitchInfo): Promise<SwitchInfo> {
+  async post (createSwitchInfo: CreateSwitchInfo): Promise<SwitchInfo> {
     return this.rc.post(this.path(false), createSwitchInfo)
   }
 
@@ -41,7 +41,7 @@ class Switches {
    * Operation: Get Switch
    * Http get /restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches/{switchId}
    */
-  async get(): Promise<SwitchInfo> {
+  async get (): Promise<SwitchInfo> {
     if (this.switchId === null) {
       throw new Error('switchId must be specified.')
     }
@@ -53,7 +53,7 @@ class Switches {
    * Operation: Update Switch
    * Http put /restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches/{switchId}
    */
-  async put(updateSwitchInfo: UpdateSwitchInfo): Promise<SwitchInfo> {
+  async put (updateSwitchInfo: UpdateSwitchInfo): Promise<SwitchInfo> {
     if (this.switchId === null) {
       throw new Error('switchId must be specified.')
     }
@@ -65,7 +65,7 @@ class Switches {
    * Operation: Delete Switch
    * Http delete /restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches/{switchId}
    */
-  async delete(): Promise<string> {
+  async delete (): Promise<string> {
     if (this.switchId === null) {
       throw new Error('switchId must be specified.')
     }

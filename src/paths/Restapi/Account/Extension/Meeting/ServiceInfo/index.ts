@@ -6,12 +6,12 @@ class ServiceInfo {
   rc: RestClient
   parent: Parent
 
-  constructor(parent: Parent) {
+  constructor (parent: Parent) {
     this.parent = parent
     this.rc = parent.rc
   }
 
-  path(): string {
+  path (): string {
     return `${this.parent.path()}/service-info`
   }
 
@@ -19,7 +19,7 @@ class ServiceInfo {
    * Operation: Get Meeting Service Info
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/service-info
    */
-  async get(): Promise<MeetingServiceInfoResource> {
+  async get (): Promise<MeetingServiceInfoResource> {
     return this.rc.get(this.path())
   }
 
@@ -27,7 +27,7 @@ class ServiceInfo {
    * Operation: Update Meeting Service Info
    * Http patch /restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/service-info
    */
-  async patch(meetingServiceInfoRequest: MeetingServiceInfoRequest): Promise<MeetingServiceInfoResource> {
+  async patch (meetingServiceInfoRequest: MeetingServiceInfoRequest): Promise<MeetingServiceInfoResource> {
     return this.rc.patch(this.path(), meetingServiceInfoRequest)
   }
 }

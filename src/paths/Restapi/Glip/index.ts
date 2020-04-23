@@ -22,80 +22,80 @@ class Glip {
   rc: RestClient
   parent: Parent
 
-  constructor(parent: Parent) {
+  constructor (parent: Parent) {
     this.parent = parent
     this.rc = parent.rc
   }
 
-  path(): string {
+  path (): string {
     return `${this.parent.path()}/glip`
   }
 
-  chats(chatId: (string | null) = null): Chats {
+  chats (chatId: (string | null) = null): Chats {
     return new Chats(this, chatId)
   }
 
-  conversations(chatId: (string | null) = null): Conversations {
+  conversations (chatId: (string | null) = null): Conversations {
     return new Conversations(this, chatId)
   }
 
-  teams(chatId: (string | null) = null): Teams {
+  teams (chatId: (string | null) = null): Teams {
     return new Teams(this, chatId)
   }
 
-  everyone(): Everyone {
+  everyone (): Everyone {
     return new Everyone(this)
   }
 
-  recent(): Recent {
+  recent (): Recent {
     return new Recent(this)
   }
 
-  favorites(): Favorites {
+  favorites (): Favorites {
     return new Favorites(this)
   }
 
-  groups(groupId: (string | null) = null): Groups {
+  groups (groupId: (string | null) = null): Groups {
     return new Groups(this, groupId)
   }
 
-  cards(cardId: (string | null) = null): Cards {
+  cards (cardId: (string | null) = null): Cards {
     return new Cards(this, cardId)
   }
 
-  events(eventId: (string | null) = null): Events {
+  events (eventId: (string | null) = null): Events {
     return new Events(this, eventId)
   }
 
-  notes(noteId: (string | null) = null): Notes {
+  notes (noteId: (string | null) = null): Notes {
     return new Notes(this, noteId)
   }
 
-  tasks(taskId: (string | null) = null): Tasks {
+  tasks (taskId: (string | null) = null): Tasks {
     return new Tasks(this, taskId)
   }
 
-  persons(personId: (string | null) = null): Persons {
+  persons (personId: (string | null) = null): Persons {
     return new Persons(this, personId)
   }
 
-  companies(companyId: (string | null) = null): Companies {
+  companies (companyId: (string | null) = null): Companies {
     return new Companies(this, companyId)
   }
 
-  webhooks(webhookId: (string | null) = null): Webhooks {
+  webhooks (webhookId: (string | null) = null): Webhooks {
     return new Webhooks(this, webhookId)
   }
 
-  preferences(): Preferences {
+  preferences (): Preferences {
     return new Preferences(this)
   }
 
-  posts(): Posts {
+  posts (): Posts {
     return new Posts(this)
   }
 
-  dataExport(taskId: (string | null) = null): DataExport {
+  dataExport (taskId: (string | null) = null): DataExport {
     return new DataExport(this, taskId)
   }
 }

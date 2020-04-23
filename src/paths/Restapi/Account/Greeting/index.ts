@@ -7,12 +7,12 @@ class Greeting {
   rc: RestClient
   parent: Parent
 
-  constructor(parent: Parent) {
+  constructor (parent: Parent) {
     this.parent = parent
     this.rc = parent.rc
   }
 
-  path(): string {
+  path (): string {
     return `${this.parent.path()}/greeting`
   }
 
@@ -20,7 +20,7 @@ class Greeting {
    * Operation: Create Company Greeting
    * Http post /restapi/v1.0/account/{accountId}/greeting
    */
-  async post(createCompanyGreetingRequest: CreateCompanyGreetingRequest): Promise<CustomCompanyGreetingInfo> {
+  async post (createCompanyGreetingRequest: CreateCompanyGreetingRequest): Promise<CustomCompanyGreetingInfo> {
     var formData = Utils.getFormData(createCompanyGreetingRequest)
     return this.rc.post(this.path(), formData, undefined, formData.getHeaders())
   }

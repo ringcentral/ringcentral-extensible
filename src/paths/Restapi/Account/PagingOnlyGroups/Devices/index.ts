@@ -6,12 +6,12 @@ class Devices {
   rc: RestClient
   parent: Parent
 
-  constructor(parent: Parent) {
+  constructor (parent: Parent) {
     this.parent = parent
     this.rc = parent.rc
   }
 
-  path(): string {
+  path (): string {
     return `${this.parent.path()}/devices`
   }
 
@@ -19,7 +19,7 @@ class Devices {
    * Operation: Get Paging Group Devices
    * Http get /restapi/v1.0/account/{accountId}/paging-only-groups/{pagingOnlyGroupId}/devices
    */
-  async get(queryParams?: ListPagingGroupDevicesParameters): Promise<PagingOnlyGroupDevices> {
+  async get (queryParams?: ListPagingGroupDevicesParameters): Promise<PagingOnlyGroupDevices> {
     return this.rc.get(this.path(), queryParams)
   }
 }

@@ -6,12 +6,12 @@ class Preferences {
   rc: RestClient
   parent: Parent
 
-  constructor(parent: Parent) {
+  constructor (parent: Parent) {
     this.parent = parent
     this.rc = parent.rc
   }
 
-  path(): string {
+  path (): string {
     return `${this.parent.path()}/preferences`
   }
 
@@ -19,7 +19,7 @@ class Preferences {
    * Operation: Get Preferences
    * Http get /restapi/v1.0/glip/preferences
    */
-  async get(): Promise<GlipPreferencesInfo> {
+  async get (): Promise<GlipPreferencesInfo> {
     return this.rc.get(this.path())
   }
 }

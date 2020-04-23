@@ -9,13 +9,13 @@ class IvrPrompts {
   promptId: (string | null)
   parent: Parent
 
-  constructor(parent: Parent, promptId: (string | null) = null) {
+  constructor (parent: Parent, promptId: (string | null) = null) {
     this.parent = parent
     this.rc = parent.rc
     this.promptId = promptId
   }
 
-  path(withParameter: boolean = true): string {
+  path (withParameter: boolean = true): string {
     if (withParameter && this.promptId !== null) {
       return `${this.parent.path()}/ivr-prompts/${this.promptId}`
     }
@@ -27,7 +27,7 @@ class IvrPrompts {
    * Operation: Create IVR Prompts
    * Http post /restapi/v1.0/account/{accountId}/ivr-prompts
    */
-  async post(createIVRPromptRequest: CreateIvrPromptRequest): Promise<PromptInfo> {
+  async post (createIVRPromptRequest: CreateIvrPromptRequest): Promise<PromptInfo> {
     var formData = Utils.getFormData(createIVRPromptRequest)
     return this.rc.post(this.path(false), formData, undefined, formData.getHeaders())
   }
@@ -36,7 +36,7 @@ class IvrPrompts {
    * Operation: Get IVR Prompt List
    * Http get /restapi/v1.0/account/{accountId}/ivr-prompts
    */
-  async list(): Promise<IVRPrompts> {
+  async list (): Promise<IVRPrompts> {
     return this.rc.get(this.path(false))
   }
 
@@ -44,7 +44,7 @@ class IvrPrompts {
    * Operation: Get IVR Prompt
    * Http get /restapi/v1.0/account/{accountId}/ivr-prompts/{promptId}
    */
-  async get(): Promise<PromptInfo> {
+  async get (): Promise<PromptInfo> {
     if (this.promptId === null) {
       throw new Error('promptId must be specified.')
     }
@@ -56,7 +56,7 @@ class IvrPrompts {
    * Operation: Delete IVR Prompt
    * Http delete /restapi/v1.0/account/{accountId}/ivr-prompts/{promptId}
    */
-  async delete(): Promise<string> {
+  async delete (): Promise<string> {
     if (this.promptId === null) {
       throw new Error('promptId must be specified.')
     }
@@ -68,7 +68,7 @@ class IvrPrompts {
    * Operation: Update IVR Prompt
    * Http put /restapi/v1.0/account/{accountId}/ivr-prompts/{promptId}
    */
-  async put(updateIVRPromptRequest: UpdateIVRPromptRequest): Promise<PromptInfo> {
+  async put (updateIVRPromptRequest: UpdateIVRPromptRequest): Promise<PromptInfo> {
     if (this.promptId === null) {
       throw new Error('promptId must be specified.')
     }
@@ -76,7 +76,7 @@ class IvrPrompts {
     return this.rc.put(this.path(), updateIVRPromptRequest)
   }
 
-  content(): Content {
+  content (): Content {
     return new Content(this)
   }
 }

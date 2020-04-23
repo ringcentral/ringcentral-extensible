@@ -9,13 +9,13 @@ class PagingOnlyGroups {
   pagingOnlyGroupId: (string | null)
   parent: Parent
 
-  constructor(parent: Parent, pagingOnlyGroupId: (string | null) = null) {
+  constructor (parent: Parent, pagingOnlyGroupId: (string | null) = null) {
     this.parent = parent
     this.rc = parent.rc
     this.pagingOnlyGroupId = pagingOnlyGroupId
   }
 
-  path(withParameter: boolean = true): string {
+  path (withParameter: boolean = true): string {
     if (withParameter && this.pagingOnlyGroupId !== null) {
       return `${this.parent.path()}/paging-only-groups/${this.pagingOnlyGroupId}`
     }
@@ -23,15 +23,15 @@ class PagingOnlyGroups {
     return `${this.parent.path()}/paging-only-groups`
   }
 
-  users(): Users {
+  users (): Users {
     return new Users(this)
   }
 
-  devices(): Devices {
+  devices (): Devices {
     return new Devices(this)
   }
 
-  bulkAssign(): BulkAssign {
+  bulkAssign (): BulkAssign {
     return new BulkAssign(this)
   }
 }

@@ -5,12 +5,12 @@ class MessageStoreConfiguration {
   rc: RestClient
   parent: Parent
 
-  constructor(parent: Parent) {
+  constructor (parent: Parent) {
     this.parent = parent
     this.rc = parent.rc
   }
 
-  path(): string {
+  path (): string {
     return `${this.parent.path()}/message-store-configuration`
   }
 
@@ -18,7 +18,7 @@ class MessageStoreConfiguration {
    * Operation: Get Message Store Configuration
    * Http get /restapi/v1.0/account/{accountId}/message-store-configuration
    */
-  async get(): Promise<MessageStoreConfiguration> {
+  async get (): Promise<MessageStoreConfiguration> {
     return this.rc.get(this.path())
   }
 
@@ -26,7 +26,7 @@ class MessageStoreConfiguration {
    * Operation: Update Message Store Configuration
    * Http put /restapi/v1.0/account/{accountId}/message-store-configuration
    */
-  async put(messageStoreConfiguration: MessageStoreConfiguration): Promise<MessageStoreConfiguration> {
+  async put (messageStoreConfiguration: MessageStoreConfiguration): Promise<MessageStoreConfiguration> {
     return this.rc.put(this.path(), messageStoreConfiguration)
   }
 }

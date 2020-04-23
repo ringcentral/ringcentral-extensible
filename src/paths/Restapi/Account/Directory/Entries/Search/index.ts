@@ -6,12 +6,12 @@ class Search {
   rc: RestClient
   parent: Parent
 
-  constructor(parent: Parent) {
+  constructor (parent: Parent) {
     this.parent = parent
     this.rc = parent.rc
   }
 
-  path(): string {
+  path (): string {
     return `${this.parent.path()}/search`
   }
 
@@ -19,7 +19,7 @@ class Search {
    * Operation: Search Company Directory Entries
    * Http post /restapi/v1.0/account/{accountId}/directory/entries/search
    */
-  async post(searchDirectoryEntriesRequest: SearchDirectoryEntriesRequest): Promise<DirectoryResource> {
+  async post (searchDirectoryEntriesRequest: SearchDirectoryEntriesRequest): Promise<DirectoryResource> {
     return this.rc.post(this.path(), searchDirectoryEntriesRequest)
   }
 }

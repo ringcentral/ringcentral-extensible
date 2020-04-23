@@ -6,12 +6,12 @@ class MessageSync {
   rc: RestClient
   parent: Parent
 
-  constructor(parent: Parent) {
+  constructor (parent: Parent) {
     this.parent = parent
     this.rc = parent.rc
   }
 
-  path(): string {
+  path (): string {
     return `${this.parent.path()}/message-sync`
   }
 
@@ -19,7 +19,7 @@ class MessageSync {
    * Operation: Sync Messages
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/message-sync
    */
-  async get(queryParams?: SyncMessagesParameters): Promise<GetMessageSyncResponse> {
+  async get (queryParams?: SyncMessagesParameters): Promise<GetMessageSyncResponse> {
     return this.rc.get(this.path(), queryParams)
   }
 }

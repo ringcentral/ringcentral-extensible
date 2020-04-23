@@ -6,12 +6,12 @@ class Everyone {
   rc: RestClient
   parent: Parent
 
-  constructor(parent: Parent) {
+  constructor (parent: Parent) {
     this.parent = parent
     this.rc = parent.rc
   }
 
-  path(): string {
+  path (): string {
     return `${this.parent.path()}/everyone`
   }
 
@@ -19,7 +19,7 @@ class Everyone {
    * Operation: Get Everyone Chat
    * Http get /restapi/v1.0/glip/everyone
    */
-  async get(): Promise<GlipEveryoneInfo> {
+  async get (): Promise<GlipEveryoneInfo> {
     return this.rc.get(this.path())
   }
 
@@ -27,7 +27,7 @@ class Everyone {
    * Operation: Update Everyone Сhat
    * Http patch /restapi/v1.0/glip/everyone
    */
-  async patch(updateGlipEveryoneRequest: UpdateGlipEveryoneRequest): Promise<GlipEveryoneInfo> {
+  async patch (updateGlipEveryoneRequest: UpdateGlipEveryoneRequest): Promise<GlipEveryoneInfo> {
     return this.rc.patch(this.path(), updateGlipEveryoneRequest)
   }
 }

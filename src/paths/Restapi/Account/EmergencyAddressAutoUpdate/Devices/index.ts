@@ -7,12 +7,12 @@ class Devices {
   rc: RestClient
   parent: Parent
 
-  constructor(parent: Parent) {
+  constructor (parent: Parent) {
     this.parent = parent
     this.rc = parent.rc
   }
 
-  path(): string {
+  path (): string {
     return `${this.parent.path()}/devices`
   }
 
@@ -20,11 +20,11 @@ class Devices {
    * Operation: Get Device List
    * Http get /restapi/v1.0/account/{accountId}/emergency-address-auto-update/devices
    */
-  async get(queryParams?: ListDevicesAutomaticLocationUpdatesParameters): Promise<ListDevicesAutomaticLocationUpdates> {
+  async get (queryParams?: ListDevicesAutomaticLocationUpdatesParameters): Promise<ListDevicesAutomaticLocationUpdates> {
     return this.rc.get(this.path(), queryParams)
   }
 
-  bulkAssign(): BulkAssign {
+  bulkAssign (): BulkAssign {
     return new BulkAssign(this)
   }
 }

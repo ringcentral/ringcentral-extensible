@@ -8,13 +8,13 @@ class Entries {
   entryId: (string | null)
   parent: Parent
 
-  constructor(parent: Parent, entryId: (string | null) = null) {
+  constructor (parent: Parent, entryId: (string | null) = null) {
     this.parent = parent
     this.rc = parent.rc
     this.entryId = entryId
   }
 
-  path(withParameter: boolean = true): string {
+  path (withParameter: boolean = true): string {
     if (withParameter && this.entryId !== null) {
       return `${this.parent.path()}/entries/${this.entryId}`
     }
@@ -26,7 +26,7 @@ class Entries {
    * Operation: Get Company Directory Entries
    * Http get /restapi/v1.0/account/{accountId}/directory/entries
    */
-  async list(queryParams?: ListDirectoryEntriesParameters): Promise<DirectoryResource> {
+  async list (queryParams?: ListDirectoryEntriesParameters): Promise<DirectoryResource> {
     return this.rc.get(this.path(false), queryParams)
   }
 
@@ -34,7 +34,7 @@ class Entries {
    * Operation: Get Corporate Directory Entry
    * Http get /restapi/v1.0/account/{accountId}/directory/entries/{entryId}
    */
-  async get(): Promise<ContactResource> {
+  async get (): Promise<ContactResource> {
     if (this.entryId === null) {
       throw new Error('entryId must be specified.')
     }
@@ -42,7 +42,7 @@ class Entries {
     return this.rc.get(this.path())
   }
 
-  search(): Search {
+  search (): Search {
     return new Search(this)
   }
 }

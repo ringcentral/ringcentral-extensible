@@ -6,12 +6,12 @@ class Favorites {
   rc: RestClient
   parent: Parent
 
-  constructor(parent: Parent) {
+  constructor (parent: Parent) {
     this.parent = parent
     this.rc = parent.rc
   }
 
-  path(): string {
+  path (): string {
     return `${this.parent.path()}/favorites`
   }
 
@@ -19,7 +19,7 @@ class Favorites {
    * Operation: Get Favorite Chats
    * Http get /restapi/v1.0/glip/favorites
    */
-  async get(queryParams?: ListFavoriteChatsParameters): Promise<GlipChatsListWithoutNavigation> {
+  async get (queryParams?: ListFavoriteChatsParameters): Promise<GlipChatsListWithoutNavigation> {
     return this.rc.get(this.path(), queryParams)
   }
 }

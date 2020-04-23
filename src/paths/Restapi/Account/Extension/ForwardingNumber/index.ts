@@ -7,13 +7,13 @@ class ForwardingNumber {
   forwardingNumberId: (string | null)
   parent: Parent
 
-  constructor(parent: Parent, forwardingNumberId: (string | null) = null) {
+  constructor (parent: Parent, forwardingNumberId: (string | null) = null) {
     this.parent = parent
     this.rc = parent.rc
     this.forwardingNumberId = forwardingNumberId
   }
 
-  path(withParameter: boolean = true): string {
+  path (withParameter: boolean = true): string {
     if (withParameter && this.forwardingNumberId !== null) {
       return `${this.parent.path()}/forwarding-number/${this.forwardingNumberId}`
     }
@@ -25,7 +25,7 @@ class ForwardingNumber {
    * Operation: Get Forwarding Number List
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number
    */
-  async list(queryParams?: ListForwardingNumbersParameters): Promise<GetExtensionForwardingNumberListResponse> {
+  async list (queryParams?: ListForwardingNumbersParameters): Promise<GetExtensionForwardingNumberListResponse> {
     return this.rc.get(this.path(false), queryParams)
   }
 
@@ -33,7 +33,7 @@ class ForwardingNumber {
    * Operation: Create Forwarding Number
    * Http post /restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number
    */
-  async post(createForwardingNumberRequest: CreateForwardingNumberRequest): Promise<ForwardingNumberInfo> {
+  async post (createForwardingNumberRequest: CreateForwardingNumberRequest): Promise<ForwardingNumberInfo> {
     return this.rc.post(this.path(false), createForwardingNumberRequest)
   }
 
@@ -41,7 +41,7 @@ class ForwardingNumber {
    * Operation: Get Forwarding Number
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number/{forwardingNumberId}
    */
-  async get(): Promise<ForwardingNumberInfo> {
+  async get (): Promise<ForwardingNumberInfo> {
     if (this.forwardingNumberId === null) {
       throw new Error('forwardingNumberId must be specified.')
     }
@@ -53,7 +53,7 @@ class ForwardingNumber {
    * Operation: Update Forwarding Number
    * Http put /restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number/{forwardingNumberId}
    */
-  async put(updateForwardingNumberRequest: UpdateForwardingNumberRequest): Promise<ForwardingNumberInfo> {
+  async put (updateForwardingNumberRequest: UpdateForwardingNumberRequest): Promise<ForwardingNumberInfo> {
     if (this.forwardingNumberId === null) {
       throw new Error('forwardingNumberId must be specified.')
     }
@@ -65,7 +65,7 @@ class ForwardingNumber {
    * Operation: Delete Forwarding Number
    * Http delete /restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number/{forwardingNumberId}
    */
-  async delete(): Promise<string> {
+  async delete (): Promise<string> {
     if (this.forwardingNumberId === null) {
       throw new Error('forwardingNumberId must be specified.')
     }

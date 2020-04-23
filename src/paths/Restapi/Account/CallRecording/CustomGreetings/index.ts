@@ -7,13 +7,13 @@ class CustomGreetings {
   greetingId: (string | null)
   parent: Parent
 
-  constructor(parent: Parent, greetingId: (string | null) = null) {
+  constructor (parent: Parent, greetingId: (string | null) = null) {
     this.parent = parent
     this.rc = parent.rc
     this.greetingId = greetingId
   }
 
-  path(withParameter: boolean = true): string {
+  path (withParameter: boolean = true): string {
     if (withParameter && this.greetingId !== null) {
       return `${this.parent.path()}/custom-greetings/${this.greetingId}`
     }
@@ -25,7 +25,7 @@ class CustomGreetings {
    * Operation: Get Call Recording Custom Greeting List
    * Http get /restapi/v1.0/account/{accountId}/call-recording/custom-greetings
    */
-  async get(queryParams?: ListCallRecordingCustomGreetingsParameters): Promise<CallRecordingCustomGreetings> {
+  async get (queryParams?: ListCallRecordingCustomGreetingsParameters): Promise<CallRecordingCustomGreetings> {
     return this.rc.get(this.path(false), queryParams)
   }
 
@@ -33,7 +33,7 @@ class CustomGreetings {
    * Operation: Delete Call Recording Custom Greeting
    * Http delete /restapi/v1.0/account/{accountId}/call-recording/custom-greetings/{greetingId}
    */
-  async delete(): Promise<string> {
+  async delete (): Promise<string> {
     if (this.greetingId === null) {
       throw new Error('greetingId must be specified.')
     }

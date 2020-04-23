@@ -6,12 +6,12 @@ class Token {
   rc: RestClient
   parent: Parent
 
-  constructor(parent: Parent) {
+  constructor (parent: Parent) {
     this.parent = parent
     this.rc = parent.rc
   }
 
-  path(): string {
+  path (): string {
     return `${this.parent.path()}/token`
   }
 
@@ -19,7 +19,7 @@ class Token {
    * Operation: Get Token
    * Http post /restapi/oauth/token
    */
-  async post(getTokenRequest: GetTokenRequest): Promise<TokenInfo> {
+  async post (getTokenRequest: GetTokenRequest): Promise<TokenInfo> {
     return this.rc.post(this.path(), getTokenRequest)
   }
 }

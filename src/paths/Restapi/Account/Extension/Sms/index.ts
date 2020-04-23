@@ -6,12 +6,12 @@ class Sms {
   rc: RestClient
   parent: Parent
 
-  constructor(parent: Parent) {
+  constructor (parent: Parent) {
     this.parent = parent
     this.rc = parent.rc
   }
 
-  path(): string {
+  path (): string {
     return `${this.parent.path()}/sms`
   }
 
@@ -19,7 +19,7 @@ class Sms {
    * Operation: Send SMS
    * Http post /restapi/v1.0/account/{accountId}/extension/{extensionId}/sms
    */
-  async post(createSMSMessage: CreateSMSMessage): Promise<GetMessageInfoResponse> {
+  async post (createSMSMessage: CreateSMSMessage): Promise<GetMessageInfoResponse> {
     return this.rc.post(this.path(), createSMSMessage)
   }
 }

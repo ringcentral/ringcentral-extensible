@@ -5,12 +5,12 @@ class Lock {
   rc: RestClient
   parent: Parent
 
-  constructor(parent: Parent) {
+  constructor (parent: Parent) {
     this.parent = parent
     this.rc = parent.rc
   }
 
-  path(): string {
+  path (): string {
     return `${this.parent.path()}/lock`
   }
 
@@ -18,7 +18,7 @@ class Lock {
    * Operation: Lock Note
    * Http post /restapi/v1.0/glip/notes/{noteId}/lock
    */
-  async post(): Promise<string> {
+  async post (): Promise<string> {
     return this.rc.post(this.path())
   }
 }

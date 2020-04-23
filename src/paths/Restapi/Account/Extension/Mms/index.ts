@@ -7,12 +7,12 @@ class Mms {
   rc: RestClient
   parent: Parent
 
-  constructor(parent: Parent) {
+  constructor (parent: Parent) {
     this.parent = parent
     this.rc = parent.rc
   }
 
-  path(): string {
+  path (): string {
     return `${this.parent.path()}/mms`
   }
 
@@ -20,7 +20,7 @@ class Mms {
    * Operation: Create MMS Message
    * Http post /restapi/v1.0/account/{accountId}/extension/{extensionId}/mms
    */
-  async post(createMMSMessage: CreateMMSMessage): Promise<GetMessageInfoResponse> {
+  async post (createMMSMessage: CreateMMSMessage): Promise<GetMessageInfoResponse> {
     var formData = Utils.getFormData(createMMSMessage)
     return this.rc.post(this.path(), formData, undefined, formData.getHeaders())
   }

@@ -6,12 +6,12 @@ class Ignore {
   rc: RestClient
   parent: Parent
 
-  constructor(parent: Parent) {
+  constructor (parent: Parent) {
     this.parent = parent
     this.rc = parent.rc
   }
 
-  path(): string {
+  path (): string {
     return `${this.parent.path()}/ignore`
   }
 
@@ -19,7 +19,7 @@ class Ignore {
    * Operation: Ignore Call in Queue
    * Http post /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/ignore
    */
-  async post(ignoreRequestBody: IgnoreRequestBody): Promise<string> {
+  async post (ignoreRequestBody: IgnoreRequestBody): Promise<string> {
     return this.rc.post(this.path(), ignoreRequestBody)
   }
 }

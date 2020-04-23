@@ -6,12 +6,12 @@ class ServiceInfo {
   rc: RestClient
   parent: Parent
 
-  constructor(parent: Parent) {
+  constructor (parent: Parent) {
     this.parent = parent
     this.rc = parent.rc
   }
 
-  path(): string {
+  path (): string {
     return `${this.parent.path()}/service-info`
   }
 
@@ -19,7 +19,7 @@ class ServiceInfo {
    * Operation: Get Account Service Info
    * Http get /restapi/v1.0/account/{accountId}/service-info
    */
-  async get(): Promise<GetServiceInfoResponse> {
+  async get (): Promise<GetServiceInfoResponse> {
     return this.rc.get(this.path())
   }
 }

@@ -17,60 +17,60 @@ class EmergencyAddressAutoUpdate {
   rc: RestClient
   parent: Parent
 
-  constructor(parent: Parent) {
+  constructor (parent: Parent) {
     this.parent = parent
     this.rc = parent.rc
   }
 
-  path(): string {
+  path (): string {
     return `${this.parent.path()}/emergency-address-auto-update`
   }
 
-  users(): Users {
+  users (): Users {
     return new Users(this)
   }
 
-  wirelessPoints(pointId: (string | null) = null): WirelessPoints {
+  wirelessPoints (pointId: (string | null) = null): WirelessPoints {
     return new WirelessPoints(this, pointId)
   }
 
-  networks(networkId: (string | null) = null): Networks {
+  networks (networkId: (string | null) = null): Networks {
     return new Networks(this, networkId)
   }
 
-  devices(): Devices {
+  devices (): Devices {
     return new Devices(this)
   }
 
-  switches(switchId: (string | null) = null): Switches {
+  switches (switchId: (string | null) = null): Switches {
     return new Switches(this, switchId)
   }
 
-  switchesBulkCreate(): SwitchesBulkCreate {
+  switchesBulkCreate (): SwitchesBulkCreate {
     return new SwitchesBulkCreate(this)
   }
 
-  switchesBulkUpdate(): SwitchesBulkUpdate {
+  switchesBulkUpdate (): SwitchesBulkUpdate {
     return new SwitchesBulkUpdate(this)
   }
 
-  wirelessPointsBulkCreate(): WirelessPointsBulkCreate {
+  wirelessPointsBulkCreate (): WirelessPointsBulkCreate {
     return new WirelessPointsBulkCreate(this)
   }
 
-  wirelessPointsBulkUpdate(): WirelessPointsBulkUpdate {
+  wirelessPointsBulkUpdate (): WirelessPointsBulkUpdate {
     return new WirelessPointsBulkUpdate(this)
   }
 
-  wirelessPointsBulkValidate(): WirelessPointsBulkValidate {
+  wirelessPointsBulkValidate (): WirelessPointsBulkValidate {
     return new WirelessPointsBulkValidate(this)
   }
 
-  switchesBulkValidate(): SwitchesBulkValidate {
+  switchesBulkValidate (): SwitchesBulkValidate {
     return new SwitchesBulkValidate(this)
   }
 
-  tasks(taskId: (string | null) = null): Tasks {
+  tasks (taskId: (string | null) = null): Tasks {
     return new Tasks(this, taskId)
   }
 }

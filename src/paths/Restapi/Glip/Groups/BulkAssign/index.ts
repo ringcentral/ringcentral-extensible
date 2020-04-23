@@ -6,12 +6,12 @@ class BulkAssign {
   rc: RestClient
   parent: Parent
 
-  constructor(parent: Parent) {
+  constructor (parent: Parent) {
     this.parent = parent
     this.rc = parent.rc
   }
 
-  path(): string {
+  path (): string {
     return `${this.parent.path()}/bulk-assign`
   }
 
@@ -19,7 +19,7 @@ class BulkAssign {
    * Operation: Edit Group Members
    * Http post /restapi/v1.0/glip/groups/{groupId}/bulk-assign
    */
-  async post(editGroupRequest: EditGroupRequest): Promise<GlipGroupInfo> {
+  async post (editGroupRequest: EditGroupRequest): Promise<GlipGroupInfo> {
     return this.rc.post(this.path(), editGroupRequest)
   }
 }

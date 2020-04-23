@@ -6,12 +6,12 @@ class WirelessPointsBulkUpdate {
   rc: RestClient
   parent: Parent
 
-  constructor(parent: Parent) {
+  constructor (parent: Parent) {
     this.parent = parent
     this.rc = parent.rc
   }
 
-  path(): string {
+  path (): string {
     return `${this.parent.path()}/wireless-points-bulk-update`
   }
 
@@ -19,7 +19,7 @@ class WirelessPointsBulkUpdate {
    * Operation: Update Multiple Wireless Points
    * Http post /restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points-bulk-update
    */
-  async post(updateMultipleWirelessPointsRequest: UpdateMultipleWirelessPointsRequest): Promise<UpdateMultipleWirelessPointsResponse> {
+  async post (updateMultipleWirelessPointsRequest: UpdateMultipleWirelessPointsRequest): Promise<UpdateMultipleWirelessPointsResponse> {
     return this.rc.post(this.path(), updateMultipleWirelessPointsRequest)
   }
 }

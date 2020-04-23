@@ -7,13 +7,13 @@ class Posts {
   postId: (string | null)
   parent: Parent
 
-  constructor(parent: Parent, postId: (string | null) = null) {
+  constructor (parent: Parent, postId: (string | null) = null) {
     this.parent = parent
     this.rc = parent.rc
     this.postId = postId
   }
 
-  path(withParameter: boolean = true): string {
+  path (withParameter: boolean = true): string {
     if (withParameter && this.postId !== null) {
       return `${this.parent.path()}/posts/${this.postId}`
     }
@@ -25,7 +25,7 @@ class Posts {
    * Operation: Get Posts
    * Http get /restapi/v1.0/glip/chats/{chatId}/posts
    */
-  async list(queryParams?: ReadGlipPostsParameters): Promise<GlipPostsList> {
+  async list (queryParams?: ReadGlipPostsParameters): Promise<GlipPostsList> {
     return this.rc.get(this.path(false), queryParams)
   }
 
@@ -33,7 +33,7 @@ class Posts {
    * Operation: Create Post
    * Http post /restapi/v1.0/glip/chats/{chatId}/posts
    */
-  async post(glipPostPostBody: GlipPostPostBody): Promise<GlipPostInfo> {
+  async post (glipPostPostBody: GlipPostPostBody): Promise<GlipPostInfo> {
     return this.rc.post(this.path(false), glipPostPostBody)
   }
 
@@ -41,7 +41,7 @@ class Posts {
    * Operation: Get Post
    * Http get /restapi/v1.0/glip/chats/{chatId}/posts/{postId}
    */
-  async get(): Promise<GlipPostInfo> {
+  async get (): Promise<GlipPostInfo> {
     if (this.postId === null) {
       throw new Error('postId must be specified.')
     }
@@ -53,7 +53,7 @@ class Posts {
    * Operation: Update Post
    * Http patch /restapi/v1.0/glip/chats/{chatId}/posts/{postId}
    */
-  async patch(glipPatchPostBody: GlipPatchPostBody): Promise<GlipPostInfo> {
+  async patch (glipPatchPostBody: GlipPatchPostBody): Promise<GlipPostInfo> {
     if (this.postId === null) {
       throw new Error('postId must be specified.')
     }
@@ -65,7 +65,7 @@ class Posts {
    * Operation: Delete Post
    * Http delete /restapi/v1.0/glip/chats/{chatId}/posts/{postId}
    */
-  async delete(): Promise<string> {
+  async delete (): Promise<string> {
     if (this.postId === null) {
       throw new Error('postId must be specified.')
     }

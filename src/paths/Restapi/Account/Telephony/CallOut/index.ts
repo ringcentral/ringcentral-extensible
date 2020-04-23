@@ -6,12 +6,12 @@ class CallOut {
   rc: RestClient
   parent: Parent
 
-  constructor(parent: Parent) {
+  constructor (parent: Parent) {
     this.parent = parent
     this.rc = parent.rc
   }
 
-  path(): string {
+  path (): string {
     return `${this.parent.path()}/call-out`
   }
 
@@ -19,7 +19,7 @@ class CallOut {
    * Operation: Make CallOut
    * Http post /restapi/v1.0/account/{accountId}/telephony/call-out
    */
-  async post(makeCallOutRequest: MakeCallOutRequest): Promise<CallSession> {
+  async post (makeCallOutRequest: MakeCallOutRequest): Promise<CallSession> {
     return this.rc.post(this.path(), makeCallOutRequest)
   }
 }

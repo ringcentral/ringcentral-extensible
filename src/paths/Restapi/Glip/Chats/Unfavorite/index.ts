@@ -5,12 +5,12 @@ class Unfavorite {
   rc: RestClient
   parent: Parent
 
-  constructor(parent: Parent) {
+  constructor (parent: Parent) {
     this.parent = parent
     this.rc = parent.rc
   }
 
-  path(): string {
+  path (): string {
     return `${this.parent.path()}/unfavorite`
   }
 
@@ -18,7 +18,7 @@ class Unfavorite {
    * Operation: Remove Chat from Favorites
    * Http post /restapi/v1.0/glip/chats/{chatId}/unfavorite
    */
-  async post(): Promise<string> {
+  async post (): Promise<string> {
     return this.rc.post(this.path())
   }
 }

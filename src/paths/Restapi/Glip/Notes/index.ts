@@ -10,13 +10,13 @@ class Notes {
   noteId: (string | null)
   parent: Parent
 
-  constructor(parent: Parent, noteId: (string | null) = null) {
+  constructor (parent: Parent, noteId: (string | null) = null) {
     this.parent = parent
     this.rc = parent.rc
     this.noteId = noteId
   }
 
-  path(withParameter: boolean = true): string {
+  path (withParameter: boolean = true): string {
     if (withParameter && this.noteId !== null) {
       return `${this.parent.path()}/notes/${this.noteId}`
     }
@@ -28,7 +28,7 @@ class Notes {
    * Operation: Get Note
    * Http get /restapi/v1.0/glip/notes/{noteId}
    */
-  async get(): Promise<GetGlipNoteInfo> {
+  async get (): Promise<GetGlipNoteInfo> {
     if (this.noteId === null) {
       throw new Error('noteId must be specified.')
     }
@@ -40,7 +40,7 @@ class Notes {
    * Operation: Update Note
    * Http patch /restapi/v1.0/glip/notes/{noteId}
    */
-  async patch(glipNoteCreate: GlipNoteCreate): Promise<GlipNoteInfo> {
+  async patch (glipNoteCreate: GlipNoteCreate): Promise<GlipNoteInfo> {
     if (this.noteId === null) {
       throw new Error('noteId must be specified.')
     }
@@ -52,7 +52,7 @@ class Notes {
    * Operation: Delete Note
    * Http delete /restapi/v1.0/glip/notes/{noteId}
    */
-  async delete(): Promise<string> {
+  async delete (): Promise<string> {
     if (this.noteId === null) {
       throw new Error('noteId must be specified.')
     }
@@ -60,15 +60,15 @@ class Notes {
     return this.rc.delete(this.path())
   }
 
-  lock(): Lock {
+  lock (): Lock {
     return new Lock(this)
   }
 
-  unlock(): Unlock {
+  unlock (): Unlock {
     return new Unlock(this)
   }
 
-  publish(): Publish {
+  publish (): Publish {
     return new Publish(this)
   }
 }

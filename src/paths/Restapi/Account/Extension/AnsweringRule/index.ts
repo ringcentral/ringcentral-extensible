@@ -7,13 +7,13 @@ class AnsweringRule {
   ruleId: (string | null)
   parent: Parent
 
-  constructor(parent: Parent, ruleId: (string | null) = null) {
+  constructor (parent: Parent, ruleId: (string | null) = null) {
     this.parent = parent
     this.rc = parent.rc
     this.ruleId = ruleId
   }
 
-  path(withParameter: boolean = true): string {
+  path (withParameter: boolean = true): string {
     if (withParameter && this.ruleId !== null) {
       return `${this.parent.path()}/answering-rule/${this.ruleId}`
     }
@@ -25,7 +25,7 @@ class AnsweringRule {
    * Operation: Get Call Handling Rules
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/answering-rule
    */
-  async list(queryParams?: ListAnsweringRulesParameters): Promise<UserAnsweringRuleList> {
+  async list (queryParams?: ListAnsweringRulesParameters): Promise<UserAnsweringRuleList> {
     return this.rc.get(this.path(false), queryParams)
   }
 
@@ -33,7 +33,7 @@ class AnsweringRule {
    * Operation: Create Call Handling Rule
    * Http post /restapi/v1.0/account/{accountId}/extension/{extensionId}/answering-rule
    */
-  async post(createAnsweringRuleRequest: CreateAnsweringRuleRequest): Promise<CustomAnsweringRuleInfo> {
+  async post (createAnsweringRuleRequest: CreateAnsweringRuleRequest): Promise<CustomAnsweringRuleInfo> {
     return this.rc.post(this.path(false), createAnsweringRuleRequest)
   }
 
@@ -41,7 +41,7 @@ class AnsweringRule {
    * Operation: Get Call Handling Rule
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/answering-rule/{ruleId}
    */
-  async get(queryParams?: ReadAnsweringRuleParameters): Promise<AnsweringRuleInfo> {
+  async get (queryParams?: ReadAnsweringRuleParameters): Promise<AnsweringRuleInfo> {
     if (this.ruleId === null) {
       throw new Error('ruleId must be specified.')
     }
@@ -53,7 +53,7 @@ class AnsweringRule {
    * Operation: Update Call Handling Rule
    * Http put /restapi/v1.0/account/{accountId}/extension/{extensionId}/answering-rule/{ruleId}
    */
-  async put(updateAnsweringRuleRequest: UpdateAnsweringRuleRequest): Promise<AnsweringRuleInfo> {
+  async put (updateAnsweringRuleRequest: UpdateAnsweringRuleRequest): Promise<AnsweringRuleInfo> {
     if (this.ruleId === null) {
       throw new Error('ruleId must be specified.')
     }
@@ -65,7 +65,7 @@ class AnsweringRule {
    * Operation: Delete Call Handling Rule
    * Http delete /restapi/v1.0/account/{accountId}/extension/{extensionId}/answering-rule/{ruleId}
    */
-  async delete(): Promise<string> {
+  async delete (): Promise<string> {
     if (this.ruleId === null) {
       throw new Error('ruleId must be specified.')
     }

@@ -8,13 +8,13 @@ class MessageStore {
   messageId: (string | null)
   parent: Parent
 
-  constructor(parent: Parent, messageId: (string | null) = null) {
+  constructor (parent: Parent, messageId: (string | null) = null) {
     this.parent = parent
     this.rc = parent.rc
     this.messageId = messageId
   }
 
-  path(withParameter: boolean = true): string {
+  path (withParameter: boolean = true): string {
     if (withParameter && this.messageId !== null) {
       return `${this.parent.path()}/message-store/${this.messageId}`
     }
@@ -26,7 +26,7 @@ class MessageStore {
    * Operation: Get Message List
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store
    */
-  async list(queryParams?: ListMessagesParameters): Promise<GetMessageList> {
+  async list (queryParams?: ListMessagesParameters): Promise<GetMessageList> {
     return this.rc.get(this.path(false), queryParams)
   }
 
@@ -34,7 +34,7 @@ class MessageStore {
    * Operation: Get Message
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}
    */
-  async get(): Promise<GetMessageInfoResponse> {
+  async get (): Promise<GetMessageInfoResponse> {
     if (this.messageId === null) {
       throw new Error('messageId must be specified.')
     }
@@ -46,7 +46,7 @@ class MessageStore {
    * Operation: Update Message List
    * Http put /restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}
    */
-  async put(updateMessageRequest: UpdateMessageRequest, queryParams?: UpdateMessageParameters): Promise<GetMessageInfoResponse> {
+  async put (updateMessageRequest: UpdateMessageRequest, queryParams?: UpdateMessageParameters): Promise<GetMessageInfoResponse> {
     if (this.messageId === null) {
       throw new Error('messageId must be specified.')
     }
@@ -58,7 +58,7 @@ class MessageStore {
    * Operation: Delete Message
    * Http delete /restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}
    */
-  async delete(queryParams?: DeleteMessageParameters): Promise<string> {
+  async delete (queryParams?: DeleteMessageParameters): Promise<string> {
     if (this.messageId === null) {
       throw new Error('messageId must be specified.')
     }
@@ -66,7 +66,7 @@ class MessageStore {
     return this.rc.delete(this.path(), queryParams)
   }
 
-  content(attachmentId: (string | null) = null): Content {
+  content (attachmentId: (string | null) = null): Content {
     return new Content(this, attachmentId)
   }
 }

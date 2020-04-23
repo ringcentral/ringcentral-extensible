@@ -6,12 +6,12 @@ class Flip {
   rc: RestClient
   parent: Parent
 
-  constructor(parent: Parent) {
+  constructor (parent: Parent) {
     this.parent = parent
     this.rc = parent.rc
   }
 
-  path(): string {
+  path (): string {
     return `${this.parent.path()}/flip`
   }
 
@@ -19,7 +19,7 @@ class Flip {
    * Operation: Call Flip on Party
    * Http post /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/flip
    */
-  async post(callPartyFlip: CallPartyFlip): Promise<string> {
+  async post (callPartyFlip: CallPartyFlip): Promise<string> {
     return this.rc.post(this.path(), callPartyFlip)
   }
 }

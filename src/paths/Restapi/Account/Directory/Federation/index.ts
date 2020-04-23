@@ -6,12 +6,12 @@ class Federation {
   rc: RestClient
   parent: Parent
 
-  constructor(parent: Parent) {
+  constructor (parent: Parent) {
     this.parent = parent
     this.rc = parent.rc
   }
 
-  path(): string {
+  path (): string {
     return `${this.parent.path()}/federation`
   }
 
@@ -19,7 +19,7 @@ class Federation {
    * Operation: Get Account Federation
    * Http get /restapi/v1.0/account/{accountId}/directory/federation
    */
-  async get(): Promise<FederationResource> {
+  async get (): Promise<FederationResource> {
     return this.rc.get(this.path())
   }
 }

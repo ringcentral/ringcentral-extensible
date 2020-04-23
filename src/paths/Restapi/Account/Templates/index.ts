@@ -7,13 +7,13 @@ class Templates {
   templateId: (string | null)
   parent: Parent
 
-  constructor(parent: Parent, templateId: (string | null) = null) {
+  constructor (parent: Parent, templateId: (string | null) = null) {
     this.parent = parent
     this.rc = parent.rc
     this.templateId = templateId
   }
 
-  path(withParameter: boolean = true): string {
+  path (withParameter: boolean = true): string {
     if (withParameter && this.templateId !== null) {
       return `${this.parent.path()}/templates/${this.templateId}`
     }
@@ -25,7 +25,7 @@ class Templates {
    * Operation: Get User Template List
    * Http get /restapi/v1.0/account/{accountId}/templates
    */
-  async list(queryParams?: ListUserTemplatesParameters): Promise<UserTemplates> {
+  async list (queryParams?: ListUserTemplatesParameters): Promise<UserTemplates> {
     return this.rc.get(this.path(false), queryParams)
   }
 
@@ -33,7 +33,7 @@ class Templates {
    * Operation: Get User Template
    * Http get /restapi/v1.0/account/{accountId}/templates/{templateId}
    */
-  async get(): Promise<TemplateInfo> {
+  async get (): Promise<TemplateInfo> {
     if (this.templateId === null) {
       throw new Error('templateId must be specified.')
     }

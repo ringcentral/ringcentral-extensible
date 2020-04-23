@@ -6,12 +6,12 @@ class Add {
   rc: RestClient
   parent: Parent
 
-  constructor(parent: Parent) {
+  constructor (parent: Parent) {
     this.parent = parent
     this.rc = parent.rc
   }
 
-  path(): string {
+  path (): string {
     return `${this.parent.path()}/add`
   }
 
@@ -19,7 +19,7 @@ class Add {
    * Operation: Add Team Members
    * Http post /restapi/v1.0/glip/teams/{chatId}/add
    */
-  async post(glipPostMembersListBody: GlipPostMembersListBody): Promise<string> {
+  async post (glipPostMembersListBody: GlipPostMembersListBody): Promise<string> {
     return this.rc.post(this.path(), glipPostMembersListBody)
   }
 }

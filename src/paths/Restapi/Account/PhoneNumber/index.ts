@@ -7,13 +7,13 @@ class PhoneNumber {
   phoneNumberId: (string | null)
   parent: Parent
 
-  constructor(parent: Parent, phoneNumberId: (string | null) = null) {
+  constructor (parent: Parent, phoneNumberId: (string | null) = null) {
     this.parent = parent
     this.rc = parent.rc
     this.phoneNumberId = phoneNumberId
   }
 
-  path(withParameter: boolean = true): string {
+  path (withParameter: boolean = true): string {
     if (withParameter && this.phoneNumberId !== null) {
       return `${this.parent.path()}/phone-number/${this.phoneNumberId}`
     }
@@ -25,7 +25,7 @@ class PhoneNumber {
    * Operation: Get Company Phone Number List
    * Http get /restapi/v1.0/account/{accountId}/phone-number
    */
-  async list(queryParams?: ListAccountPhoneNumbersParameters): Promise<AccountPhoneNumbers> {
+  async list (queryParams?: ListAccountPhoneNumbersParameters): Promise<AccountPhoneNumbers> {
     return this.rc.get(this.path(false), queryParams)
   }
 
@@ -33,7 +33,7 @@ class PhoneNumber {
    * Operation: Get Phone Number
    * Http get /restapi/v1.0/account/{accountId}/phone-number/{phoneNumberId}
    */
-  async get(): Promise<CompanyPhoneNumberInfo> {
+  async get (): Promise<CompanyPhoneNumberInfo> {
     if (this.phoneNumberId === null) {
       throw new Error('phoneNumberId must be specified.')
     }

@@ -6,12 +6,12 @@ class Members {
   rc: RestClient
   parent: Parent
 
-  constructor(parent: Parent) {
+  constructor (parent: Parent) {
     this.parent = parent
     this.rc = parent.rc
   }
 
-  path(): string {
+  path (): string {
     return `${this.parent.path()}/members`
   }
 
@@ -19,7 +19,7 @@ class Members {
    * Operation: Get Department Member List
    * Http get /restapi/v1.0/account/{accountId}/department/{departmentId}/members
    */
-  async get(queryParams?: ListDepartmentMembersParameters): Promise<DepartmentMemberList> {
+  async get (queryParams?: ListDepartmentMembersParameters): Promise<DepartmentMemberList> {
     return this.rc.get(this.path(), queryParams)
   }
 }

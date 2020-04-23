@@ -8,13 +8,13 @@ class Posts {
   postId: (string | null)
   parent: Parent
 
-  constructor(parent: Parent, postId: (string | null) = null) {
+  constructor (parent: Parent, postId: (string | null) = null) {
     this.parent = parent
     this.rc = parent.rc
     this.postId = postId
   }
 
-  path(withParameter: boolean = true): string {
+  path (withParameter: boolean = true): string {
     if (withParameter && this.postId !== null) {
       return `${this.parent.path()}/posts/${this.postId}`
     }
@@ -26,7 +26,7 @@ class Posts {
    * Operation: Get Group Posts
    * Http get /restapi/v1.0/glip/groups/{groupId}/posts
    */
-  async get(queryParams?: ListGlipGroupPostsParameters): Promise<GlipPosts> {
+  async get (queryParams?: ListGlipGroupPostsParameters): Promise<GlipPosts> {
     return this.rc.get(this.path(false), queryParams)
   }
 
@@ -34,11 +34,11 @@ class Posts {
    * Operation: Create Post in Group
    * Http post /restapi/v1.0/glip/groups/{groupId}/posts
    */
-  async post(glipCreatePost: GlipCreatePost): Promise<GlipPostInfo> {
+  async post (glipCreatePost: GlipCreatePost): Promise<GlipPostInfo> {
     return this.rc.post(this.path(false), glipCreatePost)
   }
 
-  text(): Text {
+  text (): Text {
     return new Text(this)
   }
 }

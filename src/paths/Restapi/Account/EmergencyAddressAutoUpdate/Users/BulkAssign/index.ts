@@ -6,12 +6,12 @@ class BulkAssign {
   rc: RestClient
   parent: Parent
 
-  constructor(parent: Parent) {
+  constructor (parent: Parent) {
     this.parent = parent
     this.rc = parent.rc
   }
 
-  path(): string {
+  path (): string {
     return `${this.parent.path()}/bulk-assign`
   }
 
@@ -19,7 +19,7 @@ class BulkAssign {
    * Operation: Enable Automatic Location Updates for Users
    * Http post /restapi/v1.0/account/{accountId}/emergency-address-auto-update/users/bulk-assign
    */
-  async post(bulkAssignAutomaticaLocationUpdatesUsers: BulkAssignAutomaticaLocationUpdatesUsers): Promise<string> {
+  async post (bulkAssignAutomaticaLocationUpdatesUsers: BulkAssignAutomaticaLocationUpdatesUsers): Promise<string> {
     return this.rc.post(this.path(), bulkAssignAutomaticaLocationUpdatesUsers)
   }
 }

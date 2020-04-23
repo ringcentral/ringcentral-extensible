@@ -6,12 +6,12 @@ class Parse {
   rc: RestClient
   parent: Parent
 
-  constructor(parent: Parent) {
+  constructor (parent: Parent) {
     this.parent = parent
     this.rc = parent.rc
   }
 
-  path(): string {
+  path (): string {
     return `${this.parent.path()}/parse`
   }
 
@@ -19,7 +19,7 @@ class Parse {
    * Operation: Parse Phone Number
    * Http post /restapi/v1.0/number-parser/parse
    */
-  async post(parsePhoneNumberRequest: ParsePhoneNumberRequest, queryParams?: ParsePhoneNumberParameters): Promise<ParsePhoneNumberResponse> {
+  async post (parsePhoneNumberRequest: ParsePhoneNumberRequest, queryParams?: ParsePhoneNumberParameters): Promise<ParsePhoneNumberResponse> {
     return this.rc.post(this.path(), parsePhoneNumberRequest, queryParams)
   }
 }

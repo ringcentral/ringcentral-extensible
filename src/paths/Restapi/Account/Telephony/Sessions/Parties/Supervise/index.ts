@@ -6,12 +6,12 @@ class Supervise {
   rc: RestClient
   parent: Parent
 
-  constructor(parent: Parent) {
+  constructor (parent: Parent) {
     this.parent = parent
     this.rc = parent.rc
   }
 
-  path(): string {
+  path (): string {
     return `${this.parent.path()}/supervise`
   }
 
@@ -19,7 +19,7 @@ class Supervise {
    * Operation: Supervise Call Party
    * Http post /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/supervise
    */
-  async post(partySuperviseRequest: PartySuperviseRequest): Promise<PartySuperviseResponse> {
+  async post (partySuperviseRequest: PartySuperviseRequest): Promise<PartySuperviseResponse> {
     return this.rc.post(this.path(), partySuperviseRequest)
   }
 }

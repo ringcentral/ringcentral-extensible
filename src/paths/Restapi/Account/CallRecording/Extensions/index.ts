@@ -6,12 +6,12 @@ class Extensions {
   rc: RestClient
   parent: Parent
 
-  constructor(parent: Parent) {
+  constructor (parent: Parent) {
     this.parent = parent
     this.rc = parent.rc
   }
 
-  path(): string {
+  path (): string {
     return `${this.parent.path()}/extensions`
   }
 
@@ -19,7 +19,7 @@ class Extensions {
    * Operation: Get Call Recording Extension List
    * Http get /restapi/v1.0/account/{accountId}/call-recording/extensions
    */
-  async get(): Promise<CallRecordingExtensions> {
+  async get (): Promise<CallRecordingExtensions> {
     return this.rc.get(this.path())
   }
 }

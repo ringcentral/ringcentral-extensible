@@ -7,13 +7,13 @@ class Timezone {
   timezoneId: (string | null)
   parent: Parent
 
-  constructor(parent: Parent, timezoneId: (string | null) = null) {
+  constructor (parent: Parent, timezoneId: (string | null) = null) {
     this.parent = parent
     this.rc = parent.rc
     this.timezoneId = timezoneId
   }
 
-  path(withParameter: boolean = true): string {
+  path (withParameter: boolean = true): string {
     if (withParameter && this.timezoneId !== null) {
       return `${this.parent.path()}/timezone/${this.timezoneId}`
     }
@@ -25,7 +25,7 @@ class Timezone {
    * Operation: Get Timezone List
    * Http get /restapi/v1.0/dictionary/timezone
    */
-  async list(queryParams?: ListTimezonesParameters): Promise<GetTimezoneListResponse> {
+  async list (queryParams?: ListTimezonesParameters): Promise<GetTimezoneListResponse> {
     return this.rc.get(this.path(false), queryParams)
   }
 
@@ -33,7 +33,7 @@ class Timezone {
    * Operation: Get Timezone
    * Http get /restapi/v1.0/dictionary/timezone/{timezoneId}
    */
-  async get(queryParams?: ReadTimezoneParameters): Promise<GetTimezoneInfoResponse> {
+  async get (queryParams?: ReadTimezoneParameters): Promise<GetTimezoneInfoResponse> {
     if (this.timezoneId === null) {
       throw new Error('timezoneId must be specified.')
     }

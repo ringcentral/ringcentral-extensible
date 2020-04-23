@@ -7,13 +7,13 @@ class Persons {
   personId: (string | null)
   parent: Parent
 
-  constructor(parent: Parent, personId: (string | null) = null) {
+  constructor (parent: Parent, personId: (string | null) = null) {
     this.parent = parent
     this.rc = parent.rc
     this.personId = personId
   }
 
-  path(withParameter: boolean = true): string {
+  path (withParameter: boolean = true): string {
     if (withParameter && this.personId !== null) {
       return `${this.parent.path()}/persons/${this.personId}`
     }
@@ -25,7 +25,7 @@ class Persons {
    * Operation: Get Person
    * Http get /restapi/v1.0/glip/persons/{personId}
    */
-  async get(): Promise<GlipPersonInfo> {
+  async get (): Promise<GlipPersonInfo> {
     if (this.personId === null) {
       throw new Error('personId must be specified.')
     }

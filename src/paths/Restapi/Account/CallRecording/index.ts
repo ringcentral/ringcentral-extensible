@@ -9,12 +9,12 @@ class CallRecording {
   rc: RestClient
   parent: Parent
 
-  constructor(parent: Parent) {
+  constructor (parent: Parent) {
     this.parent = parent
     this.rc = parent.rc
   }
 
-  path(): string {
+  path (): string {
     return `${this.parent.path()}/call-recording`
   }
 
@@ -22,7 +22,7 @@ class CallRecording {
    * Operation: Get Call Recording Settings
    * Http get /restapi/v1.0/account/{accountId}/call-recording
    */
-  async get(): Promise<CallRecordingSettingsResource> {
+  async get (): Promise<CallRecordingSettingsResource> {
     return this.rc.get(this.path())
   }
 
@@ -30,19 +30,19 @@ class CallRecording {
    * Operation: Update Call Recording Settings
    * Http put /restapi/v1.0/account/{accountId}/call-recording
    */
-  async put(callRecordingSettingsResource: CallRecordingSettingsResource): Promise<CallRecordingSettingsResource> {
+  async put (callRecordingSettingsResource: CallRecordingSettingsResource): Promise<CallRecordingSettingsResource> {
     return this.rc.put(this.path(), callRecordingSettingsResource)
   }
 
-  extensions(): Extensions {
+  extensions (): Extensions {
     return new Extensions(this)
   }
 
-  bulkAssign(): BulkAssign {
+  bulkAssign (): BulkAssign {
     return new BulkAssign(this)
   }
 
-  customGreetings(greetingId: (string | null) = null): CustomGreetings {
+  customGreetings (greetingId: (string | null) = null): CustomGreetings {
     return new CustomGreetings(this, greetingId)
   }
 }

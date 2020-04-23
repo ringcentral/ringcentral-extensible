@@ -8,13 +8,13 @@ class MessageStoreReport {
   taskId: (string | null)
   parent: Parent
 
-  constructor(parent: Parent, taskId: (string | null) = null) {
+  constructor (parent: Parent, taskId: (string | null) = null) {
     this.parent = parent
     this.rc = parent.rc
     this.taskId = taskId
   }
 
-  path(withParameter: boolean = true): string {
+  path (withParameter: boolean = true): string {
     if (withParameter && this.taskId !== null) {
       return `${this.parent.path()}/message-store-report/${this.taskId}`
     }
@@ -26,7 +26,7 @@ class MessageStoreReport {
    * Operation: Create Message Store Report
    * Http post /restapi/v1.0/account/{accountId}/message-store-report
    */
-  async post(createMessageStoreReportRequest: CreateMessageStoreReportRequest): Promise<MessageStoreReport> {
+  async post (createMessageStoreReportRequest: CreateMessageStoreReportRequest): Promise<MessageStoreReport> {
     return this.rc.post(this.path(false), createMessageStoreReportRequest)
   }
 
@@ -34,7 +34,7 @@ class MessageStoreReport {
    * Operation: Get Message Store Report Task
    * Http get /restapi/v1.0/account/{accountId}/message-store-report/{taskId}
    */
-  async get(): Promise<MessageStoreReport> {
+  async get (): Promise<MessageStoreReport> {
     if (this.taskId === null) {
       throw new Error('taskId must be specified.')
     }
@@ -42,7 +42,7 @@ class MessageStoreReport {
     return this.rc.get(this.path())
   }
 
-  archive(archiveId: (string | null) = null): Archive {
+  archive (archiveId: (string | null) = null): Archive {
     return new Archive(this, archiveId)
   }
 }

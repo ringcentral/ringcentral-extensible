@@ -6,12 +6,12 @@ class Unhold {
   rc: RestClient
   parent: Parent
 
-  constructor(parent: Parent) {
+  constructor (parent: Parent) {
     this.parent = parent
     this.rc = parent.rc
   }
 
-  path(): string {
+  path (): string {
     return `${this.parent.path()}/unhold`
   }
 
@@ -19,7 +19,7 @@ class Unhold {
    * Operation: Unhold Call Party
    * Http post /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/unhold
    */
-  async post(): Promise<CallParty> {
+  async post (): Promise<CallParty> {
     return this.rc.post(this.path())
   }
 }

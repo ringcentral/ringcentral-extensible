@@ -7,13 +7,13 @@ class Language {
   languageId: (string | null)
   parent: Parent
 
-  constructor(parent: Parent, languageId: (string | null) = null) {
+  constructor (parent: Parent, languageId: (string | null) = null) {
     this.parent = parent
     this.rc = parent.rc
     this.languageId = languageId
   }
 
-  path(withParameter: boolean = true): string {
+  path (withParameter: boolean = true): string {
     if (withParameter && this.languageId !== null) {
       return `${this.parent.path()}/language/${this.languageId}`
     }
@@ -25,7 +25,7 @@ class Language {
    * Operation: Get Language List
    * Http get /restapi/v1.0/dictionary/language
    */
-  async list(): Promise<LanguageList> {
+  async list (): Promise<LanguageList> {
     return this.rc.get(this.path(false))
   }
 
@@ -33,7 +33,7 @@ class Language {
    * Operation: Get Language
    * Http get /restapi/v1.0/dictionary/language/{languageId}
    */
-  async get(): Promise<LanguageInfo> {
+  async get (): Promise<LanguageInfo> {
     if (this.languageId === null) {
       throw new Error('languageId must be specified.')
     }

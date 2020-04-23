@@ -14,13 +14,13 @@ class Chats {
   chatId: (string | null)
   parent: Parent
 
-  constructor(parent: Parent, chatId: (string | null) = null) {
+  constructor (parent: Parent, chatId: (string | null) = null) {
     this.parent = parent
     this.rc = parent.rc
     this.chatId = chatId
   }
 
-  path(withParameter: boolean = true): string {
+  path (withParameter: boolean = true): string {
     if (withParameter && this.chatId !== null) {
       return `${this.parent.path()}/chats/${this.chatId}`
     }
@@ -32,7 +32,7 @@ class Chats {
    * Operation: Get Chats
    * Http get /restapi/v1.0/glip/chats
    */
-  async list(queryParams?: ListGlipChatsParameters): Promise<GlipChatsList> {
+  async list (queryParams?: ListGlipChatsParameters): Promise<GlipChatsList> {
     return this.rc.get(this.path(false), queryParams)
   }
 
@@ -40,7 +40,7 @@ class Chats {
    * Operation: Get Chat
    * Http get /restapi/v1.0/glip/chats/{chatId}
    */
-  async get(): Promise<GlipChatInfo> {
+  async get (): Promise<GlipChatInfo> {
     if (this.chatId === null) {
       throw new Error('chatId must be specified.')
     }
@@ -48,31 +48,31 @@ class Chats {
     return this.rc.get(this.path())
   }
 
-  favorite(): Favorite {
+  favorite (): Favorite {
     return new Favorite(this)
   }
 
-  unfavorite(): Unfavorite {
+  unfavorite (): Unfavorite {
     return new Unfavorite(this)
   }
 
-  read(): Read {
+  read (): Read {
     return new Read(this)
   }
 
-  unread(): Unread {
+  unread (): Unread {
     return new Unread(this)
   }
 
-  posts(postId: (string | null) = null): Posts {
+  posts (postId: (string | null) = null): Posts {
     return new Posts(this, postId)
   }
 
-  notes(): Notes {
+  notes (): Notes {
     return new Notes(this)
   }
 
-  tasks(): Tasks {
+  tasks (): Tasks {
     return new Tasks(this)
   }
 }

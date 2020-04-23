@@ -6,12 +6,12 @@ class Location {
   rc: RestClient
   parent: Parent
 
-  constructor(parent: Parent) {
+  constructor (parent: Parent) {
     this.parent = parent
     this.rc = parent.rc
   }
 
-  path(): string {
+  path (): string {
     return `${this.parent.path()}/location`
   }
 
@@ -19,7 +19,7 @@ class Location {
    * Operation: Get Location List
    * Http get /restapi/v1.0/dictionary/location
    */
-  async get(queryParams?: ListLocationsParameters): Promise<GetLocationListResponse> {
+  async get (queryParams?: ListLocationsParameters): Promise<GetLocationListResponse> {
     return this.rc.get(this.path(), queryParams)
   }
 }

@@ -6,12 +6,12 @@ class CallLogSync {
   rc: RestClient
   parent: Parent
 
-  constructor(parent: Parent) {
+  constructor (parent: Parent) {
     this.parent = parent
     this.rc = parent.rc
   }
 
-  path(): string {
+  path (): string {
     return `${this.parent.path()}/call-log-sync`
   }
 
@@ -19,7 +19,7 @@ class CallLogSync {
    * Operation: Sync Company Call Log
    * Http get /restapi/v1.0/account/{accountId}/call-log-sync
    */
-  async get(queryParams?: SyncAccountCallLogParameters): Promise<AccountCallLogSyncResponse> {
+  async get (queryParams?: SyncAccountCallLogParameters): Promise<AccountCallLogSyncResponse> {
     return this.rc.get(this.path(), queryParams)
   }
 }

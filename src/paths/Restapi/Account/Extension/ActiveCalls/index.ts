@@ -6,12 +6,12 @@ class ActiveCalls {
   rc: RestClient
   parent: Parent
 
-  constructor(parent: Parent) {
+  constructor (parent: Parent) {
     this.parent = parent
     this.rc = parent.rc
   }
 
-  path(): string {
+  path (): string {
     return `${this.parent.path()}/active-calls`
   }
 
@@ -19,7 +19,7 @@ class ActiveCalls {
    * Operation: Get User Active Calls
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/active-calls
    */
-  async get(queryParams?: ListExtensionActiveCallsParameters): Promise<UserActiveCallsResponse> {
+  async get (queryParams?: ListExtensionActiveCallsParameters): Promise<UserActiveCallsResponse> {
     return this.rc.get(this.path(), queryParams)
   }
 }

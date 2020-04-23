@@ -6,12 +6,12 @@ class Tasks {
   rc: RestClient
   parent: Parent
 
-  constructor(parent: Parent) {
+  constructor (parent: Parent) {
     this.parent = parent
     this.rc = parent.rc
   }
 
-  path(): string {
+  path (): string {
     return `${this.parent.path()}/tasks`
   }
 
@@ -19,7 +19,7 @@ class Tasks {
    * Operation: Get Chat Tasks
    * Http get /restapi/v1.0/glip/chats/{chatId}/tasks
    */
-  async get(queryParams?: ListChatTasksParameters): Promise<GlipTaskList> {
+  async get (queryParams?: ListChatTasksParameters): Promise<GlipTaskList> {
     return this.rc.get(this.path(), queryParams)
   }
 
@@ -27,7 +27,7 @@ class Tasks {
    * Operation: Create Task
    * Http post /restapi/v1.0/glip/chats/{chatId}/tasks
    */
-  async post(glipCreateTask: GlipCreateTask): Promise<GlipTaskInfo> {
+  async post (glipCreateTask: GlipCreateTask): Promise<GlipTaskInfo> {
     return this.rc.post(this.path(), glipCreateTask)
   }
 }

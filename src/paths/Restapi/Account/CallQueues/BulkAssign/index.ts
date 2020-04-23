@@ -6,12 +6,12 @@ class BulkAssign {
   rc: RestClient
   parent: Parent
 
-  constructor(parent: Parent) {
+  constructor (parent: Parent) {
     this.parent = parent
     this.rc = parent.rc
   }
 
-  path(): string {
+  path (): string {
     return `${this.parent.path()}/bulk-assign`
   }
 
@@ -19,7 +19,7 @@ class BulkAssign {
    * Operation: Assign Multiple Call Queue Members
    * Http post /restapi/v1.0/account/{accountId}/call-queues/{groupId}/bulk-assign
    */
-  async post(callQueueBulkAssignResource: CallQueueBulkAssignResource): Promise<string> {
+  async post (callQueueBulkAssignResource: CallQueueBulkAssignResource): Promise<string> {
     return this.rc.post(this.path(), callQueueBulkAssignResource)
   }
 }

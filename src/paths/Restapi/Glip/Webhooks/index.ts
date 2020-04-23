@@ -9,13 +9,13 @@ class Webhooks {
   webhookId: (string | null)
   parent: Parent
 
-  constructor(parent: Parent, webhookId: (string | null) = null) {
+  constructor (parent: Parent, webhookId: (string | null) = null) {
     this.parent = parent
     this.rc = parent.rc
     this.webhookId = webhookId
   }
 
-  path(withParameter: boolean = true): string {
+  path (withParameter: boolean = true): string {
     if (withParameter && this.webhookId !== null) {
       return `${this.parent.path()}/webhooks/${this.webhookId}`
     }
@@ -27,7 +27,7 @@ class Webhooks {
    * Operation: Get Webhooks
    * Http get /restapi/v1.0/glip/webhooks
    */
-  async list(): Promise<GlipWebhookList> {
+  async list (): Promise<GlipWebhookList> {
     return this.rc.get(this.path(false))
   }
 
@@ -35,7 +35,7 @@ class Webhooks {
    * Operation: Get Webhook
    * Http get /restapi/v1.0/glip/webhooks/{webhookId}
    */
-  async get(): Promise<GlipWebhookList> {
+  async get (): Promise<GlipWebhookList> {
     if (this.webhookId === null) {
       throw new Error('webhookId must be specified.')
     }
@@ -47,7 +47,7 @@ class Webhooks {
    * Operation: Delete Webhook
    * Http delete /restapi/v1.0/glip/webhooks/{webhookId}
    */
-  async delete(): Promise<string> {
+  async delete (): Promise<string> {
     if (this.webhookId === null) {
       throw new Error('webhookId must be specified.')
     }
@@ -55,11 +55,11 @@ class Webhooks {
     return this.rc.delete(this.path())
   }
 
-  activate(): Activate {
+  activate (): Activate {
     return new Activate(this)
   }
 
-  suspend(): Suspend {
+  suspend (): Suspend {
     return new Suspend(this)
   }
 }

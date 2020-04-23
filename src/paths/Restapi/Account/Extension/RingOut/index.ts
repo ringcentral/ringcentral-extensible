@@ -7,13 +7,13 @@ class RingOut {
   ringoutId: (string | null)
   parent: Parent
 
-  constructor(parent: Parent, ringoutId: (string | null) = null) {
+  constructor (parent: Parent, ringoutId: (string | null) = null) {
     this.parent = parent
     this.rc = parent.rc
     this.ringoutId = ringoutId
   }
 
-  path(withParameter: boolean = true): string {
+  path (withParameter: boolean = true): string {
     if (withParameter && this.ringoutId !== null) {
       return `${this.parent.path()}/ring-out/${this.ringoutId}`
     }
@@ -25,7 +25,7 @@ class RingOut {
    * Operation: Make RingOut Call
    * Http post /restapi/v1.0/account/{accountId}/extension/{extensionId}/ring-out
    */
-  async post(makeRingOutRequest: MakeRingOutRequest): Promise<GetRingOutStatusResponse> {
+  async post (makeRingOutRequest: MakeRingOutRequest): Promise<GetRingOutStatusResponse> {
     return this.rc.post(this.path(false), makeRingOutRequest)
   }
 
@@ -33,7 +33,7 @@ class RingOut {
    * Operation: Get RingOut Call Status
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/ring-out/{ringoutId}
    */
-  async get(): Promise<GetRingOutStatusResponse> {
+  async get (): Promise<GetRingOutStatusResponse> {
     if (this.ringoutId === null) {
       throw new Error('ringoutId must be specified.')
     }
@@ -45,7 +45,7 @@ class RingOut {
    * Operation: Cancel RingOut Call
    * Http delete /restapi/v1.0/account/{accountId}/extension/{extensionId}/ring-out/{ringoutId}
    */
-  async delete(): Promise<string> {
+  async delete (): Promise<string> {
     if (this.ringoutId === null) {
       throw new Error('ringoutId must be specified.')
     }

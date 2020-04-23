@@ -7,13 +7,13 @@ class State {
   stateId: (string | null)
   parent: Parent
 
-  constructor(parent: Parent, stateId: (string | null) = null) {
+  constructor (parent: Parent, stateId: (string | null) = null) {
     this.parent = parent
     this.rc = parent.rc
     this.stateId = stateId
   }
 
-  path(withParameter: boolean = true): string {
+  path (withParameter: boolean = true): string {
     if (withParameter && this.stateId !== null) {
       return `${this.parent.path()}/state/${this.stateId}`
     }
@@ -25,7 +25,7 @@ class State {
    * Operation: Get States List
    * Http get /restapi/v1.0/dictionary/state
    */
-  async list(queryParams?: ListStatesParameters): Promise<GetStateListResponse> {
+  async list (queryParams?: ListStatesParameters): Promise<GetStateListResponse> {
     return this.rc.get(this.path(false), queryParams)
   }
 
@@ -33,7 +33,7 @@ class State {
    * Operation: Get State
    * Http get /restapi/v1.0/dictionary/state/{stateId}
    */
-  async get(): Promise<GetStateInfoResponse> {
+  async get (): Promise<GetStateInfoResponse> {
     if (this.stateId === null) {
       throw new Error('stateId must be specified.')
     }

@@ -7,13 +7,13 @@ class Content {
   attachmentId: (string | null)
   parent: Parent
 
-  constructor(parent: Parent, attachmentId: (string | null) = null) {
+  constructor (parent: Parent, attachmentId: (string | null) = null) {
     this.parent = parent
     this.rc = parent.rc
     this.attachmentId = attachmentId
   }
 
-  path(withParameter: boolean = true): string {
+  path (withParameter: boolean = true): string {
     if (withParameter && this.attachmentId !== null) {
       return `${this.parent.path()}/content/${this.attachmentId}`
     }
@@ -25,7 +25,7 @@ class Content {
    * Operation: Get Message Content
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}/content/{attachmentId}
    */
-  async get(queryParams?: ReadMessageContentParameters): Promise<Buffer> {
+  async get (queryParams?: ReadMessageContentParameters): Promise<Buffer> {
     if (this.attachmentId === null) {
       throw new Error('attachmentId must be specified.')
     }

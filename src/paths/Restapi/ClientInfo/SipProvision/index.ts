@@ -6,12 +6,12 @@ class SipProvision {
   rc: RestClient
   parent: Parent
 
-  constructor(parent: Parent) {
+  constructor (parent: Parent) {
     this.parent = parent
     this.rc = parent.rc
   }
 
-  path(): string {
+  path (): string {
     return `${this.parent.path()}/sip-provision`
   }
 
@@ -19,7 +19,7 @@ class SipProvision {
    * Operation: Register SIP Device
    * Http post /restapi/v1.0/client-info/sip-provision
    */
-  async post(createSipRegistrationRequest: CreateSipRegistrationRequest): Promise<CreateSipRegistrationResponse> {
+  async post (createSipRegistrationRequest: CreateSipRegistrationRequest): Promise<CreateSipRegistrationResponse> {
     return this.rc.post(this.path(), createSipRegistrationRequest)
   }
 }

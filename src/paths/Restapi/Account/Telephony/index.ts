@@ -7,20 +7,20 @@ class Telephony {
   rc: RestClient
   parent: Parent
 
-  constructor(parent: Parent) {
+  constructor (parent: Parent) {
     this.parent = parent
     this.rc = parent.rc
   }
 
-  path(): string {
+  path (): string {
     return `${this.parent.path()}/telephony`
   }
 
-  callOut(): CallOut {
+  callOut (): CallOut {
     return new CallOut(this)
   }
 
-  sessions(telephonySessionId: (string | null) = null): Sessions {
+  sessions (telephonySessionId: (string | null) = null): Sessions {
     return new Sessions(this, telephonySessionId)
   }
 }

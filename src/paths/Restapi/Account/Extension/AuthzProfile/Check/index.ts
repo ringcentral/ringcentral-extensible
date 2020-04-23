@@ -6,12 +6,12 @@ class Check {
   rc: RestClient
   parent: Parent
 
-  constructor(parent: Parent) {
+  constructor (parent: Parent) {
     this.parent = parent
     this.rc = parent.rc
   }
 
-  path(): string {
+  path (): string {
     return `${this.parent.path()}/check`
   }
 
@@ -19,7 +19,7 @@ class Check {
    * Operation: Check User Permission
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/authz-profile/check
    */
-  async get(queryParams?: CheckUserPermissionParameters): Promise<AuthProfileCheckResource> {
+  async get (queryParams?: CheckUserPermissionParameters): Promise<AuthProfileCheckResource> {
     return this.rc.get(this.path(), queryParams)
   }
 }

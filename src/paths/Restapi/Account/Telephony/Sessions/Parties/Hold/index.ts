@@ -6,12 +6,12 @@ class Hold {
   rc: RestClient
   parent: Parent
 
-  constructor(parent: Parent) {
+  constructor (parent: Parent) {
     this.parent = parent
     this.rc = parent.rc
   }
 
-  path(): string {
+  path (): string {
     return `${this.parent.path()}/hold`
   }
 
@@ -19,7 +19,7 @@ class Hold {
    * Operation: Hold Call Party
    * Http post /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/hold
    */
-  async post(): Promise<CallParty> {
+  async post (): Promise<CallParty> {
     return this.rc.post(this.path())
   }
 }

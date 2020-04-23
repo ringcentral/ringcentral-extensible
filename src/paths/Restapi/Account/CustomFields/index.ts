@@ -7,13 +7,13 @@ class CustomFields {
   fieldId: (string | null)
   parent: Parent
 
-  constructor(parent: Parent, fieldId: (string | null) = null) {
+  constructor (parent: Parent, fieldId: (string | null) = null) {
     this.parent = parent
     this.rc = parent.rc
     this.fieldId = fieldId
   }
 
-  path(withParameter: boolean = true): string {
+  path (withParameter: boolean = true): string {
     if (withParameter && this.fieldId !== null) {
       return `${this.parent.path()}/custom-fields/${this.fieldId}`
     }
@@ -25,7 +25,7 @@ class CustomFields {
    * Operation: Create Custom Field
    * Http post /restapi/v1.0/account/{accountId}/custom-fields
    */
-  async post(customFieldCreateRequest: CustomFieldCreateRequest): Promise<CustomFieldResource> {
+  async post (customFieldCreateRequest: CustomFieldCreateRequest): Promise<CustomFieldResource> {
     return this.rc.post(this.path(false), customFieldCreateRequest)
   }
 
@@ -33,7 +33,7 @@ class CustomFields {
    * Operation: Get Custom Field List
    * Http get /restapi/v1.0/account/{accountId}/custom-fields
    */
-  async get(): Promise<CustomFieldsResource> {
+  async get (): Promise<CustomFieldsResource> {
     return this.rc.get(this.path(false))
   }
 
@@ -41,7 +41,7 @@ class CustomFields {
    * Operation: Update Сustom Field
    * Http put /restapi/v1.0/account/{accountId}/custom-fields/{fieldId}
    */
-  async put(customFieldUpdateRequest: CustomFieldUpdateRequest): Promise<CustomFieldResource> {
+  async put (customFieldUpdateRequest: CustomFieldUpdateRequest): Promise<CustomFieldResource> {
     if (this.fieldId === null) {
       throw new Error('fieldId must be specified.')
     }
@@ -53,7 +53,7 @@ class CustomFields {
    * Operation: Delete Custom Field
    * Http delete /restapi/v1.0/account/{accountId}/custom-fields/{fieldId}
    */
-  async delete(): Promise<string> {
+  async delete (): Promise<string> {
     if (this.fieldId === null) {
       throw new Error('fieldId must be specified.')
     }

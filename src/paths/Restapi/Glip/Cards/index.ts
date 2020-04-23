@@ -7,13 +7,13 @@ class Cards {
   cardId: (string | null)
   parent: Parent
 
-  constructor(parent: Parent, cardId: (string | null) = null) {
+  constructor (parent: Parent, cardId: (string | null) = null) {
     this.parent = parent
     this.rc = parent.rc
     this.cardId = cardId
   }
 
-  path(withParameter: boolean = true): string {
+  path (withParameter: boolean = true): string {
     if (withParameter && this.cardId !== null) {
       return `${this.parent.path()}/cards/${this.cardId}`
     }
@@ -25,7 +25,7 @@ class Cards {
    * Operation: Create Card
    * Http post /restapi/v1.0/glip/cards
    */
-  async post(glipMessageAttachmentInfoRequest: GlipMessageAttachmentInfoRequest, queryParams?: CreateGlipCardParameters): Promise<GlipMessageAttachmentInfo> {
+  async post (glipMessageAttachmentInfoRequest: GlipMessageAttachmentInfoRequest, queryParams?: CreateGlipCardParameters): Promise<GlipMessageAttachmentInfo> {
     return this.rc.post(this.path(false), glipMessageAttachmentInfoRequest, queryParams)
   }
 
@@ -33,7 +33,7 @@ class Cards {
    * Operation: Get Card
    * Http get /restapi/v1.0/glip/cards/{cardId}
    */
-  async get(): Promise<GlipMessageAttachmentInfo> {
+  async get (): Promise<GlipMessageAttachmentInfo> {
     if (this.cardId === null) {
       throw new Error('cardId must be specified.')
     }
@@ -45,7 +45,7 @@ class Cards {
    * Operation: Update Card
    * Http put /restapi/v1.0/glip/cards/{cardId}
    */
-  async put(glipMessageAttachmentInfoRequest: GlipMessageAttachmentInfoRequest): Promise<string> {
+  async put (glipMessageAttachmentInfoRequest: GlipMessageAttachmentInfoRequest): Promise<string> {
     if (this.cardId === null) {
       throw new Error('cardId must be specified.')
     }
@@ -57,7 +57,7 @@ class Cards {
    * Operation: Delete Card
    * Http delete /restapi/v1.0/glip/cards/{cardId}
    */
-  async delete(): Promise<string> {
+  async delete (): Promise<string> {
     if (this.cardId === null) {
       throw new Error('cardId must be specified.')
     }

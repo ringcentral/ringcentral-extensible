@@ -7,13 +7,13 @@ class Networks {
   networkId: (string | null)
   parent: Parent
 
-  constructor(parent: Parent, networkId: (string | null) = null) {
+  constructor (parent: Parent, networkId: (string | null) = null) {
     this.parent = parent
     this.rc = parent.rc
     this.networkId = networkId
   }
 
-  path(withParameter: boolean = true): string {
+  path (withParameter: boolean = true): string {
     if (withParameter && this.networkId !== null) {
       return `${this.parent.path()}/networks/${this.networkId}`
     }
@@ -25,7 +25,7 @@ class Networks {
    * Operation: Get Network Map
    * Http get /restapi/v1.0/account/{accountId}/emergency-address-auto-update/networks
    */
-  async list(): Promise<NetworksList> {
+  async list (): Promise<NetworksList> {
     return this.rc.get(this.path(false))
   }
 
@@ -33,7 +33,7 @@ class Networks {
    * Operation: Create Network
    * Http post /restapi/v1.0/account/{accountId}/emergency-address-auto-update/networks
    */
-  async post(createNetworkRequest: CreateNetworkRequest): Promise<NetworkInfo> {
+  async post (createNetworkRequest: CreateNetworkRequest): Promise<NetworkInfo> {
     return this.rc.post(this.path(false), createNetworkRequest)
   }
 
@@ -41,7 +41,7 @@ class Networks {
    * Operation: Get Network
    * Http get /restapi/v1.0/account/{accountId}/emergency-address-auto-update/networks/{networkId}
    */
-  async get(): Promise<NetworkInfo> {
+  async get (): Promise<NetworkInfo> {
     if (this.networkId === null) {
       throw new Error('networkId must be specified.')
     }
@@ -53,7 +53,7 @@ class Networks {
    * Operation: Update Network
    * Http put /restapi/v1.0/account/{accountId}/emergency-address-auto-update/networks/{networkId}
    */
-  async put(updateNetworkRequest: UpdateNetworkRequest): Promise<string> {
+  async put (updateNetworkRequest: UpdateNetworkRequest): Promise<string> {
     if (this.networkId === null) {
       throw new Error('networkId must be specified.')
     }
@@ -65,7 +65,7 @@ class Networks {
    * Operation: Delete Network
    * Http delete /restapi/v1.0/account/{accountId}/emergency-address-auto-update/networks/{networkId}
    */
-  async delete(): Promise<string> {
+  async delete (): Promise<string> {
     if (this.networkId === null) {
       throw new Error('networkId must be specified.')
     }

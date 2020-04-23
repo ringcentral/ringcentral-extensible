@@ -7,13 +7,13 @@ class IvrMenus {
   ivrMenuId: (string | null)
   parent: Parent
 
-  constructor(parent: Parent, ivrMenuId: (string | null) = null) {
+  constructor (parent: Parent, ivrMenuId: (string | null) = null) {
     this.parent = parent
     this.rc = parent.rc
     this.ivrMenuId = ivrMenuId
   }
 
-  path(withParameter: boolean = true): string {
+  path (withParameter: boolean = true): string {
     if (withParameter && this.ivrMenuId !== null) {
       return `${this.parent.path()}/ivr-menus/${this.ivrMenuId}`
     }
@@ -25,7 +25,7 @@ class IvrMenus {
    * Operation: Create IVR Menu
    * Http post /restapi/v1.0/account/{accountId}/ivr-menus
    */
-  async post(iVRMenuInfo: IVRMenuInfo): Promise<IVRMenuInfo> {
+  async post (iVRMenuInfo: IVRMenuInfo): Promise<IVRMenuInfo> {
     return this.rc.post(this.path(false), iVRMenuInfo)
   }
 
@@ -33,7 +33,7 @@ class IvrMenus {
    * Operation: Get IVR Menu
    * Http get /restapi/v1.0/account/{accountId}/ivr-menus/{ivrMenuId}
    */
-  async get(): Promise<IVRMenuInfo> {
+  async get (): Promise<IVRMenuInfo> {
     if (this.ivrMenuId === null) {
       throw new Error('ivrMenuId must be specified.')
     }
@@ -45,7 +45,7 @@ class IvrMenus {
    * Operation: Update IVR Menu
    * Http put /restapi/v1.0/account/{accountId}/ivr-menus/{ivrMenuId}
    */
-  async put(iVRMenuInfo: IVRMenuInfo): Promise<IVRMenuInfo> {
+  async put (iVRMenuInfo: IVRMenuInfo): Promise<IVRMenuInfo> {
     if (this.ivrMenuId === null) {
       throw new Error('ivrMenuId must be specified.')
     }
