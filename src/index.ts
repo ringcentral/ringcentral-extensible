@@ -99,10 +99,10 @@ class RestClient {
     return this.token
   }
 
-  async refresh(refreshToken?: string): Promise<TokenInfo | void> {
+  async refresh(refreshToken?: string): Promise<TokenInfo> {
     const tokenToRefresh = refreshToken ?? this.token?.refresh_token
     if (!tokenToRefresh) {
-        return
+      throw new Error('tokenToRefresh must be specified.')
     }
     const getTokenRequest = new GetTokenRequest()
     getTokenRequest.grant_type = 'refresh_token'
