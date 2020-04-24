@@ -23,7 +23,7 @@ Since this library is model after the [RingCentral.NET](https://github.com/ringc
 
 ### Regenerate code using latest swagger spec
 
-Get the latest swagger spec [here])(https://github.com/ringcentral/RingCentral.Net/blob/master/code-generator/rc-platform-adjusted.yml) and run:
+Get the latest swagger spec [here](https://github.com/ringcentral/RingCentral.Net/blob/master/code-generator/rc-platform-adjusted.yml) and run:
 
 ```
 yarn generate
