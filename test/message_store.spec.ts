@@ -10,5 +10,7 @@ describe('message store', () => {
     const messageList = await rc.restapi().account().extension().messageStore().list({ messageType: ['Fax'], direction: ['Inbound'], dateFrom: '2015-04-15T17:18:00.000Z' })
     expect(messageList.records?.length).toBeGreaterThan(0)
     expect(messageList.records?.filter(r => 'from' in r).length).toBe(messageList.records?.length)
+    const messageInfo = await rc.restapi().account().extension().messageStore(messageList.records?.[0].id?.toString()).get()
+    expect(messageInfo.from).toBeDefined()
   })
 })
