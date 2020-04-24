@@ -16,6 +16,11 @@ describe('manage token', () => {
     // set token
     rc.token = tokenInfo
 
+    // if you only have the access token string
+    // rc.token = {
+    //   access_token: '...'
+    // }
+
     const extensionInfo = await rc.restapi().account().extension().get()
     expect(extensionInfo).not.toBeUndefined()
     expect(extensionInfo.id).not.toBeUndefined()
