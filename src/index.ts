@@ -5,6 +5,7 @@ import { GetTokenRequest, TokenInfo } from './definitions'
 import RestException from './RestException'
 import Restapi from './paths/Restapi'
 import Scim from './paths/Scim'
+import { version } from '../package.json'
 
 class RestClient {
   static sandboxServer = 'https://platform.devtest.ringcentral.com'
@@ -26,7 +27,7 @@ class RestClient {
     this.appVersion = appVersion
     this.httpClient = axios.create({
       baseURL: this.server,
-      headers: { 'X-User-Agent': `${appName}/${appVersion} tylerlong/ringcentral-typescript` },
+      headers: { 'X-User-Agent': `${appName}/${appVersion} tylerlong/ringcentral-typescript/${version}` },
       validateStatus: status => {
         return true
       },

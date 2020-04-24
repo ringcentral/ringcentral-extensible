@@ -12,7 +12,7 @@
     "definitions": "rm -rf ./src/definitions/* && node ./code-generator/definitions.js",
     "paths": "rm -rf ./src/paths/* && node ./code-generator/paths.js",
     "generate": "yarn definitions && yarn paths",
-    "prepublishOnly": "standard && tsc && yarn test",
+    "prepublishOnly": "standard && rm -rf dist && tsc && rm dist/package.json && mv dist/src/* dist/ && rmdir dist/src && yarn test",
     "tslint": "tslint --project ."
   },
   "dependencies": {

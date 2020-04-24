@@ -73,7 +73,6 @@ yarn test
 
 ### Todo
 
-- sdk version in user agent. adjust project structure before publishing
 - check other tsconfig options as well
 - Travis
 - Replace axios with @ringcentral/sdk ?
