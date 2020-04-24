@@ -2753,7 +2753,7 @@ await rc.revoke()
 ```
 
 - Parameter `readMessageContentParameters` is of type [ReadMessageContentParameters](./src/definitions/ReadMessageContentParameters.ts)
-- `result` is of type `byte[]`
+- `result` is of type [Buffer](https://nodejs.org/api/buffer.html)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
@@ -2917,7 +2917,7 @@ await rc.revoke()
 ```
 
 
-- `result` is of type `byte[]`
+- `result` is of type [Buffer](https://nodejs.org/api/buffer.html)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
@@ -2981,7 +2981,7 @@ await rc.revoke()
 ```
 
 
-- `result` is of type `byte[]`
+- `result` is of type [Buffer](https://nodejs.org/api/buffer.html)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
@@ -3296,7 +3296,7 @@ await rc.revoke()
 ```
 
 
-- `result` is of type `byte[]`
+- `result` is of type [Buffer](https://nodejs.org/api/buffer.html)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 
@@ -3585,7 +3585,7 @@ await rc.revoke()
 ```
 
 
-- `result` is of type `byte[]`
+- `result` is of type [Buffer](https://nodejs.org/api/buffer.html)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 
@@ -4749,7 +4749,7 @@ await rc.revoke()
 ```
 
 
-- `result` is of type `byte[]`
+- `result` is of type [Buffer](https://nodejs.org/api/buffer.html)
 - Parameter `apiVersion` is optional with default value `v1.0`
 
 [Try it out](https://developer.ringcentral.com/api-reference#Glip-Compliance-Exports-readDataExportTaskDataset) in API Explorer.
