@@ -73,8 +73,9 @@ yarn test
 
 ### Todo
 
-- check other tsconfig options as well
+- compare it with C# sdk and see what are missing
 - Travis
+- Create a WSG version of this SDK
 - Replace axios with @ringcentral/sdk ?
 - Make it an RingCentral official project
 - PubNub
