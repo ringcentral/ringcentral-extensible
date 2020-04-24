@@ -79,9 +79,9 @@ class RestClient {
   }
 
   async authorize (getTokenRequest: GetTokenRequest): Promise<TokenInfo>
-  async authorize (username: string, extension: string, password: string): Promise<TokenInfo>
-  async authorize (authCode: string, redirectUri: string): Promise<TokenInfo>
-  async authorize (arg1: (string | GetTokenRequest), arg2?: string, arg3?: string): Promise<TokenInfo> {
+  // authorize(username, extension, password) OR authorize(authCode, redirectUri)
+  async authorize (arg1: string, arg2: string, arg3?: string): Promise<TokenInfo>
+  async authorize (arg1: string | GetTokenRequest, arg2?: string, arg3?: string): Promise<TokenInfo> {
     let getTokenRequest = new GetTokenRequest()
     if (arg1 instanceof GetTokenRequest) {
       getTokenRequest = arg1
