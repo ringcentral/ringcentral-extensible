@@ -21,7 +21,7 @@ class Fax {
    * Http post /restapi/v1.0/account/{accountId}/extension/{extensionId}/fax
    */
   async post (createFaxMessageRequest: CreateFaxMessageRequest): Promise<FaxResponse> {
-    var formData = Utils.getFormData(createFaxMessageRequest)
+    const formData = Utils.getFormData(createFaxMessageRequest)
     return this.rc.post(this.path(), formData, undefined, formData.getHeaders())
   }
 }

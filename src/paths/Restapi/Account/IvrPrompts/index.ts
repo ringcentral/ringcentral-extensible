@@ -28,7 +28,7 @@ class IvrPrompts {
    * Http post /restapi/v1.0/account/{accountId}/ivr-prompts
    */
   async post (createIVRPromptRequest: CreateIvrPromptRequest): Promise<PromptInfo> {
-    var formData = Utils.getFormData(createIVRPromptRequest)
+    const formData = Utils.getFormData(createIVRPromptRequest)
     return this.rc.post(this.path(false), formData, undefined, formData.getHeaders())
   }
 

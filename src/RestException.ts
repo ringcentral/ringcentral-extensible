@@ -19,7 +19,7 @@ class RestException extends Error {
   response: RestResponse
   request: RestRequest
   message: string
-  constructor(r: AxiosResponse) {
+  constructor (r: AxiosResponse) {
     const response: RestResponse = {
       data: r.data,
       status: r.status,

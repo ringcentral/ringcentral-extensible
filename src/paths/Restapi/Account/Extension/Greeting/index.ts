@@ -27,7 +27,7 @@ class Greeting {
    * Http post /restapi/v1.0/account/{accountId}/extension/{extensionId}/greeting
    */
   async post (createCustomUserGreetingRequest: CreateCustomUserGreetingRequest): Promise<CustomUserGreetingInfo> {
-    var formData = Utils.getFormData(createCustomUserGreetingRequest)
+    const formData = Utils.getFormData(createCustomUserGreetingRequest)
     return this.rc.post(this.path(false), formData, undefined, formData.getHeaders())
   }
 

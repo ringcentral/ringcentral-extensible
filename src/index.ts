@@ -18,7 +18,7 @@ class RestClient {
   httpClient: AxiosInstance
   token?: TokenInfo
 
-  constructor(clientId: string, clientSecret: string, server: string, appName = 'Unknown', appVersion = '0.0.1') {
+  constructor (clientId: string, clientSecret: string, server: string, appName = 'Unknown', appVersion = '0.0.1') {
     this.clientId = clientId
     this.clientSecret = clientSecret
     this.server = server
@@ -36,7 +36,7 @@ class RestClient {
     })
   }
 
-  async request(httpMethod: Method, endpoint: string, content?: {}, queryParams?: {}, headers?: {}):  Promise<any>{
+  async request (httpMethod: Method, endpoint: string, content?: {}, queryParams?: {}, headers?: {}): Promise<any> {
     const config: AxiosRequestConfig = {
       method: httpMethod,
       url: endpoint,
@@ -44,7 +44,7 @@ class RestClient {
       params: queryParams,
       headers
     }
-    if(endpoint.startsWith('/restapi/oauth/')) { // basic token
+    if (endpoint.startsWith('/restapi/oauth/')) { // basic token
       config.auth = {
         username: this.clientId,
         password: this.clientSecret
@@ -57,31 +57,31 @@ class RestClient {
       }
     }
     const r = await this.httpClient.request(config)
-    if(r.status < 200 || r.status > 299) {
+    if (r.status < 200 || r.status > 299) {
       throw new RestException(r)
     }
     return r.data
   }
-  async get(endpoint: string, queryParams?: {}): Promise<any> {
+  async get (endpoint: string, queryParams?: {}): Promise<any> {
     return this.request('GET', endpoint, undefined, queryParams)
   }
-  async delete(endpoint: string, queryParams?: {}): Promise<any> {
+  async delete (endpoint: string, queryParams?: {}): Promise<any> {
     return this.request('DELETE', endpoint, undefined, queryParams)
   }
-  async post(endpoint: string, content?: {}, queryParams?: {}, headers?: {}) : Promise<any> {
+  async post (endpoint: string, content?: {}, queryParams?: {}, headers?: {}): Promise<any> {
     return this.request('POST', endpoint, content, queryParams, headers)
   }
-  async put(endpoint: string, content: {}, queryParams?: {}, headers?: {}) : Promise<any> {
+  async put (endpoint: string, content: {}, queryParams?: {}, headers?: {}): Promise<any> {
     return this.request('PUT', endpoint, content, queryParams, headers)
   }
-  async patch(endpoint: string, content: {}, queryParams?: {}, headers?: {}) : Promise<any> {
+  async patch (endpoint: string, content: {}, queryParams?: {}, headers?: {}): Promise<any> {
     return this.request('PATCH', endpoint, content, queryParams, headers)
   }
 
-  async authorize(getTokenRequest: GetTokenRequest): Promise<TokenInfo>
-  async authorize(username: string, extension: string, password: string): Promise<TokenInfo>
-  async authorize(authCode: string, redirectUri: string): Promise<TokenInfo>
-  async authorize(arg1: (string | GetTokenRequest), arg2?: string, arg3?: string): Promise<TokenInfo> {
+  async authorize (getTokenRequest: GetTokenRequest): Promise<TokenInfo>
+  async authorize (username: string, extension: string, password: string): Promise<TokenInfo>
+  async authorize (authCode: string, redirectUri: string): Promise<TokenInfo>
+  async authorize (arg1: (string | GetTokenRequest), arg2?: string, arg3?: string): Promise<TokenInfo> {
     let getTokenRequest = new GetTokenRequest()
     if (arg1 instanceof GetTokenRequest) {
       getTokenRequest = arg1
@@ -99,7 +99,7 @@ class RestClient {
     return this.token
   }
 
-  async refresh(refreshToken?: string): Promise<TokenInfo> {
+  async refresh (refreshToken?: string): Promise<TokenInfo> {
     const tokenToRefresh = refreshToken ?? this.token?.refresh_token
     if (!tokenToRefresh) {
       throw new Error('tokenToRefresh must be specified.')
@@ -110,7 +110,7 @@ class RestClient {
     return this.authorize(getTokenRequest)
   }
 
-  async revoke(tokenToRevoke?: string) {
+  async revoke (tokenToRevoke?: string) {
     if (!tokenToRevoke && !this.token) { // nothing to revoke
       return
     }
@@ -119,11 +119,11 @@ class RestClient {
     this.token = undefined
   }
 
-  restapi(apiVersion: (string | null) = 'v1.0'): Restapi {
-    return new Restapi(this, apiVersion);
+  restapi (apiVersion: (string | null) = 'v1.0'): Restapi {
+    return new Restapi(this, apiVersion)
   }
 
-  scim(version: (string | null) = 'v2'): Scim {
+  scim (version: (string | null) = 'v2'): Scim {
     return new Scim(this, version)
   }
 }

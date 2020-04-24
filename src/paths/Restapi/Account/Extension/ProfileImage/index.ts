@@ -35,7 +35,7 @@ class ProfileImage {
    * Http post /restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image
    */
   async post (createUserProfileImageRequest: CreateUserProfileImageRequest): Promise<string> {
-    var formData = Utils.getFormData(createUserProfileImageRequest)
+    const formData = Utils.getFormData(createUserProfileImageRequest)
     return this.rc.post(this.path(false), formData, undefined, formData.getHeaders())
   }
 
@@ -44,7 +44,7 @@ class ProfileImage {
    * Http put /restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image
    */
   async put (updateUserProfileImageRequest: UpdateUserProfileImageRequest): Promise<string> {
-    var formData = Utils.getFormData(updateUserProfileImageRequest)
+    const formData = Utils.getFormData(updateUserProfileImageRequest)
     return this.rc.post(this.path(false), formData, undefined, formData.getHeaders())
   }
 

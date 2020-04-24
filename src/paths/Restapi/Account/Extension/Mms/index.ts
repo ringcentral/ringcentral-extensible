@@ -21,7 +21,7 @@ class Mms {
    * Http post /restapi/v1.0/account/{accountId}/extension/{extensionId}/mms
    */
   async post (createMMSMessage: CreateMMSMessage): Promise<GetMessageInfoResponse> {
-    var formData = Utils.getFormData(createMMSMessage)
+    const formData = Utils.getFormData(createMMSMessage)
     return this.rc.post(this.path(), formData, undefined, formData.getHeaders())
   }
 }
