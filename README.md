@@ -12,7 +12,7 @@ yarn add ringcentral-typescript
 
 ## Sample code
 
-#### [Sample code for all the endpoints](./sample.md)
+#### [Sample code for all the endpoints](./samples.md)
 
 You can also find lots of useful code snippets from the [test cases](./test).
 
