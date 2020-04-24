@@ -74,8 +74,6 @@ yarn test
 ### Todo
 
 - sdk version in user agent. adjust project structure before publishing
-- Generate API reference
-    - go to dotnet SDK
 - check other tsconfig options as well
 - Travis
 - Replace axios with @ringcentral/sdk ?
