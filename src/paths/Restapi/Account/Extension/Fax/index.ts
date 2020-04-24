@@ -22,7 +22,7 @@ class Fax {
    */
   async post (createFaxMessageRequest: CreateFaxMessageRequest): Promise<FaxResponse> {
     const formData = Utils.getFormData(createFaxMessageRequest)
-    return this.rc.post(this.path(), formData, undefined, formData.getHeaders())
+    return this.rc.post(this.path(), formData, undefined, { headers: formData.getHeaders() })
   }
 }
 

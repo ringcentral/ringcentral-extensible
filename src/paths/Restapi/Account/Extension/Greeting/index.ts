@@ -28,7 +28,7 @@ class Greeting {
    */
   async post (createCustomUserGreetingRequest: CreateCustomUserGreetingRequest): Promise<CustomUserGreetingInfo> {
     const formData = Utils.getFormData(createCustomUserGreetingRequest)
-    return this.rc.post(this.path(false), formData, undefined, formData.getHeaders())
+    return this.rc.post(this.path(false), formData, undefined, { headers: formData.getHeaders() })
   }
 
   /**

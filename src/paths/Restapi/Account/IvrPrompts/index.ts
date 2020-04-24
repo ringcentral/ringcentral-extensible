@@ -29,7 +29,7 @@ class IvrPrompts {
    */
   async post (createIVRPromptRequest: CreateIvrPromptRequest): Promise<PromptInfo> {
     const formData = Utils.getFormData(createIVRPromptRequest)
-    return this.rc.post(this.path(false), formData, undefined, formData.getHeaders())
+    return this.rc.post(this.path(false), formData, undefined, { headers: formData.getHeaders() })
   }
 
   /**

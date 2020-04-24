@@ -218,7 +218,11 @@ class ${R.last(routes)} {
       if (multipart) {
         code += `
     const formData = Utils.getFormData(${bodyParam})
-    return this.rc.post(this.path(${(!withParam && paramName) ? 'false' : ''}), formData, ${queryParams.length > 0 ? 'queryParams' : 'undefined'}, formData.getHeaders())
+    return this.rc.post(this.path(${(!withParam && paramName) ? 'false' : ''}), formData, ${queryParams.length > 0 ? 'queryParams' : 'undefined'}, { headers: formData.getHeaders() })
+  }`
+      } else if (responseType === 'Buffer') {
+        code += `
+    return this.rc.${operation.method}(this.path(${(!withParam && paramName) ? 'false' : ''})${bodyParam ? `, ${bodyParam}` : ''}, ${queryParams.length > 0 ? 'queryParams' : 'undefined'}, { responseType: 'arraybuffer' })
   }`
       } else {
         code += `

@@ -30,7 +30,7 @@ class Content {
       throw new Error('attachmentId must be specified.')
     }
 
-    return this.rc.get(this.path(), queryParams)
+    return this.rc.get(this.path(), queryParams, { responseType: 'arraybuffer' })
   }
 }
 

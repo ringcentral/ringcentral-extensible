@@ -19,7 +19,7 @@ class Content {
    * Http get /restapi/v1.0/account/{accountId}/ivr-prompts/{promptId}/content
    */
   async get (): Promise<Buffer> {
-    return this.rc.get(this.path())
+    return this.rc.get(this.path(), undefined, { responseType: 'arraybuffer' })
   }
 }
 

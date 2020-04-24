@@ -29,7 +29,7 @@ class Datasets {
       throw new Error('datasetId must be specified.')
     }
 
-    return this.rc.get(this.path())
+    return this.rc.get(this.path(), undefined, { responseType: 'arraybuffer' })
   }
 }
 

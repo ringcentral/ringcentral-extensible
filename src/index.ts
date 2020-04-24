@@ -36,46 +36,46 @@ class RestClient {
     })
   }
 
-  async request (httpMethod: Method, endpoint: string, content?: {}, queryParams?: {}, headers?: {}): Promise<any> {
-    const config: AxiosRequestConfig = {
+  async request (httpMethod: Method, endpoint: string, content?: {}, queryParams?: {}, config?: {}): Promise<any> {
+    const _config: AxiosRequestConfig = {
       method: httpMethod,
       url: endpoint,
       data: content,
       params: queryParams,
-      headers
+      ...config
     }
     if (endpoint.startsWith('/restapi/oauth/')) { // basic token
-      config.auth = {
+      _config.auth = {
         username: this.clientId,
         password: this.clientSecret
       }
-      config.data = qs.stringify(config.data)
+      _config.data = qs.stringify(_config.data)
     } else { // bearer token
-      config.headers = {
-        ...config.headers,
+      _config.headers = {
+        ..._config.headers,
         Authorization: `Bearer ${this.token?.access_token}`
       }
     }
-    const r = await this.httpClient.request(config)
+    const r = await this.httpClient.request(_config)
     if (r.status < 200 || r.status > 299) {
       throw new RestException(r)
     }
     return r.data
   }
-  async get (endpoint: string, queryParams?: {}): Promise<any> {
-    return this.request('GET', endpoint, undefined, queryParams)
+  async get (endpoint: string, queryParams?: {}, config?: {}): Promise<any> {
+    return this.request('GET', endpoint, undefined, queryParams, config)
   }
-  async delete (endpoint: string, queryParams?: {}): Promise<any> {
-    return this.request('DELETE', endpoint, undefined, queryParams)
+  async delete (endpoint: string, queryParams?: {}, config?: {}): Promise<any> {
+    return this.request('DELETE', endpoint, undefined, queryParams, config)
   }
-  async post (endpoint: string, content?: {}, queryParams?: {}, headers?: {}): Promise<any> {
-    return this.request('POST', endpoint, content, queryParams, headers)
+  async post (endpoint: string, content?: {}, queryParams?: {}, config?: {}): Promise<any> {
+    return this.request('POST', endpoint, content, queryParams, config)
   }
-  async put (endpoint: string, content: {}, queryParams?: {}, headers?: {}): Promise<any> {
-    return this.request('PUT', endpoint, content, queryParams, headers)
+  async put (endpoint: string, content: {}, queryParams?: {}, config?: {}): Promise<any> {
+    return this.request('PUT', endpoint, content, queryParams, config)
   }
-  async patch (endpoint: string, content: {}, queryParams?: {}, headers?: {}): Promise<any> {
-    return this.request('PATCH', endpoint, content, queryParams, headers)
+  async patch (endpoint: string, content: {}, queryParams?: {}, config?: {}): Promise<any> {
+    return this.request('PATCH', endpoint, content, queryParams, config)
   }
 
   async authorize (getTokenRequest: GetTokenRequest): Promise<TokenInfo>

@@ -27,7 +27,7 @@ class ProfileImage {
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image
    */
   async list (): Promise<Buffer> {
-    return this.rc.get(this.path(false))
+    return this.rc.get(this.path(false), undefined, { responseType: 'arraybuffer' })
   }
 
   /**
@@ -36,7 +36,7 @@ class ProfileImage {
    */
   async post (createUserProfileImageRequest: CreateUserProfileImageRequest): Promise<string> {
     const formData = Utils.getFormData(createUserProfileImageRequest)
-    return this.rc.post(this.path(false), formData, undefined, formData.getHeaders())
+    return this.rc.post(this.path(false), formData, undefined, { headers: formData.getHeaders() })
   }
 
   /**
@@ -45,7 +45,7 @@ class ProfileImage {
    */
   async put (updateUserProfileImageRequest: UpdateUserProfileImageRequest): Promise<string> {
     const formData = Utils.getFormData(updateUserProfileImageRequest)
-    return this.rc.post(this.path(false), formData, undefined, formData.getHeaders())
+    return this.rc.post(this.path(false), formData, undefined, { headers: formData.getHeaders() })
   }
 
   /**
@@ -57,7 +57,7 @@ class ProfileImage {
       throw new Error('scaleSize must be specified.')
     }
 
-    return this.rc.get(this.path())
+    return this.rc.get(this.path(), undefined, { responseType: 'arraybuffer' })
   }
 }
 
