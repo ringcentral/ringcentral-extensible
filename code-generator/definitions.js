@@ -65,7 +65,7 @@ const generateField = (m, f) => {
     p = ` * Required\n  ${p}`
   }
   if (f.description) {
-    p = `${f.description.trim().split('\n').map(l => ` * ${l}`).join('\n')}\n  ${p}`
+    p = `${f.description.trim().split('\n').map(l => ` * ${l.trim()}`).join('\n  ')}\n  ${p}`
   }
   p = `/**\n  ${p}`
   return p
