@@ -45,7 +45,7 @@ class ProfileImage {
    */
   async put (updateUserProfileImageRequest: UpdateUserProfileImageRequest): Promise<string> {
     const formData = Utils.getFormData(updateUserProfileImageRequest)
-    return this.rc.post(this.path(false), formData, undefined, { headers: formData.getHeaders() })
+    return this.rc.put(this.path(false), formData, undefined, { headers: formData.getHeaders() })
   }
 
   /**

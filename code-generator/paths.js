@@ -218,7 +218,7 @@ class ${R.last(routes)} {
       if (multipart) {
         code += `
     const formData = Utils.getFormData(${bodyParam})
-    return this.rc.post(this.path(${(!withParam && paramName) ? 'false' : ''}), formData, ${queryParams.length > 0 ? 'queryParams' : 'undefined'}, { headers: formData.getHeaders() })
+    return this.rc.${operation.method}(this.path(${(!withParam && paramName) ? 'false' : ''}), formData, ${queryParams.length > 0 ? 'queryParams' : 'undefined'}, { headers: formData.getHeaders() })
   }`
       } else if (responseType === 'Buffer') {
         code += `
