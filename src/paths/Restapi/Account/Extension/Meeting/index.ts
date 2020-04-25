@@ -25,6 +25,7 @@ class Meeting {
 
   /**
    * Operation: Get Scheduled Meetings
+   * Rate Limit Group: Light
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting
    */
   async list (): Promise<MeetingsResource> {
@@ -33,6 +34,7 @@ class Meeting {
 
   /**
    * Operation: Create Meeting
+   * Rate Limit Group: Medium
    * Http post /restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting
    */
   async post (meetingRequestResource: MeetingRequestResource): Promise<MeetingResponseResource> {
@@ -41,6 +43,7 @@ class Meeting {
 
   /**
    * Operation: Get Meeting Info
+   * Rate Limit Group: Light
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/{meetingId}
    */
   async get (): Promise<MeetingResponseResource> {
@@ -53,6 +56,7 @@ class Meeting {
 
   /**
    * Operation: Update Meeting
+   * Rate Limit Group: Medium
    * Http put /restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/{meetingId}
    */
   async put (meetingRequestResource: MeetingRequestResource): Promise<MeetingResponseResource> {
@@ -65,6 +69,7 @@ class Meeting {
 
   /**
    * Operation: Delete Meeting
+   * Rate Limit Group: Medium
    * Http delete /restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/{meetingId}
    */
   async delete (): Promise<string> {

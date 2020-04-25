@@ -23,6 +23,7 @@ class Tasks {
 
   /**
    * Operation: Get Emergency Map Configuration Task
+   * Rate Limit Group: Light
    * Http get /restapi/v1.0/account/{accountId}/emergency-address-auto-update/tasks/{taskId}
    */
   async get (): Promise<AutomaticLocationUpdatesTaskInfo> {

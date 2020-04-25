@@ -24,6 +24,7 @@ class Recording {
 
   /**
    * Operation: Get Call Recording
+   * Rate Limit Group: Heavy
    * Http get /restapi/v1.0/account/{accountId}/recording/{recordingId}
    */
   async get (): Promise<GetCallRecordingResponse> {

@@ -18,6 +18,7 @@ class AuthzProfile {
 
   /**
    * Operation: Get Authorization Profile
+   * Rate Limit Group: Medium
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/authz-profile
    */
   async get (): Promise<AuthProfileResource> {

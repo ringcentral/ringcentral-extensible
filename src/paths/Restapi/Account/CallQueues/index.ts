@@ -25,6 +25,7 @@ class CallQueues {
 
   /**
    * Operation: Get Call Queue List
+   * Rate Limit Group: Medium
    * Http get /restapi/v1.0/account/{accountId}/call-queues
    */
   async get (queryParams?: ListCallQueuesParameters): Promise<CallQueues> {

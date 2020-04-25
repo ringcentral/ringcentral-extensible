@@ -16,6 +16,7 @@ class Read {
 
   /**
    * Operation: Mark Chat as Read
+   * Rate Limit Group: Medium
    * Http post /restapi/v1.0/glip/chats/{chatId}/read
    */
   async post (): Promise<string> {

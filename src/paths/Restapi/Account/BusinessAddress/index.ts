@@ -17,6 +17,7 @@ class BusinessAddress {
 
   /**
    * Operation: Get Account Business Address
+   * Rate Limit Group: Light
    * Http get /restapi/v1.0/account/{accountId}/business-address
    */
   async get (): Promise<AccountBusinessAddressResource> {
@@ -25,6 +26,7 @@ class BusinessAddress {
 
   /**
    * Operation: Update Company Business Address
+   * Rate Limit Group: Medium
    * Http put /restapi/v1.0/account/{accountId}/business-address
    */
   async put (modifyAccountBusinessAddressRequest: ModifyAccountBusinessAddressRequest): Promise<AccountBusinessAddressResource> {

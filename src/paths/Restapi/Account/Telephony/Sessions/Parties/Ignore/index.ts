@@ -17,6 +17,7 @@ class Ignore {
 
   /**
    * Operation: Ignore Call in Queue
+   * Rate Limit Group: Light
    * Http post /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/ignore
    */
   async post (ignoreRequestBody: IgnoreRequestBody): Promise<string> {

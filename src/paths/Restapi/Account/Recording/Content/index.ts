@@ -16,6 +16,7 @@ class Content {
 
   /**
    * Operation: Get Call Recordings Data
+   * Rate Limit Group: Heavy
    * Http get /restapi/v1.0/account/{accountId}/recording/{recordingId}/content
    */
   async get (): Promise<Buffer> {

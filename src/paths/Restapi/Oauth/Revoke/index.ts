@@ -17,6 +17,7 @@ class Revoke {
 
   /**
    * Operation: Revoke Token
+   * Rate Limit Group: Auth
    * Http post /restapi/oauth/revoke
    */
   async post (revokeTokenRequest: RevokeTokenRequest): Promise<string> {

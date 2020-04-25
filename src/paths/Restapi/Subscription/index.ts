@@ -24,6 +24,7 @@ class Subscription {
 
   /**
    * Operation: Get Subscriptions
+   * Rate Limit Group: Light
    * Http get /restapi/v1.0/subscription
    */
   async list (): Promise<RecordsCollectionResourceSubscriptionResponse> {
@@ -32,6 +33,7 @@ class Subscription {
 
   /**
    * Operation: Create Subscription
+   * Rate Limit Group: Medium
    * Http post /restapi/v1.0/subscription
    */
   async post (createSubscriptionRequest: CreateSubscriptionRequest): Promise<SubscriptionInfo> {
@@ -40,6 +42,7 @@ class Subscription {
 
   /**
    * Operation: Get Subscription
+   * Rate Limit Group: Light
    * Http get /restapi/v1.0/subscription/{subscriptionId}
    */
   async get (): Promise<SubscriptionInfo> {
@@ -52,6 +55,7 @@ class Subscription {
 
   /**
    * Operation: Renew Subscription / Update Event Filters
+   * Rate Limit Group: Medium
    * Http put /restapi/v1.0/subscription/{subscriptionId}
    */
   async put (modifySubscriptionRequest: ModifySubscriptionRequest, queryParams?: UpdateSubscriptionParameters): Promise<SubscriptionInfo> {
@@ -64,6 +68,7 @@ class Subscription {
 
   /**
    * Operation: Cancel Subscription
+   * Rate Limit Group: Medium
    * Http delete /restapi/v1.0/subscription/{subscriptionId}
    */
   async delete (): Promise<string> {

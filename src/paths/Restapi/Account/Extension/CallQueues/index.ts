@@ -17,6 +17,7 @@ class CallQueues {
 
   /**
    * Operation: Update User Call Queues
+   * Rate Limit Group: Medium
    * Http put /restapi/v1.0/account/{accountId}/extension/{extensionId}/call-queues
    */
   async put (userCallQueues: UserCallQueues): Promise<UserCallQueues> {

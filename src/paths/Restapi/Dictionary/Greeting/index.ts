@@ -23,6 +23,7 @@ class Greeting {
 
   /**
    * Operation: Get Standard Greeting List
+   * Rate Limit Group: Medium
    * Http get /restapi/v1.0/dictionary/greeting
    */
   async list (queryParams?: ListStandardGreetingsParameters): Promise<DictionaryGreetingList> {
@@ -31,6 +32,7 @@ class Greeting {
 
   /**
    * Operation: Get Standard Greeting
+   * Rate Limit Group: Medium
    * Http get /restapi/v1.0/dictionary/greeting/{greetingId}
    */
   async get (): Promise<DictionaryGreetingInfo> {

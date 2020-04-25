@@ -27,6 +27,7 @@ class Groups {
 
   /**
    * Operation: Get User Groups
+   * Rate Limit Group: Medium
    * Http get /restapi/v1.0/glip/groups
    */
   async list (queryParams?: ListGlipGroupsParameters): Promise<GlipGroupList> {
@@ -35,6 +36,7 @@ class Groups {
 
   /**
    * Operation: Create Group
+   * Rate Limit Group: Medium
    * Http post /restapi/v1.0/glip/groups
    */
   async post (glipCreateGroup: GlipCreateGroup): Promise<GlipGroupInfo> {
@@ -43,6 +45,7 @@ class Groups {
 
   /**
    * Operation: Get Group
+   * Rate Limit Group: Light
    * Http get /restapi/v1.0/glip/groups/{groupId}
    */
   async get (): Promise<GlipGroupInfo> {

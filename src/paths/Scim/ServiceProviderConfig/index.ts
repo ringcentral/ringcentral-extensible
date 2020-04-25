@@ -16,6 +16,7 @@ class ServiceProviderConfig {
 
   /**
    * Operation: Get Service Provider Config
+   * Rate Limit Group: NoThrottling
    * Http get /scim/v2/ServiceProviderConfig
    */
   async get (): Promise<ServiceProviderConfig> {

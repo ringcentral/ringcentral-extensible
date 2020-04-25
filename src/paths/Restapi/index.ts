@@ -28,6 +28,7 @@ class Restapi {
 
   /**
    * Operation: Get API Versions
+   * Rate Limit Group: NoThrottling
    * Http get /restapi
    */
   async list (): Promise<GetVersionsResponse> {
@@ -36,6 +37,7 @@ class Restapi {
 
   /**
    * Operation: Get Version Info
+   * Rate Limit Group: NoThrottling
    * Http get /restapi/{apiVersion}
    */
   async get (): Promise<GetVersionResponse> {

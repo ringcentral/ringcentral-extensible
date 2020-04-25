@@ -17,6 +17,7 @@ class BulkAssign {
 
   /**
    * Operation: Enable Automatic Location Updates for Users
+   * Rate Limit Group: Heavy
    * Http post /restapi/v1.0/account/{accountId}/emergency-address-auto-update/users/bulk-assign
    */
   async post (bulkAssignAutomaticaLocationUpdatesUsers: BulkAssignAutomaticaLocationUpdatesUsers): Promise<string> {

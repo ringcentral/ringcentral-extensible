@@ -208,6 +208,7 @@ class ${R.last(routes)} {
 
   /**
    * Operation: ${operation.detail.summary || titleCase(operation.detail.operationId)}
+   * Rate Limit Group: ${operation.detail['x-throttling-group']}
    * Http ${operation.method} ${operation.endpoint}
    */
   async ${smartMethod} (${methodParams.join(', ')}): Promise<${responseType}> {${withParam ? `

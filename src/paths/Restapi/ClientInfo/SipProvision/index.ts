@@ -17,6 +17,7 @@ class SipProvision {
 
   /**
    * Operation: Register SIP Device
+   * Rate Limit Group: Heavy
    * Http post /restapi/v1.0/client-info/sip-provision
    */
   async post (createSipRegistrationRequest: CreateSipRegistrationRequest): Promise<CreateSipRegistrationResponse> {

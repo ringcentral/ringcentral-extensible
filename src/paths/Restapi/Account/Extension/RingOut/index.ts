@@ -23,6 +23,7 @@ class RingOut {
 
   /**
    * Operation: Make RingOut Call
+   * Rate Limit Group: Heavy
    * Http post /restapi/v1.0/account/{accountId}/extension/{extensionId}/ring-out
    */
   async post (makeRingOutRequest: MakeRingOutRequest): Promise<GetRingOutStatusResponse> {
@@ -31,6 +32,7 @@ class RingOut {
 
   /**
    * Operation: Get RingOut Call Status
+   * Rate Limit Group: Light
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/ring-out/{ringoutId}
    */
   async get (): Promise<GetRingOutStatusResponse> {
@@ -43,6 +45,7 @@ class RingOut {
 
   /**
    * Operation: Cancel RingOut Call
+   * Rate Limit Group: Heavy
    * Http delete /restapi/v1.0/account/{accountId}/extension/{extensionId}/ring-out/{ringoutId}
    */
   async delete (): Promise<string> {

@@ -23,6 +23,7 @@ class Switches {
 
   /**
    * Operation: Get Account Switch List
+   * Rate Limit Group: Heavy
    * Http get /restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches
    */
   async list (queryParams?: ListAccountSwitchesParameters): Promise<SwitchesList> {
@@ -31,6 +32,7 @@ class Switches {
 
   /**
    * Operation: Create Switch
+   * Rate Limit Group: Heavy
    * Http post /restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches
    */
   async post (createSwitchInfo: CreateSwitchInfo): Promise<SwitchInfo> {
@@ -39,6 +41,7 @@ class Switches {
 
   /**
    * Operation: Get Switch
+   * Rate Limit Group: Medium
    * Http get /restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches/{switchId}
    */
   async get (): Promise<SwitchInfo> {
@@ -51,6 +54,7 @@ class Switches {
 
   /**
    * Operation: Update Switch
+   * Rate Limit Group: Heavy
    * Http put /restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches/{switchId}
    */
   async put (updateSwitchInfo: UpdateSwitchInfo): Promise<SwitchInfo> {
@@ -63,6 +67,7 @@ class Switches {
 
   /**
    * Operation: Delete Switch
+   * Rate Limit Group: Heavy
    * Http delete /restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches/{switchId}
    */
   async delete (): Promise<string> {

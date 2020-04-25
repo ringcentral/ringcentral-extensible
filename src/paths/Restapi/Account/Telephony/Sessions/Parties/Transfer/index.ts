@@ -17,6 +17,7 @@ class Transfer {
 
   /**
    * Operation: Transfer Call Party
+   * Rate Limit Group: Light
    * Http post /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/transfer
    */
   async post (transferTarget: TransferTarget): Promise<CallParty> {

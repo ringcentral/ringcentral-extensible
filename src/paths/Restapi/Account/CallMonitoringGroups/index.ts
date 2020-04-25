@@ -25,6 +25,7 @@ class CallMonitoringGroups {
 
   /**
    * Operation: Create Call Monitoring Group
+   * Rate Limit Group: Medium
    * Http post /restapi/v1.0/account/{accountId}/call-monitoring-groups
    */
   async post (createCallMonitoringGroupRequest: CreateCallMonitoringGroupRequest): Promise<CallMonitoringGroup> {
@@ -33,6 +34,7 @@ class CallMonitoringGroups {
 
   /**
    * Operation: Get Call Monitoring Groups List
+   * Rate Limit Group: Medium
    * Http get /restapi/v1.0/account/{accountId}/call-monitoring-groups
    */
   async get (queryParams?: ListCallMonitoringGroupsParameters): Promise<CallMonitoringGroups> {
@@ -41,6 +43,7 @@ class CallMonitoringGroups {
 
   /**
    * Operation: Updates Call Monitoring Group
+   * Rate Limit Group: Medium
    * Http put /restapi/v1.0/account/{accountId}/call-monitoring-groups/{groupId}
    */
   async put (createCallMonitoringGroupRequest: CreateCallMonitoringGroupRequest): Promise<CallMonitoringGroup> {
@@ -53,6 +56,7 @@ class CallMonitoringGroups {
 
   /**
    * Operation: Delete Call Monitoring Group
+   * Rate Limit Group: Medium
    * Http delete /restapi/v1.0/account/{accountId}/call-monitoring-groups/{groupId}
    */
   async delete (): Promise<string> {

@@ -24,6 +24,7 @@ class Entries {
 
   /**
    * Operation: Get Company Directory Entries
+   * Rate Limit Group: Medium
    * Http get /restapi/v1.0/account/{accountId}/directory/entries
    */
   async list (queryParams?: ListDirectoryEntriesParameters): Promise<DirectoryResource> {
@@ -32,6 +33,7 @@ class Entries {
 
   /**
    * Operation: Get Corporate Directory Entry
+   * Rate Limit Group: Medium
    * Http get /restapi/v1.0/account/{accountId}/directory/entries/{entryId}
    */
   async get (): Promise<ContactResource> {

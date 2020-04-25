@@ -24,6 +24,7 @@ class ProfileImage {
 
   /**
    * Operation: Get User Profile Image
+   * Rate Limit Group: Medium
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image
    */
   async list (): Promise<Buffer> {
@@ -32,6 +33,7 @@ class ProfileImage {
 
   /**
    * Operation: Upload User Profile Image
+   * Rate Limit Group: Heavy
    * Http post /restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image
    */
   async post (createUserProfileImageRequest: CreateUserProfileImageRequest): Promise<string> {
@@ -41,6 +43,7 @@ class ProfileImage {
 
   /**
    * Operation: Update User Profile Image
+   * Rate Limit Group: Heavy
    * Http put /restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image
    */
   async put (updateUserProfileImageRequest: UpdateUserProfileImageRequest): Promise<string> {
@@ -50,6 +53,7 @@ class ProfileImage {
 
   /**
    * Operation: Get Scaled User Profile Image
+   * Rate Limit Group: Light
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image/{scaleSize}
    */
   async get (): Promise<Buffer> {

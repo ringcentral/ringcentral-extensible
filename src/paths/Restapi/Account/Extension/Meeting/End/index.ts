@@ -16,6 +16,7 @@ class End {
 
   /**
    * Operation: End Meeting
+   * Rate Limit Group: Medium
    * Http post /restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/{meetingId}/end
    */
   async post (): Promise<string> {

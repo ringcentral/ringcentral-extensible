@@ -23,6 +23,7 @@ class State {
 
   /**
    * Operation: Get States List
+   * Rate Limit Group: Light
    * Http get /restapi/v1.0/dictionary/state
    */
   async list (queryParams?: ListStatesParameters): Promise<GetStateListResponse> {
@@ -31,6 +32,7 @@ class State {
 
   /**
    * Operation: Get State
+   * Rate Limit Group: Light
    * Http get /restapi/v1.0/dictionary/state/{stateId}
    */
   async get (): Promise<GetStateInfoResponse> {

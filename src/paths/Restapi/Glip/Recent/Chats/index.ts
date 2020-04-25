@@ -17,6 +17,7 @@ class Chats {
 
   /**
    * Operation: Get Recent Chats
+   * Rate Limit Group: Light
    * Http get /restapi/v1.0/glip/recent/chats
    */
   async get (queryParams?: ListRecentChatsParameters): Promise<GlipChatsListWithoutNavigation> {

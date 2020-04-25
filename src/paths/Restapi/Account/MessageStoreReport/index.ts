@@ -24,6 +24,7 @@ class MessageStoreReport {
 
   /**
    * Operation: Create Message Store Report
+   * Rate Limit Group: Heavy
    * Http post /restapi/v1.0/account/{accountId}/message-store-report
    */
   async post (createMessageStoreReportRequest: CreateMessageStoreReportRequest): Promise<MessageStoreReport> {
@@ -32,6 +33,7 @@ class MessageStoreReport {
 
   /**
    * Operation: Get Message Store Report Task
+   * Rate Limit Group: Heavy
    * Http get /restapi/v1.0/account/{accountId}/message-store-report/{taskId}
    */
   async get (): Promise<MessageStoreReport> {

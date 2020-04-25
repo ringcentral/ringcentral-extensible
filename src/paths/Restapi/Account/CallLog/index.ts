@@ -23,6 +23,7 @@ class CallLog {
 
   /**
    * Operation: Get Company Call Log Records
+   * Rate Limit Group: Heavy
    * Http get /restapi/v1.0/account/{accountId}/call-log
    */
   async list (queryParams?: ReadCompanyCallLogParameters): Promise<AccountCallLogResponse> {
@@ -31,6 +32,7 @@ class CallLog {
 
   /**
    * Operation: Get Company Call Log Record(s)
+   * Rate Limit Group: Heavy
    * Http get /restapi/v1.0/account/{accountId}/call-log/{callRecordId}
    */
   async get (queryParams?: ReadCompanyCallRecordParameters): Promise<CompanyCallLogRecord> {

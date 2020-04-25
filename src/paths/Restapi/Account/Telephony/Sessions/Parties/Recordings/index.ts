@@ -23,6 +23,7 @@ class Recordings {
 
   /**
    * Operation: Create Recording
+   * Rate Limit Group: Light
    * Http post /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/recordings
    */
   async post (): Promise<string> {
@@ -31,6 +32,7 @@ class Recordings {
 
   /**
    * Operation: Pause/Resume Recording
+   * Rate Limit Group: Light
    * Http patch /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/recordings/{recordingId}
    */
   async patch (callRecordingUpdate: CallRecordingUpdate, queryParams?: PauseResumeCallRecordingParameters): Promise<CallRecording> {

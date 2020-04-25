@@ -17,6 +17,7 @@ class CompanyPager {
 
   /**
    * Operation: Create Internal Text Message
+   * Rate Limit Group: Medium
    * Http post /restapi/v1.0/account/{accountId}/extension/{extensionId}/company-pager
    */
   async post (createInternalTextMessageRequest: CreateInternalTextMessageRequest): Promise<GetMessageInfoResponse> {

@@ -17,6 +17,7 @@ class AddressBookSync {
 
   /**
    * Operation: Address Book Synchronization
+   * Rate Limit Group: Heavy
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book-sync
    */
   async get (queryParams?: SyncAddressBookParameters): Promise<AddressBookSync> {

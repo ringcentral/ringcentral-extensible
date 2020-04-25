@@ -23,6 +23,7 @@ class Conversations {
 
   /**
    * Operation: Get Conversations
+   * Rate Limit Group: Medium
    * Http get /restapi/v1.0/glip/conversations
    */
   async list (queryParams?: ListGlipConversationsParameters): Promise<GlipConversationsList> {
@@ -31,6 +32,7 @@ class Conversations {
 
   /**
    * Operation: Create/Open Conversation
+   * Rate Limit Group: Medium
    * Http post /restapi/v1.0/glip/conversations
    */
   async post (createGlipConversationRequest: CreateGlipConversationRequest): Promise<GlipConversationInfo> {
@@ -39,6 +41,7 @@ class Conversations {
 
   /**
    * Operation: Get Conversation
+   * Rate Limit Group: Light
    * Http get /restapi/v1.0/glip/conversations/{chatId}
    */
   async get (): Promise<GlipConversationInfo> {

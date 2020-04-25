@@ -23,6 +23,7 @@ class Content {
 
   /**
    * Operation: Get Message Content
+   * Rate Limit Group: Medium
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}/content/{attachmentId}
    */
   async get (queryParams?: ReadMessageContentParameters): Promise<Buffer> {

@@ -23,6 +23,7 @@ class Language {
 
   /**
    * Operation: Get Language List
+   * Rate Limit Group: Light
    * Http get /restapi/v1.0/dictionary/language
    */
   async list (): Promise<LanguageList> {
@@ -31,6 +32,7 @@ class Language {
 
   /**
    * Operation: Get Language
+   * Rate Limit Group: Light
    * Http get /restapi/v1.0/dictionary/language/{languageId}
    */
   async get (): Promise<LanguageInfo> {

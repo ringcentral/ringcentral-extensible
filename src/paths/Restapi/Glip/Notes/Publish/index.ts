@@ -16,6 +16,7 @@ class Publish {
 
   /**
    * Operation: Publish Note
+   * Rate Limit Group: Medium
    * Http post /restapi/v1.0/glip/notes/{noteId}/publish
    */
   async post (): Promise<string> {

@@ -17,6 +17,7 @@ class ActiveCalls {
 
   /**
    * Operation: Get Company Active Calls
+   * Rate Limit Group: Heavy
    * Http get /restapi/v1.0/account/{accountId}/active-calls
    */
   async get (queryParams?: ListCompanyActiveCallsParameters): Promise<CompanyActiveCallsResponse> {

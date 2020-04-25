@@ -23,6 +23,7 @@ class Country {
 
   /**
    * Operation: Get Country List
+   * Rate Limit Group: Light
    * Http get /restapi/v1.0/dictionary/country
    */
   async list (queryParams?: ListCountriesParameters): Promise<GetCountryListResponse> {
@@ -31,6 +32,7 @@ class Country {
 
   /**
    * Operation: Get Country
+   * Rate Limit Group: Light
    * Http get /restapi/v1.0/dictionary/country/{countryId}
    */
   async get (): Promise<GetCountryInfoDictionaryResponse> {

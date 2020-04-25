@@ -17,6 +17,7 @@ class Devices {
 
   /**
    * Operation: Get Paging Group Devices
+   * Rate Limit Group: Light
    * Http get /restapi/v1.0/account/{accountId}/paging-only-groups/{pagingOnlyGroupId}/devices
    */
   async get (queryParams?: ListPagingGroupDevicesParameters): Promise<PagingOnlyGroupDevices> {

@@ -17,6 +17,7 @@ class Token {
 
   /**
    * Operation: Get Token
+   * Rate Limit Group: Auth
    * Http post /restapi/oauth/token
    */
   async post (getTokenRequest: GetTokenRequest): Promise<TokenInfo> {

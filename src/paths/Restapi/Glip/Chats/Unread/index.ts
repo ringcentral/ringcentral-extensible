@@ -16,6 +16,7 @@ class Unread {
 
   /**
    * Operation: Mark Chat as Unread
+   * Rate Limit Group: Medium
    * Http post /restapi/v1.0/glip/chats/{chatId}/unread
    */
   async post (): Promise<string> {

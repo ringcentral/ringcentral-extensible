@@ -17,6 +17,7 @@ class Forward {
 
   /**
    * Operation: Forward Call Party
+   * Rate Limit Group: Light
    * Http post /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/forward
    */
   async post (forwardTarget: ForwardTarget): Promise<CallParty> {

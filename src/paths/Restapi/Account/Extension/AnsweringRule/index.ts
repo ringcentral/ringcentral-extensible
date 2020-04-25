@@ -23,6 +23,7 @@ class AnsweringRule {
 
   /**
    * Operation: Get Call Handling Rules
+   * Rate Limit Group: Medium
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/answering-rule
    */
   async list (queryParams?: ListAnsweringRulesParameters): Promise<UserAnsweringRuleList> {
@@ -31,6 +32,7 @@ class AnsweringRule {
 
   /**
    * Operation: Create Call Handling Rule
+   * Rate Limit Group: Medium
    * Http post /restapi/v1.0/account/{accountId}/extension/{extensionId}/answering-rule
    */
   async post (createAnsweringRuleRequest: CreateAnsweringRuleRequest): Promise<CustomAnsweringRuleInfo> {
@@ -39,6 +41,7 @@ class AnsweringRule {
 
   /**
    * Operation: Get Call Handling Rule
+   * Rate Limit Group: Light
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/answering-rule/{ruleId}
    */
   async get (queryParams?: ReadAnsweringRuleParameters): Promise<AnsweringRuleInfo> {
@@ -51,6 +54,7 @@ class AnsweringRule {
 
   /**
    * Operation: Update Call Handling Rule
+   * Rate Limit Group: Medium
    * Http put /restapi/v1.0/account/{accountId}/extension/{extensionId}/answering-rule/{ruleId}
    */
   async put (updateAnsweringRuleRequest: UpdateAnsweringRuleRequest): Promise<AnsweringRuleInfo> {
@@ -63,6 +67,7 @@ class AnsweringRule {
 
   /**
    * Operation: Delete Call Handling Rule
+   * Rate Limit Group: Medium
    * Http delete /restapi/v1.0/account/{accountId}/extension/{extensionId}/answering-rule/{ruleId}
    */
   async delete (): Promise<string> {

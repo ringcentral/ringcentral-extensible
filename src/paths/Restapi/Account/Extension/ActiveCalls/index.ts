@@ -17,6 +17,7 @@ class ActiveCalls {
 
   /**
    * Operation: Get User Active Calls
+   * Rate Limit Group: Heavy
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/active-calls
    */
   async get (queryParams?: ListExtensionActiveCallsParameters): Promise<UserActiveCallsResponse> {

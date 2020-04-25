@@ -25,6 +25,7 @@ class Webhooks {
 
   /**
    * Operation: Get Webhooks
+   * Rate Limit Group: Medium
    * Http get /restapi/v1.0/glip/webhooks
    */
   async list (): Promise<GlipWebhookList> {
@@ -33,6 +34,7 @@ class Webhooks {
 
   /**
    * Operation: Get Webhook
+   * Rate Limit Group: Medium
    * Http get /restapi/v1.0/glip/webhooks/{webhookId}
    */
   async get (): Promise<GlipWebhookList> {
@@ -45,6 +47,7 @@ class Webhooks {
 
   /**
    * Operation: Delete Webhook
+   * Rate Limit Group: Medium
    * Http delete /restapi/v1.0/glip/webhooks/{webhookId}
    */
   async delete (): Promise<string> {

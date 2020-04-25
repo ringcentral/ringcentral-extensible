@@ -17,6 +17,7 @@ class BulkAssign {
 
   /**
    * Operation: Assign Paging Group Users and Devices
+   * Rate Limit Group: Heavy
    * Http post /restapi/v1.0/account/{accountId}/paging-only-groups/{pagingOnlyGroupId}/bulk-assign
    */
   async post (editPagingGroupRequest: EditPagingGroupRequest): Promise<string> {

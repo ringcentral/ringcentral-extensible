@@ -17,6 +17,7 @@ class DotSearch {
 
   /**
    * Operation: Search/List Users
+   * Rate Limit Group: Light
    * Http post /scim/v2/Users/.search
    */
   async post (searchRequest: SearchRequest): Promise<UserSearchResponse> {

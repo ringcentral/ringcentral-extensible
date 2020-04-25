@@ -24,6 +24,7 @@ class Greeting {
 
   /**
    * Operation: Create Custom User Greeting
+   * Rate Limit Group: Heavy
    * Http post /restapi/v1.0/account/{accountId}/extension/{extensionId}/greeting
    */
   async post (createCustomUserGreetingRequest: CreateCustomUserGreetingRequest): Promise<CustomUserGreetingInfo> {
@@ -33,6 +34,7 @@ class Greeting {
 
   /**
    * Operation: Get Custom Greeting
+   * Rate Limit Group: Medium
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/greeting/{greetingId}
    */
   async get (): Promise<CustomUserGreetingInfo> {

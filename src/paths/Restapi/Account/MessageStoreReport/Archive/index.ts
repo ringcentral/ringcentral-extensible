@@ -23,6 +23,7 @@ class Archive {
 
   /**
    * Operation: Get Message Store Report Archive
+   * Rate Limit Group: Heavy
    * Http get /restapi/v1.0/account/{accountId}/message-store-report/{taskId}/archive
    */
   async list (): Promise<MessageStoreReportArchive> {
@@ -31,6 +32,7 @@ class Archive {
 
   /**
    * Operation: Get Message Store Report Archive Content
+   * Rate Limit Group: Heavy
    * Http get /restapi/v1.0/account/{accountId}/message-store-report/{taskId}/archive/{archiveId}
    */
   async get (): Promise<string> {

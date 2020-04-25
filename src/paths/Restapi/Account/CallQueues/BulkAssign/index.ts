@@ -17,6 +17,7 @@ class BulkAssign {
 
   /**
    * Operation: Assign Multiple Call Queue Members
+   * Rate Limit Group: Heavy
    * Http post /restapi/v1.0/account/{accountId}/call-queues/{groupId}/bulk-assign
    */
   async post (callQueueBulkAssignResource: CallQueueBulkAssignResource): Promise<string> {

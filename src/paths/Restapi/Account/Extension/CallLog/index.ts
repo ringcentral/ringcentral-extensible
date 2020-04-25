@@ -23,6 +23,7 @@ class CallLog {
 
   /**
    * Operation: Get User Call Log Records
+   * Rate Limit Group: Heavy
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log
    */
   async list (queryParams?: ReadUserCallLogParameters): Promise<UserCallLogResponse> {
@@ -31,6 +32,7 @@ class CallLog {
 
   /**
    * Operation: Delete User Call Log
+   * Rate Limit Group: Heavy
    * Http delete /restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log
    */
   async delete (queryParams?: DeleteUserCallLogParameters): Promise<string> {
@@ -39,6 +41,7 @@ class CallLog {
 
   /**
    * Operation: Get User Call Record
+   * Rate Limit Group: Heavy
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log/{callRecordId}
    */
   async get (queryParams?: ReadUserCallRecordParameters): Promise<UserCallLogRecord> {

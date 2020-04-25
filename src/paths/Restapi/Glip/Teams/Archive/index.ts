@@ -16,6 +16,7 @@ class Archive {
 
   /**
    * Operation: Archive Team
+   * Rate Limit Group: Medium
    * Http post /restapi/v1.0/glip/teams/{chatId}/archive
    */
   async post (): Promise<string> {

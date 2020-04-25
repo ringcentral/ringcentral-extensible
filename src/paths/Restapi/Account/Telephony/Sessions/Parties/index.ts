@@ -36,6 +36,7 @@ class Parties {
 
   /**
    * Operation: Get Call Party Status
+   * Rate Limit Group: Light
    * Http get /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}
    */
   async get (): Promise<CallParty> {
@@ -48,6 +49,7 @@ class Parties {
 
   /**
    * Operation: Update Call Party
+   * Rate Limit Group: Light
    * Http patch /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}
    */
   async patch (partyUpdateRequest: PartyUpdateRequest): Promise<CallParty> {

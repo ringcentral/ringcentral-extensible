@@ -23,6 +23,7 @@ class CustomFields {
 
   /**
    * Operation: Create Custom Field
+   * Rate Limit Group: Light
    * Http post /restapi/v1.0/account/{accountId}/custom-fields
    */
   async post (customFieldCreateRequest: CustomFieldCreateRequest): Promise<CustomFieldResource> {
@@ -31,6 +32,7 @@ class CustomFields {
 
   /**
    * Operation: Get Custom Field List
+   * Rate Limit Group: Light
    * Http get /restapi/v1.0/account/{accountId}/custom-fields
    */
   async get (): Promise<CustomFieldsResource> {
@@ -39,6 +41,7 @@ class CustomFields {
 
   /**
    * Operation: Update Сustom Field
+   * Rate Limit Group: Light
    * Http put /restapi/v1.0/account/{accountId}/custom-fields/{fieldId}
    */
   async put (customFieldUpdateRequest: CustomFieldUpdateRequest): Promise<CustomFieldResource> {
@@ -51,6 +54,7 @@ class CustomFields {
 
   /**
    * Operation: Delete Custom Field
+   * Rate Limit Group: Light
    * Http delete /restapi/v1.0/account/{accountId}/custom-fields/{fieldId}
    */
   async delete (): Promise<string> {

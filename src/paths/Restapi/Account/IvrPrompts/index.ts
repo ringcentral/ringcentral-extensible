@@ -25,6 +25,7 @@ class IvrPrompts {
 
   /**
    * Operation: Create IVR Prompts
+   * Rate Limit Group: Heavy
    * Http post /restapi/v1.0/account/{accountId}/ivr-prompts
    */
   async post (createIVRPromptRequest: CreateIvrPromptRequest): Promise<PromptInfo> {
@@ -34,6 +35,7 @@ class IvrPrompts {
 
   /**
    * Operation: Get IVR Prompt List
+   * Rate Limit Group: Medium
    * Http get /restapi/v1.0/account/{accountId}/ivr-prompts
    */
   async list (): Promise<IVRPrompts> {
@@ -42,6 +44,7 @@ class IvrPrompts {
 
   /**
    * Operation: Get IVR Prompt
+   * Rate Limit Group: Medium
    * Http get /restapi/v1.0/account/{accountId}/ivr-prompts/{promptId}
    */
   async get (): Promise<PromptInfo> {
@@ -54,6 +57,7 @@ class IvrPrompts {
 
   /**
    * Operation: Delete IVR Prompt
+   * Rate Limit Group: Heavy
    * Http delete /restapi/v1.0/account/{accountId}/ivr-prompts/{promptId}
    */
   async delete (): Promise<string> {
@@ -66,6 +70,7 @@ class IvrPrompts {
 
   /**
    * Operation: Update IVR Prompt
+   * Rate Limit Group: Medium
    * Http put /restapi/v1.0/account/{accountId}/ivr-prompts/{promptId}
    */
   async put (updateIVRPromptRequest: UpdateIVRPromptRequest): Promise<PromptInfo> {

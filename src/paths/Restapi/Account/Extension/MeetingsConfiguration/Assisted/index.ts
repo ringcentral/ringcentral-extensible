@@ -17,6 +17,7 @@ class Assisted {
 
   /**
    * Operation: Get Assisted Users
+   * Rate Limit Group: Light
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/meetings-configuration/assisted
    */
   async get (): Promise<AssistedUsersResource> {

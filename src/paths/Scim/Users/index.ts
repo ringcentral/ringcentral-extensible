@@ -24,6 +24,7 @@ class Users {
 
   /**
    * Operation: Search/List Users
+   * Rate Limit Group: Light
    * Http get /scim/v2/Users
    */
   async list (queryParams?: SearchViaGet2Parameters): Promise<UserSearchResponse> {
@@ -32,6 +33,7 @@ class Users {
 
   /**
    * Operation: Create User
+   * Rate Limit Group: Heavy
    * Http post /scim/v2/Users
    */
   async post (createUser: CreateUser): Promise<UserResponse> {
@@ -40,6 +42,7 @@ class Users {
 
   /**
    * Operation: Get User
+   * Rate Limit Group: Light
    * Http get /scim/v2/Users/{id}
    */
   async get (): Promise<UserResponse> {
@@ -52,6 +55,7 @@ class Users {
 
   /**
    * Operation: Update/Replace User
+   * Rate Limit Group: Heavy
    * Http put /scim/v2/Users/{id}
    */
   async put (user: User): Promise<UserResponse> {
@@ -64,6 +68,7 @@ class Users {
 
   /**
    * Operation: Delete User
+   * Rate Limit Group: Heavy
    * Http delete /scim/v2/Users/{id}
    */
   async delete (): Promise<string> {
@@ -76,6 +81,7 @@ class Users {
 
   /**
    * Operation: Update/Patch User
+   * Rate Limit Group: Heavy
    * Http patch /scim/v2/Users/{id}
    */
   async patch (userPatch: UserPatch): Promise<UserResponse> {

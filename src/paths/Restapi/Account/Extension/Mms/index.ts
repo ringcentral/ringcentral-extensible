@@ -18,6 +18,7 @@ class Mms {
 
   /**
    * Operation: Create MMS Message
+   * Rate Limit Group: Medium
    * Http post /restapi/v1.0/account/{accountId}/extension/{extensionId}/mms
    */
   async post (createMMSMessage: CreateMMSMessage): Promise<GetMessageInfoResponse> {

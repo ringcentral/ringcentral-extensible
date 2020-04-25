@@ -23,6 +23,7 @@ class CustomGreetings {
 
   /**
    * Operation: Get Call Recording Custom Greeting List
+   * Rate Limit Group: Medium
    * Http get /restapi/v1.0/account/{accountId}/call-recording/custom-greetings
    */
   async get (queryParams?: ListCallRecordingCustomGreetingsParameters): Promise<CallRecordingCustomGreetings> {
@@ -31,6 +32,7 @@ class CustomGreetings {
 
   /**
    * Operation: Delete Call Recording Custom Greeting
+   * Rate Limit Group: Medium
    * Http delete /restapi/v1.0/account/{accountId}/call-recording/custom-greetings/{greetingId}
    */
   async delete (): Promise<string> {

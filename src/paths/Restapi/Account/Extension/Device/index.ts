@@ -17,6 +17,7 @@ class Device {
 
   /**
    * Operation: Get Extension Device List
+   * Rate Limit Group: Light
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/device
    */
   async get (queryParams?: ListExtensionDevicesParameters): Promise<GetExtensionDevicesResponse> {

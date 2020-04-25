@@ -22,6 +22,7 @@ class Datasets {
 
   /**
    * Operation: Get Data Export Task Dataset
+   * Rate Limit Group: Heavy
    * Http get /restapi/v1.0/glip/data-export/{taskId}/datasets/{datasetId}
    */
   async get (): Promise<Buffer> {

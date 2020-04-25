@@ -16,6 +16,7 @@ class Suspend {
 
   /**
    * Operation: Suspend Webhook
+   * Rate Limit Group: Medium
    * Http post /restapi/v1.0/glip/webhooks/{webhookId}/suspend
    */
   async post (): Promise<string> {

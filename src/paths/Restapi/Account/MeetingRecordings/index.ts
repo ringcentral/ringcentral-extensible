@@ -17,6 +17,7 @@ class MeetingRecordings {
 
   /**
    * Operation: Get Account Meeting Recordings List
+   * Rate Limit Group: Medium
    * Http get /restapi/v1.0/account/{accountId}/meeting-recordings
    */
   async get (queryParams?: ListAccountMeetingRecordingsParameters): Promise<ListMeetingRecordingsResponse> {

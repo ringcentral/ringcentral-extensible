@@ -18,6 +18,7 @@ class CallerBlocking {
 
   /**
    * Operation: Get Caller Blocking Settings
+   * Rate Limit Group: Light
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking
    */
   async get (): Promise<CallerBlockingSettings> {
@@ -26,6 +27,7 @@ class CallerBlocking {
 
   /**
    * Operation: Update Caller Blocking Settings
+   * Rate Limit Group: Light
    * Http put /restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking
    */
   async put (callerBlockingSettingsUpdate: CallerBlockingSettingsUpdate): Promise<CallerBlockingSettings> {

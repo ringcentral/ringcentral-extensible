@@ -30,6 +30,7 @@ class Chats {
 
   /**
    * Operation: Get Chats
+   * Rate Limit Group: Medium
    * Http get /restapi/v1.0/glip/chats
    */
   async list (queryParams?: ListGlipChatsParameters): Promise<GlipChatsList> {
@@ -38,6 +39,7 @@ class Chats {
 
   /**
    * Operation: Get Chat
+   * Rate Limit Group: Light
    * Http get /restapi/v1.0/glip/chats/{chatId}
    */
   async get (): Promise<GlipChatInfo> {

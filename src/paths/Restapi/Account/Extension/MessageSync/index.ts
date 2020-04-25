@@ -17,6 +17,7 @@ class MessageSync {
 
   /**
    * Operation: Sync Messages
+   * Rate Limit Group: Light
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/message-sync
    */
   async get (queryParams?: SyncMessagesParameters): Promise<GetMessageSyncResponse> {

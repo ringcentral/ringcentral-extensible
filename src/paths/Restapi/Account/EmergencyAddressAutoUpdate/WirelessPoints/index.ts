@@ -23,6 +23,7 @@ class WirelessPoints {
 
   /**
    * Operation: Get Wireless Point List
+   * Rate Limit Group: Medium
    * Http get /restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points
    */
   async list (queryParams?: ListWirelessPointsParameters): Promise<WirelessPointsList> {
@@ -31,6 +32,7 @@ class WirelessPoints {
 
   /**
    * Operation: Create Wireless Point
+   * Rate Limit Group: Heavy
    * Http post /restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points
    */
   async post (createWirelessPoint: CreateWirelessPoint): Promise<WirelessPointInfo> {
@@ -39,6 +41,7 @@ class WirelessPoints {
 
   /**
    * Operation: Get Wireless Point
+   * Rate Limit Group: Medium
    * Http get /restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points/{pointId}
    */
   async get (): Promise<WirelessPointInfo> {
@@ -51,6 +54,7 @@ class WirelessPoints {
 
   /**
    * Operation: Update Wireless Point
+   * Rate Limit Group: Heavy
    * Http put /restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points/{pointId}
    */
   async put (updateWirelessPoint: UpdateWirelessPoint): Promise<WirelessPointInfo> {
@@ -63,6 +67,7 @@ class WirelessPoints {
 
   /**
    * Operation: Delete Wireless Point
+   * Rate Limit Group: Heavy
    * Http delete /restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points/{pointId}
    */
   async delete (): Promise<string> {

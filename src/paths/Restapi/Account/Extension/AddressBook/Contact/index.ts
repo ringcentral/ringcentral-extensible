@@ -23,6 +23,7 @@ class Contact {
 
   /**
    * Operation: Get Contact List
+   * Rate Limit Group: Heavy
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact
    */
   async list (queryParams?: ListContactsParameters): Promise<ContactList> {
@@ -31,6 +32,7 @@ class Contact {
 
   /**
    * Operation: Create Contact
+   * Rate Limit Group: Heavy
    * Http post /restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact
    */
   async post (personalContactRequest: PersonalContactRequest, queryParams?: CreateContactParameters): Promise<PersonalContactResource> {
@@ -39,6 +41,7 @@ class Contact {
 
   /**
    * Operation: Get Contact
+   * Rate Limit Group: Heavy
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact/{contactId}
    */
   async get (): Promise<PersonalContactResource> {
@@ -51,6 +54,7 @@ class Contact {
 
   /**
    * Operation: Update Contact
+   * Rate Limit Group: Heavy
    * Http put /restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact/{contactId}
    */
   async put (personalContactRequest: PersonalContactRequest, queryParams?: UpdateContactParameters): Promise<PersonalContactResource> {
@@ -63,6 +67,7 @@ class Contact {
 
   /**
    * Operation: Delete Contact
+   * Rate Limit Group: Heavy
    * Http delete /restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact/{contactId}
    */
   async delete (): Promise<string> {

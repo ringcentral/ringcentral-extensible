@@ -17,6 +17,7 @@ class SwitchesBulkCreate {
 
   /**
    * Operation: Create Multiple Switches
+   * Rate Limit Group: Heavy
    * Http post /restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches-bulk-create
    */
   async post (createMultipleSwitchesRequest: CreateMultipleSwitchesRequest): Promise<CreateMultipleSwitchesResponse> {

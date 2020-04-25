@@ -23,6 +23,7 @@ class Templates {
 
   /**
    * Operation: Get User Template List
+   * Rate Limit Group: Medium
    * Http get /restapi/v1.0/account/{accountId}/templates
    */
   async list (queryParams?: ListUserTemplatesParameters): Promise<UserTemplates> {
@@ -31,6 +32,7 @@ class Templates {
 
   /**
    * Operation: Get User Template
+   * Rate Limit Group: Light
    * Http get /restapi/v1.0/account/{accountId}/templates/{templateId}
    */
   async get (): Promise<TemplateInfo> {

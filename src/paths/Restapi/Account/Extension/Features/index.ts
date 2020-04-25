@@ -17,6 +17,7 @@ class Features {
 
   /**
    * Operation: Get User Features
+   * Rate Limit Group: Medium
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/features
    */
   async get (queryParams?: ReadUserFeaturesParameters): Promise<FeatureList> {

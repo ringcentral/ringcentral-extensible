@@ -17,6 +17,7 @@ class SwitchesBulkUpdate {
 
   /**
    * Operation: Update Multiple Switches
+   * Rate Limit Group: Heavy
    * Http post /restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches-bulk-update
    */
   async post (updateMultipleSwitchesRequest: UpdateMultipleSwitchesRequest): Promise<UpdateMultipleSwitchesResponse> {

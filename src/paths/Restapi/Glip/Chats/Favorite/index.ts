@@ -16,6 +16,7 @@ class Favorite {
 
   /**
    * Operation: Add Chat to Favorites
+   * Rate Limit Group: Medium
    * Http post /restapi/v1.0/glip/chats/{chatId}/favorite
    */
   async post (): Promise<string> {

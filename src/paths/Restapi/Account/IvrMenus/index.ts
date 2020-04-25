@@ -23,6 +23,7 @@ class IvrMenus {
 
   /**
    * Operation: Create IVR Menu
+   * Rate Limit Group: Heavy
    * Http post /restapi/v1.0/account/{accountId}/ivr-menus
    */
   async post (iVRMenuInfo: IVRMenuInfo): Promise<IVRMenuInfo> {
@@ -31,6 +32,7 @@ class IvrMenus {
 
   /**
    * Operation: Get IVR Menu
+   * Rate Limit Group: Medium
    * Http get /restapi/v1.0/account/{accountId}/ivr-menus/{ivrMenuId}
    */
   async get (): Promise<IVRMenuInfo> {
@@ -43,6 +45,7 @@ class IvrMenus {
 
   /**
    * Operation: Update IVR Menu
+   * Rate Limit Group: Medium
    * Http put /restapi/v1.0/account/{accountId}/ivr-menus/{ivrMenuId}
    */
   async put (iVRMenuInfo: IVRMenuInfo): Promise<IVRMenuInfo> {

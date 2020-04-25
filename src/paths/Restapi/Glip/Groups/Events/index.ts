@@ -17,6 +17,7 @@ class Events {
 
   /**
    * Operation: Create Event by Group ID
+   * Rate Limit Group: Medium
    * Http post /restapi/v1.0/glip/groups/{groupId}/events
    */
   async post (glipEventCreate: GlipEventCreate): Promise<GlipEventInfo> {
@@ -25,6 +26,7 @@ class Events {
 
   /**
    * Operation: Get Group Events
+   * Rate Limit Group: Medium
    * Http get /restapi/v1.0/glip/groups/{groupId}/events
    */
   async get (): Promise<GlipEventInfo> {

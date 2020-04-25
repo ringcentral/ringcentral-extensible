@@ -17,6 +17,7 @@ class Supervise {
 
   /**
    * Operation: Supervise Call Party
+   * Rate Limit Group: Light
    * Http post /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/supervise
    */
   async post (partySuperviseRequest: PartySuperviseRequest): Promise<PartySuperviseResponse> {

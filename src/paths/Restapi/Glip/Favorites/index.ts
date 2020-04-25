@@ -17,6 +17,7 @@ class Favorites {
 
   /**
    * Operation: Get Favorite Chats
+   * Rate Limit Group: Light
    * Http get /restapi/v1.0/glip/favorites
    */
   async get (queryParams?: ListFavoriteChatsParameters): Promise<GlipChatsListWithoutNavigation> {

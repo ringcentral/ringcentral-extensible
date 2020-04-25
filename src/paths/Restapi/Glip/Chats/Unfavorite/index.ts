@@ -16,6 +16,7 @@ class Unfavorite {
 
   /**
    * Operation: Remove Chat from Favorites
+   * Rate Limit Group: Medium
    * Http post /restapi/v1.0/glip/chats/{chatId}/unfavorite
    */
   async post (): Promise<string> {

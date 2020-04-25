@@ -17,6 +17,7 @@ class Members {
 
   /**
    * Operation: Get Call Queue Members
+   * Rate Limit Group: Light
    * Http get /restapi/v1.0/account/{accountId}/call-queues/{groupId}/members
    */
   async get (queryParams?: ListCallQueueMembersParameters): Promise<CallQueueMembers> {

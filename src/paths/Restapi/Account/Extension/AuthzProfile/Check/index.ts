@@ -17,6 +17,7 @@ class Check {
 
   /**
    * Operation: Check User Permission
+   * Rate Limit Group: Light
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/authz-profile/check
    */
   async get (queryParams?: CheckUserPermissionParameters): Promise<AuthProfileCheckResource> {

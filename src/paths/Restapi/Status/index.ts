@@ -16,6 +16,7 @@ class Status {
 
   /**
    * Operation: Get Service Status
+   * Rate Limit Group: NoThrottling
    * Http get /restapi/v1.0/status
    */
   async get (): Promise<string> {

@@ -17,6 +17,7 @@ class Presence {
 
   /**
    * Operation: Get User Presence Status
+   * Rate Limit Group: Light
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/presence
    */
   async get (queryParams?: ReadUserPresenceStatusParameters): Promise<GetPresenceInfo> {
@@ -25,6 +26,7 @@ class Presence {
 
   /**
    * Operation: Update User Presence Status
+   * Rate Limit Group: Medium
    * Http put /restapi/v1.0/account/{accountId}/extension/{extensionId}/presence
    */
   async put (presenceInfoResource: PresenceInfoResource): Promise<PresenceInfoResponse> {

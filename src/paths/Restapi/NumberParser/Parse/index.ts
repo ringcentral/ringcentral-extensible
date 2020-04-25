@@ -17,6 +17,7 @@ class Parse {
 
   /**
    * Operation: Parse Phone Number
+   * Rate Limit Group: Light
    * Http post /restapi/v1.0/number-parser/parse
    */
   async post (parsePhoneNumberRequest: ParsePhoneNumberRequest, queryParams?: ParsePhoneNumberParameters): Promise<ParsePhoneNumberResponse> {

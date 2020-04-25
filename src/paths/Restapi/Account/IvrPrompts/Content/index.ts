@@ -16,6 +16,7 @@ class Content {
 
   /**
    * Operation: Get IVR Prompt Content
+   * Rate Limit Group: Medium
    * Http get /restapi/v1.0/account/{accountId}/ivr-prompts/{promptId}/content
    */
   async get (): Promise<Buffer> {

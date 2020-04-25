@@ -23,6 +23,7 @@ class PhoneNumber {
 
   /**
    * Operation: Get Company Phone Number List
+   * Rate Limit Group: Heavy
    * Http get /restapi/v1.0/account/{accountId}/phone-number
    */
   async list (queryParams?: ListAccountPhoneNumbersParameters): Promise<AccountPhoneNumbers> {
@@ -31,6 +32,7 @@ class PhoneNumber {
 
   /**
    * Operation: Get Phone Number
+   * Rate Limit Group: Light
    * Http get /restapi/v1.0/account/{accountId}/phone-number/{phoneNumberId}
    */
   async get (): Promise<CompanyPhoneNumberInfo> {

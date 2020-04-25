@@ -18,6 +18,7 @@ class Users {
 
   /**
    * Operation: Get User List
+   * Rate Limit Group: Medium
    * Http get /restapi/v1.0/account/{accountId}/emergency-address-auto-update/users
    */
   async get (queryParams?: ListAutomaticLocationUpdatesUsersParameters): Promise<AutomaticLocationUpdatesUserList> {

@@ -17,6 +17,7 @@ class CallOut {
 
   /**
    * Operation: Make CallOut
+   * Rate Limit Group: Heavy
    * Http post /restapi/v1.0/account/{accountId}/telephony/call-out
    */
   async post (makeCallOutRequest: MakeCallOutRequest): Promise<CallSession> {

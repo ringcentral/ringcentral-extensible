@@ -17,6 +17,7 @@ class Extensions {
 
   /**
    * Operation: Get Call Recording Extension List
+   * Rate Limit Group: Medium
    * Http get /restapi/v1.0/account/{accountId}/call-recording/extensions
    */
   async get (): Promise<CallRecordingExtensions> {

@@ -17,6 +17,7 @@ class Flip {
 
   /**
    * Operation: Call Flip on Party
+   * Rate Limit Group: Light
    * Http post /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/flip
    */
   async post (callPartyFlip: CallPartyFlip): Promise<string> {

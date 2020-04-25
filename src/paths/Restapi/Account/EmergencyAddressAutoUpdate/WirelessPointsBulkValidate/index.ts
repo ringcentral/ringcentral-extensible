@@ -17,6 +17,7 @@ class WirelessPointsBulkValidate {
 
   /**
    * Operation: Validate Multiple Wireless Points
+   * Rate Limit Group: Heavy
    * Http post /restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points-bulk-validate
    */
   async post (validateMultipleWirelessPointsRequest: ValidateMultipleWirelessPointsRequest): Promise<ValidateMultipleWirelessPointsResponse> {

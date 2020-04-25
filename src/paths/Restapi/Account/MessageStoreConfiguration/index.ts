@@ -16,6 +16,7 @@ class MessageStoreConfiguration {
 
   /**
    * Operation: Get Message Store Configuration
+   * Rate Limit Group: Light
    * Http get /restapi/v1.0/account/{accountId}/message-store-configuration
    */
   async get (): Promise<MessageStoreConfiguration> {
@@ -24,6 +25,7 @@ class MessageStoreConfiguration {
 
   /**
    * Operation: Update Message Store Configuration
+   * Rate Limit Group: Light
    * Http put /restapi/v1.0/account/{accountId}/message-store-configuration
    */
   async put (messageStoreConfiguration: MessageStoreConfiguration): Promise<MessageStoreConfiguration> {

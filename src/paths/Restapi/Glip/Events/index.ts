@@ -23,6 +23,7 @@ class Events {
 
   /**
    * Operation: Get User Events List
+   * Rate Limit Group: Medium
    * Http get /restapi/v1.0/glip/events
    */
   async list (queryParams?: ReadGlipEventsParameters): Promise<GlipEventsInfo> {
@@ -31,6 +32,7 @@ class Events {
 
   /**
    * Operation: Create Event
+   * Rate Limit Group: Medium
    * Http post /restapi/v1.0/glip/events
    */
   async post (glipEventCreate: GlipEventCreate): Promise<GlipEventInfo> {
@@ -39,6 +41,7 @@ class Events {
 
   /**
    * Operation: Get Event
+   * Rate Limit Group: Medium
    * Http get /restapi/v1.0/glip/events/{eventId}
    */
   async get (): Promise<GlipEventInfo> {
@@ -51,6 +54,7 @@ class Events {
 
   /**
    * Operation: Update Event
+   * Rate Limit Group: Medium
    * Http put /restapi/v1.0/glip/events/{eventId}
    */
   async put (glipEventCreate: GlipEventCreate): Promise<GlipEventInfo> {
@@ -63,6 +67,7 @@ class Events {
 
   /**
    * Operation: Delete Event
+   * Rate Limit Group: Medium
    * Http delete /restapi/v1.0/glip/events/{eventId}
    */
   async delete (): Promise<string> {

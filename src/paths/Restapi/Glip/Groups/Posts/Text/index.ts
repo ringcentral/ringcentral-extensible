@@ -16,6 +16,7 @@ class Text {
 
   /**
    * Operation: Update Post
+   * Rate Limit Group: Medium
    * Http put /restapi/v1.0/glip/groups/{groupId}/posts/{postId}/text
    */
   async put (body: string): Promise<string> {

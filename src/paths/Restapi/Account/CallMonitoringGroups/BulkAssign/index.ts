@@ -17,6 +17,7 @@ class BulkAssign {
 
   /**
    * Operation: Update Call Monitoring Group List
+   * Rate Limit Group: Heavy
    * Http post /restapi/v1.0/account/{accountId}/call-monitoring-groups/{groupId}/bulk-assign
    */
   async post (callMonitoringBulkAssign: CallMonitoringBulkAssign): Promise<string> {

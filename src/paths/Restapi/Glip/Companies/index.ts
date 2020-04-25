@@ -23,6 +23,7 @@ class Companies {
 
   /**
    * Operation: Get Company Info
+   * Rate Limit Group: Light
    * Http get /restapi/v1.0/glip/companies/{companyId}
    */
   async get (): Promise<GlipCompany> {

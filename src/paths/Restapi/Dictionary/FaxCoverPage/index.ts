@@ -17,6 +17,7 @@ class FaxCoverPage {
 
   /**
    * Operation: Get Fax Cover Page List
+   * Rate Limit Group: Light
    * Http get /restapi/v1.0/dictionary/fax-cover-page
    */
   async get (queryParams?: ListFaxCoverPagesParameters): Promise<ListFaxCoverPagesResponse> {

@@ -17,6 +17,7 @@ class Pickup {
 
   /**
    * Operation: Pickup Call
+   * Rate Limit Group: Light
    * Http post /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/pickup
    */
   async post (pickupTarget: PickupTarget): Promise<CallParty> {

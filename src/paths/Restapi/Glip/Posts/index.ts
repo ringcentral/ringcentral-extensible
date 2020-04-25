@@ -17,6 +17,7 @@ class Posts {
 
   /**
    * Operation: Get Posts
+   * Rate Limit Group: Light
    * Http get /restapi/v1.0/glip/posts
    */
   async get (queryParams?: ListGlipPostsParameters): Promise<GlipPosts> {
@@ -25,6 +26,7 @@ class Posts {
 
   /**
    * Operation: Create Post
+   * Rate Limit Group: Light
    * Http post /restapi/v1.0/glip/posts
    */
   async post (glipCreatePost: GlipCreatePost): Promise<GlipPostInfo> {

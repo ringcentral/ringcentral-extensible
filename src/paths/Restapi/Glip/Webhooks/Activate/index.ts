@@ -16,6 +16,7 @@ class Activate {
 
   /**
    * Operation: Activate Webhook
+   * Rate Limit Group: Medium
    * Http post /restapi/v1.0/glip/webhooks/{webhookId}/activate
    */
   async post (): Promise<string> {

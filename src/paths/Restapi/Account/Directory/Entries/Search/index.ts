@@ -17,6 +17,7 @@ class Search {
 
   /**
    * Operation: Search Company Directory Entries
+   * Rate Limit Group: Heavy
    * Http post /restapi/v1.0/account/{accountId}/directory/entries/search
    */
   async post (searchDirectoryEntriesRequest: SearchDirectoryEntriesRequest): Promise<DirectoryResource> {

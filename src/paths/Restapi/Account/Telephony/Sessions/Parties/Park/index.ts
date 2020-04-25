@@ -17,6 +17,7 @@ class Park {
 
   /**
    * Operation: Call Park
+   * Rate Limit Group: Light
    * Http post /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/park
    */
   async post (): Promise<CallParty> {

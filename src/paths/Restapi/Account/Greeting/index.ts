@@ -18,6 +18,7 @@ class Greeting {
 
   /**
    * Operation: Create Company Greeting
+   * Rate Limit Group: Medium
    * Http post /restapi/v1.0/account/{accountId}/greeting
    */
   async post (createCompanyGreetingRequest: CreateCompanyGreetingRequest): Promise<CustomCompanyGreetingInfo> {

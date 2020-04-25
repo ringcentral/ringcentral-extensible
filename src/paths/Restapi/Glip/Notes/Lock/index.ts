@@ -16,6 +16,7 @@ class Lock {
 
   /**
    * Operation: Lock Note
+   * Rate Limit Group: Light
    * Http post /restapi/v1.0/glip/notes/{noteId}/lock
    */
   async post (): Promise<string> {

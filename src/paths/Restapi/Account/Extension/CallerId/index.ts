@@ -17,6 +17,7 @@ class CallerId {
 
   /**
    * Operation: Get Extension Caller ID
+   * Rate Limit Group: Light
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-id
    */
   async get (): Promise<ExtensionCallerIdInfo> {
@@ -25,6 +26,7 @@ class CallerId {
 
   /**
    * Operation: Update Extension Caller ID
+   * Rate Limit Group: Medium
    * Http put /restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-id
    */
   async put (extensionCallerIdInfo: ExtensionCallerIdInfo): Promise<ExtensionCallerIdInfo> {

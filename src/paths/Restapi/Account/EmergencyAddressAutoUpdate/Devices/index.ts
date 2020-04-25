@@ -18,6 +18,7 @@ class Devices {
 
   /**
    * Operation: Get Device List
+   * Rate Limit Group: Medium
    * Http get /restapi/v1.0/account/{accountId}/emergency-address-auto-update/devices
    */
   async get (queryParams?: ListDevicesAutomaticLocationUpdatesParameters): Promise<ListDevicesAutomaticLocationUpdates> {

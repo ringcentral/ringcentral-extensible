@@ -17,6 +17,7 @@ class Grant {
 
   /**
    * Operation: Get Extension Grant List
+   * Rate Limit Group: Light
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/grant
    */
   async get (queryParams?: ListExtensionGrantsParameters): Promise<GetExtensionGrantListResponse> {

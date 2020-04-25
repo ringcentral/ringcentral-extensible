@@ -17,6 +17,7 @@ class ServiceInfo {
 
   /**
    * Operation: Get Meeting Service Info
+   * Rate Limit Group: Light
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/service-info
    */
   async get (): Promise<MeetingServiceInfoResource> {
@@ -25,6 +26,7 @@ class ServiceInfo {
 
   /**
    * Operation: Update Meeting Service Info
+   * Rate Limit Group: Medium
    * Http patch /restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/service-info
    */
   async patch (meetingServiceInfoRequest: MeetingServiceInfoRequest): Promise<MeetingServiceInfoResource> {

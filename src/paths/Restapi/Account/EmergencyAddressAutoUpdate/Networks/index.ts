@@ -23,6 +23,7 @@ class Networks {
 
   /**
    * Operation: Get Network Map
+   * Rate Limit Group: Heavy
    * Http get /restapi/v1.0/account/{accountId}/emergency-address-auto-update/networks
    */
   async list (): Promise<NetworksList> {
@@ -31,6 +32,7 @@ class Networks {
 
   /**
    * Operation: Create Network
+   * Rate Limit Group: Heavy
    * Http post /restapi/v1.0/account/{accountId}/emergency-address-auto-update/networks
    */
   async post (createNetworkRequest: CreateNetworkRequest): Promise<NetworkInfo> {
@@ -39,6 +41,7 @@ class Networks {
 
   /**
    * Operation: Get Network
+   * Rate Limit Group: Medium
    * Http get /restapi/v1.0/account/{accountId}/emergency-address-auto-update/networks/{networkId}
    */
   async get (): Promise<NetworkInfo> {
@@ -51,6 +54,7 @@ class Networks {
 
   /**
    * Operation: Update Network
+   * Rate Limit Group: Heavy
    * Http put /restapi/v1.0/account/{accountId}/emergency-address-auto-update/networks/{networkId}
    */
   async put (updateNetworkRequest: UpdateNetworkRequest): Promise<string> {
@@ -63,6 +67,7 @@ class Networks {
 
   /**
    * Operation: Delete Network
+   * Rate Limit Group: Heavy
    * Http delete /restapi/v1.0/account/{accountId}/emergency-address-auto-update/networks/{networkId}
    */
   async delete (): Promise<string> {

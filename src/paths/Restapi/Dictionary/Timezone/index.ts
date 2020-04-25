@@ -23,6 +23,7 @@ class Timezone {
 
   /**
    * Operation: Get Timezone List
+   * Rate Limit Group: Light
    * Http get /restapi/v1.0/dictionary/timezone
    */
   async list (queryParams?: ListTimezonesParameters): Promise<GetTimezoneListResponse> {
@@ -31,6 +32,7 @@ class Timezone {
 
   /**
    * Operation: Get Timezone
+   * Rate Limit Group: Light
    * Http get /restapi/v1.0/dictionary/timezone/{timezoneId}
    */
   async get (queryParams?: ReadTimezoneParameters): Promise<GetTimezoneInfoResponse> {

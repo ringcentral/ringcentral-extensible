@@ -17,6 +17,7 @@ class NotificationSettings {
 
   /**
    * Operation: Get Notification Settings
+   * Rate Limit Group: Light
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/notification-settings
    */
   async get (): Promise<NotificationSettings> {
@@ -25,6 +26,7 @@ class NotificationSettings {
 
   /**
    * Operation: Update Notification Settings
+   * Rate Limit Group: Medium
    * Http put /restapi/v1.0/account/{accountId}/extension/{extensionId}/notification-settings
    */
   async put (notificationSettingsUpdateRequest: NotificationSettingsUpdateRequest): Promise<NotificationSettings> {

@@ -18,6 +18,7 @@ class Fax {
 
   /**
    * Operation: Create Fax Message
+   * Rate Limit Group: Heavy
    * Http post /restapi/v1.0/account/{accountId}/extension/{extensionId}/fax
    */
   async post (createFaxMessageRequest: CreateFaxMessageRequest): Promise<FaxResponse> {

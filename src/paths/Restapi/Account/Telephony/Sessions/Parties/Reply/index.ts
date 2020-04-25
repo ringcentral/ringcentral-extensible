@@ -17,6 +17,7 @@ class Reply {
 
   /**
    * Operation: Reply with Text
+   * Rate Limit Group: Light
    * Http post /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/reply
    */
   async post (callPartyReply: CallPartyReply): Promise<ReplyParty> {

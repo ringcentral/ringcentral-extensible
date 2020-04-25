@@ -17,6 +17,7 @@ class BulkAssign {
 
   /**
    * Operation: Edit Group Members
+   * Rate Limit Group: Medium
    * Http post /restapi/v1.0/glip/groups/{groupId}/bulk-assign
    */
   async post (editGroupRequest: EditGroupRequest): Promise<GlipGroupInfo> {

@@ -17,6 +17,7 @@ class Renew {
 
   /**
    * Operation: Renew Subscription
+   * Rate Limit Group: Light
    * Http post /restapi/v1.0/subscription/{subscriptionId}/renew
    */
   async post (): Promise<SubscriptionInfo> {

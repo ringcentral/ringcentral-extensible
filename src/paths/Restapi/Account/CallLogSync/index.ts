@@ -17,6 +17,7 @@ class CallLogSync {
 
   /**
    * Operation: Sync Company Call Log
+   * Rate Limit Group: Heavy
    * Http get /restapi/v1.0/account/{accountId}/call-log-sync
    */
   async get (queryParams?: SyncAccountCallLogParameters): Promise<AccountCallLogSyncResponse> {

@@ -17,6 +17,7 @@ class Tasks {
 
   /**
    * Operation: Get Chat Tasks
+   * Rate Limit Group: Heavy
    * Http get /restapi/v1.0/glip/chats/{chatId}/tasks
    */
   async get (queryParams?: ListChatTasksParameters): Promise<GlipTaskList> {
@@ -25,6 +26,7 @@ class Tasks {
 
   /**
    * Operation: Create Task
+   * Rate Limit Group: Medium
    * Http post /restapi/v1.0/glip/chats/{chatId}/tasks
    */
   async post (glipCreateTask: GlipCreateTask): Promise<GlipTaskInfo> {

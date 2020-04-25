@@ -17,6 +17,7 @@ class Complete {
 
   /**
    * Operation: Complete Task
+   * Rate Limit Group: Medium
    * Http post /restapi/v1.0/glip/tasks/{taskId}/complete
    */
   async post (glipCompleteTask: GlipCompleteTask): Promise<string> {

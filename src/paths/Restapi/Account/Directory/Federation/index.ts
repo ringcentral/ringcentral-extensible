@@ -17,6 +17,7 @@ class Federation {
 
   /**
    * Operation: Get Account Federation
+   * Rate Limit Group: Medium
    * Http get /restapi/v1.0/account/{accountId}/directory/federation
    */
   async get (): Promise<FederationResource> {

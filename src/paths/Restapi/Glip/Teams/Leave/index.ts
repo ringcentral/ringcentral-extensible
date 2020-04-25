@@ -16,6 +16,7 @@ class Leave {
 
   /**
    * Operation: Leave Team
+   * Rate Limit Group: Medium
    * Http post /restapi/v1.0/glip/teams/{chatId}/leave
    */
   async post (): Promise<string> {

@@ -56,6 +56,7 @@ class Extension {
 
   /**
    * Operation: Get Extension List
+   * Rate Limit Group: Medium
    * Http get /restapi/v1.0/account/{accountId}/extension
    */
   async list (queryParams?: ListExtensionsParameters): Promise<GetExtensionListResponse> {
@@ -64,6 +65,7 @@ class Extension {
 
   /**
    * Operation: Create Extension
+   * Rate Limit Group: Medium
    * Http post /restapi/v1.0/account/{accountId}/extension
    */
   async post (extensionCreationRequest: ExtensionCreationRequest): Promise<ExtensionCreationResponse> {
@@ -72,6 +74,7 @@ class Extension {
 
   /**
    * Operation: Get Extension
+   * Rate Limit Group: Light
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}
    */
   async get (): Promise<GetExtensionInfoResponse> {
@@ -84,6 +87,7 @@ class Extension {
 
   /**
    * Operation: Update Extension
+   * Rate Limit Group: Medium
    * Http put /restapi/v1.0/account/{accountId}/extension/{extensionId}
    */
   async put (extensionUpdateRequest: ExtensionUpdateRequest): Promise<GetExtensionInfoResponse> {
@@ -96,6 +100,7 @@ class Extension {
 
   /**
    * Operation: Delete Extension
+   * Rate Limit Group: Medium
    * Http delete /restapi/v1.0/account/{accountId}/extension/{extensionId}
    */
   async delete (queryParams?: DeleteExtensionParameters): Promise<string> {

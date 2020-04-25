@@ -23,6 +23,7 @@ class Posts {
 
   /**
    * Operation: Get Posts
+   * Rate Limit Group: Medium
    * Http get /restapi/v1.0/glip/chats/{chatId}/posts
    */
   async list (queryParams?: ReadGlipPostsParameters): Promise<GlipPostsList> {
@@ -31,6 +32,7 @@ class Posts {
 
   /**
    * Operation: Create Post
+   * Rate Limit Group: Medium
    * Http post /restapi/v1.0/glip/chats/{chatId}/posts
    */
   async post (glipPostPostBody: GlipPostPostBody): Promise<GlipPostInfo> {
@@ -39,6 +41,7 @@ class Posts {
 
   /**
    * Operation: Get Post
+   * Rate Limit Group: Light
    * Http get /restapi/v1.0/glip/chats/{chatId}/posts/{postId}
    */
   async get (): Promise<GlipPostInfo> {
@@ -51,6 +54,7 @@ class Posts {
 
   /**
    * Operation: Update Post
+   * Rate Limit Group: Medium
    * Http patch /restapi/v1.0/glip/chats/{chatId}/posts/{postId}
    */
   async patch (glipPatchPostBody: GlipPatchPostBody): Promise<GlipPostInfo> {
@@ -63,6 +67,7 @@ class Posts {
 
   /**
    * Operation: Delete Post
+   * Rate Limit Group: Medium
    * Http delete /restapi/v1.0/glip/chats/{chatId}/posts/{postId}
    */
   async delete (): Promise<string> {

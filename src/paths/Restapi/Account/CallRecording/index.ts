@@ -20,6 +20,7 @@ class CallRecording {
 
   /**
    * Operation: Get Call Recording Settings
+   * Rate Limit Group: Light
    * Http get /restapi/v1.0/account/{accountId}/call-recording
    */
   async get (): Promise<CallRecordingSettingsResource> {
@@ -28,6 +29,7 @@ class CallRecording {
 
   /**
    * Operation: Update Call Recording Settings
+   * Rate Limit Group: Medium
    * Http put /restapi/v1.0/account/{accountId}/call-recording
    */
   async put (callRecordingSettingsResource: CallRecordingSettingsResource): Promise<CallRecordingSettingsResource> {

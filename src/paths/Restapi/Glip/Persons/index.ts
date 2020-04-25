@@ -23,6 +23,7 @@ class Persons {
 
   /**
    * Operation: Get Person
+   * Rate Limit Group: Light
    * Http get /restapi/v1.0/glip/persons/{personId}
    */
   async get (): Promise<GlipPersonInfo> {

@@ -17,6 +17,7 @@ class Assistants {
 
   /**
    * Operation: Get Assistants
+   * Rate Limit Group: Light
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/meetings-configuration/assistants
    */
   async get (): Promise<AssistantsResource> {

@@ -26,6 +26,7 @@ class Notes {
 
   /**
    * Operation: Get Note
+   * Rate Limit Group: Medium
    * Http get /restapi/v1.0/glip/notes/{noteId}
    */
   async get (): Promise<GetGlipNoteInfo> {
@@ -38,6 +39,7 @@ class Notes {
 
   /**
    * Operation: Update Note
+   * Rate Limit Group: Medium
    * Http patch /restapi/v1.0/glip/notes/{noteId}
    */
   async patch (glipNoteCreate: GlipNoteCreate): Promise<GlipNoteInfo> {
@@ -50,6 +52,7 @@ class Notes {
 
   /**
    * Operation: Delete Note
+   * Rate Limit Group: Medium
    * Http delete /restapi/v1.0/glip/notes/{noteId}
    */
   async delete (): Promise<string> {

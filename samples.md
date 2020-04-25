@@ -5,6 +5,8 @@
 
 HTTP GET `/restapi`
 
+Rate Limit Group: `NoThrottling`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -21,6 +23,8 @@ await rc.revoke()
 ## Revoke Token
 
 HTTP POST `/restapi/oauth/revoke`
+
+Rate Limit Group: `Auth`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -39,6 +43,8 @@ await rc.revoke()
 
 HTTP POST `/restapi/oauth/token`
 
+Rate Limit Group: `Auth`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -55,6 +61,8 @@ await rc.revoke()
 ## Get Version Info
 
 HTTP GET `/restapi/{apiVersion}`
+
+Rate Limit Group: `NoThrottling`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -73,6 +81,8 @@ await rc.revoke()
 ## Get Account Info
 
 HTTP GET `/restapi/v1.0/account/{accountId}`
+
+Rate Limit Group: `Light`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -93,6 +103,8 @@ await rc.revoke()
 
 HTTP GET `/restapi/v1.0/account/{accountId}/active-calls`
 
+Rate Limit Group: `Heavy`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -111,6 +123,8 @@ await rc.revoke()
 ## Create Company Call Handling Rule
 
 HTTP POST `/restapi/v1.0/account/{accountId}/answering-rule`
+
+Rate Limit Group: `Medium`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -131,6 +145,8 @@ await rc.revoke()
 
 HTTP GET `/restapi/v1.0/account/{accountId}/answering-rule`
 
+Rate Limit Group: `Medium`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -149,6 +165,8 @@ await rc.revoke()
 ## Get Company Call Handling Rule
 
 HTTP GET `/restapi/v1.0/account/{accountId}/answering-rule/{ruleId}`
+
+Rate Limit Group: `Light`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -169,6 +187,8 @@ await rc.revoke()
 
 HTTP PUT `/restapi/v1.0/account/{accountId}/answering-rule/{ruleId}`
 
+Rate Limit Group: `Medium`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -187,6 +207,8 @@ await rc.revoke()
 ## Delete Company Call Handling Rule
 
 HTTP DELETE `/restapi/v1.0/account/{accountId}/answering-rule/{ruleId}`
+
+Rate Limit Group: `Medium`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -207,6 +229,8 @@ await rc.revoke()
 
 HTTP GET `/restapi/v1.0/account/{accountId}/business-address`
 
+Rate Limit Group: `Light`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -225,6 +249,8 @@ await rc.revoke()
 ## Update Company Business Address
 
 HTTP PUT `/restapi/v1.0/account/{accountId}/business-address`
+
+Rate Limit Group: `Medium`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -245,6 +271,8 @@ await rc.revoke()
 
 HTTP GET `/restapi/v1.0/account/{accountId}/business-hours`
 
+Rate Limit Group: `Light`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -263,6 +291,8 @@ await rc.revoke()
 ## Update Company Business Hours
 
 HTTP PUT `/restapi/v1.0/account/{accountId}/business-hours`
+
+Rate Limit Group: `Medium`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -283,6 +313,8 @@ await rc.revoke()
 
 HTTP GET `/restapi/v1.0/account/{accountId}/call-log`
 
+Rate Limit Group: `Heavy`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -301,6 +333,8 @@ await rc.revoke()
 ## Sync Company Call Log
 
 HTTP GET `/restapi/v1.0/account/{accountId}/call-log-sync`
+
+Rate Limit Group: `Heavy`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -321,6 +355,8 @@ await rc.revoke()
 
 HTTP GET `/restapi/v1.0/account/{accountId}/call-log/{callRecordId}`
 
+Rate Limit Group: `Heavy`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -339,6 +375,8 @@ await rc.revoke()
 ## Create Call Monitoring Group
 
 HTTP POST `/restapi/v1.0/account/{accountId}/call-monitoring-groups`
+
+Rate Limit Group: `Medium`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -359,6 +397,8 @@ await rc.revoke()
 
 HTTP GET `/restapi/v1.0/account/{accountId}/call-monitoring-groups`
 
+Rate Limit Group: `Medium`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -377,6 +417,8 @@ await rc.revoke()
 ## Updates Call Monitoring Group
 
 HTTP PUT `/restapi/v1.0/account/{accountId}/call-monitoring-groups/{groupId}`
+
+Rate Limit Group: `Medium`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -397,6 +439,8 @@ await rc.revoke()
 
 HTTP DELETE `/restapi/v1.0/account/{accountId}/call-monitoring-groups/{groupId}`
 
+Rate Limit Group: `Medium`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -415,6 +459,8 @@ await rc.revoke()
 ## Update Call Monitoring Group List
 
 HTTP POST `/restapi/v1.0/account/{accountId}/call-monitoring-groups/{groupId}/bulk-assign`
+
+Rate Limit Group: `Heavy`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -435,6 +481,8 @@ await rc.revoke()
 
 HTTP GET `/restapi/v1.0/account/{accountId}/call-monitoring-groups/{groupId}/members`
 
+Rate Limit Group: `Medium`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -453,6 +501,8 @@ await rc.revoke()
 ## Get Call Queue List
 
 HTTP GET `/restapi/v1.0/account/{accountId}/call-queues`
+
+Rate Limit Group: `Medium`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -473,6 +523,8 @@ await rc.revoke()
 
 HTTP POST `/restapi/v1.0/account/{accountId}/call-queues/{groupId}/bulk-assign`
 
+Rate Limit Group: `Heavy`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -491,6 +543,8 @@ await rc.revoke()
 ## Get Call Queue Members
 
 HTTP GET `/restapi/v1.0/account/{accountId}/call-queues/{groupId}/members`
+
+Rate Limit Group: `Light`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -511,6 +565,8 @@ await rc.revoke()
 
 HTTP GET `/restapi/v1.0/account/{accountId}/call-recording`
 
+Rate Limit Group: `Light`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -529,6 +585,8 @@ await rc.revoke()
 ## Update Call Recording Settings
 
 HTTP PUT `/restapi/v1.0/account/{accountId}/call-recording`
+
+Rate Limit Group: `Medium`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -549,6 +607,8 @@ await rc.revoke()
 
 HTTP POST `/restapi/v1.0/account/{accountId}/call-recording/bulk-assign`
 
+Rate Limit Group: `Medium`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -567,6 +627,8 @@ await rc.revoke()
 ## Get Call Recording Custom Greeting List
 
 HTTP GET `/restapi/v1.0/account/{accountId}/call-recording/custom-greetings`
+
+Rate Limit Group: `Medium`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -587,6 +649,8 @@ await rc.revoke()
 
 HTTP DELETE `/restapi/v1.0/account/{accountId}/call-recording/custom-greetings/{greetingId}`
 
+Rate Limit Group: `Medium`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -605,6 +669,8 @@ await rc.revoke()
 ## Get Call Recording Extension List
 
 HTTP GET `/restapi/v1.0/account/{accountId}/call-recording/extensions`
+
+Rate Limit Group: `Medium`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -625,6 +691,8 @@ await rc.revoke()
 
 HTTP POST `/restapi/v1.0/account/{accountId}/custom-fields`
 
+Rate Limit Group: `Light`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -643,6 +711,8 @@ await rc.revoke()
 ## Get Custom Field List
 
 HTTP GET `/restapi/v1.0/account/{accountId}/custom-fields`
+
+Rate Limit Group: `Light`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -663,6 +733,8 @@ await rc.revoke()
 
 HTTP PUT `/restapi/v1.0/account/{accountId}/custom-fields/{fieldId}`
 
+Rate Limit Group: `Light`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -681,6 +753,8 @@ await rc.revoke()
 ## Delete Custom Field
 
 HTTP DELETE `/restapi/v1.0/account/{accountId}/custom-fields/{fieldId}`
+
+Rate Limit Group: `Light`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -701,6 +775,8 @@ await rc.revoke()
 
 HTTP POST `/restapi/v1.0/account/{accountId}/department/bulk-assign`
 
+Rate Limit Group: `Heavy`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -719,6 +795,8 @@ await rc.revoke()
 ## Get Department Member List
 
 HTTP GET `/restapi/v1.0/account/{accountId}/department/{departmentId}/members`
+
+Rate Limit Group: `Light`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -739,6 +817,8 @@ await rc.revoke()
 
 HTTP GET `/restapi/v1.0/account/{accountId}/device/{deviceId}`
 
+Rate Limit Group: `Light`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -757,6 +837,8 @@ await rc.revoke()
 ## Update Device
 
 HTTP PUT `/restapi/v1.0/account/{accountId}/device/{deviceId}`
+
+Rate Limit Group: `Medium`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -778,6 +860,8 @@ await rc.revoke()
 
 HTTP GET `/restapi/v1.0/account/{accountId}/directory/entries`
 
+Rate Limit Group: `Medium`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -796,6 +880,8 @@ await rc.revoke()
 ## Search Company Directory Entries
 
 HTTP POST `/restapi/v1.0/account/{accountId}/directory/entries/search`
+
+Rate Limit Group: `Heavy`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -816,6 +902,8 @@ await rc.revoke()
 
 HTTP GET `/restapi/v1.0/account/{accountId}/directory/entries/{entryId}`
 
+Rate Limit Group: `Medium`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -834,6 +922,8 @@ await rc.revoke()
 ## Get Account Federation
 
 HTTP GET `/restapi/v1.0/account/{accountId}/directory/federation`
+
+Rate Limit Group: `Medium`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -854,6 +944,8 @@ await rc.revoke()
 
 HTTP GET `/restapi/v1.0/account/{accountId}/emergency-address-auto-update/devices`
 
+Rate Limit Group: `Medium`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -872,6 +964,8 @@ await rc.revoke()
 ## Enable Automatic Location Updates for Devices
 
 HTTP POST `/restapi/v1.0/account/{accountId}/emergency-address-auto-update/devices/bulk-assign`
+
+Rate Limit Group: `Heavy`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -892,6 +986,8 @@ await rc.revoke()
 
 HTTP GET `/restapi/v1.0/account/{accountId}/emergency-address-auto-update/networks`
 
+Rate Limit Group: `Heavy`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -910,6 +1006,8 @@ await rc.revoke()
 ## Create Network
 
 HTTP POST `/restapi/v1.0/account/{accountId}/emergency-address-auto-update/networks`
+
+Rate Limit Group: `Heavy`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -930,6 +1028,8 @@ await rc.revoke()
 
 HTTP GET `/restapi/v1.0/account/{accountId}/emergency-address-auto-update/networks/{networkId}`
 
+Rate Limit Group: `Medium`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -948,6 +1048,8 @@ await rc.revoke()
 ## Update Network
 
 HTTP PUT `/restapi/v1.0/account/{accountId}/emergency-address-auto-update/networks/{networkId}`
+
+Rate Limit Group: `Heavy`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -968,6 +1070,8 @@ await rc.revoke()
 
 HTTP DELETE `/restapi/v1.0/account/{accountId}/emergency-address-auto-update/networks/{networkId}`
 
+Rate Limit Group: `Heavy`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -986,6 +1090,8 @@ await rc.revoke()
 ## Get Account Switch List
 
 HTTP GET `/restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches`
+
+Rate Limit Group: `Heavy`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -1006,6 +1112,8 @@ await rc.revoke()
 
 HTTP POST `/restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches`
 
+Rate Limit Group: `Heavy`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -1024,6 +1132,8 @@ await rc.revoke()
 ## Create Multiple Switches
 
 HTTP POST `/restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches-bulk-create`
+
+Rate Limit Group: `Heavy`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -1044,6 +1154,8 @@ await rc.revoke()
 
 HTTP POST `/restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches-bulk-update`
 
+Rate Limit Group: `Heavy`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -1062,6 +1174,8 @@ await rc.revoke()
 ## Validate Multiple Switches
 
 HTTP POST `/restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches-bulk-validate`
+
+Rate Limit Group: `Heavy`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -1082,6 +1196,8 @@ await rc.revoke()
 
 HTTP GET `/restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches/{switchId}`
 
+Rate Limit Group: `Medium`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -1100,6 +1216,8 @@ await rc.revoke()
 ## Update Switch
 
 HTTP PUT `/restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches/{switchId}`
+
+Rate Limit Group: `Heavy`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -1120,6 +1238,8 @@ await rc.revoke()
 
 HTTP DELETE `/restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches/{switchId}`
 
+Rate Limit Group: `Heavy`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -1138,6 +1258,8 @@ await rc.revoke()
 ## Get Emergency Map Configuration Task
 
 HTTP GET `/restapi/v1.0/account/{accountId}/emergency-address-auto-update/tasks/{taskId}`
+
+Rate Limit Group: `Light`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -1158,6 +1280,8 @@ await rc.revoke()
 
 HTTP GET `/restapi/v1.0/account/{accountId}/emergency-address-auto-update/users`
 
+Rate Limit Group: `Medium`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -1176,6 +1300,8 @@ await rc.revoke()
 ## Enable Automatic Location Updates for Users
 
 HTTP POST `/restapi/v1.0/account/{accountId}/emergency-address-auto-update/users/bulk-assign`
+
+Rate Limit Group: `Heavy`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -1196,6 +1322,8 @@ await rc.revoke()
 
 HTTP GET `/restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points`
 
+Rate Limit Group: `Medium`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -1214,6 +1342,8 @@ await rc.revoke()
 ## Create Wireless Point
 
 HTTP POST `/restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points`
+
+Rate Limit Group: `Heavy`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -1234,6 +1364,8 @@ await rc.revoke()
 
 HTTP POST `/restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points-bulk-create`
 
+Rate Limit Group: `Heavy`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -1252,6 +1384,8 @@ await rc.revoke()
 ## Update Multiple Wireless Points
 
 HTTP POST `/restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points-bulk-update`
+
+Rate Limit Group: `Heavy`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -1272,6 +1406,8 @@ await rc.revoke()
 
 HTTP POST `/restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points-bulk-validate`
 
+Rate Limit Group: `Heavy`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -1290,6 +1426,8 @@ await rc.revoke()
 ## Get Wireless Point
 
 HTTP GET `/restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points/{pointId}`
+
+Rate Limit Group: `Medium`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -1310,6 +1448,8 @@ await rc.revoke()
 
 HTTP PUT `/restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points/{pointId}`
 
+Rate Limit Group: `Heavy`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -1328,6 +1468,8 @@ await rc.revoke()
 ## Delete Wireless Point
 
 HTTP DELETE `/restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points/{pointId}`
+
+Rate Limit Group: `Heavy`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -1348,6 +1490,8 @@ await rc.revoke()
 
 HTTP POST `/restapi/v1.0/account/{accountId}/emergency-locations`
 
+Rate Limit Group: `Medium`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -1366,6 +1510,8 @@ await rc.revoke()
 ## Get Emergency Location List
 
 HTTP GET `/restapi/v1.0/account/{accountId}/emergency-locations`
+
+Rate Limit Group: `Light`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -1386,6 +1532,8 @@ await rc.revoke()
 
 HTTP GET `/restapi/v1.0/account/{accountId}/emergency-locations/{locationId}`
 
+Rate Limit Group: `Light`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -1404,6 +1552,8 @@ await rc.revoke()
 ## Update Emergency Location
 
 HTTP PUT `/restapi/v1.0/account/{accountId}/emergency-locations/{locationId}`
+
+Rate Limit Group: `Heavy`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -1424,6 +1574,8 @@ await rc.revoke()
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension`
 
+Rate Limit Group: `Medium`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -1443,6 +1595,8 @@ await rc.revoke()
 
 HTTP POST `/restapi/v1.0/account/{accountId}/extension`
 
+Rate Limit Group: `Medium`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -1461,6 +1615,8 @@ await rc.revoke()
 ## Get Extension
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}`
+
+Rate Limit Group: `Light`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -1482,6 +1638,8 @@ await rc.revoke()
 
 HTTP PUT `/restapi/v1.0/account/{accountId}/extension/{extensionId}`
 
+Rate Limit Group: `Medium`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -1501,6 +1659,8 @@ await rc.revoke()
 ## Delete Extension
 
 HTTP DELETE `/restapi/v1.0/account/{accountId}/extension/{extensionId}`
+
+Rate Limit Group: `Medium`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -1522,6 +1682,8 @@ await rc.revoke()
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/active-calls`
 
+Rate Limit Group: `Heavy`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -1541,6 +1703,8 @@ await rc.revoke()
 ## Address Book Synchronization
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book-sync`
+
+Rate Limit Group: `Heavy`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -1562,6 +1726,8 @@ await rc.revoke()
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact`
 
+Rate Limit Group: `Heavy`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -1581,6 +1747,8 @@ await rc.revoke()
 ## Create Contact
 
 HTTP POST `/restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact`
+
+Rate Limit Group: `Heavy`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -1603,6 +1771,8 @@ await rc.revoke()
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact/{contactId}`
 
+Rate Limit Group: `Heavy`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -1622,6 +1792,8 @@ await rc.revoke()
 ## Update Contact
 
 HTTP PUT `/restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact/{contactId}`
+
+Rate Limit Group: `Heavy`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -1644,6 +1816,8 @@ await rc.revoke()
 
 HTTP DELETE `/restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact/{contactId}`
 
+Rate Limit Group: `Heavy`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -1663,6 +1837,8 @@ await rc.revoke()
 ## Get Call Handling Rules
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/answering-rule`
+
+Rate Limit Group: `Medium`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -1684,6 +1860,8 @@ await rc.revoke()
 
 HTTP POST `/restapi/v1.0/account/{accountId}/extension/{extensionId}/answering-rule`
 
+Rate Limit Group: `Medium`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -1703,6 +1881,8 @@ await rc.revoke()
 ## Get Call Handling Rule
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/answering-rule/{ruleId}`
+
+Rate Limit Group: `Light`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -1724,6 +1904,8 @@ await rc.revoke()
 
 HTTP PUT `/restapi/v1.0/account/{accountId}/extension/{extensionId}/answering-rule/{ruleId}`
 
+Rate Limit Group: `Medium`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -1743,6 +1925,8 @@ await rc.revoke()
 ## Delete Call Handling Rule
 
 HTTP DELETE `/restapi/v1.0/account/{accountId}/extension/{extensionId}/answering-rule/{ruleId}`
+
+Rate Limit Group: `Medium`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -1764,6 +1948,8 @@ await rc.revoke()
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/authz-profile`
 
+Rate Limit Group: `Medium`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -1783,6 +1969,8 @@ await rc.revoke()
 ## Check User Permission
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/authz-profile/check`
+
+Rate Limit Group: `Light`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -1804,6 +1992,8 @@ await rc.revoke()
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/business-hours`
 
+Rate Limit Group: `Light`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -1823,6 +2013,8 @@ await rc.revoke()
 ## Update User Business Hours
 
 HTTP PUT `/restapi/v1.0/account/{accountId}/extension/{extensionId}/business-hours`
+
+Rate Limit Group: `Medium`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -1844,6 +2036,8 @@ await rc.revoke()
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log`
 
+Rate Limit Group: `Heavy`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -1863,6 +2057,8 @@ await rc.revoke()
 ## Delete User Call Log
 
 HTTP DELETE `/restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log`
+
+Rate Limit Group: `Heavy`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -1884,6 +2080,8 @@ await rc.revoke()
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log-sync`
 
+Rate Limit Group: `Heavy`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -1903,6 +2101,8 @@ await rc.revoke()
 ## Get User Call Record
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log/{callRecordId}`
+
+Rate Limit Group: `Heavy`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -1924,6 +2124,8 @@ await rc.revoke()
 
 HTTP PUT `/restapi/v1.0/account/{accountId}/extension/{extensionId}/call-queues`
 
+Rate Limit Group: `Medium`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -1943,6 +2145,8 @@ await rc.revoke()
 ## Get Caller Blocking Settings
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking`
+
+Rate Limit Group: `Light`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -1964,6 +2168,8 @@ await rc.revoke()
 
 HTTP PUT `/restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking`
 
+Rate Limit Group: `Light`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -1983,6 +2189,8 @@ await rc.revoke()
 ## Get Blocked/Allowed Phone Numbers
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers`
+
+Rate Limit Group: `Light`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -2004,6 +2212,8 @@ await rc.revoke()
 
 HTTP POST `/restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers`
 
+Rate Limit Group: `Medium`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -2023,6 +2233,8 @@ await rc.revoke()
 ## Get Blocked/Allowed Number
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers/{blockedNumberId}`
+
+Rate Limit Group: `Light`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -2044,6 +2256,8 @@ await rc.revoke()
 
 HTTP DELETE `/restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers/{blockedNumberId}`
 
+Rate Limit Group: `Medium`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -2063,6 +2277,8 @@ await rc.revoke()
 ## Update Blocked/Allowed Number
 
 HTTP PUT `/restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers/{blockedNumberId}`
+
+Rate Limit Group: `Medium`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -2084,6 +2300,8 @@ await rc.revoke()
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-id`
 
+Rate Limit Group: `Light`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -2103,6 +2321,8 @@ await rc.revoke()
 ## Update Extension Caller ID
 
 HTTP PUT `/restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-id`
+
+Rate Limit Group: `Medium`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -2124,6 +2344,8 @@ await rc.revoke()
 
 HTTP POST `/restapi/v1.0/account/{accountId}/extension/{extensionId}/company-pager`
 
+Rate Limit Group: `Medium`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -2143,6 +2365,8 @@ await rc.revoke()
 ## Get User Conferencing Settings
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/conferencing`
+
+Rate Limit Group: `Light`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -2164,6 +2388,8 @@ await rc.revoke()
 
 HTTP PUT `/restapi/v1.0/account/{accountId}/extension/{extensionId}/conferencing`
 
+Rate Limit Group: `Medium`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -2183,6 +2409,8 @@ await rc.revoke()
 ## Get Extension Device List
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/device`
+
+Rate Limit Group: `Light`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -2204,6 +2432,8 @@ await rc.revoke()
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/favorite`
 
+Rate Limit Group: `Light`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -2223,6 +2453,8 @@ await rc.revoke()
 ## Update Favorite Contact List
 
 HTTP PUT `/restapi/v1.0/account/{accountId}/extension/{extensionId}/favorite`
+
+Rate Limit Group: `Medium`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -2244,6 +2476,8 @@ await rc.revoke()
 
 HTTP POST `/restapi/v1.0/account/{accountId}/extension/{extensionId}/fax`
 
+Rate Limit Group: `Heavy`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -2263,6 +2497,8 @@ await rc.revoke()
 ## Get User Features
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/features`
+
+Rate Limit Group: `Medium`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -2284,6 +2520,8 @@ await rc.revoke()
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number`
 
+Rate Limit Group: `Light`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -2303,6 +2541,8 @@ await rc.revoke()
 ## Create Forwarding Number
 
 HTTP POST `/restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number`
+
+Rate Limit Group: `Medium`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -2324,6 +2564,8 @@ await rc.revoke()
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number/{forwardingNumberId}`
 
+Rate Limit Group: `Light`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -2343,6 +2585,8 @@ await rc.revoke()
 ## Update Forwarding Number
 
 HTTP PUT `/restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number/{forwardingNumberId}`
+
+Rate Limit Group: `Medium`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -2364,6 +2608,8 @@ await rc.revoke()
 
 HTTP DELETE `/restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number/{forwardingNumberId}`
 
+Rate Limit Group: `Medium`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -2383,6 +2629,8 @@ await rc.revoke()
 ## Get Extension Grant List
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/grant`
+
+Rate Limit Group: `Light`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -2404,6 +2652,8 @@ await rc.revoke()
 
 HTTP POST `/restapi/v1.0/account/{accountId}/extension/{extensionId}/greeting`
 
+Rate Limit Group: `Heavy`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -2423,6 +2673,8 @@ await rc.revoke()
 ## Get Custom Greeting
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/greeting/{greetingId}`
+
+Rate Limit Group: `Medium`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -2444,6 +2696,8 @@ await rc.revoke()
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting`
 
+Rate Limit Group: `Light`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -2463,6 +2717,8 @@ await rc.revoke()
 ## Create Meeting
 
 HTTP POST `/restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting`
+
+Rate Limit Group: `Medium`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -2484,6 +2740,8 @@ await rc.revoke()
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting-recordings`
 
+Rate Limit Group: `Medium`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -2503,6 +2761,8 @@ await rc.revoke()
 ## Get Meeting Service Info
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/service-info`
+
+Rate Limit Group: `Light`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -2524,6 +2784,8 @@ await rc.revoke()
 
 HTTP PATCH `/restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/service-info`
 
+Rate Limit Group: `Medium`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -2543,6 +2805,8 @@ await rc.revoke()
 ## Get Meeting Info
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/{meetingId}`
+
+Rate Limit Group: `Light`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -2564,6 +2828,8 @@ await rc.revoke()
 
 HTTP PUT `/restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/{meetingId}`
 
+Rate Limit Group: `Medium`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -2583,6 +2849,8 @@ await rc.revoke()
 ## Delete Meeting
 
 HTTP DELETE `/restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/{meetingId}`
+
+Rate Limit Group: `Medium`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -2604,6 +2872,8 @@ await rc.revoke()
 
 HTTP POST `/restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/{meetingId}/end`
 
+Rate Limit Group: `Medium`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -2623,6 +2893,8 @@ await rc.revoke()
 ## Get Assistants
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/meetings-configuration/assistants`
+
+Rate Limit Group: `Light`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -2644,6 +2916,8 @@ await rc.revoke()
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/meetings-configuration/assisted`
 
+Rate Limit Group: `Light`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -2663,6 +2937,8 @@ await rc.revoke()
 ## Get Message List
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store`
+
+Rate Limit Group: `Light`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -2684,6 +2960,8 @@ await rc.revoke()
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}`
 
+Rate Limit Group: `Light`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -2703,6 +2981,8 @@ await rc.revoke()
 ## Update Message List
 
 HTTP PUT `/restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}`
+
+Rate Limit Group: `Medium`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -2725,6 +3005,8 @@ await rc.revoke()
 
 HTTP DELETE `/restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}`
 
+Rate Limit Group: `Medium`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -2744,6 +3026,8 @@ await rc.revoke()
 ## Get Message Content
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}/content/{attachmentId}`
+
+Rate Limit Group: `Medium`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -2769,6 +3053,8 @@ Please refer to [Binary content downloading](/README.md#Binary-content-downloadi
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/message-sync`
 
+Rate Limit Group: `Light`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -2788,6 +3074,8 @@ await rc.revoke()
 ## Create MMS Message
 
 HTTP POST `/restapi/v1.0/account/{accountId}/extension/{extensionId}/mms`
+
+Rate Limit Group: `Medium`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -2809,6 +3097,8 @@ await rc.revoke()
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/notification-settings`
 
+Rate Limit Group: `Light`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -2828,6 +3118,8 @@ await rc.revoke()
 ## Update Notification Settings
 
 HTTP PUT `/restapi/v1.0/account/{accountId}/extension/{extensionId}/notification-settings`
+
+Rate Limit Group: `Medium`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -2849,6 +3141,8 @@ await rc.revoke()
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/phone-number`
 
+Rate Limit Group: `Light`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -2868,6 +3162,8 @@ await rc.revoke()
 ## Get User Presence Status
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/presence`
+
+Rate Limit Group: `Light`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -2889,6 +3185,8 @@ await rc.revoke()
 
 HTTP PUT `/restapi/v1.0/account/{accountId}/extension/{extensionId}/presence`
 
+Rate Limit Group: `Medium`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -2908,6 +3206,8 @@ await rc.revoke()
 ## Get User Profile Image
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image`
+
+Rate Limit Group: `Medium`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -2933,6 +3233,8 @@ Please refer to [Binary content downloading](/README.md#Binary-content-downloadi
 
 HTTP POST `/restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image`
 
+Rate Limit Group: `Heavy`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -2953,6 +3255,8 @@ await rc.revoke()
 
 HTTP PUT `/restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image`
 
+Rate Limit Group: `Heavy`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -2972,6 +3276,8 @@ await rc.revoke()
 ## Get Scaled User Profile Image
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image/{scaleSize}`
+
+Rate Limit Group: `Light`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -2997,6 +3303,8 @@ Please refer to [Binary content downloading](/README.md#Binary-content-downloadi
 
 HTTP POST `/restapi/v1.0/account/{accountId}/extension/{extensionId}/ring-out`
 
+Rate Limit Group: `Heavy`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -3016,6 +3324,8 @@ await rc.revoke()
 ## Get RingOut Call Status
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/ring-out/{ringoutId}`
+
+Rate Limit Group: `Light`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -3037,6 +3347,8 @@ await rc.revoke()
 
 HTTP DELETE `/restapi/v1.0/account/{accountId}/extension/{extensionId}/ring-out/{ringoutId}`
 
+Rate Limit Group: `Heavy`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -3056,6 +3368,8 @@ await rc.revoke()
 ## Send SMS
 
 HTTP POST `/restapi/v1.0/account/{accountId}/extension/{extensionId}/sms`
+
+Rate Limit Group: `Medium`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -3077,6 +3391,8 @@ await rc.revoke()
 
 HTTP GET `/restapi/v1.0/account/{accountId}/extension/{extensionId}/unified-presence`
 
+Rate Limit Group: `Medium`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -3096,6 +3412,8 @@ await rc.revoke()
 ## Update Unified Presence
 
 HTTP PATCH `/restapi/v1.0/account/{accountId}/extension/{extensionId}/unified-presence`
+
+Rate Limit Group: `Medium`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -3117,6 +3435,8 @@ await rc.revoke()
 
 HTTP POST `/restapi/v1.0/account/{accountId}/greeting`
 
+Rate Limit Group: `Medium`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -3135,6 +3455,8 @@ await rc.revoke()
 ## Create IVR Menu
 
 HTTP POST `/restapi/v1.0/account/{accountId}/ivr-menus`
+
+Rate Limit Group: `Heavy`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -3155,6 +3477,8 @@ await rc.revoke()
 
 HTTP GET `/restapi/v1.0/account/{accountId}/ivr-menus/{ivrMenuId}`
 
+Rate Limit Group: `Medium`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -3173,6 +3497,8 @@ await rc.revoke()
 ## Update IVR Menu
 
 HTTP PUT `/restapi/v1.0/account/{accountId}/ivr-menus/{ivrMenuId}`
+
+Rate Limit Group: `Medium`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -3193,6 +3519,8 @@ await rc.revoke()
 
 HTTP POST `/restapi/v1.0/account/{accountId}/ivr-prompts`
 
+Rate Limit Group: `Heavy`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -3211,6 +3539,8 @@ await rc.revoke()
 ## Get IVR Prompt List
 
 HTTP GET `/restapi/v1.0/account/{accountId}/ivr-prompts`
+
+Rate Limit Group: `Medium`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -3231,6 +3561,8 @@ await rc.revoke()
 
 HTTP GET `/restapi/v1.0/account/{accountId}/ivr-prompts/{promptId}`
 
+Rate Limit Group: `Medium`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -3249,6 +3581,8 @@ await rc.revoke()
 ## Delete IVR Prompt
 
 HTTP DELETE `/restapi/v1.0/account/{accountId}/ivr-prompts/{promptId}`
+
+Rate Limit Group: `Heavy`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -3269,6 +3603,8 @@ await rc.revoke()
 
 HTTP PUT `/restapi/v1.0/account/{accountId}/ivr-prompts/{promptId}`
 
+Rate Limit Group: `Medium`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -3287,6 +3623,8 @@ await rc.revoke()
 ## Get IVR Prompt Content
 
 HTTP GET `/restapi/v1.0/account/{accountId}/ivr-prompts/{promptId}/content`
+
+Rate Limit Group: `Medium`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -3311,6 +3649,8 @@ Please refer to [Binary content downloading](/README.md#Binary-content-downloadi
 
 HTTP GET `/restapi/v1.0/account/{accountId}/meeting-recordings`
 
+Rate Limit Group: `Medium`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -3329,6 +3669,8 @@ await rc.revoke()
 ## Get Message Store Configuration
 
 HTTP GET `/restapi/v1.0/account/{accountId}/message-store-configuration`
+
+Rate Limit Group: `Light`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -3349,6 +3691,8 @@ await rc.revoke()
 
 HTTP PUT `/restapi/v1.0/account/{accountId}/message-store-configuration`
 
+Rate Limit Group: `Light`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -3367,6 +3711,8 @@ await rc.revoke()
 ## Create Message Store Report
 
 HTTP POST `/restapi/v1.0/account/{accountId}/message-store-report`
+
+Rate Limit Group: `Heavy`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -3387,6 +3733,8 @@ await rc.revoke()
 
 HTTP GET `/restapi/v1.0/account/{accountId}/message-store-report/{taskId}`
 
+Rate Limit Group: `Heavy`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -3405,6 +3753,8 @@ await rc.revoke()
 ## Get Message Store Report Archive
 
 HTTP GET `/restapi/v1.0/account/{accountId}/message-store-report/{taskId}/archive`
+
+Rate Limit Group: `Heavy`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -3425,6 +3775,8 @@ await rc.revoke()
 
 HTTP GET `/restapi/v1.0/account/{accountId}/message-store-report/{taskId}/archive/{archiveId}`
 
+Rate Limit Group: `Heavy`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -3443,6 +3795,8 @@ await rc.revoke()
 ## Assign Paging Group Users and Devices
 
 HTTP POST `/restapi/v1.0/account/{accountId}/paging-only-groups/{pagingOnlyGroupId}/bulk-assign`
+
+Rate Limit Group: `Heavy`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -3463,6 +3817,8 @@ await rc.revoke()
 
 HTTP GET `/restapi/v1.0/account/{accountId}/paging-only-groups/{pagingOnlyGroupId}/devices`
 
+Rate Limit Group: `Light`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -3481,6 +3837,8 @@ await rc.revoke()
 ## Get Paging Group Users
 
 HTTP GET `/restapi/v1.0/account/{accountId}/paging-only-groups/{pagingOnlyGroupId}/users`
+
+Rate Limit Group: `Light`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -3501,6 +3859,8 @@ await rc.revoke()
 
 HTTP GET `/restapi/v1.0/account/{accountId}/phone-number`
 
+Rate Limit Group: `Heavy`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -3519,6 +3879,8 @@ await rc.revoke()
 ## Get Phone Number
 
 HTTP GET `/restapi/v1.0/account/{accountId}/phone-number/{phoneNumberId}`
+
+Rate Limit Group: `Light`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -3539,6 +3901,8 @@ await rc.revoke()
 
 HTTP GET `/restapi/v1.0/account/{accountId}/presence`
 
+Rate Limit Group: `Heavy`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -3558,6 +3922,8 @@ await rc.revoke()
 
 HTTP GET `/restapi/v1.0/account/{accountId}/recording/{recordingId}`
 
+Rate Limit Group: `Heavy`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -3576,6 +3942,8 @@ await rc.revoke()
 ## Get Call Recordings Data
 
 HTTP GET `/restapi/v1.0/account/{accountId}/recording/{recordingId}/content`
+
+Rate Limit Group: `Heavy`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -3600,6 +3968,8 @@ Please refer to [Binary content downloading](/README.md#Binary-content-downloadi
 
 HTTP GET `/restapi/v1.0/account/{accountId}/service-info`
 
+Rate Limit Group: `Light`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -3618,6 +3988,8 @@ await rc.revoke()
 ## Make CallOut
 
 HTTP POST `/restapi/v1.0/account/{accountId}/telephony/call-out`
+
+Rate Limit Group: `Heavy`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -3638,6 +4010,8 @@ await rc.revoke()
 
 HTTP GET `/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}`
 
+Rate Limit Group: `Light`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -3656,6 +4030,8 @@ await rc.revoke()
 ## Drop Call Session
 
 HTTP DELETE `/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}`
+
+Rate Limit Group: `Light`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -3676,6 +4052,8 @@ await rc.revoke()
 
 HTTP GET `/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}`
 
+Rate Limit Group: `Light`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -3694,6 +4072,8 @@ await rc.revoke()
 ## Update Call Party
 
 HTTP PATCH `/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}`
+
+Rate Limit Group: `Light`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -3714,6 +4094,8 @@ await rc.revoke()
 
 HTTP POST `/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/answer`
 
+Rate Limit Group: `Light`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -3732,6 +4114,8 @@ await rc.revoke()
 ## Call Flip on Party
 
 HTTP POST `/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/flip`
+
+Rate Limit Group: `Light`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -3752,6 +4136,8 @@ await rc.revoke()
 
 HTTP POST `/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/forward`
 
+Rate Limit Group: `Light`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -3770,6 +4156,8 @@ await rc.revoke()
 ## Hold Call Party
 
 HTTP POST `/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/hold`
+
+Rate Limit Group: `Light`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -3790,6 +4178,8 @@ await rc.revoke()
 
 HTTP POST `/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/ignore`
 
+Rate Limit Group: `Light`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -3808,6 +4198,8 @@ await rc.revoke()
 ## Call Park
 
 HTTP POST `/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/park`
+
+Rate Limit Group: `Light`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -3828,6 +4220,8 @@ await rc.revoke()
 
 HTTP POST `/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/pickup`
 
+Rate Limit Group: `Light`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -3847,6 +4241,8 @@ await rc.revoke()
 
 HTTP POST `/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/recordings`
 
+Rate Limit Group: `Light`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -3865,6 +4261,8 @@ await rc.revoke()
 ## Pause/Resume Recording
 
 HTTP PATCH `/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/recordings/{recordingId}`
+
+Rate Limit Group: `Light`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -3886,6 +4284,8 @@ await rc.revoke()
 
 HTTP POST `/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/reject`
 
+Rate Limit Group: `Light`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -3904,6 +4304,8 @@ await rc.revoke()
 ## Reply with Text
 
 HTTP POST `/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/reply`
+
+Rate Limit Group: `Light`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -3924,6 +4326,8 @@ await rc.revoke()
 
 HTTP POST `/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/supervise`
 
+Rate Limit Group: `Light`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -3942,6 +4346,8 @@ await rc.revoke()
 ## Transfer Call Party
 
 HTTP POST `/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/transfer`
+
+Rate Limit Group: `Light`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -3962,6 +4368,8 @@ await rc.revoke()
 
 HTTP POST `/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/unhold`
 
+Rate Limit Group: `Light`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -3980,6 +4388,8 @@ await rc.revoke()
 ## Supervise Call Session
 
 HTTP POST `/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/supervise`
+
+Rate Limit Group: `Light`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -4000,6 +4410,8 @@ await rc.revoke()
 
 HTTP GET `/restapi/v1.0/account/{accountId}/templates`
 
+Rate Limit Group: `Medium`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -4018,6 +4430,8 @@ await rc.revoke()
 ## Get User Template
 
 HTTP GET `/restapi/v1.0/account/{accountId}/templates/{templateId}`
+
+Rate Limit Group: `Light`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -4038,6 +4452,8 @@ await rc.revoke()
 
 HTTP POST `/restapi/v1.0/client-info/sip-provision`
 
+Rate Limit Group: `Heavy`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -4055,6 +4471,8 @@ await rc.revoke()
 ## Get Country List
 
 HTTP GET `/restapi/v1.0/dictionary/country`
+
+Rate Limit Group: `Light`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -4074,6 +4492,8 @@ await rc.revoke()
 
 HTTP GET `/restapi/v1.0/dictionary/country/{countryId}`
 
+Rate Limit Group: `Light`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -4091,6 +4511,8 @@ await rc.revoke()
 ## Get Fax Cover Page List
 
 HTTP GET `/restapi/v1.0/dictionary/fax-cover-page`
+
+Rate Limit Group: `Light`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -4110,6 +4532,8 @@ await rc.revoke()
 
 HTTP GET `/restapi/v1.0/dictionary/greeting`
 
+Rate Limit Group: `Medium`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -4127,6 +4551,8 @@ await rc.revoke()
 ## Get Standard Greeting
 
 HTTP GET `/restapi/v1.0/dictionary/greeting/{greetingId}`
+
+Rate Limit Group: `Medium`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -4146,6 +4572,8 @@ await rc.revoke()
 
 HTTP GET `/restapi/v1.0/dictionary/language`
 
+Rate Limit Group: `Light`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -4163,6 +4591,8 @@ await rc.revoke()
 ## Get Language
 
 HTTP GET `/restapi/v1.0/dictionary/language/{languageId}`
+
+Rate Limit Group: `Light`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -4182,6 +4612,8 @@ await rc.revoke()
 
 HTTP GET `/restapi/v1.0/dictionary/location`
 
+Rate Limit Group: `Light`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -4199,6 +4631,8 @@ await rc.revoke()
 ## Get States List
 
 HTTP GET `/restapi/v1.0/dictionary/state`
+
+Rate Limit Group: `Light`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -4218,6 +4652,8 @@ await rc.revoke()
 
 HTTP GET `/restapi/v1.0/dictionary/state/{stateId}`
 
+Rate Limit Group: `Light`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -4235,6 +4671,8 @@ await rc.revoke()
 ## Get Timezone List
 
 HTTP GET `/restapi/v1.0/dictionary/timezone`
+
+Rate Limit Group: `Light`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -4254,6 +4692,8 @@ await rc.revoke()
 
 HTTP GET `/restapi/v1.0/dictionary/timezone/{timezoneId}`
 
+Rate Limit Group: `Light`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -4271,6 +4711,8 @@ await rc.revoke()
 ## Create Card
 
 HTTP POST `/restapi/v1.0/glip/cards`
+
+Rate Limit Group: `Medium`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -4291,6 +4733,8 @@ await rc.revoke()
 
 HTTP GET `/restapi/v1.0/glip/cards/{cardId}`
 
+Rate Limit Group: `Medium`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -4308,6 +4752,8 @@ await rc.revoke()
 ## Update Card
 
 HTTP PUT `/restapi/v1.0/glip/cards/{cardId}`
+
+Rate Limit Group: `Medium`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -4327,6 +4773,8 @@ await rc.revoke()
 
 HTTP DELETE `/restapi/v1.0/glip/cards/{cardId}`
 
+Rate Limit Group: `Medium`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -4344,6 +4792,8 @@ await rc.revoke()
 ## Get Chats
 
 HTTP GET `/restapi/v1.0/glip/chats`
+
+Rate Limit Group: `Medium`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -4363,6 +4813,8 @@ await rc.revoke()
 
 HTTP GET `/restapi/v1.0/glip/chats/{chatId}`
 
+Rate Limit Group: `Light`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -4380,6 +4832,8 @@ await rc.revoke()
 ## Add Chat to Favorites
 
 HTTP POST `/restapi/v1.0/glip/chats/{chatId}/favorite`
+
+Rate Limit Group: `Medium`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -4399,6 +4853,8 @@ await rc.revoke()
 
 HTTP POST `/restapi/v1.0/glip/chats/{chatId}/notes`
 
+Rate Limit Group: `Medium`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -4416,6 +4872,8 @@ await rc.revoke()
 ## Get Chat Notes
 
 HTTP GET `/restapi/v1.0/glip/chats/{chatId}/notes`
+
+Rate Limit Group: `Heavy`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -4435,6 +4893,8 @@ await rc.revoke()
 
 HTTP GET `/restapi/v1.0/glip/chats/{chatId}/posts`
 
+Rate Limit Group: `Medium`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -4452,6 +4912,8 @@ await rc.revoke()
 ## Create Post
 
 HTTP POST `/restapi/v1.0/glip/chats/{chatId}/posts`
+
+Rate Limit Group: `Medium`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -4471,6 +4933,8 @@ await rc.revoke()
 
 HTTP GET `/restapi/v1.0/glip/chats/{chatId}/posts/{postId}`
 
+Rate Limit Group: `Light`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -4488,6 +4952,8 @@ await rc.revoke()
 ## Update Post
 
 HTTP PATCH `/restapi/v1.0/glip/chats/{chatId}/posts/{postId}`
+
+Rate Limit Group: `Medium`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -4507,6 +4973,8 @@ await rc.revoke()
 
 HTTP DELETE `/restapi/v1.0/glip/chats/{chatId}/posts/{postId}`
 
+Rate Limit Group: `Medium`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -4524,6 +4992,8 @@ await rc.revoke()
 ## Mark Chat as Read
 
 HTTP POST `/restapi/v1.0/glip/chats/{chatId}/read`
+
+Rate Limit Group: `Medium`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -4543,6 +5013,8 @@ await rc.revoke()
 
 HTTP GET `/restapi/v1.0/glip/chats/{chatId}/tasks`
 
+Rate Limit Group: `Heavy`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -4560,6 +5032,8 @@ await rc.revoke()
 ## Create Task
 
 HTTP POST `/restapi/v1.0/glip/chats/{chatId}/tasks`
+
+Rate Limit Group: `Medium`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -4579,6 +5053,8 @@ await rc.revoke()
 
 HTTP POST `/restapi/v1.0/glip/chats/{chatId}/unfavorite`
 
+Rate Limit Group: `Medium`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -4596,6 +5072,8 @@ await rc.revoke()
 ## Mark Chat as Unread
 
 HTTP POST `/restapi/v1.0/glip/chats/{chatId}/unread`
+
+Rate Limit Group: `Medium`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -4615,6 +5093,8 @@ await rc.revoke()
 
 HTTP GET `/restapi/v1.0/glip/companies/{companyId}`
 
+Rate Limit Group: `Light`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -4632,6 +5112,8 @@ await rc.revoke()
 ## Get Conversations
 
 HTTP GET `/restapi/v1.0/glip/conversations`
+
+Rate Limit Group: `Medium`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -4651,6 +5133,8 @@ await rc.revoke()
 
 HTTP POST `/restapi/v1.0/glip/conversations`
 
+Rate Limit Group: `Medium`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -4668,6 +5152,8 @@ await rc.revoke()
 ## Get Conversation
 
 HTTP GET `/restapi/v1.0/glip/conversations/{chatId}`
+
+Rate Limit Group: `Light`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -4687,6 +5173,8 @@ await rc.revoke()
 
 HTTP POST `/restapi/v1.0/glip/data-export`
 
+Rate Limit Group: `Heavy`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -4704,6 +5192,8 @@ await rc.revoke()
 ## Get Data Export Task List
 
 HTTP GET `/restapi/v1.0/glip/data-export`
+
+Rate Limit Group: `Medium`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -4723,6 +5213,8 @@ await rc.revoke()
 
 HTTP GET `/restapi/v1.0/glip/data-export/{taskId}`
 
+Rate Limit Group: `Medium`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -4740,6 +5232,8 @@ await rc.revoke()
 ## Get Data Export Task Dataset
 
 HTTP GET `/restapi/v1.0/glip/data-export/{taskId}/datasets/{datasetId}`
+
+Rate Limit Group: `Heavy`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -4763,6 +5257,8 @@ Please refer to [Binary content downloading](/README.md#Binary-content-downloadi
 
 HTTP GET `/restapi/v1.0/glip/events`
 
+Rate Limit Group: `Medium`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -4780,6 +5276,8 @@ await rc.revoke()
 ## Create Event
 
 HTTP POST `/restapi/v1.0/glip/events`
+
+Rate Limit Group: `Medium`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -4799,6 +5297,8 @@ await rc.revoke()
 
 HTTP GET `/restapi/v1.0/glip/events/{eventId}`
 
+Rate Limit Group: `Medium`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -4816,6 +5316,8 @@ await rc.revoke()
 ## Update Event
 
 HTTP PUT `/restapi/v1.0/glip/events/{eventId}`
+
+Rate Limit Group: `Medium`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -4835,6 +5337,8 @@ await rc.revoke()
 
 HTTP DELETE `/restapi/v1.0/glip/events/{eventId}`
 
+Rate Limit Group: `Medium`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -4852,6 +5356,8 @@ await rc.revoke()
 ## Get Everyone Chat
 
 HTTP GET `/restapi/v1.0/glip/everyone`
+
+Rate Limit Group: `Light`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -4871,6 +5377,8 @@ await rc.revoke()
 
 HTTP PATCH `/restapi/v1.0/glip/everyone`
 
+Rate Limit Group: `Medium`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -4888,6 +5396,8 @@ await rc.revoke()
 ## Get Favorite Chats
 
 HTTP GET `/restapi/v1.0/glip/favorites`
+
+Rate Limit Group: `Light`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -4907,6 +5417,8 @@ await rc.revoke()
 
 HTTP GET `/restapi/v1.0/glip/groups`
 
+Rate Limit Group: `Medium`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -4924,6 +5436,8 @@ await rc.revoke()
 ## Create Group
 
 HTTP POST `/restapi/v1.0/glip/groups`
+
+Rate Limit Group: `Medium`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -4943,6 +5457,8 @@ await rc.revoke()
 
 HTTP GET `/restapi/v1.0/glip/groups/{groupId}`
 
+Rate Limit Group: `Light`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -4960,6 +5476,8 @@ await rc.revoke()
 ## Edit Group Members
 
 HTTP POST `/restapi/v1.0/glip/groups/{groupId}/bulk-assign`
+
+Rate Limit Group: `Medium`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -4979,6 +5497,8 @@ await rc.revoke()
 
 HTTP POST `/restapi/v1.0/glip/groups/{groupId}/events`
 
+Rate Limit Group: `Medium`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -4996,6 +5516,8 @@ await rc.revoke()
 ## Get Group Events
 
 HTTP GET `/restapi/v1.0/glip/groups/{groupId}/events`
+
+Rate Limit Group: `Medium`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -5015,6 +5537,8 @@ await rc.revoke()
 
 HTTP GET `/restapi/v1.0/glip/groups/{groupId}/posts`
 
+Rate Limit Group: `Medium`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -5032,6 +5556,8 @@ await rc.revoke()
 ## Create Post in Group
 
 HTTP POST `/restapi/v1.0/glip/groups/{groupId}/posts`
+
+Rate Limit Group: `Medium`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -5051,6 +5577,8 @@ await rc.revoke()
 
 HTTP PUT `/restapi/v1.0/glip/groups/{groupId}/posts/{postId}/text`
 
+Rate Limit Group: `Medium`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -5068,6 +5596,8 @@ await rc.revoke()
 ## Create Webhook in Group
 
 HTTP POST `/restapi/v1.0/glip/groups/{groupId}/webhooks`
+
+Rate Limit Group: `Medium`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -5087,6 +5617,8 @@ await rc.revoke()
 
 HTTP GET `/restapi/v1.0/glip/groups/{groupId}/webhooks`
 
+Rate Limit Group: `Medium`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -5104,6 +5636,8 @@ await rc.revoke()
 ## Get Note
 
 HTTP GET `/restapi/v1.0/glip/notes/{noteId}`
+
+Rate Limit Group: `Medium`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -5123,6 +5657,8 @@ await rc.revoke()
 
 HTTP PATCH `/restapi/v1.0/glip/notes/{noteId}`
 
+Rate Limit Group: `Medium`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -5140,6 +5676,8 @@ await rc.revoke()
 ## Delete Note
 
 HTTP DELETE `/restapi/v1.0/glip/notes/{noteId}`
+
+Rate Limit Group: `Medium`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -5159,6 +5697,8 @@ await rc.revoke()
 
 HTTP POST `/restapi/v1.0/glip/notes/{noteId}/lock`
 
+Rate Limit Group: `Light`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -5176,6 +5716,8 @@ await rc.revoke()
 ## Publish Note
 
 HTTP POST `/restapi/v1.0/glip/notes/{noteId}/publish`
+
+Rate Limit Group: `Medium`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -5195,6 +5737,8 @@ await rc.revoke()
 
 HTTP POST `/restapi/v1.0/glip/notes/{noteId}/unlock`
 
+Rate Limit Group: `Light`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -5212,6 +5756,8 @@ await rc.revoke()
 ## Get Person
 
 HTTP GET `/restapi/v1.0/glip/persons/{personId}`
+
+Rate Limit Group: `Light`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -5231,6 +5777,8 @@ await rc.revoke()
 
 HTTP GET `/restapi/v1.0/glip/posts`
 
+Rate Limit Group: `Light`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -5248,6 +5796,8 @@ await rc.revoke()
 ## Create Post
 
 HTTP POST `/restapi/v1.0/glip/posts`
+
+Rate Limit Group: `Light`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -5267,6 +5817,8 @@ await rc.revoke()
 
 HTTP GET `/restapi/v1.0/glip/preferences`
 
+Rate Limit Group: `Medium`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -5284,6 +5836,8 @@ await rc.revoke()
 ## Get Recent Chats
 
 HTTP GET `/restapi/v1.0/glip/recent/chats`
+
+Rate Limit Group: `Light`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -5303,6 +5857,8 @@ await rc.revoke()
 
 HTTP GET `/restapi/v1.0/glip/tasks/{taskId}`
 
+Rate Limit Group: `Medium`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -5320,6 +5876,8 @@ await rc.revoke()
 ## Patch Task
 
 HTTP PATCH `/restapi/v1.0/glip/tasks/{taskId}`
+
+Rate Limit Group: `Medium`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -5339,6 +5897,8 @@ await rc.revoke()
 
 HTTP DELETE `/restapi/v1.0/glip/tasks/{taskId}`
 
+Rate Limit Group: `Medium`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -5356,6 +5916,8 @@ await rc.revoke()
 ## Complete Task
 
 HTTP POST `/restapi/v1.0/glip/tasks/{taskId}/complete`
+
+Rate Limit Group: `Medium`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -5375,6 +5937,8 @@ await rc.revoke()
 
 HTTP GET `/restapi/v1.0/glip/teams`
 
+Rate Limit Group: `Medium`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -5392,6 +5956,8 @@ await rc.revoke()
 ## Create Team
 
 HTTP POST `/restapi/v1.0/glip/teams`
+
+Rate Limit Group: `Medium`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -5411,6 +5977,8 @@ await rc.revoke()
 
 HTTP GET `/restapi/v1.0/glip/teams/{chatId}`
 
+Rate Limit Group: `Light`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -5428,6 +5996,8 @@ await rc.revoke()
 ## Update Team
 
 HTTP PATCH `/restapi/v1.0/glip/teams/{chatId}`
+
+Rate Limit Group: `Medium`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -5447,6 +6017,8 @@ await rc.revoke()
 
 HTTP DELETE `/restapi/v1.0/glip/teams/{chatId}`
 
+Rate Limit Group: `Medium`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -5464,6 +6036,8 @@ await rc.revoke()
 ## Add Team Members
 
 HTTP POST `/restapi/v1.0/glip/teams/{chatId}/add`
+
+Rate Limit Group: `Medium`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -5483,6 +6057,8 @@ await rc.revoke()
 
 HTTP POST `/restapi/v1.0/glip/teams/{chatId}/archive`
 
+Rate Limit Group: `Medium`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -5500,6 +6076,8 @@ await rc.revoke()
 ## Join Team
 
 HTTP POST `/restapi/v1.0/glip/teams/{chatId}/join`
+
+Rate Limit Group: `Medium`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -5519,6 +6097,8 @@ await rc.revoke()
 
 HTTP POST `/restapi/v1.0/glip/teams/{chatId}/leave`
 
+Rate Limit Group: `Medium`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -5536,6 +6116,8 @@ await rc.revoke()
 ## Remove Team Members
 
 HTTP POST `/restapi/v1.0/glip/teams/{chatId}/remove`
+
+Rate Limit Group: `Medium`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -5555,6 +6137,8 @@ await rc.revoke()
 
 HTTP POST `/restapi/v1.0/glip/teams/{chatId}/unarchive`
 
+Rate Limit Group: `Medium`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -5572,6 +6156,8 @@ await rc.revoke()
 ## Get Webhooks
 
 HTTP GET `/restapi/v1.0/glip/webhooks`
+
+Rate Limit Group: `Medium`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -5591,6 +6177,8 @@ await rc.revoke()
 
 HTTP GET `/restapi/v1.0/glip/webhooks/{webhookId}`
 
+Rate Limit Group: `Medium`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -5608,6 +6196,8 @@ await rc.revoke()
 ## Delete Webhook
 
 HTTP DELETE `/restapi/v1.0/glip/webhooks/{webhookId}`
+
+Rate Limit Group: `Medium`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -5627,6 +6217,8 @@ await rc.revoke()
 
 HTTP POST `/restapi/v1.0/glip/webhooks/{webhookId}/activate`
 
+Rate Limit Group: `Medium`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -5645,6 +6237,8 @@ await rc.revoke()
 
 HTTP POST `/restapi/v1.0/glip/webhooks/{webhookId}/suspend`
 
+Rate Limit Group: `Medium`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -5662,6 +6256,8 @@ await rc.revoke()
 ## Parse Phone Number
 
 HTTP POST `/restapi/v1.0/number-parser/parse`
+
+Rate Limit Group: `Light`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -5682,6 +6278,8 @@ await rc.revoke()
 
 HTTP GET `/restapi/v1.0/status`
 
+Rate Limit Group: `NoThrottling`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -5699,6 +6297,8 @@ await rc.revoke()
 ## Get Subscriptions
 
 HTTP GET `/restapi/v1.0/subscription`
+
+Rate Limit Group: `Light`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -5718,6 +6318,8 @@ await rc.revoke()
 
 HTTP POST `/restapi/v1.0/subscription`
 
+Rate Limit Group: `Medium`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -5736,6 +6338,8 @@ await rc.revoke()
 
 HTTP GET `/restapi/v1.0/subscription/{subscriptionId}`
 
+Rate Limit Group: `Light`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -5753,6 +6357,8 @@ await rc.revoke()
 ## Renew Subscription / Update Event Filters
 
 HTTP PUT `/restapi/v1.0/subscription/{subscriptionId}`
+
+Rate Limit Group: `Medium`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -5773,6 +6379,8 @@ await rc.revoke()
 
 HTTP DELETE `/restapi/v1.0/subscription/{subscriptionId}`
 
+Rate Limit Group: `Medium`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -5790,6 +6398,8 @@ await rc.revoke()
 ## Renew Subscription
 
 HTTP POST `/restapi/v1.0/subscription/{subscriptionId}/renew`
+
+Rate Limit Group: `Light`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -5809,6 +6419,8 @@ await rc.revoke()
 
 HTTP GET `/scim/v2/ServiceProviderConfig`
 
+Rate Limit Group: `NoThrottling`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -5826,6 +6438,8 @@ await rc.revoke()
 ## Search/List Users
 
 HTTP GET `/scim/v2/Users`
+
+Rate Limit Group: `Light`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -5845,6 +6459,8 @@ await rc.revoke()
 
 HTTP POST `/scim/v2/Users`
 
+Rate Limit Group: `Heavy`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -5862,6 +6478,8 @@ await rc.revoke()
 ## Search/List Users
 
 HTTP POST `/scim/v2/Users/.search`
+
+Rate Limit Group: `Light`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -5881,6 +6499,8 @@ await rc.revoke()
 
 HTTP GET `/scim/v2/Users/{id}`
 
+Rate Limit Group: `Light`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -5898,6 +6518,8 @@ await rc.revoke()
 ## Update/Replace User
 
 HTTP PUT `/scim/v2/Users/{id}`
+
+Rate Limit Group: `Heavy`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
@@ -5917,6 +6539,8 @@ await rc.revoke()
 
 HTTP DELETE `/scim/v2/Users/{id}`
 
+Rate Limit Group: `Heavy`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -5935,6 +6559,8 @@ await rc.revoke()
 
 HTTP PATCH `/scim/v2/Users/{id}`
 
+Rate Limit Group: `Heavy`
+
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)
 await rc.authorize(username, extension, password)
@@ -5952,6 +6578,8 @@ await rc.revoke()
 ## Check Health
 
 HTTP GET `/scim/v2/health`
+
+Rate Limit Group: `NoThrottling`
 
 ```ts
 const rc = new RestClient(clientId, clientSecret, serverUrl)

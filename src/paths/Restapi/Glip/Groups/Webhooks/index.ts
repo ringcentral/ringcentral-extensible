@@ -17,6 +17,7 @@ class Webhooks {
 
   /**
    * Operation: Create Webhook in Group
+   * Rate Limit Group: Medium
    * Http post /restapi/v1.0/glip/groups/{groupId}/webhooks
    */
   async post (): Promise<GlipWebhookInfo> {
@@ -25,6 +26,7 @@ class Webhooks {
 
   /**
    * Operation: Get Webhooks in Group
+   * Rate Limit Group: Medium
    * Http get /restapi/v1.0/glip/groups/{groupId}/webhooks
    */
   async get (): Promise<GlipWebhookList> {

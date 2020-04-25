@@ -52,6 +52,7 @@ class Account {
 
   /**
    * Operation: Get Account Info
+   * Rate Limit Group: Light
    * Http get /restapi/v1.0/account/{accountId}
    */
   async get (): Promise<GetAccountInfoResponse> {

@@ -24,6 +24,7 @@ class DataExport {
 
   /**
    * Operation: Create Data Export Task
+   * Rate Limit Group: Heavy
    * Http post /restapi/v1.0/glip/data-export
    */
   async post (createDataExportTaskRequest: CreateDataExportTaskRequest): Promise<DataExportTask> {
@@ -32,6 +33,7 @@ class DataExport {
 
   /**
    * Operation: Get Data Export Task List
+   * Rate Limit Group: Medium
    * Http get /restapi/v1.0/glip/data-export
    */
   async list (queryParams?: ListDataExportTasksParameters): Promise<DataExportTaskList> {
@@ -40,6 +42,7 @@ class DataExport {
 
   /**
    * Operation: Get Data Export Task
+   * Rate Limit Group: Medium
    * Http get /restapi/v1.0/glip/data-export/{taskId}
    */
   async get (): Promise<DataExportTask> {

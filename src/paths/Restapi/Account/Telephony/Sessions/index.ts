@@ -25,6 +25,7 @@ class Sessions {
 
   /**
    * Operation: Get Call Session Status
+   * Rate Limit Group: Light
    * Http get /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}
    */
   async get (queryParams?: ReadCallSessionStatusParameters): Promise<CallSession> {
@@ -37,6 +38,7 @@ class Sessions {
 
   /**
    * Operation: Drop Call Session
+   * Rate Limit Group: Light
    * Http delete /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}
    */
   async delete (): Promise<string> {

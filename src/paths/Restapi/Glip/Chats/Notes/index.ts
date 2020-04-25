@@ -17,6 +17,7 @@ class Notes {
 
   /**
    * Operation: Create Note
+   * Rate Limit Group: Medium
    * Http post /restapi/v1.0/glip/chats/{chatId}/notes
    */
   async post (glipNoteCreate: GlipNoteCreate): Promise<GlipNoteInfo> {
@@ -25,6 +26,7 @@ class Notes {
 
   /**
    * Operation: Get Chat Notes
+   * Rate Limit Group: Heavy
    * Http get /restapi/v1.0/glip/chats/{chatId}/notes
    */
   async get (queryParams?: ListChatNotesParameters): Promise<GlipNotesInfo> {

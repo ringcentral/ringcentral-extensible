@@ -17,6 +17,7 @@ class Favorite {
 
   /**
    * Operation: Get Favorite Contact List
+   * Rate Limit Group: Light
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/favorite
    */
   async get (): Promise<FavoriteContactList> {
@@ -25,6 +26,7 @@ class Favorite {
 
   /**
    * Operation: Update Favorite Contact List
+   * Rate Limit Group: Medium
    * Http put /restapi/v1.0/account/{accountId}/extension/{extensionId}/favorite
    */
   async put (favoriteCollection: FavoriteCollection): Promise<FavoriteContactList> {

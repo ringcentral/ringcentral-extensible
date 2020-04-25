@@ -17,6 +17,7 @@ class Location {
 
   /**
    * Operation: Get Location List
+   * Rate Limit Group: Light
    * Http get /restapi/v1.0/dictionary/location
    */
   async get (queryParams?: ListLocationsParameters): Promise<GetLocationListResponse> {

@@ -23,6 +23,7 @@ class ForwardingNumber {
 
   /**
    * Operation: Get Forwarding Number List
+   * Rate Limit Group: Light
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number
    */
   async list (queryParams?: ListForwardingNumbersParameters): Promise<GetExtensionForwardingNumberListResponse> {
@@ -31,6 +32,7 @@ class ForwardingNumber {
 
   /**
    * Operation: Create Forwarding Number
+   * Rate Limit Group: Medium
    * Http post /restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number
    */
   async post (createForwardingNumberRequest: CreateForwardingNumberRequest): Promise<ForwardingNumberInfo> {
@@ -39,6 +41,7 @@ class ForwardingNumber {
 
   /**
    * Operation: Get Forwarding Number
+   * Rate Limit Group: Light
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number/{forwardingNumberId}
    */
   async get (): Promise<ForwardingNumberInfo> {
@@ -51,6 +54,7 @@ class ForwardingNumber {
 
   /**
    * Operation: Update Forwarding Number
+   * Rate Limit Group: Medium
    * Http put /restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number/{forwardingNumberId}
    */
   async put (updateForwardingNumberRequest: UpdateForwardingNumberRequest): Promise<ForwardingNumberInfo> {
@@ -63,6 +67,7 @@ class ForwardingNumber {
 
   /**
    * Operation: Delete Forwarding Number
+   * Rate Limit Group: Medium
    * Http delete /restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number/{forwardingNumberId}
    */
   async delete (): Promise<string> {

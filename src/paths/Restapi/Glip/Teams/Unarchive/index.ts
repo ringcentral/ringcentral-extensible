@@ -16,6 +16,7 @@ class Unarchive {
 
   /**
    * Operation: Unarchive Team
+   * Rate Limit Group: Medium
    * Http post /restapi/v1.0/glip/teams/{chatId}/unarchive
    */
   async post (): Promise<string> {

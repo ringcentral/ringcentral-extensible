@@ -17,6 +17,7 @@ class UnifiedPresence {
 
   /**
    * Operation: Get Unified Presence
+   * Rate Limit Group: Medium
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/unified-presence
    */
   async get (): Promise<UnifiedPresence> {
@@ -25,6 +26,7 @@ class UnifiedPresence {
 
   /**
    * Operation: Update Unified Presence
+   * Rate Limit Group: Medium
    * Http patch /restapi/v1.0/account/{accountId}/extension/{extensionId}/unified-presence
    */
   async patch (updateUnifiedPresence: UpdateUnifiedPresence): Promise<UnifiedPresence> {

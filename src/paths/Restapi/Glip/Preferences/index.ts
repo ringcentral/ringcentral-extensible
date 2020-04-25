@@ -17,6 +17,7 @@ class Preferences {
 
   /**
    * Operation: Get Preferences
+   * Rate Limit Group: Medium
    * Http get /restapi/v1.0/glip/preferences
    */
   async get (): Promise<GlipPreferencesInfo> {

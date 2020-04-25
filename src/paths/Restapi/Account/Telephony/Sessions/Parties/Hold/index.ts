@@ -17,6 +17,7 @@ class Hold {
 
   /**
    * Operation: Hold Call Party
+   * Rate Limit Group: Light
    * Http post /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/hold
    */
   async post (): Promise<CallParty> {

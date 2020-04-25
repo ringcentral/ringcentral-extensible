@@ -17,6 +17,7 @@ class BulkAssign {
 
   /**
    * Operation: Update Call Recording Extension List
+   * Rate Limit Group: Medium
    * Http post /restapi/v1.0/account/{accountId}/call-recording/bulk-assign
    */
   async post (bulkAccountCallRecordingsResource: BulkAccountCallRecordingsResource): Promise<string> {

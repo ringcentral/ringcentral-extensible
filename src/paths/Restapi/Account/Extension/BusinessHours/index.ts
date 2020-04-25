@@ -17,6 +17,7 @@ class BusinessHours {
 
   /**
    * Operation: Get User Business Hours
+   * Rate Limit Group: Light
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/business-hours
    */
   async get (): Promise<GetUserBusinessHoursResponse> {
@@ -25,6 +26,7 @@ class BusinessHours {
 
   /**
    * Operation: Update User Business Hours
+   * Rate Limit Group: Medium
    * Http put /restapi/v1.0/account/{accountId}/extension/{extensionId}/business-hours
    */
   async put (userBusinessHoursUpdateRequest: UserBusinessHoursUpdateRequest): Promise<UserBusinessHoursUpdateResponse> {

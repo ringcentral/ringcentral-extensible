@@ -17,6 +17,7 @@ class Add {
 
   /**
    * Operation: Add Team Members
+   * Rate Limit Group: Medium
    * Http post /restapi/v1.0/glip/teams/{chatId}/add
    */
   async post (glipPostMembersListBody: GlipPostMembersListBody): Promise<string> {

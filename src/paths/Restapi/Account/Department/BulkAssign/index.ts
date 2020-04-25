@@ -17,6 +17,7 @@ class BulkAssign {
 
   /**
    * Operation: Assign Multiple Department Members
+   * Rate Limit Group: Heavy
    * Http post /restapi/v1.0/account/{accountId}/department/bulk-assign
    */
   async post (departmentBulkAssignResource: DepartmentBulkAssignResource): Promise<string> {

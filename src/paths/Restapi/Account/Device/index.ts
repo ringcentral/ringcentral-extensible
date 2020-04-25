@@ -23,6 +23,7 @@ class Device {
 
   /**
    * Operation: Get Device
+   * Rate Limit Group: Light
    * Http get /restapi/v1.0/account/{accountId}/device/{deviceId}
    */
   async get (queryParams?: ReadDeviceParameters): Promise<GetDeviceInfoResponse> {
@@ -35,6 +36,7 @@ class Device {
 
   /**
    * Operation: Update Device
+   * Rate Limit Group: Medium
    * Http put /restapi/v1.0/account/{accountId}/device/{deviceId}
    */
   async put (accountDeviceUpdate: AccountDeviceUpdate, queryParams?: UpdateDeviceParameters): Promise<GetDeviceInfoResponse> {

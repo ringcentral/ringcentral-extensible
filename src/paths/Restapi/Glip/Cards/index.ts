@@ -23,6 +23,7 @@ class Cards {
 
   /**
    * Operation: Create Card
+   * Rate Limit Group: Medium
    * Http post /restapi/v1.0/glip/cards
    */
   async post (glipMessageAttachmentInfoRequest: GlipMessageAttachmentInfoRequest, queryParams?: CreateGlipCardParameters): Promise<GlipMessageAttachmentInfo> {
@@ -31,6 +32,7 @@ class Cards {
 
   /**
    * Operation: Get Card
+   * Rate Limit Group: Medium
    * Http get /restapi/v1.0/glip/cards/{cardId}
    */
   async get (): Promise<GlipMessageAttachmentInfo> {
@@ -43,6 +45,7 @@ class Cards {
 
   /**
    * Operation: Update Card
+   * Rate Limit Group: Medium
    * Http put /restapi/v1.0/glip/cards/{cardId}
    */
   async put (glipMessageAttachmentInfoRequest: GlipMessageAttachmentInfoRequest): Promise<string> {
@@ -55,6 +58,7 @@ class Cards {
 
   /**
    * Operation: Delete Card
+   * Rate Limit Group: Medium
    * Http delete /restapi/v1.0/glip/cards/{cardId}
    */
   async delete (): Promise<string> {

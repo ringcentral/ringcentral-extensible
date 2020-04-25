@@ -17,6 +17,7 @@ class Conferencing {
 
   /**
    * Operation: Get User Conferencing Settings
+   * Rate Limit Group: Light
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/conferencing
    */
   async get (queryParams?: ReadConferencingSettingsParameters): Promise<GetConferencingInfoResponse> {
@@ -25,6 +26,7 @@ class Conferencing {
 
   /**
    * Operation: Update User Conferencing Settings
+   * Rate Limit Group: Medium
    * Http put /restapi/v1.0/account/{accountId}/extension/{extensionId}/conferencing
    */
   async put (updateConferencingInfoRequest: UpdateConferencingInfoRequest): Promise<GetConferencingInfoResponse> {

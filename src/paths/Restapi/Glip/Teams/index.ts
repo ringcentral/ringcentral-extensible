@@ -29,6 +29,7 @@ class Teams {
 
   /**
    * Operation: Get Teams
+   * Rate Limit Group: Medium
    * Http get /restapi/v1.0/glip/teams
    */
   async list (queryParams?: ListGlipTeamsParameters): Promise<GlipTeamsList> {
@@ -37,6 +38,7 @@ class Teams {
 
   /**
    * Operation: Create Team
+   * Rate Limit Group: Medium
    * Http post /restapi/v1.0/glip/teams
    */
   async post (glipPostTeamBody: GlipPostTeamBody): Promise<GlipTeamInfo> {
@@ -45,6 +47,7 @@ class Teams {
 
   /**
    * Operation: Get Team
+   * Rate Limit Group: Light
    * Http get /restapi/v1.0/glip/teams/{chatId}
    */
   async get (): Promise<GlipTeamInfo> {
@@ -57,6 +60,7 @@ class Teams {
 
   /**
    * Operation: Update Team
+   * Rate Limit Group: Medium
    * Http patch /restapi/v1.0/glip/teams/{chatId}
    */
   async patch (glipPatchTeamBody: GlipPatchTeamBody): Promise<GlipTeamInfo> {
@@ -69,6 +73,7 @@ class Teams {
 
   /**
    * Operation: Delete Team
+   * Rate Limit Group: Medium
    * Http delete /restapi/v1.0/glip/teams/{chatId}
    */
   async delete (): Promise<string> {

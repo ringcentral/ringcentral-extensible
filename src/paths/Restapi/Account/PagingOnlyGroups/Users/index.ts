@@ -17,6 +17,7 @@ class Users {
 
   /**
    * Operation: Get Paging Group Users
+   * Rate Limit Group: Light
    * Http get /restapi/v1.0/account/{accountId}/paging-only-groups/{pagingOnlyGroupId}/users
    */
   async get (queryParams?: ListPagingGroupUsersParameters): Promise<PagingOnlyGroupUsers> {

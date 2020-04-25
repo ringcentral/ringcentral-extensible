@@ -16,6 +16,7 @@ class Health {
 
   /**
    * Operation: Check Health
+   * Rate Limit Group: NoThrottling
    * Http get /scim/v2/health
    */
   async get (): Promise<string> {

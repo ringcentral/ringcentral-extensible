@@ -23,6 +23,7 @@ class PhoneNumbers {
 
   /**
    * Operation: Get Blocked/Allowed Phone Numbers
+   * Rate Limit Group: Light
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers
    */
   async list (queryParams?: ListBlockedAllowedNumbersParameters): Promise<BlockedAllowedPhoneNumbersList> {
@@ -31,6 +32,7 @@ class PhoneNumbers {
 
   /**
    * Operation: Add Blocked/Allowed Number
+   * Rate Limit Group: Medium
    * Http post /restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers
    */
   async post (addBlockedAllowedPhoneNumber: AddBlockedAllowedPhoneNumber): Promise<BlockedAllowedPhoneNumberInfo> {
@@ -39,6 +41,7 @@ class PhoneNumbers {
 
   /**
    * Operation: Get Blocked/Allowed Number
+   * Rate Limit Group: Light
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers/{blockedNumberId}
    */
   async get (): Promise<BlockedAllowedPhoneNumberInfo> {
@@ -51,6 +54,7 @@ class PhoneNumbers {
 
   /**
    * Operation: Delete Blocked/Allowed Number
+   * Rate Limit Group: Medium
    * Http delete /restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers/{blockedNumberId}
    */
   async delete (): Promise<string> {
@@ -63,6 +67,7 @@ class PhoneNumbers {
 
   /**
    * Operation: Update Blocked/Allowed Number
+   * Rate Limit Group: Medium
    * Http put /restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers/{blockedNumberId}
    */
   async put (addBlockedAllowedPhoneNumber: AddBlockedAllowedPhoneNumber): Promise<BlockedAllowedPhoneNumberInfo> {

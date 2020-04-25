@@ -17,6 +17,7 @@ class SwitchesBulkValidate {
 
   /**
    * Operation: Validate Multiple Switches
+   * Rate Limit Group: Heavy
    * Http post /restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches-bulk-validate
    */
   async post (validateMultipleSwitchesRequest: ValidateMultipleSwitchesRequest): Promise<ValidateMultipleSwitchesResponse> {

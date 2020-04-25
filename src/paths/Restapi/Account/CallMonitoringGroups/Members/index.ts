@@ -17,6 +17,7 @@ class Members {
 
   /**
    * Operation: Get Call Monitoring Group Member List
+   * Rate Limit Group: Medium
    * Http get /restapi/v1.0/account/{accountId}/call-monitoring-groups/{groupId}/members
    */
   async get (queryParams?: ListCallMonitoringGroupMembersParameters): Promise<CallMonitoringGroupMemberList> {

@@ -23,6 +23,7 @@ class EmergencyLocations {
 
   /**
    * Operation: Add Emergency Location
+   * Rate Limit Group: Medium
    * Http post /restapi/v1.0/account/{accountId}/emergency-locations
    */
   async post (emergencyLocationInfoRequest: EmergencyLocationInfoRequest): Promise<string> {
@@ -31,6 +32,7 @@ class EmergencyLocations {
 
   /**
    * Operation: Get Emergency Location List
+   * Rate Limit Group: Light
    * Http get /restapi/v1.0/account/{accountId}/emergency-locations
    */
   async list (queryParams?: ListEmergencyLocationsParameters): Promise<EmergencyLocationList> {
@@ -39,6 +41,7 @@ class EmergencyLocations {
 
   /**
    * Operation: Get Emergency Location
+   * Rate Limit Group: Light
    * Http get /restapi/v1.0/account/{accountId}/emergency-locations/{locationId}
    */
   async get (): Promise<EmergencyLocationInfo> {
@@ -51,6 +54,7 @@ class EmergencyLocations {
 
   /**
    * Operation: Update Emergency Location
+   * Rate Limit Group: Heavy
    * Http put /restapi/v1.0/account/{accountId}/emergency-locations/{locationId}
    */
   async put (emergencyLocationInfoRequest: EmergencyLocationInfoRequest): Promise<EmergencyLocationInfo> {

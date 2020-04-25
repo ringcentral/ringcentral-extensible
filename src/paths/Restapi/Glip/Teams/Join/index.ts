@@ -16,6 +16,7 @@ class Join {
 
   /**
    * Operation: Join Team
+   * Rate Limit Group: Medium
    * Http post /restapi/v1.0/glip/teams/{chatId}/join
    */
   async post (): Promise<string> {

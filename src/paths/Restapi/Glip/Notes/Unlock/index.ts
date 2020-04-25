@@ -16,6 +16,7 @@ class Unlock {
 
   /**
    * Operation: Unlock Note
+   * Rate Limit Group: Light
    * Http post /restapi/v1.0/glip/notes/{noteId}/unlock
    */
   async post (): Promise<string> {

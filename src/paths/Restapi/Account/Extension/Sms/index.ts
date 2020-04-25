@@ -17,6 +17,7 @@ class Sms {
 
   /**
    * Operation: Send SMS
+   * Rate Limit Group: Medium
    * Http post /restapi/v1.0/account/{accountId}/extension/{extensionId}/sms
    */
   async post (createSMSMessage: CreateSMSMessage): Promise<GetMessageInfoResponse> {

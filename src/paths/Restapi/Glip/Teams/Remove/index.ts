@@ -17,6 +17,7 @@ class Remove {
 
   /**
    * Operation: Remove Team Members
+   * Rate Limit Group: Medium
    * Http post /restapi/v1.0/glip/teams/{chatId}/remove
    */
   async post (glipPostMembersIdsListBody: GlipPostMembersIdsListBody): Promise<string> {

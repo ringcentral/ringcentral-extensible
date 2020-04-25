@@ -24,6 +24,7 @@ class MessageStore {
 
   /**
    * Operation: Get Message List
+   * Rate Limit Group: Light
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store
    */
   async list (queryParams?: ListMessagesParameters): Promise<GetMessageList> {
@@ -32,6 +33,7 @@ class MessageStore {
 
   /**
    * Operation: Get Message
+   * Rate Limit Group: Light
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}
    */
   async get (): Promise<GetMessageInfoResponse> {
@@ -44,6 +46,7 @@ class MessageStore {
 
   /**
    * Operation: Update Message List
+   * Rate Limit Group: Medium
    * Http put /restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}
    */
   async put (updateMessageRequest: UpdateMessageRequest, queryParams?: UpdateMessageParameters): Promise<GetMessageInfoResponse> {
@@ -56,6 +59,7 @@ class MessageStore {
 
   /**
    * Operation: Delete Message
+   * Rate Limit Group: Medium
    * Http delete /restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}
    */
   async delete (queryParams?: DeleteMessageParameters): Promise<string> {

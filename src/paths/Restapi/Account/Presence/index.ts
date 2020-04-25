@@ -17,6 +17,7 @@ class Presence {
 
   /**
    * Operation: Get User Presence Status List
+   * Rate Limit Group: Heavy
    * Http get /restapi/v1.0/account/{accountId}/presence
    */
   async get (queryParams?: ReadAccountPresenceParameters): Promise<AccountPresenceInfo> {

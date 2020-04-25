@@ -24,6 +24,7 @@ class Tasks {
 
   /**
    * Operation: Get Task
+   * Rate Limit Group: Medium
    * Http get /restapi/v1.0/glip/tasks/{taskId}
    */
   async get (): Promise<GlipTaskInfo> {
@@ -36,6 +37,7 @@ class Tasks {
 
   /**
    * Operation: Patch Task
+   * Rate Limit Group: Medium
    * Http patch /restapi/v1.0/glip/tasks/{taskId}
    */
   async patch (glipUpdateTask: GlipUpdateTask): Promise<GlipTaskList> {
@@ -48,6 +50,7 @@ class Tasks {
 
   /**
    * Operation: Delete Task
+   * Rate Limit Group: Medium
    * Http delete /restapi/v1.0/glip/tasks/{taskId}
    */
   async delete (): Promise<string> {
