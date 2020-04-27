@@ -82,3 +82,4 @@ yarn test
     - if use @ringcentral/sdk, then no need to implement
 - Support events
     - if use @ringcentral/sdk, then no need to implement
+- How can developers access headers?
