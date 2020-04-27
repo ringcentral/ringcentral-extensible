@@ -18,6 +18,11 @@ class CreateAnsweringRuleForwardingNumberInfo {
    * Forwarding/Call flip number title
    */
   label?: string
+
+  /**
+   * Type of a forwarding number
+   */
+  type?: ('Home' | 'Mobile' | 'Work' | 'PhoneLine' | 'Outage' | 'Other')
 }
 
 export default CreateAnsweringRuleForwardingNumberInfo

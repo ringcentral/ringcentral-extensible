@@ -13,6 +13,14 @@ class ValidationError {
    * Name of invalid parameter
    */
   parameterName?: string
+
+  /**
+   */
+  featureName?: string
+
+  /**
+   */
+  parameterValue?: string
 }
 
 export default ValidationError

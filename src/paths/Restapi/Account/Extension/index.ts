@@ -2,6 +2,7 @@ import MeetingRecordings from './MeetingRecordings'
 import Device from './Device'
 import Features from './Features'
 import CallQueues from './CallQueues'
+import VideoConfiguration from './VideoConfiguration'
 import Conferencing from './Conferencing'
 import ProfileImage from './ProfileImage'
 import NotificationSettings from './NotificationSettings'
@@ -225,6 +226,10 @@ class Extension {
 
   conferencing (): Conferencing {
     return new Conferencing(this)
+  }
+
+  videoConfiguration (): VideoConfiguration {
+    return new VideoConfiguration(this)
   }
 
   callQueues (): CallQueues {

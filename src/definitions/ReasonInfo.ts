@@ -8,6 +8,10 @@ class ReasonInfo {
    * Reason description
    */
   message?: string
+
+  /**
+   */
+  permission?: string
 }
 
 export default ReasonInfo

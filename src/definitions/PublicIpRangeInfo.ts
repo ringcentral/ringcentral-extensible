@@ -10,6 +10,10 @@ class PublicIpRangeInfo {
   /**
    */
   endIp?: string
+
+  /**
+   */
+  matched?: boolean
 }
 
 export default PublicIpRangeInfo

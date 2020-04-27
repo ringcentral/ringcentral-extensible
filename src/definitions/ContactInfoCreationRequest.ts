@@ -8,7 +8,6 @@ class ContactInfoCreationRequest {
 
   /**
    * For User extension type only. Extension user last name
-   * Required
    */
   lastName?: string
 
@@ -23,7 +22,6 @@ class ContactInfoCreationRequest {
 
   /**
    * Email of extension user
-   * Required
    */
   email?: string
 

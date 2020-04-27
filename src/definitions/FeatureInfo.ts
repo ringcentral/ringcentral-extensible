@@ -13,7 +13,7 @@ class FeatureInfo {
 
   /**
    */
-  params?: ParamsInfo
+  params?: ParamsInfo[]
 
   /**
    * Reason of the feature unavailability. Returned only if `available` is set to 'false'

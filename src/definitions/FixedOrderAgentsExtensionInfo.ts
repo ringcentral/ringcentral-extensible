@@ -1,8 +1,8 @@
-class FixOrderAgentsExtensionInfo {
+class FixedOrderAgentsExtensionInfo {
   /**
    * Internal identifier of an extension
    */
-  id?: number
+  id?: string
 
   /**
    * Canonical URI of an extension
@@ -15,4 +15,4 @@ class FixOrderAgentsExtensionInfo {
   extensionNumber?: string
 }
 
-export default FixOrderAgentsExtensionInfo
+export default FixedOrderAgentsExtensionInfo

@@ -2,6 +2,10 @@ import { GlipMessageAttachmentInfoRequest } from '.'
 
 class GlipCreatePost {
   /**
+   */
+  activity?: string
+
+  /**
    * Title of a message. (Can be set for bot's messages only).
    */
   title?: string
@@ -21,6 +25,14 @@ class GlipCreatePost {
    * List of attachments to be posted
    */
   attachments?: GlipMessageAttachmentInfoRequest[]
+
+  /**
+   */
+  personIds?: string[]
+
+  /**
+   */
+  system?: boolean
 }
 
 export default GlipCreatePost

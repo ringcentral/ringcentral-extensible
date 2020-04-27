@@ -1,9 +1,8 @@
-import { ContactInfoCreationRequest, ReferenceInfo, Roles, RegionalSettings, ExtensionStatusInfo } from '.'
+import { ContactInfoCreationRequest, CustomFieldInfo, ReferenceInfo, Roles, RegionalSettings, SiteInfo, ExtensionStatusInfo } from '.'
 
 class ExtensionCreationRequest {
   /**
    * Contact Information
-   * Required
    */
   contact?: ContactInfoCreationRequest
 
@@ -11,6 +10,10 @@ class ExtensionCreationRequest {
    * Number of extension
    */
   extensionNumber?: string
+
+  /**
+   */
+  customFields?: CustomFieldInfo[]
 
   /**
    * Password for extension. If not specified, the password is auto-generated
@@ -32,15 +35,29 @@ class ExtensionCreationRequest {
   regionalSettings?: RegionalSettings
 
   /**
+   * Additional extension identifier, created by partner application and applied on client side
+   */
+  partnerId?: string
+
+  /**
+   * IVR PIN
+   */
+  ivrPin?: string
+
+  /**
    * Specifies extension configuration wizard state (web service setup).
    * Default: NotStarted
    */
   setupWizardState?: ('NotStarted' | 'Incomplete' | 'Completed')
 
   /**
+   */
+  site?: SiteInfo
+
+  /**
    * Extension current state
    */
-  status?: ('Enabled' | 'Disabled' | 'NotActivated' | 'Unassigned')
+  status?: ('Enabled' | 'Disabled' | 'NotActivated' | 'Unassigned' | 'Frozen')
 
   /**
    * Status information (reason, comment). For 'Disabled' status only
@@ -49,9 +66,8 @@ class ExtensionCreationRequest {
 
   /**
    * Extension type
-   * Required
    */
-  type?: ('User' | 'VirtualUser' | 'DigitalUser' | 'Department' | 'Announcement' | 'Voicemail' | 'SharedLinesGroup' | 'PagingOnly' | 'ParkLocation')
+  type?: ('User' | 'VirtualUser' | 'DigitalUser' | 'Department' | 'Announcement' | 'Voicemail' | 'SharedLinesGroup' | 'PagingOnly' | 'ParkLocation' | 'Limited')
 
   /**
    * Hides extension from showing in company directory. Supported for extensions of User type only. For unassigned extensions the value is set to 'True' by default. For assigned extensions the value is set to 'False' by default

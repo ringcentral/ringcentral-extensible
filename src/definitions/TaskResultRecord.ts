@@ -23,7 +23,7 @@ class TaskResultRecord {
 
   /**
    */
-  errors?: TaskResultRecordErrorsInfo
+  errors?: TaskResultRecordErrorsInfo[]
 }
 
 export default TaskResultRecord

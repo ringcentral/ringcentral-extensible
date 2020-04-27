@@ -27,7 +27,7 @@ class GetAccountInfoResponse {
   operator?: GetExtensionInfoResponse
 
   /**
-   * Additional account identifier, developed and applied by the client
+   * Additional account identifier, created by partner application and applied on client side
    */
   partnerId?: string
 

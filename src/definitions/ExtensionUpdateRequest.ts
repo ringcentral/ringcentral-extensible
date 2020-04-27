@@ -37,7 +37,7 @@ class ExtensionUpdateRequest {
   setupWizardState?: ('NotStarted' | 'Incomplete' | 'Completed')
 
   /**
-   * Extension partner identifier
+   * Additional extension identifier, created by partner application and applied on client side
    */
   partnerId?: string
 
