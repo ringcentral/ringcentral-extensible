@@ -1,6 +1,6 @@
 {
   "name": "ringcentral-typescript",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "RingCentral TypeScript SDK",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
