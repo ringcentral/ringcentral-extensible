@@ -74,7 +74,6 @@ yarn test
 ### Todo
 
 - compare it with C# sdk and see what are missing
-- Travis
 - Create a WSG version of this SDK
 - Replace axios with @ringcentral/sdk ?
 - Make it an RingCentral official project
@@ -82,4 +81,3 @@ yarn test
     - if use @ringcentral/sdk, then no need to implement
 - Support events
     - if use @ringcentral/sdk, then no need to implement
-- How can developers access headers?
