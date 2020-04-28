@@ -31,7 +31,8 @@ For example, to download the attachment of a fax:
 
 ```ts
 // `message` is the fax message object
-const content = await rc.get(message.attachments[0].uri, undefined, { responseType: 'arraybuffer' })
+const r = await rc.get(message.attachments[0].uri, undefined, { responseType: 'arraybuffer' })
+const content = r.data
 ```
 
 The following does **NOT** work:
