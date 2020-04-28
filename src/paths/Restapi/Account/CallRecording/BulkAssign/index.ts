@@ -21,7 +21,8 @@ class BulkAssign {
    * Http post /restapi/v1.0/account/{accountId}/call-recording/bulk-assign
    */
   async post (bulkAccountCallRecordingsResource: BulkAccountCallRecordingsResource): Promise<string> {
-    return this.rc.post(this.path(), bulkAccountCallRecordingsResource)
+    const r = await this.rc.post(this.path(), bulkAccountCallRecordingsResource)
+    return r.data
   }
 }
 

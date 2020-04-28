@@ -21,7 +21,8 @@ class Conferencing {
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/conferencing
    */
   async get (queryParams?: ReadConferencingSettingsParameters): Promise<GetConferencingInfoResponse> {
-    return this.rc.get(this.path(), queryParams)
+    const r = await this.rc.get(this.path(), queryParams)
+    return r.data
   }
 
   /**
@@ -30,7 +31,8 @@ class Conferencing {
    * Http put /restapi/v1.0/account/{accountId}/extension/{extensionId}/conferencing
    */
   async put (updateConferencingInfoRequest: UpdateConferencingInfoRequest): Promise<GetConferencingInfoResponse> {
-    return this.rc.put(this.path(), updateConferencingInfoRequest)
+    const r = await this.rc.put(this.path(), updateConferencingInfoRequest)
+    return r.data
   }
 }
 

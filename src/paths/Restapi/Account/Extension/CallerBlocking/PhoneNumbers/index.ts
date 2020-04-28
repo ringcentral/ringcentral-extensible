@@ -27,7 +27,8 @@ class PhoneNumbers {
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers
    */
   async list (queryParams?: ListBlockedAllowedNumbersParameters): Promise<BlockedAllowedPhoneNumbersList> {
-    return this.rc.get(this.path(false), queryParams)
+    const r = await this.rc.get(this.path(false), queryParams)
+    return r.data
   }
 
   /**
@@ -36,7 +37,8 @@ class PhoneNumbers {
    * Http post /restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers
    */
   async post (addBlockedAllowedPhoneNumber: AddBlockedAllowedPhoneNumber): Promise<BlockedAllowedPhoneNumberInfo> {
-    return this.rc.post(this.path(false), addBlockedAllowedPhoneNumber)
+    const r = await this.rc.post(this.path(false), addBlockedAllowedPhoneNumber)
+    return r.data
   }
 
   /**
@@ -49,7 +51,8 @@ class PhoneNumbers {
       throw new Error('blockedNumberId must be specified.')
     }
 
-    return this.rc.get(this.path())
+    const r = await this.rc.get(this.path())
+    return r.data
   }
 
   /**
@@ -62,7 +65,8 @@ class PhoneNumbers {
       throw new Error('blockedNumberId must be specified.')
     }
 
-    return this.rc.delete(this.path())
+    const r = await this.rc.delete(this.path())
+    return r.data
   }
 
   /**
@@ -75,7 +79,8 @@ class PhoneNumbers {
       throw new Error('blockedNumberId must be specified.')
     }
 
-    return this.rc.put(this.path(), addBlockedAllowedPhoneNumber)
+    const r = await this.rc.put(this.path(), addBlockedAllowedPhoneNumber)
+    return r.data
   }
 }
 

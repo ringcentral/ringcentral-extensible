@@ -27,7 +27,8 @@ class Timezone {
    * Http get /restapi/v1.0/dictionary/timezone
    */
   async list (queryParams?: ListTimezonesParameters): Promise<GetTimezoneListResponse> {
-    return this.rc.get(this.path(false), queryParams)
+    const r = await this.rc.get(this.path(false), queryParams)
+    return r.data
   }
 
   /**
@@ -40,7 +41,8 @@ class Timezone {
       throw new Error('timezoneId must be specified.')
     }
 
-    return this.rc.get(this.path(), queryParams)
+    const r = await this.rc.get(this.path(), queryParams)
+    return r.data
   }
 }
 

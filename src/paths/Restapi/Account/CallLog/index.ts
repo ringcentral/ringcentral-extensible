@@ -27,7 +27,8 @@ class CallLog {
    * Http get /restapi/v1.0/account/{accountId}/call-log
    */
   async list (queryParams?: ReadCompanyCallLogParameters): Promise<AccountCallLogResponse> {
-    return this.rc.get(this.path(false), queryParams)
+    const r = await this.rc.get(this.path(false), queryParams)
+    return r.data
   }
 
   /**
@@ -40,7 +41,8 @@ class CallLog {
       throw new Error('callRecordId must be specified.')
     }
 
-    return this.rc.get(this.path(), queryParams)
+    const r = await this.rc.get(this.path(), queryParams)
+    return r.data
   }
 }
 

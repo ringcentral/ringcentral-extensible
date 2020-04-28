@@ -21,7 +21,8 @@ class BulkAssign {
    * Http post /restapi/v1.0/account/{accountId}/emergency-address-auto-update/devices/bulk-assign
    */
   async post (assignMultipleDevicesAutomaticLocationUpdates: AssignMultipleDevicesAutomaticLocationUpdates): Promise<string> {
-    return this.rc.post(this.path(), assignMultipleDevicesAutomaticLocationUpdates)
+    const r = await this.rc.post(this.path(), assignMultipleDevicesAutomaticLocationUpdates)
+    return r.data
   }
 }
 

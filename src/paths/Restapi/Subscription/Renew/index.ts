@@ -21,7 +21,8 @@ class Renew {
    * Http post /restapi/v1.0/subscription/{subscriptionId}/renew
    */
   async post (): Promise<SubscriptionInfo> {
-    return this.rc.post(this.path())
+    const r = await this.rc.post(this.path())
+    return r.data
   }
 }
 

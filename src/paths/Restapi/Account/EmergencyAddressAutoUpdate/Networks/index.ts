@@ -27,7 +27,8 @@ class Networks {
    * Http get /restapi/v1.0/account/{accountId}/emergency-address-auto-update/networks
    */
   async list (): Promise<NetworksList> {
-    return this.rc.get(this.path(false))
+    const r = await this.rc.get(this.path(false))
+    return r.data
   }
 
   /**
@@ -36,7 +37,8 @@ class Networks {
    * Http post /restapi/v1.0/account/{accountId}/emergency-address-auto-update/networks
    */
   async post (createNetworkRequest: CreateNetworkRequest): Promise<NetworkInfo> {
-    return this.rc.post(this.path(false), createNetworkRequest)
+    const r = await this.rc.post(this.path(false), createNetworkRequest)
+    return r.data
   }
 
   /**
@@ -49,7 +51,8 @@ class Networks {
       throw new Error('networkId must be specified.')
     }
 
-    return this.rc.get(this.path())
+    const r = await this.rc.get(this.path())
+    return r.data
   }
 
   /**
@@ -62,7 +65,8 @@ class Networks {
       throw new Error('networkId must be specified.')
     }
 
-    return this.rc.put(this.path(), updateNetworkRequest)
+    const r = await this.rc.put(this.path(), updateNetworkRequest)
+    return r.data
   }
 
   /**
@@ -75,7 +79,8 @@ class Networks {
       throw new Error('networkId must be specified.')
     }
 
-    return this.rc.delete(this.path())
+    const r = await this.rc.delete(this.path())
+    return r.data
   }
 }
 

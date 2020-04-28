@@ -21,7 +21,8 @@ class BulkAssign {
    * Http post /restapi/v1.0/account/{accountId}/call-queues/{groupId}/bulk-assign
    */
   async post (callQueueBulkAssignResource: CallQueueBulkAssignResource): Promise<string> {
-    return this.rc.post(this.path(), callQueueBulkAssignResource)
+    const r = await this.rc.post(this.path(), callQueueBulkAssignResource)
+    return r.data
   }
 }
 

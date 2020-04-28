@@ -31,7 +31,8 @@ class Content {
       throw new Error('attachmentId must be specified.')
     }
 
-    return this.rc.get(this.path(), queryParams, { responseType: 'arraybuffer' })
+    const r = await this.rc.get(this.path(), queryParams, { responseType: 'arraybuffer' })
+    return r.data
   }
 }
 

@@ -11,7 +11,7 @@ describe('low level API', () => {
   test('sms', async () => {
     const rc = new RestClient(process.env.RINGCENTRAL_CLIENT_ID!, process.env.RINGCENTRAL_CLIENT_SECRET!, process.env.RINGCENTRAL_SERVER_URL!)
     await rc.authorize(process.env.RINGCENTRAL_USERNAME!, process.env.RINGCENTRAL_EXTENSION!, process.env.RINGCENTRAL_PASSWORD!)
-    const messageInfo = await rc.post('/restapi/v1.0/account/~/extension/~/sms', {
+    const r = await rc.post('/restapi/v1.0/account/~/extension/~/sms', {
       from: {
         phoneNumber: process.env.RINGCENTRAL_USERNAME!
       },
@@ -20,6 +20,7 @@ describe('low level API', () => {
       }],
       text: 'hello world'
     })
+    const messageInfo = r.data
     expect(messageInfo).not.toBeUndefined()
     expect(messageInfo.id).not.toBeUndefined()
   })
@@ -42,7 +43,8 @@ describe('low level API', () => {
       ]
     }
     const formData = Utils.getFormData(requestBody)
-    const messageInfo = await rc.post('/restapi/v1.0/account/~/extension/~/fax', formData, undefined, { headers: formData.getHeaders() })
+    const r = await rc.post('/restapi/v1.0/account/~/extension/~/fax', formData, undefined, { headers: formData.getHeaders() })
+    const messageInfo = r.data
     expect(messageInfo).not.toBeUndefined()
     expect(messageInfo.id).not.toBeUndefined()
   })

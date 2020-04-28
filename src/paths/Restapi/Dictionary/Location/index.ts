@@ -21,7 +21,8 @@ class Location {
    * Http get /restapi/v1.0/dictionary/location
    */
   async get (queryParams?: ListLocationsParameters): Promise<GetLocationListResponse> {
-    return this.rc.get(this.path(), queryParams)
+    const r = await this.rc.get(this.path(), queryParams)
+    return r.data
   }
 }
 

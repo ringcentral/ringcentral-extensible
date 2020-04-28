@@ -21,7 +21,8 @@ class Park {
    * Http post /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/park
    */
   async post (): Promise<CallParty> {
-    return this.rc.post(this.path())
+    const r = await this.rc.post(this.path())
+    return r.data
   }
 }
 

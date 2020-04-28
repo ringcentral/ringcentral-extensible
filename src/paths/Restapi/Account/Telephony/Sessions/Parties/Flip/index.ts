@@ -21,7 +21,8 @@ class Flip {
    * Http post /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/flip
    */
   async post (callPartyFlip: CallPartyFlip): Promise<string> {
-    return this.rc.post(this.path(), callPartyFlip)
+    const r = await this.rc.post(this.path(), callPartyFlip)
+    return r.data
   }
 }
 

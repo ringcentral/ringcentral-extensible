@@ -21,7 +21,8 @@ class Check {
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/authz-profile/check
    */
   async get (queryParams?: CheckUserPermissionParameters): Promise<AuthProfileCheckResource> {
-    return this.rc.get(this.path(), queryParams)
+    const r = await this.rc.get(this.path(), queryParams)
+    return r.data
   }
 }
 

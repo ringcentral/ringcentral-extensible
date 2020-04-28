@@ -31,7 +31,8 @@ class Groups {
    * Http get /restapi/v1.0/glip/groups
    */
   async list (queryParams?: ListGlipGroupsParameters): Promise<GlipGroupList> {
-    return this.rc.get(this.path(false), queryParams)
+    const r = await this.rc.get(this.path(false), queryParams)
+    return r.data
   }
 
   /**
@@ -40,7 +41,8 @@ class Groups {
    * Http post /restapi/v1.0/glip/groups
    */
   async post (glipCreateGroup: GlipCreateGroup): Promise<GlipGroupInfo> {
-    return this.rc.post(this.path(false), glipCreateGroup)
+    const r = await this.rc.post(this.path(false), glipCreateGroup)
+    return r.data
   }
 
   /**
@@ -53,7 +55,8 @@ class Groups {
       throw new Error('groupId must be specified.')
     }
 
-    return this.rc.get(this.path())
+    const r = await this.rc.get(this.path())
+    return r.data
   }
 
   posts (postId: (string | null) = null): Posts {

@@ -27,7 +27,8 @@ class Cards {
    * Http post /restapi/v1.0/glip/cards
    */
   async post (glipMessageAttachmentInfoRequest: GlipMessageAttachmentInfoRequest, queryParams?: CreateGlipCardParameters): Promise<GlipMessageAttachmentInfo> {
-    return this.rc.post(this.path(false), glipMessageAttachmentInfoRequest, queryParams)
+    const r = await this.rc.post(this.path(false), glipMessageAttachmentInfoRequest, queryParams)
+    return r.data
   }
 
   /**
@@ -40,7 +41,8 @@ class Cards {
       throw new Error('cardId must be specified.')
     }
 
-    return this.rc.get(this.path())
+    const r = await this.rc.get(this.path())
+    return r.data
   }
 
   /**
@@ -53,7 +55,8 @@ class Cards {
       throw new Error('cardId must be specified.')
     }
 
-    return this.rc.put(this.path(), glipMessageAttachmentInfoRequest)
+    const r = await this.rc.put(this.path(), glipMessageAttachmentInfoRequest)
+    return r.data
   }
 
   /**
@@ -66,7 +69,8 @@ class Cards {
       throw new Error('cardId must be specified.')
     }
 
-    return this.rc.delete(this.path())
+    const r = await this.rc.delete(this.path())
+    return r.data
   }
 }
 

@@ -31,7 +31,8 @@ class Companies {
       throw new Error('companyId must be specified.')
     }
 
-    return this.rc.get(this.path())
+    const r = await this.rc.get(this.path())
+    return r.data
   }
 }
 

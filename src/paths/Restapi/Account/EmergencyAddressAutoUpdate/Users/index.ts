@@ -22,7 +22,8 @@ class Users {
    * Http get /restapi/v1.0/account/{accountId}/emergency-address-auto-update/users
    */
   async get (queryParams?: ListAutomaticLocationUpdatesUsersParameters): Promise<AutomaticLocationUpdatesUserList> {
-    return this.rc.get(this.path(), queryParams)
+    const r = await this.rc.get(this.path(), queryParams)
+    return r.data
   }
 
   bulkAssign (): BulkAssign {

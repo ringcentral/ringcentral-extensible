@@ -21,7 +21,8 @@ class Events {
    * Http post /restapi/v1.0/glip/groups/{groupId}/events
    */
   async post (glipEventCreate: GlipEventCreate): Promise<GlipEventInfo> {
-    return this.rc.post(this.path(), glipEventCreate)
+    const r = await this.rc.post(this.path(), glipEventCreate)
+    return r.data
   }
 
   /**
@@ -30,7 +31,8 @@ class Events {
    * Http get /restapi/v1.0/glip/groups/{groupId}/events
    */
   async get (): Promise<GlipEventInfo> {
-    return this.rc.get(this.path())
+    const r = await this.rc.get(this.path())
+    return r.data
   }
 }
 

@@ -21,7 +21,8 @@ class BusinessHours {
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/business-hours
    */
   async get (): Promise<GetUserBusinessHoursResponse> {
-    return this.rc.get(this.path())
+    const r = await this.rc.get(this.path())
+    return r.data
   }
 
   /**
@@ -30,7 +31,8 @@ class BusinessHours {
    * Http put /restapi/v1.0/account/{accountId}/extension/{extensionId}/business-hours
    */
   async put (userBusinessHoursUpdateRequest: UserBusinessHoursUpdateRequest): Promise<UserBusinessHoursUpdateResponse> {
-    return this.rc.put(this.path(), userBusinessHoursUpdateRequest)
+    const r = await this.rc.put(this.path(), userBusinessHoursUpdateRequest)
+    return r.data
   }
 }
 

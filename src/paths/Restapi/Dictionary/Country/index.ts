@@ -27,7 +27,8 @@ class Country {
    * Http get /restapi/v1.0/dictionary/country
    */
   async list (queryParams?: ListCountriesParameters): Promise<GetCountryListResponse> {
-    return this.rc.get(this.path(false), queryParams)
+    const r = await this.rc.get(this.path(false), queryParams)
+    return r.data
   }
 
   /**
@@ -40,7 +41,8 @@ class Country {
       throw new Error('countryId must be specified.')
     }
 
-    return this.rc.get(this.path())
+    const r = await this.rc.get(this.path())
+    return r.data
   }
 }
 

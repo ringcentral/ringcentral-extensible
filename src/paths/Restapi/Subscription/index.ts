@@ -28,7 +28,8 @@ class Subscription {
    * Http get /restapi/v1.0/subscription
    */
   async list (): Promise<RecordsCollectionResourceSubscriptionResponse> {
-    return this.rc.get(this.path(false))
+    const r = await this.rc.get(this.path(false))
+    return r.data
   }
 
   /**
@@ -37,7 +38,8 @@ class Subscription {
    * Http post /restapi/v1.0/subscription
    */
   async post (createSubscriptionRequest: CreateSubscriptionRequest): Promise<SubscriptionInfo> {
-    return this.rc.post(this.path(false), createSubscriptionRequest)
+    const r = await this.rc.post(this.path(false), createSubscriptionRequest)
+    return r.data
   }
 
   /**
@@ -50,7 +52,8 @@ class Subscription {
       throw new Error('subscriptionId must be specified.')
     }
 
-    return this.rc.get(this.path())
+    const r = await this.rc.get(this.path())
+    return r.data
   }
 
   /**
@@ -63,7 +66,8 @@ class Subscription {
       throw new Error('subscriptionId must be specified.')
     }
 
-    return this.rc.put(this.path(), modifySubscriptionRequest, queryParams)
+    const r = await this.rc.put(this.path(), modifySubscriptionRequest, queryParams)
+    return r.data
   }
 
   /**
@@ -76,7 +80,8 @@ class Subscription {
       throw new Error('subscriptionId must be specified.')
     }
 
-    return this.rc.delete(this.path())
+    const r = await this.rc.delete(this.path())
+    return r.data
   }
 
   renew (): Renew {

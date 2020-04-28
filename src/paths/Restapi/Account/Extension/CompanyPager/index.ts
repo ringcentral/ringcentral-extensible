@@ -21,7 +21,8 @@ class CompanyPager {
    * Http post /restapi/v1.0/account/{accountId}/extension/{extensionId}/company-pager
    */
   async post (createInternalTextMessageRequest: CreateInternalTextMessageRequest): Promise<GetMessageInfoResponse> {
-    return this.rc.post(this.path(), createInternalTextMessageRequest)
+    const r = await this.rc.post(this.path(), createInternalTextMessageRequest)
+    return r.data
   }
 }
 

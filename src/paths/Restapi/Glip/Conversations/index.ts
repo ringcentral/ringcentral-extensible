@@ -27,7 +27,8 @@ class Conversations {
    * Http get /restapi/v1.0/glip/conversations
    */
   async list (queryParams?: ListGlipConversationsParameters): Promise<GlipConversationsList> {
-    return this.rc.get(this.path(false), queryParams)
+    const r = await this.rc.get(this.path(false), queryParams)
+    return r.data
   }
 
   /**
@@ -36,7 +37,8 @@ class Conversations {
    * Http post /restapi/v1.0/glip/conversations
    */
   async post (createGlipConversationRequest: CreateGlipConversationRequest): Promise<GlipConversationInfo> {
-    return this.rc.post(this.path(false), createGlipConversationRequest)
+    const r = await this.rc.post(this.path(false), createGlipConversationRequest)
+    return r.data
   }
 
   /**
@@ -49,7 +51,8 @@ class Conversations {
       throw new Error('chatId must be specified.')
     }
 
-    return this.rc.get(this.path())
+    const r = await this.rc.get(this.path())
+    return r.data
   }
 }
 

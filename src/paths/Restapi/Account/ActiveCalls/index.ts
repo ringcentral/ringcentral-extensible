@@ -21,7 +21,8 @@ class ActiveCalls {
    * Http get /restapi/v1.0/account/{accountId}/active-calls
    */
   async get (queryParams?: ListCompanyActiveCallsParameters): Promise<CompanyActiveCallsResponse> {
-    return this.rc.get(this.path(), queryParams)
+    const r = await this.rc.get(this.path(), queryParams)
+    return r.data
   }
 }
 

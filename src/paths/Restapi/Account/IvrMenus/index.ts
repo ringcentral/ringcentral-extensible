@@ -27,7 +27,8 @@ class IvrMenus {
    * Http post /restapi/v1.0/account/{accountId}/ivr-menus
    */
   async post (iVRMenuInfo: IVRMenuInfo): Promise<IVRMenuInfo> {
-    return this.rc.post(this.path(false), iVRMenuInfo)
+    const r = await this.rc.post(this.path(false), iVRMenuInfo)
+    return r.data
   }
 
   /**
@@ -40,7 +41,8 @@ class IvrMenus {
       throw new Error('ivrMenuId must be specified.')
     }
 
-    return this.rc.get(this.path())
+    const r = await this.rc.get(this.path())
+    return r.data
   }
 
   /**
@@ -53,7 +55,8 @@ class IvrMenus {
       throw new Error('ivrMenuId must be specified.')
     }
 
-    return this.rc.put(this.path(), iVRMenuInfo)
+    const r = await this.rc.put(this.path(), iVRMenuInfo)
+    return r.data
   }
 }
 

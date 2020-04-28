@@ -21,7 +21,8 @@ class Assistants {
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/meetings-configuration/assistants
    */
   async get (): Promise<AssistantsResource> {
-    return this.rc.get(this.path())
+    const r = await this.rc.get(this.path())
+    return r.data
   }
 }
 

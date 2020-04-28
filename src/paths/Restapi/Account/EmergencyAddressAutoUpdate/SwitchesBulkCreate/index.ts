@@ -21,7 +21,8 @@ class SwitchesBulkCreate {
    * Http post /restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches-bulk-create
    */
   async post (createMultipleSwitchesRequest: CreateMultipleSwitchesRequest): Promise<CreateMultipleSwitchesResponse> {
-    return this.rc.post(this.path(), createMultipleSwitchesRequest)
+    const r = await this.rc.post(this.path(), createMultipleSwitchesRequest)
+    return r.data
   }
 }
 

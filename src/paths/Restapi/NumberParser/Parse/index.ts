@@ -21,7 +21,8 @@ class Parse {
    * Http post /restapi/v1.0/number-parser/parse
    */
   async post (parsePhoneNumberRequest: ParsePhoneNumberRequest, queryParams?: ParsePhoneNumberParameters): Promise<ParsePhoneNumberResponse> {
-    return this.rc.post(this.path(), parsePhoneNumberRequest, queryParams)
+    const r = await this.rc.post(this.path(), parsePhoneNumberRequest, queryParams)
+    return r.data
   }
 }
 

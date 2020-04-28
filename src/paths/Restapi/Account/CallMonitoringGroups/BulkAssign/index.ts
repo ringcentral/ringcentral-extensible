@@ -21,7 +21,8 @@ class BulkAssign {
    * Http post /restapi/v1.0/account/{accountId}/call-monitoring-groups/{groupId}/bulk-assign
    */
   async post (callMonitoringBulkAssign: CallMonitoringBulkAssign): Promise<string> {
-    return this.rc.post(this.path(), callMonitoringBulkAssign)
+    const r = await this.rc.post(this.path(), callMonitoringBulkAssign)
+    return r.data
   }
 }
 

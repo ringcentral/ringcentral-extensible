@@ -27,7 +27,8 @@ class Greeting {
    * Http get /restapi/v1.0/dictionary/greeting
    */
   async list (queryParams?: ListStandardGreetingsParameters): Promise<DictionaryGreetingList> {
-    return this.rc.get(this.path(false), queryParams)
+    const r = await this.rc.get(this.path(false), queryParams)
+    return r.data
   }
 
   /**
@@ -40,7 +41,8 @@ class Greeting {
       throw new Error('greetingId must be specified.')
     }
 
-    return this.rc.get(this.path())
+    const r = await this.rc.get(this.path())
+    return r.data
   }
 }
 

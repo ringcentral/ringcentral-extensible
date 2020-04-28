@@ -21,7 +21,8 @@ class Presence {
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/presence
    */
   async get (queryParams?: ReadUserPresenceStatusParameters): Promise<GetPresenceInfo> {
-    return this.rc.get(this.path(), queryParams)
+    const r = await this.rc.get(this.path(), queryParams)
+    return r.data
   }
 
   /**
@@ -30,7 +31,8 @@ class Presence {
    * Http put /restapi/v1.0/account/{accountId}/extension/{extensionId}/presence
    */
   async put (presenceInfoResource: PresenceInfoResource): Promise<PresenceInfoResponse> {
-    return this.rc.put(this.path(), presenceInfoResource)
+    const r = await this.rc.put(this.path(), presenceInfoResource)
+    return r.data
   }
 }
 

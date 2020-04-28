@@ -32,7 +32,8 @@ class Recording {
       throw new Error('recordingId must be specified.')
     }
 
-    return this.rc.get(this.path())
+    const r = await this.rc.get(this.path())
+    return r.data
   }
 
   content (): Content {

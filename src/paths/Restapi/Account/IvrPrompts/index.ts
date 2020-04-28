@@ -30,7 +30,8 @@ class IvrPrompts {
    */
   async post (createIVRPromptRequest: CreateIvrPromptRequest): Promise<PromptInfo> {
     const formData = Utils.getFormData(createIVRPromptRequest)
-    return this.rc.post(this.path(false), formData, undefined, { headers: formData.getHeaders() })
+    const r = await this.rc.post(this.path(false), formData, undefined, { headers: formData.getHeaders() })
+    return r.data
   }
 
   /**
@@ -39,7 +40,8 @@ class IvrPrompts {
    * Http get /restapi/v1.0/account/{accountId}/ivr-prompts
    */
   async list (): Promise<IVRPrompts> {
-    return this.rc.get(this.path(false))
+    const r = await this.rc.get(this.path(false))
+    return r.data
   }
 
   /**
@@ -52,7 +54,8 @@ class IvrPrompts {
       throw new Error('promptId must be specified.')
     }
 
-    return this.rc.get(this.path())
+    const r = await this.rc.get(this.path())
+    return r.data
   }
 
   /**
@@ -65,7 +68,8 @@ class IvrPrompts {
       throw new Error('promptId must be specified.')
     }
 
-    return this.rc.delete(this.path())
+    const r = await this.rc.delete(this.path())
+    return r.data
   }
 
   /**
@@ -78,7 +82,8 @@ class IvrPrompts {
       throw new Error('promptId must be specified.')
     }
 
-    return this.rc.put(this.path(), updateIVRPromptRequest)
+    const r = await this.rc.put(this.path(), updateIVRPromptRequest)
+    return r.data
   }
 
   content (): Content {

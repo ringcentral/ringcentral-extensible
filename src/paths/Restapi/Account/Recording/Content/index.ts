@@ -20,7 +20,8 @@ class Content {
    * Http get /restapi/v1.0/account/{accountId}/recording/{recordingId}/content
    */
   async get (): Promise<Buffer> {
-    return this.rc.get(this.path(), undefined, { responseType: 'arraybuffer' })
+    const r = await this.rc.get(this.path(), undefined, { responseType: 'arraybuffer' })
+    return r.data
   }
 }
 

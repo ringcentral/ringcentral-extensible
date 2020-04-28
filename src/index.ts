@@ -1,4 +1,4 @@
-import axios, { AxiosInstance, Method, AxiosRequestConfig } from 'axios'
+import axios, { AxiosInstance, Method, AxiosRequestConfig, AxiosResponse } from 'axios'
 import qs from 'qs'
 
 import { GetTokenRequest, TokenInfo } from './definitions'
@@ -37,7 +37,7 @@ class RestClient {
     })
   }
 
-  async request (httpMethod: Method, endpoint: string, content?: {}, queryParams?: {}, config?: {}): Promise<any> {
+  async request (httpMethod: Method, endpoint: string, content?: {}, queryParams?: {}, config?: {}): Promise<AxiosResponse<any>> {
     const _config: AxiosRequestConfig = {
       method: httpMethod,
       url: endpoint,
@@ -61,21 +61,21 @@ class RestClient {
     if (r.status < 200 || r.status > 299) {
       throw new RestException(r)
     }
-    return r.data
+    return r
   }
-  async get (endpoint: string, queryParams?: {}, config?: {}): Promise<any> {
+  async get (endpoint: string, queryParams?: {}, config?: {}): Promise<AxiosResponse<any>> {
     return this.request('GET', endpoint, undefined, queryParams, config)
   }
-  async delete (endpoint: string, queryParams?: {}, config?: {}): Promise<any> {
+  async delete (endpoint: string, queryParams?: {}, config?: {}): Promise<AxiosResponse<any>> {
     return this.request('DELETE', endpoint, undefined, queryParams, config)
   }
-  async post (endpoint: string, content?: {}, queryParams?: {}, config?: {}): Promise<any> {
+  async post (endpoint: string, content?: {}, queryParams?: {}, config?: {}): Promise<AxiosResponse<any>> {
     return this.request('POST', endpoint, content, queryParams, config)
   }
-  async put (endpoint: string, content: {}, queryParams?: {}, config?: {}): Promise<any> {
+  async put (endpoint: string, content: {}, queryParams?: {}, config?: {}): Promise<AxiosResponse<any>> {
     return this.request('PUT', endpoint, content, queryParams, config)
   }
-  async patch (endpoint: string, content: {}, queryParams?: {}, config?: {}): Promise<any> {
+  async patch (endpoint: string, content: {}, queryParams?: {}, config?: {}): Promise<AxiosResponse<any>> {
     return this.request('PATCH', endpoint, content, queryParams, config)
   }
 

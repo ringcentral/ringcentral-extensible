@@ -21,7 +21,8 @@ class ServiceInfo {
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/service-info
    */
   async get (): Promise<MeetingServiceInfoResource> {
-    return this.rc.get(this.path())
+    const r = await this.rc.get(this.path())
+    return r.data
   }
 
   /**
@@ -30,7 +31,8 @@ class ServiceInfo {
    * Http patch /restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/service-info
    */
   async patch (meetingServiceInfoRequest: MeetingServiceInfoRequest): Promise<MeetingServiceInfoResource> {
-    return this.rc.patch(this.path(), meetingServiceInfoRequest)
+    const r = await this.rc.patch(this.path(), meetingServiceInfoRequest)
+    return r.data
   }
 }
 

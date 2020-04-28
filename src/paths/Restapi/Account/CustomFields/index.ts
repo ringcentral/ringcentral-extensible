@@ -27,7 +27,8 @@ class CustomFields {
    * Http post /restapi/v1.0/account/{accountId}/custom-fields
    */
   async post (customFieldCreateRequest: CustomFieldCreateRequest): Promise<CustomFieldResource> {
-    return this.rc.post(this.path(false), customFieldCreateRequest)
+    const r = await this.rc.post(this.path(false), customFieldCreateRequest)
+    return r.data
   }
 
   /**
@@ -36,7 +37,8 @@ class CustomFields {
    * Http get /restapi/v1.0/account/{accountId}/custom-fields
    */
   async get (): Promise<CustomFieldsResource> {
-    return this.rc.get(this.path(false))
+    const r = await this.rc.get(this.path(false))
+    return r.data
   }
 
   /**
@@ -49,7 +51,8 @@ class CustomFields {
       throw new Error('fieldId must be specified.')
     }
 
-    return this.rc.put(this.path(), customFieldUpdateRequest)
+    const r = await this.rc.put(this.path(), customFieldUpdateRequest)
+    return r.data
   }
 
   /**
@@ -62,7 +65,8 @@ class CustomFields {
       throw new Error('fieldId must be specified.')
     }
 
-    return this.rc.delete(this.path())
+    const r = await this.rc.delete(this.path())
+    return r.data
   }
 }
 

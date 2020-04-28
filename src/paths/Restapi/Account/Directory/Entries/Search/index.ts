@@ -21,7 +21,8 @@ class Search {
    * Http post /restapi/v1.0/account/{accountId}/directory/entries/search
    */
   async post (searchDirectoryEntriesRequest: SearchDirectoryEntriesRequest): Promise<DirectoryResource> {
-    return this.rc.post(this.path(), searchDirectoryEntriesRequest)
+    const r = await this.rc.post(this.path(), searchDirectoryEntriesRequest)
+    return r.data
   }
 }
 

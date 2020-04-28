@@ -21,7 +21,8 @@ class Remove {
    * Http post /restapi/v1.0/glip/teams/{chatId}/remove
    */
   async post (glipPostMembersIdsListBody: GlipPostMembersIdsListBody): Promise<string> {
-    return this.rc.post(this.path(), glipPostMembersIdsListBody)
+    const r = await this.rc.post(this.path(), glipPostMembersIdsListBody)
+    return r.data
   }
 }
 

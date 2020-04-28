@@ -31,7 +31,8 @@ class Device {
       throw new Error('deviceId must be specified.')
     }
 
-    return this.rc.get(this.path(), queryParams)
+    const r = await this.rc.get(this.path(), queryParams)
+    return r.data
   }
 
   /**
@@ -44,7 +45,8 @@ class Device {
       throw new Error('deviceId must be specified.')
     }
 
-    return this.rc.put(this.path(), accountDeviceUpdate, queryParams)
+    const r = await this.rc.put(this.path(), accountDeviceUpdate, queryParams)
+    return r.data
   }
 }
 

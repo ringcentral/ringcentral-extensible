@@ -24,7 +24,8 @@ class CallRecording {
    * Http get /restapi/v1.0/account/{accountId}/call-recording
    */
   async get (): Promise<CallRecordingSettingsResource> {
-    return this.rc.get(this.path())
+    const r = await this.rc.get(this.path())
+    return r.data
   }
 
   /**
@@ -33,7 +34,8 @@ class CallRecording {
    * Http put /restapi/v1.0/account/{accountId}/call-recording
    */
   async put (callRecordingSettingsResource: CallRecordingSettingsResource): Promise<CallRecordingSettingsResource> {
-    return this.rc.put(this.path(), callRecordingSettingsResource)
+    const r = await this.rc.put(this.path(), callRecordingSettingsResource)
+    return r.data
   }
 
   extensions (): Extensions {

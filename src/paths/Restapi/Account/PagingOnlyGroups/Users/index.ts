@@ -21,7 +21,8 @@ class Users {
    * Http get /restapi/v1.0/account/{accountId}/paging-only-groups/{pagingOnlyGroupId}/users
    */
   async get (queryParams?: ListPagingGroupUsersParameters): Promise<PagingOnlyGroupUsers> {
-    return this.rc.get(this.path(), queryParams)
+    const r = await this.rc.get(this.path(), queryParams)
+    return r.data
   }
 }
 

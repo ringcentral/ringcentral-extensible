@@ -27,7 +27,8 @@ class CallLog {
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log
    */
   async list (queryParams?: ReadUserCallLogParameters): Promise<UserCallLogResponse> {
-    return this.rc.get(this.path(false), queryParams)
+    const r = await this.rc.get(this.path(false), queryParams)
+    return r.data
   }
 
   /**
@@ -36,7 +37,8 @@ class CallLog {
    * Http delete /restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log
    */
   async delete (queryParams?: DeleteUserCallLogParameters): Promise<string> {
-    return this.rc.delete(this.path(false), queryParams)
+    const r = await this.rc.delete(this.path(false), queryParams)
+    return r.data
   }
 
   /**
@@ -49,7 +51,8 @@ class CallLog {
       throw new Error('callRecordId must be specified.')
     }
 
-    return this.rc.get(this.path(), queryParams)
+    const r = await this.rc.get(this.path(), queryParams)
+    return r.data
   }
 }
 

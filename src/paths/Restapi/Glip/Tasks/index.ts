@@ -32,7 +32,8 @@ class Tasks {
       throw new Error('taskId must be specified.')
     }
 
-    return this.rc.get(this.path())
+    const r = await this.rc.get(this.path())
+    return r.data
   }
 
   /**
@@ -45,7 +46,8 @@ class Tasks {
       throw new Error('taskId must be specified.')
     }
 
-    return this.rc.patch(this.path(), glipUpdateTask)
+    const r = await this.rc.patch(this.path(), glipUpdateTask)
+    return r.data
   }
 
   /**
@@ -58,7 +60,8 @@ class Tasks {
       throw new Error('taskId must be specified.')
     }
 
-    return this.rc.delete(this.path())
+    const r = await this.rc.delete(this.path())
+    return r.data
   }
 
   complete (): Complete {

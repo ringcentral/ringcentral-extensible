@@ -27,7 +27,8 @@ class EmergencyLocations {
    * Http post /restapi/v1.0/account/{accountId}/emergency-locations
    */
   async post (emergencyLocationInfoRequest: EmergencyLocationInfoRequest): Promise<string> {
-    return this.rc.post(this.path(false), emergencyLocationInfoRequest)
+    const r = await this.rc.post(this.path(false), emergencyLocationInfoRequest)
+    return r.data
   }
 
   /**
@@ -36,7 +37,8 @@ class EmergencyLocations {
    * Http get /restapi/v1.0/account/{accountId}/emergency-locations
    */
   async list (queryParams?: ListEmergencyLocationsParameters): Promise<EmergencyLocationList> {
-    return this.rc.get(this.path(false), queryParams)
+    const r = await this.rc.get(this.path(false), queryParams)
+    return r.data
   }
 
   /**
@@ -49,7 +51,8 @@ class EmergencyLocations {
       throw new Error('locationId must be specified.')
     }
 
-    return this.rc.get(this.path())
+    const r = await this.rc.get(this.path())
+    return r.data
   }
 
   /**
@@ -62,7 +65,8 @@ class EmergencyLocations {
       throw new Error('locationId must be specified.')
     }
 
-    return this.rc.put(this.path(), emergencyLocationInfoRequest)
+    const r = await this.rc.put(this.path(), emergencyLocationInfoRequest)
+    return r.data
   }
 }
 

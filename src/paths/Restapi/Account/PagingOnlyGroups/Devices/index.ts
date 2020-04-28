@@ -21,7 +21,8 @@ class Devices {
    * Http get /restapi/v1.0/account/{accountId}/paging-only-groups/{pagingOnlyGroupId}/devices
    */
   async get (queryParams?: ListPagingGroupDevicesParameters): Promise<PagingOnlyGroupDevices> {
-    return this.rc.get(this.path(), queryParams)
+    const r = await this.rc.get(this.path(), queryParams)
+    return r.data
   }
 }
 

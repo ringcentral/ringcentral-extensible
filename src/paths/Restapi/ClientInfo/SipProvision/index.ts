@@ -21,7 +21,8 @@ class SipProvision {
    * Http post /restapi/v1.0/client-info/sip-provision
    */
   async post (createSipRegistrationRequest: CreateSipRegistrationRequest): Promise<CreateSipRegistrationResponse> {
-    return this.rc.post(this.path(), createSipRegistrationRequest)
+    const r = await this.rc.post(this.path(), createSipRegistrationRequest)
+    return r.data
   }
 }
 

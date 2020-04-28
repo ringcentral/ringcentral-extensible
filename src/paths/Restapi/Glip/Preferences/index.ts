@@ -21,7 +21,8 @@ class Preferences {
    * Http get /restapi/v1.0/glip/preferences
    */
   async get (): Promise<GlipPreferencesInfo> {
-    return this.rc.get(this.path())
+    const r = await this.rc.get(this.path())
+    return r.data
   }
 }
 

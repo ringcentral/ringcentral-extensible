@@ -61,7 +61,8 @@ class Extension {
    * Http get /restapi/v1.0/account/{accountId}/extension
    */
   async list (queryParams?: ListExtensionsParameters): Promise<GetExtensionListResponse> {
-    return this.rc.get(this.path(false), queryParams)
+    const r = await this.rc.get(this.path(false), queryParams)
+    return r.data
   }
 
   /**
@@ -70,7 +71,8 @@ class Extension {
    * Http post /restapi/v1.0/account/{accountId}/extension
    */
   async post (extensionCreationRequest: ExtensionCreationRequest): Promise<ExtensionCreationResponse> {
-    return this.rc.post(this.path(false), extensionCreationRequest)
+    const r = await this.rc.post(this.path(false), extensionCreationRequest)
+    return r.data
   }
 
   /**
@@ -83,7 +85,8 @@ class Extension {
       throw new Error('extensionId must be specified.')
     }
 
-    return this.rc.get(this.path())
+    const r = await this.rc.get(this.path())
+    return r.data
   }
 
   /**
@@ -96,7 +99,8 @@ class Extension {
       throw new Error('extensionId must be specified.')
     }
 
-    return this.rc.put(this.path(), extensionUpdateRequest)
+    const r = await this.rc.put(this.path(), extensionUpdateRequest)
+    return r.data
   }
 
   /**
@@ -109,7 +113,8 @@ class Extension {
       throw new Error('extensionId must be specified.')
     }
 
-    return this.rc.delete(this.path(), queryParams)
+    const r = await this.rc.delete(this.path(), queryParams)
+    return r.data
   }
 
   callLog (callRecordId: (string | null) = null): CallLog {

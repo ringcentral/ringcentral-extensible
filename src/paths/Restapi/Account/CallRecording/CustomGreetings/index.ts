@@ -27,7 +27,8 @@ class CustomGreetings {
    * Http get /restapi/v1.0/account/{accountId}/call-recording/custom-greetings
    */
   async get (queryParams?: ListCallRecordingCustomGreetingsParameters): Promise<CallRecordingCustomGreetings> {
-    return this.rc.get(this.path(false), queryParams)
+    const r = await this.rc.get(this.path(false), queryParams)
+    return r.data
   }
 
   /**
@@ -40,7 +41,8 @@ class CustomGreetings {
       throw new Error('greetingId must be specified.')
     }
 
-    return this.rc.delete(this.path())
+    const r = await this.rc.delete(this.path())
+    return r.data
   }
 }
 

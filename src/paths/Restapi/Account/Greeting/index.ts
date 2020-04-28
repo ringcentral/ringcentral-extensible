@@ -23,7 +23,8 @@ class Greeting {
    */
   async post (createCompanyGreetingRequest: CreateCompanyGreetingRequest): Promise<CustomCompanyGreetingInfo> {
     const formData = Utils.getFormData(createCompanyGreetingRequest)
-    return this.rc.post(this.path(), formData, undefined, { headers: formData.getHeaders() })
+    const r = await this.rc.post(this.path(), formData, undefined, { headers: formData.getHeaders() })
+    return r.data
   }
 }
 

@@ -15,6 +15,7 @@ describe('batch get', () => {
     expect(extensions.records?.length).toBeGreaterThan(1)
     const r = await rc.get(`/restapi/v1.0/account/~/extension/${extensions.records?.map(r => r.id).join(',')}/presence`)
     expect(r).not.toBeNull()
-    expect(r).toContain('--Boundary')
+    expect(r.data).not.toBeNull()
+    expect(r.data).toContain('--Boundary')
   })
 })

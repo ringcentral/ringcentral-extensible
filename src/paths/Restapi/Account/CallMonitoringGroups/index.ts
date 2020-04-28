@@ -29,7 +29,8 @@ class CallMonitoringGroups {
    * Http post /restapi/v1.0/account/{accountId}/call-monitoring-groups
    */
   async post (createCallMonitoringGroupRequest: CreateCallMonitoringGroupRequest): Promise<CallMonitoringGroup> {
-    return this.rc.post(this.path(false), createCallMonitoringGroupRequest)
+    const r = await this.rc.post(this.path(false), createCallMonitoringGroupRequest)
+    return r.data
   }
 
   /**
@@ -38,7 +39,8 @@ class CallMonitoringGroups {
    * Http get /restapi/v1.0/account/{accountId}/call-monitoring-groups
    */
   async get (queryParams?: ListCallMonitoringGroupsParameters): Promise<CallMonitoringGroups> {
-    return this.rc.get(this.path(false), queryParams)
+    const r = await this.rc.get(this.path(false), queryParams)
+    return r.data
   }
 
   /**
@@ -51,7 +53,8 @@ class CallMonitoringGroups {
       throw new Error('groupId must be specified.')
     }
 
-    return this.rc.put(this.path(), createCallMonitoringGroupRequest)
+    const r = await this.rc.put(this.path(), createCallMonitoringGroupRequest)
+    return r.data
   }
 
   /**
@@ -64,7 +67,8 @@ class CallMonitoringGroups {
       throw new Error('groupId must be specified.')
     }
 
-    return this.rc.delete(this.path())
+    const r = await this.rc.delete(this.path())
+    return r.data
   }
 
   members (): Members {

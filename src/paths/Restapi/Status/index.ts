@@ -20,7 +20,8 @@ class Status {
    * Http get /restapi/v1.0/status
    */
   async get (): Promise<string> {
-    return this.rc.get(this.path())
+    const r = await this.rc.get(this.path())
+    return r.data
   }
 }
 

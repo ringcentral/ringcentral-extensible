@@ -27,7 +27,8 @@ class Templates {
    * Http get /restapi/v1.0/account/{accountId}/templates
    */
   async list (queryParams?: ListUserTemplatesParameters): Promise<UserTemplates> {
-    return this.rc.get(this.path(false), queryParams)
+    const r = await this.rc.get(this.path(false), queryParams)
+    return r.data
   }
 
   /**
@@ -40,7 +41,8 @@ class Templates {
       throw new Error('templateId must be specified.')
     }
 
-    return this.rc.get(this.path())
+    const r = await this.rc.get(this.path())
+    return r.data
   }
 }
 

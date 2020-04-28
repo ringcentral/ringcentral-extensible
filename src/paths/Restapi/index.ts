@@ -32,7 +32,8 @@ class Restapi {
    * Http get /restapi
    */
   async list (): Promise<GetVersionsResponse> {
-    return this.rc.get(this.path(false))
+    const r = await this.rc.get(this.path(false))
+    return r.data
   }
 
   /**
@@ -45,7 +46,8 @@ class Restapi {
       throw new Error('apiVersion must be specified.')
     }
 
-    return this.rc.get(this.path())
+    const r = await this.rc.get(this.path())
+    return r.data
   }
 
   oauth (): Oauth {

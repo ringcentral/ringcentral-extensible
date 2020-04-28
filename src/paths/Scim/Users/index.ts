@@ -28,7 +28,8 @@ class Users {
    * Http get /scim/v2/Users
    */
   async list (queryParams?: SearchViaGet2Parameters): Promise<UserSearchResponse> {
-    return this.rc.get(this.path(false), queryParams)
+    const r = await this.rc.get(this.path(false), queryParams)
+    return r.data
   }
 
   /**
@@ -37,7 +38,8 @@ class Users {
    * Http post /scim/v2/Users
    */
   async post (createUser: CreateUser): Promise<UserResponse> {
-    return this.rc.post(this.path(false), createUser)
+    const r = await this.rc.post(this.path(false), createUser)
+    return r.data
   }
 
   /**
@@ -50,7 +52,8 @@ class Users {
       throw new Error('id must be specified.')
     }
 
-    return this.rc.get(this.path())
+    const r = await this.rc.get(this.path())
+    return r.data
   }
 
   /**
@@ -63,7 +66,8 @@ class Users {
       throw new Error('id must be specified.')
     }
 
-    return this.rc.put(this.path(), user)
+    const r = await this.rc.put(this.path(), user)
+    return r.data
   }
 
   /**
@@ -76,7 +80,8 @@ class Users {
       throw new Error('id must be specified.')
     }
 
-    return this.rc.delete(this.path())
+    const r = await this.rc.delete(this.path())
+    return r.data
   }
 
   /**
@@ -89,7 +94,8 @@ class Users {
       throw new Error('id must be specified.')
     }
 
-    return this.rc.patch(this.path(), userPatch)
+    const r = await this.rc.patch(this.path(), userPatch)
+    return r.data
   }
 
   dotSearch (): DotSearch {

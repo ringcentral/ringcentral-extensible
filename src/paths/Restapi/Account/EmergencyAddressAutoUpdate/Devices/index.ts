@@ -22,7 +22,8 @@ class Devices {
    * Http get /restapi/v1.0/account/{accountId}/emergency-address-auto-update/devices
    */
   async get (queryParams?: ListDevicesAutomaticLocationUpdatesParameters): Promise<ListDevicesAutomaticLocationUpdates> {
-    return this.rc.get(this.path(), queryParams)
+    const r = await this.rc.get(this.path(), queryParams)
+    return r.data
   }
 
   bulkAssign (): BulkAssign {

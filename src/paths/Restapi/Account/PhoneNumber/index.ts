@@ -27,7 +27,8 @@ class PhoneNumber {
    * Http get /restapi/v1.0/account/{accountId}/phone-number
    */
   async list (queryParams?: ListAccountPhoneNumbersParameters): Promise<AccountPhoneNumbers> {
-    return this.rc.get(this.path(false), queryParams)
+    const r = await this.rc.get(this.path(false), queryParams)
+    return r.data
   }
 
   /**
@@ -40,7 +41,8 @@ class PhoneNumber {
       throw new Error('phoneNumberId must be specified.')
     }
 
-    return this.rc.get(this.path())
+    const r = await this.rc.get(this.path())
+    return r.data
   }
 }
 

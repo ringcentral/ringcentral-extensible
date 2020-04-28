@@ -21,7 +21,8 @@ class Add {
    * Http post /restapi/v1.0/glip/teams/{chatId}/add
    */
   async post (glipPostMembersListBody: GlipPostMembersListBody): Promise<string> {
-    return this.rc.post(this.path(), glipPostMembersListBody)
+    const r = await this.rc.post(this.path(), glipPostMembersListBody)
+    return r.data
   }
 }
 

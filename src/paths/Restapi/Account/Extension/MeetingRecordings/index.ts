@@ -21,7 +21,8 @@ class MeetingRecordings {
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting-recordings
    */
   async get (queryParams?: ListUserMeetingRecordingsParameters): Promise<ListMeetingRecordingsResponse> {
-    return this.rc.get(this.path(), queryParams)
+    const r = await this.rc.get(this.path(), queryParams)
+    return r.data
   }
 }
 

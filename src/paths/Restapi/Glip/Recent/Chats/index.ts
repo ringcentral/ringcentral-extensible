@@ -21,7 +21,8 @@ class Chats {
    * Http get /restapi/v1.0/glip/recent/chats
    */
   async get (queryParams?: ListRecentChatsParameters): Promise<GlipChatsListWithoutNavigation> {
-    return this.rc.get(this.path(), queryParams)
+    const r = await this.rc.get(this.path(), queryParams)
+    return r.data
   }
 }
 

@@ -33,7 +33,8 @@ class Sessions {
       throw new Error('telephonySessionId must be specified.')
     }
 
-    return this.rc.get(this.path(), queryParams)
+    const r = await this.rc.get(this.path(), queryParams)
+    return r.data
   }
 
   /**
@@ -46,7 +47,8 @@ class Sessions {
       throw new Error('telephonySessionId must be specified.')
     }
 
-    return this.rc.delete(this.path())
+    const r = await this.rc.delete(this.path())
+    return r.data
   }
 
   parties (partyId: (string | null) = null): Parties {

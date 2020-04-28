@@ -22,7 +22,8 @@ class AuthzProfile {
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/authz-profile
    */
   async get (): Promise<AuthProfileResource> {
-    return this.rc.get(this.path())
+    const r = await this.rc.get(this.path())
+    return r.data
   }
 
   check (): Check {

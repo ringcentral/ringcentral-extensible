@@ -34,7 +34,8 @@ class Notes {
       throw new Error('noteId must be specified.')
     }
 
-    return this.rc.get(this.path())
+    const r = await this.rc.get(this.path())
+    return r.data
   }
 
   /**
@@ -47,7 +48,8 @@ class Notes {
       throw new Error('noteId must be specified.')
     }
 
-    return this.rc.patch(this.path(), glipNoteCreate)
+    const r = await this.rc.patch(this.path(), glipNoteCreate)
+    return r.data
   }
 
   /**
@@ -60,7 +62,8 @@ class Notes {
       throw new Error('noteId must be specified.')
     }
 
-    return this.rc.delete(this.path())
+    const r = await this.rc.delete(this.path())
+    return r.data
   }
 
   lock (): Lock {

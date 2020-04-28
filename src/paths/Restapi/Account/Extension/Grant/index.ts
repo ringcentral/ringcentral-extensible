@@ -21,7 +21,8 @@ class Grant {
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/grant
    */
   async get (queryParams?: ListExtensionGrantsParameters): Promise<GetExtensionGrantListResponse> {
-    return this.rc.get(this.path(), queryParams)
+    const r = await this.rc.get(this.path(), queryParams)
+    return r.data
   }
 }
 

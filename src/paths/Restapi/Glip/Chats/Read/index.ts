@@ -20,7 +20,8 @@ class Read {
    * Http post /restapi/v1.0/glip/chats/{chatId}/read
    */
   async post (): Promise<string> {
-    return this.rc.post(this.path())
+    const r = await this.rc.post(this.path())
+    return r.data
   }
 }
 

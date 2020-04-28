@@ -28,7 +28,8 @@ class DataExport {
    * Http post /restapi/v1.0/glip/data-export
    */
   async post (createDataExportTaskRequest: CreateDataExportTaskRequest): Promise<DataExportTask> {
-    return this.rc.post(this.path(false), createDataExportTaskRequest)
+    const r = await this.rc.post(this.path(false), createDataExportTaskRequest)
+    return r.data
   }
 
   /**
@@ -37,7 +38,8 @@ class DataExport {
    * Http get /restapi/v1.0/glip/data-export
    */
   async list (queryParams?: ListDataExportTasksParameters): Promise<DataExportTaskList> {
-    return this.rc.get(this.path(false), queryParams)
+    const r = await this.rc.get(this.path(false), queryParams)
+    return r.data
   }
 
   /**
@@ -50,7 +52,8 @@ class DataExport {
       throw new Error('taskId must be specified.')
     }
 
-    return this.rc.get(this.path())
+    const r = await this.rc.get(this.path())
+    return r.data
   }
 
   datasets (datasetId: (string | null) = null): Datasets {

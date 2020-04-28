@@ -21,7 +21,8 @@ class Answer {
    * Http post /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/answer
    */
   async post (answerTarget: AnswerTarget): Promise<CallParty> {
-    return this.rc.post(this.path(), answerTarget)
+    const r = await this.rc.post(this.path(), answerTarget)
+    return r.data
   }
 }
 

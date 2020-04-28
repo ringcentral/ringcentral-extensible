@@ -27,7 +27,8 @@ class State {
    * Http get /restapi/v1.0/dictionary/state
    */
   async list (queryParams?: ListStatesParameters): Promise<GetStateListResponse> {
-    return this.rc.get(this.path(false), queryParams)
+    const r = await this.rc.get(this.path(false), queryParams)
+    return r.data
   }
 
   /**
@@ -40,7 +41,8 @@ class State {
       throw new Error('stateId must be specified.')
     }
 
-    return this.rc.get(this.path())
+    const r = await this.rc.get(this.path())
+    return r.data
   }
 }
 

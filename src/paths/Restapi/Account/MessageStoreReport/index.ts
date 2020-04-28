@@ -28,7 +28,8 @@ class MessageStoreReport {
    * Http post /restapi/v1.0/account/{accountId}/message-store-report
    */
   async post (createMessageStoreReportRequest: CreateMessageStoreReportRequest): Promise<MessageStoreReport> {
-    return this.rc.post(this.path(false), createMessageStoreReportRequest)
+    const r = await this.rc.post(this.path(false), createMessageStoreReportRequest)
+    return r.data
   }
 
   /**
@@ -41,7 +42,8 @@ class MessageStoreReport {
       throw new Error('taskId must be specified.')
     }
 
-    return this.rc.get(this.path())
+    const r = await this.rc.get(this.path())
+    return r.data
   }
 
   archive (archiveId: (string | null) = null): Archive {

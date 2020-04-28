@@ -21,7 +21,8 @@ class Members {
    * Http get /restapi/v1.0/account/{accountId}/department/{departmentId}/members
    */
   async get (queryParams?: ListDepartmentMembersParameters): Promise<DepartmentMemberList> {
-    return this.rc.get(this.path(), queryParams)
+    const r = await this.rc.get(this.path(), queryParams)
+    return r.data
   }
 }
 

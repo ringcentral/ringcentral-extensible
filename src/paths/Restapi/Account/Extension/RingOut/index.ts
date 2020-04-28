@@ -27,7 +27,8 @@ class RingOut {
    * Http post /restapi/v1.0/account/{accountId}/extension/{extensionId}/ring-out
    */
   async post (makeRingOutRequest: MakeRingOutRequest): Promise<GetRingOutStatusResponse> {
-    return this.rc.post(this.path(false), makeRingOutRequest)
+    const r = await this.rc.post(this.path(false), makeRingOutRequest)
+    return r.data
   }
 
   /**
@@ -40,7 +41,8 @@ class RingOut {
       throw new Error('ringoutId must be specified.')
     }
 
-    return this.rc.get(this.path())
+    const r = await this.rc.get(this.path())
+    return r.data
   }
 
   /**
@@ -53,7 +55,8 @@ class RingOut {
       throw new Error('ringoutId must be specified.')
     }
 
-    return this.rc.delete(this.path())
+    const r = await this.rc.delete(this.path())
+    return r.data
   }
 }
 

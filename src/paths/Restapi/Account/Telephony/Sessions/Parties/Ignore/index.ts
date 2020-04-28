@@ -21,7 +21,8 @@ class Ignore {
    * Http post /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/ignore
    */
   async post (ignoreRequestBody: IgnoreRequestBody): Promise<string> {
-    return this.rc.post(this.path(), ignoreRequestBody)
+    const r = await this.rc.post(this.path(), ignoreRequestBody)
+    return r.data
   }
 }
 

@@ -27,7 +27,8 @@ class Switches {
    * Http get /restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches
    */
   async list (queryParams?: ListAccountSwitchesParameters): Promise<SwitchesList> {
-    return this.rc.get(this.path(false), queryParams)
+    const r = await this.rc.get(this.path(false), queryParams)
+    return r.data
   }
 
   /**
@@ -36,7 +37,8 @@ class Switches {
    * Http post /restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches
    */
   async post (createSwitchInfo: CreateSwitchInfo): Promise<SwitchInfo> {
-    return this.rc.post(this.path(false), createSwitchInfo)
+    const r = await this.rc.post(this.path(false), createSwitchInfo)
+    return r.data
   }
 
   /**
@@ -49,7 +51,8 @@ class Switches {
       throw new Error('switchId must be specified.')
     }
 
-    return this.rc.get(this.path())
+    const r = await this.rc.get(this.path())
+    return r.data
   }
 
   /**
@@ -62,7 +65,8 @@ class Switches {
       throw new Error('switchId must be specified.')
     }
 
-    return this.rc.put(this.path(), updateSwitchInfo)
+    const r = await this.rc.put(this.path(), updateSwitchInfo)
+    return r.data
   }
 
   /**
@@ -75,7 +79,8 @@ class Switches {
       throw new Error('switchId must be specified.')
     }
 
-    return this.rc.delete(this.path())
+    const r = await this.rc.delete(this.path())
+    return r.data
   }
 }
 

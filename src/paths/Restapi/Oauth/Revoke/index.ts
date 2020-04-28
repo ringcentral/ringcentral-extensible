@@ -21,7 +21,8 @@ class Revoke {
    * Http post /restapi/oauth/revoke
    */
   async post (revokeTokenRequest: RevokeTokenRequest): Promise<string> {
-    return this.rc.post(this.path(), revokeTokenRequest)
+    const r = await this.rc.post(this.path(), revokeTokenRequest)
+    return r.data
   }
 }
 

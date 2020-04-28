@@ -21,7 +21,8 @@ class SwitchesBulkUpdate {
    * Http post /restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches-bulk-update
    */
   async post (updateMultipleSwitchesRequest: UpdateMultipleSwitchesRequest): Promise<UpdateMultipleSwitchesResponse> {
-    return this.rc.post(this.path(), updateMultipleSwitchesRequest)
+    const r = await this.rc.post(this.path(), updateMultipleSwitchesRequest)
+    return r.data
   }
 }
 

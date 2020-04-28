@@ -22,7 +22,8 @@ class CallerBlocking {
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking
    */
   async get (): Promise<CallerBlockingSettings> {
-    return this.rc.get(this.path())
+    const r = await this.rc.get(this.path())
+    return r.data
   }
 
   /**
@@ -31,7 +32,8 @@ class CallerBlocking {
    * Http put /restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking
    */
   async put (callerBlockingSettingsUpdate: CallerBlockingSettingsUpdate): Promise<CallerBlockingSettings> {
-    return this.rc.put(this.path(), callerBlockingSettingsUpdate)
+    const r = await this.rc.put(this.path(), callerBlockingSettingsUpdate)
+    return r.data
   }
 
   phoneNumbers (blockedNumberId: (string | null) = null): PhoneNumbers {

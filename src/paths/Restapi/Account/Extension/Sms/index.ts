@@ -21,7 +21,8 @@ class Sms {
    * Http post /restapi/v1.0/account/{accountId}/extension/{extensionId}/sms
    */
   async post (createSMSMessage: CreateSMSMessage): Promise<GetMessageInfoResponse> {
-    return this.rc.post(this.path(), createSMSMessage)
+    const r = await this.rc.post(this.path(), createSMSMessage)
+    return r.data
   }
 }
 

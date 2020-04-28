@@ -21,7 +21,8 @@ class Supervise {
    * Http post /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/supervise
    */
   async post (superviseCallSessionRequest: SuperviseCallSessionRequest): Promise<SuperviseCallSession> {
-    return this.rc.post(this.path(), superviseCallSessionRequest)
+    const r = await this.rc.post(this.path(), superviseCallSessionRequest)
+    return r.data
   }
 }
 

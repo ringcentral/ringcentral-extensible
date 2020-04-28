@@ -21,7 +21,8 @@ class Members {
    * Http get /restapi/v1.0/account/{accountId}/call-queues/{groupId}/members
    */
   async get (queryParams?: ListCallQueueMembersParameters): Promise<CallQueueMembers> {
-    return this.rc.get(this.path(), queryParams)
+    const r = await this.rc.get(this.path(), queryParams)
+    return r.data
   }
 }
 

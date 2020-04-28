@@ -27,7 +27,8 @@ class Posts {
    * Http get /restapi/v1.0/glip/chats/{chatId}/posts
    */
   async list (queryParams?: ReadGlipPostsParameters): Promise<GlipPostsList> {
-    return this.rc.get(this.path(false), queryParams)
+    const r = await this.rc.get(this.path(false), queryParams)
+    return r.data
   }
 
   /**
@@ -36,7 +37,8 @@ class Posts {
    * Http post /restapi/v1.0/glip/chats/{chatId}/posts
    */
   async post (glipPostPostBody: GlipPostPostBody): Promise<GlipPostInfo> {
-    return this.rc.post(this.path(false), glipPostPostBody)
+    const r = await this.rc.post(this.path(false), glipPostPostBody)
+    return r.data
   }
 
   /**
@@ -49,7 +51,8 @@ class Posts {
       throw new Error('postId must be specified.')
     }
 
-    return this.rc.get(this.path())
+    const r = await this.rc.get(this.path())
+    return r.data
   }
 
   /**
@@ -62,7 +65,8 @@ class Posts {
       throw new Error('postId must be specified.')
     }
 
-    return this.rc.patch(this.path(), glipPatchPostBody)
+    const r = await this.rc.patch(this.path(), glipPatchPostBody)
+    return r.data
   }
 
   /**
@@ -75,7 +79,8 @@ class Posts {
       throw new Error('postId must be specified.')
     }
 
-    return this.rc.delete(this.path())
+    const r = await this.rc.delete(this.path())
+    return r.data
   }
 }
 

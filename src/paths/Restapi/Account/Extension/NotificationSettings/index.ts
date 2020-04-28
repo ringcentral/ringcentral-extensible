@@ -21,7 +21,8 @@ class NotificationSettings {
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/notification-settings
    */
   async get (): Promise<NotificationSettings> {
-    return this.rc.get(this.path())
+    const r = await this.rc.get(this.path())
+    return r.data
   }
 
   /**
@@ -30,7 +31,8 @@ class NotificationSettings {
    * Http put /restapi/v1.0/account/{accountId}/extension/{extensionId}/notification-settings
    */
   async put (notificationSettingsUpdateRequest: NotificationSettingsUpdateRequest): Promise<NotificationSettings> {
-    return this.rc.put(this.path(), notificationSettingsUpdateRequest)
+    const r = await this.rc.put(this.path(), notificationSettingsUpdateRequest)
+    return r.data
   }
 }
 

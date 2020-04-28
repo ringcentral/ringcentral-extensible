@@ -30,7 +30,8 @@ class Datasets {
       throw new Error('datasetId must be specified.')
     }
 
-    return this.rc.get(this.path(), undefined, { responseType: 'arraybuffer' })
+    const r = await this.rc.get(this.path(), undefined, { responseType: 'arraybuffer' })
+    return r.data
   }
 }
 

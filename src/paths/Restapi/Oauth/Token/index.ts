@@ -21,7 +21,8 @@ class Token {
    * Http post /restapi/oauth/token
    */
   async post (getTokenRequest: GetTokenRequest): Promise<TokenInfo> {
-    return this.rc.post(this.path(), getTokenRequest)
+    const r = await this.rc.post(this.path(), getTokenRequest)
+    return r.data
   }
 }
 

@@ -21,7 +21,8 @@ class PhoneNumber {
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/phone-number
    */
   async get (queryParams?: ListExtensionPhoneNumbersParameters): Promise<GetExtensionPhoneNumbersResponse> {
-    return this.rc.get(this.path(), queryParams)
+    const r = await this.rc.get(this.path(), queryParams)
+    return r.data
   }
 }
 

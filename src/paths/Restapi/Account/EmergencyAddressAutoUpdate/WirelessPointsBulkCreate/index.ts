@@ -21,7 +21,8 @@ class WirelessPointsBulkCreate {
    * Http post /restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points-bulk-create
    */
   async post (createMultipleWirelessPointsRequest: CreateMultipleWirelessPointsRequest): Promise<CreateMultipleWirelessPointsResponse> {
-    return this.rc.post(this.path(), createMultipleWirelessPointsRequest)
+    const r = await this.rc.post(this.path(), createMultipleWirelessPointsRequest)
+    return r.data
   }
 }
 

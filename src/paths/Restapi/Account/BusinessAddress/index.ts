@@ -21,7 +21,8 @@ class BusinessAddress {
    * Http get /restapi/v1.0/account/{accountId}/business-address
    */
   async get (): Promise<AccountBusinessAddressResource> {
-    return this.rc.get(this.path())
+    const r = await this.rc.get(this.path())
+    return r.data
   }
 
   /**
@@ -30,7 +31,8 @@ class BusinessAddress {
    * Http put /restapi/v1.0/account/{accountId}/business-address
    */
   async put (modifyAccountBusinessAddressRequest: ModifyAccountBusinessAddressRequest): Promise<AccountBusinessAddressResource> {
-    return this.rc.put(this.path(), modifyAccountBusinessAddressRequest)
+    const r = await this.rc.put(this.path(), modifyAccountBusinessAddressRequest)
+    return r.data
   }
 }
 

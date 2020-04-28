@@ -21,7 +21,8 @@ class Device {
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/device
    */
   async get (queryParams?: ListExtensionDevicesParameters): Promise<GetExtensionDevicesResponse> {
-    return this.rc.get(this.path(), queryParams)
+    const r = await this.rc.get(this.path(), queryParams)
+    return r.data
   }
 }
 

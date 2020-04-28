@@ -21,7 +21,8 @@ class BulkAssign {
    * Http post /restapi/v1.0/account/{accountId}/department/bulk-assign
    */
   async post (departmentBulkAssignResource: DepartmentBulkAssignResource): Promise<string> {
-    return this.rc.post(this.path(), departmentBulkAssignResource)
+    const r = await this.rc.post(this.path(), departmentBulkAssignResource)
+    return r.data
   }
 }
 

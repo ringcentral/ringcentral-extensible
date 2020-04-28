@@ -21,7 +21,8 @@ class Features {
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/features
    */
   async get (queryParams?: ReadUserFeaturesParameters): Promise<FeatureList> {
-    return this.rc.get(this.path(), queryParams)
+    const r = await this.rc.get(this.path(), queryParams)
+    return r.data
   }
 }
 

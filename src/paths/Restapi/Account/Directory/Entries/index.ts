@@ -28,7 +28,8 @@ class Entries {
    * Http get /restapi/v1.0/account/{accountId}/directory/entries
    */
   async list (queryParams?: ListDirectoryEntriesParameters): Promise<DirectoryResource> {
-    return this.rc.get(this.path(false), queryParams)
+    const r = await this.rc.get(this.path(false), queryParams)
+    return r.data
   }
 
   /**
@@ -41,7 +42,8 @@ class Entries {
       throw new Error('entryId must be specified.')
     }
 
-    return this.rc.get(this.path())
+    const r = await this.rc.get(this.path())
+    return r.data
   }
 
   search (): Search {

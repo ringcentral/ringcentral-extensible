@@ -21,7 +21,8 @@ class Favorites {
    * Http get /restapi/v1.0/glip/favorites
    */
   async get (queryParams?: ListFavoriteChatsParameters): Promise<GlipChatsListWithoutNavigation> {
-    return this.rc.get(this.path(), queryParams)
+    const r = await this.rc.get(this.path(), queryParams)
+    return r.data
   }
 }
 

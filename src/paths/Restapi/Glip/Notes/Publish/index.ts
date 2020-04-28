@@ -20,7 +20,8 @@ class Publish {
    * Http post /restapi/v1.0/glip/notes/{noteId}/publish
    */
   async post (): Promise<string> {
-    return this.rc.post(this.path())
+    const r = await this.rc.post(this.path())
+    return r.data
   }
 }
 

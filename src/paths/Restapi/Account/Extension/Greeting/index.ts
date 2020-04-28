@@ -29,7 +29,8 @@ class Greeting {
    */
   async post (createCustomUserGreetingRequest: CreateCustomUserGreetingRequest): Promise<CustomUserGreetingInfo> {
     const formData = Utils.getFormData(createCustomUserGreetingRequest)
-    return this.rc.post(this.path(false), formData, undefined, { headers: formData.getHeaders() })
+    const r = await this.rc.post(this.path(false), formData, undefined, { headers: formData.getHeaders() })
+    return r.data
   }
 
   /**
@@ -42,7 +43,8 @@ class Greeting {
       throw new Error('greetingId must be specified.')
     }
 
-    return this.rc.get(this.path())
+    const r = await this.rc.get(this.path())
+    return r.data
   }
 }
 

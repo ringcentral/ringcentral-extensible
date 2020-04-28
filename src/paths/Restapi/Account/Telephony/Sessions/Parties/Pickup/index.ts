@@ -21,7 +21,8 @@ class Pickup {
    * Http post /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/pickup
    */
   async post (pickupTarget: PickupTarget): Promise<CallParty> {
-    return this.rc.post(this.path(), pickupTarget)
+    const r = await this.rc.post(this.path(), pickupTarget)
+    return r.data
   }
 }
 

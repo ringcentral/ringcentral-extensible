@@ -21,7 +21,8 @@ class FaxCoverPage {
    * Http get /restapi/v1.0/dictionary/fax-cover-page
    */
   async get (queryParams?: ListFaxCoverPagesParameters): Promise<ListFaxCoverPagesResponse> {
-    return this.rc.get(this.path(), queryParams)
+    const r = await this.rc.get(this.path(), queryParams)
+    return r.data
   }
 }
 

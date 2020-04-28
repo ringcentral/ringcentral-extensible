@@ -21,7 +21,8 @@ class MessageSync {
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/message-sync
    */
   async get (queryParams?: SyncMessagesParameters): Promise<GetMessageSyncResponse> {
-    return this.rc.get(this.path(), queryParams)
+    const r = await this.rc.get(this.path(), queryParams)
+    return r.data
   }
 }
 

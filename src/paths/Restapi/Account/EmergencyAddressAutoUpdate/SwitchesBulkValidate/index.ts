@@ -21,7 +21,8 @@ class SwitchesBulkValidate {
    * Http post /restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches-bulk-validate
    */
   async post (validateMultipleSwitchesRequest: ValidateMultipleSwitchesRequest): Promise<ValidateMultipleSwitchesResponse> {
-    return this.rc.post(this.path(), validateMultipleSwitchesRequest)
+    const r = await this.rc.post(this.path(), validateMultipleSwitchesRequest)
+    return r.data
   }
 }
 
