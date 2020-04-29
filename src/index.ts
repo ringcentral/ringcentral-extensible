@@ -7,6 +7,8 @@ import Restapi from './paths/Restapi'
 import Scim from './paths/Scim'
 import { version } from '../package.json'
 
+import delay from 'delay'
+
 interface ConstructorOpts {
   clientId: string
   clientSecret: string
@@ -15,6 +17,7 @@ interface ConstructorOpts {
   appVersion?: string
   httpClient?: AxiosInstance
   token?: TokenInfo
+  handleRateLimit?: (boolean | number)
 }
 
 interface PasswordLoginFlowOpts {
@@ -34,6 +37,7 @@ class RestClient {
   appVersion: string
   httpClient: AxiosInstance
   token?: TokenInfo
+  handleRateLimit?: (boolean | number)
 
   constructor(opts: ConstructorOpts) {
     this.clientId = opts.clientId
@@ -51,6 +55,7 @@ class RestClient {
         return qs.stringify(params, { indices: false })
       }
     })
+    this.handleRateLimit = opts.handleRateLimit ? opts.handleRateLimit : false
   }
 
   async request(httpMethod: Method, endpoint: string, content?: {}, queryParams?: {}, config?: {}): Promise<AxiosResponse<any>> {
@@ -74,11 +79,32 @@ class RestClient {
       }
     }
     const r = await this.httpClient.request(_config)
-    if (r.status < 200 || r.status > 299) {
+
+    if (r.status == 429 && this.handleRateLimit == false) {
+      throw new RestException(r)
+    }
+    else if (r.status == 429 && (this.handleRateLimit == true || typeof this.handleRateLimit == 'number')) {
+
+      let delayTime = r.headers['x-rate-limit-window'] ? r.headers['x-rate-limit-window'] : 60
+
+      if (typeof this.handleRateLimit == 'number') {
+        delayTime = this.handleRateLimit
+      }
+
+      // unsure on level? or if this should be a thrown error?
+      console.debug(`Hit RingCentral Rate Limit. Pausing requests for ${delayTime} seconds.`)
+
+      await delay(delayTime * 1000)
+
+      return this.request(httpMethod, endpoint, content, queryParams, config)
+
+    }
+    else if (r.status < 200 || r.status > 299 && r.status != 429) {
       throw new RestException(r)
     }
     return r
   }
+
   async get(endpoint: string, queryParams?: {}, config?: {}): Promise<AxiosResponse<any>> {
     return this.request('GET', endpoint, undefined, queryParams, config)
   }
