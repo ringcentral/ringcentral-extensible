@@ -17,6 +17,12 @@ interface ConstructorOpts {
   token?: TokenInfo
 }
 
+interface PasswordLoginFlowOpts {
+  username: string
+  extension: string
+  password: string
+}
+
 class RestClient {
   static sandboxServer = 'https://platform.devtest.ringcentral.com'
   static productionServer = 'https://platform.ringcentral.com'
@@ -90,17 +96,13 @@ class RestClient {
   }
 
   async authorize(getTokenRequest: GetTokenRequest): Promise<TokenInfo>
-  // authorize(username, extension, password) OR authorize(authCode, redirectUri)
+
+  // authorize(authCode, redirectUri)
   async authorize(arg1: string, arg2: string, arg3?: string): Promise<TokenInfo>
   async authorize(arg1: string | GetTokenRequest, arg2?: string, arg3?: string): Promise<TokenInfo> {
     let getTokenRequest = new GetTokenRequest()
     if (arg1 instanceof GetTokenRequest) {
       getTokenRequest = arg1
-    } else if (arg3) { // password flow
-      getTokenRequest.grant_type = 'password'
-      getTokenRequest.username = arg1
-      getTokenRequest.extension = arg2
-      getTokenRequest.password = arg3
     } else { // auth code flow
       getTokenRequest.grant_type = 'authorization_code'
       getTokenRequest.code = arg1
@@ -110,6 +112,39 @@ class RestClient {
     return this.token
   }
 
+  /**
+   * Each time you call token endpoint using this flow a new client session starts. 
+   * It is associated with the issued token pair: access token and refresh token, returned in response to this request. 
+   * To continue the session you can refresh the obtained access token and refresh token as many times as you need, using Refresh Token flow or the same flow.
+   * To start another client session you should call token endpoint using this flow again. 
+   * 
+   * Please consider that only 5 simultaneously active sessions per extension per application are supported. 
+   * Thus if you exceed the number of sessions started per extension per application, the oldest one is ended.
+   * 
+   * https://developers.ringcentral.com/api-reference/Get-Token
+   * 
+   * @param opts PasswordLoginFlowOpts
+   */
+  async login(opts: PasswordLoginFlowOpts) {
+    let getTokenRequest = new GetTokenRequest()
+
+    getTokenRequest.grant_type = 'password'
+    getTokenRequest.username = opts.username
+    getTokenRequest.extension = opts.extension
+    getTokenRequest.password = opts.password
+
+    this.token = await this.restapi(null).oauth().token().post(getTokenRequest)
+    return this.token
+  }
+
+  /**
+   * Each time you call token endpoint using this flow, you continue current client session, and receive a new token pair: access token and refresh token in response to this request. 
+   * The old token pair immediately becomes inactive.
+   * 
+   * https://developers.ringcentral.com/api-reference/Get-Token
+   * 
+   * @param refreshToken Refresh Token
+   */
   async refresh(refreshToken?: string): Promise<TokenInfo> {
     const tokenToRefresh = refreshToken ?? this.token?.refresh_token
     if (!tokenToRefresh) {
@@ -121,6 +156,14 @@ class RestClient {
     return this.authorize(getTokenRequest)
   }
 
+  /**
+   * Each time you call token endpoint using this flow, you continue current client session, and receive a new token pair: access token and refresh token in response to this request. 
+   * The old token pair immediately becomes inactive.
+   * 
+   * https://developers.ringcentral.com/api-reference/Revoke-Token
+   * 
+   * @param tokenToRevoke AccessToken
+   */
   async revoke(tokenToRevoke?: string) {
     if (!tokenToRevoke && !this.token) { // nothing to revoke
       return
@@ -130,6 +173,13 @@ class RestClient {
     this.token = undefined
   }
 
+  /**
+   * Returns current API version info by apiVersion.
+   * 
+   * https://developers.ringcentral.com/api-reference/API-Info/readAPIVersion
+   * 
+   * @param apiVersion API version to be requested, for example 'v1.0'
+   */
   restapi(apiVersion: (string | null) = 'v1.0'): Restapi {
     return new Restapi(this, apiVersion)
   }

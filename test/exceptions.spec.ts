@@ -8,10 +8,14 @@ describe('Exceptions', () => {
   test('400', async () => {
     const rc = new RestClient({
       clientId: process.env.RINGCENTRAL_CLIENT_ID!,
-      clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET!!,
-      server: process.env.RINGCENTRAL_SERVER_URL!!
+      clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET!,
+      server: process.env.RINGCENTRAL_SERVER_URL!
     })
-    await rc.authorize(process.env.RINGCENTRAL_USERNAME!, process.env.RINGCENTRAL_EXTENSION!, process.env.RINGCENTRAL_PASSWORD!)
+    await rc.login({
+      username: process.env.RINGCENTRAL_USERNAME!,
+      extension: process.env.RINGCENTRAL_EXTENSION!,
+      password: process.env.RINGCENTRAL_PASSWORD!
+    })
     let exception = false
     try {
       // no to number
@@ -28,10 +32,14 @@ describe('Exceptions', () => {
   test('404', async () => {
     const rc = new RestClient({
       clientId: process.env.RINGCENTRAL_CLIENT_ID!,
-      clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET!!,
-      server: process.env.RINGCENTRAL_SERVER_URL!!
+      clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET!,
+      server: process.env.RINGCENTRAL_SERVER_URL!
     })
-    await rc.authorize(process.env.RINGCENTRAL_USERNAME!, process.env.RINGCENTRAL_EXTENSION!, process.env.RINGCENTRAL_PASSWORD!!)
+    await rc.login({
+        username: process.env.RINGCENTRAL_USERNAME!,
+        extension: process.env.RINGCENTRAL_EXTENSION!,
+        password: process.env.RINGCENTRAL_PASSWORD!
+    })
     let exception = false
     try {
       await rc.post(rc.restapi().account().extension().path(true) + '/does-not-exist', { text: 'Hello world' })
