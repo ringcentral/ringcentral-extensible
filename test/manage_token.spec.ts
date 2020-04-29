@@ -5,8 +5,16 @@ jest.setTimeout(16000)
 
 describe('manage token', () => {
   test('get and set token', async () => {
-    const rc = new RestClient(process.env.RINGCENTRAL_CLIENT_ID!, process.env.RINGCENTRAL_CLIENT_SECRET!, process.env.RINGCENTRAL_SERVER_URL!)
-    await rc.authorize(process.env.RINGCENTRAL_USERNAME!, process.env.RINGCENTRAL_EXTENSION!, process.env.RINGCENTRAL_PASSWORD!)
+    const rc = new RestClient({
+      clientId: process.env.RINGCENTRAL_CLIENT_ID!,
+      clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET!,
+      server: process.env.RINGCENTRAL_SERVER_URL!
+    })
+    await rc.login({
+      username: process.env.RINGCENTRAL_USERNAME!,
+      extension: process.env.RINGCENTRAL_EXTENSION!,
+      password: process.env.RINGCENTRAL_PASSWORD!
+    })
 
     // get token
     const tokenInfo = rc.token

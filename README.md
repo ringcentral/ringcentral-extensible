@@ -11,6 +11,21 @@ This SDK is modelled after the [RingCentral.NET](https://github.com/ringcentral/
 yarn add ringcentral-typescript
 ```
 
+## Setup
+Make a copy of `env_example` and rename it to `.env`, then fill in the data appropriately. 
+
+In your project, require the sdk, then initialize and login
+
+```js
+const RestClient = require('ringcentral-typescript').default
+
+const rc = new RestClient({
+    clientId: process.env.RINGCENTRAL_CLIENT_ID,
+    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
+    server: process.env.RINGCENTRAL_SERVER_URL
+})
+```
+
 
 ## Sample code
 
