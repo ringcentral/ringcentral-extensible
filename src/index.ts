@@ -39,8 +39,8 @@ class RestClient {
     this.clientId = opts.clientId
     this.clientSecret = opts.clientSecret
     this.server = opts.server
-    this.appName = opts.appName ? opts.appName : 'Unknown'
-    this.appVersion = opts.appVersion ? opts.appVersion : '0.0.1'
+    this.appName = opts.appName ?? 'Unknown'
+    this.appVersion = opts.appVersion ?? '0.0.1'
     this.httpClient = opts.httpClient ? opts.httpClient : axios.create({
       baseURL: this.server,
       headers: { 'X-User-Agent': `${this.appName}/${this.appVersion} tylerlong/ringcentral-typescript/${version}` },
@@ -51,6 +51,7 @@ class RestClient {
         return qs.stringify(params, { indices: false })
       }
     })
+    this.token = opts.token
   }
 
   async request (httpMethod: Method, endpoint: string, content?: {}, queryParams?: {}, config?: {}): Promise<AxiosResponse<any>> {
@@ -126,7 +127,7 @@ class RestClient {
    * @param opts PasswordLoginFlowOpts
    */
   async login (opts: PasswordLoginFlowOpts) {
-    let getTokenRequest = new GetTokenRequest()
+    const getTokenRequest = new GetTokenRequest()
 
     getTokenRequest.grant_type = 'password'
     getTokenRequest.username = opts.username
@@ -174,16 +175,21 @@ class RestClient {
   }
 
   /**
-   * Returns current API version info by apiVersion.
+   * This method provides you with a start of chain methods `rc.restapi()`,
+   * so that you can construct longer ones, like this `rc.restapi().account().extension().messageStore().list()`
    *
-   * https://developers.ringcentral.com/api-reference/API-Info/readAPIVersion
-   *
-   * @param apiVersion API version to be requested, for example 'v1.0'
+   * @param apiVersion API version, currently the only valid value is 'v1.0'
    */
   restapi (apiVersion: (string | null) = 'v1.0'): Restapi {
     return new Restapi(this, apiVersion)
   }
 
+  /**
+   * This method provides you with a start of chain methods `rc.scim()`,
+   * so that you can construct longer ones, like this `rc.scim().users(userId).delete()`
+   *
+   * @param version SCIM API version, currently the only valid value is 'v2'
+   */
   scim (version: (string | null) = 'v2'): Scim {
     return new Scim(this, version)
   }
