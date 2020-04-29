@@ -35,7 +35,7 @@ class RestClient {
   httpClient: AxiosInstance
   token?: TokenInfo
 
-  constructor(opts: ConstructorOpts) {
+  constructor (opts: ConstructorOpts) {
     this.clientId = opts.clientId
     this.clientSecret = opts.clientSecret
     this.server = opts.server
@@ -53,7 +53,7 @@ class RestClient {
     })
   }
 
-  async request(httpMethod: Method, endpoint: string, content?: {}, queryParams?: {}, config?: {}): Promise<AxiosResponse<any>> {
+  async request (httpMethod: Method, endpoint: string, content?: {}, queryParams?: {}, config?: {}): Promise<AxiosResponse<any>> {
     const _config: AxiosRequestConfig = {
       method: httpMethod,
       url: endpoint,
@@ -79,27 +79,27 @@ class RestClient {
     }
     return r
   }
-  async get(endpoint: string, queryParams?: {}, config?: {}): Promise<AxiosResponse<any>> {
+  async get (endpoint: string, queryParams?: {}, config?: {}): Promise<AxiosResponse<any>> {
     return this.request('GET', endpoint, undefined, queryParams, config)
   }
-  async delete(endpoint: string, queryParams?: {}, config?: {}): Promise<AxiosResponse<any>> {
+  async delete (endpoint: string, queryParams?: {}, config?: {}): Promise<AxiosResponse<any>> {
     return this.request('DELETE', endpoint, undefined, queryParams, config)
   }
-  async post(endpoint: string, content?: {}, queryParams?: {}, config?: {}): Promise<AxiosResponse<any>> {
+  async post (endpoint: string, content?: {}, queryParams?: {}, config?: {}): Promise<AxiosResponse<any>> {
     return this.request('POST', endpoint, content, queryParams, config)
   }
-  async put(endpoint: string, content: {}, queryParams?: {}, config?: {}): Promise<AxiosResponse<any>> {
+  async put (endpoint: string, content: {}, queryParams?: {}, config?: {}): Promise<AxiosResponse<any>> {
     return this.request('PUT', endpoint, content, queryParams, config)
   }
-  async patch(endpoint: string, content: {}, queryParams?: {}, config?: {}): Promise<AxiosResponse<any>> {
+  async patch (endpoint: string, content: {}, queryParams?: {}, config?: {}): Promise<AxiosResponse<any>> {
     return this.request('PATCH', endpoint, content, queryParams, config)
   }
 
-  async authorize(getTokenRequest: GetTokenRequest): Promise<TokenInfo>
+  async authorize (getTokenRequest: GetTokenRequest): Promise<TokenInfo>
 
   // authorize(authCode, redirectUri)
-  async authorize(arg1: string, arg2: string, arg3?: string): Promise<TokenInfo>
-  async authorize(arg1: string | GetTokenRequest, arg2?: string, arg3?: string): Promise<TokenInfo> {
+  async authorize (arg1: string, arg2: string, arg3?: string): Promise<TokenInfo>
+  async authorize (arg1: string | GetTokenRequest, arg2?: string, arg3?: string): Promise<TokenInfo> {
     let getTokenRequest = new GetTokenRequest()
     if (arg1 instanceof GetTokenRequest) {
       getTokenRequest = arg1
@@ -113,19 +113,19 @@ class RestClient {
   }
 
   /**
-   * Each time you call token endpoint using this flow a new client session starts. 
-   * It is associated with the issued token pair: access token and refresh token, returned in response to this request. 
+   * Each time you call token endpoint using this flow a new client session starts.
+   * It is associated with the issued token pair: access token and refresh token, returned in response to this request.
    * To continue the session you can refresh the obtained access token and refresh token as many times as you need, using Refresh Token flow or the same flow.
-   * To start another client session you should call token endpoint using this flow again. 
-   * 
-   * Please consider that only 5 simultaneously active sessions per extension per application are supported. 
+   * To start another client session you should call token endpoint using this flow again.
+   *
+   * Please consider that only 5 simultaneously active sessions per extension per application are supported.
    * Thus if you exceed the number of sessions started per extension per application, the oldest one is ended.
-   * 
+   *
    * https://developers.ringcentral.com/api-reference/Get-Token
-   * 
+   *
    * @param opts PasswordLoginFlowOpts
    */
-  async login(opts: PasswordLoginFlowOpts) {
+  async login (opts: PasswordLoginFlowOpts) {
     let getTokenRequest = new GetTokenRequest()
 
     getTokenRequest.grant_type = 'password'
@@ -138,14 +138,14 @@ class RestClient {
   }
 
   /**
-   * Each time you call token endpoint using this flow, you continue current client session, and receive a new token pair: access token and refresh token in response to this request. 
+   * Each time you call token endpoint using this flow, you continue current client session, and receive a new token pair: access token and refresh token in response to this request.
    * The old token pair immediately becomes inactive.
-   * 
+   *
    * https://developers.ringcentral.com/api-reference/Get-Token
-   * 
+   *
    * @param refreshToken Refresh Token
    */
-  async refresh(refreshToken?: string): Promise<TokenInfo> {
+  async refresh (refreshToken?: string): Promise<TokenInfo> {
     const tokenToRefresh = refreshToken ?? this.token?.refresh_token
     if (!tokenToRefresh) {
       throw new Error('tokenToRefresh must be specified.')
@@ -157,14 +157,14 @@ class RestClient {
   }
 
   /**
-   * Each time you call token endpoint using this flow, you continue current client session, and receive a new token pair: access token and refresh token in response to this request. 
+   * Each time you call token endpoint using this flow, you continue current client session, and receive a new token pair: access token and refresh token in response to this request.
    * The old token pair immediately becomes inactive.
-   * 
+   *
    * https://developers.ringcentral.com/api-reference/Revoke-Token
-   * 
+   *
    * @param tokenToRevoke AccessToken
    */
-  async revoke(tokenToRevoke?: string) {
+  async revoke (tokenToRevoke?: string) {
     if (!tokenToRevoke && !this.token) { // nothing to revoke
       return
     }
@@ -175,16 +175,16 @@ class RestClient {
 
   /**
    * Returns current API version info by apiVersion.
-   * 
+   *
    * https://developers.ringcentral.com/api-reference/API-Info/readAPIVersion
-   * 
+   *
    * @param apiVersion API version to be requested, for example 'v1.0'
    */
-  restapi(apiVersion: (string | null) = 'v1.0'): Restapi {
+  restapi (apiVersion: (string | null) = 'v1.0'): Restapi {
     return new Restapi(this, apiVersion)
   }
 
-  scim(version: (string | null) = 'v2'): Scim {
+  scim (version: (string | null) = 'v2'): Scim {
     return new Scim(this, version)
   }
 }
