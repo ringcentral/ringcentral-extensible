@@ -22,7 +22,12 @@ const RestClient = require('ringcentral-typescript').default
 const rc = new RestClient({
     clientId: process.env.RINGCENTRAL_CLIENT_ID,
     clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
+    server: process.env.RINGCENTRAL_SERVER_URL,
+    appName: "", //optional
+    appVersion: "", //optional
+    httpClient: "", //optional
+    token: "", //optional
+    handleRateLimit: false //optional
 })
 ```
 
@@ -63,6 +68,19 @@ But not all binary content has been migrated to CDN.
 If the resource to download provides you with a CDN uri, use that CDN uri.
 If there is no CDN uri provided, contruct the uri as the [sample code](./samples.md) shows.
 
+## Rate Limiting
+The RingCentral Platform enforces rate limits to reduce network traffic and avoid DOS issues. 
+
+[Here's](https://github.com/ringcentral/ringcentral-js/blob/master/sdk/src/platform/Platform.ts) a blog article discussing it in detail. 
+
+This SDK has the option of handling rate limits automatically by passing `handleRateLimit: (boolean | number)` into the constructor. 
+
+Options: 
+
+- boolean
+    - When set to true, this will pause requests for however many seconds are indicated in the `rate-limit-window` header (defaulting to 60 is there header is somehow missing)
+- number
+    - When set to a number, this overrides using the header, or the default, and instead pauses for x seconds (where x is your number in the constructor)
 
 ## For maintainers
 
