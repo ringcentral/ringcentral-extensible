@@ -1,39 +1,39 @@
 {
-  "name": "ringcentral-typescript",
-  "version": "0.6.0",
-  "description": "RingCentral TypeScript SDK",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "repository": "git@github.com:tylerlong/ringcentral-typescript.git",
-  "author": "Tyler Long <tyler.liu@ringcentral.com>",
-  "license": "MIT",
-  "scripts": {
-    "test": "jest -w 1",
-    "definitions": "rm -rf ./src/definitions/* && node ./code-generator/definitions.js",
-    "paths": "rm -rf ./src/paths/* && node ./code-generator/paths.js",
-    "generate": "yarn definitions && yarn paths",
-    "prepublishOnly": "standard && rm -rf dist && tsc && rm dist/package.json && mv dist/src/* dist/ && rmdir dist/src && yarn test",
-    "tslint": "tslint --project ."
-  },
-  "dependencies": {
-    "axios": "^0.19.2",
-    "form-data": "^3.0.0",
-    "qs": "^6.9.3"
-  },
-  "devDependencies": {
-    "@types/jest": "^25.2.1",
-    "@types/node": "^13.13.2",
-    "@types/qs": "^6.9.1",
-    "change-case": "^4.1.1",
-    "dotenv-override-true": "^6.2.0",
-    "jest": "^25.4.0",
-    "lower-case-first": "^2.0.1",
-    "ramda": "^0.27.0",
-    "standard": "^14.3.3",
-    "ts-jest": "^25.4.0",
-    "tslint": "^6.1.1",
-    "tslint-config-standard": "^9.0.0",
-    "typescript": "^3.8.3",
-    "yarn-upgrade-all": "^0.5.2"
-  }
+    "name": "ringcentral-typescript",
+    "version": "0.6.0",
+    "description": "RingCentral TypeScript SDK",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "repository": "git@github.com:tylerlong/ringcentral-typescript.git",
+    "author": "Tyler Long <tyler.liu@ringcentral.com>",
+    "license": "MIT",
+    "scripts": {
+        "test": "jest -w 1",
+        "definitions": "rm -rf ./src/definitions/* && node ./code-generator/definitions.js",
+        "paths": "rm -rf ./src/paths/* && node ./code-generator/paths.js",
+        "generate": "yarn definitions && yarn paths",
+        "prepublishOnly": "standard && rm -rf dist && tsc && rm dist/package.json && mv dist/src/* dist/ && rmdir dist/src && yarn test",
+        "tslint": "tslint --project ."
+    },
+    "dependencies": {
+        "axios": "^0.19.2",
+        "form-data": "^3.0.0",
+        "qs": "^6.9.3"
+    },
+    "devDependencies": {
+        "@types/jest": "^25.2.1",
+        "@types/node": "^13.13.2",
+        "@types/qs": "^6.9.1",
+        "change-case": "^4.1.1",
+        "dotenv-override-true": "^6.2.0",
+        "jest": "^25.4.0",
+        "lower-case-first": "^2.0.1",
+        "ramda": "^0.27.0",
+        "standard": "^14.3.3",
+        "ts-jest": "^25.4.0",
+        "tslint": "^6.1.1",
+        "tslint-config-standard": "^9.0.0",
+        "typescript": "^3.8.3",
+        "yarn-upgrade-all": "^0.5.2"
+    }
 }

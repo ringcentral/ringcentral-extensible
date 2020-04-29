@@ -7,6 +7,16 @@ import Restapi from './paths/Restapi'
 import Scim from './paths/Scim'
 import { version } from '../package.json'
 
+interface ConstructorOpts {
+  clientId: string
+  clientSecret: string
+  server: string
+  appName?: string
+  appVersion?: string
+  httpClient?: AxiosInstance
+  token?: TokenInfo
+}
+
 class RestClient {
   static sandboxServer = 'https://platform.devtest.ringcentral.com'
   static productionServer = 'https://platform.ringcentral.com'
@@ -14,20 +24,20 @@ class RestClient {
   clientId: string
   clientSecret: string
   server: string
-  appName = 'Unknown'
-  appVersion = '0.0.1'
+  appName: string
+  appVersion: string
   httpClient: AxiosInstance
   token?: TokenInfo
 
-  constructor (clientId: string, clientSecret: string, server: string, appName = 'Unknown', appVersion = '0.0.1') {
-    this.clientId = clientId
-    this.clientSecret = clientSecret
-    this.server = server
-    this.appName = appName
-    this.appVersion = appVersion
-    this.httpClient = axios.create({
+  constructor(opts: ConstructorOpts) {
+    this.clientId = opts.clientId
+    this.clientSecret = opts.clientSecret
+    this.server = opts.server
+    this.appName = opts.appName ? opts.appName : 'Unknown'
+    this.appVersion = opts.appVersion ? opts.appVersion : '0.0.1'
+    this.httpClient = opts.httpClient ? opts.httpClient : axios.create({
       baseURL: this.server,
-      headers: { 'X-User-Agent': `${appName}/${appVersion} tylerlong/ringcentral-typescript/${version}` },
+      headers: { 'X-User-Agent': `${this.appName}/${this.appVersion} tylerlong/ringcentral-typescript/${version}` },
       validateStatus: status => {
         return true
       },
@@ -37,7 +47,7 @@ class RestClient {
     })
   }
 
-  async request (httpMethod: Method, endpoint: string, content?: {}, queryParams?: {}, config?: {}): Promise<AxiosResponse<any>> {
+  async request(httpMethod: Method, endpoint: string, content?: {}, queryParams?: {}, config?: {}): Promise<AxiosResponse<any>> {
     const _config: AxiosRequestConfig = {
       method: httpMethod,
       url: endpoint,
@@ -63,26 +73,26 @@ class RestClient {
     }
     return r
   }
-  async get (endpoint: string, queryParams?: {}, config?: {}): Promise<AxiosResponse<any>> {
+  async get(endpoint: string, queryParams?: {}, config?: {}): Promise<AxiosResponse<any>> {
     return this.request('GET', endpoint, undefined, queryParams, config)
   }
-  async delete (endpoint: string, queryParams?: {}, config?: {}): Promise<AxiosResponse<any>> {
+  async delete(endpoint: string, queryParams?: {}, config?: {}): Promise<AxiosResponse<any>> {
     return this.request('DELETE', endpoint, undefined, queryParams, config)
   }
-  async post (endpoint: string, content?: {}, queryParams?: {}, config?: {}): Promise<AxiosResponse<any>> {
+  async post(endpoint: string, content?: {}, queryParams?: {}, config?: {}): Promise<AxiosResponse<any>> {
     return this.request('POST', endpoint, content, queryParams, config)
   }
-  async put (endpoint: string, content: {}, queryParams?: {}, config?: {}): Promise<AxiosResponse<any>> {
+  async put(endpoint: string, content: {}, queryParams?: {}, config?: {}): Promise<AxiosResponse<any>> {
     return this.request('PUT', endpoint, content, queryParams, config)
   }
-  async patch (endpoint: string, content: {}, queryParams?: {}, config?: {}): Promise<AxiosResponse<any>> {
+  async patch(endpoint: string, content: {}, queryParams?: {}, config?: {}): Promise<AxiosResponse<any>> {
     return this.request('PATCH', endpoint, content, queryParams, config)
   }
 
-  async authorize (getTokenRequest: GetTokenRequest): Promise<TokenInfo>
+  async authorize(getTokenRequest: GetTokenRequest): Promise<TokenInfo>
   // authorize(username, extension, password) OR authorize(authCode, redirectUri)
-  async authorize (arg1: string, arg2: string, arg3?: string): Promise<TokenInfo>
-  async authorize (arg1: string | GetTokenRequest, arg2?: string, arg3?: string): Promise<TokenInfo> {
+  async authorize(arg1: string, arg2: string, arg3?: string): Promise<TokenInfo>
+  async authorize(arg1: string | GetTokenRequest, arg2?: string, arg3?: string): Promise<TokenInfo> {
     let getTokenRequest = new GetTokenRequest()
     if (arg1 instanceof GetTokenRequest) {
       getTokenRequest = arg1
@@ -100,7 +110,7 @@ class RestClient {
     return this.token
   }
 
-  async refresh (refreshToken?: string): Promise<TokenInfo> {
+  async refresh(refreshToken?: string): Promise<TokenInfo> {
     const tokenToRefresh = refreshToken ?? this.token?.refresh_token
     if (!tokenToRefresh) {
       throw new Error('tokenToRefresh must be specified.')
@@ -111,7 +121,7 @@ class RestClient {
     return this.authorize(getTokenRequest)
   }
 
-  async revoke (tokenToRevoke?: string) {
+  async revoke(tokenToRevoke?: string) {
     if (!tokenToRevoke && !this.token) { // nothing to revoke
       return
     }
@@ -120,11 +130,11 @@ class RestClient {
     this.token = undefined
   }
 
-  restapi (apiVersion: (string | null) = 'v1.0'): Restapi {
+  restapi(apiVersion: (string | null) = 'v1.0'): Restapi {
     return new Restapi(this, apiVersion)
   }
 
-  scim (version: (string | null) = 'v2'): Scim {
+  scim(version: (string | null) = 'v2'): Scim {
     return new Scim(this, version)
   }
 }
