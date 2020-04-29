@@ -1,6 +1,6 @@
 {
     "name": "ringcentral-typescript",
-    "version": "0.6.0",
+    "version": "0.7.0",
     "description": "RingCentral TypeScript SDK",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
@@ -17,6 +17,7 @@
     },
     "dependencies": {
         "axios": "^0.19.2",
+        "delay": "^4.3.0",
         "form-data": "^3.0.0",
         "qs": "^6.9.3"
     },

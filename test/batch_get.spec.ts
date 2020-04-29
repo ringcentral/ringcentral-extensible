@@ -15,9 +15,9 @@ describe('batch get', () => {
       server: process.env.RINGCENTRAL_SERVER_URL!
     })
     await rc.login({
-        username: process.env.RINGCENTRAL_USERNAME!,
-        extension: process.env.RINGCENTRAL_EXTENSION!,
-        password: process.env.RINGCENTRAL_PASSWORD!
+      username: process.env.RINGCENTRAL_USERNAME!,
+      extension: process.env.RINGCENTRAL_EXTENSION!,
+      password: process.env.RINGCENTRAL_PASSWORD!
     })
     await rc.login({
       username: process.env.RINGCENTRAL_USERNAME!,
