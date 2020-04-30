@@ -1,5 +1,6 @@
 import axios, { AxiosInstance, Method, AxiosRequestConfig, AxiosResponse } from 'axios'
 import qs from 'qs'
+import delay from 'delay'
 
 import { GetTokenRequest, TokenInfo } from './definitions'
 import RestException from './RestException'
@@ -7,9 +8,7 @@ import Restapi from './paths/Restapi'
 import Scim from './paths/Scim'
 import { version } from '../package.json'
 
-import delay from 'delay'
-
-interface ConstructorOpts {
+interface ConstructorOptions {
   clientId: string
   clientSecret: string
   server: string
@@ -20,10 +19,14 @@ interface ConstructorOpts {
   handleRateLimit?: (boolean | number)
 }
 
-interface PasswordLoginFlowOpts {
+interface PasswordFlowOptions {
   username: string
-  extension: string
+  extension?: string
   password: string
+}
+interface AuthCodeFlowOptions {
+  code: string
+  redirect_uri: string
 }
 
 class RestClient {
@@ -39,13 +42,13 @@ class RestClient {
   token?: TokenInfo
   handleRateLimit?: (boolean | number)
 
-  constructor (opts: ConstructorOpts) {
-    this.clientId = opts.clientId
-    this.clientSecret = opts.clientSecret
-    this.server = opts.server
-    this.appName = opts.appName ? opts.appName : 'Unknown'
-    this.appVersion = opts.appVersion ? opts.appVersion : '0.0.1'
-    this.httpClient = opts.httpClient ? opts.httpClient : axios.create({
+  constructor (options: ConstructorOptions) {
+    this.clientId = options.clientId
+    this.clientSecret = options.clientSecret
+    this.server = options.server
+    this.appName = options.appName ? options.appName : 'Unknown'
+    this.appVersion = options.appVersion ? options.appVersion : '0.0.1'
+    this.httpClient = options.httpClient ? options.httpClient : axios.create({
       baseURL: this.server,
       headers: { 'X-User-Agent': `${this.appName}/${this.appVersion} tylerlong/ringcentral-typescript/${version}` },
       validateStatus: status => {
@@ -55,8 +58,8 @@ class RestClient {
         return qs.stringify(params, { indices: false })
       }
     })
-    this.handleRateLimit = opts.handleRateLimit ? opts.handleRateLimit : false
-    this.token = opts.token
+    this.token = options.token
+    this.handleRateLimit = options.handleRateLimit ? options.handleRateLimit : false
   }
 
   async request (httpMethod: Method, endpoint: string, content?: {}, queryParams?: {}, config?: {}): Promise<AxiosResponse<any>> {
@@ -119,21 +122,26 @@ class RestClient {
     return this.request('PATCH', endpoint, content, queryParams, config)
   }
 
-  async authorize (getTokenRequest: GetTokenRequest): Promise<TokenInfo>
-
-  // authorize(authCode, redirectUri)
-  async authorize (arg1: string, arg2: string, arg3?: string): Promise<TokenInfo>
-  async authorize (arg1: string | GetTokenRequest, arg2?: string, arg3?: string): Promise<TokenInfo> {
-    let getTokenRequest = new GetTokenRequest()
-    if (arg1 instanceof GetTokenRequest) {
-      getTokenRequest = arg1
-    } else { // auth code flow
-      getTokenRequest.grant_type = 'authorization_code'
-      getTokenRequest.code = arg1
-      getTokenRequest.redirect_uri = arg2
-    }
+  async getToken (getTokenRequest: GetTokenRequest): Promise<TokenInfo> {
     this.token = await this.restapi(null).oauth().token().post(getTokenRequest)
     return this.token
+  }
+
+  async authorize (options: (PasswordFlowOptions | AuthCodeFlowOptions)): Promise<TokenInfo> {
+    const getTokenRequest = new GetTokenRequest()
+    if ('username' in options) {
+      getTokenRequest.grant_type = 'password'
+      getTokenRequest.username = options.username
+      getTokenRequest.extension = options.extension ?? ''
+      getTokenRequest.password = options.password
+    } else if ('code' in options) {
+      getTokenRequest.grant_type = 'authorization_code'
+      getTokenRequest.code = options.code
+      getTokenRequest.redirect_uri = options.redirect_uri
+    } else {
+      throw new Error('Unsupported authorization flow')
+    }
+    return this.getToken(getTokenRequest)
   }
 
   /**
@@ -147,18 +155,10 @@ class RestClient {
    *
    * https://developers.ringcentral.com/api-reference/Get-Token
    *
-   * @param opts PasswordLoginFlowOpts
+   * @param options PasswordLoginFlowOpts
    */
-  async login (opts: PasswordLoginFlowOpts) {
-    const getTokenRequest = new GetTokenRequest()
-
-    getTokenRequest.grant_type = 'password'
-    getTokenRequest.username = opts.username
-    getTokenRequest.extension = opts.extension
-    getTokenRequest.password = opts.password
-
-    this.token = await this.restapi(null).oauth().token().post(getTokenRequest)
-    return this.token
+  async login (options: PasswordFlowOptions): Promise<TokenInfo> {
+    return this.authorize(options)
   }
 
   /**
@@ -177,7 +177,7 @@ class RestClient {
     const getTokenRequest = new GetTokenRequest()
     getTokenRequest.grant_type = 'refresh_token'
     getTokenRequest.refresh_token = tokenToRefresh
-    return this.authorize(getTokenRequest)
+    return this.getToken(getTokenRequest)
   }
 
   /**
