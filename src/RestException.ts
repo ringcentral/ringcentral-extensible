@@ -1,6 +1,6 @@
 import { AxiosResponse } from 'axios'
 
-import Utils, { RestRequest, RestResponse, RestTraffic } from './Utils'
+import { RestRequest, RestResponse, RestTraffic } from './Utils'
 
 class RestException extends Error {
   response: RestResponse

@@ -7,6 +7,7 @@ import RestException from './RestException'
 import Restapi from './paths/Restapi'
 import Scim from './paths/Scim'
 import { version } from '../package.json'
+import { RestTraffic } from './Utils'
 
 interface ConstructorOptions {
   clientId: string
@@ -17,6 +18,7 @@ interface ConstructorOptions {
   httpClient?: AxiosInstance
   token?: TokenInfo
   handleRateLimit?: (boolean | number)
+  debugMode?: boolean
 }
 
 interface PasswordFlowOptions {
@@ -41,6 +43,7 @@ class RestClient {
   httpClient: AxiosInstance
   token?: TokenInfo
   handleRateLimit?: (boolean | number)
+  debugMode?: boolean
 
   constructor (options: ConstructorOptions) {
     this.clientId = options.clientId
@@ -59,7 +62,8 @@ class RestClient {
       }
     })
     this.token = options.token
-    this.handleRateLimit = options.handleRateLimit ? options.handleRateLimit : false
+    this.handleRateLimit = options.handleRateLimit ?? false
+    this.debugMode = options.debugMode ?? false
   }
 
   async request (httpMethod: Method, endpoint: string, content?: {}, queryParams?: {}, config?: {}): Promise<AxiosResponse<any>> {
@@ -83,6 +87,10 @@ class RestClient {
       }
     }
     const r = await this.httpClient.request(_config)
+
+    if (this.debugMode === true) {
+      console.debug(new RestTraffic(r).toString())
+    }
 
     if (r.status === 429 && this.handleRateLimit === false) {
       throw new RestException(r)
