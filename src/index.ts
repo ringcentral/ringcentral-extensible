@@ -175,7 +175,7 @@ class RestClient {
   }
 
   /**
-   * This method provides you with a start of chain methods `rc.restapi()`,
+   * This method provides you with a start of chain methods `rc.restapi() ...`,
    * so that you can construct longer ones, like this `rc.restapi().account().extension().messageStore().list()`
    *
    * @param apiVersion API version, currently the only valid value is 'v1.0'
@@ -185,7 +185,7 @@ class RestClient {
   }
 
   /**
-   * This method provides you with a start of chain methods `rc.scim()`,
+   * This method provides you with a start of chain methods `rc.scim() ...`,
    * so that you can construct longer ones, like this `rc.scim().users(userId).delete()`
    *
    * @param version SCIM API version, currently the only valid value is 'v2'
