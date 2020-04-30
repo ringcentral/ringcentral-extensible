@@ -92,27 +92,20 @@ class RestClient {
       console.debug(new RestTraffic(r).toString())
     }
 
-    if (r.status === 429 && this.handleRateLimit === false) {
-      throw new RestException(r)
-    } else if (r.status === 429 && (this.handleRateLimit === true || typeof this.handleRateLimit === 'number')) {
-
+    if (r.status >= 200 && r.status < 300) {
+      return r
+    } else if (r.status === 429 && this.handleRateLimit) {
       let delayTime = r.headers['x-rate-limit-window'] ? r.headers['x-rate-limit-window'] : 60
-
       if (typeof this.handleRateLimit === 'number') {
         delayTime = this.handleRateLimit
       }
-
       // unsure on level? or if this should be a thrown error?
       console.debug(`Hit RingCentral Rate Limit. Pausing requests for ${delayTime} seconds.`)
-
       await delay(delayTime * 1000)
-
       return this.request(httpMethod, endpoint, content, queryParams, config)
-
-    } else if (r.status < 200 || r.status > 299 && r.status !== 429) {
+    } else {
       throw new RestException(r)
     }
-    return r
   }
   async get (endpoint: string, queryParams?: {}, config?: {}): Promise<AxiosResponse<any>> {
     return this.request('GET', endpoint, undefined, queryParams, config)
