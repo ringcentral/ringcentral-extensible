@@ -63,7 +63,7 @@ class RestClient {
           headers: {
             'X-User-Agent': `${this.appName}/${this.appVersion} tylerlong/ringcentral-typescript/${version}`,
           },
-          validateStatus: status => {
+          validateStatus: () => {
             return true;
           },
           paramsSerializer: params => {

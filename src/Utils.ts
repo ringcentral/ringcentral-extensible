@@ -55,6 +55,10 @@ export class RestTraffic {
 }
 
 class Utils {
+  static isAttachment(obj: any): boolean {
+    return 'filename' in obj && 'content' in obj;
+  }
+
   static getFormData(...objs: any[]): FormData {
     const formData = new FormData({});
     const obj = Object.assign({}, ...objs);
@@ -65,10 +69,10 @@ class Utils {
       if (value === undefined || value === null) {
         continue;
       }
-      if (Attachment.isAttachment(value)) {
+      if (Utils.isAttachment(value)) {
         attachments.push(value);
       }
-      if (Array.isArray(value) && Attachment.isAttachment(value[0])) {
+      if (Array.isArray(value) && Utils.isAttachment(value[0])) {
         attachments.push(...value);
       } else {
         jsonRequest[key] = value;
