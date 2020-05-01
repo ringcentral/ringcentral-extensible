@@ -5,7 +5,7 @@ import path from 'path'
 import RestClient from '../src/index'
 import Utils from '../src/Utils'
 
-jest.setTimeout(16000)
+jest.setTimeout(64000)
 
 describe('low level API', () => {
   test('sms', async () => {
@@ -39,9 +39,9 @@ describe('low level API', () => {
       server: process.env.RINGCENTRAL_SERVER_URL!
     })
     await rc.login({
-        username: process.env.RINGCENTRAL_USERNAME!,
-        extension: process.env.RINGCENTRAL_EXTENSION!,
-        password: process.env.RINGCENTRAL_PASSWORD!
+      username: process.env.RINGCENTRAL_USERNAME!,
+      extension: process.env.RINGCENTRAL_EXTENSION!,
+      password: process.env.RINGCENTRAL_PASSWORD!
     })
     const requestBody = {
       to: [{ phoneNumber: process.env.RINGCENTRAL_RECEIVER }],

@@ -1,7 +1,7 @@
 /* eslint-env jest */
 import RestClient from '../src/index'
 
-jest.setTimeout(16000)
+jest.setTimeout(64000)
 
 describe('HTTP GET', () => {
   test('get extension info', async () => {

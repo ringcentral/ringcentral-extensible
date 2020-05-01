@@ -5,7 +5,7 @@ import path from 'path'
 import RestClient from '../src/index'
 import { CreateMMSMessage, Attachment } from '../src/definitions'
 
-jest.setTimeout(16000)
+jest.setTimeout(64000)
 
 describe('mms', () => {
   test('send mms', async () => {

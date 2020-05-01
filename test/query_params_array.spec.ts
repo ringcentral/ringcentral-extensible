@@ -1,8 +1,6 @@
 /* eslint-env jest */
 import qs from 'qs'
 
-jest.setTimeout(16000)
-
 describe('query params', () => {
   test('npm qs', async () => {
     const params = { messageType: ['Fax', 'SMS', 'Voicemail'] }

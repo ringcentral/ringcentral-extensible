@@ -2,7 +2,7 @@
 import RestClient from '../src/index'
 import RestException from '../src/RestException'
 
-jest.setTimeout(16000)
+jest.setTimeout(64000)
 
 describe('Exceptions', () => {
   test('400', async () => {
@@ -36,9 +36,9 @@ describe('Exceptions', () => {
       server: process.env.RINGCENTRAL_SERVER_URL!
     })
     await rc.login({
-        username: process.env.RINGCENTRAL_USERNAME!,
-        extension: process.env.RINGCENTRAL_EXTENSION!,
-        password: process.env.RINGCENTRAL_PASSWORD!
+      username: process.env.RINGCENTRAL_USERNAME!,
+      extension: process.env.RINGCENTRAL_EXTENSION!,
+      password: process.env.RINGCENTRAL_PASSWORD!
     })
     let exception = false
     try {

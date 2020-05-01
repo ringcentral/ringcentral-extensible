@@ -4,7 +4,7 @@ import path from 'path'
 
 import RestClient from '../src/index'
 
-jest.setTimeout(16000)
+jest.setTimeout(64000)
 
 describe('Profile image', () => {
   test('download', async () => {

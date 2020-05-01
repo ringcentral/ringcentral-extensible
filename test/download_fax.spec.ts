@@ -3,12 +3,11 @@ import fs from 'fs'
 import path from 'path'
 
 import RestClient from '../src/index'
-import { CreateFaxMessageRequest, Attachment } from '../src/definitions'
 
-jest.setTimeout(16000)
+jest.setTimeout(64000)
 
 describe('fax', () => {
-  test('send fax', async () => {
+  test('download fax', async () => {
     const rc = new RestClient({
       clientId: process.env.RINGCENTRAL_CLIENT_ID!,
       clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET!,

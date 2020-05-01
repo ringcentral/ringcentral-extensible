@@ -2,7 +2,7 @@
 import RestClient from '../src/index'
 import { MeetingRequestResource, MeetingScheduleResource, TimezoneResource, HostInfoRequest } from '../src/definitions'
 
-jest.setTimeout(16000)
+jest.setTimeout(64000)
 
 describe('schedule meeting', () => {
   test('for myself', async () => {
