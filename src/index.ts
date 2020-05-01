@@ -1,15 +1,15 @@
 import axios, { AxiosInstance, Method, AxiosRequestConfig, AxiosResponse } from 'axios'
 import qs from 'qs'
+import delay from 'delay'
 
 import { GetTokenRequest, TokenInfo } from './definitions'
 import RestException from './RestException'
 import Restapi from './paths/Restapi'
 import Scim from './paths/Scim'
 import { version } from '../package.json'
+import { RestTraffic } from './Utils'
 
-import delay from 'delay'
-
-interface ConstructorOpts {
+interface ConstructorOptions {
   clientId: string
   clientSecret: string
   server: string
@@ -18,12 +18,17 @@ interface ConstructorOpts {
   httpClient?: AxiosInstance
   token?: TokenInfo
   handleRateLimit?: (boolean | number)
+  debugMode?: boolean
 }
 
-interface PasswordLoginFlowOpts {
+interface PasswordFlowOptions {
   username: string
-  extension: string
+  extension?: string
   password: string
+}
+interface AuthCodeFlowOptions {
+  code: string
+  redirect_uri: string
 }
 
 class RestClient {
@@ -38,14 +43,15 @@ class RestClient {
   httpClient: AxiosInstance
   token?: TokenInfo
   handleRateLimit?: (boolean | number)
+  debugMode?: boolean
 
-  constructor(opts: ConstructorOpts) {
-    this.clientId = opts.clientId
-    this.clientSecret = opts.clientSecret
-    this.server = opts.server
-    this.appName = opts.appName ? opts.appName : 'Unknown'
-    this.appVersion = opts.appVersion ? opts.appVersion : '0.0.1'
-    this.httpClient = opts.httpClient ? opts.httpClient : axios.create({
+  constructor (options: ConstructorOptions) {
+    this.clientId = options.clientId
+    this.clientSecret = options.clientSecret
+    this.server = options.server
+    this.appName = options.appName ? options.appName : 'Unknown'
+    this.appVersion = options.appVersion ? options.appVersion : '0.0.1'
+    this.httpClient = options.httpClient ? options.httpClient : axios.create({
       baseURL: this.server,
       headers: { 'X-User-Agent': `${this.appName}/${this.appVersion} tylerlong/ringcentral-typescript/${version}` },
       validateStatus: status => {
@@ -55,11 +61,12 @@ class RestClient {
         return qs.stringify(params, { indices: false })
       }
     })
-    this.handleRateLimit = opts.handleRateLimit ? opts.handleRateLimit : false
-    this.token = opts.token
+    this.token = options.token
+    this.handleRateLimit = options.handleRateLimit ?? false
+    this.debugMode = options.debugMode ?? false
   }
 
-  async request(httpMethod: Method, endpoint: string, content?: {}, queryParams?: {}, config?: {}): Promise<AxiosResponse<any>> {
+  async request (httpMethod: Method, endpoint: string, content?: {}, queryParams?: {}, config?: {}): Promise<AxiosResponse<any>> {
     const _config: AxiosRequestConfig = {
       method: httpMethod,
       url: endpoint,
@@ -81,61 +88,61 @@ class RestClient {
     }
     const r = await this.httpClient.request(_config)
 
-    if (r.status == 429 && this.handleRateLimit == false) {
-      throw new RestException(r)
+    if (this.debugMode === true) {
+      console.debug(new RestTraffic(r).toString())
     }
-    else if (r.status == 429 && (this.handleRateLimit == true || typeof this.handleRateLimit == 'number')) {
 
+    if (r.status >= 200 && r.status < 300) {
+      return r
+    } else if (r.status === 429 && this.handleRateLimit) {
       let delayTime = r.headers['x-rate-limit-window'] ? r.headers['x-rate-limit-window'] : 60
-
-      if (typeof this.handleRateLimit == 'number') {
+      if (typeof this.handleRateLimit === 'number') {
         delayTime = this.handleRateLimit
       }
-
       // unsure on level? or if this should be a thrown error?
       console.debug(`Hit RingCentral Rate Limit. Pausing requests for ${delayTime} seconds.`)
-
       await delay(delayTime * 1000)
-
       return this.request(httpMethod, endpoint, content, queryParams, config)
-
-    }
-    else if (r.status < 200 || r.status > 299 && r.status != 429) {
+    } else {
       throw new RestException(r)
     }
-    return r
   }
-  async get(endpoint: string, queryParams?: {}, config?: {}): Promise<AxiosResponse<any>> {
+  async get (endpoint: string, queryParams?: {}, config?: {}): Promise<AxiosResponse<any>> {
     return this.request('GET', endpoint, undefined, queryParams, config)
   }
-  async delete(endpoint: string, queryParams?: {}, config?: {}): Promise<AxiosResponse<any>> {
+  async delete (endpoint: string, queryParams?: {}, config?: {}): Promise<AxiosResponse<any>> {
     return this.request('DELETE', endpoint, undefined, queryParams, config)
   }
-  async post(endpoint: string, content?: {}, queryParams?: {}, config?: {}): Promise<AxiosResponse<any>> {
+  async post (endpoint: string, content?: {}, queryParams?: {}, config?: {}): Promise<AxiosResponse<any>> {
     return this.request('POST', endpoint, content, queryParams, config)
   }
-  async put(endpoint: string, content: {}, queryParams?: {}, config?: {}): Promise<AxiosResponse<any>> {
+  async put (endpoint: string, content: {}, queryParams?: {}, config?: {}): Promise<AxiosResponse<any>> {
     return this.request('PUT', endpoint, content, queryParams, config)
   }
-  async patch(endpoint: string, content: {}, queryParams?: {}, config?: {}): Promise<AxiosResponse<any>> {
+  async patch (endpoint: string, content: {}, queryParams?: {}, config?: {}): Promise<AxiosResponse<any>> {
     return this.request('PATCH', endpoint, content, queryParams, config)
   }
 
-  async authorize(getTokenRequest: GetTokenRequest): Promise<TokenInfo>
-
-  // authorize(authCode, redirectUri)
-  async authorize(arg1: string, arg2: string, arg3?: string): Promise<TokenInfo>
-  async authorize(arg1: string | GetTokenRequest, arg2?: string, arg3?: string): Promise<TokenInfo> {
-    let getTokenRequest = new GetTokenRequest()
-    if (arg1 instanceof GetTokenRequest) {
-      getTokenRequest = arg1
-    } else { // auth code flow
-      getTokenRequest.grant_type = 'authorization_code'
-      getTokenRequest.code = arg1
-      getTokenRequest.redirect_uri = arg2
-    }
+  async getToken (getTokenRequest: GetTokenRequest): Promise<TokenInfo> {
     this.token = await this.restapi(null).oauth().token().post(getTokenRequest)
     return this.token
+  }
+
+  async authorize (options: (PasswordFlowOptions | AuthCodeFlowOptions)): Promise<TokenInfo> {
+    const getTokenRequest = new GetTokenRequest()
+    if ('username' in options) {
+      getTokenRequest.grant_type = 'password'
+      getTokenRequest.username = options.username
+      getTokenRequest.extension = options.extension ?? ''
+      getTokenRequest.password = options.password
+    } else if ('code' in options) {
+      getTokenRequest.grant_type = 'authorization_code'
+      getTokenRequest.code = options.code
+      getTokenRequest.redirect_uri = options.redirect_uri
+    } else {
+      throw new Error('Unsupported authorization flow')
+    }
+    return this.getToken(getTokenRequest)
   }
 
   /**
@@ -149,18 +156,10 @@ class RestClient {
    *
    * https://developers.ringcentral.com/api-reference/Get-Token
    *
-   * @param opts PasswordLoginFlowOpts
+   * @param options PasswordLoginFlowOpts
    */
-  async login(opts: PasswordLoginFlowOpts) {
-    const getTokenRequest = new GetTokenRequest()
-
-    getTokenRequest.grant_type = 'password'
-    getTokenRequest.username = opts.username
-    getTokenRequest.extension = opts.extension
-    getTokenRequest.password = opts.password
-
-    this.token = await this.restapi(null).oauth().token().post(getTokenRequest)
-    return this.token
+  async login (options: PasswordFlowOptions): Promise<TokenInfo> {
+    return this.authorize(options)
   }
 
   /**
@@ -171,7 +170,7 @@ class RestClient {
    *
    * @param refreshToken Refresh Token
    */
-  async refresh(refreshToken?: string): Promise<TokenInfo> {
+  async refresh (refreshToken?: string): Promise<TokenInfo> {
     const tokenToRefresh = refreshToken ?? this.token?.refresh_token
     if (!tokenToRefresh) {
       throw new Error('tokenToRefresh must be specified.')
@@ -179,7 +178,7 @@ class RestClient {
     const getTokenRequest = new GetTokenRequest()
     getTokenRequest.grant_type = 'refresh_token'
     getTokenRequest.refresh_token = tokenToRefresh
-    return this.authorize(getTokenRequest)
+    return this.getToken(getTokenRequest)
   }
 
   /**
@@ -190,7 +189,7 @@ class RestClient {
    *
    * @param tokenToRevoke AccessToken
    */
-  async revoke(tokenToRevoke?: string) {
+  async revoke (tokenToRevoke?: string) {
     if (!tokenToRevoke && !this.token) { // nothing to revoke
       return
     }
@@ -200,22 +199,22 @@ class RestClient {
   }
 
   /**
-   * This method provides you with a start of chain methods `rc.restapi()`,
+   * This method provides you with a start of chain methods `rc.restapi() ...`,
    * so that you can construct longer ones, like this `rc.restapi().account().extension().messageStore().list()`
    *
    * @param apiVersion API version, currently the only valid value is 'v1.0'
    */
-  restapi(apiVersion: (string | null) = 'v1.0'): Restapi {
+  restapi (apiVersion: (string | null) = 'v1.0'): Restapi {
     return new Restapi(this, apiVersion)
   }
 
   /**
-   * This method provides you with a start of chain methods `rc.scim()`,
+   * This method provides you with a start of chain methods `rc.scim() ...`,
    * so that you can construct longer ones, like this `rc.scim().users(userId).delete()`
    *
    * @param version SCIM API version, currently the only valid value is 'v2'
    */
-  scim(version: (string | null) = 'v2'): Scim {
+  scim (version: (string | null) = 'v2'): Scim {
     return new Scim(this, version)
   }
 }

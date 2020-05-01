@@ -12,7 +12,8 @@ yarn add ringcentral-typescript
 ```
 
 ## Setup
-Make a copy of `env_example` and rename it to `.env`, then fill in the data appropriately. 
+
+Make a copy of `.env.example` and rename it to `.env`, then fill in the data appropriately.
 
 In your project, require the sdk, then initialize and login
 
@@ -23,11 +24,12 @@ const rc = new RestClient({
     clientId: process.env.RINGCENTRAL_CLIENT_ID,
     clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
     server: process.env.RINGCENTRAL_SERVER_URL,
-    appName: "", //optional
-    appVersion: "", //optional
+    appName: "", //optional, if specified, it will be included in X-User-Agent header
+    appVersion: "", //optional, if specified, it will be included in X-User-Agent header
     httpClient: "", //optional
     token: "", //optional
-    handleRateLimit: false //optional
+    handleRateLimit: false, //optional
+    debugMode: false // optional
 })
 ```
 
@@ -69,13 +71,14 @@ If the resource to download provides you with a CDN uri, use that CDN uri.
 If there is no CDN uri provided, contruct the uri as the [sample code](./samples.md) shows.
 
 ## Rate Limiting
-The RingCentral Platform enforces rate limits to reduce network traffic and avoid DOS issues. 
+The RingCentral Platform enforces rate limits to reduce network traffic and avoid DOS issues.
+
 
 [Here's](https://medium.com/ringcentral-developers/new-features-in-ringcentral-net-sdk-4-0-e2c596f63f43) a blog article discussing it in detail. 
 
-This SDK has the option of handling rate limits automatically by passing `handleRateLimit: (boolean | number)` into the constructor. 
+This SDK has the option of handling rate limits automatically by passing `handleRateLimit: (boolean | number)` into the constructor.
 
-Options: 
+Options:
 
 - boolean
     - When set to true, this will pause requests for however many seconds are indicated in the `rate-limit-window` header (defaulting to 60 is there header is somehow missing)
