@@ -71,7 +71,7 @@ If there is no CDN uri provided, contruct the uri as the [sample code](./samples
 ## Rate Limiting
 The RingCentral Platform enforces rate limits to reduce network traffic and avoid DOS issues. 
 
-[Here's](https://github.com/ringcentral/ringcentral-js/blob/master/sdk/src/platform/Platform.ts) a blog article discussing it in detail. 
+[Here's](https://medium.com/ringcentral-developers/new-features-in-ringcentral-net-sdk-4-0-e2c596f63f43) a blog article discussing it in detail. 
 
 This SDK has the option of handling rate limits automatically by passing `handleRateLimit: (boolean | number)` into the constructor. 
 
