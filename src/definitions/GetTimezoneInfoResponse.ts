@@ -2,26 +2,26 @@ class GetTimezoneInfoResponse {
   /**
    * Internal identifier of a timezone
    */
-  id?: string
+  id?: string;
 
   /**
    * Canonical URI of a timezone
    */
-  uri?: string
+  uri?: string;
 
   /**
    * Short name of a timezone
    */
-  name?: string
+  name?: string;
 
   /**
    * Description of a timezone
    */
-  description?: string
+  description?: string;
 
   /**
    */
-  bias?: string
+  bias?: string;
 }
 
-export default GetTimezoneInfoResponse
+export default GetTimezoneInfoResponse;

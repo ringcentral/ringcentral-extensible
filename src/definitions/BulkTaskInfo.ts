@@ -2,22 +2,22 @@ class BulkTaskInfo {
   /**
    * Internal identifier of a task for multiple switches creation
    */
-  id?: string
+  id?: string;
 
   /**
    * Status of a task
    */
-  status?: ('Accepted' | 'Failed')
+  status?: 'Accepted' | 'Failed';
 
   /**
    * Task creation time
    */
-  creationTime?: string
+  creationTime?: string;
 
   /**
    * Time of the task latest modification
    */
-  lastModifiedTime?: string
+  lastModifiedTime?: string;
 }
 
-export default BulkTaskInfo
+export default BulkTaskInfo;

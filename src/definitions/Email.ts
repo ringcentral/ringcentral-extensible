@@ -2,12 +2,12 @@ class Email {
   /**
    * Required
    */
-  type?: ('work')
+  type?: 'work';
 
   /**
    * Required
    */
-  value?: string
+  value?: string;
 }
 
-export default Email
+export default Email;

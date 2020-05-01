@@ -1,28 +1,28 @@
-import Assisted from './Assisted'
-import Assistants from './Assistants'
-import Parent from '..'
-import RestClient from '../../../../..'
+import Assisted from './Assisted';
+import Assistants from './Assistants';
+import Parent from '..';
+import RestClient from '../../../../..';
 
 class MeetingsConfiguration {
-  rc: RestClient
-  parent: Parent
+  rc: RestClient;
+  parent: Parent;
 
-  constructor (parent: Parent) {
-    this.parent = parent
-    this.rc = parent.rc
+  constructor(parent: Parent) {
+    this.parent = parent;
+    this.rc = parent.rc;
   }
 
-  path (): string {
-    return `${this.parent.path()}/meetings-configuration`
+  path(): string {
+    return `${this.parent.path()}/meetings-configuration`;
   }
 
-  assistants (): Assistants {
-    return new Assistants(this)
+  assistants(): Assistants {
+    return new Assistants(this);
   }
 
-  assisted (): Assisted {
-    return new Assisted(this)
+  assisted(): Assisted {
+    return new Assisted(this);
   }
 }
 
-export default MeetingsConfiguration
+export default MeetingsConfiguration;

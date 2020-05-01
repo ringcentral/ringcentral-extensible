@@ -2,12 +2,12 @@ class DevicePhoneLinesEmergencyAddressInfo {
   /**
    * 'True' if specifying of emergency address is required
    */
-  required?: boolean
+  required?: boolean;
 
   /**
    * 'True' if only local emergency address can be specified
    */
-  localOnly?: boolean
+  localOnly?: boolean;
 }
 
-export default DevicePhoneLinesEmergencyAddressInfo
+export default DevicePhoneLinesEmergencyAddressInfo;

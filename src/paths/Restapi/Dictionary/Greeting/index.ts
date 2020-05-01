@@ -1,24 +1,28 @@
-import { DictionaryGreetingList, ListStandardGreetingsParameters, DictionaryGreetingInfo } from '../../../../definitions'
-import Parent from '..'
-import RestClient from '../../../..'
+import {
+  DictionaryGreetingList,
+  ListStandardGreetingsParameters,
+  DictionaryGreetingInfo,
+} from '../../../../definitions';
+import Parent from '..';
+import RestClient from '../../../..';
 
 class Greeting {
-  rc: RestClient
-  greetingId: (string | null)
-  parent: Parent
+  rc: RestClient;
+  greetingId: string | null;
+  parent: Parent;
 
-  constructor (parent: Parent, greetingId: (string | null) = null) {
-    this.parent = parent
-    this.rc = parent.rc
-    this.greetingId = greetingId
+  constructor(parent: Parent, greetingId: string | null = null) {
+    this.parent = parent;
+    this.rc = parent.rc;
+    this.greetingId = greetingId;
   }
 
-  path (withParameter: boolean = true): string {
+  path(withParameter = true): string {
     if (withParameter && this.greetingId !== null) {
-      return `${this.parent.path()}/greeting/${this.greetingId}`
+      return `${this.parent.path()}/greeting/${this.greetingId}`;
     }
 
-    return `${this.parent.path()}/greeting`
+    return `${this.parent.path()}/greeting`;
   }
 
   /**
@@ -26,9 +30,11 @@ class Greeting {
    * Rate Limit Group: Medium
    * Http get /restapi/v1.0/dictionary/greeting
    */
-  async list (queryParams?: ListStandardGreetingsParameters): Promise<DictionaryGreetingList> {
-    const r = await this.rc.get(this.path(false), queryParams)
-    return r.data
+  async list(
+    queryParams?: ListStandardGreetingsParameters
+  ): Promise<DictionaryGreetingList> {
+    const r = await this.rc.get(this.path(false), queryParams);
+    return r.data;
   }
 
   /**
@@ -36,14 +42,14 @@ class Greeting {
    * Rate Limit Group: Medium
    * Http get /restapi/v1.0/dictionary/greeting/{greetingId}
    */
-  async get (): Promise<DictionaryGreetingInfo> {
+  async get(): Promise<DictionaryGreetingInfo> {
     if (this.greetingId === null) {
-      throw new Error('greetingId must be specified.')
+      throw new Error('greetingId must be specified.');
     }
 
-    const r = await this.rc.get(this.path())
-    return r.data
+    const r = await this.rc.get(this.path());
+    return r.data;
   }
 }
 
-export default Greeting
+export default Greeting;

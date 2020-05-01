@@ -1,25 +1,29 @@
-import { DictionaryGreetingInfo, CallHandlingNavigationInfo, CallHandlingPagingInfo } from '.'
+import {
+  DictionaryGreetingInfo,
+  CallHandlingNavigationInfo,
+  CallHandlingPagingInfo,
+} from '.';
 
 class DictionaryGreetingList {
   /**
    * Canonical URI of greetings list resource
    */
-  uri?: string
+  uri?: string;
 
   /**
    * List of greetings
    */
-  records?: DictionaryGreetingInfo[]
+  records?: DictionaryGreetingInfo[];
 
   /**
    * Information on navigation
    */
-  navigation?: CallHandlingNavigationInfo
+  navigation?: CallHandlingNavigationInfo;
 
   /**
    * Information on paging
    */
-  paging?: CallHandlingPagingInfo
+  paging?: CallHandlingPagingInfo;
 }
 
-export default DictionaryGreetingList
+export default DictionaryGreetingList;

@@ -1,13 +1,13 @@
-import { CallerIdDeviceInfo, CallerIdByDeviceInfo } from '.'
+import {CallerIdDeviceInfo, CallerIdByDeviceInfo} from '.';
 
 class CallerIdByDevice {
   /**
    */
-  device?: CallerIdDeviceInfo
+  device?: CallerIdDeviceInfo;
 
   /**
    */
-  callerId?: CallerIdByDeviceInfo
+  callerId?: CallerIdByDeviceInfo;
 }
 
-export default CallerIdByDevice
+export default CallerIdByDevice;

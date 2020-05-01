@@ -1,25 +1,25 @@
-import { VersionInfo } from '.'
+import {VersionInfo} from '.';
 
 class GetVersionsResponse {
   /**
    * Canonical URI of the API version
    */
-  uri?: string
+  uri?: string;
 
   /**
    * Full API version information: uri, number, release date
    */
-  apiVersions?: VersionInfo[]
+  apiVersions?: VersionInfo[];
 
   /**
    * Server version
    */
-  serverVersion?: string
+  serverVersion?: string;
 
   /**
    * Server revision
    */
-  serverRevision?: string
+  serverRevision?: string;
 }
 
-export default GetVersionsResponse
+export default GetVersionsResponse;

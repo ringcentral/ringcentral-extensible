@@ -1,25 +1,29 @@
 class PhoneNumberResource {
   /**
    */
-  formattedPhoneNumber?: string
+  formattedPhoneNumber?: string;
 
   /**
    */
-  phoneNumber?: string
+  phoneNumber?: string;
 
   /**
    */
-  type?: string
+  type?: string;
 
   /**
    * Custom user name of a phone number, if any
    */
-  label?: string
+  label?: string;
 
   /**
    * Usage type of a phone number
    */
-  usageType?: ('MobileNumber' | 'ContactNumber' | 'DirectNumber' | 'ForwardedNumber')
+  usageType?:
+    | 'MobileNumber'
+    | 'ContactNumber'
+    | 'DirectNumber'
+    | 'ForwardedNumber';
 }
 
-export default PhoneNumberResource
+export default PhoneNumberResource;

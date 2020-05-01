@@ -2,7 +2,7 @@ class ExtensionLanguageInfoRequest {
   /**
    * internal Identifier of a language
    */
-  id?: string
+  id?: string;
 }
 
-export default ExtensionLanguageInfoRequest
+export default ExtensionLanguageInfoRequest;

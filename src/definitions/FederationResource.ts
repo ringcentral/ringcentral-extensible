@@ -1,25 +1,25 @@
-import { FederatedAccountResource } from '.'
+import {FederatedAccountResource} from '.';
 
 class FederationResource {
   /**
    */
-  accounts?: FederatedAccountResource[]
+  accounts?: FederatedAccountResource[];
 
   /**
    */
-  creationTime?: string
+  creationTime?: string;
 
   /**
    */
-  displayName?: string
+  displayName?: string;
 
   /**
    */
-  id?: string
+  id?: string;
 
   /**
    */
-  lastModifiedTime?: string
+  lastModifiedTime?: string;
 }
 
-export default FederationResource
+export default FederationResource;

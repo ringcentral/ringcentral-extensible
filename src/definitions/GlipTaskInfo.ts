@@ -1,92 +1,105 @@
-import { CreatorInfo, TaskAssigneeInfo, GlipTaskRecurrenceInfo, TaskAttachment } from '.'
+import {
+  CreatorInfo,
+  TaskAssigneeInfo,
+  GlipTaskRecurrenceInfo,
+  TaskAttachment,
+} from '.';
 
 class GlipTaskInfo {
   /**
    * Internal identifier of a task
    */
-  id?: string
+  id?: string;
 
   /**
    * Datetime of the task creation in UTC time zone.
    */
-  creationTime?: string
+  creationTime?: string;
 
   /**
    * Datetime of the last modification of the task in UTC time zone.
    */
-  lastModifiedTime?: string
+  lastModifiedTime?: string;
 
   /**
    * Type of a task
    */
-  type?: ('Task')
+  type?: 'Task';
 
   /**
    */
-  creator?: CreatorInfo
+  creator?: CreatorInfo;
 
   /**
    * Chat IDs where the task is posted or shared.
    */
-  chatIds?: string[]
+  chatIds?: string[];
 
   /**
    * Status of task execution
    */
-  status?: ('Pending' | 'InProgress' | 'Completed')
+  status?: 'Pending' | 'InProgress' | 'Completed';
 
   /**
    * Name/subject of a task
    */
-  subject?: string
+  subject?: string;
 
   /**
    */
-  assignees?: TaskAssigneeInfo[]
+  assignees?: TaskAssigneeInfo[];
 
   /**
    * Specifies how to determine task completeness
    */
-  completenessCondition?: ('Simple' | 'AllAssignees' | 'Percentage')
+  completenessCondition?: 'Simple' | 'AllAssignees' | 'Percentage';
 
   /**
    * Current completeness percentage of the task with the specified percentage completeness condition
    * Maximum: 100
    */
-  completenessPercentage?: number
+  completenessPercentage?: number;
 
   /**
    * Task start date
    */
-  startDate?: string
+  startDate?: string;
 
   /**
    * Task due date/time
    */
-  dueDate?: string
+  dueDate?: string;
 
   /**
    * Font color of a post with the current task
    */
-  color?: ('Black' | 'Red' | 'Orange' | 'Yellow' | 'Green' | 'Blue' | 'Purple' | 'Magenta')
+  color?:
+    | 'Black'
+    | 'Red'
+    | 'Orange'
+    | 'Yellow'
+    | 'Green'
+    | 'Blue'
+    | 'Purple'
+    | 'Magenta';
 
   /**
    * Task section to group/search by
    */
-  section?: string
+  section?: string;
 
   /**
    * Task details
    */
-  description?: string
+  description?: string;
 
   /**
    */
-  recurrence?: GlipTaskRecurrenceInfo
+  recurrence?: GlipTaskRecurrenceInfo;
 
   /**
    */
-  attachments?: TaskAttachment[]
+  attachments?: TaskAttachment[];
 }
 
-export default GlipTaskInfo
+export default GlipTaskInfo;

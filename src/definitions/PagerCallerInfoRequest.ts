@@ -2,12 +2,12 @@ class PagerCallerInfoRequest {
   /**
    * Extension identifier
    */
-  extensionId?: string
+  extensionId?: string;
 
   /**
    * Extension number
    */
-  extensionNumber?: string
+  extensionNumber?: string;
 }
 
-export default PagerCallerInfoRequest
+export default PagerCallerInfoRequest;

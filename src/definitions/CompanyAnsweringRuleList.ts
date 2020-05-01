@@ -1,25 +1,29 @@
-import { ListCompanyAnsweringRuleInfo, CallHandlingPagingInfo, CallHandlingNavigationInfo } from '.'
+import {
+  ListCompanyAnsweringRuleInfo,
+  CallHandlingPagingInfo,
+  CallHandlingNavigationInfo,
+} from '.';
 
 class CompanyAnsweringRuleList {
   /**
    * Link to an answering rule resource
    */
-  uri?: string
+  uri?: string;
 
   /**
    * List of company answering rules
    */
-  records?: ListCompanyAnsweringRuleInfo[]
+  records?: ListCompanyAnsweringRuleInfo[];
 
   /**
    * Information on paging
    */
-  paging?: CallHandlingPagingInfo
+  paging?: CallHandlingPagingInfo;
 
   /**
    * Information on navigation
    */
-  navigation?: CallHandlingNavigationInfo
+  navigation?: CallHandlingNavigationInfo;
 }
 
-export default CompanyAnsweringRuleList
+export default CompanyAnsweringRuleList;

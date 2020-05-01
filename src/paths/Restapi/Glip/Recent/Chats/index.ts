@@ -1,18 +1,21 @@
-import { GlipChatsListWithoutNavigation, ListRecentChatsParameters } from '../../../../../definitions'
-import Parent from '..'
-import RestClient from '../../../../..'
+import {
+  GlipChatsListWithoutNavigation,
+  ListRecentChatsParameters,
+} from '../../../../../definitions';
+import Parent from '..';
+import RestClient from '../../../../..';
 
 class Chats {
-  rc: RestClient
-  parent: Parent
+  rc: RestClient;
+  parent: Parent;
 
-  constructor (parent: Parent) {
-    this.parent = parent
-    this.rc = parent.rc
+  constructor(parent: Parent) {
+    this.parent = parent;
+    this.rc = parent.rc;
   }
 
-  path (): string {
-    return `${this.parent.path()}/chats`
+  path(): string {
+    return `${this.parent.path()}/chats`;
   }
 
   /**
@@ -20,10 +23,12 @@ class Chats {
    * Rate Limit Group: Light
    * Http get /restapi/v1.0/glip/recent/chats
    */
-  async get (queryParams?: ListRecentChatsParameters): Promise<GlipChatsListWithoutNavigation> {
-    const r = await this.rc.get(this.path(), queryParams)
-    return r.data
+  async get(
+    queryParams?: ListRecentChatsParameters
+  ): Promise<GlipChatsListWithoutNavigation> {
+    const r = await this.rc.get(this.path(), queryParams);
+    return r.data;
   }
 }
 
-export default Chats
+export default Chats;

@@ -1,10 +1,10 @@
-import { BulkTaskInfo } from '.'
+import {BulkTaskInfo} from '.';
 
-  // Information on the task for multiple switches creation
+// Information on the task for multiple switches creation
 class CreateMultipleSwitchesResponse {
   /**
    */
-  task?: BulkTaskInfo
+  task?: BulkTaskInfo;
 }
 
-export default CreateMultipleSwitchesResponse
+export default CreateMultipleSwitchesResponse;

@@ -1,18 +1,21 @@
-import { UpdateMultipleWirelessPointsResponse, UpdateMultipleWirelessPointsRequest } from '../../../../../definitions'
-import Parent from '..'
-import RestClient from '../../../../..'
+import {
+  UpdateMultipleWirelessPointsResponse,
+  UpdateMultipleWirelessPointsRequest,
+} from '../../../../../definitions';
+import Parent from '..';
+import RestClient from '../../../../..';
 
 class WirelessPointsBulkUpdate {
-  rc: RestClient
-  parent: Parent
+  rc: RestClient;
+  parent: Parent;
 
-  constructor (parent: Parent) {
-    this.parent = parent
-    this.rc = parent.rc
+  constructor(parent: Parent) {
+    this.parent = parent;
+    this.rc = parent.rc;
   }
 
-  path (): string {
-    return `${this.parent.path()}/wireless-points-bulk-update`
+  path(): string {
+    return `${this.parent.path()}/wireless-points-bulk-update`;
   }
 
   /**
@@ -20,10 +23,15 @@ class WirelessPointsBulkUpdate {
    * Rate Limit Group: Heavy
    * Http post /restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points-bulk-update
    */
-  async post (updateMultipleWirelessPointsRequest: UpdateMultipleWirelessPointsRequest): Promise<UpdateMultipleWirelessPointsResponse> {
-    const r = await this.rc.post(this.path(), updateMultipleWirelessPointsRequest)
-    return r.data
+  async post(
+    updateMultipleWirelessPointsRequest: UpdateMultipleWirelessPointsRequest
+  ): Promise<UpdateMultipleWirelessPointsResponse> {
+    const r = await this.rc.post(
+      this.path(),
+      updateMultipleWirelessPointsRequest
+    );
+    return r.data;
   }
 }
 
-export default WirelessPointsBulkUpdate
+export default WirelessPointsBulkUpdate;

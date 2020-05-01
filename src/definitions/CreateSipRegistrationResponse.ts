@@ -1,30 +1,30 @@
-import { SipRegistrationDeviceInfo, SIPInfoResponse, SIPFlagsResponse } from '.'
+import {SipRegistrationDeviceInfo, SIPInfoResponse, SIPFlagsResponse} from '.';
 
 class CreateSipRegistrationResponse {
   /**
    */
-  device?: SipRegistrationDeviceInfo
+  device?: SipRegistrationDeviceInfo;
 
   /**
    * SIP settings for device
    * Required
    */
-  sipInfo?: SIPInfoResponse[]
+  sipInfo?: SIPInfoResponse[];
 
   /**
    * SIP PSTN settings for device
    */
-  sipInfoPstn?: SIPInfoResponse[]
+  sipInfoPstn?: SIPInfoResponse[];
 
   /**
    * SIP flags data
    * Required
    */
-  sipFlags?: SIPFlagsResponse[]
+  sipFlags?: SIPFlagsResponse[];
 
   /**
    */
-  sipErrorCodes?: string[]
+  sipErrorCodes?: string[];
 }
 
-export default CreateSipRegistrationResponse
+export default CreateSipRegistrationResponse;

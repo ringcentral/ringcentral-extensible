@@ -2,27 +2,27 @@ class UserAnsweringRuleListRecord {
   /**
    * Canonical URI to an answering rule resource
    */
-  uri?: string
+  uri?: string;
 
   /**
    * Internal identifier of an asnwering rule
    */
-  id?: string
+  id?: string;
 
   /**
    * Type of an answering rule
    */
-  type?: ('BusinessHours' | 'AfterHours' | 'Custom')
+  type?: 'BusinessHours' | 'AfterHours' | 'Custom';
 
   /**
    * Name of an answering rule specified by user
    */
-  name?: string
+  name?: string;
 
   /**
    * Specifies if an answering rule is active or inactive
    */
-  enabled?: boolean
+  enabled?: boolean;
 }
 
-export default UserAnsweringRuleListRecord
+export default UserAnsweringRuleListRecord;

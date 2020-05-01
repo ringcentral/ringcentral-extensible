@@ -1,24 +1,24 @@
-import { DataExportTaskContactInfo } from '.'
+import {DataExportTaskContactInfo} from '.';
 
 class SpecificInfo {
   /**
    * Starting time for data collection
    */
-  timeFrom?: string
+  timeFrom?: string;
 
   /**
    * Ending time for data collection
    */
-  timeTo?: string
+  timeTo?: string;
 
   /**
    */
-  contacts?: DataExportTaskContactInfo[]
+  contacts?: DataExportTaskContactInfo[];
 
   /**
    * List of chats from which the data (posts, files, tasks, events, notes, etc.) will be collected
    */
-  chatIds?: string[]
+  chatIds?: string[];
 }
 
-export default SpecificInfo
+export default SpecificInfo;

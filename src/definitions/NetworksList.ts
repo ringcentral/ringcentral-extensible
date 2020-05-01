@@ -1,22 +1,26 @@
-import { NetworkInfo, ProvisioningNavigationInfo, ProvisioningPagingInfo } from '.'
+import {
+  NetworkInfo,
+  ProvisioningNavigationInfo,
+  ProvisioningPagingInfo,
+} from '.';
 
 class NetworksList {
   /**
    * Link to a networks resource
    */
-  uri?: string
+  uri?: string;
 
   /**
    */
-  records?: NetworkInfo[]
+  records?: NetworkInfo[];
 
   /**
    */
-  navigation?: ProvisioningNavigationInfo
+  navigation?: ProvisioningNavigationInfo;
 
   /**
    */
-  paging?: ProvisioningPagingInfo
+  paging?: ProvisioningPagingInfo;
 }
 
-export default NetworksList
+export default NetworksList;

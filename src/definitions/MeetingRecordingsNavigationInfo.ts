@@ -1,25 +1,25 @@
-import { MeetingRecordingsNavigationInfoUri } from '.'
+import {MeetingRecordingsNavigationInfoUri} from '.';
 
 class MeetingRecordingsNavigationInfo {
   /**
    * Canonical URI for the first page of the list
    */
-  firstPage?: MeetingRecordingsNavigationInfoUri
+  firstPage?: MeetingRecordingsNavigationInfoUri;
 
   /**
    * Canonical URI for the next page of the list
    */
-  nextPage?: MeetingRecordingsNavigationInfoUri
+  nextPage?: MeetingRecordingsNavigationInfoUri;
 
   /**
    * Canonical URI for the previous page of the list
    */
-  previousPage?: MeetingRecordingsNavigationInfoUri
+  previousPage?: MeetingRecordingsNavigationInfoUri;
 
   /**
    * Canonical URI for the last page of the list
    */
-  lastPage?: MeetingRecordingsNavigationInfoUri
+  lastPage?: MeetingRecordingsNavigationInfoUri;
 }
 
-export default MeetingRecordingsNavigationInfo
+export default MeetingRecordingsNavigationInfo;

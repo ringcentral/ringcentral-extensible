@@ -2,17 +2,17 @@ class PresetInfo {
   /**
    * Link to a greeting resource
    */
-  uri?: string
+  uri?: string;
 
   /**
    * Internal identifier of a greeting
    */
-  id?: string
+  id?: string;
 
   /**
    * Name of a greeting
    */
-  name?: string
+  name?: string;
 }
 
-export default PresetInfo
+export default PresetInfo;

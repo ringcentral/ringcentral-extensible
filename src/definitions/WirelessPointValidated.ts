@@ -1,24 +1,24 @@
-import { ValidationError } from '.'
+import {ValidationError} from '.';
 
 class WirelessPointValidated {
   /**
    * Internal identifier of a wireless point
    */
-  id?: string
+  id?: string;
 
   /**
    * Unique 48-bit identifier of the wireless access point complying with MAC address conventions
    */
-  bssid?: string
+  bssid?: string;
 
   /**
    * Validation result status
    */
-  status?: ('Valid' | 'Invalid')
+  status?: 'Valid' | 'Invalid';
 
   /**
    */
-  errors?: ValidationError[]
+  errors?: ValidationError[];
 }
 
-export default WirelessPointValidated
+export default WirelessPointValidated;

@@ -1,56 +1,56 @@
-import { MeetingScheduleResource, HostInfoRequest, RecurrenceInfo } from '.'
+import {MeetingScheduleResource, HostInfoRequest, RecurrenceInfo} from '.';
 
 class MeetingRequestResource {
   /**
    */
-  topic?: string
+  topic?: string;
 
   /**
    */
-  meetingType?: ('Instant' | 'Scheduled' | 'ScheduledRecurring' | 'Recurring')
+  meetingType?: 'Instant' | 'Scheduled' | 'ScheduledRecurring' | 'Recurring';
 
   /**
    */
-  schedule?: MeetingScheduleResource
+  schedule?: MeetingScheduleResource;
 
   /**
    */
-  password?: string
+  password?: string;
 
   /**
    */
-  host?: HostInfoRequest
+  host?: HostInfoRequest;
 
   /**
    */
-  allowJoinBeforeHost?: boolean
+  allowJoinBeforeHost?: boolean;
 
   /**
    */
-  startHostVideo?: boolean
+  startHostVideo?: boolean;
 
   /**
    */
-  startParticipantsVideo?: boolean
+  startParticipantsVideo?: boolean;
 
   /**
    */
-  usePersonalMeetingId?: boolean
+  usePersonalMeetingId?: boolean;
 
   /**
    */
-  audioOptions?: string[]
+  audioOptions?: string[];
 
   /**
    * Recurrence settings
    */
-  recurrence?: RecurrenceInfo
+  recurrence?: RecurrenceInfo;
 
   /**
    * Automatic record type
    * Default: local
    */
-  autoRecordType?: ('local' | 'cloud' | 'none')
+  autoRecordType?: 'local' | 'cloud' | 'none';
 }
 
-export default MeetingRequestResource
+export default MeetingRequestResource;

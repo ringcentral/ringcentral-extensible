@@ -1,9 +1,9 @@
-import { AssistedUserResource } from '.'
+import {AssistedUserResource} from '.';
 
 class AssistedUsersResource {
   /**
    */
-  records?: AssistedUserResource[]
+  records?: AssistedUserResource[];
 }
 
-export default AssistedUsersResource
+export default AssistedUsersResource;

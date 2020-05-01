@@ -1,17 +1,17 @@
-import Parent from '..'
-import RestClient from '../../../../..'
+import Parent from '..';
+import RestClient from '../../../../..';
 
 class Content {
-  rc: RestClient
-  parent: Parent
+  rc: RestClient;
+  parent: Parent;
 
-  constructor (parent: Parent) {
-    this.parent = parent
-    this.rc = parent.rc
+  constructor(parent: Parent) {
+    this.parent = parent;
+    this.rc = parent.rc;
   }
 
-  path (): string {
-    return `${this.parent.path()}/content`
+  path(): string {
+    return `${this.parent.path()}/content`;
   }
 
   /**
@@ -19,10 +19,12 @@ class Content {
    * Rate Limit Group: Heavy
    * Http get /restapi/v1.0/account/{accountId}/recording/{recordingId}/content
    */
-  async get (): Promise<Buffer> {
-    const r = await this.rc.get(this.path(), undefined, { responseType: 'arraybuffer' })
-    return r.data
+  async get(): Promise<Buffer> {
+    const r = await this.rc.get(this.path(), undefined, {
+      responseType: 'arraybuffer',
+    });
+    return r.data;
   }
 }
 
-export default Content
+export default Content;

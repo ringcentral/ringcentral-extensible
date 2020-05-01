@@ -1,64 +1,64 @@
-import { CreatorInfo, LastModifiedByInfo, LockedByInfo } from '.'
+import {CreatorInfo, LastModifiedByInfo, LockedByInfo} from '.';
 
 class GetGlipNoteInfo {
   /**
    * Internal identifier of a note
    */
-  id?: string
+  id?: string;
 
   /**
    * Title of a note
    */
-  title?: string
+  title?: string;
 
   /**
    * Internal identifiers of the chat(s) where the note is posted or shared.
    */
-  chatIds?: string[]
+  chatIds?: string[];
 
   /**
    * Preview of a note (first 150 characters of a body)
    */
-  preview?: string
+  preview?: string;
 
   /**
    * Text of a note
    */
-  body?: string
+  body?: string;
 
   /**
    * Note creator information
    */
-  creator?: CreatorInfo
+  creator?: CreatorInfo;
 
   /**
    * Note last modification information
    */
-  lastModifiedBy?: LastModifiedByInfo
+  lastModifiedBy?: LastModifiedByInfo;
 
   /**
    * Returned for the note being edited (locked) at the current moment. Information on the user editing the note
    */
-  lockedBy?: LockedByInfo
+  lockedBy?: LockedByInfo;
 
   /**
    * Note publishing status. Any note is created in 'Draft' status. After it is posted it becomes 'Active'
    */
-  status?: ('Active' | 'Draft')
+  status?: 'Active' | 'Draft';
 
   /**
    * Creation time
    */
-  creationTime?: string
+  creationTime?: string;
 
   /**
    * Datetime of the note last update
    */
-  lastModifiedTime?: string
+  lastModifiedTime?: string;
 
   /**
    */
-  type?: ('Note')
+  type?: 'Note';
 }
 
-export default GetGlipNoteInfo
+export default GetGlipNoteInfo;

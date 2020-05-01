@@ -1,15 +1,15 @@
-import { DeviceInfoRequest, SIPInfoRequest } from '.'
+import {DeviceInfoRequest, SIPInfoRequest} from '.';
 
 class CreateSipRegistrationRequest {
   /**
    * Device unique description
    */
-  device?: DeviceInfoRequest
+  device?: DeviceInfoRequest;
 
   /**
    * SIP settings for device
    */
-  sipInfo?: SIPInfoRequest[]
+  sipInfo?: SIPInfoRequest[];
 }
 
-export default CreateSipRegistrationRequest
+export default CreateSipRegistrationRequest;

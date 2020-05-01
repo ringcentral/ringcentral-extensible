@@ -1,19 +1,19 @@
 class TaskResultRecordErrorsInfo {
   /**
    */
-  errorCode?: string
+  errorCode?: string;
 
   /**
    */
-  message?: string
+  message?: string;
 
   /**
    */
-  parameterName?: string
+  parameterName?: string;
 
   /**
    */
-  description?: string
+  description?: string;
 }
 
-export default TaskResultRecordErrorsInfo
+export default TaskResultRecordErrorsInfo;

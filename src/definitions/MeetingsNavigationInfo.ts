@@ -1,21 +1,21 @@
-import { MeetingsNavigationInfoUri } from '.'
+import {MeetingsNavigationInfoUri} from '.';
 
 class MeetingsNavigationInfo {
   /**
    */
-  nextPage?: MeetingsNavigationInfoUri
+  nextPage?: MeetingsNavigationInfoUri;
 
   /**
    */
-  previousPage?: MeetingsNavigationInfoUri
+  previousPage?: MeetingsNavigationInfoUri;
 
   /**
    */
-  firstPage?: MeetingsNavigationInfoUri
+  firstPage?: MeetingsNavigationInfoUri;
 
   /**
    */
-  lastPage?: MeetingsNavigationInfoUri
+  lastPage?: MeetingsNavigationInfoUri;
 }
 
-export default MeetingsNavigationInfo
+export default MeetingsNavigationInfo;

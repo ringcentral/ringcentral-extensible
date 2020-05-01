@@ -2,16 +2,16 @@ class PatchOperation {
   /**
    * Required
    */
-  op?: ('add' | 'replace' | 'remove')
+  op?: 'add' | 'replace' | 'remove';
 
   /**
    */
-  path?: string
+  path?: string;
 
   /**
    * corresponding 'value' of that field specified by 'path'
    */
-  value?: string
+  value?: string;
 }
 
-export default PatchOperation
+export default PatchOperation;

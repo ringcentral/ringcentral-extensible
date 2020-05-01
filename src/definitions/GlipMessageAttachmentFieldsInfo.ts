@@ -2,18 +2,18 @@ class GlipMessageAttachmentFieldsInfo {
   /**
    * Title of an individual field
    */
-  title?: string
+  title?: string;
 
   /**
    * Value of an individual field (supports Markdown)
    */
-  value?: string
+  value?: string;
 
   /**
    * Style of width span applied to a field
    * Default: Short
    */
-  style?: ('Short' | 'Long')
+  style?: 'Short' | 'Long';
 }
 
-export default GlipMessageAttachmentFieldsInfo
+export default GlipMessageAttachmentFieldsInfo;

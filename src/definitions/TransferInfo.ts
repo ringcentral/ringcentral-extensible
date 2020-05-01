@@ -1,13 +1,13 @@
-import { TransferExtensionInfo } from '.'
+import {TransferExtensionInfo} from '.';
 
 class TransferInfo {
   /**
    */
-  extension?: TransferExtensionInfo
+  extension?: TransferExtensionInfo;
 
   /**
    */
-  action?: string
+  action?: string;
 }
 
-export default TransferInfo
+export default TransferInfo;

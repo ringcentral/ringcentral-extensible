@@ -1,26 +1,26 @@
-import { UserResponse } from '.'
+import {UserResponse} from '.';
 
 class UserSearchResponse {
   /**
    * user list
    */
-  Resources?: UserResponse[]
+  Resources?: UserResponse[];
 
   /**
    */
-  itemsPerPage?: number
+  itemsPerPage?: number;
 
   /**
    */
-  schemas?: ('urn:ietf:params:scim:api:messages:2.0:ListResponse')[]
+  schemas?: 'urn:ietf:params:scim:api:messages:2.0:ListResponse'[];
 
   /**
    */
-  startIndex?: number
+  startIndex?: number;
 
   /**
    */
-  totalResults?: number
+  totalResults?: number;
 }
 
-export default UserSearchResponse
+export default UserSearchResponse;

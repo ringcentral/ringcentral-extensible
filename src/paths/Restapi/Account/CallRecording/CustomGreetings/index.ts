@@ -1,24 +1,27 @@
-import { CallRecordingCustomGreetings, ListCallRecordingCustomGreetingsParameters } from '../../../../../definitions'
-import Parent from '..'
-import RestClient from '../../../../..'
+import {
+  CallRecordingCustomGreetings,
+  ListCallRecordingCustomGreetingsParameters,
+} from '../../../../../definitions';
+import Parent from '..';
+import RestClient from '../../../../..';
 
 class CustomGreetings {
-  rc: RestClient
-  greetingId: (string | null)
-  parent: Parent
+  rc: RestClient;
+  greetingId: string | null;
+  parent: Parent;
 
-  constructor (parent: Parent, greetingId: (string | null) = null) {
-    this.parent = parent
-    this.rc = parent.rc
-    this.greetingId = greetingId
+  constructor(parent: Parent, greetingId: string | null = null) {
+    this.parent = parent;
+    this.rc = parent.rc;
+    this.greetingId = greetingId;
   }
 
-  path (withParameter: boolean = true): string {
+  path(withParameter = true): string {
     if (withParameter && this.greetingId !== null) {
-      return `${this.parent.path()}/custom-greetings/${this.greetingId}`
+      return `${this.parent.path()}/custom-greetings/${this.greetingId}`;
     }
 
-    return `${this.parent.path()}/custom-greetings`
+    return `${this.parent.path()}/custom-greetings`;
   }
 
   /**
@@ -26,9 +29,11 @@ class CustomGreetings {
    * Rate Limit Group: Medium
    * Http get /restapi/v1.0/account/{accountId}/call-recording/custom-greetings
    */
-  async get (queryParams?: ListCallRecordingCustomGreetingsParameters): Promise<CallRecordingCustomGreetings> {
-    const r = await this.rc.get(this.path(false), queryParams)
-    return r.data
+  async get(
+    queryParams?: ListCallRecordingCustomGreetingsParameters
+  ): Promise<CallRecordingCustomGreetings> {
+    const r = await this.rc.get(this.path(false), queryParams);
+    return r.data;
   }
 
   /**
@@ -36,14 +41,14 @@ class CustomGreetings {
    * Rate Limit Group: Medium
    * Http delete /restapi/v1.0/account/{accountId}/call-recording/custom-greetings/{greetingId}
    */
-  async delete (): Promise<string> {
+  async delete(): Promise<string> {
     if (this.greetingId === null) {
-      throw new Error('greetingId must be specified.')
+      throw new Error('greetingId must be specified.');
     }
 
-    const r = await this.rc.delete(this.path())
-    return r.data
+    const r = await this.rc.delete(this.path());
+    return r.data;
   }
 }
 
-export default CustomGreetings
+export default CustomGreetings;

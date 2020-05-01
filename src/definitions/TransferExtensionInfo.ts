@@ -2,17 +2,17 @@ class TransferExtensionInfo {
   /**
    * Internal identifier of an extension the call is transferred to
    */
-  id?: string
+  id?: string;
 
   /**
    * Extension name
    */
-  name?: string
+  name?: string;
 
   /**
    * Extension number
    */
-  extensionNumber?: string
+  extensionNumber?: string;
 }
 
-export default TransferExtensionInfo
+export default TransferExtensionInfo;

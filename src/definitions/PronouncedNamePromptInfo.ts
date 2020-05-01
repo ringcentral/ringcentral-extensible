@@ -1,12 +1,12 @@
 class PronouncedNamePromptInfo {
   /**
    */
-  id?: string
+  id?: string;
 
   /**
    * Link to a prompt resource
    */
-  contentUri?: string
+  contentUri?: string;
 }
 
-export default PronouncedNamePromptInfo
+export default PronouncedNamePromptInfo;

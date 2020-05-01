@@ -2,22 +2,22 @@ class CallLogRecordingInfo {
   /**
    * Internal identifier of the call recording
    */
-  id?: string
+  id?: string;
 
   /**
    * Link to the call recording metadata resource
    */
-  uri?: string
+  uri?: string;
 
   /**
    * Indicates recording mode used
    */
-  type?: ('Automatic' | 'OnDemand')
+  type?: 'Automatic' | 'OnDemand';
 
   /**
    * Link to the call recording binary content
    */
-  contentUri?: string
+  contentUri?: string;
 }
 
-export default CallLogRecordingInfo
+export default CallLogRecordingInfo;

@@ -3,12 +3,12 @@ class MakeCallOutCallerInfoRequestTo {
   /**
    * Phone number in E.164 format
    */
-  phoneNumber?: string
+  phoneNumber?: string;
 
   /**
    * Extension number
    */
-  extensionNumber?: string
+  extensionNumber?: string;
 }
 
-export default MakeCallOutCallerInfoRequestTo
+export default MakeCallOutCallerInfoRequestTo;

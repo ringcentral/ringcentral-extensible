@@ -1,35 +1,35 @@
-import { GetCountryInfoConferencing } from '.'
+import {GetCountryInfoConferencing} from '.';
 
 class PhoneNumberInfoConferencing {
   /**
    * Information on a home country of a conference phone number
    */
-  country?: GetCountryInfoConferencing
+  country?: GetCountryInfoConferencing;
 
   /**
    * 'True' if the number is default for the conference. Default conference number is a domestic number that can be set by user (otherwise it is set by the system). Only one default number per country is allowed
    */
-  default?: boolean
+  default?: boolean;
 
   /**
    * 'True' if the greeting message is played on this number
    */
-  hasGreeting?: boolean
+  hasGreeting?: boolean;
 
   /**
    * Location (city, region, state) of a conference phone number
    */
-  location?: string
+  location?: string;
 
   /**
    * Dial-in phone number to connect to a conference
    */
-  phoneNumber?: string
+  phoneNumber?: string;
 
   /**
    * Indicates if the number is 'premium' (account phone number with the `ConferencingNumber` usageType)
    */
-  premium?: boolean
+  premium?: boolean;
 }
 
-export default PhoneNumberInfoConferencing
+export default PhoneNumberInfoConferencing;

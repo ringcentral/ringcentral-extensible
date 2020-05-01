@@ -2,22 +2,22 @@ class PartyInfo {
   /**
    * Phone number of a party
    */
-  phoneNumber?: string
+  phoneNumber?: string;
 
   /**
    * Displayed name of a party
    */
-  name?: string
+  name?: string;
 
   /**
    * Internal identifier of a device
    */
-  deviceId?: string
+  deviceId?: string;
 
   /**
    * Internal identifier of an extension
    */
-  extensionId?: string
+  extensionId?: string;
 }
 
-export default PartyInfo
+export default PartyInfo;

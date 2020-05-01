@@ -2,7 +2,7 @@ class GlipPatchPostBody {
   /**
    * Post text.
    */
-  text?: string
+  text?: string;
 }
 
-export default GlipPatchPostBody
+export default GlipPatchPostBody;

@@ -1,9 +1,9 @@
-import { UpdateSwitchInfo } from '.'
+import {UpdateSwitchInfo} from '.';
 
 class UpdateMultipleSwitchesRequest {
   /**
    */
-  records?: UpdateSwitchInfo[]
+  records?: UpdateSwitchInfo[];
 }
 
-export default UpdateMultipleSwitchesRequest
+export default UpdateMultipleSwitchesRequest;

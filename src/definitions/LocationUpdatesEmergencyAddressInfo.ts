@@ -2,67 +2,67 @@ class LocationUpdatesEmergencyAddressInfo {
   /**
    * Country name
    */
-  country?: string
+  country?: string;
 
   /**
    * Internal identifier of a country
    */
-  countryId?: string
+  countryId?: string;
 
   /**
    * ISO code of a country
    */
-  countryIsoCode?: string
+  countryIsoCode?: string;
 
   /**
    * Full name of a country
    */
-  countryName?: string
+  countryName?: string;
 
   /**
    * Customer name
    */
-  customerName?: string
+  customerName?: string;
 
   /**
    * State/Province name. Mandatory for the USA, the UK and Canada
    */
-  state?: string
+  state?: string;
 
   /**
    * Internal identifier of a state
    */
-  stateId?: string
+  stateId?: string;
 
   /**
    * ISO code of a state
    */
-  stateIsoCode?: string
+  stateIsoCode?: string;
 
   /**
    * Full name of a state
    */
-  stateName?: string
+  stateName?: string;
 
   /**
    * City name
    */
-  city?: string
+  city?: string;
 
   /**
    * First line address
    */
-  street?: string
+  street?: string;
 
   /**
    * Second line address (apartment, suite, unit, building, floor, etc.)
    */
-  street2?: string
+  street2?: string;
 
   /**
    * Postal (Zip) code
    */
-  zip?: string
+  zip?: string;
 }
 
-export default LocationUpdatesEmergencyAddressInfo
+export default LocationUpdatesEmergencyAddressInfo;

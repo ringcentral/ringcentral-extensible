@@ -1,18 +1,21 @@
-import { GetExtensionGrantListResponse, ListExtensionGrantsParameters } from '../../../../../definitions'
-import Parent from '..'
-import RestClient from '../../../../..'
+import {
+  GetExtensionGrantListResponse,
+  ListExtensionGrantsParameters,
+} from '../../../../../definitions';
+import Parent from '..';
+import RestClient from '../../../../..';
 
 class Grant {
-  rc: RestClient
-  parent: Parent
+  rc: RestClient;
+  parent: Parent;
 
-  constructor (parent: Parent) {
-    this.parent = parent
-    this.rc = parent.rc
+  constructor(parent: Parent) {
+    this.parent = parent;
+    this.rc = parent.rc;
   }
 
-  path (): string {
-    return `${this.parent.path()}/grant`
+  path(): string {
+    return `${this.parent.path()}/grant`;
   }
 
   /**
@@ -20,10 +23,12 @@ class Grant {
    * Rate Limit Group: Light
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/grant
    */
-  async get (queryParams?: ListExtensionGrantsParameters): Promise<GetExtensionGrantListResponse> {
-    const r = await this.rc.get(this.path(), queryParams)
-    return r.data
+  async get(
+    queryParams?: ListExtensionGrantsParameters
+  ): Promise<GetExtensionGrantListResponse> {
+    const r = await this.rc.get(this.path(), queryParams);
+    return r.data;
   }
 }
 
-export default Grant
+export default Grant;

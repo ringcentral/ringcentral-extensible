@@ -2,12 +2,12 @@ class CallersInfoRequest {
   /**
    * Phone number of a caller
    */
-  callerId?: string
+  callerId?: string;
 
   /**
    * Contact name of a caller
    */
-  name?: string
+  name?: string;
 }
 
-export default CallersInfoRequest
+export default CallersInfoRequest;

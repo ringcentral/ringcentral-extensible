@@ -1,11 +1,11 @@
-import { Error } from '.'
+import {Error} from '.';
 
-  // Format of response in case that any error occured during request processing
+// Format of response in case that any error occured during request processing
 class ErrorResponse {
   /**
    * Collection of all gathered errors
    */
-  errors?: Error[]
+  errors?: Error[];
 }
 
-export default ErrorResponse
+export default ErrorResponse;

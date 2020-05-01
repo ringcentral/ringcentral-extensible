@@ -1,7 +1,7 @@
 class ListCallRecordingCustomGreetingsParameters {
   /**
    */
-  type?: ('StartRecording' | 'StopRecording' | 'AutomaticRecording')
+  type?: 'StartRecording' | 'StopRecording' | 'AutomaticRecording';
 }
 
-export default ListCallRecordingCustomGreetingsParameters
+export default ListCallRecordingCustomGreetingsParameters;

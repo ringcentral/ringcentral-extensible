@@ -1,20 +1,20 @@
-import { UserCallLogRecord, SyncInfoCallLog } from '.'
+import {UserCallLogRecord, SyncInfoCallLog} from '.';
 
 class CallLogSync {
   /**
    * Link to the list of call log records with sync information
    */
-  uri?: string
+  uri?: string;
 
   /**
    * List of call log records with synchronization information. For ISync the total number of returned records is limited to 250; this includes both new records and the old ones, specified by the recordCount parameter
    */
-  records?: UserCallLogRecord[]
+  records?: UserCallLogRecord[];
 
   /**
    * Sync information (type, token and time)
    */
-  syncInfo?: SyncInfoCallLog
+  syncInfo?: SyncInfoCallLog;
 }
 
-export default CallLogSync
+export default CallLogSync;

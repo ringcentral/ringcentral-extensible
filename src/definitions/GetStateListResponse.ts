@@ -1,25 +1,29 @@
-import { GetStateInfoResponse, ProvisioningNavigationInfo, ProvisioningPagingInfo } from '.'
+import {
+  GetStateInfoResponse,
+  ProvisioningNavigationInfo,
+  ProvisioningPagingInfo,
+} from '.';
 
 class GetStateListResponse {
   /**
    * Link to the states list resource
    */
-  uri?: string
+  uri?: string;
 
   /**
    * List of states
    */
-  records?: GetStateInfoResponse[]
+  records?: GetStateInfoResponse[];
 
   /**
    * Information on navigation
    */
-  navigation?: ProvisioningNavigationInfo
+  navigation?: ProvisioningNavigationInfo;
 
   /**
    * Information on paging
    */
-  paging?: ProvisioningPagingInfo
+  paging?: ProvisioningPagingInfo;
 }
 
-export default GetStateListResponse
+export default GetStateListResponse;

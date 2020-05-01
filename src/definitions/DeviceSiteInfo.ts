@@ -2,12 +2,12 @@ class DeviceSiteInfo {
   /**
    * Internal identifier of a site
    */
-  id?: string
+  id?: string;
 
   /**
    * Name of a site
    */
-  name?: string
+  name?: string;
 }
 
-export default DeviceSiteInfo
+export default DeviceSiteInfo;

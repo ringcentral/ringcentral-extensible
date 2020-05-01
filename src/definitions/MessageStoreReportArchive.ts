@@ -1,9 +1,9 @@
-import { ArchiveInfo } from '.'
+import {ArchiveInfo} from '.';
 
 class MessageStoreReportArchive {
   /**
    */
-  records?: ArchiveInfo[]
+  records?: ArchiveInfo[];
 }
 
-export default MessageStoreReportArchive
+export default MessageStoreReportArchive;

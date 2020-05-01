@@ -2,29 +2,29 @@ class ListStatesParameters {
   /**
    * If set to 'True' then states for all countries are returned and `countryId` is ignored, even if specified. If the value is empty then the parameter is ignored
    */
-  allCountries?: boolean
+  allCountries?: boolean;
 
   /**
    * Internal identifier of a country
    */
-  countryId?: number
+  countryId?: number;
 
   /**
    * Indicates the page number to retrieve. Only positive number values are accepted
    * Default: 1
    */
-  page?: number
+  page?: number;
 
   /**
    * Indicates the page size (number of items)
    * Default: 100
    */
-  perPage?: number
+  perPage?: number;
 
   /**
    * If 'True', the list of states with phone numbers available for buying is returned
    */
-  withPhoneNumbers?: boolean
+  withPhoneNumbers?: boolean;
 }
 
-export default ListStatesParameters
+export default ListStatesParameters;

@@ -1,55 +1,55 @@
-import { ContactBusinessAddressInfo, RegionalSettings, OperatorInfo } from '.'
+import {ContactBusinessAddressInfo, RegionalSettings, OperatorInfo} from '.';
 
 class SiteInfo {
   /**
    * Internal idetifier of a site extension
    */
-  id?: string
+  id?: string;
 
   /**
    * Link to a site resource
    */
-  uri?: string
+  uri?: string;
 
   /**
    * Extension user first name
    */
-  name?: string
+  name?: string;
 
   /**
    * Extension number
    */
-  extensionNumber?: string
+  extensionNumber?: string;
 
   /**
    * Custom name of a caller. Max number of characters is 15 (only alphabetical symbols, numbers and commas are supported)
    */
-  callerIdName?: string
+  callerIdName?: string;
 
   /**
    * Exetnsion user email
    */
-  email?: string
+  email?: string;
 
   /**
    * Extension user business address. The default is Company settings
    */
-  businessAddress?: ContactBusinessAddressInfo
+  businessAddress?: ContactBusinessAddressInfo;
 
   /**
    * Information about regional settings. The default is Company settings
    */
-  regionalSettings?: RegionalSettings
+  regionalSettings?: RegionalSettings;
 
   /**
    * Site Fax/SMS recipient (operator) reference. Multi-level IVR should be enabled
    */
-  operator?: OperatorInfo
+  operator?: OperatorInfo;
 
   /**
    * Site code value. Returned only if specified
    */
-  code?: string
+  code?: string;
 }
 
-export default SiteInfo
+export default SiteInfo;

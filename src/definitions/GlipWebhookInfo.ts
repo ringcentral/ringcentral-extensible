@@ -2,37 +2,37 @@ class GlipWebhookInfo {
   /**
    * Internal identifier of a webhook
    */
-  id?: string
+  id?: string;
 
   /**
    * Internal identifier of the user who created a webhook
    */
-  creatorId?: string
+  creatorId?: string;
 
   /**
    * Internal identifiers of groups where a webhook has been created
    */
-  groupIds?: string[]
+  groupIds?: string[];
 
   /**
    * Webhook creation time in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format
    */
-  creationTime?: string
+  creationTime?: string;
 
   /**
    * Webhook last update time in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format
    */
-  lastModifiedTime?: string
+  lastModifiedTime?: string;
 
   /**
    * Public link to send a webhook payload
    */
-  uri?: string
+  uri?: string;
 
   /**
    * Current status of a webhook
    */
-  status?: ('Active' | 'Suspended' | 'Deleted')
+  status?: 'Active' | 'Suspended' | 'Deleted';
 }
 
-export default GlipWebhookInfo
+export default GlipWebhookInfo;

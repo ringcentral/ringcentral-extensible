@@ -2,17 +2,17 @@ class MessageChanges {
   /**
    * Message type
    */
-  type?: ('Voicemail' | 'SMS' | 'Fax' | 'Pager')
+  type?: 'Voicemail' | 'SMS' | 'Fax' | 'Pager';
 
   /**
    * The number of new messages. Can be omitted if the value is zero
    */
-  newCount?: number
+  newCount?: number;
 
   /**
    * The number of updated messages. Can be omitted if the value is zero
    */
-  updatedCount?: number
+  updatedCount?: number;
 }
 
-export default MessageChanges
+export default MessageChanges;

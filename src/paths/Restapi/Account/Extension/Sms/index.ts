@@ -1,18 +1,21 @@
-import { GetMessageInfoResponse, CreateSMSMessage } from '../../../../../definitions'
-import Parent from '..'
-import RestClient from '../../../../..'
+import {
+  GetMessageInfoResponse,
+  CreateSMSMessage,
+} from '../../../../../definitions';
+import Parent from '..';
+import RestClient from '../../../../..';
 
 class Sms {
-  rc: RestClient
-  parent: Parent
+  rc: RestClient;
+  parent: Parent;
 
-  constructor (parent: Parent) {
-    this.parent = parent
-    this.rc = parent.rc
+  constructor(parent: Parent) {
+    this.parent = parent;
+    this.rc = parent.rc;
   }
 
-  path (): string {
-    return `${this.parent.path()}/sms`
+  path(): string {
+    return `${this.parent.path()}/sms`;
   }
 
   /**
@@ -20,10 +23,12 @@ class Sms {
    * Rate Limit Group: Medium
    * Http post /restapi/v1.0/account/{accountId}/extension/{extensionId}/sms
    */
-  async post (createSMSMessage: CreateSMSMessage): Promise<GetMessageInfoResponse> {
-    const r = await this.rc.post(this.path(), createSMSMessage)
-    return r.data
+  async post(
+    createSMSMessage: CreateSMSMessage
+  ): Promise<GetMessageInfoResponse> {
+    const r = await this.rc.post(this.path(), createSMSMessage);
+    return r.data;
   }
 }
 
-export default Sms
+export default Sms;

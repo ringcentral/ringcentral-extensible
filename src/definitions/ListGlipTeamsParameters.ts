@@ -4,12 +4,12 @@ class ListGlipTeamsParameters {
    * Maximum: 250
    * Default: 30
    */
-  recordCount?: number
+  recordCount?: number;
 
   /**
    * Pagination token.
    */
-  pageToken?: string
+  pageToken?: string;
 }
 
-export default ListGlipTeamsParameters
+export default ListGlipTeamsParameters;

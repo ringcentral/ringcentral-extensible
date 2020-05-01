@@ -1,27 +1,27 @@
 class DetailedCallInfo {
   /**
    */
-  callId?: string
+  callId?: string;
 
   /**
    */
-  toTag?: string
+  toTag?: string;
 
   /**
    */
-  fromTag?: string
+  fromTag?: string;
 
   /**
    */
-  remoteUri?: string
+  remoteUri?: string;
 
   /**
    */
-  localUri?: string
+  localUri?: string;
 
   /**
    */
-  rcSessionId?: string
+  rcSessionId?: string;
 }
 
-export default DetailedCallInfo
+export default DetailedCallInfo;

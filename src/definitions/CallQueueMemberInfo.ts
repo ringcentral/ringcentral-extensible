@@ -2,17 +2,17 @@ class CallQueueMemberInfo {
   /**
    * Link to a call queue member
    */
-  uri?: string
+  uri?: string;
 
   /**
    * Internal identifier of a call queue member
    */
-  id?: number
+  id?: number;
 
   /**
    * Extension number of a call queue member
    */
-  extensionNumber?: string
+  extensionNumber?: string;
 }
 
-export default CallQueueMemberInfo
+export default CallQueueMemberInfo;

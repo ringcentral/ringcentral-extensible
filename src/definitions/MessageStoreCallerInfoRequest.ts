@@ -2,7 +2,7 @@ class MessageStoreCallerInfoRequest {
   /**
    * Phone number in E.164 format
    */
-  phoneNumber?: string
+  phoneNumber?: string;
 }
 
-export default MessageStoreCallerInfoRequest
+export default MessageStoreCallerInfoRequest;

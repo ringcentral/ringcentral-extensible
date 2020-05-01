@@ -1,18 +1,21 @@
-import { ListMeetingRecordingsResponse, ListAccountMeetingRecordingsParameters } from '../../../../definitions'
-import Parent from '..'
-import RestClient from '../../../..'
+import {
+  ListMeetingRecordingsResponse,
+  ListAccountMeetingRecordingsParameters,
+} from '../../../../definitions';
+import Parent from '..';
+import RestClient from '../../../..';
 
 class MeetingRecordings {
-  rc: RestClient
-  parent: Parent
+  rc: RestClient;
+  parent: Parent;
 
-  constructor (parent: Parent) {
-    this.parent = parent
-    this.rc = parent.rc
+  constructor(parent: Parent) {
+    this.parent = parent;
+    this.rc = parent.rc;
   }
 
-  path (): string {
-    return `${this.parent.path()}/meeting-recordings`
+  path(): string {
+    return `${this.parent.path()}/meeting-recordings`;
   }
 
   /**
@@ -20,10 +23,12 @@ class MeetingRecordings {
    * Rate Limit Group: Medium
    * Http get /restapi/v1.0/account/{accountId}/meeting-recordings
    */
-  async get (queryParams?: ListAccountMeetingRecordingsParameters): Promise<ListMeetingRecordingsResponse> {
-    const r = await this.rc.get(this.path(), queryParams)
-    return r.data
+  async get(
+    queryParams?: ListAccountMeetingRecordingsParameters
+  ): Promise<ListMeetingRecordingsResponse> {
+    const r = await this.rc.get(this.path(), queryParams);
+    return r.data;
   }
 }
 
-export default MeetingRecordings
+export default MeetingRecordings;

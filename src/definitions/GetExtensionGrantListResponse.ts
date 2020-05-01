@@ -1,28 +1,28 @@
-import { GrantInfo, ProvisioningNavigationInfo, ProvisioningPagingInfo } from '.'
+import {GrantInfo, ProvisioningNavigationInfo, ProvisioningPagingInfo} from '.';
 
 class GetExtensionGrantListResponse {
   /**
    * Link to the list of extension grants
    */
-  uri?: string
+  uri?: string;
 
   /**
    * List of extension grants with details
    * Required
    */
-  records?: GrantInfo[]
+  records?: GrantInfo[];
 
   /**
    * Information on navigation
    * Required
    */
-  navigation?: ProvisioningNavigationInfo
+  navigation?: ProvisioningNavigationInfo;
 
   /**
    * Information on paging
    * Required
    */
-  paging?: ProvisioningPagingInfo
+  paging?: ProvisioningPagingInfo;
 }
 
-export default GetExtensionGrantListResponse
+export default GetExtensionGrantListResponse;

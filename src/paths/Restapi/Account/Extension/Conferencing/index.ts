@@ -1,18 +1,22 @@
-import { GetConferencingInfoResponse, ReadConferencingSettingsParameters, UpdateConferencingInfoRequest } from '../../../../../definitions'
-import Parent from '..'
-import RestClient from '../../../../..'
+import {
+  GetConferencingInfoResponse,
+  ReadConferencingSettingsParameters,
+  UpdateConferencingInfoRequest,
+} from '../../../../../definitions';
+import Parent from '..';
+import RestClient from '../../../../..';
 
 class Conferencing {
-  rc: RestClient
-  parent: Parent
+  rc: RestClient;
+  parent: Parent;
 
-  constructor (parent: Parent) {
-    this.parent = parent
-    this.rc = parent.rc
+  constructor(parent: Parent) {
+    this.parent = parent;
+    this.rc = parent.rc;
   }
 
-  path (): string {
-    return `${this.parent.path()}/conferencing`
+  path(): string {
+    return `${this.parent.path()}/conferencing`;
   }
 
   /**
@@ -20,9 +24,11 @@ class Conferencing {
    * Rate Limit Group: Light
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/conferencing
    */
-  async get (queryParams?: ReadConferencingSettingsParameters): Promise<GetConferencingInfoResponse> {
-    const r = await this.rc.get(this.path(), queryParams)
-    return r.data
+  async get(
+    queryParams?: ReadConferencingSettingsParameters
+  ): Promise<GetConferencingInfoResponse> {
+    const r = await this.rc.get(this.path(), queryParams);
+    return r.data;
   }
 
   /**
@@ -30,10 +36,12 @@ class Conferencing {
    * Rate Limit Group: Medium
    * Http put /restapi/v1.0/account/{accountId}/extension/{extensionId}/conferencing
    */
-  async put (updateConferencingInfoRequest: UpdateConferencingInfoRequest): Promise<GetConferencingInfoResponse> {
-    const r = await this.rc.put(this.path(), updateConferencingInfoRequest)
-    return r.data
+  async put(
+    updateConferencingInfoRequest: UpdateConferencingInfoRequest
+  ): Promise<GetConferencingInfoResponse> {
+    const r = await this.rc.put(this.path(), updateConferencingInfoRequest);
+    return r.data;
   }
 }
 
-export default Conferencing
+export default Conferencing;

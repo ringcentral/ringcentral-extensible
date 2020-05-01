@@ -1,22 +1,26 @@
-import { UnifiedPresenceGlip, UnifiedPresenceTelephony, UnifiedPresenceMeeting } from '.'
+import {
+  UnifiedPresenceGlip,
+  UnifiedPresenceTelephony,
+  UnifiedPresenceMeeting,
+} from '.';
 
 class UnifiedPresence {
   /**
    * Aggregated presence status of the user
    */
-  status?: ('Available' | 'Offline' | 'DND' | 'Busy')
+  status?: 'Available' | 'Offline' | 'DND' | 'Busy';
 
   /**
    */
-  glip?: UnifiedPresenceGlip
+  glip?: UnifiedPresenceGlip;
 
   /**
    */
-  telephony?: UnifiedPresenceTelephony
+  telephony?: UnifiedPresenceTelephony;
 
   /**
    */
-  meeting?: UnifiedPresenceMeeting
+  meeting?: UnifiedPresenceMeeting;
 }
 
-export default UnifiedPresence
+export default UnifiedPresence;

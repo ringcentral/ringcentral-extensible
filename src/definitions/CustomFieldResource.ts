@@ -2,17 +2,17 @@ class CustomFieldResource {
   /**
    * Custom field identifier
    */
-  id?: string
+  id?: string;
 
   /**
    * Object category to attach custom fields
    */
-  category?: ('User')
+  category?: 'User';
 
   /**
    * Custom field display name
    */
-  displayName?: string
+  displayName?: string;
 }
 
-export default CustomFieldResource
+export default CustomFieldResource;

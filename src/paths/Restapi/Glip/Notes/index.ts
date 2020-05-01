@@ -1,27 +1,31 @@
-import Publish from './Publish'
-import Unlock from './Unlock'
-import Lock from './Lock'
-import { GetGlipNoteInfo, GlipNoteInfo, GlipNoteCreate } from '../../../../definitions'
-import Parent from '..'
-import RestClient from '../../../..'
+import Publish from './Publish';
+import Unlock from './Unlock';
+import Lock from './Lock';
+import {
+  GetGlipNoteInfo,
+  GlipNoteInfo,
+  GlipNoteCreate,
+} from '../../../../definitions';
+import Parent from '..';
+import RestClient from '../../../..';
 
 class Notes {
-  rc: RestClient
-  noteId: (string | null)
-  parent: Parent
+  rc: RestClient;
+  noteId: string | null;
+  parent: Parent;
 
-  constructor (parent: Parent, noteId: (string | null) = null) {
-    this.parent = parent
-    this.rc = parent.rc
-    this.noteId = noteId
+  constructor(parent: Parent, noteId: string | null = null) {
+    this.parent = parent;
+    this.rc = parent.rc;
+    this.noteId = noteId;
   }
 
-  path (withParameter: boolean = true): string {
+  path(withParameter = true): string {
     if (withParameter && this.noteId !== null) {
-      return `${this.parent.path()}/notes/${this.noteId}`
+      return `${this.parent.path()}/notes/${this.noteId}`;
     }
 
-    return `${this.parent.path()}/notes`
+    return `${this.parent.path()}/notes`;
   }
 
   /**
@@ -29,13 +33,13 @@ class Notes {
    * Rate Limit Group: Medium
    * Http get /restapi/v1.0/glip/notes/{noteId}
    */
-  async get (): Promise<GetGlipNoteInfo> {
+  async get(): Promise<GetGlipNoteInfo> {
     if (this.noteId === null) {
-      throw new Error('noteId must be specified.')
+      throw new Error('noteId must be specified.');
     }
 
-    const r = await this.rc.get(this.path())
-    return r.data
+    const r = await this.rc.get(this.path());
+    return r.data;
   }
 
   /**
@@ -43,13 +47,13 @@ class Notes {
    * Rate Limit Group: Medium
    * Http patch /restapi/v1.0/glip/notes/{noteId}
    */
-  async patch (glipNoteCreate: GlipNoteCreate): Promise<GlipNoteInfo> {
+  async patch(glipNoteCreate: GlipNoteCreate): Promise<GlipNoteInfo> {
     if (this.noteId === null) {
-      throw new Error('noteId must be specified.')
+      throw new Error('noteId must be specified.');
     }
 
-    const r = await this.rc.patch(this.path(), glipNoteCreate)
-    return r.data
+    const r = await this.rc.patch(this.path(), glipNoteCreate);
+    return r.data;
   }
 
   /**
@@ -57,26 +61,26 @@ class Notes {
    * Rate Limit Group: Medium
    * Http delete /restapi/v1.0/glip/notes/{noteId}
    */
-  async delete (): Promise<string> {
+  async delete(): Promise<string> {
     if (this.noteId === null) {
-      throw new Error('noteId must be specified.')
+      throw new Error('noteId must be specified.');
     }
 
-    const r = await this.rc.delete(this.path())
-    return r.data
+    const r = await this.rc.delete(this.path());
+    return r.data;
   }
 
-  lock (): Lock {
-    return new Lock(this)
+  lock(): Lock {
+    return new Lock(this);
   }
 
-  unlock (): Unlock {
-    return new Unlock(this)
+  unlock(): Unlock {
+    return new Unlock(this);
   }
 
-  publish (): Publish {
-    return new Publish(this)
+  publish(): Publish {
+    return new Publish(this);
   }
 }
 
-export default Notes
+export default Notes;

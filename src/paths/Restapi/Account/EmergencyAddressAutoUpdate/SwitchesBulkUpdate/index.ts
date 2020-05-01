@@ -1,18 +1,21 @@
-import { UpdateMultipleSwitchesResponse, UpdateMultipleSwitchesRequest } from '../../../../../definitions'
-import Parent from '..'
-import RestClient from '../../../../..'
+import {
+  UpdateMultipleSwitchesResponse,
+  UpdateMultipleSwitchesRequest,
+} from '../../../../../definitions';
+import Parent from '..';
+import RestClient from '../../../../..';
 
 class SwitchesBulkUpdate {
-  rc: RestClient
-  parent: Parent
+  rc: RestClient;
+  parent: Parent;
 
-  constructor (parent: Parent) {
-    this.parent = parent
-    this.rc = parent.rc
+  constructor(parent: Parent) {
+    this.parent = parent;
+    this.rc = parent.rc;
   }
 
-  path (): string {
-    return `${this.parent.path()}/switches-bulk-update`
+  path(): string {
+    return `${this.parent.path()}/switches-bulk-update`;
   }
 
   /**
@@ -20,10 +23,12 @@ class SwitchesBulkUpdate {
    * Rate Limit Group: Heavy
    * Http post /restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches-bulk-update
    */
-  async post (updateMultipleSwitchesRequest: UpdateMultipleSwitchesRequest): Promise<UpdateMultipleSwitchesResponse> {
-    const r = await this.rc.post(this.path(), updateMultipleSwitchesRequest)
-    return r.data
+  async post(
+    updateMultipleSwitchesRequest: UpdateMultipleSwitchesRequest
+  ): Promise<UpdateMultipleSwitchesResponse> {
+    const r = await this.rc.post(this.path(), updateMultipleSwitchesRequest);
+    return r.data;
   }
 }
 
-export default SwitchesBulkUpdate
+export default SwitchesBulkUpdate;

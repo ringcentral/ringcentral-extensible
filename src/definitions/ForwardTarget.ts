@@ -2,12 +2,12 @@ class ForwardTarget {
   /**
    * Phone number
    */
-  phoneNumber?: string
+  phoneNumber?: string;
 
   /**
    * Voicemail owner extension identifier
    */
-  voicemail?: string
+  voicemail?: string;
 }
 
-export default ForwardTarget
+export default ForwardTarget;

@@ -1,9 +1,9 @@
-import { UpdateWirelessPoint } from '.'
+import {UpdateWirelessPoint} from '.';
 
 class UpdateMultipleWirelessPointsRequest {
   /**
    */
-  records?: UpdateWirelessPoint[]
+  records?: UpdateWirelessPoint[];
 }
 
-export default UpdateMultipleWirelessPointsRequest
+export default UpdateMultipleWirelessPointsRequest;

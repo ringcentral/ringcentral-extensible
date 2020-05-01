@@ -1,13 +1,13 @@
-import { CompanyContactsPagingInfo, ContactResource } from '.'
+import {CompanyContactsPagingInfo, ContactResource} from '.';
 
 class DirectoryResource {
   /**
    */
-  paging?: CompanyContactsPagingInfo
+  paging?: CompanyContactsPagingInfo;
 
   /**
    */
-  records?: ContactResource[]
+  records?: ContactResource[];
 }
 
-export default DirectoryResource
+export default DirectoryResource;

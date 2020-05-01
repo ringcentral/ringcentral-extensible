@@ -1,15 +1,15 @@
 class BulkSupported {
   /**
    */
-  maxOperations?: number
+  maxOperations?: number;
 
   /**
    */
-  maxPayloadSize?: number
+  maxPayloadSize?: number;
 
   /**
    */
-  supported?: boolean
+  supported?: boolean;
 }
 
-export default BulkSupported
+export default BulkSupported;

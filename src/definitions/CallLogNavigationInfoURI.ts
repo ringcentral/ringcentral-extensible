@@ -1,7 +1,7 @@
 class CallLogNavigationInfoURI {
   /**
    */
-  uri?: string
+  uri?: string;
 }
 
-export default CallLogNavigationInfoURI
+export default CallLogNavigationInfoURI;

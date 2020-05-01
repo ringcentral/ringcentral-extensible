@@ -2,22 +2,22 @@ class ListAnsweringRulesParameters {
   /**
    * Default: Simple
    */
-  view?: ('Detailed' | 'Simple')
+  view?: 'Detailed' | 'Simple';
 
   /**
    * If true, then only active call handling rules are returned
    */
-  enabledOnly?: boolean
+  enabledOnly?: boolean;
 
   /**
    * Default: 1
    */
-  page?: string
+  page?: string;
 
   /**
    * Default: 100
    */
-  perPage?: string
+  perPage?: string;
 }
 
-export default ListAnsweringRulesParameters
+export default ListAnsweringRulesParameters;

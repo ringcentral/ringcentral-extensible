@@ -1,28 +1,28 @@
 class UserAddress {
   /**
    */
-  country?: string
+  country?: string;
 
   /**
    */
-  locality?: string
+  locality?: string;
 
   /**
    */
-  postalCode?: string
+  postalCode?: string;
 
   /**
    */
-  region?: string
+  region?: string;
 
   /**
    */
-  streetAddress?: string
+  streetAddress?: string;
 
   /**
    * Required
    */
-  type?: ('work')
+  type?: 'work';
 }
 
-export default UserAddress
+export default UserAddress;

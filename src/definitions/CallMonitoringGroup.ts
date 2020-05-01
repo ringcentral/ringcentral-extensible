@@ -2,17 +2,17 @@ class CallMonitoringGroup {
   /**
    * Link to a call monitoring group resource
    */
-  uri?: string
+  uri?: string;
 
   /**
    * Internal identifier of a group
    */
-  id?: string
+  id?: string;
 
   /**
    * Name of a group
    */
-  name?: string
+  name?: string;
 }
 
-export default CallMonitoringGroup
+export default CallMonitoringGroup;

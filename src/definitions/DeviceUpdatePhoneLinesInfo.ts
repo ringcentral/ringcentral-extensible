@@ -1,10 +1,10 @@
-import { UpdateDevicePhoneInfo } from '.'
+import {UpdateDevicePhoneInfo} from '.';
 
 class DeviceUpdatePhoneLinesInfo {
   /**
    * Information on phone lines added to a device
    */
-  phoneLines?: UpdateDevicePhoneInfo[]
+  phoneLines?: UpdateDevicePhoneInfo[];
 }
 
-export default DeviceUpdatePhoneLinesInfo
+export default DeviceUpdatePhoneLinesInfo;

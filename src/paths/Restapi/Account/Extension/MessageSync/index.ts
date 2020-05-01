@@ -1,18 +1,21 @@
-import { GetMessageSyncResponse, SyncMessagesParameters } from '../../../../../definitions'
-import Parent from '..'
-import RestClient from '../../../../..'
+import {
+  GetMessageSyncResponse,
+  SyncMessagesParameters,
+} from '../../../../../definitions';
+import Parent from '..';
+import RestClient from '../../../../..';
 
 class MessageSync {
-  rc: RestClient
-  parent: Parent
+  rc: RestClient;
+  parent: Parent;
 
-  constructor (parent: Parent) {
-    this.parent = parent
-    this.rc = parent.rc
+  constructor(parent: Parent) {
+    this.parent = parent;
+    this.rc = parent.rc;
   }
 
-  path (): string {
-    return `${this.parent.path()}/message-sync`
+  path(): string {
+    return `${this.parent.path()}/message-sync`;
   }
 
   /**
@@ -20,10 +23,12 @@ class MessageSync {
    * Rate Limit Group: Light
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/message-sync
    */
-  async get (queryParams?: SyncMessagesParameters): Promise<GetMessageSyncResponse> {
-    const r = await this.rc.get(this.path(), queryParams)
-    return r.data
+  async get(
+    queryParams?: SyncMessagesParameters
+  ): Promise<GetMessageSyncResponse> {
+    const r = await this.rc.get(this.path(), queryParams);
+    return r.data;
   }
 }
 
-export default MessageSync
+export default MessageSync;

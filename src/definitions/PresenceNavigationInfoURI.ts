@@ -1,7 +1,7 @@
 class PresenceNavigationInfoURI {
   /**
    */
-  uri?: string
+  uri?: string;
 }
 
-export default PresenceNavigationInfoURI
+export default PresenceNavigationInfoURI;

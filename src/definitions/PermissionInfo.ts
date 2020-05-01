@@ -2,7 +2,7 @@ class PermissionInfo {
   /**
    * Specifies if a permission is enabled or not
    */
-  enabled?: boolean
+  enabled?: boolean;
 }
 
-export default PermissionInfo
+export default PermissionInfo;

@@ -2,17 +2,17 @@ class IVRMenuExtensionInfo {
   /**
    * Link to an extension resource
    */
-  uri?: string
+  uri?: string;
 
   /**
    * Internal identifier of an extension
    */
-  id?: string
+  id?: string;
 
   /**
    * Name of an extension
    */
-  name?: string
+  name?: string;
 }
 
-export default IVRMenuExtensionInfo
+export default IVRMenuExtensionInfo;

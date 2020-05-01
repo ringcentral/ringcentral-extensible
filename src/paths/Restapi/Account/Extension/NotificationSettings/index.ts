@@ -1,18 +1,18 @@
-import { NotificationSettingsUpdateRequest } from '../../../../../definitions'
-import Parent from '..'
-import RestClient from '../../../../..'
+import {NotificationSettingsUpdateRequest} from '../../../../../definitions';
+import Parent from '..';
+import RestClient from '../../../../..';
 
 class NotificationSettings {
-  rc: RestClient
-  parent: Parent
+  rc: RestClient;
+  parent: Parent;
 
-  constructor (parent: Parent) {
-    this.parent = parent
-    this.rc = parent.rc
+  constructor(parent: Parent) {
+    this.parent = parent;
+    this.rc = parent.rc;
   }
 
-  path (): string {
-    return `${this.parent.path()}/notification-settings`
+  path(): string {
+    return `${this.parent.path()}/notification-settings`;
   }
 
   /**
@@ -20,9 +20,9 @@ class NotificationSettings {
    * Rate Limit Group: Light
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/notification-settings
    */
-  async get (): Promise<NotificationSettings> {
-    const r = await this.rc.get(this.path())
-    return r.data
+  async get(): Promise<NotificationSettings> {
+    const r = await this.rc.get(this.path());
+    return r.data;
   }
 
   /**
@@ -30,10 +30,12 @@ class NotificationSettings {
    * Rate Limit Group: Medium
    * Http put /restapi/v1.0/account/{accountId}/extension/{extensionId}/notification-settings
    */
-  async put (notificationSettingsUpdateRequest: NotificationSettingsUpdateRequest): Promise<NotificationSettings> {
-    const r = await this.rc.put(this.path(), notificationSettingsUpdateRequest)
-    return r.data
+  async put(
+    notificationSettingsUpdateRequest: NotificationSettingsUpdateRequest
+  ): Promise<NotificationSettings> {
+    const r = await this.rc.put(this.path(), notificationSettingsUpdateRequest);
+    return r.data;
   }
 }
 
-export default NotificationSettings
+export default NotificationSettings;

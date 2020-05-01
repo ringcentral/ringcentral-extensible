@@ -1,18 +1,18 @@
-import { AssistedUsersResource } from '../../../../../../definitions'
-import Parent from '..'
-import RestClient from '../../../../../..'
+import {AssistedUsersResource} from '../../../../../../definitions';
+import Parent from '..';
+import RestClient from '../../../../../..';
 
 class Assisted {
-  rc: RestClient
-  parent: Parent
+  rc: RestClient;
+  parent: Parent;
 
-  constructor (parent: Parent) {
-    this.parent = parent
-    this.rc = parent.rc
+  constructor(parent: Parent) {
+    this.parent = parent;
+    this.rc = parent.rc;
   }
 
-  path (): string {
-    return `${this.parent.path()}/assisted`
+  path(): string {
+    return `${this.parent.path()}/assisted`;
   }
 
   /**
@@ -20,10 +20,10 @@ class Assisted {
    * Rate Limit Group: Light
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/meetings-configuration/assisted
    */
-  async get (): Promise<AssistedUsersResource> {
-    const r = await this.rc.get(this.path())
-    return r.data
+  async get(): Promise<AssistedUsersResource> {
+    const r = await this.rc.get(this.path());
+    return r.data;
   }
 }
 
-export default Assisted
+export default Assisted;

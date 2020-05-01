@@ -1,18 +1,18 @@
-import { CallParty, TransferTarget } from '../../../../../../../definitions'
-import Parent from '..'
-import RestClient from '../../../../../../..'
+import {CallParty, TransferTarget} from '../../../../../../../definitions';
+import Parent from '..';
+import RestClient from '../../../../../../..';
 
 class Transfer {
-  rc: RestClient
-  parent: Parent
+  rc: RestClient;
+  parent: Parent;
 
-  constructor (parent: Parent) {
-    this.parent = parent
-    this.rc = parent.rc
+  constructor(parent: Parent) {
+    this.parent = parent;
+    this.rc = parent.rc;
   }
 
-  path (): string {
-    return `${this.parent.path()}/transfer`
+  path(): string {
+    return `${this.parent.path()}/transfer`;
   }
 
   /**
@@ -20,10 +20,10 @@ class Transfer {
    * Rate Limit Group: Light
    * Http post /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/transfer
    */
-  async post (transferTarget: TransferTarget): Promise<CallParty> {
-    const r = await this.rc.post(this.path(), transferTarget)
-    return r.data
+  async post(transferTarget: TransferTarget): Promise<CallParty> {
+    const r = await this.rc.post(this.path(), transferTarget);
+    return r.data;
   }
 }
 
-export default Transfer
+export default Transfer;

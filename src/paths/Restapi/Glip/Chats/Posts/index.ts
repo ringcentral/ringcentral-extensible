@@ -1,24 +1,30 @@
-import { GlipPostsList, ReadGlipPostsParameters, GlipPostInfo, GlipPostPostBody, GlipPatchPostBody } from '../../../../../definitions'
-import Parent from '..'
-import RestClient from '../../../../..'
+import {
+  GlipPostsList,
+  ReadGlipPostsParameters,
+  GlipPostInfo,
+  GlipPostPostBody,
+  GlipPatchPostBody,
+} from '../../../../../definitions';
+import Parent from '..';
+import RestClient from '../../../../..';
 
 class Posts {
-  rc: RestClient
-  postId: (string | null)
-  parent: Parent
+  rc: RestClient;
+  postId: string | null;
+  parent: Parent;
 
-  constructor (parent: Parent, postId: (string | null) = null) {
-    this.parent = parent
-    this.rc = parent.rc
-    this.postId = postId
+  constructor(parent: Parent, postId: string | null = null) {
+    this.parent = parent;
+    this.rc = parent.rc;
+    this.postId = postId;
   }
 
-  path (withParameter: boolean = true): string {
+  path(withParameter = true): string {
     if (withParameter && this.postId !== null) {
-      return `${this.parent.path()}/posts/${this.postId}`
+      return `${this.parent.path()}/posts/${this.postId}`;
     }
 
-    return `${this.parent.path()}/posts`
+    return `${this.parent.path()}/posts`;
   }
 
   /**
@@ -26,9 +32,9 @@ class Posts {
    * Rate Limit Group: Medium
    * Http get /restapi/v1.0/glip/chats/{chatId}/posts
    */
-  async list (queryParams?: ReadGlipPostsParameters): Promise<GlipPostsList> {
-    const r = await this.rc.get(this.path(false), queryParams)
-    return r.data
+  async list(queryParams?: ReadGlipPostsParameters): Promise<GlipPostsList> {
+    const r = await this.rc.get(this.path(false), queryParams);
+    return r.data;
   }
 
   /**
@@ -36,9 +42,9 @@ class Posts {
    * Rate Limit Group: Medium
    * Http post /restapi/v1.0/glip/chats/{chatId}/posts
    */
-  async post (glipPostPostBody: GlipPostPostBody): Promise<GlipPostInfo> {
-    const r = await this.rc.post(this.path(false), glipPostPostBody)
-    return r.data
+  async post(glipPostPostBody: GlipPostPostBody): Promise<GlipPostInfo> {
+    const r = await this.rc.post(this.path(false), glipPostPostBody);
+    return r.data;
   }
 
   /**
@@ -46,13 +52,13 @@ class Posts {
    * Rate Limit Group: Light
    * Http get /restapi/v1.0/glip/chats/{chatId}/posts/{postId}
    */
-  async get (): Promise<GlipPostInfo> {
+  async get(): Promise<GlipPostInfo> {
     if (this.postId === null) {
-      throw new Error('postId must be specified.')
+      throw new Error('postId must be specified.');
     }
 
-    const r = await this.rc.get(this.path())
-    return r.data
+    const r = await this.rc.get(this.path());
+    return r.data;
   }
 
   /**
@@ -60,13 +66,13 @@ class Posts {
    * Rate Limit Group: Medium
    * Http patch /restapi/v1.0/glip/chats/{chatId}/posts/{postId}
    */
-  async patch (glipPatchPostBody: GlipPatchPostBody): Promise<GlipPostInfo> {
+  async patch(glipPatchPostBody: GlipPatchPostBody): Promise<GlipPostInfo> {
     if (this.postId === null) {
-      throw new Error('postId must be specified.')
+      throw new Error('postId must be specified.');
     }
 
-    const r = await this.rc.patch(this.path(), glipPatchPostBody)
-    return r.data
+    const r = await this.rc.patch(this.path(), glipPatchPostBody);
+    return r.data;
   }
 
   /**
@@ -74,14 +80,14 @@ class Posts {
    * Rate Limit Group: Medium
    * Http delete /restapi/v1.0/glip/chats/{chatId}/posts/{postId}
    */
-  async delete (): Promise<string> {
+  async delete(): Promise<string> {
     if (this.postId === null) {
-      throw new Error('postId must be specified.')
+      throw new Error('postId must be specified.');
     }
 
-    const r = await this.rc.delete(this.path())
-    return r.data
+    const r = await this.rc.delete(this.path());
+    return r.data;
   }
 }
 
-export default Posts
+export default Posts;

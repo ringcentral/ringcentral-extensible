@@ -1,33 +1,38 @@
-import { ActiveCallInfo } from '.'
+import {ActiveCallInfo} from '.';
 
 class PresenceInfoResource {
   /**
    */
-  userStatus?: ('Offline' | 'Busy' | 'Available')
+  userStatus?: 'Offline' | 'Busy' | 'Available';
 
   /**
    */
-  dndStatus?: ('TakeAllCalls' | 'DoNotAcceptDepartmentCalls' | 'TakeDepartmentCallsOnly' | 'DoNotAcceptAnyCalls' | 'Unknown')
+  dndStatus?:
+    | 'TakeAllCalls'
+    | 'DoNotAcceptDepartmentCalls'
+    | 'TakeDepartmentCallsOnly'
+    | 'DoNotAcceptAnyCalls'
+    | 'Unknown';
 
   /**
    */
-  message?: string
+  message?: string;
 
   /**
    */
-  allowSeeMyPresence?: boolean
+  allowSeeMyPresence?: boolean;
 
   /**
    */
-  ringOnMonitoredCall?: boolean
+  ringOnMonitoredCall?: boolean;
 
   /**
    */
-  pickUpCallsOnHold?: boolean
+  pickUpCallsOnHold?: boolean;
 
   /**
    */
-  activeCalls?: ActiveCallInfo[]
+  activeCalls?: ActiveCallInfo[];
 }
 
-export default PresenceInfoResource
+export default PresenceInfoResource;

@@ -2,12 +2,12 @@ class CallRecording {
   /**
    * Internal identifier of a call recording
    */
-  id?: string
+  id?: string;
 
   /**
    * Call recording status
    */
-  active?: boolean
+  active?: boolean;
 }
 
-export default CallRecording
+export default CallRecording;

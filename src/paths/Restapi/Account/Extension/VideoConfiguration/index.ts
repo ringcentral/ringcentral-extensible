@@ -1,18 +1,18 @@
-import { UserVideoConfiguration } from '../../../../../definitions'
-import Parent from '..'
-import RestClient from '../../../../..'
+import {UserVideoConfiguration} from '../../../../../definitions';
+import Parent from '..';
+import RestClient from '../../../../..';
 
 class VideoConfiguration {
-  rc: RestClient
-  parent: Parent
+  rc: RestClient;
+  parent: Parent;
 
-  constructor (parent: Parent) {
-    this.parent = parent
-    this.rc = parent.rc
+  constructor(parent: Parent) {
+    this.parent = parent;
+    this.rc = parent.rc;
   }
 
-  path (): string {
-    return `${this.parent.path()}/video-configuration`
+  path(): string {
+    return `${this.parent.path()}/video-configuration`;
   }
 
   /**
@@ -20,9 +20,9 @@ class VideoConfiguration {
    * Rate Limit Group: Light
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/video-configuration
    */
-  async get (): Promise<UserVideoConfiguration> {
-    const r = await this.rc.get(this.path())
-    return r.data
+  async get(): Promise<UserVideoConfiguration> {
+    const r = await this.rc.get(this.path());
+    return r.data;
   }
 
   /**
@@ -30,10 +30,12 @@ class VideoConfiguration {
    * Rate Limit Group: Light
    * Http put /restapi/v1.0/account/{accountId}/extension/{extensionId}/video-configuration
    */
-  async put (userVideoConfiguration: UserVideoConfiguration): Promise<UserVideoConfiguration> {
-    const r = await this.rc.put(this.path(), userVideoConfiguration)
-    return r.data
+  async put(
+    userVideoConfiguration: UserVideoConfiguration
+  ): Promise<UserVideoConfiguration> {
+    const r = await this.rc.put(this.path(), userVideoConfiguration);
+    return r.data;
   }
 }
 
-export default VideoConfiguration
+export default VideoConfiguration;

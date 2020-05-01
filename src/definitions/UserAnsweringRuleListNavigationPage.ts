@@ -1,7 +1,7 @@
 class UserAnsweringRuleListNavigationPage {
   /**
    */
-  uri?: string
+  uri?: string;
 }
 
-export default UserAnsweringRuleListNavigationPage
+export default UserAnsweringRuleListNavigationPage;

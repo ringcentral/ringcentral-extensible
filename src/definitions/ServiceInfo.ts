@@ -1,30 +1,35 @@
-import { BillingPlanInfo, BrandInfo, ServicePlanInfo, TargetServicePlanInfo } from '.'
+import {
+  BillingPlanInfo,
+  BrandInfo,
+  ServicePlanInfo,
+  TargetServicePlanInfo,
+} from '.';
 
 class ServiceInfo {
   /**
    * Canonical URI of a service info resource
    */
-  uri?: string
+  uri?: string;
 
   /**
    * Information on account billing plan
    */
-  billingPlan?: BillingPlanInfo
+  billingPlan?: BillingPlanInfo;
 
   /**
    * Information on account brand
    */
-  brand?: BrandInfo
+  brand?: BrandInfo;
 
   /**
    * Information on account service plan
    */
-  servicePlan?: ServicePlanInfo
+  servicePlan?: ServicePlanInfo;
 
   /**
    * Information on account target service plan
    */
-  targetServicePlan?: TargetServicePlanInfo
+  targetServicePlan?: TargetServicePlanInfo;
 }
 
-export default ServiceInfo
+export default ServiceInfo;

@@ -1,23 +1,23 @@
 class AuthenticationScheme {
   /**
    */
-  description?: string
+  description?: string;
 
   /**
    */
-  documentationUri?: string
+  documentationUri?: string;
 
   /**
    */
-  name?: string
+  name?: string;
 
   /**
    */
-  specUri?: string
+  specUri?: string;
 
   /**
    */
-  primary?: boolean
+  primary?: boolean;
 }
 
-export default AuthenticationScheme
+export default AuthenticationScheme;

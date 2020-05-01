@@ -1,11 +1,11 @@
-import { CreateGlipMember } from '.'
+import {CreateGlipMember} from '.';
 
 class GlipPostMembersListBody {
   /**
    * List of glip members
    * Required
    */
-  members?: CreateGlipMember[]
+  members?: CreateGlipMember[];
 }
 
-export default GlipPostMembersListBody
+export default GlipPostMembersListBody;

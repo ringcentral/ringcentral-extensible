@@ -1,30 +1,30 @@
-import { CreateGlipMember } from '.'
+import {CreateGlipMember} from '.';
 
 class GlipConversationInfo {
   /**
    * Internal identifier of a conversation
    */
-  id?: string
+  id?: string;
 
   /**
    * Type of a conversation
    */
-  type?: ('Direct' | 'Personal' | 'Group')
+  type?: 'Direct' | 'Personal' | 'Group';
 
   /**
    * Conversation creation datetime in ISO 8601 format
    */
-  creationTime?: string
+  creationTime?: string;
 
   /**
    * Conversation last change datetime in ISO 8601 format
    */
-  lastModifiedTime?: string
+  lastModifiedTime?: string;
 
   /**
    * List of glip members
    */
-  members?: CreateGlipMember[]
+  members?: CreateGlipMember[];
 }
 
-export default GlipConversationInfo
+export default GlipConversationInfo;

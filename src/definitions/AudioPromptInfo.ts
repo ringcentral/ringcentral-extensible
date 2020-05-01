@@ -2,12 +2,12 @@ class AudioPromptInfo {
   /**
    * Link to a prompt audio file
    */
-  uri?: string
+  uri?: string;
 
   /**
    * Internal identifier of a prompt
    */
-  id?: string
+  id?: string;
 }
 
-export default AudioPromptInfo
+export default AudioPromptInfo;

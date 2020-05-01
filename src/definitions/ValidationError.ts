@@ -2,25 +2,25 @@ class ValidationError {
   /**
    * Error code
    */
-  errorCode?: string
+  errorCode?: string;
 
   /**
    * Error message
    */
-  message?: string
+  message?: string;
 
   /**
    * Name of invalid parameter
    */
-  parameterName?: string
+  parameterName?: string;
 
   /**
    */
-  featureName?: string
+  featureName?: string;
 
   /**
    */
-  parameterValue?: string
+  parameterValue?: string;
 }
 
-export default ValidationError
+export default ValidationError;

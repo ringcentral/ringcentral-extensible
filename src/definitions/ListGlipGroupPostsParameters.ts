@@ -4,12 +4,12 @@ class ListGlipGroupPostsParameters {
    * Maximum: 250
    * Default: 30
    */
-  recordCount?: number
+  recordCount?: number;
 
   /**
    * Pagination token
    */
-  pageToken?: string
+  pageToken?: string;
 }
 
-export default ListGlipGroupPostsParameters
+export default ListGlipGroupPostsParameters;

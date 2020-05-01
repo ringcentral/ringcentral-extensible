@@ -1,21 +1,25 @@
-import { AutomaticLocationUpdatesSiteInfo, PublicIpRangeInfo, PrivateIpRangeInfoRequest } from '.'
+import {
+  AutomaticLocationUpdatesSiteInfo,
+  PublicIpRangeInfo,
+  PrivateIpRangeInfoRequest,
+} from '.';
 
 class UpdateNetworkRequest {
   /**
    */
-  name?: string
+  name?: string;
 
   /**
    */
-  site?: AutomaticLocationUpdatesSiteInfo
+  site?: AutomaticLocationUpdatesSiteInfo;
 
   /**
    */
-  publicIpRanges?: PublicIpRangeInfo[]
+  publicIpRanges?: PublicIpRangeInfo[];
 
   /**
    */
-  privateIpRanges?: PrivateIpRangeInfoRequest[]
+  privateIpRanges?: PrivateIpRangeInfoRequest[];
 }
 
-export default UpdateNetworkRequest
+export default UpdateNetworkRequest;

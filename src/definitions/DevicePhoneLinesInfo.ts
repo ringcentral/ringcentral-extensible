@@ -1,19 +1,19 @@
-import { DevicePhoneLinesEmergencyAddressInfo, DevicePhoneNumberInfo } from '.'
+import {DevicePhoneLinesEmergencyAddressInfo, DevicePhoneNumberInfo} from '.';
 
 class DevicePhoneLinesInfo {
   /**
    * Type of phone line
    */
-  lineType?: ('Standalone' | 'StandaloneFree' | 'BlaPrimary' | 'BlaSecondary')
+  lineType?: 'Standalone' | 'StandaloneFree' | 'BlaPrimary' | 'BlaSecondary';
 
   /**
    */
-  emergencyAddress?: DevicePhoneLinesEmergencyAddressInfo
+  emergencyAddress?: DevicePhoneLinesEmergencyAddressInfo;
 
   /**
    * Phone number information
    */
-  phoneInfo?: DevicePhoneNumberInfo
+  phoneInfo?: DevicePhoneNumberInfo;
 }
 
-export default DevicePhoneLinesInfo
+export default DevicePhoneLinesInfo;

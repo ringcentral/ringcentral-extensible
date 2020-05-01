@@ -2,12 +2,12 @@ class CompanyAnsweringRuleCalledNumberInfoRequest {
   /**
    * Internal identifier of an account phone number
    */
-  id?: string
+  id?: string;
 
   /**
    * Phone number of a callee
    */
-  phoneNumber?: string
+  phoneNumber?: string;
 }
 
-export default CompanyAnsweringRuleCalledNumberInfoRequest
+export default CompanyAnsweringRuleCalledNumberInfoRequest;

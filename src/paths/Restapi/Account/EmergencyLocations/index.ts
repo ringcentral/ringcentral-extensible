@@ -1,24 +1,29 @@
-import { EmergencyLocationInfoRequest, EmergencyLocationList, ListEmergencyLocationsParameters, EmergencyLocationInfo } from '../../../../definitions'
-import Parent from '..'
-import RestClient from '../../../..'
+import {
+  EmergencyLocationInfoRequest,
+  EmergencyLocationList,
+  ListEmergencyLocationsParameters,
+  EmergencyLocationInfo,
+} from '../../../../definitions';
+import Parent from '..';
+import RestClient from '../../../..';
 
 class EmergencyLocations {
-  rc: RestClient
-  locationId: (string | null)
-  parent: Parent
+  rc: RestClient;
+  locationId: string | null;
+  parent: Parent;
 
-  constructor (parent: Parent, locationId: (string | null) = null) {
-    this.parent = parent
-    this.rc = parent.rc
-    this.locationId = locationId
+  constructor(parent: Parent, locationId: string | null = null) {
+    this.parent = parent;
+    this.rc = parent.rc;
+    this.locationId = locationId;
   }
 
-  path (withParameter: boolean = true): string {
+  path(withParameter = true): string {
     if (withParameter && this.locationId !== null) {
-      return `${this.parent.path()}/emergency-locations/${this.locationId}`
+      return `${this.parent.path()}/emergency-locations/${this.locationId}`;
     }
 
-    return `${this.parent.path()}/emergency-locations`
+    return `${this.parent.path()}/emergency-locations`;
   }
 
   /**
@@ -26,9 +31,14 @@ class EmergencyLocations {
    * Rate Limit Group: Medium
    * Http post /restapi/v1.0/account/{accountId}/emergency-locations
    */
-  async post (emergencyLocationInfoRequest: EmergencyLocationInfoRequest): Promise<string> {
-    const r = await this.rc.post(this.path(false), emergencyLocationInfoRequest)
-    return r.data
+  async post(
+    emergencyLocationInfoRequest: EmergencyLocationInfoRequest
+  ): Promise<string> {
+    const r = await this.rc.post(
+      this.path(false),
+      emergencyLocationInfoRequest
+    );
+    return r.data;
   }
 
   /**
@@ -36,9 +46,11 @@ class EmergencyLocations {
    * Rate Limit Group: Light
    * Http get /restapi/v1.0/account/{accountId}/emergency-locations
    */
-  async list (queryParams?: ListEmergencyLocationsParameters): Promise<EmergencyLocationList> {
-    const r = await this.rc.get(this.path(false), queryParams)
-    return r.data
+  async list(
+    queryParams?: ListEmergencyLocationsParameters
+  ): Promise<EmergencyLocationList> {
+    const r = await this.rc.get(this.path(false), queryParams);
+    return r.data;
   }
 
   /**
@@ -46,13 +58,13 @@ class EmergencyLocations {
    * Rate Limit Group: Light
    * Http get /restapi/v1.0/account/{accountId}/emergency-locations/{locationId}
    */
-  async get (): Promise<EmergencyLocationInfo> {
+  async get(): Promise<EmergencyLocationInfo> {
     if (this.locationId === null) {
-      throw new Error('locationId must be specified.')
+      throw new Error('locationId must be specified.');
     }
 
-    const r = await this.rc.get(this.path())
-    return r.data
+    const r = await this.rc.get(this.path());
+    return r.data;
   }
 
   /**
@@ -60,14 +72,16 @@ class EmergencyLocations {
    * Rate Limit Group: Heavy
    * Http put /restapi/v1.0/account/{accountId}/emergency-locations/{locationId}
    */
-  async put (emergencyLocationInfoRequest: EmergencyLocationInfoRequest): Promise<EmergencyLocationInfo> {
+  async put(
+    emergencyLocationInfoRequest: EmergencyLocationInfoRequest
+  ): Promise<EmergencyLocationInfo> {
     if (this.locationId === null) {
-      throw new Error('locationId must be specified.')
+      throw new Error('locationId must be specified.');
     }
 
-    const r = await this.rc.put(this.path(), emergencyLocationInfoRequest)
-    return r.data
+    const r = await this.rc.put(this.path(), emergencyLocationInfoRequest);
+    return r.data;
   }
 }
 
-export default EmergencyLocations
+export default EmergencyLocations;

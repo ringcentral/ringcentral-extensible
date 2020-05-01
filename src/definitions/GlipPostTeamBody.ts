@@ -1,26 +1,26 @@
-import { CreateGlipMember } from '.'
+import {CreateGlipMember} from '.';
 
 class GlipPostTeamBody {
   /**
    * Team access level.
    */
-  public?: boolean
+  public?: boolean;
 
   /**
    * Team name.
    * Required
    */
-  name?: string
+  name?: string;
 
   /**
    * Team description.
    */
-  description?: string
+  description?: string;
 
   /**
    * List of glip members
    */
-  members?: CreateGlipMember[]
+  members?: CreateGlipMember[];
 }
 
-export default GlipPostTeamBody
+export default GlipPostTeamBody;

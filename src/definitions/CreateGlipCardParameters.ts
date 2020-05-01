@@ -2,7 +2,7 @@ class CreateGlipCardParameters {
   /**
    * Internal identifier of a group where to create a post with the card
    */
-  groupId?: number
+  groupId?: number;
 }
 
-export default CreateGlipCardParameters
+export default CreateGlipCardParameters;

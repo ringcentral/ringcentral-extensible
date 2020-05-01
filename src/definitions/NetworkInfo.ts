@@ -1,31 +1,35 @@
-import { AutomaticLocationUpdatesSiteInfo, PublicIpRangeInfo, PrivateIpRangeInfo } from '.'
+import {
+  AutomaticLocationUpdatesSiteInfo,
+  PublicIpRangeInfo,
+  PrivateIpRangeInfo,
+} from '.';
 
 class NetworkInfo {
   /**
    * Internal identifier of a network
    */
-  id?: string
+  id?: string;
 
   /**
    * Link to a network resource
    */
-  uri?: string
+  uri?: string;
 
   /**
    */
-  name?: string
+  name?: string;
 
   /**
    */
-  site?: AutomaticLocationUpdatesSiteInfo
+  site?: AutomaticLocationUpdatesSiteInfo;
 
   /**
    */
-  publicIpRanges?: PublicIpRangeInfo[]
+  publicIpRanges?: PublicIpRangeInfo[];
 
   /**
    */
-  privateIpRanges?: PrivateIpRangeInfo[]
+  privateIpRanges?: PrivateIpRangeInfo[];
 }
 
-export default NetworkInfo
+export default NetworkInfo;

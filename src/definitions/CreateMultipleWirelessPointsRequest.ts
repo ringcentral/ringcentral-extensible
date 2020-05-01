@@ -1,9 +1,9 @@
-import { CreateWirelessPoint } from '.'
+import {CreateWirelessPoint} from '.';
 
 class CreateMultipleWirelessPointsRequest {
   /**
    */
-  records?: CreateWirelessPoint[]
+  records?: CreateWirelessPoint[];
 }
 
-export default CreateMultipleWirelessPointsRequest
+export default CreateMultipleWirelessPointsRequest;

@@ -2,12 +2,12 @@ class Photo {
   /**
    * Required
    */
-  type?: ('photo')
+  type?: 'photo';
 
   /**
    * Required
    */
-  value?: string
+  value?: string;
 }
 
-export default Photo
+export default Photo;

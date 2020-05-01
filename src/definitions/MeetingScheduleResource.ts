@@ -1,17 +1,17 @@
-import { TimezoneResource } from '.'
+import {TimezoneResource} from '.';
 
 class MeetingScheduleResource {
   /**
    */
-  startTime?: string
+  startTime?: string;
 
   /**
    */
-  durationInMinutes?: number
+  durationInMinutes?: number;
 
   /**
    */
-  timeZone?: TimezoneResource
+  timeZone?: TimezoneResource;
 }
 
-export default MeetingScheduleResource
+export default MeetingScheduleResource;

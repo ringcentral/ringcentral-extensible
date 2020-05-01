@@ -1,19 +1,19 @@
-import { RingOutStatusInfo } from '.'
+import {RingOutStatusInfo} from '.';
 
 class GetRingOutStatusResponse {
   /**
    * Internal identifier of a RingOut call
    */
-  id?: number
+  id?: number;
 
   /**
    */
-  uri?: string
+  uri?: string;
 
   /**
    * RingOut status information
    */
-  status?: RingOutStatusInfo
+  status?: RingOutStatusInfo;
 }
 
-export default GetRingOutStatusResponse
+export default GetRingOutStatusResponse;

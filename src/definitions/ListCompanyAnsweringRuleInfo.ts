@@ -1,40 +1,40 @@
-import { CalledNumberInfo, CompanyAnsweringRuleExtensionInfo } from '.'
+import {CalledNumberInfo, CompanyAnsweringRuleExtensionInfo} from '.';
 
 class ListCompanyAnsweringRuleInfo {
   /**
    * Internal identifier of an answering rule
    */
-  id?: string
+  id?: string;
 
   /**
    * Canonical URI of an answering rule
    */
-  uri?: string
+  uri?: string;
 
   /**
    * Specifies if the rule is active or inactive. The default value is 'True'
    * Default: true
    */
-  enabled?: boolean
+  enabled?: boolean;
 
   /**
    * Type of an answering rule, the default value is 'Custom' = ['BusinessHours', 'AfterHours', 'Custom']
    */
-  type?: ('BusinessHours' | 'AfterHours' | 'Custom')
+  type?: 'BusinessHours' | 'AfterHours' | 'Custom';
 
   /**
    * Name of an answering rule specified by user. Max number of symbols is 30. The default value is 'My Rule N' where 'N' is the first free number
    */
-  name?: string
+  name?: string;
 
   /**
    * Answering rules are applied when calling to selected number(s)
    */
-  calledNumbers?: CalledNumberInfo[]
+  calledNumbers?: CalledNumberInfo[];
 
   /**
    */
-  extension?: CompanyAnsweringRuleExtensionInfo
+  extension?: CompanyAnsweringRuleExtensionInfo;
 }
 
-export default ListCompanyAnsweringRuleInfo
+export default ListCompanyAnsweringRuleInfo;

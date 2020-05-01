@@ -2,17 +2,25 @@ class GlipMentionsInfo {
   /**
    * Internal identifier of a user
    */
-  id?: string
+  id?: string;
 
   /**
    * Type of mentions
    */
-  type?: ('Person' | 'Team' | 'File' | 'Link' | 'Event' | 'Task' | 'Note' | 'Card')
+  type?:
+    | 'Person'
+    | 'Team'
+    | 'File'
+    | 'Link'
+    | 'Event'
+    | 'Task'
+    | 'Note'
+    | 'Card';
 
   /**
    * Name of a user
    */
-  name?: string
+  name?: string;
 }
 
-export default GlipMentionsInfo
+export default GlipMentionsInfo;

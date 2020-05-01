@@ -1,25 +1,29 @@
-import { ForwardingNumberInfo, CallHandlingNavigationInfo, CallHandlingPagingInfo } from '.'
+import {
+  ForwardingNumberInfo,
+  CallHandlingNavigationInfo,
+  CallHandlingPagingInfo,
+} from '.';
 
 class GetExtensionForwardingNumberListResponse {
   /**
    * Link to the forwarding number list resource
    */
-  uri?: string
+  uri?: string;
 
   /**
    * List of forwarding phone numbers
    */
-  records?: ForwardingNumberInfo[]
+  records?: ForwardingNumberInfo[];
 
   /**
    * Information on navigation
    */
-  navigation?: CallHandlingNavigationInfo
+  navigation?: CallHandlingNavigationInfo;
 
   /**
    * Information on paging
    */
-  paging?: CallHandlingPagingInfo
+  paging?: CallHandlingPagingInfo;
 }
 
-export default GetExtensionForwardingNumberListResponse
+export default GetExtensionForwardingNumberListResponse;

@@ -1,78 +1,96 @@
-import { ContactInfoCreationRequest, CustomFieldInfo, ReferenceInfo, Roles, RegionalSettings, SiteInfo, ExtensionStatusInfo } from '.'
+import {
+  ContactInfoCreationRequest,
+  CustomFieldInfo,
+  ReferenceInfo,
+  Roles,
+  RegionalSettings,
+  SiteInfo,
+  ExtensionStatusInfo,
+} from '.';
 
 class ExtensionCreationRequest {
   /**
    * Contact Information
    */
-  contact?: ContactInfoCreationRequest
+  contact?: ContactInfoCreationRequest;
 
   /**
    * Number of extension
    */
-  extensionNumber?: string
+  extensionNumber?: string;
 
   /**
    */
-  customFields?: CustomFieldInfo[]
+  customFields?: CustomFieldInfo[];
 
   /**
    * Password for extension. If not specified, the password is auto-generated
    */
-  password?: string
+  password?: string;
 
   /**
    * List of non-RC internal identifiers assigned to an extension
    */
-  references?: ReferenceInfo[]
+  references?: ReferenceInfo[];
 
   /**
    */
-  roles?: Roles[]
+  roles?: Roles[];
 
   /**
    * Extension region data (timezone, home country, language)
    */
-  regionalSettings?: RegionalSettings
+  regionalSettings?: RegionalSettings;
 
   /**
    * Additional extension identifier, created by partner application and applied on client side
    */
-  partnerId?: string
+  partnerId?: string;
 
   /**
    * IVR PIN
    */
-  ivrPin?: string
+  ivrPin?: string;
 
   /**
    * Specifies extension configuration wizard state (web service setup).
    * Default: NotStarted
    */
-  setupWizardState?: ('NotStarted' | 'Incomplete' | 'Completed')
+  setupWizardState?: 'NotStarted' | 'Incomplete' | 'Completed';
 
   /**
    */
-  site?: SiteInfo
+  site?: SiteInfo;
 
   /**
    * Extension current state
    */
-  status?: ('Enabled' | 'Disabled' | 'NotActivated' | 'Unassigned' | 'Frozen')
+  status?: 'Enabled' | 'Disabled' | 'NotActivated' | 'Unassigned' | 'Frozen';
 
   /**
    * Status information (reason, comment). For 'Disabled' status only
    */
-  statusInfo?: ExtensionStatusInfo
+  statusInfo?: ExtensionStatusInfo;
 
   /**
    * Extension type
    */
-  type?: ('User' | 'VirtualUser' | 'DigitalUser' | 'Department' | 'Announcement' | 'Voicemail' | 'SharedLinesGroup' | 'PagingOnly' | 'ParkLocation' | 'Limited')
+  type?:
+    | 'User'
+    | 'VirtualUser'
+    | 'DigitalUser'
+    | 'Department'
+    | 'Announcement'
+    | 'Voicemail'
+    | 'SharedLinesGroup'
+    | 'PagingOnly'
+    | 'ParkLocation'
+    | 'Limited';
 
   /**
    * Hides extension from showing in company directory. Supported for extensions of User type only. For unassigned extensions the value is set to 'True' by default. For assigned extensions the value is set to 'False' by default
    */
-  hidden?: boolean
+  hidden?: boolean;
 }
 
-export default ExtensionCreationRequest
+export default ExtensionCreationRequest;

@@ -1,27 +1,31 @@
-import { LocationInfo, ProvisioningNavigationInfo, ProvisioningPagingInfo } from '.'
+import {
+  LocationInfo,
+  ProvisioningNavigationInfo,
+  ProvisioningPagingInfo,
+} from '.';
 
 class GetLocationListResponse {
   /**
    * Link to the location list resource
    */
-  uri?: string
+  uri?: string;
 
   /**
    * List of locations
    */
-  records?: LocationInfo[]
+  records?: LocationInfo[];
 
   /**
    * Information on navigation
    * Required
    */
-  navigation?: ProvisioningNavigationInfo
+  navigation?: ProvisioningNavigationInfo;
 
   /**
    * Information on paging
    * Required
    */
-  paging?: ProvisioningPagingInfo
+  paging?: ProvisioningPagingInfo;
 }
 
-export default GetLocationListResponse
+export default GetLocationListResponse;

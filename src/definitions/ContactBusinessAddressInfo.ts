@@ -2,27 +2,27 @@ class ContactBusinessAddressInfo {
   /**
    * Country name of an extension user company
    */
-  country?: string
+  country?: string;
 
   /**
    * State/province name of an extension user company. Mandatory for the USA, UK and Canada
    */
-  state?: string
+  state?: string;
 
   /**
    * City name of an extension user company
    */
-  city?: string
+  city?: string;
 
   /**
    * Street address of an extension user company
    */
-  street?: string
+  street?: string;
 
   /**
    * Zip code of an extension user company
    */
-  zip?: string
+  zip?: string;
 }
 
-export default ContactBusinessAddressInfo
+export default ContactBusinessAddressInfo;

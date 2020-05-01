@@ -2,16 +2,22 @@ class ReasonInfo {
   /**
    * Reason code
    */
-  code?: ('ServicePlanLimitation' | 'AccountLimitation' | 'ExtensionTypeLimitation' | 'ExtensionLimitation' | 'InsufficientPermissions' | 'ConfigurationLimitation')
+  code?:
+    | 'ServicePlanLimitation'
+    | 'AccountLimitation'
+    | 'ExtensionTypeLimitation'
+    | 'ExtensionLimitation'
+    | 'InsufficientPermissions'
+    | 'ConfigurationLimitation';
 
   /**
    * Reason description
    */
-  message?: string
+  message?: string;
 
   /**
    */
-  permission?: string
+  permission?: string;
 }
 
-export default ReasonInfo
+export default ReasonInfo;

@@ -1,21 +1,25 @@
-import { MeetingResponseResource, MeetingsPagingInfo, MeetingsNavigationInfo } from '.'
+import {
+  MeetingResponseResource,
+  MeetingsPagingInfo,
+  MeetingsNavigationInfo,
+} from '.';
 
 class MeetingsResource {
   /**
    */
-  uri?: string
+  uri?: string;
 
   /**
    */
-  records?: MeetingResponseResource[]
+  records?: MeetingResponseResource[];
 
   /**
    */
-  paging?: MeetingsPagingInfo
+  paging?: MeetingsPagingInfo;
 
   /**
    */
-  navigation?: MeetingsNavigationInfo
+  navigation?: MeetingsNavigationInfo;
 }
 
-export default MeetingsResource
+export default MeetingsResource;

@@ -1,17 +1,17 @@
-import Parent from '..'
-import RestClient from '../../..'
+import Parent from '..';
+import RestClient from '../../..';
 
 class Status {
-  rc: RestClient
-  parent: Parent
+  rc: RestClient;
+  parent: Parent;
 
-  constructor (parent: Parent) {
-    this.parent = parent
-    this.rc = parent.rc
+  constructor(parent: Parent) {
+    this.parent = parent;
+    this.rc = parent.rc;
   }
 
-  path (): string {
-    return `${this.parent.path()}/status`
+  path(): string {
+    return `${this.parent.path()}/status`;
   }
 
   /**
@@ -19,10 +19,10 @@ class Status {
    * Rate Limit Group: NoThrottling
    * Http get /restapi/v1.0/status
    */
-  async get (): Promise<string> {
-    const r = await this.rc.get(this.path())
-    return r.data
+  async get(): Promise<string> {
+    const r = await this.rc.get(this.path());
+    return r.data;
   }
 }
 
-export default Status
+export default Status;

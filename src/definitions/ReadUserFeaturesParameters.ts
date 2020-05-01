@@ -1,11 +1,11 @@
 class ReadUserFeaturesParameters {
   /**
    */
-  availableOnly?: boolean
+  availableOnly?: boolean;
 
   /**
    */
-  featureId?: string[]
+  featureId?: string[];
 }
 
-export default ReadUserFeaturesParameters
+export default ReadUserFeaturesParameters;

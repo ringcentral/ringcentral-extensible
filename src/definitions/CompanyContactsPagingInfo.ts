@@ -1,27 +1,27 @@
 class CompanyContactsPagingInfo {
   /**
    */
-  page?: number
+  page?: number;
 
   /**
    */
-  totalPages?: number
+  totalPages?: number;
 
   /**
    */
-  perPage?: number
+  perPage?: number;
 
   /**
    */
-  totalElements?: number
+  totalElements?: number;
 
   /**
    */
-  pageStart?: number
+  pageStart?: number;
 
   /**
    */
-  pageEnd?: number
+  pageEnd?: number;
 }
 
-export default CompanyContactsPagingInfo
+export default CompanyContactsPagingInfo;

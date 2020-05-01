@@ -1,57 +1,57 @@
-import { UserAddress, Email, Name, PhoneNumber, Photo, EnterpriseUser } from '.'
+import {UserAddress, Email, Name, PhoneNumber, Photo, EnterpriseUser} from '.';
 
 class User {
   /**
    * user status
    */
-  active?: boolean
+  active?: boolean;
 
   /**
    */
-  addresses?: UserAddress[]
+  addresses?: UserAddress[];
 
   /**
    * Required
    */
-  emails?: Email[]
+  emails?: Email[];
 
   /**
    * external unique resource id defined by provisioning client
    */
-  externalId?: string
+  externalId?: string;
 
   /**
    * unique resource id defined by RingCentral
    */
-  id?: string
+  id?: string;
 
   /**
    * Required
    */
-  name?: Name
+  name?: Name;
 
   /**
    */
-  phoneNumbers?: PhoneNumber[]
+  phoneNumbers?: PhoneNumber[];
 
   /**
    */
-  photos?: Photo[]
+  photos?: Photo[];
 
   /**
    * Required
    */
-  schemas?: ('urn:ietf:params:scim:schemas:core:2.0:User')[]
+  schemas?: 'urn:ietf:params:scim:schemas:core:2.0:User'[];
 
   /**
    */
-  'urn:ietf:params:scim:schemas:extension:enterprise:2.0:User'?: EnterpriseUser
+  'urn:ietf:params:scim:schemas:extension:enterprise:2.0:User'?: EnterpriseUser;
 
   /**
    * MUST be same as work type email address
    * Required
    */
-  userName?: string
+  userName?: string;
 }
 
-export default User
+export default User;

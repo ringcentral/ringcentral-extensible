@@ -2,7 +2,7 @@ class CustomFieldUpdateRequest {
   /**
    * Custom field display name
    */
-  displayName?: string
+  displayName?: string;
 }
 
-export default CustomFieldUpdateRequest
+export default CustomFieldUpdateRequest;

@@ -1,15 +1,15 @@
-import { RecipientInfo } from '.'
+import {RecipientInfo} from '.';
 
 class VoicemailInfo {
   /**
    * If 'True' then voicemails are allowed to be received
    */
-  enabled?: boolean
+  enabled?: boolean;
 
   /**
    * Recipient data
    */
-  recipient?: RecipientInfo
+  recipient?: RecipientInfo;
 }
 
-export default VoicemailInfo
+export default VoicemailInfo;

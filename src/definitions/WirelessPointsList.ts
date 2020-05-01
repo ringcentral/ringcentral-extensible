@@ -1,25 +1,29 @@
-import { WirelessPointInfo, ProvisioningNavigationInfo, ProvisioningPagingInfo } from '.'
+import {
+  WirelessPointInfo,
+  ProvisioningNavigationInfo,
+  ProvisioningPagingInfo,
+} from '.';
 
 class WirelessPointsList {
   /**
    * Link to the wireless point list resource
    */
-  uri?: string
+  uri?: string;
 
   /**
    * List of wireless points with assigned emergency addresses
    */
-  records?: WirelessPointInfo[]
+  records?: WirelessPointInfo[];
 
   /**
    * Information on navigation
    */
-  navigation?: ProvisioningNavigationInfo
+  navigation?: ProvisioningNavigationInfo;
 
   /**
    * Information on paging
    */
-  paging?: ProvisioningPagingInfo
+  paging?: ProvisioningPagingInfo;
 }
 
-export default WirelessPointsList
+export default WirelessPointsList;

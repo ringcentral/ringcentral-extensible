@@ -1,19 +1,19 @@
 class PublicIpRangeInfo {
   /**
    */
-  id?: string
+  id?: string;
 
   /**
    */
-  startIp?: string
+  startIp?: string;
 
   /**
    */
-  endIp?: string
+  endIp?: string;
 
   /**
    */
-  matched?: boolean
+  matched?: boolean;
 }
 
-export default PublicIpRangeInfo
+export default PublicIpRangeInfo;

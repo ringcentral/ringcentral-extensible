@@ -2,17 +2,17 @@ class AutomaticLocationUpdatesModelInfo {
   /**
    * Device model identifier
    */
-  id?: string
+  id?: string;
 
   /**
    * Device name
    */
-  name?: string
+  name?: string;
 
   /**
    * Device feature or multiple features supported
    */
-  features?: ('BLA' | 'Intercom' | 'Paging' | 'HELD')[]
+  features?: ('BLA' | 'Intercom' | 'Paging' | 'HELD')[];
 }
 
-export default AutomaticLocationUpdatesModelInfo
+export default AutomaticLocationUpdatesModelInfo;

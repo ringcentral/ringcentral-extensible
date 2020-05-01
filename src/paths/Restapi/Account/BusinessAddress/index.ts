@@ -1,18 +1,21 @@
-import { AccountBusinessAddressResource, ModifyAccountBusinessAddressRequest } from '../../../../definitions'
-import Parent from '..'
-import RestClient from '../../../..'
+import {
+  AccountBusinessAddressResource,
+  ModifyAccountBusinessAddressRequest,
+} from '../../../../definitions';
+import Parent from '..';
+import RestClient from '../../../..';
 
 class BusinessAddress {
-  rc: RestClient
-  parent: Parent
+  rc: RestClient;
+  parent: Parent;
 
-  constructor (parent: Parent) {
-    this.parent = parent
-    this.rc = parent.rc
+  constructor(parent: Parent) {
+    this.parent = parent;
+    this.rc = parent.rc;
   }
 
-  path (): string {
-    return `${this.parent.path()}/business-address`
+  path(): string {
+    return `${this.parent.path()}/business-address`;
   }
 
   /**
@@ -20,9 +23,9 @@ class BusinessAddress {
    * Rate Limit Group: Light
    * Http get /restapi/v1.0/account/{accountId}/business-address
    */
-  async get (): Promise<AccountBusinessAddressResource> {
-    const r = await this.rc.get(this.path())
-    return r.data
+  async get(): Promise<AccountBusinessAddressResource> {
+    const r = await this.rc.get(this.path());
+    return r.data;
   }
 
   /**
@@ -30,10 +33,15 @@ class BusinessAddress {
    * Rate Limit Group: Medium
    * Http put /restapi/v1.0/account/{accountId}/business-address
    */
-  async put (modifyAccountBusinessAddressRequest: ModifyAccountBusinessAddressRequest): Promise<AccountBusinessAddressResource> {
-    const r = await this.rc.put(this.path(), modifyAccountBusinessAddressRequest)
-    return r.data
+  async put(
+    modifyAccountBusinessAddressRequest: ModifyAccountBusinessAddressRequest
+  ): Promise<AccountBusinessAddressResource> {
+    const r = await this.rc.put(
+      this.path(),
+      modifyAccountBusinessAddressRequest
+    );
+    return r.data;
   }
 }
 
-export default BusinessAddress
+export default BusinessAddress;

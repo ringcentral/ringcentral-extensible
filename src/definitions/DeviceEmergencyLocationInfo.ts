@@ -2,12 +2,12 @@ class DeviceEmergencyLocationInfo {
   /**
    * Internal identifier of the emergency response location
    */
-  id?: string
+  id?: string;
 
   /**
    * Location name
    */
-  name?: string
+  name?: string;
 }
 
-export default DeviceEmergencyLocationInfo
+export default DeviceEmergencyLocationInfo;

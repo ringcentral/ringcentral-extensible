@@ -2,32 +2,32 @@ class EmergencyLocationAddressInfoRequest {
   /**
    * Country name
    */
-  country?: string
+  country?: string;
 
   /**
    * State/Province name. Mandatory for the USA, the UK and Canada
    */
-  state?: string
+  state?: string;
 
   /**
    * City name
    */
-  city?: string
+  city?: string;
 
   /**
    * First line address
    */
-  street?: string
+  street?: string;
 
   /**
    * Second line address (apartment, suite, unit, building, floor, etc.)
    */
-  street2?: string
+  street2?: string;
 
   /**
    * Postal (Zip) code
    */
-  zip?: string
+  zip?: string;
 }
 
-export default EmergencyLocationAddressInfoRequest
+export default EmergencyLocationAddressInfoRequest;

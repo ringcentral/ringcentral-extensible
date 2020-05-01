@@ -2,7 +2,7 @@ class CallPartyFlip {
   /**
    * Call flip id
    */
-  callFlipId?: string
+  callFlipId?: string;
 }
 
-export default CallPartyFlip
+export default CallPartyFlip;

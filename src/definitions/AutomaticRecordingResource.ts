@@ -2,27 +2,27 @@ class AutomaticRecordingResource {
   /**
    * Flag for controling Automatic Call Recording settings
    */
-  enabled?: boolean
+  enabled?: boolean;
 
   /**
    * Flag for controlling 'Play Call Recording Announcement for Outbound Calls' settings
    */
-  outboundCallTones?: boolean
+  outboundCallTones?: boolean;
 
   /**
    * Flag for controlling 'Play periodic tones for outbound calls' settings
    */
-  outboundCallAnnouncement?: boolean
+  outboundCallAnnouncement?: boolean;
 
   /**
    * Flag for controlling 'Allow mute in auto call recording' settings
    */
-  allowMute?: boolean
+  allowMute?: boolean;
 
   /**
    * Total amount of extension that are used in call recordings
    */
-  extensionCount?: number
+  extensionCount?: number;
 }
 
-export default AutomaticRecordingResource
+export default AutomaticRecordingResource;

@@ -1,25 +1,25 @@
-import { ForwardingNumberInfoRulesCreateRuleRequest } from '.'
+import {ForwardingNumberInfoRulesCreateRuleRequest} from '.';
 
 class RuleInfoCreateRuleRequest {
   /**
    * Forwarding number (or group) ordinal. Not returned for inactive numbers
    */
-  index?: number
+  index?: number;
 
   /**
    * Number of rings for a forwarding number (or group). For inactive numbers the default value ('4') is returned
    */
-  ringCount?: number
+  ringCount?: number;
 
   /**
    * Phone number status
    */
-  enabled?: boolean
+  enabled?: boolean;
 
   /**
    * Forwarding number (or group) data
    */
-  forwardingNumbers?: ForwardingNumberInfoRulesCreateRuleRequest[]
+  forwardingNumbers?: ForwardingNumberInfoRulesCreateRuleRequest[];
 }
 
-export default RuleInfoCreateRuleRequest
+export default RuleInfoCreateRuleRequest;

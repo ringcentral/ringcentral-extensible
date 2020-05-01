@@ -2,17 +2,17 @@ class TransferTarget {
   /**
    * Phone number
    */
-  phoneNumber?: string
+  phoneNumber?: string;
 
   /**
    * Voicemail owner extension identifier
    */
-  voicemail?: string
+  voicemail?: string;
 
   /**
    * Park orbit identifier
    */
-  parkOrbit?: string
+  parkOrbit?: string;
 }
 
-export default TransferTarget
+export default TransferTarget;

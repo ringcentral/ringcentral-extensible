@@ -1,38 +1,38 @@
-import { GlipMessageAttachmentInfoRequest } from '.'
+import {GlipMessageAttachmentInfoRequest} from '.';
 
 class GlipCreatePost {
   /**
    */
-  activity?: string
+  activity?: string;
 
   /**
    * Title of a message. (Can be set for bot's messages only).
    */
-  title?: string
+  title?: string;
 
   /**
    * Text of a post
    * Maximum: 1000
    */
-  text?: string
+  text?: string;
 
   /**
    * Internal identifier of a group
    */
-  groupId?: string
+  groupId?: string;
 
   /**
    * List of attachments to be posted
    */
-  attachments?: GlipMessageAttachmentInfoRequest[]
+  attachments?: GlipMessageAttachmentInfoRequest[];
 
   /**
    */
-  personIds?: string[]
+  personIds?: string[];
 
   /**
    */
-  system?: boolean
+  system?: boolean;
 }
 
-export default GlipCreatePost
+export default GlipCreatePost;

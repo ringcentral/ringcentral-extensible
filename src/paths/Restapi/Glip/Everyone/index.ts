@@ -1,18 +1,21 @@
-import { GlipEveryoneInfo, UpdateGlipEveryoneRequest } from '../../../../definitions'
-import Parent from '..'
-import RestClient from '../../../..'
+import {
+  GlipEveryoneInfo,
+  UpdateGlipEveryoneRequest,
+} from '../../../../definitions';
+import Parent from '..';
+import RestClient from '../../../..';
 
 class Everyone {
-  rc: RestClient
-  parent: Parent
+  rc: RestClient;
+  parent: Parent;
 
-  constructor (parent: Parent) {
-    this.parent = parent
-    this.rc = parent.rc
+  constructor(parent: Parent) {
+    this.parent = parent;
+    this.rc = parent.rc;
   }
 
-  path (): string {
-    return `${this.parent.path()}/everyone`
+  path(): string {
+    return `${this.parent.path()}/everyone`;
   }
 
   /**
@@ -20,9 +23,9 @@ class Everyone {
    * Rate Limit Group: Light
    * Http get /restapi/v1.0/glip/everyone
    */
-  async get (): Promise<GlipEveryoneInfo> {
-    const r = await this.rc.get(this.path())
-    return r.data
+  async get(): Promise<GlipEveryoneInfo> {
+    const r = await this.rc.get(this.path());
+    return r.data;
   }
 
   /**
@@ -30,10 +33,12 @@ class Everyone {
    * Rate Limit Group: Medium
    * Http patch /restapi/v1.0/glip/everyone
    */
-  async patch (updateGlipEveryoneRequest: UpdateGlipEveryoneRequest): Promise<GlipEveryoneInfo> {
-    const r = await this.rc.patch(this.path(), updateGlipEveryoneRequest)
-    return r.data
+  async patch(
+    updateGlipEveryoneRequest: UpdateGlipEveryoneRequest
+  ): Promise<GlipEveryoneInfo> {
+    const r = await this.rc.patch(this.path(), updateGlipEveryoneRequest);
+    return r.data;
   }
 }
 
-export default Everyone
+export default Everyone;

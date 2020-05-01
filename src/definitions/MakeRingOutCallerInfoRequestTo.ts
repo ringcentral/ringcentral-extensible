@@ -2,7 +2,7 @@ class MakeRingOutCallerInfoRequestTo {
   /**
    * Phone number in E.164 format
    */
-  phoneNumber?: string
+  phoneNumber?: string;
 }
 
-export default MakeRingOutCallerInfoRequestTo
+export default MakeRingOutCallerInfoRequestTo;

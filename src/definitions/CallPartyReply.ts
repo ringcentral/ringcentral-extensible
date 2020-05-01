@@ -1,14 +1,14 @@
-import { ReplyWithPattern } from '.'
+import {ReplyWithPattern} from '.';
 
 class CallPartyReply {
   /**
    * Text to reply
    */
-  replyWithText?: string
+  replyWithText?: string;
 
   /**
    */
-  replyWithPattern?: ReplyWithPattern
+  replyWithPattern?: ReplyWithPattern;
 }
 
-export default CallPartyReply
+export default CallPartyReply;

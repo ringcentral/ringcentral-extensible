@@ -1,64 +1,69 @@
-import { AccountResource, PhoneNumberResource, AccountDirectoryProfileImageResource, BusinessSiteResource } from '.'
+import {
+  AccountResource,
+  PhoneNumberResource,
+  AccountDirectoryProfileImageResource,
+  BusinessSiteResource,
+} from '.';
 
 class ContactResource {
   /**
    */
-  account?: AccountResource
+  account?: AccountResource;
 
   /**
    */
-  department?: string
+  department?: string;
 
   /**
    */
-  email?: string
+  email?: string;
 
   /**
    */
-  extensionNumber?: string
+  extensionNumber?: string;
 
   /**
    * First name of a contact, for user extensions only
    */
-  firstName?: string
+  firstName?: string;
 
   /**
    * Last name of a contact, for user extensions only
    */
-  lastName?: string
+  lastName?: string;
 
   /**
    * Name of a contact, for non-user extensions
    */
-  name?: string
+  name?: string;
 
   /**
    */
-  id?: string
+  id?: string;
 
   /**
    */
-  jobTitle?: string
+  jobTitle?: string;
 
   /**
    */
-  phoneNumbers?: PhoneNumberResource[]
+  phoneNumbers?: PhoneNumberResource[];
 
   /**
    */
-  profileImage?: AccountDirectoryProfileImageResource
+  profileImage?: AccountDirectoryProfileImageResource;
 
   /**
    */
-  site?: BusinessSiteResource
+  site?: BusinessSiteResource;
 
   /**
    */
-  status?: string
+  status?: string;
 
   /**
    */
-  type?: string
+  type?: string;
 }
 
-export default ContactResource
+export default ContactResource;

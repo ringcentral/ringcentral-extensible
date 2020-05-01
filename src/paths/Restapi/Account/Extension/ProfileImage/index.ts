@@ -1,25 +1,28 @@
-import { CreateUserProfileImageRequest, UpdateUserProfileImageRequest } from '../../../../../definitions'
-import Utils from '../../../../../Utils'
-import Parent from '..'
-import RestClient from '../../../../..'
+import {
+  CreateUserProfileImageRequest,
+  UpdateUserProfileImageRequest,
+} from '../../../../../definitions';
+import Utils from '../../../../../Utils';
+import Parent from '..';
+import RestClient from '../../../../..';
 
 class ProfileImage {
-  rc: RestClient
-  scaleSize: (string | null)
-  parent: Parent
+  rc: RestClient;
+  scaleSize: string | null;
+  parent: Parent;
 
-  constructor (parent: Parent, scaleSize: (string | null) = null) {
-    this.parent = parent
-    this.rc = parent.rc
-    this.scaleSize = scaleSize
+  constructor(parent: Parent, scaleSize: string | null = null) {
+    this.parent = parent;
+    this.rc = parent.rc;
+    this.scaleSize = scaleSize;
   }
 
-  path (withParameter: boolean = true): string {
+  path(withParameter = true): string {
     if (withParameter && this.scaleSize !== null) {
-      return `${this.parent.path()}/profile-image/${this.scaleSize}`
+      return `${this.parent.path()}/profile-image/${this.scaleSize}`;
     }
 
-    return `${this.parent.path()}/profile-image`
+    return `${this.parent.path()}/profile-image`;
   }
 
   /**
@@ -27,9 +30,11 @@ class ProfileImage {
    * Rate Limit Group: Medium
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image
    */
-  async list (): Promise<Buffer> {
-    const r = await this.rc.get(this.path(false), undefined, { responseType: 'arraybuffer' })
-    return r.data
+  async list(): Promise<Buffer> {
+    const r = await this.rc.get(this.path(false), undefined, {
+      responseType: 'arraybuffer',
+    });
+    return r.data;
   }
 
   /**
@@ -37,10 +42,14 @@ class ProfileImage {
    * Rate Limit Group: Heavy
    * Http post /restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image
    */
-  async post (createUserProfileImageRequest: CreateUserProfileImageRequest): Promise<string> {
-    const formData = Utils.getFormData(createUserProfileImageRequest)
-    const r = await this.rc.post(this.path(false), formData, undefined, { headers: formData.getHeaders() })
-    return r.data
+  async post(
+    createUserProfileImageRequest: CreateUserProfileImageRequest
+  ): Promise<string> {
+    const formData = Utils.getFormData(createUserProfileImageRequest);
+    const r = await this.rc.post(this.path(false), formData, undefined, {
+      headers: formData.getHeaders(),
+    });
+    return r.data;
   }
 
   /**
@@ -48,10 +57,14 @@ class ProfileImage {
    * Rate Limit Group: Heavy
    * Http put /restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image
    */
-  async put (updateUserProfileImageRequest: UpdateUserProfileImageRequest): Promise<string> {
-    const formData = Utils.getFormData(updateUserProfileImageRequest)
-    const r = await this.rc.put(this.path(false), formData, undefined, { headers: formData.getHeaders() })
-    return r.data
+  async put(
+    updateUserProfileImageRequest: UpdateUserProfileImageRequest
+  ): Promise<string> {
+    const formData = Utils.getFormData(updateUserProfileImageRequest);
+    const r = await this.rc.put(this.path(false), formData, undefined, {
+      headers: formData.getHeaders(),
+    });
+    return r.data;
   }
 
   /**
@@ -59,14 +72,16 @@ class ProfileImage {
    * Rate Limit Group: Light
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image/{scaleSize}
    */
-  async get (): Promise<Buffer> {
+  async get(): Promise<Buffer> {
     if (this.scaleSize === null) {
-      throw new Error('scaleSize must be specified.')
+      throw new Error('scaleSize must be specified.');
     }
 
-    const r = await this.rc.get(this.path(), undefined, { responseType: 'arraybuffer' })
-    return r.data
+    const r = await this.rc.get(this.path(), undefined, {
+      responseType: 'arraybuffer',
+    });
+    return r.data;
   }
 }
 
-export default ProfileImage
+export default ProfileImage;

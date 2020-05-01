@@ -2,21 +2,21 @@ class CallMonitoringGroupMemberInfo {
   /**
    * Link to a call monitoring group member
    */
-  uri?: string
+  uri?: string;
 
   /**
    * Internal identifier of a call monitoring group member
    */
-  id?: string
+  id?: string;
 
   /**
    * Extension number of a call monitoring group member
    */
-  extensionNumber?: string
+  extensionNumber?: string;
 
   /**
    */
-  permissions?: ('Monitoring' | 'Monitored')[]
+  permissions?: ('Monitoring' | 'Monitored')[];
 }
 
-export default CallMonitoringGroupMemberInfo
+export default CallMonitoringGroupMemberInfo;

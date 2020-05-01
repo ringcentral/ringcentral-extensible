@@ -1,25 +1,25 @@
-import { MessagingNavigationInfoURI } from '.'
+import {MessagingNavigationInfoURI} from '.';
 
 class MessagingNavigationInfo {
   /**
    * Canonical URI for the first page of the list
    */
-  firstPage?: MessagingNavigationInfoURI
+  firstPage?: MessagingNavigationInfoURI;
 
   /**
    * Canonical URI for the next page of the list
    */
-  nextPage?: MessagingNavigationInfoURI
+  nextPage?: MessagingNavigationInfoURI;
 
   /**
    * Canonical URI for the previous page of the list
    */
-  previousPage?: MessagingNavigationInfoURI
+  previousPage?: MessagingNavigationInfoURI;
 
   /**
    * Canonical URI for the last page of the list
    */
-  lastPage?: MessagingNavigationInfoURI
+  lastPage?: MessagingNavigationInfoURI;
 }
 
-export default MessagingNavigationInfo
+export default MessagingNavigationInfo;

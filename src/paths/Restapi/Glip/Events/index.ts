@@ -1,24 +1,29 @@
-import { GlipEventsInfo, ReadGlipEventsParameters, GlipEventInfo, GlipEventCreate } from '../../../../definitions'
-import Parent from '..'
-import RestClient from '../../../..'
+import {
+  GlipEventsInfo,
+  ReadGlipEventsParameters,
+  GlipEventInfo,
+  GlipEventCreate,
+} from '../../../../definitions';
+import Parent from '..';
+import RestClient from '../../../..';
 
 class Events {
-  rc: RestClient
-  eventId: (string | null)
-  parent: Parent
+  rc: RestClient;
+  eventId: string | null;
+  parent: Parent;
 
-  constructor (parent: Parent, eventId: (string | null) = null) {
-    this.parent = parent
-    this.rc = parent.rc
-    this.eventId = eventId
+  constructor(parent: Parent, eventId: string | null = null) {
+    this.parent = parent;
+    this.rc = parent.rc;
+    this.eventId = eventId;
   }
 
-  path (withParameter: boolean = true): string {
+  path(withParameter = true): string {
     if (withParameter && this.eventId !== null) {
-      return `${this.parent.path()}/events/${this.eventId}`
+      return `${this.parent.path()}/events/${this.eventId}`;
     }
 
-    return `${this.parent.path()}/events`
+    return `${this.parent.path()}/events`;
   }
 
   /**
@@ -26,9 +31,9 @@ class Events {
    * Rate Limit Group: Medium
    * Http get /restapi/v1.0/glip/events
    */
-  async list (queryParams?: ReadGlipEventsParameters): Promise<GlipEventsInfo> {
-    const r = await this.rc.get(this.path(false), queryParams)
-    return r.data
+  async list(queryParams?: ReadGlipEventsParameters): Promise<GlipEventsInfo> {
+    const r = await this.rc.get(this.path(false), queryParams);
+    return r.data;
   }
 
   /**
@@ -36,9 +41,9 @@ class Events {
    * Rate Limit Group: Medium
    * Http post /restapi/v1.0/glip/events
    */
-  async post (glipEventCreate: GlipEventCreate): Promise<GlipEventInfo> {
-    const r = await this.rc.post(this.path(false), glipEventCreate)
-    return r.data
+  async post(glipEventCreate: GlipEventCreate): Promise<GlipEventInfo> {
+    const r = await this.rc.post(this.path(false), glipEventCreate);
+    return r.data;
   }
 
   /**
@@ -46,13 +51,13 @@ class Events {
    * Rate Limit Group: Medium
    * Http get /restapi/v1.0/glip/events/{eventId}
    */
-  async get (): Promise<GlipEventInfo> {
+  async get(): Promise<GlipEventInfo> {
     if (this.eventId === null) {
-      throw new Error('eventId must be specified.')
+      throw new Error('eventId must be specified.');
     }
 
-    const r = await this.rc.get(this.path())
-    return r.data
+    const r = await this.rc.get(this.path());
+    return r.data;
   }
 
   /**
@@ -60,13 +65,13 @@ class Events {
    * Rate Limit Group: Medium
    * Http put /restapi/v1.0/glip/events/{eventId}
    */
-  async put (glipEventCreate: GlipEventCreate): Promise<GlipEventInfo> {
+  async put(glipEventCreate: GlipEventCreate): Promise<GlipEventInfo> {
     if (this.eventId === null) {
-      throw new Error('eventId must be specified.')
+      throw new Error('eventId must be specified.');
     }
 
-    const r = await this.rc.put(this.path(), glipEventCreate)
-    return r.data
+    const r = await this.rc.put(this.path(), glipEventCreate);
+    return r.data;
   }
 
   /**
@@ -74,14 +79,14 @@ class Events {
    * Rate Limit Group: Medium
    * Http delete /restapi/v1.0/glip/events/{eventId}
    */
-  async delete (): Promise<string> {
+  async delete(): Promise<string> {
     if (this.eventId === null) {
-      throw new Error('eventId must be specified.')
+      throw new Error('eventId must be specified.');
     }
 
-    const r = await this.rc.delete(this.path())
-    return r.data
+    const r = await this.rc.delete(this.path());
+    return r.data;
   }
 }
 
-export default Events
+export default Events;

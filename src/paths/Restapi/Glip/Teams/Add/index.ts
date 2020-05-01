@@ -1,18 +1,18 @@
-import { GlipPostMembersListBody } from '../../../../../definitions'
-import Parent from '..'
-import RestClient from '../../../../..'
+import {GlipPostMembersListBody} from '../../../../../definitions';
+import Parent from '..';
+import RestClient from '../../../../..';
 
 class Add {
-  rc: RestClient
-  parent: Parent
+  rc: RestClient;
+  parent: Parent;
 
-  constructor (parent: Parent) {
-    this.parent = parent
-    this.rc = parent.rc
+  constructor(parent: Parent) {
+    this.parent = parent;
+    this.rc = parent.rc;
   }
 
-  path (): string {
-    return `${this.parent.path()}/add`
+  path(): string {
+    return `${this.parent.path()}/add`;
   }
 
   /**
@@ -20,10 +20,12 @@ class Add {
    * Rate Limit Group: Medium
    * Http post /restapi/v1.0/glip/teams/{chatId}/add
    */
-  async post (glipPostMembersListBody: GlipPostMembersListBody): Promise<string> {
-    const r = await this.rc.post(this.path(), glipPostMembersListBody)
-    return r.data
+  async post(
+    glipPostMembersListBody: GlipPostMembersListBody
+  ): Promise<string> {
+    const r = await this.rc.post(this.path(), glipPostMembersListBody);
+    return r.data;
   }
 }
 
-export default Add
+export default Add;

@@ -1,9 +1,9 @@
-import { GlipTaskInfo } from '.'
+import {GlipTaskInfo} from '.';
 
 class GlipTaskList {
   /**
    */
-  records?: GlipTaskInfo[]
+  records?: GlipTaskInfo[];
 }
 
-export default GlipTaskList
+export default GlipTaskList;

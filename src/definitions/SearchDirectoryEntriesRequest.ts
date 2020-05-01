@@ -1,34 +1,46 @@
-import { OrderBy } from '.'
+import {OrderBy} from '.';
 
 class SearchDirectoryEntriesRequest {
   /**
    * String value to filter the contacts. The value specified is searched through the following fields: `firstName`, `lastName`, `extensionNumber`, `phoneNumber`, `email`
    */
-  searchString?: string
+  searchString?: string;
 
   /**
    * If 'True' then contacts of all accounts in federation are returned. If 'False' then only contacts of the current account are returned, and account section is eliminated in this case
    * Default: true
    */
-  showFederated?: boolean
+  showFederated?: boolean;
 
   /**
    * Type of extension to filter the contacts
    */
-  extensionType?: ('User' | 'Department' | 'Announcement' | 'Voicemail' | 'SharedLinesGroup' | 'PagingOnly' | 'ParkLocation' | 'IvrMenu' | 'Limited' | 'ApplicationExtension' | 'Site' | 'Bot')
+  extensionType?:
+    | 'User'
+    | 'Department'
+    | 'Announcement'
+    | 'Voicemail'
+    | 'SharedLinesGroup'
+    | 'PagingOnly'
+    | 'ParkLocation'
+    | 'IvrMenu'
+    | 'Limited'
+    | 'ApplicationExtension'
+    | 'Site'
+    | 'Bot';
 
   /**
    * Sorting settings
    */
-  orderBy?: OrderBy[]
+  orderBy?: OrderBy[];
 
   /**
    */
-  page?: number
+  page?: number;
 
   /**
    */
-  perPage?: number
+  perPage?: number;
 }
 
-export default SearchDirectoryEntriesRequest
+export default SearchDirectoryEntriesRequest;

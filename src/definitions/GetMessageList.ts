@@ -1,28 +1,32 @@
-import { GetMessageInfoResponse, MessagingNavigationInfo, MessagingPagingInfo } from '.'
+import {
+  GetMessageInfoResponse,
+  MessagingNavigationInfo,
+  MessagingPagingInfo,
+} from '.';
 
 class GetMessageList {
   /**
    * Link to the list of user messages
    */
-  uri?: string
+  uri?: string;
 
   /**
    * List of records with message information
    * Required
    */
-  records?: GetMessageInfoResponse[]
+  records?: GetMessageInfoResponse[];
 
   /**
    * Information on navigation
    * Required
    */
-  navigation?: MessagingNavigationInfo
+  navigation?: MessagingNavigationInfo;
 
   /**
    * Information on paging
    * Required
    */
-  paging?: MessagingPagingInfo
+  paging?: MessagingPagingInfo;
 }
 
-export default GetMessageList
+export default GetMessageList;

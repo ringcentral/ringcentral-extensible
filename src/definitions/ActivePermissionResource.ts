@@ -1,17 +1,17 @@
-import { PermissionIdResource, RoleIdResource } from '.'
+import {PermissionIdResource, RoleIdResource} from '.';
 
 class ActivePermissionResource {
   /**
    */
-  permission?: PermissionIdResource
+  permission?: PermissionIdResource;
 
   /**
    */
-  effectiveRole?: RoleIdResource
+  effectiveRole?: RoleIdResource;
 
   /**
    */
-  scopes?: string[]
+  scopes?: string[];
 }
 
-export default ActivePermissionResource
+export default ActivePermissionResource;

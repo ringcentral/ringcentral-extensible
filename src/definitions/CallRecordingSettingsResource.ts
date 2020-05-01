@@ -1,18 +1,22 @@
-import { OnDemandResource, AutomaticRecordingResource, GreetingResource } from '.'
+import {
+  OnDemandResource,
+  AutomaticRecordingResource,
+  GreetingResource,
+} from '.';
 
 class CallRecordingSettingsResource {
   /**
    */
-  onDemand?: OnDemandResource
+  onDemand?: OnDemandResource;
 
   /**
    */
-  automatic?: AutomaticRecordingResource
+  automatic?: AutomaticRecordingResource;
 
   /**
    * Collection of Greeting Info
    */
-  greetings?: GreetingResource[]
+  greetings?: GreetingResource[];
 }
 
-export default CallRecordingSettingsResource
+export default CallRecordingSettingsResource;

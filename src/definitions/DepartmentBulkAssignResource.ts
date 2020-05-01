@@ -1,9 +1,9 @@
-import { BulkAssignItem } from '.'
+import {BulkAssignItem} from '.';
 
 class DepartmentBulkAssignResource {
   /**
    */
-  items?: BulkAssignItem[]
+  items?: BulkAssignItem[];
 }
 
-export default DepartmentBulkAssignResource
+export default DepartmentBulkAssignResource;

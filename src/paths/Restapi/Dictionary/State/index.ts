@@ -1,24 +1,28 @@
-import { GetStateListResponse, ListStatesParameters, GetStateInfoResponse } from '../../../../definitions'
-import Parent from '..'
-import RestClient from '../../../..'
+import {
+  GetStateListResponse,
+  ListStatesParameters,
+  GetStateInfoResponse,
+} from '../../../../definitions';
+import Parent from '..';
+import RestClient from '../../../..';
 
 class State {
-  rc: RestClient
-  stateId: (string | null)
-  parent: Parent
+  rc: RestClient;
+  stateId: string | null;
+  parent: Parent;
 
-  constructor (parent: Parent, stateId: (string | null) = null) {
-    this.parent = parent
-    this.rc = parent.rc
-    this.stateId = stateId
+  constructor(parent: Parent, stateId: string | null = null) {
+    this.parent = parent;
+    this.rc = parent.rc;
+    this.stateId = stateId;
   }
 
-  path (withParameter: boolean = true): string {
+  path(withParameter = true): string {
     if (withParameter && this.stateId !== null) {
-      return `${this.parent.path()}/state/${this.stateId}`
+      return `${this.parent.path()}/state/${this.stateId}`;
     }
 
-    return `${this.parent.path()}/state`
+    return `${this.parent.path()}/state`;
   }
 
   /**
@@ -26,9 +30,11 @@ class State {
    * Rate Limit Group: Light
    * Http get /restapi/v1.0/dictionary/state
    */
-  async list (queryParams?: ListStatesParameters): Promise<GetStateListResponse> {
-    const r = await this.rc.get(this.path(false), queryParams)
-    return r.data
+  async list(
+    queryParams?: ListStatesParameters
+  ): Promise<GetStateListResponse> {
+    const r = await this.rc.get(this.path(false), queryParams);
+    return r.data;
   }
 
   /**
@@ -36,14 +42,14 @@ class State {
    * Rate Limit Group: Light
    * Http get /restapi/v1.0/dictionary/state/{stateId}
    */
-  async get (): Promise<GetStateInfoResponse> {
+  async get(): Promise<GetStateInfoResponse> {
     if (this.stateId === null) {
-      throw new Error('stateId must be specified.')
+      throw new Error('stateId must be specified.');
     }
 
-    const r = await this.rc.get(this.path())
-    return r.data
+    const r = await this.rc.get(this.path());
+    return r.data;
   }
 }
 
-export default State
+export default State;

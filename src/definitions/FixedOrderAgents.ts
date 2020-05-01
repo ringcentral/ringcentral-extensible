@@ -1,14 +1,14 @@
-import { FixedOrderAgentsExtensionInfo } from '.'
+import {FixedOrderAgentsExtensionInfo} from '.';
 
 class FixedOrderAgents {
   /**
    */
-  extension?: FixedOrderAgentsExtensionInfo
+  extension?: FixedOrderAgentsExtensionInfo;
 
   /**
    * Ordinal of an agent (call queue member)
    */
-  index?: number
+  index?: number;
 }
 
-export default FixedOrderAgents
+export default FixedOrderAgents;

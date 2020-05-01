@@ -1,152 +1,152 @@
-import { ContactAddressInfo } from '.'
+import {ContactAddressInfo} from '.';
 
 class PersonalContactResource {
   /**
    * Canonical URI of the contact
    */
-  uri?: string
+  uri?: string;
 
   /**
    * This property has a special meaning only on Address Book Sync (e.g. a contact can be `Deleted`). For simple contact list reading it has always the default value - `Alive`
    */
-  availability?: ('Alive' | 'Deleted' | 'Purged')
+  availability?: 'Alive' | 'Deleted' | 'Purged';
 
   /**
    * Email of the contact
    */
-  email?: string
+  email?: string;
 
   /**
    * Internal identifier of the contact
    */
-  id?: number
+  id?: number;
 
   /**
    * Notes for the contact
    */
-  notes?: string
+  notes?: string;
 
   /**
    * Company name of the contact
    */
-  company?: string
+  company?: string;
 
   /**
    * First name of the contact
    */
-  firstName?: string
+  firstName?: string;
 
   /**
    * Last name of the contact
    */
-  lastName?: string
+  lastName?: string;
 
   /**
    * Job title of the contact
    */
-  jobTitle?: string
+  jobTitle?: string;
 
   /**
    * Date of birth of the contact
    */
-  birthday?: string
+  birthday?: string;
 
   /**
    * The contact home page URL
    */
-  webPage?: string
+  webPage?: string;
 
   /**
    * Middle name of the contact
    */
-  middleName?: string
+  middleName?: string;
 
   /**
    * Nick name of the contact
    */
-  nickName?: string
+  nickName?: string;
 
   /**
    * 2nd email of the contact
    */
-  email2?: string
+  email2?: string;
 
   /**
    * 3rd email of the contact
    */
-  email3?: string
+  email3?: string;
 
   /**
    * Home phone number of the contact in e.164 (with "+") format
    */
-  homePhone?: string
+  homePhone?: string;
 
   /**
    * 2nd home phone number of the contact in e.164 (with "+") format
    */
-  homePhone2?: string
+  homePhone2?: string;
 
   /**
    * Business phone of the contact in e.164 (with "+") format
    */
-  businessPhone?: string
+  businessPhone?: string;
 
   /**
    * 2nd business phone of the contact in e.164 (with "+") format
    */
-  businessPhone2?: string
+  businessPhone2?: string;
 
   /**
    * Mobile phone of the contact in e.164 (with "+") format
    */
-  mobilePhone?: string
+  mobilePhone?: string;
 
   /**
    * Business fax number of the contact in e.164 (with "+") format
    */
-  businessFax?: string
+  businessFax?: string;
 
   /**
    * Company number of the contact in e.164 (with "+") format
    */
-  companyPhone?: string
+  companyPhone?: string;
 
   /**
    * Phone number of the contact assistant in e.164 (with "+") format
    */
-  assistantPhone?: string
+  assistantPhone?: string;
 
   /**
    * Car phone number of the contact in e.164 (with "+") format
    */
-  carPhone?: string
+  carPhone?: string;
 
   /**
    * Other phone number of the contact in e.164 (with "+") format
    */
-  otherPhone?: string
+  otherPhone?: string;
 
   /**
    * Other fax number of the contact in e.164 (with "+") format
    */
-  otherFax?: string
+  otherFax?: string;
 
   /**
    * Callback phone number of the contact in e.164 (with "+") format
    */
-  callbackPhone?: string
+  callbackPhone?: string;
 
   /**
    */
-  businessAddress?: ContactAddressInfo
+  businessAddress?: ContactAddressInfo;
 
   /**
    */
-  homeAddress?: ContactAddressInfo
+  homeAddress?: ContactAddressInfo;
 
   /**
    */
-  otherAddress?: ContactAddressInfo
+  otherAddress?: ContactAddressInfo;
 }
 
-export default PersonalContactResource
+export default PersonalContactResource;

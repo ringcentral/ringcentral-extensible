@@ -1,18 +1,21 @@
-import { CompanyActiveCallsResponse, ListCompanyActiveCallsParameters } from '../../../../definitions'
-import Parent from '..'
-import RestClient from '../../../..'
+import {
+  CompanyActiveCallsResponse,
+  ListCompanyActiveCallsParameters,
+} from '../../../../definitions';
+import Parent from '..';
+import RestClient from '../../../..';
 
 class ActiveCalls {
-  rc: RestClient
-  parent: Parent
+  rc: RestClient;
+  parent: Parent;
 
-  constructor (parent: Parent) {
-    this.parent = parent
-    this.rc = parent.rc
+  constructor(parent: Parent) {
+    this.parent = parent;
+    this.rc = parent.rc;
   }
 
-  path (): string {
-    return `${this.parent.path()}/active-calls`
+  path(): string {
+    return `${this.parent.path()}/active-calls`;
   }
 
   /**
@@ -20,10 +23,12 @@ class ActiveCalls {
    * Rate Limit Group: Heavy
    * Http get /restapi/v1.0/account/{accountId}/active-calls
    */
-  async get (queryParams?: ListCompanyActiveCallsParameters): Promise<CompanyActiveCallsResponse> {
-    const r = await this.rc.get(this.path(), queryParams)
-    return r.data
+  async get(
+    queryParams?: ListCompanyActiveCallsParameters
+  ): Promise<CompanyActiveCallsResponse> {
+    const r = await this.rc.get(this.path(), queryParams);
+    return r.data;
   }
 }
 
-export default ActiveCalls
+export default ActiveCalls;

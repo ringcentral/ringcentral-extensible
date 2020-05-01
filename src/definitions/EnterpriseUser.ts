@@ -1,7 +1,7 @@
 class EnterpriseUser {
   /**
    */
-  department?: string
+  department?: string;
 }
 
-export default EnterpriseUser
+export default EnterpriseUser;

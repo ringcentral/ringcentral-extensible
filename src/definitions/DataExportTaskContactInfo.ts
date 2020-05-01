@@ -2,12 +2,12 @@ class DataExportTaskContactInfo {
   /**
    * Internal identifier of a contact
    */
-  id?: string
+  id?: string;
 
   /**
    * Email address of a contact
    */
-  email?: string
+  email?: string;
 }
 
-export default DataExportTaskContactInfo
+export default DataExportTaskContactInfo;

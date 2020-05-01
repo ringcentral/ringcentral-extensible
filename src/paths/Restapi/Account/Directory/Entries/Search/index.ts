@@ -1,18 +1,21 @@
-import { DirectoryResource, SearchDirectoryEntriesRequest } from '../../../../../../definitions'
-import Parent from '..'
-import RestClient from '../../../../../..'
+import {
+  DirectoryResource,
+  SearchDirectoryEntriesRequest,
+} from '../../../../../../definitions';
+import Parent from '..';
+import RestClient from '../../../../../..';
 
 class Search {
-  rc: RestClient
-  parent: Parent
+  rc: RestClient;
+  parent: Parent;
 
-  constructor (parent: Parent) {
-    this.parent = parent
-    this.rc = parent.rc
+  constructor(parent: Parent) {
+    this.parent = parent;
+    this.rc = parent.rc;
   }
 
-  path (): string {
-    return `${this.parent.path()}/search`
+  path(): string {
+    return `${this.parent.path()}/search`;
   }
 
   /**
@@ -20,10 +23,12 @@ class Search {
    * Rate Limit Group: Heavy
    * Http post /restapi/v1.0/account/{accountId}/directory/entries/search
    */
-  async post (searchDirectoryEntriesRequest: SearchDirectoryEntriesRequest): Promise<DirectoryResource> {
-    const r = await this.rc.post(this.path(), searchDirectoryEntriesRequest)
-    return r.data
+  async post(
+    searchDirectoryEntriesRequest: SearchDirectoryEntriesRequest
+  ): Promise<DirectoryResource> {
+    const r = await this.rc.post(this.path(), searchDirectoryEntriesRequest);
+    return r.data;
   }
 }
 
-export default Search
+export default Search;

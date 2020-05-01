@@ -1,9 +1,9 @@
-import { FavoriteContactResource } from '.'
+import {FavoriteContactResource} from '.';
 
 class FavoriteCollection {
   /**
    */
-  records?: FavoriteContactResource[]
+  records?: FavoriteContactResource[];
 }
 
-export default FavoriteCollection
+export default FavoriteCollection;

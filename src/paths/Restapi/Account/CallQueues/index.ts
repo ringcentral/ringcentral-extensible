@@ -1,26 +1,26 @@
-import BulkAssign from './BulkAssign'
-import Members from './Members'
-import { ListCallQueuesParameters } from '../../../../definitions'
-import Parent from '..'
-import RestClient from '../../../..'
+import BulkAssign from './BulkAssign';
+import Members from './Members';
+import {ListCallQueuesParameters} from '../../../../definitions';
+import Parent from '..';
+import RestClient from '../../../..';
 
 class CallQueues {
-  rc: RestClient
-  groupId: (string | null)
-  parent: Parent
+  rc: RestClient;
+  groupId: string | null;
+  parent: Parent;
 
-  constructor (parent: Parent, groupId: (string | null) = null) {
-    this.parent = parent
-    this.rc = parent.rc
-    this.groupId = groupId
+  constructor(parent: Parent, groupId: string | null = null) {
+    this.parent = parent;
+    this.rc = parent.rc;
+    this.groupId = groupId;
   }
 
-  path (withParameter: boolean = true): string {
+  path(withParameter = true): string {
     if (withParameter && this.groupId !== null) {
-      return `${this.parent.path()}/call-queues/${this.groupId}`
+      return `${this.parent.path()}/call-queues/${this.groupId}`;
     }
 
-    return `${this.parent.path()}/call-queues`
+    return `${this.parent.path()}/call-queues`;
   }
 
   /**
@@ -28,18 +28,18 @@ class CallQueues {
    * Rate Limit Group: Medium
    * Http get /restapi/v1.0/account/{accountId}/call-queues
    */
-  async get (queryParams?: ListCallQueuesParameters): Promise<CallQueues> {
-    const r = await this.rc.get(this.path(false), queryParams)
-    return r.data
+  async get(queryParams?: ListCallQueuesParameters): Promise<CallQueues> {
+    const r = await this.rc.get(this.path(false), queryParams);
+    return r.data;
   }
 
-  members (): Members {
-    return new Members(this)
+  members(): Members {
+    return new Members(this);
   }
 
-  bulkAssign (): BulkAssign {
-    return new BulkAssign(this)
+  bulkAssign(): BulkAssign {
+    return new BulkAssign(this);
   }
 }
 
-export default CallQueues
+export default CallQueues;

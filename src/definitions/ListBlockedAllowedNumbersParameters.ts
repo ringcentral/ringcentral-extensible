@@ -1,15 +1,15 @@
 class ListBlockedAllowedNumbersParameters {
   /**
    */
-  page?: number
+  page?: number;
 
   /**
    */
-  perPage?: number
+  perPage?: number;
 
   /**
    */
-  status?: ('Blocked' | 'Allowed')
+  status?: 'Blocked' | 'Allowed';
 }
 
-export default ListBlockedAllowedNumbersParameters
+export default ListBlockedAllowedNumbersParameters;

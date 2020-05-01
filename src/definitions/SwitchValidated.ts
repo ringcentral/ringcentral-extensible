@@ -1,24 +1,24 @@
-import { ValidationError } from '.'
+import {ValidationError} from '.';
 
 class SwitchValidated {
   /**
    * Internal identifier of a switch
    */
-  id?: string
+  id?: string;
 
   /**
    * Unique identifier of a network switch
    */
-  chassisId?: string
+  chassisId?: string;
 
   /**
    * Validation result status
    */
-  status?: ('Valid' | 'Invalid')
+  status?: 'Valid' | 'Invalid';
 
   /**
    */
-  errors?: ValidationError[]
+  errors?: ValidationError[];
 }
 
-export default SwitchValidated
+export default SwitchValidated;

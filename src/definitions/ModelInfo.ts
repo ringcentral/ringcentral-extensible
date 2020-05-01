@@ -1,31 +1,31 @@
-import { AddonInfo } from '.'
+import {AddonInfo} from '.';
 
 class ModelInfo {
   /**
    * Addon identifier. For HardPhones of certain types, which are compatible with this addon identifier
    */
-  id?: string
+  id?: string;
 
   /**
    * Device name
    */
-  name?: string
+  name?: string;
 
   /**
    * Addons description
    * Required
    */
-  addons?: AddonInfo[]
+  addons?: AddonInfo[];
 
   /**
    * Device feature or multiple features supported
    */
-  features?: ('BLA' | 'Intercom' | 'Paging' | 'HELD')[]
+  features?: ('BLA' | 'Intercom' | 'Paging' | 'HELD')[];
 
   /**
    * Max supported count of phone lines
    */
-  lineCount?: number
+  lineCount?: number;
 }
 
-export default ModelInfo
+export default ModelInfo;

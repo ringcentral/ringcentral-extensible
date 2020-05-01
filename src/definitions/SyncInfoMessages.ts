@@ -2,21 +2,21 @@ class SyncInfoMessages {
   /**
    * Type of synchronization
    */
-  syncType?: ('FSync' | 'ISync')
+  syncType?: 'FSync' | 'ISync';
 
   /**
    * Synchronization token
    */
-  syncToken?: string
+  syncToken?: string;
 
   /**
    * Last synchronization datetime in ISO 8601 format including timezone, for example 2016-03-10T18:07:52.534Z
    */
-  syncTime?: string
+  syncTime?: string;
 
   /**
    */
-  olderRecordsExist?: boolean
+  olderRecordsExist?: boolean;
 }
 
-export default SyncInfoMessages
+export default SyncInfoMessages;

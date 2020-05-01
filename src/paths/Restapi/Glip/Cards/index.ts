@@ -1,24 +1,28 @@
-import { GlipMessageAttachmentInfo, GlipMessageAttachmentInfoRequest, CreateGlipCardParameters } from '../../../../definitions'
-import Parent from '..'
-import RestClient from '../../../..'
+import {
+  GlipMessageAttachmentInfo,
+  GlipMessageAttachmentInfoRequest,
+  CreateGlipCardParameters,
+} from '../../../../definitions';
+import Parent from '..';
+import RestClient from '../../../..';
 
 class Cards {
-  rc: RestClient
-  cardId: (string | null)
-  parent: Parent
+  rc: RestClient;
+  cardId: string | null;
+  parent: Parent;
 
-  constructor (parent: Parent, cardId: (string | null) = null) {
-    this.parent = parent
-    this.rc = parent.rc
-    this.cardId = cardId
+  constructor(parent: Parent, cardId: string | null = null) {
+    this.parent = parent;
+    this.rc = parent.rc;
+    this.cardId = cardId;
   }
 
-  path (withParameter: boolean = true): string {
+  path(withParameter = true): string {
     if (withParameter && this.cardId !== null) {
-      return `${this.parent.path()}/cards/${this.cardId}`
+      return `${this.parent.path()}/cards/${this.cardId}`;
     }
 
-    return `${this.parent.path()}/cards`
+    return `${this.parent.path()}/cards`;
   }
 
   /**
@@ -26,9 +30,16 @@ class Cards {
    * Rate Limit Group: Medium
    * Http post /restapi/v1.0/glip/cards
    */
-  async post (glipMessageAttachmentInfoRequest: GlipMessageAttachmentInfoRequest, queryParams?: CreateGlipCardParameters): Promise<GlipMessageAttachmentInfo> {
-    const r = await this.rc.post(this.path(false), glipMessageAttachmentInfoRequest, queryParams)
-    return r.data
+  async post(
+    glipMessageAttachmentInfoRequest: GlipMessageAttachmentInfoRequest,
+    queryParams?: CreateGlipCardParameters
+  ): Promise<GlipMessageAttachmentInfo> {
+    const r = await this.rc.post(
+      this.path(false),
+      glipMessageAttachmentInfoRequest,
+      queryParams
+    );
+    return r.data;
   }
 
   /**
@@ -36,13 +47,13 @@ class Cards {
    * Rate Limit Group: Medium
    * Http get /restapi/v1.0/glip/cards/{cardId}
    */
-  async get (): Promise<GlipMessageAttachmentInfo> {
+  async get(): Promise<GlipMessageAttachmentInfo> {
     if (this.cardId === null) {
-      throw new Error('cardId must be specified.')
+      throw new Error('cardId must be specified.');
     }
 
-    const r = await this.rc.get(this.path())
-    return r.data
+    const r = await this.rc.get(this.path());
+    return r.data;
   }
 
   /**
@@ -50,13 +61,15 @@ class Cards {
    * Rate Limit Group: Medium
    * Http put /restapi/v1.0/glip/cards/{cardId}
    */
-  async put (glipMessageAttachmentInfoRequest: GlipMessageAttachmentInfoRequest): Promise<string> {
+  async put(
+    glipMessageAttachmentInfoRequest: GlipMessageAttachmentInfoRequest
+  ): Promise<string> {
     if (this.cardId === null) {
-      throw new Error('cardId must be specified.')
+      throw new Error('cardId must be specified.');
     }
 
-    const r = await this.rc.put(this.path(), glipMessageAttachmentInfoRequest)
-    return r.data
+    const r = await this.rc.put(this.path(), glipMessageAttachmentInfoRequest);
+    return r.data;
   }
 
   /**
@@ -64,14 +77,14 @@ class Cards {
    * Rate Limit Group: Medium
    * Http delete /restapi/v1.0/glip/cards/{cardId}
    */
-  async delete (): Promise<string> {
+  async delete(): Promise<string> {
     if (this.cardId === null) {
-      throw new Error('cardId must be specified.')
+      throw new Error('cardId must be specified.');
     }
 
-    const r = await this.rc.delete(this.path())
-    return r.data
+    const r = await this.rc.delete(this.path());
+    return r.data;
   }
 }
 
-export default Cards
+export default Cards;

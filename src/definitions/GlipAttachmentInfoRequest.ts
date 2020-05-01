@@ -2,12 +2,12 @@ class GlipAttachmentInfoRequest {
   /**
    * Internal identifier of an attachment
    */
-  id?: string
+  id?: string;
 
   /**
    * Type of an attachment
    */
-  attachmentType?: string
+  attachmentType?: string;
 }
 
-export default GlipAttachmentInfoRequest
+export default GlipAttachmentInfoRequest;

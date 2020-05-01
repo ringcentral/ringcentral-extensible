@@ -1,23 +1,27 @@
-import { SwitchInfo, ProvisioningNavigationInfo, ProvisioningPagingInfo } from '.'
+import {
+  SwitchInfo,
+  ProvisioningNavigationInfo,
+  ProvisioningPagingInfo,
+} from '.';
 
 class SwitchesList {
   /**
    * Link to the switches list resource
    */
-  uri?: string
+  uri?: string;
 
   /**
    * Switches map
    */
-  records?: SwitchInfo[]
+  records?: SwitchInfo[];
 
   /**
    */
-  navigation?: ProvisioningNavigationInfo
+  navigation?: ProvisioningNavigationInfo;
 
   /**
    */
-  paging?: ProvisioningPagingInfo
+  paging?: ProvisioningPagingInfo;
 }
 
-export default SwitchesList
+export default SwitchesList;

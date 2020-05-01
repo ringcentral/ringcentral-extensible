@@ -1,7 +1,7 @@
 class UpdateDeviceParameters {
   /**
    */
-  prestatement?: boolean
+  prestatement?: boolean;
 }
 
-export default UpdateDeviceParameters
+export default UpdateDeviceParameters;

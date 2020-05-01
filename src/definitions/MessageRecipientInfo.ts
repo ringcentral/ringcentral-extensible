@@ -1,15 +1,15 @@
 class MessageRecipientInfo {
   /**
    */
-  extensionNumber?: string
+  extensionNumber?: string;
 
   /**
    */
-  extensionId?: string
+  extensionId?: string;
 
   /**
    */
-  name?: string
+  name?: string;
 }
 
-export default MessageRecipientInfo
+export default MessageRecipientInfo;

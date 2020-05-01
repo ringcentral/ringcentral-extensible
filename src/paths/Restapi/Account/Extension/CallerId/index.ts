@@ -1,18 +1,18 @@
-import { ExtensionCallerIdInfo } from '../../../../../definitions'
-import Parent from '..'
-import RestClient from '../../../../..'
+import {ExtensionCallerIdInfo} from '../../../../../definitions';
+import Parent from '..';
+import RestClient from '../../../../..';
 
 class CallerId {
-  rc: RestClient
-  parent: Parent
+  rc: RestClient;
+  parent: Parent;
 
-  constructor (parent: Parent) {
-    this.parent = parent
-    this.rc = parent.rc
+  constructor(parent: Parent) {
+    this.parent = parent;
+    this.rc = parent.rc;
   }
 
-  path (): string {
-    return `${this.parent.path()}/caller-id`
+  path(): string {
+    return `${this.parent.path()}/caller-id`;
   }
 
   /**
@@ -20,9 +20,9 @@ class CallerId {
    * Rate Limit Group: Light
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-id
    */
-  async get (): Promise<ExtensionCallerIdInfo> {
-    const r = await this.rc.get(this.path())
-    return r.data
+  async get(): Promise<ExtensionCallerIdInfo> {
+    const r = await this.rc.get(this.path());
+    return r.data;
   }
 
   /**
@@ -30,10 +30,12 @@ class CallerId {
    * Rate Limit Group: Medium
    * Http put /restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-id
    */
-  async put (extensionCallerIdInfo: ExtensionCallerIdInfo): Promise<ExtensionCallerIdInfo> {
-    const r = await this.rc.put(this.path(), extensionCallerIdInfo)
-    return r.data
+  async put(
+    extensionCallerIdInfo: ExtensionCallerIdInfo
+  ): Promise<ExtensionCallerIdInfo> {
+    const r = await this.rc.put(this.path(), extensionCallerIdInfo);
+    return r.data;
   }
 }
 
-export default CallerId
+export default CallerId;

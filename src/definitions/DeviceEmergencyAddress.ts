@@ -2,67 +2,67 @@ class DeviceEmergencyAddress {
   /**
    * Name of a customer
    */
-  customerName?: string
+  customerName?: string;
 
   /**
    * Street address, line 1 - street address, P.O. box, company name, c/o
    */
-  street?: string
+  street?: string;
 
   /**
    * Street address, line 2 - apartment, suite, unit, building, floor, etc.
    */
-  street2?: string
+  street2?: string;
 
   /**
    * City name
    */
-  city?: string
+  city?: string;
 
   /**
    * Zip code
    */
-  zip?: string
+  zip?: string;
 
   /**
    * State/province name
    */
-  state?: string
+  state?: string;
 
   /**
    * Internal identifier of a state
    */
-  stateId?: string
+  stateId?: string;
 
   /**
    * ISO code of a state
    */
-  stateIsoCode?: string
+  stateIsoCode?: string;
 
   /**
    * Full name of a state
    */
-  stateName?: string
+  stateName?: string;
 
   /**
    * Internal identifier of a country
    */
-  countryId?: string
+  countryId?: string;
 
   /**
    * ISO code of a country
    */
-  countryIsoCode?: string
+  countryIsoCode?: string;
 
   /**
    * Country name
    */
-  country?: string
+  country?: string;
 
   /**
    * Full name of a country
    */
-  countryName?: string
+  countryName?: string;
 }
 
-export default DeviceEmergencyAddress
+export default DeviceEmergencyAddress;

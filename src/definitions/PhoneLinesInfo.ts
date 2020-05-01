@@ -1,24 +1,24 @@
-import { PhoneNumberInfoIntId, EmergencyAddress } from '.'
+import {PhoneNumberInfoIntId, EmergencyAddress} from '.';
 
 class PhoneLinesInfo {
   /**
    * Internal identifier of a phone line
    */
-  id?: string
+  id?: string;
 
   /**
    * Type of phone line
    */
-  lineType?: ('Standalone' | 'StandaloneFree' | 'BlaPrimary' | 'BlaSecondary')
+  lineType?: 'Standalone' | 'StandaloneFree' | 'BlaPrimary' | 'BlaSecondary';
 
   /**
    * Phone number information
    */
-  phoneInfo?: PhoneNumberInfoIntId
+  phoneInfo?: PhoneNumberInfoIntId;
 
   /**
    */
-  emergencyAddress?: EmergencyAddress
+  emergencyAddress?: EmergencyAddress;
 }
 
-export default PhoneLinesInfo
+export default PhoneLinesInfo;

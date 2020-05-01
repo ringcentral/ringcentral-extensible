@@ -1,9 +1,9 @@
-import { Attachment } from '.'
+import {Attachment} from '.';
 
 class UpdateUserProfileImageRequest {
   /**
    */
-  image?: Attachment
+  image?: Attachment;
 }
 
-export default UpdateUserProfileImageRequest
+export default UpdateUserProfileImageRequest;

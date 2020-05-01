@@ -1,17 +1,21 @@
-import { MeetingRecordings, MeetingRecordingsPagingInfo, MeetingRecordingsNavigationInfo } from '.'
+import {
+  MeetingRecordings,
+  MeetingRecordingsPagingInfo,
+  MeetingRecordingsNavigationInfo,
+} from '.';
 
 class ListMeetingRecordingsResponse {
   /**
    */
-  records?: MeetingRecordings[]
+  records?: MeetingRecordings[];
 
   /**
    */
-  paging?: MeetingRecordingsPagingInfo
+  paging?: MeetingRecordingsPagingInfo;
 
   /**
    */
-  navigation?: MeetingRecordingsNavigationInfo
+  navigation?: MeetingRecordingsNavigationInfo;
 }
 
-export default ListMeetingRecordingsResponse
+export default ListMeetingRecordingsResponse;

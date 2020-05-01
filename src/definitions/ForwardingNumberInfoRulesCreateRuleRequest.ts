@@ -2,27 +2,27 @@ class ForwardingNumberInfoRulesCreateRuleRequest {
   /**
    * Internal identifier of a forwarding number
    */
-  id?: string
+  id?: string;
 
   /**
    * Forwarding phone number type
    */
-  type?: ('Home' | 'Mobile' | 'Work' | 'PhoneLine' | 'Outage' | 'Other')
+  type?: 'Home' | 'Mobile' | 'Work' | 'PhoneLine' | 'Outage' | 'Other';
 
   /**
    * Canonical URI of a forwarding/call flip phone number
    */
-  uri?: string
+  uri?: string;
 
   /**
    * Forwarding/Call flip phone number
    */
-  phoneNumber?: string
+  phoneNumber?: string;
 
   /**
    * Forwarding/Call flip number title
    */
-  label?: string
+  label?: string;
 }
 
-export default ForwardingNumberInfoRulesCreateRuleRequest
+export default ForwardingNumberInfoRulesCreateRuleRequest;

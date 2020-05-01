@@ -1,46 +1,49 @@
-import { AutomaticLocationUpdatesModelInfo, AutomaticLocationUpdatesPhoneLine } from '.'
+import {
+  AutomaticLocationUpdatesModelInfo,
+  AutomaticLocationUpdatesPhoneLine,
+} from '.';
 
 class AutomaticLocationUpdatesDeviceInfo {
   /**
    * Internal identifier of a device
    */
-  id?: string
+  id?: string;
 
   /**
    * Device type
    * Default: HardPhone
    */
-  type?: ('HardPhone' | 'SoftPhone' | 'OtherPhone')
+  type?: 'HardPhone' | 'SoftPhone' | 'OtherPhone';
 
   /**
    * Serial number for HardPhone (is returned only when the phone is shipped and provisioned)
    */
-  serial?: string
+  serial?: string;
 
   /**
    * Specifies if Automatic Location Updates feature is enabled
    */
-  featureEnabled?: boolean
+  featureEnabled?: boolean;
 
   /**
    * Device name
    */
-  name?: string
+  name?: string;
 
   /**
    * HardPhone model information
    */
-  model?: AutomaticLocationUpdatesModelInfo
+  model?: AutomaticLocationUpdatesModelInfo;
 
   /**
    * Site data
    */
-  site?: string
+  site?: string;
 
   /**
    * Phone lines information
    */
-  phoneLines?: AutomaticLocationUpdatesPhoneLine[]
+  phoneLines?: AutomaticLocationUpdatesPhoneLine[];
 }
 
-export default AutomaticLocationUpdatesDeviceInfo
+export default AutomaticLocationUpdatesDeviceInfo;

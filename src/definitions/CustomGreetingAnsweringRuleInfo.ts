@@ -2,12 +2,12 @@ class CustomGreetingAnsweringRuleInfo {
   /**
    * Canonical URI of an answering rule
    */
-  uri?: string
+  uri?: string;
 
   /**
    * Internal identifier of an answering rule
    */
-  id?: string
+  id?: string;
 }
 
-export default CustomGreetingAnsweringRuleInfo
+export default CustomGreetingAnsweringRuleInfo;

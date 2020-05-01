@@ -2,12 +2,12 @@ class ConversationInfo {
   /**
    * Internal identifier of a conversation
    */
-  id?: string
+  id?: string;
 
   /**
    * Deprecated. Link to a conversation resource
    */
-  uri?: string
+  uri?: string;
 }
 
-export default ConversationInfo
+export default ConversationInfo;

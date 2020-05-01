@@ -4,7 +4,7 @@ class MessageStoreConfiguration {
    * Maximum: 90
    * Minimum: 7
    */
-  retentionPeriod?: number
+  retentionPeriod?: number;
 }
 
-export default MessageStoreConfiguration
+export default MessageStoreConfiguration;

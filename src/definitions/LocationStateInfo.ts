@@ -2,12 +2,12 @@ class LocationStateInfo {
   /**
    * Internal identifier of a state
    */
-  id?: string
+  id?: string;
 
   /**
    * Link to a state resource
    */
-  uri?: string
+  uri?: string;
 }
 
-export default LocationStateInfo
+export default LocationStateInfo;

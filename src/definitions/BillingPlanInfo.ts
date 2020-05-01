@@ -2,32 +2,32 @@ class BillingPlanInfo {
   /**
    * Internal identifier of a billing plan
    */
-  id?: string
+  id?: string;
 
   /**
    * Billing plan name
    */
-  name?: string
+  name?: string;
 
   /**
    * Duration period
    */
-  durationUnit?: ('Month' | 'Day')
+  durationUnit?: 'Month' | 'Day';
 
   /**
    * Number of duration units
    */
-  duration?: number
+  duration?: number;
 
   /**
    * Billing plan type
    */
-  type?: ('Initial' | 'Regular' | 'Suspended' | 'Trial' | 'TrialNoCC' | 'Free')
+  type?: 'Initial' | 'Regular' | 'Suspended' | 'Trial' | 'TrialNoCC' | 'Free';
 
   /**
    * Included digital lines count
    */
-  includedPhoneLines?: number
+  includedPhoneLines?: number;
 }
 
-export default BillingPlanInfo
+export default BillingPlanInfo;

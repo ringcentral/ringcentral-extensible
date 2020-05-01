@@ -2,22 +2,22 @@ class DeviceInfoRequest {
   /**
    * Device unique identifier, retrieved on previous session (if any)
    */
-  id?: string
+  id?: string;
 
   /**
    * Supported for iOS devices only. Certificate name (used by iOS applications for APNS subscription)
    */
-  appExternalId?: string
+  appExternalId?: string;
 
   /**
    * Supported for SoftPhone only. Computer name
    */
-  computerName?: string
+  computerName?: string;
 
   /**
    * Serial number for HardPhone; endpoint_id for softphone and mobile applications. Returned only when the phone is shipped and provisioned
    */
-  serial?: string
+  serial?: string;
 }
 
-export default DeviceInfoRequest
+export default DeviceInfoRequest;

@@ -2,12 +2,12 @@ class Name {
   /**
    * Required
    */
-  familyName?: string
+  familyName?: string;
 
   /**
    * Required
    */
-  givenName?: string
+  givenName?: string;
 }
 
-export default Name
+export default Name;

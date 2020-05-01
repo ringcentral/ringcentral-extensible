@@ -1,24 +1,24 @@
-import { AutomaticLocationUpdatesTaskInfo } from '../../../../../definitions'
-import Parent from '..'
-import RestClient from '../../../../..'
+import {AutomaticLocationUpdatesTaskInfo} from '../../../../../definitions';
+import Parent from '..';
+import RestClient from '../../../../..';
 
 class Tasks {
-  rc: RestClient
-  taskId: (string | null)
-  parent: Parent
+  rc: RestClient;
+  taskId: string | null;
+  parent: Parent;
 
-  constructor (parent: Parent, taskId: (string | null) = null) {
-    this.parent = parent
-    this.rc = parent.rc
-    this.taskId = taskId
+  constructor(parent: Parent, taskId: string | null = null) {
+    this.parent = parent;
+    this.rc = parent.rc;
+    this.taskId = taskId;
   }
 
-  path (withParameter: boolean = true): string {
+  path(withParameter = true): string {
     if (withParameter && this.taskId !== null) {
-      return `${this.parent.path()}/tasks/${this.taskId}`
+      return `${this.parent.path()}/tasks/${this.taskId}`;
     }
 
-    return `${this.parent.path()}/tasks`
+    return `${this.parent.path()}/tasks`;
   }
 
   /**
@@ -26,14 +26,14 @@ class Tasks {
    * Rate Limit Group: Light
    * Http get /restapi/v1.0/account/{accountId}/emergency-address-auto-update/tasks/{taskId}
    */
-  async get (): Promise<AutomaticLocationUpdatesTaskInfo> {
+  async get(): Promise<AutomaticLocationUpdatesTaskInfo> {
     if (this.taskId === null) {
-      throw new Error('taskId must be specified.')
+      throw new Error('taskId must be specified.');
     }
 
-    const r = await this.rc.get(this.path())
-    return r.data
+    const r = await this.rc.get(this.path());
+    return r.data;
   }
 }
 
-export default Tasks
+export default Tasks;

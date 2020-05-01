@@ -1,28 +1,32 @@
-import { TemplateInfo, ProvisioningNavigationInfo, ProvisioningPagingInfo } from '.'
+import {
+  TemplateInfo,
+  ProvisioningNavigationInfo,
+  ProvisioningPagingInfo,
+} from '.';
 
 class UserTemplates {
   /**
    * Link to user templates resource
    */
-  uri?: string
+  uri?: string;
 
   /**
    * List of user templates
    * Required
    */
-  records?: TemplateInfo[]
+  records?: TemplateInfo[];
 
   /**
    * Information on navigation
    * Required
    */
-  navigation?: ProvisioningNavigationInfo
+  navigation?: ProvisioningNavigationInfo;
 
   /**
    * Information on paging
    * Required
    */
-  paging?: ProvisioningPagingInfo
+  paging?: ProvisioningPagingInfo;
 }
 
-export default UserTemplates
+export default UserTemplates;

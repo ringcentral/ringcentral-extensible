@@ -1,13 +1,13 @@
-import { SubscriptionInfo } from '.'
+import {SubscriptionInfo} from '.';
 
 class RecordsCollectionResourceSubscriptionResponse {
   /**
    */
-  uri?: string
+  uri?: string;
 
   /**
    */
-  records?: SubscriptionInfo[]
+  records?: SubscriptionInfo[];
 }
 
-export default RecordsCollectionResourceSubscriptionResponse
+export default RecordsCollectionResourceSubscriptionResponse;

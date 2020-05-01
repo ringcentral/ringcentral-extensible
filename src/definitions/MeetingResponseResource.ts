@@ -1,70 +1,75 @@
-import { MeetingLinks, MeetingScheduleResource, HostInfoRequest, MeetingOccurrenceInfo } from '.'
+import {
+  MeetingLinks,
+  MeetingScheduleResource,
+  HostInfoRequest,
+  MeetingOccurrenceInfo,
+} from '.';
 
 class MeetingResponseResource {
   /**
    */
-  uri?: string
+  uri?: string;
 
   /**
    */
-  uuid?: string
+  uuid?: string;
 
   /**
    */
-  id?: string
+  id?: string;
 
   /**
    */
-  topic?: string
+  topic?: string;
 
   /**
    */
-  meetingType?: ('Instant' | 'Scheduled' | 'ScheduledRecurring' | 'Recurring')
+  meetingType?: 'Instant' | 'Scheduled' | 'ScheduledRecurring' | 'Recurring';
 
   /**
    */
-  password?: string
+  password?: string;
 
   /**
    */
-  h323Password?: string
+  h323Password?: string;
 
   /**
    */
-  status?: string
+  status?: string;
 
   /**
    */
-  links?: MeetingLinks
+  links?: MeetingLinks;
 
   /**
    */
-  schedule?: MeetingScheduleResource
+  schedule?: MeetingScheduleResource;
 
   /**
    */
-  host?: HostInfoRequest
+  host?: HostInfoRequest;
 
   /**
    */
-  allowJoinBeforeHost?: boolean
+  allowJoinBeforeHost?: boolean;
 
   /**
    */
-  startHostVideo?: boolean
+  startHostVideo?: boolean;
 
   /**
    */
-  startParticipantsVideo?: boolean
+  startParticipantsVideo?: boolean;
 
   /**
    */
-  audioOptions?: string[]
+  audioOptions?: string[];
 
   /**
    * List of meeting occurrences
    */
-  occurrences?: MeetingOccurrenceInfo[]
+  occurrences?: MeetingOccurrenceInfo[];
 }
 
-export default MeetingResponseResource
+export default MeetingResponseResource;

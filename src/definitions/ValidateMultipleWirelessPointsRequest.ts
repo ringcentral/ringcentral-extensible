@@ -1,9 +1,9 @@
-import { WirelessPointInfoRequest } from '.'
+import {WirelessPointInfoRequest} from '.';
 
 class ValidateMultipleWirelessPointsRequest {
   /**
    */
-  records?: WirelessPointInfoRequest[]
+  records?: WirelessPointInfoRequest[];
 }
 
-export default ValidateMultipleWirelessPointsRequest
+export default ValidateMultipleWirelessPointsRequest;

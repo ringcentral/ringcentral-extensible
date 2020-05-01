@@ -1,15 +1,15 @@
-import { GlipPostInfo, GlipNavigationInfo } from '.'
+import {GlipPostInfo, GlipNavigationInfo} from '.';
 
 class GlipPosts {
   /**
    * List of posts
    * Required
    */
-  records?: GlipPostInfo[]
+  records?: GlipPostInfo[];
 
   /**
    */
-  navigation?: GlipNavigationInfo
+  navigation?: GlipNavigationInfo;
 }
 
-export default GlipPosts
+export default GlipPosts;

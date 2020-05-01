@@ -1,9 +1,9 @@
-import { GlipPreferencesChats } from '.'
+import {GlipPreferencesChats} from '.';
 
 class GlipPreferencesInfo {
   /**
    */
-  chats?: GlipPreferencesChats
+  chats?: GlipPreferencesChats;
 }
 
-export default GlipPreferencesInfo
+export default GlipPreferencesInfo;

@@ -1,40 +1,40 @@
-import { IVRMenuPromptInfo, IVRMenuActionsInfo } from '.'
+import {IVRMenuPromptInfo, IVRMenuActionsInfo} from '.';
 
 class IVRMenuInfo {
   /**
    * Internal identifier of an IVR Menu extension
    */
-  id?: string
+  id?: string;
 
   /**
    * Link to an IVR Menu extension resource
    */
-  uri?: string
+  uri?: string;
 
   /**
    * First name of an IVR Menu user
    */
-  name?: string
+  name?: string;
 
   /**
    * Number of an IVR Menu extension
    */
-  extensionNumber?: string
+  extensionNumber?: string;
 
   /**
    * Site data
    */
-  site?: string
+  site?: string;
 
   /**
    * Prompt metadata
    */
-  prompt?: IVRMenuPromptInfo
+  prompt?: IVRMenuPromptInfo;
 
   /**
    * Keys handling settings
    */
-  actions?: IVRMenuActionsInfo[]
+  actions?: IVRMenuActionsInfo[];
 }
 
-export default IVRMenuInfo
+export default IVRMenuInfo;

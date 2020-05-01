@@ -1,9 +1,9 @@
-import { AssistantResource } from '.'
+import {AssistantResource} from '.';
 
 class AssistantsResource {
   /**
    */
-  records?: AssistantResource[]
+  records?: AssistantResource[];
 }
 
-export default AssistantsResource
+export default AssistantsResource;

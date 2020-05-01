@@ -1,10 +1,10 @@
-import { PartyUpdateInfo } from '.'
+import {PartyUpdateInfo} from '.';
 
 class PartyUpdateRequest {
   /**
    * Party update data
    */
-  party?: PartyUpdateInfo
+  party?: PartyUpdateInfo;
 }
 
-export default PartyUpdateRequest
+export default PartyUpdateRequest;

@@ -1,17 +1,17 @@
-import { CallMonitoringExtensionInfo } from '.'
+import {CallMonitoringExtensionInfo} from '.';
 
 class CallMonitoringBulkAssign {
   /**
    */
-  addedExtensions?: CallMonitoringExtensionInfo[]
+  addedExtensions?: CallMonitoringExtensionInfo[];
 
   /**
    */
-  updatedExtensions?: CallMonitoringExtensionInfo[]
+  updatedExtensions?: CallMonitoringExtensionInfo[];
 
   /**
    */
-  removedExtensions?: CallMonitoringExtensionInfo[]
+  removedExtensions?: CallMonitoringExtensionInfo[];
 }
 
-export default CallMonitoringBulkAssign
+export default CallMonitoringBulkAssign;

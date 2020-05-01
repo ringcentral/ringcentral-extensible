@@ -1,11 +1,11 @@
-import { GlipChatInfo } from '.'
+import {GlipChatInfo} from '.';
 
 class GlipChatsListWithoutNavigation {
   /**
    * List of chats
    * Required
    */
-  records?: GlipChatInfo[]
+  records?: GlipChatInfo[];
 }
 
-export default GlipChatsListWithoutNavigation
+export default GlipChatsListWithoutNavigation;

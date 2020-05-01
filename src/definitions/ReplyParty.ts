@@ -1,50 +1,50 @@
-import { CallStatusInfo, ParkInfo, PartyInfo, OwnerInfo } from '.'
+import {CallStatusInfo, ParkInfo, PartyInfo, OwnerInfo} from '.';
 
 class ReplyParty {
   /**
    * Internal identifier of a party
    */
-  id?: string
+  id?: string;
 
   /**
    * Status data of a call session
    */
-  status?: CallStatusInfo
+  status?: CallStatusInfo;
 
   /**
    * Specifies if a call participant is muted or not. **Note:** If a call is also controlled via Hard phone or RingCentral App (not only through the API by calling call control methods) then it cannot be fully muted/unmuted via API only, in this case the action should be duplicated via Hard phone/RC App interfaces
    */
-  muted?: boolean
+  muted?: boolean;
 
   /**
    * If 'True' then the party is not connected to a session voice conference, 'False' means the party is connected to other parties in a session
    */
-  standAlone?: boolean
+  standAlone?: boolean;
 
   /**
    * Call park information
    */
-  park?: ParkInfo
+  park?: ParkInfo;
 
   /**
    * Data on a calling party
    */
-  from?: PartyInfo
+  from?: PartyInfo;
 
   /**
    * Data on a called party
    */
-  to?: PartyInfo
+  to?: PartyInfo;
 
   /**
    * Data on a call owner
    */
-  owner?: OwnerInfo
+  owner?: OwnerInfo;
 
   /**
    * Direction of a call
    */
-  direction?: ('Inbound' | 'Outbound')
+  direction?: 'Inbound' | 'Outbound';
 }
 
-export default ReplyParty
+export default ReplyParty;

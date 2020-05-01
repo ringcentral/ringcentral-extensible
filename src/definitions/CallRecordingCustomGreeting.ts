@@ -1,19 +1,22 @@
-import { CallRecordingCustomGreetingData, CallRecordingCustomGreetingLanguage } from '.'
+import {
+  CallRecordingCustomGreetingData,
+  CallRecordingCustomGreetingLanguage,
+} from '.';
 
 class CallRecordingCustomGreeting {
   /**
    */
-  type?: ('StartRecording' | 'StopRecording' | 'AutomaticRecording')
+  type?: 'StartRecording' | 'StopRecording' | 'AutomaticRecording';
 
   /**
    * Custom greeting data
    */
-  custom?: CallRecordingCustomGreetingData
+  custom?: CallRecordingCustomGreetingData;
 
   /**
    * Custom greeting language
    */
-  language?: CallRecordingCustomGreetingLanguage
+  language?: CallRecordingCustomGreetingLanguage;
 }
 
-export default CallRecordingCustomGreeting
+export default CallRecordingCustomGreeting;

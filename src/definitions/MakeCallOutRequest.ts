@@ -1,15 +1,18 @@
-import { MakeCallOutCallerInfoRequestFrom, MakeCallOutCallerInfoRequestTo } from '.'
+import {
+  MakeCallOutCallerInfoRequestFrom,
+  MakeCallOutCallerInfoRequestTo,
+} from '.';
 
 class MakeCallOutRequest {
   /**
    * Required
    */
-  from?: MakeCallOutCallerInfoRequestFrom
+  from?: MakeCallOutCallerInfoRequestFrom;
 
   /**
    * Required
    */
-  to?: MakeCallOutCallerInfoRequestTo
+  to?: MakeCallOutCallerInfoRequestTo;
 }
 
-export default MakeCallOutRequest
+export default MakeCallOutRequest;

@@ -1,39 +1,39 @@
-import { EmergencyLocationAddressInfo, ShortSiteInfo } from '.'
+import {EmergencyLocationAddressInfo, ShortSiteInfo} from '.';
 
 class EmergencyLocationInfo {
   /**
    * Internal identifier of the emergency response location
    */
-  id?: string
+  id?: string;
 
   /**
    */
-  address?: EmergencyLocationAddressInfo
+  address?: EmergencyLocationAddressInfo;
 
   /**
    * Emergency response location name
    */
-  name?: string
+  name?: string;
 
   /**
    */
-  site?: ShortSiteInfo
+  site?: ShortSiteInfo;
 
   /**
    * Emergency address status
    */
-  addressStatus?: ('Valid' | 'Invalid')
+  addressStatus?: 'Valid' | 'Invalid';
 
   /**
    * Status of emergency response location usage.
    */
-  usageStatus?: ('Active' | 'Inactive')
+  usageStatus?: 'Active' | 'Inactive';
 
   /**
    * Visibility of an emergency response location. If `Private` is set, then location is visible only for restricted number of users, specified in `owners` array
    * Default: Public
    */
-  visibility?: ('Private' | 'Public')
+  visibility?: 'Private' | 'Public';
 }
 
-export default EmergencyLocationInfo
+export default EmergencyLocationInfo;

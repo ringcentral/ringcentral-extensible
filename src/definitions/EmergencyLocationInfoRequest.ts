@@ -1,14 +1,14 @@
-import { EmergencyLocationAddressInfoRequest } from '.'
+import {EmergencyLocationAddressInfoRequest} from '.';
 
 class EmergencyLocationInfoRequest {
   /**
    * Internal identifier of the emergency response location
    */
-  id?: string
+  id?: string;
 
   /**
    */
-  address?: EmergencyLocationAddressInfoRequest
+  address?: EmergencyLocationAddressInfoRequest;
 }
 
-export default EmergencyLocationInfoRequest
+export default EmergencyLocationInfoRequest;

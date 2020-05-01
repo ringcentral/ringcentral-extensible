@@ -1,18 +1,18 @@
-import { UserCallQueues } from '../../../../../definitions'
-import Parent from '..'
-import RestClient from '../../../../..'
+import {UserCallQueues} from '../../../../../definitions';
+import Parent from '..';
+import RestClient from '../../../../..';
 
 class CallQueues {
-  rc: RestClient
-  parent: Parent
+  rc: RestClient;
+  parent: Parent;
 
-  constructor (parent: Parent) {
-    this.parent = parent
-    this.rc = parent.rc
+  constructor(parent: Parent) {
+    this.parent = parent;
+    this.rc = parent.rc;
   }
 
-  path (): string {
-    return `${this.parent.path()}/call-queues`
+  path(): string {
+    return `${this.parent.path()}/call-queues`;
   }
 
   /**
@@ -20,10 +20,10 @@ class CallQueues {
    * Rate Limit Group: Medium
    * Http put /restapi/v1.0/account/{accountId}/extension/{extensionId}/call-queues
    */
-  async put (userCallQueues: UserCallQueues): Promise<UserCallQueues> {
-    const r = await this.rc.put(this.path(), userCallQueues)
-    return r.data
+  async put(userCallQueues: UserCallQueues): Promise<UserCallQueues> {
+    const r = await this.rc.put(this.path(), userCallQueues);
+    return r.data;
   }
 }
 
-export default CallQueues
+export default CallQueues;

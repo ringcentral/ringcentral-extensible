@@ -1,54 +1,54 @@
-import { PartyInfo, OwnerInfo, CallStatusInfo } from '.'
+import {PartyInfo, OwnerInfo, CallStatusInfo} from '.';
 
 class PartySuperviseResponse {
   /**
    * Information about a call party that monitors a call
    */
-  from?: PartyInfo
+  from?: PartyInfo;
 
   /**
    * Information about a call party that is monitored
    */
-  to?: PartyInfo
+  to?: PartyInfo;
 
   /**
    * Direction of a call
    */
-  direction?: ('Outbound' | 'Inbound')
+  direction?: 'Outbound' | 'Inbound';
 
   /**
    * Internal identifier of a party that monitors a call
    */
-  id?: string
+  id?: string;
 
   /**
    * Internal identifier of an account that monitors a call
    */
-  accountId?: string
+  accountId?: string;
 
   /**
    * Internal identifier of an extension that monitors a call
    */
-  extensionId?: string
+  extensionId?: string;
 
   /**
    * Specifies if a call party is muted
    */
-  muted?: boolean
+  muted?: boolean;
 
   /**
    * Deprecated. Infromation a call owner
    */
-  owner?: OwnerInfo
+  owner?: OwnerInfo;
 
   /**
    * Specifies if a device is stand-alone
    */
-  standAlone?: boolean
+  standAlone?: boolean;
 
   /**
    */
-  status?: CallStatusInfo
+  status?: CallStatusInfo;
 }
 
-export default PartySuperviseResponse
+export default PartySuperviseResponse;

@@ -2,12 +2,12 @@ class ExtensionGrantListEventBody {
   /**
    * Internal identifier of an extension
    */
-  extensionId?: string
+  extensionId?: string;
 
   /**
    * Internal identifier of a subscription owner extension
    */
-  ownerId?: string
+  ownerId?: string;
 }
 
-export default ExtensionGrantListEventBody
+export default ExtensionGrantListEventBody;

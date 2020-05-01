@@ -1,7 +1,7 @@
 class GlipDataExportNavigationInfoUri {
   /**
    */
-  uri?: string
+  uri?: string;
 }
 
-export default GlipDataExportNavigationInfoUri
+export default GlipDataExportNavigationInfoUri;

@@ -2,12 +2,12 @@ class SwitchSiteInfo {
   /**
    * Internal identifier of a site. The company identifier value is 'main-site'
    */
-  id?: string
+  id?: string;
 
   /**
    * Name of a site
    */
-  name?: string
+  name?: string;
 }
 
-export default SwitchSiteInfo
+export default SwitchSiteInfo;

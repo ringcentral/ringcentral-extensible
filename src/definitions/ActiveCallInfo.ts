@@ -1,65 +1,70 @@
-import { DetailedCallInfo, PrimaryCQInfo, AdditionalCQInfo } from '.'
+import {DetailedCallInfo, PrimaryCQInfo, AdditionalCQInfo} from '.';
 
 class ActiveCallInfo {
   /**
    */
-  id?: string
+  id?: string;
 
   /**
    */
-  direction?: ('Inbound' | 'Outbound')
+  direction?: 'Inbound' | 'Outbound';
 
   /**
    * Phone number or extension number of a caller. For GCM transport type '_from' property should be used
    */
-  from?: string
+  from?: string;
 
   /**
    * Name of a caller
    */
-  fromName?: string
+  fromName?: string;
 
   /**
    * Phone number or extension number of a callee
    */
-  to?: string
+  to?: string;
 
   /**
    * Name of a callee
    */
-  toName?: string
+  toName?: string;
 
   /**
    * Time when the call is actually started
    */
-  startTime?: string
+  startTime?: string;
 
   /**
    * Telephony presence status
    */
-  telephonyStatus?: ('NoCall' | 'CallConnected' | 'Ringing' | 'OnHold' | 'ParkedCall')
+  telephonyStatus?:
+    | 'NoCall'
+    | 'CallConnected'
+    | 'Ringing'
+    | 'OnHold'
+    | 'ParkedCall';
 
   /**
    */
-  sipData?: DetailedCallInfo
+  sipData?: DetailedCallInfo;
 
   /**
    */
-  sessionId?: string
+  sessionId?: string;
 
   /**
    */
-  terminationType?: string
+  terminationType?: string;
 
   /**
    * Primary call session information. Supported for Call Queues only
    */
-  primary?: PrimaryCQInfo
+  primary?: PrimaryCQInfo;
 
   /**
    * Additional call session information. Supported for Call Queues only
    */
-  additional?: AdditionalCQInfo
+  additional?: AdditionalCQInfo;
 }
 
-export default ActiveCallInfo
+export default ActiveCallInfo;

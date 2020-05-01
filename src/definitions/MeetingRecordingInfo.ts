@@ -1,33 +1,33 @@
 class MeetingRecordingInfo {
   /**
    */
-  id?: string
+  id?: string;
 
   /**
    */
-  contentDownloadUri?: string
+  contentDownloadUri?: string;
 
   /**
    */
-  contentType?: ('video/mp4' | 'audio/m4a' | 'text/vtt')
+  contentType?: 'video/mp4' | 'audio/m4a' | 'text/vtt';
 
   /**
    */
-  size?: number
+  size?: number;
 
   /**
    * Starting time of a recording
    */
-  startTime?: string
+  startTime?: string;
 
   /**
    * Ending time of a recording
    */
-  endTime?: string
+  endTime?: string;
 
   /**
    */
-  status?: ('Completed' | 'Processing')
+  status?: 'Completed' | 'Processing';
 }
 
-export default MeetingRecordingInfo
+export default MeetingRecordingInfo;

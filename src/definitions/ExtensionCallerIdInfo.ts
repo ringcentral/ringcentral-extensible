@@ -1,28 +1,28 @@
-import { CallerIdByDevice, CallerIdByFeature } from '.'
+import {CallerIdByDevice, CallerIdByFeature} from '.';
 
 class ExtensionCallerIdInfo {
   /**
    * Canonical URL of a caller ID resource
    */
-  uri?: string
+  uri?: string;
 
   /**
    */
-  byDevice?: CallerIdByDevice[]
+  byDevice?: CallerIdByDevice[];
 
   /**
    */
-  byFeature?: CallerIdByFeature[]
+  byFeature?: CallerIdByFeature[];
 
   /**
    * If 'True', then user first name and last name will be used as caller ID when making outbound calls from extension
    */
-  extensionNameForOutboundCalls?: boolean
+  extensionNameForOutboundCalls?: boolean;
 
   /**
    * If 'True', then extension number will be used as caller ID when making internal calls
    */
-  extensionNumberForInternalCalls?: boolean
+  extensionNumberForInternalCalls?: boolean;
 }
 
-export default ExtensionCallerIdInfo
+export default ExtensionCallerIdInfo;

@@ -1,7 +1,7 @@
 class Supported {
   /**
    */
-  supported?: boolean
+  supported?: boolean;
 }
 
-export default Supported
+export default Supported;

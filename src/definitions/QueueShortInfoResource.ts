@@ -2,12 +2,12 @@ class QueueShortInfoResource {
   /**
    * Call queue extension identifier
    */
-  id?: string
+  id?: string;
 
   /**
    * Call queue name (read-only)
    */
-  name?: string
+  name?: string;
 }
 
-export default QueueShortInfoResource
+export default QueueShortInfoResource;

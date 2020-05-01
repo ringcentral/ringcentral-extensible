@@ -1,19 +1,19 @@
-import { UnifiedPresence } from '.'
+import {UnifiedPresence} from '.';
 
 class UnifiedPresenceListEntry {
   /**
    * Internal identifier of the resource
    */
-  resourceId?: string
+  resourceId?: string;
 
   /**
    * Status code of resource retrieval
    */
-  status?: number
+  status?: number;
 
   /**
    */
-  body?: UnifiedPresence
+  body?: UnifiedPresence;
 }
 
-export default UnifiedPresenceListEntry
+export default UnifiedPresenceListEntry;

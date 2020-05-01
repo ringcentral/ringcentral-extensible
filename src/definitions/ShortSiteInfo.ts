@@ -2,12 +2,12 @@ class ShortSiteInfo {
   /**
    * Internal idetifier of a site extension
    */
-  id?: string
+  id?: string;
 
   /**
    * Extension user first name
    */
-  name?: string
+  name?: string;
 }
 
-export default ShortSiteInfo
+export default ShortSiteInfo;

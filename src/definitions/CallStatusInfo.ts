@@ -1,25 +1,62 @@
-import { PeerInfo } from '.'
+import {PeerInfo} from '.';
 
 class CallStatusInfo {
   /**
    * Status code of a call
    */
-  code?: ('Setup' | 'Proceeding' | 'Answered' | 'Disconnected' | 'Gone' | 'Parked' | 'Hold' | 'VoiceMail' | 'FaxReceive' | 'VoiceMailScreening')
+  code?:
+    | 'Setup'
+    | 'Proceeding'
+    | 'Answered'
+    | 'Disconnected'
+    | 'Gone'
+    | 'Parked'
+    | 'Hold'
+    | 'VoiceMail'
+    | 'FaxReceive'
+    | 'VoiceMailScreening';
 
   /**
    * Peer session / party data.'Gone'state only
    */
-  peerId?: PeerInfo
+  peerId?: PeerInfo;
 
   /**
    * Reason of call termination. For 'Disconnected' code only
    */
-  reason?: ('Pickup' | 'Supervising' | 'TakeOver' | 'Timeout' | 'BlindTransfer' | 'RccTransfer' | 'AttendedTransfer' | 'CallerInputRedirect' | 'CallFlip' | 'ParkLocation' | 'DtmfTransfer' | 'AgentAnswered' | 'AgentDropped' | 'Rejected' | 'Cancelled' | 'InternalError' | 'NoAnswer' | 'TargetBusy' | 'InvalidNumber' | 'InternationalDisabled' | 'DestinationBlocked' | 'NotEnoughFunds' | 'NoSuchUser' | 'CallRedirected' | 'CallReplied' | 'CallFinished' | 'CallDropped')
+  reason?:
+    | 'Pickup'
+    | 'Supervising'
+    | 'TakeOver'
+    | 'Timeout'
+    | 'BlindTransfer'
+    | 'RccTransfer'
+    | 'AttendedTransfer'
+    | 'CallerInputRedirect'
+    | 'CallFlip'
+    | 'ParkLocation'
+    | 'DtmfTransfer'
+    | 'AgentAnswered'
+    | 'AgentDropped'
+    | 'Rejected'
+    | 'Cancelled'
+    | 'InternalError'
+    | 'NoAnswer'
+    | 'TargetBusy'
+    | 'InvalidNumber'
+    | 'InternationalDisabled'
+    | 'DestinationBlocked'
+    | 'NotEnoughFunds'
+    | 'NoSuchUser'
+    | 'CallRedirected'
+    | 'CallReplied'
+    | 'CallFinished'
+    | 'CallDropped';
 
   /**
    * Optional message
    */
-  description?: string
+  description?: string;
 }
 
-export default CallStatusInfo
+export default CallStatusInfo;

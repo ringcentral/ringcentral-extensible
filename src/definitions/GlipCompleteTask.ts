@@ -1,20 +1,20 @@
-import { AssigneeInfo } from '.'
+import {AssigneeInfo} from '.';
 
 class GlipCompleteTask {
   /**
    * Completeness status. 'Mandatory' if `completenessCondition` is set to `Simple`, otherwise 'Optional'
    */
-  status?: ('Incomplete' | 'Complete')
+  status?: 'Incomplete' | 'Complete';
 
   /**
    */
-  assignees?: AssigneeInfo[]
+  assignees?: AssigneeInfo[];
 
   /**
    * Current completeness percentage of a task with the 'Percentage' completeness condition. 'Mandatory' if `completenessCondition` is set to `Percentage`, otherwise 'Optional'
    * Maximum: 100
    */
-  completenessPercentage?: number
+  completenessPercentage?: number;
 }
 
-export default GlipCompleteTask
+export default GlipCompleteTask;

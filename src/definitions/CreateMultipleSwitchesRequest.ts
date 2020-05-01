@@ -1,9 +1,9 @@
-import { CreateSwitchInfo } from '.'
+import {CreateSwitchInfo} from '.';
 
 class CreateMultipleSwitchesRequest {
   /**
    */
-  records?: CreateSwitchInfo[]
+  records?: CreateSwitchInfo[];
 }
 
-export default CreateMultipleSwitchesRequest
+export default CreateMultipleSwitchesRequest;

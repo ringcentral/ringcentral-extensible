@@ -2,7 +2,7 @@ class UserVideoConfiguration {
   /**
    * Video provider of the user
    */
-  provider?: ('RCMeetings' | 'RCVideo' | 'None')
+  provider?: 'RCMeetings' | 'RCVideo' | 'None';
 }
 
-export default UserVideoConfiguration
+export default UserVideoConfiguration;

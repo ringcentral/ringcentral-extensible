@@ -1,43 +1,43 @@
 class EmergencyServiceAddressResourceRequest {
   /**
    */
-  street?: string
+  street?: string;
 
   /**
    */
-  street2?: string
+  street2?: string;
 
   /**
    */
-  city?: string
+  city?: string;
 
   /**
    */
-  zip?: string
+  zip?: string;
 
   /**
    */
-  customerName?: string
+  customerName?: string;
 
   /**
    * State/province name
    */
-  state?: string
+  state?: string;
 
   /**
    * Internal identifier of a state
    */
-  stateId?: string
+  stateId?: string;
 
   /**
    * Country name
    */
-  country?: string
+  country?: string;
 
   /**
    * Internal identifier of a country
    */
-  countryId?: string
+  countryId?: string;
 }
 
-export default EmergencyServiceAddressResourceRequest
+export default EmergencyServiceAddressResourceRequest;

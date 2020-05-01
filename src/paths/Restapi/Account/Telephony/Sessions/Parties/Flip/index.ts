@@ -1,18 +1,18 @@
-import { CallPartyFlip } from '../../../../../../../definitions'
-import Parent from '..'
-import RestClient from '../../../../../../..'
+import {CallPartyFlip} from '../../../../../../../definitions';
+import Parent from '..';
+import RestClient from '../../../../../../..';
 
 class Flip {
-  rc: RestClient
-  parent: Parent
+  rc: RestClient;
+  parent: Parent;
 
-  constructor (parent: Parent) {
-    this.parent = parent
-    this.rc = parent.rc
+  constructor(parent: Parent) {
+    this.parent = parent;
+    this.rc = parent.rc;
   }
 
-  path (): string {
-    return `${this.parent.path()}/flip`
+  path(): string {
+    return `${this.parent.path()}/flip`;
   }
 
   /**
@@ -20,10 +20,10 @@ class Flip {
    * Rate Limit Group: Light
    * Http post /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/flip
    */
-  async post (callPartyFlip: CallPartyFlip): Promise<string> {
-    const r = await this.rc.post(this.path(), callPartyFlip)
-    return r.data
+  async post(callPartyFlip: CallPartyFlip): Promise<string> {
+    const r = await this.rc.post(this.path(), callPartyFlip);
+    return r.data;
   }
 }
 
-export default Flip
+export default Flip;

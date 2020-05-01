@@ -1,20 +1,20 @@
-import { CountryInfo } from '.'
+import {CountryInfo} from '.';
 
 class BrandInfo {
   /**
    * Internal identifier of a brand
    */
-  id?: string
+  id?: string;
 
   /**
    * Brand name, for example  RingCentral UK ,  ClearFax
    */
-  name?: string
+  name?: string;
 
   /**
    * Home country information
    */
-  homeCountry?: CountryInfo
+  homeCountry?: CountryInfo;
 }
 
-export default BrandInfo
+export default BrandInfo;

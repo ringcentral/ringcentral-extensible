@@ -1,18 +1,22 @@
-import { ParsePhoneNumberResponse, ParsePhoneNumberRequest, ParsePhoneNumberParameters } from '../../../../definitions'
-import Parent from '..'
-import RestClient from '../../../..'
+import {
+  ParsePhoneNumberResponse,
+  ParsePhoneNumberRequest,
+  ParsePhoneNumberParameters,
+} from '../../../../definitions';
+import Parent from '..';
+import RestClient from '../../../..';
 
 class Parse {
-  rc: RestClient
-  parent: Parent
+  rc: RestClient;
+  parent: Parent;
 
-  constructor (parent: Parent) {
-    this.parent = parent
-    this.rc = parent.rc
+  constructor(parent: Parent) {
+    this.parent = parent;
+    this.rc = parent.rc;
   }
 
-  path (): string {
-    return `${this.parent.path()}/parse`
+  path(): string {
+    return `${this.parent.path()}/parse`;
   }
 
   /**
@@ -20,10 +24,17 @@ class Parse {
    * Rate Limit Group: Light
    * Http post /restapi/v1.0/number-parser/parse
    */
-  async post (parsePhoneNumberRequest: ParsePhoneNumberRequest, queryParams?: ParsePhoneNumberParameters): Promise<ParsePhoneNumberResponse> {
-    const r = await this.rc.post(this.path(), parsePhoneNumberRequest, queryParams)
-    return r.data
+  async post(
+    parsePhoneNumberRequest: ParsePhoneNumberRequest,
+    queryParams?: ParsePhoneNumberParameters
+  ): Promise<ParsePhoneNumberResponse> {
+    const r = await this.rc.post(
+      this.path(),
+      parsePhoneNumberRequest,
+      queryParams
+    );
+    return r.data;
   }
 }
 
-export default Parse
+export default Parse;

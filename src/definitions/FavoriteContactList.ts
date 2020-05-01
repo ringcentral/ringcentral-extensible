@@ -1,13 +1,13 @@
-import { FavoriteContactResource } from '.'
+import {FavoriteContactResource} from '.';
 
 class FavoriteContactList {
   /**
    */
-  uri?: string
+  uri?: string;
 
   /**
    */
-  records?: FavoriteContactResource[]
+  records?: FavoriteContactResource[];
 }
 
-export default FavoriteContactList
+export default FavoriteContactList;

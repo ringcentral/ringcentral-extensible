@@ -2,7 +2,7 @@ class ReadDeviceParameters {
   /**
    * Specifies if emergency address should be synchronized or not
    */
-  syncEmergencyAddress?: boolean
+  syncEmergencyAddress?: boolean;
 }
 
-export default ReadDeviceParameters
+export default ReadDeviceParameters;

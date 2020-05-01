@@ -1,11 +1,11 @@
 class UpdateMessageParameters {
   /**
    */
-  dateFrom?: string
+  dateFrom?: string;
 
   /**
    */
-  type?: ('Fax' | 'SMS' | 'VoiceMail' | 'Pager' | 'Text' | 'All')
+  type?: 'Fax' | 'SMS' | 'VoiceMail' | 'Pager' | 'Text' | 'All';
 }
 
-export default UpdateMessageParameters
+export default UpdateMessageParameters;

@@ -2,22 +2,22 @@ class AutomaticLocationUpdatesSiteInfo {
   /**
    * Internal identifier of a site
    */
-  id?: string
+  id?: string;
 
   /**
    * Link to a site resource
    */
-  uri?: string
+  uri?: string;
 
   /**
    * Name of a site
    */
-  name?: string
+  name?: string;
 
   /**
    * Site code value. Returned only if specified
    */
-  code?: string
+  code?: string;
 }
 
-export default AutomaticLocationUpdatesSiteInfo
+export default AutomaticLocationUpdatesSiteInfo;

@@ -1,18 +1,18 @@
-import { GlipEventInfo, GlipEventCreate } from '../../../../../definitions'
-import Parent from '..'
-import RestClient from '../../../../..'
+import {GlipEventInfo, GlipEventCreate} from '../../../../../definitions';
+import Parent from '..';
+import RestClient from '../../../../..';
 
 class Events {
-  rc: RestClient
-  parent: Parent
+  rc: RestClient;
+  parent: Parent;
 
-  constructor (parent: Parent) {
-    this.parent = parent
-    this.rc = parent.rc
+  constructor(parent: Parent) {
+    this.parent = parent;
+    this.rc = parent.rc;
   }
 
-  path (): string {
-    return `${this.parent.path()}/events`
+  path(): string {
+    return `${this.parent.path()}/events`;
   }
 
   /**
@@ -20,9 +20,9 @@ class Events {
    * Rate Limit Group: Medium
    * Http post /restapi/v1.0/glip/groups/{groupId}/events
    */
-  async post (glipEventCreate: GlipEventCreate): Promise<GlipEventInfo> {
-    const r = await this.rc.post(this.path(), glipEventCreate)
-    return r.data
+  async post(glipEventCreate: GlipEventCreate): Promise<GlipEventInfo> {
+    const r = await this.rc.post(this.path(), glipEventCreate);
+    return r.data;
   }
 
   /**
@@ -30,10 +30,10 @@ class Events {
    * Rate Limit Group: Medium
    * Http get /restapi/v1.0/glip/groups/{groupId}/events
    */
-  async get (): Promise<GlipEventInfo> {
-    const r = await this.rc.get(this.path())
-    return r.data
+  async get(): Promise<GlipEventInfo> {
+    const r = await this.rc.get(this.path());
+    return r.data;
   }
 }
 
-export default Events
+export default Events;

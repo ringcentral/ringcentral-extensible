@@ -1,40 +1,43 @@
-import { CustomGreetingAnsweringRuleInfo, CustomCompanyGreetingLanguageInfo } from '.'
+import {
+  CustomGreetingAnsweringRuleInfo,
+  CustomCompanyGreetingLanguageInfo,
+} from '.';
 
 class CustomCompanyGreetingInfo {
   /**
    * Link to an extension custom greeting
    */
-  uri?: string
+  uri?: string;
 
   /**
    * Internal identifier of an answering rule
    */
-  id?: string
+  id?: string;
 
   /**
    * Type of a company greeting
    */
-  type?: ('Company' | 'StartRecording' | 'StopRecording' | 'AutomaticRecording')
+  type?: 'Company' | 'StartRecording' | 'StopRecording' | 'AutomaticRecording';
 
   /**
    * Content media type
    */
-  contentType?: ('audio/mpeg' | 'audio/wav')
+  contentType?: 'audio/mpeg' | 'audio/wav';
 
   /**
    * Link to a greeting content (audio file)
    */
-  contentUri?: string
+  contentUri?: string;
 
   /**
    * Information on an answering rule that the greeting is applied to
    */
-  answeringRule?: CustomGreetingAnsweringRuleInfo
+  answeringRule?: CustomGreetingAnsweringRuleInfo;
 
   /**
    * Information on a greeting language. Supported for types 'StopRecording', 'StartRecording', 'AutomaticRecording'
    */
-  language?: CustomCompanyGreetingLanguageInfo
+  language?: CustomCompanyGreetingLanguageInfo;
 }
 
-export default CustomCompanyGreetingInfo
+export default CustomCompanyGreetingInfo;

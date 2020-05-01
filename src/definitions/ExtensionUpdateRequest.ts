@@ -1,83 +1,103 @@
-import { ExtensionStatusInfo, ContactInfoUpdateRequest, ExtensionRegionalSettingRequest, CallQueueInfoRequest, UserTransitionInfo, CustomFieldInfo, AutomaticLocationUpdatesSiteInfo } from '.'
+import {
+  ExtensionStatusInfo,
+  ContactInfoUpdateRequest,
+  ExtensionRegionalSettingRequest,
+  CallQueueInfoRequest,
+  UserTransitionInfo,
+  CustomFieldInfo,
+  AutomaticLocationUpdatesSiteInfo,
+} from '.';
 
 class ExtensionUpdateRequest {
   /**
    */
-  status?: ('Disabled' | 'Enabled' | 'NotActivated' | 'Frozen')
+  status?: 'Disabled' | 'Enabled' | 'NotActivated' | 'Frozen';
 
   /**
    */
-  statusInfo?: ExtensionStatusInfo
+  statusInfo?: ExtensionStatusInfo;
 
   /**
    * Type of suspension
    */
-  reason?: string
+  reason?: string;
 
   /**
    * Free Form user comment
    */
-  comment?: string
+  comment?: string;
 
   /**
    * Extension number available
    */
-  extensionNumber?: string
+  extensionNumber?: string;
 
   /**
    */
-  contact?: ContactInfoUpdateRequest
+  contact?: ContactInfoUpdateRequest;
 
   /**
    */
-  regionalSettings?: ExtensionRegionalSettingRequest
+  regionalSettings?: ExtensionRegionalSettingRequest;
 
   /**
    */
-  setupWizardState?: ('NotStarted' | 'Incomplete' | 'Completed')
+  setupWizardState?: 'NotStarted' | 'Incomplete' | 'Completed';
 
   /**
    * Additional extension identifier, created by partner application and applied on client side
    */
-  partnerId?: string
+  partnerId?: string;
 
   /**
    * IVR PIN
    */
-  ivrPin?: string
+  ivrPin?: string;
 
   /**
    * Password for extension
    */
-  password?: string
+  password?: string;
 
   /**
    * For Department extension type only. Call queue settings
    */
-  callQueueInfo?: CallQueueInfoRequest
+  callQueueInfo?: CallQueueInfoRequest;
 
   /**
    */
-  transition?: UserTransitionInfo[]
+  transition?: UserTransitionInfo[];
 
   /**
    */
-  customFields?: CustomFieldInfo[]
+  customFields?: CustomFieldInfo[];
 
   /**
    * Hides extension from showing in company directory. Supported for extensions of User type only
    */
-  hidden?: boolean
+  hidden?: boolean;
 
   /**
    * Site data. If multi-site feature is turned on for the account, then internal identifier of a site must be specified. To assign the wireless point to the main site (company) set site ID to `main-site`
    */
-  site?: AutomaticLocationUpdatesSiteInfo
+  site?: AutomaticLocationUpdatesSiteInfo;
 
   /**
    * Extension type
    */
-  type?: ('User' | 'Fax User' | 'VirtualUser' | 'DigitalUser' | 'Department' | 'Announcement' | 'Voicemail' | 'SharedLinesGroup' | 'PagingOnly' | 'IvrMenu' | 'ApplicationExtension' | 'ParkLocation')
+  type?:
+    | 'User'
+    | 'Fax User'
+    | 'VirtualUser'
+    | 'DigitalUser'
+    | 'Department'
+    | 'Announcement'
+    | 'Voicemail'
+    | 'SharedLinesGroup'
+    | 'PagingOnly'
+    | 'IvrMenu'
+    | 'ApplicationExtension'
+    | 'ParkLocation';
 }
 
-export default ExtensionUpdateRequest
+export default ExtensionUpdateRequest;

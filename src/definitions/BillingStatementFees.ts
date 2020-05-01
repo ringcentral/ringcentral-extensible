@@ -1,15 +1,15 @@
 class BillingStatementFees {
   /**
    */
-  description?: string
+  description?: string;
 
   /**
    */
-  amount?: number
+  amount?: number;
 
   /**
    */
-  freeServiceCredit?: number
+  freeServiceCredit?: number;
 }
 
-export default BillingStatementFees
+export default BillingStatementFees;

@@ -3,7 +3,7 @@ class ReadMessageContentParameters {
    * Content disposition of a response
    * Default: Inline
    */
-  contentDisposition?: ('Inline' | 'Attachment')
+  contentDisposition?: 'Inline' | 'Attachment';
 }
 
-export default ReadMessageContentParameters
+export default ReadMessageContentParameters;

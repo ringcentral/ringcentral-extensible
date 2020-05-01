@@ -2,7 +2,7 @@ class CalledNumberInfo {
   /**
    * Called phone number
    */
-  phoneNumber?: string
+  phoneNumber?: string;
 }
 
-export default CalledNumberInfo
+export default CalledNumberInfo;

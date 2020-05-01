@@ -1,13 +1,22 @@
-import { CallerIdByFeatureInfo } from '.'
+import {CallerIdByFeatureInfo} from '.';
 
 class CallerIdByFeature {
   /**
    */
-  feature?: ('RingOut' | 'RingMe' | 'CallFlip' | 'FaxNumber' | 'AdditionalSoftphone' | 'Alternate' | 'CommonPhone' | 'MobileApp' | 'Delegated')
+  feature?:
+    | 'RingOut'
+    | 'RingMe'
+    | 'CallFlip'
+    | 'FaxNumber'
+    | 'AdditionalSoftphone'
+    | 'Alternate'
+    | 'CommonPhone'
+    | 'MobileApp'
+    | 'Delegated';
 
   /**
    */
-  callerId?: CallerIdByFeatureInfo
+  callerId?: CallerIdByFeatureInfo;
 }
 
-export default CallerIdByFeature
+export default CallerIdByFeature;

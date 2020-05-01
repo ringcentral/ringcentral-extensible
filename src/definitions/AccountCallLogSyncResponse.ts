@@ -1,15 +1,15 @@
-import { CompanyCallLogRecord, CompanyCallLogSyncInfo } from '.'
+import {CompanyCallLogRecord, CompanyCallLogSyncInfo} from '.';
 
 class AccountCallLogSyncResponse {
   /**
    * List of call log records with synchronization information. For 'ISync' the total number of returned records is limited to 250; this includes both new records and the old ones, specified by the recordCount parameter
    */
-  records?: CompanyCallLogRecord[]
+  records?: CompanyCallLogRecord[];
 
   /**
    * Sync information (type, token and time)
    */
-  syncInfo?: CompanyCallLogSyncInfo
+  syncInfo?: CompanyCallLogSyncInfo;
 }
 
-export default AccountCallLogSyncResponse
+export default AccountCallLogSyncResponse;

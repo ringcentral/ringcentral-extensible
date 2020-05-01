@@ -1,60 +1,165 @@
-import { BillingInfo, DelegateInfo, ExtensionInfoCallLog, CallLogCallerInfo, CallLogRecordingInfo, CallLogRecordMessage } from '.'
+import {
+  BillingInfo,
+  DelegateInfo,
+  ExtensionInfoCallLog,
+  CallLogCallerInfo,
+  CallLogRecordingInfo,
+  CallLogRecordMessage,
+} from '.';
 
 class CallLogRecordLegInfo {
   /**
    * Action description of the call operation
    */
-  action?: ('Unknown' | 'Phone Call' | 'Phone Login' | 'Incoming Fax' | 'Accept Call' | 'External Application' | 'FindMe' | 'FollowMe' | 'Outgoing Fax' | 'CallOut-CallMe' | 'Call Return' | 'Calling Card' | 'Monitoring' | 'Ring Directly' | 'RingOut Web' | 'Text Relay' | 'VoIP Call' | 'RingOut PC' | 'RingMe' | 'Transfer' | '411 Info' | 'Emergency' | 'E911 Update' | 'Support' | 'RingOut Mobile' | 'MeetingsCall' | 'SilentMonitoring')
+  action?:
+    | 'Unknown'
+    | 'Phone Call'
+    | 'Phone Login'
+    | 'Incoming Fax'
+    | 'Accept Call'
+    | 'External Application'
+    | 'FindMe'
+    | 'FollowMe'
+    | 'Outgoing Fax'
+    | 'CallOut-CallMe'
+    | 'Call Return'
+    | 'Calling Card'
+    | 'Monitoring'
+    | 'Ring Directly'
+    | 'RingOut Web'
+    | 'Text Relay'
+    | 'VoIP Call'
+    | 'RingOut PC'
+    | 'RingMe'
+    | 'Transfer'
+    | '411 Info'
+    | 'Emergency'
+    | 'E911 Update'
+    | 'Support'
+    | 'RingOut Mobile'
+    | 'MeetingsCall'
+    | 'SilentMonitoring';
 
   /**
    * Call direction
    */
-  direction?: ('Inbound' | 'Outbound')
+  direction?: 'Inbound' | 'Outbound';
 
   /**
    * Billing information related to the call
    */
-  billing?: BillingInfo
+  billing?: BillingInfo;
 
   /**
    * Information on a delegate extension that actually implemented a call action. For Secretary call log the field is returned if the current extension implemented a call. For Boss call log the field contains information on a Secretary extension which actually implemented a call on behalf of the current extension
    */
-  delegate?: DelegateInfo
+  delegate?: DelegateInfo;
 
   /**
    * Internal identifier of an extension
    */
-  extensionId?: string
+  extensionId?: string;
 
   /**
    * Call duration in seconds
    */
-  duration?: number
+  duration?: number;
 
   /**
    * Information on extension
    */
-  extension?: ExtensionInfoCallLog
+  extension?: ExtensionInfoCallLog;
 
   /**
    * Leg type
    */
-  legType?: ('SipForwarding' | 'ServiceMinus2' | 'ServiceMinus3' | 'PstnToSip' | 'Accept' | 'FindMe' | 'FollowMe' | 'TestCall' | 'FaxSent' | 'CallBack' | 'CallingCard' | 'RingDirectly' | 'RingOutWebToSubscriber' | 'RingOutWebToCaller' | 'SipToPstnMetered' | 'RingOutClientToSubscriber' | 'RingOutClientToCaller' | 'RingMe' | 'TransferCall' | 'SipToPstnUnmetered' | 'RingOutDeviceToSubscriber' | 'RingOutDeviceToCaller' | 'RingOutOneLegToCaller' | 'ExtensionToExtension' | 'CallPark' | 'PagingServer' | 'Hunting' | 'OutgoingFreeSpDl' | 'ParkLocation' | 'ConferenceCall' | 'MobileApp' | 'Monitoring' | 'MoveToConference' | 'Unknown')
+  legType?:
+    | 'SipForwarding'
+    | 'ServiceMinus2'
+    | 'ServiceMinus3'
+    | 'PstnToSip'
+    | 'Accept'
+    | 'FindMe'
+    | 'FollowMe'
+    | 'TestCall'
+    | 'FaxSent'
+    | 'CallBack'
+    | 'CallingCard'
+    | 'RingDirectly'
+    | 'RingOutWebToSubscriber'
+    | 'RingOutWebToCaller'
+    | 'SipToPstnMetered'
+    | 'RingOutClientToSubscriber'
+    | 'RingOutClientToCaller'
+    | 'RingMe'
+    | 'TransferCall'
+    | 'SipToPstnUnmetered'
+    | 'RingOutDeviceToSubscriber'
+    | 'RingOutDeviceToCaller'
+    | 'RingOutOneLegToCaller'
+    | 'ExtensionToExtension'
+    | 'CallPark'
+    | 'PagingServer'
+    | 'Hunting'
+    | 'OutgoingFreeSpDl'
+    | 'ParkLocation'
+    | 'ConferenceCall'
+    | 'MobileApp'
+    | 'Monitoring'
+    | 'MoveToConference'
+    | 'Unknown';
 
   /**
    * The call start datetime in (ISO 8601)[https://en.wikipedia.org/wiki/ISO_8601] format including timezone, for example 2016-03-10T18:07:52.534Z
    */
-  startTime?: string
+  startTime?: string;
 
   /**
    * Call type
    */
-  type?: ('Voice' | 'Fax')
+  type?: 'Voice' | 'Fax';
 
   /**
    * Status description of the call operation
    */
-  result?: ('Unknown' | 'Accepted' | 'Call connected' | 'In Progress' | 'Voicemail' | 'Reply' | 'Missed' | 'Busy' | 'Rejected' | 'No Answer' | 'Hang Up' | 'Blocked' | 'Suspended account' | 'Call Failed' | 'Call Failure' | 'Internal Error' | 'IP Phone Offline' | 'No Calling Credit' | 'Not Allowed' | 'Restricted Number' | 'Wrong Number' | 'Answered Not Accepted' | 'Stopped' | 'International Disabled' | 'International Restricted' | 'Abandoned' | 'Declined' | 'Received' | 'Fax on Demand' | 'Partial Receive' | 'Receive Error' | 'Fax Receipt Error' | 'Sent' | 'Fax Partially Sent' | 'Send Error' | 'Fax Not Sent' | 'Fax Poor Line')
+  result?:
+    | 'Unknown'
+    | 'Accepted'
+    | 'Call connected'
+    | 'In Progress'
+    | 'Voicemail'
+    | 'Reply'
+    | 'Missed'
+    | 'Busy'
+    | 'Rejected'
+    | 'No Answer'
+    | 'Hang Up'
+    | 'Blocked'
+    | 'Suspended account'
+    | 'Call Failed'
+    | 'Call Failure'
+    | 'Internal Error'
+    | 'IP Phone Offline'
+    | 'No Calling Credit'
+    | 'Not Allowed'
+    | 'Restricted Number'
+    | 'Wrong Number'
+    | 'Answered Not Accepted'
+    | 'Stopped'
+    | 'International Disabled'
+    | 'International Restricted'
+    | 'Abandoned'
+    | 'Declined'
+    | 'Received'
+    | 'Fax on Demand'
+    | 'Partial Receive'
+    | 'Receive Error'
+    | 'Fax Receipt Error'
+    | 'Sent'
+    | 'Fax Partially Sent'
+    | 'Send Error'
+    | 'Fax Not Sent'
+    | 'Fax Poor Line';
 
   /**
    * Reason of a call result:
@@ -92,50 +197,84 @@ class CallLogRecordLegInfo {
    * * `Fax Save Error` - An internal error occurred when saving the fax. Please try again
    * * `Fax Send Error` - An error occurred when sending the fax. Please try again
    */
-  reason?: ('Accepted' | 'Connected' | 'line Busy' | 'Not Answered' | 'No Answer' | 'Hang Up' | 'Stopped' | 'Internal Error' | 'No Credit' | 'Restricted Number' | 'Wrong Number' | 'International Disabled' | 'International Restricted' | 'Bad Number' | 'Info 411 Restricted' | 'Customer 611 Restricted' | 'No Digital Line' | 'Failed Try Again' | 'Max Call Limit' | 'Too Many Calls' | 'Calls Not Accepted' | 'Number Not Allowed' | 'Number Blocked' | 'Number Disabled' | 'Not Allowed' | 'Resource Error' | 'Call Loop' | 'Fax Not Received' | 'Fax Partially Sent' | 'Fax Not Sent' | 'Fax Poor Line' | 'Fax Prepare Error' | 'Fax Save Error' | 'Fax Send Error')
+  reason?:
+    | 'Accepted'
+    | 'Connected'
+    | 'line Busy'
+    | 'Not Answered'
+    | 'No Answer'
+    | 'Hang Up'
+    | 'Stopped'
+    | 'Internal Error'
+    | 'No Credit'
+    | 'Restricted Number'
+    | 'Wrong Number'
+    | 'International Disabled'
+    | 'International Restricted'
+    | 'Bad Number'
+    | 'Info 411 Restricted'
+    | 'Customer 611 Restricted'
+    | 'No Digital Line'
+    | 'Failed Try Again'
+    | 'Max Call Limit'
+    | 'Too Many Calls'
+    | 'Calls Not Accepted'
+    | 'Number Not Allowed'
+    | 'Number Blocked'
+    | 'Number Disabled'
+    | 'Not Allowed'
+    | 'Resource Error'
+    | 'Call Loop'
+    | 'Fax Not Received'
+    | 'Fax Partially Sent'
+    | 'Fax Not Sent'
+    | 'Fax Poor Line'
+    | 'Fax Prepare Error'
+    | 'Fax Save Error'
+    | 'Fax Send Error';
 
   /**
    */
-  reasonDescription?: string
+  reasonDescription?: string;
 
   /**
    * Caller information
    */
-  from?: CallLogCallerInfo
+  from?: CallLogCallerInfo;
 
   /**
    * Callee information
    */
-  to?: CallLogCallerInfo
+  to?: CallLogCallerInfo;
 
   /**
    * Call transport
    */
-  transport?: ('PSTN' | 'VoIP')
+  transport?: 'PSTN' | 'VoIP';
 
   /**
    * Call recording data. Returned if the call is recorded
    */
-  recording?: CallLogRecordingInfo
+  recording?: CallLogRecordingInfo;
 
   /**
    * Indicates that the recording is too short and therefore wouldn't be returned. The flag is not returned if the value is false
    */
-  shortRecording?: boolean
+  shortRecording?: boolean;
 
   /**
    * Returned for 'Detailed' call log. Specifies if the leg is master-leg
    */
-  master?: boolean
+  master?: boolean;
 
   /**
    */
-  message?: CallLogRecordMessage
+  message?: CallLogRecordMessage;
 
   /**
    * Telephony identifier of a call session
    */
-  telephonySessionId?: string
+  telephonySessionId?: string;
 }
 
-export default CallLogRecordLegInfo
+export default CallLogRecordLegInfo;

@@ -1,18 +1,21 @@
-import { CreateSipRegistrationResponse, CreateSipRegistrationRequest } from '../../../../definitions'
-import Parent from '..'
-import RestClient from '../../../..'
+import {
+  CreateSipRegistrationResponse,
+  CreateSipRegistrationRequest,
+} from '../../../../definitions';
+import Parent from '..';
+import RestClient from '../../../..';
 
 class SipProvision {
-  rc: RestClient
-  parent: Parent
+  rc: RestClient;
+  parent: Parent;
 
-  constructor (parent: Parent) {
-    this.parent = parent
-    this.rc = parent.rc
+  constructor(parent: Parent) {
+    this.parent = parent;
+    this.rc = parent.rc;
   }
 
-  path (): string {
-    return `${this.parent.path()}/sip-provision`
+  path(): string {
+    return `${this.parent.path()}/sip-provision`;
   }
 
   /**
@@ -20,10 +23,12 @@ class SipProvision {
    * Rate Limit Group: Heavy
    * Http post /restapi/v1.0/client-info/sip-provision
    */
-  async post (createSipRegistrationRequest: CreateSipRegistrationRequest): Promise<CreateSipRegistrationResponse> {
-    const r = await this.rc.post(this.path(), createSipRegistrationRequest)
-    return r.data
+  async post(
+    createSipRegistrationRequest: CreateSipRegistrationRequest
+  ): Promise<CreateSipRegistrationResponse> {
+    const r = await this.rc.post(this.path(), createSipRegistrationRequest);
+    return r.data;
   }
 }
 
-export default SipProvision
+export default SipProvision;

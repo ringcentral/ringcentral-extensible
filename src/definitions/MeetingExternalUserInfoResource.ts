@@ -1,31 +1,31 @@
 class MeetingExternalUserInfoResource {
   /**
    */
-  uri?: string
+  uri?: string;
 
   /**
    */
-  userId?: string
+  userId?: string;
 
   /**
    */
-  accountId?: string
+  accountId?: string;
 
   /**
    */
-  userType?: number
+  userType?: number;
 
   /**
    */
-  userToken?: string
+  userToken?: string;
 
   /**
    */
-  hostKey?: string
+  hostKey?: string;
 
   /**
    */
-  personalMeetingId?: string
+  personalMeetingId?: string;
 }
 
-export default MeetingExternalUserInfoResource
+export default MeetingExternalUserInfoResource;

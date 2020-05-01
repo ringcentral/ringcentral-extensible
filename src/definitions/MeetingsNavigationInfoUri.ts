@@ -1,7 +1,7 @@
 class MeetingsNavigationInfoUri {
   /**
    */
-  uri?: string
+  uri?: string;
 }
 
-export default MeetingsNavigationInfoUri
+export default MeetingsNavigationInfoUri;

@@ -1,29 +1,33 @@
-import { CallQueueInfo, ProvisioningNavigationInfo, ProvisioningPagingInfo } from '.'
+import {
+  CallQueueInfo,
+  ProvisioningNavigationInfo,
+  ProvisioningPagingInfo,
+} from '.';
 
 class CallQueues {
   /**
    * Link to a call queues resource
    * Required
    */
-  uri?: string
+  uri?: string;
 
   /**
    * List of call queues
    * Required
    */
-  records?: CallQueueInfo[]
+  records?: CallQueueInfo[];
 
   /**
    * Information on navigation
    * Required
    */
-  navigation?: ProvisioningNavigationInfo
+  navigation?: ProvisioningNavigationInfo;
 
   /**
    * Information on paging
    * Required
    */
-  paging?: ProvisioningPagingInfo
+  paging?: ProvisioningPagingInfo;
 }
 
-export default CallQueues
+export default CallQueues;

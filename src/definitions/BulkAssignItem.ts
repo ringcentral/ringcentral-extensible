@@ -1,15 +1,15 @@
 class BulkAssignItem {
   /**
    */
-  departmentId?: string
+  departmentId?: string;
 
   /**
    */
-  addedExtensionIds?: string[]
+  addedExtensionIds?: string[];
 
   /**
    */
-  removedExtensionIds?: string[]
+  removedExtensionIds?: string[];
 }
 
-export default BulkAssignItem
+export default BulkAssignItem;

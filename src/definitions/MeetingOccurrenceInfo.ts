@@ -2,22 +2,22 @@ class MeetingOccurrenceInfo {
   /**
    * Identifier of a meeting occurrence
    */
-  id?: string
+  id?: string;
 
   /**
    * Starting time of a meeting occurrence
    */
-  startTime?: string
+  startTime?: string;
 
   /**
    * Duration of a meeting occurrence
    */
-  durationInMinutes?: number
+  durationInMinutes?: number;
 
   /**
    * Status of a meeting occurrence
    */
-  status?: string
+  status?: string;
 }
 
-export default MeetingOccurrenceInfo
+export default MeetingOccurrenceInfo;

@@ -1,15 +1,15 @@
 class ListUserTemplatesParameters {
   /**
    */
-  type?: ('UserSettings' | 'CallHandling')
+  type?: 'UserSettings' | 'CallHandling';
 
   /**
    */
-  page?: string
+  page?: string;
 
   /**
    */
-  perPage?: string
+  perPage?: string;
 }
 
-export default ListUserTemplatesParameters
+export default ListUserTemplatesParameters;

@@ -1,26 +1,29 @@
-import Supervise from './Supervise'
-import Parties from './Parties'
-import { CallSession, ReadCallSessionStatusParameters } from '../../../../../definitions'
-import Parent from '..'
-import RestClient from '../../../../..'
+import Supervise from './Supervise';
+import Parties from './Parties';
+import {
+  CallSession,
+  ReadCallSessionStatusParameters,
+} from '../../../../../definitions';
+import Parent from '..';
+import RestClient from '../../../../..';
 
 class Sessions {
-  rc: RestClient
-  telephonySessionId: (string | null)
-  parent: Parent
+  rc: RestClient;
+  telephonySessionId: string | null;
+  parent: Parent;
 
-  constructor (parent: Parent, telephonySessionId: (string | null) = null) {
-    this.parent = parent
-    this.rc = parent.rc
-    this.telephonySessionId = telephonySessionId
+  constructor(parent: Parent, telephonySessionId: string | null = null) {
+    this.parent = parent;
+    this.rc = parent.rc;
+    this.telephonySessionId = telephonySessionId;
   }
 
-  path (withParameter: boolean = true): string {
+  path(withParameter = true): string {
     if (withParameter && this.telephonySessionId !== null) {
-      return `${this.parent.path()}/sessions/${this.telephonySessionId}`
+      return `${this.parent.path()}/sessions/${this.telephonySessionId}`;
     }
 
-    return `${this.parent.path()}/sessions`
+    return `${this.parent.path()}/sessions`;
   }
 
   /**
@@ -28,13 +31,15 @@ class Sessions {
    * Rate Limit Group: Light
    * Http get /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}
    */
-  async get (queryParams?: ReadCallSessionStatusParameters): Promise<CallSession> {
+  async get(
+    queryParams?: ReadCallSessionStatusParameters
+  ): Promise<CallSession> {
     if (this.telephonySessionId === null) {
-      throw new Error('telephonySessionId must be specified.')
+      throw new Error('telephonySessionId must be specified.');
     }
 
-    const r = await this.rc.get(this.path(), queryParams)
-    return r.data
+    const r = await this.rc.get(this.path(), queryParams);
+    return r.data;
   }
 
   /**
@@ -42,22 +47,22 @@ class Sessions {
    * Rate Limit Group: Light
    * Http delete /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}
    */
-  async delete (): Promise<string> {
+  async delete(): Promise<string> {
     if (this.telephonySessionId === null) {
-      throw new Error('telephonySessionId must be specified.')
+      throw new Error('telephonySessionId must be specified.');
     }
 
-    const r = await this.rc.delete(this.path())
-    return r.data
+    const r = await this.rc.delete(this.path());
+    return r.data;
   }
 
-  parties (partyId: (string | null) = null): Parties {
-    return new Parties(this, partyId)
+  parties(partyId: string | null = null): Parties {
+    return new Parties(this, partyId);
   }
 
-  supervise (): Supervise {
-    return new Supervise(this)
+  supervise(): Supervise {
+    return new Supervise(this);
   }
 }
 
-export default Sessions
+export default Sessions;

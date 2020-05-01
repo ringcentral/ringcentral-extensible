@@ -1,34 +1,42 @@
-import { DevicePhoneNumberCountryInfo } from '.'
+import {DevicePhoneNumberCountryInfo} from '.';
 
 class DevicePhoneNumberInfo {
   /**
    * Internal identifier of a phone number
    */
-  id?: number
+  id?: number;
 
   /**
    * Brief information on a phone number country
    */
-  country?: DevicePhoneNumberCountryInfo
+  country?: DevicePhoneNumberCountryInfo;
 
   /**
    * Payment type. 'External' is returned for forwarded numbers which are not terminated in the RingCentral phone system = ['External', 'TollFree', 'Local'],
    */
-  paymentType?: ('External' | 'TollFree' | 'Local')
+  paymentType?: 'External' | 'TollFree' | 'Local';
 
   /**
    * Phone number
    */
-  phoneNumber?: string
+  phoneNumber?: string;
 
   /**
    */
-  usageType?: ('CompanyNumber' | 'MainCompanyNumber' | 'AdditionalCompanyNumber' | 'DirectNumber' | 'CompanyFaxNumber' | 'ForwardedNumber' | 'ForwardedCompanyNumber' | 'ContactCenterNumber')
+  usageType?:
+    | 'CompanyNumber'
+    | 'MainCompanyNumber'
+    | 'AdditionalCompanyNumber'
+    | 'DirectNumber'
+    | 'CompanyFaxNumber'
+    | 'ForwardedNumber'
+    | 'ForwardedCompanyNumber'
+    | 'ContactCenterNumber';
 
   /**
    * Type of a phone number
    */
-  type?: ('VoiceFax' | 'FaxOnly' | 'VoiceOnly')
+  type?: 'VoiceFax' | 'FaxOnly' | 'VoiceOnly';
 }
 
-export default DevicePhoneNumberInfo
+export default DevicePhoneNumberInfo;

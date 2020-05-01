@@ -1,41 +1,46 @@
-import { AuthenticationScheme, BulkSupported, Supported, FilterSupported } from '.'
+import {
+  AuthenticationScheme,
+  BulkSupported,
+  Supported,
+  FilterSupported,
+} from '.';
 
 class ServiceProviderConfig {
   /**
    */
-  authenticationSchemes?: AuthenticationScheme[]
+  authenticationSchemes?: AuthenticationScheme[];
 
   /**
    */
-  bulk?: BulkSupported
+  bulk?: BulkSupported;
 
   /**
    */
-  changePassword?: Supported
+  changePassword?: Supported;
 
   /**
    */
-  etag?: Supported
+  etag?: Supported;
 
   /**
    */
-  filter?: FilterSupported
+  filter?: FilterSupported;
 
   /**
    */
-  patch?: Supported
+  patch?: Supported;
 
   /**
    */
-  schemas?: ('urn:ietf:params:scim:schemas:core:2.0:ServiceProviderConfig')[]
+  schemas?: 'urn:ietf:params:scim:schemas:core:2.0:ServiceProviderConfig'[];
 
   /**
    */
-  sort?: Supported
+  sort?: Supported;
 
   /**
    */
-  xmlDataFormat?: Supported
+  xmlDataFormat?: Supported;
 }
 
-export default ServiceProviderConfig
+export default ServiceProviderConfig;

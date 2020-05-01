@@ -1,10 +1,10 @@
-import { BulkTaskInfo } from '.'
+import {BulkTaskInfo} from '.';
 
 class UpdateMultipleSwitchesResponse {
   /**
    * Information on the task for multiple switches update
    */
-  task?: BulkTaskInfo
+  task?: BulkTaskInfo;
 }
 
-export default UpdateMultipleSwitchesResponse
+export default UpdateMultipleSwitchesResponse;

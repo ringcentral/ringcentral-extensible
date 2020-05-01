@@ -1,18 +1,23 @@
-import { GlipNoteInfo, GlipNoteCreate, GlipNotesInfo, ListChatNotesParameters } from '../../../../../definitions'
-import Parent from '..'
-import RestClient from '../../../../..'
+import {
+  GlipNoteInfo,
+  GlipNoteCreate,
+  GlipNotesInfo,
+  ListChatNotesParameters,
+} from '../../../../../definitions';
+import Parent from '..';
+import RestClient from '../../../../..';
 
 class Notes {
-  rc: RestClient
-  parent: Parent
+  rc: RestClient;
+  parent: Parent;
 
-  constructor (parent: Parent) {
-    this.parent = parent
-    this.rc = parent.rc
+  constructor(parent: Parent) {
+    this.parent = parent;
+    this.rc = parent.rc;
   }
 
-  path (): string {
-    return `${this.parent.path()}/notes`
+  path(): string {
+    return `${this.parent.path()}/notes`;
   }
 
   /**
@@ -20,9 +25,9 @@ class Notes {
    * Rate Limit Group: Medium
    * Http post /restapi/v1.0/glip/chats/{chatId}/notes
    */
-  async post (glipNoteCreate: GlipNoteCreate): Promise<GlipNoteInfo> {
-    const r = await this.rc.post(this.path(), glipNoteCreate)
-    return r.data
+  async post(glipNoteCreate: GlipNoteCreate): Promise<GlipNoteInfo> {
+    const r = await this.rc.post(this.path(), glipNoteCreate);
+    return r.data;
   }
 
   /**
@@ -30,10 +35,10 @@ class Notes {
    * Rate Limit Group: Heavy
    * Http get /restapi/v1.0/glip/chats/{chatId}/notes
    */
-  async get (queryParams?: ListChatNotesParameters): Promise<GlipNotesInfo> {
-    const r = await this.rc.get(this.path(), queryParams)
-    return r.data
+  async get(queryParams?: ListChatNotesParameters): Promise<GlipNotesInfo> {
+    const r = await this.rc.get(this.path(), queryParams);
+    return r.data;
   }
 }
 
-export default Notes
+export default Notes;

@@ -1,15 +1,15 @@
-import { GlipGroupInfo, GlipNavigationInfo } from '.'
+import {GlipGroupInfo, GlipNavigationInfo} from '.';
 
 class GlipGroupList {
   /**
    * List of groups/teams/private chats
    * Required
    */
-  records?: GlipGroupInfo[]
+  records?: GlipGroupInfo[];
 
   /**
    */
-  navigation?: GlipNavigationInfo
+  navigation?: GlipNavigationInfo;
 }
 
-export default GlipGroupList
+export default GlipGroupList;

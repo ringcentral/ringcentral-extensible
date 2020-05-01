@@ -1,19 +1,26 @@
-import { Attachment, CustomGreetingAnsweringRuleInfoRequest } from '.'
+import {Attachment, CustomGreetingAnsweringRuleInfoRequest} from '.';
 
 class CreateCustomUserGreetingRequest {
   /**
    * Type of a greeting, specifying the case when the greeting is played.
    */
-  type?: ('Introductory' | 'Announcement' | 'ConnectingMessage' | 'ConnectingAudio' | 'Voicemail' | 'Unavailable' | 'HoldMusic')
+  type?:
+    | 'Introductory'
+    | 'Announcement'
+    | 'ConnectingMessage'
+    | 'ConnectingAudio'
+    | 'Voicemail'
+    | 'Unavailable'
+    | 'HoldMusic';
 
   /**
    * Meida file to upload
    */
-  binary?: Attachment
+  binary?: Attachment;
 
   /**
    */
-  answeringRule?: CustomGreetingAnsweringRuleInfoRequest
+  answeringRule?: CustomGreetingAnsweringRuleInfoRequest;
 }
 
-export default CreateCustomUserGreetingRequest
+export default CreateCustomUserGreetingRequest;

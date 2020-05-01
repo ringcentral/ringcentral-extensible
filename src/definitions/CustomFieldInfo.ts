@@ -2,16 +2,16 @@ class CustomFieldInfo {
   /**
    * Internal identifier of a custom field
    */
-  id?: string
+  id?: string;
 
   /**
    * Custom field value
    */
-  value?: string
+  value?: string;
 
   /**
    */
-  displayName?: string
+  displayName?: string;
 }
 
-export default CustomFieldInfo
+export default CustomFieldInfo;

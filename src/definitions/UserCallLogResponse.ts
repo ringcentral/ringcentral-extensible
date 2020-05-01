@@ -1,23 +1,23 @@
-import { UserCallLogRecord, CallLogNavigationInfo, CallLogPagingInfo } from '.'
+import {UserCallLogRecord, CallLogNavigationInfo, CallLogPagingInfo} from '.';
 
 class UserCallLogResponse {
   /**
    * List of call log records
    * Required
    */
-  records?: UserCallLogRecord[]
+  records?: UserCallLogRecord[];
 
   /**
    * Information on navigation
    * Required
    */
-  navigation?: CallLogNavigationInfo
+  navigation?: CallLogNavigationInfo;
 
   /**
    * Information on paging
    * Required
    */
-  paging?: CallLogPagingInfo
+  paging?: CallLogPagingInfo;
 }
 
-export default UserCallLogResponse
+export default UserCallLogResponse;

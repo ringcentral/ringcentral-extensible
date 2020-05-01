@@ -1,26 +1,26 @@
 class PermissionIdResource {
   /**
    */
-  uri?: string
+  uri?: string;
 
   /**
    */
-  id?: string
+  id?: string;
 
   /**
    * Site compatibility flag set for permission
    */
-  siteCompatible?: ('Compatible' | 'Incompatible' | 'Independent')
+  siteCompatible?: 'Compatible' | 'Incompatible' | 'Independent';
 
   /**
    * Specifies if the permission is editable on UI (if set to 'True') or not (if set to 'False')
    */
-  readOnly?: boolean
+  readOnly?: boolean;
 
   /**
    * Specifies if the permission can be assigned by the account administrator
    */
-  assignable?: boolean
+  assignable?: boolean;
 }
 
-export default PermissionIdResource
+export default PermissionIdResource;

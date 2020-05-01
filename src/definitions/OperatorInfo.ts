@@ -2,22 +2,22 @@ class OperatorInfo {
   /**
    * Internal identifier of an operator
    */
-  id?: string
+  id?: string;
 
   /**
    * Link to an operator resource
    */
-  uri?: string
+  uri?: string;
 
   /**
    * Extension number (pin)
    */
-  extensionNumber?: string
+  extensionNumber?: string;
 
   /**
    * Operator extension user full name
    */
-  name?: string
+  name?: string;
 }
 
-export default OperatorInfo
+export default OperatorInfo;

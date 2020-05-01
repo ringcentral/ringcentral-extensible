@@ -1,31 +1,37 @@
-import { ExtensionCountryInfoRequest, ExtensionTimezoneInfoRequest, ExtensionLanguageInfoRequest, ExtensionGreetingLanguageInfoRequest, ExtensionFormattingLocaleInfoRequest } from '.'
+import {
+  ExtensionCountryInfoRequest,
+  ExtensionTimezoneInfoRequest,
+  ExtensionLanguageInfoRequest,
+  ExtensionGreetingLanguageInfoRequest,
+  ExtensionFormattingLocaleInfoRequest,
+} from '.';
 
 class ExtensionRegionalSettingRequest {
   /**
    */
-  homeCountry?: ExtensionCountryInfoRequest
+  homeCountry?: ExtensionCountryInfoRequest;
 
   /**
    */
-  timezone?: ExtensionTimezoneInfoRequest
+  timezone?: ExtensionTimezoneInfoRequest;
 
   /**
    */
-  language?: ExtensionLanguageInfoRequest
+  language?: ExtensionLanguageInfoRequest;
 
   /**
    */
-  greetingLanguage?: ExtensionGreetingLanguageInfoRequest
+  greetingLanguage?: ExtensionGreetingLanguageInfoRequest;
 
   /**
    */
-  formattingLocale?: ExtensionFormattingLocaleInfoRequest
+  formattingLocale?: ExtensionFormattingLocaleInfoRequest;
 
   /**
    * Time format setting
    * Default: 12h
    */
-  timeFormat?: ('12h' | '24h')
+  timeFormat?: '12h' | '24h';
 }
 
-export default ExtensionRegionalSettingRequest
+export default ExtensionRegionalSettingRequest;

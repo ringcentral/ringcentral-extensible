@@ -1,35 +1,35 @@
 class CountryResource {
   /**
    */
-  uri?: string
+  uri?: string;
 
   /**
    */
-  id?: string
+  id?: string;
 
   /**
    */
-  name?: string
+  name?: string;
 
   /**
    */
-  isoCode?: string
+  isoCode?: string;
 
   /**
    */
-  callingCode?: string
+  callingCode?: string;
 
   /**
    */
-  emergencyCalling?: boolean
+  emergencyCalling?: boolean;
 
   /**
    */
-  numberSelling?: boolean
+  numberSelling?: boolean;
 
   /**
    */
-  loginAllowed?: boolean
+  loginAllowed?: boolean;
 }
 
-export default CountryResource
+export default CountryResource;

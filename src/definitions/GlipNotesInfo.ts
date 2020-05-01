@@ -1,13 +1,13 @@
-import { GlipNoteInfo, GlipNavigationInfo } from '.'
+import {GlipNoteInfo, GlipNavigationInfo} from '.';
 
 class GlipNotesInfo {
   /**
    */
-  records?: GlipNoteInfo[]
+  records?: GlipNoteInfo[];
 
   /**
    */
-  navigation?: GlipNavigationInfo
+  navigation?: GlipNavigationInfo;
 }
 
-export default GlipNotesInfo
+export default GlipNotesInfo;

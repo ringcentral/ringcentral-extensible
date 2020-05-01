@@ -2,12 +2,12 @@ class GetExtensionAccountInfo {
   /**
    * Internal identifier of an account
    */
-  id?: string
+  id?: string;
 
   /**
    * Canonical URI of an account
    */
-  uri?: string
+  uri?: string;
 }
 
-export default GetExtensionAccountInfo
+export default GetExtensionAccountInfo;

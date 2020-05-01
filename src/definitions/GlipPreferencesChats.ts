@@ -2,12 +2,15 @@ class GlipPreferencesChats {
   /**
    * Default: 10
    */
-  maxCount?: number
+  maxCount?: number;
 
   /**
    * Default: CombineAllChatTypes
    */
-  leftRailMode?: ('SeparateAllChatTypes' | 'SeparateConversationsAndTeams' | 'CombineAllChatTypes')
+  leftRailMode?:
+    | 'SeparateAllChatTypes'
+    | 'SeparateConversationsAndTeams'
+    | 'CombineAllChatTypes';
 }
 
-export default GlipPreferencesChats
+export default GlipPreferencesChats;

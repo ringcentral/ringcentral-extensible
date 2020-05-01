@@ -1,18 +1,21 @@
-import { GlipChatsListWithoutNavigation, ListFavoriteChatsParameters } from '../../../../definitions'
-import Parent from '..'
-import RestClient from '../../../..'
+import {
+  GlipChatsListWithoutNavigation,
+  ListFavoriteChatsParameters,
+} from '../../../../definitions';
+import Parent from '..';
+import RestClient from '../../../..';
 
 class Favorites {
-  rc: RestClient
-  parent: Parent
+  rc: RestClient;
+  parent: Parent;
 
-  constructor (parent: Parent) {
-    this.parent = parent
-    this.rc = parent.rc
+  constructor(parent: Parent) {
+    this.parent = parent;
+    this.rc = parent.rc;
   }
 
-  path (): string {
-    return `${this.parent.path()}/favorites`
+  path(): string {
+    return `${this.parent.path()}/favorites`;
   }
 
   /**
@@ -20,10 +23,12 @@ class Favorites {
    * Rate Limit Group: Light
    * Http get /restapi/v1.0/glip/favorites
    */
-  async get (queryParams?: ListFavoriteChatsParameters): Promise<GlipChatsListWithoutNavigation> {
-    const r = await this.rc.get(this.path(), queryParams)
-    return r.data
+  async get(
+    queryParams?: ListFavoriteChatsParameters
+  ): Promise<GlipChatsListWithoutNavigation> {
+    const r = await this.rc.get(this.path(), queryParams);
+    return r.data;
   }
 }
 
-export default Favorites
+export default Favorites;

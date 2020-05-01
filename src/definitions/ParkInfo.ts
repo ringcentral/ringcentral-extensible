@@ -2,7 +2,7 @@ class ParkInfo {
   /**
    * Call park identifier
    */
-  id?: string
+  id?: string;
 }
 
-export default ParkInfo
+export default ParkInfo;

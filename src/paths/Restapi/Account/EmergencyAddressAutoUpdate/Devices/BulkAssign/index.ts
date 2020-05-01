@@ -1,18 +1,18 @@
-import { AssignMultipleDevicesAutomaticLocationUpdates } from '../../../../../../definitions'
-import Parent from '..'
-import RestClient from '../../../../../..'
+import {AssignMultipleDevicesAutomaticLocationUpdates} from '../../../../../../definitions';
+import Parent from '..';
+import RestClient from '../../../../../..';
 
 class BulkAssign {
-  rc: RestClient
-  parent: Parent
+  rc: RestClient;
+  parent: Parent;
 
-  constructor (parent: Parent) {
-    this.parent = parent
-    this.rc = parent.rc
+  constructor(parent: Parent) {
+    this.parent = parent;
+    this.rc = parent.rc;
   }
 
-  path (): string {
-    return `${this.parent.path()}/bulk-assign`
+  path(): string {
+    return `${this.parent.path()}/bulk-assign`;
   }
 
   /**
@@ -20,10 +20,15 @@ class BulkAssign {
    * Rate Limit Group: Heavy
    * Http post /restapi/v1.0/account/{accountId}/emergency-address-auto-update/devices/bulk-assign
    */
-  async post (assignMultipleDevicesAutomaticLocationUpdates: AssignMultipleDevicesAutomaticLocationUpdates): Promise<string> {
-    const r = await this.rc.post(this.path(), assignMultipleDevicesAutomaticLocationUpdates)
-    return r.data
+  async post(
+    assignMultipleDevicesAutomaticLocationUpdates: AssignMultipleDevicesAutomaticLocationUpdates
+  ): Promise<string> {
+    const r = await this.rc.post(
+      this.path(),
+      assignMultipleDevicesAutomaticLocationUpdates
+    );
+    return r.data;
   }
 }
 
-export default BulkAssign
+export default BulkAssign;

@@ -1,17 +1,17 @@
-import Parent from '..'
-import RestClient from '../../../../..'
+import Parent from '..';
+import RestClient from '../../../../..';
 
 class Lock {
-  rc: RestClient
-  parent: Parent
+  rc: RestClient;
+  parent: Parent;
 
-  constructor (parent: Parent) {
-    this.parent = parent
-    this.rc = parent.rc
+  constructor(parent: Parent) {
+    this.parent = parent;
+    this.rc = parent.rc;
   }
 
-  path (): string {
-    return `${this.parent.path()}/lock`
+  path(): string {
+    return `${this.parent.path()}/lock`;
   }
 
   /**
@@ -19,10 +19,10 @@ class Lock {
    * Rate Limit Group: Light
    * Http post /restapi/v1.0/glip/notes/{noteId}/lock
    */
-  async post (): Promise<string> {
-    const r = await this.rc.post(this.path())
-    return r.data
+  async post(): Promise<string> {
+    const r = await this.rc.post(this.path());
+    return r.data;
   }
 }
 
-export default Lock
+export default Lock;

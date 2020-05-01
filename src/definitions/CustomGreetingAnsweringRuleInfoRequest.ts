@@ -1,7 +1,7 @@
 class CustomGreetingAnsweringRuleInfoRequest {
   /**
    */
-  id?: string
+  id?: string;
 }
 
-export default CustomGreetingAnsweringRuleInfoRequest
+export default CustomGreetingAnsweringRuleInfoRequest;

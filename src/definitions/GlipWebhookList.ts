@@ -1,9 +1,9 @@
-import { GlipWebhookInfo } from '.'
+import {GlipWebhookInfo} from '.';
 
 class GlipWebhookList {
   /**
    */
-  records?: GlipWebhookInfo[]
+  records?: GlipWebhookInfo[];
 }
 
-export default GlipWebhookList
+export default GlipWebhookList;

@@ -1,34 +1,34 @@
-import Members from './Members'
-import BulkAssign from './BulkAssign'
-import Parent from '..'
-import RestClient from '../../../..'
+import Members from './Members';
+import BulkAssign from './BulkAssign';
+import Parent from '..';
+import RestClient from '../../../..';
 
 class Department {
-  rc: RestClient
-  departmentId: (string | null)
-  parent: Parent
+  rc: RestClient;
+  departmentId: string | null;
+  parent: Parent;
 
-  constructor (parent: Parent, departmentId: (string | null) = null) {
-    this.parent = parent
-    this.rc = parent.rc
-    this.departmentId = departmentId
+  constructor(parent: Parent, departmentId: string | null = null) {
+    this.parent = parent;
+    this.rc = parent.rc;
+    this.departmentId = departmentId;
   }
 
-  path (withParameter: boolean = true): string {
+  path(withParameter = true): string {
     if (withParameter && this.departmentId !== null) {
-      return `${this.parent.path()}/department/${this.departmentId}`
+      return `${this.parent.path()}/department/${this.departmentId}`;
     }
 
-    return `${this.parent.path()}/department`
+    return `${this.parent.path()}/department`;
   }
 
-  bulkAssign (): BulkAssign {
-    return new BulkAssign(this)
+  bulkAssign(): BulkAssign {
+    return new BulkAssign(this);
   }
 
-  members (): Members {
-    return new Members(this)
+  members(): Members {
+    return new Members(this);
   }
 }
 
-export default Department
+export default Department;

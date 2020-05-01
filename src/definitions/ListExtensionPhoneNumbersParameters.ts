@@ -2,22 +2,30 @@ class ListExtensionPhoneNumbersParameters {
   /**
    * Status of a phone number. Multiple values are supported
    */
-  status?: ('Normal' | 'Pending' | 'PortedIn' | 'Temporary')
+  status?: 'Normal' | 'Pending' | 'PortedIn' | 'Temporary';
 
   /**
    * Usage type of a phone number
    */
-  usageType?: ('MainCompanyNumber' | 'AdditionalCompanyNumber' | 'CompanyNumber' | 'DirectNumber' | 'CompanyFaxNumber' | 'ForwardedNumber' | 'ForwardedCompanyNumber')[]
+  usageType?: (
+    | 'MainCompanyNumber'
+    | 'AdditionalCompanyNumber'
+    | 'CompanyNumber'
+    | 'DirectNumber'
+    | 'CompanyFaxNumber'
+    | 'ForwardedNumber'
+    | 'ForwardedCompanyNumber'
+  )[];
 
   /**
    * Indicates the page number to retrieve. Only positive number values are allowed. Default value is '1'
    */
-  page?: number
+  page?: number;
 
   /**
    * Indicates the page size (number of items). If not specified, the value is '100' by default
    */
-  perPage?: number
+  perPage?: number;
 }
 
-export default ListExtensionPhoneNumbersParameters
+export default ListExtensionPhoneNumbersParameters;

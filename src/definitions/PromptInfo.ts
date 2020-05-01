@@ -2,27 +2,27 @@ class PromptInfo {
   /**
    * Internal identifier of a prompt
    */
-  uri?: string
+  uri?: string;
 
   /**
    * Link to a prompt metadata
    */
-  id?: string
+  id?: string;
 
   /**
    * Type of a prompt media content
    */
-  contentType?: string
+  contentType?: string;
 
   /**
    * Link to a prompt media content
    */
-  contentUri?: string
+  contentUri?: string;
 
   /**
    * Name of a prompt
    */
-  filename?: string
+  filename?: string;
 }
 
-export default PromptInfo
+export default PromptInfo;

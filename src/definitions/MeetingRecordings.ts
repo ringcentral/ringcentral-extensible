@@ -1,13 +1,13 @@
-import { MeetingInfo, MeetingRecordingInfo } from '.'
+import {MeetingInfo, MeetingRecordingInfo} from '.';
 
 class MeetingRecordings {
   /**
    */
-  meeting?: MeetingInfo
+  meeting?: MeetingInfo;
 
   /**
    */
-  recordings?: MeetingRecordingInfo[]
+  recordings?: MeetingRecordingInfo[];
 }
 
-export default MeetingRecordings
+export default MeetingRecordings;

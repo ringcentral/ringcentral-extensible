@@ -1,10 +1,10 @@
-import { APSInfo } from '.'
+import {APSInfo} from '.';
 
 class APNSInfo {
   /**
    * Notification priority data
    */
-  aps?: APSInfo
+  aps?: APSInfo;
 }
 
-export default APNSInfo
+export default APNSInfo;

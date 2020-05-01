@@ -3,23 +3,23 @@ class SuperviseCallSessionRequest {
    * Supervising mode
    * Required
    */
-  mode?: ('Listen')
+  mode?: 'Listen';
 
   /**
    * Internal identifier of a supervisor's device which will be used for call session monitoring
    * Required
    */
-  supervisorDeviceId?: string
+  supervisorDeviceId?: string;
 
   /**
    * Extension number of the user that will be monitored
    */
-  agentExtensionNumber?: string
+  agentExtensionNumber?: string;
 
   /**
    * Extension identifier of the user that will be monitored
    */
-  agentExtensionId?: string
+  agentExtensionId?: string;
 }
 
-export default SuperviseCallSessionRequest
+export default SuperviseCallSessionRequest;

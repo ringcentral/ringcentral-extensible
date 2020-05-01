@@ -1,18 +1,21 @@
-import { GetMessageInfoResponse, CreateInternalTextMessageRequest } from '../../../../../definitions'
-import Parent from '..'
-import RestClient from '../../../../..'
+import {
+  GetMessageInfoResponse,
+  CreateInternalTextMessageRequest,
+} from '../../../../../definitions';
+import Parent from '..';
+import RestClient from '../../../../..';
 
 class CompanyPager {
-  rc: RestClient
-  parent: Parent
+  rc: RestClient;
+  parent: Parent;
 
-  constructor (parent: Parent) {
-    this.parent = parent
-    this.rc = parent.rc
+  constructor(parent: Parent) {
+    this.parent = parent;
+    this.rc = parent.rc;
   }
 
-  path (): string {
-    return `${this.parent.path()}/company-pager`
+  path(): string {
+    return `${this.parent.path()}/company-pager`;
   }
 
   /**
@@ -20,10 +23,12 @@ class CompanyPager {
    * Rate Limit Group: Medium
    * Http post /restapi/v1.0/account/{accountId}/extension/{extensionId}/company-pager
    */
-  async post (createInternalTextMessageRequest: CreateInternalTextMessageRequest): Promise<GetMessageInfoResponse> {
-    const r = await this.rc.post(this.path(), createInternalTextMessageRequest)
-    return r.data
+  async post(
+    createInternalTextMessageRequest: CreateInternalTextMessageRequest
+  ): Promise<GetMessageInfoResponse> {
+    const r = await this.rc.post(this.path(), createInternalTextMessageRequest);
+    return r.data;
   }
 }
 
-export default CompanyPager
+export default CompanyPager;

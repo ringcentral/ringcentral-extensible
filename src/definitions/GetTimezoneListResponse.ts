@@ -1,28 +1,32 @@
-import { GetTimezoneInfoResponse, ProvisioningNavigationInfo, ProvisioningPagingInfo } from '.'
+import {
+  GetTimezoneInfoResponse,
+  ProvisioningNavigationInfo,
+  ProvisioningPagingInfo,
+} from '.';
 
 class GetTimezoneListResponse {
   /**
    * Link to the timezone list resource
    */
-  uri?: string
+  uri?: string;
 
   /**
    * List of timezones
    * Required
    */
-  records?: GetTimezoneInfoResponse[]
+  records?: GetTimezoneInfoResponse[];
 
   /**
    * Information on navigation
    * Required
    */
-  navigation?: ProvisioningNavigationInfo
+  navigation?: ProvisioningNavigationInfo;
 
   /**
    * Information on paging
    * Required
    */
-  paging?: ProvisioningPagingInfo
+  paging?: ProvisioningPagingInfo;
 }
 
-export default GetTimezoneListResponse
+export default GetTimezoneListResponse;

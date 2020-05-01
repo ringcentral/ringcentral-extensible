@@ -1,57 +1,67 @@
-import { ActiveCallInfo, GetPresenceExtensionInfo } from '.'
+import {ActiveCallInfo, GetPresenceExtensionInfo} from '.';
 
 class PresenceInfoResponse {
   /**
    * Link to the presence resource
    */
-  uri?: string
+  uri?: string;
 
   /**
    */
-  userStatus?: ('Offline' | 'Busy' | 'Available')
+  userStatus?: 'Offline' | 'Busy' | 'Available';
 
   /**
    */
-  dndStatus?: ('TakeAllCalls' | 'DoNotAcceptDepartmentCalls' | 'TakeDepartmentCallsOnly' | 'DoNotAcceptAnyCalls' | 'Unknown')
+  dndStatus?:
+    | 'TakeAllCalls'
+    | 'DoNotAcceptDepartmentCalls'
+    | 'TakeDepartmentCallsOnly'
+    | 'DoNotAcceptAnyCalls'
+    | 'Unknown';
 
   /**
    */
-  message?: string
+  message?: string;
 
   /**
    */
-  allowSeeMyPresence?: boolean
+  allowSeeMyPresence?: boolean;
 
   /**
    */
-  ringOnMonitoredCall?: boolean
+  ringOnMonitoredCall?: boolean;
 
   /**
    */
-  pickUpCallsOnHold?: boolean
+  pickUpCallsOnHold?: boolean;
 
   /**
    */
-  activeCalls?: ActiveCallInfo[]
+  activeCalls?: ActiveCallInfo[];
 
   /**
    */
-  extension?: GetPresenceExtensionInfo
+  extension?: GetPresenceExtensionInfo;
 
   /**
    * Meetings presence status
    */
-  meetingStatus?: ('Connected' | 'Disconnected')
+  meetingStatus?: 'Connected' | 'Disconnected';
 
   /**
    * Telephony presence status. Returned if telephony status is changed
    */
-  telephonyStatus?: ('NoCall' | 'CallConnected' | 'Ringing' | 'OnHold' | 'ParkedCall')
+  telephonyStatus?:
+    | 'NoCall'
+    | 'CallConnected'
+    | 'Ringing'
+    | 'OnHold'
+    | 'ParkedCall';
 
   /**
    * Aggregated presence status, calculated from a number of sources
    */
-  presenceStatus?: ('Offline' | 'Busy' | 'Available')
+  presenceStatus?: 'Offline' | 'Busy' | 'Available';
 }
 
-export default PresenceInfoResponse
+export default PresenceInfoResponse;

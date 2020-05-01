@@ -1,9 +1,9 @@
-import { MeetingExternalUserInfoResource } from '.'
+import {MeetingExternalUserInfoResource} from '.';
 
 class MeetingServiceInfoRequest {
   /**
    */
-  externalUserInfo?: MeetingExternalUserInfoResource
+  externalUserInfo?: MeetingExternalUserInfoResource;
 }
 
-export default MeetingServiceInfoRequest
+export default MeetingServiceInfoRequest;

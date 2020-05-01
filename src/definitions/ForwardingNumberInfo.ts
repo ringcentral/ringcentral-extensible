@@ -1,45 +1,45 @@
-import { CreateForwardingNumberDeviceInfo } from '.'
+import {CreateForwardingNumberDeviceInfo} from '.';
 
 class ForwardingNumberInfo {
   /**
    * Internal identifier of a forwarding/call flip phone number
    */
-  id?: string
+  id?: string;
 
   /**
    * Canonical URI of a forwarding/call flip phone number
    */
-  uri?: string
+  uri?: string;
 
   /**
    * Forwarding/Call flip phone number
    */
-  phoneNumber?: string
+  phoneNumber?: string;
 
   /**
    * Forwarding/Call flip number title
    */
-  label?: string
+  label?: string;
 
   /**
    * Type of option this phone number is used for. Multiple values are accepted
    */
-  features?: ('CallFlip' | 'CallForwarding')[]
+  features?: ('CallFlip' | 'CallForwarding')[];
 
   /**
    * Number assigned to the call flip phone number, corresponds to the shortcut dial number
    */
-  flipNumber?: string
+  flipNumber?: string;
 
   /**
    * Forwarding device information
    */
-  device?: CreateForwardingNumberDeviceInfo
+  device?: CreateForwardingNumberDeviceInfo;
 
   /**
    * Forwarding phone number type
    */
-  type?: ('Home' | 'Mobile' | 'Work' | 'PhoneLine' | 'Outage' | 'Other')
+  type?: 'Home' | 'Mobile' | 'Work' | 'PhoneLine' | 'Outage' | 'Other';
 }
 
-export default ForwardingNumberInfo
+export default ForwardingNumberInfo;

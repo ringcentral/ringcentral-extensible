@@ -1,19 +1,19 @@
 class SyncInfo {
   /**
    */
-  syncType?: ('FSync' | 'ISync')
+  syncType?: 'FSync' | 'ISync';
 
   /**
    */
-  syncToken?: string
+  syncToken?: string;
 
   /**
    */
-  syncTime?: string
+  syncTime?: string;
 
   /**
    */
-  olderRecordsExist?: boolean
+  olderRecordsExist?: boolean;
 }
 
-export default SyncInfo
+export default SyncInfo;

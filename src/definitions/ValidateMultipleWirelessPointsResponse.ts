@@ -1,9 +1,9 @@
-import { WirelessPointValidated } from '.'
+import {WirelessPointValidated} from '.';
 
 class ValidateMultipleWirelessPointsResponse {
   /**
    */
-  records?: WirelessPointValidated[]
+  records?: WirelessPointValidated[];
 }
 
-export default ValidateMultipleWirelessPointsResponse
+export default ValidateMultipleWirelessPointsResponse;

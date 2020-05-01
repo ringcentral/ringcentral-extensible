@@ -1,35 +1,44 @@
-import { CustomGreetingAnsweringRuleInfo } from '.'
+import {CustomGreetingAnsweringRuleInfo} from '.';
 
 class CustomUserGreetingInfo {
   /**
    * Link to a custom user greeting
    */
-  uri?: string
+  uri?: string;
 
   /**
    * Internal identifier of a custom user greeting
    */
-  id?: string
+  id?: string;
 
   /**
    * Type of a custom user greeting
    */
-  type?: ('Introductory' | 'Announcement' | 'InterruptPrompt' | 'ConnectingAudio' | 'ConnectingMessage' | 'Voicemail' | 'Unavailable' | 'HoldMusic' | 'PronouncedName')
+  type?:
+    | 'Introductory'
+    | 'Announcement'
+    | 'InterruptPrompt'
+    | 'ConnectingAudio'
+    | 'ConnectingMessage'
+    | 'Voicemail'
+    | 'Unavailable'
+    | 'HoldMusic'
+    | 'PronouncedName';
 
   /**
    * Content media type
    */
-  contentType?: ('audio/mpeg' | 'audio/wav')
+  contentType?: 'audio/mpeg' | 'audio/wav';
 
   /**
    * Link to a greeting content (audio file)
    */
-  contentUri?: string
+  contentUri?: string;
 
   /**
    * Information on an answering rule that the greeting is applied to
    */
-  answeringRule?: CustomGreetingAnsweringRuleInfo
+  answeringRule?: CustomGreetingAnsweringRuleInfo;
 }
 
-export default CustomUserGreetingInfo
+export default CustomUserGreetingInfo;

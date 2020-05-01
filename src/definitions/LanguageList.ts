@@ -1,25 +1,29 @@
-import { LanguageInfo, ProvisioningNavigationInfo, ProvisioningPagingInfo } from '.'
+import {
+  LanguageInfo,
+  ProvisioningNavigationInfo,
+  ProvisioningPagingInfo,
+} from '.';
 
 class LanguageList {
   /**
    * Canonical URI of the language list resource
    */
-  uri?: string
+  uri?: string;
 
   /**
    * Language data
    */
-  records?: LanguageInfo[]
+  records?: LanguageInfo[];
 
   /**
    * Information on navigation
    */
-  navigation?: ProvisioningNavigationInfo
+  navigation?: ProvisioningNavigationInfo;
 
   /**
    * Information on paging
    */
-  paging?: ProvisioningPagingInfo
+  paging?: ProvisioningPagingInfo;
 }
 
-export default LanguageList
+export default LanguageList;

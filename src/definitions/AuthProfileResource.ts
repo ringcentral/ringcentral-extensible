@@ -1,13 +1,13 @@
-import { ActivePermissionResource } from '.'
+import {ActivePermissionResource} from '.';
 
 class AuthProfileResource {
   /**
    */
-  uri?: string
+  uri?: string;
 
   /**
    */
-  permissions?: ActivePermissionResource[]
+  permissions?: ActivePermissionResource[];
 }
 
-export default AuthProfileResource
+export default AuthProfileResource;

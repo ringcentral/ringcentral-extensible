@@ -1,9 +1,9 @@
-import { FeatureInfo } from '.'
+import {FeatureInfo} from '.';
 
 class FeatureList {
   /**
    */
-  records?: FeatureInfo[]
+  records?: FeatureInfo[];
 }
 
-export default FeatureList
+export default FeatureList;

@@ -1,20 +1,20 @@
-import { WeeklyScheduleInfo, RangesInfo } from '.'
+import {WeeklyScheduleInfo, RangesInfo} from '.';
 
 class ScheduleInfo {
   /**
    * Weekly schedule
    */
-  weeklyRanges?: WeeklyScheduleInfo
+  weeklyRanges?: WeeklyScheduleInfo;
 
   /**
    * Specific data ranges
    */
-  ranges?: RangesInfo[]
+  ranges?: RangesInfo[];
 
   /**
    * The user's schedule specified for business hours or after hours; it can also be set/retrieved calling the corresponding method
    */
-  ref?: ('BusinessHours' | 'AfterHours')
+  ref?: 'BusinessHours' | 'AfterHours';
 }
 
-export default ScheduleInfo
+export default ScheduleInfo;

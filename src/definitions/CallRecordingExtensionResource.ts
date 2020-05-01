@@ -2,24 +2,24 @@ class CallRecordingExtensionResource {
   /**
    * Internal identifier of an extension
    */
-  id?: string
+  id?: string;
 
   /**
    */
-  uri?: string
+  uri?: string;
 
   /**
    */
-  extensionNumber?: string
+  extensionNumber?: string;
 
   /**
    */
-  type?: string
+  type?: string;
 
   /**
    * Direction of call
    */
-  callDirection?: ('Outbound' | 'Inbound' | 'All')
+  callDirection?: 'Outbound' | 'Inbound' | 'All';
 }
 
-export default CallRecordingExtensionResource
+export default CallRecordingExtensionResource;

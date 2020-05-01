@@ -1,19 +1,19 @@
 class FavoriteContactResource {
   /**
    */
-  id?: number
+  id?: number;
 
   /**
    */
-  extensionId?: string
+  extensionId?: string;
 
   /**
    */
-  accountId?: string
+  accountId?: string;
 
   /**
    */
-  contactId?: string
+  contactId?: string;
 }
 
-export default FavoriteContactResource
+export default FavoriteContactResource;

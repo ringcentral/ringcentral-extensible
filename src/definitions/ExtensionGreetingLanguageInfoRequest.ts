@@ -2,7 +2,7 @@ class ExtensionGreetingLanguageInfoRequest {
   /**
    * internal Identifier of a greeting language
    */
-  id?: string
+  id?: string;
 }
 
-export default ExtensionGreetingLanguageInfoRequest
+export default ExtensionGreetingLanguageInfoRequest;

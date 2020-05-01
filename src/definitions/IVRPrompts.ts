@@ -1,25 +1,29 @@
-import { PromptInfo, CallHandlingNavigationInfo, CallHandlingPagingInfo } from '.'
+import {
+  PromptInfo,
+  CallHandlingNavigationInfo,
+  CallHandlingPagingInfo,
+} from '.';
 
 class IVRPrompts {
   /**
    * Link to prompts library resource
    */
-  uri?: string
+  uri?: string;
 
   /**
    * List of Prompts
    */
-  records?: PromptInfo[]
+  records?: PromptInfo[];
 
   /**
    * Information on navigation
    */
-  navigation?: CallHandlingNavigationInfo
+  navigation?: CallHandlingNavigationInfo;
 
   /**
    * Information on paging
    */
-  paging?: CallHandlingPagingInfo
+  paging?: CallHandlingPagingInfo;
 }
 
-export default IVRPrompts
+export default IVRPrompts;

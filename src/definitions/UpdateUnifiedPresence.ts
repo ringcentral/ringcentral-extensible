@@ -1,13 +1,13 @@
-import { UpdateUnifiedPresenceGlip, UpdateUnifiedPresenceTelephony } from '.'
+import {UpdateUnifiedPresenceGlip, UpdateUnifiedPresenceTelephony} from '.';
 
 class UpdateUnifiedPresence {
   /**
    */
-  glip?: UpdateUnifiedPresenceGlip
+  glip?: UpdateUnifiedPresenceGlip;
 
   /**
    */
-  telephony?: UpdateUnifiedPresenceTelephony
+  telephony?: UpdateUnifiedPresenceTelephony;
 }
 
-export default UpdateUnifiedPresence
+export default UpdateUnifiedPresence;

@@ -2,17 +2,17 @@ class DeviceExtensionInfo {
   /**
    * Internal identifier of an extension
    */
-  id?: number
+  id?: number;
 
   /**
    * Link to an extension resource
    */
-  uri?: string
+  uri?: string;
 
   /**
    * Number of extension
    */
-  extensionNumber?: string
+  extensionNumber?: string;
 }
 
-export default DeviceExtensionInfo
+export default DeviceExtensionInfo;

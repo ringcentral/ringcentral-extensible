@@ -1,26 +1,26 @@
-import { DeviceAddonInfo } from '.'
+import {DeviceAddonInfo} from '.';
 
 class DeviceModelInfo {
   /**
    * Addon identifier. For HardPhones of certain types, which are compatible with this addon identifier
    */
-  id?: string
+  id?: string;
 
   /**
    * Device name
    */
-  name?: string
+  name?: string;
 
   /**
    * Addons description
    * Required
    */
-  addons?: DeviceAddonInfo[]
+  addons?: DeviceAddonInfo[];
 
   /**
    * Device feature or multiple features supported
    */
-  features?: ('BLA' | 'Intercom' | 'Paging' | 'HELD')[]
+  features?: ('BLA' | 'Intercom' | 'Paging' | 'HELD')[];
 }
 
-export default DeviceModelInfo
+export default DeviceModelInfo;

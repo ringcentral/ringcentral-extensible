@@ -2,33 +2,33 @@ class SIPFlagsResponse {
   /**
    * If 'True' VoIP calling feature is enabled
    */
-  voipFeatureEnabled?: ('True' | 'False')
+  voipFeatureEnabled?: 'True' | 'False';
 
   /**
    * If 'True' the request is sent from IP address of a country blocked for VoIP calling
    */
-  voipCountryBlocked?: ('True' | 'False')
+  voipCountryBlocked?: 'True' | 'False';
 
   /**
    * If 'True' outbound calls are enabled
    */
-  outboundCallsEnabled?: ('True' | 'False')
+  outboundCallsEnabled?: 'True' | 'False';
 
   /**
    */
-  dscpEnabled?: boolean
+  dscpEnabled?: boolean;
 
   /**
    */
-  dscpSignaling?: number
+  dscpSignaling?: number;
 
   /**
    */
-  dscpVoice?: number
+  dscpVoice?: number;
 
   /**
    */
-  dscpVideo?: number
+  dscpVideo?: number;
 }
 
-export default SIPFlagsResponse
+export default SIPFlagsResponse;

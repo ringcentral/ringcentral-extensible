@@ -1,10 +1,10 @@
-import { CallSessionObject } from '.'
+import {CallSessionObject} from '.';
 
 class CallSession {
   /**
    * Call session information
    */
-  session?: CallSessionObject
+  session?: CallSessionObject;
 }
 
-export default CallSession
+export default CallSession;

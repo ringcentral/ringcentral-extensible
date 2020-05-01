@@ -1,11 +1,11 @@
 class MethodResource {
   /**
    */
-  id?: string
+  id?: string;
 
   /**
    */
-  name?: string
+  name?: string;
 }
 
-export default MethodResource
+export default MethodResource;

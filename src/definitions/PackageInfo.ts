@@ -1,11 +1,11 @@
 class PackageInfo {
   /**
    */
-  version?: string
+  version?: string;
 
   /**
    */
-  id?: string
+  id?: string;
 }
 
-export default PackageInfo
+export default PackageInfo;

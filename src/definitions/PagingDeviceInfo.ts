@@ -2,17 +2,17 @@ class PagingDeviceInfo {
   /**
    * Internal identifier of a paging device
    */
-  id?: string
+  id?: string;
 
   /**
    * Link to a paging device resource
    */
-  uri?: string
+  uri?: string;
 
   /**
    * Name of a paging device
    */
-  name?: string
+  name?: string;
 }
 
-export default PagingDeviceInfo
+export default PagingDeviceInfo;

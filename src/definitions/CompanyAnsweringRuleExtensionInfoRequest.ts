@@ -2,7 +2,7 @@ class CompanyAnsweringRuleExtensionInfoRequest {
   /**
    * Internal identifier of an extension
    */
-  id?: string
+  id?: string;
 }
 
-export default CompanyAnsweringRuleExtensionInfoRequest
+export default CompanyAnsweringRuleExtensionInfoRequest;

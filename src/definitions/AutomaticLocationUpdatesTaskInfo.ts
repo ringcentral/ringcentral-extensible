@@ -1,35 +1,39 @@
-import { TaskResultInfo } from '.'
+import {TaskResultInfo} from '.';
 
 class AutomaticLocationUpdatesTaskInfo {
   /**
    * Internal identifier of a task
    */
-  id?: string
+  id?: string;
 
   /**
    * Status of a task
    */
-  status?: ('Accepted' | 'InProgress' | 'Completed' | 'Failed')
+  status?: 'Accepted' | 'InProgress' | 'Completed' | 'Failed';
 
   /**
    * Task creation time
    */
-  creationTime?: string
+  creationTime?: string;
 
   /**
    * Time of the task latest modification
    */
-  lastModifiedTime?: string
+  lastModifiedTime?: string;
 
   /**
    * Type of a task
    */
-  type?: ('WirelessPointsBulkCreate' | 'WirelessPointsBulkUpdate' | 'SwitchesBulkCreate' | 'SwitchesBulkUpdate')
+  type?:
+    | 'WirelessPointsBulkCreate'
+    | 'WirelessPointsBulkUpdate'
+    | 'SwitchesBulkCreate'
+    | 'SwitchesBulkUpdate';
 
   /**
    * Task detailed result. Returned for failed and completed tasks
    */
-  result?: TaskResultInfo
+  result?: TaskResultInfo;
 }
 
-export default AutomaticLocationUpdatesTaskInfo
+export default AutomaticLocationUpdatesTaskInfo;

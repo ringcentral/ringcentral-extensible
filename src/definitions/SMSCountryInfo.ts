@@ -2,27 +2,27 @@ class SMSCountryInfo {
   /**
    * Internal identifier of a country
    */
-  id?: string
+  id?: string;
 
   /**
    * Canonical URI of a country
    */
-  uri?: string
+  uri?: string;
 
   /**
    * Official name of a country
    */
-  name?: string
+  name?: string;
 
   /**
    * ISO code of a country
    */
-  isoCode?: string
+  isoCode?: string;
 
   /**
    * Calling code of a country
    */
-  callingCode?: string
+  callingCode?: string;
 }
 
-export default SMSCountryInfo
+export default SMSCountryInfo;

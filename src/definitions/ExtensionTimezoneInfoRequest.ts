@@ -2,7 +2,7 @@ class ExtensionTimezoneInfoRequest {
   /**
    * internal Identifier of a timezone
    */
-  id?: string
+  id?: string;
 }
 
-export default ExtensionTimezoneInfoRequest
+export default ExtensionTimezoneInfoRequest;

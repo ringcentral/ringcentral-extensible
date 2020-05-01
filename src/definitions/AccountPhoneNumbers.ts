@@ -1,25 +1,29 @@
-import { CompanyPhoneNumberInfo, ProvisioningNavigationInfo, ProvisioningPagingInfo } from '.'
+import {
+  CompanyPhoneNumberInfo,
+  ProvisioningNavigationInfo,
+  ProvisioningPagingInfo,
+} from '.';
 
 class AccountPhoneNumbers {
   /**
    * Link to the list of account phone numbers
    */
-  uri?: string
+  uri?: string;
 
   /**
    * List of account phone numbers
    */
-  records?: CompanyPhoneNumberInfo[]
+  records?: CompanyPhoneNumberInfo[];
 
   /**
    * Information on navigation
    */
-  navigation?: ProvisioningNavigationInfo
+  navigation?: ProvisioningNavigationInfo;
 
   /**
    * Information on paging
    */
-  paging?: ProvisioningPagingInfo
+  paging?: ProvisioningPagingInfo;
 }
 
-export default AccountPhoneNumbers
+export default AccountPhoneNumbers;

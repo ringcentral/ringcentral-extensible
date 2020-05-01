@@ -1,40 +1,40 @@
-import { TimeInterval } from '.'
+import {TimeInterval} from '.';
 
 class WeeklyScheduleInfo {
   /**
    * Time intervals for a particular day
    */
-  monday?: TimeInterval[]
+  monday?: TimeInterval[];
 
   /**
    * Time intervals for a particular day
    */
-  tuesday?: TimeInterval[]
+  tuesday?: TimeInterval[];
 
   /**
    * Time intervals for a particular day
    */
-  wednesday?: TimeInterval[]
+  wednesday?: TimeInterval[];
 
   /**
    * Time intervals for a particular day
    */
-  thursday?: TimeInterval[]
+  thursday?: TimeInterval[];
 
   /**
    * Time intervals for a particular day
    */
-  friday?: TimeInterval[]
+  friday?: TimeInterval[];
 
   /**
    * Time intervals for a particular day
    */
-  saturday?: TimeInterval[]
+  saturday?: TimeInterval[];
 
   /**
    * Time intervals for a particular day
    */
-  sunday?: TimeInterval[]
+  sunday?: TimeInterval[];
 }
 
-export default WeeklyScheduleInfo
+export default WeeklyScheduleInfo;

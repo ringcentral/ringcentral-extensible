@@ -1,19 +1,22 @@
-import { GetMessageInfoResponse, CreateMMSMessage } from '../../../../../definitions'
-import Utils from '../../../../../Utils'
-import Parent from '..'
-import RestClient from '../../../../..'
+import {
+  GetMessageInfoResponse,
+  CreateMMSMessage,
+} from '../../../../../definitions';
+import Utils from '../../../../../Utils';
+import Parent from '..';
+import RestClient from '../../../../..';
 
 class Mms {
-  rc: RestClient
-  parent: Parent
+  rc: RestClient;
+  parent: Parent;
 
-  constructor (parent: Parent) {
-    this.parent = parent
-    this.rc = parent.rc
+  constructor(parent: Parent) {
+    this.parent = parent;
+    this.rc = parent.rc;
   }
 
-  path (): string {
-    return `${this.parent.path()}/mms`
+  path(): string {
+    return `${this.parent.path()}/mms`;
   }
 
   /**
@@ -21,11 +24,15 @@ class Mms {
    * Rate Limit Group: Medium
    * Http post /restapi/v1.0/account/{accountId}/extension/{extensionId}/mms
    */
-  async post (createMMSMessage: CreateMMSMessage): Promise<GetMessageInfoResponse> {
-    const formData = Utils.getFormData(createMMSMessage)
-    const r = await this.rc.post(this.path(), formData, undefined, { headers: formData.getHeaders() })
-    return r.data
+  async post(
+    createMMSMessage: CreateMMSMessage
+  ): Promise<GetMessageInfoResponse> {
+    const formData = Utils.getFormData(createMMSMessage);
+    const r = await this.rc.post(this.path(), formData, undefined, {
+      headers: formData.getHeaders(),
+    });
+    return r.data;
   }
 }
 
-export default Mms
+export default Mms;

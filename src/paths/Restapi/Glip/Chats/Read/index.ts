@@ -1,17 +1,17 @@
-import Parent from '..'
-import RestClient from '../../../../..'
+import Parent from '..';
+import RestClient from '../../../../..';
 
 class Read {
-  rc: RestClient
-  parent: Parent
+  rc: RestClient;
+  parent: Parent;
 
-  constructor (parent: Parent) {
-    this.parent = parent
-    this.rc = parent.rc
+  constructor(parent: Parent) {
+    this.parent = parent;
+    this.rc = parent.rc;
   }
 
-  path (): string {
-    return `${this.parent.path()}/read`
+  path(): string {
+    return `${this.parent.path()}/read`;
   }
 
   /**
@@ -19,10 +19,10 @@ class Read {
    * Rate Limit Group: Medium
    * Http post /restapi/v1.0/glip/chats/{chatId}/read
    */
-  async post (): Promise<string> {
-    const r = await this.rc.post(this.path())
-    return r.data
+  async post(): Promise<string> {
+    const r = await this.rc.post(this.path());
+    return r.data;
   }
 }
 
-export default Read
+export default Read;

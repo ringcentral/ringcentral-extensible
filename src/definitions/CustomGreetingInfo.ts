@@ -2,12 +2,12 @@ class CustomGreetingInfo {
   /**
    * Link to a custom user greeting
    */
-  uri?: string
+  uri?: string;
 
   /**
    * Internal identifier of a custom user greeting
    */
-  id?: string
+  id?: string;
 }
 
-export default CustomGreetingInfo
+export default CustomGreetingInfo;

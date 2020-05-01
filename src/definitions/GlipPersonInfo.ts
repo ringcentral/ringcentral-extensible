@@ -3,42 +3,42 @@ class GlipPersonInfo {
    * Internal identifier of a user
    * Required
    */
-  id?: string
+  id?: string;
 
   /**
    * First name of a user
    */
-  firstName?: string
+  firstName?: string;
 
   /**
    * Last name of a user
    */
-  lastName?: string
+  lastName?: string;
 
   /**
    * Email of a user
    */
-  email?: string
+  email?: string;
 
   /**
    * Photo of a user
    */
-  avatar?: string
+  avatar?: string;
 
   /**
    * Internal identifier of a company
    */
-  companyId?: string
+  companyId?: string;
 
   /**
    * Time of creation in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format
    */
-  creationTime?: string
+  creationTime?: string;
 
   /**
    * Time of the last modification in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format
    */
-  lastModifiedTime?: string
+  lastModifiedTime?: string;
 }
 
-export default GlipPersonInfo
+export default GlipPersonInfo;

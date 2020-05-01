@@ -2,42 +2,42 @@ class SIPInfoResponse {
   /**
    * User credentials
    */
-  username?: string
+  username?: string;
 
   /**
    * User password
    */
-  password?: string
+  password?: string;
 
   /**
    * Identifier for SIP authorization
    */
-  authorizationId?: string
+  authorizationId?: string;
 
   /**
    * SIP domain
    */
-  domain?: string
+  domain?: string;
 
   /**
    * SIP outbound proxy
    */
-  outboundProxy?: string
+  outboundProxy?: string;
 
   /**
    * Preferred transport. SIP info will be returned for this transport if supported
    */
-  transport?: ('UDP' | 'TCP' | 'TLS' | 'WS' | 'WSS')
+  transport?: 'UDP' | 'TCP' | 'TLS' | 'WS' | 'WSS';
 
   /**
    * For TLS transport only Base64 encoded certificate
    */
-  certificate?: string
+  certificate?: string;
 
   /**
    * The interval in seconds after which the app must try to switch back to primary proxy if it was previously switched to backup. If this parameter is not returned, the app must stay on backup proxy and try to switch to primary proxy after the next SIP-provision call.
    */
-  switchBackInterval?: number
+  switchBackInterval?: number;
 }
 
-export default SIPInfoResponse
+export default SIPInfoResponse;

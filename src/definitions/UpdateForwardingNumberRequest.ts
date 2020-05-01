@@ -2,22 +2,22 @@ class UpdateForwardingNumberRequest {
   /**
    * Forwarding/Call flip phone number
    */
-  phoneNumber?: string
+  phoneNumber?: string;
 
   /**
    * Forwarding/Call flip number title
    */
-  label?: string
+  label?: string;
 
   /**
    * Number assigned to the call flip phone number, corresponds to the shortcut dial number
    */
-  flipNumber?: string
+  flipNumber?: string;
 
   /**
    * Forwarding phone number type
    */
-  type?: ('Home' | 'Mobile' | 'Work' | 'PhoneLine' | 'Outage' | 'Other')
+  type?: 'Home' | 'Mobile' | 'Work' | 'PhoneLine' | 'Outage' | 'Other';
 }
 
-export default UpdateForwardingNumberRequest
+export default UpdateForwardingNumberRequest;

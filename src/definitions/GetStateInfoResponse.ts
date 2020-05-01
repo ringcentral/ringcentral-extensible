@@ -1,30 +1,30 @@
-import { GetCountryInfoState } from '.'
+import {GetCountryInfoState} from '.';
 
 class GetStateInfoResponse {
   /**
    * Internal identifier of a state
    */
-  id?: string
+  id?: string;
 
   /**
    * Canonical URI of a state
    */
-  uri?: string
+  uri?: string;
 
   /**
    * Information on a country the state belongs to
    */
-  country?: GetCountryInfoState
+  country?: GetCountryInfoState;
 
   /**
    * Short code for a state (2-letter usually)
    */
-  isoCode?: string
+  isoCode?: string;
 
   /**
    * Official name of a state
    */
-  name?: string
+  name?: string;
 }
 
-export default GetStateInfoResponse
+export default GetStateInfoResponse;

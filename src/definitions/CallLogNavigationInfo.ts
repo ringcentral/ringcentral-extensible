@@ -1,25 +1,25 @@
-import { CallLogNavigationInfoURI } from '.'
+import {CallLogNavigationInfoURI} from '.';
 
 class CallLogNavigationInfo {
   /**
    * Canonical URI for the first page of the list
    */
-  firstPage?: CallLogNavigationInfoURI
+  firstPage?: CallLogNavigationInfoURI;
 
   /**
    * Canonical URI for the next page of the list
    */
-  nextPage?: CallLogNavigationInfoURI
+  nextPage?: CallLogNavigationInfoURI;
 
   /**
    * Canonical URI for the previous page of the list
    */
-  previousPage?: CallLogNavigationInfoURI
+  previousPage?: CallLogNavigationInfoURI;
 
   /**
    * Canonical URI for the last page of the list
    */
-  lastPage?: CallLogNavigationInfoURI
+  lastPage?: CallLogNavigationInfoURI;
 }
 
-export default CallLogNavigationInfo
+export default CallLogNavigationInfo;

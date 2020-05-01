@@ -1,15 +1,15 @@
-import { CompanyBusinessHoursScheduleInfo } from '.'
+import {CompanyBusinessHoursScheduleInfo} from '.';
 
 class CompanyBusinessHours {
   /**
    * Canonical URI of a business-hours resource
    */
-  uri?: string
+  uri?: string;
 
   /**
    * Schedule when an answering rule is applied
    */
-  schedule?: CompanyBusinessHoursScheduleInfo
+  schedule?: CompanyBusinessHoursScheduleInfo;
 }
 
-export default CompanyBusinessHours
+export default CompanyBusinessHours;

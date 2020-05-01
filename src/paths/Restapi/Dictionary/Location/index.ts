@@ -1,18 +1,21 @@
-import { GetLocationListResponse, ListLocationsParameters } from '../../../../definitions'
-import Parent from '..'
-import RestClient from '../../../..'
+import {
+  GetLocationListResponse,
+  ListLocationsParameters,
+} from '../../../../definitions';
+import Parent from '..';
+import RestClient from '../../../..';
 
 class Location {
-  rc: RestClient
-  parent: Parent
+  rc: RestClient;
+  parent: Parent;
 
-  constructor (parent: Parent) {
-    this.parent = parent
-    this.rc = parent.rc
+  constructor(parent: Parent) {
+    this.parent = parent;
+    this.rc = parent.rc;
   }
 
-  path (): string {
-    return `${this.parent.path()}/location`
+  path(): string {
+    return `${this.parent.path()}/location`;
   }
 
   /**
@@ -20,10 +23,12 @@ class Location {
    * Rate Limit Group: Light
    * Http get /restapi/v1.0/dictionary/location
    */
-  async get (queryParams?: ListLocationsParameters): Promise<GetLocationListResponse> {
-    const r = await this.rc.get(this.path(), queryParams)
-    return r.data
+  async get(
+    queryParams?: ListLocationsParameters
+  ): Promise<GetLocationListResponse> {
+    const r = await this.rc.get(this.path(), queryParams);
+    return r.data;
   }
 }
 
-export default Location
+export default Location;

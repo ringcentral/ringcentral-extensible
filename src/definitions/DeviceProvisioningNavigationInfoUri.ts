@@ -1,7 +1,7 @@
 class DeviceProvisioningNavigationInfoUri {
   /**
    */
-  uri?: string
+  uri?: string;
 }
 
-export default DeviceProvisioningNavigationInfoUri
+export default DeviceProvisioningNavigationInfoUri;

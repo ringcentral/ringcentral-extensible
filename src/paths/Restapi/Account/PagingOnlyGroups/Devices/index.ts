@@ -1,18 +1,21 @@
-import { PagingOnlyGroupDevices, ListPagingGroupDevicesParameters } from '../../../../../definitions'
-import Parent from '..'
-import RestClient from '../../../../..'
+import {
+  PagingOnlyGroupDevices,
+  ListPagingGroupDevicesParameters,
+} from '../../../../../definitions';
+import Parent from '..';
+import RestClient from '../../../../..';
 
 class Devices {
-  rc: RestClient
-  parent: Parent
+  rc: RestClient;
+  parent: Parent;
 
-  constructor (parent: Parent) {
-    this.parent = parent
-    this.rc = parent.rc
+  constructor(parent: Parent) {
+    this.parent = parent;
+    this.rc = parent.rc;
   }
 
-  path (): string {
-    return `${this.parent.path()}/devices`
+  path(): string {
+    return `${this.parent.path()}/devices`;
   }
 
   /**
@@ -20,10 +23,12 @@ class Devices {
    * Rate Limit Group: Light
    * Http get /restapi/v1.0/account/{accountId}/paging-only-groups/{pagingOnlyGroupId}/devices
    */
-  async get (queryParams?: ListPagingGroupDevicesParameters): Promise<PagingOnlyGroupDevices> {
-    const r = await this.rc.get(this.path(), queryParams)
-    return r.data
+  async get(
+    queryParams?: ListPagingGroupDevicesParameters
+  ): Promise<PagingOnlyGroupDevices> {
+    const r = await this.rc.get(this.path(), queryParams);
+    return r.data;
   }
 }
 
-export default Devices
+export default Devices;

@@ -1,34 +1,34 @@
-import { BillingStatementCharges, BillingStatementFees } from '.'
+import {BillingStatementCharges, BillingStatementFees} from '.';
 
 class BillingStatementInfo {
   /**
    * Currency code complying with [ISO-4217](https://en.wikipedia.org/wiki/ISO_4217) standard
    */
-  currency?: string
+  currency?: string;
 
   /**
    */
-  charges?: BillingStatementCharges[]
+  charges?: BillingStatementCharges[];
 
   /**
    */
-  fees?: BillingStatementFees[]
+  fees?: BillingStatementFees[];
 
   /**
    */
-  totalCharges?: number
+  totalCharges?: number;
 
   /**
    */
-  totalFees?: number
+  totalFees?: number;
 
   /**
    */
-  subtotal?: number
+  subtotal?: number;
 
   /**
    */
-  totalFreeServiceCredit?: number
+  totalFreeServiceCredit?: number;
 }
 
-export default BillingStatementInfo
+export default BillingStatementInfo;

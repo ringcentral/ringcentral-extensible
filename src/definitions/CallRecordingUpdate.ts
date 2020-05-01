@@ -2,7 +2,7 @@ class CallRecordingUpdate {
   /**
    * Recording status
    */
-  active?: boolean
+  active?: boolean;
 }
 
-export default CallRecordingUpdate
+export default CallRecordingUpdate;

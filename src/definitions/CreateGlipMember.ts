@@ -2,12 +2,12 @@ class CreateGlipMember {
   /**
    * Internal identifier of a user
    */
-  id?: string
+  id?: string;
 
   /**
    * Email of a user
    */
-  email?: string
+  email?: string;
 }
 
-export default CreateGlipMember
+export default CreateGlipMember;

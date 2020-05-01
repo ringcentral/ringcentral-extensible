@@ -2,17 +2,17 @@ class FixedOrderAgentsExtensionInfo {
   /**
    * Internal identifier of an extension
    */
-  id?: string
+  id?: string;
 
   /**
    * Canonical URI of an extension
    */
-  uri?: string
+  uri?: string;
 
   /**
    * Number of department extension
    */
-  extensionNumber?: string
+  extensionNumber?: string;
 }
 
-export default FixedOrderAgentsExtensionInfo
+export default FixedOrderAgentsExtensionInfo;

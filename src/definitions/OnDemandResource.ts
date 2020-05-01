@@ -2,7 +2,7 @@ class OnDemandResource {
   /**
    * Flag for controlling OnDemand Call Recording settings
    */
-  enabled?: boolean
+  enabled?: boolean;
 }
 
-export default OnDemandResource
+export default OnDemandResource;

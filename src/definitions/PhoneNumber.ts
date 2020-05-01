@@ -2,12 +2,12 @@ class PhoneNumber {
   /**
    * Required
    */
-  type?: ('work' | 'mobile' | 'other')
+  type?: 'work' | 'mobile' | 'other';
 
   /**
    * Required
    */
-  value?: string
+  value?: string;
 }
 
-export default PhoneNumber
+export default PhoneNumber;

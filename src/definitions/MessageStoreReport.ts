@@ -2,47 +2,54 @@ class MessageStoreReport {
   /**
    * Internal identifier of a message store report task
    */
-  id?: string
+  id?: string;
 
   /**
    * Link to a task
    */
-  uri?: string
+  uri?: string;
 
   /**
    * Status of a message store report task
    */
-  status?: ('Accepted' | 'Pending' | 'InProgress' | 'AttemptFailed' | 'Failed' | 'Completed' | 'Cancelled')
+  status?:
+    | 'Accepted'
+    | 'Pending'
+    | 'InProgress'
+    | 'AttemptFailed'
+    | 'Failed'
+    | 'Completed'
+    | 'Cancelled';
 
   /**
    * Internal identifier of an account
    */
-  accountId?: string
+  accountId?: string;
 
   /**
    * Internal identifier of an extension
    */
-  extensionId?: string
+  extensionId?: string;
 
   /**
    * Task creation time
    */
-  creationTime?: string
+  creationTime?: string;
 
   /**
    * Time of the last task modification
    */
-  lastModifiedTime?: string
+  lastModifiedTime?: string;
 
   /**
    * Ending time for collecting messages
    */
-  dateTo?: string
+  dateTo?: string;
 
   /**
    * Starting time for collecting messages
    */
-  dateFrom?: string
+  dateFrom?: string;
 }
 
-export default MessageStoreReport
+export default MessageStoreReport;

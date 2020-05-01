@@ -1,16 +1,16 @@
-import { GlipAttachmentInfoRequest } from '.'
+import {GlipAttachmentInfoRequest} from '.';
 
 class GlipPostPostBody {
   /**
    * Post text.
    * Required
    */
-  text?: string
+  text?: string;
 
   /**
    * Identifier(s) of attachments.
    */
-  attachments?: GlipAttachmentInfoRequest[]
+  attachments?: GlipAttachmentInfoRequest[];
 }
 
-export default GlipPostPostBody
+export default GlipPostPostBody;

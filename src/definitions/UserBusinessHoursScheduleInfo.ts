@@ -1,10 +1,10 @@
-import { WeeklyScheduleInfo } from '.'
+import {WeeklyScheduleInfo} from '.';
 
 class UserBusinessHoursScheduleInfo {
   /**
    * Weekly schedule
    */
-  weeklyRanges?: WeeklyScheduleInfo
+  weeklyRanges?: WeeklyScheduleInfo;
 }
 
-export default UserBusinessHoursScheduleInfo
+export default UserBusinessHoursScheduleInfo;

@@ -1,11 +1,11 @@
 class MeetingLinks {
   /**
    */
-  startUri?: string
+  startUri?: string;
 
   /**
    */
-  joinUri?: string
+  joinUri?: string;
 }
 
-export default MeetingLinks
+export default MeetingLinks;

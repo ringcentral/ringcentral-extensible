@@ -2,22 +2,22 @@ class CustomCompanyGreetingLanguageInfo {
   /**
    * Internal identifier of a greeting language
    */
-  id?: string
+  id?: string;
 
   /**
    * Link to a greeting language
    */
-  uri?: string
+  uri?: string;
 
   /**
    * Name of a greeting language
    */
-  name?: string
+  name?: string;
 
   /**
    * Locale code of a greeting language
    */
-  localeCode?: string
+  localeCode?: string;
 }
 
-export default CustomCompanyGreetingLanguageInfo
+export default CustomCompanyGreetingLanguageInfo;

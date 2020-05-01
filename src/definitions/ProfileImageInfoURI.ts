@@ -1,7 +1,7 @@
 class ProfileImageInfoURI {
   /**
    */
-  uri?: string
+  uri?: string;
 }
 
-export default ProfileImageInfoURI
+export default ProfileImageInfoURI;

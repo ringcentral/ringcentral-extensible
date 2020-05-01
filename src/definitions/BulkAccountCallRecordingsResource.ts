@@ -1,17 +1,17 @@
-import { CallRecordingExtensionResource } from '.'
+import {CallRecordingExtensionResource} from '.';
 
 class BulkAccountCallRecordingsResource {
   /**
    */
-  addedExtensions?: CallRecordingExtensionResource[]
+  addedExtensions?: CallRecordingExtensionResource[];
 
   /**
    */
-  updatedExtensions?: CallRecordingExtensionResource[]
+  updatedExtensions?: CallRecordingExtensionResource[];
 
   /**
    */
-  removedExtensions?: CallRecordingExtensionResource[]
+  removedExtensions?: CallRecordingExtensionResource[];
 }
 
-export default BulkAccountCallRecordingsResource
+export default BulkAccountCallRecordingsResource;

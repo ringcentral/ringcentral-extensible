@@ -1,7 +1,7 @@
 class CustomCompanyGreetingAnsweringRuleInfo {
   /**
    */
-  id?: string
+  id?: string;
 }
 
-export default CustomCompanyGreetingAnsweringRuleInfo
+export default CustomCompanyGreetingAnsweringRuleInfo;

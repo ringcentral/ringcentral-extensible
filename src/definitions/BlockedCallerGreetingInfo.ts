@@ -1,14 +1,14 @@
-import { PresetInfo } from '.'
+import {PresetInfo} from '.';
 
 class BlockedCallerGreetingInfo {
   /**
    * Type of a greeting
    */
-  type?: string
+  type?: string;
 
   /**
    */
-  preset?: PresetInfo
+  preset?: PresetInfo;
 }
 
-export default BlockedCallerGreetingInfo
+export default BlockedCallerGreetingInfo;

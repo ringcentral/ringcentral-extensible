@@ -1,9 +1,9 @@
-import { SwitchInfo } from '.'
+import {SwitchInfo} from '.';
 
 class ValidateMultipleSwitchesRequest {
   /**
    */
-  records?: SwitchInfo[]
+  records?: SwitchInfo[];
 }
 
-export default ValidateMultipleSwitchesRequest
+export default ValidateMultipleSwitchesRequest;

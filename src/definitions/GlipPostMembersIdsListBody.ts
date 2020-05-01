@@ -1,11 +1,11 @@
-import { GlipMemberInfo } from '.'
+import {GlipMemberInfo} from '.';
 
 class GlipPostMembersIdsListBody {
   /**
    * Identifier(s) of chat members.
    * Required
    */
-  members?: GlipMemberInfo[]
+  members?: GlipMemberInfo[];
 }
 
-export default GlipPostMembersIdsListBody
+export default GlipPostMembersIdsListBody;

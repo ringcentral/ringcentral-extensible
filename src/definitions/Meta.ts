@@ -2,20 +2,20 @@
 class Meta {
   /**
    */
-  created?: string
+  created?: string;
 
   /**
    */
-  lastModified?: string
+  lastModified?: string;
 
   /**
    * resource location URI
    */
-  location?: string
+  location?: string;
 
   /**
    */
-  resourceType?: ('User' | 'Group')
+  resourceType?: 'User' | 'Group';
 }
 
-export default Meta
+export default Meta;

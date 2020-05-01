@@ -1,9 +1,9 @@
-import { ExtensionInfo } from '.'
+import {ExtensionInfo} from '.';
 
 class TransferredExtensionInfo {
   /**
    */
-  extension?: ExtensionInfo
+  extension?: ExtensionInfo;
 }
 
-export default TransferredExtensionInfo
+export default TransferredExtensionInfo;
