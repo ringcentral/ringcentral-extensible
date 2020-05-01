@@ -25,7 +25,9 @@ describe('schedule meeting', () => {
     meetingRequestResource.topic = 'test meeting'
     meetingRequestResource.meetingType = 'Scheduled'
     const meetingScheduleResource = new MeetingScheduleResource()
-    meetingScheduleResource.startTime = new Date(new Date().getTime() + 10 * 24 * 60 * 60 * 1000).toISOString()
+    // the format is important! wrong format won't work at all!
+    // new Date(new Date().getTime() + 10 * 24 * 60 * 60 * 1000).toISOString()  does NOT work, wrong format
+    meetingScheduleResource.startTime = meetingScheduleResource.startTime = '2030-05-01T00:01:49Z'
     meetingScheduleResource.durationInMinutes = 30
     const timezoneResource = new TimezoneResource()
     timezoneResource.id = '58'
@@ -63,7 +65,9 @@ describe('schedule meeting', () => {
     meetingRequestResource.topic = 'test meeting'
     meetingRequestResource.meetingType = 'Scheduled'
     const meetingScheduleResource = new MeetingScheduleResource()
-    meetingScheduleResource.startTime = new Date(new Date().getTime() + 365 * 24 * 60 * 60 * 1000).toISOString()
+    // the format is important! wrong format won't work at all!
+    // new Date(new Date().getTime() + 10 * 24 * 60 * 60 * 1000).toISOString()  does NOT work, wrong format
+    meetingScheduleResource.startTime = '2030-05-01T00:01:49Z'
     meetingScheduleResource.durationInMinutes = 30
     const timezoneResource = new TimezoneResource()
     timezoneResource.id = '58'
