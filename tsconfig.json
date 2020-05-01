@@ -5,7 +5,7 @@
     "outDir": "build",
     "resolveJsonModule": true,
     "esModuleInterop": true,
-    "lib": ["ES6", "DOM"],
+    "lib": ["DOM"]
   },
   "include": [
     "src/**/*.ts",
