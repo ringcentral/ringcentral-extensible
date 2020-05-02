@@ -37,7 +37,10 @@ class ForwardingNumber {
   async list(
     queryParams?: ListForwardingNumbersParameters
   ): Promise<GetExtensionForwardingNumberListResponse> {
-    const r = await this.rc.get(this.path(false), queryParams);
+    const r = await this.rc.get<GetExtensionForwardingNumberListResponse>(
+      this.path(false),
+      queryParams
+    );
     return r.data;
   }
 
@@ -49,7 +52,7 @@ class ForwardingNumber {
   async post(
     createForwardingNumberRequest: CreateForwardingNumberRequest
   ): Promise<ForwardingNumberInfo> {
-    const r = await this.rc.post(
+    const r = await this.rc.post<ForwardingNumberInfo>(
       this.path(false),
       createForwardingNumberRequest
     );
@@ -66,7 +69,7 @@ class ForwardingNumber {
       throw new Error('forwardingNumberId must be specified.');
     }
 
-    const r = await this.rc.get(this.path());
+    const r = await this.rc.get<ForwardingNumberInfo>(this.path());
     return r.data;
   }
 
@@ -82,7 +85,10 @@ class ForwardingNumber {
       throw new Error('forwardingNumberId must be specified.');
     }
 
-    const r = await this.rc.put(this.path(), updateForwardingNumberRequest);
+    const r = await this.rc.put<ForwardingNumberInfo>(
+      this.path(),
+      updateForwardingNumberRequest
+    );
     return r.data;
   }
 
@@ -96,7 +102,7 @@ class ForwardingNumber {
       throw new Error('forwardingNumberId must be specified.');
     }
 
-    const r = await this.rc.delete(this.path());
+    const r = await this.rc.delete<string>(this.path());
     return r.data;
   }
 }

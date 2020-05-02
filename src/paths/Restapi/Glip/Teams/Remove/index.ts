@@ -23,7 +23,10 @@ class Remove {
   async post(
     glipPostMembersIdsListBody: GlipPostMembersIdsListBody
   ): Promise<string> {
-    const r = await this.rc.post(this.path(), glipPostMembersIdsListBody);
+    const r = await this.rc.post<string>(
+      this.path(),
+      glipPostMembersIdsListBody
+    );
     return r.data;
   }
 }

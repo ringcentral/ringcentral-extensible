@@ -24,7 +24,7 @@ class Everyone {
    * Http get /restapi/v1.0/glip/everyone
    */
   async get(): Promise<GlipEveryoneInfo> {
-    const r = await this.rc.get(this.path());
+    const r = await this.rc.get<GlipEveryoneInfo>(this.path());
     return r.data;
   }
 
@@ -36,7 +36,10 @@ class Everyone {
   async patch(
     updateGlipEveryoneRequest: UpdateGlipEveryoneRequest
   ): Promise<GlipEveryoneInfo> {
-    const r = await this.rc.patch(this.path(), updateGlipEveryoneRequest);
+    const r = await this.rc.patch<GlipEveryoneInfo>(
+      this.path(),
+      updateGlipEveryoneRequest
+    );
     return r.data;
   }
 }

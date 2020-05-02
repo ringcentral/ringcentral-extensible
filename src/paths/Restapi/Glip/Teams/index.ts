@@ -39,7 +39,7 @@ class Teams {
    * Http get /restapi/v1.0/glip/teams
    */
   async list(queryParams?: ListGlipTeamsParameters): Promise<GlipTeamsList> {
-    const r = await this.rc.get(this.path(false), queryParams);
+    const r = await this.rc.get<GlipTeamsList>(this.path(false), queryParams);
     return r.data;
   }
 
@@ -49,7 +49,10 @@ class Teams {
    * Http post /restapi/v1.0/glip/teams
    */
   async post(glipPostTeamBody: GlipPostTeamBody): Promise<GlipTeamInfo> {
-    const r = await this.rc.post(this.path(false), glipPostTeamBody);
+    const r = await this.rc.post<GlipTeamInfo>(
+      this.path(false),
+      glipPostTeamBody
+    );
     return r.data;
   }
 
@@ -63,7 +66,7 @@ class Teams {
       throw new Error('chatId must be specified.');
     }
 
-    const r = await this.rc.get(this.path());
+    const r = await this.rc.get<GlipTeamInfo>(this.path());
     return r.data;
   }
 
@@ -77,7 +80,7 @@ class Teams {
       throw new Error('chatId must be specified.');
     }
 
-    const r = await this.rc.patch(this.path(), glipPatchTeamBody);
+    const r = await this.rc.patch<GlipTeamInfo>(this.path(), glipPatchTeamBody);
     return r.data;
   }
 
@@ -91,7 +94,7 @@ class Teams {
       throw new Error('chatId must be specified.');
     }
 
-    const r = await this.rc.delete(this.path());
+    const r = await this.rc.delete<string>(this.path());
     return r.data;
   }
 

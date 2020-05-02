@@ -26,7 +26,10 @@ class CallLogSync {
   async get(
     queryParams?: SyncAccountCallLogParameters
   ): Promise<AccountCallLogSyncResponse> {
-    const r = await this.rc.get(this.path(), queryParams);
+    const r = await this.rc.get<AccountCallLogSyncResponse>(
+      this.path(),
+      queryParams
+    );
     return r.data;
   }
 }

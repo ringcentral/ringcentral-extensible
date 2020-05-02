@@ -33,7 +33,10 @@ class Country {
   async list(
     queryParams?: ListCountriesParameters
   ): Promise<GetCountryListResponse> {
-    const r = await this.rc.get(this.path(false), queryParams);
+    const r = await this.rc.get<GetCountryListResponse>(
+      this.path(false),
+      queryParams
+    );
     return r.data;
   }
 
@@ -47,7 +50,7 @@ class Country {
       throw new Error('countryId must be specified.');
     }
 
-    const r = await this.rc.get(this.path());
+    const r = await this.rc.get<GetCountryInfoDictionaryResponse>(this.path());
     return r.data;
   }
 }

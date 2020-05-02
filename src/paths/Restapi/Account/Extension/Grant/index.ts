@@ -26,7 +26,10 @@ class Grant {
   async get(
     queryParams?: ListExtensionGrantsParameters
   ): Promise<GetExtensionGrantListResponse> {
-    const r = await this.rc.get(this.path(), queryParams);
+    const r = await this.rc.get<GetExtensionGrantListResponse>(
+      this.path(),
+      queryParams
+    );
     return r.data;
   }
 }

@@ -20,7 +20,7 @@ class MessageStoreConfiguration {
    * Http get /restapi/v1.0/account/{accountId}/message-store-configuration
    */
   async get(): Promise<MessageStoreConfiguration> {
-    const r = await this.rc.get(this.path());
+    const r = await this.rc.get<MessageStoreConfiguration>(this.path());
     return r.data;
   }
 
@@ -32,7 +32,10 @@ class MessageStoreConfiguration {
   async put(
     messageStoreConfiguration: MessageStoreConfiguration
   ): Promise<MessageStoreConfiguration> {
-    const r = await this.rc.put(this.path(), messageStoreConfiguration);
+    const r = await this.rc.put<MessageStoreConfiguration>(
+      this.path(),
+      messageStoreConfiguration
+    );
     return r.data;
   }
 }

@@ -26,7 +26,10 @@ class MeetingRecordings {
   async get(
     queryParams?: ListUserMeetingRecordingsParameters
   ): Promise<ListMeetingRecordingsResponse> {
-    const r = await this.rc.get(this.path(), queryParams);
+    const r = await this.rc.get<ListMeetingRecordingsResponse>(
+      this.path(),
+      queryParams
+    );
     return r.data;
   }
 }

@@ -20,7 +20,7 @@ class Unlock {
    * Http post /restapi/v1.0/glip/notes/{noteId}/unlock
    */
   async post(): Promise<string> {
-    const r = await this.rc.post(this.path());
+    const r = await this.rc.post<string>(this.path());
     return r.data;
   }
 }

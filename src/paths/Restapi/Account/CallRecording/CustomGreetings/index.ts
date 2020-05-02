@@ -32,7 +32,10 @@ class CustomGreetings {
   async get(
     queryParams?: ListCallRecordingCustomGreetingsParameters
   ): Promise<CallRecordingCustomGreetings> {
-    const r = await this.rc.get(this.path(false), queryParams);
+    const r = await this.rc.get<CallRecordingCustomGreetings>(
+      this.path(false),
+      queryParams
+    );
     return r.data;
   }
 
@@ -46,7 +49,7 @@ class CustomGreetings {
       throw new Error('greetingId must be specified.');
     }
 
-    const r = await this.rc.delete(this.path());
+    const r = await this.rc.delete<string>(this.path());
     return r.data;
   }
 }

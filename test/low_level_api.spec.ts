@@ -4,6 +4,7 @@ import path from 'path';
 
 import RestClient from '../src/index';
 import Utils from '../src/Utils';
+import {FaxResponse, GetMessageInfoResponse} from '../src/definitions';
 
 jest.setTimeout(64000);
 
@@ -19,17 +20,20 @@ describe('low level API', () => {
       extension: process.env.RINGCENTRAL_EXTENSION!,
       password: process.env.RINGCENTRAL_PASSWORD!,
     });
-    const r = await rc.post('/restapi/v1.0/account/~/extension/~/sms', {
-      from: {
-        phoneNumber: process.env.RINGCENTRAL_USERNAME!,
-      },
-      to: [
-        {
-          phoneNumber: process.env.RINGCENTRAL_RECEIVER,
+    const r = await rc.post<GetMessageInfoResponse>(
+      '/restapi/v1.0/account/~/extension/~/sms',
+      {
+        from: {
+          phoneNumber: process.env.RINGCENTRAL_USERNAME!,
         },
-      ],
-      text: 'hello world',
-    });
+        to: [
+          {
+            phoneNumber: process.env.RINGCENTRAL_RECEIVER,
+          },
+        ],
+        text: 'hello world',
+      }
+    );
     const messageInfo = r.data;
     expect(messageInfo).not.toBeUndefined();
     expect(messageInfo.id).not.toBeUndefined();
@@ -61,7 +65,7 @@ describe('low level API', () => {
       ],
     };
     const formData = Utils.getFormData(requestBody);
-    const r = await rc.post(
+    const r = await rc.post<FaxResponse>(
       '/restapi/v1.0/account/~/extension/~/fax',
       formData,
       undefined,

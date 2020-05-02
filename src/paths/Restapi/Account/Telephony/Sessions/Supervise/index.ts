@@ -26,7 +26,10 @@ class Supervise {
   async post(
     superviseCallSessionRequest: SuperviseCallSessionRequest
   ): Promise<SuperviseCallSession> {
-    const r = await this.rc.post(this.path(), superviseCallSessionRequest);
+    const r = await this.rc.post<SuperviseCallSession>(
+      this.path(),
+      superviseCallSessionRequest
+    );
     return r.data;
   }
 }

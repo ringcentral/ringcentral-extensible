@@ -27,7 +27,10 @@ class Conferencing {
   async get(
     queryParams?: ReadConferencingSettingsParameters
   ): Promise<GetConferencingInfoResponse> {
-    const r = await this.rc.get(this.path(), queryParams);
+    const r = await this.rc.get<GetConferencingInfoResponse>(
+      this.path(),
+      queryParams
+    );
     return r.data;
   }
 
@@ -39,7 +42,10 @@ class Conferencing {
   async put(
     updateConferencingInfoRequest: UpdateConferencingInfoRequest
   ): Promise<GetConferencingInfoResponse> {
-    const r = await this.rc.put(this.path(), updateConferencingInfoRequest);
+    const r = await this.rc.put<GetConferencingInfoResponse>(
+      this.path(),
+      updateConferencingInfoRequest
+    );
     return r.data;
   }
 }

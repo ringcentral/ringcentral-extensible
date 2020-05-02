@@ -21,7 +21,7 @@ class UnifiedPresence {
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/unified-presence
    */
   async get(): Promise<UnifiedPresence> {
-    const r = await this.rc.get(this.path());
+    const r = await this.rc.get<UnifiedPresence>(this.path());
     return r.data;
   }
 
@@ -33,7 +33,10 @@ class UnifiedPresence {
   async patch(
     updateUnifiedPresence: UpdateUnifiedPresence
   ): Promise<UnifiedPresence> {
-    const r = await this.rc.patch(this.path(), updateUnifiedPresence);
+    const r = await this.rc.patch<UnifiedPresence>(
+      this.path(),
+      updateUnifiedPresence
+    );
     return r.data;
   }
 }

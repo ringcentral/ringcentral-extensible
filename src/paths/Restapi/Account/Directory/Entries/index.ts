@@ -34,7 +34,10 @@ class Entries {
   async list(
     queryParams?: ListDirectoryEntriesParameters
   ): Promise<DirectoryResource> {
-    const r = await this.rc.get(this.path(false), queryParams);
+    const r = await this.rc.get<DirectoryResource>(
+      this.path(false),
+      queryParams
+    );
     return r.data;
   }
 
@@ -48,7 +51,7 @@ class Entries {
       throw new Error('entryId must be specified.');
     }
 
-    const r = await this.rc.get(this.path());
+    const r = await this.rc.get<ContactResource>(this.path());
     return r.data;
   }
 

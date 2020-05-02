@@ -29,7 +29,7 @@ class Webhooks {
    * Http get /restapi/v1.0/glip/webhooks
    */
   async list(): Promise<GlipWebhookList> {
-    const r = await this.rc.get(this.path(false));
+    const r = await this.rc.get<GlipWebhookList>(this.path(false));
     return r.data;
   }
 
@@ -43,7 +43,7 @@ class Webhooks {
       throw new Error('webhookId must be specified.');
     }
 
-    const r = await this.rc.get(this.path());
+    const r = await this.rc.get<GlipWebhookList>(this.path());
     return r.data;
   }
 
@@ -57,7 +57,7 @@ class Webhooks {
       throw new Error('webhookId must be specified.');
     }
 
-    const r = await this.rc.delete(this.path());
+    const r = await this.rc.delete<string>(this.path());
     return r.data;
   }
 

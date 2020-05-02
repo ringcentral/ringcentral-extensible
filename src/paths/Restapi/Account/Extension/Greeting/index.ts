@@ -34,9 +34,12 @@ class Greeting {
     createCustomUserGreetingRequest: CreateCustomUserGreetingRequest
   ): Promise<CustomUserGreetingInfo> {
     const formData = Utils.getFormData(createCustomUserGreetingRequest);
-    const r = await this.rc.post(this.path(false), formData, undefined, {
-      headers: formData.getHeaders(),
-    });
+    const r = await this.rc.post<CustomUserGreetingInfo>(
+      this.path(false),
+      formData,
+      undefined,
+      {headers: formData.getHeaders()}
+    );
     return r.data;
   }
 
@@ -50,7 +53,7 @@ class Greeting {
       throw new Error('greetingId must be specified.');
     }
 
-    const r = await this.rc.get(this.path());
+    const r = await this.rc.get<CustomUserGreetingInfo>(this.path());
     return r.data;
   }
 }

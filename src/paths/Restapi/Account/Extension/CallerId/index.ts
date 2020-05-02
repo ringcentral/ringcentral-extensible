@@ -21,7 +21,7 @@ class CallerId {
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-id
    */
   async get(): Promise<ExtensionCallerIdInfo> {
-    const r = await this.rc.get(this.path());
+    const r = await this.rc.get<ExtensionCallerIdInfo>(this.path());
     return r.data;
   }
 
@@ -33,7 +33,10 @@ class CallerId {
   async put(
     extensionCallerIdInfo: ExtensionCallerIdInfo
   ): Promise<ExtensionCallerIdInfo> {
-    const r = await this.rc.put(this.path(), extensionCallerIdInfo);
+    const r = await this.rc.put<ExtensionCallerIdInfo>(
+      this.path(),
+      extensionCallerIdInfo
+    );
     return r.data;
   }
 }

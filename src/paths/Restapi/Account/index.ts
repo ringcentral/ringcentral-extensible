@@ -60,7 +60,7 @@ class Account {
       throw new Error('accountId must be specified.');
     }
 
-    const r = await this.rc.get(this.path());
+    const r = await this.rc.get<GetAccountInfoResponse>(this.path());
     return r.data;
   }
 

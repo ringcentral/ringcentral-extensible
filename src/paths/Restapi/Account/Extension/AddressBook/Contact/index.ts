@@ -34,7 +34,7 @@ class Contact {
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact
    */
   async list(queryParams?: ListContactsParameters): Promise<ContactList> {
-    const r = await this.rc.get(this.path(false), queryParams);
+    const r = await this.rc.get<ContactList>(this.path(false), queryParams);
     return r.data;
   }
 
@@ -47,7 +47,7 @@ class Contact {
     personalContactRequest: PersonalContactRequest,
     queryParams?: CreateContactParameters
   ): Promise<PersonalContactResource> {
-    const r = await this.rc.post(
+    const r = await this.rc.post<PersonalContactResource>(
       this.path(false),
       personalContactRequest,
       queryParams
@@ -65,7 +65,7 @@ class Contact {
       throw new Error('contactId must be specified.');
     }
 
-    const r = await this.rc.get(this.path());
+    const r = await this.rc.get<PersonalContactResource>(this.path());
     return r.data;
   }
 
@@ -82,7 +82,7 @@ class Contact {
       throw new Error('contactId must be specified.');
     }
 
-    const r = await this.rc.put(
+    const r = await this.rc.put<PersonalContactResource>(
       this.path(),
       personalContactRequest,
       queryParams
@@ -100,7 +100,7 @@ class Contact {
       throw new Error('contactId must be specified.');
     }
 
-    const r = await this.rc.delete(this.path());
+    const r = await this.rc.delete<string>(this.path());
     return r.data;
   }
 }

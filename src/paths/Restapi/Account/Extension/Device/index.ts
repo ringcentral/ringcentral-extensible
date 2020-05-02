@@ -26,7 +26,10 @@ class Device {
   async get(
     queryParams?: ListExtensionDevicesParameters
   ): Promise<GetExtensionDevicesResponse> {
-    const r = await this.rc.get(this.path(), queryParams);
+    const r = await this.rc.get<GetExtensionDevicesResponse>(
+      this.path(),
+      queryParams
+    );
     return r.data;
   }
 }

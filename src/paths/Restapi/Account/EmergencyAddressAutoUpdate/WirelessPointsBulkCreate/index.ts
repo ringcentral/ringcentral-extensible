@@ -26,7 +26,7 @@ class WirelessPointsBulkCreate {
   async post(
     createMultipleWirelessPointsRequest: CreateMultipleWirelessPointsRequest
   ): Promise<CreateMultipleWirelessPointsResponse> {
-    const r = await this.rc.post(
+    const r = await this.rc.post<CreateMultipleWirelessPointsResponse>(
       this.path(),
       createMultipleWirelessPointsRequest
     );

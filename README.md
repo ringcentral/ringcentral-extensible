@@ -74,7 +74,7 @@ If there is no CDN uri provided, contruct the uri as the [sample code](./samples
 The RingCentral Platform enforces rate limits to reduce network traffic and avoid DOS issues.
 
 
-[Here's](https://medium.com/ringcentral-developers/new-features-in-ringcentral-net-sdk-4-0-e2c596f63f43) a blog article discussing it in detail. 
+[Here's](https://medium.com/ringcentral-developers/new-features-in-ringcentral-net-sdk-4-0-e2c596f63f43) a blog article discussing it in detail.
 
 This SDK has the option of handling rate limits automatically by passing `handleRateLimit: (boolean | number)` into the constructor.
 
@@ -112,6 +112,7 @@ yarn test
 
 ### Todo
 
+- no more `any` type and `{}` type
 - compare it with C# sdk and see what are missing
 - Create a WSG version of this SDK
 - Replace axios with @ringcentral/sdk ?

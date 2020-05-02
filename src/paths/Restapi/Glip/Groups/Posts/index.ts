@@ -33,7 +33,7 @@ class Posts {
    * Http get /restapi/v1.0/glip/groups/{groupId}/posts
    */
   async get(queryParams?: ListGlipGroupPostsParameters): Promise<GlipPosts> {
-    const r = await this.rc.get(this.path(false), queryParams);
+    const r = await this.rc.get<GlipPosts>(this.path(false), queryParams);
     return r.data;
   }
 
@@ -43,7 +43,10 @@ class Posts {
    * Http post /restapi/v1.0/glip/groups/{groupId}/posts
    */
   async post(glipCreatePost: GlipCreatePost): Promise<GlipPostInfo> {
-    const r = await this.rc.post(this.path(false), glipCreatePost);
+    const r = await this.rc.post<GlipPostInfo>(
+      this.path(false),
+      glipCreatePost
+    );
     return r.data;
   }
 

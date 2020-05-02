@@ -26,7 +26,7 @@ class WirelessPointsBulkUpdate {
   async post(
     updateMultipleWirelessPointsRequest: UpdateMultipleWirelessPointsRequest
   ): Promise<UpdateMultipleWirelessPointsResponse> {
-    const r = await this.rc.post(
+    const r = await this.rc.post<UpdateMultipleWirelessPointsResponse>(
       this.path(),
       updateMultipleWirelessPointsRequest
     );

@@ -34,7 +34,10 @@ class Timezone {
   async list(
     queryParams?: ListTimezonesParameters
   ): Promise<GetTimezoneListResponse> {
-    const r = await this.rc.get(this.path(false), queryParams);
+    const r = await this.rc.get<GetTimezoneListResponse>(
+      this.path(false),
+      queryParams
+    );
     return r.data;
   }
 
@@ -50,7 +53,10 @@ class Timezone {
       throw new Error('timezoneId must be specified.');
     }
 
-    const r = await this.rc.get(this.path(), queryParams);
+    const r = await this.rc.get<GetTimezoneInfoResponse>(
+      this.path(),
+      queryParams
+    );
     return r.data;
   }
 }

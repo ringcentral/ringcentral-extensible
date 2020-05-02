@@ -31,7 +31,7 @@ class Companies {
       throw new Error('companyId must be specified.');
     }
 
-    const r = await this.rc.get(this.path());
+    const r = await this.rc.get<GlipCompany>(this.path());
     return r.data;
   }
 }

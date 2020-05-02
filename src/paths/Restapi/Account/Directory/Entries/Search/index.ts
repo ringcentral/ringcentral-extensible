@@ -26,7 +26,10 @@ class Search {
   async post(
     searchDirectoryEntriesRequest: SearchDirectoryEntriesRequest
   ): Promise<DirectoryResource> {
-    const r = await this.rc.post(this.path(), searchDirectoryEntriesRequest);
+    const r = await this.rc.post<DirectoryResource>(
+      this.path(),
+      searchDirectoryEntriesRequest
+    );
     return r.data;
   }
 }

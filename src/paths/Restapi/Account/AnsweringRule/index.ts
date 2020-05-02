@@ -35,7 +35,10 @@ class AnsweringRule {
   async post(
     companyAnsweringRuleRequest: CompanyAnsweringRuleRequest
   ): Promise<CompanyAnsweringRuleInfo> {
-    const r = await this.rc.post(this.path(false), companyAnsweringRuleRequest);
+    const r = await this.rc.post<CompanyAnsweringRuleInfo>(
+      this.path(false),
+      companyAnsweringRuleRequest
+    );
     return r.data;
   }
 
@@ -47,7 +50,10 @@ class AnsweringRule {
   async list(
     queryParams?: ListCompanyAnsweringRulesParameters
   ): Promise<CompanyAnsweringRuleList> {
-    const r = await this.rc.get(this.path(false), queryParams);
+    const r = await this.rc.get<CompanyAnsweringRuleList>(
+      this.path(false),
+      queryParams
+    );
     return r.data;
   }
 
@@ -61,7 +67,7 @@ class AnsweringRule {
       throw new Error('ruleId must be specified.');
     }
 
-    const r = await this.rc.get(this.path());
+    const r = await this.rc.get<CompanyAnsweringRuleInfo>(this.path());
     return r.data;
   }
 
@@ -77,7 +83,10 @@ class AnsweringRule {
       throw new Error('ruleId must be specified.');
     }
 
-    const r = await this.rc.put(this.path(), companyAnsweringRuleUpdate);
+    const r = await this.rc.put<CompanyAnsweringRuleInfo>(
+      this.path(),
+      companyAnsweringRuleUpdate
+    );
     return r.data;
   }
 
@@ -91,7 +100,7 @@ class AnsweringRule {
       throw new Error('ruleId must be specified.');
     }
 
-    const r = await this.rc.delete(this.path());
+    const r = await this.rc.delete<string>(this.path());
     return r.data;
   }
 }

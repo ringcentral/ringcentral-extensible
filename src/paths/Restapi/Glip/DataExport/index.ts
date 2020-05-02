@@ -35,7 +35,10 @@ class DataExport {
   async post(
     createDataExportTaskRequest: CreateDataExportTaskRequest
   ): Promise<DataExportTask> {
-    const r = await this.rc.post(this.path(false), createDataExportTaskRequest);
+    const r = await this.rc.post<DataExportTask>(
+      this.path(false),
+      createDataExportTaskRequest
+    );
     return r.data;
   }
 
@@ -47,7 +50,10 @@ class DataExport {
   async list(
     queryParams?: ListDataExportTasksParameters
   ): Promise<DataExportTaskList> {
-    const r = await this.rc.get(this.path(false), queryParams);
+    const r = await this.rc.get<DataExportTaskList>(
+      this.path(false),
+      queryParams
+    );
     return r.data;
   }
 
@@ -61,7 +67,7 @@ class DataExport {
       throw new Error('taskId must be specified.');
     }
 
-    const r = await this.rc.get(this.path());
+    const r = await this.rc.get<DataExportTask>(this.path());
     return r.data;
   }
 

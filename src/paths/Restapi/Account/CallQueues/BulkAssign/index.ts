@@ -23,7 +23,10 @@ class BulkAssign {
   async post(
     callQueueBulkAssignResource: CallQueueBulkAssignResource
   ): Promise<string> {
-    const r = await this.rc.post(this.path(), callQueueBulkAssignResource);
+    const r = await this.rc.post<string>(
+      this.path(),
+      callQueueBulkAssignResource
+    );
     return r.data;
   }
 }

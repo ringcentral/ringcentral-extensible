@@ -23,7 +23,7 @@ class BulkAssign {
   async post(
     assignMultipleDevicesAutomaticLocationUpdates: AssignMultipleDevicesAutomaticLocationUpdates
   ): Promise<string> {
-    const r = await this.rc.post(
+    const r = await this.rc.post<string>(
       this.path(),
       assignMultipleDevicesAutomaticLocationUpdates
     );

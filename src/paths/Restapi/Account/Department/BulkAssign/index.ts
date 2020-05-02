@@ -23,7 +23,10 @@ class BulkAssign {
   async post(
     departmentBulkAssignResource: DepartmentBulkAssignResource
   ): Promise<string> {
-    const r = await this.rc.post(this.path(), departmentBulkAssignResource);
+    const r = await this.rc.post<string>(
+      this.path(),
+      departmentBulkAssignResource
+    );
     return r.data;
   }
 }

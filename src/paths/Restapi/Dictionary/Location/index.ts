@@ -26,7 +26,10 @@ class Location {
   async get(
     queryParams?: ListLocationsParameters
   ): Promise<GetLocationListResponse> {
-    const r = await this.rc.get(this.path(), queryParams);
+    const r = await this.rc.get<GetLocationListResponse>(
+      this.path(),
+      queryParams
+    );
     return r.data;
   }
 }

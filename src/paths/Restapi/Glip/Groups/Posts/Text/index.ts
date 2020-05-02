@@ -20,7 +20,7 @@ class Text {
    * Http put /restapi/v1.0/glip/groups/{groupId}/posts/{postId}/text
    */
   async put(body: string): Promise<string> {
-    const r = await this.rc.put(this.path(), body);
+    const r = await this.rc.put<string>(this.path(), body);
     return r.data;
   }
 }

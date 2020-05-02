@@ -26,7 +26,10 @@ class SwitchesBulkCreate {
   async post(
     createMultipleSwitchesRequest: CreateMultipleSwitchesRequest
   ): Promise<CreateMultipleSwitchesResponse> {
-    const r = await this.rc.post(this.path(), createMultipleSwitchesRequest);
+    const r = await this.rc.post<CreateMultipleSwitchesResponse>(
+      this.path(),
+      createMultipleSwitchesRequest
+    );
     return r.data;
   }
 }

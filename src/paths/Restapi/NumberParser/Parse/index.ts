@@ -28,7 +28,7 @@ class Parse {
     parsePhoneNumberRequest: ParsePhoneNumberRequest,
     queryParams?: ParsePhoneNumberParameters
   ): Promise<ParsePhoneNumberResponse> {
-    const r = await this.rc.post(
+    const r = await this.rc.post<ParsePhoneNumberResponse>(
       this.path(),
       parsePhoneNumberRequest,
       queryParams

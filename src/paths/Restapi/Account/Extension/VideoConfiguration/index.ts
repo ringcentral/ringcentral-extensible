@@ -21,7 +21,7 @@ class VideoConfiguration {
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/video-configuration
    */
   async get(): Promise<UserVideoConfiguration> {
-    const r = await this.rc.get(this.path());
+    const r = await this.rc.get<UserVideoConfiguration>(this.path());
     return r.data;
   }
 
@@ -33,7 +33,10 @@ class VideoConfiguration {
   async put(
     userVideoConfiguration: UserVideoConfiguration
   ): Promise<UserVideoConfiguration> {
-    const r = await this.rc.put(this.path(), userVideoConfiguration);
+    const r = await this.rc.put<UserVideoConfiguration>(
+      this.path(),
+      userVideoConfiguration
+    );
     return r.data;
   }
 }

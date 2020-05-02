@@ -26,7 +26,7 @@ class Notes {
    * Http post /restapi/v1.0/glip/chats/{chatId}/notes
    */
   async post(glipNoteCreate: GlipNoteCreate): Promise<GlipNoteInfo> {
-    const r = await this.rc.post(this.path(), glipNoteCreate);
+    const r = await this.rc.post<GlipNoteInfo>(this.path(), glipNoteCreate);
     return r.data;
   }
 
@@ -36,7 +36,7 @@ class Notes {
    * Http get /restapi/v1.0/glip/chats/{chatId}/notes
    */
   async get(queryParams?: ListChatNotesParameters): Promise<GlipNotesInfo> {
-    const r = await this.rc.get(this.path(), queryParams);
+    const r = await this.rc.get<GlipNotesInfo>(this.path(), queryParams);
     return r.data;
   }
 }

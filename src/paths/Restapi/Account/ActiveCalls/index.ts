@@ -26,7 +26,10 @@ class ActiveCalls {
   async get(
     queryParams?: ListCompanyActiveCallsParameters
   ): Promise<CompanyActiveCallsResponse> {
-    const r = await this.rc.get(this.path(), queryParams);
+    const r = await this.rc.get<CompanyActiveCallsResponse>(
+      this.path(),
+      queryParams
+    );
     return r.data;
   }
 }

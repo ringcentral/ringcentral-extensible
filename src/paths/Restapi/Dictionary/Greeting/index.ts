@@ -33,7 +33,10 @@ class Greeting {
   async list(
     queryParams?: ListStandardGreetingsParameters
   ): Promise<DictionaryGreetingList> {
-    const r = await this.rc.get(this.path(false), queryParams);
+    const r = await this.rc.get<DictionaryGreetingList>(
+      this.path(false),
+      queryParams
+    );
     return r.data;
   }
 
@@ -47,7 +50,7 @@ class Greeting {
       throw new Error('greetingId must be specified.');
     }
 
-    const r = await this.rc.get(this.path());
+    const r = await this.rc.get<DictionaryGreetingInfo>(this.path());
     return r.data;
   }
 }

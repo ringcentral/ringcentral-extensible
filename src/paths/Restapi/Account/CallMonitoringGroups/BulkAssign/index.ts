@@ -23,7 +23,7 @@ class BulkAssign {
   async post(
     callMonitoringBulkAssign: CallMonitoringBulkAssign
   ): Promise<string> {
-    const r = await this.rc.post(this.path(), callMonitoringBulkAssign);
+    const r = await this.rc.post<string>(this.path(), callMonitoringBulkAssign);
     return r.data;
   }
 }

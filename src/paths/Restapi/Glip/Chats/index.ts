@@ -38,7 +38,7 @@ class Chats {
    * Http get /restapi/v1.0/glip/chats
    */
   async list(queryParams?: ListGlipChatsParameters): Promise<GlipChatsList> {
-    const r = await this.rc.get(this.path(false), queryParams);
+    const r = await this.rc.get<GlipChatsList>(this.path(false), queryParams);
     return r.data;
   }
 
@@ -52,7 +52,7 @@ class Chats {
       throw new Error('chatId must be specified.');
     }
 
-    const r = await this.rc.get(this.path());
+    const r = await this.rc.get<GlipChatInfo>(this.path());
     return r.data;
   }
 

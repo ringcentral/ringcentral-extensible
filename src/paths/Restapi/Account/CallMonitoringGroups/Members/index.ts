@@ -26,7 +26,10 @@ class Members {
   async get(
     queryParams?: ListCallMonitoringGroupMembersParameters
   ): Promise<CallMonitoringGroupMemberList> {
-    const r = await this.rc.get(this.path(), queryParams);
+    const r = await this.rc.get<CallMonitoringGroupMemberList>(
+      this.path(),
+      queryParams
+    );
     return r.data;
   }
 }

@@ -21,7 +21,7 @@ class Transfer {
    * Http post /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/transfer
    */
   async post(transferTarget: TransferTarget): Promise<CallParty> {
-    const r = await this.rc.post(this.path(), transferTarget);
+    const r = await this.rc.post<CallParty>(this.path(), transferTarget);
     return r.data;
   }
 }

@@ -26,7 +26,10 @@ class Devices {
   async get(
     queryParams?: ListPagingGroupDevicesParameters
   ): Promise<PagingOnlyGroupDevices> {
-    const r = await this.rc.get(this.path(), queryParams);
+    const r = await this.rc.get<PagingOnlyGroupDevices>(
+      this.path(),
+      queryParams
+    );
     return r.data;
   }
 }

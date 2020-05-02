@@ -27,7 +27,7 @@ class Language {
    * Http get /restapi/v1.0/dictionary/language
    */
   async list(): Promise<LanguageList> {
-    const r = await this.rc.get(this.path(false));
+    const r = await this.rc.get<LanguageList>(this.path(false));
     return r.data;
   }
 
@@ -41,7 +41,7 @@ class Language {
       throw new Error('languageId must be specified.');
     }
 
-    const r = await this.rc.get(this.path());
+    const r = await this.rc.get<LanguageInfo>(this.path());
     return r.data;
   }
 }

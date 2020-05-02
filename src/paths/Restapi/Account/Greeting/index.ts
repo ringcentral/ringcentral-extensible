@@ -28,9 +28,12 @@ class Greeting {
     createCompanyGreetingRequest: CreateCompanyGreetingRequest
   ): Promise<CustomCompanyGreetingInfo> {
     const formData = Utils.getFormData(createCompanyGreetingRequest);
-    const r = await this.rc.post(this.path(), formData, undefined, {
-      headers: formData.getHeaders(),
-    });
+    const r = await this.rc.post<CustomCompanyGreetingInfo>(
+      this.path(),
+      formData,
+      undefined,
+      {headers: formData.getHeaders()}
+    );
     return r.data;
   }
 }

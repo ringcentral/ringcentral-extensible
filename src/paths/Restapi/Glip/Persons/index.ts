@@ -31,7 +31,7 @@ class Persons {
       throw new Error('personId must be specified.');
     }
 
-    const r = await this.rc.get(this.path());
+    const r = await this.rc.get<GlipPersonInfo>(this.path());
     return r.data;
   }
 }

@@ -26,7 +26,10 @@ class Supervise {
   async post(
     partySuperviseRequest: PartySuperviseRequest
   ): Promise<PartySuperviseResponse> {
-    const r = await this.rc.post(this.path(), partySuperviseRequest);
+    const r = await this.rc.post<PartySuperviseResponse>(
+      this.path(),
+      partySuperviseRequest
+    );
     return r.data;
   }
 }

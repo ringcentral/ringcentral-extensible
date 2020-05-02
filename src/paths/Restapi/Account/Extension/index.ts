@@ -71,7 +71,10 @@ class Extension {
   async list(
     queryParams?: ListExtensionsParameters
   ): Promise<GetExtensionListResponse> {
-    const r = await this.rc.get(this.path(false), queryParams);
+    const r = await this.rc.get<GetExtensionListResponse>(
+      this.path(false),
+      queryParams
+    );
     return r.data;
   }
 
@@ -83,7 +86,10 @@ class Extension {
   async post(
     extensionCreationRequest: ExtensionCreationRequest
   ): Promise<ExtensionCreationResponse> {
-    const r = await this.rc.post(this.path(false), extensionCreationRequest);
+    const r = await this.rc.post<ExtensionCreationResponse>(
+      this.path(false),
+      extensionCreationRequest
+    );
     return r.data;
   }
 
@@ -97,7 +103,7 @@ class Extension {
       throw new Error('extensionId must be specified.');
     }
 
-    const r = await this.rc.get(this.path());
+    const r = await this.rc.get<GetExtensionInfoResponse>(this.path());
     return r.data;
   }
 
@@ -113,7 +119,10 @@ class Extension {
       throw new Error('extensionId must be specified.');
     }
 
-    const r = await this.rc.put(this.path(), extensionUpdateRequest);
+    const r = await this.rc.put<GetExtensionInfoResponse>(
+      this.path(),
+      extensionUpdateRequest
+    );
     return r.data;
   }
 
@@ -127,7 +136,7 @@ class Extension {
       throw new Error('extensionId must be specified.');
     }
 
-    const r = await this.rc.delete(this.path(), queryParams);
+    const r = await this.rc.delete<string>(this.path(), queryParams);
     return r.data;
   }
 

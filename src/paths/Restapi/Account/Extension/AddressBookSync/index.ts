@@ -21,7 +21,7 @@ class AddressBookSync {
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book-sync
    */
   async get(queryParams?: SyncAddressBookParameters): Promise<AddressBookSync> {
-    const r = await this.rc.get(this.path(), queryParams);
+    const r = await this.rc.get<AddressBookSync>(this.path(), queryParams);
     return r.data;
   }
 }

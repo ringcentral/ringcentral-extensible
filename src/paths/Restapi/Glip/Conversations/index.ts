@@ -34,7 +34,10 @@ class Conversations {
   async list(
     queryParams?: ListGlipConversationsParameters
   ): Promise<GlipConversationsList> {
-    const r = await this.rc.get(this.path(false), queryParams);
+    const r = await this.rc.get<GlipConversationsList>(
+      this.path(false),
+      queryParams
+    );
     return r.data;
   }
 
@@ -46,7 +49,7 @@ class Conversations {
   async post(
     createGlipConversationRequest: CreateGlipConversationRequest
   ): Promise<GlipConversationInfo> {
-    const r = await this.rc.post(
+    const r = await this.rc.post<GlipConversationInfo>(
       this.path(false),
       createGlipConversationRequest
     );
@@ -63,7 +66,7 @@ class Conversations {
       throw new Error('chatId must be specified.');
     }
 
-    const r = await this.rc.get(this.path());
+    const r = await this.rc.get<GlipConversationInfo>(this.path());
     return r.data;
   }
 }

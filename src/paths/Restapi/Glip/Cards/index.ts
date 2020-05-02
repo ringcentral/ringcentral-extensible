@@ -34,7 +34,7 @@ class Cards {
     glipMessageAttachmentInfoRequest: GlipMessageAttachmentInfoRequest,
     queryParams?: CreateGlipCardParameters
   ): Promise<GlipMessageAttachmentInfo> {
-    const r = await this.rc.post(
+    const r = await this.rc.post<GlipMessageAttachmentInfo>(
       this.path(false),
       glipMessageAttachmentInfoRequest,
       queryParams
@@ -52,7 +52,7 @@ class Cards {
       throw new Error('cardId must be specified.');
     }
 
-    const r = await this.rc.get(this.path());
+    const r = await this.rc.get<GlipMessageAttachmentInfo>(this.path());
     return r.data;
   }
 
@@ -68,7 +68,10 @@ class Cards {
       throw new Error('cardId must be specified.');
     }
 
-    const r = await this.rc.put(this.path(), glipMessageAttachmentInfoRequest);
+    const r = await this.rc.put<string>(
+      this.path(),
+      glipMessageAttachmentInfoRequest
+    );
     return r.data;
   }
 
@@ -82,7 +85,7 @@ class Cards {
       throw new Error('cardId must be specified.');
     }
 
-    const r = await this.rc.delete(this.path());
+    const r = await this.rc.delete<string>(this.path());
     return r.data;
   }
 }

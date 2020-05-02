@@ -34,7 +34,7 @@ class EmergencyLocations {
   async post(
     emergencyLocationInfoRequest: EmergencyLocationInfoRequest
   ): Promise<string> {
-    const r = await this.rc.post(
+    const r = await this.rc.post<string>(
       this.path(false),
       emergencyLocationInfoRequest
     );
@@ -49,7 +49,10 @@ class EmergencyLocations {
   async list(
     queryParams?: ListEmergencyLocationsParameters
   ): Promise<EmergencyLocationList> {
-    const r = await this.rc.get(this.path(false), queryParams);
+    const r = await this.rc.get<EmergencyLocationList>(
+      this.path(false),
+      queryParams
+    );
     return r.data;
   }
 
@@ -63,7 +66,7 @@ class EmergencyLocations {
       throw new Error('locationId must be specified.');
     }
 
-    const r = await this.rc.get(this.path());
+    const r = await this.rc.get<EmergencyLocationInfo>(this.path());
     return r.data;
   }
 
@@ -79,7 +82,10 @@ class EmergencyLocations {
       throw new Error('locationId must be specified.');
     }
 
-    const r = await this.rc.put(this.path(), emergencyLocationInfoRequest);
+    const r = await this.rc.put<EmergencyLocationInfo>(
+      this.path(),
+      emergencyLocationInfoRequest
+    );
     return r.data;
   }
 }

@@ -21,7 +21,7 @@ class ServiceInfo {
    * Http get /restapi/v1.0/account/{accountId}/service-info
    */
   async get(): Promise<GetServiceInfoResponse> {
-    const r = await this.rc.get(this.path());
+    const r = await this.rc.get<GetServiceInfoResponse>(this.path());
     return r.data;
   }
 }

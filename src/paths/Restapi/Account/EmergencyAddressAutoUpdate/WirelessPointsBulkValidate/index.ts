@@ -26,7 +26,7 @@ class WirelessPointsBulkValidate {
   async post(
     validateMultipleWirelessPointsRequest: ValidateMultipleWirelessPointsRequest
   ): Promise<ValidateMultipleWirelessPointsResponse> {
-    const r = await this.rc.post(
+    const r = await this.rc.post<ValidateMultipleWirelessPointsResponse>(
       this.path(),
       validateMultipleWirelessPointsRequest
     );

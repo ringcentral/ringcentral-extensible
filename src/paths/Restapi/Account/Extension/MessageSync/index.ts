@@ -26,7 +26,10 @@ class MessageSync {
   async get(
     queryParams?: SyncMessagesParameters
   ): Promise<GetMessageSyncResponse> {
-    const r = await this.rc.get(this.path(), queryParams);
+    const r = await this.rc.get<GetMessageSyncResponse>(
+      this.path(),
+      queryParams
+    );
     return r.data;
   }
 }

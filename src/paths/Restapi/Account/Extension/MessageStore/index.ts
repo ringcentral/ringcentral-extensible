@@ -35,7 +35,7 @@ class MessageStore {
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store
    */
   async list(queryParams?: ListMessagesParameters): Promise<GetMessageList> {
-    const r = await this.rc.get(this.path(false), queryParams);
+    const r = await this.rc.get<GetMessageList>(this.path(false), queryParams);
     return r.data;
   }
 
@@ -49,7 +49,7 @@ class MessageStore {
       throw new Error('messageId must be specified.');
     }
 
-    const r = await this.rc.get(this.path());
+    const r = await this.rc.get<GetMessageInfoResponse>(this.path());
     return r.data;
   }
 
@@ -66,7 +66,11 @@ class MessageStore {
       throw new Error('messageId must be specified.');
     }
 
-    const r = await this.rc.put(this.path(), updateMessageRequest, queryParams);
+    const r = await this.rc.put<GetMessageInfoResponse>(
+      this.path(),
+      updateMessageRequest,
+      queryParams
+    );
     return r.data;
   }
 
@@ -80,7 +84,7 @@ class MessageStore {
       throw new Error('messageId must be specified.');
     }
 
-    const r = await this.rc.delete(this.path(), queryParams);
+    const r = await this.rc.delete<string>(this.path(), queryParams);
     return r.data;
   }
 

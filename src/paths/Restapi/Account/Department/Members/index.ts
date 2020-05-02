@@ -26,7 +26,7 @@ class Members {
   async get(
     queryParams?: ListDepartmentMembersParameters
   ): Promise<DepartmentMemberList> {
-    const r = await this.rc.get(this.path(), queryParams);
+    const r = await this.rc.get<DepartmentMemberList>(this.path(), queryParams);
     return r.data;
   }
 }

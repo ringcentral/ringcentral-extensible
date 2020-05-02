@@ -38,7 +38,7 @@ class Sessions {
       throw new Error('telephonySessionId must be specified.');
     }
 
-    const r = await this.rc.get(this.path(), queryParams);
+    const r = await this.rc.get<CallSession>(this.path(), queryParams);
     return r.data;
   }
 
@@ -52,7 +52,7 @@ class Sessions {
       throw new Error('telephonySessionId must be specified.');
     }
 
-    const r = await this.rc.delete(this.path());
+    const r = await this.rc.delete<string>(this.path());
     return r.data;
   }
 

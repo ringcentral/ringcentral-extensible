@@ -29,7 +29,7 @@ class CallQueues {
    * Http get /restapi/v1.0/account/{accountId}/call-queues
    */
   async get(queryParams?: ListCallQueuesParameters): Promise<CallQueues> {
-    const r = await this.rc.get(this.path(false), queryParams);
+    const r = await this.rc.get<CallQueues>(this.path(false), queryParams);
     return r.data;
   }
 

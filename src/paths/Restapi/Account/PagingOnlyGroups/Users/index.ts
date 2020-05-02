@@ -26,7 +26,7 @@ class Users {
   async get(
     queryParams?: ListPagingGroupUsersParameters
   ): Promise<PagingOnlyGroupUsers> {
-    const r = await this.rc.get(this.path(), queryParams);
+    const r = await this.rc.get<PagingOnlyGroupUsers>(this.path(), queryParams);
     return r.data;
   }
 }

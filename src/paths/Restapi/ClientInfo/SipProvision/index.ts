@@ -26,7 +26,10 @@ class SipProvision {
   async post(
     createSipRegistrationRequest: CreateSipRegistrationRequest
   ): Promise<CreateSipRegistrationResponse> {
-    const r = await this.rc.post(this.path(), createSipRegistrationRequest);
+    const r = await this.rc.post<CreateSipRegistrationResponse>(
+      this.path(),
+      createSipRegistrationRequest
+    );
     return r.data;
   }
 }

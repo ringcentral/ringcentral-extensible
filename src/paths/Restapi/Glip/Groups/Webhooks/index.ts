@@ -21,7 +21,7 @@ class Webhooks {
    * Http post /restapi/v1.0/glip/groups/{groupId}/webhooks
    */
   async post(): Promise<GlipWebhookInfo> {
-    const r = await this.rc.post(this.path());
+    const r = await this.rc.post<GlipWebhookInfo>(this.path());
     return r.data;
   }
 
@@ -31,7 +31,7 @@ class Webhooks {
    * Http get /restapi/v1.0/glip/groups/{groupId}/webhooks
    */
   async get(): Promise<GlipWebhookList> {
-    const r = await this.rc.get(this.path());
+    const r = await this.rc.get<GlipWebhookList>(this.path());
     return r.data;
   }
 }

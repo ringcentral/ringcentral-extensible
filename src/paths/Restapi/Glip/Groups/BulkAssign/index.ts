@@ -21,7 +21,7 @@ class BulkAssign {
    * Http post /restapi/v1.0/glip/groups/{groupId}/bulk-assign
    */
   async post(editGroupRequest: EditGroupRequest): Promise<GlipGroupInfo> {
-    const r = await this.rc.post(this.path(), editGroupRequest);
+    const r = await this.rc.post<GlipGroupInfo>(this.path(), editGroupRequest);
     return r.data;
   }
 }

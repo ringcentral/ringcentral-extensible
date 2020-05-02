@@ -26,7 +26,10 @@ class Favorites {
   async get(
     queryParams?: ListFavoriteChatsParameters
   ): Promise<GlipChatsListWithoutNavigation> {
-    const r = await this.rc.get(this.path(), queryParams);
+    const r = await this.rc.get<GlipChatsListWithoutNavigation>(
+      this.path(),
+      queryParams
+    );
     return r.data;
   }
 }

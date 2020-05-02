@@ -21,7 +21,7 @@ class Hold {
    * Http post /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/hold
    */
   async post(): Promise<CallParty> {
-    const r = await this.rc.post(this.path());
+    const r = await this.rc.post<CallParty>(this.path());
     return r.data;
   }
 }

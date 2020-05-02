@@ -26,7 +26,10 @@ class SwitchesBulkUpdate {
   async post(
     updateMultipleSwitchesRequest: UpdateMultipleSwitchesRequest
   ): Promise<UpdateMultipleSwitchesResponse> {
-    const r = await this.rc.post(this.path(), updateMultipleSwitchesRequest);
+    const r = await this.rc.post<UpdateMultipleSwitchesResponse>(
+      this.path(),
+      updateMultipleSwitchesRequest
+    );
     return r.data;
   }
 }

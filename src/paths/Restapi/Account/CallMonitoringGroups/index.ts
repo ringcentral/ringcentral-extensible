@@ -35,7 +35,7 @@ class CallMonitoringGroups {
   async post(
     createCallMonitoringGroupRequest: CreateCallMonitoringGroupRequest
   ): Promise<CallMonitoringGroup> {
-    const r = await this.rc.post(
+    const r = await this.rc.post<CallMonitoringGroup>(
       this.path(false),
       createCallMonitoringGroupRequest
     );
@@ -50,7 +50,10 @@ class CallMonitoringGroups {
   async get(
     queryParams?: ListCallMonitoringGroupsParameters
   ): Promise<CallMonitoringGroups> {
-    const r = await this.rc.get(this.path(false), queryParams);
+    const r = await this.rc.get<CallMonitoringGroups>(
+      this.path(false),
+      queryParams
+    );
     return r.data;
   }
 
@@ -66,7 +69,10 @@ class CallMonitoringGroups {
       throw new Error('groupId must be specified.');
     }
 
-    const r = await this.rc.put(this.path(), createCallMonitoringGroupRequest);
+    const r = await this.rc.put<CallMonitoringGroup>(
+      this.path(),
+      createCallMonitoringGroupRequest
+    );
     return r.data;
   }
 
@@ -80,7 +86,7 @@ class CallMonitoringGroups {
       throw new Error('groupId must be specified.');
     }
 
-    const r = await this.rc.delete(this.path());
+    const r = await this.rc.delete<string>(this.path());
     return r.data;
   }
 

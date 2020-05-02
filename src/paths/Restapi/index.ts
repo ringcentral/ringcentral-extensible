@@ -32,7 +32,7 @@ class Restapi {
    * Http get /restapi
    */
   async list(): Promise<GetVersionsResponse> {
-    const r = await this.rc.get(this.path(false));
+    const r = await this.rc.get<GetVersionsResponse>(this.path(false));
     return r.data;
   }
 
@@ -46,7 +46,7 @@ class Restapi {
       throw new Error('apiVersion must be specified.');
     }
 
-    const r = await this.rc.get(this.path());
+    const r = await this.rc.get<GetVersionResponse>(this.path());
     return r.data;
   }
 

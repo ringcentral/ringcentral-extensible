@@ -38,7 +38,7 @@ class Notes {
       throw new Error('noteId must be specified.');
     }
 
-    const r = await this.rc.get(this.path());
+    const r = await this.rc.get<GetGlipNoteInfo>(this.path());
     return r.data;
   }
 
@@ -52,7 +52,7 @@ class Notes {
       throw new Error('noteId must be specified.');
     }
 
-    const r = await this.rc.patch(this.path(), glipNoteCreate);
+    const r = await this.rc.patch<GlipNoteInfo>(this.path(), glipNoteCreate);
     return r.data;
   }
 
@@ -66,7 +66,7 @@ class Notes {
       throw new Error('noteId must be specified.');
     }
 
-    const r = await this.rc.delete(this.path());
+    const r = await this.rc.delete<string>(this.path());
     return r.data;
   }
 

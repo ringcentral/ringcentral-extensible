@@ -20,7 +20,7 @@ class End {
    * Http post /restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/{meetingId}/end
    */
   async post(): Promise<string> {
-    const r = await this.rc.post(this.path());
+    const r = await this.rc.post<string>(this.path());
     return r.data;
   }
 }

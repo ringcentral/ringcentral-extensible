@@ -24,7 +24,7 @@ class Favorite {
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/favorite
    */
   async get(): Promise<FavoriteContactList> {
-    const r = await this.rc.get(this.path());
+    const r = await this.rc.get<FavoriteContactList>(this.path());
     return r.data;
   }
 
@@ -36,7 +36,10 @@ class Favorite {
   async put(
     favoriteCollection: FavoriteCollection
   ): Promise<FavoriteContactList> {
-    const r = await this.rc.put(this.path(), favoriteCollection);
+    const r = await this.rc.put<FavoriteContactList>(
+      this.path(),
+      favoriteCollection
+    );
     return r.data;
   }
 }

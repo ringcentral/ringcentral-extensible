@@ -21,7 +21,7 @@ class BulkAssign {
    * Http post /restapi/v1.0/account/{accountId}/paging-only-groups/{pagingOnlyGroupId}/bulk-assign
    */
   async post(editPagingGroupRequest: EditPagingGroupRequest): Promise<string> {
-    const r = await this.rc.post(this.path(), editPagingGroupRequest);
+    const r = await this.rc.post<string>(this.path(), editPagingGroupRequest);
     return r.data;
   }
 }

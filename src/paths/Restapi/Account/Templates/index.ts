@@ -33,7 +33,7 @@ class Templates {
   async list(
     queryParams?: ListUserTemplatesParameters
   ): Promise<UserTemplates> {
-    const r = await this.rc.get(this.path(false), queryParams);
+    const r = await this.rc.get<UserTemplates>(this.path(false), queryParams);
     return r.data;
   }
 
@@ -47,7 +47,7 @@ class Templates {
       throw new Error('templateId must be specified.');
     }
 
-    const r = await this.rc.get(this.path());
+    const r = await this.rc.get<TemplateInfo>(this.path());
     return r.data;
   }
 }

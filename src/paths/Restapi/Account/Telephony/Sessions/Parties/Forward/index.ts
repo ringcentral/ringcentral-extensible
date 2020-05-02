@@ -21,7 +21,7 @@ class Forward {
    * Http post /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/forward
    */
   async post(forwardTarget: ForwardTarget): Promise<CallParty> {
-    const r = await this.rc.post(this.path(), forwardTarget);
+    const r = await this.rc.post<CallParty>(this.path(), forwardTarget);
     return r.data;
   }
 }

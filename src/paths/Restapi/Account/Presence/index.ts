@@ -26,7 +26,7 @@ class Presence {
   async get(
     queryParams?: ReadAccountPresenceParameters
   ): Promise<AccountPresenceInfo> {
-    const r = await this.rc.get(this.path(), queryParams);
+    const r = await this.rc.get<AccountPresenceInfo>(this.path(), queryParams);
     return r.data;
   }
 }

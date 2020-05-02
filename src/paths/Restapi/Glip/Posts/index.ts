@@ -26,7 +26,7 @@ class Posts {
    * Http get /restapi/v1.0/glip/posts
    */
   async get(queryParams?: ListGlipPostsParameters): Promise<GlipPosts> {
-    const r = await this.rc.get(this.path(), queryParams);
+    const r = await this.rc.get<GlipPosts>(this.path(), queryParams);
     return r.data;
   }
 
@@ -36,7 +36,7 @@ class Posts {
    * Http post /restapi/v1.0/glip/posts
    */
   async post(glipCreatePost: GlipCreatePost): Promise<GlipPostInfo> {
-    const r = await this.rc.post(this.path(), glipCreatePost);
+    const r = await this.rc.post<GlipPostInfo>(this.path(), glipCreatePost);
     return r.data;
   }
 }

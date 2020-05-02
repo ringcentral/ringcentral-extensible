@@ -34,7 +34,10 @@ class CallLog {
   async list(
     queryParams?: ReadCompanyCallLogParameters
   ): Promise<AccountCallLogResponse> {
-    const r = await this.rc.get(this.path(false), queryParams);
+    const r = await this.rc.get<AccountCallLogResponse>(
+      this.path(false),
+      queryParams
+    );
     return r.data;
   }
 
@@ -50,7 +53,7 @@ class CallLog {
       throw new Error('callRecordId must be specified.');
     }
 
-    const r = await this.rc.get(this.path(), queryParams);
+    const r = await this.rc.get<CompanyCallLogRecord>(this.path(), queryParams);
     return r.data;
   }
 }

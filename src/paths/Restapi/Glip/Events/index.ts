@@ -32,7 +32,7 @@ class Events {
    * Http get /restapi/v1.0/glip/events
    */
   async list(queryParams?: ReadGlipEventsParameters): Promise<GlipEventsInfo> {
-    const r = await this.rc.get(this.path(false), queryParams);
+    const r = await this.rc.get<GlipEventsInfo>(this.path(false), queryParams);
     return r.data;
   }
 
@@ -42,7 +42,10 @@ class Events {
    * Http post /restapi/v1.0/glip/events
    */
   async post(glipEventCreate: GlipEventCreate): Promise<GlipEventInfo> {
-    const r = await this.rc.post(this.path(false), glipEventCreate);
+    const r = await this.rc.post<GlipEventInfo>(
+      this.path(false),
+      glipEventCreate
+    );
     return r.data;
   }
 
@@ -56,7 +59,7 @@ class Events {
       throw new Error('eventId must be specified.');
     }
 
-    const r = await this.rc.get(this.path());
+    const r = await this.rc.get<GlipEventInfo>(this.path());
     return r.data;
   }
 
@@ -70,7 +73,7 @@ class Events {
       throw new Error('eventId must be specified.');
     }
 
-    const r = await this.rc.put(this.path(), glipEventCreate);
+    const r = await this.rc.put<GlipEventInfo>(this.path(), glipEventCreate);
     return r.data;
   }
 
@@ -84,7 +87,7 @@ class Events {
       throw new Error('eventId must be specified.');
     }
 
-    const r = await this.rc.delete(this.path());
+    const r = await this.rc.delete<string>(this.path());
     return r.data;
   }
 }

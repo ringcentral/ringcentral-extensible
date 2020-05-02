@@ -23,7 +23,7 @@ class BulkAssign {
   async post(
     bulkAssignAutomaticaLocationUpdatesUsers: BulkAssignAutomaticaLocationUpdatesUsers
   ): Promise<string> {
-    const r = await this.rc.post(
+    const r = await this.rc.post<string>(
       this.path(),
       bulkAssignAutomaticaLocationUpdatesUsers
     );

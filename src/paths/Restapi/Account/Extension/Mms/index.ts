@@ -28,9 +28,12 @@ class Mms {
     createMMSMessage: CreateMMSMessage
   ): Promise<GetMessageInfoResponse> {
     const formData = Utils.getFormData(createMMSMessage);
-    const r = await this.rc.post(this.path(), formData, undefined, {
-      headers: formData.getHeaders(),
-    });
+    const r = await this.rc.post<GetMessageInfoResponse>(
+      this.path(),
+      formData,
+      undefined,
+      {headers: formData.getHeaders()}
+    );
     return r.data;
   }
 }

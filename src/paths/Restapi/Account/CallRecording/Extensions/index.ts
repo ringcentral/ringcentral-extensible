@@ -21,7 +21,7 @@ class Extensions {
    * Http get /restapi/v1.0/account/{accountId}/call-recording/extensions
    */
   async get(): Promise<CallRecordingExtensions> {
-    const r = await this.rc.get(this.path());
+    const r = await this.rc.get<CallRecordingExtensions>(this.path());
     return r.data;
   }
 }

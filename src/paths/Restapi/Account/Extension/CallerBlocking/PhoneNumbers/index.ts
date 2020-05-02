@@ -34,7 +34,10 @@ class PhoneNumbers {
   async list(
     queryParams?: ListBlockedAllowedNumbersParameters
   ): Promise<BlockedAllowedPhoneNumbersList> {
-    const r = await this.rc.get(this.path(false), queryParams);
+    const r = await this.rc.get<BlockedAllowedPhoneNumbersList>(
+      this.path(false),
+      queryParams
+    );
     return r.data;
   }
 
@@ -46,7 +49,7 @@ class PhoneNumbers {
   async post(
     addBlockedAllowedPhoneNumber: AddBlockedAllowedPhoneNumber
   ): Promise<BlockedAllowedPhoneNumberInfo> {
-    const r = await this.rc.post(
+    const r = await this.rc.post<BlockedAllowedPhoneNumberInfo>(
       this.path(false),
       addBlockedAllowedPhoneNumber
     );
@@ -63,7 +66,7 @@ class PhoneNumbers {
       throw new Error('blockedNumberId must be specified.');
     }
 
-    const r = await this.rc.get(this.path());
+    const r = await this.rc.get<BlockedAllowedPhoneNumberInfo>(this.path());
     return r.data;
   }
 
@@ -77,7 +80,7 @@ class PhoneNumbers {
       throw new Error('blockedNumberId must be specified.');
     }
 
-    const r = await this.rc.delete(this.path());
+    const r = await this.rc.delete<string>(this.path());
     return r.data;
   }
 
@@ -93,7 +96,10 @@ class PhoneNumbers {
       throw new Error('blockedNumberId must be specified.');
     }
 
-    const r = await this.rc.put(this.path(), addBlockedAllowedPhoneNumber);
+    const r = await this.rc.put<BlockedAllowedPhoneNumberInfo>(
+      this.path(),
+      addBlockedAllowedPhoneNumber
+    );
     return r.data;
   }
 }

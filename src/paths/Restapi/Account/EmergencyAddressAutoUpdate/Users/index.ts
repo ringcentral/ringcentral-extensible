@@ -27,7 +27,10 @@ class Users {
   async get(
     queryParams?: ListAutomaticLocationUpdatesUsersParameters
   ): Promise<AutomaticLocationUpdatesUserList> {
-    const r = await this.rc.get(this.path(), queryParams);
+    const r = await this.rc.get<AutomaticLocationUpdatesUserList>(
+      this.path(),
+      queryParams
+    );
     return r.data;
   }
 

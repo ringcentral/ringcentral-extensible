@@ -31,7 +31,7 @@ class Tasks {
       throw new Error('taskId must be specified.');
     }
 
-    const r = await this.rc.get(this.path());
+    const r = await this.rc.get<AutomaticLocationUpdatesTaskInfo>(this.path());
     return r.data;
   }
 }

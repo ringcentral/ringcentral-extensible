@@ -33,7 +33,10 @@ class State {
   async list(
     queryParams?: ListStatesParameters
   ): Promise<GetStateListResponse> {
-    const r = await this.rc.get(this.path(false), queryParams);
+    const r = await this.rc.get<GetStateListResponse>(
+      this.path(false),
+      queryParams
+    );
     return r.data;
   }
 
@@ -47,7 +50,7 @@ class State {
       throw new Error('stateId must be specified.');
     }
 
-    const r = await this.rc.get(this.path());
+    const r = await this.rc.get<GetStateInfoResponse>(this.path());
     return r.data;
   }
 }

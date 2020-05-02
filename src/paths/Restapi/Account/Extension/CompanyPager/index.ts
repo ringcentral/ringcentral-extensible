@@ -26,7 +26,10 @@ class CompanyPager {
   async post(
     createInternalTextMessageRequest: CreateInternalTextMessageRequest
   ): Promise<GetMessageInfoResponse> {
-    const r = await this.rc.post(this.path(), createInternalTextMessageRequest);
+    const r = await this.rc.post<GetMessageInfoResponse>(
+      this.path(),
+      createInternalTextMessageRequest
+    );
     return r.data;
   }
 }

@@ -219,13 +219,13 @@ class ${R.last(routes)} {
       if (multipart) {
         code += `
     const formData = Utils.getFormData(${bodyParam})
-    const r = await this.rc.${operation.method}(this.path(${(!withParam && paramName) ? 'false' : ''}), formData, ${queryParams.length > 0 ? 'queryParams' : 'undefined'}, { headers: formData.getHeaders() })`
+    const r = await this.rc.${operation.method}<${responseType}>(this.path(${(!withParam && paramName) ? 'false' : ''}), formData, ${queryParams.length > 0 ? 'queryParams' : 'undefined'}, { headers: formData.getHeaders() })`
       } else if (responseType === 'Buffer') {
         code += `
-    const r = await this.rc.${operation.method}(this.path(${(!withParam && paramName) ? 'false' : ''})${bodyParam ? `, ${bodyParam}` : ''}, ${queryParams.length > 0 ? 'queryParams' : 'undefined'}, { responseType: 'arraybuffer' })`
+    const r = await this.rc.${operation.method}<${responseType}>(this.path(${(!withParam && paramName) ? 'false' : ''})${bodyParam ? `, ${bodyParam}` : ''}, ${queryParams.length > 0 ? 'queryParams' : 'undefined'}, { responseType: 'arraybuffer' })`
       } else {
         code += `
-    const r = await this.rc.${operation.method}(this.path(${(!withParam && paramName) ? 'false' : ''})${bodyParam ? `, ${bodyParam}` : ''}${queryParams.length > 0 ? ', queryParams' : ''})`
+    const r = await this.rc.${operation.method}<${responseType}>(this.path(${(!withParam && paramName) ? 'false' : ''})${bodyParam ? `, ${bodyParam}` : ''}${queryParams.length > 0 ? ', queryParams' : ''})`
       }
       code += `
     return r.data

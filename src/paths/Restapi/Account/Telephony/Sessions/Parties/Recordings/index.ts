@@ -31,7 +31,7 @@ class Recordings {
    * Http post /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/recordings
    */
   async post(): Promise<string> {
-    const r = await this.rc.post(this.path(false));
+    const r = await this.rc.post<string>(this.path(false));
     return r.data;
   }
 
@@ -48,7 +48,7 @@ class Recordings {
       throw new Error('recordingId must be specified.');
     }
 
-    const r = await this.rc.patch(
+    const r = await this.rc.patch<CallRecording>(
       this.path(),
       callRecordingUpdate,
       queryParams

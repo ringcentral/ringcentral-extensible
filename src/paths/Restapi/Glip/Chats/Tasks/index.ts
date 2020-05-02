@@ -26,7 +26,7 @@ class Tasks {
    * Http get /restapi/v1.0/glip/chats/{chatId}/tasks
    */
   async get(queryParams?: ListChatTasksParameters): Promise<GlipTaskList> {
-    const r = await this.rc.get(this.path(), queryParams);
+    const r = await this.rc.get<GlipTaskList>(this.path(), queryParams);
     return r.data;
   }
 
@@ -36,7 +36,7 @@ class Tasks {
    * Http post /restapi/v1.0/glip/chats/{chatId}/tasks
    */
   async post(glipCreateTask: GlipCreateTask): Promise<GlipTaskInfo> {
-    const r = await this.rc.post(this.path(), glipCreateTask);
+    const r = await this.rc.post<GlipTaskInfo>(this.path(), glipCreateTask);
     return r.data;
   }
 }

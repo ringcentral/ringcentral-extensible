@@ -26,7 +26,10 @@ class Check {
   async get(
     queryParams?: CheckUserPermissionParameters
   ): Promise<AuthProfileCheckResource> {
-    const r = await this.rc.get(this.path(), queryParams);
+    const r = await this.rc.get<AuthProfileCheckResource>(
+      this.path(),
+      queryParams
+    );
     return r.data;
   }
 }

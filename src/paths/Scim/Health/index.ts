@@ -20,7 +20,7 @@ class Health {
    * Http get /scim/v2/health
    */
   async get(): Promise<string> {
-    const r = await this.rc.get(this.path());
+    const r = await this.rc.get<string>(this.path());
     return r.data;
   }
 }

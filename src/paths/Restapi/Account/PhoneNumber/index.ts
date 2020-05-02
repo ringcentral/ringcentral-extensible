@@ -33,7 +33,10 @@ class PhoneNumber {
   async list(
     queryParams?: ListAccountPhoneNumbersParameters
   ): Promise<AccountPhoneNumbers> {
-    const r = await this.rc.get(this.path(false), queryParams);
+    const r = await this.rc.get<AccountPhoneNumbers>(
+      this.path(false),
+      queryParams
+    );
     return r.data;
   }
 
@@ -47,7 +50,7 @@ class PhoneNumber {
       throw new Error('phoneNumberId must be specified.');
     }
 
-    const r = await this.rc.get(this.path());
+    const r = await this.rc.get<CompanyPhoneNumberInfo>(this.path());
     return r.data;
   }
 }

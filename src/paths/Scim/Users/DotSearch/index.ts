@@ -21,7 +21,10 @@ class DotSearch {
    * Http post /scim/v2/Users/.search
    */
   async post(searchRequest: SearchRequest): Promise<UserSearchResponse> {
-    const r = await this.rc.post(this.path(), searchRequest);
+    const r = await this.rc.post<UserSearchResponse>(
+      this.path(),
+      searchRequest
+    );
     return r.data;
   }
 }

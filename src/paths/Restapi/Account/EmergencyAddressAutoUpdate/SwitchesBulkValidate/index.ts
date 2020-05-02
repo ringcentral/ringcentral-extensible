@@ -26,7 +26,10 @@ class SwitchesBulkValidate {
   async post(
     validateMultipleSwitchesRequest: ValidateMultipleSwitchesRequest
   ): Promise<ValidateMultipleSwitchesResponse> {
-    const r = await this.rc.post(this.path(), validateMultipleSwitchesRequest);
+    const r = await this.rc.post<ValidateMultipleSwitchesResponse>(
+      this.path(),
+      validateMultipleSwitchesRequest
+    );
     return r.data;
   }
 }

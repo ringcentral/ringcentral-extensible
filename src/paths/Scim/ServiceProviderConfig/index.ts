@@ -20,7 +20,7 @@ class ServiceProviderConfig {
    * Http get /scim/v2/ServiceProviderConfig
    */
   async get(): Promise<ServiceProviderConfig> {
-    const r = await this.rc.get(this.path());
+    const r = await this.rc.get<ServiceProviderConfig>(this.path());
     return r.data;
   }
 }

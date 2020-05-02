@@ -32,7 +32,10 @@ class RingOut {
   async post(
     makeRingOutRequest: MakeRingOutRequest
   ): Promise<GetRingOutStatusResponse> {
-    const r = await this.rc.post(this.path(false), makeRingOutRequest);
+    const r = await this.rc.post<GetRingOutStatusResponse>(
+      this.path(false),
+      makeRingOutRequest
+    );
     return r.data;
   }
 
@@ -46,7 +49,7 @@ class RingOut {
       throw new Error('ringoutId must be specified.');
     }
 
-    const r = await this.rc.get(this.path());
+    const r = await this.rc.get<GetRingOutStatusResponse>(this.path());
     return r.data;
   }
 
@@ -60,7 +63,7 @@ class RingOut {
       throw new Error('ringoutId must be specified.');
     }
 
-    const r = await this.rc.delete(this.path());
+    const r = await this.rc.delete<string>(this.path());
     return r.data;
   }
 }

@@ -37,7 +37,10 @@ class Users {
   async list(
     queryParams?: SearchViaGet2Parameters
   ): Promise<UserSearchResponse> {
-    const r = await this.rc.get(this.path(false), queryParams);
+    const r = await this.rc.get<UserSearchResponse>(
+      this.path(false),
+      queryParams
+    );
     return r.data;
   }
 
@@ -47,7 +50,7 @@ class Users {
    * Http post /scim/v2/Users
    */
   async post(createUser: CreateUser): Promise<UserResponse> {
-    const r = await this.rc.post(this.path(false), createUser);
+    const r = await this.rc.post<UserResponse>(this.path(false), createUser);
     return r.data;
   }
 
@@ -61,7 +64,7 @@ class Users {
       throw new Error('id must be specified.');
     }
 
-    const r = await this.rc.get(this.path());
+    const r = await this.rc.get<UserResponse>(this.path());
     return r.data;
   }
 
@@ -75,7 +78,7 @@ class Users {
       throw new Error('id must be specified.');
     }
 
-    const r = await this.rc.put(this.path(), user);
+    const r = await this.rc.put<UserResponse>(this.path(), user);
     return r.data;
   }
 
@@ -89,7 +92,7 @@ class Users {
       throw new Error('id must be specified.');
     }
 
-    const r = await this.rc.delete(this.path());
+    const r = await this.rc.delete<string>(this.path());
     return r.data;
   }
 
@@ -103,7 +106,7 @@ class Users {
       throw new Error('id must be specified.');
     }
 
-    const r = await this.rc.patch(this.path(), userPatch);
+    const r = await this.rc.patch<UserResponse>(this.path(), userPatch);
     return r.data;
   }
 

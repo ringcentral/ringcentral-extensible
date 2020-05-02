@@ -35,7 +35,10 @@ class WirelessPoints {
   async list(
     queryParams?: ListWirelessPointsParameters
   ): Promise<WirelessPointsList> {
-    const r = await this.rc.get(this.path(false), queryParams);
+    const r = await this.rc.get<WirelessPointsList>(
+      this.path(false),
+      queryParams
+    );
     return r.data;
   }
 
@@ -47,7 +50,10 @@ class WirelessPoints {
   async post(
     createWirelessPoint: CreateWirelessPoint
   ): Promise<WirelessPointInfo> {
-    const r = await this.rc.post(this.path(false), createWirelessPoint);
+    const r = await this.rc.post<WirelessPointInfo>(
+      this.path(false),
+      createWirelessPoint
+    );
     return r.data;
   }
 
@@ -61,7 +67,7 @@ class WirelessPoints {
       throw new Error('pointId must be specified.');
     }
 
-    const r = await this.rc.get(this.path());
+    const r = await this.rc.get<WirelessPointInfo>(this.path());
     return r.data;
   }
 
@@ -77,7 +83,10 @@ class WirelessPoints {
       throw new Error('pointId must be specified.');
     }
 
-    const r = await this.rc.put(this.path(), updateWirelessPoint);
+    const r = await this.rc.put<WirelessPointInfo>(
+      this.path(),
+      updateWirelessPoint
+    );
     return r.data;
   }
 
@@ -91,7 +100,7 @@ class WirelessPoints {
       throw new Error('pointId must be specified.');
     }
 
-    const r = await this.rc.delete(this.path());
+    const r = await this.rc.delete<string>(this.path());
     return r.data;
   }
 }

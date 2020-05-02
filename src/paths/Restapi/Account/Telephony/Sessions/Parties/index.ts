@@ -44,7 +44,7 @@ class Parties {
       throw new Error('partyId must be specified.');
     }
 
-    const r = await this.rc.get(this.path());
+    const r = await this.rc.get<CallParty>(this.path());
     return r.data;
   }
 
@@ -58,7 +58,7 @@ class Parties {
       throw new Error('partyId must be specified.');
     }
 
-    const r = await this.rc.patch(this.path(), partyUpdateRequest);
+    const r = await this.rc.patch<CallParty>(this.path(), partyUpdateRequest);
     return r.data;
   }
 

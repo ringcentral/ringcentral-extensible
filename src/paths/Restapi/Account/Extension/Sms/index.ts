@@ -26,7 +26,10 @@ class Sms {
   async post(
     createSMSMessage: CreateSMSMessage
   ): Promise<GetMessageInfoResponse> {
-    const r = await this.rc.post(this.path(), createSMSMessage);
+    const r = await this.rc.post<GetMessageInfoResponse>(
+      this.path(),
+      createSMSMessage
+    );
     return r.data;
   }
 }

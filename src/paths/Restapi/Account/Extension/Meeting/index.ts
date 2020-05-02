@@ -33,7 +33,7 @@ class Meeting {
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting
    */
   async list(): Promise<MeetingsResource> {
-    const r = await this.rc.get(this.path(false));
+    const r = await this.rc.get<MeetingsResource>(this.path(false));
     return r.data;
   }
 
@@ -45,7 +45,10 @@ class Meeting {
   async post(
     meetingRequestResource: MeetingRequestResource
   ): Promise<MeetingResponseResource> {
-    const r = await this.rc.post(this.path(false), meetingRequestResource);
+    const r = await this.rc.post<MeetingResponseResource>(
+      this.path(false),
+      meetingRequestResource
+    );
     return r.data;
   }
 
@@ -59,7 +62,7 @@ class Meeting {
       throw new Error('meetingId must be specified.');
     }
 
-    const r = await this.rc.get(this.path());
+    const r = await this.rc.get<MeetingResponseResource>(this.path());
     return r.data;
   }
 
@@ -75,7 +78,10 @@ class Meeting {
       throw new Error('meetingId must be specified.');
     }
 
-    const r = await this.rc.put(this.path(), meetingRequestResource);
+    const r = await this.rc.put<MeetingResponseResource>(
+      this.path(),
+      meetingRequestResource
+    );
     return r.data;
   }
 
@@ -89,7 +95,7 @@ class Meeting {
       throw new Error('meetingId must be specified.');
     }
 
-    const r = await this.rc.delete(this.path());
+    const r = await this.rc.delete<string>(this.path());
     return r.data;
   }
 

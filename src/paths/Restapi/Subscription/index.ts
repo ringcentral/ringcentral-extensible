@@ -34,7 +34,9 @@ class Subscription {
    * Http get /restapi/v1.0/subscription
    */
   async list(): Promise<RecordsCollectionResourceSubscriptionResponse> {
-    const r = await this.rc.get(this.path(false));
+    const r = await this.rc.get<RecordsCollectionResourceSubscriptionResponse>(
+      this.path(false)
+    );
     return r.data;
   }
 
@@ -46,7 +48,10 @@ class Subscription {
   async post(
     createSubscriptionRequest: CreateSubscriptionRequest
   ): Promise<SubscriptionInfo> {
-    const r = await this.rc.post(this.path(false), createSubscriptionRequest);
+    const r = await this.rc.post<SubscriptionInfo>(
+      this.path(false),
+      createSubscriptionRequest
+    );
     return r.data;
   }
 
@@ -60,7 +65,7 @@ class Subscription {
       throw new Error('subscriptionId must be specified.');
     }
 
-    const r = await this.rc.get(this.path());
+    const r = await this.rc.get<SubscriptionInfo>(this.path());
     return r.data;
   }
 
@@ -77,7 +82,7 @@ class Subscription {
       throw new Error('subscriptionId must be specified.');
     }
 
-    const r = await this.rc.put(
+    const r = await this.rc.put<SubscriptionInfo>(
       this.path(),
       modifySubscriptionRequest,
       queryParams
@@ -95,7 +100,7 @@ class Subscription {
       throw new Error('subscriptionId must be specified.');
     }
 
-    const r = await this.rc.delete(this.path());
+    const r = await this.rc.delete<string>(this.path());
     return r.data;
   }
 

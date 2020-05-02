@@ -26,7 +26,7 @@ class Members {
   async get(
     queryParams?: ListCallQueueMembersParameters
   ): Promise<CallQueueMembers> {
-    const r = await this.rc.get(this.path(), queryParams);
+    const r = await this.rc.get<CallQueueMembers>(this.path(), queryParams);
     return r.data;
   }
 }

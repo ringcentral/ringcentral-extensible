@@ -25,7 +25,7 @@ class CallerBlocking {
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking
    */
   async get(): Promise<CallerBlockingSettings> {
-    const r = await this.rc.get(this.path());
+    const r = await this.rc.get<CallerBlockingSettings>(this.path());
     return r.data;
   }
 
@@ -37,7 +37,10 @@ class CallerBlocking {
   async put(
     callerBlockingSettingsUpdate: CallerBlockingSettingsUpdate
   ): Promise<CallerBlockingSettings> {
-    const r = await this.rc.put(this.path(), callerBlockingSettingsUpdate);
+    const r = await this.rc.put<CallerBlockingSettings>(
+      this.path(),
+      callerBlockingSettingsUpdate
+    );
     return r.data;
   }
 

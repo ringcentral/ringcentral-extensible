@@ -21,7 +21,7 @@ class CallQueues {
    * Http put /restapi/v1.0/account/{accountId}/extension/{extensionId}/call-queues
    */
   async put(userCallQueues: UserCallQueues): Promise<UserCallQueues> {
-    const r = await this.rc.put(this.path(), userCallQueues);
+    const r = await this.rc.put<UserCallQueues>(this.path(), userCallQueues);
     return r.data;
   }
 }

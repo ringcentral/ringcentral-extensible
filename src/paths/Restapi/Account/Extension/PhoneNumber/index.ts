@@ -26,7 +26,10 @@ class PhoneNumber {
   async get(
     queryParams?: ListExtensionPhoneNumbersParameters
   ): Promise<GetExtensionPhoneNumbersResponse> {
-    const r = await this.rc.get(this.path(), queryParams);
+    const r = await this.rc.get<GetExtensionPhoneNumbersResponse>(
+      this.path(),
+      queryParams
+    );
     return r.data;
   }
 }

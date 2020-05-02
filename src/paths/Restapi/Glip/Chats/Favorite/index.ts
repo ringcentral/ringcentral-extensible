@@ -20,7 +20,7 @@ class Favorite {
    * Http post /restapi/v1.0/glip/chats/{chatId}/favorite
    */
   async post(): Promise<string> {
-    const r = await this.rc.post(this.path());
+    const r = await this.rc.post<string>(this.path());
     return r.data;
   }
 }

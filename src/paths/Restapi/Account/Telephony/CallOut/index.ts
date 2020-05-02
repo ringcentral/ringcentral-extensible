@@ -21,7 +21,7 @@ class CallOut {
    * Http post /restapi/v1.0/account/{accountId}/telephony/call-out
    */
   async post(makeCallOutRequest: MakeCallOutRequest): Promise<CallSession> {
-    const r = await this.rc.post(this.path(), makeCallOutRequest);
+    const r = await this.rc.post<CallSession>(this.path(), makeCallOutRequest);
     return r.data;
   }
 }

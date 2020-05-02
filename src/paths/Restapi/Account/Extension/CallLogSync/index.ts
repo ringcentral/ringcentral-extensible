@@ -21,7 +21,7 @@ class CallLogSync {
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log-sync
    */
   async get(queryParams?: SyncUserCallLogParameters): Promise<CallLogSync> {
-    const r = await this.rc.get(this.path(), queryParams);
+    const r = await this.rc.get<CallLogSync>(this.path(), queryParams);
     return r.data;
   }
 }

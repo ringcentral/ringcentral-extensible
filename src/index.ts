@@ -54,34 +54,34 @@ class RestClient {
     this.clientId = options.clientId;
     this.clientSecret = options.clientSecret;
     this.server = options.server;
-    this.appName = options.appName ? options.appName : 'Unknown';
-    this.appVersion = options.appVersion ? options.appVersion : '0.0.1';
-    this.httpClient = options.httpClient
-      ? options.httpClient
-      : axios.create({
-          baseURL: this.server,
-          headers: {
-            'X-User-Agent': `${this.appName}/${this.appVersion} tylerlong/ringcentral-typescript/${version}`,
-          },
-          validateStatus: () => {
-            return true;
-          },
-          paramsSerializer: params => {
-            return qs.stringify(params, {indices: false});
-          },
-        });
+    this.appName = options.appName ?? 'Unknown';
+    this.appVersion = options.appVersion ?? '0.0.1';
+    this.httpClient =
+      options.httpClient ??
+      axios.create({
+        baseURL: this.server,
+        headers: {
+          'X-User-Agent': `${this.appName}/${this.appVersion} tylerlong/ringcentral-typescript/${version}`,
+        },
+        validateStatus: () => {
+          return true;
+        },
+        paramsSerializer: params => {
+          return qs.stringify(params, {indices: false});
+        },
+      });
     this.token = options.token;
     this.handleRateLimit = options.handleRateLimit ?? false;
     this.debugMode = options.debugMode ?? false;
   }
 
-  async request(
+  async request<T>(
     httpMethod: Method,
     endpoint: string,
     content?: {},
     queryParams?: {},
     config?: {}
-  ): Promise<AxiosResponse<any>> {
+  ): Promise<AxiosResponse<T>> {
     const _config: AxiosRequestConfig = {
       method: httpMethod,
       url: endpoint,
@@ -103,7 +103,7 @@ class RestClient {
         Authorization: `Bearer ${this.token?.access_token}`,
       };
     }
-    const r = await this.httpClient.request(_config);
+    const r = await this.httpClient.request<T>(_config);
 
     if (this.debugMode === true) {
       console.debug(new RestTraffic(r).toString());
@@ -112,9 +112,7 @@ class RestClient {
     if (r.status >= 200 && r.status < 300) {
       return r;
     } else if (r.status === 429 && this.handleRateLimit) {
-      let delayTime = r.headers['x-rate-limit-window']
-        ? r.headers['x-rate-limit-window']
-        : 60;
+      let delayTime = r.headers['x-rate-limit-window'] ?? 60;
       if (typeof this.handleRateLimit === 'number') {
         delayTime = this.handleRateLimit;
       }
@@ -123,48 +121,54 @@ class RestClient {
         `Hit RingCentral Rate Limit. Pausing requests for ${delayTime} seconds.`
       );
       await delay(delayTime * 1000);
-      return this.request(httpMethod, endpoint, content, queryParams, config);
+      return this.request<T>(
+        httpMethod,
+        endpoint,
+        content,
+        queryParams,
+        config
+      );
     } else {
       throw new RestException(r);
     }
   }
-  async get(
+  async get<T>(
     endpoint: string,
     queryParams?: {},
     config?: {}
-  ): Promise<AxiosResponse<any>> {
-    return this.request('GET', endpoint, undefined, queryParams, config);
+  ): Promise<AxiosResponse<T>> {
+    return this.request<T>('GET', endpoint, undefined, queryParams, config);
   }
-  async delete(
+  async delete<T>(
     endpoint: string,
     queryParams?: {},
     config?: {}
-  ): Promise<AxiosResponse<any>> {
-    return this.request('DELETE', endpoint, undefined, queryParams, config);
+  ): Promise<AxiosResponse<T>> {
+    return this.request<T>('DELETE', endpoint, undefined, queryParams, config);
   }
-  async post(
+  async post<T>(
     endpoint: string,
     content?: {},
     queryParams?: {},
     config?: {}
-  ): Promise<AxiosResponse<any>> {
-    return this.request('POST', endpoint, content, queryParams, config);
+  ): Promise<AxiosResponse<T>> {
+    return this.request<T>('POST', endpoint, content, queryParams, config);
   }
-  async put(
+  async put<T>(
     endpoint: string,
     content: {},
     queryParams?: {},
     config?: {}
-  ): Promise<AxiosResponse<any>> {
-    return this.request('PUT', endpoint, content, queryParams, config);
+  ): Promise<AxiosResponse<T>> {
+    return this.request<T>('PUT', endpoint, content, queryParams, config);
   }
-  async patch(
+  async patch<T>(
     endpoint: string,
     content: {},
     queryParams?: {},
     config?: {}
-  ): Promise<AxiosResponse<any>> {
-    return this.request('PATCH', endpoint, content, queryParams, config);
+  ): Promise<AxiosResponse<T>> {
+    return this.request<T>('PATCH', endpoint, content, queryParams, config);
   }
 
   async getToken(getTokenRequest: GetTokenRequest): Promise<TokenInfo> {

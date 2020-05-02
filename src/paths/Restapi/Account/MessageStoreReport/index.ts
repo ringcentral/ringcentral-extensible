@@ -30,7 +30,7 @@ class MessageStoreReport {
   async post(
     createMessageStoreReportRequest: CreateMessageStoreReportRequest
   ): Promise<MessageStoreReport> {
-    const r = await this.rc.post(
+    const r = await this.rc.post<MessageStoreReport>(
       this.path(false),
       createMessageStoreReportRequest
     );
@@ -47,7 +47,7 @@ class MessageStoreReport {
       throw new Error('taskId must be specified.');
     }
 
-    const r = await this.rc.get(this.path());
+    const r = await this.rc.get<MessageStoreReport>(this.path());
     return r.data;
   }
 

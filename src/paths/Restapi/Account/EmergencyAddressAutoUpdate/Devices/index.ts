@@ -27,7 +27,10 @@ class Devices {
   async get(
     queryParams?: ListDevicesAutomaticLocationUpdatesParameters
   ): Promise<ListDevicesAutomaticLocationUpdates> {
-    const r = await this.rc.get(this.path(), queryParams);
+    const r = await this.rc.get<ListDevicesAutomaticLocationUpdates>(
+      this.path(),
+      queryParams
+    );
     return r.data;
   }
 

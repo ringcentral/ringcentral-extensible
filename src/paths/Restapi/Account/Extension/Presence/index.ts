@@ -28,7 +28,7 @@ class Presence {
   async get(
     queryParams?: ReadUserPresenceStatusParameters
   ): Promise<GetPresenceInfo> {
-    const r = await this.rc.get(this.path(), queryParams);
+    const r = await this.rc.get<GetPresenceInfo>(this.path(), queryParams);
     return r.data;
   }
 
@@ -40,7 +40,10 @@ class Presence {
   async put(
     presenceInfoResource: PresenceInfoResource
   ): Promise<PresenceInfoResponse> {
-    const r = await this.rc.put(this.path(), presenceInfoResource);
+    const r = await this.rc.put<PresenceInfoResponse>(
+      this.path(),
+      presenceInfoResource
+    );
     return r.data;
   }
 }

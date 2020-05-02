@@ -26,7 +26,10 @@ class FaxCoverPage {
   async get(
     queryParams?: ListFaxCoverPagesParameters
   ): Promise<ListFaxCoverPagesResponse> {
-    const r = await this.rc.get(this.path(), queryParams);
+    const r = await this.rc.get<ListFaxCoverPagesResponse>(
+      this.path(),
+      queryParams
+    );
     return r.data;
   }
 }

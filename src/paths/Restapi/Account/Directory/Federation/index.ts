@@ -21,7 +21,7 @@ class Federation {
    * Http get /restapi/v1.0/account/{accountId}/directory/federation
    */
   async get(): Promise<FederationResource> {
-    const r = await this.rc.get(this.path());
+    const r = await this.rc.get<FederationResource>(this.path());
     return r.data;
   }
 }

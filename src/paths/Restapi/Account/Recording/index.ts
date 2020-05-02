@@ -32,7 +32,7 @@ class Recording {
       throw new Error('recordingId must be specified.');
     }
 
-    const r = await this.rc.get(this.path());
+    const r = await this.rc.get<GetCallRecordingResponse>(this.path());
     return r.data;
   }
 

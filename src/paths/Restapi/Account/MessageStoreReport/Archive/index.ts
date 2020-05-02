@@ -27,7 +27,7 @@ class Archive {
    * Http get /restapi/v1.0/account/{accountId}/message-store-report/{taskId}/archive
    */
   async list(): Promise<MessageStoreReportArchive> {
-    const r = await this.rc.get(this.path(false));
+    const r = await this.rc.get<MessageStoreReportArchive>(this.path(false));
     return r.data;
   }
 
@@ -41,7 +41,7 @@ class Archive {
       throw new Error('archiveId must be specified.');
     }
 
-    const r = await this.rc.get(this.path());
+    const r = await this.rc.get<string>(this.path());
     return r.data;
   }
 }

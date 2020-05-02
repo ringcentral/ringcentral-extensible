@@ -21,7 +21,7 @@ class Complete {
    * Http post /restapi/v1.0/glip/tasks/{taskId}/complete
    */
   async post(glipCompleteTask: GlipCompleteTask): Promise<string> {
-    const r = await this.rc.post(this.path(), glipCompleteTask);
+    const r = await this.rc.post<string>(this.path(), glipCompleteTask);
     return r.data;
   }
 }
