@@ -27,6 +27,7 @@
     "change-case": "^4.1.1",
     "dotenv-override-true": "^6.2.0",
     "gts": "^2.0.0",
+    "husky": "^4.2.5",
     "jest": "^25.5.2",
     "lower-case-first": "^2.0.1",
     "ramda": "^0.27.0",
@@ -34,5 +35,11 @@
     "ts-jest": "^25.4.0",
     "typescript": "^3.8.3",
     "yarn-upgrade-all": "^0.5.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "gts fix",
+      "pre-push": "gts fix && yarn test"
+    }
   }
 }
