@@ -12,7 +12,7 @@ import RestException from './RestException';
 import Restapi from './paths/Restapi';
 import Scim from './paths/Scim';
 import {version} from '../package.json';
-import {RestTraffic} from './Utils';
+import Utils from './Utils';
 
 interface ConstructorOptions {
   clientId: string;
@@ -106,7 +106,7 @@ class RestClient {
     const r = await this.httpClient.request<T>(_config);
 
     if (this.debugMode === true) {
-      console.debug(new RestTraffic(r).toString());
+      console.debug(Utils.formatTraffic(r));
     }
 
     if (r.status >= 200 && r.status < 300) {

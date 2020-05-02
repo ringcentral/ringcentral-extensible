@@ -1,18 +1,15 @@
 import {AxiosResponse} from 'axios';
 
-import {RestRequest, RestResponse, RestTraffic} from './Utils';
+import Utils from './Utils';
 
 class RestException extends Error {
-  response: RestResponse;
-  request: RestRequest;
+  response: AxiosResponse;
   message: string;
   constructor(r: AxiosResponse) {
-    const traffic = new RestTraffic(r);
-    const message = traffic.toString();
+    const message = Utils.formatTraffic(r);
     super(message);
     Object.setPrototypeOf(this, RestException.prototype);
-    this.response = traffic.response;
-    this.request = traffic.request;
+    this.response = r;
     this.message = message;
   }
 }
