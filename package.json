@@ -1,6 +1,6 @@
 {
   "name": "ringcentral-typescript",
-  "version": "0.9.0",
+  "version": "0.10.0",
   "description": "RingCentral TypeScript SDK",
   "main": "build/index.js",
   "types": "build/index.d.ts",
@@ -12,7 +12,7 @@
     "definitions": "rm -rf ./src/definitions/* && node ./code-generator/definitions.js",
     "paths": "rm -rf ./src/paths/* && node ./code-generator/paths.js",
     "generate": "yarn definitions && yarn paths && gts fix",
-    "prepublishOnly": "standard && rm -rf build && tsc && rm build/package.json && mv build/src/* build/ && rmdir build/src && gts fix && yarn test"
+    "prepublishOnly": "rm -rf build && tsc && rm build/package.json && mv build/src/* build/ && rmdir build/src && gts fix && yarn test"
   },
   "dependencies": {
     "axios": "^0.19.2",
@@ -31,7 +31,6 @@
     "jest": "^25.5.2",
     "lower-case-first": "^2.0.1",
     "ramda": "^0.27.0",
-    "standard": "^14.3.3",
     "ts-jest": "^25.4.0",
     "typescript": "^3.8.3",
     "yarn-upgrade-all": "^0.5.2"

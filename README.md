@@ -113,6 +113,7 @@ yarn test
 ### Todo
 
 - no more `any` type and `{}` type
+- convert code generator to TS
 - compare it with C# sdk and see what are missing
 - Create a WSG version of this SDK
 - Replace axios with @ringcentral/sdk ?
