@@ -12,16 +12,8 @@ App Permission|`N/A`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi().list()
 await rc.revoke()
 ```
@@ -42,16 +34,8 @@ App Permission|`N/A`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi().oauth().revoke().post(revokeTokenRequest)
 await rc.revoke()
 ```
@@ -72,16 +56,8 @@ App Permission|`N/A`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi().oauth().token().post(getTokenRequest)
 await rc.revoke()
 ```
@@ -102,16 +78,8 @@ App Permission|`N/A`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).get()
 await rc.revoke()
 ```
@@ -133,16 +101,8 @@ App Permission|`ReadAccounts`
 User Permission|`ReadCompanyInfo`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).get()
 await rc.revoke()
 ```
@@ -165,16 +125,8 @@ App Permission|`ReadCallLog`
 User Permission|`ReadCallLog`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).activeCalls().get(listCompanyActiveCallsParameters)
 await rc.revoke()
 ```
@@ -197,16 +149,8 @@ App Permission|`EditAccounts`
 User Permission|`EditCompanyAnsweringRules`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).answeringRule().post(companyAnsweringRuleRequest)
 await rc.revoke()
 ```
@@ -229,16 +173,8 @@ App Permission|`ReadAccounts`
 User Permission|`ReadCompanyAnsweringRules`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).answeringRule().list(listCompanyAnsweringRulesParameters)
 await rc.revoke()
 ```
@@ -261,16 +197,8 @@ App Permission|`ReadAccounts`
 User Permission|`ReadCompanyAnsweringRules`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).answeringRule(ruleId).get()
 await rc.revoke()
 ```
@@ -293,16 +221,8 @@ App Permission|`EditAccounts`
 User Permission|`EditCompanyAnsweringRules`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).answeringRule(ruleId).put(companyAnsweringRuleUpdate)
 await rc.revoke()
 ```
@@ -325,16 +245,8 @@ App Permission|`EditAccounts`
 User Permission|`EditCompanyAnsweringRules`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).answeringRule(ruleId).delete()
 await rc.revoke()
 ```
@@ -357,16 +269,8 @@ App Permission|`ReadAccounts`
 User Permission|`ReadCompanyInfo`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).businessAddress().get()
 await rc.revoke()
 ```
@@ -389,16 +293,8 @@ App Permission|`EditAccounts`
 User Permission|`EditCompanyInfo`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).businessAddress().put(modifyAccountBusinessAddressRequest)
 await rc.revoke()
 ```
@@ -421,16 +317,8 @@ App Permission|`ReadAccounts`
 User Permission|`ReadUserAnsweringRules`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).businessHours().get()
 await rc.revoke()
 ```
@@ -453,16 +341,8 @@ App Permission|`EditExtensions`
 User Permission|`EditUserAnsweringRules`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).businessHours().put(companyBusinessHoursUpdateRequest)
 await rc.revoke()
 ```
@@ -485,16 +365,8 @@ App Permission|`ReadCallLog`
 User Permission|`FullCompanyCallLog`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).callLog().list(readCompanyCallLogParameters)
 await rc.revoke()
 ```
@@ -517,16 +389,8 @@ App Permission|`ReadCallLog`
 User Permission|`ReadCallLog`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).callLogSync().get(syncAccountCallLogParameters)
 await rc.revoke()
 ```
@@ -549,16 +413,8 @@ App Permission|`ReadCallLog`
 User Permission|`FullCompanyCallLog`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).callLog(callRecordId).get(readCompanyCallRecordParameters)
 await rc.revoke()
 ```
@@ -581,16 +437,8 @@ App Permission|`EditExtensions`
 User Permission|`Groups`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).callMonitoringGroups().post(createCallMonitoringGroupRequest)
 await rc.revoke()
 ```
@@ -613,16 +461,8 @@ App Permission|`ReadAccounts`
 User Permission|`ReadExtensions`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).callMonitoringGroups().get(listCallMonitoringGroupsParameters)
 await rc.revoke()
 ```
@@ -645,16 +485,8 @@ App Permission|`EditExtensions`
 User Permission|`Groups`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).callMonitoringGroups(groupId).put(createCallMonitoringGroupRequest)
 await rc.revoke()
 ```
@@ -677,16 +509,8 @@ App Permission|`EditExtensions`
 User Permission|`Groups`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).callMonitoringGroups(groupId).delete()
 await rc.revoke()
 ```
@@ -709,16 +533,8 @@ App Permission|`EditExtensions`
 User Permission|`Groups`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).callMonitoringGroups(groupId).bulkAssign().post(callMonitoringBulkAssign)
 await rc.revoke()
 ```
@@ -741,16 +557,8 @@ App Permission|`ReadAccounts`
 User Permission|`ReadExtensions`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).callMonitoringGroups(groupId).members().get(listCallMonitoringGroupMembersParameters)
 await rc.revoke()
 ```
@@ -773,16 +581,8 @@ App Permission|`ReadAccounts`
 User Permission|`ReadExtensions`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).callQueues().get(listCallQueuesParameters)
 await rc.revoke()
 ```
@@ -805,16 +605,8 @@ App Permission|`EditExtensions`
 User Permission|`Groups`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).callQueues(groupId).bulkAssign().post(callQueueBulkAssignResource)
 await rc.revoke()
 ```
@@ -837,16 +629,8 @@ App Permission|`ReadAccounts`
 User Permission|`ReadExtensions`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).callQueues(groupId).members().get(listCallQueueMembersParameters)
 await rc.revoke()
 ```
@@ -869,16 +653,8 @@ App Permission|`ReadAccounts`
 User Permission|`ReadCompanyInfo`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).callRecording().get()
 await rc.revoke()
 ```
@@ -901,16 +677,8 @@ App Permission|`EditAccounts`
 User Permission|`EditCompanyInfo`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).callRecording().put(callRecordingSettingsResource)
 await rc.revoke()
 ```
@@ -933,16 +701,8 @@ App Permission|`ReadAccounts`
 User Permission|`ReadCompanyInfo`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).callRecording().bulkAssign().post(bulkAccountCallRecordingsResource)
 await rc.revoke()
 ```
@@ -965,16 +725,8 @@ App Permission|`ReadAccounts`
 User Permission|`ReadCompanyInfo`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).callRecording().customGreetings().get(listCallRecordingCustomGreetingsParameters)
 await rc.revoke()
 ```
@@ -997,16 +749,8 @@ App Permission|`EditAccounts`
 User Permission|`EditCompanyInfo`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).callRecording().customGreetings(greetingId).delete()
 await rc.revoke()
 ```
@@ -1029,16 +773,8 @@ App Permission|`ReadAccounts`
 User Permission|`ReadCompanyInfo`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).callRecording().extensions().get()
 await rc.revoke()
 ```
@@ -1061,16 +797,8 @@ App Permission|`EditAccounts`
 User Permission|`Users`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).customFields().post(customFieldCreateRequest)
 await rc.revoke()
 ```
@@ -1093,16 +821,8 @@ App Permission|`ReadAccounts`
 User Permission|`ReadUserInfo`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).customFields().get()
 await rc.revoke()
 ```
@@ -1125,16 +845,8 @@ App Permission|`EditAccounts`
 User Permission|`Users`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).customFields(fieldId).put(customFieldUpdateRequest)
 await rc.revoke()
 ```
@@ -1157,16 +869,8 @@ App Permission|`EditAccounts`
 User Permission|`Users`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).customFields(fieldId).delete()
 await rc.revoke()
 ```
@@ -1189,16 +893,8 @@ App Permission|`EditAccounts`
 User Permission|`UserGroups`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).department().bulkAssign().post(departmentBulkAssignResource)
 await rc.revoke()
 ```
@@ -1221,16 +917,8 @@ App Permission|`ReadAccounts`
 User Permission|`ReadExtensions`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).department(departmentId).members().get(listDepartmentMembersParameters)
 await rc.revoke()
 ```
@@ -1253,16 +941,8 @@ App Permission|`ReadAccounts`
 User Permission|`ReadCompanyDevices`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).device(deviceId).get(readDeviceParameters)
 await rc.revoke()
 ```
@@ -1285,16 +965,8 @@ App Permission|`EditAccounts`
 User Permission|`EditCompanyDevices`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).device(deviceId).put(accountDeviceUpdate, updateDeviceParameters)
 await rc.revoke()
 ```
@@ -1318,16 +990,8 @@ App Permission|`ReadAccounts`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).directory().entries().list(listDirectoryEntriesParameters)
 await rc.revoke()
 ```
@@ -1350,16 +1014,8 @@ App Permission|`ReadAccounts`
 User Permission|`ReadExtensions`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).directory().entries().search().post(searchDirectoryEntriesRequest)
 await rc.revoke()
 ```
@@ -1382,16 +1038,8 @@ App Permission|`ReadAccounts`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).directory().entries(entryId).get()
 await rc.revoke()
 ```
@@ -1414,16 +1062,8 @@ App Permission|`ReadAccounts`
 User Permission|`ReadCompanyInfo`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).directory().federation().get()
 await rc.revoke()
 ```
@@ -1446,16 +1086,8 @@ App Permission|`EditAccounts`
 User Permission|`ConfigureEmergencyMaps`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().devices().get(listDevicesAutomaticLocationUpdatesParameters)
 await rc.revoke()
 ```
@@ -1478,16 +1110,8 @@ App Permission|`EditAccounts`
 User Permission|`ConfigureEmergencyMaps`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().devices().bulkAssign().post(assignMultipleDevicesAutomaticLocationUpdates)
 await rc.revoke()
 ```
@@ -1510,16 +1134,8 @@ App Permission|`EditAccounts`
 User Permission|`ConfigureEmergencyMaps`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().networks().list()
 await rc.revoke()
 ```
@@ -1542,16 +1158,8 @@ App Permission|`EditAccounts`
 User Permission|`ConfigureEmergencyMaps`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().networks().post(createNetworkRequest)
 await rc.revoke()
 ```
@@ -1574,16 +1182,8 @@ App Permission|`EditAccounts`
 User Permission|`ConfigureEmergencyMaps`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().networks(networkId).get()
 await rc.revoke()
 ```
@@ -1606,16 +1206,8 @@ App Permission|`EditAccounts`
 User Permission|`ConfigureEmergencyMaps`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().networks(networkId).put(updateNetworkRequest)
 await rc.revoke()
 ```
@@ -1638,16 +1230,8 @@ App Permission|`EditAccounts`
 User Permission|`ConfigureEmergencyMaps`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().networks(networkId).delete()
 await rc.revoke()
 ```
@@ -1670,16 +1254,8 @@ App Permission|`EditAccounts`
 User Permission|`ConfigureEmergencyMaps`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().switches().list(listAccountSwitchesParameters)
 await rc.revoke()
 ```
@@ -1702,16 +1278,8 @@ App Permission|`EditAccounts`
 User Permission|`ConfigureEmergencyMaps`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().switches().post(createSwitchInfo)
 await rc.revoke()
 ```
@@ -1734,16 +1302,8 @@ App Permission|`EditAccounts`
 User Permission|`ConfigureEmergencyMaps`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().switchesBulkCreate().post(createMultipleSwitchesRequest)
 await rc.revoke()
 ```
@@ -1766,16 +1326,8 @@ App Permission|`EditAccounts`
 User Permission|`ConfigureEmergencyMaps`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().switchesBulkUpdate().post(updateMultipleSwitchesRequest)
 await rc.revoke()
 ```
@@ -1798,16 +1350,8 @@ App Permission|`EditAccounts`
 User Permission|`ConfigureEmergencyMaps`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().switchesBulkValidate().post(validateMultipleSwitchesRequest)
 await rc.revoke()
 ```
@@ -1830,16 +1374,8 @@ App Permission|`EditAccounts`
 User Permission|`ConfigureEmergencyMaps`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().switches(switchId).get()
 await rc.revoke()
 ```
@@ -1862,16 +1398,8 @@ App Permission|`EditAccounts`
 User Permission|`ConfigureEmergencyMaps`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().switches(switchId).put(updateSwitchInfo)
 await rc.revoke()
 ```
@@ -1894,16 +1422,8 @@ App Permission|`EditAccounts`
 User Permission|`ConfigureEmergencyMaps`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().switches(switchId).delete()
 await rc.revoke()
 ```
@@ -1926,16 +1446,8 @@ App Permission|`EditAccounts`
 User Permission|`ConfigureEmergencyMaps`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().tasks(taskId).get()
 await rc.revoke()
 ```
@@ -1958,16 +1470,8 @@ App Permission|`EditAccounts`
 User Permission|`ConfigureEmergencyMaps`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().users().get(listAutomaticLocationUpdatesUsersParameters)
 await rc.revoke()
 ```
@@ -1990,16 +1494,8 @@ App Permission|`EditAccounts`
 User Permission|`ConfigureEmergencyMaps`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().users().bulkAssign().post(bulkAssignAutomaticaLocationUpdatesUsers)
 await rc.revoke()
 ```
@@ -2022,16 +1518,8 @@ App Permission|`EditAccounts`
 User Permission|`ConfigureEmergencyMaps`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().wirelessPoints().list(listWirelessPointsParameters)
 await rc.revoke()
 ```
@@ -2054,16 +1542,8 @@ App Permission|`EditAccounts`
 User Permission|`ConfigureEmergencyMaps`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().wirelessPoints().post(createWirelessPoint)
 await rc.revoke()
 ```
@@ -2086,16 +1566,8 @@ App Permission|`EditAccounts`
 User Permission|`ConfigureEmergencyMaps`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().wirelessPointsBulkCreate().post(createMultipleWirelessPointsRequest)
 await rc.revoke()
 ```
@@ -2118,16 +1590,8 @@ App Permission|`EditAccounts`
 User Permission|`ConfigureEmergencyMaps`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().wirelessPointsBulkUpdate().post(updateMultipleWirelessPointsRequest)
 await rc.revoke()
 ```
@@ -2150,16 +1614,8 @@ App Permission|`EditAccounts`
 User Permission|`ConfigureEmergencyMaps`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().wirelessPointsBulkValidate().post(validateMultipleWirelessPointsRequest)
 await rc.revoke()
 ```
@@ -2182,16 +1638,8 @@ App Permission|`EditAccounts`
 User Permission|`ConfigureEmergencyMaps`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().wirelessPoints(pointId).get()
 await rc.revoke()
 ```
@@ -2214,16 +1662,8 @@ App Permission|`EditAccounts`
 User Permission|`ConfigureEmergencyMaps`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().wirelessPoints(pointId).put(updateWirelessPoint)
 await rc.revoke()
 ```
@@ -2246,16 +1686,8 @@ App Permission|`EditAccounts`
 User Permission|`ConfigureEmergencyMaps`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().wirelessPoints(pointId).delete()
 await rc.revoke()
 ```
@@ -2278,16 +1710,8 @@ App Permission|`EditAccounts`
 User Permission|`ConfigureEmergencyMaps`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).emergencyLocations().post(emergencyLocationInfoRequest)
 await rc.revoke()
 ```
@@ -2310,16 +1734,8 @@ App Permission|`EditAccounts`
 User Permission|`ConfigureEmergencyMaps`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).emergencyLocations().list(listEmergencyLocationsParameters)
 await rc.revoke()
 ```
@@ -2342,16 +1758,8 @@ App Permission|`EditAccounts`
 User Permission|`ConfigureEmergencyMaps`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).emergencyLocations(locationId).get()
 await rc.revoke()
 ```
@@ -2374,16 +1782,8 @@ App Permission|`EditAccounts`
 User Permission|`ConfigureEmergencyMaps`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).emergencyLocations(locationId).put(emergencyLocationInfoRequest)
 await rc.revoke()
 ```
@@ -2406,16 +1806,8 @@ App Permission|`ReadAccounts`
 User Permission|`ReadExtensions`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).extension().list(listExtensionsParameters)
 await rc.revoke()
 ```
@@ -2438,16 +1830,8 @@ App Permission|`EditAccounts`
 User Permission|`AddRemoveUsers`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).extension().post(extensionCreationRequest)
 await rc.revoke()
 ```
@@ -2470,16 +1854,8 @@ App Permission|`ReadAccounts`
 User Permission|`ReadExtensions`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).get()
 await rc.revoke()
 ```
@@ -2503,16 +1879,8 @@ App Permission|`EditExtensions`
 User Permission|`EditUserInfo OR EditUserCredentials`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).put(extensionUpdateRequest)
 await rc.revoke()
 ```
@@ -2536,16 +1904,8 @@ App Permission|`EditAccounts`
 User Permission|`AddRemoveUsers`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).delete(deleteExtensionParameters)
 await rc.revoke()
 ```
@@ -2569,16 +1929,8 @@ App Permission|`ReadCallLog`
 User Permission|`ReadCallLog`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).activeCalls().get(listExtensionActiveCallsParameters)
 await rc.revoke()
 ```
@@ -2602,16 +1954,8 @@ App Permission|`ReadContacts`
 User Permission|`ReadPersonalContacts`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).addressBookSync().get(syncAddressBookParameters)
 await rc.revoke()
 ```
@@ -2635,16 +1979,8 @@ App Permission|`ReadContacts`
 User Permission|`ReadPersonalContacts`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).addressBook().contact().list(listContactsParameters)
 await rc.revoke()
 ```
@@ -2668,16 +2004,8 @@ App Permission|`Contacts`
 User Permission|`EditPersonalContacts`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).addressBook().contact().post(personalContactRequest, createContactParameters)
 await rc.revoke()
 ```
@@ -2702,16 +2030,8 @@ App Permission|`ReadContacts`
 User Permission|`ReadPersonalContacts`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).addressBook().contact(contactId).get()
 await rc.revoke()
 ```
@@ -2735,16 +2055,8 @@ App Permission|`Contacts`
 User Permission|`EditPersonalContacts`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).addressBook().contact(contactId).put(personalContactRequest, updateContactParameters)
 await rc.revoke()
 ```
@@ -2769,16 +2081,8 @@ App Permission|`Contacts`
 User Permission|`EditPersonalContacts`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).addressBook().contact(contactId).delete()
 await rc.revoke()
 ```
@@ -2802,16 +2106,8 @@ App Permission|`ReadAccounts`
 User Permission|`ReadUserAnsweringRules`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).answeringRule().list(listAnsweringRulesParameters)
 await rc.revoke()
 ```
@@ -2835,16 +2131,8 @@ App Permission|`EditExtensions`
 User Permission|`EditUserAnsweringRules`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).answeringRule().post(createAnsweringRuleRequest)
 await rc.revoke()
 ```
@@ -2868,16 +2156,8 @@ App Permission|`ReadAccounts`
 User Permission|`ReadUserAnsweringRules`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).answeringRule(ruleId).get(readAnsweringRuleParameters)
 await rc.revoke()
 ```
@@ -2901,16 +2181,8 @@ App Permission|`EditExtensions`
 User Permission|`EditUserAnsweringRules`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).answeringRule(ruleId).put(updateAnsweringRuleRequest)
 await rc.revoke()
 ```
@@ -2934,16 +2206,8 @@ App Permission|`EditExtensions`
 User Permission|`EditUserAnsweringRules`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).answeringRule(ruleId).delete()
 await rc.revoke()
 ```
@@ -2967,16 +2231,8 @@ App Permission|`N/A`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).authzProfile().get()
 await rc.revoke()
 ```
@@ -3000,16 +2256,8 @@ App Permission|`N/A`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).authzProfile().check().get(checkUserPermissionParameters)
 await rc.revoke()
 ```
@@ -3033,16 +2281,8 @@ App Permission|`ReadAccounts`
 User Permission|`ReadExtensions`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).businessHours().get()
 await rc.revoke()
 ```
@@ -3066,16 +2306,8 @@ App Permission|`EditExtensions`
 User Permission|`EditUserAnsweringRules`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).businessHours().put(userBusinessHoursUpdateRequest)
 await rc.revoke()
 ```
@@ -3099,16 +2331,8 @@ App Permission|`ReadCallLog`
 User Permission|`ReadCallLog`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).callLog().list(readUserCallLogParameters)
 await rc.revoke()
 ```
@@ -3132,16 +2356,8 @@ App Permission|`EditCallLog`
 User Permission|`EditCallLog`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).callLog().delete(deleteUserCallLogParameters)
 await rc.revoke()
 ```
@@ -3165,16 +2381,8 @@ App Permission|`ReadCallLog`
 User Permission|`ReadCallLog`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).callLogSync().get(syncUserCallLogParameters)
 await rc.revoke()
 ```
@@ -3198,16 +2406,8 @@ App Permission|`ReadCallLog`
 User Permission|`ReadCallLog`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).callLog(callRecordId).get(readUserCallRecordParameters)
 await rc.revoke()
 ```
@@ -3231,16 +2431,8 @@ App Permission|`Accounts`
 User Permission|`JoinLeaveCallQueue`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).callQueues().put(userCallQueues)
 await rc.revoke()
 ```
@@ -3264,16 +2456,8 @@ App Permission|`ReadAccounts`
 User Permission|`ReadBlockedNumbers`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).callerBlocking().get()
 await rc.revoke()
 ```
@@ -3297,16 +2481,8 @@ App Permission|`EditExtensions`
 User Permission|`EditBlockedNumbers`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).callerBlocking().put(callerBlockingSettingsUpdate)
 await rc.revoke()
 ```
@@ -3330,16 +2506,8 @@ App Permission|`ReadAccounts`
 User Permission|`ReadBlockedNumbers`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).callerBlocking().phoneNumbers().list(listBlockedAllowedNumbersParameters)
 await rc.revoke()
 ```
@@ -3363,16 +2531,8 @@ App Permission|`EditExtensions`
 User Permission|`EditBlockedNumbers`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).callerBlocking().phoneNumbers().post(addBlockedAllowedPhoneNumber)
 await rc.revoke()
 ```
@@ -3396,16 +2556,8 @@ App Permission|`ReadAccounts`
 User Permission|`ReadBlockedNumbers`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).callerBlocking().phoneNumbers(blockedNumberId).get()
 await rc.revoke()
 ```
@@ -3429,16 +2581,8 @@ App Permission|`EditExtensions`
 User Permission|`EditBlockedNumbers`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).callerBlocking().phoneNumbers(blockedNumberId).delete()
 await rc.revoke()
 ```
@@ -3462,16 +2606,8 @@ App Permission|`EditExtensions`
 User Permission|`EditBlockedNumbers`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).callerBlocking().phoneNumbers(blockedNumberId).put(addBlockedAllowedPhoneNumber)
 await rc.revoke()
 ```
@@ -3495,16 +2631,8 @@ App Permission|`ReadAccounts`
 User Permission|`ReadCallerIDSettings`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).callerId().get()
 await rc.revoke()
 ```
@@ -3528,16 +2656,8 @@ App Permission|`EditExtensions`
 User Permission|`EditCallerIDSettings`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).callerId().put(extensionCallerIdInfo)
 await rc.revoke()
 ```
@@ -3561,16 +2681,8 @@ App Permission|`InternalMessages`
 User Permission|`InternalSMS`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).companyPager().post(createInternalTextMessageRequest)
 await rc.revoke()
 ```
@@ -3594,16 +2706,8 @@ App Permission|`ReadAccounts`
 User Permission|`OrganizeConference`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).conferencing().get(readConferencingSettingsParameters)
 await rc.revoke()
 ```
@@ -3627,16 +2731,8 @@ App Permission|`EditExtensions`
 User Permission|`OrganizeConference`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).conferencing().put(updateConferencingInfoRequest)
 await rc.revoke()
 ```
@@ -3660,16 +2756,8 @@ App Permission|`ReadAccounts`
 User Permission|`ReadUserDevices`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).device().get(listExtensionDevicesParameters)
 await rc.revoke()
 ```
@@ -3693,16 +2781,8 @@ App Permission|`ReadContacts`
 User Permission|`ReadPersonalContacts`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).favorite().get()
 await rc.revoke()
 ```
@@ -3726,16 +2806,8 @@ App Permission|`Contacts`
 User Permission|`EditPersonalContacts`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).favorite().put(favoriteCollection)
 await rc.revoke()
 ```
@@ -3759,16 +2831,8 @@ App Permission|`Faxes`
 User Permission|`OutboundFaxes`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).fax().post(createFaxMessageRequest)
 await rc.revoke()
 ```
@@ -3792,16 +2856,8 @@ App Permission|`ReadAccounts`
 User Permission|`ReadExtensions`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).features().get(readUserFeaturesParameters)
 await rc.revoke()
 ```
@@ -3825,16 +2881,8 @@ App Permission|`ReadAccounts`
 User Permission|`ReadUserForwardingFlipNumbers`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).forwardingNumber().list(listForwardingNumbersParameters)
 await rc.revoke()
 ```
@@ -3858,16 +2906,8 @@ App Permission|`EditExtensions`
 User Permission|`EditUserForwardingFlipNumbers`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).forwardingNumber().post(createForwardingNumberRequest)
 await rc.revoke()
 ```
@@ -3891,16 +2931,8 @@ App Permission|`ReadAccounts`
 User Permission|`ReadUserForwardingFlipNumbers`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).forwardingNumber(forwardingNumberId).get()
 await rc.revoke()
 ```
@@ -3924,16 +2956,8 @@ App Permission|`EditExtensions`
 User Permission|`EditUserForwardingFlipNumbers`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).forwardingNumber(forwardingNumberId).put(updateForwardingNumberRequest)
 await rc.revoke()
 ```
@@ -3957,16 +2981,8 @@ App Permission|`EditExtensions`
 User Permission|`EditUserForwardingFlipNumbers`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).forwardingNumber(forwardingNumberId).delete()
 await rc.revoke()
 ```
@@ -3990,16 +3006,8 @@ App Permission|`ReadAccounts`
 User Permission|`ReadExtensions`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).grant().get(listExtensionGrantsParameters)
 await rc.revoke()
 ```
@@ -4023,16 +3031,8 @@ App Permission|`EditExtensions`
 User Permission|`EditUserAnsweringRules`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).greeting().post(createCustomUserGreetingRequest)
 await rc.revoke()
 ```
@@ -4056,16 +3056,8 @@ App Permission|`ReadAccounts`
 User Permission|`ReadUserInfo`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).greeting(greetingId).get()
 await rc.revoke()
 ```
@@ -4089,16 +3081,8 @@ App Permission|`Meetings`
 User Permission|`Meetings`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).meeting().list()
 await rc.revoke()
 ```
@@ -4122,16 +3106,8 @@ App Permission|`Meetings`
 User Permission|`Meetings`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).meeting().post(meetingRequestResource)
 await rc.revoke()
 ```
@@ -4155,16 +3131,8 @@ App Permission|`Meetings`
 User Permission|`MeetingsRecordings`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).meetingRecordings().get(listUserMeetingRecordingsParameters)
 await rc.revoke()
 ```
@@ -4188,16 +3156,8 @@ App Permission|`Meetings`
 User Permission|`Meetings`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).meeting().serviceInfo().get()
 await rc.revoke()
 ```
@@ -4221,16 +3181,8 @@ App Permission|`Meetings`
 User Permission|`Meetings`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).meeting().serviceInfo().patch(meetingServiceInfoRequest)
 await rc.revoke()
 ```
@@ -4254,16 +3206,8 @@ App Permission|`Meetings`
 User Permission|`Meetings`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).meeting(meetingId).get()
 await rc.revoke()
 ```
@@ -4287,16 +3231,8 @@ App Permission|`Meetings`
 User Permission|`Meetings`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).meeting(meetingId).put(meetingRequestResource)
 await rc.revoke()
 ```
@@ -4320,16 +3256,8 @@ App Permission|`Meetings`
 User Permission|`Meetings`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).meeting(meetingId).delete()
 await rc.revoke()
 ```
@@ -4353,16 +3281,8 @@ App Permission|`Meetings`
 User Permission|`Meetings`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).meeting(meetingId).end().post()
 await rc.revoke()
 ```
@@ -4386,16 +3306,8 @@ App Permission|`Meetings`
 User Permission|`Meetings`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).meetingsConfiguration().assistants().get()
 await rc.revoke()
 ```
@@ -4419,16 +3331,8 @@ App Permission|`Meetings`
 User Permission|`Meetings`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).meetingsConfiguration().assisted().get()
 await rc.revoke()
 ```
@@ -4452,16 +3356,8 @@ App Permission|`ReadMessages`
 User Permission|`ReadMessages`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).messageStore().list(listMessagesParameters)
 await rc.revoke()
 ```
@@ -4485,16 +3381,8 @@ App Permission|`ReadMessages`
 User Permission|`ReadMessages`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).messageStore(messageId).get()
 await rc.revoke()
 ```
@@ -4518,16 +3406,8 @@ App Permission|`EditMessages`
 User Permission|`EditMessages`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).messageStore(messageId).put(updateMessageRequest, updateMessageParameters)
 await rc.revoke()
 ```
@@ -4552,16 +3432,8 @@ App Permission|`EditMessages`
 User Permission|`EditMessages`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).messageStore(messageId).delete(deleteMessageParameters)
 await rc.revoke()
 ```
@@ -4585,16 +3457,8 @@ App Permission|`ReadMessages`
 User Permission|`ReadMessageContent`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).messageStore(messageId).content(attachmentId).get(readMessageContentParameters)
 await rc.revoke()
 ```
@@ -4622,16 +3486,8 @@ App Permission|`ReadMessages`
 User Permission|`ReadMessages`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).messageSync().get(syncMessagesParameters)
 await rc.revoke()
 ```
@@ -4655,16 +3511,8 @@ App Permission|`SMS`
 User Permission|`OutboundSMS`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).mms().post(createMmsMessage)
 await rc.revoke()
 ```
@@ -4688,16 +3536,8 @@ App Permission|`ReadAccounts`
 User Permission|`ReadMessagesNotificationsSettings`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).notificationSettings().get()
 await rc.revoke()
 ```
@@ -4721,16 +3561,8 @@ App Permission|`EditExtensions`
 User Permission|`EditMessagesNotificationsSettings`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).notificationSettings().put(notificationSettingsUpdateRequest)
 await rc.revoke()
 ```
@@ -4754,16 +3586,8 @@ App Permission|`ReadAccounts`
 User Permission|`ReadUserPhoneNumbers`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).phoneNumber().get(listExtensionPhoneNumbersParameters)
 await rc.revoke()
 ```
@@ -4787,16 +3611,8 @@ App Permission|`ReadPresence`
 User Permission|`ReadPresenceStatus`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).presence().get(readUserPresenceStatusParameters)
 await rc.revoke()
 ```
@@ -4820,16 +3636,8 @@ App Permission|`EditPresence`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).presence().put(presenceInfoResource)
 await rc.revoke()
 ```
@@ -4853,16 +3661,8 @@ App Permission|`ReadAccounts`
 User Permission|`ReadExtensions`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).profileImage().list()
 await rc.revoke()
 ```
@@ -4890,16 +3690,8 @@ App Permission|`EditExtensions`
 User Permission|`EditUserInfo`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).profileImage().post(createUserProfileImageRequest)
 await rc.revoke()
 ```
@@ -4923,16 +3715,8 @@ App Permission|`EditExtensions`
 User Permission|`EditUserInfo`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).profileImage().put(updateUserProfileImageRequest)
 await rc.revoke()
 ```
@@ -4956,16 +3740,8 @@ App Permission|`ReadAccounts`
 User Permission|`ReadExtensions`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).profileImage(scaleSize).get()
 await rc.revoke()
 ```
@@ -4993,16 +3769,8 @@ App Permission|`RingOut`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).ringOut().post(makeRingOutRequest)
 await rc.revoke()
 ```
@@ -5026,16 +3794,8 @@ App Permission|`RingOut`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).ringOut(ringoutId).get()
 await rc.revoke()
 ```
@@ -5059,16 +3819,8 @@ App Permission|`RingOut`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).ringOut(ringoutId).delete()
 await rc.revoke()
 ```
@@ -5092,16 +3844,8 @@ App Permission|`RingOut`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).ringout().post(makeRingOutRequest)
 await rc.revoke()
 ```
@@ -5125,16 +3869,8 @@ App Permission|`RingOut`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).ringout(ringoutId).get()
 await rc.revoke()
 ```
@@ -5158,16 +3894,8 @@ App Permission|`RingOut`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).ringout(ringoutId).delete()
 await rc.revoke()
 ```
@@ -5191,16 +3919,8 @@ App Permission|`SMS`
 User Permission|`OutboundSMS`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).sms().post(createSmsMessage)
 await rc.revoke()
 ```
@@ -5224,16 +3944,8 @@ App Permission|`ReadPresence`
 User Permission|`ReadPresenceStatus`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).unifiedPresence().get()
 await rc.revoke()
 ```
@@ -5257,16 +3969,8 @@ App Permission|`EditPresence`
 User Permission|`EditPresenceStatus`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).unifiedPresence().patch(updateUnifiedPresence)
 await rc.revoke()
 ```
@@ -5290,16 +3994,8 @@ App Permission|`Meetings`
 User Permission|`Meetings`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).videoConfiguration().get()
 await rc.revoke()
 ```
@@ -5323,16 +4019,8 @@ App Permission|`Meetings`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).videoConfiguration().put(userVideoConfiguration)
 await rc.revoke()
 ```
@@ -5356,16 +4044,8 @@ App Permission|`EditAccounts`
 User Permission|`ReadUserInfo`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).greeting().post(createCompanyGreetingRequest)
 await rc.revoke()
 ```
@@ -5388,16 +4068,8 @@ App Permission|`EditAccounts`
 User Permission|`AutoReceptionist`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).ivrMenus().post(ivrMenuInfo)
 await rc.revoke()
 ```
@@ -5420,16 +4092,8 @@ App Permission|`ReadAccounts`
 User Permission|`AutoReceptionist`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).ivrMenus(ivrMenuId).get()
 await rc.revoke()
 ```
@@ -5452,16 +4116,8 @@ App Permission|`ReadAccounts`
 User Permission|`AutoReceptionist`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).ivrMenus(ivrMenuId).put(ivrMenuInfo)
 await rc.revoke()
 ```
@@ -5484,16 +4140,8 @@ App Permission|`EditAccounts`
 User Permission|`EditCompanyGreetings`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).ivrPrompts().post(createIvrPromptRequest)
 await rc.revoke()
 ```
@@ -5516,16 +4164,8 @@ App Permission|`ReadAccounts`
 User Permission|`ReadCompanyGreetings`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).ivrPrompts().list()
 await rc.revoke()
 ```
@@ -5548,16 +4188,8 @@ App Permission|`ReadAccounts`
 User Permission|`ReadCompanyGreetings`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).ivrPrompts(promptId).get()
 await rc.revoke()
 ```
@@ -5580,16 +4212,8 @@ App Permission|`EditAccounts`
 User Permission|`EditCompanyGreetings`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).ivrPrompts(promptId).delete()
 await rc.revoke()
 ```
@@ -5612,16 +4236,8 @@ App Permission|`EditAccounts`
 User Permission|`EditCompanyGreetings`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).ivrPrompts(promptId).put(updateIvrPromptRequest)
 await rc.revoke()
 ```
@@ -5644,16 +4260,8 @@ App Permission|`ReadAccounts`
 User Permission|`ReadCompanyGreetings`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).ivrPrompts(promptId).content().get()
 await rc.revoke()
 ```
@@ -5680,16 +4288,8 @@ App Permission|`Meetings`
 User Permission|`MeetingsRecordings`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).meetingRecordings().get(listAccountMeetingRecordingsParameters)
 await rc.revoke()
 ```
@@ -5712,16 +4312,8 @@ App Permission|`EditAccounts`
 User Permission|`AccountAdministration`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).messageStoreConfiguration().get()
 await rc.revoke()
 ```
@@ -5744,16 +4336,8 @@ App Permission|`EditAccounts`
 User Permission|`AccountAdministration`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).messageStoreConfiguration().put(messageStoreConfiguration)
 await rc.revoke()
 ```
@@ -5776,16 +4360,8 @@ App Permission|`ReadMessages`
 User Permission|`Users`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).messageStoreReport().post(createMessageStoreReportRequest)
 await rc.revoke()
 ```
@@ -5808,16 +4384,8 @@ App Permission|`ReadMessages`
 User Permission|`Users`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).messageStoreReport(taskId).get()
 await rc.revoke()
 ```
@@ -5840,16 +4408,8 @@ App Permission|`ReadMessages`
 User Permission|`Users`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).messageStoreReport(taskId).archive().list()
 await rc.revoke()
 ```
@@ -5872,16 +4432,8 @@ App Permission|`ReadMessages`
 User Permission|`Users`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).messageStoreReport(taskId).archive(archiveId).get()
 await rc.revoke()
 ```
@@ -5904,16 +4456,8 @@ App Permission|`EditAccounts`
 User Permission|`Groups`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).pagingOnlyGroups(pagingOnlyGroupId).bulkAssign().post(editPagingGroupRequest)
 await rc.revoke()
 ```
@@ -5936,16 +4480,8 @@ App Permission|`ReadAccounts`
 User Permission|`ReadCompanyDevices`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).pagingOnlyGroups(pagingOnlyGroupId).devices().get(listPagingGroupDevicesParameters)
 await rc.revoke()
 ```
@@ -5968,16 +4504,8 @@ App Permission|`ReadAccounts`
 User Permission|`ReadUserInfo`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).pagingOnlyGroups(pagingOnlyGroupId).users().get(listPagingGroupUsersParameters)
 await rc.revoke()
 ```
@@ -6000,16 +4528,8 @@ App Permission|`ReadAccounts`
 User Permission|`ReadCompanyPhoneNumbers`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).phoneNumber().list(listAccountPhoneNumbersParameters)
 await rc.revoke()
 ```
@@ -6032,16 +4552,8 @@ App Permission|`ReadAccounts`
 User Permission|`ReadCompanyPhoneNumbers`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).phoneNumber(phoneNumberId).get()
 await rc.revoke()
 ```
@@ -6064,16 +4576,8 @@ App Permission|`ReadPresence`
 User Permission|`ReadPresenceStatus`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).presence().get(readAccountPresenceParameters)
 await rc.revoke()
 ```
@@ -6096,16 +4600,8 @@ App Permission|`ReadCallRecording`
 User Permission|`ReadCallRecording`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).recording(recordingId).get()
 await rc.revoke()
 ```
@@ -6128,16 +4624,8 @@ App Permission|`ReadCallRecording`
 User Permission|`ReadCallRecording`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).recording(recordingId).content().get()
 await rc.revoke()
 ```
@@ -6164,16 +4652,8 @@ App Permission|`ReadAccounts`
 User Permission|`ReadServicePlanInfo`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).serviceInfo().get()
 await rc.revoke()
 ```
@@ -6196,16 +4676,8 @@ App Permission|`CallControl`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).telephony().callOut().post(makeCallOutRequest)
 await rc.revoke()
 ```
@@ -6228,16 +4700,8 @@ App Permission|`CallControl`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).telephony().sessions(telephonySessionId).get(readCallSessionStatusParameters)
 await rc.revoke()
 ```
@@ -6260,16 +4724,8 @@ App Permission|`CallControl`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).telephony().sessions(telephonySessionId).delete()
 await rc.revoke()
 ```
@@ -6292,16 +4748,8 @@ App Permission|`CallControl`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).telephony().sessions(telephonySessionId).parties(partyId).get()
 await rc.revoke()
 ```
@@ -6324,16 +4772,8 @@ App Permission|`CallControl`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).telephony().sessions(telephonySessionId).parties(partyId).patch(partyUpdateRequest)
 await rc.revoke()
 ```
@@ -6356,16 +4796,8 @@ App Permission|`CallControl`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).telephony().sessions(telephonySessionId).parties(partyId).answer().post(answerTarget)
 await rc.revoke()
 ```
@@ -6388,16 +4820,8 @@ App Permission|`CallControl`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).telephony().sessions(telephonySessionId).parties(partyId).flip().post(callPartyFlip)
 await rc.revoke()
 ```
@@ -6420,16 +4844,8 @@ App Permission|`CallControl`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).telephony().sessions(telephonySessionId).parties(partyId).forward().post(forwardTarget)
 await rc.revoke()
 ```
@@ -6452,16 +4868,8 @@ App Permission|`CallControl`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).telephony().sessions(telephonySessionId).parties(partyId).hold().post()
 await rc.revoke()
 ```
@@ -6484,16 +4892,8 @@ App Permission|`CallControl`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).telephony().sessions(telephonySessionId).parties(partyId).ignore().post(ignoreRequestBody)
 await rc.revoke()
 ```
@@ -6516,16 +4916,8 @@ App Permission|`CallControl`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).telephony().sessions(telephonySessionId).parties(partyId).park().post()
 await rc.revoke()
 ```
@@ -6548,16 +4940,8 @@ App Permission|`CallControl`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).telephony().sessions(telephonySessionId).parties(partyId).pickup().post(pickupTarget)
 await rc.revoke()
 ```
@@ -6580,16 +4964,8 @@ App Permission|`CallControl`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).telephony().sessions(telephonySessionId).parties(partyId).recordings().post()
 await rc.revoke()
 ```
@@ -6612,16 +4988,8 @@ App Permission|`CallControl`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).telephony().sessions(telephonySessionId).parties(partyId).recordings(recordingId).patch(callRecordingUpdate, pauseResumeCallRecordingParameters)
 await rc.revoke()
 ```
@@ -6645,16 +5013,8 @@ App Permission|`CallControl`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).telephony().sessions(telephonySessionId).parties(partyId).reject().post()
 await rc.revoke()
 ```
@@ -6677,16 +5037,8 @@ App Permission|`CallControl`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).telephony().sessions(telephonySessionId).parties(partyId).reply().post(callPartyReply)
 await rc.revoke()
 ```
@@ -6709,16 +5061,8 @@ App Permission|`CallControl`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).telephony().sessions(telephonySessionId).parties(partyId).supervise().post(partySuperviseRequest)
 await rc.revoke()
 ```
@@ -6741,16 +5085,8 @@ App Permission|`CallControl`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).telephony().sessions(telephonySessionId).parties(partyId).transfer().post(transferTarget)
 await rc.revoke()
 ```
@@ -6773,16 +5109,8 @@ App Permission|`CallControl`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).telephony().sessions(telephonySessionId).parties(partyId).unhold().post()
 await rc.revoke()
 ```
@@ -6805,16 +5133,8 @@ App Permission|`CallControl`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).telephony().sessions(telephonySessionId).supervise().post(superviseCallSessionRequest)
 await rc.revoke()
 ```
@@ -6837,16 +5157,8 @@ App Permission|`ReadAccounts`
 User Permission|`ReadCompanyInfo`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).templates().list(listUserTemplatesParameters)
 await rc.revoke()
 ```
@@ -6869,16 +5181,8 @@ App Permission|`ReadAccounts`
 User Permission|`ReadCompanyInfo`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).account(accountId).templates(templateId).get()
 await rc.revoke()
 ```
@@ -6901,16 +5205,8 @@ App Permission|`VoipCalling`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).clientInfo().sipProvision().post(createSipRegistrationRequest)
 await rc.revoke()
 ```
@@ -6932,16 +5228,8 @@ App Permission|`N/A`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).dictionary().country().list(listCountriesParameters)
 await rc.revoke()
 ```
@@ -6963,16 +5251,8 @@ App Permission|`N/A`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).dictionary().country(countryId).get()
 await rc.revoke()
 ```
@@ -6994,16 +5274,8 @@ App Permission|`N/A`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).dictionary().faxCoverPage().get(listFaxCoverPagesParameters)
 await rc.revoke()
 ```
@@ -7025,16 +5297,8 @@ App Permission|`N/A`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).dictionary().greeting().list(listStandardGreetingsParameters)
 await rc.revoke()
 ```
@@ -7056,16 +5320,8 @@ App Permission|`N/A`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).dictionary().greeting(greetingId).get()
 await rc.revoke()
 ```
@@ -7087,16 +5343,8 @@ App Permission|`N/A`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).dictionary().language().list()
 await rc.revoke()
 ```
@@ -7118,16 +5366,8 @@ App Permission|`N/A`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).dictionary().language(languageId).get()
 await rc.revoke()
 ```
@@ -7149,16 +5389,8 @@ App Permission|`N/A`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).dictionary().location().get(listLocationsParameters)
 await rc.revoke()
 ```
@@ -7180,16 +5412,8 @@ App Permission|`N/A`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).dictionary().state().list(listStatesParameters)
 await rc.revoke()
 ```
@@ -7211,16 +5435,8 @@ App Permission|`N/A`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).dictionary().state(stateId).get()
 await rc.revoke()
 ```
@@ -7242,16 +5458,8 @@ App Permission|`N/A`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).dictionary().timezone().list(listTimezonesParameters)
 await rc.revoke()
 ```
@@ -7273,16 +5481,8 @@ App Permission|`N/A`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).dictionary().timezone(timezoneId).get(readTimezoneParameters)
 await rc.revoke()
 ```
@@ -7304,16 +5504,8 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).glip().cards().post(glipMessageAttachmentInfoRequest, createGlipCardParameters)
 await rc.revoke()
 ```
@@ -7336,16 +5528,8 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).glip().cards(cardId).get()
 await rc.revoke()
 ```
@@ -7367,16 +5551,8 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).glip().cards(cardId).put(glipMessageAttachmentInfoRequest)
 await rc.revoke()
 ```
@@ -7398,16 +5574,8 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).glip().cards(cardId).delete()
 await rc.revoke()
 ```
@@ -7429,16 +5597,8 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).glip().chats().list(listGlipChatsParameters)
 await rc.revoke()
 ```
@@ -7460,16 +5620,8 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).glip().chats(chatId).get()
 await rc.revoke()
 ```
@@ -7491,16 +5643,8 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).glip().chats(chatId).favorite().post()
 await rc.revoke()
 ```
@@ -7522,16 +5666,8 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).glip().chats(chatId).notes().post(glipNoteCreate)
 await rc.revoke()
 ```
@@ -7553,16 +5689,8 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).glip().chats(chatId).notes().get(listChatNotesParameters)
 await rc.revoke()
 ```
@@ -7584,16 +5712,8 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).glip().chats(chatId).posts().list(readGlipPostsParameters)
 await rc.revoke()
 ```
@@ -7615,16 +5735,8 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).glip().chats(chatId).posts().post(glipPostPostBody)
 await rc.revoke()
 ```
@@ -7646,16 +5758,8 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).glip().chats(chatId).posts(postId).get()
 await rc.revoke()
 ```
@@ -7677,16 +5781,8 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).glip().chats(chatId).posts(postId).patch(glipPatchPostBody)
 await rc.revoke()
 ```
@@ -7708,16 +5804,8 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).glip().chats(chatId).posts(postId).delete()
 await rc.revoke()
 ```
@@ -7739,16 +5827,8 @@ App Permission|`GlipInternal`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).glip().chats(chatId).read().post()
 await rc.revoke()
 ```
@@ -7770,16 +5850,8 @@ App Permission|`N/A`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).glip().chats(chatId).tasks().get(listChatTasksParameters)
 await rc.revoke()
 ```
@@ -7801,16 +5873,8 @@ App Permission|`N/A`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).glip().chats(chatId).tasks().post(glipCreateTask)
 await rc.revoke()
 ```
@@ -7832,16 +5896,8 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).glip().chats(chatId).unfavorite().post()
 await rc.revoke()
 ```
@@ -7863,16 +5919,8 @@ App Permission|`GlipInternal`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).glip().chats(chatId).unread().post()
 await rc.revoke()
 ```
@@ -7894,16 +5942,8 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).glip().companies(companyId).get()
 await rc.revoke()
 ```
@@ -7925,16 +5965,8 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).glip().conversations().list(listGlipConversationsParameters)
 await rc.revoke()
 ```
@@ -7956,16 +5988,8 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).glip().conversations().post(createGlipConversationRequest)
 await rc.revoke()
 ```
@@ -7987,16 +6011,8 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).glip().conversations(chatId).get()
 await rc.revoke()
 ```
@@ -8018,16 +6034,8 @@ App Permission|`Glip`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).glip().dataExport().post(createDataExportTaskRequest)
 await rc.revoke()
 ```
@@ -8049,16 +6057,8 @@ App Permission|`Glip`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).glip().dataExport().list(listDataExportTasksParameters)
 await rc.revoke()
 ```
@@ -8080,16 +6080,8 @@ App Permission|`Glip`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).glip().dataExport(taskId).get()
 await rc.revoke()
 ```
@@ -8111,16 +6103,8 @@ App Permission|`Glip`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).glip().dataExport(taskId).datasets(datasetId).get()
 await rc.revoke()
 ```
@@ -8146,16 +6130,8 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).glip().events().list(readGlipEventsParameters)
 await rc.revoke()
 ```
@@ -8177,16 +6153,8 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).glip().events().post(glipEventCreate)
 await rc.revoke()
 ```
@@ -8208,16 +6176,8 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).glip().events(eventId).get()
 await rc.revoke()
 ```
@@ -8239,16 +6199,8 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).glip().events(eventId).put(glipEventCreate)
 await rc.revoke()
 ```
@@ -8270,16 +6222,8 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).glip().events(eventId).delete()
 await rc.revoke()
 ```
@@ -8301,16 +6245,8 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).glip().everyone().get()
 await rc.revoke()
 ```
@@ -8332,16 +6268,8 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).glip().everyone().patch(updateGlipEveryoneRequest)
 await rc.revoke()
 ```
@@ -8363,16 +6291,8 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).glip().favorites().get(listFavoriteChatsParameters)
 await rc.revoke()
 ```
@@ -8394,16 +6314,8 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).glip().groups().list(listGlipGroupsParameters)
 await rc.revoke()
 ```
@@ -8425,16 +6337,8 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).glip().groups().post(glipCreateGroup)
 await rc.revoke()
 ```
@@ -8456,16 +6360,8 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).glip().groups(groupId).get()
 await rc.revoke()
 ```
@@ -8487,16 +6383,8 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).glip().groups(groupId).bulkAssign().post(editGroupRequest)
 await rc.revoke()
 ```
@@ -8518,16 +6406,8 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).glip().groups(groupId).events().post(glipEventCreate)
 await rc.revoke()
 ```
@@ -8549,16 +6429,8 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).glip().groups(groupId).events().get()
 await rc.revoke()
 ```
@@ -8580,16 +6452,8 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).glip().groups(groupId).posts().get(listGlipGroupPostsParameters)
 await rc.revoke()
 ```
@@ -8611,16 +6475,8 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).glip().groups(groupId).posts().post(glipCreatePost)
 await rc.revoke()
 ```
@@ -8642,16 +6498,8 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).glip().groups(groupId).posts(postId).text().put(string)
 await rc.revoke()
 ```
@@ -8673,16 +6521,8 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).glip().groups(groupId).webhooks().post()
 await rc.revoke()
 ```
@@ -8704,16 +6544,8 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).glip().groups(groupId).webhooks().get()
 await rc.revoke()
 ```
@@ -8735,16 +6567,8 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).glip().notes(noteId).get()
 await rc.revoke()
 ```
@@ -8766,16 +6590,8 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).glip().notes(noteId).patch(glipNoteCreate)
 await rc.revoke()
 ```
@@ -8797,16 +6613,8 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).glip().notes(noteId).delete()
 await rc.revoke()
 ```
@@ -8828,16 +6636,8 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).glip().notes(noteId).lock().post()
 await rc.revoke()
 ```
@@ -8859,16 +6659,8 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).glip().notes(noteId).publish().post()
 await rc.revoke()
 ```
@@ -8890,16 +6682,8 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).glip().notes(noteId).unlock().post()
 await rc.revoke()
 ```
@@ -8921,16 +6705,8 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).glip().persons(personId).get()
 await rc.revoke()
 ```
@@ -8952,16 +6728,8 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).glip().posts().get(listGlipPostsParameters)
 await rc.revoke()
 ```
@@ -8983,16 +6751,8 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).glip().posts().post(glipCreatePost)
 await rc.revoke()
 ```
@@ -9014,16 +6774,8 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).glip().preferences().get()
 await rc.revoke()
 ```
@@ -9045,16 +6797,8 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).glip().recent().chats().get(listRecentChatsParameters)
 await rc.revoke()
 ```
@@ -9076,16 +6820,8 @@ App Permission|`N/A`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).glip().tasks(taskId).get()
 await rc.revoke()
 ```
@@ -9107,16 +6843,8 @@ App Permission|`N/A`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).glip().tasks(taskId).patch(glipUpdateTask)
 await rc.revoke()
 ```
@@ -9138,16 +6866,8 @@ App Permission|`N/A`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).glip().tasks(taskId).delete()
 await rc.revoke()
 ```
@@ -9169,16 +6889,8 @@ App Permission|`N/A`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).glip().tasks(taskId).complete().post(glipCompleteTask)
 await rc.revoke()
 ```
@@ -9200,16 +6912,8 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).glip().teams().list(listGlipTeamsParameters)
 await rc.revoke()
 ```
@@ -9231,16 +6935,8 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).glip().teams().post(glipPostTeamBody)
 await rc.revoke()
 ```
@@ -9262,16 +6958,8 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).glip().teams(chatId).get()
 await rc.revoke()
 ```
@@ -9293,16 +6981,8 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).glip().teams(chatId).patch(glipPatchTeamBody)
 await rc.revoke()
 ```
@@ -9324,16 +7004,8 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).glip().teams(chatId).delete()
 await rc.revoke()
 ```
@@ -9355,16 +7027,8 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).glip().teams(chatId).add().post(glipPostMembersListBody)
 await rc.revoke()
 ```
@@ -9386,16 +7050,8 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).glip().teams(chatId).archive().post()
 await rc.revoke()
 ```
@@ -9417,16 +7073,8 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).glip().teams(chatId).join().post()
 await rc.revoke()
 ```
@@ -9448,16 +7096,8 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).glip().teams(chatId).leave().post()
 await rc.revoke()
 ```
@@ -9479,16 +7119,8 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).glip().teams(chatId).remove().post(glipPostMembersIdsListBody)
 await rc.revoke()
 ```
@@ -9510,16 +7142,8 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).glip().teams(chatId).unarchive().post()
 await rc.revoke()
 ```
@@ -9541,16 +7165,8 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).glip().webhooks().list()
 await rc.revoke()
 ```
@@ -9572,16 +7188,8 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).glip().webhooks(webhookId).get()
 await rc.revoke()
 ```
@@ -9603,16 +7211,8 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).glip().webhooks(webhookId).delete()
 await rc.revoke()
 ```
@@ -9634,16 +7234,8 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).glip().webhooks(webhookId).activate().post()
 await rc.revoke()
 ```
@@ -9665,16 +7257,8 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).glip().webhooks(webhookId).suspend().post()
 await rc.revoke()
 ```
@@ -9696,16 +7280,8 @@ App Permission|`N/A`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).numberParser().parse().post(parsePhoneNumberRequest, parsePhoneNumberParameters)
 await rc.revoke()
 ```
@@ -9728,16 +7304,8 @@ App Permission|`N/A`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).status().get()
 await rc.revoke()
 ```
@@ -9759,16 +7327,8 @@ App Permission|`N/A`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).subscription().list()
 await rc.revoke()
 ```
@@ -9790,16 +7350,8 @@ App Permission|`N/A`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).subscription().post(createSubscriptionRequest)
 await rc.revoke()
 ```
@@ -9821,16 +7373,8 @@ App Permission|`N/A`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).subscription(subscriptionId).get()
 await rc.revoke()
 ```
@@ -9852,16 +7396,8 @@ App Permission|`N/A`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).subscription(subscriptionId).put(modifySubscriptionRequest, updateSubscriptionParameters)
 await rc.revoke()
 ```
@@ -9884,16 +7420,8 @@ App Permission|`N/A`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).subscription(subscriptionId).delete()
 await rc.revoke()
 ```
@@ -9915,16 +7443,8 @@ App Permission|`N/A`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.restapi(apiVersion).subscription(subscriptionId).renew().post()
 await rc.revoke()
 ```
@@ -9946,16 +7466,8 @@ App Permission|`N/A`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.scim(version).serviceProviderConfig().get()
 await rc.revoke()
 ```
@@ -9977,16 +7489,8 @@ App Permission|`ReadAccounts`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.scim(version).users().list(searchViaGet2Parameters)
 await rc.revoke()
 ```
@@ -10008,16 +7512,8 @@ App Permission|`EditAccounts`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.scim(version).users().post(createUser)
 await rc.revoke()
 ```
@@ -10039,16 +7535,8 @@ App Permission|`ReadAccounts`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.scim(version).users().dotSearch().post(searchRequest)
 await rc.revoke()
 ```
@@ -10070,16 +7558,8 @@ App Permission|`ReadAccounts`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.scim(version).users(id).get()
 await rc.revoke()
 ```
@@ -10101,16 +7581,8 @@ App Permission|`EditAccounts`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.scim(version).users(id).put(user)
 await rc.revoke()
 ```
@@ -10132,16 +7604,8 @@ App Permission|`EditAccounts`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.scim(version).users(id).delete()
 await rc.revoke()
 ```
@@ -10163,16 +7627,8 @@ App Permission|`EditAccounts`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.scim(version).users(id).patch(userPatch)
 await rc.revoke()
 ```
@@ -10194,16 +7650,8 @@ App Permission|`N/A`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL
-})
-await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME,
-    extension: process.env.RINGCENTRAL_EXTENSION,
-    password: process.env.RINGCENTRAL_PASSWORD
-})
+const rc = new RestClient({ clientId, clientSecret, serverURL })
+await rc.authorize({ username, extension, password })
 const result = await rc.scim(version).health().get()
 await rc.revoke()
 ```
