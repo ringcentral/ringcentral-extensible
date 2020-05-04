@@ -112,6 +112,7 @@ yarn test
 
 ### Todo
 
+- Unified client: new UnifiedClient(protocal: 'https' | 'wss')
 - no more `any` type and `{}` type
 - convert code generator to TS
 - compare it with C# sdk and see what are missing
