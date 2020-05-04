@@ -12,10 +12,10 @@ App Permission|`N/A`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi().list()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi().list();
+await rc.revoke();
 ```
 
 - `result` is of type [GetVersionsResponse](./src/definitions/GetVersionsResponse.ts)
@@ -34,10 +34,10 @@ App Permission|`N/A`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi().oauth().revoke().post(revokeTokenRequest)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi().oauth().revoke().post(revokeTokenRequest);
+await rc.revoke();
 ```
 - Parameter `revokeTokenRequest` is of type [RevokeTokenRequest](./src/definitions/RevokeTokenRequest.ts)
 - `result` is an empty string
@@ -56,10 +56,10 @@ App Permission|`N/A`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi().oauth().token().post(getTokenRequest)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi().oauth().token().post(getTokenRequest);
+await rc.revoke();
 ```
 - Parameter `getTokenRequest` is of type [GetTokenRequest](./src/definitions/GetTokenRequest.ts)
 - `result` is of type [TokenInfo](./src/definitions/TokenInfo.ts)
@@ -78,10 +78,10 @@ App Permission|`N/A`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).get()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).get();
+await rc.revoke();
 ```
 
 - `result` is of type [GetVersionResponse](./src/definitions/GetVersionResponse.ts)
@@ -101,10 +101,10 @@ App Permission|`ReadAccounts`
 User Permission|`ReadCompanyInfo`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).get()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).get();
+await rc.revoke();
 ```
 
 - `result` is of type [GetAccountInfoResponse](./src/definitions/GetAccountInfoResponse.ts)
@@ -125,10 +125,10 @@ App Permission|`ReadCallLog`
 User Permission|`ReadCallLog`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).activeCalls().get(listCompanyActiveCallsParameters)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).activeCalls().get(listCompanyActiveCallsParameters);
+await rc.revoke();
 ```
 - Parameter `listCompanyActiveCallsParameters` is of type [ListCompanyActiveCallsParameters](./src/definitions/ListCompanyActiveCallsParameters.ts)
 - `result` is of type [CompanyActiveCallsResponse](./src/definitions/CompanyActiveCallsResponse.ts)
@@ -149,10 +149,10 @@ App Permission|`EditAccounts`
 User Permission|`EditCompanyAnsweringRules`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).answeringRule().post(companyAnsweringRuleRequest)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).answeringRule().post(companyAnsweringRuleRequest);
+await rc.revoke();
 ```
 - Parameter `companyAnsweringRuleRequest` is of type [CompanyAnsweringRuleRequest](./src/definitions/CompanyAnsweringRuleRequest.ts)
 - `result` is of type [CompanyAnsweringRuleInfo](./src/definitions/CompanyAnsweringRuleInfo.ts)
@@ -173,10 +173,10 @@ App Permission|`ReadAccounts`
 User Permission|`ReadCompanyAnsweringRules`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).answeringRule().list(listCompanyAnsweringRulesParameters)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).answeringRule().list(listCompanyAnsweringRulesParameters);
+await rc.revoke();
 ```
 - Parameter `listCompanyAnsweringRulesParameters` is of type [ListCompanyAnsweringRulesParameters](./src/definitions/ListCompanyAnsweringRulesParameters.ts)
 - `result` is of type [CompanyAnsweringRuleList](./src/definitions/CompanyAnsweringRuleList.ts)
@@ -197,10 +197,10 @@ App Permission|`ReadAccounts`
 User Permission|`ReadCompanyAnsweringRules`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).answeringRule(ruleId).get()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).answeringRule(ruleId).get();
+await rc.revoke();
 ```
 
 - `result` is of type [CompanyAnsweringRuleInfo](./src/definitions/CompanyAnsweringRuleInfo.ts)
@@ -221,10 +221,10 @@ App Permission|`EditAccounts`
 User Permission|`EditCompanyAnsweringRules`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).answeringRule(ruleId).put(companyAnsweringRuleUpdate)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).answeringRule(ruleId).put(companyAnsweringRuleUpdate);
+await rc.revoke();
 ```
 - Parameter `companyAnsweringRuleUpdate` is of type [CompanyAnsweringRuleUpdate](./src/definitions/CompanyAnsweringRuleUpdate.ts)
 - `result` is of type [CompanyAnsweringRuleInfo](./src/definitions/CompanyAnsweringRuleInfo.ts)
@@ -245,10 +245,10 @@ App Permission|`EditAccounts`
 User Permission|`EditCompanyAnsweringRules`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).answeringRule(ruleId).delete()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).answeringRule(ruleId).delete();
+await rc.revoke();
 ```
 
 - `result` is an empty string
@@ -269,10 +269,10 @@ App Permission|`ReadAccounts`
 User Permission|`ReadCompanyInfo`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).businessAddress().get()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).businessAddress().get();
+await rc.revoke();
 ```
 
 - `result` is of type [AccountBusinessAddressResource](./src/definitions/AccountBusinessAddressResource.ts)
@@ -293,10 +293,10 @@ App Permission|`EditAccounts`
 User Permission|`EditCompanyInfo`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).businessAddress().put(modifyAccountBusinessAddressRequest)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).businessAddress().put(modifyAccountBusinessAddressRequest);
+await rc.revoke();
 ```
 - Parameter `modifyAccountBusinessAddressRequest` is of type [ModifyAccountBusinessAddressRequest](./src/definitions/ModifyAccountBusinessAddressRequest.ts)
 - `result` is of type [AccountBusinessAddressResource](./src/definitions/AccountBusinessAddressResource.ts)
@@ -317,10 +317,10 @@ App Permission|`ReadAccounts`
 User Permission|`ReadUserAnsweringRules`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).businessHours().get()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).businessHours().get();
+await rc.revoke();
 ```
 
 - `result` is of type [CompanyBusinessHours](./src/definitions/CompanyBusinessHours.ts)
@@ -341,10 +341,10 @@ App Permission|`EditExtensions`
 User Permission|`EditUserAnsweringRules`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).businessHours().put(companyBusinessHoursUpdateRequest)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).businessHours().put(companyBusinessHoursUpdateRequest);
+await rc.revoke();
 ```
 - Parameter `companyBusinessHoursUpdateRequest` is of type [CompanyBusinessHoursUpdateRequest](./src/definitions/CompanyBusinessHoursUpdateRequest.ts)
 - `result` is of type [CompanyBusinessHours](./src/definitions/CompanyBusinessHours.ts)
@@ -365,10 +365,10 @@ App Permission|`ReadCallLog`
 User Permission|`FullCompanyCallLog`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).callLog().list(readCompanyCallLogParameters)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).callLog().list(readCompanyCallLogParameters);
+await rc.revoke();
 ```
 - Parameter `readCompanyCallLogParameters` is of type [ReadCompanyCallLogParameters](./src/definitions/ReadCompanyCallLogParameters.ts)
 - `result` is of type [AccountCallLogResponse](./src/definitions/AccountCallLogResponse.ts)
@@ -389,10 +389,10 @@ App Permission|`ReadCallLog`
 User Permission|`ReadCallLog`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).callLogSync().get(syncAccountCallLogParameters)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).callLogSync().get(syncAccountCallLogParameters);
+await rc.revoke();
 ```
 - Parameter `syncAccountCallLogParameters` is of type [SyncAccountCallLogParameters](./src/definitions/SyncAccountCallLogParameters.ts)
 - `result` is of type [AccountCallLogSyncResponse](./src/definitions/AccountCallLogSyncResponse.ts)
@@ -413,10 +413,10 @@ App Permission|`ReadCallLog`
 User Permission|`FullCompanyCallLog`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).callLog(callRecordId).get(readCompanyCallRecordParameters)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).callLog(callRecordId).get(readCompanyCallRecordParameters);
+await rc.revoke();
 ```
 - Parameter `readCompanyCallRecordParameters` is of type [ReadCompanyCallRecordParameters](./src/definitions/ReadCompanyCallRecordParameters.ts)
 - `result` is of type [CompanyCallLogRecord](./src/definitions/CompanyCallLogRecord.ts)
@@ -437,10 +437,10 @@ App Permission|`EditExtensions`
 User Permission|`Groups`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).callMonitoringGroups().post(createCallMonitoringGroupRequest)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).callMonitoringGroups().post(createCallMonitoringGroupRequest);
+await rc.revoke();
 ```
 - Parameter `createCallMonitoringGroupRequest` is of type [CreateCallMonitoringGroupRequest](./src/definitions/CreateCallMonitoringGroupRequest.ts)
 - `result` is of type [CallMonitoringGroup](./src/definitions/CallMonitoringGroup.ts)
@@ -461,10 +461,10 @@ App Permission|`ReadAccounts`
 User Permission|`ReadExtensions`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).callMonitoringGroups().get(listCallMonitoringGroupsParameters)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).callMonitoringGroups().get(listCallMonitoringGroupsParameters);
+await rc.revoke();
 ```
 - Parameter `listCallMonitoringGroupsParameters` is of type [ListCallMonitoringGroupsParameters](./src/definitions/ListCallMonitoringGroupsParameters.ts)
 - `result` is of type [CallMonitoringGroups](./src/definitions/CallMonitoringGroups.ts)
@@ -485,10 +485,10 @@ App Permission|`EditExtensions`
 User Permission|`Groups`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).callMonitoringGroups(groupId).put(createCallMonitoringGroupRequest)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).callMonitoringGroups(groupId).put(createCallMonitoringGroupRequest);
+await rc.revoke();
 ```
 - Parameter `createCallMonitoringGroupRequest` is of type [CreateCallMonitoringGroupRequest](./src/definitions/CreateCallMonitoringGroupRequest.ts)
 - `result` is of type [CallMonitoringGroup](./src/definitions/CallMonitoringGroup.ts)
@@ -509,10 +509,10 @@ App Permission|`EditExtensions`
 User Permission|`Groups`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).callMonitoringGroups(groupId).delete()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).callMonitoringGroups(groupId).delete();
+await rc.revoke();
 ```
 
 - `result` is an empty string
@@ -533,10 +533,10 @@ App Permission|`EditExtensions`
 User Permission|`Groups`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).callMonitoringGroups(groupId).bulkAssign().post(callMonitoringBulkAssign)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).callMonitoringGroups(groupId).bulkAssign().post(callMonitoringBulkAssign);
+await rc.revoke();
 ```
 - Parameter `callMonitoringBulkAssign` is of type [CallMonitoringBulkAssign](./src/definitions/CallMonitoringBulkAssign.ts)
 - `result` is an empty string
@@ -557,10 +557,10 @@ App Permission|`ReadAccounts`
 User Permission|`ReadExtensions`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).callMonitoringGroups(groupId).members().get(listCallMonitoringGroupMembersParameters)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).callMonitoringGroups(groupId).members().get(listCallMonitoringGroupMembersParameters);
+await rc.revoke();
 ```
 - Parameter `listCallMonitoringGroupMembersParameters` is of type [ListCallMonitoringGroupMembersParameters](./src/definitions/ListCallMonitoringGroupMembersParameters.ts)
 - `result` is of type [CallMonitoringGroupMemberList](./src/definitions/CallMonitoringGroupMemberList.ts)
@@ -581,10 +581,10 @@ App Permission|`ReadAccounts`
 User Permission|`ReadExtensions`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).callQueues().get(listCallQueuesParameters)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).callQueues().get(listCallQueuesParameters);
+await rc.revoke();
 ```
 - Parameter `listCallQueuesParameters` is of type [ListCallQueuesParameters](./src/definitions/ListCallQueuesParameters.ts)
 - `result` is of type [CallQueues](./src/definitions/CallQueues.ts)
@@ -605,10 +605,10 @@ App Permission|`EditExtensions`
 User Permission|`Groups`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).callQueues(groupId).bulkAssign().post(callQueueBulkAssignResource)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).callQueues(groupId).bulkAssign().post(callQueueBulkAssignResource);
+await rc.revoke();
 ```
 - Parameter `callQueueBulkAssignResource` is of type [CallQueueBulkAssignResource](./src/definitions/CallQueueBulkAssignResource.ts)
 - `result` is an empty string
@@ -629,10 +629,10 @@ App Permission|`ReadAccounts`
 User Permission|`ReadExtensions`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).callQueues(groupId).members().get(listCallQueueMembersParameters)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).callQueues(groupId).members().get(listCallQueueMembersParameters);
+await rc.revoke();
 ```
 - Parameter `listCallQueueMembersParameters` is of type [ListCallQueueMembersParameters](./src/definitions/ListCallQueueMembersParameters.ts)
 - `result` is of type [CallQueueMembers](./src/definitions/CallQueueMembers.ts)
@@ -653,10 +653,10 @@ App Permission|`ReadAccounts`
 User Permission|`ReadCompanyInfo`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).callRecording().get()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).callRecording().get();
+await rc.revoke();
 ```
 
 - `result` is of type [CallRecordingSettingsResource](./src/definitions/CallRecordingSettingsResource.ts)
@@ -677,10 +677,10 @@ App Permission|`EditAccounts`
 User Permission|`EditCompanyInfo`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).callRecording().put(callRecordingSettingsResource)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).callRecording().put(callRecordingSettingsResource);
+await rc.revoke();
 ```
 - Parameter `callRecordingSettingsResource` is of type [CallRecordingSettingsResource](./src/definitions/CallRecordingSettingsResource.ts)
 - `result` is of type [CallRecordingSettingsResource](./src/definitions/CallRecordingSettingsResource.ts)
@@ -701,10 +701,10 @@ App Permission|`ReadAccounts`
 User Permission|`ReadCompanyInfo`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).callRecording().bulkAssign().post(bulkAccountCallRecordingsResource)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).callRecording().bulkAssign().post(bulkAccountCallRecordingsResource);
+await rc.revoke();
 ```
 - Parameter `bulkAccountCallRecordingsResource` is of type [BulkAccountCallRecordingsResource](./src/definitions/BulkAccountCallRecordingsResource.ts)
 - `result` is an empty string
@@ -725,10 +725,10 @@ App Permission|`ReadAccounts`
 User Permission|`ReadCompanyInfo`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).callRecording().customGreetings().get(listCallRecordingCustomGreetingsParameters)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).callRecording().customGreetings().get(listCallRecordingCustomGreetingsParameters);
+await rc.revoke();
 ```
 - Parameter `listCallRecordingCustomGreetingsParameters` is of type [ListCallRecordingCustomGreetingsParameters](./src/definitions/ListCallRecordingCustomGreetingsParameters.ts)
 - `result` is of type [CallRecordingCustomGreetings](./src/definitions/CallRecordingCustomGreetings.ts)
@@ -749,10 +749,10 @@ App Permission|`EditAccounts`
 User Permission|`EditCompanyInfo`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).callRecording().customGreetings(greetingId).delete()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).callRecording().customGreetings(greetingId).delete();
+await rc.revoke();
 ```
 
 - `result` is an empty string
@@ -773,10 +773,10 @@ App Permission|`ReadAccounts`
 User Permission|`ReadCompanyInfo`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).callRecording().extensions().get()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).callRecording().extensions().get();
+await rc.revoke();
 ```
 
 - `result` is of type [CallRecordingExtensions](./src/definitions/CallRecordingExtensions.ts)
@@ -797,10 +797,10 @@ App Permission|`EditAccounts`
 User Permission|`Users`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).customFields().post(customFieldCreateRequest)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).customFields().post(customFieldCreateRequest);
+await rc.revoke();
 ```
 - Parameter `customFieldCreateRequest` is of type [CustomFieldCreateRequest](./src/definitions/CustomFieldCreateRequest.ts)
 - `result` is of type [CustomFieldResource](./src/definitions/CustomFieldResource.ts)
@@ -821,10 +821,10 @@ App Permission|`ReadAccounts`
 User Permission|`ReadUserInfo`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).customFields().get()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).customFields().get();
+await rc.revoke();
 ```
 
 - `result` is of type [CustomFieldsResource](./src/definitions/CustomFieldsResource.ts)
@@ -845,10 +845,10 @@ App Permission|`EditAccounts`
 User Permission|`Users`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).customFields(fieldId).put(customFieldUpdateRequest)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).customFields(fieldId).put(customFieldUpdateRequest);
+await rc.revoke();
 ```
 - Parameter `customFieldUpdateRequest` is of type [CustomFieldUpdateRequest](./src/definitions/CustomFieldUpdateRequest.ts)
 - `result` is of type [CustomFieldResource](./src/definitions/CustomFieldResource.ts)
@@ -869,10 +869,10 @@ App Permission|`EditAccounts`
 User Permission|`Users`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).customFields(fieldId).delete()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).customFields(fieldId).delete();
+await rc.revoke();
 ```
 
 - `result` is an empty string
@@ -893,10 +893,10 @@ App Permission|`EditAccounts`
 User Permission|`UserGroups`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).department().bulkAssign().post(departmentBulkAssignResource)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).department().bulkAssign().post(departmentBulkAssignResource);
+await rc.revoke();
 ```
 - Parameter `departmentBulkAssignResource` is of type [DepartmentBulkAssignResource](./src/definitions/DepartmentBulkAssignResource.ts)
 - `result` is an empty string
@@ -917,10 +917,10 @@ App Permission|`ReadAccounts`
 User Permission|`ReadExtensions`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).department(departmentId).members().get(listDepartmentMembersParameters)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).department(departmentId).members().get(listDepartmentMembersParameters);
+await rc.revoke();
 ```
 - Parameter `listDepartmentMembersParameters` is of type [ListDepartmentMembersParameters](./src/definitions/ListDepartmentMembersParameters.ts)
 - `result` is of type [DepartmentMemberList](./src/definitions/DepartmentMemberList.ts)
@@ -941,10 +941,10 @@ App Permission|`ReadAccounts`
 User Permission|`ReadCompanyDevices`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).device(deviceId).get(readDeviceParameters)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).device(deviceId).get(readDeviceParameters);
+await rc.revoke();
 ```
 - Parameter `readDeviceParameters` is of type [ReadDeviceParameters](./src/definitions/ReadDeviceParameters.ts)
 - `result` is of type [GetDeviceInfoResponse](./src/definitions/GetDeviceInfoResponse.ts)
@@ -965,10 +965,10 @@ App Permission|`EditAccounts`
 User Permission|`EditCompanyDevices`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).device(deviceId).put(accountDeviceUpdate, updateDeviceParameters)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).device(deviceId).put(accountDeviceUpdate, updateDeviceParameters);
+await rc.revoke();
 ```
 - Parameter `accountDeviceUpdate` is of type [AccountDeviceUpdate](./src/definitions/AccountDeviceUpdate.ts)
 - Parameter `updateDeviceParameters` is of type [UpdateDeviceParameters](./src/definitions/UpdateDeviceParameters.ts)
@@ -990,10 +990,10 @@ App Permission|`ReadAccounts`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).directory().entries().list(listDirectoryEntriesParameters)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).directory().entries().list(listDirectoryEntriesParameters);
+await rc.revoke();
 ```
 - Parameter `listDirectoryEntriesParameters` is of type [ListDirectoryEntriesParameters](./src/definitions/ListDirectoryEntriesParameters.ts)
 - `result` is of type [DirectoryResource](./src/definitions/DirectoryResource.ts)
@@ -1014,10 +1014,10 @@ App Permission|`ReadAccounts`
 User Permission|`ReadExtensions`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).directory().entries().search().post(searchDirectoryEntriesRequest)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).directory().entries().search().post(searchDirectoryEntriesRequest);
+await rc.revoke();
 ```
 - Parameter `searchDirectoryEntriesRequest` is of type [SearchDirectoryEntriesRequest](./src/definitions/SearchDirectoryEntriesRequest.ts)
 - `result` is of type [DirectoryResource](./src/definitions/DirectoryResource.ts)
@@ -1038,10 +1038,10 @@ App Permission|`ReadAccounts`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).directory().entries(entryId).get()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).directory().entries(entryId).get();
+await rc.revoke();
 ```
 
 - `result` is of type [ContactResource](./src/definitions/ContactResource.ts)
@@ -1062,10 +1062,10 @@ App Permission|`ReadAccounts`
 User Permission|`ReadCompanyInfo`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).directory().federation().get()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).directory().federation().get();
+await rc.revoke();
 ```
 
 - `result` is of type [FederationResource](./src/definitions/FederationResource.ts)
@@ -1086,10 +1086,10 @@ App Permission|`EditAccounts`
 User Permission|`ConfigureEmergencyMaps`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().devices().get(listDevicesAutomaticLocationUpdatesParameters)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().devices().get(listDevicesAutomaticLocationUpdatesParameters);
+await rc.revoke();
 ```
 - Parameter `listDevicesAutomaticLocationUpdatesParameters` is of type [ListDevicesAutomaticLocationUpdatesParameters](./src/definitions/ListDevicesAutomaticLocationUpdatesParameters.ts)
 - `result` is of type [ListDevicesAutomaticLocationUpdates](./src/definitions/ListDevicesAutomaticLocationUpdates.ts)
@@ -1110,10 +1110,10 @@ App Permission|`EditAccounts`
 User Permission|`ConfigureEmergencyMaps`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().devices().bulkAssign().post(assignMultipleDevicesAutomaticLocationUpdates)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().devices().bulkAssign().post(assignMultipleDevicesAutomaticLocationUpdates);
+await rc.revoke();
 ```
 - Parameter `assignMultipleDevicesAutomaticLocationUpdates` is of type [AssignMultipleDevicesAutomaticLocationUpdates](./src/definitions/AssignMultipleDevicesAutomaticLocationUpdates.ts)
 - `result` is an empty string
@@ -1134,10 +1134,10 @@ App Permission|`EditAccounts`
 User Permission|`ConfigureEmergencyMaps`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().networks().list()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().networks().list();
+await rc.revoke();
 ```
 
 - `result` is of type [NetworksList](./src/definitions/NetworksList.ts)
@@ -1158,10 +1158,10 @@ App Permission|`EditAccounts`
 User Permission|`ConfigureEmergencyMaps`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().networks().post(createNetworkRequest)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().networks().post(createNetworkRequest);
+await rc.revoke();
 ```
 - Parameter `createNetworkRequest` is of type [CreateNetworkRequest](./src/definitions/CreateNetworkRequest.ts)
 - `result` is of type [NetworkInfo](./src/definitions/NetworkInfo.ts)
@@ -1182,10 +1182,10 @@ App Permission|`EditAccounts`
 User Permission|`ConfigureEmergencyMaps`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().networks(networkId).get()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().networks(networkId).get();
+await rc.revoke();
 ```
 
 - `result` is of type [NetworkInfo](./src/definitions/NetworkInfo.ts)
@@ -1206,10 +1206,10 @@ App Permission|`EditAccounts`
 User Permission|`ConfigureEmergencyMaps`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().networks(networkId).put(updateNetworkRequest)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().networks(networkId).put(updateNetworkRequest);
+await rc.revoke();
 ```
 - Parameter `updateNetworkRequest` is of type [UpdateNetworkRequest](./src/definitions/UpdateNetworkRequest.ts)
 - `result` is an empty string
@@ -1230,10 +1230,10 @@ App Permission|`EditAccounts`
 User Permission|`ConfigureEmergencyMaps`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().networks(networkId).delete()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().networks(networkId).delete();
+await rc.revoke();
 ```
 
 - `result` is an empty string
@@ -1254,10 +1254,10 @@ App Permission|`EditAccounts`
 User Permission|`ConfigureEmergencyMaps`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().switches().list(listAccountSwitchesParameters)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().switches().list(listAccountSwitchesParameters);
+await rc.revoke();
 ```
 - Parameter `listAccountSwitchesParameters` is of type [ListAccountSwitchesParameters](./src/definitions/ListAccountSwitchesParameters.ts)
 - `result` is of type [SwitchesList](./src/definitions/SwitchesList.ts)
@@ -1278,10 +1278,10 @@ App Permission|`EditAccounts`
 User Permission|`ConfigureEmergencyMaps`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().switches().post(createSwitchInfo)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().switches().post(createSwitchInfo);
+await rc.revoke();
 ```
 - Parameter `createSwitchInfo` is of type [CreateSwitchInfo](./src/definitions/CreateSwitchInfo.ts)
 - `result` is of type [SwitchInfo](./src/definitions/SwitchInfo.ts)
@@ -1302,10 +1302,10 @@ App Permission|`EditAccounts`
 User Permission|`ConfigureEmergencyMaps`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().switchesBulkCreate().post(createMultipleSwitchesRequest)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().switchesBulkCreate().post(createMultipleSwitchesRequest);
+await rc.revoke();
 ```
 - Parameter `createMultipleSwitchesRequest` is of type [CreateMultipleSwitchesRequest](./src/definitions/CreateMultipleSwitchesRequest.ts)
 - `result` is of type [CreateMultipleSwitchesResponse](./src/definitions/CreateMultipleSwitchesResponse.ts)
@@ -1326,10 +1326,10 @@ App Permission|`EditAccounts`
 User Permission|`ConfigureEmergencyMaps`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().switchesBulkUpdate().post(updateMultipleSwitchesRequest)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().switchesBulkUpdate().post(updateMultipleSwitchesRequest);
+await rc.revoke();
 ```
 - Parameter `updateMultipleSwitchesRequest` is of type [UpdateMultipleSwitchesRequest](./src/definitions/UpdateMultipleSwitchesRequest.ts)
 - `result` is of type [UpdateMultipleSwitchesResponse](./src/definitions/UpdateMultipleSwitchesResponse.ts)
@@ -1350,10 +1350,10 @@ App Permission|`EditAccounts`
 User Permission|`ConfigureEmergencyMaps`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().switchesBulkValidate().post(validateMultipleSwitchesRequest)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().switchesBulkValidate().post(validateMultipleSwitchesRequest);
+await rc.revoke();
 ```
 - Parameter `validateMultipleSwitchesRequest` is of type [ValidateMultipleSwitchesRequest](./src/definitions/ValidateMultipleSwitchesRequest.ts)
 - `result` is of type [ValidateMultipleSwitchesResponse](./src/definitions/ValidateMultipleSwitchesResponse.ts)
@@ -1374,10 +1374,10 @@ App Permission|`EditAccounts`
 User Permission|`ConfigureEmergencyMaps`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().switches(switchId).get()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().switches(switchId).get();
+await rc.revoke();
 ```
 
 - `result` is of type [SwitchInfo](./src/definitions/SwitchInfo.ts)
@@ -1398,10 +1398,10 @@ App Permission|`EditAccounts`
 User Permission|`ConfigureEmergencyMaps`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().switches(switchId).put(updateSwitchInfo)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().switches(switchId).put(updateSwitchInfo);
+await rc.revoke();
 ```
 - Parameter `updateSwitchInfo` is of type [UpdateSwitchInfo](./src/definitions/UpdateSwitchInfo.ts)
 - `result` is of type [SwitchInfo](./src/definitions/SwitchInfo.ts)
@@ -1422,10 +1422,10 @@ App Permission|`EditAccounts`
 User Permission|`ConfigureEmergencyMaps`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().switches(switchId).delete()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().switches(switchId).delete();
+await rc.revoke();
 ```
 
 - `result` is an empty string
@@ -1446,10 +1446,10 @@ App Permission|`EditAccounts`
 User Permission|`ConfigureEmergencyMaps`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().tasks(taskId).get()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().tasks(taskId).get();
+await rc.revoke();
 ```
 
 - `result` is of type [AutomaticLocationUpdatesTaskInfo](./src/definitions/AutomaticLocationUpdatesTaskInfo.ts)
@@ -1470,10 +1470,10 @@ App Permission|`EditAccounts`
 User Permission|`ConfigureEmergencyMaps`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().users().get(listAutomaticLocationUpdatesUsersParameters)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().users().get(listAutomaticLocationUpdatesUsersParameters);
+await rc.revoke();
 ```
 - Parameter `listAutomaticLocationUpdatesUsersParameters` is of type [ListAutomaticLocationUpdatesUsersParameters](./src/definitions/ListAutomaticLocationUpdatesUsersParameters.ts)
 - `result` is of type [AutomaticLocationUpdatesUserList](./src/definitions/AutomaticLocationUpdatesUserList.ts)
@@ -1494,10 +1494,10 @@ App Permission|`EditAccounts`
 User Permission|`ConfigureEmergencyMaps`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().users().bulkAssign().post(bulkAssignAutomaticaLocationUpdatesUsers)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().users().bulkAssign().post(bulkAssignAutomaticaLocationUpdatesUsers);
+await rc.revoke();
 ```
 - Parameter `bulkAssignAutomaticaLocationUpdatesUsers` is of type [BulkAssignAutomaticaLocationUpdatesUsers](./src/definitions/BulkAssignAutomaticaLocationUpdatesUsers.ts)
 - `result` is an empty string
@@ -1518,10 +1518,10 @@ App Permission|`EditAccounts`
 User Permission|`ConfigureEmergencyMaps`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().wirelessPoints().list(listWirelessPointsParameters)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().wirelessPoints().list(listWirelessPointsParameters);
+await rc.revoke();
 ```
 - Parameter `listWirelessPointsParameters` is of type [ListWirelessPointsParameters](./src/definitions/ListWirelessPointsParameters.ts)
 - `result` is of type [WirelessPointsList](./src/definitions/WirelessPointsList.ts)
@@ -1542,10 +1542,10 @@ App Permission|`EditAccounts`
 User Permission|`ConfigureEmergencyMaps`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().wirelessPoints().post(createWirelessPoint)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().wirelessPoints().post(createWirelessPoint);
+await rc.revoke();
 ```
 - Parameter `createWirelessPoint` is of type [CreateWirelessPoint](./src/definitions/CreateWirelessPoint.ts)
 - `result` is of type [WirelessPointInfo](./src/definitions/WirelessPointInfo.ts)
@@ -1566,10 +1566,10 @@ App Permission|`EditAccounts`
 User Permission|`ConfigureEmergencyMaps`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().wirelessPointsBulkCreate().post(createMultipleWirelessPointsRequest)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().wirelessPointsBulkCreate().post(createMultipleWirelessPointsRequest);
+await rc.revoke();
 ```
 - Parameter `createMultipleWirelessPointsRequest` is of type [CreateMultipleWirelessPointsRequest](./src/definitions/CreateMultipleWirelessPointsRequest.ts)
 - `result` is of type [CreateMultipleWirelessPointsResponse](./src/definitions/CreateMultipleWirelessPointsResponse.ts)
@@ -1590,10 +1590,10 @@ App Permission|`EditAccounts`
 User Permission|`ConfigureEmergencyMaps`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().wirelessPointsBulkUpdate().post(updateMultipleWirelessPointsRequest)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().wirelessPointsBulkUpdate().post(updateMultipleWirelessPointsRequest);
+await rc.revoke();
 ```
 - Parameter `updateMultipleWirelessPointsRequest` is of type [UpdateMultipleWirelessPointsRequest](./src/definitions/UpdateMultipleWirelessPointsRequest.ts)
 - `result` is of type [UpdateMultipleWirelessPointsResponse](./src/definitions/UpdateMultipleWirelessPointsResponse.ts)
@@ -1614,10 +1614,10 @@ App Permission|`EditAccounts`
 User Permission|`ConfigureEmergencyMaps`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().wirelessPointsBulkValidate().post(validateMultipleWirelessPointsRequest)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().wirelessPointsBulkValidate().post(validateMultipleWirelessPointsRequest);
+await rc.revoke();
 ```
 - Parameter `validateMultipleWirelessPointsRequest` is of type [ValidateMultipleWirelessPointsRequest](./src/definitions/ValidateMultipleWirelessPointsRequest.ts)
 - `result` is of type [ValidateMultipleWirelessPointsResponse](./src/definitions/ValidateMultipleWirelessPointsResponse.ts)
@@ -1638,10 +1638,10 @@ App Permission|`EditAccounts`
 User Permission|`ConfigureEmergencyMaps`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().wirelessPoints(pointId).get()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().wirelessPoints(pointId).get();
+await rc.revoke();
 ```
 
 - `result` is of type [WirelessPointInfo](./src/definitions/WirelessPointInfo.ts)
@@ -1662,10 +1662,10 @@ App Permission|`EditAccounts`
 User Permission|`ConfigureEmergencyMaps`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().wirelessPoints(pointId).put(updateWirelessPoint)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().wirelessPoints(pointId).put(updateWirelessPoint);
+await rc.revoke();
 ```
 - Parameter `updateWirelessPoint` is of type [UpdateWirelessPoint](./src/definitions/UpdateWirelessPoint.ts)
 - `result` is of type [WirelessPointInfo](./src/definitions/WirelessPointInfo.ts)
@@ -1686,10 +1686,10 @@ App Permission|`EditAccounts`
 User Permission|`ConfigureEmergencyMaps`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().wirelessPoints(pointId).delete()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().wirelessPoints(pointId).delete();
+await rc.revoke();
 ```
 
 - `result` is an empty string
@@ -1710,10 +1710,10 @@ App Permission|`EditAccounts`
 User Permission|`ConfigureEmergencyMaps`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).emergencyLocations().post(emergencyLocationInfoRequest)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).emergencyLocations().post(emergencyLocationInfoRequest);
+await rc.revoke();
 ```
 - Parameter `emergencyLocationInfoRequest` is of type [EmergencyLocationInfoRequest](./src/definitions/EmergencyLocationInfoRequest.ts)
 - `result` is an empty string
@@ -1734,10 +1734,10 @@ App Permission|`EditAccounts`
 User Permission|`ConfigureEmergencyMaps`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).emergencyLocations().list(listEmergencyLocationsParameters)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).emergencyLocations().list(listEmergencyLocationsParameters);
+await rc.revoke();
 ```
 - Parameter `listEmergencyLocationsParameters` is of type [ListEmergencyLocationsParameters](./src/definitions/ListEmergencyLocationsParameters.ts)
 - `result` is of type [EmergencyLocationList](./src/definitions/EmergencyLocationList.ts)
@@ -1758,10 +1758,10 @@ App Permission|`EditAccounts`
 User Permission|`ConfigureEmergencyMaps`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).emergencyLocations(locationId).get()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).emergencyLocations(locationId).get();
+await rc.revoke();
 ```
 
 - `result` is of type [EmergencyLocationInfo](./src/definitions/EmergencyLocationInfo.ts)
@@ -1782,10 +1782,10 @@ App Permission|`EditAccounts`
 User Permission|`ConfigureEmergencyMaps`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).emergencyLocations(locationId).put(emergencyLocationInfoRequest)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).emergencyLocations(locationId).put(emergencyLocationInfoRequest);
+await rc.revoke();
 ```
 - Parameter `emergencyLocationInfoRequest` is of type [EmergencyLocationInfoRequest](./src/definitions/EmergencyLocationInfoRequest.ts)
 - `result` is of type [EmergencyLocationInfo](./src/definitions/EmergencyLocationInfo.ts)
@@ -1806,10 +1806,10 @@ App Permission|`ReadAccounts`
 User Permission|`ReadExtensions`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).extension().list(listExtensionsParameters)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).extension().list(listExtensionsParameters);
+await rc.revoke();
 ```
 - Parameter `listExtensionsParameters` is of type [ListExtensionsParameters](./src/definitions/ListExtensionsParameters.ts)
 - `result` is of type [GetExtensionListResponse](./src/definitions/GetExtensionListResponse.ts)
@@ -1830,10 +1830,10 @@ App Permission|`EditAccounts`
 User Permission|`AddRemoveUsers`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).extension().post(extensionCreationRequest)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).extension().post(extensionCreationRequest);
+await rc.revoke();
 ```
 - Parameter `extensionCreationRequest` is of type [ExtensionCreationRequest](./src/definitions/ExtensionCreationRequest.ts)
 - `result` is of type [ExtensionCreationResponse](./src/definitions/ExtensionCreationResponse.ts)
@@ -1854,10 +1854,10 @@ App Permission|`ReadAccounts`
 User Permission|`ReadExtensions`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).get()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).get();
+await rc.revoke();
 ```
 
 - `result` is of type [GetExtensionInfoResponse](./src/definitions/GetExtensionInfoResponse.ts)
@@ -1879,10 +1879,10 @@ App Permission|`EditExtensions`
 User Permission|`EditUserInfo OR EditUserCredentials`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).put(extensionUpdateRequest)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).put(extensionUpdateRequest);
+await rc.revoke();
 ```
 - Parameter `extensionUpdateRequest` is of type [ExtensionUpdateRequest](./src/definitions/ExtensionUpdateRequest.ts)
 - `result` is of type [GetExtensionInfoResponse](./src/definitions/GetExtensionInfoResponse.ts)
@@ -1904,10 +1904,10 @@ App Permission|`EditAccounts`
 User Permission|`AddRemoveUsers`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).delete(deleteExtensionParameters)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).delete(deleteExtensionParameters);
+await rc.revoke();
 ```
 - Parameter `deleteExtensionParameters` is of type [DeleteExtensionParameters](./src/definitions/DeleteExtensionParameters.ts)
 - `result` is an empty string
@@ -1929,10 +1929,10 @@ App Permission|`ReadCallLog`
 User Permission|`ReadCallLog`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).activeCalls().get(listExtensionActiveCallsParameters)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).activeCalls().get(listExtensionActiveCallsParameters);
+await rc.revoke();
 ```
 - Parameter `listExtensionActiveCallsParameters` is of type [ListExtensionActiveCallsParameters](./src/definitions/ListExtensionActiveCallsParameters.ts)
 - `result` is of type [UserActiveCallsResponse](./src/definitions/UserActiveCallsResponse.ts)
@@ -1954,10 +1954,10 @@ App Permission|`ReadContacts`
 User Permission|`ReadPersonalContacts`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).addressBookSync().get(syncAddressBookParameters)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).addressBookSync().get(syncAddressBookParameters);
+await rc.revoke();
 ```
 - Parameter `syncAddressBookParameters` is of type [SyncAddressBookParameters](./src/definitions/SyncAddressBookParameters.ts)
 - `result` is of type [AddressBookSync](./src/definitions/AddressBookSync.ts)
@@ -1979,10 +1979,10 @@ App Permission|`ReadContacts`
 User Permission|`ReadPersonalContacts`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).addressBook().contact().list(listContactsParameters)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).addressBook().contact().list(listContactsParameters);
+await rc.revoke();
 ```
 - Parameter `listContactsParameters` is of type [ListContactsParameters](./src/definitions/ListContactsParameters.ts)
 - `result` is of type [ContactList](./src/definitions/ContactList.ts)
@@ -2004,10 +2004,10 @@ App Permission|`Contacts`
 User Permission|`EditPersonalContacts`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).addressBook().contact().post(personalContactRequest, createContactParameters)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).addressBook().contact().post(personalContactRequest, createContactParameters);
+await rc.revoke();
 ```
 - Parameter `personalContactRequest` is of type [PersonalContactRequest](./src/definitions/PersonalContactRequest.ts)
 - Parameter `createContactParameters` is of type [CreateContactParameters](./src/definitions/CreateContactParameters.ts)
@@ -2030,10 +2030,10 @@ App Permission|`ReadContacts`
 User Permission|`ReadPersonalContacts`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).addressBook().contact(contactId).get()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).addressBook().contact(contactId).get();
+await rc.revoke();
 ```
 
 - `result` is of type [PersonalContactResource](./src/definitions/PersonalContactResource.ts)
@@ -2055,10 +2055,10 @@ App Permission|`Contacts`
 User Permission|`EditPersonalContacts`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).addressBook().contact(contactId).put(personalContactRequest, updateContactParameters)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).addressBook().contact(contactId).put(personalContactRequest, updateContactParameters);
+await rc.revoke();
 ```
 - Parameter `personalContactRequest` is of type [PersonalContactRequest](./src/definitions/PersonalContactRequest.ts)
 - Parameter `updateContactParameters` is of type [UpdateContactParameters](./src/definitions/UpdateContactParameters.ts)
@@ -2081,10 +2081,10 @@ App Permission|`Contacts`
 User Permission|`EditPersonalContacts`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).addressBook().contact(contactId).delete()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).addressBook().contact(contactId).delete();
+await rc.revoke();
 ```
 
 - `result` is an empty string
@@ -2106,10 +2106,10 @@ App Permission|`ReadAccounts`
 User Permission|`ReadUserAnsweringRules`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).answeringRule().list(listAnsweringRulesParameters)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).answeringRule().list(listAnsweringRulesParameters);
+await rc.revoke();
 ```
 - Parameter `listAnsweringRulesParameters` is of type [ListAnsweringRulesParameters](./src/definitions/ListAnsweringRulesParameters.ts)
 - `result` is of type [UserAnsweringRuleList](./src/definitions/UserAnsweringRuleList.ts)
@@ -2131,10 +2131,10 @@ App Permission|`EditExtensions`
 User Permission|`EditUserAnsweringRules`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).answeringRule().post(createAnsweringRuleRequest)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).answeringRule().post(createAnsweringRuleRequest);
+await rc.revoke();
 ```
 - Parameter `createAnsweringRuleRequest` is of type [CreateAnsweringRuleRequest](./src/definitions/CreateAnsweringRuleRequest.ts)
 - `result` is of type [CustomAnsweringRuleInfo](./src/definitions/CustomAnsweringRuleInfo.ts)
@@ -2156,10 +2156,10 @@ App Permission|`ReadAccounts`
 User Permission|`ReadUserAnsweringRules`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).answeringRule(ruleId).get(readAnsweringRuleParameters)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).answeringRule(ruleId).get(readAnsweringRuleParameters);
+await rc.revoke();
 ```
 - Parameter `readAnsweringRuleParameters` is of type [ReadAnsweringRuleParameters](./src/definitions/ReadAnsweringRuleParameters.ts)
 - `result` is of type [AnsweringRuleInfo](./src/definitions/AnsweringRuleInfo.ts)
@@ -2181,10 +2181,10 @@ App Permission|`EditExtensions`
 User Permission|`EditUserAnsweringRules`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).answeringRule(ruleId).put(updateAnsweringRuleRequest)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).answeringRule(ruleId).put(updateAnsweringRuleRequest);
+await rc.revoke();
 ```
 - Parameter `updateAnsweringRuleRequest` is of type [UpdateAnsweringRuleRequest](./src/definitions/UpdateAnsweringRuleRequest.ts)
 - `result` is of type [AnsweringRuleInfo](./src/definitions/AnsweringRuleInfo.ts)
@@ -2206,10 +2206,10 @@ App Permission|`EditExtensions`
 User Permission|`EditUserAnsweringRules`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).answeringRule(ruleId).delete()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).answeringRule(ruleId).delete();
+await rc.revoke();
 ```
 
 - `result` is an empty string
@@ -2231,10 +2231,10 @@ App Permission|`N/A`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).authzProfile().get()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).authzProfile().get();
+await rc.revoke();
 ```
 
 - `result` is of type [AuthProfileResource](./src/definitions/AuthProfileResource.ts)
@@ -2256,10 +2256,10 @@ App Permission|`N/A`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).authzProfile().check().get(checkUserPermissionParameters)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).authzProfile().check().get(checkUserPermissionParameters);
+await rc.revoke();
 ```
 - Parameter `checkUserPermissionParameters` is of type [CheckUserPermissionParameters](./src/definitions/CheckUserPermissionParameters.ts)
 - `result` is of type [AuthProfileCheckResource](./src/definitions/AuthProfileCheckResource.ts)
@@ -2281,10 +2281,10 @@ App Permission|`ReadAccounts`
 User Permission|`ReadExtensions`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).businessHours().get()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).businessHours().get();
+await rc.revoke();
 ```
 
 - `result` is of type [GetUserBusinessHoursResponse](./src/definitions/GetUserBusinessHoursResponse.ts)
@@ -2306,10 +2306,10 @@ App Permission|`EditExtensions`
 User Permission|`EditUserAnsweringRules`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).businessHours().put(userBusinessHoursUpdateRequest)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).businessHours().put(userBusinessHoursUpdateRequest);
+await rc.revoke();
 ```
 - Parameter `userBusinessHoursUpdateRequest` is of type [UserBusinessHoursUpdateRequest](./src/definitions/UserBusinessHoursUpdateRequest.ts)
 - `result` is of type [UserBusinessHoursUpdateResponse](./src/definitions/UserBusinessHoursUpdateResponse.ts)
@@ -2331,10 +2331,10 @@ App Permission|`ReadCallLog`
 User Permission|`ReadCallLog`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).callLog().list(readUserCallLogParameters)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).callLog().list(readUserCallLogParameters);
+await rc.revoke();
 ```
 - Parameter `readUserCallLogParameters` is of type [ReadUserCallLogParameters](./src/definitions/ReadUserCallLogParameters.ts)
 - `result` is of type [UserCallLogResponse](./src/definitions/UserCallLogResponse.ts)
@@ -2356,10 +2356,10 @@ App Permission|`EditCallLog`
 User Permission|`EditCallLog`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).callLog().delete(deleteUserCallLogParameters)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).callLog().delete(deleteUserCallLogParameters);
+await rc.revoke();
 ```
 - Parameter `deleteUserCallLogParameters` is of type [DeleteUserCallLogParameters](./src/definitions/DeleteUserCallLogParameters.ts)
 - `result` is an empty string
@@ -2381,10 +2381,10 @@ App Permission|`ReadCallLog`
 User Permission|`ReadCallLog`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).callLogSync().get(syncUserCallLogParameters)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).callLogSync().get(syncUserCallLogParameters);
+await rc.revoke();
 ```
 - Parameter `syncUserCallLogParameters` is of type [SyncUserCallLogParameters](./src/definitions/SyncUserCallLogParameters.ts)
 - `result` is of type [CallLogSync](./src/definitions/CallLogSync.ts)
@@ -2406,10 +2406,10 @@ App Permission|`ReadCallLog`
 User Permission|`ReadCallLog`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).callLog(callRecordId).get(readUserCallRecordParameters)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).callLog(callRecordId).get(readUserCallRecordParameters);
+await rc.revoke();
 ```
 - Parameter `readUserCallRecordParameters` is of type [ReadUserCallRecordParameters](./src/definitions/ReadUserCallRecordParameters.ts)
 - `result` is of type [UserCallLogRecord](./src/definitions/UserCallLogRecord.ts)
@@ -2431,10 +2431,10 @@ App Permission|`Accounts`
 User Permission|`JoinLeaveCallQueue`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).callQueues().put(userCallQueues)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).callQueues().put(userCallQueues);
+await rc.revoke();
 ```
 - Parameter `userCallQueues` is of type [UserCallQueues](./src/definitions/UserCallQueues.ts)
 - `result` is of type [UserCallQueues](./src/definitions/UserCallQueues.ts)
@@ -2456,10 +2456,10 @@ App Permission|`ReadAccounts`
 User Permission|`ReadBlockedNumbers`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).callerBlocking().get()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).callerBlocking().get();
+await rc.revoke();
 ```
 
 - `result` is of type [CallerBlockingSettings](./src/definitions/CallerBlockingSettings.ts)
@@ -2481,10 +2481,10 @@ App Permission|`EditExtensions`
 User Permission|`EditBlockedNumbers`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).callerBlocking().put(callerBlockingSettingsUpdate)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).callerBlocking().put(callerBlockingSettingsUpdate);
+await rc.revoke();
 ```
 - Parameter `callerBlockingSettingsUpdate` is of type [CallerBlockingSettingsUpdate](./src/definitions/CallerBlockingSettingsUpdate.ts)
 - `result` is of type [CallerBlockingSettings](./src/definitions/CallerBlockingSettings.ts)
@@ -2506,10 +2506,10 @@ App Permission|`ReadAccounts`
 User Permission|`ReadBlockedNumbers`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).callerBlocking().phoneNumbers().list(listBlockedAllowedNumbersParameters)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).callerBlocking().phoneNumbers().list(listBlockedAllowedNumbersParameters);
+await rc.revoke();
 ```
 - Parameter `listBlockedAllowedNumbersParameters` is of type [ListBlockedAllowedNumbersParameters](./src/definitions/ListBlockedAllowedNumbersParameters.ts)
 - `result` is of type [BlockedAllowedPhoneNumbersList](./src/definitions/BlockedAllowedPhoneNumbersList.ts)
@@ -2531,10 +2531,10 @@ App Permission|`EditExtensions`
 User Permission|`EditBlockedNumbers`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).callerBlocking().phoneNumbers().post(addBlockedAllowedPhoneNumber)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).callerBlocking().phoneNumbers().post(addBlockedAllowedPhoneNumber);
+await rc.revoke();
 ```
 - Parameter `addBlockedAllowedPhoneNumber` is of type [AddBlockedAllowedPhoneNumber](./src/definitions/AddBlockedAllowedPhoneNumber.ts)
 - `result` is of type [BlockedAllowedPhoneNumberInfo](./src/definitions/BlockedAllowedPhoneNumberInfo.ts)
@@ -2556,10 +2556,10 @@ App Permission|`ReadAccounts`
 User Permission|`ReadBlockedNumbers`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).callerBlocking().phoneNumbers(blockedNumberId).get()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).callerBlocking().phoneNumbers(blockedNumberId).get();
+await rc.revoke();
 ```
 
 - `result` is of type [BlockedAllowedPhoneNumberInfo](./src/definitions/BlockedAllowedPhoneNumberInfo.ts)
@@ -2581,10 +2581,10 @@ App Permission|`EditExtensions`
 User Permission|`EditBlockedNumbers`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).callerBlocking().phoneNumbers(blockedNumberId).delete()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).callerBlocking().phoneNumbers(blockedNumberId).delete();
+await rc.revoke();
 ```
 
 - `result` is an empty string
@@ -2606,10 +2606,10 @@ App Permission|`EditExtensions`
 User Permission|`EditBlockedNumbers`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).callerBlocking().phoneNumbers(blockedNumberId).put(addBlockedAllowedPhoneNumber)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).callerBlocking().phoneNumbers(blockedNumberId).put(addBlockedAllowedPhoneNumber);
+await rc.revoke();
 ```
 - Parameter `addBlockedAllowedPhoneNumber` is of type [AddBlockedAllowedPhoneNumber](./src/definitions/AddBlockedAllowedPhoneNumber.ts)
 - `result` is of type [BlockedAllowedPhoneNumberInfo](./src/definitions/BlockedAllowedPhoneNumberInfo.ts)
@@ -2631,10 +2631,10 @@ App Permission|`ReadAccounts`
 User Permission|`ReadCallerIDSettings`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).callerId().get()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).callerId().get();
+await rc.revoke();
 ```
 
 - `result` is of type [ExtensionCallerIdInfo](./src/definitions/ExtensionCallerIdInfo.ts)
@@ -2656,10 +2656,10 @@ App Permission|`EditExtensions`
 User Permission|`EditCallerIDSettings`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).callerId().put(extensionCallerIdInfo)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).callerId().put(extensionCallerIdInfo);
+await rc.revoke();
 ```
 - Parameter `extensionCallerIdInfo` is of type [ExtensionCallerIdInfo](./src/definitions/ExtensionCallerIdInfo.ts)
 - `result` is of type [ExtensionCallerIdInfo](./src/definitions/ExtensionCallerIdInfo.ts)
@@ -2681,10 +2681,10 @@ App Permission|`InternalMessages`
 User Permission|`InternalSMS`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).companyPager().post(createInternalTextMessageRequest)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).companyPager().post(createInternalTextMessageRequest);
+await rc.revoke();
 ```
 - Parameter `createInternalTextMessageRequest` is of type [CreateInternalTextMessageRequest](./src/definitions/CreateInternalTextMessageRequest.ts)
 - `result` is of type [GetMessageInfoResponse](./src/definitions/GetMessageInfoResponse.ts)
@@ -2706,10 +2706,10 @@ App Permission|`ReadAccounts`
 User Permission|`OrganizeConference`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).conferencing().get(readConferencingSettingsParameters)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).conferencing().get(readConferencingSettingsParameters);
+await rc.revoke();
 ```
 - Parameter `readConferencingSettingsParameters` is of type [ReadConferencingSettingsParameters](./src/definitions/ReadConferencingSettingsParameters.ts)
 - `result` is of type [GetConferencingInfoResponse](./src/definitions/GetConferencingInfoResponse.ts)
@@ -2731,10 +2731,10 @@ App Permission|`EditExtensions`
 User Permission|`OrganizeConference`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).conferencing().put(updateConferencingInfoRequest)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).conferencing().put(updateConferencingInfoRequest);
+await rc.revoke();
 ```
 - Parameter `updateConferencingInfoRequest` is of type [UpdateConferencingInfoRequest](./src/definitions/UpdateConferencingInfoRequest.ts)
 - `result` is of type [GetConferencingInfoResponse](./src/definitions/GetConferencingInfoResponse.ts)
@@ -2756,10 +2756,10 @@ App Permission|`ReadAccounts`
 User Permission|`ReadUserDevices`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).device().get(listExtensionDevicesParameters)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).device().get(listExtensionDevicesParameters);
+await rc.revoke();
 ```
 - Parameter `listExtensionDevicesParameters` is of type [ListExtensionDevicesParameters](./src/definitions/ListExtensionDevicesParameters.ts)
 - `result` is of type [GetExtensionDevicesResponse](./src/definitions/GetExtensionDevicesResponse.ts)
@@ -2781,10 +2781,10 @@ App Permission|`ReadContacts`
 User Permission|`ReadPersonalContacts`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).favorite().get()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).favorite().get();
+await rc.revoke();
 ```
 
 - `result` is of type [FavoriteContactList](./src/definitions/FavoriteContactList.ts)
@@ -2806,10 +2806,10 @@ App Permission|`Contacts`
 User Permission|`EditPersonalContacts`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).favorite().put(favoriteCollection)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).favorite().put(favoriteCollection);
+await rc.revoke();
 ```
 - Parameter `favoriteCollection` is of type [FavoriteCollection](./src/definitions/FavoriteCollection.ts)
 - `result` is of type [FavoriteContactList](./src/definitions/FavoriteContactList.ts)
@@ -2831,10 +2831,10 @@ App Permission|`Faxes`
 User Permission|`OutboundFaxes`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).fax().post(createFaxMessageRequest)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).fax().post(createFaxMessageRequest);
+await rc.revoke();
 ```
 - Parameter `createFaxMessageRequest` is of type [CreateFaxMessageRequest](./src/definitions/CreateFaxMessageRequest.ts)
 - `result` is of type [FaxResponse](./src/definitions/FaxResponse.ts)
@@ -2856,10 +2856,10 @@ App Permission|`ReadAccounts`
 User Permission|`ReadExtensions`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).features().get(readUserFeaturesParameters)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).features().get(readUserFeaturesParameters);
+await rc.revoke();
 ```
 - Parameter `readUserFeaturesParameters` is of type [ReadUserFeaturesParameters](./src/definitions/ReadUserFeaturesParameters.ts)
 - `result` is of type [FeatureList](./src/definitions/FeatureList.ts)
@@ -2881,10 +2881,10 @@ App Permission|`ReadAccounts`
 User Permission|`ReadUserForwardingFlipNumbers`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).forwardingNumber().list(listForwardingNumbersParameters)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).forwardingNumber().list(listForwardingNumbersParameters);
+await rc.revoke();
 ```
 - Parameter `listForwardingNumbersParameters` is of type [ListForwardingNumbersParameters](./src/definitions/ListForwardingNumbersParameters.ts)
 - `result` is of type [GetExtensionForwardingNumberListResponse](./src/definitions/GetExtensionForwardingNumberListResponse.ts)
@@ -2906,10 +2906,10 @@ App Permission|`EditExtensions`
 User Permission|`EditUserForwardingFlipNumbers`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).forwardingNumber().post(createForwardingNumberRequest)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).forwardingNumber().post(createForwardingNumberRequest);
+await rc.revoke();
 ```
 - Parameter `createForwardingNumberRequest` is of type [CreateForwardingNumberRequest](./src/definitions/CreateForwardingNumberRequest.ts)
 - `result` is of type [ForwardingNumberInfo](./src/definitions/ForwardingNumberInfo.ts)
@@ -2931,10 +2931,10 @@ App Permission|`ReadAccounts`
 User Permission|`ReadUserForwardingFlipNumbers`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).forwardingNumber(forwardingNumberId).get()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).forwardingNumber(forwardingNumberId).get();
+await rc.revoke();
 ```
 
 - `result` is of type [ForwardingNumberInfo](./src/definitions/ForwardingNumberInfo.ts)
@@ -2956,10 +2956,10 @@ App Permission|`EditExtensions`
 User Permission|`EditUserForwardingFlipNumbers`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).forwardingNumber(forwardingNumberId).put(updateForwardingNumberRequest)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).forwardingNumber(forwardingNumberId).put(updateForwardingNumberRequest);
+await rc.revoke();
 ```
 - Parameter `updateForwardingNumberRequest` is of type [UpdateForwardingNumberRequest](./src/definitions/UpdateForwardingNumberRequest.ts)
 - `result` is of type [ForwardingNumberInfo](./src/definitions/ForwardingNumberInfo.ts)
@@ -2981,10 +2981,10 @@ App Permission|`EditExtensions`
 User Permission|`EditUserForwardingFlipNumbers`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).forwardingNumber(forwardingNumberId).delete()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).forwardingNumber(forwardingNumberId).delete();
+await rc.revoke();
 ```
 
 - `result` is an empty string
@@ -3006,10 +3006,10 @@ App Permission|`ReadAccounts`
 User Permission|`ReadExtensions`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).grant().get(listExtensionGrantsParameters)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).grant().get(listExtensionGrantsParameters);
+await rc.revoke();
 ```
 - Parameter `listExtensionGrantsParameters` is of type [ListExtensionGrantsParameters](./src/definitions/ListExtensionGrantsParameters.ts)
 - `result` is of type [GetExtensionGrantListResponse](./src/definitions/GetExtensionGrantListResponse.ts)
@@ -3031,10 +3031,10 @@ App Permission|`EditExtensions`
 User Permission|`EditUserAnsweringRules`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).greeting().post(createCustomUserGreetingRequest)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).greeting().post(createCustomUserGreetingRequest);
+await rc.revoke();
 ```
 - Parameter `createCustomUserGreetingRequest` is of type [CreateCustomUserGreetingRequest](./src/definitions/CreateCustomUserGreetingRequest.ts)
 - `result` is of type [CustomUserGreetingInfo](./src/definitions/CustomUserGreetingInfo.ts)
@@ -3056,10 +3056,10 @@ App Permission|`ReadAccounts`
 User Permission|`ReadUserInfo`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).greeting(greetingId).get()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).greeting(greetingId).get();
+await rc.revoke();
 ```
 
 - `result` is of type [CustomUserGreetingInfo](./src/definitions/CustomUserGreetingInfo.ts)
@@ -3081,10 +3081,10 @@ App Permission|`Meetings`
 User Permission|`Meetings`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).meeting().list()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).meeting().list();
+await rc.revoke();
 ```
 
 - `result` is of type [MeetingsResource](./src/definitions/MeetingsResource.ts)
@@ -3106,10 +3106,10 @@ App Permission|`Meetings`
 User Permission|`Meetings`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).meeting().post(meetingRequestResource)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).meeting().post(meetingRequestResource);
+await rc.revoke();
 ```
 - Parameter `meetingRequestResource` is of type [MeetingRequestResource](./src/definitions/MeetingRequestResource.ts)
 - `result` is of type [MeetingResponseResource](./src/definitions/MeetingResponseResource.ts)
@@ -3131,10 +3131,10 @@ App Permission|`Meetings`
 User Permission|`MeetingsRecordings`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).meetingRecordings().get(listUserMeetingRecordingsParameters)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).meetingRecordings().get(listUserMeetingRecordingsParameters);
+await rc.revoke();
 ```
 - Parameter `listUserMeetingRecordingsParameters` is of type [ListUserMeetingRecordingsParameters](./src/definitions/ListUserMeetingRecordingsParameters.ts)
 - `result` is of type [ListMeetingRecordingsResponse](./src/definitions/ListMeetingRecordingsResponse.ts)
@@ -3156,10 +3156,10 @@ App Permission|`Meetings`
 User Permission|`Meetings`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).meeting().serviceInfo().get()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).meeting().serviceInfo().get();
+await rc.revoke();
 ```
 
 - `result` is of type [MeetingServiceInfoResource](./src/definitions/MeetingServiceInfoResource.ts)
@@ -3181,10 +3181,10 @@ App Permission|`Meetings`
 User Permission|`Meetings`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).meeting().serviceInfo().patch(meetingServiceInfoRequest)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).meeting().serviceInfo().patch(meetingServiceInfoRequest);
+await rc.revoke();
 ```
 - Parameter `meetingServiceInfoRequest` is of type [MeetingServiceInfoRequest](./src/definitions/MeetingServiceInfoRequest.ts)
 - `result` is of type [MeetingServiceInfoResource](./src/definitions/MeetingServiceInfoResource.ts)
@@ -3206,10 +3206,10 @@ App Permission|`Meetings`
 User Permission|`Meetings`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).meeting(meetingId).get()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).meeting(meetingId).get();
+await rc.revoke();
 ```
 
 - `result` is of type [MeetingResponseResource](./src/definitions/MeetingResponseResource.ts)
@@ -3231,10 +3231,10 @@ App Permission|`Meetings`
 User Permission|`Meetings`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).meeting(meetingId).put(meetingRequestResource)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).meeting(meetingId).put(meetingRequestResource);
+await rc.revoke();
 ```
 - Parameter `meetingRequestResource` is of type [MeetingRequestResource](./src/definitions/MeetingRequestResource.ts)
 - `result` is of type [MeetingResponseResource](./src/definitions/MeetingResponseResource.ts)
@@ -3256,10 +3256,10 @@ App Permission|`Meetings`
 User Permission|`Meetings`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).meeting(meetingId).delete()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).meeting(meetingId).delete();
+await rc.revoke();
 ```
 
 - `result` is an empty string
@@ -3281,10 +3281,10 @@ App Permission|`Meetings`
 User Permission|`Meetings`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).meeting(meetingId).end().post()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).meeting(meetingId).end().post();
+await rc.revoke();
 ```
 
 - `result` is an empty string
@@ -3306,10 +3306,10 @@ App Permission|`Meetings`
 User Permission|`Meetings`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).meetingsConfiguration().assistants().get()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).meetingsConfiguration().assistants().get();
+await rc.revoke();
 ```
 
 - `result` is of type [AssistantsResource](./src/definitions/AssistantsResource.ts)
@@ -3331,10 +3331,10 @@ App Permission|`Meetings`
 User Permission|`Meetings`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).meetingsConfiguration().assisted().get()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).meetingsConfiguration().assisted().get();
+await rc.revoke();
 ```
 
 - `result` is of type [AssistedUsersResource](./src/definitions/AssistedUsersResource.ts)
@@ -3356,10 +3356,10 @@ App Permission|`ReadMessages`
 User Permission|`ReadMessages`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).messageStore().list(listMessagesParameters)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).messageStore().list(listMessagesParameters);
+await rc.revoke();
 ```
 - Parameter `listMessagesParameters` is of type [ListMessagesParameters](./src/definitions/ListMessagesParameters.ts)
 - `result` is of type [GetMessageList](./src/definitions/GetMessageList.ts)
@@ -3381,10 +3381,10 @@ App Permission|`ReadMessages`
 User Permission|`ReadMessages`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).messageStore(messageId).get()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).messageStore(messageId).get();
+await rc.revoke();
 ```
 
 - `result` is of type [GetMessageInfoResponse](./src/definitions/GetMessageInfoResponse.ts)
@@ -3406,10 +3406,10 @@ App Permission|`EditMessages`
 User Permission|`EditMessages`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).messageStore(messageId).put(updateMessageRequest, updateMessageParameters)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).messageStore(messageId).put(updateMessageRequest, updateMessageParameters);
+await rc.revoke();
 ```
 - Parameter `updateMessageRequest` is of type [UpdateMessageRequest](./src/definitions/UpdateMessageRequest.ts)
 - Parameter `updateMessageParameters` is of type [UpdateMessageParameters](./src/definitions/UpdateMessageParameters.ts)
@@ -3432,10 +3432,10 @@ App Permission|`EditMessages`
 User Permission|`EditMessages`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).messageStore(messageId).delete(deleteMessageParameters)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).messageStore(messageId).delete(deleteMessageParameters);
+await rc.revoke();
 ```
 - Parameter `deleteMessageParameters` is of type [DeleteMessageParameters](./src/definitions/DeleteMessageParameters.ts)
 - `result` is an empty string
@@ -3457,10 +3457,10 @@ App Permission|`ReadMessages`
 User Permission|`ReadMessageContent`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).messageStore(messageId).content(attachmentId).get(readMessageContentParameters)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).messageStore(messageId).content(attachmentId).get(readMessageContentParameters);
+await rc.revoke();
 ```
 - Parameter `readMessageContentParameters` is of type [ReadMessageContentParameters](./src/definitions/ReadMessageContentParameters.ts)
 - `result` is of type [Buffer](https://nodejs.org/api/buffer.html)
@@ -3486,10 +3486,10 @@ App Permission|`ReadMessages`
 User Permission|`ReadMessages`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).messageSync().get(syncMessagesParameters)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).messageSync().get(syncMessagesParameters);
+await rc.revoke();
 ```
 - Parameter `syncMessagesParameters` is of type [SyncMessagesParameters](./src/definitions/SyncMessagesParameters.ts)
 - `result` is of type [GetMessageSyncResponse](./src/definitions/GetMessageSyncResponse.ts)
@@ -3511,10 +3511,10 @@ App Permission|`SMS`
 User Permission|`OutboundSMS`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).mms().post(createMmsMessage)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).mms().post(createMmsMessage);
+await rc.revoke();
 ```
 - Parameter `createMmsMessage` is of type [CreateMMSMessage](./src/definitions/CreateMMSMessage.ts)
 - `result` is of type [GetMessageInfoResponse](./src/definitions/GetMessageInfoResponse.ts)
@@ -3536,10 +3536,10 @@ App Permission|`ReadAccounts`
 User Permission|`ReadMessagesNotificationsSettings`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).notificationSettings().get()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).notificationSettings().get();
+await rc.revoke();
 ```
 
 - `result` is of type [NotificationSettings](./src/definitions/NotificationSettings.ts)
@@ -3561,10 +3561,10 @@ App Permission|`EditExtensions`
 User Permission|`EditMessagesNotificationsSettings`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).notificationSettings().put(notificationSettingsUpdateRequest)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).notificationSettings().put(notificationSettingsUpdateRequest);
+await rc.revoke();
 ```
 - Parameter `notificationSettingsUpdateRequest` is of type [NotificationSettingsUpdateRequest](./src/definitions/NotificationSettingsUpdateRequest.ts)
 - `result` is of type [NotificationSettings](./src/definitions/NotificationSettings.ts)
@@ -3586,10 +3586,10 @@ App Permission|`ReadAccounts`
 User Permission|`ReadUserPhoneNumbers`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).phoneNumber().get(listExtensionPhoneNumbersParameters)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).phoneNumber().get(listExtensionPhoneNumbersParameters);
+await rc.revoke();
 ```
 - Parameter `listExtensionPhoneNumbersParameters` is of type [ListExtensionPhoneNumbersParameters](./src/definitions/ListExtensionPhoneNumbersParameters.ts)
 - `result` is of type [GetExtensionPhoneNumbersResponse](./src/definitions/GetExtensionPhoneNumbersResponse.ts)
@@ -3611,10 +3611,10 @@ App Permission|`ReadPresence`
 User Permission|`ReadPresenceStatus`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).presence().get(readUserPresenceStatusParameters)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).presence().get(readUserPresenceStatusParameters);
+await rc.revoke();
 ```
 - Parameter `readUserPresenceStatusParameters` is of type [ReadUserPresenceStatusParameters](./src/definitions/ReadUserPresenceStatusParameters.ts)
 - `result` is of type [GetPresenceInfo](./src/definitions/GetPresenceInfo.ts)
@@ -3636,10 +3636,10 @@ App Permission|`EditPresence`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).presence().put(presenceInfoResource)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).presence().put(presenceInfoResource);
+await rc.revoke();
 ```
 - Parameter `presenceInfoResource` is of type [PresenceInfoResource](./src/definitions/PresenceInfoResource.ts)
 - `result` is of type [PresenceInfoResponse](./src/definitions/PresenceInfoResponse.ts)
@@ -3661,10 +3661,10 @@ App Permission|`ReadAccounts`
 User Permission|`ReadExtensions`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).profileImage().list()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).profileImage().list();
+await rc.revoke();
 ```
 
 - `result` is of type [Buffer](https://nodejs.org/api/buffer.html)
@@ -3690,10 +3690,10 @@ App Permission|`EditExtensions`
 User Permission|`EditUserInfo`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).profileImage().post(createUserProfileImageRequest)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).profileImage().post(createUserProfileImageRequest);
+await rc.revoke();
 ```
 - Parameter `createUserProfileImageRequest` is of type [CreateUserProfileImageRequest](./src/definitions/CreateUserProfileImageRequest.ts)
 - `result` is an empty string
@@ -3715,10 +3715,10 @@ App Permission|`EditExtensions`
 User Permission|`EditUserInfo`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).profileImage().put(updateUserProfileImageRequest)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).profileImage().put(updateUserProfileImageRequest);
+await rc.revoke();
 ```
 - Parameter `updateUserProfileImageRequest` is of type [UpdateUserProfileImageRequest](./src/definitions/UpdateUserProfileImageRequest.ts)
 - `result` is an empty string
@@ -3740,10 +3740,10 @@ App Permission|`ReadAccounts`
 User Permission|`ReadExtensions`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).profileImage(scaleSize).get()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).profileImage(scaleSize).get();
+await rc.revoke();
 ```
 
 - `result` is of type [Buffer](https://nodejs.org/api/buffer.html)
@@ -3769,10 +3769,10 @@ App Permission|`RingOut`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).ringOut().post(makeRingOutRequest)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).ringOut().post(makeRingOutRequest);
+await rc.revoke();
 ```
 - Parameter `makeRingOutRequest` is of type [MakeRingOutRequest](./src/definitions/MakeRingOutRequest.ts)
 - `result` is of type [GetRingOutStatusResponse](./src/definitions/GetRingOutStatusResponse.ts)
@@ -3794,10 +3794,10 @@ App Permission|`RingOut`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).ringOut(ringoutId).get()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).ringOut(ringoutId).get();
+await rc.revoke();
 ```
 
 - `result` is of type [GetRingOutStatusResponse](./src/definitions/GetRingOutStatusResponse.ts)
@@ -3819,10 +3819,10 @@ App Permission|`RingOut`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).ringOut(ringoutId).delete()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).ringOut(ringoutId).delete();
+await rc.revoke();
 ```
 
 - `result` is an empty string
@@ -3844,10 +3844,10 @@ App Permission|`RingOut`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).ringout().post(makeRingOutRequest)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).ringout().post(makeRingOutRequest);
+await rc.revoke();
 ```
 - Parameter `makeRingOutRequest` is of type [MakeRingOutRequest](./src/definitions/MakeRingOutRequest.ts)
 - `result` is of type [GetRingOutStatusResponse](./src/definitions/GetRingOutStatusResponse.ts)
@@ -3869,10 +3869,10 @@ App Permission|`RingOut`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).ringout(ringoutId).get()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).ringout(ringoutId).get();
+await rc.revoke();
 ```
 
 - `result` is of type [GetRingOutStatusResponse](./src/definitions/GetRingOutStatusResponse.ts)
@@ -3894,10 +3894,10 @@ App Permission|`RingOut`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).ringout(ringoutId).delete()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).ringout(ringoutId).delete();
+await rc.revoke();
 ```
 
 - `result` is an empty string
@@ -3919,10 +3919,10 @@ App Permission|`SMS`
 User Permission|`OutboundSMS`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).sms().post(createSmsMessage)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).sms().post(createSmsMessage);
+await rc.revoke();
 ```
 - Parameter `createSmsMessage` is of type [CreateSMSMessage](./src/definitions/CreateSMSMessage.ts)
 - `result` is of type [GetMessageInfoResponse](./src/definitions/GetMessageInfoResponse.ts)
@@ -3944,10 +3944,10 @@ App Permission|`ReadPresence`
 User Permission|`ReadPresenceStatus`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).unifiedPresence().get()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).unifiedPresence().get();
+await rc.revoke();
 ```
 
 - `result` is of type [UnifiedPresence](./src/definitions/UnifiedPresence.ts)
@@ -3969,10 +3969,10 @@ App Permission|`EditPresence`
 User Permission|`EditPresenceStatus`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).unifiedPresence().patch(updateUnifiedPresence)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).unifiedPresence().patch(updateUnifiedPresence);
+await rc.revoke();
 ```
 - Parameter `updateUnifiedPresence` is of type [UpdateUnifiedPresence](./src/definitions/UpdateUnifiedPresence.ts)
 - `result` is of type [UnifiedPresence](./src/definitions/UnifiedPresence.ts)
@@ -3994,10 +3994,10 @@ App Permission|`Meetings`
 User Permission|`Meetings`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).videoConfiguration().get()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).videoConfiguration().get();
+await rc.revoke();
 ```
 
 - `result` is of type [UserVideoConfiguration](./src/definitions/UserVideoConfiguration.ts)
@@ -4019,10 +4019,10 @@ App Permission|`Meetings`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).videoConfiguration().put(userVideoConfiguration)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).videoConfiguration().put(userVideoConfiguration);
+await rc.revoke();
 ```
 - Parameter `userVideoConfiguration` is of type [UserVideoConfiguration](./src/definitions/UserVideoConfiguration.ts)
 - `result` is of type [UserVideoConfiguration](./src/definitions/UserVideoConfiguration.ts)
@@ -4044,10 +4044,10 @@ App Permission|`EditAccounts`
 User Permission|`ReadUserInfo`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).greeting().post(createCompanyGreetingRequest)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).greeting().post(createCompanyGreetingRequest);
+await rc.revoke();
 ```
 - Parameter `createCompanyGreetingRequest` is of type [CreateCompanyGreetingRequest](./src/definitions/CreateCompanyGreetingRequest.ts)
 - `result` is of type [CustomCompanyGreetingInfo](./src/definitions/CustomCompanyGreetingInfo.ts)
@@ -4068,10 +4068,10 @@ App Permission|`EditAccounts`
 User Permission|`AutoReceptionist`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).ivrMenus().post(ivrMenuInfo)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).ivrMenus().post(ivrMenuInfo);
+await rc.revoke();
 ```
 - Parameter `ivrMenuInfo` is of type [IVRMenuInfo](./src/definitions/IVRMenuInfo.ts)
 - `result` is of type [IVRMenuInfo](./src/definitions/IVRMenuInfo.ts)
@@ -4092,10 +4092,10 @@ App Permission|`ReadAccounts`
 User Permission|`AutoReceptionist`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).ivrMenus(ivrMenuId).get()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).ivrMenus(ivrMenuId).get();
+await rc.revoke();
 ```
 
 - `result` is of type [IVRMenuInfo](./src/definitions/IVRMenuInfo.ts)
@@ -4116,10 +4116,10 @@ App Permission|`ReadAccounts`
 User Permission|`AutoReceptionist`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).ivrMenus(ivrMenuId).put(ivrMenuInfo)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).ivrMenus(ivrMenuId).put(ivrMenuInfo);
+await rc.revoke();
 ```
 - Parameter `ivrMenuInfo` is of type [IVRMenuInfo](./src/definitions/IVRMenuInfo.ts)
 - `result` is of type [IVRMenuInfo](./src/definitions/IVRMenuInfo.ts)
@@ -4140,10 +4140,10 @@ App Permission|`EditAccounts`
 User Permission|`EditCompanyGreetings`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).ivrPrompts().post(createIvrPromptRequest)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).ivrPrompts().post(createIvrPromptRequest);
+await rc.revoke();
 ```
 - Parameter `createIvrPromptRequest` is of type [CreateIvrPromptRequest](./src/definitions/CreateIvrPromptRequest.ts)
 - `result` is of type [PromptInfo](./src/definitions/PromptInfo.ts)
@@ -4164,10 +4164,10 @@ App Permission|`ReadAccounts`
 User Permission|`ReadCompanyGreetings`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).ivrPrompts().list()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).ivrPrompts().list();
+await rc.revoke();
 ```
 
 - `result` is of type [IVRPrompts](./src/definitions/IVRPrompts.ts)
@@ -4188,10 +4188,10 @@ App Permission|`ReadAccounts`
 User Permission|`ReadCompanyGreetings`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).ivrPrompts(promptId).get()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).ivrPrompts(promptId).get();
+await rc.revoke();
 ```
 
 - `result` is of type [PromptInfo](./src/definitions/PromptInfo.ts)
@@ -4212,10 +4212,10 @@ App Permission|`EditAccounts`
 User Permission|`EditCompanyGreetings`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).ivrPrompts(promptId).delete()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).ivrPrompts(promptId).delete();
+await rc.revoke();
 ```
 
 - `result` is an empty string
@@ -4236,10 +4236,10 @@ App Permission|`EditAccounts`
 User Permission|`EditCompanyGreetings`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).ivrPrompts(promptId).put(updateIvrPromptRequest)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).ivrPrompts(promptId).put(updateIvrPromptRequest);
+await rc.revoke();
 ```
 - Parameter `updateIvrPromptRequest` is of type [UpdateIVRPromptRequest](./src/definitions/UpdateIVRPromptRequest.ts)
 - `result` is of type [PromptInfo](./src/definitions/PromptInfo.ts)
@@ -4260,10 +4260,10 @@ App Permission|`ReadAccounts`
 User Permission|`ReadCompanyGreetings`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).ivrPrompts(promptId).content().get()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).ivrPrompts(promptId).content().get();
+await rc.revoke();
 ```
 
 - `result` is of type [Buffer](https://nodejs.org/api/buffer.html)
@@ -4288,10 +4288,10 @@ App Permission|`Meetings`
 User Permission|`MeetingsRecordings`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).meetingRecordings().get(listAccountMeetingRecordingsParameters)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).meetingRecordings().get(listAccountMeetingRecordingsParameters);
+await rc.revoke();
 ```
 - Parameter `listAccountMeetingRecordingsParameters` is of type [ListAccountMeetingRecordingsParameters](./src/definitions/ListAccountMeetingRecordingsParameters.ts)
 - `result` is of type [ListMeetingRecordingsResponse](./src/definitions/ListMeetingRecordingsResponse.ts)
@@ -4312,10 +4312,10 @@ App Permission|`EditAccounts`
 User Permission|`AccountAdministration`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).messageStoreConfiguration().get()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).messageStoreConfiguration().get();
+await rc.revoke();
 ```
 
 - `result` is of type [MessageStoreConfiguration](./src/definitions/MessageStoreConfiguration.ts)
@@ -4336,10 +4336,10 @@ App Permission|`EditAccounts`
 User Permission|`AccountAdministration`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).messageStoreConfiguration().put(messageStoreConfiguration)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).messageStoreConfiguration().put(messageStoreConfiguration);
+await rc.revoke();
 ```
 - Parameter `messageStoreConfiguration` is of type [MessageStoreConfiguration](./src/definitions/MessageStoreConfiguration.ts)
 - `result` is of type [MessageStoreConfiguration](./src/definitions/MessageStoreConfiguration.ts)
@@ -4360,10 +4360,10 @@ App Permission|`ReadMessages`
 User Permission|`Users`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).messageStoreReport().post(createMessageStoreReportRequest)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).messageStoreReport().post(createMessageStoreReportRequest);
+await rc.revoke();
 ```
 - Parameter `createMessageStoreReportRequest` is of type [CreateMessageStoreReportRequest](./src/definitions/CreateMessageStoreReportRequest.ts)
 - `result` is of type [MessageStoreReport](./src/definitions/MessageStoreReport.ts)
@@ -4384,10 +4384,10 @@ App Permission|`ReadMessages`
 User Permission|`Users`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).messageStoreReport(taskId).get()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).messageStoreReport(taskId).get();
+await rc.revoke();
 ```
 
 - `result` is of type [MessageStoreReport](./src/definitions/MessageStoreReport.ts)
@@ -4408,10 +4408,10 @@ App Permission|`ReadMessages`
 User Permission|`Users`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).messageStoreReport(taskId).archive().list()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).messageStoreReport(taskId).archive().list();
+await rc.revoke();
 ```
 
 - `result` is of type [MessageStoreReportArchive](./src/definitions/MessageStoreReportArchive.ts)
@@ -4432,10 +4432,10 @@ App Permission|`ReadMessages`
 User Permission|`Users`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).messageStoreReport(taskId).archive(archiveId).get()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).messageStoreReport(taskId).archive(archiveId).get();
+await rc.revoke();
 ```
 
 - `result` is an empty string
@@ -4456,10 +4456,10 @@ App Permission|`EditAccounts`
 User Permission|`Groups`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).pagingOnlyGroups(pagingOnlyGroupId).bulkAssign().post(editPagingGroupRequest)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).pagingOnlyGroups(pagingOnlyGroupId).bulkAssign().post(editPagingGroupRequest);
+await rc.revoke();
 ```
 - Parameter `editPagingGroupRequest` is of type [EditPagingGroupRequest](./src/definitions/EditPagingGroupRequest.ts)
 - `result` is an empty string
@@ -4480,10 +4480,10 @@ App Permission|`ReadAccounts`
 User Permission|`ReadCompanyDevices`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).pagingOnlyGroups(pagingOnlyGroupId).devices().get(listPagingGroupDevicesParameters)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).pagingOnlyGroups(pagingOnlyGroupId).devices().get(listPagingGroupDevicesParameters);
+await rc.revoke();
 ```
 - Parameter `listPagingGroupDevicesParameters` is of type [ListPagingGroupDevicesParameters](./src/definitions/ListPagingGroupDevicesParameters.ts)
 - `result` is of type [PagingOnlyGroupDevices](./src/definitions/PagingOnlyGroupDevices.ts)
@@ -4504,10 +4504,10 @@ App Permission|`ReadAccounts`
 User Permission|`ReadUserInfo`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).pagingOnlyGroups(pagingOnlyGroupId).users().get(listPagingGroupUsersParameters)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).pagingOnlyGroups(pagingOnlyGroupId).users().get(listPagingGroupUsersParameters);
+await rc.revoke();
 ```
 - Parameter `listPagingGroupUsersParameters` is of type [ListPagingGroupUsersParameters](./src/definitions/ListPagingGroupUsersParameters.ts)
 - `result` is of type [PagingOnlyGroupUsers](./src/definitions/PagingOnlyGroupUsers.ts)
@@ -4528,10 +4528,10 @@ App Permission|`ReadAccounts`
 User Permission|`ReadCompanyPhoneNumbers`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).phoneNumber().list(listAccountPhoneNumbersParameters)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).phoneNumber().list(listAccountPhoneNumbersParameters);
+await rc.revoke();
 ```
 - Parameter `listAccountPhoneNumbersParameters` is of type [ListAccountPhoneNumbersParameters](./src/definitions/ListAccountPhoneNumbersParameters.ts)
 - `result` is of type [AccountPhoneNumbers](./src/definitions/AccountPhoneNumbers.ts)
@@ -4552,10 +4552,10 @@ App Permission|`ReadAccounts`
 User Permission|`ReadCompanyPhoneNumbers`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).phoneNumber(phoneNumberId).get()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).phoneNumber(phoneNumberId).get();
+await rc.revoke();
 ```
 
 - `result` is of type [CompanyPhoneNumberInfo](./src/definitions/CompanyPhoneNumberInfo.ts)
@@ -4576,10 +4576,10 @@ App Permission|`ReadPresence`
 User Permission|`ReadPresenceStatus`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).presence().get(readAccountPresenceParameters)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).presence().get(readAccountPresenceParameters);
+await rc.revoke();
 ```
 - Parameter `readAccountPresenceParameters` is of type [ReadAccountPresenceParameters](./src/definitions/ReadAccountPresenceParameters.ts)
 - `result` is of type [AccountPresenceInfo](./src/definitions/AccountPresenceInfo.ts)
@@ -4600,10 +4600,10 @@ App Permission|`ReadCallRecording`
 User Permission|`ReadCallRecording`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).recording(recordingId).get()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).recording(recordingId).get();
+await rc.revoke();
 ```
 
 - `result` is of type [GetCallRecordingResponse](./src/definitions/GetCallRecordingResponse.ts)
@@ -4624,10 +4624,10 @@ App Permission|`ReadCallRecording`
 User Permission|`ReadCallRecording`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).recording(recordingId).content().get()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).recording(recordingId).content().get();
+await rc.revoke();
 ```
 
 - `result` is of type [Buffer](https://nodejs.org/api/buffer.html)
@@ -4652,10 +4652,10 @@ App Permission|`ReadAccounts`
 User Permission|`ReadServicePlanInfo`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).serviceInfo().get()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).serviceInfo().get();
+await rc.revoke();
 ```
 
 - `result` is of type [GetServiceInfoResponse](./src/definitions/GetServiceInfoResponse.ts)
@@ -4676,10 +4676,10 @@ App Permission|`CallControl`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).telephony().callOut().post(makeCallOutRequest)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).telephony().callOut().post(makeCallOutRequest);
+await rc.revoke();
 ```
 - Parameter `makeCallOutRequest` is of type [MakeCallOutRequest](./src/definitions/MakeCallOutRequest.ts)
 - `result` is of type [CallSession](./src/definitions/CallSession.ts)
@@ -4700,10 +4700,10 @@ App Permission|`CallControl`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).telephony().sessions(telephonySessionId).get(readCallSessionStatusParameters)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).telephony().sessions(telephonySessionId).get(readCallSessionStatusParameters);
+await rc.revoke();
 ```
 - Parameter `readCallSessionStatusParameters` is of type [ReadCallSessionStatusParameters](./src/definitions/ReadCallSessionStatusParameters.ts)
 - `result` is of type [CallSession](./src/definitions/CallSession.ts)
@@ -4724,10 +4724,10 @@ App Permission|`CallControl`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).telephony().sessions(telephonySessionId).delete()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).telephony().sessions(telephonySessionId).delete();
+await rc.revoke();
 ```
 
 - `result` is an empty string
@@ -4748,10 +4748,10 @@ App Permission|`CallControl`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).telephony().sessions(telephonySessionId).parties(partyId).get()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).telephony().sessions(telephonySessionId).parties(partyId).get();
+await rc.revoke();
 ```
 
 - `result` is of type [CallParty](./src/definitions/CallParty.ts)
@@ -4772,10 +4772,10 @@ App Permission|`CallControl`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).telephony().sessions(telephonySessionId).parties(partyId).patch(partyUpdateRequest)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).telephony().sessions(telephonySessionId).parties(partyId).patch(partyUpdateRequest);
+await rc.revoke();
 ```
 - Parameter `partyUpdateRequest` is of type [PartyUpdateRequest](./src/definitions/PartyUpdateRequest.ts)
 - `result` is of type [CallParty](./src/definitions/CallParty.ts)
@@ -4796,10 +4796,10 @@ App Permission|`CallControl`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).telephony().sessions(telephonySessionId).parties(partyId).answer().post(answerTarget)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).telephony().sessions(telephonySessionId).parties(partyId).answer().post(answerTarget);
+await rc.revoke();
 ```
 - Parameter `answerTarget` is of type [AnswerTarget](./src/definitions/AnswerTarget.ts)
 - `result` is of type [CallParty](./src/definitions/CallParty.ts)
@@ -4820,10 +4820,10 @@ App Permission|`CallControl`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).telephony().sessions(telephonySessionId).parties(partyId).flip().post(callPartyFlip)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).telephony().sessions(telephonySessionId).parties(partyId).flip().post(callPartyFlip);
+await rc.revoke();
 ```
 - Parameter `callPartyFlip` is of type [CallPartyFlip](./src/definitions/CallPartyFlip.ts)
 - `result` is an empty string
@@ -4844,10 +4844,10 @@ App Permission|`CallControl`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).telephony().sessions(telephonySessionId).parties(partyId).forward().post(forwardTarget)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).telephony().sessions(telephonySessionId).parties(partyId).forward().post(forwardTarget);
+await rc.revoke();
 ```
 - Parameter `forwardTarget` is of type [ForwardTarget](./src/definitions/ForwardTarget.ts)
 - `result` is of type [CallParty](./src/definitions/CallParty.ts)
@@ -4868,10 +4868,10 @@ App Permission|`CallControl`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).telephony().sessions(telephonySessionId).parties(partyId).hold().post()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).telephony().sessions(telephonySessionId).parties(partyId).hold().post();
+await rc.revoke();
 ```
 
 - `result` is of type [CallParty](./src/definitions/CallParty.ts)
@@ -4892,10 +4892,10 @@ App Permission|`CallControl`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).telephony().sessions(telephonySessionId).parties(partyId).ignore().post(ignoreRequestBody)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).telephony().sessions(telephonySessionId).parties(partyId).ignore().post(ignoreRequestBody);
+await rc.revoke();
 ```
 - Parameter `ignoreRequestBody` is of type [IgnoreRequestBody](./src/definitions/IgnoreRequestBody.ts)
 - `result` is an empty string
@@ -4916,10 +4916,10 @@ App Permission|`CallControl`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).telephony().sessions(telephonySessionId).parties(partyId).park().post()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).telephony().sessions(telephonySessionId).parties(partyId).park().post();
+await rc.revoke();
 ```
 
 - `result` is of type [CallParty](./src/definitions/CallParty.ts)
@@ -4940,10 +4940,10 @@ App Permission|`CallControl`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).telephony().sessions(telephonySessionId).parties(partyId).pickup().post(pickupTarget)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).telephony().sessions(telephonySessionId).parties(partyId).pickup().post(pickupTarget);
+await rc.revoke();
 ```
 - Parameter `pickupTarget` is of type [PickupTarget](./src/definitions/PickupTarget.ts)
 - `result` is of type [CallParty](./src/definitions/CallParty.ts)
@@ -4964,10 +4964,10 @@ App Permission|`CallControl`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).telephony().sessions(telephonySessionId).parties(partyId).recordings().post()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).telephony().sessions(telephonySessionId).parties(partyId).recordings().post();
+await rc.revoke();
 ```
 
 - `result` is an empty string
@@ -4988,10 +4988,10 @@ App Permission|`CallControl`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).telephony().sessions(telephonySessionId).parties(partyId).recordings(recordingId).patch(callRecordingUpdate, pauseResumeCallRecordingParameters)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).telephony().sessions(telephonySessionId).parties(partyId).recordings(recordingId).patch(callRecordingUpdate, pauseResumeCallRecordingParameters);
+await rc.revoke();
 ```
 - Parameter `callRecordingUpdate` is of type [CallRecordingUpdate](./src/definitions/CallRecordingUpdate.ts)
 - Parameter `pauseResumeCallRecordingParameters` is of type [PauseResumeCallRecordingParameters](./src/definitions/PauseResumeCallRecordingParameters.ts)
@@ -5013,10 +5013,10 @@ App Permission|`CallControl`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).telephony().sessions(telephonySessionId).parties(partyId).reject().post()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).telephony().sessions(telephonySessionId).parties(partyId).reject().post();
+await rc.revoke();
 ```
 
 - `result` is an empty string
@@ -5037,10 +5037,10 @@ App Permission|`CallControl`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).telephony().sessions(telephonySessionId).parties(partyId).reply().post(callPartyReply)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).telephony().sessions(telephonySessionId).parties(partyId).reply().post(callPartyReply);
+await rc.revoke();
 ```
 - Parameter `callPartyReply` is of type [CallPartyReply](./src/definitions/CallPartyReply.ts)
 - `result` is of type [ReplyParty](./src/definitions/ReplyParty.ts)
@@ -5061,10 +5061,10 @@ App Permission|`CallControl`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).telephony().sessions(telephonySessionId).parties(partyId).supervise().post(partySuperviseRequest)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).telephony().sessions(telephonySessionId).parties(partyId).supervise().post(partySuperviseRequest);
+await rc.revoke();
 ```
 - Parameter `partySuperviseRequest` is of type [PartySuperviseRequest](./src/definitions/PartySuperviseRequest.ts)
 - `result` is of type [PartySuperviseResponse](./src/definitions/PartySuperviseResponse.ts)
@@ -5085,10 +5085,10 @@ App Permission|`CallControl`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).telephony().sessions(telephonySessionId).parties(partyId).transfer().post(transferTarget)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).telephony().sessions(telephonySessionId).parties(partyId).transfer().post(transferTarget);
+await rc.revoke();
 ```
 - Parameter `transferTarget` is of type [TransferTarget](./src/definitions/TransferTarget.ts)
 - `result` is of type [CallParty](./src/definitions/CallParty.ts)
@@ -5109,10 +5109,10 @@ App Permission|`CallControl`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).telephony().sessions(telephonySessionId).parties(partyId).unhold().post()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).telephony().sessions(telephonySessionId).parties(partyId).unhold().post();
+await rc.revoke();
 ```
 
 - `result` is of type [CallParty](./src/definitions/CallParty.ts)
@@ -5133,10 +5133,10 @@ App Permission|`CallControl`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).telephony().sessions(telephonySessionId).supervise().post(superviseCallSessionRequest)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).telephony().sessions(telephonySessionId).supervise().post(superviseCallSessionRequest);
+await rc.revoke();
 ```
 - Parameter `superviseCallSessionRequest` is of type [SuperviseCallSessionRequest](./src/definitions/SuperviseCallSessionRequest.ts)
 - `result` is of type [SuperviseCallSession](./src/definitions/SuperviseCallSession.ts)
@@ -5157,10 +5157,10 @@ App Permission|`ReadAccounts`
 User Permission|`ReadCompanyInfo`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).templates().list(listUserTemplatesParameters)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).templates().list(listUserTemplatesParameters);
+await rc.revoke();
 ```
 - Parameter `listUserTemplatesParameters` is of type [ListUserTemplatesParameters](./src/definitions/ListUserTemplatesParameters.ts)
 - `result` is of type [UserTemplates](./src/definitions/UserTemplates.ts)
@@ -5181,10 +5181,10 @@ App Permission|`ReadAccounts`
 User Permission|`ReadCompanyInfo`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).account(accountId).templates(templateId).get()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).templates(templateId).get();
+await rc.revoke();
 ```
 
 - `result` is of type [TemplateInfo](./src/definitions/TemplateInfo.ts)
@@ -5205,10 +5205,10 @@ App Permission|`VoipCalling`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).clientInfo().sipProvision().post(createSipRegistrationRequest)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).clientInfo().sipProvision().post(createSipRegistrationRequest);
+await rc.revoke();
 ```
 - Parameter `createSipRegistrationRequest` is of type [CreateSipRegistrationRequest](./src/definitions/CreateSipRegistrationRequest.ts)
 - `result` is of type [CreateSipRegistrationResponse](./src/definitions/CreateSipRegistrationResponse.ts)
@@ -5228,10 +5228,10 @@ App Permission|`N/A`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).dictionary().country().list(listCountriesParameters)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).dictionary().country().list(listCountriesParameters);
+await rc.revoke();
 ```
 - Parameter `listCountriesParameters` is of type [ListCountriesParameters](./src/definitions/ListCountriesParameters.ts)
 - `result` is of type [GetCountryListResponse](./src/definitions/GetCountryListResponse.ts)
@@ -5251,10 +5251,10 @@ App Permission|`N/A`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).dictionary().country(countryId).get()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).dictionary().country(countryId).get();
+await rc.revoke();
 ```
 
 - `result` is of type [GetCountryInfoDictionaryResponse](./src/definitions/GetCountryInfoDictionaryResponse.ts)
@@ -5274,10 +5274,10 @@ App Permission|`N/A`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).dictionary().faxCoverPage().get(listFaxCoverPagesParameters)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).dictionary().faxCoverPage().get(listFaxCoverPagesParameters);
+await rc.revoke();
 ```
 - Parameter `listFaxCoverPagesParameters` is of type [ListFaxCoverPagesParameters](./src/definitions/ListFaxCoverPagesParameters.ts)
 - `result` is of type [ListFaxCoverPagesResponse](./src/definitions/ListFaxCoverPagesResponse.ts)
@@ -5297,10 +5297,10 @@ App Permission|`N/A`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).dictionary().greeting().list(listStandardGreetingsParameters)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).dictionary().greeting().list(listStandardGreetingsParameters);
+await rc.revoke();
 ```
 - Parameter `listStandardGreetingsParameters` is of type [ListStandardGreetingsParameters](./src/definitions/ListStandardGreetingsParameters.ts)
 - `result` is of type [DictionaryGreetingList](./src/definitions/DictionaryGreetingList.ts)
@@ -5320,10 +5320,10 @@ App Permission|`N/A`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).dictionary().greeting(greetingId).get()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).dictionary().greeting(greetingId).get();
+await rc.revoke();
 ```
 
 - `result` is of type [DictionaryGreetingInfo](./src/definitions/DictionaryGreetingInfo.ts)
@@ -5343,10 +5343,10 @@ App Permission|`N/A`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).dictionary().language().list()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).dictionary().language().list();
+await rc.revoke();
 ```
 
 - `result` is of type [LanguageList](./src/definitions/LanguageList.ts)
@@ -5366,10 +5366,10 @@ App Permission|`N/A`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).dictionary().language(languageId).get()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).dictionary().language(languageId).get();
+await rc.revoke();
 ```
 
 - `result` is of type [LanguageInfo](./src/definitions/LanguageInfo.ts)
@@ -5389,10 +5389,10 @@ App Permission|`N/A`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).dictionary().location().get(listLocationsParameters)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).dictionary().location().get(listLocationsParameters);
+await rc.revoke();
 ```
 - Parameter `listLocationsParameters` is of type [ListLocationsParameters](./src/definitions/ListLocationsParameters.ts)
 - `result` is of type [GetLocationListResponse](./src/definitions/GetLocationListResponse.ts)
@@ -5412,10 +5412,10 @@ App Permission|`N/A`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).dictionary().state().list(listStatesParameters)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).dictionary().state().list(listStatesParameters);
+await rc.revoke();
 ```
 - Parameter `listStatesParameters` is of type [ListStatesParameters](./src/definitions/ListStatesParameters.ts)
 - `result` is of type [GetStateListResponse](./src/definitions/GetStateListResponse.ts)
@@ -5435,10 +5435,10 @@ App Permission|`N/A`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).dictionary().state(stateId).get()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).dictionary().state(stateId).get();
+await rc.revoke();
 ```
 
 - `result` is of type [GetStateInfoResponse](./src/definitions/GetStateInfoResponse.ts)
@@ -5458,10 +5458,10 @@ App Permission|`N/A`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).dictionary().timezone().list(listTimezonesParameters)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).dictionary().timezone().list(listTimezonesParameters);
+await rc.revoke();
 ```
 - Parameter `listTimezonesParameters` is of type [ListTimezonesParameters](./src/definitions/ListTimezonesParameters.ts)
 - `result` is of type [GetTimezoneListResponse](./src/definitions/GetTimezoneListResponse.ts)
@@ -5481,10 +5481,10 @@ App Permission|`N/A`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).dictionary().timezone(timezoneId).get(readTimezoneParameters)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).dictionary().timezone(timezoneId).get(readTimezoneParameters);
+await rc.revoke();
 ```
 - Parameter `readTimezoneParameters` is of type [ReadTimezoneParameters](./src/definitions/ReadTimezoneParameters.ts)
 - `result` is of type [GetTimezoneInfoResponse](./src/definitions/GetTimezoneInfoResponse.ts)
@@ -5504,10 +5504,10 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).glip().cards().post(glipMessageAttachmentInfoRequest, createGlipCardParameters)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).glip().cards().post(glipMessageAttachmentInfoRequest, createGlipCardParameters);
+await rc.revoke();
 ```
 - Parameter `glipMessageAttachmentInfoRequest` is of type [GlipMessageAttachmentInfoRequest](./src/definitions/GlipMessageAttachmentInfoRequest.ts)
 - Parameter `createGlipCardParameters` is of type [CreateGlipCardParameters](./src/definitions/CreateGlipCardParameters.ts)
@@ -5528,10 +5528,10 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).glip().cards(cardId).get()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).glip().cards(cardId).get();
+await rc.revoke();
 ```
 
 - `result` is of type [GlipMessageAttachmentInfo](./src/definitions/GlipMessageAttachmentInfo.ts)
@@ -5551,10 +5551,10 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).glip().cards(cardId).put(glipMessageAttachmentInfoRequest)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).glip().cards(cardId).put(glipMessageAttachmentInfoRequest);
+await rc.revoke();
 ```
 - Parameter `glipMessageAttachmentInfoRequest` is of type [GlipMessageAttachmentInfoRequest](./src/definitions/GlipMessageAttachmentInfoRequest.ts)
 - `result` is an empty string
@@ -5574,10 +5574,10 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).glip().cards(cardId).delete()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).glip().cards(cardId).delete();
+await rc.revoke();
 ```
 
 - `result` is an empty string
@@ -5597,10 +5597,10 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).glip().chats().list(listGlipChatsParameters)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).glip().chats().list(listGlipChatsParameters);
+await rc.revoke();
 ```
 - Parameter `listGlipChatsParameters` is of type [ListGlipChatsParameters](./src/definitions/ListGlipChatsParameters.ts)
 - `result` is of type [GlipChatsList](./src/definitions/GlipChatsList.ts)
@@ -5620,10 +5620,10 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).glip().chats(chatId).get()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).glip().chats(chatId).get();
+await rc.revoke();
 ```
 
 - `result` is of type [GlipChatInfo](./src/definitions/GlipChatInfo.ts)
@@ -5643,10 +5643,10 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).glip().chats(chatId).favorite().post()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).glip().chats(chatId).favorite().post();
+await rc.revoke();
 ```
 
 - `result` is an empty string
@@ -5666,10 +5666,10 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).glip().chats(chatId).notes().post(glipNoteCreate)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).glip().chats(chatId).notes().post(glipNoteCreate);
+await rc.revoke();
 ```
 - Parameter `glipNoteCreate` is of type [GlipNoteCreate](./src/definitions/GlipNoteCreate.ts)
 - `result` is of type [GlipNoteInfo](./src/definitions/GlipNoteInfo.ts)
@@ -5689,10 +5689,10 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).glip().chats(chatId).notes().get(listChatNotesParameters)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).glip().chats(chatId).notes().get(listChatNotesParameters);
+await rc.revoke();
 ```
 - Parameter `listChatNotesParameters` is of type [ListChatNotesParameters](./src/definitions/ListChatNotesParameters.ts)
 - `result` is of type [GlipNotesInfo](./src/definitions/GlipNotesInfo.ts)
@@ -5712,10 +5712,10 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).glip().chats(chatId).posts().list(readGlipPostsParameters)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).glip().chats(chatId).posts().list(readGlipPostsParameters);
+await rc.revoke();
 ```
 - Parameter `readGlipPostsParameters` is of type [ReadGlipPostsParameters](./src/definitions/ReadGlipPostsParameters.ts)
 - `result` is of type [GlipPostsList](./src/definitions/GlipPostsList.ts)
@@ -5735,10 +5735,10 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).glip().chats(chatId).posts().post(glipPostPostBody)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).glip().chats(chatId).posts().post(glipPostPostBody);
+await rc.revoke();
 ```
 - Parameter `glipPostPostBody` is of type [GlipPostPostBody](./src/definitions/GlipPostPostBody.ts)
 - `result` is of type [GlipPostInfo](./src/definitions/GlipPostInfo.ts)
@@ -5758,10 +5758,10 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).glip().chats(chatId).posts(postId).get()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).glip().chats(chatId).posts(postId).get();
+await rc.revoke();
 ```
 
 - `result` is of type [GlipPostInfo](./src/definitions/GlipPostInfo.ts)
@@ -5781,10 +5781,10 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).glip().chats(chatId).posts(postId).patch(glipPatchPostBody)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).glip().chats(chatId).posts(postId).patch(glipPatchPostBody);
+await rc.revoke();
 ```
 - Parameter `glipPatchPostBody` is of type [GlipPatchPostBody](./src/definitions/GlipPatchPostBody.ts)
 - `result` is of type [GlipPostInfo](./src/definitions/GlipPostInfo.ts)
@@ -5804,10 +5804,10 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).glip().chats(chatId).posts(postId).delete()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).glip().chats(chatId).posts(postId).delete();
+await rc.revoke();
 ```
 
 - `result` is an empty string
@@ -5827,10 +5827,10 @@ App Permission|`GlipInternal`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).glip().chats(chatId).read().post()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).glip().chats(chatId).read().post();
+await rc.revoke();
 ```
 
 - `result` is an empty string
@@ -5850,10 +5850,10 @@ App Permission|`N/A`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).glip().chats(chatId).tasks().get(listChatTasksParameters)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).glip().chats(chatId).tasks().get(listChatTasksParameters);
+await rc.revoke();
 ```
 - Parameter `listChatTasksParameters` is of type [ListChatTasksParameters](./src/definitions/ListChatTasksParameters.ts)
 - `result` is of type [GlipTaskList](./src/definitions/GlipTaskList.ts)
@@ -5873,10 +5873,10 @@ App Permission|`N/A`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).glip().chats(chatId).tasks().post(glipCreateTask)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).glip().chats(chatId).tasks().post(glipCreateTask);
+await rc.revoke();
 ```
 - Parameter `glipCreateTask` is of type [GlipCreateTask](./src/definitions/GlipCreateTask.ts)
 - `result` is of type [GlipTaskInfo](./src/definitions/GlipTaskInfo.ts)
@@ -5896,10 +5896,10 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).glip().chats(chatId).unfavorite().post()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).glip().chats(chatId).unfavorite().post();
+await rc.revoke();
 ```
 
 - `result` is an empty string
@@ -5919,10 +5919,10 @@ App Permission|`GlipInternal`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).glip().chats(chatId).unread().post()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).glip().chats(chatId).unread().post();
+await rc.revoke();
 ```
 
 - `result` is an empty string
@@ -5942,10 +5942,10 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).glip().companies(companyId).get()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).glip().companies(companyId).get();
+await rc.revoke();
 ```
 
 - `result` is of type [GlipCompany](./src/definitions/GlipCompany.ts)
@@ -5965,10 +5965,10 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).glip().conversations().list(listGlipConversationsParameters)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).glip().conversations().list(listGlipConversationsParameters);
+await rc.revoke();
 ```
 - Parameter `listGlipConversationsParameters` is of type [ListGlipConversationsParameters](./src/definitions/ListGlipConversationsParameters.ts)
 - `result` is of type [GlipConversationsList](./src/definitions/GlipConversationsList.ts)
@@ -5988,10 +5988,10 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).glip().conversations().post(createGlipConversationRequest)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).glip().conversations().post(createGlipConversationRequest);
+await rc.revoke();
 ```
 - Parameter `createGlipConversationRequest` is of type [CreateGlipConversationRequest](./src/definitions/CreateGlipConversationRequest.ts)
 - `result` is of type [GlipConversationInfo](./src/definitions/GlipConversationInfo.ts)
@@ -6011,10 +6011,10 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).glip().conversations(chatId).get()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).glip().conversations(chatId).get();
+await rc.revoke();
 ```
 
 - `result` is of type [GlipConversationInfo](./src/definitions/GlipConversationInfo.ts)
@@ -6034,10 +6034,10 @@ App Permission|`Glip`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).glip().dataExport().post(createDataExportTaskRequest)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).glip().dataExport().post(createDataExportTaskRequest);
+await rc.revoke();
 ```
 - Parameter `createDataExportTaskRequest` is of type [CreateDataExportTaskRequest](./src/definitions/CreateDataExportTaskRequest.ts)
 - `result` is of type [DataExportTask](./src/definitions/DataExportTask.ts)
@@ -6057,10 +6057,10 @@ App Permission|`Glip`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).glip().dataExport().list(listDataExportTasksParameters)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).glip().dataExport().list(listDataExportTasksParameters);
+await rc.revoke();
 ```
 - Parameter `listDataExportTasksParameters` is of type [ListDataExportTasksParameters](./src/definitions/ListDataExportTasksParameters.ts)
 - `result` is of type [DataExportTaskList](./src/definitions/DataExportTaskList.ts)
@@ -6080,10 +6080,10 @@ App Permission|`Glip`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).glip().dataExport(taskId).get()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).glip().dataExport(taskId).get();
+await rc.revoke();
 ```
 
 - `result` is of type [DataExportTask](./src/definitions/DataExportTask.ts)
@@ -6103,10 +6103,10 @@ App Permission|`Glip`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).glip().dataExport(taskId).datasets(datasetId).get()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).glip().dataExport(taskId).datasets(datasetId).get();
+await rc.revoke();
 ```
 
 - `result` is of type [Buffer](https://nodejs.org/api/buffer.html)
@@ -6130,10 +6130,10 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).glip().events().list(readGlipEventsParameters)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).glip().events().list(readGlipEventsParameters);
+await rc.revoke();
 ```
 - Parameter `readGlipEventsParameters` is of type [ReadGlipEventsParameters](./src/definitions/ReadGlipEventsParameters.ts)
 - `result` is of type [GlipEventsInfo](./src/definitions/GlipEventsInfo.ts)
@@ -6153,10 +6153,10 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).glip().events().post(glipEventCreate)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).glip().events().post(glipEventCreate);
+await rc.revoke();
 ```
 - Parameter `glipEventCreate` is of type [GlipEventCreate](./src/definitions/GlipEventCreate.ts)
 - `result` is of type [GlipEventInfo](./src/definitions/GlipEventInfo.ts)
@@ -6176,10 +6176,10 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).glip().events(eventId).get()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).glip().events(eventId).get();
+await rc.revoke();
 ```
 
 - `result` is of type [GlipEventInfo](./src/definitions/GlipEventInfo.ts)
@@ -6199,10 +6199,10 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).glip().events(eventId).put(glipEventCreate)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).glip().events(eventId).put(glipEventCreate);
+await rc.revoke();
 ```
 - Parameter `glipEventCreate` is of type [GlipEventCreate](./src/definitions/GlipEventCreate.ts)
 - `result` is of type [GlipEventInfo](./src/definitions/GlipEventInfo.ts)
@@ -6222,10 +6222,10 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).glip().events(eventId).delete()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).glip().events(eventId).delete();
+await rc.revoke();
 ```
 
 - `result` is an empty string
@@ -6245,10 +6245,10 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).glip().everyone().get()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).glip().everyone().get();
+await rc.revoke();
 ```
 
 - `result` is of type [GlipEveryoneInfo](./src/definitions/GlipEveryoneInfo.ts)
@@ -6268,10 +6268,10 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).glip().everyone().patch(updateGlipEveryoneRequest)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).glip().everyone().patch(updateGlipEveryoneRequest);
+await rc.revoke();
 ```
 - Parameter `updateGlipEveryoneRequest` is of type [UpdateGlipEveryoneRequest](./src/definitions/UpdateGlipEveryoneRequest.ts)
 - `result` is of type [GlipEveryoneInfo](./src/definitions/GlipEveryoneInfo.ts)
@@ -6291,10 +6291,10 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).glip().favorites().get(listFavoriteChatsParameters)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).glip().favorites().get(listFavoriteChatsParameters);
+await rc.revoke();
 ```
 - Parameter `listFavoriteChatsParameters` is of type [ListFavoriteChatsParameters](./src/definitions/ListFavoriteChatsParameters.ts)
 - `result` is of type [GlipChatsListWithoutNavigation](./src/definitions/GlipChatsListWithoutNavigation.ts)
@@ -6314,10 +6314,10 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).glip().groups().list(listGlipGroupsParameters)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).glip().groups().list(listGlipGroupsParameters);
+await rc.revoke();
 ```
 - Parameter `listGlipGroupsParameters` is of type [ListGlipGroupsParameters](./src/definitions/ListGlipGroupsParameters.ts)
 - `result` is of type [GlipGroupList](./src/definitions/GlipGroupList.ts)
@@ -6337,10 +6337,10 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).glip().groups().post(glipCreateGroup)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).glip().groups().post(glipCreateGroup);
+await rc.revoke();
 ```
 - Parameter `glipCreateGroup` is of type [GlipCreateGroup](./src/definitions/GlipCreateGroup.ts)
 - `result` is of type [GlipGroupInfo](./src/definitions/GlipGroupInfo.ts)
@@ -6360,10 +6360,10 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).glip().groups(groupId).get()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).glip().groups(groupId).get();
+await rc.revoke();
 ```
 
 - `result` is of type [GlipGroupInfo](./src/definitions/GlipGroupInfo.ts)
@@ -6383,10 +6383,10 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).glip().groups(groupId).bulkAssign().post(editGroupRequest)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).glip().groups(groupId).bulkAssign().post(editGroupRequest);
+await rc.revoke();
 ```
 - Parameter `editGroupRequest` is of type [EditGroupRequest](./src/definitions/EditGroupRequest.ts)
 - `result` is of type [GlipGroupInfo](./src/definitions/GlipGroupInfo.ts)
@@ -6406,10 +6406,10 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).glip().groups(groupId).events().post(glipEventCreate)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).glip().groups(groupId).events().post(glipEventCreate);
+await rc.revoke();
 ```
 - Parameter `glipEventCreate` is of type [GlipEventCreate](./src/definitions/GlipEventCreate.ts)
 - `result` is of type [GlipEventInfo](./src/definitions/GlipEventInfo.ts)
@@ -6429,10 +6429,10 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).glip().groups(groupId).events().get()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).glip().groups(groupId).events().get();
+await rc.revoke();
 ```
 
 - `result` is of type [GlipEventInfo](./src/definitions/GlipEventInfo.ts)
@@ -6452,10 +6452,10 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).glip().groups(groupId).posts().get(listGlipGroupPostsParameters)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).glip().groups(groupId).posts().get(listGlipGroupPostsParameters);
+await rc.revoke();
 ```
 - Parameter `listGlipGroupPostsParameters` is of type [ListGlipGroupPostsParameters](./src/definitions/ListGlipGroupPostsParameters.ts)
 - `result` is of type [GlipPosts](./src/definitions/GlipPosts.ts)
@@ -6475,10 +6475,10 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).glip().groups(groupId).posts().post(glipCreatePost)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).glip().groups(groupId).posts().post(glipCreatePost);
+await rc.revoke();
 ```
 - Parameter `glipCreatePost` is of type [GlipCreatePost](./src/definitions/GlipCreatePost.ts)
 - `result` is of type [GlipPostInfo](./src/definitions/GlipPostInfo.ts)
@@ -6498,10 +6498,10 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).glip().groups(groupId).posts(postId).text().put(string)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).glip().groups(groupId).posts(postId).text().put(string);
+await rc.revoke();
 ```
 - Parameter `string` is of type [string](./src/definitions/string.ts)
 - `result` is an empty string
@@ -6521,10 +6521,10 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).glip().groups(groupId).webhooks().post()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).glip().groups(groupId).webhooks().post();
+await rc.revoke();
 ```
 
 - `result` is of type [GlipWebhookInfo](./src/definitions/GlipWebhookInfo.ts)
@@ -6544,10 +6544,10 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).glip().groups(groupId).webhooks().get()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).glip().groups(groupId).webhooks().get();
+await rc.revoke();
 ```
 
 - `result` is of type [GlipWebhookList](./src/definitions/GlipWebhookList.ts)
@@ -6567,10 +6567,10 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).glip().notes(noteId).get()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).glip().notes(noteId).get();
+await rc.revoke();
 ```
 
 - `result` is of type [GetGlipNoteInfo](./src/definitions/GetGlipNoteInfo.ts)
@@ -6590,10 +6590,10 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).glip().notes(noteId).patch(glipNoteCreate)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).glip().notes(noteId).patch(glipNoteCreate);
+await rc.revoke();
 ```
 - Parameter `glipNoteCreate` is of type [GlipNoteCreate](./src/definitions/GlipNoteCreate.ts)
 - `result` is of type [GlipNoteInfo](./src/definitions/GlipNoteInfo.ts)
@@ -6613,10 +6613,10 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).glip().notes(noteId).delete()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).glip().notes(noteId).delete();
+await rc.revoke();
 ```
 
 - `result` is an empty string
@@ -6636,10 +6636,10 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).glip().notes(noteId).lock().post()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).glip().notes(noteId).lock().post();
+await rc.revoke();
 ```
 
 - `result` is an empty string
@@ -6659,10 +6659,10 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).glip().notes(noteId).publish().post()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).glip().notes(noteId).publish().post();
+await rc.revoke();
 ```
 
 - `result` is an empty string
@@ -6682,10 +6682,10 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).glip().notes(noteId).unlock().post()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).glip().notes(noteId).unlock().post();
+await rc.revoke();
 ```
 
 - `result` is an empty string
@@ -6705,10 +6705,10 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).glip().persons(personId).get()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).glip().persons(personId).get();
+await rc.revoke();
 ```
 
 - `result` is of type [GlipPersonInfo](./src/definitions/GlipPersonInfo.ts)
@@ -6728,10 +6728,10 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).glip().posts().get(listGlipPostsParameters)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).glip().posts().get(listGlipPostsParameters);
+await rc.revoke();
 ```
 - Parameter `listGlipPostsParameters` is of type [ListGlipPostsParameters](./src/definitions/ListGlipPostsParameters.ts)
 - `result` is of type [GlipPosts](./src/definitions/GlipPosts.ts)
@@ -6751,10 +6751,10 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).glip().posts().post(glipCreatePost)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).glip().posts().post(glipCreatePost);
+await rc.revoke();
 ```
 - Parameter `glipCreatePost` is of type [GlipCreatePost](./src/definitions/GlipCreatePost.ts)
 - `result` is of type [GlipPostInfo](./src/definitions/GlipPostInfo.ts)
@@ -6774,10 +6774,10 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).glip().preferences().get()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).glip().preferences().get();
+await rc.revoke();
 ```
 
 - `result` is of type [GlipPreferencesInfo](./src/definitions/GlipPreferencesInfo.ts)
@@ -6797,10 +6797,10 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).glip().recent().chats().get(listRecentChatsParameters)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).glip().recent().chats().get(listRecentChatsParameters);
+await rc.revoke();
 ```
 - Parameter `listRecentChatsParameters` is of type [ListRecentChatsParameters](./src/definitions/ListRecentChatsParameters.ts)
 - `result` is of type [GlipChatsListWithoutNavigation](./src/definitions/GlipChatsListWithoutNavigation.ts)
@@ -6820,10 +6820,10 @@ App Permission|`N/A`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).glip().tasks(taskId).get()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).glip().tasks(taskId).get();
+await rc.revoke();
 ```
 
 - `result` is of type [GlipTaskInfo](./src/definitions/GlipTaskInfo.ts)
@@ -6843,10 +6843,10 @@ App Permission|`N/A`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).glip().tasks(taskId).patch(glipUpdateTask)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).glip().tasks(taskId).patch(glipUpdateTask);
+await rc.revoke();
 ```
 - Parameter `glipUpdateTask` is of type [GlipUpdateTask](./src/definitions/GlipUpdateTask.ts)
 - `result` is of type [GlipTaskList](./src/definitions/GlipTaskList.ts)
@@ -6866,10 +6866,10 @@ App Permission|`N/A`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).glip().tasks(taskId).delete()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).glip().tasks(taskId).delete();
+await rc.revoke();
 ```
 
 - `result` is an empty string
@@ -6889,10 +6889,10 @@ App Permission|`N/A`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).glip().tasks(taskId).complete().post(glipCompleteTask)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).glip().tasks(taskId).complete().post(glipCompleteTask);
+await rc.revoke();
 ```
 - Parameter `glipCompleteTask` is of type [GlipCompleteTask](./src/definitions/GlipCompleteTask.ts)
 - `result` is an empty string
@@ -6912,10 +6912,10 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).glip().teams().list(listGlipTeamsParameters)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).glip().teams().list(listGlipTeamsParameters);
+await rc.revoke();
 ```
 - Parameter `listGlipTeamsParameters` is of type [ListGlipTeamsParameters](./src/definitions/ListGlipTeamsParameters.ts)
 - `result` is of type [GlipTeamsList](./src/definitions/GlipTeamsList.ts)
@@ -6935,10 +6935,10 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).glip().teams().post(glipPostTeamBody)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).glip().teams().post(glipPostTeamBody);
+await rc.revoke();
 ```
 - Parameter `glipPostTeamBody` is of type [GlipPostTeamBody](./src/definitions/GlipPostTeamBody.ts)
 - `result` is of type [GlipTeamInfo](./src/definitions/GlipTeamInfo.ts)
@@ -6958,10 +6958,10 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).glip().teams(chatId).get()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).glip().teams(chatId).get();
+await rc.revoke();
 ```
 
 - `result` is of type [GlipTeamInfo](./src/definitions/GlipTeamInfo.ts)
@@ -6981,10 +6981,10 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).glip().teams(chatId).patch(glipPatchTeamBody)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).glip().teams(chatId).patch(glipPatchTeamBody);
+await rc.revoke();
 ```
 - Parameter `glipPatchTeamBody` is of type [GlipPatchTeamBody](./src/definitions/GlipPatchTeamBody.ts)
 - `result` is of type [GlipTeamInfo](./src/definitions/GlipTeamInfo.ts)
@@ -7004,10 +7004,10 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).glip().teams(chatId).delete()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).glip().teams(chatId).delete();
+await rc.revoke();
 ```
 
 - `result` is an empty string
@@ -7027,10 +7027,10 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).glip().teams(chatId).add().post(glipPostMembersListBody)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).glip().teams(chatId).add().post(glipPostMembersListBody);
+await rc.revoke();
 ```
 - Parameter `glipPostMembersListBody` is of type [GlipPostMembersListBody](./src/definitions/GlipPostMembersListBody.ts)
 - `result` is an empty string
@@ -7050,10 +7050,10 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).glip().teams(chatId).archive().post()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).glip().teams(chatId).archive().post();
+await rc.revoke();
 ```
 
 - `result` is an empty string
@@ -7073,10 +7073,10 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).glip().teams(chatId).join().post()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).glip().teams(chatId).join().post();
+await rc.revoke();
 ```
 
 - `result` is an empty string
@@ -7096,10 +7096,10 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).glip().teams(chatId).leave().post()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).glip().teams(chatId).leave().post();
+await rc.revoke();
 ```
 
 - `result` is an empty string
@@ -7119,10 +7119,10 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).glip().teams(chatId).remove().post(glipPostMembersIdsListBody)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).glip().teams(chatId).remove().post(glipPostMembersIdsListBody);
+await rc.revoke();
 ```
 - Parameter `glipPostMembersIdsListBody` is of type [GlipPostMembersIdsListBody](./src/definitions/GlipPostMembersIdsListBody.ts)
 - `result` is an empty string
@@ -7142,10 +7142,10 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).glip().teams(chatId).unarchive().post()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).glip().teams(chatId).unarchive().post();
+await rc.revoke();
 ```
 
 - `result` is an empty string
@@ -7165,10 +7165,10 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).glip().webhooks().list()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).glip().webhooks().list();
+await rc.revoke();
 ```
 
 - `result` is of type [GlipWebhookList](./src/definitions/GlipWebhookList.ts)
@@ -7188,10 +7188,10 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).glip().webhooks(webhookId).get()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).glip().webhooks(webhookId).get();
+await rc.revoke();
 ```
 
 - `result` is of type [GlipWebhookList](./src/definitions/GlipWebhookList.ts)
@@ -7211,10 +7211,10 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).glip().webhooks(webhookId).delete()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).glip().webhooks(webhookId).delete();
+await rc.revoke();
 ```
 
 - `result` is an empty string
@@ -7234,10 +7234,10 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).glip().webhooks(webhookId).activate().post()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).glip().webhooks(webhookId).activate().post();
+await rc.revoke();
 ```
 
 - `result` is an empty string
@@ -7257,10 +7257,10 @@ App Permission|`Glip`
 User Permission|`Glip`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).glip().webhooks(webhookId).suspend().post()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).glip().webhooks(webhookId).suspend().post();
+await rc.revoke();
 ```
 
 - `result` is an empty string
@@ -7280,10 +7280,10 @@ App Permission|`N/A`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).numberParser().parse().post(parsePhoneNumberRequest, parsePhoneNumberParameters)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).numberParser().parse().post(parsePhoneNumberRequest, parsePhoneNumberParameters);
+await rc.revoke();
 ```
 - Parameter `parsePhoneNumberRequest` is of type [ParsePhoneNumberRequest](./src/definitions/ParsePhoneNumberRequest.ts)
 - Parameter `parsePhoneNumberParameters` is of type [ParsePhoneNumberParameters](./src/definitions/ParsePhoneNumberParameters.ts)
@@ -7304,10 +7304,10 @@ App Permission|`N/A`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).status().get()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).status().get();
+await rc.revoke();
 ```
 
 - `result` is an empty string
@@ -7327,10 +7327,10 @@ App Permission|`N/A`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).subscription().list()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).subscription().list();
+await rc.revoke();
 ```
 
 - `result` is of type [RecordsCollectionResourceSubscriptionResponse](./src/definitions/RecordsCollectionResourceSubscriptionResponse.ts)
@@ -7350,10 +7350,10 @@ App Permission|`N/A`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).subscription().post(createSubscriptionRequest)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).subscription().post(createSubscriptionRequest);
+await rc.revoke();
 ```
 - Parameter `createSubscriptionRequest` is of type [CreateSubscriptionRequest](./src/definitions/CreateSubscriptionRequest.ts)
 - `result` is of type [SubscriptionInfo](./src/definitions/SubscriptionInfo.ts)
@@ -7373,10 +7373,10 @@ App Permission|`N/A`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).subscription(subscriptionId).get()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).subscription(subscriptionId).get();
+await rc.revoke();
 ```
 
 - `result` is of type [SubscriptionInfo](./src/definitions/SubscriptionInfo.ts)
@@ -7396,10 +7396,10 @@ App Permission|`N/A`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).subscription(subscriptionId).put(modifySubscriptionRequest, updateSubscriptionParameters)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).subscription(subscriptionId).put(modifySubscriptionRequest, updateSubscriptionParameters);
+await rc.revoke();
 ```
 - Parameter `modifySubscriptionRequest` is of type [ModifySubscriptionRequest](./src/definitions/ModifySubscriptionRequest.ts)
 - Parameter `updateSubscriptionParameters` is of type [UpdateSubscriptionParameters](./src/definitions/UpdateSubscriptionParameters.ts)
@@ -7420,10 +7420,10 @@ App Permission|`N/A`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).subscription(subscriptionId).delete()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).subscription(subscriptionId).delete();
+await rc.revoke();
 ```
 
 - `result` is an empty string
@@ -7443,10 +7443,10 @@ App Permission|`N/A`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.restapi(apiVersion).subscription(subscriptionId).renew().post()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).subscription(subscriptionId).renew().post();
+await rc.revoke();
 ```
 
 - `result` is of type [SubscriptionInfo](./src/definitions/SubscriptionInfo.ts)
@@ -7466,10 +7466,10 @@ App Permission|`N/A`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.scim(version).serviceProviderConfig().get()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.scim(version).serviceProviderConfig().get();
+await rc.revoke();
 ```
 
 - `result` is of type [ServiceProviderConfig](./src/definitions/ServiceProviderConfig.ts)
@@ -7489,10 +7489,10 @@ App Permission|`ReadAccounts`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.scim(version).users().list(searchViaGet2Parameters)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.scim(version).users().list(searchViaGet2Parameters);
+await rc.revoke();
 ```
 - Parameter `searchViaGet2Parameters` is of type [SearchViaGet2Parameters](./src/definitions/SearchViaGet2Parameters.ts)
 - `result` is of type [UserSearchResponse](./src/definitions/UserSearchResponse.ts)
@@ -7512,10 +7512,10 @@ App Permission|`EditAccounts`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.scim(version).users().post(createUser)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.scim(version).users().post(createUser);
+await rc.revoke();
 ```
 - Parameter `createUser` is of type [CreateUser](./src/definitions/CreateUser.ts)
 - `result` is of type [UserResponse](./src/definitions/UserResponse.ts)
@@ -7535,10 +7535,10 @@ App Permission|`ReadAccounts`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.scim(version).users().dotSearch().post(searchRequest)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.scim(version).users().dotSearch().post(searchRequest);
+await rc.revoke();
 ```
 - Parameter `searchRequest` is of type [SearchRequest](./src/definitions/SearchRequest.ts)
 - `result` is of type [UserSearchResponse](./src/definitions/UserSearchResponse.ts)
@@ -7558,10 +7558,10 @@ App Permission|`ReadAccounts`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.scim(version).users(id).get()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.scim(version).users(id).get();
+await rc.revoke();
 ```
 
 - `result` is of type [UserResponse](./src/definitions/UserResponse.ts)
@@ -7581,10 +7581,10 @@ App Permission|`EditAccounts`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.scim(version).users(id).put(user)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.scim(version).users(id).put(user);
+await rc.revoke();
 ```
 - Parameter `user` is of type [User](./src/definitions/User.ts)
 - `result` is of type [UserResponse](./src/definitions/UserResponse.ts)
@@ -7604,10 +7604,10 @@ App Permission|`EditAccounts`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.scim(version).users(id).delete()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.scim(version).users(id).delete();
+await rc.revoke();
 ```
 
 - `result` is an empty string
@@ -7627,10 +7627,10 @@ App Permission|`EditAccounts`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.scim(version).users(id).patch(userPatch)
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.scim(version).users(id).patch(userPatch);
+await rc.revoke();
 ```
 - Parameter `userPatch` is of type [UserPatch](./src/definitions/UserPatch.ts)
 - `result` is of type [UserResponse](./src/definitions/UserResponse.ts)
@@ -7650,10 +7650,10 @@ App Permission|`N/A`
 User Permission|`N/A`
 
 ```ts
-const rc = new RestClient({ clientId, clientSecret, serverURL })
-await rc.authorize({ username, extension, password })
-const result = await rc.scim(version).health().get()
-await rc.revoke()
+const rc = new RestClient({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.scim(version).health().get();
+await rc.revoke();
 ```
 
 - `result` is an empty string
