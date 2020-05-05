@@ -75,33 +75,33 @@ describe('schedule meeting', () => {
       extension: process.env.RINGCENTRAL_EXTENSION!,
       password: process.env.RINGCENTRAL_PASSWORD!,
     });
-    const rc102 = new RestClient({
+    const rc2 = new RestClient({
       clientId: process.env.RINGCENTRAL_CLIENT_ID!,
       clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET!,
       server: process.env.RINGCENTRAL_SERVER_URL!,
     });
-    await rc102.login({
-      username: process.env.RINGCENTRAL_USERNAME!,
-      extension: '102',
-      password: process.env.RINGCENTRAL_PASSWORD!,
+    await rc2.login({
+      username: process.env.RINGCENTRAL_USERNAME2!,
+      extension: process.env.RINGCENTRAL_EXTENSION2!,
+      password: process.env.RINGCENTRAL_PASSWORD2!,
     });
 
-    const ext102 = await rc102.restapi().account().extension().get();
+    const ext2 = await rc2.restapi().account().extension().get();
 
-    let meetingsList101 = await rc
+    let meetingsList = await rc
       .restapi()
       .account()
       .extension()
       .meeting()
       .list();
-    const count101 = meetingsList101.records!.length;
-    let meetingsList102 = await rc102
+    const count = meetingsList.records!.length;
+    let meetingsList2 = await rc2
       .restapi()
       .account()
       .extension()
       .meeting()
       .list();
-    const count102 = meetingsList102.records!.length;
+    const count2 = meetingsList2.records!.length;
 
     // schedule a meeting
     const meetingRequestResource = new MeetingRequestResource();
@@ -117,7 +117,7 @@ describe('schedule meeting', () => {
     meetingScheduleResource.timeZone = timezoneResource;
     meetingRequestResource.schedule = meetingScheduleResource;
     const hostInfoRequest = new HostInfoRequest();
-    hostInfoRequest.id = ext102.id?.toString();
+    hostInfoRequest.id = ext2.id?.toString();
     meetingRequestResource.host = hostInfoRequest;
     const meetingResponseResource = await rc
       .restapi()
@@ -127,20 +127,15 @@ describe('schedule meeting', () => {
       .post(meetingRequestResource);
 
     // don't forget to clean up
-    meetingsList101 = await rc.restapi().account().extension().meeting().list();
-    expect(meetingsList101.records!.length).toBe(count101 + 1);
+    meetingsList = await rc.restapi().account().extension().meeting().list();
+    expect(meetingsList.records!.length).toBe(count + 1);
     expect(
-      meetingsList101.records!.some(r => r.id === meetingResponseResource.id)
+      meetingsList.records!.some(r => r.id === meetingResponseResource.id)
     ).toBeTruthy();
-    meetingsList102 = await rc102
-      .restapi()
-      .account()
-      .extension()
-      .meeting()
-      .list();
-    expect(meetingsList102.records!.length).toBe(count102 + 1);
+    meetingsList2 = await rc2.restapi().account().extension().meeting().list();
+    expect(meetingsList2.records!.length).toBe(count2 + 1);
     expect(
-      meetingsList102.records!.some(r => r.id === meetingResponseResource.id)
+      meetingsList2.records!.some(r => r.id === meetingResponseResource.id)
     ).toBeTruthy();
 
     await rc
@@ -150,20 +145,15 @@ describe('schedule meeting', () => {
       .meeting(meetingResponseResource.id)
       .delete();
 
-    meetingsList101 = await rc.restapi().account().extension().meeting().list();
-    expect(meetingsList101.records!.length).toBe(count101);
+    meetingsList = await rc.restapi().account().extension().meeting().list();
+    expect(meetingsList.records!.length).toBe(count);
     expect(
-      meetingsList101.records!.some(r => r.id === meetingResponseResource.id)
+      meetingsList.records!.some(r => r.id === meetingResponseResource.id)
     ).toBeFalsy();
-    meetingsList102 = await rc102
-      .restapi()
-      .account()
-      .extension()
-      .meeting()
-      .list();
-    expect(meetingsList102.records!.length).toBe(count102);
+    meetingsList2 = await rc2.restapi().account().extension().meeting().list();
+    expect(meetingsList2.records!.length).toBe(count2);
     expect(
-      meetingsList102.records!.some(r => r.id === meetingResponseResource.id)
+      meetingsList2.records!.some(r => r.id === meetingResponseResource.id)
     ).toBeFalsy();
   });
 });
