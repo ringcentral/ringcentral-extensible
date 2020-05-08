@@ -1,18 +1,20 @@
-import axios, {
+import {
+  // axios,
   AxiosInstance,
   Method,
-  AxiosRequestConfig,
+  // AxiosRequestConfig,
   AxiosResponse,
 } from 'axios';
-import qs from 'qs';
-import delay from 'delay';
+// import qs from 'qs';
+// import delay from 'delay';
 
 import {GetTokenRequest, TokenInfo} from './definitions';
-import RestException from './RestException';
+// import RestException from './RestException';
 import Restapi from './paths/Restapi';
 import Scim from './paths/Scim';
-import {version} from '../package.json';
-import Utils from './Utils';
+// import {version} from '../package.json';
+// import Utils from './Utils';
+import {HttpEngine} from './Engines';
 
 interface ConstructorOptions {
   clientId: string;
@@ -37,42 +39,47 @@ interface AuthCodeFlowOptions {
 }
 
 class RestClient {
-  static sandboxServer = 'https://platform.devtest.ringcentral.com';
-  static productionServer = 'https://platform.ringcentral.com';
-
-  clientId: string;
-  clientSecret: string;
-  server: string;
-  appName: string;
-  appVersion: string;
-  httpClient: AxiosInstance;
-  token?: TokenInfo;
-  handleRateLimit?: boolean | number;
-  debugMode?: boolean;
+  // clientId: string;
+  // clientSecret: string;
+  // server: string;
+  // appName: string;
+  // appVersion: string;
+  httpEngine: HttpEngine;
+  // _token?: TokenInfo;
+  // handleRateLimit?: boolean | number;
+  // debugMode?: boolean;
 
   constructor(options: ConstructorOptions) {
-    this.clientId = options.clientId;
-    this.clientSecret = options.clientSecret;
-    this.server = options.server;
-    this.appName = options.appName ?? 'Unknown';
-    this.appVersion = options.appVersion ?? '0.0.1';
-    this.httpClient =
-      options.httpClient ??
-      axios.create({
-        baseURL: this.server,
-        headers: {
-          'X-User-Agent': `${this.appName}/${this.appVersion} tylerlong/ringcentral-typescript/${version}`,
-        },
-        validateStatus: () => {
-          return true;
-        },
-        paramsSerializer: params => {
-          return qs.stringify(params, {indices: false});
-        },
-      });
-    this.token = options.token;
-    this.handleRateLimit = options.handleRateLimit ?? false;
-    this.debugMode = options.debugMode ?? false;
+    // this.clientId = options.clientId;
+    // this.clientSecret = options.clientSecret;
+    // this.server = options.server;
+    // this.appName = options.appName ?? 'Unknown';
+    // this.appVersion = options.appVersion ?? '0.0.1';
+    // this.httpClient =
+    //   options.httpClient ??
+    //   axios.create({
+    //     baseURL: this.server,
+    //     headers: {
+    //       'X-User-Agent': `${this.appName}/${this.appVersion} tylerlong/ringcentral-typescript/${version}`,
+    //     },
+    //     validateStatus: () => {
+    //       return true;
+    //     },
+    //     paramsSerializer: params => {
+    //       return qs.stringify(params, {indices: false});
+    //     },
+    //   });
+    this.httpEngine = new HttpEngine(options);
+    // this.token = options.token;
+    // this.handleRateLimit = options.handleRateLimit ?? false;
+    // this.debugMode = options.debugMode ?? false;
+  }
+
+  get token() {
+    return this.httpEngine.token;
+  }
+  set token(token) {
+    this.httpEngine.token = token;
   }
 
   async request<T>(
@@ -82,56 +89,72 @@ class RestClient {
     queryParams?: {},
     config?: {}
   ): Promise<AxiosResponse<T>> {
-    const _config: AxiosRequestConfig = {
-      method: httpMethod,
-      url: endpoint,
-      data: content,
-      params: queryParams,
-      ...config,
-    };
-    if (endpoint.startsWith('/restapi/oauth/')) {
-      // basic token
-      _config.auth = {
-        username: this.clientId,
-        password: this.clientSecret,
-      };
-      _config.data = qs.stringify(_config.data);
-    } else {
-      // bearer token
-      _config.headers = {
-        ..._config.headers,
-        Authorization: `Bearer ${this.token?.access_token}`,
-      };
-    }
-    const r = await this.httpClient.request<T>(_config);
-
-    if (this.debugMode === true) {
-      console.debug(Utils.formatTraffic(r));
-    }
-
-    if (r.status >= 200 && r.status < 300) {
-      return r;
-    } else if (r.status === 429 && this.handleRateLimit) {
-      let delayTime = r.headers['x-rate-limit-window'] ?? 60;
-      if (typeof this.handleRateLimit === 'number') {
-        delayTime = this.handleRateLimit;
-      }
-      // unsure on level? or if this should be a thrown error?
-      console.debug(
-        `Hit RingCentral Rate Limit. Pausing requests for ${delayTime} seconds.`
-      );
-      await delay(delayTime * 1000);
-      return this.request<T>(
-        httpMethod,
-        endpoint,
-        content,
-        queryParams,
-        config
-      );
-    } else {
-      throw new RestException(r);
-    }
+    return this.httpEngine.request<T>(
+      httpMethod,
+      endpoint,
+      content,
+      queryParams,
+      config
+    );
   }
+
+  // async request<T>(
+  //   httpMethod: Method,
+  //   endpoint: string,
+  //   content?: {},
+  //   queryParams?: {},
+  //   config?: {}
+  // ): Promise<AxiosResponse<T>> {
+  //   const _config: AxiosRequestConfig = {
+  //     method: httpMethod,
+  //     url: endpoint,
+  //     data: content,
+  //     params: queryParams,
+  //     ...config,
+  //   };
+  //   if (endpoint.startsWith('/restapi/oauth/')) {
+  //     // basic token
+  //     _config.auth = {
+  //       username: this.clientId,
+  //       password: this.clientSecret,
+  //     };
+  //     _config.data = qs.stringify(_config.data);
+  //   } else {
+  //     // bearer token
+  //     _config.headers = {
+  //       ..._config.headers,
+  //       Authorization: `Bearer ${this.token?.access_token}`,
+  //     };
+  //   }
+  //   const r = await this.httpClient.request<T>(_config);
+
+  //   if (this.debugMode === true) {
+  //     console.debug(Utils.formatTraffic(r));
+  //   }
+
+  //   if (r.status >= 200 && r.status < 300) {
+  //     return r;
+  //   } else if (r.status === 429 && this.handleRateLimit) {
+  //     let delayTime = r.headers['x-rate-limit-window'] ?? 60;
+  //     if (typeof this.handleRateLimit === 'number') {
+  //       delayTime = this.handleRateLimit;
+  //     }
+  //     // unsure on level? or if this should be a thrown error?
+  //     console.debug(
+  //       `Hit RingCentral Rate Limit. Pausing requests for ${delayTime} seconds.`
+  //     );
+  //     await delay(delayTime * 1000);
+  //     return this.request<T>(
+  //       httpMethod,
+  //       endpoint,
+  //       content,
+  //       queryParams,
+  //       config
+  //     );
+  //   } else {
+  //     throw new RestException(r);
+  //   }
+  // }
   async get<T>(
     endpoint: string,
     queryParams?: {},
