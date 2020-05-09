@@ -3,10 +3,10 @@ import {
   ValidateMultipleSwitchesRequest,
 } from '../../../../../definitions';
 import Parent from '..';
-import RestClient from '../../../../..';
+import RingCentral from '../../../../..';
 
 class SwitchesBulkValidate {
-  rc: RestClient;
+  rc: RingCentral;
   parent: Parent;
 
   constructor(parent: Parent) {

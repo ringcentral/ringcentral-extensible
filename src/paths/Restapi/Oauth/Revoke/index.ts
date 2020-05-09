@@ -1,9 +1,9 @@
 import {RevokeTokenRequest} from '../../../../definitions';
 import Parent from '..';
-import RestClient from '../../../..';
+import RingCentral from '../../../..';
 
 class Revoke {
-  rc: RestClient;
+  rc: RingCentral;
   parent: Parent;
 
   constructor(parent: Parent) {

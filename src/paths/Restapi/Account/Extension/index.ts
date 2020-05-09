@@ -42,10 +42,10 @@ import {
   DeleteExtensionParameters,
 } from '../../../../definitions';
 import Parent from '..';
-import RestClient from '../../../..';
+import RingCentral from '../../../..';
 
 class Extension {
-  rc: RestClient;
+  rc: RingCentral;
   extensionId: string | null;
   parent: Parent;
 

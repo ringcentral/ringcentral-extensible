@@ -7,10 +7,10 @@ import {
   GlipNoteCreate,
 } from '../../../../definitions';
 import Parent from '..';
-import RestClient from '../../../..';
+import RingCentral from '../../../..';
 
 class Notes {
-  rc: RestClient;
+  rc: RingCentral;
   noteId: string | null;
   parent: Parent;
 

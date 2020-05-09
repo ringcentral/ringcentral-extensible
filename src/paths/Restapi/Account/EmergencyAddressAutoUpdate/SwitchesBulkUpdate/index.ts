@@ -3,10 +3,10 @@ import {
   UpdateMultipleSwitchesRequest,
 } from '../../../../../definitions';
 import Parent from '..';
-import RestClient from '../../../../..';
+import RingCentral from '../../../../..';
 
 class SwitchesBulkUpdate {
-  rc: RestClient;
+  rc: RingCentral;
   parent: Parent;
 
   constructor(parent: Parent) {

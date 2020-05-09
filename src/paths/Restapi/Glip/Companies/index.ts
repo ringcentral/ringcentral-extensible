@@ -1,9 +1,9 @@
 import {GlipCompany} from '../../../../definitions';
 import Parent from '..';
-import RestClient from '../../../..';
+import RingCentral from '../../../..';
 
 class Companies {
-  rc: RestClient;
+  rc: RingCentral;
   companyId: string | null;
   parent: Parent;
 

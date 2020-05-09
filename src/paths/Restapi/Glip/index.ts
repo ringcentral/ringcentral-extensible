@@ -16,10 +16,10 @@ import Teams from './Teams';
 import Conversations from './Conversations';
 import Chats from './Chats';
 import Parent from '..';
-import RestClient from '../../..';
+import RingCentral from '../../..';
 
 class Glip {
-  rc: RestClient;
+  rc: RingCentral;
   parent: Parent;
 
   constructor(parent: Parent) {

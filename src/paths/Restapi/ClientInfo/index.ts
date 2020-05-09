@@ -1,9 +1,9 @@
 import SipProvision from './SipProvision';
 import Parent from '..';
-import RestClient from '../../..';
+import RingCentral from '../../..';
 
 class ClientInfo {
-  rc: RestClient;
+  rc: RingCentral;
   parent: Parent;
 
   constructor(parent: Parent) {

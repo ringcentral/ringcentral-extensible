@@ -1,10 +1,10 @@
 import Archive from './Archive';
 import {CreateMessageStoreReportRequest} from '../../../../definitions';
 import Parent from '..';
-import RestClient from '../../../..';
+import RingCentral from '../../../..';
 
 class MessageStoreReport {
-  rc: RestClient;
+  rc: RingCentral;
   taskId: string | null;
   parent: Parent;
 

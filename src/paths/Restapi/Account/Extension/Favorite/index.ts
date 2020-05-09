@@ -3,10 +3,10 @@ import {
   FavoriteCollection,
 } from '../../../../../definitions';
 import Parent from '..';
-import RestClient from '../../../../..';
+import RingCentral from '../../../../..';
 
 class Favorite {
-  rc: RestClient;
+  rc: RingCentral;
   parent: Parent;
 
   constructor(parent: Parent) {

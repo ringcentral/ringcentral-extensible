@@ -18,12 +18,14 @@
     "axios": "^0.19.2",
     "delay": "^4.3.0",
     "form-data": "^3.0.0",
-    "qs": "^6.9.4"
+    "qs": "^6.9.4",
+    "ws": "^7.2.5"
   },
   "devDependencies": {
     "@types/jest": "^25.2.1",
     "@types/node": "^13.13.5",
     "@types/qs": "^6.9.2",
+    "@types/ws": "^7.2.4",
     "change-case": "^4.1.1",
     "dotenv-override-true": "^6.2.0",
     "gts": "^2.0.0",

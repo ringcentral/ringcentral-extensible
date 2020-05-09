@@ -4,10 +4,10 @@ import {
   DictionaryGreetingInfo,
 } from '../../../../definitions';
 import Parent from '..';
-import RestClient from '../../../..';
+import RingCentral from '../../../..';
 
 class Greeting {
-  rc: RestClient;
+  rc: RingCentral;
   greetingId: string | null;
   parent: Parent;
 

@@ -1,9 +1,9 @@
 import {GlipWebhookInfo, GlipWebhookList} from '../../../../../definitions';
 import Parent from '..';
-import RestClient from '../../../../..';
+import RingCentral from '../../../../..';
 
 class Webhooks {
-  rc: RestClient;
+  rc: RingCentral;
   parent: Parent;
 
   constructor(parent: Parent) {

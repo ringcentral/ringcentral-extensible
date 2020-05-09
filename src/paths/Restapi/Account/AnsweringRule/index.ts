@@ -6,10 +6,10 @@ import {
   CompanyAnsweringRuleUpdate,
 } from '../../../../definitions';
 import Parent from '..';
-import RestClient from '../../../..';
+import RingCentral from '../../../..';
 
 class AnsweringRule {
-  rc: RestClient;
+  rc: RingCentral;
   ruleId: string | null;
   parent: Parent;
 

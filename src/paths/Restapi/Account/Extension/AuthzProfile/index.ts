@@ -1,10 +1,10 @@
 import Check from './Check';
 import {AuthProfileResource} from '../../../../../definitions';
 import Parent from '..';
-import RestClient from '../../../../..';
+import RingCentral from '../../../../..';
 
 class AuthzProfile {
-  rc: RestClient;
+  rc: RingCentral;
   parent: Parent;
 
   constructor(parent: Parent) {

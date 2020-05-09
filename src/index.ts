@@ -3,7 +3,8 @@ import {Method, AxiosResponse} from 'axios';
 import {GetTokenRequest, TokenInfo} from './definitions';
 import Restapi from './paths/Restapi';
 import Scim from './paths/Scim';
-import {HttpsEngine, RestOptions, WsgOptions, WsgEngine} from './Engines';
+import Rest, {RestOptions} from './Rest';
+import Wsg, {WsgOptions} from './Wsg';
 
 interface PasswordFlowOptions {
   username: string;
@@ -15,14 +16,14 @@ interface AuthCodeFlowOptions {
   redirect_uri: string;
 }
 
-class RestClient {
-  rest: HttpsEngine;
-  wsg?: WsgEngine;
+export default class RingCentral {
+  rest: Rest;
+  wsg?: Wsg;
 
   constructor(restOptions: RestOptions, wsgOptions?: WsgOptions) {
-    this.rest = new HttpsEngine(restOptions);
+    this.rest = new Rest(restOptions);
     if (wsgOptions) {
-      this.wsg = new WsgEngine(wsgOptions);
+      this.wsg = new Wsg(this, wsgOptions);
     }
   }
 
@@ -187,5 +188,3 @@ class RestClient {
     return new Scim(this, version);
   }
 }
-
-export default RestClient;

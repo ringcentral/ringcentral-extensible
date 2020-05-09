@@ -7,10 +7,10 @@ import {
   UpdateContactParameters,
 } from '../../../../../../definitions';
 import Parent from '..';
-import RestClient from '../../../../../..';
+import RingCentral from '../../../../../..';
 
 class Contact {
-  rc: RestClient;
+  rc: RingCentral;
   contactId: string | null;
   parent: Parent;
 

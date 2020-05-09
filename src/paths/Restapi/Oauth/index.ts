@@ -1,10 +1,10 @@
 import Token from './Token';
 import Revoke from './Revoke';
 import Parent from '..';
-import RestClient from '../../..';
+import RingCentral from '../../..';
 
 class Oauth {
-  rc: RestClient;
+  rc: RingCentral;
   parent: Parent;
 
   constructor(parent: Parent) {

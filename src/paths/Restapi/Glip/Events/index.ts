@@ -5,10 +5,10 @@ import {
   GlipEventCreate,
 } from '../../../../definitions';
 import Parent from '..';
-import RestClient from '../../../..';
+import RingCentral from '../../../..';
 
 class Events {
-  rc: RestClient;
+  rc: RingCentral;
   eventId: string | null;
   parent: Parent;
 

@@ -1,9 +1,9 @@
 import {GlipPersonInfo} from '../../../../definitions';
 import Parent from '..';
-import RestClient from '../../../..';
+import RingCentral from '../../../..';
 
 class Persons {
-  rc: RestClient;
+  rc: RingCentral;
   personId: string | null;
   parent: Parent;
 

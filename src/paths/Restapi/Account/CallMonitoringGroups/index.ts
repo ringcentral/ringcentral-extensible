@@ -6,10 +6,10 @@ import {
   ListCallMonitoringGroupsParameters,
 } from '../../../../definitions';
 import Parent from '..';
-import RestClient from '../../../..';
+import RingCentral from '../../../..';
 
 class CallMonitoringGroups {
-  rc: RestClient;
+  rc: RingCentral;
   groupId: string | null;
   parent: Parent;
 

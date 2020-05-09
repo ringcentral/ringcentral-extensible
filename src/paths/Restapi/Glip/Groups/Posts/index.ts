@@ -6,10 +6,10 @@ import {
   GlipCreatePost,
 } from '../../../../../definitions';
 import Parent from '..';
-import RestClient from '../../../../..';
+import RingCentral from '../../../../..';
 
 class Posts {
-  rc: RestClient;
+  rc: RingCentral;
   postId: string | null;
   parent: Parent;
 

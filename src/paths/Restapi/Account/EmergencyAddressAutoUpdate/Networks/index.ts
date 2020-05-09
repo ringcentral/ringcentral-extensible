@@ -5,10 +5,10 @@ import {
   UpdateNetworkRequest,
 } from '../../../../../definitions';
 import Parent from '..';
-import RestClient from '../../../../..';
+import RingCentral from '../../../../..';
 
 class Networks {
-  rc: RestClient;
+  rc: RingCentral;
   networkId: string | null;
   parent: Parent;
 

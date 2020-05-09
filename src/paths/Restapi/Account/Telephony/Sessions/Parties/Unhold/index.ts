@@ -1,9 +1,9 @@
 import {CallParty} from '../../../../../../../definitions';
 import Parent from '..';
-import RestClient from '../../../../../../..';
+import RingCentral from '../../../../../../..';
 
 class Unhold {
-  rc: RestClient;
+  rc: RingCentral;
   parent: Parent;
 
   constructor(parent: Parent) {

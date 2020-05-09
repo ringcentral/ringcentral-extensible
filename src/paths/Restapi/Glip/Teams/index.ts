@@ -12,10 +12,10 @@ import {
   GlipPatchTeamBody,
 } from '../../../../definitions';
 import Parent from '..';
-import RestClient from '../../../..';
+import RingCentral from '../../../..';
 
 class Teams {
-  rc: RestClient;
+  rc: RingCentral;
   chatId: string | null;
   parent: Parent;
 

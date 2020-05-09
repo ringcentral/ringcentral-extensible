@@ -2,10 +2,10 @@ import BulkAssign from './BulkAssign';
 import Devices from './Devices';
 import Users from './Users';
 import Parent from '..';
-import RestClient from '../../../..';
+import RingCentral from '../../../..';
 
 class PagingOnlyGroups {
-  rc: RestClient;
+  rc: RingCentral;
   pagingOnlyGroupId: string | null;
   parent: Parent;
 

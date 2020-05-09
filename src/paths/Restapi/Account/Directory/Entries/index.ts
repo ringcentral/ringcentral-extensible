@@ -5,10 +5,10 @@ import {
   ContactResource,
 } from '../../../../../definitions';
 import Parent from '..';
-import RestClient from '../../../../..';
+import RingCentral from '../../../../..';
 
 class Entries {
-  rc: RestClient;
+  rc: RingCentral;
   entryId: string | null;
   parent: Parent;
 

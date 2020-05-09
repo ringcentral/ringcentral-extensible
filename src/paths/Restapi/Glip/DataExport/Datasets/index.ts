@@ -1,8 +1,8 @@
 import Parent from '..';
-import RestClient from '../../../../..';
+import RingCentral from '../../../../..';
 
 class Datasets {
-  rc: RestClient;
+  rc: RingCentral;
   datasetId: string | null;
   parent: Parent;
 

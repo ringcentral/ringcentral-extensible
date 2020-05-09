@@ -3,10 +3,10 @@ import {
   ValidateMultipleWirelessPointsRequest,
 } from '../../../../../definitions';
 import Parent from '..';
-import RestClient from '../../../../..';
+import RingCentral from '../../../../..';
 
 class WirelessPointsBulkValidate {
-  rc: RestClient;
+  rc: RingCentral;
   parent: Parent;
 
   constructor(parent: Parent) {

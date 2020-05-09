@@ -4,10 +4,10 @@ import {
   GetStateInfoResponse,
 } from '../../../../definitions';
 import Parent from '..';
-import RestClient from '../../../..';
+import RingCentral from '../../../..';
 
 class State {
-  rc: RestClient;
+  rc: RingCentral;
   stateId: string | null;
   parent: Parent;
 

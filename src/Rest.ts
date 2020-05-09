@@ -22,11 +22,7 @@ export interface RestOptions {
   debugMode?: boolean;
 }
 
-export interface WsgOptions {
-  server: string;
-}
-
-export class HttpsEngine {
+export default class Rest {
   static sandboxServer = 'https://platform.devtest.ringcentral.com';
   static productionServer = 'https://platform.ringcentral.com';
 
@@ -121,16 +117,5 @@ export class HttpsEngine {
     } else {
       throw new RestException(r);
     }
-  }
-}
-
-export class WsgEngine {
-  static sandboxServer = 'wss://ws-api.devtest.ringcentral.com/ws';
-  static productionServer = 'wss://ws-api.ringcentral.com/ws';
-
-  server: string;
-
-  constructor(options: WsgOptions) {
-    this.server = options.server;
   }
 }

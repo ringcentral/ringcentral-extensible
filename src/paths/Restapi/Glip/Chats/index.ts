@@ -11,10 +11,10 @@ import {
   GlipChatInfo,
 } from '../../../../definitions';
 import Parent from '..';
-import RestClient from '../../../..';
+import RingCentral from '../../../..';
 
 class Chats {
-  rc: RestClient;
+  rc: RingCentral;
   chatId: string | null;
   parent: Parent;
 

@@ -1,9 +1,9 @@
 import {AutomaticLocationUpdatesTaskInfo} from '../../../../../definitions';
 import Parent from '..';
-import RestClient from '../../../../..';
+import RingCentral from '../../../../..';
 
 class Tasks {
-  rc: RestClient;
+  rc: RingCentral;
   taskId: string | null;
   parent: Parent;
 

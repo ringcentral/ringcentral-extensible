@@ -5,10 +5,10 @@ import {
   ReadCallSessionStatusParameters,
 } from '../../../../../definitions';
 import Parent from '..';
-import RestClient from '../../../../..';
+import RingCentral from '../../../../..';
 
 class Sessions {
-  rc: RestClient;
+  rc: RingCentral;
   telephonySessionId: string | null;
   parent: Parent;
 

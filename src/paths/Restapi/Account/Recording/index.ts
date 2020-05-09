@@ -1,10 +1,10 @@
 import Content from './Content';
 import {GetCallRecordingResponse} from '../../../../definitions';
 import Parent from '..';
-import RestClient from '../../../..';
+import RingCentral from '../../../..';
 
 class Recording {
-  rc: RestClient;
+  rc: RingCentral;
   recordingId: string | null;
   parent: Parent;
 

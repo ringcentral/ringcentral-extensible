@@ -6,10 +6,10 @@ import {
   ReadUserCallRecordParameters,
 } from '../../../../../definitions';
 import Parent from '..';
-import RestClient from '../../../../..';
+import RingCentral from '../../../../..';
 
 class CallLog {
-  rc: RestClient;
+  rc: RingCentral;
   callRecordId: string | null;
   parent: Parent;
 

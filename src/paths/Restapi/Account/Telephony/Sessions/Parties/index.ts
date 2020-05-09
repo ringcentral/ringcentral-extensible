@@ -13,10 +13,10 @@ import Unhold from './Unhold';
 import Hold from './Hold';
 import {CallParty, PartyUpdateRequest} from '../../../../../../definitions';
 import Parent from '..';
-import RestClient from '../../../../../..';
+import RingCentral from '../../../../../..';
 
 class Parties {
-  rc: RestClient;
+  rc: RingCentral;
   partyId: string | null;
   parent: Parent;
 

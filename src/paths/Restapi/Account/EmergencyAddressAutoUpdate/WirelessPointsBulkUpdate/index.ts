@@ -3,10 +3,10 @@ import {
   UpdateMultipleWirelessPointsRequest,
 } from '../../../../../definitions';
 import Parent from '..';
-import RestClient from '../../../../..';
+import RingCentral from '../../../../..';
 
 class WirelessPointsBulkUpdate {
-  rc: RestClient;
+  rc: RingCentral;
   parent: Parent;
 
   constructor(parent: Parent) {

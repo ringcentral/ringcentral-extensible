@@ -1,10 +1,10 @@
 import Sessions from './Sessions';
 import CallOut from './CallOut';
 import Parent from '..';
-import RestClient from '../../../..';
+import RingCentral from '../../../..';
 
 class Telephony {
-  rc: RestClient;
+  rc: RingCentral;
   parent: Parent;
 
   constructor(parent: Parent) {

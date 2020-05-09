@@ -1,9 +1,9 @@
 import {CallPartyFlip} from '../../../../../../../definitions';
 import Parent from '..';
-import RestClient from '../../../../../../..';
+import RingCentral from '../../../../../../..';
 
 class Flip {
-  rc: RestClient;
+  rc: RingCentral;
   parent: Parent;
 
   constructor(parent: Parent) {

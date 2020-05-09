@@ -6,10 +6,10 @@ import {
   ListDataExportTasksParameters,
 } from '../../../../definitions';
 import Parent from '..';
-import RestClient from '../../../..';
+import RingCentral from '../../../..';
 
 class DataExport {
-  rc: RestClient;
+  rc: RingCentral;
   taskId: string | null;
   parent: Parent;
 

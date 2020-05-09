@@ -3,10 +3,10 @@ import BulkAssign from './BulkAssign';
 import Extensions from './Extensions';
 import {CallRecordingSettingsResource} from '../../../../definitions';
 import Parent from '..';
-import RestClient from '../../../..';
+import RingCentral from '../../../..';
 
 class CallRecording {
-  rc: RestClient;
+  rc: RingCentral;
   parent: Parent;
 
   constructor(parent: Parent) {

@@ -4,10 +4,10 @@ import {
   PauseResumeCallRecordingParameters,
 } from '../../../../../../../definitions';
 import Parent from '..';
-import RestClient from '../../../../../../..';
+import RingCentral from '../../../../../../..';
 
 class Recordings {
-  rc: RestClient;
+  rc: RingCentral;
   recordingId: string | null;
   parent: Parent;
 

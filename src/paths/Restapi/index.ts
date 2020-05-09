@@ -7,13 +7,13 @@ import Account from './Account';
 import Status from './Status';
 import Oauth from './Oauth';
 import {GetVersionsResponse, GetVersionResponse} from '../../definitions';
-import RestClient from '../..';
+import RingCentral from '../..';
 
 class Restapi {
-  rc: RestClient;
+  rc: RingCentral;
   apiVersion: string | null;
 
-  constructor(rc: RestClient, apiVersion: string | null = 'v1.0') {
+  constructor(rc: RingCentral, apiVersion: string | null = 'v1.0') {
     this.rc = rc;
     this.apiVersion = apiVersion;
   }

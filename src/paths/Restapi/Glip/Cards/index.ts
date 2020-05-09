@@ -4,10 +4,10 @@ import {
   CreateGlipCardParameters,
 } from '../../../../definitions';
 import Parent from '..';
-import RestClient from '../../../..';
+import RingCentral from '../../../..';
 
 class Cards {
-  rc: RestClient;
+  rc: RingCentral;
   cardId: string | null;
   parent: Parent;
 

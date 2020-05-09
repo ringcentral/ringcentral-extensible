@@ -1,10 +1,10 @@
 import Assisted from './Assisted';
 import Assistants from './Assistants';
 import Parent from '..';
-import RestClient from '../../../../..';
+import RingCentral from '../../../../..';
 
 class MeetingsConfiguration {
-  rc: RestClient;
+  rc: RingCentral;
   parent: Parent;
 
   constructor(parent: Parent) {

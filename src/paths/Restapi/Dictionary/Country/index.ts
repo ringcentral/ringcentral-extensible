@@ -4,10 +4,10 @@ import {
   GetCountryInfoDictionaryResponse,
 } from '../../../../definitions';
 import Parent from '..';
-import RestClient from '../../../..';
+import RingCentral from '../../../..';
 
 class Country {
-  rc: RestClient;
+  rc: RingCentral;
   countryId: string | null;
   parent: Parent;
 

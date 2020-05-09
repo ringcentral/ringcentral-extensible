@@ -5,10 +5,10 @@ import {
   EmergencyLocationInfo,
 } from '../../../../definitions';
 import Parent from '..';
-import RestClient from '../../../..';
+import RingCentral from '../../../..';
 
 class EmergencyLocations {
-  rc: RestClient;
+  rc: RingCentral;
   locationId: string | null;
   parent: Parent;
 

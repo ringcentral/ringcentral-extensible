@@ -1,9 +1,9 @@
 import {ReadMessageContentParameters} from '../../../../../../definitions';
 import Parent from '..';
-import RestClient from '../../../../../..';
+import RingCentral from '../../../../../..';
 
 class Content {
-  rc: RestClient;
+  rc: RingCentral;
   attachmentId: string | null;
   parent: Parent;
 

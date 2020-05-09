@@ -6,10 +6,10 @@ import {
   UpdateWirelessPoint,
 } from '../../../../../definitions';
 import Parent from '..';
-import RestClient from '../../../../..';
+import RingCentral from '../../../../..';
 
 class WirelessPoints {
-  rc: RestClient;
+  rc: RingCentral;
   pointId: string | null;
   parent: Parent;
 

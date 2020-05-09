@@ -29,10 +29,10 @@ import CallLog from './CallLog';
 import Extension from './Extension';
 import {GetAccountInfoResponse} from '../../../definitions';
 import Parent from '..';
-import RestClient from '../../..';
+import RingCentral from '../../..';
 
 class Account {
-  rc: RestClient;
+  rc: RingCentral;
   accountId: string | null;
   parent: Parent;
 

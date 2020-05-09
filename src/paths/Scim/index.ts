@@ -1,13 +1,13 @@
 import Users from './Users';
 import ServiceProviderConfig from './ServiceProviderConfig';
 import Health from './Health';
-import RestClient from '../..';
+import RingCentral from '../..';
 
 class Scim {
-  rc: RestClient;
+  rc: RingCentral;
   version: string | null;
 
-  constructor(rc: RestClient, version: string | null = 'v2') {
+  constructor(rc: RingCentral, version: string | null = 'v2') {
     this.rc = rc;
     this.version = version;
   }

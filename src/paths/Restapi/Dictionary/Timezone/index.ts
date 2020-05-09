@@ -5,10 +5,10 @@ import {
   ReadTimezoneParameters,
 } from '../../../../definitions';
 import Parent from '..';
-import RestClient from '../../../..';
+import RingCentral from '../../../..';
 
 class Timezone {
-  rc: RestClient;
+  rc: RingCentral;
   timezoneId: string | null;
   parent: Parent;
 

@@ -8,10 +8,10 @@ import {
   UserPatch,
 } from '../../../definitions';
 import Parent from '..';
-import RestClient from '../../..';
+import RingCentral from '../../..';
 
 class Users {
-  rc: RestClient;
+  rc: RingCentral;
   id: string | null;
   parent: Parent;
 

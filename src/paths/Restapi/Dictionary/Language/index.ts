@@ -1,9 +1,9 @@
 import {LanguageList, LanguageInfo} from '../../../../definitions';
 import Parent from '..';
-import RestClient from '../../../..';
+import RingCentral from '../../../..';
 
 class Language {
-  rc: RestClient;
+  rc: RingCentral;
   languageId: string | null;
   parent: Parent;
 

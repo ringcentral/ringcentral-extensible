@@ -5,10 +5,10 @@ import {
   UpdateDeviceParameters,
 } from '../../../../definitions';
 import Parent from '..';
-import RestClient from '../../../..';
+import RingCentral from '../../../..';
 
 class Device {
-  rc: RestClient;
+  rc: RingCentral;
   deviceId: string | null;
   parent: Parent;
 

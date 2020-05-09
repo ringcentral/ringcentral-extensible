@@ -1,9 +1,9 @@
 import {IVRMenuInfo} from '../../../../definitions';
 import Parent from '..';
-import RestClient from '../../../..';
+import RingCentral from '../../../..';
 
 class IvrMenus {
-  rc: RestClient;
+  rc: RingCentral;
   ivrMenuId: string | null;
   parent: Parent;
 

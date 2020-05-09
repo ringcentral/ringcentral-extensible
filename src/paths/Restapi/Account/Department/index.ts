@@ -1,10 +1,10 @@
 import Members from './Members';
 import BulkAssign from './BulkAssign';
 import Parent from '..';
-import RestClient from '../../../..';
+import RingCentral from '../../../..';
 
 class Department {
-  rc: RestClient;
+  rc: RingCentral;
   departmentId: string | null;
   parent: Parent;
 

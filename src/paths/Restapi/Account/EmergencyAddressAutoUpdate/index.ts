@@ -11,10 +11,10 @@ import Networks from './Networks';
 import WirelessPoints from './WirelessPoints';
 import Users from './Users';
 import Parent from '..';
-import RestClient from '../../../..';
+import RingCentral from '../../../..';
 
 class EmergencyAddressAutoUpdate {
-  rc: RestClient;
+  rc: RingCentral;
   parent: Parent;
 
   constructor(parent: Parent) {

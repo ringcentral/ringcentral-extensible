@@ -6,10 +6,10 @@ import {
   MeetingRequestResource,
 } from '../../../../../definitions';
 import Parent from '..';
-import RestClient from '../../../../..';
+import RingCentral from '../../../../..';
 
 class Meeting {
-  rc: RestClient;
+  rc: RingCentral;
   meetingId: string | null;
   parent: Parent;
 

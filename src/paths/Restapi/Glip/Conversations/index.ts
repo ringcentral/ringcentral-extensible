@@ -5,10 +5,10 @@ import {
   CreateGlipConversationRequest,
 } from '../../../../definitions';
 import Parent from '..';
-import RestClient from '../../../..';
+import RingCentral from '../../../..';
 
 class Conversations {
-  rc: RestClient;
+  rc: RingCentral;
   chatId: string | null;
   parent: Parent;
 

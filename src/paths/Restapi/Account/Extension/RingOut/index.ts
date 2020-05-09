@@ -3,10 +3,10 @@ import {
   MakeRingOutRequest,
 } from '../../../../../definitions';
 import Parent from '..';
-import RestClient from '../../../../..';
+import RingCentral from '../../../../..';
 
 class RingOut {
-  rc: RestClient;
+  rc: RingCentral;
   ringoutId: string | null;
   parent: Parent;
 

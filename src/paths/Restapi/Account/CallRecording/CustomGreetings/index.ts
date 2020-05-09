@@ -3,10 +3,10 @@ import {
   ListCallRecordingCustomGreetingsParameters,
 } from '../../../../../definitions';
 import Parent from '..';
-import RestClient from '../../../../..';
+import RingCentral from '../../../../..';
 
 class CustomGreetings {
-  rc: RestClient;
+  rc: RingCentral;
   greetingId: string | null;
   parent: Parent;
 

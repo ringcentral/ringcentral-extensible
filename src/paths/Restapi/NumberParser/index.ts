@@ -1,9 +1,9 @@
 import Parse from './Parse';
 import Parent from '..';
-import RestClient from '../../..';
+import RingCentral from '../../..';
 
 class NumberParser {
-  rc: RestClient;
+  rc: RingCentral;
   parent: Parent;
 
   constructor(parent: Parent) {

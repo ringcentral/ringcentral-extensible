@@ -1,9 +1,9 @@
 import {MessageStoreReportArchive} from '../../../../../definitions';
 import Parent from '..';
-import RestClient from '../../../../..';
+import RingCentral from '../../../../..';
 
 class Archive {
-  rc: RestClient;
+  rc: RingCentral;
   archiveId: string | null;
   parent: Parent;
 

@@ -6,10 +6,10 @@ import {
   UpdateSwitchInfo,
 } from '../../../../../definitions';
 import Parent from '..';
-import RestClient from '../../../../..';
+import RingCentral from '../../../../..';
 
 class Switches {
-  rc: RestClient;
+  rc: RingCentral;
   switchId: string | null;
   parent: Parent;
 

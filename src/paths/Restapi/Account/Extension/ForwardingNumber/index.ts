@@ -6,10 +6,10 @@ import {
   UpdateForwardingNumberRequest,
 } from '../../../../../definitions';
 import Parent from '..';
-import RestClient from '../../../../..';
+import RingCentral from '../../../../..';
 
 class ForwardingNumber {
-  rc: RestClient;
+  rc: RingCentral;
   forwardingNumberId: string | null;
   parent: Parent;
 

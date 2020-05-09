@@ -9,10 +9,10 @@ import {
   GlipCreateGroup,
 } from '../../../../definitions';
 import Parent from '..';
-import RestClient from '../../../..';
+import RingCentral from '../../../..';
 
 class Groups {
-  rc: RestClient;
+  rc: RingCentral;
   groupId: string | null;
   parent: Parent;
 

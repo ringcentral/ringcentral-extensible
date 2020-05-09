@@ -5,10 +5,10 @@ import {
   AddBlockedAllowedPhoneNumber,
 } from '../../../../../../definitions';
 import Parent from '..';
-import RestClient from '../../../../../..';
+import RingCentral from '../../../../../..';
 
 class PhoneNumbers {
-  rc: RestClient;
+  rc: RingCentral;
   blockedNumberId: string | null;
   parent: Parent;
 

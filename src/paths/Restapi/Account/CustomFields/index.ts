@@ -5,10 +5,10 @@ import {
   CustomFieldUpdateRequest,
 } from '../../../../definitions';
 import Parent from '..';
-import RestClient from '../../../..';
+import RingCentral from '../../../..';
 
 class CustomFields {
-  rc: RestClient;
+  rc: RingCentral;
   fieldId: string | null;
   parent: Parent;
 

@@ -4,10 +4,10 @@ import {
   CompanyPhoneNumberInfo,
 } from '../../../../definitions';
 import Parent from '..';
-import RestClient from '../../../..';
+import RingCentral from '../../../..';
 
 class PhoneNumber {
-  rc: RestClient;
+  rc: RingCentral;
   phoneNumberId: string | null;
   parent: Parent;
 

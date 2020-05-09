@@ -6,10 +6,10 @@ import Language from './Language';
 import Greeting from './Greeting';
 import FaxCoverPage from './FaxCoverPage';
 import Parent from '..';
-import RestClient from '../../..';
+import RingCentral from '../../..';
 
 class Dictionary {
-  rc: RestClient;
+  rc: RingCentral;
   parent: Parent;
 
   constructor(parent: Parent) {

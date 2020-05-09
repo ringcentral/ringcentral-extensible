@@ -8,10 +8,10 @@ import {
   DeleteMessageParameters,
 } from '../../../../../definitions';
 import Parent from '..';
-import RestClient from '../../../../..';
+import RingCentral from '../../../../..';
 
 class MessageStore {
-  rc: RestClient;
+  rc: RingCentral;
   messageId: string | null;
   parent: Parent;
 

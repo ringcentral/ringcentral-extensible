@@ -7,10 +7,10 @@ import {
   UpdateSubscriptionParameters,
 } from '../../../definitions';
 import Parent from '..';
-import RestClient from '../../..';
+import RingCentral from '../../..';
 
 class Subscription {
-  rc: RestClient;
+  rc: RingCentral;
   subscriptionId: string | null;
   parent: Parent;
 

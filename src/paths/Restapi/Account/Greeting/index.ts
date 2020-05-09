@@ -4,10 +4,10 @@ import {
 } from '../../../../definitions';
 import Utils from '../../../../Utils';
 import Parent from '..';
-import RestClient from '../../../..';
+import RingCentral from '../../../..';
 
 class Greeting {
-  rc: RestClient;
+  rc: RingCentral;
   parent: Parent;
 
   constructor(parent: Parent) {

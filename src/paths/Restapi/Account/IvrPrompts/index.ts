@@ -7,10 +7,10 @@ import {
 } from '../../../../definitions';
 import Utils from '../../../../Utils';
 import Parent from '..';
-import RestClient from '../../../..';
+import RingCentral from '../../../..';
 
 class IvrPrompts {
-  rc: RestClient;
+  rc: RingCentral;
   promptId: string | null;
   parent: Parent;
 

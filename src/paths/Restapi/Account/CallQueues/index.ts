@@ -2,10 +2,10 @@ import BulkAssign from './BulkAssign';
 import Members from './Members';
 import {ListCallQueuesParameters} from '../../../../definitions';
 import Parent from '..';
-import RestClient from '../../../..';
+import RingCentral from '../../../..';
 
 class CallQueues {
-  rc: RestClient;
+  rc: RingCentral;
   groupId: string | null;
   parent: Parent;
 

@@ -4,10 +4,10 @@ import {
   TemplateInfo,
 } from '../../../../definitions';
 import Parent from '..';
-import RestClient from '../../../..';
+import RingCentral from '../../../..';
 
 class Templates {
-  rc: RestClient;
+  rc: RingCentral;
   templateId: string | null;
   parent: Parent;
 

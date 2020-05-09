@@ -4,10 +4,10 @@ import {
 } from '../../../../../definitions';
 import Utils from '../../../../../Utils';
 import Parent from '..';
-import RestClient from '../../../../..';
+import RingCentral from '../../../../..';
 
 class ProfileImage {
-  rc: RestClient;
+  rc: RingCentral;
   scaleSize: string | null;
   parent: Parent;
 
