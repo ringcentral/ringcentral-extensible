@@ -15,11 +15,6 @@ describe('batch get', () => {
       extension: process.env.RINGCENTRAL_EXTENSION!,
       password: process.env.RINGCENTRAL_PASSWORD!,
     });
-    await rc.login({
-      username: process.env.RINGCENTRAL_USERNAME!,
-      extension: process.env.RINGCENTRAL_EXTENSION!,
-      password: process.env.RINGCENTRAL_PASSWORD!,
-    });
     const extensions = await rc.restapi().account().extension().list({
       perPage: 30,
     }); // batch requests limited to 30 max
