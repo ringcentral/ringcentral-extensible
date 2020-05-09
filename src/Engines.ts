@@ -11,18 +11,22 @@ import {version} from '../package.json';
 import delay from 'delay';
 import Utils from './Utils';
 
-interface ConstructorOptions {
+export interface RestOptions {
+  clientId: string;
+  clientSecret: string;
   server: string;
-  clientId?: string;
-  clientSecret?: string;
-  token?: TokenInfo;
   appName?: string;
   appVersion?: string;
+  token?: TokenInfo;
   handleRateLimit?: boolean | number;
   debugMode?: boolean;
 }
 
-export class HttpEngine {
+export interface WsgOptions {
+  server: string;
+}
+
+export class HttpsEngine {
   static sandboxServer = 'https://platform.devtest.ringcentral.com';
   static productionServer = 'https://platform.ringcentral.com';
 
@@ -37,7 +41,7 @@ export class HttpEngine {
 
   httpClient: AxiosInstance;
 
-  constructor(options: ConstructorOptions) {
+  constructor(options: RestOptions) {
     this.server = options.server;
     this.clientId = options.clientId ?? '';
     this.clientSecret = options.clientSecret ?? '';
@@ -117,5 +121,16 @@ export class HttpEngine {
     } else {
       throw new RestException(r);
     }
+  }
+}
+
+export class WsgEngine {
+  static sandboxServer = 'wss://ws-api.devtest.ringcentral.com/ws';
+  static productionServer = 'wss://ws-api.ringcentral.com/ws';
+
+  server: string;
+
+  constructor(options: WsgOptions) {
+    this.server = options.server;
   }
 }
