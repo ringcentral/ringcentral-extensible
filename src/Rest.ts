@@ -22,6 +22,10 @@ export type RestOptions = {
   debugMode?: boolean;
 };
 
+export type RestRequestConfig = AxiosRequestConfig & {
+  transport: 'https' | 'wss';
+};
+
 export default class Rest {
   static sandboxServer = 'https://platform.devtest.ringcentral.com';
   static productionServer = 'https://platform.ringcentral.com';
@@ -66,7 +70,7 @@ export default class Rest {
     endpoint: string,
     content?: {},
     queryParams?: {},
-    config?: {}
+    config?: RestRequestConfig
   ): Promise<AxiosResponse<T>> {
     const _config: AxiosRequestConfig = {
       method: httpMethod,

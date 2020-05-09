@@ -3,7 +3,7 @@ import {Method, AxiosResponse} from 'axios';
 import {GetTokenRequest, TokenInfo} from './definitions';
 import Restapi from './paths/Restapi';
 import Scim from './paths/Scim';
-import Rest, {RestOptions} from './Rest';
+import Rest, {RestOptions, RestRequestConfig} from './Rest';
 import Wsg, {WsgOptions} from './Wsg';
 
 type PasswordFlowOptions = {
@@ -39,7 +39,7 @@ export default class RingCentral {
     endpoint: string,
     content?: {},
     queryParams?: {},
-    config?: {}
+    config?: RestRequestConfig
   ): Promise<AxiosResponse<T>> {
     return this.rest.request<T>(
       httpMethod,
@@ -53,14 +53,14 @@ export default class RingCentral {
   async get<T>(
     endpoint: string,
     queryParams?: {},
-    config?: {}
+    config?: RestRequestConfig
   ): Promise<AxiosResponse<T>> {
     return this.request<T>('GET', endpoint, undefined, queryParams, config);
   }
   async delete<T>(
     endpoint: string,
     queryParams?: {},
-    config?: {}
+    config?: RestRequestConfig
   ): Promise<AxiosResponse<T>> {
     return this.request<T>('DELETE', endpoint, undefined, queryParams, config);
   }
@@ -68,7 +68,7 @@ export default class RingCentral {
     endpoint: string,
     content?: {},
     queryParams?: {},
-    config?: {}
+    config?: RestRequestConfig
   ): Promise<AxiosResponse<T>> {
     return this.request<T>('POST', endpoint, content, queryParams, config);
   }
@@ -76,7 +76,7 @@ export default class RingCentral {
     endpoint: string,
     content: {},
     queryParams?: {},
-    config?: {}
+    config?: RestRequestConfig
   ): Promise<AxiosResponse<T>> {
     return this.request<T>('PUT', endpoint, content, queryParams, config);
   }
@@ -84,7 +84,7 @@ export default class RingCentral {
     endpoint: string,
     content: {},
     queryParams?: {},
-    config?: {}
+    config?: RestRequestConfig
   ): Promise<AxiosResponse<T>> {
     return this.request<T>('PATCH', endpoint, content, queryParams, config);
   }

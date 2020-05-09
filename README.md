@@ -113,13 +113,10 @@ yarn test
 ### Todo
 
 - Unified client: new UnifiedClient(protocal: 'https' | 'wss')
-- no more `any` type and `{}` type
+- no more `{}` type
 - convert code generator to TS
 - compare it with C# sdk and see what are missing
 - Create a WSG version of this SDK
-- Replace axios with @ringcentral/sdk ?
-- Make it an RingCentral official project
+- Make it a RingCentral official project
 - PubNub
-    - if use @ringcentral/sdk, then no need to implement
 - Support events
-    - if use @ringcentral/sdk, then no need to implement
