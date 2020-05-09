@@ -158,6 +158,7 @@ export default class RingCentral {
    * @param tokenToRevoke AccessToken
    */
   async revoke(tokenToRevoke?: string) {
+    this.wsg?.revoke();
     if (!tokenToRevoke && !this.token) {
       // nothing to revoke
       return;

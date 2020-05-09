@@ -28,7 +28,7 @@
     "@types/ws": "^7.2.4",
     "change-case": "^4.1.1",
     "dotenv-override-true": "^6.2.0",
-    "gts": "^2.0.0",
+    "gts": "^2.0.1",
     "husky": "^4.2.5",
     "jest": "^26.0.1",
     "lower-case-first": "^2.0.1",

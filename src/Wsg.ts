@@ -19,6 +19,10 @@ export default class Wsg {
     this.ws = new WS(this.server);
   }
 
+  revoke() {
+    this.ws.close();
+  }
+
   async subscribe(eventFilters: string[], callback: (body: {}) => void) {
     const subscriptionInfo = await this.rc
       .restapi()
