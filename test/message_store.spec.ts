@@ -36,5 +36,6 @@ describe('message store', () => {
       .messageStore(messageList.records?.[0].id?.toString())
       .get();
     expect(messageInfo.from).toBeDefined();
+    await rc.revoke();
   });
 });

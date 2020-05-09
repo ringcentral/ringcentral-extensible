@@ -23,5 +23,6 @@ describe('list meetings', () => {
       .list();
     expect(meetingList).not.toBeUndefined();
     expect(meetingList.records).not.toBeUndefined();
+    await rc.revoke();
   });
 });

@@ -15,6 +15,7 @@ describe('authorize', () => {
     });
     expect(tokenInfo).not.toBeUndefined();
     expect(tokenInfo.access_token).not.toBeUndefined();
+    await rc.revoke();
   });
   test('refresh', async () => {
     const rc = new RestClient({
@@ -31,6 +32,7 @@ describe('authorize', () => {
     expect(tokenInfo).not.toBeUndefined();
     expect(tokenInfo.access_token).not.toBeUndefined();
     expect(tokenInfo.access_token).not.toEqual(_tokenInfo.access_token);
+    await rc.revoke();
   });
   test('revoke', async () => {
     const rc = new RestClient({

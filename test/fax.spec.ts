@@ -40,5 +40,6 @@ describe('fax', () => {
       .post(createFaxMessageRequest);
     expect(messageInfo).not.toBeUndefined();
     expect(messageInfo.id).not.toBeUndefined();
+    await rc.revoke();
   });
 });

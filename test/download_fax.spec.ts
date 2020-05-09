@@ -34,5 +34,6 @@ describe('fax', () => {
       {responseType: 'arraybuffer'}
     );
     fs.writeFileSync(path.join(__dirname, 'temp.pdf'), buffer);
+    await rc.revoke();
   });
 });

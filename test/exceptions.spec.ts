@@ -32,6 +32,7 @@ describe('Exceptions', () => {
     } finally {
       expect(exception).toBeTruthy();
     }
+    await rc.revoke();
   });
 
   test('404', async () => {
@@ -58,5 +59,6 @@ describe('Exceptions', () => {
     } finally {
       expect(exception).toBeTruthy();
     }
+    await rc.revoke();
   });
 });

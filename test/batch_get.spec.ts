@@ -27,5 +27,6 @@ describe('batch get', () => {
     expect(r).not.toBeNull();
     expect(r.data).not.toBeNull();
     expect(r.data).toContain('--Boundary');
+    await rc.revoke();
   });
 });

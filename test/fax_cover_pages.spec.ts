@@ -18,5 +18,6 @@ describe('fax cover pages', () => {
     const faxCoverPages = await rc.restapi().dictionary().faxCoverPage().get();
     expect(faxCoverPages.records?.length).toBeGreaterThan(0);
     expect(faxCoverPages.records?.[0].name).toBe('None');
+    await rc.revoke();
   });
 });

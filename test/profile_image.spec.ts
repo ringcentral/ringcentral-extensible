@@ -26,5 +26,6 @@ describe('Profile image', () => {
       .list();
     expect(buffer.constructor.name).toBe('Buffer');
     fs.writeFileSync(path.join(__dirname, 'temp.png'), buffer);
+    await rc.revoke();
   });
 });

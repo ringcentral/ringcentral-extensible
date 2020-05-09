@@ -18,5 +18,6 @@ describe('HTTP GET', () => {
     const extensionInfo = await rc.restapi().account().extension().get();
     expect(extensionInfo).not.toBeUndefined();
     expect(extensionInfo.id).not.toBeUndefined();
+    await rc.revoke();
   });
 });

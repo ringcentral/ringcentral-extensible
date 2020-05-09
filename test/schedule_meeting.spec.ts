@@ -62,6 +62,7 @@ describe('schedule meeting', () => {
       .delete();
     meetingsList = await rc.restapi().account().extension().meeting().list();
     expect(meetingsList.records!.length).toBe(count);
+    await rc.revoke();
   });
 
   test('for others', async () => {
@@ -155,5 +156,7 @@ describe('schedule meeting', () => {
     expect(
       meetingsList2.records!.some(r => r.id === meetingResponseResource.id)
     ).toBeFalsy();
+    await rc.revoke();
+    await rc2.revoke();
   });
 });

@@ -37,6 +37,7 @@ describe('low level API', () => {
     const messageInfo = r.data;
     expect(messageInfo).not.toBeUndefined();
     expect(messageInfo.id).not.toBeUndefined();
+    await rc.revoke();
   });
   test('fax', async () => {
     const rc = new RestClient({
@@ -74,5 +75,6 @@ describe('low level API', () => {
     const messageInfo = r.data;
     expect(messageInfo).not.toBeUndefined();
     expect(messageInfo.id).not.toBeUndefined();
+    await rc.revoke();
   });
 });
