@@ -73,10 +73,10 @@ const generate = (prefix = '/') => {
       defaultParamValue = '~'
     }
 
-    let code = `import RestClient from '${Array(routes.length + 1).fill('..').join('/')}'
+    let code = `import RingCentral from '${Array(routes.length + 1).fill('..').join('/')}'
 
 class ${R.last(routes)} {
-  rc: RestClient`
+  rc: RingCentral`
 
     if (paramName) {
       code += `
@@ -90,7 +90,7 @@ class ${R.last(routes)} {
     if (paramName) {
       code += `
 
-  constructor (${routes.length > 1 ? 'parent: Parent' : 'rc: RestClient'}, ${paramName}: (string | null) = ${defaultParamValue ? `'${defaultParamValue}'` : null}) {
+  constructor (${routes.length > 1 ? 'parent: Parent' : 'rc: RingCentral'}, ${paramName}: (string | null) = ${defaultParamValue ? `'${defaultParamValue}'` : null}) {
     ${routes.length > 1 ? `this.parent = parent
     this.rc = parent.rc` : 'this.rc = rc'}
     this.${paramName} = ${paramName}
@@ -98,7 +98,7 @@ class ${R.last(routes)} {
     } else {
       code += `
 
-  constructor (${routes.length > 1 ? 'parent: Parent' : 'rc: RestClient'}) {
+  constructor (${routes.length > 1 ? 'parent: Parent' : 'rc: RingCentral'}) {
     ${routes.length > 1 ? `this.parent = parent
     this.rc = parent.rc` : 'this.rc = rc'}
   }`
