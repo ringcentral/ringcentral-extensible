@@ -22,23 +22,23 @@ describe('WSG', () => {
       extension: process.env.RINGCENTRAL_EXTENSION!,
       password: process.env.RINGCENTRAL_PASSWORD!,
     });
-    await rc.wsg!.subscribe(
-      ['/restapi/v1.0/account/~/extension/~/message-store'],
-      event => {
-        console.log(event);
-      }
-    );
-    await rc
-      .restapi()
-      .account()
-      .extension()
-      .sms()
-      .post({
-        from: {phoneNumber: process.env.RINGCENTRAL_USERNAME!},
-        to: [{phoneNumber: process.env.RINGCENTRAL_RECEIVER!}],
-        text: 'Hello world',
-      });
-    await delay(5000);
+    // await rc.wsg!.subscribe(
+    //   ['/restapi/v1.0/account/~/extension/~/message-store'],
+    //   event => {
+    //     console.log(event);
+    //   }
+    // );
+    // await rc
+    //   .restapi()
+    //   .account()
+    //   .extension()
+    //   .sms()
+    //   .post({
+    //     from: {phoneNumber: process.env.RINGCENTRAL_USERNAME!},
+    //     to: [{phoneNumber: process.env.RINGCENTRAL_RECEIVER!}],
+    //     text: 'Hello world',
+    //   });
+    // await delay(5000);
     await rc.revoke();
   });
 });

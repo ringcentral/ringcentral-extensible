@@ -2,9 +2,9 @@ import WS from 'ws';
 
 import RingCentral from '.';
 
-export interface WsgOptions {
+export type WsgOptions = {
   server: string;
-}
+};
 export default class Wsg {
   static sandboxServer = 'wss://ws-api.devtest.ringcentral.com/ws';
   static productionServer = 'wss://ws-api.ringcentral.com/ws';

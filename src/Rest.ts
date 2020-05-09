@@ -11,7 +11,7 @@ import {version} from '../package.json';
 import delay from 'delay';
 import Utils from './Utils';
 
-export interface RestOptions {
+export type RestOptions = {
   clientId: string;
   clientSecret: string;
   server: string;
@@ -20,7 +20,7 @@ export interface RestOptions {
   token?: TokenInfo;
   handleRateLimit?: boolean | number;
   debugMode?: boolean;
-}
+};
 
 export default class Rest {
   static sandboxServer = 'https://platform.devtest.ringcentral.com';

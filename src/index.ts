@@ -6,15 +6,15 @@ import Scim from './paths/Scim';
 import Rest, {RestOptions} from './Rest';
 import Wsg, {WsgOptions} from './Wsg';
 
-interface PasswordFlowOptions {
+type PasswordFlowOptions = {
   username: string;
   extension?: string;
   password: string;
-}
-interface AuthCodeFlowOptions {
+};
+type AuthCodeFlowOptions = {
   code: string;
   redirect_uri: string;
-}
+};
 
 export default class RingCentral {
   rest: Rest;
