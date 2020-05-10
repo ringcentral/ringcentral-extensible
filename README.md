@@ -55,10 +55,10 @@ const wsgOptions = {
 const rc = new RingCentral(restOptions, wsgOptions);
 ```
 
-The you can set the default tranport protocol to `wss`:
+The you can set the default transport protocol to `wss`:
 
 ```ts
-rc.defaults.tranport = 'wss';
+rc.defaults.transport = 'wss';
 ```
 
 The transport protocol can also be specified when making an API call:
@@ -71,7 +71,7 @@ const extInfo = await rc
       .get({transport: 'wss'});
 ```
 
-To use HTTPS as transport protocol, just specify `tranport` as `'https'`.
+To use HTTPS as transport protocol, just specify `transport` as `'https'`.
 
 
 ## Binary content downloading
