@@ -34,7 +34,7 @@ class Mms {
       this.path(),
       formData,
       undefined,
-      {...config, headers: {...config.headers, ...formData.getHeaders()}}
+      {...config, headers: {...config?.headers, ...formData.getHeaders()}}
     );
     return r.data;
   }

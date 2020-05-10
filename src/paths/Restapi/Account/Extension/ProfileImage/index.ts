@@ -53,7 +53,7 @@ class ProfileImage {
       this.path(false),
       formData,
       undefined,
-      {...config, headers: {...config.headers, ...formData.getHeaders()}}
+      {...config, headers: {...config?.headers, ...formData.getHeaders()}}
     );
     return r.data;
   }
@@ -70,7 +70,7 @@ class ProfileImage {
     const formData = Utils.getFormData(updateUserProfileImageRequest);
     const r = await this.rc.put<string>(this.path(false), formData, undefined, {
       ...config,
-      headers: {...config.headers, ...formData.getHeaders()},
+      headers: {...config?.headers, ...formData.getHeaders()},
     });
     return r.data;
   }

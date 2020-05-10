@@ -40,7 +40,7 @@ class Greeting {
       this.path(false),
       formData,
       undefined,
-      {...config, headers: {...config.headers, ...formData.getHeaders()}}
+      {...config, headers: {...config?.headers, ...formData.getHeaders()}}
     );
     return r.data;
   }
