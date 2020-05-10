@@ -21,7 +21,7 @@
     "http-status-codes": "^1.4.0",
     "hyperid": "^2.0.5",
     "qs": "^6.9.4",
-    "ws": "^7.2.5"
+    "ws": "^7.3.0"
   },
   "devDependencies": {
     "@types/jest": "^25.2.1",
@@ -35,7 +35,7 @@
     "jest": "^26.0.1",
     "lower-case-first": "^2.0.1",
     "ramda": "^0.27.0",
-    "ts-jest": "^25.5.0",
+    "ts-jest": "^25.5.1",
     "typescript": "^3.8.3",
     "yarn-upgrade-all": "^0.5.2"
   },

@@ -1,8 +1,13 @@
-# RingCentral TypeScript SDK
+# RingCentral Unified SDK for TypeScript
 
-[![Build Status](https://travis-ci.org/tylerlong/ringcentral-typescript.svg?branch=master)](https://travis-ci.org/tylerlong/ringcentral-typescript)
+[![Build Status](https://travis-ci.org/ringcentral/ringcentral-unified-ts.svg?branch=master)](https://travis-ci.org/ringcentral/ringcentral-unified-ts)
 
-This SDK is modelled after the [RingCentral.NET](https://github.com/ringcentral/ringcentral.net) SDK which is the most popular RingCentral SDK for static compiled languages.
+This SDK supports both [RingCentral REST API](https://developers.ringcentral.com/api-reference) and [RingCentral Events & Notifications](https://developers.ringcentral.com/api-reference/events-notifications).
+
+It provides unifed programming interface to transport protocol HTTPS and WebSocket:
+
+- For RingCentral REST API, you can access it via either HTTPS or WebSocket.
+- For RingCentral Events & Notifications, you can set it up with either WebSocket or WebHook.
 
 
 ## Installation
@@ -11,36 +16,62 @@ This SDK is modelled after the [RingCentral.NET](https://github.com/ringcentral/
 yarn add ringcentral-typescript
 ```
 
-## Setup
+or
 
-Make a copy of `.env.example` and rename it to `.env`, then fill in the data appropriately.
+```
+npm install ringcentral-typescript --save
+```
 
-In your project, require the sdk, then initialize and login
+Then you should be able to import the SDK like this:
+
+```ts
+import RestCentral from 'ringcentral-typescript';
+```
+
+or
 
 ```js
-const RestCentral = require('ringcentral-typescript').default
-
-const rc = new RestCentral({
-    clientId: process.env.RINGCENTRAL_CLIENT_ID,
-    clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
-    server: process.env.RINGCENTRAL_SERVER_URL,
-    appName: "", //optional, if specified, it will be included in X-User-Agent header
-    appVersion: "", //optional, if specified, it will be included in X-User-Agent header
-    httpClient: "", //optional
-    token: "", //optional
-    handleRateLimit: false, //optional
-    debugMode: false // optional
-})
+const RestCentral = require('ringcentral-typescript').default;
 ```
 
 
-## Sample code
+## Usage
 
 #### [Sample code for all the endpoints](./samples.md)
 
 You can also find lots of useful code snippets from the [test cases](./test).
 
-Since this library is model after the [RingCentral.NET](https://github.com/ringcentral/ringcentral.net) SDK, you can also reference the samples in C#. It should be straightforward to translate C# code into TypeScript or JavaScript since this two SDKs are very similar.
+
+## Change Transport Protocol
+
+By default, HTTPS is the transport protocol. If you'd like to use WebSocket as transport protocol, you need to sepcify `wsgOptions` when creating a `RingCentral` instance:
+
+```ts
+const restOptions = { ... };
+const wsgOptions = {
+    server: 'wss://ws-api.devtest.ringcentral.com/ws', // for sandbox
+    // server: 'wss://ws-api.ringcentral.com/ws', // for production
+};
+const rc = new RingCentral(restOptions, wsgOptions);
+```
+
+The you can set the default tranport protocol to `wss`:
+
+```ts
+rc.defaults.tranport = 'wss';
+```
+
+The transport protocol can also be specified when making an API call:
+
+```ts
+const extInfo = await rc
+      .restapi()
+      .account()
+      .extension()
+      .get({transport: 'wss'});
+```
+
+To use HTTPS as transport protocol, just specify `tranport` as `'https'`.
 
 
 ## Binary content downloading
@@ -70,20 +101,6 @@ But not all binary content has been migrated to CDN.
 If the resource to download provides you with a CDN uri, use that CDN uri.
 If there is no CDN uri provided, contruct the uri as the [sample code](./samples.md) shows.
 
-## Rate Limiting
-The RingCentral Platform enforces rate limits to reduce network traffic and avoid DOS issues.
-
-
-[Here's](https://medium.com/ringcentral-developers/new-features-in-ringcentral-net-sdk-4-0-e2c596f63f43) a blog article discussing it in detail.
-
-This SDK has the option of handling rate limits automatically by passing `handleRateLimit: (boolean | number)` into the constructor.
-
-Options:
-
-- boolean
-    - When set to true, this will pause requests for however many seconds are indicated in the `rate-limit-window` header (defaulting to 60 is there header is somehow missing)
-- number
-    - When set to a number, this overrides using the header, or the default, and instead pauses for x seconds (where x is your number in the constructor)
 
 ## For maintainers
 
@@ -96,13 +113,6 @@ yarn generate
 ```
 
 
-### Compile
-
-```
-yarn tsc
-```
-
-
 ### Test
 
 ```
@@ -112,13 +122,12 @@ yarn test
 
 ### Todo
 
-- Unified client: new UnifiedClient(protocal: 'https' | 'wss')
 - no more `{}` type
 - convert code generator to TS
 - compare it with C# sdk and see what are missing
-- Create a WSG version of this SDK
 - Make it a RingCentral official project
 - PubNub
+    - optional, since we will mainly use WSG instead.
 - Support events:
     - token refreshed
 - extra features as plugins or extensions
@@ -126,7 +135,8 @@ yarn test
     - debug mode
     - extrensions/<extension 1>/
         - every extension should have a readme file
-- Test WSG queryParams with array as value
-- Test WSG binary uploading / downloading
+- WSG
+    - Test WSG queryParams with array as value
+    - Test WSG binary uploading / downloading
     - update test case so that everyone tests both REST and WSG
-- WSG should have its own folder and readme file
+    - WSG should have its own folder and readme file
