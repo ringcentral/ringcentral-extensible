@@ -23,7 +23,7 @@ export type RestOptions = {
 };
 
 export type RestRequestConfig = AxiosRequestConfig & {
-  transport: 'https' | 'wss';
+  transport?: 'https' | 'wss';
 };
 
 export default class Rest {

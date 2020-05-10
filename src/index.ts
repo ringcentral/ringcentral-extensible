@@ -15,10 +15,17 @@ type AuthCodeFlowOptions = {
   code: string;
   redirect_uri: string;
 };
+type RingCentralDefaults = {
+  transport: 'https' | 'wss';
+};
 
 export default class RingCentral {
   rest: Rest;
   wsg?: Wsg;
+
+  defaults: RingCentralDefaults = {
+    transport: 'https',
+  };
 
   constructor(restOptions: RestOptions, wsgOptions?: WsgOptions) {
     this.rest = new Rest(restOptions);
@@ -41,7 +48,17 @@ export default class RingCentral {
     queryParams?: {},
     config?: RestRequestConfig
   ): Promise<AxiosResponse<T>> {
-    return this.rest.request<T>(
+    const transport = config?.transport ?? this.defaults.transport;
+    let engine: Rest | Wsg = this.rest;
+    if (transport === 'wss') {
+      if (!this.wsg) {
+        throw new Error(
+          'In order to use wss as transport, you need to specify wsgOptions when initializing RingCentral.'
+        );
+      }
+      engine = this.wsg!;
+    }
+    return engine.request<T>(
       httpMethod,
       endpoint,
       content,
