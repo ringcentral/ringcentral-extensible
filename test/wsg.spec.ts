@@ -1,12 +1,12 @@
 /* eslint-env jest */
-import RestClient from '../src/index';
+import RingCentral from '../src/index';
 import Utils from '../src/Utils';
 
 jest.setTimeout(64000);
 
 describe('WSG', () => {
   test('subscription', async () => {
-    const rc = new RestClient(
+    const rc = new RingCentral(
       {
         clientId: process.env.RINGCENTRAL_CLIENT_ID!,
         clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET!,
@@ -45,7 +45,7 @@ describe('WSG', () => {
     expect(eventCount).toBeGreaterThan(0);
   });
   test('Rest API call', async () => {
-    const rc = new RestClient(
+    const rc = new RingCentral(
       {
         clientId: process.env.RINGCENTRAL_CLIENT_ID!,
         clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET!,

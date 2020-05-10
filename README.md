@@ -18,9 +18,9 @@ Make a copy of `.env.example` and rename it to `.env`, then fill in the data app
 In your project, require the sdk, then initialize and login
 
 ```js
-const RestClient = require('ringcentral-typescript').default
+const RestCentral = require('ringcentral-typescript').default
 
-const rc = new RestClient({
+const rc = new RestCentral({
     clientId: process.env.RINGCENTRAL_CLIENT_ID,
     clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET,
     server: process.env.RINGCENTRAL_SERVER_URL,
