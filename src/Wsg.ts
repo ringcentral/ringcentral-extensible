@@ -1,5 +1,4 @@
 import WS from 'ws';
-import delay from 'delay';
 import {Method, AxiosResponse, AxiosRequestConfig} from 'axios';
 import hyperid from 'hyperid';
 import {getStatusText} from 'http-status-codes';
@@ -8,6 +7,7 @@ import RingCentral from '.';
 import {RestRequestConfig} from './Rest';
 import RestException from './RestException';
 import {version} from '../package.json';
+import Utils from './Utils';
 
 const uuid = hyperid();
 
@@ -18,25 +18,6 @@ export type WsgEvent = {
   data: string;
 };
 
-/*
-{
-  "type": "ClientRequest",
-  "messageId": "04fc1c70-9258-11ea-b861-db9249523354",
-  "status": 200,
-  "headers": {
-    "Server": "nginx",
-    "Date": "Sun, 10 May 2020 00:48:52 GMT",
-    "Content-Type": "application/json;charset=UTF-8",
-    "LocalHostInfo": "10.28.28.27__17169@sjc11-c01-csg02.devtest.ringcentral.com",
-    "X-Rate-Limit-Group": "medium",
-    "X-Rate-Limit-Limit": "100",
-    "X-Rate-Limit-Remaining": "98",
-    "X-Rate-Limit-Window": "60",
-    "RoutingKey": "SJC11P01",
-    "RCRequestId": "e7e62e26-c356-4930-8833-7d7ac4f78b0c-56481120-0"
-  }
-}
-*/
 export type WsgMeta = {
   type: 'ClientRequest' | 'ServerNotification';
   messageId: string;
@@ -67,8 +48,16 @@ export default class Wsg {
   }
 
   async waitForOpen() {
-    while (!this.opened) {
-      await delay(100);
+    const waitForSeconds = 60;
+    const successful = await Utils.waitUntil(
+      100,
+      (waitForSeconds * 1000) / 100,
+      () => this.opened
+    );
+    if (!successful) {
+      throw new Error(
+        `Have been Waiting for ${this.waitForOpen} seconds but WebSocket is not open.`
+      );
     }
   }
 
@@ -131,9 +120,7 @@ export default class Wsg {
         Authorization: `Bearer ${this.rc.token?.access_token}`,
       };
     }
-    // const r = await this.httpClient.request<T>(_config);
     await this.waitForOpen();
-
     return new Promise((resolve, reject) => {
       const messageId = uuid();
       const body = [
@@ -153,39 +140,21 @@ export default class Wsg {
         const [meta, body]: [WsgMeta, T] = JSON.parse(event.data);
         if (meta.messageId === messageId && meta.type === 'ClientRequest') {
           this.ws.removeEventListener('message', handler);
+          const response: AxiosResponse = {
+            data: body,
+            status: meta.status,
+            statusText: getStatusText(meta.status),
+            headers: meta.headers,
+            config: _config,
+          };
           if (meta.status >= 200 && meta.status < 300) {
-            resolve({
-              data: body,
-              status: meta.status,
-              statusText: getStatusText(meta.status),
-              headers: meta.headers,
-              config: _config,
-            });
-            //   resolve({
-            //     data: body,
-            //     status: meta.status,
-            //     headers: meta.headers,
-            //     config: _config,
-            //   });
+            resolve(response);
           } else {
-            //   reject(
-            //     new RestException({
-            //       data: body,
-            //       status: meta.status,
-            //       headers: meta.headers,
-            //       config: _config,
-            //     })
-            //   );
+            reject(new RestException(response));
           }
         }
       };
       this.ws.addEventListener('message', handler);
     });
-
-    // if (r.status >= 200 && r.status < 300) {
-    //   return r;
-    // } else {
-    //   throw new RestException(r);
-    // }
   }
 }

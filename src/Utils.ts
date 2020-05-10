@@ -2,6 +2,7 @@ import FormData from 'form-data';
 
 import {Attachment} from './definitions';
 import {AxiosResponse} from 'axios';
+import delay from 'delay';
 
 class Utils {
   static formatTraffic(r: AxiosResponse): string {
@@ -71,6 +72,20 @@ class Utils {
       });
     }
     return formData;
+  }
+
+  static async waitUntil(
+    interval: number,
+    times: number,
+    condition: () => boolean
+  ): Promise<boolean> {
+    for (let i = 0; i < times; i++) {
+      if (condition()) {
+        return true;
+      }
+      await delay(interval);
+    }
+    return condition();
   }
 }
 

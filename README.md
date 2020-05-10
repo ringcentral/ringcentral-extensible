@@ -127,3 +127,6 @@ yarn test
     - extrensions/<extension 1>/
         - every extension should have a readme file
 - Test WSG queryParams with array as value
+- Test WSG binary uploading / downloading
+    - update test case so that everyone tests both REST and WSG
+- WSG should have its own folder and readme file
