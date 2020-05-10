@@ -1,3 +1,4 @@
+import {RestRequestConfig} from '../../../../../Rest';
 import {
   GetMessageInfoResponse,
   CreateMMSMessage,
@@ -25,14 +26,15 @@ class Mms {
    * Http post /restapi/v1.0/account/{accountId}/extension/{extensionId}/mms
    */
   async post(
-    createMMSMessage: CreateMMSMessage
+    createMMSMessage: CreateMMSMessage,
+    config?: RestRequestConfig
   ): Promise<GetMessageInfoResponse> {
     const formData = Utils.getFormData(createMMSMessage);
     const r = await this.rc.post<GetMessageInfoResponse>(
       this.path(),
       formData,
       undefined,
-      {headers: formData.getHeaders()}
+      {...config, headers: {...config.headers, ...formData.getHeaders()}}
     );
     return r.data;
   }

@@ -1,3 +1,4 @@
+import {RestRequestConfig} from '../../../../Rest';
 import {
   AccountCallLogResponse,
   ReadCompanyCallLogParameters,
@@ -32,11 +33,13 @@ class CallLog {
    * Http get /restapi/v1.0/account/{accountId}/call-log
    */
   async list(
-    queryParams?: ReadCompanyCallLogParameters
+    queryParams?: ReadCompanyCallLogParameters,
+    config?: RestRequestConfig
   ): Promise<AccountCallLogResponse> {
     const r = await this.rc.get<AccountCallLogResponse>(
       this.path(false),
-      queryParams
+      queryParams,
+      config
     );
     return r.data;
   }
@@ -47,13 +50,18 @@ class CallLog {
    * Http get /restapi/v1.0/account/{accountId}/call-log/{callRecordId}
    */
   async get(
-    queryParams?: ReadCompanyCallRecordParameters
+    queryParams?: ReadCompanyCallRecordParameters,
+    config?: RestRequestConfig
   ): Promise<CompanyCallLogRecord> {
     if (this.callRecordId === null) {
       throw new Error('callRecordId must be specified.');
     }
 
-    const r = await this.rc.get<CompanyCallLogRecord>(this.path(), queryParams);
+    const r = await this.rc.get<CompanyCallLogRecord>(
+      this.path(),
+      queryParams,
+      config
+    );
     return r.data;
   }
 }

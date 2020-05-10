@@ -1,3 +1,4 @@
+import {RestRequestConfig} from '../../../../Rest';
 import {
   CustomFieldResource,
   CustomFieldCreateRequest,
@@ -32,11 +33,14 @@ class CustomFields {
    * Http post /restapi/v1.0/account/{accountId}/custom-fields
    */
   async post(
-    customFieldCreateRequest: CustomFieldCreateRequest
+    customFieldCreateRequest: CustomFieldCreateRequest,
+    config?: RestRequestConfig
   ): Promise<CustomFieldResource> {
     const r = await this.rc.post<CustomFieldResource>(
       this.path(false),
-      customFieldCreateRequest
+      customFieldCreateRequest,
+      undefined,
+      config
     );
     return r.data;
   }
@@ -46,8 +50,12 @@ class CustomFields {
    * Rate Limit Group: Light
    * Http get /restapi/v1.0/account/{accountId}/custom-fields
    */
-  async get(): Promise<CustomFieldsResource> {
-    const r = await this.rc.get<CustomFieldsResource>(this.path(false));
+  async get(config?: RestRequestConfig): Promise<CustomFieldsResource> {
+    const r = await this.rc.get<CustomFieldsResource>(
+      this.path(false),
+      undefined,
+      config
+    );
     return r.data;
   }
 
@@ -57,7 +65,8 @@ class CustomFields {
    * Http put /restapi/v1.0/account/{accountId}/custom-fields/{fieldId}
    */
   async put(
-    customFieldUpdateRequest: CustomFieldUpdateRequest
+    customFieldUpdateRequest: CustomFieldUpdateRequest,
+    config?: RestRequestConfig
   ): Promise<CustomFieldResource> {
     if (this.fieldId === null) {
       throw new Error('fieldId must be specified.');
@@ -65,7 +74,9 @@ class CustomFields {
 
     const r = await this.rc.put<CustomFieldResource>(
       this.path(),
-      customFieldUpdateRequest
+      customFieldUpdateRequest,
+      undefined,
+      config
     );
     return r.data;
   }
@@ -75,12 +86,12 @@ class CustomFields {
    * Rate Limit Group: Light
    * Http delete /restapi/v1.0/account/{accountId}/custom-fields/{fieldId}
    */
-  async delete(): Promise<string> {
+  async delete(config?: RestRequestConfig): Promise<string> {
     if (this.fieldId === null) {
       throw new Error('fieldId must be specified.');
     }
 
-    const r = await this.rc.delete<string>(this.path());
+    const r = await this.rc.delete<string>(this.path(), undefined, config);
     return r.data;
   }
 }

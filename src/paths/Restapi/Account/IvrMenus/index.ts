@@ -1,3 +1,4 @@
+import {RestRequestConfig} from '../../../../Rest';
 import {IVRMenuInfo} from '../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../..';
@@ -26,8 +27,16 @@ class IvrMenus {
    * Rate Limit Group: Heavy
    * Http post /restapi/v1.0/account/{accountId}/ivr-menus
    */
-  async post(iVRMenuInfo: IVRMenuInfo): Promise<IVRMenuInfo> {
-    const r = await this.rc.post<IVRMenuInfo>(this.path(false), iVRMenuInfo);
+  async post(
+    iVRMenuInfo: IVRMenuInfo,
+    config?: RestRequestConfig
+  ): Promise<IVRMenuInfo> {
+    const r = await this.rc.post<IVRMenuInfo>(
+      this.path(false),
+      iVRMenuInfo,
+      undefined,
+      config
+    );
     return r.data;
   }
 
@@ -36,12 +45,12 @@ class IvrMenus {
    * Rate Limit Group: Medium
    * Http get /restapi/v1.0/account/{accountId}/ivr-menus/{ivrMenuId}
    */
-  async get(): Promise<IVRMenuInfo> {
+  async get(config?: RestRequestConfig): Promise<IVRMenuInfo> {
     if (this.ivrMenuId === null) {
       throw new Error('ivrMenuId must be specified.');
     }
 
-    const r = await this.rc.get<IVRMenuInfo>(this.path());
+    const r = await this.rc.get<IVRMenuInfo>(this.path(), undefined, config);
     return r.data;
   }
 
@@ -50,12 +59,20 @@ class IvrMenus {
    * Rate Limit Group: Medium
    * Http put /restapi/v1.0/account/{accountId}/ivr-menus/{ivrMenuId}
    */
-  async put(iVRMenuInfo: IVRMenuInfo): Promise<IVRMenuInfo> {
+  async put(
+    iVRMenuInfo: IVRMenuInfo,
+    config?: RestRequestConfig
+  ): Promise<IVRMenuInfo> {
     if (this.ivrMenuId === null) {
       throw new Error('ivrMenuId must be specified.');
     }
 
-    const r = await this.rc.put<IVRMenuInfo>(this.path(), iVRMenuInfo);
+    const r = await this.rc.put<IVRMenuInfo>(
+      this.path(),
+      iVRMenuInfo,
+      undefined,
+      config
+    );
     return r.data;
   }
 }

@@ -1,3 +1,4 @@
+import {RestRequestConfig} from '../../../../Rest';
 import {
   GetStateListResponse,
   ListStatesParameters,
@@ -31,11 +32,13 @@ class State {
    * Http get /restapi/v1.0/dictionary/state
    */
   async list(
-    queryParams?: ListStatesParameters
+    queryParams?: ListStatesParameters,
+    config?: RestRequestConfig
   ): Promise<GetStateListResponse> {
     const r = await this.rc.get<GetStateListResponse>(
       this.path(false),
-      queryParams
+      queryParams,
+      config
     );
     return r.data;
   }
@@ -45,12 +48,16 @@ class State {
    * Rate Limit Group: Light
    * Http get /restapi/v1.0/dictionary/state/{stateId}
    */
-  async get(): Promise<GetStateInfoResponse> {
+  async get(config?: RestRequestConfig): Promise<GetStateInfoResponse> {
     if (this.stateId === null) {
       throw new Error('stateId must be specified.');
     }
 
-    const r = await this.rc.get<GetStateInfoResponse>(this.path());
+    const r = await this.rc.get<GetStateInfoResponse>(
+      this.path(),
+      undefined,
+      config
+    );
     return r.data;
   }
 }

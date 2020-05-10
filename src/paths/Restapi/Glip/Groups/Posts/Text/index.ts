@@ -1,3 +1,4 @@
+import {RestRequestConfig} from '../../../../../../Rest';
 import Parent from '..';
 import RingCentral from '../../../../../..';
 
@@ -19,8 +20,8 @@ class Text {
    * Rate Limit Group: Medium
    * Http put /restapi/v1.0/glip/groups/{groupId}/posts/{postId}/text
    */
-  async put(body: string): Promise<string> {
-    const r = await this.rc.put<string>(this.path(), body);
+  async put(body: string, config?: RestRequestConfig): Promise<string> {
+    const r = await this.rc.put<string>(this.path(), body, undefined, config);
     return r.data;
   }
 }

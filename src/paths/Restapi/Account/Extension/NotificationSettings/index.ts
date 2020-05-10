@@ -1,3 +1,4 @@
+import {RestRequestConfig} from '../../../../../Rest';
 import {NotificationSettingsUpdateRequest} from '../../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../../..';
@@ -20,8 +21,12 @@ class NotificationSettings {
    * Rate Limit Group: Light
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/notification-settings
    */
-  async get(): Promise<NotificationSettings> {
-    const r = await this.rc.get<NotificationSettings>(this.path());
+  async get(config?: RestRequestConfig): Promise<NotificationSettings> {
+    const r = await this.rc.get<NotificationSettings>(
+      this.path(),
+      undefined,
+      config
+    );
     return r.data;
   }
 
@@ -31,11 +36,14 @@ class NotificationSettings {
    * Http put /restapi/v1.0/account/{accountId}/extension/{extensionId}/notification-settings
    */
   async put(
-    notificationSettingsUpdateRequest: NotificationSettingsUpdateRequest
+    notificationSettingsUpdateRequest: NotificationSettingsUpdateRequest,
+    config?: RestRequestConfig
   ): Promise<NotificationSettings> {
     const r = await this.rc.put<NotificationSettings>(
       this.path(),
-      notificationSettingsUpdateRequest
+      notificationSettingsUpdateRequest,
+      undefined,
+      config
     );
     return r.data;
   }

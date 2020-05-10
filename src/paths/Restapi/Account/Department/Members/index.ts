@@ -1,3 +1,4 @@
+import {RestRequestConfig} from '../../../../../Rest';
 import {
   DepartmentMemberList,
   ListDepartmentMembersParameters,
@@ -24,9 +25,14 @@ class Members {
    * Http get /restapi/v1.0/account/{accountId}/department/{departmentId}/members
    */
   async get(
-    queryParams?: ListDepartmentMembersParameters
+    queryParams?: ListDepartmentMembersParameters,
+    config?: RestRequestConfig
   ): Promise<DepartmentMemberList> {
-    const r = await this.rc.get<DepartmentMemberList>(this.path(), queryParams);
+    const r = await this.rc.get<DepartmentMemberList>(
+      this.path(),
+      queryParams,
+      config
+    );
     return r.data;
   }
 }

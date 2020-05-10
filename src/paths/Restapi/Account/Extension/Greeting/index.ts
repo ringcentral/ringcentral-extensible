@@ -1,3 +1,4 @@
+import {RestRequestConfig} from '../../../../../Rest';
 import {
   CustomUserGreetingInfo,
   CreateCustomUserGreetingRequest,
@@ -31,14 +32,15 @@ class Greeting {
    * Http post /restapi/v1.0/account/{accountId}/extension/{extensionId}/greeting
    */
   async post(
-    createCustomUserGreetingRequest: CreateCustomUserGreetingRequest
+    createCustomUserGreetingRequest: CreateCustomUserGreetingRequest,
+    config?: RestRequestConfig
   ): Promise<CustomUserGreetingInfo> {
     const formData = Utils.getFormData(createCustomUserGreetingRequest);
     const r = await this.rc.post<CustomUserGreetingInfo>(
       this.path(false),
       formData,
       undefined,
-      {headers: formData.getHeaders()}
+      {...config, headers: {...config.headers, ...formData.getHeaders()}}
     );
     return r.data;
   }
@@ -48,12 +50,16 @@ class Greeting {
    * Rate Limit Group: Medium
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/greeting/{greetingId}
    */
-  async get(): Promise<CustomUserGreetingInfo> {
+  async get(config?: RestRequestConfig): Promise<CustomUserGreetingInfo> {
     if (this.greetingId === null) {
       throw new Error('greetingId must be specified.');
     }
 
-    const r = await this.rc.get<CustomUserGreetingInfo>(this.path());
+    const r = await this.rc.get<CustomUserGreetingInfo>(
+      this.path(),
+      undefined,
+      config
+    );
     return r.data;
   }
 }

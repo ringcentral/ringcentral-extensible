@@ -1,3 +1,4 @@
+import {RestRequestConfig} from '../../../../../Rest';
 import {
   GlipPostsList,
   ReadGlipPostsParameters,
@@ -32,8 +33,15 @@ class Posts {
    * Rate Limit Group: Medium
    * Http get /restapi/v1.0/glip/chats/{chatId}/posts
    */
-  async list(queryParams?: ReadGlipPostsParameters): Promise<GlipPostsList> {
-    const r = await this.rc.get<GlipPostsList>(this.path(false), queryParams);
+  async list(
+    queryParams?: ReadGlipPostsParameters,
+    config?: RestRequestConfig
+  ): Promise<GlipPostsList> {
+    const r = await this.rc.get<GlipPostsList>(
+      this.path(false),
+      queryParams,
+      config
+    );
     return r.data;
   }
 
@@ -42,10 +50,15 @@ class Posts {
    * Rate Limit Group: Medium
    * Http post /restapi/v1.0/glip/chats/{chatId}/posts
    */
-  async post(glipPostPostBody: GlipPostPostBody): Promise<GlipPostInfo> {
+  async post(
+    glipPostPostBody: GlipPostPostBody,
+    config?: RestRequestConfig
+  ): Promise<GlipPostInfo> {
     const r = await this.rc.post<GlipPostInfo>(
       this.path(false),
-      glipPostPostBody
+      glipPostPostBody,
+      undefined,
+      config
     );
     return r.data;
   }
@@ -55,12 +68,12 @@ class Posts {
    * Rate Limit Group: Light
    * Http get /restapi/v1.0/glip/chats/{chatId}/posts/{postId}
    */
-  async get(): Promise<GlipPostInfo> {
+  async get(config?: RestRequestConfig): Promise<GlipPostInfo> {
     if (this.postId === null) {
       throw new Error('postId must be specified.');
     }
 
-    const r = await this.rc.get<GlipPostInfo>(this.path());
+    const r = await this.rc.get<GlipPostInfo>(this.path(), undefined, config);
     return r.data;
   }
 
@@ -69,12 +82,20 @@ class Posts {
    * Rate Limit Group: Medium
    * Http patch /restapi/v1.0/glip/chats/{chatId}/posts/{postId}
    */
-  async patch(glipPatchPostBody: GlipPatchPostBody): Promise<GlipPostInfo> {
+  async patch(
+    glipPatchPostBody: GlipPatchPostBody,
+    config?: RestRequestConfig
+  ): Promise<GlipPostInfo> {
     if (this.postId === null) {
       throw new Error('postId must be specified.');
     }
 
-    const r = await this.rc.patch<GlipPostInfo>(this.path(), glipPatchPostBody);
+    const r = await this.rc.patch<GlipPostInfo>(
+      this.path(),
+      glipPatchPostBody,
+      undefined,
+      config
+    );
     return r.data;
   }
 
@@ -83,12 +104,12 @@ class Posts {
    * Rate Limit Group: Medium
    * Http delete /restapi/v1.0/glip/chats/{chatId}/posts/{postId}
    */
-  async delete(): Promise<string> {
+  async delete(config?: RestRequestConfig): Promise<string> {
     if (this.postId === null) {
       throw new Error('postId must be specified.');
     }
 
-    const r = await this.rc.delete<string>(this.path());
+    const r = await this.rc.delete<string>(this.path(), undefined, config);
     return r.data;
   }
 }

@@ -1,3 +1,4 @@
+import {RestRequestConfig} from '../../../../Rest';
 import {
   GetTimezoneListResponse,
   ListTimezonesParameters,
@@ -32,11 +33,13 @@ class Timezone {
    * Http get /restapi/v1.0/dictionary/timezone
    */
   async list(
-    queryParams?: ListTimezonesParameters
+    queryParams?: ListTimezonesParameters,
+    config?: RestRequestConfig
   ): Promise<GetTimezoneListResponse> {
     const r = await this.rc.get<GetTimezoneListResponse>(
       this.path(false),
-      queryParams
+      queryParams,
+      config
     );
     return r.data;
   }
@@ -47,7 +50,8 @@ class Timezone {
    * Http get /restapi/v1.0/dictionary/timezone/{timezoneId}
    */
   async get(
-    queryParams?: ReadTimezoneParameters
+    queryParams?: ReadTimezoneParameters,
+    config?: RestRequestConfig
   ): Promise<GetTimezoneInfoResponse> {
     if (this.timezoneId === null) {
       throw new Error('timezoneId must be specified.');
@@ -55,7 +59,8 @@ class Timezone {
 
     const r = await this.rc.get<GetTimezoneInfoResponse>(
       this.path(),
-      queryParams
+      queryParams,
+      config
     );
     return r.data;
   }

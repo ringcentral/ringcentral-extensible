@@ -1,3 +1,4 @@
+import {RestRequestConfig} from '../../../../../../Rest';
 import {ReadMessageContentParameters} from '../../../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../../../..';
@@ -26,12 +27,16 @@ class Content {
    * Rate Limit Group: Medium
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}/content/{attachmentId}
    */
-  async get(queryParams?: ReadMessageContentParameters): Promise<Buffer> {
+  async get(
+    queryParams?: ReadMessageContentParameters,
+    config?: RestRequestConfig
+  ): Promise<Buffer> {
     if (this.attachmentId === null) {
       throw new Error('attachmentId must be specified.');
     }
 
     const r = await this.rc.get<Buffer>(this.path(), queryParams, {
+      ...config,
       responseType: 'arraybuffer',
     });
     return r.data;

@@ -1,3 +1,4 @@
+import {RestRequestConfig} from '../../../../../Rest';
 import {AutomaticLocationUpdatesTaskInfo} from '../../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../../..';
@@ -26,12 +27,18 @@ class Tasks {
    * Rate Limit Group: Light
    * Http get /restapi/v1.0/account/{accountId}/emergency-address-auto-update/tasks/{taskId}
    */
-  async get(): Promise<AutomaticLocationUpdatesTaskInfo> {
+  async get(
+    config?: RestRequestConfig
+  ): Promise<AutomaticLocationUpdatesTaskInfo> {
     if (this.taskId === null) {
       throw new Error('taskId must be specified.');
     }
 
-    const r = await this.rc.get<AutomaticLocationUpdatesTaskInfo>(this.path());
+    const r = await this.rc.get<AutomaticLocationUpdatesTaskInfo>(
+      this.path(),
+      undefined,
+      config
+    );
     return r.data;
   }
 }

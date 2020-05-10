@@ -1,3 +1,4 @@
+import {RestRequestConfig} from '../../../../../Rest';
 import {
   UserCallLogResponse,
   ReadUserCallLogParameters,
@@ -33,11 +34,13 @@ class CallLog {
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log
    */
   async list(
-    queryParams?: ReadUserCallLogParameters
+    queryParams?: ReadUserCallLogParameters,
+    config?: RestRequestConfig
   ): Promise<UserCallLogResponse> {
     const r = await this.rc.get<UserCallLogResponse>(
       this.path(false),
-      queryParams
+      queryParams,
+      config
     );
     return r.data;
   }
@@ -47,8 +50,15 @@ class CallLog {
    * Rate Limit Group: Heavy
    * Http delete /restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log
    */
-  async delete(queryParams?: DeleteUserCallLogParameters): Promise<string> {
-    const r = await this.rc.delete<string>(this.path(false), queryParams);
+  async delete(
+    queryParams?: DeleteUserCallLogParameters,
+    config?: RestRequestConfig
+  ): Promise<string> {
+    const r = await this.rc.delete<string>(
+      this.path(false),
+      queryParams,
+      config
+    );
     return r.data;
   }
 
@@ -58,13 +68,18 @@ class CallLog {
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log/{callRecordId}
    */
   async get(
-    queryParams?: ReadUserCallRecordParameters
+    queryParams?: ReadUserCallRecordParameters,
+    config?: RestRequestConfig
   ): Promise<UserCallLogRecord> {
     if (this.callRecordId === null) {
       throw new Error('callRecordId must be specified.');
     }
 
-    const r = await this.rc.get<UserCallLogRecord>(this.path(), queryParams);
+    const r = await this.rc.get<UserCallLogRecord>(
+      this.path(),
+      queryParams,
+      config
+    );
     return r.data;
   }
 }

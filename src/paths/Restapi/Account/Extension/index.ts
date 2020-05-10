@@ -32,6 +32,7 @@ import Sms from './Sms';
 import ActiveCalls from './ActiveCalls';
 import CallLogSync from './CallLogSync';
 import CallLog from './CallLog';
+import {RestRequestConfig} from '../../../../Rest';
 import {
   GetExtensionListResponse,
   ListExtensionsParameters,
@@ -69,11 +70,13 @@ class Extension {
    * Http get /restapi/v1.0/account/{accountId}/extension
    */
   async list(
-    queryParams?: ListExtensionsParameters
+    queryParams?: ListExtensionsParameters,
+    config?: RestRequestConfig
   ): Promise<GetExtensionListResponse> {
     const r = await this.rc.get<GetExtensionListResponse>(
       this.path(false),
-      queryParams
+      queryParams,
+      config
     );
     return r.data;
   }
@@ -84,11 +87,14 @@ class Extension {
    * Http post /restapi/v1.0/account/{accountId}/extension
    */
   async post(
-    extensionCreationRequest: ExtensionCreationRequest
+    extensionCreationRequest: ExtensionCreationRequest,
+    config?: RestRequestConfig
   ): Promise<ExtensionCreationResponse> {
     const r = await this.rc.post<ExtensionCreationResponse>(
       this.path(false),
-      extensionCreationRequest
+      extensionCreationRequest,
+      undefined,
+      config
     );
     return r.data;
   }
@@ -98,12 +104,16 @@ class Extension {
    * Rate Limit Group: Light
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}
    */
-  async get(): Promise<GetExtensionInfoResponse> {
+  async get(config?: RestRequestConfig): Promise<GetExtensionInfoResponse> {
     if (this.extensionId === null) {
       throw new Error('extensionId must be specified.');
     }
 
-    const r = await this.rc.get<GetExtensionInfoResponse>(this.path());
+    const r = await this.rc.get<GetExtensionInfoResponse>(
+      this.path(),
+      undefined,
+      config
+    );
     return r.data;
   }
 
@@ -113,7 +123,8 @@ class Extension {
    * Http put /restapi/v1.0/account/{accountId}/extension/{extensionId}
    */
   async put(
-    extensionUpdateRequest: ExtensionUpdateRequest
+    extensionUpdateRequest: ExtensionUpdateRequest,
+    config?: RestRequestConfig
   ): Promise<GetExtensionInfoResponse> {
     if (this.extensionId === null) {
       throw new Error('extensionId must be specified.');
@@ -121,7 +132,9 @@ class Extension {
 
     const r = await this.rc.put<GetExtensionInfoResponse>(
       this.path(),
-      extensionUpdateRequest
+      extensionUpdateRequest,
+      undefined,
+      config
     );
     return r.data;
   }
@@ -131,12 +144,15 @@ class Extension {
    * Rate Limit Group: Medium
    * Http delete /restapi/v1.0/account/{accountId}/extension/{extensionId}
    */
-  async delete(queryParams?: DeleteExtensionParameters): Promise<string> {
+  async delete(
+    queryParams?: DeleteExtensionParameters,
+    config?: RestRequestConfig
+  ): Promise<string> {
     if (this.extensionId === null) {
       throw new Error('extensionId must be specified.');
     }
 
-    const r = await this.rc.delete<string>(this.path(), queryParams);
+    const r = await this.rc.delete<string>(this.path(), queryParams, config);
     return r.data;
   }
 

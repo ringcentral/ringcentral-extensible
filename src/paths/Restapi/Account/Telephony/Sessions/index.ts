@@ -1,5 +1,6 @@
 import Supervise from './Supervise';
 import Parties from './Parties';
+import {RestRequestConfig} from '../../../../../Rest';
 import {
   CallSession,
   ReadCallSessionStatusParameters,
@@ -32,13 +33,14 @@ class Sessions {
    * Http get /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}
    */
   async get(
-    queryParams?: ReadCallSessionStatusParameters
+    queryParams?: ReadCallSessionStatusParameters,
+    config?: RestRequestConfig
   ): Promise<CallSession> {
     if (this.telephonySessionId === null) {
       throw new Error('telephonySessionId must be specified.');
     }
 
-    const r = await this.rc.get<CallSession>(this.path(), queryParams);
+    const r = await this.rc.get<CallSession>(this.path(), queryParams, config);
     return r.data;
   }
 
@@ -47,12 +49,12 @@ class Sessions {
    * Rate Limit Group: Light
    * Http delete /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}
    */
-  async delete(): Promise<string> {
+  async delete(config?: RestRequestConfig): Promise<string> {
     if (this.telephonySessionId === null) {
       throw new Error('telephonySessionId must be specified.');
     }
 
-    const r = await this.rc.delete<string>(this.path());
+    const r = await this.rc.delete<string>(this.path(), undefined, config);
     return r.data;
   }
 

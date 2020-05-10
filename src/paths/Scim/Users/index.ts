@@ -1,4 +1,5 @@
 import DotSearch from './DotSearch';
+import {RestRequestConfig} from '../../../Rest';
 import {
   UserSearchResponse,
   SearchViaGet2Parameters,
@@ -35,11 +36,13 @@ class Users {
    * Http get /scim/v2/Users
    */
   async list(
-    queryParams?: SearchViaGet2Parameters
+    queryParams?: SearchViaGet2Parameters,
+    config?: RestRequestConfig
   ): Promise<UserSearchResponse> {
     const r = await this.rc.get<UserSearchResponse>(
       this.path(false),
-      queryParams
+      queryParams,
+      config
     );
     return r.data;
   }
@@ -49,8 +52,16 @@ class Users {
    * Rate Limit Group: Heavy
    * Http post /scim/v2/Users
    */
-  async post(createUser: CreateUser): Promise<UserResponse> {
-    const r = await this.rc.post<UserResponse>(this.path(false), createUser);
+  async post(
+    createUser: CreateUser,
+    config?: RestRequestConfig
+  ): Promise<UserResponse> {
+    const r = await this.rc.post<UserResponse>(
+      this.path(false),
+      createUser,
+      undefined,
+      config
+    );
     return r.data;
   }
 
@@ -59,12 +70,12 @@ class Users {
    * Rate Limit Group: Light
    * Http get /scim/v2/Users/{id}
    */
-  async get(): Promise<UserResponse> {
+  async get(config?: RestRequestConfig): Promise<UserResponse> {
     if (this.id === null) {
       throw new Error('id must be specified.');
     }
 
-    const r = await this.rc.get<UserResponse>(this.path());
+    const r = await this.rc.get<UserResponse>(this.path(), undefined, config);
     return r.data;
   }
 
@@ -73,12 +84,17 @@ class Users {
    * Rate Limit Group: Heavy
    * Http put /scim/v2/Users/{id}
    */
-  async put(user: User): Promise<UserResponse> {
+  async put(user: User, config?: RestRequestConfig): Promise<UserResponse> {
     if (this.id === null) {
       throw new Error('id must be specified.');
     }
 
-    const r = await this.rc.put<UserResponse>(this.path(), user);
+    const r = await this.rc.put<UserResponse>(
+      this.path(),
+      user,
+      undefined,
+      config
+    );
     return r.data;
   }
 
@@ -87,12 +103,12 @@ class Users {
    * Rate Limit Group: Heavy
    * Http delete /scim/v2/Users/{id}
    */
-  async delete(): Promise<string> {
+  async delete(config?: RestRequestConfig): Promise<string> {
     if (this.id === null) {
       throw new Error('id must be specified.');
     }
 
-    const r = await this.rc.delete<string>(this.path());
+    const r = await this.rc.delete<string>(this.path(), undefined, config);
     return r.data;
   }
 
@@ -101,12 +117,20 @@ class Users {
    * Rate Limit Group: Heavy
    * Http patch /scim/v2/Users/{id}
    */
-  async patch(userPatch: UserPatch): Promise<UserResponse> {
+  async patch(
+    userPatch: UserPatch,
+    config?: RestRequestConfig
+  ): Promise<UserResponse> {
     if (this.id === null) {
       throw new Error('id must be specified.');
     }
 
-    const r = await this.rc.patch<UserResponse>(this.path(), userPatch);
+    const r = await this.rc.patch<UserResponse>(
+      this.path(),
+      userPatch,
+      undefined,
+      config
+    );
     return r.data;
   }
 

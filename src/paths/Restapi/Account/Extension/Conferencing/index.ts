@@ -1,3 +1,4 @@
+import {RestRequestConfig} from '../../../../../Rest';
 import {
   GetConferencingInfoResponse,
   ReadConferencingSettingsParameters,
@@ -25,11 +26,13 @@ class Conferencing {
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/conferencing
    */
   async get(
-    queryParams?: ReadConferencingSettingsParameters
+    queryParams?: ReadConferencingSettingsParameters,
+    config?: RestRequestConfig
   ): Promise<GetConferencingInfoResponse> {
     const r = await this.rc.get<GetConferencingInfoResponse>(
       this.path(),
-      queryParams
+      queryParams,
+      config
     );
     return r.data;
   }
@@ -40,11 +43,14 @@ class Conferencing {
    * Http put /restapi/v1.0/account/{accountId}/extension/{extensionId}/conferencing
    */
   async put(
-    updateConferencingInfoRequest: UpdateConferencingInfoRequest
+    updateConferencingInfoRequest: UpdateConferencingInfoRequest,
+    config?: RestRequestConfig
   ): Promise<GetConferencingInfoResponse> {
     const r = await this.rc.put<GetConferencingInfoResponse>(
       this.path(),
-      updateConferencingInfoRequest
+      updateConferencingInfoRequest,
+      undefined,
+      config
     );
     return r.data;
   }

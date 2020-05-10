@@ -1,3 +1,4 @@
+import {RestRequestConfig} from '../../../../Rest';
 import {
   GlipMessageAttachmentInfo,
   GlipMessageAttachmentInfoRequest,
@@ -32,12 +33,14 @@ class Cards {
    */
   async post(
     glipMessageAttachmentInfoRequest: GlipMessageAttachmentInfoRequest,
-    queryParams?: CreateGlipCardParameters
+    queryParams?: CreateGlipCardParameters,
+    config?: RestRequestConfig
   ): Promise<GlipMessageAttachmentInfo> {
     const r = await this.rc.post<GlipMessageAttachmentInfo>(
       this.path(false),
       glipMessageAttachmentInfoRequest,
-      queryParams
+      queryParams,
+      config
     );
     return r.data;
   }
@@ -47,12 +50,16 @@ class Cards {
    * Rate Limit Group: Medium
    * Http get /restapi/v1.0/glip/cards/{cardId}
    */
-  async get(): Promise<GlipMessageAttachmentInfo> {
+  async get(config?: RestRequestConfig): Promise<GlipMessageAttachmentInfo> {
     if (this.cardId === null) {
       throw new Error('cardId must be specified.');
     }
 
-    const r = await this.rc.get<GlipMessageAttachmentInfo>(this.path());
+    const r = await this.rc.get<GlipMessageAttachmentInfo>(
+      this.path(),
+      undefined,
+      config
+    );
     return r.data;
   }
 
@@ -62,7 +69,8 @@ class Cards {
    * Http put /restapi/v1.0/glip/cards/{cardId}
    */
   async put(
-    glipMessageAttachmentInfoRequest: GlipMessageAttachmentInfoRequest
+    glipMessageAttachmentInfoRequest: GlipMessageAttachmentInfoRequest,
+    config?: RestRequestConfig
   ): Promise<string> {
     if (this.cardId === null) {
       throw new Error('cardId must be specified.');
@@ -70,7 +78,9 @@ class Cards {
 
     const r = await this.rc.put<string>(
       this.path(),
-      glipMessageAttachmentInfoRequest
+      glipMessageAttachmentInfoRequest,
+      undefined,
+      config
     );
     return r.data;
   }
@@ -80,12 +90,12 @@ class Cards {
    * Rate Limit Group: Medium
    * Http delete /restapi/v1.0/glip/cards/{cardId}
    */
-  async delete(): Promise<string> {
+  async delete(config?: RestRequestConfig): Promise<string> {
     if (this.cardId === null) {
       throw new Error('cardId must be specified.');
     }
 
-    const r = await this.rc.delete<string>(this.path());
+    const r = await this.rc.delete<string>(this.path(), undefined, config);
     return r.data;
   }
 }

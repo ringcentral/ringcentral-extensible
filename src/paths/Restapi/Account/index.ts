@@ -27,6 +27,7 @@ import ActiveCalls from './ActiveCalls';
 import CallLogSync from './CallLogSync';
 import CallLog from './CallLog';
 import Extension from './Extension';
+import {RestRequestConfig} from '../../../Rest';
 import {GetAccountInfoResponse} from '../../../definitions';
 import Parent from '..';
 import RingCentral from '../../..';
@@ -55,12 +56,16 @@ class Account {
    * Rate Limit Group: Light
    * Http get /restapi/v1.0/account/{accountId}
    */
-  async get(): Promise<GetAccountInfoResponse> {
+  async get(config?: RestRequestConfig): Promise<GetAccountInfoResponse> {
     if (this.accountId === null) {
       throw new Error('accountId must be specified.');
     }
 
-    const r = await this.rc.get<GetAccountInfoResponse>(this.path());
+    const r = await this.rc.get<GetAccountInfoResponse>(
+      this.path(),
+      undefined,
+      config
+    );
     return r.data;
   }
 

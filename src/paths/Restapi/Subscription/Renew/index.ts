@@ -1,3 +1,4 @@
+import {RestRequestConfig} from '../../../../Rest';
 import {SubscriptionInfo} from '../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../..';
@@ -20,8 +21,12 @@ class Renew {
    * Rate Limit Group: Light
    * Http post /restapi/v1.0/subscription/{subscriptionId}/renew
    */
-  async post(): Promise<SubscriptionInfo> {
-    const r = await this.rc.post<SubscriptionInfo>(this.path());
+  async post(config?: RestRequestConfig): Promise<SubscriptionInfo> {
+    const r = await this.rc.post<SubscriptionInfo>(
+      this.path(),
+      undefined,
+      config
+    );
     return r.data;
   }
 }

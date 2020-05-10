@@ -1,4 +1,5 @@
 import Complete from './Complete';
+import {RestRequestConfig} from '../../../../Rest';
 import {
   GlipTaskInfo,
   GlipTaskList,
@@ -31,12 +32,12 @@ class Tasks {
    * Rate Limit Group: Medium
    * Http get /restapi/v1.0/glip/tasks/{taskId}
    */
-  async get(): Promise<GlipTaskInfo> {
+  async get(config?: RestRequestConfig): Promise<GlipTaskInfo> {
     if (this.taskId === null) {
       throw new Error('taskId must be specified.');
     }
 
-    const r = await this.rc.get<GlipTaskInfo>(this.path());
+    const r = await this.rc.get<GlipTaskInfo>(this.path(), undefined, config);
     return r.data;
   }
 
@@ -45,12 +46,20 @@ class Tasks {
    * Rate Limit Group: Medium
    * Http patch /restapi/v1.0/glip/tasks/{taskId}
    */
-  async patch(glipUpdateTask: GlipUpdateTask): Promise<GlipTaskList> {
+  async patch(
+    glipUpdateTask: GlipUpdateTask,
+    config?: RestRequestConfig
+  ): Promise<GlipTaskList> {
     if (this.taskId === null) {
       throw new Error('taskId must be specified.');
     }
 
-    const r = await this.rc.patch<GlipTaskList>(this.path(), glipUpdateTask);
+    const r = await this.rc.patch<GlipTaskList>(
+      this.path(),
+      glipUpdateTask,
+      undefined,
+      config
+    );
     return r.data;
   }
 
@@ -59,12 +68,12 @@ class Tasks {
    * Rate Limit Group: Medium
    * Http delete /restapi/v1.0/glip/tasks/{taskId}
    */
-  async delete(): Promise<string> {
+  async delete(config?: RestRequestConfig): Promise<string> {
     if (this.taskId === null) {
       throw new Error('taskId must be specified.');
     }
 
-    const r = await this.rc.delete<string>(this.path());
+    const r = await this.rc.delete<string>(this.path(), undefined, config);
     return r.data;
   }
 

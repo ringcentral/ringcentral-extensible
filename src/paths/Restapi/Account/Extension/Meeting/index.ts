@@ -1,5 +1,6 @@
 import End from './End';
 import ServiceInfo from './ServiceInfo';
+import {RestRequestConfig} from '../../../../../Rest';
 import {
   MeetingsResource,
   MeetingResponseResource,
@@ -32,8 +33,12 @@ class Meeting {
    * Rate Limit Group: Light
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting
    */
-  async list(): Promise<MeetingsResource> {
-    const r = await this.rc.get<MeetingsResource>(this.path(false));
+  async list(config?: RestRequestConfig): Promise<MeetingsResource> {
+    const r = await this.rc.get<MeetingsResource>(
+      this.path(false),
+      undefined,
+      config
+    );
     return r.data;
   }
 
@@ -43,11 +48,14 @@ class Meeting {
    * Http post /restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting
    */
   async post(
-    meetingRequestResource: MeetingRequestResource
+    meetingRequestResource: MeetingRequestResource,
+    config?: RestRequestConfig
   ): Promise<MeetingResponseResource> {
     const r = await this.rc.post<MeetingResponseResource>(
       this.path(false),
-      meetingRequestResource
+      meetingRequestResource,
+      undefined,
+      config
     );
     return r.data;
   }
@@ -57,12 +65,16 @@ class Meeting {
    * Rate Limit Group: Light
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/{meetingId}
    */
-  async get(): Promise<MeetingResponseResource> {
+  async get(config?: RestRequestConfig): Promise<MeetingResponseResource> {
     if (this.meetingId === null) {
       throw new Error('meetingId must be specified.');
     }
 
-    const r = await this.rc.get<MeetingResponseResource>(this.path());
+    const r = await this.rc.get<MeetingResponseResource>(
+      this.path(),
+      undefined,
+      config
+    );
     return r.data;
   }
 
@@ -72,7 +84,8 @@ class Meeting {
    * Http put /restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/{meetingId}
    */
   async put(
-    meetingRequestResource: MeetingRequestResource
+    meetingRequestResource: MeetingRequestResource,
+    config?: RestRequestConfig
   ): Promise<MeetingResponseResource> {
     if (this.meetingId === null) {
       throw new Error('meetingId must be specified.');
@@ -80,7 +93,9 @@ class Meeting {
 
     const r = await this.rc.put<MeetingResponseResource>(
       this.path(),
-      meetingRequestResource
+      meetingRequestResource,
+      undefined,
+      config
     );
     return r.data;
   }
@@ -90,12 +105,12 @@ class Meeting {
    * Rate Limit Group: Medium
    * Http delete /restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/{meetingId}
    */
-  async delete(): Promise<string> {
+  async delete(config?: RestRequestConfig): Promise<string> {
     if (this.meetingId === null) {
       throw new Error('meetingId must be specified.');
     }
 
-    const r = await this.rc.delete<string>(this.path());
+    const r = await this.rc.delete<string>(this.path(), undefined, config);
     return r.data;
   }
 

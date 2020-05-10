@@ -1,5 +1,6 @@
 import BulkAssign from './BulkAssign';
 import Members from './Members';
+import {RestRequestConfig} from '../../../../Rest';
 import {
   CallMonitoringGroup,
   CreateCallMonitoringGroupRequest,
@@ -33,11 +34,14 @@ class CallMonitoringGroups {
    * Http post /restapi/v1.0/account/{accountId}/call-monitoring-groups
    */
   async post(
-    createCallMonitoringGroupRequest: CreateCallMonitoringGroupRequest
+    createCallMonitoringGroupRequest: CreateCallMonitoringGroupRequest,
+    config?: RestRequestConfig
   ): Promise<CallMonitoringGroup> {
     const r = await this.rc.post<CallMonitoringGroup>(
       this.path(false),
-      createCallMonitoringGroupRequest
+      createCallMonitoringGroupRequest,
+      undefined,
+      config
     );
     return r.data;
   }
@@ -48,11 +52,13 @@ class CallMonitoringGroups {
    * Http get /restapi/v1.0/account/{accountId}/call-monitoring-groups
    */
   async get(
-    queryParams?: ListCallMonitoringGroupsParameters
+    queryParams?: ListCallMonitoringGroupsParameters,
+    config?: RestRequestConfig
   ): Promise<CallMonitoringGroups> {
     const r = await this.rc.get<CallMonitoringGroups>(
       this.path(false),
-      queryParams
+      queryParams,
+      config
     );
     return r.data;
   }
@@ -63,7 +69,8 @@ class CallMonitoringGroups {
    * Http put /restapi/v1.0/account/{accountId}/call-monitoring-groups/{groupId}
    */
   async put(
-    createCallMonitoringGroupRequest: CreateCallMonitoringGroupRequest
+    createCallMonitoringGroupRequest: CreateCallMonitoringGroupRequest,
+    config?: RestRequestConfig
   ): Promise<CallMonitoringGroup> {
     if (this.groupId === null) {
       throw new Error('groupId must be specified.');
@@ -71,7 +78,9 @@ class CallMonitoringGroups {
 
     const r = await this.rc.put<CallMonitoringGroup>(
       this.path(),
-      createCallMonitoringGroupRequest
+      createCallMonitoringGroupRequest,
+      undefined,
+      config
     );
     return r.data;
   }
@@ -81,12 +90,12 @@ class CallMonitoringGroups {
    * Rate Limit Group: Medium
    * Http delete /restapi/v1.0/account/{accountId}/call-monitoring-groups/{groupId}
    */
-  async delete(): Promise<string> {
+  async delete(config?: RestRequestConfig): Promise<string> {
     if (this.groupId === null) {
       throw new Error('groupId must be specified.');
     }
 
-    const r = await this.rc.delete<string>(this.path());
+    const r = await this.rc.delete<string>(this.path(), undefined, config);
     return r.data;
   }
 

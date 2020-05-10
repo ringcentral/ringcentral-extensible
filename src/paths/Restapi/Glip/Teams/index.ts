@@ -4,6 +4,7 @@ import Remove from './Remove';
 import Add from './Add';
 import Leave from './Leave';
 import Join from './Join';
+import {RestRequestConfig} from '../../../../Rest';
 import {
   GlipTeamsList,
   ListGlipTeamsParameters,
@@ -38,8 +39,15 @@ class Teams {
    * Rate Limit Group: Medium
    * Http get /restapi/v1.0/glip/teams
    */
-  async list(queryParams?: ListGlipTeamsParameters): Promise<GlipTeamsList> {
-    const r = await this.rc.get<GlipTeamsList>(this.path(false), queryParams);
+  async list(
+    queryParams?: ListGlipTeamsParameters,
+    config?: RestRequestConfig
+  ): Promise<GlipTeamsList> {
+    const r = await this.rc.get<GlipTeamsList>(
+      this.path(false),
+      queryParams,
+      config
+    );
     return r.data;
   }
 
@@ -48,10 +56,15 @@ class Teams {
    * Rate Limit Group: Medium
    * Http post /restapi/v1.0/glip/teams
    */
-  async post(glipPostTeamBody: GlipPostTeamBody): Promise<GlipTeamInfo> {
+  async post(
+    glipPostTeamBody: GlipPostTeamBody,
+    config?: RestRequestConfig
+  ): Promise<GlipTeamInfo> {
     const r = await this.rc.post<GlipTeamInfo>(
       this.path(false),
-      glipPostTeamBody
+      glipPostTeamBody,
+      undefined,
+      config
     );
     return r.data;
   }
@@ -61,12 +74,12 @@ class Teams {
    * Rate Limit Group: Light
    * Http get /restapi/v1.0/glip/teams/{chatId}
    */
-  async get(): Promise<GlipTeamInfo> {
+  async get(config?: RestRequestConfig): Promise<GlipTeamInfo> {
     if (this.chatId === null) {
       throw new Error('chatId must be specified.');
     }
 
-    const r = await this.rc.get<GlipTeamInfo>(this.path());
+    const r = await this.rc.get<GlipTeamInfo>(this.path(), undefined, config);
     return r.data;
   }
 
@@ -75,12 +88,20 @@ class Teams {
    * Rate Limit Group: Medium
    * Http patch /restapi/v1.0/glip/teams/{chatId}
    */
-  async patch(glipPatchTeamBody: GlipPatchTeamBody): Promise<GlipTeamInfo> {
+  async patch(
+    glipPatchTeamBody: GlipPatchTeamBody,
+    config?: RestRequestConfig
+  ): Promise<GlipTeamInfo> {
     if (this.chatId === null) {
       throw new Error('chatId must be specified.');
     }
 
-    const r = await this.rc.patch<GlipTeamInfo>(this.path(), glipPatchTeamBody);
+    const r = await this.rc.patch<GlipTeamInfo>(
+      this.path(),
+      glipPatchTeamBody,
+      undefined,
+      config
+    );
     return r.data;
   }
 
@@ -89,12 +110,12 @@ class Teams {
    * Rate Limit Group: Medium
    * Http delete /restapi/v1.0/glip/teams/{chatId}
    */
-  async delete(): Promise<string> {
+  async delete(config?: RestRequestConfig): Promise<string> {
     if (this.chatId === null) {
       throw new Error('chatId must be specified.');
     }
 
-    const r = await this.rc.delete<string>(this.path());
+    const r = await this.rc.delete<string>(this.path(), undefined, config);
     return r.data;
   }
 

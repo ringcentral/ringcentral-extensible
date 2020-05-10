@@ -1,4 +1,5 @@
 import Content from './Content';
+import {RestRequestConfig} from '../../../../../Rest';
 import {
   GetMessageList,
   ListMessagesParameters,
@@ -34,8 +35,15 @@ class MessageStore {
    * Rate Limit Group: Light
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store
    */
-  async list(queryParams?: ListMessagesParameters): Promise<GetMessageList> {
-    const r = await this.rc.get<GetMessageList>(this.path(false), queryParams);
+  async list(
+    queryParams?: ListMessagesParameters,
+    config?: RestRequestConfig
+  ): Promise<GetMessageList> {
+    const r = await this.rc.get<GetMessageList>(
+      this.path(false),
+      queryParams,
+      config
+    );
     return r.data;
   }
 
@@ -44,12 +52,16 @@ class MessageStore {
    * Rate Limit Group: Light
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}
    */
-  async get(): Promise<GetMessageInfoResponse> {
+  async get(config?: RestRequestConfig): Promise<GetMessageInfoResponse> {
     if (this.messageId === null) {
       throw new Error('messageId must be specified.');
     }
 
-    const r = await this.rc.get<GetMessageInfoResponse>(this.path());
+    const r = await this.rc.get<GetMessageInfoResponse>(
+      this.path(),
+      undefined,
+      config
+    );
     return r.data;
   }
 
@@ -60,7 +72,8 @@ class MessageStore {
    */
   async put(
     updateMessageRequest: UpdateMessageRequest,
-    queryParams?: UpdateMessageParameters
+    queryParams?: UpdateMessageParameters,
+    config?: RestRequestConfig
   ): Promise<GetMessageInfoResponse> {
     if (this.messageId === null) {
       throw new Error('messageId must be specified.');
@@ -69,7 +82,8 @@ class MessageStore {
     const r = await this.rc.put<GetMessageInfoResponse>(
       this.path(),
       updateMessageRequest,
-      queryParams
+      queryParams,
+      config
     );
     return r.data;
   }
@@ -79,12 +93,15 @@ class MessageStore {
    * Rate Limit Group: Medium
    * Http delete /restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}
    */
-  async delete(queryParams?: DeleteMessageParameters): Promise<string> {
+  async delete(
+    queryParams?: DeleteMessageParameters,
+    config?: RestRequestConfig
+  ): Promise<string> {
     if (this.messageId === null) {
       throw new Error('messageId must be specified.');
     }
 
-    const r = await this.rc.delete<string>(this.path(), queryParams);
+    const r = await this.rc.delete<string>(this.path(), queryParams, config);
     return r.data;
   }
 

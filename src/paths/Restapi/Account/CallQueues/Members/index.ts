@@ -1,3 +1,4 @@
+import {RestRequestConfig} from '../../../../../Rest';
 import {
   CallQueueMembers,
   ListCallQueueMembersParameters,
@@ -24,9 +25,14 @@ class Members {
    * Http get /restapi/v1.0/account/{accountId}/call-queues/{groupId}/members
    */
   async get(
-    queryParams?: ListCallQueueMembersParameters
+    queryParams?: ListCallQueueMembersParameters,
+    config?: RestRequestConfig
   ): Promise<CallQueueMembers> {
-    const r = await this.rc.get<CallQueueMembers>(this.path(), queryParams);
+    const r = await this.rc.get<CallQueueMembers>(
+      this.path(),
+      queryParams,
+      config
+    );
     return r.data;
   }
 }

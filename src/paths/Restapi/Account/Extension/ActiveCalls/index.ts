@@ -1,3 +1,4 @@
+import {RestRequestConfig} from '../../../../../Rest';
 import {
   UserActiveCallsResponse,
   ListExtensionActiveCallsParameters,
@@ -24,11 +25,13 @@ class ActiveCalls {
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/active-calls
    */
   async get(
-    queryParams?: ListExtensionActiveCallsParameters
+    queryParams?: ListExtensionActiveCallsParameters,
+    config?: RestRequestConfig
   ): Promise<UserActiveCallsResponse> {
     const r = await this.rc.get<UserActiveCallsResponse>(
       this.path(),
-      queryParams
+      queryParams,
+      config
     );
     return r.data;
   }

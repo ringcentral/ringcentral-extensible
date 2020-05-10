@@ -1,3 +1,4 @@
+import {RestRequestConfig} from '../../../../../Rest';
 import {
   FeatureList,
   ReadUserFeaturesParameters,
@@ -23,8 +24,11 @@ class Features {
    * Rate Limit Group: Medium
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/features
    */
-  async get(queryParams?: ReadUserFeaturesParameters): Promise<FeatureList> {
-    const r = await this.rc.get<FeatureList>(this.path(), queryParams);
+  async get(
+    queryParams?: ReadUserFeaturesParameters,
+    config?: RestRequestConfig
+  ): Promise<FeatureList> {
+    const r = await this.rc.get<FeatureList>(this.path(), queryParams, config);
     return r.data;
   }
 }

@@ -1,3 +1,4 @@
+import {RestRequestConfig} from '../../../../../../Rest';
 import {AssignMultipleDevicesAutomaticLocationUpdates} from '../../../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../../../..';
@@ -21,11 +22,14 @@ class BulkAssign {
    * Http post /restapi/v1.0/account/{accountId}/emergency-address-auto-update/devices/bulk-assign
    */
   async post(
-    assignMultipleDevicesAutomaticLocationUpdates: AssignMultipleDevicesAutomaticLocationUpdates
+    assignMultipleDevicesAutomaticLocationUpdates: AssignMultipleDevicesAutomaticLocationUpdates,
+    config?: RestRequestConfig
   ): Promise<string> {
     const r = await this.rc.post<string>(
       this.path(),
-      assignMultipleDevicesAutomaticLocationUpdates
+      assignMultipleDevicesAutomaticLocationUpdates,
+      undefined,
+      config
     );
     return r.data;
   }

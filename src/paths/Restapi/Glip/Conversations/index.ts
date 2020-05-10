@@ -1,3 +1,4 @@
+import {RestRequestConfig} from '../../../../Rest';
 import {
   GlipConversationsList,
   ListGlipConversationsParameters,
@@ -32,11 +33,13 @@ class Conversations {
    * Http get /restapi/v1.0/glip/conversations
    */
   async list(
-    queryParams?: ListGlipConversationsParameters
+    queryParams?: ListGlipConversationsParameters,
+    config?: RestRequestConfig
   ): Promise<GlipConversationsList> {
     const r = await this.rc.get<GlipConversationsList>(
       this.path(false),
-      queryParams
+      queryParams,
+      config
     );
     return r.data;
   }
@@ -47,11 +50,14 @@ class Conversations {
    * Http post /restapi/v1.0/glip/conversations
    */
   async post(
-    createGlipConversationRequest: CreateGlipConversationRequest
+    createGlipConversationRequest: CreateGlipConversationRequest,
+    config?: RestRequestConfig
   ): Promise<GlipConversationInfo> {
     const r = await this.rc.post<GlipConversationInfo>(
       this.path(false),
-      createGlipConversationRequest
+      createGlipConversationRequest,
+      undefined,
+      config
     );
     return r.data;
   }
@@ -61,12 +67,16 @@ class Conversations {
    * Rate Limit Group: Light
    * Http get /restapi/v1.0/glip/conversations/{chatId}
    */
-  async get(): Promise<GlipConversationInfo> {
+  async get(config?: RestRequestConfig): Promise<GlipConversationInfo> {
     if (this.chatId === null) {
       throw new Error('chatId must be specified.');
     }
 
-    const r = await this.rc.get<GlipConversationInfo>(this.path());
+    const r = await this.rc.get<GlipConversationInfo>(
+      this.path(),
+      undefined,
+      config
+    );
     return r.data;
   }
 }

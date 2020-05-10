@@ -1,3 +1,4 @@
+import {RestRequestConfig} from '../../../../../Rest';
 import {
   WirelessPointsList,
   ListWirelessPointsParameters,
@@ -33,11 +34,13 @@ class WirelessPoints {
    * Http get /restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points
    */
   async list(
-    queryParams?: ListWirelessPointsParameters
+    queryParams?: ListWirelessPointsParameters,
+    config?: RestRequestConfig
   ): Promise<WirelessPointsList> {
     const r = await this.rc.get<WirelessPointsList>(
       this.path(false),
-      queryParams
+      queryParams,
+      config
     );
     return r.data;
   }
@@ -48,11 +51,14 @@ class WirelessPoints {
    * Http post /restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points
    */
   async post(
-    createWirelessPoint: CreateWirelessPoint
+    createWirelessPoint: CreateWirelessPoint,
+    config?: RestRequestConfig
   ): Promise<WirelessPointInfo> {
     const r = await this.rc.post<WirelessPointInfo>(
       this.path(false),
-      createWirelessPoint
+      createWirelessPoint,
+      undefined,
+      config
     );
     return r.data;
   }
@@ -62,12 +68,16 @@ class WirelessPoints {
    * Rate Limit Group: Medium
    * Http get /restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points/{pointId}
    */
-  async get(): Promise<WirelessPointInfo> {
+  async get(config?: RestRequestConfig): Promise<WirelessPointInfo> {
     if (this.pointId === null) {
       throw new Error('pointId must be specified.');
     }
 
-    const r = await this.rc.get<WirelessPointInfo>(this.path());
+    const r = await this.rc.get<WirelessPointInfo>(
+      this.path(),
+      undefined,
+      config
+    );
     return r.data;
   }
 
@@ -77,7 +87,8 @@ class WirelessPoints {
    * Http put /restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points/{pointId}
    */
   async put(
-    updateWirelessPoint: UpdateWirelessPoint
+    updateWirelessPoint: UpdateWirelessPoint,
+    config?: RestRequestConfig
   ): Promise<WirelessPointInfo> {
     if (this.pointId === null) {
       throw new Error('pointId must be specified.');
@@ -85,7 +96,9 @@ class WirelessPoints {
 
     const r = await this.rc.put<WirelessPointInfo>(
       this.path(),
-      updateWirelessPoint
+      updateWirelessPoint,
+      undefined,
+      config
     );
     return r.data;
   }
@@ -95,12 +108,12 @@ class WirelessPoints {
    * Rate Limit Group: Heavy
    * Http delete /restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points/{pointId}
    */
-  async delete(): Promise<string> {
+  async delete(config?: RestRequestConfig): Promise<string> {
     if (this.pointId === null) {
       throw new Error('pointId must be specified.');
     }
 
-    const r = await this.rc.delete<string>(this.path());
+    const r = await this.rc.delete<string>(this.path(), undefined, config);
     return r.data;
   }
 }

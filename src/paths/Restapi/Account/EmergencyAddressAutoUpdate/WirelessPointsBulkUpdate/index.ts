@@ -1,3 +1,4 @@
+import {RestRequestConfig} from '../../../../../Rest';
 import {
   UpdateMultipleWirelessPointsResponse,
   UpdateMultipleWirelessPointsRequest,
@@ -24,11 +25,14 @@ class WirelessPointsBulkUpdate {
    * Http post /restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points-bulk-update
    */
   async post(
-    updateMultipleWirelessPointsRequest: UpdateMultipleWirelessPointsRequest
+    updateMultipleWirelessPointsRequest: UpdateMultipleWirelessPointsRequest,
+    config?: RestRequestConfig
   ): Promise<UpdateMultipleWirelessPointsResponse> {
     const r = await this.rc.post<UpdateMultipleWirelessPointsResponse>(
       this.path(),
-      updateMultipleWirelessPointsRequest
+      updateMultipleWirelessPointsRequest,
+      undefined,
+      config
     );
     return r.data;
   }

@@ -1,3 +1,4 @@
+import {RestRequestConfig} from '../../../../../../Rest';
 import {
   AuthProfileCheckResource,
   CheckUserPermissionParameters,
@@ -24,11 +25,13 @@ class Check {
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/authz-profile/check
    */
   async get(
-    queryParams?: CheckUserPermissionParameters
+    queryParams?: CheckUserPermissionParameters,
+    config?: RestRequestConfig
   ): Promise<AuthProfileCheckResource> {
     const r = await this.rc.get<AuthProfileCheckResource>(
       this.path(),
-      queryParams
+      queryParams,
+      config
     );
     return r.data;
   }

@@ -1,3 +1,4 @@
+import {RestRequestConfig} from '../../../../Rest';
 import {
   GetCountryListResponse,
   ListCountriesParameters,
@@ -31,11 +32,13 @@ class Country {
    * Http get /restapi/v1.0/dictionary/country
    */
   async list(
-    queryParams?: ListCountriesParameters
+    queryParams?: ListCountriesParameters,
+    config?: RestRequestConfig
   ): Promise<GetCountryListResponse> {
     const r = await this.rc.get<GetCountryListResponse>(
       this.path(false),
-      queryParams
+      queryParams,
+      config
     );
     return r.data;
   }
@@ -45,12 +48,18 @@ class Country {
    * Rate Limit Group: Light
    * Http get /restapi/v1.0/dictionary/country/{countryId}
    */
-  async get(): Promise<GetCountryInfoDictionaryResponse> {
+  async get(
+    config?: RestRequestConfig
+  ): Promise<GetCountryInfoDictionaryResponse> {
     if (this.countryId === null) {
       throw new Error('countryId must be specified.');
     }
 
-    const r = await this.rc.get<GetCountryInfoDictionaryResponse>(this.path());
+    const r = await this.rc.get<GetCountryInfoDictionaryResponse>(
+      this.path(),
+      undefined,
+      config
+    );
     return r.data;
   }
 }

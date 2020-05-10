@@ -1,3 +1,4 @@
+import {RestRequestConfig} from '../../../../../Rest';
 import {
   GetRingOutStatusResponse,
   MakeRingOutRequest,
@@ -30,11 +31,14 @@ class RingOut {
    * Http post /restapi/v1.0/account/{accountId}/extension/{extensionId}/ring-out
    */
   async post(
-    makeRingOutRequest: MakeRingOutRequest
+    makeRingOutRequest: MakeRingOutRequest,
+    config?: RestRequestConfig
   ): Promise<GetRingOutStatusResponse> {
     const r = await this.rc.post<GetRingOutStatusResponse>(
       this.path(false),
-      makeRingOutRequest
+      makeRingOutRequest,
+      undefined,
+      config
     );
     return r.data;
   }
@@ -44,12 +48,16 @@ class RingOut {
    * Rate Limit Group: Light
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/ring-out/{ringoutId}
    */
-  async get(): Promise<GetRingOutStatusResponse> {
+  async get(config?: RestRequestConfig): Promise<GetRingOutStatusResponse> {
     if (this.ringoutId === null) {
       throw new Error('ringoutId must be specified.');
     }
 
-    const r = await this.rc.get<GetRingOutStatusResponse>(this.path());
+    const r = await this.rc.get<GetRingOutStatusResponse>(
+      this.path(),
+      undefined,
+      config
+    );
     return r.data;
   }
 
@@ -58,12 +66,12 @@ class RingOut {
    * Rate Limit Group: Heavy
    * Http delete /restapi/v1.0/account/{accountId}/extension/{extensionId}/ring-out/{ringoutId}
    */
-  async delete(): Promise<string> {
+  async delete(config?: RestRequestConfig): Promise<string> {
     if (this.ringoutId === null) {
       throw new Error('ringoutId must be specified.');
     }
 
-    const r = await this.rc.delete<string>(this.path());
+    const r = await this.rc.delete<string>(this.path(), undefined, config);
     return r.data;
   }
 }

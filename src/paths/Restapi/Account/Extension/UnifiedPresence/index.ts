@@ -1,3 +1,4 @@
+import {RestRequestConfig} from '../../../../../Rest';
 import {UpdateUnifiedPresence} from '../../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../../..';
@@ -20,8 +21,12 @@ class UnifiedPresence {
    * Rate Limit Group: Medium
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/unified-presence
    */
-  async get(): Promise<UnifiedPresence> {
-    const r = await this.rc.get<UnifiedPresence>(this.path());
+  async get(config?: RestRequestConfig): Promise<UnifiedPresence> {
+    const r = await this.rc.get<UnifiedPresence>(
+      this.path(),
+      undefined,
+      config
+    );
     return r.data;
   }
 
@@ -31,11 +36,14 @@ class UnifiedPresence {
    * Http patch /restapi/v1.0/account/{accountId}/extension/{extensionId}/unified-presence
    */
   async patch(
-    updateUnifiedPresence: UpdateUnifiedPresence
+    updateUnifiedPresence: UpdateUnifiedPresence,
+    config?: RestRequestConfig
   ): Promise<UnifiedPresence> {
     const r = await this.rc.patch<UnifiedPresence>(
       this.path(),
-      updateUnifiedPresence
+      updateUnifiedPresence,
+      undefined,
+      config
     );
     return r.data;
   }

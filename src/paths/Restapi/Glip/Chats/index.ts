@@ -5,6 +5,7 @@ import Unread from './Unread';
 import Read from './Read';
 import Unfavorite from './Unfavorite';
 import Favorite from './Favorite';
+import {RestRequestConfig} from '../../../../Rest';
 import {
   GlipChatsList,
   ListGlipChatsParameters,
@@ -37,8 +38,15 @@ class Chats {
    * Rate Limit Group: Medium
    * Http get /restapi/v1.0/glip/chats
    */
-  async list(queryParams?: ListGlipChatsParameters): Promise<GlipChatsList> {
-    const r = await this.rc.get<GlipChatsList>(this.path(false), queryParams);
+  async list(
+    queryParams?: ListGlipChatsParameters,
+    config?: RestRequestConfig
+  ): Promise<GlipChatsList> {
+    const r = await this.rc.get<GlipChatsList>(
+      this.path(false),
+      queryParams,
+      config
+    );
     return r.data;
   }
 
@@ -47,12 +55,12 @@ class Chats {
    * Rate Limit Group: Light
    * Http get /restapi/v1.0/glip/chats/{chatId}
    */
-  async get(): Promise<GlipChatInfo> {
+  async get(config?: RestRequestConfig): Promise<GlipChatInfo> {
     if (this.chatId === null) {
       throw new Error('chatId must be specified.');
     }
 
-    const r = await this.rc.get<GlipChatInfo>(this.path());
+    const r = await this.rc.get<GlipChatInfo>(this.path(), undefined, config);
     return r.data;
   }
 

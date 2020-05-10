@@ -1,3 +1,4 @@
+import {RestRequestConfig} from '../../../../../../Rest';
 import {AssistedUsersResource} from '../../../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../../../..';
@@ -20,8 +21,12 @@ class Assisted {
    * Rate Limit Group: Light
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/meetings-configuration/assisted
    */
-  async get(): Promise<AssistedUsersResource> {
-    const r = await this.rc.get<AssistedUsersResource>(this.path());
+  async get(config?: RestRequestConfig): Promise<AssistedUsersResource> {
+    const r = await this.rc.get<AssistedUsersResource>(
+      this.path(),
+      undefined,
+      config
+    );
     return r.data;
   }
 }

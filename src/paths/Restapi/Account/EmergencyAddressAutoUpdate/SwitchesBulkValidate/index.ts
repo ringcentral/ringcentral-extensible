@@ -1,3 +1,4 @@
+import {RestRequestConfig} from '../../../../../Rest';
 import {
   ValidateMultipleSwitchesResponse,
   ValidateMultipleSwitchesRequest,
@@ -24,11 +25,14 @@ class SwitchesBulkValidate {
    * Http post /restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches-bulk-validate
    */
   async post(
-    validateMultipleSwitchesRequest: ValidateMultipleSwitchesRequest
+    validateMultipleSwitchesRequest: ValidateMultipleSwitchesRequest,
+    config?: RestRequestConfig
   ): Promise<ValidateMultipleSwitchesResponse> {
     const r = await this.rc.post<ValidateMultipleSwitchesResponse>(
       this.path(),
-      validateMultipleSwitchesRequest
+      validateMultipleSwitchesRequest,
+      undefined,
+      config
     );
     return r.data;
   }

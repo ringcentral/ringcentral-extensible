@@ -1,3 +1,4 @@
+import {RestRequestConfig} from '../../../../../Rest';
 import {
   CreateUserProfileImageRequest,
   UpdateUserProfileImageRequest,
@@ -30,8 +31,9 @@ class ProfileImage {
    * Rate Limit Group: Medium
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image
    */
-  async list(): Promise<Buffer> {
+  async list(config?: RestRequestConfig): Promise<Buffer> {
     const r = await this.rc.get<Buffer>(this.path(false), undefined, {
+      ...config,
       responseType: 'arraybuffer',
     });
     return r.data;
@@ -43,14 +45,15 @@ class ProfileImage {
    * Http post /restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image
    */
   async post(
-    createUserProfileImageRequest: CreateUserProfileImageRequest
+    createUserProfileImageRequest: CreateUserProfileImageRequest,
+    config?: RestRequestConfig
   ): Promise<string> {
     const formData = Utils.getFormData(createUserProfileImageRequest);
     const r = await this.rc.post<string>(
       this.path(false),
       formData,
       undefined,
-      {headers: formData.getHeaders()}
+      {...config, headers: {...config.headers, ...formData.getHeaders()}}
     );
     return r.data;
   }
@@ -61,11 +64,13 @@ class ProfileImage {
    * Http put /restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image
    */
   async put(
-    updateUserProfileImageRequest: UpdateUserProfileImageRequest
+    updateUserProfileImageRequest: UpdateUserProfileImageRequest,
+    config?: RestRequestConfig
   ): Promise<string> {
     const formData = Utils.getFormData(updateUserProfileImageRequest);
     const r = await this.rc.put<string>(this.path(false), formData, undefined, {
-      headers: formData.getHeaders(),
+      ...config,
+      headers: {...config.headers, ...formData.getHeaders()},
     });
     return r.data;
   }
@@ -75,12 +80,13 @@ class ProfileImage {
    * Rate Limit Group: Light
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image/{scaleSize}
    */
-  async get(): Promise<Buffer> {
+  async get(config?: RestRequestConfig): Promise<Buffer> {
     if (this.scaleSize === null) {
       throw new Error('scaleSize must be specified.');
     }
 
     const r = await this.rc.get<Buffer>(this.path(), undefined, {
+      ...config,
       responseType: 'arraybuffer',
     });
     return r.data;

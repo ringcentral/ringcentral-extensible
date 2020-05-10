@@ -1,3 +1,4 @@
+import {RestRequestConfig} from '../../../../Rest';
 import {
   AccountPhoneNumbers,
   ListAccountPhoneNumbersParameters,
@@ -31,11 +32,13 @@ class PhoneNumber {
    * Http get /restapi/v1.0/account/{accountId}/phone-number
    */
   async list(
-    queryParams?: ListAccountPhoneNumbersParameters
+    queryParams?: ListAccountPhoneNumbersParameters,
+    config?: RestRequestConfig
   ): Promise<AccountPhoneNumbers> {
     const r = await this.rc.get<AccountPhoneNumbers>(
       this.path(false),
-      queryParams
+      queryParams,
+      config
     );
     return r.data;
   }
@@ -45,12 +48,16 @@ class PhoneNumber {
    * Rate Limit Group: Light
    * Http get /restapi/v1.0/account/{accountId}/phone-number/{phoneNumberId}
    */
-  async get(): Promise<CompanyPhoneNumberInfo> {
+  async get(config?: RestRequestConfig): Promise<CompanyPhoneNumberInfo> {
     if (this.phoneNumberId === null) {
       throw new Error('phoneNumberId must be specified.');
     }
 
-    const r = await this.rc.get<CompanyPhoneNumberInfo>(this.path());
+    const r = await this.rc.get<CompanyPhoneNumberInfo>(
+      this.path(),
+      undefined,
+      config
+    );
     return r.data;
   }
 }

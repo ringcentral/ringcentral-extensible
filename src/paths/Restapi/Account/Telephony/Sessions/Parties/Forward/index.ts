@@ -1,3 +1,4 @@
+import {RestRequestConfig} from '../../../../../../../Rest';
 import {CallParty, ForwardTarget} from '../../../../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../../../../..';
@@ -20,8 +21,16 @@ class Forward {
    * Rate Limit Group: Light
    * Http post /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/forward
    */
-  async post(forwardTarget: ForwardTarget): Promise<CallParty> {
-    const r = await this.rc.post<CallParty>(this.path(), forwardTarget);
+  async post(
+    forwardTarget: ForwardTarget,
+    config?: RestRequestConfig
+  ): Promise<CallParty> {
+    const r = await this.rc.post<CallParty>(
+      this.path(),
+      forwardTarget,
+      undefined,
+      config
+    );
     return r.data;
   }
 }

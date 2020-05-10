@@ -1,3 +1,4 @@
+import {RestRequestConfig} from '../../../../Rest';
 import {
   ListMeetingRecordingsResponse,
   ListAccountMeetingRecordingsParameters,
@@ -24,11 +25,13 @@ class MeetingRecordings {
    * Http get /restapi/v1.0/account/{accountId}/meeting-recordings
    */
   async get(
-    queryParams?: ListAccountMeetingRecordingsParameters
+    queryParams?: ListAccountMeetingRecordingsParameters,
+    config?: RestRequestConfig
   ): Promise<ListMeetingRecordingsResponse> {
     const r = await this.rc.get<ListMeetingRecordingsResponse>(
       this.path(),
-      queryParams
+      queryParams,
+      config
     );
     return r.data;
   }

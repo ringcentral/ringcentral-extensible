@@ -1,3 +1,4 @@
+import {RestRequestConfig} from '../../../Rest';
 import Parent from '..';
 import RingCentral from '../../..';
 
@@ -19,8 +20,8 @@ class Health {
    * Rate Limit Group: NoThrottling
    * Http get /scim/v2/health
    */
-  async get(): Promise<string> {
-    const r = await this.rc.get<string>(this.path());
+  async get(config?: RestRequestConfig): Promise<string> {
+    const r = await this.rc.get<string>(this.path(), undefined, config);
     return r.data;
   }
 }

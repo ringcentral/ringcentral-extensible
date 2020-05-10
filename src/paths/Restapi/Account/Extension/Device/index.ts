@@ -1,3 +1,4 @@
+import {RestRequestConfig} from '../../../../../Rest';
 import {
   GetExtensionDevicesResponse,
   ListExtensionDevicesParameters,
@@ -24,11 +25,13 @@ class Device {
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/device
    */
   async get(
-    queryParams?: ListExtensionDevicesParameters
+    queryParams?: ListExtensionDevicesParameters,
+    config?: RestRequestConfig
   ): Promise<GetExtensionDevicesResponse> {
     const r = await this.rc.get<GetExtensionDevicesResponse>(
       this.path(),
-      queryParams
+      queryParams,
+      config
     );
     return r.data;
   }

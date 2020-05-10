@@ -1,3 +1,4 @@
+import {RestRequestConfig} from '../../../../../Rest';
 import {CallMonitoringBulkAssign} from '../../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../../..';
@@ -21,9 +22,15 @@ class BulkAssign {
    * Http post /restapi/v1.0/account/{accountId}/call-monitoring-groups/{groupId}/bulk-assign
    */
   async post(
-    callMonitoringBulkAssign: CallMonitoringBulkAssign
+    callMonitoringBulkAssign: CallMonitoringBulkAssign,
+    config?: RestRequestConfig
   ): Promise<string> {
-    const r = await this.rc.post<string>(this.path(), callMonitoringBulkAssign);
+    const r = await this.rc.post<string>(
+      this.path(),
+      callMonitoringBulkAssign,
+      undefined,
+      config
+    );
     return r.data;
   }
 }

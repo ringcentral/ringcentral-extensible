@@ -1,3 +1,4 @@
+import {RestRequestConfig} from '../../../../../../../Rest';
 import {
   PartySuperviseResponse,
   PartySuperviseRequest,
@@ -24,11 +25,14 @@ class Supervise {
    * Http post /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/supervise
    */
   async post(
-    partySuperviseRequest: PartySuperviseRequest
+    partySuperviseRequest: PartySuperviseRequest,
+    config?: RestRequestConfig
   ): Promise<PartySuperviseResponse> {
     const r = await this.rc.post<PartySuperviseResponse>(
       this.path(),
-      partySuperviseRequest
+      partySuperviseRequest,
+      undefined,
+      config
     );
     return r.data;
   }

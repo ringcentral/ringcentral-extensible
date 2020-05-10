@@ -1,3 +1,4 @@
+import {RestRequestConfig} from '../../../../Rest';
 import {RevokeTokenRequest} from '../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../..';
@@ -20,8 +21,16 @@ class Revoke {
    * Rate Limit Group: Auth
    * Http post /restapi/oauth/revoke
    */
-  async post(revokeTokenRequest: RevokeTokenRequest): Promise<string> {
-    const r = await this.rc.post<string>(this.path(), revokeTokenRequest);
+  async post(
+    revokeTokenRequest: RevokeTokenRequest,
+    config?: RestRequestConfig
+  ): Promise<string> {
+    const r = await this.rc.post<string>(
+      this.path(),
+      revokeTokenRequest,
+      undefined,
+      config
+    );
     return r.data;
   }
 }

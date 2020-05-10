@@ -1,3 +1,4 @@
+import {RestRequestConfig} from '../../../../Rest';
 import {
   DictionaryGreetingList,
   ListStandardGreetingsParameters,
@@ -31,11 +32,13 @@ class Greeting {
    * Http get /restapi/v1.0/dictionary/greeting
    */
   async list(
-    queryParams?: ListStandardGreetingsParameters
+    queryParams?: ListStandardGreetingsParameters,
+    config?: RestRequestConfig
   ): Promise<DictionaryGreetingList> {
     const r = await this.rc.get<DictionaryGreetingList>(
       this.path(false),
-      queryParams
+      queryParams,
+      config
     );
     return r.data;
   }
@@ -45,12 +48,16 @@ class Greeting {
    * Rate Limit Group: Medium
    * Http get /restapi/v1.0/dictionary/greeting/{greetingId}
    */
-  async get(): Promise<DictionaryGreetingInfo> {
+  async get(config?: RestRequestConfig): Promise<DictionaryGreetingInfo> {
     if (this.greetingId === null) {
       throw new Error('greetingId must be specified.');
     }
 
-    const r = await this.rc.get<DictionaryGreetingInfo>(this.path());
+    const r = await this.rc.get<DictionaryGreetingInfo>(
+      this.path(),
+      undefined,
+      config
+    );
     return r.data;
   }
 }

@@ -1,3 +1,4 @@
+import {RestRequestConfig} from '../../../../../../../Rest';
 import {CallParty, PickupTarget} from '../../../../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../../../../..';
@@ -20,8 +21,16 @@ class Pickup {
    * Rate Limit Group: Light
    * Http post /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/pickup
    */
-  async post(pickupTarget: PickupTarget): Promise<CallParty> {
-    const r = await this.rc.post<CallParty>(this.path(), pickupTarget);
+  async post(
+    pickupTarget: PickupTarget,
+    config?: RestRequestConfig
+  ): Promise<CallParty> {
+    const r = await this.rc.post<CallParty>(
+      this.path(),
+      pickupTarget,
+      undefined,
+      config
+    );
     return r.data;
   }
 }

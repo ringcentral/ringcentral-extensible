@@ -1,3 +1,4 @@
+import {RestRequestConfig} from '../../../../../Rest';
 import {
   GetMessageSyncResponse,
   SyncMessagesParameters,
@@ -24,11 +25,13 @@ class MessageSync {
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/message-sync
    */
   async get(
-    queryParams?: SyncMessagesParameters
+    queryParams?: SyncMessagesParameters,
+    config?: RestRequestConfig
   ): Promise<GetMessageSyncResponse> {
     const r = await this.rc.get<GetMessageSyncResponse>(
       this.path(),
-      queryParams
+      queryParams,
+      config
     );
     return r.data;
   }

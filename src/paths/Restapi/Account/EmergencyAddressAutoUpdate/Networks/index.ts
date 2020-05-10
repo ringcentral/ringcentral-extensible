@@ -1,3 +1,4 @@
+import {RestRequestConfig} from '../../../../../Rest';
 import {
   NetworksList,
   NetworkInfo,
@@ -31,8 +32,12 @@ class Networks {
    * Rate Limit Group: Heavy
    * Http get /restapi/v1.0/account/{accountId}/emergency-address-auto-update/networks
    */
-  async list(): Promise<NetworksList> {
-    const r = await this.rc.get<NetworksList>(this.path(false));
+  async list(config?: RestRequestConfig): Promise<NetworksList> {
+    const r = await this.rc.get<NetworksList>(
+      this.path(false),
+      undefined,
+      config
+    );
     return r.data;
   }
 
@@ -41,10 +46,15 @@ class Networks {
    * Rate Limit Group: Heavy
    * Http post /restapi/v1.0/account/{accountId}/emergency-address-auto-update/networks
    */
-  async post(createNetworkRequest: CreateNetworkRequest): Promise<NetworkInfo> {
+  async post(
+    createNetworkRequest: CreateNetworkRequest,
+    config?: RestRequestConfig
+  ): Promise<NetworkInfo> {
     const r = await this.rc.post<NetworkInfo>(
       this.path(false),
-      createNetworkRequest
+      createNetworkRequest,
+      undefined,
+      config
     );
     return r.data;
   }
@@ -54,12 +64,12 @@ class Networks {
    * Rate Limit Group: Medium
    * Http get /restapi/v1.0/account/{accountId}/emergency-address-auto-update/networks/{networkId}
    */
-  async get(): Promise<NetworkInfo> {
+  async get(config?: RestRequestConfig): Promise<NetworkInfo> {
     if (this.networkId === null) {
       throw new Error('networkId must be specified.');
     }
 
-    const r = await this.rc.get<NetworkInfo>(this.path());
+    const r = await this.rc.get<NetworkInfo>(this.path(), undefined, config);
     return r.data;
   }
 
@@ -68,12 +78,20 @@ class Networks {
    * Rate Limit Group: Heavy
    * Http put /restapi/v1.0/account/{accountId}/emergency-address-auto-update/networks/{networkId}
    */
-  async put(updateNetworkRequest: UpdateNetworkRequest): Promise<string> {
+  async put(
+    updateNetworkRequest: UpdateNetworkRequest,
+    config?: RestRequestConfig
+  ): Promise<string> {
     if (this.networkId === null) {
       throw new Error('networkId must be specified.');
     }
 
-    const r = await this.rc.put<string>(this.path(), updateNetworkRequest);
+    const r = await this.rc.put<string>(
+      this.path(),
+      updateNetworkRequest,
+      undefined,
+      config
+    );
     return r.data;
   }
 
@@ -82,12 +100,12 @@ class Networks {
    * Rate Limit Group: Heavy
    * Http delete /restapi/v1.0/account/{accountId}/emergency-address-auto-update/networks/{networkId}
    */
-  async delete(): Promise<string> {
+  async delete(config?: RestRequestConfig): Promise<string> {
     if (this.networkId === null) {
       throw new Error('networkId must be specified.');
     }
 
-    const r = await this.rc.delete<string>(this.path());
+    const r = await this.rc.delete<string>(this.path(), undefined, config);
     return r.data;
   }
 }

@@ -1,3 +1,4 @@
+import {RestRequestConfig} from '../../../../Rest';
 import Parent from '..';
 import RingCentral from '../../../..';
 
@@ -19,8 +20,12 @@ class MessageStoreConfiguration {
    * Rate Limit Group: Light
    * Http get /restapi/v1.0/account/{accountId}/message-store-configuration
    */
-  async get(): Promise<MessageStoreConfiguration> {
-    const r = await this.rc.get<MessageStoreConfiguration>(this.path());
+  async get(config?: RestRequestConfig): Promise<MessageStoreConfiguration> {
+    const r = await this.rc.get<MessageStoreConfiguration>(
+      this.path(),
+      undefined,
+      config
+    );
     return r.data;
   }
 
@@ -30,11 +35,14 @@ class MessageStoreConfiguration {
    * Http put /restapi/v1.0/account/{accountId}/message-store-configuration
    */
   async put(
-    messageStoreConfiguration: MessageStoreConfiguration
+    messageStoreConfiguration: MessageStoreConfiguration,
+    config?: RestRequestConfig
   ): Promise<MessageStoreConfiguration> {
     const r = await this.rc.put<MessageStoreConfiguration>(
       this.path(),
-      messageStoreConfiguration
+      messageStoreConfiguration,
+      undefined,
+      config
     );
     return r.data;
   }

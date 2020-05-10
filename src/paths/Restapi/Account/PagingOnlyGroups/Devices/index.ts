@@ -1,3 +1,4 @@
+import {RestRequestConfig} from '../../../../../Rest';
 import {
   PagingOnlyGroupDevices,
   ListPagingGroupDevicesParameters,
@@ -24,11 +25,13 @@ class Devices {
    * Http get /restapi/v1.0/account/{accountId}/paging-only-groups/{pagingOnlyGroupId}/devices
    */
   async get(
-    queryParams?: ListPagingGroupDevicesParameters
+    queryParams?: ListPagingGroupDevicesParameters,
+    config?: RestRequestConfig
   ): Promise<PagingOnlyGroupDevices> {
     const r = await this.rc.get<PagingOnlyGroupDevices>(
       this.path(),
-      queryParams
+      queryParams,
+      config
     );
     return r.data;
   }

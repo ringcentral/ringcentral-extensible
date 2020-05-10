@@ -1,3 +1,4 @@
+import {RestRequestConfig} from '../../../../../Rest';
 import {BulkAccountCallRecordingsResource} from '../../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../../..';
@@ -21,11 +22,14 @@ class BulkAssign {
    * Http post /restapi/v1.0/account/{accountId}/call-recording/bulk-assign
    */
   async post(
-    bulkAccountCallRecordingsResource: BulkAccountCallRecordingsResource
+    bulkAccountCallRecordingsResource: BulkAccountCallRecordingsResource,
+    config?: RestRequestConfig
   ): Promise<string> {
     const r = await this.rc.post<string>(
       this.path(),
-      bulkAccountCallRecordingsResource
+      bulkAccountCallRecordingsResource,
+      undefined,
+      config
     );
     return r.data;
   }

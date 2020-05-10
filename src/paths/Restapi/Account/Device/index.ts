@@ -1,3 +1,4 @@
+import {RestRequestConfig} from '../../../../Rest';
 import {
   GetDeviceInfoResponse,
   ReadDeviceParameters,
@@ -32,7 +33,8 @@ class Device {
    * Http get /restapi/v1.0/account/{accountId}/device/{deviceId}
    */
   async get(
-    queryParams?: ReadDeviceParameters
+    queryParams?: ReadDeviceParameters,
+    config?: RestRequestConfig
   ): Promise<GetDeviceInfoResponse> {
     if (this.deviceId === null) {
       throw new Error('deviceId must be specified.');
@@ -40,7 +42,8 @@ class Device {
 
     const r = await this.rc.get<GetDeviceInfoResponse>(
       this.path(),
-      queryParams
+      queryParams,
+      config
     );
     return r.data;
   }
@@ -52,7 +55,8 @@ class Device {
    */
   async put(
     accountDeviceUpdate: AccountDeviceUpdate,
-    queryParams?: UpdateDeviceParameters
+    queryParams?: UpdateDeviceParameters,
+    config?: RestRequestConfig
   ): Promise<GetDeviceInfoResponse> {
     if (this.deviceId === null) {
       throw new Error('deviceId must be specified.');
@@ -61,7 +65,8 @@ class Device {
     const r = await this.rc.put<GetDeviceInfoResponse>(
       this.path(),
       accountDeviceUpdate,
-      queryParams
+      queryParams,
+      config
     );
     return r.data;
   }

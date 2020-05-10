@@ -1,3 +1,4 @@
+import {RestRequestConfig} from '../../../../../Rest';
 import {GlipEventInfo, GlipEventCreate} from '../../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../../..';
@@ -20,8 +21,16 @@ class Events {
    * Rate Limit Group: Medium
    * Http post /restapi/v1.0/glip/groups/{groupId}/events
    */
-  async post(glipEventCreate: GlipEventCreate): Promise<GlipEventInfo> {
-    const r = await this.rc.post<GlipEventInfo>(this.path(), glipEventCreate);
+  async post(
+    glipEventCreate: GlipEventCreate,
+    config?: RestRequestConfig
+  ): Promise<GlipEventInfo> {
+    const r = await this.rc.post<GlipEventInfo>(
+      this.path(),
+      glipEventCreate,
+      undefined,
+      config
+    );
     return r.data;
   }
 
@@ -30,8 +39,8 @@ class Events {
    * Rate Limit Group: Medium
    * Http get /restapi/v1.0/glip/groups/{groupId}/events
    */
-  async get(): Promise<GlipEventInfo> {
-    const r = await this.rc.get<GlipEventInfo>(this.path());
+  async get(config?: RestRequestConfig): Promise<GlipEventInfo> {
+    const r = await this.rc.get<GlipEventInfo>(this.path(), undefined, config);
     return r.data;
   }
 }

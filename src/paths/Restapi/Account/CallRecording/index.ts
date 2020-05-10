@@ -1,6 +1,7 @@
 import CustomGreetings from './CustomGreetings';
 import BulkAssign from './BulkAssign';
 import Extensions from './Extensions';
+import {RestRequestConfig} from '../../../../Rest';
 import {CallRecordingSettingsResource} from '../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../..';
@@ -23,8 +24,14 @@ class CallRecording {
    * Rate Limit Group: Light
    * Http get /restapi/v1.0/account/{accountId}/call-recording
    */
-  async get(): Promise<CallRecordingSettingsResource> {
-    const r = await this.rc.get<CallRecordingSettingsResource>(this.path());
+  async get(
+    config?: RestRequestConfig
+  ): Promise<CallRecordingSettingsResource> {
+    const r = await this.rc.get<CallRecordingSettingsResource>(
+      this.path(),
+      undefined,
+      config
+    );
     return r.data;
   }
 
@@ -34,11 +41,14 @@ class CallRecording {
    * Http put /restapi/v1.0/account/{accountId}/call-recording
    */
   async put(
-    callRecordingSettingsResource: CallRecordingSettingsResource
+    callRecordingSettingsResource: CallRecordingSettingsResource,
+    config?: RestRequestConfig
   ): Promise<CallRecordingSettingsResource> {
     const r = await this.rc.put<CallRecordingSettingsResource>(
       this.path(),
-      callRecordingSettingsResource
+      callRecordingSettingsResource,
+      undefined,
+      config
     );
     return r.data;
   }

@@ -1,4 +1,5 @@
 import Renew from './Renew';
+import {RestRequestConfig} from '../../../Rest';
 import {
   RecordsCollectionResourceSubscriptionResponse,
   SubscriptionInfo,
@@ -33,9 +34,13 @@ class Subscription {
    * Rate Limit Group: Light
    * Http get /restapi/v1.0/subscription
    */
-  async list(): Promise<RecordsCollectionResourceSubscriptionResponse> {
+  async list(
+    config?: RestRequestConfig
+  ): Promise<RecordsCollectionResourceSubscriptionResponse> {
     const r = await this.rc.get<RecordsCollectionResourceSubscriptionResponse>(
-      this.path(false)
+      this.path(false),
+      undefined,
+      config
     );
     return r.data;
   }
@@ -46,11 +51,14 @@ class Subscription {
    * Http post /restapi/v1.0/subscription
    */
   async post(
-    createSubscriptionRequest: CreateSubscriptionRequest
+    createSubscriptionRequest: CreateSubscriptionRequest,
+    config?: RestRequestConfig
   ): Promise<SubscriptionInfo> {
     const r = await this.rc.post<SubscriptionInfo>(
       this.path(false),
-      createSubscriptionRequest
+      createSubscriptionRequest,
+      undefined,
+      config
     );
     return r.data;
   }
@@ -60,12 +68,16 @@ class Subscription {
    * Rate Limit Group: Light
    * Http get /restapi/v1.0/subscription/{subscriptionId}
    */
-  async get(): Promise<SubscriptionInfo> {
+  async get(config?: RestRequestConfig): Promise<SubscriptionInfo> {
     if (this.subscriptionId === null) {
       throw new Error('subscriptionId must be specified.');
     }
 
-    const r = await this.rc.get<SubscriptionInfo>(this.path());
+    const r = await this.rc.get<SubscriptionInfo>(
+      this.path(),
+      undefined,
+      config
+    );
     return r.data;
   }
 
@@ -76,7 +88,8 @@ class Subscription {
    */
   async put(
     modifySubscriptionRequest: ModifySubscriptionRequest,
-    queryParams?: UpdateSubscriptionParameters
+    queryParams?: UpdateSubscriptionParameters,
+    config?: RestRequestConfig
   ): Promise<SubscriptionInfo> {
     if (this.subscriptionId === null) {
       throw new Error('subscriptionId must be specified.');
@@ -85,7 +98,8 @@ class Subscription {
     const r = await this.rc.put<SubscriptionInfo>(
       this.path(),
       modifySubscriptionRequest,
-      queryParams
+      queryParams,
+      config
     );
     return r.data;
   }
@@ -95,12 +109,12 @@ class Subscription {
    * Rate Limit Group: Medium
    * Http delete /restapi/v1.0/subscription/{subscriptionId}
    */
-  async delete(): Promise<string> {
+  async delete(config?: RestRequestConfig): Promise<string> {
     if (this.subscriptionId === null) {
       throw new Error('subscriptionId must be specified.');
     }
 
-    const r = await this.rc.delete<string>(this.path());
+    const r = await this.rc.delete<string>(this.path(), undefined, config);
     return r.data;
   }
 

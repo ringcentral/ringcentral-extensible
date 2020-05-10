@@ -1,3 +1,4 @@
+import {RestRequestConfig} from '../../../../../../Rest';
 import {
   BlockedAllowedPhoneNumbersList,
   ListBlockedAllowedNumbersParameters,
@@ -32,11 +33,13 @@ class PhoneNumbers {
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers
    */
   async list(
-    queryParams?: ListBlockedAllowedNumbersParameters
+    queryParams?: ListBlockedAllowedNumbersParameters,
+    config?: RestRequestConfig
   ): Promise<BlockedAllowedPhoneNumbersList> {
     const r = await this.rc.get<BlockedAllowedPhoneNumbersList>(
       this.path(false),
-      queryParams
+      queryParams,
+      config
     );
     return r.data;
   }
@@ -47,11 +50,14 @@ class PhoneNumbers {
    * Http post /restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers
    */
   async post(
-    addBlockedAllowedPhoneNumber: AddBlockedAllowedPhoneNumber
+    addBlockedAllowedPhoneNumber: AddBlockedAllowedPhoneNumber,
+    config?: RestRequestConfig
   ): Promise<BlockedAllowedPhoneNumberInfo> {
     const r = await this.rc.post<BlockedAllowedPhoneNumberInfo>(
       this.path(false),
-      addBlockedAllowedPhoneNumber
+      addBlockedAllowedPhoneNumber,
+      undefined,
+      config
     );
     return r.data;
   }
@@ -61,12 +67,18 @@ class PhoneNumbers {
    * Rate Limit Group: Light
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers/{blockedNumberId}
    */
-  async get(): Promise<BlockedAllowedPhoneNumberInfo> {
+  async get(
+    config?: RestRequestConfig
+  ): Promise<BlockedAllowedPhoneNumberInfo> {
     if (this.blockedNumberId === null) {
       throw new Error('blockedNumberId must be specified.');
     }
 
-    const r = await this.rc.get<BlockedAllowedPhoneNumberInfo>(this.path());
+    const r = await this.rc.get<BlockedAllowedPhoneNumberInfo>(
+      this.path(),
+      undefined,
+      config
+    );
     return r.data;
   }
 
@@ -75,12 +87,12 @@ class PhoneNumbers {
    * Rate Limit Group: Medium
    * Http delete /restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers/{blockedNumberId}
    */
-  async delete(): Promise<string> {
+  async delete(config?: RestRequestConfig): Promise<string> {
     if (this.blockedNumberId === null) {
       throw new Error('blockedNumberId must be specified.');
     }
 
-    const r = await this.rc.delete<string>(this.path());
+    const r = await this.rc.delete<string>(this.path(), undefined, config);
     return r.data;
   }
 
@@ -90,7 +102,8 @@ class PhoneNumbers {
    * Http put /restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers/{blockedNumberId}
    */
   async put(
-    addBlockedAllowedPhoneNumber: AddBlockedAllowedPhoneNumber
+    addBlockedAllowedPhoneNumber: AddBlockedAllowedPhoneNumber,
+    config?: RestRequestConfig
   ): Promise<BlockedAllowedPhoneNumberInfo> {
     if (this.blockedNumberId === null) {
       throw new Error('blockedNumberId must be specified.');
@@ -98,7 +111,9 @@ class PhoneNumbers {
 
     const r = await this.rc.put<BlockedAllowedPhoneNumberInfo>(
       this.path(),
-      addBlockedAllowedPhoneNumber
+      addBlockedAllowedPhoneNumber,
+      undefined,
+      config
     );
     return r.data;
   }

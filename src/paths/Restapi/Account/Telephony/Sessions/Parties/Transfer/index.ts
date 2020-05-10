@@ -1,3 +1,4 @@
+import {RestRequestConfig} from '../../../../../../../Rest';
 import {CallParty, TransferTarget} from '../../../../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../../../../..';
@@ -20,8 +21,16 @@ class Transfer {
    * Rate Limit Group: Light
    * Http post /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/transfer
    */
-  async post(transferTarget: TransferTarget): Promise<CallParty> {
-    const r = await this.rc.post<CallParty>(this.path(), transferTarget);
+  async post(
+    transferTarget: TransferTarget,
+    config?: RestRequestConfig
+  ): Promise<CallParty> {
+    const r = await this.rc.post<CallParty>(
+      this.path(),
+      transferTarget,
+      undefined,
+      config
+    );
     return r.data;
   }
 }

@@ -1,3 +1,4 @@
+import {RestRequestConfig} from '../../../../Rest';
 import {GlipPersonInfo} from '../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../..';
@@ -26,12 +27,12 @@ class Persons {
    * Rate Limit Group: Light
    * Http get /restapi/v1.0/glip/persons/{personId}
    */
-  async get(): Promise<GlipPersonInfo> {
+  async get(config?: RestRequestConfig): Promise<GlipPersonInfo> {
     if (this.personId === null) {
       throw new Error('personId must be specified.');
     }
 
-    const r = await this.rc.get<GlipPersonInfo>(this.path());
+    const r = await this.rc.get<GlipPersonInfo>(this.path(), undefined, config);
     return r.data;
   }
 }

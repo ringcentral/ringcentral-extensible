@@ -11,6 +11,7 @@ import Ignore from './Ignore';
 import Reject from './Reject';
 import Unhold from './Unhold';
 import Hold from './Hold';
+import {RestRequestConfig} from '../../../../../../Rest';
 import {CallParty, PartyUpdateRequest} from '../../../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../../../..';
@@ -39,12 +40,12 @@ class Parties {
    * Rate Limit Group: Light
    * Http get /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}
    */
-  async get(): Promise<CallParty> {
+  async get(config?: RestRequestConfig): Promise<CallParty> {
     if (this.partyId === null) {
       throw new Error('partyId must be specified.');
     }
 
-    const r = await this.rc.get<CallParty>(this.path());
+    const r = await this.rc.get<CallParty>(this.path(), undefined, config);
     return r.data;
   }
 
@@ -53,12 +54,20 @@ class Parties {
    * Rate Limit Group: Light
    * Http patch /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}
    */
-  async patch(partyUpdateRequest: PartyUpdateRequest): Promise<CallParty> {
+  async patch(
+    partyUpdateRequest: PartyUpdateRequest,
+    config?: RestRequestConfig
+  ): Promise<CallParty> {
     if (this.partyId === null) {
       throw new Error('partyId must be specified.');
     }
 
-    const r = await this.rc.patch<CallParty>(this.path(), partyUpdateRequest);
+    const r = await this.rc.patch<CallParty>(
+      this.path(),
+      partyUpdateRequest,
+      undefined,
+      config
+    );
     return r.data;
   }
 

@@ -1,3 +1,4 @@
+import {RestRequestConfig} from '../../../../Rest';
 import {
   CompanyBusinessHours,
   CompanyBusinessHoursUpdateRequest,
@@ -23,8 +24,12 @@ class BusinessHours {
    * Rate Limit Group: Light
    * Http get /restapi/v1.0/account/{accountId}/business-hours
    */
-  async get(): Promise<CompanyBusinessHours> {
-    const r = await this.rc.get<CompanyBusinessHours>(this.path());
+  async get(config?: RestRequestConfig): Promise<CompanyBusinessHours> {
+    const r = await this.rc.get<CompanyBusinessHours>(
+      this.path(),
+      undefined,
+      config
+    );
     return r.data;
   }
 
@@ -34,11 +39,14 @@ class BusinessHours {
    * Http put /restapi/v1.0/account/{accountId}/business-hours
    */
   async put(
-    companyBusinessHoursUpdateRequest: CompanyBusinessHoursUpdateRequest
+    companyBusinessHoursUpdateRequest: CompanyBusinessHoursUpdateRequest,
+    config?: RestRequestConfig
   ): Promise<CompanyBusinessHours> {
     const r = await this.rc.put<CompanyBusinessHours>(
       this.path(),
-      companyBusinessHoursUpdateRequest
+      companyBusinessHoursUpdateRequest,
+      undefined,
+      config
     );
     return r.data;
   }

@@ -1,3 +1,4 @@
+import {RestRequestConfig} from '../../../../../Rest';
 import {
   GetExtensionGrantListResponse,
   ListExtensionGrantsParameters,
@@ -24,11 +25,13 @@ class Grant {
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/grant
    */
   async get(
-    queryParams?: ListExtensionGrantsParameters
+    queryParams?: ListExtensionGrantsParameters,
+    config?: RestRequestConfig
   ): Promise<GetExtensionGrantListResponse> {
     const r = await this.rc.get<GetExtensionGrantListResponse>(
       this.path(),
-      queryParams
+      queryParams,
+      config
     );
     return r.data;
   }

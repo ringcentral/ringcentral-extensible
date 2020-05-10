@@ -1,3 +1,4 @@
+import {RestRequestConfig} from '../../../../../Rest';
 import {UserVideoConfiguration} from '../../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../../..';
@@ -20,8 +21,12 @@ class VideoConfiguration {
    * Rate Limit Group: Light
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/video-configuration
    */
-  async get(): Promise<UserVideoConfiguration> {
-    const r = await this.rc.get<UserVideoConfiguration>(this.path());
+  async get(config?: RestRequestConfig): Promise<UserVideoConfiguration> {
+    const r = await this.rc.get<UserVideoConfiguration>(
+      this.path(),
+      undefined,
+      config
+    );
     return r.data;
   }
 
@@ -31,11 +36,14 @@ class VideoConfiguration {
    * Http put /restapi/v1.0/account/{accountId}/extension/{extensionId}/video-configuration
    */
   async put(
-    userVideoConfiguration: UserVideoConfiguration
+    userVideoConfiguration: UserVideoConfiguration,
+    config?: RestRequestConfig
   ): Promise<UserVideoConfiguration> {
     const r = await this.rc.put<UserVideoConfiguration>(
       this.path(),
-      userVideoConfiguration
+      userVideoConfiguration,
+      undefined,
+      config
     );
     return r.data;
   }

@@ -1,3 +1,4 @@
+import {RestRequestConfig} from '../../../../../../../Rest';
 import {CallPartyFlip} from '../../../../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../../../../..';
@@ -20,8 +21,16 @@ class Flip {
    * Rate Limit Group: Light
    * Http post /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/flip
    */
-  async post(callPartyFlip: CallPartyFlip): Promise<string> {
-    const r = await this.rc.post<string>(this.path(), callPartyFlip);
+  async post(
+    callPartyFlip: CallPartyFlip,
+    config?: RestRequestConfig
+  ): Promise<string> {
+    const r = await this.rc.post<string>(
+      this.path(),
+      callPartyFlip,
+      undefined,
+      config
+    );
     return r.data;
   }
 }

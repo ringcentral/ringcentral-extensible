@@ -1,4 +1,5 @@
 import Check from './Check';
+import {RestRequestConfig} from '../../../../../Rest';
 import {AuthProfileResource} from '../../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../../..';
@@ -21,8 +22,12 @@ class AuthzProfile {
    * Rate Limit Group: Medium
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/authz-profile
    */
-  async get(): Promise<AuthProfileResource> {
-    const r = await this.rc.get<AuthProfileResource>(this.path());
+  async get(config?: RestRequestConfig): Promise<AuthProfileResource> {
+    const r = await this.rc.get<AuthProfileResource>(
+      this.path(),
+      undefined,
+      config
+    );
     return r.data;
   }
 

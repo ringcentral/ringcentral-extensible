@@ -1,3 +1,4 @@
+import {RestRequestConfig} from '../../../../../../Rest';
 import {
   ContactList,
   ListContactsParameters,
@@ -33,8 +34,15 @@ class Contact {
    * Rate Limit Group: Heavy
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact
    */
-  async list(queryParams?: ListContactsParameters): Promise<ContactList> {
-    const r = await this.rc.get<ContactList>(this.path(false), queryParams);
+  async list(
+    queryParams?: ListContactsParameters,
+    config?: RestRequestConfig
+  ): Promise<ContactList> {
+    const r = await this.rc.get<ContactList>(
+      this.path(false),
+      queryParams,
+      config
+    );
     return r.data;
   }
 
@@ -45,12 +53,14 @@ class Contact {
    */
   async post(
     personalContactRequest: PersonalContactRequest,
-    queryParams?: CreateContactParameters
+    queryParams?: CreateContactParameters,
+    config?: RestRequestConfig
   ): Promise<PersonalContactResource> {
     const r = await this.rc.post<PersonalContactResource>(
       this.path(false),
       personalContactRequest,
-      queryParams
+      queryParams,
+      config
     );
     return r.data;
   }
@@ -60,12 +70,16 @@ class Contact {
    * Rate Limit Group: Heavy
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact/{contactId}
    */
-  async get(): Promise<PersonalContactResource> {
+  async get(config?: RestRequestConfig): Promise<PersonalContactResource> {
     if (this.contactId === null) {
       throw new Error('contactId must be specified.');
     }
 
-    const r = await this.rc.get<PersonalContactResource>(this.path());
+    const r = await this.rc.get<PersonalContactResource>(
+      this.path(),
+      undefined,
+      config
+    );
     return r.data;
   }
 
@@ -76,7 +90,8 @@ class Contact {
    */
   async put(
     personalContactRequest: PersonalContactRequest,
-    queryParams?: UpdateContactParameters
+    queryParams?: UpdateContactParameters,
+    config?: RestRequestConfig
   ): Promise<PersonalContactResource> {
     if (this.contactId === null) {
       throw new Error('contactId must be specified.');
@@ -85,7 +100,8 @@ class Contact {
     const r = await this.rc.put<PersonalContactResource>(
       this.path(),
       personalContactRequest,
-      queryParams
+      queryParams,
+      config
     );
     return r.data;
   }
@@ -95,12 +111,12 @@ class Contact {
    * Rate Limit Group: Heavy
    * Http delete /restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact/{contactId}
    */
-  async delete(): Promise<string> {
+  async delete(config?: RestRequestConfig): Promise<string> {
     if (this.contactId === null) {
       throw new Error('contactId must be specified.');
     }
 
-    const r = await this.rc.delete<string>(this.path());
+    const r = await this.rc.delete<string>(this.path(), undefined, config);
     return r.data;
   }
 }

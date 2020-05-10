@@ -1,3 +1,4 @@
+import {RestRequestConfig} from '../../../../../Rest';
 import Parent from '..';
 import RingCentral from '../../../../..';
 
@@ -19,8 +20,9 @@ class Content {
    * Rate Limit Group: Medium
    * Http get /restapi/v1.0/account/{accountId}/ivr-prompts/{promptId}/content
    */
-  async get(): Promise<Buffer> {
+  async get(config?: RestRequestConfig): Promise<Buffer> {
     const r = await this.rc.get<Buffer>(this.path(), undefined, {
+      ...config,
       responseType: 'arraybuffer',
     });
     return r.data;

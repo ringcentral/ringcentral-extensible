@@ -1,3 +1,4 @@
+import {RestRequestConfig} from '../../../../../../Rest';
 import Parent from '..';
 import RingCentral from '../../../../../..';
 
@@ -19,8 +20,8 @@ class End {
    * Rate Limit Group: Medium
    * Http post /restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/{meetingId}/end
    */
-  async post(): Promise<string> {
-    const r = await this.rc.post<string>(this.path());
+  async post(config?: RestRequestConfig): Promise<string> {
+    const r = await this.rc.post<string>(this.path(), undefined, config);
     return r.data;
   }
 }

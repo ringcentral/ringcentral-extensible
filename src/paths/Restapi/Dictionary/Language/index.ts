@@ -1,3 +1,4 @@
+import {RestRequestConfig} from '../../../../Rest';
 import {LanguageList, LanguageInfo} from '../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../..';
@@ -26,8 +27,12 @@ class Language {
    * Rate Limit Group: Light
    * Http get /restapi/v1.0/dictionary/language
    */
-  async list(): Promise<LanguageList> {
-    const r = await this.rc.get<LanguageList>(this.path(false));
+  async list(config?: RestRequestConfig): Promise<LanguageList> {
+    const r = await this.rc.get<LanguageList>(
+      this.path(false),
+      undefined,
+      config
+    );
     return r.data;
   }
 
@@ -36,12 +41,12 @@ class Language {
    * Rate Limit Group: Light
    * Http get /restapi/v1.0/dictionary/language/{languageId}
    */
-  async get(): Promise<LanguageInfo> {
+  async get(config?: RestRequestConfig): Promise<LanguageInfo> {
     if (this.languageId === null) {
       throw new Error('languageId must be specified.');
     }
 
-    const r = await this.rc.get<LanguageInfo>(this.path());
+    const r = await this.rc.get<LanguageInfo>(this.path(), undefined, config);
     return r.data;
   }
 }

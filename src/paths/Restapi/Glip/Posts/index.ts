@@ -1,3 +1,4 @@
+import {RestRequestConfig} from '../../../../Rest';
 import {
   GlipPosts,
   ListGlipPostsParameters,
@@ -25,8 +26,11 @@ class Posts {
    * Rate Limit Group: Light
    * Http get /restapi/v1.0/glip/posts
    */
-  async get(queryParams?: ListGlipPostsParameters): Promise<GlipPosts> {
-    const r = await this.rc.get<GlipPosts>(this.path(), queryParams);
+  async get(
+    queryParams?: ListGlipPostsParameters,
+    config?: RestRequestConfig
+  ): Promise<GlipPosts> {
+    const r = await this.rc.get<GlipPosts>(this.path(), queryParams, config);
     return r.data;
   }
 
@@ -35,8 +39,16 @@ class Posts {
    * Rate Limit Group: Light
    * Http post /restapi/v1.0/glip/posts
    */
-  async post(glipCreatePost: GlipCreatePost): Promise<GlipPostInfo> {
-    const r = await this.rc.post<GlipPostInfo>(this.path(), glipCreatePost);
+  async post(
+    glipCreatePost: GlipCreatePost,
+    config?: RestRequestConfig
+  ): Promise<GlipPostInfo> {
+    const r = await this.rc.post<GlipPostInfo>(
+      this.path(),
+      glipCreatePost,
+      undefined,
+      config
+    );
     return r.data;
   }
 }

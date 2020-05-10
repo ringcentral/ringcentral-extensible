@@ -1,3 +1,4 @@
+import {RestRequestConfig} from '../../../../../Rest';
 import {
   GetExtensionForwardingNumberListResponse,
   ListForwardingNumbersParameters,
@@ -35,11 +36,13 @@ class ForwardingNumber {
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number
    */
   async list(
-    queryParams?: ListForwardingNumbersParameters
+    queryParams?: ListForwardingNumbersParameters,
+    config?: RestRequestConfig
   ): Promise<GetExtensionForwardingNumberListResponse> {
     const r = await this.rc.get<GetExtensionForwardingNumberListResponse>(
       this.path(false),
-      queryParams
+      queryParams,
+      config
     );
     return r.data;
   }
@@ -50,11 +53,14 @@ class ForwardingNumber {
    * Http post /restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number
    */
   async post(
-    createForwardingNumberRequest: CreateForwardingNumberRequest
+    createForwardingNumberRequest: CreateForwardingNumberRequest,
+    config?: RestRequestConfig
   ): Promise<ForwardingNumberInfo> {
     const r = await this.rc.post<ForwardingNumberInfo>(
       this.path(false),
-      createForwardingNumberRequest
+      createForwardingNumberRequest,
+      undefined,
+      config
     );
     return r.data;
   }
@@ -64,12 +70,16 @@ class ForwardingNumber {
    * Rate Limit Group: Light
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number/{forwardingNumberId}
    */
-  async get(): Promise<ForwardingNumberInfo> {
+  async get(config?: RestRequestConfig): Promise<ForwardingNumberInfo> {
     if (this.forwardingNumberId === null) {
       throw new Error('forwardingNumberId must be specified.');
     }
 
-    const r = await this.rc.get<ForwardingNumberInfo>(this.path());
+    const r = await this.rc.get<ForwardingNumberInfo>(
+      this.path(),
+      undefined,
+      config
+    );
     return r.data;
   }
 
@@ -79,7 +89,8 @@ class ForwardingNumber {
    * Http put /restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number/{forwardingNumberId}
    */
   async put(
-    updateForwardingNumberRequest: UpdateForwardingNumberRequest
+    updateForwardingNumberRequest: UpdateForwardingNumberRequest,
+    config?: RestRequestConfig
   ): Promise<ForwardingNumberInfo> {
     if (this.forwardingNumberId === null) {
       throw new Error('forwardingNumberId must be specified.');
@@ -87,7 +98,9 @@ class ForwardingNumber {
 
     const r = await this.rc.put<ForwardingNumberInfo>(
       this.path(),
-      updateForwardingNumberRequest
+      updateForwardingNumberRequest,
+      undefined,
+      config
     );
     return r.data;
   }
@@ -97,12 +110,12 @@ class ForwardingNumber {
    * Rate Limit Group: Medium
    * Http delete /restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number/{forwardingNumberId}
    */
-  async delete(): Promise<string> {
+  async delete(config?: RestRequestConfig): Promise<string> {
     if (this.forwardingNumberId === null) {
       throw new Error('forwardingNumberId must be specified.');
     }
 
-    const r = await this.rc.delete<string>(this.path());
+    const r = await this.rc.delete<string>(this.path(), undefined, config);
     return r.data;
   }
 }

@@ -1,3 +1,4 @@
+import {RestRequestConfig} from '../../../../Rest';
 import {
   CompanyAnsweringRuleInfo,
   CompanyAnsweringRuleRequest,
@@ -33,11 +34,14 @@ class AnsweringRule {
    * Http post /restapi/v1.0/account/{accountId}/answering-rule
    */
   async post(
-    companyAnsweringRuleRequest: CompanyAnsweringRuleRequest
+    companyAnsweringRuleRequest: CompanyAnsweringRuleRequest,
+    config?: RestRequestConfig
   ): Promise<CompanyAnsweringRuleInfo> {
     const r = await this.rc.post<CompanyAnsweringRuleInfo>(
       this.path(false),
-      companyAnsweringRuleRequest
+      companyAnsweringRuleRequest,
+      undefined,
+      config
     );
     return r.data;
   }
@@ -48,11 +52,13 @@ class AnsweringRule {
    * Http get /restapi/v1.0/account/{accountId}/answering-rule
    */
   async list(
-    queryParams?: ListCompanyAnsweringRulesParameters
+    queryParams?: ListCompanyAnsweringRulesParameters,
+    config?: RestRequestConfig
   ): Promise<CompanyAnsweringRuleList> {
     const r = await this.rc.get<CompanyAnsweringRuleList>(
       this.path(false),
-      queryParams
+      queryParams,
+      config
     );
     return r.data;
   }
@@ -62,12 +68,16 @@ class AnsweringRule {
    * Rate Limit Group: Light
    * Http get /restapi/v1.0/account/{accountId}/answering-rule/{ruleId}
    */
-  async get(): Promise<CompanyAnsweringRuleInfo> {
+  async get(config?: RestRequestConfig): Promise<CompanyAnsweringRuleInfo> {
     if (this.ruleId === null) {
       throw new Error('ruleId must be specified.');
     }
 
-    const r = await this.rc.get<CompanyAnsweringRuleInfo>(this.path());
+    const r = await this.rc.get<CompanyAnsweringRuleInfo>(
+      this.path(),
+      undefined,
+      config
+    );
     return r.data;
   }
 
@@ -77,7 +87,8 @@ class AnsweringRule {
    * Http put /restapi/v1.0/account/{accountId}/answering-rule/{ruleId}
    */
   async put(
-    companyAnsweringRuleUpdate: CompanyAnsweringRuleUpdate
+    companyAnsweringRuleUpdate: CompanyAnsweringRuleUpdate,
+    config?: RestRequestConfig
   ): Promise<CompanyAnsweringRuleInfo> {
     if (this.ruleId === null) {
       throw new Error('ruleId must be specified.');
@@ -85,7 +96,9 @@ class AnsweringRule {
 
     const r = await this.rc.put<CompanyAnsweringRuleInfo>(
       this.path(),
-      companyAnsweringRuleUpdate
+      companyAnsweringRuleUpdate,
+      undefined,
+      config
     );
     return r.data;
   }
@@ -95,12 +108,12 @@ class AnsweringRule {
    * Rate Limit Group: Medium
    * Http delete /restapi/v1.0/account/{accountId}/answering-rule/{ruleId}
    */
-  async delete(): Promise<string> {
+  async delete(config?: RestRequestConfig): Promise<string> {
     if (this.ruleId === null) {
       throw new Error('ruleId must be specified.');
     }
 
-    const r = await this.rc.delete<string>(this.path());
+    const r = await this.rc.delete<string>(this.path(), undefined, config);
     return r.data;
   }
 }

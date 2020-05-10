@@ -1,3 +1,4 @@
+import {RestRequestConfig} from '../../../../../Rest';
 import {
   GetUserBusinessHoursResponse,
   UserBusinessHoursUpdateResponse,
@@ -24,8 +25,12 @@ class BusinessHours {
    * Rate Limit Group: Light
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/business-hours
    */
-  async get(): Promise<GetUserBusinessHoursResponse> {
-    const r = await this.rc.get<GetUserBusinessHoursResponse>(this.path());
+  async get(config?: RestRequestConfig): Promise<GetUserBusinessHoursResponse> {
+    const r = await this.rc.get<GetUserBusinessHoursResponse>(
+      this.path(),
+      undefined,
+      config
+    );
     return r.data;
   }
 
@@ -35,11 +40,14 @@ class BusinessHours {
    * Http put /restapi/v1.0/account/{accountId}/extension/{extensionId}/business-hours
    */
   async put(
-    userBusinessHoursUpdateRequest: UserBusinessHoursUpdateRequest
+    userBusinessHoursUpdateRequest: UserBusinessHoursUpdateRequest,
+    config?: RestRequestConfig
   ): Promise<UserBusinessHoursUpdateResponse> {
     const r = await this.rc.put<UserBusinessHoursUpdateResponse>(
       this.path(),
-      userBusinessHoursUpdateRequest
+      userBusinessHoursUpdateRequest,
+      undefined,
+      config
     );
     return r.data;
   }

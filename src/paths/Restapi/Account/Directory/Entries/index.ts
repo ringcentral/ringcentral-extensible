@@ -1,4 +1,5 @@
 import Search from './Search';
+import {RestRequestConfig} from '../../../../../Rest';
 import {
   DirectoryResource,
   ListDirectoryEntriesParameters,
@@ -32,11 +33,13 @@ class Entries {
    * Http get /restapi/v1.0/account/{accountId}/directory/entries
    */
   async list(
-    queryParams?: ListDirectoryEntriesParameters
+    queryParams?: ListDirectoryEntriesParameters,
+    config?: RestRequestConfig
   ): Promise<DirectoryResource> {
     const r = await this.rc.get<DirectoryResource>(
       this.path(false),
-      queryParams
+      queryParams,
+      config
     );
     return r.data;
   }
@@ -46,12 +49,16 @@ class Entries {
    * Rate Limit Group: Medium
    * Http get /restapi/v1.0/account/{accountId}/directory/entries/{entryId}
    */
-  async get(): Promise<ContactResource> {
+  async get(config?: RestRequestConfig): Promise<ContactResource> {
     if (this.entryId === null) {
       throw new Error('entryId must be specified.');
     }
 
-    const r = await this.rc.get<ContactResource>(this.path());
+    const r = await this.rc.get<ContactResource>(
+      this.path(),
+      undefined,
+      config
+    );
     return r.data;
   }
 

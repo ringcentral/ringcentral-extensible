@@ -1,5 +1,6 @@
 import BulkAssign from './BulkAssign';
 import Members from './Members';
+import {RestRequestConfig} from '../../../../Rest';
 import {ListCallQueuesParameters} from '../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../..';
@@ -28,8 +29,15 @@ class CallQueues {
    * Rate Limit Group: Medium
    * Http get /restapi/v1.0/account/{accountId}/call-queues
    */
-  async get(queryParams?: ListCallQueuesParameters): Promise<CallQueues> {
-    const r = await this.rc.get<CallQueues>(this.path(false), queryParams);
+  async get(
+    queryParams?: ListCallQueuesParameters,
+    config?: RestRequestConfig
+  ): Promise<CallQueues> {
+    const r = await this.rc.get<CallQueues>(
+      this.path(false),
+      queryParams,
+      config
+    );
     return r.data;
   }
 

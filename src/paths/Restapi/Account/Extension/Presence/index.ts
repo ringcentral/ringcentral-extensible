@@ -1,3 +1,4 @@
+import {RestRequestConfig} from '../../../../../Rest';
 import {
   GetPresenceInfo,
   ReadUserPresenceStatusParameters,
@@ -26,9 +27,14 @@ class Presence {
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/presence
    */
   async get(
-    queryParams?: ReadUserPresenceStatusParameters
+    queryParams?: ReadUserPresenceStatusParameters,
+    config?: RestRequestConfig
   ): Promise<GetPresenceInfo> {
-    const r = await this.rc.get<GetPresenceInfo>(this.path(), queryParams);
+    const r = await this.rc.get<GetPresenceInfo>(
+      this.path(),
+      queryParams,
+      config
+    );
     return r.data;
   }
 
@@ -38,11 +44,14 @@ class Presence {
    * Http put /restapi/v1.0/account/{accountId}/extension/{extensionId}/presence
    */
   async put(
-    presenceInfoResource: PresenceInfoResource
+    presenceInfoResource: PresenceInfoResource,
+    config?: RestRequestConfig
   ): Promise<PresenceInfoResponse> {
     const r = await this.rc.put<PresenceInfoResponse>(
       this.path(),
-      presenceInfoResource
+      presenceInfoResource,
+      undefined,
+      config
     );
     return r.data;
   }

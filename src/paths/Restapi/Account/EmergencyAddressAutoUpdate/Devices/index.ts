@@ -1,4 +1,5 @@
 import BulkAssign from './BulkAssign';
+import {RestRequestConfig} from '../../../../../Rest';
 import {
   ListDevicesAutomaticLocationUpdates,
   ListDevicesAutomaticLocationUpdatesParameters,
@@ -25,11 +26,13 @@ class Devices {
    * Http get /restapi/v1.0/account/{accountId}/emergency-address-auto-update/devices
    */
   async get(
-    queryParams?: ListDevicesAutomaticLocationUpdatesParameters
+    queryParams?: ListDevicesAutomaticLocationUpdatesParameters,
+    config?: RestRequestConfig
   ): Promise<ListDevicesAutomaticLocationUpdates> {
     const r = await this.rc.get<ListDevicesAutomaticLocationUpdates>(
       this.path(),
-      queryParams
+      queryParams,
+      config
     );
     return r.data;
   }

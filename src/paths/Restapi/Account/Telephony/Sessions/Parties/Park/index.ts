@@ -1,3 +1,4 @@
+import {RestRequestConfig} from '../../../../../../../Rest';
 import {CallParty} from '../../../../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../../../../..';
@@ -20,8 +21,8 @@ class Park {
    * Rate Limit Group: Light
    * Http post /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/park
    */
-  async post(): Promise<CallParty> {
-    const r = await this.rc.post<CallParty>(this.path());
+  async post(config?: RestRequestConfig): Promise<CallParty> {
+    const r = await this.rc.post<CallParty>(this.path(), undefined, config);
     return r.data;
   }
 }

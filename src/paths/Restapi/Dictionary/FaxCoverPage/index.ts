@@ -1,3 +1,4 @@
+import {RestRequestConfig} from '../../../../Rest';
 import {
   ListFaxCoverPagesResponse,
   ListFaxCoverPagesParameters,
@@ -24,11 +25,13 @@ class FaxCoverPage {
    * Http get /restapi/v1.0/dictionary/fax-cover-page
    */
   async get(
-    queryParams?: ListFaxCoverPagesParameters
+    queryParams?: ListFaxCoverPagesParameters,
+    config?: RestRequestConfig
   ): Promise<ListFaxCoverPagesResponse> {
     const r = await this.rc.get<ListFaxCoverPagesResponse>(
       this.path(),
-      queryParams
+      queryParams,
+      config
     );
     return r.data;
   }

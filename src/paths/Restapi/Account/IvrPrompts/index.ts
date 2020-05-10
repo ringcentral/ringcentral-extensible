@@ -1,4 +1,5 @@
 import Content from './Content';
+import {RestRequestConfig} from '../../../../Rest';
 import {
   PromptInfo,
   CreateIvrPromptRequest,
@@ -34,14 +35,15 @@ class IvrPrompts {
    * Http post /restapi/v1.0/account/{accountId}/ivr-prompts
    */
   async post(
-    createIVRPromptRequest: CreateIvrPromptRequest
+    createIVRPromptRequest: CreateIvrPromptRequest,
+    config?: RestRequestConfig
   ): Promise<PromptInfo> {
     const formData = Utils.getFormData(createIVRPromptRequest);
     const r = await this.rc.post<PromptInfo>(
       this.path(false),
       formData,
       undefined,
-      {headers: formData.getHeaders()}
+      {...config, headers: {...config.headers, ...formData.getHeaders()}}
     );
     return r.data;
   }
@@ -51,8 +53,12 @@ class IvrPrompts {
    * Rate Limit Group: Medium
    * Http get /restapi/v1.0/account/{accountId}/ivr-prompts
    */
-  async list(): Promise<IVRPrompts> {
-    const r = await this.rc.get<IVRPrompts>(this.path(false));
+  async list(config?: RestRequestConfig): Promise<IVRPrompts> {
+    const r = await this.rc.get<IVRPrompts>(
+      this.path(false),
+      undefined,
+      config
+    );
     return r.data;
   }
 
@@ -61,12 +67,12 @@ class IvrPrompts {
    * Rate Limit Group: Medium
    * Http get /restapi/v1.0/account/{accountId}/ivr-prompts/{promptId}
    */
-  async get(): Promise<PromptInfo> {
+  async get(config?: RestRequestConfig): Promise<PromptInfo> {
     if (this.promptId === null) {
       throw new Error('promptId must be specified.');
     }
 
-    const r = await this.rc.get<PromptInfo>(this.path());
+    const r = await this.rc.get<PromptInfo>(this.path(), undefined, config);
     return r.data;
   }
 
@@ -75,12 +81,12 @@ class IvrPrompts {
    * Rate Limit Group: Heavy
    * Http delete /restapi/v1.0/account/{accountId}/ivr-prompts/{promptId}
    */
-  async delete(): Promise<string> {
+  async delete(config?: RestRequestConfig): Promise<string> {
     if (this.promptId === null) {
       throw new Error('promptId must be specified.');
     }
 
-    const r = await this.rc.delete<string>(this.path());
+    const r = await this.rc.delete<string>(this.path(), undefined, config);
     return r.data;
   }
 
@@ -90,7 +96,8 @@ class IvrPrompts {
    * Http put /restapi/v1.0/account/{accountId}/ivr-prompts/{promptId}
    */
   async put(
-    updateIVRPromptRequest: UpdateIVRPromptRequest
+    updateIVRPromptRequest: UpdateIVRPromptRequest,
+    config?: RestRequestConfig
   ): Promise<PromptInfo> {
     if (this.promptId === null) {
       throw new Error('promptId must be specified.');
@@ -98,7 +105,9 @@ class IvrPrompts {
 
     const r = await this.rc.put<PromptInfo>(
       this.path(),
-      updateIVRPromptRequest
+      updateIVRPromptRequest,
+      undefined,
+      config
     );
     return r.data;
   }

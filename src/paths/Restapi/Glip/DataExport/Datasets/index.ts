@@ -1,3 +1,4 @@
+import {RestRequestConfig} from '../../../../../Rest';
 import Parent from '..';
 import RingCentral from '../../../../..';
 
@@ -25,12 +26,13 @@ class Datasets {
    * Rate Limit Group: Heavy
    * Http get /restapi/v1.0/glip/data-export/{taskId}/datasets/{datasetId}
    */
-  async get(): Promise<Buffer> {
+  async get(config?: RestRequestConfig): Promise<Buffer> {
     if (this.datasetId === null) {
       throw new Error('datasetId must be specified.');
     }
 
     const r = await this.rc.get<Buffer>(this.path(), undefined, {
+      ...config,
       responseType: 'arraybuffer',
     });
     return r.data;

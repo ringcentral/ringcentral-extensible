@@ -1,3 +1,4 @@
+import {RestRequestConfig} from '../../../../../../Rest';
 import {BulkAssignAutomaticaLocationUpdatesUsers} from '../../../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../../../..';
@@ -21,11 +22,14 @@ class BulkAssign {
    * Http post /restapi/v1.0/account/{accountId}/emergency-address-auto-update/users/bulk-assign
    */
   async post(
-    bulkAssignAutomaticaLocationUpdatesUsers: BulkAssignAutomaticaLocationUpdatesUsers
+    bulkAssignAutomaticaLocationUpdatesUsers: BulkAssignAutomaticaLocationUpdatesUsers,
+    config?: RestRequestConfig
   ): Promise<string> {
     const r = await this.rc.post<string>(
       this.path(),
-      bulkAssignAutomaticaLocationUpdatesUsers
+      bulkAssignAutomaticaLocationUpdatesUsers,
+      undefined,
+      config
     );
     return r.data;
   }

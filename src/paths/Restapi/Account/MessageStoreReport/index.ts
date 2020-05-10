@@ -1,4 +1,5 @@
 import Archive from './Archive';
+import {RestRequestConfig} from '../../../../Rest';
 import {CreateMessageStoreReportRequest} from '../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../..';
@@ -28,11 +29,14 @@ class MessageStoreReport {
    * Http post /restapi/v1.0/account/{accountId}/message-store-report
    */
   async post(
-    createMessageStoreReportRequest: CreateMessageStoreReportRequest
+    createMessageStoreReportRequest: CreateMessageStoreReportRequest,
+    config?: RestRequestConfig
   ): Promise<MessageStoreReport> {
     const r = await this.rc.post<MessageStoreReport>(
       this.path(false),
-      createMessageStoreReportRequest
+      createMessageStoreReportRequest,
+      undefined,
+      config
     );
     return r.data;
   }
@@ -42,12 +46,16 @@ class MessageStoreReport {
    * Rate Limit Group: Heavy
    * Http get /restapi/v1.0/account/{accountId}/message-store-report/{taskId}
    */
-  async get(): Promise<MessageStoreReport> {
+  async get(config?: RestRequestConfig): Promise<MessageStoreReport> {
     if (this.taskId === null) {
       throw new Error('taskId must be specified.');
     }
 
-    const r = await this.rc.get<MessageStoreReport>(this.path());
+    const r = await this.rc.get<MessageStoreReport>(
+      this.path(),
+      undefined,
+      config
+    );
     return r.data;
   }
 

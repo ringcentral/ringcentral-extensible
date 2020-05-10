@@ -1,3 +1,4 @@
+import {RestRequestConfig} from '../../../../../../Rest';
 import {
   SuperviseCallSession,
   SuperviseCallSessionRequest,
@@ -24,11 +25,14 @@ class Supervise {
    * Http post /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/supervise
    */
   async post(
-    superviseCallSessionRequest: SuperviseCallSessionRequest
+    superviseCallSessionRequest: SuperviseCallSessionRequest,
+    config?: RestRequestConfig
   ): Promise<SuperviseCallSession> {
     const r = await this.rc.post<SuperviseCallSession>(
       this.path(),
-      superviseCallSessionRequest
+      superviseCallSessionRequest,
+      undefined,
+      config
     );
     return r.data;
   }

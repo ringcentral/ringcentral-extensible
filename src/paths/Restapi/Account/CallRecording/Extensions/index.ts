@@ -1,3 +1,4 @@
+import {RestRequestConfig} from '../../../../../Rest';
 import {CallRecordingExtensions} from '../../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../../..';
@@ -20,8 +21,12 @@ class Extensions {
    * Rate Limit Group: Medium
    * Http get /restapi/v1.0/account/{accountId}/call-recording/extensions
    */
-  async get(): Promise<CallRecordingExtensions> {
-    const r = await this.rc.get<CallRecordingExtensions>(this.path());
+  async get(config?: RestRequestConfig): Promise<CallRecordingExtensions> {
+    const r = await this.rc.get<CallRecordingExtensions>(
+      this.path(),
+      undefined,
+      config
+    );
     return r.data;
   }
 }

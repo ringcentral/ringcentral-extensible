@@ -1,3 +1,4 @@
+import {RestRequestConfig} from '../../../../../Rest';
 import {MessageStoreReportArchive} from '../../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../../..';
@@ -26,8 +27,12 @@ class Archive {
    * Rate Limit Group: Heavy
    * Http get /restapi/v1.0/account/{accountId}/message-store-report/{taskId}/archive
    */
-  async list(): Promise<MessageStoreReportArchive> {
-    const r = await this.rc.get<MessageStoreReportArchive>(this.path(false));
+  async list(config?: RestRequestConfig): Promise<MessageStoreReportArchive> {
+    const r = await this.rc.get<MessageStoreReportArchive>(
+      this.path(false),
+      undefined,
+      config
+    );
     return r.data;
   }
 
@@ -36,12 +41,12 @@ class Archive {
    * Rate Limit Group: Heavy
    * Http get /restapi/v1.0/account/{accountId}/message-store-report/{taskId}/archive/{archiveId}
    */
-  async get(): Promise<string> {
+  async get(config?: RestRequestConfig): Promise<string> {
     if (this.archiveId === null) {
       throw new Error('archiveId must be specified.');
     }
 
-    const r = await this.rc.get<string>(this.path());
+    const r = await this.rc.get<string>(this.path(), undefined, config);
     return r.data;
   }
 }

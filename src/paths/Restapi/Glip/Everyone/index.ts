@@ -1,3 +1,4 @@
+import {RestRequestConfig} from '../../../../Rest';
 import {
   GlipEveryoneInfo,
   UpdateGlipEveryoneRequest,
@@ -23,8 +24,12 @@ class Everyone {
    * Rate Limit Group: Light
    * Http get /restapi/v1.0/glip/everyone
    */
-  async get(): Promise<GlipEveryoneInfo> {
-    const r = await this.rc.get<GlipEveryoneInfo>(this.path());
+  async get(config?: RestRequestConfig): Promise<GlipEveryoneInfo> {
+    const r = await this.rc.get<GlipEveryoneInfo>(
+      this.path(),
+      undefined,
+      config
+    );
     return r.data;
   }
 
@@ -34,11 +39,14 @@ class Everyone {
    * Http patch /restapi/v1.0/glip/everyone
    */
   async patch(
-    updateGlipEveryoneRequest: UpdateGlipEveryoneRequest
+    updateGlipEveryoneRequest: UpdateGlipEveryoneRequest,
+    config?: RestRequestConfig
   ): Promise<GlipEveryoneInfo> {
     const r = await this.rc.patch<GlipEveryoneInfo>(
       this.path(),
-      updateGlipEveryoneRequest
+      updateGlipEveryoneRequest,
+      undefined,
+      config
     );
     return r.data;
   }

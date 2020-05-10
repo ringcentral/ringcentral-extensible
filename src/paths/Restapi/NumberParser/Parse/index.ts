@@ -1,3 +1,4 @@
+import {RestRequestConfig} from '../../../../Rest';
 import {
   ParsePhoneNumberResponse,
   ParsePhoneNumberRequest,
@@ -26,12 +27,14 @@ class Parse {
    */
   async post(
     parsePhoneNumberRequest: ParsePhoneNumberRequest,
-    queryParams?: ParsePhoneNumberParameters
+    queryParams?: ParsePhoneNumberParameters,
+    config?: RestRequestConfig
   ): Promise<ParsePhoneNumberResponse> {
     const r = await this.rc.post<ParsePhoneNumberResponse>(
       this.path(),
       parsePhoneNumberRequest,
-      queryParams
+      queryParams,
+      config
     );
     return r.data;
   }

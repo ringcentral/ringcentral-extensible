@@ -1,3 +1,4 @@
+import {RestRequestConfig} from '../../../../../Rest';
 import {FederationResource} from '../../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../../..';
@@ -20,8 +21,12 @@ class Federation {
    * Rate Limit Group: Medium
    * Http get /restapi/v1.0/account/{accountId}/directory/federation
    */
-  async get(): Promise<FederationResource> {
-    const r = await this.rc.get<FederationResource>(this.path());
+  async get(config?: RestRequestConfig): Promise<FederationResource> {
+    const r = await this.rc.get<FederationResource>(
+      this.path(),
+      undefined,
+      config
+    );
     return r.data;
   }
 }

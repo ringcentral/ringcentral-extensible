@@ -1,3 +1,4 @@
+import {RestRequestConfig} from '../../../../Rest';
 import {
   AccountBusinessAddressResource,
   ModifyAccountBusinessAddressRequest,
@@ -23,8 +24,14 @@ class BusinessAddress {
    * Rate Limit Group: Light
    * Http get /restapi/v1.0/account/{accountId}/business-address
    */
-  async get(): Promise<AccountBusinessAddressResource> {
-    const r = await this.rc.get<AccountBusinessAddressResource>(this.path());
+  async get(
+    config?: RestRequestConfig
+  ): Promise<AccountBusinessAddressResource> {
+    const r = await this.rc.get<AccountBusinessAddressResource>(
+      this.path(),
+      undefined,
+      config
+    );
     return r.data;
   }
 
@@ -34,11 +41,14 @@ class BusinessAddress {
    * Http put /restapi/v1.0/account/{accountId}/business-address
    */
   async put(
-    modifyAccountBusinessAddressRequest: ModifyAccountBusinessAddressRequest
+    modifyAccountBusinessAddressRequest: ModifyAccountBusinessAddressRequest,
+    config?: RestRequestConfig
   ): Promise<AccountBusinessAddressResource> {
     const r = await this.rc.put<AccountBusinessAddressResource>(
       this.path(),
-      modifyAccountBusinessAddressRequest
+      modifyAccountBusinessAddressRequest,
+      undefined,
+      config
     );
     return r.data;
   }

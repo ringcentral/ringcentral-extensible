@@ -1,3 +1,4 @@
+import {RestRequestConfig} from '../../../../Rest';
 import {
   CreateSipRegistrationResponse,
   CreateSipRegistrationRequest,
@@ -24,11 +25,14 @@ class SipProvision {
    * Http post /restapi/v1.0/client-info/sip-provision
    */
   async post(
-    createSipRegistrationRequest: CreateSipRegistrationRequest
+    createSipRegistrationRequest: CreateSipRegistrationRequest,
+    config?: RestRequestConfig
   ): Promise<CreateSipRegistrationResponse> {
     const r = await this.rc.post<CreateSipRegistrationResponse>(
       this.path(),
-      createSipRegistrationRequest
+      createSipRegistrationRequest,
+      undefined,
+      config
     );
     return r.data;
   }

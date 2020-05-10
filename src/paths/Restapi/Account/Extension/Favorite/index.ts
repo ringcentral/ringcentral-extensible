@@ -1,3 +1,4 @@
+import {RestRequestConfig} from '../../../../../Rest';
 import {
   FavoriteContactList,
   FavoriteCollection,
@@ -23,8 +24,12 @@ class Favorite {
    * Rate Limit Group: Light
    * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/favorite
    */
-  async get(): Promise<FavoriteContactList> {
-    const r = await this.rc.get<FavoriteContactList>(this.path());
+  async get(config?: RestRequestConfig): Promise<FavoriteContactList> {
+    const r = await this.rc.get<FavoriteContactList>(
+      this.path(),
+      undefined,
+      config
+    );
     return r.data;
   }
 
@@ -34,11 +39,14 @@ class Favorite {
    * Http put /restapi/v1.0/account/{accountId}/extension/{extensionId}/favorite
    */
   async put(
-    favoriteCollection: FavoriteCollection
+    favoriteCollection: FavoriteCollection,
+    config?: RestRequestConfig
   ): Promise<FavoriteContactList> {
     const r = await this.rc.put<FavoriteContactList>(
       this.path(),
-      favoriteCollection
+      favoriteCollection,
+      undefined,
+      config
     );
     return r.data;
   }

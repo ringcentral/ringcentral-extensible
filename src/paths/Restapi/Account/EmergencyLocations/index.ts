@@ -1,3 +1,4 @@
+import {RestRequestConfig} from '../../../../Rest';
 import {
   EmergencyLocationInfoRequest,
   EmergencyLocationList,
@@ -32,11 +33,14 @@ class EmergencyLocations {
    * Http post /restapi/v1.0/account/{accountId}/emergency-locations
    */
   async post(
-    emergencyLocationInfoRequest: EmergencyLocationInfoRequest
+    emergencyLocationInfoRequest: EmergencyLocationInfoRequest,
+    config?: RestRequestConfig
   ): Promise<string> {
     const r = await this.rc.post<string>(
       this.path(false),
-      emergencyLocationInfoRequest
+      emergencyLocationInfoRequest,
+      undefined,
+      config
     );
     return r.data;
   }
@@ -47,11 +51,13 @@ class EmergencyLocations {
    * Http get /restapi/v1.0/account/{accountId}/emergency-locations
    */
   async list(
-    queryParams?: ListEmergencyLocationsParameters
+    queryParams?: ListEmergencyLocationsParameters,
+    config?: RestRequestConfig
   ): Promise<EmergencyLocationList> {
     const r = await this.rc.get<EmergencyLocationList>(
       this.path(false),
-      queryParams
+      queryParams,
+      config
     );
     return r.data;
   }
@@ -61,12 +67,16 @@ class EmergencyLocations {
    * Rate Limit Group: Light
    * Http get /restapi/v1.0/account/{accountId}/emergency-locations/{locationId}
    */
-  async get(): Promise<EmergencyLocationInfo> {
+  async get(config?: RestRequestConfig): Promise<EmergencyLocationInfo> {
     if (this.locationId === null) {
       throw new Error('locationId must be specified.');
     }
 
-    const r = await this.rc.get<EmergencyLocationInfo>(this.path());
+    const r = await this.rc.get<EmergencyLocationInfo>(
+      this.path(),
+      undefined,
+      config
+    );
     return r.data;
   }
 
@@ -76,7 +86,8 @@ class EmergencyLocations {
    * Http put /restapi/v1.0/account/{accountId}/emergency-locations/{locationId}
    */
   async put(
-    emergencyLocationInfoRequest: EmergencyLocationInfoRequest
+    emergencyLocationInfoRequest: EmergencyLocationInfoRequest,
+    config?: RestRequestConfig
   ): Promise<EmergencyLocationInfo> {
     if (this.locationId === null) {
       throw new Error('locationId must be specified.');
@@ -84,7 +95,9 @@ class EmergencyLocations {
 
     const r = await this.rc.put<EmergencyLocationInfo>(
       this.path(),
-      emergencyLocationInfoRequest
+      emergencyLocationInfoRequest,
+      undefined,
+      config
     );
     return r.data;
   }

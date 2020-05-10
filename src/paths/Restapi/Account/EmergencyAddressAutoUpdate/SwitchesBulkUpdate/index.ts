@@ -1,3 +1,4 @@
+import {RestRequestConfig} from '../../../../../Rest';
 import {
   UpdateMultipleSwitchesResponse,
   UpdateMultipleSwitchesRequest,
@@ -24,11 +25,14 @@ class SwitchesBulkUpdate {
    * Http post /restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches-bulk-update
    */
   async post(
-    updateMultipleSwitchesRequest: UpdateMultipleSwitchesRequest
+    updateMultipleSwitchesRequest: UpdateMultipleSwitchesRequest,
+    config?: RestRequestConfig
   ): Promise<UpdateMultipleSwitchesResponse> {
     const r = await this.rc.post<UpdateMultipleSwitchesResponse>(
       this.path(),
-      updateMultipleSwitchesRequest
+      updateMultipleSwitchesRequest,
+      undefined,
+      config
     );
     return r.data;
   }

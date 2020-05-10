@@ -1,3 +1,4 @@
+import {RestRequestConfig} from '../../../../Rest';
 import {
   GlipChatsListWithoutNavigation,
   ListFavoriteChatsParameters,
@@ -24,11 +25,13 @@ class Favorites {
    * Http get /restapi/v1.0/glip/favorites
    */
   async get(
-    queryParams?: ListFavoriteChatsParameters
+    queryParams?: ListFavoriteChatsParameters,
+    config?: RestRequestConfig
   ): Promise<GlipChatsListWithoutNavigation> {
     const r = await this.rc.get<GlipChatsListWithoutNavigation>(
       this.path(),
-      queryParams
+      queryParams,
+      config
     );
     return r.data;
   }

@@ -1,6 +1,7 @@
 import Publish from './Publish';
 import Unlock from './Unlock';
 import Lock from './Lock';
+import {RestRequestConfig} from '../../../../Rest';
 import {
   GetGlipNoteInfo,
   GlipNoteInfo,
@@ -33,12 +34,16 @@ class Notes {
    * Rate Limit Group: Medium
    * Http get /restapi/v1.0/glip/notes/{noteId}
    */
-  async get(): Promise<GetGlipNoteInfo> {
+  async get(config?: RestRequestConfig): Promise<GetGlipNoteInfo> {
     if (this.noteId === null) {
       throw new Error('noteId must be specified.');
     }
 
-    const r = await this.rc.get<GetGlipNoteInfo>(this.path());
+    const r = await this.rc.get<GetGlipNoteInfo>(
+      this.path(),
+      undefined,
+      config
+    );
     return r.data;
   }
 
@@ -47,12 +52,20 @@ class Notes {
    * Rate Limit Group: Medium
    * Http patch /restapi/v1.0/glip/notes/{noteId}
    */
-  async patch(glipNoteCreate: GlipNoteCreate): Promise<GlipNoteInfo> {
+  async patch(
+    glipNoteCreate: GlipNoteCreate,
+    config?: RestRequestConfig
+  ): Promise<GlipNoteInfo> {
     if (this.noteId === null) {
       throw new Error('noteId must be specified.');
     }
 
-    const r = await this.rc.patch<GlipNoteInfo>(this.path(), glipNoteCreate);
+    const r = await this.rc.patch<GlipNoteInfo>(
+      this.path(),
+      glipNoteCreate,
+      undefined,
+      config
+    );
     return r.data;
   }
 
@@ -61,12 +74,12 @@ class Notes {
    * Rate Limit Group: Medium
    * Http delete /restapi/v1.0/glip/notes/{noteId}
    */
-  async delete(): Promise<string> {
+  async delete(config?: RestRequestConfig): Promise<string> {
     if (this.noteId === null) {
       throw new Error('noteId must be specified.');
     }
 
-    const r = await this.rc.delete<string>(this.path());
+    const r = await this.rc.delete<string>(this.path(), undefined, config);
     return r.data;
   }
 

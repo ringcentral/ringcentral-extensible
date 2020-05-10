@@ -1,3 +1,4 @@
+import {RestRequestConfig} from '../../../../../Rest';
 import {
   SwitchesList,
   ListAccountSwitchesParameters,
@@ -33,9 +34,14 @@ class Switches {
    * Http get /restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches
    */
   async list(
-    queryParams?: ListAccountSwitchesParameters
+    queryParams?: ListAccountSwitchesParameters,
+    config?: RestRequestConfig
   ): Promise<SwitchesList> {
-    const r = await this.rc.get<SwitchesList>(this.path(false), queryParams);
+    const r = await this.rc.get<SwitchesList>(
+      this.path(false),
+      queryParams,
+      config
+    );
     return r.data;
   }
 
@@ -44,10 +50,15 @@ class Switches {
    * Rate Limit Group: Heavy
    * Http post /restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches
    */
-  async post(createSwitchInfo: CreateSwitchInfo): Promise<SwitchInfo> {
+  async post(
+    createSwitchInfo: CreateSwitchInfo,
+    config?: RestRequestConfig
+  ): Promise<SwitchInfo> {
     const r = await this.rc.post<SwitchInfo>(
       this.path(false),
-      createSwitchInfo
+      createSwitchInfo,
+      undefined,
+      config
     );
     return r.data;
   }
@@ -57,12 +68,12 @@ class Switches {
    * Rate Limit Group: Medium
    * Http get /restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches/{switchId}
    */
-  async get(): Promise<SwitchInfo> {
+  async get(config?: RestRequestConfig): Promise<SwitchInfo> {
     if (this.switchId === null) {
       throw new Error('switchId must be specified.');
     }
 
-    const r = await this.rc.get<SwitchInfo>(this.path());
+    const r = await this.rc.get<SwitchInfo>(this.path(), undefined, config);
     return r.data;
   }
 
@@ -71,12 +82,20 @@ class Switches {
    * Rate Limit Group: Heavy
    * Http put /restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches/{switchId}
    */
-  async put(updateSwitchInfo: UpdateSwitchInfo): Promise<SwitchInfo> {
+  async put(
+    updateSwitchInfo: UpdateSwitchInfo,
+    config?: RestRequestConfig
+  ): Promise<SwitchInfo> {
     if (this.switchId === null) {
       throw new Error('switchId must be specified.');
     }
 
-    const r = await this.rc.put<SwitchInfo>(this.path(), updateSwitchInfo);
+    const r = await this.rc.put<SwitchInfo>(
+      this.path(),
+      updateSwitchInfo,
+      undefined,
+      config
+    );
     return r.data;
   }
 
@@ -85,12 +104,12 @@ class Switches {
    * Rate Limit Group: Heavy
    * Http delete /restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches/{switchId}
    */
-  async delete(): Promise<string> {
+  async delete(config?: RestRequestConfig): Promise<string> {
     if (this.switchId === null) {
       throw new Error('switchId must be specified.');
     }
 
-    const r = await this.rc.delete<string>(this.path());
+    const r = await this.rc.delete<string>(this.path(), undefined, config);
     return r.data;
   }
 }

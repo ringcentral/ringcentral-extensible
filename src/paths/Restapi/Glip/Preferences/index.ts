@@ -1,3 +1,4 @@
+import {RestRequestConfig} from '../../../../Rest';
 import {GlipPreferencesInfo} from '../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../..';
@@ -20,8 +21,12 @@ class Preferences {
    * Rate Limit Group: Medium
    * Http get /restapi/v1.0/glip/preferences
    */
-  async get(): Promise<GlipPreferencesInfo> {
-    const r = await this.rc.get<GlipPreferencesInfo>(this.path());
+  async get(config?: RestRequestConfig): Promise<GlipPreferencesInfo> {
+    const r = await this.rc.get<GlipPreferencesInfo>(
+      this.path(),
+      undefined,
+      config
+    );
     return r.data;
   }
 }

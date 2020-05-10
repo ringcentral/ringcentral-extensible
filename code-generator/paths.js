@@ -73,6 +73,7 @@ const generate = (prefix = '/') => {
       defaultParamValue = '~'
     }
 
+    let restRequestConfig = false;
     let code = `import RingCentral from '${Array(routes.length + 1).fill('..').join('/')}'
 
 class ${R.last(routes)} {
@@ -204,6 +205,8 @@ class ${R.last(routes)} {
         methodParams.push(`queryParams?: ${queryParamsClass}`)
         definitionsUsed.add(queryParamsClass)
       }
+      methodParams.push('config?: RestRequestConfig')
+      restRequestConfig = true;
       code += `
 
   /**
@@ -219,13 +222,13 @@ class ${R.last(routes)} {
       if (multipart) {
         code += `
     const formData = Utils.getFormData(${bodyParam})
-    const r = await this.rc.${operation.method}<${responseType}>(this.path(${(!withParam && paramName) ? 'false' : ''}), formData, ${queryParams.length > 0 ? 'queryParams' : 'undefined'}, { headers: formData.getHeaders() })`
+    const r = await this.rc.${operation.method}<${responseType}>(this.path(${(!withParam && paramName) ? 'false' : ''}), formData, ${queryParams.length > 0 ? 'queryParams' : 'undefined'}, { ...config, headers: { ...config.headers, ...formData.getHeaders() } })`
       } else if (responseType === 'Buffer') {
         code += `
-    const r = await this.rc.${operation.method}<${responseType}>(this.path(${(!withParam && paramName) ? 'false' : ''})${bodyParam ? `, ${bodyParam}` : ''}, ${queryParams.length > 0 ? 'queryParams' : 'undefined'}, { responseType: 'arraybuffer' })`
+    const r = await this.rc.${operation.method}<${responseType}>(this.path(${(!withParam && paramName) ? 'false' : ''})${bodyParam ? `, ${bodyParam}` : ''}, ${queryParams.length > 0 ? 'queryParams' : 'undefined'}, { ...config, responseType: 'arraybuffer' })`
       } else {
         code += `
-    const r = await this.rc.${operation.method}<${responseType}>(this.path(${(!withParam && paramName) ? 'false' : ''})${bodyParam ? `, ${bodyParam}` : ''}${queryParams.length > 0 ? ', queryParams' : ''})`
+    const r = await this.rc.${operation.method}<${responseType}>(this.path(${(!withParam && paramName) ? 'false' : ''})${bodyParam ? `, ${bodyParam}` : ''}, ${queryParams.length > 0 ? 'queryParams' : 'undefined'}, config)`
       }
       code += `
     return r.data
@@ -242,6 +245,10 @@ class ${R.last(routes)} {
     }
     code += `
 }`
+
+    if(restRequestConfig) {
+      code = `import { RestRequestConfig } from '${Array(routes.length + 1).fill('..').join('/')}/Rest'\n${code}`
+    }
 
     fs.writeFileSync(path.join(folderPath, 'index.ts'), code.trim() + `\n\nexport default ${R.last(routes)}\n`)
 

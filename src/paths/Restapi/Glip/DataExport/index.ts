@@ -1,4 +1,5 @@
 import Datasets from './Datasets';
+import {RestRequestConfig} from '../../../../Rest';
 import {
   DataExportTask,
   CreateDataExportTaskRequest,
@@ -33,11 +34,14 @@ class DataExport {
    * Http post /restapi/v1.0/glip/data-export
    */
   async post(
-    createDataExportTaskRequest: CreateDataExportTaskRequest
+    createDataExportTaskRequest: CreateDataExportTaskRequest,
+    config?: RestRequestConfig
   ): Promise<DataExportTask> {
     const r = await this.rc.post<DataExportTask>(
       this.path(false),
-      createDataExportTaskRequest
+      createDataExportTaskRequest,
+      undefined,
+      config
     );
     return r.data;
   }
@@ -48,11 +52,13 @@ class DataExport {
    * Http get /restapi/v1.0/glip/data-export
    */
   async list(
-    queryParams?: ListDataExportTasksParameters
+    queryParams?: ListDataExportTasksParameters,
+    config?: RestRequestConfig
   ): Promise<DataExportTaskList> {
     const r = await this.rc.get<DataExportTaskList>(
       this.path(false),
-      queryParams
+      queryParams,
+      config
     );
     return r.data;
   }
@@ -62,12 +68,12 @@ class DataExport {
    * Rate Limit Group: Medium
    * Http get /restapi/v1.0/glip/data-export/{taskId}
    */
-  async get(): Promise<DataExportTask> {
+  async get(config?: RestRequestConfig): Promise<DataExportTask> {
     if (this.taskId === null) {
       throw new Error('taskId must be specified.');
     }
 
-    const r = await this.rc.get<DataExportTask>(this.path());
+    const r = await this.rc.get<DataExportTask>(this.path(), undefined, config);
     return r.data;
   }
 
