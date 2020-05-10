@@ -119,4 +119,11 @@ yarn test
 - Create a WSG version of this SDK
 - Make it a RingCentral official project
 - PubNub
-- Support events
+- Support events:
+    - token refreshed
+- extra features as plugins or extensions
+    - rate limit handling
+    - debug mode
+    - extrensions/<extension 1>/
+        - every extension should have a readme file
+- Test WSG queryParams with array as value
