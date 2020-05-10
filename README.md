@@ -13,25 +13,25 @@ It provides unifed programming interface to transport protocol HTTPS and WebSock
 ## Installation
 
 ```
-yarn add ringcentral-typescript
+yarn add ringcentral-unified
 ```
 
 or
 
 ```
-npm install ringcentral-typescript --save
+npm install ringcentral-unified --save
 ```
 
 Then you should be able to import the SDK like this:
 
 ```ts
-import RestCentral from 'ringcentral-typescript';
+import RestCentral from 'ringcentral-unified';
 ```
 
 or
 
 ```js
-const RestCentral = require('ringcentral-typescript').default;
+const RestCentral = require('ringcentral-unified').default;
 ```
 
 

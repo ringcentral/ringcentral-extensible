@@ -1,10 +1,10 @@
 {
-  "name": "ringcentral-typescript",
-  "version": "0.10.0",
-  "description": "RingCentral TypeScript SDK",
+  "name": "ringcentral-unified",
+  "version": "0.1.0",
+  "description": "RingCentral Unified SDK for TypeScript",
   "main": "build/index.js",
   "types": "build/index.d.ts",
-  "repository": "git@github.com:tylerlong/ringcentral-typescript.git",
+  "repository": "git@github.com:ringcentral/ringcentral-unified-ts.git",
   "author": "Tyler Liu <tyler.liu@ringcentral.com>",
   "license": "MIT",
   "scripts": {
