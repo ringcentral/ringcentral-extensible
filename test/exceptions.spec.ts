@@ -26,8 +26,8 @@ describe('Exceptions', () => {
       }
       await rc.revoke();
     };
-    await testRingCentral('https', testCase);
-    await testRingCentral('wss', testCase);
+    await testRingCentral(testCase);
+    await testRingCentral(testCase, 'wss');
   });
 
   test('404', async () => {
@@ -47,7 +47,7 @@ describe('Exceptions', () => {
       }
       await rc.revoke();
     };
-    await testRingCentral('https', testCase);
-    await testRingCentral('wss', testCase);
+    await testRingCentral(testCase);
+    await testRingCentral(testCase, 'wss');
   });
 });

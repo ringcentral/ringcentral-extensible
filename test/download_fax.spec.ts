@@ -29,7 +29,7 @@ describe('fax', () => {
       fs.writeFileSync(path.join(__dirname, 'temp.pdf'), buffer);
       await rc.revoke();
     };
-    await testRingCentral('https', testCase);
-    // await testRingCentral('wss', testCase); // todo: https://jira.ringcentral.com/browse/PLA-49506
+    await testRingCentral(testCase);
+    // await testRingCentral(testCase, 'wss'); // todo: https://jira.ringcentral.com/browse/PLA-49506
   });
 });

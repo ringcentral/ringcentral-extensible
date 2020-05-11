@@ -1,6 +1,6 @@
 /* eslint-env jest */
 import RingCentral from '../src/index';
-import {createRingCentral} from './utils';
+import {testRingCentral} from './utils';
 
 describe('authorize', () => {
   test('password flow', async () => {
@@ -36,9 +36,10 @@ describe('authorize', () => {
     await rc.revoke();
   });
   test('revoke', async () => {
-    const rc = await createRingCentral();
-    expect(rc.token).not.toBeUndefined();
-    await rc.revoke();
-    expect(rc.token).toBeUndefined();
+    await testRingCentral(async (rc: RingCentral) => {
+      expect(rc.token).not.toBeUndefined();
+      await rc.revoke();
+      expect(rc.token).toBeUndefined();
+    });
   });
 });

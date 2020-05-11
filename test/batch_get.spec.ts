@@ -21,7 +21,7 @@ describe('batch get', () => {
       expect(r.data).toContain('--Boundary');
       await rc.revoke();
     };
-    await testRingCentral('https', testCase);
-    // await testRingCentral('wss', testCase); // todo: https://jira.ringcentral.com/browse/PLA-49505
+    await testRingCentral(testCase);
+    // await testRingCentral(testCase, 'wss'); // todo: https://jira.ringcentral.com/browse/PLA-49505
   });
 });

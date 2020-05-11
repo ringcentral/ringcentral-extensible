@@ -12,7 +12,7 @@ describe('HTTP GET', () => {
       expect(extensionInfo.id).not.toBeUndefined();
       await rc.revoke();
     };
-    await testRingCentral('https', testCase);
-    await testRingCentral('wss', testCase);
+    await testRingCentral(testCase);
+    await testRingCentral(testCase, 'wss');
   });
 });
