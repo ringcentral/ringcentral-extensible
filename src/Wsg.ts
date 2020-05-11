@@ -137,6 +137,7 @@ export default class Wsg {
       }
       this.ws.send(JSON.stringify(body));
       const handler = (event: WsgEvent) => {
+        // console.log(event.data);
         const [meta, body]: [WsgMeta, T] = JSON.parse(event.data);
         if (meta.messageId === messageId && meta.type === 'ClientRequest') {
           this.ws.removeEventListener('message', handler);
