@@ -12,12 +12,12 @@ import delay from 'delay';
 import Utils from './Utils';
 
 export type RestOptions = {
-  clientId: string;
-  clientSecret: string;
   server: string;
+  clientId?: string;
+  clientSecret?: string;
+  token?: TokenInfo;
   appName?: string;
   appVersion?: string;
-  token?: TokenInfo;
   handleRateLimit?: boolean | number;
   debugMode?: boolean;
 };

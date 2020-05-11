@@ -4,11 +4,11 @@ export const testRingCentral = async (
   testCase: (rc: RingCentral) => Promise<void>,
   transport: 'https' | 'wss' = 'https'
 ) => {
-  const rc = await _createRingCentral(transport);
+  const rc = await createRingCentral(transport);
   await testCase(rc);
 };
 
-const _createRingCentral = async (
+export const createRingCentral = async (
   transport: 'https' | 'wss' = 'https'
 ): Promise<RingCentral> => {
   if (transport === 'https') {

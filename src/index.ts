@@ -184,6 +184,11 @@ export default class RingCentral {
       // nothing to revoke
       return;
     }
+    if (!this.rest.clientId || !this.rest.clientSecret) {
+      // no clientId or clientSecret, the token is from external source, cannot revoke
+      this.token = undefined;
+      return;
+    }
     tokenToRevoke =
       tokenToRevoke ?? this.token?.access_token ?? this.token?.refresh_token;
     await this.restapi(null)
