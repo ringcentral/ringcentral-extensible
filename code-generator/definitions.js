@@ -6,7 +6,7 @@ const R = require('ramda')
 
 const outputDir = path.join(__dirname, '..', 'src', 'definitions')
 
-const doc = yaml.safeLoad(fs.readFileSync('/Users/tyler.liu/src/dotnet/RingCentral.Net/code-generator/rc-platform-adjusted.yml', 'utf8'))
+const doc = yaml.safeLoad(fs.readFileSync(process.env.PATH_TO_SWAGGER_SPEC, 'utf8'))
 const definitions = doc.definitions
 const models = Object.keys(definitions).map(k => ({ name: k, ...definitions[k] }))
   .filter(m => m.type !== 'array')

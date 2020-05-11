@@ -9,7 +9,7 @@ const { normalizePath, deNormalizePath, getResponseType, patchSrcFile } = requir
 
 const outputDir = path.join(__dirname, '..', 'src', 'paths')
 
-const doc = yaml.safeLoad(fs.readFileSync('/Users/tyler.liu/src/dotnet/RingCentral.Net/code-generator/rc-platform-adjusted.yml', 'utf8'))
+const doc = yaml.safeLoad(fs.readFileSync(process.env.PATH_TO_SWAGGER_SPEC, 'utf8'))
 
 // Delete /restapi/oauth/authorize: https://git.ringcentral.com/platform/api-metadata-specs/issues/26
 delete doc.paths['/restapi/oauth/authorize']
