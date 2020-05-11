@@ -2,7 +2,7 @@ import RingCentral from '../src/index';
 
 export const createRingCentral = async (
   transport: 'https' | 'wss' = 'https'
-) => {
+): Promise<RingCentral> => {
   if (transport === 'https') {
     const rc = new RingCentral({
       clientId: process.env.RINGCENTRAL_CLIENT_ID!,
@@ -35,4 +35,12 @@ export const createRingCentral = async (
     rc.defaults.transport = 'wss';
     return rc;
   }
+};
+
+export const testRingCentral = async (
+  transport: 'https' | 'wss',
+  testCase: (rc: RingCentral) => Promise<void>
+) => {
+  const rc = await createRingCentral(transport);
+  await testCase(rc);
 };

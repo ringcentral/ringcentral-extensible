@@ -2,14 +2,14 @@
 import fs from 'fs';
 import path from 'path';
 
-import {createRingCentral} from './utils';
+import {testRingCentral} from './utils';
+import RingCentral from '../src';
 
 jest.setTimeout(64000);
 
 describe('fax', () => {
   test('download fax', async () => {
-    const f = async (transport: 'https' | 'wss') => {
-      const rc = await createRingCentral(transport);
+    const testCase = async (rc: RingCentral) => {
       const faxMessages = await rc
         .restapi()
         .account()
@@ -29,7 +29,7 @@ describe('fax', () => {
       fs.writeFileSync(path.join(__dirname, 'temp.pdf'), buffer);
       await rc.revoke();
     };
-    await f('https');
-    // await f('wss'); // todo: https://jira.ringcentral.com/browse/PLA-49506
+    await testRingCentral('https', testCase);
+    // await testRingCentral('wss', testCase); // todo: https://jira.ringcentral.com/browse/PLA-49506
   });
 });

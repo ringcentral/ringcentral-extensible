@@ -1,13 +1,13 @@
 /* eslint-env jest */
 import RestException from '../src/RestException';
-import {createRingCentral} from './utils';
+import {testRingCentral} from './utils';
+import RingCentral from '../src';
 
 jest.setTimeout(64000);
 
 describe('Exceptions', () => {
   test('400', async () => {
-    const f = async (transport: 'https' | 'wss') => {
-      const rc = await createRingCentral(transport);
+    const testCase = async (rc: RingCentral) => {
       let exception = false;
       try {
         // no to number
@@ -26,13 +26,12 @@ describe('Exceptions', () => {
       }
       await rc.revoke();
     };
-    await f('https');
-    await f('wss');
+    await testRingCentral('https', testCase);
+    await testRingCentral('wss', testCase);
   });
 
   test('404', async () => {
-    const f = async (transport: 'https' | 'wss') => {
-      const rc = await createRingCentral(transport);
+    const testCase = async (rc: RingCentral) => {
       let exception = false;
       try {
         await rc.post(
@@ -48,7 +47,7 @@ describe('Exceptions', () => {
       }
       await rc.revoke();
     };
-    await f('https');
-    await f('wss');
+    await testRingCentral('https', testCase);
+    await testRingCentral('wss', testCase);
   });
 });

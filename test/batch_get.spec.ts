@@ -1,12 +1,12 @@
 /* eslint-env jest */
-import {createRingCentral} from './utils';
+import {testRingCentral} from './utils';
+import RingCentral from '../src';
 
 jest.setTimeout(64000);
 
 describe('batch get', () => {
   test("get extension's presence info", async () => {
-    const f = async (transport: 'https' | 'wss') => {
-      const rc = await createRingCentral(transport);
+    const testCase = async (rc: RingCentral) => {
       const extensions = await rc.restapi().account().extension().list({
         perPage: 30,
       }); // batch requests limited to 30 max
@@ -21,7 +21,7 @@ describe('batch get', () => {
       expect(r.data).toContain('--Boundary');
       await rc.revoke();
     };
-    await f('https');
-    // await f('wss'); // todo: enable this test, ref: https://jira.ringcentral.com/browse/PLA-49505
+    await testRingCentral('https', testCase);
+    // await testRingCentral('wss', testCase); // todo: https://jira.ringcentral.com/browse/PLA-49505
   });
 });
