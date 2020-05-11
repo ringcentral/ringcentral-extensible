@@ -5,6 +5,13 @@ import {AxiosResponse} from 'axios';
 import delay from 'delay';
 
 class Utils {
+  static formatData(data: {}): string {
+    if (data instanceof FormData) {
+      // todo: provide more useful message
+      return '<multipart/form-data>';
+    }
+    return data.toString();
+  }
   static formatTraffic(r: AxiosResponse): string {
     return `HTTP ${r.status} ${r.statusText}${
       r.data.message ? ` - ${r.data.message}` : ''
@@ -28,7 +35,7 @@ class Utils {
         method: r.config.method,
         baseURL: r.config.baseURL,
         url: r.config.url,
-        data: r.config.data,
+        data: Utils.formatData(r.config.data),
         headers: r.config.headers,
       },
       null,
