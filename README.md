@@ -37,9 +37,9 @@ const RestCentral = require('ringcentral-unified').default;
 
 ## Usage
 
-#### [Sample code for all the endpoints](./samples.md)
+#### [Sample code for all endpoints](./samples.md)
 
-You can also find lots of useful code snippets from the [test cases](./test).
+You can also find lots of useful code snippets from [test cases](./test).
 
 
 ## Change Transport Protocol
@@ -55,13 +55,13 @@ const wsgOptions = {
 const rc = new RingCentral(restOptions, wsgOptions);
 ```
 
-The you can set the default transport protocol to `wss`:
+Then you can set the default transport protocol to `wss`:
 
 ```ts
 rc.defaults.transport = 'wss';
 ```
 
-The transport protocol can also be specified when making an API call:
+Transport protocol can also be specified when making an API call:
 
 ```ts
 const extInfo = await rc
@@ -72,6 +72,7 @@ const extInfo = await rc
 ```
 
 To use HTTPS as transport protocol, just specify `transport` as `'https'`.
+Or do do not specify it at all when `https` is default.
 
 
 ## Binary content downloading
@@ -99,14 +100,14 @@ const content = await rc.restapi().account().extension().messageStore(message.id
 
 But not all binary content has been migrated to CDN.
 If the resource to download provides you with a CDN uri, use that CDN uri.
-If there is no CDN uri provided, contruct the uri as the [sample code](./samples.md) shows.
+If there is no CDN uri provided, contruct the uri as [sample code](./samples.md) shows.
 
 
 ## For maintainers
 
 ### Regenerate code using latest swagger spec
 
-Get the latest swagger spec [here](https://github.com/ringcentral/RingCentral.Net/blob/master/code-generator/rc-platform-adjusted.yml) and run:
+Get latest swagger spec [here](https://github.com/ringcentral/RingCentral.Net/blob/master/code-generator/rc-platform-adjusted.yml) and run:
 
 ```
 yarn generate
@@ -125,7 +126,6 @@ yarn test
 - no more `{}` type
 - convert code generator to TS
 - compare it with C# sdk and see what are missing
-- Make it a RingCentral official project
 - PubNub
     - optional, since we will mainly use WSG instead.
 - Support events:
@@ -140,3 +140,4 @@ yarn test
     - Test WSG binary uploading / downloading
     - update test case so that everyone tests both REST and WSG
     - WSG should have its own folder and readme file
+    - Support unsubscribe
