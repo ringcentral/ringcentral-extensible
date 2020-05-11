@@ -58,6 +58,7 @@ export default class RingCentral {
       }
       engine = this.wsg!;
     }
+    delete config?.transport;
     return engine.request<T>(
       httpMethod,
       endpoint,
@@ -107,7 +108,10 @@ export default class RingCentral {
   }
 
   async getToken(getTokenRequest: GetTokenRequest): Promise<TokenInfo> {
-    this.token = await this.restapi(null).oauth().token().post(getTokenRequest);
+    this.token = await this.restapi(null)
+      .oauth()
+      .token()
+      .post(getTokenRequest, {transport: 'https'});
     return this.token;
   }
 
@@ -182,7 +186,10 @@ export default class RingCentral {
     }
     tokenToRevoke =
       tokenToRevoke ?? this.token?.access_token ?? this.token?.refresh_token;
-    await this.restapi(null).oauth().revoke().post({token: tokenToRevoke});
+    await this.restapi(null)
+      .oauth()
+      .revoke()
+      .post({token: tokenToRevoke}, {transport: 'https'});
     this.token = undefined;
   }
 
