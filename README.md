@@ -1,6 +1,7 @@
 # RingCentral Unified SDK for TypeScript
 
-[![Build Status](https://travis-ci.org/ringcentral/ringcentral-unified-ts.svg?branch=master)](https://travis-ci.org/ringcentral/ringcentral-unified-ts)
+[![Build Status](https://travis-ci.com/ringcentral/ringcentral-unified-ts.svg?token=316MqomevzwR7zFzsQz2&branch=master)](https://travis-ci.com/ringcentral/ringcentral-unified-ts)
+[![Code Style: Google](https://img.shields.io/badge/code%20style-google-blueviolet.svg)](https://github.com/google/gts)
 
 This SDK supports both [RingCentral REST API](https://developers.ringcentral.com/api-reference) and [RingCentral Events & Notifications](https://developers.ringcentral.com/api-reference/events-notifications).
 
@@ -123,6 +124,7 @@ yarn test
 
 ### Todo
 
+- Run tests in browser env
 - no more `{}` type
 - convert code generator to TS
 - compare it with C# sdk and see what are missing
@@ -141,3 +143,4 @@ yarn test
     - update test case so that everyone tests both REST and WSG
     - WSG should have its own folder and readme file
     - Support unsubscribe
+    - according to wiki, subscription needs refreshing
