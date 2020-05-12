@@ -108,7 +108,9 @@ If there is no CDN uri provided, contruct the uri as [sample code](./samples.md)
 
 ### Regenerate code using latest swagger spec
 
-Get latest swagger spec [here](https://github.com/ringcentral/RingCentral.Net/blob/master/code-generator/rc-platform-adjusted.yml) and run:
+Get latest swagger spec [here](https://github.com/ringcentral/RingCentral.Net/blob/master/code-generator/rc-platform-adjusted.yml).
+
+Make a copy of the `.env.sample` file and name it `.env`, edit it to specify credentials.
 
 ```
 yarn generate

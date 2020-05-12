@@ -9,8 +9,8 @@
   "license": "MIT",
   "scripts": {
     "test": "jest -w 1",
-    "definitions": "rm -rf ./src/definitions/* && node ./code-generator/definitions.js",
-    "paths": "rm -rf ./src/paths/* && node ./code-generator/paths.js",
+    "definitions": "rm -rf ./src/definitions/* && node -r dotenv-override-true/config ./code-generator/definitions.js",
+    "paths": "rm -rf ./src/paths/* && node -r dotenv-override-true/config ./code-generator/paths.js",
     "generate": "yarn definitions && yarn paths && gts fix",
     "prepublishOnly": "rm -rf build && tsc && rm build/package.json && mv build/src/* build/ && rmdir build/src && gts fix && yarn test"
   },
