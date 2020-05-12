@@ -1,17 +1,30 @@
-import FormData from 'form-data';
+import _FormData from 'form-data';
 
 import {Attachment} from './definitions';
 import {AxiosResponse} from 'axios';
 import delay from 'delay';
 
-class Utils {
-  static formatData(data: {}): string {
-    if (data instanceof FormData) {
-      // todo: provide more useful message
-      return '<multipart/form-data>';
-    }
-    return data.toString();
+class FormData extends _FormData {
+  readableParts: string[] = [];
+  toString(): string {
+    return this.readableParts.join('\n');
   }
+  append(
+    key: string,
+    value: string | Buffer | Blob | NodeJS.ReadableStream,
+    options?: {filename?: string; contentType?: string}
+  ): void {
+    super.append(key, value, options);
+    this.readableParts.push(
+      JSON.stringify({
+        ...options,
+        content: typeof value === 'string' ? value : '<binary data>',
+      })
+    );
+  }
+}
+
+class Utils {
   static formatTraffic(r: AxiosResponse): string {
     return `HTTP ${r.status} ${r.statusText}${
       r.data.message ? ` - ${r.data.message}` : ''
@@ -35,7 +48,7 @@ class Utils {
         method: r.config.method,
         baseURL: r.config.baseURL,
         url: r.config.url,
-        data: Utils.formatData(r.config.data),
+        data: r.config.data.toString(),
         headers: r.config.headers,
       },
       null,
@@ -73,7 +86,7 @@ class Utils {
       contentType: 'application/json',
     });
     for (const attachment of attachments) {
-      formData.append('files[]', attachment.content, {
+      formData.append('files[]', attachment.content!, {
         filename: attachment.filename,
         contentType: attachment.contentType,
       });
