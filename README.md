@@ -141,7 +141,7 @@ yarn test
         - every extension should have a readme file
 - WSG
     - Test WSG queryParams with array as value
-    - Test WSG binary uploading / downloading
+        - how does WSG support queryParams
     - update test case so that everyone tests both REST and WSG
     - WSG should have its own folder and readme file
     - Support unsubscribe

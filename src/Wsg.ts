@@ -17,7 +17,6 @@ export type WsgOptions = {
 export type WsgEvent = {
   data: string;
 };
-
 export type WsgMeta = {
   type: 'ClientRequest' | 'ServerNotification';
   messageId: string;
@@ -99,6 +98,16 @@ export default class Wsg {
     queryParams?: {},
     config?: RestRequestConfig
   ): Promise<AxiosResponse<T>> {
+    if (config?.headers?.['Content-Type'].includes('multipart/form-data')) {
+      throw new Error(
+        'Content type "multipart/form-data" via wss is not supported. Do it via https instead.'
+      );
+    }
+    if (config?.headers?.responseType === 'arraybuffer') {
+      throw new Error(
+        'Binary download via wss is not supported. Do it via https instead.'
+      );
+    }
     const _config: AxiosRequestConfig = {
       method: httpMethod,
       url: endpoint,
@@ -112,7 +121,7 @@ export default class Wsg {
     };
     if (endpoint.startsWith('/restapi/oauth/')) {
       throw new Error(
-        'Authorization via wss is not supported. Do it via https instead'
+        'Authorization via wss is not supported. Do it via https instead.'
       );
     } else {
       _config.headers = {
@@ -137,7 +146,6 @@ export default class Wsg {
       }
       this.ws.send(JSON.stringify(body));
       const handler = (event: WsgEvent) => {
-        // console.log(event.data);
         const [meta, body]: [WsgMeta, T] = JSON.parse(event.data);
         if (meta.messageId === messageId && meta.type === 'ClientRequest') {
           this.ws.removeEventListener('message', handler);
