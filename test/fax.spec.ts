@@ -9,6 +9,7 @@ import {
   FaxResponse,
 } from '../src/definitions';
 import {testRingCentral} from './utils';
+import Utils from '../src/Utils';
 
 jest.setTimeout(64000);
 
@@ -56,14 +57,15 @@ describe('fax', () => {
         path.join(__dirname, 'test.png')
       );
       attachment2.contentType = 'image/png';
+      const formData = Utils.getFormData({
+        attachments: [attachment1, attachment2],
+        to: [{phoneNumber: process.env.RINGCENTRAL_RECEIVER, name: 'To Name'}],
+      });
       const r = await rc.post<FaxResponse>(
         '/restapi/v1.0/account/~/extension/~/fax',
-        {
-          attachments: [attachment1, attachment2],
-          to: [
-            {phoneNumber: process.env.RINGCENTRAL_RECEIVER, name: 'To Name'},
-          ],
-        }
+        formData,
+        undefined,
+        {headers: formData.getHeaders()}
       );
       const messageInfo = r.data;
       expect(messageInfo).not.toBeUndefined();

@@ -1,6 +1,6 @@
 {
   "name": "ringcentral-unified",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "RingCentral Unified SDK for TypeScript",
   "main": "build/index.js",
   "types": "build/index.d.ts",
@@ -30,7 +30,7 @@
     "@types/ws": "^7.2.4",
     "change-case": "^4.1.1",
     "dotenv-override-true": "^6.2.0",
-    "gts": "^2.0.1",
+    "gts": "^2.0.2",
     "husky": "^4.2.5",
     "jest": "^26.0.1",
     "lower-case-first": "^2.0.1",
