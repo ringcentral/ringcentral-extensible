@@ -103,7 +103,7 @@ export default class Wsg {
         'Content type "multipart/form-data" via wss is not supported. Do it via https instead.'
       );
     }
-    if (config?.headers?.responseType === 'arraybuffer') {
+    if (config?.responseType === 'arraybuffer') {
       throw new Error(
         'Binary download via wss is not supported. Do it via https instead.'
       );
