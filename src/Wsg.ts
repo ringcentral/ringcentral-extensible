@@ -79,9 +79,10 @@ export default class Wsg {
       );
     const subscriptionId = subscriptionInfo.id;
     this.ws.addEventListener('message', (event: WsgEvent) => {
-      const [meta, body]: [WsgMeta, {subscriptionId: string}] = JSON.parse(
-        event.data
-      );
+      const [meta, body]: [
+        WsgMeta,
+        {subscriptionId: string}
+      ] = Utils.splitWsgData(event.data);
       if (
         meta.type === 'ServerNotification' &&
         body.subscriptionId === subscriptionId
@@ -146,7 +147,7 @@ export default class Wsg {
       }
       this.ws.send(JSON.stringify(body));
       const handler = (event: WsgEvent) => {
-        const [meta, body]: [WsgMeta, T] = JSON.parse(event.data);
+        const [meta, body]: [WsgMeta, T] = Utils.splitWsgData(event.data);
         if (meta.messageId === messageId && meta.type === 'ClientRequest') {
           this.ws.removeEventListener('message', handler);
           const response: AxiosResponse = {
