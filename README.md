@@ -3,12 +3,20 @@
 [![Build Status](https://travis-ci.com/ringcentral/ringcentral-unified-ts.svg?token=316MqomevzwR7zFzsQz2&branch=master)](https://travis-ci.com/ringcentral/ringcentral-unified-ts)
 [![Code Style: Google](https://img.shields.io/badge/code%20style-google-blueviolet.svg)](https://github.com/google/gts)
 
-This SDK supports both [RingCentral REST API](https://developers.ringcentral.com/api-reference) and [RingCentral Events & Notifications](https://developers.ringcentral.com/api-reference/events-notifications).
+This SDK supports:
 
-It provides unifed programming interface to transport protocol HTTPS and WebSocket:
+- [RingCentral REST API](https://developers.ringcentral.com/api-reference)
+- [RingCentral Events & Notifications](https://developers.ringcentral.com/api-reference/events-notifications).
+
+For transport protocol, this SDK supports:
+
+- HTTPS
+- WebSocket
+
+It provides unifed programming interface for HTTPS and WebSocket:
 
 - For RingCentral REST API, you can access it via either HTTPS or WebSocket.
-- For RingCentral Events & Notifications, you can set it up with either WebSocket or WebHook.
+- For RingCentral Events & Notifications, you can set it up with either WebHook or WebSocket.
 
 
 ## Installation
@@ -144,3 +152,4 @@ yarn test
     - WSG should have its own folder and readme file
     - Support unsubscribe
     - according to wiki, subscription needs refreshing
+    - what if network outage?
