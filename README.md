@@ -151,7 +151,6 @@ yarn test
     - extrensions/<extension 1>/
         - every extension should have a readme file
 - WSG
-    - update test case so that everyone tests both REST and WSG
     - WSG should have its own folder and readme file
     - Support unsubscribe
     - according to wiki, subscription needs refreshing
