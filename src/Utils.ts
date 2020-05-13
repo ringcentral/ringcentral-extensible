@@ -7,7 +7,7 @@ import {WsgMeta} from './Wsg';
 
 class FormData extends _FormData {
   readableParts: string[] = [];
-  toString(): string {
+  toJSON(): string {
     return this.readableParts.join('\n');
   }
   append(
@@ -61,7 +61,7 @@ class Utils {
         method: r.config.method,
         baseURL: r.config.baseURL,
         url: r.config.url,
-        data: r.config.data?.toString(),
+        data: r.config.data,
         headers: r.config.headers,
       },
       null,

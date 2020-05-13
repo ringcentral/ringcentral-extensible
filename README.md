@@ -134,6 +134,9 @@ yarn test
 
 ### Todo
 
+- make it work with offcial sdk
+    - share token and auto update token based on token events
+    - update ringcentral-client, or release @ringcentral/client
 - Run tests in browser env
 - no more `{}` type
 - convert code generator to TS
