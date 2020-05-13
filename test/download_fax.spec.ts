@@ -20,12 +20,12 @@ describe('fax', () => {
           direction: ['Inbound'],
           dateFrom: '2015-04-15T17:18:00.000Z',
         });
-      const buffer = await rc.get(
+      const r = await rc.get<Buffer>(
         faxMessages.records?.[0].attachments?.[0].uri!,
         undefined,
         {responseType: 'arraybuffer'}
       );
-      fs.writeFileSync(path.join(__dirname, 'temp.pdf'), buffer);
+      fs.writeFileSync(path.join(__dirname, 'temp.pdf'), r.data);
       await rc.revoke();
     };
     await testRingCentral(testCase);
