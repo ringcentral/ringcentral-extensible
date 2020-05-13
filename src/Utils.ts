@@ -61,7 +61,7 @@ class Utils {
         method: r.config.method,
         baseURL: r.config.baseURL,
         url: r.config.url,
-        data: r.config.data.toString(),
+        data: r.config.data?.toString(),
         headers: r.config.headers,
       },
       null,
