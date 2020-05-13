@@ -27,5 +27,6 @@ describe('Profile image', () => {
     expect(buffer.constructor.name).toBe('Buffer');
     fs.writeFileSync(path.join(__dirname, 'temp.png'), buffer);
     await rc.revoke();
+    // We don't test WSG because it doesn't support binary downloading
   });
 });

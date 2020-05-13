@@ -30,7 +30,7 @@ describe('message store', () => {
       expect(messageInfo.from).toBeDefined();
       await rc.revoke();
     };
-    testRingCentral(testCase);
-    testRingCentral(testCase, 'wss');
+    await testRingCentral(testCase);
+    await testRingCentral(testCase, 'wss');
   });
 });

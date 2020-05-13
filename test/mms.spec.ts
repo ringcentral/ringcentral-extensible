@@ -36,5 +36,6 @@ describe('mms', () => {
     expect(messageInfo).not.toBeUndefined();
     expect(messageInfo.id).not.toBeUndefined();
     await rc.revoke();
+    // we don't test WSG because WSG doesn't support multipart/form-data
   });
 });

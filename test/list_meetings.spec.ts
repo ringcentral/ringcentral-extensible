@@ -18,7 +18,7 @@ describe('list meetings', () => {
       expect(meetingList.records).not.toBeUndefined();
       await rc.revoke();
     };
-    testRingCentral(testCase);
-    testRingCentral(testCase, 'wss');
+    await testRingCentral(testCase);
+    await testRingCentral(testCase, 'wss');
   });
 });

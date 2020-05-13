@@ -31,8 +31,8 @@ describe('low level API', () => {
       expect(messageInfo.id).not.toBeUndefined();
       await rc.revoke();
     };
-    testRingCentral(testCase);
-    testRingCentral(testCase, 'wss');
+    await testRingCentral(testCase);
+    await testRingCentral(testCase, 'wss');
   });
   test('fax', async () => {
     const rc = new RingCentral({
