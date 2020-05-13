@@ -18,7 +18,7 @@ export type WsgEvent = {
   data: string;
 };
 export type WsgMeta = {
-  type: 'ClientRequest' | 'ServerNotification';
+  type: 'ClientRequest' | 'ServerNotification' | 'Error';
   messageId: string;
   status: number;
   headers: {
@@ -149,7 +149,7 @@ export default class Wsg {
       this.ws.send(JSON.stringify(body));
       const handler = (event: WsgEvent) => {
         const [meta, body]: [WsgMeta, T] = Utils.splitWsgData(event.data);
-        if (meta.messageId === messageId && meta.type === 'ClientRequest') {
+        if (meta.messageId === messageId) {
           this.ws.removeEventListener('message', handler);
           const response: AxiosResponse = {
             data: body,
@@ -158,10 +158,14 @@ export default class Wsg {
             headers: meta.headers,
             config: _config,
           };
-          if (meta.status >= 200 && meta.status < 300) {
-            resolve(response);
-          } else {
+          if (meta.type === 'Error') {
             reject(new RestException(response));
+          } else if (meta.type === 'ClientRequest') {
+            if (meta.status >= 200 && meta.status < 300) {
+              resolve(response);
+            } else {
+              reject(new RestException(response));
+            }
           }
         }
       };
