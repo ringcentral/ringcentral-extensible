@@ -111,6 +111,7 @@ export default class Wsg {
     }
     const _config: AxiosRequestConfig = {
       method: httpMethod,
+      baseURL: this.server,
       url: endpoint,
       data: content,
       params: queryParams,
