@@ -140,6 +140,7 @@ export default class Wsg {
           method: _config.method,
           path: _config.url,
           headers: _config.headers,
+          query: _config.params,
         },
       ];
       if (_config.data) {
