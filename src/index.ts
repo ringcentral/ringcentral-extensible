@@ -1,5 +1,7 @@
 import {Method, AxiosResponse} from 'axios';
 
+import {EventEmitter} from 'events';
+
 import {GetTokenRequest, TokenInfo} from './definitions';
 import Restapi from './paths/Restapi';
 import Scim from './paths/Scim';
@@ -19,7 +21,20 @@ type RingCentralDefaults = {
   transport: 'https' | 'wss';
 };
 
-export default class RingCentral {
+export enum events {
+  beforeLogin = 'beforeLogin',
+  loginSuccess = 'loginSuccess',
+  loginError = 'loginError',
+  beforeRefresh = 'beforeRefresh',
+  refreshSuccess = 'refreshSuccess',
+  refreshError = 'refreshError',
+  beforeLogout = 'beforeLogout',
+  logoutSuccess = 'logoutSuccess',
+  logoutError = 'logoutError',
+  rateLimitError = 'rateLimitError',
+}
+
+export default class RingCentral extends EventEmitter {
   rest: Rest;
   wsg?: Wsg;
 
@@ -28,10 +43,14 @@ export default class RingCentral {
   };
 
   constructor(restOptions: RestOptions, wsgOptions?: WsgOptions) {
+    super();
     this.rest = new Rest(restOptions);
     if (wsgOptions) {
       this.wsg = new Wsg(this, wsgOptions);
     }
+    this.rest.on(events.rateLimitError, event => {
+      this.emit(events.rateLimitError, event);
+    });
   }
 
   get token() {
@@ -107,17 +126,39 @@ export default class RingCentral {
     return this.request<T>('PATCH', endpoint, content, queryParams, config);
   }
 
-  async getToken(getTokenRequest: GetTokenRequest): Promise<TokenInfo> {
+  async getToken(
+    getTokenRequest: GetTokenRequest
+  ): Promise<TokenInfo | undefined> {
     this.token = await this.restapi(null)
       .oauth()
       .token()
-      .post(getTokenRequest, {transport: 'https'});
+      .post(getTokenRequest, {transport: 'https'})
+      .then(res => {
+        if (getTokenRequest.grant_type === 'password') {
+          this.emit(events.loginSuccess, res);
+        } else if (getTokenRequest.grant_type === 'authorization_code') {
+          this.emit(events.loginSuccess, res);
+        } else if (getTokenRequest.grant_type === 'refresh_token') {
+          this.emit(events.refreshSuccess, res);
+        }
+        return res;
+      })
+      .catch(e => {
+        if (getTokenRequest.grant_type === 'password') {
+          this.emit(events.loginError, e.response);
+        } else if (getTokenRequest.grant_type === 'authorization_code') {
+          this.emit(events.loginError, e.response);
+        } else if (getTokenRequest.grant_type === 'refresh_token') {
+          this.emit(events.refreshError, e.response);
+        }
+        return undefined;
+      });
     return this.token;
   }
 
   async authorize(
     options: PasswordFlowOptions | AuthCodeFlowOptions
-  ): Promise<TokenInfo> {
+  ): Promise<TokenInfo | undefined> {
     const getTokenRequest = new GetTokenRequest();
     if ('username' in options) {
       getTokenRequest.grant_type = 'password';
@@ -147,7 +188,8 @@ export default class RingCentral {
    *
    * @param options PasswordLoginFlowOpts
    */
-  async login(options: PasswordFlowOptions): Promise<TokenInfo> {
+  async login(options: PasswordFlowOptions): Promise<TokenInfo | undefined> {
+    this.emit(events.beforeLogin);
     return this.authorize(options);
   }
 
@@ -159,9 +201,11 @@ export default class RingCentral {
    *
    * @param refreshToken Refresh Token
    */
-  async refresh(refreshToken?: string): Promise<TokenInfo> {
-    const tokenToRefresh = refreshToken ?? this.token?.refresh_token;
+  async refresh(refreshToken?: string): Promise<TokenInfo | undefined> {
+    this.emit(events.beforeRefresh);
+    const tokenToRefresh = refreshToken ?? this.token?.refresh_token ?? '';
     if (!tokenToRefresh) {
+      this.emit(events.logoutError, 'TokenToRefresh must be specified..');
       throw new Error('tokenToRefresh must be specified.');
     }
     const getTokenRequest = new GetTokenRequest();
@@ -179,13 +223,16 @@ export default class RingCentral {
    * @param tokenToRevoke AccessToken
    */
   async revoke(tokenToRevoke?: string) {
+    this.emit(events.beforeLogout);
     this.wsg?.revoke();
     if (!tokenToRevoke && !this.token) {
       // nothing to revoke
+      this.emit(events.logoutError, 'Nothing to revoke.');
       return;
     }
     if (!this.rest.clientId || !this.rest.clientSecret) {
       // no clientId or clientSecret, the token is from external source, cannot revoke
+      this.emit(events.logoutError, 'No clientId or clientSecret');
       this.token = undefined;
       return;
     }
@@ -194,7 +241,13 @@ export default class RingCentral {
     await this.restapi(null)
       .oauth()
       .revoke()
-      .post({token: tokenToRevoke}, {transport: 'https'});
+      .post({token: tokenToRevoke}, {transport: 'https'})
+      .then(() => {
+        this.emit(events.logoutSuccess);
+      })
+      .catch(e => {
+        this.emit(events.logoutError, e);
+      });
     this.token = undefined;
   }
 
