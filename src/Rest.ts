@@ -11,6 +11,9 @@ import {version} from '../package.json';
 import delay from 'delay';
 import Utils from './Utils';
 
+import {EventEmitter} from 'events';
+import {events} from './index';
+
 export type RestOptions = {
   server: string;
   clientId?: string;
@@ -26,7 +29,7 @@ export type RestRequestConfig = AxiosRequestConfig & {
   transport?: 'https' | 'wss';
 };
 
-export default class Rest {
+export default class Rest extends EventEmitter {
   static sandboxServer = 'https://platform.devtest.ringcentral.com';
   static productionServer = 'https://platform.ringcentral.com';
 
@@ -42,6 +45,7 @@ export default class Rest {
   httpClient: AxiosInstance;
 
   constructor(options: RestOptions) {
+    super();
     this.server = options.server;
     this.clientId = options.clientId ?? '';
     this.clientSecret = options.clientSecret ?? '';
@@ -106,10 +110,11 @@ export default class Rest {
       if (typeof this.handleRateLimit === 'number') {
         delayTime = this.handleRateLimit;
       }
-      // unsure on level? or if this should be a thrown error?
-      console.debug(
-        `Hit RingCentral Rate Limit. Pausing requests for ${delayTime} seconds.`
-      );
+      // // unsure on level? or if this should be a thrown error?
+      // console.debug(
+      //   `Hit RingCentral Rate Limit. Pausing requests for ${delayTime} seconds.`
+      // );
+      this.emit(events.rateLimitError, r);
       await delay(delayTime * 1000);
       return this.request<T>(
         httpMethod,
