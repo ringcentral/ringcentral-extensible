@@ -111,6 +111,57 @@ But not all binary content has been migrated to CDN.
 If the resource to download provides you with a CDN uri, use that CDN uri.
 If there is no CDN uri provided, contruct the uri as [sample code](./samples.md) shows.
 
+## Events
+
+To make use of events, import the `events` enum from the sdk
+
+```javascript
+const events = require('ringcentral-unified').events;
+```
+
+Then after initializing your SDK, you can begin catching events that are emitted
+```javascript
+rc.on(events.rateLimitError, event => {
+    console.log("Rate Limit");
+    console.log(event);
+});
+
+rc.on(events.beforeRefresh, event => {
+    console.log("Before Refresh");
+});
+rc.on(events.refreshSuccess, event => {
+    console.log("Refresh Success");
+    console.log(event);
+})
+rc.on(event;s.refreshError, event => {
+    console.log("Refresh Error");
+    console.log(event);
+});
+
+rc.on(events.beforeLogin, event => {
+    console.log("Before Login");
+});
+rc.on(events.loginSuccess, event => {
+    console.log("Login Success");
+    console.log(event);
+});
+rc.on(events.loginError, event => {
+    console.log("Login Error");
+    console.log(event);
+});
+
+rc.on(events.beforeLogout, event => {
+    console.log("Before Logout");
+    console.log(event);
+});
+rc.on(events.logoutSuccess, () => {
+    console.log("Logged out ok");
+});
+rc.on(events.logoutError, event => {
+    console.log("Logout error");
+    console.log(event);
+});
+```
 
 ## For maintainers
 
