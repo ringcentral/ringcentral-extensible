@@ -24,13 +24,10 @@ class FormData extends _FormData {
     if (typeof Blob !== 'undefined') {
       if (typeof value === 'string') {
         // for browser
-        super.append(
-          key,
-          // eslint-disable-next-line no-undef
-          new Blob([value], {type: options?.contentType}),
-          options?.filename
-        );
+        // eslint-disable-next-line no-undef
+        value = new Blob([value], {type: options?.contentType});
       }
+      super.append(key, value, options?.filename);
     } else {
       super.append(key, value, options);
     }
