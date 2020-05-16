@@ -76,7 +76,7 @@ class Utils {
   }
 
   static getFormData(...objs: {}[]): FormData {
-    const formData = new FormData({});
+    const formData = new FormData();
     const obj = Object.assign({}, ...objs);
     const attachments: Attachment[] = [];
     for (const key of Object.keys(obj)) {
