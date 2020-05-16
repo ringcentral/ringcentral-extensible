@@ -24,11 +24,16 @@ class FormData extends _FormData {
     if (typeof Blob !== 'undefined') {
       if (typeof value === 'string') {
         // for browser
-        // eslint-disable-next-line no-undef
-        value = new Blob([value]);
+        super.append(
+          key,
+          // eslint-disable-next-line no-undef
+          new Blob([value], {type: options?.contentType}),
+          options?.filename
+        );
       }
+    } else {
+      super.append(key, value, options);
     }
-    super.append(key, value, options);
   }
   getHeaders(): {} {
     if (super.getHeaders !== undefined) {
