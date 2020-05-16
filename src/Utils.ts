@@ -15,13 +15,28 @@ class FormData extends _FormData {
     value: string | Buffer | Blob | NodeJS.ReadableStream,
     options?: {filename?: string; contentType?: string}
   ): void {
-    super.append(key, value, options);
     this.readableParts.push(
       JSON.stringify({
         ...options,
         content: typeof value === 'string' ? value : '<binary data>',
       })
     );
+    if (typeof Blob !== 'undefined') {
+      if (typeof value === 'string') {
+        // for browser
+        // eslint-disable-next-line no-undef
+        value = new Blob([value]);
+      }
+    }
+    super.append(key, value, options);
+  }
+  getHeaders(): {} {
+    if (super.getHeaders !== undefined) {
+      // for node
+      return super.getHeaders();
+    }
+    // for browser
+    return {};
   }
 }
 
@@ -95,12 +110,7 @@ class Utils {
         delete obj[key];
       }
     }
-    const jsonFile =
-      typeof Blob !== 'undefined'
-        ? // eslint-disable-next-line no-undef
-          new Blob([JSON.stringify(obj)])
-        : JSON.stringify(obj);
-    formData.append('files[]', jsonFile, {
+    formData.append('files[]', JSON.stringify(obj), {
       filename: 'request.json',
       contentType: 'application/json',
     });
