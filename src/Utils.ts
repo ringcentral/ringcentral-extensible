@@ -95,7 +95,12 @@ class Utils {
         delete obj[key];
       }
     }
-    formData.append('files[]', JSON.stringify(obj), {
+    const jsonFile =
+      typeof Blob !== 'undefined'
+        ? // eslint-disable-next-line no-undef
+          new Blob([JSON.stringify(obj)])
+        : JSON.stringify(obj);
+    formData.append('files[]', jsonFile, {
       filename: 'request.json',
       contentType: 'application/json',
     });
