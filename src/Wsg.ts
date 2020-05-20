@@ -1,4 +1,4 @@
-import WS from 'ws';
+import WS from 'isomorphic-ws';
 import {Method, AxiosResponse, AxiosRequestConfig} from 'axios';
 import hyperid from 'hyperid';
 import {getStatusText} from 'http-status-codes';
