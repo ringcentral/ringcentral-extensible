@@ -134,6 +134,8 @@ yarn test
 
 ### Todo
 
+- Do not force node.js projects to include `lib: ["DOM]`
+    - provide separate entry point for node and browser?
 - create project `unified-form-data`
     - create `multipart-form-data-builder` to replace `form-data`.
         - Should support both node and browser
