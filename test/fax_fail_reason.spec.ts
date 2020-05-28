@@ -15,7 +15,7 @@ describe('fax fail reason', () => {
         .list({
           messageType: ['Fax'],
           direction: ['Outbound'],
-          dateFrom: '2015-04-15T17:18:00.000Z',
+          dateFrom: '2010-04-15T17:18:00.000Z',
         });
       await rc.revoke();
       const failedFaxes = messages.records?.filter(

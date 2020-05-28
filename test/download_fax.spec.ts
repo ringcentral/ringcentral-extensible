@@ -18,8 +18,12 @@ describe('fax', () => {
         .list({
           messageType: ['Fax'],
           direction: ['Inbound'],
-          dateFrom: '2015-04-15T17:18:00.000Z',
+          dateFrom: '2010-04-15T17:18:00.000Z',
         });
+      if (faxMessages.records?.length === 0) {
+        await rc.revoke();
+        return;
+      }
       const r = await rc.get<Buffer>(
         faxMessages.records?.[0].attachments?.[0].uri!,
         undefined,
@@ -42,8 +46,12 @@ describe('fax', () => {
         .list({
           messageType: ['Fax'],
           direction: ['Inbound'],
-          dateFrom: '2015-04-15T17:18:00.000Z',
+          dateFrom: '2010-04-15T17:18:00.000Z',
         });
+      if (faxMessages.records?.length === 0) {
+        await rc.revoke();
+        return;
+      }
       expect(
         faxMessages.records?.[0].attachments?.[0].uri!.startsWith('https://') // absolute CDN uri
       ).toBeTruthy();
