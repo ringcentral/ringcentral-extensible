@@ -13,7 +13,7 @@ For transport protocol, this SDK supports:
 - HTTPS
 - WebSocket
 
-It provides unifed programming interface for HTTPS and WebSocket:
+It provides unified programming interface for HTTPS and WebSocket:
 
 - For RingCentral REST API, you can access it via either HTTPS or WebSocket.
 - For RingCentral Events & Notifications, you can set it up with either WebHook or WebSocket.
@@ -53,7 +53,7 @@ You can also find lots of useful code snippets from [test cases](./test).
 
 ## Change Transport Protocol
 
-By default, HTTPS is the transport protocol. If you'd like to use WebSocket as transport protocol, you need to sepcify `wsgOptions` when creating a `RingCentral` instance:
+By default, HTTPS is the transport protocol. If you'd like to use WebSocket as transport protocol, you need to specify `wsgOptions` when creating a `RingCentral` instance:
 
 ```ts
 const restOptions = { ... };
@@ -109,7 +109,7 @@ const content = await rc.restapi().account().extension().messageStore(message.id
 
 But not all binary content has been migrated to CDN.
 If the resource to download provides you with a CDN uri, use that CDN uri.
-If there is no CDN uri provided, contruct the uri as [sample code](./samples.md) shows.
+If there is no CDN uri provided, construct the uri as [sample code](./samples.md) shows.
 
 
 ## For maintainers
@@ -134,13 +134,12 @@ yarn test
 
 ### Todo
 
-- `@types/xxx` should be in dependencies
 - TS projects are required to install `ws` and `@types/ws` even with they don't use WSG.
 - create project `unified-form-data`
     - create `multipart-form-data-builder` to replace `form-data`.
         - Should support both node and browser
 - replace `delay` with `wait-for-async`
-- make it work with offcial sdk
+- make it work with official sdk
     - share token and auto update token based on token events
     - update ringcentral-client, or release @ringcentral/client
 - Run tests in browser env
@@ -154,7 +153,7 @@ yarn test
 - extra features as plugins or extensions
     - rate limit handling
     - debug mode
-    - extrensions/<extension 1>/
+    - extensions/<extension 1>/
         - every extension should have a readme file
 - WSG
     - WSG should have its own folder and readme file

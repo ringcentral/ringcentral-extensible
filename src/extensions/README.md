@@ -2,6 +2,10 @@
 
 This folder contains features which are not considered to be the core of the SDK.
 
+## [Debug Mode](./debugMode)
+
+Debug mode prints details about API traffic so you can inspect the request and response data.
+
 
 ## Rate Limiting
 
@@ -17,14 +21,3 @@ Options:
     - When set to true, this will pause requests for however many seconds are indicated in the `rate-limit-window` header (defaulting to 60 is there header is somehow missing)
 - number
     - When set to a number, this overrides using the header, or the default, and instead pauses for x seconds (where x is your number in the constructor)
-
-
-## Debug mode
-
-Enable debug mode will let the SDK print traffic details for every API call. In order to debug an API call, you can enable debug mode right before invoking it:
-
-```ts
-rc.rest.debugMode = true;
-// make the API call
-rc.rest.debugMode = false;
-```

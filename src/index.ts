@@ -5,6 +5,7 @@ import Restapi from './paths/Restapi';
 import Scim from './paths/Scim';
 import Rest, {RestOptions, RestRequestConfig} from './Rest';
 import Wsg, {WsgOptions} from './Wsg';
+import SdkExtension from './extensions';
 
 type PasswordFlowOptions = {
   username: string;
@@ -32,6 +33,10 @@ export default class RingCentral {
     if (wsgOptions) {
       this.wsg = new Wsg(this, wsgOptions);
     }
+  }
+
+  installExtension(sdkExtension: SdkExtension) {
+    sdkExtension.install(this);
   }
 
   get token() {

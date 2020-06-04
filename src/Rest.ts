@@ -5,11 +5,11 @@ import axios, {
   AxiosInstance,
 } from 'axios';
 import qs from 'qs';
+import delay from 'delay';
+
 import RestException from './RestException';
 import {TokenInfo} from './definitions';
 import {version} from '../package.json';
-import delay from 'delay';
-import Utils from './Utils';
 
 export type RestOptions = {
   server: string;
@@ -19,7 +19,6 @@ export type RestOptions = {
   appName?: string;
   appVersion?: string;
   handleRateLimit?: boolean | number;
-  debugMode?: boolean;
 };
 
 export type RestRequestConfig = AxiosRequestConfig & {
@@ -37,7 +36,6 @@ export default class Rest {
   appName: string;
   appVersion: string;
   handleRateLimit?: boolean | number;
-  debugMode?: boolean;
 
   httpClient: AxiosInstance;
 
@@ -49,7 +47,6 @@ export default class Rest {
     this.appName = options.appName ?? 'Unknown';
     this.appVersion = options.appVersion ?? '0.0.1';
     this.handleRateLimit = options.handleRateLimit ?? undefined;
-    this.debugMode = options.debugMode ?? false;
 
     this.httpClient = axios.create({
       baseURL: this.server,
@@ -94,10 +91,6 @@ export default class Rest {
       };
     }
     const r = await this.httpClient.request<T>(_config);
-
-    if (this.debugMode === true) {
-      console.debug(Utils.formatTraffic(r));
-    }
 
     if (r.status >= 200 && r.status < 300) {
       return r;
