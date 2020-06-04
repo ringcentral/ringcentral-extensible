@@ -2,6 +2,7 @@ import WS from 'isomorphic-ws';
 import {Method, AxiosResponse, AxiosRequestConfig} from 'axios';
 import hyperid from 'hyperid';
 import {getStatusText} from 'http-status-codes';
+import waitFor from 'wait-for-async';
 
 import RingCentral from '.';
 import {RestRequestConfig} from './Rest';
@@ -47,15 +48,15 @@ export default class Wsg {
   }
 
   async waitForOpen() {
-    const waitForSeconds = 60;
-    const successful = await Utils.waitUntil(
-      100,
-      (waitForSeconds * 1000) / 100,
-      () => this.opened
-    );
+    const timeoutSeconds = 60;
+    const successful = await waitFor({
+      condition: () => this.opened,
+      interval: 100,
+      times: (timeoutSeconds * 1000) / 100,
+    });
     if (!successful) {
       throw new Error(
-        `Have been Waiting for ${this.waitForOpen} seconds but WebSocket is not open.`
+        `Have been Waiting for ${timeoutSeconds} seconds but WebSocket is not open.`
       );
     }
   }

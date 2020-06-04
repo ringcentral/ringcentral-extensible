@@ -1,6 +1,7 @@
 /* eslint-env jest */
+import waitFor from 'wait-for-async';
+
 import RingCentral from '../src/index';
-import Utils from '../src/Utils';
 import {createRingCentral} from './utils';
 
 jest.setTimeout(64000);
@@ -24,7 +25,11 @@ const testSubscription = async (rc: RingCentral) => {
       to: [{phoneNumber: process.env.RINGCENTRAL_RECEIVER!}],
       text: 'Hello world',
     });
-  const successful = await Utils.waitUntil(1000, 30, () => eventCount > 0);
+  const successful = await waitFor({
+    condition: () => eventCount > 0,
+    interval: 1000,
+    times: 30,
+  });
   await rc.revoke();
   expect(successful).toBeTruthy();
   expect(eventCount).toBeGreaterThan(0);

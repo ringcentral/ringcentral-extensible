@@ -1,4 +1,4 @@
-import delay from 'delay';
+import waitFor from 'wait-for-async';
 
 import RingCentral from '../..';
 import {AxiosResponse, Method} from 'axios';
@@ -31,8 +31,9 @@ class RateLimitExtension extends SdkExtension {
       } catch (e) {
         if (e instanceof RestException) {
           if (e.response.status === 429) {
-            const delayTime = e.response.headers['x-rate-limit-window'] ?? 60;
-            await delay(delayTime * 1000);
+            const delaySeconds =
+              e.response.headers['x-rate-limit-window'] ?? 60;
+            await waitFor({interval: delaySeconds * 1000});
             return request<T>(
               httpMethod,
               endpoint,

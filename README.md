@@ -145,7 +145,6 @@ yarn test
 - create project `unified-form-data`
     - create `multipart-form-data-builder` to replace `form-data`.
         - Should support both node and browser
-- replace `delay` with `wait-for-async`
 - make it work with official sdk
     - share token and auto update token based on token events
     - update ringcentral-client, or release @ringcentral/client
@@ -162,6 +161,7 @@ yarn test
     - event emitter
     - extensions/<extension 1>/
         - every extension should have a readme file
+    - Do not install extension dependencies by default
 - WSG
     - WSG should have its own folder and readme file
     - Support unsubscribe

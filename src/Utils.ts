@@ -2,7 +2,6 @@ import _FormData from 'form-data';
 
 import {Attachment} from './definitions';
 import {AxiosResponse} from 'axios';
-import delay from 'delay';
 import {WsgMeta} from './Wsg';
 
 // for browser
@@ -96,9 +95,9 @@ class Utils {
     return 'filename' in obj && 'content' in obj;
   }
 
-  static getFormData(...objs: {}[]): FormData {
+  static getFormData(...objects: {}[]): FormData {
     const formData = new FormData();
-    const obj = Object.assign({}, ...objs);
+    const obj = Object.assign({}, ...objects);
     const attachments: Attachment[] = [];
     for (const key of Object.keys(obj)) {
       const value = obj[key];
@@ -127,20 +126,6 @@ class Utils {
       });
     }
     return formData;
-  }
-
-  static async waitUntil(
-    interval: number,
-    times: number,
-    condition: () => boolean
-  ): Promise<boolean> {
-    for (let i = 0; i < times; i++) {
-      if (condition()) {
-        return true;
-      }
-      await delay(interval);
-    }
-    return condition();
   }
 }
 
