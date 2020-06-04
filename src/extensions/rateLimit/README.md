@@ -38,4 +38,4 @@ Default value is 3.
 
 `rateLimitWindow` defines the rate limit window. This parameter will only take effect when there is no `x-rate-limit-window` HTTP header available.
 
-Its value is used to determine the retryInterval.
+Its value is used to determine the [retryInterval](https://github.com/ringcentral/ringcentral-unified-ts/tree/master/src/extensions/retry#retryinterval).
