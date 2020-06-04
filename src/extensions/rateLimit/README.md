@@ -2,6 +2,8 @@
 
 Rate limit extension handles rate limit automatically by delaying and retrying API calls.
 
+This extension is based on the [Retry Extension](../retry).
+
 
 ## Usage
 
@@ -9,6 +11,31 @@ Rate limit extension handles rate limit automatically by delaying and retrying A
 import RingCentral from 'ringcentral-unified';
 const rc = new RingCentral(...);
 
-const rateLimitExtension = new RateLimitExtension();
+const rateLimitExtension = new RateLimitExtension(rateLimitOptions);
 rc.installExtension(rateLimitExtension);
 ```
+
+
+## RateLimitOptions
+
+`RetryExtension` constructor accepts optional `RateLimitOptions` as parameter:
+
+```ts
+type RateLimitOptions = {
+  maxRetries?: number;
+  rateLimitWindow?: number;
+};
+```
+
+### maxRetries
+
+`maxRetries` defines maximum times of retries before aborting.
+
+Default value is 3.
+
+
+### rateLimitWindow
+
+`rateLimitWindow` defines the rate limit window. This parameter will only take effect when there is no `x-rate-limit-window` HTTP header available.
+
+Its value is used to determine the retryInterval.
