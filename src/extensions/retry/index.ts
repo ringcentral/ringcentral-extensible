@@ -36,7 +36,7 @@ class RetryExtension extends SdkExtension {
     this.retryInterval =
       options?.retryInterval ??
       ((restException, retriesAttempted) => {
-        return 60 * 1000 * Math.pow(2, retriesAttempted);
+        return 60 * 1000 * Math.pow(2, retriesAttempted); // exponential back off
       });
   }
 
