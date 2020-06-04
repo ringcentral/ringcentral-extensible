@@ -51,6 +51,13 @@ const RestCentral = require('ringcentral-unified').default;
 You can also find lots of useful code snippets from [test cases](./test).
 
 
+## Extensions
+
+This SDK supports [extensions](./src/extensions). You can enable non-core features by installing extensions.
+
+If you want to add features to this SDK, create an extension.
+
+
 ## Change Transport Protocol
 
 By default, HTTPS is the transport protocol. If you'd like to use WebSocket as transport protocol, you need to specify `wsgOptions` when creating a `RingCentral` instance:
@@ -152,7 +159,7 @@ yarn test
     - token refreshed
 - extra features as plugins or extensions
     - rate limit handling
-    - debug mode
+    - event emitter
     - extensions/<extension 1>/
         - every extension should have a readme file
 - WSG

@@ -2,22 +2,35 @@
 
 This folder contains features which are not considered to be the core of the SDK.
 
-## [Debug Mode](./debugMode)
-
-Debug mode prints details about API traffic so you can inspect the request and response data.
+We provide them as extensions so you can install them on demand.
 
 
-## Rate Limiting
+## Usage
 
-The RingCentral Platform enforces rate limits to reduce network traffic and avoid DOS issues.
+Here we provide general usage guidance for extensions. You need to read each extension's README page in case there are special instructions.
 
-[Here's](https://medium.com/ringcentral-developers/new-features-in-ringcentral-net-sdk-4-0-e2c596f63f43) a blog article discussing it in detail.
+Let's say an extension's name is `AbcExtension`:
 
-This SDK has the option of handling rate limits automatically by passing `handleRateLimit: (boolean | number)` into the constructor.
+```
+import RingCentral from 'ringcentral-unified';
+const rc = new RingCentral(...);
 
-Options:
+const abcExtension = new AbcExtension();
+rc.installExtension(abcExtension);
+```
 
-- boolean
-    - When set to true, this will pause requests for however many seconds are indicated in the `rate-limit-window` header (defaulting to 60 is there header is somehow missing)
-- number
-    - When set to a number, this overrides using the header, or the default, and instead pauses for x seconds (where x is your number in the constructor)
+## Enable & Disable
+
+By default, an extension is enabled after installation. You can disable it by `abcExtension.enabled = false`.
+
+You can re-enabled it by `abcExtension.enabled = true`.
+
+
+## [Debug Mode Extension](./debugMode)
+
+Debug mode extension prints details about API traffic so you can inspect the request and response data.
+
+
+## [Rate Limit Extension](./rateLimit)
+
+Rate limit extension handles rate limit automatically by delaying and retrying API calls.

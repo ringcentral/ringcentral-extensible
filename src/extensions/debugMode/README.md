@@ -73,18 +73,3 @@ Request:
     }
 }
 ```
-
-
-## Enable and disable
-
-### Enable
-
-```ts
-debugModeExtension.enabled = true // enable, this is default value
-```
-
-### Disable
-
-```ts
-debugModeExtension.enabled = false // disable, when disabled, no `console.debug` output
-```

@@ -5,7 +5,6 @@ import axios, {
   AxiosInstance,
 } from 'axios';
 import qs from 'qs';
-import delay from 'delay';
 
 import RestException from './RestException';
 import {TokenInfo} from './definitions';
@@ -18,7 +17,6 @@ export type RestOptions = {
   token?: TokenInfo;
   appName?: string;
   appVersion?: string;
-  handleRateLimit?: boolean | number;
 };
 
 export type RestRequestConfig = AxiosRequestConfig & {
@@ -35,7 +33,6 @@ export default class Rest {
   token?: TokenInfo;
   appName: string;
   appVersion: string;
-  handleRateLimit?: boolean | number;
 
   httpClient: AxiosInstance;
 
@@ -46,7 +43,6 @@ export default class Rest {
     this.token = options.token ?? undefined;
     this.appName = options.appName ?? 'Unknown';
     this.appVersion = options.appVersion ?? '0.0.1';
-    this.handleRateLimit = options.handleRateLimit ?? undefined;
 
     this.httpClient = axios.create({
       baseURL: this.server,
@@ -94,23 +90,6 @@ export default class Rest {
 
     if (r.status >= 200 && r.status < 300) {
       return r;
-    } else if (r.status === 429 && this.handleRateLimit) {
-      let delayTime = r.headers['x-rate-limit-window'] ?? 60;
-      if (typeof this.handleRateLimit === 'number') {
-        delayTime = this.handleRateLimit;
-      }
-      // unsure on level? or if this should be a thrown error?
-      console.debug(
-        `Hit RingCentral Rate Limit. Pausing requests for ${delayTime} seconds.`
-      );
-      await delay(delayTime * 1000);
-      return this.request<T>(
-        httpMethod,
-        endpoint,
-        content,
-        queryParams,
-        config
-      );
     } else {
       throw new RestException(r);
     }

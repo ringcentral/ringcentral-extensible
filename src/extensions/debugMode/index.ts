@@ -4,13 +4,7 @@ import {RestRequestConfig} from '../../Rest';
 import Utils from '../../Utils';
 import SdkExtension from '..';
 
-class DebugModeExtension implements SdkExtension {
-  enabled = true;
-
-  constructor(enabled = true) {
-    this.enabled = enabled;
-  }
-
+class DebugModeExtension extends SdkExtension {
   install(rc: RingCentral): void {
     const request = rc.request.bind(rc);
     rc.request = async <T>(
