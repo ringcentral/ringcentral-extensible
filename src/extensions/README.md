@@ -15,7 +15,7 @@ Let's say an extension's name is `AbcExtension`:
 import RingCentral from 'ringcentral-unified';
 const rc = new RingCentral(...);
 
-const abcExtension = new AbcExtension();
+const abcExtension = new AbcExtension(...);
 rc.installExtension(abcExtension);
 ```
 
@@ -29,6 +29,11 @@ You can re-enabled it by `abcExtension.enabled = true`.
 ## [Debug Mode Extension](./debugMode)
 
 Debug mode extension prints details about API traffic so you can inspect the request and response data.
+
+
+## [Retry Extension](./retry)
+
+Retry Extension auto retries API calls based on specified condition and interval.
 
 
 ## [Rate Limit Extension](./rateLimit)
