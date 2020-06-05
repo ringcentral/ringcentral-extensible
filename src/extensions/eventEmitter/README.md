@@ -10,7 +10,7 @@ import RingCentral from 'ringcentral-unified';
 import EventEmitterExtension, {Events} from 'ringcentral-unified/build/extensions/eventEmitter';
 
 const rc = new RingCentral(...);
-const eventEmitterExtension = new EventEmitterExtension(EventEmitterOptions);
+const eventEmitterExtension = new EventEmitterExtension(eventEmitterOptions);
 rc.installExtension(eventEmitterExtension);
 
 eventEmitterExtension.eventEmitter.on(Events.requestSuccess, r => {
