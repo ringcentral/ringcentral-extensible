@@ -14,7 +14,7 @@ describe('Debug mode', () => {
       eventEmitterExtension.eventEmitter.on(Events.requestSuccess, r => {
         console.log(Utils.formatTraffic(r));
       });
-      eventEmitterExtension.enabled = false; // remove this line to true enable events
+      eventEmitterExtension.enabled = false; // remove this line to enable events
       await rc.restapi().account().extension().get();
       await rc.revoke();
     };
