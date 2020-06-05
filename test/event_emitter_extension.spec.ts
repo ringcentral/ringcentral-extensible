@@ -6,7 +6,7 @@ import Utils from '../src/Utils';
 
 jest.setTimeout(64000);
 
-describe('Debug mode', () => {
+describe('Event Emitter Extension', () => {
   test('default', async () => {
     const testCase = async (rc: RingCentral) => {
       const eventEmitterExtension = new EventEmitterExtension();

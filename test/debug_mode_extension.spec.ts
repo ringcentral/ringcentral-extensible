@@ -5,7 +5,7 @@ import DebugModeExtension from '../src/extensions/debugMode';
 
 jest.setTimeout(64000);
 
-describe('Debug mode', () => {
+describe('Debug Mode Extension', () => {
   test('default', async () => {
     const testCase = async (rc: RingCentral) => {
       const debugModeExtension = new DebugModeExtension();
