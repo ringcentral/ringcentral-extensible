@@ -40,3 +40,13 @@ Retry Extension auto retries API calls based on specified condition and interval
 ## [Rate Limit Extension](./rateLimit)
 
 Rate limit extension handles rate limit automatically by delaying and retrying API calls.
+
+
+## [Event Emitter Extension](./eventEmitter)
+
+Event Emitter Extension emits API call related events.
+
+
+## [RingCentral Extension](./ringCentral)
+
+RingCentral Extension makes [@ringcentral/sdk](https://www.npmjs.com/package/@ringcentral/sdk) the HTTP engine.
