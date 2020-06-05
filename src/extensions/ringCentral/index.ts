@@ -5,6 +5,7 @@ import RingCentral from '../..';
 import {AxiosResponse, Method} from 'axios';
 import {RestRequestConfig} from '../../Rest';
 import SdkExtension from '..';
+import RestException from '../../RestException';
 
 class RingCentralExtension extends SdkExtension {
   sdk: SDK;
@@ -29,8 +30,23 @@ class RingCentralExtension extends SdkExtension {
         query: queryParams,
         headers: config?.headers,
       });
-      console.log(r);
-      return r;
+      const response: AxiosResponse = {
+        data: await r.json(),
+        status: r.status,
+        statusText: r.statusText,
+        headers: r.headers,
+        config: {
+          method: httpMethod,
+          baseURL: r.url.split(endpoint)[0],
+          url: endpoint,
+          data: content,
+          params: queryParams,
+        },
+      };
+      if (r.ok) {
+        return response;
+      }
+      throw new RestException(response);
     };
   }
 }

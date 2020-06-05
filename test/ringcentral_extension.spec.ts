@@ -26,6 +26,7 @@ describe('RingCentral extension', () => {
 
     const extensionInfo = await rc.restapi().account().extension().get();
     expect(extensionInfo.id).toBeDefined();
+    expect(extensionInfo.extensionNumber).toBeDefined();
 
     await sdk.logout();
   });
