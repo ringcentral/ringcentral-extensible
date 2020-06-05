@@ -7,12 +7,13 @@ This extension emits API call related events.
 
 ```ts
 import RingCentral from 'ringcentral-unified';
-const rc = new RingCentral(...);
+import EventEmitterExtension, {Events} from 'ringcentral-unified/build/extensions/eventEmitter';
 
+const rc = new RingCentral(...);
 const eventEmitterExtension = new EventEmitterExtension(EventEmitterOptions);
 rc.installExtension(eventEmitterExtension);
 
-eventEmitterExtension.eventEmitter.on('requestError', r => {
+eventEmitterExtension.eventEmitter.on(Events.requestSuccess, r => {
   console.log(`There is a request error: ${r}`)
 })
 ```
@@ -53,4 +54,4 @@ enum Events {
 }
 ```
 
-If you don't specify this parameter, all events are supported by default.
+If you don't specify this parameter, all events are enabled by default.

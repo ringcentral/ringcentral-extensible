@@ -9,8 +9,9 @@ This extension is based on the [Retry Extension](../retry).
 
 ```ts
 import RingCentral from 'ringcentral-unified';
-const rc = new RingCentral(...);
+import RateLimitExtension from 'ringcentral-unified/build/extensions/rateLimit';
 
+const rc = new RingCentral(...);
 const rateLimitExtension = new RateLimitExtension(rateLimitOptions);
 rc.installExtension(rateLimitExtension);
 ```

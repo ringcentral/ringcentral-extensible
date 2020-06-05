@@ -7,8 +7,9 @@ Retry API calls upon `RestException`
 
 ```ts
 import RingCentral from 'ringcentral-unified';
-const rc = new RingCentral(...);
+import RetryExtension from 'ringcentral-unified/build/extensions/retry';
 
+const rc = new RingCentral(...);
 const retryExtension = new RetryExtension(retryOptions);
 rc.installExtension(retryExtension);
 ```
