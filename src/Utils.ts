@@ -4,10 +4,6 @@ import {Attachment} from './definitions';
 import {AxiosResponse} from 'axios';
 import {WsgMeta} from './Wsg';
 
-// for browser
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-declare let Blob: any;
-
 class FormData extends _FormData {
   readableParts: string[] = [];
   toJSON(): string {
@@ -15,7 +11,7 @@ class FormData extends _FormData {
   }
   append(
     key: string,
-    value: string | Buffer | typeof Blob | NodeJS.ReadableStream,
+    value: string | Buffer | Blob | NodeJS.ReadableStream,
     options?: {filename?: string; contentType?: string}
   ): void {
     this.readableParts.push(
@@ -28,6 +24,7 @@ class FormData extends _FormData {
       // for browser
       if (typeof value === 'string') {
         // plain text file
+        // eslint-disable-next-line no-undef
         value = new Blob([value], {type: options?.contentType});
       }
       super.append(key, value, options?.filename);

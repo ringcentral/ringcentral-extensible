@@ -133,11 +133,7 @@ Object.keys(doc.paths).forEach(p => {
 })
 
 // Generate Attachment
-fs.writeFileSync(path.join(outputDir, 'Attachment.ts'), `// for browser
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-declare let Blob: any;
-
-class Attachment {
+fs.writeFileSync(path.join(outputDir, 'Attachment.ts'), `class Attachment {
   /**
    * File name with extension, such as 'example.png'
    */
@@ -146,10 +142,10 @@ class Attachment {
   /**
    * Binary content of the file
    */
-  content?: string | Buffer | typeof Blob | NodeJS.ReadableStream
+  content?: string | Buffer | Blob | NodeJS.ReadableStream
 
   /**
-   * Content tyle of the file, such as 'image/png'
+   * Content type of the file, such as 'image/png'
    */
   contentType?: string
 }
@@ -157,6 +153,6 @@ class Attachment {
 export default Attachment
 `)
 
-const defintionFiles = fs.readdirSync(outputDir).map(df => df.substring(0, df.length - 3))
-const code = defintionFiles.map(df => `export { default as ${df} } from './${df}'`).join('\n')
+const definitionFiles = fs.readdirSync(outputDir).map(df => df.substring(0, df.length - 3))
+const code = definitionFiles.map(df => `export { default as ${df} } from './${df}'`).join('\n')
 fs.writeFileSync(path.join(outputDir, 'index.ts'), code + '\n')
