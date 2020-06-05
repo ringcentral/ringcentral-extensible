@@ -1,6 +1,6 @@
 import RetryExtension from '../retry';
 
-type RateLimitOptions = {
+export type RateLimitOptions = {
   maxRetries?: number;
   rateLimitWindow?: number;
 };

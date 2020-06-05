@@ -10,8 +10,8 @@ describe('Debug mode', () => {
     const testCase = async (rc: RingCentral) => {
       const debugModeExtension = new DebugModeExtension();
       rc.installExtension(debugModeExtension);
-      debugModeExtension.enabled = false; // change this to true to print API traffic
-      await rc.restapi().account().extension().messageStore().list();
+      debugModeExtension.enabled = false; // remove this line to print API traffic
+      await rc.restapi().account().extension().get();
       await rc.revoke();
     };
     await testRingCentral(testCase);

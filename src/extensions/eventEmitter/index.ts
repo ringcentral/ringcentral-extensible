@@ -7,7 +7,7 @@ import SdkExtension from '..';
 import {GetTokenRequest} from '../../definitions';
 import RestException from '../../RestException';
 
-enum Events {
+export enum Events {
   beforeRequest = 'beforeRequest',
   requestSuccess = 'requestSuccess',
   requestError = 'requestError',
@@ -26,7 +26,7 @@ enum Events {
   rateLimitError = 'rateLimitError',
 }
 
-type EventEmitterOptions = {
+export type EventEmitterOptions = {
   enabledEvents?: Events[];
 };
 

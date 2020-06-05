@@ -6,15 +6,15 @@ import {RestRequestConfig} from '../../Rest';
 import SdkExtension from '..';
 import RestException from '../../RestException';
 
-type ShouldRetry = (
+export type ShouldRetry = (
   restException: RestException,
   retriesAttempted: number
 ) => boolean;
-type RetryInterval = (
+export type RetryInterval = (
   restException: RestException,
   retriesAttempted: number
 ) => number;
-type RetryOptions = {
+export type RetryOptions = {
   shouldRetry?: ShouldRetry;
   retryInterval?: RetryInterval;
 };
