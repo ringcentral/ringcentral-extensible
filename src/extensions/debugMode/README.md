@@ -74,3 +74,5 @@ Request:
     }
 }
 ```
+
+For a working sample, please check this [test case](../../../test/debug_mode_extension.spec.ts).

@@ -1,6 +1,6 @@
 # RingCentral extension
 
-This extension makes [@ringcentral/sdk](https://www.npmjs.com/package/@ringcentral/sdk) the HTTP client.
+This extension makes [@ringcentral/sdk](https://www.npmjs.com/package/@ringcentral/sdk) the HTTP engine.
 
 
 ## Install dependencies
@@ -29,6 +29,8 @@ rc.installExtension(ringCentralExtension);
 // API call with @ringcentral/sdk as HTTP engine
 const extensionInfo = await rc.restapi().account().extension().get();
 ```
+
+For a working sample, please check this [test case](../../../test/ringcentral_extension.spec.ts).
 
 
 ## Known issues

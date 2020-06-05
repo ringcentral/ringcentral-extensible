@@ -18,6 +18,8 @@ eventEmitterExtension.eventEmitter.on(Events.requestSuccess, r => {
 })
 ```
 
+For a working sample, please check this [test case](../../../test/event_emitter_extension.spec.ts).
+
 
 ## EventEmitterOptions
 
