@@ -21,15 +21,17 @@ type RingCentralDefaults = {
 };
 
 export default class RingCentral {
-  rest: Rest;
+  rest?: Rest;
   wsg?: Wsg;
 
   defaults: RingCentralDefaults = {
     transport: 'https',
   };
 
-  constructor(restOptions: RestOptions, wsgOptions?: WsgOptions) {
-    this.rest = new Rest(restOptions);
+  constructor(restOptions?: RestOptions, wsgOptions?: WsgOptions) {
+    if (restOptions) {
+      this.rest = new Rest(restOptions);
+    }
     if (wsgOptions) {
       this.wsg = new Wsg(this, wsgOptions);
     }
@@ -40,10 +42,10 @@ export default class RingCentral {
   }
 
   get token() {
-    return this.rest.token;
+    return this.rest?.token;
   }
   set token(token) {
-    this.rest.token = token;
+    this.rest!.token = token;
   }
 
   async request<T>(
@@ -54,7 +56,7 @@ export default class RingCentral {
     config?: RestRequestConfig
   ): Promise<AxiosResponse<T>> {
     const transport = config?.transport ?? this.defaults.transport;
-    let engine: Rest | Wsg = this.rest;
+    let engine: Rest | Wsg;
     if (transport === 'wss') {
       if (!this.wsg) {
         throw new Error(
@@ -62,6 +64,14 @@ export default class RingCentral {
         );
       }
       engine = this.wsg!;
+    } else {
+      // https
+      if (!this.rest) {
+        throw new Error(
+          'In order to use https as transport, you need to specify restOptions when initializing RingCentral.'
+        );
+      }
+      engine = this.rest!;
     }
     delete config?.transport;
     return engine.request<T>(
@@ -189,7 +199,7 @@ export default class RingCentral {
       // nothing to revoke
       return;
     }
-    if (!this.rest.clientId || !this.rest.clientSecret) {
+    if (!this.rest?.clientId || !this.rest?.clientSecret) {
       // no clientId or clientSecret, the token is from external source, cannot revoke
       this.token = undefined;
       return;

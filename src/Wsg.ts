@@ -120,7 +120,9 @@ export default class Wsg {
     };
     _config.headers = {
       ..._config.headers,
-      'X-User-Agent': `${this.rc.rest.appName}/${this.rc.rest.appVersion} ringcentral/ringcentral-unified-ts/${version} via wss`,
+      'X-User-Agent': `${this.rc.rest!.appName}/${
+        this.rc.rest!.appVersion
+      } ringcentral/ringcentral-unified-ts/${version} via wss`,
     };
     if (endpoint.startsWith('/restapi/oauth/')) {
       throw new Error(

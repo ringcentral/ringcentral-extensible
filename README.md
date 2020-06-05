@@ -157,11 +157,8 @@ yarn test
 - Support events:
     - token refreshed
 - extra features as plugins or extensions
-    - rate limit handling
-    - event emitter
-    - extensions/<extension 1>/
-        - every extension should have a readme file
     - Do not install extension dependencies by default
+    - Make axios and wsg extensions?
 - WSG
     - WSG should have its own folder and readme file
     - Support unsubscribe
