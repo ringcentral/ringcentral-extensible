@@ -3,7 +3,7 @@ import {ReadMessageContentParameters} from '../../../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../../../..';
 
-class Content {
+class Index {
   rc: RingCentral;
   attachmentId: string | null;
   parent: Parent;
@@ -43,4 +43,4 @@ class Content {
   }
 }
 
-export default Content;
+export default Index;

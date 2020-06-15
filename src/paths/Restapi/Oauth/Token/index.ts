@@ -3,7 +3,7 @@ import {TokenInfo, GetTokenRequest} from '../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../..';
 
-class Token {
+class Index {
   rc: RingCentral;
   parent: Parent;
 
@@ -35,4 +35,4 @@ class Token {
   }
 }
 
-export default Token;
+export default Index;

@@ -3,7 +3,7 @@ import {GlipEventInfo, GlipEventCreate} from '../../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../../..';
 
-class Events {
+class Index {
   rc: RingCentral;
   parent: Parent;
 
@@ -45,4 +45,4 @@ class Events {
   }
 }
 
-export default Events;
+export default Index;

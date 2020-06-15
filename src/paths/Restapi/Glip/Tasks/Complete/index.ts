@@ -3,7 +3,7 @@ import {GlipCompleteTask} from '../../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../../..';
 
-class Complete {
+class Index {
   rc: RingCentral;
   parent: Parent;
 
@@ -35,4 +35,4 @@ class Complete {
   }
 }
 
-export default Complete;
+export default Index;

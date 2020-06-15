@@ -10,7 +10,7 @@ import Utils from '../../../../Utils';
 import Parent from '..';
 import RingCentral from '../../../..';
 
-class IvrPrompts {
+class Index {
   rc: RingCentral;
   promptId: string | null;
   parent: Parent;
@@ -117,4 +117,4 @@ class IvrPrompts {
   }
 }
 
-export default IvrPrompts;
+export default Index;

@@ -4,7 +4,7 @@ import {AuthProfileResource} from '../../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../../..';
 
-class AuthzProfile {
+class Index {
   rc: RingCentral;
   parent: Parent;
 
@@ -36,4 +36,4 @@ class AuthzProfile {
   }
 }
 
-export default AuthzProfile;
+export default Index;

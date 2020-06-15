@@ -6,7 +6,7 @@ import {
 import Parent from '..';
 import RingCentral from '../../../..';
 
-class FaxCoverPage {
+class Index {
   rc: RingCentral;
   parent: Parent;
 
@@ -37,4 +37,4 @@ class FaxCoverPage {
   }
 }
 
-export default FaxCoverPage;
+export default Index;

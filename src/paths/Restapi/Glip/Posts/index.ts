@@ -8,7 +8,7 @@ import {
 import Parent from '..';
 import RingCentral from '../../../..';
 
-class Posts {
+class Index {
   rc: RingCentral;
   parent: Parent;
 
@@ -53,4 +53,4 @@ class Posts {
   }
 }
 
-export default Posts;
+export default Index;

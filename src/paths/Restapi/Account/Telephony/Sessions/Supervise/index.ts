@@ -6,7 +6,7 @@ import {
 import Parent from '..';
 import RingCentral from '../../../../../..';
 
-class Supervise {
+class Index {
   rc: RingCentral;
   parent: Parent;
 
@@ -38,4 +38,4 @@ class Supervise {
   }
 }
 
-export default Supervise;
+export default Index;

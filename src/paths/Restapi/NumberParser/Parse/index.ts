@@ -7,7 +7,7 @@ import {
 import Parent from '..';
 import RingCentral from '../../../..';
 
-class Parse {
+class Index {
   rc: RingCentral;
   parent: Parent;
 
@@ -40,4 +40,4 @@ class Parse {
   }
 }
 
-export default Parse;
+export default Index;

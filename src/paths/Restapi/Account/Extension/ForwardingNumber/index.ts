@@ -9,7 +9,7 @@ import {
 import Parent from '..';
 import RingCentral from '../../../../..';
 
-class ForwardingNumber {
+class Index {
   rc: RingCentral;
   forwardingNumberId: string | null;
   parent: Parent;
@@ -120,4 +120,4 @@ class ForwardingNumber {
   }
 }
 
-export default ForwardingNumber;
+export default Index;

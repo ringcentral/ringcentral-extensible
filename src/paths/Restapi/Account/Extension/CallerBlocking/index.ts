@@ -7,7 +7,7 @@ import {
 import Parent from '..';
 import RingCentral from '../../../../..';
 
-class CallerBlocking {
+class Index {
   rc: RingCentral;
   parent: Parent;
 
@@ -57,4 +57,4 @@ class CallerBlocking {
   }
 }
 
-export default CallerBlocking;
+export default Index;

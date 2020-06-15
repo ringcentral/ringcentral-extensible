@@ -7,7 +7,7 @@ import Utils from '../../../../Utils';
 import Parent from '..';
 import RingCentral from '../../../..';
 
-class Greeting {
+class Index {
   rc: RingCentral;
   parent: Parent;
 
@@ -40,4 +40,4 @@ class Greeting {
   }
 }
 
-export default Greeting;
+export default Index;

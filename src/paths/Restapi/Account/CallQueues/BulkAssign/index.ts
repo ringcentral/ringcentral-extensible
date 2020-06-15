@@ -3,7 +3,7 @@ import {CallQueueBulkAssignResource} from '../../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../../..';
 
-class BulkAssign {
+class Index {
   rc: RingCentral;
   parent: Parent;
 
@@ -35,4 +35,4 @@ class BulkAssign {
   }
 }
 
-export default BulkAssign;
+export default Index;

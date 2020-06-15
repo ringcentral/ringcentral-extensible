@@ -8,7 +8,7 @@ import {
 import Parent from '..';
 import RingCentral from '../../../..';
 
-class Conversations {
+class Index {
   rc: RingCentral;
   chatId: string | null;
   parent: Parent;
@@ -81,4 +81,4 @@ class Conversations {
   }
 }
 
-export default Conversations;
+export default Index;

@@ -3,7 +3,7 @@ import CallOut from './CallOut';
 import Parent from '..';
 import RingCentral from '../../../..';
 
-class Telephony {
+class Index {
   rc: RingCentral;
   parent: Parent;
 
@@ -25,4 +25,4 @@ class Telephony {
   }
 }
 
-export default Telephony;
+export default Index;

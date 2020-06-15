@@ -1,8 +1,9 @@
 import {RestRequestConfig} from '../../../Rest';
+import {ServiceProviderConfig} from '../../../definitions';
 import Parent from '..';
 import RingCentral from '../../..';
 
-class ServiceProviderConfig {
+class Index {
   rc: RingCentral;
   parent: Parent;
 
@@ -30,4 +31,4 @@ class ServiceProviderConfig {
   }
 }
 
-export default ServiceProviderConfig;
+export default Index;

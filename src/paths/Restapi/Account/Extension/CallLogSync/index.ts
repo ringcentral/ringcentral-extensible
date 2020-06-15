@@ -1,9 +1,12 @@
 import {RestRequestConfig} from '../../../../../Rest';
-import {SyncUserCallLogParameters} from '../../../../../definitions';
+import {
+  CallLogSync,
+  SyncUserCallLogParameters,
+} from '../../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../../..';
 
-class CallLogSync {
+class Index {
   rc: RingCentral;
   parent: Parent;
 
@@ -30,4 +33,4 @@ class CallLogSync {
   }
 }
 
-export default CallLogSync;
+export default Index;

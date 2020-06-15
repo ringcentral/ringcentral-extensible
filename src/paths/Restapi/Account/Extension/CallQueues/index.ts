@@ -3,7 +3,7 @@ import {UserCallQueues} from '../../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../../..';
 
-class CallQueues {
+class Index {
   rc: RingCentral;
   parent: Parent;
 
@@ -35,4 +35,4 @@ class CallQueues {
   }
 }
 
-export default CallQueues;
+export default Index;

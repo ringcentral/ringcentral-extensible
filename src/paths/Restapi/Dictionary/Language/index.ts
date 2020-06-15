@@ -3,7 +3,7 @@ import {LanguageList, LanguageInfo} from '../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../..';
 
-class Language {
+class Index {
   rc: RingCentral;
   languageId: string | null;
   parent: Parent;
@@ -51,4 +51,4 @@ class Language {
   }
 }
 
-export default Language;
+export default Index;

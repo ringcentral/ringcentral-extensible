@@ -2,7 +2,7 @@ import {RestRequestConfig} from '../../../../../Rest';
 import Parent from '..';
 import RingCentral from '../../../../..';
 
-class Unread {
+class Index {
   rc: RingCentral;
   parent: Parent;
 
@@ -26,4 +26,4 @@ class Unread {
   }
 }
 
-export default Unread;
+export default Index;

@@ -2,7 +2,7 @@ import Chats from './Chats';
 import Parent from '..';
 import RingCentral from '../../../..';
 
-class Recent {
+class Index {
   rc: RingCentral;
   parent: Parent;
 
@@ -20,4 +20,4 @@ class Recent {
   }
 }
 
-export default Recent;
+export default Index;

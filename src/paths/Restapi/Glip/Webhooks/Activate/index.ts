@@ -2,7 +2,7 @@ import {RestRequestConfig} from '../../../../../Rest';
 import Parent from '..';
 import RingCentral from '../../../../..';
 
-class Activate {
+class Index {
   rc: RingCentral;
   parent: Parent;
 
@@ -26,4 +26,4 @@ class Activate {
   }
 }
 
-export default Activate;
+export default Index;

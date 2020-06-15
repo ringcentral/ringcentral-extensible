@@ -10,7 +10,7 @@ import {RestRequestConfig} from '../../Rest';
 import {GetVersionsResponse, GetVersionResponse} from '../../definitions';
 import RingCentral from '../..';
 
-class Restapi {
+class Index {
   rc: RingCentral;
   apiVersion: string | null;
 
@@ -92,4 +92,4 @@ class Restapi {
   }
 }
 
-export default Restapi;
+export default Index;

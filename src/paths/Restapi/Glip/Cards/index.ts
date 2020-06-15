@@ -7,7 +7,7 @@ import {
 import Parent from '..';
 import RingCentral from '../../../..';
 
-class Cards {
+class Index {
   rc: RingCentral;
   cardId: string | null;
   parent: Parent;
@@ -100,4 +100,4 @@ class Cards {
   }
 }
 
-export default Cards;
+export default Index;

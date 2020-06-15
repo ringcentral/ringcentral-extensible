@@ -2,7 +2,7 @@ import {RestRequestConfig} from '../../../../../Rest';
 import Parent from '..';
 import RingCentral from '../../../../..';
 
-class Publish {
+class Index {
   rc: RingCentral;
   parent: Parent;
 
@@ -26,4 +26,4 @@ class Publish {
   }
 }
 
-export default Publish;
+export default Index;

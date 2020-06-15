@@ -2,7 +2,7 @@ import {RestRequestConfig} from '../../../../../../../Rest';
 import Parent from '..';
 import RingCentral from '../../../../../../..';
 
-class Reject {
+class Index {
   rc: RingCentral;
   parent: Parent;
 
@@ -26,4 +26,4 @@ class Reject {
   }
 }
 
-export default Reject;
+export default Index;

@@ -6,7 +6,7 @@ import {
 import Parent from '..';
 import RingCentral from '../../../../..';
 
-class MessageSync {
+class Index {
   rc: RingCentral;
   parent: Parent;
 
@@ -37,4 +37,4 @@ class MessageSync {
   }
 }
 
-export default MessageSync;
+export default Index;

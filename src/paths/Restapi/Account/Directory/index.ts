@@ -3,7 +3,7 @@ import Entries from './Entries';
 import Parent from '..';
 import RingCentral from '../../../..';
 
-class Directory {
+class Index {
   rc: RingCentral;
   parent: Parent;
 
@@ -25,4 +25,4 @@ class Directory {
   }
 }
 
-export default Directory;
+export default Index;

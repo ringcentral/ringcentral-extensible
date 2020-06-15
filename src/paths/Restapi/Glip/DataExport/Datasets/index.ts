@@ -2,7 +2,7 @@ import {RestRequestConfig} from '../../../../../Rest';
 import Parent from '..';
 import RingCentral from '../../../../..';
 
-class Datasets {
+class Index {
   rc: RingCentral;
   datasetId: string | null;
   parent: Parent;
@@ -39,4 +39,4 @@ class Datasets {
   }
 }
 
-export default Datasets;
+export default Index;

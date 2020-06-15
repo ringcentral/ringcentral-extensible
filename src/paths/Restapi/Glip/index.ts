@@ -18,7 +18,7 @@ import Chats from './Chats';
 import Parent from '..';
 import RingCentral from '../../..';
 
-class Glip {
+class Index {
   rc: RingCentral;
   parent: Parent;
 
@@ -100,4 +100,4 @@ class Glip {
   }
 }
 
-export default Glip;
+export default Index;

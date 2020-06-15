@@ -76,7 +76,7 @@ const generate = (prefix = '/') => {
     let restRequestConfig = false;
     let code = `import RingCentral from '${Array(routes.length + 1).fill('..').join('/')}'
 
-class ${R.last(routes)} {
+class Index {
   rc: RingCentral`
 
     if (paramName) {
@@ -239,7 +239,6 @@ class ${R.last(routes)} {
       code = `import Utils from '${Array(routes.length + 1).fill('..').join('/')}/Utils'\n${code}`
     }
 
-    definitionsUsed.delete(R.last(routes))
     if (definitionsUsed.size > 0) {
       code = `import { ${Array.from(definitionsUsed).join(', ')} } from '${Array(routes.length + 1).fill('..').join('/')}/definitions'\n${code}`
     }
@@ -250,7 +249,7 @@ class ${R.last(routes)} {
       code = `import { RestRequestConfig } from '${Array(routes.length + 1).fill('..').join('/')}/Rest'\n${code}`
     }
 
-    fs.writeFileSync(path.join(folderPath, 'index.ts'), code.trim() + `\n\nexport default ${R.last(routes)}\n`)
+    fs.writeFileSync(path.join(folderPath, 'index.ts'), code.trim() + `\n\nexport default Index\n`)
 
     if (routes.length > 1) {
       patchSrcFile(['paths', ...R.init(routes), 'index.ts'], [`import ${R.last(routes)} from './${R.last(routes)}'`], `

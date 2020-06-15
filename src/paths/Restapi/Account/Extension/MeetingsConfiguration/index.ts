@@ -3,7 +3,7 @@ import Assistants from './Assistants';
 import Parent from '..';
 import RingCentral from '../../../../..';
 
-class MeetingsConfiguration {
+class Index {
   rc: RingCentral;
   parent: Parent;
 
@@ -25,4 +25,4 @@ class MeetingsConfiguration {
   }
 }
 
-export default MeetingsConfiguration;
+export default Index;

@@ -6,7 +6,7 @@ import {
 import Parent from '..';
 import RingCentral from '../../../../..';
 
-class Grant {
+class Index {
   rc: RingCentral;
   parent: Parent;
 
@@ -37,4 +37,4 @@ class Grant {
   }
 }
 
-export default Grant;
+export default Index;

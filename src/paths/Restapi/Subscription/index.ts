@@ -10,7 +10,7 @@ import {
 import Parent from '..';
 import RingCentral from '../../..';
 
-class Subscription {
+class Index {
   rc: RingCentral;
   subscriptionId: string | null;
   parent: Parent;
@@ -123,4 +123,4 @@ class Subscription {
   }
 }
 
-export default Subscription;
+export default Index;

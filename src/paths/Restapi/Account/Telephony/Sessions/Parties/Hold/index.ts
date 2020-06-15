@@ -3,7 +3,7 @@ import {CallParty} from '../../../../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../../../../..';
 
-class Hold {
+class Index {
   rc: RingCentral;
   parent: Parent;
 
@@ -27,4 +27,4 @@ class Hold {
   }
 }
 
-export default Hold;
+export default Index;

@@ -1,8 +1,9 @@
 import {RestRequestConfig} from '../../../../Rest';
+import {MessageStoreConfiguration} from '../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../..';
 
-class MessageStoreConfiguration {
+class Index {
   rc: RingCentral;
   parent: Parent;
 
@@ -48,4 +49,4 @@ class MessageStoreConfiguration {
   }
 }
 
-export default MessageStoreConfiguration;
+export default Index;

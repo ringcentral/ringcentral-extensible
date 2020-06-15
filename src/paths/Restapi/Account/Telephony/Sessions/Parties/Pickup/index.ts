@@ -3,7 +3,7 @@ import {CallParty, PickupTarget} from '../../../../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../../../../..';
 
-class Pickup {
+class Index {
   rc: RingCentral;
   parent: Parent;
 
@@ -35,4 +35,4 @@ class Pickup {
   }
 }
 
-export default Pickup;
+export default Index;

@@ -7,7 +7,7 @@ import Utils from '../../../../../Utils';
 import Parent from '..';
 import RingCentral from '../../../../..';
 
-class ProfileImage {
+class Index {
   rc: RingCentral;
   scaleSize: string | null;
   parent: Parent;
@@ -93,4 +93,4 @@ class ProfileImage {
   }
 }
 
-export default ProfileImage;
+export default Index;

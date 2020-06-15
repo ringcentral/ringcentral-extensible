@@ -3,7 +3,7 @@ import {GlipWebhookInfo, GlipWebhookList} from '../../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../../..';
 
-class Webhooks {
+class Index {
   rc: RingCentral;
   parent: Parent;
 
@@ -45,4 +45,4 @@ class Webhooks {
   }
 }
 
-export default Webhooks;
+export default Index;

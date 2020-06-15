@@ -3,7 +3,7 @@ import {CallRecordingExtensions} from '../../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../../..';
 
-class Extensions {
+class Index {
   rc: RingCentral;
   parent: Parent;
 
@@ -31,4 +31,4 @@ class Extensions {
   }
 }
 
-export default Extensions;
+export default Index;

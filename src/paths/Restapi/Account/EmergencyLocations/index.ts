@@ -8,7 +8,7 @@ import {
 import Parent from '..';
 import RingCentral from '../../../..';
 
-class EmergencyLocations {
+class Index {
   rc: RingCentral;
   locationId: string | null;
   parent: Parent;
@@ -103,4 +103,4 @@ class EmergencyLocations {
   }
 }
 
-export default EmergencyLocations;
+export default Index;

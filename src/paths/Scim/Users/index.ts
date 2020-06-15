@@ -11,7 +11,7 @@ import {
 import Parent from '..';
 import RingCentral from '../../..';
 
-class Users {
+class Index {
   rc: RingCentral;
   id: string | null;
   parent: Parent;
@@ -139,4 +139,4 @@ class Users {
   }
 }
 
-export default Users;
+export default Index;

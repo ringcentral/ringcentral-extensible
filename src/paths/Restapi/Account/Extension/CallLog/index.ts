@@ -9,7 +9,7 @@ import {
 import Parent from '..';
 import RingCentral from '../../../../..';
 
-class CallLog {
+class Index {
   rc: RingCentral;
   callRecordId: string | null;
   parent: Parent;
@@ -84,4 +84,4 @@ class CallLog {
   }
 }
 
-export default CallLog;
+export default Index;

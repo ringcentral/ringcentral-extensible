@@ -2,7 +2,7 @@ import Contact from './Contact';
 import Parent from '..';
 import RingCentral from '../../../../..';
 
-class AddressBook {
+class Index {
   rc: RingCentral;
   parent: Parent;
 
@@ -20,4 +20,4 @@ class AddressBook {
   }
 }
 
-export default AddressBook;
+export default Index;

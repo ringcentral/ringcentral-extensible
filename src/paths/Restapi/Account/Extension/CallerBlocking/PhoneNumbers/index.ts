@@ -8,7 +8,7 @@ import {
 import Parent from '..';
 import RingCentral from '../../../../../..';
 
-class PhoneNumbers {
+class Index {
   rc: RingCentral;
   blockedNumberId: string | null;
   parent: Parent;
@@ -119,4 +119,4 @@ class PhoneNumbers {
   }
 }
 
-export default PhoneNumbers;
+export default Index;

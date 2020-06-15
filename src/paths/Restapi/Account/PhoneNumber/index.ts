@@ -7,7 +7,7 @@ import {
 import Parent from '..';
 import RingCentral from '../../../..';
 
-class PhoneNumber {
+class Index {
   rc: RingCentral;
   phoneNumberId: string | null;
   parent: Parent;
@@ -62,4 +62,4 @@ class PhoneNumber {
   }
 }
 
-export default PhoneNumber;
+export default Index;

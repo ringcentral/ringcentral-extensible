@@ -1,9 +1,12 @@
 import {RestRequestConfig} from '../../../../../Rest';
-import {NotificationSettingsUpdateRequest} from '../../../../../definitions';
+import {
+  NotificationSettings,
+  NotificationSettingsUpdateRequest,
+} from '../../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../../..';
 
-class NotificationSettings {
+class Index {
   rc: RingCentral;
   parent: Parent;
 
@@ -49,4 +52,4 @@ class NotificationSettings {
   }
 }
 
-export default NotificationSettings;
+export default Index;

@@ -16,7 +16,7 @@ import {CallParty, PartyUpdateRequest} from '../../../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../../../..';
 
-class Parties {
+class Index {
   rc: RingCentral;
   partyId: string | null;
   parent: Parent;
@@ -124,4 +124,4 @@ class Parties {
   }
 }
 
-export default Parties;
+export default Index;

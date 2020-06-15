@@ -1,10 +1,13 @@
 import Archive from './Archive';
 import {RestRequestConfig} from '../../../../Rest';
-import {CreateMessageStoreReportRequest} from '../../../../definitions';
+import {
+  MessageStoreReport,
+  CreateMessageStoreReportRequest,
+} from '../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../..';
 
-class MessageStoreReport {
+class Index {
   rc: RingCentral;
   taskId: string | null;
   parent: Parent;
@@ -64,4 +67,4 @@ class MessageStoreReport {
   }
 }
 
-export default MessageStoreReport;
+export default Index;

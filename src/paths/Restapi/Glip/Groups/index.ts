@@ -12,7 +12,7 @@ import {
 import Parent from '..';
 import RingCentral from '../../../..';
 
-class Groups {
+class Index {
   rc: RingCentral;
   groupId: string | null;
   parent: Parent;
@@ -97,4 +97,4 @@ class Groups {
   }
 }
 
-export default Groups;
+export default Index;

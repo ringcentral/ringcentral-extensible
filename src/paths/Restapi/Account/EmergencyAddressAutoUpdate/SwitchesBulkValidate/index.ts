@@ -6,7 +6,7 @@ import {
 import Parent from '..';
 import RingCentral from '../../../../..';
 
-class SwitchesBulkValidate {
+class Index {
   rc: RingCentral;
   parent: Parent;
 
@@ -38,4 +38,4 @@ class SwitchesBulkValidate {
   }
 }
 
-export default SwitchesBulkValidate;
+export default Index;

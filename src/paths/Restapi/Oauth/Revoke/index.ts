@@ -3,7 +3,7 @@ import {RevokeTokenRequest} from '../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../..';
 
-class Revoke {
+class Index {
   rc: RingCentral;
   parent: Parent;
 
@@ -35,4 +35,4 @@ class Revoke {
   }
 }
 
-export default Revoke;
+export default Index;

@@ -3,7 +3,7 @@ import ServiceProviderConfig from './ServiceProviderConfig';
 import Health from './Health';
 import RingCentral from '../..';
 
-class Scim {
+class Index {
   rc: RingCentral;
   version: string | null;
 
@@ -33,4 +33,4 @@ class Scim {
   }
 }
 
-export default Scim;
+export default Index;

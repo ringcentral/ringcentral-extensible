@@ -11,7 +11,7 @@ import {
 import Parent from '..';
 import RingCentral from '../../../../..';
 
-class MessageStore {
+class Index {
   rc: RingCentral;
   messageId: string | null;
   parent: Parent;
@@ -110,4 +110,4 @@ class MessageStore {
   }
 }
 
-export default MessageStore;
+export default Index;

@@ -6,7 +6,7 @@ import {
 import Parent from '..';
 import RingCentral from '../../../..';
 
-class SipProvision {
+class Index {
   rc: RingCentral;
   parent: Parent;
 
@@ -38,4 +38,4 @@ class SipProvision {
   }
 }
 
-export default SipProvision;
+export default Index;

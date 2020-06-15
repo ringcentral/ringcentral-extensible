@@ -8,7 +8,7 @@ import FaxCoverPage from './FaxCoverPage';
 import Parent from '..';
 import RingCentral from '../../..';
 
-class Dictionary {
+class Index {
   rc: RingCentral;
   parent: Parent;
 
@@ -50,4 +50,4 @@ class Dictionary {
   }
 }
 
-export default Dictionary;
+export default Index;

@@ -2,7 +2,7 @@ import {RestRequestConfig} from '../../../Rest';
 import Parent from '..';
 import RingCentral from '../../..';
 
-class Health {
+class Index {
   rc: RingCentral;
   parent: Parent;
 
@@ -26,4 +26,4 @@ class Health {
   }
 }
 
-export default Health;
+export default Index;

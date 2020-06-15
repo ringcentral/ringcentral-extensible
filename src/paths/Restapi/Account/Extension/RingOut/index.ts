@@ -6,7 +6,7 @@ import {
 import Parent from '..';
 import RingCentral from '../../../../..';
 
-class RingOut {
+class Index {
   rc: RingCentral;
   ringoutId: string | null;
   parent: Parent;
@@ -76,4 +76,4 @@ class RingOut {
   }
 }
 
-export default RingOut;
+export default Index;

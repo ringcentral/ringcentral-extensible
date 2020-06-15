@@ -8,7 +8,7 @@ import {
 import Parent from '..';
 import RingCentral from '../../../../..';
 
-class Networks {
+class Index {
   rc: RingCentral;
   networkId: string | null;
   parent: Parent;
@@ -110,4 +110,4 @@ class Networks {
   }
 }
 
-export default Networks;
+export default Index;

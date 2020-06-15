@@ -6,7 +6,7 @@ import {CallRecordingSettingsResource} from '../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../..';
 
-class CallRecording {
+class Index {
   rc: RingCentral;
   parent: Parent;
 
@@ -66,4 +66,4 @@ class CallRecording {
   }
 }
 
-export default CallRecording;
+export default Index;

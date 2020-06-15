@@ -3,7 +3,7 @@ import BulkAssign from './BulkAssign';
 import Parent from '..';
 import RingCentral from '../../../..';
 
-class Department {
+class Index {
   rc: RingCentral;
   departmentId: string | null;
   parent: Parent;
@@ -31,4 +31,4 @@ class Department {
   }
 }
 
-export default Department;
+export default Index;

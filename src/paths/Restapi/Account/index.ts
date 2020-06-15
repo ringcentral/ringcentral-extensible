@@ -32,7 +32,7 @@ import {GetAccountInfoResponse} from '../../../definitions';
 import Parent from '..';
 import RingCentral from '../../..';
 
-class Account {
+class Index {
   rc: RingCentral;
   accountId: string | null;
   parent: Parent;
@@ -186,4 +186,4 @@ class Account {
   }
 }
 
-export default Account;
+export default Index;

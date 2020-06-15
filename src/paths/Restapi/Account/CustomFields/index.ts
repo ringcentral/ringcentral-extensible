@@ -8,7 +8,7 @@ import {
 import Parent from '..';
 import RingCentral from '../../../..';
 
-class CustomFields {
+class Index {
   rc: RingCentral;
   fieldId: string | null;
   parent: Parent;
@@ -96,4 +96,4 @@ class CustomFields {
   }
 }
 
-export default CustomFields;
+export default Index;

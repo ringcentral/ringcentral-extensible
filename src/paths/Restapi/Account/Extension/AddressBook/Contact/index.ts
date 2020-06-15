@@ -10,7 +10,7 @@ import {
 import Parent from '..';
 import RingCentral from '../../../../../..';
 
-class Contact {
+class Index {
   rc: RingCentral;
   contactId: string | null;
   parent: Parent;
@@ -121,4 +121,4 @@ class Contact {
   }
 }
 
-export default Contact;
+export default Index;

@@ -5,7 +5,7 @@ import {GlipWebhookList} from '../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../..';
 
-class Webhooks {
+class Index {
   rc: RingCentral;
   webhookId: string | null;
   parent: Parent;
@@ -79,4 +79,4 @@ class Webhooks {
   }
 }
 
-export default Webhooks;
+export default Index;

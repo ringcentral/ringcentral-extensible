@@ -3,7 +3,7 @@ import {CallPartyFlip} from '../../../../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../../../../..';
 
-class Flip {
+class Index {
   rc: RingCentral;
   parent: Parent;
 
@@ -35,4 +35,4 @@ class Flip {
   }
 }
 
-export default Flip;
+export default Index;

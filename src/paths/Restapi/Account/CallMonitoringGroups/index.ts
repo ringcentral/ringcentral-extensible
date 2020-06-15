@@ -4,12 +4,13 @@ import {RestRequestConfig} from '../../../../Rest';
 import {
   CallMonitoringGroup,
   CreateCallMonitoringGroupRequest,
+  CallMonitoringGroups,
   ListCallMonitoringGroupsParameters,
 } from '../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../..';
 
-class CallMonitoringGroups {
+class Index {
   rc: RingCentral;
   groupId: string | null;
   parent: Parent;
@@ -108,4 +109,4 @@ class CallMonitoringGroups {
   }
 }
 
-export default CallMonitoringGroups;
+export default Index;

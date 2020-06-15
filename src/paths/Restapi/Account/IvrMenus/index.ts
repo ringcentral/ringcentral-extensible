@@ -3,7 +3,7 @@ import {IVRMenuInfo} from '../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../..';
 
-class IvrMenus {
+class Index {
   rc: RingCentral;
   ivrMenuId: string | null;
   parent: Parent;
@@ -77,4 +77,4 @@ class IvrMenus {
   }
 }
 
-export default IvrMenus;
+export default Index;

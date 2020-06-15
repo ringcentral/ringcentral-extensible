@@ -3,7 +3,7 @@ import {ExtensionCallerIdInfo} from '../../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../../..';
 
-class CallerId {
+class Index {
   rc: RingCentral;
   parent: Parent;
 
@@ -49,4 +49,4 @@ class CallerId {
   }
 }
 
-export default CallerId;
+export default Index;

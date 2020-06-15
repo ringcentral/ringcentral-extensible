@@ -2,7 +2,7 @@ import {RestRequestConfig} from '../../../../../../Rest';
 import Parent from '..';
 import RingCentral from '../../../../../..';
 
-class Text {
+class Index {
   rc: RingCentral;
   parent: Parent;
 
@@ -26,4 +26,4 @@ class Text {
   }
 }
 
-export default Text;
+export default Index;

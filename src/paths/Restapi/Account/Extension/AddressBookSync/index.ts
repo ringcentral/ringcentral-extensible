@@ -1,9 +1,12 @@
 import {RestRequestConfig} from '../../../../../Rest';
-import {SyncAddressBookParameters} from '../../../../../definitions';
+import {
+  AddressBookSync,
+  SyncAddressBookParameters,
+} from '../../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../../..';
 
-class AddressBookSync {
+class Index {
   rc: RingCentral;
   parent: Parent;
 
@@ -34,4 +37,4 @@ class AddressBookSync {
   }
 }
 
-export default AddressBookSync;
+export default Index;

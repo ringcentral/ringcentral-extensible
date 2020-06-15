@@ -7,7 +7,7 @@ import Utils from '../../../../../Utils';
 import Parent from '..';
 import RingCentral from '../../../../..';
 
-class Mms {
+class Index {
   rc: RingCentral;
   parent: Parent;
 
@@ -40,4 +40,4 @@ class Mms {
   }
 }
 
-export default Mms;
+export default Index;

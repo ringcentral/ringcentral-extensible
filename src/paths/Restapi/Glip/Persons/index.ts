@@ -3,7 +3,7 @@ import {GlipPersonInfo} from '../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../..';
 
-class Persons {
+class Index {
   rc: RingCentral;
   personId: string | null;
   parent: Parent;
@@ -37,4 +37,4 @@ class Persons {
   }
 }
 
-export default Persons;
+export default Index;

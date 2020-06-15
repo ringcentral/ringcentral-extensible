@@ -15,7 +15,7 @@ import {
 import Parent from '..';
 import RingCentral from '../../../..';
 
-class Teams {
+class Index {
   rc: RingCentral;
   chatId: string | null;
   parent: Parent;
@@ -144,4 +144,4 @@ class Teams {
   }
 }
 
-export default Teams;
+export default Index;

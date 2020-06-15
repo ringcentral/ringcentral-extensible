@@ -4,7 +4,7 @@ import Utils from '../../../../../Utils';
 import Parent from '..';
 import RingCentral from '../../../../..';
 
-class Fax {
+class Index {
   rc: RingCentral;
   parent: Parent;
 
@@ -37,4 +37,4 @@ class Fax {
   }
 }
 
-export default Fax;
+export default Index;

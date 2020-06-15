@@ -6,7 +6,7 @@ import {
 import Parent from '..';
 import RingCentral from '../../../../..';
 
-class WirelessPointsBulkCreate {
+class Index {
   rc: RingCentral;
   parent: Parent;
 
@@ -38,4 +38,4 @@ class WirelessPointsBulkCreate {
   }
 }
 
-export default WirelessPointsBulkCreate;
+export default Index;

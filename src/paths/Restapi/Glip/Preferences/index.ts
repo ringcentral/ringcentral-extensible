@@ -3,7 +3,7 @@ import {GlipPreferencesInfo} from '../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../..';
 
-class Preferences {
+class Index {
   rc: RingCentral;
   parent: Parent;
 
@@ -31,4 +31,4 @@ class Preferences {
   }
 }
 
-export default Preferences;
+export default Index;

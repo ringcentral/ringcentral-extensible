@@ -3,7 +3,7 @@ import {CallSession, MakeCallOutRequest} from '../../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../../..';
 
-class CallOut {
+class Index {
   rc: RingCentral;
   parent: Parent;
 
@@ -35,4 +35,4 @@ class CallOut {
   }
 }
 
-export default CallOut;
+export default Index;

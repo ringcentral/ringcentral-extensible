@@ -3,7 +3,7 @@ import {IgnoreRequestBody} from '../../../../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../../../../..';
 
-class Ignore {
+class Index {
   rc: RingCentral;
   parent: Parent;
 
@@ -35,4 +35,4 @@ class Ignore {
   }
 }
 
-export default Ignore;
+export default Index;

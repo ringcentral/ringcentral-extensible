@@ -3,7 +3,7 @@ import {UserSearchResponse, SearchRequest} from '../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../..';
 
-class DotSearch {
+class Index {
   rc: RingCentral;
   parent: Parent;
 
@@ -35,4 +35,4 @@ class DotSearch {
   }
 }
 
-export default DotSearch;
+export default Index;

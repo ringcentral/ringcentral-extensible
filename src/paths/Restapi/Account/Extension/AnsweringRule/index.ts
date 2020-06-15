@@ -11,7 +11,7 @@ import {
 import Parent from '..';
 import RingCentral from '../../../../..';
 
-class AnsweringRule {
+class Index {
   rc: RingCentral;
   ruleId: string | null;
   parent: Parent;
@@ -123,4 +123,4 @@ class AnsweringRule {
   }
 }
 
-export default AnsweringRule;
+export default Index;

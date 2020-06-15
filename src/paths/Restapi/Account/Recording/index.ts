@@ -4,7 +4,7 @@ import {GetCallRecordingResponse} from '../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../..';
 
-class Recording {
+class Index {
   rc: RingCentral;
   recordingId: string | null;
   parent: Parent;
@@ -46,4 +46,4 @@ class Recording {
   }
 }
 
-export default Recording;
+export default Index;

@@ -7,7 +7,7 @@ import {
 import Parent from '..';
 import RingCentral from '../../../..';
 
-class Templates {
+class Index {
   rc: RingCentral;
   templateId: string | null;
   parent: Parent;
@@ -58,4 +58,4 @@ class Templates {
   }
 }
 
-export default Templates;
+export default Index;

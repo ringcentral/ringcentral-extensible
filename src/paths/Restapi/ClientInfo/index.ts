@@ -2,7 +2,7 @@ import SipProvision from './SipProvision';
 import Parent from '..';
 import RingCentral from '../../..';
 
-class ClientInfo {
+class Index {
   rc: RingCentral;
   parent: Parent;
 
@@ -20,4 +20,4 @@ class ClientInfo {
   }
 }
 
-export default ClientInfo;
+export default Index;

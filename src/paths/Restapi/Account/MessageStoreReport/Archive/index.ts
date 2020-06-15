@@ -3,7 +3,7 @@ import {MessageStoreReportArchive} from '../../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../../..';
 
-class Archive {
+class Index {
   rc: RingCentral;
   archiveId: string | null;
   parent: Parent;
@@ -51,4 +51,4 @@ class Archive {
   }
 }
 
-export default Archive;
+export default Index;

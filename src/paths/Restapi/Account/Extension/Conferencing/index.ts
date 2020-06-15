@@ -7,7 +7,7 @@ import {
 import Parent from '..';
 import RingCentral from '../../../../..';
 
-class Conferencing {
+class Index {
   rc: RingCentral;
   parent: Parent;
 
@@ -56,4 +56,4 @@ class Conferencing {
   }
 }
 
-export default Conferencing;
+export default Index;

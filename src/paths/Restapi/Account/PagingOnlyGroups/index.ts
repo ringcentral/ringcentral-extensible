@@ -4,7 +4,7 @@ import Users from './Users';
 import Parent from '..';
 import RingCentral from '../../../..';
 
-class PagingOnlyGroups {
+class Index {
   rc: RingCentral;
   pagingOnlyGroupId: string | null;
   parent: Parent;
@@ -38,4 +38,4 @@ class PagingOnlyGroups {
   }
 }
 
-export default PagingOnlyGroups;
+export default Index;

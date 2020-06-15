@@ -9,7 +9,7 @@ import {
 import Parent from '..';
 import RingCentral from '../../../../..';
 
-class Switches {
+class Index {
   rc: RingCentral;
   switchId: string | null;
   parent: Parent;
@@ -114,4 +114,4 @@ class Switches {
   }
 }
 
-export default Switches;
+export default Index;

@@ -3,7 +3,7 @@ import {AssistantsResource} from '../../../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../../../..';
 
-class Assistants {
+class Index {
   rc: RingCentral;
   parent: Parent;
 
@@ -31,4 +31,4 @@ class Assistants {
   }
 }
 
-export default Assistants;
+export default Index;

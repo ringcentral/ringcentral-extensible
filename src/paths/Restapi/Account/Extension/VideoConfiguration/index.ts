@@ -3,7 +3,7 @@ import {UserVideoConfiguration} from '../../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../../..';
 
-class VideoConfiguration {
+class Index {
   rc: RingCentral;
   parent: Parent;
 
@@ -49,4 +49,4 @@ class VideoConfiguration {
   }
 }
 
-export default VideoConfiguration;
+export default Index;

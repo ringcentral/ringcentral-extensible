@@ -3,7 +3,7 @@ import {GlipCompany} from '../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../..';
 
-class Companies {
+class Index {
   rc: RingCentral;
   companyId: string | null;
   parent: Parent;
@@ -37,4 +37,4 @@ class Companies {
   }
 }
 
-export default Companies;
+export default Index;

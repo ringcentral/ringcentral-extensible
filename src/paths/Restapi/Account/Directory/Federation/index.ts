@@ -3,7 +3,7 @@ import {FederationResource} from '../../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../../..';
 
-class Federation {
+class Index {
   rc: RingCentral;
   parent: Parent;
 
@@ -31,4 +31,4 @@ class Federation {
   }
 }
 
-export default Federation;
+export default Index;

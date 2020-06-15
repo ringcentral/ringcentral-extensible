@@ -1,11 +1,11 @@
 import BulkAssign from './BulkAssign';
 import Members from './Members';
 import {RestRequestConfig} from '../../../../Rest';
-import {ListCallQueuesParameters} from '../../../../definitions';
+import {CallQueues, ListCallQueuesParameters} from '../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../..';
 
-class CallQueues {
+class Index {
   rc: RingCentral;
   groupId: string | null;
   parent: Parent;
@@ -50,4 +50,4 @@ class CallQueues {
   }
 }
 
-export default CallQueues;
+export default Index;

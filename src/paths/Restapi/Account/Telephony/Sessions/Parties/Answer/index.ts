@@ -3,7 +3,7 @@ import {CallParty, AnswerTarget} from '../../../../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../../../../..';
 
-class Answer {
+class Index {
   rc: RingCentral;
   parent: Parent;
 
@@ -35,4 +35,4 @@ class Answer {
   }
 }
 
-export default Answer;
+export default Index;

@@ -3,7 +3,7 @@ import {CallParty, ForwardTarget} from '../../../../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../../../../..';
 
-class Forward {
+class Index {
   rc: RingCentral;
   parent: Parent;
 
@@ -35,4 +35,4 @@ class Forward {
   }
 }
 
-export default Forward;
+export default Index;

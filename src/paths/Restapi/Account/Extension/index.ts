@@ -45,7 +45,7 @@ import {
 import Parent from '..';
 import RingCentral from '../../../..';
 
-class Extension {
+class Index {
   rc: RingCentral;
   extensionId: string | null;
   parent: Parent;
@@ -293,4 +293,4 @@ class Extension {
   }
 }
 
-export default Extension;
+export default Index;

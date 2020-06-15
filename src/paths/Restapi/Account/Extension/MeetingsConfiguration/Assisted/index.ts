@@ -3,7 +3,7 @@ import {AssistedUsersResource} from '../../../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../../../..';
 
-class Assisted {
+class Index {
   rc: RingCentral;
   parent: Parent;
 
@@ -31,4 +31,4 @@ class Assisted {
   }
 }
 
-export default Assisted;
+export default Index;

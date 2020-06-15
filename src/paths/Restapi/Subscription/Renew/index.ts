@@ -3,7 +3,7 @@ import {SubscriptionInfo} from '../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../..';
 
-class Renew {
+class Index {
   rc: RingCentral;
   parent: Parent;
 
@@ -31,4 +31,4 @@ class Renew {
   }
 }
 
-export default Renew;
+export default Index;

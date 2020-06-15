@@ -9,7 +9,7 @@ import {
 import Parent from '..';
 import RingCentral from '../../../../..';
 
-class Meeting {
+class Index {
   rc: RingCentral;
   meetingId: string | null;
   parent: Parent;
@@ -123,4 +123,4 @@ class Meeting {
   }
 }
 
-export default Meeting;
+export default Index;

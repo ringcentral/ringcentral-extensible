@@ -3,7 +3,7 @@ import Revoke from './Revoke';
 import Parent from '..';
 import RingCentral from '../../..';
 
-class Oauth {
+class Index {
   rc: RingCentral;
   parent: Parent;
 
@@ -25,4 +25,4 @@ class Oauth {
   }
 }
 
-export default Oauth;
+export default Index;

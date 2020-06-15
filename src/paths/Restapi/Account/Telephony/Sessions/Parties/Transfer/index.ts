@@ -3,7 +3,7 @@ import {CallParty, TransferTarget} from '../../../../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../../../../..';
 
-class Transfer {
+class Index {
   rc: RingCentral;
   parent: Parent;
 
@@ -35,4 +35,4 @@ class Transfer {
   }
 }
 
-export default Transfer;
+export default Index;

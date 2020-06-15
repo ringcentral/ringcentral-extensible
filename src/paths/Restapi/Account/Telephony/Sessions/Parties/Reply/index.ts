@@ -3,7 +3,7 @@ import {ReplyParty, CallPartyReply} from '../../../../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../../../../..';
 
-class Reply {
+class Index {
   rc: RingCentral;
   parent: Parent;
 
@@ -35,4 +35,4 @@ class Reply {
   }
 }
 
-export default Reply;
+export default Index;

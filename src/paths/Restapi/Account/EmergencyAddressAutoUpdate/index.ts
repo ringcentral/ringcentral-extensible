@@ -13,7 +13,7 @@ import Users from './Users';
 import Parent from '..';
 import RingCentral from '../../../..';
 
-class EmergencyAddressAutoUpdate {
+class Index {
   rc: RingCentral;
   parent: Parent;
 
@@ -75,4 +75,4 @@ class EmergencyAddressAutoUpdate {
   }
 }
 
-export default EmergencyAddressAutoUpdate;
+export default Index;

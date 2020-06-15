@@ -2,7 +2,7 @@ import Parse from './Parse';
 import Parent from '..';
 import RingCentral from '../../..';
 
-class NumberParser {
+class Index {
   rc: RingCentral;
   parent: Parent;
 
@@ -20,4 +20,4 @@ class NumberParser {
   }
 }
 
-export default NumberParser;
+export default Index;

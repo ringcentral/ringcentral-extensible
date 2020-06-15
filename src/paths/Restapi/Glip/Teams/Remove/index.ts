@@ -3,7 +3,7 @@ import {GlipPostMembersIdsListBody} from '../../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../../..';
 
-class Remove {
+class Index {
   rc: RingCentral;
   parent: Parent;
 
@@ -35,4 +35,4 @@ class Remove {
   }
 }
 
-export default Remove;
+export default Index;

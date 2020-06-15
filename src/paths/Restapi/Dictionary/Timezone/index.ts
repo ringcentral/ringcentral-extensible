@@ -8,7 +8,7 @@ import {
 import Parent from '..';
 import RingCentral from '../../../..';
 
-class Timezone {
+class Index {
   rc: RingCentral;
   timezoneId: string | null;
   parent: Parent;
@@ -66,4 +66,4 @@ class Timezone {
   }
 }
 
-export default Timezone;
+export default Index;

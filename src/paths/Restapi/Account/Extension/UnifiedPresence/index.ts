@@ -1,9 +1,12 @@
 import {RestRequestConfig} from '../../../../../Rest';
-import {UpdateUnifiedPresence} from '../../../../../definitions';
+import {
+  UnifiedPresence,
+  UpdateUnifiedPresence,
+} from '../../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../../..';
 
-class UnifiedPresence {
+class Index {
   rc: RingCentral;
   parent: Parent;
 
@@ -49,4 +52,4 @@ class UnifiedPresence {
   }
 }
 
-export default UnifiedPresence;
+export default Index;

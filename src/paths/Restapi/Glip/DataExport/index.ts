@@ -9,7 +9,7 @@ import {
 import Parent from '..';
 import RingCentral from '../../../..';
 
-class DataExport {
+class Index {
   rc: RingCentral;
   taskId: string | null;
   parent: Parent;
@@ -82,4 +82,4 @@ class DataExport {
   }
 }
 
-export default DataExport;
+export default Index;
