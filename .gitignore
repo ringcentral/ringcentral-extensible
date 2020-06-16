@@ -4,4 +4,3 @@ build/
 .env.prod
 temp.*
 .DS_Store
-.vscode
