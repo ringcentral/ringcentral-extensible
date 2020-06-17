@@ -5,10 +5,9 @@ import waitFor from 'wait-for-async';
 // eslint-disable-next-line node/no-unpublished-import
 import {getStatusText} from 'http-status-codes';
 import hyperid from 'hyperid';
-import {AxiosResponse, Method, AxiosRequestConfig} from 'axios';
 
 import RingCentral from '../..';
-import {RestRequestConfig} from '../../Rest';
+import {RestRequestConfig, RestResponse, RestMethod} from '../../Rest';
 import SdkExtension from '..';
 import RestException from '../../RestException';
 import {version} from '../../../package.json';
@@ -51,14 +50,14 @@ class WebSocketExtension extends SdkExtension {
     this.rc = rc;
     const request = rc.request.bind(rc);
     rc.request = async <T>(
-      httpMethod: Method,
+      method: RestMethod,
       endpoint: string,
       content?: {},
       queryParams?: {},
       config?: RestRequestConfig
-    ): Promise<AxiosResponse<T>> => {
+    ): Promise<RestResponse<T>> => {
       if (!this.enabled || !this.restOverWebsocket) {
-        return request<T>(httpMethod, endpoint, content, queryParams, config);
+        return request<T>(method, endpoint, content, queryParams, config);
       }
       if (
         // the following cannot be done with WebSocket
@@ -66,15 +65,9 @@ class WebSocketExtension extends SdkExtension {
         config?.responseType === 'arraybuffer' ||
         endpoint.startsWith('/restapi/oauth/')
       ) {
-        return request<T>(httpMethod, endpoint, content, queryParams, config);
+        return request<T>(method, endpoint, content, queryParams, config);
       }
-      return this.request<T>(
-        httpMethod,
-        endpoint,
-        content,
-        queryParams,
-        config
-      );
+      return this.request<T>(method, endpoint, content, queryParams, config);
     };
   }
 
@@ -147,14 +140,14 @@ class WebSocketExtension extends SdkExtension {
   }
 
   async request<T>(
-    httpMethod: Method,
+    method: RestMethod,
     endpoint: string,
     content?: {},
     queryParams?: {},
     config?: RestRequestConfig
-  ): Promise<AxiosResponse<T>> {
-    const _config: AxiosRequestConfig = {
-      method: httpMethod,
+  ): Promise<RestResponse<T>> {
+    const _config: RestRequestConfig = {
+      method: method,
       baseURL: this.server,
       url: endpoint,
       data: content,
@@ -194,7 +187,7 @@ class WebSocketExtension extends SdkExtension {
         );
         if (meta.messageId === messageId) {
           this.ws.removeEventListener('message', handler);
-          const response: AxiosResponse = {
+          const response: RestResponse = {
             data: body,
             status: meta.status,
             statusText: getStatusText(meta.status),

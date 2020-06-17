@@ -3,21 +3,6 @@
 [![Build Status](https://travis-ci.com/ringcentral/ringcentral-unified-ts.svg?token=316MqomevzwR7zFzsQz2&branch=master)](https://travis-ci.com/ringcentral/ringcentral-unified-ts)
 [![Code Style: Google](https://img.shields.io/badge/code%20style-google-blueviolet.svg)](https://github.com/google/gts)
 
-This SDK supports:
-
-- [RingCentral REST API](https://developers.ringcentral.com/api-reference)
-- [RingCentral Events & Notifications](https://developers.ringcentral.com/api-reference/events-notifications).
-
-For transport protocol, this SDK supports:
-
-- HTTPS
-- WebSocket
-
-It provides unified programming interface for HTTPS and WebSocket:
-
-- For RingCentral REST API, you can access it via either HTTPS or WebSocket.
-- For RingCentral Events & Notifications, you can set it up with either WebHook or WebSocket.
-
 
 ## Installation
 
@@ -53,42 +38,9 @@ You can also find lots of useful code snippets from [test cases](./test).
 
 ## Extensions
 
-This SDK supports [extensions](./src/extensions). You can enable non-core features by installing extensions.
+This SDK supports [extensions](./src/extensions). You can enable features by installing extensions.
 
 If you want to add features to this SDK, create an extension.
-
-
-## Change Transport Protocol
-
-By default, HTTPS is the transport protocol. If you'd like to use WebSocket as transport protocol, you need to specify `wsgOptions` when creating a `RingCentral` instance:
-
-```ts
-const restOptions = { ... };
-const wsgOptions = {
-    server: 'wss://ws-api.devtest.ringcentral.com/ws', // for sandbox
-    // server: 'wss://ws-api.ringcentral.com/ws', // for production
-};
-const rc = new RingCentral(restOptions, wsgOptions);
-```
-
-Then you can set the default transport protocol to `wss`:
-
-```ts
-rc.defaults.transport = 'wss';
-```
-
-Transport protocol can also be specified when making an API call:
-
-```ts
-const extInfo = await rc
-      .restapi()
-      .account()
-      .extension()
-      .get({transport: 'wss'});
-```
-
-To use HTTPS as transport protocol, just specify `transport` as `'https'`.
-Or do do not specify it at all when `https` is default.
 
 
 ## Binary content downloading
@@ -142,27 +94,17 @@ yarn test
 ### Todo
 
 - rename project to `ringcentral-extensible` or `ringcentral-types`
-- rename axios to rest (create synonyms of types)
-- TS projects are required to install `ws` and `@types/ws` even with they don't use WSG.
 - create project `unified-form-data`
     - create `multipart-form-data-builder` to replace `form-data`.
         - Should support both node and browser
-- make it work with official sdk
-    - share token and auto update token based on token events
-    - update ringcentral-client, or release @ringcentral/client
 - Run tests in browser env
 - no more `{}` type
 - convert code generator to TS
 - compare it with C# sdk and see what are missing
 - PubNub
     - optional, since we will mainly use WSG instead.
-- Support events:
-    - token refreshed
-- extra features as plugins or extensions
-    - Do not install extension dependencies by default
-    - Make axios and wsg extensions?
+    - It will be available as an extension
 - WSG
-    - WSG should have its own folder and readme file
     - Support unsubscribe
     - according to wiki, subscription needs refreshing
     - what if network outage?

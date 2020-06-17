@@ -1,7 +1,7 @@
 import _FormData from 'form-data';
 
 import {Attachment} from './definitions';
-import {AxiosResponse} from 'axios';
+import {RestResponse} from './Rest';
 
 class FormData extends _FormData {
   readableParts: string[] = [];
@@ -42,7 +42,7 @@ class FormData extends _FormData {
 }
 
 class Utils {
-  static formatTraffic(r: AxiosResponse): string {
+  static formatTraffic(r: RestResponse): string {
     return `HTTP ${r.status} ${r.statusText}${
       r.data.message ? ` - ${r.data.message}` : ''
     }

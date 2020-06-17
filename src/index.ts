@@ -1,5 +1,4 @@
-import {Method, AxiosResponse} from 'axios';
-
+import {RestMethod, RestResponse} from './Rest';
 import {GetTokenRequest, TokenInfo} from './definitions';
 import Restapi from './paths/Restapi';
 import Scim from './paths/Scim';
@@ -40,14 +39,14 @@ export default class RingCentral {
   }
 
   async request<T>(
-    httpMethod: Method,
+    method: RestMethod,
     endpoint: string,
     content?: {},
     queryParams?: {},
     config?: RestRequestConfig
-  ): Promise<AxiosResponse<T>> {
+  ): Promise<RestResponse<T>> {
     return this.rest!.request<T>(
-      httpMethod,
+      method,
       endpoint,
       content,
       queryParams,
@@ -59,14 +58,14 @@ export default class RingCentral {
     endpoint: string,
     queryParams?: {},
     config?: RestRequestConfig
-  ): Promise<AxiosResponse<T>> {
+  ): Promise<RestResponse<T>> {
     return this.request<T>('GET', endpoint, undefined, queryParams, config);
   }
   async delete<T>(
     endpoint: string,
     queryParams?: {},
     config?: RestRequestConfig
-  ): Promise<AxiosResponse<T>> {
+  ): Promise<RestResponse<T>> {
     return this.request<T>('DELETE', endpoint, undefined, queryParams, config);
   }
   async post<T>(
@@ -74,7 +73,7 @@ export default class RingCentral {
     content?: {},
     queryParams?: {},
     config?: RestRequestConfig
-  ): Promise<AxiosResponse<T>> {
+  ): Promise<RestResponse<T>> {
     return this.request<T>('POST', endpoint, content, queryParams, config);
   }
   async put<T>(
@@ -82,7 +81,7 @@ export default class RingCentral {
     content: {},
     queryParams?: {},
     config?: RestRequestConfig
-  ): Promise<AxiosResponse<T>> {
+  ): Promise<RestResponse<T>> {
     return this.request<T>('PUT', endpoint, content, queryParams, config);
   }
   async patch<T>(
@@ -90,7 +89,7 @@ export default class RingCentral {
     content: {},
     queryParams?: {},
     config?: RestRequestConfig
-  ): Promise<AxiosResponse<T>> {
+  ): Promise<RestResponse<T>> {
     return this.request<T>('PATCH', endpoint, content, queryParams, config);
   }
 

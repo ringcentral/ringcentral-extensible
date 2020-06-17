@@ -2,8 +2,7 @@
 import waitFor from 'wait-for-async';
 
 import RingCentral from '../..';
-import {AxiosResponse, Method} from 'axios';
-import {RestRequestConfig} from '../../Rest';
+import {RestRequestConfig, RestResponse, RestMethod} from '../../Rest';
 import SdkExtension from '..';
 import RestException from '../../RestException';
 
@@ -44,24 +43,24 @@ class RetryExtension extends SdkExtension {
   install(rc: RingCentral): void {
     const request = rc.request.bind(rc);
     const newRequest = async <T>(
-      httpMethod: Method,
+      method: RestMethod,
       endpoint: string,
       content?: {},
       queryParams?: {},
       config?: RestRequestConfig,
       retriesAttempted = 0
-    ): Promise<AxiosResponse<T>> => {
+    ): Promise<RestResponse<T>> => {
       if (!this.enabled) {
-        return request<T>(httpMethod, endpoint, content, queryParams, config);
+        return request<T>(method, endpoint, content, queryParams, config);
       }
       try {
-        return request<T>(httpMethod, endpoint, content, queryParams, config);
+        return request<T>(method, endpoint, content, queryParams, config);
       } catch (e) {
         if (e instanceof RestException) {
           if (this.shouldRetry(e, retriesAttempted)) {
             await waitFor({interval: this.retryInterval(e, retriesAttempted)});
             return newRequest<T>(
-              httpMethod,
+              method,
               endpoint,
               content,
               queryParams,

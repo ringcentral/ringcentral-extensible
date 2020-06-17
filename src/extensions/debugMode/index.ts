@@ -1,7 +1,5 @@
-import {AxiosResponse, Method} from 'axios';
-
 import RingCentral from '../..';
-import {RestRequestConfig} from '../../Rest';
+import {RestRequestConfig, RestResponse, RestMethod} from '../../Rest';
 import Utils from '../../Utils';
 import SdkExtension from '..';
 
@@ -9,17 +7,17 @@ class DebugModeExtension extends SdkExtension {
   install(rc: RingCentral): void {
     const request = rc.request.bind(rc);
     rc.request = async <T>(
-      httpMethod: Method,
+      method: RestMethod,
       endpoint: string,
       content?: {},
       queryParams?: {},
       config?: RestRequestConfig
-    ): Promise<AxiosResponse<T>> => {
+    ): Promise<RestResponse<T>> => {
       if (!this.enabled) {
-        return request<T>(httpMethod, endpoint, content, queryParams, config);
+        return request<T>(method, endpoint, content, queryParams, config);
       }
       const r = await request<T>(
-        httpMethod,
+        method,
         endpoint,
         content,
         queryParams,

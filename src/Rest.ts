@@ -19,6 +19,8 @@ export type RestOptions = {
   appVersion?: string;
 };
 
+export type RestMethod = Method;
+export type RestResponse<T = any> = AxiosResponse;
 export type RestRequestConfig = AxiosRequestConfig;
 
 export default class Rest {
@@ -57,14 +59,14 @@ export default class Rest {
   }
 
   async request<T>(
-    httpMethod: Method,
+    method: RestMethod,
     endpoint: string,
     content?: {},
     queryParams?: {},
     config?: RestRequestConfig
-  ): Promise<AxiosResponse<T>> {
-    const _config: AxiosRequestConfig = {
-      method: httpMethod,
+  ): Promise<RestResponse<T>> {
+    const _config: RestRequestConfig = {
+      method,
       url: endpoint,
       data: content,
       params: queryParams,

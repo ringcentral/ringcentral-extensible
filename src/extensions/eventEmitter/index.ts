@@ -1,8 +1,7 @@
 import {EventEmitter} from 'events';
-import {AxiosResponse, Method} from 'axios';
 
 import RingCentral from '../..';
-import {RestRequestConfig} from '../../Rest';
+import {RestRequestConfig, RestResponse, RestMethod} from '../../Rest';
 import SdkExtension from '..';
 import {GetTokenRequest} from '../../definitions';
 import RestException from '../../RestException';
@@ -49,24 +48,24 @@ class EventEmitterExtension extends SdkExtension {
   install(rc: RingCentral): void {
     const request = rc.request.bind(rc);
     rc.request = async <T>(
-      httpMethod: Method,
+      method: RestMethod,
       endpoint: string,
       content?: {},
       queryParams?: {},
       config?: RestRequestConfig
-    ): Promise<AxiosResponse<T>> => {
+    ): Promise<RestResponse<T>> => {
       if (!this.enabled) {
-        return request<T>(httpMethod, endpoint, content, queryParams, config);
+        return request<T>(method, endpoint, content, queryParams, config);
       }
       const params = {
-        httpMethod,
+        method,
         endpoint,
         content,
         queryParams,
         config,
       };
       this.emit(Events.beforeRequest, params);
-      if (httpMethod === 'POST') {
+      if (method === 'POST') {
         if (endpoint === '/restapi/oauth/token') {
           if ((content as GetTokenRequest).grant_type === 'refresh_token') {
             this.emit(Events.beforeRefresh, params);
@@ -79,14 +78,14 @@ class EventEmitterExtension extends SdkExtension {
       }
       try {
         const r = await request<T>(
-          httpMethod,
+          method,
           endpoint,
           content,
           queryParams,
           config
         );
         this.emit(Events.requestSuccess, r);
-        if (httpMethod === 'POST') {
+        if (method === 'POST') {
           if (endpoint === '/restapi/oauth/token') {
             if ((content as GetTokenRequest).grant_type === 'refresh_token') {
               this.emit(Events.refreshSuccess, r);
@@ -100,7 +99,7 @@ class EventEmitterExtension extends SdkExtension {
         return r;
       } catch (e) {
         this.emit(Events.requestError, e);
-        if (httpMethod === 'POST') {
+        if (method === 'POST') {
           if (endpoint === '/restapi/oauth/token') {
             if ((content as GetTokenRequest).grant_type === 'refresh_token') {
               this.emit(Events.refreshError, e);
