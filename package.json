@@ -1,6 +1,6 @@
 {
   "name": "ringcentral-unified",
-  "version": "0.7.1",
+  "version": "0.7.2",
   "description": "RingCentral Unified SDK for TypeScript",
   "main": "build/index.js",
   "types": "build/index.d.ts",
@@ -18,7 +18,6 @@
     "@types/qs": "^6.9.3",
     "axios": "^0.19.2",
     "form-data": "^3.0.0",
-    "hyperid": "^2.0.5",
     "qs": "^6.9.4"
   },
   "devDependencies": {
@@ -31,6 +30,7 @@
     "gts": "^2.0.2",
     "http-status-codes": "^1.4.0",
     "husky": "^4.2.5",
+    "hyperid": "^2.0.5",
     "isomorphic-ws": "^4.0.1",
     "jest": "^26.0.1",
     "lower-case-first": "^2.0.1",

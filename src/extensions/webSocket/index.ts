@@ -4,6 +4,7 @@ import WS from 'isomorphic-ws';
 import waitFor from 'wait-for-async';
 // eslint-disable-next-line node/no-unpublished-import
 import {getStatusText} from 'http-status-codes';
+// eslint-disable-next-line node/no-unpublished-import
 import hyperid from 'hyperid';
 
 import RingCentral from '../..';
