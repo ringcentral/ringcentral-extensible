@@ -8,9 +8,9 @@ import WebSocketExtension from '../src/extensions/webSocket';
 
 jest.setTimeout(64000);
 
-const testSubscription = async (rc: RingCentral, we: WebSocketExtension) => {
+const testSubscription = async (rc: RingCentral, wse: WebSocketExtension) => {
   let eventCount = 0;
-  await we.subscribe(
+  await wse.subscribe(
     ['/restapi/v1.0/account/~/extension/~/message-store'],
     event => {
       expect(event).toBeDefined();
