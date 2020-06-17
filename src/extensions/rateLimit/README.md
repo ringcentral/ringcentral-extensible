@@ -5,6 +5,11 @@ Rate limit extension handles rate limit automatically by delaying and retrying A
 This extension is based on the [Retry Extension](../retry).
 
 
+## Install dependencies
+
+Please check the [Retry Extension](../retry) dependencies.
+
+
 ## Usage
 
 ```ts

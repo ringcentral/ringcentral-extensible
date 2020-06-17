@@ -1,7 +1,7 @@
 import {EventEmitter} from 'events';
+import {AxiosResponse, Method} from 'axios';
 
 import RingCentral from '../..';
-import {AxiosResponse, Method} from 'axios';
 import {RestRequestConfig} from '../../Rest';
 import SdkExtension from '..';
 import {GetTokenRequest} from '../../definitions';

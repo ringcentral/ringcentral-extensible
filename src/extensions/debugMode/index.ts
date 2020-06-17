@@ -1,5 +1,6 @@
-import RingCentral from '../..';
 import {AxiosResponse, Method} from 'axios';
+
+import RingCentral from '../..';
 import {RestRequestConfig} from '../../Rest';
 import Utils from '../../Utils';
 import SdkExtension from '..';

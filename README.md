@@ -141,6 +141,7 @@ yarn test
 
 ### Todo
 
+- rename project to `ringcentral-extensible` or `ringcentral-types`
 - rename axios to rest (create synonyms of types)
 - TS projects are required to install `ws` and `@types/ws` even with they don't use WSG.
 - create project `unified-form-data`

@@ -3,6 +3,13 @@
 Retry API calls upon `RestException`
 
 
+## Install dependencies
+
+```
+yarn add wait-for-async
+```
+
+
 ## Usage
 
 ```ts
