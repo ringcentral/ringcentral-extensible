@@ -19,9 +19,7 @@ export type RestOptions = {
   appVersion?: string;
 };
 
-export type RestRequestConfig = AxiosRequestConfig & {
-  transport?: 'https' | 'wss';
-};
+export type RestRequestConfig = AxiosRequestConfig;
 
 export default class Rest {
   static sandboxServer = 'https://platform.devtest.ringcentral.com';

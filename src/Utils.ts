@@ -2,7 +2,6 @@ import _FormData from 'form-data';
 
 import {Attachment} from './definitions';
 import {AxiosResponse} from 'axios';
-import {WsgMeta} from './Wsg';
 
 class FormData extends _FormData {
   readableParts: string[] = [];
@@ -43,18 +42,6 @@ class FormData extends _FormData {
 }
 
 class Utils {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  static splitWsgData(wsgData: string): [WsgMeta, any] {
-    if (wsgData.includes(',--Boundary')) {
-      const index = wsgData.indexOf(',--Boundary');
-      return [
-        JSON.parse(wsgData.substring(1, index)),
-        wsgData.substring(index + 1, wsgData.length - 1),
-      ];
-    } else {
-      return JSON.parse(wsgData);
-    }
-  }
   static formatTraffic(r: AxiosResponse): string {
     return `HTTP ${r.status} ${r.statusText}${
       r.data.message ? ` - ${r.data.message}` : ''

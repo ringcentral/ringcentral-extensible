@@ -4,7 +4,6 @@ import {GetTokenRequest, TokenInfo} from './definitions';
 import Restapi from './paths/Restapi';
 import Scim from './paths/Scim';
 import Rest, {RestOptions, RestRequestConfig} from './Rest';
-import Wsg, {WsgOptions} from './Wsg';
 import SdkExtension from './extensions';
 
 type PasswordFlowOptions = {
@@ -16,29 +15,21 @@ type AuthCodeFlowOptions = {
   code: string;
   redirect_uri: string;
 };
-type RingCentralDefaults = {
-  transport: 'https' | 'wss';
-};
 
 export default class RingCentral {
+  sdkExtensions: SdkExtension[] = [];
+
   rest?: Rest;
-  wsg?: Wsg;
 
-  defaults: RingCentralDefaults = {
-    transport: 'https',
-  };
-
-  constructor(restOptions?: RestOptions, wsgOptions?: WsgOptions) {
+  constructor(restOptions?: RestOptions) {
     if (restOptions) {
       this.rest = new Rest(restOptions);
-    }
-    if (wsgOptions) {
-      this.wsg = new Wsg(this, wsgOptions);
     }
   }
 
   installExtension(sdkExtension: SdkExtension) {
     sdkExtension.install(this);
+    this.sdkExtensions.push(sdkExtension);
   }
 
   get token() {
@@ -55,26 +46,7 @@ export default class RingCentral {
     queryParams?: {},
     config?: RestRequestConfig
   ): Promise<AxiosResponse<T>> {
-    const transport = config?.transport ?? this.defaults.transport;
-    let engine: Rest | Wsg;
-    if (transport === 'wss') {
-      if (!this.wsg) {
-        throw new Error(
-          'In order to use wss as transport, you need to specify wsgOptions when initializing RingCentral.'
-        );
-      }
-      engine = this.wsg!;
-    } else {
-      // https
-      if (!this.rest) {
-        throw new Error(
-          'In order to use https as transport, you need to specify restOptions when initializing RingCentral.'
-        );
-      }
-      engine = this.rest!;
-    }
-    delete config?.transport;
-    return engine.request<T>(
+    return this.rest!.request<T>(
       httpMethod,
       endpoint,
       content,
@@ -123,10 +95,7 @@ export default class RingCentral {
   }
 
   async getToken(getTokenRequest: GetTokenRequest): Promise<TokenInfo> {
-    this.token = await this.restapi(null)
-      .oauth()
-      .token()
-      .post(getTokenRequest, {transport: 'https'});
+    this.token = await this.restapi(null).oauth().token().post(getTokenRequest);
     return this.token;
   }
 
@@ -194,7 +163,9 @@ export default class RingCentral {
    * @param tokenToRevoke AccessToken
    */
   async revoke(tokenToRevoke?: string) {
-    this.wsg?.revoke();
+    for (const sdkExtension of this.sdkExtensions) {
+      await sdkExtension.revoke();
+    }
     if (!tokenToRevoke && !this.token) {
       // nothing to revoke
       return;
@@ -206,10 +177,7 @@ export default class RingCentral {
     }
     tokenToRevoke =
       tokenToRevoke ?? this.token?.access_token ?? this.token?.refresh_token;
-    await this.restapi(null)
-      .oauth()
-      .revoke()
-      .post({token: tokenToRevoke}, {transport: 'https'});
+    await this.restapi(null).oauth().revoke().post({token: tokenToRevoke});
     this.token = undefined;
   }
 
