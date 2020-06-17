@@ -50,10 +50,13 @@ class RetryExtension extends SdkExtension {
       config?: RestRequestConfig,
       retriesAttempted = 0
     ): Promise<AxiosResponse<T>> => {
+      if (!this.enabled) {
+        return request<T>(httpMethod, endpoint, content, queryParams, config);
+      }
       try {
         return request<T>(httpMethod, endpoint, content, queryParams, config);
       } catch (e) {
-        if (this.enabled && e instanceof RestException) {
+        if (e instanceof RestException) {
           if (this.shouldRetry(e, retriesAttempted)) {
             await waitFor({interval: this.retryInterval(e, retriesAttempted)});
             return newRequest<T>(

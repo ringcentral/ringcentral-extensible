@@ -14,6 +14,9 @@ class DebugModeExtension extends SdkExtension {
       queryParams?: {},
       config?: RestRequestConfig
     ): Promise<AxiosResponse<T>> => {
+      if (!this.enabled) {
+        return request<T>(httpMethod, endpoint, content, queryParams, config);
+      }
       const r = await request<T>(
         httpMethod,
         endpoint,
@@ -21,9 +24,7 @@ class DebugModeExtension extends SdkExtension {
         queryParams,
         config
       );
-      if (this.enabled) {
-        console.debug(Utils.formatTraffic(r));
-      }
+      console.debug(Utils.formatTraffic(r));
       return r;
     };
   }

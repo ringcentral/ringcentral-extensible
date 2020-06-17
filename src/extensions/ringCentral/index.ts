@@ -1,8 +1,8 @@
 // eslint-disable-next-line node/no-unpublished-import
 import SDK from '@ringcentral/sdk';
+import {AxiosResponse, Method} from 'axios';
 
 import RingCentral from '../..';
-import {AxiosResponse, Method} from 'axios';
 import {RestRequestConfig} from '../../Rest';
 import SdkExtension from '..';
 import RestException from '../../RestException';
@@ -16,6 +16,7 @@ class RingCentralExtension extends SdkExtension {
   }
 
   install(rc: RingCentral): void {
+    const request = rc.request.bind(rc);
     rc.request = async <T>(
       httpMethod: Method,
       endpoint: string,
@@ -23,6 +24,9 @@ class RingCentralExtension extends SdkExtension {
       queryParams?: {},
       config?: RestRequestConfig
     ): Promise<AxiosResponse<T>> => {
+      if (!this.enabled) {
+        return request<T>(httpMethod, endpoint, content, queryParams, config);
+      }
       const r = await this.sdk.send({
         method: httpMethod,
         url: endpoint,
