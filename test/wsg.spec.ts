@@ -1,4 +1,5 @@
 /* eslint-env jest */
+// eslint-disable-next-line node/no-unpublished-import
 import waitFor from 'wait-for-async';
 
 import RingCentral from '../src/index';

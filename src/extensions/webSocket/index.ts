@@ -1,7 +1,10 @@
+// eslint-disable-next-line node/no-unpublished-import
 import WS from 'isomorphic-ws';
-import hyperid from 'hyperid';
+// eslint-disable-next-line node/no-unpublished-import
 import waitFor from 'wait-for-async';
+// eslint-disable-next-line node/no-unpublished-import
 import {getStatusText} from 'http-status-codes';
+import hyperid from 'hyperid';
 import {AxiosResponse, Method, AxiosRequestConfig} from 'axios';
 
 import RingCentral from '../..';
