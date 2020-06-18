@@ -60,7 +60,7 @@ export default class Rest {
     });
 
     this.httpClient.interceptors.request.use(config => {
-      if (config.data instanceof FormData) {
+      if (config.data instanceof FormData && config.data.getHeaders) {
         return {
           ...config,
           headers: {...config.headers, ...config.data.getHeaders()},
