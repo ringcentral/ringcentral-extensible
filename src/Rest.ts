@@ -5,6 +5,7 @@ import axios, {
   AxiosInstance,
 } from 'axios';
 import qs from 'qs';
+import FormData from 'form-data';
 
 import RestException from './RestException';
 import {TokenInfo} from './definitions';
@@ -20,6 +21,7 @@ export type RestOptions = {
 };
 
 export type RestMethod = Method;
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export type RestResponse<T = any> = AxiosResponse;
 export type RestRequestConfig = AxiosRequestConfig;
 
@@ -55,6 +57,16 @@ export default class Rest {
       paramsSerializer: params => {
         return qs.stringify(params, {indices: false});
       },
+    });
+
+    this.httpClient.interceptors.request.use(config => {
+      if (config.data instanceof FormData) {
+        return {
+          ...config,
+          headers: {...config.headers, ...config.data.getHeaders()},
+        };
+      }
+      return config;
     });
   }
 

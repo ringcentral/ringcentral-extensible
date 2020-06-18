@@ -53,7 +53,7 @@ class Index {
       this.path(false),
       formData,
       undefined,
-      {...config, headers: {...config?.headers, ...formData.getHeaders()}}
+      config
     );
     return r.data;
   }
@@ -68,10 +68,12 @@ class Index {
     config?: RestRequestConfig
   ): Promise<string> {
     const formData = Utils.getFormData(updateUserProfileImageRequest);
-    const r = await this.rc.put<string>(this.path(false), formData, undefined, {
-      ...config,
-      headers: {...config?.headers, ...formData.getHeaders()},
-    });
+    const r = await this.rc.put<string>(
+      this.path(false),
+      formData,
+      undefined,
+      config
+    );
     return r.data;
   }
 

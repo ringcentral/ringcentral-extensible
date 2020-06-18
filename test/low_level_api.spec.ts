@@ -63,9 +63,7 @@ describe('low level API', () => {
     const formData = Utils.getFormData(requestBody);
     const r = await rc.post<FaxResponse>(
       '/restapi/v1.0/account/~/extension/~/fax',
-      formData,
-      undefined,
-      {headers: formData.getHeaders()}
+      formData
     );
     const messageInfo = r.data;
     expect(messageInfo).not.toBeUndefined();

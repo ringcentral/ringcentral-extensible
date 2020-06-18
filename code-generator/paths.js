@@ -34,7 +34,7 @@ const generate = (prefix = '/') => {
   if (R.isEmpty(nextLevels)) {
     return
   }
-  console.log('nextLeves', nextLevels)
+  console.log('nextLevels', nextLevels)
 
   R.forEach(name => {
     console.log('prefix', prefix)
@@ -222,7 +222,7 @@ class Index {
       if (multipart) {
         code += `
     const formData = Utils.getFormData(${bodyParam})
-    const r = await this.rc.${operation.method}<${responseType}>(this.path(${(!withParam && paramName) ? 'false' : ''}), formData, ${queryParams.length > 0 ? 'queryParams' : 'undefined'}, { ...config, headers: { ...config?.headers, ...formData.getHeaders() } })`
+    const r = await this.rc.${operation.method}<${responseType}>(this.path(${(!withParam && paramName) ? 'false' : ''}), formData, ${queryParams.length > 0 ? 'queryParams' : 'undefined'}, config)`
       } else if (responseType === 'Buffer') {
         code += `
     const r = await this.rc.${operation.method}<${responseType}>(this.path(${(!withParam && paramName) ? 'false' : ''})${bodyParam ? `, ${bodyParam}` : ''}, ${queryParams.length > 0 ? 'queryParams' : 'undefined'}, { ...config, responseType: 'arraybuffer' })`

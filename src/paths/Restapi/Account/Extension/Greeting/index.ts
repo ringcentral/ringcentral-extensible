@@ -40,7 +40,7 @@ class Index {
       this.path(false),
       formData,
       undefined,
-      {...config, headers: {...config?.headers, ...formData.getHeaders()}}
+      config
     );
     return r.data;
   }

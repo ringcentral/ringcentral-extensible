@@ -31,14 +31,6 @@ class FormData extends _FormData {
       super.append(key, value, options);
     }
   }
-  getHeaders(): {} {
-    if (super.getHeaders !== undefined) {
-      // for node
-      return super.getHeaders();
-    }
-    // for browser
-    return {};
-  }
 }
 
 class Utils {
