@@ -27,7 +27,7 @@ import RestCentral from 'ringcentral-extensible';
 You can also find lots of useful code snippets from [test cases](./test).
 
 
-## Extensions
+## [Extensions](./src/extensions)
 
 This SDK supports [extensions](./src/extensions). You can enable features by installing extensions.
 
