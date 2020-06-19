@@ -1,3 +1,4 @@
+// eslint-disable-next-line node/no-unpublished-import
 import PubNub from 'pubnub';
 
 import RingCentral from '../..';
@@ -33,7 +34,6 @@ class Subscription {
   rc: RingCentral;
   eventFilters: string[];
   callback: (body: {}) => void;
-  listener: PubNub.ListenerParameters;
   _subscriptionInfo?: SubscriptionInfo;
   _timeout?: NodeJS.Timeout;
   pubnub?: PubNub;
@@ -46,21 +46,6 @@ class Subscription {
     this.rc = rc;
     this.eventFilters = eventFilters;
     this.callback = callback;
-    this.listener = {
-      message: (message: {message: string}) => {
-        const decrypted = this.pubnub!.decrypt(
-          message.message,
-          this.subscriptionInfo!.deliveryMode!.encryptionKey,
-          {
-            encryptKey: false,
-            keyEncoding: 'base64',
-            keyLength: 128,
-            mode: 'ecb',
-          }
-        );
-        this.callback(decrypted);
-      },
-    };
   }
 
   _requestBody() {
@@ -95,7 +80,21 @@ class Subscription {
     this.pubnub = new PubNub({
       subscribeKey: this.subscriptionInfo!.deliveryMode!.subscriberKey!,
     });
-    this.pubnub.addListener(this.listener);
+    this.pubnub.addListener({
+      message: (message: {message: string}) => {
+        const decrypted = this.pubnub!.decrypt(
+          message.message,
+          this.subscriptionInfo!.deliveryMode!.encryptionKey,
+          {
+            encryptKey: false,
+            keyEncoding: 'base64',
+            keyLength: 128,
+            mode: 'ecb',
+          }
+        );
+        this.callback(decrypted);
+      },
+    });
     this.pubnub.subscribe({
       channels: [this.subscriptionInfo!.deliveryMode!.address!],
     });
@@ -123,11 +122,12 @@ class Subscription {
     if (!this.subscriptionInfo) {
       return;
     }
-    this.pubnub!.unsubscribe({
-      channels: [this.subscriptionInfo!.deliveryMode!.address!],
-    });
-    this.pubnub!.removeListener(this.listener!);
+    this.pubnub!.unsubscribeAll();
+    this.pubnub!.stop();
     this.pubnub = undefined;
+    if (this._timeout) {
+      clearTimeout(this._timeout);
+    }
     await this.rc.delete(
       `/restapi/v1.0/subscription/${this.subscriptionInfo.id}`
     );

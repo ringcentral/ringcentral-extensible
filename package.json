@@ -35,6 +35,7 @@
     "isomorphic-ws": "^4.0.1",
     "jest": "^26.0.1",
     "lower-case-first": "^2.0.1",
+    "pubnub": "^4.28.1",
     "ramda": "^0.27.0",
     "ts-jest": "^26.1.0",
     "typescript": "^3.9.5",

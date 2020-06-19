@@ -97,8 +97,7 @@ yarn test
 - convert code generator to TS
 - compare it with C# sdk and see what are missing
 - PubNub
-    - optional, since we will mainly use WSG instead.
-    - It will be available as an extension
+    - test it
 - WSG
     - Support unsubscribe
     - according to wiki, subscription needs refreshing
