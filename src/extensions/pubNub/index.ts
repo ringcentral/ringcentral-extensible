@@ -13,6 +13,12 @@ class PubNubExtension extends SdkExtension {
     this.rc = rc;
   }
 
+  set enabled(value: boolean) {
+    for (const subscription of this.subscriptions ?? []) {
+      subscription.enabled = value;
+    }
+  }
+
   async subscribe(
     eventFilters: string[],
     callback: (body: {}) => void
@@ -36,6 +42,7 @@ class Subscription {
   callback: (body: {}) => void;
   timeout?: NodeJS.Timeout;
   pubnub?: PubNub;
+  enabled = true;
 
   constructor(
     rc: RingCentral,
@@ -81,6 +88,9 @@ class Subscription {
     });
     this.pubnub.addListener({
       message: (message: {message: string}) => {
+        if (!this.enabled) {
+          return;
+        }
         const decrypted = this.pubnub!.decrypt(
           message.message,
           this.subscriptionInfo!.deliveryMode!.encryptionKey,
