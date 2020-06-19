@@ -3,7 +3,7 @@ import PubNub from 'pubnub';
 
 import RingCentral from '../..';
 import SdkExtension from '..';
-import {SubscriptionInfo} from '../../definitions';
+import {SubscriptionInfo, CreateSubscriptionRequest} from '../../definitions';
 
 class PubNubExtension extends SdkExtension {
   rc!: RingCentral;
@@ -34,8 +34,7 @@ class Subscription {
   rc: RingCentral;
   eventFilters: string[];
   callback: (body: {}) => void;
-  _subscriptionInfo?: SubscriptionInfo;
-  _timeout?: NodeJS.Timeout;
+  timeout?: NodeJS.Timeout;
   pubnub?: PubNub;
 
   constructor(
@@ -48,35 +47,35 @@ class Subscription {
     this.callback = callback;
   }
 
-  _requestBody() {
+  get requestBody(): CreateSubscriptionRequest {
     return {
       deliveryMode: {transportType: 'PubNub', encryption: true},
       eventFilters: this.eventFilters,
     };
   }
 
+  _subscriptionInfo?: SubscriptionInfo;
   get subscriptionInfo(): SubscriptionInfo | undefined {
     return this._subscriptionInfo;
   }
   set subscriptionInfo(_subscription) {
     this._subscriptionInfo = _subscription;
-    if (this._timeout) {
-      clearTimeout(this._timeout);
-      this._timeout = undefined;
+    if (this.timeout) {
+      global.clearTimeout(this.timeout);
+      this.timeout = undefined;
     }
     if (_subscription) {
-      this._timeout = setTimeout(() => {
+      this.timeout = global.setTimeout(() => {
         this.refresh();
       }, ((_subscription.expiresIn ?? 900) - 120) * 1000);
     }
   }
 
   async subscribe() {
-    const r = await this.rc.post(
-      '/restapi/v1.0/subscription',
-      this._requestBody()
-    );
-    this.subscriptionInfo = r.data;
+    this.subscriptionInfo = await this.rc
+      .restapi()
+      .subscription()
+      .post(this.requestBody);
     this.pubnub = new PubNub({
       subscribeKey: this.subscriptionInfo!.deliveryMode!.subscriberKey!,
     });
@@ -105,11 +104,10 @@ class Subscription {
       return;
     }
     try {
-      const r = await this.rc.put(
-        `/restapi/v1.0/subscription/${this.subscriptionInfo!.id}`,
-        this._requestBody()
-      );
-      this.subscriptionInfo = r.data;
+      this.subscriptionInfo = await this.rc
+        .restapi()
+        .subscription(this.subscriptionInfo!.id)
+        .put(this.requestBody);
     } catch (e) {
       if (e.response && e.response.status === 404) {
         // subscription expired
@@ -122,15 +120,14 @@ class Subscription {
     if (!this.subscriptionInfo) {
       return;
     }
+    if (this.timeout) {
+      global.clearTimeout(this.timeout);
+      this.timeout = undefined;
+    }
     this.pubnub!.unsubscribeAll();
     this.pubnub!.stop();
     this.pubnub = undefined;
-    if (this._timeout) {
-      clearTimeout(this._timeout);
-    }
-    await this.rc.delete(
-      `/restapi/v1.0/subscription/${this.subscriptionInfo.id}`
-    );
+    await this.rc.restapi().subscription(this.subscriptionInfo.id).delete();
     this.subscriptionInfo = undefined;
   }
 }

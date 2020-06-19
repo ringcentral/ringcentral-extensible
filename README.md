@@ -96,8 +96,6 @@ yarn test
 - rename project to `ringcentral-extensible` or `ringcentral-types`
 - convert code generator to TS
 - compare it with C# sdk and see what are missing
-- PubNub
-    - test it
 - WSG
     - Support unsubscribe
     - according to wiki, subscription needs refreshing
