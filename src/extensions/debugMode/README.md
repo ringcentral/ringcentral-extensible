@@ -6,8 +6,8 @@ Provide debug mode for this SDK, it supports Rest API over both HTTPS and WebSoc
 ## Usage
 
 ```ts
-import RingCentral from 'ringcentral-unified';
-import DebugModeExtension from 'ringcentral-unified/build/extensions/debugMode';
+import RingCentral from 'ringcentral-extensible';
+import DebugModeExtension from 'ringcentral-extensible/build/extensions/debugMode';
 
 const rc = new RingCentral(...);
 const debugModeExtension = new DebugModeExtension();
@@ -68,7 +68,7 @@ Request:
     "url": "/restapi/v1.0/account/~/extension/~/message-store",
     "headers": {
     "Accept": "application/json, text/plain, */*",
-    "X-User-Agent": "Unknown/0.0.1 ringcentral/ringcentral-unified-ts/0.5.5 via https",
+    "X-User-Agent": "Unknown/0.0.1 ringcentral/ringcentral-extensible/0.5.5 via https",
     "Authorization": "Bearer U0pDMTFQMDFQQVMwMHxBQUFmUXE0dG9FbTBBNll2eDlWYUhoNkQyblBWVXlXZnc0b0VxWldtVjNTZkw1MGExNG8wbHdscU4tOVEwU1RiWU9IYUt3NUY2Y2lVQk9oaDE4amlSN2VqTDl0VlhNMnZNYzVOa1FLZWJyejJRRDk3VnFESkdIV3k2U1RuU28zeG52RHlPdW5OcXFIR3FkbU1IQWhTaUluY0psN3A2ckQxbEhPRG1MdkIxX0FpSlhQeXlES2tYaURWejkwWFdiVjlfQXxrRjF4RVF8S1BrdVJvLVhBMlhIMXdlcnV6VVdjd3xBUQ",
     "User-Agent": "axios/0.19.2"
     }

@@ -159,7 +159,7 @@ class WebSocketExtension extends SdkExtension {
       ..._config.headers,
       'X-User-Agent': `${this.rc.rest!.appName}/${
         this.rc.rest!.appVersion
-      } ringcentral/ringcentral-unified-ts/${version} via wss`,
+      } ringcentral/ringcentral-extensible/${version} via wss`,
     };
     _config.headers = {
       ..._config.headers,

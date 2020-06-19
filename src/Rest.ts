@@ -49,7 +49,7 @@ export default class Rest {
     this.httpClient = axios.create({
       baseURL: this.server,
       headers: {
-        'X-User-Agent': `${this.appName}/${this.appVersion} ringcentral/ringcentral-unified-ts/${version} via https`,
+        'X-User-Agent': `${this.appName}/${this.appVersion} ringcentral/ringcentral-extensible/${version} via https`,
       },
       validateStatus: () => {
         return true;

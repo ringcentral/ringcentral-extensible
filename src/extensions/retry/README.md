@@ -13,8 +13,8 @@ yarn add wait-for-async
 ## Usage
 
 ```ts
-import RingCentral from 'ringcentral-unified';
-import RetryExtension from 'ringcentral-unified/build/extensions/retry';
+import RingCentral from 'ringcentral-extensible';
+import RetryExtension from 'ringcentral-extensible/build/extensions/retry';
 
 const rc = new RingCentral(...);
 const retryExtension = new RetryExtension(retryOptions);

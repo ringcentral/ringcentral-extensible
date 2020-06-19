@@ -19,8 +19,8 @@ yarn add @types/ws
 ## Usage
 
 ```ts
-import RingCentral from 'ringcentral-unified';
-import WebSocketExtension from 'ringcentral-unified/build/extensions/webSocket';
+import RingCentral from 'ringcentral-extensible';
+import WebSocketExtension from 'ringcentral-extensible/build/extensions/webSocket';
 
 const rc = new RingCentral(...);
 const webSocketExtension = new WebSocketExtension(webSocketOptions);

@@ -19,8 +19,8 @@ yarn add @types/pubnub
 ## Usage
 
 ```ts
-import RingCentral from 'ringcentral-unified';
-import PubNubExtension from 'ringcentral-unified/build/extensions/pubNub';
+import RingCentral from 'ringcentral-extensible';
+import PubNubExtension from 'ringcentral-extensible/build/extensions/pubNub';
 
 const rc = new RingCentral(...);
 const pubNubExtension = new PubNubExtension();

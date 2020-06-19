@@ -1,31 +1,22 @@
-# RingCentral Unified SDK for TypeScript
+# RingCentral Extensible SDK
 
-[![Build Status](https://travis-ci.com/ringcentral/ringcentral-unified-ts.svg?token=316MqomevzwR7zFzsQz2&branch=master)](https://travis-ci.com/ringcentral/ringcentral-unified-ts)
+[![Build Status](https://travis-ci.com/ringcentral/ringcentral-extensible.svg?token=316MqomevzwR7zFzsQz2&branch=master)](https://travis-ci.com/ringcentral/ringcentral-extensible)
 [![Code Style: Google](https://img.shields.io/badge/code%20style-google-blueviolet.svg)](https://github.com/google/gts)
+
+RingCentral Extensible is a SDK with a tiny core and lots of extensions.
+It is an endeavour to get rid of bloated SDK. You install extensions on demand.
 
 
 ## Installation
 
 ```
-yarn add ringcentral-unified
-```
-
-or
-
-```
-npm install ringcentral-unified --save
+yarn add ringcentral-extensible
 ```
 
 Then you should be able to import the SDK like this:
 
 ```ts
-import RestCentral from 'ringcentral-unified';
-```
-
-or
-
-```js
-const RestCentral = require('ringcentral-unified').default;
+import RestCentral from 'ringcentral-extensible';
 ```
 
 
@@ -93,7 +84,6 @@ yarn test
 
 ### Todo
 
-- rename project to `ringcentral-extensible` or `ringcentral-types`
 - convert code generator to TS
 - compare it with C# sdk and see what are missing
 - WSG

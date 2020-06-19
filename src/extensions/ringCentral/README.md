@@ -14,14 +14,14 @@ yarn add @ringcentral/sdk
 
 ```ts
 import SDK from '@ringcentral/sdk';
-import RingCentral from 'ringcentral-unified';
-import RingCentralExtension from 'ringcentral-unified/build/extensions/ringCentral';
+import RingCentral from 'ringcentral-extensible';
+import RingCentralExtension from 'ringcentral-extensible/build/extensions/ringCentral';
 
 // @ringcentral/sdk
 const sdk = new SDK({clientId, clientSecret, server});
 await sdk.login({username, extension, password});
 
-// ringcentral-unified + ringcentral extension
+// ringcentral-extensible + ringcentral extension
 const rc = new RingCentral();
 const ringCentralExtension = new RingCentralExtension(sdk);
 rc.installExtension(ringCentralExtension);
@@ -44,7 +44,7 @@ For a working sample, please check this [test case](../../../test/ringcentral_ex
 This extension makes `@ringcentral/sdk` as HTTP engine. to switch back to `axios`, just disable this extension:
 
 ```ts
-// ringcentral-unified + ringcentral extension
+// ringcentral-extensible + ringcentral extension
 const rc = new RingCentral({...});
 const ringCentralExtension = new RingCentralExtension(sdk);
 rc.installExtension(ringCentralExtension);
