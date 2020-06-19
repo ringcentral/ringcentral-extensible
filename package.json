@@ -44,7 +44,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-push": "gts fix && yarn test"
+      "pre-push": "gts fix"
     }
   }
 }
