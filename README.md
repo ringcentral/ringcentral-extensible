@@ -94,11 +94,6 @@ yarn test
 ### Todo
 
 - rename project to `ringcentral-extensible` or `ringcentral-types`
-- create project `unified-form-data`
-    - create `multipart-form-data-builder` to replace `form-data`.
-        - Should support both node and browser
-- Run tests in browser env
-- no more `{}` type
 - convert code generator to TS
 - compare it with C# sdk and see what are missing
 - PubNub

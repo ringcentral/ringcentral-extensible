@@ -52,6 +52,11 @@ Event Emitter Extension emits API call related events.
 RingCentral Extension makes [@ringcentral/sdk](https://www.npmjs.com/package/@ringcentral/sdk) the HTTP engine.
 
 
-# [WebSocket Extension](./webSocket)
+## [WebSocket Extension](./webSocket)
 
 WebSocket Extension adds support for WebSocket protocol.
+
+
+## [PubNub Extension](./pubNub)
+
+PubNub Extension adds PubNub notifications feature.
