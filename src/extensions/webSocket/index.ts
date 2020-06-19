@@ -75,7 +75,7 @@ class WebSocketExtension extends SdkExtension {
   static sandboxServer = 'wss://ws-api.devtest.ringcentral.com/ws';
   static productionServer = 'wss://ws-api.ringcentral.com/ws';
 
-  rc?: RingCentral;
+  rc!: RingCentral;
   server: string;
   ws: WS;
   opened = false;
@@ -157,13 +157,13 @@ class WebSocketExtension extends SdkExtension {
     };
     _config.headers = {
       ..._config.headers,
-      'X-User-Agent': `${this.rc!.rest!.appName}/${
-        this.rc!.rest!.appVersion
+      'X-User-Agent': `${this.rc.rest!.appName}/${
+        this.rc.rest!.appVersion
       } ringcentral/ringcentral-unified-ts/${version} via wss`,
     };
     _config.headers = {
       ..._config.headers,
-      Authorization: `Bearer ${this.rc!.token?.access_token}`,
+      Authorization: `Bearer ${this.rc.token?.access_token}`,
     };
     await this.waitForOpen();
     return new Promise((resolve, reject) => {
