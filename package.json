@@ -1,6 +1,6 @@
 {
   "name": "ringcentral-extensible",
-  "version": "0.8.0",
+  "version": "0.8.1",
   "description": "RingCentral extensible",
   "main": "build/index.js",
   "types": "build/index.d.ts",
