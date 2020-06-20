@@ -21,7 +21,7 @@ class PubNubExtension extends SdkExtension {
 
   async subscribe(
     eventFilters: string[],
-    callback: (body: {}) => void
+    callback: (event: {}) => void
   ): Promise<Subscription> {
     const subscription = new Subscription(this.rc, eventFilters, callback);
     await subscription.subscribe();
@@ -39,7 +39,7 @@ class PubNubExtension extends SdkExtension {
 class Subscription {
   rc: RingCentral;
   eventFilters: string[];
-  callback: (body: {}) => void;
+  callback: (event: {}) => void;
   timeout?: NodeJS.Timeout;
   pubnub?: PubNub;
   enabled = true;
@@ -47,7 +47,7 @@ class Subscription {
   constructor(
     rc: RingCentral,
     eventFilters: string[],
-    callback: (body: {}) => void
+    callback: (event: {}) => void
   ) {
     this.rc = rc;
     this.eventFilters = eventFilters;

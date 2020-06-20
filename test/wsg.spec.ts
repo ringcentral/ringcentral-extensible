@@ -19,12 +19,12 @@ describe('WSG', () => {
       extension: process.env.RINGCENTRAL_EXTENSION!,
       password: process.env.RINGCENTRAL_PASSWORD!,
     });
-    const websocketExtension = new WebSocketExtension({
+    const webSocketExtension = new WebSocketExtension({
       server: process.env.RINGCENTRAL_WSG_SERVER_URL!,
     });
-    rc.installExtension(websocketExtension);
+    rc.installExtension(webSocketExtension);
     let eventCount = 0;
-    await websocketExtension.subscribe(
+    await webSocketExtension.subscribe(
       ['/restapi/v1.0/account/~/extension/~/message-store'],
       event => {
         expect(event).toBeDefined();

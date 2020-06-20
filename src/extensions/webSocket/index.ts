@@ -111,7 +111,7 @@ class WebSocketExtension extends SdkExtension {
     this.ws.close();
   }
 
-  async subscribe(eventFilters: string[], callback: (body: {}) => void) {
+  async subscribe(eventFilters: string[], callback: (event: {}) => void) {
     const r = await this.request<SubscriptionInfo>(
       'POST',
       '/restapi/v1.0/subscription',
