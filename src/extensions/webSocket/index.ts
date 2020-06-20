@@ -163,7 +163,7 @@ class WebSocketExtension extends SdkExtension {
     };
     _config.headers = {
       ..._config.headers,
-      Authorization: `Bearer ${this.rc.token?.access_token}`,
+      Authorization: `Bearer ${(await this.rc.token)!.access_token}`,
     };
     await this.waitForOpen();
     return new Promise((resolve, reject) => {

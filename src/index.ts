@@ -17,13 +17,10 @@ type AuthCodeFlowOptions = {
 
 export default class RingCentral {
   sdkExtensions: SdkExtension[] = [];
-
-  rest?: Rest;
+  rest: Rest;
 
   constructor(restOptions?: RestOptions) {
-    if (restOptions) {
-      this.rest = new Rest(restOptions);
-    }
+    this.rest = new Rest(restOptions ?? {});
   }
 
   installExtension(sdkExtension: SdkExtension) {
@@ -32,10 +29,10 @@ export default class RingCentral {
   }
 
   get token() {
-    return this.rest?.token;
+    return this.rest.token;
   }
   set token(token) {
-    this.rest!.token = token;
+    this.rest.token = token;
   }
 
   async request<T>(
@@ -45,13 +42,7 @@ export default class RingCentral {
     queryParams?: {},
     config?: RestRequestConfig
   ): Promise<RestResponse<T>> {
-    return this.rest!.request<T>(
-      method,
-      endpoint,
-      content,
-      queryParams,
-      config
-    );
+    return this.rest.request<T>(method, endpoint, content, queryParams, config);
   }
 
   async get<T>(
@@ -169,9 +160,8 @@ export default class RingCentral {
       // nothing to revoke
       return;
     }
-    if (!this.rest?.clientId || !this.rest?.clientSecret) {
+    if (!this.rest.clientId || !this.rest.clientSecret) {
       // no clientId or clientSecret, the token is from external source, cannot revoke
-      this.token = undefined;
       return;
     }
     tokenToRevoke =

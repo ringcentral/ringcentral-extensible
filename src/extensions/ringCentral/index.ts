@@ -15,6 +15,11 @@ class RingCentralExtension extends SdkExtension {
   }
 
   install(rc: RingCentral): void {
+    Object.defineProperty(rc, 'token', {
+      get: async () => {
+        return await this.sdk.platform().auth().data();
+      },
+    });
     const request = rc.request.bind(rc);
     rc.request = async <T>(
       method: RestMethod,

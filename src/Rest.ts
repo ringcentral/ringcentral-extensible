@@ -12,7 +12,7 @@ import {TokenInfo} from './definitions';
 import {version} from '../package.json';
 
 export type RestOptions = {
-  server: string;
+  server?: string;
   clientId?: string;
   clientSecret?: string;
   token?: TokenInfo;
@@ -39,7 +39,7 @@ export default class Rest {
   httpClient: AxiosInstance;
 
   constructor(options: RestOptions) {
-    this.server = options.server;
+    this.server = options.server ?? Rest.sandboxServer;
     this.clientId = options.clientId ?? '';
     this.clientSecret = options.clientSecret ?? '';
     this.token = options.token ?? undefined;
