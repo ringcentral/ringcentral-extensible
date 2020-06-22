@@ -85,6 +85,7 @@ class Subscription {
       .post(this.requestBody);
     this.pubnub = new PubNub({
       subscribeKey: this.subscriptionInfo!.deliveryMode!.subscriberKey!,
+      origin: 'ringcentral.pubnubapi.com',
     });
     this.pubnub.addListener({
       message: (message: {message: string}) => {
