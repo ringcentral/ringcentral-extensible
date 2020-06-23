@@ -84,7 +84,10 @@ export default class Rest {
       params: queryParams,
       ...config,
     };
-    if (endpoint.startsWith('/restapi/oauth/')) {
+    if (
+      endpoint === '/restapi/oauth/token' ||
+      endpoint === '/restapi/oauth/revoke'
+    ) {
       // basic token
       _config.auth = {
         username: this.clientId,

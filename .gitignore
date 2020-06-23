@@ -2,5 +2,6 @@ node_modules/
 build/
 .env
 .env.prod
+.env.lab
 temp.*
 .DS_Store
