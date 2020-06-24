@@ -25,6 +25,7 @@ import WebSocketExtension from 'ringcentral-extensible/build/extensions/webSocke
 const rc = new RingCentral(...);
 const webSocketExtension = new WebSocketExtension(webSocketOptions);
 rc.installExtension(webSocketExtension);
+await webSocketExtension.connect();
 ```
 
 You can setup subscriptions:
@@ -42,8 +43,7 @@ You can also make Rest API calls over WebSocket if you specified `webSocketOptio
 
 ```ts
 const webSocketExtension = new WebSocketExtension({
-  server: '...',
-  restOverWebSocket: true
+  restOverWebSocket: true,
 });
 rc.installExtension(webSocketExtension);
 
@@ -59,19 +59,10 @@ console.log(extInfo.id);
 
 ```ts
 type WebSocketOptions = {
-  server: string;
   restOverWebSocket?: boolean;
+  debugMode?: boolean;
 };
 ```
-
-
-### server
-
-`server` defines WebSocket server uri.
-
-For sandbox it is `wss://ws-api.devtest.ringcentral.com/ws` while for production it is `wss://ws-api.ringcentral.com/ws`.
-
-You may have different server uri depending on your testing/running environment.
 
 
 ### restOverWebSocket
@@ -87,3 +78,12 @@ Please note that, not all Rest API calls can be done over WebSocket protocol. Th
 - Authorization, such as get token and revoke token
 
 If `restOverWebSocket` is true and an Rest API call cannot be done over WebSocket, it will be done over HTTPS instead.
+
+
+### debugMode
+
+`debugMode` indicates whether to enable debug mode.
+
+Default value is false.
+
+If enabled, WebSocket incoming message and outgoing message will be printed using `console.debug`.

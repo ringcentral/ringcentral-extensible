@@ -16,6 +16,7 @@ const uuid = hyperid();
 
 export type WebSocketOptions = {
   restOverWebSocket?: boolean;
+  debugMode?: boolean;
 };
 export type WsgEvent = {
   data: string;
@@ -31,10 +32,12 @@ export type WsgMeta = {
 
 class WebSocketExtension extends SdkExtension {
   restOverWebsocket: boolean;
+  debugMode: boolean;
 
   constructor(options?: WebSocketOptions) {
     super();
     this.restOverWebsocket = options?.restOverWebSocket ?? false;
+    this.debugMode = options?.debugMode ?? false;
   }
 
   install(rc: RingCentral): void {
@@ -81,14 +84,25 @@ class WebSocketExtension extends SdkExtension {
       this.ws.removeEventListener('open', openHandler);
     };
     this.ws.addEventListener('open', openHandler);
-    // todo: make the following part of debug mode
-    this.ws.addEventListener('message', (event: WsgEvent) => {
-      console.log(
-        '*** WebSocket incoming message: ***\n',
-        JSON.stringify(JSON.parse(event.data), null, 2),
-        '\n******'
-      );
-    });
+
+    if (this.debugMode) {
+      const send = this.ws.send.bind(this.ws);
+      this.ws.send = (str: string) => {
+        send(str);
+        console.debug(
+          `*** WebSocket outgoing message: ***
+${JSON.stringify(JSON.parse(str), null, 2)}
+******`
+        );
+      };
+      this.ws.addEventListener('message', (event: WsgEvent) => {
+        console.debug(
+          `*** WebSocket incoming message: ***
+${JSON.stringify(JSON.parse(event.data), null, 2)}
+******`
+        );
+      });
+    }
   }
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -189,11 +203,6 @@ class WebSocketExtension extends SdkExtension {
         body.push(_config.data);
       }
       this.ws.send(JSON.stringify(body));
-      console.log(
-        '*** WebSocket outgoing message: ***\n',
-        JSON.stringify(body, null, 2),
-        '\n******'
-      );
       const handler = (event: WsgEvent) => {
         const [meta, body]: [WsgMeta, T] = WebSocketExtension.splitWsgData(
           event.data

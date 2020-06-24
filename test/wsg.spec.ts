@@ -27,7 +27,7 @@ describe('WSG', () => {
       password: process.env.RINGCENTRAL_PASSWORD!,
     });
     const webSocketExtension = new WebSocketExtension({
-      restOverWebSocket: true,
+      // debugMode: true,
     });
     rc.installExtension(webSocketExtension);
     await webSocketExtension.connect();
