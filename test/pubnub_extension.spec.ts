@@ -1,5 +1,5 @@
+/* eslint-disable node/no-unpublished-import */
 /* eslint-env jest */
-// eslint-disable-next-line node/no-unpublished-import
 import waitFor from 'wait-for-async';
 
 import RingCentral from '../src/index';
@@ -23,7 +23,10 @@ describe('PubNub extension', () => {
     rc.installExtension(pubNubExtension);
     let eventCount = 0;
     await pubNubExtension.subscribe(
-      ['/restapi/v1.0/account/~/extension/~/message-store'],
+      [
+        // '/restapi/v1.0/account/~/extension/~/message-store',
+        '/restapi/v1.0/account/~/extension/~/message-store/instant?type=SMS',
+      ],
       body => {
         expect(body).toBeDefined();
         eventCount += 1;
@@ -36,7 +39,7 @@ describe('PubNub extension', () => {
       .sms()
       .post({
         from: {phoneNumber: process.env.RINGCENTRAL_USERNAME!},
-        to: [{phoneNumber: process.env.RINGCENTRAL_RECEIVER!}],
+        to: [{phoneNumber: process.env.RINGCENTRAL_USERNAME!}], // send sms to oneself
         text: 'Hello world',
       });
     const successful = await waitFor({
