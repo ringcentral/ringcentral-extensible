@@ -6,7 +6,7 @@ import waitFor from 'wait-for-async';
 
 import RingCentral from '../src/index';
 import RingCentralExtension from '../src/extensions/ringCentral';
-import WebSocketExtension from '../src/extensions/webSocket';
+import WebSocketExtension from '../src/extensions/webSocketLegacy';
 
 jest.setTimeout(64000);
 
