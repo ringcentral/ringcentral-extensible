@@ -1,10 +1,7 @@
-// eslint-disable-next-line node/no-unpublished-import
+/* eslint-disable node/no-unpublished-import */
 import WS from 'isomorphic-ws';
-// eslint-disable-next-line node/no-unpublished-import
 import waitFor from 'wait-for-async';
-// eslint-disable-next-line node/no-unpublished-import
 import {getStatusText} from 'http-status-codes';
-// eslint-disable-next-line node/no-unpublished-import
 import hyperid from 'hyperid';
 
 import RingCentral from '../..';
@@ -13,11 +10,11 @@ import SdkExtension from '..';
 import RestException from '../../RestException';
 import {version} from '../../../package.json';
 import {SubscriptionInfo} from '../../definitions';
+import {WsToken} from './types';
 
 const uuid = hyperid();
 
 export type WebSocketOptions = {
-  server: string;
   restOverWebSocket?: boolean;
 };
 export type WsgEvent = {
@@ -35,16 +32,9 @@ export type WsgMeta = {
 class WebSocketExtension extends SdkExtension {
   restOverWebsocket: boolean;
 
-  constructor(options: WebSocketOptions) {
+  constructor(options?: WebSocketOptions) {
     super();
-    this.server = options.server;
-    this.restOverWebsocket = options.restOverWebSocket ?? false;
-    this.ws = new WS(this.server);
-    const openHandler = () => {
-      this.opened = true;
-      this.ws.removeEventListener('open', openHandler);
-    };
-    this.ws.addEventListener('open', openHandler);
+    this.restOverWebsocket = options?.restOverWebSocket ?? false;
   }
 
   install(rc: RingCentral): void {
@@ -76,9 +66,30 @@ class WebSocketExtension extends SdkExtension {
   static productionServer = 'wss://ws-api.ringcentral.com/ws';
 
   rc!: RingCentral;
-  server: string;
-  ws: WS;
+  wsToken!: WsToken;
+  ws!: WS;
   opened = false;
+
+  async connect() {
+    const r = await this.rc.post('/restapi/oauth/wstoken');
+    this.wsToken = r.data as WsToken;
+    this.ws = new WS(
+      this.wsToken.uri + '?access_token=' + this.wsToken.ws_access_token
+    );
+    const openHandler = () => {
+      this.opened = true;
+      this.ws.removeEventListener('open', openHandler);
+    };
+    this.ws.addEventListener('open', openHandler);
+    // todo: make the following part of debug mode
+    this.ws.addEventListener('message', (event: WsgEvent) => {
+      console.log(
+        '*** WebSocket incoming message: ***\n',
+        JSON.stringify(JSON.parse(event.data), null, 2),
+        '\n******'
+      );
+    });
+  }
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   static splitWsgData(wsgData: string): [WsgMeta, any] {
@@ -149,7 +160,7 @@ class WebSocketExtension extends SdkExtension {
   ): Promise<RestResponse<T>> {
     const _config: RestRequestConfig = {
       method: method,
-      baseURL: this.server,
+      baseURL: this.wsToken.uri,
       url: endpoint,
       data: content,
       params: queryParams,
@@ -160,10 +171,6 @@ class WebSocketExtension extends SdkExtension {
       'X-User-Agent': `${this.rc.rest!.appName}/${
         this.rc.rest!.appVersion
       } ringcentral/ringcentral-extensible/${version} via wss`,
-    };
-    _config.headers = {
-      ..._config.headers,
-      Authorization: `Bearer ${(await this.rc.token)!.access_token}`,
     };
     await this.waitForOpen();
     return new Promise((resolve, reject) => {
@@ -182,6 +189,11 @@ class WebSocketExtension extends SdkExtension {
         body.push(_config.data);
       }
       this.ws.send(JSON.stringify(body));
+      console.log(
+        '*** WebSocket outgoing message: ***\n',
+        JSON.stringify(body, null, 2),
+        '\n******'
+      );
       const handler = (event: WsgEvent) => {
         const [meta, body]: [WsgMeta, T] = WebSocketExtension.splitWsgData(
           event.data

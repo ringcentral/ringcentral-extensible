@@ -1,14 +1,21 @@
+/* eslint-disable node/no-unpublished-import */
 /* eslint-env jest */
-// eslint-disable-next-line node/no-unpublished-import
 import waitFor from 'wait-for-async';
+import path from 'path';
+import dotenv from 'dotenv-override-true';
 
+import './types.d';
 import RingCentral from '../src/index';
 import WebSocketExtension from '../src/extensions/webSocket';
 
-jest.setTimeout(64000);
+jest.setTimeout(128000);
+dotenv.config({path: path.join(__dirname, '..', '.env.lab')});
 
 describe('WSG', () => {
   test('subscription', async () => {
+    if (!process.env.IS_LAB_ENV) {
+      return;
+    }
     const rc = new RingCentral({
       clientId: process.env.RINGCENTRAL_CLIENT_ID!,
       clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET!,
@@ -20,12 +27,16 @@ describe('WSG', () => {
       password: process.env.RINGCENTRAL_PASSWORD!,
     });
     const webSocketExtension = new WebSocketExtension({
-      server: process.env.RINGCENTRAL_WSG_SERVER_URL!,
+      restOverWebSocket: true,
     });
     rc.installExtension(webSocketExtension);
+    await webSocketExtension.connect();
     let eventCount = 0;
     await webSocketExtension.subscribe(
-      ['/restapi/v1.0/account/~/extension/~/message-store'],
+      [
+        '/restapi/v1.0/account/~/extension/~/message-store',
+        '/restapi/v1.0/account/~/extension/~/message-store/instant?type=SMS',
+      ],
       event => {
         expect(event).toBeDefined();
         eventCount += 1;
@@ -38,13 +49,13 @@ describe('WSG', () => {
       .sms()
       .post({
         from: {phoneNumber: process.env.RINGCENTRAL_USERNAME!},
-        to: [{phoneNumber: process.env.RINGCENTRAL_RECEIVER!}],
+        to: [{phoneNumber: process.env.RINGCENTRAL_USERNAME!}], // send sms to oneself
         text: 'Hello world',
       });
     const successful = await waitFor({
       condition: () => eventCount > 0,
       interval: 1000,
-      times: 30,
+      times: 60,
     });
     await rc.revoke();
     expect(successful).toBeTruthy();
@@ -52,6 +63,9 @@ describe('WSG', () => {
   });
 
   test('Rest API call via WebSocket', async () => {
+    if (!process.env.IS_LAB_ENV) {
+      return;
+    }
     const rc = new RingCentral({
       clientId: process.env.RINGCENTRAL_CLIENT_ID!,
       clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET!,
@@ -62,11 +76,11 @@ describe('WSG', () => {
       extension: process.env.RINGCENTRAL_EXTENSION!,
       password: process.env.RINGCENTRAL_PASSWORD!,
     });
-    const websocketExtension = new WebSocketExtension({
-      server: process.env.RINGCENTRAL_WSG_SERVER_URL!,
+    const webSocketExtension = new WebSocketExtension({
       restOverWebSocket: true,
     });
-    rc.installExtension(websocketExtension);
+    rc.installExtension(webSocketExtension);
+    await webSocketExtension.connect();
 
     const extInfo = await rc.restapi().account().extension().get();
     expect(extInfo).toBeDefined();
