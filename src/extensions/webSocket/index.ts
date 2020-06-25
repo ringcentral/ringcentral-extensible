@@ -63,6 +63,7 @@ class WebSocketExtension extends SdkExtension {
       }
       return this.request<T>(method, endpoint, content, queryParams, config);
     };
+    this.connect();
   }
 
   static sandboxServer = 'wss://ws-api.devtest.ringcentral.com/ws';
@@ -84,7 +85,6 @@ class WebSocketExtension extends SdkExtension {
       this.ws.removeEventListener('open', openHandler);
     };
     this.ws.addEventListener('open', openHandler);
-
     if (this.debugMode) {
       const send = this.ws.send.bind(this.ws);
       this.ws.send = (str: string) => {
@@ -172,6 +172,7 @@ ${JSON.stringify(JSON.parse(event.data), null, 2)}
     queryParams?: {},
     config?: RestRequestConfig
   ): Promise<RestResponse<T>> {
+    await this.waitForOpen();
     const _config: RestRequestConfig = {
       method: method,
       baseURL: this.wsToken.uri,
@@ -186,7 +187,6 @@ ${JSON.stringify(JSON.parse(event.data), null, 2)}
         this.rc.rest!.appVersion
       } ringcentral/ringcentral-extensible/${version} via wss`,
     };
-    await this.waitForOpen();
     return new Promise((resolve, reject) => {
       const messageId = uuid();
       const body = [

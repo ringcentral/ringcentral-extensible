@@ -30,7 +30,6 @@ describe('WSG', () => {
       // debugMode: true,
     });
     rc.installExtension(webSocketExtension);
-    await webSocketExtension.connect();
     let eventCount = 0;
     await webSocketExtension.subscribe(
       [
@@ -80,7 +79,6 @@ describe('WSG', () => {
       restOverWebSocket: true,
     });
     rc.installExtension(webSocketExtension);
-    await webSocketExtension.connect();
 
     const extInfo = await rc.restapi().account().extension().get();
     expect(extInfo).toBeDefined();

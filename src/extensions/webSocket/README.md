@@ -25,7 +25,6 @@ import WebSocketExtension from 'ringcentral-extensible/build/extensions/webSocke
 const rc = new RingCentral(...);
 const webSocketExtension = new WebSocketExtension(webSocketOptions);
 rc.installExtension(webSocketExtension);
-await webSocketExtension.connect();
 ```
 
 You can setup subscriptions:
