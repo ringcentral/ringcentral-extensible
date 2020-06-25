@@ -9,7 +9,7 @@ import {RestRequestConfig, RestResponse, RestMethod} from '../../Rest';
 import SdkExtension from '..';
 import RestException from '../../RestException';
 import {version} from '../../../package.json';
-import {SubscriptionInfo} from '../../definitions';
+import {SubscriptionInfo, CreateSubscriptionRequest} from '../../definitions';
 import {WsToken} from './types';
 
 const uuid = hyperid();
@@ -31,8 +31,17 @@ export type WsgMeta = {
 };
 
 class WebSocketExtension extends SdkExtension {
+  static sandboxServer = 'wss://ws-api.devtest.ringcentral.com/ws';
+  static productionServer = 'wss://ws-api.ringcentral.com/ws';
+
+  rc!: RingCentral;
+  wsToken!: WsToken;
+  ws!: WS;
+  opened = false;
+
   restOverWebsocket: boolean;
   debugMode: boolean;
+  subscriptions: Subscription[] = [];
 
   constructor(options?: WebSocketOptions) {
     super();
@@ -66,13 +75,15 @@ class WebSocketExtension extends SdkExtension {
     this.connect();
   }
 
-  static sandboxServer = 'wss://ws-api.devtest.ringcentral.com/ws';
-  static productionServer = 'wss://ws-api.ringcentral.com/ws';
-
-  rc!: RingCentral;
-  wsToken!: WsToken;
-  ws!: WS;
-  opened = false;
+  get enabled() {
+    return super.enabled;
+  }
+  set enabled(value: boolean) {
+    super.enabled = value;
+    for (const subscription of this.subscriptions) {
+      subscription.enabled = value;
+    }
+  }
 
   async connect() {
     const r = await this.rc.post('/restapi/oauth/wstoken');
@@ -133,36 +144,17 @@ ${JSON.stringify(JSON.parse(event.data), null, 2)}
   }
 
   async revoke() {
+    for (const subscription of this.subscriptions) {
+      await subscription.revoke();
+    }
     this.ws.close();
   }
 
   async subscribe(eventFilters: string[], callback: (event: {}) => void) {
-    const r = await this.request<SubscriptionInfo>(
-      'POST',
-      '/restapi/v1.0/subscription',
-      {
-        eventFilters,
-        deliveryMode: {
-          transportType: 'WebSocket',
-        },
-      }
-    );
-    const subscriptionInfo = r.data;
-
-    const subscriptionId = subscriptionInfo.id;
-    this.ws.addEventListener('message', (event: WsgEvent) => {
-      const [meta, body]: [
-        WsgMeta,
-        {subscriptionId: string}
-      ] = WebSocketExtension.splitWsgData(event.data);
-      if (
-        this.enabled &&
-        meta.type === 'ServerNotification' &&
-        body.subscriptionId === subscriptionId
-      ) {
-        callback(body);
-      }
-    });
+    const subscription = new Subscription(this, eventFilters, callback);
+    await subscription.subscribe();
+    this.subscriptions.push(subscription);
+    return subscription;
   }
 
   async request<T>(
@@ -229,6 +221,108 @@ ${JSON.stringify(JSON.parse(event.data), null, 2)}
       };
       this.ws.addEventListener('message', handler);
     });
+  }
+}
+
+class Subscription {
+  wse: WebSocketExtension;
+  eventFilters: string[];
+  callback: (event: {}) => void;
+  timeout?: NodeJS.Timeout;
+  enabled = true;
+
+  constructor(
+    wse: WebSocketExtension,
+    eventFilters: string[],
+    callback: (event: {}) => void
+  ) {
+    this.wse = wse;
+    this.eventFilters = eventFilters;
+    this.callback = callback;
+  }
+
+  get requestBody(): CreateSubscriptionRequest {
+    return {
+      deliveryMode: {transportType: 'WebSocket'},
+      eventFilters: this.eventFilters,
+    };
+  }
+
+  _subscriptionInfo?: SubscriptionInfo;
+  get subscriptionInfo(): SubscriptionInfo | undefined {
+    return this._subscriptionInfo;
+  }
+  set subscriptionInfo(_subscription) {
+    this._subscriptionInfo = _subscription;
+    if (this.timeout) {
+      global.clearTimeout(this.timeout);
+      this.timeout = undefined;
+    }
+    if (_subscription) {
+      this.timeout = global.setTimeout(() => {
+        this.refresh();
+      }, ((_subscription.expiresIn ?? 900) - 120) * 1000);
+    }
+  }
+
+  async subscribe() {
+    this.subscriptionInfo = (
+      await this.wse.request<SubscriptionInfo>(
+        'POST',
+        '/restapi/v1.0/subscription',
+        this.requestBody
+      )
+    ).data;
+    this.wse.ws.addEventListener('message', (event: WsgEvent) => {
+      const [meta, body]: [
+        WsgMeta,
+        {subscriptionId: string}
+      ] = WebSocketExtension.splitWsgData(event.data);
+      if (
+        this.enabled &&
+        meta.type === 'ServerNotification' &&
+        body.subscriptionId === this.subscriptionInfo!.id
+      ) {
+        this.callback(body);
+      }
+    });
+  }
+
+  async refresh() {
+    if (!this.subscriptionInfo) {
+      return;
+    }
+    try {
+      this.subscriptionInfo = (
+        await this.wse.request<SubscriptionInfo>(
+          'PUT',
+          `/restapi/v1.0/subscription/${this.subscriptionInfo!.id}`,
+          this.requestBody
+        )
+      ).data;
+    } catch (e) {
+      if (e.response && e.response.status === 404) {
+        // subscription expired
+        // todo: will it create duplicate ws event listener?
+        await this.subscribe();
+      }
+    }
+  }
+
+  async revoke() {
+    if (!this.subscriptionInfo) {
+      return;
+    }
+    if (this.timeout) {
+      global.clearTimeout(this.timeout);
+      this.timeout = undefined;
+    }
+    await this.wse.request<SubscriptionInfo>(
+      'DELETE',
+      `/restapi/v1.0/subscription/${this.subscriptionInfo!.id}`
+    );
+    this.subscriptionInfo = undefined;
+    // todo: remove ws event listener
   }
 }
 
