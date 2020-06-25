@@ -13,14 +13,6 @@ jest.setTimeout(64000);
 describe('schedule meeting', () => {
   test('for myself', async () => {
     const testCase = async (rc: RingCentral) => {
-      let meetingsList = await rc
-        .restapi()
-        .account()
-        .extension()
-        .meeting()
-        .list();
-      const count = meetingsList.records!.length;
-
       // schedule a meeting
       const meetingRequestResource = new MeetingRequestResource();
       meetingRequestResource.topic = 'test meeting';
@@ -41,8 +33,6 @@ describe('schedule meeting', () => {
         .extension()
         .meeting()
         .post(meetingRequestResource);
-      meetingsList = await rc.restapi().account().extension().meeting().list();
-      expect(meetingsList.records!.length).toBe(count + 1);
 
       // don't forget to clean up
       await rc
@@ -51,8 +41,6 @@ describe('schedule meeting', () => {
         .extension()
         .meeting(meetingResponseResource.id)
         .delete();
-      meetingsList = await rc.restapi().account().extension().meeting().list();
-      expect(meetingsList.records!.length).toBe(count);
       await rc.revoke();
     };
     await testRingCentral(testCase);
@@ -73,21 +61,6 @@ describe('schedule meeting', () => {
       });
 
       const ext2 = await rc2.restapi().account().extension().get();
-
-      let meetingsList = await rc
-        .restapi()
-        .account()
-        .extension()
-        .meeting()
-        .list();
-      const count = meetingsList.records!.length;
-      let meetingsList2 = await rc2
-        .restapi()
-        .account()
-        .extension()
-        .meeting()
-        .list();
-      const count2 = meetingsList2.records!.length;
 
       // schedule a meeting
       const meetingRequestResource = new MeetingRequestResource();
@@ -113,22 +86,6 @@ describe('schedule meeting', () => {
         .post(meetingRequestResource);
 
       // don't forget to clean up
-      meetingsList = await rc.restapi().account().extension().meeting().list();
-      expect(meetingsList.records!.length).toBe(count + 1);
-      expect(
-        meetingsList.records!.some(r => r.id === meetingResponseResource.id)
-      ).toBeTruthy();
-      meetingsList2 = await rc2
-        .restapi()
-        .account()
-        .extension()
-        .meeting()
-        .list();
-      expect(meetingsList2.records!.length).toBe(count2 + 1);
-      expect(
-        meetingsList2.records!.some(r => r.id === meetingResponseResource.id)
-      ).toBeTruthy();
-
       await rc
         .restapi()
         .account()
@@ -136,21 +93,6 @@ describe('schedule meeting', () => {
         .meeting(meetingResponseResource.id)
         .delete();
 
-      meetingsList = await rc.restapi().account().extension().meeting().list();
-      expect(meetingsList.records!.length).toBe(count);
-      expect(
-        meetingsList.records!.some(r => r.id === meetingResponseResource.id)
-      ).toBeFalsy();
-      meetingsList2 = await rc2
-        .restapi()
-        .account()
-        .extension()
-        .meeting()
-        .list();
-      expect(meetingsList2.records!.length).toBe(count2);
-      expect(
-        meetingsList2.records!.some(r => r.id === meetingResponseResource.id)
-      ).toBeFalsy();
       await rc.revoke();
       await rc2.revoke();
     };
