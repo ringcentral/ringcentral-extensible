@@ -87,6 +87,4 @@ yarn test
 - convert code generator to TS
 - compare it with C# sdk and see what are missing
 - WSG
-    - Support unsubscribe
-    - according to wiki, subscription needs refreshing
     - what if network outage?

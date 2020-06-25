@@ -34,8 +34,9 @@ class PubNubExtension extends SdkExtension {
   }
 
   async revoke() {
-    for (const subscription of this.subscriptions) {
-      await subscription.revoke();
+    while (this.subscriptions.length > 0) {
+      const subscription = this.subscriptions.pop();
+      await subscription?.revoke();
     }
   }
 }

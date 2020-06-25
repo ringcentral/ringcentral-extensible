@@ -49,6 +49,6 @@ describe('call log', () => {
       await rc.revoke();
     };
     await testRingCentral(testCase);
-    // await testRingCentral(testCase, 'wss'); // todo: WSG doesn't allow int as query parameter
+    // await testRingCentral(testCase, 'wss'); // todo: https://jira.ringcentral.com/browse/PLA-49604
   });
 });
