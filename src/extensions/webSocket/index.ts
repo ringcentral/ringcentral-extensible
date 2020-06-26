@@ -93,9 +93,13 @@ class WebSocketExtension extends SdkExtension {
         WsgMeta,
         ConnectionBody
       ] = WebSocketExtension.splitWsgData(event.data);
-      if (meta.type === 'ConnectionDetails') {
-        this.connectionDetail = {...meta, body};
-        this.ws.removeEventListener('message', connectionDetailListener);
+      if (meta.type === 'ConnectionDetails' && meta.wsc) {
+        if (
+          !this.connectionDetail ||
+          (this.connectionDetail &&
+            this.connectionDetail.wsc!.sequence < meta.wsc.sequence)
+        )
+          this.connectionDetail = {...meta, body};
       }
     };
     this.ws.addEventListener('message', connectionDetailListener);
