@@ -22,12 +22,27 @@ export type WsgEvent = {
   data: string;
 };
 export type WsgMeta = {
-  type: 'ClientRequest' | 'ServerNotification' | 'Error';
+  type: 'ClientRequest' | 'ServerNotification' | 'Error' | 'ConnectionDetails';
   messageId: string;
   status: number;
   headers: {
     [key: string]: string;
   };
+  wsc?: {
+    token: string;
+    sequence: number;
+  };
+};
+export type ConnectionBody = {
+  creationTime: string;
+  maxConnectionsPerSession: number;
+  recoveryBufferSize: number;
+  recoveryTimeout: number;
+  idleTimeout: number;
+  absoluteTimeout: number;
+};
+export type ConnectionDetail = WsgMeta & {
+  body: ConnectionBody;
 };
 
 class WebSocketExtension extends SdkExtension {
@@ -38,6 +53,7 @@ class WebSocketExtension extends SdkExtension {
   wsToken!: WsToken;
   ws!: WS;
   opened = false;
+  connectionDetail!: ConnectionDetail;
 
   restOverWebsocket: boolean;
   debugMode: boolean;
@@ -96,6 +112,17 @@ class WebSocketExtension extends SdkExtension {
       this.ws.removeEventListener('open', openHandler);
     };
     this.ws.addEventListener('open', openHandler);
+    const connectionDetailListener = (event: WsgEvent) => {
+      const [meta, body]: [
+        WsgMeta,
+        ConnectionBody
+      ] = WebSocketExtension.splitWsgData(event.data);
+      if (meta.type === 'ConnectionDetails') {
+        this.connectionDetail = {...meta, body};
+        this.ws.removeEventListener('message', connectionDetailListener);
+      }
+    };
+    this.ws.addEventListener('message', connectionDetailListener);
     if (this.debugMode) {
       const send = this.ws.send.bind(this.ws);
       this.ws.send = (str: string) => {
