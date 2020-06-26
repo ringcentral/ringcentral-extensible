@@ -80,7 +80,7 @@ class WebSocketExtension extends SdkExtension {
   }
   set enabled(value: boolean) {
     super.enabled = value;
-    for (const subscription of this.subscriptions) {
+    for (const subscription of this.subscriptions ?? []) {
       subscription.enabled = value;
     }
   }
@@ -151,6 +151,7 @@ ${JSON.stringify(JSON.parse(event.data), null, 2)}
   }
 
   async subscribe(eventFilters: string[], callback: (event: {}) => void) {
+    await this.waitForOpen();
     const subscription = new Subscription(this, eventFilters, callback);
     await subscription.subscribe();
     this.subscriptions.push(subscription);
