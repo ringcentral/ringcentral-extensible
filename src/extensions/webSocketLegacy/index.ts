@@ -40,11 +40,11 @@ class WebSocketExtension extends SdkExtension {
     this.server = options.server;
     this.restOverWebsocket = options.restOverWebSocket ?? false;
     this.ws = new WS(this.server);
-    const openHandler = () => {
+    const openListener = () => {
       this.opened = true;
-      this.ws.removeEventListener('open', openHandler);
+      this.ws.removeEventListener('open', openListener);
     };
-    this.ws.addEventListener('open', openHandler);
+    this.ws.addEventListener('open', openListener);
   }
 
   install(rc: RingCentral): void {

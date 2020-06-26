@@ -107,11 +107,11 @@ class WebSocketExtension extends SdkExtension {
     this.ws = new WS(
       this.wsToken.uri + '?access_token=' + this.wsToken.ws_access_token
     );
-    const openHandler = () => {
+    const openListener = () => {
       this.opened = true;
-      this.ws.removeEventListener('open', openHandler);
+      this.ws.removeEventListener('open', openListener);
     };
-    this.ws.addEventListener('open', openHandler);
+    this.ws.addEventListener('open', openListener);
     const connectionDetailListener = (event: WsgEvent) => {
       const [meta, body]: [
         WsgMeta,
