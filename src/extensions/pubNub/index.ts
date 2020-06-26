@@ -27,22 +27,21 @@ class PubNubExtension extends SdkExtension {
     eventFilters: string[],
     callback: (event: {}) => void
   ): Promise<Subscription> {
-    const subscription = new Subscription(this.rc, eventFilters, callback);
+    const subscription = new Subscription(this, eventFilters, callback);
     await subscription.subscribe();
     this.subscriptions.push(subscription);
     return subscription;
   }
 
   async revoke() {
-    while (this.subscriptions.length > 0) {
-      const subscription = this.subscriptions.pop();
-      await subscription?.revoke();
+    for (const subscription of this.subscriptions) {
+      await subscription.revoke();
     }
   }
 }
 
 class Subscription {
-  rc: RingCentral;
+  pne: PubNubExtension;
   eventFilters: string[];
   callback: (event: {}) => void;
   timeout?: NodeJS.Timeout;
@@ -50,11 +49,11 @@ class Subscription {
   enabled = true;
 
   constructor(
-    rc: RingCentral,
+    pne: PubNubExtension,
     eventFilters: string[],
     callback: (event: {}) => void
   ) {
-    this.rc = rc;
+    this.pne = pne;
     this.eventFilters = eventFilters;
     this.callback = callback;
   }
@@ -84,7 +83,7 @@ class Subscription {
   }
 
   async subscribe() {
-    this.subscriptionInfo = await this.rc
+    this.subscriptionInfo = await this.pne.rc
       .restapi()
       .subscription()
       .post(this.requestBody);
@@ -120,7 +119,7 @@ class Subscription {
       return;
     }
     try {
-      this.subscriptionInfo = await this.rc
+      this.subscriptionInfo = await this.pne.rc
         .restapi()
         .subscription(this.subscriptionInfo!.id)
         .put(this.requestBody);
@@ -143,8 +142,12 @@ class Subscription {
     this.pubnub!.unsubscribeAll();
     this.pubnub!.stop();
     this.pubnub = undefined;
-    await this.rc.restapi().subscription(this.subscriptionInfo.id).delete();
+    await this.pne.rc.restapi().subscription(this.subscriptionInfo.id).delete();
     this.subscriptionInfo = undefined;
+    const index = this.pne.subscriptions.indexOf(this);
+    if (index !== -1) {
+      this.pne.subscriptions.splice(index, 1);
+    }
   }
 }
 
