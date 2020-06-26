@@ -144,9 +144,8 @@ ${JSON.stringify(JSON.parse(event.data), null, 2)}
   }
 
   async revoke() {
-    while (this.subscriptions.length > 0) {
-      const subscription = this.subscriptions.pop();
-      await subscription?.revoke();
+    for (const subscription of this.subscriptions) {
+      await subscription.revoke();
     }
     this.ws.close();
   }
@@ -228,7 +227,7 @@ ${JSON.stringify(JSON.parse(event.data), null, 2)}
 class Subscription {
   wse: WebSocketExtension;
   eventFilters: string[];
-  callback: (event: {}) => void;
+  eventListener: (event: WsgEvent) => void;
   timeout?: NodeJS.Timeout;
   enabled = true;
 
@@ -239,7 +238,20 @@ class Subscription {
   ) {
     this.wse = wse;
     this.eventFilters = eventFilters;
-    this.callback = callback;
+    this.eventListener = (event: WsgEvent) => {
+      const [meta, body]: [
+        WsgMeta,
+        {subscriptionId: string}
+      ] = WebSocketExtension.splitWsgData(event.data);
+      if (
+        this.enabled &&
+        meta.type === 'ServerNotification' &&
+        body.subscriptionId === this.subscriptionInfo!.id
+      ) {
+        callback(body);
+      }
+    };
+    this.wse.ws.addEventListener('message', this.eventListener);
   }
 
   get requestBody(): CreateSubscriptionRequest {
@@ -274,19 +286,6 @@ class Subscription {
         this.requestBody
       )
     ).data;
-    this.wse.ws.addEventListener('message', (event: WsgEvent) => {
-      const [meta, body]: [
-        WsgMeta,
-        {subscriptionId: string}
-      ] = WebSocketExtension.splitWsgData(event.data);
-      if (
-        this.enabled &&
-        meta.type === 'ServerNotification' &&
-        body.subscriptionId === this.subscriptionInfo!.id
-      ) {
-        this.callback(body);
-      }
-    });
   }
 
   async refresh() {
@@ -304,7 +303,6 @@ class Subscription {
     } catch (e) {
       if (e.response && e.response.status === 404) {
         // subscription expired
-        // todo: will it create duplicate ws event listener?
         await this.subscribe();
       }
     }
@@ -323,7 +321,11 @@ class Subscription {
       `/restapi/v1.0/subscription/${this.subscriptionInfo!.id}`
     );
     this.subscriptionInfo = undefined;
-    // todo: remove ws event listener
+    this.wse.ws.removeEventListener('message', this.eventListener);
+    const index = this.wse.subscriptions.indexOf(this);
+    if (index !== -1) {
+      this.wse.subscriptions.splice(index, 1);
+    }
   }
 }
 
