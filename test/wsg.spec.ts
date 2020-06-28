@@ -32,10 +32,7 @@ describe('WSG', () => {
     rc.installExtension(webSocketExtension);
     let eventCount = 0;
     await webSocketExtension.subscribe(
-      [
-        '/restapi/v1.0/account/~/extension/~/message-store',
-        '/restapi/v1.0/account/~/extension/~/message-store/instant?type=SMS',
-      ],
+      ['/restapi/v1.0/account/~/extension/~/message-store/instant?type=SMS'],
       event => {
         expect(event).toBeDefined();
         eventCount += 1;

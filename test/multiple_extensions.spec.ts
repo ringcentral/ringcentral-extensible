@@ -3,15 +3,24 @@
 import SDK from '@ringcentral/sdk';
 // eslint-disable-next-line node/no-unpublished-import
 import waitFor from 'wait-for-async';
+// eslint-disable-next-line node/no-unpublished-import
+import dotenv from 'dotenv-override-true';
+import path from 'path';
 
 import RingCentral from '../src/index';
 import RingCentralExtension from '../src/extensions/ringCentral';
-import WebSocketExtension from '../src/extensions/webSocketLegacy';
+import WebSocketExtension from '../src/extensions/webSocket';
 
-jest.setTimeout(64000);
+import './types.d';
+
+jest.setTimeout(128000);
+dotenv.config({path: path.join(__dirname, '..', '.env.lab')});
 
 describe('extensions', () => {
   test('RingCentral Extension + WebSocket Extension', async () => {
+    if (!process.env.IS_LAB_ENV) {
+      return;
+    }
     const rc = new RingCentral();
 
     // install RingCentral Extension
@@ -30,7 +39,6 @@ describe('extensions', () => {
 
     // install WebSocket Extension
     const webSocketExtension = new WebSocketExtension({
-      server: process.env.RINGCENTRAL_WSG_SERVER_URL!,
       restOverWebSocket: true,
     });
     rc.installExtension(webSocketExtension);
@@ -38,7 +46,7 @@ describe('extensions', () => {
     // setup subscription
     let eventCount = 0;
     await webSocketExtension.subscribe(
-      ['/restapi/v1.0/account/~/extension/~/message-store'],
+      ['/restapi/v1.0/account/~/extension/~/message-store/instant?type=SMS'],
       event => {
         expect(event).toBeDefined();
         eventCount += 1;
@@ -53,7 +61,7 @@ describe('extensions', () => {
       .sms()
       .post({
         from: {phoneNumber: process.env.RINGCENTRAL_USERNAME!},
-        to: [{phoneNumber: process.env.RINGCENTRAL_RECEIVER!}],
+        to: [{phoneNumber: process.env.RINGCENTRAL_USERNAME!}], // send sms to oneself
         text: 'Hello world',
       });
 

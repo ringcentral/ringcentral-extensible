@@ -88,3 +88,4 @@ yarn test
 - compare it with C# sdk and see what are missing
 - WSG
     - what if network outage?
+    - WebSocket Session Recovery
