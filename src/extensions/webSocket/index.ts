@@ -28,8 +28,7 @@ class WebSocketExtension extends SdkExtension {
   rc!: RingCentral;
   wsToken!: WsToken;
   ws!: WS;
-  opened = false;
-  connectionDetail!: ConnectionDetail;
+  connectionDetail?: ConnectionDetail;
 
   restOverWebsocket: boolean;
   debugMode: boolean;
@@ -83,11 +82,6 @@ class WebSocketExtension extends SdkExtension {
     this.ws = new WS(
       this.wsToken.uri + '?access_token=' + this.wsToken.ws_access_token
     );
-    const openListener = () => {
-      this.opened = true;
-      this.ws.removeEventListener('open', openListener);
-    };
-    this.ws.addEventListener('open', openListener);
     const connectionDetailListener = (event: WsgEvent) => {
       const [meta, body]: [
         WsgMeta,
@@ -136,16 +130,16 @@ ${JSON.stringify(JSON.parse(event.data), null, 2)}
     }
   }
 
-  async waitForOpen() {
+  async waitForConnected() {
     const timeoutSeconds = 60;
     const successful = await waitFor({
-      condition: () => this.opened,
+      condition: () => this.connectionDetail !== undefined,
       interval: 100,
       times: (timeoutSeconds * 1000) / 100,
     });
     if (!successful) {
       throw new Error(
-        `Have been Waiting for ${timeoutSeconds} seconds but WebSocket is not open.`
+        `Have been Waiting for ${timeoutSeconds} seconds but haven't received "ConnectionDetail" message.`
       );
     }
   }
@@ -158,7 +152,7 @@ ${JSON.stringify(JSON.parse(event.data), null, 2)}
   }
 
   async subscribe(eventFilters: string[], callback: (event: {}) => void) {
-    await this.waitForOpen();
+    await this.waitForConnected();
     const subscription = new Subscription(this, eventFilters, callback);
     await subscription.subscribe();
     this.subscriptions.push(subscription);
@@ -172,7 +166,7 @@ ${JSON.stringify(JSON.parse(event.data), null, 2)}
     queryParams?: {},
     config?: RestRequestConfig
   ): Promise<RestResponse<T>> {
-    await this.waitForOpen();
+    await this.waitForConnected();
     const _config: RestRequestConfig = {
       method: method,
       baseURL: this.wsToken.uri,
