@@ -4,7 +4,6 @@ import waitFor from 'wait-for-async';
 import path from 'path';
 import dotenv from 'dotenv-override-true';
 
-import './types.d';
 import RingCentral from '../src/index';
 import WebSocketExtension from '../src/extensions/webSocket';
 

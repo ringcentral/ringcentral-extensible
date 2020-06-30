@@ -11,8 +11,6 @@ import RingCentral from '../src/index';
 import RingCentralExtension from '../src/extensions/ringCentral';
 import WebSocketExtension from '../src/extensions/webSocket';
 
-import './types.d';
-
 jest.setTimeout(128000);
 dotenv.config({path: path.join(__dirname, '..', '.env.lab')});
 
