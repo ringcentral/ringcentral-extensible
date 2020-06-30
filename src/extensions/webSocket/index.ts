@@ -58,8 +58,7 @@ class WebSocketExtension extends SdkExtension {
         // the following cannot be done with WebSocket
         config?.headers?.['Content-Type'].includes('multipart/form-data') ||
         config?.responseType === 'arraybuffer' ||
-        endpoint === '/restapi/oauth/token' ||
-        endpoint === '/restapi/oauth/revoke'
+        endpoint.startsWith('/restapi/oauth/') // token, revoke, wstoken
       ) {
         return request<T>(method, endpoint, content, queryParams, config);
       }

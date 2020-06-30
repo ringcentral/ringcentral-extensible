@@ -84,6 +84,7 @@ export default class Rest {
       params: queryParams,
       ...config,
     };
+    // /restapi/oauth/wstoken uses bearer token
     if (
       endpoint === '/restapi/oauth/token' ||
       endpoint === '/restapi/oauth/revoke'

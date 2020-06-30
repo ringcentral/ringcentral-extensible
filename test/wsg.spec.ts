@@ -56,7 +56,6 @@ describe('WSG', () => {
     expect(successful).toBeTruthy();
     expect(eventCount).toBeGreaterThan(0);
   });
-
   test('Rest API call via WebSocket', async () => {
     if (!process.env.IS_LAB_ENV) {
       return;
@@ -75,11 +74,9 @@ describe('WSG', () => {
       restOverWebSocket: true,
     });
     rc.installExtension(webSocketExtension);
-
     const extInfo = await rc.restapi().account().extension().get();
     expect(extInfo).toBeDefined();
     expect(extInfo.id).toBeDefined();
-
     await rc.revoke();
   });
 });
