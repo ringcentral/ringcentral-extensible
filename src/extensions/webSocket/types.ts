@@ -26,6 +26,11 @@ export type WsgMeta = {
   };
 };
 
+export type WsgError = {
+  errorCode: string;
+  message: string;
+};
+
 export type ConnectionBody = {
   creationTime: string;
   maxConnectionsPerSession: number;

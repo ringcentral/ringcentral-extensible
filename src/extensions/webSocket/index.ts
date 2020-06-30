@@ -18,6 +18,7 @@ import {
   ConnectionBody,
 } from './types';
 import Subscription from './subscription';
+import WsgException from './wsgException';
 
 const uuid = hyperid();
 
@@ -100,10 +101,14 @@ class WebSocketExtension extends SdkExtension {
       if (meta.type === 'ConnectionDetails' && meta.wsc) {
         if (
           !this.connectionDetail ||
+          body.recoveryState ||
           (this.connectionDetail &&
             this.connectionDetail.wsc!.sequence < meta.wsc.sequence)
         )
           this.connectionDetail = {...meta, body};
+      } else if (!this.connectionDetail && meta.type === 'Error') {
+        // session recovery failed
+        throw new WsgException(event);
       }
     };
     this.ws.addEventListener('message', connectionDetailListener);
@@ -158,7 +163,9 @@ ${JSON.stringify(JSON.parse(event.data), null, 2)}
     for (const subscription of this.subscriptions) {
       await subscription.revoke();
     }
-    this.ws.close();
+    if (this.ws.OPEN) {
+      this.ws.close();
+    }
   }
 
   async subscribe(eventFilters: string[], callback: (event: {}) => void) {
