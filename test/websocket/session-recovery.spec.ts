@@ -1,17 +1,17 @@
 /* eslint-disable node/no-unpublished-import */
 /* eslint-env jest */
-import waitFor from 'wait-for-async';
 import path from 'path';
 import dotenv from 'dotenv-override-true';
+import waitFor from 'wait-for-async';
 
 import RingCentral from '../../src/index';
 import WebSocketExtension from '../../src/extensions/webSocket';
 
-jest.setTimeout(128000);
+jest.setTimeout(256000);
 dotenv.config({path: path.join(__dirname, '..', '..', '.env.lab')});
 
-describe('WSG', () => {
-  test('subscription', async () => {
+describe('WSG session recovery', () => {
+  test('default ', async () => {
     if (!process.env.IS_LAB_ENV) {
       return;
     }
@@ -29,6 +29,11 @@ describe('WSG', () => {
       // debugMode: true,
     });
     rc.installExtension(webSocketExtension);
+    await webSocketExtension.waitForReady();
+    expect(
+      webSocketExtension.connectionDetail?.body.recoveryState
+    ).toBeUndefined();
+
     let eventCount = 0;
     await webSocketExtension.subscribe(
       ['/restapi/v1.0/account/~/extension/~/message-store/instant?type=SMS'],
@@ -37,6 +42,17 @@ describe('WSG', () => {
         eventCount += 1;
       }
     );
+
+    // close WebSocket connection to simulate session lost
+    // here we don't invoke webSocketExtension.revoke() because that will also revoke all subscriptions created
+    webSocketExtension.ws.close();
+    await waitFor({interval: 60000});
+    await webSocketExtension.connect(); // re-connect
+    await webSocketExtension.waitForReady();
+    expect(webSocketExtension.connectionDetail?.body.recoveryState).toBe(
+      'Successful'
+    );
+
     await rc
       .restapi()
       .account()
@@ -50,7 +66,7 @@ describe('WSG', () => {
     const successful = await waitFor({
       condition: () => eventCount > 0,
       interval: 1000,
-      times: 60,
+      times: 30,
     });
     await rc.revoke();
     expect(successful).toBeTruthy();

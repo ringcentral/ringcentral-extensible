@@ -29,6 +29,10 @@ class Subscription {
         callback(body);
       }
     };
+    this.setupWsEventListener();
+  }
+
+  setupWsEventListener() {
     this.wse.ws.addEventListener('message', this.eventListener);
   }
 

@@ -79,9 +79,19 @@ class WebSocketExtension extends SdkExtension {
   async connect() {
     const r = await this.rc.post('/restapi/oauth/wstoken');
     this.wsToken = r.data as WsToken;
-    this.ws = new WS(
-      this.wsToken.uri + '?access_token=' + this.wsToken.ws_access_token
-    );
+    let wsUri = `${this.wsToken.uri}?access_token=${this.wsToken.ws_access_token}`;
+    if (this.connectionDetail) {
+      wsUri = `${wsUri}&wsc=${this.connectionDetail.wsc?.token}`;
+    }
+    this.ws = new WS(wsUri);
+    if (this.subscriptions.length > 0) {
+      // session recovery
+      for (const subscription of this.subscriptions) {
+        // because we have a new ws instance
+        subscription.setupWsEventListener();
+      }
+    }
+    this.connectionDetail = undefined;
     const connectionDetailListener = (event: WsgEvent) => {
       const [meta, body]: [
         WsgMeta,
@@ -130,7 +140,7 @@ ${JSON.stringify(JSON.parse(event.data), null, 2)}
     }
   }
 
-  async waitForConnected() {
+  async waitForReady() {
     const timeoutSeconds = 60;
     const successful = await waitFor({
       condition: () => this.connectionDetail !== undefined,
@@ -152,7 +162,7 @@ ${JSON.stringify(JSON.parse(event.data), null, 2)}
   }
 
   async subscribe(eventFilters: string[], callback: (event: {}) => void) {
-    await this.waitForConnected();
+    await this.waitForReady();
     const subscription = new Subscription(this, eventFilters, callback);
     await subscription.subscribe();
     this.subscriptions.push(subscription);
@@ -166,7 +176,7 @@ ${JSON.stringify(JSON.parse(event.data), null, 2)}
     queryParams?: {},
     config?: RestRequestConfig
   ): Promise<RestResponse<T>> {
-    await this.waitForConnected();
+    await this.waitForReady();
     const _config: RestRequestConfig = {
       method: method,
       baseURL: this.wsToken.uri,

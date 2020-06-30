@@ -33,6 +33,8 @@ export type ConnectionBody = {
   recoveryTimeout: number;
   idleTimeout: number;
   absoluteTimeout: number;
+  recoveryState?: 'Successful' | 'Failed';
+  recoveryErrorCode?: string;
 };
 
 export type ConnectionDetail = WsgMeta & {
