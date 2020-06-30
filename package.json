@@ -1,9 +1,9 @@
 {
   "name": "ringcentral-extensible",
-  "version": "0.8.4",
+  "version": "0.8.5",
   "description": "RingCentral extensible",
-  "main": "build/index.js",
-  "types": "build/index.d.ts",
+  "main": "build/src/index.js",
+  "types": "build/src/index.d.ts",
   "repository": "git@github.com:ringcentral/ringcentral-extensible.git",
   "author": "Tyler Liu <tyler.liu@ringcentral.com>",
   "license": "MIT",
@@ -12,7 +12,7 @@
     "definitions": "rm -rf ./src/definitions/* && node -r dotenv-override-true/config ./code-generator/definitions.js",
     "paths": "rm -rf ./src/paths/* && node -r dotenv-override-true/config ./code-generator/paths.js",
     "generate": "yarn definitions && yarn paths && gts fix",
-    "prepublishOnly": "rm -rf build && tsc && rm build/package.json && mv build/src/* build/ && rmdir build/src && gts fix && yarn test"
+    "prepublishOnly": "rm -rf build && gts fix && yarn test && tsc"
   },
   "dependencies": {
     "@types/qs": "^6.9.3",
@@ -21,11 +21,11 @@
     "qs": "^6.9.4"
   },
   "devDependencies": {
-    "@ringcentral/sdk": "^4.3.0",
-    "@types/jest": "^26.0.0",
-    "@types/node": "^14.0.13",
+    "@ringcentral/sdk": "^4.3.1",
+    "@types/jest": "^26.0.3",
+    "@types/node": "^14.0.14",
     "@types/pubnub": "^4.27.4",
-    "@types/ws": "^7.2.5",
+    "@types/ws": "^7.2.6",
     "change-case": "^4.1.1",
     "dotenv-override-true": "^6.2.0",
     "gts": "^2.0.2",
@@ -33,11 +33,11 @@
     "husky": "^4.2.5",
     "hyperid": "^2.0.5",
     "isomorphic-ws": "^4.0.1",
-    "jest": "^26.0.1",
+    "jest": "^26.1.0",
     "lower-case-first": "^2.0.1",
-    "pubnub": "^4.28.1",
+    "pubnub": "^4.28.2",
     "ramda": "^0.27.0",
-    "ts-jest": "^26.1.0",
+    "ts-jest": "^26.1.1",
     "typescript": "^3.9.5",
     "wait-for-async": "^0.5.0",
     "yarn-upgrade-all": "^0.5.2"

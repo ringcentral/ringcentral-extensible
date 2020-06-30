@@ -70,7 +70,8 @@ describe('WSG session recovery', () => {
     expect(successful).toBeTruthy();
     expect(eventCount).toBeGreaterThan(0);
   });
-  test('recover existing session', async () => {
+
+  test('re-connect existing session', async () => {
     if (!process.env.IS_LAB_ENV) {
       return;
     }
