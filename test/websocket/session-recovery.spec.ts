@@ -106,7 +106,7 @@ describe('WSG session recovery', () => {
     // here we don't invoke webSocketExtension.revoke() because that will also revoke all subscriptions created
     webSocketExtension.ws.close();
     await waitFor({interval: 5000});
-    await webSocketExtension.connect(); // re-connect by do not recover session
+    await webSocketExtension.reconnect(); // re-connect by do not recover session
     await webSocketExtension.waitForReady();
     expect(
       webSocketExtension.connectionDetails?.body.recoveryState

@@ -88,3 +88,4 @@ yarn test
 - compare it with C# sdk and see what are missing
 - WSG
     - what if network outage?
+    - convert all callback style code to async/await style
