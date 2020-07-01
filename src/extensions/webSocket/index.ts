@@ -11,7 +11,7 @@ import RestException from '../../RestException';
 import {version} from '../../../package.json';
 import {
   WsToken,
-  ConnectionDetail,
+  ConnectionDetails,
   WebSocketOptions,
   WsgEvent,
   WsgMeta,
@@ -29,7 +29,7 @@ class WebSocketExtension extends SdkExtension {
   rc!: RingCentral;
   wsToken!: WsToken;
   ws!: WS;
-  connectionDetail?: ConnectionDetail;
+  connectionDetails?: ConnectionDetails;
 
   restOverWebsocket: boolean;
   debugMode: boolean;
@@ -77,41 +77,48 @@ class WebSocketExtension extends SdkExtension {
     }
   }
 
-  async connect() {
+  async connect(recoverSession = false) {
     const r = await this.rc.post('/restapi/oauth/wstoken');
     this.wsToken = r.data as WsToken;
     let wsUri = `${this.wsToken.uri}?access_token=${this.wsToken.ws_access_token}`;
-    if (this.connectionDetail) {
-      wsUri = `${wsUri}&wsc=${this.connectionDetail.wsc?.token}`;
+    if (recoverSession) {
+      wsUri = `${wsUri}&wsc=${this.connectionDetails!.wsc!.token}`;
     }
     this.ws = new WS(wsUri);
-    if (this.subscriptions.length > 0) {
-      // session recovery
-      for (const subscription of this.subscriptions) {
-        // because we have a new ws instance
-        subscription.setupWsEventListener();
-      }
-    }
-    this.connectionDetail = undefined;
-    const connectionDetailListener = (event: WsgEvent) => {
+
+    // listen for connectionDetails data
+    this.connectionDetails = undefined;
+    const connectionDetailsListener = (event: WsgEvent) => {
       const [meta, body]: [
         WsgMeta,
         ConnectionBody
       ] = WebSocketExtension.splitWsgData(event.data);
       if (meta.type === 'ConnectionDetails' && meta.wsc) {
         if (
-          !this.connectionDetail ||
+          !this.connectionDetails ||
           body.recoveryState ||
-          (this.connectionDetail &&
-            this.connectionDetail.wsc!.sequence < meta.wsc.sequence)
+          (this.connectionDetails &&
+            this.connectionDetails.wsc!.sequence < meta.wsc.sequence)
         )
-          this.connectionDetail = {...meta, body};
-      } else if (!this.connectionDetail && meta.type === 'Error') {
+          this.connectionDetails = {...meta, body};
+      } else if (!this.connectionDetails && meta.type === 'Error') {
         // session recovery failed
         throw new WsgException(event);
       }
     };
-    this.ws.addEventListener('message', connectionDetailListener);
+    this.ws.addEventListener('message', connectionDetailsListener);
+
+    // recover all subscriptions
+    for (const subscription of this.subscriptions) {
+      // because we have a new ws object
+      subscription.setupWsEventListener();
+      if (!recoverSession) {
+        // create new subscription if don't recover existing one
+        await subscription.subscribe();
+      }
+    }
+
+    // debug mode to print all WS traffic
     if (this.debugMode) {
       const send = this.ws.send.bind(this.ws);
       this.ws.send = (str: string) => {
@@ -148,13 +155,13 @@ ${JSON.stringify(JSON.parse(event.data), null, 2)}
   async waitForReady() {
     const timeoutSeconds = 60;
     const successful = await waitFor({
-      condition: () => this.connectionDetail !== undefined,
+      condition: () => this.connectionDetails !== undefined,
       interval: 100,
       times: (timeoutSeconds * 1000) / 100,
     });
     if (!successful) {
       throw new Error(
-        `Have been Waiting for ${timeoutSeconds} seconds but haven't received "ConnectionDetail" message.`
+        `Have been Waiting for ${timeoutSeconds} seconds but haven't received "ConnectionDetails" message.`
       );
     }
   }

@@ -42,6 +42,6 @@ export type ConnectionBody = {
   recoveryErrorCode?: string;
 };
 
-export type ConnectionDetail = WsgMeta & {
+export type ConnectionDetails = WsgMeta & {
   body: ConnectionBody;
 };
