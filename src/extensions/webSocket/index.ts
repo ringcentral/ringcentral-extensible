@@ -77,6 +77,11 @@ class WebSocketExtension extends SdkExtension {
     }
   }
 
+  async recover() {
+    // todo: check if it is recoverable
+    await this.connect(true);
+  }
+
   async connect(recoverSession = false) {
     const r = await this.rc.post('/restapi/oauth/wstoken');
     this.wsToken = r.data as WsToken;

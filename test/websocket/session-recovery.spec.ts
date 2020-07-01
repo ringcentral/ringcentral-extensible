@@ -46,7 +46,7 @@ describe('WSG session recovery', () => {
     // here we don't invoke webSocketExtension.revoke() because that will also revoke all subscriptions created
     webSocketExtension.ws.close();
     await waitFor({interval: 5000});
-    await webSocketExtension.connect(true); // re-connect
+    await webSocketExtension.recover();
     await webSocketExtension.waitForReady();
     expect(webSocketExtension.connectionDetails?.body.recoveryState).toBe(
       'Successful'
@@ -106,7 +106,7 @@ describe('WSG session recovery', () => {
     // here we don't invoke webSocketExtension.revoke() because that will also revoke all subscriptions created
     webSocketExtension.ws.close();
     await waitFor({interval: 5000});
-    await webSocketExtension.connect(false); // re-connect by do not recover session
+    await webSocketExtension.connect(); // re-connect by do not recover session
     await webSocketExtension.waitForReady();
     expect(
       webSocketExtension.connectionDetails?.body.recoveryState
@@ -162,7 +162,7 @@ describe('WSG session recovery', () => {
       }
     );
     // already connected, connect again will not cause any issues
-    await webSocketExtension.connect(true);
+    await webSocketExtension.recover();
     await webSocketExtension.waitForReady();
     expect(webSocketExtension.connectionDetails?.body.recoveryState).toBe(
       'Successful'
@@ -226,7 +226,7 @@ describe('WSG session recovery', () => {
   //       webSocketExtension.connectionDetails!.body.recoveryTimeout * 1000 +
   //       20000,
   //   });
-  //   await webSocketExtension.connect(); // re-connect
+  //   await webSocketExtension.recover();
   //   await webSocketExtension.waitForReady();
   //   console.log(JSON.stringify(webSocketExtension.connectionDetails, null, 2));
   //   expect(webSocketExtension.connectionDetails?.body.recoveryState).toBe(
