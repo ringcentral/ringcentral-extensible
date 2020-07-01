@@ -1,6 +1,7 @@
 import WebSocketExtension from '.';
 import {WsgEvent, WsgMeta} from './types';
 import {CreateSubscriptionRequest, SubscriptionInfo} from '../../definitions';
+import Utils from './utils';
 
 class Subscription {
   wse: WebSocketExtension;
@@ -20,7 +21,7 @@ class Subscription {
       const [meta, body]: [
         WsgMeta,
         {subscriptionId: string}
-      ] = WebSocketExtension.splitWsgData(event.data);
+      ] = Utils.splitWsgData(event.data);
       if (
         this.enabled &&
         meta.type === 'ServerNotification' &&

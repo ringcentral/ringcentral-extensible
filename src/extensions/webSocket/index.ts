@@ -19,6 +19,7 @@ import {
 } from './types';
 import Subscription from './subscription';
 import WsgException from './wsgException';
+import Utils from './utils';
 
 const uuid = hyperid();
 
@@ -100,10 +101,9 @@ class WebSocketExtension extends SdkExtension {
     // listen for connectionDetails data
     this.connectionDetails = undefined;
     const connectionDetailsListener = (event: WsgEvent) => {
-      const [meta, body]: [
-        WsgMeta,
-        ConnectionBody
-      ] = WebSocketExtension.splitWsgData(event.data);
+      const [meta, body]: [WsgMeta, ConnectionBody] = Utils.splitWsgData(
+        event.data
+      );
       if (meta.type === 'ConnectionDetails' && meta.wsc) {
         if (
           !this.connectionDetails ||
@@ -147,19 +147,6 @@ ${JSON.stringify(JSON.parse(event.data), null, 2)}
 ******`
         );
       });
-    }
-  }
-
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  static splitWsgData(wsgData: string): [WsgMeta, any] {
-    if (wsgData.includes(',--Boundary')) {
-      const index = wsgData.indexOf(',--Boundary');
-      return [
-        JSON.parse(wsgData.substring(1, index)),
-        wsgData.substring(index + 1, wsgData.length - 1),
-      ];
-    } else {
-      return JSON.parse(wsgData);
     }
   }
 
@@ -233,9 +220,7 @@ ${JSON.stringify(JSON.parse(event.data), null, 2)}
       }
       this.ws.send(JSON.stringify(body));
       const handler = (event: WsgEvent) => {
-        const [meta, body]: [WsgMeta, T] = WebSocketExtension.splitWsgData(
-          event.data
-        );
+        const [meta, body]: [WsgMeta, T] = Utils.splitWsgData(event.data);
         if (meta.messageId === messageId) {
           this.ws.removeEventListener('message', handler);
           const response: RestResponse = {
