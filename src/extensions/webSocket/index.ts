@@ -1,14 +1,11 @@
 /* eslint-disable node/no-unpublished-import */
 import WS from 'isomorphic-ws';
 import waitFor from 'wait-for-async';
-import {getStatusText} from 'http-status-codes';
-import hyperid from 'hyperid';
 
 import RingCentral from '../..';
 import {RestRequestConfig, RestResponse, RestMethod} from '../../Rest';
 import SdkExtension from '..';
-import RestException from '../../RestException';
-import {version} from '../../../package.json';
+import {request} from './rest';
 import {
   WsToken,
   ConnectionDetails,
@@ -20,8 +17,6 @@ import {
 import Subscription from './subscription';
 import WsgException from './wsgException';
 import Utils from './utils';
-
-const uuid = hyperid();
 
 class WebSocketExtension extends SdkExtension {
   static sandboxServer = 'wss://ws-api.devtest.ringcentral.com/ws';
@@ -35,6 +30,8 @@ class WebSocketExtension extends SdkExtension {
   restOverWebsocket: boolean;
   debugMode: boolean;
   subscriptions: Subscription[] = [];
+
+  public request = request;
 
   constructor(options?: WebSocketOptions) {
     super();
@@ -179,70 +176,6 @@ ${JSON.stringify(JSON.parse(event.data), null, 2)}
     await subscription.subscribe();
     this.subscriptions.push(subscription);
     return subscription;
-  }
-
-  async request<T>(
-    method: RestMethod,
-    endpoint: string,
-    content?: {},
-    queryParams?: {},
-    config?: RestRequestConfig
-  ): Promise<RestResponse<T>> {
-    await this.waitForReady();
-    const _config: RestRequestConfig = {
-      method: method,
-      baseURL: this.wsToken.uri,
-      url: endpoint,
-      data: content,
-      params: queryParams,
-      ...config,
-    };
-    _config.headers = {
-      ..._config.headers,
-      'X-User-Agent': `${this.rc.rest!.appName}/${
-        this.rc.rest!.appVersion
-      } ringcentral/ringcentral-extensible/${version} via wss`,
-    };
-    return new Promise((resolve, reject) => {
-      const messageId = uuid();
-      const body = [
-        {
-          type: 'ClientRequest',
-          messageId,
-          method: _config.method,
-          path: _config.url,
-          headers: _config.headers,
-          query: _config.params,
-        },
-      ];
-      if (_config.data) {
-        body.push(_config.data);
-      }
-      this.ws.send(JSON.stringify(body));
-      const handler = (event: WsgEvent) => {
-        const [meta, body]: [WsgMeta, T] = Utils.splitWsgData(event.data);
-        if (meta.messageId === messageId) {
-          this.ws.removeEventListener('message', handler);
-          const response: RestResponse = {
-            data: body,
-            status: meta.status,
-            statusText: getStatusText(meta.status),
-            headers: meta.headers,
-            config: _config,
-          };
-          if (meta.type === 'Error') {
-            reject(new RestException(response));
-          } else if (meta.type === 'ClientRequest') {
-            if (meta.status >= 200 && meta.status < 300) {
-              resolve(response);
-            } else {
-              reject(new RestException(response));
-            }
-          }
-        }
-      };
-      this.ws.addEventListener('message', handler);
-    });
   }
 }
 
