@@ -26,6 +26,7 @@ describe('WSG', () => {
     });
     const webSocketExtension = new WebSocketExtension({
       restOverWebSocket: true,
+      // debugMode: true,
     });
     rc.installExtension(webSocketExtension);
     const extInfo = await rc.restapi().account().extension().get();

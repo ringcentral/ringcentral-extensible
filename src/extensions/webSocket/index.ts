@@ -22,16 +22,15 @@ class WebSocketExtension extends SdkExtension {
   static sandboxServer = 'wss://ws-api.devtest.ringcentral.com/ws';
   static productionServer = 'wss://ws-api.ringcentral.com/ws';
 
+  restOverWebsocket: boolean;
+  debugMode: boolean;
   rc!: RingCentral;
   wsToken!: WsToken;
   ws!: WS;
   connectionDetails?: ConnectionDetails;
-
-  restOverWebsocket: boolean;
-  debugMode: boolean;
   subscriptions: Subscription[] = [];
 
-  public request = request;
+  request = request; // request method was moved to another file to keep this file short
 
   constructor(options?: WebSocketOptions) {
     super();
@@ -116,7 +115,7 @@ class WebSocketExtension extends SdkExtension {
     };
     this.ws.addEventListener('message', connectionDetailsListener);
 
-    // recover all subscriptions
+    // recover all subscriptions, if there are any
     for (const subscription of this.subscriptions) {
       // because we have a new ws object
       subscription.setupWsEventListener();
@@ -126,24 +125,9 @@ class WebSocketExtension extends SdkExtension {
       }
     }
 
-    // debug mode to print all WS traffic
+    // debug mode to print all WebSocket traffic
     if (this.debugMode) {
-      const send = this.ws.send.bind(this.ws);
-      this.ws.send = (str: string) => {
-        send(str);
-        console.debug(
-          `*** WebSocket outgoing message: ***
-${JSON.stringify(JSON.parse(str), null, 2)}
-******`
-        );
-      };
-      this.ws.addEventListener('message', (event: WsgEvent) => {
-        console.debug(
-          `*** WebSocket incoming message: ***
-${JSON.stringify(JSON.parse(event.data), null, 2)}
-******`
-        );
-      });
+      Utils.debugWebSocket(this.ws);
     }
   }
 
