@@ -14,7 +14,7 @@ import {
   ConnectionBody,
 } from './types';
 import Subscription from './subscription';
-import WsgException from './wsgException';
+import {ConnectionException} from './exceptions';
 import Utils from './utils';
 
 class WebSocketExtension extends SdkExtension {
@@ -104,7 +104,7 @@ class WebSocketExtension extends SdkExtension {
       meta => meta.type === 'ConnectionDetails' || meta.type === 'Error'
     );
     if (meta.type === 'Error') {
-      throw new WsgException(event);
+      throw new ConnectionException(event);
     }
     this.connectionDetails = {...meta, body};
     if (

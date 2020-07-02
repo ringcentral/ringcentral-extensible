@@ -1,7 +1,7 @@
 import {WsgEvent, WsgError, WsgMeta} from './types';
 import Utils from './utils';
 
-class WsgException extends Error {
+export class ConnectionException extends Error {
   wsgEvent: WsgEvent;
   wsgError: WsgError;
   constructor(wsgEvent: WsgEvent) {
@@ -12,4 +12,8 @@ class WsgException extends Error {
   }
 }
 
-export default WsgException;
+export class TimeoutException extends Error {
+  constructor(message?: string) {
+    super(message ?? 'Failed to receive expected WebSocket message in time.');
+  }
+}

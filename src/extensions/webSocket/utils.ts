@@ -2,6 +2,7 @@
 import WS from 'isomorphic-ws';
 
 import {WsgMeta, WsgEvent} from './types';
+import {TimeoutException} from './exceptions';
 
 class Utils {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -45,8 +46,7 @@ ${JSON.stringify(JSON.parse(event.data), null, 2)}
     return new Promise<[WsgMeta, any, WsgEvent]>((resolve, reject) => {
       const timeoutHandle = setTimeout(() => {
         ws.removeEventListener('message', handler);
-        // todo: create an exception class
-        reject('Wait for WebSocket message timeout');
+        reject(new TimeoutException());
         return;
       }, timeout);
       const handler = (event: WsgEvent) => {
