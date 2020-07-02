@@ -17,7 +17,7 @@ import AbcExtension from 'ringcentral-extensible/build/extensions/abc';
 
 const rc = new RingCentral(...);
 const abcExtension = new AbcExtension(...);
-rc.installExtension(abcExtension);
+await rc.installExtension(abcExtension);
 ```
 
 ## Enable & Disable

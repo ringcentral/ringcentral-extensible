@@ -10,7 +10,7 @@ describe('Event Emitter Extension', () => {
   test('default', async () => {
     const testCase = async (rc: RingCentral) => {
       const eventEmitterExtension = new EventEmitterExtension();
-      rc.installExtension(eventEmitterExtension);
+      await rc.installExtension(eventEmitterExtension);
       eventEmitterExtension.eventEmitter.on(Events.requestSuccess, r => {
         console.log(Utils.formatTraffic(r));
       });

@@ -22,7 +22,7 @@ describe('RingCentral extension', () => {
 
     const rc = new RingCentral();
     const ringCentralExtension = new RingCentralExtension(sdk);
-    rc.installExtension(ringCentralExtension);
+    await rc.installExtension(ringCentralExtension);
 
     const extensionInfo = await rc.restapi().account().extension().get();
     expect(extensionInfo.id).toBeDefined();

@@ -11,7 +11,7 @@ import DebugModeExtension from 'ringcentral-extensible/build/extensions/debugMod
 
 const rc = new RingCentral(...);
 const debugModeExtension = new DebugModeExtension();
-rc.installExtension(debugModeExtension);
+await rc.installExtension(debugModeExtension);
 ```
 
 With this extension installed, details for every API request traffic will be printed using `console.debug`.

@@ -33,13 +33,13 @@ describe('extensions', () => {
       password: process.env.RINGCENTRAL_PASSWORD!,
     });
     const ringCentralExtension = new RingCentralExtension(sdk);
-    rc.installExtension(ringCentralExtension);
+    await rc.installExtension(ringCentralExtension);
 
     // install WebSocket Extension
     const webSocketExtension = new WebSocketExtension({
       restOverWebSocket: true,
     });
-    rc.installExtension(webSocketExtension);
+    await rc.installExtension(webSocketExtension);
 
     // setup subscription
     let eventCount = 0;

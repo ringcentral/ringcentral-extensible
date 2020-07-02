@@ -18,7 +18,7 @@ import RetryExtension from 'ringcentral-extensible/build/extensions/retry';
 
 const rc = new RingCentral(...);
 const retryExtension = new RetryExtension(retryOptions);
-rc.installExtension(retryExtension);
+await rc.installExtension(retryExtension);
 ```
 
 

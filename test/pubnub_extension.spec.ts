@@ -20,7 +20,7 @@ describe('PubNub extension', () => {
       password: process.env.RINGCENTRAL_PASSWORD!,
     });
     const pubNubExtension = new PubNubExtension();
-    rc.installExtension(pubNubExtension);
+    await rc.installExtension(pubNubExtension);
     let eventCount = 0;
     await pubNubExtension.subscribe(
       [

@@ -11,7 +11,7 @@ import EventEmitterExtension, {Events} from 'ringcentral-extensible/build/extens
 
 const rc = new RingCentral(...);
 const eventEmitterExtension = new EventEmitterExtension(eventEmitterOptions);
-rc.installExtension(eventEmitterExtension);
+await rc.installExtension(eventEmitterExtension);
 
 eventEmitterExtension.eventEmitter.on(Events.requestSuccess, r => {
   console.log(`There is a request error: ${r}`)

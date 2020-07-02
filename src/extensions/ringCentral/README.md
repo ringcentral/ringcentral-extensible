@@ -24,7 +24,7 @@ await sdk.login({username, extension, password});
 // ringcentral-extensible + ringcentral extension
 const rc = new RingCentral();
 const ringCentralExtension = new RingCentralExtension(sdk);
-rc.installExtension(ringCentralExtension);
+await rc.installExtension(ringCentralExtension);
 
 // API call with @ringcentral/sdk as HTTP engine
 const extensionInfo = await rc.restapi().account().extension().get();
@@ -47,7 +47,7 @@ This extension makes `@ringcentral/sdk` as HTTP engine. to switch back to `axios
 // ringcentral-extensible + ringcentral extension
 const rc = new RingCentral({...});
 const ringCentralExtension = new RingCentralExtension(sdk);
-rc.installExtension(ringCentralExtension);
+await rc.installExtension(ringCentralExtension);
 
 // API call with @ringcentral/sdk as HTTP engine
 const extensionInfo = await rc.restapi().account().extension().get();

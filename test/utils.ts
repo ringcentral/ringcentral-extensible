@@ -39,7 +39,7 @@ export const createRingCentral = async (
       server: process.env.RINGCENTRAL_WSG_SERVER_URL!,
       restOverWebSocket: true,
     });
-    rc.installExtension(websocketExtension);
+    await rc.installExtension(websocketExtension);
     return rc;
   }
 };

@@ -24,7 +24,7 @@ import WebSocketExtension from 'ringcentral-extensible/build/extensions/webSocke
 
 const rc = new RingCentral(...);
 const webSocketExtension = new WebSocketExtension(webSocketOptions);
-rc.installExtension(webSocketExtension);
+await rc.installExtension(webSocketExtension);
 ```
 
 You can setup subscriptions:
@@ -44,7 +44,7 @@ You can also make Rest API calls over WebSocket if you specified `webSocketOptio
 const webSocketExtension = new WebSocketExtension({
   restOverWebSocket: true,
 });
-rc.installExtension(webSocketExtension);
+await rc.installExtension(webSocketExtension);
 
 const extInfo = await rc.restapi().account().extension().get();
 console.log(extInfo.id);

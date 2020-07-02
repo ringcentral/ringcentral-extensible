@@ -24,7 +24,7 @@ import PubNubExtension from 'ringcentral-extensible/build/extensions/pubNub';
 
 const rc = new RingCentral(...);
 const pubNubExtension = new PubNubExtension();
-rc.installExtension(pubNubExtension);
+await rc.installExtension(pubNubExtension);
 
 const subscription = pubNubExtension.subscribe(
     ['/restapi/v1.0/account/~/extension/~/message-store'],

@@ -18,7 +18,7 @@ import RateLimitExtension from 'ringcentral-extensible/build/extensions/rateLimi
 
 const rc = new RingCentral(...);
 const rateLimitExtension = new RateLimitExtension(rateLimitOptions);
-rc.installExtension(rateLimitExtension);
+await rc.installExtension(rateLimitExtension);
 ```
 
 
