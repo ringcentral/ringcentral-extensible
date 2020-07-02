@@ -52,6 +52,7 @@ ${JSON.stringify(JSON.parse(event.data), null, 2)}
       const handler = (event: WsgEvent) => {
         const [meta, body] = Utils.splitWsgData(event.data);
         if (matchCondition(meta)) {
+          ws.removeEventListener('message', handler);
           resolve([meta, body, event]);
           clearTimeout(timeoutHandle);
           return;
