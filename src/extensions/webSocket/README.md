@@ -105,5 +105,4 @@ In case of network outage and the WebSocket connection is lost, you can restore 
 await webSocketExtension.recover()
 ```
 
-Command above will create a new WebSocket connection and make sure that subscriptions are also recovered.
-
+Command above will create a new WebSocket connection and make sure that subscriptions are recovered.
