@@ -9,7 +9,7 @@ class PubNubExtension extends SdkExtension {
   rc!: RingCentral;
   subscriptions: Subscription[] = [];
 
-  install(rc: RingCentral): void {
+  async install(rc: RingCentral) {
     this.rc = rc;
   }
 

@@ -45,7 +45,7 @@ class EventEmitterExtension extends SdkExtension {
     }
   }
 
-  install(rc: RingCentral): void {
+  async install(rc: RingCentral) {
     const request = rc.request.bind(rc);
     rc.request = async <T>(
       method: RestMethod,

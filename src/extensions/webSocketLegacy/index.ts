@@ -47,7 +47,7 @@ class WebSocketExtension extends SdkExtension {
     this.ws.addEventListener('open', openListener);
   }
 
-  install(rc: RingCentral): void {
+  async install(rc: RingCentral) {
     this.rc = rc;
     const request = rc.request.bind(rc);
     rc.request = async <T>(

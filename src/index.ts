@@ -23,8 +23,8 @@ export default class RingCentral {
     this.rest = new Rest(restOptions ?? {});
   }
 
-  installExtension(sdkExtension: SdkExtension) {
-    sdkExtension.install(this);
+  async installExtension(sdkExtension: SdkExtension) {
+    await sdkExtension.install(this);
     this.sdkExtensions.push(sdkExtension);
   }
 

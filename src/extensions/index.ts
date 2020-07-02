@@ -2,7 +2,7 @@ import RingCentral from '..';
 
 abstract class SdkExtension {
   enabled = true;
-  abstract install(rc: RingCentral): void;
+  abstract async install(rc: RingCentral): Promise<void>;
   async revoke(): Promise<void> {}
 }
 

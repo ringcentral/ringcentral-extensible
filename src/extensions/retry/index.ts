@@ -40,7 +40,7 @@ class RetryExtension extends SdkExtension {
       });
   }
 
-  install(rc: RingCentral): void {
+  async install(rc: RingCentral) {
     const request = rc.request.bind(rc);
     const newRequest = async <T>(
       method: RestMethod,

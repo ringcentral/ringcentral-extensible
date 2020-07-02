@@ -38,7 +38,7 @@ class WebSocketExtension extends SdkExtension {
     this.debugMode = options?.debugMode ?? false;
   }
 
-  install(rc: RingCentral): void {
+  async install(rc: RingCentral) {
     this.rc = rc;
     const request = rc.request.bind(rc);
     rc.request = async <T>(
@@ -61,7 +61,7 @@ class WebSocketExtension extends SdkExtension {
       }
       return this.request<T>(method, endpoint, content, queryParams, config);
     };
-    this.connect();
+    await this.connect();
   }
 
   get enabled() {

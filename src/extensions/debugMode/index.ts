@@ -4,7 +4,7 @@ import Utils from '../../Utils';
 import SdkExtension from '..';
 
 class DebugModeExtension extends SdkExtension {
-  install(rc: RingCentral): void {
+  async install(rc: RingCentral) {
     const request = rc.request.bind(rc);
     rc.request = async <T>(
       method: RestMethod,
