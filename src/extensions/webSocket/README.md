@@ -86,3 +86,24 @@ If `restOverWebSocket` is true and an Rest API call cannot be done over WebSocke
 Default value is false.
 
 If enabled, WebSocket incoming message and outgoing message will be printed using `console.debug`.
+
+
+## Access WebSocket object
+
+```ts
+webSocketExtension.ws
+```
+
+gives you the WebSocket object.
+
+
+## Session Recovery
+
+In case of network outage and the WebSocket connection is lost, you can restore the session by:
+
+```ts
+await webSocketExtension.recover()
+```
+
+Command above will create a new WebSocket connection and make sure that subscriptions are also recovered.
+
