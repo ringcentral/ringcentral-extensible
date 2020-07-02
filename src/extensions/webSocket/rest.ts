@@ -20,7 +20,6 @@ export async function request<T>(
   queryParams?: {},
   config?: RestRequestConfig
 ): Promise<RestResponse<T>> {
-  await this.waitForReady();
   const _config: RestRequestConfig = {
     method: method,
     baseURL: this.wsToken.uri,

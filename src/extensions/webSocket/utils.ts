@@ -35,6 +35,31 @@ ${JSON.stringify(JSON.parse(event.data), null, 2)}
       );
     });
   }
+
+  static waitForWebSocketMessage(
+    ws: WS,
+    matchCondition: (meta: WsgMeta) => boolean,
+    timeout = 60000
+  ) {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    return new Promise<[WsgMeta, any, WsgEvent]>((resolve, reject) => {
+      const timeoutHandle = setTimeout(() => {
+        ws.removeEventListener('message', handler);
+        // todo: create an exception class
+        reject('Wait for WebSocket message timeout');
+        return;
+      }, timeout);
+      const handler = (event: WsgEvent) => {
+        const [meta, body] = Utils.splitWsgData(event.data);
+        if (matchCondition(meta)) {
+          resolve([meta, body, event]);
+          clearTimeout(timeoutHandle);
+          return;
+        }
+      };
+      ws.addEventListener('message', handler);
+    });
+  }
 }
 
 export default Utils;

@@ -29,8 +29,7 @@ describe('WSG session recovery', () => {
       // debugMode: true,
       restOverWebSocket: true,
     });
-    rc.installExtension(webSocketExtension);
-    await webSocketExtension.waitForReady();
+    await rc.installExtension(webSocketExtension);
     expect(
       webSocketExtension.connectionDetails?.body.recoveryState
     ).toBeUndefined();
@@ -47,7 +46,6 @@ describe('WSG session recovery', () => {
     webSocketExtension.ws.close();
     await waitFor({interval: 5000});
     await webSocketExtension.recover();
-    await webSocketExtension.waitForReady();
     expect(webSocketExtension.connectionDetails?.body.recoveryState).toBe(
       'Successful'
     );
@@ -89,8 +87,7 @@ describe('WSG session recovery', () => {
       // debugMode: true,
       restOverWebSocket: true,
     });
-    rc.installExtension(webSocketExtension);
-    await webSocketExtension.waitForReady();
+    await rc.installExtension(webSocketExtension);
     expect(
       webSocketExtension.connectionDetails?.body.recoveryState
     ).toBeUndefined();
@@ -107,7 +104,6 @@ describe('WSG session recovery', () => {
     webSocketExtension.ws.close();
     await waitFor({interval: 5000});
     await webSocketExtension.reconnect(); // re-connect by do not recover session
-    await webSocketExtension.waitForReady();
     expect(
       webSocketExtension.connectionDetails?.body.recoveryState
     ).toBeUndefined();
@@ -148,8 +144,7 @@ describe('WSG session recovery', () => {
     const webSocketExtension = new WebSocketExtension({
       // debugMode: true,
     });
-    rc.installExtension(webSocketExtension);
-    await webSocketExtension.waitForReady();
+    await rc.installExtension(webSocketExtension);
     expect(
       webSocketExtension.connectionDetails?.body.recoveryState
     ).toBeUndefined();
@@ -163,7 +158,6 @@ describe('WSG session recovery', () => {
     );
     // already connected, connect again will not cause any issues
     await webSocketExtension.recover();
-    await webSocketExtension.waitForReady();
     expect(webSocketExtension.connectionDetails?.body.recoveryState).toBe(
       'Successful'
     );
@@ -204,8 +198,7 @@ describe('WSG session recovery', () => {
   //   const webSocketExtension = new WebSocketExtension({
   //     // debugMode: true,
   //   });
-  //   rc.installExtension(webSocketExtension);
-  //   await webSocketExtension.waitForReady();
+  //   await rc.installExtension(webSocketExtension);
   //   console.log(JSON.stringify(webSocketExtension.connectionDetails, null, 2));
   //   expect(
   //     webSocketExtension.connectionDetails?.body.recoveryState
@@ -227,7 +220,6 @@ describe('WSG session recovery', () => {
   //       20000,
   //   });
   //   await webSocketExtension.recover();
-  //   await webSocketExtension.waitForReady();
   //   console.log(JSON.stringify(webSocketExtension.connectionDetails, null, 2));
   //   expect(webSocketExtension.connectionDetails?.body.recoveryState).toBe(
   //     'Failed'

@@ -1,6 +1,5 @@
 /* eslint-disable node/no-unpublished-import */
 import WS from 'isomorphic-ws';
-import waitFor from 'wait-for-async';
 
 import RingCentral from '../..';
 import {RestRequestConfig, RestResponse, RestMethod} from '../../Rest';
@@ -27,7 +26,7 @@ class WebSocketExtension extends SdkExtension {
   rc!: RingCentral;
   wsToken!: WsToken;
   ws!: WS;
-  connectionDetails?: ConnectionDetails;
+  connectionDetails!: ConnectionDetails;
   subscriptions: Subscription[] = [];
 
   request = request; // request method was moved to another file to keep this file short
@@ -36,6 +35,16 @@ class WebSocketExtension extends SdkExtension {
     super();
     this.restOverWebsocket = options?.restOverWebSocket ?? false;
     this.debugMode = options?.debugMode ?? false;
+  }
+
+  get enabled() {
+    return super.enabled;
+  }
+  set enabled(value: boolean) {
+    super.enabled = value;
+    for (const subscription of this.subscriptions ?? []) {
+      subscription.enabled = value;
+    }
   }
 
   async install(rc: RingCentral) {
@@ -64,16 +73,6 @@ class WebSocketExtension extends SdkExtension {
     await this.connect();
   }
 
-  get enabled() {
-    return super.enabled;
-  }
-  set enabled(value: boolean) {
-    super.enabled = value;
-    for (const subscription of this.subscriptions ?? []) {
-      subscription.enabled = value;
-    }
-  }
-
   async recover() {
     if (this.connectionDetails?.wsc?.token === undefined) {
       throw new Error('No existing session to recover');
@@ -94,26 +93,40 @@ class WebSocketExtension extends SdkExtension {
     }
     this.ws = new WS(wsUri);
 
-    // listen for connectionDetails data
-    this.connectionDetails = undefined;
-    const connectionDetailsListener = (event: WsgEvent) => {
+    // debug mode to print all WebSocket traffic
+    if (this.debugMode) {
+      Utils.debugWebSocket(this.ws);
+    }
+
+    // get initial ConnectionDetails data
+    const [meta, body, event] = await Utils.waitForWebSocketMessage(
+      this.ws,
+      meta => meta.type === 'ConnectionDetails' || meta.type === 'Error'
+    );
+    if (meta.type === 'Error') {
+      throw new WsgException(event);
+    }
+    this.connectionDetails = {...meta, body};
+    if (
+      recoverSession &&
+      this.connectionDetails.body.recoveryState === 'Failed'
+    ) {
+      recoverSession = false;
+    }
+
+    // listen for new ConnectionDetails data
+    this.ws.addEventListener('message', (event: WsgEvent) => {
       const [meta, body]: [WsgMeta, ConnectionBody] = Utils.splitWsgData(
         event.data
       );
       if (meta.type === 'ConnectionDetails' && meta.wsc) {
         if (
-          !this.connectionDetails ||
           body.recoveryState ||
-          (this.connectionDetails &&
-            this.connectionDetails.wsc!.sequence < meta.wsc.sequence)
+          this.connectionDetails.wsc!.sequence < meta.wsc.sequence
         )
           this.connectionDetails = {...meta, body};
-      } else if (!this.connectionDetails && meta.type === 'Error') {
-        // session recovery failed
-        throw new WsgException(event);
       }
-    };
-    this.ws.addEventListener('message', connectionDetailsListener);
+    });
 
     // recover all subscriptions, if there are any
     for (const subscription of this.subscriptions) {
@@ -124,38 +137,16 @@ class WebSocketExtension extends SdkExtension {
         await subscription.subscribe();
       }
     }
-
-    // debug mode to print all WebSocket traffic
-    if (this.debugMode) {
-      Utils.debugWebSocket(this.ws);
-    }
-  }
-
-  async waitForReady() {
-    const timeoutSeconds = 60;
-    const successful = await waitFor({
-      condition: () => this.connectionDetails !== undefined,
-      interval: 100,
-      times: (timeoutSeconds * 1000) / 100,
-    });
-    if (!successful) {
-      throw new Error(
-        `Have been Waiting for ${timeoutSeconds} seconds but haven't received "ConnectionDetails" message.`
-      );
-    }
   }
 
   async revoke() {
     for (const subscription of this.subscriptions) {
       await subscription.revoke();
     }
-    if (this.ws.OPEN) {
-      this.ws.close();
-    }
+    this.ws.close();
   }
 
   async subscribe(eventFilters: string[], callback: (event: {}) => void) {
-    await this.waitForReady();
     const subscription = new Subscription(this, eventFilters, callback);
     await subscription.subscribe();
     this.subscriptions.push(subscription);
