@@ -20,7 +20,7 @@ yarn add @types/ws
 
 ```ts
 import RingCentral from 'ringcentral-extensible';
-import WebSocketExtension from 'ringcentral-extensible/build/extensions/webSocket';
+import WebSocketExtension from 'ringcentral-extensible/build/src/extensions/webSocket';
 
 const rc = new RingCentral(...);
 const webSocketExtension = new WebSocketExtension(webSocketOptions);

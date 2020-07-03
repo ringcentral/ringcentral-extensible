@@ -7,7 +7,7 @@ Provide debug mode for this SDK, it supports Rest API over both HTTPS and WebSoc
 
 ```ts
 import RingCentral from 'ringcentral-extensible';
-import DebugModeExtension from 'ringcentral-extensible/build/extensions/debugMode';
+import DebugModeExtension from 'ringcentral-extensible/build/src/extensions/debugMode';
 
 const rc = new RingCentral(...);
 const debugModeExtension = new DebugModeExtension();
