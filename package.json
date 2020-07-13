@@ -40,11 +40,15 @@
     "ts-jest": "^26.1.1",
     "typescript": "^3.9.5",
     "wait-for-async": "^0.5.0",
+    "ws": "^7.3.1",
     "yarn-upgrade-all": "^0.5.2"
   },
   "husky": {
     "hooks": {
       "pre-push": "gts fix"
     }
+  },
+  "peerDependencies": {
+    "ws": "^7.3.1"
   }
 }
