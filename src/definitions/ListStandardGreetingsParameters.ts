@@ -34,7 +34,8 @@ class ListStandardGreetingsParameters {
     | 'CompanyAnsweringRule'
     | 'CompanyAfterHoursAnsweringRule'
     | 'VoicemailExtensionAnsweringRule'
-    | 'AnnouncementExtensionAnsweringRule';
+    | 'AnnouncementExtensionAnsweringRule'
+    | 'SharedLinesGroupAnsweringRule';
 }
 
 export default ListStandardGreetingsParameters;

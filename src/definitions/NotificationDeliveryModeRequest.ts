@@ -2,7 +2,7 @@ class NotificationDeliveryModeRequest {
   /**
    * Notifications transportation provider name
    */
-  transportType?: 'PubNub' | 'WebHook' | 'RC/APNS' | 'RC/GCM' | 'WebSocket';
+  transportType?: 'PubNub' | 'WebHook' | 'RC/APNS' | 'RC/GCM';
 
   /**
    * Mandatory for 'WebHook' transport type, URL of a consumer service (cannot be changed during subscription update)

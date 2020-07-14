@@ -1,6 +1,8 @@
 import {
   BrandInfo,
+  ContractedCountryInfo,
   ServicePlanInfo,
+  TargetServicePlanInfo,
   BillingPlanInfo,
   ServiceFeatureInfo,
   AccountLimits,
@@ -24,13 +26,18 @@ class GetServiceInfoResponse {
   brand?: BrandInfo;
 
   /**
+   * Information on the contracted country of account
+   */
+  contractedCountry?: ContractedCountryInfo;
+
+  /**
    * Information on account service plan
    */
   servicePlan?: ServicePlanInfo;
 
   /**
    */
-  targetServicePlan?: ServicePlanInfo;
+  targetServicePlan?: TargetServicePlanInfo;
 
   /**
    * Information on account billing plan

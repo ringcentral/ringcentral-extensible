@@ -31,8 +31,7 @@ class QueueInfo {
   holdAudioInterruptionPeriod?: number;
 
   /**
-   * Specifies the type of action to be taken after the hold time (waiting for an available call queue member) expires. If 'TransferToExtension' option is selected, the extension specified in `transfer` field is used
-   * Default: Voicemail
+   * Specifies the type of action to be taken after the hold time (waiting for an available call queue member) expires. If 'TransferToExtension' option is selected, the extension specified in `transfer` field is used. The default value is `Voicemail`
    */
   holdTimeExpirationAction?:
     | 'TransferToExtension'

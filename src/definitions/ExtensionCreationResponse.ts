@@ -4,7 +4,6 @@ import {
   ExtensionPermissions,
   ProfileImageInfo,
   ReferenceInfo,
-  Roles,
   RegionalSettings,
   ExtensionServiceFeatureInfo,
   AutomaticLocationUpdatesSiteInfo,
@@ -59,10 +58,6 @@ class ExtensionCreationResponse {
    * List of non-RC internal identifiers assigned to an extension
    */
   references?: ReferenceInfo[];
-
-  /**
-   */
-  roles?: Roles[];
 
   /**
    * Extension region data (timezone, home country, language)

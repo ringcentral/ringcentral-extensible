@@ -1,5 +1,3 @@
-import DataExport from './DataExport';
-import Posts from './Posts';
 import Preferences from './Preferences';
 import Webhooks from './Webhooks';
 import Companies from './Companies';
@@ -7,7 +5,6 @@ import Persons from './Persons';
 import Tasks from './Tasks';
 import Notes from './Notes';
 import Events from './Events';
-import Cards from './Cards';
 import Groups from './Groups';
 import Favorites from './Favorites';
 import Recent from './Recent';
@@ -15,6 +12,7 @@ import Everyone from './Everyone';
 import Teams from './Teams';
 import Conversations from './Conversations';
 import Chats from './Chats';
+import DataExport from './DataExport';
 import Parent from '..';
 import RingCentral from '../../..';
 
@@ -29,6 +27,10 @@ class Index {
 
   path(): string {
     return `${this.parent.path()}/glip`;
+  }
+
+  dataExport(taskId: string | null = null): DataExport {
+    return new DataExport(this, taskId);
   }
 
   chats(chatId: string | null = null): Chats {
@@ -59,10 +61,6 @@ class Index {
     return new Groups(this, groupId);
   }
 
-  cards(cardId: string | null = null): Cards {
-    return new Cards(this, cardId);
-  }
-
   events(eventId: string | null = null): Events {
     return new Events(this, eventId);
   }
@@ -89,14 +87,6 @@ class Index {
 
   preferences(): Preferences {
     return new Preferences(this);
-  }
-
-  posts(): Posts {
-    return new Posts(this);
-  }
-
-  dataExport(taskId: string | null = null): DataExport {
-    return new DataExport(this, taskId);
   }
 }
 

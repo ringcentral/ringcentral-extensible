@@ -1,4 +1,5 @@
 import {
+  EmailRecipientInfo,
   VoicemailsInfo,
   InboundFaxesInfo,
   OutboundFaxesInfo,
@@ -11,6 +12,11 @@ class NotificationSettings {
    * Canonical URI of notifications settings resource
    */
   uri?: string;
+
+  /**
+   * List of extensions specified as email notification recipients. Returned only for call queues where queue managers are assigned as user extensions.
+   */
+  emailRecipients?: EmailRecipientInfo[];
 
   /**
    * List of notification recipient email addresses

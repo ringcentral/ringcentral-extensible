@@ -3,8 +3,8 @@ import State from './State';
 import Location from './Location';
 import Country from './Country';
 import Language from './Language';
-import Greeting from './Greeting';
 import FaxCoverPage from './FaxCoverPage';
+import Greeting from './Greeting';
 import Parent from '..';
 import RingCentral from '../../..';
 
@@ -21,12 +21,12 @@ class Index {
     return `${this.parent.path()}/dictionary`;
   }
 
-  faxCoverPage(): FaxCoverPage {
-    return new FaxCoverPage(this);
-  }
-
   greeting(greetingId: string | null = null): Greeting {
     return new Greeting(this, greetingId);
+  }
+
+  faxCoverPage(): FaxCoverPage {
+    return new FaxCoverPage(this);
   }
 
   language(languageId: string | null = null): Language {

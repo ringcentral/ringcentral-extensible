@@ -2,6 +2,7 @@ import {
   AutomaticLocationUpdatesSiteInfo,
   PublicIpRangeInfo,
   PrivateIpRangeInfoRequest,
+  ERLLocationInfo,
 } from '.';
 
 class UpdateNetworkRequest {
@@ -20,6 +21,11 @@ class UpdateNetworkRequest {
   /**
    */
   privateIpRanges?: PrivateIpRangeInfoRequest[];
+
+  /**
+   * Emergency response location information
+   */
+  emergencyLocation?: ERLLocationInfo;
 }
 
 export default UpdateNetworkRequest;

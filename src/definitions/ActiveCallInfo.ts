@@ -53,6 +53,21 @@ class ActiveCallInfo {
   sessionId?: string;
 
   /**
+   * Telephony identifier of a call session
+   */
+  telephonySessionId?: string;
+
+  /**
+   * Extension ID of the call owner on whose behalf a call is performed
+   */
+  onBehalfOf?: string;
+
+  /**
+   * Internal identifier of a call party
+   */
+  partyId?: string;
+
+  /**
    */
   terminationType?: string;
 

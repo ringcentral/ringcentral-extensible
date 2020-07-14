@@ -1,5 +1,5 @@
-import MeetingRecordings from './MeetingRecordings';
-import Device from './Device';
+import RingOut from './RingOut';
+import AuthzProfile from './AuthzProfile';
 import Features from './Features';
 import CallQueues from './CallQueues';
 import VideoConfiguration from './VideoConfiguration';
@@ -9,29 +9,29 @@ import NotificationSettings from './NotificationSettings';
 import Grant from './Grant';
 import CallerId from './CallerId';
 import PhoneNumber from './PhoneNumber';
-import Greeting from './Greeting';
-import AnsweringRule from './AnsweringRule';
-import ForwardingNumber from './ForwardingNumber';
-import CallerBlocking from './CallerBlocking';
-import BusinessHours from './BusinessHours';
-import AuthzProfile from './AuthzProfile';
-import MeetingsConfiguration from './MeetingsConfiguration';
-import Meeting from './Meeting';
-import UnifiedPresence from './UnifiedPresence';
-import Presence from './Presence';
-import Favorite from './Favorite';
-import AddressBookSync from './AddressBookSync';
-import AddressBook from './AddressBook';
-import RingOut from './RingOut';
 import MessageSync from './MessageSync';
 import MessageStore from './MessageStore';
 import Fax from './Fax';
 import CompanyPager from './CompanyPager';
 import Mms from './Mms';
 import Sms from './Sms';
+import MeetingsConfiguration from './MeetingsConfiguration';
+import Meeting from './Meeting';
+import MeetingRecordings from './MeetingRecordings';
+import Device from './Device';
 import ActiveCalls from './ActiveCalls';
 import CallLogSync from './CallLogSync';
 import CallLog from './CallLog';
+import Greeting from './Greeting';
+import AnsweringRule from './AnsweringRule';
+import ForwardingNumber from './ForwardingNumber';
+import CallerBlocking from './CallerBlocking';
+import BusinessHours from './BusinessHours';
+import Favorite from './Favorite';
+import AddressBookSync from './AddressBookSync';
+import AddressBook from './AddressBook';
+import UnifiedPresence from './UnifiedPresence';
+import Presence from './Presence';
 import {RestRequestConfig} from '../../../../Rest';
 import {
   GetExtensionListResponse,
@@ -156,6 +156,46 @@ class Index {
     return r.data;
   }
 
+  presence(): Presence {
+    return new Presence(this);
+  }
+
+  unifiedPresence(): UnifiedPresence {
+    return new UnifiedPresence(this);
+  }
+
+  addressBook(): AddressBook {
+    return new AddressBook(this);
+  }
+
+  addressBookSync(): AddressBookSync {
+    return new AddressBookSync(this);
+  }
+
+  favorite(): Favorite {
+    return new Favorite(this);
+  }
+
+  businessHours(): BusinessHours {
+    return new BusinessHours(this);
+  }
+
+  callerBlocking(): CallerBlocking {
+    return new CallerBlocking(this);
+  }
+
+  forwardingNumber(forwardingNumberId: string | null = null): ForwardingNumber {
+    return new ForwardingNumber(this, forwardingNumberId);
+  }
+
+  answeringRule(ruleId: string | null = null): AnsweringRule {
+    return new AnsweringRule(this, ruleId);
+  }
+
+  greeting(greetingId: string | null = null): Greeting {
+    return new Greeting(this, greetingId);
+  }
+
   callLog(callRecordId: string | null = null): CallLog {
     return new CallLog(this, callRecordId);
   }
@@ -166,6 +206,22 @@ class Index {
 
   activeCalls(): ActiveCalls {
     return new ActiveCalls(this);
+  }
+
+  device(): Device {
+    return new Device(this);
+  }
+
+  meetingRecordings(): MeetingRecordings {
+    return new MeetingRecordings(this);
+  }
+
+  meeting(meetingId: string | null = null): Meeting {
+    return new Meeting(this, meetingId);
+  }
+
+  meetingsConfiguration(): MeetingsConfiguration {
+    return new MeetingsConfiguration(this);
   }
 
   sms(): Sms {
@@ -190,62 +246,6 @@ class Index {
 
   messageSync(): MessageSync {
     return new MessageSync(this);
-  }
-
-  ringOut(ringoutId: string | null = null): RingOut {
-    return new RingOut(this, ringoutId);
-  }
-
-  addressBook(): AddressBook {
-    return new AddressBook(this);
-  }
-
-  addressBookSync(): AddressBookSync {
-    return new AddressBookSync(this);
-  }
-
-  favorite(): Favorite {
-    return new Favorite(this);
-  }
-
-  presence(): Presence {
-    return new Presence(this);
-  }
-
-  unifiedPresence(): UnifiedPresence {
-    return new UnifiedPresence(this);
-  }
-
-  meeting(meetingId: string | null = null): Meeting {
-    return new Meeting(this, meetingId);
-  }
-
-  meetingsConfiguration(): MeetingsConfiguration {
-    return new MeetingsConfiguration(this);
-  }
-
-  authzProfile(): AuthzProfile {
-    return new AuthzProfile(this);
-  }
-
-  businessHours(): BusinessHours {
-    return new BusinessHours(this);
-  }
-
-  callerBlocking(): CallerBlocking {
-    return new CallerBlocking(this);
-  }
-
-  forwardingNumber(forwardingNumberId: string | null = null): ForwardingNumber {
-    return new ForwardingNumber(this, forwardingNumberId);
-  }
-
-  answeringRule(ruleId: string | null = null): AnsweringRule {
-    return new AnsweringRule(this, ruleId);
-  }
-
-  greeting(greetingId: string | null = null): Greeting {
-    return new Greeting(this, greetingId);
   }
 
   phoneNumber(): PhoneNumber {
@@ -284,12 +284,12 @@ class Index {
     return new Features(this);
   }
 
-  device(): Device {
-    return new Device(this);
+  authzProfile(): AuthzProfile {
+    return new AuthzProfile(this);
   }
 
-  meetingRecordings(): MeetingRecordings {
-    return new MeetingRecordings(this);
+  ringOut(ringoutId: string | null = null): RingOut {
+    return new RingOut(this, ringoutId);
   }
 }
 

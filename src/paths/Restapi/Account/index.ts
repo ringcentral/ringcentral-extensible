@@ -1,11 +1,6 @@
-import CustomFields from './CustomFields';
-import MeetingRecordings from './MeetingRecordings';
-import MessageStoreReport from './MessageStoreReport';
 import Telephony from './Telephony';
-import Device from './Device';
 import CallMonitoringGroups from './CallMonitoringGroups';
 import PagingOnlyGroups from './PagingOnlyGroups';
-import Department from './Department';
 import CallQueues from './CallQueues';
 import Templates from './Templates';
 import PhoneNumber from './PhoneNumber';
@@ -13,19 +8,23 @@ import ServiceInfo from './ServiceInfo';
 import BusinessAddress from './BusinessAddress';
 import EmergencyLocations from './EmergencyLocations';
 import EmergencyAddressAutoUpdate from './EmergencyAddressAutoUpdate';
+import MessageStoreReport from './MessageStoreReport';
+import MessageStoreConfiguration from './MessageStoreConfiguration';
+import MeetingRecordings from './MeetingRecordings';
+import Device from './Device';
+import CustomFields from './CustomFields';
+import Recording from './Recording';
+import ActiveCalls from './ActiveCalls';
+import CallLogSync from './CallLogSync';
+import CallLog from './CallLog';
 import CallRecording from './CallRecording';
 import IvrMenus from './IvrMenus';
 import IvrPrompts from './IvrPrompts';
 import Greeting from './Greeting';
 import AnsweringRule from './AnsweringRule';
 import BusinessHours from './BusinessHours';
-import Presence from './Presence';
 import Directory from './Directory';
-import MessageStoreConfiguration from './MessageStoreConfiguration';
-import Recording from './Recording';
-import ActiveCalls from './ActiveCalls';
-import CallLogSync from './CallLogSync';
-import CallLog from './CallLog';
+import Presence from './Presence';
 import Extension from './Extension';
 import {RestRequestConfig} from '../../../Rest';
 import {GetAccountInfoResponse} from '../../../definitions';
@@ -73,32 +72,12 @@ class Index {
     return new Extension(this, extensionId);
   }
 
-  callLog(callRecordId: string | null = null): CallLog {
-    return new CallLog(this, callRecordId);
-  }
-
-  callLogSync(): CallLogSync {
-    return new CallLogSync(this);
-  }
-
-  activeCalls(): ActiveCalls {
-    return new ActiveCalls(this);
-  }
-
-  recording(recordingId: string | null = null): Recording {
-    return new Recording(this, recordingId);
-  }
-
-  messageStoreConfiguration(): MessageStoreConfiguration {
-    return new MessageStoreConfiguration(this);
+  presence(): Presence {
+    return new Presence(this);
   }
 
   directory(): Directory {
     return new Directory(this);
-  }
-
-  presence(): Presence {
-    return new Presence(this);
   }
 
   businessHours(): BusinessHours {
@@ -123,6 +102,42 @@ class Index {
 
   callRecording(): CallRecording {
     return new CallRecording(this);
+  }
+
+  callLog(callRecordId: string | null = null): CallLog {
+    return new CallLog(this, callRecordId);
+  }
+
+  callLogSync(): CallLogSync {
+    return new CallLogSync(this);
+  }
+
+  activeCalls(): ActiveCalls {
+    return new ActiveCalls(this);
+  }
+
+  recording(recordingId: string | null = null): Recording {
+    return new Recording(this, recordingId);
+  }
+
+  customFields(fieldId: string | null = null): CustomFields {
+    return new CustomFields(this, fieldId);
+  }
+
+  device(deviceId: string | null = null): Device {
+    return new Device(this, deviceId);
+  }
+
+  meetingRecordings(): MeetingRecordings {
+    return new MeetingRecordings(this);
+  }
+
+  messageStoreConfiguration(): MessageStoreConfiguration {
+    return new MessageStoreConfiguration(this);
+  }
+
+  messageStoreReport(taskId: string | null = null): MessageStoreReport {
+    return new MessageStoreReport(this, taskId);
   }
 
   emergencyAddressAutoUpdate(): EmergencyAddressAutoUpdate {
@@ -153,10 +168,6 @@ class Index {
     return new CallQueues(this, groupId);
   }
 
-  department(departmentId: string | null = null): Department {
-    return new Department(this, departmentId);
-  }
-
   pagingOnlyGroups(pagingOnlyGroupId: string | null = null): PagingOnlyGroups {
     return new PagingOnlyGroups(this, pagingOnlyGroupId);
   }
@@ -165,24 +176,8 @@ class Index {
     return new CallMonitoringGroups(this, groupId);
   }
 
-  device(deviceId: string | null = null): Device {
-    return new Device(this, deviceId);
-  }
-
   telephony(): Telephony {
     return new Telephony(this);
-  }
-
-  messageStoreReport(taskId: string | null = null): MessageStoreReport {
-    return new MessageStoreReport(this, taskId);
-  }
-
-  meetingRecordings(): MeetingRecordings {
-    return new MeetingRecordings(this);
-  }
-
-  customFields(fieldId: string | null = null): CustomFields {
-    return new CustomFields(this, fieldId);
   }
 }
 

@@ -11,7 +11,15 @@ class ActivePermissionResource {
 
   /**
    */
-  scopes?: string[];
+  scopes?: (
+    | 'Account'
+    | 'AllExtensions'
+    | 'Federation'
+    | 'NonUserExtensions'
+    | 'RoleBased'
+    | 'Self'
+    | 'UserExtensions'
+  )[];
 }
 
 export default ActivePermissionResource;

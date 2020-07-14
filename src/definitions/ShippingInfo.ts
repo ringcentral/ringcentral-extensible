@@ -18,13 +18,11 @@ class ShippingInfo {
 
   /**
    * Shipping method information
-   * Required
    */
   method?: MethodInfo;
 
   /**
    * Shipping address for the order. If it coincides with the Emergency Service Address, then can be omitted. By default the same value as the emergencyServiceAddress. Multiple addresses can be specified; in case an order contains several devices, they can be delivered to different addresses
-   * Required
    */
   address?: ShippingAddressInfo;
 }

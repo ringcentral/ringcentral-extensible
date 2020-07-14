@@ -1,8 +1,8 @@
 class ListExtensionsParameters {
   /**
-   * Extension number to retrieve
+   * Number of extension to be retrieved
    */
-  extensionId?: string;
+  extensionNumber?: string;
 
   /**
    * Extension email address

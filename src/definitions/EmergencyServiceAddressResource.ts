@@ -74,6 +74,36 @@ class EmergencyServiceAddressResource {
     | 'NotRequired'
     | 'Unsupported'
     | 'Failed';
+
+  /**
+   * Name of an additional contact person. Should be specified for countries except the US, Canada, the UK and Australia.
+   */
+  additionalCustomerName?: string;
+
+  /**
+   * Email of a primary contact person (receiver). Should be specified for countries except the US, Canada, the UK and Australia.
+   */
+  customerEmail?: string;
+
+  /**
+   * Email of an additional contact person. Should be specified for countries except the US, Canada, the UK and Australia.
+   */
+  additionalCustomerEmail?: string;
+
+  /**
+   * Phone number of a primary contact person (receiver). Should be specified for countries except the US, Canada, the UK and Australia
+   */
+  customerPhone?: string;
+
+  /**
+   * Phone number of an additional contact person. Should be specified for countries except the US, Canada, the UK & Australia.
+   */
+  additionalCustomerPhone?: string;
+
+  /**
+   * Internal identifier of a tax
+   */
+  taxId?: string;
 }
 
 export default EmergencyServiceAddressResource;

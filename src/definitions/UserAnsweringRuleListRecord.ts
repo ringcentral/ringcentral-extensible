@@ -1,3 +1,5 @@
+import {SharedLinesInfo} from '.';
+
 class UserAnsweringRuleListRecord {
   /**
    * Canonical URI to an answering rule resource
@@ -23,6 +25,11 @@ class UserAnsweringRuleListRecord {
    * Specifies if an answering rule is active or inactive
    */
   enabled?: boolean;
+
+  /**
+   * SharedLines call handling action settings
+   */
+  sharedLines?: SharedLinesInfo;
 }
 
 export default UserAnsweringRuleListRecord;

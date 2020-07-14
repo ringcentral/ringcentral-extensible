@@ -1,5 +1,5 @@
 import {
-  MeetingRecordings,
+  MeetingRecording,
   MeetingRecordingsPagingInfo,
   MeetingRecordingsNavigationInfo,
 } from '.';
@@ -7,7 +7,7 @@ import {
 class ListMeetingRecordingsResponse {
   /**
    */
-  records?: MeetingRecordings[];
+  records?: MeetingRecording[];
 
   /**
    */

@@ -13,6 +13,10 @@ class TargetServicePlanInfo {
    * Edition of a service plan
    */
   edition?: string;
+
+  /**
+   */
+  freemiumProductType?: 'Freyja' | 'Phoenix';
 }
 
 export default TargetServicePlanInfo;

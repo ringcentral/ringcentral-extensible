@@ -29,7 +29,8 @@ class DictionaryGreetingInfo {
     | 'CompanyAfterHoursAnsweringRule'
     | 'LimitedExtensionAnsweringRule'
     | 'VoicemailExtensionAnsweringRule'
-    | 'AnnouncementExtensionAnsweringRule';
+    | 'AnnouncementExtensionAnsweringRule'
+    | 'SharedLinesGroupAnsweringRule';
 
   /**
    * Text of a greeting, if any

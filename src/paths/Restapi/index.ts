@@ -1,10 +1,10 @@
 import NumberParser from './NumberParser';
 import ClientInfo from './ClientInfo';
-import Subscription from './Subscription';
-import Glip from './Glip';
-import Dictionary from './Dictionary';
-import Account from './Account';
 import Status from './Status';
+import Dictionary from './Dictionary';
+import Glip from './Glip';
+import Subscription from './Subscription';
+import Account from './Account';
 import Oauth from './Oauth';
 import {RestRequestConfig} from '../../Rest';
 import {GetVersionsResponse, GetVersionResponse} from '../../definitions';
@@ -63,24 +63,24 @@ class Index {
     return new Oauth(this);
   }
 
-  status(): Status {
-    return new Status(this);
-  }
-
   account(accountId: string | null = '~'): Account {
     return new Account(this, accountId);
   }
 
-  dictionary(): Dictionary {
-    return new Dictionary(this);
+  subscription(subscriptionId: string | null = null): Subscription {
+    return new Subscription(this, subscriptionId);
   }
 
   glip(): Glip {
     return new Glip(this);
   }
 
-  subscription(subscriptionId: string | null = null): Subscription {
-    return new Subscription(this, subscriptionId);
+  dictionary(): Dictionary {
+    return new Dictionary(this);
+  }
+
+  status(): Status {
+    return new Status(this);
   }
 
   clientInfo(): ClientInfo {

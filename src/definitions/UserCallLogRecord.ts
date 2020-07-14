@@ -96,6 +96,7 @@ class UserCallLogRecord {
   lastModifiedTime?: string;
 
   /**
+   * Call recording data. Returned if a call is recorded
    */
   recording?: CallLogRecordingInfo;
 

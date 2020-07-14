@@ -6,6 +6,7 @@ import {
   UserTransitionInfo,
   CustomFieldInfo,
   AutomaticLocationUpdatesSiteInfo,
+  ReferenceInfo,
 } from '.';
 
 class ExtensionUpdateRequest {
@@ -98,6 +99,11 @@ class ExtensionUpdateRequest {
     | 'IvrMenu'
     | 'ApplicationExtension'
     | 'ParkLocation';
+
+  /**
+   * List of non-RC internal identifiers assigned to an extension
+   */
+  references?: ReferenceInfo[];
 }
 
 export default ExtensionUpdateRequest;

@@ -1,4 +1,4 @@
-import {SpecificInfo, ExportTaskResultInfo} from '.';
+import {CreatorInfo, SpecificInfo, ExportTaskResultInfo} from '.';
 
 class DataExportTask {
   /**
@@ -24,18 +24,12 @@ class DataExportTask {
   /**
    * Task status
    */
-  status?:
-    | 'Accepted'
-    | 'InProgress'
-    | 'Completed'
-    | 'Failed'
-    | 'Canceled'
-    | 'Expired';
+  status?: 'Accepted' | 'InProgress' | 'Completed' | 'Failed' | 'Expired';
 
   /**
-   * Internal identifier of a user
+   * Task creator information
    */
-  creator?: string;
+  creator?: CreatorInfo;
 
   /**
    * Information specififed in request

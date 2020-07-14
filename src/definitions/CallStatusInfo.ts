@@ -48,8 +48,10 @@ class CallStatusInfo {
     | 'DestinationBlocked'
     | 'NotEnoughFunds'
     | 'NoSuchUser'
+    | 'CallPark'
     | 'CallRedirected'
     | 'CallReplied'
+    | 'CallSwitch'
     | 'CallFinished'
     | 'CallDropped';
 

@@ -1,13 +1,19 @@
+import {DelegateExtensionInfo} from '.';
+
 class DelegateInfo {
   /**
-   * Internal identifier of a Secretary extension
    */
-  id?: string;
+  extension?: DelegateExtensionInfo;
 
   /**
-   * Custom name of a Secretary extension
+   * Specifies whether Secretary is permitted to pickup calls on behalf of Boss
    */
-  name?: string;
+  callPickup?: boolean;
+
+  /**
+   * Specifies whether Secretary is permitted to organize conference on behalf of Boss
+   */
+  conferencing?: boolean;
 }
 
 export default DelegateInfo;

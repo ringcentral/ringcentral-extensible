@@ -8,6 +8,7 @@ import {
   TransferredExtensionInfo,
   VoicemailInfo,
   GreetingInfo,
+  SharedLinesInfo,
 } from '.';
 
 class CustomAnsweringRuleInfo {
@@ -60,7 +61,8 @@ class CustomAnsweringRuleInfo {
     | 'AgentQueue'
     | 'TransferToExtension'
     | 'TakeMessagesOnly'
-    | 'PlayAnnouncementOnly';
+    | 'PlayAnnouncementOnly'
+    | 'SharedLines';
 
   /**
    * Forwarding parameters. Returned if 'ForwardCalls' is specified in 'callHandlingAction'. These settings determine the forwarding numbers to which the call will be forwarded
@@ -96,6 +98,11 @@ class CustomAnsweringRuleInfo {
    * Call screening status. 'Off' - no call screening; 'NoCallerId' - if caller ID is missing, then callers are asked to say their name before connecting; 'UnknownCallerId' - if caller ID is not in contact list, then callers are asked to say their name before connecting; 'Always' - the callers are always asked to say their name before connecting. The default value is 'Off'
    */
   screening?: 'Off' | 'NoCallerId' | 'UnknownCallerId' | 'Always';
+
+  /**
+   * SharedLines call handling action settings
+   */
+  sharedLines?: SharedLinesInfo;
 }
 
 export default CustomAnsweringRuleInfo;

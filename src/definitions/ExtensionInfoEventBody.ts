@@ -13,14 +13,16 @@ class ExtensionInfoEventBody {
    * Returned for 'Update' event type only
    */
   hints?: (
-    | 'LimitsFeatures'
     | 'AccountSettings'
-    | 'CompanyNumbers'
     | 'AccountStatus'
+    | 'AnsweringRules'
+    | 'CompanyNumbers'
     | 'DialingPlan'
+    | 'ExtensionInfo'
+    | 'Features'
+    | 'Limits'
     | 'Permissions'
     | 'ProfileImage'
-    | 'ExtensionInfo'
     | 'VideoConfiguration'
   )[];
 

@@ -2,7 +2,6 @@ import {
   ContactInfoCreationRequest,
   CustomFieldInfo,
   ReferenceInfo,
-  Roles,
   RegionalSettings,
   SiteInfo,
   ExtensionStatusInfo,
@@ -32,10 +31,6 @@ class ExtensionCreationRequest {
    * List of non-RC internal identifiers assigned to an extension
    */
   references?: ReferenceInfo[];
-
-  /**
-   */
-  roles?: Roles[];
 
   /**
    * Extension region data (timezone, home country, language)

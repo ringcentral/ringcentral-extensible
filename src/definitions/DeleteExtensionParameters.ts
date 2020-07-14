@@ -4,6 +4,7 @@ class DeleteExtensionParameters {
   savePhoneLines?: boolean;
 
   /**
+   * Default: true
    */
   savePhoneNumbers?: boolean;
 }

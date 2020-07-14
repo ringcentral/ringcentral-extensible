@@ -81,6 +81,7 @@ class UserPhoneNumberInfo {
   features?: (
     | 'CallerId'
     | 'SmsSender'
+    | 'A2PSmsSender'
     | 'MmsSender'
     | 'InternationalSmsSender'
     | 'Delegated'

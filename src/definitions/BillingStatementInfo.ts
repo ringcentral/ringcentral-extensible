@@ -16,6 +16,10 @@ class BillingStatementInfo {
 
   /**
    */
+  totalCharged?: number;
+
+  /**
+   */
   totalCharges?: number;
 
   /**

@@ -1,6 +1,7 @@
 import {
   AutomaticLocationUpdatesSiteInfo,
   LocationUpdatesEmergencyAddressInfoRequest,
+  ERLLocationInfo,
 } from '.';
 
 class UpdateWirelessPoint {
@@ -30,9 +31,14 @@ class UpdateWirelessPoint {
   emergencyAddress?: LocationUpdatesEmergencyAddressInfoRequest;
 
   /**
-   * Internal identifier of the emergency response location (address). Only one of a pair `emergencyAddress` or `emergencyLocationId` should be specified, otherwise the error is returned
+   * Deprecated. Internal identifier of the emergency response location (address). Only one of a pair `emergencyAddress` or `emergencyLocationId` should be specified, otherwise the error is returned
    */
   emergencyLocationId?: string;
+
+  /**
+   * Emergency response location information
+   */
+  emergencyLocation?: ERLLocationInfo;
 }
 
 export default UpdateWirelessPoint;

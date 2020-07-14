@@ -3,6 +3,7 @@ import {
   BrandInfo,
   ServicePlanInfo,
   TargetServicePlanInfo,
+  ContractedCountryInfo,
 } from '.';
 
 class ServiceInfo {
@@ -30,6 +31,11 @@ class ServiceInfo {
    * Information on account target service plan
    */
   targetServicePlan?: TargetServicePlanInfo;
+
+  /**
+   * Information on the contracted country of account
+   */
+  contractedCountry?: ContractedCountryInfo;
 }
 
 export default ServiceInfo;

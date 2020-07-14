@@ -2,6 +2,7 @@ import {
   DeviceModelInfo,
   DeviceExtensionInfo,
   DeviceEmergencyServiceAddressResource,
+  SipRegistrationDeviceEmergencyInfo,
   Shipping,
   DevicePhoneLinesInfo,
   DeviceSiteInfo,
@@ -61,6 +62,11 @@ class SipRegistrationDeviceInfo {
    * Address for emergency cases. The same emergency address is assigned to all the numbers of one device
    */
   emergencyServiceAddress?: DeviceEmergencyServiceAddressResource;
+
+  /**
+   * Device mergency response location settings
+   */
+  emergency?: SipRegistrationDeviceEmergencyInfo;
 
   /**
    * Shipping information, according to which devices (in case of HardPhone ) or e911 stickers (in case of SoftPhone and OtherPhone ) will be delivered to the customer

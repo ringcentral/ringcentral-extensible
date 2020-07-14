@@ -1,5 +1,6 @@
 import End from './End';
 import ServiceInfo from './ServiceInfo';
+import UserSettings from './UserSettings';
 import {RestRequestConfig} from '../../../../../Rest';
 import {
   MeetingsResource,
@@ -112,6 +113,10 @@ class Index {
 
     const r = await this.rc.delete<string>(this.path(), undefined, config);
     return r.data;
+  }
+
+  userSettings(): UserSettings {
+    return new UserSettings(this);
   }
 
   serviceInfo(): ServiceInfo {

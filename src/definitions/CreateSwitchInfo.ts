@@ -1,4 +1,8 @@
-import {SwitchSiteInfo, LocationUpdatesEmergencyAddressInfoRequest} from '.';
+import {
+  SwitchSiteInfo,
+  LocationUpdatesEmergencyAddressInfoRequest,
+  ERLLocationInfo,
+} from '.';
 
 class CreateSwitchInfo {
   /**
@@ -19,14 +23,18 @@ class CreateSwitchInfo {
 
   /**
    * Emergency address assigned to the switch. Only one of a pair `emergencyAddress` or `emergencyLocationId` should be specified, otherwise the error is returned
-   * Required
    */
   emergencyAddress?: LocationUpdatesEmergencyAddressInfoRequest;
 
   /**
-   * Emergency response location (address) internal identifier. Only one of a pair `emergencyAddress` or `emergencyLocationId` should be specified, otherwise the error is returned
+   * Deprecated. Emergency response location (address) internal identifier. Only one of a pair `emergencyAddress` or `emergencyLocationId` should be specified, otherwise the error is returned
    */
   emergencyLocationId?: string;
+
+  /**
+   * Emergency response location information
+   */
+  emergencyLocation?: ERLLocationInfo;
 }
 
 export default CreateSwitchInfo;

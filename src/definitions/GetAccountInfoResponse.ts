@@ -3,7 +3,7 @@ import {
   ServiceInfo,
   SignupInfoResource,
   AccountStatusInfo,
-  RegionalSettings,
+  AccountRegionalSettings,
   AccountLimits,
 } from '.';
 
@@ -67,7 +67,7 @@ class GetAccountInfoResponse {
   /**
    * Account level region data (web service Auto-Receptionist settings)
    */
-  regionalSettings?: RegionalSettings;
+  regionalSettings?: AccountRegionalSettings;
 
   /**
    * Specifies whether an account is included into any federation of accounts or not

@@ -30,9 +30,19 @@ class ActiveCallInfoWithoutSIP {
   toName?: string;
 
   /**
+   * Internal identifier of a call party
+   */
+  partyId?: string;
+
+  /**
    * Time when the call is actually started
    */
   startTime?: string;
+
+  /**
+   * Internal identifier of a call session
+   */
+  sessionId?: string;
 
   /**
    * Telephony call status
@@ -45,9 +55,9 @@ class ActiveCallInfoWithoutSIP {
     | 'ParkedCall';
 
   /**
-   * Internal identifier of a call session
+   * Telephony identifier of a call session
    */
-  sessionId?: string;
+  telephonySessionId?: string;
 
   /**
    * Type of call termination. Supported for calls in 'NoCall' status. If the returned termination type is 'intermediate' it means the call is not actually ended, the connection is established on one of the devices

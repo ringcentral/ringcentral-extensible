@@ -1,14 +1,14 @@
-import {MessageStoreCallerInfoRequest, SMSCountryInfo} from '.';
+import {MessageStoreCallerInfoRequest, MessageCountryInfo} from '.';
 
 class CreateSMSMessage {
   /**
-   * Sender of an SMS message. The phoneNumber property must be filled to correspond to one of the account phone numbers which is allowed to send SMS
+   * Message sender information. The `phoneNumber` value should be one the account phone numbers allowed to send text messages
    * Required
    */
   from?: MessageStoreCallerInfoRequest;
 
   /**
-   * Receiver of an SMS message. The phoneNumber property must be filled
+   * Message receiver(s) information. The `phoneNumber` value is required
    * Required
    */
   to?: MessageStoreCallerInfoRequest[];
@@ -21,7 +21,7 @@ class CreateSMSMessage {
 
   /**
    */
-  country?: SMSCountryInfo;
+  country?: MessageCountryInfo;
 }
 
 export default CreateSMSMessage;

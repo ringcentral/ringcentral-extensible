@@ -6,6 +6,7 @@ import Reply from './Reply';
 import Forward from './Forward';
 import Pickup from './Pickup';
 import Answer from './Answer';
+import Bridge from './Bridge';
 import Transfer from './Transfer';
 import Ignore from './Ignore';
 import Reject from './Reject';
@@ -50,6 +51,20 @@ class Index {
   }
 
   /**
+   * Operation: Delete Call Party
+   * Rate Limit Group: Light
+   * Http delete /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}
+   */
+  async delete(config?: RestRequestConfig): Promise<string> {
+    if (this.partyId === null) {
+      throw new Error('partyId must be specified.');
+    }
+
+    const r = await this.rc.delete<string>(this.path(), undefined, config);
+    return r.data;
+  }
+
+  /**
    * Operation: Update Call Party
    * Rate Limit Group: Light
    * Http patch /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}
@@ -89,6 +104,10 @@ class Index {
 
   transfer(): Transfer {
     return new Transfer(this);
+  }
+
+  bridge(): Bridge {
+    return new Bridge(this);
   }
 
   answer(): Answer {

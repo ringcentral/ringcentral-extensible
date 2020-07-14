@@ -2,7 +2,7 @@ class CompanyCallLogSyncInfo {
   /**
    * Type of synchronization
    */
-  syncType?: 'Fsync' | 'ISync';
+  syncType?: 'FSync' | 'ISync';
 
   /**
    * Synchronization token
