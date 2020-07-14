@@ -66,7 +66,7 @@ If there is no CDN uri provided, construct the uri as [sample code](./samples.md
 
 ### Regenerate code using latest swagger spec
 
-Get latest swagger spec [here](https://github.com/ringcentral/RingCentral.Net/blob/master/code-generator/rc-platform-adjusted.yml).
+Get latest swagger spec [here](https://github.com/ringcentral/RingCentral.Net/blob/master/code-generator/rc-platform.yml).
 
 Make a copy of the `.env.sample` file and name it `.env`, edit it to specify credentials.
 
