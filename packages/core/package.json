@@ -2,17 +2,18 @@
   "name": "@ringcentral-extensible/core",
   "version": "0.9.0",
   "description": "RingCentral extensible",
-  "main": "build/src/index.js",
-  "types": "build/src/index.d.ts",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "repository": "git@github.com:ringcentral/ringcentral-extensible.git",
   "author": "Tyler Liu <tyler.liu@ringcentral.com>",
   "license": "MIT",
   "scripts": {
+    "tsc": "tsc",
     "test": "jest -w 1 --detectOpenHandles ./test/*",
     "definitions": "rm -rf ./src/definitions/* && node -r dotenv-override-true/config ./code-generator/definitions.js",
     "paths": "rm -rf ./src/paths/* && node -r dotenv-override-true/config ./code-generator/paths.js",
     "generate": "yarn definitions && yarn paths && gts fix",
-    "prepublishOnly": "rm -rf build && gts fix && yarn test && tsc"
+    "prepublishOnly": "gts fix && yarn test && tsc"
   },
   "dependencies": {
     "@types/qs": "^6.9.3",

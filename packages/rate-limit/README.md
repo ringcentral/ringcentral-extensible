@@ -13,8 +13,8 @@ Please check the [Retry Extension](../retry) dependencies.
 ## Usage
 
 ```ts
-import RingCentral from 'ringcentral-extensible';
-import RateLimitExtension from 'ringcentral-extensible/build/src/extensions/rateLimit';
+import RingCentral from '@ringcentral-extensible/core';
+import RateLimitExtension from '@ringcentral-extensible/rate-limit';
 
 const rc = new RingCentral(...);
 const rateLimitExtension = new RateLimitExtension(rateLimitOptions);

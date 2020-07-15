@@ -92,8 +92,21 @@ yarn test
 
 ### Notes about monorepo
 
-#### How to reinstall all dependencies
+#### Reinstall all dependencies
 
 ```
-npx lerna clean && npx lerna bootstrap
+npx lerna clean
+npx lerna bootstrap
+```
+
+### Compile all packages
+
+```
+npx lerna run tsc
+```
+
+### Run all tests
+
+```
+yarn test
 ```
