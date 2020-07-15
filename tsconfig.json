@@ -8,7 +8,7 @@
     "lib": ["DOM"]
   },
   "include": [
-    "src/**/*.ts",
+    "packages/**/*.ts",
     "test/**/*.ts"
   ]
 }

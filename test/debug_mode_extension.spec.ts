@@ -1,16 +1,16 @@
 /* eslint-env jest */
-import RingCentral from '../src/index';
+import RingCentral from '../packages/core';
 import {testRingCentral} from './utils';
-import DebugModeExtension from '../src/extensions/debugMode';
+import DebugExtension from '../packages/debug';
 
 jest.setTimeout(64000);
 
 describe('Debug Mode Extension', () => {
   test('default', async () => {
     const testCase = async (rc: RingCentral) => {
-      const debugModeExtension = new DebugModeExtension();
-      await rc.installExtension(debugModeExtension);
-      debugModeExtension.enabled = false; // remove this line to print API traffic
+      const debugExtension = new DebugExtension();
+      await rc.installExtension(debugExtension);
+      debugExtension.enabled = false; // remove this line to print API traffic
       await rc.restapi().account().extension().get();
       await rc.revoke();
     };

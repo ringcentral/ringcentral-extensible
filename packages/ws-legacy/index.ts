@@ -7,12 +7,16 @@ import {getStatusText} from 'http-status-codes';
 // eslint-disable-next-line node/no-unpublished-import
 import hyperid from 'hyperid';
 
-import RingCentral from '../..';
-import {RestRequestConfig, RestResponse, RestMethod} from '../../Rest';
-import SdkExtension from '..';
-import RestException from '../../RestException';
-import {version} from '../../../package.json';
-import {SubscriptionInfo} from '../../definitions';
+import RingCentral from '@ringcentral-extensible/core';
+import {
+  RestRequestConfig,
+  RestResponse,
+  RestMethod,
+} from '@ringcentral-extensible/core/Rest';
+import SdkExtension from '@ringcentral-extensible/core/extensions';
+import RestException from '@ringcentral-extensible/core/RestException';
+import {version} from './package.json';
+import {SubscriptionInfo} from '@ringcentral-extensible/core/definitions';
 
 const uuid = hyperid();
 
@@ -159,7 +163,7 @@ class WebSocketExtension extends SdkExtension {
       ..._config.headers,
       'X-User-Agent': `${this.rc.rest!.appName}/${
         this.rc.rest!.appVersion
-      } ringcentral/ringcentral-extensible/${version} via wss`,
+      } @ringcentral-extensible/ws-legacy/${version}`,
     };
     _config.headers = {
       ..._config.headers,

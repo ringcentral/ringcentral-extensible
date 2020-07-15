@@ -1,4 +1,4 @@
-import RetryExtension from '../retry';
+import RetryExtension from '@ringcentral-extensible/retry';
 
 export type RateLimitOptions = {
   maxRetries?: number;

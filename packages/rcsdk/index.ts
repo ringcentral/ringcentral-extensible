@@ -1,10 +1,14 @@
 // eslint-disable-next-line node/no-unpublished-import
 import SDK from '@ringcentral/sdk';
 
-import RingCentral from '../..';
-import {RestRequestConfig, RestResponse, RestMethod} from '../../Rest';
-import SdkExtension from '..';
-import RestException from '../../RestException';
+import RingCentral from '@ringcentral-extensible/core';
+import {
+  RestRequestConfig,
+  RestResponse,
+  RestMethod,
+} from '@ringcentral-extensible/core/Rest';
+import SdkExtension from '@ringcentral-extensible/core/extensions';
+import RestException from '@ringcentral-extensible/core/RestException';
 
 class RingCentralExtension extends SdkExtension {
   sdk: SDK;

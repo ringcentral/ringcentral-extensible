@@ -1,9 +1,12 @@
 // eslint-disable-next-line node/no-unpublished-import
 import PubNub from 'pubnub';
 
-import RingCentral from '../..';
-import SdkExtension from '..';
-import {SubscriptionInfo, CreateSubscriptionRequest} from '../../definitions';
+import RingCentral from '@ringcentral-extensible/core';
+import SdkExtension from '@ringcentral-extensible/core/extensions';
+import {
+  SubscriptionInfo,
+  CreateSubscriptionRequest,
+} from '@ringcentral-extensible/core/definitions';
 
 class PubNubExtension extends SdkExtension {
   rc!: RingCentral;

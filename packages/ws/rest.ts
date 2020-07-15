@@ -4,10 +4,14 @@ import hyperid from 'hyperid';
 import {getStatusText} from 'http-status-codes';
 
 import WebSocketExtension from '.';
-import {RestMethod, RestRequestConfig, RestResponse} from '../../Rest';
-import {version} from '../../../package.json';
+import {
+  RestMethod,
+  RestRequestConfig,
+  RestResponse,
+} from '@ringcentral-extensible/core/Rest';
+import {version} from './package.json';
 import Utils from './utils';
-import RestException from '../../RestException';
+import RestException from '@ringcentral-extensible/core/RestException';
 
 const uuid = hyperid();
 
@@ -31,7 +35,7 @@ export async function request<T>(
     ..._config.headers,
     'X-User-Agent': `${this.rc.rest!.appName}/${
       this.rc.rest!.appVersion
-    } ringcentral/ringcentral-extensible/${version} via wss`,
+    } @ringcentral-extensible/ws/${version}`,
   };
   const messageId = uuid();
   const requestBody = [

@@ -1,7 +1,11 @@
-import RingCentral from '../..';
-import {RestRequestConfig, RestResponse, RestMethod} from '../../Rest';
-import Utils from '../../Utils';
-import SdkExtension from '..';
+import RingCentral from '@ringcentral-extensible/core';
+import {
+  RestRequestConfig,
+  RestResponse,
+  RestMethod,
+} from '@ringcentral-extensible/core/Rest';
+import Utils from '@ringcentral-extensible/core/Utils';
+import SdkExtension from '@ringcentral-extensible/core/extensions';
 
 class DebugModeExtension extends SdkExtension {
   async install(rc: RingCentral) {

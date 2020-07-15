@@ -1,6 +1,9 @@
 import WebSocketExtension from '.';
 import {WsgEvent, WsgMeta} from './types';
-import {CreateSubscriptionRequest, SubscriptionInfo} from '../../definitions';
+import {
+  CreateSubscriptionRequest,
+  SubscriptionInfo,
+} from '@ringcentral-extensible/core/definitions';
 import Utils from './utils';
 
 class Subscription {

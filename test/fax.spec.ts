@@ -2,14 +2,14 @@
 import fs from 'fs';
 import path from 'path';
 
-import RingCentral from '../src/index';
+import RingCentral from '../packages/core';
 import {
   CreateFaxMessageRequest,
   Attachment,
   FaxResponse,
-} from '../src/definitions';
+} from '../packages/core/definitions';
 import {testRingCentral} from './utils';
-import Utils from '../src/Utils';
+import Utils from '../packages/core/Utils';
 
 jest.setTimeout(64000);
 

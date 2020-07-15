@@ -2,8 +2,8 @@
 import fs from 'fs';
 import path from 'path';
 
-import RingCentral from '../src/index';
-import {CreateMMSMessage, Attachment} from '../src/definitions';
+import RingCentral from '../packages/core';
+import {CreateMMSMessage, Attachment} from '../packages/core/definitions';
 
 jest.setTimeout(64000);
 

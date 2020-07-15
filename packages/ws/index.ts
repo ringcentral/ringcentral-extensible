@@ -1,9 +1,13 @@
 /* eslint-disable node/no-unpublished-import */
 import WS from 'isomorphic-ws';
 
-import RingCentral from '../..';
-import {RestRequestConfig, RestResponse, RestMethod} from '../../Rest';
-import SdkExtension from '..';
+import RingCentral from '@ringcentral-extensible/core';
+import {
+  RestRequestConfig,
+  RestResponse,
+  RestMethod,
+} from '@ringcentral-extensible/core/Rest';
+import SdkExtension from '@ringcentral-extensible/core/extensions';
 import {request} from './rest';
 import {
   WsToken,

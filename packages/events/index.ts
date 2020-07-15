@@ -1,10 +1,14 @@
 import {EventEmitter} from 'events';
 
-import RingCentral from '../..';
-import {RestRequestConfig, RestResponse, RestMethod} from '../../Rest';
-import SdkExtension from '..';
-import {GetTokenRequest} from '../../definitions';
-import RestException from '../../RestException';
+import RingCentral from '@ringcentral-extensible/core';
+import {
+  RestRequestConfig,
+  RestResponse,
+  RestMethod,
+} from '@ringcentral-extensible/core/Rest';
+import SdkExtension from '@ringcentral-extensible/core/extensions';
+import {GetTokenRequest} from '@ringcentral-extensible/core/definitions';
+import RestException from '@ringcentral-extensible/core/RestException';
 
 export enum Events {
   beforeRequest = 'beforeRequest',

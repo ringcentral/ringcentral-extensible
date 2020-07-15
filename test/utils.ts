@@ -1,5 +1,5 @@
-import RingCentral from '../src/index';
-import WebsocketExtension from '../src/extensions/webSocketLegacy';
+import RingCentral from '../packages/core';
+import WebsocketExtension from '../packages/ws-legacy';
 
 export const testRingCentral = async (
   testCase: (rc: RingCentral) => Promise<void>,

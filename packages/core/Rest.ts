@@ -9,7 +9,7 @@ import FormData from 'form-data';
 
 import RestException from './RestException';
 import {TokenInfo} from './definitions';
-import {version} from '../package.json';
+import {version} from './package.json';
 
 export type RestOptions = {
   server?: string;
@@ -49,7 +49,7 @@ export default class Rest {
     this.httpClient = axios.create({
       baseURL: this.server,
       headers: {
-        'X-User-Agent': `${this.appName}/${this.appVersion} ringcentral/ringcentral-extensible/${version} via https`,
+        'X-User-Agent': `${this.appName}/${this.appVersion} @ringcentral-extensible/core/${version}`,
       },
       validateStatus: () => {
         return true;

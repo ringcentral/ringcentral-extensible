@@ -1,10 +1,13 @@
-// eslint-disable-next-line node/no-unpublished-import
 import waitFor from 'wait-for-async';
 
-import RingCentral from '../..';
-import {RestRequestConfig, RestResponse, RestMethod} from '../../Rest';
-import SdkExtension from '..';
-import RestException from '../../RestException';
+import RingCentral from '@ringcentral-extensible/core';
+import {
+  RestRequestConfig,
+  RestResponse,
+  RestMethod,
+} from '@ringcentral-extensible/core/Rest';
+import SdkExtension from '@ringcentral-extensible/core/extensions';
+import RestException from '@ringcentral-extensible/core/RestException';
 
 export type ShouldRetry = (
   restException: RestException,

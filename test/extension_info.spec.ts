@@ -1,6 +1,6 @@
 /* eslint-env jest */
 import {testRingCentral} from './utils';
-import RingCentral from '../src';
+import RingCentral from '../packages/core';
 
 jest.setTimeout(64000);
 

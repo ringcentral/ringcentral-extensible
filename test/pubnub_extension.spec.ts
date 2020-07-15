@@ -2,8 +2,8 @@
 /* eslint-env jest */
 import waitFor from 'wait-for-async';
 
-import RingCentral from '../src/index';
-import PubNubExtension from '../src/extensions/pubNub';
+import RingCentral from '../packages/core';
+import PubNubExtension from '../packages/pubnub';
 
 jest.setTimeout(64000);
 

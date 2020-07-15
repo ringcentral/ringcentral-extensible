@@ -1,0 +1,14 @@
+{
+  "name": "@ringcentral-extensible/rate-limit",
+  "version": "0.1.0",
+  "devDependencies": {
+    "@ringcentral-extensible/core": "^0.9.0",
+    "yarn-upgrade-all": "^0.5.4"
+  },
+  "peerDependencies": {
+    "@ringcentral-extensible/core": "^0.9.0"
+  },
+  "dependencies": {
+    "@ringcentral-extensible/retry": "^0.1.0"
+  }
+}
