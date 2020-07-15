@@ -1,6 +1,8 @@
 {
   "name": "@ringcentral-extensible/rcsdk",
   "version": "0.1.0",
+  "author": "Tyler Liu <tyler.liu@ringcentral.com>",
+  "license": "MIT",
   "devDependencies": {
     "@ringcentral-extensible/core": "^0.9.0",
     "@ringcentral/sdk": "^4.3.2",

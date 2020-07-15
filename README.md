@@ -88,3 +88,12 @@ yarn test
 - compare it with C# sdk and see what are missing
 - WSG
     - what if network outage?
+
+
+### Notes about monorepo
+
+#### How to reinstall all dependencies
+
+```
+npx lerna clean && npx lerna bootstrap
+```
