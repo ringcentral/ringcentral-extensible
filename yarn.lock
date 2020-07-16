@@ -4081,10 +4081,10 @@ psl@^1.1.28:
   resolved "https://registry.yarnpkg.com/psl/-/psl-1.8.0.tgz#9326f8bcfb013adcc005fdff056acce020e51c24"
   integrity sha512-RIdOzyoavK+hA18OGGWDqUTsCLhtA7IcZ/6NCs4fFJaHBDab+pDDmDIByWFRQJq2Cd7r1OoQxBGKOaztq+hjIQ==
 
-pubnub@^4.28.2:
-  version "4.28.2"
-  resolved "https://registry.yarnpkg.com/pubnub/-/pubnub-4.28.2.tgz#aba48665c14b10e4ce1b8267e9b37c698f754cfa"
-  integrity sha512-A8fUXbKeGkhi704Ux1/2sJRVaxlPoKCYqI7lw9YEaoQ9AUINgVMya5pOjNlbi28KWIp28Qn/n2xzAIHMPZm2Hg==
+pubnub@^4.28.4:
+  version "4.28.4"
+  resolved "https://registry.yarnpkg.com/pubnub/-/pubnub-4.28.4.tgz#81d31c561849ca640667ddf270fcb995e94c7ed6"
+  integrity sha512-EqRr1ZJj79+sIrI5gzz0IGe2kJAK94DtH8ka1lW6V/sHa8lvqIEKPyZ5mgLJVmdX3QuxpG05W2YWISWiJcauDQ==
   dependencies:
     agentkeepalive "^3.5.2"
     cbor-js "^0.1.0"
