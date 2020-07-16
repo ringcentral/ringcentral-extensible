@@ -1,7 +1,7 @@
 /* eslint-env jest */
-import RestException from '../packages/core/RestException';
+import RestException from '../src/RestException';
 import {testRingCentral} from './utils';
-import RingCentral from '../packages/core';
+import RingCentral from '../src';
 
 jest.setTimeout(64000);
 

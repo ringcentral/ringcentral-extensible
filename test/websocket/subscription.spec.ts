@@ -4,8 +4,8 @@ import waitFor from 'wait-for-async';
 import path from 'path';
 import dotenv from 'dotenv-override-true';
 
-import RingCentral from '../../packages/core';
-import WebSocketExtension from '../../packages/ws';
+import RingCentral from '../../src/index';
+import WebSocketExtension from '../../src/extensions/webSocket';
 
 jest.setTimeout(128000);
 dotenv.config({path: path.join(__dirname, '..', '..', '.env.lab')});

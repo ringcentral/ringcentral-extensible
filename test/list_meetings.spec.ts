@@ -1,5 +1,5 @@
 /* eslint-env jest */
-import RingCentral from '../packages/core';
+import RingCentral from '../src/index';
 
 import {testRingCentral} from './utils';
 

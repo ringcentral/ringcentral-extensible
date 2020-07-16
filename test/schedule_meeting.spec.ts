@@ -1,11 +1,11 @@
 /* eslint-env jest */
-import RingCentral from '../packages/core';
+import RingCentral from '../src/index';
 import {
   MeetingRequestResource,
   MeetingScheduleResource,
   TimezoneResource,
   HostInfoRequest,
-} from '../packages/core/definitions';
+} from '../src/definitions';
 import {testRingCentral} from './utils';
 
 jest.setTimeout(64000);

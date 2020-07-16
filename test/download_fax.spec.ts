@@ -3,7 +3,7 @@ import fs from 'fs';
 import path from 'path';
 
 import {testRingCentral} from './utils';
-import RingCentral from '../packages/core';
+import RingCentral from '../src';
 
 jest.setTimeout(64000);
 

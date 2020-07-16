@@ -2,8 +2,8 @@
 // eslint-disable-next-line node/no-unpublished-import
 import SDK from '@ringcentral/sdk';
 
-import RingCentral from '../packages/core';
-import RingCentralExtension from '../packages/rcsdk';
+import RingCentral from '../src/index';
+import RingCentralExtension from '../src/extensions/ringCentral';
 
 jest.setTimeout(64000);
 
