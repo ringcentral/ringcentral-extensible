@@ -34,6 +34,7 @@
     "hyperid": "^2.0.5",
     "isomorphic-ws": "^4.0.1",
     "jest": "^26.1.0",
+    "lerna": "^3.22.1",
     "lower-case-first": "^2.0.1",
     "pubnub": "^4.28.4",
     "ramda": "^0.27.0",
