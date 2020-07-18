@@ -1,51 +1,37 @@
 {
   "name": "ringcentral-extensible",
-  "version": "0.9.0",
-  "description": "RingCentral extensible",
-  "main": "build/src/index.js",
-  "types": "build/src/index.d.ts",
-  "repository": "git@github.com:ringcentral/ringcentral-extensible.git",
-  "author": "Tyler Liu <tyler.liu@ringcentral.com>",
+  "private": "true",
   "license": "MIT",
+  "description": "RingCentral Extensible SDK",
   "scripts": {
-    "test": "jest -w 1 --detectOpenHandles ./test/*",
     "definitions": "rm -rf ./src/definitions/* && node -r dotenv-override-true/config ./code-generator/definitions.js",
     "paths": "rm -rf ./src/paths/* && node -r dotenv-override-true/config ./code-generator/paths.js",
     "generate": "yarn definitions && yarn paths && gts fix",
-    "prepublishOnly": "rm -rf build && gts fix && yarn test && tsc"
-  },
-  "dependencies": {
-    "@types/qs": "^6.9.3",
-    "axios": "^0.19.2",
-    "form-data": "^3.0.0",
-    "qs": "^6.9.4"
+    "upgrade-all": "yarn-upgrade-all && lerna exec yarn-upgrade-all",
+    "reset": "lerna exec 'rm -rf lib' && lerna clean -y && lerna bootstrap",
+    "test": "lerna exec 'jest -w 1 --detectOpenHandles' --scope=@rc-ex/test",
+    "compile": "lerna exec 'rm -rf lib' && lerna exec tsc --ignore=@rc-ex/test",
+    "prepublishOnly": "gts fix && yarn test && yarn compile",
+    "all": "yarn upgrade-all && yarn reset && yarn prepublishOnly"
   },
   "devDependencies": {
-    "@ringcentral/sdk": "^4.3.2",
-    "@types/jest": "^26.0.4",
     "@types/node": "^14.0.23",
-    "@types/pubnub": "^4.28.1",
-    "@types/ws": "^7.2.6",
     "change-case": "^4.1.1",
-    "dotenv-override-true": "^6.2.0",
     "gts": "^2.0.2",
-    "http-status-codes": "^1.4.0",
     "husky": "^4.2.5",
-    "hyperid": "^2.0.5",
-    "isomorphic-ws": "^4.0.1",
-    "jest": "^26.1.0",
+    "js-yaml": "^3.14.0",
     "lerna": "^3.22.1",
     "lower-case-first": "^2.0.1",
-    "pubnub": "^4.28.4",
     "ramda": "^0.27.0",
-    "ts-jest": "^26.1.2",
-    "typescript": "^3.9.6",
-    "wait-for-async": "^0.5.0",
+    "typescript": "^3.9.7",
     "yarn-upgrade-all": "^0.5.4"
   },
   "husky": {
     "hooks": {
       "pre-push": "gts fix"
     }
+  },
+  "engines": {
+    "node": ">=10.0.0"
   }
 }

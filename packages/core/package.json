@@ -1,0 +1,25 @@
+{
+  "name": "@rc-ex/core",
+  "version": "0.1.0",
+  "description": "Core for ringcentral-extensible project",
+  "author": "Tyler Liu <tyler.liu@ringcentral.com>",
+  "homepage": "https://github.com/ringcentral/ringcentral-extensible/tree/master/packages/core",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ringcentral/ringcentral-extensible.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ringcentral/ringcentral-extensible/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@types/qs": "^6.9.3",
+    "axios": "^0.19.2",
+    "form-data": "^3.0.0",
+    "qs": "^6.9.4"
+  }
+}
