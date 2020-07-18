@@ -2135,6 +2135,11 @@ dot-prop@^5.2.0:
   dependencies:
     is-obj "^2.0.0"
 
+dotenv-override-true@^6.2.0:
+  version "6.2.0"
+  resolved "https://registry.yarnpkg.com/dotenv-override-true/-/dotenv-override-true-6.2.0.tgz#4205a7e4e9161eda299d3e242f53b9b4902a2570"
+  integrity sha512-g2EEXx8eY0vy9OWlCUTg7YEHTMoKExXblryNYv/9hN7I7Q3XWMJ9VNEUQppnL/nkZ9dtVq2fKTFcs1HVMHYikg==
+
 duplexer3@^0.1.4:
   version "0.1.4"
   resolved "https://registry.yarnpkg.com/duplexer3/-/duplexer3-0.1.4.tgz#ee01dd1cac0ed3cbc7fdbea37dc0a8f1ce002ce2"

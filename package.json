@@ -4,8 +4,8 @@
   "license": "MIT",
   "description": "RingCentral Extensible SDK",
   "scripts": {
-    "definitions": "rm -rf ./src/definitions/* && node -r dotenv-override-true/config ./code-generator/definitions.js",
-    "paths": "rm -rf ./src/paths/* && node -r dotenv-override-true/config ./code-generator/paths.js",
+    "definitions": "node -r dotenv-override-true/config ./code-generator/definitions.js",
+    "paths": "node -r dotenv-override-true/config ./code-generator/paths.js",
     "generate": "yarn definitions && yarn paths && gts fix",
     "upgrade-all": "yarn-upgrade-all && lerna exec yarn-upgrade-all",
     "reset": "lerna exec 'rm -rf lib' && lerna clean -y && lerna bootstrap",
@@ -17,6 +17,7 @@
   "devDependencies": {
     "@types/node": "^14.0.23",
     "change-case": "^4.1.1",
+    "dotenv-override-true": "^6.2.0",
     "gts": "^2.0.2",
     "husky": "^4.2.5",
     "js-yaml": "^3.14.0",

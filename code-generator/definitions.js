@@ -4,8 +4,10 @@ const fs = require('fs');
 const path = require('path');
 const {pascalCase} = require('change-case');
 const R = require('ramda');
+const {spawnSync} = require('child_process');
 
 const outputDir = path.join(__dirname, '..', 'packages', 'core', 'definitions');
+spawnSync('rm', ['-rf', path.join(outputDir, '*')]);
 
 const doc = yaml.safeLoad(
   fs.readFileSync(process.env.PATH_TO_SWAGGER_SPEC, 'utf8')
