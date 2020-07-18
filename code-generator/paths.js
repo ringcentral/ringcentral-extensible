@@ -15,7 +15,8 @@ const {
 } = require('./utils');
 
 const outputDir = path.join(__dirname, '..', 'packages', 'core', 'paths');
-spawnSync('rm', ['-rf', path.join(outputDir, '*')]);
+spawnSync('rm', ['-rf', outputDir]);
+spawnSync('mkdir', [outputDir]);
 
 const doc = yaml.safeLoad(
   fs.readFileSync(process.env.PATH_TO_SWAGGER_SPEC, 'utf8')

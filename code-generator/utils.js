@@ -45,7 +45,13 @@ const getResponseType = responses => {
 exports.getResponseType = getResponseType;
 
 const patchSrcFile = (fileRoutes, imports, extensions) => {
-  const filePath = path.join(__dirname, '..', 'src', ...fileRoutes);
+  const filePath = path.join(
+    __dirname,
+    '..',
+    'packages',
+    'core',
+    ...fileRoutes
+  );
   let code = fs.readFileSync(filePath, 'utf8');
   if (imports && imports.length > 0) {
     code = `${imports.join('\n')}\n${code}`;
