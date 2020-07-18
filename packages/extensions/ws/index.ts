@@ -17,9 +17,6 @@ import {ConnectionException} from './exceptions';
 import Utils from './utils';
 
 class WebSocketExtension extends SdkExtension {
-  static sandboxServer = 'wss://ws-api.devtest.ringcentral.com/ws';
-  static productionServer = 'wss://ws-api.ringcentral.com/ws';
-
   restOverWebsocket: boolean;
   debugMode: boolean;
   rc!: RingCentral;
