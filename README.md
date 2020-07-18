@@ -84,7 +84,8 @@ yarn test
 
 ### Todo
 
-- convert code generator to TS
+- refactor code generator
+    - converted from js, lots of explicit any
 - compare it with C# sdk and see what are missing
 - WSG
     - what if network outage?

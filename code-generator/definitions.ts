@@ -1,18 +1,18 @@
-/* eslint-disable node/no-unpublished-require */
-const yaml = require('js-yaml');
-const fs = require('fs');
-const path = require('path');
-const {pascalCase} = require('change-case');
-const R = require('ramda');
-const {spawnSync} = require('child_process');
+/* eslint-disable node/no-unpublished-import */
+import yaml from 'js-yaml';
+import fs from 'fs';
+import path from 'path';
+import {pascalCase} from 'change-case';
+import R from 'ramda';
+import {spawnSync} from 'child_process';
 
 const outputDir = path.join(__dirname, '..', 'packages', 'core', 'definitions');
 spawnSync('rm', ['-rf', outputDir]);
 spawnSync('mkdir', [outputDir]);
 
 const doc = yaml.safeLoad(
-  fs.readFileSync(process.env.PATH_TO_SWAGGER_SPEC, 'utf8')
-);
+  fs.readFileSync(process.env.PATH_TO_SWAGGER_SPEC!, 'utf8')
+) as any;
 const definitions = doc.definitions;
 const models = Object.keys(definitions)
   .map(k => ({name: k, ...definitions[k]}))
@@ -23,7 +23,7 @@ models.forEach(m => {
   Object.keys(m).forEach(k => keys.push(k));
 });
 
-const normalizeType = f => {
+const normalizeType = (f: any): string => {
   if (f.type === 'integer' || f.type === 'number') {
     return 'number';
   } else if (f.type === 'array') {
@@ -36,7 +36,9 @@ const normalizeType = f => {
     return 'Attachment';
   } else if (f.type === 'string') {
     if (f.enum) {
-      return `(${f.enum.map(i => `'${i.replace(/'/g, "\\'")}'`).join(' | ')})`;
+      return `(${f.enum
+        .map((i: string) => `'${i.replace(/'/g, "\\'")}'`)
+        .join(' | ')})`;
     } else {
       return 'string';
     }
@@ -45,12 +47,12 @@ const normalizeType = f => {
   }
 };
 
-const normalizeField = f => {
+const normalizeField = (f: any) => {
   f.type = normalizeType(f);
   return f;
 };
 
-const generateField = (m, f) => {
+const generateField = (m: any, f: any) => {
   let p = '';
   if (f.name.includes('-') || f.name.includes(':') || f.name.includes('.')) {
     p = `'${f.name}'?: ${f.type}`;
@@ -75,26 +77,25 @@ const generateField = (m, f) => {
     p = `${f.description
       .trim()
       .split('\n')
-      .map(l => ` * ${l.trim()}`)
+      .map((l: string) => ` * ${l.trim()}`)
       .join('\n  ')}\n  ${p}`;
   }
   p = `/**\n  ${p}`;
   return p;
 };
 
-const generateCode = (m, fields) => {
+const generateCode = (m: any, fields: any) => {
   let code = `${m.description ? '\n  // ' + m.description : ''}
 class ${m.name} {
   ${fields.join('\n\n  ')}
 }
 
 export default ${m.name}`;
-  const match = code.match(/(?<=^ {2}\S+?: )[A-Z][A-Za-z]+?\b/gm);
+  const match = code.match(/(?<=^ {2}\S+?: )[A-Z][A-Za-z]+?\b/gm) as any;
   if (match !== null) {
-    code = `import { ${R.pipe(
-      R.uniq,
-      R.without([m.name])
-    )(match).join(', ')} } from '.'\n${code}`;
+    code = `import { ${R.without([m.name], R.uniq(match)).join(
+      ', '
+    )} } from '.'\n${code}`;
   }
   return code;
 };
@@ -116,12 +117,12 @@ models.forEach(m => {
 Object.keys(doc.paths).forEach(p => {
   Object.keys(doc.paths[p]).forEach(method => {
     const operation = doc.paths[p][method];
-    if ((operation.parameters || []).some(p => p.in === 'formData')) {
+    if ((operation.parameters || []).some((p: any) => p.in === 'formData')) {
       const operationId = operation.operationId;
       const className = pascalCase(operationId) + 'Request';
       const fields = operation.parameters
-        .filter(p => p.in === 'formData')
-        .map(p => {
+        .filter((p: any) => p.in === 'formData')
+        .map((p: any) => {
           p = normalizeField(p);
           if (p.$ref) {
             p.type = p.$ref.split('/').slice(-1)[0];
@@ -140,12 +141,12 @@ Object.keys(doc.paths).forEach(p => {
 Object.keys(doc.paths).forEach(p => {
   Object.keys(doc.paths[p]).forEach(method => {
     const operation = doc.paths[p][method];
-    if ((operation.parameters || []).some(p => p.in === 'query')) {
+    if ((operation.parameters || []).some((p: any) => p.in === 'query')) {
       const operationId = operation.operationId;
       const className = pascalCase(operationId) + 'Parameters';
       const fields = operation.parameters
-        .filter(p => p.in === 'query')
-        .map(p => {
+        .filter((p: any) => p.in === 'query')
+        .map((p: any) => {
           p = normalizeField(p);
           return generateField({}, p);
         });

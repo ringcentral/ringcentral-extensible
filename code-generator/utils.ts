@@ -1,25 +1,23 @@
-/* eslint-disable node/no-unpublished-require */
-const R = require('ramda');
-const fs = require('fs');
-const path = require('path');
+/* eslint-disable node/no-unpublished-import */
+import R from 'ramda';
+import fs from 'fs';
+import path from 'path';
 
-const normalizePath = path => {
+export const normalizePath = (path: any) => {
   return path
     .replace(/\/restapi\/v1\.0\//, '/restapi/{apiVersion}/')
     .replace(/\/scim\/v2/, '/scim/{version}')
     .replace(/\/\.search/, '/dotSearch');
 };
-exports.normalizePath = normalizePath;
 
-const deNormalizePath = path => {
+export const deNormalizePath = (path: any) => {
   return path
     .replace(/\/restapi\/\{apiVersion\}\//, '/restapi/v1.0/')
     .replace(/\/scim\/\{version\}/, '/scim/v2')
     .replace(/\/dotSearch/, '/.search');
 };
-exports.deNormalizePath = deNormalizePath;
 
-const getResponseType = responses => {
+export const getResponseType = (responses: any) => {
   const responseSchema = (
     responses[200] ||
     responses[201] ||
@@ -44,7 +42,11 @@ const getResponseType = responses => {
 };
 exports.getResponseType = getResponseType;
 
-const patchSrcFile = (fileRoutes, imports, extensions) => {
+export const patchSrcFile = (
+  fileRoutes: any,
+  imports: any,
+  extensions: any
+) => {
   const filePath = path.join(
     __dirname,
     '..',

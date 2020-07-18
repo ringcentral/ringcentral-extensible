@@ -1,26 +1,27 @@
-/* eslint-disable node/no-unpublished-require */
-const yaml = require('js-yaml');
-const fs = require('fs');
-const R = require('ramda');
-const {pascalCase, titleCase} = require('change-case');
-const {lowerCaseFirst} = require('lower-case-first');
-const path = require('path');
-const {spawnSync} = require('child_process');
+/* eslint-disable node/no-unpublished-import */
+import yaml from 'js-yaml';
+import fs from 'fs';
+import R from 'ramda';
+import {pascalCase} from 'change-case';
+import {titleCase} from 'title-case';
+import {lowerCaseFirst} from 'lower-case-first';
+import path from 'path';
+import {spawnSync} from 'child_process';
 
-const {
+import {
   normalizePath,
   deNormalizePath,
   getResponseType,
   patchSrcFile,
-} = require('./utils');
+} from './utils';
 
 const outputDir = path.join(__dirname, '..', 'packages', 'core', 'paths');
 spawnSync('rm', ['-rf', outputDir]);
 spawnSync('mkdir', [outputDir]);
 
 const doc = yaml.safeLoad(
-  fs.readFileSync(process.env.PATH_TO_SWAGGER_SPEC, 'utf8')
-);
+  fs.readFileSync(process.env.PATH_TO_SWAGGER_SPEC!, 'utf8')
+) as any;
 
 // Delete /restapi/oauth/authorize: https://git.ringcentral.com/platform/api-metadata-specs/issues/26
 delete doc.paths['/restapi/oauth/authorize'];
@@ -28,48 +29,57 @@ delete doc.paths['/restapi/oauth/authorize'];
 const paths = Object.keys(doc.paths);
 const normalizedPaths = paths.map(p => normalizePath(p));
 
-const getRoutes = (prefix, name) => {
+const getRoutes = (prefix: any, name: any) => {
   return [
-    ...prefix.split('/').filter(t => t !== '' && !t.startsWith('{')),
+    ...prefix.split('/').filter((t: any) => t !== '' && !t.startsWith('{')),
     name,
   ].map(t => pascalCase(t));
 };
-const getFolderPath = (prefix, name) => {
+const getFolderPath = (prefix: any, name: any) => {
   return path.join(outputDir, ...getRoutes(prefix, name));
 };
 
 const generate = (prefix = '/') => {
-  const nextLevels = R.pipe(
-    R.filter(p => p.startsWith(prefix)),
-    R.map(
-      p =>
-        p
-          .substring(prefix.length)
-          .split('/')
-          .filter(t => t !== '')[0]
-    ),
-    R.filter(t => !R.isNil(t) && !t.startsWith('{')),
-    R.uniq
-  )(normalizedPaths);
+  let nextLevels = R.filter((p: any) => p.startsWith(prefix), normalizedPaths);
+  nextLevels = R.map(
+    p =>
+      p
+        .substring(prefix.length)
+        .split('/')
+        .filter((t: string) => t !== '')[0],
+    nextLevels
+  );
+  nextLevels = R.filter(t => !R.isNil(t) && !t.startsWith('{'), nextLevels);
+  nextLevels = R.uniq(nextLevels);
+
   if (R.isEmpty(nextLevels)) {
     return;
   }
   console.log('nextLevels', nextLevels);
 
-  R.forEach(name => {
+  R.forEach((name: string) => {
     console.log('prefix', prefix);
     console.log('name', name);
     const routes = getRoutes(prefix, name);
     console.log('routes', routes);
     const folderPath = getFolderPath(prefix, name);
     console.log('folderPath', folderPath);
-    const paramName = R.pipe(
-      R.filter(p => p.startsWith(`${prefix}${name}/{`)),
-      R.map(p => p.substring(`${prefix}${name}/`.length)),
-      R.map(p => p.split('/').filter(t => t !== '')[0]),
-      R.map(t => t.substring(1, t.length - 1)),
-      R.head
-    )(normalizedPaths);
+
+    let paramNames = R.filter(
+      p => p.startsWith(`${prefix}${name}/{`),
+      normalizedPaths
+    );
+    paramNames = R.map(
+      p => p.substring(`${prefix}${name}/`.length),
+      paramNames
+    );
+    paramNames = R.map(
+      p => p.split('/').filter((t: any) => t !== '')[0],
+      paramNames
+    );
+    paramNames = R.map(t => t.substring(1, t.length - 1), paramNames);
+    const paramName = R.head(paramNames);
+
     if (fs.existsSync(folderPath)) {
       console.log('folder already exists');
       generate(`${prefix}${name}/`);
@@ -165,7 +175,7 @@ class Index {
   }`;
     }
 
-    let operations = [];
+    let operations: any[] = [];
     const endpoints = [deNormalizePath(`${prefix}${name}`)];
     if (paramName) {
       endpoints.push(`${deNormalizePath(`${prefix}${name}`)}/{${paramName}}`);
@@ -197,7 +207,7 @@ class Index {
         operation.method === 'get' &&
         !operation.endpoint.endsWith('}') &&
         R.any(
-          o =>
+          (o: any) =>
             o.method === 'get' &&
             o.endpoint === operation.endpoint + `/{${paramName}}`
         )(operations)
@@ -224,8 +234,10 @@ class Index {
         multipart = true;
       } else if (
         operation.detail.consumes &&
-        !operation.detail.consumes.some(c => c === 'application/json') &&
-        !operation.detail.consumes.some(c => c.startsWith('text/'))
+        !operation.detail.consumes.some(
+          (c: string) => c === 'application/json'
+        ) &&
+        !operation.detail.consumes.some((c: string) => c.startsWith('text/'))
       ) {
         throw new Error(
           `Unsupported consume content type: ${operation.detail.consumes.join(
@@ -234,7 +246,7 @@ class Index {
         );
       } else {
         body = (operation.detail.parameters || []).filter(
-          p => p.in === 'body'
+          (p: any) => p.in === 'body'
         )[0];
         if (body) {
           if (body.schema.type === 'string') {
@@ -251,7 +263,7 @@ class Index {
         bodyClass = `${pascalCase(operation.detail.operationId)}Request`;
         bodyParam = `${operation.detail.operationId}Request`;
         body = (operation.detail.parameters || []).filter(
-          p => p.in === 'body' && p.schema && p.schema.$ref
+          (p: any) => p.in === 'body' && p.schema && p.schema.$ref
         )[0];
         if (body) {
           bodyClass = R.last(body.schema.$ref.split('/'));
@@ -261,7 +273,7 @@ class Index {
       }
 
       const queryParams = (operation.detail.parameters || []).filter(
-        p => p.in === 'query'
+        (p: any) => p.in === 'query'
       );
       const withParam = paramName && operation.endpoint.endsWith('}');
       const methodParams = [];
@@ -357,7 +369,7 @@ class Index {
         ['paths', ...R.init(routes), 'index.ts'],
         [`import ${R.last(routes)} from './${R.last(routes)}'`],
         `
-  ${lowerCaseFirst(R.last(routes))} (${
+  ${lowerCaseFirst(R.last(routes)!)} (${
           paramName
             ? `${paramName}: (string | null) = ${
                 defaultParamValue ? `'${defaultParamValue}'` : 'null'
