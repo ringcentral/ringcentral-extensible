@@ -1,4 +1,3 @@
-/* eslint-disable node/no-unpublished-import */
 import R from 'ramda';
 import fs from 'fs';
 import path from 'path';

@@ -1,4 +1,3 @@
-/* eslint-disable node/no-unpublished-import */
 import yaml from 'js-yaml';
 import fs from 'fs';
 import R from 'ramda';
