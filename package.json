@@ -4,9 +4,7 @@
   "license": "MIT",
   "description": "RingCentral Extensible SDK",
   "scripts": {
-    "definitions": "ts-node -r dotenv-override-true/config ./code-generator/definitions.ts",
-    "paths": "ts-node -r dotenv-override-true/config ./code-generator/paths.ts",
-    "generate": "yarn definitions && yarn paths && gts fix",
+    "generate": "lerna run definitions --scope=@rc-ex/code-generator && lerna run paths --scope=@rc-ex/code-generator && gts fix",
     "upgrade-all": "yarn-upgrade-all && lerna exec yarn-upgrade-all",
     "reset": "lerna exec 'rm -rf lib' && lerna clean -y && lerna bootstrap",
     "test": "lerna exec 'jest -w 1 --detectOpenHandles' --scope=@rc-ex/test",
@@ -15,19 +13,10 @@
     "all": "yarn upgrade-all && yarn reset && yarn prepublishOnly"
   },
   "devDependencies": {
-    "@types/js-yaml": "^3.12.5",
     "@types/node": "^14.0.23",
-    "@types/ramda": "^0.27.11",
-    "change-case": "^4.1.1",
-    "dotenv-override-true": "^6.2.0",
     "gts": "^2.0.2",
     "husky": "^4.2.5",
-    "js-yaml": "^3.14.0",
     "lerna": "^3.22.1",
-    "lower-case-first": "^2.0.1",
-    "ramda": "^0.27.0",
-    "title-case": "^3.0.2",
-    "ts-node": "^8.10.2",
     "typescript": "^3.9.7",
     "yarn-upgrade-all": "^0.5.4"
   },

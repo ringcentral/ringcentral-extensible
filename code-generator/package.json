@@ -1,5 +1,20 @@
 {
   "name": "@rc-ex/code-generator",
   "private": true,
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "definitions": "ts-node -r dotenv-override-true/config ./definitions.ts",
+    "paths": "ts-node -r dotenv-override-true/config ./paths.ts"
+  },
+  "dependencies": {
+    "@types/js-yaml": "^3.12.5",
+    "@types/ramda": "^0.27.11",
+    "change-case": "^4.1.1",
+    "dotenv-override-true": "^6.2.0",
+    "js-yaml": "^3.14.0",
+    "lower-case-first": "^2.0.1",
+    "ramda": "^0.27.0",
+    "title-case": "^3.0.2",
+    "ts-node": "^8.10.2"
+  }
 }
