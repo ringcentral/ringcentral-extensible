@@ -3,7 +3,6 @@
   "npmClient": "yarn",
   "packages": [
     "packages/core",
-    "packages/test",
     "packages/extensions/debug",
     "packages/extensions/events",
     "packages/extensions/pubnub",
@@ -11,6 +10,7 @@
     "packages/extensions/rcsdk",
     "packages/extensions/retry",
     "packages/extensions/ws",
-    "packages/extensions/ws-legacy"
+    "packages/extensions/ws-legacy",
+    "test"
   ]
 }
