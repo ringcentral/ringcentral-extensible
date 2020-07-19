@@ -86,6 +86,7 @@ yarn test
 
 - refactor code generator
     - it was converted from js, lots of explicit any
+    - update `code-generator/.eslintrc.json`
 - compare it with C# sdk and see what are missing
 - WSG
     - what if network outage?
