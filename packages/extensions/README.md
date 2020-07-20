@@ -27,9 +27,9 @@ By default, an extension is enabled after installation. You can disable it by `a
 You can re-enabled it by `abcExtension.enabled = true`.
 
 
-## [Debug Mode Extension](./debug)
+## [Debug Extension](./debug)
 
-Debug mode extension prints details about API traffic so you can inspect the request and response data.
+Debug extension prints details about API traffic so you can inspect the request and response data.
 
 
 ## [Retry Extension](./retry)
@@ -42,9 +42,9 @@ Retry Extension auto retries API calls based on specified condition and interval
 Rate limit extension handles rate limit automatically by delaying and retrying API calls.
 
 
-## [Event Emitter Extension](./events)
+## [Events Extension](./events)
 
-Event Emitter Extension emits API call related events.
+Events Extension emits API call related events.
 
 
 ## [RingCentral Extension](./rcsdk)
