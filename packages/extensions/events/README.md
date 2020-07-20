@@ -1,4 +1,4 @@
-# Event Emitter Extension
+# Events Extension
 
 This extension emits API call related events.
 

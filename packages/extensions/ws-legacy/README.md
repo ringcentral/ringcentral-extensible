@@ -1,4 +1,4 @@
-# WebSocket Extension
+# WebSocket Extension (legacy and deprecated)
 
 WebSocket Extension adds support for WebSocket protocol.
 

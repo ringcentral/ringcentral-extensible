@@ -1,6 +1,6 @@
-# Debug Mode Extension
+# Debug Extension
 
-Provide debug mode for this SDK, it supports Rest API over both HTTPS and WebSocket.
+Provide debug mode for this SDK.
 
 
 ## Install
