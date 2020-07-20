@@ -27,7 +27,7 @@ By default, an extension is enabled after installation. You can disable it by `a
 You can re-enabled it by `abcExtension.enabled = true`.
 
 
-## [Debug Mode Extension](./debugMode)
+## [Debug Mode Extension](./debug)
 
 Debug mode extension prints details about API traffic so you can inspect the request and response data.
 
@@ -37,26 +37,26 @@ Debug mode extension prints details about API traffic so you can inspect the req
 Retry Extension auto retries API calls based on specified condition and interval.
 
 
-## [Rate Limit Extension](./rateLimit)
+## [Rate Limit Extension](./rate-limit)
 
 Rate limit extension handles rate limit automatically by delaying and retrying API calls.
 
 
-## [Event Emitter Extension](./eventEmitter)
+## [Event Emitter Extension](./events)
 
 Event Emitter Extension emits API call related events.
 
 
-## [RingCentral Extension](./ringCentral)
+## [RingCentral Extension](./rcsdk)
 
 RingCentral Extension makes [@ringcentral/sdk](https://www.npmjs.com/package/@ringcentral/sdk) the HTTP engine.
 
 
-## [WebSocket Extension](./webSocket)
+## [WebSocket Extension](./ws)
 
 WebSocket Extension adds support for WebSocket protocol.
 
 
-## [PubNub Extension](./pubNub)
+## [PubNub Extension](./pubnub)
 
 PubNub Extension adds PubNub notifications feature.
