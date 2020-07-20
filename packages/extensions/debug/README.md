@@ -7,11 +7,11 @@ Provide debug mode for this SDK, it supports Rest API over both HTTPS and WebSoc
 
 ```ts
 import RingCentral from '@rc-ex/core';
-import DebugModeExtension from '@rc-ex/debug';
+import DebugExtension from '@rc-ex/debug';
 
 const rc = new RingCentral(...);
-const debugModeExtension = new DebugModeExtension();
-await rc.installExtension(debugModeExtension);
+const debugExtension = new DebugExtension();
+await rc.installExtension(debugExtension);
 ```
 
 With this extension installed, details for every API request traffic will be printed using `console.debug`.

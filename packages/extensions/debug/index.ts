@@ -3,7 +3,7 @@ import {RestRequestConfig, RestResponse, RestMethod} from '@rc-ex/core/Rest';
 import Utils from '@rc-ex/core/Utils';
 import SdkExtension from '@rc-ex/core/SdkExtension';
 
-class DebugModeExtension extends SdkExtension {
+class DebugExtension extends SdkExtension {
   async install(rc: RingCentral) {
     const request = rc.request.bind(rc);
     rc.request = async <T>(
@@ -29,4 +29,4 @@ class DebugModeExtension extends SdkExtension {
   }
 }
 
-export default DebugModeExtension;
+export default DebugExtension;

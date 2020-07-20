@@ -24,15 +24,15 @@ export enum Events {
   rateLimitError = 'rateLimitError',
 }
 
-export type EventEmitterOptions = {
+export type EventsOptions = {
   enabledEvents?: Events[];
 };
 
-class EventEmitterExtension extends SdkExtension {
+class EventsExtension extends SdkExtension {
   eventEmitter = new EventEmitter();
   enabledEvents?: Events[];
 
-  constructor(options?: EventEmitterOptions) {
+  constructor(options?: EventsOptions) {
     super();
     this.enabledEvents = options?.enabledEvents;
   }
@@ -118,4 +118,4 @@ class EventEmitterExtension extends SdkExtension {
   }
 }
 
-export default EventEmitterExtension;
+export default EventsExtension;

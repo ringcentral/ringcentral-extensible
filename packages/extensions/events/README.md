@@ -7,13 +7,13 @@ This extension emits API call related events.
 
 ```ts
 import RingCentral from '@rc-ex/core';
-import EventEmitterExtension, {Events} from '@rc-ex/events';
+import EventsExtension, {Events} from '@rc-ex/events';
 
 const rc = new RingCentral(...);
-const eventEmitterExtension = new EventEmitterExtension(eventEmitterOptions);
-await rc.installExtension(eventEmitterExtension);
+const eventsExtension = new EventsExtension(eventsOptions);
+await rc.installExtension(eventsExtension);
 
-eventEmitterExtension.eventEmitter.on(Events.requestSuccess, r => {
+eventsExtension.eventEmitter.on(Events.requestSuccess, r => {
   console.log(`There is a request error: ${r}`)
 })
 ```
@@ -21,12 +21,12 @@ eventEmitterExtension.eventEmitter.on(Events.requestSuccess, r => {
 For a working sample, please check this [test case](../../../test/event_emitter_extension.spec.ts).
 
 
-## EventEmitterOptions
+## EventsOptions
 
-`EventEmitterExtension` constructor accepts optional `EventEmitterOptions` as parameter:
+`EventsExtension` constructor accepts optional `EventsOptions` as parameter:
 
 ```ts
-type EventEmitterOptions = {
+type EventsOptions = {
   enabledEvents?: Events[];
 };
 ```
