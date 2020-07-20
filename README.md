@@ -90,7 +90,4 @@ yarn test
 - compare it with C# sdk and see what are missing
 - WSG
     - what if network outage?
-- Publish to NPM
-- make yarn-upgrade-all working
-    - maybe don't have to ignore
 - Update doc about monorepo
