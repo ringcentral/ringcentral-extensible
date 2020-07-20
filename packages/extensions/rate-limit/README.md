@@ -5,9 +5,11 @@ Rate limit extension handles rate limit automatically by delaying and retrying A
 This extension is based on the [Retry Extension](../retry).
 
 
-## Install dependencies
+## Install
 
-Please check the [Retry Extension](../retry) dependencies.
+```
+yarn add @rc-ex/rate-limit
+```
 
 
 ## Usage

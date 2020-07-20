@@ -3,10 +3,10 @@
 Retry API calls upon `RestException`
 
 
-## Install dependencies
+## Install
 
 ```
-yarn add wait-for-async
+yarn add @rc-ex/retry
 ```
 
 

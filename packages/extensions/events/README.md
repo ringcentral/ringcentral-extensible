@@ -3,6 +3,13 @@
 This extension emits API call related events.
 
 
+## Install
+
+```
+yarn add @rc-ex/events
+```
+
+
 ## Usage
 
 ```ts

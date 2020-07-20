@@ -3,16 +3,10 @@
 WebSocket Extension adds support for WebSocket protocol.
 
 
-## Install dependencies
+## Install
 
 ```
-yarn add isomorphic-ws http-status-codes wait-for-async hyperid
-```
-
-If you use TypeScript, you also need to
-
-```
-yarn add @types/ws
+yarn add @rc-ex/ws
 ```
 
 

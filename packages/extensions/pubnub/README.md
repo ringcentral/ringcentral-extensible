@@ -3,16 +3,10 @@
 PubNub Extension adds PubNub notifications feature.
 
 
-## Install dependencies
+## Install
 
 ```
-yarn add pubnub
-```
-
-If you use TypeScript, you also need the following:
-
-```
-yarn add @types/pubnub
+yarn add @rc-ex/pubnub
 ```
 
 

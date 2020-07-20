@@ -3,6 +3,13 @@
 Provide debug mode for this SDK, it supports Rest API over both HTTPS and WebSocket.
 
 
+## Install
+
+```
+yarn add @rc-ex/debug
+```
+
+
 ## Usage
 
 ```ts

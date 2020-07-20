@@ -47,7 +47,7 @@ Rate limit extension handles rate limit automatically by delaying and retrying A
 Events Extension emits API call related events.
 
 
-## [RingCentral Extension](./rcsdk)
+## [RingCentral SDK Extension](./rcsdk)
 
 RingCentral Extension makes [@ringcentral/sdk](https://www.npmjs.com/package/@ringcentral/sdk) the HTTP engine.
 

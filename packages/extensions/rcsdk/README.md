@@ -1,12 +1,12 @@
-# RingCentral extension
+# RingCentral SDK extension
 
 This extension makes [@ringcentral/sdk](https://www.npmjs.com/package/@ringcentral/sdk) the HTTP engine.
 
 
-## Install dependencies
+## Install
 
 ```
-yarn add @ringcentral/sdk
+yarn add @rc-ex/rcsdk
 ```
 
 
