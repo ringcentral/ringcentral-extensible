@@ -93,3 +93,4 @@ yarn test
 - Publish to NPM
 - make yarn-upgrade-all working
     - maybe don't have to ignore
+- Update doc about monorepo
