@@ -91,7 +91,6 @@ yarn lerna publish
 
 ### Todo
 
-- Fix Travis
 - refactor code generator
     - it was converted from js, lots of explicit any
     - update `code-generator/.eslintrc.json`
