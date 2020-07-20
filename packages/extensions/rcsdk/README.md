@@ -15,16 +15,16 @@ yarn add @rc-ex/rcsdk
 ```ts
 import SDK from '@ringcentral/sdk';
 import RingCentral from '@rc-ex/core';
-import RingCentralExtension from '@rc-ex/rcsdk';
+import RcSdkExtension from '@rc-ex/rcsdk';
 
 // @ringcentral/sdk
 const sdk = new SDK({clientId, clientSecret, server});
 await sdk.login({username, extension, password});
 
-// ringcentral-extensible + ringcentral extension
+// ringcentral-extensible + rcsdk extension
 const rc = new RingCentral();
-const ringCentralExtension = new RingCentralExtension(sdk);
-await rc.installExtension(ringCentralExtension);
+const rcSdkExtension = new RcSdkExtension(sdk);
+await rc.installExtension(rcSdkExtension);
 
 // API call with @ringcentral/sdk as HTTP engine
 const extensionInfo = await rc.restapi().account().extension().get();
@@ -46,13 +46,13 @@ This extension makes `@ringcentral/sdk` as HTTP engine. to switch back to `axios
 ```ts
 // ringcentral-extensible + rcsdk extension
 const rc = new RingCentral({...});
-const ringCentralExtension = new RingCentralExtension(sdk);
-await rc.installExtension(ringCentralExtension);
+const rcSdkExtension = new RcSdkExtension(sdk);
+await rc.installExtension(rcSdkExtension);
 
 // API call with @ringcentral/sdk as HTTP engine
 const extensionInfo = await rc.restapi().account().extension().get();
 
-ringCentralExtension.enabled = false;
+rcSdkExtension.enabled = false;
 // API call with axios as HTTP engine
 const extensionInfo2 = await rc.restapi().account().extension().get();
 ```

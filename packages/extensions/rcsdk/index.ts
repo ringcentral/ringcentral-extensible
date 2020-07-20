@@ -8,7 +8,7 @@ import SdkExtension from '@rc-ex/core/lib/SdkExtension';
 import RestException from '@rc-ex/core/lib/RestException';
 import SDK from '@ringcentral/sdk';
 
-class RingCentralExtension extends SdkExtension {
+class RcSdkExtension extends SdkExtension {
   sdk: SDK;
 
   constructor(sdk: SDK) {
@@ -61,4 +61,4 @@ class RingCentralExtension extends SdkExtension {
   }
 }
 
-export default RingCentralExtension;
+export default RcSdkExtension;
