@@ -14,8 +14,8 @@ yarn add @ringcentral/sdk
 
 ```ts
 import SDK from '@ringcentral/sdk';
-import RingCentral from 'ringcentral-extensible';
-import RingCentralExtension from 'ringcentral-extensible/build/src/extensions/ringCentral';
+import RingCentral from '@rc-ex/core';
+import RingCentralExtension from '@rc-ex/rcsdk';
 
 // @ringcentral/sdk
 const sdk = new SDK({clientId, clientSecret, server});

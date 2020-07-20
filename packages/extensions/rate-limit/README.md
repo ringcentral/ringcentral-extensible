@@ -13,8 +13,8 @@ Please check the [Retry Extension](../retry) dependencies.
 ## Usage
 
 ```ts
-import RingCentral from 'ringcentral-extensible';
-import RateLimitExtension from 'ringcentral-extensible/build/src/extensions/rateLimit';
+import RingCentral from '@rc-ex/core';
+import RateLimitExtension from '@rc-ex/rate-limit';
 
 const rc = new RingCentral(...);
 const rateLimitExtension = new RateLimitExtension(rateLimitOptions);
@@ -46,4 +46,4 @@ Default value is 3.
 
 Default value is 60 (seconds).
 
-Its value is used to determine the [retryInterval](https://github.com/ringcentral/ringcentral-extensible/tree/master/src/extensions/retry#retryinterval).
+Its value is used to determine the [retryInterval](https://github.com/ringcentral/ringcentral-extensible/tree/master/packages/extensions/retry#retryinterval).

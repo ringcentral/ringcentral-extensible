@@ -10,13 +10,13 @@ It is an endeavour to get rid of bloated SDK. You install extensions on demand.
 ## Installation
 
 ```
-yarn add ringcentral-extensible
+yarn add @rc-ex/core
 ```
 
 Then you should be able to import the SDK like this:
 
 ```ts
-import RestCentral from 'ringcentral-extensible';
+import RingCentral from '@rc-ex/core';
 ```
 
 
@@ -27,9 +27,9 @@ import RestCentral from 'ringcentral-extensible';
 You can also find lots of useful code snippets from [test cases](./test).
 
 
-## [Extensions](./src/extensions)
+## [Extensions](./packages/extensions)
 
-This SDK supports [extensions](./src/extensions). You can enable features by installing extensions.
+This SDK supports [extensions](./packages/extensions). You can enable features by installing extensions.
 
 If you want to add features to this SDK, create an extension.
 
@@ -90,4 +90,3 @@ yarn test
 - compare it with C# sdk and see what are missing
 - WSG
     - what if network outage?
-- Update doc about monorepo

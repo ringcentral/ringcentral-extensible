@@ -12,8 +12,8 @@ Here we provide general usage guidance for extensions. You need to read each ext
 Let's say an extension's name is `AbcExtension`:
 
 ```ts
-import RingCentral from 'ringcentral-extensible';
-import AbcExtension from 'ringcentral-extensible/build/src/extensions/abc';
+import RingCentral from '@rc-ex/core';
+import AbcExtension from '@rc-ex/abc';
 
 const rc = new RingCentral(...);
 const abcExtension = new AbcExtension(...);

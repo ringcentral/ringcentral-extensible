@@ -6,8 +6,8 @@ This extension emits API call related events.
 ## Usage
 
 ```ts
-import RingCentral from 'ringcentral-extensible';
-import EventEmitterExtension, {Events} from 'ringcentral-extensible/build/src/extensions/eventEmitter';
+import RingCentral from '@rc-ex/core';
+import EventEmitterExtension, {Events} from '@rc-ex/events';
 
 const rc = new RingCentral(...);
 const eventEmitterExtension = new EventEmitterExtension(eventEmitterOptions);
