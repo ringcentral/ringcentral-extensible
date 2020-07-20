@@ -82,6 +82,13 @@ yarn test
 ```
 
 
+## Publish
+
+```
+yarn lerna publish
+```
+
+
 ### Todo
 
 - refactor code generator
