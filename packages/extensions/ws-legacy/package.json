@@ -1,6 +1,6 @@
 {
   "name": "@rc-ex/ws-legacy",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Legacy WebSocket extension for ringcentral-extensible project",
   "author": "Tyler Liu <tyler.liu@ringcentral.com>",
   "homepage": "https://github.com/ringcentral/ringcentral-extensible/tree/master/packages/extensions/ws-legacy",
@@ -26,7 +26,7 @@
     "ws": "^7.3.1"
   },
   "devDependencies": {
-    "@rc-ex/core": "^0.2.0"
+    "@rc-ex/core": "^0.3.0"
   },
   "peerDependencies": {
     "@rc-ex/core": "^0.2.0"
