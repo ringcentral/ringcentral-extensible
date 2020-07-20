@@ -3,15 +3,15 @@
   "private": true,
   "license": "MIT",
   "dependencies": {
-    "@rc-ex/core": "^0.1.0",
-    "@rc-ex/debug": "^0.1.0",
-    "@rc-ex/events": "^0.1.0",
-    "@rc-ex/pubnub": "^0.1.0",
-    "@rc-ex/rate-limit": "^0.1.0",
-    "@rc-ex/rcsdk": "^0.1.0",
-    "@rc-ex/retry": "^0.1.0",
-    "@rc-ex/ws": "^0.1.0",
-    "@rc-ex/ws-legacy": "^0.1.0"
+    "@rc-ex/core": "^0.2.0",
+    "@rc-ex/debug": "^0.2.0",
+    "@rc-ex/events": "^0.2.0",
+    "@rc-ex/pubnub": "^0.2.0",
+    "@rc-ex/rate-limit": "^0.2.0",
+    "@rc-ex/rcsdk": "^0.2.0",
+    "@rc-ex/retry": "^0.2.0",
+    "@rc-ex/ws": "^0.2.0",
+    "@rc-ex/ws-legacy": "^0.2.0"
   },
   "devDependencies": {
     "@ringcentral/sdk": "^4.3.2",
