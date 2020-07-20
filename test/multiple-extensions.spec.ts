@@ -11,7 +11,7 @@ dotenv.config({path: path.join(__dirname, '.env.lab')});
 
 describe('extensions', () => {
   test('RingCentral Extension + WebSocket Extension', async () => {
-    if (!process.env.IS_LAB_ENV) {
+    if (process.env.IS_LAB_ENV !== 'true') {
       return;
     }
     const rc = new RingCentral();

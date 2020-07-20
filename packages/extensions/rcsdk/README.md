@@ -44,7 +44,7 @@ For a working sample, please check this [test case](../../../test/ringcentral_ex
 This extension makes `@ringcentral/sdk` as HTTP engine. to switch back to `axios`, just disable this extension:
 
 ```ts
-// ringcentral-extensible + ringcentral extension
+// ringcentral-extensible + rcsdk extension
 const rc = new RingCentral({...});
 const ringCentralExtension = new RingCentralExtension(sdk);
 await rc.installExtension(ringCentralExtension);

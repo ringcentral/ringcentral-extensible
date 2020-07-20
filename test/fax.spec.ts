@@ -3,8 +3,8 @@ import {
   CreateFaxMessageRequest,
   Attachment,
   FaxResponse,
-} from '@rc-ex/core/definitions';
-import Utils from '@rc-ex/core/Utils';
+} from '@rc-ex/core/lib/definitions';
+import Utils from '@rc-ex/core/lib/Utils';
 import fs from 'fs';
 import path from 'path';
 

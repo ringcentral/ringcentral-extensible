@@ -1,9 +1,9 @@
 import RingCentral from '@rc-ex/core';
-import SdkExtension from '@rc-ex/core/SdkExtension';
+import SdkExtension from '@rc-ex/core/lib/SdkExtension';
 import {
   SubscriptionInfo,
   CreateSubscriptionRequest,
-} from '@rc-ex/core/definitions';
+} from '@rc-ex/core/lib/definitions';
 import PubNub from 'pubnub';
 
 class PubNubExtension extends SdkExtension {

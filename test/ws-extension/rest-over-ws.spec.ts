@@ -7,7 +7,7 @@ dotenv.config({path: path.join(__dirname, '..', '.env.lab')});
 
 describe('WSG', () => {
   test('Rest API call via WebSocket', async () => {
-    if (!process.env.IS_LAB_ENV) {
+    if (process.env.IS_LAB_ENV !== 'true') {
       return;
     }
     const rc = new RingCentral({

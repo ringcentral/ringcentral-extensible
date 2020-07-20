@@ -1,7 +1,7 @@
 import {
   CreateSubscriptionRequest,
   SubscriptionInfo,
-} from '@rc-ex/core/definitions';
+} from '@rc-ex/core/lib/definitions';
 
 import WebSocketExtension from '.';
 import {WsgEvent, WsgMeta} from './types';

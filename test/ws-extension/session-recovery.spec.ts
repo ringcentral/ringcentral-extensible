@@ -8,7 +8,7 @@ dotenv.config({path: path.join(__dirname, '..', '.env.lab')});
 
 describe('WSG session recovery', () => {
   test('default ', async () => {
-    if (!process.env.IS_LAB_ENV) {
+    if (process.env.IS_LAB_ENV !== 'true') {
       return;
     }
     const rc = new RingCentral({
@@ -66,7 +66,7 @@ describe('WSG session recovery', () => {
   });
 
   test('reconnect by do not recover session ', async () => {
-    if (!process.env.IS_LAB_ENV) {
+    if (process.env.IS_LAB_ENV !== 'true') {
       return;
     }
     const rc = new RingCentral({
@@ -124,7 +124,7 @@ describe('WSG session recovery', () => {
   });
 
   test('re-connect existing session', async () => {
-    if (!process.env.IS_LAB_ENV) {
+    if (process.env.IS_LAB_ENV !== 'true') {
       return;
     }
     const rc = new RingCentral({
@@ -178,7 +178,7 @@ describe('WSG session recovery', () => {
   });
   // todo: uncomment test case below
   // test('too late to recover', async () => {
-  //   if (!process.env.IS_LAB_ENV) {
+  //   if (process.env.IS_LAB_ENV !== 'true') {
   //     return;
   //   }
   //   const rc = new RingCentral({

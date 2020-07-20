@@ -1,5 +1,5 @@
 import RingCentral from '@rc-ex/core';
-import {CreateMMSMessage, Attachment} from '@rc-ex/core/definitions';
+import {CreateMMSMessage, Attachment} from '@rc-ex/core/lib/definitions';
 import fs from 'fs';
 import path from 'path';
 
