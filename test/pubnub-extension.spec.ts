@@ -1,6 +1,11 @@
 import RingCentral from '@rc-ex/core';
 import PubNubExtension from '@rc-ex/pubnub';
 import waitFor from 'wait-for-async';
+// import path from 'path';
+// import dotenv from 'dotenv-override-true';
+
+// dotenv.config({path: path.join(__dirname, '.env.lab')});
+// console.log(process.env.RINGCENTRAL_SERVER_URL);
 
 describe('PubNub extension', () => {
   test('default', async () => {
