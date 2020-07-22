@@ -1,16 +1,12 @@
 import RingCentral from '@rc-ex/core';
 
 import {testRingCentral} from './utils';
+import {ExtensionContactInfo} from '@rc-ex/core/lib/definitions';
 
 describe('Update extension', () => {
   test('default', async () => {
     const testCase = async (rc: RingCentral) => {
       let extensionInfo = await rc.restapi().account().extension().get();
-      console.log(
-        extensionInfo.contact?.firstName,
-        extensionInfo.contact?.lastName
-      );
-
       const firstName = extensionInfo.contact?.firstName;
       const lastName = extensionInfo.contact?.lastName;
 
@@ -24,12 +20,8 @@ describe('Update extension', () => {
             firstName: 'firstName',
           },
         });
-
       extensionInfo = await rc.restapi().account().extension().get();
-      console.log(
-        extensionInfo.contact?.firstName,
-        extensionInfo.contact?.lastName
-      );
+      expect(extensionInfo.contact?.firstName).not.toEqual(firstName);
 
       await rc.restapi().account().extension().put({
         contact: {
@@ -37,12 +29,8 @@ describe('Update extension', () => {
           firstName,
         },
       });
-
       extensionInfo = await rc.restapi().account().extension().get();
-      console.log(
-        extensionInfo.contact?.firstName,
-        extensionInfo.contact?.lastName
-      );
+      expect(extensionInfo.contact?.firstName).toEqual(firstName);
 
       await rc.revoke();
     };
