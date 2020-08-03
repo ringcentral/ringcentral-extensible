@@ -1,7 +1,6 @@
 import RingCentral from '@rc-ex/core';
 
 import {testRingCentral} from './utils';
-import {ExtensionContactInfo} from '@rc-ex/core/lib/definitions';
 
 describe('Update extension', () => {
   test('default', async () => {
