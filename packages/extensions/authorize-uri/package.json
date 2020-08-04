@@ -1,0 +1,26 @@
+{
+  "name": "@rc-ex/authorize-uri",
+  "version": "0.4.0",
+  "description": "Authorize URI extension for ringcentral-extensible project",
+  "author": "Tyler Liu <tyler.liu@ringcentral.com>",
+  "homepage": "https://github.com/ringcentral/ringcentral-extensible/tree/master/packages/extensions/authorize-uri",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ringcentral/ringcentral-extensible.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ringcentral/ringcentral-extensible/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "@rc-ex/core": "^0.4.2"
+  },
+  "peerDependencies": {
+    "@rc-ex/core": "^0.4.2"
+  }
+}

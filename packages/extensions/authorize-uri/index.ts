@@ -1,0 +1,22 @@
+import RingCentral from '@rc-ex/core';
+import SdkExtension from '@rc-ex/core/SdkExtension';
+import {AuthorizeRequest} from '@rc-ex/core/definitions';
+
+class AuthorizeUriExtension extends SdkExtension {
+  rc!: RingCentral;
+  async install(rc: RingCentral) {
+    this.rc = rc;
+  }
+  buildUri(authorizeRequest: AuthorizeRequest): string {
+    if (!authorizeRequest.response_type) {
+      authorizeRequest.response_type = 'code';
+    }
+
+    if (!authorizeRequest.client_id) {
+      authorizeRequest.client_id = this.rc.rest.clientId;
+    }
+    return 'Hello world';
+  }
+}
+
+export default AuthorizeUriExtension;

@@ -3,6 +3,7 @@
   "npmClient": "yarn",
   "packages": [
     "packages/core",
+    "packages/extensions/authorize-uri",
     "packages/extensions/debug",
     "packages/extensions/events",
     "packages/extensions/pubnub",

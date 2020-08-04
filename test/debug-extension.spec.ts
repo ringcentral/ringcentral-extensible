@@ -3,7 +3,7 @@ import DebugExtension from '@rc-ex/debug';
 
 import {testRingCentral} from './utils';
 
-describe('Debug Mode Extension', () => {
+describe('Debug Extension', () => {
   test('default', async () => {
     const testCase = async (rc: RingCentral) => {
       const debugExtension = new DebugExtension();

@@ -3,6 +3,7 @@
   "private": true,
   "license": "MIT",
   "dependencies": {
+    "@rc-ex/authorize-uri": "^0.4.0",
     "@rc-ex/core": "^0.4.2",
     "@rc-ex/debug": "^0.4.2",
     "@rc-ex/events": "^0.4.2",
