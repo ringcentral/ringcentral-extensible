@@ -1,6 +1,7 @@
 import RingCentral from '@rc-ex/core';
 import SdkExtension from '@rc-ex/core/SdkExtension';
 import {AuthorizeRequest} from '@rc-ex/core/definitions';
+import URI, {QueryDataMap} from 'urijs';
 
 class AuthorizeUriExtension extends SdkExtension {
   rc!: RingCentral;
@@ -15,7 +16,10 @@ class AuthorizeUriExtension extends SdkExtension {
     if (!authorizeRequest.client_id) {
       authorizeRequest.client_id = this.rc.rest.clientId;
     }
-    return 'Hello world';
+    return URI(this.rc.rest.server)
+      .directory('/restapi/oauth/authorize')
+      .search(authorizeRequest as QueryDataMap)
+      .toString();
   }
 }
 

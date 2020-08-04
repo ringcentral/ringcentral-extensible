@@ -19,6 +19,10 @@ import AuthorizeUriExtension from '@rc-ex/authorize-uri';
 const rc = new RingCentral(...);
 const authorizeUriExtension = new AuthorizeUriExtension();
 await rc.installExtension(authorizeUriExtension);
+const authorizeUri = authorizeUriExtension.buildUri({
+  state: 'hello',
+  redirect_uri: 'https://example.com',
+});
 ```
 
 For a working sample, please check this [test case](../../../test/authorize-uri-extension.spec.ts).

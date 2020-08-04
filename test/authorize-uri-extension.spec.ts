@@ -10,6 +10,12 @@ describe('Authorize URI Extension', () => {
     });
     const authorizeUriExtension = new AuthorizeUriExtension();
     await rc.installExtension(authorizeUriExtension);
-    expect(authorizeUriExtension.buildUri).toBeDefined();
+    const authorizeUri = authorizeUriExtension.buildUri({
+      state: 'hello',
+      redirect_uri: 'https://example.com',
+    });
+    expect(authorizeUri).toBeDefined();
+    expect(authorizeUri.indexOf('state=hello')).not.toBe(-1);
+    expect(authorizeUri.startsWith(rc.rest.server)).toBeTruthy();
   });
 });
