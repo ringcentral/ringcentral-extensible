@@ -1,10 +1,6 @@
 import RingCentral from '@rc-ex/core';
-import {
-  RestRequestConfig,
-  RestResponse,
-  RestMethod,
-} from '@rc-ex/core/lib/Rest';
-import SdkExtension from '@rc-ex/core/lib/SdkExtension';
+import {RestRequestConfig, RestResponse, RestMethod} from '@rc-ex/core/Rest';
+import SdkExtension from '@rc-ex/core/SdkExtension';
 import WS from 'isomorphic-ws';
 
 import {request} from './rest';

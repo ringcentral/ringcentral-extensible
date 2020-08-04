@@ -1,9 +1,5 @@
-import {
-  RestMethod,
-  RestRequestConfig,
-  RestResponse,
-} from '@rc-ex/core/lib/Rest';
-import RestException from '@rc-ex/core/lib/RestException';
+import {RestMethod, RestRequestConfig, RestResponse} from '@rc-ex/core/Rest';
+import RestException from '@rc-ex/core/RestException';
 import hyperid from 'hyperid';
 import {getStatusText} from 'http-status-codes';
 

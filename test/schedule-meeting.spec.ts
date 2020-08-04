@@ -4,7 +4,7 @@ import {
   MeetingScheduleResource,
   TimezoneResource,
   HostInfoRequest,
-} from '@rc-ex/core/lib/definitions';
+} from '@rc-ex/core/definitions';
 
 import {testRingCentral} from './utils';
 

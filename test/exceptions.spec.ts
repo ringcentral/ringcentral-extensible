@@ -1,5 +1,5 @@
 import RingCentral from '@rc-ex/core';
-import RestException from '@rc-ex/core/lib/RestException';
+import RestException from '@rc-ex/core/RestException';
 
 import {testRingCentral} from './utils';
 

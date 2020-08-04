@@ -89,6 +89,13 @@ yarn lerna publish
 ```
 
 
+## Add dependency
+
+```
+yarn lerna add ramda --scope=@rc-ex/debug
+```
+
+
 ### Todo
 
 - refactor code generator
