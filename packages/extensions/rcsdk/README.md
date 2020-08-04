@@ -30,7 +30,7 @@ await rc.installExtension(rcSdkExtension);
 const extensionInfo = await rc.restapi().account().extension().get();
 ```
 
-For a working sample, please check this [test case](../../../test/ringcentral_extension.spec.ts).
+For a working sample, please check this [test case](../../../test/rcsdk-extension.spec.ts).
 
 
 ## Known issues
