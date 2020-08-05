@@ -41,7 +41,7 @@ class PubNubExtension extends SdkExtension {
   }
 }
 
-class Subscription {
+export class Subscription {
   pne: PubNubExtension;
   eventFilters: string[];
   callback: (event: {}) => void;
