@@ -1,6 +1,6 @@
 import RingCentral from '@rc-ex/core';
 import EventsExtension, {Events} from '@rc-ex/events';
-import Utils from '@rc-ex/core/Utils';
+import Utils from '@rc-ex/core/lib/Utils';
 
 import {testRingCentral} from './utils';
 
