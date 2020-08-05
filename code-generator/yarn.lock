@@ -7,10 +7,10 @@
   resolved "https://registry.yarnpkg.com/@types/js-yaml/-/js-yaml-3.12.5.tgz#136d5e6a57a931e1cce6f9d8126aa98a9c92a6bb"
   integrity sha512-JCcp6J0GV66Y4ZMDAQCXot4xprYB+Zfd3meK9+INSJeVZwJmHAW30BBEEkPzXswMXuiyReUGOP3GxrADc9wPww==
 
-"@types/ramda@^0.27.11":
-  version "0.27.11"
-  resolved "https://registry.yarnpkg.com/@types/ramda/-/ramda-0.27.11.tgz#a2efedc1fecc0faa2d3530eb53cf468e219f7c51"
-  integrity sha512-pojA0+wBhjMWfwZ1tAea/OdUqZxaRQOi/vHldthrOIEPdRQdJb/hvU4yM1uHKGTT89ZZpxe43KM1sq5YGxS5lw==
+"@types/ramda@^0.27.14":
+  version "0.27.14"
+  resolved "https://registry.yarnpkg.com/@types/ramda/-/ramda-0.27.14.tgz#95f5f676ebdff89cbc7ded8cd011911fa6854daf"
+  integrity sha512-vbw/VAtEJeSJ6Z61QT+epirlnBeJiJIO7ndK1BJ0fKswnfbiTNga/jBG6R3OnBaFYx+UJv6Iv7ZfWDFSsSzNqA==
   dependencies:
     ts-toolbelt "^6.3.3"
 
@@ -88,10 +88,10 @@ dot-case@^3.0.3:
     no-case "^3.0.3"
     tslib "^1.10.0"
 
-dotenv-override-true@^6.2.0:
-  version "6.2.0"
-  resolved "https://registry.yarnpkg.com/dotenv-override-true/-/dotenv-override-true-6.2.0.tgz#4205a7e4e9161eda299d3e242f53b9b4902a2570"
-  integrity sha512-g2EEXx8eY0vy9OWlCUTg7YEHTMoKExXblryNYv/9hN7I7Q3XWMJ9VNEUQppnL/nkZ9dtVq2fKTFcs1HVMHYikg==
+dotenv-override-true@^6.2.1:
+  version "6.2.1"
+  resolved "https://registry.yarnpkg.com/dotenv-override-true/-/dotenv-override-true-6.2.1.tgz#afe3580783413bb4a14bbd87c1cc930cefcb67da"
+  integrity sha512-yi46v9S7FkS0e38qxg+yYEVThjqPaHADd3Xfd+VWhdS08teThmtY3AByCpfnix3WIWv0L1mEUrwso34jqkjKrA==
 
 esprima@^4.0.0:
   version "4.0.1"
@@ -165,10 +165,10 @@ path-case@^3.0.3:
     dot-case "^3.0.3"
     tslib "^1.10.0"
 
-ramda@^0.27.0:
-  version "0.27.0"
-  resolved "https://registry.yarnpkg.com/ramda/-/ramda-0.27.0.tgz#915dc29865c0800bf3f69b8fd6c279898b59de43"
-  integrity sha512-pVzZdDpWwWqEVVLshWUHjNwuVP7SfcmPraYuqocJp1yo2U1R7P+5QAfDhdItkuoGqIBnBYrtPp7rEPqDn9HlZA==
+ramda@^0.27.1:
+  version "0.27.1"
+  resolved "https://registry.yarnpkg.com/ramda/-/ramda-0.27.1.tgz#66fc2df3ef873874ffc2da6aa8984658abacf5c9"
+  integrity sha512-PgIdVpn5y5Yns8vqb8FzBUEYn98V3xcPgawAkkgj0YJ0qDsnHCiNmZYfOGMgOvoB0eWFLpYbhxUR3mxfDIMvpw==
 
 sentence-case@^3.0.3:
   version "3.0.3"
@@ -224,9 +224,9 @@ ts-node@^8.10.2:
     yn "3.1.1"
 
 ts-toolbelt@^6.3.3:
-  version "6.13.11"
-  resolved "https://registry.yarnpkg.com/ts-toolbelt/-/ts-toolbelt-6.13.11.tgz#46260d1cff0f2d635931df8d32239b73f2ed4f8d"
-  integrity sha512-QmvHwAofS1MAn1ndXCn2AVhxJLipaj4tK26SrhBTiydfgKtbLlU2efpIP/8Jocrc9ynNslZqrhqAesruJMlxCQ==
+  version "6.13.39"
+  resolved "https://registry.yarnpkg.com/ts-toolbelt/-/ts-toolbelt-6.13.39.tgz#80541ce39b595a42be5ddd04e3e6df65597774f8"
+  integrity sha512-VD/rJ6+NGFA7AK2KWmGzLifrqA060M9o7+R2BxJtLBlwmfEaGdqGeyUPRDKhMZPMgpT/JMQ6+X+/ppaZNzuhvw==
 
 tslib@^1.10.0:
   version "1.13.0"
