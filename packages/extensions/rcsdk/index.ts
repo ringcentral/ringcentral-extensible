@@ -1,7 +1,11 @@
 import RingCentral from '@rc-ex/core';
-import {RestRequestConfig, RestResponse, RestMethod} from '@rc-ex/core/Rest';
-import SdkExtension from '@rc-ex/core/SdkExtension';
-import RestException from '@rc-ex/core/RestException';
+import {
+  RestRequestConfig,
+  RestResponse,
+  RestMethod,
+} from '@rc-ex/core/lib/Rest';
+import SdkExtension from '@rc-ex/core/lib/SdkExtension';
+import RestException from '@rc-ex/core/lib/RestException';
 import SDK from '@ringcentral/sdk';
 
 class RcSdkExtension extends SdkExtension {

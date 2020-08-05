@@ -1,6 +1,6 @@
 import RingCentral from '@rc-ex/core';
-import SdkExtension from '@rc-ex/core/SdkExtension';
-import {AuthorizeRequest} from '@rc-ex/core/definitions';
+import SdkExtension from '@rc-ex/core/lib/SdkExtension';
+import {AuthorizeRequest} from '@rc-ex/core/lib/definitions';
 import URI, {QueryDataMap} from 'urijs';
 
 class AuthorizeUriExtension extends SdkExtension {

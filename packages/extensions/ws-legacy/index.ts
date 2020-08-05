@@ -1,8 +1,12 @@
 import RingCentral from '@rc-ex/core';
-import {RestRequestConfig, RestResponse, RestMethod} from '@rc-ex/core/Rest';
-import SdkExtension from '@rc-ex/core/SdkExtension';
-import RestException from '@rc-ex/core/RestException';
-import {SubscriptionInfo} from '@rc-ex/core/definitions';
+import {
+  RestRequestConfig,
+  RestResponse,
+  RestMethod,
+} from '@rc-ex/core/lib/Rest';
+import SdkExtension from '@rc-ex/core/lib/SdkExtension';
+import RestException from '@rc-ex/core/lib/RestException';
+import {SubscriptionInfo} from '@rc-ex/core/lib/definitions';
 import WS from 'isomorphic-ws';
 import waitFor from 'wait-for-async';
 import {getStatusText} from 'http-status-codes';

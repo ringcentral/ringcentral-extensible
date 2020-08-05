@@ -1,8 +1,12 @@
 import RingCentral from '@rc-ex/core';
-import {RestRequestConfig, RestResponse, RestMethod} from '@rc-ex/core/Rest';
-import SdkExtension from '@rc-ex/core/SdkExtension';
-import {GetTokenRequest} from '@rc-ex/core/definitions';
-import RestException from '@rc-ex/core/RestException';
+import {
+  RestRequestConfig,
+  RestResponse,
+  RestMethod,
+} from '@rc-ex/core/lib/Rest';
+import SdkExtension from '@rc-ex/core/lib/SdkExtension';
+import {GetTokenRequest} from '@rc-ex/core/lib/definitions';
+import RestException from '@rc-ex/core/lib/RestException';
 import {EventEmitter} from 'events';
 
 export enum Events {
