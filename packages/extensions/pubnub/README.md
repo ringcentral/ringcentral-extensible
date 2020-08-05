@@ -27,3 +27,7 @@ const subscription = pubNubExtension.subscribe(
     }
 );
 ```
+
+## Todo
+
+Should not depend on `@babel/runtime`. It is a bug of PubNub 4.29.0. Remove it when there is a PubNub new version.

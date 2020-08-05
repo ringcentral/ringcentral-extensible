@@ -20,7 +20,7 @@ describe('Update extension', () => {
           },
         });
       extensionInfo = await rc.restapi().account().extension().get();
-      expect(extensionInfo.contact?.firstName).not.toEqual(firstName);
+      expect(extensionInfo.contact?.firstName).toEqual('firstName');
 
       await rc.restapi().account().extension().put({
         contact: {
