@@ -20,12 +20,12 @@
   "dependencies": {
     "@babel/runtime": "^7.11.1",
     "@types/pubnub": "^4.28.1",
-    "pubnub": "^4.29.0"
+    "pubnub": "^4.29.1"
   },
   "devDependencies": {
     "@rc-ex/core": "^0.4.3"
   },
   "peerDependencies": {
-    "@rc-ex/core": "^0.4.2"
+    "@rc-ex/core": "^0.4.3"
   }
 }

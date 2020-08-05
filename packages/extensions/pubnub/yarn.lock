@@ -586,10 +586,10 @@ proxy-from-env@^1.0.0:
   resolved "https://registry.yarnpkg.com/proxy-from-env/-/proxy-from-env-1.1.0.tgz#e102f16ca355424865755d2c9e8ea4f24d58c3e2"
   integrity sha512-D+zkORCbA9f1tdWRK0RaCR3GPv50cMxcrz4X8k5LTSUD1Dkw47mKJEZQNunItRTkWwgtaUSo1RVFRIG9ZXiFYg==
 
-pubnub@^4.29.0:
-  version "4.29.0"
-  resolved "https://registry.yarnpkg.com/pubnub/-/pubnub-4.29.0.tgz#b4a7e36857debf7dc204e196bbdda4de8e3c8d6f"
-  integrity sha512-bAp13avTBsXUA2iNhgPuXIRTFbFkyH/WWGLnmSvBFhoTY5l6s0XUQiKx2TbaASTeHcaEpfywvwAyH7WTODPKLA==
+pubnub@^4.29.1:
+  version "4.29.1"
+  resolved "https://registry.yarnpkg.com/pubnub/-/pubnub-4.29.1.tgz#302e585ada505e48feb5452aa18c103316040d82"
+  integrity sha512-byAzzIpJzw57ITQxtEnr9fc26zhhECuhcDljRgLPFiJYZiukgBzd5RnMS3DVOIGCZS9Q08q3e0sWqVtggVdyKg==
   dependencies:
     agentkeepalive "^3.5.2"
     cbor-js "^0.1.0"
