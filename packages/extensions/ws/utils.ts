@@ -34,6 +34,15 @@ ${JSON.stringify(JSON.parse(event.data), null, 2)}
 ******`
       );
     });
+    ws.addEventListener('open', event => {
+      console.debug('WebSocket open event:', event);
+    });
+    ws.addEventListener('error', event => {
+      console.debug('WebSocket error event:', event);
+    });
+    ws.addEventListener('close', event => {
+      console.debug('WebSocket close event:', event);
+    });
   }
 
   static waitForWebSocketMessage(
