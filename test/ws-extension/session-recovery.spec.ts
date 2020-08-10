@@ -179,7 +179,8 @@ describe('WSG session recovery', () => {
     expect(eventCount).toBeGreaterThan(0);
   });
 
-  // // todo: uncomment test case below
+  // comment out because it takes too long to finish.
+  // uncomment when you want to test it
   // test('too late to recover', async () => {
   //   if (process.env.IS_LAB_ENV !== 'true') {
   //     return;
