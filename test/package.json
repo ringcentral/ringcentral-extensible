@@ -3,22 +3,22 @@
   "private": true,
   "license": "MIT",
   "dependencies": {
-    "@rc-ex/authorize-uri": "^0.4.2",
-    "@rc-ex/core": "^0.4.3",
-    "@rc-ex/debug": "^0.4.7",
-    "@rc-ex/events": "^0.4.7",
-    "@rc-ex/pubnub": "^0.4.9",
-    "@rc-ex/rate-limit": "^0.4.7",
-    "@rc-ex/rcsdk": "^0.4.7",
-    "@rc-ex/retry": "^0.4.7",
-    "@rc-ex/ws": "^0.4.7",
-    "@rc-ex/ws-legacy": "^0.4.7"
+    "@rc-ex/authorize-uri": "^0.4.4",
+    "@rc-ex/core": "^0.4.4",
+    "@rc-ex/debug": "^0.4.9",
+    "@rc-ex/events": "^0.4.9",
+    "@rc-ex/pubnub": "^0.4.11",
+    "@rc-ex/rate-limit": "^0.4.9",
+    "@rc-ex/rcsdk": "^0.4.9",
+    "@rc-ex/retry": "^0.4.9",
+    "@rc-ex/ws": "^0.4.10",
+    "@rc-ex/ws-legacy": "^0.4.9"
   },
   "devDependencies": {
     "@ringcentral/sdk": "^4.3.2",
-    "@types/jest": "^26.0.8",
+    "@types/jest": "^26.0.9",
     "dotenv-override-true": "^6.2.1",
-    "jest": "^26.2.2",
+    "jest": "^26.3.0",
     "ts-jest": "^26.1.4",
     "wait-for-async": "^0.5.0"
   }

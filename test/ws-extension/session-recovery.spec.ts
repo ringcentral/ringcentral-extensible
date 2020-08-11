@@ -67,7 +67,7 @@ describe('WSG session recovery', () => {
     expect(eventCount).toBeGreaterThan(0);
   });
 
-  test('reconnect by do not recover session ', async () => {
+  test('reconnect but do not recover session ', async () => {
     if (process.env.IS_LAB_ENV !== 'true') {
       return;
     }
@@ -101,7 +101,7 @@ describe('WSG session recovery', () => {
     // here we don't invoke webSocketExtension.revoke() because that will also revoke all subscriptions created
     webSocketExtension.ws.close();
     await waitFor({interval: 5000});
-    await webSocketExtension.reconnect(); // re-connect by do not recover session
+    await webSocketExtension.reconnect(); // re-connect but do not recover session
     expect(
       webSocketExtension.connectionDetails?.body.recoveryState
     ).toBeUndefined();

@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@types/urijs@^1.19.9":
-  version "1.19.9"
-  resolved "https://registry.yarnpkg.com/@types/urijs/-/urijs-1.19.9.tgz#cedccc8e69677080cc8bb2e9ec50c6dd6093429e"
-  integrity sha512-/tiJyrc0GPcsReHzgC0SXwOmoPjLqYe01W7dLYB0yasQXMbcRee+ZIk+g8MIQhoBS8fPoBQO3Y93+aeBrI93Ug==
+"@types/urijs@^1.19.10":
+  version "1.19.10"
+  resolved "https://registry.yarnpkg.com/@types/urijs/-/urijs-1.19.10.tgz#c65855716264489f9384e560220a681a87b162e9"
+  integrity sha512-/R3arh6LDmdWYHFsIRM2UgqbsOimc8nR3TNTjEMpEy2lzWkUSPavCN90ihygu2togtc8oB/VRwrevgx6tnzxDA==
 
 urijs@^1.19.2:
   version "1.19.2"
