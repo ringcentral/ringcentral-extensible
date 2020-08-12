@@ -1,6 +1,6 @@
 import RingCentral from '@rc-ex/core';
 
-import {testRingCentral} from './utils';
+import {createRingCentral} from './utils';
 
 describe('authorize', () => {
   test('password flow', async () => {
@@ -36,10 +36,9 @@ describe('authorize', () => {
     await rc.revoke();
   });
   test('revoke', async () => {
-    await testRingCentral(async (rc: RingCentral) => {
-      expect(rc.token).not.toBeUndefined();
-      await rc.revoke();
-      expect(rc.token).toBeUndefined();
-    });
+    const rc = await createRingCentral();
+    expect(rc.token).not.toBeUndefined();
+    await rc.revoke();
+    expect(rc.token).toBeUndefined();
   });
 });

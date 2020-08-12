@@ -11,8 +11,7 @@
     "@rc-ex/rate-limit": "^0.4.9",
     "@rc-ex/rcsdk": "^0.4.9",
     "@rc-ex/retry": "^0.4.9",
-    "@rc-ex/ws": "^0.4.10",
-    "@rc-ex/ws-legacy": "^0.4.9"
+    "@rc-ex/ws": "^0.4.10"
   },
   "devDependencies": {
     "@ringcentral/sdk": "^4.3.2",

@@ -4,32 +4,29 @@ import {FaxResponse, GetMessageInfoResponse} from '@rc-ex/core/lib/definitions';
 import fs from 'fs';
 import path from 'path';
 
-import {testRingCentral} from './utils';
+import {createRingCentral} from './utils';
 
 describe('low level API', () => {
   test('sms', async () => {
-    const testCase = async (rc: RingCentral) => {
-      const r = await rc.post<GetMessageInfoResponse>(
-        '/restapi/v1.0/account/~/extension/~/sms',
-        {
-          from: {
-            phoneNumber: process.env.RINGCENTRAL_USERNAME!,
+    const rc = await createRingCentral();
+    const r = await rc.post<GetMessageInfoResponse>(
+      '/restapi/v1.0/account/~/extension/~/sms',
+      {
+        from: {
+          phoneNumber: process.env.RINGCENTRAL_USERNAME!,
+        },
+        to: [
+          {
+            phoneNumber: process.env.RINGCENTRAL_RECEIVER,
           },
-          to: [
-            {
-              phoneNumber: process.env.RINGCENTRAL_RECEIVER,
-            },
-          ],
-          text: 'hello world',
-        }
-      );
-      const messageInfo = r.data;
-      expect(messageInfo).not.toBeUndefined();
-      expect(messageInfo.id).not.toBeUndefined();
-      await rc.revoke();
-    };
-    await testRingCentral(testCase);
-    await testRingCentral(testCase, 'wss');
+        ],
+        text: 'hello world',
+      }
+    );
+    const messageInfo = r.data;
+    expect(messageInfo).not.toBeUndefined();
+    expect(messageInfo.id).not.toBeUndefined();
+    await rc.revoke();
   });
   test('fax', async () => {
     const rc = new RingCentral({
