@@ -28,13 +28,33 @@ describe('WebSocket', () => {
     });
     await rc.installExtension(webSocketExtension);
 
+    let eventCount = 0;
+    await webSocketExtension.subscribe(
+      ['/restapi/v1.0/account/~/extension/~/message-store/instant?type=SMS'],
+      event => {
+        expect(event).toBeDefined();
+        eventCount += 1;
+      }
+    );
+
     webSocketExtension.ws.close();
 
-    await waitFor({interval: 15000});
-
-    const extInfo = await rc.restapi().account().extension().get();
-    expect(extInfo).toBeDefined();
-
+    await rc
+      .restapi()
+      .account()
+      .extension()
+      .sms()
+      .post({
+        from: {phoneNumber: process.env.RINGCENTRAL_USERNAME!},
+        to: [{phoneNumber: process.env.RINGCENTRAL_USERNAME!}], // send sms to oneself
+        text: 'Hello world',
+      });
+    const successful = await waitFor({
+      condition: () => eventCount > 0,
+      interval: 1000,
+      times: 60,
+    });
     await rc.revoke();
+    expect(successful).toBeTruthy();
   });
 });
