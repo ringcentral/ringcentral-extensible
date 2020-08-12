@@ -30,7 +30,7 @@ describe('WebSocket', () => {
 
     webSocketExtension.ws.close();
 
-    await waitFor({interval: 130000});
+    await waitFor({interval: 15000});
 
     const extInfo = await rc.restapi().account().extension().get();
     expect(extInfo).toBeDefined();

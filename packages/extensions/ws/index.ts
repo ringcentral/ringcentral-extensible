@@ -28,6 +28,8 @@ class WebSocketExtension extends SdkExtension {
   ws!: WS;
   connectionDetails!: ConnectionDetails;
   subscriptions: Subscription[] = [];
+
+  // for auto recover
   intervalHandle!: NodeJS.Timeout;
 
   request = request; // request method was moved to another file to keep this file short
@@ -73,16 +75,31 @@ class WebSocketExtension extends SdkExtension {
     };
     await this.connect();
 
-    this.intervalHandle = setInterval(() => {
+    // start of auto recover
+    let interval = 10000;
+    const check = async () => {
       if (this.ws.readyState !== OPEN) {
+        clearInterval(this.intervalHandle);
         try {
-          this.recover();
-          console.debug('WebSocket connection closed and auto recovered');
+          await this.recover();
+          interval = 10000;
+          if (this.debugMode) {
+            console.debug('WebSocket auto recovered');
+          }
         } catch (e) {
-          console.debug('WebSocket auto recover failed:', e);
+          interval += 10000;
+          if (interval > 60000) {
+            interval = 60000; // max interval 60 seconds
+          }
+          if (this.debugMode) {
+            console.debug('WebSocket auto recover failed:', e);
+          }
         }
+        this.intervalHandle = setInterval(check, interval);
       }
-    }, 60000);
+    };
+    this.intervalHandle = setInterval(check, interval);
+    // end of auto recover
   }
 
   async recover() {
