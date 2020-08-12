@@ -5,7 +5,7 @@ import dotenv from 'dotenv-override-true';
 
 dotenv.config({path: path.join(__dirname, '..', '.env.lab')});
 
-describe('WSG', () => {
+describe('WebSocket', () => {
   test('Rest API call via WebSocket', async () => {
     if (process.env.IS_LAB_ENV !== 'true') {
       return;

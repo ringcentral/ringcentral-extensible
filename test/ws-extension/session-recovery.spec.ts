@@ -8,7 +8,7 @@ jest.setTimeout(999999999); // to test recover failed
 
 dotenv.config({path: path.join(__dirname, '..', '.env.lab')});
 
-describe('WSG session recovery', () => {
+describe('WebSocket session recovery', () => {
   test('default ', async () => {
     if (process.env.IS_LAB_ENV !== 'true') {
       return;

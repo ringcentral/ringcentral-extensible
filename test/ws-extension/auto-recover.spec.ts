@@ -2,14 +2,14 @@ import RingCentral from '@rc-ex/core';
 import WebSocketExtension from '@rc-ex/ws';
 import path from 'path';
 import dotenv from 'dotenv-override-true';
-// import waitFor from 'wait-for-async';
+import waitFor from 'wait-for-async';
 
 dotenv.config({path: path.join(__dirname, '..', '.env.lab')});
 
 jest.setTimeout(999999999);
 
-describe('WSG', () => {
-  test('Heartbeat', async () => {
+describe('WebSocket', () => {
+  test('auto recover', async () => {
     if (process.env.IS_LAB_ENV !== 'true') {
       return;
     }
@@ -28,13 +28,12 @@ describe('WSG', () => {
     });
     await rc.installExtension(webSocketExtension);
 
-    // let count = 0;
-    // const handle = setInterval(() => {
-    //   count += 10;
-    //   console.log(`${count} seconds`);
-    // }, 10000);
-    // await waitFor({interval: 1200000});
-    // clearInterval(handle);
+    webSocketExtension.ws.close();
+
+    await waitFor({interval: 130000});
+
+    const extInfo = await rc.restapi().account().extension().get();
+    expect(extInfo).toBeDefined();
 
     await rc.revoke();
   });
