@@ -5,7 +5,7 @@ import {
   RestMethod,
 } from '@rc-ex/core/lib/Rest';
 import SdkExtension from '@rc-ex/core/lib/SdkExtension';
-import WS from 'isomorphic-ws';
+import WS, {OPEN} from 'isomorphic-ws';
 
 import {request} from './rest';
 import {
@@ -28,6 +28,7 @@ class WebSocketExtension extends SdkExtension {
   ws!: WS;
   connectionDetails!: ConnectionDetails;
   subscriptions: Subscription[] = [];
+  intervalHandle!: NodeJS.Timeout;
 
   request = request; // request method was moved to another file to keep this file short
 
@@ -71,6 +72,17 @@ class WebSocketExtension extends SdkExtension {
       return this.request<T>(method, endpoint, content, queryParams, config);
     };
     await this.connect();
+
+    this.intervalHandle = setInterval(() => {
+      if (this.ws.readyState !== OPEN) {
+        try {
+          this.recover();
+          console.debug('WebSocket connection closed and auto recovered');
+        } catch (e) {
+          console.debug('WebSocket auto recover failed:', e);
+        }
+      }
+    }, 60000);
   }
 
   async recover() {
@@ -143,6 +155,7 @@ class WebSocketExtension extends SdkExtension {
     for (const subscription of this.subscriptions) {
       await subscription.revoke();
     }
+    clearInterval(this.intervalHandle);
     this.ws.close();
   }
 
