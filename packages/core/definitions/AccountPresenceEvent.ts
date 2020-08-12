@@ -1,4 +1,4 @@
-import {AccountPresenceEventBody} from '.';
+import {AccountPresenceEventBody} from './index';
 
 class AccountPresenceEvent {
   /**

@@ -1,4 +1,4 @@
-import {GlipChatInfo} from '.';
+import {GlipChatInfo} from './index';
 
 class GlipChatsListWithoutNavigation {
   /**

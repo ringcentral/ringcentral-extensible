@@ -1,4 +1,4 @@
-import {UserAnsweringRuleListNavigationPage} from '.';
+import {UserAnsweringRuleListNavigationPage} from './index';
 
 class UserAnsweringRuleListNavigation {
   /**

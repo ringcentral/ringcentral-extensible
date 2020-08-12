@@ -3,7 +3,7 @@ import {
   PublicIpRangeInfo,
   PrivateIpRangeInfoRequest,
   ERLLocationInfo,
-} from '.';
+} from './index';
 
 class CreateNetworkRequest {
   /**

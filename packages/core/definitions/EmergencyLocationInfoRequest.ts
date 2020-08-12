@@ -2,7 +2,7 @@ import {
   EmergencyLocationAddressInfo,
   ShortSiteInfo,
   LocationOwnerInfo,
-} from '.';
+} from './index';
 
 class EmergencyLocationInfoRequest {
   /**

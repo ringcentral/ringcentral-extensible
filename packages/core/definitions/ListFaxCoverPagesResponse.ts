@@ -2,7 +2,7 @@ import {
   FaxCoverPageInfo,
   MessagingNavigationInfo,
   MessagingPagingInfo,
-} from '.';
+} from './index';
 
 class ListFaxCoverPagesResponse {
   /**

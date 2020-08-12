@@ -1,4 +1,4 @@
-import {DetailedExtensionPresenceEventBody} from '.';
+import {DetailedExtensionPresenceEventBody} from './index';
 
 class DetailedExtensionPresenceEvent {
   /**

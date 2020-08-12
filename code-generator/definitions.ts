@@ -94,7 +94,7 @@ export default ${m.name}`;
   if (match !== null) {
     code = `import { ${R.without([m.name], R.uniq(match)).join(
       ', '
-    )} } from '.'\n${code}`;
+    )} } from './index'\n${code}`;
   }
   return code;
 };

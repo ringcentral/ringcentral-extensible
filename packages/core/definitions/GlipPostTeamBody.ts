@@ -1,4 +1,4 @@
-import {CreateGlipMember} from '.';
+import {CreateGlipMember} from './index';
 
 class GlipPostTeamBody {
   /**

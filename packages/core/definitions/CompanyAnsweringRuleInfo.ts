@@ -4,7 +4,7 @@ import {
   CompanyAnsweringRuleScheduleInfo,
   CompanyAnsweringRuleExtensionInfoRequest,
   GreetingInfo,
-} from '.';
+} from './index';
 
 class CompanyAnsweringRuleInfo {
   /**

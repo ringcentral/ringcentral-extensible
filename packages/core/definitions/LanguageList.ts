@@ -2,7 +2,7 @@ import {
   LanguageInfo,
   ProvisioningNavigationInfo,
   ProvisioningPagingInfo,
-} from '.';
+} from './index';
 
 class LanguageList {
   /**

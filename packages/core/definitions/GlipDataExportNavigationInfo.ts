@@ -1,4 +1,4 @@
-import {GlipDataExportNavigationInfoUri} from '.';
+import {GlipDataExportNavigationInfoUri} from './index';
 
 class GlipDataExportNavigationInfo {
   /**

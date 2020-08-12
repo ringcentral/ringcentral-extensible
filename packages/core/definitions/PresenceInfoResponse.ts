@@ -1,4 +1,4 @@
-import {ActiveCallInfo, GetPresenceExtensionInfo} from '.';
+import {ActiveCallInfo, GetPresenceExtensionInfo} from './index';
 
 class PresenceInfoResponse {
   /**

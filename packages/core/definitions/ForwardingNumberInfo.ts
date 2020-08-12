@@ -1,4 +1,4 @@
-import {CreateForwardingNumberDeviceInfo} from '.';
+import {CreateForwardingNumberDeviceInfo} from './index';
 
 class ForwardingNumberInfo {
   /**

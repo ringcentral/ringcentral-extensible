@@ -2,7 +2,7 @@ import {
   CompanyPhoneNumberInfo,
   ProvisioningNavigationInfo,
   ProvisioningPagingInfo,
-} from '.';
+} from './index';
 
 class AccountPhoneNumbers {
   /**

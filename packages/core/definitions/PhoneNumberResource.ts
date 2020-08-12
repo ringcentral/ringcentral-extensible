@@ -1,4 +1,4 @@
-import {CountryResource, PhoneNumberExtensionInfo} from '.';
+import {CountryResource, PhoneNumberExtensionInfo} from './index';
 
 class PhoneNumberResource {
   /**

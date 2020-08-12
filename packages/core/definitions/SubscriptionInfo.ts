@@ -2,7 +2,7 @@ import {
   DisabledFilterInfo,
   NotificationDeliveryMode,
   NotificationBlacklistedData,
-} from '.';
+} from './index';
 
 class SubscriptionInfo {
   /**

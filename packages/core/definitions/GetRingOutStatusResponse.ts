@@ -1,4 +1,4 @@
-import {RingOutStatusInfo} from '.';
+import {RingOutStatusInfo} from './index';
 
 class GetRingOutStatusResponse {
   /**

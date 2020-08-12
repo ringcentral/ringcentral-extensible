@@ -1,4 +1,4 @@
-import {CallLogRecordDeviceInfo} from '.';
+import {CallLogRecordDeviceInfo} from './index';
 
 class CallLogCallerInfo {
   /**

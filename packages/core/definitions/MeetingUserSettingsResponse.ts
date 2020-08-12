@@ -1,4 +1,4 @@
-import {UserMeetingRecordingSetting} from '.';
+import {UserMeetingRecordingSetting} from './index';
 
 class MeetingUserSettingsResponse {
   /**

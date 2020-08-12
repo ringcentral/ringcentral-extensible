@@ -2,7 +2,7 @@ import {
   UserAnsweringRuleListRecord,
   UserAnsweringRuleListPaging,
   UserAnsweringRuleListNavigation,
-} from '.';
+} from './index';
 
 class UserAnsweringRuleList {
   /**

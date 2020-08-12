@@ -2,7 +2,7 @@ import {
   ExtensionDeviceResponse,
   DeviceProvisioningNavigationInfo,
   DeviceProvisioningPagingInfo,
-} from '.';
+} from './index';
 
 class GetExtensionDevicesResponse {
   /**

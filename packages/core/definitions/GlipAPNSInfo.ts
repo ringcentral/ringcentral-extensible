@@ -1,4 +1,4 @@
-import {APSInfo, GlipUnreadMessageCountInfo} from '.';
+import {APSInfo, GlipUnreadMessageCountInfo} from './index';
 
 class GlipAPNSInfo {
   /**

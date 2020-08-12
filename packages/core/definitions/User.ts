@@ -1,4 +1,11 @@
-import {UserAddress, Email, Name, PhoneNumber, Photo, EnterpriseUser} from '.';
+import {
+  UserAddress,
+  Email,
+  Name,
+  PhoneNumber,
+  Photo,
+  EnterpriseUser,
+} from './index';
 
 class User {
   /**

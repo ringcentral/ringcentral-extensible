@@ -3,7 +3,7 @@ import {
   SenderInfo,
   MessageAttachmentInfo,
   ConversationInfo,
-} from '.';
+} from './index';
 
 class InstantMessageEventBody {
   /**

@@ -1,4 +1,4 @@
-import {TimeInterval} from '.';
+import {TimeInterval} from './index';
 
 class WeeklyScheduleInfo {
   /**

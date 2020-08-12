@@ -1,4 +1,4 @@
-import {PersonalContactResource, SyncInfo} from '.';
+import {PersonalContactResource, SyncInfo} from './index';
 
 class AddressBookSync {
   /**

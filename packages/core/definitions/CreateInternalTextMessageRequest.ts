@@ -1,4 +1,4 @@
-import {PagerCallerInfoRequest} from '.';
+import {PagerCallerInfoRequest} from './index';
 
 class CreateInternalTextMessageRequest {
   /**

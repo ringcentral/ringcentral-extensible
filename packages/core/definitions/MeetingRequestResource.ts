@@ -1,4 +1,8 @@
-import {MeetingScheduleResource, HostInfoRequest, RecurrenceInfo} from '.';
+import {
+  MeetingScheduleResource,
+  HostInfoRequest,
+  RecurrenceInfo,
+} from './index';
 
 class MeetingRequestResource {
   /**

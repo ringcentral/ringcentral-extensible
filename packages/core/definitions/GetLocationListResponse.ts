@@ -2,7 +2,7 @@ import {
   LocationInfo,
   ProvisioningNavigationInfo,
   ProvisioningPagingInfo,
-} from '.';
+} from './index';
 
 class GetLocationListResponse {
   /**

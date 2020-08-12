@@ -3,7 +3,7 @@ import {
   ConversationInfo,
   MessageStoreCallerInfoResponseFrom,
   MessageStoreCallerInfoResponseTo,
-} from '.';
+} from './index';
 
 class GetMessageInfoResponse {
   /**

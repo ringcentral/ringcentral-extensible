@@ -1,4 +1,4 @@
-import {DataExportTaskContactInfo} from '.';
+import {DataExportTaskContactInfo} from './index';
 
 class SpecificInfo {
   /**

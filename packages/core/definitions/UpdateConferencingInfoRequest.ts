@@ -1,4 +1,4 @@
-import {ConferencePhoneNumberInfo} from '.';
+import {ConferencePhoneNumberInfo} from './index';
 
 class UpdateConferencingInfoRequest {
   /**

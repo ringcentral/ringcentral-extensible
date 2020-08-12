@@ -3,7 +3,7 @@ import {
   PublicIpRangeInfo,
   PrivateIpRangeInfo,
   ERLLocationInfo,
-} from '.';
+} from './index';
 
 class NetworkInfo {
   /**

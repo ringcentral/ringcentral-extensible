@@ -1,4 +1,4 @@
-import {CountryInfo} from '.';
+import {CountryInfo} from './index';
 
 class BrandInfo {
   /**

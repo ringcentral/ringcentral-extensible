@@ -1,4 +1,4 @@
-import {TransferExtensionInfo} from '.';
+import {TransferExtensionInfo} from './index';
 
 class TransferInfo {
   /**

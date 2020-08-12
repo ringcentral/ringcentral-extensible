@@ -3,7 +3,7 @@ import {
   PhoneNumberResource,
   AccountDirectoryProfileImageResource,
   BusinessSiteResource,
-} from '.';
+} from './index';
 
 class ContactResource {
   /**

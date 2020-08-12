@@ -1,4 +1,4 @@
-import {IVRMenuPromptInfo, IVRMenuActionsInfo} from '.';
+import {IVRMenuPromptInfo, IVRMenuActionsInfo} from './index';
 
 class IVRMenuInfo {
   /**

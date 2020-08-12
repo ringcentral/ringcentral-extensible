@@ -2,7 +2,7 @@ import {
   CallQueueMemberInfo,
   ProvisioningNavigationInfo,
   ProvisioningPagingInfo,
-} from '.';
+} from './index';
 
 class CallQueueMembers {
   /**

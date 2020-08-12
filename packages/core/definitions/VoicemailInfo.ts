@@ -1,4 +1,4 @@
-import {RecipientInfo} from '.';
+import {RecipientInfo} from './index';
 
 class VoicemailInfo {
   /**

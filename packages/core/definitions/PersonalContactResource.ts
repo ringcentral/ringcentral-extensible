@@ -1,4 +1,4 @@
-import {ContactAddressInfo} from '.';
+import {ContactAddressInfo} from './index';
 
 class PersonalContactResource {
   /**

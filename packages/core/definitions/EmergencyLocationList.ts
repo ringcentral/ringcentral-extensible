@@ -2,7 +2,7 @@ import {
   EmergencyLocationInfo,
   ProvisioningNavigationInfo,
   ProvisioningPagingInfo,
-} from '.';
+} from './index';
 
 class EmergencyLocationList {
   /**

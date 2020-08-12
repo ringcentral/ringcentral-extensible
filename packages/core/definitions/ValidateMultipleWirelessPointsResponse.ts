@@ -1,4 +1,4 @@
-import {WirelessPointValidated} from '.';
+import {WirelessPointValidated} from './index';
 
 class ValidateMultipleWirelessPointsResponse {
   /**

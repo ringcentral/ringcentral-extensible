@@ -2,7 +2,7 @@ import {
   UserPhoneNumberInfo,
   ProvisioningNavigationInfo,
   ProvisioningPagingInfo,
-} from '.';
+} from './index';
 
 class GetExtensionPhoneNumbersResponse {
   /**

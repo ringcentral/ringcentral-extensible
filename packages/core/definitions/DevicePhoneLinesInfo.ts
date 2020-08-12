@@ -1,4 +1,7 @@
-import {DevicePhoneLinesEmergencyAddressInfo, DevicePhoneNumberInfo} from '.';
+import {
+  DevicePhoneLinesEmergencyAddressInfo,
+  DevicePhoneNumberInfo,
+} from './index';
 
 class DevicePhoneLinesInfo {
   /**

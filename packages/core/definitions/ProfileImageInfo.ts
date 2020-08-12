@@ -1,4 +1,4 @@
-import {ProfileImageInfoURI} from '.';
+import {ProfileImageInfoURI} from './index';
 
 class ProfileImageInfo {
   /**

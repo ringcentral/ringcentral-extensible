@@ -1,4 +1,8 @@
-import {NotificationRecipientInfo, SenderInfo, FaxMessageAttachment} from '.';
+import {
+  NotificationRecipientInfo,
+  SenderInfo,
+  FaxMessageAttachment,
+} from './index';
 
 class FaxMessageEventBody {
   /**

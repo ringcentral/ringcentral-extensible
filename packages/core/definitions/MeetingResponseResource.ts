@@ -3,7 +3,7 @@ import {
   MeetingScheduleResource,
   HostInfoRequest,
   MeetingOccurrenceInfo,
-} from '.';
+} from './index';
 
 class MeetingResponseResource {
   /**

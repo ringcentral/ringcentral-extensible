@@ -1,4 +1,4 @@
-import {GetCountryInfoState} from '.';
+import {GetCountryInfoState} from './index';
 
 class GetStateInfoResponse {
   /**

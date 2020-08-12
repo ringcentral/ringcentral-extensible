@@ -1,4 +1,10 @@
-import {CallStatusInfo, ParkInfo, PartyInfo, OwnerInfo, RecordingInfo} from '.';
+import {
+  CallStatusInfo,
+  ParkInfo,
+  PartyInfo,
+  OwnerInfo,
+  RecordingInfo,
+} from './index';
 
 class CallParty {
   /**

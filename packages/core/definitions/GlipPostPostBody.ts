@@ -1,4 +1,4 @@
-import {GlipAttachmentInfoRequest} from '.';
+import {GlipAttachmentInfoRequest} from './index';
 
 class GlipPostPostBody {
   /**

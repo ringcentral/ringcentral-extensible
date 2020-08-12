@@ -7,7 +7,7 @@ import {
   RegionalSettingsInfo,
   ExtensionPermissionsResource,
   ProfileImageResource,
-} from '.';
+} from './index';
 
 class PhoneNumberExtensionInfo {
   /**

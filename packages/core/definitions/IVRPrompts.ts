@@ -2,7 +2,7 @@ import {
   PromptInfo,
   CallHandlingNavigationInfo,
   CallHandlingPagingInfo,
-} from '.';
+} from './index';
 
 class IVRPrompts {
   /**

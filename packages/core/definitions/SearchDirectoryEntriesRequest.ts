@@ -1,4 +1,4 @@
-import {OrderBy} from '.';
+import {OrderBy} from './index';
 
 class SearchDirectoryEntriesRequest {
   /**

@@ -1,4 +1,4 @@
-import {GetCountryInfoConferencing} from '.';
+import {GetCountryInfoConferencing} from './index';
 
 class PhoneNumberInfoConferencing {
   /**

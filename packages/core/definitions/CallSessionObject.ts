@@ -1,4 +1,4 @@
-import {OriginInfo, CallParty} from '.';
+import {OriginInfo, CallParty} from './index';
 
 class CallSessionObject {
   /**

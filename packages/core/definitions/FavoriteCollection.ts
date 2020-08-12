@@ -1,4 +1,4 @@
-import {FavoriteContactResource} from '.';
+import {FavoriteContactResource} from './index';
 
 class FavoriteCollection {
   /**

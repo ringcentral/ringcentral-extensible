@@ -2,7 +2,7 @@ import {
   GlipMessageAttachmentAuthorInfo,
   GlipMessageAttachmentFieldsInfo,
   GlipMessageAttachmentFootnoteInfo,
-} from '.';
+} from './index';
 
 class GlipAttachmentInfoRequest {
   /**

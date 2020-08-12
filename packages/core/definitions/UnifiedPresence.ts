@@ -2,7 +2,7 @@ import {
   UnifiedPresenceGlip,
   UnifiedPresenceTelephony,
   UnifiedPresenceMeeting,
-} from '.';
+} from './index';
 
 class UnifiedPresence {
   /**

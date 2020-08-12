@@ -7,7 +7,7 @@ import {
   ServiceFeatureInfo,
   AccountLimits,
   PackageInfo,
-} from '.';
+} from './index';
 
 class GetServiceInfoResponse {
   /**

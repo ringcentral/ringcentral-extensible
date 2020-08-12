@@ -1,4 +1,4 @@
-import {SharedLinesInfo} from '.';
+import {SharedLinesInfo} from './index';
 
 class UserAnsweringRuleListRecord {
   /**

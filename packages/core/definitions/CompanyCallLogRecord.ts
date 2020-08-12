@@ -6,7 +6,7 @@ import {
   CallLogRecordingInfo,
   CallLogRecordLegInfo,
   BillingInfo,
-} from '.';
+} from './index';
 
 class CompanyCallLogRecord {
   /**

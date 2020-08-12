@@ -2,7 +2,7 @@ import {
   ForwardingNumberInfo,
   CallHandlingNavigationInfo,
   CallHandlingPagingInfo,
-} from '.';
+} from './index';
 
 class GetExtensionForwardingNumberListResponse {
   /**

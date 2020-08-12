@@ -2,7 +2,7 @@ import {
   PagingDeviceInfo,
   ProvisioningNavigationInfo,
   ProvisioningPagingInfo,
-} from '.';
+} from './index';
 
 class PagingOnlyGroupDevices {
   /**

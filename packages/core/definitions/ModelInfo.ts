@@ -1,4 +1,4 @@
-import {AddonInfo} from '.';
+import {AddonInfo} from './index';
 
 class ModelInfo {
   /**

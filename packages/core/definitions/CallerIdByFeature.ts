@@ -1,4 +1,4 @@
-import {CallerIdByFeatureInfo} from '.';
+import {CallerIdByFeatureInfo} from './index';
 
 class CallerIdByFeature {
   /**

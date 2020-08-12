@@ -1,4 +1,4 @@
-import {WirelessPointInfoRequest} from '.';
+import {WirelessPointInfoRequest} from './index';
 
 class ValidateMultipleWirelessPointsRequest {
   /**

@@ -1,4 +1,4 @@
-import {MessageBody} from '.';
+import {MessageBody} from './index';
 
 class GetMessageInfoMultiResponse {
   /**

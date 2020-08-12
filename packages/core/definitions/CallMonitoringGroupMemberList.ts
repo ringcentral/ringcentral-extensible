@@ -2,7 +2,7 @@ import {
   CallMonitoringGroupMemberInfo,
   ProvisioningNavigationInfo,
   ProvisioningPagingInfo,
-} from '.';
+} from './index';
 
 class CallMonitoringGroupMemberList {
   /**

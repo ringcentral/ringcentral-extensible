@@ -12,7 +12,7 @@ import {
   ExtensionStatusInfo,
   CallQueueExtensionInfo,
   AutomaticLocationUpdatesSiteInfo,
-} from '.';
+} from './index';
 
 class GetExtensionInfoResponse {
   /**

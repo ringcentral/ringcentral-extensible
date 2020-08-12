@@ -1,4 +1,4 @@
-import {TimezoneResource, CountryResource, LanguageResource} from '.';
+import {TimezoneResource, CountryResource, LanguageResource} from './index';
 
 class RegionalSettingsInfo {
   /**

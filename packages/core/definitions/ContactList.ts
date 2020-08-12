@@ -3,7 +3,7 @@ import {
   UserContactsNavigationInfo,
   UserContactsPagingInfo,
   UserContactsGroupsInfo,
-} from '.';
+} from './index';
 
 class ContactList {
   /**

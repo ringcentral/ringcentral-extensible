@@ -1,4 +1,4 @@
-import {AlertInfo} from '.';
+import {AlertInfo} from './index';
 
 class NotificationInfo {
   /**

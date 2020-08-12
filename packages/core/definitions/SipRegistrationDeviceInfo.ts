@@ -6,7 +6,7 @@ import {
   Shipping,
   DevicePhoneLinesInfo,
   DeviceSiteInfo,
-} from '.';
+} from './index';
 
 class SipRegistrationDeviceInfo {
   /**

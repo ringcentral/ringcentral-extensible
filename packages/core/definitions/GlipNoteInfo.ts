@@ -1,4 +1,4 @@
-import {CreatorInfo, LastModifiedByInfo, LockedByInfo} from '.';
+import {CreatorInfo, LastModifiedByInfo, LockedByInfo} from './index';
 
 class GlipNoteInfo {
   /**

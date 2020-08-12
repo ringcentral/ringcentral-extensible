@@ -1,4 +1,4 @@
-import {WeeklyScheduleInfo, RangesInfo} from '.';
+import {WeeklyScheduleInfo, RangesInfo} from './index';
 
 class ScheduleInfo {
   /**

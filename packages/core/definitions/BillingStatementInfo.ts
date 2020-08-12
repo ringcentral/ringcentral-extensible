@@ -1,4 +1,4 @@
-import {BillingStatementCharges, BillingStatementFees} from '.';
+import {BillingStatementCharges, BillingStatementFees} from './index';
 
 class BillingStatementInfo {
   /**

@@ -3,7 +3,7 @@ import {
   ExtensionInfo,
   TemporaryNumberInfo,
   ContactCenterProvider,
-} from '.';
+} from './index';
 
 class CompanyPhoneNumberInfo {
   /**

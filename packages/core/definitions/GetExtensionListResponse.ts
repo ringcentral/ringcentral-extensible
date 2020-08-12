@@ -2,7 +2,7 @@ import {
   GetExtensionInfoResponse,
   ProvisioningNavigationInfo,
   ProvisioningPagingInfo,
-} from '.';
+} from './index';
 
 class GetExtensionListResponse {
   /**

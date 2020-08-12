@@ -1,4 +1,4 @@
-import {ExtensionFavoritesEventBody} from '.';
+import {ExtensionFavoritesEventBody} from './index';
 
 class ExtensionFavoritesEvent {
   /**

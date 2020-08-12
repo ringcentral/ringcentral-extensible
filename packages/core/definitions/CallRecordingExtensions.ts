@@ -2,7 +2,7 @@ import {
   CallRecordingExtensionInfo,
   CallHandlingNavigationInfo,
   CallHandlingPagingInfo,
-} from '.';
+} from './index';
 
 class CallRecordingExtensions {
   /**

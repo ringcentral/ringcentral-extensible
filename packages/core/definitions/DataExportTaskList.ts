@@ -2,7 +2,7 @@ import {
   DataExportTask,
   GlipDataExportNavigationInfo,
   GlipDataExportPagingInfo,
-} from '.';
+} from './index';
 
 class DataExportTaskList {
   /**

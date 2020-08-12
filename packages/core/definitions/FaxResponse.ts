@@ -1,4 +1,8 @@
-import {CallerInfoFrom, CallerInfoTo, MessageAttachmentInfoIntId} from '.';
+import {
+  CallerInfoFrom,
+  CallerInfoTo,
+  MessageAttachmentInfoIntId,
+} from './index';
 
 class FaxResponse {
   /**

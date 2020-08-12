@@ -3,7 +3,7 @@ import {
   ConversationInfo,
   MessageSenderInfo,
   MessageRecipientInfo,
-} from '.';
+} from './index';
 
 class MessageBody {
   /**

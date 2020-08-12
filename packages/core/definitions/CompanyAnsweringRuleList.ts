@@ -2,7 +2,7 @@ import {
   ListCompanyAnsweringRuleInfo,
   CallHandlingPagingInfo,
   CallHandlingNavigationInfo,
-} from '.';
+} from './index';
 
 class CompanyAnsweringRuleList {
   /**

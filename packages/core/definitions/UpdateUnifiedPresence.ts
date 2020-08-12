@@ -1,4 +1,7 @@
-import {UpdateUnifiedPresenceGlip, UpdateUnifiedPresenceTelephony} from '.';
+import {
+  UpdateUnifiedPresenceGlip,
+  UpdateUnifiedPresenceTelephony,
+} from './index';
 
 class UpdateUnifiedPresence {
   /**

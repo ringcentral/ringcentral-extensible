@@ -1,4 +1,4 @@
-import {ProvisioningNavigationInfoUri} from '.';
+import {ProvisioningNavigationInfoUri} from './index';
 
 class ProvisioningNavigationInfo {
   /**

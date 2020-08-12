@@ -2,7 +2,7 @@ import {
   PagingGroupExtensionInfo,
   ProvisioningNavigationInfo,
   ProvisioningPagingInfo,
-} from '.';
+} from './index';
 
 class PagingOnlyGroupUsers {
   /**

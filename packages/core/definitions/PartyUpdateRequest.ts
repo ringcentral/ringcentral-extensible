@@ -1,4 +1,4 @@
-import {PartyUpdateInfo} from '.';
+import {PartyUpdateInfo} from './index';
 
 class PartyUpdateRequest {
   /**

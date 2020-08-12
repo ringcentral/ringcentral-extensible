@@ -1,4 +1,4 @@
-import {UserResponse} from '.';
+import {UserResponse} from './index';
 
 class UserSearchResponse {
   /**

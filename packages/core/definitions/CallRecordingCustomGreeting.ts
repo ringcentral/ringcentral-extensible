@@ -1,7 +1,7 @@
 import {
   CallRecordingCustomGreetingData,
   CallRecordingCustomGreetingLanguage,
-} from '.';
+} from './index';
 
 class CallRecordingCustomGreeting {
   /**

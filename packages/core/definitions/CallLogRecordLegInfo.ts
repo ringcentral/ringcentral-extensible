@@ -5,7 +5,7 @@ import {
   CallLogCallerInfo,
   CallLogRecordingInfo,
   CallLogRecordMessage,
-} from '.';
+} from './index';
 
 class CallLogRecordLegInfo {
   /**

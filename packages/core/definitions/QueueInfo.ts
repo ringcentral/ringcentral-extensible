@@ -1,4 +1,8 @@
-import {TransferInfo, FixedOrderAgents, UnconditionalForwardingInfo} from '.';
+import {
+  TransferInfo,
+  FixedOrderAgents,
+  UnconditionalForwardingInfo,
+} from './index';
 
 class QueueInfo {
   /**

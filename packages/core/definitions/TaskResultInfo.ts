@@ -1,4 +1,4 @@
-import {TaskResultRecord} from '.';
+import {TaskResultRecord} from './index';
 
 class TaskResultInfo {
   /**

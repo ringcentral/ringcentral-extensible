@@ -8,7 +8,7 @@ import {
   TransferredExtensionInfo,
   VoicemailInfo,
   GreetingInfo,
-} from '.';
+} from './index';
 
 class CreateAnsweringRuleRequest {
   /**

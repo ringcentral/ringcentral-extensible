@@ -1,4 +1,4 @@
-import {TimezoneResource} from '.';
+import {TimezoneResource} from './index';
 
 class MeetingScheduleResource {
   /**

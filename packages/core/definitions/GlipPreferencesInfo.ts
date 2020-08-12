@@ -1,4 +1,4 @@
-import {GlipPreferencesChats} from '.';
+import {GlipPreferencesChats} from './index';
 
 class GlipPreferencesInfo {
   /**

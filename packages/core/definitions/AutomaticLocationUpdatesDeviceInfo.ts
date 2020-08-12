@@ -1,7 +1,7 @@
 import {
   AutomaticLocationUpdatesModelInfo,
   AutomaticLocationUpdatesPhoneLine,
-} from '.';
+} from './index';
 
 class AutomaticLocationUpdatesDeviceInfo {
   /**

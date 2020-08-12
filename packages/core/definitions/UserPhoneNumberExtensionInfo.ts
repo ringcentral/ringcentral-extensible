@@ -1,4 +1,4 @@
-import {ContactCenterProvider} from '.';
+import {ContactCenterProvider} from './index';
 
 class UserPhoneNumberExtensionInfo {
   /**

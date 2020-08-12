@@ -3,7 +3,7 @@ import {
   BulkSupported,
   Supported,
   FilterSupported,
-} from '.';
+} from './index';
 
 class ServiceProviderConfig {
   /**

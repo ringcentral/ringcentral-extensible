@@ -1,4 +1,4 @@
-import {Attachment, CustomGreetingAnsweringRuleInfoRequest} from '.';
+import {Attachment, CustomGreetingAnsweringRuleInfoRequest} from './index';
 
 class CreateCustomUserGreetingRequest {
   /**

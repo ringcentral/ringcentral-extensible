@@ -4,7 +4,7 @@ import {
   ServicePlanInfo,
   TargetServicePlanInfo,
   ContractedCountryInfo,
-} from '.';
+} from './index';
 
 class ServiceInfo {
   /**

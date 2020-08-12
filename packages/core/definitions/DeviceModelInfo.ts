@@ -1,4 +1,4 @@
-import {DeviceAddonInfo} from '.';
+import {DeviceAddonInfo} from './index';
 
 class DeviceModelInfo {
   /**

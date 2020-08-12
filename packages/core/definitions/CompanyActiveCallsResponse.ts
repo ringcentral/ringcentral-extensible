@@ -2,7 +2,7 @@ import {
   CompanyCallLogRecord,
   CallLogNavigationInfo,
   CallLogPagingInfo,
-} from '.';
+} from './index';
 
 class CompanyActiveCallsResponse {
   /**

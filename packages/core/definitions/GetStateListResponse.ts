@@ -2,7 +2,7 @@ import {
   GetStateInfoResponse,
   ProvisioningNavigationInfo,
   ProvisioningPagingInfo,
-} from '.';
+} from './index';
 
 class GetStateListResponse {
   /**

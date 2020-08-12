@@ -2,7 +2,7 @@ import {
   TemplateInfo,
   ProvisioningNavigationInfo,
   ProvisioningPagingInfo,
-} from '.';
+} from './index';
 
 class UserTemplates {
   /**

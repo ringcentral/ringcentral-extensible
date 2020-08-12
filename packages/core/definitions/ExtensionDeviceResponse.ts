@@ -6,7 +6,7 @@ import {
   PhoneLinesInfo,
   ShippingInfo,
   DeviceSiteInfo,
-} from '.';
+} from './index';
 
 class ExtensionDeviceResponse {
   /**

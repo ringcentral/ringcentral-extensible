@@ -1,4 +1,4 @@
-import {IVRMenuExtensionInfo} from '.';
+import {IVRMenuExtensionInfo} from './index';
 
 class IVRMenuActionsInfo {
   /**

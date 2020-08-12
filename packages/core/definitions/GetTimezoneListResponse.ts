@@ -2,7 +2,7 @@ import {
   GetTimezoneInfoResponse,
   ProvisioningNavigationInfo,
   ProvisioningPagingInfo,
-} from '.';
+} from './index';
 
 class GetTimezoneListResponse {
   /**

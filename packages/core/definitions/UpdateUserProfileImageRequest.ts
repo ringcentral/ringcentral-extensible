@@ -1,4 +1,4 @@
-import {Attachment} from '.';
+import {Attachment} from './index';
 
 class UpdateUserProfileImageRequest {
   /**

@@ -1,4 +1,4 @@
-import {ReplyWithPattern} from '.';
+import {ReplyWithPattern} from './index';
 
 class CallPartyReply {
   /**

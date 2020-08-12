@@ -1,4 +1,4 @@
-import {CompanyCallLogRecord, CompanyCallLogSyncInfo} from '.';
+import {CompanyCallLogRecord, CompanyCallLogSyncInfo} from './index';
 
 class AccountCallLogSyncResponse {
   /**

@@ -1,4 +1,4 @@
-import {DelegateExtensionInfo} from '.';
+import {DelegateExtensionInfo} from './index';
 
 class DelegateInfo {
   /**

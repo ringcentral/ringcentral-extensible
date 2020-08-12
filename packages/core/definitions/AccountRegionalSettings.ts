@@ -5,7 +5,7 @@ import {
   GreetingLanguageInfo,
   FormattingLocaleInfo,
   CurrencyInfo,
-} from '.';
+} from './index';
 
 class AccountRegionalSettings {
   /**

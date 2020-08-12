@@ -1,4 +1,4 @@
-import {DetailedCallInfo, PrimaryCQInfo, AdditionalCQInfo} from '.';
+import {DetailedCallInfo, PrimaryCQInfo, AdditionalCQInfo} from './index';
 
 class ActiveCallInfo {
   /**

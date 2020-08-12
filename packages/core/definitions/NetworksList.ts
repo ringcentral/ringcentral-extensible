@@ -2,7 +2,7 @@ import {
   NetworkInfo,
   ProvisioningNavigationInfo,
   ProvisioningPagingInfo,
-} from '.';
+} from './index';
 
 class NetworksList {
   /**

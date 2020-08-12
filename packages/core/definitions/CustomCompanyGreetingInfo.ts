@@ -1,7 +1,7 @@
 import {
   CustomGreetingAnsweringRuleInfo,
   CustomCompanyGreetingLanguageInfo,
-} from '.';
+} from './index';
 
 class CustomCompanyGreetingInfo {
   /**

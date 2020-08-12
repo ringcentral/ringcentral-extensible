@@ -3,7 +3,7 @@ import {
   TaskAssigneeInfo,
   GlipTaskRecurrenceInfo,
   TaskAttachment,
-} from '.';
+} from './index';
 
 class GlipTaskInfo {
   /**

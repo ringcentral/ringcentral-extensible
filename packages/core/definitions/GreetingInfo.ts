@@ -1,4 +1,4 @@
-import {PresetInfo, CustomGreetingInfo} from '.';
+import {PresetInfo, CustomGreetingInfo} from './index';
 
 class GreetingInfo {
   /**

@@ -1,4 +1,4 @@
-import {GlipConversationInfo, GlipNavigationInfo} from '.';
+import {GlipConversationInfo, GlipNavigationInfo} from './index';
 
 class GlipConversationsList {
   /**

@@ -1,4 +1,4 @@
-import {DeviceProvisioningNavigationInfoUri} from '.';
+import {DeviceProvisioningNavigationInfoUri} from './index';
 
 class DeviceProvisioningNavigationInfo {
   /**

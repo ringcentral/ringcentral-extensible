@@ -4,7 +4,7 @@ import {
   LanguageInfo,
   GreetingLanguageInfo,
   FormattingLocaleInfo,
-} from '.';
+} from './index';
 
 class RegionalSettings {
   /**

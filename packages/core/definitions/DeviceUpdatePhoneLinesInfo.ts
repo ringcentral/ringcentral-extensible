@@ -1,4 +1,4 @@
-import {UpdateDevicePhoneInfo} from '.';
+import {UpdateDevicePhoneInfo} from './index';
 
 class DeviceUpdatePhoneLinesInfo {
   /**

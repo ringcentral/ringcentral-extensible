@@ -1,4 +1,4 @@
-import {RuleInfo} from '.';
+import {RuleInfo} from './index';
 
 class ForwardingInfo {
   /**

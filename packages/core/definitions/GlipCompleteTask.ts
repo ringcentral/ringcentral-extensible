@@ -1,4 +1,4 @@
-import {AssigneeInfo} from '.';
+import {AssigneeInfo} from './index';
 
 class GlipCompleteTask {
   /**

@@ -2,7 +2,7 @@ import {
   OnDemandResource,
   AutomaticRecordingResource,
   GreetingResource,
-} from '.';
+} from './index';
 
 class CallRecordingSettingsResource {
   /**

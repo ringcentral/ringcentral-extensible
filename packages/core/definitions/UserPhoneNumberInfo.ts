@@ -2,7 +2,7 @@ import {
   CountryInfo,
   ContactCenterProvider,
   UserPhoneNumberExtensionInfo,
-} from '.';
+} from './index';
 
 class UserPhoneNumberInfo {
   /**

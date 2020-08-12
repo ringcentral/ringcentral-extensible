@@ -1,4 +1,4 @@
-import {GCMData} from '.';
+import {GCMData} from './index';
 
 class GCMInfo {
   /**

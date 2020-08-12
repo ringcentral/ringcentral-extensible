@@ -1,4 +1,4 @@
-import {PeerInfo, MobilePickupData} from '.';
+import {PeerInfo, MobilePickupData} from './index';
 
 class CallSessionStatusInfo {
   /**

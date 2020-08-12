@@ -5,7 +5,7 @@ import {
   AccountStatusInfo,
   AccountRegionalSettings,
   AccountLimits,
-} from '.';
+} from './index';
 
 class GetAccountInfoResponse {
   /**

@@ -1,7 +1,7 @@
 import {
   AutomaticLocationUpdatesSiteInfo,
   LocationUpdatesEmergencyAddressInfoRequest,
-} from '.';
+} from './index';
 
 class WirelessPointInfoRequest {
   /**

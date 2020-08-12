@@ -1,4 +1,4 @@
-import {ExtensionInfoGrants} from '.';
+import {ExtensionInfoGrants} from './index';
 
 class GrantInfo {
   /**

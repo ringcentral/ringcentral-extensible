@@ -1,4 +1,4 @@
-import {InstantMessageEventBody} from '.';
+import {InstantMessageEventBody} from './index';
 
 class InstantMessageEvent {
   /**

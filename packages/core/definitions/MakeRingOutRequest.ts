@@ -2,7 +2,7 @@ import {
   MakeRingOutCallerInfoRequestFrom,
   MakeRingOutCallerInfoRequestTo,
   MakeRingOutCoutryInfo,
-} from '.';
+} from './index';
 
 class MakeRingOutRequest {
   /**

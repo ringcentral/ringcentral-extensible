@@ -1,4 +1,4 @@
-import {ParamsInfo, ReasonInfo} from '.';
+import {ParamsInfo, ReasonInfo} from './index';
 
 class FeatureInfo {
   /**

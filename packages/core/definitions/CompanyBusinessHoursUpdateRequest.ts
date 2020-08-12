@@ -1,4 +1,4 @@
-import {CompanyBusinessHoursScheduleInfo} from '.';
+import {CompanyBusinessHoursScheduleInfo} from './index';
 
 class CompanyBusinessHoursUpdateRequest {
   /**

@@ -3,7 +3,7 @@ import {
   SubscriptionInfo,
 } from '@rc-ex/core/lib/definitions';
 
-import WebSocketExtension from '.';
+import WebSocketExtension from './index';
 import {WsgEvent, WsgMeta} from './types';
 import Utils from './utils';
 

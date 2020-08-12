@@ -1,4 +1,4 @@
-import {PhoneNumberInfoIntId, EmergencyAddress} from '.';
+import {PhoneNumberInfoIntId, EmergencyAddress} from './index';
 
 class PhoneLinesInfo {
   /**

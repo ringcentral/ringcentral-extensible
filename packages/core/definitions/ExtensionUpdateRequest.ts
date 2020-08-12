@@ -7,7 +7,7 @@ import {
   CustomFieldInfo,
   AutomaticLocationUpdatesSiteInfo,
   ReferenceInfo,
-} from '.';
+} from './index';
 
 class ExtensionUpdateRequest {
   /**

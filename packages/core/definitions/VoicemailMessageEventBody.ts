@@ -1,4 +1,8 @@
-import {NotificationRecipientInfo, SenderInfo, MessageAttachmentInfo} from '.';
+import {
+  NotificationRecipientInfo,
+  SenderInfo,
+  MessageAttachmentInfo,
+} from './index';
 
 class VoicemailMessageEventBody {
   /**

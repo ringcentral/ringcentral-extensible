@@ -2,7 +2,7 @@ import {
   AutomaticLocationUpdatesDeviceInfo,
   ProvisioningNavigationInfo,
   ProvisioningPagingInfo,
-} from '.';
+} from './index';
 
 class ListDevicesAutomaticLocationUpdates {
   /**

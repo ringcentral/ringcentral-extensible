@@ -1,4 +1,4 @@
-import {TaskResultRecordErrorsInfo} from '.';
+import {TaskResultRecordErrorsInfo} from './index';
 
 class TaskResultRecord {
   /**

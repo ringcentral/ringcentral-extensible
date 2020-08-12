@@ -2,7 +2,7 @@ import {
   SwitchInfo,
   ProvisioningNavigationInfo,
   ProvisioningPagingInfo,
-} from '.';
+} from './index';
 
 class SwitchesList {
   /**

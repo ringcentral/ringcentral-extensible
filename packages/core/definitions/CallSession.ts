@@ -1,4 +1,4 @@
-import {CallSessionObject} from '.';
+import {CallSessionObject} from './index';
 
 class CallSession {
   /**

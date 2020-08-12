@@ -1,7 +1,7 @@
 import {
   MakeCallOutCallerInfoRequestFrom,
   MakeCallOutCallerInfoRequestTo,
-} from '.';
+} from './index';
 
 class MakeCallOutRequest {
   /**

@@ -5,7 +5,7 @@ import {
   OutboundFaxesInfo,
   InboundTextsInfo,
   MissedCallsInfo,
-} from '.';
+} from './index';
 
 class NotificationSettings {
   /**

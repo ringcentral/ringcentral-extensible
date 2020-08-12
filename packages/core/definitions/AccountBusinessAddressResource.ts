@@ -1,4 +1,4 @@
-import {ContactBusinessAddressInfo} from '.';
+import {ContactBusinessAddressInfo} from './index';
 
 class AccountBusinessAddressResource {
   /**

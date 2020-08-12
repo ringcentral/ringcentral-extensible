@@ -2,7 +2,7 @@ import {
   AutomaticLocationUpdatesUserInfo,
   ProvisioningNavigationInfo,
   ProvisioningPagingInfo,
-} from '.';
+} from './index';
 
 class AutomaticLocationUpdatesUserList {
   /**

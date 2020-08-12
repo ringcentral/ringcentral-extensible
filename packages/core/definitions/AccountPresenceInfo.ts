@@ -1,4 +1,8 @@
-import {GetPresenceInfo, PresenceNavigationInfo, PresencePagingInfo} from '.';
+import {
+  GetPresenceInfo,
+  PresenceNavigationInfo,
+  PresencePagingInfo,
+} from './index';
 
 class AccountPresenceInfo {
   /**

@@ -2,7 +2,7 @@ import {
   DictionaryGreetingInfo,
   CallHandlingNavigationInfo,
   CallHandlingPagingInfo,
-} from '.';
+} from './index';
 
 class DictionaryGreetingList {
   /**

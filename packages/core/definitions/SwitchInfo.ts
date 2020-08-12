@@ -2,7 +2,7 @@ import {
   SwitchSiteInfo,
   LocationUpdatesEmergencyAddressInfo,
   ERLLocationInfo,
-} from '.';
+} from './index';
 
 class SwitchInfo {
   /**

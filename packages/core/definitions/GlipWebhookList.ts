@@ -1,4 +1,4 @@
-import {GlipWebhookInfo} from '.';
+import {GlipWebhookInfo} from './index';
 
 class GlipWebhookList {
   /**

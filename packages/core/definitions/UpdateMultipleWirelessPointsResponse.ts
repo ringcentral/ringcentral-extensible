@@ -1,4 +1,4 @@
-import {BulkTaskInfo} from '.';
+import {BulkTaskInfo} from './index';
 
 class UpdateMultipleWirelessPointsResponse {
   /**

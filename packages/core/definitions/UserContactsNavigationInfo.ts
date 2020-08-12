@@ -1,4 +1,4 @@
-import {UserContactsNavigationInfoUri} from '.';
+import {UserContactsNavigationInfoUri} from './index';
 
 class UserContactsNavigationInfo {
   /**

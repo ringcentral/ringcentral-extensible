@@ -1,4 +1,4 @@
-import {ExtensionGrantListEventBody} from '.';
+import {ExtensionGrantListEventBody} from './index';
 
 class ExtensionGrantListEvent {
   /**

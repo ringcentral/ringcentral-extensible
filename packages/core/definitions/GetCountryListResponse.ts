@@ -2,7 +2,7 @@ import {
   GetCountryInfoDictionaryResponse,
   ProvisioningNavigationInfo,
   ProvisioningPagingInfo,
-} from '.';
+} from './index';
 
 class GetCountryListResponse {
   /**

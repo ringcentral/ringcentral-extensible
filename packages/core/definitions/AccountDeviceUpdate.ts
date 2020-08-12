@@ -3,7 +3,7 @@ import {
   DeviceEmergencyInfo,
   DeviceUpdateExtensionInfo,
   DeviceUpdatePhoneLinesInfo,
-} from '.';
+} from './index';
 
 class AccountDeviceUpdate {
   /**

@@ -1,4 +1,4 @@
-import {BlockedCallerGreetingInfo} from '.';
+import {BlockedCallerGreetingInfo} from './index';
 
 // Returns the lists of blocked and allowed phone numbers
 class CallerBlockingSettings {

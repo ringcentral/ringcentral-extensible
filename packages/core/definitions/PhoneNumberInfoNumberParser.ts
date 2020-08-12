@@ -1,4 +1,4 @@
-import {GetCountryInfoNumberParser} from '.';
+import {GetCountryInfoNumberParser} from './index';
 
 class PhoneNumberInfoNumberParser {
   /**

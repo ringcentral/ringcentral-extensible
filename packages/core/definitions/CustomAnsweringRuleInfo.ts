@@ -9,7 +9,7 @@ import {
   VoicemailInfo,
   GreetingInfo,
   SharedLinesInfo,
-} from '.';
+} from './index';
 
 class CustomAnsweringRuleInfo {
   /**

@@ -6,7 +6,7 @@ import {
   CallLogRecordMessage,
   DelegateInfo,
   CallLogRecordingInfo,
-} from '.';
+} from './index';
 
 class UserCallLogRecord {
   /**

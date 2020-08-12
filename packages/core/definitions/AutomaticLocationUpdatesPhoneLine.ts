@@ -1,4 +1,4 @@
-import {AutomaticLocationUpdatesPhoneNumberInfo} from '.';
+import {AutomaticLocationUpdatesPhoneNumberInfo} from './index';
 
 class AutomaticLocationUpdatesPhoneLine {
   /**

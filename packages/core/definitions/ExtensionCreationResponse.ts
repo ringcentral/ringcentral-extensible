@@ -8,7 +8,7 @@ import {
   ExtensionServiceFeatureInfo,
   AutomaticLocationUpdatesSiteInfo,
   ExtensionStatusInfo,
-} from '.';
+} from './index';
 
 class ExtensionCreationResponse {
   /**

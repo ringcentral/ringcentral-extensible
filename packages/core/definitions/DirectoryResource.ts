@@ -1,4 +1,4 @@
-import {CompanyContactsPagingInfo, ContactResource} from '.';
+import {CompanyContactsPagingInfo, ContactResource} from './index';
 
 class DirectoryResource {
   /**

@@ -1,4 +1,4 @@
-import {CustomGreetingAnsweringRuleInfo} from '.';
+import {CustomGreetingAnsweringRuleInfo} from './index';
 
 class CustomUserGreetingInfo {
   /**

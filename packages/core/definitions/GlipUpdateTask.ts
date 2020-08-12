@@ -2,7 +2,7 @@ import {
   AssigneeInfo,
   GlipTaskRecurrenceInfo,
   GlipAttachmentInfoRequest,
-} from '.';
+} from './index';
 
 class GlipUpdateTask {
   /**

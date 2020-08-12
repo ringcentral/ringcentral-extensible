@@ -2,7 +2,7 @@ import {
   MeetingRecording,
   MeetingRecordingsPagingInfo,
   MeetingRecordingsNavigationInfo,
-} from '.';
+} from './index';
 
 class ListMeetingRecordingsResponse {
   /**

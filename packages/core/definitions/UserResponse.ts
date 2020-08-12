@@ -6,7 +6,7 @@ import {
   Photo,
   EnterpriseUser,
   Meta,
-} from '.';
+} from './index';
 
 class UserResponse {
   /**

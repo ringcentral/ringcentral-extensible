@@ -2,7 +2,7 @@ import {
   AutomaticLocationUpdatesSiteInfo,
   LocationUpdatesEmergencyAddressInfoRequest,
   ERLLocationInfo,
-} from '.';
+} from './index';
 
 class CreateWirelessPoint {
   /**

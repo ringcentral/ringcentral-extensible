@@ -1,4 +1,4 @@
-import {MessageStoreCallerInfoRequest, MessageCountryInfo} from '.';
+import {MessageStoreCallerInfoRequest, MessageCountryInfo} from './index';
 
 class CreateSMSMessage {
   /**

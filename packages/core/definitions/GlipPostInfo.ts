@@ -1,4 +1,4 @@
-import {GlipMessageAttachmentInfo, GlipMentionsInfo} from '.';
+import {GlipMessageAttachmentInfo, GlipMentionsInfo} from './index';
 
 class GlipPostInfo {
   /**

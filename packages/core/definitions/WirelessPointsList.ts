@@ -2,7 +2,7 @@ import {
   WirelessPointInfo,
   ProvisioningNavigationInfo,
   ProvisioningPagingInfo,
-} from '.';
+} from './index';
 
 class WirelessPointsList {
   /**

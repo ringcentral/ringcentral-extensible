@@ -1,4 +1,4 @@
-import {CallHandlingNavigationInfoUri} from '.';
+import {CallHandlingNavigationInfoUri} from './index';
 
 class CallHandlingNavigationInfo {
   /**

@@ -1,4 +1,4 @@
-import {CompanyAnsweringRuleTimeIntervalRequest} from '.';
+import {CompanyAnsweringRuleTimeIntervalRequest} from './index';
 
 class CompanyAnsweringRuleWeeklyScheduleInfoRequest {
   /**

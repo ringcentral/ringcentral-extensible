@@ -1,4 +1,4 @@
-import {CalledNumberInfo, CompanyAnsweringRuleExtensionInfo} from '.';
+import {CalledNumberInfo, CompanyAnsweringRuleExtensionInfo} from './index';
 
 class ListCompanyAnsweringRuleInfo {
   /**

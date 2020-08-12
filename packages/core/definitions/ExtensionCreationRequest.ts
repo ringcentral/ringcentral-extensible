@@ -5,7 +5,7 @@ import {
   RegionalSettings,
   SiteInfo,
   ExtensionStatusInfo,
-} from '.';
+} from './index';
 
 class ExtensionCreationRequest {
   /**

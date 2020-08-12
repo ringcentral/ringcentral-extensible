@@ -1,4 +1,4 @@
-import {AudioPromptInfo, PromptLanguageInfo} from '.';
+import {AudioPromptInfo, PromptLanguageInfo} from './index';
 
 class IVRMenuPromptInfo {
   /**

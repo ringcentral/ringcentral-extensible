@@ -1,4 +1,4 @@
-import {ActiveCallInfoWithoutSIP} from '.';
+import {ActiveCallInfoWithoutSIP} from './index';
 
 class DetailedExtensionPresenceEventBody {
   /**

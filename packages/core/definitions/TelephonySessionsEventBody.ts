@@ -1,4 +1,4 @@
-import {OriginInfo, TelephonySessionsEventPartyInfo} from '.';
+import {OriginInfo, TelephonySessionsEventPartyInfo} from './index';
 
 class TelephonySessionsEventBody {
   /**

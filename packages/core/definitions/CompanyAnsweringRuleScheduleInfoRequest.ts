@@ -1,4 +1,7 @@
-import {CompanyAnsweringRuleWeeklyScheduleInfoRequest, RangesInfo} from '.';
+import {
+  CompanyAnsweringRuleWeeklyScheduleInfoRequest,
+  RangesInfo,
+} from './index';
 
 class CompanyAnsweringRuleScheduleInfoRequest {
   /**

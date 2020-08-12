@@ -2,7 +2,7 @@ import {
   GetMessageInfoResponse,
   MessagingNavigationInfo,
   MessagingPagingInfo,
-} from '.';
+} from './index';
 
 class GetMessageList {
   /**

@@ -1,4 +1,4 @@
-import {ContactAddressInfoDevices} from '.';
+import {ContactAddressInfoDevices} from './index';
 
 class ExtensionContactInfo {
   /**

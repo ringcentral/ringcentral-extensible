@@ -1,4 +1,4 @@
-import RingCentral from '.';
+import RingCentral from './index';
 
 abstract class SdkExtension {
   enabled = true;

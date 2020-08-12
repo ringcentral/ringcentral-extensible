@@ -1,4 +1,4 @@
-import {PhoneNumberCountryInfo, DeviceProvisioningExtensionInfo} from '.';
+import {PhoneNumberCountryInfo, DeviceProvisioningExtensionInfo} from './index';
 
 class PhoneNumberInfoIntId {
   /**

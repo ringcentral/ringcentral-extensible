@@ -1,7 +1,7 @@
 import {
   DeviceEmergencyServiceAddressResource,
   SipRegistrationDeviceLocationInfo,
-} from '.';
+} from './index';
 
 class SipRegistrationDeviceEmergencyInfo {
   /**

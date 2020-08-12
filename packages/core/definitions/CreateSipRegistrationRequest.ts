@@ -1,4 +1,4 @@
-import {DeviceInfoRequest, SIPInfoRequest} from '.';
+import {DeviceInfoRequest, SIPInfoRequest} from './index';
 
 class CreateSipRegistrationRequest {
   /**

@@ -1,4 +1,4 @@
-import {FeatureInfo} from '.';
+import {FeatureInfo} from './index';
 
 class FeatureList {
   /**

@@ -1,4 +1,4 @@
-import {GlipNoteInfo, GlipNavigationInfo} from '.';
+import {GlipNoteInfo, GlipNavigationInfo} from './index';
 
 class GlipNotesInfo {
   /**

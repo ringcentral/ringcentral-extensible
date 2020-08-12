@@ -1,4 +1,4 @@
-import {DevicePhoneNumberCountryInfo} from '.';
+import {DevicePhoneNumberCountryInfo} from './index';
 
 class DevicePhoneNumberInfo {
   /**

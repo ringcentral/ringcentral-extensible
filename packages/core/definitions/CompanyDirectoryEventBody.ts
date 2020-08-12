@@ -3,7 +3,7 @@ import {
   CompanyDirectoryPhoneNumberInfo,
   ContactDirectorySiteInfo,
   CompanyDirectoryProfileImageInfo,
-} from '.';
+} from './index';
 
 class CompanyDirectoryEventBody {
   /**

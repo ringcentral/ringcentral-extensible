@@ -1,4 +1,4 @@
-import {PeerInfo} from '.';
+import {PeerInfo} from './index';
 
 class CallStatusInfo {
   /**

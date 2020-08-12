@@ -1,4 +1,4 @@
-import {DeviceEmergencyServiceAddressResource, MethodResource} from '.';
+import {DeviceEmergencyServiceAddressResource, MethodResource} from './index';
 
 class Shipping {
   /**

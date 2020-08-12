@@ -1,4 +1,4 @@
-import {FixedOrderAgentsExtensionInfo} from '.';
+import {FixedOrderAgentsExtensionInfo} from './index';
 
 class FixedOrderAgents {
   /**

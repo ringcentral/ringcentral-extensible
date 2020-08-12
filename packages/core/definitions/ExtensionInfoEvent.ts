@@ -1,4 +1,4 @@
-import {ExtensionInfoEventBody} from '.';
+import {ExtensionInfoEventBody} from './index';
 
 class ExtensionInfoEvent {
   /**

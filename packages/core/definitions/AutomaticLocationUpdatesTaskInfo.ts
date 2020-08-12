@@ -1,4 +1,4 @@
-import {TaskResultInfo} from '.';
+import {TaskResultInfo} from './index';
 
 class AutomaticLocationUpdatesTaskInfo {
   /**

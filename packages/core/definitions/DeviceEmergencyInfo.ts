@@ -1,4 +1,4 @@
-import {DeviceEmergencyAddress, DeviceEmergencyLocationInfo} from '.';
+import {DeviceEmergencyAddress, DeviceEmergencyLocationInfo} from './index';
 
 class DeviceEmergencyInfo {
   /**

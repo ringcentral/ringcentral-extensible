@@ -4,7 +4,7 @@ import {
   ExtensionLanguageInfoRequest,
   ExtensionGreetingLanguageInfoRequest,
   ExtensionFormattingLocaleInfoRequest,
-} from '.';
+} from './index';
 
 class ExtensionRegionalSettingRequest {
   /**

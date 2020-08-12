@@ -1,4 +1,4 @@
-import {Attachment, MessageStoreCalleeInfoRequest} from '.';
+import {Attachment, MessageStoreCalleeInfoRequest} from './index';
 
 class CreateFaxMessageRequest {
   /**

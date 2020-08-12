@@ -1,4 +1,4 @@
-import {ActivePermissionResource} from '.';
+import {ActivePermissionResource} from './index';
 
 class AuthProfileCheckResource {
   /**

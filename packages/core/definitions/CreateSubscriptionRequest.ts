@@ -1,4 +1,4 @@
-import {NotificationDeliveryModeRequest} from '.';
+import {NotificationDeliveryModeRequest} from './index';
 
 class CreateSubscriptionRequest {
   /**

@@ -2,7 +2,7 @@ import {
   BlockedAllowedPhoneNumberInfo,
   CallHandlingNavigationInfo,
   CallHandlingPagingInfo,
-} from '.';
+} from './index';
 
 // List of blocked or allowed phone numbers
 class BlockedAllowedPhoneNumbersList {

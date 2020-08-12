@@ -1,4 +1,8 @@
-import {MessageStoreCallerInfoRequest, MessageCountryInfo, Attachment} from '.';
+import {
+  MessageStoreCallerInfoRequest,
+  MessageCountryInfo,
+  Attachment,
+} from './index';
 
 class CreateMMSMessage {
   /**

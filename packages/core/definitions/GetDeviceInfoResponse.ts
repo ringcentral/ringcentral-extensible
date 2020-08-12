@@ -7,7 +7,7 @@ import {
   ShippingInfo,
   DeviceSiteInfo,
   BillingStatementInfo,
-} from '.';
+} from './index';
 
 class GetDeviceInfoResponse {
   /**

@@ -1,4 +1,4 @@
-import {MethodInfo, ShippingAddressInfo} from '.';
+import {MethodInfo, ShippingAddressInfo} from './index';
 
 class ShippingInfo {
   /**
