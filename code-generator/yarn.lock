@@ -224,9 +224,9 @@ ts-node@^8.10.2:
     yn "3.1.1"
 
 ts-toolbelt@^6.3.3:
-  version "6.15.4"
-  resolved "https://registry.yarnpkg.com/ts-toolbelt/-/ts-toolbelt-6.15.4.tgz#f7fad584e197d0f495f77b5e3ee75a8f4c4dd3da"
-  integrity sha512-Ifp2yNo4I8q5UwNARUBMnBiFpv5DEtTbCtS8RCjjLOz+PNcThbjUsPJCK3hRnz0dTygM1Fi3Mgvnt/DoKUTU2g==
+  version "6.15.5"
+  resolved "https://registry.yarnpkg.com/ts-toolbelt/-/ts-toolbelt-6.15.5.tgz#cb3b43ed725cb63644782c64fbcad7d8f28c0a83"
+  integrity sha512-FZIXf1ksVyLcfr7M317jbB67XFJhOO1YqdTcuGaq9q5jLUoTikukZ+98TPjKiP2jC5CgmYdWWYs0s2nLSU0/1A==
 
 tslib@^1.10.0:
   version "1.13.0"
