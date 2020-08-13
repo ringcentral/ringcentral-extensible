@@ -33,6 +33,7 @@ describe('WebSocket', () => {
     let count = 0;
     webSocketExtension.eventEmitter.on(Events.autoRecoverSuccess, ws => {
       expect(ws).toBeDefined();
+      expect(ws).not.toBe(oldWS);
       count += 1;
     });
 
