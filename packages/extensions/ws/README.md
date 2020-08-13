@@ -54,6 +54,7 @@ console.log(extInfo.id);
 type WebSocketOptions = {
   restOverWebSocket?: boolean;
   debugMode?: boolean;
+  autoRecover?: boolean;
 };
 ```
 
@@ -82,16 +83,55 @@ Default value is false.
 If enabled, WebSocket incoming message and outgoing message will be printed using `console.debug`.
 
 
+### autoRecover
+
+`autoRecover` indicates whether to auto recover when WebSocket connection is lost.
+
+Default value is true.
+
+If disabled, you need to manually invoke `await webSocketExtension.recover()` whenever WebSocket connection is lost.
+
+
 ## Access WebSocket object
 
 ```ts
 webSocketExtension.ws
 ```
 
-gives you the WebSocket object.
+gives you the WebSocket object. But if the network is unstable and `autoRecover` is enabled, sometimes a new WebSocket connection will be created to replace the current one.
+You can listen for `autoRecoverSuccess` event:
+
+```ts
+import {Events} from '@rc-ex/ws';
+
+...
+
+webSocketExtension.eventEmitter.on(Events.autoRecoverSuccess, ws => {
+  console.log(`New WebSocket connection: ${ws}`);
+});
+```
 
 
 ## Session Recovery
+
+### Auto recover
+
+By default auto recover is enabled. You can subscribe to auto recover events:
+
+```ts
+webSocketExtension.eventEmitter.on(Events.autoRecoverSuccess, ws => {
+  console.log(`auto recover success: ${ws}`);
+});
+webSocketExtension.eventEmitter.on(Events.autoRecoverError, error => {
+  console.log(`auto recover error: ${error}`);
+});
+```
+
+Please note that `autoRecoverError` means last try to recover failed. There will be more tries.
+So `autoRecoverError` does NOT mean auto recover gives up trying.
+
+
+## Manual recover
 
 In case of network outage and the WebSocket connection is lost, you can restore the session by:
 

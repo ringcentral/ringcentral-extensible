@@ -7,6 +7,7 @@ export type WsToken = {
 export type WebSocketOptions = {
   restOverWebSocket?: boolean;
   debugMode?: boolean;
+  autoRecover?: boolean;
 };
 
 export type WsgEvent = {

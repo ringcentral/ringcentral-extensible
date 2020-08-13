@@ -19,10 +19,19 @@ import {
 import Subscription from './subscription';
 import {ConnectionException} from './exceptions';
 import Utils from './utils';
+import {EventEmitter} from 'events';
+
+export enum Events {
+  autoRecoverSuccess = 'autoRecoverSuccess',
+  autoRecoverError = 'autoRecoverError',
+}
 
 class WebSocketExtension extends SdkExtension {
+  eventEmitter = new EventEmitter();
+
   restOverWebsocket: boolean;
   debugMode: boolean;
+  autoRecover: boolean;
   rc!: RingCentral;
   wsToken!: WsToken;
   ws!: WS;
@@ -30,7 +39,7 @@ class WebSocketExtension extends SdkExtension {
   subscriptions: Subscription[] = [];
 
   // for auto recover
-  intervalHandle!: NodeJS.Timeout;
+  intervalHandle?: NodeJS.Timeout;
 
   request = request; // request method was moved to another file to keep this file short
 
@@ -38,6 +47,7 @@ class WebSocketExtension extends SdkExtension {
     super();
     this.restOverWebsocket = options?.restOverWebSocket ?? false;
     this.debugMode = options?.debugMode ?? false;
+    this.autoRecover = options?.autoRecover ?? true;
   }
 
   get enabled() {
@@ -76,29 +86,33 @@ class WebSocketExtension extends SdkExtension {
     await this.connect();
 
     // start of auto recover
-    let interval = 10000;
-    const check = async () => {
-      if (this.ws.readyState !== OPEN) {
-        clearInterval(this.intervalHandle);
-        try {
-          await this.recover();
-          interval = 10000;
-          if (this.debugMode) {
-            console.debug('WebSocket auto recovered');
+    if (this.autoRecover) {
+      let interval = 10000;
+      const check = async () => {
+        if (this.ws.readyState !== OPEN) {
+          clearInterval(this.intervalHandle!);
+          try {
+            await this.recover();
+            interval = 10000;
+            if (this.debugMode) {
+              console.debug('Auto recover success');
+            }
+            this.eventEmitter.emit(Events.autoRecoverSuccess, this.ws);
+          } catch (e) {
+            interval += 10000;
+            if (interval > 60000) {
+              interval = 60000; // max interval 60 seconds
+            }
+            if (this.debugMode) {
+              console.debug('Auto recover error:', e);
+            }
+            this.eventEmitter.emit(Events.autoRecoverError, e);
           }
-        } catch (e) {
-          interval += 10000;
-          if (interval > 60000) {
-            interval = 60000; // max interval 60 seconds
-          }
-          if (this.debugMode) {
-            console.debug('WebSocket auto recover failed:', e);
-          }
+          this.intervalHandle = setInterval(check, interval);
         }
-        this.intervalHandle = setInterval(check, interval);
-      }
-    };
-    this.intervalHandle = setInterval(check, interval);
+      };
+      this.intervalHandle = setInterval(check, interval);
+    }
     // end of auto recover
   }
 
@@ -172,7 +186,9 @@ class WebSocketExtension extends SdkExtension {
     for (const subscription of this.subscriptions) {
       await subscription.revoke();
     }
-    clearInterval(this.intervalHandle);
+    if (this.intervalHandle) {
+      clearInterval(this.intervalHandle);
+    }
     this.ws.close();
   }
 
