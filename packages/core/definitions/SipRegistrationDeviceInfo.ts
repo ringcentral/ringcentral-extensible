@@ -64,7 +64,7 @@ class SipRegistrationDeviceInfo {
   emergencyServiceAddress?: DeviceEmergencyServiceAddressResource;
 
   /**
-   * Device mergency response location settings
+   * Emergency response location settings of a device
    */
   emergency?: SipRegistrationDeviceEmergencyInfo;
 

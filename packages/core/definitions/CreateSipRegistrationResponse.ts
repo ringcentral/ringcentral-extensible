@@ -24,7 +24,7 @@ class CreateSipRegistrationResponse {
    * SIP flags data
    * Required
    */
-  sipFlags?: SIPFlagsResponse[];
+  sipFlags?: SIPFlagsResponse;
 
   /**
    */

@@ -7,7 +7,14 @@ class ForwardingNumberInfoRulesCreateRuleRequest {
   /**
    * Forwarding phone number type
    */
-  type?: 'Home' | 'Mobile' | 'Work' | 'PhoneLine' | 'Outage' | 'Other';
+  type?:
+    | 'Home'
+    | 'Mobile'
+    | 'Work'
+    | 'PhoneLine'
+    | 'Outage'
+    | 'Other'
+    | 'BusinessMobilePhone';
 
   /**
    * Canonical URI of a forwarding/call flip phone number
@@ -22,7 +29,7 @@ class ForwardingNumberInfoRulesCreateRuleRequest {
   /**
    * Forwarding/Call flip number title
    */
-  label?: string;
+  label?: 'Business Mobile Phone';
 }
 
 export default ForwardingNumberInfoRulesCreateRuleRequest;

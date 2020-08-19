@@ -126,7 +126,8 @@ class GetExtensionInfoResponse {
     | 'Bot'
     | 'Room'
     | 'Limited'
-    | 'Site';
+    | 'Site'
+    | 'ProxyAdmin';
 
   /**
    * For Department extension type only. Call queue settings

@@ -40,7 +40,7 @@ class EmergencyLocationInfo {
     | 'Verified'
     | 'Updated'
     | 'Deleted'
-    | 'NotRequired'
+    | 'ActivationProcess'
     | 'Unsupported'
     | 'Failed';
 

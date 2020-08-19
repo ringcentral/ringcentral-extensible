@@ -15,6 +15,7 @@ class ListExtensionPhoneNumbersParameters {
     | 'CompanyFaxNumber'
     | 'ForwardedNumber'
     | 'ForwardedCompanyNumber'
+    | 'BusinessMobileNumber'
   )[];
 
   /**

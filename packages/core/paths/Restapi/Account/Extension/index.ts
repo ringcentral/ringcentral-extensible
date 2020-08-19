@@ -31,6 +31,7 @@ import Favorite from './Favorite';
 import AddressBookSync from './AddressBookSync';
 import AddressBook from './AddressBook';
 import UnifiedPresence from './UnifiedPresence';
+import CallQueuePresence from './CallQueuePresence';
 import Presence from './Presence';
 import {RestRequestConfig} from '../../../../Rest';
 import {
@@ -158,6 +159,10 @@ class Index {
 
   presence(): Presence {
     return new Presence(this);
+  }
+
+  callQueuePresence(): CallQueuePresence {
+    return new CallQueuePresence(this);
   }
 
   unifiedPresence(): UnifiedPresence {

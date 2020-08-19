@@ -44,6 +44,7 @@ class ListExtensionsParameters {
     | 'ParkLocation'
     | 'Limited'
     | 'Bot'
+    | 'ProxyAdmin'
   )[];
 }
 

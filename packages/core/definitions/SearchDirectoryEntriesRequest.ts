@@ -2,9 +2,22 @@ import {OrderBy} from './index';
 
 class SearchDirectoryEntriesRequest {
   /**
-   * String value to filter the contacts. The value specified is searched through the following fields: `firstName`, `lastName`, `extensionNumber`, `phoneNumber`, `email`
+   * String value to filter the contacts. The value specified is searched through the following fields: `firstName`, `lastName`, `extensionNumber`, `phoneNumber`, `email`, `jobTitle`, `department`
    */
   searchString?: string;
+
+  /**
+   * Default: firstName,lastName,extensionNumber,phoneNumber,email
+   */
+  searchFields?: (
+    | 'firstName'
+    | 'lastName'
+    | 'extensionNumber'
+    | 'phoneNumber'
+    | 'email'
+    | 'jobTitle'
+    | 'department'
+  )[];
 
   /**
    * If 'True' then contacts of all accounts in federation are returned. If 'False' then only contacts of the current account are returned, and account section is eliminated in this case
@@ -27,7 +40,8 @@ class SearchDirectoryEntriesRequest {
     | 'Limited'
     | 'ApplicationExtension'
     | 'Site'
-    | 'Bot';
+    | 'Bot'
+    | 'ProxyAdmin';
 
   /**
    * Sorting settings

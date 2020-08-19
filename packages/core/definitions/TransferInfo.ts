@@ -6,8 +6,9 @@ class TransferInfo {
   extension?: TransferExtensionInfo;
 
   /**
+   * Event that initiates transferring to the specified extension
    */
-  action?: string;
+  action?: 'HoldTimeExpiration' | 'MaxCallers' | 'NoAnswer';
 }
 
 export default TransferInfo;

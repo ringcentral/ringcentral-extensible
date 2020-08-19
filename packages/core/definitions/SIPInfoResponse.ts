@@ -17,12 +17,27 @@ class SIPInfoResponse {
   /**
    * SIP domain
    */
-  domain?: string;
+  omain?: string;
 
   /**
    * SIP outbound proxy
    */
   outboundProxy?: string;
+
+  /**
+   * SIP outbound IPv6 proxy
+   */
+  outboundProxyIPv6?: string;
+
+  /**
+   * SIP outbound proxy backup
+   */
+  outboundProxyBackup?: string;
+
+  /**
+   * SIP outbound IPv6 proxy backup
+   */
+  outboundProxyIPv6Backup?: string;
 
   /**
    * Preferred transport. SIP info will be returned for this transport if supported

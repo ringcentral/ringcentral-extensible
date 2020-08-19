@@ -19,7 +19,7 @@ class ForwardingNumberInfo {
   /**
    * Forwarding/Call flip number title
    */
-  label?: string;
+  label?: 'Business Mobile Phone';
 
   /**
    * Type of option this phone number is used for. Multiple values are accepted
@@ -39,7 +39,14 @@ class ForwardingNumberInfo {
   /**
    * Forwarding phone number type
    */
-  type?: 'Home' | 'Mobile' | 'Work' | 'PhoneLine' | 'Outage' | 'Other';
+  type?:
+    | 'Home'
+    | 'Mobile'
+    | 'Work'
+    | 'PhoneLine'
+    | 'Outage'
+    | 'Other'
+    | 'BusinessMobilePhone';
 }
 
 export default ForwardingNumberInfo;

@@ -16,8 +16,14 @@ class QueueInfo {
   transfer?: TransferInfo[];
 
   /**
+   * Specifies the type of action to be taken if: members are available but no one answers, or all members are busy/unavailable. This option is available for Business hours only. For simultaneous transfer mode only 'WaitPrimaryMembers' and 'WaitPrimaryAndOverflowMembers' are supported
    */
-  noAnswerAction?: string;
+  noAnswerAction?:
+    | 'WaitPrimaryMembers'
+    | 'WaitPrimaryAndOverflowMembers'
+    | 'Voicemail'
+    | 'TransferToExtension'
+    | 'UnconditionalForwarding';
 
   /**
    * Information on a call forwarding rule
@@ -36,6 +42,7 @@ class QueueInfo {
 
   /**
    * Specifies the type of action to be taken after the hold time (waiting for an available call queue member) expires. If 'TransferToExtension' option is selected, the extension specified in `transfer` field is used. The default value is `Voicemail`
+   * Default: Voicemail
    */
   holdTimeExpirationAction?:
     | 'TransferToExtension'
@@ -63,7 +70,7 @@ class QueueInfo {
   maxCallers?: number;
 
   /**
-   * Action which should be taken if count of callers on hold exceeds the maximum
+   * Specifies the type of action to be taken if count of callers on hold exceeds the supported maximum
    */
   maxCallersAction?:
     | 'Voicemail'

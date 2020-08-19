@@ -17,12 +17,19 @@ class CreateAnsweringRuleForwardingNumberInfo {
   /**
    * Forwarding/Call flip number title
    */
-  label?: string;
+  label?: 'Business Mobile Phone';
 
   /**
    * Type of a forwarding number
    */
-  type?: 'Home' | 'Mobile' | 'Work' | 'PhoneLine' | 'Outage' | 'Other';
+  type?:
+    | 'Home'
+    | 'Mobile'
+    | 'Work'
+    | 'PhoneLine'
+    | 'Outage'
+    | 'Other'
+    | 'BusinessMobilePhone';
 }
 
 export default CreateAnsweringRuleForwardingNumberInfo;

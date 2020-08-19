@@ -1,3 +1,4 @@
+import Invitation from './Invitation';
 import End from './End';
 import ServiceInfo from './ServiceInfo';
 import UserSettings from './UserSettings';
@@ -125,6 +126,10 @@ class Index {
 
   end(): End {
     return new End(this);
+  }
+
+  invitation(): Invitation {
+    return new Invitation(this);
   }
 }
 

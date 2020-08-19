@@ -1,7 +1,13 @@
 import BulkAssign from './BulkAssign';
 import Members from './Members';
+import Presence from './Presence';
 import {RestRequestConfig} from '../../../../Rest';
-import {CallQueues, ListCallQueuesParameters} from '../../../../definitions';
+import {
+  CallQueues,
+  ListCallQueuesParameters,
+  CallQueueDetails,
+  CallQueueUpdateDetails,
+} from '../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../..';
 
@@ -29,7 +35,7 @@ class Index {
    * Rate Limit Group: Medium
    * Http get /restapi/v1.0/account/{accountId}/call-queues
    */
-  async get(
+  async list(
     queryParams?: ListCallQueuesParameters,
     config?: RestRequestConfig
   ): Promise<CallQueues> {
@@ -39,6 +45,50 @@ class Index {
       config
     );
     return r.data;
+  }
+
+  /**
+   * Operation: Get Call Queue
+   * Rate Limit Group: Light
+   * Http get /restapi/v1.0/account/{accountId}/call-queues/{groupId}
+   */
+  async get(config?: RestRequestConfig): Promise<CallQueueDetails> {
+    if (this.groupId === null) {
+      throw new Error('groupId must be specified.');
+    }
+
+    const r = await this.rc.get<CallQueueDetails>(
+      this.path(),
+      undefined,
+      config
+    );
+    return r.data;
+  }
+
+  /**
+   * Operation: Update Call Queue
+   * Rate Limit Group: Light
+   * Http put /restapi/v1.0/account/{accountId}/call-queues/{groupId}
+   */
+  async put(
+    callQueueUpdateDetails: CallQueueUpdateDetails,
+    config?: RestRequestConfig
+  ): Promise<CallQueueDetails> {
+    if (this.groupId === null) {
+      throw new Error('groupId must be specified.');
+    }
+
+    const r = await this.rc.put<CallQueueDetails>(
+      this.path(),
+      callQueueUpdateDetails,
+      undefined,
+      config
+    );
+    return r.data;
+  }
+
+  presence(): Presence {
+    return new Presence(this);
   }
 
   members(): Members {

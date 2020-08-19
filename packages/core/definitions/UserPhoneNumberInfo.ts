@@ -43,7 +43,11 @@ class UserPhoneNumberInfo {
   /**
    * Payment type. 'External' is returned for forwarded numbers which are not terminated in the RingCentral phone system
    */
-  paymentType?: 'External' | 'TollFree' | 'Local';
+  paymentType?:
+    | 'External'
+    | 'TollFree'
+    | 'Local'
+    | 'BusinessMobileNumberProvider';
 
   /**
    * Phone number
@@ -73,7 +77,8 @@ class UserPhoneNumberInfo {
     | 'ForwardedCompanyNumber'
     | 'ContactCenterNumber'
     | 'ConferencingNumber'
-    | 'NumberPool';
+    | 'NumberPool'
+    | 'BusinessMobileNumber';
 
   /**
    * List of features of a phone number

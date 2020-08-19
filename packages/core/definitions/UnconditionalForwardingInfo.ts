@@ -5,8 +5,9 @@ class UnconditionalForwardingInfo {
   phoneNumber?: string;
 
   /**
+   * Event that initiates forwarding to the specified phone number
    */
-  action?: string;
+  action?: 'HoldTimeExpiration' | 'MaxCallers' | 'NoAnswer';
 }
 
 export default UnconditionalForwardingInfo;

@@ -12,7 +12,9 @@ class OrderBy {
     | 'lastName'
     | 'extensionNumber'
     | 'phoneNumber'
-    | 'email';
+    | 'email'
+    | 'jobTitle'
+    | 'department';
 
   /**
    * Sorting direction

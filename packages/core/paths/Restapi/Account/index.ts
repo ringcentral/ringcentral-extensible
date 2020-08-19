@@ -1,7 +1,6 @@
 import Telephony from './Telephony';
 import CallMonitoringGroups from './CallMonitoringGroups';
 import PagingOnlyGroups from './PagingOnlyGroups';
-import CallQueues from './CallQueues';
 import Templates from './Templates';
 import PhoneNumber from './PhoneNumber';
 import ServiceInfo from './ServiceInfo';
@@ -10,6 +9,7 @@ import EmergencyLocations from './EmergencyLocations';
 import EmergencyAddressAutoUpdate from './EmergencyAddressAutoUpdate';
 import MessageStoreReport from './MessageStoreReport';
 import MessageStoreConfiguration from './MessageStoreConfiguration';
+import Meeting from './Meeting';
 import MeetingRecordings from './MeetingRecordings';
 import Device from './Device';
 import CustomFields from './CustomFields';
@@ -24,6 +24,7 @@ import Greeting from './Greeting';
 import AnsweringRule from './AnsweringRule';
 import BusinessHours from './BusinessHours';
 import Directory from './Directory';
+import CallQueues from './CallQueues';
 import Presence from './Presence';
 import Extension from './Extension';
 import {RestRequestConfig} from '../../../Rest';
@@ -74,6 +75,10 @@ class Index {
 
   presence(): Presence {
     return new Presence(this);
+  }
+
+  callQueues(groupId: string | null = null): CallQueues {
+    return new CallQueues(this, groupId);
   }
 
   directory(): Directory {
@@ -132,6 +137,10 @@ class Index {
     return new MeetingRecordings(this);
   }
 
+  meeting(): Meeting {
+    return new Meeting(this);
+  }
+
   messageStoreConfiguration(): MessageStoreConfiguration {
     return new MessageStoreConfiguration(this);
   }
@@ -162,10 +171,6 @@ class Index {
 
   templates(templateId: string | null = null): Templates {
     return new Templates(this, templateId);
-  }
-
-  callQueues(groupId: string | null = null): CallQueues {
-    return new CallQueues(this, groupId);
   }
 
   pagingOnlyGroups(pagingOnlyGroupId: string | null = null): PagingOnlyGroups {

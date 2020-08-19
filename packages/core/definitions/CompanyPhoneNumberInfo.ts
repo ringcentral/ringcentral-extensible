@@ -39,7 +39,11 @@ class CompanyPhoneNumberInfo {
   /**
    * Payment type. 'External' is returned for forwarded numbers which are not terminated in the RingCentral phone system
    */
-  paymentType?: 'External' | 'TollFree' | 'Local';
+  paymentType?:
+    | 'External'
+    | 'TollFree'
+    | 'Local'
+    | 'BusinessMobileNumberProvider';
 
   /**
    * Phone number
@@ -70,7 +74,8 @@ class CompanyPhoneNumberInfo {
     | 'ContactCenterNumber'
     | 'ConferencingNumber'
     | 'MeetingsNumber'
-    | 'NumberPool';
+    | 'NumberPool'
+    | 'BusinessMobileNumber';
 
   /**
    * Temporary phone number, if any. Returned for phone numbers in `Pending` porting status only
