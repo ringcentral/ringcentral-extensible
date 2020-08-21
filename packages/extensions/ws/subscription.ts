@@ -108,11 +108,8 @@ class Subscription {
       `/restapi/v1.0/subscription/${this.subscriptionInfo!.id}`
     );
     this.subscriptionInfo = undefined;
+    this.enabled = false;
     this.wse.ws.removeEventListener('message', this.eventListener);
-    const index = this.wse.subscriptions.indexOf(this);
-    if (index !== -1) {
-      this.wse.subscriptions.splice(index, 1);
-    }
   }
 }
 

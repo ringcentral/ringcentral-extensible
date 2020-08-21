@@ -172,7 +172,7 @@ class WebSocketExtension extends SdkExtension {
     });
 
     // recover all subscriptions, if there are any
-    for (const subscription of this.subscriptions) {
+    for (const subscription of this.subscriptions.filter(sub => sub.enabled)) {
       // because we have a new ws object
       subscription.setupWsEventListener();
       if (!recoverSession) {
@@ -186,6 +186,7 @@ class WebSocketExtension extends SdkExtension {
     for (const subscription of this.subscriptions) {
       await subscription.revoke();
     }
+    this.subscriptions = [];
     if (this.intervalHandle) {
       clearInterval(this.intervalHandle);
     }

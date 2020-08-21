@@ -38,6 +38,7 @@ class PubNubExtension extends SdkExtension {
     for (const subscription of this.subscriptions) {
       await subscription.revoke();
     }
+    this.subscriptions = [];
   }
 }
 
@@ -145,10 +146,7 @@ export class Subscription {
     this.pubnub = undefined;
     await this.pne.rc.restapi().subscription(this.subscriptionInfo.id).delete();
     this.subscriptionInfo = undefined;
-    const index = this.pne.subscriptions.indexOf(this);
-    if (index !== -1) {
-      this.pne.subscriptions.splice(index, 1);
-    }
+    this.enabled = false;
   }
 }
 

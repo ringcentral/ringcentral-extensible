@@ -26,14 +26,30 @@ describe('WebSocket', () => {
       // restOverWebSocket: true,
     });
     await rc.installExtension(webSocketExtension);
-    let eventCount = 0;
+
+    let presenceEventCount = 0;
+    await webSocketExtension.subscribe(
+      ['/restapi/v1.0/account/~/extension/~/presence'],
+      event => {
+        expect(event).toBeDefined();
+        presenceEventCount += 1;
+      }
+    );
+
+    let smsEventCount = 0;
     await webSocketExtension.subscribe(
       ['/restapi/v1.0/account/~/extension/~/message-store/instant?type=SMS'],
       event => {
         expect(event).toBeDefined();
-        eventCount += 1;
+        smsEventCount += 1;
       }
     );
+
+    await rc.restapi().account().extension().presence().put({
+      userStatus: 'Busy',
+      message: 'Hello world',
+    });
+
     await rc
       .restapi()
       .account()
@@ -44,13 +60,20 @@ describe('WebSocket', () => {
         to: [{phoneNumber: process.env.RINGCENTRAL_USERNAME!}], // send sms to oneself
         text: 'Hello world',
       });
-    const successful = await waitFor({
-      condition: () => eventCount > 0,
+
+    const successful1 = await waitFor({
+      condition: () => presenceEventCount > 0,
       interval: 1000,
       times: 60,
     });
+    expect(successful1).toBeTruthy();
+    const successful2 = await waitFor({
+      condition: () => smsEventCount > 0,
+      interval: 1000,
+      times: 60,
+    });
+    expect(successful2).toBeTruthy();
+
     await rc.revoke();
-    expect(successful).toBeTruthy();
-    expect(eventCount).toBeGreaterThan(0);
   });
 });
