@@ -474,7 +474,7 @@ mime-db@1.44.0:
   resolved "https://registry.yarnpkg.com/mime-db/-/mime-db-1.44.0.tgz#fa11c5eb0aca1334b4233cb4d52f10c5a6272f92"
   integrity sha512-/NOTfLrsPBVeH7YtFPgsVWveuL+4SjjYxaQ1xtM1KMFj7HdxlBlxeyNLzhyJVx7r4rZGJAZ/6lkKCitSc/Nmpg==
 
-mime-types@^2.1.12, mime-types@^2.1.27:
+mime-types@^2.1.12:
   version "2.1.27"
   resolved "https://registry.yarnpkg.com/mime-types/-/mime-types-2.1.27.tgz#47949f98e279ea53119f5722e0f34e529bec009f"
   integrity sha512-JIhqnCasI9yD+SsmkquHBxTSEuZdQX5BuQnS2Vc7puQQQ+8yiP5AY5uWhpdv4YL4VM5c6iliiYWPgJ/nJQLp7w==
@@ -586,10 +586,10 @@ proxy-from-env@^1.0.0:
   resolved "https://registry.yarnpkg.com/proxy-from-env/-/proxy-from-env-1.1.0.tgz#e102f16ca355424865755d2c9e8ea4f24d58c3e2"
   integrity sha512-D+zkORCbA9f1tdWRK0RaCR3GPv50cMxcrz4X8k5LTSUD1Dkw47mKJEZQNunItRTkWwgtaUSo1RVFRIG9ZXiFYg==
 
-pubnub@^4.29.2:
-  version "4.29.2"
-  resolved "https://registry.yarnpkg.com/pubnub/-/pubnub-4.29.2.tgz#eae0bc521c3be46616302ea899cf979f76da64da"
-  integrity sha512-B78Aty9FIA5TZu42YKLTwD3JMPPHKsptFIiryu5K4/tLS88cbZnIQHckxGNqxMewdVdQh5D2myLd/hXPDMfxsw==
+pubnub@^4.29.4:
+  version "4.29.4"
+  resolved "https://registry.yarnpkg.com/pubnub/-/pubnub-4.29.4.tgz#e47e8656e973cd85b59a0ad7dd89f32936bb9e4d"
+  integrity sha512-GzXuKsaPnjGNwdmhsGIjQgd7K/VCchN6ziHIoI7wyFL1y6sgPmUbNsoxeyN/+rIr9cNzk7/mtbzvWzu/iBJj5Q==
   dependencies:
     "@babel/runtime" "^7.10.5"
     agentkeepalive "^3.5.2"
@@ -597,7 +597,6 @@ pubnub@^4.29.2:
     cbor-sync "^1.0.4"
     isomorphic-webcrypto "^2.3.6"
     lil-uuid "^0.1.1"
-    mime-types "^2.1.27"
     superagent "^3.8.1"
     superagent-proxy "^2.0.0"
 

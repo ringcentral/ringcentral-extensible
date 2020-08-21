@@ -15,6 +15,6 @@
     "lower-case-first": "^2.0.1",
     "ramda": "^0.27.1",
     "title-case": "^3.0.2",
-    "ts-node": "^8.10.2"
+    "ts-node": "^9.0.0"
   }
 }
