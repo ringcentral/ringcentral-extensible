@@ -2,6 +2,7 @@ import RingCentral from '@rc-ex/core';
 import SdkExtension from '@rc-ex/core/lib/SdkExtension';
 import {AuthorizeRequest} from '@rc-ex/core/lib/definitions';
 import URI, {QueryDataMap} from 'urijs';
+import {createHash} from 'crypto';
 
 class AuthorizeUriExtension extends SdkExtension {
   rc!: RingCentral;
@@ -12,10 +13,25 @@ class AuthorizeUriExtension extends SdkExtension {
     if (!authorizeRequest.response_type) {
       authorizeRequest.response_type = 'code';
     }
-
     if (!authorizeRequest.client_id) {
       authorizeRequest.client_id = this.rc.rest.clientId;
     }
+
+    // PKCE: https://medium.com/ringcentral-developers/use-authorization-code-pkce-for-ringcentral-api-in-client-app-e9108f04b5f0
+    if (
+      authorizeRequest.response_type === 'code' &&
+      this.rc.rest.clientSecret === undefined
+    ) {
+      authorizeRequest.code_challenge = createHash('sha256')
+        .update(this.rc.codeVerifier)
+        .digest()
+        .toString('base64')
+        .replace(/\+/g, '-')
+        .replace(/\//g, '_')
+        .replace(/=/g, '');
+      authorizeRequest.code_challenge_method = 'S256';
+    }
+
     return URI(this.rc.rest.server)
       .directory('/restapi/oauth/authorize')
       .search(authorizeRequest as QueryDataMap)

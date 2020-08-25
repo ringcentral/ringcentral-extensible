@@ -31,7 +31,7 @@ export default class Rest {
 
   server: string;
   clientId: string;
-  clientSecret: string;
+  clientSecret?: string;
   token?: TokenInfo;
   appName: string;
   appVersion: string;
@@ -41,7 +41,7 @@ export default class Rest {
   constructor(options: RestOptions) {
     this.server = options.server ?? Rest.sandboxServer;
     this.clientId = options.clientId ?? '';
-    this.clientSecret = options.clientSecret ?? '';
+    this.clientSecret = options.clientSecret;
     this.token = options.token ?? undefined;
     this.appName = options.appName ?? 'Unknown';
     this.appVersion = options.appVersion ?? '0.0.1';
@@ -89,11 +89,14 @@ export default class Rest {
       endpoint === '/restapi/oauth/token' ||
       endpoint === '/restapi/oauth/revoke'
     ) {
-      // basic token
-      _config.auth = {
-        username: this.clientId,
-        password: this.clientSecret,
-      };
+      if (this.clientSecret) {
+        // basic token
+        _config.auth = {
+          username: this.clientId,
+          password: this.clientSecret,
+        };
+      }
+      // else: PKCE: https://medium.com/ringcentral-developers/use-authorization-code-pkce-for-ringcentral-api-in-client-app-e9108f04b5f0
       _config.data = qs.stringify(_config.data);
     } else {
       // bearer token

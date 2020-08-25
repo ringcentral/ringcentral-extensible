@@ -1,3 +1,5 @@
+import {randomBytes} from 'crypto';
+
 import {RestMethod, RestResponse} from './Rest';
 import {GetTokenRequest, TokenInfo} from './definitions';
 import Restapi from './paths/Restapi';
@@ -18,6 +20,19 @@ type AuthCodeFlowOptions = {
 export default class RingCentral {
   sdkExtensions: SdkExtension[] = [];
   rest: Rest;
+
+  // PKCE: https://medium.com/ringcentral-developers/use-authorization-code-pkce-for-ringcentral-api-in-client-app-e9108f04b5f0
+  private _codeVerifier?: string;
+  get codeVerifier() {
+    if (this._codeVerifier === undefined) {
+      this._codeVerifier = randomBytes(32)
+        .toString('base64')
+        .replace(/\+/g, '-')
+        .replace(/\//g, '_')
+        .replace(/=/g, '');
+    }
+    return this._codeVerifier;
+  }
 
   constructor(restOptions?: RestOptions) {
     this.rest = new Rest(restOptions ?? {});
@@ -102,6 +117,11 @@ export default class RingCentral {
       getTokenRequest.grant_type = 'authorization_code';
       getTokenRequest.code = options.code;
       getTokenRequest.redirect_uri = options.redirect_uri;
+      if (this.rest.clientSecret === undefined) {
+        // PKCE: https://medium.com/ringcentral-developers/use-authorization-code-pkce-for-ringcentral-api-in-client-app-e9108f04b5f0
+        getTokenRequest.client_id = this.rest.clientId;
+        getTokenRequest.code_verifier = this.codeVerifier;
+      }
     } else {
       throw new Error('Unsupported authorization flow');
     }
