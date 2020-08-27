@@ -32,7 +32,7 @@ For a working sample, please check this [test case](../../../test/authorize-uri-
 
 Ref: https://medium.com/ringcentral-developers/use-authorization-code-pkce-for-ringcentral-api-in-client-app-e9108f04b5f0
 
-First and foremost, you should not specify client secret, that's the whole point of PKCE.
+First and foremost, you should not specify client secret in your project, that's the whole point of PKCE.
 
 Secondly, specify `code_challenge_method: 'S256'`:
 
