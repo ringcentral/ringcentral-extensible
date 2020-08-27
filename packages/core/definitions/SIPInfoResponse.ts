@@ -17,7 +17,7 @@ class SIPInfoResponse {
   /**
    * SIP domain
    */
-  omain?: string;
+  domain?: string;
 
   /**
    * SIP outbound proxy

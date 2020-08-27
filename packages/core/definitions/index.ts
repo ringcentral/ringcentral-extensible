@@ -402,7 +402,6 @@ export {default as GlipPostEvent} from './GlipPostEvent';
 export {default as GlipPostInfo} from './GlipPostInfo';
 export {default as GlipPostMembersIdsListBody} from './GlipPostMembersIdsListBody';
 export {default as GlipPostMembersListBody} from './GlipPostMembersListBody';
-export {default as GlipPostPostBody} from './GlipPostPostBody';
 export {default as GlipPostTeamBody} from './GlipPostTeamBody';
 export {default as GlipPostsList} from './GlipPostsList';
 export {default as GlipPreferencesChats} from './GlipPreferencesChats';

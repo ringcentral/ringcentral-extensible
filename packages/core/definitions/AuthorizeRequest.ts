@@ -80,7 +80,7 @@ class AuthorizeRequest {
 
   /**
    */
-  code_challenge_method?: string;
+  code_challenge_method?: 'plain' | 'S256';
 }
 
 export default AuthorizeRequest;

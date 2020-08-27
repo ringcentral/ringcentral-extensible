@@ -14,7 +14,7 @@ class GlipMessageAttachmentInfo {
    * Type of an attachment
    * Default: Card
    */
-  type?: 'Card' | 'Event' | 'Note';
+  type?: 'Card' | 'Event' | 'File' | 'Note' | 'Task';
 
   /**
    * A string of default text that will be rendered in the case that the client does not support Interactive Messages
