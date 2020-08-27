@@ -62,3 +62,8 @@ await rc.authorize({
     code_verifier: codeVerifier
 })
 ```
+
+### PKCE demo
+
+- [Online demo](https://chuntaoliu.com/pkce-demo-ts/)
+- [Source code](https://github.com/tylerlong/pkce-demo-ts)
