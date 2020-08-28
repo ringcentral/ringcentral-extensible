@@ -86,6 +86,7 @@ export default class RingCentral {
   }
 
   async getToken(getTokenRequest: GetTokenRequest): Promise<TokenInfo> {
+    getTokenRequest.client_id = this.rest.clientId;
     this.token = await this.restapi(null).oauth().token().post(getTokenRequest);
     return this.token;
   }
@@ -103,11 +104,8 @@ export default class RingCentral {
       getTokenRequest.grant_type = 'authorization_code';
       getTokenRequest.code = options.code;
       getTokenRequest.redirect_uri = options.redirect_uri;
-      if (options.code_verifier) {
-        // PKCE: https://medium.com/ringcentral-developers/use-authorization-code-pkce-for-ringcentral-api-in-client-app-e9108f04b5f0
-        getTokenRequest.code_verifier = options.code_verifier;
-        getTokenRequest.client_id = this.rest.clientId;
-      }
+      // PKCE: https://medium.com/ringcentral-developers/use-authorization-code-pkce-for-ringcentral-api-in-client-app-e9108f04b5f0
+      getTokenRequest.code_verifier = options.code_verifier;
     } else {
       throw new Error('Unsupported authorization flow');
     }
