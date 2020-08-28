@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@rc-ex/retry@^0.5.2":
-  version "0.5.2"
-  resolved "https://registry.yarnpkg.com/@rc-ex/retry/-/retry-0.5.2.tgz#0ac7efa1871472fa8297583086dbd1b4e1317b12"
-  integrity sha512-KkJbuEU0BQDKgVeWpYinSjLKcSAftYcGUIc9Ncnwhd39BvhubftuAe5AqBhXEtc4gbwthAVoLk9tKcylu2/6UA==
+"@rc-ex/retry@^0.5.3":
+  version "0.5.3"
+  resolved "https://registry.yarnpkg.com/@rc-ex/retry/-/retry-0.5.3.tgz#2f54a702c12860f7de648a69ab2b0c3ef890202a"
+  integrity sha512-ZT0FRAa5uXULCiLHYHWlNpCZUdB5ZsqATDINyKxempsBdp9aOuP4WU1DstUk/+sYoChMJ8+tHlhWmfRdEmoUEg==
   dependencies:
     wait-for-async "^0.5.0"
 
