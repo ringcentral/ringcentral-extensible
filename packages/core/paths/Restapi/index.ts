@@ -1,6 +1,5 @@
 import NumberParser from './NumberParser';
 import ClientInfo from './ClientInfo';
-import Status from './Status';
 import Dictionary from './Dictionary';
 import Glip from './Glip';
 import Subscription from './Subscription';
@@ -77,10 +76,6 @@ class Index {
 
   dictionary(): Dictionary {
     return new Dictionary(this);
-  }
-
-  status(): Status {
-    return new Status(this);
   }
 
   clientInfo(): ClientInfo {

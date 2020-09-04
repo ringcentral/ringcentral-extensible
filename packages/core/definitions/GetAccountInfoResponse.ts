@@ -1,5 +1,5 @@
 import {
-  GetExtensionInfoResponse,
+  AccountOperatorInfo,
   ServiceInfo,
   SignupInfoResource,
   AccountStatusInfo,
@@ -31,7 +31,7 @@ class GetAccountInfoResponse {
   /**
    * Operator's extension information. This extension will receive all calls and messages intended for the operator
    */
-  operator?: GetExtensionInfoResponse;
+  operator?: AccountOperatorInfo;
 
   /**
    * Additional account identifier, created by partner application and applied on client side

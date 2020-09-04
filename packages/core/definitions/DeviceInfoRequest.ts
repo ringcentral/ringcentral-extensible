@@ -1,6 +1,6 @@
 class DeviceInfoRequest {
   /**
-   * Device unique identifier, retrieved on previous session (if any)
+   * Device unique identifier, retrieved at previous session (if any)
    */
   id?: string;
 
@@ -15,7 +15,7 @@ class DeviceInfoRequest {
   computerName?: string;
 
   /**
-   * Serial number for HardPhone; endpoint_id for softphone and mobile applications. Returned only when the phone is shipped and provisioned
+   * Serial number for HardPhone; `endpoint_id` for softphone and mobile applications. Returned only when the phone is shipped and provisioned
    */
   serial?: string;
 }

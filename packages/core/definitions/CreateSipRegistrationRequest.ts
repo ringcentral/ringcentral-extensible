@@ -2,7 +2,7 @@ import {DeviceInfoRequest, SIPInfoRequest} from './index';
 
 class CreateSipRegistrationRequest {
   /**
-   * Device unique description
+   * Device information
    */
   device?: DeviceInfoRequest;
 

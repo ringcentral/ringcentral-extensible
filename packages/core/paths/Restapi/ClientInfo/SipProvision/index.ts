@@ -20,7 +20,7 @@ class Index {
   }
 
   /**
-   * Operation: Register SIP Device
+   * Operation: Register Device
    * Rate Limit Group: Heavy
    * Http post /restapi/v1.0/client-info/sip-provision
    */

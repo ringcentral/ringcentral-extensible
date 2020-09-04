@@ -7,6 +7,7 @@ export {default as AccountDeviceUpdate} from './AccountDeviceUpdate';
 export {default as AccountDirectoryProfileImageResource} from './AccountDirectoryProfileImageResource';
 export {default as AccountLimits} from './AccountLimits';
 export {default as AccountLockedSettingResponse} from './AccountLockedSettingResponse';
+export {default as AccountOperatorInfo} from './AccountOperatorInfo';
 export {default as AccountPhoneNumbers} from './AccountPhoneNumbers';
 export {default as AccountPresenceEvent} from './AccountPresenceEvent';
 export {default as AccountPresenceEventBody} from './AccountPresenceEventBody';
