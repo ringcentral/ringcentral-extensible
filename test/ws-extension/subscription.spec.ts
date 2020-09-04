@@ -27,21 +27,21 @@ describe('WebSocket', () => {
     });
     await rc.installExtension(webSocketExtension);
 
-    let presenceEventCount = 0;
-    await webSocketExtension.subscribe(
-      ['/restapi/v1.0/account/~/extension/~/presence'],
-      event => {
-        expect(event).toBeDefined();
-        presenceEventCount += 1;
-      }
-    );
+    // let presenceEventCount = 0;
+    // await webSocketExtension.subscribe(
+    //   ['/restapi/v1.0/account/~/extension/~/presence'],
+    //   event => {
+    //     expect(event).toBeDefined();
+    //     presenceEventCount += 1;
+    //   }
+    // );
 
-    let smsEventCount = 0;
+    let messageEventCount = 0;
     await webSocketExtension.subscribe(
-      ['/restapi/v1.0/account/~/extension/~/message-store/instant?type=SMS'],
+      ['/restapi/v1.0/account/~/extension/~/message-store'],
       event => {
         expect(event).toBeDefined();
-        smsEventCount += 1;
+        messageEventCount += 1;
       }
     );
 
@@ -54,21 +54,21 @@ describe('WebSocket', () => {
       .restapi()
       .account()
       .extension()
-      .sms()
+      .companyPager()
       .post({
-        from: {phoneNumber: process.env.RINGCENTRAL_USERNAME!},
-        to: [{phoneNumber: process.env.RINGCENTRAL_USERNAME!}], // send sms to oneself
+        from: {extensionNumber: '101'},
+        to: [{extensionNumber: '101'}], // send pager to oneself
         text: 'Hello world',
       });
 
-    const successful1 = await waitFor({
-      condition: () => presenceEventCount > 0,
-      interval: 1000,
-      times: 60,
-    });
-    expect(successful1).toBeTruthy();
+    // const successful1 = await waitFor({
+    //   condition: () => presenceEventCount > 0,
+    //   interval: 1000,
+    //   times: 60,
+    // });
+    // expect(successful1).toBeTruthy();
     const successful2 = await waitFor({
-      condition: () => smsEventCount > 0,
+      condition: () => messageEventCount > 0,
       interval: 1000,
       times: 60,
     });

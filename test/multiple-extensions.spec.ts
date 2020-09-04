@@ -39,7 +39,7 @@ describe('extensions', () => {
     // setup subscription
     let eventCount = 0;
     await webSocketExtension.subscribe(
-      ['/restapi/v1.0/account/~/extension/~/message-store/instant?type=SMS'],
+      ['/restapi/v1.0/account/~/extension/~/message-store'],
       event => {
         expect(event).toBeDefined();
         eventCount += 1;
@@ -51,10 +51,10 @@ describe('extensions', () => {
       .restapi()
       .account()
       .extension()
-      .sms()
+      .companyPager()
       .post({
-        from: {phoneNumber: process.env.RINGCENTRAL_USERNAME!},
-        to: [{phoneNumber: process.env.RINGCENTRAL_USERNAME!}], // send sms to oneself
+        from: {extensionNumber: '101'},
+        to: [{extensionNumber: '101'}], // send pager to oneself
         text: 'Hello world',
       });
 
