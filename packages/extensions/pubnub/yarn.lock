@@ -588,10 +588,10 @@ proxy-from-env@^1.0.0:
   resolved "https://registry.yarnpkg.com/proxy-from-env/-/proxy-from-env-1.1.0.tgz#e102f16ca355424865755d2c9e8ea4f24d58c3e2"
   integrity sha512-D+zkORCbA9f1tdWRK0RaCR3GPv50cMxcrz4X8k5LTSUD1Dkw47mKJEZQNunItRTkWwgtaUSo1RVFRIG9ZXiFYg==
 
-pubnub@^4.29.4:
-  version "4.29.4"
-  resolved "https://registry.yarnpkg.com/pubnub/-/pubnub-4.29.4.tgz#e47e8656e973cd85b59a0ad7dd89f32936bb9e4d"
-  integrity sha512-GzXuKsaPnjGNwdmhsGIjQgd7K/VCchN6ziHIoI7wyFL1y6sgPmUbNsoxeyN/+rIr9cNzk7/mtbzvWzu/iBJj5Q==
+pubnub@^4.29.5:
+  version "4.29.5"
+  resolved "https://registry.yarnpkg.com/pubnub/-/pubnub-4.29.5.tgz#75a44b4533ac7493f27e92c9e8fd0c04d8a53601"
+  integrity sha512-uMr8PZ62XBi+k/82fwq6g/0tBSsKSW8+nsD5l7KF1pqIyPa6ZrG1g2cmaFCEpQwVZJ/F/12SD99lrSH5u9CMpQ==
   dependencies:
     "@babel/runtime" "^7.10.5"
     agentkeepalive "^3.5.2"
@@ -603,9 +603,11 @@ pubnub@^4.29.4:
     superagent-proxy "^2.0.0"
 
 pvtsutils@^1.0.11:
-  version "1.0.11"
-  resolved "https://registry.yarnpkg.com/pvtsutils/-/pvtsutils-1.0.11.tgz#bc23b765b1e0e57217ab26885775edc03a85e124"
-  integrity sha512-k040UEiUms7Ey8fwRvCBvlqcuOxK9IMBnnmIijk0jkAs+gdZQkayenRQ1a2Z574i2HyFVyJ+zwomZc5QEjzewg==
+  version "1.0.12"
+  resolved "https://registry.yarnpkg.com/pvtsutils/-/pvtsutils-1.0.12.tgz#44f2902ae802012946bdc800fcfe46cb3a63820e"
+  integrity sha512-fudCcWFUE7WPHMRVdlEDdeaeLf+8hvZFvfJJ+p8GZlwrrdoiVfv7WZaPt6k7k/NZjMxR8yUbbH51hpwlSmLHiQ==
+  dependencies:
+    tslib "^2.0.1"
 
 pvutils@latest:
   version "1.0.17"
