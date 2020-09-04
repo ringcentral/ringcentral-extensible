@@ -5,3 +5,4 @@ lib/
 .env.lab
 temp.*
 .DS_Store
+rcv.spec.ts

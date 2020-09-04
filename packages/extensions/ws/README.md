@@ -131,7 +131,7 @@ Please note that `autoRecoverError` means last try to recover failed. There will
 So `autoRecoverError` does NOT mean auto recover gives up trying.
 
 
-## Manual recover
+### Manual recover
 
 In case of network outage and the WebSocket connection is lost, you can restore the session by:
 
