@@ -11,6 +11,7 @@
     "packages/extensions/rcsdk",
     "packages/extensions/retry",
     "packages/extensions/ws",
+    "packages/extensions/engage-voice",
     "test",
     "code-generator"
   ]
