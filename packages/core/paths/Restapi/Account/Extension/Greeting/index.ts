@@ -2,6 +2,7 @@ import {RestRequestConfig} from '../../../../../Rest';
 import {
   CustomUserGreetingInfo,
   CreateCustomUserGreetingRequest,
+  CreateCustomUserGreetingParameters,
 } from '../../../../../definitions';
 import Utils from '../../../../../Utils';
 import Parent from '..';
@@ -33,13 +34,14 @@ class Index {
    */
   async post(
     createCustomUserGreetingRequest: CreateCustomUserGreetingRequest,
+    queryParams?: CreateCustomUserGreetingParameters,
     config?: RestRequestConfig
   ): Promise<CustomUserGreetingInfo> {
     const formData = Utils.getFormData(createCustomUserGreetingRequest);
     const r = await this.rc.post<CustomUserGreetingInfo>(
       this.path(false),
       formData,
-      undefined,
+      queryParams,
       config
     );
     return r.data;

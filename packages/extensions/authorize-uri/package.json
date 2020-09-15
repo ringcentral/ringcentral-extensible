@@ -18,7 +18,7 @@
     "access": "public"
   },
   "dependencies": {
-    "@types/urijs": "^1.19.11",
+    "@types/urijs": "^1.19.12",
     "urijs": "^1.19.2"
   },
   "devDependencies": {

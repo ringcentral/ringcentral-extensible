@@ -18,8 +18,8 @@
     "access": "public"
   },
   "dependencies": {
-    "@types/pubnub": "^4.28.1",
-    "pubnub": "^4.29.5"
+    "@types/pubnub": "^4.28.2",
+    "pubnub": "^4.29.7"
   },
   "devDependencies": {
     "@rc-ex/core": "^0.5.5"

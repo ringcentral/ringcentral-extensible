@@ -1,8 +1,9 @@
 class SyncAccountCallLogParameters {
   /**
-   * Type of synchronization. 'FSync' is a default value
+   * Type of synchronization.
+   * Default: FSync
    */
-  syncType?: string[];
+  syncType?: 'FSync' | 'ISync';
 
   /**
    * Value of syncToken property of last sync request response

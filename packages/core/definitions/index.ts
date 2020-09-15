@@ -180,6 +180,7 @@ export {default as CreateAnsweringRuleRequest} from './CreateAnsweringRuleReques
 export {default as CreateCallMonitoringGroupRequest} from './CreateCallMonitoringGroupRequest';
 export {default as CreateCompanyGreetingRequest} from './CreateCompanyGreetingRequest';
 export {default as CreateContactParameters} from './CreateContactParameters';
+export {default as CreateCustomUserGreetingParameters} from './CreateCustomUserGreetingParameters';
 export {default as CreateCustomUserGreetingRequest} from './CreateCustomUserGreetingRequest';
 export {default as CreateDataExportTaskRequest} from './CreateDataExportTaskRequest';
 export {default as CreateFaxMessageRequest} from './CreateFaxMessageRequest';

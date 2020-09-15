@@ -42,7 +42,7 @@ class SyncMessagesParameters {
   /**
    * Type of message synchronization
    */
-  syncType?: ('FSync' | 'ISync')[];
+  syncType?: 'FSync' | 'ISync';
 }
 
 export default SyncMessagesParameters;
