@@ -3,6 +3,7 @@ lib/
 .env
 .env.prod
 .env.lab
+.env.ev
 temp.*
 .DS_Store
 rcv.spec.ts

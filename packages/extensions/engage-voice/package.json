@@ -18,6 +18,9 @@
     "access": "public"
   },
   "dependencies": {
+    "@types/qs": "^6.9.4",
+    "axios": "^0.20.0",
+    "qs": "^6.9.4"
   },
   "devDependencies": {
     "@rc-ex/core": "^0.5.6"
