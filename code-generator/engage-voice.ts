@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import {spawnSync} from 'child_process';
+import {pascalCase} from 'change-case';
 
 const typesSet = new Set();
 const normalizeType = (prop: {
@@ -9,7 +10,7 @@ const normalizeType = (prop: {
   items: any;
 }): string => {
   if (prop.$ref) {
-    const type = prop.$ref.split('/').slice(-1)[0];
+    const type = pascalCase(prop.$ref.split('/').slice(-1)[0]);
     typesSet.add(type);
     return type;
   }
@@ -69,7 +70,8 @@ spawnSync('mkdir', [outputDir]);
 // generate definitions
 for (const name of Object.keys(schemas)) {
   console.log(name);
-  let code = `class ${name} {`;
+  const className = pascalCase(name);
+  let code = `class ${className} {`;
   const schema = schemas[name];
   for (const propName of Object.keys(schema.properties ?? {})) {
     const prop = schema.properties[propName];
@@ -80,14 +82,16 @@ for (const name of Object.keys(schemas)) {
   code += `
 }
 
-export default ${name};`;
-  typesSet.delete(name);
-  code = `import {${Array.from(typesSet).join(', ')}} from './index';
+export default ${className};`;
+  typesSet.delete(className);
+  if (typesSet.size > 0) {
+    code = `import {${Array.from(typesSet).join(', ')}} from './index';
 
 ${code}
 `;
+  }
   typesSet.clear();
-  fs.writeFileSync(path.join(outputDir, `${name}.ts`), code);
+  fs.writeFileSync(path.join(outputDir, `${className}.ts`), code);
 }
 
 // generate definitions/index.ts
