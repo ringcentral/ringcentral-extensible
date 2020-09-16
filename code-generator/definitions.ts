@@ -185,6 +185,6 @@ const definitionFiles = fs
   .readdirSync(outputDir)
   .map(df => df.substring(0, df.length - 3));
 const code = definitionFiles
-  .map(df => `export { default as ${df} } from './${df}'`)
+  .map(df => `export {default as ${df}} from './${df}';`)
   .join('\n');
 fs.writeFileSync(path.join(outputDir, 'index.ts'), code + '\n');

@@ -4,7 +4,8 @@
   "license": "MIT",
   "scripts": {
     "definitions": "ts-node -r dotenv-override-true/config ./definitions.ts",
-    "paths": "ts-node -r dotenv-override-true/config ./paths.ts"
+    "paths": "ts-node -r dotenv-override-true/config ./paths.ts",
+    "ev": "ts-node -r dotenv-override-true/config ./engage-voice.ts"
   },
   "dependencies": {
     "@types/js-yaml": "^3.12.5",
