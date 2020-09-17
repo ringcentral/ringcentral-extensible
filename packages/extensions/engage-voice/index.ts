@@ -9,6 +9,7 @@ import {
   RestRequestConfig,
   RestResponse,
 } from '@rc-ex/core/lib/Rest';
+import {AccessTokenUserDetails} from './definitions';
 
 type EngageVoiceOptions = {
   server?: string;
@@ -18,6 +19,7 @@ class EngageVoiceExtension extends SdkExtension {
   server: string;
   rc!: RingCentral;
   httpClient!: AxiosInstance;
+  token?: AccessTokenUserDetails;
 
   constructor(options?: EngageVoiceOptions) {
     super();
@@ -59,12 +61,46 @@ class EngageVoiceExtension extends SdkExtension {
     }
   }
 
-  async authorize() {
+  async get<T>(endpoint: string, queryParams?: {}, config?: RestRequestConfig) {
+    return this.request<T>('GET', endpoint, undefined, queryParams, config);
+  }
+  async delete<T>(
+    endpoint: string,
+    queryParams?: {},
+    config?: RestRequestConfig
+  ) {
+    return this.request<T>('DELETE', endpoint, undefined, queryParams, config);
+  }
+  async post<T>(
+    endpoint: string,
+    content?: {},
+    queryParams?: {},
+    config?: RestRequestConfig
+  ) {
+    return this.request<T>('POST', endpoint, content, queryParams, config);
+  }
+  async put<T>(
+    endpoint: string,
+    content?: {},
+    queryParams?: {},
+    config?: RestRequestConfig
+  ) {
+    return this.request<T>('PUT', endpoint, content, queryParams, config);
+  }
+  async patch<T>(
+    endpoint: string,
+    content?: {},
+    queryParams?: {},
+    config?: RestRequestConfig
+  ) {
+    return this.request<T>('PATCH', endpoint, content, queryParams, config);
+  }
+
+  async authorize(): Promise<AccessTokenUserDetails> {
     if (this.rc.token?.access_token === undefined) {
       throw new Error('Need a RingCentral access token to continue');
     }
-    const r = await this.request(
-      'POST',
+    const r = await this.post<AccessTokenUserDetails>(
       '/api/auth/login/rc/accesstoken',
       undefined,
       {
@@ -72,7 +108,8 @@ class EngageVoiceExtension extends SdkExtension {
         rcAccessToken: this.rc.token?.access_token,
       }
     );
-    console.log(r.data);
+    this.token = r.data;
+    return this.token!;
   }
 }
 
