@@ -53,6 +53,15 @@ class EngageVoiceExtension extends SdkExtension {
       params: queryParams,
       ...config,
     };
+    if (
+      endpoint !== '/api/auth/login/rc/accesstoken' &&
+      this.token?.accessToken
+    ) {
+      _config.headers = {
+        ..._config.headers,
+        Authorization: `Bearer ${this.token?.accessToken}`,
+      };
+    }
     const r = await this.httpClient.request<T>(_config);
     if (r.status >= 200 && r.status < 300) {
       return r;

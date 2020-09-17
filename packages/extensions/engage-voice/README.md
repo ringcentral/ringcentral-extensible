@@ -19,4 +19,10 @@ import EngageVoiceExtension from '@rc-ex/engage-voice';
 const rc = new RingCentral(...);
 const engageVoiceExtension = new EngageVoiceExtension();
 await rc.installExtension(engageVoiceExtension);
+
+await rc.authorize(...);
+await engageVoiceExtension.authorize();
+
+const r = await engageVoiceExtension.get('/voice/api/v1/admin/accounts');
+console.log(r.data);
 ```

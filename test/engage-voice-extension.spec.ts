@@ -26,6 +26,9 @@ describe('Engage Voice extension', () => {
     await rc.installExtension(engageVoiceExtension);
     await engageVoiceExtension.authorize();
 
+    const r = await engageVoiceExtension.get('/voice/api/v1/admin/accounts');
+    expect(r.data).toBeDefined();
+
     await rc.revoke();
   });
 });
