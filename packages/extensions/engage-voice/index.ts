@@ -2,7 +2,6 @@ import RingCentral from '@rc-ex/core';
 import SdkExtension from '@rc-ex/core/lib/SdkExtension';
 import RestException from '@rc-ex/core/lib/RestException';
 import axios, {AxiosInstance} from 'axios';
-import qs from 'qs';
 
 import {version} from './package.json';
 import {
@@ -67,10 +66,11 @@ class EngageVoiceExtension extends SdkExtension {
     const r = await this.request(
       'POST',
       '/api/auth/login/rc/accesstoken',
-      qs.stringify({
+      undefined,
+      {
         rcTokenType: 'Bearer',
         rcAccessToken: this.rc.token?.access_token,
-      })
+      }
     );
     console.log(r.data);
   }
