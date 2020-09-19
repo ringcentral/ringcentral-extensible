@@ -56,12 +56,12 @@ class RetryExtension extends SdkExtension {
         return request<T>(method, endpoint, content, queryParams, config);
       }
       try {
-        return request<T>(method, endpoint, content, queryParams, config);
+        return await request<T>(method, endpoint, content, queryParams, config);
       } catch (e) {
         if (e instanceof RestException) {
           if (this.shouldRetry(e, retriesAttempted)) {
             await waitFor({interval: this.retryInterval(e, retriesAttempted)});
-            return newRequest<T>(
+            return await newRequest<T>(
               method,
               endpoint,
               content,
