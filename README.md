@@ -1,6 +1,6 @@
 # RingCentral Extensible SDK
 
-[![Build Status](https://travis-ci.com/ringcentral/ringcentral-extensible.svg?token=316MqomevzwR7zFzsQz2&branch=master)](https://travis-ci.com/ringcentral/ringcentral-extensible)
+[![Build Status](https://travis-ci.org/ringcentral/ringcentral-extensible.svg?branch=master)](https://travis-ci.org/ringcentral/ringcentral-extensible)
 [![Code Style: Google](https://img.shields.io/badge/code%20style-google-blueviolet.svg)](https://github.com/google/gts)
 
 RingCentral Extensible is a SDK with a tiny core and lots of extensions.
