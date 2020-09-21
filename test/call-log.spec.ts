@@ -20,7 +20,7 @@ describe('call log', () => {
       .extension()
       .callLogSync()
       .get({
-        syncType: ['FSync'],
+        syncType: 'FSync',
         dateFrom: '2020-06-08T15:41:00.000Z',
         recordCount: 5,
       });
@@ -33,7 +33,7 @@ describe('call log', () => {
       .extension()
       .callLogSync()
       .get({
-        syncType: ['ISync'],
+        syncType: 'ISync',
         recordCount: 5,
         syncToken: callLogs.syncInfo!.syncToken,
       });
