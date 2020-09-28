@@ -8,7 +8,13 @@ import SdkExtension from '@rc-ex/core/lib/SdkExtension';
 import WS, {OPEN} from 'isomorphic-ws';
 
 import {request} from './rest';
-import {WsToken, ConnectionDetails, WebSocketOptions, WsgEvent} from './types';
+import {
+  WsToken,
+  ConnectionDetails,
+  WebSocketOptions,
+  WsgEvent,
+  Wsc,
+} from './types';
 import Subscription from './subscription';
 import {ConnectionException} from './exceptions';
 import Utils from './utils';
@@ -29,6 +35,7 @@ class WebSocketExtension extends SdkExtension {
   wsToken!: WsToken;
   ws!: WS;
   connectionDetails!: ConnectionDetails;
+  wsc!: Wsc;
   subscriptions: Subscription[] = [];
 
   // for auto recover
@@ -110,7 +117,7 @@ class WebSocketExtension extends SdkExtension {
   }
 
   async recover() {
-    if (this.connectionDetails?.wsc?.token === undefined) {
+    if (this.wsc.token === undefined) {
       throw new Error('No existing session to recover');
     }
     await this.connect(true);
@@ -125,7 +132,7 @@ class WebSocketExtension extends SdkExtension {
     this.wsToken = r.data as WsToken;
     let wsUri = `${this.wsToken.uri}?access_token=${this.wsToken.ws_access_token}`;
     if (recoverSession) {
-      wsUri = `${wsUri}&wsc=${this.connectionDetails!.wsc!.token}`;
+      wsUri = `${wsUri}&wsc=${this.wsc.token}`;
     }
     this.ws = new WS(wsUri);
 
@@ -142,22 +149,16 @@ class WebSocketExtension extends SdkExtension {
     if (meta.type === 'Error') {
       throw new ConnectionException(event);
     }
-    this.connectionDetails = {...meta, body};
-    if (
-      recoverSession &&
-      this.connectionDetails.body.recoveryState === 'Failed'
-    ) {
+    this.connectionDetails = body;
+    if (recoverSession && this.connectionDetails.recoveryState === 'Failed') {
       recoverSession = false;
     }
 
     // listen for new wsc data
     this.ws.addEventListener('message', (event: WsgEvent) => {
       const [meta] = Utils.splitWsgData(event.data);
-      if (
-        meta.wsc &&
-        this.connectionDetails.wsc!.sequence < meta.wsc.sequence
-      ) {
-        this.connectionDetails.wsc = meta.wsc;
+      if (meta.wsc && this.wsc.sequence < meta.wsc.sequence) {
+        this.wsc = meta.wsc;
       }
     });
 

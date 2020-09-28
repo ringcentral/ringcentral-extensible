@@ -14,6 +14,11 @@ export type WsgEvent = {
   data: string;
 };
 
+export type Wsc = {
+  token: string;
+  sequence: number;
+};
+
 export type WsgMeta = {
   type: 'ClientRequest' | 'ServerNotification' | 'Error' | 'ConnectionDetails';
   messageId: string;
@@ -21,10 +26,7 @@ export type WsgMeta = {
   headers: {
     [key: string]: string;
   };
-  wsc?: {
-    token: string;
-    sequence: number;
-  };
+  wsc?: Wsc;
 };
 
 export type WsgError = {
@@ -32,7 +34,7 @@ export type WsgError = {
   message: string;
 };
 
-export type ConnectionBody = {
+export type ConnectionDetails = {
   creationTime: string;
   maxConnectionsPerSession: number;
   recoveryBufferSize: number;
@@ -41,8 +43,4 @@ export type ConnectionBody = {
   absoluteTimeout: number;
   recoveryState?: 'Successful' | 'Failed';
   recoveryErrorCode?: string;
-};
-
-export type ConnectionDetails = WsgMeta & {
-  body: ConnectionBody;
 };
