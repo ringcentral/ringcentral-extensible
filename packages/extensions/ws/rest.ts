@@ -5,7 +5,7 @@ import {
 } from '@rc-ex/core/lib/Rest';
 import RestException from '@rc-ex/core/lib/RestException';
 import hyperid from 'hyperid';
-import {getStatusText} from 'http-status-codes';
+import {getReasonPhrase} from 'http-status-codes';
 
 import WebSocketExtension from './index';
 import {version} from './package.json';
@@ -57,7 +57,7 @@ export async function request<T>(
   const response: RestResponse = {
     data: body as T,
     status: meta.status,
-    statusText: getStatusText(meta.status),
+    statusText: getReasonPhrase(meta.status),
     headers: meta.headers,
     config: _config,
   };
