@@ -8,14 +8,7 @@ import SdkExtension from '@rc-ex/core/lib/SdkExtension';
 import WS, {OPEN} from 'isomorphic-ws';
 
 import {request} from './rest';
-import {
-  WsToken,
-  ConnectionDetails,
-  WebSocketOptions,
-  WsgEvent,
-  WsgMeta,
-  ConnectionBody,
-} from './types';
+import {WsToken, ConnectionDetails, WebSocketOptions, WsgEvent} from './types';
 import Subscription from './subscription';
 import {ConnectionException} from './exceptions';
 import Utils from './utils';
@@ -157,17 +150,14 @@ class WebSocketExtension extends SdkExtension {
       recoverSession = false;
     }
 
-    // listen for new ConnectionDetails data
+    // listen for new wsc data
     this.ws.addEventListener('message', (event: WsgEvent) => {
-      const [meta, body]: [WsgMeta, ConnectionBody] = Utils.splitWsgData(
-        event.data
-      );
-      if (meta.type === 'ConnectionDetails' && meta.wsc) {
-        if (
-          body.recoveryState ||
-          this.connectionDetails.wsc!.sequence < meta.wsc.sequence
-        )
-          this.connectionDetails = {...meta, body};
+      const [meta] = Utils.splitWsgData(event.data);
+      if (
+        meta.wsc &&
+        this.connectionDetails.wsc!.sequence < meta.wsc.sequence
+      ) {
+        this.connectionDetails.wsc = meta.wsc;
       }
     });
 
