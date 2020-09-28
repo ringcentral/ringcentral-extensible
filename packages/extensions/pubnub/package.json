@@ -19,7 +19,7 @@
   },
   "dependencies": {
     "@types/pubnub": "^4.28.2",
-    "pubnub": "^4.29.7"
+    "pubnub": "^4.29.8"
   },
   "devDependencies": {
     "@rc-ex/core": "^0.5.7"
