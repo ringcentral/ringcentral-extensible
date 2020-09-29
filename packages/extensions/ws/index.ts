@@ -41,6 +41,7 @@ class WebSocketExtension extends SdkExtension {
 
   // for auto recover
   intervalHandle?: NodeJS.Timeout;
+  recoverTimestamp?: number;
 
   request = request; // request method was moved to another file to keep this file short
 
@@ -99,9 +100,9 @@ class WebSocketExtension extends SdkExtension {
               console.debug('Auto recover success');
             }
             this.eventEmitter.emit(
-              this.connectionDetails.recoveryState === 'Failed'
-                ? Events.autoRecoverFailed
-                : Events.autoRecoverSuccess,
+              this.connectionDetails.recoveryState === 'Successful'
+                ? Events.autoRecoverSuccess
+                : Events.autoRecoverFailed,
               this.ws
             );
           } catch (e) {
@@ -127,9 +128,21 @@ class WebSocketExtension extends SdkExtension {
       return;
     }
     if (!this.wsc || !this.wsc.token) {
-      return await this.connect(false); // connect to WSG but do not recover
+      await this.connect(false); // connect to WSG but do not recover
+      return;
     }
-    await this.connect(true); // connect to WSG and recover
+    if (this.recoverTimestamp === undefined) {
+      this.recoverTimestamp = Date.now();
+    }
+    if (
+      Date.now() - this.recoverTimestamp >
+      this.connectionDetails.recoveryTimeout * 1000
+    ) {
+      await this.connect(false); // connect to WSG but do not recover
+    } else {
+      await this.connect(true); // connect to WSG and recover
+    }
+    this.recoverTimestamp = undefined;
   }
 
   async connect(recoverSession = false) {

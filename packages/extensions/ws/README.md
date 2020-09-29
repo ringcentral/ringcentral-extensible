@@ -135,7 +135,8 @@ webSocketExtension.eventEmitter.on(Events.autoRecoverError, error => {
     - This means a local exception or error.
 - Note #2: `autoRecoverFailed` means connection to WebSocket server has been restored, but existing subscriptions haven't. The SDK automatically created new subscriptions for you.
     - Notifications during WebSocket disconnection are all lost.
-    - This means a message from WebSocket server with `"recoveryState": "Failed"`.
+    - It could mean `recoveryTimeout` and client side gives up recovery but creates brand new connection instead.
+    - It could mean a message from WebSocket server with `"recoveryState": "Failed"`
 - Note #3: `autoRecoverSuccess` means connection to WebSocket server has been restored, and existing subscriptions have been restored too. And server side keeps your notification messages in a buffer and it will send you the messages soon.
     - There is a `recoveryBufferSize` setting on server side. If there are too many messages queued before session recover success, oldest messages will be discarded.
 
