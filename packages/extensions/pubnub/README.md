@@ -20,7 +20,7 @@ const rc = new RingCentral(...);
 const pubNubExtension = new PubNubExtension();
 await rc.installExtension(pubNubExtension);
 
-const subscription = pubNubExtension.subscribe(
+const subscription = await pubNubExtension.subscribe(
     ['/restapi/v1.0/account/~/extension/~/message-store'],
     message => {
        ...

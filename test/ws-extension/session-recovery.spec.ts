@@ -4,7 +4,7 @@ import path from 'path';
 import dotenv from 'dotenv-override-true';
 import waitFor from 'wait-for-async';
 
-jest.setTimeout(999999999); // to test recover failed
+jest.setTimeout(99999999); // to test recover failed
 
 dotenv.config({path: path.join(__dirname, '..', '.env.lab')});
 
