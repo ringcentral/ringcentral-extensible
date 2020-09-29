@@ -22,6 +22,7 @@ import {EventEmitter} from 'events';
 
 export enum Events {
   autoRecoverSuccess = 'autoRecoverSuccess',
+  autoRecoverFailed = 'autoRecoverFailed',
   autoRecoverError = 'autoRecoverError',
 }
 
@@ -87,7 +88,7 @@ class WebSocketExtension extends SdkExtension {
 
     // start of auto recover
     if (this.autoRecover) {
-      let interval = 10000;
+      let interval = 10000; // check WSG connection every 10 seconds
       const check = async () => {
         if (this.ws.readyState !== OPEN) {
           clearInterval(this.intervalHandle!);
@@ -97,7 +98,12 @@ class WebSocketExtension extends SdkExtension {
             if (this.debugMode) {
               console.debug('Auto recover success');
             }
-            this.eventEmitter.emit(Events.autoRecoverSuccess, this.ws);
+            this.eventEmitter.emit(
+              this.connectionDetails.recoveryState === 'Failed'
+                ? Events.autoRecoverFailed
+                : Events.autoRecoverSuccess,
+              this.ws
+            );
           } catch (e) {
             interval += 10000;
             if (interval > 60000) {

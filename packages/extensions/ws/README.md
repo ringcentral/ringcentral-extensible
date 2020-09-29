@@ -122,13 +122,22 @@ By default auto recover is enabled. You can subscribe to auto recover events:
 webSocketExtension.eventEmitter.on(Events.autoRecoverSuccess, ws => {
   console.log(`auto recover success: ${ws}`);
 });
+webSocketExtension.eventEmitter.on(Events.autoRecoverFailed, ws => {
+  console.log(`auto recover failed: ${ws}`);
+});
 webSocketExtension.eventEmitter.on(Events.autoRecoverError, error => {
   console.log(`auto recover error: ${error}`);
 });
 ```
 
-Please note that `autoRecoverError` means last try to recover failed. There will be more tries.
-So `autoRecoverError` does NOT mean auto recover gives up trying.
+- Note #1: `autoRecoverError` means cannot connect to WebSocket server at all. There will be more tries. So `autoRecoverError` does NOT mean auto recover gives up trying.
+    - This is most likely caused by local network issue, or in rare cases remote WebSocket server is down.
+    - This means a local exception or error.
+- Note #2: `autoRecoverFailed` means connection to WebSocket server has been restored, but existing subscriptions haven't. The SDK automatically created new subscriptions for you.
+    - Notifications during WebSocket disconnection are all lost.
+    - This means a message from WebSocket server with `"recoveryState": "Failed"`.
+- Note #3: `autoRecoverSuccess` means connection to WebSocket server has been restored, and existing subscriptions have been restored too. And server side keeps your notification messages in a buffer and it will send you the messages soon.
+    - There is a `recoveryBufferSize` setting on server side. If there are too many messages queued before session recover success, oldest messages will be discarded.
 
 
 ### Manual recover
