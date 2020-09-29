@@ -141,6 +141,19 @@ class WebSocketExtension extends SdkExtension {
       Utils.debugWebSocket(this.ws);
     }
 
+    // listen for new wsc data
+    this.ws.addEventListener('message', (event: WsgEvent) => {
+      const [meta, body] = Utils.splitWsgData(event.data);
+      if (
+        meta.wsc &&
+        (!this.wsc ||
+          (meta.type === 'ConnectionDetails' && body.recoveryState) ||
+          this.wsc.sequence < meta.wsc.sequence)
+      ) {
+        this.wsc = meta.wsc;
+      }
+    });
+
     // get initial ConnectionDetails data
     const [meta, body, event] = await Utils.waitForWebSocketMessage(
       this.ws,
@@ -150,24 +163,15 @@ class WebSocketExtension extends SdkExtension {
       throw new ConnectionException(event);
     }
     this.connectionDetails = body;
-    this.wsc = meta.wsc!;
-    if (recoverSession && this.connectionDetails.recoveryState === 'Failed') {
-      recoverSession = false;
-    }
-
-    // listen for new wsc data
-    this.ws.addEventListener('message', (event: WsgEvent) => {
-      const [meta] = Utils.splitWsgData(event.data);
-      if (meta.wsc && this.wsc.sequence < meta.wsc.sequence) {
-        this.wsc = meta.wsc;
-      }
-    });
 
     // recover all subscriptions, if there are any
     for (const subscription of this.subscriptions.filter(sub => sub.enabled)) {
       // because we have a new ws object
       subscription.setupWsEventListener();
-      if (!recoverSession) {
+      if (
+        !recoverSession ||
+        this.connectionDetails.recoveryState === 'Failed'
+      ) {
         // create new subscription if don't recover existing one
         await subscription.subscribe();
       }
