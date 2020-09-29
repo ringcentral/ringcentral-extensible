@@ -28,9 +28,7 @@ describe('WebSocket session recovery', () => {
       restOverWebSocket: true,
     });
     await rc.installExtension(webSocketExtension);
-    expect(
-      webSocketExtension.connectionDetails?.body.recoveryState
-    ).toBeUndefined();
+    expect(webSocketExtension.connectionDetails.recoveryState).toBeUndefined();
     let eventCount = 0;
     await webSocketExtension.subscribe(
       ['/restapi/v1.0/account/~/extension/~/message-store'],
@@ -44,7 +42,7 @@ describe('WebSocket session recovery', () => {
     webSocketExtension.ws.close();
     await waitFor({interval: 5000});
     await webSocketExtension.recover();
-    expect(webSocketExtension.connectionDetails?.body.recoveryState).toBe(
+    expect(webSocketExtension.connectionDetails.recoveryState).toBe(
       'Successful'
     );
     await rc
@@ -86,9 +84,7 @@ describe('WebSocket session recovery', () => {
       restOverWebSocket: true,
     });
     await rc.installExtension(webSocketExtension);
-    expect(
-      webSocketExtension.connectionDetails?.body.recoveryState
-    ).toBeUndefined();
+    expect(webSocketExtension.connectionDetails.recoveryState).toBeUndefined();
     let eventCount = 0;
     await webSocketExtension.subscribe(
       ['/restapi/v1.0/account/~/extension/~/message-store'],
@@ -102,9 +98,7 @@ describe('WebSocket session recovery', () => {
     webSocketExtension.ws.close();
     await waitFor({interval: 5000});
     await webSocketExtension.reconnect(); // re-connect but do not recover session
-    expect(
-      webSocketExtension.connectionDetails?.body.recoveryState
-    ).toBeUndefined();
+    expect(webSocketExtension.connectionDetails.recoveryState).toBeUndefined();
     await rc
       .restapi()
       .account()
@@ -143,9 +137,7 @@ describe('WebSocket session recovery', () => {
       // debugMode: true,
     });
     await rc.installExtension(webSocketExtension);
-    expect(
-      webSocketExtension.connectionDetails?.body.recoveryState
-    ).toBeUndefined();
+    expect(webSocketExtension.connectionDetails.recoveryState).toBeUndefined();
     let eventCount = 0;
     await webSocketExtension.subscribe(
       ['/restapi/v1.0/account/~/extension/~/message-store'],
@@ -156,7 +148,7 @@ describe('WebSocket session recovery', () => {
     );
     // already connected, connect again will not cause any issues
     await webSocketExtension.recover();
-    expect(webSocketExtension.connectionDetails?.body.recoveryState).toBe(
+    expect(webSocketExtension.connectionDetails.recoveryState).toBe(
       'Successful'
     );
     await rc
@@ -201,7 +193,7 @@ describe('WebSocket session recovery', () => {
   //   await rc.installExtension(webSocketExtension);
   //   console.log(JSON.stringify(webSocketExtension.connectionDetails, null, 2));
   //   expect(
-  //     webSocketExtension.connectionDetails?.body.recoveryState
+  //     webSocketExtension.connectionDetails.recoveryState
   //   ).toBeUndefined();
   //   let eventCount = 0;
   //   await webSocketExtension.subscribe(
@@ -221,7 +213,7 @@ describe('WebSocket session recovery', () => {
   //   });
   //   await webSocketExtension.recover();
   //   console.log(JSON.stringify(webSocketExtension.connectionDetails, null, 2));
-  //   expect(webSocketExtension.connectionDetails?.body.recoveryState).toBe(
+  //   expect(webSocketExtension.connectionDetails.recoveryState).toBe(
   //     'Failed'
   //   );
   //   eventCount = 0;

@@ -150,6 +150,7 @@ class WebSocketExtension extends SdkExtension {
       throw new ConnectionException(event);
     }
     this.connectionDetails = body;
+    this.wsc = meta.wsc!;
     if (recoverSession && this.connectionDetails.recoveryState === 'Failed') {
       recoverSession = false;
     }
