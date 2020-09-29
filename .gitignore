@@ -7,3 +7,4 @@ lib/
 temp.*
 .DS_Store
 rcv.spec.ts
+test/local/
