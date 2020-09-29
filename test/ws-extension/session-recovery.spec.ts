@@ -65,7 +65,7 @@ describe('WebSocket session recovery', () => {
     expect(eventCount).toBeGreaterThan(0);
   });
 
-  test('reconnect but do not recover session ', async () => {
+  test('connect but do not recover session ', async () => {
     if (process.env.IS_LAB_ENV !== 'true') {
       return;
     }
@@ -97,7 +97,7 @@ describe('WebSocket session recovery', () => {
     // here we don't invoke webSocketExtension.revoke() because that will also revoke all subscriptions created
     webSocketExtension.ws.close();
     await waitFor({interval: 5000});
-    await webSocketExtension.reconnect(); // re-connect but do not recover session
+    await webSocketExtension.connect(false); // connect but do not recover session
     expect(webSocketExtension.connectionDetails.recoveryState).toBeUndefined();
     await rc
       .restapi()
@@ -148,9 +148,8 @@ describe('WebSocket session recovery', () => {
     );
     // already connected, connect again will not cause any issues
     await webSocketExtension.recover();
-    expect(webSocketExtension.connectionDetails.recoveryState).toBe(
-      'Successful'
-    );
+    // because it didn't try to recover at all since you had an open WS connection
+    expect(webSocketExtension.connectionDetails.recoveryState).toBe(undefined);
     await rc
       .restapi()
       .account()

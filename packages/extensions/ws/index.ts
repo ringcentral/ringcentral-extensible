@@ -117,17 +117,16 @@ class WebSocketExtension extends SdkExtension {
   }
 
   async recover() {
-    if (this.wsc.token === undefined) {
-      throw new Error('No existing session to recover');
+    if (this.ws && this.ws.readyState === OPEN) {
+      return;
     }
-    await this.connect(true);
+    if (!this.wsc || !this.wsc.token) {
+      return await this.connect(false); // connect to WSG but do not recover
+    }
+    await this.connect(true); // connect to WSG and recover
   }
 
-  async reconnect() {
-    await this.connect(false);
-  }
-
-  private async connect(recoverSession = false) {
+  async connect(recoverSession = false) {
     const r = await this.rc.post('/restapi/oauth/wstoken');
     this.wsToken = r.data as WsToken;
     let wsUri = `${this.wsToken.uri}?access_token=${this.wsToken.ws_access_token}`;
