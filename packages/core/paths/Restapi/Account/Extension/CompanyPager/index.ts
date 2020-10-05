@@ -1,6 +1,6 @@
 import {RestRequestConfig} from '../../../../../Rest';
 import {
-  GetMessageInfoResponse,
+  GetInternalTextMessageInfoResponse,
   CreateInternalTextMessageRequest,
 } from '../../../../../definitions';
 import Parent from '..';
@@ -27,8 +27,8 @@ class Index {
   async post(
     createInternalTextMessageRequest: CreateInternalTextMessageRequest,
     config?: RestRequestConfig
-  ): Promise<GetMessageInfoResponse> {
-    const r = await this.rc.post<GetMessageInfoResponse>(
+  ): Promise<GetInternalTextMessageInfoResponse> {
+    const r = await this.rc.post<GetInternalTextMessageInfoResponse>(
       this.path(),
       createInternalTextMessageRequest,
       undefined,

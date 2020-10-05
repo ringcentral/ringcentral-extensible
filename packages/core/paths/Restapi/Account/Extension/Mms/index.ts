@@ -1,6 +1,6 @@
 import {RestRequestConfig} from '../../../../../Rest';
 import {
-  GetMessageInfoResponse,
+  GetSMSMessageInfoResponse,
   CreateMMSMessage,
 } from '../../../../../definitions';
 import Utils from '../../../../../Utils';
@@ -21,16 +21,16 @@ class Index {
   }
 
   /**
-   * Operation: Create MMS Message
+   * Operation: Send MMS
    * Rate Limit Group: Medium
    * Http post /restapi/v1.0/account/{accountId}/extension/{extensionId}/mms
    */
   async post(
     createMMSMessage: CreateMMSMessage,
     config?: RestRequestConfig
-  ): Promise<GetMessageInfoResponse> {
+  ): Promise<GetSMSMessageInfoResponse> {
     const formData = Utils.getFormData(createMMSMessage);
-    const r = await this.rc.post<GetMessageInfoResponse>(
+    const r = await this.rc.post<GetSMSMessageInfoResponse>(
       this.path(),
       formData,
       undefined,

@@ -1,4 +1,5 @@
 import Sessions from './Sessions';
+import Conference from './Conference';
 import CallOut from './CallOut';
 import Parent from '..';
 import RingCentral from '../../../..';
@@ -18,6 +19,10 @@ class Index {
 
   callOut(): CallOut {
     return new CallOut(this);
+  }
+
+  conference(): Conference {
+    return new Conference(this);
   }
 
   sessions(telephonySessionId: string | null = null): Sessions {

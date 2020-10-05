@@ -4,12 +4,13 @@ class MeetingRecordingInfo {
   id?: string;
 
   /**
+   * Link for recording file download
    */
   contentDownloadUri?: string;
 
   /**
    */
-  contentType?: 'video/mp4' | 'audio/m4a' | 'text/vtt';
+  contentType?: 'video/mp4' | 'audio/m4a' | 'text/plain';
 
   /**
    */

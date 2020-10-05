@@ -6,6 +6,7 @@ import {
 
 class MeetingRequestResource {
   /**
+   * Custom topic of a meeting
    */
   topic?: string;
 
@@ -14,14 +15,17 @@ class MeetingRequestResource {
   meetingType?: 'Instant' | 'Scheduled' | 'ScheduledRecurring' | 'Recurring';
 
   /**
+   * Timing of a meeting
    */
   schedule?: MeetingScheduleResource;
 
   /**
+   * Meeting password
    */
   password?: string;
 
   /**
+   * Meeting host information
    */
   host?: HostInfoRequest;
 
@@ -34,16 +38,18 @@ class MeetingRequestResource {
   startHostVideo?: boolean;
 
   /**
+   * Starting meetings with participant video on/off (true/false)
    */
   startParticipantsVideo?: boolean;
 
   /**
+   * If true, then personal user's meeting ID is applied for creation of this meeting
    */
   usePersonalMeetingId?: boolean;
 
   /**
    */
-  audioOptions?: string[];
+  audioOptions?: ('Phone' | 'ComputerAudio')[];
 
   /**
    * Recurrence settings
@@ -52,9 +58,29 @@ class MeetingRequestResource {
 
   /**
    * Automatic record type
-   * Default: local
+   * Default: none
    */
   autoRecordType?: 'local' | 'cloud' | 'none';
+
+  /**
+   * If true, then only signed-in users can join this meeting
+   */
+  enforceLogin?: boolean;
+
+  /**
+   * If true, then participants are muted on entry
+   */
+  muteParticipantsOnEntry?: boolean;
+
+  /**
+   * If true, then the waiting room for participants is enabled
+   */
+  enableWaitingRoom?: boolean;
+
+  /**
+   * List of global dial-in countries (eg. US, UK, AU, etc.)
+   */
+  globalDialInCountries?: string[];
 }
 
 export default MeetingRequestResource;

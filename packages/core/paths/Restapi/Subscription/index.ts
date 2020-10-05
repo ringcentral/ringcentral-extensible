@@ -30,7 +30,7 @@ class Index {
   }
 
   /**
-   * Operation: Get Subscriptions
+   * Operation: Get Subscription List
    * Rate Limit Group: Light
    * Http get /restapi/v1.0/subscription
    */
@@ -82,7 +82,7 @@ class Index {
   }
 
   /**
-   * Operation: Renew Subscription / Update Event Filters
+   * Operation: Update Subscription
    * Rate Limit Group: Medium
    * Http put /restapi/v1.0/subscription/{subscriptionId}
    */

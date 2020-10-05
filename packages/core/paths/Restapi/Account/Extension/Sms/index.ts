@@ -1,6 +1,6 @@
 import {RestRequestConfig} from '../../../../../Rest';
 import {
-  GetMessageInfoResponse,
+  GetSMSMessageInfoResponse,
   CreateSMSMessage,
 } from '../../../../../definitions';
 import Parent from '..';
@@ -27,8 +27,8 @@ class Index {
   async post(
     createSMSMessage: CreateSMSMessage,
     config?: RestRequestConfig
-  ): Promise<GetMessageInfoResponse> {
-    const r = await this.rc.post<GetMessageInfoResponse>(
+  ): Promise<GetSMSMessageInfoResponse> {
+    const r = await this.rc.post<GetSMSMessageInfoResponse>(
       this.path(),
       createSMSMessage,
       undefined,

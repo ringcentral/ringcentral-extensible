@@ -2,23 +2,27 @@ import {
   MeetingLinks,
   MeetingScheduleResource,
   HostInfoRequest,
-  MeetingOccurrenceInfo,
+  RecurrenceInfo,
 } from './index';
 
 class MeetingResponseResource {
   /**
+   * Link to a meeting resource
    */
   uri?: string;
 
   /**
+   * Universally unique identifier of a meeting"
    */
   uuid?: string;
 
   /**
+   * Internal identifier of a meeting
    */
   id?: string;
 
   /**
+   * Custom topic of a meeting
    */
   topic?: string;
 
@@ -27,6 +31,7 @@ class MeetingResponseResource {
   meetingType?: 'Instant' | 'Scheduled' | 'ScheduledRecurring' | 'Recurring';
 
   /**
+   * Meeting password
    */
   password?: string;
 
@@ -35,41 +40,74 @@ class MeetingResponseResource {
   h323Password?: string;
 
   /**
+   * Status of a meeting
    */
   status?: string;
 
   /**
+   * Meeting links
    */
   links?: MeetingLinks;
 
   /**
+   * Meeting schedule information
    */
   schedule?: MeetingScheduleResource;
 
   /**
+   * Meeting host information
    */
   host?: HostInfoRequest;
 
   /**
+   * If true, then participants can join the meeting before host arrives
    */
   allowJoinBeforeHost?: boolean;
 
   /**
+   * Starting meetings with host video on/off (true/false)
    */
   startHostVideo?: boolean;
 
   /**
+   * Starting meetings with participant video on/off (true/false)
    */
   startParticipantsVideo?: boolean;
 
   /**
    */
-  audioOptions?: string[];
+  audioOptions?: ('Phone' | 'ComputerAudio')[];
 
   /**
-   * List of meeting occurrences
+   * Meeting recurrence information
    */
-  occurrences?: MeetingOccurrenceInfo[];
+  reccurence?: RecurrenceInfo;
+
+  /**
+   * Automatic record type
+   * Default: none
+   */
+  autoRecordType?: 'local' | 'cloud' | 'none';
+
+  /**
+   * If true, then only signed-in users can join this meeting
+   */
+  enforceLogin?: boolean;
+
+  /**
+   * If true, then participants are muted on entry
+   */
+  muteParticipantsOnEntry?: boolean;
+
+  /**
+   * If true, then the waiting room for participants is enabled
+   */
+  enableWaitingRoom?: boolean;
+
+  /**
+   * List of global dial-in countries (eg. US, UK, AU, etc.)
+   */
+  globalDialInCountries?: string[];
 }
 
 export default MeetingResponseResource;

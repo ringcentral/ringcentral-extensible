@@ -1,4 +1,4 @@
-import {PresetInfo, CustomGreetingInfo} from './index';
+import {PresetInfo, CustomGreetingInfoRequest} from './index';
 
 class GreetingInfo {
   /**
@@ -41,7 +41,7 @@ class GreetingInfo {
 
   /**
    */
-  custom?: CustomGreetingInfo;
+  custom?: CustomGreetingInfoRequest;
 }
 
 export default GreetingInfo;

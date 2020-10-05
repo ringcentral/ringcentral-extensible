@@ -12,6 +12,7 @@ import Ignore from './Ignore';
 import Reject from './Reject';
 import Unhold from './Unhold';
 import Hold from './Hold';
+import BringIn from './BringIn';
 import {RestRequestConfig} from '../../../../../../Rest';
 import {CallParty, PartyUpdateRequest} from '../../../../../../definitions';
 import Parent from '..';
@@ -84,6 +85,10 @@ class Index {
       config
     );
     return r.data;
+  }
+
+  bringIn(): BringIn {
+    return new BringIn(this);
   }
 
   hold(): Hold {
