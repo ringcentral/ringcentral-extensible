@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@types/js-yaml": "^3.12.5",
-    "@types/ramda": "^0.27.19",
+    "@types/ramda": "^0.27.20",
     "change-case": "^4.1.1",
     "dotenv-override-true": "^6.2.2",
     "js-yaml": "^3.14.0",

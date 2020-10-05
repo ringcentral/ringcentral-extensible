@@ -8,18 +8,18 @@
     "@rc-ex/debug": "^0.5.8",
     "@rc-ex/engage-voice": "^0.1.2",
     "@rc-ex/events": "^0.5.8",
-    "@rc-ex/pubnub": "^0.5.8",
-    "@rc-ex/rate-limit": "^0.5.8",
+    "@rc-ex/pubnub": "^0.5.9",
+    "@rc-ex/rate-limit": "^0.5.9",
     "@rc-ex/rcsdk": "^0.5.8",
     "@rc-ex/retry": "^0.5.8",
-    "@rc-ex/ws": "^0.5.8"
+    "@rc-ex/ws": "^0.5.9"
   },
   "devDependencies": {
     "@ringcentral/sdk": "^4.3.3",
     "@types/jest": "^26.0.14",
     "dotenv-override-true": "^6.2.2",
-    "jest": "^26.4.2",
-    "ts-jest": "^26.4.0",
+    "jest": "^26.5.0",
+    "ts-jest": "^26.4.1",
     "wait-for-async": "^0.5.0"
   }
 }

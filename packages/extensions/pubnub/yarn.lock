@@ -55,9 +55,9 @@
   integrity sha512-CgQAm7pjyeF3Gnv78ty4RBVIfluB+Td+2DR8iPaU0prF18pkzptHHP+DoKPfpsJYknKsVZyVsJEu5AuGgAqQ5w==
 
 "@unimodules/core@*":
-  version "5.5.0"
-  resolved "https://registry.yarnpkg.com/@unimodules/core/-/core-5.5.0.tgz#580aaa4887641c1af85e0ab9f8987a5d4424595c"
-  integrity sha512-i99Dw9Ie/8hSCn80hq6nKlklINdtOhhNqRf2BbF0xs03Ej/WYHsp6NaXReTifI5I7OP5djArEu2oYdZAFxFvbA==
+  version "5.5.1"
+  resolved "https://registry.yarnpkg.com/@unimodules/core/-/core-5.5.1.tgz#82afe960568c58da62c76ea45ca77aa43a31ce13"
+  integrity sha512-4OADQJqQ52TsCzfK+xUGWjt3zZADYxRvBZe8JXrnx2qGMXhFFUUn2JMEZT3nDt4QwtM+rIp9BsrQCMIPlXCOHg==
   dependencies:
     compare-versions "^3.4.0"
 
@@ -573,10 +573,10 @@ proxy-from-env@^1.0.0:
   resolved "https://registry.yarnpkg.com/proxy-from-env/-/proxy-from-env-1.1.0.tgz#e102f16ca355424865755d2c9e8ea4f24d58c3e2"
   integrity sha512-D+zkORCbA9f1tdWRK0RaCR3GPv50cMxcrz4X8k5LTSUD1Dkw47mKJEZQNunItRTkWwgtaUSo1RVFRIG9ZXiFYg==
 
-pubnub@^4.29.8:
-  version "4.29.8"
-  resolved "https://registry.yarnpkg.com/pubnub/-/pubnub-4.29.8.tgz#0970ddd4cbbcbf00f12a2fdcaa90e071457ca1b6"
-  integrity sha512-tND+tkCLE1yg+6P4TjiNrguAS/grl89nj24QOeFxVoZwrvk+7UyfxQMQges/l1ckuHlYaD0pYeNsWcTwH2k2Vw==
+pubnub@^4.29.9:
+  version "4.29.9"
+  resolved "https://registry.yarnpkg.com/pubnub/-/pubnub-4.29.9.tgz#b23fd273883a4af6b4ff284bfaf3f179966450d6"
+  integrity sha512-+cKtPozFu2VswhXF+5Hka9yIgZFLHQ1pDofK/kBfOgsA9zgfYL3HYvVkDJeqftT7vM4IdM16JnAyF1SL5/dUKA==
   dependencies:
     "@babel/runtime" "^7.10.5"
     agentkeepalive "^3.5.2"
@@ -588,9 +588,9 @@ pubnub@^4.29.8:
     superagent-proxy "^2.0.0"
 
 pvtsutils@^1.0.11:
-  version "1.0.12"
-  resolved "https://registry.yarnpkg.com/pvtsutils/-/pvtsutils-1.0.12.tgz#44f2902ae802012946bdc800fcfe46cb3a63820e"
-  integrity sha512-fudCcWFUE7WPHMRVdlEDdeaeLf+8hvZFvfJJ+p8GZlwrrdoiVfv7WZaPt6k7k/NZjMxR8yUbbH51hpwlSmLHiQ==
+  version "1.0.14"
+  resolved "https://registry.yarnpkg.com/pvtsutils/-/pvtsutils-1.0.14.tgz#002a07d5a47b00aa9191889e450493390ebffefc"
+  integrity sha512-X9SBWQ9ceNAEEgLweoE7m7P6LDnZ3pZADBq7utQQV4pQ1vj7uQIAXaAQRCz/4nKLKQRT9ZrHOuxailKqBiztrg==
   dependencies:
     tslib "^2.0.1"
 
