@@ -101,7 +101,5 @@ yarn lerna add ramda --scope=@rc-ex/debug
 - refactor code generator
     - it was converted from js, lots of explicit any
     - update `code-generator/.eslintrc.json`
-- compare it with C# sdk and see what are missing
-- https://github.com/ringcentral/ringcentral-extensible/issues/9
 - Extension to refresh token
 - Extension to do pagination
