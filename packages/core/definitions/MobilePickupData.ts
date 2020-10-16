@@ -2,7 +2,7 @@ class MobilePickupData {
   /**
    * The list of extension IDs, configured to pick a call from Desktop/Mobile applications
    */
-  ccMailboxes?: string;
+  ccMailboxes?: string[];
 
   /**
    * SIP proxy registration name

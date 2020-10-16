@@ -21,7 +21,7 @@ export type RestOptions = {
 };
 
 export type RestMethod = Method;
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
+// eslint-disable-next-line @typescript-eslint/no-explicit-any,@typescript-eslint/no-unused-vars
 export type RestResponse<T = any> = AxiosResponse;
 export type RestRequestConfig = AxiosRequestConfig;
 

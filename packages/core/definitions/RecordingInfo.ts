@@ -1,6 +1,6 @@
 class RecordingInfo {
   /**
-   * Internal identifier of a Recording resource
+   * Internal identifier of a recording resource
    */
   id?: string;
 

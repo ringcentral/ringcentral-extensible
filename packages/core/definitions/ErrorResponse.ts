@@ -1,11 +1,14 @@
-import {Error} from './index';
-
-// Format of response in case that any error occured during request processing
+// Error response
 class ErrorResponse {
   /**
-   * Collection of all gathered errors
+   * Error code
    */
-  errors?: Error[];
+  errorCode?: string;
+
+  /**
+   * Human-readable description of an error. Not suitable for end users
+   */
+  description?: string;
 }
 
 export default ErrorResponse;

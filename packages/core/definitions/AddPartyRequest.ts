@@ -3,7 +3,7 @@ class AddPartyRequest {
    * Internal identifier of a call session
    * Required
    */
-  sessionId?: string;
+  telephonySessionId?: string;
 
   /**
    * Internal identifier of a party that should be added to the call session

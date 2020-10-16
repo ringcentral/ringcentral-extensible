@@ -21,7 +21,7 @@ describe('fax', () => {
       return;
     }
     const r = await rc.get<Buffer>(
-      faxMessages.records?.[0].attachments?.[0].uri!,
+      faxMessages.records?.[0].attachments?.[0].uri ?? '',
       undefined,
       {responseType: 'arraybuffer'}
     );

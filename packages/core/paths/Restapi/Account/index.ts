@@ -17,6 +17,7 @@ import Recording from './Recording';
 import ActiveCalls from './ActiveCalls';
 import CallLogSync from './CallLogSync';
 import CallLog from './CallLog';
+import A2pSms from './A2pSms';
 import CallRecording from './CallRecording';
 import IvrMenus from './IvrMenus';
 import IvrPrompts from './IvrPrompts';
@@ -107,6 +108,10 @@ class Index {
 
   callRecording(): CallRecording {
     return new CallRecording(this);
+  }
+
+  a2pSms(): A2pSms {
+    return new A2pSms(this);
   }
 
   callLog(callRecordId: string | null = null): CallLog {

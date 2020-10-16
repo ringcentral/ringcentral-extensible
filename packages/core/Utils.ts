@@ -68,7 +68,12 @@ class Utils {
   }
 
   static isAttachment(obj: {}): boolean {
-    return 'filename' in obj && 'content' in obj;
+    return (
+      typeof obj === 'object' &&
+      obj !== null &&
+      'filename' in obj &&
+      'content' in obj
+    );
   }
 
   static getFormData(...objects: {}[]): FormData {

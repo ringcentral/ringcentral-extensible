@@ -228,7 +228,10 @@ class Index {
         formUrlEncoded = true;
       } else if (
         operation.detail.consumes &&
-        operation.detail.consumes[0].startsWith('multipart/')
+        R.any(
+          (item: string) => item.startsWith('multipart/'),
+          operation.detail.consumes
+        )
       ) {
         multipart = true;
       } else if (

@@ -3,6 +3,7 @@ import {
   GlipPostsList,
   ReadGlipPostsParameters,
   GlipPostInfo,
+  GlipPostPostBody,
   GlipPatchPostBody,
 } from '../../../../../definitions';
 import Parent from '..';
@@ -45,13 +46,17 @@ class Index {
   }
 
   /**
-   * Operation: createGlipPost
+   * Operation: Create Post
    * Rate Limit Group: Medium
    * Http post /restapi/v1.0/glip/chats/{chatId}/posts
    */
-  async post(config?: RestRequestConfig): Promise<GlipPostInfo> {
+  async post(
+    glipPostPostBody: GlipPostPostBody,
+    config?: RestRequestConfig
+  ): Promise<GlipPostInfo> {
     const r = await this.rc.post<GlipPostInfo>(
       this.path(false),
+      glipPostPostBody,
       undefined,
       config
     );
