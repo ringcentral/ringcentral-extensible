@@ -1,5 +1,10 @@
 class ListA2PsmsParameters {
   /**
+   * Internal identifier of a message batch used for filtering records
+   */
+  batchId?: string;
+
+  /**
    * Token of a page to be retrieved
    */
   pageToken?: string;

@@ -21,16 +21,6 @@ class MessageDetailsResponse {
   text?: string;
 
   /**
-   * Time at which the message is scheduled to be sent
-   */
-  scheduledAt?: string;
-
-  /**
-   * Time when this message will not be attempted to be sent, returned if a message is scheduled or in the 'Queued' state
-   */
-  expiresAt?: string;
-
-  /**
    * Time of message creation
    */
   createdAt?: string;

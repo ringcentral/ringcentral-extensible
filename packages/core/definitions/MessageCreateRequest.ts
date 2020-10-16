@@ -10,16 +10,6 @@ class MessageCreateRequest {
    * Text to send
    */
   text?: string;
-
-  /**
-   * Scheduled time to send this message. Overrides batch's `scheduledAt` attribute when sending
-   */
-  scheduledAt?: string;
-
-  /**
-   * Number of seconds since `scheduledAt` this message is relevant for. If more time than `expiresIn` has passed since `scheduledAt` (or current time, if no scheduled time specified) and the message has not been sent yet, it becomes discarded.
-   */
-  expiresIn?: number;
 }
 
 export default MessageCreateRequest;
