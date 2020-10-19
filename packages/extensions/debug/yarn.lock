@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@rc-ex/core@^0.5.8":
-  version "0.5.8"
-  resolved "https://registry.yarnpkg.com/@rc-ex/core/-/core-0.5.8.tgz#ae4e0e2c404396e869190a82217b2b909daa56f1"
-  integrity sha512-j2rrei/IVQtfSk0EhckBJW5bQvLv6oC7ru7dySZq8UudTd1pu0kh+TWG7CimQWWNYW3sISLvIvaRZnhzHaIkNQ==
+"@rc-ex/core@^0.6.0":
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/@rc-ex/core/-/core-0.6.0.tgz#4aad6af129aab99c6a3af851fc549149e2fb27b3"
+  integrity sha512-C9yWotVO8bSBW0TfE7Bahsm36hitdBg9lNOc0ZUbwwNS5JF6Y0eQIvUXJqXgdMU+qYh5bm9GmeQgYKp6SKT/8Q==
   dependencies:
     "@types/qs" "^6.9.5"
     axios "^0.20.0"
