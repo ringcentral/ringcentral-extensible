@@ -16,10 +16,22 @@ describe('SMS', () => {
       extension: process.env.RINGCENTRAL_EXTENSION!,
       password: process.env.RINGCENTRAL_PASSWORD!,
     });
-    // rc.restapi().account().a2pSms();
-    // const messageInfo = await rc
-    // expect(messageInfo).not.toBeUndefined();
-    // expect(messageInfo.id).not.toBeUndefined();
+    const messageBatchResponse = await rc
+      .restapi()
+      .account()
+      .a2pSms()
+      .batch()
+      .post({
+        from: process.env.RINGCENTRAL_FROM!,
+        text: 'hello world',
+        messages: [
+          {
+            to: [process.env.RINGCENTRAL_TO!],
+            text: 'hello world 2', // override 'hello world'
+          },
+        ],
+      });
+    expect(messageBatchResponse).not.toBeUndefined();
     await rc.revoke();
   });
 });
