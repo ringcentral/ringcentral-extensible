@@ -27,7 +27,7 @@ console.log(discoveryExtension.initialEntryPoints)
 const extInfo = await rc.restapi().account().extension().get();
 ```
 
-### with @ringcentral/sdk
+### With @ringcentral/sdk
 
 ```ts
 const rc = new RingCentral();
