@@ -39,7 +39,6 @@ class DiscoveryExtension extends SdkExtension {
     );
     this.initialEntryPoints = r.data;
     this.rc.rest.server = this.initialEntryPoints!.coreApi.baseUri;
-    console.log(this.rc.rest.server);
   }
 }
 
