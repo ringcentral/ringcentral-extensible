@@ -17,9 +17,13 @@ import RingCentral from '@rc-ex/core';
 import DiscoveryExtension from '@rc-ex/discovery';
 
 const rc = new RingCentral();
-const discoveryExtension = new DiscoveryExtension();
-await rc.installExtension(discoveryExtension);
-await discoveryExtension.discover();
+// install Discovery Extension
+const discoveryExtension = new DiscoveryExtension({
+    discoveryServer: process.env.RINGCENTRAL_DISCOVERY_SERVER!,
+    brandId: '1210',
+});
+rc.installExtension(discoveryExtension);
+await discoveryExtension.discover(); // discover entry points
 
 console.log(discoveryExtension.initialEntryPoints)
 
