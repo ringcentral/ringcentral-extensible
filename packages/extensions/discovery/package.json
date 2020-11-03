@@ -1,0 +1,26 @@
+{
+  "name": "@rc-ex/discovery",
+  "version": "0.1.0",
+  "description": "Discovery extension for ringcentral-extensible project",
+  "author": "Tyler Liu <tyler.liu@ringcentral.com>",
+  "homepage": "https://github.com/ringcentral/ringcentral-extensible/tree/master/packages/extensions/discovery",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ringcentral/ringcentral-extensible.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ringcentral/ringcentral-extensible/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "@rc-ex/core": "^0.6.0"
+  },
+  "peerDependencies": {
+    "@rc-ex/core": "^0.6.0"
+  }
+}
