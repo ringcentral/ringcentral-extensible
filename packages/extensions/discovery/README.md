@@ -16,7 +16,7 @@ yarn add @rc-ex/discovery
 import RingCentral from '@rc-ex/core';
 import DiscoveryExtension from '@rc-ex/discovery';
 
-const rc = new RingCentral(...);
+const rc = new RingCentral();
 const discoveryExtension = new DiscoveryExtension();
 await rc.installExtension(discoveryExtension);
 await discoveryExtension.discover();
