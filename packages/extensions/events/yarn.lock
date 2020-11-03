@@ -2,13 +2,13 @@
 # yarn lockfile v1
 
 
-"@rc-ex/core@^0.6.0":
-  version "0.6.0"
-  resolved "https://registry.yarnpkg.com/@rc-ex/core/-/core-0.6.0.tgz#4aad6af129aab99c6a3af851fc549149e2fb27b3"
-  integrity sha512-C9yWotVO8bSBW0TfE7Bahsm36hitdBg9lNOc0ZUbwwNS5JF6Y0eQIvUXJqXgdMU+qYh5bm9GmeQgYKp6SKT/8Q==
+"@rc-ex/core@^0.6.1":
+  version "0.6.1"
+  resolved "https://registry.yarnpkg.com/@rc-ex/core/-/core-0.6.1.tgz#0ddf53aa9349cde378a0b5e38e89b0cac78b10e5"
+  integrity sha512-zytRlo4vHvEZnHyGxCkJox1MfKwn0qGTEe0Lw6KJE1kGH/aAJa+wHUDdbAF5eKvyo0zmq/BFqKDJBYMjcQ2atQ==
   dependencies:
     "@types/qs" "^6.9.5"
-    axios "^0.20.0"
+    axios "^0.21.0"
     form-data "^3.0.0"
     qs "^6.9.4"
 
@@ -22,10 +22,10 @@ asynckit@^0.4.0:
   resolved "https://registry.yarnpkg.com/asynckit/-/asynckit-0.4.0.tgz#c79ed97f7f34cb8f2ba1bc9790bcc366474b4b79"
   integrity sha1-x57Zf380y48robyXkLzDZkdLS3k=
 
-axios@^0.20.0:
-  version "0.20.0"
-  resolved "https://registry.yarnpkg.com/axios/-/axios-0.20.0.tgz#057ba30f04884694993a8cd07fa394cff11c50bd"
-  integrity sha512-ANA4rr2BDcmmAQLOKft2fufrtuvlqR+cXNNinUmvfeSNCOF98PZL+7M/v1zIdGo7OLjEA9J2gXJL+j4zGsl0bA==
+axios@^0.21.0:
+  version "0.21.0"
+  resolved "https://registry.yarnpkg.com/axios/-/axios-0.21.0.tgz#26df088803a2350dff2c27f96fef99fe49442aca"
+  integrity sha512-fmkJBknJKoZwem3/IKSSLpkdNXZeBu5Q7GA/aRsr2btgrptmSCxi2oFjZHqGdK9DoTil9PIHlPIZw2EcRJXRvw==
   dependencies:
     follow-redirects "^1.10.0"
 
