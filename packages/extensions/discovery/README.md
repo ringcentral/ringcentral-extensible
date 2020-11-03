@@ -20,7 +20,11 @@ const rc = new RingCentral(...);
 const discoveryExtension = new DiscoveryExtension();
 await rc.installExtension(discoveryExtension);
 await discoveryExtension.discover();
+
 console.log(discoveryExtension.initialEntryPoints)
+
+// Then you don't have to manually configure the platform API server
+const extInfo = await rc.restapi().account().extension().get();
 ```
 
 ### with @ringcentral/sdk
