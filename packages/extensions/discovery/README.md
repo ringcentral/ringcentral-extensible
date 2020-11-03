@@ -28,7 +28,6 @@ await discoveryExtension.discover(); // discover entry points
 console.log(discoveryExtension.initialEntryPoints)
 
 // Then you don't have to manually configure the platform API server
-const extInfo = await rc.restapi().account().extension().get();
 ```
 
 ### With @ringcentral/sdk
