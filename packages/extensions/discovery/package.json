@@ -17,6 +17,9 @@
   "publishConfig": {
     "access": "public"
   },
+  "dependencies": {
+    "axios": "^0.21.0"
+  },
   "devDependencies": {
     "@rc-ex/core": "^0.6.0"
   },

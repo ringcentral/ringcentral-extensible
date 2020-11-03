@@ -47,7 +47,6 @@ export default class Rest {
     this.appVersion = options.appVersion ?? '0.0.1';
 
     this.httpClient = axios.create({
-      baseURL: this.server,
       headers: {
         'X-User-Agent': `${this.appName}/${this.appVersion} ringcentral-extensible/core/${version}`,
       },
@@ -78,6 +77,7 @@ export default class Rest {
     config?: RestRequestConfig
   ): Promise<RestResponse<T>> {
     const _config: RestRequestConfig = {
+      baseURL: this.server,
       method,
       url: endpoint,
       data: content,
