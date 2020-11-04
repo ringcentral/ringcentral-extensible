@@ -70,6 +70,8 @@ class DiscoveryExtension extends SdkExtension {
         const r = await axios.get(uri.toString());
         this.initialDiscovery = r.data;
         this.rc.rest.server = this.initialDiscovery!.coreApi.baseUri;
+        this.initialRetrySettings.retryCount = this.initialDiscovery!.retryCount;
+        this.initialRetrySettings.retryInterval = this.initialDiscovery!.retryInterval;
         break;
       } catch (e) {
         if (e.response) {
