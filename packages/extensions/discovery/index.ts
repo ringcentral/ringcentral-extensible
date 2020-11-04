@@ -1,6 +1,7 @@
 import RingCentral from '@rc-ex/core';
 import SdkExtension from '@rc-ex/core/lib/SdkExtension';
 import axios from 'axios';
+import URI from 'urijs';
 
 export type DiscoveryOptions = {
   discoveryServer?: string;
@@ -25,7 +26,7 @@ export type InitialDiscovery = {
 
 class DiscoveryExtension extends SdkExtension {
   discoveryServer: string;
-  brandId: string;
+  brandId?: string;
   rc!: RingCentral;
   initialDiscovery?: InitialDiscovery;
 
@@ -33,7 +34,7 @@ class DiscoveryExtension extends SdkExtension {
     super();
     this.discoveryServer =
       options?.discoveryServer ?? 'https://discovery.ringcentral.com';
-    this.brandId = options?.brandId ?? '1210';
+    this.brandId = options?.brandId;
   }
 
   async install(rc: RingCentral) {
@@ -41,9 +42,13 @@ class DiscoveryExtension extends SdkExtension {
   }
 
   async discover() {
-    const r = await axios.get(
-      `${process.env.RINGCENTRAL_DISCOVERY_SERVER}/.well-known/entry-points/initial?clientId=${process.env.RINGCENTRAL_CLIENT_ID}`
-    );
+    let uri = new URI(this.discoveryServer)
+      .directory('/.well-known/entry-points/initial')
+      .addQuery('clientId', this.rc.rest.clientId);
+    if (this.brandId) {
+      uri = uri.addQuery('brandId', this.brandId);
+    }
+    const r = await axios.get(uri.toString());
     this.initialDiscovery = r.data;
     this.rc.rest.server = this.initialDiscovery!.coreApi.baseUri;
   }

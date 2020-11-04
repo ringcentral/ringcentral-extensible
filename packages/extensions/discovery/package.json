@@ -18,7 +18,9 @@
     "access": "public"
   },
   "dependencies": {
-    "axios": "^0.21.0"
+    "@types/urijs": "^1.19.13",
+    "axios": "^0.21.0",
+    "urijs": "^1.19.2"
   },
   "devDependencies": {
     "@rc-ex/core": "^0.6.1"

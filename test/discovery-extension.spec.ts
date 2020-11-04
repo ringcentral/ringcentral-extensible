@@ -13,13 +13,14 @@ describe('discovery', () => {
     if (process.env.IS_PROD_ENV !== 'true') {
       return;
     }
-    const rc = new RingCentral();
+    const rc = new RingCentral({
+      clientId: process.env.RINGCENTRAL_CLIENT_ID,
+    });
     const debugExtension = new DebugExtension();
     rc.installExtension(debugExtension);
     debugExtension.enabled = false; // comment out this line to enable debug mode
     const discoveryExtension = new DiscoveryExtension({
       discoveryServer: process.env.RINGCENTRAL_DISCOVERY_SERVER!,
-      brandId: '1210',
     });
     rc.installExtension(discoveryExtension);
     await discoveryExtension.discover(); // discover entry points
@@ -31,12 +32,13 @@ describe('discovery', () => {
     if (process.env.IS_PROD_ENV !== 'true') {
       return;
     }
-    const rc = new RingCentral();
+    const rc = new RingCentral({
+      clientId: process.env.RINGCENTRAL_CLIENT_ID,
+    });
 
     // install Discovery Extension
     const discoveryExtension = new DiscoveryExtension({
       discoveryServer: process.env.RINGCENTRAL_DISCOVERY_SERVER!,
-      brandId: '1210',
     });
     rc.installExtension(discoveryExtension);
     await discoveryExtension.discover(); // discover entry points
@@ -45,7 +47,7 @@ describe('discovery', () => {
     const sdk = new SDK({
       clientId: process.env.RINGCENTRAL_CLIENT_ID!,
       clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET!,
-      server: discoveryExtension.initialEntryPoints!.coreApi.baseUri, // use the discovered entry point
+      server: discoveryExtension.initialDiscovery!.coreApi.baseUri, // use the discovered entry point
     });
     await sdk.login({
       username: process.env.RINGCENTRAL_USERNAME!,
