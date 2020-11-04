@@ -1,5 +1,6 @@
 import RingCentral from '@rc-ex/core';
 import SdkExtension from '@rc-ex/core/lib/SdkExtension';
+import RestException from '@rc-ex/core/lib/RestException';
 import axios from 'axios';
 import URI from 'urijs';
 
@@ -48,9 +49,16 @@ class DiscoveryExtension extends SdkExtension {
     if (this.brandId) {
       uri = uri.addQuery('brandId', this.brandId);
     }
-    const r = await axios.get(uri.toString());
-    this.initialDiscovery = r.data;
-    this.rc.rest.server = this.initialDiscovery!.coreApi.baseUri;
+    try {
+      const r = await axios.get(uri.toString());
+      this.initialDiscovery = r.data;
+      this.rc.rest.server = this.initialDiscovery!.coreApi.baseUri;
+    } catch (e) {
+      if (e.response) {
+        throw new RestException(e.response);
+      }
+      throw e;
+    }
   }
 }
 
