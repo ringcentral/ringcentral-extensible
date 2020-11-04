@@ -3,8 +3,8 @@ import SdkExtension from '@rc-ex/core/lib/SdkExtension';
 import axios from 'axios';
 
 export type DiscoveryOptions = {
-  discoveryServer: string;
-  brandId: string;
+  discoveryServer?: string;
+  brandId?: string;
 };
 
 export type InitialEntryPoints = {
