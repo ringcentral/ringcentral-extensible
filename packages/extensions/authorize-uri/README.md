@@ -67,3 +67,9 @@ await rc.authorize({
 
 - [Online demo](https://chuntaoliu.com/pkce-demo-ts/)
 - [Source code](https://github.com/tylerlong/pkce-demo-ts)
+
+
+## Base Authorization URI
+
+Optionally, you can specify `baseAuthorizationUri` as parameter to the constructor of this extension.
+If it's not specified, `${rc.rest.server}/restapi/oauth/authorize` is used as `baseAuthorizationUri`.
