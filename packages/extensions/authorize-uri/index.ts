@@ -7,9 +7,17 @@ import {createHash, randomBytes} from 'crypto';
 class AuthorizeUriExtension extends SdkExtension {
   rc!: RingCentral;
   codeVerifier?: string;
+  baseAuthorizationUri?: string;
+
+  constructor(baseAuthorizationUri?: string) {
+    super();
+    this.baseAuthorizationUri = baseAuthorizationUri;
+  }
+
   async install(rc: RingCentral) {
     this.rc = rc;
   }
+
   buildUri(authorizeRequest: AuthorizeRequest): string {
     if (!authorizeRequest.response_type) {
       authorizeRequest.response_type = 'code';
@@ -34,10 +42,13 @@ class AuthorizeUriExtension extends SdkExtension {
         .replace(/=/g, '');
     }
 
-    return URI(this.rc.rest.server)
-      .directory('/restapi/oauth/authorize')
-      .search(authorizeRequest as QueryDataMap)
-      .toString();
+    let uri;
+    if (this.baseAuthorizationUri) {
+      uri = new URI(this.baseAuthorizationUri);
+    } else {
+      uri = new URI(this.rc.rest.server).directory('/restapi/oauth/authorize');
+    }
+    return uri.search(authorizeRequest as QueryDataMap).toString();
   }
 }
 
