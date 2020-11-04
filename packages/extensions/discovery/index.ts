@@ -3,10 +3,17 @@ import SdkExtension from '@rc-ex/core/lib/SdkExtension';
 import RestException from '@rc-ex/core/lib/RestException';
 import axios from 'axios';
 import URI from 'urijs';
+import waitFor from 'wait-for-async';
+
+export type RetrySettings = {
+  retryCount: number;
+  retryInterval: number;
+};
 
 export type DiscoveryOptions = {
   discoveryServer?: string;
   brandId?: string;
+  initialRetrySettings?: RetrySettings;
 };
 
 export type InitialDiscovery = {
@@ -28,7 +35,9 @@ export type InitialDiscovery = {
 class DiscoveryExtension extends SdkExtension {
   discoveryServer: string;
   brandId?: string;
+  initialRetrySettings: RetrySettings;
   rc!: RingCentral;
+
   initialDiscovery?: InitialDiscovery;
 
   constructor(options?: DiscoveryOptions) {
@@ -36,6 +45,10 @@ class DiscoveryExtension extends SdkExtension {
     this.discoveryServer =
       options?.discoveryServer ?? 'https://discovery.ringcentral.com';
     this.brandId = options?.brandId;
+    this.initialRetrySettings = options?.initialRetrySettings ?? {
+      retryCount: 3,
+      retryInterval: 3,
+    };
   }
 
   async install(rc: RingCentral) {
@@ -49,15 +62,28 @@ class DiscoveryExtension extends SdkExtension {
     if (this.brandId) {
       uri = uri.addQuery('brandId', this.brandId);
     }
-    try {
-      const r = await axios.get(uri.toString());
-      this.initialDiscovery = r.data;
-      this.rc.rest.server = this.initialDiscovery!.coreApi.baseUri;
-    } catch (e) {
-      if (e.response) {
-        throw new RestException(e.response);
+    let retryCount = 0;
+    // eslint-disable-next-line no-constant-condition
+    while (true) {
+      try {
+        retryCount += 1;
+        const r = await axios.get(uri.toString());
+        this.initialDiscovery = r.data;
+        this.rc.rest.server = this.initialDiscovery!.coreApi.baseUri;
+        break;
+      } catch (e) {
+        if (e.response) {
+          if (retryCount < this.initialRetrySettings.retryCount) {
+            await waitFor({
+              interval: this.initialRetrySettings.retryInterval * 1000,
+            });
+            continue;
+          } else {
+            throw new RestException(e.response);
+          }
+        }
+        throw e;
       }
-      throw e;
     }
   }
 }
