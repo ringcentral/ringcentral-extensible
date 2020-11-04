@@ -7,10 +7,17 @@ export type DiscoveryOptions = {
   brandId?: string;
 };
 
-export type InitialEntryPoints = {
+export type InitialDiscovery = {
   version: string;
   retryCount: number;
   retryInterval: number;
+  discoveryApi: {
+    defaultExternalUri: string;
+  };
+  authApi: {
+    authorizationUri: string;
+    oidcDiscoveryUri: string;
+  };
   coreApi: {
     baseUri: string;
   };
@@ -20,7 +27,7 @@ class DiscoveryExtension extends SdkExtension {
   discoveryServer: string;
   brandId: string;
   rc!: RingCentral;
-  initialEntryPoints?: InitialEntryPoints;
+  initialDiscovery?: InitialDiscovery;
 
   constructor(options?: DiscoveryOptions) {
     super();
@@ -37,8 +44,8 @@ class DiscoveryExtension extends SdkExtension {
     const r = await axios.get(
       `${process.env.RINGCENTRAL_DISCOVERY_SERVER}/.well-known/entry-points/initial?clientId=${process.env.RINGCENTRAL_CLIENT_ID}`
     );
-    this.initialEntryPoints = r.data;
-    this.rc.rest.server = this.initialEntryPoints!.coreApi.baseUri;
+    this.initialDiscovery = r.data;
+    this.rc.rest.server = this.initialDiscovery!.coreApi.baseUri;
   }
 }
 
