@@ -8,18 +8,22 @@ import SdkExtension from '@rc-ex/core/lib/SdkExtension';
 import RestException from '@rc-ex/core/lib/RestException';
 import SDK from '@ringcentral/sdk';
 
-class RcSdkExtension extends SdkExtension {
+export type RcSdkOptions = {
   sdk: SDK;
+};
 
-  constructor(sdk: SDK) {
+class RcSdkExtension extends SdkExtension {
+  options: RcSdkOptions;
+
+  constructor(options: RcSdkOptions) {
     super();
-    this.sdk = sdk;
+    this.options = options;
   }
 
   async install(rc: RingCentral) {
     Object.defineProperty(rc, 'token', {
       get: async () => {
-        return await this.sdk.platform().auth().data();
+        return await this.options.sdk.platform().auth().data();
       },
     });
     const request = rc.request.bind(rc);
@@ -33,7 +37,7 @@ class RcSdkExtension extends SdkExtension {
       if (!this.enabled) {
         return request<T>(method, endpoint, content, queryParams, config);
       }
-      const r = await this.sdk.send({
+      const r = await this.options.sdk.send({
         method: method,
         url: endpoint,
         body: content,
