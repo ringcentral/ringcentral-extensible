@@ -4,14 +4,18 @@ import {AuthorizeRequest} from '@rc-ex/core/lib/definitions';
 import URI, {QueryDataMap} from 'urijs';
 import {createHash, randomBytes} from 'crypto';
 
+export type AuthorizeUriOptions = {
+  baseUri?: string;
+};
+
 class AuthorizeUriExtension extends SdkExtension {
   rc!: RingCentral;
   codeVerifier?: string;
-  baseAuthorizationUri?: string;
+  options: AuthorizeUriOptions;
 
-  constructor(baseAuthorizationUri?: string) {
+  constructor(options?: AuthorizeUriOptions) {
     super();
-    this.baseAuthorizationUri = baseAuthorizationUri;
+    this.options = options ?? {};
   }
 
   async install(rc: RingCentral) {
@@ -43,8 +47,8 @@ class AuthorizeUriExtension extends SdkExtension {
     }
 
     let uri;
-    if (this.baseAuthorizationUri) {
-      uri = new URI(this.baseAuthorizationUri);
+    if (this.options.baseUri) {
+      uri = new URI(this.options.baseUri);
     } else {
       uri = new URI(this.rc.rest.server).directory('/restapi/oauth/authorize');
     }
