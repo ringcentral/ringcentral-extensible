@@ -34,16 +34,19 @@ export type EventsOptions = {
 
 class EventsExtension extends SdkExtension {
   eventEmitter = new EventEmitter();
-  enabledEvents?: Events[];
+  options: EventsOptions;
 
-  constructor(options?: EventsOptions) {
+  constructor(options: EventsOptions = {}) {
     super();
-    this.enabledEvents = options?.enabledEvents;
+    this.options = options;
   }
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   emit(event: Events, data: any) {
-    if (!this.enabledEvents || this.enabledEvents.includes(event)) {
+    if (
+      !this.options.enabledEvents ||
+      this.options.enabledEvents.includes(event)
+    ) {
       this.eventEmitter.emit(event, data);
     }
   }
