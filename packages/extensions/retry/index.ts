@@ -22,24 +22,20 @@ export type RetryOptions = {
 };
 
 class RetryExtension extends SdkExtension {
-  shouldRetry: ShouldRetry;
-  retryInterval: RetryInterval;
+  options: RetryOptions;
 
-  constructor(options?: RetryOptions) {
+  constructor(options: RetryOptions = {}) {
     super();
-    this.shouldRetry =
-      options?.shouldRetry ??
-      ((restException, retriesAttempted) => {
-        return (
-          retriesAttempted < 3 &&
-          [429, 503].includes(restException.response.status)
-        );
-      });
-    this.retryInterval =
-      options?.retryInterval ??
-      ((restException, retriesAttempted) => {
-        return 60 * 1000 * Math.pow(2, retriesAttempted); // exponential back off
-      });
+    this.options = options;
+    this.options.shouldRetry ||= (restException, retriesAttempted) => {
+      return (
+        retriesAttempted < 3 &&
+        [429, 503].includes(restException.response.status)
+      );
+    };
+    this.options.retryInterval ||= (restException, retriesAttempted) => {
+      return 60 * 1000 * Math.pow(2, retriesAttempted); // exponential back off
+    };
   }
 
   async install(rc: RingCentral) {
@@ -59,8 +55,10 @@ class RetryExtension extends SdkExtension {
         return await request<T>(method, endpoint, content, queryParams, config);
       } catch (e) {
         if (e instanceof RestException) {
-          if (this.shouldRetry(e, retriesAttempted)) {
-            await waitFor({interval: this.retryInterval(e, retriesAttempted)});
+          if (this.options.shouldRetry!(e, retriesAttempted)) {
+            await waitFor({
+              interval: this.options.retryInterval!(e, retriesAttempted),
+            });
             return await newRequest<T>(
               method,
               endpoint,
