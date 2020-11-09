@@ -16,20 +16,21 @@ type EngageVoiceOptions = {
 };
 
 class EngageVoiceExtension extends SdkExtension {
-  server: string;
+  options: EngageVoiceOptions;
   rc!: RingCentral;
   httpClient!: AxiosInstance;
   token?: AccessTokenUserDetails;
 
-  constructor(options?: EngageVoiceOptions) {
+  constructor(options: EngageVoiceOptions = {}) {
     super();
-    this.server = options?.server ?? 'https://engage.ringcentral.com';
+    this.options = options;
+    this.options.server ||= 'https://engage.ringcentral.com';
   }
 
   async install(rc: RingCentral) {
     this.rc = rc;
     this.httpClient = axios.create({
-      baseURL: this.server,
+      baseURL: this.options.server,
       headers: {
         'X-User-Agent': `${this.rc.rest.appName}/${this.rc.rest.appVersion} ringcentral-extensible/engage-voice/${version}`,
       },
