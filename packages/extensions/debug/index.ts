@@ -7,16 +7,17 @@ import {
 import Utils from '@rc-ex/core/lib/Utils';
 import SdkExtension from '@rc-ex/core/lib/SdkExtension';
 
-export type LoggingAction = (message: string) => void;
+export type DebugOptions = {
+  loggingAction?: (message: string) => void;
+};
 
 class DebugExtension extends SdkExtension {
-  loggingAction: LoggingAction;
+  options: DebugOptions;
 
-  constructor(
-    loggingAction: LoggingAction = message => console.debug(message)
-  ) {
+  constructor(options: DebugOptions = {}) {
     super();
-    this.loggingAction = loggingAction;
+    this.options = options;
+    this.options.loggingAction ||= message => console.debug(message);
   }
 
   async install(rc: RingCentral) {
@@ -38,7 +39,7 @@ class DebugExtension extends SdkExtension {
         queryParams,
         config
       );
-      this.loggingAction(Utils.formatTraffic(r));
+      this.options.loggingAction!(Utils.formatTraffic(r));
       return r;
     };
   }

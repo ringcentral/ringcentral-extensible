@@ -13,9 +13,9 @@ class AuthorizeUriExtension extends SdkExtension {
   codeVerifier?: string;
   options: AuthorizeUriOptions;
 
-  constructor(options?: AuthorizeUriOptions) {
+  constructor(options: AuthorizeUriOptions = {}) {
     super();
-    this.options = options ?? {};
+    this.options = options;
   }
 
   async install(rc: RingCentral) {
