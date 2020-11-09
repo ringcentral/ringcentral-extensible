@@ -33,19 +33,16 @@ export type InitialDiscovery = {
 };
 
 class DiscoveryExtension extends SdkExtension {
-  discoveryServer: string;
-  brandId?: string;
-  initialRetrySettings: RetrySettings;
   rc!: RingCentral;
+  options: DiscoveryOptions;
 
   initialDiscovery?: InitialDiscovery;
 
-  constructor(options?: DiscoveryOptions) {
+  constructor(options: DiscoveryOptions = {}) {
     super();
-    this.discoveryServer =
-      options?.discoveryServer ?? 'https://discovery.ringcentral.com';
-    this.brandId = options?.brandId;
-    this.initialRetrySettings = options?.initialRetrySettings ?? {
+    this.options = options;
+    this.options.discoveryServer ||= 'https://discovery.ringcentral.com';
+    this.options.initialRetrySettings ||= {
       retryCount: 3,
       retryInterval: 3,
     };
@@ -56,11 +53,11 @@ class DiscoveryExtension extends SdkExtension {
   }
 
   async discover() {
-    let uri = new URI(this.discoveryServer)
+    let uri = new URI(this.options.discoveryServer)
       .directory('/.well-known/entry-points/initial')
       .addQuery('clientId', this.rc.rest.clientId);
-    if (this.brandId) {
-      uri = uri.addQuery('brandId', this.brandId);
+    if (this.options.brandId) {
+      uri = uri.addQuery('brandId', this.options.brandId);
     }
     let retryCount = 0;
     // eslint-disable-next-line no-constant-condition
@@ -70,14 +67,14 @@ class DiscoveryExtension extends SdkExtension {
         const r = await axios.get(uri.toString());
         this.initialDiscovery = r.data;
         this.rc.rest.server = this.initialDiscovery!.coreApi.baseUri;
-        this.initialRetrySettings.retryCount = this.initialDiscovery!.retryCount;
-        this.initialRetrySettings.retryInterval = this.initialDiscovery!.retryInterval;
+        this.options.initialRetrySettings!.retryCount = this.initialDiscovery!.retryCount;
+        this.options.initialRetrySettings!.retryInterval = this.initialDiscovery!.retryInterval;
         break;
       } catch (e) {
         if (e.response) {
-          if (retryCount < this.initialRetrySettings.retryCount) {
+          if (retryCount < this.options.initialRetrySettings!.retryCount) {
             await waitFor({
-              interval: this.initialRetrySettings.retryInterval * 1000,
+              interval: this.options.initialRetrySettings!.retryInterval * 1000,
             });
             continue;
           } else {
