@@ -29,9 +29,7 @@ export enum Events {
 class WebSocketExtension extends SdkExtension {
   eventEmitter = new EventEmitter();
 
-  restOverWebsocket: boolean;
-  debugMode: boolean;
-  autoRecover: boolean;
+  options: WebSocketOptions;
   rc!: RingCentral;
   wsToken!: WsToken;
   ws!: WS;
@@ -45,11 +43,12 @@ class WebSocketExtension extends SdkExtension {
 
   request = request; // request method was moved to another file to keep this file short
 
-  constructor(options?: WebSocketOptions) {
+  constructor(options: WebSocketOptions = {}) {
     super();
-    this.restOverWebsocket = options?.restOverWebSocket ?? false;
-    this.debugMode = options?.debugMode ?? false;
-    this.autoRecover = options?.autoRecover ?? true;
+    this.options = options;
+    this.options.restOverWebSocket ??= false;
+    this.options.debugMode ??= false;
+    this.options.autoRecover ??= true;
   }
 
   get enabled() {
@@ -72,7 +71,7 @@ class WebSocketExtension extends SdkExtension {
       queryParams?: {},
       config?: RestRequestConfig
     ): Promise<RestResponse<T>> => {
-      if (!this.enabled || !this.restOverWebsocket) {
+      if (!this.enabled || !this.options.restOverWebSocket) {
         return request<T>(method, endpoint, content, queryParams, config);
       }
       if (
@@ -88,7 +87,7 @@ class WebSocketExtension extends SdkExtension {
     await this.connect();
 
     // start of auto recover
-    if (this.autoRecover) {
+    if (this.options.autoRecover) {
       let interval = 10000; // check WSG connection every 10 seconds
       const check = async () => {
         if (this.ws.readyState !== OPEN) {
@@ -96,7 +95,7 @@ class WebSocketExtension extends SdkExtension {
           try {
             await this.recover();
             interval = 10000;
-            if (this.debugMode) {
+            if (this.options.debugMode) {
               console.debug('Auto recover success');
             }
             this.eventEmitter.emit(
@@ -110,7 +109,7 @@ class WebSocketExtension extends SdkExtension {
             if (interval > 60000) {
               interval = 60000; // max interval 60 seconds
             }
-            if (this.debugMode) {
+            if (this.options.debugMode) {
               console.debug('Auto recover error:', e);
             }
             this.eventEmitter.emit(Events.autoRecoverError, e);
@@ -155,7 +154,7 @@ class WebSocketExtension extends SdkExtension {
     this.ws = new WS(wsUri);
 
     // debug mode to print all WebSocket traffic
-    if (this.debugMode) {
+    if (this.options.debugMode) {
       Utils.debugWebSocket(this.ws);
     }
 
