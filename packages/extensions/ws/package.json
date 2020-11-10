@@ -18,16 +18,16 @@
     "access": "public"
   },
   "dependencies": {
-    "@types/ws": "^7.2.9",
+    "@types/ws": "^7.4.0",
     "http-status-codes": "^2.1.4",
     "hyperid": "^2.0.5",
     "isomorphic-ws": "^4.0.1",
-    "ws": "^7.3.1"
+    "ws": "^7.4.0"
   },
   "devDependencies": {
     "@rc-ex/core": "^0.6.2"
   },
   "peerDependencies": {
-    "@rc-ex/core": "^0.6.1"
+    "@rc-ex/core": "^0.6.2"
   }
 }
