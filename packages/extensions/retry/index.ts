@@ -27,13 +27,13 @@ class RetryExtension extends SdkExtension {
   constructor(options: RetryOptions = {}) {
     super();
     this.options = options;
-    this.options.shouldRetry ||= (restException, retriesAttempted) => {
+    this.options.shouldRetry ??= (restException, retriesAttempted) => {
       return (
         retriesAttempted < 3 &&
         [429, 503].includes(restException.response.status)
       );
     };
-    this.options.retryInterval ||= (restException, retriesAttempted) => {
+    this.options.retryInterval ??= (restException, retriesAttempted) => {
       return 60 * 1000 * Math.pow(2, retriesAttempted); // exponential back off
     };
   }

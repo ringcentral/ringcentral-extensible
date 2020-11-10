@@ -17,7 +17,7 @@ class DebugExtension extends SdkExtension {
   constructor(options: DebugOptions = {}) {
     super();
     this.options = options;
-    this.options.loggingAction ||= message => console.debug(message);
+    this.options.loggingAction ??= message => console.debug(message);
   }
 
   async install(rc: RingCentral) {

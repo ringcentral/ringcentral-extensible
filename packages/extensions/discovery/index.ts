@@ -41,8 +41,8 @@ class DiscoveryExtension extends SdkExtension {
   constructor(options: DiscoveryOptions = {}) {
     super();
     this.options = options;
-    this.options.discoveryServer ||= 'https://discovery.ringcentral.com';
-    this.options.initialRetrySettings ||= {
+    this.options.discoveryServer ??= 'https://discovery.ringcentral.com';
+    this.options.initialRetrySettings ??= {
       retryCount: 3,
       retryInterval: 3,
     };

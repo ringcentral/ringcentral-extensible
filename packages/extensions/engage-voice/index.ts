@@ -24,7 +24,7 @@ class EngageVoiceExtension extends SdkExtension {
   constructor(options: EngageVoiceOptions = {}) {
     super();
     this.options = options;
-    this.options.server ||= 'https://engage.ringcentral.com';
+    this.options.server ??= 'https://engage.ringcentral.com';
   }
 
   async install(rc: RingCentral) {
