@@ -4,7 +4,7 @@ import RingCentral from '@rc-ex/core';
 import DiscoveryExtension from '@rc-ex/discovery';
 import DebugExtension from '@rc-ex/debug';
 import SDK from '@ringcentral/sdk';
-import RingCentralExtension from '@rc-ex/rcsdk';
+import RcSdkExtension from '@rc-ex/rcsdk';
 
 dotenv.config({path: path.join(__dirname, '.env.prod')});
 
@@ -54,8 +54,8 @@ describe('discovery', () => {
       extension: process.env.RINGCENTRAL_EXTENSION!,
       password: process.env.RINGCENTRAL_PASSWORD!,
     });
-    const ringCentralExtension = new RingCentralExtension(sdk);
-    await rc.installExtension(ringCentralExtension);
+    const rcSdkExtension = new RcSdkExtension({rcSdk: sdk});
+    await rc.installExtension(rcSdkExtension);
 
     const extInfo = await rc.restapi().account().extension().get();
     expect(extInfo).toBeDefined();

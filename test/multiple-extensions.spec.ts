@@ -4,7 +4,7 @@ import dotenv from 'dotenv-override-true';
 import path from 'path';
 
 import RingCentral from '@rc-ex/core';
-import RingCentralExtension from '@rc-ex/rcsdk';
+import RcSdkExtension from '@rc-ex/rcsdk';
 import WebSocketExtension from '@rc-ex/ws';
 
 dotenv.config({path: path.join(__dirname, '.env.lab')});
@@ -27,8 +27,8 @@ describe('extensions', () => {
       extension: process.env.RINGCENTRAL_EXTENSION!,
       password: process.env.RINGCENTRAL_PASSWORD!,
     });
-    const ringCentralExtension = new RingCentralExtension(sdk);
-    await rc.installExtension(ringCentralExtension);
+    const rcSdkExtension = new RcSdkExtension({rcSdk: sdk});
+    await rc.installExtension(rcSdkExtension);
 
     // install WebSocket Extension
     const webSocketExtension = new WebSocketExtension({

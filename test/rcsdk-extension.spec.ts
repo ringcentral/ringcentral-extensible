@@ -1,5 +1,5 @@
 import RingCentral from '@rc-ex/core';
-import RingCentralExtension from '@rc-ex/rcsdk';
+import RcSdkExtension from '@rc-ex/rcsdk';
 import SDK from '@ringcentral/sdk';
 
 describe('RingCentral extension', () => {
@@ -16,8 +16,8 @@ describe('RingCentral extension', () => {
     });
 
     const rc = new RingCentral();
-    const ringCentralExtension = new RingCentralExtension(sdk);
-    await rc.installExtension(ringCentralExtension);
+    const rcSdkExtension = new RcSdkExtension({rcSdk: sdk});
+    await rc.installExtension(rcSdkExtension);
 
     const extensionInfo = await rc.restapi().account().extension().get();
     expect(extensionInfo.id).toBeDefined();
