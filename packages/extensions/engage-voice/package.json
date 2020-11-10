@@ -1,6 +1,6 @@
 {
   "name": "@rc-ex/engage-voice",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "Engage Voice extension for ringcentral-extensible project",
   "author": "Tyler Liu <tyler.liu@ringcentral.com>",
   "homepage": "https://github.com/ringcentral/ringcentral-extensible/tree/master/packages/extensions/engage-voice",
