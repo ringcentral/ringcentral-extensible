@@ -99,7 +99,7 @@ webSocketExtension.ws
 ```
 
 gives you the WebSocket object. But if the network is unstable and `autoRecover` is enabled, sometimes a new WebSocket connection will be created to replace the current one.
-You can listen for `autoRecoverSuccess` event:
+You can listen for `autoRecoverSuccess` & `autoRecoverFailed` events:
 
 ```ts
 import {Events} from '@rc-ex/ws';
@@ -107,6 +107,9 @@ import {Events} from '@rc-ex/ws';
 ...
 
 webSocketExtension.eventEmitter.on(Events.autoRecoverSuccess, ws => {
+  console.log(`New WebSocket connection: ${ws}`);
+});
+webSocketExtension.eventEmitter.on(Events.autoRecoverFailed, ws => {
   console.log(`New WebSocket connection: ${ws}`);
 });
 ```
