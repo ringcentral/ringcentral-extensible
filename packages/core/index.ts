@@ -98,7 +98,7 @@ export default class RingCentral {
     if ('username' in options) {
       getTokenRequest.grant_type = 'password';
       getTokenRequest.username = options.username;
-      getTokenRequest.extension = options.extension ?? '';
+      getTokenRequest.extension = options.extension;
       getTokenRequest.password = options.password;
     } else if ('code' in options) {
       getTokenRequest.grant_type = 'authorization_code';
