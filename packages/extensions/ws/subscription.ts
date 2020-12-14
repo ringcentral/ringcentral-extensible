@@ -103,10 +103,25 @@ class Subscription {
       global.clearTimeout(this.timeout);
       this.timeout = undefined;
     }
-    await this.wse.request<SubscriptionInfo>(
-      'DELETE',
-      `/restapi/v1.0/subscription/${this.subscriptionInfo!.id}`
-    );
+    try {
+      await this.wse.request<SubscriptionInfo>(
+        'DELETE',
+        `/restapi/v1.0/subscription/${this.subscriptionInfo!.id}`
+      );
+    } catch (e) {
+      if (e.response && e.response.status === 404) {
+        // ignore
+        if (this.wse.options.debugMode) {
+          console.debug(
+            `Subscription ${
+              this.subscriptionInfo!.id
+            } doesn't exist on server side`
+          );
+        }
+      } else {
+        throw e;
+      }
+    }
     this.subscriptionInfo = undefined;
     this.enabled = false;
     this.wse.ws.removeEventListener('message', this.eventListener);
