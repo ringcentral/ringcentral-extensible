@@ -9,13 +9,13 @@
   },
   "dependencies": {
     "@types/js-yaml": "^3.12.5",
-    "@types/ramda": "^0.27.32",
-    "change-case": "^4.1.1",
+    "@types/ramda": "^0.27.33",
+    "change-case": "^4.1.2",
     "dotenv-override-true": "^6.2.2",
-    "js-yaml": "^3.14.0",
-    "lower-case-first": "^2.0.1",
+    "js-yaml": "^3.14.1",
+    "lower-case-first": "^2.0.2",
     "ramda": "^0.27.1",
-    "title-case": "^3.0.2",
-    "ts-node": "^9.0.0"
+    "title-case": "^3.0.3",
+    "ts-node": "^9.1.1"
   }
 }

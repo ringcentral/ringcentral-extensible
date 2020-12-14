@@ -22,7 +22,7 @@
     "http-status-codes": "^2.1.4",
     "hyperid": "^2.0.5",
     "isomorphic-ws": "^4.0.1",
-    "ws": "^7.4.0"
+    "ws": "^7.4.1"
   },
   "devDependencies": {
     "@rc-ex/core": "^0.6.2"
