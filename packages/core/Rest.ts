@@ -54,7 +54,7 @@ export default class Rest {
         return true;
       },
       paramsSerializer: params => {
-        return qs.stringify(params, {indices: false});
+        return qs.stringify(params, {arrayFormat: 'repeat'});
       },
     });
 
