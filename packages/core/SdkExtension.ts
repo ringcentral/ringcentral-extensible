@@ -8,7 +8,7 @@ abstract class SdkExtension {
   set enabled(value) {
     this._enabled = value;
   }
-  abstract async install(rc: RingCentral): Promise<void>;
+  abstract install(rc: RingCentral): Promise<void>;
   async revoke(): Promise<void> {}
 }
 
