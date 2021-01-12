@@ -53,16 +53,16 @@
   integrity sha512-jpx/P78H4ZfuAZyx2moDdKO04leq1GDFGwAfJpV2Lxv4lWbagb6EOp9Ga0+1HxM0C87KxRyqucfgXEIwT78bIg==
 
 "@unimodules/core@*":
-  version "6.0.0"
-  resolved "https://registry.yarnpkg.com/@unimodules/core/-/core-6.0.0.tgz#c76ca5ca92128a059c62bb0c24d0372aaf908408"
-  integrity sha512-+KCVh+NjU33lkHOFiRfJZR6dDsSF8zCY1CVARMYJbQ7w1epRsalpKnCK08JoNYHQqkPR79d2zQSWMxd20zBvoA==
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/@unimodules/core/-/core-7.0.0.tgz#0311a9c7c0a661368ceef8891f758eb2e166bdf4"
+  integrity sha512-hKxNN6ad2VmmJqB3i1C8IJe27TcchY7YAKpkQhshjPxso61f7iM7AUFeG4vcU1vPH5d/X4Vk1ds8bWxaxg7nnw==
   dependencies:
     compare-versions "^3.4.0"
 
 "@unimodules/react-native-adapter@*":
-  version "5.7.0"
-  resolved "https://registry.yarnpkg.com/@unimodules/react-native-adapter/-/react-native-adapter-5.7.0.tgz#c5b7c660c5c69e77a7baeaed62be73cfe18dd7b0"
-  integrity sha512-L557/+sc8ZKJVgo1734HF1QNCxrt/fpqdmdNgySJT+kErux/AJNfPq3flsK0fyJduVmniTutYIMyW48cFoPKDA==
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/@unimodules/react-native-adapter/-/react-native-adapter-6.0.0.tgz#bd8946c275b8a79bcdfb1bf344d0c510e892bcc7"
+  integrity sha512-NiD45wW6L9Xqyfhx3EClltar9JM2HmA44N5JUPnBRgH88UYJ4joVcOyGsobLNBxi+TMy6PAWHNbaPDzd8l4Fzg==
   dependencies:
     invariant "^2.2.4"
     lodash "^4.5.0"
@@ -549,10 +549,10 @@ proxy-from-env@^1.0.0:
   resolved "https://registry.yarnpkg.com/proxy-from-env/-/proxy-from-env-1.1.0.tgz#e102f16ca355424865755d2c9e8ea4f24d58c3e2"
   integrity sha512-D+zkORCbA9f1tdWRK0RaCR3GPv50cMxcrz4X8k5LTSUD1Dkw47mKJEZQNunItRTkWwgtaUSo1RVFRIG9ZXiFYg==
 
-pubnub@^4.29.10:
-  version "4.29.10"
-  resolved "https://registry.yarnpkg.com/pubnub/-/pubnub-4.29.10.tgz#4ae1be0290417dae2967ea0e8f0f9b9acb6549f7"
-  integrity sha512-AbQK/FPEOOlml83nH0Lup9+FUe1lb0UWN5PkpHnYhQjIRMYpP+18XODmRClM/7ZMhmlo9j8VQt/w75EbV/NUTg==
+pubnub@^4.29.11:
+  version "4.29.11"
+  resolved "https://registry.yarnpkg.com/pubnub/-/pubnub-4.29.11.tgz#d56623bd72d3485bf7f779611ed4865dbb5bc126"
+  integrity sha512-L/3TYuw/7t8EA2l5jnn8YwYpGWZst8AFWJ0KLmAM/xs9BA+ZkWvsZkC7gllf1N5e5DbH0EB8vl52F81WYu3n5Q==
   dependencies:
     "@babel/runtime" "^7.10.5"
     agentkeepalive "^3.5.2"
@@ -719,9 +719,9 @@ toidentifier@1.0.0:
   integrity sha512-yaOH/Pk/VEhBWWTlhI+qXxDFXlejDGcQipMlyxda9nthulaxLZUNcUqFxokp0vcYnvteJln5FNQDRrxj3YcbVw==
 
 tslib@^2.0.0, tslib@^2.0.1, tslib@^2.0.3:
-  version "2.0.3"
-  resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.0.3.tgz#8e0741ac45fc0c226e58a17bfc3e64b9bc6ca61c"
-  integrity sha512-uZtkfKblCEQtZKBF6EBXVZeQNl82yqtDQdv+eck8u7tdPxjLu2/lp5/uPW+um2tpuxINHWy3GhiccY7QgEaVHQ==
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.1.0.tgz#da60860f1c2ecaa5703ab7d39bc05b6bf988b97a"
+  integrity sha512-hcVC3wYEziELGGmEEXue7D75zbwIIVUMWAVbHItGPx0ziyXxrOMQx4rQEVEV45Ut/1IotuEvwqPopzIOkDMf0A==
 
 type-check@~0.3.2:
   version "0.3.2"

@@ -3,9 +3,9 @@
 
 
 "@types/node@*":
-  version "14.14.13"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-14.14.13.tgz#9e425079799322113ae8477297ae6ef51b8e0cdf"
-  integrity sha512-vbxr0VZ8exFMMAjCW8rJwaya0dMCDyYW2ZRdTyjtrCvJoENMpdUHOT/eTzvgyA5ZnqRZ/sI0NwqAxNHKYokLJQ==
+  version "14.14.20"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-14.14.20.tgz#f7974863edd21d1f8a494a73e8e2b3658615c340"
+  integrity sha512-Y93R97Ouif9JEOWPIUyU+eyIdyRqQR0I8Ez1dzku4hDx34NWh4HbtIc3WNzwB1Y9ULvNGeu5B8h8bVL5cAk4/A==
 
 "@types/ws@^7.4.0":
   version "7.4.0"
@@ -19,10 +19,10 @@ http-status-codes@^2.1.4:
   resolved "https://registry.yarnpkg.com/http-status-codes/-/http-status-codes-2.1.4.tgz#453d99b4bd9424254c4f6a9a3a03715923052798"
   integrity sha512-MZVIsLKGVOVE1KEnldppe6Ij+vmemMuApDfjhVSLzyYP+td0bREEYyAoIw9yFePoBXManCuBqmiNP5FqJS5Xkg==
 
-hyperid@^2.0.5:
-  version "2.0.5"
-  resolved "https://registry.yarnpkg.com/hyperid/-/hyperid-2.0.5.tgz#fecedad4e9868d548c096482917c33090bccd2be"
-  integrity sha512-kg0+DOmWo3HSFvWWMCQJJhzEB4kg5z/83l4eFDaeAMJ5E2zbQzTEewAmVtOqdRElU9yRFJhCOuegUk0M6RZfiw==
+hyperid@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/hyperid/-/hyperid-2.1.0.tgz#2f5ed7537e87e8fddd344710a610be501b3d2da6"
+  integrity sha512-cSakhxbUsaIuqjfvvcUuvl/Fl342J65xgLLYrYxSSr9qmJ/EJK+S8crS6mIlQd/a7i+Pe4D0MgSrtZPLze+aCw==
   dependencies:
     uuid "^3.4.0"
     uuid-parse "^1.1.0"
@@ -42,7 +42,7 @@ uuid@^3.4.0:
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.4.0.tgz#b23e4358afa8a202fe7a100af1f5f883f02007ee"
   integrity sha512-HjSDRw6gZE5JMggctHBcjVak08+KEVhSIiDzFnT9S9aegmp85S/bReBVTb4QTFaRNptJ9kuYaNhnbNEOkbKb/A==
 
-ws@^7.4.1:
-  version "7.4.1"
-  resolved "https://registry.yarnpkg.com/ws/-/ws-7.4.1.tgz#a333be02696bd0e54cea0434e21dcc8a9ac294bb"
-  integrity sha512-pTsP8UAfhy3sk1lSk/O/s4tjD0CRwvMnzvwr4OKGX7ZvqZtUyx4KIJB5JWbkykPoc55tixMGgTNoh3k4FkNGFQ==
+ws@^7.4.2:
+  version "7.4.2"
+  resolved "https://registry.yarnpkg.com/ws/-/ws-7.4.2.tgz#782100048e54eb36fe9843363ab1c68672b261dd"
+  integrity sha512-T4tewALS3+qsrpGI/8dqNMLIVdq/g/85U98HPMa6F0m6xTbvhXU6RCQLqPH3+SlomNV/LdY6RXEbBpMH6EOJnA==

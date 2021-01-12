@@ -2,12 +2,12 @@
 # yarn lockfile v1
 
 
-"@types/urijs@^1.19.13":
-  version "1.19.13"
-  resolved "https://registry.yarnpkg.com/@types/urijs/-/urijs-1.19.13.tgz#0bd025b65df8ee5f038bbf6f1cb2e95160b49a56"
-  integrity sha512-Wg/E8Q+ylkR6JElTwOcjG7kM99/iJz28E9RKr8syOxssRs3gWchsziUkb+Nr254aUBWHY0QiScGAfIx4lKI3/g==
+"@types/urijs@^1.19.14":
+  version "1.19.14"
+  resolved "https://registry.yarnpkg.com/@types/urijs/-/urijs-1.19.14.tgz#1c714cfbc23eb9e3f840dd02b7e8284ab85f1a6b"
+  integrity sha512-Ds9OMd4xZqI2zZtoOicASAi0SvFPyNPgkfgPrPeUTQwcJOX1w6Mwkpq8ClI4ZP11nsEI6akvKqRDV+epA8yzRw==
 
-urijs@^1.19.2:
-  version "1.19.2"
-  resolved "https://registry.yarnpkg.com/urijs/-/urijs-1.19.2.tgz#f9be09f00c4c5134b7cb3cf475c1dd394526265a"
-  integrity sha512-s/UIq9ap4JPZ7H1EB5ULo/aOUbWqfDi7FKzMC2Nz+0Si8GiT1rIEaprt8hy3Vy2Ex2aJPpOQv4P4DuOZ+K1c6w==
+urijs@^1.19.5:
+  version "1.19.5"
+  resolved "https://registry.yarnpkg.com/urijs/-/urijs-1.19.5.tgz#119683ab4b2fb0bd637e5ea6dd9117bcac68d3e4"
+  integrity sha512-48z9VGWwdCV5KfizHsE05DWS5fhK6gFlx5MjO7xu0Krc5FGPWzjlXEVV0nPMrdVuP7xmMHiPZ2HoYZwKOFTZOg==

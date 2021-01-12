@@ -18,12 +18,12 @@
     "access": "public"
   },
   "dependencies": {
-    "axios": "^0.21.0"
+    "axios": "^0.21.1"
   },
   "devDependencies": {
     "@rc-ex/core": "^0.6.3"
   },
   "peerDependencies": {
-    "@rc-ex/core": "^0.6.2"
+    "@rc-ex/core": "^0.6.3"
   }
 }

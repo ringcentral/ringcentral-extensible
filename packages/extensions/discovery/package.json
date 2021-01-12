@@ -18,15 +18,15 @@
     "access": "public"
   },
   "dependencies": {
-    "@types/urijs": "^1.19.13",
-    "axios": "^0.21.0",
-    "urijs": "^1.19.2",
+    "@types/urijs": "^1.19.14",
+    "axios": "^0.21.1",
+    "urijs": "^1.19.5",
     "wait-for-async": "^0.5.0"
   },
   "devDependencies": {
     "@rc-ex/core": "^0.6.3"
   },
   "peerDependencies": {
-    "@rc-ex/core": "^0.6.2"
+    "@rc-ex/core": "^0.6.3"
   }
 }
