@@ -1,19 +1,19 @@
 import SDK from '@ringcentral/sdk';
 import waitFor from 'wait-for-async';
-import dotenv from 'dotenv-override-true';
-import path from 'path';
+// import dotenv from 'dotenv-override-true';
+// import path from 'path';
 
 import RingCentral from '@rc-ex/core';
 import RcSdkExtension from '@rc-ex/rcsdk';
 import WebSocketExtension from '@rc-ex/ws';
 
-dotenv.config({path: path.join(__dirname, '.env.lab')});
+// dotenv.config({path: path.join(__dirname, '.env.lab')});
 
 describe('extensions', () => {
   test('RingCentral Extension + WebSocket Extension', async () => {
-    if (process.env.IS_LAB_ENV !== 'true') {
-      return;
-    }
+    // if (process.env.IS_LAB_ENV !== 'true') {
+    //   return;
+    // }
     const rc = new RingCentral();
 
     // install RingCentral Extension

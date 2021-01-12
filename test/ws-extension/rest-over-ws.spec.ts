@@ -1,15 +1,15 @@
 import RingCentral from '@rc-ex/core';
 import WebSocketExtension from '@rc-ex/ws';
-import path from 'path';
-import dotenv from 'dotenv-override-true';
+// import path from 'path';
+// import dotenv from 'dotenv-override-true';
 
-dotenv.config({path: path.join(__dirname, '..', '.env.lab')});
+// dotenv.config({path: path.join(__dirname, '..', '.env.lab')});
 
 describe('WebSocket', () => {
   test('Rest API call via WebSocket', async () => {
-    if (process.env.IS_LAB_ENV !== 'true') {
-      return;
-    }
+    // if (process.env.IS_LAB_ENV !== 'true') {
+    //   return;
+    // }
     const rc = new RingCentral({
       clientId: process.env.RINGCENTRAL_CLIENT_ID!,
       clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET!,
