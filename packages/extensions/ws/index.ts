@@ -90,7 +90,7 @@ class WebSocketExtension extends SdkExtension {
     if (this.options.autoRecover) {
       let interval = 10000; // check WSG connection every 10 seconds
       const check = async () => {
-        if (this.ws.readyState !== OPEN) {
+        if (this.ws?.readyState !== OPEN) {
           clearInterval(this.intervalHandle!);
           try {
             await this.recover();
@@ -123,7 +123,7 @@ class WebSocketExtension extends SdkExtension {
   }
 
   async recover() {
-    if (this.ws && this.ws.readyState === OPEN) {
+    if (this.ws?.readyState === OPEN) {
       return;
     }
     if (!this.wsc || !this.wsc.token) {
@@ -203,7 +203,7 @@ class WebSocketExtension extends SdkExtension {
     if (this.intervalHandle) {
       clearInterval(this.intervalHandle);
     }
-    this.ws.close();
+    this.ws?.close();
   }
 
   async subscribe(eventFilters: string[], callback: (event: {}) => void) {
