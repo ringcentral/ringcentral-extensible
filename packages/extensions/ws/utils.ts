@@ -1,7 +1,7 @@
 import WS from 'isomorphic-ws';
 
 import {WsgMeta, WsgEvent} from './types';
-import {TimeoutException} from './exceptions';
+import {ClosedException, TimeoutException} from './exceptions';
 
 class Utils {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -52,8 +52,15 @@ ${JSON.stringify(JSON.parse(event.data), null, 2)}
   ) {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     return new Promise<[WsgMeta, any, WsgEvent]>((resolve, reject) => {
+      const checkHandle = setInterval(() => {
+        if (ws.readyState === ws.CLOSED) {
+          clearInterval(checkHandle);
+          reject(new ClosedException());
+        }
+      }, 1000);
       const timeoutHandle = setTimeout(() => {
         ws.removeEventListener('message', handler);
+        clearInterval(checkHandle);
         reject(new TimeoutException());
         return;
       }, timeout);
@@ -61,8 +68,9 @@ ${JSON.stringify(JSON.parse(event.data), null, 2)}
         const [meta, body] = Utils.splitWsgData(event.data);
         if (matchCondition(meta)) {
           ws.removeEventListener('message', handler);
-          resolve([meta, body, event]);
+          clearInterval(checkHandle);
           clearTimeout(timeoutHandle);
+          resolve([meta, body, event]);
           return;
         }
       };

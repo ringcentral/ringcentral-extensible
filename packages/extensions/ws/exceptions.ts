@@ -17,3 +17,9 @@ export class TimeoutException extends Error {
     super(message ?? 'Failed to receive expected WebSocket message in time.');
   }
 }
+
+export class ClosedException extends Error {
+  constructor(message?: string) {
+    super(message ?? 'WebSocket has been closed');
+  }
+}
