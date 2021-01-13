@@ -17,7 +17,7 @@ export const deNormalizePath = (path: any) => {
 };
 
 export const getResponseType = (responses: any) => {
-  const responseSchema = (
+  const responseContent = (
     responses[200] ||
     responses[201] ||
     responses[202] ||
@@ -25,9 +25,12 @@ export const getResponseType = (responses: any) => {
     responses[205] ||
     responses[302] ||
     responses.default
-  ).schema;
+  ).content;
+
   let responseType;
-  if (responseSchema) {
+  if (responseContent && !R.isEmpty(responseContent)) {
+    const responseSchema =
+      responseContent[Object.keys(responseContent)[0]].schema;
     if (
       responseSchema.type === 'string' &&
       responseSchema.format === 'binary'
@@ -39,7 +42,6 @@ export const getResponseType = (responses: any) => {
   }
   return responseType;
 };
-exports.getResponseType = getResponseType;
 
 export const patchSrcFile = (
   fileRoutes: any,
@@ -63,4 +65,3 @@ export const patchSrcFile = (
   console.log(filePath, code);
   fs.writeFileSync(filePath, code);
 };
-exports.patchSrcFile = patchSrcFile;
