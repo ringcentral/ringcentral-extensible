@@ -12,9 +12,9 @@ spawnSync('mkdir', [outputDir]);
 const doc = yaml.load(
   fs.readFileSync(process.env.PATH_TO_SWAGGER_SPEC!, 'utf8')
 ) as any;
-const definitions = doc.definitions;
-const models = Object.keys(definitions)
-  .map(k => ({name: k, ...definitions[k]}))
+const schemas = doc.components.schemas;
+const models = Object.keys(schemas)
+  .map(k => ({name: k, ...schemas[k]}))
   .filter(m => m.type !== 'array');
 
 const keys = [];
