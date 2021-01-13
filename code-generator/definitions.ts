@@ -23,12 +23,12 @@ models.forEach(m => {
 });
 
 const normalizeType = (f: any): string => {
-  if (f.type === 'integer' || f.type === 'number') {
+  if (f.$ref) {
+    return f.$ref.split('/').slice(-1)[0];
+  } else if (f.type === 'integer' || f.type === 'number') {
     return 'number';
   } else if (f.type === 'array') {
     return `${normalizeType(f.items)}[]`;
-  } else if (f.type === undefined || f.type === 'object') {
-    return f.$ref.split('/').slice(-1)[0];
   } else if (f.type === 'boolean') {
     return 'boolean';
   } else if (f.type === 'file') {
@@ -38,15 +38,16 @@ const normalizeType = (f: any): string => {
       return `(${f.enum
         .map((i: string) => `'${i.replace(/'/g, "\\'")}'`)
         .join(' | ')})`;
-    } else {
-      return 'string';
     }
+    return 'string';
   } else {
     throw new Error(`Unknown type ${f.type}`);
   }
 };
 
 const normalizeField = (f: any) => {
+  f = Object.assign(f, f.schema);
+  delete f.schema;
   f.type = normalizeType(f);
   return f;
 };
