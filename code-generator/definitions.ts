@@ -9,7 +9,7 @@ const outputDir = path.join(__dirname, '..', 'packages', 'core', 'definitions');
 spawnSync('rm', ['-rf', outputDir]);
 spawnSync('mkdir', [outputDir]);
 
-const doc = yaml.safeLoad(
+const doc = yaml.load(
   fs.readFileSync(process.env.PATH_TO_SWAGGER_SPEC!, 'utf8')
 ) as any;
 const definitions = doc.definitions;
