@@ -221,17 +221,19 @@ class Index {
       }
 
       let body, bodyClass, bodyParam, formUrlEncoded, multipart;
+
       if (
-        operation.detail.consumes &&
-        operation.detail.consumes[0] === 'application/x-www-form-urlencoded'
+        operation.detail.requestBody &&
+        operation.detail.requestBody.content &&
+        operation.detail.requestBody.content[
+          'application/x-www-form-urlencoded'
+        ]
       ) {
         formUrlEncoded = true;
       } else if (
-        operation.detail.consumes &&
-        R.any(
-          (item: string) => item.startsWith('multipart/'),
-          operation.detail.consumes
-        )
+        operation.detail.requestBody &&
+        operation.detail.requestBody.content &&
+        operation.detail.requestBody.content['multipart/form-data']
       ) {
         multipart = true;
       } else if (
@@ -246,11 +248,39 @@ class Index {
             ', '
           )}`
         );
-      } else {
-        body = (operation.detail.parameters || []).filter(
-          (p: any) => p.in === 'body'
-        )[0];
-        if (body) {
+      }
+
+      // if (
+      //   operation.detail.consumes &&
+      //   operation.detail.consumes[0] === 'application/x-www-form-urlencoded'
+      // ) {
+      //   formUrlEncoded = true;
+      // } else if (
+      //   operation.detail.consumes &&
+      //   R.any(
+      //     (item: string) => item.startsWith('multipart/'),
+      //     operation.detail.consumes
+      //   )
+      // ) {
+      //   multipart = true;
+      // } else if (
+      //   operation.detail.consumes &&
+      //   !operation.detail.consumes.some(
+      //     (c: string) => c === 'application/json'
+      //   ) &&
+      //   !operation.detail.consumes.some((c: string) => c.startsWith('text/'))
+      // ) {
+      //   throw new Error(
+      //     `Unsupported consume content type: ${operation.detail.consumes.join(
+      //       ', '
+      //     )}`
+      //   );
+      // }
+      else {
+        const requestBody = operation.detail.requestBody;
+        if (requestBody) {
+          const content = requestBody.content;
+          body = content[Object.keys(content)[0]];
           if (body.schema.type === 'string') {
             bodyClass = 'string';
             bodyParam = 'body';
@@ -260,17 +290,39 @@ class Index {
             definitionsUsed.add(bodyClass);
           }
         }
+
+        // body = (operation.detail.parameters || []).filter(
+        //   (p: any) => p.in === 'body'
+        // )[0];
+        // if (body) {
+        //   if (body.schema.type === 'string') {
+        //     bodyClass = 'string';
+        //     bodyParam = 'body';
+        //   } else {
+        //     bodyClass = R.last(body.schema.$ref.split('/'));
+        //     bodyParam = lowerCaseFirst(bodyClass);
+        //     definitionsUsed.add(bodyClass);
+        //   }
+        // }
       }
       if (formUrlEncoded || multipart) {
         bodyClass = `${pascalCase(operation.detail.operationId)}Request`;
         bodyParam = `${operation.detail.operationId}Request`;
-        body = (operation.detail.parameters || []).filter(
-          (p: any) => p.in === 'body' && p.schema && p.schema.$ref
-        )[0];
-        if (body) {
+
+        const content = operation.detail.requestBody.content;
+        body = content[Object.keys(content)[0]];
+        if (body && body.schema && body.schema.$ref) {
           bodyClass = R.last(body.schema.$ref.split('/'));
           bodyParam = lowerCaseFirst(bodyClass);
         }
+
+        // body = (operation.detail.parameters || []).filter(
+        //   (p: any) => p.in === 'body' && p.schema && p.schema.$ref
+        // )[0];
+        // if (body) {
+        //   bodyClass = R.last(body.schema.$ref.split('/'));
+        //   bodyParam = lowerCaseFirst(bodyClass);
+        // }
         definitionsUsed.add(bodyClass);
       }
 
