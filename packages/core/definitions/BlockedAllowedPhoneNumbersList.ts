@@ -16,12 +16,10 @@ class BlockedAllowedPhoneNumbersList {
   records?: BlockedAllowedPhoneNumberInfo[];
 
   /**
-   * Information on navigation
    */
   navigation?: CallHandlingNavigationInfo;
 
   /**
-   * Information on paging
    */
   paging?: CallHandlingPagingInfo;
 }

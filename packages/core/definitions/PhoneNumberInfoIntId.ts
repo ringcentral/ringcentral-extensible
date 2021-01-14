@@ -1,5 +1,6 @@
 import {PhoneNumberCountryInfo, DeviceProvisioningExtensionInfo} from './index';
 
+// Phone number information
 class PhoneNumberInfoIntId {
   /**
    * Internal identifier of a phone number
@@ -7,12 +8,10 @@ class PhoneNumberInfoIntId {
   id?: number;
 
   /**
-   * Brief information on a phone number country
    */
   country?: PhoneNumberCountryInfo;
 
   /**
-   * Information on the extension, to which the phone number is assigned. Returned only for the request of Account phone number list
    */
   extension?: DeviceProvisioningExtensionInfo;
 

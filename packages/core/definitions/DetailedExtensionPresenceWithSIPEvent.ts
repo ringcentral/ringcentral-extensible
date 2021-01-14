@@ -22,7 +22,6 @@ class DetailedExtensionPresenceWithSIPEvent {
   subscriptionId?: string;
 
   /**
-   * Notification payload body
    */
   body?: DetailedExtensionPresenceWithSIPEventBody;
 }

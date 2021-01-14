@@ -1,6 +1,5 @@
 import Webhooks from './Webhooks';
 import Events from './Events';
-import Posts from './Posts';
 import Parent from '..';
 import RingCentral from '../../../..';
 
@@ -21,10 +20,6 @@ class Index {
     }
 
     return `${this.parent.path()}/groups`;
-  }
-
-  posts(): Posts {
-    return new Posts(this);
   }
 
   events(): Events {

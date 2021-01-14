@@ -1,3 +1,4 @@
+// Limits which are effective for the account
 class AccountLimits {
   /**
    * Max number of free softphone phone lines per user extension
@@ -21,7 +22,6 @@ class AccountLimits {
 
   /**
    * Max length of extension numbers of an account; the supported value is up to 8 symbols, depends on account type
-   * Default: 5
    */
   maxExtensionNumberLength?: number;
 

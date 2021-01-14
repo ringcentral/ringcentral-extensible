@@ -1,4 +1,4 @@
-// Official name of a formatting language
+// Formatting language preferences for numbers, dates and currencies
 class FormattingLocaleInfo {
   /**
    * Internal identifier of a formatting language
@@ -11,6 +11,7 @@ class FormattingLocaleInfo {
   localeCode?: string;
 
   /**
+   * Official name of a formatting language
    */
   name?: string;
 }

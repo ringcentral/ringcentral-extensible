@@ -1,8 +1,8 @@
 import {APSInfo} from './index';
 
+// APNS (Apple Push Notification Service) information
 class APNSInfo {
   /**
-   * Notification priority data
    */
   aps?: APSInfo;
 }

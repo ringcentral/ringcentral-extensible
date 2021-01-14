@@ -11,7 +11,6 @@ class GetRingOutStatusResponse {
   uri?: string;
 
   /**
-   * RingOut status information
    */
   status?: RingOutStatusInfo;
 }

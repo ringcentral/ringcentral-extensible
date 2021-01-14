@@ -1,10 +1,9 @@
-import {BulkTaskInfo} from './index';
+import {BulkTaskInfoWiCreate} from './index';
 
 class CreateMultipleWirelessPointsResponse {
   /**
-   * Information on the task for multiple wireless points creation
    */
-  task?: BulkTaskInfo;
+  task?: BulkTaskInfoWiCreate;
 }
 
 export default CreateMultipleWirelessPointsResponse;

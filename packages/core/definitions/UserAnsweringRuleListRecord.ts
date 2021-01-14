@@ -27,7 +27,6 @@ class UserAnsweringRuleListRecord {
   enabled?: boolean;
 
   /**
-   * SharedLines call handling action settings
    */
   sharedLines?: SharedLinesInfo;
 }

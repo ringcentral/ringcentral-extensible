@@ -2,12 +2,10 @@ import {PartyInfo, OwnerInfo, CallStatusInfo} from './index';
 
 class PartySuperviseResponse {
   /**
-   * Information about a call party that monitors a call
    */
   from?: PartyInfo;
 
   /**
-   * Information about a call party that is monitored
    */
   to?: PartyInfo;
 
@@ -37,7 +35,6 @@ class PartySuperviseResponse {
   muted?: boolean;
 
   /**
-   * Deprecated. Infromation a call owner
    */
   owner?: OwnerInfo;
 

@@ -3,13 +3,13 @@ import {
   SipRegistrationDeviceLocationInfo,
 } from './index';
 
+// Emergency response location settings of a device
 class SipRegistrationDeviceEmergencyInfo {
   /**
    */
   address?: DeviceEmergencyServiceAddressResource;
 
   /**
-   * Company emergency response location details
    */
   location?: SipRegistrationDeviceLocationInfo;
 

@@ -17,13 +17,11 @@ class GetExtensionPhoneNumbersResponse {
   records?: UserPhoneNumberInfo[];
 
   /**
-   * Information on navigation
    * Required
    */
   navigation?: ProvisioningNavigationInfo;
 
   /**
-   * Information on paging
    * Required
    */
   paging?: ProvisioningPagingInfo;

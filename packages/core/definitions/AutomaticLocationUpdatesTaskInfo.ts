@@ -31,7 +31,6 @@ class AutomaticLocationUpdatesTaskInfo {
     | 'SwitchesBulkUpdate';
 
   /**
-   * Task detailed result. Returned for failed and completed tasks
    */
   result?: TaskResultInfo;
 }

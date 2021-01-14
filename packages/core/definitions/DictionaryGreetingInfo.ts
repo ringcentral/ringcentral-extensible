@@ -69,12 +69,10 @@ class DictionaryGreetingInfo {
   category?: 'Music' | 'Message' | 'RingTones' | 'None';
 
   /**
-   * Information on navigation
    */
   navigation?: CallHandlingNavigationInfo;
 
   /**
-   * Information on paging
    */
   paging?: CallHandlingPagingInfo;
 }

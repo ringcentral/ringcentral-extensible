@@ -21,17 +21,14 @@ class GetServiceInfoResponse {
   servicePlanName?: string;
 
   /**
-   * Information on account brand
    */
   brand?: BrandInfo;
 
   /**
-   * Information on the contracted country of account
    */
   contractedCountry?: ContractedCountryInfo;
 
   /**
-   * Information on account service plan
    */
   servicePlan?: ServicePlanInfo;
 
@@ -40,7 +37,6 @@ class GetServiceInfoResponse {
   targetServicePlan?: TargetServicePlanInfo;
 
   /**
-   * Information on account billing plan
    */
   billingPlan?: BillingPlanInfo;
 
@@ -50,7 +46,6 @@ class GetServiceInfoResponse {
   serviceFeatures?: ServiceFeatureInfo[];
 
   /**
-   * Limits which are effective for the account
    */
   limits?: AccountLimits;
 

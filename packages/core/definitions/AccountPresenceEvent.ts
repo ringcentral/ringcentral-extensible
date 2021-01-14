@@ -22,7 +22,6 @@ class AccountPresenceEvent {
   subscriptionId?: string;
 
   /**
-   * Notification payload body
    */
   body?: AccountPresenceEventBody;
 }

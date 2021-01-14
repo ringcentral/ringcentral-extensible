@@ -17,13 +17,11 @@ class GetExtensionGrantListResponse {
   records?: GrantInfo[];
 
   /**
-   * Information on navigation
    * Required
    */
   navigation?: ProvisioningNavigationInfo;
 
   /**
-   * Information on paging
    * Required
    */
   paging?: ProvisioningPagingInfo;

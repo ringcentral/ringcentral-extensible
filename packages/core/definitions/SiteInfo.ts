@@ -36,17 +36,14 @@ class SiteInfo {
   email?: string;
 
   /**
-   * Extension user business address. The default is Company settings
    */
   businessAddress?: ContactBusinessAddressInfo;
 
   /**
-   * Information about regional settings. The default is Company settings
    */
   regionalSettings?: RegionalSettings;
 
   /**
-   * Site Fax/SMS recipient (operator) reference. Multi-level IVR should be enabled
    */
   operator?: OperatorInfo;
 

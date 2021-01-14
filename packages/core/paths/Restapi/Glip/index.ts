@@ -4,8 +4,8 @@ import Companies from './Companies';
 import Persons from './Persons';
 import Tasks from './Tasks';
 import Notes from './Notes';
-import Events from './Events';
 import Groups from './Groups';
+import Events from './Events';
 import Favorites from './Favorites';
 import Recent from './Recent';
 import Everyone from './Everyone';
@@ -57,12 +57,12 @@ class Index {
     return new Favorites(this);
   }
 
-  groups(groupId: string | null = null): Groups {
-    return new Groups(this, groupId);
-  }
-
   events(eventId: string | null = null): Events {
     return new Events(this, eventId);
+  }
+
+  groups(groupId: string | null = null): Groups {
+    return new Groups(this, groupId);
   }
 
   notes(noteId: string | null = null): Notes {

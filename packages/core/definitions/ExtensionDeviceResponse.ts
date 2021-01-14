@@ -51,22 +51,18 @@ class ExtensionDeviceResponse {
   computerName?: string;
 
   /**
-   * HardPhone model information
    */
   model?: ModelInfo;
 
   /**
-   * This attribute can be omitted for unassigned devices
    */
   extension?: ExtensionInfoIntId;
 
   /**
-   * Address for emergency cases. The same emergency address is assigned to all the numbers of one device
    */
   emergencyServiceAddress?: EmergencyServiceAddressResource;
 
   /**
-   * Device emergency settings
    */
   emergency?: DeviceEmergencyInfo;
 
@@ -76,7 +72,6 @@ class ExtensionDeviceResponse {
   phoneLines?: PhoneLinesInfo[];
 
   /**
-   * Shipping information, according to which devices (in case of  HardPhone ) or e911 stickers (in case of  SoftPhone  and  OtherPhone ) will be delivered to the customer
    */
   shipping?: ShippingInfo;
 
@@ -101,7 +96,6 @@ class ExtensionDeviceResponse {
   inCompanyNet?: boolean;
 
   /**
-   * Site data
    */
   site?: DeviceSiteInfo;
 

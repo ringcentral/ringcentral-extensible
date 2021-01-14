@@ -1,8 +1,8 @@
 import {WeeklyScheduleInfo} from './index';
 
+// Schedule when an answering rule is applied
 class UserBusinessHoursScheduleInfo {
   /**
-   * Weekly schedule
    */
   weeklyRanges?: WeeklyScheduleInfo;
 }

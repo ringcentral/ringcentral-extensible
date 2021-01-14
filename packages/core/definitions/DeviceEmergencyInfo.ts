@@ -1,12 +1,12 @@
 import {DeviceEmergencyAddress, DeviceEmergencyLocationInfo} from './index';
 
+// Device emergency settings
 class DeviceEmergencyInfo {
   /**
    */
   address?: DeviceEmergencyAddress;
 
   /**
-   * Company emergency response location details
    */
   location?: DeviceEmergencyLocationInfo;
 

@@ -17,13 +17,11 @@ class GetMessageList {
   records?: GetMessageInfoResponse[];
 
   /**
-   * Information on navigation
    * Required
    */
   navigation?: MessagingNavigationInfo;
 
   /**
-   * Information on paging
    * Required
    */
   paging?: MessagingPagingInfo;

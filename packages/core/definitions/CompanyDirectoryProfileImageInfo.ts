@@ -1,3 +1,4 @@
+// Extension profile image information. Not returned if profile images are absent for an extension
 class CompanyDirectoryProfileImageInfo {
   /**
    * Link to a profile image resource

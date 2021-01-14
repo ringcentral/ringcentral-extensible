@@ -1,9 +1,7 @@
-import {Attachment} from './index';
-
 class CreateUserProfileImageRequest {
   /**
    */
-  image?: Attachment;
+  image?: string;
 }
 
 export default CreateUserProfileImageRequest;

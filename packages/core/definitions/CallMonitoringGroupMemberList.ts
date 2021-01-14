@@ -18,13 +18,11 @@ class CallMonitoringGroupMemberList {
   records?: CallMonitoringGroupMemberInfo[];
 
   /**
-   * Information on navigation
    * Required
    */
   navigation?: ProvisioningNavigationInfo;
 
   /**
-   * Information on paging
    * Required
    */
   paging?: ProvisioningPagingInfo;

@@ -19,7 +19,6 @@ class PrivateIpRangeInfoRequest {
   name?: string;
 
   /**
-   * Emergency address information. Only one of a pair `emergencyAddress` or `emergencyLocationId` should be specified, otherwise the error is returned
    */
   emergencyAddress?: LocationUpdatesEmergencyAddressInfoRequest;
 

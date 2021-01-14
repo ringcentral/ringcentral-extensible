@@ -27,7 +27,6 @@ class CompanyDirectoryEvent {
   ownerId?: string;
 
   /**
-   * Notification payload body
    */
   body?: CompanyDirectoryEventBody;
 }

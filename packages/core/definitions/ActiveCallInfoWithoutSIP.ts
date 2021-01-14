@@ -1,3 +1,5 @@
+import {CallInfoCQ} from './index';
+
 class ActiveCallInfoWithoutSIP {
   /**
    * Internal identifier of a call
@@ -8,6 +10,11 @@ class ActiveCallInfoWithoutSIP {
    * Call direction
    */
   direction?: 'Inbound' | 'Outbound';
+
+  /**
+   * Identifies if a call belongs to the call queue
+   */
+  queueCall?: boolean;
 
   /**
    * Phone number or extension number of a caller. For GCM transport type '_from' property should be used
@@ -63,6 +70,10 @@ class ActiveCallInfoWithoutSIP {
    * Type of call termination. Supported for calls in 'NoCall' status. If the returned termination type is 'intermediate' it means the call is not actually ended, the connection is established on one of the devices
    */
   terminationType?: 'final' | 'intermediate';
+
+  /**
+   */
+  callInfo?: CallInfoCQ;
 }
 
 export default ActiveCallInfoWithoutSIP;

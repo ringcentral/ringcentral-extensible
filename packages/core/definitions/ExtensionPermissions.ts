@@ -1,16 +1,14 @@
-import {PermissionInfo} from './index';
+import {PermissionInfoAdmin, PermissionInfoInt} from './index';
 
 // Extension permissions, corresponding to the Service Web permissions 'Admin' and 'InternationalCalling'
 class ExtensionPermissions {
   /**
-   * Admin permission
    */
-  admin?: PermissionInfo;
+  admin?: PermissionInfoAdmin;
 
   /**
-   * International Calling permission
    */
-  internationalCalling?: PermissionInfo;
+  internationalCalling?: PermissionInfoInt;
 }
 
 export default ExtensionPermissions;

@@ -1,4 +1,4 @@
-// Infommation on a message returned within the specified batch
+// Infomation on a message returned within the specified batch
 class MessageListMessageResponse {
   /**
    * Internal identifier of a message
@@ -21,19 +21,24 @@ class MessageListMessageResponse {
   to?: string[];
 
   /**
-   * Time of message creation
+   * The time at which the message was created
    */
-  createdAt?: string;
+  creationTime?: string;
 
   /**
-   * Time of the message(s) last update
+   * The time at which the messages was last updated
    */
-  lastUpdatedAt?: string;
+  lastModifiedTime?: string;
 
   /**
    * Current status of a message
    */
-  messageStatus?: string;
+  messageStatus?:
+    | 'Queued'
+    | 'Delivered'
+    | 'Sent'
+    | 'SendingFailed'
+    | 'DeliveryFailed';
 
   /**
    * Number of segments of a message
@@ -41,9 +46,24 @@ class MessageListMessageResponse {
   segmentCount?: number;
 
   /**
+   * Text of a message. Returned if the `view` parameter is set to 'Detailed'
+   */
+  text?: string;
+
+  /**
    * Cost of a message
    */
   cost?: number;
+
+  /**
+   * Indicates whether the message was outbound or inbound
+   */
+  direction?: 'Inbound' | 'Outbound';
+
+  /**
+   * The RC error code of the message sending failure reason
+   */
+  errorCode?: string;
 }
 
 export default MessageListMessageResponse;

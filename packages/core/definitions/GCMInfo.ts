@@ -1,5 +1,6 @@
 import {GCMData} from './index';
 
+// GCM data
 class GCMInfo {
   /**
    * Notification priority, if the value is 'high' then notification is turned on even if the application is in background
@@ -12,7 +13,6 @@ class GCMInfo {
   time_to_live?: number;
 
   /**
-   * GCM data
    */
   data?: GCMData;
 }

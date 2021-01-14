@@ -5,6 +5,7 @@ import {
   CompanyDirectoryProfileImageInfo,
 } from './index';
 
+// Notification payload body
 class CompanyDirectoryEventBody {
   /**
    * Internal identifier of an extension
@@ -63,12 +64,10 @@ class CompanyDirectoryEventBody {
   phoneNumbers?: CompanyDirectoryPhoneNumberInfo[];
 
   /**
-   * Site data
    */
   site?: ContactDirectorySiteInfo;
 
   /**
-   * Extension profile image information. Not returned if profile images are absent for an extension
    */
   profileImage?: CompanyDirectoryProfileImageInfo;
 }

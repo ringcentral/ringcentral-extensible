@@ -9,6 +9,7 @@ import {
   ProfileImageResource,
 } from './index';
 
+// Information on an extension to which the phone number is assigned
 class PhoneNumberExtensionInfo {
   /**
    */

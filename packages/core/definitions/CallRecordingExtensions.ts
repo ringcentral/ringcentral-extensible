@@ -15,12 +15,10 @@ class CallRecordingExtensions {
   records?: CallRecordingExtensionInfo[];
 
   /**
-   * Information on navigation
    */
   navigation?: CallHandlingNavigationInfo;
 
   /**
-   * Information on paging
    */
   paging?: CallHandlingPagingInfo;
 }

@@ -1,3 +1,4 @@
+// Sync information (type, token and time)
 class SyncInfoCallLog {
   /**
    * Type of synchronization

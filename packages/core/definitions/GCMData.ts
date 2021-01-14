@@ -1,3 +1,4 @@
+// GCM data
 class GCMData {
   /**
    * Event filter URI

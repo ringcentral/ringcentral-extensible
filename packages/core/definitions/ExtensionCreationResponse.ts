@@ -22,7 +22,6 @@ class ExtensionCreationResponse {
   uri?: string;
 
   /**
-   * Contact detailed information
    */
   contact?: ContactInfo;
 
@@ -50,7 +49,6 @@ class ExtensionCreationResponse {
   permissions?: ExtensionPermissions;
 
   /**
-   * Information on profile image
    */
   profileImage?: ProfileImageInfo;
 
@@ -60,7 +58,6 @@ class ExtensionCreationResponse {
   references?: ReferenceInfo[];
 
   /**
-   * Extension region data (timezone, home country, language)
    */
   regionalSettings?: RegionalSettings;
 
@@ -75,7 +72,6 @@ class ExtensionCreationResponse {
   setupWizardState?: 'NotStarted' | 'Incomplete' | 'Completed';
 
   /**
-   * Site data. If multi-site feature is turned on for the account, then internal identifier of a site must be specified. To assign the wireless point to the main site (company) set site ID to `main-site`
    */
   site?: AutomaticLocationUpdatesSiteInfo;
 
@@ -85,7 +81,6 @@ class ExtensionCreationResponse {
   status?: 'Enabled' | 'Disabled' | 'Frozen' | 'NotActivated' | 'Unassigned';
 
   /**
-   * Status information (reason, comment). Returned for 'Disabled' status only
    */
   statusInfo?: ExtensionStatusInfo;
 

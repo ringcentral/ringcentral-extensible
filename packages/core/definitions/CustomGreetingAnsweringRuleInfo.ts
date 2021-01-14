@@ -1,3 +1,4 @@
+// Information on an answering rule that the greeting is applied to
 class CustomGreetingAnsweringRuleInfo {
   /**
    * Canonical URI of an answering rule

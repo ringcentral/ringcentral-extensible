@@ -1,3 +1,4 @@
+// Information on extension, for which this presence data is returned
 class GetPresenceExtensionInfo {
   /**
    * Internal identifier of an extension

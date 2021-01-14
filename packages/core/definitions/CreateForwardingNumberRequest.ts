@@ -22,7 +22,6 @@ class CreateForwardingNumberRequest {
   type?: 'PhoneLine' | 'Home' | 'Mobile' | 'Work' | 'Other';
 
   /**
-   * Reference to the other extension device. Applicable for 'PhoneLine' type only. Cannot be specified together with 'phoneNumber' parameter.
    */
   device?: CreateForwardingNumberDeviceInfo;
 }

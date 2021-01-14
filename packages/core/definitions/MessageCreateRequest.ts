@@ -7,7 +7,7 @@ class MessageCreateRequest {
   to?: string[];
 
   /**
-   * Text to send
+   * Text to send, maximum number of characters is 1000
    */
   text?: string;
 }

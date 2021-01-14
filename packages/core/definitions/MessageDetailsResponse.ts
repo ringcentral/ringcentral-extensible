@@ -16,19 +16,19 @@ class MessageDetailsResponse {
   to?: string[];
 
   /**
-   * Text of a message
+   * Text of a message, maximum number of characters is 1000
    */
   text?: string;
 
   /**
-   * Time of message creation
+   * The time when this is message was created.
    */
-  createdAt?: string;
+  creationTime?: string;
 
   /**
-   * Time а a message last update
+   * The time when this message was last updated.
    */
-  lastUpdatedAt?: string;
+  lastModifiedTime?: string;
 
   /**
    * Current status of a message
@@ -49,6 +49,21 @@ class MessageDetailsResponse {
    * Cost of a message
    */
   cost?: number;
+
+  /**
+   * The batchId in which the message was submitted
+   */
+  batchId?: string;
+
+  /**
+   * Indicates whether the message was outbound or inbound
+   */
+  direction?: 'Inbound' | 'Outbound';
+
+  /**
+   * The RC error code of the message sending failure reason
+   */
+  errorCode?: string;
 }
 
 export default MessageDetailsResponse;

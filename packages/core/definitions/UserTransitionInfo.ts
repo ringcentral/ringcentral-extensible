@@ -1,11 +1,12 @@
+// For NotActivated extensions only. Welcome email settings
 class UserTransitionInfo {
   /**
-   * Specifies if an activation email is automatically sent to new users (Not Activated extensions) or not
+   * Specifies if a welcome/activation email is sent to the existing users during account confirmation
    */
   sendWelcomeEmailsToUsers?: boolean;
 
   /**
-   * Supported for account confirmation. Specifies whether welcome email is sent
+   * Specifies if a welcome/activation email is sent to the new users (within extension status changing from 'Unsassigned' to 'NotActivated/Disabled')
    */
   sendWelcomeEmail?: boolean;
 }

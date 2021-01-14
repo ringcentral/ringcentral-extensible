@@ -1,10 +1,9 @@
-import {BulkTaskInfo} from './index';
+import {BulkTaskInfoWiUpdate} from './index';
 
 class UpdateMultipleWirelessPointsResponse {
   /**
-   * Information on the task for multiple wireless points update
    */
-  task?: BulkTaskInfo;
+  task?: BulkTaskInfoWiUpdate;
 }
 
 export default UpdateMultipleWirelessPointsResponse;

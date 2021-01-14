@@ -16,12 +16,10 @@ class AccountPhoneNumbers {
   records?: CompanyPhoneNumberInfo[];
 
   /**
-   * Information on navigation
    */
   navigation?: ProvisioningNavigationInfo;
 
   /**
-   * Information on paging
    */
   paging?: ProvisioningPagingInfo;
 }

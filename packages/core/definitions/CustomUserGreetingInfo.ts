@@ -36,7 +36,6 @@ class CustomUserGreetingInfo {
   contentUri?: string;
 
   /**
-   * Information on an answering rule that the greeting is applied to
    */
   answeringRule?: CustomGreetingAnsweringRuleInfo;
 }

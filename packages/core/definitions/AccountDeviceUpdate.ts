@@ -7,22 +7,18 @@ import {
 
 class AccountDeviceUpdate {
   /**
-   * Address for emergency cases. The same emergency address is assigned to all numbers of a single device. If the emergency address is also specified in `emergency` resource, then this value is ignored
    */
   emergencyServiceAddress?: EmergencyServiceAddressResourceRequest;
 
   /**
-   * Device emergency settings
    */
   emergency?: DeviceEmergencyInfo;
 
   /**
-   * Information on extension that the device is assigned to
    */
   extension?: DeviceUpdateExtensionInfo;
 
   /**
-   * Information on phone lines added to a device
    */
   phoneLines?: DeviceUpdatePhoneLinesInfo;
 

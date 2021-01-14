@@ -27,7 +27,6 @@ class LocationInfo {
   nxx?: string;
 
   /**
-   * Information on the state this location belongs to
    */
   state?: LocationStateInfo;
 }

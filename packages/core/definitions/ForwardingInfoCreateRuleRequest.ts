@@ -1,5 +1,6 @@
 import {RuleInfoCreateRuleRequest} from './index';
 
+// Forwarding parameters. Returned if 'ForwardCalls' is specified in 'callHandlingAction'. These settings determine the forwarding numbers to which the call will be forwarded
 class ForwardingInfoCreateRuleRequest {
   /**
    * Specifies if the first ring on desktop/mobile apps is enabled. The default value is 'True'
@@ -13,7 +14,6 @@ class ForwardingInfoCreateRuleRequest {
 
   /**
    * Specifies delay between ring on apps and starting of a call forwarding
-   * Default: 1
    */
   softPhonesRingCount?: number;
 

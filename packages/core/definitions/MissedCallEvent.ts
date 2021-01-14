@@ -7,7 +7,6 @@ class MissedCallEvent {
   uuid?: string;
 
   /**
-   * APNS service info
    */
   pn_apns?: APNSInfo;
 

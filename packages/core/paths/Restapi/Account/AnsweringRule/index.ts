@@ -1,9 +1,9 @@
 import {RestRequestConfig} from '../../../../Rest';
 import {
-  CompanyAnsweringRuleInfo,
-  CompanyAnsweringRuleRequest,
   CompanyAnsweringRuleList,
   ListCompanyAnsweringRulesParameters,
+  CompanyAnsweringRuleInfo,
+  CompanyAnsweringRuleRequest,
   CompanyAnsweringRuleUpdate,
 } from '../../../../definitions';
 import Parent from '..';
@@ -29,6 +29,23 @@ class Index {
   }
 
   /**
+   * Operation: Get Company Call Handling Rule List
+   * Rate Limit Group: Medium
+   * Http get /restapi/v1.0/account/{accountId}/answering-rule
+   */
+  async list(
+    queryParams?: ListCompanyAnsweringRulesParameters,
+    config?: RestRequestConfig
+  ): Promise<CompanyAnsweringRuleList> {
+    const r = await this.rc.get<CompanyAnsweringRuleList>(
+      this.path(false),
+      queryParams,
+      config
+    );
+    return r.data;
+  }
+
+  /**
    * Operation: Create Company Call Handling Rule
    * Rate Limit Group: Medium
    * Http post /restapi/v1.0/account/{accountId}/answering-rule
@@ -41,23 +58,6 @@ class Index {
       this.path(false),
       companyAnsweringRuleRequest,
       undefined,
-      config
-    );
-    return r.data;
-  }
-
-  /**
-   * Operation: Get Company Call Handling Rule List
-   * Rate Limit Group: Medium
-   * Http get /restapi/v1.0/account/{accountId}/answering-rule
-   */
-  async list(
-    queryParams?: ListCompanyAnsweringRulesParameters,
-    config?: RestRequestConfig
-  ): Promise<CompanyAnsweringRuleList> {
-    const r = await this.rc.get<CompanyAnsweringRuleList>(
-      this.path(false),
-      queryParams,
       config
     );
     return r.data;

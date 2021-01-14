@@ -1,9 +1,9 @@
 import Content from './Content';
 import {RestRequestConfig} from '../../../../Rest';
 import {
+  IVRPrompts,
   PromptInfo,
   CreateIvrPromptRequest,
-  IVRPrompts,
   UpdateIVRPromptRequest,
 } from '../../../../definitions';
 import Utils from '../../../../Utils';
@@ -30,6 +30,20 @@ class Index {
   }
 
   /**
+   * Operation: Get IVR Prompt List
+   * Rate Limit Group: Medium
+   * Http get /restapi/v1.0/account/{accountId}/ivr-prompts
+   */
+  async list(config?: RestRequestConfig): Promise<IVRPrompts> {
+    const r = await this.rc.get<IVRPrompts>(
+      this.path(false),
+      undefined,
+      config
+    );
+    return r.data;
+  }
+
+  /**
    * Operation: Create IVR Prompts
    * Rate Limit Group: Heavy
    * Http post /restapi/v1.0/account/{accountId}/ivr-prompts
@@ -49,20 +63,6 @@ class Index {
   }
 
   /**
-   * Operation: Get IVR Prompt List
-   * Rate Limit Group: Medium
-   * Http get /restapi/v1.0/account/{accountId}/ivr-prompts
-   */
-  async list(config?: RestRequestConfig): Promise<IVRPrompts> {
-    const r = await this.rc.get<IVRPrompts>(
-      this.path(false),
-      undefined,
-      config
-    );
-    return r.data;
-  }
-
-  /**
    * Operation: Get IVR Prompt
    * Rate Limit Group: Medium
    * Http get /restapi/v1.0/account/{accountId}/ivr-prompts/{promptId}
@@ -73,20 +73,6 @@ class Index {
     }
 
     const r = await this.rc.get<PromptInfo>(this.path(), undefined, config);
-    return r.data;
-  }
-
-  /**
-   * Operation: Delete IVR Prompt
-   * Rate Limit Group: Heavy
-   * Http delete /restapi/v1.0/account/{accountId}/ivr-prompts/{promptId}
-   */
-  async delete(config?: RestRequestConfig): Promise<string> {
-    if (this.promptId === null) {
-      throw new Error('promptId must be specified.');
-    }
-
-    const r = await this.rc.delete<string>(this.path(), undefined, config);
     return r.data;
   }
 
@@ -109,6 +95,20 @@ class Index {
       undefined,
       config
     );
+    return r.data;
+  }
+
+  /**
+   * Operation: Delete IVR Prompt
+   * Rate Limit Group: Heavy
+   * Http delete /restapi/v1.0/account/{accountId}/ivr-prompts/{promptId}
+   */
+  async delete(config?: RestRequestConfig): Promise<string> {
+    if (this.promptId === null) {
+      throw new Error('promptId must be specified.');
+    }
+
+    const r = await this.rc.delete<string>(this.path(), undefined, config);
     return r.data;
   }
 

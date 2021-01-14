@@ -27,7 +27,6 @@ class FaxMessageEvent {
   ownerId?: string;
 
   /**
-   * Notification payload body
    */
   body?: FaxMessageEventBody;
 }

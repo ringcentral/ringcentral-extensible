@@ -1,3 +1,4 @@
+// Information on account billing plan
 class BillingPlanInfo {
   /**
    * Internal identifier of a billing plan

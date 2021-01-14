@@ -12,13 +12,11 @@ class UserCallLogResponse {
   records?: UserCallLogRecord[];
 
   /**
-   * Information on navigation
    * Required
    */
   navigation?: CallLogNavigationInfo;
 
   /**
-   * Information on paging
    * Required
    */
   paging?: CallLogPagingInfo;

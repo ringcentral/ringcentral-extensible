@@ -9,7 +9,6 @@ import {
 
 class ExtensionCreationRequest {
   /**
-   * Contact Information
    */
   contact?: ContactInfoCreationRequest;
 
@@ -33,7 +32,6 @@ class ExtensionCreationRequest {
   references?: ReferenceInfo[];
 
   /**
-   * Extension region data (timezone, home country, language)
    */
   regionalSettings?: RegionalSettings;
 
@@ -63,7 +61,6 @@ class ExtensionCreationRequest {
   status?: 'Enabled' | 'Disabled' | 'NotActivated' | 'Unassigned' | 'Frozen';
 
   /**
-   * Status information (reason, comment). For 'Disabled' status only
    */
   statusInfo?: ExtensionStatusInfo;
 

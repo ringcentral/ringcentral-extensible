@@ -27,7 +27,6 @@ class GlipMessageAttachmentInfo {
   intro?: string;
 
   /**
-   * Information about the author
    */
   author?: GlipMessageAttachmentAuthorInfo;
 
@@ -57,7 +56,6 @@ class GlipMessageAttachmentInfo {
   fields?: GlipMessageAttachmentFieldsInfo[];
 
   /**
-   * Message Footer
    */
   footnote?: GlipMessageAttachmentFootnoteInfo;
 

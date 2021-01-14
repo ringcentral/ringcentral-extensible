@@ -1,3 +1,4 @@
+// Session origin details
 class OriginInfo {
   /**
    * Session origin type

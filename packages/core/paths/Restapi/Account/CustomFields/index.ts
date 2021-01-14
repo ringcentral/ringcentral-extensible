@@ -1,8 +1,8 @@
 import {RestRequestConfig} from '../../../../Rest';
 import {
+  CustomFieldsResource,
   CustomFieldResource,
   CustomFieldCreateRequest,
-  CustomFieldsResource,
   CustomFieldUpdateRequest,
 } from '../../../../definitions';
 import Parent from '..';
@@ -28,6 +28,20 @@ class Index {
   }
 
   /**
+   * Operation: Get Custom Field List
+   * Rate Limit Group: Light
+   * Http get /restapi/v1.0/account/{accountId}/custom-fields
+   */
+  async get(config?: RestRequestConfig): Promise<CustomFieldsResource> {
+    const r = await this.rc.get<CustomFieldsResource>(
+      this.path(false),
+      undefined,
+      config
+    );
+    return r.data;
+  }
+
+  /**
    * Operation: Create Custom Field
    * Rate Limit Group: Light
    * Http post /restapi/v1.0/account/{accountId}/custom-fields
@@ -39,20 +53,6 @@ class Index {
     const r = await this.rc.post<CustomFieldResource>(
       this.path(false),
       customFieldCreateRequest,
-      undefined,
-      config
-    );
-    return r.data;
-  }
-
-  /**
-   * Operation: Get Custom Field List
-   * Rate Limit Group: Light
-   * Http get /restapi/v1.0/account/{accountId}/custom-fields
-   */
-  async get(config?: RestRequestConfig): Promise<CustomFieldsResource> {
-    const r = await this.rc.get<CustomFieldsResource>(
-      this.path(false),
       undefined,
       config
     );

@@ -41,12 +41,15 @@ class Index {
    * Rate Limit Group: Heavy
    * Http get /restapi/v1.0/account/{accountId}/message-store-report/{taskId}/archive/{archiveId}
    */
-  async get(config?: RestRequestConfig): Promise<string> {
+  async get(config?: RestRequestConfig): Promise<Buffer> {
     if (this.archiveId === null) {
       throw new Error('archiveId must be specified.');
     }
 
-    const r = await this.rc.get<string>(this.path(), undefined, config);
+    const r = await this.rc.get<Buffer>(this.path(), undefined, {
+      ...config,
+      responseType: 'arraybuffer',
+    });
     return r.data;
   }
 }

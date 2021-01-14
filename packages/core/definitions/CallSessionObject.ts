@@ -1,5 +1,6 @@
 import {OriginInfo, CallParty} from './index';
 
+// Call session information
 class CallSessionObject {
   /**
    * Internal identifier of a call session
@@ -7,7 +8,6 @@ class CallSessionObject {
   id?: string;
 
   /**
-   * Initial data of a call session
    */
   origin?: OriginInfo;
 

@@ -12,7 +12,6 @@ class CallLogSync {
   records?: UserCallLogRecord[];
 
   /**
-   * Sync information (type, token and time)
    */
   syncInfo?: SyncInfoCallLog;
 }

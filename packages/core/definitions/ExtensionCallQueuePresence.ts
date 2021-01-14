@@ -2,7 +2,6 @@ import {CallQueueInfo} from './index';
 
 class ExtensionCallQueuePresence {
   /**
-   * Call queue information
    */
   callQueue?: CallQueueInfo;
 

@@ -16,12 +16,10 @@ class WirelessPointsList {
   records?: WirelessPointInfo[];
 
   /**
-   * Information on navigation
    */
   navigation?: ProvisioningNavigationInfo;
 
   /**
-   * Information on paging
    */
   paging?: ProvisioningPagingInfo;
 }

@@ -1,3 +1,4 @@
+// Extension timezone information
 class TimezoneInfo {
   /**
    * Internal identifier of a timezone

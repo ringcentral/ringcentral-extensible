@@ -29,7 +29,6 @@ class GetAccountInfoResponse {
   mainNumber?: string;
 
   /**
-   * Operator's extension information. This extension will receive all calls and messages intended for the operator
    */
   operator?: AccountOperatorInfo;
 
@@ -39,7 +38,6 @@ class GetAccountInfoResponse {
   partnerId?: string;
 
   /**
-   * Account service information, including brand, service plan and billing plan
    */
   serviceInfo?: ServiceInfo;
 
@@ -50,7 +48,6 @@ class GetAccountInfoResponse {
   setupWizardState?: 'NotStarted' | 'Incomplete' | 'Completed';
 
   /**
-   * Account sign up data
    */
   signupInfo?: SignupInfoResource;
 
@@ -60,12 +57,10 @@ class GetAccountInfoResponse {
   status?: 'Initial' | 'Confirmed' | 'Unconfirmed' | 'Disabled';
 
   /**
-   * Status information (reason, comment, lifetime). Returned for 'Disabled' status only
    */
   statusInfo?: AccountStatusInfo;
 
   /**
-   * Account level region data (web service Auto-Receptionist settings)
    */
   regionalSettings?: AccountRegionalSettings;
 
@@ -85,7 +80,6 @@ class GetAccountInfoResponse {
   cfid?: string;
 
   /**
-   * Limits which are effective for the account
    */
   limits?: AccountLimits;
 }

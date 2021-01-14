@@ -16,12 +16,10 @@ class CompanyAnsweringRuleList {
   records?: ListCompanyAnsweringRuleInfo[];
 
   /**
-   * Information on paging
    */
   paging?: CallHandlingPagingInfo;
 
   /**
-   * Information on navigation
    */
   navigation?: CallHandlingNavigationInfo;
 }

@@ -3,9 +3,9 @@ import {
   RangesInfo,
 } from './index';
 
+// Schedule when an answering rule should be applied
 class CompanyAnsweringRuleScheduleInfoRequest {
   /**
-   * Weekly schedule. If specified, ranges cannot be specified
    */
   weeklyRanges?: CompanyAnsweringRuleWeeklyScheduleInfoRequest;
 

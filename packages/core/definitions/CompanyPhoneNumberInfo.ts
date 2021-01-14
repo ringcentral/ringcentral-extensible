@@ -17,12 +17,10 @@ class CompanyPhoneNumberInfo {
   id?: number;
 
   /**
-   * Brief information on a phone number country
    */
   country?: CountryInfo;
 
   /**
-   * Information on the extension, to which the phone number is assigned. Returned only for the request of Account phone number list
    */
   extension?: ExtensionInfo;
 
@@ -78,12 +76,10 @@ class CompanyPhoneNumberInfo {
     | 'BusinessMobileNumber';
 
   /**
-   * Temporary phone number, if any. Returned for phone numbers in `Pending` porting status only
    */
   temporaryNumber?: TemporaryNumberInfo;
 
   /**
-   * CCRN (Contact Center Routing Number) provider. If not specified then the default value 'InContact/North America' is used, its ID is '1'
    */
   contactCenterProvider?: ContactCenterProvider;
 

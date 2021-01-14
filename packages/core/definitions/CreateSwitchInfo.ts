@@ -17,12 +17,10 @@ class CreateSwitchInfo {
   name?: string;
 
   /**
-   * Site data
    */
   site?: SwitchSiteInfo;
 
   /**
-   * Emergency address assigned to the switch. Only one of a pair `emergencyAddress` or `emergencyLocationId` should be specified, otherwise the error is returned
    */
   emergencyAddress?: LocationUpdatesEmergencyAddressInfoRequest;
 
@@ -32,7 +30,6 @@ class CreateSwitchInfo {
   emergencyLocationId?: string;
 
   /**
-   * Emergency response location information
    */
   emergencyLocation?: ERLLocationInfo;
 }

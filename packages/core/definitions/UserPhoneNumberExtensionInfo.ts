@@ -1,5 +1,6 @@
 import {ContactCenterProvider} from './index';
 
+// Information on the extension, to which the phone number is assigned. Returned only for the request of Account phone number list
 class UserPhoneNumberExtensionInfo {
   /**
    * Internal identifier of an extension
@@ -40,7 +41,6 @@ class UserPhoneNumberExtensionInfo {
     | 'Site';
 
   /**
-   * CCRN (Contact Center Routing Number) provider. If not specified then the default value 'InContact/North America' is used, its ID is '1'
    */
   contactCenterProvider?: ContactCenterProvider;
 

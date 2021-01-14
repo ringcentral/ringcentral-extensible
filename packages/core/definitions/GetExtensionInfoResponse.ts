@@ -26,12 +26,10 @@ class GetExtensionInfoResponse {
   uri?: string;
 
   /**
-   * Account information
    */
   account?: GetExtensionAccountInfo;
 
   /**
-   * Contact detailed information
    */
   contact?: ContactInfo;
 
@@ -68,7 +66,6 @@ class GetExtensionInfoResponse {
   permissions?: ExtensionPermissions;
 
   /**
-   * Information on profile image
    */
   profileImage?: ProfileImageInfo;
 
@@ -82,7 +79,6 @@ class GetExtensionInfoResponse {
   roles?: Roles[];
 
   /**
-   * Extension region data (timezone, home country, language)
    */
   regionalSettings?: RegionalSettings;
 
@@ -103,7 +99,6 @@ class GetExtensionInfoResponse {
   status?: 'Enabled' | 'Disabled' | 'Frozen' | 'NotActivated' | 'Unassigned';
 
   /**
-   * Status information (reason, comment). Returned for 'Disabled' status only
    */
   statusInfo?: ExtensionStatusInfo;
 
@@ -127,10 +122,10 @@ class GetExtensionInfoResponse {
     | 'Room'
     | 'Limited'
     | 'Site'
-    | 'ProxyAdmin';
+    | 'ProxyAdmin'
+    | 'DelegatedLinesGroup';
 
   /**
-   * For Department extension type only. Call queue settings
    */
   callQueueInfo?: CallQueueExtensionInfo;
 
@@ -140,7 +135,6 @@ class GetExtensionInfoResponse {
   hidden?: boolean;
 
   /**
-   * Site data. If multi-site feature is turned on for the account, then internal identifier of a site must be specified. To assign the wireless point to the main site (company) set site ID to `main-site`
    */
   site?: AutomaticLocationUpdatesSiteInfo;
 }

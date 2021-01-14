@@ -32,7 +32,6 @@ class ForwardingNumberInfo {
   flipNumber?: string;
 
   /**
-   * Forwarding device information
    */
   device?: CreateForwardingNumberDeviceInfo;
 

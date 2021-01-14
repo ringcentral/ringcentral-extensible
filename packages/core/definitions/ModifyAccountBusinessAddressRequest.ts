@@ -12,7 +12,6 @@ class ModifyAccountBusinessAddressRequest {
   email?: string;
 
   /**
-   * Company business address
    */
   businessAddress?: BusinessAddressInfo;
 

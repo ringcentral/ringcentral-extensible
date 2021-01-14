@@ -1,3 +1,4 @@
+// Call queue member information
 class CallQueueMemberId {
   /**
    * Internal identifier of an extension - queue member

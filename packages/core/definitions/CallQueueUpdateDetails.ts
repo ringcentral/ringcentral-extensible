@@ -2,7 +2,6 @@ import {CallQueueServiceLevelSettings} from './index';
 
 class CallQueueUpdateDetails {
   /**
-   * Call queue service level settings
    */
   serviceLevelSettings?: CallQueueServiceLevelSettings;
 

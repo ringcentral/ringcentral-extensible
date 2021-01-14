@@ -1,5 +1,3 @@
-import {Attachment, CustomGreetingAnsweringRuleInfoRequest} from './index';
-
 class CreateCustomUserGreetingRequest {
   /**
    * Type of a greeting, specifying the case when the greeting is played.
@@ -14,13 +12,14 @@ class CreateCustomUserGreetingRequest {
     | 'HoldMusic';
 
   /**
-   * Meida file to upload
+   * Internal identifier of an answering rule
    */
-  binary?: Attachment;
+  answeringRuleId?: string;
 
   /**
+   * Meida file to upload
    */
-  answeringRule?: CustomGreetingAnsweringRuleInfoRequest;
+  binary?: string;
 }
 
 export default CreateCustomUserGreetingRequest;

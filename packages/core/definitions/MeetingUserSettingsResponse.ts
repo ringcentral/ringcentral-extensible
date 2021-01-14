@@ -6,7 +6,6 @@ class MeetingUserSettingsResponse {
   recording?: UserMeetingRecordingSetting;
 
   /**
-   * Settings defining how to schedule user meetings
    */
   scheduleMeeting?: ScheduleUserMeetingInfo;
 }

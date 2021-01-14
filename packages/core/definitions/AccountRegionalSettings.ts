@@ -7,29 +7,25 @@ import {
   CurrencyInfo,
 } from './index';
 
+// Account level region data (web service Auto-Receptionist settings)
 class AccountRegionalSettings {
   /**
-   * Extension country information
    */
   homeCountry?: CountryInfo;
 
   /**
-   * Extension timezone information
    */
   timezone?: TimezoneInfo;
 
   /**
-   * User interface language data
    */
   language?: LanguageInfo;
 
   /**
-   * Information on language used for telephony greetings
    */
   greetingLanguage?: GreetingLanguageInfo;
 
   /**
-   * Formatting language preferences for numbers, dates and currencies
    */
   formattingLocale?: FormattingLocaleInfo;
 
@@ -39,7 +35,6 @@ class AccountRegionalSettings {
   timeFormat?: '12h' | '24h';
 
   /**
-   * Currency information
    */
   currency?: CurrencyInfo;
 }

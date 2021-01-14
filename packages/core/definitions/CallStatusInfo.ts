@@ -1,5 +1,6 @@
 import {PeerInfo} from './index';
 
+// Status data of a call session
 class CallStatusInfo {
   /**
    * Status code of a call
@@ -17,12 +18,11 @@ class CallStatusInfo {
     | 'VoiceMailScreening';
 
   /**
-   * Peer session / party data.'Gone'state only
    */
   peerId?: PeerInfo;
 
   /**
-   * Reason of call termination. For 'Disconnected' code only
+   * Reason for call termination. For 'Disconnected' code only
    */
   reason?:
     | 'Pickup'

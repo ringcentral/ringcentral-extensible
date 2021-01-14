@@ -27,7 +27,6 @@ class VoicemailMessageEvent {
   ownerId?: string;
 
   /**
-   * Notification payload body
    */
   body?: VoicemailMessageEventBody;
 }

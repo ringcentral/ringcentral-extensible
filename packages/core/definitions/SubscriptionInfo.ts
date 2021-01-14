@@ -32,7 +32,6 @@ class SubscriptionInfo {
 
   /**
    * Subscription lifetime in seconds
-   * Default: 900
    */
   expiresIn?: number;
 
@@ -47,7 +46,6 @@ class SubscriptionInfo {
   creationTime?: string;
 
   /**
-   * Delivery mode data
    * Required
    */
   deliveryMode?: NotificationDeliveryMode;

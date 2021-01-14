@@ -1,5 +1,5 @@
 import {RestRequestConfig} from '../../../../../Rest';
-import {GlipWebhookInfo, GlipWebhookList} from '../../../../../definitions';
+import {GlipWebhookList, GlipWebhookInfo} from '../../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../../..';
 
@@ -17,12 +17,12 @@ class Index {
   }
 
   /**
-   * Operation: Create Webhook in Group
+   * Operation: Get Webhooks in Group
    * Rate Limit Group: Medium
-   * Http post /restapi/v1.0/glip/groups/{groupId}/webhooks
+   * Http get /restapi/v1.0/glip/groups/{groupId}/webhooks
    */
-  async post(config?: RestRequestConfig): Promise<GlipWebhookInfo> {
-    const r = await this.rc.post<GlipWebhookInfo>(
+  async get(config?: RestRequestConfig): Promise<GlipWebhookList> {
+    const r = await this.rc.get<GlipWebhookList>(
       this.path(),
       undefined,
       config
@@ -31,12 +31,12 @@ class Index {
   }
 
   /**
-   * Operation: Get Webhooks in Group
+   * Operation: Create Webhook in Group
    * Rate Limit Group: Medium
-   * Http get /restapi/v1.0/glip/groups/{groupId}/webhooks
+   * Http post /restapi/v1.0/glip/groups/{groupId}/webhooks
    */
-  async get(config?: RestRequestConfig): Promise<GlipWebhookList> {
-    const r = await this.rc.get<GlipWebhookList>(
+  async post(config?: RestRequestConfig): Promise<GlipWebhookInfo> {
+    const r = await this.rc.post<GlipWebhookInfo>(
       this.path(),
       undefined,
       config

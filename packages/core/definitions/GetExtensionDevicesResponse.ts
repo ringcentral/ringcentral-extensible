@@ -17,13 +17,11 @@ class GetExtensionDevicesResponse {
   records?: ExtensionDeviceResponse[];
 
   /**
-   * Information on navigation
    * Required
    */
   navigation?: DeviceProvisioningNavigationInfo;
 
   /**
-   * Information on paging
    * Required
    */
   paging?: DeviceProvisioningPagingInfo;

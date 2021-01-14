@@ -27,7 +27,6 @@ class AccountTelephonySessionsEvent {
   ownerId?: string;
 
   /**
-   * Notification payload body
    */
   body?: TelephonySessionsEventBody;
 }

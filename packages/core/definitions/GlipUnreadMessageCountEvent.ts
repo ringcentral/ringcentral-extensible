@@ -7,12 +7,10 @@ class GlipUnreadMessageCountEvent {
   uuid?: string;
 
   /**
-   * Apple notification data
    */
   pn_apns?: GlipAPNSInfo;
 
   /**
-   * GCM data
    */
   pn_gcm?: GCMInfo;
 

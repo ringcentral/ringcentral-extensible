@@ -1,4 +1,5 @@
-class BulkTaskInfo {
+// Information on the task for multiple wireless points update
+class BulkTaskInfoWiUpdate {
   /**
    * Internal identifier of a task for multiple switches creation
    */
@@ -20,4 +21,4 @@ class BulkTaskInfo {
   lastModifiedTime?: string;
 }
 
-export default BulkTaskInfo;
+export default BulkTaskInfoWiUpdate;

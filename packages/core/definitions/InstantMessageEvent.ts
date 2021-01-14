@@ -22,7 +22,6 @@ class InstantMessageEvent {
   subscriptionId?: string;
 
   /**
-   * Notification payload body
    */
   body?: InstantMessageEventBody;
 }

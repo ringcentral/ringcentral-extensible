@@ -22,7 +22,6 @@ class ExtensionInfoEvent {
   subscriptionId?: string;
 
   /**
-   * Notification payload body
    */
   body?: ExtensionInfoEventBody;
 }

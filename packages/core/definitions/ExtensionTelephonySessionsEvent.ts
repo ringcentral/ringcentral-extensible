@@ -27,7 +27,6 @@ class ExtensionTelephonySessionsEvent {
   ownerId?: string;
 
   /**
-   * Notification payload body
    */
   body?: TelephonySessionsEventBody;
 }

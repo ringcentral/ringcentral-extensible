@@ -1,10 +1,9 @@
-import {BulkTaskInfo} from './index';
+import {BulkTaskInfoSwUpdate} from './index';
 
 class UpdateMultipleSwitchesResponse {
   /**
-   * Information on the task for multiple switches update
    */
-  task?: BulkTaskInfo;
+  task?: BulkTaskInfoSwUpdate;
 }
 
 export default UpdateMultipleSwitchesResponse;

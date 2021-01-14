@@ -17,6 +17,16 @@ class Index {
   }
 
   /**
+   * Operation: Get Group Events
+   * Rate Limit Group: Medium
+   * Http get /restapi/v1.0/glip/groups/{groupId}/events
+   */
+  async get(config?: RestRequestConfig): Promise<GlipEventInfo> {
+    const r = await this.rc.get<GlipEventInfo>(this.path(), undefined, config);
+    return r.data;
+  }
+
+  /**
    * Operation: Create Event by Group ID
    * Rate Limit Group: Medium
    * Http post /restapi/v1.0/glip/groups/{groupId}/events
@@ -31,16 +41,6 @@ class Index {
       undefined,
       config
     );
-    return r.data;
-  }
-
-  /**
-   * Operation: Get Group Events
-   * Rate Limit Group: Medium
-   * Http get /restapi/v1.0/glip/groups/{groupId}/events
-   */
-  async get(config?: RestRequestConfig): Promise<GlipEventInfo> {
-    const r = await this.rc.get<GlipEventInfo>(this.path(), undefined, config);
     return r.data;
   }
 }

@@ -7,7 +7,6 @@ class UserBusinessHoursUpdateResponse {
   uri?: string;
 
   /**
-   * Schedule when an answering rule is applied
    */
   schedule?: UserBusinessHoursScheduleInfo;
 }

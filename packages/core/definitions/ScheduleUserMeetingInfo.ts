@@ -1,3 +1,4 @@
+// Scheduling meeting settings locked on account level || Settings defining how to schedule user meetings
 class ScheduleUserMeetingInfo {
   /**
    * Starting meetings with host video on/off (true/false)

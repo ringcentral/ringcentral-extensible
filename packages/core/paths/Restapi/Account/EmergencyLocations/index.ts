@@ -1,9 +1,10 @@
 import {RestRequestConfig} from '../../../../Rest';
 import {
-  EmergencyLocationInfoRequest,
   EmergencyLocationList,
   ListEmergencyLocationsParameters,
+  EmergencyLocationInfoRequest,
   EmergencyLocationInfo,
+  DeleteEmergencyLocationParameters,
 } from '../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../..';
@@ -28,6 +29,23 @@ class Index {
   }
 
   /**
+   * Operation: Get Emergency Location List
+   * Rate Limit Group: Light
+   * Http get /restapi/v1.0/account/{accountId}/emergency-locations
+   */
+  async list(
+    queryParams?: ListEmergencyLocationsParameters,
+    config?: RestRequestConfig
+  ): Promise<EmergencyLocationList> {
+    const r = await this.rc.get<EmergencyLocationList>(
+      this.path(false),
+      queryParams,
+      config
+    );
+    return r.data;
+  }
+
+  /**
    * Operation: Add Emergency Location
    * Rate Limit Group: Medium
    * Http post /restapi/v1.0/account/{accountId}/emergency-locations
@@ -40,23 +58,6 @@ class Index {
       this.path(false),
       emergencyLocationInfoRequest,
       undefined,
-      config
-    );
-    return r.data;
-  }
-
-  /**
-   * Operation: Get Emergency Location List
-   * Rate Limit Group: Light
-   * Http get /restapi/v1.0/account/{accountId}/emergency-locations
-   */
-  async list(
-    queryParams?: ListEmergencyLocationsParameters,
-    config?: RestRequestConfig
-  ): Promise<EmergencyLocationList> {
-    const r = await this.rc.get<EmergencyLocationList>(
-      this.path(false),
-      queryParams,
       config
     );
     return r.data;
@@ -99,6 +100,23 @@ class Index {
       undefined,
       config
     );
+    return r.data;
+  }
+
+  /**
+   * Operation: Delete Emergency Location
+   * Rate Limit Group: Heavy
+   * Http delete /restapi/v1.0/account/{accountId}/emergency-locations/{locationId}
+   */
+  async delete(
+    queryParams?: DeleteEmergencyLocationParameters,
+    config?: RestRequestConfig
+  ): Promise<string> {
+    if (this.locationId === null) {
+      throw new Error('locationId must be specified.');
+    }
+
+    const r = await this.rc.delete<string>(this.path(), queryParams, config);
     return r.data;
   }
 }

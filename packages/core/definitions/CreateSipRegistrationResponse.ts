@@ -21,7 +21,6 @@ class CreateSipRegistrationResponse {
   sipInfoPstn?: SIPInfoResponse[];
 
   /**
-   * SIP flags data
    * Required
    */
   sipFlags?: SIPFlagsResponse;

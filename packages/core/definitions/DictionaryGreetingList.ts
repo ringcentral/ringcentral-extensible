@@ -16,12 +16,10 @@ class DictionaryGreetingList {
   records?: DictionaryGreetingInfo[];
 
   /**
-   * Information on navigation
    */
   navigation?: CallHandlingNavigationInfo;
 
   /**
-   * Information on paging
    */
   paging?: CallHandlingPagingInfo;
 }

@@ -1,6 +1,5 @@
 class GlipPreferencesChats {
   /**
-   * Default: 10
    */
   maxCount?: number;
 

@@ -12,7 +12,6 @@ class AccountCallLogSyncResponse {
   records?: CompanyCallLogRecord[];
 
   /**
-   * Sync information (type, token and time)
    */
   syncInfo?: CompanyCallLogSyncInfo;
 }

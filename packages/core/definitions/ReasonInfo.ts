@@ -1,3 +1,4 @@
+// Reason for the feature unavailability. Returned only if `available` is set to 'false'
 class ReasonInfo {
   /**
    * Reason code

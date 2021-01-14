@@ -2,7 +2,6 @@ import {NotificationInfo} from './index';
 
 class InboundMessageEvent {
   /**
-   * Information on a notification
    */
   aps?: NotificationInfo;
 
@@ -12,7 +11,7 @@ class InboundMessageEvent {
   messageId?: string;
 
   /**
-   * Internal identifier of an conversation
+   * Internal identifier of a conversation
    */
   conversationId?: string;
 

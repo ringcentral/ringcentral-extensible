@@ -16,7 +16,6 @@ class FeatureInfo {
   params?: ParamsInfo[];
 
   /**
-   * Reason of the feature unavailability. Returned only if `available` is set to 'false'
    */
   reason?: ReasonInfo;
 }

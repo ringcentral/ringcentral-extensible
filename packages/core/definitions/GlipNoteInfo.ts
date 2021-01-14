@@ -22,17 +22,14 @@ class GlipNoteInfo {
   preview?: string;
 
   /**
-   * Note creator information
    */
   creator?: CreatorInfo;
 
   /**
-   * Note last modification information
    */
   lastModifiedBy?: LastModifiedByInfo;
 
   /**
-   * Returned for the note being edited (locked) at the current moment. Information on the user editing the note
    */
   lockedBy?: LockedByInfo;
 

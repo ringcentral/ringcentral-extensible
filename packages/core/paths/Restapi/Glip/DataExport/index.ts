@@ -1,10 +1,10 @@
 import Datasets from './Datasets';
 import {RestRequestConfig} from '../../../../Rest';
 import {
-  DataExportTask,
-  CreateDataExportTaskRequest,
   DataExportTaskList,
   ListDataExportTasksParameters,
+  DataExportTask,
+  CreateDataExportTaskRequest,
 } from '../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../..';
@@ -29,6 +29,23 @@ class Index {
   }
 
   /**
+   * Operation: Get Data Export Task List
+   * Rate Limit Group: Medium
+   * Http get /restapi/v1.0/glip/data-export
+   */
+  async list(
+    queryParams?: ListDataExportTasksParameters,
+    config?: RestRequestConfig
+  ): Promise<DataExportTaskList> {
+    const r = await this.rc.get<DataExportTaskList>(
+      this.path(false),
+      queryParams,
+      config
+    );
+    return r.data;
+  }
+
+  /**
    * Operation: Create Data Export Task
    * Rate Limit Group: Heavy
    * Http post /restapi/v1.0/glip/data-export
@@ -41,23 +58,6 @@ class Index {
       this.path(false),
       createDataExportTaskRequest,
       undefined,
-      config
-    );
-    return r.data;
-  }
-
-  /**
-   * Operation: Get Data Export Task List
-   * Rate Limit Group: Medium
-   * Http get /restapi/v1.0/glip/data-export
-   */
-  async list(
-    queryParams?: ListDataExportTasksParameters,
-    config?: RestRequestConfig
-  ): Promise<DataExportTaskList> {
-    const r = await this.rc.get<DataExportTaskList>(
-      this.path(false),
-      queryParams,
       config
     );
     return r.data;

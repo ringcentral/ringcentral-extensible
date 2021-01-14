@@ -12,7 +12,6 @@ class PhoneLinesInfo {
   lineType?: 'Standalone' | 'StandaloneFree' | 'BlaPrimary' | 'BlaSecondary';
 
   /**
-   * Phone number information
    */
   phoneInfo?: PhoneNumberInfoIntId;
 

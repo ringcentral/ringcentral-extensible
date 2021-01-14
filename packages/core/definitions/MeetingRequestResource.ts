@@ -15,7 +15,6 @@ class MeetingRequestResource {
   meetingType?: 'Instant' | 'Scheduled' | 'ScheduledRecurring' | 'Recurring';
 
   /**
-   * Timing of a meeting
    */
   schedule?: MeetingScheduleResource;
 
@@ -25,7 +24,6 @@ class MeetingRequestResource {
   password?: string;
 
   /**
-   * Meeting host information
    */
   host?: HostInfoRequest;
 
@@ -52,7 +50,6 @@ class MeetingRequestResource {
   audioOptions?: ('Phone' | 'ComputerAudio')[];
 
   /**
-   * Recurrence settings
    */
   recurrence?: RecurrenceInfo;
 

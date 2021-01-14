@@ -12,7 +12,6 @@ class GetStateInfoResponse {
   uri?: string;
 
   /**
-   * Information on a country the state belongs to
    */
   country?: GetCountryInfoState;
 

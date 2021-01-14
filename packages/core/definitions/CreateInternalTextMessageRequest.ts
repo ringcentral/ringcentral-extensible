@@ -2,7 +2,6 @@ import {PagerCallerInfoRequest} from './index';
 
 class CreateInternalTextMessageRequest {
   /**
-   * Sender of a pager message.
    */
   from?: PagerCallerInfoRequest;
 

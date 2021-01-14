@@ -45,6 +45,7 @@ class ListExtensionsParameters {
     | 'Limited'
     | 'Bot'
     | 'ProxyAdmin'
+    | 'DelegatedLinesGroup'
   )[];
 }
 

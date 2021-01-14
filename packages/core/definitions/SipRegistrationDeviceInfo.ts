@@ -49,27 +49,22 @@ class SipRegistrationDeviceInfo {
   computerName?: string;
 
   /**
-   * HardPhone model information
    */
   model?: DeviceModelInfo;
 
   /**
-   * Internal identifier of an extension the device should be assigned to
    */
   extension?: DeviceExtensionInfo;
 
   /**
-   * Address for emergency cases. The same emergency address is assigned to all the numbers of one device
    */
   emergencyServiceAddress?: DeviceEmergencyServiceAddressResource;
 
   /**
-   * Emergency response location settings of a device
    */
   emergency?: SipRegistrationDeviceEmergencyInfo;
 
   /**
-   * Shipping information, according to which devices (in case of HardPhone ) or e911 stickers (in case of SoftPhone and OtherPhone ) will be delivered to the customer
    */
   shipping?: Shipping;
 
@@ -99,7 +94,6 @@ class SipRegistrationDeviceInfo {
   inCompanyNet?: boolean;
 
   /**
-   * Site data
    */
   site?: DeviceSiteInfo;
 

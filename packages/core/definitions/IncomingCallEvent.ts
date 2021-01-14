@@ -2,7 +2,6 @@ import {APSInfo} from './index';
 
 class IncomingCallEvent {
   /**
-   * Apple Push Notification Service Info
    */
   aps?: APSInfo;
 

@@ -1,3 +1,4 @@
+// Extension information
 class ExtensionInfoGrants {
   /**
    * Internal identifier of an extension

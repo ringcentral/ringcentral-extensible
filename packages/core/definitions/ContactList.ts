@@ -17,17 +17,14 @@ class ContactList {
   records?: PersonalContactResource[];
 
   /**
-   * Information on navigation
    */
   navigation?: UserContactsNavigationInfo;
 
   /**
-   * Information on paging
    */
   paging?: UserContactsPagingInfo;
 
   /**
-   * Information on address book groups
    */
   groups?: UserContactsGroupsInfo;
 }

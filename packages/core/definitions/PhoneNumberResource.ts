@@ -7,12 +7,10 @@ class PhoneNumberResource {
   id?: string;
 
   /**
-   * Brief information on a phone number country
    */
   country?: CountryResource;
 
   /**
-   * Information on an extension to which the phone number is assigned
    */
   extension?: PhoneNumberExtensionInfo;
 

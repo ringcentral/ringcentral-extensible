@@ -1,5 +1,6 @@
 import {DevicePhoneNumberCountryInfo} from './index';
 
+// Phone number information
 class DevicePhoneNumberInfo {
   /**
    * Internal identifier of a phone number
@@ -7,12 +8,11 @@ class DevicePhoneNumberInfo {
   id?: number;
 
   /**
-   * Brief information on a phone number country
    */
   country?: DevicePhoneNumberCountryInfo;
 
   /**
-   * Payment type. 'External' is returned for forwarded numbers which are not terminated in the RingCentral phone system = ['External', 'TollFree', 'Local'],
+   * Payment type. 'External' is returned for forwarded numbers which are not terminated in the RingCentral phone system = ['External', 'TollFree', 'Local']
    */
   paymentType?: 'External' | 'TollFree' | 'Local';
 

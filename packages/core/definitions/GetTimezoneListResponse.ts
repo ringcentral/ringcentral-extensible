@@ -17,13 +17,11 @@ class GetTimezoneListResponse {
   records?: GetTimezoneInfoResponse[];
 
   /**
-   * Information on navigation
    * Required
    */
   navigation?: ProvisioningNavigationInfo;
 
   /**
-   * Information on paging
    * Required
    */
   paging?: ProvisioningPagingInfo;

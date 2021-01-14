@@ -57,7 +57,6 @@ class UserCallLogRecord {
   legs?: CallLogRecordLegInfo[];
 
   /**
-   * Billing information related to the call
    */
   billing?: BillingInfo;
 
@@ -76,7 +75,6 @@ class UserCallLogRecord {
   startTime?: string;
 
   /**
-   * Information on a delegate extension that actually implemented a call action. For Secretary call log the field is returned if the current extension implemented a call. For Boss call log the field contains information on a Secretary extension which actually implemented a call on behalf of the current extension
    */
   delegate?: DelegateInfo;
 
@@ -96,7 +94,6 @@ class UserCallLogRecord {
   lastModifiedTime?: string;
 
   /**
-   * Call recording data. Returned if a call is recorded
    */
   recording?: CallLogRecordingInfo;
 

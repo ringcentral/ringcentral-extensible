@@ -1,9 +1,7 @@
-import {Attachment} from './index';
-
 class UpdateUserProfileImageRequest {
   /**
    */
-  image?: Attachment;
+  image?: string;
 }
 
 export default UpdateUserProfileImageRequest;

@@ -1,4 +1,4 @@
-import {IVRMenuPromptInfo, IVRMenuActionsInfo} from './index';
+import {IVRMenuSiteInfo, IVRMenuPromptInfo, IVRMenuActionsInfo} from './index';
 
 class IVRMenuInfo {
   /**
@@ -22,12 +22,10 @@ class IVRMenuInfo {
   extensionNumber?: string;
 
   /**
-   * Site data
    */
-  site?: string;
+  site?: IVRMenuSiteInfo;
 
   /**
-   * Prompt metadata
    */
   prompt?: IVRMenuPromptInfo;
 

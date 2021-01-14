@@ -14,7 +14,6 @@ class CallSessionStatusInfo {
   parkData?: string;
 
   /**
-   * Contains details of the 'linked' Session. Appears in 'Gone' State Code
    */
   peerId?: PeerInfo;
 

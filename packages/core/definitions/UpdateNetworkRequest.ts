@@ -23,7 +23,6 @@ class UpdateNetworkRequest {
   privateIpRanges?: PrivateIpRangeInfoRequest[];
 
   /**
-   * Emergency response location information
    */
   emergencyLocation?: ERLLocationInfo;
 }

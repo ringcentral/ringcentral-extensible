@@ -22,7 +22,6 @@ class CallQueuePresenceEvent {
   subscriptionId?: string;
 
   /**
-   * Notification payload body
    */
   body?: CallQueuePresenceEventBody;
 }

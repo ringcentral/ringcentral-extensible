@@ -7,7 +7,6 @@ class PhoneNumberInfoNumberParser {
   areaCode?: string;
 
   /**
-   * Information on a country the phone number belongs to
    */
   country?: GetCountryInfoNumberParser;
 

@@ -1,3 +1,4 @@
+// Account sign up data
 class SignupInfoResource {
   /**
    */

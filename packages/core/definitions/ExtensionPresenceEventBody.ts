@@ -1,3 +1,4 @@
+// Notification payload body
 class ExtensionPresenceEventBody {
   /**
    * Internal identifier of an extension. Optional parameter

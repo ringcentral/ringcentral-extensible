@@ -17,7 +17,6 @@ class UpdateAnsweringRuleRequest {
   id?: string;
 
   /**
-   * Forwarding parameters. Returned if 'ForwardCalls' is specified in 'callHandlingAction'. These settings determine the forwarding numbers to which the call will be forwarded
    */
   forwarding?: ForwardingInfoCreateRuleRequest;
 
@@ -42,7 +41,6 @@ class UpdateAnsweringRuleRequest {
   calledNumbers?: CalledNumberInfo[];
 
   /**
-   * Schedule when an answering rule should be applied
    */
   schedule?: ScheduleInfo;
 
@@ -64,17 +62,14 @@ class UpdateAnsweringRuleRequest {
   type?: 'BusinessHours' | 'AfterHours' | 'Custom';
 
   /**
-   * Unconditional forwarding parameters. Returned if 'UnconditionalForwarding' is specified in 'callHandlingAction'
    */
   unconditionalForwarding?: UnconditionalForwardingInfo;
 
   /**
-   * Queue settings applied for department (call queue) extension type, with the 'AgentQueue' value specified as a call handling action
    */
   queue?: QueueInfo;
 
   /**
-   * Specifies whether to take a voicemail and who should do it
    */
   voicemail?: VoicemailInfo;
 
@@ -94,7 +89,6 @@ class UpdateAnsweringRuleRequest {
   showInactiveNumbers?: boolean;
 
   /**
-   * Transfer settings applied for department (call queue) extension type, with 'TransferToExtension' call handling action
    */
   transfer?: TransferredExtensionInfo;
 }

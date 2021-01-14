@@ -1,5 +1,6 @@
 import {
   AutomaticLocationUpdatesModelInfo,
+  AutomaticLocationUpdatesSiteInfo,
   AutomaticLocationUpdatesPhoneLine,
 } from './index';
 
@@ -31,14 +32,12 @@ class AutomaticLocationUpdatesDeviceInfo {
   name?: string;
 
   /**
-   * HardPhone model information
    */
   model?: AutomaticLocationUpdatesModelInfo;
 
   /**
-   * Site data
    */
-  site?: string;
+  site?: AutomaticLocationUpdatesSiteInfo;
 
   /**
    * Phone lines information

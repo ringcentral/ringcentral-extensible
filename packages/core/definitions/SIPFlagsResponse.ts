@@ -1,3 +1,4 @@
+// SIP flags data
 class SIPFlagsResponse {
   /**
    * If 'True' VoIP calling feature is enabled

@@ -1,3 +1,4 @@
+// Call recording data. Returned if the call is recorded - `withRecording` parameter is set to 'True' in this case
 class CallLogRecordingInfo {
   /**
    * Internal identifier of the call recording

@@ -1,3 +1,4 @@
+// Note creator information
 class CreatorInfo {
   /**
    * Internal identifier of a user who created a note/task

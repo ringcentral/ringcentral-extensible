@@ -1,3 +1,4 @@
+// Information on a greeting language. Supported for types 'StopRecording', 'StartRecording', 'AutomaticRecording'
 class CustomCompanyGreetingLanguageInfo {
   /**
    * Internal identifier of a greeting language

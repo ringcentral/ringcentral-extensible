@@ -16,12 +16,10 @@ class IVRPrompts {
   records?: PromptInfo[];
 
   /**
-   * Information on navigation
    */
   navigation?: CallHandlingNavigationInfo;
 
   /**
-   * Information on paging
    */
   paging?: CallHandlingPagingInfo;
 }

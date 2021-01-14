@@ -42,6 +42,20 @@ class Index {
   }
 
   /**
+   * Operation: Delete Task
+   * Rate Limit Group: Medium
+   * Http delete /restapi/v1.0/glip/tasks/{taskId}
+   */
+  async delete(config?: RestRequestConfig): Promise<string> {
+    if (this.taskId === null) {
+      throw new Error('taskId must be specified.');
+    }
+
+    const r = await this.rc.delete<string>(this.path(), undefined, config);
+    return r.data;
+  }
+
+  /**
    * Operation: Patch Task
    * Rate Limit Group: Medium
    * Http patch /restapi/v1.0/glip/tasks/{taskId}
@@ -60,20 +74,6 @@ class Index {
       undefined,
       config
     );
-    return r.data;
-  }
-
-  /**
-   * Operation: Delete Task
-   * Rate Limit Group: Medium
-   * Http delete /restapi/v1.0/glip/tasks/{taskId}
-   */
-  async delete(config?: RestRequestConfig): Promise<string> {
-    if (this.taskId === null) {
-      throw new Error('taskId must be specified.');
-    }
-
-    const r = await this.rc.delete<string>(this.path(), undefined, config);
     return r.data;
   }
 

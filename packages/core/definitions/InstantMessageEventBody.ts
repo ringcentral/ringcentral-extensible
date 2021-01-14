@@ -5,6 +5,7 @@ import {
   ConversationInfo,
 } from './index';
 
+// Notification payload body
 class InstantMessageEventBody {
   /**
    * Internal identifier of a message
@@ -17,7 +18,6 @@ class InstantMessageEventBody {
   to?: NotificationRecipientInfo[];
 
   /**
-   * Extension Type. For GCM transport type '_from' property should be used
    */
   from?: SenderInfo;
 
@@ -81,7 +81,6 @@ class InstantMessageEventBody {
   conversationId?: string;
 
   /**
-   * Information about a conversation the message belongs to
    */
   conversation?: ConversationInfo;
 

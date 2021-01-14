@@ -21,7 +21,6 @@ class FaxResponse {
   type?: string;
 
   /**
-   * Sender information
    */
   from?: CallerInfoFrom;
 

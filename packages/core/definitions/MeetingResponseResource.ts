@@ -45,17 +45,14 @@ class MeetingResponseResource {
   status?: string;
 
   /**
-   * Meeting links
    */
   links?: MeetingLinks;
 
   /**
-   * Meeting schedule information
    */
   schedule?: MeetingScheduleResource;
 
   /**
-   * Meeting host information
    */
   host?: HostInfoRequest;
 
@@ -79,7 +76,6 @@ class MeetingResponseResource {
   audioOptions?: ('Phone' | 'ComputerAudio')[];
 
   /**
-   * Meeting recurrence information
    */
   reccurence?: RecurrenceInfo;
 

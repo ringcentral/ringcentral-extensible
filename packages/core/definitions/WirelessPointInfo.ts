@@ -26,17 +26,14 @@ class WirelessPointInfo {
   name?: string;
 
   /**
-   * Site data (internal identifier and custom name of a site)
    */
   site?: AutomaticLocationUpdatesSiteInfo;
 
   /**
-   * Emergency address assigned to the wireless point. Only one of a pair `emergencyAddress` or `emergencyLocationId` should be specified, otherwise the error is returned
    */
   emergencyAddress?: LocationUpdatesEmergencyAddressInfo;
 
   /**
-   * Emergency response location information
    */
   emergencyLocation?: ERLLocationInfo;
 

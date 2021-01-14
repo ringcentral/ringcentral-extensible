@@ -22,7 +22,6 @@ class MessageEvent {
   subscriptionId?: string;
 
   /**
-   * Notification payload body
    */
   body?: MessageEventBody;
 }

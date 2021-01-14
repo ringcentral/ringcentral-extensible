@@ -22,7 +22,6 @@ class DetailedExtensionPresenceEvent {
   subscriptionId?: string;
 
   /**
-   * Notification payload body
    */
   body?: DetailedExtensionPresenceEventBody;
 }

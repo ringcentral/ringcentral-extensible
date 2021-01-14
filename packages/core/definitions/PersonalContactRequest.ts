@@ -132,6 +132,11 @@ class PersonalContactRequest {
   /**
    */
   otherAddress?: ContactAddressInfo;
+
+  /**
+   * Contact ringtone. Max number of symbols is 64
+   */
+  ringtoneIndex?: string;
 }
 
 export default PersonalContactRequest;

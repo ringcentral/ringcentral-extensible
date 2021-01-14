@@ -33,7 +33,6 @@ class CompanyAnsweringRuleRequest {
   calledNumbers?: CompanyAnsweringRuleCalledNumberInfo[];
 
   /**
-   * Schedule when an answering rule should be applied
    */
   schedule?: CompanyAnsweringRuleScheduleInfoRequest;
 

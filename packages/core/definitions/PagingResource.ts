@@ -7,7 +7,6 @@ class PagingResource {
 
   /**
    * Number of records per page
-   * Default: 1000
    */
   perPage?: number;
 

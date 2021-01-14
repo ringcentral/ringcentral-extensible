@@ -17,12 +17,10 @@ class GetExtensionListResponse {
   records?: GetExtensionInfoResponse[];
 
   /**
-   * Information on navigation
    */
   navigation?: ProvisioningNavigationInfo;
 
   /**
-   * Information on paging
    */
   paging?: ProvisioningPagingInfo;
 }

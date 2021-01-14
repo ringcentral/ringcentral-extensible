@@ -58,22 +58,18 @@ class GetDeviceInfoResponse {
   computerName?: string;
 
   /**
-   * HardPhone model information
    */
   model?: ModelInfo;
 
   /**
-   * This attribute can be omitted for unassigned devices
    */
   extension?: ExtensionInfoIntId;
 
   /**
-   * Device emergency settings
    */
   emergency?: DeviceEmergencyInfo;
 
   /**
-   * Address for emergency cases. The same emergency address is assigned to all the numbers of one device
    */
   emergencyServiceAddress?: EmergencyServiceAddressResource;
 
@@ -83,7 +79,6 @@ class GetDeviceInfoResponse {
   phoneLines?: PhoneLinesInfo[];
 
   /**
-   * Shipping information, according to which devices (in case of  HardPhone ) or e911 stickers (in case of  SoftPhone  and  OtherPhone ) will be delivered to the customer
    */
   shipping?: ShippingInfo;
 
@@ -103,7 +98,6 @@ class GetDeviceInfoResponse {
   inCompanyNet?: boolean;
 
   /**
-   * Site data
    */
   site?: DeviceSiteInfo;
 
@@ -118,7 +112,6 @@ class GetDeviceInfoResponse {
   linePooling?: 'Host' | 'Guest' | 'None';
 
   /**
-   * Billing information. Returned for device update request if `prestatement` query parameter is set to 'true'
    */
   billingStatement?: BillingStatementInfo;
 }

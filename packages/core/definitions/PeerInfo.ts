@@ -1,4 +1,4 @@
-// Peer session / party data. Valid in Gone state only
+// Peer session/party details. Valid in 'Gone' state of a call
 class PeerInfo {
   /**
    */

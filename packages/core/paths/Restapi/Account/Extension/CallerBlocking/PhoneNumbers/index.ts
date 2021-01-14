@@ -83,20 +83,6 @@ class Index {
   }
 
   /**
-   * Operation: Delete Blocked/Allowed Number
-   * Rate Limit Group: Medium
-   * Http delete /restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers/{blockedNumberId}
-   */
-  async delete(config?: RestRequestConfig): Promise<string> {
-    if (this.blockedNumberId === null) {
-      throw new Error('blockedNumberId must be specified.');
-    }
-
-    const r = await this.rc.delete<string>(this.path(), undefined, config);
-    return r.data;
-  }
-
-  /**
    * Operation: Update Blocked/Allowed Number
    * Rate Limit Group: Medium
    * Http put /restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers/{blockedNumberId}
@@ -115,6 +101,20 @@ class Index {
       undefined,
       config
     );
+    return r.data;
+  }
+
+  /**
+   * Operation: Delete Blocked/Allowed Number
+   * Rate Limit Group: Medium
+   * Http delete /restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers/{blockedNumberId}
+   */
+  async delete(config?: RestRequestConfig): Promise<string> {
+    if (this.blockedNumberId === null) {
+      throw new Error('blockedNumberId must be specified.');
+    }
+
+    const r = await this.rc.delete<string>(this.path(), undefined, config);
     return r.data;
   }
 }

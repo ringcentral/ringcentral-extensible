@@ -1,8 +1,9 @@
-class PermissionInfo {
+// Admin permission
+class PermissionInfoAdmin {
   /**
    * Specifies if a permission is enabled or not
    */
   enabled?: boolean;
 }
 
-export default PermissionInfo;
+export default PermissionInfoAdmin;

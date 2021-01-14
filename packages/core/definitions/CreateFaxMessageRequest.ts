@@ -1,11 +1,6 @@
-import {Attachment, MessageStoreCalleeInfoRequest} from './index';
+import {MessageStoreCalleeInfoRequest, Attachment} from './index';
 
 class CreateFaxMessageRequest {
-  /**
-   * File to upload
-   */
-  attachments?: Attachment[];
-
   /**
    * Resolution of Fax
    */
@@ -35,6 +30,11 @@ class CreateFaxMessageRequest {
    * Cover page text, entered by the fax sender and printed on the cover page. Maximum length is limited to 1024 symbols
    */
   coverPageText?: string;
+
+  /**
+   * File to upload
+   */
+  attachments?: Attachment[];
 }
 
 export default CreateFaxMessageRequest;

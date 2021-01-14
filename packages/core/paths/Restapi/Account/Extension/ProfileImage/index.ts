@@ -1,7 +1,7 @@
 import {RestRequestConfig} from '../../../../../Rest';
 import {
-  CreateUserProfileImageRequest,
   UpdateUserProfileImageRequest,
+  CreateUserProfileImageRequest,
 } from '../../../../../definitions';
 import Utils from '../../../../../Utils';
 import Parent from '..';
@@ -40,25 +40,6 @@ class Index {
   }
 
   /**
-   * Operation: Upload User Profile Image
-   * Rate Limit Group: Heavy
-   * Http post /restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image
-   */
-  async post(
-    createUserProfileImageRequest: CreateUserProfileImageRequest,
-    config?: RestRequestConfig
-  ): Promise<string> {
-    const formData = Utils.getFormData(createUserProfileImageRequest);
-    const r = await this.rc.post<string>(
-      this.path(false),
-      formData,
-      undefined,
-      config
-    );
-    return r.data;
-  }
-
-  /**
    * Operation: Update User Profile Image
    * Rate Limit Group: Heavy
    * Http put /restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image
@@ -69,6 +50,25 @@ class Index {
   ): Promise<string> {
     const formData = Utils.getFormData(updateUserProfileImageRequest);
     const r = await this.rc.put<string>(
+      this.path(false),
+      formData,
+      undefined,
+      config
+    );
+    return r.data;
+  }
+
+  /**
+   * Operation: Upload User Profile Image
+   * Rate Limit Group: Heavy
+   * Http post /restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image
+   */
+  async post(
+    createUserProfileImageRequest: CreateUserProfileImageRequest,
+    config?: RestRequestConfig
+  ): Promise<string> {
+    const formData = Utils.getFormData(createUserProfileImageRequest);
+    const r = await this.rc.post<string>(
       this.path(false),
       formData,
       undefined,

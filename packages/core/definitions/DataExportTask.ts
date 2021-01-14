@@ -27,12 +27,10 @@ class DataExportTask {
   status?: 'Accepted' | 'InProgress' | 'Completed' | 'Failed' | 'Expired';
 
   /**
-   * Task creator information
    */
   creator?: CreatorInfo;
 
   /**
-   * Information specififed in request
    */
   specific?: SpecificInfo;
 

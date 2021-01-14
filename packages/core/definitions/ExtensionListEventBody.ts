@@ -1,3 +1,4 @@
+// Notification payload body
 class ExtensionListEventBody {
   /**
    * Internal identifier of an extension

@@ -6,6 +6,7 @@ import {
   RecordingInfo,
 } from './index';
 
+// Information on a party of a call session
 class CallParty {
   /**
    * Internal identifier of a party
@@ -13,7 +14,6 @@ class CallParty {
   id?: string;
 
   /**
-   * Status data of a call session
    */
   status?: CallStatusInfo;
 
@@ -28,22 +28,18 @@ class CallParty {
   standAlone?: boolean;
 
   /**
-   * Call park information
    */
   park?: ParkInfo;
 
   /**
-   * Data on a calling party
    */
   from?: PartyInfo;
 
   /**
-   * Data on a called party
    */
   to?: PartyInfo;
 
   /**
-   * Data on a call owner
    */
   owner?: OwnerInfo;
 

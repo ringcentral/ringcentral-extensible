@@ -16,12 +16,10 @@ class GetExtensionForwardingNumberListResponse {
   records?: ForwardingNumberInfo[];
 
   /**
-   * Information on navigation
    */
   navigation?: CallHandlingNavigationInfo;
 
   /**
-   * Information on paging
    */
   paging?: CallHandlingPagingInfo;
 }

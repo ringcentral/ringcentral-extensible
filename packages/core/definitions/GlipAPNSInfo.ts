@@ -1,8 +1,8 @@
 import {APSInfo, GlipUnreadMessageCountInfo} from './index';
 
+// Apple notification data
 class GlipAPNSInfo {
   /**
-   * Apple Push Notification Service Info
    */
   aps?: APSInfo;
 
@@ -27,7 +27,6 @@ class GlipAPNSInfo {
   subscriptionId?: string;
 
   /**
-   * Unread messages data
    */
   body?: GlipUnreadMessageCountInfo;
 }

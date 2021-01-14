@@ -27,12 +27,11 @@ class GetInternalTextMessageInfoResponse {
   availability?: 'Alive' | 'Deleted' | 'Purged';
 
   /**
-   * SMS and Pager only. Identifier of a conversation the message belongs to
+   * SMS and Pager only. Identifier of a conversation that the message belongs to
    */
   conversationId?: number;
 
   /**
-   * SMS and Pager only. Identifier of a conversation the message belongs to
    */
   conversation?: ConversationInfo;
 
@@ -47,7 +46,6 @@ class GetInternalTextMessageInfoResponse {
   direction?: 'Inbound' | 'Outbound';
 
   /**
-   * Sender information
    */
   from?: MessageStoreCallerInfoResponseFrom;
 

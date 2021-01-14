@@ -16,12 +16,10 @@ class AccountCallLogResponse {
   records?: CompanyCallLogRecord[];
 
   /**
-   * Information on navigation
    */
   navigation?: CallLogNavigationInfo;
 
   /**
-   * Information on paging
    */
   paging?: CallLogPagingInfo;
 }

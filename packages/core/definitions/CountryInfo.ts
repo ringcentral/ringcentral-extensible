@@ -1,3 +1,4 @@
+// Country information
 class CountryInfo {
   /**
    * Internal identifier of a home country

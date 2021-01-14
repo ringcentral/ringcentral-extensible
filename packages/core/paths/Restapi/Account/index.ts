@@ -1,4 +1,6 @@
 import Telephony from './Telephony';
+import AddressBookBulkUpload from './AddressBookBulkUpload';
+import ExtensionBulkUpdate from './ExtensionBulkUpdate';
 import CallMonitoringGroups from './CallMonitoringGroups';
 import PagingOnlyGroups from './PagingOnlyGroups';
 import Templates from './Templates';
@@ -184,6 +186,14 @@ class Index {
 
   callMonitoringGroups(groupId: string | null = null): CallMonitoringGroups {
     return new CallMonitoringGroups(this, groupId);
+  }
+
+  extensionBulkUpdate(): ExtensionBulkUpdate {
+    return new ExtensionBulkUpdate(this);
+  }
+
+  addressBookBulkUpload(): AddressBookBulkUpload {
+    return new AddressBookBulkUpload(this);
   }
 
   telephony(): Telephony {

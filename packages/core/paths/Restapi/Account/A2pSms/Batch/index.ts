@@ -1,7 +1,7 @@
 import {RestRequestConfig} from '../../../../../Rest';
 import {
   MessageBatchResponse,
-  MessageBatchCreateRequest,
+  CreateSMSMessageBatchRequest,
 } from '../../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../../..';
@@ -31,12 +31,12 @@ class Index {
    * Http post /restapi/v1.0/account/{accountId}/a2p-sms/batch
    */
   async post(
-    messageBatchCreateRequest: MessageBatchCreateRequest,
+    createSMSMessageBatchRequest: CreateSMSMessageBatchRequest,
     config?: RestRequestConfig
   ): Promise<MessageBatchResponse> {
     const r = await this.rc.post<MessageBatchResponse>(
       this.path(false),
-      messageBatchCreateRequest,
+      createSMSMessageBatchRequest,
       undefined,
       config
     );

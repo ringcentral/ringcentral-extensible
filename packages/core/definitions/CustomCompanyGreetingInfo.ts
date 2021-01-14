@@ -30,12 +30,10 @@ class CustomCompanyGreetingInfo {
   contentUri?: string;
 
   /**
-   * Information on an answering rule that the greeting is applied to
    */
   answeringRule?: CustomGreetingAnsweringRuleInfo;
 
   /**
-   * Information on a greeting language. Supported for types 'StopRecording', 'StartRecording', 'AutomaticRecording'
    */
   language?: CustomCompanyGreetingLanguageInfo;
 }

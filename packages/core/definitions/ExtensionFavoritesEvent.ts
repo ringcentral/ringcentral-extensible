@@ -22,7 +22,6 @@ class ExtensionFavoritesEvent {
   subscriptionId?: string;
 
   /**
-   * Notification payload body
    */
   body?: ExtensionFavoritesEventBody;
 }

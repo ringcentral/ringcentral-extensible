@@ -1,3 +1,4 @@
+// Business address of extension user company
 class ContactAddressInfoDevices {
   /**
    * Country name of extension user company. Not returned for Address Book

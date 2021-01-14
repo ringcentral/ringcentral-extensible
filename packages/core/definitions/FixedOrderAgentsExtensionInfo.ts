@@ -13,6 +13,11 @@ class FixedOrderAgentsExtensionInfo {
    * Number of department extension
    */
   extensionNumber?: string;
+
+  /**
+   * Name of agent extension
+   */
+  name?: string;
 }
 
 export default FixedOrderAgentsExtensionInfo;

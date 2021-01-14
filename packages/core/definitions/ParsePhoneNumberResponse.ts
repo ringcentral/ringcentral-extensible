@@ -7,7 +7,6 @@ class ParsePhoneNumberResponse {
   uri?: string;
 
   /**
-   * Information on a user home country
    * Required
    */
   homeCountry?: GetCountryInfoNumberParser;

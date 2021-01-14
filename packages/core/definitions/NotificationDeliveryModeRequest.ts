@@ -1,3 +1,4 @@
+// Notification delivery settings
 class NotificationDeliveryModeRequest {
   /**
    * Notifications transportation provider name

@@ -17,13 +17,11 @@ class CompanyActiveCallsResponse {
   records?: CompanyCallLogRecord[];
 
   /**
-   * Information on navigation
    * Required
    */
   navigation?: CallLogNavigationInfo;
 
   /**
-   * Information on paging
    * Required
    */
   paging?: CallLogPagingInfo;

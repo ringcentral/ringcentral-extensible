@@ -1,3 +1,4 @@
+// Information on a country the state belongs to
 class GetCountryInfoState {
   /**
    * Internal identifier of a state

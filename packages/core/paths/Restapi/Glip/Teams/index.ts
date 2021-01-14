@@ -84,6 +84,20 @@ class Index {
   }
 
   /**
+   * Operation: Delete Team
+   * Rate Limit Group: Medium
+   * Http delete /restapi/v1.0/glip/teams/{chatId}
+   */
+  async delete(config?: RestRequestConfig): Promise<string> {
+    if (this.chatId === null) {
+      throw new Error('chatId must be specified.');
+    }
+
+    const r = await this.rc.delete<string>(this.path(), undefined, config);
+    return r.data;
+  }
+
+  /**
    * Operation: Update Team
    * Rate Limit Group: Medium
    * Http patch /restapi/v1.0/glip/teams/{chatId}
@@ -102,20 +116,6 @@ class Index {
       undefined,
       config
     );
-    return r.data;
-  }
-
-  /**
-   * Operation: Delete Team
-   * Rate Limit Group: Medium
-   * Http delete /restapi/v1.0/glip/teams/{chatId}
-   */
-  async delete(config?: RestRequestConfig): Promise<string> {
-    if (this.chatId === null) {
-      throw new Error('chatId must be specified.');
-    }
-
-    const r = await this.rc.delete<string>(this.path(), undefined, config);
     return r.data;
   }
 

@@ -1,5 +1,6 @@
 import {SiteResource} from './index';
 
+// Call queue member information
 class CallQueueMember {
   /**
    * Internal identifier of an extension
@@ -17,7 +18,6 @@ class CallQueueMember {
   extensionNumber?: string;
 
   /**
-   * Extension site
    */
   site?: SiteResource;
 }

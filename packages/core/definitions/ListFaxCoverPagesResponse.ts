@@ -14,12 +14,10 @@ class ListFaxCoverPagesResponse {
   records?: FaxCoverPageInfo[];
 
   /**
-   * Information on navigation
    */
   navigation?: MessagingNavigationInfo;
 
   /**
-   * Information on paging
    */
   paging?: MessagingPagingInfo;
 }

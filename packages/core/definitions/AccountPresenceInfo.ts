@@ -16,12 +16,10 @@ class AccountPresenceInfo {
   records?: GetPresenceInfo[];
 
   /**
-   * Information on navigation
    */
   navigation?: PresenceNavigationInfo;
 
   /**
-   * Information on paging
    */
   paging?: PresencePagingInfo;
 }

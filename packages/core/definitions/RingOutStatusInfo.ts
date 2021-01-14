@@ -1,3 +1,4 @@
+// RingOut status information
 class RingOutStatusInfo {
   /**
    * Status of a call

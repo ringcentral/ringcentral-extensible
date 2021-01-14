@@ -1,3 +1,4 @@
+// Notification payload body
 class AccountPresenceEventBody {
   /**
    * Internal identifier of an extension. Optional parameter

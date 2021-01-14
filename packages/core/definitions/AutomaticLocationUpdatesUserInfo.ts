@@ -1,3 +1,5 @@
+import {AutomaticLocationUpdatesSiteInfo} from './index';
+
 class AutomaticLocationUpdatesUserInfo {
   /**
    * Internal identifier of a device
@@ -24,9 +26,8 @@ class AutomaticLocationUpdatesUserInfo {
   type?: 'User' | 'Limited';
 
   /**
-   * Site data
    */
-  site?: string;
+  site?: AutomaticLocationUpdatesSiteInfo;
 
   /**
    * Department name

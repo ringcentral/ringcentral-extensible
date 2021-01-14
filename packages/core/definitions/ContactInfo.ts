@@ -1,5 +1,6 @@
 import {ContactBusinessAddressInfo, PronouncedNameInfo} from './index';
 
+// Contact detailed information
 class ContactInfo {
   /**
    * For User extension type only. Extension user first name
@@ -36,13 +37,11 @@ class ContactInfo {
   mobilePhone?: string;
 
   /**
-   * Business address of extension user company
    */
   businessAddress?: ContactBusinessAddressInfo;
 
   /**
    * If 'True' then contact email is enabled as login name for this user. Please note that email should be unique in this case.
-   * Default: False
    */
   emailAsLoginName?: boolean;
 

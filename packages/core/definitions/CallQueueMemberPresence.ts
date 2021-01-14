@@ -2,7 +2,6 @@ import {CallQueueMember} from './index';
 
 class CallQueueMemberPresence {
   /**
-   * Call queue member information
    */
   member?: CallQueueMember;
 

@@ -7,7 +7,6 @@ class GrantInfo {
   uri?: string;
 
   /**
-   * Extension information
    */
   extension?: ExtensionInfoGrants;
 

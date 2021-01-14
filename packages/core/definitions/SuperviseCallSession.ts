@@ -1,15 +1,18 @@
-import {PartyInfo, OwnerInfo, CallStatusInfo} from './index';
+import {
+  SupervisePartyFrom,
+  SupervisePartyTo,
+  OwnerInfo,
+  CallStatusInfo,
+} from './index';
 
 class SuperviseCallSession {
   /**
-   * Information about a call party that monitors a call
    */
-  from?: PartyInfo;
+  from?: SupervisePartyFrom;
 
   /**
-   * Information about a call party that is monitored
    */
-  to?: PartyInfo;
+  to?: SupervisePartyTo;
 
   /**
    * Direction of a call
@@ -37,7 +40,6 @@ class SuperviseCallSession {
   muted?: boolean;
 
   /**
-   * Data on a call owner
    */
   owner?: OwnerInfo;
 

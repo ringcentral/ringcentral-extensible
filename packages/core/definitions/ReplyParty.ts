@@ -7,7 +7,6 @@ class ReplyParty {
   id?: string;
 
   /**
-   * Status data of a call session
    */
   status?: CallStatusInfo;
 
@@ -22,22 +21,18 @@ class ReplyParty {
   standAlone?: boolean;
 
   /**
-   * Call park information
    */
   park?: ParkInfo;
 
   /**
-   * Data on a calling party
    */
   from?: PartyInfo;
 
   /**
-   * Data on a called party
    */
   to?: PartyInfo;
 
   /**
-   * Data on a call owner
    */
   owner?: OwnerInfo;
 

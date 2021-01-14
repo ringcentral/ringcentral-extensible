@@ -6,29 +6,25 @@ import {
   FormattingLocaleInfo,
 } from './index';
 
+// Regional data (timezone, home country, language) of an extension/account. The default is Company (Auto-Receptionist) settings
 class RegionalSettings {
   /**
-   * Extension country information
    */
   homeCountry?: CountryInfo;
 
   /**
-   * Extension timezone information
    */
   timezone?: TimezoneInfo;
 
   /**
-   * User interface language data
    */
   language?: LanguageInfo;
 
   /**
-   * Information on language used for telephony greetings
    */
   greetingLanguage?: GreetingLanguageInfo;
 
   /**
-   * Formatting language preferences for numbers, dates and currencies
    */
   formattingLocale?: FormattingLocaleInfo;
 

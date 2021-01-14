@@ -27,7 +27,6 @@ class ExtensionContactInfo {
   businessPhone?: string;
 
   /**
-   * Business address of extension user company
    */
   businessAddress?: ContactAddressInfoDevices;
 }

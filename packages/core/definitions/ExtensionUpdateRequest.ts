@@ -61,7 +61,6 @@ class ExtensionUpdateRequest {
   password?: string;
 
   /**
-   * For Department extension type only. Call queue settings
    */
   callQueueInfo?: CallQueueInfoRequest;
 
@@ -79,7 +78,6 @@ class ExtensionUpdateRequest {
   hidden?: boolean;
 
   /**
-   * Site data. If multi-site feature is turned on for the account, then internal identifier of a site must be specified. To assign the wireless point to the main site (company) set site ID to `main-site`
    */
   site?: AutomaticLocationUpdatesSiteInfo;
 
@@ -98,7 +96,8 @@ class ExtensionUpdateRequest {
     | 'PagingOnly'
     | 'IvrMenu'
     | 'ApplicationExtension'
-    | 'ParkLocation';
+    | 'ParkLocation'
+    | 'DelegatedLinesGroup';
 
   /**
    * List of non-RC internal identifiers assigned to an extension

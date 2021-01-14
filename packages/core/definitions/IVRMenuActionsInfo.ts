@@ -20,7 +20,6 @@ class IVRMenuActionsInfo {
     | 'Disconnect';
 
   /**
-   * For 'Connect' or 'Voicemail' actions only. Extension reference
    */
   extension?: IVRMenuExtensionInfo;
 

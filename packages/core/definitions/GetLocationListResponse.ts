@@ -16,13 +16,11 @@ class GetLocationListResponse {
   records?: LocationInfo[];
 
   /**
-   * Information on navigation
    * Required
    */
   navigation?: ProvisioningNavigationInfo;
 
   /**
-   * Information on paging
    * Required
    */
   paging?: ProvisioningPagingInfo;

@@ -1,3 +1,4 @@
+// Brief information on a phone number country
 class CountryResource {
   /**
    */

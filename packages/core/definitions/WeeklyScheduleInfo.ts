@@ -1,5 +1,6 @@
 import {TimeInterval} from './index';
 
+// Weekly schedule
 class WeeklyScheduleInfo {
   /**
    * Time intervals for a particular day

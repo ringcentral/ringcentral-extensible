@@ -33,7 +33,6 @@ class NetworkInfo {
   privateIpRanges?: PrivateIpRangeInfo[];
 
   /**
-   * Emergency response location information
    */
   emergencyLocation?: ERLLocationInfo;
 }

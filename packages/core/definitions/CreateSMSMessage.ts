@@ -2,7 +2,6 @@ import {MessageStoreCallerInfoRequest, MessageCountryInfo} from './index';
 
 class CreateSMSMessage {
   /**
-   * Message sender information. The `phoneNumber` value should be one the account phone numbers allowed to send text messages
    * Required
    */
   from?: MessageStoreCallerInfoRequest;

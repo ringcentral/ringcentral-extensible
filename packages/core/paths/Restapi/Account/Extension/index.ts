@@ -6,6 +6,7 @@ import VideoConfiguration from './VideoConfiguration';
 import Conferencing from './Conferencing';
 import ProfileImage from './ProfileImage';
 import NotificationSettings from './NotificationSettings';
+import EmergencyLocations from './EmergencyLocations';
 import Grant from './Grant';
 import CallerId from './CallerId';
 import PhoneNumber from './PhoneNumber';
@@ -263,6 +264,10 @@ class Index {
 
   grant(): Grant {
     return new Grant(this);
+  }
+
+  emergencyLocations(): EmergencyLocations {
+    return new EmergencyLocations(this);
   }
 
   notificationSettings(): NotificationSettings {

@@ -19,7 +19,6 @@ class DevicePhoneLinesInfo {
   emergencyAddress?: DevicePhoneLinesEmergencyAddressInfo;
 
   /**
-   * Phone number information
    */
   phoneInfo?: DevicePhoneNumberInfo;
 }

@@ -13,7 +13,6 @@ class GetMessageSyncResponse {
   records?: GetMessageInfoResponse[];
 
   /**
-   * Sync type, token and time
    * Required
    */
   syncInfo?: SyncInfoMessages;

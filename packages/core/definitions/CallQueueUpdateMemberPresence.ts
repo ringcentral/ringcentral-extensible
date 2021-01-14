@@ -2,7 +2,6 @@ import {CallQueueMemberId} from './index';
 
 class CallQueueUpdateMemberPresence {
   /**
-   * Call queue member information
    */
   member?: CallQueueMemberId;
 

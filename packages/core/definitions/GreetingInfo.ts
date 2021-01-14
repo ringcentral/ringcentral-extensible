@@ -24,18 +24,6 @@ class GreetingInfo {
     | 'AutomaticRecording';
 
   /**
-   * Usage type of a greeting, specifying if the greeting is applied to user extension or department extension.
-   */
-  usageType?:
-    | 'UserExtensionAnsweringRule'
-    | 'ExtensionAnsweringRule'
-    | 'DepartmentExtensionAnsweringRule'
-    | 'CompanyAnsweringRule'
-    | 'CompanyAfterHoursAnsweringRule'
-    | 'VoicemailExtensionAnsweringRule'
-    | 'AnnouncementExtensionAnsweringRule';
-
-  /**
    */
   preset?: PresetInfo;
 

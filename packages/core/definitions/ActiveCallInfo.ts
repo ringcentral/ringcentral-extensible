@@ -1,4 +1,4 @@
-import {DetailedCallInfo, PrimaryCQInfo, AdditionalCQInfo} from './index';
+import {DetailedCallInfo, CallInfoCQ} from './index';
 
 class ActiveCallInfo {
   /**
@@ -8,6 +8,11 @@ class ActiveCallInfo {
   /**
    */
   direction?: 'Inbound' | 'Outbound';
+
+  /**
+   * Identifies if a call belongs to the call queue
+   */
+  queueCall?: boolean;
 
   /**
    * Phone number or extension number of a caller. For GCM transport type '_from' property should be used
@@ -72,14 +77,8 @@ class ActiveCallInfo {
   terminationType?: string;
 
   /**
-   * Primary call session information. Supported for Call Queues only
    */
-  primary?: PrimaryCQInfo;
-
-  /**
-   * Additional call session information. Supported for Call Queues only
-   */
-  additional?: AdditionalCQInfo;
+  callInfo?: CallInfoCQ;
 }
 
 export default ActiveCallInfo;

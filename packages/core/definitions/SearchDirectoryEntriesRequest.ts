@@ -7,7 +7,6 @@ class SearchDirectoryEntriesRequest {
   searchString?: string;
 
   /**
-   * Default: firstName,lastName,extensionNumber,phoneNumber,email
    */
   searchFields?: (
     | 'firstName'
@@ -41,7 +40,8 @@ class SearchDirectoryEntriesRequest {
     | 'ApplicationExtension'
     | 'Site'
     | 'Bot'
-    | 'ProxyAdmin';
+    | 'ProxyAdmin'
+    | 'DelegatedLinesGroup';
 
   /**
    * Sorting settings

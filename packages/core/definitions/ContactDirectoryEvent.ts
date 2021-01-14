@@ -52,22 +52,18 @@ class ContactDirectoryEvent {
   extensionNumber?: string;
 
   /**
-   * Account data of an extension
    */
   account?: CompanyDirectoryAccountInfo;
 
   /**
-   * Extension phone number information
    */
   phoneNumbers?: CompanyDirectoryPhoneNumberInfo;
 
   /**
-   * Site Data
    */
   site?: ContactDirectorySiteInfo;
 
   /**
-   * Extension profile image information. Not returned if profile images are absent for an extension
    */
   profileImage?: CompanyDirectoryProfileImageInfo;
 

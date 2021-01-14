@@ -32,7 +32,6 @@ class MessageBody {
   conversationId?: number;
 
   /**
-   * SMS and Pager only. Identifier of a conversation the message belongs to
    */
   conversation?: ConversationInfo;
 
@@ -62,7 +61,6 @@ class MessageBody {
   faxResolution?: 'High' | 'Low';
 
   /**
-   * Sender information
    */
   from?: MessageSenderInfo;
 

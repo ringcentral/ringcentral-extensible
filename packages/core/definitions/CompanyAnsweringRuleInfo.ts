@@ -45,7 +45,6 @@ class CompanyAnsweringRuleInfo {
   calledNumbers?: CompanyAnsweringRuleCalledNumberInfoRequest[];
 
   /**
-   * Schedule when an answering rule should be applied
    */
   schedule?: CompanyAnsweringRuleScheduleInfo;
 
@@ -55,7 +54,6 @@ class CompanyAnsweringRuleInfo {
   callHandlingAction?: 'Operator' | 'Disconnect' | 'Bypass';
 
   /**
-   * Extension to which the call is forwarded in 'Bypass' mode
    */
   extension?: CompanyAnsweringRuleExtensionInfoRequest;
 

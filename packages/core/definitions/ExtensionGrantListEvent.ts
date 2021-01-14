@@ -22,7 +22,6 @@ class ExtensionGrantListEvent {
   subscriptionId?: string;
 
   /**
-   * Notification payload body
    */
   body?: ExtensionGrantListEventBody;
 }

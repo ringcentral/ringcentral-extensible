@@ -6,7 +6,6 @@ import {
 
 class CreateMMSMessage {
   /**
-   * Message sender information. The `phoneNumber` value should be one the account phone numbers allowed to send media messages
    * Required
    */
   from?: MessageStoreCallerInfoRequest;

@@ -4,6 +4,7 @@ import {
   FaxMessageAttachment,
 } from './index';
 
+// Notification payload body
 class FaxMessageEventBody {
   /**
    * Internal identifier of a message

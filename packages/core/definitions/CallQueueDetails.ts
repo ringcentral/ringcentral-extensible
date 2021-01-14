@@ -22,7 +22,6 @@ class CallQueueDetails {
   status?: 'Enabled' | 'Disabled' | 'NotActivated';
 
   /**
-   * Call queue service level settings
    */
   serviceLevelSettings?: CallQueueServiceLevelSettings;
 

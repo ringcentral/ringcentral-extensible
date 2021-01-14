@@ -37,7 +37,6 @@ class CreateAnsweringRuleRequest {
   calledNumbers?: CalledNumberInfo[];
 
   /**
-   * Schedule when an answering rule should be applied
    */
   schedule?: ScheduleInfo;
 
@@ -54,27 +53,22 @@ class CreateAnsweringRuleRequest {
     | 'SharedLines';
 
   /**
-   * Forwarding parameters. Returned if 'ForwardCalls' is specified in 'callHandlingAction'. These settings determine the forwarding numbers to which the call will be forwarded
    */
   forwarding?: ForwardingInfo;
 
   /**
-   * Unconditional forwarding parameters. Returned if 'UnconditionalForwarding' is specified in 'callHandlingAction'
    */
   unconditionalForwarding?: UnconditionalForwardingInfo;
 
   /**
-   * Queue settings applied for department (call queue) extension type, with the 'AgentQueue' value specified as a call handling action
    */
   queue?: QueueInfo;
 
   /**
-   * Transfer settings applied for department (call queue) extension type, with 'TransferToExtension' call handling action
    */
   transfer?: TransferredExtensionInfo;
 
   /**
-   * Specifies whether to take a voicemail and who should do it
    */
   voicemail?: VoicemailInfo;
 

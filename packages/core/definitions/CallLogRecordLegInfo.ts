@@ -46,12 +46,10 @@ class CallLogRecordLegInfo {
   direction?: 'Inbound' | 'Outbound';
 
   /**
-   * Billing information related to the call
    */
   billing?: BillingInfo;
 
   /**
-   * Information on a delegate extension that actually implemented a call action. For Secretary call log the field is returned if the current extension implemented a call. For Boss call log the field contains information on a Secretary extension which actually implemented a call on behalf of the current extension
    */
   delegate?: DelegateInfo;
 
@@ -66,7 +64,6 @@ class CallLogRecordLegInfo {
   duration?: number;
 
   /**
-   * Information on extension
    */
   extension?: ExtensionInfoCallLog;
 
@@ -238,12 +235,10 @@ class CallLogRecordLegInfo {
   reasonDescription?: string;
 
   /**
-   * Caller information
    */
   from?: CallLogCallerInfo;
 
   /**
-   * Callee information
    */
   to?: CallLogCallerInfo;
 
@@ -253,7 +248,6 @@ class CallLogRecordLegInfo {
   transport?: 'PSTN' | 'VoIP';
 
   /**
-   * Call recording data. Returned if the call is recorded
    */
   recording?: CallLogRecordingInfo;
 

@@ -4,6 +4,7 @@ import {
   LocationOwnerInfo,
 } from './index';
 
+// Company emergency response location details
 class EmergencyLocationInfo {
   /**
    * Internal identifier of the emergency response location

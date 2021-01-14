@@ -16,12 +16,10 @@ class GetStateListResponse {
   records?: GetStateInfoResponse[];
 
   /**
-   * Information on navigation
    */
   navigation?: ProvisioningNavigationInfo;
 
   /**
-   * Information on paging
    */
   paging?: ProvisioningPagingInfo;
 }

@@ -21,7 +21,6 @@ class GetPresenceInfo {
     | 'TakeDepartmentCallsOnly';
 
   /**
-   * Information on extension, for which this presence data is returned
    */
   extension?: GetPresenceExtensionInfo;
 
