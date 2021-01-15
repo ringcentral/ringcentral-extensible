@@ -3,17 +3,17 @@
   "private": true,
   "license": "MIT",
   "dependencies": {
-    "@rc-ex/authorize-uri": "^0.6.6",
-    "@rc-ex/core": "^0.6.3",
-    "@rc-ex/debug": "^0.6.5",
-    "@rc-ex/discovery": "^0.1.5",
-    "@rc-ex/engage-voice": "^0.2.5",
-    "@rc-ex/events": "^0.6.5",
-    "@rc-ex/pubnub": "^0.6.5",
-    "@rc-ex/rate-limit": "^0.6.5",
-    "@rc-ex/rcsdk": "^0.6.5",
-    "@rc-ex/retry": "^0.6.5",
-    "@rc-ex/ws": "^0.6.6"
+    "@rc-ex/authorize-uri": "^0.6.7",
+    "@rc-ex/core": "^0.6.4",
+    "@rc-ex/debug": "^0.6.6",
+    "@rc-ex/discovery": "^0.1.6",
+    "@rc-ex/engage-voice": "^0.2.6",
+    "@rc-ex/events": "^0.6.6",
+    "@rc-ex/pubnub": "^0.6.6",
+    "@rc-ex/rate-limit": "^0.6.6",
+    "@rc-ex/rcsdk": "^0.6.6",
+    "@rc-ex/retry": "^0.6.6",
+    "@rc-ex/ws": "^0.6.7"
   },
   "devDependencies": {
     "@ringcentral/sdk": "^4.4.0",

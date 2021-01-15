@@ -2,13 +2,13 @@
 # yarn lockfile v1
 
 
-"@rc-ex/core@^0.6.3":
-  version "0.6.3"
-  resolved "https://registry.yarnpkg.com/@rc-ex/core/-/core-0.6.3.tgz#f65072debb87b49ced148b74b34bcf5cb1dc2776"
-  integrity sha512-pbomaRK3N4sCjx3jZ8oVfz3cHAneo7bd3JaPtrL+lLLpX1ucap6uUa0RwOcktIBVjnT6+cv4Z8MLkHdAyLxG5w==
+"@rc-ex/core@^0.6.4":
+  version "0.6.4"
+  resolved "https://registry.yarnpkg.com/@rc-ex/core/-/core-0.6.4.tgz#0cd1c6d42cbf1d143b4609afa6a16b04b8657225"
+  integrity sha512-o9ktokjR8obL87qvOIVVCTcfp0LSLjYsszS45Z5P5xO6FzZnAwsHrS8GiTOd9LAz3b9vTxRJD7hlBMufNF8Y+w==
   dependencies:
     "@types/qs" "^6.9.5"
-    axios "^0.21.0"
+    axios "^0.21.1"
     form-data "^3.0.0"
     qs "^6.9.4"
 
@@ -22,7 +22,7 @@ asynckit@^0.4.0:
   resolved "https://registry.yarnpkg.com/asynckit/-/asynckit-0.4.0.tgz#c79ed97f7f34cb8f2ba1bc9790bcc366474b4b79"
   integrity sha1-x57Zf380y48robyXkLzDZkdLS3k=
 
-axios@^0.21.0:
+axios@^0.21.1:
   version "0.21.1"
   resolved "https://registry.yarnpkg.com/axios/-/axios-0.21.1.tgz#22563481962f4d6bde9a76d516ef0e5d3c09b2b8"
   integrity sha512-dKQiRHxGD9PPRIUNIWvZhPTPpl1rf/OxTYKsqKUDjBwYylTvV7SjSHJb9ratfyzM6wCdLCOYLzs73qpg5c4iGA==
@@ -68,6 +68,6 @@ mime-types@^2.1.12:
     mime-db "1.45.0"
 
 qs@^6.9.4:
-  version "6.9.4"
-  resolved "https://registry.yarnpkg.com/qs/-/qs-6.9.4.tgz#9090b290d1f91728d3c22e54843ca44aea5ab687"
-  integrity sha512-A1kFqHekCTM7cz0udomYUoYNWjBebHm/5wzU/XqrBRBNWectVH0QIiN+NEcZ0Dte5hvzHwbr8+XQmguPhJ6WdQ==
+  version "6.9.6"
+  resolved "https://registry.yarnpkg.com/qs/-/qs-6.9.6.tgz#26ed3c8243a431b2924aca84cc90471f35d5a0ee"
+  integrity sha512-TIRk4aqYLNoJUbd+g2lEdz5kLWIuTMRagAXxl78Q0RiVjAOugHmeKNGdd3cwo/ktpf9aL9epCfFqWDEKysUlLQ==
