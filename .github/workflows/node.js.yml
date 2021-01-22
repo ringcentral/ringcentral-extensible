@@ -16,7 +16,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [10.x, 12.x, 14.x, 15.x]
+        node-version: [15.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
@@ -28,3 +28,18 @@ jobs:
     - run: npm ci
     - run: npm run build --if-present
     - run: npm test
+      environment: sandbox
+      env:
+        RINGCENTRAL_SERVER_URL=${{ secrets.RINGCENTRAL_SERVER_URL }}
+        RINGCENTRAL_CLIENT_ID=${{ secrets.RINGCENTRAL_CLIENT_ID }}
+        RINGCENTRAL_CLIENT_SECRET=${{ secrets.RINGCENTRAL_CLIENT_SECRET }}
+        RINGCENTRAL_USERNAME=${{ secrets.RINGCENTRAL_USERNAME }}
+        RINGCENTRAL_EXTENSION=${{ secrets.RINGCENTRAL_EXTENSION }}
+        RINGCENTRAL_PASSWORD=${{ secrets.RINGCENTRAL_PASSWORD }}
+        RINGCENTRAL_RECEIVER=${{ secrets.RINGCENTRAL_RECEIVER }}
+        RINGCENTRAL_CALLEE=${{ secrets.RINGCENTRAL_CALLEE }}
+
+        # to test schedule meeting for others
+        RINGCENTRAL_USERNAME2=${{ secrets.RINGCENTRAL_USERNAME2 }}
+        RINGCENTRAL_EXTENSION2=${{ secrets.RINGCENTRAL_EXTENSION2 }}
+        RINGCENTRAL_PASSWORD2=${{ secrets.RINGCENTRAL_PASSWORD2 }}
