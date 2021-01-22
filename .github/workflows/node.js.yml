@@ -27,8 +27,8 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: npm ci
-    - run: npm reset
-    - run: npm compile
+    - run: npm run reset
+    - run: npm run compile
     - run: npm test
       env:
         RINGCENTRAL_SERVER_URL: ${{ secrets.RINGCENTRAL_SERVER_URL }}
