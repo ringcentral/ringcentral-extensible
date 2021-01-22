@@ -26,7 +26,8 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: npm ci
-    - run: npm run build --if-present
+    - run: npm reset
+    - run: npm compile
     - run: npm test
       environment: sandbox
       env:

@@ -1,6 +1,0 @@
-dist: trusty
-language: node_js
-node_js:
-  - "13"
-script:
-  - yarn reset && yarn compile && yarn test
