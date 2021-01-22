@@ -11,6 +11,7 @@ on:
 
 jobs:
   build:
+    environment: sandbox
 
     runs-on: ubuntu-latest
 
@@ -29,7 +30,6 @@ jobs:
     - run: npm reset
     - run: npm compile
     - run: npm test
-      environment: sandbox
       env:
         RINGCENTRAL_SERVER_URL: ${{ secrets.RINGCENTRAL_SERVER_URL }}
         RINGCENTRAL_CLIENT_ID: ${{ secrets.RINGCENTRAL_CLIENT_ID }}
