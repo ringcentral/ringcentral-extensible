@@ -14,7 +14,7 @@ User Permission|`N/A`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi().list(restRequestConfig);
+const result = await rc.restapi().list();
 await rc.revoke();
 ```
 
@@ -36,7 +36,7 @@ User Permission|`N/A`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi().oauth().revoke().post(revokeTokenRequest, restRequestConfig);
+const result = await rc.restapi().oauth().revoke().post(revokeTokenRequest);
 await rc.revoke();
 ```
 - Parameter `revokeTokenRequest` is of type [RevokeTokenRequest](./packages/core/definitions/RevokeTokenRequest.ts)
@@ -58,7 +58,7 @@ User Permission|`N/A`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi().oauth().token().post(getTokenRequest, restRequestConfig);
+const result = await rc.restapi().oauth().token().post(getTokenRequest);
 await rc.revoke();
 ```
 - Parameter `getTokenRequest` is of type [GetTokenRequest](./packages/core/definitions/GetTokenRequest.ts)
@@ -80,7 +80,7 @@ User Permission|`N/A`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).get(restRequestConfig);
+const result = await rc.restapi(apiVersion).get();
 await rc.revoke();
 ```
 
@@ -103,7 +103,7 @@ User Permission|`ReadCompanyInfo`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).get(restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).get();
 await rc.revoke();
 ```
 
@@ -127,7 +127,7 @@ User Permission|`N/A`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).a2pSms().batch().post(createSmsMessageBatchRequest, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).a2pSms().batch().post(createSmsMessageBatchRequest);
 await rc.revoke();
 ```
 - Parameter `createSmsMessageBatchRequest` is of type [CreateSMSMessageBatchRequest](./packages/core/definitions/CreateSMSMessageBatchRequest.ts)
@@ -151,7 +151,7 @@ User Permission|`N/A`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).a2pSms().batch(batchId).get(restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).a2pSms().batch(batchId).get();
 await rc.revoke();
 ```
 
@@ -175,7 +175,7 @@ User Permission|`N/A`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).a2pSms().messages().list(listA2PsmsParameters, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).a2pSms().messages().list(listA2PsmsParameters);
 await rc.revoke();
 ```
 - Parameter `listA2PsmsParameters` is of type [ListA2PsmsParameters](./packages/core/definitions/ListA2PsmsParameters.ts)
@@ -199,7 +199,7 @@ User Permission|`N/A`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).a2pSms().messages(messageId).get(restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).a2pSms().messages(messageId).get();
 await rc.revoke();
 ```
 
@@ -223,7 +223,7 @@ User Permission|`N/A`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).a2pSms().optOuts().get(readA2PsmsOptOutsParameters, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).a2pSms().optOuts().get(readA2PsmsOptOutsParameters);
 await rc.revoke();
 ```
 - Parameter `readA2PsmsOptOutsParameters` is of type [ReadA2PsmsOptOutsParameters](./packages/core/definitions/ReadA2PsmsOptOutsParameters.ts)
@@ -247,7 +247,7 @@ User Permission|`ReadCallLog`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).activeCalls().get(listCompanyActiveCallsParameters, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).activeCalls().get(listCompanyActiveCallsParameters);
 await rc.revoke();
 ```
 - Parameter `listCompanyActiveCallsParameters` is of type [ListCompanyActiveCallsParameters](./packages/core/definitions/ListCompanyActiveCallsParameters.ts)
@@ -271,7 +271,7 @@ User Permission|`EditPersonalContacts`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).addressBookBulkUpload().post(addressBookBulkUploadRequest, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).addressBookBulkUpload().post(addressBookBulkUploadRequest);
 await rc.revoke();
 ```
 - Parameter `addressBookBulkUploadRequest` is of type [AddressBookBulkUploadRequest](./packages/core/definitions/AddressBookBulkUploadRequest.ts)
@@ -295,7 +295,7 @@ User Permission|`EditPersonalContacts`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).addressBookBulkUpload().tasks(taskId).get(restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).addressBookBulkUpload().tasks(taskId).get();
 await rc.revoke();
 ```
 
@@ -319,7 +319,7 @@ User Permission|`ReadCompanyAnsweringRules`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).answeringRule().list(listCompanyAnsweringRulesParameters, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).answeringRule().list(listCompanyAnsweringRulesParameters);
 await rc.revoke();
 ```
 - Parameter `listCompanyAnsweringRulesParameters` is of type [ListCompanyAnsweringRulesParameters](./packages/core/definitions/ListCompanyAnsweringRulesParameters.ts)
@@ -343,7 +343,7 @@ User Permission|`EditCompanyAnsweringRules`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).answeringRule().post(companyAnsweringRuleRequest, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).answeringRule().post(companyAnsweringRuleRequest);
 await rc.revoke();
 ```
 - Parameter `companyAnsweringRuleRequest` is of type [CompanyAnsweringRuleRequest](./packages/core/definitions/CompanyAnsweringRuleRequest.ts)
@@ -367,7 +367,7 @@ User Permission|`ReadCompanyAnsweringRules`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).answeringRule(ruleId).get(restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).answeringRule(ruleId).get();
 await rc.revoke();
 ```
 
@@ -391,7 +391,7 @@ User Permission|`EditCompanyAnsweringRules`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).answeringRule(ruleId).put(companyAnsweringRuleUpdate, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).answeringRule(ruleId).put(companyAnsweringRuleUpdate);
 await rc.revoke();
 ```
 - Parameter `companyAnsweringRuleUpdate` is of type [CompanyAnsweringRuleUpdate](./packages/core/definitions/CompanyAnsweringRuleUpdate.ts)
@@ -415,7 +415,7 @@ User Permission|`EditCompanyAnsweringRules`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).answeringRule(ruleId).delete(restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).answeringRule(ruleId).delete();
 await rc.revoke();
 ```
 
@@ -439,7 +439,7 @@ User Permission|`ReadCompanyInfo`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).businessAddress().get(restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).businessAddress().get();
 await rc.revoke();
 ```
 
@@ -463,7 +463,7 @@ User Permission|`EditCompanyInfo`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).businessAddress().put(modifyAccountBusinessAddressRequest, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).businessAddress().put(modifyAccountBusinessAddressRequest);
 await rc.revoke();
 ```
 - Parameter `modifyAccountBusinessAddressRequest` is of type [ModifyAccountBusinessAddressRequest](./packages/core/definitions/ModifyAccountBusinessAddressRequest.ts)
@@ -487,7 +487,7 @@ User Permission|`ReadUserAnsweringRules`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).businessHours().get(restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).businessHours().get();
 await rc.revoke();
 ```
 
@@ -511,7 +511,7 @@ User Permission|`EditUserAnsweringRules`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).businessHours().put(companyBusinessHoursUpdateRequest, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).businessHours().put(companyBusinessHoursUpdateRequest);
 await rc.revoke();
 ```
 - Parameter `companyBusinessHoursUpdateRequest` is of type [CompanyBusinessHoursUpdateRequest](./packages/core/definitions/CompanyBusinessHoursUpdateRequest.ts)
@@ -535,7 +535,7 @@ User Permission|`FullCompanyCallLog`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).callLog().list(readCompanyCallLogParameters, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).callLog().list(readCompanyCallLogParameters);
 await rc.revoke();
 ```
 - Parameter `readCompanyCallLogParameters` is of type [ReadCompanyCallLogParameters](./packages/core/definitions/ReadCompanyCallLogParameters.ts)
@@ -559,7 +559,7 @@ User Permission|`ReadCallLog`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).callLogSync().get(syncAccountCallLogParameters, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).callLogSync().get(syncAccountCallLogParameters);
 await rc.revoke();
 ```
 - Parameter `syncAccountCallLogParameters` is of type [SyncAccountCallLogParameters](./packages/core/definitions/SyncAccountCallLogParameters.ts)
@@ -583,7 +583,7 @@ User Permission|`FullCompanyCallLog`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).callLog(callRecordId).get(readCompanyCallRecordParameters, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).callLog(callRecordId).get(readCompanyCallRecordParameters);
 await rc.revoke();
 ```
 - Parameter `readCompanyCallRecordParameters` is of type [ReadCompanyCallRecordParameters](./packages/core/definitions/ReadCompanyCallRecordParameters.ts)
@@ -607,7 +607,7 @@ User Permission|`ReadExtensions`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).callMonitoringGroups().get(listCallMonitoringGroupsParameters, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).callMonitoringGroups().get(listCallMonitoringGroupsParameters);
 await rc.revoke();
 ```
 - Parameter `listCallMonitoringGroupsParameters` is of type [ListCallMonitoringGroupsParameters](./packages/core/definitions/ListCallMonitoringGroupsParameters.ts)
@@ -631,7 +631,7 @@ User Permission|`Groups`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).callMonitoringGroups().post(createCallMonitoringGroupRequest, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).callMonitoringGroups().post(createCallMonitoringGroupRequest);
 await rc.revoke();
 ```
 - Parameter `createCallMonitoringGroupRequest` is of type [CreateCallMonitoringGroupRequest](./packages/core/definitions/CreateCallMonitoringGroupRequest.ts)
@@ -655,7 +655,7 @@ User Permission|`Groups`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).callMonitoringGroups(groupId).put(createCallMonitoringGroupRequest, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).callMonitoringGroups(groupId).put(createCallMonitoringGroupRequest);
 await rc.revoke();
 ```
 - Parameter `createCallMonitoringGroupRequest` is of type [CreateCallMonitoringGroupRequest](./packages/core/definitions/CreateCallMonitoringGroupRequest.ts)
@@ -679,7 +679,7 @@ User Permission|`Groups`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).callMonitoringGroups(groupId).delete(restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).callMonitoringGroups(groupId).delete();
 await rc.revoke();
 ```
 
@@ -703,7 +703,7 @@ User Permission|`Groups`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).callMonitoringGroups(groupId).bulkAssign().post(callMonitoringBulkAssign, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).callMonitoringGroups(groupId).bulkAssign().post(callMonitoringBulkAssign);
 await rc.revoke();
 ```
 - Parameter `callMonitoringBulkAssign` is of type [CallMonitoringBulkAssign](./packages/core/definitions/CallMonitoringBulkAssign.ts)
@@ -727,7 +727,7 @@ User Permission|`ReadExtensions`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).callMonitoringGroups(groupId).members().get(listCallMonitoringGroupMembersParameters, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).callMonitoringGroups(groupId).members().get(listCallMonitoringGroupMembersParameters);
 await rc.revoke();
 ```
 - Parameter `listCallMonitoringGroupMembersParameters` is of type [ListCallMonitoringGroupMembersParameters](./packages/core/definitions/ListCallMonitoringGroupMembersParameters.ts)
@@ -751,7 +751,7 @@ User Permission|`ReadExtensions`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).callQueues().list(listCallQueuesParameters, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).callQueues().list(listCallQueuesParameters);
 await rc.revoke();
 ```
 - Parameter `listCallQueuesParameters` is of type [ListCallQueuesParameters](./packages/core/definitions/ListCallQueuesParameters.ts)
@@ -775,7 +775,7 @@ User Permission|`ReadExtensions`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).callQueues(groupId).get(restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).callQueues(groupId).get();
 await rc.revoke();
 ```
 
@@ -799,7 +799,7 @@ User Permission|`EditUserInfo`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).callQueues(groupId).put(callQueueUpdateDetails, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).callQueues(groupId).put(callQueueUpdateDetails);
 await rc.revoke();
 ```
 - Parameter `callQueueUpdateDetails` is of type [CallQueueUpdateDetails](./packages/core/definitions/CallQueueUpdateDetails.ts)
@@ -823,7 +823,7 @@ User Permission|`Groups`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).callQueues(groupId).bulkAssign().post(callQueueBulkAssignResource, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).callQueues(groupId).bulkAssign().post(callQueueBulkAssignResource);
 await rc.revoke();
 ```
 - Parameter `callQueueBulkAssignResource` is of type [CallQueueBulkAssignResource](./packages/core/definitions/CallQueueBulkAssignResource.ts)
@@ -847,7 +847,7 @@ User Permission|`ReadExtensions`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).callQueues(groupId).members().get(listCallQueueMembersParameters, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).callQueues(groupId).members().get(listCallQueueMembersParameters);
 await rc.revoke();
 ```
 - Parameter `listCallQueueMembersParameters` is of type [ListCallQueueMembersParameters](./packages/core/definitions/ListCallQueueMembersParameters.ts)
@@ -871,7 +871,7 @@ User Permission|`N/A`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).callQueues(groupId).presence().get(restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).callQueues(groupId).presence().get();
 await rc.revoke();
 ```
 
@@ -895,7 +895,7 @@ User Permission|`N/A`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).callQueues(groupId).presence().put(callQueueUpdatePresence, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).callQueues(groupId).presence().put(callQueueUpdatePresence);
 await rc.revoke();
 ```
 - Parameter `callQueueUpdatePresence` is of type [CallQueueUpdatePresence](./packages/core/definitions/CallQueueUpdatePresence.ts)
@@ -919,7 +919,7 @@ User Permission|`ReadCompanyInfo`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).callRecording().get(restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).callRecording().get();
 await rc.revoke();
 ```
 
@@ -943,7 +943,7 @@ User Permission|`EditCompanyInfo`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).callRecording().put(callRecordingSettingsResource, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).callRecording().put(callRecordingSettingsResource);
 await rc.revoke();
 ```
 - Parameter `callRecordingSettingsResource` is of type [CallRecordingSettingsResource](./packages/core/definitions/CallRecordingSettingsResource.ts)
@@ -967,7 +967,7 @@ User Permission|`ReadCompanyInfo`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).callRecording().bulkAssign().post(bulkAccountCallRecordingsResource, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).callRecording().bulkAssign().post(bulkAccountCallRecordingsResource);
 await rc.revoke();
 ```
 - Parameter `bulkAccountCallRecordingsResource` is of type [BulkAccountCallRecordingsResource](./packages/core/definitions/BulkAccountCallRecordingsResource.ts)
@@ -991,7 +991,7 @@ User Permission|`ReadCompanyInfo`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).callRecording().customGreetings().get(listCallRecordingCustomGreetingsParameters, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).callRecording().customGreetings().get(listCallRecordingCustomGreetingsParameters);
 await rc.revoke();
 ```
 - Parameter `listCallRecordingCustomGreetingsParameters` is of type [ListCallRecordingCustomGreetingsParameters](./packages/core/definitions/ListCallRecordingCustomGreetingsParameters.ts)
@@ -1015,7 +1015,7 @@ User Permission|`EditCompanyInfo`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).callRecording().customGreetings(greetingId).delete(restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).callRecording().customGreetings(greetingId).delete();
 await rc.revoke();
 ```
 
@@ -1039,7 +1039,7 @@ User Permission|`ReadCompanyInfo`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).callRecording().extensions().get(restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).callRecording().extensions().get();
 await rc.revoke();
 ```
 
@@ -1063,7 +1063,7 @@ User Permission|`ReadUserInfo`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).customFields().get(restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).customFields().get();
 await rc.revoke();
 ```
 
@@ -1087,7 +1087,7 @@ User Permission|`Users`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).customFields().post(customFieldCreateRequest, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).customFields().post(customFieldCreateRequest);
 await rc.revoke();
 ```
 - Parameter `customFieldCreateRequest` is of type [CustomFieldCreateRequest](./packages/core/definitions/CustomFieldCreateRequest.ts)
@@ -1111,7 +1111,7 @@ User Permission|`Users`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).customFields(fieldId).put(customFieldUpdateRequest, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).customFields(fieldId).put(customFieldUpdateRequest);
 await rc.revoke();
 ```
 - Parameter `customFieldUpdateRequest` is of type [CustomFieldUpdateRequest](./packages/core/definitions/CustomFieldUpdateRequest.ts)
@@ -1135,7 +1135,7 @@ User Permission|`Users`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).customFields(fieldId).delete(restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).customFields(fieldId).delete();
 await rc.revoke();
 ```
 
@@ -1159,7 +1159,7 @@ User Permission|`ReadCompanyDevices`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).device(deviceId).get(readDeviceParameters, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).device(deviceId).get(readDeviceParameters);
 await rc.revoke();
 ```
 - Parameter `readDeviceParameters` is of type [ReadDeviceParameters](./packages/core/definitions/ReadDeviceParameters.ts)
@@ -1183,7 +1183,7 @@ User Permission|`EditCompanyDevices`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).device(deviceId).put(accountDeviceUpdate, updateDeviceParameters, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).device(deviceId).put(accountDeviceUpdate, updateDeviceParameters);
 await rc.revoke();
 ```
 - Parameter `accountDeviceUpdate` is of type [AccountDeviceUpdate](./packages/core/definitions/AccountDeviceUpdate.ts)
@@ -1208,7 +1208,7 @@ User Permission|`N/A`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).directory().entries().list(listDirectoryEntriesParameters, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).directory().entries().list(listDirectoryEntriesParameters);
 await rc.revoke();
 ```
 - Parameter `listDirectoryEntriesParameters` is of type [ListDirectoryEntriesParameters](./packages/core/definitions/ListDirectoryEntriesParameters.ts)
@@ -1232,7 +1232,7 @@ User Permission|`ReadExtensions`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).directory().entries().search().post(searchDirectoryEntriesRequest, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).directory().entries().search().post(searchDirectoryEntriesRequest);
 await rc.revoke();
 ```
 - Parameter `searchDirectoryEntriesRequest` is of type [SearchDirectoryEntriesRequest](./packages/core/definitions/SearchDirectoryEntriesRequest.ts)
@@ -1256,7 +1256,7 @@ User Permission|`N/A`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).directory().entries(entryId).get(restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).directory().entries(entryId).get();
 await rc.revoke();
 ```
 
@@ -1280,7 +1280,7 @@ User Permission|`ReadCompanyInfo`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).directory().federation().get(restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).directory().federation().get();
 await rc.revoke();
 ```
 
@@ -1304,7 +1304,7 @@ User Permission|`ConfigureEmergencyMaps`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().devices().get(listDevicesAutomaticLocationUpdatesParameters, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().devices().get(listDevicesAutomaticLocationUpdatesParameters);
 await rc.revoke();
 ```
 - Parameter `listDevicesAutomaticLocationUpdatesParameters` is of type [ListDevicesAutomaticLocationUpdatesParameters](./packages/core/definitions/ListDevicesAutomaticLocationUpdatesParameters.ts)
@@ -1328,7 +1328,7 @@ User Permission|`ConfigureEmergencyMaps`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().devices().bulkAssign().post(assignMultipleDevicesAutomaticLocationUpdates, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().devices().bulkAssign().post(assignMultipleDevicesAutomaticLocationUpdates);
 await rc.revoke();
 ```
 - Parameter `assignMultipleDevicesAutomaticLocationUpdates` is of type [AssignMultipleDevicesAutomaticLocationUpdates](./packages/core/definitions/AssignMultipleDevicesAutomaticLocationUpdates.ts)
@@ -1352,7 +1352,7 @@ User Permission|`ConfigureEmergencyMaps`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().networks().list(restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().networks().list();
 await rc.revoke();
 ```
 
@@ -1376,7 +1376,7 @@ User Permission|`ConfigureEmergencyMaps`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().networks().post(createNetworkRequest, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().networks().post(createNetworkRequest);
 await rc.revoke();
 ```
 - Parameter `createNetworkRequest` is of type [CreateNetworkRequest](./packages/core/definitions/CreateNetworkRequest.ts)
@@ -1400,7 +1400,7 @@ User Permission|`ConfigureEmergencyMaps`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().networks(networkId).get(restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().networks(networkId).get();
 await rc.revoke();
 ```
 
@@ -1424,7 +1424,7 @@ User Permission|`ConfigureEmergencyMaps`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().networks(networkId).put(updateNetworkRequest, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().networks(networkId).put(updateNetworkRequest);
 await rc.revoke();
 ```
 - Parameter `updateNetworkRequest` is of type [UpdateNetworkRequest](./packages/core/definitions/UpdateNetworkRequest.ts)
@@ -1448,7 +1448,7 @@ User Permission|`ConfigureEmergencyMaps`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().networks(networkId).delete(restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().networks(networkId).delete();
 await rc.revoke();
 ```
 
@@ -1472,7 +1472,7 @@ User Permission|`ConfigureEmergencyMaps`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().switches().list(listAccountSwitchesParameters, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().switches().list(listAccountSwitchesParameters);
 await rc.revoke();
 ```
 - Parameter `listAccountSwitchesParameters` is of type [ListAccountSwitchesParameters](./packages/core/definitions/ListAccountSwitchesParameters.ts)
@@ -1496,7 +1496,7 @@ User Permission|`ConfigureEmergencyMaps`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().switches().post(createSwitchInfo, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().switches().post(createSwitchInfo);
 await rc.revoke();
 ```
 - Parameter `createSwitchInfo` is of type [CreateSwitchInfo](./packages/core/definitions/CreateSwitchInfo.ts)
@@ -1520,7 +1520,7 @@ User Permission|`ConfigureEmergencyMaps`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().switchesBulkCreate().post(createMultipleSwitchesRequest, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().switchesBulkCreate().post(createMultipleSwitchesRequest);
 await rc.revoke();
 ```
 - Parameter `createMultipleSwitchesRequest` is of type [CreateMultipleSwitchesRequest](./packages/core/definitions/CreateMultipleSwitchesRequest.ts)
@@ -1544,7 +1544,7 @@ User Permission|`ConfigureEmergencyMaps`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().switchesBulkUpdate().post(updateMultipleSwitchesRequest, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().switchesBulkUpdate().post(updateMultipleSwitchesRequest);
 await rc.revoke();
 ```
 - Parameter `updateMultipleSwitchesRequest` is of type [UpdateMultipleSwitchesRequest](./packages/core/definitions/UpdateMultipleSwitchesRequest.ts)
@@ -1568,7 +1568,7 @@ User Permission|`ConfigureEmergencyMaps`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().switchesBulkValidate().post(validateMultipleSwitchesRequest, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().switchesBulkValidate().post(validateMultipleSwitchesRequest);
 await rc.revoke();
 ```
 - Parameter `validateMultipleSwitchesRequest` is of type [ValidateMultipleSwitchesRequest](./packages/core/definitions/ValidateMultipleSwitchesRequest.ts)
@@ -1592,7 +1592,7 @@ User Permission|`ConfigureEmergencyMaps`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().switches(switchId).get(restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().switches(switchId).get();
 await rc.revoke();
 ```
 
@@ -1616,7 +1616,7 @@ User Permission|`ConfigureEmergencyMaps`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().switches(switchId).put(updateSwitchInfo, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().switches(switchId).put(updateSwitchInfo);
 await rc.revoke();
 ```
 - Parameter `updateSwitchInfo` is of type [UpdateSwitchInfo](./packages/core/definitions/UpdateSwitchInfo.ts)
@@ -1640,7 +1640,7 @@ User Permission|`ConfigureEmergencyMaps`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().switches(switchId).delete(restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().switches(switchId).delete();
 await rc.revoke();
 ```
 
@@ -1664,7 +1664,7 @@ User Permission|`ConfigureEmergencyMaps`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().tasks(taskId).get(restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().tasks(taskId).get();
 await rc.revoke();
 ```
 
@@ -1688,7 +1688,7 @@ User Permission|`ConfigureEmergencyMaps`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().users().get(listAutomaticLocationUpdatesUsersParameters, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().users().get(listAutomaticLocationUpdatesUsersParameters);
 await rc.revoke();
 ```
 - Parameter `listAutomaticLocationUpdatesUsersParameters` is of type [ListAutomaticLocationUpdatesUsersParameters](./packages/core/definitions/ListAutomaticLocationUpdatesUsersParameters.ts)
@@ -1712,7 +1712,7 @@ User Permission|`ConfigureEmergencyMaps`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().users().bulkAssign().post(bulkAssignAutomaticLocationUpdatesUsers, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().users().bulkAssign().post(bulkAssignAutomaticLocationUpdatesUsers);
 await rc.revoke();
 ```
 - Parameter `bulkAssignAutomaticLocationUpdatesUsers` is of type [BulkAssignAutomaticLocationUpdatesUsers](./packages/core/definitions/BulkAssignAutomaticLocationUpdatesUsers.ts)
@@ -1736,7 +1736,7 @@ User Permission|`ConfigureEmergencyMaps`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().wirelessPoints().list(listWirelessPointsParameters, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().wirelessPoints().list(listWirelessPointsParameters);
 await rc.revoke();
 ```
 - Parameter `listWirelessPointsParameters` is of type [ListWirelessPointsParameters](./packages/core/definitions/ListWirelessPointsParameters.ts)
@@ -1760,7 +1760,7 @@ User Permission|`ConfigureEmergencyMaps`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().wirelessPoints().post(createWirelessPoint, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().wirelessPoints().post(createWirelessPoint);
 await rc.revoke();
 ```
 - Parameter `createWirelessPoint` is of type [CreateWirelessPoint](./packages/core/definitions/CreateWirelessPoint.ts)
@@ -1784,7 +1784,7 @@ User Permission|`ConfigureEmergencyMaps`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().wirelessPointsBulkCreate().post(createMultipleWirelessPointsRequest, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().wirelessPointsBulkCreate().post(createMultipleWirelessPointsRequest);
 await rc.revoke();
 ```
 - Parameter `createMultipleWirelessPointsRequest` is of type [CreateMultipleWirelessPointsRequest](./packages/core/definitions/CreateMultipleWirelessPointsRequest.ts)
@@ -1808,7 +1808,7 @@ User Permission|`ConfigureEmergencyMaps`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().wirelessPointsBulkUpdate().post(updateMultipleWirelessPointsRequest, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().wirelessPointsBulkUpdate().post(updateMultipleWirelessPointsRequest);
 await rc.revoke();
 ```
 - Parameter `updateMultipleWirelessPointsRequest` is of type [UpdateMultipleWirelessPointsRequest](./packages/core/definitions/UpdateMultipleWirelessPointsRequest.ts)
@@ -1832,7 +1832,7 @@ User Permission|`ConfigureEmergencyMaps`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().wirelessPointsBulkValidate().post(validateMultipleWirelessPointsRequest, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().wirelessPointsBulkValidate().post(validateMultipleWirelessPointsRequest);
 await rc.revoke();
 ```
 - Parameter `validateMultipleWirelessPointsRequest` is of type [ValidateMultipleWirelessPointsRequest](./packages/core/definitions/ValidateMultipleWirelessPointsRequest.ts)
@@ -1856,7 +1856,7 @@ User Permission|`ConfigureEmergencyMaps`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().wirelessPoints(pointId).get(restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().wirelessPoints(pointId).get();
 await rc.revoke();
 ```
 
@@ -1880,7 +1880,7 @@ User Permission|`ConfigureEmergencyMaps`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().wirelessPoints(pointId).put(updateWirelessPoint, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().wirelessPoints(pointId).put(updateWirelessPoint);
 await rc.revoke();
 ```
 - Parameter `updateWirelessPoint` is of type [UpdateWirelessPoint](./packages/core/definitions/UpdateWirelessPoint.ts)
@@ -1904,7 +1904,7 @@ User Permission|`ConfigureEmergencyMaps`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().wirelessPoints(pointId).delete(restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().wirelessPoints(pointId).delete();
 await rc.revoke();
 ```
 
@@ -1928,7 +1928,7 @@ User Permission|`ConfigureEmergencyMaps`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).emergencyLocations().list(listEmergencyLocationsParameters, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).emergencyLocations().list(listEmergencyLocationsParameters);
 await rc.revoke();
 ```
 - Parameter `listEmergencyLocationsParameters` is of type [ListEmergencyLocationsParameters](./packages/core/definitions/ListEmergencyLocationsParameters.ts)
@@ -1952,7 +1952,7 @@ User Permission|`ConfigureEmergencyMaps`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).emergencyLocations().post(emergencyLocationInfoRequest, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).emergencyLocations().post(emergencyLocationInfoRequest);
 await rc.revoke();
 ```
 - Parameter `emergencyLocationInfoRequest` is of type [EmergencyLocationInfoRequest](./packages/core/definitions/EmergencyLocationInfoRequest.ts)
@@ -1976,7 +1976,7 @@ User Permission|`ConfigureEmergencyMaps`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).emergencyLocations(locationId).get(restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).emergencyLocations(locationId).get();
 await rc.revoke();
 ```
 
@@ -2000,7 +2000,7 @@ User Permission|`ConfigureEmergencyMaps`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).emergencyLocations(locationId).put(emergencyLocationInfoRequest, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).emergencyLocations(locationId).put(emergencyLocationInfoRequest);
 await rc.revoke();
 ```
 - Parameter `emergencyLocationInfoRequest` is of type [EmergencyLocationInfoRequest](./packages/core/definitions/EmergencyLocationInfoRequest.ts)
@@ -2024,7 +2024,7 @@ User Permission|`ConfigureEmergencyMaps`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).emergencyLocations(locationId).delete(deleteEmergencyLocationParameters, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).emergencyLocations(locationId).delete(deleteEmergencyLocationParameters);
 await rc.revoke();
 ```
 - Parameter `deleteEmergencyLocationParameters` is of type [DeleteEmergencyLocationParameters](./packages/core/definitions/DeleteEmergencyLocationParameters.ts)
@@ -2048,7 +2048,7 @@ User Permission|`ReadExtensions`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).extension().list(listExtensionsParameters, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).extension().list(listExtensionsParameters);
 await rc.revoke();
 ```
 - Parameter `listExtensionsParameters` is of type [ListExtensionsParameters](./packages/core/definitions/ListExtensionsParameters.ts)
@@ -2072,7 +2072,7 @@ User Permission|`AddRemoveUsers`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).extension().post(extensionCreationRequest, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).extension().post(extensionCreationRequest);
 await rc.revoke();
 ```
 - Parameter `extensionCreationRequest` is of type [ExtensionCreationRequest](./packages/core/definitions/ExtensionCreationRequest.ts)
@@ -2096,7 +2096,7 @@ User Permission|`EditExtensionInfo`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).extensionBulkUpdate().post(extensionBulkUpdateRequest, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).extensionBulkUpdate().post(extensionBulkUpdateRequest);
 await rc.revoke();
 ```
 - Parameter `extensionBulkUpdateRequest` is of type [ExtensionBulkUpdateRequest](./packages/core/definitions/ExtensionBulkUpdateRequest.ts)
@@ -2120,7 +2120,7 @@ User Permission|`EditExtensionInfo`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).extensionBulkUpdate().tasks(taskId).get(restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).extensionBulkUpdate().tasks(taskId).get();
 await rc.revoke();
 ```
 
@@ -2144,7 +2144,7 @@ User Permission|`ReadExtensions`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).get(restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).get();
 await rc.revoke();
 ```
 
@@ -2169,7 +2169,7 @@ User Permission|`EditUserInfo OR EditUserCredentials`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).put(extensionUpdateRequest, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).put(extensionUpdateRequest);
 await rc.revoke();
 ```
 - Parameter `extensionUpdateRequest` is of type [ExtensionUpdateRequest](./packages/core/definitions/ExtensionUpdateRequest.ts)
@@ -2194,7 +2194,7 @@ User Permission|`AddRemoveUsers`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).delete(deleteExtensionParameters, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).delete(deleteExtensionParameters);
 await rc.revoke();
 ```
 - Parameter `deleteExtensionParameters` is of type [DeleteExtensionParameters](./packages/core/definitions/DeleteExtensionParameters.ts)
@@ -2219,7 +2219,7 @@ User Permission|`ReadCallLog`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).activeCalls().get(listExtensionActiveCallsParameters, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).activeCalls().get(listExtensionActiveCallsParameters);
 await rc.revoke();
 ```
 - Parameter `listExtensionActiveCallsParameters` is of type [ListExtensionActiveCallsParameters](./packages/core/definitions/ListExtensionActiveCallsParameters.ts)
@@ -2244,7 +2244,7 @@ User Permission|`ReadPersonalContacts`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).addressBookSync().get(syncAddressBookParameters, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).addressBookSync().get(syncAddressBookParameters);
 await rc.revoke();
 ```
 - Parameter `syncAddressBookParameters` is of type [SyncAddressBookParameters](./packages/core/definitions/SyncAddressBookParameters.ts)
@@ -2269,7 +2269,7 @@ User Permission|`ReadPersonalContacts`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).addressBook().contact().list(listContactsParameters, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).addressBook().contact().list(listContactsParameters);
 await rc.revoke();
 ```
 - Parameter `listContactsParameters` is of type [ListContactsParameters](./packages/core/definitions/ListContactsParameters.ts)
@@ -2294,7 +2294,7 @@ User Permission|`EditPersonalContacts`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).addressBook().contact().post(personalContactRequest, createContactParameters, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).addressBook().contact().post(personalContactRequest, createContactParameters);
 await rc.revoke();
 ```
 - Parameter `personalContactRequest` is of type [PersonalContactRequest](./packages/core/definitions/PersonalContactRequest.ts)
@@ -2320,7 +2320,7 @@ User Permission|`ReadPersonalContacts`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).addressBook().contact(contactId).get(restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).addressBook().contact(contactId).get();
 await rc.revoke();
 ```
 
@@ -2345,7 +2345,7 @@ User Permission|`EditPersonalContacts`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).addressBook().contact(contactId).put(personalContactRequest, updateContactParameters, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).addressBook().contact(contactId).put(personalContactRequest, updateContactParameters);
 await rc.revoke();
 ```
 - Parameter `personalContactRequest` is of type [PersonalContactRequest](./packages/core/definitions/PersonalContactRequest.ts)
@@ -2371,7 +2371,7 @@ User Permission|`EditPersonalContacts`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).addressBook().contact(contactId).delete(restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).addressBook().contact(contactId).delete();
 await rc.revoke();
 ```
 
@@ -2396,7 +2396,7 @@ User Permission|`ReadUserAnsweringRules`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).answeringRule().list(listAnsweringRulesParameters, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).answeringRule().list(listAnsweringRulesParameters);
 await rc.revoke();
 ```
 - Parameter `listAnsweringRulesParameters` is of type [ListAnsweringRulesParameters](./packages/core/definitions/ListAnsweringRulesParameters.ts)
@@ -2421,7 +2421,7 @@ User Permission|`EditUserAnsweringRules`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).answeringRule().post(createAnsweringRuleRequest, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).answeringRule().post(createAnsweringRuleRequest);
 await rc.revoke();
 ```
 - Parameter `createAnsweringRuleRequest` is of type [CreateAnsweringRuleRequest](./packages/core/definitions/CreateAnsweringRuleRequest.ts)
@@ -2446,7 +2446,7 @@ User Permission|`ReadUserAnsweringRules`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).answeringRule(ruleId).get(readAnsweringRuleParameters, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).answeringRule(ruleId).get(readAnsweringRuleParameters);
 await rc.revoke();
 ```
 - Parameter `readAnsweringRuleParameters` is of type [ReadAnsweringRuleParameters](./packages/core/definitions/ReadAnsweringRuleParameters.ts)
@@ -2471,7 +2471,7 @@ User Permission|`EditUserAnsweringRules`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).answeringRule(ruleId).put(updateAnsweringRuleRequest, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).answeringRule(ruleId).put(updateAnsweringRuleRequest);
 await rc.revoke();
 ```
 - Parameter `updateAnsweringRuleRequest` is of type [UpdateAnsweringRuleRequest](./packages/core/definitions/UpdateAnsweringRuleRequest.ts)
@@ -2496,7 +2496,7 @@ User Permission|`EditUserAnsweringRules`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).answeringRule(ruleId).delete(restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).answeringRule(ruleId).delete();
 await rc.revoke();
 ```
 
@@ -2521,7 +2521,7 @@ User Permission|`N/A`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).authzProfile().get(restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).authzProfile().get();
 await rc.revoke();
 ```
 
@@ -2546,7 +2546,7 @@ User Permission|`N/A`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).authzProfile().check().get(checkUserPermissionParameters, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).authzProfile().check().get(checkUserPermissionParameters);
 await rc.revoke();
 ```
 - Parameter `checkUserPermissionParameters` is of type [CheckUserPermissionParameters](./packages/core/definitions/CheckUserPermissionParameters.ts)
@@ -2571,7 +2571,7 @@ User Permission|`ReadExtensions`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).businessHours().get(restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).businessHours().get();
 await rc.revoke();
 ```
 
@@ -2596,7 +2596,7 @@ User Permission|`EditUserAnsweringRules`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).businessHours().put(userBusinessHoursUpdateRequest, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).businessHours().put(userBusinessHoursUpdateRequest);
 await rc.revoke();
 ```
 - Parameter `userBusinessHoursUpdateRequest` is of type [UserBusinessHoursUpdateRequest](./packages/core/definitions/UserBusinessHoursUpdateRequest.ts)
@@ -2621,7 +2621,7 @@ User Permission|`ReadCallLog`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).callLog().list(readUserCallLogParameters, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).callLog().list(readUserCallLogParameters);
 await rc.revoke();
 ```
 - Parameter `readUserCallLogParameters` is of type [ReadUserCallLogParameters](./packages/core/definitions/ReadUserCallLogParameters.ts)
@@ -2646,7 +2646,7 @@ User Permission|`EditCallLog`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).callLog().delete(deleteUserCallLogParameters, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).callLog().delete(deleteUserCallLogParameters);
 await rc.revoke();
 ```
 - Parameter `deleteUserCallLogParameters` is of type [DeleteUserCallLogParameters](./packages/core/definitions/DeleteUserCallLogParameters.ts)
@@ -2671,7 +2671,7 @@ User Permission|`ReadCallLog`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).callLogSync().get(syncUserCallLogParameters, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).callLogSync().get(syncUserCallLogParameters);
 await rc.revoke();
 ```
 - Parameter `syncUserCallLogParameters` is of type [SyncUserCallLogParameters](./packages/core/definitions/SyncUserCallLogParameters.ts)
@@ -2696,7 +2696,7 @@ User Permission|`ReadCallLog`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).callLog(callRecordId).get(readUserCallRecordParameters, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).callLog(callRecordId).get(readUserCallRecordParameters);
 await rc.revoke();
 ```
 - Parameter `readUserCallRecordParameters` is of type [ReadUserCallRecordParameters](./packages/core/definitions/ReadUserCallRecordParameters.ts)
@@ -2721,7 +2721,7 @@ User Permission|`N/A`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).callQueuePresence().get(readExtensionCallQueuePresenceParameters, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).callQueuePresence().get(readExtensionCallQueuePresenceParameters);
 await rc.revoke();
 ```
 - Parameter `readExtensionCallQueuePresenceParameters` is of type [ReadExtensionCallQueuePresenceParameters](./packages/core/definitions/ReadExtensionCallQueuePresenceParameters.ts)
@@ -2746,7 +2746,7 @@ User Permission|`N/A`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).callQueuePresence().put(extensionCallQueueUpdatePresenceList, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).callQueuePresence().put(extensionCallQueueUpdatePresenceList);
 await rc.revoke();
 ```
 - Parameter `extensionCallQueueUpdatePresenceList` is of type [ExtensionCallQueueUpdatePresenceList](./packages/core/definitions/ExtensionCallQueueUpdatePresenceList.ts)
@@ -2771,7 +2771,7 @@ User Permission|`JoinLeaveCallQueue`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).callQueues().put(userCallQueues, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).callQueues().put(userCallQueues);
 await rc.revoke();
 ```
 - Parameter `userCallQueues` is of type [UserCallQueues](./packages/core/definitions/UserCallQueues.ts)
@@ -2796,7 +2796,7 @@ User Permission|`ReadBlockedNumbers`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).callerBlocking().get(restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).callerBlocking().get();
 await rc.revoke();
 ```
 
@@ -2821,7 +2821,7 @@ User Permission|`EditBlockedNumbers`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).callerBlocking().put(callerBlockingSettingsUpdate, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).callerBlocking().put(callerBlockingSettingsUpdate);
 await rc.revoke();
 ```
 - Parameter `callerBlockingSettingsUpdate` is of type [CallerBlockingSettingsUpdate](./packages/core/definitions/CallerBlockingSettingsUpdate.ts)
@@ -2846,7 +2846,7 @@ User Permission|`ReadBlockedNumbers`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).callerBlocking().phoneNumbers().list(listBlockedAllowedNumbersParameters, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).callerBlocking().phoneNumbers().list(listBlockedAllowedNumbersParameters);
 await rc.revoke();
 ```
 - Parameter `listBlockedAllowedNumbersParameters` is of type [ListBlockedAllowedNumbersParameters](./packages/core/definitions/ListBlockedAllowedNumbersParameters.ts)
@@ -2871,7 +2871,7 @@ User Permission|`EditBlockedNumbers`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).callerBlocking().phoneNumbers().post(addBlockedAllowedPhoneNumber, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).callerBlocking().phoneNumbers().post(addBlockedAllowedPhoneNumber);
 await rc.revoke();
 ```
 - Parameter `addBlockedAllowedPhoneNumber` is of type [AddBlockedAllowedPhoneNumber](./packages/core/definitions/AddBlockedAllowedPhoneNumber.ts)
@@ -2896,7 +2896,7 @@ User Permission|`ReadBlockedNumbers`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).callerBlocking().phoneNumbers(blockedNumberId).get(restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).callerBlocking().phoneNumbers(blockedNumberId).get();
 await rc.revoke();
 ```
 
@@ -2921,7 +2921,7 @@ User Permission|`EditBlockedNumbers`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).callerBlocking().phoneNumbers(blockedNumberId).put(addBlockedAllowedPhoneNumber, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).callerBlocking().phoneNumbers(blockedNumberId).put(addBlockedAllowedPhoneNumber);
 await rc.revoke();
 ```
 - Parameter `addBlockedAllowedPhoneNumber` is of type [AddBlockedAllowedPhoneNumber](./packages/core/definitions/AddBlockedAllowedPhoneNumber.ts)
@@ -2946,7 +2946,7 @@ User Permission|`EditBlockedNumbers`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).callerBlocking().phoneNumbers(blockedNumberId).delete(restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).callerBlocking().phoneNumbers(blockedNumberId).delete();
 await rc.revoke();
 ```
 
@@ -2971,7 +2971,7 @@ User Permission|`ReadCallerIDSettings`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).callerId().get(restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).callerId().get();
 await rc.revoke();
 ```
 
@@ -2996,7 +2996,7 @@ User Permission|`EditCallerIDSettings`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).callerId().put(extensionCallerIdInfo, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).callerId().put(extensionCallerIdInfo);
 await rc.revoke();
 ```
 - Parameter `extensionCallerIdInfo` is of type [ExtensionCallerIdInfo](./packages/core/definitions/ExtensionCallerIdInfo.ts)
@@ -3021,7 +3021,7 @@ User Permission|`InternalSMS`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).companyPager().post(createInternalTextMessageRequest, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).companyPager().post(createInternalTextMessageRequest);
 await rc.revoke();
 ```
 - Parameter `createInternalTextMessageRequest` is of type [CreateInternalTextMessageRequest](./packages/core/definitions/CreateInternalTextMessageRequest.ts)
@@ -3046,7 +3046,7 @@ User Permission|`OrganizeConference`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).conferencing().get(readConferencingSettingsParameters, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).conferencing().get(readConferencingSettingsParameters);
 await rc.revoke();
 ```
 - Parameter `readConferencingSettingsParameters` is of type [ReadConferencingSettingsParameters](./packages/core/definitions/ReadConferencingSettingsParameters.ts)
@@ -3071,7 +3071,7 @@ User Permission|`OrganizeConference`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).conferencing().put(updateConferencingInfoRequest, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).conferencing().put(updateConferencingInfoRequest);
 await rc.revoke();
 ```
 - Parameter `updateConferencingInfoRequest` is of type [UpdateConferencingInfoRequest](./packages/core/definitions/UpdateConferencingInfoRequest.ts)
@@ -3096,7 +3096,7 @@ User Permission|`ReadUserDevices`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).device().get(listExtensionDevicesParameters, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).device().get(listExtensionDevicesParameters);
 await rc.revoke();
 ```
 - Parameter `listExtensionDevicesParameters` is of type [ListExtensionDevicesParameters](./packages/core/definitions/ListExtensionDevicesParameters.ts)
@@ -3121,7 +3121,7 @@ User Permission|`N/A`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).emergencyLocations().get(restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).emergencyLocations().get();
 await rc.revoke();
 ```
 
@@ -3146,7 +3146,7 @@ User Permission|`ReadPersonalContacts`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).favorite().get(restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).favorite().get();
 await rc.revoke();
 ```
 
@@ -3171,7 +3171,7 @@ User Permission|`EditPersonalContacts`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).favorite().put(favoriteCollection, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).favorite().put(favoriteCollection);
 await rc.revoke();
 ```
 - Parameter `favoriteCollection` is of type [FavoriteCollection](./packages/core/definitions/FavoriteCollection.ts)
@@ -3196,7 +3196,7 @@ User Permission|`OutboundFaxes`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).fax().post(createFaxMessageRequest, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).fax().post(createFaxMessageRequest);
 await rc.revoke();
 ```
 - Parameter `createFaxMessageRequest` is of type [CreateFaxMessageRequest](./packages/core/definitions/CreateFaxMessageRequest.ts)
@@ -3221,7 +3221,7 @@ User Permission|`ReadExtensions`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).features().get(readUserFeaturesParameters, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).features().get(readUserFeaturesParameters);
 await rc.revoke();
 ```
 - Parameter `readUserFeaturesParameters` is of type [ReadUserFeaturesParameters](./packages/core/definitions/ReadUserFeaturesParameters.ts)
@@ -3246,7 +3246,7 @@ User Permission|`ReadUserForwardingFlipNumbers`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).forwardingNumber().list(listForwardingNumbersParameters, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).forwardingNumber().list(listForwardingNumbersParameters);
 await rc.revoke();
 ```
 - Parameter `listForwardingNumbersParameters` is of type [ListForwardingNumbersParameters](./packages/core/definitions/ListForwardingNumbersParameters.ts)
@@ -3271,7 +3271,7 @@ User Permission|`EditUserForwardingFlipNumbers`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).forwardingNumber().post(createForwardingNumberRequest, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).forwardingNumber().post(createForwardingNumberRequest);
 await rc.revoke();
 ```
 - Parameter `createForwardingNumberRequest` is of type [CreateForwardingNumberRequest](./packages/core/definitions/CreateForwardingNumberRequest.ts)
@@ -3296,7 +3296,7 @@ User Permission|`ReadUserForwardingFlipNumbers`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).forwardingNumber(forwardingNumberId).get(restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).forwardingNumber(forwardingNumberId).get();
 await rc.revoke();
 ```
 
@@ -3321,7 +3321,7 @@ User Permission|`EditUserForwardingFlipNumbers`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).forwardingNumber(forwardingNumberId).put(updateForwardingNumberRequest, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).forwardingNumber(forwardingNumberId).put(updateForwardingNumberRequest);
 await rc.revoke();
 ```
 - Parameter `updateForwardingNumberRequest` is of type [UpdateForwardingNumberRequest](./packages/core/definitions/UpdateForwardingNumberRequest.ts)
@@ -3346,7 +3346,7 @@ User Permission|`EditUserForwardingFlipNumbers`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).forwardingNumber(forwardingNumberId).delete(restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).forwardingNumber(forwardingNumberId).delete();
 await rc.revoke();
 ```
 
@@ -3371,7 +3371,7 @@ User Permission|`ReadExtensions`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).grant().get(listExtensionGrantsParameters, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).grant().get(listExtensionGrantsParameters);
 await rc.revoke();
 ```
 - Parameter `listExtensionGrantsParameters` is of type [ListExtensionGrantsParameters](./packages/core/definitions/ListExtensionGrantsParameters.ts)
@@ -3396,7 +3396,7 @@ User Permission|`EditUserAnsweringRules`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).greeting().post(createCustomUserGreetingRequest, createCustomUserGreetingParameters, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).greeting().post(createCustomUserGreetingRequest, createCustomUserGreetingParameters);
 await rc.revoke();
 ```
 - Parameter `createCustomUserGreetingRequest` is of type [CreateCustomUserGreetingRequest](./packages/core/definitions/CreateCustomUserGreetingRequest.ts)
@@ -3422,7 +3422,7 @@ User Permission|`ReadUserInfo`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).greeting(greetingId).get(restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).greeting(greetingId).get();
 await rc.revoke();
 ```
 
@@ -3447,7 +3447,7 @@ User Permission|`Meetings`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).meeting().list(restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).meeting().list();
 await rc.revoke();
 ```
 
@@ -3472,7 +3472,7 @@ User Permission|`Meetings`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).meeting().post(meetingRequestResource, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).meeting().post(meetingRequestResource);
 await rc.revoke();
 ```
 - Parameter `meetingRequestResource` is of type [MeetingRequestResource](./packages/core/definitions/MeetingRequestResource.ts)
@@ -3497,7 +3497,7 @@ User Permission|`N/A`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).meetingConfiguration().profileImage().post(createUserMeetingProfileImageRequest, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).meetingConfiguration().profileImage().post(createUserMeetingProfileImageRequest);
 await rc.revoke();
 ```
 - Parameter `createUserMeetingProfileImageRequest` is of type [CreateUserMeetingProfileImageRequest](./packages/core/definitions/CreateUserMeetingProfileImageRequest.ts)
@@ -3522,7 +3522,7 @@ User Permission|`MeetingsRecordings`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).meetingRecordings().get(listUserMeetingRecordingsParameters, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).meetingRecordings().get(listUserMeetingRecordingsParameters);
 await rc.revoke();
 ```
 - Parameter `listUserMeetingRecordingsParameters` is of type [ListUserMeetingRecordingsParameters](./packages/core/definitions/ListUserMeetingRecordingsParameters.ts)
@@ -3547,7 +3547,7 @@ User Permission|`Meetings`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).meeting().serviceInfo().get(restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).meeting().serviceInfo().get();
 await rc.revoke();
 ```
 
@@ -3572,7 +3572,7 @@ User Permission|`Meetings`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).meeting().serviceInfo().patch(meetingServiceInfoRequest, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).meeting().serviceInfo().patch(meetingServiceInfoRequest);
 await rc.revoke();
 ```
 - Parameter `meetingServiceInfoRequest` is of type [MeetingServiceInfoRequest](./packages/core/definitions/MeetingServiceInfoRequest.ts)
@@ -3597,7 +3597,7 @@ User Permission|`Meetings`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).meeting().userSettings().get(restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).meeting().userSettings().get();
 await rc.revoke();
 ```
 
@@ -3622,7 +3622,7 @@ User Permission|`Meetings`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).meeting(meetingId).get(restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).meeting(meetingId).get();
 await rc.revoke();
 ```
 
@@ -3647,7 +3647,7 @@ User Permission|`Meetings`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).meeting(meetingId).put(meetingRequestResource, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).meeting(meetingId).put(meetingRequestResource);
 await rc.revoke();
 ```
 - Parameter `meetingRequestResource` is of type [MeetingRequestResource](./packages/core/definitions/MeetingRequestResource.ts)
@@ -3672,7 +3672,7 @@ User Permission|`Meetings`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).meeting(meetingId).delete(restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).meeting(meetingId).delete();
 await rc.revoke();
 ```
 
@@ -3697,7 +3697,7 @@ User Permission|`Meetings`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).meeting(meetingId).end().post(restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).meeting(meetingId).end().post();
 await rc.revoke();
 ```
 
@@ -3722,7 +3722,7 @@ User Permission|`Meetings`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).meeting(meetingId).invitation().get(restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).meeting(meetingId).invitation().get();
 await rc.revoke();
 ```
 
@@ -3747,7 +3747,7 @@ User Permission|`Meetings`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).meetingsConfiguration().assistants().get(restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).meetingsConfiguration().assistants().get();
 await rc.revoke();
 ```
 
@@ -3772,7 +3772,7 @@ User Permission|`Meetings`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).meetingsConfiguration().assisted().get(restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).meetingsConfiguration().assisted().get();
 await rc.revoke();
 ```
 
@@ -3797,7 +3797,7 @@ User Permission|`ReadMessages`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).messageStore().list(listMessagesParameters, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).messageStore().list(listMessagesParameters);
 await rc.revoke();
 ```
 - Parameter `listMessagesParameters` is of type [ListMessagesParameters](./packages/core/definitions/ListMessagesParameters.ts)
@@ -3822,7 +3822,7 @@ User Permission|`ReadMessages`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).messageStore(messageId).get(restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).messageStore(messageId).get();
 await rc.revoke();
 ```
 
@@ -3847,7 +3847,7 @@ User Permission|`EditMessages`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).messageStore(messageId).put(updateMessageRequest, updateMessageParameters, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).messageStore(messageId).put(updateMessageRequest, updateMessageParameters);
 await rc.revoke();
 ```
 - Parameter `updateMessageRequest` is of type [UpdateMessageRequest](./packages/core/definitions/UpdateMessageRequest.ts)
@@ -3873,7 +3873,7 @@ User Permission|`EditMessages`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).messageStore(messageId).delete(deleteMessageParameters, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).messageStore(messageId).delete(deleteMessageParameters);
 await rc.revoke();
 ```
 - Parameter `deleteMessageParameters` is of type [DeleteMessageParameters](./packages/core/definitions/DeleteMessageParameters.ts)
@@ -3898,7 +3898,7 @@ User Permission|`ReadMessageContent`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).messageStore(messageId).content(attachmentId).get(readMessageContentParameters, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).messageStore(messageId).content(attachmentId).get(readMessageContentParameters);
 await rc.revoke();
 ```
 - Parameter `readMessageContentParameters` is of type [ReadMessageContentParameters](./packages/core/definitions/ReadMessageContentParameters.ts)
@@ -3927,7 +3927,7 @@ User Permission|`ReadMessages`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).messageSync().get(syncMessagesParameters, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).messageSync().get(syncMessagesParameters);
 await rc.revoke();
 ```
 - Parameter `syncMessagesParameters` is of type [SyncMessagesParameters](./packages/core/definitions/SyncMessagesParameters.ts)
@@ -3952,7 +3952,7 @@ User Permission|`OutboundSMS`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).mms().post(createMmsMessage, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).mms().post(createMmsMessage);
 await rc.revoke();
 ```
 - Parameter `createMmsMessage` is of type [CreateMMSMessage](./packages/core/definitions/CreateMMSMessage.ts)
@@ -3977,7 +3977,7 @@ User Permission|`ReadMessagesNotificationsSettings`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).notificationSettings().get(restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).notificationSettings().get();
 await rc.revoke();
 ```
 
@@ -4002,7 +4002,7 @@ User Permission|`EditMessagesNotificationsSettings`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).notificationSettings().put(notificationSettingsUpdateRequest, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).notificationSettings().put(notificationSettingsUpdateRequest);
 await rc.revoke();
 ```
 - Parameter `notificationSettingsUpdateRequest` is of type [NotificationSettingsUpdateRequest](./packages/core/definitions/NotificationSettingsUpdateRequest.ts)
@@ -4027,7 +4027,7 @@ User Permission|`ReadUserPhoneNumbers`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).phoneNumber().get(listExtensionPhoneNumbersParameters, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).phoneNumber().get(listExtensionPhoneNumbersParameters);
 await rc.revoke();
 ```
 - Parameter `listExtensionPhoneNumbersParameters` is of type [ListExtensionPhoneNumbersParameters](./packages/core/definitions/ListExtensionPhoneNumbersParameters.ts)
@@ -4052,7 +4052,7 @@ User Permission|`ReadPresenceStatus`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).presence().get(readUserPresenceStatusParameters, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).presence().get(readUserPresenceStatusParameters);
 await rc.revoke();
 ```
 - Parameter `readUserPresenceStatusParameters` is of type [ReadUserPresenceStatusParameters](./packages/core/definitions/ReadUserPresenceStatusParameters.ts)
@@ -4077,7 +4077,7 @@ User Permission|`N/A`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).presence().put(presenceInfoRequest, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).presence().put(presenceInfoRequest);
 await rc.revoke();
 ```
 - Parameter `presenceInfoRequest` is of type [PresenceInfoRequest](./packages/core/definitions/PresenceInfoRequest.ts)
@@ -4102,7 +4102,7 @@ User Permission|`ReadExtensions`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).profileImage().list(restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).profileImage().list();
 await rc.revoke();
 ```
 
@@ -4131,7 +4131,7 @@ User Permission|`EditUserInfo`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).profileImage().put(updateUserProfileImageRequest, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).profileImage().put(updateUserProfileImageRequest);
 await rc.revoke();
 ```
 - Parameter `updateUserProfileImageRequest` is of type [UpdateUserProfileImageRequest](./packages/core/definitions/UpdateUserProfileImageRequest.ts)
@@ -4156,7 +4156,7 @@ User Permission|`EditUserInfo`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).profileImage().post(createUserProfileImageRequest, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).profileImage().post(createUserProfileImageRequest);
 await rc.revoke();
 ```
 - Parameter `createUserProfileImageRequest` is of type [CreateUserProfileImageRequest](./packages/core/definitions/CreateUserProfileImageRequest.ts)
@@ -4181,7 +4181,7 @@ User Permission|`ReadExtensions`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).profileImage(scaleSize).get(restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).profileImage(scaleSize).get();
 await rc.revoke();
 ```
 
@@ -4210,7 +4210,7 @@ User Permission|`N/A`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).ringOut().post(makeRingOutRequest, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).ringOut().post(makeRingOutRequest);
 await rc.revoke();
 ```
 - Parameter `makeRingOutRequest` is of type [MakeRingOutRequest](./packages/core/definitions/MakeRingOutRequest.ts)
@@ -4235,7 +4235,7 @@ User Permission|`N/A`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).ringOut(ringoutId).get(restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).ringOut(ringoutId).get();
 await rc.revoke();
 ```
 
@@ -4260,7 +4260,7 @@ User Permission|`N/A`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).ringOut(ringoutId).delete(restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).ringOut(ringoutId).delete();
 await rc.revoke();
 ```
 
@@ -4285,7 +4285,7 @@ User Permission|`OutboundSMS`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).sms().post(createSmsMessage, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).sms().post(createSmsMessage);
 await rc.revoke();
 ```
 - Parameter `createSmsMessage` is of type [CreateSMSMessage](./packages/core/definitions/CreateSMSMessage.ts)
@@ -4310,7 +4310,7 @@ User Permission|`ReadPresenceStatus`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).unifiedPresence().get(restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).unifiedPresence().get();
 await rc.revoke();
 ```
 
@@ -4335,7 +4335,7 @@ User Permission|`EditPresenceStatus`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).unifiedPresence().patch(updateUnifiedPresence, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).unifiedPresence().patch(updateUnifiedPresence);
 await rc.revoke();
 ```
 - Parameter `updateUnifiedPresence` is of type [UpdateUnifiedPresence](./packages/core/definitions/UpdateUnifiedPresence.ts)
@@ -4360,7 +4360,7 @@ User Permission|`Meetings`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).videoConfiguration().get(restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).videoConfiguration().get();
 await rc.revoke();
 ```
 
@@ -4385,7 +4385,7 @@ User Permission|`N/A`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).videoConfiguration().put(userVideoConfiguration, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).videoConfiguration().put(userVideoConfiguration);
 await rc.revoke();
 ```
 - Parameter `userVideoConfiguration` is of type [UserVideoConfiguration](./packages/core/definitions/UserVideoConfiguration.ts)
@@ -4410,7 +4410,7 @@ User Permission|`ReadUserInfo`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).greeting().post(createCompanyGreetingRequest, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).greeting().post(createCompanyGreetingRequest);
 await rc.revoke();
 ```
 - Parameter `createCompanyGreetingRequest` is of type [CreateCompanyGreetingRequest](./packages/core/definitions/CreateCompanyGreetingRequest.ts)
@@ -4434,7 +4434,7 @@ User Permission|`AutoReceptionist`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).ivrMenus().post(ivrMenuInfo, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).ivrMenus().post(ivrMenuInfo);
 await rc.revoke();
 ```
 - Parameter `ivrMenuInfo` is of type [IVRMenuInfo](./packages/core/definitions/IVRMenuInfo.ts)
@@ -4458,7 +4458,7 @@ User Permission|`AutoReceptionist`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).ivrMenus(ivrMenuId).get(restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).ivrMenus(ivrMenuId).get();
 await rc.revoke();
 ```
 
@@ -4482,7 +4482,7 @@ User Permission|`AutoReceptionist`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).ivrMenus(ivrMenuId).put(ivrMenuInfo, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).ivrMenus(ivrMenuId).put(ivrMenuInfo);
 await rc.revoke();
 ```
 - Parameter `ivrMenuInfo` is of type [IVRMenuInfo](./packages/core/definitions/IVRMenuInfo.ts)
@@ -4506,7 +4506,7 @@ User Permission|`ReadCompanyGreetings`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).ivrPrompts().list(restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).ivrPrompts().list();
 await rc.revoke();
 ```
 
@@ -4530,7 +4530,7 @@ User Permission|`EditCompanyGreetings`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).ivrPrompts().post(createIvrPromptRequest, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).ivrPrompts().post(createIvrPromptRequest);
 await rc.revoke();
 ```
 - Parameter `createIvrPromptRequest` is of type [CreateIvrPromptRequest](./packages/core/definitions/CreateIvrPromptRequest.ts)
@@ -4554,7 +4554,7 @@ User Permission|`ReadCompanyGreetings`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).ivrPrompts(promptId).get(restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).ivrPrompts(promptId).get();
 await rc.revoke();
 ```
 
@@ -4578,7 +4578,7 @@ User Permission|`EditCompanyGreetings`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).ivrPrompts(promptId).put(updateIvrPromptRequest, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).ivrPrompts(promptId).put(updateIvrPromptRequest);
 await rc.revoke();
 ```
 - Parameter `updateIvrPromptRequest` is of type [UpdateIVRPromptRequest](./packages/core/definitions/UpdateIVRPromptRequest.ts)
@@ -4602,7 +4602,7 @@ User Permission|`EditCompanyGreetings`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).ivrPrompts(promptId).delete(restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).ivrPrompts(promptId).delete();
 await rc.revoke();
 ```
 
@@ -4626,7 +4626,7 @@ User Permission|`ReadCompanyGreetings`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).ivrPrompts(promptId).content().get(restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).ivrPrompts(promptId).content().get();
 await rc.revoke();
 ```
 
@@ -4654,7 +4654,7 @@ User Permission|`MeetingsRecordings`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).meetingRecordings().get(listAccountMeetingRecordingsParameters, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).meetingRecordings().get(listAccountMeetingRecordingsParameters);
 await rc.revoke();
 ```
 - Parameter `listAccountMeetingRecordingsParameters` is of type [ListAccountMeetingRecordingsParameters](./packages/core/definitions/ListAccountMeetingRecordingsParameters.ts)
@@ -4678,7 +4678,7 @@ User Permission|`Meetings`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).meeting().lockedSettings().get(restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).meeting().lockedSettings().get();
 await rc.revoke();
 ```
 
@@ -4702,7 +4702,7 @@ User Permission|`AccountAdministration`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).messageStoreConfiguration().get(restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).messageStoreConfiguration().get();
 await rc.revoke();
 ```
 
@@ -4726,7 +4726,7 @@ User Permission|`AccountAdministration`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).messageStoreConfiguration().put(messageStoreConfiguration, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).messageStoreConfiguration().put(messageStoreConfiguration);
 await rc.revoke();
 ```
 - Parameter `messageStoreConfiguration` is of type [MessageStoreConfiguration](./packages/core/definitions/MessageStoreConfiguration.ts)
@@ -4750,7 +4750,7 @@ User Permission|`Users`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).messageStoreReport().post(createMessageStoreReportRequest, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).messageStoreReport().post(createMessageStoreReportRequest);
 await rc.revoke();
 ```
 - Parameter `createMessageStoreReportRequest` is of type [CreateMessageStoreReportRequest](./packages/core/definitions/CreateMessageStoreReportRequest.ts)
@@ -4774,7 +4774,7 @@ User Permission|`Users`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).messageStoreReport(taskId).get(restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).messageStoreReport(taskId).get();
 await rc.revoke();
 ```
 
@@ -4798,7 +4798,7 @@ User Permission|`Users`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).messageStoreReport(taskId).archive().list(restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).messageStoreReport(taskId).archive().list();
 await rc.revoke();
 ```
 
@@ -4822,7 +4822,7 @@ User Permission|`Users`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).messageStoreReport(taskId).archive(archiveId).get(restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).messageStoreReport(taskId).archive(archiveId).get();
 await rc.revoke();
 ```
 
@@ -4850,7 +4850,7 @@ User Permission|`Groups`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).pagingOnlyGroups(pagingOnlyGroupId).bulkAssign().post(editPagingGroupRequest, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).pagingOnlyGroups(pagingOnlyGroupId).bulkAssign().post(editPagingGroupRequest);
 await rc.revoke();
 ```
 - Parameter `editPagingGroupRequest` is of type [EditPagingGroupRequest](./packages/core/definitions/EditPagingGroupRequest.ts)
@@ -4874,7 +4874,7 @@ User Permission|`ReadCompanyDevices`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).pagingOnlyGroups(pagingOnlyGroupId).devices().get(listPagingGroupDevicesParameters, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).pagingOnlyGroups(pagingOnlyGroupId).devices().get(listPagingGroupDevicesParameters);
 await rc.revoke();
 ```
 - Parameter `listPagingGroupDevicesParameters` is of type [ListPagingGroupDevicesParameters](./packages/core/definitions/ListPagingGroupDevicesParameters.ts)
@@ -4898,7 +4898,7 @@ User Permission|`ReadUserInfo`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).pagingOnlyGroups(pagingOnlyGroupId).users().get(listPagingGroupUsersParameters, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).pagingOnlyGroups(pagingOnlyGroupId).users().get(listPagingGroupUsersParameters);
 await rc.revoke();
 ```
 - Parameter `listPagingGroupUsersParameters` is of type [ListPagingGroupUsersParameters](./packages/core/definitions/ListPagingGroupUsersParameters.ts)
@@ -4922,7 +4922,7 @@ User Permission|`ReadCompanyPhoneNumbers`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).phoneNumber().list(listAccountPhoneNumbersParameters, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).phoneNumber().list(listAccountPhoneNumbersParameters);
 await rc.revoke();
 ```
 - Parameter `listAccountPhoneNumbersParameters` is of type [ListAccountPhoneNumbersParameters](./packages/core/definitions/ListAccountPhoneNumbersParameters.ts)
@@ -4946,7 +4946,7 @@ User Permission|`ReadCompanyPhoneNumbers`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).phoneNumber(phoneNumberId).get(restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).phoneNumber(phoneNumberId).get();
 await rc.revoke();
 ```
 
@@ -4970,7 +4970,7 @@ User Permission|`ReadPresenceStatus`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).presence().get(readAccountPresenceParameters, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).presence().get(readAccountPresenceParameters);
 await rc.revoke();
 ```
 - Parameter `readAccountPresenceParameters` is of type [ReadAccountPresenceParameters](./packages/core/definitions/ReadAccountPresenceParameters.ts)
@@ -4994,7 +4994,7 @@ User Permission|`ReadCallRecording`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).recording(recordingId).get(restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).recording(recordingId).get();
 await rc.revoke();
 ```
 
@@ -5018,7 +5018,7 @@ User Permission|`ReadCallRecording`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).recording(recordingId).content().get(restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).recording(recordingId).content().get();
 await rc.revoke();
 ```
 
@@ -5046,7 +5046,7 @@ User Permission|`ReadServicePlanInfo`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).serviceInfo().get(restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).serviceInfo().get();
 await rc.revoke();
 ```
 
@@ -5070,7 +5070,7 @@ User Permission|`N/A`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).telephony().callOut().post(makeCallOutRequest, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).telephony().callOut().post(makeCallOutRequest);
 await rc.revoke();
 ```
 - Parameter `makeCallOutRequest` is of type [MakeCallOutRequest](./packages/core/definitions/MakeCallOutRequest.ts)
@@ -5094,7 +5094,7 @@ User Permission|`N/A`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).telephony().conference().post(restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).telephony().conference().post();
 await rc.revoke();
 ```
 
@@ -5118,7 +5118,7 @@ User Permission|`N/A`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).telephony().sessions(telephonySessionId).get(readCallSessionStatusParameters, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).telephony().sessions(telephonySessionId).get(readCallSessionStatusParameters);
 await rc.revoke();
 ```
 - Parameter `readCallSessionStatusParameters` is of type [ReadCallSessionStatusParameters](./packages/core/definitions/ReadCallSessionStatusParameters.ts)
@@ -5142,7 +5142,7 @@ User Permission|`N/A`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).telephony().sessions(telephonySessionId).delete(restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).telephony().sessions(telephonySessionId).delete();
 await rc.revoke();
 ```
 
@@ -5166,7 +5166,7 @@ User Permission|`N/A`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).telephony().sessions(telephonySessionId).parties().bringIn().post(addPartyRequest, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).telephony().sessions(telephonySessionId).parties().bringIn().post(addPartyRequest);
 await rc.revoke();
 ```
 - Parameter `addPartyRequest` is of type [AddPartyRequest](./packages/core/definitions/AddPartyRequest.ts)
@@ -5190,7 +5190,7 @@ User Permission|`N/A`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).telephony().sessions(telephonySessionId).parties(partyId).get(restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).telephony().sessions(telephonySessionId).parties(partyId).get();
 await rc.revoke();
 ```
 
@@ -5214,7 +5214,7 @@ User Permission|`N/A`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).telephony().sessions(telephonySessionId).parties(partyId).delete(restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).telephony().sessions(telephonySessionId).parties(partyId).delete();
 await rc.revoke();
 ```
 
@@ -5238,7 +5238,7 @@ User Permission|`N/A`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).telephony().sessions(telephonySessionId).parties(partyId).patch(partyUpdateRequest, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).telephony().sessions(telephonySessionId).parties(partyId).patch(partyUpdateRequest);
 await rc.revoke();
 ```
 - Parameter `partyUpdateRequest` is of type [PartyUpdateRequest](./packages/core/definitions/PartyUpdateRequest.ts)
@@ -5262,7 +5262,7 @@ User Permission|`N/A`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).telephony().sessions(telephonySessionId).parties(partyId).answer().post(answerTarget, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).telephony().sessions(telephonySessionId).parties(partyId).answer().post(answerTarget);
 await rc.revoke();
 ```
 - Parameter `answerTarget` is of type [AnswerTarget](./packages/core/definitions/AnswerTarget.ts)
@@ -5286,7 +5286,7 @@ User Permission|`N/A`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).telephony().sessions(telephonySessionId).parties(partyId).bridge().post(bridgeTargetRequest, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).telephony().sessions(telephonySessionId).parties(partyId).bridge().post(bridgeTargetRequest);
 await rc.revoke();
 ```
 - Parameter `bridgeTargetRequest` is of type [BridgeTargetRequest](./packages/core/definitions/BridgeTargetRequest.ts)
@@ -5310,7 +5310,7 @@ User Permission|`N/A`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).telephony().sessions(telephonySessionId).parties(partyId).flip().post(callPartyFlip, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).telephony().sessions(telephonySessionId).parties(partyId).flip().post(callPartyFlip);
 await rc.revoke();
 ```
 - Parameter `callPartyFlip` is of type [CallPartyFlip](./packages/core/definitions/CallPartyFlip.ts)
@@ -5334,7 +5334,7 @@ User Permission|`N/A`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).telephony().sessions(telephonySessionId).parties(partyId).forward().post(forwardTarget, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).telephony().sessions(telephonySessionId).parties(partyId).forward().post(forwardTarget);
 await rc.revoke();
 ```
 - Parameter `forwardTarget` is of type [ForwardTarget](./packages/core/definitions/ForwardTarget.ts)
@@ -5358,7 +5358,7 @@ User Permission|`N/A`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).telephony().sessions(telephonySessionId).parties(partyId).hold().post(restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).telephony().sessions(telephonySessionId).parties(partyId).hold().post();
 await rc.revoke();
 ```
 
@@ -5382,7 +5382,7 @@ User Permission|`N/A`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).telephony().sessions(telephonySessionId).parties(partyId).ignore().post(ignoreRequestBody, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).telephony().sessions(telephonySessionId).parties(partyId).ignore().post(ignoreRequestBody);
 await rc.revoke();
 ```
 - Parameter `ignoreRequestBody` is of type [IgnoreRequestBody](./packages/core/definitions/IgnoreRequestBody.ts)
@@ -5406,7 +5406,7 @@ User Permission|`N/A`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).telephony().sessions(telephonySessionId).parties(partyId).park().post(restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).telephony().sessions(telephonySessionId).parties(partyId).park().post();
 await rc.revoke();
 ```
 
@@ -5430,7 +5430,7 @@ User Permission|`N/A`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).telephony().sessions(telephonySessionId).parties(partyId).pickup().post(pickupTarget, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).telephony().sessions(telephonySessionId).parties(partyId).pickup().post(pickupTarget);
 await rc.revoke();
 ```
 - Parameter `pickupTarget` is of type [PickupTarget](./packages/core/definitions/PickupTarget.ts)
@@ -5454,7 +5454,7 @@ User Permission|`N/A`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).telephony().sessions(telephonySessionId).parties(partyId).recordings().post(restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).telephony().sessions(telephonySessionId).parties(partyId).recordings().post();
 await rc.revoke();
 ```
 
@@ -5478,7 +5478,7 @@ User Permission|`N/A`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).telephony().sessions(telephonySessionId).parties(partyId).recordings(recordingId).patch(callRecordingUpdate, pauseResumeCallRecordingParameters, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).telephony().sessions(telephonySessionId).parties(partyId).recordings(recordingId).patch(callRecordingUpdate, pauseResumeCallRecordingParameters);
 await rc.revoke();
 ```
 - Parameter `callRecordingUpdate` is of type [CallRecordingUpdate](./packages/core/definitions/CallRecordingUpdate.ts)
@@ -5503,7 +5503,7 @@ User Permission|`N/A`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).telephony().sessions(telephonySessionId).parties(partyId).reject().post(restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).telephony().sessions(telephonySessionId).parties(partyId).reject().post();
 await rc.revoke();
 ```
 
@@ -5527,7 +5527,7 @@ User Permission|`N/A`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).telephony().sessions(telephonySessionId).parties(partyId).reply().post(callPartyReply, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).telephony().sessions(telephonySessionId).parties(partyId).reply().post(callPartyReply);
 await rc.revoke();
 ```
 - Parameter `callPartyReply` is of type [CallPartyReply](./packages/core/definitions/CallPartyReply.ts)
@@ -5551,7 +5551,7 @@ User Permission|`N/A`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).telephony().sessions(telephonySessionId).parties(partyId).supervise().post(partySuperviseRequest, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).telephony().sessions(telephonySessionId).parties(partyId).supervise().post(partySuperviseRequest);
 await rc.revoke();
 ```
 - Parameter `partySuperviseRequest` is of type [PartySuperviseRequest](./packages/core/definitions/PartySuperviseRequest.ts)
@@ -5575,7 +5575,7 @@ User Permission|`N/A`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).telephony().sessions(telephonySessionId).parties(partyId).transfer().post(transferTarget, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).telephony().sessions(telephonySessionId).parties(partyId).transfer().post(transferTarget);
 await rc.revoke();
 ```
 - Parameter `transferTarget` is of type [TransferTarget](./packages/core/definitions/TransferTarget.ts)
@@ -5599,7 +5599,7 @@ User Permission|`N/A`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).telephony().sessions(telephonySessionId).parties(partyId).unhold().post(restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).telephony().sessions(telephonySessionId).parties(partyId).unhold().post();
 await rc.revoke();
 ```
 
@@ -5623,7 +5623,7 @@ User Permission|`N/A`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).telephony().sessions(telephonySessionId).supervise().post(superviseCallSessionRequest, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).telephony().sessions(telephonySessionId).supervise().post(superviseCallSessionRequest);
 await rc.revoke();
 ```
 - Parameter `superviseCallSessionRequest` is of type [SuperviseCallSessionRequest](./packages/core/definitions/SuperviseCallSessionRequest.ts)
@@ -5647,7 +5647,7 @@ User Permission|`ReadCompanyInfo`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).templates().list(listUserTemplatesParameters, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).templates().list(listUserTemplatesParameters);
 await rc.revoke();
 ```
 - Parameter `listUserTemplatesParameters` is of type [ListUserTemplatesParameters](./packages/core/definitions/ListUserTemplatesParameters.ts)
@@ -5671,7 +5671,7 @@ User Permission|`ReadCompanyInfo`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).templates(templateId).get(restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).templates(templateId).get();
 await rc.revoke();
 ```
 
@@ -5695,7 +5695,7 @@ User Permission|`N/A`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).clientInfo().sipProvision().post(createSipRegistrationRequest, restRequestConfig);
+const result = await rc.restapi(apiVersion).clientInfo().sipProvision().post(createSipRegistrationRequest);
 await rc.revoke();
 ```
 - Parameter `createSipRegistrationRequest` is of type [CreateSipRegistrationRequest](./packages/core/definitions/CreateSipRegistrationRequest.ts)
@@ -5718,7 +5718,7 @@ User Permission|`N/A`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).dictionary().country().list(listCountriesParameters, restRequestConfig);
+const result = await rc.restapi(apiVersion).dictionary().country().list(listCountriesParameters);
 await rc.revoke();
 ```
 - Parameter `listCountriesParameters` is of type [ListCountriesParameters](./packages/core/definitions/ListCountriesParameters.ts)
@@ -5741,7 +5741,7 @@ User Permission|`N/A`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).dictionary().country(countryId).get(restRequestConfig);
+const result = await rc.restapi(apiVersion).dictionary().country(countryId).get();
 await rc.revoke();
 ```
 
@@ -5764,7 +5764,7 @@ User Permission|`N/A`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).dictionary().faxCoverPage().get(listFaxCoverPagesParameters, restRequestConfig);
+const result = await rc.restapi(apiVersion).dictionary().faxCoverPage().get(listFaxCoverPagesParameters);
 await rc.revoke();
 ```
 - Parameter `listFaxCoverPagesParameters` is of type [ListFaxCoverPagesParameters](./packages/core/definitions/ListFaxCoverPagesParameters.ts)
@@ -5787,7 +5787,7 @@ User Permission|`N/A`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).dictionary().greeting().list(listStandardGreetingsParameters, restRequestConfig);
+const result = await rc.restapi(apiVersion).dictionary().greeting().list(listStandardGreetingsParameters);
 await rc.revoke();
 ```
 - Parameter `listStandardGreetingsParameters` is of type [ListStandardGreetingsParameters](./packages/core/definitions/ListStandardGreetingsParameters.ts)
@@ -5810,7 +5810,7 @@ User Permission|`N/A`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).dictionary().greeting(greetingId).get(restRequestConfig);
+const result = await rc.restapi(apiVersion).dictionary().greeting(greetingId).get();
 await rc.revoke();
 ```
 
@@ -5833,7 +5833,7 @@ User Permission|`N/A`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).dictionary().language().list(restRequestConfig);
+const result = await rc.restapi(apiVersion).dictionary().language().list();
 await rc.revoke();
 ```
 
@@ -5856,7 +5856,7 @@ User Permission|`N/A`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).dictionary().language(languageId).get(restRequestConfig);
+const result = await rc.restapi(apiVersion).dictionary().language(languageId).get();
 await rc.revoke();
 ```
 
@@ -5879,7 +5879,7 @@ User Permission|`N/A`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).dictionary().location().get(listLocationsParameters, restRequestConfig);
+const result = await rc.restapi(apiVersion).dictionary().location().get(listLocationsParameters);
 await rc.revoke();
 ```
 - Parameter `listLocationsParameters` is of type [ListLocationsParameters](./packages/core/definitions/ListLocationsParameters.ts)
@@ -5902,7 +5902,7 @@ User Permission|`N/A`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).dictionary().state().list(listStatesParameters, restRequestConfig);
+const result = await rc.restapi(apiVersion).dictionary().state().list(listStatesParameters);
 await rc.revoke();
 ```
 - Parameter `listStatesParameters` is of type [ListStatesParameters](./packages/core/definitions/ListStatesParameters.ts)
@@ -5925,7 +5925,7 @@ User Permission|`N/A`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).dictionary().state(stateId).get(restRequestConfig);
+const result = await rc.restapi(apiVersion).dictionary().state(stateId).get();
 await rc.revoke();
 ```
 
@@ -5948,7 +5948,7 @@ User Permission|`N/A`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).dictionary().timezone().list(listTimezonesParameters, restRequestConfig);
+const result = await rc.restapi(apiVersion).dictionary().timezone().list(listTimezonesParameters);
 await rc.revoke();
 ```
 - Parameter `listTimezonesParameters` is of type [ListTimezonesParameters](./packages/core/definitions/ListTimezonesParameters.ts)
@@ -5971,7 +5971,7 @@ User Permission|`N/A`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).dictionary().timezone(timezoneId).get(readTimezoneParameters, restRequestConfig);
+const result = await rc.restapi(apiVersion).dictionary().timezone(timezoneId).get(readTimezoneParameters);
 await rc.revoke();
 ```
 - Parameter `readTimezoneParameters` is of type [ReadTimezoneParameters](./packages/core/definitions/ReadTimezoneParameters.ts)
@@ -5994,7 +5994,7 @@ User Permission|`Glip`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).glip().chats().list(listGlipChatsParameters, restRequestConfig);
+const result = await rc.restapi(apiVersion).glip().chats().list(listGlipChatsParameters);
 await rc.revoke();
 ```
 - Parameter `listGlipChatsParameters` is of type [ListGlipChatsParameters](./packages/core/definitions/ListGlipChatsParameters.ts)
@@ -6017,7 +6017,7 @@ User Permission|`Glip`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).glip().chats(chatId).get(restRequestConfig);
+const result = await rc.restapi(apiVersion).glip().chats(chatId).get();
 await rc.revoke();
 ```
 
@@ -6040,7 +6040,7 @@ User Permission|`Glip`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).glip().chats(chatId).favorite().post(restRequestConfig);
+const result = await rc.restapi(apiVersion).glip().chats(chatId).favorite().post();
 await rc.revoke();
 ```
 
@@ -6063,7 +6063,7 @@ User Permission|`Glip`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).glip().chats(chatId).notes().get(listChatNotesParameters, restRequestConfig);
+const result = await rc.restapi(apiVersion).glip().chats(chatId).notes().get(listChatNotesParameters);
 await rc.revoke();
 ```
 - Parameter `listChatNotesParameters` is of type [ListChatNotesParameters](./packages/core/definitions/ListChatNotesParameters.ts)
@@ -6086,7 +6086,7 @@ User Permission|`Glip`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).glip().chats(chatId).notes().post(glipNoteCreate, restRequestConfig);
+const result = await rc.restapi(apiVersion).glip().chats(chatId).notes().post(glipNoteCreate);
 await rc.revoke();
 ```
 - Parameter `glipNoteCreate` is of type [GlipNoteCreate](./packages/core/definitions/GlipNoteCreate.ts)
@@ -6109,7 +6109,7 @@ User Permission|`Glip`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).glip().chats(chatId).posts().list(readGlipPostsParameters, restRequestConfig);
+const result = await rc.restapi(apiVersion).glip().chats(chatId).posts().list(readGlipPostsParameters);
 await rc.revoke();
 ```
 - Parameter `readGlipPostsParameters` is of type [ReadGlipPostsParameters](./packages/core/definitions/ReadGlipPostsParameters.ts)
@@ -6132,7 +6132,7 @@ User Permission|`Glip`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).glip().chats(chatId).posts().post(glipPostPostBody, restRequestConfig);
+const result = await rc.restapi(apiVersion).glip().chats(chatId).posts().post(glipPostPostBody);
 await rc.revoke();
 ```
 - Parameter `glipPostPostBody` is of type [GlipPostPostBody](./packages/core/definitions/GlipPostPostBody.ts)
@@ -6155,7 +6155,7 @@ User Permission|`Glip`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).glip().chats(chatId).posts(postId).get(restRequestConfig);
+const result = await rc.restapi(apiVersion).glip().chats(chatId).posts(postId).get();
 await rc.revoke();
 ```
 
@@ -6178,7 +6178,7 @@ User Permission|`Glip`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).glip().chats(chatId).posts(postId).delete(restRequestConfig);
+const result = await rc.restapi(apiVersion).glip().chats(chatId).posts(postId).delete();
 await rc.revoke();
 ```
 
@@ -6201,7 +6201,7 @@ User Permission|`Glip`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).glip().chats(chatId).posts(postId).patch(glipPatchPostBody, restRequestConfig);
+const result = await rc.restapi(apiVersion).glip().chats(chatId).posts(postId).patch(glipPatchPostBody);
 await rc.revoke();
 ```
 - Parameter `glipPatchPostBody` is of type [GlipPatchPostBody](./packages/core/definitions/GlipPatchPostBody.ts)
@@ -6224,7 +6224,7 @@ User Permission|`N/A`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).glip().chats(chatId).read().post(restRequestConfig);
+const result = await rc.restapi(apiVersion).glip().chats(chatId).read().post();
 await rc.revoke();
 ```
 
@@ -6247,7 +6247,7 @@ User Permission|`N/A`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).glip().chats(chatId).tasks().get(listChatTasksParameters, restRequestConfig);
+const result = await rc.restapi(apiVersion).glip().chats(chatId).tasks().get(listChatTasksParameters);
 await rc.revoke();
 ```
 - Parameter `listChatTasksParameters` is of type [ListChatTasksParameters](./packages/core/definitions/ListChatTasksParameters.ts)
@@ -6270,7 +6270,7 @@ User Permission|`N/A`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).glip().chats(chatId).tasks().post(glipCreateTask, restRequestConfig);
+const result = await rc.restapi(apiVersion).glip().chats(chatId).tasks().post(glipCreateTask);
 await rc.revoke();
 ```
 - Parameter `glipCreateTask` is of type [GlipCreateTask](./packages/core/definitions/GlipCreateTask.ts)
@@ -6293,7 +6293,7 @@ User Permission|`Glip`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).glip().chats(chatId).unfavorite().post(restRequestConfig);
+const result = await rc.restapi(apiVersion).glip().chats(chatId).unfavorite().post();
 await rc.revoke();
 ```
 
@@ -6316,7 +6316,7 @@ User Permission|`N/A`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).glip().chats(chatId).unread().post(restRequestConfig);
+const result = await rc.restapi(apiVersion).glip().chats(chatId).unread().post();
 await rc.revoke();
 ```
 
@@ -6339,7 +6339,7 @@ User Permission|`Glip`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).glip().companies(companyId).get(restRequestConfig);
+const result = await rc.restapi(apiVersion).glip().companies(companyId).get();
 await rc.revoke();
 ```
 
@@ -6362,7 +6362,7 @@ User Permission|`Glip`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).glip().conversations().list(listGlipConversationsParameters, restRequestConfig);
+const result = await rc.restapi(apiVersion).glip().conversations().list(listGlipConversationsParameters);
 await rc.revoke();
 ```
 - Parameter `listGlipConversationsParameters` is of type [ListGlipConversationsParameters](./packages/core/definitions/ListGlipConversationsParameters.ts)
@@ -6385,7 +6385,7 @@ User Permission|`Glip`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).glip().conversations().post(createGlipConversationRequest, restRequestConfig);
+const result = await rc.restapi(apiVersion).glip().conversations().post(createGlipConversationRequest);
 await rc.revoke();
 ```
 - Parameter `createGlipConversationRequest` is of type [CreateGlipConversationRequest](./packages/core/definitions/CreateGlipConversationRequest.ts)
@@ -6408,7 +6408,7 @@ User Permission|`Glip`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).glip().conversations(chatId).get(restRequestConfig);
+const result = await rc.restapi(apiVersion).glip().conversations(chatId).get();
 await rc.revoke();
 ```
 
@@ -6431,7 +6431,7 @@ User Permission|`N/A`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).glip().dataExport().list(listDataExportTasksParameters, restRequestConfig);
+const result = await rc.restapi(apiVersion).glip().dataExport().list(listDataExportTasksParameters);
 await rc.revoke();
 ```
 - Parameter `listDataExportTasksParameters` is of type [ListDataExportTasksParameters](./packages/core/definitions/ListDataExportTasksParameters.ts)
@@ -6454,7 +6454,7 @@ User Permission|`N/A`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).glip().dataExport().post(createDataExportTaskRequest, restRequestConfig);
+const result = await rc.restapi(apiVersion).glip().dataExport().post(createDataExportTaskRequest);
 await rc.revoke();
 ```
 - Parameter `createDataExportTaskRequest` is of type [CreateDataExportTaskRequest](./packages/core/definitions/CreateDataExportTaskRequest.ts)
@@ -6477,7 +6477,7 @@ User Permission|`N/A`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).glip().dataExport(taskId).get(restRequestConfig);
+const result = await rc.restapi(apiVersion).glip().dataExport(taskId).get();
 await rc.revoke();
 ```
 
@@ -6500,7 +6500,7 @@ User Permission|`N/A`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).glip().dataExport(taskId).datasets(datasetId).get(restRequestConfig);
+const result = await rc.restapi(apiVersion).glip().dataExport(taskId).datasets(datasetId).get();
 await rc.revoke();
 ```
 
@@ -6527,7 +6527,7 @@ User Permission|`Glip`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).glip().events().list(readGlipEventsParameters, restRequestConfig);
+const result = await rc.restapi(apiVersion).glip().events().list(readGlipEventsParameters);
 await rc.revoke();
 ```
 - Parameter `readGlipEventsParameters` is of type [ReadGlipEventsParameters](./packages/core/definitions/ReadGlipEventsParameters.ts)
@@ -6550,7 +6550,7 @@ User Permission|`Glip`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).glip().events().post(glipEventCreate, restRequestConfig);
+const result = await rc.restapi(apiVersion).glip().events().post(glipEventCreate);
 await rc.revoke();
 ```
 - Parameter `glipEventCreate` is of type [GlipEventCreate](./packages/core/definitions/GlipEventCreate.ts)
@@ -6573,7 +6573,7 @@ User Permission|`Glip`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).glip().events(eventId).get(restRequestConfig);
+const result = await rc.restapi(apiVersion).glip().events(eventId).get();
 await rc.revoke();
 ```
 
@@ -6596,7 +6596,7 @@ User Permission|`Glip`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).glip().events(eventId).put(glipEventCreate, restRequestConfig);
+const result = await rc.restapi(apiVersion).glip().events(eventId).put(glipEventCreate);
 await rc.revoke();
 ```
 - Parameter `glipEventCreate` is of type [GlipEventCreate](./packages/core/definitions/GlipEventCreate.ts)
@@ -6619,7 +6619,7 @@ User Permission|`Glip`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).glip().events(eventId).delete(restRequestConfig);
+const result = await rc.restapi(apiVersion).glip().events(eventId).delete();
 await rc.revoke();
 ```
 
@@ -6642,7 +6642,7 @@ User Permission|`Glip`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).glip().everyone().get(restRequestConfig);
+const result = await rc.restapi(apiVersion).glip().everyone().get();
 await rc.revoke();
 ```
 
@@ -6665,7 +6665,7 @@ User Permission|`Glip`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).glip().everyone().patch(updateGlipEveryoneRequest, restRequestConfig);
+const result = await rc.restapi(apiVersion).glip().everyone().patch(updateGlipEveryoneRequest);
 await rc.revoke();
 ```
 - Parameter `updateGlipEveryoneRequest` is of type [UpdateGlipEveryoneRequest](./packages/core/definitions/UpdateGlipEveryoneRequest.ts)
@@ -6688,7 +6688,7 @@ User Permission|`Glip`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).glip().favorites().get(listFavoriteChatsParameters, restRequestConfig);
+const result = await rc.restapi(apiVersion).glip().favorites().get(listFavoriteChatsParameters);
 await rc.revoke();
 ```
 - Parameter `listFavoriteChatsParameters` is of type [ListFavoriteChatsParameters](./packages/core/definitions/ListFavoriteChatsParameters.ts)
@@ -6711,7 +6711,7 @@ User Permission|`Glip`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).glip().groups(groupId).events().get(restRequestConfig);
+const result = await rc.restapi(apiVersion).glip().groups(groupId).events().get();
 await rc.revoke();
 ```
 
@@ -6734,7 +6734,7 @@ User Permission|`Glip`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).glip().groups(groupId).events().post(glipEventCreate, restRequestConfig);
+const result = await rc.restapi(apiVersion).glip().groups(groupId).events().post(glipEventCreate);
 await rc.revoke();
 ```
 - Parameter `glipEventCreate` is of type [GlipEventCreate](./packages/core/definitions/GlipEventCreate.ts)
@@ -6757,7 +6757,7 @@ User Permission|`Glip`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).glip().groups(groupId).webhooks().get(restRequestConfig);
+const result = await rc.restapi(apiVersion).glip().groups(groupId).webhooks().get();
 await rc.revoke();
 ```
 
@@ -6780,7 +6780,7 @@ User Permission|`Glip`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).glip().groups(groupId).webhooks().post(restRequestConfig);
+const result = await rc.restapi(apiVersion).glip().groups(groupId).webhooks().post();
 await rc.revoke();
 ```
 
@@ -6803,7 +6803,7 @@ User Permission|`Glip`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).glip().notes(noteId).get(restRequestConfig);
+const result = await rc.restapi(apiVersion).glip().notes(noteId).get();
 await rc.revoke();
 ```
 
@@ -6826,7 +6826,7 @@ User Permission|`Glip`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).glip().notes(noteId).delete(restRequestConfig);
+const result = await rc.restapi(apiVersion).glip().notes(noteId).delete();
 await rc.revoke();
 ```
 
@@ -6849,7 +6849,7 @@ User Permission|`Glip`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).glip().notes(noteId).patch(glipNoteCreate, restRequestConfig);
+const result = await rc.restapi(apiVersion).glip().notes(noteId).patch(glipNoteCreate);
 await rc.revoke();
 ```
 - Parameter `glipNoteCreate` is of type [GlipNoteCreate](./packages/core/definitions/GlipNoteCreate.ts)
@@ -6872,7 +6872,7 @@ User Permission|`Glip`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).glip().notes(noteId).lock().post(restRequestConfig);
+const result = await rc.restapi(apiVersion).glip().notes(noteId).lock().post();
 await rc.revoke();
 ```
 
@@ -6895,7 +6895,7 @@ User Permission|`Glip`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).glip().notes(noteId).publish().post(restRequestConfig);
+const result = await rc.restapi(apiVersion).glip().notes(noteId).publish().post();
 await rc.revoke();
 ```
 
@@ -6918,7 +6918,7 @@ User Permission|`Glip`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).glip().notes(noteId).unlock().post(restRequestConfig);
+const result = await rc.restapi(apiVersion).glip().notes(noteId).unlock().post();
 await rc.revoke();
 ```
 
@@ -6941,7 +6941,7 @@ User Permission|`Glip`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).glip().persons(personId).get(restRequestConfig);
+const result = await rc.restapi(apiVersion).glip().persons(personId).get();
 await rc.revoke();
 ```
 
@@ -6964,7 +6964,7 @@ User Permission|`Glip`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).glip().preferences().get(restRequestConfig);
+const result = await rc.restapi(apiVersion).glip().preferences().get();
 await rc.revoke();
 ```
 
@@ -6987,7 +6987,7 @@ User Permission|`Glip`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).glip().recent().chats().get(listRecentChatsParameters, restRequestConfig);
+const result = await rc.restapi(apiVersion).glip().recent().chats().get(listRecentChatsParameters);
 await rc.revoke();
 ```
 - Parameter `listRecentChatsParameters` is of type [ListRecentChatsParameters](./packages/core/definitions/ListRecentChatsParameters.ts)
@@ -7010,7 +7010,7 @@ User Permission|`N/A`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).glip().tasks(taskId).get(restRequestConfig);
+const result = await rc.restapi(apiVersion).glip().tasks(taskId).get();
 await rc.revoke();
 ```
 
@@ -7033,7 +7033,7 @@ User Permission|`N/A`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).glip().tasks(taskId).delete(restRequestConfig);
+const result = await rc.restapi(apiVersion).glip().tasks(taskId).delete();
 await rc.revoke();
 ```
 
@@ -7056,7 +7056,7 @@ User Permission|`N/A`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).glip().tasks(taskId).patch(glipUpdateTask, restRequestConfig);
+const result = await rc.restapi(apiVersion).glip().tasks(taskId).patch(glipUpdateTask);
 await rc.revoke();
 ```
 - Parameter `glipUpdateTask` is of type [GlipUpdateTask](./packages/core/definitions/GlipUpdateTask.ts)
@@ -7079,7 +7079,7 @@ User Permission|`N/A`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).glip().tasks(taskId).complete().post(glipCompleteTask, restRequestConfig);
+const result = await rc.restapi(apiVersion).glip().tasks(taskId).complete().post(glipCompleteTask);
 await rc.revoke();
 ```
 - Parameter `glipCompleteTask` is of type [GlipCompleteTask](./packages/core/definitions/GlipCompleteTask.ts)
@@ -7102,7 +7102,7 @@ User Permission|`Glip`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).glip().teams().list(listGlipTeamsParameters, restRequestConfig);
+const result = await rc.restapi(apiVersion).glip().teams().list(listGlipTeamsParameters);
 await rc.revoke();
 ```
 - Parameter `listGlipTeamsParameters` is of type [ListGlipTeamsParameters](./packages/core/definitions/ListGlipTeamsParameters.ts)
@@ -7125,7 +7125,7 @@ User Permission|`Glip`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).glip().teams().post(glipPostTeamBody, restRequestConfig);
+const result = await rc.restapi(apiVersion).glip().teams().post(glipPostTeamBody);
 await rc.revoke();
 ```
 - Parameter `glipPostTeamBody` is of type [GlipPostTeamBody](./packages/core/definitions/GlipPostTeamBody.ts)
@@ -7148,7 +7148,7 @@ User Permission|`Glip`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).glip().teams(chatId).get(restRequestConfig);
+const result = await rc.restapi(apiVersion).glip().teams(chatId).get();
 await rc.revoke();
 ```
 
@@ -7171,7 +7171,7 @@ User Permission|`Glip`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).glip().teams(chatId).delete(restRequestConfig);
+const result = await rc.restapi(apiVersion).glip().teams(chatId).delete();
 await rc.revoke();
 ```
 
@@ -7194,7 +7194,7 @@ User Permission|`Glip`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).glip().teams(chatId).patch(glipPatchTeamBody, restRequestConfig);
+const result = await rc.restapi(apiVersion).glip().teams(chatId).patch(glipPatchTeamBody);
 await rc.revoke();
 ```
 - Parameter `glipPatchTeamBody` is of type [GlipPatchTeamBody](./packages/core/definitions/GlipPatchTeamBody.ts)
@@ -7217,7 +7217,7 @@ User Permission|`Glip`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).glip().teams(chatId).add().post(glipPostMembersListBody, restRequestConfig);
+const result = await rc.restapi(apiVersion).glip().teams(chatId).add().post(glipPostMembersListBody);
 await rc.revoke();
 ```
 - Parameter `glipPostMembersListBody` is of type [GlipPostMembersListBody](./packages/core/definitions/GlipPostMembersListBody.ts)
@@ -7240,7 +7240,7 @@ User Permission|`Glip`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).glip().teams(chatId).archive().post(restRequestConfig);
+const result = await rc.restapi(apiVersion).glip().teams(chatId).archive().post();
 await rc.revoke();
 ```
 
@@ -7263,7 +7263,7 @@ User Permission|`Glip`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).glip().teams(chatId).join().post(restRequestConfig);
+const result = await rc.restapi(apiVersion).glip().teams(chatId).join().post();
 await rc.revoke();
 ```
 
@@ -7286,7 +7286,7 @@ User Permission|`Glip`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).glip().teams(chatId).leave().post(restRequestConfig);
+const result = await rc.restapi(apiVersion).glip().teams(chatId).leave().post();
 await rc.revoke();
 ```
 
@@ -7309,7 +7309,7 @@ User Permission|`Glip`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).glip().teams(chatId).remove().post(glipPostMembersIdsListBody, restRequestConfig);
+const result = await rc.restapi(apiVersion).glip().teams(chatId).remove().post(glipPostMembersIdsListBody);
 await rc.revoke();
 ```
 - Parameter `glipPostMembersIdsListBody` is of type [GlipPostMembersIdsListBody](./packages/core/definitions/GlipPostMembersIdsListBody.ts)
@@ -7332,7 +7332,7 @@ User Permission|`Glip`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).glip().teams(chatId).unarchive().post(restRequestConfig);
+const result = await rc.restapi(apiVersion).glip().teams(chatId).unarchive().post();
 await rc.revoke();
 ```
 
@@ -7355,7 +7355,7 @@ User Permission|`Glip`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).glip().webhooks().list(restRequestConfig);
+const result = await rc.restapi(apiVersion).glip().webhooks().list();
 await rc.revoke();
 ```
 
@@ -7378,7 +7378,7 @@ User Permission|`Glip`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).glip().webhooks(webhookId).get(restRequestConfig);
+const result = await rc.restapi(apiVersion).glip().webhooks(webhookId).get();
 await rc.revoke();
 ```
 
@@ -7401,7 +7401,7 @@ User Permission|`Glip`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).glip().webhooks(webhookId).delete(restRequestConfig);
+const result = await rc.restapi(apiVersion).glip().webhooks(webhookId).delete();
 await rc.revoke();
 ```
 
@@ -7424,7 +7424,7 @@ User Permission|`Glip`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).glip().webhooks(webhookId).activate().post(restRequestConfig);
+const result = await rc.restapi(apiVersion).glip().webhooks(webhookId).activate().post();
 await rc.revoke();
 ```
 
@@ -7447,7 +7447,7 @@ User Permission|`Glip`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).glip().webhooks(webhookId).suspend().post(restRequestConfig);
+const result = await rc.restapi(apiVersion).glip().webhooks(webhookId).suspend().post();
 await rc.revoke();
 ```
 
@@ -7470,7 +7470,7 @@ User Permission|`N/A`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).numberParser().parse().post(parsePhoneNumberRequest, parsePhoneNumberParameters, restRequestConfig);
+const result = await rc.restapi(apiVersion).numberParser().parse().post(parsePhoneNumberRequest, parsePhoneNumberParameters);
 await rc.revoke();
 ```
 - Parameter `parsePhoneNumberRequest` is of type [ParsePhoneNumberRequest](./packages/core/definitions/ParsePhoneNumberRequest.ts)
@@ -7494,7 +7494,7 @@ User Permission|`N/A`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).subscription().list(restRequestConfig);
+const result = await rc.restapi(apiVersion).subscription().list();
 await rc.revoke();
 ```
 
@@ -7517,7 +7517,7 @@ User Permission|`N/A`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).subscription().post(createSubscriptionRequest, restRequestConfig);
+const result = await rc.restapi(apiVersion).subscription().post(createSubscriptionRequest);
 await rc.revoke();
 ```
 - Parameter `createSubscriptionRequest` is of type [CreateSubscriptionRequest](./packages/core/definitions/CreateSubscriptionRequest.ts)
@@ -7540,7 +7540,7 @@ User Permission|`N/A`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).subscription(subscriptionId).get(restRequestConfig);
+const result = await rc.restapi(apiVersion).subscription(subscriptionId).get();
 await rc.revoke();
 ```
 
@@ -7563,7 +7563,7 @@ User Permission|`N/A`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).subscription(subscriptionId).put(modifySubscriptionRequest, restRequestConfig);
+const result = await rc.restapi(apiVersion).subscription(subscriptionId).put(modifySubscriptionRequest);
 await rc.revoke();
 ```
 - Parameter `modifySubscriptionRequest` is of type [ModifySubscriptionRequest](./packages/core/definitions/ModifySubscriptionRequest.ts)
@@ -7586,7 +7586,7 @@ User Permission|`N/A`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).subscription(subscriptionId).delete(restRequestConfig);
+const result = await rc.restapi(apiVersion).subscription(subscriptionId).delete();
 await rc.revoke();
 ```
 
@@ -7609,7 +7609,7 @@ User Permission|`N/A`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).subscription(subscriptionId).renew().post(restRequestConfig);
+const result = await rc.restapi(apiVersion).subscription(subscriptionId).renew().post();
 await rc.revoke();
 ```
 
@@ -7632,7 +7632,7 @@ User Permission|`N/A`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.scim(version).serviceProviderConfig().get(restRequestConfig);
+const result = await rc.scim(version).serviceProviderConfig().get();
 await rc.revoke();
 ```
 
@@ -7655,7 +7655,7 @@ User Permission|`N/A`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.scim(version).users().list(searchViaGet2Parameters, restRequestConfig);
+const result = await rc.scim(version).users().list(searchViaGet2Parameters);
 await rc.revoke();
 ```
 - Parameter `searchViaGet2Parameters` is of type [SearchViaGet2Parameters](./packages/core/definitions/SearchViaGet2Parameters.ts)
@@ -7678,7 +7678,7 @@ User Permission|`N/A`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.scim(version).users().post(createUser, restRequestConfig);
+const result = await rc.scim(version).users().post(createUser);
 await rc.revoke();
 ```
 - Parameter `createUser` is of type [CreateUser](./packages/core/definitions/CreateUser.ts)
@@ -7701,7 +7701,7 @@ User Permission|`N/A`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.scim(version).users().dotSearch().post(searchRequest, restRequestConfig);
+const result = await rc.scim(version).users().dotSearch().post(searchRequest);
 await rc.revoke();
 ```
 - Parameter `searchRequest` is of type [SearchRequest](./packages/core/definitions/SearchRequest.ts)
@@ -7724,7 +7724,7 @@ User Permission|`N/A`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.scim(version).users(id).get(restRequestConfig);
+const result = await rc.scim(version).users(id).get();
 await rc.revoke();
 ```
 
@@ -7747,7 +7747,7 @@ User Permission|`N/A`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.scim(version).users(id).put(user, restRequestConfig);
+const result = await rc.scim(version).users(id).put(user);
 await rc.revoke();
 ```
 - Parameter `user` is of type [User](./packages/core/definitions/User.ts)
@@ -7770,7 +7770,7 @@ User Permission|`N/A`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.scim(version).users(id).delete(restRequestConfig);
+const result = await rc.scim(version).users(id).delete();
 await rc.revoke();
 ```
 
@@ -7793,7 +7793,7 @@ User Permission|`N/A`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.scim(version).users(id).patch(userPatch, restRequestConfig);
+const result = await rc.scim(version).users(id).patch(userPatch);
 await rc.revoke();
 ```
 - Parameter `userPatch` is of type [UserPatch](./packages/core/definitions/UserPatch.ts)
@@ -7816,7 +7816,7 @@ User Permission|`N/A`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.scim(version).health().get(restRequestConfig);
+const result = await rc.scim(version).health().get();
 await rc.revoke();
 ```
 
