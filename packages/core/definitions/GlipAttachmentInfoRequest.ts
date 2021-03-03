@@ -7,7 +7,7 @@ class GlipAttachmentInfoRequest {
   /**
    * Type of an attachment
    */
-  type?: 'Event' | 'File' | 'Note' | 'Task';
+  type?: 'File' | 'Note' | 'Event' | 'Card';
 }
 
 export default GlipAttachmentInfoRequest;

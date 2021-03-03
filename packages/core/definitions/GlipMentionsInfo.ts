@@ -5,7 +5,7 @@ class GlipMentionsInfo {
   id?: string;
 
   /**
-   * Type of mentions
+   * Type of mention
    */
   type?:
     | 'Person'

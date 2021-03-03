@@ -26,6 +26,7 @@ class ListAccountPhoneNumbersParameters {
     | 'ConferencingNumber'
     | 'MeetingsNumber'
     | 'BusinessMobileNumber'
+    | 'ExternalMobileNumber'
   )[];
 
   /**

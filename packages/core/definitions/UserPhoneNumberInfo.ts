@@ -44,7 +44,8 @@ class UserPhoneNumberInfo {
     | 'External'
     | 'TollFree'
     | 'Local'
-    | 'BusinessMobileNumberProvider';
+    | 'BusinessMobileNumberProvider'
+    | 'ExternalNumberProvider';
 
   /**
    * Phone number
@@ -75,7 +76,8 @@ class UserPhoneNumberInfo {
     | 'ContactCenterNumber'
     | 'ConferencingNumber'
     | 'NumberPool'
-    | 'BusinessMobileNumber';
+    | 'BusinessMobileNumber'
+    | 'ExternalMobileNumber';
 
   /**
    * List of features of a phone number

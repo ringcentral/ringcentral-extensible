@@ -25,7 +25,7 @@ class SearchDirectoryEntriesRequest {
   showFederated?: boolean;
 
   /**
-   * Type of extension to filter the contacts
+   * Type of extension to filter the contacts. Please note that legacy 'Department' extension type corresponds to 'Call Queue' extensions in modern RingCentral product terminology
    */
   extensionType?:
     | 'User'
@@ -41,7 +41,8 @@ class SearchDirectoryEntriesRequest {
     | 'Site'
     | 'Bot'
     | 'ProxyAdmin'
-    | 'DelegatedLinesGroup';
+    | 'DelegatedLinesGroup'
+    | 'GroupCallPickup';
 
   /**
    * Sorting settings

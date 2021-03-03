@@ -5,7 +5,6 @@ import {
   SubscriptionInfo,
   CreateSubscriptionRequest,
   ModifySubscriptionRequest,
-  UpdateSubscriptionParameters,
 } from '../../../definitions';
 import Parent from '..';
 import RingCentral from '../../..';
@@ -88,7 +87,6 @@ class Index {
    */
   async put(
     modifySubscriptionRequest: ModifySubscriptionRequest,
-    queryParams?: UpdateSubscriptionParameters,
     config?: RestRequestConfig
   ): Promise<SubscriptionInfo> {
     if (this.subscriptionId === null) {
@@ -98,7 +96,7 @@ class Index {
     const r = await this.rc.put<SubscriptionInfo>(
       this.path(),
       modifySubscriptionRequest,
-      queryParams,
+      undefined,
       config
     );
     return r.data;

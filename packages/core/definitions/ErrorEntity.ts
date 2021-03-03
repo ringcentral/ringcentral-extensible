@@ -8,6 +8,16 @@ class ErrorEntity {
    * Error message
    */
   message?: string;
+
+  /**
+   * Name of invalid parameter
+   */
+  parameterName?: string;
+
+  /**
+   * Value of invalid parameter
+   */
+  parameterValue?: string;
 }
 
 export default ErrorEntity;

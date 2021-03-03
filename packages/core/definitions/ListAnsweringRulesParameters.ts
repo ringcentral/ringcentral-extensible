@@ -1,5 +1,10 @@
 class ListAnsweringRulesParameters {
   /**
+   * Filters custom call handling rules of the extension
+   */
+  type?: 'Custom';
+
+  /**
    * Default: Simple
    */
   view?: 'Detailed' | 'Simple';

@@ -16,7 +16,7 @@ class ExtensionInfo {
   name?: string;
 
   /**
-   * Number of department extension
+   * Number of extension
    */
   extensionNumber?: string;
 

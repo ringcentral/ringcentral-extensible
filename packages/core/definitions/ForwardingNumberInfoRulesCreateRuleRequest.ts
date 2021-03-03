@@ -14,7 +14,8 @@ class ForwardingNumberInfoRulesCreateRuleRequest {
     | 'PhoneLine'
     | 'Outage'
     | 'Other'
-    | 'BusinessMobilePhone';
+    | 'BusinessMobilePhone'
+    | 'ExternalCarrier';
 
   /**
    * Canonical URI of a forwarding/call flip phone number
@@ -29,7 +30,7 @@ class ForwardingNumberInfoRulesCreateRuleRequest {
   /**
    * Forwarding/Call flip number title
    */
-  label?: 'Business Mobile Phone';
+  label?: string;
 }
 
 export default ForwardingNumberInfoRulesCreateRuleRequest;

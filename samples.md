@@ -3484,6 +3484,31 @@ await rc.revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Meeting-Management-createMeeting) in API Explorer.
 
 
+## Upload User Meeting Profile Image
+
+Name|Value
+-|-
+HTTP Method|`POST`
+Endpoint|`/restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting-configuration/profile-image`
+Rate Limit Group|`Light`
+App Permission|`N/A`
+User Permission|`N/A`
+
+```ts
+const rc = new RingCentral({ clientId, clientSecret, serverURL });
+await rc.authorize({ username, extension, password });
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).meetingConfiguration().profileImage().post(createUserMeetingProfileImageRequest, restRequestConfig);
+await rc.revoke();
+```
+- Parameter `createUserMeetingProfileImageRequest` is of type [CreateUserMeetingProfileImageRequest](./packages/core/definitions/CreateUserMeetingProfileImageRequest.ts)
+- `result` is an empty string
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- Parameter `extensionId` is optional with default value `~`
+
+[Try it out](https://developer.ringcentral.com/api-reference#Meeting-Configuration-createUserMeetingProfileImage) in API Explorer.
+
+
 ## Get User Meeting Recordings List
 
 Name|Value
@@ -4052,10 +4077,10 @@ User Permission|`N/A`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).presence().put(presenceInfoResource, restRequestConfig);
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).presence().put(presenceInfoRequest, restRequestConfig);
 await rc.revoke();
 ```
-- Parameter `presenceInfoResource` is of type [PresenceInfoResource](./packages/core/definitions/PresenceInfoResource.ts)
+- Parameter `presenceInfoRequest` is of type [PresenceInfoRequest](./packages/core/definitions/PresenceInfoRequest.ts)
 - `result` is of type [PresenceInfoResponse](./packages/core/definitions/PresenceInfoResponse.ts)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
@@ -7538,11 +7563,10 @@ User Permission|`N/A`
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ username, extension, password });
-const result = await rc.restapi(apiVersion).subscription(subscriptionId).put(modifySubscriptionRequest, updateSubscriptionParameters, restRequestConfig);
+const result = await rc.restapi(apiVersion).subscription(subscriptionId).put(modifySubscriptionRequest, restRequestConfig);
 await rc.revoke();
 ```
 - Parameter `modifySubscriptionRequest` is of type [ModifySubscriptionRequest](./packages/core/definitions/ModifySubscriptionRequest.ts)
-- Parameter `updateSubscriptionParameters` is of type [UpdateSubscriptionParameters](./packages/core/definitions/UpdateSubscriptionParameters.ts)
 - `result` is of type [SubscriptionInfo](./packages/core/definitions/SubscriptionInfo.ts)
 - Parameter `apiVersion` is optional with default value `v1.0`
 

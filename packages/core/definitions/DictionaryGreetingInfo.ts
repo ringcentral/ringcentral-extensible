@@ -17,7 +17,7 @@ class DictionaryGreetingInfo {
   name?: string;
 
   /**
-   * Usage type of a greeting, specifying if the greeting is applied for user extension or department extension.
+   * Usage type of a greeting, specifying if the greeting is applied for user extension or department (call queue) extension.
    */
   usageType?:
     | 'UserExtensionAnsweringRule'

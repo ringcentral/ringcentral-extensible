@@ -17,6 +17,11 @@ class GetMessageInfoResponse {
   uri?: string;
 
   /**
+   * Internal identifier of an extension
+   */
+  extensionId?: string;
+
+  /**
    * The list of message attachments
    */
   attachments?: MessageAttachmentInfo[];

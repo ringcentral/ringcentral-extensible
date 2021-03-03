@@ -214,6 +214,7 @@ export {default as CreateSipRegistrationResponse} from './CreateSipRegistrationR
 export {default as CreateSubscriptionRequest} from './CreateSubscriptionRequest';
 export {default as CreateSwitchInfo} from './CreateSwitchInfo';
 export {default as CreateUser} from './CreateUser';
+export {default as CreateUserMeetingProfileImageRequest} from './CreateUserMeetingProfileImageRequest';
 export {default as CreateUserProfileImageRequest} from './CreateUserProfileImageRequest';
 export {default as CreateWirelessPoint} from './CreateWirelessPoint';
 export {default as CreatorInfo} from './CreatorInfo';
@@ -364,6 +365,7 @@ export {default as GetExtensionDevicesResponse} from './GetExtensionDevicesRespo
 export {default as GetExtensionForwardingNumberListResponse} from './GetExtensionForwardingNumberListResponse';
 export {default as GetExtensionGrantListResponse} from './GetExtensionGrantListResponse';
 export {default as GetExtensionInfoResponse} from './GetExtensionInfoResponse';
+export {default as GetExtensionListInfoResponse} from './GetExtensionListInfoResponse';
 export {default as GetExtensionListResponse} from './GetExtensionListResponse';
 export {default as GetExtensionPhoneNumbersResponse} from './GetExtensionPhoneNumbersResponse';
 export {default as GetGlipNoteInfo} from './GetGlipNoteInfo';
@@ -628,7 +630,7 @@ export {default as PhoneNumberInfoNumberParser} from './PhoneNumberInfoNumberPar
 export {default as PhoneNumberResource} from './PhoneNumberResource';
 export {default as Photo} from './Photo';
 export {default as PickupTarget} from './PickupTarget';
-export {default as PresenceInfoResource} from './PresenceInfoResource';
+export {default as PresenceInfoRequest} from './PresenceInfoRequest';
 export {default as PresenceInfoResponse} from './PresenceInfoResponse';
 export {default as PresenceNavigationInfo} from './PresenceNavigationInfo';
 export {default as PresenceNavigationInfoURI} from './PresenceNavigationInfoURI';
@@ -739,8 +741,10 @@ export {default as TaskAttachment} from './TaskAttachment';
 export {default as TaskResultInfo} from './TaskResultInfo';
 export {default as TaskResultRecord} from './TaskResultRecord';
 export {default as TaskResultRecordErrorsInfo} from './TaskResultRecordErrorsInfo';
+export {default as TelephonyLockedSettings} from './TelephonyLockedSettings';
 export {default as TelephonySessionsEventBody} from './TelephonySessionsEventBody';
 export {default as TelephonySessionsEventPartyInfo} from './TelephonySessionsEventPartyInfo';
+export {default as TelephonyUserMeetingSettings} from './TelephonyUserMeetingSettings';
 export {default as TemplateInfo} from './TemplateInfo';
 export {default as TemporaryNumberInfo} from './TemporaryNumberInfo';
 export {default as TimeInterval} from './TimeInterval';
@@ -772,7 +776,6 @@ export {default as UpdateMultipleSwitchesResponse} from './UpdateMultipleSwitche
 export {default as UpdateMultipleWirelessPointsRequest} from './UpdateMultipleWirelessPointsRequest';
 export {default as UpdateMultipleWirelessPointsResponse} from './UpdateMultipleWirelessPointsResponse';
 export {default as UpdateNetworkRequest} from './UpdateNetworkRequest';
-export {default as UpdateSubscriptionParameters} from './UpdateSubscriptionParameters';
 export {default as UpdateSwitchInfo} from './UpdateSwitchInfo';
 export {default as UpdateUnifiedPresence} from './UpdateUnifiedPresence';
 export {default as UpdateUnifiedPresenceGlip} from './UpdateUnifiedPresenceGlip';

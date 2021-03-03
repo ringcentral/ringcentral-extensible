@@ -1,5 +1,5 @@
 import {
-  GetExtensionInfoResponse,
+  GetExtensionListInfoResponse,
   ProvisioningNavigationInfo,
   ProvisioningPagingInfo,
 } from './index';
@@ -14,7 +14,7 @@ class GetExtensionListResponse {
    * List of extensions with extension information
    * Required
    */
-  records?: GetExtensionInfoResponse[];
+  records?: GetExtensionListInfoResponse[];
 
   /**
    */

@@ -7,7 +7,7 @@ class UpdateForwardingNumberRequest {
   /**
    * Forwarding/Call flip number title
    */
-  label?: 'Business Mobile Phone';
+  label?: string;
 
   /**
    * Number assigned to the call flip phone number, corresponds to the shortcut dial number
@@ -24,7 +24,8 @@ class UpdateForwardingNumberRequest {
     | 'PhoneLine'
     | 'Outage'
     | 'Other'
-    | 'BusinessMobilePhone';
+    | 'BusinessMobilePhone'
+    | 'ExternalCarrier';
 }
 
 export default UpdateForwardingNumberRequest;

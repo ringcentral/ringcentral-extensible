@@ -13,7 +13,7 @@ class BillingPlanInfo {
   /**
    * Duration period
    */
-  durationUnit?: 'Month' | 'Day';
+  durationUnit?: 'Day' | 'Month' | 'Year';
 
   /**
    * Number of duration units

@@ -38,12 +38,12 @@ class GetExtensionInfoResponse {
   customFields?: CustomFieldInfo[];
 
   /**
-   * Information on department extension(s), to which the requested extension belongs. Returned only for user extensions, members of department, requested by single extensionId
+   * Information on department extension(s), to which the requested extension belongs. Returned only for user extensions, members of department, requested by single extensionId. Please note that legacy 'Department' extension type corresponds to 'Call Queue' extensions in modern RingCentral product terminology
    */
   departments?: DepartmentInfo[];
 
   /**
-   * Number of department extension
+   * Number of extension
    */
   extensionNumber?: string;
 
@@ -103,7 +103,7 @@ class GetExtensionInfoResponse {
   statusInfo?: ExtensionStatusInfo;
 
   /**
-   * Extension type
+   * Extension type. Please note that legacy 'Department' extension type corresponds to 'Call Queue' extensions in modern RingCentral product terminology
    */
   type?:
     | 'User'
@@ -123,7 +123,8 @@ class GetExtensionInfoResponse {
     | 'Limited'
     | 'Site'
     | 'ProxyAdmin'
-    | 'DelegatedLinesGroup';
+    | 'DelegatedLinesGroup'
+    | 'GroupCallPickup';
 
   /**
    */

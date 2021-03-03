@@ -1,6 +1,6 @@
 class MobilePickupData {
   /**
-   * The list of extension IDs, configured to pick a call from Desktop/Mobile applications
+   * List of extension IDs, configured to pick up a call from Desktop/Mobile applications
    */
   ccMailboxes?: string[];
 

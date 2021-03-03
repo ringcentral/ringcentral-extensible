@@ -1,6 +1,4 @@
-import {ActiveCallInfo} from './index';
-
-class PresenceInfoResource {
+class PresenceInfoRequest {
   /**
    */
   userStatus?: 'Offline' | 'Busy' | 'Available';
@@ -29,10 +27,6 @@ class PresenceInfoResource {
   /**
    */
   pickUpCallsOnHold?: boolean;
-
-  /**
-   */
-  activeCalls?: ActiveCallInfo[];
 }
 
-export default PresenceInfoResource;
+export default PresenceInfoRequest;

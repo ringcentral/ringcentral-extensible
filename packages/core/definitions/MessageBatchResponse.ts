@@ -29,7 +29,7 @@ class MessageBatchResponse {
   /**
    * Current status of a message batch
    */
-  status?: 'Processing' | 'Completed';
+  status?: 'Processing' | 'Sent' | 'Completed';
 
   /**
    * The time at which the batch was created

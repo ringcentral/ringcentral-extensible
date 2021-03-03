@@ -23,6 +23,16 @@ class AutomaticRecordingResource {
    * Total amount of extension that are used in call recordings
    */
   extensionCount?: number;
+
+  /**
+   * Retention period of a call recording, the default value is 90 days
+   */
+  retentionPeriod?: number;
+
+  /**
+   * Max number of automatic call recordings per account, the default value is 100 000
+   */
+  maxNumberLimit?: number;
 }
 
 export default AutomaticRecordingResource;

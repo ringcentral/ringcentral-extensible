@@ -13,7 +13,7 @@ class UserPhoneNumberExtensionInfo {
   uri?: string;
 
   /**
-   * Number of department extension
+   * Number of extension
    */
   extensionNumber?: string;
 
@@ -23,7 +23,7 @@ class UserPhoneNumberExtensionInfo {
   partnerId?: string;
 
   /**
-   * Extension type
+   * Extension type. Please note that legacy 'Department' extension type corresponds to 'Call Queue' extensions in modern RingCentral product terminology
    */
   type?:
     | 'User'

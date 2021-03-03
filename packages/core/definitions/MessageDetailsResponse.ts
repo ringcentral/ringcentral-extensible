@@ -51,17 +51,17 @@ class MessageDetailsResponse {
   cost?: number;
 
   /**
-   * The batchId in which the message was submitted
+   * The batch in which the message was submitted
    */
   batchId?: string;
 
   /**
-   * Indicates whether the message was outbound or inbound
+   * Indicates whether the message is outbound or inbound
    */
   direction?: 'Inbound' | 'Outbound';
 
   /**
-   * The RC error code of the message sending failure reason
+   * RC error code of the message sending failure reason
    */
   errorCode?: string;
 }

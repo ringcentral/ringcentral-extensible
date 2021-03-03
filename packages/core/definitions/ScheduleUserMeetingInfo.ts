@@ -1,5 +1,10 @@
-// Scheduling meeting settings locked on account level || Settings defining how to schedule user meetings
+// Scheduling meeting settings locked on account level || Settings defining how to schedule user meetingsxs
 class ScheduleUserMeetingInfo {
+  /**
+   * If true, then only signed-in users can join this meeting
+   */
+  enforceLogin?: boolean;
+
   /**
    * Starting meetings with host video on/off (true/false)
    */
@@ -13,7 +18,7 @@ class ScheduleUserMeetingInfo {
   /**
    * Determines how participants can join the audio channel of a meeting
    */
-  audioOptions?: ('Phone' | 'ComputerAudio')[];
+  audioOptions?: ('Phone' | 'ComputerAudio' | 'ThirdParty')[];
 
   /**
    * Allows participants to join the meeting before the host arrives

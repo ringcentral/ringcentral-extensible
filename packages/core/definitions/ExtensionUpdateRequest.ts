@@ -66,7 +66,7 @@ class ExtensionUpdateRequest {
 
   /**
    */
-  transition?: UserTransitionInfo[];
+  transition?: UserTransitionInfo;
 
   /**
    */
@@ -82,7 +82,7 @@ class ExtensionUpdateRequest {
   site?: AutomaticLocationUpdatesSiteInfo;
 
   /**
-   * Extension type
+   * Extension type. Please note that legacy 'Department' extension type corresponds to 'Call Queue' extensions in modern RingCentral product terminology
    */
   type?:
     | 'User'
@@ -97,7 +97,8 @@ class ExtensionUpdateRequest {
     | 'IvrMenu'
     | 'ApplicationExtension'
     | 'ParkLocation'
-    | 'DelegatedLinesGroup';
+    | 'DelegatedLinesGroup'
+    | 'GroupCallPickup';
 
   /**
    * List of non-RC internal identifiers assigned to an extension

@@ -15,6 +15,10 @@ class TimezoneResource {
   /**
    */
   description?: string;
+
+  /**
+   */
+  bias?: string;
 }
 
 export default TimezoneResource;

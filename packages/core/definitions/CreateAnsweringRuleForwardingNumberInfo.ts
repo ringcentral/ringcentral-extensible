@@ -17,7 +17,7 @@ class CreateAnsweringRuleForwardingNumberInfo {
   /**
    * Forwarding/Call flip number title
    */
-  label?: 'Business Mobile Phone';
+  label?: string;
 
   /**
    * Type of a forwarding number
@@ -29,7 +29,8 @@ class CreateAnsweringRuleForwardingNumberInfo {
     | 'PhoneLine'
     | 'Outage'
     | 'Other'
-    | 'BusinessMobilePhone';
+    | 'BusinessMobilePhone'
+    | 'ExternalCarrier';
 }
 
 export default CreateAnsweringRuleForwardingNumberInfo;

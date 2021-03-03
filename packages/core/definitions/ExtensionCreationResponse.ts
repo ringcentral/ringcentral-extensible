@@ -30,7 +30,7 @@ class ExtensionCreationResponse {
   customFields?: CustomFieldInfo[];
 
   /**
-   * Number of department extension
+   * Number of extension
    */
   extensionNumber?: string;
 
@@ -85,7 +85,7 @@ class ExtensionCreationResponse {
   statusInfo?: ExtensionStatusInfo;
 
   /**
-   * Extension type
+   * Extension type. Please note that legacy 'Department' extension type corresponds to 'Call Queue' extensions in modern RingCentral product terminology
    */
   type?:
     | 'User'

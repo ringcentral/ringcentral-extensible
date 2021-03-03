@@ -8,6 +8,18 @@ class ListExtensionDevicesParameters {
    * Device feature or multiple features supported
    */
   feature?: 'Intercom' | 'Paging' | 'BLA' | 'HELD';
+
+  /**
+   * Number of a page to be returned
+   * Default: 1
+   */
+  page?: string;
+
+  /**
+   * Number of records per page to be returned
+   * Default: 100
+   */
+  perPage?: string;
 }
 
 export default ListExtensionDevicesParameters;

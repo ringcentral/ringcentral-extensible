@@ -71,7 +71,7 @@ class ExtensionBulkUpdateInfo {
 
   /**
    */
-  transition?: UserTransitionInfo[];
+  transition?: UserTransitionInfo;
 
   /**
    */
@@ -87,7 +87,7 @@ class ExtensionBulkUpdateInfo {
   site?: AutomaticLocationUpdatesSiteInfo;
 
   /**
-   * Extension type
+   * Extension type. Please note that legacy 'Department' extension type corresponds to 'Call Queue' extensions in modern RingCentral product terminology
    */
   type?:
     | 'User'

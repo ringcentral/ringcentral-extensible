@@ -4,7 +4,7 @@ class MeetingRecordingInfo {
   id?: string;
 
   /**
-   * Link for recording file download
+   * Link for downloading the recorded file (mp4, mp3 audio and text/plain chat file)
    */
   contentDownloadUri?: string;
 

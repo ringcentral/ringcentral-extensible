@@ -17,6 +17,7 @@ import CompanyPager from './CompanyPager';
 import Mms from './Mms';
 import Sms from './Sms';
 import MeetingsConfiguration from './MeetingsConfiguration';
+import MeetingConfiguration from './MeetingConfiguration';
 import Meeting from './Meeting';
 import MeetingRecordings from './MeetingRecordings';
 import Device from './Device';
@@ -224,6 +225,10 @@ class Index {
 
   meeting(meetingId: string | null = null): Meeting {
     return new Meeting(this, meetingId);
+  }
+
+  meetingConfiguration(): MeetingConfiguration {
+    return new MeetingConfiguration(this);
   }
 
   meetingsConfiguration(): MeetingsConfiguration {

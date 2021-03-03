@@ -41,7 +41,8 @@ class CompanyPhoneNumberInfo {
     | 'External'
     | 'TollFree'
     | 'Local'
-    | 'BusinessMobileNumberProvider';
+    | 'BusinessMobileNumberProvider'
+    | 'ExternalNumberProvider';
 
   /**
    * Phone number
@@ -73,7 +74,8 @@ class CompanyPhoneNumberInfo {
     | 'ConferencingNumber'
     | 'MeetingsNumber'
     | 'NumberPool'
-    | 'BusinessMobileNumber';
+    | 'BusinessMobileNumber'
+    | 'ExternalMobileNumber';
 
   /**
    */

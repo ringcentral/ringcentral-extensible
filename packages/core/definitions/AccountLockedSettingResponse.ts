@@ -1,4 +1,8 @@
-import {ScheduleUserMeetingInfo, UserMeetingRecordingSetting} from './index';
+import {
+  ScheduleUserMeetingInfo,
+  UserMeetingRecordingSetting,
+  TelephonyLockedSettings,
+} from './index';
 
 class AccountLockedSettingResponse {
   /**
@@ -8,6 +12,10 @@ class AccountLockedSettingResponse {
   /**
    */
   recording?: UserMeetingRecordingSetting;
+
+  /**
+   */
+  telephony?: TelephonyLockedSettings;
 }
 
 export default AccountLockedSettingResponse;

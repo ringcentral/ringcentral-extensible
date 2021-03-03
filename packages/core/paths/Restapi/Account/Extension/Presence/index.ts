@@ -3,7 +3,7 @@ import {
   GetPresenceInfo,
   ReadUserPresenceStatusParameters,
   PresenceInfoResponse,
-  PresenceInfoResource,
+  PresenceInfoRequest,
 } from '../../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../../..';
@@ -44,12 +44,12 @@ class Index {
    * Http put /restapi/v1.0/account/{accountId}/extension/{extensionId}/presence
    */
   async put(
-    presenceInfoResource: PresenceInfoResource,
+    presenceInfoRequest: PresenceInfoRequest,
     config?: RestRequestConfig
   ): Promise<PresenceInfoResponse> {
     const r = await this.rc.put<PresenceInfoResponse>(
       this.path(),
-      presenceInfoResource,
+      presenceInfoRequest,
       undefined,
       config
     );

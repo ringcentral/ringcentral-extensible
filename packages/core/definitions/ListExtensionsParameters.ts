@@ -27,7 +27,7 @@ class ListExtensionsParameters {
   status?: ('Enabled' | 'Disabled' | 'NotActivated' | 'Unassigned')[];
 
   /**
-   * Extension type. Multiple values are supported
+   * Extension type. Multiple values are supported. Please note that legacy 'Department' extension type corresponds to 'Call Queue' extensions in modern RingCentral product terminology
    */
   type?: (
     | 'User'
