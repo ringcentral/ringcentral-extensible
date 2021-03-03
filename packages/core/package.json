@@ -1,6 +1,6 @@
 {
   "name": "@rc-ex/core",
-  "version": "0.6.5",
+  "version": "0.6.6",
   "description": "Core for ringcentral-extensible project",
   "author": "Tyler Liu <tyler.liu@ringcentral.com>",
   "homepage": "https://github.com/ringcentral/ringcentral-extensible/tree/master/packages/core",
