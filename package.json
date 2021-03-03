@@ -7,16 +7,16 @@
     "generate": "lerna run definitions --scope=@rc-ex/code-generator && lerna run paths --scope=@rc-ex/code-generator && gts fix",
     "upgrade-all": "yarn-upgrade-all && lerna exec yarn-upgrade-all && yarn reset",
     "reset": "lerna exec 'rm -rf lib' && lerna clean -y && lerna bootstrap",
-    "test": "lerna exec 'jest -w 1 --detectOpenHandles' --scope=@rc-ex/test",
-    "test2": "lerna exec 'jest -w 1 --detectOpenHandles $REGEX' --scope=@rc-ex/test",
+    "test": "lerna exec 'yarn jest -w 1 --detectOpenHandles' --scope=@rc-ex/test",
+    "test2": "lerna exec 'yarn jest -w 1 --detectOpenHandles $REGEX' --scope=@rc-ex/test",
     "compile": "lerna exec tsc --no-private",
     "prepublishOnly": "yarn reset && yarn compile"
   },
   "devDependencies": {
-    "@types/node": "^14.14.21",
+    "@types/node": "^14.14.31",
     "gts": "^3.1.0",
-    "lerna": "^3.22.1",
-    "typescript": "^4.1.3",
+    "lerna": "^4.0.0",
+    "typescript": "^4.2.2",
     "yarn-upgrade-all": "^0.5.4"
   }
 }
