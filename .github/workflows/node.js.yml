@@ -13,21 +13,13 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - uses: actions/setup-node@v1
+    - uses: actions/setup-node@v2
       with:
         node-version: 15.x
-    - uses: borales/actions-yarn@v2.0.0
-      with:
-        cmd: install
-    - uses: borales/actions-yarn@v2.0.0
-      with:
-        cmd: reset
-    - uses: borales/actions-yarn@v2.0.0
-      with:
-        cmd: compile
-    - uses: borales/actions-yarn@v2.0.0
-      with:
-        cmd: test
+    - run: yarn install
+    - run: yarn reset
+    - run: yarn compile
+    - run: yarn test
       env:
         RINGCENTRAL_SERVER_URL: ${{ secrets.RINGCENTRAL_SERVER_URL }}
         RINGCENTRAL_CLIENT_ID: ${{ secrets.RINGCENTRAL_CLIENT_ID }}
