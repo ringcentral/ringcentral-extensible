@@ -24,6 +24,9 @@ jobs:
     #     node-version: ${{ matrix.node-version }}
     - uses: borales/actions-yarn@v2.0.0
       with:
+        cmd: install
+    - uses: borales/actions-yarn@v2.0.0
+      with:
         cmd: reset
     - uses: borales/actions-yarn@v2.0.0
       with:
