@@ -3,7 +3,7 @@ import _FormData from 'form-data';
 import {Attachment} from './definitions';
 import {RestResponse} from './Rest';
 
-class FormData extends _FormData {
+class MyFormData extends _FormData {
   readableParts: string[] = [];
   toJSON(): string {
     return this.readableParts.join('\n');
@@ -76,8 +76,8 @@ class Utils {
     );
   }
 
-  static getFormData(...objects: {}[]): FormData {
-    const formData = new FormData();
+  static getFormData(...objects: {}[]): MyFormData {
+    const formData = new MyFormData();
     const obj = Object.assign({}, ...objects);
     const attachments: Attachment[] = [];
     for (const key of Object.keys(obj)) {
