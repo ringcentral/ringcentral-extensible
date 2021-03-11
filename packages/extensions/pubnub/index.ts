@@ -15,10 +15,10 @@ class PubNubExtension extends SdkExtension {
   }
 
   get enabled() {
-    return super.enabled;
+    return this._enabled;
   }
   set enabled(value: boolean) {
-    super.enabled = value;
+    this._enabled = value;
     for (const subscription of this.subscriptions ?? []) {
       subscription.enabled = value;
     }
