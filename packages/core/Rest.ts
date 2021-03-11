@@ -5,7 +5,7 @@ import axios, {
   AxiosInstance,
 } from 'axios';
 import qs from 'qs';
-import _FormData from 'form-data';
+import FormData from 'form-data';
 
 import RestException from './RestException';
 import {TokenInfo} from './definitions';
@@ -59,7 +59,7 @@ export default class Rest {
     });
 
     this.httpClient.interceptors.request.use(config => {
-      if (config.data instanceof _FormData && config.data.getHeaders) {
+      if (config.data instanceof FormData && config.data.getHeaders) {
         return {
           ...config,
           headers: {...config.headers, ...config.data.getHeaders()},

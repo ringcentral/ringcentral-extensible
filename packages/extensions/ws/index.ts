@@ -52,10 +52,10 @@ class WebSocketExtension extends SdkExtension {
   }
 
   get enabled() {
-    return this._enabled;
+    return super.enabled;
   }
   set enabled(value: boolean) {
-    this._enabled = value;
+    super.enabled = value;
     for (const subscription of this.subscriptions ?? []) {
       subscription.enabled = value;
     }
