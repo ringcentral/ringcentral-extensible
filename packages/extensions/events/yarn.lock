@@ -2,20 +2,20 @@
 # yarn lockfile v1
 
 
-"@rc-ex/core@^0.6.5":
-  version "0.6.5"
-  resolved "https://registry.yarnpkg.com/@rc-ex/core/-/core-0.6.5.tgz#219fdb9e67d59d8623f6a5af53a8beeafcf42cdc"
-  integrity sha512-CqSX9sMjEoHaWaZCVHSaMEttWjX6awk1I1eQSfA5bQgvB0sev/DJoX+Ot25s9PRwFEjSWx1TWzC1cz/Zn5yLJg==
+"@rc-ex/core@^0.6.6":
+  version "0.6.6"
+  resolved "https://registry.yarnpkg.com/@rc-ex/core/-/core-0.6.6.tgz#b751e90fba3bbc07d024a83bae3ac13067dab6a6"
+  integrity sha512-AJDVyWAsCwANHdEO6EHRauUg9w6oOzZZiOT7sv+/uZqQODoBD7FKAJIJe0Jv07NYpuL30XzScCLsjrV1fNe4bg==
   dependencies:
     "@types/qs" "^6.9.5"
     axios "^0.21.1"
-    form-data "^3.0.0"
+    form-data "^4.0.0"
     qs "^6.9.6"
 
 "@types/qs@^6.9.5":
-  version "6.9.5"
-  resolved "https://registry.yarnpkg.com/@types/qs/-/qs-6.9.5.tgz#434711bdd49eb5ee69d90c1d67c354a9a8ecb18b"
-  integrity sha512-/JHkVHtx/REVG0VVToGRGH2+23hsYLHdyG+GrvoUGlGAd0ErauXDyvHtRI/7H7mzLm+tBCKA7pfcpkQ1lf58iQ==
+  version "6.9.6"
+  resolved "https://registry.yarnpkg.com/@types/qs/-/qs-6.9.6.tgz#df9c3c8b31a247ec315e6996566be3171df4b3b1"
+  integrity sha512-0/HnwIfW4ki2D8L8c9GVcG5I72s9jP5GSLVF0VIXDW00kmIpA6O33G7a8n59Tmh7Nz0WUC3rSb7PTY/sdW2JzA==
 
 asynckit@^0.4.0:
   version "0.4.0"
@@ -46,10 +46,10 @@ follow-redirects@^1.10.0:
   resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.13.3.tgz#e5598ad50174c1bc4e872301e82ac2cd97f90267"
   integrity sha512-DUgl6+HDzB0iEptNQEXLx/KhTmDb8tZUHSeLqpnjpknR70H0nC2t9N73BK6fN4hOvJ84pKlIQVQ4k5FFlBedKA==
 
-form-data@^3.0.0:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/form-data/-/form-data-3.0.1.tgz#ebd53791b78356a99af9a300d4282c4d5eb9755f"
-  integrity sha512-RHkBKtLWUVwd7SqRIvCZMEvAMoGUp0XU+seQiZejj0COz3RI3hWP4sCv3gZWWLjJTd7rGwcsF5eKZGii0r/hbg==
+form-data@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/form-data/-/form-data-4.0.0.tgz#93919daeaf361ee529584b9b31664dc12c9fa452"
+  integrity sha512-ETEklSGi5t0QMZuiXoA/Q6vcnxcLQP5vdugSpuAyi6SVGi2clPPp+xgEhuMaHC+zGgn31Kd235W35f7Hykkaww==
   dependencies:
     asynckit "^0.4.0"
     combined-stream "^1.0.8"
