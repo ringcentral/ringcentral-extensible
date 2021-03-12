@@ -51,11 +51,8 @@ class WebSocketExtension extends SdkExtension {
     this.options.autoRecover ??= true;
   }
 
-  get enabled() {
-    return super.enabled;
-  }
   set enabled(value: boolean) {
-    super.enabled = value;
+    this._enabled = value;
     for (const subscription of this.subscriptions ?? []) {
       subscription.enabled = value;
     }
