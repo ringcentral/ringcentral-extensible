@@ -1,6 +1,6 @@
 {
   "name": "@rc-ex/discovery",
-  "version": "0.1.11",
+  "version": "0.1.12",
   "description": "Discovery extension for ringcentral-extensible project",
   "author": "Tyler Liu <tyler.liu@ringcentral.com>",
   "homepage": "https://github.com/ringcentral/ringcentral-extensible/tree/master/packages/extensions/discovery",
