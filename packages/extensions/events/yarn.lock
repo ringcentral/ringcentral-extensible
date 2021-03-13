@@ -2,17 +2,17 @@
 # yarn lockfile v1
 
 
-"@rc-ex/core@^0.6.6":
-  version "0.6.6"
-  resolved "https://registry.yarnpkg.com/@rc-ex/core/-/core-0.6.6.tgz#b751e90fba3bbc07d024a83bae3ac13067dab6a6"
-  integrity sha512-AJDVyWAsCwANHdEO6EHRauUg9w6oOzZZiOT7sv+/uZqQODoBD7FKAJIJe0Jv07NYpuL30XzScCLsjrV1fNe4bg==
+"@rc-ex/core@^0.7.0":
+  version "0.7.0"
+  resolved "https://registry.yarnpkg.com/@rc-ex/core/-/core-0.7.0.tgz#845a6f52c0f761d838e9d185099720c05775761d"
+  integrity sha512-krNFmtLkKBiLzIDB8Q6KjCw5TaVW9GuIHQhjxjCJx8pC9hsVWvmtJpelFxhAKhj9sa6wtqFe9394FKh8IG3fWg==
   dependencies:
-    "@types/qs" "^6.9.5"
+    "@types/qs" "^6.9.6"
     axios "^0.21.1"
     form-data "^4.0.0"
     qs "^6.9.6"
 
-"@types/qs@^6.9.5":
+"@types/qs@^6.9.6":
   version "6.9.6"
   resolved "https://registry.yarnpkg.com/@types/qs/-/qs-6.9.6.tgz#df9c3c8b31a247ec315e6996566be3171df4b3b1"
   integrity sha512-0/HnwIfW4ki2D8L8c9GVcG5I72s9jP5GSLVF0VIXDW00kmIpA6O33G7a8n59Tmh7Nz0WUC3rSb7PTY/sdW2JzA==
