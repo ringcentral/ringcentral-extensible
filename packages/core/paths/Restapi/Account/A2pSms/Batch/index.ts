@@ -1,7 +1,8 @@
 import {RestRequestConfig} from '../../../../../Rest';
 import {
-  MessageBatchResponse,
+  CreateMessageBatchResponse,
   CreateSMSMessageBatchRequest,
+  MessageBatchResponse,
 } from '../../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../../..';
@@ -33,8 +34,8 @@ class Index {
   async post(
     createSMSMessageBatchRequest: CreateSMSMessageBatchRequest,
     config?: RestRequestConfig
-  ): Promise<MessageBatchResponse> {
-    const r = await this.rc.post<MessageBatchResponse>(
+  ): Promise<CreateMessageBatchResponse> {
+    const r = await this.rc.post<CreateMessageBatchResponse>(
       this.path(false),
       createSMSMessageBatchRequest,
       undefined,

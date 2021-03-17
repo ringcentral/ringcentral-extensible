@@ -1,5 +1,10 @@
 class MeetingRecordingInfo {
   /**
+   * Unique identifier of a meeting instance
+   */
+  uuid?: string;
+
+  /**
    */
   id?: string;
 

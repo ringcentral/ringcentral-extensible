@@ -17,7 +17,10 @@ class IVRMenuActionsInfo {
     | 'Repeat'
     | 'ReturnToRoot'
     | 'ReturnToPrevious'
-    | 'Disconnect';
+    | 'Disconnect'
+    | 'ReturnToTopLevelMenu'
+    | 'DoNothing'
+    | 'ConnectToOperator';
 
   /**
    */

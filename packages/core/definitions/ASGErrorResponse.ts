@@ -1,5 +1,5 @@
 // Error response
-class ErrorResponse {
+class ASGErrorResponse {
   /**
    * Error code
    */
@@ -11,4 +11,4 @@ class ErrorResponse {
   description?: string;
 }
 
-export default ErrorResponse;
+export default ASGErrorResponse;

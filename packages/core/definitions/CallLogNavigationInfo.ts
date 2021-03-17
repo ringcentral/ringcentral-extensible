@@ -13,10 +13,6 @@ class CallLogNavigationInfo {
   /**
    */
   previousPage?: CallLogNavigationInfoURI;
-
-  /**
-   */
-  lastPage?: CallLogNavigationInfoURI;
 }
 
 export default CallLogNavigationInfo;
