@@ -1,6 +1,6 @@
 {
   "name": "@rc-ex/discovery",
-  "version": "0.1.12",
+  "version": "0.1.13",
   "description": "Discovery extension for ringcentral-extensible project",
   "author": "Tyler Liu <tyler.liu@ringcentral.com>",
   "homepage": "https://github.com/ringcentral/ringcentral-extensible/tree/master/packages/extensions/discovery",
@@ -24,7 +24,7 @@
     "wait-for-async": "^0.5.0"
   },
   "devDependencies": {
-    "@rc-ex/core": "^0.7.0"
+    "@rc-ex/core": "^0.7.1"
   },
   "peerDependencies": {
     "@rc-ex/core": "^0.7.0"
