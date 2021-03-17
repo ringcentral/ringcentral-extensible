@@ -131,7 +131,7 @@ const result = await rc.restapi(apiVersion).account(accountId).a2pSms().batch().
 await rc.revoke();
 ```
 - Parameter `createSmsMessageBatchRequest` is of type [CreateSMSMessageBatchRequest](./packages/core/definitions/CreateSMSMessageBatchRequest.ts)
-- `result` is of type [MessageBatchResponse](./packages/core/definitions/MessageBatchResponse.ts)
+- `result` is of type [CreateMessageBatchResponse](./packages/core/definitions/CreateMessageBatchResponse.ts)
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 
@@ -5088,7 +5088,7 @@ Name|Value
 HTTP Method|`POST`
 Endpoint|`/restapi/v1.0/account/{accountId}/telephony/conference`
 Rate Limit Group|`Heavy`
-App Permission|`TelephonySessions`
+App Permission|`CallControl`
 User Permission|`N/A`
 
 ```ts
@@ -5160,7 +5160,7 @@ Name|Value
 HTTP Method|`POST`
 Endpoint|`/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/bring-in`
 Rate Limit Group|`Light`
-App Permission|`TelephonySessions`
+App Permission|`CallControl`
 User Permission|`N/A`
 
 ```ts

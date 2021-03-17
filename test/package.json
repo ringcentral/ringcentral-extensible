@@ -3,24 +3,24 @@
   "private": true,
   "license": "MIT",
   "dependencies": {
-    "@rc-ex/authorize-uri": "^0.7.0",
+    "@rc-ex/authorize-uri": "^0.7.1",
     "@rc-ex/core": "^0.7.0",
-    "@rc-ex/debug": "^0.7.0",
-    "@rc-ex/discovery": "^0.1.11",
-    "@rc-ex/engage-voice": "^0.2.11",
-    "@rc-ex/events": "^0.7.0",
-    "@rc-ex/pubnub": "^0.7.0",
-    "@rc-ex/rate-limit": "^0.7.0",
-    "@rc-ex/rcsdk": "^0.7.0",
-    "@rc-ex/retry": "^0.7.0",
-    "@rc-ex/ws": "^0.7.0"
+    "@rc-ex/debug": "^0.7.1",
+    "@rc-ex/discovery": "^0.1.12",
+    "@rc-ex/engage-voice": "^0.2.12",
+    "@rc-ex/events": "^0.7.1",
+    "@rc-ex/pubnub": "^0.7.1",
+    "@rc-ex/rate-limit": "^0.7.1",
+    "@rc-ex/rcsdk": "^0.7.1",
+    "@rc-ex/retry": "^0.7.1",
+    "@rc-ex/ws": "^0.7.1"
   },
   "devDependencies": {
     "@ringcentral/sdk": "^4.4.1",
-    "@types/jest": "^26.0.20",
+    "@types/jest": "^26.0.21",
     "dotenv-override-true": "^6.2.2",
     "jest": "^26.6.3",
-    "ts-jest": "^26.5.3",
+    "ts-jest": "^26.5.4",
     "wait-for-async": "^0.5.0"
   }
 }
