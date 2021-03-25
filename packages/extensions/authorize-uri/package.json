@@ -18,13 +18,13 @@
     "access": "public"
   },
   "dependencies": {
-    "@types/urijs": "^1.19.14",
+    "@types/urijs": "^1.19.15",
     "urijs": "^1.19.6"
   },
   "devDependencies": {
     "@rc-ex/core": "^0.7.1"
   },
   "peerDependencies": {
-    "@rc-ex/core": "^0.7.0"
+    "@rc-ex/core": "^0.7.1"
   }
 }
