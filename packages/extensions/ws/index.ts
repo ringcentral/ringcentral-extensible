@@ -48,7 +48,13 @@ class WebSocketExtension extends SdkExtension {
     this.options = options;
     this.options.restOverWebSocket ??= false;
     this.options.debugMode ??= false;
-    this.options.autoRecover ??= true;
+    this.options.autoRecover ??= {
+      enabled: true,
+    };
+    this.options.autoRecover.checkInterval ??= retriesAttempted => {
+      const interval = 2000 + 2000 * retriesAttempted;
+      return Math.min(8000, interval);
+    };
   }
 
   set enabled(value: boolean) {
@@ -84,14 +90,14 @@ class WebSocketExtension extends SdkExtension {
     await this.connect();
 
     // start of auto recover
-    if (this.options.autoRecover) {
-      let interval = 10000; // check WSG connection every 10 seconds
+    if (this.options.autoRecover!.enabled) {
+      let retriesAttempted = 0;
       const check = async () => {
         if (this.ws?.readyState !== OPEN) {
           clearInterval(this.intervalHandle!);
           try {
             await this.recover();
-            interval = 10000;
+            retriesAttempted = 0;
             if (this.options.debugMode) {
               console.debug('Auto recover success');
             }
@@ -102,19 +108,22 @@ class WebSocketExtension extends SdkExtension {
               this.ws
             );
           } catch (e) {
-            interval += 10000;
-            if (interval > 60000) {
-              interval = 60000; // max interval 60 seconds
-            }
+            retriesAttempted += 1;
             if (this.options.debugMode) {
               console.debug('Auto recover error:', e);
             }
             this.eventEmitter.emit(Events.autoRecoverError, e);
           }
-          this.intervalHandle = setInterval(check, interval);
+          this.intervalHandle = setInterval(
+            check,
+            this.options.autoRecover!.checkInterval!(retriesAttempted)
+          );
         }
       };
-      this.intervalHandle = setInterval(check, interval);
+      this.intervalHandle = setInterval(
+        check,
+        this.options.autoRecover!.checkInterval!(retriesAttempted)
+      );
     }
     // end of auto recover
   }

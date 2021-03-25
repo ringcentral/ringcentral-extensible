@@ -4,10 +4,14 @@ export type WsToken = {
   expires_in: number;
 };
 
+export type CheckInterval = (retriesAttempted: number) => number;
 export type WebSocketOptions = {
   restOverWebSocket?: boolean;
   debugMode?: boolean;
-  autoRecover?: boolean;
+  autoRecover?: {
+    enabled: boolean;
+    checkInterval?: CheckInterval;
+  };
 };
 
 export type WsgEvent = {

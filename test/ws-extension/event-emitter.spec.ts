@@ -22,7 +22,9 @@ describe('WebSocket', () => {
       password: process.env.RINGCENTRAL_PASSWORD!,
     });
     const webSocketExtension = new WebSocketExtension({
-      autoRecover: true,
+      autoRecover: {
+        enabled: true,
+      },
       // debugMode: true,
     });
 
