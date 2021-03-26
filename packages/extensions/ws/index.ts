@@ -57,6 +57,9 @@ class WebSocketExtension extends SdkExtension {
     };
   }
 
+  get enabled() {
+    return this._enabled;
+  }
   set enabled(value: boolean) {
     this._enabled = value;
     for (const subscription of this.subscriptions ?? []) {
