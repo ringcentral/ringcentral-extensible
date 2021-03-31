@@ -513,10 +513,10 @@ msrcrypto@^1.5.6:
   resolved "https://registry.yarnpkg.com/msrcrypto/-/msrcrypto-1.5.8.tgz#be419be4945bf134d8af52e9d43be7fa261f4a1c"
   integrity sha512-ujZ0TRuozHKKm6eGbKHfXef7f+esIhEckmThVnz7RNyiOJd7a6MXj2JGBoL9cnPDW+JMG16MoTUh5X+XXjI66Q==
 
-netmask@^1.0.6:
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/netmask/-/netmask-1.0.6.tgz#20297e89d86f6f6400f250d9f4f6b4c1945fcd35"
-  integrity sha1-ICl+idhvb2QA8lDZ9Pa0wZRfzTU=
+netmask@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/netmask/-/netmask-2.0.1.tgz#5a5cbdcbb7b6de650870e15e83d3e9553a414cf4"
+  integrity sha512-gB8eG6ubxz67c7O2gaGiyWdRUIbH61q7anjgueDqCC9kvIs/b4CTtCMaQKeJbv1/Y7FT19I4zKwYmjnjInRQsg==
 
 object-inspect@^1.9.0:
   version "1.9.0"
@@ -551,13 +551,13 @@ pac-proxy-agent@^4.1.0:
     socks-proxy-agent "5"
 
 pac-resolver@^4.1.0:
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/pac-resolver/-/pac-resolver-4.1.0.tgz#4b12e7d096b255a3b84e53f6831f32e9c7e5fe95"
-  integrity sha512-d6lf2IrZJJ7ooVHr7BfwSjRO1yKSJMaiiWYSHcrxSIUtZrCa4KKGwcztdkZ/E9LFleJfjoi1yl+XLR7AX24nbQ==
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/pac-resolver/-/pac-resolver-4.2.0.tgz#b82bcb9992d48166920bc83c7542abb454bd9bdd"
+  integrity sha512-rPACZdUyuxT5Io/gFKUeeZFfE5T7ve7cAkE5TUZRRfuKP0u5Hocwe48X7ZEm6mYB+bTB0Qf+xlVlA/RM/i6RCQ==
   dependencies:
     degenerator "^2.2.0"
     ip "^1.1.5"
-    netmask "^1.0.6"
+    netmask "^2.0.1"
 
 prelude-ls@~1.1.2:
   version "1.1.2"
@@ -588,10 +588,10 @@ proxy-from-env@^1.0.0:
   resolved "https://registry.yarnpkg.com/proxy-from-env/-/proxy-from-env-1.1.0.tgz#e102f16ca355424865755d2c9e8ea4f24d58c3e2"
   integrity sha512-D+zkORCbA9f1tdWRK0RaCR3GPv50cMxcrz4X8k5LTSUD1Dkw47mKJEZQNunItRTkWwgtaUSo1RVFRIG9ZXiFYg==
 
-pubnub@^4.29.11:
-  version "4.29.11"
-  resolved "https://registry.yarnpkg.com/pubnub/-/pubnub-4.29.11.tgz#d56623bd72d3485bf7f779611ed4865dbb5bc126"
-  integrity sha512-L/3TYuw/7t8EA2l5jnn8YwYpGWZst8AFWJ0KLmAM/xs9BA+ZkWvsZkC7gllf1N5e5DbH0EB8vl52F81WYu3n5Q==
+pubnub@^4.30.1:
+  version "4.30.1"
+  resolved "https://registry.yarnpkg.com/pubnub/-/pubnub-4.30.1.tgz#ca16f15d67ab335ee1f2db5b4ec97d1faa76980c"
+  integrity sha512-bwhGmfKHkVTDDrb/oLHLzovgvK982n/W5PbhLGG8lrmDnNHwTx2z8DBjaGqNljPV/jHMLG0CRCV1G0SnQhW7fQ==
   dependencies:
     "@babel/runtime" "^7.10.5"
     agentkeepalive "^3.5.2"
