@@ -23,7 +23,7 @@ await sdk.login({username, extension, password});
 
 // ringcentral-extensible + rcsdk extension
 const rc = new RingCentral();
-const rcSdkExtension = new RcSdkExtension(sdk);
+const rcSdkExtension = new RcSdkExtension({rcSdk: sdk});
 await rc.installExtension(rcSdkExtension);
 
 // API call with @ringcentral/sdk as HTTP engine
@@ -35,7 +35,10 @@ For a working sample, please check this [test case](../../../test/rcsdk-extensio
 
 ## Known issues
 
-`multipart/form-data` may not work (untested), since this library is originally designed for [axios](https://github.com/axios/axios). For such cases, please use `@ringcentral/sdk` directly, such as `await sdk.post('/restapi/v1.0/account/~/extension/~/fax', ...);`
+`multipart/form-data` does not work, because `@rc-ex/core` is originally designed for [axios](https://github.com/axios/axios).
+For such cases, please use `@ringcentral/sdk` directly, such as `await sdk.post('/restapi/v1.0/account/~/extension/~/fax', ...);`
+
+Some extensions don't work with this extension. For example, the Retry Extension and RateLimit Extension because they rely on RestException object which `@ringcentral/sdk` doesn't throw.
 
 
 ## Switch between @ringcentral/sdk and axios
@@ -46,7 +49,7 @@ This extension makes `@ringcentral/sdk` as HTTP engine. to switch back to `axios
 ```ts
 // ringcentral-extensible + rcsdk extension
 const rc = new RingCentral({...});
-const rcSdkExtension = new RcSdkExtension(sdk);
+const rcSdkExtension = new RcSdkExtension({rcSdk: sdk});
 await rc.installExtension(rcSdkExtension);
 
 // API call with @ringcentral/sdk as HTTP engine
