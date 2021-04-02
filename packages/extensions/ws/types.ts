@@ -11,6 +11,7 @@ export type WebSocketOptions = {
   autoRecover?: {
     enabled: boolean;
     checkInterval?: CheckInterval;
+    pingServerInterval?: number;
   };
 };
 

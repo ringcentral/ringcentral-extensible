@@ -58,6 +58,7 @@ class WebSocketExtension extends SdkExtension {
       const interval = 2000 + 2000 * retriesAttempted;
       return Math.min(8000, interval);
     };
+    this.options.autoRecover.pingServerInterval ??= 60000;
   }
 
   get enabled() {
@@ -183,7 +184,10 @@ class WebSocketExtension extends SdkExtension {
         if (this.pingServerHandle) {
           clearTimeout(this.pingServerHandle);
         }
-        this.pingServerHandle = setTimeout(() => this.pingServer(), 10000);
+        this.pingServerHandle = setTimeout(
+          () => this.pingServer(),
+          this.options.autoRecover!.pingServerInterval
+        );
       });
     }
 
