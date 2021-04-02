@@ -1,6 +1,6 @@
 {
   "name": "@rc-ex/ws",
-  "version": "0.9.0-alpha.0",
+  "version": "0.9.1-alpha.0",
   "description": "WebSocket extension for ringcentral-extensible project",
   "author": "Tyler Liu <tyler.liu@ringcentral.com>",
   "homepage": "https://github.com/ringcentral/ringcentral-extensible/tree/master/packages/extensions/ws",
