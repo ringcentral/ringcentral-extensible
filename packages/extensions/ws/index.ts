@@ -194,7 +194,7 @@ class WebSocketExtension extends SdkExtension {
     this.eventEmitter.emit(Events.newWebSocketObject, this.ws);
 
     if (this.options.autoRecover?.enabled) {
-      this.ws.on('message', () => {
+      this.ws.addEventListener('message', () => {
         if (this.pingServerHandle) {
           clearTimeout(this.pingServerHandle);
         }
