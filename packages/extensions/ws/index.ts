@@ -19,11 +19,13 @@ import Subscription from './subscription';
 import {ConnectionException} from './exceptions';
 import Utils from './utils';
 import {EventEmitter} from 'events';
+import RestException from '@rc-ex/core/lib/RestException';
 
 export enum Events {
   autoRecoverSuccess = 'autoRecoverSuccess',
   autoRecoverFailed = 'autoRecoverFailed',
   autoRecoverError = 'autoRecoverError',
+  newWebSocketObject = 'newWebSocketObject',
 }
 
 class WebSocketExtension extends SdkExtension {
@@ -40,6 +42,7 @@ class WebSocketExtension extends SdkExtension {
   // for auto recover
   intervalHandle?: NodeJS.Timeout;
   recoverTimestamp?: number;
+  pingServerHandle?: NodeJS.Timeout;
 
   request = request; // request method was moved to another file to keep this file short
 
@@ -153,6 +156,18 @@ class WebSocketExtension extends SdkExtension {
     this.recoverTimestamp = undefined;
   }
 
+  async pingServer() {
+    try {
+      await this.request('get', '/restapi/v1.0/status');
+    } catch (e) {
+      if (e instanceof RestException) {
+        return; // Not a WS connection issue
+      }
+      // network issue or WS connection issue
+      this.ws?.close(); // Explicitly mark WS as closed
+    }
+  }
+
   async connect(recoverSession = false) {
     const r = await this.rc.post('/restapi/oauth/wstoken');
     this.wsToken = r.data as WsToken;
@@ -161,6 +176,16 @@ class WebSocketExtension extends SdkExtension {
       wsUri = `${wsUri}&wsc=${this.wsc.token}`;
     }
     this.ws = new WS(wsUri);
+    this.eventEmitter.emit(Events.newWebSocketObject, this.ws);
+
+    if (this.options.autoRecover?.enabled) {
+      this.ws.on('message', () => {
+        if (this.pingServerHandle) {
+          clearTimeout(this.pingServerHandle);
+        }
+        this.pingServerHandle = setTimeout(() => this.pingServer(), 10000);
+      });
+    }
 
     // debug mode to print all WebSocket traffic
     if (this.options.debugMode) {
@@ -211,6 +236,9 @@ class WebSocketExtension extends SdkExtension {
     this.subscriptions = [];
     if (this.intervalHandle) {
       clearInterval(this.intervalHandle);
+    }
+    if (this.pingServerHandle) {
+      clearTimeout(this.pingServerHandle);
     }
     this.ws?.close();
   }
