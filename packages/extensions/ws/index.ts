@@ -98,20 +98,6 @@ class WebSocketExtension extends SdkExtension {
 
     // start of auto recover
     if (this.options.autoRecover!.enabled) {
-      // browser only code start
-      if (typeof window !== 'undefined' && window.addEventListener) {
-        window.addEventListener('offline', () => {
-          if (this.pingServerHandle) {
-            clearTimeout(this.pingServerHandle);
-          }
-          this.ws.close();
-        });
-        window.addEventListener('online', () => {
-          this.recover();
-        });
-      }
-      // browser only code end
-
       let retriesAttempted = 0;
       const check = async () => {
         if (this.ws?.readyState !== OPEN) {
@@ -145,6 +131,20 @@ class WebSocketExtension extends SdkExtension {
         check,
         this.options.autoRecover!.checkInterval!(retriesAttempted)
       );
+
+      // browser only code start
+      if (typeof window !== 'undefined' && window.addEventListener) {
+        window.addEventListener('offline', () => {
+          if (this.pingServerHandle) {
+            clearTimeout(this.pingServerHandle);
+          }
+          this.ws.close();
+        });
+        window.addEventListener('online', () => {
+          check();
+        });
+      }
+      // browser only code end
     }
     // end of auto recover
   }
