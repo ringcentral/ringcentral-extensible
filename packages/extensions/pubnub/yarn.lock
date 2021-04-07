@@ -47,10 +47,10 @@
   resolved "https://registry.yarnpkg.com/@types/asn1js/-/asn1js-2.0.0.tgz#10ca75692575744d0117098148a8dc84cbee6682"
   integrity sha512-Jjzp5EqU0hNpADctc/UqhiFbY1y2MqIxBVa2S4dBlbnZHTLPMuggoL5q43X63LpsOIINRDirBjP56DUUKIUWIA==
 
-"@types/pubnub@^4.29.1":
-  version "4.29.1"
-  resolved "https://registry.yarnpkg.com/@types/pubnub/-/pubnub-4.29.1.tgz#abe3d3e632ff00909038d5d7f4c850b0209f3aaa"
-  integrity sha512-VDSazKgTrJn+db/HjK6n1EeF4JQrMbB9KYVTbnugyNR07w6MWhJ5WEBQXYDP95rn/7vzOycFMMDDBvJoAafdTg==
+"@types/pubnub@^4.29.2":
+  version "4.29.2"
+  resolved "https://registry.yarnpkg.com/@types/pubnub/-/pubnub-4.29.2.tgz#4cac40dab1408f0b02b671431876c8874b2e511d"
+  integrity sha512-I6jwPn7lex9GQ4QCtq28LyiAJZ/hEfEOM9eqISILVvDQYOB4NB0YbtdrAqg9BJlw5GwpHIMI61ANnKp34w6fwg==
 
 "@unimodules/core@*":
   version "7.0.0"
@@ -514,9 +514,9 @@ msrcrypto@^1.5.6:
   integrity sha512-ujZ0TRuozHKKm6eGbKHfXef7f+esIhEckmThVnz7RNyiOJd7a6MXj2JGBoL9cnPDW+JMG16MoTUh5X+XXjI66Q==
 
 netmask@^2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/netmask/-/netmask-2.0.1.tgz#5a5cbdcbb7b6de650870e15e83d3e9553a414cf4"
-  integrity sha512-gB8eG6ubxz67c7O2gaGiyWdRUIbH61q7anjgueDqCC9kvIs/b4CTtCMaQKeJbv1/Y7FT19I4zKwYmjnjInRQsg==
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/netmask/-/netmask-2.0.2.tgz#8b01a07644065d536383835823bc52004ebac5e7"
+  integrity sha512-dBpDMdxv9Irdq66304OLfEmQ9tbNRFnFTuZiLo+bD+r332bBmMJ8GBLXklIXXgxd3+v9+KUnZaUR5PJMa75Gsg==
 
 object-inspect@^1.9.0:
   version "1.9.0"
@@ -769,9 +769,9 @@ toidentifier@1.0.0:
   integrity sha512-yaOH/Pk/VEhBWWTlhI+qXxDFXlejDGcQipMlyxda9nthulaxLZUNcUqFxokp0vcYnvteJln5FNQDRrxj3YcbVw==
 
 tslib@^2.0.0, tslib@^2.0.1, tslib@^2.0.3, tslib@^2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.1.0.tgz#da60860f1c2ecaa5703ab7d39bc05b6bf988b97a"
-  integrity sha512-hcVC3wYEziELGGmEEXue7D75zbwIIVUMWAVbHItGPx0ziyXxrOMQx4rQEVEV45Ut/1IotuEvwqPopzIOkDMf0A==
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.2.0.tgz#fb2c475977e35e241311ede2693cee1ec6698f5c"
+  integrity sha512-gS9GVHRU+RGn5KQM2rllAlR3dU6m7AcpJKdtH8gFvQiC4Otgk98XnmMU+nZenHt/+VhnBPWwgrJsyrdcw6i23w==
 
 type-check@~0.3.2:
   version "0.3.2"

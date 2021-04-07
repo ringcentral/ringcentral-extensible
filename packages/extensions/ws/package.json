@@ -18,7 +18,7 @@
     "access": "public"
   },
   "dependencies": {
-    "@types/ws": "^7.4.0",
+    "@types/ws": "^7.4.1",
     "http-status-codes": "^2.1.4",
     "hyperid": "^2.1.0",
     "isomorphic-ws": "^4.0.1",

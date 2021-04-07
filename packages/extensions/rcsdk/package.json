@@ -19,10 +19,10 @@
   },
   "devDependencies": {
     "@rc-ex/core": "^0.7.2",
-    "@ringcentral/sdk": "^4.4.1"
+    "@ringcentral/sdk": "^4.4.2"
   },
   "peerDependencies": {
     "@rc-ex/core": "^0.7.2",
-    "@ringcentral/sdk": "^4.4.1"
+    "@ringcentral/sdk": "^4.4.2"
   }
 }
