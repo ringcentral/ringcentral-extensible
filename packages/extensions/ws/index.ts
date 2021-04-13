@@ -96,65 +96,64 @@ class WebSocketExtension extends SdkExtension {
     };
     if (!this.options.autoRecover!.enabled) {
       await this.connect();
+      return;
     }
-    // start of auto recover
-    else {
-      try {
-        await this.connect();
-      } catch (e) {
-        if (this.options.debugMode) {
-          console.log('Initial connect failed:', e);
-        }
-      }
-      let retriesAttempted = 0;
-      const check = async () => {
-        if (this.ws?.readyState !== OPEN) {
-          clearInterval(this.intervalHandle!);
-          try {
-            await this.recover();
-            retriesAttempted = 0;
-            if (this.options.debugMode) {
-              console.debug('Auto recover success');
-            }
-            this.eventEmitter.emit(
-              this.connectionDetails.recoveryState === 'Successful'
-                ? Events.autoRecoverSuccess
-                : Events.autoRecoverFailed,
-              this.ws
-            );
-          } catch (e) {
-            retriesAttempted += 1;
-            if (this.options.debugMode) {
-              console.debug('Auto recover error:', e);
-            }
-            this.eventEmitter.emit(Events.autoRecoverError, e);
-          }
-          this.intervalHandle = setInterval(
-            check,
-            this.options.autoRecover!.checkInterval!(retriesAttempted)
-          );
-        }
-      };
-      this.intervalHandle = setInterval(
-        check,
-        this.options.autoRecover!.checkInterval!(retriesAttempted)
-      );
 
-      // browser only code start
-      if (typeof window !== 'undefined' && window.addEventListener) {
-        window.addEventListener('offline', () => {
-          if (this.pingServerHandle) {
-            clearTimeout(this.pingServerHandle);
-          }
-          this.ws.close();
-        });
-        window.addEventListener('online', () => {
-          check();
-        });
+    // code after is for auto recover
+    try {
+      await this.connect();
+    } catch (e) {
+      if (this.options.debugMode) {
+        console.log('Initial connect failed:', e);
       }
-      // browser only code end
     }
-    // end of auto recover
+    let retriesAttempted = 0;
+    const check = async () => {
+      if (this.ws?.readyState !== OPEN) {
+        clearInterval(this.intervalHandle!);
+        try {
+          await this.recover();
+          retriesAttempted = 0;
+          if (this.options.debugMode) {
+            console.debug('Auto recover success');
+          }
+          this.eventEmitter.emit(
+            this.connectionDetails.recoveryState === 'Successful'
+              ? Events.autoRecoverSuccess
+              : Events.autoRecoverFailed,
+            this.ws
+          );
+        } catch (e) {
+          retriesAttempted += 1;
+          if (this.options.debugMode) {
+            console.debug('Auto recover error:', e);
+          }
+          this.eventEmitter.emit(Events.autoRecoverError, e);
+        }
+        this.intervalHandle = setInterval(
+          check,
+          this.options.autoRecover!.checkInterval!(retriesAttempted)
+        );
+      }
+    };
+    this.intervalHandle = setInterval(
+      check,
+      this.options.autoRecover!.checkInterval!(retriesAttempted)
+    );
+
+    // browser only code start
+    if (typeof window !== 'undefined' && window.addEventListener) {
+      window.addEventListener('offline', () => {
+        if (this.pingServerHandle) {
+          clearTimeout(this.pingServerHandle);
+        }
+        this.ws.close();
+      });
+      window.addEventListener('online', () => {
+        check();
+      });
+    }
+    // browser only code end
   }
 
   async recover() {
