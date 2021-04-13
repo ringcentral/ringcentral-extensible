@@ -94,10 +94,18 @@ class WebSocketExtension extends SdkExtension {
       }
       return this.request<T>(method, endpoint, content, queryParams, config);
     };
-    await this.connect();
-
+    if (!this.options.autoRecover!.enabled) {
+      await this.connect();
+    }
     // start of auto recover
-    if (this.options.autoRecover!.enabled) {
+    else {
+      try {
+        await this.connect();
+      } catch (e) {
+        if (this.options.debugMode) {
+          console.log('Initial connect failed:', e);
+        }
+      }
       let retriesAttempted = 0;
       const check = async () => {
         if (this.ws?.readyState !== OPEN) {
