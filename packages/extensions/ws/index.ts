@@ -8,7 +8,6 @@ import SdkExtension from '@rc-ex/core/lib/SdkExtension';
 import WS, {OPEN} from 'isomorphic-ws';
 import hyperid from 'hyperid';
 import {EventEmitter} from 'events';
-import RestException from '@rc-ex/core/lib/RestException';
 
 import {request} from './rest';
 import {
@@ -198,11 +197,7 @@ class WebSocketExtension extends SdkExtension {
         );
       }
     } catch (e) {
-      if (e instanceof RestException) {
-        return; // Not a WS connection issue
-      }
-      // network issue or WS connection issue
-      this.ws?.close(); // Explicitly mark WS as closed
+      this.ws.close(); // Explicitly mark WS as closed
     }
   }
 
