@@ -6,6 +6,9 @@ import {
 } from '@rc-ex/core/lib/Rest';
 import SdkExtension from '@rc-ex/core/lib/SdkExtension';
 import WS, {OPEN} from 'isomorphic-ws';
+import hyperid from 'hyperid';
+import {EventEmitter} from 'events';
+import RestException from '@rc-ex/core/lib/RestException';
 
 import {request} from './rest';
 import {
@@ -18,8 +21,8 @@ import {
 import Subscription from './subscription';
 import {ConnectionException} from './exceptions';
 import Utils from './utils';
-import {EventEmitter} from 'events';
-import RestException from '@rc-ex/core/lib/RestException';
+
+const uuid = hyperid();
 
 export enum Events {
   autoRecoverSuccess = 'autoRecoverSuccess',
@@ -180,12 +183,19 @@ class WebSocketExtension extends SdkExtension {
 
   async pingServer() {
     try {
-      if (this.ws?.ping) {
+      if (this.ws.ping) {
         // node.js
         this.ws.ping();
       } else {
         // browser
-        await this.request('get', '/restapi/v1.0/status');
+        this.ws.send(
+          JSON.stringify([
+            {
+              type: 'Heartbeat',
+              messageId: uuid(),
+            },
+          ])
+        );
       }
     } catch (e) {
       if (e instanceof RestException) {

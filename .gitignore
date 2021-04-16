@@ -5,6 +5,7 @@ lib/
 .env.lab
 .env.ev
 .env.a2p
+.env.sandbox
 temp.*
 .DS_Store
 rcv.spec.ts
