@@ -58,7 +58,7 @@ class WebSocketExtension extends SdkExtension {
       const interval = 2000 + 2000 * retriesAttempted;
       return Math.min(8000, interval);
     };
-    this.options.autoRecover.pingServerInterval ??= 60000;
+    this.options.autoRecover.pingServerInterval ??= 30000;
   }
 
   get enabled() {
@@ -180,7 +180,13 @@ class WebSocketExtension extends SdkExtension {
 
   async pingServer() {
     try {
-      await this.request('get', '/restapi/v1.0/status');
+      if (this.ws?.ping) {
+        // node.js
+        this.ws.ping();
+      } else {
+        // browser
+        await this.request('get', '/restapi/v1.0/status');
+      }
     } catch (e) {
       if (e instanceof RestException) {
         return; // Not a WS connection issue
