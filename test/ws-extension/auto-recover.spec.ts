@@ -1,18 +1,11 @@
 import RingCentral from '@rc-ex/core';
 import WebSocketExtension from '@rc-ex/ws';
-// import path from 'path';
-// import dotenv from 'dotenv-override-true';
 import waitFor from 'wait-for-async';
-
-// dotenv.config({path: path.join(__dirname, '..', '.env.lab')});
 
 jest.setTimeout(999999999);
 
 describe('WebSocket', () => {
   test('auto recover', async () => {
-    // if (process.env.IS_LAB_ENV !== 'true') {
-    //   return;
-    // }
     const rc = new RingCentral({
       clientId: process.env.RINGCENTRAL_CLIENT_ID!,
       clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET!,
