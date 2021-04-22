@@ -5,7 +5,7 @@ class UpdateUnifiedPresenceGlip {
   visibility?: 'Visible' | 'Invisible';
 
   /**
-   * Availability setting specifing whether to receive Glip notifications or not
+   * Availability setting specifying whether to receive Glip notifications or not
    */
   availability?: 'Available' | 'DND';
 }

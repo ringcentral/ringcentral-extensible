@@ -63,7 +63,7 @@ class UserPhoneNumberInfo {
   type?: 'VoiceFax' | 'FaxOnly' | 'VoiceOnly';
 
   /**
-   * Usage type of a phone number. Numbers of 'NumberPool' type wont't be returned for phone number list requests
+   * Usage type of a phone number. Numbers of 'NumberPool' type will not be returned for phone number list requests
    */
   usageType?:
     | 'MainCompanyNumber'

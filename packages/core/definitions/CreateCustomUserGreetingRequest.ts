@@ -17,7 +17,7 @@ class CreateCustomUserGreetingRequest {
   answeringRuleId?: string;
 
   /**
-   * Meida file to upload
+   * Media file to upload
    */
   binary?: string;
 }

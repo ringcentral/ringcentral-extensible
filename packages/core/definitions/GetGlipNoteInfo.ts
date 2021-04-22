@@ -1,4 +1,4 @@
-import {CreatorInfo, LastModifiedByInfo, LockedByInfo} from './index';
+import {GlipCreatorInfo, LastModifiedByInfo, LockedByInfo} from './index';
 
 class GetGlipNoteInfo {
   /**
@@ -28,7 +28,7 @@ class GetGlipNoteInfo {
 
   /**
    */
-  creator?: CreatorInfo;
+  creator?: GlipCreatorInfo;
 
   /**
    */

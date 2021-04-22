@@ -15,7 +15,7 @@ class CreateCompanyGreetingRequest {
   languageId?: string;
 
   /**
-   * Meida file to upload
+   * Media file to upload
    */
   binary?: string;
 }

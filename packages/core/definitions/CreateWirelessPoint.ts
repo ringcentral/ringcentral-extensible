@@ -22,7 +22,6 @@ class CreateWirelessPoint {
   site?: AutomaticLocationUpdatesSiteInfo;
 
   /**
-   * Required
    */
   emergencyAddress?: LocationUpdatesEmergencyAddressInfoRequest;
 

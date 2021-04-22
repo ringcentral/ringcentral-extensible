@@ -2,7 +2,7 @@ import {
   ExtensionContactInfo,
   Reference,
   StatusInfo,
-  DepartmentResource,
+  DeviceDepartmentResource,
   ServiceFeatureValue,
   RegionalSettingsInfo,
   ExtensionPermissionsResource,
@@ -71,7 +71,7 @@ class PhoneNumberExtensionInfo {
 
   /**
    */
-  departments?: DepartmentResource[];
+  departments?: DeviceDepartmentResource[];
 
   /**
    */

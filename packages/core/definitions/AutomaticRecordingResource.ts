@@ -1,6 +1,6 @@
 class AutomaticRecordingResource {
   /**
-   * Flag for controling Automatic Call Recording settings
+   * Flag for controlling Automatic Call Recording settings
    */
   enabled?: boolean;
 

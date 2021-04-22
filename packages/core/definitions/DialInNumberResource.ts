@@ -1,4 +1,4 @@
-import {CountryResource} from './index';
+import {MeetingsCountryResource} from './index';
 
 class DialInNumberResource {
   /**
@@ -15,7 +15,7 @@ class DialInNumberResource {
 
   /**
    */
-  country?: CountryResource;
+  country?: MeetingsCountryResource;
 }
 
 export default DialInNumberResource;

@@ -1,6 +1,6 @@
 import {DataExportTaskContactInfo} from './index';
 
-// Information specififed in request
+// Information specified in request
 class SpecificInfo {
   /**
    * Starting time for data collection

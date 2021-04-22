@@ -2,7 +2,7 @@ import Supervise from './Supervise';
 import Parties from './Parties';
 import {RestRequestConfig} from '../../../../../Rest';
 import {
-  CallSession,
+  CallSessionObject,
   ReadCallSessionStatusParameters,
 } from '../../../../../definitions';
 import Parent from '..';
@@ -35,12 +35,16 @@ class Index {
   async get(
     queryParams?: ReadCallSessionStatusParameters,
     config?: RestRequestConfig
-  ): Promise<CallSession> {
+  ): Promise<CallSessionObject> {
     if (this.telephonySessionId === null) {
       throw new Error('telephonySessionId must be specified.');
     }
 
-    const r = await this.rc.get<CallSession>(this.path(), queryParams, config);
+    const r = await this.rc.get<CallSessionObject>(
+      this.path(),
+      queryParams,
+      config
+    );
     return r.data;
   }
 

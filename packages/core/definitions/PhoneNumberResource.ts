@@ -1,4 +1,4 @@
-import {CountryResource, PhoneNumberExtensionInfo} from './index';
+import {DeviceCountryResource, PhoneNumberExtensionInfo} from './index';
 
 class PhoneNumberResource {
   /**
@@ -8,7 +8,7 @@ class PhoneNumberResource {
 
   /**
    */
-  country?: CountryResource;
+  country?: DeviceCountryResource;
 
   /**
    */

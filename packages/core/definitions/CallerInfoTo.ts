@@ -18,6 +18,7 @@ class CallerInfoTo {
   /**
    */
   faxErrorCode?:
+    | 'AllLinesInUse'
     | 'Undefined'
     | 'NoFaxSendPermission'
     | 'NoInternationalPermission'

@@ -42,7 +42,7 @@ class GlipPostEvent {
   removedPersonIds?: string[];
 
   /**
-   * List of at mentions in post text with names.
+   * List of mentions in post text with names.
    */
   mentions?: GlipMentionsInfo[];
 

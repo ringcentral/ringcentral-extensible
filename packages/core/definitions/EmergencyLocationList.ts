@@ -6,6 +6,11 @@ import {
 
 class EmergencyLocationList {
   /**
+   * Link to the emergency location list resource
+   */
+  uri?: string;
+
+  /**
    */
   records?: EmergencyLocationInfo[];
 

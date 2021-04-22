@@ -18,6 +18,10 @@ class ModelInfo {
   addons?: AddonInfo[];
 
   /**
+   */
+  deviceClass?: string;
+
+  /**
    * Device feature or multiple features supported
    */
   features?: ('BLA' | 'CommonPhone' | 'Intercom' | 'Paging' | 'HELD')[];

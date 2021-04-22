@@ -22,7 +22,8 @@ class GetTokenRequest {
     | 'authorization_code'
     | 'password'
     | 'refresh_token'
-    | 'client_credentials';
+    | 'client_credentials'
+    | 'urn:ietf:params:oauth:grant-type:jwt-bearer';
 
   /**
    * Authorization code

@@ -1,9 +1,9 @@
-import {CallQueueInfo} from './index';
+import {PresenceCallQueueInfo} from './index';
 
 class ExtensionCallQueuePresence {
   /**
    */
-  callQueue?: CallQueueInfo;
+  callQueue?: PresenceCallQueueInfo;
 
   /**
    * Call queue agent availability for calls of this queue

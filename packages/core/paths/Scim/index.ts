@@ -1,6 +1,5 @@
 import Users from './Users';
 import ServiceProviderConfig from './ServiceProviderConfig';
-import Health from './Health';
 import RingCentral from '../..';
 
 class Index {
@@ -18,10 +17,6 @@ class Index {
     }
 
     return '/scim';
-  }
-
-  health(): Health {
-    return new Health(this);
   }
 
   serviceProviderConfig(): ServiceProviderConfig {

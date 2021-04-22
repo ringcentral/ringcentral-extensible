@@ -1,6 +1,6 @@
 class GlipNoteCreate {
   /**
-   * Title of a note. Max allowed legth is 250 characters
+   * Title of a note. Max allowed length is 250 characters
    * Required
    */
   title?: string;

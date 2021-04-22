@@ -6,7 +6,7 @@ import {
 
 class SiteInfo {
   /**
-   * Internal idetifier of a site extension
+   * Internal identifier of a site extension
    */
   id?: string;
 
@@ -31,7 +31,7 @@ class SiteInfo {
   callerIdName?: string;
 
   /**
-   * Exetnsion user email
+   * Extension user email
    */
   email?: string;
 

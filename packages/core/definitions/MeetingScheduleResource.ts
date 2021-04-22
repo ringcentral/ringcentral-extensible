@@ -1,4 +1,4 @@
-import {TimezoneResource} from './index';
+import {MeetingsTimezoneResource} from './index';
 
 // Timing of a meeting
 class MeetingScheduleResource {
@@ -12,7 +12,7 @@ class MeetingScheduleResource {
 
   /**
    */
-  timeZone?: TimezoneResource;
+  timeZone?: MeetingsTimezoneResource;
 }
 
 export default MeetingScheduleResource;

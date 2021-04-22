@@ -2,7 +2,7 @@ import RingCentral from '@rc-ex/core';
 import {
   MeetingRequestResource,
   MeetingScheduleResource,
-  TimezoneResource,
+  MeetingsTimezoneResource,
   HostInfoRequest,
 } from '@rc-ex/core/lib/definitions';
 
@@ -21,7 +21,7 @@ describe('schedule meeting', () => {
     meetingScheduleResource.startTime = meetingScheduleResource.startTime =
       '2030-05-01T00:01:49Z';
     meetingScheduleResource.durationInMinutes = 30;
-    const timezoneResource = new TimezoneResource();
+    const timezoneResource = new MeetingsTimezoneResource();
     timezoneResource.id = '58';
     meetingScheduleResource.timeZone = timezoneResource;
     meetingRequestResource.schedule = meetingScheduleResource;
@@ -66,7 +66,7 @@ describe('schedule meeting', () => {
     // new Date(new Date().getTime() + 10 * 24 * 60 * 60 * 1000).toISOString()  does NOT work, wrong format
     meetingScheduleResource.startTime = '2030-05-01T00:01:49Z';
     meetingScheduleResource.durationInMinutes = 30;
-    const timezoneResource = new TimezoneResource();
+    const timezoneResource = new MeetingsTimezoneResource();
     timezoneResource.id = '58';
     meetingScheduleResource.timeZone = timezoneResource;
     meetingRequestResource.schedule = meetingScheduleResource;

@@ -41,12 +41,12 @@ class GlipUpdateTask {
     | 'Magenta';
 
   /**
-   * Task section to group/search by. Max allowed legth is 100 characters
+   * Task section to group/search by. Max allowed length is 100 characters
    */
   section?: string;
 
   /**
-   * Task details. Max allowed legth is 102400 characters (100kB)
+   * Task details. Max allowed length is 102400 characters (100kB)
    */
   description?: string;
 

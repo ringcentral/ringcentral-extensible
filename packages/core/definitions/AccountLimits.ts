@@ -11,7 +11,7 @@ class AccountLimits {
   meetingSize?: number;
 
   /**
-   * Meetings recording cloud storage limitaion in Gb
+   * Meetings recording cloud storage limitation in Gb
    */
   cloudRecordingStorage?: number;
 

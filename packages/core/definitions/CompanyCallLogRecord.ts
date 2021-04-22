@@ -2,7 +2,7 @@ import {
   ExtensionInfoCallLog,
   CallLogCallerInfo,
   CallLogRecordMessage,
-  DelegateInfo,
+  CallLogDelegateInfo,
   CallLogRecordingInfo,
   CallLogRecordLegInfo,
   BillingInfo,
@@ -62,7 +62,7 @@ class CompanyCallLogRecord {
 
   /**
    */
-  delegate?: DelegateInfo;
+  delegate?: CallLogDelegateInfo;
 
   /**
    * Indicates whether the record is deleted. Returned for deleted records, for ISync requests

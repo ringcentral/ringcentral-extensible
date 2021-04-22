@@ -1,5 +1,5 @@
 import {
-  CreatorInfo,
+  GlipCreatorInfo,
   TaskAssigneeInfo,
   GlipTaskRecurrenceInfo,
   TaskAttachment,
@@ -28,7 +28,7 @@ class GlipTaskInfo {
 
   /**
    */
-  creator?: CreatorInfo;
+  creator?: GlipCreatorInfo;
 
   /**
    * Chat IDs where the task is posted or shared.

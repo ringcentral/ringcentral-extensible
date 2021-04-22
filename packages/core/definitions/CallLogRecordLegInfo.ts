@@ -1,6 +1,6 @@
 import {
   BillingInfo,
-  DelegateInfo,
+  CallLogDelegateInfo,
   ExtensionInfoCallLog,
   CallLogCallerInfo,
   CallLogRecordingInfo,
@@ -51,7 +51,7 @@ class CallLogRecordLegInfo {
 
   /**
    */
-  delegate?: DelegateInfo;
+  delegate?: CallLogDelegateInfo;
 
   /**
    * Internal identifier of an extension

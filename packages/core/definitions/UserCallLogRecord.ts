@@ -4,7 +4,7 @@ import {
   CallLogRecordLegInfo,
   BillingInfo,
   CallLogRecordMessage,
-  DelegateInfo,
+  CallLogDelegateInfo,
   CallLogRecordingInfo,
 } from './index';
 
@@ -76,7 +76,7 @@ class UserCallLogRecord {
 
   /**
    */
-  delegate?: DelegateInfo;
+  delegate?: CallLogDelegateInfo;
 
   /**
    * Indicates whether the record is deleted. Returned for deleted records, for ISync requests

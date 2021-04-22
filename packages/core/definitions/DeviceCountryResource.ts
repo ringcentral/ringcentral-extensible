@@ -1,5 +1,5 @@
 // Brief information on a phone number country
-class CountryResource {
+class DeviceCountryResource {
   /**
    */
   uri?: string;
@@ -33,4 +33,4 @@ class CountryResource {
   loginAllowed?: boolean;
 }
 
-export default CountryResource;
+export default DeviceCountryResource;

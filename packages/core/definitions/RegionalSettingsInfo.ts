@@ -1,13 +1,17 @@
-import {TimezoneResource, CountryResource, LanguageResource} from './index';
+import {
+  DeviceTimezoneResource,
+  DeviceCountryResource,
+  LanguageResource,
+} from './index';
 
 class RegionalSettingsInfo {
   /**
    */
-  timezone?: TimezoneResource;
+  timezone?: DeviceTimezoneResource;
 
   /**
    */
-  homeCountry?: CountryResource;
+  homeCountry?: DeviceCountryResource;
 
   /**
    */

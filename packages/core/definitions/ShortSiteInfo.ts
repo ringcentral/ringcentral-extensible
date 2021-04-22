@@ -1,6 +1,6 @@
 class ShortSiteInfo {
   /**
-   * Internal idetifier of a site extension
+   * Internal identifier of a site extension
    */
   id?: string;
 

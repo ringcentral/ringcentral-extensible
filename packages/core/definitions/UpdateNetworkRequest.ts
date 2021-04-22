@@ -7,6 +7,15 @@ import {
 
 class UpdateNetworkRequest {
   /**
+   * Internal identifier of a network
+   */
+  id?: string;
+
+  /**
+   */
+  uri?: string;
+
+  /**
    */
   name?: string;
 
