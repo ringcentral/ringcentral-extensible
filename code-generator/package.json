@@ -12,7 +12,7 @@
     "@types/ramda": "^0.27.40",
     "change-case": "^4.1.2",
     "dotenv-override-true": "^6.2.2",
-    "js-yaml": "^4.0.0",
+    "js-yaml": "^4.1.0",
     "lower-case-first": "^2.0.2",
     "ramda": "^0.27.1",
     "title-case": "^3.0.3",

@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@rc-ex/core@^0.7.3":
-  version "0.7.3"
-  resolved "https://registry.yarnpkg.com/@rc-ex/core/-/core-0.7.3.tgz#0ea144d3a90118918d411711b50bdeadb6b7490b"
-  integrity sha512-bxOPlIv4B8KDkEc8roMkh6NPzwO3th8hDHLd0JbW0PWzwKoZOLmnMk3Cgf7HQ+mDUUilQurt2EqPfaUIS2xpeA==
+"@rc-ex/core@^0.7.4":
+  version "0.7.4"
+  resolved "https://registry.yarnpkg.com/@rc-ex/core/-/core-0.7.4.tgz#f9fb20f1c6281f6d4b1d1f22ba0ba402ab38cd11"
+  integrity sha512-Sp92aQPoVL26Q5spwT3fTGz7nmdzIZCnNfnTpYEMk+zU6nalM/dx3TO0QuQVLv8Ul4A4xWSPu69yo4e/5YtiMw==
   dependencies:
     "@types/qs" "^6.9.6"
     axios "^0.21.1"
@@ -102,9 +102,9 @@ mime-types@^2.1.12:
     mime-db "1.47.0"
 
 object-inspect@^1.9.0:
-  version "1.9.0"
-  resolved "https://registry.yarnpkg.com/object-inspect/-/object-inspect-1.9.0.tgz#c90521d74e1127b67266ded3394ad6116986533a"
-  integrity sha512-i3Bp9iTqwhaLZBxGkRfo5ZbE07BQRT7MGu8+nNgwW9ItGp1TzCTw2DLEoWwjClxBjOFI/hWljTAmYGCEwmtnOw==
+  version "1.10.2"
+  resolved "https://registry.yarnpkg.com/object-inspect/-/object-inspect-1.10.2.tgz#b6385a3e2b7cae0b5eafcf90cddf85d128767f30"
+  integrity sha512-gz58rdPpadwztRrPjZE9DZLOABUpTGdcANUgOwBFO1C+HZZhePoP83M65WGDmbpwFYJSWqavbl4SgDn4k8RYTA==
 
 qs@^6.10.1:
   version "6.10.1"
