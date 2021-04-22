@@ -40,7 +40,7 @@ describe('WebSocket session recovery', () => {
     // close WebSocket connection to simulate session lost
     // here we don't invoke webSocketExtension.revoke() because that will also revoke all subscriptions created
     webSocketExtension.ws.close();
-    await waitFor({interval: 5000});
+    await waitFor({interval: 1000});
     await webSocketExtension.recover();
     expect(webSocketExtension.connectionDetails.recoveryState).toBe(
       'Successful'
@@ -58,7 +58,7 @@ describe('WebSocket session recovery', () => {
     const successful = await waitFor({
       condition: () => eventCount > 0,
       interval: 1000,
-      times: 30,
+      times: 20,
     });
     await rc.revoke();
     expect(successful).toBeTruthy();
@@ -96,7 +96,7 @@ describe('WebSocket session recovery', () => {
     // close WebSocket connection to simulate session lost
     // here we don't invoke webSocketExtension.revoke() because that will also revoke all subscriptions created
     webSocketExtension.ws.close();
-    await waitFor({interval: 5000});
+    await waitFor({interval: 1000});
     await webSocketExtension.connect(false); // connect but do not recover session
     expect(webSocketExtension.connectionDetails.recoveryState).toBeUndefined();
     await rc
@@ -112,7 +112,7 @@ describe('WebSocket session recovery', () => {
     const successful = await waitFor({
       condition: () => eventCount > 0,
       interval: 1000,
-      times: 30,
+      times: 20,
     });
     await rc.revoke();
     expect(successful).toBeTruthy();
@@ -163,7 +163,7 @@ describe('WebSocket session recovery', () => {
     const successful = await waitFor({
       condition: () => eventCount > 0,
       interval: 1000,
-      times: 30,
+      times: 20,
     });
     await rc.revoke();
     expect(successful).toBeTruthy();
