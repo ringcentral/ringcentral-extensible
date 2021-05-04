@@ -202,8 +202,8 @@ export {default as CreateForwardingNumberDeviceInfo} from './CreateForwardingNum
 export {default as CreateForwardingNumberRequest} from './CreateForwardingNumberRequest';
 export {default as CreateGlipConversationRequest} from './CreateGlipConversationRequest';
 export {default as CreateGlipMember} from './CreateGlipMember';
+export {default as CreateIVRPromptRequest} from './CreateIVRPromptRequest';
 export {default as CreateInternalTextMessageRequest} from './CreateInternalTextMessageRequest';
-export {default as CreateIvrPromptRequest} from './CreateIvrPromptRequest';
 export {default as CreateMMSMessage} from './CreateMMSMessage';
 export {default as CreateMessageBatchResponse} from './CreateMessageBatchResponse';
 export {default as CreateMessageStoreReportRequest} from './CreateMessageStoreReportRequest';
@@ -467,7 +467,7 @@ export {default as LanguageInfo} from './LanguageInfo';
 export {default as LanguageList} from './LanguageList';
 export {default as LanguageResource} from './LanguageResource';
 export {default as LastModifiedByInfo} from './LastModifiedByInfo';
-export {default as ListA2PsmsParameters} from './ListA2PsmsParameters';
+export {default as ListA2PSMSParameters} from './ListA2PSMSParameters';
 export {default as ListAccountMeetingRecordingsParameters} from './ListAccountMeetingRecordingsParameters';
 export {default as ListAccountPhoneNumbersParameters} from './ListAccountPhoneNumbersParameters';
 export {default as ListAccountSwitchesParameters} from './ListAccountSwitchesParameters';
@@ -663,7 +663,7 @@ export {default as PublicMeetingInvitationResponse} from './PublicMeetingInvitat
 export {default as QueueInfo} from './QueueInfo';
 export {default as QueueShortInfoResource} from './QueueShortInfoResource';
 export {default as RangesInfo} from './RangesInfo';
-export {default as ReadA2PsmsOptOutsParameters} from './ReadA2PsmsOptOutsParameters';
+export {default as ReadA2PSMSOptOutsParameters} from './ReadA2PSMSOptOutsParameters';
 export {default as ReadAccountPresenceParameters} from './ReadAccountPresenceParameters';
 export {default as ReadAnsweringRuleParameters} from './ReadAnsweringRuleParameters';
 export {default as ReadCallSessionStatusParameters} from './ReadCallSessionStatusParameters';
