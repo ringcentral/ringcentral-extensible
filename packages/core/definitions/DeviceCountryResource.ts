@@ -1,6 +1,7 @@
 // Brief information on a phone number country
 class DeviceCountryResource {
   /**
+   * Format: uri
    */
   uri?: string;
 

@@ -6,6 +6,7 @@ class FederatedAccountResource {
   companyName?: string;
 
   /**
+   * Format: int32
    */
   conflictCount?: number;
 

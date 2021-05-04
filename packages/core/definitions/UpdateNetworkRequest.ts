@@ -8,6 +8,7 @@ import {
 class UpdateNetworkRequest {
   /**
    * Internal identifier of a network
+   * Example: 2874044
    */
   id?: string;
 

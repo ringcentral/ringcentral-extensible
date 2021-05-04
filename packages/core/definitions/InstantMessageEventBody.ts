@@ -28,11 +28,13 @@ class InstantMessageEventBody {
 
   /**
    * Message creation datetime in ISO 8601 format including timezone, for example 2016-03-10T18:07:52.534Z
+   * Format: date-time
    */
   creationTime?: string;
 
   /**
    * Datetime when the message was modified in ISO 8601 format including timezone, for example 2016-03-10T18:07:52.534Z
+   * Format: date-time
    */
   lastModifiedTime?: string;
 

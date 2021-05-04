@@ -1,5 +1,6 @@
 class FilterSupported {
   /**
+   * Format: int32
    */
   maxResults?: number;
 

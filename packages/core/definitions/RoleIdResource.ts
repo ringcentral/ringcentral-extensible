@@ -1,5 +1,6 @@
 class RoleIdResource {
   /**
+   * Format: uri
    */
   uri?: string;
 

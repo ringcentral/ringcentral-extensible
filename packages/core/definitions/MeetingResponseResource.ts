@@ -8,6 +8,7 @@ import {
 class MeetingResponseResource {
   /**
    * Link to a meeting resource
+   * Format: uri
    */
   uri?: string;
 

@@ -1,3 +1,4 @@
+// Request body for operation revokeToken
 class RevokeTokenRequest {
   /**
    */
@@ -9,6 +10,7 @@ class RevokeTokenRequest {
 
   /**
    * Active access or refresh token to be revoked
+   * Required
    */
   token?: string;
 }

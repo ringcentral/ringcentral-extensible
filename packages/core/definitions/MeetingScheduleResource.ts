@@ -7,6 +7,7 @@ class MeetingScheduleResource {
   startTime?: string;
 
   /**
+   * Format: int32
    */
   durationInMinutes?: number;
 

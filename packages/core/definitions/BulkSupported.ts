@@ -1,9 +1,11 @@
 class BulkSupported {
   /**
+   * Format: int32
    */
   maxOperations?: number;
 
   /**
+   * Format: int32
    */
   maxPayloadSize?: number;
 

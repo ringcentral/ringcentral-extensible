@@ -1,3 +1,4 @@
+// Query parameters for operation listAnsweringRules
 class ListAnsweringRulesParameters {
   /**
    * Filters custom call handling rules of the extension

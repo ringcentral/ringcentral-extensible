@@ -1,6 +1,10 @@
+import {Attachment} from './index';
+
+// Request body for operation createCustomUserGreeting
 class CreateCustomUserGreetingRequest {
   /**
    * Type of a greeting, specifying the case when the greeting is played.
+   * Required
    */
   type?:
     | 'Introductory'
@@ -18,8 +22,9 @@ class CreateCustomUserGreetingRequest {
 
   /**
    * Media file to upload
+   * Required
    */
-  binary?: string;
+  binary?: Attachment;
 }
 
 export default CreateCustomUserGreetingRequest;

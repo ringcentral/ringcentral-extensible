@@ -8,6 +8,7 @@ class SyncInfo {
   syncToken?: string;
 
   /**
+   * Format: date-time
    */
   syncTime?: string;
 

@@ -33,11 +33,13 @@ class GlipPostInfo {
 
   /**
    * Post creation datetime in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format
+   * Format: date-time
    */
   creationTime?: string;
 
   /**
    * Post last modification datetime in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format
+   * Format: date-time
    */
   lastModifiedTime?: string;
 

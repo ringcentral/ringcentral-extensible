@@ -1,3 +1,4 @@
+// Query parameters for operation readAccountPresence
 class ReadAccountPresenceParameters {
   /**
    * Whether to return detailed telephony state
@@ -11,11 +12,13 @@ class ReadAccountPresenceParameters {
 
   /**
    * Page number for account presence information
+   * Format: int32
    */
   page?: number;
 
   /**
    * Number for account presence information items per page
+   * Format: int32
    */
   perPage?: number;
 }

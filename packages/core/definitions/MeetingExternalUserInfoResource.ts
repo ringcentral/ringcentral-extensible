@@ -1,5 +1,6 @@
 class MeetingExternalUserInfoResource {
   /**
+   * Format: uri
    */
   uri?: string;
 
@@ -12,6 +13,7 @@ class MeetingExternalUserInfoResource {
   accountId?: string;
 
   /**
+   * Format: int64
    */
   userType?: number;
 
@@ -29,6 +31,7 @@ class MeetingExternalUserInfoResource {
 
   /**
    * Link to the user's personal meeting room, used as an alias for personal meeting URL (with personal meeting ID)
+   * Example: https://meetings.ringcentral.com/my/jsmith
    */
   personalLink?: string;
 

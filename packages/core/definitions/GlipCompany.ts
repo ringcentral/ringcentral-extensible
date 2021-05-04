@@ -1,8 +1,7 @@
 class GlipCompany {
   /**
-   * Internal identifier of an RC account/Glip company, or tilde (~) to indicate a company the current user belongs to
+   * Internal identifier of a Glip company (RC account)
    * Required
-   * Default: ~
    */
   id?: string;
 

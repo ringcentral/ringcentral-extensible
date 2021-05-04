@@ -31,11 +31,13 @@ class GlipTeamInfo {
 
   /**
    * Team creation datetime in ISO 8601 format
+   * Format: date-time
    */
   creationTime?: string;
 
   /**
    * Team last change datetime in ISO 8601 format
+   * Format: date-time
    */
   lastModifiedTime?: string;
 }

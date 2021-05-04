@@ -1,6 +1,7 @@
 class Roles {
   /**
    * Link to a role
+   * Format: uri
    */
   uri?: string;
 

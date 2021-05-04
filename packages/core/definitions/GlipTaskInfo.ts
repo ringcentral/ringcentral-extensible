@@ -13,11 +13,13 @@ class GlipTaskInfo {
 
   /**
    * Datetime of the task creation in UTC time zone.
+   * Format: datetime
    */
   creationTime?: string;
 
   /**
    * Datetime of the last modification of the task in UTC time zone.
+   * Format: datetime
    */
   lastModifiedTime?: string;
 
@@ -62,11 +64,13 @@ class GlipTaskInfo {
 
   /**
    * Task start date
+   * Format: date-time
    */
   startDate?: string;
 
   /**
    * Task due date/time
+   * Format: date-time
    */
   dueDate?: string;
 

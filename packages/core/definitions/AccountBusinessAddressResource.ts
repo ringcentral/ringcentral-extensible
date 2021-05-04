@@ -2,6 +2,7 @@ import {ContactBusinessAddressInfo} from './index';
 
 class AccountBusinessAddressResource {
   /**
+   * Format: uri
    */
   uri?: string;
 

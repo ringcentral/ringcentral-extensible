@@ -20,11 +20,13 @@ class GlipUpdateTask {
 
   /**
    * Task start date in UTC time zone
+   * Format: date-time
    */
   startDate?: string;
 
   /**
    * Task due date/time in UTC time zone
+   * Format: date-time
    */
   dueDate?: string;
 

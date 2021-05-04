@@ -2,18 +2,21 @@ class PartySuperviseRequest {
   /**
    * Supervising mode
    * Required
+   * Example: Listen
    */
   mode?: 'Listen';
 
   /**
    * Internal identifier of a supervisor's device
    * Required
+   * Example: 191888004
    */
   supervisorDeviceId?: string;
 
   /**
    * Mailbox ID of a user that will be monitored
    * Required
+   * Example: 400378008008
    */
   agentExtensionId?: string;
 

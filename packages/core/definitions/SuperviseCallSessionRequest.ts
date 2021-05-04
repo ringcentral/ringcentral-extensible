@@ -2,17 +2,20 @@ class SuperviseCallSessionRequest {
   /**
    * Supervising mode
    * Required
+   * Example: Listen
    */
   mode?: 'Listen';
 
   /**
    * Internal identifier of a supervisor's device which will be used for call session monitoring
    * Required
+   * Example: 191888004
    */
   supervisorDeviceId?: string;
 
   /**
    * Extension identifier of the user that will be monitored
+   * Example: 400378008008
    */
   agentExtensionId?: string;
 

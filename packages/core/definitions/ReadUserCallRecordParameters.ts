@@ -1,3 +1,4 @@
+// Query parameters for operation readUserCallRecord
 class ReadUserCallRecordParameters {
   /**
    * View of call records. The view value specified for 'FSync' will also be applied for 'ISync' by default, since it cannot be changed for ISync

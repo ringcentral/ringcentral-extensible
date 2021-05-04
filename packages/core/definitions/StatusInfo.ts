@@ -4,6 +4,7 @@ class StatusInfo {
   reason?: string;
 
   /**
+   * Format: date-time
    */
   till?: string;
 

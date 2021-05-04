@@ -1,3 +1,4 @@
+// Query parameters for operation listEmergencyLocations
 class ListEmergencyLocationsParameters {
   /**
    * Filters entries containing the specified substring in address and name fields. The characters range is 0-64; not case-sensitive. If empty then the filter is ignored

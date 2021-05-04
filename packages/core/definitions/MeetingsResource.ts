@@ -6,6 +6,7 @@ import {
 
 class MeetingsResource {
   /**
+   * Format: uri
    */
   uri?: string;
 

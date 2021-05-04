@@ -2,6 +2,7 @@
 class MakeCallOutCallerInfoRequestFrom {
   /**
    * Internal identifier of a device
+   * Example: 59474004
    */
   deviceId?: string;
 }

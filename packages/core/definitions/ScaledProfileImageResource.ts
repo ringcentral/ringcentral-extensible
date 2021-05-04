@@ -1,5 +1,6 @@
 class ScaledProfileImageResource {
   /**
+   * Format: uri
    */
   uri?: string;
 }

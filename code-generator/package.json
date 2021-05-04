@@ -3,8 +3,8 @@
   "private": true,
   "license": "MIT",
   "scripts": {
-    "definitions": "ts-node -r dotenv-override-true/config ./definitions.ts",
-    "paths": "ts-node -r dotenv-override-true/config ./paths.ts",
+    "definitions": "ts-node -r dotenv-override-true/config ./src/definitions.ts",
+    "paths": "ts-node -r dotenv-override-true/config ./src/paths.ts",
     "ev": "ts-node -r dotenv-override-true/config ./engage-voice.ts"
   },
   "dependencies": {
@@ -15,6 +15,7 @@
     "js-yaml": "^4.1.0",
     "lower-case-first": "^2.0.2",
     "ramda": "^0.27.1",
+    "ringcentral-open-api-parser": "^0.4.2",
     "title-case": "^3.0.3",
     "ts-node": "^9.1.1"
   }

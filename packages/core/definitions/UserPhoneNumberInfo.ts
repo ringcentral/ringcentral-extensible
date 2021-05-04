@@ -53,6 +53,11 @@ class UserPhoneNumberInfo {
   phoneNumber?: string;
 
   /**
+   * Specifies if the number is primary, i.e. displayed as 'main number' and called by default
+   */
+  primary?: boolean;
+
+  /**
    * Status of a phone number. If the value is 'Normal', the phone number is ready to be used. Otherwise it is an external number not yet ported to RingCentral
    */
   status?: string;

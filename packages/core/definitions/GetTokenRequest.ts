@@ -1,3 +1,4 @@
+// Request body for operation getToken
 class GetTokenRequest {
   /**
    * Phone number linked to an account or extension in E.164 format with or without leading '+' sign
@@ -6,6 +7,7 @@ class GetTokenRequest {
 
   /**
    * User's password
+   * Format: password
    */
   password?: string;
 
@@ -39,6 +41,7 @@ class GetTokenRequest {
    * Access token lifetime in seconds
    * Maximum: 3600
    * Minimum: 600
+   * Format: int64
    * Default: 3600
    */
   access_token_ttl?: number;
@@ -46,6 +49,7 @@ class GetTokenRequest {
   /**
    * Refresh token lifetime in seconds
    * Maximum: 604800
+   * Format: int64
    * Default: 604800
    */
   refresh_token_ttl?: number;

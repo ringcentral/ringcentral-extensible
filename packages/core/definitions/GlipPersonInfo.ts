@@ -32,11 +32,13 @@ class GlipPersonInfo {
 
   /**
    * Time of creation in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format
+   * Format: date-time
    */
   creationTime?: string;
 
   /**
    * Time of the last modification in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format
+   * Format: date-time
    */
   lastModifiedTime?: string;
 }

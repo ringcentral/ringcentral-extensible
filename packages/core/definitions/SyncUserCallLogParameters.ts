@@ -1,3 +1,4 @@
+// Query parameters for operation syncUserCallLog
 class SyncUserCallLogParameters {
   /**
    * Type of synchronization
@@ -12,6 +13,7 @@ class SyncUserCallLogParameters {
 
   /**
    * The start datetime for resulting records in (ISO 8601)[https://en.wikipedia.org/wiki/ISO_8601] format including timezone, for example 2016-03-10T18:07:52.534Z. The default value is the current moment
+   * Format: date-time
    */
   dateFrom?: string;
 

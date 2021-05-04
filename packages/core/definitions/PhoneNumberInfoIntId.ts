@@ -4,6 +4,7 @@ import {PhoneNumberCountryInfo, DeviceProvisioningExtensionInfo} from './index';
 class PhoneNumberInfoIntId {
   /**
    * Internal identifier of a phone number
+   * Format: int64
    */
   id?: number;
 

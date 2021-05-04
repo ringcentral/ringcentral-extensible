@@ -1,3 +1,4 @@
+// Query parameters for operation listStandardGreetings
 class ListStandardGreetingsParameters {
   /**
    * Indicates the page number to retrieve. Only positive number values are accepted.

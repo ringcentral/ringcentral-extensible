@@ -12,6 +12,7 @@ import {
 // Information on an extension to which the phone number is assigned
 class PhoneNumberExtensionInfo {
   /**
+   * Format: uri
    */
   uri?: string;
 

@@ -1,3 +1,4 @@
+// Query parameters for operation listLocations
 class ListLocationsParameters {
   /**
    * Sorts results by the property specified

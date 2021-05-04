@@ -2,6 +2,7 @@ import {SubscriptionInfo} from './index';
 
 class RecordsCollectionResourceSubscriptionResponse {
   /**
+   * Format: uri
    */
   uri?: string;
 

@@ -1,5 +1,6 @@
 class DeviceTimezoneResource {
   /**
+   * Format: uri
    */
   uri?: string;
 

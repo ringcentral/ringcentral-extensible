@@ -7,6 +7,7 @@ class UserSearchResponse {
   Resources?: UserResponse[];
 
   /**
+   * Format: int64
    */
   itemsPerPage?: number;
 
@@ -15,10 +16,12 @@ class UserSearchResponse {
   schemas?: 'urn:ietf:params:scim:api:messages:2.0:ListResponse'[];
 
   /**
+   * Format: int64
    */
   startIndex?: number;
 
   /**
+   * Format: int64
    */
   totalResults?: number;
 }

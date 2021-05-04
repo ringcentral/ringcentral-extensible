@@ -1,3 +1,4 @@
+// Query parameters for operation listUserMeetingRecordings
 class ListUserMeetingRecordingsParameters {
   /**
    * Internal identifier of a meeting. Either `meetingId` or `meetingStartTime`/`meetingEndTime` can be specified

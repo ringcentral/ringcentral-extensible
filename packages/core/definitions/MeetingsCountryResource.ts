@@ -1,5 +1,6 @@
 class MeetingsCountryResource {
   /**
+   * Format: uri
    */
   uri?: string;
 

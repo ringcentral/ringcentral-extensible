@@ -2,6 +2,7 @@ import {MeetingExternalUserInfoResource, DialInNumberResource} from './index';
 
 class MeetingServiceInfoResource {
   /**
+   * Format: uri
    */
   uri?: string;
 

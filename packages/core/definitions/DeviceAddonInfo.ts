@@ -8,6 +8,7 @@ class DeviceAddonInfo {
   name?: string;
 
   /**
+   * Format: int32
    */
   count?: string;
 }

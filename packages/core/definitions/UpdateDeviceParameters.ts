@@ -1,3 +1,4 @@
+// Query parameters for operation updateDevice
 class UpdateDeviceParameters {
   /**
    */

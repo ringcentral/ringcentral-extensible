@@ -1,3 +1,4 @@
+// Query parameters for operation listExtensions
 class ListExtensionsParameters {
   /**
    * Number of extension to be retrieved
@@ -11,12 +12,14 @@ class ListExtensionsParameters {
 
   /**
    * Indicates the page number to retrieve. Only positive number values are allowed
+   * Format: int64
    * Default: 1
    */
   page?: number;
 
   /**
    * Indicates the page size (number of items)
+   * Format: int64
    * Default: 100
    */
   perPage?: number;

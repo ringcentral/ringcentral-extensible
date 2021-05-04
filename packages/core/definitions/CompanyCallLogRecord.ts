@@ -189,6 +189,7 @@ class CompanyCallLogRecord {
 
   /**
    * The call start datetime in (ISO 8601)[https://en.wikipedia.org/wiki/ISO_8601] format including timezone, for example 2016-03-10T18:07:52.534Z
+   * Format: date-time
    */
   startTime?: string;
 
@@ -217,6 +218,7 @@ class CompanyCallLogRecord {
 
   /**
    * For 'Detailed' view only. The datetime when the call log record was modified in (ISO 8601)[https://en.wikipedia.org/wiki/ISO_8601] format including timezone, for example 2016-03-10T18:07:52.534Z
+   * Format: date-time
    */
   lastModifiedTime?: string;
 }

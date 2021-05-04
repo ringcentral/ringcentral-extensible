@@ -1,5 +1,6 @@
 class MeetingsTimezoneResource {
   /**
+   * Format: uri
    */
   uri?: string;
 

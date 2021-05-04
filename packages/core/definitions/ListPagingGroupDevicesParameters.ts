@@ -1,3 +1,4 @@
+// Query parameters for operation listPagingGroupDevices
 class ListPagingGroupDevicesParameters {
   /**
    * Indicates the page number to retrieve. Only positive number values are accepted

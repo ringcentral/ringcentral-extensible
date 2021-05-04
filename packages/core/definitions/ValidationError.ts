@@ -15,10 +15,12 @@ class ValidationError {
   parameterName?: string;
 
   /**
+   * Example: Sites
    */
   featureName?: string;
 
   /**
+   * Example: SoftPhoneAutoLocationUpdate
    */
   parameterValue?: string;
 }

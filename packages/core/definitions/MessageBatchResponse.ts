@@ -2,37 +2,44 @@
 class MessageBatchResponse {
   /**
    * Unique identifier of the message batch
+   * Example: 12345
    */
   id?: string;
 
   /**
    * Phone number in [E.164](https://www.itu.int/rec/T-REC-E.164-201011-I) format from which the messages are going to be sent
    * Required
+   * Example: 15551234567
    */
   from?: string;
 
   /**
    * Total number of messages in the accepted batch
+   * Example: 5
    */
   batchSize?: number;
 
   /**
    * Total number of messages currently processed in the batch
+   * Example: 1
    */
   processedCount?: number;
 
   /**
    * The last time the batch was processed.
+   * Format: date-time
    */
   lastModifiedTime?: string;
 
   /**
    * Current status of a message batch
+   * Example: Processing
    */
   status?: 'Processing' | 'Sent' | 'Completed';
 
   /**
    * The time at which the batch was created
+   * Format: date-time
    */
   creationTime?: string;
 }

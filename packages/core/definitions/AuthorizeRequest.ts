@@ -1,16 +1,20 @@
+// Request body for operation authorize
 class AuthorizeRequest {
   /**
    * Determines authorization flow: **code** - Authorization Code, **token** - Implicit Grant
+   * Required
    */
   response_type?: 'code' | 'token';
 
   /**
    * This is a callback URI which determines where the response is sent. The value of this parameter must exactly match one of the URIs you have provided for your app upon registration
+   * Required
    */
   redirect_uri?: string;
 
   /**
    * Identifier (key) of a client application
+   * Required
    */
   client_id?: string;
 

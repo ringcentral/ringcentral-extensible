@@ -1,3 +1,4 @@
+// Query parameters for operation syncMessages
 class SyncMessagesParameters {
   /**
    * Conversation identifier for the resulting messages. Meaningful for SMS and Pager messages only.
@@ -6,11 +7,13 @@ class SyncMessagesParameters {
 
   /**
    * The start datetime for resulting messages in ISO 8601 format including timezone, for example 2016-03-10T18:07:52.534Z. The default value is dateTo minus 24 hours
+   * Format: date-time
    */
   dateFrom?: string;
 
   /**
    * The end datetime for resulting messages in ISO 8601 format including timezone, for example 2016-03-10T18:07:52.534Z. The default value is current time
+   * Format: date-time
    */
   dateTo?: string;
 

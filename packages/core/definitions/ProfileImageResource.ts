@@ -2,6 +2,7 @@ import {ScaledProfileImageResource} from './index';
 
 class ProfileImageResource {
   /**
+   * Format: uri
    */
   uri?: string;
 
@@ -14,6 +15,7 @@ class ProfileImageResource {
   contentType?: string;
 
   /**
+   * Format: date-time
    */
   lastModified?: string;
 

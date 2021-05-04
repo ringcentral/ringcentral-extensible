@@ -7,6 +7,7 @@ class ASGErrorResponse {
 
   /**
    * Human-readable description of an error. Not suitable for end users
+   * Example: AccountId 1234 is invalid
    */
   description?: string;
 }

@@ -18,6 +18,7 @@ class MeetingRecordingInfo {
   contentType?: 'video/mp4' | 'audio/m4a' | 'text/plain';
 
   /**
+   * Format: int32
    */
   size?: number;
 

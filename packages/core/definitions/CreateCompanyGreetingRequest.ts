@@ -1,6 +1,10 @@
+import {Attachment} from './index';
+
+// Request body for operation createCompanyGreeting
 class CreateCompanyGreetingRequest {
   /**
    * Type of a greeting, specifying the case when the greeting is played.
+   * Required
    */
   type?: 'Company' | 'StartRecording' | 'StopRecording' | 'AutomaticRecording';
 
@@ -16,8 +20,9 @@ class CreateCompanyGreetingRequest {
 
   /**
    * Media file to upload
+   * Required
    */
-  binary?: string;
+  binary?: Attachment;
 }
 
 export default CreateCompanyGreetingRequest;

@@ -2,6 +2,7 @@ import {PersonalContactResource, SyncInfo} from './index';
 
 class AddressBookSync {
   /**
+   * Format: uri
    */
   uri?: string;
 
@@ -14,10 +15,12 @@ class AddressBookSync {
   syncInfo?: SyncInfo;
 
   /**
+   * Format: int64
    */
   nextPageId?: number;
 
   /**
+   * Format: uri
    */
   nextPageUri?: string;
 }

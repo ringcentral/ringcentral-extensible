@@ -2,6 +2,7 @@ import {ActivePermissionResource} from './index';
 
 class AuthProfileCheckResource {
   /**
+   * Format: uri
    */
   uri?: string;
 

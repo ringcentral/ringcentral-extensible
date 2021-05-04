@@ -1,6 +1,7 @@
 class SearchRequest {
   /**
    * page size
+   * Format: int32
    */
   count?: number;
 
@@ -15,6 +16,7 @@ class SearchRequest {
 
   /**
    * start index (1-based)
+   * Format: int32
    */
   startIndex?: number;
 }

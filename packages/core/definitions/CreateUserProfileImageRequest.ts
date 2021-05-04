@@ -1,7 +1,11 @@
+import {Attachment} from './index';
+
+// Request body for operation createUserProfileImage
 class CreateUserProfileImageRequest {
   /**
+   * Required
    */
-  image?: string;
+  image?: Attachment;
 }
 
 export default CreateUserProfileImageRequest;

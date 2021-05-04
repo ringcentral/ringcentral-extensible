@@ -1,10 +1,12 @@
 // resource metadata
 class Meta {
   /**
+   * Format: date-time
    */
   created?: string;
 
   /**
+   * Format: date-time
    */
   lastModified?: string;
 

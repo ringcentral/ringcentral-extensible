@@ -1,5 +1,6 @@
 class MeetingsNavigationInfoUri {
   /**
+   * Format: uri
    */
   uri?: string;
 }

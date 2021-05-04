@@ -2,6 +2,7 @@ import {Permission} from './index';
 
 class ExtensionPermissionsResource {
   /**
+   * Format: uri
    */
   uri?: string;
 

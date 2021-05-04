@@ -18,6 +18,7 @@ class GlipTaskRecurrenceInfo {
 
   /**
    * End date of periodic task
+   * Format: date-time
    */
   endingOn?: string;
 }

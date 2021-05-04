@@ -1,3 +1,4 @@
+// Query parameters for operation listAutomaticLocationUpdatesUsers
 class ListAutomaticLocationUpdatesUsersParameters {
   /**
    * Extension type. Multiple values are supported

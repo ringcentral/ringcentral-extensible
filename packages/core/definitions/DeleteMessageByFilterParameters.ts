@@ -1,3 +1,4 @@
+// Query parameters for operation deleteMessageByFilter
 class DeleteMessageByFilterParameters {
   /**
    */
@@ -5,6 +6,7 @@ class DeleteMessageByFilterParameters {
 
   /**
    * Messages received earlier then the date specified will be deleted. The default value is current datetime
+   * Format: date-time
    */
   dateTo?: string;
 

@@ -7,6 +7,7 @@ import {
 class FaxResponse {
   /**
    * Internal identifier of a message
+   * Format: int64
    */
   id?: number;
 
@@ -31,6 +32,7 @@ class FaxResponse {
 
   /**
    * Message creation datetime in ISO 8601 format including timezone, for example 2016-03-10T18:07:52.534Z
+   * Format: date-time
    */
   creationTime?: string;
 
@@ -76,6 +78,7 @@ class FaxResponse {
 
   /**
    * Datetime when the message was modified on server in ISO 8601 format including timezone, for example 2016-03-10T18:07:52.534Z
+   * Format: date-time
    */
   lastModifiedTime?: string;
 
