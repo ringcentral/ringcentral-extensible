@@ -8,15 +8,11 @@
     "ev": "ts-node -r dotenv-override-true/config ./engage-voice.ts"
   },
   "dependencies": {
-    "@types/js-yaml": "^4.0.0",
     "@types/ramda": "^0.27.40",
     "change-case": "^4.1.2",
     "dotenv-override-true": "^6.2.2",
-    "js-yaml": "^4.1.0",
-    "lower-case-first": "^2.0.2",
     "ramda": "^0.27.1",
-    "ringcentral-open-api-parser": "^0.4.2",
-    "title-case": "^3.0.3",
+    "ringcentral-open-api-parser": "^0.4.4",
     "ts-node": "^9.1.1"
   }
 }
