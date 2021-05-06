@@ -1,18 +1,18 @@
 import {RestRequestConfig} from '../../../../../Rest';
 import {
-  UserCallLogResponse,
   ReadUserCallLogParameters,
+  UserCallLogResponse,
   DeleteUserCallLogParameters,
-  UserCallLogRecord,
   ReadUserCallRecordParameters,
+  UserCallLogRecord,
 } from '../../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../../..';
 
 class Index {
   rc: RingCentral;
-  callRecordId: string | null;
   parent: Parent;
+  callRecordId: string | null;
 
   constructor(parent: Parent, callRecordId: string | null = null) {
     this.parent = parent;
@@ -24,52 +24,60 @@ class Index {
     if (withParameter && this.callRecordId !== null) {
       return `${this.parent.path()}/call-log/${this.callRecordId}`;
     }
-
     return `${this.parent.path()}/call-log`;
   }
 
   /**
-   * Operation: Get User Call Log Records
+   * Returns call log records filtered by parameters specified.
+   * HTTP Method: get
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/call-log
    * Rate Limit Group: Heavy
-   * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log
+   * App Permission: ReadCallLog
+   * User Permission: ReadCallLog
    */
   async list(
     queryParams?: ReadUserCallLogParameters,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<UserCallLogResponse> {
     const r = await this.rc.get<UserCallLogResponse>(
       this.path(false),
       queryParams,
-      config
+      restRequestConfig
     );
     return r.data;
   }
 
   /**
-   * Operation: Delete User Call Log
+   * Deletes filtered call log records.
+   * HTTP Method: delete
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/call-log
    * Rate Limit Group: Heavy
-   * Http delete /restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log
+   * App Permission: EditCallLog
+   * User Permission: EditCallLog
    */
   async delete(
     queryParams?: DeleteUserCallLogParameters,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<string> {
     const r = await this.rc.delete<string>(
       this.path(false),
       queryParams,
-      config
+      restRequestConfig
     );
     return r.data;
   }
 
   /**
-   * Operation: Get User Call Record
+   * Returns call log records by ID.
+   * HTTP Method: get
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/call-log/{callRecordId}
    * Rate Limit Group: Heavy
-   * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log/{callRecordId}
+   * App Permission: ReadCallLog
+   * User Permission: ReadCallLog
    */
   async get(
     queryParams?: ReadUserCallRecordParameters,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<UserCallLogRecord> {
     if (this.callRecordId === null) {
       throw new Error('callRecordId must be specified.');
@@ -78,7 +86,7 @@ class Index {
     const r = await this.rc.get<UserCallLogRecord>(
       this.path(),
       queryParams,
-      config
+      restRequestConfig
     );
     return r.data;
   }

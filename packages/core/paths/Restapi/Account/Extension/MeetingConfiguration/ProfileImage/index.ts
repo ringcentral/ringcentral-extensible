@@ -1,6 +1,6 @@
+import Utils from '../../../../../../Utils';
 import {RestRequestConfig} from '../../../../../../Rest';
 import {CreateUserMeetingProfileImageRequest} from '../../../../../../definitions';
-import Utils from '../../../../../../Utils';
 import Parent from '..';
 import RingCentral from '../../../../../..';
 
@@ -18,20 +18,21 @@ class Index {
   }
 
   /**
-   * Operation: Upload User Meeting Profile Image
+   * Uploads profile picture for user meetings.
+   * HTTP Method: post
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/meeting-configuration/profile-image
    * Rate Limit Group: Light
-   * Http post /restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting-configuration/profile-image
    */
   async post(
     createUserMeetingProfileImageRequest: CreateUserMeetingProfileImageRequest,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<string> {
     const formData = Utils.getFormData(createUserMeetingProfileImageRequest);
     const r = await this.rc.post<string>(
       this.path(),
       formData,
       undefined,
-      config
+      restRequestConfig
     );
     return r.data;
   }

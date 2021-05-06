@@ -17,19 +17,20 @@ class Index {
   }
 
   /**
-   * Operation: Complete Task
+   * Completes a task in the specified chat.
+   * HTTP Method: post
+   * Endpoint: /restapi/{apiVersion}/glip/tasks/{taskId}/complete
    * Rate Limit Group: Medium
-   * Http post /restapi/v1.0/glip/tasks/{taskId}/complete
    */
   async post(
     glipCompleteTask: GlipCompleteTask,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<string> {
     const r = await this.rc.post<string>(
       this.path(),
       glipCompleteTask,
       undefined,
-      config
+      restRequestConfig
     );
     return r.data;
   }

@@ -1,7 +1,7 @@
 import {RestRequestConfig} from '../../../../Rest';
 import {
-  AccountCallLogSyncResponse,
   SyncAccountCallLogParameters,
+  AccountCallLogSyncResponse,
 } from '../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../..';
@@ -20,18 +20,21 @@ class Index {
   }
 
   /**
-   * Operation: Sync Company Call Log
+   * Synchronizes company call log records.
+   * HTTP Method: get
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/call-log-sync
    * Rate Limit Group: Heavy
-   * Http get /restapi/v1.0/account/{accountId}/call-log-sync
+   * App Permission: ReadCallLog
+   * User Permission: ReadCallLog
    */
   async get(
     queryParams?: SyncAccountCallLogParameters,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<AccountCallLogSyncResponse> {
     const r = await this.rc.get<AccountCallLogSyncResponse>(
       this.path(),
       queryParams,
-      config
+      restRequestConfig
     );
     return r.data;
   }

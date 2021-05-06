@@ -20,35 +20,41 @@ class Index {
   }
 
   /**
-   * Operation: Get Call Recording Settings
+   * Returns call recording settings.
+   * HTTP Method: get
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/call-recording
    * Rate Limit Group: Light
-   * Http get /restapi/v1.0/account/{accountId}/call-recording
+   * App Permission: ReadAccounts
+   * User Permission: ReadCompanyInfo
    */
   async get(
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<CallRecordingSettingsResource> {
     const r = await this.rc.get<CallRecordingSettingsResource>(
       this.path(),
       undefined,
-      config
+      restRequestConfig
     );
     return r.data;
   }
 
   /**
-   * Operation: Update Call Recording Settings
+   * Updates current call recording settings.
+   * HTTP Method: put
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/call-recording
    * Rate Limit Group: Medium
-   * Http put /restapi/v1.0/account/{accountId}/call-recording
+   * App Permission: EditAccounts
+   * User Permission: EditCompanyInfo
    */
   async put(
     callRecordingSettingsResource: CallRecordingSettingsResource,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<CallRecordingSettingsResource> {
     const r = await this.rc.put<CallRecordingSettingsResource>(
       this.path(),
       callRecordingSettingsResource,
       undefined,
-      config
+      restRequestConfig
     );
     return r.data;
   }

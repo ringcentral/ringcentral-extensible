@@ -20,33 +20,41 @@ class Index {
   }
 
   /**
-   * Operation: Get Company Business Hours
+   * Returns the company business hours schedule. Business hours (and After hours - all the remaining time) schedules are commonly used for setting call handling rules - `business-hours-rule` and `after-hours-rule` correspondingly.
+   * HTTP Method: get
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/business-hours
    * Rate Limit Group: Light
-   * Http get /restapi/v1.0/account/{accountId}/business-hours
+   * App Permission: ReadAccounts
+   * User Permission: ReadUserAnsweringRules
    */
-  async get(config?: RestRequestConfig): Promise<CompanyBusinessHours> {
+  async get(
+    restRequestConfig?: RestRequestConfig
+  ): Promise<CompanyBusinessHours> {
     const r = await this.rc.get<CompanyBusinessHours>(
       this.path(),
       undefined,
-      config
+      restRequestConfig
     );
     return r.data;
   }
 
   /**
-   * Operation: Update Company Business Hours
+   * Updates the company business hours schedule.
+   * HTTP Method: put
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/business-hours
    * Rate Limit Group: Medium
-   * Http put /restapi/v1.0/account/{accountId}/business-hours
+   * App Permission: EditExtensions
+   * User Permission: EditUserAnsweringRules
    */
   async put(
     companyBusinessHoursUpdateRequest: CompanyBusinessHoursUpdateRequest,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<CompanyBusinessHours> {
     const r = await this.rc.put<CompanyBusinessHours>(
       this.path(),
       companyBusinessHoursUpdateRequest,
       undefined,
-      config
+      restRequestConfig
     );
     return r.data;
   }

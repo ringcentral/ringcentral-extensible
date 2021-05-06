@@ -1,17 +1,17 @@
 import {RestRequestConfig} from '../../../../Rest';
 import {
-  AccountCallLogResponse,
   ReadCompanyCallLogParameters,
-  CompanyCallLogRecord,
+  AccountCallLogResponse,
   ReadCompanyCallRecordParameters,
+  CompanyCallLogRecord,
 } from '../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../..';
 
 class Index {
   rc: RingCentral;
-  callRecordId: string | null;
   parent: Parent;
+  callRecordId: string | null;
 
   constructor(parent: Parent, callRecordId: string | null = null) {
     this.parent = parent;
@@ -23,35 +23,40 @@ class Index {
     if (withParameter && this.callRecordId !== null) {
       return `${this.parent.path()}/call-log/${this.callRecordId}`;
     }
-
     return `${this.parent.path()}/call-log`;
   }
 
   /**
-   * Operation: Get Company Call Log Records
+   * Returns call log records filtered by parameters specified.
+   * HTTP Method: get
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/call-log
    * Rate Limit Group: Heavy
-   * Http get /restapi/v1.0/account/{accountId}/call-log
+   * App Permission: ReadCallLog
+   * User Permission: FullCompanyCallLog
    */
   async list(
     queryParams?: ReadCompanyCallLogParameters,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<AccountCallLogResponse> {
     const r = await this.rc.get<AccountCallLogResponse>(
       this.path(false),
       queryParams,
-      config
+      restRequestConfig
     );
     return r.data;
   }
 
   /**
-   * Operation: Get Company Call Log Record(s)
+   * Returns individual call log record(s) by ID(s). Batch request is supported.
+   * HTTP Method: get
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/call-log/{callRecordId}
    * Rate Limit Group: Heavy
-   * Http get /restapi/v1.0/account/{accountId}/call-log/{callRecordId}
+   * App Permission: ReadCallLog
+   * User Permission: FullCompanyCallLog
    */
   async get(
     queryParams?: ReadCompanyCallRecordParameters,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<CompanyCallLogRecord> {
     if (this.callRecordId === null) {
       throw new Error('callRecordId must be specified.');
@@ -60,7 +65,7 @@ class Index {
     const r = await this.rc.get<CompanyCallLogRecord>(
       this.path(),
       queryParams,
-      config
+      restRequestConfig
     );
     return r.data;
   }

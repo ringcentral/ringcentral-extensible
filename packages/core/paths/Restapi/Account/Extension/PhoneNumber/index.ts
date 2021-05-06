@@ -1,7 +1,7 @@
 import {RestRequestConfig} from '../../../../../Rest';
 import {
-  GetExtensionPhoneNumbersResponse,
   ListExtensionPhoneNumbersParameters,
+  GetExtensionPhoneNumbersResponse,
 } from '../../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../../..';
@@ -20,18 +20,21 @@ class Index {
   }
 
   /**
-   * Operation: Get Extension Phone Number List
+   * Returns the list of phone numbers that are used by a particular extension, and can be filtered by the phone number type. The returned list contains all numbers which are directly mapped to a given extension plus the features and also company-level numbers which may be used when performing different operations on behalf of this extension.
+   * HTTP Method: get
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/phone-number
    * Rate Limit Group: Light
-   * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/phone-number
+   * App Permission: ReadAccounts
+   * User Permission: ReadUserPhoneNumbers
    */
   async get(
     queryParams?: ListExtensionPhoneNumbersParameters,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<GetExtensionPhoneNumbersResponse> {
     const r = await this.rc.get<GetExtensionPhoneNumbersResponse>(
       this.path(),
       queryParams,
-      config
+      restRequestConfig
     );
     return r.data;
   }

@@ -1,8 +1,8 @@
 import {RestRequestConfig} from '../../../../../Rest';
 import {
   NetworksList,
-  NetworkInfo,
   CreateNetworkRequest,
+  NetworkInfo,
   UpdateNetworkRequest,
 } from '../../../../../definitions';
 import Parent from '..';
@@ -10,8 +10,8 @@ import RingCentral from '../../../../..';
 
 class Index {
   rc: RingCentral;
-  networkId: string | null;
   parent: Parent;
+  networkId: string | null;
 
   constructor(parent: Parent, networkId: string | null = null) {
     this.parent = parent;
@@ -23,64 +23,79 @@ class Index {
     if (withParameter && this.networkId !== null) {
       return `${this.parent.path()}/networks/${this.networkId}`;
     }
-
     return `${this.parent.path()}/networks`;
   }
 
   /**
-   * Operation: Get Network Map
+   * Returns corporate networks map with emergency addresses assigned to the current account.
+   * HTTP Method: get
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/networks
    * Rate Limit Group: Heavy
-   * Http get /restapi/v1.0/account/{accountId}/emergency-address-auto-update/networks
+   * App Permission: EditAccounts
+   * User Permission: ConfigureEmergencyMaps
    */
-  async list(config?: RestRequestConfig): Promise<NetworksList> {
+  async list(restRequestConfig?: RestRequestConfig): Promise<NetworksList> {
     const r = await this.rc.get<NetworksList>(
       this.path(false),
       undefined,
-      config
+      restRequestConfig
     );
     return r.data;
   }
 
   /**
-   * Operation: Create Network
+   * Creates a new network in corporate ethernet map for assignment of emergency addresses to network access points.
+   * HTTP Method: post
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/networks
    * Rate Limit Group: Heavy
-   * Http post /restapi/v1.0/account/{accountId}/emergency-address-auto-update/networks
+   * App Permission: EditAccounts
+   * User Permission: ConfigureEmergencyMaps
    */
   async post(
     createNetworkRequest: CreateNetworkRequest,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<NetworkInfo> {
     const r = await this.rc.post<NetworkInfo>(
       this.path(false),
       createNetworkRequest,
       undefined,
-      config
+      restRequestConfig
     );
     return r.data;
   }
 
   /**
-   * Operation: Get Network
+   * Returns the specified network with emergency addresses assigned to the current account.
+   * HTTP Method: get
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/networks/{networkId}
    * Rate Limit Group: Medium
-   * Http get /restapi/v1.0/account/{accountId}/emergency-address-auto-update/networks/{networkId}
+   * App Permission: EditAccounts
+   * User Permission: ConfigureEmergencyMaps
    */
-  async get(config?: RestRequestConfig): Promise<NetworkInfo> {
+  async get(restRequestConfig?: RestRequestConfig): Promise<NetworkInfo> {
     if (this.networkId === null) {
       throw new Error('networkId must be specified.');
     }
 
-    const r = await this.rc.get<NetworkInfo>(this.path(), undefined, config);
+    const r = await this.rc.get<NetworkInfo>(
+      this.path(),
+      undefined,
+      restRequestConfig
+    );
     return r.data;
   }
 
   /**
-   * Operation: Update Network
+   * Updates network in corporate ethernet map for assignment of emergency addresses to network access points.
+   * HTTP Method: put
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/networks/{networkId}
    * Rate Limit Group: Heavy
-   * Http put /restapi/v1.0/account/{accountId}/emergency-address-auto-update/networks/{networkId}
+   * App Permission: EditAccounts
+   * User Permission: ConfigureEmergencyMaps
    */
   async put(
     updateNetworkRequest: UpdateNetworkRequest,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<string> {
     if (this.networkId === null) {
       throw new Error('networkId must be specified.');
@@ -90,22 +105,29 @@ class Index {
       this.path(),
       updateNetworkRequest,
       undefined,
-      config
+      restRequestConfig
     );
     return r.data;
   }
 
   /**
-   * Operation: Delete Network
+   * Deletes network(s) in corporate ethernet map for Automatic Location Updates feature.
+   * HTTP Method: delete
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/networks/{networkId}
    * Rate Limit Group: Heavy
-   * Http delete /restapi/v1.0/account/{accountId}/emergency-address-auto-update/networks/{networkId}
+   * App Permission: EditAccounts
+   * User Permission: ConfigureEmergencyMaps
    */
-  async delete(config?: RestRequestConfig): Promise<string> {
+  async delete(restRequestConfig?: RestRequestConfig): Promise<string> {
     if (this.networkId === null) {
       throw new Error('networkId must be specified.');
     }
 
-    const r = await this.rc.delete<string>(this.path(), undefined, config);
+    const r = await this.rc.delete<string>(
+      this.path(),
+      undefined,
+      restRequestConfig
+    );
     return r.data;
   }
 }

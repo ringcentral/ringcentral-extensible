@@ -1,5 +1,5 @@
 import {RestRequestConfig} from '../../../../../../../Rest';
-import {CallParty, AddPartyRequest} from '../../../../../../../definitions';
+import {AddPartyRequest, CallParty} from '../../../../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../../../../..';
 
@@ -17,19 +17,21 @@ class Index {
   }
 
   /**
-   * Operation: Bring-In Call Party
+   * Adds a new party to the call session by bringing-in an established SIP call connection. The maximum number of parties to bring-in is 10; only 1 call party can be added per request. Currently the method is supported for sessions of 'Conference' origin only.
+   * HTTP Method: post
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/bring-in
    * Rate Limit Group: Light
-   * Http post /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/bring-in
+   * App Permission: CallControl
    */
   async post(
     addPartyRequest: AddPartyRequest,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<CallParty> {
     const r = await this.rc.post<CallParty>(
       this.path(),
       addPartyRequest,
       undefined,
-      config
+      restRequestConfig
     );
     return r.data;
   }

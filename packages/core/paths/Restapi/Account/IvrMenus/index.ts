@@ -5,8 +5,8 @@ import RingCentral from '../../../..';
 
 class Index {
   rc: RingCentral;
-  ivrMenuId: string | null;
   parent: Parent;
+  ivrMenuId: string | null;
 
   constructor(parent: Parent, ivrMenuId: string | null = null) {
     this.parent = parent;
@@ -18,50 +18,62 @@ class Index {
     if (withParameter && this.ivrMenuId !== null) {
       return `${this.parent.path()}/ivr-menus/${this.ivrMenuId}`;
     }
-
     return `${this.parent.path()}/ivr-menus`;
   }
 
   /**
-   * Operation: Create IVR Menu
+   * Creates a company IVR menu.
+   * HTTP Method: post
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/ivr-menus
    * Rate Limit Group: Heavy
-   * Http post /restapi/v1.0/account/{accountId}/ivr-menus
+   * App Permission: EditAccounts
+   * User Permission: AutoReceptionist
    */
   async post(
     iVRMenuInfo: IVRMenuInfo,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<IVRMenuInfo> {
     const r = await this.rc.post<IVRMenuInfo>(
       this.path(false),
       iVRMenuInfo,
       undefined,
-      config
+      restRequestConfig
     );
     return r.data;
   }
 
   /**
-   * Operation: Get IVR Menu
+   * Returns a company IVR menu by ID.
+   * HTTP Method: get
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/ivr-menus/{ivrMenuId}
    * Rate Limit Group: Medium
-   * Http get /restapi/v1.0/account/{accountId}/ivr-menus/{ivrMenuId}
+   * App Permission: ReadAccounts
+   * User Permission: AutoReceptionist
    */
-  async get(config?: RestRequestConfig): Promise<IVRMenuInfo> {
+  async get(restRequestConfig?: RestRequestConfig): Promise<IVRMenuInfo> {
     if (this.ivrMenuId === null) {
       throw new Error('ivrMenuId must be specified.');
     }
 
-    const r = await this.rc.get<IVRMenuInfo>(this.path(), undefined, config);
+    const r = await this.rc.get<IVRMenuInfo>(
+      this.path(),
+      undefined,
+      restRequestConfig
+    );
     return r.data;
   }
 
   /**
-   * Operation: Update IVR Menu
+   * Updates a company IVR menu by ID.
+   * HTTP Method: put
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/ivr-menus/{ivrMenuId}
    * Rate Limit Group: Medium
-   * Http put /restapi/v1.0/account/{accountId}/ivr-menus/{ivrMenuId}
+   * App Permission: ReadAccounts
+   * User Permission: AutoReceptionist
    */
   async put(
     iVRMenuInfo: IVRMenuInfo,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<IVRMenuInfo> {
     if (this.ivrMenuId === null) {
       throw new Error('ivrMenuId must be specified.');
@@ -71,7 +83,7 @@ class Index {
       this.path(),
       iVRMenuInfo,
       undefined,
-      config
+      restRequestConfig
     );
     return r.data;
   }

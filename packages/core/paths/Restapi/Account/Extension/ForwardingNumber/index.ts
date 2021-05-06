@@ -1,9 +1,9 @@
 import {RestRequestConfig} from '../../../../../Rest';
 import {
-  GetExtensionForwardingNumberListResponse,
   ListForwardingNumbersParameters,
-  ForwardingNumberInfo,
+  GetExtensionForwardingNumberListResponse,
   CreateForwardingNumberRequest,
+  ForwardingNumberInfo,
   UpdateForwardingNumberRequest,
 } from '../../../../../definitions';
 import Parent from '..';
@@ -11,8 +11,8 @@ import RingCentral from '../../../../..';
 
 class Index {
   rc: RingCentral;
-  forwardingNumberId: string | null;
   parent: Parent;
+  forwardingNumberId: string | null;
 
   constructor(parent: Parent, forwardingNumberId: string | null = null) {
     this.parent = parent;
@@ -26,51 +26,61 @@ class Index {
         this.forwardingNumberId
       }`;
     }
-
     return `${this.parent.path()}/forwarding-number`;
   }
 
   /**
-   * Operation: Get Forwarding Number List
+   * Returns the list of extension phone numbers used for call forwarding and call flip. The returned list contains all the extension phone numbers used for call forwarding and call flip.
+   * HTTP Method: get
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/forwarding-number
    * Rate Limit Group: Light
-   * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number
+   * App Permission: ReadAccounts
+   * User Permission: ReadUserForwardingFlipNumbers
    */
   async list(
     queryParams?: ListForwardingNumbersParameters,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<GetExtensionForwardingNumberListResponse> {
     const r = await this.rc.get<GetExtensionForwardingNumberListResponse>(
       this.path(false),
       queryParams,
-      config
+      restRequestConfig
     );
     return r.data;
   }
 
   /**
-   * Operation: Create Forwarding Number
+   * Adds a new forwarding number to the forwarding number list.
+   * HTTP Method: post
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/forwarding-number
    * Rate Limit Group: Medium
-   * Http post /restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number
+   * App Permission: EditExtensions
+   * User Permission: EditUserForwardingFlipNumbers
    */
   async post(
     createForwardingNumberRequest: CreateForwardingNumberRequest,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<ForwardingNumberInfo> {
     const r = await this.rc.post<ForwardingNumberInfo>(
       this.path(false),
       createForwardingNumberRequest,
       undefined,
-      config
+      restRequestConfig
     );
     return r.data;
   }
 
   /**
-   * Operation: Get Forwarding Number
+   * Returns a specific forwarding number.
+   * HTTP Method: get
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/forwarding-number/{forwardingNumberId}
    * Rate Limit Group: Light
-   * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number/{forwardingNumberId}
+   * App Permission: ReadAccounts
+   * User Permission: ReadUserForwardingFlipNumbers
    */
-  async get(config?: RestRequestConfig): Promise<ForwardingNumberInfo> {
+  async get(
+    restRequestConfig?: RestRequestConfig
+  ): Promise<ForwardingNumberInfo> {
     if (this.forwardingNumberId === null) {
       throw new Error('forwardingNumberId must be specified.');
     }
@@ -78,19 +88,22 @@ class Index {
     const r = await this.rc.get<ForwardingNumberInfo>(
       this.path(),
       undefined,
-      config
+      restRequestConfig
     );
     return r.data;
   }
 
   /**
-   * Operation: Update Forwarding Number
+   * Updates the existing forwarding number from the forwarding number list.
+   * HTTP Method: put
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/forwarding-number/{forwardingNumberId}
    * Rate Limit Group: Medium
-   * Http put /restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number/{forwardingNumberId}
+   * App Permission: EditExtensions
+   * User Permission: EditUserForwardingFlipNumbers
    */
   async put(
     updateForwardingNumberRequest: UpdateForwardingNumberRequest,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<ForwardingNumberInfo> {
     if (this.forwardingNumberId === null) {
       throw new Error('forwardingNumberId must be specified.');
@@ -100,22 +113,29 @@ class Index {
       this.path(),
       updateForwardingNumberRequest,
       undefined,
-      config
+      restRequestConfig
     );
     return r.data;
   }
 
   /**
-   * Operation: Delete Forwarding Number
+   * Deletes a forwarding number from the forwarding number list by its ID.
+   * HTTP Method: delete
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/forwarding-number/{forwardingNumberId}
    * Rate Limit Group: Medium
-   * Http delete /restapi/v1.0/account/{accountId}/extension/{extensionId}/forwarding-number/{forwardingNumberId}
+   * App Permission: EditExtensions
+   * User Permission: EditUserForwardingFlipNumbers
    */
-  async delete(config?: RestRequestConfig): Promise<string> {
+  async delete(restRequestConfig?: RestRequestConfig): Promise<string> {
     if (this.forwardingNumberId === null) {
       throw new Error('forwardingNumberId must be specified.');
     }
 
-    const r = await this.rc.delete<string>(this.path(), undefined, config);
+    const r = await this.rc.delete<string>(
+      this.path(),
+      undefined,
+      restRequestConfig
+    );
     return r.data;
   }
 }

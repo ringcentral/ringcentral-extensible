@@ -20,33 +20,37 @@ class Index {
   }
 
   /**
-   * Operation: Get Call Queue Presence
+   * Returns presence status of the call queue members.
+   * HTTP Method: get
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/call-queues/{groupId}/presence
    * Rate Limit Group: Light
-   * Http get /restapi/v1.0/account/{accountId}/call-queues/{groupId}/presence
+   * App Permission: ReadPresence
    */
-  async get(config?: RestRequestConfig): Promise<CallQueuePresence> {
+  async get(restRequestConfig?: RestRequestConfig): Promise<CallQueuePresence> {
     const r = await this.rc.get<CallQueuePresence>(
       this.path(),
       undefined,
-      config
+      restRequestConfig
     );
     return r.data;
   }
 
   /**
-   * Operation: Update Call Queue Presence
+   * Updates presence status of the call queue members in the specified queue.
+   * HTTP Method: put
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/call-queues/{groupId}/presence
    * Rate Limit Group: Medium
-   * Http put /restapi/v1.0/account/{accountId}/call-queues/{groupId}/presence
+   * App Permission: EditPresence
    */
   async put(
     callQueueUpdatePresence: CallQueueUpdatePresence,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<CallQueuePresence> {
     const r = await this.rc.put<CallQueuePresence>(
       this.path(),
       callQueueUpdatePresence,
       undefined,
-      config
+      restRequestConfig
     );
     return r.data;
   }

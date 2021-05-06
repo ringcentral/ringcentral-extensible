@@ -17,29 +17,35 @@ class Index {
   }
 
   /**
-   * Operation: Get Webhooks in Group
+   * Returns webhooks which are available for the current user by group ID.
+   * HTTP Method: get
+   * Endpoint: /restapi/{apiVersion}/glip/groups/{groupId}/webhooks
    * Rate Limit Group: Medium
-   * Http get /restapi/v1.0/glip/groups/{groupId}/webhooks
+   * App Permission: Glip
+   * User Permission: Glip
    */
-  async get(config?: RestRequestConfig): Promise<GlipWebhookList> {
+  async get(restRequestConfig?: RestRequestConfig): Promise<GlipWebhookList> {
     const r = await this.rc.get<GlipWebhookList>(
       this.path(),
       undefined,
-      config
+      restRequestConfig
     );
     return r.data;
   }
 
   /**
-   * Operation: Create Webhook in Group
+   * Creates a new webhook.
+   * HTTP Method: post
+   * Endpoint: /restapi/{apiVersion}/glip/groups/{groupId}/webhooks
    * Rate Limit Group: Medium
-   * Http post /restapi/v1.0/glip/groups/{groupId}/webhooks
+   * App Permission: Glip
+   * User Permission: Glip
    */
-  async post(config?: RestRequestConfig): Promise<GlipWebhookInfo> {
+  async post(restRequestConfig?: RestRequestConfig): Promise<GlipWebhookInfo> {
     const r = await this.rc.post<GlipWebhookInfo>(
       this.path(),
       undefined,
-      config
+      restRequestConfig
     );
     return r.data;
   }

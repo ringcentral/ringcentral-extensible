@@ -17,15 +17,20 @@ class Index {
   }
 
   /**
-   * Operation: Get Assistants
+   * Returns assistants information.
+   * HTTP Method: get
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/meetings-configuration/assistants
    * Rate Limit Group: Light
-   * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/meetings-configuration/assistants
+   * App Permission: Meetings
+   * User Permission: Meetings
    */
-  async get(config?: RestRequestConfig): Promise<AssistantsResource> {
+  async get(
+    restRequestConfig?: RestRequestConfig
+  ): Promise<AssistantsResource> {
     const r = await this.rc.get<AssistantsResource>(
       this.path(),
       undefined,
-      config
+      restRequestConfig
     );
     return r.data;
   }

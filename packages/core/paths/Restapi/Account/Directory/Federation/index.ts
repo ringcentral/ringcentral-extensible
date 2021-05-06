@@ -17,15 +17,20 @@ class Index {
   }
 
   /**
-   * Operation: Get Account Federation
+   * Returns information on a federation and associated accounts.
+   * HTTP Method: get
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/directory/federation
    * Rate Limit Group: Medium
-   * Http get /restapi/v1.0/account/{accountId}/directory/federation
+   * App Permission: ReadAccounts
+   * User Permission: ReadCompanyInfo
    */
-  async get(config?: RestRequestConfig): Promise<FederationResource> {
+  async get(
+    restRequestConfig?: RestRequestConfig
+  ): Promise<FederationResource> {
     const r = await this.rc.get<FederationResource>(
       this.path(),
       undefined,
-      config
+      restRequestConfig
     );
     return r.data;
   }

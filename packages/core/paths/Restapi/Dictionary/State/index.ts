@@ -1,7 +1,7 @@
 import {RestRequestConfig} from '../../../../Rest';
 import {
-  GetStateListResponse,
   ListStatesParameters,
+  GetStateListResponse,
   GetStateInfoResponse,
 } from '../../../../definitions';
 import Parent from '..';
@@ -9,8 +9,8 @@ import RingCentral from '../../../..';
 
 class Index {
   rc: RingCentral;
-  stateId: string | null;
   parent: Parent;
+  stateId: string | null;
 
   constructor(parent: Parent, stateId: string | null = null) {
     this.parent = parent;
@@ -22,33 +22,36 @@ class Index {
     if (withParameter && this.stateId !== null) {
       return `${this.parent.path()}/state/${this.stateId}`;
     }
-
     return `${this.parent.path()}/state`;
   }
 
   /**
-   * Operation: Get States List
+   * Returns all the states of a certain country
+   * HTTP Method: get
+   * Endpoint: /restapi/{apiVersion}/dictionary/state
    * Rate Limit Group: Light
-   * Http get /restapi/v1.0/dictionary/state
    */
   async list(
     queryParams?: ListStatesParameters,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<GetStateListResponse> {
     const r = await this.rc.get<GetStateListResponse>(
       this.path(false),
       queryParams,
-      config
+      restRequestConfig
     );
     return r.data;
   }
 
   /**
-   * Operation: Get State
+   * Returns the information on a specific state.
+   * HTTP Method: get
+   * Endpoint: /restapi/{apiVersion}/dictionary/state/{stateId}
    * Rate Limit Group: Light
-   * Http get /restapi/v1.0/dictionary/state/{stateId}
    */
-  async get(config?: RestRequestConfig): Promise<GetStateInfoResponse> {
+  async get(
+    restRequestConfig?: RestRequestConfig
+  ): Promise<GetStateInfoResponse> {
     if (this.stateId === null) {
       throw new Error('stateId must be specified.');
     }
@@ -56,7 +59,7 @@ class Index {
     const r = await this.rc.get<GetStateInfoResponse>(
       this.path(),
       undefined,
-      config
+      restRequestConfig
     );
     return r.data;
   }

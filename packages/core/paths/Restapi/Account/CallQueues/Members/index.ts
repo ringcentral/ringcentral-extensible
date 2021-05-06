@@ -1,7 +1,7 @@
 import {RestRequestConfig} from '../../../../../Rest';
 import {
-  CallQueueMembers,
   ListCallQueueMembersParameters,
+  CallQueueMembers,
 } from '../../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../../..';
@@ -20,18 +20,21 @@ class Index {
   }
 
   /**
-   * Operation: Get Call Queue Members
+   * Returns call queue group members.
+   * HTTP Method: get
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/call-queues/{groupId}/members
    * Rate Limit Group: Light
-   * Http get /restapi/v1.0/account/{accountId}/call-queues/{groupId}/members
+   * App Permission: ReadAccounts
+   * User Permission: ReadExtensions
    */
   async get(
     queryParams?: ListCallQueueMembersParameters,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<CallQueueMembers> {
     const r = await this.rc.get<CallQueueMembers>(
       this.path(),
       queryParams,
-      config
+      restRequestConfig
     );
     return r.data;
   }

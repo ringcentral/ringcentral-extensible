@@ -1,7 +1,7 @@
 import {RestRequestConfig} from '../../../../Rest';
 import {
-  EmergencyLocationList,
   ListEmergencyLocationsParameters,
+  EmergencyLocationList,
   EmergencyLocationInfoRequest,
   EmergencyLocationInfo,
   DeleteEmergencyLocationParameters,
@@ -11,8 +11,8 @@ import RingCentral from '../../../..';
 
 class Index {
   rc: RingCentral;
-  locationId: string | null;
   parent: Parent;
+  locationId: string | null;
 
   constructor(parent: Parent, locationId: string | null = null) {
     this.parent = parent;
@@ -24,51 +24,61 @@ class Index {
     if (withParameter && this.locationId !== null) {
       return `${this.parent.path()}/emergency-locations/${this.locationId}`;
     }
-
     return `${this.parent.path()}/emergency-locations`;
   }
 
   /**
-   * Operation: Get Emergency Location List
+   * Returns emergency response locations of the current account.
+   * HTTP Method: get
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/emergency-locations
    * Rate Limit Group: Light
-   * Http get /restapi/v1.0/account/{accountId}/emergency-locations
+   * App Permission: ReadAccounts
+   * User Permission: ConfigureEmergencyMaps
    */
   async list(
     queryParams?: ListEmergencyLocationsParameters,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<EmergencyLocationList> {
     const r = await this.rc.get<EmergencyLocationList>(
       this.path(false),
       queryParams,
-      config
+      restRequestConfig
     );
     return r.data;
   }
 
   /**
-   * Operation: Add Emergency Location
+   * Add Emergency Location
+   * HTTP Method: post
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/emergency-locations
    * Rate Limit Group: Medium
-   * Http post /restapi/v1.0/account/{accountId}/emergency-locations
+   * App Permission: EditAccounts
+   * User Permission: ConfigureEmergencyMaps
    */
   async post(
     emergencyLocationInfoRequest: EmergencyLocationInfoRequest,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<string> {
     const r = await this.rc.post<string>(
       this.path(false),
       emergencyLocationInfoRequest,
       undefined,
-      config
+      restRequestConfig
     );
     return r.data;
   }
 
   /**
-   * Operation: Get Emergency Location
+   * Returns emergency response location by ID.
+   * HTTP Method: get
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/emergency-locations/{locationId}
    * Rate Limit Group: Light
-   * Http get /restapi/v1.0/account/{accountId}/emergency-locations/{locationId}
+   * App Permission: EditAccounts
+   * User Permission: ConfigureEmergencyMaps
    */
-  async get(config?: RestRequestConfig): Promise<EmergencyLocationInfo> {
+  async get(
+    restRequestConfig?: RestRequestConfig
+  ): Promise<EmergencyLocationInfo> {
     if (this.locationId === null) {
       throw new Error('locationId must be specified.');
     }
@@ -76,19 +86,22 @@ class Index {
     const r = await this.rc.get<EmergencyLocationInfo>(
       this.path(),
       undefined,
-      config
+      restRequestConfig
     );
     return r.data;
   }
 
   /**
-   * Operation: Update Emergency Location
+   * Updates the specified emergency response location.
+   * HTTP Method: put
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/emergency-locations/{locationId}
    * Rate Limit Group: Heavy
-   * Http put /restapi/v1.0/account/{accountId}/emergency-locations/{locationId}
+   * App Permission: EditAccounts
+   * User Permission: ConfigureEmergencyMaps
    */
   async put(
     emergencyLocationInfoRequest: EmergencyLocationInfoRequest,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<EmergencyLocationInfo> {
     if (this.locationId === null) {
       throw new Error('locationId must be specified.');
@@ -98,25 +111,32 @@ class Index {
       this.path(),
       emergencyLocationInfoRequest,
       undefined,
-      config
+      restRequestConfig
     );
     return r.data;
   }
 
   /**
-   * Operation: Delete Emergency Location
+   * Deletes the specified emergency response location.
+   * HTTP Method: delete
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/emergency-locations/{locationId}
    * Rate Limit Group: Heavy
-   * Http delete /restapi/v1.0/account/{accountId}/emergency-locations/{locationId}
+   * App Permission: EditAccounts
+   * User Permission: ConfigureEmergencyMaps
    */
   async delete(
     queryParams?: DeleteEmergencyLocationParameters,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<string> {
     if (this.locationId === null) {
       throw new Error('locationId must be specified.');
     }
 
-    const r = await this.rc.delete<string>(this.path(), queryParams, config);
+    const r = await this.rc.delete<string>(
+      this.path(),
+      queryParams,
+      restRequestConfig
+    );
     return r.data;
   }
 }

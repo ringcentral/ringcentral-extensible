@@ -1,10 +1,10 @@
 import NumberParser from './NumberParser';
+import Subscription from './Subscription';
 import ClientInfo from './ClientInfo';
 import Dictionary from './Dictionary';
-import Glip from './Glip';
-import Subscription from './Subscription';
 import Account from './Account';
 import Oauth from './Oauth';
+import Glip from './Glip';
 import {RestRequestConfig} from '../../Rest';
 import {GetVersionsResponse, GetVersionResponse} from '../../definitions';
 import RingCentral from '../..';
@@ -22,30 +22,35 @@ class Index {
     if (withParameter && this.apiVersion !== null) {
       return `/restapi/${this.apiVersion}`;
     }
-
     return '/restapi';
   }
 
   /**
-   * Operation: Get API Versions
+   * Returns current API version(s) and server info.
+   * HTTP Method: get
+   * Endpoint: /restapi
    * Rate Limit Group: NoThrottling
-   * Http get /restapi
    */
-  async list(config?: RestRequestConfig): Promise<GetVersionsResponse> {
+  async list(
+    restRequestConfig?: RestRequestConfig
+  ): Promise<GetVersionsResponse> {
     const r = await this.rc.get<GetVersionsResponse>(
       this.path(false),
       undefined,
-      config
+      restRequestConfig
     );
     return r.data;
   }
 
   /**
-   * Operation: Get Version Info
+   * Returns current API version info by apiVersion.
+   * HTTP Method: get
+   * Endpoint: /restapi/{apiVersion}
    * Rate Limit Group: NoThrottling
-   * Http get /restapi/{apiVersion}
    */
-  async get(config?: RestRequestConfig): Promise<GetVersionResponse> {
+  async get(
+    restRequestConfig?: RestRequestConfig
+  ): Promise<GetVersionResponse> {
     if (this.apiVersion === null) {
       throw new Error('apiVersion must be specified.');
     }
@@ -53,9 +58,13 @@ class Index {
     const r = await this.rc.get<GetVersionResponse>(
       this.path(),
       undefined,
-      config
+      restRequestConfig
     );
     return r.data;
+  }
+
+  glip(): Glip {
+    return new Glip(this);
   }
 
   oauth(): Oauth {
@@ -66,20 +75,16 @@ class Index {
     return new Account(this, accountId);
   }
 
-  subscription(subscriptionId: string | null = null): Subscription {
-    return new Subscription(this, subscriptionId);
-  }
-
-  glip(): Glip {
-    return new Glip(this);
-  }
-
   dictionary(): Dictionary {
     return new Dictionary(this);
   }
 
   clientInfo(): ClientInfo {
     return new ClientInfo(this);
+  }
+
+  subscription(subscriptionId: string | null = null): Subscription {
+    return new Subscription(this, subscriptionId);
   }
 
   numberParser(): NumberParser {

@@ -17,33 +17,40 @@ class Index {
   }
 
   /**
-   * Operation: Get User Video Configuration
+   * Returns information about video configuration of the current user.
+   * HTTP Method: get
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/video-configuration
    * Rate Limit Group: Light
-   * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/video-configuration
+   * App Permission: Meetings
+   * User Permission: Meetings
    */
-  async get(config?: RestRequestConfig): Promise<UserVideoConfiguration> {
+  async get(
+    restRequestConfig?: RestRequestConfig
+  ): Promise<UserVideoConfiguration> {
     const r = await this.rc.get<UserVideoConfiguration>(
       this.path(),
       undefined,
-      config
+      restRequestConfig
     );
     return r.data;
   }
 
   /**
-   * Operation: Update User Video Configuration
+   * Allows to update user video settings, for example video provider.
+   * HTTP Method: put
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/video-configuration
    * Rate Limit Group: Light
-   * Http put /restapi/v1.0/account/{accountId}/extension/{extensionId}/video-configuration
+   * App Permission: Meetings
    */
   async put(
     userVideoConfiguration: UserVideoConfiguration,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<UserVideoConfiguration> {
     const r = await this.rc.put<UserVideoConfiguration>(
       this.path(),
       userVideoConfiguration,
       undefined,
-      config
+      restRequestConfig
     );
     return r.data;
   }

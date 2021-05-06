@@ -1,7 +1,7 @@
 import {RestRequestConfig} from '../../../../../Rest';
 import {
-  CreateMessageBatchResponse,
   CreateSMSMessageBatchRequest,
+  CreateMessageBatchResponse,
   MessageBatchResponse,
 } from '../../../../../definitions';
 import Parent from '..';
@@ -9,8 +9,8 @@ import RingCentral from '../../../../..';
 
 class Index {
   rc: RingCentral;
-  batchId: string | null;
   parent: Parent;
+  batchId: string | null;
 
   constructor(parent: Parent, batchId: string | null = null) {
     this.parent = parent;
@@ -22,34 +22,39 @@ class Index {
     if (withParameter && this.batchId !== null) {
       return `${this.parent.path()}/batch/${this.batchId}`;
     }
-
     return `${this.parent.path()}/batch`;
   }
 
   /**
-   * Operation: Send A2P SMS
+   * Allows to send high volume of A2P (Application-to-Person) SMS messages (in message batches). Only phone number with the `A2PSmsSender` feature can be used as a sender.
+   * HTTP Method: post
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/a2p-sms/batch
    * Rate Limit Group: Light
-   * Http post /restapi/v1.0/account/{accountId}/a2p-sms/batch
+   * App Permission: A2PSMS
    */
   async post(
     createSMSMessageBatchRequest: CreateSMSMessageBatchRequest,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<CreateMessageBatchResponse> {
     const r = await this.rc.post<CreateMessageBatchResponse>(
       this.path(false),
       createSMSMessageBatchRequest,
       undefined,
-      config
+      restRequestConfig
     );
     return r.data;
   }
 
   /**
-   * Operation: Get A2P SMS Batch
+   * Returns information on a message batch.
+   * HTTP Method: get
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/a2p-sms/batch/{batchId}
    * Rate Limit Group: Light
-   * Http get /restapi/v1.0/account/{accountId}/a2p-sms/batch/{batchId}
+   * App Permission: A2PSMS
    */
-  async get(config?: RestRequestConfig): Promise<MessageBatchResponse> {
+  async get(
+    restRequestConfig?: RestRequestConfig
+  ): Promise<MessageBatchResponse> {
     if (this.batchId === null) {
       throw new Error('batchId must be specified.');
     }
@@ -57,7 +62,7 @@ class Index {
     const r = await this.rc.get<MessageBatchResponse>(
       this.path(),
       undefined,
-      config
+      restRequestConfig
     );
     return r.data;
   }

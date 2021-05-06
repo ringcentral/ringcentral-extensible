@@ -21,33 +21,41 @@ class Index {
   }
 
   /**
-   * Operation: Get Caller Blocking Settings
+   * Returns the current caller blocking settings of a user.
+   * HTTP Method: get
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/caller-blocking
    * Rate Limit Group: Light
-   * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking
+   * App Permission: ReadAccounts
+   * User Permission: ReadBlockedNumbers
    */
-  async get(config?: RestRequestConfig): Promise<CallerBlockingSettings> {
+  async get(
+    restRequestConfig?: RestRequestConfig
+  ): Promise<CallerBlockingSettings> {
     const r = await this.rc.get<CallerBlockingSettings>(
       this.path(),
       undefined,
-      config
+      restRequestConfig
     );
     return r.data;
   }
 
   /**
-   * Operation: Update Caller Blocking Settings
+   * Updates the current caller blocking settings of a user.
+   * HTTP Method: put
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/caller-blocking
    * Rate Limit Group: Light
-   * Http put /restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking
+   * App Permission: EditExtensions
+   * User Permission: EditBlockedNumbers
    */
   async put(
     callerBlockingSettingsUpdate: CallerBlockingSettingsUpdate,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<CallerBlockingSettings> {
     const r = await this.rc.put<CallerBlockingSettings>(
       this.path(),
       callerBlockingSettingsUpdate,
       undefined,
-      config
+      restRequestConfig
     );
     return r.data;
   }

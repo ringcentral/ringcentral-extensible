@@ -17,15 +17,19 @@ class Index {
   }
 
   /**
-   * Operation: Start Conference Call Session
+   * Initiates a conference call session.
+   * HTTP Method: post
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/telephony/conference
    * Rate Limit Group: Heavy
-   * Http post /restapi/v1.0/account/{accountId}/telephony/conference
+   * App Permission: CallControl
    */
-  async post(config?: RestRequestConfig): Promise<CallSessionObject> {
+  async post(
+    restRequestConfig?: RestRequestConfig
+  ): Promise<CallSessionObject> {
     const r = await this.rc.post<CallSessionObject>(
       this.path(),
       undefined,
-      config
+      restRequestConfig
     );
     return r.data;
   }

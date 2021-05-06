@@ -17,19 +17,22 @@ class Index {
   }
 
   /**
-   * Operation: Update User Call Queues
+   * Updates the list of call queues where the user is an agent. This is a full update request, which means that if any queue where the user is an agent is not mentioned in request, then the user is automatically removed from this queue.
+   * HTTP Method: put
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/call-queues
    * Rate Limit Group: Medium
-   * Http put /restapi/v1.0/account/{accountId}/extension/{extensionId}/call-queues
+   * App Permission: Accounts
+   * User Permission: JoinLeaveCallQueue
    */
   async put(
     userCallQueues: UserCallQueues,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<UserCallQueues> {
     const r = await this.rc.put<UserCallQueues>(
       this.path(),
       userCallQueues,
       undefined,
-      config
+      restRequestConfig
     );
     return r.data;
   }

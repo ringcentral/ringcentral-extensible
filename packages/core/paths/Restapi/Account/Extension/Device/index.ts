@@ -1,7 +1,7 @@
 import {RestRequestConfig} from '../../../../../Rest';
 import {
-  GetExtensionDevicesResponse,
   ListExtensionDevicesParameters,
+  GetExtensionDevicesResponse,
 } from '../../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../../..';
@@ -20,18 +20,21 @@ class Index {
   }
 
   /**
-   * Operation: Get Extension Device List
+   * Returns devices of the extension(s) by their ID(s). Batch request is supported
+   * HTTP Method: get
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/device
    * Rate Limit Group: Light
-   * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/device
+   * App Permission: ReadAccounts
+   * User Permission: ReadUserDevices
    */
   async get(
     queryParams?: ListExtensionDevicesParameters,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<GetExtensionDevicesResponse> {
     const r = await this.rc.get<GetExtensionDevicesResponse>(
       this.path(),
       queryParams,
-      config
+      restRequestConfig
     );
     return r.data;
   }

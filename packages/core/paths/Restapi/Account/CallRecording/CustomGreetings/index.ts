@@ -1,15 +1,15 @@
 import {RestRequestConfig} from '../../../../../Rest';
 import {
-  CallRecordingCustomGreetings,
   ListCallRecordingCustomGreetingsParameters,
+  CallRecordingCustomGreetings,
 } from '../../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../../..';
 
 class Index {
   rc: RingCentral;
-  greetingId: string | null;
   parent: Parent;
+  greetingId: string | null;
 
   constructor(parent: Parent, greetingId: string | null = null) {
     this.parent = parent;
@@ -21,38 +21,64 @@ class Index {
     if (withParameter && this.greetingId !== null) {
       return `${this.parent.path()}/custom-greetings/${this.greetingId}`;
     }
-
     return `${this.parent.path()}/custom-greetings`;
   }
 
   /**
-   * Operation: Get Call Recording Custom Greeting List
+   * Returns call recording custom greetings.
+   * HTTP Method: get
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/call-recording/custom-greetings
    * Rate Limit Group: Medium
-   * Http get /restapi/v1.0/account/{accountId}/call-recording/custom-greetings
+   * App Permission: ReadAccounts
+   * User Permission: ReadCompanyInfo
    */
   async get(
     queryParams?: ListCallRecordingCustomGreetingsParameters,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<CallRecordingCustomGreetings> {
     const r = await this.rc.get<CallRecordingCustomGreetings>(
       this.path(false),
       queryParams,
-      config
+      restRequestConfig
     );
     return r.data;
   }
 
   /**
-   * Operation: Delete Call Recording Custom Greeting
+   * Deletes call recording custom greetings.
+   * HTTP Method: delete
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/call-recording/custom-greetings
    * Rate Limit Group: Medium
-   * Http delete /restapi/v1.0/account/{accountId}/call-recording/custom-greetings/{greetingId}
+   * App Permission: EditAccounts
+   * User Permission: EditCompanyInfo
    */
-  async delete(config?: RestRequestConfig): Promise<string> {
+  async deleteAll(restRequestConfig?: RestRequestConfig): Promise<string> {
+    const r = await this.rc.delete<string>(
+      this.path(false),
+      undefined,
+      restRequestConfig
+    );
+    return r.data;
+  }
+
+  /**
+   * Deletes call recording custom greeting(s).
+   * HTTP Method: delete
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/call-recording/custom-greetings/{greetingId}
+   * Rate Limit Group: Medium
+   * App Permission: EditAccounts
+   * User Permission: EditCompanyInfo
+   */
+  async delete(restRequestConfig?: RestRequestConfig): Promise<string> {
     if (this.greetingId === null) {
       throw new Error('greetingId must be specified.');
     }
 
-    const r = await this.rc.delete<string>(this.path(), undefined, config);
+    const r = await this.rc.delete<string>(
+      this.path(),
+      undefined,
+      restRequestConfig
+    );
     return r.data;
   }
 }

@@ -17,19 +17,22 @@ class Index {
   }
 
   /**
-   * Operation: Enable Automatic Location Updates for Users
+   * Enables or disables Automatic Location Updates feature for multiple account users.
+   * HTTP Method: post
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/users/bulk-assign
    * Rate Limit Group: Heavy
-   * Http post /restapi/v1.0/account/{accountId}/emergency-address-auto-update/users/bulk-assign
+   * App Permission: EditAccounts
+   * User Permission: ConfigureEmergencyMaps
    */
   async post(
     bulkAssignAutomaticLocationUpdatesUsers: BulkAssignAutomaticLocationUpdatesUsers,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<string> {
     const r = await this.rc.post<string>(
       this.path(),
       bulkAssignAutomaticLocationUpdatesUsers,
       undefined,
-      config
+      restRequestConfig
     );
     return r.data;
   }

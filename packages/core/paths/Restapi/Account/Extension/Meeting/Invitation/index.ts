@@ -17,17 +17,20 @@ class Index {
   }
 
   /**
-   * Operation: Get Meeting Invitation
+   * Returns a meeting invitation by ID.
+   * HTTP Method: get
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/meeting/{meetingId}/invitation
    * Rate Limit Group: Light
-   * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/{meetingId}/invitation
+   * App Permission: Meetings
+   * User Permission: Meetings
    */
   async get(
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<PublicMeetingInvitationResponse> {
     const r = await this.rc.get<PublicMeetingInvitationResponse>(
       this.path(),
       undefined,
-      config
+      restRequestConfig
     );
     return r.data;
   }

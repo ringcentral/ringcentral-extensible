@@ -1,7 +1,7 @@
 import {RestRequestConfig} from '../../../../../Rest';
 import {
-  UserActiveCallsResponse,
   ListExtensionActiveCallsParameters,
+  UserActiveCallsResponse,
 } from '../../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../../..';
@@ -20,18 +20,21 @@ class Index {
   }
 
   /**
-   * Operation: Get User Active Calls
+   * Returns records of all extension calls that are in progress, ordered by start time in descending order.
+   * HTTP Method: get
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/active-calls
    * Rate Limit Group: Heavy
-   * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/active-calls
+   * App Permission: ReadCallLog
+   * User Permission: ReadCallLog
    */
   async get(
     queryParams?: ListExtensionActiveCallsParameters,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<UserActiveCallsResponse> {
     const r = await this.rc.get<UserActiveCallsResponse>(
       this.path(),
       queryParams,
-      config
+      restRequestConfig
     );
     return r.data;
   }

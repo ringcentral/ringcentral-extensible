@@ -1,8 +1,8 @@
 import Tasks from './Tasks';
 import {RestRequestConfig} from '../../../../Rest';
 import {
-  AddressBookBulkUploadResponse,
   AddressBookBulkUploadRequest,
+  AddressBookBulkUploadResponse,
 } from '../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../..';
@@ -21,19 +21,22 @@ class Index {
   }
 
   /**
-   * Operation: Update Multiple Contacts
+   * Uploads multiple contacts for multiple extensions at once. Maximum 500 extension, each up to 10000 contacts, can be updated per request.
+   * HTTP Method: post
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/address-book-bulk-upload
    * Rate Limit Group: Heavy
-   * Http post /restapi/v1.0/account/{accountId}/address-book-bulk-upload
+   * App Permission: Contacts
+   * User Permission: EditPersonalContacts
    */
   async post(
     addressBookBulkUploadRequest: AddressBookBulkUploadRequest,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<AddressBookBulkUploadResponse> {
     const r = await this.rc.post<AddressBookBulkUploadResponse>(
       this.path(),
       addressBookBulkUploadRequest,
       undefined,
-      config
+      restRequestConfig
     );
     return r.data;
   }

@@ -1,7 +1,7 @@
 import {RestRequestConfig} from '../../../../Rest';
 import {
-  AccountPhoneNumbers,
   ListAccountPhoneNumbersParameters,
+  AccountPhoneNumbers,
   CompanyPhoneNumberInfo,
 } from '../../../../definitions';
 import Parent from '..';
@@ -9,8 +9,8 @@ import RingCentral from '../../../..';
 
 class Index {
   rc: RingCentral;
-  phoneNumberId: string | null;
   parent: Parent;
+  phoneNumberId: string | null;
 
   constructor(parent: Parent, phoneNumberId: string | null = null) {
     this.parent = parent;
@@ -22,33 +22,40 @@ class Index {
     if (withParameter && this.phoneNumberId !== null) {
       return `${this.parent.path()}/phone-number/${this.phoneNumberId}`;
     }
-
     return `${this.parent.path()}/phone-number`;
   }
 
   /**
-   * Operation: Get Company Phone Number List
+   * Returns the list of phone numbers assigned to RingCentral customer account. Both company-level and extension-level numbers are returned.
+   * HTTP Method: get
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/phone-number
    * Rate Limit Group: Heavy
-   * Http get /restapi/v1.0/account/{accountId}/phone-number
+   * App Permission: ReadAccounts
+   * User Permission: ReadCompanyPhoneNumbers
    */
   async list(
     queryParams?: ListAccountPhoneNumbersParameters,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<AccountPhoneNumbers> {
     const r = await this.rc.get<AccountPhoneNumbers>(
       this.path(false),
       queryParams,
-      config
+      restRequestConfig
     );
     return r.data;
   }
 
   /**
-   * Operation: Get Phone Number
+   * Returns the phone number(s) belonging to a certain account or extension by phoneNumberId(s). Batch request is supported.
+   * HTTP Method: get
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/phone-number/{phoneNumberId}
    * Rate Limit Group: Light
-   * Http get /restapi/v1.0/account/{accountId}/phone-number/{phoneNumberId}
+   * App Permission: ReadAccounts
+   * User Permission: ReadCompanyPhoneNumbers
    */
-  async get(config?: RestRequestConfig): Promise<CompanyPhoneNumberInfo> {
+  async get(
+    restRequestConfig?: RestRequestConfig
+  ): Promise<CompanyPhoneNumberInfo> {
     if (this.phoneNumberId === null) {
       throw new Error('phoneNumberId must be specified.');
     }
@@ -56,7 +63,7 @@ class Index {
     const r = await this.rc.get<CompanyPhoneNumberInfo>(
       this.path(),
       undefined,
-      config
+      restRequestConfig
     );
     return r.data;
   }

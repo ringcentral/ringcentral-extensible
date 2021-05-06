@@ -1,7 +1,7 @@
 import {RestRequestConfig} from '../../../../../Rest';
 import {
-  ValidateMultipleWirelessPointsResponse,
   ValidateMultipleWirelessPointsRequest,
+  ValidateMultipleWirelessPointsResponse,
 } from '../../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../../..';
@@ -20,19 +20,22 @@ class Index {
   }
 
   /**
-   * Operation: Validate Multiple Wireless Points
+   * Validates wireless points before creation or update. The maximum number of wireless points per request is 10 000.
+   * HTTP Method: post
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/wireless-points-bulk-validate
    * Rate Limit Group: Heavy
-   * Http post /restapi/v1.0/account/{accountId}/emergency-address-auto-update/wireless-points-bulk-validate
+   * App Permission: EditAccounts
+   * User Permission: ConfigureEmergencyMaps
    */
   async post(
     validateMultipleWirelessPointsRequest: ValidateMultipleWirelessPointsRequest,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<ValidateMultipleWirelessPointsResponse> {
     const r = await this.rc.post<ValidateMultipleWirelessPointsResponse>(
       this.path(),
       validateMultipleWirelessPointsRequest,
       undefined,
-      config
+      restRequestConfig
     );
     return r.data;
   }

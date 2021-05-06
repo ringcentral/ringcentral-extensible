@@ -17,33 +17,41 @@ class Index {
   }
 
   /**
-   * Operation: Get Extension Caller ID
+   * Returns information on an outbound caller ID of an extension.
+   * HTTP Method: get
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/caller-id
    * Rate Limit Group: Light
-   * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-id
+   * App Permission: ReadAccounts
+   * User Permission: ReadCallerIDSettings
    */
-  async get(config?: RestRequestConfig): Promise<ExtensionCallerIdInfo> {
+  async get(
+    restRequestConfig?: RestRequestConfig
+  ): Promise<ExtensionCallerIdInfo> {
     const r = await this.rc.get<ExtensionCallerIdInfo>(
       this.path(),
       undefined,
-      config
+      restRequestConfig
     );
     return r.data;
   }
 
   /**
-   * Operation: Update Extension Caller ID
+   * Updates outbound caller ID information of an extension.
+   * HTTP Method: put
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/caller-id
    * Rate Limit Group: Medium
-   * Http put /restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-id
+   * App Permission: EditExtensions
+   * User Permission: EditCallerIDSettings
    */
   async put(
     extensionCallerIdInfo: ExtensionCallerIdInfo,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<ExtensionCallerIdInfo> {
     const r = await this.rc.put<ExtensionCallerIdInfo>(
       this.path(),
       extensionCallerIdInfo,
       undefined,
-      config
+      restRequestConfig
     );
     return r.data;
   }

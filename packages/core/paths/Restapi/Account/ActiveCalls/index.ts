@@ -1,7 +1,7 @@
 import {RestRequestConfig} from '../../../../Rest';
 import {
-  CompanyActiveCallsResponse,
   ListCompanyActiveCallsParameters,
+  CompanyActiveCallsResponse,
 } from '../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../..';
@@ -20,18 +20,21 @@ class Index {
   }
 
   /**
-   * Operation: Get Company Active Calls
+   * Returns records of all calls that are in progress, ordered by start time in descending order.
+   * HTTP Method: get
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/active-calls
    * Rate Limit Group: Heavy
-   * Http get /restapi/v1.0/account/{accountId}/active-calls
+   * App Permission: ReadCallLog
+   * User Permission: ReadCallLog
    */
   async get(
     queryParams?: ListCompanyActiveCallsParameters,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<CompanyActiveCallsResponse> {
     const r = await this.rc.get<CompanyActiveCallsResponse>(
       this.path(),
       queryParams,
-      config
+      restRequestConfig
     );
     return r.data;
   }

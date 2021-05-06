@@ -1,7 +1,7 @@
 import {RestRequestConfig} from '../../../../Rest';
 import {
-  ListMeetingRecordingsResponse,
   ListAccountMeetingRecordingsParameters,
+  ListMeetingRecordingsResponse,
 } from '../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../..';
@@ -20,18 +20,21 @@ class Index {
   }
 
   /**
-   * Operation: Get Account Meeting Recordings List
+   * Returns the list of meeting recordings for the current account.
+   * HTTP Method: get
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/meeting-recordings
    * Rate Limit Group: Medium
-   * Http get /restapi/v1.0/account/{accountId}/meeting-recordings
+   * App Permission: Meetings
+   * User Permission: MeetingsRecordings
    */
   async get(
     queryParams?: ListAccountMeetingRecordingsParameters,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<ListMeetingRecordingsResponse> {
     const r = await this.rc.get<ListMeetingRecordingsResponse>(
       this.path(),
       queryParams,
-      config
+      restRequestConfig
     );
     return r.data;
   }

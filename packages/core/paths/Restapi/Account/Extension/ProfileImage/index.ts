@@ -1,16 +1,16 @@
+import Utils from '../../../../../Utils';
 import {RestRequestConfig} from '../../../../../Rest';
 import {
-  UpdateUserProfileImageRequest,
   CreateUserProfileImageRequest,
+  UpdateUserProfileImageRequest,
 } from '../../../../../definitions';
-import Utils from '../../../../../Utils';
 import Parent from '..';
 import RingCentral from '../../../../..';
 
 class Index {
   rc: RingCentral;
-  scaleSize: string | null;
   parent: Parent;
+  scaleSize: string | null;
 
   constructor(parent: Parent, scaleSize: string | null = null) {
     this.parent = parent;
@@ -22,73 +22,84 @@ class Index {
     if (withParameter && this.scaleSize !== null) {
       return `${this.parent.path()}/profile-image/${this.scaleSize}`;
     }
-
     return `${this.parent.path()}/profile-image`;
   }
 
   /**
-   * Operation: Get User Profile Image
+   * Returns a profile image of an extension.
+   * HTTP Method: get
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/profile-image
    * Rate Limit Group: Medium
-   * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image
+   * App Permission: ReadAccounts
+   * User Permission: ReadExtensions
    */
-  async list(config?: RestRequestConfig): Promise<Buffer> {
+  async list(restRequestConfig?: RestRequestConfig): Promise<Buffer> {
     const r = await this.rc.get<Buffer>(this.path(false), undefined, {
-      ...config,
+      ...restRequestConfig,
       responseType: 'arraybuffer',
     });
     return r.data;
   }
 
   /**
-   * Operation: Update User Profile Image
+   * Uploads the extension profile image.
+   * HTTP Method: post
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/profile-image
    * Rate Limit Group: Heavy
-   * Http put /restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image
-   */
-  async put(
-    updateUserProfileImageRequest: UpdateUserProfileImageRequest,
-    config?: RestRequestConfig
-  ): Promise<string> {
-    const formData = Utils.getFormData(updateUserProfileImageRequest);
-    const r = await this.rc.put<string>(
-      this.path(false),
-      formData,
-      undefined,
-      config
-    );
-    return r.data;
-  }
-
-  /**
-   * Operation: Upload User Profile Image
-   * Rate Limit Group: Heavy
-   * Http post /restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image
+   * App Permission: EditExtensions
+   * User Permission: EditUserInfo
    */
   async post(
     createUserProfileImageRequest: CreateUserProfileImageRequest,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<string> {
     const formData = Utils.getFormData(createUserProfileImageRequest);
     const r = await this.rc.post<string>(
       this.path(false),
       formData,
       undefined,
-      config
+      restRequestConfig
     );
     return r.data;
   }
 
   /**
-   * Operation: Get Scaled User Profile Image
-   * Rate Limit Group: Light
-   * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/profile-image/{scaleSize}
+   * Updates the extension profile image
+   * HTTP Method: put
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/profile-image
+   * Rate Limit Group: Heavy
+   * App Permission: EditExtensions
+   * User Permission: EditUserInfo
    */
-  async get(config?: RestRequestConfig): Promise<Buffer> {
+  async put(
+    updateUserProfileImageRequest: UpdateUserProfileImageRequest,
+    restRequestConfig?: RestRequestConfig
+  ): Promise<string> {
+    const formData = Utils.getFormData(updateUserProfileImageRequest);
+    const r = await this.rc.put<string>(
+      this.path(false),
+      formData,
+      undefined,
+      restRequestConfig
+    );
+    return r.data;
+  }
+
+  /**
+   * Returns scaled profile image of an extension.
+   * HTTP Method: get
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/profile-image/{scaleSize}
+   * Rate Limit Group: Light
+   * App Permission: ReadAccounts
+   * User Permission: ReadExtensions
+   */
+  async get(restRequestConfig?: RestRequestConfig): Promise<Buffer> {
     if (this.scaleSize === null) {
       throw new Error('scaleSize must be specified.');
     }
 
     const r = await this.rc.get<Buffer>(this.path(), undefined, {
-      ...config,
+      ...restRequestConfig,
       responseType: 'arraybuffer',
     });
     return r.data;

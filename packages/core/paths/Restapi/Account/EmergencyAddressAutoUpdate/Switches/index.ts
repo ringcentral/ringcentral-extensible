@@ -1,9 +1,9 @@
 import {RestRequestConfig} from '../../../../../Rest';
 import {
-  SwitchesList,
   ListAccountSwitchesParameters,
-  SwitchInfo,
+  SwitchesList,
   CreateSwitchInfo,
+  SwitchInfo,
   UpdateSwitchInfo,
 } from '../../../../../definitions';
 import Parent from '..';
@@ -11,8 +11,8 @@ import RingCentral from '../../../../..';
 
 class Index {
   rc: RingCentral;
-  switchId: string | null;
   parent: Parent;
+  switchId: string | null;
 
   constructor(parent: Parent, switchId: string | null = null) {
     this.parent = parent;
@@ -24,67 +24,82 @@ class Index {
     if (withParameter && this.switchId !== null) {
       return `${this.parent.path()}/switches/${this.switchId}`;
     }
-
     return `${this.parent.path()}/switches`;
   }
 
   /**
-   * Operation: Get Account Switch List
+   * Returns corporate map of configured network switches with the assigned emergency addresses for the logged-in account.
+   * HTTP Method: get
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/switches
    * Rate Limit Group: Heavy
-   * Http get /restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches
+   * App Permission: EditAccounts
+   * User Permission: ConfigureEmergencyMaps
    */
   async list(
     queryParams?: ListAccountSwitchesParameters,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<SwitchesList> {
     const r = await this.rc.get<SwitchesList>(
       this.path(false),
       queryParams,
-      config
+      restRequestConfig
     );
     return r.data;
   }
 
   /**
-   * Operation: Create Switch
+   * Creates a new switch in corporate map based on chassis ID and used for Automatic Locations Update feature.
+   * HTTP Method: post
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/switches
    * Rate Limit Group: Heavy
-   * Http post /restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches
+   * App Permission: EditAccounts
+   * User Permission: ConfigureEmergencyMaps
    */
   async post(
     createSwitchInfo: CreateSwitchInfo,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<SwitchInfo> {
     const r = await this.rc.post<SwitchInfo>(
       this.path(false),
       createSwitchInfo,
       undefined,
-      config
+      restRequestConfig
     );
     return r.data;
   }
 
   /**
-   * Operation: Get Switch
+   * Returns the specified switch with the assigned emergency address.
+   * HTTP Method: get
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/switches/{switchId}
    * Rate Limit Group: Medium
-   * Http get /restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches/{switchId}
+   * App Permission: EditAccounts
+   * User Permission: ConfigureEmergencyMaps
    */
-  async get(config?: RestRequestConfig): Promise<SwitchInfo> {
+  async get(restRequestConfig?: RestRequestConfig): Promise<SwitchInfo> {
     if (this.switchId === null) {
       throw new Error('switchId must be specified.');
     }
 
-    const r = await this.rc.get<SwitchInfo>(this.path(), undefined, config);
+    const r = await this.rc.get<SwitchInfo>(
+      this.path(),
+      undefined,
+      restRequestConfig
+    );
     return r.data;
   }
 
   /**
-   * Operation: Update Switch
+   * Updates switch. Partial update is not supported, all switch parameters should be specified. If null value is received or parameter is missing, its value is removed.
+   * HTTP Method: put
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/switches/{switchId}
    * Rate Limit Group: Heavy
-   * Http put /restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches/{switchId}
+   * App Permission: EditAccounts
+   * User Permission: ConfigureEmergencyMaps
    */
   async put(
     updateSwitchInfo: UpdateSwitchInfo,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<SwitchInfo> {
     if (this.switchId === null) {
       throw new Error('switchId must be specified.');
@@ -94,22 +109,29 @@ class Index {
       this.path(),
       updateSwitchInfo,
       undefined,
-      config
+      restRequestConfig
     );
     return r.data;
   }
 
   /**
-   * Operation: Delete Switch
+   * Deletes wireless switch(es) in network configuration for Automatic Location Updates feature.
+   * HTTP Method: delete
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/switches/{switchId}
    * Rate Limit Group: Heavy
-   * Http delete /restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches/{switchId}
+   * App Permission: EditAccounts
+   * User Permission: ConfigureEmergencyMaps
    */
-  async delete(config?: RestRequestConfig): Promise<string> {
+  async delete(restRequestConfig?: RestRequestConfig): Promise<string> {
     if (this.switchId === null) {
       throw new Error('switchId must be specified.');
     }
 
-    const r = await this.rc.delete<string>(this.path(), undefined, config);
+    const r = await this.rc.delete<string>(
+      this.path(),
+      undefined,
+      restRequestConfig
+    );
     return r.data;
   }
 }

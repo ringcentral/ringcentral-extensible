@@ -1,5 +1,5 @@
 import {RestRequestConfig} from '../../../../Rest';
-import {RevokeTokenRequest} from '../../../../definitions';
+import {AuthorizeRequest} from '../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../..';
 
@@ -13,22 +13,21 @@ class Index {
   }
 
   path(): string {
-    return `${this.parent.path()}/revoke`;
+    return `${this.parent.path()}/authorize`;
   }
 
   /**
-   * Revokes access/refresh token. Requests to this endpoint must be authenticated with HTTP Basic scheme using the application key and application secret as login and password, correspondingly.
+   * Returns a link to a login page location.
    * HTTP Method: post
-   * Endpoint: /restapi/oauth/revoke
-   * Rate Limit Group: Auth
+   * Endpoint: /restapi/oauth/authorize
    */
   async post(
-    revokeTokenRequest: RevokeTokenRequest,
+    authorizeRequest: AuthorizeRequest,
     restRequestConfig?: RestRequestConfig
   ): Promise<string> {
     const r = await this.rc.post<string>(
       this.path(),
-      revokeTokenRequest,
+      authorizeRequest,
       undefined,
       restRequestConfig
     );

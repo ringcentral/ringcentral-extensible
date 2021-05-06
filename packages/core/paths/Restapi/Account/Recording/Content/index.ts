@@ -16,13 +16,16 @@ class Index {
   }
 
   /**
-   * Operation: Get Call Recordings Data
+   * Returns media content of a call recording.
+   * HTTP Method: get
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/recording/{recordingId}/content
    * Rate Limit Group: Heavy
-   * Http get /restapi/v1.0/account/{accountId}/recording/{recordingId}/content
+   * App Permission: ReadCallRecording
+   * User Permission: ReadCallRecording
    */
-  async get(config?: RestRequestConfig): Promise<Buffer> {
+  async get(restRequestConfig?: RestRequestConfig): Promise<Buffer> {
     const r = await this.rc.get<Buffer>(this.path(), undefined, {
-      ...config,
+      ...restRequestConfig,
       responseType: 'arraybuffer',
     });
     return r.data;

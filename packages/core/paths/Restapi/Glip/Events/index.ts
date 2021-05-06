@@ -1,17 +1,17 @@
 import {RestRequestConfig} from '../../../../Rest';
 import {
-  GlipEventsInfo,
   ReadGlipEventsParameters,
-  GlipEventInfo,
+  GlipEventsInfo,
   GlipEventCreate,
+  GlipEventInfo,
 } from '../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../..';
 
 class Index {
   rc: RingCentral;
-  eventId: string | null;
   parent: Parent;
+  eventId: string | null;
 
   constructor(parent: Parent, eventId: string | null = null) {
     this.parent = parent;
@@ -23,67 +23,82 @@ class Index {
     if (withParameter && this.eventId !== null) {
       return `${this.parent.path()}/events/${this.eventId}`;
     }
-
     return `${this.parent.path()}/events`;
   }
 
   /**
-   * Operation: Get User Events List
+   * Returns all calendar events created by the current user.
+   * HTTP Method: get
+   * Endpoint: /restapi/{apiVersion}/glip/events
    * Rate Limit Group: Medium
-   * Http get /restapi/v1.0/glip/events
+   * App Permission: Glip
+   * User Permission: Glip
    */
   async list(
     queryParams?: ReadGlipEventsParameters,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<GlipEventsInfo> {
     const r = await this.rc.get<GlipEventsInfo>(
       this.path(false),
       queryParams,
-      config
+      restRequestConfig
     );
     return r.data;
   }
 
   /**
-   * Operation: Create Event
+   * Creates a new calendar event.
+   * HTTP Method: post
+   * Endpoint: /restapi/{apiVersion}/glip/events
    * Rate Limit Group: Medium
-   * Http post /restapi/v1.0/glip/events
+   * App Permission: Glip
+   * User Permission: Glip
    */
   async post(
     glipEventCreate: GlipEventCreate,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<GlipEventInfo> {
     const r = await this.rc.post<GlipEventInfo>(
       this.path(false),
       glipEventCreate,
       undefined,
-      config
+      restRequestConfig
     );
     return r.data;
   }
 
   /**
-   * Operation: Get Event
+   * Returns the specified calendar event(s) by ID(s).
+   * HTTP Method: get
+   * Endpoint: /restapi/{apiVersion}/glip/events/{eventId}
    * Rate Limit Group: Medium
-   * Http get /restapi/v1.0/glip/events/{eventId}
+   * App Permission: Glip
+   * User Permission: Glip
    */
-  async get(config?: RestRequestConfig): Promise<GlipEventInfo> {
+  async get(restRequestConfig?: RestRequestConfig): Promise<GlipEventInfo> {
     if (this.eventId === null) {
       throw new Error('eventId must be specified.');
     }
 
-    const r = await this.rc.get<GlipEventInfo>(this.path(), undefined, config);
+    const r = await this.rc.get<GlipEventInfo>(
+      this.path(),
+      undefined,
+      restRequestConfig
+    );
     return r.data;
   }
 
   /**
-   * Operation: Update Event
+   * Updates the specified calendar event.
+   * HTTP Method: put
+   * Endpoint: /restapi/{apiVersion}/glip/events/{eventId}
    * Rate Limit Group: Medium
-   * Http put /restapi/v1.0/glip/events/{eventId}
+   * App Permission: Glip
+   * User Permission: Glip
    */
   async put(
     glipEventCreate: GlipEventCreate,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<GlipEventInfo> {
     if (this.eventId === null) {
       throw new Error('eventId must be specified.');
@@ -93,22 +108,29 @@ class Index {
       this.path(),
       glipEventCreate,
       undefined,
-      config
+      restRequestConfig
     );
     return r.data;
   }
 
   /**
-   * Operation: Delete Event
+   * Deletes the specified calendar event.
+   * HTTP Method: delete
+   * Endpoint: /restapi/{apiVersion}/glip/events/{eventId}
    * Rate Limit Group: Medium
-   * Http delete /restapi/v1.0/glip/events/{eventId}
+   * App Permission: Glip
+   * User Permission: Glip
    */
-  async delete(config?: RestRequestConfig): Promise<string> {
+  async delete(restRequestConfig?: RestRequestConfig): Promise<string> {
     if (this.eventId === null) {
       throw new Error('eventId must be specified.');
     }
 
-    const r = await this.rc.delete<string>(this.path(), undefined, config);
+    const r = await this.rc.delete<string>(
+      this.path(),
+      undefined,
+      restRequestConfig
+    );
     return r.data;
   }
 }

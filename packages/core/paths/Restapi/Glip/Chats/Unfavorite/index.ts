@@ -16,12 +16,19 @@ class Index {
   }
 
   /**
-   * Operation: Remove Chat from Favorites
+   * Removes the specified chat from the users's list of favorites.
+   * HTTP Method: post
+   * Endpoint: /restapi/{apiVersion}/glip/chats/{chatId}/unfavorite
    * Rate Limit Group: Medium
-   * Http post /restapi/v1.0/glip/chats/{chatId}/unfavorite
+   * App Permission: Glip
+   * User Permission: Glip
    */
-  async post(config?: RestRequestConfig): Promise<string> {
-    const r = await this.rc.post<string>(this.path(), undefined, config);
+  async post(restRequestConfig?: RestRequestConfig): Promise<string> {
+    const r = await this.rc.post<string>(
+      this.path(),
+      undefined,
+      restRequestConfig
+    );
     return r.data;
   }
 }

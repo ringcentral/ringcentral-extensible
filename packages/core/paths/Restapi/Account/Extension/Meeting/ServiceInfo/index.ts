@@ -20,33 +20,41 @@ class Index {
   }
 
   /**
-   * Operation: Get Meeting Service Info
+   * Returns information on dial-in numbers for meetings, support and international dial-in numbers URIs and meeting account information.
+   * HTTP Method: get
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/meeting/service-info
    * Rate Limit Group: Light
-   * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/service-info
+   * App Permission: Meetings
+   * User Permission: Meetings
    */
-  async get(config?: RestRequestConfig): Promise<MeetingServiceInfoResource> {
+  async get(
+    restRequestConfig?: RestRequestConfig
+  ): Promise<MeetingServiceInfoResource> {
     const r = await this.rc.get<MeetingServiceInfoResource>(
       this.path(),
       undefined,
-      config
+      restRequestConfig
     );
     return r.data;
   }
 
   /**
-   * Operation: Update Meeting Service Info
+   * Updates personal meeting identifier.
+   * HTTP Method: patch
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/meeting/service-info
    * Rate Limit Group: Medium
-   * Http patch /restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/service-info
+   * App Permission: Meetings
+   * User Permission: Meetings
    */
   async patch(
     meetingServiceInfoRequest: MeetingServiceInfoRequest,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<MeetingServiceInfoResource> {
     const r = await this.rc.patch<MeetingServiceInfoResource>(
       this.path(),
       meetingServiceInfoRequest,
       undefined,
-      config
+      restRequestConfig
     );
     return r.data;
   }

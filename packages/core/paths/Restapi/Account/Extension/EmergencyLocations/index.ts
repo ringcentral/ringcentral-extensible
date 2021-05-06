@@ -17,15 +17,19 @@ class Index {
   }
 
   /**
-   * Operation: Get User Emergency Location List
+   * Returns a list of emergency response locations available for the current user extension.
+   * HTTP Method: get
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/emergency-locations
    * Rate Limit Group: Light
-   * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/emergency-locations
+   * App Permission: ReadAccounts
    */
-  async get(config?: RestRequestConfig): Promise<UserEmergencyLocationList> {
+  async get(
+    restRequestConfig?: RestRequestConfig
+  ): Promise<UserEmergencyLocationList> {
     const r = await this.rc.get<UserEmergencyLocationList>(
       this.path(),
       undefined,
-      config
+      restRequestConfig
     );
     return r.data;
   }

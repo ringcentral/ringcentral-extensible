@@ -1,5 +1,6 @@
-import Token from './Token';
+import Authorize from './Authorize';
 import Revoke from './Revoke';
+import Token from './Token';
 import Parent from '..';
 import RingCentral from '../../..';
 
@@ -16,12 +17,16 @@ class Index {
     return `${this.parent.path()}/oauth`;
   }
 
+  token(): Token {
+    return new Token(this);
+  }
+
   revoke(): Revoke {
     return new Revoke(this);
   }
 
-  token(): Token {
-    return new Token(this);
+  authorize(): Authorize {
+    return new Authorize(this);
   }
 }
 

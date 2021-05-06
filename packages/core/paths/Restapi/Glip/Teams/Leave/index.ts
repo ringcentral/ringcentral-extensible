@@ -16,12 +16,19 @@ class Index {
   }
 
   /**
-   * Operation: Leave Team
+   * Removes the current user from the specified team. A team is a chat between 2 and more participants assigned with specific name.
+   * HTTP Method: post
+   * Endpoint: /restapi/{apiVersion}/glip/teams/{chatId}/leave
    * Rate Limit Group: Medium
-   * Http post /restapi/v1.0/glip/teams/{chatId}/leave
+   * App Permission: Glip
+   * User Permission: Glip
    */
-  async post(config?: RestRequestConfig): Promise<string> {
-    const r = await this.rc.post<string>(this.path(), undefined, config);
+  async post(restRequestConfig?: RestRequestConfig): Promise<string> {
+    const r = await this.rc.post<string>(
+      this.path(),
+      undefined,
+      restRequestConfig
+    );
     return r.data;
   }
 }

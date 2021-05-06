@@ -5,8 +5,8 @@ import RingCentral from '../../../../..';
 
 class Index {
   rc: RingCentral;
-  taskId: string | null;
   parent: Parent;
+  taskId: string | null;
 
   constructor(parent: Parent, taskId: string | null = null) {
     this.parent = parent;
@@ -18,17 +18,19 @@ class Index {
     if (withParameter && this.taskId !== null) {
       return `${this.parent.path()}/tasks/${this.taskId}`;
     }
-
     return `${this.parent.path()}/tasks`;
   }
 
   /**
-   * Operation: Get Emergency Map Configuration Task
+   * Returns results of the task created within the frame of Automatic Location Updates feature. Currently four task types are supported: 'Wireless Points Bulk Create', 'Wireless Points Bulk Update', 'Switches Bulk Create', 'Switches Bulk Update'.
+   * HTTP Method: get
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/tasks/{taskId}
    * Rate Limit Group: Light
-   * Http get /restapi/v1.0/account/{accountId}/emergency-address-auto-update/tasks/{taskId}
+   * App Permission: EditAccounts
+   * User Permission: ConfigureEmergencyMaps
    */
   async get(
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<AutomaticLocationUpdatesTaskInfo> {
     if (this.taskId === null) {
       throw new Error('taskId must be specified.');
@@ -37,7 +39,7 @@ class Index {
     const r = await this.rc.get<AutomaticLocationUpdatesTaskInfo>(
       this.path(),
       undefined,
-      config
+      restRequestConfig
     );
     return r.data;
   }

@@ -1,17 +1,17 @@
 import {RestRequestConfig} from '../../../../Rest';
 import {
-  GlipConversationsList,
   ListGlipConversationsParameters,
-  GlipConversationInfo,
+  GlipConversationsList,
   CreateGlipConversationRequest,
+  GlipConversationInfo,
 } from '../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../..';
 
 class Index {
   rc: RingCentral;
-  chatId: string | null;
   parent: Parent;
+  chatId: string | null;
 
   constructor(parent: Parent, chatId: string | null = null) {
     this.parent = parent;
@@ -23,51 +23,61 @@ class Index {
     if (withParameter && this.chatId !== null) {
       return `${this.parent.path()}/conversations/${this.chatId}`;
     }
-
     return `${this.parent.path()}/conversations`;
   }
 
   /**
-   * Operation: Get Conversations
+   * Returns the list of conversations where the user is a member. All records in response are sorted by creation time of a conversation in ascending order. Conversation is a chat of the *Group* type.
+   * HTTP Method: get
+   * Endpoint: /restapi/{apiVersion}/glip/conversations
    * Rate Limit Group: Medium
-   * Http get /restapi/v1.0/glip/conversations
+   * App Permission: Glip
+   * User Permission: Glip
    */
   async list(
     queryParams?: ListGlipConversationsParameters,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<GlipConversationsList> {
     const r = await this.rc.get<GlipConversationsList>(
       this.path(false),
       queryParams,
-      config
+      restRequestConfig
     );
     return r.data;
   }
 
   /**
-   * Operation: Create/Open Conversation
+   * Creates a new conversation or opens the existing one. If the conversation already exists, then its ID will be returned in response. A conversation is an adhoc discussion between a particular set of users, not featuring any specific name or description; it is a chat of 'Group' type. If you add a person to the existing conversation (group), it creates a whole new conversation.
+   * HTTP Method: post
+   * Endpoint: /restapi/{apiVersion}/glip/conversations
    * Rate Limit Group: Medium
-   * Http post /restapi/v1.0/glip/conversations
+   * App Permission: Glip
+   * User Permission: Glip
    */
   async post(
     createGlipConversationRequest: CreateGlipConversationRequest,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<GlipConversationInfo> {
     const r = await this.rc.post<GlipConversationInfo>(
       this.path(false),
       createGlipConversationRequest,
       undefined,
-      config
+      restRequestConfig
     );
     return r.data;
   }
 
   /**
-   * Operation: Get Conversation
+   * Returns information about the specified conversation, including the list of conversation participants. A conversation is an adhoc discussion between a particular set of users, not featuring any specific name or description; it is a chat of 'Group' type. If you add a person to the existing conversation, it creates a whole new conversation.
+   * HTTP Method: get
+   * Endpoint: /restapi/{apiVersion}/glip/conversations/{chatId}
    * Rate Limit Group: Light
-   * Http get /restapi/v1.0/glip/conversations/{chatId}
+   * App Permission: Glip
+   * User Permission: Glip
    */
-  async get(config?: RestRequestConfig): Promise<GlipConversationInfo> {
+  async get(
+    restRequestConfig?: RestRequestConfig
+  ): Promise<GlipConversationInfo> {
     if (this.chatId === null) {
       throw new Error('chatId must be specified.');
     }
@@ -75,7 +85,7 @@ class Index {
     const r = await this.rc.get<GlipConversationInfo>(
       this.path(),
       undefined,
-      config
+      restRequestConfig
     );
     return r.data;
   }

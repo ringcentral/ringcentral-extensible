@@ -1,8 +1,8 @@
 import BulkAssign from './BulkAssign';
 import {RestRequestConfig} from '../../../../../Rest';
 import {
-  AutomaticLocationUpdatesUserList,
   ListAutomaticLocationUpdatesUsersParameters,
+  AutomaticLocationUpdatesUserList,
 } from '../../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../../..';
@@ -21,18 +21,21 @@ class Index {
   }
 
   /**
-   * Operation: Get User List
+   * Returns the list of users with their status of Automatic Location Updates feature.
+   * HTTP Method: get
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/users
    * Rate Limit Group: Medium
-   * Http get /restapi/v1.0/account/{accountId}/emergency-address-auto-update/users
+   * App Permission: EditAccounts
+   * User Permission: ConfigureEmergencyMaps
    */
   async get(
     queryParams?: ListAutomaticLocationUpdatesUsersParameters,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<AutomaticLocationUpdatesUserList> {
     const r = await this.rc.get<AutomaticLocationUpdatesUserList>(
       this.path(),
       queryParams,
-      config
+      restRequestConfig
     );
     return r.data;
   }

@@ -1,5 +1,5 @@
 import {RestRequestConfig} from '../../../../Rest';
-import {UserSearchResponse, SearchRequest} from '../../../../definitions';
+import {SearchRequest, UserSearchResponse} from '../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../..';
 
@@ -17,19 +17,21 @@ class Index {
   }
 
   /**
-   * Operation: Search/List Users
+   * Search/List Users
+   * HTTP Method: post
+   * Endpoint: /scim/{version}/Users/dotSearch
    * Rate Limit Group: Light
-   * Http post /scim/v2/Users/.search
+   * App Permission: ReadAccounts
    */
   async post(
     searchRequest: SearchRequest,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<UserSearchResponse> {
     const r = await this.rc.post<UserSearchResponse>(
       this.path(),
       searchRequest,
       undefined,
-      config
+      restRequestConfig
     );
     return r.data;
   }

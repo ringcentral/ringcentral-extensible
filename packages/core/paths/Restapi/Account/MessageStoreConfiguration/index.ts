@@ -17,33 +17,41 @@ class Index {
   }
 
   /**
-   * Operation: Get Message Store Configuration
+   * Returns message store settings.
+   * HTTP Method: get
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/message-store-configuration
    * Rate Limit Group: Light
-   * Http get /restapi/v1.0/account/{accountId}/message-store-configuration
+   * App Permission: EditAccounts
+   * User Permission: AccountAdministration
    */
-  async get(config?: RestRequestConfig): Promise<MessageStoreConfiguration> {
+  async get(
+    restRequestConfig?: RestRequestConfig
+  ): Promise<MessageStoreConfiguration> {
     const r = await this.rc.get<MessageStoreConfiguration>(
       this.path(),
       undefined,
-      config
+      restRequestConfig
     );
     return r.data;
   }
 
   /**
-   * Operation: Update Message Store Configuration
+   * Updates message store settings.
+   * HTTP Method: put
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/message-store-configuration
    * Rate Limit Group: Light
-   * Http put /restapi/v1.0/account/{accountId}/message-store-configuration
+   * App Permission: EditAccounts
+   * User Permission: AccountAdministration
    */
   async put(
     messageStoreConfiguration: MessageStoreConfiguration,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<MessageStoreConfiguration> {
     const r = await this.rc.put<MessageStoreConfiguration>(
       this.path(),
       messageStoreConfiguration,
       undefined,
-      config
+      restRequestConfig
     );
     return r.data;
   }

@@ -17,19 +17,22 @@ class Index {
   }
 
   /**
-   * Operation: Add Team Members
+   * Adds members to the specified team. A team is a chat between 2 and more participants assigned with specific name.
+   * HTTP Method: post
+   * Endpoint: /restapi/{apiVersion}/glip/teams/{chatId}/add
    * Rate Limit Group: Medium
-   * Http post /restapi/v1.0/glip/teams/{chatId}/add
+   * App Permission: Glip
+   * User Permission: Glip
    */
   async post(
     glipPostMembersListBody: GlipPostMembersListBody,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<string> {
     const r = await this.rc.post<string>(
       this.path(),
       glipPostMembersListBody,
       undefined,
-      config
+      restRequestConfig
     );
     return r.data;
   }

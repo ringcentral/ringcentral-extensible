@@ -17,15 +17,16 @@ class Index {
   }
 
   /**
-   * Operation: Renew Subscription
+   * Renews an existent subscription by posting request with an empty body.
+   * HTTP Method: post
+   * Endpoint: /restapi/{apiVersion}/subscription/{subscriptionId}/renew
    * Rate Limit Group: Light
-   * Http post /restapi/v1.0/subscription/{subscriptionId}/renew
    */
-  async post(config?: RestRequestConfig): Promise<SubscriptionInfo> {
+  async post(restRequestConfig?: RestRequestConfig): Promise<SubscriptionInfo> {
     const r = await this.rc.post<SubscriptionInfo>(
       this.path(),
       undefined,
-      config
+      restRequestConfig
     );
     return r.data;
   }

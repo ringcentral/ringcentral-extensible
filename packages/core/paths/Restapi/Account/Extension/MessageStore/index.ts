@@ -1,8 +1,9 @@
 import Content from './Content';
 import {RestRequestConfig} from '../../../../../Rest';
 import {
-  GetMessageList,
   ListMessagesParameters,
+  GetMessageList,
+  DeleteMessageByFilterParameters,
   GetMessageInfoResponse,
   UpdateMessageRequest,
   UpdateMessageParameters,
@@ -13,8 +14,8 @@ import RingCentral from '../../../../..';
 
 class Index {
   rc: RingCentral;
-  messageId: string | null;
   parent: Parent;
+  messageId: string | null;
 
   constructor(parent: Parent, messageId: string | null = null) {
     this.parent = parent;
@@ -26,33 +27,60 @@ class Index {
     if (withParameter && this.messageId !== null) {
       return `${this.parent.path()}/message-store/${this.messageId}`;
     }
-
     return `${this.parent.path()}/message-store`;
   }
 
   /**
-   * Operation: Get Message List
+   * Returns the list of messages from an extension mailbox.
+   * HTTP Method: get
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/message-store
    * Rate Limit Group: Light
-   * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store
+   * App Permission: ReadMessages
+   * User Permission: ReadMessages
    */
   async list(
     queryParams?: ListMessagesParameters,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<GetMessageList> {
     const r = await this.rc.get<GetMessageList>(
       this.path(false),
       queryParams,
-      config
+      restRequestConfig
     );
     return r.data;
   }
 
   /**
-   * Operation: Get Message
-   * Rate Limit Group: Light
-   * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}
+   * Deletes conversation(s) by conversation ID(s). Batch request is supported, max number of IDs passed as query/path parameters is 50. Alternative syntax is supported - user converations can be deleted by passing multiple IDs in request body as an array of string, max number of conversation IDs passed in request body is 100. In this case asterisk is used in the path instead of IDs
+   * HTTP Method: delete
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/message-store
+   * Rate Limit Group: Medium
+   * App Permission: EditMessages
+   * User Permission: EditMessages
    */
-  async get(config?: RestRequestConfig): Promise<GetMessageInfoResponse> {
+  async deleteAll(
+    queryParams?: DeleteMessageByFilterParameters,
+    restRequestConfig?: RestRequestConfig
+  ): Promise<string> {
+    const r = await this.rc.delete<string>(
+      this.path(false),
+      queryParams,
+      restRequestConfig
+    );
+    return r.data;
+  }
+
+  /**
+   * Returns individual message record(s) by the given message ID(s). The length of inbound messages is unlimited. Batch request is supported.
+   * HTTP Method: get
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/message-store/{messageId}
+   * Rate Limit Group: Light
+   * App Permission: ReadMessages
+   * User Permission: ReadMessages
+   */
+  async get(
+    restRequestConfig?: RestRequestConfig
+  ): Promise<GetMessageInfoResponse> {
     if (this.messageId === null) {
       throw new Error('messageId must be specified.');
     }
@@ -60,20 +88,23 @@ class Index {
     const r = await this.rc.get<GetMessageInfoResponse>(
       this.path(),
       undefined,
-      config
+      restRequestConfig
     );
     return r.data;
   }
 
   /**
-   * Operation: Update Message List
+   * Updates message(s) by ID(s). Currently only message read status can be updated. Batch request is supported, max number of IDs passed as query/path parameters is 50. Alternative syntax is supported - user messages can be updated by passing multiple IDs in request body as an array of string, max number of IDs passed in request body is 1000. In this case asterisk is used in the path instead of IDs.
+   * HTTP Method: put
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/message-store/{messageId}
    * Rate Limit Group: Medium
-   * Http put /restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}
+   * App Permission: EditMessages
+   * User Permission: EditMessages
    */
   async put(
     updateMessageRequest: UpdateMessageRequest,
     queryParams?: UpdateMessageParameters,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<GetMessageInfoResponse> {
     if (this.messageId === null) {
       throw new Error('messageId must be specified.');
@@ -83,25 +114,32 @@ class Index {
       this.path(),
       updateMessageRequest,
       queryParams,
-      config
+      restRequestConfig
     );
     return r.data;
   }
 
   /**
-   * Operation: Delete Message
+   * Deletes message(s) by the given message ID(s). The first call of this method transfers the message to the 'Delete' status. The second call transfers the deleted message to the 'Purged' status. If it is required to make the message 'Purged' immediately (from the first call), then set the query parameter purge to 'True'.
+   * HTTP Method: delete
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/message-store/{messageId}
    * Rate Limit Group: Medium
-   * Http delete /restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}
+   * App Permission: EditMessages
+   * User Permission: EditMessages
    */
   async delete(
     queryParams?: DeleteMessageParameters,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<string> {
     if (this.messageId === null) {
       throw new Error('messageId must be specified.');
     }
 
-    const r = await this.rc.delete<string>(this.path(), queryParams, config);
+    const r = await this.rc.delete<string>(
+      this.path(),
+      queryParams,
+      restRequestConfig
+    );
     return r.data;
   }
 

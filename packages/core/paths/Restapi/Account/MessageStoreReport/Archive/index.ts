@@ -5,8 +5,8 @@ import RingCentral from '../../../../..';
 
 class Index {
   rc: RingCentral;
-  archiveId: string | null;
   parent: Parent;
+  archiveId: string | null;
 
   constructor(parent: Parent, archiveId: string | null = null) {
     this.parent = parent;
@@ -18,36 +18,43 @@ class Index {
     if (withParameter && this.archiveId !== null) {
       return `${this.parent.path()}/archive/${this.archiveId}`;
     }
-
     return `${this.parent.path()}/archive`;
   }
 
   /**
-   * Operation: Get Message Store Report Archive
+   * Returns the created report with message data not including attachments.
+   * HTTP Method: get
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/message-store-report/{taskId}/archive
    * Rate Limit Group: Heavy
-   * Http get /restapi/v1.0/account/{accountId}/message-store-report/{taskId}/archive
+   * App Permission: ReadMessages
+   * User Permission: Users
    */
-  async list(config?: RestRequestConfig): Promise<MessageStoreReportArchive> {
+  async list(
+    restRequestConfig?: RestRequestConfig
+  ): Promise<MessageStoreReportArchive> {
     const r = await this.rc.get<MessageStoreReportArchive>(
       this.path(false),
       undefined,
-      config
+      restRequestConfig
     );
     return r.data;
   }
 
   /**
-   * Operation: Get Message Store Report Archive Content
+   * Returns one of the report archives with message contents in application/zip format.
+   * HTTP Method: get
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/message-store-report/{taskId}/archive/{archiveId}
    * Rate Limit Group: Heavy
-   * Http get /restapi/v1.0/account/{accountId}/message-store-report/{taskId}/archive/{archiveId}
+   * App Permission: ReadMessages
+   * User Permission: Users
    */
-  async get(config?: RestRequestConfig): Promise<Buffer> {
+  async get(restRequestConfig?: RestRequestConfig): Promise<Buffer> {
     if (this.archiveId === null) {
       throw new Error('archiveId must be specified.');
     }
 
     const r = await this.rc.get<Buffer>(this.path(), undefined, {
-      ...config,
+      ...restRequestConfig,
       responseType: 'arraybuffer',
     });
     return r.data;

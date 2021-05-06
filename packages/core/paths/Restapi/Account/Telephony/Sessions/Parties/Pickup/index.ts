@@ -1,5 +1,5 @@
 import {RestRequestConfig} from '../../../../../../../Rest';
-import {CallParty, PickupTarget} from '../../../../../../../definitions';
+import {PickupTarget, CallParty} from '../../../../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../../../../..';
 
@@ -17,19 +17,21 @@ class Index {
   }
 
   /**
-   * Operation: Pickup Call
+   * Picks up a call parked to the specified park location.
+   * HTTP Method: post
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/pickup
    * Rate Limit Group: Light
-   * Http post /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/pickup
+   * App Permission: CallControl
    */
   async post(
     pickupTarget: PickupTarget,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<CallParty> {
     const r = await this.rc.post<CallParty>(
       this.path(),
       pickupTarget,
       undefined,
-      config
+      restRequestConfig
     );
     return r.data;
   }

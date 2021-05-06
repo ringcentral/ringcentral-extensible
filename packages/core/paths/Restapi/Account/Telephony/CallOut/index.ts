@@ -1,5 +1,5 @@
 import {RestRequestConfig} from '../../../../../Rest';
-import {CallSession, MakeCallOutRequest} from '../../../../../definitions';
+import {MakeCallOutRequest, CallSession} from '../../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../../..';
 
@@ -17,19 +17,21 @@ class Index {
   }
 
   /**
-   * Operation: Make CallOut
+   * Creates a new outbound call out session. Currently this method is supported for Softphone/Hardphone only, since device IDs for WebRTC/Mobile apps cannot be obtained.
+   * HTTP Method: post
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/telephony/call-out
    * Rate Limit Group: Heavy
-   * Http post /restapi/v1.0/account/{accountId}/telephony/call-out
+   * App Permission: CallControl
    */
   async post(
     makeCallOutRequest: MakeCallOutRequest,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<CallSession> {
     const r = await this.rc.post<CallSession>(
       this.path(),
       makeCallOutRequest,
       undefined,
-      config
+      restRequestConfig
     );
     return r.data;
   }

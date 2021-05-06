@@ -1,7 +1,7 @@
 import {RestRequestConfig} from '../../../../Rest';
 import {
-  UserTemplates,
   ListUserTemplatesParameters,
+  UserTemplates,
   TemplateInfo,
 } from '../../../../definitions';
 import Parent from '..';
@@ -9,8 +9,8 @@ import RingCentral from '../../../..';
 
 class Index {
   rc: RingCentral;
-  templateId: string | null;
   parent: Parent;
+  templateId: string | null;
 
   constructor(parent: Parent, templateId: string | null = null) {
     this.parent = parent;
@@ -22,38 +22,47 @@ class Index {
     if (withParameter && this.templateId !== null) {
       return `${this.parent.path()}/templates/${this.templateId}`;
     }
-
     return `${this.parent.path()}/templates`;
   }
 
   /**
-   * Operation: Get User Template List
+   * Returns the list of user templates for the current account.
+   * HTTP Method: get
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/templates
    * Rate Limit Group: Medium
-   * Http get /restapi/v1.0/account/{accountId}/templates
+   * App Permission: ReadAccounts
+   * User Permission: ReadCompanyInfo
    */
   async list(
     queryParams?: ListUserTemplatesParameters,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<UserTemplates> {
     const r = await this.rc.get<UserTemplates>(
       this.path(false),
       queryParams,
-      config
+      restRequestConfig
     );
     return r.data;
   }
 
   /**
-   * Operation: Get User Template
+   * Returns the user template by ID.
+   * HTTP Method: get
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/templates/{templateId}
    * Rate Limit Group: Light
-   * Http get /restapi/v1.0/account/{accountId}/templates/{templateId}
+   * App Permission: ReadAccounts
+   * User Permission: ReadCompanyInfo
    */
-  async get(config?: RestRequestConfig): Promise<TemplateInfo> {
+  async get(restRequestConfig?: RestRequestConfig): Promise<TemplateInfo> {
     if (this.templateId === null) {
       throw new Error('templateId must be specified.');
     }
 
-    const r = await this.rc.get<TemplateInfo>(this.path(), undefined, config);
+    const r = await this.rc.get<TemplateInfo>(
+      this.path(),
+      undefined,
+      restRequestConfig
+    );
     return r.data;
   }
 }

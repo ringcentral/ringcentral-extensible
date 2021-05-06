@@ -1,7 +1,7 @@
 import {RestRequestConfig} from '../../../../../Rest';
 import {
-  PagingOnlyGroupDevices,
   ListPagingGroupDevicesParameters,
+  PagingOnlyGroupDevices,
 } from '../../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../../..';
@@ -20,18 +20,21 @@ class Index {
   }
 
   /**
-   * Operation: Get Paging Group Devices
+   * Returns the list of paging devices assigned to this group.
+   * HTTP Method: get
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/paging-only-groups/{pagingOnlyGroupId}/devices
    * Rate Limit Group: Light
-   * Http get /restapi/v1.0/account/{accountId}/paging-only-groups/{pagingOnlyGroupId}/devices
+   * App Permission: ReadAccounts
+   * User Permission: ReadCompanyDevices
    */
   async get(
     queryParams?: ListPagingGroupDevicesParameters,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<PagingOnlyGroupDevices> {
     const r = await this.rc.get<PagingOnlyGroupDevices>(
       this.path(),
       queryParams,
-      config
+      restRequestConfig
     );
     return r.data;
   }

@@ -1,7 +1,7 @@
 import {RestRequestConfig} from '../../../../../../Rest';
 import {
-  AuthProfileCheckResource,
   CheckUserPermissionParameters,
+  AuthProfileCheckResource,
 } from '../../../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../../../..';
@@ -20,18 +20,19 @@ class Index {
   }
 
   /**
-   * Operation: Check User Permission
+   * Checks if a certain user permission is activated for a particular extension.
+   * HTTP Method: get
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/authz-profile/check
    * Rate Limit Group: Light
-   * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/authz-profile/check
    */
   async get(
     queryParams?: CheckUserPermissionParameters,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<AuthProfileCheckResource> {
     const r = await this.rc.get<AuthProfileCheckResource>(
       this.path(),
       queryParams,
-      config
+      restRequestConfig
     );
     return r.data;
   }

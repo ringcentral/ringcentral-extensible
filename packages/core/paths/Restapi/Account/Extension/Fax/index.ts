@@ -1,6 +1,6 @@
-import {RestRequestConfig} from '../../../../../Rest';
-import {FaxResponse, CreateFaxMessageRequest} from '../../../../../definitions';
 import Utils from '../../../../../Utils';
+import {RestRequestConfig} from '../../../../../Rest';
+import {CreateFaxMessageRequest, FaxResponse} from '../../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../../..';
 
@@ -18,20 +18,23 @@ class Index {
   }
 
   /**
-   * Operation: Create Fax Message
+   * Creates and sends/resends a fax message. Resend can be implemented if sending has failed. Fax attachment size (both single and total) is limited to 50Mb.
+   * HTTP Method: post
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/fax
    * Rate Limit Group: Heavy
-   * Http post /restapi/v1.0/account/{accountId}/extension/{extensionId}/fax
+   * App Permission: Faxes
+   * User Permission: OutboundFaxes
    */
   async post(
     createFaxMessageRequest: CreateFaxMessageRequest,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<FaxResponse> {
     const formData = Utils.getFormData(createFaxMessageRequest);
     const r = await this.rc.post<FaxResponse>(
       this.path(),
       formData,
       undefined,
-      config
+      restRequestConfig
     );
     return r.data;
   }

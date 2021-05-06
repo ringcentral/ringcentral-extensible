@@ -1,5 +1,5 @@
 import {RestRequestConfig} from '../../../../../../../Rest';
-import {CallParty, BridgeTargetRequest} from '../../../../../../../definitions';
+import {BridgeTargetRequest, CallParty} from '../../../../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../../../../..';
 
@@ -17,19 +17,21 @@ class Index {
   }
 
   /**
-   * Operation: Bridge Call Party
+   * Allows the user to connect multiple call session participants over a conference call bridge. The current active call session ID and party ID of the user within this session should be specified in path; the bridged call session ID and party ID of the user within that session should be specified in request body. Thus the user connects participants of two sessions into one conference call using his/her own party IDs from both sessions.
+   * HTTP Method: post
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/bridge
    * Rate Limit Group: Light
-   * Http post /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/bridge
+   * App Permission: CallControl
    */
   async post(
     bridgeTargetRequest: BridgeTargetRequest,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<CallParty> {
     const r = await this.rc.post<CallParty>(
       this.path(),
       bridgeTargetRequest,
       undefined,
-      config
+      restRequestConfig
     );
     return r.data;
   }

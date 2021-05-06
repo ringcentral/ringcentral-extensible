@@ -1,5 +1,5 @@
 import {RestRequestConfig} from '../../../../../../../Rest';
-import {CallParty, TransferTarget} from '../../../../../../../definitions';
+import {TransferTarget, CallParty} from '../../../../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../../../../..';
 
@@ -17,19 +17,21 @@ class Index {
   }
 
   /**
-   * Operation: Transfer Call Party
+   * Transfers an answered call to the specified call party. Applicable for a call session in "Answered" or "Hold" state.
+   * HTTP Method: post
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/transfer
    * Rate Limit Group: Light
-   * Http post /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/transfer
+   * App Permission: CallControl
    */
   async post(
     transferTarget: TransferTarget,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<CallParty> {
     const r = await this.rc.post<CallParty>(
       this.path(),
       transferTarget,
       undefined,
-      config
+      restRequestConfig
     );
     return r.data;
   }

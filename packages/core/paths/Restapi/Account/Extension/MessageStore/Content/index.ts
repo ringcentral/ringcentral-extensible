@@ -5,8 +5,8 @@ import RingCentral from '../../../../../..';
 
 class Index {
   rc: RingCentral;
-  attachmentId: string | null;
   parent: Parent;
+  attachmentId: string | null;
 
   constructor(parent: Parent, attachmentId: string | null = null) {
     this.parent = parent;
@@ -18,25 +18,27 @@ class Index {
     if (withParameter && this.attachmentId !== null) {
       return `${this.parent.path()}/content/${this.attachmentId}`;
     }
-
     return `${this.parent.path()}/content`;
   }
 
   /**
-   * Operation: Get Message Content
+   * Returns a specific message attachment data as media stream.
+   * HTTP Method: get
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/message-store/{messageId}/content/{attachmentId}
    * Rate Limit Group: Medium
-   * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}/content/{attachmentId}
+   * App Permission: ReadMessages
+   * User Permission: ReadMessageContent
    */
   async get(
     queryParams?: ReadMessageContentParameters,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<Buffer> {
     if (this.attachmentId === null) {
       throw new Error('attachmentId must be specified.');
     }
 
     const r = await this.rc.get<Buffer>(this.path(), queryParams, {
-      ...config,
+      ...restRequestConfig,
       responseType: 'arraybuffer',
     });
     return r.data;

@@ -17,19 +17,22 @@ class Index {
   }
 
   /**
-   * Operation: Assign Paging Group Users and Devices
+   * Adds and/or removes paging group users and devices.
+   * HTTP Method: post
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/paging-only-groups/{pagingOnlyGroupId}/bulk-assign
    * Rate Limit Group: Heavy
-   * Http post /restapi/v1.0/account/{accountId}/paging-only-groups/{pagingOnlyGroupId}/bulk-assign
+   * App Permission: EditAccounts
+   * User Permission: Groups
    */
   async post(
     editPagingGroupRequest: EditPagingGroupRequest,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<string> {
     const r = await this.rc.post<string>(
       this.path(),
       editPagingGroupRequest,
       undefined,
-      config
+      restRequestConfig
     );
     return r.data;
   }

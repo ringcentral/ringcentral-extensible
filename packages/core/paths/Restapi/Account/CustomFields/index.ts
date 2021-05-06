@@ -1,8 +1,8 @@
 import {RestRequestConfig} from '../../../../Rest';
 import {
   CustomFieldsResource,
-  CustomFieldResource,
   CustomFieldCreateRequest,
+  CustomFieldResource,
   CustomFieldUpdateRequest,
 } from '../../../../definitions';
 import Parent from '..';
@@ -10,8 +10,8 @@ import RingCentral from '../../../..';
 
 class Index {
   rc: RingCentral;
-  fieldId: string | null;
   parent: Parent;
+  fieldId: string | null;
 
   constructor(parent: Parent, fieldId: string | null = null) {
     this.parent = parent;
@@ -23,50 +23,60 @@ class Index {
     if (withParameter && this.fieldId !== null) {
       return `${this.parent.path()}/custom-fields/${this.fieldId}`;
     }
-
     return `${this.parent.path()}/custom-fields`;
   }
 
   /**
-   * Operation: Get Custom Field List
+   * Returns the list of created custom fields.
+   * HTTP Method: get
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/custom-fields
    * Rate Limit Group: Light
-   * Http get /restapi/v1.0/account/{accountId}/custom-fields
+   * App Permission: ReadAccounts
+   * User Permission: ReadUserInfo
    */
-  async get(config?: RestRequestConfig): Promise<CustomFieldsResource> {
+  async get(
+    restRequestConfig?: RestRequestConfig
+  ): Promise<CustomFieldsResource> {
     const r = await this.rc.get<CustomFieldsResource>(
       this.path(false),
       undefined,
-      config
+      restRequestConfig
     );
     return r.data;
   }
 
   /**
-   * Operation: Create Custom Field
+   * Creates custom field attached to the object.
+   * HTTP Method: post
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/custom-fields
    * Rate Limit Group: Light
-   * Http post /restapi/v1.0/account/{accountId}/custom-fields
+   * App Permission: EditAccounts
+   * User Permission: Users
    */
   async post(
     customFieldCreateRequest: CustomFieldCreateRequest,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<CustomFieldResource> {
     const r = await this.rc.post<CustomFieldResource>(
       this.path(false),
       customFieldCreateRequest,
       undefined,
-      config
+      restRequestConfig
     );
     return r.data;
   }
 
   /**
-   * Operation: Update Сustom Field
+   * Updates custom field by ID specified in path.
+   * HTTP Method: put
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/custom-fields/{fieldId}
    * Rate Limit Group: Light
-   * Http put /restapi/v1.0/account/{accountId}/custom-fields/{fieldId}
+   * App Permission: EditAccounts
+   * User Permission: Users
    */
   async put(
     customFieldUpdateRequest: CustomFieldUpdateRequest,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<CustomFieldResource> {
     if (this.fieldId === null) {
       throw new Error('fieldId must be specified.');
@@ -76,22 +86,29 @@ class Index {
       this.path(),
       customFieldUpdateRequest,
       undefined,
-      config
+      restRequestConfig
     );
     return r.data;
   }
 
   /**
-   * Operation: Delete Custom Field
+   * Deletes custom field(s) by ID(s) with the corresponding values.
+   * HTTP Method: delete
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/custom-fields/{fieldId}
    * Rate Limit Group: Light
-   * Http delete /restapi/v1.0/account/{accountId}/custom-fields/{fieldId}
+   * App Permission: EditAccounts
+   * User Permission: Users
    */
-  async delete(config?: RestRequestConfig): Promise<string> {
+  async delete(restRequestConfig?: RestRequestConfig): Promise<string> {
     if (this.fieldId === null) {
       throw new Error('fieldId must be specified.');
     }
 
-    const r = await this.rc.delete<string>(this.path(), undefined, config);
+    const r = await this.rc.delete<string>(
+      this.path(),
+      undefined,
+      restRequestConfig
+    );
     return r.data;
   }
 }

@@ -20,33 +20,39 @@ class Index {
   }
 
   /**
-   * Operation: Get Everyone Chat
+   * Returns information about Everyone chat, which is a company level chat including all employees; assigned with specific name.
+   * HTTP Method: get
+   * Endpoint: /restapi/{apiVersion}/glip/everyone
    * Rate Limit Group: Light
-   * Http get /restapi/v1.0/glip/everyone
+   * App Permission: Glip
+   * User Permission: Glip
    */
-  async get(config?: RestRequestConfig): Promise<GlipEveryoneInfo> {
+  async get(restRequestConfig?: RestRequestConfig): Promise<GlipEveryoneInfo> {
     const r = await this.rc.get<GlipEveryoneInfo>(
       this.path(),
       undefined,
-      config
+      restRequestConfig
     );
     return r.data;
   }
 
   /**
-   * Operation: Update Everyone Сhat
+   * Updates Everyone chat information. Everyone chat is a company level chat including all employees; assigned with specific name.
+   * HTTP Method: patch
+   * Endpoint: /restapi/{apiVersion}/glip/everyone
    * Rate Limit Group: Medium
-   * Http patch /restapi/v1.0/glip/everyone
+   * App Permission: Glip
+   * User Permission: Glip
    */
   async patch(
     updateGlipEveryoneRequest: UpdateGlipEveryoneRequest,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<GlipEveryoneInfo> {
     const r = await this.rc.patch<GlipEveryoneInfo>(
       this.path(),
       updateGlipEveryoneRequest,
       undefined,
-      config
+      restRequestConfig
     );
     return r.data;
   }

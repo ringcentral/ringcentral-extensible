@@ -1,7 +1,7 @@
 import {RestRequestConfig} from '../../../../../Rest';
 import {
-  GetConferencingInfoResponse,
   ReadConferencingSettingsParameters,
+  GetConferencingInfoResponse,
   UpdateConferencingInfoRequest,
 } from '../../../../../definitions';
 import Parent from '..';
@@ -21,36 +21,42 @@ class Index {
   }
 
   /**
-   * Operation: Get User Conferencing Settings
+   * Returns the information on the Free Conference Calling (FCC) feature for a given extension.
+   * HTTP Method: get
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/conferencing
    * Rate Limit Group: Light
-   * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/conferencing
+   * App Permission: ReadAccounts
+   * User Permission: OrganizeConference
    */
   async get(
     queryParams?: ReadConferencingSettingsParameters,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<GetConferencingInfoResponse> {
     const r = await this.rc.get<GetConferencingInfoResponse>(
       this.path(),
       queryParams,
-      config
+      restRequestConfig
     );
     return r.data;
   }
 
   /**
-   * Operation: Update User Conferencing Settings
+   * Updates the default conferencing number for the current extension. The number can be selected from conferencing numbers of the current extension. Updates the setting, allowing participants join the conference before host.
+   * HTTP Method: put
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/conferencing
    * Rate Limit Group: Medium
-   * Http put /restapi/v1.0/account/{accountId}/extension/{extensionId}/conferencing
+   * App Permission: EditExtensions
+   * User Permission: OrganizeConference
    */
   async put(
     updateConferencingInfoRequest: UpdateConferencingInfoRequest,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<GetConferencingInfoResponse> {
     const r = await this.rc.put<GetConferencingInfoResponse>(
       this.path(),
       updateConferencingInfoRequest,
       undefined,
-      config
+      restRequestConfig
     );
     return r.data;
   }

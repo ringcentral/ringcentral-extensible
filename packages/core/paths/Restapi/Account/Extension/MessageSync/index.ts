@@ -1,7 +1,7 @@
 import {RestRequestConfig} from '../../../../../Rest';
 import {
-  GetMessageSyncResponse,
   SyncMessagesParameters,
+  GetMessageSyncResponse,
 } from '../../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../../..';
@@ -20,18 +20,21 @@ class Index {
   }
 
   /**
-   * Operation: Sync Messages
+   * Synchronizes messages.
+   * HTTP Method: get
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/message-sync
    * Rate Limit Group: Light
-   * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/message-sync
+   * App Permission: ReadMessages
+   * User Permission: ReadMessages
    */
   async get(
     queryParams?: SyncMessagesParameters,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<GetMessageSyncResponse> {
     const r = await this.rc.get<GetMessageSyncResponse>(
       this.path(),
       queryParams,
-      config
+      restRequestConfig
     );
     return r.data;
   }

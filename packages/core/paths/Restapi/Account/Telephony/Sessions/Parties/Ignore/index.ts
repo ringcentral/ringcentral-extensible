@@ -17,19 +17,21 @@ class Index {
   }
 
   /**
-   * Operation: Ignore Call in Queue
+   * Ignores a call to a call queue agent in `Setup` or `Proceeding` state.
+   * HTTP Method: post
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/ignore
    * Rate Limit Group: Light
-   * Http post /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/ignore
+   * App Permission: CallControl
    */
   async post(
     ignoreRequestBody: IgnoreRequestBody,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<string> {
     const r = await this.rc.post<string>(
       this.path(),
       ignoreRequestBody,
       undefined,
-      config
+      restRequestConfig
     );
     return r.data;
   }

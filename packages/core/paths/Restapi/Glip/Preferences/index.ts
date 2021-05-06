@@ -17,15 +17,20 @@ class Index {
   }
 
   /**
-   * Operation: Get Preferences
+   * Returns information about user preferences.
+   * HTTP Method: get
+   * Endpoint: /restapi/{apiVersion}/glip/preferences
    * Rate Limit Group: Medium
-   * Http get /restapi/v1.0/glip/preferences
+   * App Permission: Glip
+   * User Permission: Glip
    */
-  async get(config?: RestRequestConfig): Promise<GlipPreferencesInfo> {
+  async get(
+    restRequestConfig?: RestRequestConfig
+  ): Promise<GlipPreferencesInfo> {
     const r = await this.rc.get<GlipPreferencesInfo>(
       this.path(),
       undefined,
-      config
+      restRequestConfig
     );
     return r.data;
   }

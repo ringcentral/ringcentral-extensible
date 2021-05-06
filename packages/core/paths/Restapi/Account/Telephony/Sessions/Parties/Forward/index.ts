@@ -1,5 +1,5 @@
 import {RestRequestConfig} from '../../../../../../../Rest';
-import {CallParty, ForwardTarget} from '../../../../../../../definitions';
+import {ForwardTarget, CallParty} from '../../../../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../../../../..';
 
@@ -17,19 +17,21 @@ class Index {
   }
 
   /**
-   * Operation: Forward Call Party
+   * Forwards a non-answered incoming call to the specified call party. Applicable for a call session in "Setup" or "Proceeding" state.
+   * HTTP Method: post
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/forward
    * Rate Limit Group: Light
-   * Http post /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/forward
+   * App Permission: CallControl
    */
   async post(
     forwardTarget: ForwardTarget,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<CallParty> {
     const r = await this.rc.post<CallParty>(
       this.path(),
       forwardTarget,
       undefined,
-      config
+      restRequestConfig
     );
     return r.data;
   }

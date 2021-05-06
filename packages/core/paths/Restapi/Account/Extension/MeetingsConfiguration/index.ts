@@ -1,5 +1,5 @@
-import Assisted from './Assisted';
 import Assistants from './Assistants';
+import Assisted from './Assisted';
 import Parent from '..';
 import RingCentral from '../../../../..';
 
@@ -16,12 +16,12 @@ class Index {
     return `${this.parent.path()}/meetings-configuration`;
   }
 
-  assistants(): Assistants {
-    return new Assistants(this);
-  }
-
   assisted(): Assisted {
     return new Assisted(this);
+  }
+
+  assistants(): Assistants {
+    return new Assistants(this);
   }
 }
 

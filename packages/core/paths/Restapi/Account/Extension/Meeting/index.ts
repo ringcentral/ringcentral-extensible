@@ -1,20 +1,20 @@
+import UserSettings from './UserSettings';
+import ServiceInfo from './ServiceInfo';
 import Invitation from './Invitation';
 import End from './End';
-import ServiceInfo from './ServiceInfo';
-import UserSettings from './UserSettings';
 import {RestRequestConfig} from '../../../../../Rest';
 import {
   MeetingsResource,
-  MeetingResponseResource,
   MeetingRequestResource,
+  MeetingResponseResource,
 } from '../../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../../..';
 
 class Index {
   rc: RingCentral;
-  meetingId: string | null;
   parent: Parent;
+  meetingId: string | null;
 
   constructor(parent: Parent, meetingId: string | null = null) {
     this.parent = parent;
@@ -26,48 +26,58 @@ class Index {
     if (withParameter && this.meetingId !== null) {
       return `${this.parent.path()}/meeting/${this.meetingId}`;
     }
-
     return `${this.parent.path()}/meeting`;
   }
 
   /**
-   * Operation: Get Scheduled Meetings
+   * Returns a list of user meetings scheduled for the future (meetings of 'Instant' type are not included).
+   * HTTP Method: get
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/meeting
    * Rate Limit Group: Light
-   * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting
+   * App Permission: Meetings
+   * User Permission: Meetings
    */
-  async list(config?: RestRequestConfig): Promise<MeetingsResource> {
+  async list(restRequestConfig?: RestRequestConfig): Promise<MeetingsResource> {
     const r = await this.rc.get<MeetingsResource>(
       this.path(false),
       undefined,
-      config
+      restRequestConfig
     );
     return r.data;
   }
 
   /**
-   * Operation: Create Meeting
+   * Creates a new meeting.
+   * HTTP Method: post
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/meeting
    * Rate Limit Group: Medium
-   * Http post /restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting
+   * App Permission: Meetings
+   * User Permission: Meetings
    */
   async post(
     meetingRequestResource: MeetingRequestResource,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<MeetingResponseResource> {
     const r = await this.rc.post<MeetingResponseResource>(
       this.path(false),
       meetingRequestResource,
       undefined,
-      config
+      restRequestConfig
     );
     return r.data;
   }
 
   /**
-   * Operation: Get Meeting Info
+   * Returns a particular meetings details by ID.
+   * HTTP Method: get
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/meeting/{meetingId}
    * Rate Limit Group: Light
-   * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/{meetingId}
+   * App Permission: Meetings
+   * User Permission: Meetings
    */
-  async get(config?: RestRequestConfig): Promise<MeetingResponseResource> {
+  async get(
+    restRequestConfig?: RestRequestConfig
+  ): Promise<MeetingResponseResource> {
     if (this.meetingId === null) {
       throw new Error('meetingId must be specified.');
     }
@@ -75,19 +85,22 @@ class Index {
     const r = await this.rc.get<MeetingResponseResource>(
       this.path(),
       undefined,
-      config
+      restRequestConfig
     );
     return r.data;
   }
 
   /**
-   * Operation: Update Meeting
+   * Modifies a particular meeting.
+   * HTTP Method: put
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/meeting/{meetingId}
    * Rate Limit Group: Medium
-   * Http put /restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/{meetingId}
+   * App Permission: Meetings
+   * User Permission: Meetings
    */
   async put(
     meetingRequestResource: MeetingRequestResource,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<MeetingResponseResource> {
     if (this.meetingId === null) {
       throw new Error('meetingId must be specified.');
@@ -97,31 +110,30 @@ class Index {
       this.path(),
       meetingRequestResource,
       undefined,
-      config
+      restRequestConfig
     );
     return r.data;
   }
 
   /**
-   * Operation: Delete Meeting
+   * Deletes a scheduled meeting.
+   * HTTP Method: delete
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/meeting/{meetingId}
    * Rate Limit Group: Medium
-   * Http delete /restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/{meetingId}
+   * App Permission: Meetings
+   * User Permission: Meetings
    */
-  async delete(config?: RestRequestConfig): Promise<string> {
+  async delete(restRequestConfig?: RestRequestConfig): Promise<string> {
     if (this.meetingId === null) {
       throw new Error('meetingId must be specified.');
     }
 
-    const r = await this.rc.delete<string>(this.path(), undefined, config);
+    const r = await this.rc.delete<string>(
+      this.path(),
+      undefined,
+      restRequestConfig
+    );
     return r.data;
-  }
-
-  userSettings(): UserSettings {
-    return new UserSettings(this);
-  }
-
-  serviceInfo(): ServiceInfo {
-    return new ServiceInfo(this);
   }
 
   end(): End {
@@ -130,6 +142,14 @@ class Index {
 
   invitation(): Invitation {
     return new Invitation(this);
+  }
+
+  serviceInfo(): ServiceInfo {
+    return new ServiceInfo(this);
+  }
+
+  userSettings(): UserSettings {
+    return new UserSettings(this);
   }
 }
 

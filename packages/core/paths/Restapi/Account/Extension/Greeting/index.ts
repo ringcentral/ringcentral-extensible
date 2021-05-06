@@ -1,17 +1,17 @@
+import Utils from '../../../../../Utils';
 import {RestRequestConfig} from '../../../../../Rest';
 import {
-  CustomUserGreetingInfo,
   CreateCustomUserGreetingRequest,
   CreateCustomUserGreetingParameters,
+  CustomUserGreetingInfo,
 } from '../../../../../definitions';
-import Utils from '../../../../../Utils';
 import Parent from '..';
 import RingCentral from '../../../../..';
 
 class Index {
   rc: RingCentral;
-  greetingId: string | null;
   parent: Parent;
+  greetingId: string | null;
 
   constructor(parent: Parent, greetingId: string | null = null) {
     this.parent = parent;
@@ -23,36 +23,43 @@ class Index {
     if (withParameter && this.greetingId !== null) {
       return `${this.parent.path()}/greeting/${this.greetingId}`;
     }
-
     return `${this.parent.path()}/greeting`;
   }
 
   /**
-   * Operation: Create Custom User Greeting
+   * Creates custom greeting for an extension user.
+   * HTTP Method: post
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/greeting
    * Rate Limit Group: Heavy
-   * Http post /restapi/v1.0/account/{accountId}/extension/{extensionId}/greeting
+   * App Permission: EditExtensions
+   * User Permission: EditUserAnsweringRules
    */
   async post(
     createCustomUserGreetingRequest: CreateCustomUserGreetingRequest,
     queryParams?: CreateCustomUserGreetingParameters,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<CustomUserGreetingInfo> {
     const formData = Utils.getFormData(createCustomUserGreetingRequest);
     const r = await this.rc.post<CustomUserGreetingInfo>(
       this.path(false),
       formData,
       queryParams,
-      config
+      restRequestConfig
     );
     return r.data;
   }
 
   /**
-   * Operation: Get Custom Greeting
+   * Returns a custom user greeting by ID.
+   * HTTP Method: get
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/greeting/{greetingId}
    * Rate Limit Group: Medium
-   * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/greeting/{greetingId}
+   * App Permission: ReadAccounts
+   * User Permission: ReadUserInfo
    */
-  async get(config?: RestRequestConfig): Promise<CustomUserGreetingInfo> {
+  async get(
+    restRequestConfig?: RestRequestConfig
+  ): Promise<CustomUserGreetingInfo> {
     if (this.greetingId === null) {
       throw new Error('greetingId must be specified.');
     }
@@ -60,7 +67,7 @@ class Index {
     const r = await this.rc.get<CustomUserGreetingInfo>(
       this.path(),
       undefined,
-      config
+      restRequestConfig
     );
     return r.data;
   }

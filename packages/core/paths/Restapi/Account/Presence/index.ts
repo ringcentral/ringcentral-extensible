@@ -1,7 +1,7 @@
 import {RestRequestConfig} from '../../../../Rest';
 import {
-  AccountPresenceInfo,
   ReadAccountPresenceParameters,
+  AccountPresenceInfo,
 } from '../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../..';
@@ -20,18 +20,21 @@ class Index {
   }
 
   /**
-   * Operation: Get User Presence Status List
+   * Returns presence status of all extensions of an account. Please note: The presenceStatus is returned as Offline (the parameters telephonyStatus, message, userStatus and dndStatus are not returned at all) for the following extension types: Department, Announcement Only, Voicemail (Take Messages Only), Fax User, Paging Only Group, Shared Lines Group, IVR Menu, Application Extension.
+   * HTTP Method: get
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/presence
    * Rate Limit Group: Heavy
-   * Http get /restapi/v1.0/account/{accountId}/presence
+   * App Permission: ReadPresence
+   * User Permission: ReadPresenceStatus
    */
   async get(
     queryParams?: ReadAccountPresenceParameters,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<AccountPresenceInfo> {
     const r = await this.rc.get<AccountPresenceInfo>(
       this.path(),
       queryParams,
-      config
+      restRequestConfig
     );
     return r.data;
   }

@@ -20,33 +20,39 @@ class Index {
   }
 
   /**
-   * Operation: Get Unified Presence
+   * Returns the unified presence status of the requested user(s). The set of parameters returned by this method differs whether you return the requester's presence or any other user presence.
+   * HTTP Method: get
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/unified-presence
    * Rate Limit Group: Medium
-   * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/unified-presence
+   * App Permission: ReadPresence
+   * User Permission: ReadPresenceStatus
    */
-  async get(config?: RestRequestConfig): Promise<UnifiedPresence> {
+  async get(restRequestConfig?: RestRequestConfig): Promise<UnifiedPresence> {
     const r = await this.rc.get<UnifiedPresence>(
       this.path(),
       undefined,
-      config
+      restRequestConfig
     );
     return r.data;
   }
 
   /**
-   * Operation: Update Unified Presence
+   * Updates the unified presence for the current user specified in path.
+   * HTTP Method: patch
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/unified-presence
    * Rate Limit Group: Medium
-   * Http patch /restapi/v1.0/account/{accountId}/extension/{extensionId}/unified-presence
+   * App Permission: EditPresence
+   * User Permission: EditPresenceStatus
    */
   async patch(
     updateUnifiedPresence: UpdateUnifiedPresence,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<UnifiedPresence> {
     const r = await this.rc.patch<UnifiedPresence>(
       this.path(),
       updateUnifiedPresence,
       undefined,
-      config
+      restRequestConfig
     );
     return r.data;
   }

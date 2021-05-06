@@ -4,16 +4,16 @@ import Lock from './Lock';
 import {RestRequestConfig} from '../../../../Rest';
 import {
   GetGlipNoteInfo,
-  GlipNoteInfo,
   GlipNoteCreate,
+  GlipNoteInfo,
 } from '../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../..';
 
 class Index {
   rc: RingCentral;
-  noteId: string | null;
   parent: Parent;
+  noteId: string | null;
 
   constructor(parent: Parent, noteId: string | null = null) {
     this.parent = parent;
@@ -25,16 +25,18 @@ class Index {
     if (withParameter && this.noteId !== null) {
       return `${this.parent.path()}/notes/${this.noteId}`;
     }
-
     return `${this.parent.path()}/notes`;
   }
 
   /**
-   * Operation: Get Note
+   * Returns the specified note(s). It is possible to fetch up to 50 notes per request.
+   * HTTP Method: get
+   * Endpoint: /restapi/{apiVersion}/glip/notes/{noteId}
    * Rate Limit Group: Medium
-   * Http get /restapi/v1.0/glip/notes/{noteId}
+   * App Permission: Glip
+   * User Permission: Glip
    */
-  async get(config?: RestRequestConfig): Promise<GetGlipNoteInfo> {
+  async get(restRequestConfig?: RestRequestConfig): Promise<GetGlipNoteInfo> {
     if (this.noteId === null) {
       throw new Error('noteId must be specified.');
     }
@@ -42,33 +44,43 @@ class Index {
     const r = await this.rc.get<GetGlipNoteInfo>(
       this.path(),
       undefined,
-      config
+      restRequestConfig
     );
     return r.data;
   }
 
   /**
-   * Operation: Delete Note
+   * Deletes the specified note.
+   * HTTP Method: delete
+   * Endpoint: /restapi/{apiVersion}/glip/notes/{noteId}
    * Rate Limit Group: Medium
-   * Http delete /restapi/v1.0/glip/notes/{noteId}
+   * App Permission: Glip
+   * User Permission: Glip
    */
-  async delete(config?: RestRequestConfig): Promise<string> {
+  async delete(restRequestConfig?: RestRequestConfig): Promise<string> {
     if (this.noteId === null) {
       throw new Error('noteId must be specified.');
     }
 
-    const r = await this.rc.delete<string>(this.path(), undefined, config);
+    const r = await this.rc.delete<string>(
+      this.path(),
+      undefined,
+      restRequestConfig
+    );
     return r.data;
   }
 
   /**
-   * Operation: Update Note
+   * Edits a note. Notes can be edited by any user if posted to a chat. the user belongs to.
+   * HTTP Method: patch
+   * Endpoint: /restapi/{apiVersion}/glip/notes/{noteId}
    * Rate Limit Group: Medium
-   * Http patch /restapi/v1.0/glip/notes/{noteId}
+   * App Permission: Glip
+   * User Permission: Glip
    */
   async patch(
     glipNoteCreate: GlipNoteCreate,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<GlipNoteInfo> {
     if (this.noteId === null) {
       throw new Error('noteId must be specified.');
@@ -78,7 +90,7 @@ class Index {
       this.path(),
       glipNoteCreate,
       undefined,
-      config
+      restRequestConfig
     );
     return r.data;
   }

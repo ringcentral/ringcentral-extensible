@@ -1,5 +1,5 @@
 import {RestRequestConfig} from '../../../../../../../Rest';
-import {ReplyParty, CallPartyReply} from '../../../../../../../definitions';
+import {CallPartyReply, ReplyParty} from '../../../../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../../../../..';
 
@@ -17,19 +17,21 @@ class Index {
   }
 
   /**
-   * Operation: Reply with Text
+   * Replies with text/pattern without picking up a call.
+   * HTTP Method: post
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/reply
    * Rate Limit Group: Light
-   * Http post /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/reply
+   * App Permission: CallControl
    */
   async post(
     callPartyReply: CallPartyReply,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<ReplyParty> {
     const r = await this.rc.post<ReplyParty>(
       this.path(),
       callPartyReply,
       undefined,
-      config
+      restRequestConfig
     );
     return r.data;
   }

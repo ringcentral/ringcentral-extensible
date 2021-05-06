@@ -1,8 +1,8 @@
 import {RestRequestConfig} from '../../../../Rest';
 import {
-  ParsePhoneNumberResponse,
   ParsePhoneNumberRequest,
   ParsePhoneNumberParameters,
+  ParsePhoneNumberResponse,
 } from '../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../..';
@@ -21,20 +21,21 @@ class Index {
   }
 
   /**
-   * Operation: Parse Phone Number
+   * Returns one or more parsed and/or formatted phone numbers that are passed as a string.
+   * HTTP Method: post
+   * Endpoint: /restapi/{apiVersion}/number-parser/parse
    * Rate Limit Group: Light
-   * Http post /restapi/v1.0/number-parser/parse
    */
   async post(
     parsePhoneNumberRequest: ParsePhoneNumberRequest,
     queryParams?: ParsePhoneNumberParameters,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<ParsePhoneNumberResponse> {
     const r = await this.rc.post<ParsePhoneNumberResponse>(
       this.path(),
       parsePhoneNumberRequest,
       queryParams,
-      config
+      restRequestConfig
     );
     return r.data;
   }

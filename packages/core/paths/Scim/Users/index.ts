@@ -1,10 +1,10 @@
 import DotSearch from './DotSearch';
 import {RestRequestConfig} from '../../../Rest';
 import {
-  UserSearchResponse,
   SearchViaGet2Parameters,
-  UserResponse,
+  UserSearchResponse,
   CreateUser,
+  UserResponse,
   User,
   UserPatch,
 } from '../../../definitions';
@@ -13,8 +13,8 @@ import RingCentral from '../../..';
 
 class Index {
   rc: RingCentral;
-  id: string | null;
   parent: Parent;
+  id: string | null;
 
   constructor(parent: Parent, id: string | null = null) {
     this.parent = parent;
@@ -26,65 +26,79 @@ class Index {
     if (withParameter && this.id !== null) {
       return `${this.parent.path()}/Users/${this.id}`;
     }
-
     return `${this.parent.path()}/Users`;
   }
 
   /**
-   * Operation: Search/List Users
+   * Search/List Users
+   * HTTP Method: get
+   * Endpoint: /scim/{version}/Users
    * Rate Limit Group: Light
-   * Http get /scim/v2/Users
+   * App Permission: ReadAccounts
    */
   async list(
     queryParams?: SearchViaGet2Parameters,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<UserSearchResponse> {
     const r = await this.rc.get<UserSearchResponse>(
       this.path(false),
       queryParams,
-      config
+      restRequestConfig
     );
     return r.data;
   }
 
   /**
-   * Operation: Create User
+   * Create User
+   * HTTP Method: post
+   * Endpoint: /scim/{version}/Users
    * Rate Limit Group: Heavy
-   * Http post /scim/v2/Users
+   * App Permission: EditAccounts
    */
   async post(
     createUser: CreateUser,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<UserResponse> {
     const r = await this.rc.post<UserResponse>(
       this.path(false),
       createUser,
       undefined,
-      config
+      restRequestConfig
     );
     return r.data;
   }
 
   /**
-   * Operation: Get User
+   * Get User
+   * HTTP Method: get
+   * Endpoint: /scim/{version}/Users/{id}
    * Rate Limit Group: Light
-   * Http get /scim/v2/Users/{id}
+   * App Permission: ReadAccounts
    */
-  async get(config?: RestRequestConfig): Promise<UserResponse> {
+  async get(restRequestConfig?: RestRequestConfig): Promise<UserResponse> {
     if (this.id === null) {
       throw new Error('id must be specified.');
     }
 
-    const r = await this.rc.get<UserResponse>(this.path(), undefined, config);
+    const r = await this.rc.get<UserResponse>(
+      this.path(),
+      undefined,
+      restRequestConfig
+    );
     return r.data;
   }
 
   /**
-   * Operation: Update/Replace User
+   * Update/Replace User
+   * HTTP Method: put
+   * Endpoint: /scim/{version}/Users/{id}
    * Rate Limit Group: Heavy
-   * Http put /scim/v2/Users/{id}
+   * App Permission: EditAccounts
    */
-  async put(user: User, config?: RestRequestConfig): Promise<UserResponse> {
+  async put(
+    user: User,
+    restRequestConfig?: RestRequestConfig
+  ): Promise<UserResponse> {
     if (this.id === null) {
       throw new Error('id must be specified.');
     }
@@ -93,33 +107,41 @@ class Index {
       this.path(),
       user,
       undefined,
-      config
+      restRequestConfig
     );
     return r.data;
   }
 
   /**
-   * Operation: Delete User
+   * Delete User
+   * HTTP Method: delete
+   * Endpoint: /scim/{version}/Users/{id}
    * Rate Limit Group: Heavy
-   * Http delete /scim/v2/Users/{id}
+   * App Permission: EditAccounts
    */
-  async delete(config?: RestRequestConfig): Promise<string> {
+  async delete(restRequestConfig?: RestRequestConfig): Promise<string> {
     if (this.id === null) {
       throw new Error('id must be specified.');
     }
 
-    const r = await this.rc.delete<string>(this.path(), undefined, config);
+    const r = await this.rc.delete<string>(
+      this.path(),
+      undefined,
+      restRequestConfig
+    );
     return r.data;
   }
 
   /**
-   * Operation: Update/Patch User
+   * Update/Patch User
+   * HTTP Method: patch
+   * Endpoint: /scim/{version}/Users/{id}
    * Rate Limit Group: Heavy
-   * Http patch /scim/v2/Users/{id}
+   * App Permission: EditAccounts
    */
   async patch(
     userPatch: UserPatch,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<UserResponse> {
     if (this.id === null) {
       throw new Error('id must be specified.');
@@ -129,7 +151,7 @@ class Index {
       this.path(),
       userPatch,
       undefined,
-      config
+      restRequestConfig
     );
     return r.data;
   }

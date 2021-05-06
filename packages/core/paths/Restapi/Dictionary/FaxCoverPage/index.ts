@@ -1,7 +1,7 @@
 import {RestRequestConfig} from '../../../../Rest';
 import {
-  ListFaxCoverPagesResponse,
   ListFaxCoverPagesParameters,
+  ListFaxCoverPagesResponse,
 } from '../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../..';
@@ -20,18 +20,19 @@ class Index {
   }
 
   /**
-   * Operation: Get Fax Cover Page List
+   * Returns fax cover pages available for the current extension.
+   * HTTP Method: get
+   * Endpoint: /restapi/{apiVersion}/dictionary/fax-cover-page
    * Rate Limit Group: Light
-   * Http get /restapi/v1.0/dictionary/fax-cover-page
    */
   async get(
     queryParams?: ListFaxCoverPagesParameters,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<ListFaxCoverPagesResponse> {
     const r = await this.rc.get<ListFaxCoverPagesResponse>(
       this.path(),
       queryParams,
-      config
+      restRequestConfig
     );
     return r.data;
   }

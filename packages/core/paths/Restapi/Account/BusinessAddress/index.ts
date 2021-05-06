@@ -20,35 +20,41 @@ class Index {
   }
 
   /**
-   * Operation: Get Account Business Address
+   * Returns business address of a company.
+   * HTTP Method: get
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/business-address
    * Rate Limit Group: Light
-   * Http get /restapi/v1.0/account/{accountId}/business-address
+   * App Permission: ReadAccounts
+   * User Permission: ReadCompanyInfo
    */
   async get(
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<AccountBusinessAddressResource> {
     const r = await this.rc.get<AccountBusinessAddressResource>(
       this.path(),
       undefined,
-      config
+      restRequestConfig
     );
     return r.data;
   }
 
   /**
-   * Operation: Update Company Business Address
+   * Updates the business address of a company that account is linked to. Batch request is supported.
+   * HTTP Method: put
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/business-address
    * Rate Limit Group: Medium
-   * Http put /restapi/v1.0/account/{accountId}/business-address
+   * App Permission: EditAccounts
+   * User Permission: EditCompanyInfo
    */
   async put(
     modifyAccountBusinessAddressRequest: ModifyAccountBusinessAddressRequest,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<AccountBusinessAddressResource> {
     const r = await this.rc.put<AccountBusinessAddressResource>(
       this.path(),
       modifyAccountBusinessAddressRequest,
       undefined,
-      config
+      restRequestConfig
     );
     return r.data;
   }

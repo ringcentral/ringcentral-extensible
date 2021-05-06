@@ -1,18 +1,18 @@
-import Supervise from './Supervise';
 import Recordings from './Recordings';
-import Park from './Park';
-import Flip from './Flip';
-import Reply from './Reply';
+import Supervise from './Supervise';
+import BringIn from './BringIn';
+import Transfer from './Transfer';
 import Forward from './Forward';
 import Pickup from './Pickup';
 import Answer from './Answer';
 import Bridge from './Bridge';
-import Transfer from './Transfer';
 import Ignore from './Ignore';
 import Reject from './Reject';
 import Unhold from './Unhold';
+import Reply from './Reply';
+import Park from './Park';
+import Flip from './Flip';
 import Hold from './Hold';
-import BringIn from './BringIn';
 import {RestRequestConfig} from '../../../../../../Rest';
 import {CallParty, PartyUpdateRequest} from '../../../../../../definitions';
 import Parent from '..';
@@ -20,8 +20,8 @@ import RingCentral from '../../../../../..';
 
 class Index {
   rc: RingCentral;
-  partyId: string | null;
   parent: Parent;
+  partyId: string | null;
 
   constructor(parent: Parent, partyId: string | null = null) {
     this.parent = parent;
@@ -33,46 +33,59 @@ class Index {
     if (withParameter && this.partyId !== null) {
       return `${this.parent.path()}/parties/${this.partyId}`;
     }
-
     return `${this.parent.path()}/parties`;
   }
 
   /**
-   * Operation: Get Call Party Status
+   * Returns a call party status by ID.
+   * HTTP Method: get
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}
    * Rate Limit Group: Light
-   * Http get /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}
+   * App Permission: CallControl
    */
-  async get(config?: RestRequestConfig): Promise<CallParty> {
+  async get(restRequestConfig?: RestRequestConfig): Promise<CallParty> {
     if (this.partyId === null) {
       throw new Error('partyId must be specified.');
     }
 
-    const r = await this.rc.get<CallParty>(this.path(), undefined, config);
+    const r = await this.rc.get<CallParty>(
+      this.path(),
+      undefined,
+      restRequestConfig
+    );
     return r.data;
   }
 
   /**
-   * Operation: Delete Call Party
+   * Removes a party from a call session by ID. A party can be deleted only if supervised or parked. It is possible to delete only one conference participant per request.
+   * HTTP Method: delete
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}
    * Rate Limit Group: Light
-   * Http delete /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}
+   * App Permission: TelephonySessions
    */
-  async delete(config?: RestRequestConfig): Promise<string> {
+  async delete(restRequestConfig?: RestRequestConfig): Promise<string> {
     if (this.partyId === null) {
       throw new Error('partyId must be specified.');
     }
 
-    const r = await this.rc.delete<string>(this.path(), undefined, config);
+    const r = await this.rc.delete<string>(
+      this.path(),
+      undefined,
+      restRequestConfig
+    );
     return r.data;
   }
 
   /**
-   * Operation: Update Call Party
+   * Modifies a call party by ID. There is a known limitation for Mute scenario - mute via REST API doesn't work with mute placed via RingCentral apps or HardPhone. It means that if you muted participant via Call Control API and Ringcentral Desktop app you need to unmute both endpoints to bring the media back.
+   * HTTP Method: patch
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}
    * Rate Limit Group: Light
-   * Http patch /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}
+   * App Permission: CallControl
    */
   async patch(
     partyUpdateRequest: PartyUpdateRequest,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<CallParty> {
     if (this.partyId === null) {
       throw new Error('partyId must be specified.');
@@ -82,17 +95,25 @@ class Index {
       this.path(),
       partyUpdateRequest,
       undefined,
-      config
+      restRequestConfig
     );
     return r.data;
   }
 
-  bringIn(): BringIn {
-    return new BringIn(this);
-  }
-
   hold(): Hold {
     return new Hold(this);
+  }
+
+  flip(): Flip {
+    return new Flip(this);
+  }
+
+  park(): Park {
+    return new Park(this);
+  }
+
+  reply(): Reply {
+    return new Reply(this);
   }
 
   unhold(): Unhold {
@@ -105,10 +126,6 @@ class Index {
 
   ignore(): Ignore {
     return new Ignore(this);
-  }
-
-  transfer(): Transfer {
-    return new Transfer(this);
   }
 
   bridge(): Bridge {
@@ -127,24 +144,20 @@ class Index {
     return new Forward(this);
   }
 
-  reply(): Reply {
-    return new Reply(this);
+  transfer(): Transfer {
+    return new Transfer(this);
   }
 
-  flip(): Flip {
-    return new Flip(this);
-  }
-
-  park(): Park {
-    return new Park(this);
-  }
-
-  recordings(recordingId: string | null = null): Recordings {
-    return new Recordings(this, recordingId);
+  bringIn(): BringIn {
+    return new BringIn(this);
   }
 
   supervise(): Supervise {
     return new Supervise(this);
+  }
+
+  recordings(recordingId: string | null = null): Recordings {
+    return new Recordings(this, recordingId);
   }
 }
 

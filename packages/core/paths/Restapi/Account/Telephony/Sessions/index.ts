@@ -2,16 +2,16 @@ import Supervise from './Supervise';
 import Parties from './Parties';
 import {RestRequestConfig} from '../../../../../Rest';
 import {
-  CallSessionObject,
   ReadCallSessionStatusParameters,
+  CallSessionObject,
 } from '../../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../../..';
 
 class Index {
   rc: RingCentral;
-  telephonySessionId: string | null;
   parent: Parent;
+  telephonySessionId: string | null;
 
   constructor(parent: Parent, telephonySessionId: string | null = null) {
     this.parent = parent;
@@ -23,18 +23,19 @@ class Index {
     if (withParameter && this.telephonySessionId !== null) {
       return `${this.parent.path()}/sessions/${this.telephonySessionId}`;
     }
-
     return `${this.parent.path()}/sessions`;
   }
 
   /**
-   * Operation: Get Call Session Status
+   * Returns the status of a call session by ID.
+   * HTTP Method: get
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/telephony/sessions/{telephonySessionId}
    * Rate Limit Group: Light
-   * Http get /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}
+   * App Permission: CallControl
    */
   async get(
     queryParams?: ReadCallSessionStatusParameters,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<CallSessionObject> {
     if (this.telephonySessionId === null) {
       throw new Error('telephonySessionId must be specified.');
@@ -43,22 +44,28 @@ class Index {
     const r = await this.rc.get<CallSessionObject>(
       this.path(),
       queryParams,
-      config
+      restRequestConfig
     );
     return r.data;
   }
 
   /**
-   * Operation: Drop Call Session
+   * Drops a call session.
+   * HTTP Method: delete
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/telephony/sessions/{telephonySessionId}
    * Rate Limit Group: Light
-   * Http delete /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}
+   * App Permission: CallControl
    */
-  async delete(config?: RestRequestConfig): Promise<string> {
+  async delete(restRequestConfig?: RestRequestConfig): Promise<string> {
     if (this.telephonySessionId === null) {
       throw new Error('telephonySessionId must be specified.');
     }
 
-    const r = await this.rc.delete<string>(this.path(), undefined, config);
+    const r = await this.rc.delete<string>(
+      this.path(),
+      undefined,
+      restRequestConfig
+    );
     return r.data;
   }
 

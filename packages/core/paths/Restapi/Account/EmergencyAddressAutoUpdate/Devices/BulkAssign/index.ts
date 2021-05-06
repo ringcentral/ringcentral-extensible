@@ -17,19 +17,22 @@ class Index {
   }
 
   /**
-   * Operation: Enable Automatic Location Updates for Devices
+   * Enables or disables Automatic Location Updates feature for the specified common phones.
+   * HTTP Method: post
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/devices/bulk-assign
    * Rate Limit Group: Heavy
-   * Http post /restapi/v1.0/account/{accountId}/emergency-address-auto-update/devices/bulk-assign
+   * App Permission: EditAccounts
+   * User Permission: ConfigureEmergencyMaps
    */
   async post(
     assignMultipleDevicesAutomaticLocationUpdates: AssignMultipleDevicesAutomaticLocationUpdates,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<string> {
     const r = await this.rc.post<string>(
       this.path(),
       assignMultipleDevicesAutomaticLocationUpdates,
       undefined,
-      config
+      restRequestConfig
     );
     return r.data;
   }

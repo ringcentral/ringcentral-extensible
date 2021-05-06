@@ -1,15 +1,15 @@
-import Tasks from './Tasks';
-import SwitchesBulkValidate from './SwitchesBulkValidate';
 import WirelessPointsBulkValidate from './WirelessPointsBulkValidate';
 import WirelessPointsBulkUpdate from './WirelessPointsBulkUpdate';
 import WirelessPointsBulkCreate from './WirelessPointsBulkCreate';
+import SwitchesBulkValidate from './SwitchesBulkValidate';
 import SwitchesBulkUpdate from './SwitchesBulkUpdate';
 import SwitchesBulkCreate from './SwitchesBulkCreate';
-import Switches from './Switches';
-import Devices from './Devices';
-import Networks from './Networks';
 import WirelessPoints from './WirelessPoints';
+import Switches from './Switches';
+import Networks from './Networks';
+import Devices from './Devices';
 import Users from './Users';
+import Tasks from './Tasks';
 import Parent from '..';
 import RingCentral from '../../../..';
 
@@ -26,24 +26,28 @@ class Index {
     return `${this.parent.path()}/emergency-address-auto-update`;
   }
 
+  tasks(taskId: string | null = null): Tasks {
+    return new Tasks(this, taskId);
+  }
+
   users(): Users {
     return new Users(this);
-  }
-
-  wirelessPoints(pointId: string | null = null): WirelessPoints {
-    return new WirelessPoints(this, pointId);
-  }
-
-  networks(networkId: string | null = null): Networks {
-    return new Networks(this, networkId);
   }
 
   devices(): Devices {
     return new Devices(this);
   }
 
+  networks(networkId: string | null = null): Networks {
+    return new Networks(this, networkId);
+  }
+
   switches(switchId: string | null = null): Switches {
     return new Switches(this, switchId);
+  }
+
+  wirelessPoints(pointId: string | null = null): WirelessPoints {
+    return new WirelessPoints(this, pointId);
   }
 
   switchesBulkCreate(): SwitchesBulkCreate {
@@ -52,6 +56,10 @@ class Index {
 
   switchesBulkUpdate(): SwitchesBulkUpdate {
     return new SwitchesBulkUpdate(this);
+  }
+
+  switchesBulkValidate(): SwitchesBulkValidate {
+    return new SwitchesBulkValidate(this);
   }
 
   wirelessPointsBulkCreate(): WirelessPointsBulkCreate {
@@ -64,14 +72,6 @@ class Index {
 
   wirelessPointsBulkValidate(): WirelessPointsBulkValidate {
     return new WirelessPointsBulkValidate(this);
-  }
-
-  switchesBulkValidate(): SwitchesBulkValidate {
-    return new SwitchesBulkValidate(this);
-  }
-
-  tasks(taskId: string | null = null): Tasks {
-    return new Tasks(this, taskId);
   }
 }
 

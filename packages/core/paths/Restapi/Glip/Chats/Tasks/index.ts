@@ -1,9 +1,9 @@
 import {RestRequestConfig} from '../../../../../Rest';
 import {
-  GlipTaskList,
   ListChatTasksParameters,
-  GlipTaskInfo,
+  GlipTaskList,
   GlipCreateTask,
+  GlipTaskInfo,
 } from '../../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../../..';
@@ -22,32 +22,38 @@ class Index {
   }
 
   /**
-   * Operation: Get Chat Tasks
+   * Returns the list of tasks of the specified chat.
+   * HTTP Method: get
+   * Endpoint: /restapi/{apiVersion}/glip/chats/{chatId}/tasks
    * Rate Limit Group: Heavy
-   * Http get /restapi/v1.0/glip/chats/{chatId}/tasks
    */
   async get(
     queryParams?: ListChatTasksParameters,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<GlipTaskList> {
-    const r = await this.rc.get<GlipTaskList>(this.path(), queryParams, config);
+    const r = await this.rc.get<GlipTaskList>(
+      this.path(),
+      queryParams,
+      restRequestConfig
+    );
     return r.data;
   }
 
   /**
-   * Operation: Create Task
+   * Creates a task in the specified chat.
+   * HTTP Method: post
+   * Endpoint: /restapi/{apiVersion}/glip/chats/{chatId}/tasks
    * Rate Limit Group: Medium
-   * Http post /restapi/v1.0/glip/chats/{chatId}/tasks
    */
   async post(
     glipCreateTask: GlipCreateTask,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<GlipTaskInfo> {
     const r = await this.rc.post<GlipTaskInfo>(
       this.path(),
       glipCreateTask,
       undefined,
-      config
+      restRequestConfig
     );
     return r.data;
   }

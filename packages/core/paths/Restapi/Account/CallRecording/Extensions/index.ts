@@ -17,15 +17,20 @@ class Index {
   }
 
   /**
-   * Operation: Get Call Recording Extension List
+   * Returns the list of extensions to be recorded.
+   * HTTP Method: get
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/call-recording/extensions
    * Rate Limit Group: Medium
-   * Http get /restapi/v1.0/account/{accountId}/call-recording/extensions
+   * App Permission: ReadAccounts
+   * User Permission: ReadCompanyInfo
    */
-  async get(config?: RestRequestConfig): Promise<CallRecordingExtensions> {
+  async get(
+    restRequestConfig?: RestRequestConfig
+  ): Promise<CallRecordingExtensions> {
     const r = await this.rc.get<CallRecordingExtensions>(
       this.path(),
       undefined,
-      config
+      restRequestConfig
     );
     return r.data;
   }

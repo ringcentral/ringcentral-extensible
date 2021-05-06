@@ -1,7 +1,7 @@
 import {RestRequestConfig} from '../../../../../Rest';
 import {
-  GetInternalTextMessageInfoResponse,
   CreateInternalTextMessageRequest,
+  GetInternalTextMessageInfoResponse,
 } from '../../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../../..';
@@ -20,19 +20,22 @@ class Index {
   }
 
   /**
-   * Operation: Create Internal Text Message
+   * Creates and sends an internal text message.
+   * HTTP Method: post
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/company-pager
    * Rate Limit Group: Medium
-   * Http post /restapi/v1.0/account/{accountId}/extension/{extensionId}/company-pager
+   * App Permission: InternalMessages
+   * User Permission: InternalSMS
    */
   async post(
     createInternalTextMessageRequest: CreateInternalTextMessageRequest,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<GetInternalTextMessageInfoResponse> {
     const r = await this.rc.post<GetInternalTextMessageInfoResponse>(
       this.path(),
       createInternalTextMessageRequest,
       undefined,
-      config
+      restRequestConfig
     );
     return r.data;
   }

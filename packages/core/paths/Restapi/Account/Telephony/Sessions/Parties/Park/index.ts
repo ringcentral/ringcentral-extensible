@@ -17,12 +17,18 @@ class Index {
   }
 
   /**
-   * Operation: Call Park
+   * Parks a call to a virtual location from where it can further be retrieved by any user from any phone of the system. The call session and call party identifiers should be specified in path. Currently the users can park only their own incoming calls. Up to 50 calls can be parked simultaneously. Park location starts with asterisk (*) and ranges 801-899.
+   * HTTP Method: post
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/park
    * Rate Limit Group: Light
-   * Http post /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/park
+   * App Permission: CallControl
    */
-  async post(config?: RestRequestConfig): Promise<CallParty> {
-    const r = await this.rc.post<CallParty>(this.path(), undefined, config);
+  async post(restRequestConfig?: RestRequestConfig): Promise<CallParty> {
+    const r = await this.rc.post<CallParty>(
+      this.path(),
+      undefined,
+      restRequestConfig
+    );
     return r.data;
   }
 }

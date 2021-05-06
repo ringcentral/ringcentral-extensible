@@ -1,7 +1,7 @@
 import {RestRequestConfig} from '../../../../../Rest';
 import {
-  ValidateMultipleSwitchesResponse,
   ValidateMultipleSwitchesRequest,
+  ValidateMultipleSwitchesResponse,
 } from '../../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../../..';
@@ -20,19 +20,22 @@ class Index {
   }
 
   /**
-   * Operation: Validate Multiple Switches
+   * Validates switches before creation or update. The maximum number of switches per request is 10 000.
+   * HTTP Method: post
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/switches-bulk-validate
    * Rate Limit Group: Heavy
-   * Http post /restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches-bulk-validate
+   * App Permission: EditAccounts
+   * User Permission: ConfigureEmergencyMaps
    */
   async post(
     validateMultipleSwitchesRequest: ValidateMultipleSwitchesRequest,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<ValidateMultipleSwitchesResponse> {
     const r = await this.rc.post<ValidateMultipleSwitchesResponse>(
       this.path(),
       validateMultipleSwitchesRequest,
       undefined,
-      config
+      restRequestConfig
     );
     return r.data;
   }

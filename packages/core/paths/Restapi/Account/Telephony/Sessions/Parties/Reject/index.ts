@@ -16,12 +16,18 @@ class Index {
   }
 
   /**
-   * Operation: Reject Call Party
+   * Rejects an inbound call in a "Setup" or "Proceeding" state
+   * HTTP Method: post
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/reject
    * Rate Limit Group: Light
-   * Http post /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/reject
+   * App Permission: CallControl
    */
-  async post(config?: RestRequestConfig): Promise<string> {
-    const r = await this.rc.post<string>(this.path(), undefined, config);
+  async post(restRequestConfig?: RestRequestConfig): Promise<string> {
+    const r = await this.rc.post<string>(
+      this.path(),
+      undefined,
+      restRequestConfig
+    );
     return r.data;
   }
 }

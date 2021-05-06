@@ -1,7 +1,7 @@
 import {RestRequestConfig} from '../../../../Rest';
 import {
-  GetDeviceInfoResponse,
   ReadDeviceParameters,
+  GetDeviceInfoResponse,
   AccountDeviceUpdate,
   UpdateDeviceParameters,
 } from '../../../../definitions';
@@ -10,8 +10,8 @@ import RingCentral from '../../../..';
 
 class Index {
   rc: RingCentral;
-  deviceId: string | null;
   parent: Parent;
+  deviceId: string | null;
 
   constructor(parent: Parent, deviceId: string | null = null) {
     this.parent = parent;
@@ -23,18 +23,20 @@ class Index {
     if (withParameter && this.deviceId !== null) {
       return `${this.parent.path()}/device/${this.deviceId}`;
     }
-
     return `${this.parent.path()}/device`;
   }
 
   /**
-   * Operation: Get Device
+   * Returns account device(s) by their ID(s).
+   * HTTP Method: get
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/device/{deviceId}
    * Rate Limit Group: Light
-   * Http get /restapi/v1.0/account/{accountId}/device/{deviceId}
+   * App Permission: ReadAccounts
+   * User Permission: ReadCompanyDevices
    */
   async get(
     queryParams?: ReadDeviceParameters,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<GetDeviceInfoResponse> {
     if (this.deviceId === null) {
       throw new Error('deviceId must be specified.');
@@ -43,20 +45,23 @@ class Index {
     const r = await this.rc.get<GetDeviceInfoResponse>(
       this.path(),
       queryParams,
-      config
+      restRequestConfig
     );
     return r.data;
   }
 
   /**
-   * Operation: Update Device
+   * Updates account device(s) by their ID(s).
+   * HTTP Method: put
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/device/{deviceId}
    * Rate Limit Group: Medium
-   * Http put /restapi/v1.0/account/{accountId}/device/{deviceId}
+   * App Permission: EditAccounts
+   * User Permission: EditCompanyDevices
    */
   async put(
     accountDeviceUpdate: AccountDeviceUpdate,
     queryParams?: UpdateDeviceParameters,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<GetDeviceInfoResponse> {
     if (this.deviceId === null) {
       throw new Error('deviceId must be specified.');
@@ -66,7 +71,7 @@ class Index {
       this.path(),
       accountDeviceUpdate,
       queryParams,
-      config
+      restRequestConfig
     );
     return r.data;
   }

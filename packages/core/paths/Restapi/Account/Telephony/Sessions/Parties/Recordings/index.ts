@@ -1,16 +1,16 @@
 import {RestRequestConfig} from '../../../../../../../Rest';
 import {
-  CallRecording,
   CallRecordingUpdate,
   PauseResumeCallRecordingParameters,
+  CallRecording,
 } from '../../../../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../../../../..';
 
 class Index {
   rc: RingCentral;
-  recordingId: string | null;
   parent: Parent;
+  recordingId: string | null;
 
   constructor(parent: Parent, recordingId: string | null = null) {
     this.parent = parent;
@@ -22,29 +22,36 @@ class Index {
     if (withParameter && this.recordingId !== null) {
       return `${this.parent.path()}/recordings/${this.recordingId}`;
     }
-
     return `${this.parent.path()}/recordings`;
   }
 
   /**
-   * Operation: Create Recording
+   * Starts a new call recording for the party
+   * HTTP Method: post
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/recordings
    * Rate Limit Group: Light
-   * Http post /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/recordings
+   * App Permission: CallControl
    */
-  async post(config?: RestRequestConfig): Promise<string> {
-    const r = await this.rc.post<string>(this.path(false), undefined, config);
+  async post(restRequestConfig?: RestRequestConfig): Promise<string> {
+    const r = await this.rc.post<string>(
+      this.path(false),
+      undefined,
+      restRequestConfig
+    );
     return r.data;
   }
 
   /**
-   * Operation: Pause/Resume Recording
+   * Pause/resume recording
+   * HTTP Method: patch
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/recordings/{recordingId}
    * Rate Limit Group: Light
-   * Http patch /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/recordings/{recordingId}
+   * App Permission: CallControl
    */
   async patch(
     callRecordingUpdate: CallRecordingUpdate,
     queryParams?: PauseResumeCallRecordingParameters,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<CallRecording> {
     if (this.recordingId === null) {
       throw new Error('recordingId must be specified.');
@@ -54,7 +61,7 @@ class Index {
       this.path(),
       callRecordingUpdate,
       queryParams,
-      config
+      restRequestConfig
     );
     return r.data;
   }

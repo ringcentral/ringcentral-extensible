@@ -17,19 +17,21 @@ class Index {
   }
 
   /**
-   * Operation: Call Flip on Party
+   * Performs call flip procedure by holding opposite party and calling to the specified target
+   * HTTP Method: post
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/flip
    * Rate Limit Group: Light
-   * Http post /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/flip
+   * App Permission: CallControl
    */
   async post(
     callPartyFlip: CallPartyFlip,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<string> {
     const r = await this.rc.post<string>(
       this.path(),
       callPartyFlip,
       undefined,
-      config
+      restRequestConfig
     );
     return r.data;
   }

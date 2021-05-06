@@ -6,22 +6,14 @@ import RingCentral from '../../../..';
 
 class Index {
   rc: RingCentral;
-  pagingOnlyGroupId: string | null;
   parent: Parent;
 
-  constructor(parent: Parent, pagingOnlyGroupId: string | null = null) {
+  constructor(parent: Parent) {
     this.parent = parent;
     this.rc = parent.rc;
-    this.pagingOnlyGroupId = pagingOnlyGroupId;
   }
 
-  path(withParameter = true): string {
-    if (withParameter && this.pagingOnlyGroupId !== null) {
-      return `${this.parent.path()}/paging-only-groups/${
-        this.pagingOnlyGroupId
-      }`;
-    }
-
+  path(): string {
     return `${this.parent.path()}/paging-only-groups`;
   }
 

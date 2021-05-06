@@ -17,15 +17,20 @@ class Index {
   }
 
   /**
-   * Operation: Get Account Service Info
+   * Returns the information about service plan, available features and limitations for a particular RingCentral customer account.
+   * HTTP Method: get
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/service-info
    * Rate Limit Group: Light
-   * Http get /restapi/v1.0/account/{accountId}/service-info
+   * App Permission: ReadAccounts
+   * User Permission: ReadServicePlanInfo
    */
-  async get(config?: RestRequestConfig): Promise<GetServiceInfoResponse> {
+  async get(
+    restRequestConfig?: RestRequestConfig
+  ): Promise<GetServiceInfoResponse> {
     const r = await this.rc.get<GetServiceInfoResponse>(
       this.path(),
       undefined,
-      config
+      restRequestConfig
     );
     return r.data;
   }

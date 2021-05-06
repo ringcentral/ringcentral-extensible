@@ -1,7 +1,7 @@
 import {RestRequestConfig} from '../../../../Rest';
 import {
-  DictionaryGreetingList,
   ListStandardGreetingsParameters,
+  DictionaryGreetingList,
   DictionaryGreetingInfo,
 } from '../../../../definitions';
 import Parent from '..';
@@ -9,8 +9,8 @@ import RingCentral from '../../../..';
 
 class Index {
   rc: RingCentral;
-  greetingId: string | null;
   parent: Parent;
+  greetingId: string | null;
 
   constructor(parent: Parent, greetingId: string | null = null) {
     this.parent = parent;
@@ -22,33 +22,36 @@ class Index {
     if (withParameter && this.greetingId !== null) {
       return `${this.parent.path()}/greeting/${this.greetingId}`;
     }
-
     return `${this.parent.path()}/greeting`;
   }
 
   /**
-   * Operation: Get Standard Greeting List
+   * Returns the list of predefined standard greetings. Custom greetings recorded by user are not returned in response to this request. See Get Extension Custom Greetings.
+   * HTTP Method: get
+   * Endpoint: /restapi/{apiVersion}/dictionary/greeting
    * Rate Limit Group: Medium
-   * Http get /restapi/v1.0/dictionary/greeting
    */
   async list(
     queryParams?: ListStandardGreetingsParameters,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<DictionaryGreetingList> {
     const r = await this.rc.get<DictionaryGreetingList>(
       this.path(false),
       queryParams,
-      config
+      restRequestConfig
     );
     return r.data;
   }
 
   /**
-   * Operation: Get Standard Greeting
+   * Returns a standard greeting by ID.
+   * HTTP Method: get
+   * Endpoint: /restapi/{apiVersion}/dictionary/greeting/{greetingId}
    * Rate Limit Group: Medium
-   * Http get /restapi/v1.0/dictionary/greeting/{greetingId}
    */
-  async get(config?: RestRequestConfig): Promise<DictionaryGreetingInfo> {
+  async get(
+    restRequestConfig?: RestRequestConfig
+  ): Promise<DictionaryGreetingInfo> {
     if (this.greetingId === null) {
       throw new Error('greetingId must be specified.');
     }
@@ -56,7 +59,7 @@ class Index {
     const r = await this.rc.get<DictionaryGreetingInfo>(
       this.path(),
       undefined,
-      config
+      restRequestConfig
     );
     return r.data;
   }

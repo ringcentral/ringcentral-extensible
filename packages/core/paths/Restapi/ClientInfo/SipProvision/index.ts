@@ -1,7 +1,7 @@
 import {RestRequestConfig} from '../../../../Rest';
 import {
-  CreateSipRegistrationResponse,
   CreateSipRegistrationRequest,
+  CreateSipRegistrationResponse,
 } from '../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../..';
@@ -20,19 +20,21 @@ class Index {
   }
 
   /**
-   * Operation: Register Device
+   * Creates SIP registration of a device/application (WebPhone, Mobile, softphone).
+   * HTTP Method: post
+   * Endpoint: /restapi/{apiVersion}/client-info/sip-provision
    * Rate Limit Group: Heavy
-   * Http post /restapi/v1.0/client-info/sip-provision
+   * App Permission: VoipCalling
    */
   async post(
     createSipRegistrationRequest: CreateSipRegistrationRequest,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<CreateSipRegistrationResponse> {
     const r = await this.rc.post<CreateSipRegistrationResponse>(
       this.path(),
       createSipRegistrationRequest,
       undefined,
-      config
+      restRequestConfig
     );
     return r.data;
   }

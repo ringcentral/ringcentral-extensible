@@ -1,46 +1,46 @@
-import RingOut from './RingOut';
-import AuthzProfile from './AuthzProfile';
-import Features from './Features';
-import CallQueues from './CallQueues';
-import VideoConfiguration from './VideoConfiguration';
-import Conferencing from './Conferencing';
-import ProfileImage from './ProfileImage';
-import NotificationSettings from './NotificationSettings';
-import EmergencyLocations from './EmergencyLocations';
-import Grant from './Grant';
-import CallerId from './CallerId';
-import PhoneNumber from './PhoneNumber';
-import MessageSync from './MessageSync';
-import MessageStore from './MessageStore';
-import Fax from './Fax';
-import CompanyPager from './CompanyPager';
-import Mms from './Mms';
-import Sms from './Sms';
 import MeetingsConfiguration from './MeetingsConfiguration';
+import NotificationSettings from './NotificationSettings';
 import MeetingConfiguration from './MeetingConfiguration';
-import Meeting from './Meeting';
+import VideoConfiguration from './VideoConfiguration';
+import EmergencyLocations from './EmergencyLocations';
+import CallQueuePresence from './CallQueuePresence';
 import MeetingRecordings from './MeetingRecordings';
-import Device from './Device';
-import ActiveCalls from './ActiveCalls';
-import CallLogSync from './CallLogSync';
-import CallLog from './CallLog';
-import Greeting from './Greeting';
-import AnsweringRule from './AnsweringRule';
+import AddressBookSync from './AddressBookSync';
 import ForwardingNumber from './ForwardingNumber';
+import UnifiedPresence from './UnifiedPresence';
 import CallerBlocking from './CallerBlocking';
 import BusinessHours from './BusinessHours';
-import Favorite from './Favorite';
-import AddressBookSync from './AddressBookSync';
+import AnsweringRule from './AnsweringRule';
+import AuthzProfile from './AuthzProfile';
+import CompanyPager from './CompanyPager';
+import CallLogSync from './CallLogSync';
+import ProfileImage from './ProfileImage';
+import MessageStore from './MessageStore';
+import Conferencing from './Conferencing';
+import PhoneNumber from './PhoneNumber';
+import MessageSync from './MessageSync';
+import ActiveCalls from './ActiveCalls';
 import AddressBook from './AddressBook';
-import UnifiedPresence from './UnifiedPresence';
-import CallQueuePresence from './CallQueuePresence';
+import CallQueues from './CallQueues';
+import CallerId from './CallerId';
+import Features from './Features';
+import Favorite from './Favorite';
 import Presence from './Presence';
+import RingOut from './RingOut';
+import Greeting from './Greeting';
+import CallLog from './CallLog';
+import Meeting from './Meeting';
+import Device from './Device';
+import Grant from './Grant';
+import Fax from './Fax';
+import Mms from './Mms';
+import Sms from './Sms';
 import {RestRequestConfig} from '../../../../Rest';
 import {
-  GetExtensionListResponse,
   ListExtensionsParameters,
-  ExtensionCreationResponse,
+  GetExtensionListResponse,
   ExtensionCreationRequest,
+  ExtensionCreationResponse,
   GetExtensionInfoResponse,
   ExtensionUpdateRequest,
   DeleteExtensionParameters,
@@ -50,8 +50,8 @@ import RingCentral from '../../../..';
 
 class Index {
   rc: RingCentral;
-  extensionId: string | null;
   parent: Parent;
+  extensionId: string | null;
 
   constructor(parent: Parent, extensionId: string | null = '~') {
     this.parent = parent;
@@ -63,51 +63,61 @@ class Index {
     if (withParameter && this.extensionId !== null) {
       return `${this.parent.path()}/extension/${this.extensionId}`;
     }
-
     return `${this.parent.path()}/extension`;
   }
 
   /**
-   * Operation: Get Extension List
+   * Returns the list of extensions created for a particular account. All types of extensions are included in this list.
+   * HTTP Method: get
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension
    * Rate Limit Group: Medium
-   * Http get /restapi/v1.0/account/{accountId}/extension
+   * App Permission: ReadAccounts
+   * User Permission: ReadExtensions
    */
   async list(
     queryParams?: ListExtensionsParameters,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<GetExtensionListResponse> {
     const r = await this.rc.get<GetExtensionListResponse>(
       this.path(false),
       queryParams,
-      config
+      restRequestConfig
     );
     return r.data;
   }
 
   /**
-   * Operation: Create Extension
+   * Creates an extension.
+   * HTTP Method: post
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension
    * Rate Limit Group: Medium
-   * Http post /restapi/v1.0/account/{accountId}/extension
+   * App Permission: EditAccounts
+   * User Permission: AddRemoveUsers
    */
   async post(
     extensionCreationRequest: ExtensionCreationRequest,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<ExtensionCreationResponse> {
     const r = await this.rc.post<ExtensionCreationResponse>(
       this.path(false),
       extensionCreationRequest,
       undefined,
-      config
+      restRequestConfig
     );
     return r.data;
   }
 
   /**
-   * Operation: Get Extension
+   * Returns basic information about a particular extension.
+   * HTTP Method: get
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}
    * Rate Limit Group: Light
-   * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}
+   * App Permission: ReadAccounts
+   * User Permission: ReadExtensions
    */
-  async get(config?: RestRequestConfig): Promise<GetExtensionInfoResponse> {
+  async get(
+    restRequestConfig?: RestRequestConfig
+  ): Promise<GetExtensionInfoResponse> {
     if (this.extensionId === null) {
       throw new Error('extensionId must be specified.');
     }
@@ -115,19 +125,22 @@ class Index {
     const r = await this.rc.get<GetExtensionInfoResponse>(
       this.path(),
       undefined,
-      config
+      restRequestConfig
     );
     return r.data;
   }
 
   /**
-   * Operation: Update Extension
+   * Updates user settings.
+   * HTTP Method: put
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}
    * Rate Limit Group: Medium
-   * Http put /restapi/v1.0/account/{accountId}/extension/{extensionId}
+   * App Permission: EditExtensions
+   * User Permission: EditUserInfo OR EditUserCredentials
    */
   async put(
     extensionUpdateRequest: ExtensionUpdateRequest,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<GetExtensionInfoResponse> {
     if (this.extensionId === null) {
       throw new Error('extensionId must be specified.');
@@ -137,102 +150,33 @@ class Index {
       this.path(),
       extensionUpdateRequest,
       undefined,
-      config
+      restRequestConfig
     );
     return r.data;
   }
 
   /**
-   * Operation: Delete Extension
+   * Deletes extension(s) by ID(s). When an extension is being deleted the default API behaviour is as follows: ⋅⋅* user's direct numbers are preserved by becoming additional company numbers; ⋅⋅* user's digital lines (both device & associated phone number) are deleted. You can change this behaviour using the filters: ..* create unassigned extensions for each digital line of the deleted extension by setting the query parameter `savePhoneLines` to `true` in request path; ..* remove direct numbers of the deleted extension by setting the query parameter `savePhoneNumbers` to `false` in request path
+   * HTTP Method: delete
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}
    * Rate Limit Group: Medium
-   * Http delete /restapi/v1.0/account/{accountId}/extension/{extensionId}
+   * App Permission: EditAccounts
+   * User Permission: AddRemoveUsers
    */
   async delete(
     queryParams?: DeleteExtensionParameters,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<string> {
     if (this.extensionId === null) {
       throw new Error('extensionId must be specified.');
     }
 
-    const r = await this.rc.delete<string>(this.path(), queryParams, config);
+    const r = await this.rc.delete<string>(
+      this.path(),
+      queryParams,
+      restRequestConfig
+    );
     return r.data;
-  }
-
-  presence(): Presence {
-    return new Presence(this);
-  }
-
-  callQueuePresence(): CallQueuePresence {
-    return new CallQueuePresence(this);
-  }
-
-  unifiedPresence(): UnifiedPresence {
-    return new UnifiedPresence(this);
-  }
-
-  addressBook(): AddressBook {
-    return new AddressBook(this);
-  }
-
-  addressBookSync(): AddressBookSync {
-    return new AddressBookSync(this);
-  }
-
-  favorite(): Favorite {
-    return new Favorite(this);
-  }
-
-  businessHours(): BusinessHours {
-    return new BusinessHours(this);
-  }
-
-  callerBlocking(): CallerBlocking {
-    return new CallerBlocking(this);
-  }
-
-  forwardingNumber(forwardingNumberId: string | null = null): ForwardingNumber {
-    return new ForwardingNumber(this, forwardingNumberId);
-  }
-
-  answeringRule(ruleId: string | null = null): AnsweringRule {
-    return new AnsweringRule(this, ruleId);
-  }
-
-  greeting(greetingId: string | null = null): Greeting {
-    return new Greeting(this, greetingId);
-  }
-
-  callLog(callRecordId: string | null = null): CallLog {
-    return new CallLog(this, callRecordId);
-  }
-
-  callLogSync(): CallLogSync {
-    return new CallLogSync(this);
-  }
-
-  activeCalls(): ActiveCalls {
-    return new ActiveCalls(this);
-  }
-
-  device(): Device {
-    return new Device(this);
-  }
-
-  meetingRecordings(): MeetingRecordings {
-    return new MeetingRecordings(this);
-  }
-
-  meeting(meetingId: string | null = null): Meeting {
-    return new Meeting(this, meetingId);
-  }
-
-  meetingConfiguration(): MeetingConfiguration {
-    return new MeetingConfiguration(this);
-  }
-
-  meetingsConfiguration(): MeetingsConfiguration {
-    return new MeetingsConfiguration(this);
   }
 
   sms(): Sms {
@@ -243,16 +187,60 @@ class Index {
     return new Mms(this);
   }
 
-  companyPager(): CompanyPager {
-    return new CompanyPager(this);
-  }
-
   fax(): Fax {
     return new Fax(this);
   }
 
-  messageStore(messageId: string | null = null): MessageStore {
-    return new MessageStore(this, messageId);
+  grant(): Grant {
+    return new Grant(this);
+  }
+
+  device(): Device {
+    return new Device(this);
+  }
+
+  meeting(meetingId: string | null = null): Meeting {
+    return new Meeting(this, meetingId);
+  }
+
+  callLog(callRecordId: string | null = null): CallLog {
+    return new CallLog(this, callRecordId);
+  }
+
+  greeting(greetingId: string | null = null): Greeting {
+    return new Greeting(this, greetingId);
+  }
+
+  ringOut(ringoutId: string | null = null): RingOut {
+    return new RingOut(this, ringoutId);
+  }
+
+  presence(): Presence {
+    return new Presence(this);
+  }
+
+  favorite(): Favorite {
+    return new Favorite(this);
+  }
+
+  features(): Features {
+    return new Features(this);
+  }
+
+  callerId(): CallerId {
+    return new CallerId(this);
+  }
+
+  callQueues(): CallQueues {
+    return new CallQueues(this);
+  }
+
+  addressBook(): AddressBook {
+    return new AddressBook(this);
+  }
+
+  activeCalls(): ActiveCalls {
+    return new ActiveCalls(this);
   }
 
   messageSync(): MessageSync {
@@ -263,48 +251,80 @@ class Index {
     return new PhoneNumber(this);
   }
 
-  callerId(): CallerId {
-    return new CallerId(this);
+  conferencing(): Conferencing {
+    return new Conferencing(this);
   }
 
-  grant(): Grant {
-    return new Grant(this);
-  }
-
-  emergencyLocations(): EmergencyLocations {
-    return new EmergencyLocations(this);
-  }
-
-  notificationSettings(): NotificationSettings {
-    return new NotificationSettings(this);
+  messageStore(messageId: string | null = null): MessageStore {
+    return new MessageStore(this, messageId);
   }
 
   profileImage(scaleSize: string | null = null): ProfileImage {
     return new ProfileImage(this, scaleSize);
   }
 
-  conferencing(): Conferencing {
-    return new Conferencing(this);
+  callLogSync(): CallLogSync {
+    return new CallLogSync(this);
   }
 
-  videoConfiguration(): VideoConfiguration {
-    return new VideoConfiguration(this);
-  }
-
-  callQueues(): CallQueues {
-    return new CallQueues(this);
-  }
-
-  features(): Features {
-    return new Features(this);
+  companyPager(): CompanyPager {
+    return new CompanyPager(this);
   }
 
   authzProfile(): AuthzProfile {
     return new AuthzProfile(this);
   }
 
-  ringOut(ringoutId: string | null = null): RingOut {
-    return new RingOut(this, ringoutId);
+  answeringRule(ruleId: string | null = null): AnsweringRule {
+    return new AnsweringRule(this, ruleId);
+  }
+
+  businessHours(): BusinessHours {
+    return new BusinessHours(this);
+  }
+
+  callerBlocking(): CallerBlocking {
+    return new CallerBlocking(this);
+  }
+
+  unifiedPresence(): UnifiedPresence {
+    return new UnifiedPresence(this);
+  }
+
+  forwardingNumber(forwardingNumberId: string | null = null): ForwardingNumber {
+    return new ForwardingNumber(this, forwardingNumberId);
+  }
+
+  addressBookSync(): AddressBookSync {
+    return new AddressBookSync(this);
+  }
+
+  meetingRecordings(): MeetingRecordings {
+    return new MeetingRecordings(this);
+  }
+
+  callQueuePresence(): CallQueuePresence {
+    return new CallQueuePresence(this);
+  }
+
+  emergencyLocations(): EmergencyLocations {
+    return new EmergencyLocations(this);
+  }
+
+  videoConfiguration(): VideoConfiguration {
+    return new VideoConfiguration(this);
+  }
+
+  meetingConfiguration(): MeetingConfiguration {
+    return new MeetingConfiguration(this);
+  }
+
+  notificationSettings(): NotificationSettings {
+    return new NotificationSettings(this);
+  }
+
+  meetingsConfiguration(): MeetingsConfiguration {
+    return new MeetingsConfiguration(this);
   }
 }
 

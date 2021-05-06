@@ -1,8 +1,8 @@
 import {RestRequestConfig} from '../../../../../Rest';
 import {
   GetUserBusinessHoursResponse,
-  UserBusinessHoursUpdateResponse,
   UserBusinessHoursUpdateRequest,
+  UserBusinessHoursUpdateResponse,
 } from '../../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../../..';
@@ -21,33 +21,41 @@ class Index {
   }
 
   /**
-   * Operation: Get User Business Hours
+   * Returns the user business hours schedule. Business hours (and After hours - all the remaining time) schedules are commonly used for setting call handling rules - `business-hours-rule` and `after-hours-rule` correspondingly. **Please note:** If the user business hours are set to 'Custom hours' then a particular schedule is returned; however if set to '24 hours/7 days a week' the schedule will be empty.
+   * HTTP Method: get
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/business-hours
    * Rate Limit Group: Light
-   * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/business-hours
+   * App Permission: ReadAccounts
+   * User Permission: ReadExtensions
    */
-  async get(config?: RestRequestConfig): Promise<GetUserBusinessHoursResponse> {
+  async get(
+    restRequestConfig?: RestRequestConfig
+  ): Promise<GetUserBusinessHoursResponse> {
     const r = await this.rc.get<GetUserBusinessHoursResponse>(
       this.path(),
       undefined,
-      config
+      restRequestConfig
     );
     return r.data;
   }
 
   /**
-   * Operation: Update User Business Hours
+   * Updates the user business hours schedule.
+   * HTTP Method: put
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/business-hours
    * Rate Limit Group: Medium
-   * Http put /restapi/v1.0/account/{accountId}/extension/{extensionId}/business-hours
+   * App Permission: EditExtensions
+   * User Permission: EditUserAnsweringRules
    */
   async put(
     userBusinessHoursUpdateRequest: UserBusinessHoursUpdateRequest,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<UserBusinessHoursUpdateResponse> {
     const r = await this.rc.put<UserBusinessHoursUpdateResponse>(
       this.path(),
       userBusinessHoursUpdateRequest,
       undefined,
-      config
+      restRequestConfig
     );
     return r.data;
   }

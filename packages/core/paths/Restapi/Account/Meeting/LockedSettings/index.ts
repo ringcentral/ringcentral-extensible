@@ -17,15 +17,20 @@ class Index {
   }
 
   /**
-   * Operation: Get Locked Meeting Settings
+   * Returns information on user meeting settings that are locked on account level and therefore cannot be changed by user.
+   * HTTP Method: get
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/meeting/locked-settings
    * Rate Limit Group: Light
-   * Http get /restapi/v1.0/account/{accountId}/meeting/locked-settings
+   * App Permission: Meetings
+   * User Permission: Meetings
    */
-  async get(config?: RestRequestConfig): Promise<AccountLockedSettingResponse> {
+  async get(
+    restRequestConfig?: RestRequestConfig
+  ): Promise<AccountLockedSettingResponse> {
     const r = await this.rc.get<AccountLockedSettingResponse>(
       this.path(),
       undefined,
-      config
+      restRequestConfig
     );
     return r.data;
   }

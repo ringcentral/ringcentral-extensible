@@ -17,15 +17,18 @@ class Index {
   }
 
   /**
-   * Operation: Get Service Provider Config
+   * Get Service Provider Config
+   * HTTP Method: get
+   * Endpoint: /scim/{version}/ServiceProviderConfig
    * Rate Limit Group: NoThrottling
-   * Http get /scim/v2/ServiceProviderConfig
    */
-  async get(config?: RestRequestConfig): Promise<ServiceProviderConfig> {
+  async get(
+    restRequestConfig?: RestRequestConfig
+  ): Promise<ServiceProviderConfig> {
     const r = await this.rc.get<ServiceProviderConfig>(
       this.path(),
       undefined,
-      config
+      restRequestConfig
     );
     return r.data;
   }

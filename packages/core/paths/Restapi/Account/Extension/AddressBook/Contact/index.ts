@@ -1,10 +1,10 @@
 import {RestRequestConfig} from '../../../../../../Rest';
 import {
-  ContactList,
   ListContactsParameters,
-  PersonalContactResource,
+  ContactList,
   PersonalContactRequest,
   CreateContactParameters,
+  PersonalContactResource,
   UpdateContactParameters,
 } from '../../../../../../definitions';
 import Parent from '..';
@@ -12,8 +12,8 @@ import RingCentral from '../../../../../..';
 
 class Index {
   rc: RingCentral;
-  contactId: string | null;
   parent: Parent;
+  contactId: string | null;
 
   constructor(parent: Parent, contactId: string | null = null) {
     this.parent = parent;
@@ -25,52 +25,62 @@ class Index {
     if (withParameter && this.contactId !== null) {
       return `${this.parent.path()}/contact/${this.contactId}`;
     }
-
     return `${this.parent.path()}/contact`;
   }
 
   /**
-   * Operation: Get Contact List
+   * Returns user personal contacts.
+   * HTTP Method: get
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/address-book/contact
    * Rate Limit Group: Heavy
-   * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact
+   * App Permission: ReadContacts
+   * User Permission: ReadPersonalContacts
    */
   async list(
     queryParams?: ListContactsParameters,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<ContactList> {
     const r = await this.rc.get<ContactList>(
       this.path(false),
       queryParams,
-      config
+      restRequestConfig
     );
     return r.data;
   }
 
   /**
-   * Operation: Create Contact
+   * Creates personal user contact.
+   * HTTP Method: post
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/address-book/contact
    * Rate Limit Group: Heavy
-   * Http post /restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact
+   * App Permission: Contacts
+   * User Permission: EditPersonalContacts
    */
   async post(
     personalContactRequest: PersonalContactRequest,
     queryParams?: CreateContactParameters,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<PersonalContactResource> {
     const r = await this.rc.post<PersonalContactResource>(
       this.path(false),
       personalContactRequest,
       queryParams,
-      config
+      restRequestConfig
     );
     return r.data;
   }
 
   /**
-   * Operation: Get Contact
+   * Returns contact(s) by ID(s). Batch request is supported.
+   * HTTP Method: get
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/address-book/contact/{contactId}
    * Rate Limit Group: Heavy
-   * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact/{contactId}
+   * App Permission: ReadContacts
+   * User Permission: ReadPersonalContacts
    */
-  async get(config?: RestRequestConfig): Promise<PersonalContactResource> {
+  async get(
+    restRequestConfig?: RestRequestConfig
+  ): Promise<PersonalContactResource> {
     if (this.contactId === null) {
       throw new Error('contactId must be specified.');
     }
@@ -78,20 +88,23 @@ class Index {
     const r = await this.rc.get<PersonalContactResource>(
       this.path(),
       undefined,
-      config
+      restRequestConfig
     );
     return r.data;
   }
 
   /**
-   * Operation: Update Contact
+   * Updates personal contact information by contact ID(s). Batch request is supported
+   * HTTP Method: put
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/address-book/contact/{contactId}
    * Rate Limit Group: Heavy
-   * Http put /restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact/{contactId}
+   * App Permission: Contacts
+   * User Permission: EditPersonalContacts
    */
   async put(
     personalContactRequest: PersonalContactRequest,
     queryParams?: UpdateContactParameters,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<PersonalContactResource> {
     if (this.contactId === null) {
       throw new Error('contactId must be specified.');
@@ -101,22 +114,29 @@ class Index {
       this.path(),
       personalContactRequest,
       queryParams,
-      config
+      restRequestConfig
     );
     return r.data;
   }
 
   /**
-   * Operation: Delete Contact
+   * Deletes contact(s) by ID(s). Batch request is supported.
+   * HTTP Method: delete
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/address-book/contact/{contactId}
    * Rate Limit Group: Heavy
-   * Http delete /restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book/contact/{contactId}
+   * App Permission: Contacts
+   * User Permission: EditPersonalContacts
    */
-  async delete(config?: RestRequestConfig): Promise<string> {
+  async delete(restRequestConfig?: RestRequestConfig): Promise<string> {
     if (this.contactId === null) {
       throw new Error('contactId must be specified.');
     }
 
-    const r = await this.rc.delete<string>(this.path(), undefined, config);
+    const r = await this.rc.delete<string>(
+      this.path(),
+      undefined,
+      restRequestConfig
+    );
     return r.data;
   }
 }

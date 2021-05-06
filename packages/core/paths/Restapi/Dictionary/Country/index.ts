@@ -1,7 +1,7 @@
 import {RestRequestConfig} from '../../../../Rest';
 import {
-  GetCountryListResponse,
   ListCountriesParameters,
+  GetCountryListResponse,
   GetCountryInfoDictionaryResponse,
 } from '../../../../definitions';
 import Parent from '..';
@@ -9,8 +9,8 @@ import RingCentral from '../../../..';
 
 class Index {
   rc: RingCentral;
-  countryId: string | null;
   parent: Parent;
+  countryId: string | null;
 
   constructor(parent: Parent, countryId: string | null = null) {
     this.parent = parent;
@@ -22,34 +22,35 @@ class Index {
     if (withParameter && this.countryId !== null) {
       return `${this.parent.path()}/country/${this.countryId}`;
     }
-
     return `${this.parent.path()}/country`;
   }
 
   /**
-   * Operation: Get Country List
+   * Returns all the countries available for calling.
+   * HTTP Method: get
+   * Endpoint: /restapi/{apiVersion}/dictionary/country
    * Rate Limit Group: Light
-   * Http get /restapi/v1.0/dictionary/country
    */
   async list(
     queryParams?: ListCountriesParameters,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<GetCountryListResponse> {
     const r = await this.rc.get<GetCountryListResponse>(
       this.path(false),
       queryParams,
-      config
+      restRequestConfig
     );
     return r.data;
   }
 
   /**
-   * Operation: Get Country
+   * Returns the information on a specific country.
+   * HTTP Method: get
+   * Endpoint: /restapi/{apiVersion}/dictionary/country/{countryId}
    * Rate Limit Group: Light
-   * Http get /restapi/v1.0/dictionary/country/{countryId}
    */
   async get(
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<GetCountryInfoDictionaryResponse> {
     if (this.countryId === null) {
       throw new Error('countryId must be specified.');
@@ -58,7 +59,7 @@ class Index {
     const r = await this.rc.get<GetCountryInfoDictionaryResponse>(
       this.path(),
       undefined,
-      config
+      restRequestConfig
     );
     return r.data;
   }

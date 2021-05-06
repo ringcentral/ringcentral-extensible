@@ -1,7 +1,7 @@
 import {RestRequestConfig} from '../../../../../Rest';
 import {
-  AddressBookSync,
   SyncAddressBookParameters,
+  AddressBookSync,
 } from '../../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../../..';
@@ -20,18 +20,21 @@ class Index {
   }
 
   /**
-   * Operation: Address Book Synchronization
+   * Synchronizes user contacts.
+   * HTTP Method: get
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/address-book-sync
    * Rate Limit Group: Heavy
-   * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/address-book-sync
+   * App Permission: ReadContacts
+   * User Permission: ReadPersonalContacts
    */
   async get(
     queryParams?: SyncAddressBookParameters,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<AddressBookSync> {
     const r = await this.rc.get<AddressBookSync>(
       this.path(),
       queryParams,
-      config
+      restRequestConfig
     );
     return r.data;
   }

@@ -18,15 +18,18 @@ class Index {
   }
 
   /**
-   * Operation: Get Authorization Profile
+   * Returns a list of user permissions granted at authorization procedure. Please note: Some permissions may be restricted by extension type.
+   * HTTP Method: get
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/authz-profile
    * Rate Limit Group: Medium
-   * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/authz-profile
    */
-  async get(config?: RestRequestConfig): Promise<AuthProfileResource> {
+  async get(
+    restRequestConfig?: RestRequestConfig
+  ): Promise<AuthProfileResource> {
     const r = await this.rc.get<AuthProfileResource>(
       this.path(),
       undefined,
-      config
+      restRequestConfig
     );
     return r.data;
   }

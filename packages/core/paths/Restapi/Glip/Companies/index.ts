@@ -5,8 +5,8 @@ import RingCentral from '../../../..';
 
 class Index {
   rc: RingCentral;
-  companyId: string | null;
   parent: Parent;
+  companyId: string | null;
 
   constructor(parent: Parent, companyId: string | null = null) {
     this.parent = parent;
@@ -18,21 +18,27 @@ class Index {
     if (withParameter && this.companyId !== null) {
       return `${this.parent.path()}/companies/${this.companyId}`;
     }
-
     return `${this.parent.path()}/companies`;
   }
 
   /**
-   * Operation: Get Company Info
+   * Returns information about one or more companies by their IDs.
+   * HTTP Method: get
+   * Endpoint: /restapi/{apiVersion}/glip/companies/{companyId}
    * Rate Limit Group: Light
-   * Http get /restapi/v1.0/glip/companies/{companyId}
+   * App Permission: Glip
+   * User Permission: Glip
    */
-  async get(config?: RestRequestConfig): Promise<GlipCompany> {
+  async get(restRequestConfig?: RestRequestConfig): Promise<GlipCompany> {
     if (this.companyId === null) {
       throw new Error('companyId must be specified.');
     }
 
-    const r = await this.rc.get<GlipCompany>(this.path(), undefined, config);
+    const r = await this.rc.get<GlipCompany>(
+      this.path(),
+      undefined,
+      restRequestConfig
+    );
     return r.data;
   }
 }

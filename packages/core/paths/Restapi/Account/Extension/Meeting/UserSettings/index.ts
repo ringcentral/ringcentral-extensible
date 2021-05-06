@@ -17,15 +17,20 @@ class Index {
   }
 
   /**
-   * Operation: Get Meeting User Settings
+   * Returns user settings for meetings.
+   * HTTP Method: get
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/meeting/user-settings
    * Rate Limit Group: Light
-   * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/user-settings
+   * App Permission: Meetings
+   * User Permission: Meetings
    */
-  async get(config?: RestRequestConfig): Promise<MeetingUserSettingsResponse> {
+  async get(
+    restRequestConfig?: RestRequestConfig
+  ): Promise<MeetingUserSettingsResponse> {
     const r = await this.rc.get<MeetingUserSettingsResponse>(
       this.path(),
       undefined,
-      config
+      restRequestConfig
     );
     return r.data;
   }

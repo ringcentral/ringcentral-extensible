@@ -16,13 +16,16 @@ class Index {
   }
 
   /**
-   * Operation: Get IVR Prompt Content
+   * Returns media content of an IVR prompt by ID.
+   * HTTP Method: get
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/ivr-prompts/{promptId}/content
    * Rate Limit Group: Medium
-   * Http get /restapi/v1.0/account/{accountId}/ivr-prompts/{promptId}/content
+   * App Permission: ReadAccounts
+   * User Permission: ReadCompanyGreetings
    */
-  async get(config?: RestRequestConfig): Promise<Buffer> {
+  async get(restRequestConfig?: RestRequestConfig): Promise<Buffer> {
     const r = await this.rc.get<Buffer>(this.path(), undefined, {
-      ...config,
+      ...restRequestConfig,
       responseType: 'arraybuffer',
     });
     return r.data;

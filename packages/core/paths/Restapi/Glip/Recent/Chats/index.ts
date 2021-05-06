@@ -1,7 +1,7 @@
 import {RestRequestConfig} from '../../../../../Rest';
 import {
-  GlipChatsListWithoutNavigation,
   ListRecentChatsParameters,
+  GlipChatsListWithoutNavigation,
 } from '../../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../../..';
@@ -20,18 +20,21 @@ class Index {
   }
 
   /**
-   * Operation: Get Recent Chats
+   * Returns recent chats where the user is a member. All records in response are sorted by the `lastModifiedTime` in descending order (the latest changed chat is displayed first on page). **Note** 'Chat' is a general name for all types of threads icluding *Personal* (user's own me-chat), *Direct* (one on one chat), *Group* (chat of 3-15 participants without specific name), *Team* (chat of 2 and more participants, with a specific name), *Everyone* (company chat including all employees, with a specific name)."
+   * HTTP Method: get
+   * Endpoint: /restapi/{apiVersion}/glip/recent/chats
    * Rate Limit Group: Light
-   * Http get /restapi/v1.0/glip/recent/chats
+   * App Permission: Glip
+   * User Permission: Glip
    */
   async get(
     queryParams?: ListRecentChatsParameters,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<GlipChatsListWithoutNavigation> {
     const r = await this.rc.get<GlipChatsListWithoutNavigation>(
       this.path(),
       queryParams,
-      config
+      restRequestConfig
     );
     return r.data;
   }

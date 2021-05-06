@@ -1,9 +1,9 @@
+import Utils from '../../../../../Utils';
 import {RestRequestConfig} from '../../../../../Rest';
 import {
-  GetSMSMessageInfoResponse,
   CreateSMSMessage,
+  GetSMSMessageInfoResponse,
 } from '../../../../../definitions';
-import Utils from '../../../../../Utils';
 import Parent from '..';
 import RingCentral from '../../../../..';
 
@@ -21,20 +21,23 @@ class Index {
   }
 
   /**
-   * Operation: Send SMS
+   * Creates and sends a new text message. You can send SMS messages simultaneously to different recipients up to 40 requests per minute; this limitation is relevant for all client applications. Sending and receiving SMS is available for Toll-Free Numbers within the USA. You can send up to 10 attachments in one MMS message; the size of all attachments linked is limited to 1500000 bytes.
+   * HTTP Method: post
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/sms
    * Rate Limit Group: Medium
-   * Http post /restapi/v1.0/account/{accountId}/extension/{extensionId}/sms
+   * App Permission: SMS
+   * User Permission: OutboundSMS
    */
   async post(
-    createSMSMessage: CreateSMSMessage,
-    config?: RestRequestConfig
+    CreateSMSMessage: CreateSMSMessage,
+    restRequestConfig?: RestRequestConfig
   ): Promise<GetSMSMessageInfoResponse> {
-    const formData = Utils.getFormData(createSMSMessage);
+    const formData = Utils.getFormData(CreateSMSMessage);
     const r = await this.rc.post<GetSMSMessageInfoResponse>(
       this.path(),
       formData,
       undefined,
-      config
+      restRequestConfig
     );
     return r.data;
   }

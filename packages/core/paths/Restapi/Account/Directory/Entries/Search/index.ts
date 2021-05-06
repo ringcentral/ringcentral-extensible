@@ -1,7 +1,7 @@
 import {RestRequestConfig} from '../../../../../../Rest';
 import {
-  DirectoryResource,
   SearchDirectoryEntriesRequest,
+  DirectoryResource,
 } from '../../../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../../../..';
@@ -20,19 +20,22 @@ class Index {
   }
 
   /**
-   * Operation: Search Company Directory Entries
+   * Returns contact information on corporate users of federated accounts according to the specified filtering and ordering.
+   * HTTP Method: post
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/directory/entries/search
    * Rate Limit Group: Heavy
-   * Http post /restapi/v1.0/account/{accountId}/directory/entries/search
+   * App Permission: ReadAccounts
+   * User Permission: ReadExtensions
    */
   async post(
     searchDirectoryEntriesRequest: SearchDirectoryEntriesRequest,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<DirectoryResource> {
     const r = await this.rc.post<DirectoryResource>(
       this.path(),
       searchDirectoryEntriesRequest,
       undefined,
-      config
+      restRequestConfig
     );
     return r.data;
   }

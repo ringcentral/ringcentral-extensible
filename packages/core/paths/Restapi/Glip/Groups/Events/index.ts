@@ -17,29 +17,39 @@ class Index {
   }
 
   /**
-   * Operation: Get Group Events
+   * Returns a list of calendar events available for the current user within the specified group. Users can only see their personal tasks and public tasks.
+   * HTTP Method: get
+   * Endpoint: /restapi/{apiVersion}/glip/groups/{groupId}/events
    * Rate Limit Group: Medium
-   * Http get /restapi/v1.0/glip/groups/{groupId}/events
+   * App Permission: Glip
+   * User Permission: Glip
    */
-  async get(config?: RestRequestConfig): Promise<GlipEventInfo> {
-    const r = await this.rc.get<GlipEventInfo>(this.path(), undefined, config);
+  async get(restRequestConfig?: RestRequestConfig): Promise<GlipEventInfo> {
+    const r = await this.rc.get<GlipEventInfo>(
+      this.path(),
+      undefined,
+      restRequestConfig
+    );
     return r.data;
   }
 
   /**
-   * Operation: Create Event by Group ID
+   * Creates a new calendar event within the specified group.
+   * HTTP Method: post
+   * Endpoint: /restapi/{apiVersion}/glip/groups/{groupId}/events
    * Rate Limit Group: Medium
-   * Http post /restapi/v1.0/glip/groups/{groupId}/events
+   * App Permission: Glip
+   * User Permission: Glip
    */
   async post(
     glipEventCreate: GlipEventCreate,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<GlipEventInfo> {
     const r = await this.rc.post<GlipEventInfo>(
       this.path(),
       glipEventCreate,
       undefined,
-      config
+      restRequestConfig
     );
     return r.data;
   }

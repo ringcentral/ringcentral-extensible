@@ -1,7 +1,7 @@
 import {RestRequestConfig} from '../../../../../Rest';
 import {
+  ReadA2PSMSOptOutsParameters,
   OptOutListResponse,
-  ReadA2PsmsOptOutsParameters,
 } from '../../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../../..';
@@ -20,18 +20,20 @@ class Index {
   }
 
   /**
-   * Operation: Get Opted Out Numbers
+   * Returns the list of numbers opted out from the account. The list can be filtered by `to`/`from` phone number query parameters. Specifying `text/csv` in the Accept header downloads the data in CSV format.
+   * HTTP Method: get
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/a2p-sms/opt-outs
    * Rate Limit Group: Light
-   * Http get /restapi/v1.0/account/{accountId}/a2p-sms/opt-outs
+   * App Permission: A2PSMS
    */
   async get(
-    queryParams?: ReadA2PsmsOptOutsParameters,
-    config?: RestRequestConfig
+    queryParams?: ReadA2PSMSOptOutsParameters,
+    restRequestConfig?: RestRequestConfig
   ): Promise<OptOutListResponse> {
     const r = await this.rc.get<OptOutListResponse>(
       this.path(),
       queryParams,
-      config
+      restRequestConfig
     );
     return r.data;
   }

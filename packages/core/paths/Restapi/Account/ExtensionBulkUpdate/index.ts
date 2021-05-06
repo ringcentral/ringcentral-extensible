@@ -1,8 +1,8 @@
 import Tasks from './Tasks';
 import {RestRequestConfig} from '../../../../Rest';
 import {
-  ExtensionBulkUpdateTaskResource,
   ExtensionBulkUpdateRequest,
+  ExtensionBulkUpdateTaskResource,
 } from '../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../..';
@@ -21,19 +21,22 @@ class Index {
   }
 
   /**
-   * Operation: Update Multiple Extensions
+   * Updates multiple extensions at once. Maximum 500 extensions can be updated per request.
+   * HTTP Method: post
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension-bulk-update
    * Rate Limit Group: Heavy
-   * Http post /restapi/v1.0/account/{accountId}/extension-bulk-update
+   * App Permission: EditExtensions
+   * User Permission: EditExtensionInfo
    */
   async post(
     extensionBulkUpdateRequest: ExtensionBulkUpdateRequest,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<ExtensionBulkUpdateTaskResource> {
     const r = await this.rc.post<ExtensionBulkUpdateTaskResource>(
       this.path(),
       extensionBulkUpdateRequest,
       undefined,
-      config
+      restRequestConfig
     );
     return r.data;
   }

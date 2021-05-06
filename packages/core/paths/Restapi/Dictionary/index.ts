@@ -1,10 +1,10 @@
-import Timezone from './Timezone';
-import State from './State';
-import Location from './Location';
-import Country from './Country';
-import Language from './Language';
 import FaxCoverPage from './FaxCoverPage';
+import Location from './Location';
+import Timezone from './Timezone';
+import Language from './Language';
 import Greeting from './Greeting';
+import Country from './Country';
+import State from './State';
 import Parent from '..';
 import RingCentral from '../../..';
 
@@ -21,32 +21,32 @@ class Index {
     return `${this.parent.path()}/dictionary`;
   }
 
-  greeting(greetingId: string | null = null): Greeting {
-    return new Greeting(this, greetingId);
-  }
-
-  faxCoverPage(): FaxCoverPage {
-    return new FaxCoverPage(this);
-  }
-
-  language(languageId: string | null = null): Language {
-    return new Language(this, languageId);
+  state(stateId: string | null = null): State {
+    return new State(this, stateId);
   }
 
   country(countryId: string | null = null): Country {
     return new Country(this, countryId);
   }
 
-  location(): Location {
-    return new Location(this);
+  greeting(greetingId: string | null = null): Greeting {
+    return new Greeting(this, greetingId);
   }
 
-  state(stateId: string | null = null): State {
-    return new State(this, stateId);
+  language(languageId: string | null = null): Language {
+    return new Language(this, languageId);
   }
 
   timezone(timezoneId: string | null = null): Timezone {
     return new Timezone(this, timezoneId);
+  }
+
+  location(): Location {
+    return new Location(this);
+  }
+
+  faxCoverPage(): FaxCoverPage {
+    return new FaxCoverPage(this);
   }
 }
 

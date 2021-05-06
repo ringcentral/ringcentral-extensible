@@ -5,8 +5,8 @@ import RingCentral from '../../../..';
 
 class Index {
   rc: RingCentral;
-  languageId: string | null;
   parent: Parent;
+  languageId: string | null;
 
   constructor(parent: Parent, languageId: string | null = null) {
     this.parent = parent;
@@ -18,35 +18,40 @@ class Index {
     if (withParameter && this.languageId !== null) {
       return `${this.parent.path()}/language/${this.languageId}`;
     }
-
     return `${this.parent.path()}/language`;
   }
 
   /**
-   * Operation: Get Language List
+   * Returns the information about supported languages.
+   * HTTP Method: get
+   * Endpoint: /restapi/{apiVersion}/dictionary/language
    * Rate Limit Group: Light
-   * Http get /restapi/v1.0/dictionary/language
    */
-  async list(config?: RestRequestConfig): Promise<LanguageList> {
+  async list(restRequestConfig?: RestRequestConfig): Promise<LanguageList> {
     const r = await this.rc.get<LanguageList>(
       this.path(false),
       undefined,
-      config
+      restRequestConfig
     );
     return r.data;
   }
 
   /**
-   * Operation: Get Language
+   * Returns language by ID.
+   * HTTP Method: get
+   * Endpoint: /restapi/{apiVersion}/dictionary/language/{languageId}
    * Rate Limit Group: Light
-   * Http get /restapi/v1.0/dictionary/language/{languageId}
    */
-  async get(config?: RestRequestConfig): Promise<LanguageInfo> {
+  async get(restRequestConfig?: RestRequestConfig): Promise<LanguageInfo> {
     if (this.languageId === null) {
       throw new Error('languageId must be specified.');
     }
 
-    const r = await this.rc.get<LanguageInfo>(this.path(), undefined, config);
+    const r = await this.rc.get<LanguageInfo>(
+      this.path(),
+      undefined,
+      restRequestConfig
+    );
     return r.data;
   }
 }

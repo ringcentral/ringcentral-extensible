@@ -1,8 +1,8 @@
 import Search from './Search';
 import {RestRequestConfig} from '../../../../../Rest';
 import {
-  DirectoryResource,
   ListDirectoryEntriesParameters,
+  DirectoryResource,
   ContactResource,
 } from '../../../../../definitions';
 import Parent from '..';
@@ -10,8 +10,8 @@ import RingCentral from '../../../../..';
 
 class Index {
   rc: RingCentral;
-  entryId: string | null;
   parent: Parent;
+  entryId: string | null;
 
   constructor(parent: Parent, entryId: string | null = null) {
     this.parent = parent;
@@ -23,33 +23,36 @@ class Index {
     if (withParameter && this.entryId !== null) {
       return `${this.parent.path()}/entries/${this.entryId}`;
     }
-
     return `${this.parent.path()}/entries`;
   }
 
   /**
-   * Operation: Get Company Directory Entries
+   * Returns contact information on corporate users of federated accounts. Please note: 1. `User`, `DigitalUser`, `VirtualUser` and `FaxUser` types are returned as `User` type. 2. `ApplicationExtension` type is not returned. 3. Only extensions in `Enabled`, `Disabled` and `NotActivated` state are returned.
+   * HTTP Method: get
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/directory/entries
    * Rate Limit Group: Medium
-   * Http get /restapi/v1.0/account/{accountId}/directory/entries
+   * App Permission: ReadAccounts
    */
   async list(
     queryParams?: ListDirectoryEntriesParameters,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<DirectoryResource> {
     const r = await this.rc.get<DirectoryResource>(
       this.path(false),
       queryParams,
-      config
+      restRequestConfig
     );
     return r.data;
   }
 
   /**
-   * Operation: Get Corporate Directory Entry
+   * Returns contact information on a particular corporate user of a federated account.
+   * HTTP Method: get
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/directory/entries/{entryId}
    * Rate Limit Group: Medium
-   * Http get /restapi/v1.0/account/{accountId}/directory/entries/{entryId}
+   * App Permission: ReadAccounts
    */
-  async get(config?: RestRequestConfig): Promise<ContactResource> {
+  async get(restRequestConfig?: RestRequestConfig): Promise<ContactResource> {
     if (this.entryId === null) {
       throw new Error('entryId must be specified.');
     }
@@ -57,7 +60,7 @@ class Index {
     const r = await this.rc.get<ContactResource>(
       this.path(),
       undefined,
-      config
+      restRequestConfig
     );
     return r.data;
   }

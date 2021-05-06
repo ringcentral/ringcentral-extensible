@@ -1,9 +1,9 @@
+import Utils from '../../../../../Utils';
 import {RestRequestConfig} from '../../../../../Rest';
 import {
-  GetSMSMessageInfoResponse,
   CreateMMSMessage,
+  GetSMSMessageInfoResponse,
 } from '../../../../../definitions';
-import Utils from '../../../../../Utils';
 import Parent from '..';
 import RingCentral from '../../../../..';
 
@@ -21,20 +21,23 @@ class Index {
   }
 
   /**
-   * Operation: Send MMS
+   * Creates and sends media messages. Sending MMS messages simultaneously to different recipients is limited up to 50 requests per minute; relevant for all client applications.
+   * HTTP Method: post
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/mms
    * Rate Limit Group: Medium
-   * Http post /restapi/v1.0/account/{accountId}/extension/{extensionId}/mms
+   * App Permission: SMS
+   * User Permission: OutboundSMS
    */
   async post(
-    createMMSMessage: CreateMMSMessage,
-    config?: RestRequestConfig
+    CreateMMSMessage: CreateMMSMessage,
+    restRequestConfig?: RestRequestConfig
   ): Promise<GetSMSMessageInfoResponse> {
-    const formData = Utils.getFormData(createMMSMessage);
+    const formData = Utils.getFormData(CreateMMSMessage);
     const r = await this.rc.post<GetSMSMessageInfoResponse>(
       this.path(),
       formData,
       undefined,
-      config
+      restRequestConfig
     );
     return r.data;
   }

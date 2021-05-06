@@ -1,7 +1,7 @@
 import {RestRequestConfig} from '../../../../../Rest';
 import {
-  ExtensionCallQueuePresenceList,
   ReadExtensionCallQueuePresenceParameters,
+  ExtensionCallQueuePresenceList,
   ExtensionCallQueueUpdatePresenceList,
 } from '../../../../../definitions';
 import Parent from '..';
@@ -21,36 +21,40 @@ class Index {
   }
 
   /**
-   * Operation: Get Agent’s Call Queue Presence
+   * Returns a list of agent's call queues with the agent presence status (per queue)
+   * HTTP Method: get
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/call-queue-presence
    * Rate Limit Group: Light
-   * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/call-queue-presence
+   * App Permission: ReadPresence
    */
   async get(
     queryParams?: ReadExtensionCallQueuePresenceParameters,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<ExtensionCallQueuePresenceList> {
     const r = await this.rc.get<ExtensionCallQueuePresenceList>(
       this.path(),
       queryParams,
-      config
+      restRequestConfig
     );
     return r.data;
   }
 
   /**
-   * Operation: Update Call Queue Presence
+   * Updates availability of the agent for the call queues.
+   * HTTP Method: put
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/call-queue-presence
    * Rate Limit Group: Medium
-   * Http put /restapi/v1.0/account/{accountId}/extension/{extensionId}/call-queue-presence
+   * App Permission: EditPresence
    */
   async put(
     extensionCallQueueUpdatePresenceList: ExtensionCallQueueUpdatePresenceList,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<ExtensionCallQueuePresenceList> {
     const r = await this.rc.put<ExtensionCallQueuePresenceList>(
       this.path(),
       extensionCallQueueUpdatePresenceList,
       undefined,
-      config
+      restRequestConfig
     );
     return r.data;
   }

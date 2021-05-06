@@ -1,17 +1,17 @@
 import {RestRequestConfig} from '../../../../Rest';
 import {
-  GetTimezoneListResponse,
   ListTimezonesParameters,
-  GetTimezoneInfoResponse,
+  GetTimezoneListResponse,
   ReadTimezoneParameters,
+  GetTimezoneInfoResponse,
 } from '../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../..';
 
 class Index {
   rc: RingCentral;
-  timezoneId: string | null;
   parent: Parent;
+  timezoneId: string | null;
 
   constructor(parent: Parent, timezoneId: string | null = null) {
     this.parent = parent;
@@ -23,35 +23,36 @@ class Index {
     if (withParameter && this.timezoneId !== null) {
       return `${this.parent.path()}/timezone/${this.timezoneId}`;
     }
-
     return `${this.parent.path()}/timezone`;
   }
 
   /**
-   * Operation: Get Timezone List
+   * Returns all available timezones.
+   * HTTP Method: get
+   * Endpoint: /restapi/{apiVersion}/dictionary/timezone
    * Rate Limit Group: Light
-   * Http get /restapi/v1.0/dictionary/timezone
    */
   async list(
     queryParams?: ListTimezonesParameters,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<GetTimezoneListResponse> {
     const r = await this.rc.get<GetTimezoneListResponse>(
       this.path(false),
       queryParams,
-      config
+      restRequestConfig
     );
     return r.data;
   }
 
   /**
-   * Operation: Get Timezone
+   * Returns the information on a certain timezone.
+   * HTTP Method: get
+   * Endpoint: /restapi/{apiVersion}/dictionary/timezone/{timezoneId}
    * Rate Limit Group: Light
-   * Http get /restapi/v1.0/dictionary/timezone/{timezoneId}
    */
   async get(
     queryParams?: ReadTimezoneParameters,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<GetTimezoneInfoResponse> {
     if (this.timezoneId === null) {
       throw new Error('timezoneId must be specified.');
@@ -60,7 +61,7 @@ class Index {
     const r = await this.rc.get<GetTimezoneInfoResponse>(
       this.path(),
       queryParams,
-      config
+      restRequestConfig
     );
     return r.data;
   }

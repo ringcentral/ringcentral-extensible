@@ -5,8 +5,8 @@ import RingCentral from '../../../..';
 
 class Index {
   rc: RingCentral;
-  personId: string | null;
   parent: Parent;
+  personId: string | null;
 
   constructor(parent: Parent, personId: string | null = null) {
     this.parent = parent;
@@ -18,21 +18,27 @@ class Index {
     if (withParameter && this.personId !== null) {
       return `${this.parent.path()}/persons/${this.personId}`;
     }
-
     return `${this.parent.path()}/persons`;
   }
 
   /**
-   * Operation: Get Person
+   * Returns a user or multiple users by their ID(s). Batch request is supported.
+   * HTTP Method: get
+   * Endpoint: /restapi/{apiVersion}/glip/persons/{personId}
    * Rate Limit Group: Light
-   * Http get /restapi/v1.0/glip/persons/{personId}
+   * App Permission: Glip
+   * User Permission: Glip
    */
-  async get(config?: RestRequestConfig): Promise<GlipPersonInfo> {
+  async get(restRequestConfig?: RestRequestConfig): Promise<GlipPersonInfo> {
     if (this.personId === null) {
       throw new Error('personId must be specified.');
     }
 
-    const r = await this.rc.get<GlipPersonInfo>(this.path(), undefined, config);
+    const r = await this.rc.get<GlipPersonInfo>(
+      this.path(),
+      undefined,
+      restRequestConfig
+    );
     return r.data;
   }
 }

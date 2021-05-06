@@ -16,12 +16,19 @@ class Index {
   }
 
   /**
-   * Operation: Archive Team
+   * Changes the status of the specified team to 'Archived'. A team is a chat between 2 and more participants assigned with specific name.
+   * HTTP Method: post
+   * Endpoint: /restapi/{apiVersion}/glip/teams/{chatId}/archive
    * Rate Limit Group: Medium
-   * Http post /restapi/v1.0/glip/teams/{chatId}/archive
+   * App Permission: Glip
+   * User Permission: Glip
    */
-  async post(config?: RestRequestConfig): Promise<string> {
-    const r = await this.rc.post<string>(this.path(), undefined, config);
+  async post(restRequestConfig?: RestRequestConfig): Promise<string> {
+    const r = await this.rc.post<string>(
+      this.path(),
+      undefined,
+      restRequestConfig
+    );
     return r.data;
   }
 }

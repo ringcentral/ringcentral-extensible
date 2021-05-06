@@ -20,33 +20,41 @@ class Index {
   }
 
   /**
-   * Operation: Get Favorite Contact List
+   * Returns the list of favorite contacts of the current extension. Favorite contacts include both company contacts (extensions) and personal contacts (address book records).
+   * HTTP Method: get
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/favorite
    * Rate Limit Group: Light
-   * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/favorite
+   * App Permission: ReadContacts
+   * User Permission: ReadPersonalContacts
    */
-  async get(config?: RestRequestConfig): Promise<FavoriteContactList> {
+  async get(
+    restRequestConfig?: RestRequestConfig
+  ): Promise<FavoriteContactList> {
     const r = await this.rc.get<FavoriteContactList>(
       this.path(),
       undefined,
-      config
+      restRequestConfig
     );
     return r.data;
   }
 
   /**
-   * Operation: Update Favorite Contact List
+   * Updates the list of favorite contacts of the current extension. Favorite contacts include both company contacts (extensions) and personal contacts (address book records).**Please note**: currently personal address book size is limited to 10 000 contacts.
+   * HTTP Method: put
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/favorite
    * Rate Limit Group: Medium
-   * Http put /restapi/v1.0/account/{accountId}/extension/{extensionId}/favorite
+   * App Permission: Contacts
+   * User Permission: EditPersonalContacts
    */
   async put(
     favoriteCollection: FavoriteCollection,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<FavoriteContactList> {
     const r = await this.rc.put<FavoriteContactList>(
       this.path(),
       favoriteCollection,
       undefined,
-      config
+      restRequestConfig
     );
     return r.data;
   }

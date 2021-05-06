@@ -17,19 +17,22 @@ class Index {
   }
 
   /**
-   * Operation: Assign Multiple Call Queue Members
+   * Updates a call queue group.
+   * HTTP Method: post
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/call-queues/{groupId}/bulk-assign
    * Rate Limit Group: Heavy
-   * Http post /restapi/v1.0/account/{accountId}/call-queues/{groupId}/bulk-assign
+   * App Permission: EditExtensions
+   * User Permission: Groups
    */
   async post(
     callQueueBulkAssignResource: CallQueueBulkAssignResource,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<string> {
     const r = await this.rc.post<string>(
       this.path(),
       callQueueBulkAssignResource,
       undefined,
-      config
+      restRequestConfig
     );
     return r.data;
   }

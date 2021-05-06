@@ -1,7 +1,7 @@
 import {RestRequestConfig} from '../../../../../Rest';
 import {
-  CallMonitoringGroupMemberList,
   ListCallMonitoringGroupMembersParameters,
+  CallMonitoringGroupMemberList,
 } from '../../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../../..';
@@ -20,18 +20,21 @@ class Index {
   }
 
   /**
-   * Operation: Get Call Monitoring Group Member List
+   * Returns call monitoring group members.
+   * HTTP Method: get
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/call-monitoring-groups/{groupId}/members
    * Rate Limit Group: Medium
-   * Http get /restapi/v1.0/account/{accountId}/call-monitoring-groups/{groupId}/members
+   * App Permission: ReadAccounts
+   * User Permission: ReadExtensions
    */
   async get(
     queryParams?: ListCallMonitoringGroupMembersParameters,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<CallMonitoringGroupMemberList> {
     const r = await this.rc.get<CallMonitoringGroupMemberList>(
       this.path(),
       queryParams,
-      config
+      restRequestConfig
     );
     return r.data;
   }

@@ -1,8 +1,8 @@
 import BulkAssign from './BulkAssign';
 import {RestRequestConfig} from '../../../../../Rest';
 import {
-  ListDevicesAutomaticLocationUpdates,
   ListDevicesAutomaticLocationUpdatesParameters,
+  ListDevicesAutomaticLocationUpdates,
 } from '../../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../../..';
@@ -21,18 +21,21 @@ class Index {
   }
 
   /**
-   * Operation: Get Device List
+   * Returns the list of common devices with their status of Automatic Location Updates feature.
+   * HTTP Method: get
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/devices
    * Rate Limit Group: Medium
-   * Http get /restapi/v1.0/account/{accountId}/emergency-address-auto-update/devices
+   * App Permission: EditAccounts
+   * User Permission: ConfigureEmergencyMaps
    */
   async get(
     queryParams?: ListDevicesAutomaticLocationUpdatesParameters,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<ListDevicesAutomaticLocationUpdates> {
     const r = await this.rc.get<ListDevicesAutomaticLocationUpdates>(
       this.path(),
       queryParams,
-      config
+      restRequestConfig
     );
     return r.data;
   }

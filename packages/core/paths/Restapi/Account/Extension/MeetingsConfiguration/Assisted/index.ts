@@ -17,15 +17,20 @@ class Index {
   }
 
   /**
-   * Operation: Get Assisted Users
+   * Returns assisted users information.
+   * HTTP Method: get
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/meetings-configuration/assisted
    * Rate Limit Group: Light
-   * Http get /restapi/v1.0/account/{accountId}/extension/{extensionId}/meetings-configuration/assisted
+   * App Permission: Meetings
+   * User Permission: Meetings
    */
-  async get(config?: RestRequestConfig): Promise<AssistedUsersResource> {
+  async get(
+    restRequestConfig?: RestRequestConfig
+  ): Promise<AssistedUsersResource> {
     const r = await this.rc.get<AssistedUsersResource>(
       this.path(),
       undefined,
-      config
+      restRequestConfig
     );
     return r.data;
   }

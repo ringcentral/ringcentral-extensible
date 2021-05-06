@@ -1,7 +1,7 @@
 import {RestRequestConfig} from '../../../../Rest';
 import {
-  GetLocationListResponse,
   ListLocationsParameters,
+  GetLocationListResponse,
 } from '../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../..';
@@ -20,18 +20,19 @@ class Index {
   }
 
   /**
-   * Operation: Get Location List
+   * Returns all available locations for a certain state.
+   * HTTP Method: get
+   * Endpoint: /restapi/{apiVersion}/dictionary/location
    * Rate Limit Group: Light
-   * Http get /restapi/v1.0/dictionary/location
    */
   async get(
     queryParams?: ListLocationsParameters,
-    config?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig
   ): Promise<GetLocationListResponse> {
     const r = await this.rc.get<GetLocationListResponse>(
       this.path(),
       queryParams,
-      config
+      restRequestConfig
     );
     return r.data;
   }
