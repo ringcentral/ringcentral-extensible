@@ -3,16 +3,16 @@
 
 
 "@babel/runtime@^7.10.5":
-  version "7.13.17"
-  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.13.17.tgz#8966d1fc9593bf848602f0662d6b4d0069e3a7ec"
-  integrity sha512-NCdgJEelPTSh+FEFylhnP1ylq848l1z9t9N0j1Lfbcw0+KXGjsTvUmkxy+voLLXB5SOKMbLLx4jxYliGrYQseA==
+  version "7.14.0"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.14.0.tgz#46794bc20b612c5f75e62dd071e24dfd95f1cbe6"
+  integrity sha512-JELkvo/DlpNdJ7dlyw/eY7E0suy5i5GQH+Vlxaq1nsNJ+H7f4Vtv3jMeCEgRhZZQFXTjldYfQgv2qmM6M1v5wA==
   dependencies:
     regenerator-runtime "^0.13.4"
 
 "@peculiar/asn1-schema@^2.0.27":
-  version "2.0.29"
-  resolved "https://registry.yarnpkg.com/@peculiar/asn1-schema/-/asn1-schema-2.0.29.tgz#ec73452c78938755476bb40990eb64ca18ad3f59"
-  integrity sha512-VhteLXN4nQ0vWVm0fKjvposSjbjQVguYBT/jseLe88GUn9fcZ1wZl/ul2xGyFEk8MAwps103ILkKHBehSbi+mw==
+  version "2.0.32"
+  resolved "https://registry.yarnpkg.com/@peculiar/asn1-schema/-/asn1-schema-2.0.32.tgz#8711214df06859dbea5491ca0b400602adfbfc45"
+  integrity sha512-JzGUVxOFN+RKslJrGAxcq4l6tEmmLY1XuALHINVxc8BJsB4bXOdZzTvxbN9dCPk65Vbulno0B6DmImZ7I6SO8w==
   dependencies:
     "@types/asn1js" "^2.0.0"
     asn1js "^2.1.1"
@@ -582,10 +582,10 @@ proxy-from-env@^1.0.0:
   resolved "https://registry.yarnpkg.com/proxy-from-env/-/proxy-from-env-1.1.0.tgz#e102f16ca355424865755d2c9e8ea4f24d58c3e2"
   integrity sha512-D+zkORCbA9f1tdWRK0RaCR3GPv50cMxcrz4X8k5LTSUD1Dkw47mKJEZQNunItRTkWwgtaUSo1RVFRIG9ZXiFYg==
 
-pubnub@^4.31.0:
-  version "4.31.0"
-  resolved "https://registry.yarnpkg.com/pubnub/-/pubnub-4.31.0.tgz#5b6da97d67f02c8a828833381bad2a442516a734"
-  integrity sha512-bxavoo0R6I8OqF/03AjnMbE2BEQhLd2XU+9km/F07tAp1m8W1uwbRvst3X5g9cOlXzoH8bbL0SkU8mqSk29TfA==
+pubnub@^4.32.0:
+  version "4.32.0"
+  resolved "https://registry.yarnpkg.com/pubnub/-/pubnub-4.32.0.tgz#3cde8b82efb627ea7295d4fb92be9b22e342428c"
+  integrity sha512-v6Yhf0nziX1088+lWrP7ghMupESqyQuWixVwpmrsH/A4+D4HqsFLjmIJcGuiqYdSZNc2KmZ9ujny67dqQ/2Cuw==
   dependencies:
     "@babel/runtime" "^7.10.5"
     agentkeepalive "^3.5.2"
@@ -597,11 +597,11 @@ pubnub@^4.31.0:
     superagent-proxy "^2.0.0"
 
 pvtsutils@^1.1.2:
-  version "1.1.2"
-  resolved "https://registry.yarnpkg.com/pvtsutils/-/pvtsutils-1.1.2.tgz#483d72f4baa5e354466e68ff783ce8a9e2810030"
-  integrity sha512-Yfm9Dsk1zfEpOWCaJaHfqtNXAFWNNHMFSCLN6jTnhuCCBCC2nqge4sAgo7UrkRBoAAYIL8TN/6LlLoNfZD/b5A==
+  version "1.1.6"
+  resolved "https://registry.yarnpkg.com/pvtsutils/-/pvtsutils-1.1.6.tgz#0d663b26edf588670234bc949aa59b55ae7ec38d"
+  integrity sha512-Tm/74+LIqWtItcZHBJztPEPqLzNKbtPAA3LoFt763PFCHxmCfrF4YXhdFEiPAxMTakR0shbVymKKyMxg1Zqt4A==
   dependencies:
-    tslib "^2.1.0"
+    tslib "^2.2.0"
 
 pvutils@latest:
   version "1.0.17"

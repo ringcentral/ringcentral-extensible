@@ -18,7 +18,7 @@
     "access": "public"
   },
   "dependencies": {
-    "@types/ws": "^7.4.1",
+    "@types/ws": "^7.4.2",
     "http-status-codes": "^2.1.4",
     "hyperid": "^2.1.0",
     "isomorphic-ws": "^4.0.1",
@@ -28,6 +28,6 @@
     "@rc-ex/core": "^0.8.0"
   },
   "peerDependencies": {
-    "@rc-ex/core": "^0.7.4"
+    "@rc-ex/core": "^0.8.0"
   }
 }

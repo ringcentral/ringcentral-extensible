@@ -19,12 +19,12 @@
   },
   "dependencies": {
     "@types/pubnub": "^4.29.2",
-    "pubnub": "^4.31.0"
+    "pubnub": "^4.32.0"
   },
   "devDependencies": {
     "@rc-ex/core": "^0.8.0"
   },
   "peerDependencies": {
-    "@rc-ex/core": "^0.7.4"
+    "@rc-ex/core": "^0.8.0"
   }
 }
