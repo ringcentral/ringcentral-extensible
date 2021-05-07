@@ -5,6 +5,7 @@
   "scripts": {
     "definitions": "ts-node -r dotenv-override-true/config ./src/definitions.ts",
     "paths": "ts-node -r dotenv-override-true/config ./src/paths.ts",
+    "samples": "ts-node -r dotenv-override-true/config ./src/samples.ts",
     "ev": "ts-node -r dotenv-override-true/config ./engage-voice.ts"
   },
   "dependencies": {
