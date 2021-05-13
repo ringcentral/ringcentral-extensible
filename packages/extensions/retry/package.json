@@ -1,6 +1,6 @@
 {
   "name": "@rc-ex/retry",
-  "version": "0.7.8",
+  "version": "0.7.9",
   "description": "Retry extension for ringcentral-extensible project",
   "author": "Tyler Liu <tyler.liu@ringcentral.com>",
   "homepage": "https://github.com/ringcentral/ringcentral-extensible/tree/master/packages/extensions/retry",
@@ -21,7 +21,7 @@
     "wait-for-async": "^0.5.0"
   },
   "devDependencies": {
-    "@rc-ex/core": "^0.8.0"
+    "@rc-ex/core": "^0.8.1"
   },
   "peerDependencies": {
     "@rc-ex/core": "^0.8.0"
