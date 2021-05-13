@@ -181,6 +181,9 @@ class WebSocketExtension extends SdkExtension {
   }
 
   async pingServer() {
+    if (this.ws?.readyState !== OPEN) {
+      return;
+    }
     try {
       if (this.ws.ping) {
         // node.js
