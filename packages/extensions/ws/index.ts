@@ -5,9 +5,10 @@ import {
   RestMethod,
 } from '@rc-ex/core/lib/Rest';
 import SdkExtension from '@rc-ex/core/lib/SdkExtension';
-import WS, {OPEN} from 'isomorphic-ws';
+import WS, {OPEN, CONNECTING} from 'isomorphic-ws';
 import hyperid from 'hyperid';
 import {EventEmitter} from 'events';
+import waitFor from 'wait-for-async';
 
 import {request} from './rest';
 import {
@@ -111,7 +112,7 @@ class WebSocketExtension extends SdkExtension {
     }
     let retriesAttempted = 0;
     const check = async () => {
-      if (this.ws?.readyState !== OPEN) {
+      if (this.ws.readyState !== OPEN && this.ws.readyState !== CONNECTING) {
         clearInterval(this.intervalHandle!);
         try {
           await this.recover();
@@ -159,7 +160,7 @@ class WebSocketExtension extends SdkExtension {
   }
 
   async recover() {
-    if (this.ws?.readyState === OPEN) {
+    if (this.ws.readyState === OPEN || this.ws.readyState === CONNECTING) {
       return;
     }
     if (!this.wsc || !this.wsc.token) {
@@ -181,16 +182,13 @@ class WebSocketExtension extends SdkExtension {
   }
 
   async pingServer() {
-    if (this.ws?.readyState !== OPEN) {
-      return;
-    }
     try {
       if (this.ws.ping) {
         // node.js
         this.ws.ping();
       } else {
         // browser
-        this.ws.send(
+        await this.ws.send(
           JSON.stringify([
             {
               type: 'Heartbeat',
@@ -213,6 +211,15 @@ class WebSocketExtension extends SdkExtension {
     }
     this.ws = new WS(wsUri);
     this.eventEmitter.emit(Events.newWebSocketObject, this.ws);
+
+    // override send method to wait for connecting
+    const send = this.ws.send.bind(this.ws);
+    this.ws.send = async (s: string) => {
+      while (this.ws.readyState === CONNECTING) {
+        await waitFor({interval: 100});
+      }
+      await send(s);
+    };
 
     if (this.options.autoRecover?.enabled) {
       this.ws.addEventListener('message', () => {

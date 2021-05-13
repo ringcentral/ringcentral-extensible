@@ -49,7 +49,7 @@ export async function request<T>(
   if (_config.data) {
     requestBody.push(_config.data);
   }
-  this.ws.send(JSON.stringify(requestBody));
+  await this.ws.send(JSON.stringify(requestBody));
   const [meta, body] = await Utils.waitForWebSocketMessage(
     this.ws,
     meta => meta.messageId === messageId

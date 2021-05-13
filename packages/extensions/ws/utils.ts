@@ -19,8 +19,8 @@ class Utils {
 
   static debugWebSocket(ws: WS) {
     const send = ws.send.bind(ws);
-    ws.send = (str: string) => {
-      send(str);
+    ws.send = async (str: string) => {
+      await send(str);
       console.debug(
         `*** WebSocket outgoing message: ***
 ${JSON.stringify(JSON.parse(str), null, 2)}
