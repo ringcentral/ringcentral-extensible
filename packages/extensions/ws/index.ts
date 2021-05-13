@@ -215,8 +215,11 @@ class WebSocketExtension extends SdkExtension {
     // override send method to wait for connecting
     const send = this.ws.send.bind(this.ws);
     this.ws.send = async (s: string) => {
-      while (this.ws.readyState === CONNECTING) {
-        await waitFor({interval: 100});
+      if (this.ws.readyState === CONNECTING) {
+        await waitFor({
+          interval: 100,
+          condition: () => this.ws.readyState !== CONNECTING,
+        });
       }
       await send(s);
     };
