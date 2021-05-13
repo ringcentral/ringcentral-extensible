@@ -98,8 +98,5 @@ yarn lerna add ramda --scope=@rc-ex/debug
 
 ### Todo
 
-- refactor code generator
-    - it was converted from js, lots of explicit any
-    - update `code-generator/.eslintrc.json`
 - Extension to refresh token
 - Extension to do pagination
