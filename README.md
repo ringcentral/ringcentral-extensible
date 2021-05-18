@@ -78,7 +78,7 @@ yarn generate
 ### Test
 
 ```
-yarn test
+yarn reset && yarn compile && yarn test
 ```
 
 
