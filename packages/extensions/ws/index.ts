@@ -112,7 +112,7 @@ class WebSocketExtension extends SdkExtension {
     }
     let retriesAttempted = 0;
     const check = async () => {
-      if (this.ws.readyState !== OPEN && this.ws.readyState !== CONNECTING) {
+      if (this.ws?.readyState !== OPEN && this.ws?.readyState !== CONNECTING) {
         clearInterval(this.intervalHandle!);
         try {
           await this.recover();
@@ -150,7 +150,7 @@ class WebSocketExtension extends SdkExtension {
         if (this.pingServerHandle) {
           clearTimeout(this.pingServerHandle);
         }
-        this.ws.close();
+        this.ws?.close();
       });
       window.addEventListener('online', () => {
         check();
@@ -160,7 +160,7 @@ class WebSocketExtension extends SdkExtension {
   }
 
   async recover() {
-    if (this.ws.readyState === OPEN || this.ws.readyState === CONNECTING) {
+    if (this.ws?.readyState === OPEN || this.ws?.readyState === CONNECTING) {
       return;
     }
     if (!this.wsc || !this.wsc.token) {
@@ -183,12 +183,12 @@ class WebSocketExtension extends SdkExtension {
 
   async pingServer() {
     try {
-      if (this.ws.ping) {
+      if (this.ws?.ping) {
         // node.js
-        this.ws.ping();
+        this.ws?.ping();
       } else {
         // browser
-        await this.ws.send(
+        await this.ws?.send(
           JSON.stringify([
             {
               type: 'Heartbeat',
@@ -198,7 +198,7 @@ class WebSocketExtension extends SdkExtension {
         );
       }
     } catch (e) {
-      this.ws.close(); // Explicitly mark WS as closed
+      this.ws?.close(); // Explicitly mark WS as closed
     }
   }
 
