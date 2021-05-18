@@ -87,13 +87,13 @@ for (const path of paths.filter(item => item.operations.length > 0)) {
       markdown.push(
         `- \`${parameter}\` is of type [${capitalizeFirstLetter(
           parameter
-        )}](./packages/core/definitions/${capitalizeFirstLetter(parameter)}.cs)`
+        )}](./packages/core/definitions/${capitalizeFirstLetter(parameter)}.ts)`
       );
     }
 
     if (operation.responseSchema?.$ref) {
       markdown.push(
-        `- \`result\` is of type [${operation.responseSchema.$ref}](./packages/core/definitions/${operation.responseSchema.$ref}.cs)`
+        `- \`result\` is of type [${operation.responseSchema.$ref}](./packages/core/definitions/${operation.responseSchema.$ref}.ts)`
       );
     } else if (!operation.responseSchema) {
       markdown.push('- `result` is an empty string');
