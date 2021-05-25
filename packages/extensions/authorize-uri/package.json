@@ -1,6 +1,6 @@
 {
   "name": "@rc-ex/authorize-uri",
-  "version": "0.7.9",
+  "version": "0.7.10",
   "description": "Authorize URI extension for ringcentral-extensible project",
   "author": "Tyler Liu <tyler.liu@ringcentral.com>",
   "homepage": "https://github.com/ringcentral/ringcentral-extensible/tree/master/packages/extensions/authorize-uri",
@@ -22,7 +22,7 @@
     "urijs": "^1.19.6"
   },
   "devDependencies": {
-    "@rc-ex/core": "^0.8.1"
+    "@rc-ex/core": "^0.8.2"
   },
   "peerDependencies": {
     "@rc-ex/core": "^0.8.1"
