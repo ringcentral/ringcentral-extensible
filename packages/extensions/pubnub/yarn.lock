@@ -9,7 +9,7 @@
   dependencies:
     regenerator-runtime "^0.13.4"
 
-"@peculiar/asn1-schema@^2.0.27":
+"@peculiar/asn1-schema@^2.0.27", "@peculiar/asn1-schema@^2.0.32":
   version "2.0.32"
   resolved "https://registry.yarnpkg.com/@peculiar/asn1-schema/-/asn1-schema-2.0.32.tgz#8711214df06859dbea5491ca0b400602adfbfc45"
   integrity sha512-JzGUVxOFN+RKslJrGAxcq4l6tEmmLY1XuALHINVxc8BJsB4bXOdZzTvxbN9dCPk65Vbulno0B6DmImZ7I6SO8w==
@@ -27,14 +27,14 @@
     tslib "^2.0.0"
 
 "@peculiar/webcrypto@^1.0.22":
-  version "1.1.6"
-  resolved "https://registry.yarnpkg.com/@peculiar/webcrypto/-/webcrypto-1.1.6.tgz#484bb58be07149e19e873861b585b0d5e4f83b7b"
-  integrity sha512-xcTjouis4Y117mcsJslWAGypwhxtXslkVdRp7e3tHwtuw0/xCp1te8RuMMv/ia5TsvxomcyX/T+qTbRZGLLvyA==
+  version "1.1.7"
+  resolved "https://registry.yarnpkg.com/@peculiar/webcrypto/-/webcrypto-1.1.7.tgz#ff02008612e67ab7cc2a92fce04a7f0e2a04b71c"
+  integrity sha512-aCNLYdHZkvGH+T8/YBOY33jrVGVuLIa3bpizeHXqwN+P4ZtixhA+kxEEWM1amZwUY2nY/iuj+5jdZn/zB7EPPQ==
   dependencies:
-    "@peculiar/asn1-schema" "^2.0.27"
+    "@peculiar/asn1-schema" "^2.0.32"
     "@peculiar/json-schema" "^1.1.12"
-    pvtsutils "^1.1.2"
-    tslib "^2.1.0"
+    pvtsutils "^1.1.6"
+    tslib "^2.2.0"
     webcrypto-core "^1.2.0"
 
 "@tootallnate/once@1":
@@ -596,10 +596,10 @@ pubnub@^4.32.0:
     superagent "^3.8.1"
     superagent-proxy "^2.0.0"
 
-pvtsutils@^1.1.2:
-  version "1.1.6"
-  resolved "https://registry.yarnpkg.com/pvtsutils/-/pvtsutils-1.1.6.tgz#0d663b26edf588670234bc949aa59b55ae7ec38d"
-  integrity sha512-Tm/74+LIqWtItcZHBJztPEPqLzNKbtPAA3LoFt763PFCHxmCfrF4YXhdFEiPAxMTakR0shbVymKKyMxg1Zqt4A==
+pvtsutils@^1.1.2, pvtsutils@^1.1.6:
+  version "1.1.7"
+  resolved "https://registry.yarnpkg.com/pvtsutils/-/pvtsutils-1.1.7.tgz#39a65ccb3b7448c974f6a6141ce2aad037b3f13c"
+  integrity sha512-faOiD/XpB/cIebRzYwzYjCmYgiDd53YEBni+Mt1+8/HlrARHYBpsU2OHOt3EZ1ZhfRNxPL0dH3K/vKaMgNWVGA==
   dependencies:
     tslib "^2.2.0"
 
