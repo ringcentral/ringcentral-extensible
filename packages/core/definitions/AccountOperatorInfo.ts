@@ -7,6 +7,7 @@ class AccountOperatorInfo {
 
   /**
    * Internal identifier of an operator extension
+   * Format: int64
    */
   id?: number;
 

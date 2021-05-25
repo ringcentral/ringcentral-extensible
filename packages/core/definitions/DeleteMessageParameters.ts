@@ -7,6 +7,7 @@ class DeleteMessageParameters {
 
   /**
    * Internal identifier of a message thread
+   * Format: int64
    */
   conversationId?: number;
 }

@@ -1,13 +1,17 @@
 class CreateMessageStoreReportRequest {
   /**
-   * Starting time for collecting messages. The default value equals to the current time minus 24 hours
+   * Only messages created before the date will be collected. The default value is current time
+   */
+  dateTo?: string;
+
+  /**
+   * Only messages created after (or including) the date will be collected. The default value is current time minus 24 hours
    */
   dateFrom?: string;
 
   /**
-   * Ending time for collecting messages. The default value is the current time
    */
-  dateTo?: string;
+  messageTypes?: ('EMail' | 'Fax' | 'SMS' | 'VoiceMail' | 'Pager' | 'Text')[];
 }
 
 export default CreateMessageStoreReportRequest;

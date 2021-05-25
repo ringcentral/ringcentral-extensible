@@ -1,5 +1,6 @@
 class FavoriteContactResource {
   /**
+   * Format: int64
    */
   id?: number;
 

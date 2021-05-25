@@ -8,6 +8,7 @@ import {
 class GetMessageInfoResponse {
   /**
    * Internal identifier of a message
+   * Format: int64
    */
   id?: number;
 
@@ -33,6 +34,7 @@ class GetMessageInfoResponse {
 
   /**
    * SMS and Pager only. Identifier of a conversation the message belongs to
+   * Format: int64
    */
   conversationId?: number;
 

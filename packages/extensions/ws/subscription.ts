@@ -22,10 +22,8 @@ class Subscription {
     this.wse = wse;
     this.eventFilters = eventFilters;
     this.eventListener = (event: WsgEvent) => {
-      const [meta, body]: [
-        WsgMeta,
-        {subscriptionId: string}
-      ] = Utils.splitWsgData(event.data);
+      const [meta, body]: [WsgMeta, {subscriptionId: string}] =
+        Utils.splitWsgData(event.data);
       if (
         this.enabled &&
         meta.type === 'ServerNotification' &&

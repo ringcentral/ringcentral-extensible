@@ -6,6 +6,7 @@ class CallQueueMemberInfo {
 
   /**
    * Internal identifier of a call queue member
+   * Format: int64
    */
   id?: number;
 

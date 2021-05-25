@@ -10,6 +10,7 @@ import {
 class GetAccountInfoResponse {
   /**
    * Internal identifier of an account
+   * Format: int64
    */
   id?: number;
 

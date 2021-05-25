@@ -41,6 +41,11 @@ class NotificationSettingsUpdateRequest {
   /**
    */
   missedCalls?: MissedCallsInfo;
+
+  /**
+   * Specifies if managers' emails are included in the list of emails to which notifications are sent
+   */
+  includeManagers?: boolean;
 }
 
 export default NotificationSettingsUpdateRequest;

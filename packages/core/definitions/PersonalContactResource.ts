@@ -20,6 +20,7 @@ class PersonalContactResource {
 
   /**
    * Internal identifier of the contact
+   * Format: int64
    * Example: 623045004
    */
   id?: number;

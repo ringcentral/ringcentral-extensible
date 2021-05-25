@@ -1,6 +1,7 @@
 class MessageAttachmentInfo {
   /**
    * Internal identifier of a message attachment
+   * Format: int64
    */
   id?: number;
 

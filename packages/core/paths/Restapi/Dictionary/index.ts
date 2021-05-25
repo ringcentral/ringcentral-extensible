@@ -5,6 +5,7 @@ import Language from './Language';
 import Greeting from './Greeting';
 import Country from './Country';
 import State from './State';
+import Brand from './Brand';
 import Parent from '..';
 import RingCentral from '../../..';
 
@@ -19,6 +20,10 @@ class Index {
 
   path(): string {
     return `${this.parent.path()}/dictionary`;
+  }
+
+  brand(): Brand {
+    return new Brand(this);
   }
 
   state(stateId: string | null = null): State {

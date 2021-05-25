@@ -7,6 +7,7 @@ class ListStatesParameters {
 
   /**
    * Internal identifier of a country
+   * Format: int64
    */
   countryId?: number;
 

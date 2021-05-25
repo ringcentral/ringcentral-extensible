@@ -2,8 +2,9 @@
 class CurrencyInfo {
   /**
    * Internal identifier of a currency
+   * Format: int64
    */
-  id?: string;
+  id?: number;
 
   /**
    * Official code of a currency

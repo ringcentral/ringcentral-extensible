@@ -83,7 +83,8 @@ class GetDeviceInfoResponse {
   shipping?: ShippingInfo;
 
   /**
-   * Box billing identifier of a device. Applicable only for HardPhones. It is an alternative way to identify the device to be ordered. EitherT? model  structure, or  boxBillingId  must be specified forT?HardPhone
+   * Box billing identifier of a device. Applicable only for HardPhones. It is an alternative way to identify the device to be ordered. Either model  structure, or  boxBillingId  must be specified for HardPhone
+   * Format: int64
    */
   boxBillingId?: number;
 

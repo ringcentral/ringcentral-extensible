@@ -54,6 +54,7 @@ export {default as AutomaticLocationUpdatesModelInfo} from './AutomaticLocationU
 export {default as AutomaticLocationUpdatesPhoneLine} from './AutomaticLocationUpdatesPhoneLine';
 export {default as AutomaticLocationUpdatesPhoneNumberInfo} from './AutomaticLocationUpdatesPhoneNumberInfo';
 export {default as AutomaticLocationUpdatesSiteInfo} from './AutomaticLocationUpdatesSiteInfo';
+export {default as AutomaticLocationUpdatesSiteInfoRequest} from './AutomaticLocationUpdatesSiteInfoRequest';
 export {default as AutomaticLocationUpdatesTaskInfo} from './AutomaticLocationUpdatesTaskInfo';
 export {default as AutomaticLocationUpdatesUserInfo} from './AutomaticLocationUpdatesUserInfo';
 export {default as AutomaticLocationUpdatesUserList} from './AutomaticLocationUpdatesUserList';
@@ -490,6 +491,7 @@ export {default as ListDataExportTasksParameters} from './ListDataExportTasksPar
 export {default as ListDevicesAutomaticLocationUpdates} from './ListDevicesAutomaticLocationUpdates';
 export {default as ListDevicesAutomaticLocationUpdatesParameters} from './ListDevicesAutomaticLocationUpdatesParameters';
 export {default as ListDirectoryEntriesParameters} from './ListDirectoryEntriesParameters';
+export {default as ListDomesticCountriesParameters} from './ListDomesticCountriesParameters';
 export {default as ListEmergencyLocationsParameters} from './ListEmergencyLocationsParameters';
 export {default as ListExtensionActiveCallsParameters} from './ListExtensionActiveCallsParameters';
 export {default as ListExtensionDevicesParameters} from './ListExtensionDevicesParameters';
@@ -579,6 +581,8 @@ export {default as Meta} from './Meta';
 export {default as MethodInfo} from './MethodInfo';
 export {default as MethodResource} from './MethodResource';
 export {default as MissedCallEvent} from './MissedCallEvent';
+export {default as MissedCallExtensionInfo} from './MissedCallExtensionInfo';
+export {default as MissedCallInfo} from './MissedCallInfo';
 export {default as MissedCallsInfo} from './MissedCallsInfo';
 export {default as MobilePickupData} from './MobilePickupData';
 export {default as ModelInfo} from './ModelInfo';

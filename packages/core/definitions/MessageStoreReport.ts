@@ -42,14 +42,18 @@ class MessageStoreReport {
   lastModifiedTime?: string;
 
   /**
-   * Ending time for collecting messages
+   * Only messages created before the date will be collected. The default value is current time
    */
   dateTo?: string;
 
   /**
-   * Starting time for collecting messages
+   * Only messages created after (or including) the date will be collected. The default value is current time minus 24 hours
    */
   dateFrom?: string;
+
+  /**
+   */
+  messageTypes?: ('EMail' | 'Fax' | 'SMS' | 'VoiceMail' | 'Pager' | 'Text')[];
 }
 
 export default MessageStoreReport;

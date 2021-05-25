@@ -1,6 +1,7 @@
 class AutomaticLocationUpdatesPhoneNumberInfo {
   /**
    * Internal identifier of a phone number
+   * Format: int64
    */
   id?: number;
 

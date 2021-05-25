@@ -7,6 +7,7 @@ class RecipientInfo {
 
   /**
    * Internal identifier of a recipient extension
+   * Format: int64
    */
   id?: number;
 }

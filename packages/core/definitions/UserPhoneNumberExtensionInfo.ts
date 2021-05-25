@@ -4,6 +4,7 @@ import {ContactCenterProvider} from './index';
 class UserPhoneNumberExtensionInfo {
   /**
    * Internal identifier of an extension
+   * Format: int64
    */
   id?: number;
 

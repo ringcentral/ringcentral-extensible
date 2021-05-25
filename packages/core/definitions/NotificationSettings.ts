@@ -24,6 +24,11 @@ class NotificationSettings {
   emailAddresses?: string[];
 
   /**
+   * Specifies if managers' emails are included in the list of emails to which notifications are sent
+   */
+  includeManagers?: boolean;
+
+  /**
    * List of notification recipient email addresses
    */
   smsEmailAddresses?: string[];

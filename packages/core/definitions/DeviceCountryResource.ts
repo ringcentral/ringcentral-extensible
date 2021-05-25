@@ -6,6 +6,7 @@ class DeviceCountryResource {
   uri?: string;
 
   /**
+   * Format: int64
    */
   id?: string;
 

@@ -13,6 +13,11 @@ class ContactInfo {
   lastName?: string;
 
   /**
+   * Extension user name (first name and last name)
+   */
+  name?: string;
+
+  /**
    * Extension user company name
    */
   company?: string;

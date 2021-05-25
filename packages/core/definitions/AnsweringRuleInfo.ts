@@ -9,6 +9,7 @@ import {
   VoicemailInfo,
   GreetingInfo,
   SharedLinesInfo,
+  MissedCallInfo,
 } from './index';
 
 class AnsweringRuleInfo {
@@ -96,6 +97,10 @@ class AnsweringRuleInfo {
   /**
    */
   sharedLines?: SharedLinesInfo;
+
+  /**
+   */
+  missedCall?: MissedCallInfo;
 }
 
 export default AnsweringRuleInfo;
