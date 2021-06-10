@@ -107,7 +107,7 @@ class WebSocketExtension extends SdkExtension {
       await this.connect();
     } catch (e) {
       if (this.options.debugMode) {
-        console.log('Initial connect failed:', e);
+        console.debug('Initial connect failed:', e);
       }
     }
     let retriesAttempted = 0;
@@ -176,8 +176,14 @@ class WebSocketExtension extends SdkExtension {
       Date.now() - this.recoverTimestamp >
       this.connectionDetails.recoveryTimeout * 1000
     ) {
+      if (this.options.debugMode) {
+        console.debug('connect to WSG but do not recover');
+      }
       await this.connect(false); // connect to WSG but do not recover
     } else {
+      if (this.options.debugMode) {
+        console.debug('connect to WSG and recover');
+      }
       await this.connect(true); // connect to WSG and recover
     }
     this.recoverTimestamp = undefined;
