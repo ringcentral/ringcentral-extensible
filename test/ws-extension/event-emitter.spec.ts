@@ -30,6 +30,12 @@ describe('WebSocket', () => {
 
     await rc.installExtension(webSocketExtension);
 
+    // must have at least 1 subscription, otherwise recoveryState = Failed
+    await webSocketExtension.subscribe(
+      ['/restapi/v1.0/account/~/extension/~'],
+      () => {}
+    );
+
     const oldWS = webSocketExtension.ws;
 
     let count = 0;
