@@ -51,6 +51,7 @@ export type ConnectionDetails = {
   recoveryTimeout: number;
   idleTimeout: number;
   absoluteTimeout: number;
+  maxActiveRequests: number;
   recoveryState?: 'Successful' | 'Failed';
   recoveryErrorCode?: string;
 };
