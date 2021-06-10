@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@rc-ex/core@^0.8.1":
-  version "0.8.1"
-  resolved "https://registry.yarnpkg.com/@rc-ex/core/-/core-0.8.1.tgz#df53fa3df3ff48f43875dc8f55aea0f7edf45d2a"
-  integrity sha512-T/niq/4g65NY9VP9Xjo0Hwbe82j65YJEe1zTWgOLEIt8NWlsmXwy+3vRYeMNFJVkgYzIe7hm9t7KxOSHxkELKA==
+"@rc-ex/core@^0.8.2":
+  version "0.8.2"
+  resolved "https://registry.yarnpkg.com/@rc-ex/core/-/core-0.8.2.tgz#791bbb35515e37e18bb1068cf5d49f10280501cf"
+  integrity sha512-4AShLizzjMZWdbZsHceKf+G0AY0Es073efHnTPkcPyLQfWgTAMonaL+BcS38DjDNBiydl59sU93zsMiIN0jVOw==
   dependencies:
     "@types/qs" "^6.9.6"
     axios "^0.21.1"
@@ -89,17 +89,17 @@ has@^1.0.3:
   dependencies:
     function-bind "^1.1.1"
 
-mime-db@1.47.0:
-  version "1.47.0"
-  resolved "https://registry.yarnpkg.com/mime-db/-/mime-db-1.47.0.tgz#8cb313e59965d3c05cfbf898915a267af46a335c"
-  integrity sha512-QBmA/G2y+IfeS4oktet3qRZ+P5kPhCKRXxXnQEudYqUaEioAU1/Lq2us3D/t1Jfo4hE9REQPrbB7K5sOczJVIw==
+mime-db@1.48.0:
+  version "1.48.0"
+  resolved "https://registry.yarnpkg.com/mime-db/-/mime-db-1.48.0.tgz#e35b31045dd7eada3aaad537ed88a33afbef2d1d"
+  integrity sha512-FM3QwxV+TnZYQ2aRqhlKBMHxk10lTbMt3bBkMAp54ddrNeVSfcQYOOKuGuy3Ddrm38I04If834fOUSq1yzslJQ==
 
 mime-types@^2.1.12:
-  version "2.1.30"
-  resolved "https://registry.yarnpkg.com/mime-types/-/mime-types-2.1.30.tgz#6e7be8b4c479825f85ed6326695db73f9305d62d"
-  integrity sha512-crmjA4bLtR8m9qLpHvgxSChT+XoSlZi8J4n/aIdn3z92e/U47Z0V/yl+Wh9W046GgFVAmoNR/fmdbZYcSSIUeg==
+  version "2.1.31"
+  resolved "https://registry.yarnpkg.com/mime-types/-/mime-types-2.1.31.tgz#a00d76b74317c61f9c2db2218b8e9f8e9c5c9e6b"
+  integrity sha512-XGZnNzm3QvgKxa8dpzyhFTHmpP3l5YNusmne07VUOXxou9CqUqYa/HBy124RqtVh/O2pECas/MOcsDgpilPOPg==
   dependencies:
-    mime-db "1.47.0"
+    mime-db "1.48.0"
 
 object-inspect@^1.9.0:
   version "1.10.3"

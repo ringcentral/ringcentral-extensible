@@ -118,7 +118,9 @@ class WebSocketExtension extends SdkExtension {
           await this.recover();
           retriesAttempted = 0;
           if (this.options.debugMode) {
-            console.debug('Auto recover success');
+            console.debug(
+              `Auto recover done, recoveryState: ${this.connectionDetails.recoveryState}`
+            );
           }
           this.eventEmitter.emit(
             this.connectionDetails.recoveryState === 'Successful'

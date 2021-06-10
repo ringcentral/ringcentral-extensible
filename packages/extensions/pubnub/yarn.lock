@@ -3,20 +3,20 @@
 
 
 "@babel/runtime@^7.10.5":
-  version "7.14.0"
-  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.14.0.tgz#46794bc20b612c5f75e62dd071e24dfd95f1cbe6"
-  integrity sha512-JELkvo/DlpNdJ7dlyw/eY7E0suy5i5GQH+Vlxaq1nsNJ+H7f4Vtv3jMeCEgRhZZQFXTjldYfQgv2qmM6M1v5wA==
+  version "7.14.5"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.14.5.tgz#665450911c6031af38f81db530f387ec04cd9a98"
+  integrity sha512-121rumjddw9c3NCQ55KGkyE1h/nzWhU/owjhw0l4mQrkzz4x9SGS1X8gFLraHwX7td3Yo4QTL+qj0NcIzN87BA==
   dependencies:
     regenerator-runtime "^0.13.4"
 
 "@peculiar/asn1-schema@^2.0.27", "@peculiar/asn1-schema@^2.0.32":
-  version "2.0.32"
-  resolved "https://registry.yarnpkg.com/@peculiar/asn1-schema/-/asn1-schema-2.0.32.tgz#8711214df06859dbea5491ca0b400602adfbfc45"
-  integrity sha512-JzGUVxOFN+RKslJrGAxcq4l6tEmmLY1XuALHINVxc8BJsB4bXOdZzTvxbN9dCPk65Vbulno0B6DmImZ7I6SO8w==
+  version "2.0.36"
+  resolved "https://registry.yarnpkg.com/@peculiar/asn1-schema/-/asn1-schema-2.0.36.tgz#ca7978f43ffa4f35fbb74436c3f983c10a69ac27"
+  integrity sha512-x7fdMR6bzOBct2a0PLukrmVrrehHX5uisKRDWN2Bs1HojXd5nCi7MAQeV+umRxPK1oSJDstTBhGq3sLzDbL8Vw==
   dependencies:
     "@types/asn1js" "^2.0.0"
     asn1js "^2.1.1"
-    pvtsutils "^1.1.2"
+    pvtsutils "^1.1.7"
     tslib "^2.2.0"
 
 "@peculiar/json-schema@^1.1.12":
@@ -582,10 +582,10 @@ proxy-from-env@^1.0.0:
   resolved "https://registry.yarnpkg.com/proxy-from-env/-/proxy-from-env-1.1.0.tgz#e102f16ca355424865755d2c9e8ea4f24d58c3e2"
   integrity sha512-D+zkORCbA9f1tdWRK0RaCR3GPv50cMxcrz4X8k5LTSUD1Dkw47mKJEZQNunItRTkWwgtaUSo1RVFRIG9ZXiFYg==
 
-pubnub@^4.32.0:
-  version "4.32.0"
-  resolved "https://registry.yarnpkg.com/pubnub/-/pubnub-4.32.0.tgz#3cde8b82efb627ea7295d4fb92be9b22e342428c"
-  integrity sha512-v6Yhf0nziX1088+lWrP7ghMupESqyQuWixVwpmrsH/A4+D4HqsFLjmIJcGuiqYdSZNc2KmZ9ujny67dqQ/2Cuw==
+pubnub@^4.32.1:
+  version "4.32.1"
+  resolved "https://registry.yarnpkg.com/pubnub/-/pubnub-4.32.1.tgz#8eef63be4754f186d048312a14968764abad4ac4"
+  integrity sha512-hzwNmzVQD4SuGnepQt2JT5JCqgIP+laR1fqN8MVwUIclG0u7aSDcYn+0KJQceGWEpiN7GoQr6mQQ8K9TbiLz/w==
   dependencies:
     "@babel/runtime" "^7.10.5"
     agentkeepalive "^3.5.2"
@@ -596,7 +596,7 @@ pubnub@^4.32.0:
     superagent "^3.8.1"
     superagent-proxy "^2.0.0"
 
-pvtsutils@^1.1.2, pvtsutils@^1.1.6:
+pvtsutils@^1.1.2, pvtsutils@^1.1.6, pvtsutils@^1.1.7:
   version "1.1.7"
   resolved "https://registry.yarnpkg.com/pvtsutils/-/pvtsutils-1.1.7.tgz#39a65ccb3b7448c974f6a6141ce2aad037b3f13c"
   integrity sha512-faOiD/XpB/cIebRzYwzYjCmYgiDd53YEBni+Mt1+8/HlrARHYBpsU2OHOt3EZ1ZhfRNxPL0dH3K/vKaMgNWVGA==
