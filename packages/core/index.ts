@@ -1,7 +1,6 @@
 import {RestMethod, RestResponse} from './Rest';
 import {GetTokenRequest, TokenInfo} from './definitions';
-import Restapi from './paths/Restapi';
-import Scim from './paths/Scim';
+import {Restapi, Scim} from './paths';
 import Rest, {RestOptions, RestRequestConfig} from './Rest';
 import SdkExtension from './SdkExtension';
 
