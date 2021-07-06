@@ -18,7 +18,7 @@
     "access": "public"
   },
   "dependencies": {
-    "@types/urijs": "^1.19.15",
+    "@types/urijs": "^1.19.16",
     "axios": "^0.21.1",
     "urijs": "^1.19.6",
     "wait-for-async": "^0.5.0"
@@ -27,6 +27,6 @@
     "@rc-ex/core": "^0.8.3"
   },
   "peerDependencies": {
-    "@rc-ex/core": "^0.8.2"
+    "@rc-ex/core": "^0.8.3"
   }
 }
