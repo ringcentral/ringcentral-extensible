@@ -1,6 +1,6 @@
 {
   "name": "@rc-ex/events",
-  "version": "0.7.11",
+  "version": "0.7.12",
   "description": "Events extension for ringcentral-extensible project",
   "author": "Tyler Liu <tyler.liu@ringcentral.com>",
   "homepage": "https://github.com/ringcentral/ringcentral-extensible/tree/master/packages/extensions/events",
@@ -18,7 +18,7 @@
     "access": "public"
   },
   "devDependencies": {
-    "@rc-ex/core": "^0.8.3"
+    "@rc-ex/core": "^0.8.4"
   },
   "peerDependencies": {
     "@rc-ex/core": "^0.8.3"
