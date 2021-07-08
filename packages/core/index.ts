@@ -15,7 +15,7 @@ type AuthCodeFlowOptions = {
   code_verifier?: string;
 };
 
-class RingCentral {
+export class RingCentral {
   sdkExtensions: SdkExtension[] = [];
   rest: Rest;
 
@@ -172,22 +172,14 @@ class RingCentral {
     await this.restapi(null).oauth().revoke().post({token: tokenToRevoke});
     this.token = undefined;
   }
-}
 
-interface RingCentral {
-  restapi(apiVersion?: string | null): Restapi;
-}
-RingCentral.prototype.restapi = function (
-  apiVersion: string | null = 'v1.0'
-): Restapi {
-  return new Restapi(this, apiVersion);
-};
+  restapi(apiVersion: string | null = 'v1.0'): Restapi {
+    return new Restapi(this, apiVersion);
+  }
 
-interface RingCentral {
-  scim(version?: string | null): Scim;
+  scim(version: string | null = 'v2'): Scim {
+    return new Scim(this, version);
+  }
 }
-RingCentral.prototype.scim = function (version: string | null = 'v2'): Scim {
-  return new Scim(this, version);
-};
 
 export default RingCentral;
