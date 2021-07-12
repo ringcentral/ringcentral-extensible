@@ -10,6 +10,6 @@
     "change-case": "^4.1.2",
     "dotenv-override-true": "^6.2.2",
     "ringcentral-code-generator": "^0.1.0",
-    "ts-node": "^10.0.0"
+    "ts-node": "^10.1.0"
   }
 }

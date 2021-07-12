@@ -18,13 +18,13 @@
     "access": "public"
   },
   "dependencies": {
-    "@types/pubnub": "^4.29.2",
+    "@types/pubnub": "^4.29.3",
     "pubnub": "^4.32.1"
   },
   "devDependencies": {
     "@rc-ex/core": "^0.8.4"
   },
   "peerDependencies": {
-    "@rc-ex/core": "^0.8.3"
+    "@rc-ex/core": "^0.8.4"
   }
 }

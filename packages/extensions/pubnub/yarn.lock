@@ -23,9 +23,9 @@
   integrity sha512-RkhPPp2zrqDAQA/2jNhnztcPAlv64XdhIp7a7454A5ovI7Bukxgt7MX7udwAu3zg1DcpPU0rz3VV1SeaqvY4+A==
 
 "@nodelib/fs.walk@^1.2.3":
-  version "1.2.7"
-  resolved "https://registry.yarnpkg.com/@nodelib/fs.walk/-/fs.walk-1.2.7.tgz#94c23db18ee4653e129abd26fb06f870ac9e1ee2"
-  integrity sha512-BTIhocbPBSrRmHxOAJFtR18oLhxTtAFDAvL8hY1S3iU8k+E60W/YFs4jrixGzQjMpF4qPXxIQHcjVD9dz1C2QA==
+  version "1.2.8"
+  resolved "https://registry.yarnpkg.com/@nodelib/fs.walk/-/fs.walk-1.2.8.tgz#e95737e8bb6746ddedf69c556953494f196fe69a"
+  integrity sha512-oGB+UxlgWcgQkgwo8GcEGwemoTFt3FIO9ababBmaGwXIoBKZ+GTy0pP185beGg7Llih/NSHSV2XAs1lnznocSg==
   dependencies:
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
@@ -64,14 +64,14 @@
   integrity sha512-RbzJvlNzmRq5c3O09UipeuXno4tA1FE6ikOjxZK0tuxVv3412l64l5t1W5pj4+rJq9vpkm/kwiR07aZXnsKPxw==
 
 "@types/asn1js@^2.0.0":
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/@types/asn1js/-/asn1js-2.0.1.tgz#feb68592c37403411ae26f7d799cd8872e2101bc"
-  integrity sha512-bzY2++5ogh5ZdNrdNflKh7qMgpRENpq0fbzeAk7LpULrtkBN52drUfIahEoZ0xpZuO6paP7FmzvdnX1ioQb/dg==
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/@types/asn1js/-/asn1js-2.0.2.tgz#bb1992291381b5f06e22a829f2ae009267cdf8c5"
+  integrity sha512-t4YHCgtD+ERvH0FyxvNlYwJ2ezhqw7t+Ygh4urQ7dJER8i185JPv6oIM3ey5YQmGN6Zp9EMbpohkjZi9t3UxwA==
 
-"@types/pubnub@^4.29.2":
-  version "4.29.2"
-  resolved "https://registry.yarnpkg.com/@types/pubnub/-/pubnub-4.29.2.tgz#4cac40dab1408f0b02b671431876c8874b2e511d"
-  integrity sha512-I6jwPn7lex9GQ4QCtq28LyiAJZ/hEfEOM9eqISILVvDQYOB4NB0YbtdrAqg9BJlw5GwpHIMI61ANnKp34w6fwg==
+"@types/pubnub@^4.29.3":
+  version "4.29.3"
+  resolved "https://registry.yarnpkg.com/@types/pubnub/-/pubnub-4.29.3.tgz#dff7b6ea4f9a6249546f7441f1e1fe343cab619c"
+  integrity sha512-1antf8OSljKb4pAdgRIfpQXEKCzsZ/ZwnrUeasnyVgCbvqf0pRXS1sQLxXg5Sx14Vfih3fJRpQqxyYRE2Si8LQ==
 
 "@unimodules/core@*":
   version "7.1.1"
@@ -81,11 +81,11 @@
     compare-versions "^3.4.0"
 
 "@unimodules/react-native-adapter@*":
-  version "6.3.2"
-  resolved "https://registry.yarnpkg.com/@unimodules/react-native-adapter/-/react-native-adapter-6.3.2.tgz#6dd549704d3fc7c729d657beff998f27a34f62a2"
-  integrity sha512-jHrlGfIfs2GiPoDS6HttS5VZ4UmRSGiH1wArAJo7msAe0EACt6b9AR+CuxUPpK0d+DXv31iJzJxh9PYBzyA9Ag==
+  version "6.3.4"
+  resolved "https://registry.yarnpkg.com/@unimodules/react-native-adapter/-/react-native-adapter-6.3.4.tgz#b21e1750b9f2d6e3031dafba890c97586e428f4b"
+  integrity sha512-o2sX+QrYo2hmK0vNbxlULy319IxjgTWVraGxatrXeYPCbFEDM/u+nCLlCgGTz6ZrYN7dHnA0Xq3uoerhUPE0gg==
   dependencies:
-    expo-modules-autolinking "^0.0.2"
+    expo-modules-autolinking "^0.0.3"
     invariant "^2.2.4"
 
 agent-base@6, agent-base@^6.0.0, agent-base@^6.0.2:
@@ -314,10 +314,10 @@ esutils@^2.0.2:
   resolved "https://registry.yarnpkg.com/esutils/-/esutils-2.0.3.tgz#74d2eb4de0b8da1293711910d50775b9b710ef64"
   integrity sha512-kVscqXk4OCp68SZ0dkgEKVi6/8ij300KBWTJq32P/dYeWTSwK41WyTxalN1eRmA5Z9UU/LX9D7FWSmV9SAYx6g==
 
-expo-modules-autolinking@^0.0.2:
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/expo-modules-autolinking/-/expo-modules-autolinking-0.0.2.tgz#6015c4e0ba995144145ad29fb2a4b34deba73955"
-  integrity sha512-+tEosOIwQ1MlLbHoWNq9fu5C5itSbmrwzIX3KOoBCgEsHlE/xFJ1NoZCWIxCJ0K49Z4Gzab1wCpT0PhdidImnA==
+expo-modules-autolinking@^0.0.3:
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/expo-modules-autolinking/-/expo-modules-autolinking-0.0.3.tgz#45ba8cb1798f9339347ae35e96e9cc70eafb3727"
+  integrity sha512-azkCRYj/DxbK4udDuDxA9beYzQTwpJ5a9QA0bBgha2jHtWdFGF4ZZWSY+zNA5mtU3KqzYt8jWHfoqgSvKyu1Aw==
   dependencies:
     chalk "^4.1.0"
     commander "^7.2.0"
@@ -338,9 +338,9 @@ extend@^3.0.0:
   integrity sha512-fjquC59cD7CyW6urNXK0FBufkZcoiGG80wTuPujX590cB5Ttln20E2UB4S/WARVqhXffZl2LNgS+gQdPIIim/g==
 
 fast-glob@^3.2.5:
-  version "3.2.6"
-  resolved "https://registry.yarnpkg.com/fast-glob/-/fast-glob-3.2.6.tgz#434dd9529845176ea049acc9343e8282765c6e1a"
-  integrity sha512-GnLuqj/pvQ7pX8/L4J84nijv6sAnlwvSDpMkJi9i7nPmPxGtRPkBSStfvDW5l6nMdX9VWe+pkKWFTgD+vF2QSQ==
+  version "3.2.7"
+  resolved "https://registry.yarnpkg.com/fast-glob/-/fast-glob-3.2.7.tgz#fd6cb7a2d7e9aa7a7846111e85a196d6b2f766a1"
+  integrity sha512-rYGMRwip6lUMvYD3BTScMwT1HtAs2d71SMv66Vrxs0IekGZEjhM0pcMfjQPnknBt2zeCwQMEupiN02ZP4DiT1Q==
   dependencies:
     "@nodelib/fs.stat" "^2.0.2"
     "@nodelib/fs.walk" "^1.2.3"
