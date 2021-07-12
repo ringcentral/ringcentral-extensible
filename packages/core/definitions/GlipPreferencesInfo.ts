@@ -5,5 +5,4 @@ class GlipPreferencesInfo {
    */
   chats?: GlipPreferencesChats;
 }
-
 export default GlipPreferencesInfo;

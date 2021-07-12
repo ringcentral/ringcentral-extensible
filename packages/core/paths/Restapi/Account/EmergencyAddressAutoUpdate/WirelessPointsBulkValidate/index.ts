@@ -14,11 +14,9 @@ class Index {
     this.parent = parent;
     this.rc = parent.rc;
   }
-
   path(): string {
     return `${this.parent.path()}/wireless-points-bulk-validate`;
   }
-
   /**
    * Validates wireless points before creation or update. The maximum number of wireless points per request is 10 000.
    * HTTP Method: post
@@ -40,5 +38,4 @@ class Index {
     return r.data;
   }
 }
-
 export default Index;

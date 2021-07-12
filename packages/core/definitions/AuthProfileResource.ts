@@ -10,5 +10,4 @@ class AuthProfileResource {
    */
   permissions?: ActivePermissionResource[];
 }
-
 export default AuthProfileResource;

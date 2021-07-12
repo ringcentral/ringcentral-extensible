@@ -52,5 +52,4 @@ class SuperviseCallSession {
    */
   status?: CallStatusInfo;
 }
-
 export default SuperviseCallSession;

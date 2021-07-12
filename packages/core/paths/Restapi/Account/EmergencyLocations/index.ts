@@ -19,14 +19,12 @@ class Index {
     this.rc = parent.rc;
     this.locationId = locationId;
   }
-
   path(withParameter = true): string {
     if (withParameter && this.locationId !== null) {
       return `${this.parent.path()}/emergency-locations/${this.locationId}`;
     }
     return `${this.parent.path()}/emergency-locations`;
   }
-
   /**
    * Returns emergency response locations of the current account.
    * HTTP Method: get
@@ -82,7 +80,6 @@ class Index {
     if (this.locationId === null) {
       throw new Error('locationId must be specified.');
     }
-
     const r = await this.rc.get<EmergencyLocationInfo>(
       this.path(),
       undefined,
@@ -106,7 +103,6 @@ class Index {
     if (this.locationId === null) {
       throw new Error('locationId must be specified.');
     }
-
     const r = await this.rc.put<EmergencyLocationInfo>(
       this.path(),
       emergencyLocationInfoRequest,
@@ -131,7 +127,6 @@ class Index {
     if (this.locationId === null) {
       throw new Error('locationId must be specified.');
     }
-
     const r = await this.rc.delete<string>(
       this.path(),
       queryParams,
@@ -140,5 +135,4 @@ class Index {
     return r.data;
   }
 }
-
 export default Index;

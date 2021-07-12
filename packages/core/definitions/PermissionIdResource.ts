@@ -22,5 +22,4 @@ class PermissionIdResource {
    */
   assignable?: boolean;
 }
-
 export default PermissionIdResource;

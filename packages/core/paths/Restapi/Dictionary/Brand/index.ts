@@ -10,7 +10,6 @@ class Index {
     this.parent = parent;
     this.rc = parent.rc;
   }
-
   path(): string {
     return `${this.parent.path()}/brand`;
   }
@@ -21,5 +20,4 @@ class Index {
     return new ContractedCountry(this, contractedCountryId);
   }
 }
-
 export default Index;

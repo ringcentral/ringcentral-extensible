@@ -10,11 +10,9 @@ class Index {
     this.parent = parent;
     this.rc = parent.rc;
   }
-
   path(): string {
     return `${this.parent.path()}/suspend`;
   }
-
   /**
    * Suspends a webhook by ID.
    * HTTP Method: post
@@ -32,5 +30,4 @@ class Index {
     return r.data;
   }
 }
-
 export default Index;

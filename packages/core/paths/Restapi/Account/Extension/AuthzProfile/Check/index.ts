@@ -14,11 +14,9 @@ class Index {
     this.parent = parent;
     this.rc = parent.rc;
   }
-
   path(): string {
     return `${this.parent.path()}/check`;
   }
-
   /**
    * Checks if a certain user permission is activated for a particular extension.
    * HTTP Method: get
@@ -37,5 +35,4 @@ class Index {
     return r.data;
   }
 }
-
 export default Index;

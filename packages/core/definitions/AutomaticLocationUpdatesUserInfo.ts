@@ -34,5 +34,4 @@ class AutomaticLocationUpdatesUserInfo {
    */
   department?: string;
 }
-
 export default AutomaticLocationUpdatesUserInfo;

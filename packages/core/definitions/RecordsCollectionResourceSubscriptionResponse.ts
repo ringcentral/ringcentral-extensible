@@ -10,5 +10,4 @@ class RecordsCollectionResourceSubscriptionResponse {
    */
   records?: SubscriptionInfo[];
 }
-
 export default RecordsCollectionResourceSubscriptionResponse;

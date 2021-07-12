@@ -13,14 +13,12 @@ class Index {
     this.rc = parent.rc;
     this.archiveId = archiveId;
   }
-
   path(withParameter = true): string {
     if (withParameter && this.archiveId !== null) {
       return `${this.parent.path()}/archive/${this.archiveId}`;
     }
     return `${this.parent.path()}/archive`;
   }
-
   /**
    * Returns the created report with message data not including attachments.
    * HTTP Method: get
@@ -52,7 +50,6 @@ class Index {
     if (this.archiveId === null) {
       throw new Error('archiveId must be specified.');
     }
-
     const r = await this.rc.get<Buffer>(this.path(), undefined, {
       ...restRequestConfig,
       responseType: 'arraybuffer',
@@ -60,5 +57,4 @@ class Index {
     return r.data;
   }
 }
-
 export default Index;

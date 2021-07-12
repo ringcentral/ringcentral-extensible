@@ -16,5 +16,4 @@ class MeetingInfo {
    */
   startTime?: string;
 }
-
 export default MeetingInfo;

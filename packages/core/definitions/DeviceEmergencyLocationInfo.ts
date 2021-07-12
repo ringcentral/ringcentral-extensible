@@ -10,5 +10,4 @@ class DeviceEmergencyLocationInfo {
    */
   name?: string;
 }
-
 export default DeviceEmergencyLocationInfo;

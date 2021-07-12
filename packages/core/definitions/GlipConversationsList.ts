@@ -11,5 +11,4 @@ class GlipConversationsList {
    */
   navigation?: GlipNavigationInfo;
 }
-
 export default GlipConversationsList;

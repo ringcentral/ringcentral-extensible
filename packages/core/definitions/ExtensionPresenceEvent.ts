@@ -25,5 +25,4 @@ class ExtensionPresenceEvent {
    */
   body?: ExtensionPresenceEventBody;
 }
-
 export default ExtensionPresenceEvent;

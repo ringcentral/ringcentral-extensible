@@ -16,5 +16,4 @@ class AccountOperatorInfo {
    */
   extensionNumber?: string;
 }
-
 export default AccountOperatorInfo;

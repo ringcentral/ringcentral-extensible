@@ -75,5 +75,4 @@ class ActiveCallInfoWithoutSIP {
    */
   callInfo?: CallInfoCQ;
 }
-
 export default ActiveCallInfoWithoutSIP;

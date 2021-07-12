@@ -65,5 +65,4 @@ class UserResponse {
    */
   meta?: Meta;
 }
-
 export default UserResponse;

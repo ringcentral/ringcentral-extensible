@@ -14,11 +14,9 @@ class Index {
     this.parent = parent;
     this.rc = parent.rc;
   }
-
   path(): string {
     return `${this.parent.path()}/switches-bulk-validate`;
   }
-
   /**
    * Validates switches before creation or update. The maximum number of switches per request is 10 000.
    * HTTP Method: post
@@ -40,5 +38,4 @@ class Index {
     return r.data;
   }
 }
-
 export default Index;

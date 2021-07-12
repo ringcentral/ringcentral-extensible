@@ -25,5 +25,4 @@ class GetStateInfoResponse {
    */
   name?: string;
 }
-
 export default GetStateInfoResponse;

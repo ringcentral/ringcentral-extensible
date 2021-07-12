@@ -20,14 +20,12 @@ class Index {
     this.rc = parent.rc;
     this.noteId = noteId;
   }
-
   path(withParameter = true): string {
     if (withParameter && this.noteId !== null) {
       return `${this.parent.path()}/notes/${this.noteId}`;
     }
     return `${this.parent.path()}/notes`;
   }
-
   /**
    * Returns the specified note(s). It is possible to fetch up to 50 notes per request.
    * HTTP Method: get
@@ -40,7 +38,6 @@ class Index {
     if (this.noteId === null) {
       throw new Error('noteId must be specified.');
     }
-
     const r = await this.rc.get<GetGlipNoteInfo>(
       this.path(),
       undefined,
@@ -61,7 +58,6 @@ class Index {
     if (this.noteId === null) {
       throw new Error('noteId must be specified.');
     }
-
     const r = await this.rc.delete<string>(
       this.path(),
       undefined,
@@ -85,7 +81,6 @@ class Index {
     if (this.noteId === null) {
       throw new Error('noteId must be specified.');
     }
-
     const r = await this.rc.patch<GlipNoteInfo>(
       this.path(),
       glipNoteCreate,
@@ -107,5 +102,4 @@ class Index {
     return new Publish(this);
   }
 }
-
 export default Index;

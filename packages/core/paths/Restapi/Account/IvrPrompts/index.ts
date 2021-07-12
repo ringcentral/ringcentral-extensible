@@ -20,14 +20,12 @@ class Index {
     this.rc = parent.rc;
     this.promptId = promptId;
   }
-
   path(withParameter = true): string {
     if (withParameter && this.promptId !== null) {
       return `${this.parent.path()}/ivr-prompts/${this.promptId}`;
     }
     return `${this.parent.path()}/ivr-prompts`;
   }
-
   /**
    * Returns the list of IVR prompts.
    * HTTP Method: get
@@ -79,7 +77,6 @@ class Index {
     if (this.promptId === null) {
       throw new Error('promptId must be specified.');
     }
-
     const r = await this.rc.get<PromptInfo>(
       this.path(),
       undefined,
@@ -103,7 +100,6 @@ class Index {
     if (this.promptId === null) {
       throw new Error('promptId must be specified.');
     }
-
     const r = await this.rc.put<PromptInfo>(
       this.path(),
       updateIVRPromptRequest,
@@ -125,7 +121,6 @@ class Index {
     if (this.promptId === null) {
       throw new Error('promptId must be specified.');
     }
-
     const r = await this.rc.delete<string>(
       this.path(),
       undefined,
@@ -138,5 +133,4 @@ class Index {
     return new Content(this);
   }
 }
-
 export default Index;

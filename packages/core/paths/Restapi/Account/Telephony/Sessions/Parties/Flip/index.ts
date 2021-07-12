@@ -11,11 +11,9 @@ class Index {
     this.parent = parent;
     this.rc = parent.rc;
   }
-
   path(): string {
     return `${this.parent.path()}/flip`;
   }
-
   /**
    * Performs call flip procedure by holding opposite party and calling to the specified target
    * HTTP Method: post
@@ -36,5 +34,4 @@ class Index {
     return r.data;
   }
 }
-
 export default Index;

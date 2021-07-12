@@ -20,5 +20,4 @@ class DeviceProvisioningExtensionInfo {
    */
   partnerId?: string;
 }
-
 export default DeviceProvisioningExtensionInfo;

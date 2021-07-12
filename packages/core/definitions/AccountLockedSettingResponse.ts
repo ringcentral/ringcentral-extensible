@@ -17,5 +17,4 @@ class AccountLockedSettingResponse {
    */
   telephony?: TelephonyLockedSettings;
 }
-
 export default AccountLockedSettingResponse;

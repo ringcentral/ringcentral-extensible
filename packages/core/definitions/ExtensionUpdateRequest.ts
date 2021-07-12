@@ -105,5 +105,4 @@ class ExtensionUpdateRequest {
    */
   references?: ReferenceInfo[];
 }
-
 export default ExtensionUpdateRequest;

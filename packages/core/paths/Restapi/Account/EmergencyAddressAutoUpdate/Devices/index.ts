@@ -15,11 +15,9 @@ class Index {
     this.parent = parent;
     this.rc = parent.rc;
   }
-
   path(): string {
     return `${this.parent.path()}/devices`;
   }
-
   /**
    * Returns the list of common devices with their status of Automatic Location Updates feature.
    * HTTP Method: get
@@ -44,5 +42,4 @@ class Index {
     return new BulkAssign(this);
   }
 }
-
 export default Index;

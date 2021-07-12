@@ -82,5 +82,4 @@ class CreateAnsweringRuleRequest {
    */
   screening?: 'Off' | 'NoCallerId' | 'UnknownCallerId' | 'Always';
 }
-
 export default CreateAnsweringRuleRequest;

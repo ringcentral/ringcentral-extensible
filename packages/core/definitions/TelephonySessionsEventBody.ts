@@ -36,5 +36,4 @@ class TelephonySessionsEventBody {
    */
   parties?: TelephonySessionsEventPartyInfo[];
 }
-
 export default TelephonySessionsEventBody;

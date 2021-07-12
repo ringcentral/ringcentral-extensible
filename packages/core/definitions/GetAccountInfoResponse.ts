@@ -84,5 +84,4 @@ class GetAccountInfoResponse {
    */
   limits?: AccountLimits;
 }
-
 export default GetAccountInfoResponse;

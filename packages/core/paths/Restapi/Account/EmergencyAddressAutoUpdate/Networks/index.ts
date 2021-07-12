@@ -18,14 +18,12 @@ class Index {
     this.rc = parent.rc;
     this.networkId = networkId;
   }
-
   path(withParameter = true): string {
     if (withParameter && this.networkId !== null) {
       return `${this.parent.path()}/networks/${this.networkId}`;
     }
     return `${this.parent.path()}/networks`;
   }
-
   /**
    * Returns corporate networks map with emergency addresses assigned to the current account.
    * HTTP Method: get
@@ -76,7 +74,6 @@ class Index {
     if (this.networkId === null) {
       throw new Error('networkId must be specified.');
     }
-
     const r = await this.rc.get<NetworkInfo>(
       this.path(),
       undefined,
@@ -100,7 +97,6 @@ class Index {
     if (this.networkId === null) {
       throw new Error('networkId must be specified.');
     }
-
     const r = await this.rc.put<string>(
       this.path(),
       updateNetworkRequest,
@@ -122,7 +118,6 @@ class Index {
     if (this.networkId === null) {
       throw new Error('networkId must be specified.');
     }
-
     const r = await this.rc.delete<string>(
       this.path(),
       undefined,
@@ -131,5 +126,4 @@ class Index {
     return r.data;
   }
 }
-
 export default Index;

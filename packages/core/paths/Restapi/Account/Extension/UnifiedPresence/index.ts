@@ -14,11 +14,9 @@ class Index {
     this.parent = parent;
     this.rc = parent.rc;
   }
-
   path(): string {
     return `${this.parent.path()}/unified-presence`;
   }
-
   /**
    * Returns the unified presence status of the requested user(s). The set of parameters returned by this method differs whether you return the requester's presence or any other user presence.
    * HTTP Method: get
@@ -57,5 +55,4 @@ class Index {
     return r.data;
   }
 }
-
 export default Index;

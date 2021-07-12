@@ -14,5 +14,4 @@ class ExtensionStatusInfo {
     | 'SuspendedVoluntarily'
     | 'SuspendedVoluntarily2';
 }
-
 export default ExtensionStatusInfo;

@@ -31,5 +31,4 @@ class IVRMenuActionsInfo {
    */
   phoneNumber?: string;
 }
-
 export default IVRMenuActionsInfo;

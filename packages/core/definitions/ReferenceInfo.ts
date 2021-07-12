@@ -9,5 +9,4 @@ class ReferenceInfo {
    */
   type?: 'PartnerId' | 'CustomerDirectoryId';
 }
-
 export default ReferenceInfo;

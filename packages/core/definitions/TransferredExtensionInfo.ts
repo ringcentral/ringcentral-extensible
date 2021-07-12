@@ -6,5 +6,4 @@ class TransferredExtensionInfo {
    */
   extension?: CallHandlingExtensionInfo;
 }
-
 export default TransferredExtensionInfo;

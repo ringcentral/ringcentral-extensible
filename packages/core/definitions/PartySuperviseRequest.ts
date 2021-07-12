@@ -26,5 +26,4 @@ class PartySuperviseRequest {
    */
   autoAnswer?: boolean;
 }
-
 export default PartySuperviseRequest;

@@ -14,5 +14,4 @@ class CallerIdPhoneInfo {
    */
   phoneNumber?: string;
 }
-
 export default CallerIdPhoneInfo;

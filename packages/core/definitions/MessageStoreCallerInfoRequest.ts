@@ -5,5 +5,4 @@ class MessageStoreCallerInfoRequest {
    */
   phoneNumber?: string;
 }
-
 export default MessageStoreCallerInfoRequest;

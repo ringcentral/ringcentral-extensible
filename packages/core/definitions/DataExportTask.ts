@@ -39,5 +39,4 @@ class DataExportTask {
    */
   datasets?: ExportTaskResultInfo[];
 }
-
 export default DataExportTask;

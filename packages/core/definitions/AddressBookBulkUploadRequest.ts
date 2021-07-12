@@ -7,5 +7,4 @@ class AddressBookBulkUploadRequest {
    */
   records?: AddressBookBulkUploadResource[];
 }
-
 export default AddressBookBulkUploadRequest;

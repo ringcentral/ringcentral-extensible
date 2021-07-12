@@ -23,5 +23,4 @@ class AccountPresenceInfo {
    */
   paging?: PresencePagingInfo;
 }
-
 export default AccountPresenceInfo;

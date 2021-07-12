@@ -6,5 +6,4 @@ class MessageStoreConfiguration {
    */
   retentionPeriod?: number;
 }
-
 export default MessageStoreConfiguration;

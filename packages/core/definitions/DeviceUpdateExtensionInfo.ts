@@ -5,5 +5,4 @@ class DeviceUpdateExtensionInfo {
    */
   id?: string;
 }
-
 export default DeviceUpdateExtensionInfo;

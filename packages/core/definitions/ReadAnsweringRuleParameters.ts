@@ -5,5 +5,4 @@ class ReadAnsweringRuleParameters {
    */
   showInactiveNumbers?: boolean;
 }
-
 export default ReadAnsweringRuleParameters;

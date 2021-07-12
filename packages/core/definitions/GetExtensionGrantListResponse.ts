@@ -26,5 +26,4 @@ class GetExtensionGrantListResponse {
    */
   paging?: ProvisioningPagingInfo;
 }
-
 export default GetExtensionGrantListResponse;

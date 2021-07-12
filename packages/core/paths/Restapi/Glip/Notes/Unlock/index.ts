@@ -10,11 +10,9 @@ class Index {
     this.parent = parent;
     this.rc = parent.rc;
   }
-
   path(): string {
     return `${this.parent.path()}/unlock`;
   }
-
   /**
    * Unlocks a note letting other users edit this note. Once the note is locked (by another user) it cannot be unlocked during 5 hours since the lock datetime.
    * HTTP Method: post
@@ -32,5 +30,4 @@ class Index {
     return r.data;
   }
 }
-
 export default Index;

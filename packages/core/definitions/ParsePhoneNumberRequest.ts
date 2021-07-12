@@ -4,5 +4,4 @@ class ParsePhoneNumberRequest {
    */
   originalStrings?: string[];
 }
-
 export default ParsePhoneNumberRequest;

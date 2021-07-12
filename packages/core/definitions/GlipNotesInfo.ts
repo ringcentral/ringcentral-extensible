@@ -9,5 +9,4 @@ class GlipNotesInfo {
    */
   navigation?: GlipNavigationInfo;
 }
-
 export default GlipNotesInfo;

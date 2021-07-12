@@ -84,5 +84,4 @@ class ExtensionCreationRequest {
    */
   hidden?: boolean;
 }
-
 export default ExtensionCreationRequest;

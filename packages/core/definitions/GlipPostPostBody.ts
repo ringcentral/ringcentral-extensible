@@ -12,5 +12,4 @@ class GlipPostPostBody {
    */
   attachments?: GlipAttachmentInfoRequest[];
 }
-
 export default GlipPostPostBody;

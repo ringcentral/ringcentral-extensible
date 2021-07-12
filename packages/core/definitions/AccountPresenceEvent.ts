@@ -25,5 +25,4 @@ class AccountPresenceEvent {
    */
   body?: AccountPresenceEventBody;
 }
-
 export default AccountPresenceEvent;

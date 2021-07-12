@@ -10,5 +10,4 @@ class CreateSipRegistrationRequest {
    */
   sipInfo?: SIPInfoRequest[];
 }
-
 export default CreateSipRegistrationRequest;

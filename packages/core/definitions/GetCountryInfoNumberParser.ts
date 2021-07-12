@@ -30,5 +30,4 @@ class GetCountryInfoNumberParser {
    */
   name?: string;
 }
-
 export default GetCountryInfoNumberParser;

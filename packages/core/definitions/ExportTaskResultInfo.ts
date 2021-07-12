@@ -14,5 +14,4 @@ class ExportTaskResultInfo {
    */
   size?: number;
 }
-
 export default ExportTaskResultInfo;

@@ -90,5 +90,4 @@ class AuthorizeRequest {
    */
   discovery?: boolean;
 }
-
 export default AuthorizeRequest;

@@ -19,5 +19,4 @@ class FeatureInfo {
    */
   reason?: ReasonInfo;
 }
-
 export default FeatureInfo;

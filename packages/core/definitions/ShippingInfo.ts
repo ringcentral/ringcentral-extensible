@@ -25,5 +25,4 @@ class ShippingInfo {
    */
   address?: ShippingAddressInfo;
 }
-
 export default ShippingInfo;

@@ -11,5 +11,4 @@ class GlipTeamsList {
    */
   navigation?: GlipNavigationInfo;
 }
-
 export default GlipTeamsList;

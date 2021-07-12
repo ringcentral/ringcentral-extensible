@@ -19,5 +19,4 @@ class CallQueueInfo {
    */
   name?: string;
 }
-
 export default CallQueueInfo;

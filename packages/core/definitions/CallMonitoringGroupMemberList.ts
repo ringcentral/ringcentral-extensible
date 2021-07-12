@@ -27,5 +27,4 @@ class CallMonitoringGroupMemberList {
    */
   paging?: ProvisioningPagingInfo;
 }
-
 export default CallMonitoringGroupMemberList;

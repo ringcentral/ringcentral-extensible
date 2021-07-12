@@ -16,5 +16,4 @@ class DeviceTimezoneResource {
    */
   description?: string;
 }
-
 export default DeviceTimezoneResource;

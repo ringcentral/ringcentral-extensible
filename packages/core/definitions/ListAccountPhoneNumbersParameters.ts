@@ -27,7 +27,6 @@ class ListAccountPhoneNumbersParameters {
     | 'ConferencingNumber'
     | 'MeetingsNumber'
     | 'BusinessMobileNumber'
-    | 'ExternalMobileNumber'
   )[];
 
   /**
@@ -35,5 +34,4 @@ class ListAccountPhoneNumbersParameters {
    */
   status?: 'Normal' | 'Pending' | 'PortedIn' | 'Temporary';
 }
-
 export default ListAccountPhoneNumbersParameters;

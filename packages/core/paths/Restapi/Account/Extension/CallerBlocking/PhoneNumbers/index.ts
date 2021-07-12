@@ -18,14 +18,12 @@ class Index {
     this.rc = parent.rc;
     this.blockedNumberId = blockedNumberId;
   }
-
   path(withParameter = true): string {
     if (withParameter && this.blockedNumberId !== null) {
       return `${this.parent.path()}/phone-numbers/${this.blockedNumberId}`;
     }
     return `${this.parent.path()}/phone-numbers`;
   }
-
   /**
    * Returns the lists of blocked and allowed phone numbers.
    * HTTP Method: get
@@ -81,7 +79,6 @@ class Index {
     if (this.blockedNumberId === null) {
       throw new Error('blockedNumberId must be specified.');
     }
-
     const r = await this.rc.get<BlockedAllowedPhoneNumberInfo>(
       this.path(),
       undefined,
@@ -105,7 +102,6 @@ class Index {
     if (this.blockedNumberId === null) {
       throw new Error('blockedNumberId must be specified.');
     }
-
     const r = await this.rc.put<BlockedAllowedPhoneNumberInfo>(
       this.path(),
       addBlockedAllowedPhoneNumber,
@@ -127,7 +123,6 @@ class Index {
     if (this.blockedNumberId === null) {
       throw new Error('blockedNumberId must be specified.');
     }
-
     const r = await this.rc.delete<string>(
       this.path(),
       undefined,
@@ -136,5 +131,4 @@ class Index {
     return r.data;
   }
 }
-
 export default Index;

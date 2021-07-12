@@ -56,5 +56,4 @@ class PhoneNumberResource {
    */
   type?: 'VoiceFax' | 'FaxOnly' | 'VoiceOnly';
 }
-
 export default PhoneNumberResource;

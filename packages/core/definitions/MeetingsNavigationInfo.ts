@@ -17,5 +17,4 @@ class MeetingsNavigationInfo {
    */
   lastPage?: MeetingsNavigationInfoUri;
 }
-
 export default MeetingsNavigationInfo;

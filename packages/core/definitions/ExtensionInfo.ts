@@ -25,5 +25,4 @@ class ExtensionInfo {
    */
   partnerId?: string;
 }
-
 export default ExtensionInfo;

@@ -17,5 +17,4 @@ class AdditionalCQInfo {
    */
   value?: string;
 }
-
 export default AdditionalCQInfo;

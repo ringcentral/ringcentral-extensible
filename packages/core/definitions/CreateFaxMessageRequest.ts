@@ -25,7 +25,7 @@ class CreateFaxMessageRequest {
   isoCode?: string;
 
   /**
-   * Cover page identifier. For the list of available cover page identifiers please call the method Fax Cover Pages. If not specified, the default cover page which is configured in 'Outbound Fax Settings' is attached
+   * Cover page identifier. If coverIndex is set to '0' (zero) cover page is not attached. For the list of available cover page identifiers (1-13) please call the Fax Cover Pages method. If not specified, the default cover page is attached (which is configured in 'Outbound Fax Settings')
    * Format: int32
    */
   coverIndex?: number;
@@ -42,5 +42,4 @@ class CreateFaxMessageRequest {
    */
   attachments?: Attachment[];
 }
-
 export default CreateFaxMessageRequest;

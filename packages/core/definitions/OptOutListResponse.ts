@@ -11,5 +11,4 @@ class OptOutListResponse {
    */
   paging?: PagingResource;
 }
-
 export default OptOutListResponse;

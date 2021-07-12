@@ -5,5 +5,4 @@ class CompanyAnsweringRuleExtensionInfoRequest {
    */
   id?: string;
 }
-
 export default CompanyAnsweringRuleExtensionInfoRequest;

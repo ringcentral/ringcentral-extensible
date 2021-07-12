@@ -25,5 +25,4 @@ class SuperviseCallSessionRequest {
    */
   autoAnswer?: boolean;
 }
-
 export default SuperviseCallSessionRequest;

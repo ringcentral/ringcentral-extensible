@@ -26,5 +26,4 @@ class GetExtensionPhoneNumbersResponse {
    */
   paging?: ProvisioningPagingInfo;
 }
-
 export default GetExtensionPhoneNumbersResponse;

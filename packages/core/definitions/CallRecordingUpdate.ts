@@ -4,5 +4,4 @@ class CallRecordingUpdate {
    */
   active?: boolean;
 }
-
 export default CallRecordingUpdate;

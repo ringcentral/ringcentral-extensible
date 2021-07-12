@@ -15,5 +15,4 @@ class PronouncedNameInfo {
    */
   prompt?: PronouncedNamePromptInfo;
 }
-
 export default PronouncedNameInfo;

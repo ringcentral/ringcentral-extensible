@@ -34,5 +34,4 @@ class AutomaticLocationUpdatesTaskInfo {
    */
   result?: TaskResultInfo;
 }
-
 export default AutomaticLocationUpdatesTaskInfo;

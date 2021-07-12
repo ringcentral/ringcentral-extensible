@@ -36,5 +36,4 @@ class ExtensionBulkUpdateTaskResource {
    */
   result?: ExtensionBulkUpdateTaskResult;
 }
-
 export default ExtensionBulkUpdateTaskResource;

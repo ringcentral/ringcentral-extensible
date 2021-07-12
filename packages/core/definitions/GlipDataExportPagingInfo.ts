@@ -29,5 +29,4 @@ class GlipDataExportPagingInfo {
    */
   totalElements?: number;
 }
-
 export default GlipDataExportPagingInfo;

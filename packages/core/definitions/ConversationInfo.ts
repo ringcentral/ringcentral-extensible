@@ -10,5 +10,4 @@ class ConversationInfo {
    */
   uri?: string;
 }
-
 export default ConversationInfo;

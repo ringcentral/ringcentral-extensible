@@ -41,5 +41,4 @@ class GetConferencingInfoResponse {
    */
   phoneNumbers?: PhoneNumberInfoConferencing[];
 }
-
 export default GetConferencingInfoResponse;

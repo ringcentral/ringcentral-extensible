@@ -23,5 +23,4 @@ class DeviceModelInfo {
    */
   features?: ('BLA' | 'Intercom' | 'Paging' | 'HELD')[];
 }
-
 export default DeviceModelInfo;

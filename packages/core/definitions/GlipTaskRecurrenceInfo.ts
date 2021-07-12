@@ -22,5 +22,4 @@ class GlipTaskRecurrenceInfo {
    */
   endingOn?: string;
 }
-
 export default GlipTaskRecurrenceInfo;

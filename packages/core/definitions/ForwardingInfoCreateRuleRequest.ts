@@ -32,5 +32,4 @@ class ForwardingInfoCreateRuleRequest {
    */
   mobileTimeout?: boolean;
 }
-
 export default ForwardingInfoCreateRuleRequest;

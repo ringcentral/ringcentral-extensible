@@ -53,5 +53,4 @@ class GetServiceInfoResponse {
    */
   package?: PackageInfo;
 }
-
 export default GetServiceInfoResponse;

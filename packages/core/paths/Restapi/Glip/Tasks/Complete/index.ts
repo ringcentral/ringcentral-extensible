@@ -11,11 +11,9 @@ class Index {
     this.parent = parent;
     this.rc = parent.rc;
   }
-
   path(): string {
     return `${this.parent.path()}/complete`;
   }
-
   /**
    * Completes a task in the specified chat.
    * HTTP Method: post
@@ -35,5 +33,4 @@ class Index {
     return r.data;
   }
 }
-
 export default Index;

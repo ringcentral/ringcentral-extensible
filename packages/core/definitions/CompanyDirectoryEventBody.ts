@@ -71,5 +71,4 @@ class CompanyDirectoryEventBody {
    */
   profileImage?: CompanyDirectoryProfileImageInfo;
 }
-
 export default CompanyDirectoryEventBody;

@@ -20,5 +20,4 @@ class SwitchValidated {
    */
   errors?: ValidationError[];
 }
-
 export default SwitchValidated;

@@ -10,11 +10,9 @@ class Index {
     this.parent = parent;
     this.rc = parent.rc;
   }
-
   path(): string {
     return `${this.parent.path()}/reject`;
   }
-
   /**
    * Rejects an inbound call in a "Setup" or "Proceeding" state
    * HTTP Method: post
@@ -31,5 +29,4 @@ class Index {
     return r.data;
   }
 }
-
 export default Index;

@@ -23,5 +23,4 @@ class AccountBusinessAddressResource {
    */
   mainSiteName?: string;
 }
-
 export default AccountBusinessAddressResource;

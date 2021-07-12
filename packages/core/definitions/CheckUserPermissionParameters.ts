@@ -8,5 +8,4 @@ class CheckUserPermissionParameters {
    */
   targetExtensionId?: string;
 }
-
 export default CheckUserPermissionParameters;

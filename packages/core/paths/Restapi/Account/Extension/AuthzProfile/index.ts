@@ -12,11 +12,9 @@ class Index {
     this.parent = parent;
     this.rc = parent.rc;
   }
-
   path(): string {
     return `${this.parent.path()}/authz-profile`;
   }
-
   /**
    * Returns a list of user permissions granted at authorization procedure. Please note: Some permissions may be restricted by extension type.
    * HTTP Method: get
@@ -38,5 +36,4 @@ class Index {
     return new Check(this);
   }
 }
-
 export default Index;

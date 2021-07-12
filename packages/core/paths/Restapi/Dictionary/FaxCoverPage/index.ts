@@ -14,11 +14,9 @@ class Index {
     this.parent = parent;
     this.rc = parent.rc;
   }
-
   path(): string {
     return `${this.parent.path()}/fax-cover-page`;
   }
-
   /**
    * Returns fax cover pages available for the current extension.
    * HTTP Method: get
@@ -37,5 +35,4 @@ class Index {
     return r.data;
   }
 }
-
 export default Index;

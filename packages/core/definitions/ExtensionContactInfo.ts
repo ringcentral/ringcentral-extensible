@@ -30,5 +30,4 @@ class ExtensionContactInfo {
    */
   businessAddress?: ContactAddressInfoDevices;
 }
-
 export default ExtensionContactInfo;

@@ -88,5 +88,4 @@ class FaxMessageEventBody {
    */
   faxPageCount?: number;
 }
-
 export default FaxMessageEventBody;

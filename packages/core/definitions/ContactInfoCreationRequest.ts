@@ -54,5 +54,4 @@ class ContactInfoCreationRequest {
    */
   department?: string;
 }
-
 export default ContactInfoCreationRequest;

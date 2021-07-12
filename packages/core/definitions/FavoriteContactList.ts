@@ -9,5 +9,4 @@ class FavoriteContactList {
    */
   records?: FavoriteContactResource[];
 }
-
 export default FavoriteContactList;

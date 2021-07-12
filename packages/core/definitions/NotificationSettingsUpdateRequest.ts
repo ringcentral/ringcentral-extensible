@@ -47,5 +47,4 @@ class NotificationSettingsUpdateRequest {
    */
   includeManagers?: boolean;
 }
-
 export default NotificationSettingsUpdateRequest;

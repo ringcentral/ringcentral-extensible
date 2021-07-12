@@ -10,7 +10,6 @@ class Index {
     this.rc = rc;
     this.version = version;
   }
-
   path(withParameter = true): string {
     if (withParameter && this.version !== null) {
       return `/scim/${this.version}`;
@@ -26,5 +25,4 @@ class Index {
     return new ServiceProviderConfig(this);
   }
 }
-
 export default Index;

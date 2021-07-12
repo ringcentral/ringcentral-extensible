@@ -30,5 +30,4 @@ class CallQueueDetails {
    */
   editableMemberStatus?: boolean;
 }
-
 export default CallQueueDetails;

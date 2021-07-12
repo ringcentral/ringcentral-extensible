@@ -10,5 +10,4 @@ class IVRMenuSiteInfo {
    */
   name?: string;
 }
-
 export default IVRMenuSiteInfo;

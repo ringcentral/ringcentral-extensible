@@ -48,5 +48,4 @@ class ForwardingNumberInfo {
     | 'BusinessMobilePhone'
     | 'ExternalCarrier';
 }
-
 export default ForwardingNumberInfo;

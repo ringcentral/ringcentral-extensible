@@ -21,5 +21,4 @@ class CallSessionStatusInfo {
    */
   mobilePickupData?: MobilePickupData;
 }
-
 export default CallSessionStatusInfo;

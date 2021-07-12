@@ -5,5 +5,4 @@ class UpdateContactParameters {
    */
   dialingPlan?: string;
 }
-
 export default UpdateContactParameters;

@@ -19,5 +19,4 @@ class PhoneLinesInfo {
    */
   emergencyAddress?: EmergencyAddress;
 }
-
 export default PhoneLinesInfo;

@@ -21,5 +21,4 @@ class ListFaxCoverPagesResponse {
    */
   paging?: MessagingPagingInfo;
 }
-
 export default ListFaxCoverPagesResponse;

@@ -106,5 +106,4 @@ class MeetingResponseResource {
    */
   globalDialInCountries?: string[];
 }
-
 export default MeetingResponseResource;

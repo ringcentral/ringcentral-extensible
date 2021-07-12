@@ -10,5 +10,4 @@ class ExtensionGrantListEventBody {
    */
   ownerId?: string;
 }
-
 export default ExtensionGrantListEventBody;

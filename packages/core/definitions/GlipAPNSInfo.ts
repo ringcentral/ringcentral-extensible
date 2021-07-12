@@ -31,5 +31,4 @@ class GlipAPNSInfo {
    */
   body?: GlipUnreadMessageCountInfo;
 }
-
 export default GlipAPNSInfo;

@@ -10,5 +10,4 @@ class UserTransitionInfo {
    */
   sendWelcomeEmail?: boolean;
 }
-
 export default UserTransitionInfo;

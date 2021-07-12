@@ -9,5 +9,4 @@ class DirectoryResource {
    */
   records?: ContactResource[];
 }
-
 export default DirectoryResource;

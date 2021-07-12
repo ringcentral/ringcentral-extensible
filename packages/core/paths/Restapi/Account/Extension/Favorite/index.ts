@@ -14,11 +14,9 @@ class Index {
     this.parent = parent;
     this.rc = parent.rc;
   }
-
   path(): string {
     return `${this.parent.path()}/favorite`;
   }
-
   /**
    * Returns the list of favorite contacts of the current extension. Favorite contacts include both company contacts (extensions) and personal contacts (address book records).
    * HTTP Method: get
@@ -59,5 +57,4 @@ class Index {
     return r.data;
   }
 }
-
 export default Index;

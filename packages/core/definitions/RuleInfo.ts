@@ -21,5 +21,4 @@ class RuleInfo {
    */
   forwardingNumbers?: CreateAnsweringRuleForwardingNumberInfo[];
 }
-
 export default RuleInfo;

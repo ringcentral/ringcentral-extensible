@@ -77,5 +77,4 @@ class DetailedExtensionPresenceEventBody {
    */
   ownerId?: string;
 }
-
 export default DetailedExtensionPresenceEventBody;

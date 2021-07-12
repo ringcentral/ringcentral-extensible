@@ -9,5 +9,4 @@ class TaskAssigneeInfo {
    */
   status?: 'Pending' | 'Completed';
 }
-
 export default TaskAssigneeInfo;

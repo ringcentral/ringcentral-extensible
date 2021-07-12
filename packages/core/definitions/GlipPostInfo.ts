@@ -72,5 +72,4 @@ class GlipPostInfo {
    */
   iconEmoji?: string;
 }
-
 export default GlipPostInfo;

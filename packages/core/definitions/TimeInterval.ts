@@ -9,5 +9,4 @@ class TimeInterval {
    */
   to?: string;
 }
-
 export default TimeInterval;

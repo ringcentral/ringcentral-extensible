@@ -10,5 +10,4 @@ class SiteResource {
    */
   name?: string;
 }
-
 export default SiteResource;

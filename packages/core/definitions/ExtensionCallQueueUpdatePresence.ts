@@ -10,5 +10,4 @@ class ExtensionCallQueueUpdatePresence {
    */
   acceptCalls?: boolean;
 }
-
 export default ExtensionCallQueueUpdatePresence;

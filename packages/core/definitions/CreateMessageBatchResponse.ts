@@ -49,5 +49,4 @@ class CreateMessageBatchResponse {
    */
   rejected?: RejectedMessageInfo[];
 }
-
 export default CreateMessageBatchResponse;

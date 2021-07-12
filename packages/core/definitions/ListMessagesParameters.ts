@@ -59,5 +59,4 @@ class ListMessagesParameters {
    */
   phoneNumber?: string;
 }
-
 export default ListMessagesParameters;

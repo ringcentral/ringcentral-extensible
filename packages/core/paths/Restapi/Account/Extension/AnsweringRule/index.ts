@@ -21,14 +21,12 @@ class Index {
     this.rc = parent.rc;
     this.ruleId = ruleId;
   }
-
   path(withParameter = true): string {
     if (withParameter && this.ruleId !== null) {
       return `${this.parent.path()}/answering-rule/${this.ruleId}`;
     }
     return `${this.parent.path()}/answering-rule`;
   }
-
   /**
    * Returns call handling rules of an extension.
    * HTTP Method: get
@@ -85,7 +83,6 @@ class Index {
     if (this.ruleId === null) {
       throw new Error('ruleId must be specified.');
     }
-
     const r = await this.rc.get<AnsweringRuleInfo>(
       this.path(),
       queryParams,
@@ -109,7 +106,6 @@ class Index {
     if (this.ruleId === null) {
       throw new Error('ruleId must be specified.');
     }
-
     const r = await this.rc.put<AnsweringRuleInfo>(
       this.path(),
       updateAnsweringRuleRequest,
@@ -131,7 +127,6 @@ class Index {
     if (this.ruleId === null) {
       throw new Error('ruleId must be specified.');
     }
-
     const r = await this.rc.delete<string>(
       this.path(),
       undefined,
@@ -140,5 +135,4 @@ class Index {
     return r.data;
   }
 }
-
 export default Index;

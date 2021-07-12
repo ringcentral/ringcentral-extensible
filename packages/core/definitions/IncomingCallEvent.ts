@@ -102,5 +102,4 @@ class IncomingCallEvent {
    */
   ownerId?: string;
 }
-
 export default IncomingCallEvent;

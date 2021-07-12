@@ -9,5 +9,4 @@ class RecordingInfo {
    */
   active?: boolean;
 }
-
 export default RecordingInfo;

@@ -30,5 +30,4 @@ class LocationInfo {
    */
   state?: LocationStateInfo;
 }
-
 export default LocationInfo;

@@ -31,5 +31,4 @@ class GreetingInfo {
    */
   custom?: CustomGreetingInfoRequest;
 }
-
 export default GreetingInfo;

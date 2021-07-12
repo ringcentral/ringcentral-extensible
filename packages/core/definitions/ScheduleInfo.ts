@@ -16,5 +16,4 @@ class ScheduleInfo {
    */
   ref?: 'BusinessHours' | 'AfterHours';
 }
-
 export default ScheduleInfo;

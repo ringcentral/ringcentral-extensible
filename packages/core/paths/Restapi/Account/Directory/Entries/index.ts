@@ -18,14 +18,12 @@ class Index {
     this.rc = parent.rc;
     this.entryId = entryId;
   }
-
   path(withParameter = true): string {
     if (withParameter && this.entryId !== null) {
       return `${this.parent.path()}/entries/${this.entryId}`;
     }
     return `${this.parent.path()}/entries`;
   }
-
   /**
    * Returns contact information on corporate users of federated accounts. Please note: 1. `User`, `DigitalUser`, `VirtualUser` and `FaxUser` types are returned as `User` type. 2. `ApplicationExtension` type is not returned. 3. Only extensions in `Enabled`, `Disabled` and `NotActivated` state are returned.
    * HTTP Method: get
@@ -56,7 +54,6 @@ class Index {
     if (this.entryId === null) {
       throw new Error('entryId must be specified.');
     }
-
     const r = await this.rc.get<ContactResource>(
       this.path(),
       undefined,
@@ -69,5 +66,4 @@ class Index {
     return new Search(this);
   }
 }
-
 export default Index;

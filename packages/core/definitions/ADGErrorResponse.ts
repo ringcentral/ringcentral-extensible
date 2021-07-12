@@ -7,5 +7,4 @@ class ADGErrorResponse {
    */
   errors?: ADGError[];
 }
-
 export default ADGErrorResponse;

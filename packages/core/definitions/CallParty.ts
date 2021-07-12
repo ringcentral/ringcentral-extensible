@@ -68,5 +68,4 @@ class CallParty {
    */
   recordings?: RecordingInfo[];
 }
-
 export default CallParty;

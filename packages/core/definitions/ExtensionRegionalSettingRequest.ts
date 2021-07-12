@@ -33,5 +33,4 @@ class ExtensionRegionalSettingRequest {
    */
   timeFormat?: '12h' | '24h';
 }
-
 export default ExtensionRegionalSettingRequest;

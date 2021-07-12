@@ -37,5 +37,4 @@ class UpdateWirelessPoint {
    */
   emergencyLocation?: ERLLocationInfo;
 }
-
 export default UpdateWirelessPoint;

@@ -10,11 +10,9 @@ class Index {
     this.parent = parent;
     this.rc = parent.rc;
   }
-
   path(): string {
     return `${this.parent.path()}/lock`;
   }
-
   /**
    * Locks a note providing the user with the unique write access for 5 hours.
    * HTTP Method: post
@@ -32,5 +30,4 @@ class Index {
     return r.data;
   }
 }
-
 export default Index;

@@ -19,5 +19,4 @@ class GetVersionResponse {
    */
   uriString?: string;
 }
-
 export default GetVersionResponse;

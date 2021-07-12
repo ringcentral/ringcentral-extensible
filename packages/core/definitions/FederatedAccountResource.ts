@@ -26,5 +26,4 @@ class FederatedAccountResource {
    */
   mainNumber?: PhoneNumberResource;
 }
-
 export default FederatedAccountResource;

@@ -27,5 +27,4 @@ class CallQueueMembers {
    */
   paging?: ProvisioningPagingInfo;
 }
-
 export default CallQueueMembers;

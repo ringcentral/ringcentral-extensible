@@ -48,5 +48,4 @@ class GlipGroupsEvent {
    */
   eventType?: 'GroupRenamed' | 'GroupJoined' | 'GroupLeft' | 'GroupChanged';
 }
-
 export default GlipGroupsEvent;

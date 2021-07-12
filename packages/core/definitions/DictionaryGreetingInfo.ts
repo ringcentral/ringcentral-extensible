@@ -76,5 +76,4 @@ class DictionaryGreetingInfo {
    */
   paging?: CallHandlingPagingInfo;
 }
-
 export default DictionaryGreetingInfo;

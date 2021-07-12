@@ -14,11 +14,9 @@ class Index {
     this.parent = parent;
     this.rc = parent.rc;
   }
-
   path(): string {
     return `${this.parent.path()}/call-recording`;
   }
-
   /**
    * Returns call recording settings.
    * HTTP Method: get
@@ -71,5 +69,4 @@ class Index {
     return new CustomGreetings(this, greetingId);
   }
 }
-
 export default Index;

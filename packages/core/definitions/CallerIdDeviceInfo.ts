@@ -14,5 +14,4 @@ class CallerIdDeviceInfo {
    */
   name?: string;
 }
-
 export default CallerIdDeviceInfo;

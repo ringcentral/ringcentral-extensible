@@ -25,5 +25,4 @@ class BlockedAllowedPhoneNumberInfo {
    */
   status?: 'Blocked' | 'Allowed';
 }
-
 export default BlockedAllowedPhoneNumberInfo;

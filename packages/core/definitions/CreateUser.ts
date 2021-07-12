@@ -55,5 +55,4 @@ class CreateUser {
    */
   userName?: string;
 }
-
 export default CreateUser;

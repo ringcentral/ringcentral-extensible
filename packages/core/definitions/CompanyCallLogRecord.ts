@@ -221,6 +221,23 @@ class CompanyCallLogRecord {
    * Format: date-time
    */
   lastModifiedTime?: string;
-}
 
+  /**
+   * Internal type of a call
+   */
+  internalType?:
+    | 'Local'
+    | 'LongDistance'
+    | 'International'
+    | 'Sip'
+    | 'RingMe'
+    | 'RingOut'
+    | 'Usual'
+    | 'TollFreeNumber'
+    | 'VerificationNumber'
+    | 'Vma'
+    | 'LocalNumber'
+    | 'ImsOutgoing'
+    | 'ImsIncoming';
+}
 export default CompanyCallLogRecord;

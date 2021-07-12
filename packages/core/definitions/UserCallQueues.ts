@@ -6,5 +6,4 @@ class UserCallQueues {
    */
   records?: QueueShortInfoResource[];
 }
-
 export default UserCallQueues;

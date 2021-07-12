@@ -77,5 +77,4 @@ class GCMData {
    */
   srvLvlExt?: string;
 }
-
 export default GCMData;

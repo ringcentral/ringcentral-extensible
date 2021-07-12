@@ -16,5 +16,4 @@ class GetPresenceExtensionInfo {
    */
   extensionNumber?: string;
 }
-
 export default GetPresenceExtensionInfo;

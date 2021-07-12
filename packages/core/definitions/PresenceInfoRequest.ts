@@ -28,5 +28,4 @@ class PresenceInfoRequest {
    */
   pickUpCallsOnHold?: boolean;
 }
-
 export default PresenceInfoRequest;

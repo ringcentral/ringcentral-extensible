@@ -16,5 +16,4 @@ class DeleteMessageByFilterParameters {
    */
   type?: 'Fax' | 'SMS' | 'VoiceMail' | 'Pager' | 'Text' | 'All';
 }
-
 export default DeleteMessageByFilterParameters;

@@ -26,5 +26,4 @@ class NotificationInfo {
    */
   category?: string;
 }
-
 export default NotificationInfo;

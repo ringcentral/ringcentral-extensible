@@ -21,14 +21,12 @@ class Index {
     this.rc = parent.rc;
     this.id = id;
   }
-
   path(withParameter = true): string {
     if (withParameter && this.id !== null) {
       return `${this.parent.path()}/Users/${this.id}`;
     }
     return `${this.parent.path()}/Users`;
   }
-
   /**
    * Search/List Users
    * HTTP Method: get
@@ -79,7 +77,6 @@ class Index {
     if (this.id === null) {
       throw new Error('id must be specified.');
     }
-
     const r = await this.rc.get<UserResponse>(
       this.path(),
       undefined,
@@ -102,7 +99,6 @@ class Index {
     if (this.id === null) {
       throw new Error('id must be specified.');
     }
-
     const r = await this.rc.put<UserResponse>(
       this.path(),
       user,
@@ -123,7 +119,6 @@ class Index {
     if (this.id === null) {
       throw new Error('id must be specified.');
     }
-
     const r = await this.rc.delete<string>(
       this.path(),
       undefined,
@@ -146,7 +141,6 @@ class Index {
     if (this.id === null) {
       throw new Error('id must be specified.');
     }
-
     const r = await this.rc.patch<UserResponse>(
       this.path(),
       userPatch,
@@ -160,5 +154,4 @@ class Index {
     return new DotSearch(this);
   }
 }
-
 export default Index;

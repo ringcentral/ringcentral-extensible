@@ -19,14 +19,12 @@ class Index {
     this.rc = parent.rc;
     this.callRecordId = callRecordId;
   }
-
   path(withParameter = true): string {
     if (withParameter && this.callRecordId !== null) {
       return `${this.parent.path()}/call-log/${this.callRecordId}`;
     }
     return `${this.parent.path()}/call-log`;
   }
-
   /**
    * Returns call log records filtered by parameters specified.
    * HTTP Method: get
@@ -82,7 +80,6 @@ class Index {
     if (this.callRecordId === null) {
       throw new Error('callRecordId must be specified.');
     }
-
     const r = await this.rc.get<UserCallLogRecord>(
       this.path(),
       queryParams,
@@ -91,5 +88,4 @@ class Index {
     return r.data;
   }
 }
-
 export default Index;

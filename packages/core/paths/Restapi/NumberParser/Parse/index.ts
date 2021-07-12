@@ -15,11 +15,9 @@ class Index {
     this.parent = parent;
     this.rc = parent.rc;
   }
-
   path(): string {
     return `${this.parent.path()}/parse`;
   }
-
   /**
    * Returns one or more parsed and/or formatted phone numbers that are passed as a string.
    * HTTP Method: post
@@ -40,5 +38,4 @@ class Index {
     return r.data;
   }
 }
-
 export default Index;

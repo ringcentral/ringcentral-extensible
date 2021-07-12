@@ -10,5 +10,4 @@ class PartyUpdateInfo {
    */
   standAlone?: boolean;
 }
-
 export default PartyUpdateInfo;

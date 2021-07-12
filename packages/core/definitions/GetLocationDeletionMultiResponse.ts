@@ -13,5 +13,4 @@ class GetLocationDeletionMultiResponse {
    */
   emergencyLocations?: LocationDeletionInfo[];
 }
-
 export default GetLocationDeletionMultiResponse;

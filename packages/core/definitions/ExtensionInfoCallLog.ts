@@ -11,5 +11,4 @@ class ExtensionInfoCallLog {
    */
   uri?: string;
 }
-
 export default ExtensionInfoCallLog;

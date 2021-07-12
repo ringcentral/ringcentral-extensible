@@ -14,11 +14,9 @@ class Index {
     this.parent = parent;
     this.rc = parent.rc;
   }
-
   path(): string {
     return `${this.parent.path()}/sip-provision`;
   }
-
   /**
    * Creates SIP registration of a device/application (WebPhone, Mobile, softphone).
    * HTTP Method: post
@@ -39,5 +37,4 @@ class Index {
     return r.data;
   }
 }
-
 export default Index;

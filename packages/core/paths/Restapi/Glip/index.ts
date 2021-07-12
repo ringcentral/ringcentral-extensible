@@ -24,7 +24,6 @@ class Index {
     this.parent = parent;
     this.rc = parent.rc;
   }
-
   path(): string {
     return `${this.parent.path()}/glip`;
   }
@@ -89,5 +88,4 @@ class Index {
     return new Conversations(this, chatId);
   }
 }
-
 export default Index;

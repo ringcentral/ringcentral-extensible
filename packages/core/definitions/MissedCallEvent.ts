@@ -102,5 +102,4 @@ class MissedCallEvent {
    */
   ownerId?: string;
 }
-
 export default MissedCallEvent;

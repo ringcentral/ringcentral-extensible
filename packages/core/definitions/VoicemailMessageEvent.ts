@@ -30,5 +30,4 @@ class VoicemailMessageEvent {
    */
   body?: VoicemailMessageEventBody;
 }
-
 export default VoicemailMessageEvent;

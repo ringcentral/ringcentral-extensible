@@ -51,5 +51,4 @@ class ListExtensionsParameters {
     | 'DelegatedLinesGroup'
   )[];
 }
-
 export default ListExtensionsParameters;

@@ -11,11 +11,9 @@ class Index {
     this.parent = parent;
     this.rc = parent.rc;
   }
-
   path(): string {
     return `${this.parent.path()}/authorize`;
   }
-
   /**
    * Returns a link to a login page location.
    * HTTP Method: post
@@ -34,5 +32,4 @@ class Index {
     return r.data;
   }
 }
-
 export default Index;

@@ -10,5 +10,4 @@ class TransferInfo {
    */
   action?: 'HoldTimeExpiration' | 'MaxCallers' | 'NoAnswer';
 }
-
 export default TransferInfo;

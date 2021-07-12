@@ -22,5 +22,4 @@ class GlipPostTeamBody {
    */
   members?: CreateGlipMember[];
 }
-
 export default GlipPostTeamBody;

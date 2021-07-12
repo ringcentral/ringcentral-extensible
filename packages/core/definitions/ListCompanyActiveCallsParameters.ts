@@ -33,5 +33,4 @@ class ListCompanyActiveCallsParameters {
    */
   perPage?: number;
 }
-
 export default ListCompanyActiveCallsParameters;

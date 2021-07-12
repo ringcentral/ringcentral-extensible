@@ -17,5 +17,4 @@ class GetMessageSyncResponse {
    */
   syncInfo?: SyncInfoMessages;
 }
-
 export default GetMessageSyncResponse;

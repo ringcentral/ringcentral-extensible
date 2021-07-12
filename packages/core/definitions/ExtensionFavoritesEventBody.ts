@@ -10,5 +10,4 @@ class ExtensionFavoritesEventBody {
    */
   ownerId?: string;
 }
-
 export default ExtensionFavoritesEventBody;

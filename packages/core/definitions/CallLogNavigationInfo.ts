@@ -14,5 +14,4 @@ class CallLogNavigationInfo {
    */
   previousPage?: CallLogNavigationInfoURI;
 }
-
 export default CallLogNavigationInfo;

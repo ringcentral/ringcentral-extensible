@@ -23,5 +23,4 @@ class AccountPhoneNumbers {
    */
   paging?: ProvisioningPagingInfo;
 }
-
 export default AccountPhoneNumbers;

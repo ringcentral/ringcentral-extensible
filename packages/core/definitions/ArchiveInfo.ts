@@ -9,5 +9,4 @@ class ArchiveInfo {
    */
   uri?: string;
 }
-
 export default ArchiveInfo;

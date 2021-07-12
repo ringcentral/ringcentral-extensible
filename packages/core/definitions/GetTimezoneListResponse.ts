@@ -26,5 +26,4 @@ class GetTimezoneListResponse {
    */
   paging?: ProvisioningPagingInfo;
 }
-
 export default GetTimezoneListResponse;

@@ -20,5 +20,4 @@ class PartyInfo {
    */
   extensionId?: string;
 }
-
 export default PartyInfo;

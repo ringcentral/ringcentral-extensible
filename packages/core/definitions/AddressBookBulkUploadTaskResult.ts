@@ -20,5 +20,4 @@ class AddressBookBulkUploadTaskResult {
    */
   errors?: ErrorEntity[];
 }
-
 export default AddressBookBulkUploadTaskResult;

@@ -27,5 +27,4 @@ class GlipCompany {
    */
   lastModifiedTime?: string;
 }
-
 export default GlipCompany;

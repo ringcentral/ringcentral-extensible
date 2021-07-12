@@ -17,14 +17,12 @@ class Index {
     this.rc = parent.rc;
     this.recordingId = recordingId;
   }
-
   path(withParameter = true): string {
     if (withParameter && this.recordingId !== null) {
       return `${this.parent.path()}/recordings/${this.recordingId}`;
     }
     return `${this.parent.path()}/recordings`;
   }
-
   /**
    * Starts a new call recording for the party
    * HTTP Method: post
@@ -56,7 +54,6 @@ class Index {
     if (this.recordingId === null) {
       throw new Error('recordingId must be specified.');
     }
-
     const r = await this.rc.patch<CallRecording>(
       this.path(),
       callRecordingUpdate,
@@ -66,5 +63,4 @@ class Index {
     return r.data;
   }
 }
-
 export default Index;

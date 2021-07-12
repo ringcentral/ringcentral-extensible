@@ -10,5 +10,4 @@ class BlockedCallerGreetingInfo {
    */
   preset?: PresetInfo;
 }
-
 export default BlockedCallerGreetingInfo;

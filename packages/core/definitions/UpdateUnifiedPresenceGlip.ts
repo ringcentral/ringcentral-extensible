@@ -9,5 +9,4 @@ class UpdateUnifiedPresenceGlip {
    */
   availability?: 'Available' | 'DND';
 }
-
 export default UpdateUnifiedPresenceGlip;

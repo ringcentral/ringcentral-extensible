@@ -28,5 +28,4 @@ class ListLocationsParameters {
    */
   withNxx?: boolean;
 }
-
 export default ListLocationsParameters;

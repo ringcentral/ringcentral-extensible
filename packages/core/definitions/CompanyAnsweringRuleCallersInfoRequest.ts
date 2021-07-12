@@ -9,5 +9,4 @@ class CompanyAnsweringRuleCallersInfoRequest {
    */
   name?: string;
 }
-
 export default CompanyAnsweringRuleCallersInfoRequest;

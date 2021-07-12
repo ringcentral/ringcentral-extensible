@@ -26,5 +26,4 @@ class ListWirelessPointsParameters {
    */
   page?: number;
 }
-
 export default ListWirelessPointsParameters;

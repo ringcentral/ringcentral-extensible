@@ -4,5 +4,4 @@ class PublicMeetingInvitationResponse {
    */
   invitation?: string;
 }
-
 export default PublicMeetingInvitationResponse;

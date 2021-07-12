@@ -9,5 +9,4 @@ class QueueShortInfoResource {
    */
   name?: string;
 }
-
 export default QueueShortInfoResource;

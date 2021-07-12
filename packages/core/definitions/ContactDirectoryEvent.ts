@@ -72,5 +72,4 @@ class ContactDirectoryEvent {
    */
   ownerId?: string;
 }
-
 export default ContactDirectoryEvent;

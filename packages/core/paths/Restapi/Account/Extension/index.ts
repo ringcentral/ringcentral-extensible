@@ -58,14 +58,12 @@ class Index {
     this.rc = parent.rc;
     this.extensionId = extensionId;
   }
-
   path(withParameter = true): string {
     if (withParameter && this.extensionId !== null) {
       return `${this.parent.path()}/extension/${this.extensionId}`;
     }
     return `${this.parent.path()}/extension`;
   }
-
   /**
    * Returns the list of extensions created for a particular account. All types of extensions are included in this list.
    * HTTP Method: get
@@ -121,7 +119,6 @@ class Index {
     if (this.extensionId === null) {
       throw new Error('extensionId must be specified.');
     }
-
     const r = await this.rc.get<GetExtensionInfoResponse>(
       this.path(),
       undefined,
@@ -145,7 +142,6 @@ class Index {
     if (this.extensionId === null) {
       throw new Error('extensionId must be specified.');
     }
-
     const r = await this.rc.put<GetExtensionInfoResponse>(
       this.path(),
       extensionUpdateRequest,
@@ -170,7 +166,6 @@ class Index {
     if (this.extensionId === null) {
       throw new Error('extensionId must be specified.');
     }
-
     const r = await this.rc.delete<string>(
       this.path(),
       queryParams,
@@ -327,5 +322,4 @@ class Index {
     return new MeetingsConfiguration(this);
   }
 }
-
 export default Index;

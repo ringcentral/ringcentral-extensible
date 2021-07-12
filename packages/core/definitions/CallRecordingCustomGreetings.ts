@@ -6,5 +6,4 @@ class CallRecordingCustomGreetings {
    */
   records?: CallRecordingCustomGreeting[];
 }
-
 export default CallRecordingCustomGreetings;

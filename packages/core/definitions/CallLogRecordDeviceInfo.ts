@@ -9,5 +9,4 @@ class CallLogRecordDeviceInfo {
    */
   uri?: string;
 }
-
 export default CallLogRecordDeviceInfo;

@@ -10,5 +10,4 @@ class CompanyBusinessHours {
    */
   schedule?: CompanyBusinessHoursScheduleInfo;
 }
-
 export default CompanyBusinessHours;

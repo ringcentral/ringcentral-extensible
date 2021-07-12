@@ -36,5 +36,4 @@ class AddressBookBulkUploadResponse {
    */
   results?: AddressBookBulkUploadTaskResult;
 }
-
 export default AddressBookBulkUploadResponse;

@@ -27,5 +27,4 @@ class CallQueues {
    */
   paging?: ProvisioningPagingInfo;
 }
-
 export default CallQueues;

@@ -17,14 +17,12 @@ class Index {
     this.rc = parent.rc;
     this.messageId = messageId;
   }
-
   path(withParameter = true): string {
     if (withParameter && this.messageId !== null) {
       return `${this.parent.path()}/messages/${this.messageId}`;
     }
     return `${this.parent.path()}/messages`;
   }
-
   /**
    * Returns the list of outbound/inbound A2P messages sent from/to A2P phone numbers of the current account. The list can be filtered by message batch ID and/or phone number.
    * HTTP Method: get
@@ -57,7 +55,6 @@ class Index {
     if (this.messageId === null) {
       throw new Error('messageId must be specified.');
     }
-
     const r = await this.rc.get<MessageDetailsResponse>(
       this.path(),
       undefined,
@@ -66,5 +63,4 @@ class Index {
     return r.data;
   }
 }
-
 export default Index;

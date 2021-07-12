@@ -20,5 +20,4 @@ class DeviceInfoRequest {
    */
   serial?: string;
 }
-
 export default DeviceInfoRequest;

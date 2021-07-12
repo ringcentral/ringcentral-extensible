@@ -33,5 +33,4 @@ class RegionalSettings {
    */
   timeFormat?: '12h' | '24h';
 }
-
 export default RegionalSettings;

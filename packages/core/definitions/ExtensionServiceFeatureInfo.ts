@@ -74,5 +74,4 @@ class ExtensionServiceFeatureInfo {
    */
   reason?: string;
 }
-
 export default ExtensionServiceFeatureInfo;

@@ -18,5 +18,4 @@ class MessagingNavigationInfo {
    */
   lastPage?: MessagingNavigationInfoURI;
 }
-
 export default MessagingNavigationInfo;

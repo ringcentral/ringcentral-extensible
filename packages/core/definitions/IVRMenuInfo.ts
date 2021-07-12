@@ -34,5 +34,4 @@ class IVRMenuInfo {
    */
   actions?: IVRMenuActionsInfo[];
 }
-
 export default IVRMenuInfo;

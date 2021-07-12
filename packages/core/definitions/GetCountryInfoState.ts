@@ -10,5 +10,4 @@ class GetCountryInfoState {
    */
   uri?: string;
 }
-
 export default GetCountryInfoState;

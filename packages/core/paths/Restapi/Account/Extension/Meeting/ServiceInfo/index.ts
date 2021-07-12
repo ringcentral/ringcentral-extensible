@@ -14,11 +14,9 @@ class Index {
     this.parent = parent;
     this.rc = parent.rc;
   }
-
   path(): string {
     return `${this.parent.path()}/service-info`;
   }
-
   /**
    * Returns information on dial-in numbers for meetings, support and international dial-in numbers URIs and meeting account information.
    * HTTP Method: get
@@ -59,5 +57,4 @@ class Index {
     return r.data;
   }
 }
-
 export default Index;

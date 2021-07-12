@@ -5,5 +5,4 @@ class CallQueueMemberId {
    */
   id?: string;
 }
-
 export default CallQueueMemberId;

@@ -40,5 +40,4 @@ class LanguageInfo {
    */
   ui?: boolean;
 }
-
 export default LanguageInfo;

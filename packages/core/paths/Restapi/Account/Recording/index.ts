@@ -14,14 +14,12 @@ class Index {
     this.rc = parent.rc;
     this.recordingId = recordingId;
   }
-
   path(withParameter = true): string {
     if (withParameter && this.recordingId !== null) {
       return `${this.parent.path()}/recording/${this.recordingId}`;
     }
     return `${this.parent.path()}/recording`;
   }
-
   /**
    * Returns call recordings by ID(s).
    * HTTP Method: get
@@ -36,7 +34,6 @@ class Index {
     if (this.recordingId === null) {
       throw new Error('recordingId must be specified.');
     }
-
     const r = await this.rc.get<GetCallRecordingResponse>(
       this.path(),
       undefined,
@@ -49,5 +46,4 @@ class Index {
     return new Content(this);
   }
 }
-
 export default Index;

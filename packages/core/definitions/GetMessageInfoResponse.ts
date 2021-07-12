@@ -143,7 +143,7 @@ class GetMessageInfoResponse {
     | 'Unknown';
 
   /**
-   * Cover page identifier. For the list of available cover page identifiers please call the Fax Cover Pages method
+   * Cover page identifier. If coverIndex is set to '0' (zero) cover page is not attached. For the list of available cover page identifiers (1-13) please call the Fax Cover Pages method. If not specified, the default cover page is attached (which is configured in 'Outbound Fax Settings')
    */
   coverIndex?: number;
 
@@ -152,5 +152,4 @@ class GetMessageInfoResponse {
    */
   coverPageText?: string;
 }
-
 export default GetMessageInfoResponse;

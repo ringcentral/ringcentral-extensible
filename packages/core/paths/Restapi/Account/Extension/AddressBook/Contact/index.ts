@@ -20,14 +20,12 @@ class Index {
     this.rc = parent.rc;
     this.contactId = contactId;
   }
-
   path(withParameter = true): string {
     if (withParameter && this.contactId !== null) {
       return `${this.parent.path()}/contact/${this.contactId}`;
     }
     return `${this.parent.path()}/contact`;
   }
-
   /**
    * Returns user personal contacts.
    * HTTP Method: get
@@ -84,7 +82,6 @@ class Index {
     if (this.contactId === null) {
       throw new Error('contactId must be specified.');
     }
-
     const r = await this.rc.get<PersonalContactResource>(
       this.path(),
       undefined,
@@ -109,7 +106,6 @@ class Index {
     if (this.contactId === null) {
       throw new Error('contactId must be specified.');
     }
-
     const r = await this.rc.put<PersonalContactResource>(
       this.path(),
       personalContactRequest,
@@ -131,7 +127,6 @@ class Index {
     if (this.contactId === null) {
       throw new Error('contactId must be specified.');
     }
-
     const r = await this.rc.delete<string>(
       this.path(),
       undefined,
@@ -140,5 +135,4 @@ class Index {
     return r.data;
   }
 }
-
 export default Index;

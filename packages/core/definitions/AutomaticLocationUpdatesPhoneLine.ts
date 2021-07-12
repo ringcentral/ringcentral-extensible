@@ -15,5 +15,4 @@ class AutomaticLocationUpdatesPhoneLine {
    */
   phoneInfo?: AutomaticLocationUpdatesPhoneNumberInfo;
 }
-
 export default AutomaticLocationUpdatesPhoneLine;

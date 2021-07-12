@@ -11,11 +11,9 @@ class Index {
     this.parent = parent;
     this.rc = parent.rc;
   }
-
   path(): string {
     return `${this.parent.path()}/events`;
   }
-
   /**
    * Returns a list of calendar events available for the current user within the specified group. Users can only see their personal tasks and public tasks.
    * HTTP Method: get
@@ -54,5 +52,4 @@ class Index {
     return r.data;
   }
 }
-
 export default Index;

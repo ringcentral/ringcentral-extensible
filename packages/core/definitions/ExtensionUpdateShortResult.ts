@@ -15,5 +15,4 @@ class ExtensionUpdateShortResult {
    */
   errors?: ErrorEntity[];
 }
-
 export default ExtensionUpdateShortResult;

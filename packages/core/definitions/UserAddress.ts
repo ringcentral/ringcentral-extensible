@@ -24,5 +24,4 @@ class UserAddress {
    */
   type?: 'work';
 }
-
 export default UserAddress;

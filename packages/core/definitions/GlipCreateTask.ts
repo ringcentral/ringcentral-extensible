@@ -64,5 +64,4 @@ class GlipCreateTask {
    */
   attachments?: GlipAttachmentInfoRequest[];
 }
-
 export default GlipCreateTask;

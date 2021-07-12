@@ -23,5 +23,4 @@ class CompanyAnsweringRuleList {
    */
   navigation?: CallHandlingNavigationInfo;
 }
-
 export default CompanyAnsweringRuleList;

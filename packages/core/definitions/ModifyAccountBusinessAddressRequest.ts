@@ -20,5 +20,4 @@ class ModifyAccountBusinessAddressRequest {
    */
   mainSiteName?: string;
 }
-
 export default ModifyAccountBusinessAddressRequest;

@@ -22,5 +22,4 @@ class ReadAccountPresenceParameters {
    */
   perPage?: number;
 }
-
 export default ReadAccountPresenceParameters;

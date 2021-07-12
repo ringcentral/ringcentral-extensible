@@ -105,5 +105,4 @@ class ExtensionDeviceResponse {
    */
   lastLocationReportTime?: string;
 }
-
 export default ExtensionDeviceResponse;

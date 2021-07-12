@@ -105,5 +105,4 @@ class GlipTaskInfo {
    */
   attachments?: TaskAttachment[];
 }
-
 export default GlipTaskInfo;

@@ -105,5 +105,4 @@ class ExtensionCreationResponse {
    */
   hidden?: boolean;
 }
-
 export default ExtensionCreationResponse;

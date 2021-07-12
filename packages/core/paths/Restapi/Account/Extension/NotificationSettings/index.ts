@@ -14,11 +14,9 @@ class Index {
     this.parent = parent;
     this.rc = parent.rc;
   }
-
   path(): string {
     return `${this.parent.path()}/notification-settings`;
   }
-
   /**
    * Returns notification settings for the current extension.
    *  <p>Knowledge Article: <a href="https://success.ringcentral.com/articles/RC_Knowledge_Article/9740">User Settings - Set up Message Notifications</a></p>
@@ -61,5 +59,4 @@ class Index {
     return r.data;
   }
 }
-
 export default Index;

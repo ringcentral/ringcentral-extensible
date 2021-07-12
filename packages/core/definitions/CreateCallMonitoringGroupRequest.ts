@@ -5,5 +5,4 @@ class CreateCallMonitoringGroupRequest {
    */
   name?: string;
 }
-
 export default CreateCallMonitoringGroupRequest;

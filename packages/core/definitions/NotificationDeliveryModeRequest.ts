@@ -30,5 +30,4 @@ class NotificationDeliveryModeRequest {
    */
   verificationToken?: string;
 }
-
 export default NotificationDeliveryModeRequest;

@@ -11,11 +11,9 @@ class Index {
     this.parent = parent;
     this.rc = parent.rc;
   }
-
   path(): string {
     return `${this.parent.path()}/bulk-assign`;
   }
-
   /**
    * Enables or disables Automatic Location Updates feature for multiple account users.
    * HTTP Method: post
@@ -37,5 +35,4 @@ class Index {
     return r.data;
   }
 }
-
 export default Index;

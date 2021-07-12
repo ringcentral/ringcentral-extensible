@@ -35,5 +35,4 @@ class BillingStatementInfo {
    */
   totalFreeServiceCredit?: number;
 }
-
 export default BillingStatementInfo;

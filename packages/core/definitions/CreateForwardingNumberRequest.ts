@@ -25,5 +25,4 @@ class CreateForwardingNumberRequest {
    */
   device?: CreateForwardingNumberDeviceInfo;
 }
-
 export default CreateForwardingNumberRequest;

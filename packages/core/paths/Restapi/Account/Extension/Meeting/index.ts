@@ -21,14 +21,12 @@ class Index {
     this.rc = parent.rc;
     this.meetingId = meetingId;
   }
-
   path(withParameter = true): string {
     if (withParameter && this.meetingId !== null) {
       return `${this.parent.path()}/meeting/${this.meetingId}`;
     }
     return `${this.parent.path()}/meeting`;
   }
-
   /**
    * Returns a list of user meetings scheduled for the future (meetings of 'Instant' type are not included).
    * HTTP Method: get
@@ -81,7 +79,6 @@ class Index {
     if (this.meetingId === null) {
       throw new Error('meetingId must be specified.');
     }
-
     const r = await this.rc.get<MeetingResponseResource>(
       this.path(),
       undefined,
@@ -105,7 +102,6 @@ class Index {
     if (this.meetingId === null) {
       throw new Error('meetingId must be specified.');
     }
-
     const r = await this.rc.put<MeetingResponseResource>(
       this.path(),
       meetingRequestResource,
@@ -127,7 +123,6 @@ class Index {
     if (this.meetingId === null) {
       throw new Error('meetingId must be specified.');
     }
-
     const r = await this.rc.delete<string>(
       this.path(),
       undefined,
@@ -152,5 +147,4 @@ class Index {
     return new UserSettings(this);
   }
 }
-
 export default Index;

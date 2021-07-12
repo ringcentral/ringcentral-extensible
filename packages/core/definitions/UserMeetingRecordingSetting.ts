@@ -52,5 +52,4 @@ class UserMeetingRecordingSetting {
    */
   autoDeleteCmrDays?: number;
 }
-
 export default UserMeetingRecordingSetting;

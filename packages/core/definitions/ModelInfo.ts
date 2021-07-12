@@ -31,5 +31,4 @@ class ModelInfo {
    */
   lineCount?: number;
 }
-
 export default ModelInfo;

@@ -180,5 +180,4 @@ class PersonalContactResource {
    */
   ringtoneIndex?: string;
 }
-
 export default PersonalContactResource;

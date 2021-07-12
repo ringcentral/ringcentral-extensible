@@ -10,5 +10,4 @@ class FixedOrderAgents {
    */
   index?: number;
 }
-
 export default FixedOrderAgents;

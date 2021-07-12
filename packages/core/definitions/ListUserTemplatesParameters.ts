@@ -12,5 +12,4 @@ class ListUserTemplatesParameters {
    */
   perPage?: string;
 }
-
 export default ListUserTemplatesParameters;

@@ -14,5 +14,4 @@ class PresetInfo {
    */
   name?: string;
 }
-
 export default PresetInfo;

@@ -9,5 +9,4 @@ class TelephonyUserMeetingSettings {
    */
   audioConferenceInfo?: boolean;
 }
-
 export default TelephonyUserMeetingSettings;

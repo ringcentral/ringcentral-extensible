@@ -22,5 +22,4 @@ class CallRecordingExtensions {
    */
   paging?: CallHandlingPagingInfo;
 }
-
 export default CallRecordingExtensions;

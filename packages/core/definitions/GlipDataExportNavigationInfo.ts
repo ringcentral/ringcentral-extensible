@@ -17,5 +17,4 @@ class GlipDataExportNavigationInfo {
    */
   lastPage?: GlipDataExportNavigationInfoUri;
 }
-
 export default GlipDataExportNavigationInfo;

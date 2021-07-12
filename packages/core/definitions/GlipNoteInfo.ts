@@ -52,5 +52,4 @@ class GlipNoteInfo {
    */
   type?: 'Note';
 }
-
 export default GlipNoteInfo;

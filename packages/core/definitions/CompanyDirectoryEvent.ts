@@ -30,5 +30,4 @@ class CompanyDirectoryEvent {
    */
   body?: CompanyDirectoryEventBody;
 }
-
 export default CompanyDirectoryEvent;

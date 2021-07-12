@@ -14,11 +14,9 @@ class Index {
     this.parent = parent;
     this.rc = parent.rc;
   }
-
   path(): string {
     return `${this.parent.path()}/presence`;
   }
-
   /**
    * Returns presence status of the call queue members.
    * HTTP Method: get
@@ -55,5 +53,4 @@ class Index {
     return r.data;
   }
 }
-
 export default Index;

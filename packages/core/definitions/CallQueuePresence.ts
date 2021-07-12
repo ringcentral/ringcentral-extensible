@@ -5,5 +5,4 @@ class CallQueuePresence {
    */
   records?: CallQueueMemberPresence[];
 }
-
 export default CallQueuePresence;

@@ -31,5 +31,4 @@ class CreateMMSMessage {
    */
   attachments?: Attachment[];
 }
-
 export default CreateMMSMessage;

@@ -7,5 +7,4 @@ class Reference {
    */
   ref?: string;
 }
-
 export default Reference;

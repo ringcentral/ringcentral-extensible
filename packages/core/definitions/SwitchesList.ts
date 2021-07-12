@@ -23,5 +23,4 @@ class SwitchesList {
    */
   paging?: ProvisioningPagingInfo;
 }
-
 export default SwitchesList;

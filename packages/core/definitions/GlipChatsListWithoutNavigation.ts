@@ -7,5 +7,4 @@ class GlipChatsListWithoutNavigation {
    */
   records?: GlipChatInfo[];
 }
-
 export default GlipChatsListWithoutNavigation;

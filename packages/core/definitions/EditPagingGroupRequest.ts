@@ -19,5 +19,4 @@ class EditPagingGroupRequest {
    */
   removedDeviceIds?: string[];
 }
-
 export default EditPagingGroupRequest;

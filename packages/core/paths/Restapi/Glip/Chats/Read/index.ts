@@ -10,11 +10,9 @@ class Index {
     this.parent = parent;
     this.rc = parent.rc;
   }
-
   path(): string {
     return `${this.parent.path()}/read`;
   }
-
   /**
    * Sets the specified chat status to 'Read' for the current user.
    * HTTP Method: post
@@ -31,5 +29,4 @@ class Index {
     return r.data;
   }
 }
-
 export default Index;

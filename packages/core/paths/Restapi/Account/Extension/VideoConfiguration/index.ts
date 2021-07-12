@@ -11,11 +11,9 @@ class Index {
     this.parent = parent;
     this.rc = parent.rc;
   }
-
   path(): string {
     return `${this.parent.path()}/video-configuration`;
   }
-
   /**
    * Returns information about video configuration of the current user.
    * HTTP Method: get
@@ -55,5 +53,4 @@ class Index {
     return r.data;
   }
 }
-
 export default Index;

@@ -5,5 +5,4 @@ class CreateMultipleWirelessPointsResponse {
    */
   task?: BulkTaskInfoWiCreate;
 }
-
 export default CreateMultipleWirelessPointsResponse;

@@ -65,5 +65,4 @@ class PhoneNumberInfoNumberParser {
    */
   dtmfPostfix?: string;
 }
-
 export default PhoneNumberInfoNumberParser;

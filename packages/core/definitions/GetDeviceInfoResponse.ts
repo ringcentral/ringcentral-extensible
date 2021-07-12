@@ -116,5 +116,4 @@ class GetDeviceInfoResponse {
    */
   billingStatement?: BillingStatementInfo;
 }
-
 export default GetDeviceInfoResponse;

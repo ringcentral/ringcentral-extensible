@@ -22,5 +22,4 @@ class DevicePhoneLinesInfo {
    */
   phoneInfo?: DevicePhoneNumberInfo;
 }
-
 export default DevicePhoneLinesInfo;

@@ -13,5 +13,4 @@ class AddressBookBulkUploadResource {
    */
   contacts?: AddressBookBulkContactResource[];
 }
-
 export default AddressBookBulkUploadResource;

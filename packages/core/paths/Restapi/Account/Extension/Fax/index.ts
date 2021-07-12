@@ -12,11 +12,9 @@ class Index {
     this.parent = parent;
     this.rc = parent.rc;
   }
-
   path(): string {
     return `${this.parent.path()}/fax`;
   }
-
   /**
    * Creates and sends/resends a fax message. Resend can be implemented if sending has failed. Fax attachment size (both single and total) is limited to 50Mb.
    * HTTP Method: post
@@ -39,5 +37,4 @@ class Index {
     return r.data;
   }
 }
-
 export default Index;

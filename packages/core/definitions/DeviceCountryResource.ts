@@ -34,5 +34,4 @@ class DeviceCountryResource {
    */
   loginAllowed?: boolean;
 }
-
 export default DeviceCountryResource;

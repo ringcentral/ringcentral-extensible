@@ -4,5 +4,4 @@ class CallPartyFlip {
    */
   callFlipId?: string;
 }
-
 export default CallPartyFlip;

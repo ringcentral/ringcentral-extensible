@@ -17,5 +17,4 @@ class ListGlipChatsParameters {
    */
   pageToken?: string;
 }
-
 export default ListGlipChatsParameters;

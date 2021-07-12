@@ -25,5 +25,4 @@ class InstantMessageEvent {
    */
   body?: InstantMessageEventBody;
 }
-
 export default InstantMessageEvent;

@@ -21,5 +21,4 @@ class UserCallLogResponse {
    */
   paging?: CallLogPagingInfo;
 }
-
 export default UserCallLogResponse;

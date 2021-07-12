@@ -17,14 +17,12 @@ class Index {
     this.rc = parent.rc;
     this.batchId = batchId;
   }
-
   path(withParameter = true): string {
     if (withParameter && this.batchId !== null) {
       return `${this.parent.path()}/batch/${this.batchId}`;
     }
     return `${this.parent.path()}/batch`;
   }
-
   /**
    * Allows to send high volume of A2P (Application-to-Person) SMS messages (in message batches). Only phone number with the `A2PSmsSender` feature can be used as a sender.
    * HTTP Method: post
@@ -58,7 +56,6 @@ class Index {
     if (this.batchId === null) {
       throw new Error('batchId must be specified.');
     }
-
     const r = await this.rc.get<MessageBatchResponse>(
       this.path(),
       undefined,
@@ -67,5 +64,4 @@ class Index {
     return r.data;
   }
 }
-
 export default Index;

@@ -15,5 +15,4 @@ class MeetingScheduleResource {
    */
   timeZone?: MeetingsTimezoneResource;
 }
-
 export default MeetingScheduleResource;

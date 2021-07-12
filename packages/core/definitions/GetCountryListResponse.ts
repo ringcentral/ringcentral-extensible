@@ -26,5 +26,4 @@ class GetCountryListResponse {
    */
   paging?: ProvisioningPagingInfo;
 }
-
 export default GetCountryListResponse;

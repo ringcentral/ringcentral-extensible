@@ -11,5 +11,4 @@ class RecipientInfo {
    */
   id?: number;
 }
-
 export default RecipientInfo;

@@ -16,11 +16,9 @@ class Index {
     this.parent = parent;
     this.rc = parent.rc;
   }
-
   path(): string {
     return `${this.parent.path()}/notes`;
   }
-
   /**
    * Returns the list of notes created in the specified chat.
    * HTTP Method: get
@@ -62,5 +60,4 @@ class Index {
     return r.data;
   }
 }
-
 export default Index;

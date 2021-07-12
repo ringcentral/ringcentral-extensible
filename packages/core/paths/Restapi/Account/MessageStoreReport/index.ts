@@ -17,14 +17,12 @@ class Index {
     this.rc = parent.rc;
     this.taskId = taskId;
   }
-
   path(withParameter = true): string {
     if (withParameter && this.taskId !== null) {
       return `${this.parent.path()}/message-store-report/${this.taskId}`;
     }
     return `${this.parent.path()}/message-store-report`;
   }
-
   /**
    * Creates a task to collect all account messages within the specified time interval. Maximum number of simaltaneous tasks per account is 2.
    * HTTP Method: post
@@ -60,7 +58,6 @@ class Index {
     if (this.taskId === null) {
       throw new Error('taskId must be specified.');
     }
-
     const r = await this.rc.get<MessageStoreReport>(
       this.path(),
       undefined,
@@ -73,5 +70,4 @@ class Index {
     return new Archive(this, archiveId);
   }
 }
-
 export default Index;

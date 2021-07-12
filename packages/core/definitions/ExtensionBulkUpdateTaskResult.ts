@@ -10,5 +10,4 @@ class ExtensionBulkUpdateTaskResult {
    */
   errors?: ErrorEntity[];
 }
-
 export default ExtensionBulkUpdateTaskResult;

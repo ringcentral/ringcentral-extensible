@@ -4,5 +4,4 @@ class UpdateDevicePhoneInfo {
    */
   id?: string;
 }
-
 export default UpdateDevicePhoneInfo;

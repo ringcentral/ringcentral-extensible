@@ -15,14 +15,12 @@ class Index {
     this.rc = parent.rc;
     this.webhookId = webhookId;
   }
-
   path(withParameter = true): string {
     if (withParameter && this.webhookId !== null) {
       return `${this.parent.path()}/webhooks/${this.webhookId}`;
     }
     return `${this.parent.path()}/webhooks`;
   }
-
   /**
    * Returns the list of all webhooks associated with the current account.
    * HTTP Method: get
@@ -52,7 +50,6 @@ class Index {
     if (this.webhookId === null) {
       throw new Error('webhookId must be specified.');
     }
-
     const r = await this.rc.get<GlipWebhookList>(
       this.path(),
       undefined,
@@ -73,7 +70,6 @@ class Index {
     if (this.webhookId === null) {
       throw new Error('webhookId must be specified.');
     }
-
     const r = await this.rc.delete<string>(
       this.path(),
       undefined,
@@ -90,5 +86,4 @@ class Index {
     return new Activate(this);
   }
 }
-
 export default Index;

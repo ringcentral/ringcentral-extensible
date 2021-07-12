@@ -11,5 +11,4 @@ class VoicemailInfo {
    */
   recipient?: RecipientInfo;
 }
-
 export default VoicemailInfo;

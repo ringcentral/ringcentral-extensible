@@ -19,14 +19,12 @@ class Index {
     this.rc = parent.rc;
     this.postId = postId;
   }
-
   path(withParameter = true): string {
     if (withParameter && this.postId !== null) {
       return `${this.parent.path()}/posts/${this.postId}`;
     }
     return `${this.parent.path()}/posts`;
   }
-
   /**
    * Returns a list of posts from the specified chat.
    * HTTP Method: get
@@ -80,7 +78,6 @@ class Index {
     if (this.postId === null) {
       throw new Error('postId must be specified.');
     }
-
     const r = await this.rc.get<GlipPostInfo>(
       this.path(),
       undefined,
@@ -101,7 +98,6 @@ class Index {
     if (this.postId === null) {
       throw new Error('postId must be specified.');
     }
-
     const r = await this.rc.delete<string>(
       this.path(),
       undefined,
@@ -125,7 +121,6 @@ class Index {
     if (this.postId === null) {
       throw new Error('postId must be specified.');
     }
-
     const r = await this.rc.patch<GlipPostInfo>(
       this.path(),
       glipPatchPostBody,
@@ -135,5 +130,4 @@ class Index {
     return r.data;
   }
 }
-
 export default Index;

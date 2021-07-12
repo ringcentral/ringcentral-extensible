@@ -17,14 +17,12 @@ class Index {
     this.rc = parent.rc;
     this.stateId = stateId;
   }
-
   path(withParameter = true): string {
     if (withParameter && this.stateId !== null) {
       return `${this.parent.path()}/state/${this.stateId}`;
     }
     return `${this.parent.path()}/state`;
   }
-
   /**
    * Returns all the states of a certain country
    * HTTP Method: get
@@ -55,7 +53,6 @@ class Index {
     if (this.stateId === null) {
       throw new Error('stateId must be specified.');
     }
-
     const r = await this.rc.get<GetStateInfoResponse>(
       this.path(),
       undefined,
@@ -64,5 +61,4 @@ class Index {
     return r.data;
   }
 }
-
 export default Index;

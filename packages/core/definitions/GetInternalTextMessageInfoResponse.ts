@@ -99,5 +99,4 @@ class GetInternalTextMessageInfoResponse {
    */
   type?: 'Fax' | 'SMS' | 'VoiceMail' | 'Pager' | 'Text';
 }
-
 export default GetInternalTextMessageInfoResponse;

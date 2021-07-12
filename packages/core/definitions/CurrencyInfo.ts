@@ -26,5 +26,4 @@ class CurrencyInfo {
    */
   minorSymbol?: string;
 }
-
 export default CurrencyInfo;

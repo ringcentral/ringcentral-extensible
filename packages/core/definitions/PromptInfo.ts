@@ -24,5 +24,4 @@ class PromptInfo {
    */
   filename?: string;
 }
-
 export default PromptInfo;

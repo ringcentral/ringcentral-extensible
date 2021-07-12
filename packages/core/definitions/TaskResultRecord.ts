@@ -25,5 +25,4 @@ class TaskResultRecord {
    */
   errors?: TaskResultRecordErrorsInfo[];
 }
-
 export default TaskResultRecord;

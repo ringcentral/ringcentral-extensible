@@ -49,5 +49,4 @@ class SipRegistrationDeviceEmergencyInfo {
    */
   addressLocationOnly?: boolean;
 }
-
 export default SipRegistrationDeviceEmergencyInfo;

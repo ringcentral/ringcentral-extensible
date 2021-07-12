@@ -58,5 +58,4 @@ class GlipPostEvent {
    */
   lastModifiedTime?: string;
 }
-
 export default GlipPostEvent;

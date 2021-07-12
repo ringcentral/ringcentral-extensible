@@ -51,5 +51,4 @@ class CompanyAnsweringRuleRequest {
    */
   greetings?: GreetingInfo[];
 }
-
 export default CompanyAnsweringRuleRequest;

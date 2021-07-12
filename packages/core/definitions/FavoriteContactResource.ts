@@ -16,5 +16,4 @@ class FavoriteContactResource {
    */
   contactId?: string;
 }
-
 export default FavoriteContactResource;

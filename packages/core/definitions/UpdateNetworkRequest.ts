@@ -36,5 +36,4 @@ class UpdateNetworkRequest {
    */
   emergencyLocation?: ERLLocationInfo;
 }
-
 export default UpdateNetworkRequest;

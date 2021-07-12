@@ -10,7 +10,6 @@ class Index {
     this.parent = parent;
     this.rc = parent.rc;
   }
-
   path(): string {
     return `${this.parent.path()}/meeting-configuration`;
   }
@@ -19,5 +18,4 @@ class Index {
     return new ProfileImage(this);
   }
 }
-
 export default Index;

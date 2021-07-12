@@ -18,14 +18,12 @@ class Index {
     this.rc = parent.rc;
     this.deviceId = deviceId;
   }
-
   path(withParameter = true): string {
     if (withParameter && this.deviceId !== null) {
       return `${this.parent.path()}/device/${this.deviceId}`;
     }
     return `${this.parent.path()}/device`;
   }
-
   /**
    * Returns account device(s) by their ID(s).
    * HTTP Method: get
@@ -41,7 +39,6 @@ class Index {
     if (this.deviceId === null) {
       throw new Error('deviceId must be specified.');
     }
-
     const r = await this.rc.get<GetDeviceInfoResponse>(
       this.path(),
       queryParams,
@@ -66,7 +63,6 @@ class Index {
     if (this.deviceId === null) {
       throw new Error('deviceId must be specified.');
     }
-
     const r = await this.rc.put<GetDeviceInfoResponse>(
       this.path(),
       accountDeviceUpdate,
@@ -76,5 +72,4 @@ class Index {
     return r.data;
   }
 }
-
 export default Index;

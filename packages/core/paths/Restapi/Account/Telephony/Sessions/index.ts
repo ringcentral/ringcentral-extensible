@@ -18,14 +18,12 @@ class Index {
     this.rc = parent.rc;
     this.telephonySessionId = telephonySessionId;
   }
-
   path(withParameter = true): string {
     if (withParameter && this.telephonySessionId !== null) {
       return `${this.parent.path()}/sessions/${this.telephonySessionId}`;
     }
     return `${this.parent.path()}/sessions`;
   }
-
   /**
    * Returns the status of a call session by ID.
    * HTTP Method: get
@@ -40,7 +38,6 @@ class Index {
     if (this.telephonySessionId === null) {
       throw new Error('telephonySessionId must be specified.');
     }
-
     const r = await this.rc.get<CallSessionObject>(
       this.path(),
       queryParams,
@@ -60,7 +57,6 @@ class Index {
     if (this.telephonySessionId === null) {
       throw new Error('telephonySessionId must be specified.');
     }
-
     const r = await this.rc.delete<string>(
       this.path(),
       undefined,
@@ -77,5 +73,4 @@ class Index {
     return new Supervise(this);
   }
 }
-
 export default Index;

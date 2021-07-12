@@ -12,5 +12,4 @@ class DeviceAddonInfo {
    */
   count?: string;
 }
-
 export default DeviceAddonInfo;

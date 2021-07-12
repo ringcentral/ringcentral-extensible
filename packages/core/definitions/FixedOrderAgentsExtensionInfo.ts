@@ -19,5 +19,4 @@ class FixedOrderAgentsExtensionInfo {
    */
   name?: string;
 }
-
 export default FixedOrderAgentsExtensionInfo;

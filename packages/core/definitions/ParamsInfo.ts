@@ -9,5 +9,4 @@ class ParamsInfo {
    */
   value?: string;
 }
-
 export default ParamsInfo;

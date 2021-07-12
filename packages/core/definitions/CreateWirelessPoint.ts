@@ -34,5 +34,4 @@ class CreateWirelessPoint {
    */
   emergencyLocation?: ERLLocationInfo;
 }
-
 export default CreateWirelessPoint;

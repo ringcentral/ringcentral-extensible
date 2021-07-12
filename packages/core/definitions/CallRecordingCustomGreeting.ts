@@ -16,5 +16,4 @@ class CallRecordingCustomGreeting {
    */
   language?: CallRecordingCustomGreetingLanguage;
 }
-
 export default CallRecordingCustomGreeting;

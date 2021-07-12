@@ -13,14 +13,12 @@ class Index {
     this.rc = parent.rc;
     this.attachmentId = attachmentId;
   }
-
   path(withParameter = true): string {
     if (withParameter && this.attachmentId !== null) {
       return `${this.parent.path()}/content/${this.attachmentId}`;
     }
     return `${this.parent.path()}/content`;
   }
-
   /**
    * Returns a specific message attachment data as media stream.
    * HTTP Method: get
@@ -36,7 +34,6 @@ class Index {
     if (this.attachmentId === null) {
       throw new Error('attachmentId must be specified.');
     }
-
     const r = await this.rc.get<Buffer>(this.path(), queryParams, {
       ...restRequestConfig,
       responseType: 'arraybuffer',
@@ -44,5 +41,4 @@ class Index {
     return r.data;
   }
 }
-
 export default Index;

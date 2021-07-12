@@ -11,11 +11,9 @@ class Index {
     this.parent = parent;
     this.rc = parent.rc;
   }
-
   path(): string {
     return `${this.parent.path()}/forward`;
   }
-
   /**
    * Forwards a non-answered incoming call to the specified call party. Applicable for a call session in "Setup" or "Proceeding" state.
    * HTTP Method: post
@@ -36,5 +34,4 @@ class Index {
     return r.data;
   }
 }
-
 export default Index;

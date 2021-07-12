@@ -22,5 +22,4 @@ class AutomaticLocationUpdatesUserList {
    */
   paging?: ProvisioningPagingInfo;
 }
-
 export default AutomaticLocationUpdatesUserList;

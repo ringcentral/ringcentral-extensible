@@ -10,5 +10,4 @@ class GlipNoteCreate {
    */
   body?: string;
 }
-
 export default GlipNoteCreate;

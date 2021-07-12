@@ -8,5 +8,4 @@ class UpdateMessageParameters {
    */
   type?: 'Fax' | 'SMS' | 'VoiceMail' | 'Pager' | 'Text' | 'All';
 }
-
 export default UpdateMessageParameters;

@@ -5,5 +5,4 @@ class MissedCallExtensionInfo {
    */
   id?: string;
 }
-
 export default MissedCallExtensionInfo;

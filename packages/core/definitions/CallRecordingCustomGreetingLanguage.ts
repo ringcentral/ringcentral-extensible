@@ -20,5 +20,4 @@ class CallRecordingCustomGreetingLanguage {
    */
   localeCode?: string;
 }
-
 export default CallRecordingCustomGreetingLanguage;

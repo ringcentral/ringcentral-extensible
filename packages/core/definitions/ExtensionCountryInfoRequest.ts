@@ -4,5 +4,4 @@ class ExtensionCountryInfoRequest {
    */
   id?: string;
 }
-
 export default ExtensionCountryInfoRequest;

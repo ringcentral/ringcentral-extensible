@@ -4,5 +4,4 @@ class GlipMemberInfo {
    */
   id?: string;
 }
-
 export default GlipMemberInfo;

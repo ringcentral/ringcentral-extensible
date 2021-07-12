@@ -30,5 +30,4 @@ class AccountTelephonySessionsEvent {
    */
   body?: TelephonySessionsEventBody;
 }
-
 export default AccountTelephonySessionsEvent;

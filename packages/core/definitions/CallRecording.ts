@@ -9,5 +9,4 @@ class CallRecording {
    */
   active?: boolean;
 }
-
 export default CallRecording;

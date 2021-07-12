@@ -41,5 +41,4 @@ class ReplyParty {
    */
   direction?: 'Inbound' | 'Outbound';
 }
-
 export default ReplyParty;

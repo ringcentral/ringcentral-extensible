@@ -42,5 +42,4 @@ class ServiceProviderConfig {
    */
   xmlDataFormat?: Supported;
 }
-
 export default ServiceProviderConfig;

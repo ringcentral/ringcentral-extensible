@@ -15,5 +15,4 @@ class FormattingLocaleInfo {
    */
   name?: string;
 }
-
 export default FormattingLocaleInfo;

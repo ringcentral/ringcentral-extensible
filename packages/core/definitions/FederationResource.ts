@@ -21,5 +21,4 @@ class FederationResource {
    */
   lastModifiedTime?: string;
 }
-
 export default FederationResource;

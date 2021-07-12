@@ -6,5 +6,4 @@ class CompanyBusinessHoursScheduleInfo {
    */
   weeklyRanges?: WeeklyScheduleInfo;
 }
-
 export default CompanyBusinessHoursScheduleInfo;

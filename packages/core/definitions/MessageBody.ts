@@ -135,5 +135,4 @@ class MessageBody {
     | 'CompletedPartially'
     | 'Failed';
 }
-
 export default MessageBody;

@@ -14,5 +14,4 @@ class CustomFieldResource {
    */
   displayName?: string;
 }
-
 export default CustomFieldResource;

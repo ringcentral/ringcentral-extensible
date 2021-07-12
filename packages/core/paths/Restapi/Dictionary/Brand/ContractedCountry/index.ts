@@ -16,7 +16,6 @@ class Index {
     this.rc = parent.rc;
     this.contractedCountryId = contractedCountryId;
   }
-
   path(withParameter = true): string {
     if (withParameter && this.contractedCountryId !== null) {
       return `${this.parent.path()}/contracted-country/${
@@ -25,7 +24,6 @@ class Index {
     }
     return `${this.parent.path()}/contracted-country`;
   }
-
   /**
    * Returns the list of domestic countries by contracted country and brand of the account.
    * HTTP Method: get
@@ -39,7 +37,6 @@ class Index {
     if (this.contractedCountryId === null) {
       throw new Error('contractedCountryId must be specified.');
     }
-
     const r = await this.rc.get<GetCountryListResponse>(
       this.path(),
       queryParams,
@@ -48,5 +45,4 @@ class Index {
     return r.data;
   }
 }
-
 export default Index;

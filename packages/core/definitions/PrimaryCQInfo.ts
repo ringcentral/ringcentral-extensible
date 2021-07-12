@@ -17,5 +17,4 @@ class PrimaryCQInfo {
    */
   value?: string;
 }
-
 export default PrimaryCQInfo;

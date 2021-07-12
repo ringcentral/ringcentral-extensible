@@ -47,5 +47,4 @@ class PartySuperviseResponse {
    */
   status?: CallStatusInfo;
 }
-
 export default PartySuperviseResponse;

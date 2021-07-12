@@ -22,14 +22,12 @@ class Index {
     this.rc = parent.rc;
     this.messageId = messageId;
   }
-
   path(withParameter = true): string {
     if (withParameter && this.messageId !== null) {
       return `${this.parent.path()}/message-store/${this.messageId}`;
     }
     return `${this.parent.path()}/message-store`;
   }
-
   /**
    * Returns the list of messages from an extension mailbox.
    * HTTP Method: get
@@ -84,7 +82,6 @@ class Index {
     if (this.messageId === null) {
       throw new Error('messageId must be specified.');
     }
-
     const r = await this.rc.get<GetMessageInfoResponse>(
       this.path(),
       undefined,
@@ -109,7 +106,6 @@ class Index {
     if (this.messageId === null) {
       throw new Error('messageId must be specified.');
     }
-
     const r = await this.rc.put<GetMessageInfoResponse>(
       this.path(),
       updateMessageRequest,
@@ -134,7 +130,6 @@ class Index {
     if (this.messageId === null) {
       throw new Error('messageId must be specified.');
     }
-
     const r = await this.rc.delete<string>(
       this.path(),
       queryParams,
@@ -147,5 +142,4 @@ class Index {
     return new Content(this, attachmentId);
   }
 }
-
 export default Index;

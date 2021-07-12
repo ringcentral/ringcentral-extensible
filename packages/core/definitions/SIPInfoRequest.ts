@@ -4,5 +4,4 @@ class SIPInfoRequest {
    */
   transport?: 'UDP' | 'TCP' | 'TLS' | 'WS' | 'WSS';
 }
-
 export default SIPInfoRequest;

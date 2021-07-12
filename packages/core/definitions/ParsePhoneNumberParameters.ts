@@ -10,5 +10,4 @@ class ParsePhoneNumberParameters {
    */
   nationalAsPriority?: boolean;
 }
-
 export default ParsePhoneNumberParameters;

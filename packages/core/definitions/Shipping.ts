@@ -22,5 +22,4 @@ class Shipping {
    */
   trackingNumber?: string;
 }
-
 export default Shipping;

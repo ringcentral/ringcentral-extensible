@@ -4,5 +4,4 @@ class CalledNumberInfo {
    */
   phoneNumber?: string;
 }
-
 export default CalledNumberInfo;

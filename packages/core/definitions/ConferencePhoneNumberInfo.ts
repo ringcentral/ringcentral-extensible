@@ -9,5 +9,4 @@ class ConferencePhoneNumberInfo {
    */
   default?: boolean;
 }
-
 export default ConferencePhoneNumberInfo;

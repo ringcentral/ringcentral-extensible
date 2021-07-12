@@ -24,5 +24,4 @@ class CreateCompanyGreetingRequest {
    */
   binary?: Attachment;
 }
-
 export default CreateCompanyGreetingRequest;

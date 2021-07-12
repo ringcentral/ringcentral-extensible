@@ -9,5 +9,4 @@ class GlipNavigationInfo {
    */
   nextPageToken?: string;
 }
-
 export default GlipNavigationInfo;

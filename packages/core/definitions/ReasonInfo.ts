@@ -20,5 +20,4 @@ class ReasonInfo {
    */
   permission?: string;
 }
-
 export default ReasonInfo;

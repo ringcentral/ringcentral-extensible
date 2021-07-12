@@ -13,5 +13,4 @@ class BulkSupported {
    */
   supported?: boolean;
 }
-
 export default BulkSupported;

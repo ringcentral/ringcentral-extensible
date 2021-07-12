@@ -15,5 +15,4 @@ class PublicIpRangeInfo {
    */
   matched?: boolean;
 }
-
 export default PublicIpRangeInfo;

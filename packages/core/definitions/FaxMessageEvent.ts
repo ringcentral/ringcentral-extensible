@@ -30,5 +30,4 @@ class FaxMessageEvent {
    */
   body?: FaxMessageEventBody;
 }
-
 export default FaxMessageEvent;

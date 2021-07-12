@@ -18,5 +18,4 @@ class LocationDeletionInfo {
    */
   errors?: LocationDeletionErrorInfo;
 }
-
 export default LocationDeletionInfo;

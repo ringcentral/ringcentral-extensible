@@ -7,5 +7,4 @@ class DeviceUpdatePhoneLinesInfo {
    */
   phoneLines?: UpdateDevicePhoneInfo[];
 }
-
 export default DeviceUpdatePhoneLinesInfo;

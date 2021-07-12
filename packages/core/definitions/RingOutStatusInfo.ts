@@ -51,5 +51,4 @@ class RingOutStatusInfo {
     | 'NotEnoughFunds'
     | 'NoSuchUser';
 }
-
 export default RingOutStatusInfo;

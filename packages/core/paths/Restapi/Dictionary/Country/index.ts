@@ -17,14 +17,12 @@ class Index {
     this.rc = parent.rc;
     this.countryId = countryId;
   }
-
   path(withParameter = true): string {
     if (withParameter && this.countryId !== null) {
       return `${this.parent.path()}/country/${this.countryId}`;
     }
     return `${this.parent.path()}/country`;
   }
-
   /**
    * Returns all the countries available for calling.
    * HTTP Method: get
@@ -55,7 +53,6 @@ class Index {
     if (this.countryId === null) {
       throw new Error('countryId must be specified.');
     }
-
     const r = await this.rc.get<GetCountryInfoDictionaryResponse>(
       this.path(),
       undefined,
@@ -64,5 +61,4 @@ class Index {
     return r.data;
   }
 }
-
 export default Index;

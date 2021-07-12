@@ -11,5 +11,4 @@ class AddPartyRequest {
    */
   partyId?: string;
 }
-
 export default AddPartyRequest;

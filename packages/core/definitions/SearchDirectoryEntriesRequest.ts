@@ -57,5 +57,4 @@ class SearchDirectoryEntriesRequest {
    */
   perPage?: number;
 }
-
 export default SearchDirectoryEntriesRequest;

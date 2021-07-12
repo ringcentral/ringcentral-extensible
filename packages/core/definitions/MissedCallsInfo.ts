@@ -19,5 +19,4 @@ class MissedCallsInfo {
    */
   advancedSmsEmailAddresses?: string[];
 }
-
 export default MissedCallsInfo;

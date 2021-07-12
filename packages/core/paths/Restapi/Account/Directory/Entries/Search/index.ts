@@ -14,11 +14,9 @@ class Index {
     this.parent = parent;
     this.rc = parent.rc;
   }
-
   path(): string {
     return `${this.parent.path()}/search`;
   }
-
   /**
    * Returns contact information on corporate users of federated accounts according to the specified filtering and ordering.
    * HTTP Method: post
@@ -40,5 +38,4 @@ class Index {
     return r.data;
   }
 }
-
 export default Index;

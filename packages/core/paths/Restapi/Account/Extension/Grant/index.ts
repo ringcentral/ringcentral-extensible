@@ -14,11 +14,9 @@ class Index {
     this.parent = parent;
     this.rc = parent.rc;
   }
-
   path(): string {
     return `${this.parent.path()}/grant`;
   }
-
   /**
    * Returns the list of extensions with the information on grants given to the current extension regarding them. Currently the list of grants include: picking up a call, monitoring, calling or receiving a call on behalf of somebody, call delegation and calling paging groups.
    * HTTP Method: get
@@ -39,5 +37,4 @@ class Index {
     return r.data;
   }
 }
-
 export default Index;

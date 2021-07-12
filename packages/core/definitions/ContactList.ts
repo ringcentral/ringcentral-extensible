@@ -28,5 +28,4 @@ class ContactList {
    */
   groups?: UserContactsGroupsInfo;
 }
-
 export default ContactList;

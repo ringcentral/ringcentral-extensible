@@ -11,5 +11,4 @@ class LanguageResource {
    */
   localeCode?: string;
 }
-
 export default LanguageResource;

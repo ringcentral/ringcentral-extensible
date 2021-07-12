@@ -30,5 +30,4 @@ class PhoneNumberInfoConferencing {
    */
   premium?: boolean;
 }
-
 export default PhoneNumberInfoConferencing;

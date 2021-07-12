@@ -24,5 +24,4 @@ class MessageCountryInfo {
    */
   callingCode?: string;
 }
-
 export default MessageCountryInfo;

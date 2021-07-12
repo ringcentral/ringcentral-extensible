@@ -39,5 +39,4 @@ class DevicePhoneNumberInfo {
    */
   type?: 'VoiceFax' | 'FaxOnly' | 'VoiceOnly';
 }
-
 export default DevicePhoneNumberInfo;

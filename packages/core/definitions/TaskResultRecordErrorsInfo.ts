@@ -15,5 +15,4 @@ class TaskResultRecordErrorsInfo {
    */
   description?: string;
 }
-
 export default TaskResultRecordErrorsInfo;

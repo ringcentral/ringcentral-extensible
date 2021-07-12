@@ -6,5 +6,4 @@ class ReadUserCallRecordParameters {
    */
   view?: 'Simple' | 'Detailed';
 }
-
 export default ReadUserCallRecordParameters;

@@ -65,5 +65,4 @@ class ContactResource {
    */
   type?: string;
 }
-
 export default ContactResource;

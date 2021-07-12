@@ -10,5 +10,4 @@ class SwitchSiteInfo {
    */
   name?: string;
 }
-
 export default SwitchSiteInfo;

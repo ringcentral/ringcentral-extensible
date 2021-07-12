@@ -18,14 +18,12 @@ class Index {
     this.rc = parent.rc;
     this.taskId = taskId;
   }
-
   path(withParameter = true): string {
     if (withParameter && this.taskId !== null) {
       return `${this.parent.path()}/tasks/${this.taskId}`;
     }
     return `${this.parent.path()}/tasks`;
   }
-
   /**
    * Returns information about the specified task(s) by ID(s).
    * HTTP Method: get
@@ -36,7 +34,6 @@ class Index {
     if (this.taskId === null) {
       throw new Error('taskId must be specified.');
     }
-
     const r = await this.rc.get<GlipTaskInfo>(
       this.path(),
       undefined,
@@ -55,7 +52,6 @@ class Index {
     if (this.taskId === null) {
       throw new Error('taskId must be specified.');
     }
-
     const r = await this.rc.delete<string>(
       this.path(),
       undefined,
@@ -77,7 +73,6 @@ class Index {
     if (this.taskId === null) {
       throw new Error('taskId must be specified.');
     }
-
     const r = await this.rc.patch<GlipTaskList>(
       this.path(),
       glipUpdateTask,
@@ -91,5 +86,4 @@ class Index {
     return new Complete(this);
   }
 }
-
 export default Index;

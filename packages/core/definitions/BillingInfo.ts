@@ -10,5 +10,4 @@ class BillingInfo {
    */
   costPurchased?: number;
 }
-
 export default BillingInfo;

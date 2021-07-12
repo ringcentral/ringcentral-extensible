@@ -27,5 +27,4 @@ class AccountDeviceUpdate {
    */
   useAsCommonPhone?: boolean;
 }
-
 export default AccountDeviceUpdate;

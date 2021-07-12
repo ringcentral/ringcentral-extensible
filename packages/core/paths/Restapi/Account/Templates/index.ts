@@ -17,14 +17,12 @@ class Index {
     this.rc = parent.rc;
     this.templateId = templateId;
   }
-
   path(withParameter = true): string {
     if (withParameter && this.templateId !== null) {
       return `${this.parent.path()}/templates/${this.templateId}`;
     }
     return `${this.parent.path()}/templates`;
   }
-
   /**
    * Returns the list of user templates for the current account.
    * HTTP Method: get
@@ -57,7 +55,6 @@ class Index {
     if (this.templateId === null) {
       throw new Error('templateId must be specified.');
     }
-
     const r = await this.rc.get<TemplateInfo>(
       this.path(),
       undefined,
@@ -66,5 +63,4 @@ class Index {
     return r.data;
   }
 }
-
 export default Index;

@@ -11,5 +11,4 @@ class GlipPreferencesChats {
     | 'SeparateConversationsAndTeams'
     | 'CombineAllChatTypes';
 }
-
 export default GlipPreferencesChats;

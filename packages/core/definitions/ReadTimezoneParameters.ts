@@ -12,5 +12,4 @@ class ReadTimezoneParameters {
    */
   perPage?: string;
 }
-
 export default ReadTimezoneParameters;

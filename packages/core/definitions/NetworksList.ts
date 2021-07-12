@@ -22,5 +22,4 @@ class NetworksList {
    */
   paging?: ProvisioningPagingInfo;
 }
-
 export default NetworksList;

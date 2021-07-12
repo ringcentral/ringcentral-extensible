@@ -63,5 +63,4 @@ class PresenceInfoResponse {
    */
   presenceStatus?: 'Offline' | 'Busy' | 'Available';
 }
-
 export default PresenceInfoResponse;

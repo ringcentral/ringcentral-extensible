@@ -11,11 +11,9 @@ class Index {
     this.parent = parent;
     this.rc = parent.rc;
   }
-
   path(): string {
     return `${this.parent.path()}/bring-in`;
   }
-
   /**
    * Adds a new party to the call session by bringing-in an established SIP call connection. The maximum number of parties to bring-in is 10; only 1 call party can be added per request. Currently the method is supported for sessions of 'Conference' origin only.
    * HTTP Method: post
@@ -36,5 +34,4 @@ class Index {
     return r.data;
   }
 }
-
 export default Index;

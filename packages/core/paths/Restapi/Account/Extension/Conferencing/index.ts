@@ -15,11 +15,9 @@ class Index {
     this.parent = parent;
     this.rc = parent.rc;
   }
-
   path(): string {
     return `${this.parent.path()}/conferencing`;
   }
-
   /**
    * Returns the information on the Free Conference Calling (FCC) feature for a given extension.
    * HTTP Method: get
@@ -61,5 +59,4 @@ class Index {
     return r.data;
   }
 }
-
 export default Index;

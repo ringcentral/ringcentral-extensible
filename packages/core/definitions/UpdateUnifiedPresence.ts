@@ -12,5 +12,4 @@ class UpdateUnifiedPresence {
    */
   telephony?: UpdateUnifiedPresenceTelephony;
 }
-
 export default UpdateUnifiedPresence;

@@ -5,5 +5,4 @@ class MessageStoreReportArchive {
    */
   records?: ArchiveInfo[];
 }
-
 export default MessageStoreReportArchive;

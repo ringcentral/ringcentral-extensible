@@ -17,5 +17,4 @@ class CreateSubscriptionRequest {
    */
   expiresIn?: number;
 }
-
 export default CreateSubscriptionRequest;

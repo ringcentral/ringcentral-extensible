@@ -45,14 +45,12 @@ class Index {
     this.rc = parent.rc;
     this.accountId = accountId;
   }
-
   path(withParameter = true): string {
     if (withParameter && this.accountId !== null) {
       return `${this.parent.path()}/account/${this.accountId}`;
     }
     return `${this.parent.path()}/account`;
   }
-
   /**
    * Returns basic information about a particular RingCentral customer account.
    * HTTP Method: get
@@ -67,7 +65,6 @@ class Index {
     if (this.accountId === null) {
       throw new Error('accountId must be specified.');
     }
-
     const r = await this.rc.get<GetAccountInfoResponse>(
       this.path(),
       undefined,
@@ -204,5 +201,4 @@ class Index {
     return new EmergencyAddressAutoUpdate(this);
   }
 }
-
 export default Index;

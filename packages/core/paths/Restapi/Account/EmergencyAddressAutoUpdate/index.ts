@@ -21,7 +21,6 @@ class Index {
     this.parent = parent;
     this.rc = parent.rc;
   }
-
   path(): string {
     return `${this.parent.path()}/emergency-address-auto-update`;
   }
@@ -74,5 +73,4 @@ class Index {
     return new WirelessPointsBulkValidate(this);
   }
 }
-
 export default Index;

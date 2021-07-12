@@ -26,5 +26,4 @@ class CreateCustomUserGreetingRequest {
    */
   binary?: Attachment;
 }
-
 export default CreateCustomUserGreetingRequest;

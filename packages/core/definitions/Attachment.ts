@@ -17,5 +17,4 @@ class Attachment {
    */
   contentType?: string;
 }
-
 export default Attachment;

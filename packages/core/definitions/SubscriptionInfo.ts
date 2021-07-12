@@ -71,5 +71,4 @@ class SubscriptionInfo {
    */
   registrationId?: string;
 }
-
 export default SubscriptionInfo;

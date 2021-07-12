@@ -9,5 +9,4 @@ class RangesInfo {
    */
   to?: string;
 }
-
 export default RangesInfo;

@@ -21,14 +21,12 @@ class Index {
     this.rc = parent.rc;
     this.groupId = groupId;
   }
-
   path(withParameter = true): string {
     if (withParameter && this.groupId !== null) {
       return `${this.parent.path()}/call-queues/${this.groupId}`;
     }
     return `${this.parent.path()}/call-queues`;
   }
-
   /**
    * Returns call queue group list.
    * HTTP Method: get
@@ -61,7 +59,6 @@ class Index {
     if (this.groupId === null) {
       throw new Error('groupId must be specified.');
     }
-
     const r = await this.rc.get<CallQueueDetails>(
       this.path(),
       undefined,
@@ -85,7 +82,6 @@ class Index {
     if (this.groupId === null) {
       throw new Error('groupId must be specified.');
     }
-
     const r = await this.rc.put<CallQueueDetails>(
       this.path(),
       callQueueUpdateDetails,
@@ -107,5 +103,4 @@ class Index {
     return new BulkAssign(this);
   }
 }
-
 export default Index;

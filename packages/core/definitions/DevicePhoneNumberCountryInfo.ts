@@ -15,5 +15,4 @@ class DevicePhoneNumberCountryInfo {
    */
   name?: string;
 }
-
 export default DevicePhoneNumberCountryInfo;

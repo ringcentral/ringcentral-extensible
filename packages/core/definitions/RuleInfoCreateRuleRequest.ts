@@ -21,5 +21,4 @@ class RuleInfoCreateRuleRequest {
    */
   forwardingNumbers?: ForwardingNumberInfoRulesCreateRuleRequest[];
 }
-
 export default RuleInfoCreateRuleRequest;

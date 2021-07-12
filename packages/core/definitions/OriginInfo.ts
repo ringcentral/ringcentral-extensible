@@ -13,5 +13,4 @@ class OriginInfo {
     | 'Zoom'
     | 'CallOut';
 }
-
 export default OriginInfo;

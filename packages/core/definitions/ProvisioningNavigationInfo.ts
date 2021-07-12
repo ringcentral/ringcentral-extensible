@@ -18,5 +18,4 @@ class ProvisioningNavigationInfo {
    */
   lastPage?: ProvisioningNavigationInfoUri;
 }
-
 export default ProvisioningNavigationInfo;

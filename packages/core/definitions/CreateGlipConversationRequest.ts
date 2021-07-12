@@ -7,5 +7,4 @@ class CreateGlipConversationRequest {
    */
   members?: CreateGlipMember[];
 }
-
 export default CreateGlipConversationRequest;

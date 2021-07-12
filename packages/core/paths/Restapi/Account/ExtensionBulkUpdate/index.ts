@@ -15,11 +15,9 @@ class Index {
     this.parent = parent;
     this.rc = parent.rc;
   }
-
   path(): string {
     return `${this.parent.path()}/extension-bulk-update`;
   }
-
   /**
    * Updates multiple extensions at once. Maximum 500 extensions can be updated per request.
    * HTTP Method: post
@@ -45,5 +43,4 @@ class Index {
     return new Tasks(this, taskId);
   }
 }
-
 export default Index;

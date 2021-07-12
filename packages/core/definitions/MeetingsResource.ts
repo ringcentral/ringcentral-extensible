@@ -22,5 +22,4 @@ class MeetingsResource {
    */
   navigation?: MeetingsNavigationInfo;
 }
-
 export default MeetingsResource;

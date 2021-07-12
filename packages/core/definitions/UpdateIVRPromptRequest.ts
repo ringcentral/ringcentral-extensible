@@ -4,5 +4,4 @@ class UpdateIVRPromptRequest {
    */
   filename?: string;
 }
-
 export default UpdateIVRPromptRequest;

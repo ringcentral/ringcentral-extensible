@@ -18,5 +18,4 @@ class CallRecordingSettingsResource {
    */
   greetings?: GreetingResource[];
 }
-
 export default CallRecordingSettingsResource;

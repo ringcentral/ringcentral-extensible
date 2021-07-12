@@ -78,5 +78,4 @@ class MessageStoreCallerInfoResponseTo {
    */
   phoneNumber?: string;
 }
-
 export default MessageStoreCallerInfoResponseTo;

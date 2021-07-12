@@ -37,5 +37,4 @@ class WeeklyScheduleInfo {
    */
   sunday?: TimeInterval[];
 }
-
 export default WeeklyScheduleInfo;

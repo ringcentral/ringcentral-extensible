@@ -106,5 +106,4 @@ class GetTokenRequest {
    */
   code_verifier?: string;
 }
-
 export default GetTokenRequest;

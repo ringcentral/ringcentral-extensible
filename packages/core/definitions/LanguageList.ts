@@ -23,5 +23,4 @@ class LanguageList {
    */
   paging?: ProvisioningPagingInfo;
 }
-
 export default LanguageList;

@@ -38,5 +38,4 @@ class ListStandardGreetingsParameters {
     | 'AnnouncementExtensionAnsweringRule'
     | 'SharedLinesGroupAnsweringRule';
 }
-
 export default ListStandardGreetingsParameters;

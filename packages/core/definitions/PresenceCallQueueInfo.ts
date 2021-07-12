@@ -20,5 +20,4 @@ class PresenceCallQueueInfo {
    */
   editableMemberStatus?: boolean;
 }
-
 export default PresenceCallQueueInfo;

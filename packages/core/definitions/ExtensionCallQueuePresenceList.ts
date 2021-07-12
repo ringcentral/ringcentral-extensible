@@ -5,5 +5,4 @@ class ExtensionCallQueuePresenceList {
    */
   records?: ExtensionCallQueuePresence[];
 }
-
 export default ExtensionCallQueuePresenceList;

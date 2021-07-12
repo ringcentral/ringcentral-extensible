@@ -5,5 +5,4 @@ class CallSession {
    */
   session?: CallSessionObject;
 }
-
 export default CallSession;

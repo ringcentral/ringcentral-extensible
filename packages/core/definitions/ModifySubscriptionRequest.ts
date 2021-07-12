@@ -10,5 +10,4 @@ class ModifySubscriptionRequest {
    */
   expiresIn?: number;
 }
-
 export default ModifySubscriptionRequest;

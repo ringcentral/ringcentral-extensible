@@ -7,5 +7,4 @@ class AssistantResource {
    */
   name?: string;
 }
-
 export default AssistantResource;

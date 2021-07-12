@@ -47,5 +47,4 @@ class GlipChatInfo {
    */
   members?: GlipMemberInfo[];
 }
-
 export default GlipChatInfo;

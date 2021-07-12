@@ -25,5 +25,4 @@ class UserSearchResponse {
    */
   totalResults?: number;
 }
-
 export default UserSearchResponse;

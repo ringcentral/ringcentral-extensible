@@ -44,5 +44,4 @@ class AutomaticLocationUpdatesDeviceInfo {
    */
   phoneLines?: AutomaticLocationUpdatesPhoneLine[];
 }
-
 export default AutomaticLocationUpdatesDeviceInfo;

@@ -12,5 +12,4 @@ class CallerInfoFrom {
    */
   location?: string;
 }
-
 export default CallerInfoFrom;

@@ -15,5 +15,4 @@ class CompanyCallLogSyncInfo {
    */
   syncTime?: string;
 }
-
 export default CompanyCallLogSyncInfo;

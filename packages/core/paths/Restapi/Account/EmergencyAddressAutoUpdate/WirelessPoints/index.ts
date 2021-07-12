@@ -19,14 +19,12 @@ class Index {
     this.rc = parent.rc;
     this.pointId = pointId;
   }
-
   path(withParameter = true): string {
     if (withParameter && this.pointId !== null) {
       return `${this.parent.path()}/wireless-points/${this.pointId}`;
     }
     return `${this.parent.path()}/wireless-points`;
   }
-
   /**
    * Returns account wireless points configured and used for Automatic Location Updates feature.
    * HTTP Method: get
@@ -80,7 +78,6 @@ class Index {
     if (this.pointId === null) {
       throw new Error('pointId must be specified.');
     }
-
     const r = await this.rc.get<WirelessPointInfo>(
       this.path(),
       undefined,
@@ -104,7 +101,6 @@ class Index {
     if (this.pointId === null) {
       throw new Error('pointId must be specified.');
     }
-
     const r = await this.rc.put<WirelessPointInfo>(
       this.path(),
       updateWirelessPoint,
@@ -126,7 +122,6 @@ class Index {
     if (this.pointId === null) {
       throw new Error('pointId must be specified.');
     }
-
     const r = await this.rc.delete<string>(
       this.path(),
       undefined,
@@ -135,5 +130,4 @@ class Index {
     return r.data;
   }
 }
-
 export default Index;

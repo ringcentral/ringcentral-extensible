@@ -43,5 +43,4 @@ class MessageBatchResponse {
    */
   creationTime?: string;
 }
-
 export default MessageBatchResponse;

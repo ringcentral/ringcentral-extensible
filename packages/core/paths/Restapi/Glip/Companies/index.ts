@@ -13,14 +13,12 @@ class Index {
     this.rc = parent.rc;
     this.companyId = companyId;
   }
-
   path(withParameter = true): string {
     if (withParameter && this.companyId !== null) {
       return `${this.parent.path()}/companies/${this.companyId}`;
     }
     return `${this.parent.path()}/companies`;
   }
-
   /**
    * Returns information about one or more companies by their IDs.
    * HTTP Method: get
@@ -33,7 +31,6 @@ class Index {
     if (this.companyId === null) {
       throw new Error('companyId must be specified.');
     }
-
     const r = await this.rc.get<GlipCompany>(
       this.path(),
       undefined,
@@ -42,5 +39,4 @@ class Index {
     return r.data;
   }
 }
-
 export default Index;

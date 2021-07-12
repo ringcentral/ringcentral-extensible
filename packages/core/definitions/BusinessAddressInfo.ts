@@ -25,5 +25,4 @@ class BusinessAddressInfo {
    */
   zip?: string;
 }
-
 export default BusinessAddressInfo;

@@ -7,5 +7,4 @@ class GlipPostMembersIdsListBody {
    */
   members?: GlipMemberInfo[];
 }
-
 export default GlipPostMembersIdsListBody;

@@ -10,11 +10,9 @@ class Index {
     this.parent = parent;
     this.rc = parent.rc;
   }
-
   path(): string {
     return `${this.parent.path()}/content`;
   }
-
   /**
    * Returns media content of a call recording.
    * HTTP Method: get
@@ -31,5 +29,4 @@ class Index {
     return r.data;
   }
 }
-
 export default Index;

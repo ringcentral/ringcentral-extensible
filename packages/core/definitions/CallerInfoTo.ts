@@ -53,5 +53,4 @@ class CallerInfoTo {
     | 'ProhibitedDestination'
     | 'InternationalDisabled';
 }
-
 export default CallerInfoTo;

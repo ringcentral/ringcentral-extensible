@@ -4,5 +4,4 @@ class CompanyAnsweringRuleExtensionInfo {
    */
   id?: string;
 }
-
 export default CompanyAnsweringRuleExtensionInfo;

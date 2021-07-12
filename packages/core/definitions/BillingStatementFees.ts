@@ -11,5 +11,4 @@ class BillingStatementFees {
    */
   freeServiceCredit?: number;
 }
-
 export default BillingStatementFees;

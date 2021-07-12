@@ -12,7 +12,6 @@ class Index {
     this.parent = parent;
     this.rc = parent.rc;
   }
-
   path(): string {
     return `${this.parent.path()}/oauth`;
   }
@@ -29,5 +28,4 @@ class Index {
     return new Authorize(this);
   }
 }
-
 export default Index;

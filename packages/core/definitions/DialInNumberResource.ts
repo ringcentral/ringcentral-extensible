@@ -17,5 +17,4 @@ class DialInNumberResource {
    */
   country?: MeetingsCountryResource;
 }
-
 export default DialInNumberResource;

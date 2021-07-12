@@ -22,5 +22,4 @@ class EmergencyLocationList {
    */
   paging?: ProvisioningPagingInfo;
 }
-
 export default EmergencyLocationList;

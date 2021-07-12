@@ -10,5 +10,4 @@ class CallInfoCQ {
    */
   additional?: AdditionalCQInfo;
 }
-
 export default CallInfoCQ;

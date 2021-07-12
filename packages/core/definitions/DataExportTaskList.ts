@@ -17,5 +17,4 @@ class DataExportTaskList {
    */
   paging?: GlipDataExportPagingInfo;
 }
-
 export default DataExportTaskList;

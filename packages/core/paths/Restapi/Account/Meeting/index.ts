@@ -10,7 +10,6 @@ class Index {
     this.parent = parent;
     this.rc = parent.rc;
   }
-
   path(): string {
     return `${this.parent.path()}/meeting`;
   }
@@ -19,5 +18,4 @@ class Index {
     return new LockedSettings(this);
   }
 }
-
 export default Index;

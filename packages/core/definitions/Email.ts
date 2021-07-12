@@ -9,5 +9,4 @@ class Email {
    */
   value?: string;
 }
-
 export default Email;

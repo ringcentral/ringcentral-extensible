@@ -5,5 +5,4 @@ class CompanyBusinessHoursUpdateRequest {
    */
   schedule?: CompanyBusinessHoursScheduleInfo;
 }
-
 export default CompanyBusinessHoursUpdateRequest;

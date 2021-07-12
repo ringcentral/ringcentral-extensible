@@ -24,5 +24,4 @@ class ExtensionCallerIdInfo {
    */
   extensionNumberForInternalCalls?: boolean;
 }
-
 export default ExtensionCallerIdInfo;

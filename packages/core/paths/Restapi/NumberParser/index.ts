@@ -10,7 +10,6 @@ class Index {
     this.parent = parent;
     this.rc = parent.rc;
   }
-
   path(): string {
     return `${this.parent.path()}/number-parser`;
   }
@@ -19,5 +18,4 @@ class Index {
     return new Parse(this);
   }
 }
-
 export default Index;

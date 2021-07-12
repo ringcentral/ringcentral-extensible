@@ -26,5 +26,4 @@ class UserTemplates {
    */
   paging?: ProvisioningPagingInfo;
 }
-
 export default UserTemplates;

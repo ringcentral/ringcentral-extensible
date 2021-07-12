@@ -17,5 +17,4 @@ class MeetingUserSettingsResponse {
    */
   telephony?: TelephonyUserMeetingSettings;
 }
-
 export default MeetingUserSettingsResponse;

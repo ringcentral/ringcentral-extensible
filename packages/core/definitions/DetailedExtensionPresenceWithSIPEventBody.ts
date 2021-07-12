@@ -77,5 +77,4 @@ class DetailedExtensionPresenceWithSIPEventBody {
    */
   ownerId?: string;
 }
-
 export default DetailedExtensionPresenceWithSIPEventBody;

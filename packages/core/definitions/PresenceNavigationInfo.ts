@@ -18,5 +18,4 @@ class PresenceNavigationInfo {
    */
   lastPage?: PresenceNavigationInfoURI;
 }
-
 export default PresenceNavigationInfo;

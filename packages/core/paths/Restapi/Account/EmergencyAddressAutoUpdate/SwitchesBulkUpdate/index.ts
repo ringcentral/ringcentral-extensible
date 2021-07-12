@@ -14,11 +14,9 @@ class Index {
     this.parent = parent;
     this.rc = parent.rc;
   }
-
   path(): string {
     return `${this.parent.path()}/switches-bulk-update`;
   }
-
   /**
    * Updates multiple switches in corporate map. The maximum number of switches per request is 10 000; limitation for account is 10 000.
    * HTTP Method: post
@@ -40,5 +38,4 @@ class Index {
     return r.data;
   }
 }
-
 export default Index;

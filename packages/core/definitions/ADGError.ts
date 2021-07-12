@@ -24,5 +24,4 @@ class ADGError {
    */
   message?: string;
 }
-
 export default ADGError;

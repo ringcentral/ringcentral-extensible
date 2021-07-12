@@ -33,5 +33,4 @@ class ServiceInfo {
    */
   contractedCountry?: ContractedCountryInfo;
 }
-
 export default ServiceInfo;

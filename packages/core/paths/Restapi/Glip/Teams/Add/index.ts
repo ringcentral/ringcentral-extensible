@@ -11,11 +11,9 @@ class Index {
     this.parent = parent;
     this.rc = parent.rc;
   }
-
   path(): string {
     return `${this.parent.path()}/add`;
   }
-
   /**
    * Adds members to the specified team. A team is a chat between 2 and more participants assigned with specific name.
    * HTTP Method: post
@@ -37,5 +35,4 @@ class Index {
     return r.data;
   }
 }
-
 export default Index;

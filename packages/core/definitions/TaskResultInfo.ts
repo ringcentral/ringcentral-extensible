@@ -7,5 +7,4 @@ class TaskResultInfo {
    */
   records?: TaskResultRecord[];
 }
-
 export default TaskResultInfo;

@@ -22,5 +22,4 @@ class CallerBlockingSettingsUpdate {
    */
   greetings?: BlockedCallerGreetingInfo[];
 }
-
 export default CallerBlockingSettingsUpdate;

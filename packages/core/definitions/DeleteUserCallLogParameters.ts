@@ -6,5 +6,4 @@ class DeleteUserCallLogParameters {
    */
   dateTo?: string;
 }
-
 export default DeleteUserCallLogParameters;

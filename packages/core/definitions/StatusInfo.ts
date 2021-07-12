@@ -12,5 +12,4 @@ class StatusInfo {
    */
   comment?: string;
 }
-
 export default StatusInfo;

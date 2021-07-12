@@ -11,11 +11,9 @@ class Index {
     this.parent = parent;
     this.rc = parent.rc;
   }
-
   path(): string {
     return `${this.parent.path()}/revoke`;
   }
-
   /**
    * Revokes access/refresh token. Requests to this endpoint must be authenticated with HTTP Basic scheme using the application key and application secret as login and password, correspondingly.
    * HTTP Method: post
@@ -35,5 +33,4 @@ class Index {
     return r.data;
   }
 }
-
 export default Index;

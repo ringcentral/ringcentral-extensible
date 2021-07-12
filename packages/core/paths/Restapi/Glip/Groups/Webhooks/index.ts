@@ -11,11 +11,9 @@ class Index {
     this.parent = parent;
     this.rc = parent.rc;
   }
-
   path(): string {
     return `${this.parent.path()}/webhooks`;
   }
-
   /**
    * Returns webhooks which are available for the current user by group ID.
    * HTTP Method: get
@@ -50,5 +48,4 @@ class Index {
     return r.data;
   }
 }
-
 export default Index;

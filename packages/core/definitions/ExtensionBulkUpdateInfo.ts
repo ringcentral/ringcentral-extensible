@@ -109,5 +109,4 @@ class ExtensionBulkUpdateInfo {
    */
   references?: ReferenceInfo[];
 }
-
 export default ExtensionBulkUpdateInfo;

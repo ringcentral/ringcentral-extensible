@@ -31,5 +31,4 @@ class PrivateIpRangeInfo {
    */
   matched?: boolean;
 }
-
 export default PrivateIpRangeInfo;

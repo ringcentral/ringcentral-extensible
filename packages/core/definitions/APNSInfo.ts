@@ -6,5 +6,4 @@ class APNSInfo {
    */
   aps?: APSInfo;
 }
-
 export default APNSInfo;

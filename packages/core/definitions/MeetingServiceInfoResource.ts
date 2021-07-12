@@ -22,5 +22,4 @@ class MeetingServiceInfoResource {
    */
   dialInNumbers?: DialInNumberResource[];
 }
-
 export default MeetingServiceInfoResource;

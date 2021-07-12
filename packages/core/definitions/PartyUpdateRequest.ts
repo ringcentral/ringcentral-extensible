@@ -5,5 +5,4 @@ class PartyUpdateRequest {
    */
   party?: PartyUpdateInfo;
 }
-
 export default PartyUpdateRequest;

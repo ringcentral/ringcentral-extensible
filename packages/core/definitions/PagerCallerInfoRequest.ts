@@ -12,5 +12,4 @@ class PagerCallerInfoRequest {
    */
   extensionNumber?: string;
 }
-
 export default PagerCallerInfoRequest;

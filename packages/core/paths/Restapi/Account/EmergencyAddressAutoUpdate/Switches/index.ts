@@ -19,14 +19,12 @@ class Index {
     this.rc = parent.rc;
     this.switchId = switchId;
   }
-
   path(withParameter = true): string {
     if (withParameter && this.switchId !== null) {
       return `${this.parent.path()}/switches/${this.switchId}`;
     }
     return `${this.parent.path()}/switches`;
   }
-
   /**
    * Returns corporate map of configured network switches with the assigned emergency addresses for the logged-in account.
    * HTTP Method: get
@@ -80,7 +78,6 @@ class Index {
     if (this.switchId === null) {
       throw new Error('switchId must be specified.');
     }
-
     const r = await this.rc.get<SwitchInfo>(
       this.path(),
       undefined,
@@ -104,7 +101,6 @@ class Index {
     if (this.switchId === null) {
       throw new Error('switchId must be specified.');
     }
-
     const r = await this.rc.put<SwitchInfo>(
       this.path(),
       updateSwitchInfo,
@@ -126,7 +122,6 @@ class Index {
     if (this.switchId === null) {
       throw new Error('switchId must be specified.');
     }
-
     const r = await this.rc.delete<string>(
       this.path(),
       undefined,
@@ -135,5 +130,4 @@ class Index {
     return r.data;
   }
 }
-
 export default Index;

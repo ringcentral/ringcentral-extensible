@@ -19,5 +19,4 @@ class CompanyAnsweringRuleScheduleInfo {
    */
   ref?: 'BusinessHours' | 'AfterHours';
 }
-
 export default CompanyAnsweringRuleScheduleInfo;

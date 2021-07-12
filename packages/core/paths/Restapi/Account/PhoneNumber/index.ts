@@ -17,14 +17,12 @@ class Index {
     this.rc = parent.rc;
     this.phoneNumberId = phoneNumberId;
   }
-
   path(withParameter = true): string {
     if (withParameter && this.phoneNumberId !== null) {
       return `${this.parent.path()}/phone-number/${this.phoneNumberId}`;
     }
     return `${this.parent.path()}/phone-number`;
   }
-
   /**
    * Returns the list of phone numbers assigned to RingCentral customer account. Both company-level and extension-level numbers are returned.
    * HTTP Method: get
@@ -59,7 +57,6 @@ class Index {
     if (this.phoneNumberId === null) {
       throw new Error('phoneNumberId must be specified.');
     }
-
     const r = await this.rc.get<CompanyPhoneNumberInfo>(
       this.path(),
       undefined,
@@ -68,5 +65,4 @@ class Index {
     return r.data;
   }
 }
-
 export default Index;

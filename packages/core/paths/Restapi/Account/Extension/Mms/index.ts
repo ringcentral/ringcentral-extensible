@@ -15,11 +15,9 @@ class Index {
     this.parent = parent;
     this.rc = parent.rc;
   }
-
   path(): string {
     return `${this.parent.path()}/mms`;
   }
-
   /**
    * Creates and sends media messages. Sending MMS messages simultaneously to different recipients is limited up to 50 requests per minute; relevant for all client applications.
    * HTTP Method: post
@@ -42,5 +40,4 @@ class Index {
     return r.data;
   }
 }
-
 export default Index;

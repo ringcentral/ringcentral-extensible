@@ -140,5 +140,4 @@ class GetExtensionInfoResponse {
    */
   site?: AutomaticLocationUpdatesSiteInfo;
 }
-
 export default GetExtensionInfoResponse;

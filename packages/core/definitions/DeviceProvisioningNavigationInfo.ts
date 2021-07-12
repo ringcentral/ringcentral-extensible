@@ -18,5 +18,4 @@ class DeviceProvisioningNavigationInfo {
    */
   lastPage?: DeviceProvisioningNavigationInfoUri;
 }
-
 export default DeviceProvisioningNavigationInfo;

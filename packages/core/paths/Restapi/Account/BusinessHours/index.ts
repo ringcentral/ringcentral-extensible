@@ -14,11 +14,9 @@ class Index {
     this.parent = parent;
     this.rc = parent.rc;
   }
-
   path(): string {
     return `${this.parent.path()}/business-hours`;
   }
-
   /**
    * Returns the company business hours schedule. Business hours (and After hours - all the remaining time) schedules are commonly used for setting call handling rules - `business-hours-rule` and `after-hours-rule` correspondingly.
    * HTTP Method: get
@@ -59,5 +57,4 @@ class Index {
     return r.data;
   }
 }
-
 export default Index;

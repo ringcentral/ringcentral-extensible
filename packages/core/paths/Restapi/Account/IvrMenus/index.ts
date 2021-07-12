@@ -13,14 +13,12 @@ class Index {
     this.rc = parent.rc;
     this.ivrMenuId = ivrMenuId;
   }
-
   path(withParameter = true): string {
     if (withParameter && this.ivrMenuId !== null) {
       return `${this.parent.path()}/ivr-menus/${this.ivrMenuId}`;
     }
     return `${this.parent.path()}/ivr-menus`;
   }
-
   /**
    * Creates a company IVR menu.
    * HTTP Method: post
@@ -54,7 +52,6 @@ class Index {
     if (this.ivrMenuId === null) {
       throw new Error('ivrMenuId must be specified.');
     }
-
     const r = await this.rc.get<IVRMenuInfo>(
       this.path(),
       undefined,
@@ -78,7 +75,6 @@ class Index {
     if (this.ivrMenuId === null) {
       throw new Error('ivrMenuId must be specified.');
     }
-
     const r = await this.rc.put<IVRMenuInfo>(
       this.path(),
       iVRMenuInfo,
@@ -88,5 +84,4 @@ class Index {
     return r.data;
   }
 }
-
 export default Index;

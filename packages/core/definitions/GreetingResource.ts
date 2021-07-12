@@ -8,5 +8,4 @@ class GreetingResource {
    */
   mode?: 'Default' | 'Custom';
 }
-
 export default GreetingResource;

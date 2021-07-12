@@ -5,5 +5,4 @@ class GlipCreatorInfo {
    */
   id?: string;
 }
-
 export default GlipCreatorInfo;

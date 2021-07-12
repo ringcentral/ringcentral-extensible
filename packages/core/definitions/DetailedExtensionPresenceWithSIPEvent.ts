@@ -25,5 +25,4 @@ class DetailedExtensionPresenceWithSIPEvent {
    */
   body?: DetailedExtensionPresenceWithSIPEventBody;
 }
-
 export default DetailedExtensionPresenceWithSIPEvent;

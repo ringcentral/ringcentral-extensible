@@ -25,5 +25,4 @@ class ExtensionInfoEvent {
    */
   body?: ExtensionInfoEventBody;
 }
-
 export default ExtensionInfoEvent;

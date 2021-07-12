@@ -29,5 +29,4 @@ class TelephonySessionsEventPartyInfo {
    */
   status?: CallSessionStatusInfo;
 }
-
 export default TelephonySessionsEventPartyInfo;

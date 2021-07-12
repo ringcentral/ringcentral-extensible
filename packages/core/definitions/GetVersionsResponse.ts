@@ -21,5 +21,4 @@ class GetVersionsResponse {
    */
   serverRevision?: string;
 }
-
 export default GetVersionsResponse;

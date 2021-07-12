@@ -13,5 +13,4 @@ class CreateIVRPromptRequest {
    */
   name?: string;
 }
-
 export default CreateIVRPromptRequest;

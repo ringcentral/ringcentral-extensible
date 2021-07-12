@@ -83,5 +83,4 @@ class QueueInfo {
    */
   unconditionalForwarding?: UnconditionalForwardingInfo[];
 }
-
 export default QueueInfo;

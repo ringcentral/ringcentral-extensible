@@ -124,5 +124,4 @@ class GlipMessageAttachmentInfo {
    */
   description?: string;
 }
-
 export default GlipMessageAttachmentInfo;

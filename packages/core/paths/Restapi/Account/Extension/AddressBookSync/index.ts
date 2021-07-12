@@ -14,11 +14,9 @@ class Index {
     this.parent = parent;
     this.rc = parent.rc;
   }
-
   path(): string {
     return `${this.parent.path()}/address-book-sync`;
   }
-
   /**
    * Synchronizes user contacts.
    * HTTP Method: get
@@ -39,5 +37,4 @@ class Index {
     return r.data;
   }
 }
-
 export default Index;

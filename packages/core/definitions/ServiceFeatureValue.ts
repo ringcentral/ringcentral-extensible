@@ -18,5 +18,4 @@ class ServiceFeatureValue {
     | 'InsufficientPermissions'
     | 'ApplicationLimitation';
 }
-
 export default ServiceFeatureValue;

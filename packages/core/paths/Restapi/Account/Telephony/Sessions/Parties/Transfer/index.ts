@@ -11,11 +11,9 @@ class Index {
     this.parent = parent;
     this.rc = parent.rc;
   }
-
   path(): string {
     return `${this.parent.path()}/transfer`;
   }
-
   /**
    * Transfers an answered call to the specified call party. Applicable for a call session in "Answered" or "Hold" state.
    * HTTP Method: post
@@ -36,5 +34,4 @@ class Index {
     return r.data;
   }
 }
-
 export default Index;

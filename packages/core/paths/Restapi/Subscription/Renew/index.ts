@@ -11,11 +11,9 @@ class Index {
     this.parent = parent;
     this.rc = parent.rc;
   }
-
   path(): string {
     return `${this.parent.path()}/renew`;
   }
-
   /**
    * Renews an existent subscription by posting request with an empty body.
    * HTTP Method: post
@@ -31,5 +29,4 @@ class Index {
     return r.data;
   }
 }
-
 export default Index;

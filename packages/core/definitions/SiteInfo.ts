@@ -52,5 +52,4 @@ class SiteInfo {
    */
   code?: string;
 }
-
 export default SiteInfo;

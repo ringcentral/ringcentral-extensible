@@ -77,5 +77,4 @@ class GlipEventCreate {
    */
   description?: string;
 }
-
 export default GlipEventCreate;

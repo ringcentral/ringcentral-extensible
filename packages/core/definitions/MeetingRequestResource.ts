@@ -79,5 +79,4 @@ class MeetingRequestResource {
    */
   globalDialInCountries?: string[];
 }
-
 export default MeetingRequestResource;

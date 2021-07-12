@@ -69,5 +69,4 @@ class ServiceFeatureInfo {
    */
   enabled?: boolean;
 }
-
 export default ServiceFeatureInfo;

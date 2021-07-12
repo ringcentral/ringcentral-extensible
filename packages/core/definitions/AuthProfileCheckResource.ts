@@ -14,5 +14,4 @@ class AuthProfileCheckResource {
    */
   details?: ActivePermissionResource;
 }
-
 export default AuthProfileCheckResource;

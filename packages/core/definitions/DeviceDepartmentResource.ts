@@ -13,5 +13,4 @@ class DeviceDepartmentResource {
    */
   extensionNumber?: string;
 }
-
 export default DeviceDepartmentResource;

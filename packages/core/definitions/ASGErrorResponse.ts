@@ -11,5 +11,4 @@ class ASGErrorResponse {
    */
   description?: string;
 }
-
 export default ASGErrorResponse;

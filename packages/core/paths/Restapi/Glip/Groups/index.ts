@@ -11,7 +11,6 @@ class Index {
     this.parent = parent;
     this.rc = parent.rc;
   }
-
   path(): string {
     return `${this.parent.path()}/groups`;
   }
@@ -24,5 +23,4 @@ class Index {
     return new Webhooks(this);
   }
 }
-
 export default Index;

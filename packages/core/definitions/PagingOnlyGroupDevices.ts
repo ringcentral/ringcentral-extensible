@@ -23,5 +23,4 @@ class PagingOnlyGroupDevices {
    */
   paging?: ProvisioningPagingInfo;
 }
-
 export default PagingOnlyGroupDevices;

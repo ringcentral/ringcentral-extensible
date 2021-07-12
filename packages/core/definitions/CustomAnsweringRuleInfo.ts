@@ -97,5 +97,4 @@ class CustomAnsweringRuleInfo {
    */
   sharedLines?: SharedLinesInfo;
 }
-
 export default CustomAnsweringRuleInfo;

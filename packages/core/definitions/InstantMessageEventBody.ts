@@ -91,5 +91,4 @@ class InstantMessageEventBody {
    */
   ownerId?: string;
 }
-
 export default InstantMessageEventBody;

@@ -11,5 +11,4 @@ class DeleteMessageParameters {
    */
   conversationId?: number;
 }
-
 export default DeleteMessageParameters;

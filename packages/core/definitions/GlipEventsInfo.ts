@@ -10,5 +10,4 @@ class GlipEventsInfo {
    */
   navigation?: GlipNavigationInfo;
 }
-
 export default GlipEventsInfo;

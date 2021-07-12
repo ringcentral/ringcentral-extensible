@@ -5,5 +5,4 @@ class MakeRingOutCoutryInfo {
    */
   id?: string;
 }
-
 export default MakeRingOutCoutryInfo;

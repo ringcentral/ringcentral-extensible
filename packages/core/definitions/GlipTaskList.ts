@@ -5,5 +5,4 @@ class GlipTaskList {
    */
   records?: GlipTaskInfo[];
 }
-
 export default GlipTaskList;

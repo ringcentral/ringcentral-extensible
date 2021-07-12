@@ -10,5 +10,4 @@ class UserBusinessHoursUpdateResponse {
    */
   schedule?: UserBusinessHoursScheduleInfo;
 }
-
 export default UserBusinessHoursUpdateResponse;

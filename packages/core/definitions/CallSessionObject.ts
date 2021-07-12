@@ -25,5 +25,4 @@ class CallSessionObject {
    */
   creationTime?: string;
 }
-
 export default CallSessionObject;

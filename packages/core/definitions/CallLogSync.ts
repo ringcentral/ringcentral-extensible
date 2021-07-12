@@ -15,5 +15,4 @@ class CallLogSync {
    */
   syncInfo?: SyncInfoCallLog;
 }
-
 export default CallLogSync;

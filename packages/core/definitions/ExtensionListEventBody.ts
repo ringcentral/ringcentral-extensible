@@ -15,5 +15,4 @@ class ExtensionListEventBody {
    */
   ownerId?: string;
 }
-
 export default ExtensionListEventBody;

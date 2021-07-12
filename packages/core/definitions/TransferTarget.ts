@@ -20,5 +20,4 @@ class TransferTarget {
    */
   extensionNumber?: string;
 }
-
 export default TransferTarget;

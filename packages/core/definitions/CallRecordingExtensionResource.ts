@@ -21,5 +21,4 @@ class CallRecordingExtensionResource {
    */
   callDirection?: 'Outbound' | 'Inbound' | 'All';
 }
-
 export default CallRecordingExtensionResource;

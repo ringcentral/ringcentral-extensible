@@ -32,5 +32,4 @@ class CreateAnsweringRuleForwardingNumberInfo {
     | 'BusinessMobilePhone'
     | 'ExternalCarrier';
 }
-
 export default CreateAnsweringRuleForwardingNumberInfo;

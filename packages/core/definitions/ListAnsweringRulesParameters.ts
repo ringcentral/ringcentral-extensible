@@ -25,5 +25,4 @@ class ListAnsweringRulesParameters {
    */
   perPage?: string;
 }
-
 export default ListAnsweringRulesParameters;

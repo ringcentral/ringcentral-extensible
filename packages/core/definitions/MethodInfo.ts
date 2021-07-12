@@ -10,5 +10,4 @@ class MethodInfo {
    */
   name?: 'Ground' | '2 Day' | 'Overnight';
 }
-
 export default MethodInfo;

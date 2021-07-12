@@ -28,14 +28,12 @@ class Index {
     this.rc = parent.rc;
     this.partyId = partyId;
   }
-
   path(withParameter = true): string {
     if (withParameter && this.partyId !== null) {
       return `${this.parent.path()}/parties/${this.partyId}`;
     }
     return `${this.parent.path()}/parties`;
   }
-
   /**
    * Returns a call party status by ID.
    * HTTP Method: get
@@ -47,7 +45,6 @@ class Index {
     if (this.partyId === null) {
       throw new Error('partyId must be specified.');
     }
-
     const r = await this.rc.get<CallParty>(
       this.path(),
       undefined,
@@ -67,7 +64,6 @@ class Index {
     if (this.partyId === null) {
       throw new Error('partyId must be specified.');
     }
-
     const r = await this.rc.delete<string>(
       this.path(),
       undefined,
@@ -90,7 +86,6 @@ class Index {
     if (this.partyId === null) {
       throw new Error('partyId must be specified.');
     }
-
     const r = await this.rc.patch<CallParty>(
       this.path(),
       partyUpdateRequest,
@@ -160,5 +155,4 @@ class Index {
     return new Recordings(this, recordingId);
   }
 }
-
 export default Index;

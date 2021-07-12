@@ -20,5 +20,4 @@ class CreateDataExportTaskRequest {
    */
   chatIds?: string[];
 }
-
 export default CreateDataExportTaskRequest;

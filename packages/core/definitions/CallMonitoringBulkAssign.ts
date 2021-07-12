@@ -13,5 +13,4 @@ class CallMonitoringBulkAssign {
    */
   removedExtensions?: CallMonitoringExtensionInfo[];
 }
-
 export default CallMonitoringBulkAssign;

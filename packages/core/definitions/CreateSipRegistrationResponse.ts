@@ -29,5 +29,4 @@ class CreateSipRegistrationResponse {
    */
   sipErrorCodes?: string[];
 }
-
 export default CreateSipRegistrationResponse;

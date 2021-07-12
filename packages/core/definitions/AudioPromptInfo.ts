@@ -10,5 +10,4 @@ class AudioPromptInfo {
    */
   id?: string;
 }
-
 export default AudioPromptInfo;

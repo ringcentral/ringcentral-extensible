@@ -23,5 +23,4 @@ class MessageEventBody {
    */
   ownerId?: string;
 }
-
 export default MessageEventBody;

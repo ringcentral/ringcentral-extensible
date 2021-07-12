@@ -32,5 +32,4 @@ class UserAnsweringRuleListRecord {
    */
   sharedLines?: SharedLinesInfo;
 }
-
 export default UserAnsweringRuleListRecord;

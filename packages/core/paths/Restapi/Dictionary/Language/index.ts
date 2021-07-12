@@ -13,14 +13,12 @@ class Index {
     this.rc = parent.rc;
     this.languageId = languageId;
   }
-
   path(withParameter = true): string {
     if (withParameter && this.languageId !== null) {
       return `${this.parent.path()}/language/${this.languageId}`;
     }
     return `${this.parent.path()}/language`;
   }
-
   /**
    * Returns the information about supported languages.
    * HTTP Method: get
@@ -46,7 +44,6 @@ class Index {
     if (this.languageId === null) {
       throw new Error('languageId must be specified.');
     }
-
     const r = await this.rc.get<LanguageInfo>(
       this.path(),
       undefined,
@@ -55,5 +52,4 @@ class Index {
     return r.data;
   }
 }
-
 export default Index;

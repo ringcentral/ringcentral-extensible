@@ -11,11 +11,9 @@ class Index {
     this.parent = parent;
     this.rc = parent.rc;
   }
-
   path(): string {
     return `${this.parent.path()}/emergency-locations`;
   }
-
   /**
    * Returns a list of emergency response locations available for the current user extension.
    * HTTP Method: get
@@ -34,5 +32,4 @@ class Index {
     return r.data;
   }
 }
-
 export default Index;

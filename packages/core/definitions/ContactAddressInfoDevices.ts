@@ -25,5 +25,4 @@ class ContactAddressInfoDevices {
    */
   zip?: string;
 }
-
 export default ContactAddressInfoDevices;

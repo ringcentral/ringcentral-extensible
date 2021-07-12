@@ -6,5 +6,4 @@ class CreateMultipleSwitchesResponse {
    */
   task?: BulkTaskInfoSwUpdate;
 }
-
 export default CreateMultipleSwitchesResponse;

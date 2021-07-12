@@ -56,5 +56,4 @@ class EmergencyLocationInfo {
    */
   owners?: LocationOwnerInfo[];
 }
-
 export default EmergencyLocationInfo;

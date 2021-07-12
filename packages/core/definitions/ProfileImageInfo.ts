@@ -29,5 +29,4 @@ class ProfileImageInfo {
    */
   scales?: ProfileImageInfoURI[];
 }
-
 export default ProfileImageInfo;

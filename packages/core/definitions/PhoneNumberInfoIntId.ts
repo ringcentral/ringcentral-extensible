@@ -59,5 +59,4 @@ class PhoneNumberInfoIntId {
     | 'ForwardedCompanyNumber'
     | 'ContactCenterNumber';
 }
-
 export default PhoneNumberInfoIntId;

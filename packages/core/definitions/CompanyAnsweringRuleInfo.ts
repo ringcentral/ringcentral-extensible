@@ -62,5 +62,4 @@ class CompanyAnsweringRuleInfo {
    */
   greetings?: GreetingInfo[];
 }
-
 export default CompanyAnsweringRuleInfo;

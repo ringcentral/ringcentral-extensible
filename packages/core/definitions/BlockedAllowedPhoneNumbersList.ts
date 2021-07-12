@@ -23,5 +23,4 @@ class BlockedAllowedPhoneNumbersList {
    */
   paging?: CallHandlingPagingInfo;
 }
-
 export default BlockedAllowedPhoneNumbersList;

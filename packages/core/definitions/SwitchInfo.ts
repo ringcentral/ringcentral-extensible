@@ -42,5 +42,4 @@ class SwitchInfo {
    */
   emergencyLocation?: ERLLocationInfo;
 }
-
 export default SwitchInfo;

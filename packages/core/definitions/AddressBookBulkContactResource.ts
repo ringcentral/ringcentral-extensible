@@ -158,5 +158,4 @@ class AddressBookBulkContactResource {
    */
   otherAddress?: AddressBookBulkContactAddressInfo;
 }
-
 export default AddressBookBulkContactResource;

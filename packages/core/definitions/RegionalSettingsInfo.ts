@@ -25,5 +25,4 @@ class RegionalSettingsInfo {
    */
   formattingLocale?: LanguageResource;
 }
-
 export default RegionalSettingsInfo;

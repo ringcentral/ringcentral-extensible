@@ -21,5 +21,4 @@ class OrderBy {
    */
   direction?: 'Asc' | 'Desc';
 }
-
 export default OrderBy;

@@ -12,5 +12,4 @@ class OptOutResponse {
    */
   to?: string;
 }
-
 export default OptOutResponse;

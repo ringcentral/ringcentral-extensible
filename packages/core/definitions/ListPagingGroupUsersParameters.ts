@@ -12,5 +12,4 @@ class ListPagingGroupUsersParameters {
    */
   perPage?: number;
 }
-
 export default ListPagingGroupUsersParameters;

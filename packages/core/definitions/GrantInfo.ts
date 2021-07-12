@@ -45,5 +45,4 @@ class GrantInfo {
    */
   callQueueMembersSetup?: boolean;
 }
-
 export default GrantInfo;

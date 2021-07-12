@@ -25,5 +25,4 @@ class MessageEvent {
    */
   body?: MessageEventBody;
 }
-
 export default MessageEvent;

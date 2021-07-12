@@ -25,5 +25,4 @@ class ExtensionListEvent {
    */
   body?: ExtensionListEventBody;
 }
-
 export default ExtensionListEvent;

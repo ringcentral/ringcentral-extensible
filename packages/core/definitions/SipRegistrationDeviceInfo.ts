@@ -103,5 +103,4 @@ class SipRegistrationDeviceInfo {
    */
   lastLocationReportTime?: string;
 }
-
 export default SipRegistrationDeviceInfo;

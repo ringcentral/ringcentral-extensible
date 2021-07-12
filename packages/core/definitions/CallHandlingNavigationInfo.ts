@@ -18,5 +18,4 @@ class CallHandlingNavigationInfo {
    */
   lastPage?: CallHandlingNavigationInfoUri;
 }
-
 export default CallHandlingNavigationInfo;

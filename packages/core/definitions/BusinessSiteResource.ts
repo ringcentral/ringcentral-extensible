@@ -11,5 +11,4 @@ class BusinessSiteResource {
    */
   code?: string;
 }
-
 export default BusinessSiteResource;

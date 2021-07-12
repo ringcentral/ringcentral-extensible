@@ -15,5 +15,4 @@ class AccountCallLogSyncResponse {
    */
   syncInfo?: CompanyCallLogSyncInfo;
 }
-
 export default AccountCallLogSyncResponse;

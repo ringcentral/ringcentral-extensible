@@ -23,5 +23,4 @@ class ProfileImageResource {
    */
   scales?: ScaledProfileImageResource[];
 }
-
 export default ProfileImageResource;

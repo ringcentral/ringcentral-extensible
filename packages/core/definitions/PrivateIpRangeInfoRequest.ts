@@ -27,5 +27,4 @@ class PrivateIpRangeInfoRequest {
    */
   emergencyLocationId?: string;
 }
-
 export default PrivateIpRangeInfoRequest;

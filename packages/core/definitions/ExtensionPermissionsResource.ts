@@ -18,5 +18,4 @@ class ExtensionPermissionsResource {
    */
   freeSoftPhoneDigitalLine?: Permission;
 }
-
 export default ExtensionPermissionsResource;

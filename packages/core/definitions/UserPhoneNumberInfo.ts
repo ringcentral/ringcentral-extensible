@@ -82,8 +82,7 @@ class UserPhoneNumberInfo {
     | 'ContactCenterNumber'
     | 'ConferencingNumber'
     | 'NumberPool'
-    | 'BusinessMobileNumber'
-    | 'ExternalMobileNumber';
+    | 'BusinessMobileNumber';
 
   /**
    * List of features of a phone number
@@ -97,5 +96,4 @@ class UserPhoneNumberInfo {
     | 'Delegated'
   )[];
 }
-
 export default UserPhoneNumberInfo;

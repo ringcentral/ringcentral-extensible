@@ -20,5 +20,4 @@ class SupervisePartyFrom {
    */
   extensionId?: string;
 }
-
 export default SupervisePartyFrom;

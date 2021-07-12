@@ -5,5 +5,4 @@ class ValidateMultipleSwitchesResponse {
    */
   records?: SwitchValidated[];
 }
-
 export default ValidateMultipleSwitchesResponse;

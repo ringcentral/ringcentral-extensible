@@ -3,17 +3,13 @@
   "private": true,
   "license": "MIT",
   "scripts": {
-    "definitions": "ts-node -r dotenv-override-true/config ./src/definitions.ts",
-    "paths": "ts-node -r dotenv-override-true/config ./src/paths.ts",
-    "samples": "ts-node -r dotenv-override-true/config ./src/samples.ts",
-    "ev": "ts-node -r dotenv-override-true/config ./engage-voice.ts"
+    "ev": "ts-node -r dotenv-override-true/config ./src/engage-voice.ts",
+    "generate": "ts-node -r dotenv-override-true/config ./src/index.ts"
   },
   "dependencies": {
-    "@types/ramda": "^0.27.42",
     "change-case": "^4.1.2",
     "dotenv-override-true": "^6.2.2",
-    "ramda": "^0.27.1",
-    "ringcentral-open-api-parser": "^0.4.6",
+    "ringcentral-code-generator": "^0.1.0",
     "ts-node": "^10.0.0"
   }
 }

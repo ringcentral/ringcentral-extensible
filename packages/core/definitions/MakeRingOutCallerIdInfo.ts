@@ -5,5 +5,4 @@ class MakeRingOutCallerIdInfo {
    */
   phoneNumber?: string;
 }
-
 export default MakeRingOutCallerIdInfo;

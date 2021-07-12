@@ -11,5 +11,4 @@ class GlipPostsList {
    */
   navigation?: GlipNavigationInfo;
 }
-
 export default GlipPostsList;

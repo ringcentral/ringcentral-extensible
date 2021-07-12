@@ -13,5 +13,4 @@ class PatchOperation {
    */
   value?: string;
 }
-
 export default PatchOperation;

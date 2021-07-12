@@ -14,5 +14,4 @@ class TransferExtensionInfo {
    */
   extensionNumber?: string;
 }
-
 export default TransferExtensionInfo;

@@ -25,5 +25,4 @@ class ExtensionFavoritesEvent {
    */
   body?: ExtensionFavoritesEventBody;
 }
-
 export default ExtensionFavoritesEvent;

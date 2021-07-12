@@ -17,5 +17,4 @@ class AccountResource {
    */
   mainNumber?: PhoneNumberResource;
 }
-
 export default AccountResource;

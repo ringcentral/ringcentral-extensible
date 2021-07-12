@@ -14,11 +14,9 @@ class Index {
     this.parent = parent;
     this.rc = parent.rc;
   }
-
   path(): string {
     return `${this.parent.path()}/active-calls`;
   }
-
   /**
    * Returns records of all calls that are in progress, ordered by start time in descending order.
    * HTTP Method: get
@@ -39,5 +37,4 @@ class Index {
     return r.data;
   }
 }
-
 export default Index;

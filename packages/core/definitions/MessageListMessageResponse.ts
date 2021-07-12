@@ -79,5 +79,4 @@ class MessageListMessageResponse {
    */
   errorCode?: string;
 }
-
 export default MessageListMessageResponse;

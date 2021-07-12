@@ -14,11 +14,9 @@ class Index {
     this.parent = parent;
     this.rc = parent.rc;
   }
-
   path(): string {
     return `${this.parent.path()}/features`;
   }
-
   /**
    * Returns the list of supported features and information on their availability for the current extension. Specific feature(s) might be checked by providing `featureId` query param. Multiple values supported, format: `?featureId=Feature1&featureId=Feature2`. To get only available features in order to decrease response size, `availableOnly=true` query param might be specified.
    * In case the feature is available for the current user, `"available": true` is returned in the response for the record with corresponding feature `id`. Otherwise, additional attribute `reason` is returned with the appropriate code:
@@ -59,5 +57,4 @@ class Index {
     return r.data;
   }
 }
-
 export default Index;

@@ -38,5 +38,4 @@ class AccountRegionalSettings {
    */
   currency?: CurrencyInfo;
 }
-
 export default AccountRegionalSettings;

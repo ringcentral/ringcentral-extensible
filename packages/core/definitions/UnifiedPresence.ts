@@ -22,5 +22,4 @@ class UnifiedPresence {
    */
   meeting?: UnifiedPresenceMeeting;
 }
-
 export default UnifiedPresence;

@@ -18,5 +18,4 @@ class UnifiedPresenceTelephony {
     | 'DoNotAcceptAnyCalls'
     | 'DoNotAcceptQueueCalls';
 }
-
 export default UnifiedPresenceTelephony;

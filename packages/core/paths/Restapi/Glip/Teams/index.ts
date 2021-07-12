@@ -25,14 +25,12 @@ class Index {
     this.rc = parent.rc;
     this.chatId = chatId;
   }
-
   path(withParameter = true): string {
     if (withParameter && this.chatId !== null) {
       return `${this.parent.path()}/teams/${this.chatId}`;
     }
     return `${this.parent.path()}/teams`;
   }
-
   /**
    * Returns the list of teams where the user is a member (both archived and active) combined with a list of public teams that can be joined by the current user. All records in response are sorted by creation time of a chat in ascending order. A team is a chat between 2 and more (unlimited number) participants assigned with specific name.
    * HTTP Method: get
@@ -86,7 +84,6 @@ class Index {
     if (this.chatId === null) {
       throw new Error('chatId must be specified.');
     }
-
     const r = await this.rc.get<GlipTeamInfo>(
       this.path(),
       undefined,
@@ -107,7 +104,6 @@ class Index {
     if (this.chatId === null) {
       throw new Error('chatId must be specified.');
     }
-
     const r = await this.rc.delete<string>(
       this.path(),
       undefined,
@@ -131,7 +127,6 @@ class Index {
     if (this.chatId === null) {
       throw new Error('chatId must be specified.');
     }
-
     const r = await this.rc.patch<GlipTeamInfo>(
       this.path(),
       glipPatchTeamBody,
@@ -165,5 +160,4 @@ class Index {
     return new Unarchive(this);
   }
 }
-
 export default Index;

@@ -37,5 +37,4 @@ class ExtensionInfoGrants {
     | 'ApplicationExtension'
     | 'ParkLocation';
 }
-
 export default ExtensionInfoGrants;

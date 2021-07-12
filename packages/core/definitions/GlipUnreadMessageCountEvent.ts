@@ -19,5 +19,4 @@ class GlipUnreadMessageCountEvent {
    */
   ownerId?: string;
 }
-
 export default GlipUnreadMessageCountEvent;

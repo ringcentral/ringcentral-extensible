@@ -25,5 +25,4 @@ class DetailedExtensionPresenceEvent {
    */
   body?: DetailedExtensionPresenceEventBody;
 }
-
 export default DetailedExtensionPresenceEvent;

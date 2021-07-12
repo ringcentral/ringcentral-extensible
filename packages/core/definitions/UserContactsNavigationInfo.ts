@@ -18,5 +18,4 @@ class UserContactsNavigationInfo {
    */
   lastPage?: UserContactsNavigationInfoUri;
 }
-
 export default UserContactsNavigationInfo;

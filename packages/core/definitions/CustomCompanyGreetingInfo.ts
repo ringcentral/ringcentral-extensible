@@ -37,5 +37,4 @@ class CustomCompanyGreetingInfo {
    */
   language?: CustomCompanyGreetingLanguageInfo;
 }
-
 export default CustomCompanyGreetingInfo;

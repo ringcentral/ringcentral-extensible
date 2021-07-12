@@ -16,5 +16,4 @@ class GCMInfo {
    */
   data?: GCMData;
 }
-
 export default GCMInfo;

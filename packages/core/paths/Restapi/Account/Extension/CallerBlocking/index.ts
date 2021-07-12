@@ -15,11 +15,9 @@ class Index {
     this.parent = parent;
     this.rc = parent.rc;
   }
-
   path(): string {
     return `${this.parent.path()}/caller-blocking`;
   }
-
   /**
    * Returns the current caller blocking settings of a user.
    * HTTP Method: get
@@ -64,5 +62,4 @@ class Index {
     return new PhoneNumbers(this, blockedNumberId);
   }
 }
-
 export default Index;

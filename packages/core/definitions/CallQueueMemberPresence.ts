@@ -15,5 +15,4 @@ class CallQueueMemberPresence {
    */
   acceptCurrentQueueCalls?: boolean;
 }
-
 export default CallQueueMemberPresence;

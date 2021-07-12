@@ -16,14 +16,12 @@ class Index {
     this.rc = parent.rc;
     this.ringoutId = ringoutId;
   }
-
   path(withParameter = true): string {
     if (withParameter && this.ringoutId !== null) {
       return `${this.parent.path()}/ring-out/${this.ringoutId}`;
     }
     return `${this.parent.path()}/ring-out`;
   }
-
   /**
    * Makes a 2-leg RingOut call.
    * HTTP Method: post
@@ -57,7 +55,6 @@ class Index {
     if (this.ringoutId === null) {
       throw new Error('ringoutId must be specified.');
     }
-
     const r = await this.rc.get<GetRingOutStatusResponse>(
       this.path(),
       undefined,
@@ -77,7 +74,6 @@ class Index {
     if (this.ringoutId === null) {
       throw new Error('ringoutId must be specified.');
     }
-
     const r = await this.rc.delete<string>(
       this.path(),
       undefined,
@@ -86,5 +82,4 @@ class Index {
     return r.data;
   }
 }
-
 export default Index;

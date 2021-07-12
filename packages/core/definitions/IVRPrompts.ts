@@ -23,5 +23,4 @@ class IVRPrompts {
    */
   paging?: CallHandlingPagingInfo;
 }
-
 export default IVRPrompts;

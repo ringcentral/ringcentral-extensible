@@ -23,5 +23,4 @@ class DetailedCallInfo {
    */
   rcSessionId?: string;
 }
-
 export default DetailedCallInfo;

@@ -65,5 +65,4 @@ class DeviceEmergencyServiceAddressResource {
    */
   outOfCountry?: boolean;
 }
-
 export default DeviceEmergencyServiceAddressResource;

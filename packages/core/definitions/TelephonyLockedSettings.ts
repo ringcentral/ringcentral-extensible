@@ -4,5 +4,4 @@ class TelephonyLockedSettings {
    */
   thirdPartyAudio?: boolean;
 }
-
 export default TelephonyLockedSettings;

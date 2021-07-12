@@ -9,5 +9,4 @@ class PackageInfo {
    */
   id?: string;
 }
-
 export default PackageInfo;

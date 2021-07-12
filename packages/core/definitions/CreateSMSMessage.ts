@@ -22,5 +22,4 @@ class CreateSMSMessage {
    */
   country?: MessageCountryInfo;
 }
-
 export default CreateSMSMessage;

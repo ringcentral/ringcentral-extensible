@@ -30,5 +30,4 @@ class ExtensionTelephonySessionsEvent {
    */
   body?: TelephonySessionsEventBody;
 }
-
 export default ExtensionTelephonySessionsEvent;

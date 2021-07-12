@@ -9,5 +9,4 @@ class Name {
    */
   givenName?: string;
 }
-
 export default Name;

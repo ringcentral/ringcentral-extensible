@@ -17,14 +17,12 @@ class Index {
     this.rc = parent.rc;
     this.greetingId = greetingId;
   }
-
   path(withParameter = true): string {
     if (withParameter && this.greetingId !== null) {
       return `${this.parent.path()}/greeting/${this.greetingId}`;
     }
     return `${this.parent.path()}/greeting`;
   }
-
   /**
    * Returns the list of predefined standard greetings. Custom greetings recorded by user are not returned in response to this request. See Get Extension Custom Greetings.
    * HTTP Method: get
@@ -55,7 +53,6 @@ class Index {
     if (this.greetingId === null) {
       throw new Error('greetingId must be specified.');
     }
-
     const r = await this.rc.get<DictionaryGreetingInfo>(
       this.path(),
       undefined,
@@ -64,5 +61,4 @@ class Index {
     return r.data;
   }
 }
-
 export default Index;

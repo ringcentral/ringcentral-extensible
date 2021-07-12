@@ -9,5 +9,4 @@ class MeetingRecording {
    */
   recording?: MeetingRecordingInfo[];
 }
-
 export default MeetingRecording;

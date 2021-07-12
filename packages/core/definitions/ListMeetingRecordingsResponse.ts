@@ -17,5 +17,4 @@ class ListMeetingRecordingsResponse {
    */
   navigation?: MeetingRecordingsNavigationInfo;
 }
-
 export default ListMeetingRecordingsResponse;

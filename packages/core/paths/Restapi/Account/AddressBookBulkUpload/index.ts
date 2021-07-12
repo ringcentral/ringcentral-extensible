@@ -15,11 +15,9 @@ class Index {
     this.parent = parent;
     this.rc = parent.rc;
   }
-
   path(): string {
     return `${this.parent.path()}/address-book-bulk-upload`;
   }
-
   /**
    * Uploads multiple contacts for multiple extensions at once. Maximum 500 extension, each up to 10000 contacts, can be updated per request.
    * HTTP Method: post
@@ -45,5 +43,4 @@ class Index {
     return new Tasks(this, taskId);
   }
 }
-
 export default Index;

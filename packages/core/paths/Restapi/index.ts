@@ -17,14 +17,12 @@ class Index {
     this.rc = rc;
     this.apiVersion = apiVersion;
   }
-
   path(withParameter = true): string {
     if (withParameter && this.apiVersion !== null) {
       return `/restapi/${this.apiVersion}`;
     }
     return '/restapi';
   }
-
   /**
    * Returns current API version(s) and server info.
    * HTTP Method: get
@@ -54,7 +52,6 @@ class Index {
     if (this.apiVersion === null) {
       throw new Error('apiVersion must be specified.');
     }
-
     const r = await this.rc.get<GetVersionResponse>(
       this.path(),
       undefined,
@@ -91,5 +88,4 @@ class Index {
     return new NumberParser(this);
   }
 }
-
 export default Index;

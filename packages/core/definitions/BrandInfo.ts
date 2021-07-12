@@ -16,5 +16,4 @@ class BrandInfo {
    */
   homeCountry?: CountryInfo;
 }
-
 export default BrandInfo;

@@ -4,5 +4,4 @@ class AssigneeInfo {
    */
   id?: string;
 }
-
 export default AssigneeInfo;

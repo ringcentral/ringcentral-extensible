@@ -10,5 +10,4 @@ class CallerIdByFeatureInfo {
    */
   phoneInfo?: CallerIdPhoneInfo;
 }
-
 export default CallerIdByFeatureInfo;

@@ -23,5 +23,4 @@ class GetTimezoneInfoResponse {
    */
   bias?: string;
 }
-
 export default GetTimezoneInfoResponse;

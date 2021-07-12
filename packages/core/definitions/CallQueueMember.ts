@@ -21,5 +21,4 @@ class CallQueueMember {
    */
   site?: SiteResource;
 }
-
 export default CallQueueMember;

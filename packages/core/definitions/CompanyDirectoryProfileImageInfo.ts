@@ -10,5 +10,4 @@ class CompanyDirectoryProfileImageInfo {
    */
   etag?: string;
 }
-
 export default CompanyDirectoryProfileImageInfo;

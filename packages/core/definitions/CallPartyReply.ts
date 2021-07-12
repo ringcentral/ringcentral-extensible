@@ -10,5 +10,4 @@ class CallPartyReply {
    */
   replyWithPattern?: ReplyWithPattern;
 }
-
 export default CallPartyReply;

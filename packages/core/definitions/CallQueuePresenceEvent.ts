@@ -25,5 +25,4 @@ class CallQueuePresenceEvent {
    */
   body?: CallQueuePresenceEventBody;
 }
-
 export default CallQueuePresenceEvent;

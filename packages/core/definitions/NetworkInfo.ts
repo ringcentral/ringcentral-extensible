@@ -36,5 +36,4 @@ class NetworkInfo {
    */
   emergencyLocation?: ERLLocationInfo;
 }
-
 export default NetworkInfo;

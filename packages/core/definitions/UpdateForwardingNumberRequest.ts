@@ -27,5 +27,4 @@ class UpdateForwardingNumberRequest {
     | 'BusinessMobilePhone'
     | 'ExternalCarrier';
 }
-
 export default UpdateForwardingNumberRequest;

@@ -22,5 +22,4 @@ class ListExtensionDevicesParameters {
    */
   perPage?: string;
 }
-
 export default ListExtensionDevicesParameters;

@@ -28,5 +28,4 @@ class GlipConversationInfo {
    */
   members?: CreateGlipMember[];
 }
-
 export default GlipConversationInfo;

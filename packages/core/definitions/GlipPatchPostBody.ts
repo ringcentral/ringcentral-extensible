@@ -4,5 +4,4 @@ class GlipPatchPostBody {
    */
   text?: string;
 }
-
 export default GlipPatchPostBody;

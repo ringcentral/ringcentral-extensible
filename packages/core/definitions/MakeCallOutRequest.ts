@@ -14,5 +14,4 @@ class MakeCallOutRequest {
    */
   to?: MakeCallOutCallerInfoRequestTo;
 }
-
 export default MakeCallOutRequest;

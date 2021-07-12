@@ -26,5 +26,4 @@ class Roles {
    */
   siteRestricted?: boolean;
 }
-
 export default Roles;

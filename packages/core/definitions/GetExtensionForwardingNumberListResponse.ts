@@ -23,5 +23,4 @@ class GetExtensionForwardingNumberListResponse {
    */
   paging?: CallHandlingPagingInfo;
 }
-
 export default GetExtensionForwardingNumberListResponse;

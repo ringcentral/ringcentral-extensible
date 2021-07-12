@@ -16,5 +16,4 @@ class MeetingsTimezoneResource {
    */
   description?: string;
 }
-
 export default MeetingsTimezoneResource;

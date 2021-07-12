@@ -44,5 +44,4 @@ class EmergencyLocationInfoRequest {
    */
   owners?: LocationOwnerInfo[];
 }
-
 export default EmergencyLocationInfoRequest;

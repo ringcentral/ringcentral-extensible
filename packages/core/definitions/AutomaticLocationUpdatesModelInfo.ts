@@ -15,5 +15,4 @@ class AutomaticLocationUpdatesModelInfo {
    */
   features?: ('BLA' | 'Intercom' | 'Paging' | 'HELD')[];
 }
-
 export default AutomaticLocationUpdatesModelInfo;

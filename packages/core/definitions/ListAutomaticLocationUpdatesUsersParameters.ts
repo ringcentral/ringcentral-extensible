@@ -42,5 +42,4 @@ class ListAutomaticLocationUpdatesUsersParameters {
    */
   page?: number;
 }
-
 export default ListAutomaticLocationUpdatesUsersParameters;

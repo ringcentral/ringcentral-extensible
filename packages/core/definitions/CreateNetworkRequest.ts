@@ -26,5 +26,4 @@ class CreateNetworkRequest {
    */
   emergencyLocation?: ERLLocationInfo;
 }
-
 export default CreateNetworkRequest;

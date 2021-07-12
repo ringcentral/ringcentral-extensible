@@ -24,5 +24,4 @@ class AddressBookSync {
    */
   nextPageUri?: string;
 }
-
 export default AddressBookSync;

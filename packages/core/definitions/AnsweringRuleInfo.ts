@@ -102,5 +102,4 @@ class AnsweringRuleInfo {
    */
   missedCall?: MissedCallInfo;
 }
-
 export default AnsweringRuleInfo;

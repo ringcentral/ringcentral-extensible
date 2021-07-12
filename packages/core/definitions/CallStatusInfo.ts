@@ -60,5 +60,4 @@ class CallStatusInfo {
    */
   description?: string;
 }
-
 export default CallStatusInfo;

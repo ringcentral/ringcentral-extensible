@@ -20,5 +20,4 @@ class SyncInfoMessages {
    */
   olderRecordsExist?: boolean;
 }
-
 export default SyncInfoMessages;

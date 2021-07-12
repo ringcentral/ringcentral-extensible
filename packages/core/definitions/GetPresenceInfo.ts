@@ -69,5 +69,4 @@ class GetPresenceInfo {
    */
   activeCalls?: ActiveCallInfo[];
 }
-
 export default GetPresenceInfo;

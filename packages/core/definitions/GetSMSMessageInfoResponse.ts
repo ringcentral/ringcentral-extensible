@@ -110,5 +110,4 @@ class GetSMSMessageInfoResponse {
    */
   type?: 'Fax' | 'SMS' | 'VoiceMail' | 'Pager' | 'Text';
 }
-
 export default GetSMSMessageInfoResponse;

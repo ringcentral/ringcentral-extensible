@@ -14,5 +14,4 @@ class GetRingOutStatusResponse {
    */
   status?: RingOutStatusInfo;
 }
-
 export default GetRingOutStatusResponse;

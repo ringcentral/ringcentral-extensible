@@ -20,5 +20,4 @@ class IVRMenuPromptInfo {
    */
   language?: PromptLanguageInfo;
 }
-
 export default IVRMenuPromptInfo;

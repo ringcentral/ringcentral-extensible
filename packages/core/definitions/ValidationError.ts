@@ -24,5 +24,4 @@ class ValidationError {
    */
   parameterValue?: string;
 }
-
 export default ValidationError;

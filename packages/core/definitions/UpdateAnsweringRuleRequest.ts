@@ -92,5 +92,4 @@ class UpdateAnsweringRuleRequest {
    */
   transfer?: TransferredExtensionInfo;
 }
-
 export default UpdateAnsweringRuleRequest;

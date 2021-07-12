@@ -5,5 +5,4 @@ class FeatureList {
    */
   records?: FeatureInfo[];
 }
-
 export default FeatureList;

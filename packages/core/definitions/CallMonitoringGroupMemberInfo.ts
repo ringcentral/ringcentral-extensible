@@ -18,5 +18,4 @@ class CallMonitoringGroupMemberInfo {
    */
   permissions?: ('Monitoring' | 'Monitored')[];
 }
-
 export default CallMonitoringGroupMemberInfo;

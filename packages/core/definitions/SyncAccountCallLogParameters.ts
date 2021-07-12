@@ -38,5 +38,4 @@ class SyncAccountCallLogParameters {
    */
   showDeleted?: boolean;
 }
-
 export default SyncAccountCallLogParameters;

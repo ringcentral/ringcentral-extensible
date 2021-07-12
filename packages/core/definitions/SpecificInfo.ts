@@ -21,5 +21,4 @@ class SpecificInfo {
    */
   chatIds?: string[];
 }
-
 export default SpecificInfo;

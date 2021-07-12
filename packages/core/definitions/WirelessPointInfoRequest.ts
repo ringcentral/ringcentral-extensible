@@ -32,5 +32,4 @@ class WirelessPointInfoRequest {
    */
   emergencyLocationId?: string;
 }
-
 export default WirelessPointInfoRequest;

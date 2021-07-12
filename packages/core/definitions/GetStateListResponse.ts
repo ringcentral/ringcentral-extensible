@@ -23,5 +23,4 @@ class GetStateListResponse {
    */
   paging?: ProvisioningPagingInfo;
 }
-
 export default GetStateListResponse;

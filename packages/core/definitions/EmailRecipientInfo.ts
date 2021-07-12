@@ -29,5 +29,4 @@ class EmailRecipientInfo {
    */
   permission?: 'FullAccess' | 'MembersOnly';
 }
-
 export default EmailRecipientInfo;

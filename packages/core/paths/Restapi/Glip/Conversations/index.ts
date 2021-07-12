@@ -18,14 +18,12 @@ class Index {
     this.rc = parent.rc;
     this.chatId = chatId;
   }
-
   path(withParameter = true): string {
     if (withParameter && this.chatId !== null) {
       return `${this.parent.path()}/conversations/${this.chatId}`;
     }
     return `${this.parent.path()}/conversations`;
   }
-
   /**
    * Returns the list of conversations where the user is a member. All records in response are sorted by creation time of a conversation in ascending order. Conversation is a chat of the *Group* type.
    * HTTP Method: get
@@ -81,7 +79,6 @@ class Index {
     if (this.chatId === null) {
       throw new Error('chatId must be specified.');
     }
-
     const r = await this.rc.get<GlipConversationInfo>(
       this.path(),
       undefined,
@@ -90,5 +87,4 @@ class Index {
     return r.data;
   }
 }
-
 export default Index;

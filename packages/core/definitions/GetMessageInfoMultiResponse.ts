@@ -15,5 +15,4 @@ class GetMessageInfoMultiResponse {
    */
   body?: MessageBody;
 }
-
 export default GetMessageInfoMultiResponse;

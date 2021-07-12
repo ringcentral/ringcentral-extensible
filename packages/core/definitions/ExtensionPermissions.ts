@@ -10,5 +10,4 @@ class ExtensionPermissions {
    */
   internationalCalling?: PermissionInfoInt;
 }
-
 export default ExtensionPermissions;

@@ -18,14 +18,12 @@ class Index {
     this.rc = parent.rc;
     this.eventId = eventId;
   }
-
   path(withParameter = true): string {
     if (withParameter && this.eventId !== null) {
       return `${this.parent.path()}/events/${this.eventId}`;
     }
     return `${this.parent.path()}/events`;
   }
-
   /**
    * Returns all calendar events created by the current user.
    * HTTP Method: get
@@ -79,7 +77,6 @@ class Index {
     if (this.eventId === null) {
       throw new Error('eventId must be specified.');
     }
-
     const r = await this.rc.get<GlipEventInfo>(
       this.path(),
       undefined,
@@ -103,7 +100,6 @@ class Index {
     if (this.eventId === null) {
       throw new Error('eventId must be specified.');
     }
-
     const r = await this.rc.put<GlipEventInfo>(
       this.path(),
       glipEventCreate,
@@ -125,7 +121,6 @@ class Index {
     if (this.eventId === null) {
       throw new Error('eventId must be specified.');
     }
-
     const r = await this.rc.delete<string>(
       this.path(),
       undefined,
@@ -134,5 +129,4 @@ class Index {
     return r.data;
   }
 }
-
 export default Index;

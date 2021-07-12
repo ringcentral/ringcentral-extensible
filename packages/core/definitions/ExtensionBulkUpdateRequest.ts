@@ -7,5 +7,4 @@ class ExtensionBulkUpdateRequest {
    */
   records?: ExtensionBulkUpdateInfo[];
 }
-
 export default ExtensionBulkUpdateRequest;

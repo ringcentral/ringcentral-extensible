@@ -37,5 +37,4 @@ class CompanyAnsweringRuleWeeklyScheduleInfoRequest {
    */
   sunday?: CompanyAnsweringRuleTimeIntervalRequest[];
 }
-
 export default CompanyAnsweringRuleWeeklyScheduleInfoRequest;

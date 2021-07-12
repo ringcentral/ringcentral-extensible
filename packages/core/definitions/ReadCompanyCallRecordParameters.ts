@@ -6,5 +6,4 @@ class ReadCompanyCallRecordParameters {
    */
   view?: 'Simple' | 'Detailed';
 }
-
 export default ReadCompanyCallRecordParameters;

@@ -20,5 +20,4 @@ class BulkTaskInfoSwUpdate {
    */
   lastModifiedTime?: string;
 }
-
 export default BulkTaskInfoSwUpdate;

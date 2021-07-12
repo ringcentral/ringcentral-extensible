@@ -16,11 +16,9 @@ class Index {
     this.parent = parent;
     this.rc = parent.rc;
   }
-
   path(): string {
     return `${this.parent.path()}/tasks`;
   }
-
   /**
    * Returns the list of tasks of the specified chat.
    * HTTP Method: get
@@ -58,5 +56,4 @@ class Index {
     return r.data;
   }
 }
-
 export default Index;

@@ -12,7 +12,6 @@ class Index {
     this.parent = parent;
     this.rc = parent.rc;
   }
-
   path(): string {
     return `${this.parent.path()}/a2p-sms`;
   }
@@ -29,5 +28,4 @@ class Index {
     return new OptOuts(this);
   }
 }
-
 export default Index;

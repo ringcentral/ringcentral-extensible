@@ -10,5 +10,4 @@ class ContactDirectorySiteInfo {
    */
   name?: string;
 }
-
 export default ContactDirectorySiteInfo;

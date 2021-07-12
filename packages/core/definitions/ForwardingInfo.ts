@@ -32,5 +32,4 @@ class ForwardingInfo {
    */
   mobileTimeout?: boolean;
 }
-
 export default ForwardingInfo;

@@ -11,5 +11,4 @@ class MissedCallInfo {
    */
   extension?: MissedCallExtensionInfo;
 }
-
 export default MissedCallInfo;

@@ -34,5 +34,4 @@ class AutomaticRecordingResource {
    */
   maxNumberLimit?: number;
 }
-
 export default AutomaticRecordingResource;

@@ -5,5 +5,4 @@ class ReadDeviceParameters {
    */
   syncEmergencyAddress?: boolean;
 }
-
 export default ReadDeviceParameters;

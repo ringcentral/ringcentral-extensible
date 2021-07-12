@@ -25,5 +25,4 @@ class GetLocationListResponse {
    */
   paging?: ProvisioningPagingInfo;
 }
-
 export default GetLocationListResponse;

@@ -41,5 +41,4 @@ class MessageAttachmentInfoIntId {
    */
   size?: number;
 }
-
 export default MessageAttachmentInfoIntId;

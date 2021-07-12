@@ -36,5 +36,4 @@ class DeviceEmergencyInfo {
    */
   addressEditableStatus?: 'MainDevice' | 'AnyDevice';
 }
-
 export default DeviceEmergencyInfo;

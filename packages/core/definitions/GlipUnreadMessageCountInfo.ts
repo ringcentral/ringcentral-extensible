@@ -5,5 +5,4 @@ class GlipUnreadMessageCountInfo {
    */
   unread?: number;
 }
-
 export default GlipUnreadMessageCountInfo;

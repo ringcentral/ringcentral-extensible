@@ -5,5 +5,4 @@ class PermissionInfoInt {
    */
   enabled?: boolean;
 }
-
 export default PermissionInfoInt;

@@ -80,5 +80,4 @@ class ActiveCallInfo {
    */
   callInfo?: CallInfoCQ;
 }
-
 export default ActiveCallInfo;

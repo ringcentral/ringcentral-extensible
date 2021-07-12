@@ -19,7 +19,6 @@ class Index {
     this.rc = parent.rc;
     this.forwardingNumberId = forwardingNumberId;
   }
-
   path(withParameter = true): string {
     if (withParameter && this.forwardingNumberId !== null) {
       return `${this.parent.path()}/forwarding-number/${
@@ -28,7 +27,6 @@ class Index {
     }
     return `${this.parent.path()}/forwarding-number`;
   }
-
   /**
    * Returns the list of extension phone numbers used for call forwarding and call flip. The returned list contains all the extension phone numbers used for call forwarding and call flip.
    * HTTP Method: get
@@ -84,7 +82,6 @@ class Index {
     if (this.forwardingNumberId === null) {
       throw new Error('forwardingNumberId must be specified.');
     }
-
     const r = await this.rc.get<ForwardingNumberInfo>(
       this.path(),
       undefined,
@@ -108,7 +105,6 @@ class Index {
     if (this.forwardingNumberId === null) {
       throw new Error('forwardingNumberId must be specified.');
     }
-
     const r = await this.rc.put<ForwardingNumberInfo>(
       this.path(),
       updateForwardingNumberRequest,
@@ -130,7 +126,6 @@ class Index {
     if (this.forwardingNumberId === null) {
       throw new Error('forwardingNumberId must be specified.');
     }
-
     const r = await this.rc.delete<string>(
       this.path(),
       undefined,
@@ -139,5 +134,4 @@ class Index {
     return r.data;
   }
 }
-
 export default Index;

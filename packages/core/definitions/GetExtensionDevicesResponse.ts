@@ -26,5 +26,4 @@ class GetExtensionDevicesResponse {
    */
   paging?: DeviceProvisioningPagingInfo;
 }
-
 export default GetExtensionDevicesResponse;

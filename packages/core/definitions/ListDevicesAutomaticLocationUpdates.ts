@@ -23,5 +23,4 @@ class ListDevicesAutomaticLocationUpdates {
    */
   paging?: ProvisioningPagingInfo;
 }
-
 export default ListDevicesAutomaticLocationUpdates;

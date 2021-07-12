@@ -39,5 +39,4 @@ class CustomUserGreetingInfo {
    */
   answeringRule?: CustomGreetingAnsweringRuleInfo;
 }
-
 export default CustomUserGreetingInfo;

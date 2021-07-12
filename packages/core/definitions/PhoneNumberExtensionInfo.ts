@@ -102,5 +102,4 @@ class PhoneNumberExtensionInfo {
    */
   profileImage?: ProfileImageResource;
 }
-
 export default PhoneNumberExtensionInfo;

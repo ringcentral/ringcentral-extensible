@@ -20,14 +20,12 @@ class Index {
     this.rc = parent.rc;
     this.groupId = groupId;
   }
-
   path(withParameter = true): string {
     if (withParameter && this.groupId !== null) {
       return `${this.parent.path()}/call-monitoring-groups/${this.groupId}`;
     }
     return `${this.parent.path()}/call-monitoring-groups`;
   }
-
   /**
    * Returns call monitoring groups that can be filtered by some extension.
    * HTTP Method: get
@@ -84,7 +82,6 @@ class Index {
     if (this.groupId === null) {
       throw new Error('groupId must be specified.');
     }
-
     const r = await this.rc.put<CallMonitoringGroup>(
       this.path(),
       createCallMonitoringGroupRequest,
@@ -106,7 +103,6 @@ class Index {
     if (this.groupId === null) {
       throw new Error('groupId must be specified.');
     }
-
     const r = await this.rc.delete<string>(
       this.path(),
       undefined,
@@ -123,5 +119,4 @@ class Index {
     return new BulkAssign(this);
   }
 }
-
 export default Index;

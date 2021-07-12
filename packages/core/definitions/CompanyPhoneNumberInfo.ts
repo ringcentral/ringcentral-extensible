@@ -75,8 +75,7 @@ class CompanyPhoneNumberInfo {
     | 'ConferencingNumber'
     | 'MeetingsNumber'
     | 'NumberPool'
-    | 'BusinessMobileNumber'
-    | 'ExternalMobileNumber';
+    | 'BusinessMobileNumber';
 
   /**
    */
@@ -91,5 +90,4 @@ class CompanyPhoneNumberInfo {
    */
   vanityPattern?: string;
 }
-
 export default CompanyPhoneNumberInfo;

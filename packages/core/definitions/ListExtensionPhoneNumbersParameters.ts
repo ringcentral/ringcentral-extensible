@@ -17,7 +17,6 @@ class ListExtensionPhoneNumbersParameters {
     | 'ForwardedNumber'
     | 'ForwardedCompanyNumber'
     | 'BusinessMobileNumber'
-    | 'ExternalMobileNumber'
   )[];
 
   /**
@@ -30,5 +29,4 @@ class ListExtensionPhoneNumbersParameters {
    */
   perPage?: number;
 }
-
 export default ListExtensionPhoneNumbersParameters;

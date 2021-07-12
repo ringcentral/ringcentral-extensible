@@ -23,5 +23,4 @@ class DictionaryGreetingList {
    */
   paging?: CallHandlingPagingInfo;
 }
-
 export default DictionaryGreetingList;

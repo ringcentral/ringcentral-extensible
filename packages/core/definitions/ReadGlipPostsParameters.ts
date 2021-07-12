@@ -12,5 +12,4 @@ class ReadGlipPostsParameters {
    */
   pageToken?: string;
 }
-
 export default ReadGlipPostsParameters;

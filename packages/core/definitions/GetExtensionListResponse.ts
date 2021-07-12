@@ -24,5 +24,4 @@ class GetExtensionListResponse {
    */
   paging?: ProvisioningPagingInfo;
 }
-
 export default GetExtensionListResponse;

@@ -11,11 +11,9 @@ class Index {
     this.parent = parent;
     this.rc = parent.rc;
   }
-
   path(): string {
     return `${this.parent.path()}/federation`;
   }
-
   /**
    * Returns information on a federation and associated accounts.
    * HTTP Method: get
@@ -35,5 +33,4 @@ class Index {
     return r.data;
   }
 }
-
 export default Index;

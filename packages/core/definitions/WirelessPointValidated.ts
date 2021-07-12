@@ -20,5 +20,4 @@ class WirelessPointValidated {
    */
   errors?: ValidationError[];
 }
-
 export default WirelessPointValidated;

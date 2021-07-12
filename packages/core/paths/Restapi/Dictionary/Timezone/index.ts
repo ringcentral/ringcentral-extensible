@@ -18,14 +18,12 @@ class Index {
     this.rc = parent.rc;
     this.timezoneId = timezoneId;
   }
-
   path(withParameter = true): string {
     if (withParameter && this.timezoneId !== null) {
       return `${this.parent.path()}/timezone/${this.timezoneId}`;
     }
     return `${this.parent.path()}/timezone`;
   }
-
   /**
    * Returns all available timezones.
    * HTTP Method: get
@@ -57,7 +55,6 @@ class Index {
     if (this.timezoneId === null) {
       throw new Error('timezoneId must be specified.');
     }
-
     const r = await this.rc.get<GetTimezoneInfoResponse>(
       this.path(),
       queryParams,
@@ -66,5 +63,4 @@ class Index {
     return r.data;
   }
 }
-
 export default Index;

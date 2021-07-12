@@ -15,5 +15,4 @@ class UnifiedPresenceListEntry {
    */
   body?: UnifiedPresence;
 }
-
 export default UnifiedPresenceListEntry;

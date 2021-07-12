@@ -60,5 +60,4 @@ class GlipUpdateTask {
    */
   attachments?: GlipAttachmentInfoRequest[];
 }
-
 export default GlipUpdateTask;

@@ -28,5 +28,4 @@ class ListExtensionActiveCallsParameters {
    */
   perPage?: number;
 }
-
 export default ListExtensionActiveCallsParameters;

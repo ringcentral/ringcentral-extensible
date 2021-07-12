@@ -36,5 +36,4 @@ class ListCompanyAnsweringRuleInfo {
    */
   extension?: CompanyAnsweringRuleExtensionInfo;
 }
-
 export default ListCompanyAnsweringRuleInfo;

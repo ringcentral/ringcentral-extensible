@@ -21,5 +21,4 @@ class ActivePermissionResource {
     | 'UserExtensions'
   )[];
 }
-
 export default ActivePermissionResource;

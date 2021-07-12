@@ -13,5 +13,4 @@ class BulkAccountCallRecordingsResource {
    */
   removedExtensions?: CallRecordingExtensionResource[];
 }
-
 export default BulkAccountCallRecordingsResource;

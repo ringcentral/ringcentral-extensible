@@ -11,5 +11,4 @@ class UpdateConferencingInfoRequest {
    */
   allowJoinBeforeHost?: boolean;
 }
-
 export default UpdateConferencingInfoRequest;

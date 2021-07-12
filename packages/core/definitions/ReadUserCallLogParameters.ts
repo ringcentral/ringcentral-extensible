@@ -81,5 +81,4 @@ class ReadUserCallLogParameters {
    */
   showDeleted?: boolean;
 }
-
 export default ReadUserCallLogParameters;

@@ -9,5 +9,4 @@ class ShortSiteInfo {
    */
   name?: string;
 }
-
 export default ShortSiteInfo;

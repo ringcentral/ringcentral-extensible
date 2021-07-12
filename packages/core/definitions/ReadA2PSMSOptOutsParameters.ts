@@ -25,5 +25,4 @@ class ReadA2PSMSOptOutsParameters {
    */
   perPage?: number;
 }
-
 export default ReadA2PSMSOptOutsParameters;

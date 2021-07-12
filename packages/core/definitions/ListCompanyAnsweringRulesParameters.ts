@@ -12,5 +12,4 @@ class ListCompanyAnsweringRulesParameters {
    */
   perPage?: number;
 }
-
 export default ListCompanyAnsweringRulesParameters;

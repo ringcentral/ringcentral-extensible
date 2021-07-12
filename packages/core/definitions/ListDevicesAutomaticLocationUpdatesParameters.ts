@@ -42,5 +42,4 @@ class ListDevicesAutomaticLocationUpdatesParameters {
    */
   page?: number;
 }
-
 export default ListDevicesAutomaticLocationUpdatesParameters;

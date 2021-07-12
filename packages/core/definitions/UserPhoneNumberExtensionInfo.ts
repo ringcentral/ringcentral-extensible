@@ -50,5 +50,4 @@ class UserPhoneNumberExtensionInfo {
    */
   name?: string;
 }
-
 export default UserPhoneNumberExtensionInfo;

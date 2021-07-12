@@ -50,5 +50,4 @@ class ListA2PSMSParameters {
    */
   perPage?: number;
 }
-
 export default ListA2PSMSParameters;

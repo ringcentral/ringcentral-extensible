@@ -23,5 +23,4 @@ class PagingOnlyGroupUsers {
    */
   paging?: ProvisioningPagingInfo;
 }
-
 export default PagingOnlyGroupUsers;

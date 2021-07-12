@@ -17,14 +17,12 @@ class Index {
     this.rc = parent.rc;
     this.scaleSize = scaleSize;
   }
-
   path(withParameter = true): string {
     if (withParameter && this.scaleSize !== null) {
       return `${this.parent.path()}/profile-image/${this.scaleSize}`;
     }
     return `${this.parent.path()}/profile-image`;
   }
-
   /**
    * Returns a profile image of an extension.
    * HTTP Method: get
@@ -97,7 +95,6 @@ class Index {
     if (this.scaleSize === null) {
       throw new Error('scaleSize must be specified.');
     }
-
     const r = await this.rc.get<Buffer>(this.path(), undefined, {
       ...restRequestConfig,
       responseType: 'arraybuffer',
@@ -105,5 +102,4 @@ class Index {
     return r.data;
   }
 }
-
 export default Index;

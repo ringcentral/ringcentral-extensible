@@ -54,5 +54,4 @@ class SIPInfoResponse {
    */
   switchBackInterval?: number;
 }
-
 export default SIPInfoResponse;

@@ -14,11 +14,9 @@ class Index {
     this.parent = parent;
     this.rc = parent.rc;
   }
-
   path(): string {
     return `${this.parent.path()}/everyone`;
   }
-
   /**
    * Returns information about Everyone chat, which is a company level chat including all employees; assigned with specific name.
    * HTTP Method: get
@@ -57,5 +55,4 @@ class Index {
     return r.data;
   }
 }
-
 export default Index;

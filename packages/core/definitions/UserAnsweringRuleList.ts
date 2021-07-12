@@ -24,5 +24,4 @@ class UserAnsweringRuleList {
    */
   navigation?: UserAnsweringRuleListNavigation;
 }
-
 export default UserAnsweringRuleList;

@@ -26,5 +26,4 @@ class ListContactsParameters {
    */
   phoneNumber?: string[];
 }
-
 export default ListContactsParameters;

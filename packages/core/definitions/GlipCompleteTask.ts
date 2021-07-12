@@ -16,5 +16,4 @@ class GlipCompleteTask {
    */
   completenessPercentage?: number;
 }
-
 export default GlipCompleteTask;

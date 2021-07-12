@@ -10,7 +10,6 @@ class Index {
     this.parent = parent;
     this.rc = parent.rc;
   }
-
   path(): string {
     return `${this.parent.path()}/client-info`;
   }
@@ -19,5 +18,4 @@ class Index {
     return new SipProvision(this);
   }
 }
-
 export default Index;

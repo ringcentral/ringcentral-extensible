@@ -7,5 +7,4 @@ class GlipPostMembersListBody {
    */
   members?: CreateGlipMember[];
 }
-
 export default GlipPostMembersListBody;

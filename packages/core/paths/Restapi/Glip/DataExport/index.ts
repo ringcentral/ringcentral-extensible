@@ -19,14 +19,12 @@ class Index {
     this.rc = parent.rc;
     this.taskId = taskId;
   }
-
   path(withParameter = true): string {
     if (withParameter && this.taskId !== null) {
       return `${this.parent.path()}/data-export/${this.taskId}`;
     }
     return `${this.parent.path()}/data-export`;
   }
-
   /**
    * Returns the list of Glip data export tasks.
    * HTTP Method: get
@@ -77,7 +75,6 @@ class Index {
     if (this.taskId === null) {
       throw new Error('taskId must be specified.');
     }
-
     const r = await this.rc.get<DataExportTask>(
       this.path(),
       undefined,
@@ -90,5 +87,4 @@ class Index {
     return new Datasets(this, datasetId);
   }
 }
-
 export default Index;

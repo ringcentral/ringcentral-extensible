@@ -8,5 +8,4 @@ class MeetingLinks {
    */
   joinUri?: string;
 }
-
 export default MeetingLinks;

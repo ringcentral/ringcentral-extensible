@@ -19,5 +19,4 @@ class SearchViaGet2Parameters {
    */
   count?: number;
 }
-
 export default SearchViaGet2Parameters;

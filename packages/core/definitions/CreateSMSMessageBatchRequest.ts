@@ -21,5 +21,4 @@ class CreateSMSMessageBatchRequest {
    */
   messages?: MessageCreateRequest[];
 }
-
 export default CreateSMSMessageBatchRequest;

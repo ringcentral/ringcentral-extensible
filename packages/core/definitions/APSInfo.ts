@@ -5,5 +5,4 @@ class APSInfo {
    */
   'content-available'?: number;
 }
-
 export default APSInfo;

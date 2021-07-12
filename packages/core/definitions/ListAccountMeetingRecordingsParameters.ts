@@ -27,5 +27,4 @@ class ListAccountMeetingRecordingsParameters {
    */
   perPage?: number;
 }
-
 export default ListAccountMeetingRecordingsParameters;

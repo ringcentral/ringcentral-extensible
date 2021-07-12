@@ -13,14 +13,12 @@ class Index {
     this.rc = parent.rc;
     this.taskId = taskId;
   }
-
   path(withParameter = true): string {
     if (withParameter && this.taskId !== null) {
       return `${this.parent.path()}/tasks/${this.taskId}`;
     }
     return `${this.parent.path()}/tasks`;
   }
-
   /**
    * Returns the status of a task on adding multiple contacts to multiple extensions.
    * HTTP Method: get
@@ -35,7 +33,6 @@ class Index {
     if (this.taskId === null) {
       throw new Error('taskId must be specified.');
     }
-
     const r = await this.rc.get<AddressBookBulkUploadResponse>(
       this.path(),
       undefined,
@@ -44,5 +41,4 @@ class Index {
     return r.data;
   }
 }
-
 export default Index;

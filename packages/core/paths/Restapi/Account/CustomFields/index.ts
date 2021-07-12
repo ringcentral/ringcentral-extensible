@@ -18,14 +18,12 @@ class Index {
     this.rc = parent.rc;
     this.fieldId = fieldId;
   }
-
   path(withParameter = true): string {
     if (withParameter && this.fieldId !== null) {
       return `${this.parent.path()}/custom-fields/${this.fieldId}`;
     }
     return `${this.parent.path()}/custom-fields`;
   }
-
   /**
    * Returns the list of created custom fields.
    * HTTP Method: get
@@ -81,7 +79,6 @@ class Index {
     if (this.fieldId === null) {
       throw new Error('fieldId must be specified.');
     }
-
     const r = await this.rc.put<CustomFieldResource>(
       this.path(),
       customFieldUpdateRequest,
@@ -103,7 +100,6 @@ class Index {
     if (this.fieldId === null) {
       throw new Error('fieldId must be specified.');
     }
-
     const r = await this.rc.delete<string>(
       this.path(),
       undefined,
@@ -112,5 +108,4 @@ class Index {
     return r.data;
   }
 }
-
 export default Index;

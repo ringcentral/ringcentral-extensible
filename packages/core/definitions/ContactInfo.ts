@@ -59,5 +59,4 @@ class ContactInfo {
    */
   department?: string;
 }
-
 export default ContactInfo;

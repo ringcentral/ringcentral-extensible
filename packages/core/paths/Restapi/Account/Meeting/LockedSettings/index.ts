@@ -11,11 +11,9 @@ class Index {
     this.parent = parent;
     this.rc = parent.rc;
   }
-
   path(): string {
     return `${this.parent.path()}/locked-settings`;
   }
-
   /**
    * Returns information on user meeting settings that are locked on account level and therefore cannot be changed by user.
    * HTTP Method: get
@@ -35,5 +33,4 @@ class Index {
     return r.data;
   }
 }
-
 export default Index;

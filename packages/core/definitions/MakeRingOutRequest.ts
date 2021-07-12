@@ -29,5 +29,4 @@ class MakeRingOutRequest {
    */
   country?: MakeRingOutCoutryInfo;
 }
-
 export default MakeRingOutRequest;

@@ -10,5 +10,4 @@ class ContractedCountryInfo {
    */
   uri?: string;
 }
-
 export default ContractedCountryInfo;

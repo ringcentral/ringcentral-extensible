@@ -17,5 +17,4 @@ class ParsePhoneNumberResponse {
    */
   phoneNumbers?: PhoneNumberInfoNumberParser[];
 }
-
 export default ParsePhoneNumberResponse;

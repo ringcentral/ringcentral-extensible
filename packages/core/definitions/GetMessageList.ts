@@ -26,5 +26,4 @@ class GetMessageList {
    */
   paging?: MessagingPagingInfo;
 }
-
 export default GetMessageList;

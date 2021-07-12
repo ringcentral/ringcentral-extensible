@@ -10,5 +10,4 @@ class DeviceSiteInfo {
    */
   name?: string;
 }
-
 export default DeviceSiteInfo;

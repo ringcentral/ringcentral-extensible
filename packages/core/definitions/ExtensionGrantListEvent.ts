@@ -25,5 +25,4 @@ class ExtensionGrantListEvent {
    */
   body?: ExtensionGrantListEventBody;
 }
-
 export default ExtensionGrantListEvent;

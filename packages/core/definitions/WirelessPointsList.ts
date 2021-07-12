@@ -23,5 +23,4 @@ class WirelessPointsList {
    */
   paging?: ProvisioningPagingInfo;
 }
-
 export default WirelessPointsList;

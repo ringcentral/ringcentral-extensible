@@ -4,5 +4,4 @@ class ExtensionFormattingLocaleInfoRequest {
    */
   id?: string;
 }
-
 export default ExtensionFormattingLocaleInfoRequest;

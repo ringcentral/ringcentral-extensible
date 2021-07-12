@@ -58,5 +58,4 @@ class NotificationSettings {
    */
   missedCalls?: MissedCallsInfo;
 }
-
 export default NotificationSettings;

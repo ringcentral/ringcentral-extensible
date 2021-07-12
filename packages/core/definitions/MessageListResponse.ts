@@ -11,5 +11,4 @@ class MessageListResponse {
    */
   paging?: PagingResource;
 }
-
 export default MessageListResponse;

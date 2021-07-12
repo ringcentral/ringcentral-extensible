@@ -30,5 +30,4 @@ class InboundMessageEvent {
    */
   ownerId?: string;
 }
-
 export default InboundMessageEvent;

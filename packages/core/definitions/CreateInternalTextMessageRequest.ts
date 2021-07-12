@@ -22,5 +22,4 @@ class CreateInternalTextMessageRequest {
    */
   to?: PagerCallerInfoRequest[];
 }
-
 export default CreateInternalTextMessageRequest;

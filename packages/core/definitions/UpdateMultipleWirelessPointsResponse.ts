@@ -5,5 +5,4 @@ class UpdateMultipleWirelessPointsResponse {
    */
   task?: BulkTaskInfoWiUpdate;
 }
-
 export default UpdateMultipleWirelessPointsResponse;

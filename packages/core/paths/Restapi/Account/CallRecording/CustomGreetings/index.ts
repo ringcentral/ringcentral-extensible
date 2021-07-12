@@ -16,14 +16,12 @@ class Index {
     this.rc = parent.rc;
     this.greetingId = greetingId;
   }
-
   path(withParameter = true): string {
     if (withParameter && this.greetingId !== null) {
       return `${this.parent.path()}/custom-greetings/${this.greetingId}`;
     }
     return `${this.parent.path()}/custom-greetings`;
   }
-
   /**
    * Returns call recording custom greetings.
    * HTTP Method: get
@@ -73,7 +71,6 @@ class Index {
     if (this.greetingId === null) {
       throw new Error('greetingId must be specified.');
     }
-
     const r = await this.rc.delete<string>(
       this.path(),
       undefined,
@@ -82,5 +79,4 @@ class Index {
     return r.data;
   }
 }
-
 export default Index;

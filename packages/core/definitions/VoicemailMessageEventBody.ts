@@ -85,5 +85,4 @@ class VoicemailMessageEventBody {
    */
   vmTranscriptionStatus?: string;
 }
-
 export default VoicemailMessageEventBody;

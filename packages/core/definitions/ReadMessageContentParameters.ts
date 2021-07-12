@@ -6,5 +6,4 @@ class ReadMessageContentParameters {
    */
   contentDisposition?: 'Inline' | 'Attachment';
 }
-
 export default ReadMessageContentParameters;

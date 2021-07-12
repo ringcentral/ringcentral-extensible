@@ -10,5 +10,4 @@ class UnconditionalForwardingInfo {
    */
   action?: 'HoldTimeExpiration' | 'MaxCallers' | 'NoAnswer';
 }
-
 export default UnconditionalForwardingInfo;

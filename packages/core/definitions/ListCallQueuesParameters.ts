@@ -17,5 +17,4 @@ class ListCallQueuesParameters {
    */
   memberExtensionId?: string;
 }
-
 export default ListCallQueuesParameters;

@@ -24,5 +24,4 @@ class CompanyDirectoryPhoneNumberInfo {
     | 'DirectNumber'
     | 'ForwardedNumber';
 }
-
 export default CompanyDirectoryPhoneNumberInfo;

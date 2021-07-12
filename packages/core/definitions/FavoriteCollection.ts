@@ -5,5 +5,4 @@ class FavoriteCollection {
    */
   records?: FavoriteContactResource[];
 }
-
 export default FavoriteCollection;

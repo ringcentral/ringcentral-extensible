@@ -12,5 +12,4 @@ class ListRecentChatsParameters {
    */
   recordCount?: number;
 }
-
 export default ListRecentChatsParameters;
