@@ -1,6 +1,6 @@
 {
   "name": "@rc-ex/debug",
-  "version": "0.7.12",
+  "version": "0.7.13",
   "description": "Debug extension for ringcentral-extensible project",
   "author": "Tyler Liu <tyler.liu@ringcentral.com>",
   "homepage": "https://github.com/ringcentral/ringcentral-extensible/tree/master/packages/extensions/debug",
@@ -18,7 +18,7 @@
     "access": "public"
   },
   "devDependencies": {
-    "@rc-ex/core": "^0.8.4"
+    "@rc-ex/core": "^0.8.5-alpha.0"
   },
   "peerDependencies": {
     "@rc-ex/core": "^0.8.3"
