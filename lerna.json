@@ -5,6 +5,7 @@
     "packages/core",
     "packages/extensions/authorize-uri",
     "packages/extensions/debug",
+    "packages/extensions/public-api",
     "packages/extensions/events",
     "packages/extensions/pubnub",
     "packages/extensions/rate-limit",

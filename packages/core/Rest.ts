@@ -8,7 +8,7 @@ import qs from 'qs';
 import FormData from 'form-data';
 
 import RestException from './RestException';
-import {TokenInfo} from './definitions';
+import {TokenInfo} from '@rc-ex/public-api/lib/definitions';
 import {version} from './package.json';
 
 export type RestOptions = {

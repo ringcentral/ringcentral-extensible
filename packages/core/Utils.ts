@@ -1,6 +1,6 @@
 import _FormData from 'form-data';
+import {Attachment} from '@rc-ex/public-api/lib/definitions';
 
-import {Attachment} from './definitions';
 import {RestResponse} from './Rest';
 
 class FormData extends _FormData {

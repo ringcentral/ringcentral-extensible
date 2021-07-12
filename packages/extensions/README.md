@@ -27,6 +27,11 @@ By default, an extension is enabled after installation. You can disable it by `a
 You can re-enabled it by `abcExtension.enabled = true`.
 
 
+## [Public API Extension](./public-api)
+
+Public API extension add definitions and sugar methods for RingCentral public API.
+
+
 ## [Debug Extension](./debug)
 
 Debug extension prints details about API traffic so you can inspect the request and response data.

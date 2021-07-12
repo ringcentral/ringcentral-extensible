@@ -1,7 +1,8 @@
 import {RestMethod, RestResponse} from './Rest';
-import {GetTokenRequest, TokenInfo} from './definitions';
-import Restapi from './paths/Restapi';
-import Scim from './paths/Scim';
+import {GetTokenRequest, TokenInfo} from '@rc-ex/public-api/lib/definitions';
+import PublicApiExtension from '@rc-ex/public-api';
+// import Restapi from './paths/Restapi';
+// import Scim from './paths/Scim';
 import Rest, {RestOptions, RestRequestConfig} from './Rest';
 import SdkExtension from './SdkExtension';
 
@@ -174,13 +175,13 @@ export class RingCentral {
     this.token = undefined;
   }
 
-  restapi(apiVersion: string | null = 'v1.0'): Restapi {
-    return new Restapi(this, apiVersion);
-  }
+  // restapi(apiVersion: string | null = 'v1.0'): Restapi {
+  //   return new Restapi(this, apiVersion);
+  // }
 
-  scim(version: string | null = 'v2'): Scim {
-    return new Scim(this, version);
-  }
+  // scim(version: string | null = 'v2'): Scim {
+  //   return new Scim(this, version);
+  // }
 }
 
 export default RingCentral;
