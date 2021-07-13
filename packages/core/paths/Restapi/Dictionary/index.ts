@@ -7,7 +7,7 @@ import Country from './Country';
 import State from './State';
 import Brand from './Brand';
 import Parent from '..';
-import RingCentral from '../../..';
+import {RingCentral} from '../../..';
 
 class Index {
   rc: RingCentral;

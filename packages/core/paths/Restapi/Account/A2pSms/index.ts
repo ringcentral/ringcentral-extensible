@@ -2,7 +2,7 @@ import OptOuts from './OptOuts';
 import Messages from './Messages';
 import Batch from './Batch';
 import Parent from '..';
-import RingCentral from '../../../..';
+import {RingCentral} from '../../../..';
 
 class Index {
   rc: RingCentral;

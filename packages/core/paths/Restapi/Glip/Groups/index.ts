@@ -1,7 +1,7 @@
 import Webhooks from './Webhooks';
 import Events from './Events';
 import Parent from '..';
-import RingCentral from '../../../..';
+import {RingCentral} from '../../../..';
 
 class Index {
   rc: RingCentral;

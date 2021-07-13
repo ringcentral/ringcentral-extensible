@@ -16,7 +16,7 @@ import Hold from './Hold';
 import {RestRequestConfig} from '../../../../../../Rest';
 import {CallParty, PartyUpdateRequest} from '../../../../../../definitions';
 import Parent from '..';
-import RingCentral from '../../../../../..';
+import {RingCentral} from '../../../../../..';
 
 class Index {
   rc: RingCentral;

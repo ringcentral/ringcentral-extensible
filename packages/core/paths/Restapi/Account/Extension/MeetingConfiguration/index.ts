@@ -1,6 +1,6 @@
 import ProfileImage from './ProfileImage';
 import Parent from '..';
-import RingCentral from '../../../../..';
+import {RingCentral} from '../../../../..';
 
 class Index {
   rc: RingCentral;

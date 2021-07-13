@@ -2,7 +2,7 @@ import Authorize from './Authorize';
 import Revoke from './Revoke';
 import Token from './Token';
 import Parent from '..';
-import RingCentral from '../../..';
+import {RingCentral} from '../../..';
 
 class Index {
   rc: RingCentral;

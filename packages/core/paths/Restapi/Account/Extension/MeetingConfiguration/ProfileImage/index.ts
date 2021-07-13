@@ -2,7 +2,7 @@ import Utils from '../../../../../../Utils';
 import {RestRequestConfig} from '../../../../../../Rest';
 import {CreateUserMeetingProfileImageRequest} from '../../../../../../definitions';
 import Parent from '..';
-import RingCentral from '../../../../../..';
+import {RingCentral} from '../../../../../..';
 
 class Index {
   rc: RingCentral;

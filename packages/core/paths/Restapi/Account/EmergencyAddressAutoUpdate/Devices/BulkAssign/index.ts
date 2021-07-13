@@ -1,7 +1,7 @@
 import {RestRequestConfig} from '../../../../../../Rest';
 import {AssignMultipleDevicesAutomaticLocationUpdates} from '../../../../../../definitions';
 import Parent from '..';
-import RingCentral from '../../../../../..';
+import {RingCentral} from '../../../../../..';
 
 class Index {
   rc: RingCentral;

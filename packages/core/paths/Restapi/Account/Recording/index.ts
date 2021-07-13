@@ -2,7 +2,7 @@ import Content from './Content';
 import {RestRequestConfig} from '../../../../Rest';
 import {GetCallRecordingResponse} from '../../../../definitions';
 import Parent from '..';
-import RingCentral from '../../../..';
+import {RingCentral} from '../../../..';
 
 class Index {
   rc: RingCentral;

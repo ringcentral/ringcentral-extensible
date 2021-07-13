@@ -2,7 +2,7 @@ import Conference from './Conference';
 import CallOut from './CallOut';
 import Sessions from './Sessions';
 import Parent from '..';
-import RingCentral from '../../../..';
+import {RingCentral} from '../../../..';
 
 class Index {
   rc: RingCentral;

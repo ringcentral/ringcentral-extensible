@@ -2,7 +2,7 @@ import BulkAssign from './BulkAssign';
 import Devices from './Devices';
 import Users from './Users';
 import Parent from '..';
-import RingCentral from '../../../..';
+import {RingCentral} from '../../../..';
 
 class Index {
   rc: RingCentral;

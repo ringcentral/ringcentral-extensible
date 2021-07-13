@@ -5,7 +5,7 @@ import {
   GetCountryInfoDictionaryResponse,
 } from '../../../../definitions';
 import Parent from '..';
-import RingCentral from '../../../..';
+import {RingCentral} from '../../../..';
 
 class Index {
   rc: RingCentral;

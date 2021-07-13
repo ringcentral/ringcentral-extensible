@@ -1,7 +1,7 @@
 import {RestRequestConfig} from '../../../../Rest';
 import {GlipCompany} from '../../../../definitions';
 import Parent from '..';
-import RingCentral from '../../../..';
+import {RingCentral} from '../../../..';
 
 class Index {
   rc: RingCentral;

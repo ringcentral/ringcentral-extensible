@@ -4,7 +4,7 @@ import Extensions from './Extensions';
 import {RestRequestConfig} from '../../../../Rest';
 import {CallRecordingSettingsResource} from '../../../../definitions';
 import Parent from '..';
-import RingCentral from '../../../..';
+import {RingCentral} from '../../../..';
 
 class Index {
   rc: RingCentral;

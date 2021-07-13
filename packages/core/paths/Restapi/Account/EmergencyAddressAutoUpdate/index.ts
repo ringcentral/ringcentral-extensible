@@ -11,7 +11,7 @@ import Devices from './Devices';
 import Users from './Users';
 import Tasks from './Tasks';
 import Parent from '..';
-import RingCentral from '../../../..';
+import {RingCentral} from '../../../..';
 
 class Index {
   rc: RingCentral;

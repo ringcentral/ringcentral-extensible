@@ -7,7 +7,7 @@ import Oauth from './Oauth';
 import Glip from './Glip';
 import {RestRequestConfig} from '../../Rest';
 import {GetVersionsResponse, GetVersionResponse} from '../../definitions';
-import RingCentral from '../..';
+import {RingCentral} from '../..';
 
 class Index {
   rc: RingCentral;

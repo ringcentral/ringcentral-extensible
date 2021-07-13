@@ -1,7 +1,7 @@
 import Federation from './Federation';
 import Entries from './Entries';
 import Parent from '..';
-import RingCentral from '../../../..';
+import {RingCentral} from '../../../..';
 
 class Index {
   rc: RingCentral;

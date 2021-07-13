@@ -1,6 +1,6 @@
 import Contact from './Contact';
 import Parent from '..';
-import RingCentral from '../../../../..';
+import {RingCentral} from '../../../../..';
 
 class Index {
   rc: RingCentral;

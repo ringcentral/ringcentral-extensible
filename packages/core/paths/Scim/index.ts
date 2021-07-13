@@ -1,6 +1,6 @@
 import ServiceProviderConfig from './ServiceProviderConfig';
 import Users from './Users';
-import RingCentral from '../..';
+import {RingCentral} from '../..';
 
 class Index {
   rc: RingCentral;
