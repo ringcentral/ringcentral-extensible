@@ -1,3 +1,4 @@
+import SipInfo from './SipInfo';
 import {RestRequestConfig} from '../../../../Rest';
 import {
   ReadDeviceParameters,
@@ -70,6 +71,10 @@ class Index {
       restRequestConfig
     );
     return r.data;
+  }
+
+  sipInfo(): SipInfo {
+    return new SipInfo(this);
   }
 }
 export default Index;

@@ -6,7 +6,8 @@ class ListExtensionsParameters {
   extensionNumber?: string;
 
   /**
-   * Extension email address
+   * Extension email address. Multiple values are accepted
+   * Example: alice.smith@example.com&email=bob.johnson@example.com
    */
   email?: string;
 

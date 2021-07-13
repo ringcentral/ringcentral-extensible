@@ -1,5 +1,8 @@
 import {RestRequestConfig} from '../../../../../Rest';
-import {ExtensionCallerIdInfo} from '../../../../../definitions';
+import {
+  ExtensionCallerIdInfo,
+  ExtensionCallerIdInfoRequest,
+} from '../../../../../definitions';
 import Parent from '..';
 import RingCentral from '../../../../..';
 
@@ -42,12 +45,12 @@ class Index {
    * User Permission: EditCallerIDSettings
    */
   async put(
-    extensionCallerIdInfo: ExtensionCallerIdInfo,
+    extensionCallerIdInfoRequest: ExtensionCallerIdInfoRequest,
     restRequestConfig?: RestRequestConfig
   ): Promise<ExtensionCallerIdInfo> {
     const r = await this.rc.put<ExtensionCallerIdInfo>(
       this.path(),
-      extensionCallerIdInfo,
+      extensionCallerIdInfoRequest,
       undefined,
       restRequestConfig
     );
