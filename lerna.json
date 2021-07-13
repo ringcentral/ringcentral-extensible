@@ -13,7 +13,6 @@
     "packages/extensions/ws",
     "packages/extensions/engage-voice",
     "packages/extensions/discovery",
-    "test",
-    "code-generator"
+    "test"
   ]
 }

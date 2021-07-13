@@ -22,5 +22,13 @@
     "axios": "^0.21.1",
     "form-data": "^4.0.0",
     "qs": "^6.10.1"
+  },
+  "devDependencies": {
+    "dotenv-override-true": "^6.2.2",
+    "ringcentral-code-generator": "^0.1.4",
+    "ts-node": "^10.1.0"
+  },
+  "scripts": {
+    "generate": "ts-node -r dotenv-override-true/config code-generator.ts"
   }
 }

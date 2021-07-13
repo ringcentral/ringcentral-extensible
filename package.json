@@ -4,7 +4,7 @@
   "license": "MIT",
   "description": "RingCentral Extensible SDK",
   "scripts": {
-    "generate": "lerna run generate --scope=@rc-ex/code-generator && gts fix",
+    "generate": "lerna run generate --scope=@rc-ex/core && gts fix",
     "upgrade-all": "yarn-upgrade-all && lerna exec yarn-upgrade-all && yarn reset",
     "reset": "lerna exec 'rm -rf lib' && lerna clean -y && lerna bootstrap",
     "test": "lerna exec 'yarn jest -w 1 --detectOpenHandles -c jest.config.ts' --scope=@rc-ex/test",

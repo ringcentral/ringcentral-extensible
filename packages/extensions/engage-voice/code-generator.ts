@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import {spawnSync} from 'child_process';
+// eslint-disable-next-line node/no-unpublished-import
 import {pascalCase} from 'change-case';
 
 const typesSet = new Set();
@@ -56,14 +57,7 @@ for (const schemaName of Object.keys(schemas)) {
   }
 }
 
-const outputDir = path.join(
-  __dirname,
-  '..',
-  'packages',
-  'extensions',
-  'engage-voice',
-  'definitions'
-);
+const outputDir = path.join(__dirname, 'definitions');
 spawnSync('rm', ['-rf', outputDir]);
 spawnSync('mkdir', [outputDir]);
 

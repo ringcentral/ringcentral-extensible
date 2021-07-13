@@ -26,3 +26,12 @@ await engageVoiceExtension.authorize();
 const r = await engageVoiceExtension.get('/voice/api/v1/admin/accounts');
 console.log(r.data);
 ```
+
+
+## To generate code
+
+Rename `.env.sample` to `.env` and specify the EV spec file.
+
+```
+yarn lerna run generate --scope=@rc-ex/engage-voice
+```
