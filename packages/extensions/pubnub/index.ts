@@ -4,7 +4,7 @@ import {
   SubscriptionInfo,
   CreateSubscriptionRequest,
 } from '@rc-ex/core/lib/definitions';
-import PubNub from 'pubnub';
+import PubNub, {PubnubConfig} from 'pubnub';
 
 class PubNubExtension extends SdkExtension {
   rc!: RingCentral;
@@ -92,7 +92,8 @@ export class Subscription {
     this.pubnub = new PubNub({
       subscribeKey: this.subscriptionInfo!.deliveryMode!.subscriberKey!,
       origin: 'ringcentral.pubnubapi.com',
-    });
+      useRandomIVs: false,
+    } as PubnubConfig); // todo: remove `as PubnubConfig`
     this.pubnub.addListener({
       message: (message: {message: string}) => {
         if (!this.enabled) {

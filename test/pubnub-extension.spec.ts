@@ -20,6 +20,7 @@ describe('PubNub extension', () => {
     await pubNubExtension.subscribe(
       ['/restapi/v1.0/account/~/extension/~/message-store/instant?type=SMS'],
       body => {
+        expect(body).not.toBeNull();
         expect(body).toBeDefined();
         eventCount += 1;
       }
