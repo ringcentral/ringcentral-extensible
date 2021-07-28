@@ -18,7 +18,7 @@ var result = await rc.restapi().list();
 await rc.revoke();
 ```
 
-- `result` is of type [GetVersionsResponse](./packages/core/definitions/GetVersionsResponse.ts)
+- `result` is of type [GetVersionsResponse](./definitions/GetVersionsResponse.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#API-Info-readAPIVersions) in API Explorer.
 
@@ -41,7 +41,7 @@ await rc.revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
-- `result` is of type [GetVersionResponse](./packages/core/definitions/GetVersionResponse.ts)
+- `result` is of type [GetVersionResponse](./definitions/GetVersionResponse.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#API-Info-readAPIVersion) in API Explorer.
 
@@ -64,8 +64,8 @@ await rc.revoke();
 ```
 
 - Parameter `version` is optional with default value `v2`
-- `searchViaGet2Parameters` is of type [SearchViaGet2Parameters](./packages/core/definitions/SearchViaGet2Parameters.ts)
-- `result` is of type [UserSearchResponse](./packages/core/definitions/UserSearchResponse.ts)
+- `searchViaGet2Parameters` is of type [SearchViaGet2Parameters](./definitions/SearchViaGet2Parameters.ts)
+- `result` is of type [UserSearchResponse](./definitions/UserSearchResponse.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#SCIM-searchViaGet2) in API Explorer.
 
@@ -88,8 +88,8 @@ await rc.revoke();
 ```
 
 - Parameter `version` is optional with default value `v2`
-- `createUser` is of type [CreateUser](./packages/core/definitions/CreateUser.ts)
-- `result` is of type [UserResponse](./packages/core/definitions/UserResponse.ts)
+- `createUser` is of type [CreateUser](./definitions/CreateUser.ts)
+- `result` is of type [UserResponse](./definitions/UserResponse.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#SCIM-createUser2) in API Explorer.
 
@@ -112,7 +112,7 @@ await rc.revoke();
 ```
 
 - Parameter `version` is optional with default value `v2`
-- `result` is of type [UserResponse](./packages/core/definitions/UserResponse.ts)
+- `result` is of type [UserResponse](./definitions/UserResponse.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#SCIM-readUser2) in API Explorer.
 
@@ -135,8 +135,8 @@ await rc.revoke();
 ```
 
 - Parameter `version` is optional with default value `v2`
-- `user` is of type [User](./packages/core/definitions/User.ts)
-- `result` is of type [UserResponse](./packages/core/definitions/UserResponse.ts)
+- `user` is of type [User](./definitions/User.ts)
+- `result` is of type [UserResponse](./definitions/UserResponse.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#SCIM-replaceUser2) in API Explorer.
 
@@ -182,8 +182,8 @@ await rc.revoke();
 ```
 
 - Parameter `version` is optional with default value `v2`
-- `userPatch` is of type [UserPatch](./packages/core/definitions/UserPatch.ts)
-- `result` is of type [UserResponse](./packages/core/definitions/UserResponse.ts)
+- `userPatch` is of type [UserPatch](./definitions/UserPatch.ts)
+- `result` is of type [UserResponse](./definitions/UserResponse.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#SCIM-patchUser2) in API Explorer.
 
@@ -205,7 +205,7 @@ var result = await rc.restapi().oauth().authorize().post(authorizeRequest);
 await rc.revoke();
 ```
 
-- `authorizeRequest` is of type [AuthorizeRequest](./packages/core/definitions/AuthorizeRequest.ts)
+- `authorizeRequest` is of type [AuthorizeRequest](./definitions/AuthorizeRequest.ts)
 - `result` is an empty string
 
 [Try it out](https://developer.ringcentral.com/api-reference#OAuth-2.0-authorize) in API Explorer.
@@ -228,8 +228,8 @@ var result = await rc.restapi().oauth().token().post(getTokenRequest);
 await rc.revoke();
 ```
 
-- `getTokenRequest` is of type [GetTokenRequest](./packages/core/definitions/GetTokenRequest.ts)
-- `result` is of type [TokenInfo](./packages/core/definitions/TokenInfo.ts)
+- `getTokenRequest` is of type [GetTokenRequest](./definitions/GetTokenRequest.ts)
+- `result` is of type [TokenInfo](./definitions/TokenInfo.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#OAuth-2.0-getToken) in API Explorer.
 
@@ -253,7 +253,7 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `result` is of type [GetAccountInfoResponse](./packages/core/definitions/GetAccountInfoResponse.ts)
+- `result` is of type [GetAccountInfoResponse](./definitions/GetAccountInfoResponse.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Company-readAccountInfo) in API Explorer.
 
@@ -275,7 +275,7 @@ var result = await rc.restapi().oauth().revoke().post(revokeTokenRequest);
 await rc.revoke();
 ```
 
-- `revokeTokenRequest` is of type [RevokeTokenRequest](./packages/core/definitions/RevokeTokenRequest.ts)
+- `revokeTokenRequest` is of type [RevokeTokenRequest](./definitions/RevokeTokenRequest.ts)
 - `result` is an empty string
 
 [Try it out](https://developer.ringcentral.com/api-reference#OAuth-2.0-revokeToken) in API Explorer.
@@ -300,8 +300,8 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `readCompanyCallLogParameters` is of type [ReadCompanyCallLogParameters](./packages/core/definitions/ReadCompanyCallLogParameters.ts)
-- `result` is of type [AccountCallLogResponse](./packages/core/definitions/AccountCallLogResponse.ts)
+- `readCompanyCallLogParameters` is of type [ReadCompanyCallLogParameters](./definitions/ReadCompanyCallLogParameters.ts)
+- `result` is of type [AccountCallLogResponse](./definitions/AccountCallLogResponse.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Log-readCompanyCallLog) in API Explorer.
 
@@ -325,8 +325,8 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `readCompanyCallRecordParameters` is of type [ReadCompanyCallRecordParameters](./packages/core/definitions/ReadCompanyCallRecordParameters.ts)
-- `result` is of type [CompanyCallLogRecord](./packages/core/definitions/CompanyCallLogRecord.ts)
+- `readCompanyCallRecordParameters` is of type [ReadCompanyCallRecordParameters](./definitions/ReadCompanyCallRecordParameters.ts)
+- `result` is of type [CompanyCallLogRecord](./definitions/CompanyCallLogRecord.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Log-readCompanyCallRecord) in API Explorer.
 
@@ -350,8 +350,8 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `readDeviceParameters` is of type [ReadDeviceParameters](./packages/core/definitions/ReadDeviceParameters.ts)
-- `result` is of type [GetDeviceInfoResponse](./packages/core/definitions/GetDeviceInfoResponse.ts)
+- `readDeviceParameters` is of type [ReadDeviceParameters](./definitions/ReadDeviceParameters.ts)
+- `result` is of type [GetDeviceInfoResponse](./definitions/GetDeviceInfoResponse.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Devices-readDevice) in API Explorer.
 
@@ -375,9 +375,9 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `accountDeviceUpdate` is of type [AccountDeviceUpdate](./packages/core/definitions/AccountDeviceUpdate.ts)
-- `updateDeviceParameters` is of type [UpdateDeviceParameters](./packages/core/definitions/UpdateDeviceParameters.ts)
-- `result` is of type [GetDeviceInfoResponse](./packages/core/definitions/GetDeviceInfoResponse.ts)
+- `accountDeviceUpdate` is of type [AccountDeviceUpdate](./definitions/AccountDeviceUpdate.ts)
+- `updateDeviceParameters` is of type [UpdateDeviceParameters](./definitions/UpdateDeviceParameters.ts)
+- `result` is of type [GetDeviceInfoResponse](./definitions/GetDeviceInfoResponse.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Devices-updateDevice) in API Explorer.
 
@@ -401,8 +401,8 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `listExtensionsParameters` is of type [ListExtensionsParameters](./packages/core/definitions/ListExtensionsParameters.ts)
-- `result` is of type [GetExtensionListResponse](./packages/core/definitions/GetExtensionListResponse.ts)
+- `listExtensionsParameters` is of type [ListExtensionsParameters](./definitions/ListExtensionsParameters.ts)
+- `result` is of type [GetExtensionListResponse](./definitions/GetExtensionListResponse.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Extensions-listExtensions) in API Explorer.
 
@@ -426,8 +426,8 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `extensionCreationRequest` is of type [ExtensionCreationRequest](./packages/core/definitions/ExtensionCreationRequest.ts)
-- `result` is of type [ExtensionCreationResponse](./packages/core/definitions/ExtensionCreationResponse.ts)
+- `extensionCreationRequest` is of type [ExtensionCreationRequest](./definitions/ExtensionCreationRequest.ts)
+- `result` is of type [ExtensionCreationResponse](./definitions/ExtensionCreationResponse.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Extensions-createExtension) in API Explorer.
 
@@ -452,7 +452,7 @@ await rc.revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
-- `result` is of type [GetExtensionInfoResponse](./packages/core/definitions/GetExtensionInfoResponse.ts)
+- `result` is of type [GetExtensionInfoResponse](./definitions/GetExtensionInfoResponse.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#User-Settings-readExtension) in API Explorer.
 
@@ -477,8 +477,8 @@ await rc.revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
-- `extensionUpdateRequest` is of type [ExtensionUpdateRequest](./packages/core/definitions/ExtensionUpdateRequest.ts)
-- `result` is of type [GetExtensionInfoResponse](./packages/core/definitions/GetExtensionInfoResponse.ts)
+- `extensionUpdateRequest` is of type [ExtensionUpdateRequest](./definitions/ExtensionUpdateRequest.ts)
+- `result` is of type [GetExtensionInfoResponse](./definitions/GetExtensionInfoResponse.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#User-Settings-updateExtension) in API Explorer.
 
@@ -503,7 +503,7 @@ await rc.revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
-- `deleteExtensionParameters` is of type [DeleteExtensionParameters](./packages/core/definitions/DeleteExtensionParameters.ts)
+- `deleteExtensionParameters` is of type [DeleteExtensionParameters](./definitions/DeleteExtensionParameters.ts)
 - `result` is an empty string
 
 [Try it out](https://developer.ringcentral.com/api-reference#User-Settings-deleteExtension) in API Explorer.
@@ -528,8 +528,8 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `createCompanyGreetingRequest` is of type [CreateCompanyGreetingRequest](./packages/core/definitions/CreateCompanyGreetingRequest.ts)
-- `result` is of type [CustomCompanyGreetingInfo](./packages/core/definitions/CustomCompanyGreetingInfo.ts)
+- `createCompanyGreetingRequest` is of type [CreateCompanyGreetingRequest](./definitions/CreateCompanyGreetingRequest.ts)
+- `result` is of type [CustomCompanyGreetingInfo](./definitions/CustomCompanyGreetingInfo.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Greetings-createCompanyGreeting) in API Explorer.
 
@@ -553,8 +553,8 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `iVRMenuInfo` is of type [IVRMenuInfo](./packages/core/definitions/IVRMenuInfo.ts)
-- `result` is of type [IVRMenuInfo](./packages/core/definitions/IVRMenuInfo.ts)
+- `iVRMenuInfo` is of type [IVRMenuInfo](./definitions/IVRMenuInfo.ts)
+- `result` is of type [IVRMenuInfo](./definitions/IVRMenuInfo.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#IVR-createIVRMenu) in API Explorer.
 
@@ -578,7 +578,7 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `result` is of type [IVRMenuInfo](./packages/core/definitions/IVRMenuInfo.ts)
+- `result` is of type [IVRMenuInfo](./definitions/IVRMenuInfo.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#IVR-readIVRMenu) in API Explorer.
 
@@ -602,8 +602,8 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `iVRMenuInfo` is of type [IVRMenuInfo](./packages/core/definitions/IVRMenuInfo.ts)
-- `result` is of type [IVRMenuInfo](./packages/core/definitions/IVRMenuInfo.ts)
+- `iVRMenuInfo` is of type [IVRMenuInfo](./definitions/IVRMenuInfo.ts)
+- `result` is of type [IVRMenuInfo](./definitions/IVRMenuInfo.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#IVR-updateIVRMenu) in API Explorer.
 
@@ -627,8 +627,8 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `readAccountPresenceParameters` is of type [ReadAccountPresenceParameters](./packages/core/definitions/ReadAccountPresenceParameters.ts)
-- `result` is of type [AccountPresenceInfo](./packages/core/definitions/AccountPresenceInfo.ts)
+- `readAccountPresenceParameters` is of type [ReadAccountPresenceParameters](./definitions/ReadAccountPresenceParameters.ts)
+- `result` is of type [AccountPresenceInfo](./definitions/AccountPresenceInfo.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Presence-readAccountPresence) in API Explorer.
 
@@ -652,7 +652,7 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `result` is of type [GetCallRecordingResponse](./packages/core/definitions/GetCallRecordingResponse.ts)
+- `result` is of type [GetCallRecordingResponse](./definitions/GetCallRecordingResponse.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Recordings-readCallRecording) in API Explorer.
 
@@ -676,8 +676,8 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `listUserTemplatesParameters` is of type [ListUserTemplatesParameters](./packages/core/definitions/ListUserTemplatesParameters.ts)
-- `result` is of type [UserTemplates](./packages/core/definitions/UserTemplates.ts)
+- `listUserTemplatesParameters` is of type [ListUserTemplatesParameters](./definitions/ListUserTemplatesParameters.ts)
+- `result` is of type [UserTemplates](./definitions/UserTemplates.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Extensions-listUserTemplates) in API Explorer.
 
@@ -701,7 +701,7 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `result` is of type [TemplateInfo](./packages/core/definitions/TemplateInfo.ts)
+- `result` is of type [TemplateInfo](./definitions/TemplateInfo.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Extensions-readUserTemplate) in API Explorer.
 
@@ -724,8 +724,8 @@ await rc.revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
-- `listStatesParameters` is of type [ListStatesParameters](./packages/core/definitions/ListStatesParameters.ts)
-- `result` is of type [GetStateListResponse](./packages/core/definitions/GetStateListResponse.ts)
+- `listStatesParameters` is of type [ListStatesParameters](./definitions/ListStatesParameters.ts)
+- `result` is of type [GetStateListResponse](./definitions/GetStateListResponse.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Regional-Settings-listStates) in API Explorer.
 
@@ -748,7 +748,7 @@ await rc.revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
-- `result` is of type [GetStateInfoResponse](./packages/core/definitions/GetStateInfoResponse.ts)
+- `result` is of type [GetStateInfoResponse](./definitions/GetStateInfoResponse.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Regional-Settings-readState) in API Explorer.
 
@@ -771,8 +771,8 @@ await rc.revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
-- `listGlipChatsParameters` is of type [ListGlipChatsParameters](./packages/core/definitions/ListGlipChatsParameters.ts)
-- `result` is of type [GlipChatsList](./packages/core/definitions/GlipChatsList.ts)
+- `listGlipChatsParameters` is of type [ListGlipChatsParameters](./definitions/ListGlipChatsParameters.ts)
+- `result` is of type [GlipChatsList](./definitions/GlipChatsList.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Chats-listGlipChats) in API Explorer.
 
@@ -795,7 +795,7 @@ await rc.revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
-- `result` is of type [GlipChatInfo](./packages/core/definitions/GlipChatInfo.ts)
+- `result` is of type [GlipChatInfo](./definitions/GlipChatInfo.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Chats-readGlipChat) in API Explorer.
 
@@ -818,8 +818,8 @@ await rc.revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
-- `listChatNotesParameters` is of type [ListChatNotesParameters](./packages/core/definitions/ListChatNotesParameters.ts)
-- `result` is of type [GlipNotesInfo](./packages/core/definitions/GlipNotesInfo.ts)
+- `listChatNotesParameters` is of type [ListChatNotesParameters](./definitions/ListChatNotesParameters.ts)
+- `result` is of type [GlipNotesInfo](./definitions/GlipNotesInfo.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Notes-listChatNotes) in API Explorer.
 
@@ -842,8 +842,8 @@ await rc.revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
-- `glipNoteCreate` is of type [GlipNoteCreate](./packages/core/definitions/GlipNoteCreate.ts)
-- `result` is of type [GlipNoteInfo](./packages/core/definitions/GlipNoteInfo.ts)
+- `glipNoteCreate` is of type [GlipNoteCreate](./definitions/GlipNoteCreate.ts)
+- `result` is of type [GlipNoteInfo](./definitions/GlipNoteInfo.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Notes-createChatNote) in API Explorer.
 
@@ -866,8 +866,8 @@ await rc.revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
-- `readGlipPostsParameters` is of type [ReadGlipPostsParameters](./packages/core/definitions/ReadGlipPostsParameters.ts)
-- `result` is of type [GlipPostsList](./packages/core/definitions/GlipPostsList.ts)
+- `readGlipPostsParameters` is of type [ReadGlipPostsParameters](./definitions/ReadGlipPostsParameters.ts)
+- `result` is of type [GlipPostsList](./definitions/GlipPostsList.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Posts-readGlipPosts) in API Explorer.
 
@@ -890,8 +890,8 @@ await rc.revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
-- `glipPostPostBody` is of type [GlipPostPostBody](./packages/core/definitions/GlipPostPostBody.ts)
-- `result` is of type [GlipPostInfo](./packages/core/definitions/GlipPostInfo.ts)
+- `glipPostPostBody` is of type [GlipPostPostBody](./definitions/GlipPostPostBody.ts)
+- `result` is of type [GlipPostInfo](./definitions/GlipPostInfo.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Posts-createGlipPost) in API Explorer.
 
@@ -914,7 +914,7 @@ await rc.revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
-- `result` is of type [GlipPostInfo](./packages/core/definitions/GlipPostInfo.ts)
+- `result` is of type [GlipPostInfo](./definitions/GlipPostInfo.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Posts-readGlipPost) in API Explorer.
 
@@ -960,8 +960,8 @@ await rc.revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
-- `glipPatchPostBody` is of type [GlipPatchPostBody](./packages/core/definitions/GlipPatchPostBody.ts)
-- `result` is of type [GlipPostInfo](./packages/core/definitions/GlipPostInfo.ts)
+- `glipPatchPostBody` is of type [GlipPatchPostBody](./definitions/GlipPatchPostBody.ts)
+- `result` is of type [GlipPostInfo](./definitions/GlipPostInfo.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Posts-patchGlipPost) in API Explorer.
 
@@ -1007,8 +1007,8 @@ await rc.revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
-- `listChatTasksParameters` is of type [ListChatTasksParameters](./packages/core/definitions/ListChatTasksParameters.ts)
-- `result` is of type [GlipTaskList](./packages/core/definitions/GlipTaskList.ts)
+- `listChatTasksParameters` is of type [ListChatTasksParameters](./definitions/ListChatTasksParameters.ts)
+- `result` is of type [GlipTaskList](./definitions/GlipTaskList.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Tasks-listChatTasks) in API Explorer.
 
@@ -1031,8 +1031,8 @@ await rc.revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
-- `glipCreateTask` is of type [GlipCreateTask](./packages/core/definitions/GlipCreateTask.ts)
-- `result` is of type [GlipTaskInfo](./packages/core/definitions/GlipTaskInfo.ts)
+- `glipCreateTask` is of type [GlipCreateTask](./definitions/GlipCreateTask.ts)
+- `result` is of type [GlipTaskInfo](./definitions/GlipTaskInfo.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Tasks-createTask) in API Explorer.
 
@@ -1055,7 +1055,7 @@ await rc.revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
-- `result` is of type [GlipCompany](./packages/core/definitions/GlipCompany.ts)
+- `result` is of type [GlipCompany](./definitions/GlipCompany.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Glip-Profile-readGlipCompany) in API Explorer.
 
@@ -1078,8 +1078,8 @@ await rc.revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
-- `listDataExportTasksParameters` is of type [ListDataExportTasksParameters](./packages/core/definitions/ListDataExportTasksParameters.ts)
-- `result` is of type [DataExportTaskList](./packages/core/definitions/DataExportTaskList.ts)
+- `listDataExportTasksParameters` is of type [ListDataExportTasksParameters](./definitions/ListDataExportTasksParameters.ts)
+- `result` is of type [DataExportTaskList](./definitions/DataExportTaskList.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Glip-Compliance-Exports-listDataExportTasks) in API Explorer.
 
@@ -1102,8 +1102,8 @@ await rc.revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
-- `createDataExportTaskRequest` is of type [CreateDataExportTaskRequest](./packages/core/definitions/CreateDataExportTaskRequest.ts)
-- `result` is of type [DataExportTask](./packages/core/definitions/DataExportTask.ts)
+- `createDataExportTaskRequest` is of type [CreateDataExportTaskRequest](./definitions/CreateDataExportTaskRequest.ts)
+- `result` is of type [DataExportTask](./definitions/DataExportTask.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Glip-Compliance-Exports-createDataExportTask) in API Explorer.
 
@@ -1126,7 +1126,7 @@ await rc.revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
-- `result` is of type [DataExportTask](./packages/core/definitions/DataExportTask.ts)
+- `result` is of type [DataExportTask](./definitions/DataExportTask.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Glip-Compliance-Exports-readDataExportTask) in API Explorer.
 
@@ -1149,7 +1149,7 @@ await rc.revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
-- `result` is of type [GlipEveryoneInfo](./packages/core/definitions/GlipEveryoneInfo.ts)
+- `result` is of type [GlipEveryoneInfo](./definitions/GlipEveryoneInfo.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Teams-readGlipEveryone) in API Explorer.
 
@@ -1172,8 +1172,8 @@ await rc.revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
-- `updateGlipEveryoneRequest` is of type [UpdateGlipEveryoneRequest](./packages/core/definitions/UpdateGlipEveryoneRequest.ts)
-- `result` is of type [GlipEveryoneInfo](./packages/core/definitions/GlipEveryoneInfo.ts)
+- `updateGlipEveryoneRequest` is of type [UpdateGlipEveryoneRequest](./definitions/UpdateGlipEveryoneRequest.ts)
+- `result` is of type [GlipEveryoneInfo](./definitions/GlipEveryoneInfo.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Teams-patchGlipEveryone) in API Explorer.
 
@@ -1196,8 +1196,8 @@ await rc.revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
-- `listFavoriteChatsParameters` is of type [ListFavoriteChatsParameters](./packages/core/definitions/ListFavoriteChatsParameters.ts)
-- `result` is of type [GlipChatsListWithoutNavigation](./packages/core/definitions/GlipChatsListWithoutNavigation.ts)
+- `listFavoriteChatsParameters` is of type [ListFavoriteChatsParameters](./definitions/ListFavoriteChatsParameters.ts)
+- `result` is of type [GlipChatsListWithoutNavigation](./definitions/GlipChatsListWithoutNavigation.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Chats-listFavoriteChats) in API Explorer.
 
@@ -1220,7 +1220,7 @@ await rc.revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
-- `result` is of type [GetGlipNoteInfo](./packages/core/definitions/GetGlipNoteInfo.ts)
+- `result` is of type [GetGlipNoteInfo](./definitions/GetGlipNoteInfo.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Notes-readUserNote) in API Explorer.
 
@@ -1266,8 +1266,8 @@ await rc.revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
-- `glipNoteCreate` is of type [GlipNoteCreate](./packages/core/definitions/GlipNoteCreate.ts)
-- `result` is of type [GlipNoteInfo](./packages/core/definitions/GlipNoteInfo.ts)
+- `glipNoteCreate` is of type [GlipNoteCreate](./definitions/GlipNoteCreate.ts)
+- `result` is of type [GlipNoteInfo](./definitions/GlipNoteInfo.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Notes-patchNote) in API Explorer.
 
@@ -1290,7 +1290,7 @@ await rc.revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
-- `result` is of type [GlipTaskInfo](./packages/core/definitions/GlipTaskInfo.ts)
+- `result` is of type [GlipTaskInfo](./definitions/GlipTaskInfo.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Tasks-readTask) in API Explorer.
 
@@ -1336,8 +1336,8 @@ await rc.revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
-- `glipUpdateTask` is of type [GlipUpdateTask](./packages/core/definitions/GlipUpdateTask.ts)
-- `result` is of type [GlipTaskList](./packages/core/definitions/GlipTaskList.ts)
+- `glipUpdateTask` is of type [GlipUpdateTask](./definitions/GlipUpdateTask.ts)
+- `result` is of type [GlipTaskList](./definitions/GlipTaskList.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Tasks-patchTask) in API Explorer.
 
@@ -1360,8 +1360,8 @@ await rc.revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
-- `listGlipTeamsParameters` is of type [ListGlipTeamsParameters](./packages/core/definitions/ListGlipTeamsParameters.ts)
-- `result` is of type [GlipTeamsList](./packages/core/definitions/GlipTeamsList.ts)
+- `listGlipTeamsParameters` is of type [ListGlipTeamsParameters](./definitions/ListGlipTeamsParameters.ts)
+- `result` is of type [GlipTeamsList](./definitions/GlipTeamsList.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Teams-listGlipTeams) in API Explorer.
 
@@ -1384,8 +1384,8 @@ await rc.revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
-- `glipPostTeamBody` is of type [GlipPostTeamBody](./packages/core/definitions/GlipPostTeamBody.ts)
-- `result` is of type [GlipTeamInfo](./packages/core/definitions/GlipTeamInfo.ts)
+- `glipPostTeamBody` is of type [GlipPostTeamBody](./definitions/GlipPostTeamBody.ts)
+- `result` is of type [GlipTeamInfo](./definitions/GlipTeamInfo.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Teams-createGlipTeam) in API Explorer.
 
@@ -1408,7 +1408,7 @@ await rc.revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
-- `result` is of type [GlipTeamInfo](./packages/core/definitions/GlipTeamInfo.ts)
+- `result` is of type [GlipTeamInfo](./definitions/GlipTeamInfo.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Teams-readGlipTeam) in API Explorer.
 
@@ -1454,8 +1454,8 @@ await rc.revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
-- `glipPatchTeamBody` is of type [GlipPatchTeamBody](./packages/core/definitions/GlipPatchTeamBody.ts)
-- `result` is of type [GlipTeamInfo](./packages/core/definitions/GlipTeamInfo.ts)
+- `glipPatchTeamBody` is of type [GlipPatchTeamBody](./definitions/GlipPatchTeamBody.ts)
+- `result` is of type [GlipTeamInfo](./definitions/GlipTeamInfo.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Teams-patchGlipTeam) in API Explorer.
 
@@ -1478,8 +1478,8 @@ await rc.revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
-- `readGlipEventsParameters` is of type [ReadGlipEventsParameters](./packages/core/definitions/ReadGlipEventsParameters.ts)
-- `result` is of type [GlipEventsInfo](./packages/core/definitions/GlipEventsInfo.ts)
+- `readGlipEventsParameters` is of type [ReadGlipEventsParameters](./definitions/ReadGlipEventsParameters.ts)
+- `result` is of type [GlipEventsInfo](./definitions/GlipEventsInfo.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Calendar-Events-readGlipEvents) in API Explorer.
 
@@ -1502,8 +1502,8 @@ await rc.revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
-- `glipEventCreate` is of type [GlipEventCreate](./packages/core/definitions/GlipEventCreate.ts)
-- `result` is of type [GlipEventInfo](./packages/core/definitions/GlipEventInfo.ts)
+- `glipEventCreate` is of type [GlipEventCreate](./definitions/GlipEventCreate.ts)
+- `result` is of type [GlipEventInfo](./definitions/GlipEventInfo.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Calendar-Events-createEvent) in API Explorer.
 
@@ -1526,7 +1526,7 @@ await rc.revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
-- `result` is of type [GlipEventInfo](./packages/core/definitions/GlipEventInfo.ts)
+- `result` is of type [GlipEventInfo](./definitions/GlipEventInfo.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Calendar-Events-readEvent) in API Explorer.
 
@@ -1549,8 +1549,8 @@ await rc.revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
-- `glipEventCreate` is of type [GlipEventCreate](./packages/core/definitions/GlipEventCreate.ts)
-- `result` is of type [GlipEventInfo](./packages/core/definitions/GlipEventInfo.ts)
+- `glipEventCreate` is of type [GlipEventCreate](./definitions/GlipEventCreate.ts)
+- `result` is of type [GlipEventInfo](./definitions/GlipEventInfo.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Calendar-Events-updateEvent) in API Explorer.
 
@@ -1619,7 +1619,7 @@ await rc.revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
-- `result` is of type [GlipPersonInfo](./packages/core/definitions/GlipPersonInfo.ts)
+- `result` is of type [GlipPersonInfo](./definitions/GlipPersonInfo.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Glip-Profile-readGlipPerson) in API Explorer.
 
@@ -1642,7 +1642,7 @@ await rc.revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
-- `glipPostMembersListBody` is of type [GlipPostMembersListBody](./packages/core/definitions/GlipPostMembersListBody.ts)
+- `glipPostMembersListBody` is of type [GlipPostMembersListBody](./definitions/GlipPostMembersListBody.ts)
 - `result` is an empty string
 
 [Try it out](https://developer.ringcentral.com/api-reference#Teams-addGlipTeamMembers) in API Explorer.
@@ -1666,7 +1666,7 @@ await rc.revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
-- `glipPostMembersIdsListBody` is of type [GlipPostMembersIdsListBody](./packages/core/definitions/GlipPostMembersIdsListBody.ts)
+- `glipPostMembersIdsListBody` is of type [GlipPostMembersIdsListBody](./definitions/GlipPostMembersIdsListBody.ts)
 - `result` is an empty string
 
 [Try it out](https://developer.ringcentral.com/api-reference#Teams-removeGlipTeamMembers) in API Explorer.
@@ -1690,7 +1690,7 @@ await rc.revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
-- `result` is of type [GlipWebhookList](./packages/core/definitions/GlipWebhookList.ts)
+- `result` is of type [GlipWebhookList](./definitions/GlipWebhookList.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Glip-Webhooks-listGlipWebhooks) in API Explorer.
 
@@ -1713,7 +1713,7 @@ await rc.revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
-- `result` is of type [GlipWebhookList](./packages/core/definitions/GlipWebhookList.ts)
+- `result` is of type [GlipWebhookList](./definitions/GlipWebhookList.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Glip-Webhooks-readGlipWebhook) in API Explorer.
 
@@ -1759,7 +1759,7 @@ await rc.revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
-- `result` is of type [RecordsCollectionResourceSubscriptionResponse](./packages/core/definitions/RecordsCollectionResourceSubscriptionResponse.ts)
+- `result` is of type [RecordsCollectionResourceSubscriptionResponse](./definitions/RecordsCollectionResourceSubscriptionResponse.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Subscriptions-listSubscriptions) in API Explorer.
 
@@ -1782,8 +1782,8 @@ await rc.revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
-- `createSubscriptionRequest` is of type [CreateSubscriptionRequest](./packages/core/definitions/CreateSubscriptionRequest.ts)
-- `result` is of type [SubscriptionInfo](./packages/core/definitions/SubscriptionInfo.ts)
+- `createSubscriptionRequest` is of type [CreateSubscriptionRequest](./definitions/CreateSubscriptionRequest.ts)
+- `result` is of type [SubscriptionInfo](./definitions/SubscriptionInfo.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Subscriptions-createSubscription) in API Explorer.
 
@@ -1806,7 +1806,7 @@ await rc.revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
-- `result` is of type [SubscriptionInfo](./packages/core/definitions/SubscriptionInfo.ts)
+- `result` is of type [SubscriptionInfo](./definitions/SubscriptionInfo.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Subscriptions-readSubscription) in API Explorer.
 
@@ -1829,8 +1829,8 @@ await rc.revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
-- `modifySubscriptionRequest` is of type [ModifySubscriptionRequest](./packages/core/definitions/ModifySubscriptionRequest.ts)
-- `result` is of type [SubscriptionInfo](./packages/core/definitions/SubscriptionInfo.ts)
+- `modifySubscriptionRequest` is of type [ModifySubscriptionRequest](./definitions/ModifySubscriptionRequest.ts)
+- `result` is of type [SubscriptionInfo](./definitions/SubscriptionInfo.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Subscriptions-updateSubscription) in API Explorer.
 
@@ -1876,8 +1876,8 @@ await rc.revoke();
 ```
 
 - Parameter `version` is optional with default value `v2`
-- `searchRequest` is of type [SearchRequest](./packages/core/definitions/SearchRequest.ts)
-- `result` is of type [UserSearchResponse](./packages/core/definitions/UserSearchResponse.ts)
+- `searchRequest` is of type [SearchRequest](./definitions/SearchRequest.ts)
+- `result` is of type [UserSearchResponse](./definitions/UserSearchResponse.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#SCIM-searchViaPost2) in API Explorer.
 
@@ -1923,7 +1923,7 @@ await rc.revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
-- `result` is of type [GlipPreferencesInfo](./packages/core/definitions/GlipPreferencesInfo.ts)
+- `result` is of type [GlipPreferencesInfo](./definitions/GlipPreferencesInfo.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Glip-Profile-readGlipPreferences) in API Explorer.
 
@@ -1970,8 +1970,8 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `createSMSMessageBatchRequest` is of type [CreateSMSMessageBatchRequest](./packages/core/definitions/CreateSMSMessageBatchRequest.ts)
-- `result` is of type [CreateMessageBatchResponse](./packages/core/definitions/CreateMessageBatchResponse.ts)
+- `createSMSMessageBatchRequest` is of type [CreateSMSMessageBatchRequest](./definitions/CreateSMSMessageBatchRequest.ts)
+- `result` is of type [CreateMessageBatchResponse](./definitions/CreateMessageBatchResponse.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#High-Volume-SMS-createA2PSMS) in API Explorer.
 
@@ -1995,7 +1995,7 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `result` is of type [MessageBatchResponse](./packages/core/definitions/MessageBatchResponse.ts)
+- `result` is of type [MessageBatchResponse](./definitions/MessageBatchResponse.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#High-Volume-SMS-readA2PBatch) in API Explorer.
 
@@ -2019,8 +2019,8 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `listA2PSMSParameters` is of type [ListA2PSMSParameters](./packages/core/definitions/ListA2PSMSParameters.ts)
-- `result` is of type [MessageListResponse](./packages/core/definitions/MessageListResponse.ts)
+- `listA2PSMSParameters` is of type [ListA2PSMSParameters](./definitions/ListA2PSMSParameters.ts)
+- `result` is of type [MessageListResponse](./definitions/MessageListResponse.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#High-Volume-SMS-listA2PSMS) in API Explorer.
 
@@ -2044,7 +2044,7 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `result` is of type [MessageDetailsResponse](./packages/core/definitions/MessageDetailsResponse.ts)
+- `result` is of type [MessageDetailsResponse](./definitions/MessageDetailsResponse.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#High-Volume-SMS-readA2PSMS) in API Explorer.
 
@@ -2068,8 +2068,8 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `readA2PSMSOptOutsParameters` is of type [ReadA2PSMSOptOutsParameters](./packages/core/definitions/ReadA2PSMSOptOutsParameters.ts)
-- `result` is of type [OptOutListResponse](./packages/core/definitions/OptOutListResponse.ts)
+- `readA2PSMSOptOutsParameters` is of type [ReadA2PSMSOptOutsParameters](./definitions/ReadA2PSMSOptOutsParameters.ts)
+- `result` is of type [OptOutListResponse](./definitions/OptOutListResponse.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#High-Volume-SMS-readA2PSMSOptOuts) in API Explorer.
 
@@ -2093,8 +2093,8 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `listCompanyActiveCallsParameters` is of type [ListCompanyActiveCallsParameters](./packages/core/definitions/ListCompanyActiveCallsParameters.ts)
-- `result` is of type [CompanyActiveCallsResponse](./packages/core/definitions/CompanyActiveCallsResponse.ts)
+- `listCompanyActiveCallsParameters` is of type [ListCompanyActiveCallsParameters](./definitions/ListCompanyActiveCallsParameters.ts)
+- `result` is of type [CompanyActiveCallsResponse](./definitions/CompanyActiveCallsResponse.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Log-listCompanyActiveCalls) in API Explorer.
 
@@ -2118,8 +2118,8 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `listCompanyAnsweringRulesParameters` is of type [ListCompanyAnsweringRulesParameters](./packages/core/definitions/ListCompanyAnsweringRulesParameters.ts)
-- `result` is of type [CompanyAnsweringRuleList](./packages/core/definitions/CompanyAnsweringRuleList.ts)
+- `listCompanyAnsweringRulesParameters` is of type [ListCompanyAnsweringRulesParameters](./definitions/ListCompanyAnsweringRulesParameters.ts)
+- `result` is of type [CompanyAnsweringRuleList](./definitions/CompanyAnsweringRuleList.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Handling-Rules-listCompanyAnsweringRules) in API Explorer.
 
@@ -2143,8 +2143,8 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `companyAnsweringRuleRequest` is of type [CompanyAnsweringRuleRequest](./packages/core/definitions/CompanyAnsweringRuleRequest.ts)
-- `result` is of type [CompanyAnsweringRuleInfo](./packages/core/definitions/CompanyAnsweringRuleInfo.ts)
+- `companyAnsweringRuleRequest` is of type [CompanyAnsweringRuleRequest](./definitions/CompanyAnsweringRuleRequest.ts)
+- `result` is of type [CompanyAnsweringRuleInfo](./definitions/CompanyAnsweringRuleInfo.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Handling-Rules-createCompanyAnsweringRule) in API Explorer.
 
@@ -2168,7 +2168,7 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `result` is of type [CompanyAnsweringRuleInfo](./packages/core/definitions/CompanyAnsweringRuleInfo.ts)
+- `result` is of type [CompanyAnsweringRuleInfo](./definitions/CompanyAnsweringRuleInfo.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Handling-Rules-readCompanyAnsweringRule) in API Explorer.
 
@@ -2192,8 +2192,8 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `companyAnsweringRuleUpdate` is of type [CompanyAnsweringRuleUpdate](./packages/core/definitions/CompanyAnsweringRuleUpdate.ts)
-- `result` is of type [CompanyAnsweringRuleInfo](./packages/core/definitions/CompanyAnsweringRuleInfo.ts)
+- `companyAnsweringRuleUpdate` is of type [CompanyAnsweringRuleUpdate](./definitions/CompanyAnsweringRuleUpdate.ts)
+- `result` is of type [CompanyAnsweringRuleInfo](./definitions/CompanyAnsweringRuleInfo.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Handling-Rules-updateCompanyAnsweringRule) in API Explorer.
 
@@ -2241,7 +2241,7 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `result` is of type [AccountBusinessAddressResource](./packages/core/definitions/AccountBusinessAddressResource.ts)
+- `result` is of type [AccountBusinessAddressResource](./definitions/AccountBusinessAddressResource.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Company-readAccountBusinessAddress) in API Explorer.
 
@@ -2265,8 +2265,8 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `modifyAccountBusinessAddressRequest` is of type [ModifyAccountBusinessAddressRequest](./packages/core/definitions/ModifyAccountBusinessAddressRequest.ts)
-- `result` is of type [AccountBusinessAddressResource](./packages/core/definitions/AccountBusinessAddressResource.ts)
+- `modifyAccountBusinessAddressRequest` is of type [ModifyAccountBusinessAddressRequest](./definitions/ModifyAccountBusinessAddressRequest.ts)
+- `result` is of type [AccountBusinessAddressResource](./definitions/AccountBusinessAddressResource.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Company-updateAccountBusinessAddress) in API Explorer.
 
@@ -2290,7 +2290,7 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `result` is of type [CompanyBusinessHours](./packages/core/definitions/CompanyBusinessHours.ts)
+- `result` is of type [CompanyBusinessHours](./definitions/CompanyBusinessHours.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Business-Hours-readCompanyBusinessHours) in API Explorer.
 
@@ -2314,8 +2314,8 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `companyBusinessHoursUpdateRequest` is of type [CompanyBusinessHoursUpdateRequest](./packages/core/definitions/CompanyBusinessHoursUpdateRequest.ts)
-- `result` is of type [CompanyBusinessHours](./packages/core/definitions/CompanyBusinessHours.ts)
+- `companyBusinessHoursUpdateRequest` is of type [CompanyBusinessHoursUpdateRequest](./definitions/CompanyBusinessHoursUpdateRequest.ts)
+- `result` is of type [CompanyBusinessHours](./definitions/CompanyBusinessHours.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Business-Hours-updateCompanyBusinessHours) in API Explorer.
 
@@ -2339,8 +2339,8 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `syncAccountCallLogParameters` is of type [SyncAccountCallLogParameters](./packages/core/definitions/SyncAccountCallLogParameters.ts)
-- `result` is of type [AccountCallLogSyncResponse](./packages/core/definitions/AccountCallLogSyncResponse.ts)
+- `syncAccountCallLogParameters` is of type [SyncAccountCallLogParameters](./definitions/SyncAccountCallLogParameters.ts)
+- `result` is of type [AccountCallLogSyncResponse](./definitions/AccountCallLogSyncResponse.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Log-syncAccountCallLog) in API Explorer.
 
@@ -2364,8 +2364,8 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `listCallQueuesParameters` is of type [ListCallQueuesParameters](./packages/core/definitions/ListCallQueuesParameters.ts)
-- `result` is of type [CallQueues](./packages/core/definitions/CallQueues.ts)
+- `listCallQueuesParameters` is of type [ListCallQueuesParameters](./definitions/ListCallQueuesParameters.ts)
+- `result` is of type [CallQueues](./definitions/CallQueues.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Queues-listCallQueues) in API Explorer.
 
@@ -2389,7 +2389,7 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `result` is of type [CallQueueDetails](./packages/core/definitions/CallQueueDetails.ts)
+- `result` is of type [CallQueueDetails](./definitions/CallQueueDetails.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Queues-readCallQueueInfo) in API Explorer.
 
@@ -2413,8 +2413,8 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `callQueueUpdateDetails` is of type [CallQueueUpdateDetails](./packages/core/definitions/CallQueueUpdateDetails.ts)
-- `result` is of type [CallQueueDetails](./packages/core/definitions/CallQueueDetails.ts)
+- `callQueueUpdateDetails` is of type [CallQueueUpdateDetails](./definitions/CallQueueUpdateDetails.ts)
+- `result` is of type [CallQueueDetails](./definitions/CallQueueDetails.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Queues-updateCallQueueInfo) in API Explorer.
 
@@ -2438,7 +2438,7 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `result` is of type [CallRecordingSettingsResource](./packages/core/definitions/CallRecordingSettingsResource.ts)
+- `result` is of type [CallRecordingSettingsResource](./definitions/CallRecordingSettingsResource.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Recording-Settings-readCallRecordingSettings) in API Explorer.
 
@@ -2462,8 +2462,8 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `callRecordingSettingsResource` is of type [CallRecordingSettingsResource](./packages/core/definitions/CallRecordingSettingsResource.ts)
-- `result` is of type [CallRecordingSettingsResource](./packages/core/definitions/CallRecordingSettingsResource.ts)
+- `callRecordingSettingsResource` is of type [CallRecordingSettingsResource](./definitions/CallRecordingSettingsResource.ts)
+- `result` is of type [CallRecordingSettingsResource](./definitions/CallRecordingSettingsResource.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Recording-Settings-updateCallRecordingSettings) in API Explorer.
 
@@ -2487,7 +2487,7 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `result` is of type [CustomFieldsResource](./packages/core/definitions/CustomFieldsResource.ts)
+- `result` is of type [CustomFieldsResource](./definitions/CustomFieldsResource.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Custom-Fields-listCustomFields) in API Explorer.
 
@@ -2511,8 +2511,8 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `customFieldCreateRequest` is of type [CustomFieldCreateRequest](./packages/core/definitions/CustomFieldCreateRequest.ts)
-- `result` is of type [CustomFieldResource](./packages/core/definitions/CustomFieldResource.ts)
+- `customFieldCreateRequest` is of type [CustomFieldCreateRequest](./definitions/CustomFieldCreateRequest.ts)
+- `result` is of type [CustomFieldResource](./definitions/CustomFieldResource.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Custom-Fields-createCustomField) in API Explorer.
 
@@ -2536,8 +2536,8 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `customFieldUpdateRequest` is of type [CustomFieldUpdateRequest](./packages/core/definitions/CustomFieldUpdateRequest.ts)
-- `result` is of type [CustomFieldResource](./packages/core/definitions/CustomFieldResource.ts)
+- `customFieldUpdateRequest` is of type [CustomFieldUpdateRequest](./definitions/CustomFieldUpdateRequest.ts)
+- `result` is of type [CustomFieldResource](./definitions/CustomFieldResource.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Custom-Fields-updateCustomField) in API Explorer.
 
@@ -2585,7 +2585,7 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `result` is of type [SipInfoResource](./packages/core/definitions/SipInfoResource.ts)
+- `result` is of type [SipInfoResource](./definitions/SipInfoResource.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Devices-readDeviceSIPInfo) in API Explorer.
 
@@ -2609,8 +2609,8 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `listDirectoryEntriesParameters` is of type [ListDirectoryEntriesParameters](./packages/core/definitions/ListDirectoryEntriesParameters.ts)
-- `result` is of type [DirectoryResource](./packages/core/definitions/DirectoryResource.ts)
+- `listDirectoryEntriesParameters` is of type [ListDirectoryEntriesParameters](./definitions/ListDirectoryEntriesParameters.ts)
+- `result` is of type [DirectoryResource](./definitions/DirectoryResource.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Internal-Contacts-listDirectoryEntries) in API Explorer.
 
@@ -2634,7 +2634,7 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `result` is of type [ContactResource](./packages/core/definitions/ContactResource.ts)
+- `result` is of type [ContactResource](./definitions/ContactResource.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Internal-Contacts-readDirectoryEntry) in API Explorer.
 
@@ -2659,8 +2659,8 @@ await rc.revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
-- `readUserCallLogParameters` is of type [ReadUserCallLogParameters](./packages/core/definitions/ReadUserCallLogParameters.ts)
-- `result` is of type [UserCallLogResponse](./packages/core/definitions/UserCallLogResponse.ts)
+- `readUserCallLogParameters` is of type [ReadUserCallLogParameters](./definitions/ReadUserCallLogParameters.ts)
+- `result` is of type [UserCallLogResponse](./definitions/UserCallLogResponse.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Log-readUserCallLog) in API Explorer.
 
@@ -2685,7 +2685,7 @@ await rc.revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
-- `deleteUserCallLogParameters` is of type [DeleteUserCallLogParameters](./packages/core/definitions/DeleteUserCallLogParameters.ts)
+- `deleteUserCallLogParameters` is of type [DeleteUserCallLogParameters](./definitions/DeleteUserCallLogParameters.ts)
 - `result` is an empty string
 
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Log-deleteUserCallLog) in API Explorer.
@@ -2711,8 +2711,8 @@ await rc.revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
-- `readUserCallRecordParameters` is of type [ReadUserCallRecordParameters](./packages/core/definitions/ReadUserCallRecordParameters.ts)
-- `result` is of type [UserCallLogRecord](./packages/core/definitions/UserCallLogRecord.ts)
+- `readUserCallRecordParameters` is of type [ReadUserCallRecordParameters](./definitions/ReadUserCallRecordParameters.ts)
+- `result` is of type [UserCallLogRecord](./definitions/UserCallLogRecord.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Log-readUserCallRecord) in API Explorer.
 
@@ -2737,8 +2737,8 @@ await rc.revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
-- `listExtensionDevicesParameters` is of type [ListExtensionDevicesParameters](./packages/core/definitions/ListExtensionDevicesParameters.ts)
-- `result` is of type [GetExtensionDevicesResponse](./packages/core/definitions/GetExtensionDevicesResponse.ts)
+- `listExtensionDevicesParameters` is of type [ListExtensionDevicesParameters](./definitions/ListExtensionDevicesParameters.ts)
+- `result` is of type [GetExtensionDevicesResponse](./definitions/GetExtensionDevicesResponse.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Devices-listExtensionDevices) in API Explorer.
 
@@ -2763,8 +2763,8 @@ await rc.revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
-- `createFaxMessageRequest` is of type [CreateFaxMessageRequest](./packages/core/definitions/CreateFaxMessageRequest.ts)
-- `result` is of type [FaxResponse](./packages/core/definitions/FaxResponse.ts)
+- `createFaxMessageRequest` is of type [CreateFaxMessageRequest](./definitions/CreateFaxMessageRequest.ts)
+- `result` is of type [FaxResponse](./definitions/FaxResponse.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Fax-createFaxMessage) in API Explorer.
 
@@ -2789,8 +2789,8 @@ await rc.revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
-- `listExtensionGrantsParameters` is of type [ListExtensionGrantsParameters](./packages/core/definitions/ListExtensionGrantsParameters.ts)
-- `result` is of type [GetExtensionGrantListResponse](./packages/core/definitions/GetExtensionGrantListResponse.ts)
+- `listExtensionGrantsParameters` is of type [ListExtensionGrantsParameters](./definitions/ListExtensionGrantsParameters.ts)
+- `result` is of type [GetExtensionGrantListResponse](./definitions/GetExtensionGrantListResponse.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#User-Settings-listExtensionGrants) in API Explorer.
 
@@ -2815,9 +2815,9 @@ await rc.revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
-- `createCustomUserGreetingRequest` is of type [CreateCustomUserGreetingRequest](./packages/core/definitions/CreateCustomUserGreetingRequest.ts)
-- `createCustomUserGreetingParameters` is of type [CreateCustomUserGreetingParameters](./packages/core/definitions/CreateCustomUserGreetingParameters.ts)
-- `result` is of type [CustomUserGreetingInfo](./packages/core/definitions/CustomUserGreetingInfo.ts)
+- `createCustomUserGreetingRequest` is of type [CreateCustomUserGreetingRequest](./definitions/CreateCustomUserGreetingRequest.ts)
+- `createCustomUserGreetingParameters` is of type [CreateCustomUserGreetingParameters](./definitions/CreateCustomUserGreetingParameters.ts)
+- `result` is of type [CustomUserGreetingInfo](./definitions/CustomUserGreetingInfo.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Greetings-createCustomUserGreeting) in API Explorer.
 
@@ -2842,7 +2842,7 @@ await rc.revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
-- `result` is of type [CustomUserGreetingInfo](./packages/core/definitions/CustomUserGreetingInfo.ts)
+- `result` is of type [CustomUserGreetingInfo](./definitions/CustomUserGreetingInfo.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Greetings-readCustomGreeting) in API Explorer.
 
@@ -2867,7 +2867,7 @@ await rc.revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
-- `result` is of type [MeetingsResource](./packages/core/definitions/MeetingsResource.ts)
+- `result` is of type [MeetingsResource](./definitions/MeetingsResource.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Meeting-Management-listMeetings) in API Explorer.
 
@@ -2892,8 +2892,8 @@ await rc.revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
-- `meetingRequestResource` is of type [MeetingRequestResource](./packages/core/definitions/MeetingRequestResource.ts)
-- `result` is of type [MeetingResponseResource](./packages/core/definitions/MeetingResponseResource.ts)
+- `meetingRequestResource` is of type [MeetingRequestResource](./definitions/MeetingRequestResource.ts)
+- `result` is of type [MeetingResponseResource](./definitions/MeetingResponseResource.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Meeting-Management-createMeeting) in API Explorer.
 
@@ -2918,7 +2918,7 @@ await rc.revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
-- `result` is of type [MeetingResponseResource](./packages/core/definitions/MeetingResponseResource.ts)
+- `result` is of type [MeetingResponseResource](./definitions/MeetingResponseResource.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Meeting-Management-readMeeting) in API Explorer.
 
@@ -2943,8 +2943,8 @@ await rc.revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
-- `meetingRequestResource` is of type [MeetingRequestResource](./packages/core/definitions/MeetingRequestResource.ts)
-- `result` is of type [MeetingResponseResource](./packages/core/definitions/MeetingResponseResource.ts)
+- `meetingRequestResource` is of type [MeetingRequestResource](./definitions/MeetingRequestResource.ts)
+- `result` is of type [MeetingResponseResource](./definitions/MeetingResponseResource.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Meeting-Management-updateMeeting) in API Explorer.
 
@@ -2994,8 +2994,8 @@ await rc.revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
-- `CreateMMSMessage` is of type [CreateMMSMessage](./packages/core/definitions/CreateMMSMessage.ts)
-- `result` is of type [GetSMSMessageInfoResponse](./packages/core/definitions/GetSMSMessageInfoResponse.ts)
+- `CreateMMSMessage` is of type [CreateMMSMessage](./definitions/CreateMMSMessage.ts)
+- `result` is of type [GetSMSMessageInfoResponse](./definitions/GetSMSMessageInfoResponse.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#SMS-createMMS) in API Explorer.
 
@@ -3020,8 +3020,8 @@ await rc.revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
-- `CreateSMSMessage` is of type [CreateSMSMessage](./packages/core/definitions/CreateSMSMessage.ts)
-- `result` is of type [GetSMSMessageInfoResponse](./packages/core/definitions/GetSMSMessageInfoResponse.ts)
+- `CreateSMSMessage` is of type [CreateSMSMessage](./definitions/CreateSMSMessage.ts)
+- `result` is of type [GetSMSMessageInfoResponse](./definitions/GetSMSMessageInfoResponse.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#SMS-createSMSMessage) in API Explorer.
 
@@ -3045,7 +3045,7 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `result` is of type [IVRPrompts](./packages/core/definitions/IVRPrompts.ts)
+- `result` is of type [IVRPrompts](./definitions/IVRPrompts.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#IVR-listIVRPrompts) in API Explorer.
 
@@ -3069,8 +3069,8 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `createIVRPromptRequest` is of type [CreateIVRPromptRequest](./packages/core/definitions/CreateIVRPromptRequest.ts)
-- `result` is of type [PromptInfo](./packages/core/definitions/PromptInfo.ts)
+- `createIVRPromptRequest` is of type [CreateIVRPromptRequest](./definitions/CreateIVRPromptRequest.ts)
+- `result` is of type [PromptInfo](./definitions/PromptInfo.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#IVR-createIVRPrompt) in API Explorer.
 
@@ -3094,7 +3094,7 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `result` is of type [PromptInfo](./packages/core/definitions/PromptInfo.ts)
+- `result` is of type [PromptInfo](./definitions/PromptInfo.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#IVR-readIVRPrompt) in API Explorer.
 
@@ -3118,8 +3118,8 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `updateIVRPromptRequest` is of type [UpdateIVRPromptRequest](./packages/core/definitions/UpdateIVRPromptRequest.ts)
-- `result` is of type [PromptInfo](./packages/core/definitions/PromptInfo.ts)
+- `updateIVRPromptRequest` is of type [UpdateIVRPromptRequest](./definitions/UpdateIVRPromptRequest.ts)
+- `result` is of type [PromptInfo](./definitions/PromptInfo.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#IVR-updateIVRPrompt) in API Explorer.
 
@@ -3167,8 +3167,8 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `listAccountPhoneNumbersParameters` is of type [ListAccountPhoneNumbersParameters](./packages/core/definitions/ListAccountPhoneNumbersParameters.ts)
-- `result` is of type [AccountPhoneNumbers](./packages/core/definitions/AccountPhoneNumbers.ts)
+- `listAccountPhoneNumbersParameters` is of type [ListAccountPhoneNumbersParameters](./definitions/ListAccountPhoneNumbersParameters.ts)
+- `result` is of type [AccountPhoneNumbers](./definitions/AccountPhoneNumbers.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Phone-Numbers-listAccountPhoneNumbers) in API Explorer.
 
@@ -3192,7 +3192,7 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `result` is of type [CompanyPhoneNumberInfo](./packages/core/definitions/CompanyPhoneNumberInfo.ts)
+- `result` is of type [CompanyPhoneNumberInfo](./definitions/CompanyPhoneNumberInfo.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Phone-Numbers-readAccountPhoneNumber) in API Explorer.
 
@@ -3244,7 +3244,7 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `result` is of type [GetServiceInfoResponse](./packages/core/definitions/GetServiceInfoResponse.ts)
+- `result` is of type [GetServiceInfoResponse](./definitions/GetServiceInfoResponse.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Company-readAccountServiceInfo) in API Explorer.
 
@@ -3267,8 +3267,8 @@ await rc.revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
-- `createSipRegistrationRequest` is of type [CreateSipRegistrationRequest](./packages/core/definitions/CreateSipRegistrationRequest.ts)
-- `result` is of type [CreateSipRegistrationResponse](./packages/core/definitions/CreateSipRegistrationResponse.ts)
+- `createSipRegistrationRequest` is of type [CreateSipRegistrationRequest](./definitions/CreateSipRegistrationRequest.ts)
+- `result` is of type [CreateSipRegistrationResponse](./definitions/CreateSipRegistrationResponse.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Device-SIP-Registration-createSIPRegistration) in API Explorer.
 
@@ -3291,8 +3291,8 @@ await rc.revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
-- `listCountriesParameters` is of type [ListCountriesParameters](./packages/core/definitions/ListCountriesParameters.ts)
-- `result` is of type [GetCountryListResponse](./packages/core/definitions/GetCountryListResponse.ts)
+- `listCountriesParameters` is of type [ListCountriesParameters](./definitions/ListCountriesParameters.ts)
+- `result` is of type [GetCountryListResponse](./definitions/GetCountryListResponse.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Regional-Settings-listCountries) in API Explorer.
 
@@ -3315,7 +3315,7 @@ await rc.revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
-- `result` is of type [GetCountryInfoDictionaryResponse](./packages/core/definitions/GetCountryInfoDictionaryResponse.ts)
+- `result` is of type [GetCountryInfoDictionaryResponse](./definitions/GetCountryInfoDictionaryResponse.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Regional-Settings-readCountry) in API Explorer.
 
@@ -3338,8 +3338,8 @@ await rc.revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
-- `listFaxCoverPagesParameters` is of type [ListFaxCoverPagesParameters](./packages/core/definitions/ListFaxCoverPagesParameters.ts)
-- `result` is of type [ListFaxCoverPagesResponse](./packages/core/definitions/ListFaxCoverPagesResponse.ts)
+- `listFaxCoverPagesParameters` is of type [ListFaxCoverPagesParameters](./definitions/ListFaxCoverPagesParameters.ts)
+- `result` is of type [ListFaxCoverPagesResponse](./definitions/ListFaxCoverPagesResponse.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Fax-listFaxCoverPages) in API Explorer.
 
@@ -3362,8 +3362,8 @@ await rc.revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
-- `listStandardGreetingsParameters` is of type [ListStandardGreetingsParameters](./packages/core/definitions/ListStandardGreetingsParameters.ts)
-- `result` is of type [DictionaryGreetingList](./packages/core/definitions/DictionaryGreetingList.ts)
+- `listStandardGreetingsParameters` is of type [ListStandardGreetingsParameters](./definitions/ListStandardGreetingsParameters.ts)
+- `result` is of type [DictionaryGreetingList](./definitions/DictionaryGreetingList.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Greetings-listStandardGreetings) in API Explorer.
 
@@ -3386,7 +3386,7 @@ await rc.revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
-- `result` is of type [DictionaryGreetingInfo](./packages/core/definitions/DictionaryGreetingInfo.ts)
+- `result` is of type [DictionaryGreetingInfo](./definitions/DictionaryGreetingInfo.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Greetings-readStandardGreeting) in API Explorer.
 
@@ -3409,7 +3409,7 @@ await rc.revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
-- `result` is of type [LanguageList](./packages/core/definitions/LanguageList.ts)
+- `result` is of type [LanguageList](./definitions/LanguageList.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Regional-Settings-listLanguages) in API Explorer.
 
@@ -3432,7 +3432,7 @@ await rc.revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
-- `result` is of type [LanguageInfo](./packages/core/definitions/LanguageInfo.ts)
+- `result` is of type [LanguageInfo](./definitions/LanguageInfo.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Regional-Settings-readLanguage) in API Explorer.
 
@@ -3455,8 +3455,8 @@ await rc.revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
-- `listLocationsParameters` is of type [ListLocationsParameters](./packages/core/definitions/ListLocationsParameters.ts)
-- `result` is of type [GetLocationListResponse](./packages/core/definitions/GetLocationListResponse.ts)
+- `listLocationsParameters` is of type [ListLocationsParameters](./definitions/ListLocationsParameters.ts)
+- `result` is of type [GetLocationListResponse](./definitions/GetLocationListResponse.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Regional-Settings-listLocations) in API Explorer.
 
@@ -3479,8 +3479,8 @@ await rc.revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
-- `listTimezonesParameters` is of type [ListTimezonesParameters](./packages/core/definitions/ListTimezonesParameters.ts)
-- `result` is of type [GetTimezoneListResponse](./packages/core/definitions/GetTimezoneListResponse.ts)
+- `listTimezonesParameters` is of type [ListTimezonesParameters](./definitions/ListTimezonesParameters.ts)
+- `result` is of type [GetTimezoneListResponse](./definitions/GetTimezoneListResponse.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Regional-Settings-listTimezones) in API Explorer.
 
@@ -3503,8 +3503,8 @@ await rc.revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
-- `readTimezoneParameters` is of type [ReadTimezoneParameters](./packages/core/definitions/ReadTimezoneParameters.ts)
-- `result` is of type [GetTimezoneInfoResponse](./packages/core/definitions/GetTimezoneInfoResponse.ts)
+- `readTimezoneParameters` is of type [ReadTimezoneParameters](./definitions/ReadTimezoneParameters.ts)
+- `result` is of type [GetTimezoneInfoResponse](./definitions/GetTimezoneInfoResponse.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Regional-Settings-readTimezone) in API Explorer.
 
@@ -3596,8 +3596,8 @@ await rc.revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
-- `listGlipConversationsParameters` is of type [ListGlipConversationsParameters](./packages/core/definitions/ListGlipConversationsParameters.ts)
-- `result` is of type [GlipConversationsList](./packages/core/definitions/GlipConversationsList.ts)
+- `listGlipConversationsParameters` is of type [ListGlipConversationsParameters](./definitions/ListGlipConversationsParameters.ts)
+- `result` is of type [GlipConversationsList](./definitions/GlipConversationsList.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Conversations-listGlipConversations) in API Explorer.
 
@@ -3620,8 +3620,8 @@ await rc.revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
-- `createGlipConversationRequest` is of type [CreateGlipConversationRequest](./packages/core/definitions/CreateGlipConversationRequest.ts)
-- `result` is of type [GlipConversationInfo](./packages/core/definitions/GlipConversationInfo.ts)
+- `createGlipConversationRequest` is of type [CreateGlipConversationRequest](./definitions/CreateGlipConversationRequest.ts)
+- `result` is of type [GlipConversationInfo](./definitions/GlipConversationInfo.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Conversations-createGlipConversation) in API Explorer.
 
@@ -3644,7 +3644,7 @@ await rc.revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
-- `result` is of type [GlipConversationInfo](./packages/core/definitions/GlipConversationInfo.ts)
+- `result` is of type [GlipConversationInfo](./definitions/GlipConversationInfo.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Conversations-readGlipConversation) in API Explorer.
 
@@ -3694,7 +3694,7 @@ await rc.revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
-- `result` is of type [GlipEventInfo](./packages/core/definitions/GlipEventInfo.ts)
+- `result` is of type [GlipEventInfo](./definitions/GlipEventInfo.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Calendar-Events-listGroupEvents) in API Explorer.
 
@@ -3717,8 +3717,8 @@ await rc.revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
-- `glipEventCreate` is of type [GlipEventCreate](./packages/core/definitions/GlipEventCreate.ts)
-- `result` is of type [GlipEventInfo](./packages/core/definitions/GlipEventInfo.ts)
+- `glipEventCreate` is of type [GlipEventCreate](./definitions/GlipEventCreate.ts)
+- `result` is of type [GlipEventInfo](./definitions/GlipEventInfo.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Calendar-Events-createEventByGroupId) in API Explorer.
 
@@ -3741,7 +3741,7 @@ await rc.revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
-- `result` is of type [GlipWebhookList](./packages/core/definitions/GlipWebhookList.ts)
+- `result` is of type [GlipWebhookList](./definitions/GlipWebhookList.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Glip-Webhooks-listGlipGroupWebhooks) in API Explorer.
 
@@ -3764,7 +3764,7 @@ await rc.revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
-- `result` is of type [GlipWebhookInfo](./packages/core/definitions/GlipWebhookInfo.ts)
+- `result` is of type [GlipWebhookInfo](./definitions/GlipWebhookInfo.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Glip-Webhooks-createGlipGroupWebhook) in API Explorer.
 
@@ -3833,8 +3833,8 @@ await rc.revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
-- `listRecentChatsParameters` is of type [ListRecentChatsParameters](./packages/core/definitions/ListRecentChatsParameters.ts)
-- `result` is of type [GlipChatsListWithoutNavigation](./packages/core/definitions/GlipChatsListWithoutNavigation.ts)
+- `listRecentChatsParameters` is of type [ListRecentChatsParameters](./definitions/ListRecentChatsParameters.ts)
+- `result` is of type [GlipChatsListWithoutNavigation](./definitions/GlipChatsListWithoutNavigation.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Chats-listRecentChats) in API Explorer.
 
@@ -3857,7 +3857,7 @@ await rc.revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
-- `glipCompleteTask` is of type [GlipCompleteTask](./packages/core/definitions/GlipCompleteTask.ts)
+- `glipCompleteTask` is of type [GlipCompleteTask](./definitions/GlipCompleteTask.ts)
 - `result` is an empty string
 
 [Try it out](https://developer.ringcentral.com/api-reference#Tasks-completeTask) in API Explorer.
@@ -3973,9 +3973,9 @@ await rc.revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
-- `parsePhoneNumberRequest` is of type [ParsePhoneNumberRequest](./packages/core/definitions/ParsePhoneNumberRequest.ts)
-- `parsePhoneNumberParameters` is of type [ParsePhoneNumberParameters](./packages/core/definitions/ParsePhoneNumberParameters.ts)
-- `result` is of type [ParsePhoneNumberResponse](./packages/core/definitions/ParsePhoneNumberResponse.ts)
+- `parsePhoneNumberRequest` is of type [ParsePhoneNumberRequest](./definitions/ParsePhoneNumberRequest.ts)
+- `parsePhoneNumberParameters` is of type [ParsePhoneNumberParameters](./definitions/ParsePhoneNumberParameters.ts)
+- `result` is of type [ParsePhoneNumberResponse](./definitions/ParsePhoneNumberResponse.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Phone-Numbers-parsePhoneNumber) in API Explorer.
 
@@ -3998,7 +3998,7 @@ await rc.revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
-- `result` is of type [SubscriptionInfo](./packages/core/definitions/SubscriptionInfo.ts)
+- `result` is of type [SubscriptionInfo](./definitions/SubscriptionInfo.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Subscriptions-renewSubscription) in API Explorer.
 
@@ -4021,7 +4021,7 @@ await rc.revoke();
 ```
 
 - Parameter `version` is optional with default value `v2`
-- `result` is of type [ServiceProviderConfig](./packages/core/definitions/ServiceProviderConfig.ts)
+- `result` is of type [ServiceProviderConfig](./definitions/ServiceProviderConfig.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#SCIM-readServiceProviderConfig2) in API Explorer.
 
@@ -4045,8 +4045,8 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `addressBookBulkUploadRequest` is of type [AddressBookBulkUploadRequest](./packages/core/definitions/AddressBookBulkUploadRequest.ts)
-- `result` is of type [AddressBookBulkUploadResponse](./packages/core/definitions/AddressBookBulkUploadResponse.ts)
+- `addressBookBulkUploadRequest` is of type [AddressBookBulkUploadRequest](./definitions/AddressBookBulkUploadRequest.ts)
+- `result` is of type [AddressBookBulkUploadResponse](./definitions/AddressBookBulkUploadResponse.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#External-Contacts-addressBookBulkUpload) in API Explorer.
 
@@ -4070,8 +4070,8 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `listCallMonitoringGroupsParameters` is of type [ListCallMonitoringGroupsParameters](./packages/core/definitions/ListCallMonitoringGroupsParameters.ts)
-- `result` is of type [CallMonitoringGroups](./packages/core/definitions/CallMonitoringGroups.ts)
+- `listCallMonitoringGroupsParameters` is of type [ListCallMonitoringGroupsParameters](./definitions/ListCallMonitoringGroupsParameters.ts)
+- `result` is of type [CallMonitoringGroups](./definitions/CallMonitoringGroups.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Monitoring-Groups-listCallMonitoringGroups) in API Explorer.
 
@@ -4095,8 +4095,8 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `createCallMonitoringGroupRequest` is of type [CreateCallMonitoringGroupRequest](./packages/core/definitions/CreateCallMonitoringGroupRequest.ts)
-- `result` is of type [CallMonitoringGroup](./packages/core/definitions/CallMonitoringGroup.ts)
+- `createCallMonitoringGroupRequest` is of type [CreateCallMonitoringGroupRequest](./definitions/CreateCallMonitoringGroupRequest.ts)
+- `result` is of type [CallMonitoringGroup](./definitions/CallMonitoringGroup.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Monitoring-Groups-createCallMonitoringGroup) in API Explorer.
 
@@ -4120,8 +4120,8 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `createCallMonitoringGroupRequest` is of type [CreateCallMonitoringGroupRequest](./packages/core/definitions/CreateCallMonitoringGroupRequest.ts)
-- `result` is of type [CallMonitoringGroup](./packages/core/definitions/CallMonitoringGroup.ts)
+- `createCallMonitoringGroupRequest` is of type [CreateCallMonitoringGroupRequest](./definitions/CreateCallMonitoringGroupRequest.ts)
+- `result` is of type [CallMonitoringGroup](./definitions/CallMonitoringGroup.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Monitoring-Groups-updateCallMonitoringGroup) in API Explorer.
 
@@ -4169,7 +4169,7 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `callQueueBulkAssignResource` is of type [CallQueueBulkAssignResource](./packages/core/definitions/CallQueueBulkAssignResource.ts)
+- `callQueueBulkAssignResource` is of type [CallQueueBulkAssignResource](./definitions/CallQueueBulkAssignResource.ts)
 - `result` is an empty string
 
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Queues-assignMultipleCallQueueMembers) in API Explorer.
@@ -4194,8 +4194,8 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `listCallQueueMembersParameters` is of type [ListCallQueueMembersParameters](./packages/core/definitions/ListCallQueueMembersParameters.ts)
-- `result` is of type [CallQueueMembers](./packages/core/definitions/CallQueueMembers.ts)
+- `listCallQueueMembersParameters` is of type [ListCallQueueMembersParameters](./definitions/ListCallQueueMembersParameters.ts)
+- `result` is of type [CallQueueMembers](./definitions/CallQueueMembers.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Queues-listCallQueueMembers) in API Explorer.
 
@@ -4219,7 +4219,7 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `result` is of type [CallQueuePresence](./packages/core/definitions/CallQueuePresence.ts)
+- `result` is of type [CallQueuePresence](./definitions/CallQueuePresence.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Presence-readCallQueuePresence) in API Explorer.
 
@@ -4243,8 +4243,8 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `callQueueUpdatePresence` is of type [CallQueueUpdatePresence](./packages/core/definitions/CallQueueUpdatePresence.ts)
-- `result` is of type [CallQueuePresence](./packages/core/definitions/CallQueuePresence.ts)
+- `callQueueUpdatePresence` is of type [CallQueueUpdatePresence](./definitions/CallQueueUpdatePresence.ts)
+- `result` is of type [CallQueuePresence](./definitions/CallQueuePresence.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Presence-updateCallQueuePresence) in API Explorer.
 
@@ -4268,7 +4268,7 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `bulkAccountCallRecordingsResource` is of type [BulkAccountCallRecordingsResource](./packages/core/definitions/BulkAccountCallRecordingsResource.ts)
+- `bulkAccountCallRecordingsResource` is of type [BulkAccountCallRecordingsResource](./definitions/BulkAccountCallRecordingsResource.ts)
 - `result` is an empty string
 
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Recording-Settings-updateCallRecordingExtensionList) in API Explorer.
@@ -4293,7 +4293,7 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `result` is of type [CallRecordingExtensions](./packages/core/definitions/CallRecordingExtensions.ts)
+- `result` is of type [CallRecordingExtensions](./definitions/CallRecordingExtensions.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Recording-Settings-listCallRecordingExtensions) in API Explorer.
 
@@ -4317,8 +4317,8 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `searchDirectoryEntriesRequest` is of type [SearchDirectoryEntriesRequest](./packages/core/definitions/SearchDirectoryEntriesRequest.ts)
-- `result` is of type [DirectoryResource](./packages/core/definitions/DirectoryResource.ts)
+- `searchDirectoryEntriesRequest` is of type [SearchDirectoryEntriesRequest](./definitions/SearchDirectoryEntriesRequest.ts)
+- `result` is of type [DirectoryResource](./definitions/DirectoryResource.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Internal-Contacts-searchDirectoryEntries) in API Explorer.
 
@@ -4342,7 +4342,7 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `result` is of type [FederationResource](./packages/core/definitions/FederationResource.ts)
+- `result` is of type [FederationResource](./definitions/FederationResource.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Internal-Contacts-readAccountFederation) in API Explorer.
 
@@ -4366,8 +4366,8 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `listEmergencyLocationsParameters` is of type [ListEmergencyLocationsParameters](./packages/core/definitions/ListEmergencyLocationsParameters.ts)
-- `result` is of type [EmergencyLocationList](./packages/core/definitions/EmergencyLocationList.ts)
+- `listEmergencyLocationsParameters` is of type [ListEmergencyLocationsParameters](./definitions/ListEmergencyLocationsParameters.ts)
+- `result` is of type [EmergencyLocationList](./definitions/EmergencyLocationList.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-listEmergencyLocations) in API Explorer.
 
@@ -4391,7 +4391,7 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `emergencyLocationInfoRequest` is of type [EmergencyLocationInfoRequest](./packages/core/definitions/EmergencyLocationInfoRequest.ts)
+- `emergencyLocationInfoRequest` is of type [EmergencyLocationInfoRequest](./definitions/EmergencyLocationInfoRequest.ts)
 - `result` is an empty string
 
 [Try it out](https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-createEmergencyLocation) in API Explorer.
@@ -4416,7 +4416,7 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `result` is of type [EmergencyLocationInfo](./packages/core/definitions/EmergencyLocationInfo.ts)
+- `result` is of type [EmergencyLocationInfo](./definitions/EmergencyLocationInfo.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-readEmergencyLocation) in API Explorer.
 
@@ -4440,8 +4440,8 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `emergencyLocationInfoRequest` is of type [EmergencyLocationInfoRequest](./packages/core/definitions/EmergencyLocationInfoRequest.ts)
-- `result` is of type [EmergencyLocationInfo](./packages/core/definitions/EmergencyLocationInfo.ts)
+- `emergencyLocationInfoRequest` is of type [EmergencyLocationInfoRequest](./definitions/EmergencyLocationInfoRequest.ts)
+- `result` is of type [EmergencyLocationInfo](./definitions/EmergencyLocationInfo.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-updateEmergencyLocation) in API Explorer.
 
@@ -4465,7 +4465,7 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `deleteEmergencyLocationParameters` is of type [DeleteEmergencyLocationParameters](./packages/core/definitions/DeleteEmergencyLocationParameters.ts)
+- `deleteEmergencyLocationParameters` is of type [DeleteEmergencyLocationParameters](./definitions/DeleteEmergencyLocationParameters.ts)
 - `result` is an empty string
 
 [Try it out](https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-deleteEmergencyLocation) in API Explorer.
@@ -4490,8 +4490,8 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `extensionBulkUpdateRequest` is of type [ExtensionBulkUpdateRequest](./packages/core/definitions/ExtensionBulkUpdateRequest.ts)
-- `result` is of type [ExtensionBulkUpdateTaskResource](./packages/core/definitions/ExtensionBulkUpdateTaskResource.ts)
+- `extensionBulkUpdateRequest` is of type [ExtensionBulkUpdateRequest](./definitions/ExtensionBulkUpdateRequest.ts)
+- `result` is of type [ExtensionBulkUpdateTaskResource](./definitions/ExtensionBulkUpdateTaskResource.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Extensions-extensionBulkUpdate) in API Explorer.
 
@@ -4515,7 +4515,7 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `result` is of type [ExtensionBulkUpdateTaskResource](./packages/core/definitions/ExtensionBulkUpdateTaskResource.ts)
+- `result` is of type [ExtensionBulkUpdateTaskResource](./definitions/ExtensionBulkUpdateTaskResource.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Extensions-getExtensionBulkUpdateTask) in API Explorer.
 
@@ -4540,8 +4540,8 @@ await rc.revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
-- `listExtensionActiveCallsParameters` is of type [ListExtensionActiveCallsParameters](./packages/core/definitions/ListExtensionActiveCallsParameters.ts)
-- `result` is of type [UserActiveCallsResponse](./packages/core/definitions/UserActiveCallsResponse.ts)
+- `listExtensionActiveCallsParameters` is of type [ListExtensionActiveCallsParameters](./definitions/ListExtensionActiveCallsParameters.ts)
+- `result` is of type [UserActiveCallsResponse](./definitions/UserActiveCallsResponse.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Log-listExtensionActiveCalls) in API Explorer.
 
@@ -4566,8 +4566,8 @@ await rc.revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
-- `syncAddressBookParameters` is of type [SyncAddressBookParameters](./packages/core/definitions/SyncAddressBookParameters.ts)
-- `result` is of type [AddressBookSync](./packages/core/definitions/AddressBookSync.ts)
+- `syncAddressBookParameters` is of type [SyncAddressBookParameters](./definitions/SyncAddressBookParameters.ts)
+- `result` is of type [AddressBookSync](./definitions/AddressBookSync.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#External-Contacts-syncAddressBook) in API Explorer.
 
@@ -4592,8 +4592,8 @@ await rc.revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
-- `listAnsweringRulesParameters` is of type [ListAnsweringRulesParameters](./packages/core/definitions/ListAnsweringRulesParameters.ts)
-- `result` is of type [UserAnsweringRuleList](./packages/core/definitions/UserAnsweringRuleList.ts)
+- `listAnsweringRulesParameters` is of type [ListAnsweringRulesParameters](./definitions/ListAnsweringRulesParameters.ts)
+- `result` is of type [UserAnsweringRuleList](./definitions/UserAnsweringRuleList.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Handling-Rules-listAnsweringRules) in API Explorer.
 
@@ -4618,8 +4618,8 @@ await rc.revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
-- `createAnsweringRuleRequest` is of type [CreateAnsweringRuleRequest](./packages/core/definitions/CreateAnsweringRuleRequest.ts)
-- `result` is of type [CustomAnsweringRuleInfo](./packages/core/definitions/CustomAnsweringRuleInfo.ts)
+- `createAnsweringRuleRequest` is of type [CreateAnsweringRuleRequest](./definitions/CreateAnsweringRuleRequest.ts)
+- `result` is of type [CustomAnsweringRuleInfo](./definitions/CustomAnsweringRuleInfo.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Handling-Rules-createAnsweringRule) in API Explorer.
 
@@ -4644,8 +4644,8 @@ await rc.revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
-- `readAnsweringRuleParameters` is of type [ReadAnsweringRuleParameters](./packages/core/definitions/ReadAnsweringRuleParameters.ts)
-- `result` is of type [AnsweringRuleInfo](./packages/core/definitions/AnsweringRuleInfo.ts)
+- `readAnsweringRuleParameters` is of type [ReadAnsweringRuleParameters](./definitions/ReadAnsweringRuleParameters.ts)
+- `result` is of type [AnsweringRuleInfo](./definitions/AnsweringRuleInfo.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Handling-Rules-readAnsweringRule) in API Explorer.
 
@@ -4670,8 +4670,8 @@ await rc.revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
-- `updateAnsweringRuleRequest` is of type [UpdateAnsweringRuleRequest](./packages/core/definitions/UpdateAnsweringRuleRequest.ts)
-- `result` is of type [AnsweringRuleInfo](./packages/core/definitions/AnsweringRuleInfo.ts)
+- `updateAnsweringRuleRequest` is of type [UpdateAnsweringRuleRequest](./definitions/UpdateAnsweringRuleRequest.ts)
+- `result` is of type [AnsweringRuleInfo](./definitions/AnsweringRuleInfo.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Handling-Rules-updateAnsweringRule) in API Explorer.
 
@@ -4721,7 +4721,7 @@ await rc.revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
-- `result` is of type [AuthProfileResource](./packages/core/definitions/AuthProfileResource.ts)
+- `result` is of type [AuthProfileResource](./definitions/AuthProfileResource.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#User-Permissions-readAuthorizationProfile) in API Explorer.
 
@@ -4746,7 +4746,7 @@ await rc.revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
-- `result` is of type [GetUserBusinessHoursResponse](./packages/core/definitions/GetUserBusinessHoursResponse.ts)
+- `result` is of type [GetUserBusinessHoursResponse](./definitions/GetUserBusinessHoursResponse.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Business-Hours-readUserBusinessHours) in API Explorer.
 
@@ -4771,8 +4771,8 @@ await rc.revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
-- `userBusinessHoursUpdateRequest` is of type [UserBusinessHoursUpdateRequest](./packages/core/definitions/UserBusinessHoursUpdateRequest.ts)
-- `result` is of type [UserBusinessHoursUpdateResponse](./packages/core/definitions/UserBusinessHoursUpdateResponse.ts)
+- `userBusinessHoursUpdateRequest` is of type [UserBusinessHoursUpdateRequest](./definitions/UserBusinessHoursUpdateRequest.ts)
+- `result` is of type [UserBusinessHoursUpdateResponse](./definitions/UserBusinessHoursUpdateResponse.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Business-Hours-updateUserBusinessHours) in API Explorer.
 
@@ -4797,8 +4797,8 @@ await rc.revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
-- `syncUserCallLogParameters` is of type [SyncUserCallLogParameters](./packages/core/definitions/SyncUserCallLogParameters.ts)
-- `result` is of type [CallLogSync](./packages/core/definitions/CallLogSync.ts)
+- `syncUserCallLogParameters` is of type [SyncUserCallLogParameters](./definitions/SyncUserCallLogParameters.ts)
+- `result` is of type [CallLogSync](./definitions/CallLogSync.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Log-syncUserCallLog) in API Explorer.
 
@@ -4823,8 +4823,8 @@ await rc.revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
-- `userCallQueues` is of type [UserCallQueues](./packages/core/definitions/UserCallQueues.ts)
-- `result` is of type [UserCallQueues](./packages/core/definitions/UserCallQueues.ts)
+- `userCallQueues` is of type [UserCallQueues](./definitions/UserCallQueues.ts)
+- `result` is of type [UserCallQueues](./definitions/UserCallQueues.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Queues-updateUserCallQueues) in API Explorer.
 
@@ -4849,7 +4849,7 @@ await rc.revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
-- `result` is of type [CallerBlockingSettings](./packages/core/definitions/CallerBlockingSettings.ts)
+- `result` is of type [CallerBlockingSettings](./definitions/CallerBlockingSettings.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Blocking-readCallerBlockingSettings) in API Explorer.
 
@@ -4874,8 +4874,8 @@ await rc.revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
-- `callerBlockingSettingsUpdate` is of type [CallerBlockingSettingsUpdate](./packages/core/definitions/CallerBlockingSettingsUpdate.ts)
-- `result` is of type [CallerBlockingSettings](./packages/core/definitions/CallerBlockingSettings.ts)
+- `callerBlockingSettingsUpdate` is of type [CallerBlockingSettingsUpdate](./definitions/CallerBlockingSettingsUpdate.ts)
+- `result` is of type [CallerBlockingSettings](./definitions/CallerBlockingSettings.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Blocking-updateCallerBlockingSettings) in API Explorer.
 
@@ -4900,7 +4900,7 @@ await rc.revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
-- `result` is of type [ExtensionCallerIdInfo](./packages/core/definitions/ExtensionCallerIdInfo.ts)
+- `result` is of type [ExtensionCallerIdInfo](./definitions/ExtensionCallerIdInfo.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#User-Settings-readExtensionCallerId) in API Explorer.
 
@@ -4925,8 +4925,8 @@ await rc.revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
-- `extensionCallerIdInfoRequest` is of type [ExtensionCallerIdInfoRequest](./packages/core/definitions/ExtensionCallerIdInfoRequest.ts)
-- `result` is of type [ExtensionCallerIdInfo](./packages/core/definitions/ExtensionCallerIdInfo.ts)
+- `extensionCallerIdInfoRequest` is of type [ExtensionCallerIdInfoRequest](./definitions/ExtensionCallerIdInfoRequest.ts)
+- `result` is of type [ExtensionCallerIdInfo](./definitions/ExtensionCallerIdInfo.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#User-Settings-updateExtensionCallerId) in API Explorer.
 
@@ -4951,8 +4951,8 @@ await rc.revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
-- `createInternalTextMessageRequest` is of type [CreateInternalTextMessageRequest](./packages/core/definitions/CreateInternalTextMessageRequest.ts)
-- `result` is of type [GetInternalTextMessageInfoResponse](./packages/core/definitions/GetInternalTextMessageInfoResponse.ts)
+- `createInternalTextMessageRequest` is of type [CreateInternalTextMessageRequest](./definitions/CreateInternalTextMessageRequest.ts)
+- `result` is of type [GetInternalTextMessageInfoResponse](./definitions/GetInternalTextMessageInfoResponse.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Pager-Messages-createInternalTextMessage) in API Explorer.
 
@@ -4977,8 +4977,8 @@ await rc.revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
-- `readConferencingSettingsParameters` is of type [ReadConferencingSettingsParameters](./packages/core/definitions/ReadConferencingSettingsParameters.ts)
-- `result` is of type [GetConferencingInfoResponse](./packages/core/definitions/GetConferencingInfoResponse.ts)
+- `readConferencingSettingsParameters` is of type [ReadConferencingSettingsParameters](./definitions/ReadConferencingSettingsParameters.ts)
+- `result` is of type [GetConferencingInfoResponse](./definitions/GetConferencingInfoResponse.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#User-Settings-readConferencingSettings) in API Explorer.
 
@@ -5003,8 +5003,8 @@ await rc.revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
-- `updateConferencingInfoRequest` is of type [UpdateConferencingInfoRequest](./packages/core/definitions/UpdateConferencingInfoRequest.ts)
-- `result` is of type [GetConferencingInfoResponse](./packages/core/definitions/GetConferencingInfoResponse.ts)
+- `updateConferencingInfoRequest` is of type [UpdateConferencingInfoRequest](./definitions/UpdateConferencingInfoRequest.ts)
+- `result` is of type [GetConferencingInfoResponse](./definitions/GetConferencingInfoResponse.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#User-Settings-updateConferencingSettings) in API Explorer.
 
@@ -5029,7 +5029,7 @@ await rc.revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
-- `result` is of type [FavoriteContactList](./packages/core/definitions/FavoriteContactList.ts)
+- `result` is of type [FavoriteContactList](./definitions/FavoriteContactList.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#External-Contacts-listFavoriteContacts) in API Explorer.
 
@@ -5054,8 +5054,8 @@ await rc.revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
-- `favoriteCollection` is of type [FavoriteCollection](./packages/core/definitions/FavoriteCollection.ts)
-- `result` is of type [FavoriteContactList](./packages/core/definitions/FavoriteContactList.ts)
+- `favoriteCollection` is of type [FavoriteCollection](./definitions/FavoriteCollection.ts)
+- `result` is of type [FavoriteContactList](./definitions/FavoriteContactList.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#External-Contacts-updateFavoriteContactList) in API Explorer.
 
@@ -5080,8 +5080,8 @@ await rc.revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
-- `readUserFeaturesParameters` is of type [ReadUserFeaturesParameters](./packages/core/definitions/ReadUserFeaturesParameters.ts)
-- `result` is of type [FeatureList](./packages/core/definitions/FeatureList.ts)
+- `readUserFeaturesParameters` is of type [ReadUserFeaturesParameters](./definitions/ReadUserFeaturesParameters.ts)
+- `result` is of type [FeatureList](./definitions/FeatureList.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Features-readUserFeatures) in API Explorer.
 
@@ -5106,8 +5106,8 @@ await rc.revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
-- `listForwardingNumbersParameters` is of type [ListForwardingNumbersParameters](./packages/core/definitions/ListForwardingNumbersParameters.ts)
-- `result` is of type [GetExtensionForwardingNumberListResponse](./packages/core/definitions/GetExtensionForwardingNumberListResponse.ts)
+- `listForwardingNumbersParameters` is of type [ListForwardingNumbersParameters](./definitions/ListForwardingNumbersParameters.ts)
+- `result` is of type [GetExtensionForwardingNumberListResponse](./definitions/GetExtensionForwardingNumberListResponse.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Forwarding-listForwardingNumbers) in API Explorer.
 
@@ -5132,8 +5132,8 @@ await rc.revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
-- `createForwardingNumberRequest` is of type [CreateForwardingNumberRequest](./packages/core/definitions/CreateForwardingNumberRequest.ts)
-- `result` is of type [ForwardingNumberInfo](./packages/core/definitions/ForwardingNumberInfo.ts)
+- `createForwardingNumberRequest` is of type [CreateForwardingNumberRequest](./definitions/CreateForwardingNumberRequest.ts)
+- `result` is of type [ForwardingNumberInfo](./definitions/ForwardingNumberInfo.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Forwarding-createForwardingNumber) in API Explorer.
 
@@ -5158,7 +5158,7 @@ await rc.revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
-- `result` is of type [ForwardingNumberInfo](./packages/core/definitions/ForwardingNumberInfo.ts)
+- `result` is of type [ForwardingNumberInfo](./definitions/ForwardingNumberInfo.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Forwarding-readForwardingNumber) in API Explorer.
 
@@ -5183,8 +5183,8 @@ await rc.revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
-- `updateForwardingNumberRequest` is of type [UpdateForwardingNumberRequest](./packages/core/definitions/UpdateForwardingNumberRequest.ts)
-- `result` is of type [ForwardingNumberInfo](./packages/core/definitions/ForwardingNumberInfo.ts)
+- `updateForwardingNumberRequest` is of type [UpdateForwardingNumberRequest](./definitions/UpdateForwardingNumberRequest.ts)
+- `result` is of type [ForwardingNumberInfo](./definitions/ForwardingNumberInfo.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Forwarding-updateForwardingNumber) in API Explorer.
 
@@ -5234,8 +5234,8 @@ await rc.revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
-- `listUserMeetingRecordingsParameters` is of type [ListUserMeetingRecordingsParameters](./packages/core/definitions/ListUserMeetingRecordingsParameters.ts)
-- `result` is of type [ListMeetingRecordingsResponse](./packages/core/definitions/ListMeetingRecordingsResponse.ts)
+- `listUserMeetingRecordingsParameters` is of type [ListUserMeetingRecordingsParameters](./definitions/ListUserMeetingRecordingsParameters.ts)
+- `result` is of type [ListMeetingRecordingsResponse](./definitions/ListMeetingRecordingsResponse.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Meeting-Recordings-listUserMeetingRecordings) in API Explorer.
 
@@ -5285,7 +5285,7 @@ await rc.revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
-- `result` is of type [PublicMeetingInvitationResponse](./packages/core/definitions/PublicMeetingInvitationResponse.ts)
+- `result` is of type [PublicMeetingInvitationResponse](./definitions/PublicMeetingInvitationResponse.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Meeting-Management-readMeetingInvitation) in API Explorer.
 
@@ -5310,8 +5310,8 @@ await rc.revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
-- `listMessagesParameters` is of type [ListMessagesParameters](./packages/core/definitions/ListMessagesParameters.ts)
-- `result` is of type [GetMessageList](./packages/core/definitions/GetMessageList.ts)
+- `listMessagesParameters` is of type [ListMessagesParameters](./definitions/ListMessagesParameters.ts)
+- `result` is of type [GetMessageList](./definitions/GetMessageList.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Message-Store-listMessages) in API Explorer.
 
@@ -5336,7 +5336,7 @@ await rc.revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
-- `deleteMessageByFilterParameters` is of type [DeleteMessageByFilterParameters](./packages/core/definitions/DeleteMessageByFilterParameters.ts)
+- `deleteMessageByFilterParameters` is of type [DeleteMessageByFilterParameters](./definitions/DeleteMessageByFilterParameters.ts)
 - `result` is an empty string
 
 [Try it out](https://developer.ringcentral.com/api-reference#Message-Store-deleteMessageByFilter) in API Explorer.
@@ -5362,7 +5362,7 @@ await rc.revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
-- `result` is of type [GetMessageInfoResponse](./packages/core/definitions/GetMessageInfoResponse.ts)
+- `result` is of type [GetMessageInfoResponse](./definitions/GetMessageInfoResponse.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Message-Store-readMessage) in API Explorer.
 
@@ -5387,9 +5387,9 @@ await rc.revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
-- `updateMessageRequest` is of type [UpdateMessageRequest](./packages/core/definitions/UpdateMessageRequest.ts)
-- `updateMessageParameters` is of type [UpdateMessageParameters](./packages/core/definitions/UpdateMessageParameters.ts)
-- `result` is of type [GetMessageInfoResponse](./packages/core/definitions/GetMessageInfoResponse.ts)
+- `updateMessageRequest` is of type [UpdateMessageRequest](./definitions/UpdateMessageRequest.ts)
+- `updateMessageParameters` is of type [UpdateMessageParameters](./definitions/UpdateMessageParameters.ts)
+- `result` is of type [GetMessageInfoResponse](./definitions/GetMessageInfoResponse.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Message-Store-updateMessage) in API Explorer.
 
@@ -5414,7 +5414,7 @@ await rc.revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
-- `deleteMessageParameters` is of type [DeleteMessageParameters](./packages/core/definitions/DeleteMessageParameters.ts)
+- `deleteMessageParameters` is of type [DeleteMessageParameters](./definitions/DeleteMessageParameters.ts)
 - `result` is an empty string
 
 [Try it out](https://developer.ringcentral.com/api-reference#Message-Store-deleteMessage) in API Explorer.
@@ -5440,8 +5440,8 @@ await rc.revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
-- `syncMessagesParameters` is of type [SyncMessagesParameters](./packages/core/definitions/SyncMessagesParameters.ts)
-- `result` is of type [GetMessageSyncResponse](./packages/core/definitions/GetMessageSyncResponse.ts)
+- `syncMessagesParameters` is of type [SyncMessagesParameters](./definitions/SyncMessagesParameters.ts)
+- `result` is of type [GetMessageSyncResponse](./definitions/GetMessageSyncResponse.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Message-Store-syncMessages) in API Explorer.
 
@@ -5466,8 +5466,8 @@ await rc.revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
-- `listExtensionPhoneNumbersParameters` is of type [ListExtensionPhoneNumbersParameters](./packages/core/definitions/ListExtensionPhoneNumbersParameters.ts)
-- `result` is of type [GetExtensionPhoneNumbersResponse](./packages/core/definitions/GetExtensionPhoneNumbersResponse.ts)
+- `listExtensionPhoneNumbersParameters` is of type [ListExtensionPhoneNumbersParameters](./definitions/ListExtensionPhoneNumbersParameters.ts)
+- `result` is of type [GetExtensionPhoneNumbersResponse](./definitions/GetExtensionPhoneNumbersResponse.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Phone-Numbers-listExtensionPhoneNumbers) in API Explorer.
 
@@ -5492,8 +5492,8 @@ await rc.revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
-- `readUserPresenceStatusParameters` is of type [ReadUserPresenceStatusParameters](./packages/core/definitions/ReadUserPresenceStatusParameters.ts)
-- `result` is of type [GetPresenceInfo](./packages/core/definitions/GetPresenceInfo.ts)
+- `readUserPresenceStatusParameters` is of type [ReadUserPresenceStatusParameters](./definitions/ReadUserPresenceStatusParameters.ts)
+- `result` is of type [GetPresenceInfo](./definitions/GetPresenceInfo.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Presence-readUserPresenceStatus) in API Explorer.
 
@@ -5518,8 +5518,8 @@ await rc.revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
-- `presenceInfoRequest` is of type [PresenceInfoRequest](./packages/core/definitions/PresenceInfoRequest.ts)
-- `result` is of type [PresenceInfoResponse](./packages/core/definitions/PresenceInfoResponse.ts)
+- `presenceInfoRequest` is of type [PresenceInfoRequest](./definitions/PresenceInfoRequest.ts)
+- `result` is of type [PresenceInfoResponse](./definitions/PresenceInfoResponse.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Presence-updateUserPresenceStatus) in API Explorer.
 
@@ -5573,7 +5573,7 @@ await rc.revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
-- `createUserProfileImageRequest` is of type [CreateUserProfileImageRequest](./packages/core/definitions/CreateUserProfileImageRequest.ts)
+- `createUserProfileImageRequest` is of type [CreateUserProfileImageRequest](./definitions/CreateUserProfileImageRequest.ts)
 - `result` is an empty string
 
 [Try it out](https://developer.ringcentral.com/api-reference#User-Settings-createUserProfileImage) in API Explorer.
@@ -5599,7 +5599,7 @@ await rc.revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
-- `updateUserProfileImageRequest` is of type [UpdateUserProfileImageRequest](./packages/core/definitions/UpdateUserProfileImageRequest.ts)
+- `updateUserProfileImageRequest` is of type [UpdateUserProfileImageRequest](./definitions/UpdateUserProfileImageRequest.ts)
 - `result` is an empty string
 
 [Try it out](https://developer.ringcentral.com/api-reference#User-Settings-updateUserProfileImage) in API Explorer.
@@ -5654,8 +5654,8 @@ await rc.revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
-- `makeRingOutRequest` is of type [MakeRingOutRequest](./packages/core/definitions/MakeRingOutRequest.ts)
-- `result` is of type [GetRingOutStatusResponse](./packages/core/definitions/GetRingOutStatusResponse.ts)
+- `makeRingOutRequest` is of type [MakeRingOutRequest](./definitions/MakeRingOutRequest.ts)
+- `result` is of type [GetRingOutStatusResponse](./definitions/GetRingOutStatusResponse.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#RingOut-createRingOutCall) in API Explorer.
 
@@ -5680,7 +5680,7 @@ await rc.revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
-- `result` is of type [GetRingOutStatusResponse](./packages/core/definitions/GetRingOutStatusResponse.ts)
+- `result` is of type [GetRingOutStatusResponse](./definitions/GetRingOutStatusResponse.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#RingOut-readRingOutCallStatus) in API Explorer.
 
@@ -5730,7 +5730,7 @@ await rc.revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
-- `result` is of type [UnifiedPresence](./packages/core/definitions/UnifiedPresence.ts)
+- `result` is of type [UnifiedPresence](./definitions/UnifiedPresence.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Presence-readUnifiedPresence) in API Explorer.
 
@@ -5755,8 +5755,8 @@ await rc.revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
-- `updateUnifiedPresence` is of type [UpdateUnifiedPresence](./packages/core/definitions/UpdateUnifiedPresence.ts)
-- `result` is of type [UnifiedPresence](./packages/core/definitions/UnifiedPresence.ts)
+- `updateUnifiedPresence` is of type [UpdateUnifiedPresence](./definitions/UpdateUnifiedPresence.ts)
+- `result` is of type [UnifiedPresence](./definitions/UnifiedPresence.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Presence-updateUnifiedPresence) in API Explorer.
 
@@ -5808,8 +5808,8 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `listAccountMeetingRecordingsParameters` is of type [ListAccountMeetingRecordingsParameters](./packages/core/definitions/ListAccountMeetingRecordingsParameters.ts)
-- `result` is of type [ListMeetingRecordingsResponse](./packages/core/definitions/ListMeetingRecordingsResponse.ts)
+- `listAccountMeetingRecordingsParameters` is of type [ListAccountMeetingRecordingsParameters](./definitions/ListAccountMeetingRecordingsParameters.ts)
+- `result` is of type [ListMeetingRecordingsResponse](./definitions/ListMeetingRecordingsResponse.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Meeting-Recordings-listAccountMeetingRecordings) in API Explorer.
 
@@ -5833,7 +5833,7 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `result` is of type [AccountLockedSettingResponse](./packages/core/definitions/AccountLockedSettingResponse.ts)
+- `result` is of type [AccountLockedSettingResponse](./definitions/AccountLockedSettingResponse.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Meeting-Configuration-GetAccountLockedSetting) in API Explorer.
 
@@ -5857,7 +5857,7 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `result` is of type [MessageStoreConfiguration](./packages/core/definitions/MessageStoreConfiguration.ts)
+- `result` is of type [MessageStoreConfiguration](./definitions/MessageStoreConfiguration.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Message-Store-readMessageStoreConfiguration) in API Explorer.
 
@@ -5881,8 +5881,8 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `messageStoreConfiguration` is of type [MessageStoreConfiguration](./packages/core/definitions/MessageStoreConfiguration.ts)
-- `result` is of type [MessageStoreConfiguration](./packages/core/definitions/MessageStoreConfiguration.ts)
+- `messageStoreConfiguration` is of type [MessageStoreConfiguration](./definitions/MessageStoreConfiguration.ts)
+- `result` is of type [MessageStoreConfiguration](./definitions/MessageStoreConfiguration.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Message-Store-updateMessageStoreConfiguration) in API Explorer.
 
@@ -5906,8 +5906,8 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `createMessageStoreReportRequest` is of type [CreateMessageStoreReportRequest](./packages/core/definitions/CreateMessageStoreReportRequest.ts)
-- `result` is of type [MessageStoreReport](./packages/core/definitions/MessageStoreReport.ts)
+- `createMessageStoreReportRequest` is of type [CreateMessageStoreReportRequest](./definitions/CreateMessageStoreReportRequest.ts)
+- `result` is of type [MessageStoreReport](./definitions/MessageStoreReport.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Message-Exports-createMessageStoreReport) in API Explorer.
 
@@ -5931,7 +5931,7 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `result` is of type [MessageStoreReport](./packages/core/definitions/MessageStoreReport.ts)
+- `result` is of type [MessageStoreReport](./definitions/MessageStoreReport.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Message-Exports-readMessageStoreReportTask) in API Explorer.
 
@@ -5955,7 +5955,7 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `result` is of type [MessageStoreReportArchive](./packages/core/definitions/MessageStoreReportArchive.ts)
+- `result` is of type [MessageStoreReportArchive](./definitions/MessageStoreReportArchive.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Message-Exports-readMessageStoreReportArchive) in API Explorer.
 
@@ -6007,8 +6007,8 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `listPagingGroupDevicesParameters` is of type [ListPagingGroupDevicesParameters](./packages/core/definitions/ListPagingGroupDevicesParameters.ts)
-- `result` is of type [PagingOnlyGroupDevices](./packages/core/definitions/PagingOnlyGroupDevices.ts)
+- `listPagingGroupDevicesParameters` is of type [ListPagingGroupDevicesParameters](./definitions/ListPagingGroupDevicesParameters.ts)
+- `result` is of type [PagingOnlyGroupDevices](./definitions/PagingOnlyGroupDevices.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Paging-Only-Groups-listPagingGroupDevices) in API Explorer.
 
@@ -6032,8 +6032,8 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `listPagingGroupUsersParameters` is of type [ListPagingGroupUsersParameters](./packages/core/definitions/ListPagingGroupUsersParameters.ts)
-- `result` is of type [PagingOnlyGroupUsers](./packages/core/definitions/PagingOnlyGroupUsers.ts)
+- `listPagingGroupUsersParameters` is of type [ListPagingGroupUsersParameters](./definitions/ListPagingGroupUsersParameters.ts)
+- `result` is of type [PagingOnlyGroupUsers](./definitions/PagingOnlyGroupUsers.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Paging-Only-Groups-listPagingGroupUsers) in API Explorer.
 
@@ -6057,8 +6057,8 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `makeCallOutRequest` is of type [MakeCallOutRequest](./packages/core/definitions/MakeCallOutRequest.ts)
-- `result` is of type [CallSession](./packages/core/definitions/CallSession.ts)
+- `makeCallOutRequest` is of type [MakeCallOutRequest](./definitions/MakeCallOutRequest.ts)
+- `result` is of type [CallSession](./definitions/CallSession.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Control-createCallOutCallSession) in API Explorer.
 
@@ -6082,7 +6082,7 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `result` is of type [CallSessionObject](./packages/core/definitions/CallSessionObject.ts)
+- `result` is of type [CallSessionObject](./definitions/CallSessionObject.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Control-createConferenceCallSession) in API Explorer.
 
@@ -6106,8 +6106,8 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `readCallSessionStatusParameters` is of type [ReadCallSessionStatusParameters](./packages/core/definitions/ReadCallSessionStatusParameters.ts)
-- `result` is of type [CallSessionObject](./packages/core/definitions/CallSessionObject.ts)
+- `readCallSessionStatusParameters` is of type [ReadCallSessionStatusParameters](./definitions/ReadCallSessionStatusParameters.ts)
+- `result` is of type [CallSessionObject](./definitions/CallSessionObject.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Control-readCallSessionStatus) in API Explorer.
 
@@ -6155,7 +6155,7 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `result` is of type [CallParty](./packages/core/definitions/CallParty.ts)
+- `result` is of type [CallParty](./definitions/CallParty.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Control-readCallPartyStatus) in API Explorer.
 
@@ -6203,8 +6203,8 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `partyUpdateRequest` is of type [PartyUpdateRequest](./packages/core/definitions/PartyUpdateRequest.ts)
-- `result` is of type [CallParty](./packages/core/definitions/CallParty.ts)
+- `partyUpdateRequest` is of type [PartyUpdateRequest](./definitions/PartyUpdateRequest.ts)
+- `result` is of type [CallParty](./definitions/CallParty.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Control-updateCallParty) in API Explorer.
 
@@ -6228,8 +6228,8 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `superviseCallSessionRequest` is of type [SuperviseCallSessionRequest](./packages/core/definitions/SuperviseCallSessionRequest.ts)
-- `result` is of type [SuperviseCallSession](./packages/core/definitions/SuperviseCallSession.ts)
+- `superviseCallSessionRequest` is of type [SuperviseCallSessionRequest](./definitions/SuperviseCallSessionRequest.ts)
+- `result` is of type [SuperviseCallSession](./definitions/SuperviseCallSession.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Control-superviseCallSession) in API Explorer.
 
@@ -6252,8 +6252,8 @@ await rc.revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
-- `listDomesticCountriesParameters` is of type [ListDomesticCountriesParameters](./packages/core/definitions/ListDomesticCountriesParameters.ts)
-- `result` is of type [GetCountryListResponse](./packages/core/definitions/GetCountryListResponse.ts)
+- `listDomesticCountriesParameters` is of type [ListDomesticCountriesParameters](./definitions/ListDomesticCountriesParameters.ts)
+- `result` is of type [GetCountryListResponse](./definitions/GetCountryListResponse.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Company-listDomesticCountries) in API Explorer.
 
@@ -6277,7 +6277,7 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `result` is of type [AddressBookBulkUploadResponse](./packages/core/definitions/AddressBookBulkUploadResponse.ts)
+- `result` is of type [AddressBookBulkUploadResponse](./definitions/AddressBookBulkUploadResponse.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#External-Contacts-getAddressBookBulkUploadTask) in API Explorer.
 
@@ -6301,7 +6301,7 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `callMonitoringBulkAssign` is of type [CallMonitoringBulkAssign](./packages/core/definitions/CallMonitoringBulkAssign.ts)
+- `callMonitoringBulkAssign` is of type [CallMonitoringBulkAssign](./definitions/CallMonitoringBulkAssign.ts)
 - `result` is an empty string
 
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Monitoring-Groups-updateCallMonitoringGroupList) in API Explorer.
@@ -6326,8 +6326,8 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `listCallMonitoringGroupMembersParameters` is of type [ListCallMonitoringGroupMembersParameters](./packages/core/definitions/ListCallMonitoringGroupMembersParameters.ts)
-- `result` is of type [CallMonitoringGroupMemberList](./packages/core/definitions/CallMonitoringGroupMemberList.ts)
+- `listCallMonitoringGroupMembersParameters` is of type [ListCallMonitoringGroupMembersParameters](./definitions/ListCallMonitoringGroupMembersParameters.ts)
+- `result` is of type [CallMonitoringGroupMemberList](./definitions/CallMonitoringGroupMemberList.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Monitoring-Groups-listCallMonitoringGroupMembers) in API Explorer.
 
@@ -6351,8 +6351,8 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `listCallRecordingCustomGreetingsParameters` is of type [ListCallRecordingCustomGreetingsParameters](./packages/core/definitions/ListCallRecordingCustomGreetingsParameters.ts)
-- `result` is of type [CallRecordingCustomGreetings](./packages/core/definitions/CallRecordingCustomGreetings.ts)
+- `listCallRecordingCustomGreetingsParameters` is of type [ListCallRecordingCustomGreetingsParameters](./definitions/ListCallRecordingCustomGreetingsParameters.ts)
+- `result` is of type [CallRecordingCustomGreetings](./definitions/CallRecordingCustomGreetings.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Recording-Settings-listCallRecordingCustomGreetings) in API Explorer.
 
@@ -6424,8 +6424,8 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `listDevicesAutomaticLocationUpdatesParameters` is of type [ListDevicesAutomaticLocationUpdatesParameters](./packages/core/definitions/ListDevicesAutomaticLocationUpdatesParameters.ts)
-- `result` is of type [ListDevicesAutomaticLocationUpdates](./packages/core/definitions/ListDevicesAutomaticLocationUpdates.ts)
+- `listDevicesAutomaticLocationUpdatesParameters` is of type [ListDevicesAutomaticLocationUpdatesParameters](./definitions/ListDevicesAutomaticLocationUpdatesParameters.ts)
+- `result` is of type [ListDevicesAutomaticLocationUpdates](./definitions/ListDevicesAutomaticLocationUpdates.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-listDevicesAutomaticLocationUpdates) in API Explorer.
 
@@ -6449,7 +6449,7 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `result` is of type [NetworksList](./packages/core/definitions/NetworksList.ts)
+- `result` is of type [NetworksList](./definitions/NetworksList.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-listNetworks) in API Explorer.
 
@@ -6473,8 +6473,8 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `createNetworkRequest` is of type [CreateNetworkRequest](./packages/core/definitions/CreateNetworkRequest.ts)
-- `result` is of type [NetworkInfo](./packages/core/definitions/NetworkInfo.ts)
+- `createNetworkRequest` is of type [CreateNetworkRequest](./definitions/CreateNetworkRequest.ts)
+- `result` is of type [NetworkInfo](./definitions/NetworkInfo.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-createNetwork) in API Explorer.
 
@@ -6498,7 +6498,7 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `result` is of type [NetworkInfo](./packages/core/definitions/NetworkInfo.ts)
+- `result` is of type [NetworkInfo](./definitions/NetworkInfo.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-readNetwork) in API Explorer.
 
@@ -6522,7 +6522,7 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `updateNetworkRequest` is of type [UpdateNetworkRequest](./packages/core/definitions/UpdateNetworkRequest.ts)
+- `updateNetworkRequest` is of type [UpdateNetworkRequest](./definitions/UpdateNetworkRequest.ts)
 - `result` is an empty string
 
 [Try it out](https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-updateNetwork) in API Explorer.
@@ -6571,8 +6571,8 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `listAccountSwitchesParameters` is of type [ListAccountSwitchesParameters](./packages/core/definitions/ListAccountSwitchesParameters.ts)
-- `result` is of type [SwitchesList](./packages/core/definitions/SwitchesList.ts)
+- `listAccountSwitchesParameters` is of type [ListAccountSwitchesParameters](./definitions/ListAccountSwitchesParameters.ts)
+- `result` is of type [SwitchesList](./definitions/SwitchesList.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-listAccountSwitches) in API Explorer.
 
@@ -6596,8 +6596,8 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `createSwitchInfo` is of type [CreateSwitchInfo](./packages/core/definitions/CreateSwitchInfo.ts)
-- `result` is of type [SwitchInfo](./packages/core/definitions/SwitchInfo.ts)
+- `createSwitchInfo` is of type [CreateSwitchInfo](./definitions/CreateSwitchInfo.ts)
+- `result` is of type [SwitchInfo](./definitions/SwitchInfo.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-createSwitch) in API Explorer.
 
@@ -6621,7 +6621,7 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `result` is of type [SwitchInfo](./packages/core/definitions/SwitchInfo.ts)
+- `result` is of type [SwitchInfo](./definitions/SwitchInfo.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-readSwitch) in API Explorer.
 
@@ -6645,8 +6645,8 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `updateSwitchInfo` is of type [UpdateSwitchInfo](./packages/core/definitions/UpdateSwitchInfo.ts)
-- `result` is of type [SwitchInfo](./packages/core/definitions/SwitchInfo.ts)
+- `updateSwitchInfo` is of type [UpdateSwitchInfo](./definitions/UpdateSwitchInfo.ts)
+- `result` is of type [SwitchInfo](./definitions/SwitchInfo.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-updateSwitch) in API Explorer.
 
@@ -6694,7 +6694,7 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `result` is of type [AutomaticLocationUpdatesTaskInfo](./packages/core/definitions/AutomaticLocationUpdatesTaskInfo.ts)
+- `result` is of type [AutomaticLocationUpdatesTaskInfo](./definitions/AutomaticLocationUpdatesTaskInfo.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-readAutomaticLocationUpdatesTask) in API Explorer.
 
@@ -6718,8 +6718,8 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `listAutomaticLocationUpdatesUsersParameters` is of type [ListAutomaticLocationUpdatesUsersParameters](./packages/core/definitions/ListAutomaticLocationUpdatesUsersParameters.ts)
-- `result` is of type [AutomaticLocationUpdatesUserList](./packages/core/definitions/AutomaticLocationUpdatesUserList.ts)
+- `listAutomaticLocationUpdatesUsersParameters` is of type [ListAutomaticLocationUpdatesUsersParameters](./definitions/ListAutomaticLocationUpdatesUsersParameters.ts)
+- `result` is of type [AutomaticLocationUpdatesUserList](./definitions/AutomaticLocationUpdatesUserList.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-listAutomaticLocationUpdatesUsers) in API Explorer.
 
@@ -6743,7 +6743,7 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `bulkAssignAutomaticLocationUpdatesUsers` is of type [BulkAssignAutomaticLocationUpdatesUsers](./packages/core/definitions/BulkAssignAutomaticLocationUpdatesUsers.ts)
+- `bulkAssignAutomaticLocationUpdatesUsers` is of type [BulkAssignAutomaticLocationUpdatesUsers](./definitions/BulkAssignAutomaticLocationUpdatesUsers.ts)
 - `result` is an empty string
 
 [Try it out](https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-assignMultipleAutomaticaLocationUpdatesUsers) in API Explorer.
@@ -6768,8 +6768,8 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `listWirelessPointsParameters` is of type [ListWirelessPointsParameters](./packages/core/definitions/ListWirelessPointsParameters.ts)
-- `result` is of type [WirelessPointsList](./packages/core/definitions/WirelessPointsList.ts)
+- `listWirelessPointsParameters` is of type [ListWirelessPointsParameters](./definitions/ListWirelessPointsParameters.ts)
+- `result` is of type [WirelessPointsList](./definitions/WirelessPointsList.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-listWirelessPoints) in API Explorer.
 
@@ -6793,8 +6793,8 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `createWirelessPoint` is of type [CreateWirelessPoint](./packages/core/definitions/CreateWirelessPoint.ts)
-- `result` is of type [WirelessPointInfo](./packages/core/definitions/WirelessPointInfo.ts)
+- `createWirelessPoint` is of type [CreateWirelessPoint](./definitions/CreateWirelessPoint.ts)
+- `result` is of type [WirelessPointInfo](./definitions/WirelessPointInfo.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-createWirelessPoint) in API Explorer.
 
@@ -6818,7 +6818,7 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `result` is of type [WirelessPointInfo](./packages/core/definitions/WirelessPointInfo.ts)
+- `result` is of type [WirelessPointInfo](./definitions/WirelessPointInfo.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-readWirelessPoint) in API Explorer.
 
@@ -6842,8 +6842,8 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `updateWirelessPoint` is of type [UpdateWirelessPoint](./packages/core/definitions/UpdateWirelessPoint.ts)
-- `result` is of type [WirelessPointInfo](./packages/core/definitions/WirelessPointInfo.ts)
+- `updateWirelessPoint` is of type [UpdateWirelessPoint](./definitions/UpdateWirelessPoint.ts)
+- `result` is of type [WirelessPointInfo](./definitions/WirelessPointInfo.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-updateWirelessPoint) in API Explorer.
 
@@ -6892,8 +6892,8 @@ await rc.revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
-- `listContactsParameters` is of type [ListContactsParameters](./packages/core/definitions/ListContactsParameters.ts)
-- `result` is of type [ContactList](./packages/core/definitions/ContactList.ts)
+- `listContactsParameters` is of type [ListContactsParameters](./definitions/ListContactsParameters.ts)
+- `result` is of type [ContactList](./definitions/ContactList.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#External-Contacts-listContacts) in API Explorer.
 
@@ -6918,9 +6918,9 @@ await rc.revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
-- `personalContactRequest` is of type [PersonalContactRequest](./packages/core/definitions/PersonalContactRequest.ts)
-- `createContactParameters` is of type [CreateContactParameters](./packages/core/definitions/CreateContactParameters.ts)
-- `result` is of type [PersonalContactResource](./packages/core/definitions/PersonalContactResource.ts)
+- `personalContactRequest` is of type [PersonalContactRequest](./definitions/PersonalContactRequest.ts)
+- `createContactParameters` is of type [CreateContactParameters](./definitions/CreateContactParameters.ts)
+- `result` is of type [PersonalContactResource](./definitions/PersonalContactResource.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#External-Contacts-createContact) in API Explorer.
 
@@ -6945,7 +6945,7 @@ await rc.revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
-- `result` is of type [PersonalContactResource](./packages/core/definitions/PersonalContactResource.ts)
+- `result` is of type [PersonalContactResource](./definitions/PersonalContactResource.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#External-Contacts-readContact) in API Explorer.
 
@@ -6970,9 +6970,9 @@ await rc.revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
-- `personalContactRequest` is of type [PersonalContactRequest](./packages/core/definitions/PersonalContactRequest.ts)
-- `updateContactParameters` is of type [UpdateContactParameters](./packages/core/definitions/UpdateContactParameters.ts)
-- `result` is of type [PersonalContactResource](./packages/core/definitions/PersonalContactResource.ts)
+- `personalContactRequest` is of type [PersonalContactRequest](./definitions/PersonalContactRequest.ts)
+- `updateContactParameters` is of type [UpdateContactParameters](./definitions/UpdateContactParameters.ts)
+- `result` is of type [PersonalContactResource](./definitions/PersonalContactResource.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#External-Contacts-updateContact) in API Explorer.
 
@@ -7022,8 +7022,8 @@ await rc.revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
-- `checkUserPermissionParameters` is of type [CheckUserPermissionParameters](./packages/core/definitions/CheckUserPermissionParameters.ts)
-- `result` is of type [AuthProfileCheckResource](./packages/core/definitions/AuthProfileCheckResource.ts)
+- `checkUserPermissionParameters` is of type [CheckUserPermissionParameters](./definitions/CheckUserPermissionParameters.ts)
+- `result` is of type [AuthProfileCheckResource](./definitions/AuthProfileCheckResource.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#User-Permissions-checkUserPermission) in API Explorer.
 
@@ -7048,8 +7048,8 @@ await rc.revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
-- `readExtensionCallQueuePresenceParameters` is of type [ReadExtensionCallQueuePresenceParameters](./packages/core/definitions/ReadExtensionCallQueuePresenceParameters.ts)
-- `result` is of type [ExtensionCallQueuePresenceList](./packages/core/definitions/ExtensionCallQueuePresenceList.ts)
+- `readExtensionCallQueuePresenceParameters` is of type [ReadExtensionCallQueuePresenceParameters](./definitions/ReadExtensionCallQueuePresenceParameters.ts)
+- `result` is of type [ExtensionCallQueuePresenceList](./definitions/ExtensionCallQueuePresenceList.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Presence-readExtensionCallQueuePresence) in API Explorer.
 
@@ -7074,8 +7074,8 @@ await rc.revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
-- `extensionCallQueueUpdatePresenceList` is of type [ExtensionCallQueueUpdatePresenceList](./packages/core/definitions/ExtensionCallQueueUpdatePresenceList.ts)
-- `result` is of type [ExtensionCallQueuePresenceList](./packages/core/definitions/ExtensionCallQueuePresenceList.ts)
+- `extensionCallQueueUpdatePresenceList` is of type [ExtensionCallQueueUpdatePresenceList](./definitions/ExtensionCallQueueUpdatePresenceList.ts)
+- `result` is of type [ExtensionCallQueuePresenceList](./definitions/ExtensionCallQueuePresenceList.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Presence-updateExtensionCallQueuePresence) in API Explorer.
 
@@ -7100,7 +7100,7 @@ await rc.revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
-- `result` is of type [UserEmergencyLocationList](./packages/core/definitions/UserEmergencyLocationList.ts)
+- `result` is of type [UserEmergencyLocationList](./definitions/UserEmergencyLocationList.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-getExtensionEmergencyLocations) in API Explorer.
 
@@ -7125,7 +7125,7 @@ await rc.revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
-- `createUserMeetingProfileImageRequest` is of type [CreateUserMeetingProfileImageRequest](./packages/core/definitions/CreateUserMeetingProfileImageRequest.ts)
+- `createUserMeetingProfileImageRequest` is of type [CreateUserMeetingProfileImageRequest](./definitions/CreateUserMeetingProfileImageRequest.ts)
 - `result` is an empty string
 
 [Try it out](https://developer.ringcentral.com/api-reference#Meeting-Configuration-createUserMeetingProfileImage) in API Explorer.
@@ -7151,7 +7151,7 @@ await rc.revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
-- `result` is of type [MeetingServiceInfoResource](./packages/core/definitions/MeetingServiceInfoResource.ts)
+- `result` is of type [MeetingServiceInfoResource](./definitions/MeetingServiceInfoResource.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Meeting-Configuration-readMeetingServiceInfo) in API Explorer.
 
@@ -7176,8 +7176,8 @@ await rc.revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
-- `meetingServiceInfoRequest` is of type [MeetingServiceInfoRequest](./packages/core/definitions/MeetingServiceInfoRequest.ts)
-- `result` is of type [MeetingServiceInfoResource](./packages/core/definitions/MeetingServiceInfoResource.ts)
+- `meetingServiceInfoRequest` is of type [MeetingServiceInfoRequest](./definitions/MeetingServiceInfoRequest.ts)
+- `result` is of type [MeetingServiceInfoResource](./definitions/MeetingServiceInfoResource.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Meeting-Configuration-updateMeetingServiceInfo) in API Explorer.
 
@@ -7202,7 +7202,7 @@ await rc.revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
-- `readMessageContentParameters` is of type [ReadMessageContentParameters](./packages/core/definitions/ReadMessageContentParameters.ts)
+- `readMessageContentParameters` is of type [ReadMessageContentParameters](./definitions/ReadMessageContentParameters.ts)
 - `result` is of type `byte[]`
 
 ### ❗❗❗ Code sample above may not work
@@ -7232,7 +7232,7 @@ await rc.revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
-- `result` is of type [UserVideoConfiguration](./packages/core/definitions/UserVideoConfiguration.ts)
+- `result` is of type [UserVideoConfiguration](./definitions/UserVideoConfiguration.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Video-Configuration-readUserVideoConfiguration) in API Explorer.
 
@@ -7257,8 +7257,8 @@ await rc.revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
-- `userVideoConfiguration` is of type [UserVideoConfiguration](./packages/core/definitions/UserVideoConfiguration.ts)
-- `result` is of type [UserVideoConfiguration](./packages/core/definitions/UserVideoConfiguration.ts)
+- `userVideoConfiguration` is of type [UserVideoConfiguration](./definitions/UserVideoConfiguration.ts)
+- `result` is of type [UserVideoConfiguration](./definitions/UserVideoConfiguration.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Video-Configuration-updateUserVideoConfiguration) in API Explorer.
 
@@ -7282,7 +7282,7 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `editPagingGroupRequest` is of type [EditPagingGroupRequest](./packages/core/definitions/EditPagingGroupRequest.ts)
+- `editPagingGroupRequest` is of type [EditPagingGroupRequest](./definitions/EditPagingGroupRequest.ts)
 - `result` is an empty string
 
 [Try it out](https://developer.ringcentral.com/api-reference#Paging-Only-Groups-assignMultiplePagingGroupUsersDevices) in API Explorer.
@@ -7307,7 +7307,7 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `assignMultipleDevicesAutomaticLocationUpdates` is of type [AssignMultipleDevicesAutomaticLocationUpdates](./packages/core/definitions/AssignMultipleDevicesAutomaticLocationUpdates.ts)
+- `assignMultipleDevicesAutomaticLocationUpdates` is of type [AssignMultipleDevicesAutomaticLocationUpdates](./definitions/AssignMultipleDevicesAutomaticLocationUpdates.ts)
 - `result` is an empty string
 
 [Try it out](https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-assignMultipleDevicesAutomaticLocationUpdates) in API Explorer.
@@ -7332,8 +7332,8 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `createMultipleSwitchesRequest` is of type [CreateMultipleSwitchesRequest](./packages/core/definitions/CreateMultipleSwitchesRequest.ts)
-- `result` is of type [CreateMultipleSwitchesResponse](./packages/core/definitions/CreateMultipleSwitchesResponse.ts)
+- `createMultipleSwitchesRequest` is of type [CreateMultipleSwitchesRequest](./definitions/CreateMultipleSwitchesRequest.ts)
+- `result` is of type [CreateMultipleSwitchesResponse](./definitions/CreateMultipleSwitchesResponse.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-createMultipleSwitches) in API Explorer.
 
@@ -7357,8 +7357,8 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `updateMultipleSwitchesRequest` is of type [UpdateMultipleSwitchesRequest](./packages/core/definitions/UpdateMultipleSwitchesRequest.ts)
-- `result` is of type [UpdateMultipleSwitchesResponse](./packages/core/definitions/UpdateMultipleSwitchesResponse.ts)
+- `updateMultipleSwitchesRequest` is of type [UpdateMultipleSwitchesRequest](./definitions/UpdateMultipleSwitchesRequest.ts)
+- `result` is of type [UpdateMultipleSwitchesResponse](./definitions/UpdateMultipleSwitchesResponse.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-updateMultipleSwitches) in API Explorer.
 
@@ -7382,8 +7382,8 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `validateMultipleSwitchesRequest` is of type [ValidateMultipleSwitchesRequest](./packages/core/definitions/ValidateMultipleSwitchesRequest.ts)
-- `result` is of type [ValidateMultipleSwitchesResponse](./packages/core/definitions/ValidateMultipleSwitchesResponse.ts)
+- `validateMultipleSwitchesRequest` is of type [ValidateMultipleSwitchesRequest](./definitions/ValidateMultipleSwitchesRequest.ts)
+- `result` is of type [ValidateMultipleSwitchesResponse](./definitions/ValidateMultipleSwitchesResponse.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-validateMultipleSwitches) in API Explorer.
 
@@ -7407,8 +7407,8 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `createMultipleWirelessPointsRequest` is of type [CreateMultipleWirelessPointsRequest](./packages/core/definitions/CreateMultipleWirelessPointsRequest.ts)
-- `result` is of type [CreateMultipleWirelessPointsResponse](./packages/core/definitions/CreateMultipleWirelessPointsResponse.ts)
+- `createMultipleWirelessPointsRequest` is of type [CreateMultipleWirelessPointsRequest](./definitions/CreateMultipleWirelessPointsRequest.ts)
+- `result` is of type [CreateMultipleWirelessPointsResponse](./definitions/CreateMultipleWirelessPointsResponse.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-createMultipleWirelessPoints) in API Explorer.
 
@@ -7432,8 +7432,8 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `updateMultipleWirelessPointsRequest` is of type [UpdateMultipleWirelessPointsRequest](./packages/core/definitions/UpdateMultipleWirelessPointsRequest.ts)
-- `result` is of type [UpdateMultipleWirelessPointsResponse](./packages/core/definitions/UpdateMultipleWirelessPointsResponse.ts)
+- `updateMultipleWirelessPointsRequest` is of type [UpdateMultipleWirelessPointsRequest](./definitions/UpdateMultipleWirelessPointsRequest.ts)
+- `result` is of type [UpdateMultipleWirelessPointsResponse](./definitions/UpdateMultipleWirelessPointsResponse.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-updateMultipleWirelessPoints) in API Explorer.
 
@@ -7457,8 +7457,8 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `validateMultipleWirelessPointsRequest` is of type [ValidateMultipleWirelessPointsRequest](./packages/core/definitions/ValidateMultipleWirelessPointsRequest.ts)
-- `result` is of type [ValidateMultipleWirelessPointsResponse](./packages/core/definitions/ValidateMultipleWirelessPointsResponse.ts)
+- `validateMultipleWirelessPointsRequest` is of type [ValidateMultipleWirelessPointsRequest](./definitions/ValidateMultipleWirelessPointsRequest.ts)
+- `result` is of type [ValidateMultipleWirelessPointsResponse](./definitions/ValidateMultipleWirelessPointsResponse.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-validateMultipleWirelessPoints) in API Explorer.
 
@@ -7483,8 +7483,8 @@ await rc.revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
-- `listBlockedAllowedNumbersParameters` is of type [ListBlockedAllowedNumbersParameters](./packages/core/definitions/ListBlockedAllowedNumbersParameters.ts)
-- `result` is of type [BlockedAllowedPhoneNumbersList](./packages/core/definitions/BlockedAllowedPhoneNumbersList.ts)
+- `listBlockedAllowedNumbersParameters` is of type [ListBlockedAllowedNumbersParameters](./definitions/ListBlockedAllowedNumbersParameters.ts)
+- `result` is of type [BlockedAllowedPhoneNumbersList](./definitions/BlockedAllowedPhoneNumbersList.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Blocking-listBlockedAllowedNumbers) in API Explorer.
 
@@ -7509,8 +7509,8 @@ await rc.revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
-- `addBlockedAllowedPhoneNumber` is of type [AddBlockedAllowedPhoneNumber](./packages/core/definitions/AddBlockedAllowedPhoneNumber.ts)
-- `result` is of type [BlockedAllowedPhoneNumberInfo](./packages/core/definitions/BlockedAllowedPhoneNumberInfo.ts)
+- `addBlockedAllowedPhoneNumber` is of type [AddBlockedAllowedPhoneNumber](./definitions/AddBlockedAllowedPhoneNumber.ts)
+- `result` is of type [BlockedAllowedPhoneNumberInfo](./definitions/BlockedAllowedPhoneNumberInfo.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Blocking-createBlockedAllowedNumber) in API Explorer.
 
@@ -7535,7 +7535,7 @@ await rc.revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
-- `result` is of type [BlockedAllowedPhoneNumberInfo](./packages/core/definitions/BlockedAllowedPhoneNumberInfo.ts)
+- `result` is of type [BlockedAllowedPhoneNumberInfo](./definitions/BlockedAllowedPhoneNumberInfo.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Blocking-readBlockedAllowedNumber) in API Explorer.
 
@@ -7560,8 +7560,8 @@ await rc.revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
-- `addBlockedAllowedPhoneNumber` is of type [AddBlockedAllowedPhoneNumber](./packages/core/definitions/AddBlockedAllowedPhoneNumber.ts)
-- `result` is of type [BlockedAllowedPhoneNumberInfo](./packages/core/definitions/BlockedAllowedPhoneNumberInfo.ts)
+- `addBlockedAllowedPhoneNumber` is of type [AddBlockedAllowedPhoneNumber](./definitions/AddBlockedAllowedPhoneNumber.ts)
+- `result` is of type [BlockedAllowedPhoneNumberInfo](./definitions/BlockedAllowedPhoneNumberInfo.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Blocking-updateBlockedAllowedNumber) in API Explorer.
 
@@ -7611,7 +7611,7 @@ await rc.revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
-- `result` is of type [MeetingUserSettingsResponse](./packages/core/definitions/MeetingUserSettingsResponse.ts)
+- `result` is of type [MeetingUserSettingsResponse](./definitions/MeetingUserSettingsResponse.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Meeting-Configuration-GetUserSetting) in API Explorer.
 
@@ -7636,7 +7636,7 @@ await rc.revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
-- `result` is of type [AssistantsResource](./packages/core/definitions/AssistantsResource.ts)
+- `result` is of type [AssistantsResource](./definitions/AssistantsResource.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Meeting-Configuration-readAssistants) in API Explorer.
 
@@ -7661,7 +7661,7 @@ await rc.revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
-- `result` is of type [AssistedUsersResource](./packages/core/definitions/AssistedUsersResource.ts)
+- `result` is of type [AssistedUsersResource](./definitions/AssistedUsersResource.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Meeting-Configuration-readAssistedUsers) in API Explorer.
 
@@ -7686,7 +7686,7 @@ await rc.revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
-- `result` is of type [NotificationSettings](./packages/core/definitions/NotificationSettings.ts)
+- `result` is of type [NotificationSettings](./definitions/NotificationSettings.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#User-Settings-readNotificationSettings) in API Explorer.
 
@@ -7711,8 +7711,8 @@ await rc.revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
-- `notificationSettingsUpdateRequest` is of type [NotificationSettingsUpdateRequest](./packages/core/definitions/NotificationSettingsUpdateRequest.ts)
-- `result` is of type [NotificationSettings](./packages/core/definitions/NotificationSettings.ts)
+- `notificationSettingsUpdateRequest` is of type [NotificationSettingsUpdateRequest](./definitions/NotificationSettingsUpdateRequest.ts)
+- `result` is of type [NotificationSettings](./definitions/NotificationSettings.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#User-Settings-updateNotificationSettings) in API Explorer.
 
@@ -7736,8 +7736,8 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `addPartyRequest` is of type [AddPartyRequest](./packages/core/definitions/AddPartyRequest.ts)
-- `result` is of type [CallParty](./packages/core/definitions/CallParty.ts)
+- `addPartyRequest` is of type [AddPartyRequest](./definitions/AddPartyRequest.ts)
+- `result` is of type [CallParty](./definitions/CallParty.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Control-createCallPartyWithBringIn) in API Explorer.
 
@@ -7761,8 +7761,8 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `answerTarget` is of type [AnswerTarget](./packages/core/definitions/AnswerTarget.ts)
-- `result` is of type [CallParty](./packages/core/definitions/CallParty.ts)
+- `answerTarget` is of type [AnswerTarget](./definitions/AnswerTarget.ts)
+- `result` is of type [CallParty](./definitions/CallParty.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Control-answerCallParty) in API Explorer.
 
@@ -7786,8 +7786,8 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `bridgeTargetRequest` is of type [BridgeTargetRequest](./packages/core/definitions/BridgeTargetRequest.ts)
-- `result` is of type [CallParty](./packages/core/definitions/CallParty.ts)
+- `bridgeTargetRequest` is of type [BridgeTargetRequest](./definitions/BridgeTargetRequest.ts)
+- `result` is of type [CallParty](./definitions/CallParty.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Control-bridgeCallParty) in API Explorer.
 
@@ -7811,7 +7811,7 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `callPartyFlip` is of type [CallPartyFlip](./packages/core/definitions/CallPartyFlip.ts)
+- `callPartyFlip` is of type [CallPartyFlip](./definitions/CallPartyFlip.ts)
 - `result` is an empty string
 
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Control-callFlipParty) in API Explorer.
@@ -7836,8 +7836,8 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `forwardTarget` is of type [ForwardTarget](./packages/core/definitions/ForwardTarget.ts)
-- `result` is of type [CallParty](./packages/core/definitions/CallParty.ts)
+- `forwardTarget` is of type [ForwardTarget](./definitions/ForwardTarget.ts)
+- `result` is of type [CallParty](./definitions/CallParty.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Control-forwardCallParty) in API Explorer.
 
@@ -7861,7 +7861,7 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `result` is of type [CallParty](./packages/core/definitions/CallParty.ts)
+- `result` is of type [CallParty](./definitions/CallParty.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Control-holdCallParty) in API Explorer.
 
@@ -7885,7 +7885,7 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `ignoreRequestBody` is of type [IgnoreRequestBody](./packages/core/definitions/IgnoreRequestBody.ts)
+- `ignoreRequestBody` is of type [IgnoreRequestBody](./definitions/IgnoreRequestBody.ts)
 - `result` is an empty string
 
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Control-ignoreCallInQueue) in API Explorer.
@@ -7910,7 +7910,7 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `result` is of type [CallParty](./packages/core/definitions/CallParty.ts)
+- `result` is of type [CallParty](./definitions/CallParty.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Control-callParkParty) in API Explorer.
 
@@ -7934,8 +7934,8 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `pickupTarget` is of type [PickupTarget](./packages/core/definitions/PickupTarget.ts)
-- `result` is of type [CallParty](./packages/core/definitions/CallParty.ts)
+- `pickupTarget` is of type [PickupTarget](./definitions/PickupTarget.ts)
+- `result` is of type [CallParty](./definitions/CallParty.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Control-pickupCallParty) in API Explorer.
 
@@ -7983,9 +7983,9 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `callRecordingUpdate` is of type [CallRecordingUpdate](./packages/core/definitions/CallRecordingUpdate.ts)
-- `pauseResumeCallRecordingParameters` is of type [PauseResumeCallRecordingParameters](./packages/core/definitions/PauseResumeCallRecordingParameters.ts)
-- `result` is of type [CallRecording](./packages/core/definitions/CallRecording.ts)
+- `callRecordingUpdate` is of type [CallRecordingUpdate](./definitions/CallRecordingUpdate.ts)
+- `pauseResumeCallRecordingParameters` is of type [PauseResumeCallRecordingParameters](./definitions/PauseResumeCallRecordingParameters.ts)
+- `result` is of type [CallRecording](./definitions/CallRecording.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Control-pauseResumeCallRecording) in API Explorer.
 
@@ -8033,8 +8033,8 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `callPartyReply` is of type [CallPartyReply](./packages/core/definitions/CallPartyReply.ts)
-- `result` is of type [ReplyParty](./packages/core/definitions/ReplyParty.ts)
+- `callPartyReply` is of type [CallPartyReply](./definitions/CallPartyReply.ts)
+- `result` is of type [ReplyParty](./definitions/ReplyParty.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Control-replyParty) in API Explorer.
 
@@ -8058,8 +8058,8 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `partySuperviseRequest` is of type [PartySuperviseRequest](./packages/core/definitions/PartySuperviseRequest.ts)
-- `result` is of type [PartySuperviseResponse](./packages/core/definitions/PartySuperviseResponse.ts)
+- `partySuperviseRequest` is of type [PartySuperviseRequest](./definitions/PartySuperviseRequest.ts)
+- `result` is of type [PartySuperviseResponse](./definitions/PartySuperviseResponse.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Control-superviseCallParty) in API Explorer.
 
@@ -8083,8 +8083,8 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `transferTarget` is of type [TransferTarget](./packages/core/definitions/TransferTarget.ts)
-- `result` is of type [CallParty](./packages/core/definitions/CallParty.ts)
+- `transferTarget` is of type [TransferTarget](./definitions/TransferTarget.ts)
+- `result` is of type [CallParty](./definitions/CallParty.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Control-transferCallParty) in API Explorer.
 
@@ -8108,6 +8108,6 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `result` is of type [CallParty](./packages/core/definitions/CallParty.ts)
+- `result` is of type [CallParty](./definitions/CallParty.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Control-unholdCallParty) in API Explorer.
