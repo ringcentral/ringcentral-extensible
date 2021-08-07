@@ -2,17 +2,17 @@
 # yarn lockfile v1
 
 
-"@rc-ex/core@^0.8.4":
-  version "0.8.4"
-  resolved "https://registry.yarnpkg.com/@rc-ex/core/-/core-0.8.4.tgz#036d64a1060e32e5848fbe5f2762e59b4b15c693"
-  integrity sha512-IoD63P0wCfULIWIw92TDuMyxXCmmLuXPZ4mFfBIPpcTTITD8HH1gY+KYuIa35QfGdlh61tZg9+Z8M5C6nx6fVA==
+"@rc-ex/core@^0.8.7":
+  version "0.8.7"
+  resolved "https://registry.yarnpkg.com/@rc-ex/core/-/core-0.8.7.tgz#d1ad39ac6731b45e73a7a04065279e460604d29c"
+  integrity sha512-J93qmxsWjRGRtJ3r7m0MiJmILJPgapkhOmYHIM6zJnO5waEpJ4JpcWPqB39faOyAkPU0kMJFDZeGw/93qfMgfA==
   dependencies:
-    "@types/qs" "^6.9.6"
+    "@types/qs" "^6.9.7"
     axios "^0.21.1"
     form-data "^4.0.0"
     qs "^6.10.1"
 
-"@types/qs@^6.9.6":
+"@types/qs@^6.9.7":
   version "6.9.7"
   resolved "https://registry.yarnpkg.com/@types/qs/-/qs-6.9.7.tgz#63bb7d067db107cc1e457c303bc25d511febf6cb"
   integrity sha512-FGa1F62FT09qcrueBA6qYTrJPVDzah9a+493+o2PCXsesWHIn27G98TsSMs3WPNbZIEj4+VJf6saSFpvD+3Zsw==
@@ -89,17 +89,17 @@ has@^1.0.3:
   dependencies:
     function-bind "^1.1.1"
 
-mime-db@1.48.0:
-  version "1.48.0"
-  resolved "https://registry.yarnpkg.com/mime-db/-/mime-db-1.48.0.tgz#e35b31045dd7eada3aaad537ed88a33afbef2d1d"
-  integrity sha512-FM3QwxV+TnZYQ2aRqhlKBMHxk10lTbMt3bBkMAp54ddrNeVSfcQYOOKuGuy3Ddrm38I04If834fOUSq1yzslJQ==
+mime-db@1.49.0:
+  version "1.49.0"
+  resolved "https://registry.yarnpkg.com/mime-db/-/mime-db-1.49.0.tgz#f3dfde60c99e9cf3bc9701d687778f537001cbed"
+  integrity sha512-CIc8j9URtOVApSFCQIF+VBkX1RwXp/oMMOrqdyXSBXq5RWNEsRfyj1kiRnQgmNXmHxPoFIxOroKA3zcU9P+nAA==
 
 mime-types@^2.1.12:
-  version "2.1.31"
-  resolved "https://registry.yarnpkg.com/mime-types/-/mime-types-2.1.31.tgz#a00d76b74317c61f9c2db2218b8e9f8e9c5c9e6b"
-  integrity sha512-XGZnNzm3QvgKxa8dpzyhFTHmpP3l5YNusmne07VUOXxou9CqUqYa/HBy124RqtVh/O2pECas/MOcsDgpilPOPg==
+  version "2.1.32"
+  resolved "https://registry.yarnpkg.com/mime-types/-/mime-types-2.1.32.tgz#1d00e89e7de7fe02008db61001d9e02852670fd5"
+  integrity sha512-hJGaVS4G4c9TSMYh2n6SQAGrC4RnfU+daP8G7cSCmaqNjiOoUY0VHCMS42pxnQmVF1GWwFhbHWn3RIxCqTmZ9A==
   dependencies:
-    mime-db "1.48.0"
+    mime-db "1.49.0"
 
 object-inspect@^1.9.0:
   version "1.11.0"

@@ -27,7 +27,7 @@
     "ts-node": "^10.1.0"
   },
   "peerDependencies": {
-    "@rc-ex/core": "^0.8.4"
+    "@rc-ex/core": "^0.8.7"
   },
   "scripts": {
     "generate": "ts-node -r dotenv-override-true/config code-generator.ts"

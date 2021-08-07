@@ -19,17 +19,17 @@
   },
   "dependencies": {
     "@rc-ex/rate-limit": "^0.7.15",
-    "@types/ws": "^7.4.6",
+    "@types/ws": "^7.4.7",
     "http-status-codes": "^2.1.4",
     "hyperid": "^2.3.1",
     "isomorphic-ws": "^4.0.1",
     "wait-for-async": "^0.5.0",
-    "ws": "^7.5.3"
+    "ws": "^8.0.0"
   },
   "devDependencies": {
     "@rc-ex/core": "^0.8.7"
   },
   "peerDependencies": {
-    "@rc-ex/core": "^0.8.4"
+    "@rc-ex/core": "^0.8.7"
   }
 }
