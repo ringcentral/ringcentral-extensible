@@ -18,6 +18,7 @@
     "access": "public"
   },
   "dependencies": {
+    "@rc-ex/rate-limit": "^0.7.15",
     "@types/ws": "^7.4.6",
     "http-status-codes": "^2.1.4",
     "hyperid": "^2.3.1",

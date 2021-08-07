@@ -9,6 +9,7 @@ import WS, {OPEN, CONNECTING} from 'isomorphic-ws';
 import hyperid from 'hyperid';
 import {EventEmitter} from 'events';
 import waitFor from 'wait-for-async';
+import RateLimitExtension from '@rc-ex/rate-limit';
 
 import {request} from './rest';
 import {
@@ -49,6 +50,8 @@ class WebSocketExtension extends SdkExtension {
 
   request = request; // request method was moved to another file to keep this file short
 
+  rateLimitExtension: RateLimitExtension = new RateLimitExtension(); // to rate limit /restapi/oauth/wstoken
+
   constructor(options: WebSocketOptions = {}) {
     super();
     this.options = options;
@@ -75,6 +78,8 @@ class WebSocketExtension extends SdkExtension {
   }
 
   async install(rc: RingCentral) {
+    this.rateLimitExtension.enabled = false;
+    await rc.installExtension(this.rateLimitExtension);
     this.rc = rc;
     const request = rc.request.bind(rc);
     rc.request = async <T>(
@@ -211,7 +216,9 @@ class WebSocketExtension extends SdkExtension {
   }
 
   async connect(recoverSession = false) {
+    this.rateLimitExtension.enabled = true;
     const r = await this.rc.post('/restapi/oauth/wstoken');
+    this.rateLimitExtension.enabled = false;
     this.wsToken = r.data as WsToken;
     let wsUri = `${this.wsToken.uri}?access_token=${this.wsToken.ws_access_token}`;
     if (recoverSession) {
