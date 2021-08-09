@@ -27,7 +27,7 @@ describe('SMS', () => {
       .restapi()
       .account()
       .a2pSms()
-      .batch()
+      .batches()
       .post({
         from: process.env.RINGCENTRAL_FROM!,
         text: 'hello world',

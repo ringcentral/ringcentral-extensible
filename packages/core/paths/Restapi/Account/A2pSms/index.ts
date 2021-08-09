@@ -1,6 +1,7 @@
+import Statuses from './Statuses';
 import OptOuts from './OptOuts';
 import Messages from './Messages';
-import Batch from './Batch';
+import Batches from './Batches';
 import Parent from '..';
 import {RingCentral} from '../../../..';
 
@@ -16,8 +17,8 @@ class Index {
     return `${this.parent.path()}/a2p-sms`;
   }
 
-  batch(batchId: string | null = null): Batch {
-    return new Batch(this, batchId);
+  batches(batchId: string | null = null): Batches {
+    return new Batches(this, batchId);
   }
 
   messages(messageId: string | null = null): Messages {
@@ -26,6 +27,10 @@ class Index {
 
   optOuts(): OptOuts {
     return new OptOuts(this);
+  }
+
+  statuses(): Statuses {
+    return new Statuses(this);
   }
 }
 export default Index;

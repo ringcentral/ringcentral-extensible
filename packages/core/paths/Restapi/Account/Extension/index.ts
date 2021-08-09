@@ -4,6 +4,7 @@ import MeetingConfiguration from './MeetingConfiguration';
 import VideoConfiguration from './VideoConfiguration';
 import EmergencyLocations from './EmergencyLocations';
 import CallQueuePresence from './CallQueuePresence';
+import AdministeredSites from './AdministeredSites';
 import MeetingRecordings from './MeetingRecordings';
 import AddressBookSync from './AddressBookSync';
 import ForwardingNumber from './ForwardingNumber';
@@ -11,6 +12,7 @@ import UnifiedPresence from './UnifiedPresence';
 import CallerBlocking from './CallerBlocking';
 import BusinessHours from './BusinessHours';
 import AnsweringRule from './AnsweringRule';
+import AssignedRole from './AssignedRole';
 import AuthzProfile from './AuthzProfile';
 import CompanyPager from './CompanyPager';
 import CallLogSync from './CallLogSync';
@@ -270,6 +272,10 @@ class Index {
     return new AuthzProfile(this);
   }
 
+  assignedRole(): AssignedRole {
+    return new AssignedRole(this);
+  }
+
   answeringRule(ruleId: string | null = null): AnsweringRule {
     return new AnsweringRule(this, ruleId);
   }
@@ -296,6 +302,10 @@ class Index {
 
   meetingRecordings(): MeetingRecordings {
     return new MeetingRecordings(this);
+  }
+
+  administeredSites(): AdministeredSites {
+    return new AdministeredSites(this);
   }
 
   callQueuePresence(): CallQueuePresence {

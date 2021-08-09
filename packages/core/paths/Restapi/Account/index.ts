@@ -11,6 +11,7 @@ import BusinessAddress from './BusinessAddress';
 import CallRecording from './CallRecording';
 import BusinessHours from './BusinessHours';
 import AnsweringRule from './AnsweringRule';
+import AssignedRole from './AssignedRole';
 import CallLogSync from './CallLogSync';
 import CustomFields from './CustomFields';
 import ServiceInfo from './ServiceInfo';
@@ -18,6 +19,7 @@ import ActiveCalls from './ActiveCalls';
 import PhoneNumber from './PhoneNumber';
 import CallQueues from './CallQueues';
 import IvrPrompts from './IvrPrompts';
+import UserRole from './UserRole';
 import IvrMenus from './IvrMenus';
 import Templates from './Templates';
 import Extension from './Extension';
@@ -121,6 +123,10 @@ class Index {
     return new IvrMenus(this, ivrMenuId);
   }
 
+  userRole(roleId: string | null = null): UserRole {
+    return new UserRole(this, roleId);
+  }
+
   ivrPrompts(promptId: string | null = null): IvrPrompts {
     return new IvrPrompts(this, promptId);
   }
@@ -147,6 +153,10 @@ class Index {
 
   callLogSync(): CallLogSync {
     return new CallLogSync(this);
+  }
+
+  assignedRole(): AssignedRole {
+    return new AssignedRole(this);
   }
 
   answeringRule(ruleId: string | null = null): AnsweringRule {

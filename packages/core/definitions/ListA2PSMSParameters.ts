@@ -44,7 +44,7 @@ class ListA2PSMSParameters {
 
   /**
    * Number of messages to be returned per request
-   * Format: int64
+   * Format: int32
    * Example: 1
    * Default: 1000
    */

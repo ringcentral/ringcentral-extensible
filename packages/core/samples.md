@@ -280,1683 +280,13 @@ await rc.revoke();
 
 [Try it out](https://developer.ringcentral.com/api-reference#OAuth-2.0-revokeToken) in API Explorer.
 
-## readCompanyCallLog
-Get Company Call Log Records
+## listA2PBatches
+Get A2P SMS Batches
 
 Name|Value
 -|-
 HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/call-log`
-Rate Limit Group|`Heavy`
-App Permission|`ReadCallLog`
-User Permission|`FullCompanyCallLog`
-
-```ts
-const rc = new RingCentral({clientId, clientSecret, serverURL});
-await rc.authorize({username, extension, password});
-var result = await rc.restapi(apiVersion).account(accountId).callLog().list(readCompanyCallLogParameters);
-await rc.revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- Parameter `accountId` is optional with default value `~`
-- `readCompanyCallLogParameters` is of type [ReadCompanyCallLogParameters](./definitions/ReadCompanyCallLogParameters.ts)
-- `result` is of type [AccountCallLogResponse](./definitions/AccountCallLogResponse.ts)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Log-readCompanyCallLog) in API Explorer.
-
-## readCompanyCallRecord
-Get Company Call Log Record(s)
-
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/call-log/{callRecordId}`
-Rate Limit Group|`Heavy`
-App Permission|`ReadCallLog`
-User Permission|`FullCompanyCallLog`
-
-```ts
-const rc = new RingCentral({clientId, clientSecret, serverURL});
-await rc.authorize({username, extension, password});
-var result = await rc.restapi(apiVersion).account(accountId).callLog(callRecordId).get(readCompanyCallRecordParameters);
-await rc.revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- Parameter `accountId` is optional with default value `~`
-- `readCompanyCallRecordParameters` is of type [ReadCompanyCallRecordParameters](./definitions/ReadCompanyCallRecordParameters.ts)
-- `result` is of type [CompanyCallLogRecord](./definitions/CompanyCallLogRecord.ts)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Log-readCompanyCallRecord) in API Explorer.
-
-## readDevice
-Get Device
-
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/device/{deviceId}`
-Rate Limit Group|`Light`
-App Permission|`ReadAccounts`
-User Permission|`ReadCompanyDevices`
-
-```ts
-const rc = new RingCentral({clientId, clientSecret, serverURL});
-await rc.authorize({username, extension, password});
-var result = await rc.restapi(apiVersion).account(accountId).device(deviceId).get(readDeviceParameters);
-await rc.revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- Parameter `accountId` is optional with default value `~`
-- `readDeviceParameters` is of type [ReadDeviceParameters](./definitions/ReadDeviceParameters.ts)
-- `result` is of type [GetDeviceInfoResponse](./definitions/GetDeviceInfoResponse.ts)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Devices-readDevice) in API Explorer.
-
-## updateDevice
-Update Device
-
-Name|Value
--|-
-HTTP Method|`PUT`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/device/{deviceId}`
-Rate Limit Group|`Medium`
-App Permission|`EditAccounts`
-User Permission|`EditCompanyDevices`
-
-```ts
-const rc = new RingCentral({clientId, clientSecret, serverURL});
-await rc.authorize({username, extension, password});
-var result = await rc.restapi(apiVersion).account(accountId).device(deviceId).put(accountDeviceUpdate, updateDeviceParameters);
-await rc.revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- Parameter `accountId` is optional with default value `~`
-- `accountDeviceUpdate` is of type [AccountDeviceUpdate](./definitions/AccountDeviceUpdate.ts)
-- `updateDeviceParameters` is of type [UpdateDeviceParameters](./definitions/UpdateDeviceParameters.ts)
-- `result` is of type [GetDeviceInfoResponse](./definitions/GetDeviceInfoResponse.ts)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Devices-updateDevice) in API Explorer.
-
-## listExtensions
-Get Extension List
-
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/extension`
-Rate Limit Group|`Medium`
-App Permission|`ReadAccounts`
-User Permission|`ReadExtensions`
-
-```ts
-const rc = new RingCentral({clientId, clientSecret, serverURL});
-await rc.authorize({username, extension, password});
-var result = await rc.restapi(apiVersion).account(accountId).extension().list(listExtensionsParameters);
-await rc.revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- Parameter `accountId` is optional with default value `~`
-- `listExtensionsParameters` is of type [ListExtensionsParameters](./definitions/ListExtensionsParameters.ts)
-- `result` is of type [GetExtensionListResponse](./definitions/GetExtensionListResponse.ts)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Extensions-listExtensions) in API Explorer.
-
-## createExtension
-Create Extension
-
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/extension`
-Rate Limit Group|`Medium`
-App Permission|`EditAccounts`
-User Permission|`AddRemoveUsers`
-
-```ts
-const rc = new RingCentral({clientId, clientSecret, serverURL});
-await rc.authorize({username, extension, password});
-var result = await rc.restapi(apiVersion).account(accountId).extension().post(extensionCreationRequest);
-await rc.revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- Parameter `accountId` is optional with default value `~`
-- `extensionCreationRequest` is of type [ExtensionCreationRequest](./definitions/ExtensionCreationRequest.ts)
-- `result` is of type [ExtensionCreationResponse](./definitions/ExtensionCreationResponse.ts)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Extensions-createExtension) in API Explorer.
-
-## readExtension
-Get Extension
-
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}`
-Rate Limit Group|`Light`
-App Permission|`ReadAccounts`
-User Permission|`ReadExtensions`
-
-```ts
-const rc = new RingCentral({clientId, clientSecret, serverURL});
-await rc.authorize({username, extension, password});
-var result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).get();
-await rc.revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- Parameter `accountId` is optional with default value `~`
-- Parameter `extensionId` is optional with default value `~`
-- `result` is of type [GetExtensionInfoResponse](./definitions/GetExtensionInfoResponse.ts)
-
-[Try it out](https://developer.ringcentral.com/api-reference#User-Settings-readExtension) in API Explorer.
-
-## updateExtension
-Update Extension
-
-Name|Value
--|-
-HTTP Method|`PUT`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}`
-Rate Limit Group|`Medium`
-App Permission|`EditExtensions`
-User Permission|`EditUserInfo OR EditUserCredentials`
-
-```ts
-const rc = new RingCentral({clientId, clientSecret, serverURL});
-await rc.authorize({username, extension, password});
-var result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).put(extensionUpdateRequest);
-await rc.revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- Parameter `accountId` is optional with default value `~`
-- Parameter `extensionId` is optional with default value `~`
-- `extensionUpdateRequest` is of type [ExtensionUpdateRequest](./definitions/ExtensionUpdateRequest.ts)
-- `result` is of type [GetExtensionInfoResponse](./definitions/GetExtensionInfoResponse.ts)
-
-[Try it out](https://developer.ringcentral.com/api-reference#User-Settings-updateExtension) in API Explorer.
-
-## deleteExtension
-Delete Extension
-
-Name|Value
--|-
-HTTP Method|`DELETE`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}`
-Rate Limit Group|`Medium`
-App Permission|`EditAccounts`
-User Permission|`AddRemoveUsers`
-
-```ts
-const rc = new RingCentral({clientId, clientSecret, serverURL});
-await rc.authorize({username, extension, password});
-var result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).delete(deleteExtensionParameters);
-await rc.revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- Parameter `accountId` is optional with default value `~`
-- Parameter `extensionId` is optional with default value `~`
-- `deleteExtensionParameters` is of type [DeleteExtensionParameters](./definitions/DeleteExtensionParameters.ts)
-- `result` is an empty string
-
-[Try it out](https://developer.ringcentral.com/api-reference#User-Settings-deleteExtension) in API Explorer.
-
-## createCompanyGreeting
-Create Company Greeting
-
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/greeting`
-Rate Limit Group|`Medium`
-App Permission|`EditAccounts`
-User Permission|`ReadUserInfo`
-
-```ts
-const rc = new RingCentral({clientId, clientSecret, serverURL});
-await rc.authorize({username, extension, password});
-var result = await rc.restapi(apiVersion).account(accountId).greeting().post(createCompanyGreetingRequest);
-await rc.revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- Parameter `accountId` is optional with default value `~`
-- `createCompanyGreetingRequest` is of type [CreateCompanyGreetingRequest](./definitions/CreateCompanyGreetingRequest.ts)
-- `result` is of type [CustomCompanyGreetingInfo](./definitions/CustomCompanyGreetingInfo.ts)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Greetings-createCompanyGreeting) in API Explorer.
-
-## createIVRMenu
-Create IVR Menu
-
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/ivr-menus`
-Rate Limit Group|`Heavy`
-App Permission|`EditAccounts`
-User Permission|`AutoReceptionist`
-
-```ts
-const rc = new RingCentral({clientId, clientSecret, serverURL});
-await rc.authorize({username, extension, password});
-var result = await rc.restapi(apiVersion).account(accountId).ivrMenus().post(iVRMenuInfo);
-await rc.revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- Parameter `accountId` is optional with default value `~`
-- `iVRMenuInfo` is of type [IVRMenuInfo](./definitions/IVRMenuInfo.ts)
-- `result` is of type [IVRMenuInfo](./definitions/IVRMenuInfo.ts)
-
-[Try it out](https://developer.ringcentral.com/api-reference#IVR-createIVRMenu) in API Explorer.
-
-## readIVRMenu
-Get IVR Menu
-
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/ivr-menus/{ivrMenuId}`
-Rate Limit Group|`Medium`
-App Permission|`ReadAccounts`
-User Permission|`AutoReceptionist`
-
-```ts
-const rc = new RingCentral({clientId, clientSecret, serverURL});
-await rc.authorize({username, extension, password});
-var result = await rc.restapi(apiVersion).account(accountId).ivrMenus(ivrMenuId).get();
-await rc.revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- Parameter `accountId` is optional with default value `~`
-- `result` is of type [IVRMenuInfo](./definitions/IVRMenuInfo.ts)
-
-[Try it out](https://developer.ringcentral.com/api-reference#IVR-readIVRMenu) in API Explorer.
-
-## updateIVRMenu
-Update IVR Menu
-
-Name|Value
--|-
-HTTP Method|`PUT`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/ivr-menus/{ivrMenuId}`
-Rate Limit Group|`Medium`
-App Permission|`ReadAccounts`
-User Permission|`AutoReceptionist`
-
-```ts
-const rc = new RingCentral({clientId, clientSecret, serverURL});
-await rc.authorize({username, extension, password});
-var result = await rc.restapi(apiVersion).account(accountId).ivrMenus(ivrMenuId).put(iVRMenuInfo);
-await rc.revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- Parameter `accountId` is optional with default value `~`
-- `iVRMenuInfo` is of type [IVRMenuInfo](./definitions/IVRMenuInfo.ts)
-- `result` is of type [IVRMenuInfo](./definitions/IVRMenuInfo.ts)
-
-[Try it out](https://developer.ringcentral.com/api-reference#IVR-updateIVRMenu) in API Explorer.
-
-## readAccountPresence
-Get User Presence Status List
-
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/presence`
-Rate Limit Group|`Heavy`
-App Permission|`ReadPresence`
-User Permission|`ReadPresenceStatus`
-
-```ts
-const rc = new RingCentral({clientId, clientSecret, serverURL});
-await rc.authorize({username, extension, password});
-var result = await rc.restapi(apiVersion).account(accountId).presence().get(readAccountPresenceParameters);
-await rc.revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- Parameter `accountId` is optional with default value `~`
-- `readAccountPresenceParameters` is of type [ReadAccountPresenceParameters](./definitions/ReadAccountPresenceParameters.ts)
-- `result` is of type [AccountPresenceInfo](./definitions/AccountPresenceInfo.ts)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Presence-readAccountPresence) in API Explorer.
-
-## readCallRecording
-Get Call Recording
-
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/recording/{recordingId}`
-Rate Limit Group|`Heavy`
-App Permission|`ReadCallRecording`
-User Permission|`ReadCallRecording`
-
-```ts
-const rc = new RingCentral({clientId, clientSecret, serverURL});
-await rc.authorize({username, extension, password});
-var result = await rc.restapi(apiVersion).account(accountId).recording(recordingId).get();
-await rc.revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- Parameter `accountId` is optional with default value `~`
-- `result` is of type [GetCallRecordingResponse](./definitions/GetCallRecordingResponse.ts)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Recordings-readCallRecording) in API Explorer.
-
-## listUserTemplates
-Get User Template List
-
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/templates`
-Rate Limit Group|`Medium`
-App Permission|`ReadAccounts`
-User Permission|`ReadCompanyInfo`
-
-```ts
-const rc = new RingCentral({clientId, clientSecret, serverURL});
-await rc.authorize({username, extension, password});
-var result = await rc.restapi(apiVersion).account(accountId).templates().list(listUserTemplatesParameters);
-await rc.revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- Parameter `accountId` is optional with default value `~`
-- `listUserTemplatesParameters` is of type [ListUserTemplatesParameters](./definitions/ListUserTemplatesParameters.ts)
-- `result` is of type [UserTemplates](./definitions/UserTemplates.ts)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Extensions-listUserTemplates) in API Explorer.
-
-## readUserTemplate
-Get User Template
-
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/templates/{templateId}`
-Rate Limit Group|`Light`
-App Permission|`ReadAccounts`
-User Permission|`ReadCompanyInfo`
-
-```ts
-const rc = new RingCentral({clientId, clientSecret, serverURL});
-await rc.authorize({username, extension, password});
-var result = await rc.restapi(apiVersion).account(accountId).templates(templateId).get();
-await rc.revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- Parameter `accountId` is optional with default value `~`
-- `result` is of type [TemplateInfo](./definitions/TemplateInfo.ts)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Extensions-readUserTemplate) in API Explorer.
-
-## listStates
-Get States List
-
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/dictionary/state`
-Rate Limit Group|`Light`
-App Permission|`N/A`
-User Permission|`N/A`
-
-```ts
-const rc = new RingCentral({clientId, clientSecret, serverURL});
-await rc.authorize({username, extension, password});
-var result = await rc.restapi(apiVersion).dictionary().state().list(listStatesParameters);
-await rc.revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- `listStatesParameters` is of type [ListStatesParameters](./definitions/ListStatesParameters.ts)
-- `result` is of type [GetStateListResponse](./definitions/GetStateListResponse.ts)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Regional-Settings-listStates) in API Explorer.
-
-## readState
-Get State
-
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/dictionary/state/{stateId}`
-Rate Limit Group|`Light`
-App Permission|`N/A`
-User Permission|`N/A`
-
-```ts
-const rc = new RingCentral({clientId, clientSecret, serverURL});
-await rc.authorize({username, extension, password});
-var result = await rc.restapi(apiVersion).dictionary().state(stateId).get();
-await rc.revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- `result` is of type [GetStateInfoResponse](./definitions/GetStateInfoResponse.ts)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Regional-Settings-readState) in API Explorer.
-
-## listGlipChats
-Get Chats
-
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/glip/chats`
-Rate Limit Group|`Medium`
-App Permission|`Glip`
-User Permission|`Glip`
-
-```ts
-const rc = new RingCentral({clientId, clientSecret, serverURL});
-await rc.authorize({username, extension, password});
-var result = await rc.restapi(apiVersion).glip().chats().list(listGlipChatsParameters);
-await rc.revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- `listGlipChatsParameters` is of type [ListGlipChatsParameters](./definitions/ListGlipChatsParameters.ts)
-- `result` is of type [GlipChatsList](./definitions/GlipChatsList.ts)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Chats-listGlipChats) in API Explorer.
-
-## readGlipChat
-Get Chat
-
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/glip/chats/{chatId}`
-Rate Limit Group|`Light`
-App Permission|`Glip`
-User Permission|`Glip`
-
-```ts
-const rc = new RingCentral({clientId, clientSecret, serverURL});
-await rc.authorize({username, extension, password});
-var result = await rc.restapi(apiVersion).glip().chats(chatId).get();
-await rc.revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- `result` is of type [GlipChatInfo](./definitions/GlipChatInfo.ts)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Chats-readGlipChat) in API Explorer.
-
-## listChatNotes
-Get Chat Notes
-
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/glip/chats/{chatId}/notes`
-Rate Limit Group|`Heavy`
-App Permission|`Glip`
-User Permission|`Glip`
-
-```ts
-const rc = new RingCentral({clientId, clientSecret, serverURL});
-await rc.authorize({username, extension, password});
-var result = await rc.restapi(apiVersion).glip().chats(chatId).notes().get(listChatNotesParameters);
-await rc.revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- `listChatNotesParameters` is of type [ListChatNotesParameters](./definitions/ListChatNotesParameters.ts)
-- `result` is of type [GlipNotesInfo](./definitions/GlipNotesInfo.ts)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Notes-listChatNotes) in API Explorer.
-
-## createChatNote
-Create Note
-
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/restapi/{apiVersion}/glip/chats/{chatId}/notes`
-Rate Limit Group|`Medium`
-App Permission|`Glip`
-User Permission|`Glip`
-
-```ts
-const rc = new RingCentral({clientId, clientSecret, serverURL});
-await rc.authorize({username, extension, password});
-var result = await rc.restapi(apiVersion).glip().chats(chatId).notes().post(glipNoteCreate);
-await rc.revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- `glipNoteCreate` is of type [GlipNoteCreate](./definitions/GlipNoteCreate.ts)
-- `result` is of type [GlipNoteInfo](./definitions/GlipNoteInfo.ts)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Notes-createChatNote) in API Explorer.
-
-## readGlipPosts
-Get Posts
-
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/glip/chats/{chatId}/posts`
-Rate Limit Group|`Medium`
-App Permission|`Glip`
-User Permission|`Glip`
-
-```ts
-const rc = new RingCentral({clientId, clientSecret, serverURL});
-await rc.authorize({username, extension, password});
-var result = await rc.restapi(apiVersion).glip().chats(chatId).posts().list(readGlipPostsParameters);
-await rc.revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- `readGlipPostsParameters` is of type [ReadGlipPostsParameters](./definitions/ReadGlipPostsParameters.ts)
-- `result` is of type [GlipPostsList](./definitions/GlipPostsList.ts)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Posts-readGlipPosts) in API Explorer.
-
-## createGlipPost
-Create Post
-
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/restapi/{apiVersion}/glip/chats/{chatId}/posts`
-Rate Limit Group|`Medium`
-App Permission|`Glip`
-User Permission|`Glip`
-
-```ts
-const rc = new RingCentral({clientId, clientSecret, serverURL});
-await rc.authorize({username, extension, password});
-var result = await rc.restapi(apiVersion).glip().chats(chatId).posts().post(glipPostPostBody);
-await rc.revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- `glipPostPostBody` is of type [GlipPostPostBody](./definitions/GlipPostPostBody.ts)
-- `result` is of type [GlipPostInfo](./definitions/GlipPostInfo.ts)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Posts-createGlipPost) in API Explorer.
-
-## readGlipPost
-Get Post
-
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/glip/chats/{chatId}/posts/{postId}`
-Rate Limit Group|`Light`
-App Permission|`Glip`
-User Permission|`Glip`
-
-```ts
-const rc = new RingCentral({clientId, clientSecret, serverURL});
-await rc.authorize({username, extension, password});
-var result = await rc.restapi(apiVersion).glip().chats(chatId).posts(postId).get();
-await rc.revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- `result` is of type [GlipPostInfo](./definitions/GlipPostInfo.ts)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Posts-readGlipPost) in API Explorer.
-
-## deleteGlipPost
-Delete Post
-
-Name|Value
--|-
-HTTP Method|`DELETE`
-Endpoint|`/restapi/{apiVersion}/glip/chats/{chatId}/posts/{postId}`
-Rate Limit Group|`Medium`
-App Permission|`Glip`
-User Permission|`Glip`
-
-```ts
-const rc = new RingCentral({clientId, clientSecret, serverURL});
-await rc.authorize({username, extension, password});
-var result = await rc.restapi(apiVersion).glip().chats(chatId).posts(postId).delete();
-await rc.revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- `result` is an empty string
-
-[Try it out](https://developer.ringcentral.com/api-reference#Posts-deleteGlipPost) in API Explorer.
-
-## patchGlipPost
-Update Post
-
-Name|Value
--|-
-HTTP Method|`PATCH`
-Endpoint|`/restapi/{apiVersion}/glip/chats/{chatId}/posts/{postId}`
-Rate Limit Group|`Medium`
-App Permission|`Glip`
-User Permission|`Glip`
-
-```ts
-const rc = new RingCentral({clientId, clientSecret, serverURL});
-await rc.authorize({username, extension, password});
-var result = await rc.restapi(apiVersion).glip().chats(chatId).posts(postId).patch(glipPatchPostBody);
-await rc.revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- `glipPatchPostBody` is of type [GlipPatchPostBody](./definitions/GlipPatchPostBody.ts)
-- `result` is of type [GlipPostInfo](./definitions/GlipPostInfo.ts)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Posts-patchGlipPost) in API Explorer.
-
-## markChatRead
-Mark Chat as Read
-
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/restapi/{apiVersion}/glip/chats/{chatId}/read`
-Rate Limit Group|`Medium`
-App Permission|`GlipInternal`
-User Permission|`N/A`
-
-```ts
-const rc = new RingCentral({clientId, clientSecret, serverURL});
-await rc.authorize({username, extension, password});
-var result = await rc.restapi(apiVersion).glip().chats(chatId).read().post();
-await rc.revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- `result` is an empty string
-
-[Try it out](https://developer.ringcentral.com/api-reference#Chats-markChatRead) in API Explorer.
-
-## listChatTasks
-Get Chat Tasks
-
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/glip/chats/{chatId}/tasks`
-Rate Limit Group|`Heavy`
-App Permission|`N/A`
-User Permission|`N/A`
-
-```ts
-const rc = new RingCentral({clientId, clientSecret, serverURL});
-await rc.authorize({username, extension, password});
-var result = await rc.restapi(apiVersion).glip().chats(chatId).tasks().get(listChatTasksParameters);
-await rc.revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- `listChatTasksParameters` is of type [ListChatTasksParameters](./definitions/ListChatTasksParameters.ts)
-- `result` is of type [GlipTaskList](./definitions/GlipTaskList.ts)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Tasks-listChatTasks) in API Explorer.
-
-## createTask
-Create Task
-
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/restapi/{apiVersion}/glip/chats/{chatId}/tasks`
-Rate Limit Group|`Medium`
-App Permission|`N/A`
-User Permission|`N/A`
-
-```ts
-const rc = new RingCentral({clientId, clientSecret, serverURL});
-await rc.authorize({username, extension, password});
-var result = await rc.restapi(apiVersion).glip().chats(chatId).tasks().post(glipCreateTask);
-await rc.revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- `glipCreateTask` is of type [GlipCreateTask](./definitions/GlipCreateTask.ts)
-- `result` is of type [GlipTaskInfo](./definitions/GlipTaskInfo.ts)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Tasks-createTask) in API Explorer.
-
-## readGlipCompany
-Get Company Info
-
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/glip/companies/{companyId}`
-Rate Limit Group|`Light`
-App Permission|`Glip`
-User Permission|`Glip`
-
-```ts
-const rc = new RingCentral({clientId, clientSecret, serverURL});
-await rc.authorize({username, extension, password});
-var result = await rc.restapi(apiVersion).glip().companies(companyId).get();
-await rc.revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- `result` is of type [GlipCompany](./definitions/GlipCompany.ts)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Glip-Profile-readGlipCompany) in API Explorer.
-
-## listDataExportTasks
-Get Data Export Task List
-
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/glip/data-export`
-Rate Limit Group|`Medium`
-App Permission|`Glip`
-User Permission|`N/A`
-
-```ts
-const rc = new RingCentral({clientId, clientSecret, serverURL});
-await rc.authorize({username, extension, password});
-var result = await rc.restapi(apiVersion).glip().dataExport().list(listDataExportTasksParameters);
-await rc.revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- `listDataExportTasksParameters` is of type [ListDataExportTasksParameters](./definitions/ListDataExportTasksParameters.ts)
-- `result` is of type [DataExportTaskList](./definitions/DataExportTaskList.ts)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Glip-Compliance-Exports-listDataExportTasks) in API Explorer.
-
-## createDataExportTask
-Create Data Export Task
-
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/restapi/{apiVersion}/glip/data-export`
-Rate Limit Group|`Heavy`
-App Permission|`Glip`
-User Permission|`N/A`
-
-```ts
-const rc = new RingCentral({clientId, clientSecret, serverURL});
-await rc.authorize({username, extension, password});
-var result = await rc.restapi(apiVersion).glip().dataExport().post(createDataExportTaskRequest);
-await rc.revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- `createDataExportTaskRequest` is of type [CreateDataExportTaskRequest](./definitions/CreateDataExportTaskRequest.ts)
-- `result` is of type [DataExportTask](./definitions/DataExportTask.ts)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Glip-Compliance-Exports-createDataExportTask) in API Explorer.
-
-## readDataExportTask
-Get Data Export Task
-
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/glip/data-export/{taskId}`
-Rate Limit Group|`Medium`
-App Permission|`Glip`
-User Permission|`N/A`
-
-```ts
-const rc = new RingCentral({clientId, clientSecret, serverURL});
-await rc.authorize({username, extension, password});
-var result = await rc.restapi(apiVersion).glip().dataExport(taskId).get();
-await rc.revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- `result` is of type [DataExportTask](./definitions/DataExportTask.ts)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Glip-Compliance-Exports-readDataExportTask) in API Explorer.
-
-## readGlipEveryone
-Get Everyone Chat
-
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/glip/everyone`
-Rate Limit Group|`Light`
-App Permission|`Glip`
-User Permission|`Glip`
-
-```ts
-const rc = new RingCentral({clientId, clientSecret, serverURL});
-await rc.authorize({username, extension, password});
-var result = await rc.restapi(apiVersion).glip().everyone().get();
-await rc.revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- `result` is of type [GlipEveryoneInfo](./definitions/GlipEveryoneInfo.ts)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Teams-readGlipEveryone) in API Explorer.
-
-## patchGlipEveryone
-Update Everyone Сhat
-
-Name|Value
--|-
-HTTP Method|`PATCH`
-Endpoint|`/restapi/{apiVersion}/glip/everyone`
-Rate Limit Group|`Medium`
-App Permission|`Glip`
-User Permission|`Glip`
-
-```ts
-const rc = new RingCentral({clientId, clientSecret, serverURL});
-await rc.authorize({username, extension, password});
-var result = await rc.restapi(apiVersion).glip().everyone().patch(updateGlipEveryoneRequest);
-await rc.revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- `updateGlipEveryoneRequest` is of type [UpdateGlipEveryoneRequest](./definitions/UpdateGlipEveryoneRequest.ts)
-- `result` is of type [GlipEveryoneInfo](./definitions/GlipEveryoneInfo.ts)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Teams-patchGlipEveryone) in API Explorer.
-
-## listFavoriteChats
-Get Favorite Chats
-
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/glip/favorites`
-Rate Limit Group|`Light`
-App Permission|`Glip`
-User Permission|`Glip`
-
-```ts
-const rc = new RingCentral({clientId, clientSecret, serverURL});
-await rc.authorize({username, extension, password});
-var result = await rc.restapi(apiVersion).glip().favorites().get(listFavoriteChatsParameters);
-await rc.revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- `listFavoriteChatsParameters` is of type [ListFavoriteChatsParameters](./definitions/ListFavoriteChatsParameters.ts)
-- `result` is of type [GlipChatsListWithoutNavigation](./definitions/GlipChatsListWithoutNavigation.ts)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Chats-listFavoriteChats) in API Explorer.
-
-## readUserNote
-Get Note
-
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/glip/notes/{noteId}`
-Rate Limit Group|`Medium`
-App Permission|`Glip`
-User Permission|`Glip`
-
-```ts
-const rc = new RingCentral({clientId, clientSecret, serverURL});
-await rc.authorize({username, extension, password});
-var result = await rc.restapi(apiVersion).glip().notes(noteId).get();
-await rc.revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- `result` is of type [GetGlipNoteInfo](./definitions/GetGlipNoteInfo.ts)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Notes-readUserNote) in API Explorer.
-
-## deleteNote
-Delete Note
-
-Name|Value
--|-
-HTTP Method|`DELETE`
-Endpoint|`/restapi/{apiVersion}/glip/notes/{noteId}`
-Rate Limit Group|`Medium`
-App Permission|`Glip`
-User Permission|`Glip`
-
-```ts
-const rc = new RingCentral({clientId, clientSecret, serverURL});
-await rc.authorize({username, extension, password});
-var result = await rc.restapi(apiVersion).glip().notes(noteId).delete();
-await rc.revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- `result` is an empty string
-
-[Try it out](https://developer.ringcentral.com/api-reference#Notes-deleteNote) in API Explorer.
-
-## patchNote
-Update Note
-
-Name|Value
--|-
-HTTP Method|`PATCH`
-Endpoint|`/restapi/{apiVersion}/glip/notes/{noteId}`
-Rate Limit Group|`Medium`
-App Permission|`Glip`
-User Permission|`Glip`
-
-```ts
-const rc = new RingCentral({clientId, clientSecret, serverURL});
-await rc.authorize({username, extension, password});
-var result = await rc.restapi(apiVersion).glip().notes(noteId).patch(glipNoteCreate);
-await rc.revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- `glipNoteCreate` is of type [GlipNoteCreate](./definitions/GlipNoteCreate.ts)
-- `result` is of type [GlipNoteInfo](./definitions/GlipNoteInfo.ts)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Notes-patchNote) in API Explorer.
-
-## readTask
-Get Task
-
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/glip/tasks/{taskId}`
-Rate Limit Group|`Medium`
-App Permission|`N/A`
-User Permission|`N/A`
-
-```ts
-const rc = new RingCentral({clientId, clientSecret, serverURL});
-await rc.authorize({username, extension, password});
-var result = await rc.restapi(apiVersion).glip().tasks(taskId).get();
-await rc.revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- `result` is of type [GlipTaskInfo](./definitions/GlipTaskInfo.ts)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Tasks-readTask) in API Explorer.
-
-## deleteTask
-Delete Task
-
-Name|Value
--|-
-HTTP Method|`DELETE`
-Endpoint|`/restapi/{apiVersion}/glip/tasks/{taskId}`
-Rate Limit Group|`Medium`
-App Permission|`N/A`
-User Permission|`N/A`
-
-```ts
-const rc = new RingCentral({clientId, clientSecret, serverURL});
-await rc.authorize({username, extension, password});
-var result = await rc.restapi(apiVersion).glip().tasks(taskId).delete();
-await rc.revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- `result` is an empty string
-
-[Try it out](https://developer.ringcentral.com/api-reference#Tasks-deleteTask) in API Explorer.
-
-## patchTask
-Patch Task
-
-Name|Value
--|-
-HTTP Method|`PATCH`
-Endpoint|`/restapi/{apiVersion}/glip/tasks/{taskId}`
-Rate Limit Group|`Medium`
-App Permission|`N/A`
-User Permission|`N/A`
-
-```ts
-const rc = new RingCentral({clientId, clientSecret, serverURL});
-await rc.authorize({username, extension, password});
-var result = await rc.restapi(apiVersion).glip().tasks(taskId).patch(glipUpdateTask);
-await rc.revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- `glipUpdateTask` is of type [GlipUpdateTask](./definitions/GlipUpdateTask.ts)
-- `result` is of type [GlipTaskList](./definitions/GlipTaskList.ts)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Tasks-patchTask) in API Explorer.
-
-## listGlipTeams
-Get Teams
-
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/glip/teams`
-Rate Limit Group|`Medium`
-App Permission|`Glip`
-User Permission|`Glip`
-
-```ts
-const rc = new RingCentral({clientId, clientSecret, serverURL});
-await rc.authorize({username, extension, password});
-var result = await rc.restapi(apiVersion).glip().teams().list(listGlipTeamsParameters);
-await rc.revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- `listGlipTeamsParameters` is of type [ListGlipTeamsParameters](./definitions/ListGlipTeamsParameters.ts)
-- `result` is of type [GlipTeamsList](./definitions/GlipTeamsList.ts)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Teams-listGlipTeams) in API Explorer.
-
-## createGlipTeam
-Create Team
-
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/restapi/{apiVersion}/glip/teams`
-Rate Limit Group|`Medium`
-App Permission|`Glip`
-User Permission|`Glip`
-
-```ts
-const rc = new RingCentral({clientId, clientSecret, serverURL});
-await rc.authorize({username, extension, password});
-var result = await rc.restapi(apiVersion).glip().teams().post(glipPostTeamBody);
-await rc.revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- `glipPostTeamBody` is of type [GlipPostTeamBody](./definitions/GlipPostTeamBody.ts)
-- `result` is of type [GlipTeamInfo](./definitions/GlipTeamInfo.ts)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Teams-createGlipTeam) in API Explorer.
-
-## readGlipTeam
-Get Team
-
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/glip/teams/{chatId}`
-Rate Limit Group|`Light`
-App Permission|`Glip`
-User Permission|`Glip`
-
-```ts
-const rc = new RingCentral({clientId, clientSecret, serverURL});
-await rc.authorize({username, extension, password});
-var result = await rc.restapi(apiVersion).glip().teams(chatId).get();
-await rc.revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- `result` is of type [GlipTeamInfo](./definitions/GlipTeamInfo.ts)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Teams-readGlipTeam) in API Explorer.
-
-## deleteGlipTeam
-Delete Team
-
-Name|Value
--|-
-HTTP Method|`DELETE`
-Endpoint|`/restapi/{apiVersion}/glip/teams/{chatId}`
-Rate Limit Group|`Medium`
-App Permission|`Glip`
-User Permission|`Glip`
-
-```ts
-const rc = new RingCentral({clientId, clientSecret, serverURL});
-await rc.authorize({username, extension, password});
-var result = await rc.restapi(apiVersion).glip().teams(chatId).delete();
-await rc.revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- `result` is an empty string
-
-[Try it out](https://developer.ringcentral.com/api-reference#Teams-deleteGlipTeam) in API Explorer.
-
-## patchGlipTeam
-Update Team
-
-Name|Value
--|-
-HTTP Method|`PATCH`
-Endpoint|`/restapi/{apiVersion}/glip/teams/{chatId}`
-Rate Limit Group|`Medium`
-App Permission|`Glip`
-User Permission|`Glip`
-
-```ts
-const rc = new RingCentral({clientId, clientSecret, serverURL});
-await rc.authorize({username, extension, password});
-var result = await rc.restapi(apiVersion).glip().teams(chatId).patch(glipPatchTeamBody);
-await rc.revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- `glipPatchTeamBody` is of type [GlipPatchTeamBody](./definitions/GlipPatchTeamBody.ts)
-- `result` is of type [GlipTeamInfo](./definitions/GlipTeamInfo.ts)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Teams-patchGlipTeam) in API Explorer.
-
-## readGlipEvents
-Get User Events List
-
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/glip/events`
-Rate Limit Group|`Medium`
-App Permission|`Glip`
-User Permission|`Glip`
-
-```ts
-const rc = new RingCentral({clientId, clientSecret, serverURL});
-await rc.authorize({username, extension, password});
-var result = await rc.restapi(apiVersion).glip().events().list(readGlipEventsParameters);
-await rc.revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- `readGlipEventsParameters` is of type [ReadGlipEventsParameters](./definitions/ReadGlipEventsParameters.ts)
-- `result` is of type [GlipEventsInfo](./definitions/GlipEventsInfo.ts)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Calendar-Events-readGlipEvents) in API Explorer.
-
-## createEvent
-Create Event
-
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/restapi/{apiVersion}/glip/events`
-Rate Limit Group|`Medium`
-App Permission|`Glip`
-User Permission|`Glip`
-
-```ts
-const rc = new RingCentral({clientId, clientSecret, serverURL});
-await rc.authorize({username, extension, password});
-var result = await rc.restapi(apiVersion).glip().events().post(glipEventCreate);
-await rc.revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- `glipEventCreate` is of type [GlipEventCreate](./definitions/GlipEventCreate.ts)
-- `result` is of type [GlipEventInfo](./definitions/GlipEventInfo.ts)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Calendar-Events-createEvent) in API Explorer.
-
-## readEvent
-Get Event
-
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/glip/events/{eventId}`
-Rate Limit Group|`Medium`
-App Permission|`Glip`
-User Permission|`Glip`
-
-```ts
-const rc = new RingCentral({clientId, clientSecret, serverURL});
-await rc.authorize({username, extension, password});
-var result = await rc.restapi(apiVersion).glip().events(eventId).get();
-await rc.revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- `result` is of type [GlipEventInfo](./definitions/GlipEventInfo.ts)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Calendar-Events-readEvent) in API Explorer.
-
-## updateEvent
-Update Event
-
-Name|Value
--|-
-HTTP Method|`PUT`
-Endpoint|`/restapi/{apiVersion}/glip/events/{eventId}`
-Rate Limit Group|`Medium`
-App Permission|`Glip`
-User Permission|`Glip`
-
-```ts
-const rc = new RingCentral({clientId, clientSecret, serverURL});
-await rc.authorize({username, extension, password});
-var result = await rc.restapi(apiVersion).glip().events(eventId).put(glipEventCreate);
-await rc.revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- `glipEventCreate` is of type [GlipEventCreate](./definitions/GlipEventCreate.ts)
-- `result` is of type [GlipEventInfo](./definitions/GlipEventInfo.ts)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Calendar-Events-updateEvent) in API Explorer.
-
-## deleteEvent
-Delete Event
-
-Name|Value
--|-
-HTTP Method|`DELETE`
-Endpoint|`/restapi/{apiVersion}/glip/events/{eventId}`
-Rate Limit Group|`Medium`
-App Permission|`Glip`
-User Permission|`Glip`
-
-```ts
-const rc = new RingCentral({clientId, clientSecret, serverURL});
-await rc.authorize({username, extension, password});
-var result = await rc.restapi(apiVersion).glip().events(eventId).delete();
-await rc.revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- `result` is an empty string
-
-[Try it out](https://developer.ringcentral.com/api-reference#Calendar-Events-deleteEvent) in API Explorer.
-
-## lockNote
-Lock Note
-
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/restapi/{apiVersion}/glip/notes/{noteId}/lock`
-Rate Limit Group|`Light`
-App Permission|`Glip`
-User Permission|`Glip`
-
-```ts
-const rc = new RingCentral({clientId, clientSecret, serverURL});
-await rc.authorize({username, extension, password});
-var result = await rc.restapi(apiVersion).glip().notes(noteId).lock().post();
-await rc.revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- `result` is an empty string
-
-[Try it out](https://developer.ringcentral.com/api-reference#Notes-lockNote) in API Explorer.
-
-## readGlipPerson
-Get Person
-
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/glip/persons/{personId}`
-Rate Limit Group|`Light`
-App Permission|`Glip`
-User Permission|`Glip`
-
-```ts
-const rc = new RingCentral({clientId, clientSecret, serverURL});
-await rc.authorize({username, extension, password});
-var result = await rc.restapi(apiVersion).glip().persons(personId).get();
-await rc.revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- `result` is of type [GlipPersonInfo](./definitions/GlipPersonInfo.ts)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Glip-Profile-readGlipPerson) in API Explorer.
-
-## addGlipTeamMembers
-Add Team Members
-
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/restapi/{apiVersion}/glip/teams/{chatId}/add`
-Rate Limit Group|`Medium`
-App Permission|`Glip`
-User Permission|`Glip`
-
-```ts
-const rc = new RingCentral({clientId, clientSecret, serverURL});
-await rc.authorize({username, extension, password});
-var result = await rc.restapi(apiVersion).glip().teams(chatId).add().post(glipPostMembersListBody);
-await rc.revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- `glipPostMembersListBody` is of type [GlipPostMembersListBody](./definitions/GlipPostMembersListBody.ts)
-- `result` is an empty string
-
-[Try it out](https://developer.ringcentral.com/api-reference#Teams-addGlipTeamMembers) in API Explorer.
-
-## removeGlipTeamMembers
-Remove Team Members
-
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/restapi/{apiVersion}/glip/teams/{chatId}/remove`
-Rate Limit Group|`Medium`
-App Permission|`Glip`
-User Permission|`Glip`
-
-```ts
-const rc = new RingCentral({clientId, clientSecret, serverURL});
-await rc.authorize({username, extension, password});
-var result = await rc.restapi(apiVersion).glip().teams(chatId).remove().post(glipPostMembersIdsListBody);
-await rc.revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- `glipPostMembersIdsListBody` is of type [GlipPostMembersIdsListBody](./definitions/GlipPostMembersIdsListBody.ts)
-- `result` is an empty string
-
-[Try it out](https://developer.ringcentral.com/api-reference#Teams-removeGlipTeamMembers) in API Explorer.
-
-## listGlipWebhooks
-Get Webhooks
-
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/glip/webhooks`
-Rate Limit Group|`Medium`
-App Permission|`Glip`
-User Permission|`Glip`
-
-```ts
-const rc = new RingCentral({clientId, clientSecret, serverURL});
-await rc.authorize({username, extension, password});
-var result = await rc.restapi(apiVersion).glip().webhooks().list();
-await rc.revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- `result` is of type [GlipWebhookList](./definitions/GlipWebhookList.ts)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Glip-Webhooks-listGlipWebhooks) in API Explorer.
-
-## readGlipWebhook
-Get Webhook
-
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/glip/webhooks/{webhookId}`
-Rate Limit Group|`Medium`
-App Permission|`Glip`
-User Permission|`Glip`
-
-```ts
-const rc = new RingCentral({clientId, clientSecret, serverURL});
-await rc.authorize({username, extension, password});
-var result = await rc.restapi(apiVersion).glip().webhooks(webhookId).get();
-await rc.revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- `result` is of type [GlipWebhookList](./definitions/GlipWebhookList.ts)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Glip-Webhooks-readGlipWebhook) in API Explorer.
-
-## deleteGlipWebhook
-Delete Webhook
-
-Name|Value
--|-
-HTTP Method|`DELETE`
-Endpoint|`/restapi/{apiVersion}/glip/webhooks/{webhookId}`
-Rate Limit Group|`Medium`
-App Permission|`Glip`
-User Permission|`Glip`
-
-```ts
-const rc = new RingCentral({clientId, clientSecret, serverURL});
-await rc.authorize({username, extension, password});
-var result = await rc.restapi(apiVersion).glip().webhooks(webhookId).delete();
-await rc.revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- `result` is an empty string
-
-[Try it out](https://developer.ringcentral.com/api-reference#Glip-Webhooks-deleteGlipWebhook) in API Explorer.
-
-## listSubscriptions
-Get Subscription List
-
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/subscription`
-Rate Limit Group|`Light`
-App Permission|`N/A`
-User Permission|`N/A`
-
-```ts
-const rc = new RingCentral({clientId, clientSecret, serverURL});
-await rc.authorize({username, extension, password});
-var result = await rc.restapi(apiVersion).subscription().list();
-await rc.revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- `result` is of type [RecordsCollectionResourceSubscriptionResponse](./definitions/RecordsCollectionResourceSubscriptionResponse.ts)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Subscriptions-listSubscriptions) in API Explorer.
-
-## createSubscription
-Create Subscription
-
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/restapi/{apiVersion}/subscription`
-Rate Limit Group|`Medium`
-App Permission|`N/A`
-User Permission|`N/A`
-
-```ts
-const rc = new RingCentral({clientId, clientSecret, serverURL});
-await rc.authorize({username, extension, password});
-var result = await rc.restapi(apiVersion).subscription().post(createSubscriptionRequest);
-await rc.revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- `createSubscriptionRequest` is of type [CreateSubscriptionRequest](./definitions/CreateSubscriptionRequest.ts)
-- `result` is of type [SubscriptionInfo](./definitions/SubscriptionInfo.ts)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Subscriptions-createSubscription) in API Explorer.
-
-## readSubscription
-Get Subscription
-
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/subscription/{subscriptionId}`
-Rate Limit Group|`Light`
-App Permission|`N/A`
-User Permission|`N/A`
-
-```ts
-const rc = new RingCentral({clientId, clientSecret, serverURL});
-await rc.authorize({username, extension, password});
-var result = await rc.restapi(apiVersion).subscription(subscriptionId).get();
-await rc.revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- `result` is of type [SubscriptionInfo](./definitions/SubscriptionInfo.ts)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Subscriptions-readSubscription) in API Explorer.
-
-## updateSubscription
-Update Subscription
-
-Name|Value
--|-
-HTTP Method|`PUT`
-Endpoint|`/restapi/{apiVersion}/subscription/{subscriptionId}`
-Rate Limit Group|`Medium`
-App Permission|`N/A`
-User Permission|`N/A`
-
-```ts
-const rc = new RingCentral({clientId, clientSecret, serverURL});
-await rc.authorize({username, extension, password});
-var result = await rc.restapi(apiVersion).subscription(subscriptionId).put(modifySubscriptionRequest);
-await rc.revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- `modifySubscriptionRequest` is of type [ModifySubscriptionRequest](./definitions/ModifySubscriptionRequest.ts)
-- `result` is of type [SubscriptionInfo](./definitions/SubscriptionInfo.ts)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Subscriptions-updateSubscription) in API Explorer.
-
-## deleteSubscription
-Cancel Subscription
-
-Name|Value
--|-
-HTTP Method|`DELETE`
-Endpoint|`/restapi/{apiVersion}/subscription/{subscriptionId}`
-Rate Limit Group|`Medium`
-App Permission|`N/A`
-User Permission|`N/A`
-
-```ts
-const rc = new RingCentral({clientId, clientSecret, serverURL});
-await rc.authorize({username, extension, password});
-var result = await rc.restapi(apiVersion).subscription(subscriptionId).delete();
-await rc.revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- `result` is an empty string
-
-[Try it out](https://developer.ringcentral.com/api-reference#Subscriptions-deleteSubscription) in API Explorer.
-
-## searchViaPost2
-Search/List Users
-
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/scim/{version}/Users/dotSearch`
-Rate Limit Group|`Light`
-App Permission|`ReadAccounts`
-User Permission|`N/A`
-
-```ts
-const rc = new RingCentral({clientId, clientSecret, serverURL});
-await rc.authorize({username, extension, password});
-var result = await rc.scim(version).users().dotSearch().post(searchRequest);
-await rc.revoke();
-```
-
-- Parameter `version` is optional with default value `v2`
-- `searchRequest` is of type [SearchRequest](./definitions/SearchRequest.ts)
-- `result` is of type [UserSearchResponse](./definitions/UserSearchResponse.ts)
-
-[Try it out](https://developer.ringcentral.com/api-reference#SCIM-searchViaPost2) in API Explorer.
-
-## joinGlipTeam
-Join Team
-
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/restapi/{apiVersion}/glip/teams/{chatId}/join`
-Rate Limit Group|`Medium`
-App Permission|`Glip`
-User Permission|`Glip`
-
-```ts
-const rc = new RingCentral({clientId, clientSecret, serverURL});
-await rc.authorize({username, extension, password});
-var result = await rc.restapi(apiVersion).glip().teams(chatId).join().post();
-await rc.revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- `result` is an empty string
-
-[Try it out](https://developer.ringcentral.com/api-reference#Teams-joinGlipTeam) in API Explorer.
-
-## readGlipPreferences
-Get Preferences
-
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/glip/preferences`
-Rate Limit Group|`Medium`
-App Permission|`Glip`
-User Permission|`Glip`
-
-```ts
-const rc = new RingCentral({clientId, clientSecret, serverURL});
-await rc.authorize({username, extension, password});
-var result = await rc.restapi(apiVersion).glip().preferences().get();
-await rc.revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- `result` is of type [GlipPreferencesInfo](./definitions/GlipPreferencesInfo.ts)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Glip-Profile-readGlipPreferences) in API Explorer.
-
-## leaveGlipTeam
-Leave Team
-
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/restapi/{apiVersion}/glip/teams/{chatId}/leave`
-Rate Limit Group|`Medium`
-App Permission|`Glip`
-User Permission|`Glip`
-
-```ts
-const rc = new RingCentral({clientId, clientSecret, serverURL});
-await rc.authorize({username, extension, password});
-var result = await rc.restapi(apiVersion).glip().teams(chatId).leave().post();
-await rc.revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- `result` is an empty string
-
-[Try it out](https://developer.ringcentral.com/api-reference#Teams-leaveGlipTeam) in API Explorer.
-
-## createA2PSMS
-Send A2P SMS
-
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/a2p-sms/batch`
+Endpoint|`/restapi/{apiVersion}/account/{accountId}/a2p-sms/batches`
 Rate Limit Group|`Light`
 App Permission|`A2PSMS`
 User Permission|`N/A`
@@ -1964,14 +294,39 @@ User Permission|`N/A`
 ```ts
 const rc = new RingCentral({clientId, clientSecret, serverURL});
 await rc.authorize({username, extension, password});
-var result = await rc.restapi(apiVersion).account(accountId).a2pSms().batch().post(createSMSMessageBatchRequest);
+var result = await rc.restapi(apiVersion).account(accountId).a2pSms().batches().list(listA2PBatchesParameters);
+await rc.revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- `listA2PBatchesParameters` is of type [ListA2PBatchesParameters](./definitions/ListA2PBatchesParameters.ts)
+- `result` is of type [MessageBatchListResponse](./definitions/MessageBatchListResponse.ts)
+
+[Try it out](https://developer.ringcentral.com/api-reference#High-Volume-SMS-listA2PBatches) in API Explorer.
+
+## createA2PSMS
+Send A2P SMS
+
+Name|Value
+-|-
+HTTP Method|`POST`
+Endpoint|`/restapi/{apiVersion}/account/{accountId}/a2p-sms/batches`
+Rate Limit Group|`Light`
+App Permission|`A2PSMS`
+User Permission|`N/A`
+
+```ts
+const rc = new RingCentral({clientId, clientSecret, serverURL});
+await rc.authorize({username, extension, password});
+var result = await rc.restapi(apiVersion).account(accountId).a2pSms().batches().post(createSMSMessageBatchRequest);
 await rc.revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - `createSMSMessageBatchRequest` is of type [CreateSMSMessageBatchRequest](./definitions/CreateSMSMessageBatchRequest.ts)
-- `result` is of type [CreateMessageBatchResponse](./definitions/CreateMessageBatchResponse.ts)
+- `result` is of type [MessageBatchInfo](./definitions/MessageBatchInfo.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#High-Volume-SMS-createA2PSMS) in API Explorer.
 
@@ -1981,7 +336,7 @@ Get A2P SMS Batch
 Name|Value
 -|-
 HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/a2p-sms/batch/{batchId}`
+Endpoint|`/restapi/{apiVersion}/account/{accountId}/a2p-sms/batches/{batchId}`
 Rate Limit Group|`Light`
 App Permission|`A2PSMS`
 User Permission|`N/A`
@@ -1989,13 +344,13 @@ User Permission|`N/A`
 ```ts
 const rc = new RingCentral({clientId, clientSecret, serverURL});
 await rc.authorize({username, extension, password});
-var result = await rc.restapi(apiVersion).account(accountId).a2pSms().batch(batchId).get();
+var result = await rc.restapi(apiVersion).account(accountId).a2pSms().batches(batchId).get();
 await rc.revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `result` is of type [MessageBatchResponse](./definitions/MessageBatchResponse.ts)
+- `result` is of type [MessageBatchInfo](./definitions/MessageBatchInfo.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#High-Volume-SMS-readA2PBatch) in API Explorer.
 
@@ -2072,6 +427,31 @@ await rc.revoke();
 - `result` is of type [OptOutListResponse](./definitions/OptOutListResponse.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#High-Volume-SMS-readA2PSMSOptOuts) in API Explorer.
+
+## aggregateA2PSMSStatuses
+List A2P SMS Statuses
+
+Name|Value
+-|-
+HTTP Method|`GET`
+Endpoint|`/restapi/{apiVersion}/account/{accountId}/a2p-sms/statuses`
+Rate Limit Group|`Light`
+App Permission|`A2PSMS`
+User Permission|`N/A`
+
+```ts
+const rc = new RingCentral({clientId, clientSecret, serverURL});
+await rc.authorize({username, extension, password});
+var result = await rc.restapi(apiVersion).account(accountId).a2pSms().statuses().get(aggregateA2PSMSStatusesParameters);
+await rc.revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- `aggregateA2PSMSStatusesParameters` is of type [AggregateA2PSMSStatusesParameters](./definitions/AggregateA2PSMSStatusesParameters.ts)
+- `result` is of type [MessageStatusesResponse](./definitions/MessageStatusesResponse.ts)
+
+[Try it out](https://developer.ringcentral.com/api-reference#High-Volume-SMS-aggregateA2PSMSStatuses) in API Explorer.
 
 ## listCompanyActiveCalls
 Get Company Active Calls
@@ -2221,6 +601,31 @@ await rc.revoke();
 
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Handling-Rules-deleteCompanyAnsweringRule) in API Explorer.
 
+## listAssignedRoles
+Get Assigned Role List
+
+Name|Value
+-|-
+HTTP Method|`GET`
+Endpoint|`/restapi/{apiVersion}/account/{accountId}/assigned-role`
+Rate Limit Group|`Medium`
+App Permission|`ReadAccounts`
+User Permission|`ReadAssignedRoles`
+
+```ts
+const rc = new RingCentral({clientId, clientSecret, serverURL});
+await rc.authorize({username, extension, password});
+var result = await rc.restapi(apiVersion).account(accountId).assignedRole().get(listAssignedRolesParameters);
+await rc.revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- `listAssignedRolesParameters` is of type [ListAssignedRolesParameters](./definitions/ListAssignedRolesParameters.ts)
+- `result` is of type [ExtensionWithRolesCollectionResource](./definitions/ExtensionWithRolesCollectionResource.ts)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Role-Management-listAssignedRoles) in API Explorer.
+
 ## readAccountBusinessAddress
 Get Account Business Address
 
@@ -2318,6 +723,56 @@ await rc.revoke();
 - `result` is of type [CompanyBusinessHours](./definitions/CompanyBusinessHours.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Business-Hours-updateCompanyBusinessHours) in API Explorer.
+
+## readCompanyCallLog
+Get Company Call Log Records
+
+Name|Value
+-|-
+HTTP Method|`GET`
+Endpoint|`/restapi/{apiVersion}/account/{accountId}/call-log`
+Rate Limit Group|`Heavy`
+App Permission|`ReadCallLog`
+User Permission|`FullCompanyCallLog`
+
+```ts
+const rc = new RingCentral({clientId, clientSecret, serverURL});
+await rc.authorize({username, extension, password});
+var result = await rc.restapi(apiVersion).account(accountId).callLog().list(readCompanyCallLogParameters);
+await rc.revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- `readCompanyCallLogParameters` is of type [ReadCompanyCallLogParameters](./definitions/ReadCompanyCallLogParameters.ts)
+- `result` is of type [AccountCallLogResponse](./definitions/AccountCallLogResponse.ts)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Call-Log-readCompanyCallLog) in API Explorer.
+
+## readCompanyCallRecord
+Get Company Call Log Record(s)
+
+Name|Value
+-|-
+HTTP Method|`GET`
+Endpoint|`/restapi/{apiVersion}/account/{accountId}/call-log/{callRecordId}`
+Rate Limit Group|`Heavy`
+App Permission|`ReadCallLog`
+User Permission|`FullCompanyCallLog`
+
+```ts
+const rc = new RingCentral({clientId, clientSecret, serverURL});
+await rc.authorize({username, extension, password});
+var result = await rc.restapi(apiVersion).account(accountId).callLog(callRecordId).get(readCompanyCallRecordParameters);
+await rc.revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- `readCompanyCallRecordParameters` is of type [ReadCompanyCallRecordParameters](./definitions/ReadCompanyCallRecordParameters.ts)
+- `result` is of type [CompanyCallLogRecord](./definitions/CompanyCallLogRecord.ts)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Call-Log-readCompanyCallRecord) in API Explorer.
 
 ## syncAccountCallLog
 Sync Company Call Log
@@ -2565,6 +1020,57 @@ await rc.revoke();
 
 [Try it out](https://developer.ringcentral.com/api-reference#Custom-Fields-deleteCustomField) in API Explorer.
 
+## readDevice
+Get Device
+
+Name|Value
+-|-
+HTTP Method|`GET`
+Endpoint|`/restapi/{apiVersion}/account/{accountId}/device/{deviceId}`
+Rate Limit Group|`Light`
+App Permission|`ReadAccounts`
+User Permission|`ReadCompanyDevices`
+
+```ts
+const rc = new RingCentral({clientId, clientSecret, serverURL});
+await rc.authorize({username, extension, password});
+var result = await rc.restapi(apiVersion).account(accountId).device(deviceId).get(readDeviceParameters);
+await rc.revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- `readDeviceParameters` is of type [ReadDeviceParameters](./definitions/ReadDeviceParameters.ts)
+- `result` is of type [GetDeviceInfoResponse](./definitions/GetDeviceInfoResponse.ts)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Devices-readDevice) in API Explorer.
+
+## updateDevice
+Update Device
+
+Name|Value
+-|-
+HTTP Method|`PUT`
+Endpoint|`/restapi/{apiVersion}/account/{accountId}/device/{deviceId}`
+Rate Limit Group|`Medium`
+App Permission|`EditAccounts`
+User Permission|`EditCompanyDevices`
+
+```ts
+const rc = new RingCentral({clientId, clientSecret, serverURL});
+await rc.authorize({username, extension, password});
+var result = await rc.restapi(apiVersion).account(accountId).device(deviceId).put(accountDeviceUpdate, updateDeviceParameters);
+await rc.revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- `accountDeviceUpdate` is of type [AccountDeviceUpdate](./definitions/AccountDeviceUpdate.ts)
+- `updateDeviceParameters` is of type [UpdateDeviceParameters](./definitions/UpdateDeviceParameters.ts)
+- `result` is of type [GetDeviceInfoResponse](./definitions/GetDeviceInfoResponse.ts)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Devices-updateDevice) in API Explorer.
+
 ## readDeviceSIPInfo
 Get Device SIP Info
 
@@ -2637,6 +1143,133 @@ await rc.revoke();
 - `result` is of type [ContactResource](./definitions/ContactResource.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Internal-Contacts-readDirectoryEntry) in API Explorer.
+
+## listExtensions
+Get Extension List
+
+Name|Value
+-|-
+HTTP Method|`GET`
+Endpoint|`/restapi/{apiVersion}/account/{accountId}/extension`
+Rate Limit Group|`Medium`
+App Permission|`ReadAccounts`
+User Permission|`ReadExtensions`
+
+```ts
+const rc = new RingCentral({clientId, clientSecret, serverURL});
+await rc.authorize({username, extension, password});
+var result = await rc.restapi(apiVersion).account(accountId).extension().list(listExtensionsParameters);
+await rc.revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- `listExtensionsParameters` is of type [ListExtensionsParameters](./definitions/ListExtensionsParameters.ts)
+- `result` is of type [GetExtensionListResponse](./definitions/GetExtensionListResponse.ts)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Extensions-listExtensions) in API Explorer.
+
+## createExtension
+Create Extension
+
+Name|Value
+-|-
+HTTP Method|`POST`
+Endpoint|`/restapi/{apiVersion}/account/{accountId}/extension`
+Rate Limit Group|`Medium`
+App Permission|`EditAccounts`
+User Permission|`AddRemoveUsers`
+
+```ts
+const rc = new RingCentral({clientId, clientSecret, serverURL});
+await rc.authorize({username, extension, password});
+var result = await rc.restapi(apiVersion).account(accountId).extension().post(extensionCreationRequest);
+await rc.revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- `extensionCreationRequest` is of type [ExtensionCreationRequest](./definitions/ExtensionCreationRequest.ts)
+- `result` is of type [ExtensionCreationResponse](./definitions/ExtensionCreationResponse.ts)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Extensions-createExtension) in API Explorer.
+
+## readExtension
+Get Extension
+
+Name|Value
+-|-
+HTTP Method|`GET`
+Endpoint|`/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}`
+Rate Limit Group|`Light`
+App Permission|`ReadAccounts`
+User Permission|`ReadExtensions`
+
+```ts
+const rc = new RingCentral({clientId, clientSecret, serverURL});
+await rc.authorize({username, extension, password});
+var result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).get();
+await rc.revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- Parameter `extensionId` is optional with default value `~`
+- `result` is of type [GetExtensionInfoResponse](./definitions/GetExtensionInfoResponse.ts)
+
+[Try it out](https://developer.ringcentral.com/api-reference#User-Settings-readExtension) in API Explorer.
+
+## updateExtension
+Update Extension
+
+Name|Value
+-|-
+HTTP Method|`PUT`
+Endpoint|`/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}`
+Rate Limit Group|`Medium`
+App Permission|`EditExtensions`
+User Permission|`EditUserInfo OR EditUserCredentials`
+
+```ts
+const rc = new RingCentral({clientId, clientSecret, serverURL});
+await rc.authorize({username, extension, password});
+var result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).put(extensionUpdateRequest);
+await rc.revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- Parameter `extensionId` is optional with default value `~`
+- `extensionUpdateRequest` is of type [ExtensionUpdateRequest](./definitions/ExtensionUpdateRequest.ts)
+- `result` is of type [GetExtensionInfoResponse](./definitions/GetExtensionInfoResponse.ts)
+
+[Try it out](https://developer.ringcentral.com/api-reference#User-Settings-updateExtension) in API Explorer.
+
+## deleteExtension
+Delete Extension
+
+Name|Value
+-|-
+HTTP Method|`DELETE`
+Endpoint|`/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}`
+Rate Limit Group|`Medium`
+App Permission|`EditAccounts`
+User Permission|`AddRemoveUsers`
+
+```ts
+const rc = new RingCentral({clientId, clientSecret, serverURL});
+await rc.authorize({username, extension, password});
+var result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).delete(deleteExtensionParameters);
+await rc.revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- Parameter `extensionId` is optional with default value `~`
+- `deleteExtensionParameters` is of type [DeleteExtensionParameters](./definitions/DeleteExtensionParameters.ts)
+- `result` is an empty string
+
+[Try it out](https://developer.ringcentral.com/api-reference#User-Settings-deleteExtension) in API Explorer.
 
 ## readUserCallLog
 Get User Call Log Records
@@ -3025,6 +1658,105 @@ await rc.revoke();
 
 [Try it out](https://developer.ringcentral.com/api-reference#SMS-createSMSMessage) in API Explorer.
 
+## createCompanyGreeting
+Create Company Greeting
+
+Name|Value
+-|-
+HTTP Method|`POST`
+Endpoint|`/restapi/{apiVersion}/account/{accountId}/greeting`
+Rate Limit Group|`Medium`
+App Permission|`EditAccounts`
+User Permission|`ReadUserInfo`
+
+```ts
+const rc = new RingCentral({clientId, clientSecret, serverURL});
+await rc.authorize({username, extension, password});
+var result = await rc.restapi(apiVersion).account(accountId).greeting().post(createCompanyGreetingRequest);
+await rc.revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- `createCompanyGreetingRequest` is of type [CreateCompanyGreetingRequest](./definitions/CreateCompanyGreetingRequest.ts)
+- `result` is of type [CustomCompanyGreetingInfo](./definitions/CustomCompanyGreetingInfo.ts)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Greetings-createCompanyGreeting) in API Explorer.
+
+## createIVRMenu
+Create IVR Menu
+
+Name|Value
+-|-
+HTTP Method|`POST`
+Endpoint|`/restapi/{apiVersion}/account/{accountId}/ivr-menus`
+Rate Limit Group|`Heavy`
+App Permission|`EditAccounts`
+User Permission|`AutoReceptionist`
+
+```ts
+const rc = new RingCentral({clientId, clientSecret, serverURL});
+await rc.authorize({username, extension, password});
+var result = await rc.restapi(apiVersion).account(accountId).ivrMenus().post(iVRMenuInfo);
+await rc.revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- `iVRMenuInfo` is of type [IVRMenuInfo](./definitions/IVRMenuInfo.ts)
+- `result` is of type [IVRMenuInfo](./definitions/IVRMenuInfo.ts)
+
+[Try it out](https://developer.ringcentral.com/api-reference#IVR-createIVRMenu) in API Explorer.
+
+## readIVRMenu
+Get IVR Menu
+
+Name|Value
+-|-
+HTTP Method|`GET`
+Endpoint|`/restapi/{apiVersion}/account/{accountId}/ivr-menus/{ivrMenuId}`
+Rate Limit Group|`Medium`
+App Permission|`ReadAccounts`
+User Permission|`AutoReceptionist`
+
+```ts
+const rc = new RingCentral({clientId, clientSecret, serverURL});
+await rc.authorize({username, extension, password});
+var result = await rc.restapi(apiVersion).account(accountId).ivrMenus(ivrMenuId).get();
+await rc.revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- `result` is of type [IVRMenuInfo](./definitions/IVRMenuInfo.ts)
+
+[Try it out](https://developer.ringcentral.com/api-reference#IVR-readIVRMenu) in API Explorer.
+
+## updateIVRMenu
+Update IVR Menu
+
+Name|Value
+-|-
+HTTP Method|`PUT`
+Endpoint|`/restapi/{apiVersion}/account/{accountId}/ivr-menus/{ivrMenuId}`
+Rate Limit Group|`Medium`
+App Permission|`ReadAccounts`
+User Permission|`AutoReceptionist`
+
+```ts
+const rc = new RingCentral({clientId, clientSecret, serverURL});
+await rc.authorize({username, extension, password});
+var result = await rc.restapi(apiVersion).account(accountId).ivrMenus(ivrMenuId).put(iVRMenuInfo);
+await rc.revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- `iVRMenuInfo` is of type [IVRMenuInfo](./definitions/IVRMenuInfo.ts)
+- `result` is of type [IVRMenuInfo](./definitions/IVRMenuInfo.ts)
+
+[Try it out](https://developer.ringcentral.com/api-reference#IVR-updateIVRMenu) in API Explorer.
+
 ## listIVRPrompts
 Get IVR Prompt List
 
@@ -3196,6 +1928,55 @@ await rc.revoke();
 
 [Try it out](https://developer.ringcentral.com/api-reference#Phone-Numbers-readAccountPhoneNumber) in API Explorer.
 
+## readAccountPresence
+Get User Presence Status List
+
+Name|Value
+-|-
+HTTP Method|`GET`
+Endpoint|`/restapi/{apiVersion}/account/{accountId}/presence`
+Rate Limit Group|`Heavy`
+App Permission|`ReadPresence`
+User Permission|`ReadPresenceStatus`
+
+```ts
+const rc = new RingCentral({clientId, clientSecret, serverURL});
+await rc.authorize({username, extension, password});
+var result = await rc.restapi(apiVersion).account(accountId).presence().get(readAccountPresenceParameters);
+await rc.revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- `readAccountPresenceParameters` is of type [ReadAccountPresenceParameters](./definitions/ReadAccountPresenceParameters.ts)
+- `result` is of type [AccountPresenceInfo](./definitions/AccountPresenceInfo.ts)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Presence-readAccountPresence) in API Explorer.
+
+## readCallRecording
+Get Call Recording
+
+Name|Value
+-|-
+HTTP Method|`GET`
+Endpoint|`/restapi/{apiVersion}/account/{accountId}/recording/{recordingId}`
+Rate Limit Group|`Heavy`
+App Permission|`ReadCallRecording`
+User Permission|`ReadCallRecording`
+
+```ts
+const rc = new RingCentral({clientId, clientSecret, serverURL});
+await rc.authorize({username, extension, password});
+var result = await rc.restapi(apiVersion).account(accountId).recording(recordingId).get();
+await rc.revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- `result` is of type [GetCallRecordingResponse](./definitions/GetCallRecordingResponse.ts)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Call-Recordings-readCallRecording) in API Explorer.
+
 ## listCallRecordingData
 Get Call Recordings Data
 
@@ -3247,6 +2028,228 @@ await rc.revoke();
 - `result` is of type [GetServiceInfoResponse](./definitions/GetServiceInfoResponse.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Company-readAccountServiceInfo) in API Explorer.
+
+## listUserTemplates
+Get User Template List
+
+Name|Value
+-|-
+HTTP Method|`GET`
+Endpoint|`/restapi/{apiVersion}/account/{accountId}/templates`
+Rate Limit Group|`Medium`
+App Permission|`ReadAccounts`
+User Permission|`ReadCompanyInfo`
+
+```ts
+const rc = new RingCentral({clientId, clientSecret, serverURL});
+await rc.authorize({username, extension, password});
+var result = await rc.restapi(apiVersion).account(accountId).templates().list(listUserTemplatesParameters);
+await rc.revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- `listUserTemplatesParameters` is of type [ListUserTemplatesParameters](./definitions/ListUserTemplatesParameters.ts)
+- `result` is of type [UserTemplates](./definitions/UserTemplates.ts)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Extensions-listUserTemplates) in API Explorer.
+
+## readUserTemplate
+Get User Template
+
+Name|Value
+-|-
+HTTP Method|`GET`
+Endpoint|`/restapi/{apiVersion}/account/{accountId}/templates/{templateId}`
+Rate Limit Group|`Light`
+App Permission|`ReadAccounts`
+User Permission|`ReadCompanyInfo`
+
+```ts
+const rc = new RingCentral({clientId, clientSecret, serverURL});
+await rc.authorize({username, extension, password});
+var result = await rc.restapi(apiVersion).account(accountId).templates(templateId).get();
+await rc.revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- `result` is of type [TemplateInfo](./definitions/TemplateInfo.ts)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Extensions-readUserTemplate) in API Explorer.
+
+## listUserRoles
+Get Account User Role List
+
+Name|Value
+-|-
+HTTP Method|`GET`
+Endpoint|`/restapi/{apiVersion}/account/{accountId}/user-role`
+Rate Limit Group|`Medium`
+App Permission|`ReadAccounts`
+User Permission|`ReadUserRoles`
+
+```ts
+const rc = new RingCentral({clientId, clientSecret, serverURL});
+await rc.authorize({username, extension, password});
+var result = await rc.restapi(apiVersion).account(accountId).userRole().list(listUserRolesParameters);
+await rc.revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- `listUserRolesParameters` is of type [ListUserRolesParameters](./definitions/ListUserRolesParameters.ts)
+- `result` is of type [RolesCollectionResource](./definitions/RolesCollectionResource.ts)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Role-Management-listUserRoles) in API Explorer.
+
+## createCustomRole
+Create Custom Role
+
+Name|Value
+-|-
+HTTP Method|`POST`
+Endpoint|`/restapi/{apiVersion}/account/{accountId}/user-role`
+Rate Limit Group|`Medium`
+App Permission|`RoleManagement`
+User Permission|`EditUserRoles`
+
+```ts
+const rc = new RingCentral({clientId, clientSecret, serverURL});
+await rc.authorize({username, extension, password});
+var result = await rc.restapi(apiVersion).account(accountId).userRole().post(roleResource);
+await rc.revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- `roleResource` is of type [RoleResource](./definitions/RoleResource.ts)
+- `result` is an empty string
+
+[Try it out](https://developer.ringcentral.com/api-reference#Role-Management-createCustomRole) in API Explorer.
+
+## readUserRole
+Get User Role
+
+Name|Value
+-|-
+HTTP Method|`GET`
+Endpoint|`/restapi/{apiVersion}/account/{accountId}/user-role/{roleId}`
+Rate Limit Group|`Light`
+App Permission|`ReadAccounts`
+User Permission|`ReadUserRoles`
+
+```ts
+const rc = new RingCentral({clientId, clientSecret, serverURL});
+await rc.authorize({username, extension, password});
+var result = await rc.restapi(apiVersion).account(accountId).userRole(roleId).get();
+await rc.revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- `result` is of type [RoleResource](./definitions/RoleResource.ts)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Role-Management-readUserRole) in API Explorer.
+
+## updateUserRole
+Update User Role
+
+Name|Value
+-|-
+HTTP Method|`PUT`
+Endpoint|`/restapi/{apiVersion}/account/{accountId}/user-role/{roleId}`
+Rate Limit Group|`Medium`
+App Permission|`RoleManagement`
+User Permission|`EditUserRoles`
+
+```ts
+const rc = new RingCentral({clientId, clientSecret, serverURL});
+await rc.authorize({username, extension, password});
+var result = await rc.restapi(apiVersion).account(accountId).userRole(roleId).put(roleResource);
+await rc.revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- `roleResource` is of type [RoleResource](./definitions/RoleResource.ts)
+- `result` is an empty string
+
+[Try it out](https://developer.ringcentral.com/api-reference#Role-Management-updateUserRole) in API Explorer.
+
+## deleteCustomRole
+Delete Custom Role
+
+Name|Value
+-|-
+HTTP Method|`DELETE`
+Endpoint|`/restapi/{apiVersion}/account/{accountId}/user-role/{roleId}`
+Rate Limit Group|`Medium`
+App Permission|`RoleManagement`
+User Permission|`EditUserRoles`
+
+```ts
+const rc = new RingCentral({clientId, clientSecret, serverURL});
+await rc.authorize({username, extension, password});
+var result = await rc.restapi(apiVersion).account(accountId).userRole(roleId).delete(deleteCustomRoleParameters);
+await rc.revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- `deleteCustomRoleParameters` is of type [DeleteCustomRoleParameters](./definitions/DeleteCustomRoleParameters.ts)
+- `result` is an empty string
+
+[Try it out](https://developer.ringcentral.com/api-reference#Role-Management-deleteCustomRole) in API Explorer.
+
+## readDefaultRole
+Get Default User Role
+
+Name|Value
+-|-
+HTTP Method|`GET`
+Endpoint|`/restapi/{apiVersion}/account/{accountId}/user-role/default`
+Rate Limit Group|`Light`
+App Permission|`RoleManagement`
+User Permission|`Roles`
+
+```ts
+const rc = new RingCentral({clientId, clientSecret, serverURL});
+await rc.authorize({username, extension, password});
+var result = await rc.restapi(apiVersion).account(accountId).userRole().default().get();
+await rc.revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- `result` is an empty string
+
+[Try it out](https://developer.ringcentral.com/api-reference#Role-Management-readDefaultRole) in API Explorer.
+
+## updateDefaultUserRole
+Set Default User Role
+
+Name|Value
+-|-
+HTTP Method|`PUT`
+Endpoint|`/restapi/{apiVersion}/account/{accountId}/user-role/default`
+Rate Limit Group|`Medium`
+App Permission|`RoleManagement`
+User Permission|`Roles`
+
+```ts
+const rc = new RingCentral({clientId, clientSecret, serverURL});
+await rc.authorize({username, extension, password});
+var result = await rc.restapi(apiVersion).account(accountId).userRole().default().put(defaultUserRoleRequest);
+await rc.revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- `defaultUserRoleRequest` is of type [DefaultUserRoleRequest](./definitions/DefaultUserRoleRequest.ts)
+- `result` is an empty string
+
+[Try it out](https://developer.ringcentral.com/api-reference#Role-Management-updateDefaultUserRole) in API Explorer.
 
 ## createSIPRegistration
 Register Device
@@ -3460,6 +2463,100 @@ await rc.revoke();
 
 [Try it out](https://developer.ringcentral.com/api-reference#Regional-Settings-listLocations) in API Explorer.
 
+## listPermissions
+Get Permission List
+
+Name|Value
+-|-
+HTTP Method|`GET`
+Endpoint|`/restapi/{apiVersion}/dictionary/permission`
+Rate Limit Group|`Light`
+App Permission|`N/A`
+User Permission|`N/A`
+
+```ts
+const rc = new RingCentral({clientId, clientSecret, serverURL});
+await rc.authorize({username, extension, password});
+var result = await rc.restapi(apiVersion).dictionary().permission().list(listPermissionsParameters);
+await rc.revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- `listPermissionsParameters` is of type [ListPermissionsParameters](./definitions/ListPermissionsParameters.ts)
+- `result` is of type [PermissionCollectionResource](./definitions/PermissionCollectionResource.ts)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Permissions-listPermissions) in API Explorer.
+
+## readPermission
+Get Permission
+
+Name|Value
+-|-
+HTTP Method|`GET`
+Endpoint|`/restapi/{apiVersion}/dictionary/permission/{permissionId}`
+Rate Limit Group|`Light`
+App Permission|`N/A`
+User Permission|`N/A`
+
+```ts
+const rc = new RingCentral({clientId, clientSecret, serverURL});
+await rc.authorize({username, extension, password});
+var result = await rc.restapi(apiVersion).dictionary().permission(permissionId).get();
+await rc.revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- `result` is of type [PermissionResource](./definitions/PermissionResource.ts)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Permissions-readPermission) in API Explorer.
+
+## listStates
+Get States List
+
+Name|Value
+-|-
+HTTP Method|`GET`
+Endpoint|`/restapi/{apiVersion}/dictionary/state`
+Rate Limit Group|`Light`
+App Permission|`N/A`
+User Permission|`N/A`
+
+```ts
+const rc = new RingCentral({clientId, clientSecret, serverURL});
+await rc.authorize({username, extension, password});
+var result = await rc.restapi(apiVersion).dictionary().state().list(listStatesParameters);
+await rc.revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- `listStatesParameters` is of type [ListStatesParameters](./definitions/ListStatesParameters.ts)
+- `result` is of type [GetStateListResponse](./definitions/GetStateListResponse.ts)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Regional-Settings-listStates) in API Explorer.
+
+## readState
+Get State
+
+Name|Value
+-|-
+HTTP Method|`GET`
+Endpoint|`/restapi/{apiVersion}/dictionary/state/{stateId}`
+Rate Limit Group|`Light`
+App Permission|`N/A`
+User Permission|`N/A`
+
+```ts
+const rc = new RingCentral({clientId, clientSecret, serverURL});
+await rc.authorize({username, extension, password});
+var result = await rc.restapi(apiVersion).dictionary().state(stateId).get();
+await rc.revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- `result` is of type [GetStateInfoResponse](./definitions/GetStateInfoResponse.ts)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Regional-Settings-readState) in API Explorer.
+
 ## listTimezones
 Get Timezone List
 
@@ -3508,6 +2605,100 @@ await rc.revoke();
 
 [Try it out](https://developer.ringcentral.com/api-reference#Regional-Settings-readTimezone) in API Explorer.
 
+## listStandardUserRole
+Get Standard User Role List
+
+Name|Value
+-|-
+HTTP Method|`GET`
+Endpoint|`/restapi/{apiVersion}/dictionary/user-role`
+Rate Limit Group|`Light`
+App Permission|`N/A`
+User Permission|`N/A`
+
+```ts
+const rc = new RingCentral({clientId, clientSecret, serverURL});
+await rc.authorize({username, extension, password});
+var result = await rc.restapi(apiVersion).dictionary().userRole().list(listStandardUserRoleParameters);
+await rc.revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- `listStandardUserRoleParameters` is of type [ListStandardUserRoleParameters](./definitions/ListStandardUserRoleParameters.ts)
+- `result` is of type [RolesCollectionResource](./definitions/RolesCollectionResource.ts)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Role-Management-listStandardUserRole) in API Explorer.
+
+## readStandardUserRole
+Get Standard User Role
+
+Name|Value
+-|-
+HTTP Method|`GET`
+Endpoint|`/restapi/{apiVersion}/dictionary/user-role/{roleId}`
+Rate Limit Group|`Light`
+App Permission|`N/A`
+User Permission|`N/A`
+
+```ts
+const rc = new RingCentral({clientId, clientSecret, serverURL});
+await rc.authorize({username, extension, password});
+var result = await rc.restapi(apiVersion).dictionary().userRole(roleId).get();
+await rc.revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- `result` is of type [RoleResource](./definitions/RoleResource.ts)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Role-Management-readStandardUserRole) in API Explorer.
+
+## listGlipChats
+Get Chats
+
+Name|Value
+-|-
+HTTP Method|`GET`
+Endpoint|`/restapi/{apiVersion}/glip/chats`
+Rate Limit Group|`Medium`
+App Permission|`Glip`
+User Permission|`Glip`
+
+```ts
+const rc = new RingCentral({clientId, clientSecret, serverURL});
+await rc.authorize({username, extension, password});
+var result = await rc.restapi(apiVersion).glip().chats().list(listGlipChatsParameters);
+await rc.revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- `listGlipChatsParameters` is of type [ListGlipChatsParameters](./definitions/ListGlipChatsParameters.ts)
+- `result` is of type [GlipChatsList](./definitions/GlipChatsList.ts)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Chats-listGlipChats) in API Explorer.
+
+## readGlipChat
+Get Chat
+
+Name|Value
+-|-
+HTTP Method|`GET`
+Endpoint|`/restapi/{apiVersion}/glip/chats/{chatId}`
+Rate Limit Group|`Light`
+App Permission|`Glip`
+User Permission|`Glip`
+
+```ts
+const rc = new RingCentral({clientId, clientSecret, serverURL});
+await rc.authorize({username, extension, password});
+var result = await rc.restapi(apiVersion).glip().chats(chatId).get();
+await rc.revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- `result` is of type [GlipChatInfo](./definitions/GlipChatInfo.ts)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Chats-readGlipChat) in API Explorer.
+
 ## favoriteGlipChat
 Add Chat to Favorites
 
@@ -3530,6 +2721,243 @@ await rc.revoke();
 - `result` is an empty string
 
 [Try it out](https://developer.ringcentral.com/api-reference#Chats-favoriteGlipChat) in API Explorer.
+
+## listChatNotes
+Get Chat Notes
+
+Name|Value
+-|-
+HTTP Method|`GET`
+Endpoint|`/restapi/{apiVersion}/glip/chats/{chatId}/notes`
+Rate Limit Group|`Heavy`
+App Permission|`Glip`
+User Permission|`Glip`
+
+```ts
+const rc = new RingCentral({clientId, clientSecret, serverURL});
+await rc.authorize({username, extension, password});
+var result = await rc.restapi(apiVersion).glip().chats(chatId).notes().get(listChatNotesParameters);
+await rc.revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- `listChatNotesParameters` is of type [ListChatNotesParameters](./definitions/ListChatNotesParameters.ts)
+- `result` is of type [GlipNotesInfo](./definitions/GlipNotesInfo.ts)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Notes-listChatNotes) in API Explorer.
+
+## createChatNote
+Create Note
+
+Name|Value
+-|-
+HTTP Method|`POST`
+Endpoint|`/restapi/{apiVersion}/glip/chats/{chatId}/notes`
+Rate Limit Group|`Medium`
+App Permission|`Glip`
+User Permission|`Glip`
+
+```ts
+const rc = new RingCentral({clientId, clientSecret, serverURL});
+await rc.authorize({username, extension, password});
+var result = await rc.restapi(apiVersion).glip().chats(chatId).notes().post(glipNoteCreate);
+await rc.revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- `glipNoteCreate` is of type [GlipNoteCreate](./definitions/GlipNoteCreate.ts)
+- `result` is of type [GlipNoteInfo](./definitions/GlipNoteInfo.ts)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Notes-createChatNote) in API Explorer.
+
+## readGlipPosts
+Get Posts
+
+Name|Value
+-|-
+HTTP Method|`GET`
+Endpoint|`/restapi/{apiVersion}/glip/chats/{chatId}/posts`
+Rate Limit Group|`Medium`
+App Permission|`Glip`
+User Permission|`Glip`
+
+```ts
+const rc = new RingCentral({clientId, clientSecret, serverURL});
+await rc.authorize({username, extension, password});
+var result = await rc.restapi(apiVersion).glip().chats(chatId).posts().list(readGlipPostsParameters);
+await rc.revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- `readGlipPostsParameters` is of type [ReadGlipPostsParameters](./definitions/ReadGlipPostsParameters.ts)
+- `result` is of type [GlipPostsList](./definitions/GlipPostsList.ts)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Posts-readGlipPosts) in API Explorer.
+
+## createGlipPost
+Create Post
+
+Name|Value
+-|-
+HTTP Method|`POST`
+Endpoint|`/restapi/{apiVersion}/glip/chats/{chatId}/posts`
+Rate Limit Group|`Medium`
+App Permission|`Glip`
+User Permission|`Glip`
+
+```ts
+const rc = new RingCentral({clientId, clientSecret, serverURL});
+await rc.authorize({username, extension, password});
+var result = await rc.restapi(apiVersion).glip().chats(chatId).posts().post(glipPostPostBody);
+await rc.revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- `glipPostPostBody` is of type [GlipPostPostBody](./definitions/GlipPostPostBody.ts)
+- `result` is of type [GlipPostInfo](./definitions/GlipPostInfo.ts)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Posts-createGlipPost) in API Explorer.
+
+## readGlipPost
+Get Post
+
+Name|Value
+-|-
+HTTP Method|`GET`
+Endpoint|`/restapi/{apiVersion}/glip/chats/{chatId}/posts/{postId}`
+Rate Limit Group|`Light`
+App Permission|`Glip`
+User Permission|`Glip`
+
+```ts
+const rc = new RingCentral({clientId, clientSecret, serverURL});
+await rc.authorize({username, extension, password});
+var result = await rc.restapi(apiVersion).glip().chats(chatId).posts(postId).get();
+await rc.revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- `result` is of type [GlipPostInfo](./definitions/GlipPostInfo.ts)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Posts-readGlipPost) in API Explorer.
+
+## deleteGlipPost
+Delete Post
+
+Name|Value
+-|-
+HTTP Method|`DELETE`
+Endpoint|`/restapi/{apiVersion}/glip/chats/{chatId}/posts/{postId}`
+Rate Limit Group|`Medium`
+App Permission|`Glip`
+User Permission|`Glip`
+
+```ts
+const rc = new RingCentral({clientId, clientSecret, serverURL});
+await rc.authorize({username, extension, password});
+var result = await rc.restapi(apiVersion).glip().chats(chatId).posts(postId).delete();
+await rc.revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- `result` is an empty string
+
+[Try it out](https://developer.ringcentral.com/api-reference#Posts-deleteGlipPost) in API Explorer.
+
+## patchGlipPost
+Update Post
+
+Name|Value
+-|-
+HTTP Method|`PATCH`
+Endpoint|`/restapi/{apiVersion}/glip/chats/{chatId}/posts/{postId}`
+Rate Limit Group|`Medium`
+App Permission|`Glip`
+User Permission|`Glip`
+
+```ts
+const rc = new RingCentral({clientId, clientSecret, serverURL});
+await rc.authorize({username, extension, password});
+var result = await rc.restapi(apiVersion).glip().chats(chatId).posts(postId).patch(glipPatchPostBody);
+await rc.revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- `glipPatchPostBody` is of type [GlipPatchPostBody](./definitions/GlipPatchPostBody.ts)
+- `result` is of type [GlipPostInfo](./definitions/GlipPostInfo.ts)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Posts-patchGlipPost) in API Explorer.
+
+## markChatRead
+Mark Chat as Read
+
+Name|Value
+-|-
+HTTP Method|`POST`
+Endpoint|`/restapi/{apiVersion}/glip/chats/{chatId}/read`
+Rate Limit Group|`Medium`
+App Permission|`GlipInternal`
+User Permission|`N/A`
+
+```ts
+const rc = new RingCentral({clientId, clientSecret, serverURL});
+await rc.authorize({username, extension, password});
+var result = await rc.restapi(apiVersion).glip().chats(chatId).read().post();
+await rc.revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- `result` is an empty string
+
+[Try it out](https://developer.ringcentral.com/api-reference#Chats-markChatRead) in API Explorer.
+
+## listChatTasks
+Get Chat Tasks
+
+Name|Value
+-|-
+HTTP Method|`GET`
+Endpoint|`/restapi/{apiVersion}/glip/chats/{chatId}/tasks`
+Rate Limit Group|`Heavy`
+App Permission|`N/A`
+User Permission|`N/A`
+
+```ts
+const rc = new RingCentral({clientId, clientSecret, serverURL});
+await rc.authorize({username, extension, password});
+var result = await rc.restapi(apiVersion).glip().chats(chatId).tasks().get(listChatTasksParameters);
+await rc.revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- `listChatTasksParameters` is of type [ListChatTasksParameters](./definitions/ListChatTasksParameters.ts)
+- `result` is of type [GlipTaskList](./definitions/GlipTaskList.ts)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Tasks-listChatTasks) in API Explorer.
+
+## createTask
+Create Task
+
+Name|Value
+-|-
+HTTP Method|`POST`
+Endpoint|`/restapi/{apiVersion}/glip/chats/{chatId}/tasks`
+Rate Limit Group|`Medium`
+App Permission|`N/A`
+User Permission|`N/A`
+
+```ts
+const rc = new RingCentral({clientId, clientSecret, serverURL});
+await rc.authorize({username, extension, password});
+var result = await rc.restapi(apiVersion).glip().chats(chatId).tasks().post(glipCreateTask);
+await rc.revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- `glipCreateTask` is of type [GlipCreateTask](./definitions/GlipCreateTask.ts)
+- `result` is of type [GlipTaskInfo](./definitions/GlipTaskInfo.ts)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Tasks-createTask) in API Explorer.
 
 ## unfavoriteGlipChat
 Remove Chat from Favorites
@@ -3576,6 +3004,29 @@ await rc.revoke();
 - `result` is an empty string
 
 [Try it out](https://developer.ringcentral.com/api-reference#Chats-markChatUnread) in API Explorer.
+
+## readGlipCompany
+Get Company Info
+
+Name|Value
+-|-
+HTTP Method|`GET`
+Endpoint|`/restapi/{apiVersion}/glip/companies/{companyId}`
+Rate Limit Group|`Light`
+App Permission|`Glip`
+User Permission|`Glip`
+
+```ts
+const rc = new RingCentral({clientId, clientSecret, serverURL});
+await rc.authorize({username, extension, password});
+var result = await rc.restapi(apiVersion).glip().companies(companyId).get();
+await rc.revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- `result` is of type [GlipCompany](./definitions/GlipCompany.ts)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Profile-readGlipCompany) in API Explorer.
 
 ## listGlipConversations
 Get Conversations
@@ -3648,6 +3099,77 @@ await rc.revoke();
 
 [Try it out](https://developer.ringcentral.com/api-reference#Conversations-readGlipConversation) in API Explorer.
 
+## listDataExportTasks
+Get Data Export Task List
+
+Name|Value
+-|-
+HTTP Method|`GET`
+Endpoint|`/restapi/{apiVersion}/glip/data-export`
+Rate Limit Group|`Medium`
+App Permission|`Glip`
+User Permission|`N/A`
+
+```ts
+const rc = new RingCentral({clientId, clientSecret, serverURL});
+await rc.authorize({username, extension, password});
+var result = await rc.restapi(apiVersion).glip().dataExport().list(listDataExportTasksParameters);
+await rc.revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- `listDataExportTasksParameters` is of type [ListDataExportTasksParameters](./definitions/ListDataExportTasksParameters.ts)
+- `result` is of type [DataExportTaskList](./definitions/DataExportTaskList.ts)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Compliance-Exports-listDataExportTasks) in API Explorer.
+
+## createDataExportTask
+Create Data Export Task
+
+Name|Value
+-|-
+HTTP Method|`POST`
+Endpoint|`/restapi/{apiVersion}/glip/data-export`
+Rate Limit Group|`Heavy`
+App Permission|`Glip`
+User Permission|`N/A`
+
+```ts
+const rc = new RingCentral({clientId, clientSecret, serverURL});
+await rc.authorize({username, extension, password});
+var result = await rc.restapi(apiVersion).glip().dataExport().post(createDataExportTaskRequest);
+await rc.revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- `createDataExportTaskRequest` is of type [CreateDataExportTaskRequest](./definitions/CreateDataExportTaskRequest.ts)
+- `result` is of type [DataExportTask](./definitions/DataExportTask.ts)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Compliance-Exports-createDataExportTask) in API Explorer.
+
+## readDataExportTask
+Get Data Export Task
+
+Name|Value
+-|-
+HTTP Method|`GET`
+Endpoint|`/restapi/{apiVersion}/glip/data-export/{taskId}`
+Rate Limit Group|`Medium`
+App Permission|`Glip`
+User Permission|`N/A`
+
+```ts
+const rc = new RingCentral({clientId, clientSecret, serverURL});
+await rc.authorize({username, extension, password});
+var result = await rc.restapi(apiVersion).glip().dataExport(taskId).get();
+await rc.revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- `result` is of type [DataExportTask](./definitions/DataExportTask.ts)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Compliance-Exports-readDataExportTask) in API Explorer.
+
 ## readDataExportTaskDataset
 Get Data Export Task Dataset
 
@@ -3673,7 +3195,78 @@ await rc.revoke();
 
 Please refer to [Binary content downloading](/README.md#Binary-content-downloading).
 
-[Try it out](https://developer.ringcentral.com/api-reference#Glip-Compliance-Exports-readDataExportTaskDataset) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Compliance-Exports-readDataExportTaskDataset) in API Explorer.
+
+## readGlipEveryone
+Get Everyone Chat
+
+Name|Value
+-|-
+HTTP Method|`GET`
+Endpoint|`/restapi/{apiVersion}/glip/everyone`
+Rate Limit Group|`Light`
+App Permission|`Glip`
+User Permission|`Glip`
+
+```ts
+const rc = new RingCentral({clientId, clientSecret, serverURL});
+await rc.authorize({username, extension, password});
+var result = await rc.restapi(apiVersion).glip().everyone().get();
+await rc.revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- `result` is of type [GlipEveryoneInfo](./definitions/GlipEveryoneInfo.ts)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Teams-readGlipEveryone) in API Explorer.
+
+## patchGlipEveryone
+Update Everyone Сhat
+
+Name|Value
+-|-
+HTTP Method|`PATCH`
+Endpoint|`/restapi/{apiVersion}/glip/everyone`
+Rate Limit Group|`Medium`
+App Permission|`Glip`
+User Permission|`Glip`
+
+```ts
+const rc = new RingCentral({clientId, clientSecret, serverURL});
+await rc.authorize({username, extension, password});
+var result = await rc.restapi(apiVersion).glip().everyone().patch(updateGlipEveryoneRequest);
+await rc.revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- `updateGlipEveryoneRequest` is of type [UpdateGlipEveryoneRequest](./definitions/UpdateGlipEveryoneRequest.ts)
+- `result` is of type [GlipEveryoneInfo](./definitions/GlipEveryoneInfo.ts)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Teams-patchGlipEveryone) in API Explorer.
+
+## listFavoriteChats
+Get Favorite Chats
+
+Name|Value
+-|-
+HTTP Method|`GET`
+Endpoint|`/restapi/{apiVersion}/glip/favorites`
+Rate Limit Group|`Light`
+App Permission|`Glip`
+User Permission|`Glip`
+
+```ts
+const rc = new RingCentral({clientId, clientSecret, serverURL});
+await rc.authorize({username, extension, password});
+var result = await rc.restapi(apiVersion).glip().favorites().get(listFavoriteChatsParameters);
+await rc.revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- `listFavoriteChatsParameters` is of type [ListFavoriteChatsParameters](./definitions/ListFavoriteChatsParameters.ts)
+- `result` is of type [GlipChatsListWithoutNavigation](./definitions/GlipChatsListWithoutNavigation.ts)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Chats-listFavoriteChats) in API Explorer.
 
 ## listGroupEvents
 Get Group Events
@@ -3743,7 +3336,7 @@ await rc.revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - `result` is of type [GlipWebhookList](./definitions/GlipWebhookList.ts)
 
-[Try it out](https://developer.ringcentral.com/api-reference#Glip-Webhooks-listGlipGroupWebhooks) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Incoming-Webhooks-listGlipGroupWebhooks) in API Explorer.
 
 ## createGlipGroupWebhook
 Create Webhook in Group
@@ -3768,6 +3361,76 @@ await rc.revoke();
 
 [Try it out](https://developer.ringcentral.com/api-reference#Glip-Webhooks-createGlipGroupWebhook) in API Explorer.
 
+## readUserNote
+Get Note
+
+Name|Value
+-|-
+HTTP Method|`GET`
+Endpoint|`/restapi/{apiVersion}/glip/notes/{noteId}`
+Rate Limit Group|`Medium`
+App Permission|`Glip`
+User Permission|`Glip`
+
+```ts
+const rc = new RingCentral({clientId, clientSecret, serverURL});
+await rc.authorize({username, extension, password});
+var result = await rc.restapi(apiVersion).glip().notes(noteId).get();
+await rc.revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- `result` is of type [GetGlipNoteInfo](./definitions/GetGlipNoteInfo.ts)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Notes-readUserNote) in API Explorer.
+
+## deleteNote
+Delete Note
+
+Name|Value
+-|-
+HTTP Method|`DELETE`
+Endpoint|`/restapi/{apiVersion}/glip/notes/{noteId}`
+Rate Limit Group|`Medium`
+App Permission|`Glip`
+User Permission|`Glip`
+
+```ts
+const rc = new RingCentral({clientId, clientSecret, serverURL});
+await rc.authorize({username, extension, password});
+var result = await rc.restapi(apiVersion).glip().notes(noteId).delete();
+await rc.revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- `result` is an empty string
+
+[Try it out](https://developer.ringcentral.com/api-reference#Notes-deleteNote) in API Explorer.
+
+## patchNote
+Update Note
+
+Name|Value
+-|-
+HTTP Method|`PATCH`
+Endpoint|`/restapi/{apiVersion}/glip/notes/{noteId}`
+Rate Limit Group|`Medium`
+App Permission|`Glip`
+User Permission|`Glip`
+
+```ts
+const rc = new RingCentral({clientId, clientSecret, serverURL});
+await rc.authorize({username, extension, password});
+var result = await rc.restapi(apiVersion).glip().notes(noteId).patch(glipNoteCreate);
+await rc.revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- `glipNoteCreate` is of type [GlipNoteCreate](./definitions/GlipNoteCreate.ts)
+- `result` is of type [GlipNoteInfo](./definitions/GlipNoteInfo.ts)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Notes-patchNote) in API Explorer.
+
 ## publishNote
 Publish Note
 
@@ -3790,29 +3453,6 @@ await rc.revoke();
 - `result` is an empty string
 
 [Try it out](https://developer.ringcentral.com/api-reference#Notes-publishNote) in API Explorer.
-
-## unlockNote
-Unlock Note
-
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/restapi/{apiVersion}/glip/notes/{noteId}/unlock`
-Rate Limit Group|`Light`
-App Permission|`Glip`
-User Permission|`Glip`
-
-```ts
-const rc = new RingCentral({clientId, clientSecret, serverURL});
-await rc.authorize({username, extension, password});
-var result = await rc.restapi(apiVersion).glip().notes(noteId).unlock().post();
-await rc.revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- `result` is an empty string
-
-[Try it out](https://developer.ringcentral.com/api-reference#Notes-unlockNote) in API Explorer.
 
 ## listRecentChats
 Get Recent Chats
@@ -3838,6 +3478,76 @@ await rc.revoke();
 
 [Try it out](https://developer.ringcentral.com/api-reference#Chats-listRecentChats) in API Explorer.
 
+## readTask
+Get Task
+
+Name|Value
+-|-
+HTTP Method|`GET`
+Endpoint|`/restapi/{apiVersion}/glip/tasks/{taskId}`
+Rate Limit Group|`Medium`
+App Permission|`N/A`
+User Permission|`N/A`
+
+```ts
+const rc = new RingCentral({clientId, clientSecret, serverURL});
+await rc.authorize({username, extension, password});
+var result = await rc.restapi(apiVersion).glip().tasks(taskId).get();
+await rc.revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- `result` is of type [GlipTaskInfo](./definitions/GlipTaskInfo.ts)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Tasks-readTask) in API Explorer.
+
+## deleteTask
+Delete Task
+
+Name|Value
+-|-
+HTTP Method|`DELETE`
+Endpoint|`/restapi/{apiVersion}/glip/tasks/{taskId}`
+Rate Limit Group|`Medium`
+App Permission|`N/A`
+User Permission|`N/A`
+
+```ts
+const rc = new RingCentral({clientId, clientSecret, serverURL});
+await rc.authorize({username, extension, password});
+var result = await rc.restapi(apiVersion).glip().tasks(taskId).delete();
+await rc.revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- `result` is an empty string
+
+[Try it out](https://developer.ringcentral.com/api-reference#Tasks-deleteTask) in API Explorer.
+
+## patchTask
+Patch Task
+
+Name|Value
+-|-
+HTTP Method|`PATCH`
+Endpoint|`/restapi/{apiVersion}/glip/tasks/{taskId}`
+Rate Limit Group|`Medium`
+App Permission|`N/A`
+User Permission|`N/A`
+
+```ts
+const rc = new RingCentral({clientId, clientSecret, serverURL});
+await rc.authorize({username, extension, password});
+var result = await rc.restapi(apiVersion).glip().tasks(taskId).patch(glipUpdateTask);
+await rc.revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- `glipUpdateTask` is of type [GlipUpdateTask](./definitions/GlipUpdateTask.ts)
+- `result` is of type [GlipTaskList](./definitions/GlipTaskList.ts)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Tasks-patchTask) in API Explorer.
+
 ## completeTask
 Complete Task
 
@@ -3862,6 +3572,335 @@ await rc.revoke();
 
 [Try it out](https://developer.ringcentral.com/api-reference#Tasks-completeTask) in API Explorer.
 
+## listGlipTeams
+Get Teams
+
+Name|Value
+-|-
+HTTP Method|`GET`
+Endpoint|`/restapi/{apiVersion}/glip/teams`
+Rate Limit Group|`Medium`
+App Permission|`Glip`
+User Permission|`Glip`
+
+```ts
+const rc = new RingCentral({clientId, clientSecret, serverURL});
+await rc.authorize({username, extension, password});
+var result = await rc.restapi(apiVersion).glip().teams().list(listGlipTeamsParameters);
+await rc.revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- `listGlipTeamsParameters` is of type [ListGlipTeamsParameters](./definitions/ListGlipTeamsParameters.ts)
+- `result` is of type [GlipTeamsList](./definitions/GlipTeamsList.ts)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Teams-listGlipTeams) in API Explorer.
+
+## createGlipTeam
+Create Team
+
+Name|Value
+-|-
+HTTP Method|`POST`
+Endpoint|`/restapi/{apiVersion}/glip/teams`
+Rate Limit Group|`Medium`
+App Permission|`Glip`
+User Permission|`Glip`
+
+```ts
+const rc = new RingCentral({clientId, clientSecret, serverURL});
+await rc.authorize({username, extension, password});
+var result = await rc.restapi(apiVersion).glip().teams().post(glipPostTeamBody);
+await rc.revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- `glipPostTeamBody` is of type [GlipPostTeamBody](./definitions/GlipPostTeamBody.ts)
+- `result` is of type [GlipTeamInfo](./definitions/GlipTeamInfo.ts)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Teams-createGlipTeam) in API Explorer.
+
+## readGlipTeam
+Get Team
+
+Name|Value
+-|-
+HTTP Method|`GET`
+Endpoint|`/restapi/{apiVersion}/glip/teams/{chatId}`
+Rate Limit Group|`Light`
+App Permission|`Glip`
+User Permission|`Glip`
+
+```ts
+const rc = new RingCentral({clientId, clientSecret, serverURL});
+await rc.authorize({username, extension, password});
+var result = await rc.restapi(apiVersion).glip().teams(chatId).get();
+await rc.revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- `result` is of type [GlipTeamInfo](./definitions/GlipTeamInfo.ts)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Teams-readGlipTeam) in API Explorer.
+
+## deleteGlipTeam
+Delete Team
+
+Name|Value
+-|-
+HTTP Method|`DELETE`
+Endpoint|`/restapi/{apiVersion}/glip/teams/{chatId}`
+Rate Limit Group|`Medium`
+App Permission|`Glip`
+User Permission|`Glip`
+
+```ts
+const rc = new RingCentral({clientId, clientSecret, serverURL});
+await rc.authorize({username, extension, password});
+var result = await rc.restapi(apiVersion).glip().teams(chatId).delete();
+await rc.revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- `result` is an empty string
+
+[Try it out](https://developer.ringcentral.com/api-reference#Teams-deleteGlipTeam) in API Explorer.
+
+## patchGlipTeam
+Update Team
+
+Name|Value
+-|-
+HTTP Method|`PATCH`
+Endpoint|`/restapi/{apiVersion}/glip/teams/{chatId}`
+Rate Limit Group|`Medium`
+App Permission|`Glip`
+User Permission|`Glip`
+
+```ts
+const rc = new RingCentral({clientId, clientSecret, serverURL});
+await rc.authorize({username, extension, password});
+var result = await rc.restapi(apiVersion).glip().teams(chatId).patch(glipPatchTeamBody);
+await rc.revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- `glipPatchTeamBody` is of type [GlipPatchTeamBody](./definitions/GlipPatchTeamBody.ts)
+- `result` is of type [GlipTeamInfo](./definitions/GlipTeamInfo.ts)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Teams-patchGlipTeam) in API Explorer.
+
+## readGlipEvents
+Get User Events List
+
+Name|Value
+-|-
+HTTP Method|`GET`
+Endpoint|`/restapi/{apiVersion}/glip/events`
+Rate Limit Group|`Medium`
+App Permission|`Glip`
+User Permission|`Glip`
+
+```ts
+const rc = new RingCentral({clientId, clientSecret, serverURL});
+await rc.authorize({username, extension, password});
+var result = await rc.restapi(apiVersion).glip().events().list(readGlipEventsParameters);
+await rc.revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- `readGlipEventsParameters` is of type [ReadGlipEventsParameters](./definitions/ReadGlipEventsParameters.ts)
+- `result` is of type [GlipEventsInfo](./definitions/GlipEventsInfo.ts)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Calendar-Events-readGlipEvents) in API Explorer.
+
+## createEvent
+Create Event
+
+Name|Value
+-|-
+HTTP Method|`POST`
+Endpoint|`/restapi/{apiVersion}/glip/events`
+Rate Limit Group|`Medium`
+App Permission|`Glip`
+User Permission|`Glip`
+
+```ts
+const rc = new RingCentral({clientId, clientSecret, serverURL});
+await rc.authorize({username, extension, password});
+var result = await rc.restapi(apiVersion).glip().events().post(glipEventCreate);
+await rc.revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- `glipEventCreate` is of type [GlipEventCreate](./definitions/GlipEventCreate.ts)
+- `result` is of type [GlipEventInfo](./definitions/GlipEventInfo.ts)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Calendar-Events-createEvent) in API Explorer.
+
+## readEvent
+Get Event
+
+Name|Value
+-|-
+HTTP Method|`GET`
+Endpoint|`/restapi/{apiVersion}/glip/events/{eventId}`
+Rate Limit Group|`Medium`
+App Permission|`Glip`
+User Permission|`Glip`
+
+```ts
+const rc = new RingCentral({clientId, clientSecret, serverURL});
+await rc.authorize({username, extension, password});
+var result = await rc.restapi(apiVersion).glip().events(eventId).get();
+await rc.revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- `result` is of type [GlipEventInfo](./definitions/GlipEventInfo.ts)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Calendar-Events-readEvent) in API Explorer.
+
+## updateEvent
+Update Event
+
+Name|Value
+-|-
+HTTP Method|`PUT`
+Endpoint|`/restapi/{apiVersion}/glip/events/{eventId}`
+Rate Limit Group|`Medium`
+App Permission|`Glip`
+User Permission|`Glip`
+
+```ts
+const rc = new RingCentral({clientId, clientSecret, serverURL});
+await rc.authorize({username, extension, password});
+var result = await rc.restapi(apiVersion).glip().events(eventId).put(glipEventCreate);
+await rc.revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- `glipEventCreate` is of type [GlipEventCreate](./definitions/GlipEventCreate.ts)
+- `result` is of type [GlipEventInfo](./definitions/GlipEventInfo.ts)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Calendar-Events-updateEvent) in API Explorer.
+
+## deleteEvent
+Delete Event
+
+Name|Value
+-|-
+HTTP Method|`DELETE`
+Endpoint|`/restapi/{apiVersion}/glip/events/{eventId}`
+Rate Limit Group|`Medium`
+App Permission|`Glip`
+User Permission|`Glip`
+
+```ts
+const rc = new RingCentral({clientId, clientSecret, serverURL});
+await rc.authorize({username, extension, password});
+var result = await rc.restapi(apiVersion).glip().events(eventId).delete();
+await rc.revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- `result` is an empty string
+
+[Try it out](https://developer.ringcentral.com/api-reference#Calendar-Events-deleteEvent) in API Explorer.
+
+## lockNote
+Lock Note
+
+Name|Value
+-|-
+HTTP Method|`POST`
+Endpoint|`/restapi/{apiVersion}/glip/notes/{noteId}/lock`
+Rate Limit Group|`Light`
+App Permission|`Glip`
+User Permission|`Glip`
+
+```ts
+const rc = new RingCentral({clientId, clientSecret, serverURL});
+await rc.authorize({username, extension, password});
+var result = await rc.restapi(apiVersion).glip().notes(noteId).lock().post();
+await rc.revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- `result` is an empty string
+
+[Try it out](https://developer.ringcentral.com/api-reference#Notes-lockNote) in API Explorer.
+
+## unlockNote
+Unlock Note
+
+Name|Value
+-|-
+HTTP Method|`POST`
+Endpoint|`/restapi/{apiVersion}/glip/notes/{noteId}/unlock`
+Rate Limit Group|`Light`
+App Permission|`Glip`
+User Permission|`Glip`
+
+```ts
+const rc = new RingCentral({clientId, clientSecret, serverURL});
+await rc.authorize({username, extension, password});
+var result = await rc.restapi(apiVersion).glip().notes(noteId).unlock().post();
+await rc.revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- `result` is an empty string
+
+[Try it out](https://developer.ringcentral.com/api-reference#Notes-unlockNote) in API Explorer.
+
+## readGlipPerson
+Get Person
+
+Name|Value
+-|-
+HTTP Method|`GET`
+Endpoint|`/restapi/{apiVersion}/glip/persons/{personId}`
+Rate Limit Group|`Light`
+App Permission|`Glip`
+User Permission|`Glip`
+
+```ts
+const rc = new RingCentral({clientId, clientSecret, serverURL});
+await rc.authorize({username, extension, password});
+var result = await rc.restapi(apiVersion).glip().persons(personId).get();
+await rc.revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- `result` is of type [GlipPersonInfo](./definitions/GlipPersonInfo.ts)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Profile-readGlipPerson) in API Explorer.
+
+## addGlipTeamMembers
+Add Team Members
+
+Name|Value
+-|-
+HTTP Method|`POST`
+Endpoint|`/restapi/{apiVersion}/glip/teams/{chatId}/add`
+Rate Limit Group|`Medium`
+App Permission|`Glip`
+User Permission|`Glip`
+
+```ts
+const rc = new RingCentral({clientId, clientSecret, serverURL});
+await rc.authorize({username, extension, password});
+var result = await rc.restapi(apiVersion).glip().teams(chatId).add().post(glipPostMembersListBody);
+await rc.revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- `glipPostMembersListBody` is of type [GlipPostMembersListBody](./definitions/GlipPostMembersListBody.ts)
+- `result` is an empty string
+
+[Try it out](https://developer.ringcentral.com/api-reference#Teams-addGlipTeamMembers) in API Explorer.
+
 ## archiveGlipTeam
 Archive Team
 
@@ -3884,6 +3923,309 @@ await rc.revoke();
 - `result` is an empty string
 
 [Try it out](https://developer.ringcentral.com/api-reference#Teams-archiveGlipTeam) in API Explorer.
+
+## listGlipWebhooks
+Get Webhooks
+
+Name|Value
+-|-
+HTTP Method|`GET`
+Endpoint|`/restapi/{apiVersion}/glip/webhooks`
+Rate Limit Group|`Medium`
+App Permission|`Glip`
+User Permission|`Glip`
+
+```ts
+const rc = new RingCentral({clientId, clientSecret, serverURL});
+await rc.authorize({username, extension, password});
+var result = await rc.restapi(apiVersion).glip().webhooks().list();
+await rc.revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- `result` is of type [GlipWebhookList](./definitions/GlipWebhookList.ts)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Glip-Webhooks-listGlipWebhooks) in API Explorer.
+
+## readGlipWebhook
+Get Webhook
+
+Name|Value
+-|-
+HTTP Method|`GET`
+Endpoint|`/restapi/{apiVersion}/glip/webhooks/{webhookId}`
+Rate Limit Group|`Medium`
+App Permission|`Glip`
+User Permission|`Glip`
+
+```ts
+const rc = new RingCentral({clientId, clientSecret, serverURL});
+await rc.authorize({username, extension, password});
+var result = await rc.restapi(apiVersion).glip().webhooks(webhookId).get();
+await rc.revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- `result` is of type [GlipWebhookList](./definitions/GlipWebhookList.ts)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Glip-Webhooks-readGlipWebhook) in API Explorer.
+
+## deleteGlipWebhook
+Delete Webhook
+
+Name|Value
+-|-
+HTTP Method|`DELETE`
+Endpoint|`/restapi/{apiVersion}/glip/webhooks/{webhookId}`
+Rate Limit Group|`Medium`
+App Permission|`Glip`
+User Permission|`Glip`
+
+```ts
+const rc = new RingCentral({clientId, clientSecret, serverURL});
+await rc.authorize({username, extension, password});
+var result = await rc.restapi(apiVersion).glip().webhooks(webhookId).delete();
+await rc.revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- `result` is an empty string
+
+[Try it out](https://developer.ringcentral.com/api-reference#Glip-Webhooks-deleteGlipWebhook) in API Explorer.
+
+## listSubscriptions
+Get Subscription List
+
+Name|Value
+-|-
+HTTP Method|`GET`
+Endpoint|`/restapi/{apiVersion}/subscription`
+Rate Limit Group|`Light`
+App Permission|`N/A`
+User Permission|`N/A`
+
+```ts
+const rc = new RingCentral({clientId, clientSecret, serverURL});
+await rc.authorize({username, extension, password});
+var result = await rc.restapi(apiVersion).subscription().list();
+await rc.revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- `result` is of type [RecordsCollectionResourceSubscriptionResponse](./definitions/RecordsCollectionResourceSubscriptionResponse.ts)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Subscriptions-listSubscriptions) in API Explorer.
+
+## createSubscription
+Create Subscription
+
+Name|Value
+-|-
+HTTP Method|`POST`
+Endpoint|`/restapi/{apiVersion}/subscription`
+Rate Limit Group|`Medium`
+App Permission|`N/A`
+User Permission|`N/A`
+
+```ts
+const rc = new RingCentral({clientId, clientSecret, serverURL});
+await rc.authorize({username, extension, password});
+var result = await rc.restapi(apiVersion).subscription().post(createSubscriptionRequest);
+await rc.revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- `createSubscriptionRequest` is of type [CreateSubscriptionRequest](./definitions/CreateSubscriptionRequest.ts)
+- `result` is of type [SubscriptionInfo](./definitions/SubscriptionInfo.ts)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Subscriptions-createSubscription) in API Explorer.
+
+## readSubscription
+Get Subscription
+
+Name|Value
+-|-
+HTTP Method|`GET`
+Endpoint|`/restapi/{apiVersion}/subscription/{subscriptionId}`
+Rate Limit Group|`Light`
+App Permission|`N/A`
+User Permission|`N/A`
+
+```ts
+const rc = new RingCentral({clientId, clientSecret, serverURL});
+await rc.authorize({username, extension, password});
+var result = await rc.restapi(apiVersion).subscription(subscriptionId).get();
+await rc.revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- `result` is of type [SubscriptionInfo](./definitions/SubscriptionInfo.ts)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Subscriptions-readSubscription) in API Explorer.
+
+## updateSubscription
+Update Subscription
+
+Name|Value
+-|-
+HTTP Method|`PUT`
+Endpoint|`/restapi/{apiVersion}/subscription/{subscriptionId}`
+Rate Limit Group|`Medium`
+App Permission|`N/A`
+User Permission|`N/A`
+
+```ts
+const rc = new RingCentral({clientId, clientSecret, serverURL});
+await rc.authorize({username, extension, password});
+var result = await rc.restapi(apiVersion).subscription(subscriptionId).put(modifySubscriptionRequest);
+await rc.revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- `modifySubscriptionRequest` is of type [ModifySubscriptionRequest](./definitions/ModifySubscriptionRequest.ts)
+- `result` is of type [SubscriptionInfo](./definitions/SubscriptionInfo.ts)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Subscriptions-updateSubscription) in API Explorer.
+
+## deleteSubscription
+Cancel Subscription
+
+Name|Value
+-|-
+HTTP Method|`DELETE`
+Endpoint|`/restapi/{apiVersion}/subscription/{subscriptionId}`
+Rate Limit Group|`Medium`
+App Permission|`N/A`
+User Permission|`N/A`
+
+```ts
+const rc = new RingCentral({clientId, clientSecret, serverURL});
+await rc.authorize({username, extension, password});
+var result = await rc.restapi(apiVersion).subscription(subscriptionId).delete();
+await rc.revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- `result` is an empty string
+
+[Try it out](https://developer.ringcentral.com/api-reference#Subscriptions-deleteSubscription) in API Explorer.
+
+## searchViaPost2
+Search/List Users
+
+Name|Value
+-|-
+HTTP Method|`POST`
+Endpoint|`/scim/{version}/Users/dotSearch`
+Rate Limit Group|`Light`
+App Permission|`ReadAccounts`
+User Permission|`N/A`
+
+```ts
+const rc = new RingCentral({clientId, clientSecret, serverURL});
+await rc.authorize({username, extension, password});
+var result = await rc.scim(version).users().dotSearch().post(searchRequest);
+await rc.revoke();
+```
+
+- Parameter `version` is optional with default value `v2`
+- `searchRequest` is of type [SearchRequest](./definitions/SearchRequest.ts)
+- `result` is of type [UserSearchResponse](./definitions/UserSearchResponse.ts)
+
+[Try it out](https://developer.ringcentral.com/api-reference#SCIM-searchViaPost2) in API Explorer.
+
+## joinGlipTeam
+Join Team
+
+Name|Value
+-|-
+HTTP Method|`POST`
+Endpoint|`/restapi/{apiVersion}/glip/teams/{chatId}/join`
+Rate Limit Group|`Medium`
+App Permission|`Glip`
+User Permission|`Glip`
+
+```ts
+const rc = new RingCentral({clientId, clientSecret, serverURL});
+await rc.authorize({username, extension, password});
+var result = await rc.restapi(apiVersion).glip().teams(chatId).join().post();
+await rc.revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- `result` is an empty string
+
+[Try it out](https://developer.ringcentral.com/api-reference#Teams-joinGlipTeam) in API Explorer.
+
+## readGlipPreferences
+Get Preferences
+
+Name|Value
+-|-
+HTTP Method|`GET`
+Endpoint|`/restapi/{apiVersion}/glip/preferences`
+Rate Limit Group|`Medium`
+App Permission|`Glip`
+User Permission|`Glip`
+
+```ts
+const rc = new RingCentral({clientId, clientSecret, serverURL});
+await rc.authorize({username, extension, password});
+var result = await rc.restapi(apiVersion).glip().preferences().get();
+await rc.revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- `result` is of type [GlipPreferencesInfo](./definitions/GlipPreferencesInfo.ts)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Profile-readGlipPreferences) in API Explorer.
+
+## leaveGlipTeam
+Leave Team
+
+Name|Value
+-|-
+HTTP Method|`POST`
+Endpoint|`/restapi/{apiVersion}/glip/teams/{chatId}/leave`
+Rate Limit Group|`Medium`
+App Permission|`Glip`
+User Permission|`Glip`
+
+```ts
+const rc = new RingCentral({clientId, clientSecret, serverURL});
+await rc.authorize({username, extension, password});
+var result = await rc.restapi(apiVersion).glip().teams(chatId).leave().post();
+await rc.revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- `result` is an empty string
+
+[Try it out](https://developer.ringcentral.com/api-reference#Teams-leaveGlipTeam) in API Explorer.
+
+## removeGlipTeamMembers
+Remove Team Members
+
+Name|Value
+-|-
+HTTP Method|`POST`
+Endpoint|`/restapi/{apiVersion}/glip/teams/{chatId}/remove`
+Rate Limit Group|`Medium`
+App Permission|`Glip`
+User Permission|`Glip`
+
+```ts
+const rc = new RingCentral({clientId, clientSecret, serverURL});
+await rc.authorize({username, extension, password});
+var result = await rc.restapi(apiVersion).glip().teams(chatId).remove().post(glipPostMembersIdsListBody);
+await rc.revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- `glipPostMembersIdsListBody` is of type [GlipPostMembersIdsListBody](./definitions/GlipPostMembersIdsListBody.ts)
+- `result` is an empty string
+
+[Try it out](https://developer.ringcentral.com/api-reference#Teams-removeGlipTeamMembers) in API Explorer.
 
 ## unarchiveGlipTeam
 Unarchive Team
@@ -4571,6 +4913,57 @@ await rc.revoke();
 
 [Try it out](https://developer.ringcentral.com/api-reference#External-Contacts-syncAddressBook) in API Explorer.
 
+## listAdministeredSites
+Get User Administered Site List
+
+Name|Value
+-|-
+HTTP Method|`GET`
+Endpoint|`/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/administered-sites`
+Rate Limit Group|`Medium`
+App Permission|`ReadAccounts`
+User Permission|`ReadExtensions`
+
+```ts
+const rc = new RingCentral({clientId, clientSecret, serverURL});
+await rc.authorize({username, extension, password});
+var result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).administeredSites().get();
+await rc.revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- Parameter `extensionId` is optional with default value `~`
+- `result` is an empty string
+
+[Try it out](https://developer.ringcentral.com/api-reference#Site-Administration-listAdministeredSites) in API Explorer.
+
+## updateUserAdministeredSites
+Update User Administered Sites
+
+Name|Value
+-|-
+HTTP Method|`PUT`
+Endpoint|`/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/administered-sites`
+Rate Limit Group|`Medium`
+App Permission|`EditAccounts`
+User Permission|`EditAssignedRoles`
+
+```ts
+const rc = new RingCentral({clientId, clientSecret, serverURL});
+await rc.authorize({username, extension, password});
+var result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).administeredSites().put(businessSiteCollectionRequest);
+await rc.revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- Parameter `extensionId` is optional with default value `~`
+- `businessSiteCollectionRequest` is of type [BusinessSiteCollectionRequest](./definitions/BusinessSiteCollectionRequest.ts)
+- `result` is of type [BusinessSiteCollectionResource](./definitions/BusinessSiteCollectionResource.ts)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Site-Administration-updateUserAdministeredSites) in API Explorer.
+
 ## listAnsweringRules
 Get Call Handling Rules
 
@@ -4699,6 +5092,58 @@ await rc.revoke();
 - `result` is an empty string
 
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Handling-Rules-deleteAnsweringRule) in API Explorer.
+
+## listUserAssignedRoles
+Get User Assigned Role List
+
+Name|Value
+-|-
+HTTP Method|`GET`
+Endpoint|`/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/assigned-role`
+Rate Limit Group|`Light`
+App Permission|`ReadAccounts`
+User Permission|`ReadExtensions`
+
+```ts
+const rc = new RingCentral({clientId, clientSecret, serverURL});
+await rc.authorize({username, extension, password});
+var result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).assignedRole().get(listUserAssignedRolesParameters);
+await rc.revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- Parameter `extensionId` is optional with default value `~`
+- `listUserAssignedRolesParameters` is of type [ListUserAssignedRolesParameters](./definitions/ListUserAssignedRolesParameters.ts)
+- `result` is of type [AssignedRolesResource](./definitions/AssignedRolesResource.ts)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Role-Management-listUserAssignedRoles) in API Explorer.
+
+## updateUserAssignedRoles
+Update User Assigned Roles
+
+Name|Value
+-|-
+HTTP Method|`PUT`
+Endpoint|`/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/assigned-role`
+Rate Limit Group|`Medium`
+App Permission|`RoleManagement`
+User Permission|`N/A`
+
+```ts
+const rc = new RingCentral({clientId, clientSecret, serverURL});
+await rc.authorize({username, extension, password});
+var result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).assignedRole().put(assignedRolesResource);
+await rc.revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- Parameter `extensionId` is optional with default value `~`
+- `assignedRolesResource` is of type [AssignedRolesResource](./definitions/AssignedRolesResource.ts)
+- `result` is of type [AssignedRolesResource](./definitions/AssignedRolesResource.ts)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Role-Management-updateUserAssignedRoles) in API Explorer.
 
 ## readAuthorizationProfile
 Get Authorization Profile
@@ -6135,6 +6580,31 @@ await rc.revoke();
 
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Control-deleteCallSession) in API Explorer.
 
+## assignMultipleUserRoles
+Assign Multiple User Roles
+
+Name|Value
+-|-
+HTTP Method|`POST`
+Endpoint|`/restapi/{apiVersion}/account/{accountId}/user-role/{roleId}/bulk-assign`
+Rate Limit Group|`Heavy`
+App Permission|`RoleManagement`
+User Permission|`EditUserRoles`
+
+```ts
+const rc = new RingCentral({clientId, clientSecret, serverURL});
+await rc.authorize({username, extension, password});
+var result = await rc.restapi(apiVersion).account(accountId).userRole(roleId).bulkAssign().post(bulkRoleAssignResource);
+await rc.revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- `bulkRoleAssignResource` is of type [BulkRoleAssignResource](./definitions/BulkRoleAssignResource.ts)
+- `result` is an empty string
+
+[Try it out](https://developer.ringcentral.com/api-reference#Role-Management-assignMultipleUserRoles) in API Explorer.
+
 ## readCallPartyStatus
 Get Call Party Status
 
@@ -6257,6 +6727,53 @@ await rc.revoke();
 
 [Try it out](https://developer.ringcentral.com/api-reference#Company-listDomesticCountries) in API Explorer.
 
+## listPermissionCategories
+Get Permission Category List
+
+Name|Value
+-|-
+HTTP Method|`GET`
+Endpoint|`/restapi/{apiVersion}/dictionary/permission-category`
+Rate Limit Group|`Light`
+App Permission|`N/A`
+User Permission|`N/A`
+
+```ts
+const rc = new RingCentral({clientId, clientSecret, serverURL});
+await rc.authorize({username, extension, password});
+var result = await rc.restapi(apiVersion).dictionary().permissionCategory().list(listPermissionCategoriesParameters);
+await rc.revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- `listPermissionCategoriesParameters` is of type [ListPermissionCategoriesParameters](./definitions/ListPermissionCategoriesParameters.ts)
+- `result` is of type [PermissionCategoryCollectionResource](./definitions/PermissionCategoryCollectionResource.ts)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Permissions-listPermissionCategories) in API Explorer.
+
+## readPermissionCategory
+Get Permission Category
+
+Name|Value
+-|-
+HTTP Method|`GET`
+Endpoint|`/restapi/{apiVersion}/dictionary/permission-category/{permissionCategoryId}`
+Rate Limit Group|`Light`
+App Permission|`N/A`
+User Permission|`N/A`
+
+```ts
+const rc = new RingCentral({clientId, clientSecret, serverURL});
+await rc.authorize({username, extension, password});
+var result = await rc.restapi(apiVersion).dictionary().permissionCategory(permissionCategoryId).get();
+await rc.revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- `result` is of type [PermissionCategoryResource](./definitions/PermissionCategoryResource.ts)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Permissions-readPermissionCategory) in API Explorer.
+
 ## getAddressBookBulkUploadTask
 Get Contacts Update Task
 
@@ -6280,31 +6797,6 @@ await rc.revoke();
 - `result` is of type [AddressBookBulkUploadResponse](./definitions/AddressBookBulkUploadResponse.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#External-Contacts-getAddressBookBulkUploadTask) in API Explorer.
-
-## updateCallMonitoringGroupList
-Update Call Monitoring Group List
-
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/call-monitoring-groups/{groupId}/bulk-assign`
-Rate Limit Group|`Heavy`
-App Permission|`EditExtensions`
-User Permission|`Groups`
-
-```ts
-const rc = new RingCentral({clientId, clientSecret, serverURL});
-await rc.authorize({username, extension, password});
-var result = await rc.restapi(apiVersion).account(accountId).callMonitoringGroups(groupId).bulkAssign().post(callMonitoringBulkAssign);
-await rc.revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- Parameter `accountId` is optional with default value `~`
-- `callMonitoringBulkAssign` is of type [CallMonitoringBulkAssign](./definitions/CallMonitoringBulkAssign.ts)
-- `result` is an empty string
-
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Monitoring-Groups-updateCallMonitoringGroupList) in API Explorer.
 
 ## listCallMonitoringGroupMembers
 Get Call Monitoring Group Member List
@@ -6428,6 +6920,31 @@ await rc.revoke();
 - `result` is of type [ListDevicesAutomaticLocationUpdates](./definitions/ListDevicesAutomaticLocationUpdates.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-listDevicesAutomaticLocationUpdates) in API Explorer.
+
+## assignMultipleDevicesAutomaticLocationUpdates
+Enable Automatic Location Updates for Devices
+
+Name|Value
+-|-
+HTTP Method|`POST`
+Endpoint|`/restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/devices/bulk-assign`
+Rate Limit Group|`Heavy`
+App Permission|`EditAccounts`
+User Permission|`ConfigureEmergencyMaps`
+
+```ts
+const rc = new RingCentral({clientId, clientSecret, serverURL});
+await rc.authorize({username, extension, password});
+var result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().devices().bulkAssign().post(assignMultipleDevicesAutomaticLocationUpdates);
+await rc.revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- `assignMultipleDevicesAutomaticLocationUpdates` is of type [AssignMultipleDevicesAutomaticLocationUpdates](./definitions/AssignMultipleDevicesAutomaticLocationUpdates.ts)
+- `result` is an empty string
+
+[Try it out](https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-assignMultipleDevicesAutomaticLocationUpdates) in API Explorer.
 
 ## listNetworks
 Get Network Map
@@ -6674,6 +7191,31 @@ await rc.revoke();
 
 [Try it out](https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-deleteSwitch) in API Explorer.
 
+## createMultipleSwitches
+Create Multiple Switches
+
+Name|Value
+-|-
+HTTP Method|`POST`
+Endpoint|`/restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/switches-bulk-create`
+Rate Limit Group|`Heavy`
+App Permission|`EditAccounts`
+User Permission|`ConfigureEmergencyMaps`
+
+```ts
+const rc = new RingCentral({clientId, clientSecret, serverURL});
+await rc.authorize({username, extension, password});
+var result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().switchesBulkCreate().post(createMultipleSwitchesRequest);
+await rc.revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- `createMultipleSwitchesRequest` is of type [CreateMultipleSwitchesRequest](./definitions/CreateMultipleSwitchesRequest.ts)
+- `result` is of type [CreateMultipleSwitchesResponse](./definitions/CreateMultipleSwitchesResponse.ts)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-createMultipleSwitches) in API Explorer.
+
 ## readAutomaticLocationUpdatesTask
 Get Emergency Map Configuration Task
 
@@ -6697,31 +7239,6 @@ await rc.revoke();
 - `result` is of type [AutomaticLocationUpdatesTaskInfo](./definitions/AutomaticLocationUpdatesTaskInfo.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-readAutomaticLocationUpdatesTask) in API Explorer.
-
-## listAutomaticLocationUpdatesUsers
-Get User List
-
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/users`
-Rate Limit Group|`Medium`
-App Permission|`EditAccounts`
-User Permission|`ConfigureEmergencyMaps`
-
-```ts
-const rc = new RingCentral({clientId, clientSecret, serverURL});
-await rc.authorize({username, extension, password});
-var result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().users().get(listAutomaticLocationUpdatesUsersParameters);
-await rc.revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- Parameter `accountId` is optional with default value `~`
-- `listAutomaticLocationUpdatesUsersParameters` is of type [ListAutomaticLocationUpdatesUsersParameters](./definitions/ListAutomaticLocationUpdatesUsersParameters.ts)
-- `result` is of type [AutomaticLocationUpdatesUserList](./definitions/AutomaticLocationUpdatesUserList.ts)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-listAutomaticLocationUpdatesUsers) in API Explorer.
 
 ## assignMultipleAutomaticaLocationUpdatesUsers
 Enable Automatic Location Updates for Users
@@ -7001,6 +7518,31 @@ await rc.revoke();
 
 [Try it out](https://developer.ringcentral.com/api-reference#External-Contacts-deleteContact) in API Explorer.
 
+## assignDefaultRole
+Assign Default Role
+
+Name|Value
+-|-
+HTTP Method|`PUT`
+Endpoint|`/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/assigned-role/default`
+Rate Limit Group|`Medium`
+App Permission|`RoleManagement`
+User Permission|`Users`
+
+```ts
+const rc = new RingCentral({clientId, clientSecret, serverURL});
+await rc.authorize({username, extension, password});
+var result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).assignedRole().default().put();
+await rc.revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- Parameter `extensionId` is optional with default value `~`
+- `result` is of type [AssignedRolesResource](./definitions/AssignedRolesResource.ts)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Role-Management-assignDefaultRole) in API Explorer.
+
 ## checkUserPermission
 Check User Permission
 
@@ -7103,32 +7645,6 @@ await rc.revoke();
 - `result` is of type [UserEmergencyLocationList](./definitions/UserEmergencyLocationList.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-getExtensionEmergencyLocations) in API Explorer.
-
-## createUserMeetingProfileImage
-Upload User Meeting Profile Image
-
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/meeting-configuration/profile-image`
-Rate Limit Group|`Light`
-App Permission|`N/A`
-User Permission|`N/A`
-
-```ts
-const rc = new RingCentral({clientId, clientSecret, serverURL});
-await rc.authorize({username, extension, password});
-var result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).meetingConfiguration().profileImage().post(createUserMeetingProfileImageRequest);
-await rc.revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- Parameter `accountId` is optional with default value `~`
-- Parameter `extensionId` is optional with default value `~`
-- `createUserMeetingProfileImageRequest` is of type [CreateUserMeetingProfileImageRequest](./definitions/CreateUserMeetingProfileImageRequest.ts)
-- `result` is an empty string
-
-[Try it out](https://developer.ringcentral.com/api-reference#Meeting-Configuration-createUserMeetingProfileImage) in API Explorer.
 
 ## readMeetingServiceInfo
 Get Meeting Service Info
@@ -7287,55 +7803,30 @@ await rc.revoke();
 
 [Try it out](https://developer.ringcentral.com/api-reference#Paging-Only-Groups-assignMultiplePagingGroupUsersDevices) in API Explorer.
 
-## assignMultipleDevicesAutomaticLocationUpdates
-Enable Automatic Location Updates for Devices
+## updateCallMonitoringGroupList
+Update Call Monitoring Group List
 
 Name|Value
 -|-
 HTTP Method|`POST`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/devices/bulk-assign`
+Endpoint|`/restapi/{apiVersion}/account/{accountId}/call-monitoring-groups/{groupId}/bulk-assign`
 Rate Limit Group|`Heavy`
-App Permission|`EditAccounts`
-User Permission|`ConfigureEmergencyMaps`
+App Permission|`EditExtensions`
+User Permission|`Groups`
 
 ```ts
 const rc = new RingCentral({clientId, clientSecret, serverURL});
 await rc.authorize({username, extension, password});
-var result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().devices().bulkAssign().post(assignMultipleDevicesAutomaticLocationUpdates);
+var result = await rc.restapi(apiVersion).account(accountId).callMonitoringGroups(groupId).bulkAssign().post(callMonitoringBulkAssign);
 await rc.revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `assignMultipleDevicesAutomaticLocationUpdates` is of type [AssignMultipleDevicesAutomaticLocationUpdates](./definitions/AssignMultipleDevicesAutomaticLocationUpdates.ts)
+- `callMonitoringBulkAssign` is of type [CallMonitoringBulkAssign](./definitions/CallMonitoringBulkAssign.ts)
 - `result` is an empty string
 
-[Try it out](https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-assignMultipleDevicesAutomaticLocationUpdates) in API Explorer.
-
-## createMultipleSwitches
-Create Multiple Switches
-
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/switches-bulk-create`
-Rate Limit Group|`Heavy`
-App Permission|`EditAccounts`
-User Permission|`ConfigureEmergencyMaps`
-
-```ts
-const rc = new RingCentral({clientId, clientSecret, serverURL});
-await rc.authorize({username, extension, password});
-var result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().switchesBulkCreate().post(createMultipleSwitchesRequest);
-await rc.revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- Parameter `accountId` is optional with default value `~`
-- `createMultipleSwitchesRequest` is of type [CreateMultipleSwitchesRequest](./definitions/CreateMultipleSwitchesRequest.ts)
-- `result` is of type [CreateMultipleSwitchesResponse](./definitions/CreateMultipleSwitchesResponse.ts)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-createMultipleSwitches) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Call-Monitoring-Groups-updateCallMonitoringGroupList) in API Explorer.
 
 ## updateMultipleSwitches
 Update Multiple Switches
@@ -7386,6 +7877,31 @@ await rc.revoke();
 - `result` is of type [ValidateMultipleSwitchesResponse](./definitions/ValidateMultipleSwitchesResponse.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-validateMultipleSwitches) in API Explorer.
+
+## listAutomaticLocationUpdatesUsers
+Get User List
+
+Name|Value
+-|-
+HTTP Method|`GET`
+Endpoint|`/restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/users`
+Rate Limit Group|`Medium`
+App Permission|`EditAccounts`
+User Permission|`ConfigureEmergencyMaps`
+
+```ts
+const rc = new RingCentral({clientId, clientSecret, serverURL});
+await rc.authorize({username, extension, password});
+var result = await rc.restapi(apiVersion).account(accountId).emergencyAddressAutoUpdate().users().get(listAutomaticLocationUpdatesUsersParameters);
+await rc.revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- `listAutomaticLocationUpdatesUsersParameters` is of type [ListAutomaticLocationUpdatesUsersParameters](./definitions/ListAutomaticLocationUpdatesUsersParameters.ts)
+- `result` is of type [AutomaticLocationUpdatesUserList](./definitions/AutomaticLocationUpdatesUserList.ts)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-listAutomaticLocationUpdatesUsers) in API Explorer.
 
 ## createMultipleWirelessPoints
 Create Multiple Wireless Points
@@ -7589,6 +8105,32 @@ await rc.revoke();
 - `result` is an empty string
 
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Blocking-deleteBlockedAllowedNumber) in API Explorer.
+
+## createUserMeetingProfileImage
+Upload User Meeting Profile Image
+
+Name|Value
+-|-
+HTTP Method|`POST`
+Endpoint|`/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/meeting-configuration/profile-image`
+Rate Limit Group|`Light`
+App Permission|`N/A`
+User Permission|`N/A`
+
+```ts
+const rc = new RingCentral({clientId, clientSecret, serverURL});
+await rc.authorize({username, extension, password});
+var result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).meetingConfiguration().profileImage().post(createUserMeetingProfileImageRequest);
+await rc.revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- Parameter `extensionId` is optional with default value `~`
+- `createUserMeetingProfileImageRequest` is of type [CreateUserMeetingProfileImageRequest](./definitions/CreateUserMeetingProfileImageRequest.ts)
+- `result` is an empty string
+
+[Try it out](https://developer.ringcentral.com/api-reference#Meeting-Configuration-createUserMeetingProfileImage) in API Explorer.
 
 ## GetUserSetting
 Get Meeting User Settings
@@ -7865,6 +8407,30 @@ await rc.revoke();
 
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Control-holdCallParty) in API Explorer.
 
+## callParkParty
+Call Park
+
+Name|Value
+-|-
+HTTP Method|`POST`
+Endpoint|`/restapi/{apiVersion}/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/park`
+Rate Limit Group|`Light`
+App Permission|`CallControl`
+User Permission|`N/A`
+
+```ts
+const rc = new RingCentral({clientId, clientSecret, serverURL});
+await rc.authorize({username, extension, password});
+var result = await rc.restapi(apiVersion).account(accountId).telephony().sessions(telephonySessionId).parties(partyId).park().post();
+await rc.revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- `result` is of type [CallParty](./definitions/CallParty.ts)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Call-Control-callParkParty) in API Explorer.
+
 ## ignoreCallInQueue
 Ignore Call in Queue
 
@@ -7889,30 +8455,6 @@ await rc.revoke();
 - `result` is an empty string
 
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Control-ignoreCallInQueue) in API Explorer.
-
-## callParkParty
-Call Park
-
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/park`
-Rate Limit Group|`Light`
-App Permission|`CallControl`
-User Permission|`N/A`
-
-```ts
-const rc = new RingCentral({clientId, clientSecret, serverURL});
-await rc.authorize({username, extension, password});
-var result = await rc.restapi(apiVersion).account(accountId).telephony().sessions(telephonySessionId).parties(partyId).park().post();
-await rc.revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- Parameter `accountId` is optional with default value `~`
-- `result` is of type [CallParty](./definitions/CallParty.ts)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Control-callParkParty) in API Explorer.
 
 ## pickupCallParty
 Pickup Call

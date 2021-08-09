@@ -1,4 +1,7 @@
+import PermissionCategory from './PermissionCategory';
 import FaxCoverPage from './FaxCoverPage';
+import Permission from './Permission';
+import UserRole from './UserRole';
 import Location from './Location';
 import Timezone from './Timezone';
 import Language from './Language';
@@ -49,8 +52,22 @@ class Index {
     return new Location(this);
   }
 
+  userRole(roleId: string | null = null): UserRole {
+    return new UserRole(this, roleId);
+  }
+
+  permission(permissionId: string | null = null): Permission {
+    return new Permission(this, permissionId);
+  }
+
   faxCoverPage(): FaxCoverPage {
     return new FaxCoverPage(this);
+  }
+
+  permissionCategory(
+    permissionCategoryId: string | null = null
+  ): PermissionCategory {
+    return new PermissionCategory(this, permissionCategoryId);
   }
 }
 export default Index;

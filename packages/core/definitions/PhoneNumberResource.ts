@@ -1,18 +1,15 @@
-import {DeviceCountryResource, PhoneNumberExtensionInfo} from './index';
-
 class PhoneNumberResource {
   /**
-   * Internal identifier of a phone number
    */
-  id?: string;
+  formattedPhoneNumber?: string;
 
   /**
    */
-  country?: DeviceCountryResource;
+  phoneNumber?: string;
 
   /**
    */
-  extension?: PhoneNumberExtensionInfo;
+  type?: string;
 
   /**
    * Custom user name of a phone number, if any
@@ -20,40 +17,22 @@ class PhoneNumberResource {
   label?: string;
 
   /**
-   * Location (City, State). Filled for local US numbers
-   */
-  location?: string;
-
-  /**
-   * Payment type. 'External' is returned for forwarded numbers which are not terminated in the RingCentral phone system
-   */
-  paymentType?: 'External' | 'TollFree' | 'Local';
-
-  /**
-   * Phone number
-   */
-  phoneNumber?: string;
-
-  /**
-   * Status of a phone number. If the value is 'Normal', the phone number is ready to be used. Otherwise it is an external number not yet ported to RingCentral
-   */
-  status?: string;
-
-  /**
+   * Usage type of a phone number
    */
   usageType?:
-    | 'CompanyNumber'
-    | 'MainCompanyNumber'
-    | 'AdditionalCompanyNumber'
+    | 'MobileNumber'
+    | 'ContactNumber'
     | 'DirectNumber'
-    | 'CompanyFaxNumber'
-    | 'ForwardedNumber'
-    | 'ForwardedCompanyNumber'
-    | 'ContactCenterNumber';
+    | 'ForwardedNumber';
 
   /**
-   * Type of a phone number
+   * Specifies if a phone number should be hidden or not
    */
-  type?: 'VoiceFax' | 'FaxOnly' | 'VoiceOnly';
+  hidden?: boolean;
+
+  /**
+   * Specifies if the number is primary, i.e. displayed as 'main number' and called by default
+   */
+  primary?: boolean;
 }
 export default PhoneNumberResource;

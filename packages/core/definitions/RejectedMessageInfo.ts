@@ -2,6 +2,7 @@
 class RejectedMessageInfo {
   /**
    * Index of the rejected message in the request
+   * Format: int32
    * Example: 2
    */
   index?: number;

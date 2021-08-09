@@ -8,6 +8,7 @@ class PagingResource {
 
   /**
    * Number of records per page
+   * Format: int32
    * Example: 3
    */
   perPage?: number;

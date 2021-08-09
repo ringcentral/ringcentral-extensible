@@ -49,7 +49,7 @@ class MessageDetailsResponse {
 
   /**
    * Number of segments of a message
-   * Format: int64
+   * Format: int32
    * Example: 1
    */
   segmentCount?: number;

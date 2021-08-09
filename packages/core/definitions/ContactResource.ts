@@ -3,6 +3,7 @@ import {
   PhoneNumberResource,
   AccountDirectoryProfileImageResource,
   BusinessSiteResource,
+  UserCustomFieldResource,
 } from './index';
 
 class ContactResource {
@@ -64,5 +65,9 @@ class ContactResource {
   /**
    */
   type?: string;
+
+  /**
+   */
+  customFields?: UserCustomFieldResource[];
 }
 export default ContactResource;

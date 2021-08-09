@@ -19,7 +19,7 @@ class ReadA2PSMSOptOutsParameters {
 
   /**
    * Number of records to be returned for the page
-   * Format: int64
+   * Format: int32
    * Example: 5
    * Default: 1000
    */
