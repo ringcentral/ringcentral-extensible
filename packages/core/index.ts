@@ -70,7 +70,7 @@ export class RingCentral {
   }
   async put<T>(
     endpoint: string,
-    content: {},
+    content?: {},
     queryParams?: {},
     config?: RestRequestConfig
   ): Promise<RestResponse<T>> {
