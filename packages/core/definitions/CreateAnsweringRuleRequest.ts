@@ -7,6 +7,7 @@ import {
   QueueInfo,
   TransferredExtensionInfo,
   VoicemailInfo,
+  MissedCallInfo,
   GreetingInfo,
 } from './index';
 
@@ -71,6 +72,10 @@ class CreateAnsweringRuleRequest {
   /**
    */
   voicemail?: VoicemailInfo;
+
+  /**
+   */
+  missedCall?: MissedCallInfo;
 
   /**
    * Greetings applied for an answering rule; only predefined greetings can be applied, see Dictionary Greeting List

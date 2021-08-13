@@ -20,7 +20,7 @@ class Index {
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/call-queues
    * Rate Limit Group: Medium
    * App Permission: EditAccounts
-   * User Permission: JoinLeaveCallQueue
+   * User Permission: EditCallQueuePresence
    */
   async put(
     userCallQueues: UserCallQueues,
