@@ -10,6 +10,7 @@ import hyperid from 'hyperid';
 import {EventEmitter} from 'events';
 import waitFor from 'wait-for-async';
 import RateLimitExtension from '@rc-ex/rate-limit';
+import RestException from '@rc-ex/core/lib/RestException';
 
 import {request} from './rest';
 import {
@@ -111,6 +112,9 @@ class WebSocketExtension extends SdkExtension {
     try {
       await this.connect();
     } catch (e) {
+      if (e instanceof RestException) {
+        throw e; // such as InsufficientPermissions
+      }
       if (this.options.debugMode) {
         console.debug('Initial connect failed:', e);
       }
@@ -134,6 +138,9 @@ class WebSocketExtension extends SdkExtension {
             this.ws
           );
         } catch (e) {
+          if (e instanceof RestException) {
+            throw e; // such as InsufficientPermissions
+          }
           retriesAttempted += 1;
           if (this.options.debugMode) {
             console.debug('Auto recover error:', e);

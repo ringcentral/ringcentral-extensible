@@ -119,7 +119,7 @@ class Subscription {
       } else if (e.response && e.response.status === 401) {
         // ignore
         if (this.wse.options.debugMode) {
-          console.debug('Token expired when trying to revoke subscription');
+          console.debug('Token invalid when trying to revoke subscription');
         }
       } else {
         throw e;
