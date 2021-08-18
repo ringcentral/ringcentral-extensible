@@ -332,11 +332,11 @@ class WebSocketExtension extends SdkExtension {
   async subscribe(
     eventFilters: string[],
     callback: (event: {}) => void,
-    cache: SubscriptionInfo | undefined = undefined
+    cache: SubscriptionInfo | undefined | null = undefined
   ) {
     const subscription = new Subscription(this, eventFilters, callback);
     subscription.subscriptionInfo = cache;
-    if (cache === undefined) {
+    if (cache === undefined || cache === null) {
       await subscription.subscribe();
     } else {
       await subscription.refresh();
