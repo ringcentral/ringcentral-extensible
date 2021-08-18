@@ -11,6 +11,7 @@ import {EventEmitter} from 'events';
 import waitFor from 'wait-for-async';
 import RateLimitExtension from '@rc-ex/rate-limit';
 import RestException from '@rc-ex/core/lib/RestException';
+import {SubscriptionInfo} from '@rc-ex/core/lib/definitions';
 
 import {request} from './rest';
 import {
@@ -328,9 +329,16 @@ class WebSocketExtension extends SdkExtension {
     this.ws?.close();
   }
 
-  async subscribe(eventFilters: string[], callback: (event: {}) => void) {
+  async subscribe(
+    eventFilters: string[],
+    callback: (event: {}) => void,
+    cache: SubscriptionInfo | undefined = undefined
+  ) {
     const subscription = new Subscription(this, eventFilters, callback);
-    await subscription.subscribe();
+    subscription.subscriptionInfo = cache;
+    if (cache === undefined) {
+      await subscription.subscribe();
+    }
     this.subscriptions.push(subscription);
     return subscription;
   }
