@@ -31,6 +31,7 @@ export enum Events {
   autoRecoverFailed = 'autoRecoverFailed',
   autoRecoverError = 'autoRecoverError',
   newWebSocketObject = 'newWebSocketObject',
+  newWsc = 'newWsc',
 }
 
 class WebSocketExtension extends SdkExtension {
@@ -285,6 +286,7 @@ class WebSocketExtension extends SdkExtension {
           this.wsc.sequence < meta.wsc.sequence)
       ) {
         this.wsc = meta.wsc;
+        this.eventEmitter.emit(Events.newWsc, this.wsc);
       }
     });
 
