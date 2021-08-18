@@ -103,3 +103,4 @@ yarn lerna add ramda --scope=@rc-ex/debug
 
 - Extension to refresh token
 - Extension to do pagination
+- Change `enabled` to `enable()` and `disable()`

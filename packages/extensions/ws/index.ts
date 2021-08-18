@@ -103,14 +103,25 @@ class WebSocketExtension extends SdkExtension {
       }
       return this.request<T>(method, endpoint, content, queryParams, config);
     };
+
+    // should recover if this.options.wscToken
+    let connectMethod = this.connect.bind(this);
+    if (this.options.wscToken) {
+      this.wsc = {
+        token: this.options.wscToken,
+        sequence: 0,
+      };
+      connectMethod = this.recover.bind(this);
+    }
+
     if (!this.options.autoRecover!.enabled) {
-      await this.connect();
+      await connectMethod();
       return;
     }
 
     // code after is for auto recover
     try {
-      await this.connect();
+      await connectMethod();
     } catch (e) {
       if (e instanceof RestException) {
         throw e; // such as InsufficientPermissions
@@ -185,8 +196,9 @@ class WebSocketExtension extends SdkExtension {
       this.recoverTimestamp = Date.now();
     }
     if (
+      this.connectionDetails !== undefined &&
       Date.now() - this.recoverTimestamp >
-      this.connectionDetails.recoveryTimeout * 1000
+        this.connectionDetails.recoveryTimeout * 1000
     ) {
       if (this.options.debugMode) {
         console.debug('connect to WSG but do not recover');

@@ -13,6 +13,7 @@ export type WebSocketOptions = {
     checkInterval?: CheckInterval;
     pingServerInterval?: number;
   };
+  wscToken?: string;
 };
 
 export type WsgEvent = {
