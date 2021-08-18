@@ -338,6 +338,8 @@ class WebSocketExtension extends SdkExtension {
     subscription.subscriptionInfo = cache;
     if (cache === undefined) {
       await subscription.subscribe();
+    } else {
+      await subscription.refresh();
     }
     this.subscriptions.push(subscription);
     return subscription;
