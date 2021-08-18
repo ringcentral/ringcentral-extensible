@@ -31,5 +31,6 @@
   },
   "peerDependencies": {
     "@rc-ex/core": "^0.9.2"
-  }
+  },
+  "gitHead": "e90dbd80cd8fb6967eb768557f97e6fad64cc66c"
 }

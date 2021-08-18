@@ -335,10 +335,10 @@ class WebSocketExtension extends SdkExtension {
     cache: SubscriptionInfo | undefined | null = undefined
   ) {
     const subscription = new Subscription(this, eventFilters, callback);
-    subscription.subscriptionInfo = cache;
     if (cache === undefined || cache === null) {
       await subscription.subscribe();
     } else {
+      subscription.subscriptionInfo = cache;
       await subscription.refresh();
     }
     this.subscriptions.push(subscription);
