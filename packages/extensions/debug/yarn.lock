@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@rc-ex/core@^0.9.0":
-  version "0.9.0"
-  resolved "https://registry.yarnpkg.com/@rc-ex/core/-/core-0.9.0.tgz#58f5c23bb6ba0dec8f75bbf4d6d52d8303990eb2"
-  integrity sha512-omFMIaldJynqbNBoQJzs2fpZcCkjFLQRsSJ6ocov69Nes4Hpj/vdseW519w1wvQGfUGIDjYuUN72tlY/47Nl9w==
+"@rc-ex/core@^0.9.2":
+  version "0.9.2"
+  resolved "https://registry.yarnpkg.com/@rc-ex/core/-/core-0.9.2.tgz#de8c553c9d074bc2607f19b194a40496d8678589"
+  integrity sha512-/4nmiPdvva+UjvyjWfZZXUu66b24VO/YgITAup9IyyAUKFKTn73j7s5L5/D9wvDtlM95Gd+Xle4ufItc5zqMFg==
   dependencies:
     "@types/qs" "^6.9.7"
     axios "^0.21.1"
@@ -50,9 +50,9 @@ delayed-stream@~1.0.0:
   integrity sha1-3zrhmayt+31ECqrgsp4icrJOxhk=
 
 follow-redirects@^1.10.0:
-  version "1.14.1"
-  resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.14.1.tgz#d9114ded0a1cfdd334e164e6662ad02bfd91ff43"
-  integrity sha512-HWqDgT7ZEkqRzBvc2s64vSZ/hfOceEol3ac/7tKwzuvEyWx3/4UegXh5oBOIotkGsObyk3xznnSRVADBgWSQVg==
+  version "1.14.2"
+  resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.14.2.tgz#cecb825047c00f5e66b142f90fed4f515dec789b"
+  integrity sha512-yLR6WaE2lbF0x4K2qE2p9PEXKLDjUjnR/xmjS3wHAYxtlsI9MLLBJUZirAHKzUZDGLxje7w/cXR49WOUo4rbsA==
 
 form-data@^4.0.0:
   version "4.0.0"
