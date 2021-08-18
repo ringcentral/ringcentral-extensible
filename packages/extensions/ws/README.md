@@ -153,3 +153,47 @@ await webSocketExtension.recover()
 ```
 
 Command above will create a new WebSocket connection and make sure that subscriptions are recovered.
+
+
+## How to recover after page refresh?
+
+When you refresh page, you lost everything currently in the page's memory.
+
+Below is the recommended way to recover. It may not be the best practice, but we have tested it and it does work.
+
+Ref: https://github.com/tylerlong/rc-ws-refresh-page-demo/blob/main/src/index.ts
+
+Before page refresh:
+
+```ts
+const webSocketExtension = new WebSocketExtension();
+webSocketExtension.eventEmitter.on(Events.newWsc, async (wsc: Wsc) => {
+  await localforage.setItem(wscTokenKey, wsc.token);
+});
+await rc.installExtension(webSocketExtension);
+...
+
+const subscription = await webSocketExtension.subscribe(
+  ['/restapi/v1.0/account/~/extension/~/message-store'],
+  event => callback(event)
+);
+await localforage.setItem(subscriptionKey, subscription.subscriptionInfo);
+```
+
+After page refresh:
+
+```ts
+const wscToken = (await localforage.getItem(wscTokenKey)) as string;
+const webSocketExtension = new WebSocketExtension({wscToken});
+
+...
+
+const subscriptionInfo = (await localforage.getItem(
+  subscriptionKey
+)) as SubscriptionInfo;
+const subscription = await webSocketExtension.subscribe(
+  ['/restapi/v1.0/account/~/extension/~/message-store'],
+  event => callback(event),
+  subscriptionInfo // restore old one. new one will be created instead if this parameter is undefined or null
+);
+```
