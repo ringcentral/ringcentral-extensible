@@ -4,5 +4,6 @@
     "esModuleInterop": true,
     "resolveJsonModule": true,
     "lib": ["DOM"],
-  }
+  },
+  "exclude": ["lib"]
 }
