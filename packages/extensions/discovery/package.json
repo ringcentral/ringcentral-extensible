@@ -22,11 +22,5 @@
     "axios": "^0.21.4",
     "urijs": "^1.19.7",
     "wait-for-async": "^0.5.0"
-  },
-  "devDependencies": {
-    "@rc-ex/core": "^0.10.0"
-  },
-  "peerDependencies": {
-    "@rc-ex/core": "^0.9.3"
   }
 }

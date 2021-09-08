@@ -2,18 +2,8 @@
   "name": "@rc-ex/test",
   "private": true,
   "license": "MIT",
-  "dependencies": {
-    "@rc-ex/authorize-uri": "^0.7.20",
-    "@rc-ex/core": "^0.9.3",
-    "@rc-ex/debug": "^0.7.20",
-    "@rc-ex/discovery": "^0.1.31",
-    "@rc-ex/engage-voice": "^0.2.31",
-    "@rc-ex/events": "^0.7.20",
-    "@rc-ex/pubnub": "^0.7.21",
-    "@rc-ex/rate-limit": "^0.7.20",
-    "@rc-ex/rcsdk": "^0.7.20",
-    "@rc-ex/retry": "^0.7.20",
-    "@rc-ex/ws": "^0.10.2"
+  "scripts": {
+    "link": "yarn link @rc-ex/core && yarn link @rc-ex/authorize-uri && yarn link @rc-ex/debug && yarn link @rc-ex/discovery && yarn link @rc-ex/engage-voice && yarn link @rc-ex/events && yarn link @rc-ex/pubnub && yarn link @rc-ex/rate-limit && yarn link @rc-ex/rcsdk && yarn link @rc-ex/retry && yarn link @rc-ex/ws"
   },
   "devDependencies": {
     "@ringcentral/sdk": "^4.6.0",

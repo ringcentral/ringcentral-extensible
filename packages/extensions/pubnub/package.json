@@ -20,11 +20,5 @@
   "dependencies": {
     "@types/pubnub": "^4.29.4",
     "pubnub": "^4.33.0"
-  },
-  "devDependencies": {
-    "@rc-ex/core": "^0.10.0"
-  },
-  "peerDependencies": {
-    "@rc-ex/core": "^0.9.3"
   }
 }

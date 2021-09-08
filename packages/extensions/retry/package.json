@@ -19,11 +19,5 @@
   },
   "dependencies": {
     "wait-for-async": "^0.5.0"
-  },
-  "devDependencies": {
-    "@rc-ex/core": "^0.10.0"
-  },
-  "peerDependencies": {
-    "@rc-ex/core": "^0.9.3"
   }
 }

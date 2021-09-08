@@ -3,5 +3,8 @@
   "ignorePatterns": [
     "**/node_modules/**/*",
     "**/lib/**/*"
-  ]
+  ],
+  "rules": {
+    "node/no-extraneous-import": "off"
+  }
 }

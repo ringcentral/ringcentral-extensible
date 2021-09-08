@@ -21,13 +21,9 @@
     "axios": "^0.21.4"
   },
   "devDependencies": {
-    "@rc-ex/core": "^0.10.0",
     "change-case": "^4.1.2",
     "dotenv-override-true": "^6.2.2",
     "ts-node": "^10.2.1"
-  },
-  "peerDependencies": {
-    "@rc-ex/core": "^0.9.3"
   },
   "scripts": {
     "generate": "ts-node -r dotenv-override-true/config code-generator.ts"
