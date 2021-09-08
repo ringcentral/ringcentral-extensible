@@ -1,3 +1,4 @@
+import {RestResponse} from '@rc-ex/core/lib/Rest';
 import RestException from '@rc-ex/core/lib/RestException';
 
 import {createRingCentral} from './utils';
@@ -14,10 +15,11 @@ describe('Exceptions', () => {
         .extension()
         .sms()
         .post({text: 'Hello world'});
-    } catch (e: any) {
+    } catch (e) {
       exception = true;
       expect(e instanceof RestException).toBeTruthy();
-      expect(e.response.status).toBe(400);
+      const re = e as {response: RestResponse};
+      expect(re.response.status).toBe(400);
     } finally {
       expect(exception).toBeTruthy();
     }
@@ -32,10 +34,11 @@ describe('Exceptions', () => {
         rc.restapi().account().extension().path(true) + '/does-not-exist',
         {text: 'Hello world'}
       );
-    } catch (e: any) {
+    } catch (e) {
       exception = true;
       expect(e instanceof RestException).toBeTruthy();
-      expect(e.response.status).toBe(404);
+      const re = e as {response: RestResponse};
+      expect(re.response.status).toBe(404);
     } finally {
       expect(exception).toBeTruthy();
     }

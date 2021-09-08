@@ -5,6 +5,7 @@ import {
   CreateSubscriptionRequest,
 } from '@rc-ex/core/lib/definitions';
 import PubNub, {PubnubConfig} from 'pubnub';
+import {RestResponse} from '@rc-ex/core/lib/Rest';
 
 class PubNubExtension extends SdkExtension {
   rc!: RingCentral;
@@ -123,8 +124,9 @@ export class Subscription {
         .restapi()
         .subscription(this.subscriptionInfo!.id)
         .put(this.requestBody);
-    } catch (e: any) {
-      if (e.response && e.response.status === 404) {
+    } catch (e) {
+      const re = e as {response: RestResponse};
+      if (re.response && re.response.status === 404) {
         // subscription expired
         await this.subscribe();
       }

@@ -5,11 +5,12 @@ import {spawnSync} from 'child_process';
 import {pascalCase} from 'change-case';
 
 const typesSet = new Set();
-const normalizeType = (prop: {
+type Type = {
   type: string;
   $ref?: string;
-  items: any;
-}): string => {
+  items?: Type;
+};
+const normalizeType = (prop: Type): string => {
   if (prop.$ref) {
     const type = pascalCase(prop.$ref.split('/').slice(-1)[0]);
     typesSet.add(type);
@@ -19,7 +20,7 @@ const normalizeType = (prop: {
     return 'number';
   }
   if (prop.type === 'array') {
-    return normalizeType(prop.items) + '[]';
+    return normalizeType(prop.items!) + '[]';
   }
   return prop.type;
 };

@@ -4,6 +4,7 @@ import RestException from '@rc-ex/core/lib/RestException';
 import axios from 'axios';
 import URI from 'urijs';
 import waitFor from 'wait-for-async';
+import {RestResponse} from '@rc-ex/core/lib/Rest';
 
 export type RetrySettings = {
   retryCount: number;
@@ -72,15 +73,16 @@ class DiscoveryExtension extends SdkExtension {
         this.options.initialRetrySettings!.retryInterval =
           this.initialDiscovery!.retryInterval;
         break;
-      } catch (e: any) {
-        if (e.response) {
+      } catch (e) {
+        const re = e as {response: RestResponse};
+        if (re.response) {
           if (retryCount < this.options.initialRetrySettings!.retryCount) {
             await waitFor({
               interval: this.options.initialRetrySettings!.retryInterval * 1000,
             });
             continue;
           } else {
-            throw new RestException(e.response);
+            throw new RestException(re.response);
           }
         }
         throw e;

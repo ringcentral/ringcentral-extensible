@@ -2,6 +2,7 @@ import {
   CreateSubscriptionRequest,
   SubscriptionInfo,
 } from '@rc-ex/core/lib/definitions';
+import {RestResponse} from '@rc-ex/core/lib/Rest';
 
 import WebSocketExtension from './index';
 import {WsgEvent, WsgMeta} from './types';
@@ -85,8 +86,9 @@ class Subscription {
           this.requestBody
         )
       ).data;
-    } catch (e: any) {
-      if (e.response && e.response.status === 404) {
+    } catch (e) {
+      const re = e as {response: RestResponse};
+      if (re.response && re.response.status === 404) {
         // subscription expired
         await this.subscribe();
       }
@@ -106,8 +108,9 @@ class Subscription {
         'DELETE',
         `/restapi/v1.0/subscription/${this.subscriptionInfo!.id}`
       );
-    } catch (e: any) {
-      if (e.response && e.response.status === 404) {
+    } catch (e) {
+      const re = e as {response: RestResponse};
+      if (re.response && re.response.status === 404) {
         // ignore
         if (this.wse.options.debugMode) {
           console.debug(
@@ -116,7 +119,7 @@ class Subscription {
             } doesn't exist on server side`
           );
         }
-      } else if (e.response && e.response.status === 401) {
+      } else if (re.response && re.response.status === 401) {
         // ignore
         if (this.wse.options.debugMode) {
           console.debug('Token invalid when trying to revoke subscription');
