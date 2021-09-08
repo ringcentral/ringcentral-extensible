@@ -22,9 +22,9 @@ await rc.installExtension(abcExtension);
 
 ## Enable & Disable
 
-By default, an extension is enabled after installation. You can disable it by `abcExtension.enabled = false`.
+By default, an extension is enabled after installation. You can disable it by `abcExtension.disable();`.
 
-You can re-enabled it by `abcExtension.enabled = true`.
+You can re-enabled it by `abcExtension.enable();`.
 
 
 ## [Debug Extension](./debug)

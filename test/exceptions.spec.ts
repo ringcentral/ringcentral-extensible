@@ -14,7 +14,7 @@ describe('Exceptions', () => {
         .extension()
         .sms()
         .post({text: 'Hello world'});
-    } catch (e) {
+    } catch (e: any) {
       exception = true;
       expect(e instanceof RestException).toBeTruthy();
       expect(e.response.status).toBe(400);
@@ -32,7 +32,7 @@ describe('Exceptions', () => {
         rc.restapi().account().extension().path(true) + '/does-not-exist',
         {text: 'Hello world'}
       );
-    } catch (e) {
+    } catch (e: any) {
       exception = true;
       expect(e instanceof RestException).toBeTruthy();
       expect(e.response.status).toBe(404);

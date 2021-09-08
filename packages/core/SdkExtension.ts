@@ -1,12 +1,12 @@
 import RingCentral from './index';
 
 abstract class SdkExtension {
-  _enabled = true;
-  get enabled() {
-    return this._enabled;
+  enabled = true;
+  enable() {
+    this.enabled = true;
   }
-  set enabled(value) {
-    this._enabled = value;
+  disable() {
+    this.enabled = false;
   }
   abstract install(rc: RingCentral): Promise<void>;
   async revoke(): Promise<void> {}

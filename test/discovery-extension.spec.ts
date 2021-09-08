@@ -18,7 +18,7 @@ describe('discovery', () => {
     });
     const debugExtension = new DebugExtension();
     rc.installExtension(debugExtension);
-    debugExtension.enabled = false; // comment out this line to enable debug mode
+    debugExtension.disable(); // comment out this line to enable debug mode
     const discoveryExtension = new DiscoveryExtension({
       discoveryServer: process.env.RINGCENTRAL_DISCOVERY_SERVER!,
     });

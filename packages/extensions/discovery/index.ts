@@ -72,7 +72,7 @@ class DiscoveryExtension extends SdkExtension {
         this.options.initialRetrySettings!.retryInterval =
           this.initialDiscovery!.retryInterval;
         break;
-      } catch (e) {
+      } catch (e: any) {
         if (e.response) {
           if (retryCount < this.options.initialRetrySettings!.retryCount) {
             await waitFor({

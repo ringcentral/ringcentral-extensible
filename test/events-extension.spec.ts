@@ -11,7 +11,7 @@ describe('Event Emitter Extension', () => {
     eventsExtension.eventEmitter.on(Events.requestSuccess, r => {
       console.log(Utils.formatTraffic(r));
     });
-    eventsExtension.enabled = false; // remove this line to enable events
+    eventsExtension.disable(); // remove this line to enable events
     await rc.restapi().account().extension().get();
     await rc.revoke();
   });

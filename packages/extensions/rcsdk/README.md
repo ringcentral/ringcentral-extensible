@@ -55,7 +55,7 @@ await rc.installExtension(rcSdkExtension);
 // API call with @ringcentral/sdk as HTTP engine
 const extensionInfo = await rc.restapi().account().extension().get();
 
-rcSdkExtension.enabled = false;
+rcSdkExtension.disable();
 // API call with axios as HTTP engine
 const extensionInfo2 = await rc.restapi().account().extension().get();
 ```

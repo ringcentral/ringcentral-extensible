@@ -85,6 +85,13 @@ yarn reset && yarn compile && yarn test
 ```
 
 
+### Test one test case
+
+```
+t=auto-recover yarn test
+```
+
+
 ## Publish
 
 ```
@@ -103,4 +110,3 @@ yarn lerna add ramda --scope=@rc-ex/debug
 
 - Extension to refresh token
 - Extension to do pagination
-- Change `enabled` to `enable()` and `disable()`

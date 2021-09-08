@@ -85,7 +85,7 @@ class Subscription {
           this.requestBody
         )
       ).data;
-    } catch (e) {
+    } catch (e: any) {
       if (e.response && e.response.status === 404) {
         // subscription expired
         await this.subscribe();
@@ -106,7 +106,7 @@ class Subscription {
         'DELETE',
         `/restapi/v1.0/subscription/${this.subscriptionInfo!.id}`
       );
-    } catch (e) {
+    } catch (e: any) {
       if (e.response && e.response.status === 404) {
         // ignore
         if (this.wse.options.debugMode) {

@@ -70,18 +70,15 @@ class WebSocketExtension extends SdkExtension {
     this.options.autoRecover.pingServerInterval ??= 30000;
   }
 
-  get enabled() {
-    return this._enabled;
-  }
-  set enabled(value: boolean) {
-    this._enabled = value;
+  disable() {
+    super.disable();
     for (const subscription of this.subscriptions ?? []) {
-      subscription.enabled = value;
+      subscription.enabled = false;
     }
   }
 
   async install(rc: RingCentral) {
-    this.rateLimitExtension.enabled = false;
+    this.rateLimitExtension.disable();
     await rc.installExtension(this.rateLimitExtension);
     this.rc = rc;
     const request = rc.request.bind(rc);
@@ -237,9 +234,9 @@ class WebSocketExtension extends SdkExtension {
   }
 
   async connect(recoverSession = false) {
-    this.rateLimitExtension.enabled = true;
+    this.rateLimitExtension.enable();
     const r = await this.rc.post('/restapi/oauth/wstoken');
-    this.rateLimitExtension.enabled = false;
+    this.rateLimitExtension.disable();
     this.wsToken = r.data as WsToken;
     let wsUri = `${this.wsToken.uri}?access_token=${this.wsToken.ws_access_token}`;
     if (recoverSession) {

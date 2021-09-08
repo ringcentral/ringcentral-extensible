@@ -22,7 +22,7 @@ describe('SMS', () => {
     });
     const debugExtension = new DebugExtension();
     rc.installExtension(debugExtension);
-    debugExtension.enabled = false;
+    debugExtension.disable();
     const messageBatchResponse = await rc
       .restapi()
       .account()

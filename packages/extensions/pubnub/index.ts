@@ -14,13 +14,10 @@ class PubNubExtension extends SdkExtension {
     this.rc = rc;
   }
 
-  get enabled() {
-    return this._enabled;
-  }
-  set enabled(value: boolean) {
-    this._enabled = value;
+  disable() {
+    super.disable();
     for (const subscription of this.subscriptions ?? []) {
-      subscription.enabled = value;
+      subscription.enabled = false;
     }
   }
 
@@ -126,7 +123,7 @@ export class Subscription {
         .restapi()
         .subscription(this.subscriptionInfo!.id)
         .put(this.requestBody);
-    } catch (e) {
+    } catch (e: any) {
       if (e.response && e.response.status === 404) {
         // subscription expired
         await this.subscribe();
