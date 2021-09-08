@@ -22,7 +22,13 @@ class SipRegistrationDeviceInfo {
   /**
    * Device type
    */
-  type?: 'HardPhone' | 'SoftPhone' | 'OtherPhone' | 'Paging' | 'WebPhone';
+  type?:
+    | 'HardPhone'
+    | 'SoftPhone'
+    | 'OtherPhone'
+    | 'Paging'
+    | 'WebPhone'
+    | 'Room';
 
   /**
    * Device identification number (stock keeping unit) in the format TP-ID [-AT-AC], where TP is device type (HP for RC HardPhone, DV for all other devices including softphone); ID - device model ID; AT -addon type ID; AC - addon count (if any). For example 'HP-56-2-2'

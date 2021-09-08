@@ -24,8 +24,8 @@ class Index {
    * HTTP Method: get
    * Endpoint: /restapi/{apiVersion}/glip/chats/{chatId}/notes
    * Rate Limit Group: Heavy
-   * App Permission: Glip
-   * User Permission: Glip
+   * App Permission: TeamMessaging
+   * User Permission: UnifiedAppDesktop
    */
   async get(
     queryParams?: ListChatNotesParameters,
@@ -44,8 +44,8 @@ class Index {
    * HTTP Method: post
    * Endpoint: /restapi/{apiVersion}/glip/chats/{chatId}/notes
    * Rate Limit Group: Medium
-   * App Permission: Glip
-   * User Permission: Glip
+   * App Permission: TeamMessaging
+   * User Permission: UnifiedAppDesktop
    */
   async post(
     glipNoteCreate: GlipNoteCreate,

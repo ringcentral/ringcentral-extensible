@@ -18,7 +18,7 @@ class Index {
    * HTTP Method: post
    * Endpoint: /restapi/{apiVersion}/glip/chats/{chatId}/unread
    * Rate Limit Group: Medium
-   * App Permission: GlipInternal
+   * App Permission: TeamMessagingInternal
    */
   async post(restRequestConfig?: RestRequestConfig): Promise<string> {
     const r = await this.rc.post<string>(

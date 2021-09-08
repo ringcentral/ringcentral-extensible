@@ -27,7 +27,7 @@ class EmergencyLocationInfo {
   /**
    * Emergency address status
    */
-  addressStatus?: 'Valid' | 'Invalid';
+  addressStatus?: 'Valid' | 'Invalid' | 'Provisioning';
 
   /**
    * Status of emergency response location usage.
@@ -46,7 +46,7 @@ class EmergencyLocationInfo {
     | 'Failed';
 
   /**
-   * Visibility of an emergency response location. If `Private` is set, then location is visible only for restricted number of users, specified in `owners` array
+   * Visibility of an emergency response location. If `Private` is set, then location is visible only for the restricted number of users, specified in `owners` array
    * Default: Public
    */
   visibility?: 'Private' | 'Public';

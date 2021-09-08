@@ -27,6 +27,6 @@ class EmailRecipientInfo {
   /**
    * Call queue manager permission
    */
-  permission?: 'FullAccess' | 'MembersOnly';
+  permission?: 'FullAccess' | 'Messages' | 'MemberManagement';
 }
 export default EmailRecipientInfo;

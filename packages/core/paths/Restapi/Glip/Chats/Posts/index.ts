@@ -30,8 +30,8 @@ class Index {
    * HTTP Method: get
    * Endpoint: /restapi/{apiVersion}/glip/chats/{chatId}/posts
    * Rate Limit Group: Medium
-   * App Permission: Glip
-   * User Permission: Glip
+   * App Permission: TeamMessaging
+   * User Permission: UnifiedAppDesktop
    */
   async list(
     queryParams?: ReadGlipPostsParameters,
@@ -50,8 +50,8 @@ class Index {
    * HTTP Method: post
    * Endpoint: /restapi/{apiVersion}/glip/chats/{chatId}/posts
    * Rate Limit Group: Medium
-   * App Permission: Glip
-   * User Permission: Glip
+   * App Permission: TeamMessaging
+   * User Permission: UnifiedAppDesktop
    */
   async post(
     glipPostPostBody: GlipPostPostBody,
@@ -71,8 +71,8 @@ class Index {
    * HTTP Method: get
    * Endpoint: /restapi/{apiVersion}/glip/chats/{chatId}/posts/{postId}
    * Rate Limit Group: Light
-   * App Permission: Glip
-   * User Permission: Glip
+   * App Permission: TeamMessaging
+   * User Permission: UnifiedAppDesktop
    */
   async get(restRequestConfig?: RestRequestConfig): Promise<GlipPostInfo> {
     if (this.postId === null) {
@@ -91,8 +91,8 @@ class Index {
    * HTTP Method: delete
    * Endpoint: /restapi/{apiVersion}/glip/chats/{chatId}/posts/{postId}
    * Rate Limit Group: Medium
-   * App Permission: Glip
-   * User Permission: Glip
+   * App Permission: TeamMessaging
+   * User Permission: UnifiedAppDesktop
    */
   async delete(restRequestConfig?: RestRequestConfig): Promise<string> {
     if (this.postId === null) {
@@ -111,8 +111,8 @@ class Index {
    * HTTP Method: patch
    * Endpoint: /restapi/{apiVersion}/glip/chats/{chatId}/posts/{postId}
    * Rate Limit Group: Medium
-   * App Permission: Glip
-   * User Permission: Glip
+   * App Permission: TeamMessaging
+   * User Permission: UnifiedAppDesktop
    */
   async patch(
     glipPatchPostBody: GlipPatchPostBody,

@@ -24,8 +24,8 @@ class Index {
    * HTTP Method: get
    * Endpoint: /restapi/{apiVersion}/glip/persons/{personId}
    * Rate Limit Group: Light
-   * App Permission: Glip
-   * User Permission: Glip
+   * App Permission: TeamMessaging
+   * User Permission: UnifiedAppDesktop
    */
   async get(restRequestConfig?: RestRequestConfig): Promise<GlipPersonInfo> {
     if (this.personId === null) {

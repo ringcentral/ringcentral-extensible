@@ -35,8 +35,8 @@ class Index {
    * HTTP Method: get
    * Endpoint: /restapi/{apiVersion}/glip/chats
    * Rate Limit Group: Medium
-   * App Permission: Glip
-   * User Permission: Glip
+   * App Permission: TeamMessaging
+   * User Permission: UnifiedAppDesktop
    */
   async list(
     queryParams?: ListGlipChatsParameters,
@@ -55,8 +55,8 @@ class Index {
    * HTTP Method: get
    * Endpoint: /restapi/{apiVersion}/glip/chats/{chatId}
    * Rate Limit Group: Light
-   * App Permission: Glip
-   * User Permission: Glip
+   * App Permission: TeamMessaging
+   * User Permission: UnifiedAppDesktop
    */
   async get(restRequestConfig?: RestRequestConfig): Promise<GlipChatInfo> {
     if (this.chatId === null) {

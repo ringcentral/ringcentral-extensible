@@ -42,7 +42,8 @@ class SearchDirectoryEntriesRequest {
     | 'Bot'
     | 'ProxyAdmin'
     | 'DelegatedLinesGroup'
-    | 'GroupCallPickup';
+    | 'GroupCallPickup'
+    | 'Room';
 
   /**
    * Sorting settings

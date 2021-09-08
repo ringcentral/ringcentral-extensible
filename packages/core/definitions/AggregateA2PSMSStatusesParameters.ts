@@ -21,5 +21,10 @@ class AggregateA2PSMSStatusesParameters {
    * Direction of a message to filter the message list result. By default there is no filter applied - both Inbound and Outbound messages are returned
    */
   direction?: 'Inbound' | 'Outbound';
+
+  /**
+   * List of phone numbers (specified in 'to' or 'from' fields of a message) to filter the results. Maximum number of phone numbers allowed to be specified as filters is 15
+   */
+  phoneNumber?: string[];
 }
 export default AggregateA2PSMSStatusesParameters;

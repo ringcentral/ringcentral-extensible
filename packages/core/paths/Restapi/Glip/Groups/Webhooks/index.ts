@@ -19,8 +19,8 @@ class Index {
    * HTTP Method: get
    * Endpoint: /restapi/{apiVersion}/glip/groups/{groupId}/webhooks
    * Rate Limit Group: Medium
-   * App Permission: Glip
-   * User Permission: Glip
+   * App Permission: TeamMessaging
+   * User Permission: UnifiedAppDesktop
    */
   async get(restRequestConfig?: RestRequestConfig): Promise<GlipWebhookList> {
     const r = await this.rc.get<GlipWebhookList>(
@@ -36,8 +36,8 @@ class Index {
    * HTTP Method: post
    * Endpoint: /restapi/{apiVersion}/glip/groups/{groupId}/webhooks
    * Rate Limit Group: Medium
-   * App Permission: Glip
-   * User Permission: Glip
+   * App Permission: TeamMessaging
+   * User Permission: UnifiedAppDesktop
    */
   async post(restRequestConfig?: RestRequestConfig): Promise<GlipWebhookInfo> {
     const r = await this.rc.post<GlipWebhookInfo>(

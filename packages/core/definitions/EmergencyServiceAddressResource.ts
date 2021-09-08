@@ -102,6 +102,11 @@ class EmergencyServiceAddressResource {
   additionalCustomerPhone?: string;
 
   /**
+   * Status of digital line provisioning
+   */
+  lineProvisioningStatus?: 'Provisioning' | 'Valid' | 'Invalid';
+
+  /**
    * Internal identifier of a tax
    */
   taxId?: string;

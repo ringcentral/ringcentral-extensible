@@ -31,8 +31,8 @@ class Index {
    * HTTP Method: get
    * Endpoint: /restapi/{apiVersion}/glip/notes/{noteId}
    * Rate Limit Group: Medium
-   * App Permission: Glip
-   * User Permission: Glip
+   * App Permission: TeamMessaging
+   * User Permission: UnifiedAppDesktop
    */
   async get(restRequestConfig?: RestRequestConfig): Promise<GetGlipNoteInfo> {
     if (this.noteId === null) {
@@ -51,8 +51,8 @@ class Index {
    * HTTP Method: delete
    * Endpoint: /restapi/{apiVersion}/glip/notes/{noteId}
    * Rate Limit Group: Medium
-   * App Permission: Glip
-   * User Permission: Glip
+   * App Permission: TeamMessaging
+   * User Permission: UnifiedAppDesktop
    */
   async delete(restRequestConfig?: RestRequestConfig): Promise<string> {
     if (this.noteId === null) {
@@ -71,8 +71,8 @@ class Index {
    * HTTP Method: patch
    * Endpoint: /restapi/{apiVersion}/glip/notes/{noteId}
    * Rate Limit Group: Medium
-   * App Permission: Glip
-   * User Permission: Glip
+   * App Permission: TeamMessaging
+   * User Permission: UnifiedAppDesktop
    */
   async patch(
     glipNoteCreate: GlipNoteCreate,

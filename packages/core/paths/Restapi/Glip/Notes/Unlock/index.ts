@@ -18,8 +18,8 @@ class Index {
    * HTTP Method: post
    * Endpoint: /restapi/{apiVersion}/glip/notes/{noteId}/unlock
    * Rate Limit Group: Light
-   * App Permission: Glip
-   * User Permission: Glip
+   * App Permission: TeamMessaging
+   * User Permission: UnifiedAppDesktop
    */
   async post(restRequestConfig?: RestRequestConfig): Promise<string> {
     const r = await this.rc.post<string>(

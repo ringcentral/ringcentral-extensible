@@ -35,7 +35,8 @@ class GetDeviceInfoResponse {
     | 'OtherPhone'
     | 'HardPhone'
     | 'WebPhone'
-    | 'Paging';
+    | 'Paging'
+    | 'Room';
 
   /**
    * Device name. Mandatory if ordering  SoftPhone  or  OtherPhone. Optional for  HardPhone. If not specified for HardPhone, then device model name is used as device name

@@ -17,7 +17,8 @@ class ListExtensionGrantsParameters {
     | 'ApplicationExtension'
     | 'ParkLocation'
     | 'Limited'
-    | 'Bot';
+    | 'Bot'
+    | 'Room';
 
   /**
    * Default: 1

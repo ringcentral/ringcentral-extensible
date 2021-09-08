@@ -2,8 +2,8 @@ import MeetingsConfiguration from './MeetingsConfiguration';
 import NotificationSettings from './NotificationSettings';
 import MeetingConfiguration from './MeetingConfiguration';
 import VideoConfiguration from './VideoConfiguration';
-import EmergencyLocations from './EmergencyLocations';
 import CallQueuePresence from './CallQueuePresence';
+import EmergencyLocations from './EmergencyLocations';
 import AdministeredSites from './AdministeredSites';
 import MeetingRecordings from './MeetingRecordings';
 import AddressBookSync from './AddressBookSync';
@@ -308,12 +308,12 @@ class Index {
     return new AdministeredSites(this);
   }
 
-  callQueuePresence(): CallQueuePresence {
-    return new CallQueuePresence(this);
+  emergencyLocations(locationId: string | null = null): EmergencyLocations {
+    return new EmergencyLocations(this, locationId);
   }
 
-  emergencyLocations(): EmergencyLocations {
-    return new EmergencyLocations(this);
+  callQueuePresence(): CallQueuePresence {
+    return new CallQueuePresence(this);
   }
 
   videoConfiguration(): VideoConfiguration {

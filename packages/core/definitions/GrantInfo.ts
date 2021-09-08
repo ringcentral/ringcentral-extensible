@@ -44,5 +44,10 @@ class GrantInfo {
    * Specifies whether the current extension is assigned as a Members-Only manager in the call queue referenced in extension object
    */
   callQueueMembersSetup?: boolean;
+
+  /**
+   * Specifies whether the current extension is assigned as a Messages Manager in the queue referenced in extension object
+   */
+  callQueueMessages?: boolean;
 }
 export default GrantInfo;

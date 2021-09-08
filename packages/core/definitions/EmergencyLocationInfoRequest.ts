@@ -1,8 +1,4 @@
-import {
-  EmergencyLocationAddressInfo,
-  ShortSiteInfo,
-  LocationOwnerInfo,
-} from './index';
+import {EmergencyLocationAddressInfo, ShortSiteInfo} from './index';
 
 class EmergencyLocationInfoRequest {
   /**
@@ -37,11 +33,6 @@ class EmergencyLocationInfoRequest {
    * Visibility of an emergency response location. If `Private` is set, then location is visible only for restricted number of users, specified in `owners` array
    * Default: Public
    */
-  visibility?: 'Private' | 'Public';
-
-  /**
-   * List of private location owners
-   */
-  owners?: LocationOwnerInfo[];
+  visibility?: 'Public';
 }
 export default EmergencyLocationInfoRequest;

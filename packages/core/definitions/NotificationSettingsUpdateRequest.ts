@@ -8,7 +8,7 @@ import {
 
 class NotificationSettingsUpdateRequest {
   /**
-   * List of notification recipient email addresses
+   * List of notification recipient email addresses. Should not be empty if 'includeManagers' parameter is set to false
    */
   emailAddresses?: string[];
 
@@ -43,7 +43,8 @@ class NotificationSettingsUpdateRequest {
   missedCalls?: MissedCallsInfo;
 
   /**
-   * Specifies if managers' emails are included in the list of emails to which notifications are sent
+   * Specifies if managers' emails are included in the list of emails to which notifications are sent. If not specified, then the value is 'True'
+   * Default: true
    */
   includeManagers?: boolean;
 }

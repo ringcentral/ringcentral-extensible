@@ -29,8 +29,8 @@ class Index {
    * HTTP Method: get
    * Endpoint: /restapi/{apiVersion}/glip/events
    * Rate Limit Group: Medium
-   * App Permission: Glip
-   * User Permission: Glip
+   * App Permission: TeamMessaging
+   * User Permission: UnifiedAppDesktop
    */
   async list(
     queryParams?: ReadGlipEventsParameters,
@@ -49,8 +49,8 @@ class Index {
    * HTTP Method: post
    * Endpoint: /restapi/{apiVersion}/glip/events
    * Rate Limit Group: Medium
-   * App Permission: Glip
-   * User Permission: Glip
+   * App Permission: TeamMessaging
+   * User Permission: UnifiedAppDesktop
    */
   async post(
     glipEventCreate: GlipEventCreate,
@@ -70,8 +70,8 @@ class Index {
    * HTTP Method: get
    * Endpoint: /restapi/{apiVersion}/glip/events/{eventId}
    * Rate Limit Group: Medium
-   * App Permission: Glip
-   * User Permission: Glip
+   * App Permission: TeamMessaging
+   * User Permission: UnifiedAppDesktop
    */
   async get(restRequestConfig?: RestRequestConfig): Promise<GlipEventInfo> {
     if (this.eventId === null) {
@@ -90,8 +90,8 @@ class Index {
    * HTTP Method: put
    * Endpoint: /restapi/{apiVersion}/glip/events/{eventId}
    * Rate Limit Group: Medium
-   * App Permission: Glip
-   * User Permission: Glip
+   * App Permission: TeamMessaging
+   * User Permission: UnifiedAppDesktop
    */
   async put(
     glipEventCreate: GlipEventCreate,
@@ -114,8 +114,8 @@ class Index {
    * HTTP Method: delete
    * Endpoint: /restapi/{apiVersion}/glip/events/{eventId}
    * Rate Limit Group: Medium
-   * App Permission: Glip
-   * User Permission: Glip
+   * App Permission: TeamMessaging
+   * User Permission: UnifiedAppDesktop
    */
   async delete(restRequestConfig?: RestRequestConfig): Promise<string> {
     if (this.eventId === null) {
