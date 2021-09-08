@@ -3,16 +3,7 @@
   "npmClient": "yarn",
   "packages": [
     "packages/core",
-    "packages/extensions/authorize-uri",
-    "packages/extensions/debug",
-    "packages/extensions/events",
-    "packages/extensions/pubnub",
-    "packages/extensions/rate-limit",
-    "packages/extensions/rcsdk",
-    "packages/extensions/retry",
-    "packages/extensions/ws",
-    "packages/extensions/engage-voice",
-    "packages/extensions/discovery",
+    "packages/extensions/*",
     "test"
   ]
 }
