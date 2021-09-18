@@ -21,7 +21,12 @@ class SipRegistrationDeviceEmergencyInfo {
   /**
    * Emergency address status
    */
-  addressStatus?: 'Valid' | 'Invalid';
+  addressStatus?: 'Valid' | 'Invalid' | 'Processing';
+
+  /**
+   * Specifies whether to return only private or only public (company) ERLs (Emergency Response Locations)
+   */
+  visibility?: 'Private' | 'Public';
 
   /**
    * Resulting status of emergency address synchronization. Returned if `syncEmergencyAddress` parameter is set to 'True'

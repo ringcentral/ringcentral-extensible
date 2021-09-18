@@ -18,7 +18,12 @@ class DeviceEmergencyInfo {
   /**
    * Emergency address status
    */
-  addressStatus?: 'Valid' | 'Invalid';
+  addressStatus?: 'Valid' | 'Invalid' | 'Provisioning';
+
+  /**
+   * Visibility of an emergency response location. If `Private` is set, then location is visible only for the restricted number of users, specified in `owners` array
+   */
+  visibility?: 'Private' | 'Public';
 
   /**
    * Resulting status of emergency address synchronization. Returned if `syncEmergencyAddress` parameter is set to 'True'
