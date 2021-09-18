@@ -6,10 +6,10 @@
     "link": "yarn link @rc-ex/core && yarn link @rc-ex/authorize-uri && yarn link @rc-ex/debug && yarn link @rc-ex/discovery && yarn link @rc-ex/engage-voice && yarn link @rc-ex/events && yarn link @rc-ex/pubnub && yarn link @rc-ex/rate-limit && yarn link @rc-ex/rcsdk && yarn link @rc-ex/retry && yarn link @rc-ex/ws"
   },
   "devDependencies": {
-    "@ringcentral/sdk": "^4.6.0",
+    "@ringcentral/sdk": "^4.6.1",
     "@types/jest": "^27.0.1",
     "dotenv-override-true": "^6.2.2",
-    "jest": "^27.1.1",
+    "jest": "^27.2.0",
     "ts-jest": "^27.0.5",
     "ts-node": "^10.2.1",
     "wait-for-async": "^0.5.0"

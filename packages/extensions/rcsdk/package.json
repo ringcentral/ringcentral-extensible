@@ -18,9 +18,9 @@
     "access": "public"
   },
   "devDependencies": {
-    "@ringcentral/sdk": "^4.6.0"
+    "@ringcentral/sdk": "^4.6.1"
   },
   "peerDependencies": {
-    "@ringcentral/sdk": "^4.6.0"
+    "@ringcentral/sdk": "^4.6.1"
   }
 }
