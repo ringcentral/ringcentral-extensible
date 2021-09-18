@@ -1,6 +1,6 @@
 {
   "name": "@rc-ex/rcsdk",
-  "version": "0.8.1",
+  "version": "0.8.2",
   "description": "@ringcentral/sdk extension for ringcentral-extensible project",
   "author": "Tyler Liu <tyler.liu@ringcentral.com>",
   "homepage": "https://github.com/ringcentral/ringcentral-extensible/tree/master/packages/extensions/rcsdk",
