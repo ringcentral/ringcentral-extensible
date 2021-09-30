@@ -34,7 +34,7 @@
   resolved "https://registry.yarnpkg.com/@tsconfig/node16/-/node16-1.0.2.tgz#423c77877d0569db20e1fc80885ac4118314010e"
   integrity sha512-eZxlbI8GZscaGS7kkc/trHTT5xgrjH3/1n2JDwusC9iahPKWMRvRjJSAN5mCXviuTGQ/lHnhvv8Q1YTpnfz9gA==
 
-"@types/js-yaml@^4.0.2":
+"@types/js-yaml@^4.0.3":
   version "4.0.3"
   resolved "https://registry.yarnpkg.com/@types/js-yaml/-/js-yaml-4.0.3.tgz#9f33cd6fbf0d5ec575dc8c8fc69c7fec1b4eb200"
   integrity sha512-5t9BhoORasuF5uCPr+d5/hdB++zRFUTMIZOzbNkr+jZh3yQht4HYbRDyj9fY8n2TZT30iW9huzav73x4NikqWg==
@@ -44,10 +44,10 @@
   resolved "https://registry.yarnpkg.com/@types/qs/-/qs-6.9.7.tgz#63bb7d067db107cc1e457c303bc25d511febf6cb"
   integrity sha512-FGa1F62FT09qcrueBA6qYTrJPVDzah9a+493+o2PCXsesWHIn27G98TsSMs3WPNbZIEj4+VJf6saSFpvD+3Zsw==
 
-"@types/ramda@^0.27.43":
-  version "0.27.44"
-  resolved "https://registry.yarnpkg.com/@types/ramda/-/ramda-0.27.44.tgz#ba2283d67fcff366f7e68bd5124a0466e467967f"
-  integrity sha512-SlEHKcLG36PlU+rLJwp8p4dpC9Hp/LiH6n0REX2m4iEB15PWe1qKQzgNSZrYKhTHDFvkeEM/F2gcYwfighsEuQ==
+"@types/ramda@^0.27.45":
+  version "0.27.45"
+  resolved "https://registry.yarnpkg.com/@types/ramda/-/ramda-0.27.45.tgz#1d692736da8f8c199e10c751d4799cab03cd9acd"
+  integrity sha512-WDH7bIuy+JQHzYx6jgo+ytSHco/J+DWaUfxXQ2eBjilxIj4rG0aqQNU56AtO5Tem9hmx8na2ouSAtn5Tz8RePQ==
   dependencies:
     ts-toolbelt "^6.15.1"
 
@@ -262,7 +262,7 @@ object-inspect@^1.9.0:
   resolved "https://registry.yarnpkg.com/object-inspect/-/object-inspect-1.11.0.tgz#9dceb146cedd4148a0d9e51ab88d34cf509922b1"
   integrity sha512-jp7ikS6Sd3GxQfZJPyH3cjcbJF6GZPClgdV+EFygjFLQ5FmW/dRUnTd9PQ9k0JhoNDabWFbpF1yCdSWCC6gexg==
 
-openapi-types@^9.1.0:
+openapi-types@^9.1.0, openapi-types@^9.3.0:
   version "9.3.0"
   resolved "https://registry.yarnpkg.com/openapi-types/-/openapi-types-9.3.0.tgz#2d90549edb928cf06cf83018485a1a5961fbd2b9"
   integrity sha512-sR23YjmuwDSMsQVZDHbV9mPgi0RyniQlqR0AQxTC2/F3cpSjRFMH3CFPjoWvNqhC4OxPkDYNb2l8Mc1Me6D/KQ==
@@ -303,23 +303,23 @@ ramda@^0.27.1:
   resolved "https://registry.yarnpkg.com/ramda/-/ramda-0.27.1.tgz#66fc2df3ef873874ffc2da6aa8984658abacf5c9"
   integrity sha512-PgIdVpn5y5Yns8vqb8FzBUEYn98V3xcPgawAkkgj0YJ0qDsnHCiNmZYfOGMgOvoB0eWFLpYbhxUR3mxfDIMvpw==
 
-ringcentral-code-generator@^0.1.5:
-  version "0.1.5"
-  resolved "https://registry.yarnpkg.com/ringcentral-code-generator/-/ringcentral-code-generator-0.1.5.tgz#352d18822ddbda1e00da3a076f8e2c9a5a7935bc"
-  integrity sha512-PO27ZQbQ7ui/TjbJCl0y2WVEi0JEA9EKwtwQfG+QD1PjyMZmVAoewpnjIaT9IWbfpF+Gl0NHhPZ/sjOHAMiqZg==
+ringcentral-code-generator@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/ringcentral-code-generator/-/ringcentral-code-generator-0.2.0.tgz#b914b0eff0d14a47bfc96b2f24d163e895c22ec3"
+  integrity sha512-z8LnHfV9nIr/mjV//jM2DFRz4nF7KSLl3+Gz7IClDn3ksIxbQsFrY2kPHGUS+63ynReout0eY1hwlQyUVtCEGw==
   dependencies:
-    "@types/js-yaml" "^4.0.2"
-    "@types/ramda" "^0.27.43"
+    "@types/js-yaml" "^4.0.3"
+    "@types/ramda" "^0.27.45"
     change-case "^4.1.2"
     js-yaml "^4.1.0"
-    openapi-types "^9.1.0"
+    openapi-types "^9.3.0"
     ramda "^0.27.1"
-    ringcentral-open-api-parser "^0.5.1"
+    ringcentral-open-api-parser "^0.5.4"
 
-ringcentral-open-api-parser@^0.5.1:
-  version "0.5.1"
-  resolved "https://registry.yarnpkg.com/ringcentral-open-api-parser/-/ringcentral-open-api-parser-0.5.1.tgz#cf0e29b77a09955fde500904d5ef56d7db7089ed"
-  integrity sha512-ZhewgKOP2LLJLNw94rDIIives23C9W3jCkiXMHt4mb2txpGtO/yfMjxziC8wnnKR4crrBTw0ksHW7oXZ5ao0ag==
+ringcentral-open-api-parser@^0.5.4:
+  version "0.5.4"
+  resolved "https://registry.yarnpkg.com/ringcentral-open-api-parser/-/ringcentral-open-api-parser-0.5.4.tgz#54a867f213085ddf9a3d72801442a83700cd8ca8"
+  integrity sha512-S9GcIWGtnmPZz85Z6EUCh+Y0mRYA//gLifml/JejiUZfUJQF45pLsENCalgUZc/9x/oAkeuzEXed3GnuTkJfPw==
   dependencies:
     openapi-types "^9.1.0"
     ramda "^0.27.1"

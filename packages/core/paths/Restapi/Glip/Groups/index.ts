@@ -6,12 +6,17 @@ import {RingCentral} from '../../../..';
 class Index {
   rc: RingCentral;
   parent: Parent;
+  groupId: string | null;
 
-  constructor(parent: Parent) {
+  constructor(parent: Parent, groupId: string | null = null) {
     this.parent = parent;
     this.rc = parent.rc;
+    this.groupId = groupId;
   }
-  path(): string {
+  path(withParameter = true): string {
+    if (withParameter && this.groupId !== null) {
+      return `${this.parent.path()}/groups/${this.groupId}`;
+    }
     return `${this.parent.path()}/groups`;
   }
 

@@ -7,12 +7,19 @@ import {RingCentral} from '../../../..';
 class Index {
   rc: RingCentral;
   parent: Parent;
+  pagingOnlyGroupId: string | null;
 
-  constructor(parent: Parent) {
+  constructor(parent: Parent, pagingOnlyGroupId: string | null = null) {
     this.parent = parent;
     this.rc = parent.rc;
+    this.pagingOnlyGroupId = pagingOnlyGroupId;
   }
-  path(): string {
+  path(withParameter = true): string {
+    if (withParameter && this.pagingOnlyGroupId !== null) {
+      return `${this.parent.path()}/paging-only-groups/${
+        this.pagingOnlyGroupId
+      }`;
+    }
     return `${this.parent.path()}/paging-only-groups`;
   }
 

@@ -24,8 +24,8 @@ class Index {
     return `${this.parent.path()}/dictionary`;
   }
 
-  brand(): Brand {
-    return new Brand(this);
+  brand(brandId: string | null = null): Brand {
+    return new Brand(this, brandId);
   }
 
   state(stateId: string | null = null): State {

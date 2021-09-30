@@ -175,8 +175,8 @@ class Index {
     return new BusinessAddress(this);
   }
 
-  pagingOnlyGroups(): PagingOnlyGroups {
-    return new PagingOnlyGroups(this);
+  pagingOnlyGroups(pagingOnlyGroupId: string | null = null): PagingOnlyGroups {
+    return new PagingOnlyGroups(this, pagingOnlyGroupId);
   }
 
   meetingRecordings(): MeetingRecordings {

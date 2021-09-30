@@ -44,8 +44,8 @@ class Index {
     return new Tasks(this, taskId);
   }
 
-  groups(): Groups {
-    return new Groups(this);
+  groups(groupId: string | null = null): Groups {
+    return new Groups(this, groupId);
   }
 
   recent(): Recent {
