@@ -12,10 +12,10 @@
     "prepublishOnly": "yarn reset && yarn compile"
   },
   "devDependencies": {
-    "@types/node": "^16.9.2",
+    "@types/node": "^16.10.9",
     "gts": "^3.1.0",
     "lerna": "^4.0.0",
-    "typescript": "^4.4.3",
+    "typescript": "^4.4.4",
     "yarn-upgrade-all": "^0.5.4"
   }
 }
