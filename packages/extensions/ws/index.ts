@@ -5,7 +5,7 @@ import {
   RestMethod,
 } from '@rc-ex/core/lib/Rest';
 import SdkExtension from '@rc-ex/core/lib/SdkExtension';
-import WS, {OPEN, CONNECTING} from 'isomorphic-ws';
+import WS, {OPEN, CONNECTING, MessageEvent} from 'isomorphic-ws';
 import hyperid from 'hyperid';
 import {EventEmitter} from 'events';
 import waitFor from 'wait-for-async';
@@ -275,7 +275,8 @@ class WebSocketExtension extends SdkExtension {
     }
 
     // listen for new wsc data
-    this.ws.addEventListener('message', (event: WsgEvent) => {
+    this.ws.addEventListener('message', (mEvent: MessageEvent) => {
+      const event = mEvent as WsgEvent;
       const [meta, body] = Utils.splitWsgData(event.data);
       if (
         meta.wsc &&

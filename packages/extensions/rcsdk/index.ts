@@ -48,7 +48,7 @@ class RcSdkExtension extends SdkExtension {
         data: await r.json(),
         status: r.status,
         statusText: r.statusText,
-        headers: r.headers,
+        headers: r.headers as unknown as Record<string, string>,
         config: {
           method: method,
           baseURL: r.url.split(endpoint)[0],

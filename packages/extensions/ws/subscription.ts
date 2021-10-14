@@ -3,6 +3,7 @@ import {
   SubscriptionInfo,
 } from '@rc-ex/core/lib/definitions';
 import {RestResponse} from '@rc-ex/core/lib/Rest';
+import {MessageEvent} from 'ws';
 
 import WebSocketExtension from './index';
 import {WsgEvent, WsgMeta} from './types';
@@ -11,7 +12,7 @@ import Utils from './utils';
 class Subscription {
   wse: WebSocketExtension;
   eventFilters: string[];
-  eventListener: (event: WsgEvent) => void;
+  eventListener: (event: MessageEvent) => void;
   timeout?: NodeJS.Timeout;
   enabled = true;
 
@@ -22,7 +23,8 @@ class Subscription {
   ) {
     this.wse = wse;
     this.eventFilters = eventFilters;
-    this.eventListener = (event: WsgEvent) => {
+    this.eventListener = (mEvent: MessageEvent) => {
+      const event = mEvent as WsgEvent;
       const [meta, body]: [WsgMeta, {subscriptionId: string}] =
         Utils.splitWsgData(event.data);
       if (

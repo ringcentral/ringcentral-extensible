@@ -1,4 +1,4 @@
-import WS from 'isomorphic-ws';
+import WS, {MessageEvent} from 'isomorphic-ws';
 
 import {WsgMeta, WsgEvent} from './types';
 import {ClosedException, TimeoutException} from './exceptions';
@@ -27,7 +27,8 @@ ${JSON.stringify(JSON.parse(str), null, 2)}
 ******`
       );
     };
-    ws.addEventListener('message', (event: WsgEvent) => {
+    ws.addEventListener('message', (mEvent: MessageEvent) => {
+      const event = mEvent as WsgEvent;
       console.debug(
         `*** WebSocket incoming message: ***
 ${JSON.stringify(JSON.parse(event.data), null, 2)}
@@ -64,7 +65,8 @@ ${JSON.stringify(JSON.parse(event.data), null, 2)}
         reject(new TimeoutException());
         return;
       }, timeout);
-      const handler = (event: WsgEvent) => {
+      const handler = (mEvent: MessageEvent) => {
+        const event = mEvent as WsgEvent;
         const [meta, body] = Utils.splitWsgData(event.data);
         if (matchCondition(meta)) {
           ws.removeEventListener('message', handler);

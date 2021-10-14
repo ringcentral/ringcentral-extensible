@@ -65,7 +65,7 @@ class DiscoveryExtension extends SdkExtension {
     while (true) {
       try {
         retryCount += 1;
-        const r = await axios.get(uri.toString());
+        const r = await axios.get<InitialDiscovery>(uri.toString());
         this.initialDiscovery = r.data;
         this.rc.rest.server = this.initialDiscovery!.coreApi.baseUri;
         this.options.initialRetrySettings!.retryCount =
