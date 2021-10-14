@@ -248,7 +248,6 @@ class WebSocketExtension extends SdkExtension {
     }
     this.ws = new WS(wsUri);
     this.eventEmitter.emit(Events.newWebSocketObject, this.ws);
-    this.wsTokenExpiresAt = 0; // mark wsToken as expired after ws connection success
 
     // override send method to wait for connecting
     const send = this.ws.send.bind(this.ws);
@@ -303,6 +302,7 @@ class WebSocketExtension extends SdkExtension {
       throw new ConnectionException(event);
     }
     this.connectionDetails = body;
+    this.wsTokenExpiresAt = 0; // mark wsToken as expired after ws connection success
 
     // recover all subscriptions, if there are any
     for (const subscription of this.subscriptions.filter(sub => sub.enabled)) {
