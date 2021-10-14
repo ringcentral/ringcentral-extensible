@@ -41,6 +41,7 @@ class WebSocketExtension extends SdkExtension {
   options: WebSocketOptions;
   rc!: RingCentral;
   wsToken!: WsToken;
+  wsTokenExpiresAt = 0;
   ws!: WS;
   connectionDetails!: ConnectionDetails;
   wsc!: Wsc;
@@ -234,16 +235,20 @@ class WebSocketExtension extends SdkExtension {
   }
 
   async connect(recoverSession = false) {
-    this.rateLimitExtension.enable();
-    const r = await this.rc.post('/restapi/oauth/wstoken');
-    this.rateLimitExtension.disable();
-    this.wsToken = r.data as WsToken;
+    if (Date.now() > this.wsTokenExpiresAt) {
+      this.rateLimitExtension.enable();
+      const r = await this.rc.post('/restapi/oauth/wstoken');
+      this.rateLimitExtension.disable();
+      this.wsToken = r.data as WsToken;
+      this.wsTokenExpiresAt = Date.now() + this.wsToken.expires_in - 10;
+    }
     let wsUri = `${this.wsToken.uri}?access_token=${this.wsToken.ws_access_token}`;
     if (recoverSession) {
       wsUri = `${wsUri}&wsc=${this.wsc.token}`;
     }
     this.ws = new WS(wsUri);
     this.eventEmitter.emit(Events.newWebSocketObject, this.ws);
+    this.wsTokenExpiresAt = 0; // mark wsToken as expired after ws connection success
 
     // override send method to wait for connecting
     const send = this.ws.send.bind(this.ws);
