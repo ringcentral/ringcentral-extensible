@@ -240,7 +240,8 @@ class WebSocketExtension extends SdkExtension {
       const r = await this.rc.post('/restapi/oauth/wstoken');
       this.rateLimitExtension.disable();
       this.wsToken = r.data as WsToken;
-      this.wsTokenExpiresAt = Date.now() + this.wsToken.expires_in - 10;
+      this.wsTokenExpiresAt =
+        Date.now() + (this.wsToken.expires_in - 10) * 1000;
     }
     let wsUri = `${this.wsToken.uri}?access_token=${this.wsToken.ws_access_token}`;
     if (recoverSession) {
