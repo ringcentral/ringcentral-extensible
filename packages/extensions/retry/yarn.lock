@@ -2,7 +2,7 @@
 # yarn lockfile v1
 
 
-wait-for-async@^0.5.0:
-  version "0.5.0"
-  resolved "https://registry.yarnpkg.com/wait-for-async/-/wait-for-async-0.5.0.tgz#632b0262e8997e6fd4f0dea64a612f23a1380916"
-  integrity sha512-fyPjbUCgqNlOBZBV/VscFz3GlqOpFwnsp5mo61BbiXgUfPKUSw3U+hx1n5o65fu6GpfzrSB0KN6P8+O5KCFXtw==
+wait-for-async@^0.6.0:
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/wait-for-async/-/wait-for-async-0.6.0.tgz#b3a50eaef3dcbc18cbc52987d7ac82e515023781"
+  integrity sha512-jf5TFOroKPeRq/LZ1PQRFsN3xLw8H002UAikKLjv/km0YZ1okTbLw4gxmFt6etu2jfzsBuzVJjvSuM92/THqFg==

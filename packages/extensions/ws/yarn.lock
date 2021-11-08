@@ -3,9 +3,9 @@
 
 
 "@types/node@*":
-  version "16.10.9"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-16.10.9.tgz#8f1cdd517972f76a3b928298f4c0747cd6fef25a"
-  integrity sha512-H9ReOt+yqIJPCutkTYjFjlyK6WEMQYT9hLZMlWtOjFQY2ItppsWZ6RJf8Aw+jz5qTYceuHvFgPIaKOHtLAEWBw==
+  version "16.11.6"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-16.11.6.tgz#6bef7a2a0ad684cf6e90fcfe31cecabd9ce0a3ae"
+  integrity sha512-ua7PgUoeQFjmWPcoo9khiPum3Pd60k4/2ZGXt18sm2Slk0W0xZTqt5Y0Ny1NyBiN1EVQ/+FaF9NcY4Qe6rwk5w==
 
 "@types/ws@^8.2.0":
   version "8.2.0"
@@ -42,10 +42,10 @@ uuid@^8.3.2:
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-8.3.2.tgz#80d5b5ced271bb9af6c445f21a1a04c606cefbe2"
   integrity sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg==
 
-wait-for-async@^0.5.0:
-  version "0.5.0"
-  resolved "https://registry.yarnpkg.com/wait-for-async/-/wait-for-async-0.5.0.tgz#632b0262e8997e6fd4f0dea64a612f23a1380916"
-  integrity sha512-fyPjbUCgqNlOBZBV/VscFz3GlqOpFwnsp5mo61BbiXgUfPKUSw3U+hx1n5o65fu6GpfzrSB0KN6P8+O5KCFXtw==
+wait-for-async@^0.6.0:
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/wait-for-async/-/wait-for-async-0.6.0.tgz#b3a50eaef3dcbc18cbc52987d7ac82e515023781"
+  integrity sha512-jf5TFOroKPeRq/LZ1PQRFsN3xLw8H002UAikKLjv/km0YZ1okTbLw4gxmFt6etu2jfzsBuzVJjvSuM92/THqFg==
 
 ws@^8.2.3:
   version "8.2.3"
