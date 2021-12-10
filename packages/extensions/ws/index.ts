@@ -11,6 +11,7 @@ import {EventEmitter} from 'events';
 import waitFor from 'wait-for-async';
 import RestException from '@rc-ex/core/lib/RestException';
 import {SubscriptionInfo} from '@rc-ex/core/lib/definitions';
+import debounce from 'lodash/debounce';
 
 import {request} from './rest';
 import {
@@ -45,6 +46,8 @@ class WebSocketExtension extends SdkExtension {
   connectionDetails!: ConnectionDetails;
   wsc!: Wsc;
   subscriptions: Subscription[] = [];
+  recover: Function;
+  connect: Function;
 
   // for auto recover
   intervalHandle?: NodeJS.Timeout;
@@ -66,6 +69,14 @@ class WebSocketExtension extends SdkExtension {
       return Math.min(8000, interval);
     };
     this.options.autoRecover.pingServerInterval ??= 30000;
+    this.recover = debounce(this._recover, 1000, {
+      leading: true,
+      trailing: false,
+    });
+    this.connect = debounce(this._connect, 1000, {
+      leading: true,
+      trailing: false,
+    });
   }
 
   disable() {
@@ -179,7 +190,7 @@ class WebSocketExtension extends SdkExtension {
     // browser only code end
   }
 
-  async recover() {
+  async _recover() {
     if (this.ws?.readyState === OPEN || this.ws?.readyState === CONNECTING) {
       return;
     }
@@ -229,7 +240,7 @@ class WebSocketExtension extends SdkExtension {
     }
   }
 
-  async connect(recoverSession = false) {
+  async _connect(recoverSession = false) {
     if (Date.now() > this.wsTokenExpiresAt) {
       const r = await this.rc.post('/restapi/oauth/wstoken');
       this.wsToken = r.data as WsToken;
