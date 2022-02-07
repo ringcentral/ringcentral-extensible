@@ -24,6 +24,12 @@ class PubNubExtension extends SdkExtension {
       subscription.enabled = false;
     }
   }
+  enable() {
+    super.enable();
+    for (const subscription of this.subscriptions ?? []) {
+      subscription.enabled = true;
+    }
+  }
 
   async subscribe(
     eventFilters: string[],
