@@ -3,6 +3,7 @@ import SdkExtension from '@rc-ex/core/lib/SdkExtension';
 import {
   SubscriptionInfo,
   CreateSubscriptionRequest,
+  GetExtensionInfoResponse,
 } from '@rc-ex/core/lib/definitions';
 import PubNub, {PubnubConfig} from 'pubnub';
 import {RestResponse} from '@rc-ex/core/lib/Rest';
@@ -10,9 +11,11 @@ import {RestResponse} from '@rc-ex/core/lib/Rest';
 class PubNubExtension extends SdkExtension {
   rc!: RingCentral;
   subscriptions: Subscription[] = [];
+  extInfo!: GetExtensionInfoResponse;
 
   async install(rc: RingCentral) {
     this.rc = rc;
+    this.extInfo = await this.rc.restapi().account().extension().get();
   }
 
   disable() {
@@ -88,6 +91,7 @@ export class Subscription {
       .subscription()
       .post(this.requestBody);
     this.pubnub = new PubNub({
+      uuid: this.pne.extInfo.id?.toString(),
       subscribeKey: this.subscriptionInfo!.deliveryMode!.subscriberKey!,
       origin: 'ringcentral.pubnubapi.com',
       useRandomIVs: false,
