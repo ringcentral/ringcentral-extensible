@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@ringcentral/sdk@^4.6.1":
-  version "4.6.1"
-  resolved "https://registry.yarnpkg.com/@ringcentral/sdk/-/sdk-4.6.1.tgz#b031fa9129c037ef3e7f43c19bd7d1ae71efdc8d"
-  integrity sha512-TwfvIlH7bUt1StJHZQe8dMdC/HKoW9uSnmNXpQezMvksRT6TUbRRq1Y+g9vNo8bB77lPWgzF0D1A4/deP1RTjQ==
+"@ringcentral/sdk@^4.7.0":
+  version "4.7.0"
+  resolved "https://registry.yarnpkg.com/@ringcentral/sdk/-/sdk-4.7.0.tgz#1ab7a94e9bc4ebe1a9179d1dc166bafc9f6ccd48"
+  integrity sha512-NC3W5b/ojONz38J2bAkrp2XVJtrElZdVx4PmcOYZR6fpkJviwTc2jm+TrXKA9dxi69tj7F4lQpqUw0Dg3RdAVA==
   dependencies:
     dom-storage "2.1.0"
     is-plain-object "2.0.4"

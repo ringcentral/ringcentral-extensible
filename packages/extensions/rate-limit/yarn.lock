@@ -2,14 +2,14 @@
 # yarn lockfile v1
 
 
-"@rc-ex/retry@^0.8.1":
-  version "0.8.1"
-  resolved "https://registry.yarnpkg.com/@rc-ex/retry/-/retry-0.8.1.tgz#8689cf1477b8ce9dee31c466fa7f69f0b79c5299"
-  integrity sha512-7s6F22i24PGlBYOuc8uIMmtQV54avcaMEoR98u/bA3KR306w545A8dpz1nqTlbLH/4RYezMdphhJxYtvrn5P6A==
+"@rc-ex/retry@^0.8.2":
+  version "0.8.2"
+  resolved "https://registry.yarnpkg.com/@rc-ex/retry/-/retry-0.8.2.tgz#4a0b972fa34a206bb5feb468b408ddc74e3e5671"
+  integrity sha512-upBsKQKjsRhvritj39FzsyrZ5ouH30IZu8VYAC9LLQ73BGSZrMvgRQwYmqLvpNfrFlouF0XXquNllj5pVNKJZA==
   dependencies:
-    wait-for-async "^0.5.0"
+    wait-for-async "^0.6.0"
 
-wait-for-async@^0.5.0:
-  version "0.5.0"
-  resolved "https://registry.yarnpkg.com/wait-for-async/-/wait-for-async-0.5.0.tgz#632b0262e8997e6fd4f0dea64a612f23a1380916"
-  integrity sha512-fyPjbUCgqNlOBZBV/VscFz3GlqOpFwnsp5mo61BbiXgUfPKUSw3U+hx1n5o65fu6GpfzrSB0KN6P8+O5KCFXtw==
+wait-for-async@^0.6.0:
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/wait-for-async/-/wait-for-async-0.6.0.tgz#b3a50eaef3dcbc18cbc52987d7ac82e515023781"
+  integrity sha512-jf5TFOroKPeRq/LZ1PQRFsN3xLw8H002UAikKLjv/km0YZ1okTbLw4gxmFt6etu2jfzsBuzVJjvSuM92/THqFg==
