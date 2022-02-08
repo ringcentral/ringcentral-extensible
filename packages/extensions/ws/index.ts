@@ -140,6 +140,9 @@ class WebSocketExtension extends SdkExtension {
     }
     let retriesAttempted = 0;
     const check = async () => {
+      if (this.options.autoRecover?.enabled !== true) {
+        return;
+      }
       if (this.ws?.readyState !== OPEN && this.ws?.readyState !== CONNECTING) {
         clearInterval(this.intervalHandle!);
         try {
@@ -273,10 +276,11 @@ class WebSocketExtension extends SdkExtension {
         if (this.pingServerHandle) {
           clearTimeout(this.pingServerHandle);
         }
-        this.pingServerHandle = setTimeout(
-          () => this.pingServer(),
-          this.options.autoRecover!.pingServerInterval
-        );
+        this.pingServerHandle = setTimeout(() => {
+          if (this.options.autoRecover?.enabled === true) {
+            this.pingServer();
+          }
+        }, this.options.autoRecover!.pingServerInterval);
       });
     }
 
