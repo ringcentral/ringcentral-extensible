@@ -225,6 +225,9 @@ class WebSocketExtension extends SdkExtension {
   }
 
   async pingServer() {
+    if (this.options.autoRecover?.enabled !== true) {
+      return;
+    }
     try {
       if (this.ws?.ping) {
         // node.js
@@ -276,11 +279,10 @@ class WebSocketExtension extends SdkExtension {
         if (this.pingServerHandle) {
           clearTimeout(this.pingServerHandle);
         }
-        this.pingServerHandle = setTimeout(() => {
-          if (this.options.autoRecover?.enabled === true) {
-            this.pingServer();
-          }
-        }, this.options.autoRecover!.pingServerInterval);
+        this.pingServerHandle = setTimeout(
+          () => this.pingServer(),
+          this.options.autoRecover!.pingServerInterval
+        );
       });
     }
 
