@@ -4,6 +4,7 @@ import Restapi from './paths/Restapi';
 import Scim from './paths/Scim';
 import Rest, {RestOptions, RestRequestConfig} from './Rest';
 import SdkExtension from './SdkExtension';
+import Analytics from './paths/Analytics';
 
 type PasswordFlowOptions = {
   username: string;
@@ -180,6 +181,10 @@ export class RingCentral {
 
   scim(version: string | null = 'v2'): Scim {
     return new Scim(this, version);
+  }
+
+  analytics(): Analytics {
+    return new Analytics(this);
   }
 }
 
