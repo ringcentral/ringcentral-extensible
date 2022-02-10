@@ -34,20 +34,20 @@
   resolved "https://registry.yarnpkg.com/@tsconfig/node16/-/node16-1.0.2.tgz#423c77877d0569db20e1fc80885ac4118314010e"
   integrity sha512-eZxlbI8GZscaGS7kkc/trHTT5xgrjH3/1n2JDwusC9iahPKWMRvRjJSAN5mCXviuTGQ/lHnhvv8Q1YTpnfz9gA==
 
-"@types/js-yaml@^4.0.3":
-  version "4.0.4"
-  resolved "https://registry.yarnpkg.com/@types/js-yaml/-/js-yaml-4.0.4.tgz#cc38781257612581a1a0eb25f1709d2b06812fce"
-  integrity sha512-AuHubXUmg0AzkXH0Mx6sIxeY/1C110mm/EkE/gB1sTRz3h2dao2W/63q42SlVST+lICxz5Oki2hzYA6+KnnieQ==
+"@types/js-yaml@^4.0.5":
+  version "4.0.5"
+  resolved "https://registry.yarnpkg.com/@types/js-yaml/-/js-yaml-4.0.5.tgz#738dd390a6ecc5442f35e7f03fa1431353f7e138"
+  integrity sha512-FhpRzf927MNQdRZP0J5DLIdTXhjLYzeUTmLAu69mnVksLH9CJY3IuSeEgbKUki7GQZm0WqDkGzyxju2EZGD2wA==
 
 "@types/qs@^6.9.7":
   version "6.9.7"
   resolved "https://registry.yarnpkg.com/@types/qs/-/qs-6.9.7.tgz#63bb7d067db107cc1e457c303bc25d511febf6cb"
   integrity sha512-FGa1F62FT09qcrueBA6qYTrJPVDzah9a+493+o2PCXsesWHIn27G98TsSMs3WPNbZIEj4+VJf6saSFpvD+3Zsw==
 
-"@types/ramda@^0.27.45":
-  version "0.27.46"
-  resolved "https://registry.yarnpkg.com/@types/ramda/-/ramda-0.27.46.tgz#05ab23a4fd75668d26c674448f3d55cc215edd75"
-  integrity sha512-PpHUGfV3AkUT57kP9GzS6NIHHebd5wHuA19tV/SDqrVNkHrJJSfNEq/imyt7JGKBdn7VgktXUN137mrI/shzkw==
+"@types/ramda@^0.27.64":
+  version "0.27.64"
+  resolved "https://registry.yarnpkg.com/@types/ramda/-/ramda-0.27.64.tgz#7e23f2bf7b9729bcbd59223f100460ead6829008"
+  integrity sha512-EDf++ss/JoMiDpvT1MuA8oi88OwpvmqVE+o8Ojm5v/5bdJEPZ6eIQd/XYAeQ0imlwG6Tf0Npfq4Z9w3hAKBk9Q==
   dependencies:
     ts-toolbelt "^6.15.1"
 
@@ -262,10 +262,10 @@ object-inspect@^1.9.0:
   resolved "https://registry.yarnpkg.com/object-inspect/-/object-inspect-1.11.0.tgz#9dceb146cedd4148a0d9e51ab88d34cf509922b1"
   integrity sha512-jp7ikS6Sd3GxQfZJPyH3cjcbJF6GZPClgdV+EFygjFLQ5FmW/dRUnTd9PQ9k0JhoNDabWFbpF1yCdSWCC6gexg==
 
-openapi-types@^9.1.0, openapi-types@^9.3.0:
-  version "9.3.0"
-  resolved "https://registry.yarnpkg.com/openapi-types/-/openapi-types-9.3.0.tgz#2d90549edb928cf06cf83018485a1a5961fbd2b9"
-  integrity sha512-sR23YjmuwDSMsQVZDHbV9mPgi0RyniQlqR0AQxTC2/F3cpSjRFMH3CFPjoWvNqhC4OxPkDYNb2l8Mc1Me6D/KQ==
+openapi-types@^10.0.0:
+  version "10.0.0"
+  resolved "https://registry.yarnpkg.com/openapi-types/-/openapi-types-10.0.0.tgz#0debbf663b2feed0322030b5b7c9080804076934"
+  integrity sha512-Y8xOCT2eiKGYDzMW9R4x5cmfc3vGaaI4EL2pwhDmodWw1HlK18YcZ4uJxc7Rdp7/gGzAygzH9SXr6GKYIXbRcQ==
 
 param-case@^3.0.4:
   version "3.0.4"
@@ -298,31 +298,31 @@ qs@^6.10.3:
   dependencies:
     side-channel "^1.0.4"
 
-ramda@^0.27.1:
-  version "0.27.1"
-  resolved "https://registry.yarnpkg.com/ramda/-/ramda-0.27.1.tgz#66fc2df3ef873874ffc2da6aa8984658abacf5c9"
-  integrity sha512-PgIdVpn5y5Yns8vqb8FzBUEYn98V3xcPgawAkkgj0YJ0qDsnHCiNmZYfOGMgOvoB0eWFLpYbhxUR3mxfDIMvpw==
+ramda@^0.28.0:
+  version "0.28.0"
+  resolved "https://registry.yarnpkg.com/ramda/-/ramda-0.28.0.tgz#acd785690100337e8b063cab3470019be427cc97"
+  integrity sha512-9QnLuG/kPVgWvMQ4aODhsBUFKOUmnbUnsSXACv+NCQZcHbeb+v8Lodp8OVxtRULN1/xOyYLLaL6npE6dMq5QTA==
 
-ringcentral-code-generator@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/ringcentral-code-generator/-/ringcentral-code-generator-0.2.0.tgz#b914b0eff0d14a47bfc96b2f24d163e895c22ec3"
-  integrity sha512-z8LnHfV9nIr/mjV//jM2DFRz4nF7KSLl3+Gz7IClDn3ksIxbQsFrY2kPHGUS+63ynReout0eY1hwlQyUVtCEGw==
+ringcentral-code-generator@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/ringcentral-code-generator/-/ringcentral-code-generator-0.3.0.tgz#305dc0d5b4762d080f671ab902e30545d04a516e"
+  integrity sha512-WMuMIoy2MqXzgkKVGlvGy9+9FVMeo2Jq+pmg+qY9FtDjNnYlaHnapS3CvTvurT+l6p1YnLH1wUSYsrX1fa8zig==
   dependencies:
-    "@types/js-yaml" "^4.0.3"
-    "@types/ramda" "^0.27.45"
+    "@types/js-yaml" "^4.0.5"
+    "@types/ramda" "^0.27.64"
     change-case "^4.1.2"
     js-yaml "^4.1.0"
-    openapi-types "^9.3.0"
-    ramda "^0.27.1"
-    ringcentral-open-api-parser "^0.5.4"
+    openapi-types "^10.0.0"
+    ramda "^0.28.0"
+    ringcentral-open-api-parser "^0.6.2"
 
-ringcentral-open-api-parser@^0.5.4:
-  version "0.5.4"
-  resolved "https://registry.yarnpkg.com/ringcentral-open-api-parser/-/ringcentral-open-api-parser-0.5.4.tgz#54a867f213085ddf9a3d72801442a83700cd8ca8"
-  integrity sha512-S9GcIWGtnmPZz85Z6EUCh+Y0mRYA//gLifml/JejiUZfUJQF45pLsENCalgUZc/9x/oAkeuzEXed3GnuTkJfPw==
+ringcentral-open-api-parser@^0.6.2:
+  version "0.6.2"
+  resolved "https://registry.yarnpkg.com/ringcentral-open-api-parser/-/ringcentral-open-api-parser-0.6.2.tgz#f30b024c04bb55c2e3126dfd215a506aeed730e6"
+  integrity sha512-LuXGc1XVaq7i5TNvQHamJnoGycNskIuyF8kWNjIyQ9YkuwGiv/UuIlsLR1BPW9dIIO919dHhH3H/7HB8viWPsw==
   dependencies:
-    openapi-types "^9.1.0"
-    ramda "^0.27.1"
+    openapi-types "^10.0.0"
+    ramda "^0.28.0"
 
 sentence-case@^3.0.4:
   version "3.0.4"
