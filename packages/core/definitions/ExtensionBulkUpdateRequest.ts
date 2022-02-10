@@ -1,6 +1,8 @@
 import {ExtensionBulkUpdateInfo} from './index';
 
-// List of extensions to be updated
+/**
+ * List of extensions to be updated
+ */
 class ExtensionBulkUpdateRequest {
   /**
    * Required

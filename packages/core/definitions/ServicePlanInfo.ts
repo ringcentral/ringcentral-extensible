@@ -1,4 +1,6 @@
-// Information on account service plan
+/**
+ * Information on account service plan
+ */
 class ServicePlanInfo {
   /**
    * Internal identifier of a service plan

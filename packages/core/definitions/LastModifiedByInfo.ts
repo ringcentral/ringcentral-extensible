@@ -1,4 +1,6 @@
-// Note last modification information
+/**
+ * Note last modification information
+ */
 class LastModifiedByInfo {
   /**
    * Internal identifier of the user who last updated the note

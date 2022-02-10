@@ -32,7 +32,7 @@ class Index {
    * Rate Limit Group: Light
    * App Permission: ReadAccounts
    */
-  async get(
+  async list(
     queryParams?: GetExtensionEmergencyLocationsParameters,
     restRequestConfig?: RestRequestConfig
   ): Promise<EmergencyLocationsResource> {
@@ -49,7 +49,7 @@ class Index {
    * HTTP Method: post
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/emergency-locations
    * Rate Limit Group: Heavy
-   * App Permission: ReadAccounts
+   * App Permission: EditAccounts
    * User Permission: EmergencyFramework
    */
   async post(
@@ -66,11 +66,32 @@ class Index {
   }
 
   /**
+   * Returns personal emergency response location for the current user.
+   * HTTP Method: get
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/emergency-locations/{locationId}
+   * Rate Limit Group: Light
+   * App Permission: ReadAccounts
+   */
+  async get(
+    restRequestConfig?: RestRequestConfig
+  ): Promise<EmergencyLocationInfo> {
+    if (this.locationId === null) {
+      throw new Error('locationId must be specified.');
+    }
+    const r = await this.rc.get<EmergencyLocationInfo>(
+      this.path(),
+      undefined,
+      restRequestConfig
+    );
+    return r.data;
+  }
+
+  /**
    * Updates a personal emergency response location by the current user or admin.
    * HTTP Method: put
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/emergency-locations/{locationId}
    * Rate Limit Group: Light
-   * App Permission: EditExtensions
+   * App Permission: EditAccounts
    * User Permission: EmergencyFramework
    */
   async put(
@@ -94,7 +115,7 @@ class Index {
    * HTTP Method: delete
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/emergency-locations/{locationId}
    * Rate Limit Group: Heavy
-   * App Permission: EditExtensions
+   * App Permission: EditAccounts
    * User Permission: EmergencyFramework
    */
   async delete(

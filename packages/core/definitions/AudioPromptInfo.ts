@@ -1,4 +1,6 @@
-// For 'Audio' mode only. Prompt media reference
+/**
+ * For 'Audio' mode only. Prompt media reference
+ */
 class AudioPromptInfo {
   /**
    * Link to a prompt audio file

@@ -1,6 +1,8 @@
 import {ProfileImageInfoURI} from './index';
 
-// Information on profile image
+/**
+ * Information on profile image
+ */
 class ProfileImageInfo {
   /**
    * Link to a profile image. If an image is not uploaded for an extension, only uri is returned

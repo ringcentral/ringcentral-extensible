@@ -1,4 +1,6 @@
-// Query parameters for operation readGlipEvents
+/**
+ * Query parameters for operation readGlipEvents
+ */
 class ReadGlipEventsParameters {
   /**
    * Number of groups to be fetched by one request. The maximum value is 250, by default - 30.

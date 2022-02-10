@@ -1,4 +1,6 @@
-// Information on language used for telephony greetings
+/**
+ * Information on language used for telephony greetings
+ */
 class GreetingLanguageInfo {
   /**
    * Internal identifier of a greeting language

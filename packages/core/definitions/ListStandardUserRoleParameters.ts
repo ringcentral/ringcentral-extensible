@@ -1,4 +1,6 @@
-// Query parameters for operation listStandardUserRole
+/**
+ * Query parameters for operation listStandardUserRole
+ */
 class ListStandardUserRoleParameters {
   /**
    * Default: 1

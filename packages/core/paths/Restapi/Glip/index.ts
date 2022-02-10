@@ -1,3 +1,4 @@
+import AdaptiveCards from './AdaptiveCards';
 import Conversations from './Conversations';
 import Preferences from './Preferences';
 import DataExport from './DataExport';
@@ -86,6 +87,10 @@ class Index {
 
   conversations(chatId: string | null = null): Conversations {
     return new Conversations(this, chatId);
+  }
+
+  adaptiveCards(cardId: string | null = null): AdaptiveCards {
+    return new AdaptiveCards(this, cardId);
   }
 }
 export default Index;

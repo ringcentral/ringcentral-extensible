@@ -1,4 +1,6 @@
-// Query parameters for operation listFavoriteChats
+/**
+ * Query parameters for operation listFavoriteChats
+ */
 class ListFavoriteChatsParameters {
   /**
    * Max number of chats to be fetched by one request (Not more than 250).

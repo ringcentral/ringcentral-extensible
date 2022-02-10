@@ -1,4 +1,6 @@
-// Query parameters for operation readAccountPresence
+/**
+ * Query parameters for operation readAccountPresence
+ */
 class ReadAccountPresenceParameters {
   /**
    * Whether to return detailed telephony state

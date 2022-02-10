@@ -1,4 +1,6 @@
-// Emergency response location information
+/**
+ * Emergency response location information
+ */
 class ERLLocationInfo {
   /**
    * Internal identifier of an emergency response location

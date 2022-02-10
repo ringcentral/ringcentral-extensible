@@ -1,4 +1,6 @@
-// Returned if *Glip* feature is switched on
+/**
+ * Returned if *Glip* feature is switched on
+ */
 class UnifiedPresenceGlip {
   /**
    * Glip connection status calculated from all user's apps. Returned always for the requester's extension; returned for another users if their glip visibility is set to 'Visible'

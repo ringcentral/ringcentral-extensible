@@ -1,4 +1,6 @@
-// Query parameters for operation readUserFeatures
+/**
+ * Query parameters for operation readUserFeatures
+ */
 class ReadUserFeaturesParameters {
   /**
    */

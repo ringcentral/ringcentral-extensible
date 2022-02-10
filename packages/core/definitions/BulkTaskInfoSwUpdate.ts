@@ -1,4 +1,6 @@
-// Information on the task for multiple switches update
+/**
+ * Information on the task for multiple switches update
+ */
 class BulkTaskInfoSwUpdate {
   /**
    * Internal identifier of a task for multiple switches creation

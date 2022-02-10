@@ -1,6 +1,8 @@
 import {BulkTaskInfoSwUpdate} from './index';
 
-// Information on the task for multiple switches creation
+/**
+ * Information on the task for multiple switches creation
+ */
 class CreateMultipleSwitchesResponse {
   /**
    */

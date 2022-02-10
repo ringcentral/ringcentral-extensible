@@ -1,12 +1,14 @@
 import {
   CountryInfo,
   TimezoneInfo,
-  LanguageInfo,
+  RegionalLanguageInfo,
   GreetingLanguageInfo,
   FormattingLocaleInfo,
 } from './index';
 
-// Regional data (timezone, home country, language) of an extension/account. The default is Company (Auto-Receptionist) settings
+/**
+ * Regional data (timezone, home country, language) of an extension/account. The default is Company (Auto-Receptionist) settings
+ */
 class RegionalSettings {
   /**
    */
@@ -18,7 +20,7 @@ class RegionalSettings {
 
   /**
    */
-  language?: LanguageInfo;
+  language?: RegionalLanguageInfo;
 
   /**
    */

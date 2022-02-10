@@ -1,4 +1,6 @@
-// Query parameters for operation readConferencingSettings
+/**
+ * Query parameters for operation readConferencingSettings
+ */
 class ReadConferencingSettingsParameters {
   /**
    * Internal identifier of a country. If not specified, the response is returned for the brand country

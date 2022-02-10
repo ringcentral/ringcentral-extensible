@@ -1,4 +1,6 @@
-// Sync information (type, token and time)
+/**
+ * Sync information (type, token and time)
+ */
 class CompanyCallLogSyncInfo {
   /**
    * Type of synchronization

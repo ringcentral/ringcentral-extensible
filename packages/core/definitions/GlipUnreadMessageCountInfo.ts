@@ -1,4 +1,6 @@
-// Unread messages data
+/**
+ * Unread messages data
+ */
 class GlipUnreadMessageCountInfo {
   /**
    * Count of glip unread messages

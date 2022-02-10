@@ -1,6 +1,8 @@
 import {ContactBusinessAddressInfo, PronouncedNameInfo} from './index';
 
-// Contact Information
+/**
+ * Contact Information
+ */
 class ContactInfoCreationRequest {
   /**
    * For User extension type only. Extension user first name

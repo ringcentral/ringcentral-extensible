@@ -1,4 +1,6 @@
-// Query parameters for operation getExtensionEmergencyLocations
+/**
+ * Query parameters for operation getExtensionEmergencyLocations
+ */
 class GetExtensionEmergencyLocationsParameters {
   /**
    * Internal identifier of a site. To filter Main Site (Company) main-site must be specified. Supported only If multi-site feature is enabled for the account
@@ -15,9 +17,16 @@ class GetExtensionEmergencyLocationsParameters {
   domesticCountryId?: string;
 
   /**
-   * Comma-separated list of fields to order results prefixed by '+' sign (ascending order) or '-' sign (descending order). The default sorting is by `name`
+   * Comma-separated list of fields to order results prefixed by plus sign '+' (ascending order) or minus sign '-' (descending order). The default value is `+visibility`, which means public ERLs will be returned first in the list, then - private ones
+   * Default: +visibility
    */
-  orderBy?: string;
+  orderBy?:
+    | 'name'
+    | 'siteName'
+    | 'address'
+    | 'addressStatus'
+    | 'usageStatus'
+    | 'visibility';
 
   /**
    * Indicates the page size (number of items). The values supported: `Max` or numeric value. If not specified, 100 records are returned per one page

@@ -1,4 +1,6 @@
-// Request body for operation getToken
+/**
+ * Request body for operation getToken
+ */
 class GetTokenRequest {
   /**
    * Phone number linked to an account or extension in E.164 format with or without leading '+' sign

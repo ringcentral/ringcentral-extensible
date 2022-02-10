@@ -1,4 +1,6 @@
-// Request body for operation revokeToken
+/**
+ * Request body for operation revokeToken
+ */
 class RevokeTokenRequest {
   /**
    */

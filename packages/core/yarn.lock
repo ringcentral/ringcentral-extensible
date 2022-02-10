@@ -303,10 +303,10 @@ ramda@^0.28.0:
   resolved "https://registry.yarnpkg.com/ramda/-/ramda-0.28.0.tgz#acd785690100337e8b063cab3470019be427cc97"
   integrity sha512-9QnLuG/kPVgWvMQ4aODhsBUFKOUmnbUnsSXACv+NCQZcHbeb+v8Lodp8OVxtRULN1/xOyYLLaL6npE6dMq5QTA==
 
-ringcentral-code-generator@^0.3.0:
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/ringcentral-code-generator/-/ringcentral-code-generator-0.3.0.tgz#305dc0d5b4762d080f671ab902e30545d04a516e"
-  integrity sha512-WMuMIoy2MqXzgkKVGlvGy9+9FVMeo2Jq+pmg+qY9FtDjNnYlaHnapS3CvTvurT+l6p1YnLH1wUSYsrX1fa8zig==
+ringcentral-code-generator@^0.3.1:
+  version "0.3.1"
+  resolved "https://registry.yarnpkg.com/ringcentral-code-generator/-/ringcentral-code-generator-0.3.1.tgz#2c1dd8b7ac8d158574934c76084b2a0890d7cdbe"
+  integrity sha512-82dvqL3d9xfG3/h0y1dwKu7YJs+ymU6J/vnUf7h9P9Jqw2Zb0h3zuvNIhpdF/i5Y6N11KUHE2hSFlCscUpNsGg==
   dependencies:
     "@types/js-yaml" "^4.0.5"
     "@types/ramda" "^0.27.64"

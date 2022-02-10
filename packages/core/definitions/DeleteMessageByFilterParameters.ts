@@ -1,4 +1,6 @@
-// Query parameters for operation deleteMessageByFilter
+/**
+ * Query parameters for operation deleteMessageByFilter
+ */
 class DeleteMessageByFilterParameters {
   /**
    */

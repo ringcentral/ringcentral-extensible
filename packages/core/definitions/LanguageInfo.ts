@@ -1,4 +1,6 @@
-// User interface language data
+/**
+ * User interface language data
+ */
 class LanguageInfo {
   /**
    * Internal identifier of a language

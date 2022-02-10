@@ -3,7 +3,9 @@ import {
   RangesInfo,
 } from './index';
 
-// Schedule when an answering rule should be applied
+/**
+ * Schedule when an answering rule should be applied
+ */
 class CompanyAnsweringRuleScheduleInfoRequest {
   /**
    */

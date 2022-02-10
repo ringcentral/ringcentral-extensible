@@ -1,6 +1,8 @@
 import {CallerIdByFeatureInfoRequest} from './index';
 
-// Caller ID settings by feature
+/**
+ * Caller ID settings by feature
+ */
 class CallerIdByFeatureRequest {
   /**
    */

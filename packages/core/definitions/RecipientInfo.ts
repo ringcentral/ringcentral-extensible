@@ -1,4 +1,6 @@
-// Recipient data
+/**
+ * Recipient data
+ */
 class RecipientInfo {
   /**
    * Link to a recipient extension resource

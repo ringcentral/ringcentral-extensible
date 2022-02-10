@@ -1,4 +1,6 @@
-// Site Data
+/**
+ * Site Data
+ */
 class ContactDirectorySiteInfo {
   /**
    * Internal Identifier of a site

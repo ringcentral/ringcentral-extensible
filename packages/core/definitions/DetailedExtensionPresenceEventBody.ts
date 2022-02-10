@@ -1,6 +1,8 @@
 import {ActiveCallInfoWithoutSIP} from './index';
 
-// Notification payload body
+/**
+ * Notification payload body
+ */
 class DetailedExtensionPresenceEventBody {
   /**
    * Internal identifier of an extension

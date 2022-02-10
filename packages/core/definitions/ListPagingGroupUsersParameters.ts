@@ -1,4 +1,6 @@
-// Query parameters for operation listPagingGroupUsers
+/**
+ * Query parameters for operation listPagingGroupUsers
+ */
 class ListPagingGroupUsersParameters {
   /**
    * Indicates the page number to retrieve. Only positive number values are accepted

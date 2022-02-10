@@ -194,6 +194,7 @@ class CallLogRecordLegInfo {
    *   * `Fax Prepare Error` - An internal error occurred when preparing the fax. Please try again
    *   * `Fax Save Error` - An internal error occurred when saving the fax. Please try again
    *   * `Fax Send Error` - An error occurred when sending the fax. Please try again
+   *   * `DescNoE911Address` - The call was rejected due to no E911 address. Please define emergency address
    */
   reason?:
     | 'Accepted'
@@ -229,7 +230,8 @@ class CallLogRecordLegInfo {
     | 'Fax Poor Line'
     | 'Fax Prepare Error'
     | 'Fax Save Error'
-    | 'Fax Send Error';
+    | 'Fax Send Error'
+    | 'DescNoE911Address';
 
   /**
    */

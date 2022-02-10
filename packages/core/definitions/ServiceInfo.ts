@@ -6,7 +6,9 @@ import {
   ContractedCountryInfo,
 } from './index';
 
-// Account service information, including brand, service plan and billing plan
+/**
+ * Account service information, including brand, service plan and billing plan
+ */
 class ServiceInfo {
   /**
    * Canonical URI of a service info resource

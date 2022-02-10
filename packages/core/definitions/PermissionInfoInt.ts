@@ -1,4 +1,6 @@
-// International Calling permission
+/**
+ * International Calling permission
+ */
 class PermissionInfoInt {
   /**
    * Specifies if a permission is enabled or not

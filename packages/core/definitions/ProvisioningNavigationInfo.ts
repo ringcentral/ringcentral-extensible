@@ -1,6 +1,8 @@
 import {ProvisioningNavigationInfoUri} from './index';
 
-// Information on navigation
+/**
+ * Information on navigation
+ */
 class ProvisioningNavigationInfo {
   /**
    */

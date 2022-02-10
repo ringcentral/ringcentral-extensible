@@ -1,4 +1,6 @@
-// Query parameters for operation listCallRecordingCustomGreetings
+/**
+ * Query parameters for operation listCallRecordingCustomGreetings
+ */
 class ListCallRecordingCustomGreetingsParameters {
   /**
    */

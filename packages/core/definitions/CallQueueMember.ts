@@ -1,6 +1,8 @@
 import {SiteResource} from './index';
 
-// Call queue member information
+/**
+ * Call queue member information
+ */
 class CallQueueMember {
   /**
    * Internal identifier of an extension

@@ -5,7 +5,9 @@ import {
   CompanyDirectoryProfileImageInfo,
 } from './index';
 
-// Notification payload body
+/**
+ * Notification payload body
+ */
 class CompanyDirectoryEventBody {
   /**
    * Internal identifier of an extension

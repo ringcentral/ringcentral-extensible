@@ -1,4 +1,6 @@
-// Address for emergency cases. The same emergency address is assigned to all the numbers of one device
+/**
+ * Address for emergency cases. The same emergency address is assigned to all the numbers of one device
+ */
 class EmergencyServiceAddressResource {
   /**
    */

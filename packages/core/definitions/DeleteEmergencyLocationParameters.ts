@@ -1,4 +1,6 @@
-// Query parameters for operation deleteEmergencyLocation
+/**
+ * Query parameters for operation deleteEmergencyLocation
+ */
 class DeleteEmergencyLocationParameters {
   /**
    * Internal identifier of a location that should be used instead of a deleted one

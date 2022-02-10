@@ -1,4 +1,6 @@
-// Phone number of the caller. This number corresponds to the 1st leg of the RingOut call. This number can be one of the user's configured forwarding numbers or an arbitrary number
+/**
+ * Phone number of the caller. This number corresponds to the 1st leg of the RingOut call. This number can be one of the user's configured forwarding numbers or an arbitrary number
+ */
 class MakeRingOutCallerInfoRequestFrom {
   /**
    * Phone number in E.164 format

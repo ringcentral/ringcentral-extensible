@@ -1,4 +1,6 @@
-// Extension user business address. The default is Company (Auto-Receptionist) settings
+/**
+ * Extension user business address. The default is Company (Auto-Receptionist) settings
+ */
 class ContactBusinessAddressInfo {
   /**
    * Country name of an extension user company

@@ -1,6 +1,8 @@
 import {CallerIdDeviceInfoRequest, CallerIdByDeviceInfoRequest} from './index';
 
-// Caller ID settings by device
+/**
+ * Caller ID settings by device
+ */
 class CallerIdByDeviceRequest {
   /**
    */

@@ -1,4 +1,6 @@
-// Canonical URI for the corresponding page of the list
+/**
+ * Canonical URI for the corresponding page of the list
+ */
 class MeetingRecordingsNavigationInfoUri {
   /**
    */

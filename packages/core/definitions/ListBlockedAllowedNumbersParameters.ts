@@ -1,4 +1,6 @@
-// Query parameters for operation listBlockedAllowedNumbers
+/**
+ * Query parameters for operation listBlockedAllowedNumbers
+ */
 class ListBlockedAllowedNumbersParameters {
   /**
    */

@@ -1,4 +1,6 @@
-// Query parameters for operation listA2PSMS
+/**
+ * Query parameters for operation listA2PSMS
+ */
 class ListA2PSMSParameters {
   /**
    * Internal identifier of a message batch used for filtering records

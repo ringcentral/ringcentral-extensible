@@ -1,4 +1,6 @@
-// Admin permission
+/**
+ * Admin permission
+ */
 class PermissionInfoAdmin {
   /**
    * Specifies if a permission is enabled or not

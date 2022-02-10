@@ -1,4 +1,6 @@
-// Query parameters for operation listExtensions
+/**
+ * Query parameters for operation listExtensions
+ */
 class ListExtensionsParameters {
   /**
    * Number of extension to be retrieved

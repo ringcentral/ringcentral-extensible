@@ -1,4 +1,6 @@
-// Query parameters for operation deleteExtension
+/**
+ * Query parameters for operation deleteExtension
+ */
 class DeleteExtensionParameters {
   /**
    */

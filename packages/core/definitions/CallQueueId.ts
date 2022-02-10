@@ -1,4 +1,6 @@
-// Call queue information
+/**
+ * Call queue information
+ */
 class CallQueueId {
   /**
    * Internal identifier of a call queue

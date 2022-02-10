@@ -1,4 +1,6 @@
-// Sender information
+/**
+ * Sender information
+ */
 class CallerInfoFrom {
   /**
    */

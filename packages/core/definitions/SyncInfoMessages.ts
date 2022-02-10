@@ -1,4 +1,6 @@
-// Sync type, token and time
+/**
+ * Sync type, token and time
+ */
 class SyncInfoMessages {
   /**
    * Type of synchronization

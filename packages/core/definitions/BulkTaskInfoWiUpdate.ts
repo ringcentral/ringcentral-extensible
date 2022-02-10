@@ -1,4 +1,6 @@
-// Information on the task for multiple wireless points update
+/**
+ * Information on the task for multiple wireless points update
+ */
 class BulkTaskInfoWiUpdate {
   /**
    * Internal identifier of a task for multiple switches creation

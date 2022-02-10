@@ -1,4 +1,6 @@
-// Meeting recurrence information
+/**
+ * Meeting recurrence information
+ */
 class RecurrenceInfo {
   /**
    * Recurrence time frame

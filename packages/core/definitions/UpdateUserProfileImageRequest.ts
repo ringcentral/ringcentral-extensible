@@ -1,6 +1,8 @@
 import {Attachment} from './index';
 
-// Request body for operation updateUserProfileImage
+/**
+ * Request body for operation updateUserProfileImage
+ */
 class UpdateUserProfileImageRequest {
   /**
    */

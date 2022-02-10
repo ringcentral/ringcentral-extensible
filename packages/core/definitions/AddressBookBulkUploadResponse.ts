@@ -1,6 +1,8 @@
 import {AddressBookBulkUploadTaskResult} from './index';
 
-// Information on a task for adding multiple contacts to multiple extensions
+/**
+ * Information on a task for adding multiple contacts to multiple extensions
+ */
 class AddressBookBulkUploadResponse {
   /**
    * Internal identifier of a task

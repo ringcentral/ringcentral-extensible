@@ -51,9 +51,9 @@ class CompanyPhoneNumberInfo {
   phoneNumber?: string;
 
   /**
-   * Status of a phone number. If the value is 'Normal', the phone number is ready to be used. Otherwise it is an external number not yet ported to RingCentral
+   * Status of a phone number. If the value is 'Normal', the phone number is ready to be used. If the value is 'Pending' it is an external number not yet ported to RingCentral.
    */
-  status?: string;
+  status?: 'Normal' | 'Pending' | 'PortedIn' | 'Temporary';
 
   /**
    * Phone number type
@@ -75,7 +75,8 @@ class CompanyPhoneNumberInfo {
     | 'ConferencingNumber'
     | 'MeetingsNumber'
     | 'NumberPool'
-    | 'BusinessMobileNumber';
+    | 'BusinessMobileNumber'
+    | 'IntegrationNumber';
 
   /**
    */

@@ -1,4 +1,6 @@
-// Pagination details
+/**
+ * Pagination details
+ */
 class PagingResource {
   /**
    * Page token of the current response list

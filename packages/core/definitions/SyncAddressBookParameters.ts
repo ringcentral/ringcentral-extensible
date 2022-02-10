@@ -1,4 +1,6 @@
-// Query parameters for operation syncAddressBook
+/**
+ * Query parameters for operation syncAddressBook
+ */
 class SyncAddressBookParameters {
   /**
    * Type of synchronization

@@ -1,6 +1,8 @@
 import {CallLogNavigationInfoURI} from './index';
 
-// Information on navigation
+/**
+ * Information on navigation
+ */
 class CallLogNavigationInfo {
   /**
    */

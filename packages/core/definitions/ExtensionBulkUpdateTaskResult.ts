@@ -1,6 +1,8 @@
 import {ExtensionUpdateShortResult, ErrorEntity} from './index';
 
-// Result record on multiple extension update task
+/**
+ * Result record on multiple extension update task
+ */
 class ExtensionBulkUpdateTaskResult {
   /**
    */

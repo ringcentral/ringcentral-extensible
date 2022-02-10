@@ -1,4 +1,6 @@
-// Forwarding device information. Applicable for 'PhoneLine' type only. Cannot be specified together with 'phoneNumber' parameter
+/**
+ * Forwarding device information. Applicable for 'PhoneLine' type only. Cannot be specified together with 'phoneNumber' parameter
+ */
 class CreateForwardingNumberDeviceInfo {
   /**
    * Internal identifier of the other extension device

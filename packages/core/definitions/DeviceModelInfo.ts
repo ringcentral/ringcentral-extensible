@@ -1,6 +1,8 @@
 import {DeviceAddonInfo} from './index';
 
-// HardPhone model information
+/**
+ * HardPhone model information
+ */
 class DeviceModelInfo {
   /**
    * Addon identifier. For HardPhones of certain types, which are compatible with this addon identifier

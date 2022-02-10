@@ -1,4 +1,6 @@
-// Attachment is a file to be uploaded
+/**
+ * Attachment is a file to be uploaded
+ */
 class Attachment {
   /**
    * Filename with extension

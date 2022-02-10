@@ -1,4 +1,6 @@
-// Currency information
+/**
+ * Currency information
+ */
 class CurrencyInfo {
   /**
    * Internal identifier of a currency

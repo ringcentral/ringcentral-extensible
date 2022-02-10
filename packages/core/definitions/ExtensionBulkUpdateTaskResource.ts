@@ -1,6 +1,8 @@
 import {ExtensionBulkUpdateTaskResult} from './index';
 
-// Information on a task for updating multiple extensions
+/**
+ * Information on a task for updating multiple extensions
+ */
 class ExtensionBulkUpdateTaskResource {
   /**
    * Link to a task resource

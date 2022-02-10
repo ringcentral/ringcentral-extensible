@@ -1,6 +1,8 @@
 import {Attachment} from './index';
 
-// Request body for operation createUserProfileImage
+/**
+ * Request body for operation createUserProfileImage
+ */
 class CreateUserProfileImageRequest {
   /**
    * Required

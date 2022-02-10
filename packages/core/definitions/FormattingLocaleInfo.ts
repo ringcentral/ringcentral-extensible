@@ -1,4 +1,6 @@
-// Formatting language preferences for numbers, dates and currencies
+/**
+ * Formatting language preferences for numbers, dates and currencies
+ */
 class FormattingLocaleInfo {
   /**
    * Internal identifier of a formatting language

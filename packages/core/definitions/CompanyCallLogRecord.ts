@@ -181,7 +181,8 @@ class CompanyCallLogRecord {
     | 'Fax Poor Line'
     | 'Fax Prepare Error'
     | 'Fax Save Error'
-    | 'Fax Send Error';
+    | 'Fax Send Error'
+    | 'DescNoE911Address';
 
   /**
    */

@@ -1,4 +1,6 @@
-// Information about the author
+/**
+ * Information about the author
+ */
 class GlipMessageAttachmentAuthorInfo {
   /**
    * Name of a message author

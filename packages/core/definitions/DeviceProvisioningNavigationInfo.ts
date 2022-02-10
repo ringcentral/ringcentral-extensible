@@ -1,6 +1,8 @@
 import {DeviceProvisioningNavigationInfoUri} from './index';
 
-// Information on navigation
+/**
+ * Information on navigation
+ */
 class DeviceProvisioningNavigationInfo {
   /**
    */

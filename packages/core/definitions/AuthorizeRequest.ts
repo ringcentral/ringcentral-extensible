@@ -1,4 +1,6 @@
-// Request body for operation authorize
+/**
+ * Request body for operation authorize
+ */
 class AuthorizeRequest {
   /**
    * Determines authorization flow: **code** - Authorization Code, **token** - Implicit Grant

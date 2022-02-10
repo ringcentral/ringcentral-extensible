@@ -1,6 +1,8 @@
 import {OriginInfo, TelephonySessionsEventPartyInfo} from './index';
 
-// Notification payload body
+/**
+ * Notification payload body
+ */
 class TelephonySessionsEventBody {
   /**
    * Order number of a notification to state the chronology

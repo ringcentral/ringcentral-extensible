@@ -1,4 +1,6 @@
-// Meeting host information
+/**
+ * Meeting host information
+ */
 class HostInfoRequest {
   /**
    * Link to the meeting host resource

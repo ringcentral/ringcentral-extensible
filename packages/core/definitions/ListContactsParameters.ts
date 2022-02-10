@@ -1,4 +1,6 @@
-// Query parameters for operation listContacts
+/**
+ * Query parameters for operation listContacts
+ */
 class ListContactsParameters {
   /**
    * If specified, only contacts whose First name or Last name start with the mentioned substring are returned. Case-insensitive

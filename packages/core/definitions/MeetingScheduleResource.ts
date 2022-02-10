@@ -1,6 +1,8 @@
 import {MeetingsTimezoneResource} from './index';
 
-// Timing of a meeting
+/**
+ * Timing of a meeting
+ */
 class MeetingScheduleResource {
   /**
    */

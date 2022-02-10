@@ -1,4 +1,6 @@
-// Extension phone number information
+/**
+ * Extension phone number information
+ */
 class CompanyDirectoryPhoneNumberInfo {
   /**
    * Extension phone number in E.164 format

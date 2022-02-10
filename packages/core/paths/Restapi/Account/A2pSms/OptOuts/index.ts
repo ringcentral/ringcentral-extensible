@@ -1,3 +1,4 @@
+import BulkAssign from './BulkAssign';
 import {RestRequestConfig} from '../../../../../Rest';
 import {
   ReadA2PSMSOptOutsParameters,
@@ -34,6 +35,10 @@ class Index {
       restRequestConfig
     );
     return r.data;
+  }
+
+  bulkAssign(): BulkAssign {
+    return new BulkAssign(this);
   }
 }
 export default Index;

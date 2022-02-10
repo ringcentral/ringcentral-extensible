@@ -1,4 +1,6 @@
-// Query parameters for operation readCallSessionStatus
+/**
+ * Query parameters for operation readCallSessionStatus
+ */
 class ReadCallSessionStatusParameters {
   /**
    * The date and time of a call session latest change

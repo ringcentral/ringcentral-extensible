@@ -1,6 +1,8 @@
 import {AudioPromptInfo, PromptLanguageInfo} from './index';
 
-// Prompt metadata
+/**
+ * Prompt metadata
+ */
 class IVRMenuPromptInfo {
   /**
    * Prompt mode: custom media or text

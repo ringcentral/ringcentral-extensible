@@ -1,4 +1,6 @@
-// HardPhone model information
+/**
+ * HardPhone model information
+ */
 class AutomaticLocationUpdatesModelInfo {
   /**
    * Device model identifier

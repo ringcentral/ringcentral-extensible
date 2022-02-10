@@ -1,6 +1,8 @@
 import {PeerInfo} from './index';
 
-// Status data of a call session
+/**
+ * Status data of a call session
+ */
 class CallStatusInfo {
   /**
    * Status code of a call

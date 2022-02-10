@@ -6,7 +6,9 @@ import {
   RecordingInfo,
 } from './index';
 
-// Information on a party of a call session
+/**
+ * Information on a party of a call session
+ */
 class CallParty {
   /**
    * Internal identifier of a party

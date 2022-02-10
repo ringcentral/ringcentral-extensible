@@ -1,4 +1,6 @@
-// Detailed information on a message
+/**
+ * Detailed information on a message
+ */
 class MessageDetailsResponse {
   /**
    * Internal identifier of a message

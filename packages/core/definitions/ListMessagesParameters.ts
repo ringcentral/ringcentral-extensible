@@ -1,4 +1,6 @@
-// Query parameters for operation listMessages
+/**
+ * Query parameters for operation listMessages
+ */
 class ListMessagesParameters {
   /**
    * Specifies the availability status for the resulting messages. Multiple values are accepted

@@ -1,4 +1,6 @@
-// Query parameters for operation listCompanyActiveCalls
+/**
+ * Query parameters for operation listCompanyActiveCalls
+ */
 class ListCompanyActiveCallsParameters {
   /**
    * The direction for the result records. If not specified, both inbound and outbound records are returned. Multiple values are accepted

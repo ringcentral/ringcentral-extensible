@@ -1,4 +1,6 @@
-// Extension site
+/**
+ * Extension site
+ */
 class SiteResource {
   /**
    * Site extension identifier

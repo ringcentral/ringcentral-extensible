@@ -1,3 +1,4 @@
+import AdaptiveCards from './AdaptiveCards';
 import Unfavorite from './Unfavorite';
 import Favorite from './Favorite';
 import Unread from './Unread';
@@ -96,6 +97,10 @@ class Index {
 
   unfavorite(): Unfavorite {
     return new Unfavorite(this);
+  }
+
+  adaptiveCards(): AdaptiveCards {
+    return new AdaptiveCards(this);
   }
 }
 export default Index;

@@ -1,6 +1,8 @@
 import {Attachment} from './index';
 
-// Request body for operation createCustomUserGreeting
+/**
+ * Request body for operation createCustomUserGreeting
+ */
 class CreateCustomUserGreetingRequest {
   /**
    * Type of a greeting, specifying the case when the greeting is played.

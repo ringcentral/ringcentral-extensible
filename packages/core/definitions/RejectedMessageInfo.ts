@@ -1,4 +1,6 @@
-// Information about the message that failed to be sent
+/**
+ * Information about the message that failed to be sent
+ */
 class RejectedMessageInfo {
   /**
    * Index of the rejected message in the request

@@ -25,5 +25,10 @@ class PartySuperviseRequest {
    * Default: true
    */
   autoAnswer?: boolean;
+
+  /**
+   * Specifies session description protocol setting
+   */
+  mediaSDP?: 'sendOnly' | 'sendRecv';
 }
 export default PartySuperviseRequest;

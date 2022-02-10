@@ -1,4 +1,6 @@
-// resource metadata
+/**
+ * resource metadata
+ */
 class Meta {
   /**
    * Format: date-time

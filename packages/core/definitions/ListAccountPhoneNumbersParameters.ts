@@ -1,4 +1,6 @@
-// Query parameters for operation listAccountPhoneNumbers
+/**
+ * Query parameters for operation listAccountPhoneNumbers
+ */
 class ListAccountPhoneNumbersParameters {
   /**
    * Indicates the page number to retrieve. Only positive number values are accepted
@@ -27,6 +29,7 @@ class ListAccountPhoneNumbersParameters {
     | 'ConferencingNumber'
     | 'MeetingsNumber'
     | 'BusinessMobileNumber'
+    | 'IntegrationNumber'
   )[];
 
   /**

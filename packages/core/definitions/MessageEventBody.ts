@@ -1,6 +1,8 @@
 import {MessageChanges} from './index';
 
-// Notification payload body
+/**
+ * Notification payload body
+ */
 class MessageEventBody {
   /**
    * Internal identifier of an extension

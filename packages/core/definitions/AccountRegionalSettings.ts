@@ -1,13 +1,15 @@
 import {
   CountryInfo,
   TimezoneInfo,
-  LanguageInfo,
+  RegionalLanguageInfo,
   GreetingLanguageInfo,
   FormattingLocaleInfo,
   CurrencyInfo,
 } from './index';
 
-// Account level region data (web service Auto-Receptionist settings)
+/**
+ * Account level region data (web service Auto-Receptionist settings)
+ */
 class AccountRegionalSettings {
   /**
    */
@@ -19,7 +21,7 @@ class AccountRegionalSettings {
 
   /**
    */
-  language?: LanguageInfo;
+  language?: RegionalLanguageInfo;
 
   /**
    */

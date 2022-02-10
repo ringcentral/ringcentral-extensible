@@ -1,4 +1,6 @@
-// Infomation on a message returned within the specified batch
+/**
+ * Infomation on a message returned within the specified batch
+ */
 class MessageListMessageResponse {
   /**
    * Internal identifier of a message

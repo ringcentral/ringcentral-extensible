@@ -1,4 +1,6 @@
-// Meeting links
+/**
+ * Meeting links
+ */
 class MeetingLinks {
   /**
    */

@@ -1,4 +1,6 @@
-// Query parameters for operation readMessageContent
+/**
+ * Query parameters for operation readMessageContent
+ */
 class ReadMessageContentParameters {
   /**
    * Content disposition of a response

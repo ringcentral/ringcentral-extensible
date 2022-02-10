@@ -1,4 +1,6 @@
-// Query parameters for operation updateMessage
+/**
+ * Query parameters for operation updateMessage
+ */
 class UpdateMessageParameters {
   /**
    */

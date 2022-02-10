@@ -61,7 +61,7 @@ class UserPhoneNumberInfo {
   /**
    * Status of a phone number. If the value is 'Normal', the phone number is ready to be used. Otherwise it is an external number not yet ported to RingCentral
    */
-  status?: string;
+  status?: 'Normal' | 'Pending' | 'PortedIn' | 'Temporary';
 
   /**
    * Phone number type
@@ -82,7 +82,8 @@ class UserPhoneNumberInfo {
     | 'ContactCenterNumber'
     | 'ConferencingNumber'
     | 'NumberPool'
-    | 'BusinessMobileNumber';
+    | 'BusinessMobileNumber'
+    | 'IntegrationNumber';
 
   /**
    * List of features of a phone number

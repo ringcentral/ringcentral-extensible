@@ -1,4 +1,6 @@
-// The number which will be displayed to the called party
+/**
+ * The number which will be displayed to the called party
+ */
 class MakeRingOutCallerIdInfo {
   /**
    * Phone number in E.164 format

@@ -1,6 +1,8 @@
 import {PrimaryCQInfo, AdditionalCQInfo} from './index';
 
-// Primary/additional CQ information
+/**
+ * Primary/additional CQ information
+ */
 class CallInfoCQ {
   /**
    */

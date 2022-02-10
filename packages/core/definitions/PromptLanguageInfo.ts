@@ -1,4 +1,6 @@
-// For 'TextToSpeech' mode only. Prompt language metadata
+/**
+ * For 'TextToSpeech' mode only. Prompt language metadata
+ */
 class PromptLanguageInfo {
   /**
    * Link to a prompt language

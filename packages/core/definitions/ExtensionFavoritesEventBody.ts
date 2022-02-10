@@ -1,4 +1,6 @@
-// Notification payload body
+/**
+ * Notification payload body
+ */
 class ExtensionFavoritesEventBody {
   /**
    * Internal identifier of an extension

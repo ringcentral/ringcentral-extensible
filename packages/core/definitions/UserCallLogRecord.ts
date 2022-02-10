@@ -216,6 +216,7 @@ class UserCallLogRecord {
    *   * `Fax Prepare Error` - An internal error occurred when preparing the fax. Please try again
    *   * `Fax Save Error` - An internal error occurred when saving the fax. Please try again
    *   * `Fax Send Error` - An error occurred when sending the fax. Please try again
+   *   * `DescNoE911Address` - The call was rejected due to no E911 address
    */
   reason?:
     | 'Accepted'
@@ -250,7 +251,8 @@ class UserCallLogRecord {
     | 'Fax Poor Line'
     | 'Fax Prepare Error'
     | 'Fax Save Error'
-    | 'Fax Send Error';
+    | 'Fax Send Error'
+    | 'DescNoE911Address';
 
   /**
    */

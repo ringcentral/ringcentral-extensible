@@ -1,6 +1,8 @@
 import {ActiveCallInfo} from './index';
 
-// Notification payload body
+/**
+ * Notification payload body
+ */
 class DetailedExtensionPresenceWithSIPEventBody {
   /**
    * Internal identifier of an extension

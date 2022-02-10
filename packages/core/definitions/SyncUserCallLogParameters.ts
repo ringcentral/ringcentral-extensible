@@ -1,4 +1,6 @@
-// Query parameters for operation syncUserCallLog
+/**
+ * Query parameters for operation syncUserCallLog
+ */
 class SyncUserCallLogParameters {
   /**
    * Type of synchronization

@@ -1,4 +1,6 @@
-// Query parameters for operation listExtensionPhoneNumbers
+/**
+ * Query parameters for operation listExtensionPhoneNumbers
+ */
 class ListExtensionPhoneNumbersParameters {
   /**
    * Status of a phone number. Multiple values are supported
@@ -17,6 +19,7 @@ class ListExtensionPhoneNumbersParameters {
     | 'ForwardedNumber'
     | 'ForwardedCompanyNumber'
     | 'BusinessMobileNumber'
+    | 'IntegrationNumber'
   )[];
 
   /**

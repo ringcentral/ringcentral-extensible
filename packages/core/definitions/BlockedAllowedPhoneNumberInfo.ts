@@ -1,4 +1,6 @@
-// Information on a blocked/allowed phone number
+/**
+ * Information on a blocked/allowed phone number
+ */
 class BlockedAllowedPhoneNumberInfo {
   /**
    * Link to a blocked/allowed phone number
