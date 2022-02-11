@@ -315,7 +315,6 @@ class WebSocketExtension extends SdkExtension {
       throw new ConnectionException(event);
     }
     this.connectionDetails = body;
-    this.wsTokenExpiresAt = 0; // mark wsToken as expired after ws connection success
 
     // recover all subscriptions, if there are any
     for (const subscription of this.subscriptions.filter(sub => sub.enabled)) {
