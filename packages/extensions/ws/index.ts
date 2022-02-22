@@ -40,11 +40,11 @@ class WebSocketExtension extends SdkExtension {
 
   options: WebSocketOptions;
   rc!: RingCentral;
-  wsToken!: WsToken;
+  wsToken?: WsToken;
   wsTokenExpiresAt = 0;
   ws!: WS;
   connectionDetails!: ConnectionDetails;
-  wsc!: Wsc;
+  wsc?: Wsc;
   subscriptions: Subscription[] = [];
   recover: Function;
   connect: Function;
@@ -257,9 +257,12 @@ class WebSocketExtension extends SdkExtension {
       this.wsTokenExpiresAt =
         Date.now() + (this.wsToken.expires_in - 10) * 1000;
     }
-    let wsUri = `${this.wsToken.uri}?access_token=${this.wsToken.ws_access_token}`;
-    if (recoverSession) {
-      wsUri = `${wsUri}&wsc=${this.wsc.token}`;
+    let wsUri = '';
+    if (this.wsToken) {
+      wsUri = `${this.wsToken.uri}?access_token=${this.wsToken.ws_access_token}`;
+      if (recoverSession && this.wsc) {
+        wsUri += `&wsc=${this.wsc.token}`;
+      }
     }
     this.ws = new WS(wsUri);
     this.eventEmitter.emit(Events.newWebSocketObject, this.ws);
@@ -344,6 +347,9 @@ class WebSocketExtension extends SdkExtension {
       clearTimeout(this.pingServerHandle);
     }
     this.ws?.close();
+    this.wsc = undefined;
+    this.wsToken = undefined;
+    this.wsTokenExpiresAt = 0;
   }
 
   async subscribe(
