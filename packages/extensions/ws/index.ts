@@ -88,29 +88,31 @@ class WebSocketExtension extends SdkExtension {
 
   async install(rc: RingCentral) {
     this.rc = rc;
-    const request = rc.request.bind(rc);
-    rc.request = async <T>(
-      method: RestMethod,
-      endpoint: string,
-      content?: {},
-      queryParams?: {},
-      config?: RestRequestConfig
-    ): Promise<RestResponse<T>> => {
-      if (!this.enabled || !this.options.restOverWebSocket) {
-        return request<T>(method, endpoint, content, queryParams, config);
-      }
-      if (
-        // the following cannot be done with WebSocket
-        (config?.headers?.['Content-Type'] as string | undefined)?.includes(
-          'multipart/form-data'
-        ) ||
-        config?.responseType === 'arraybuffer' ||
-        endpoint.startsWith('/restapi/oauth/') // token, revoke, wstoken
-      ) {
-        return request<T>(method, endpoint, content, queryParams, config);
-      }
-      return this.request<T>(method, endpoint, content, queryParams, config);
-    };
+    if (this.options.restOverWebSocket) {
+      const request = rc.request.bind(rc);
+      rc.request = async <T>(
+        method: RestMethod,
+        endpoint: string,
+        content?: {},
+        queryParams?: {},
+        config?: RestRequestConfig
+      ): Promise<RestResponse<T>> => {
+        if (!this.enabled || !this.options.restOverWebSocket) {
+          return request<T>(method, endpoint, content, queryParams, config);
+        }
+        if (
+          // the following cannot be done with WebSocket
+          (config?.headers?.['Content-Type'] as string | undefined)?.includes(
+            'multipart/form-data'
+          ) ||
+          config?.responseType === 'arraybuffer' ||
+          endpoint.startsWith('/restapi/oauth/') // token, revoke, wstoken
+        ) {
+          return request<T>(method, endpoint, content, queryParams, config);
+        }
+        return this.request<T>(method, endpoint, content, queryParams, config);
+      };
+    }
 
     // should recover if this.options.wscToken
     let connectMethod = this.connect.bind(this);
