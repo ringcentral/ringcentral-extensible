@@ -23,7 +23,7 @@ export async function request<T>(
 ): Promise<RestResponse<T>> {
   const _config: RestRequestConfig = {
     method: method,
-    baseURL: this.wsToken.uri,
+    baseURL: this.wsToken?.uri,
     url: endpoint,
     data: content,
     params: queryParams,
