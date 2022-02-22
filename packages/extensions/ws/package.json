@@ -19,9 +19,9 @@
   },
   "dependencies": {
     "@types/lodash": "^4.14.178",
-    "@types/ws": "^8.2.2",
+    "@types/ws": "^8.2.3",
     "http-status-codes": "^2.2.0",
-    "hyperid": "^3.0.0",
+    "hyperid": "^3.0.1",
     "isomorphic-ws": "^4.0.1",
     "lodash": "^4.17.21",
     "wait-for-async": "^0.6.0",

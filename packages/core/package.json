@@ -19,7 +19,7 @@
   },
   "dependencies": {
     "@types/qs": "^6.9.7",
-    "axios": "^0.25.0",
+    "axios": "^0.26.0",
     "form-data": "^4.0.0",
     "qs": "^6.10.3"
   },
