@@ -1,13 +1,13 @@
 class CallsByOrigin {
   /**
    * Required
-   * Format: int64
+   * Format: double
    */
   internal?: number;
 
   /**
    * Required
-   * Format: int64
+   * Format: double
    */
   external?: number;
 }

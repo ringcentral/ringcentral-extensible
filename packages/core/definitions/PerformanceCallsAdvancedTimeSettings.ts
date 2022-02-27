@@ -5,8 +5,7 @@ import {PerformanceCallsTimeInterval} from './index';
  */
 class PerformanceCallsAdvancedTimeSettings {
   /**
-   * IANA-compatible time zone name, see [Time Zones](https://www.iana.org/time-zones)
-   * Required
+   * IANA-compatible time zone name, for example 'America/Los_Angeles', 'Europe/Moscow'. See also *[Time Zones](https://www.iana.org/time-zones)*
    */
   timeZone?: string;
 

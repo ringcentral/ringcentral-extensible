@@ -1,27 +1,28 @@
 import {
-  PerformanceCallsGrouping,
-  PerformanceCallsTimeRange,
-  PerformanceCallsAdditionalFilters,
-  PerformanceCallsResponseDataOptions,
+  TimelinePerformanceCallsGrouping,
+  PerformanceCallsTimeSettings,
+  PerformanceCallsFilters,
+  TimelineResponseDataOptions,
 } from './index';
 
 class PerformanceCallsTimelineRequest {
   /**
+   * Required
    */
-  grouping?: PerformanceCallsGrouping;
+  grouping?: TimelinePerformanceCallsGrouping;
 
   /**
    * Required
    */
-  timeRange?: PerformanceCallsTimeRange;
+  timeSettings?: PerformanceCallsTimeSettings;
 
   /**
    */
-  additionalFilters?: PerformanceCallsAdditionalFilters;
+  additionalFilters?: PerformanceCallsFilters;
 
   /**
    * Required
    */
-  responseOptions?: PerformanceCallsResponseDataOptions;
+  responseOptions?: TimelineResponseDataOptions;
 }
 export default PerformanceCallsTimelineRequest;

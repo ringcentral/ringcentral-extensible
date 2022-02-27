@@ -1,47 +1,59 @@
-import {PerformanceCallsCounter} from './index';
+import {
+  PerformanceCallsCountersResponseOptionsAllCalls,
+  PerformanceCallsCountersResponseOptionsCallsByDirection,
+  PerformanceCallsCountersResponseOptionsCallsByOrigin,
+  PerformanceCallsCountersResponseOptionsCallsByResponse,
+  PerformanceCallsCountersResponseOptionsCallsSegments,
+  PerformanceCallsCountersResponseOptionsCallsByResult,
+  PerformanceCallsCountersResponseOptionsCallsByCompanyHours,
+  PerformanceCallsCountersResponseOptionsCallsByQueueSla,
+  PerformanceCallsCountersResponseOptionsCallsByActions,
+  PerformanceCallsCountersResponseOptionsCallsByType,
+} from './index';
 
 /**
- * Performance calls counters
+ * The formula is defined by `aggregationType` and `aggregationInterval` for every counter individually. If `aggregationType` is `Sum` or `Percent`, `aggregationInterval` is not supported. If `aggregationType` is `Min`, `Max` or `Average`,`aggregationInterval` is required
  */
 class PerformanceCallsCountersResponseOptions {
   /**
    */
-  allCalls?: PerformanceCallsCounter;
+  allCalls?: PerformanceCallsCountersResponseOptionsAllCalls;
 
   /**
    */
-  callsByDirection?: PerformanceCallsCounter;
+  callsByDirection?: PerformanceCallsCountersResponseOptionsCallsByDirection;
 
   /**
    */
-  callsByOrigin?: PerformanceCallsCounter;
+  callsByOrigin?: PerformanceCallsCountersResponseOptionsCallsByOrigin;
 
   /**
    */
-  callsByResponse?: PerformanceCallsCounter;
+  callsByResponse?: PerformanceCallsCountersResponseOptionsCallsByResponse;
 
   /**
    */
-  callsByType?: PerformanceCallsCounter;
+  callsSegments?: PerformanceCallsCountersResponseOptionsCallsSegments;
 
   /**
    */
-  callsBySegments?: PerformanceCallsCounter;
+  callsByResult?: PerformanceCallsCountersResponseOptionsCallsByResult;
 
   /**
    */
-  callsByResult?: PerformanceCallsCounter;
+  callsByCompanyHours?: PerformanceCallsCountersResponseOptionsCallsByCompanyHours;
+
+  /**
+   * This counter is only applicable to Queues grouping
+   */
+  callsByQueueSla?: PerformanceCallsCountersResponseOptionsCallsByQueueSla;
 
   /**
    */
-  callsByActions?: PerformanceCallsCounter;
+  callsByActions?: PerformanceCallsCountersResponseOptionsCallsByActions;
 
   /**
    */
-  callsByCompanyHours?: PerformanceCallsCounter;
-
-  /**
-   */
-  callsByQueueSla?: PerformanceCallsCounter;
+  callsByType?: PerformanceCallsCountersResponseOptionsCallsByType;
 }
 export default PerformanceCallsCountersResponseOptions;

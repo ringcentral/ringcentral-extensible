@@ -1,4 +1,4 @@
-class PerformanceCallsPaging {
+class ResponsePaging {
   /**
    * The current page number
    * Required
@@ -7,7 +7,7 @@ class PerformanceCallsPaging {
   page?: number;
 
   /**
-   * The number of items displayed per page
+   * How many items are displayed on the page
    * Required
    * Format: int64
    */
@@ -27,4 +27,4 @@ class PerformanceCallsPaging {
    */
   totalElements?: number;
 }
-export default PerformanceCallsPaging;
+export default ResponsePaging;

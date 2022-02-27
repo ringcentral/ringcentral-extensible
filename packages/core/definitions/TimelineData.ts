@@ -1,10 +1,14 @@
-import {TimelineDataPoint} from './index';
+import {KeyInfo, TimelineDataPoint} from './index';
 
 class TimelineData {
   /**
    * Required
    */
   key?: string;
+
+  /**
+   */
+  keyInfo?: KeyInfo;
 
   /**
    */

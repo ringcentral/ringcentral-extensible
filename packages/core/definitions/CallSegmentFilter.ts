@@ -1,11 +1,7 @@
 import {PerformanceCallsCallSegmentLengthFilter} from './index';
 
-/**
- * Filtering calls by segment
- */
 class CallSegmentFilter {
   /**
-   * Required
    */
   callSegment?:
     | 'Ringing'

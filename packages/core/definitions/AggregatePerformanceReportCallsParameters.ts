@@ -3,7 +3,8 @@
  */
 class AggregatePerformanceReportCallsParameters {
   /**
-   * Page number
+   * The current page number
+   * Minimum: 1
    */
   page?: number;
 

@@ -1,5 +1,5 @@
 /**
- * Conditional aggregation of calls based on the time spent on a call by the specified mailbox(es)
+ * Conditional aggregation of calls based on the time spent by specified mailbox(es) on call
  */
 class PerformanceCallsFilterTimeSpentByMailbox {
   /**

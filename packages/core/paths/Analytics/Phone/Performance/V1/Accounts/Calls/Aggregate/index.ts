@@ -19,10 +19,11 @@ class Index {
     return `${this.parent.path()}/aggregate`;
   }
   /**
-   * Returns call performance data aggregated as per the specified parameters.
+   * Returns call performance aggregations filtered by parameters specified.
    * HTTP Method: post
    * Endpoint: /analytics/phone/performance/v1/accounts/{accountId}/calls/aggregate
    * Rate Limit Group: Light
+   * App Permission: Analytics
    */
   async post(
     performanceCallsAggregatesRequest: PerformanceCallsAggregatesRequest,

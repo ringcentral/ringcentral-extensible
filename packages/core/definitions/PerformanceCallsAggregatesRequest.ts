@@ -1,14 +1,15 @@
 import {
-  PerformanceCallsGrouping,
+  AggregatePerformanceCallsGrouping,
   PerformanceCallsTimeSettings,
-  PerformanceCallsAdditionalFilters,
+  PerformanceCallsFilters,
   PerformanceCallsResponseDataOptions,
 } from './index';
 
 class PerformanceCallsAggregatesRequest {
   /**
+   * Required
    */
-  grouping?: PerformanceCallsGrouping;
+  grouping?: AggregatePerformanceCallsGrouping;
 
   /**
    * Required
@@ -17,7 +18,7 @@ class PerformanceCallsAggregatesRequest {
 
   /**
    */
-  additionalFilters?: PerformanceCallsAdditionalFilters;
+  additionalFilters?: PerformanceCallsFilters;
 
   /**
    * Required

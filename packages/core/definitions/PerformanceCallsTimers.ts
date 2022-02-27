@@ -11,7 +11,7 @@ import {
 } from './index';
 
 /**
- * Call length data for the specified grouping.
+ * Call length data for the specified grouping
  */
 class PerformanceCallsTimers {
   /**

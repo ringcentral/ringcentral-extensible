@@ -12,7 +12,7 @@ import {
 } from './index';
 
 /**
- * Call volume data for the specified grouping.
+ * Call volume data for the specified grouping
  */
 class PerformanceCallsCounters {
   /**

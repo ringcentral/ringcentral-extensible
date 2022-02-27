@@ -1,13 +1,14 @@
-import {PerformanceCallsData, PerformanceCallsPaging} from './index';
+import {ResponsePaging, PerformanceCallsData} from './index';
 
 class PerformanceCallsAggregatesResponse {
   /**
    * Required
    */
-  data?: PerformanceCallsData[];
+  paging?: ResponsePaging;
 
   /**
+   * A list of call aggregations as per the grouping and filtering options specified in the request
    */
-  paging?: PerformanceCallsPaging;
+  data?: PerformanceCallsData[];
 }
 export default PerformanceCallsAggregatesResponse;

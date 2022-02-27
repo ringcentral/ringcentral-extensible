@@ -6894,14 +6894,14 @@ await rc.revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Company-listDomesticCountries) in API Explorer.
 
 ## aggregatePerformanceReportCalls
-Access Call Performance Aggregates
+Aggregate Call Performance Data
 
 Name|Value
 -|-
 HTTP Method|`POST`
 Endpoint|`/analytics/phone/performance/v1/accounts/{accountId}/calls/aggregate`
 Rate Limit Group|`Light`
-App Permission|`N/A`
+App Permission|`Analytics`
 User Permission|`N/A`
 
 ```ts
@@ -6915,17 +6915,17 @@ await rc.revoke();
 - `aggregatePerformanceReportCallsParameters` is of type [AggregatePerformanceReportCallsParameters](./definitions/AggregatePerformanceReportCallsParameters.ts)
 - `result` is of type [PerformanceCallsAggregatesResponse](./definitions/PerformanceCallsAggregatesResponse.ts)
 
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Performance-Reports-aggregatePerformanceReportCalls) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Line-Of-Business-Analytics-aggregatePerformanceReportCalls) in API Explorer.
 
 ## performanceReportCallsTimeline
-Access Call Performance Timeline
+Timeline Call Performance Data
 
 Name|Value
 -|-
 HTTP Method|`POST`
 Endpoint|`/analytics/phone/performance/v1/accounts/{accountId}/calls/timeline`
 Rate Limit Group|`Light`
-App Permission|`N/A`
+App Permission|`Analytics`
 User Permission|`N/A`
 
 ```ts
@@ -6939,7 +6939,7 @@ await rc.revoke();
 - `performanceReportCallsTimelineParameters` is of type [PerformanceReportCallsTimelineParameters](./definitions/PerformanceReportCallsTimelineParameters.ts)
 - `result` is of type [PerformanceCallsTimelineResponse](./definitions/PerformanceCallsTimelineResponse.ts)
 
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Performance-Reports-performanceReportCallsTimeline) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Line-Of-Business-Analytics-performanceReportCallsTimeline) in API Explorer.
 
 ## getAddressBookBulkUploadTask
 Get Contacts Update Task

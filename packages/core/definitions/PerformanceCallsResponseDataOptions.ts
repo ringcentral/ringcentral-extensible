@@ -4,7 +4,7 @@ import {
 } from './index';
 
 /**
- * Provides mapping of possible breakdown options for call aggregation and aggregation formula
+ * Provides mapping of possible breakdown options for call aggregation time intervals
  */
 class PerformanceCallsResponseDataOptions {
   /**

@@ -1,13 +1,13 @@
 class CallsByDirection {
   /**
    * Required
-   * Format: int64
+   * Format: double
    */
   inbound?: number;
 
   /**
    * Required
-   * Format: int64
+   * Format: double
    */
   outbound?: number;
 }

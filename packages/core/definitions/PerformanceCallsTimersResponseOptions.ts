@@ -1,43 +1,54 @@
-import {PerformanceCallsTimer} from './index';
+import {
+  PerformanceCallsTimersResponseOptionsAllCallsDuration,
+  PerformanceCallsTimersResponseOptionsCallsDurationByDirection,
+  PerformanceCallsTimersResponseOptionsCallsDurationByOrigin,
+  PerformanceCallsTimersResponseOptionsCallsDurationByResponse,
+  PerformanceCallsTimersResponseOptionsCallsSegmentsDuration,
+  PerformanceCallsTimersResponseOptionsCallsDurationByResult,
+  PerformanceCallsTimersResponseOptionsCallsDurationByCompanyHours,
+  PerformanceCallsTimersResponseOptionsCallsDurationByQueueSla,
+  PerformanceCallsTimersResponseOptionsCallsDurationByType,
+} from './index';
 
 /**
- * Performance calls timers. 'callsDurationByQueueSla' timer is only applicable to Queues grouping
+ * The formula is defined by `aggregationType` and `aggregationInterval` for every timer individually. If `aggregationType` is `Sum` or `Percent`, `aggregationInterval` is not supported. If `aggregationType` is `Min`, `Max` or `Average`,`aggregationInterval` is supported, but not required. If left empty, aggregation will be performed on per-call basis
  */
 class PerformanceCallsTimersResponseOptions {
   /**
    */
-  allCallsDuration?: PerformanceCallsTimer;
+  allCallsDuration?: PerformanceCallsTimersResponseOptionsAllCallsDuration;
 
   /**
    */
-  callsSegmentsDuration?: PerformanceCallsTimer;
+  callsDurationByDirection?: PerformanceCallsTimersResponseOptionsCallsDurationByDirection;
 
   /**
    */
-  callsDurationByDirection?: PerformanceCallsTimer;
+  callsDurationByOrigin?: PerformanceCallsTimersResponseOptionsCallsDurationByOrigin;
 
   /**
    */
-  callsDurationByOrigin?: PerformanceCallsTimer;
+  callsDurationByResponse?: PerformanceCallsTimersResponseOptionsCallsDurationByResponse;
 
   /**
    */
-  callsDurationByResponse?: PerformanceCallsTimer;
+  callsSegmentsDuration?: PerformanceCallsTimersResponseOptionsCallsSegmentsDuration;
 
   /**
    */
-  callsDurationByType?: PerformanceCallsTimer;
+  callsDurationByResult?: PerformanceCallsTimersResponseOptionsCallsDurationByResult;
 
   /**
    */
-  callsDurationByResult?: PerformanceCallsTimer;
+  callsDurationByCompanyHours?: PerformanceCallsTimersResponseOptionsCallsDurationByCompanyHours;
+
+  /**
+   * This timer is only applicable to Queues grouping
+   */
+  callsDurationByQueueSla?: PerformanceCallsTimersResponseOptionsCallsDurationByQueueSla;
 
   /**
    */
-  callsDurationByCompanyHours?: PerformanceCallsTimer;
-
-  /**
-   */
-  callsDurationByQueueSla?: PerformanceCallsTimer;
+  callsDurationByType?: PerformanceCallsTimersResponseOptionsCallsDurationByType;
 }
 export default PerformanceCallsTimersResponseOptions;

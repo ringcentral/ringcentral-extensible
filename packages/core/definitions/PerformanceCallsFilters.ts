@@ -1,14 +1,14 @@
 import {
   CallSegmentFilter,
-  CallPerformanceActionInfo,
+  CallActionFilter,
   PerformanceCallsFilterByLength,
   PerformanceCallsFilterTimeSpentByMailbox,
 } from './index';
 
 /**
- * Optional filters that limit the scope of calls to be aggregated. Multiple values can be joined via 'AND'
+ * Optional filters that limit the scope of calls to be aggregated (joined via AND)
  */
-class PerformanceCallsAdditionalFilters {
+class PerformanceCallsFilters {
   /**
    * Specifies whether the call was inbound or outbound relative to the scope specified in grouping object. Not applicable to internal calls with company scope (when grouping is not specified)
    */
@@ -20,45 +20,34 @@ class PerformanceCallsAdditionalFilters {
   origin?: 'Internal' | 'External';
 
   /**
-   * Aggregation of calls by the first response
+   * Aggregation of calls by first response
    */
   callResponse?: 'Answered' | 'NotAnswered' | 'Connected' | 'NotConnected';
 
   /**
-   * List of call response types. This filter allows to get aggregation of calls based on how the call started from the callee perspective. Multiple values can be joined via 'OR'. If the call is outbound relative to the grouping scope, `callType` is Outbound
-   */
-  callType?: (
-    | 'Direct'
-    | 'Outbound'
-    | 'ParkRetrieval'
-    | 'FromQueue'
-    | 'Transferred'
-  )[];
-
-  /**
-   * Aggregation of calls by the nature of call result. Multiple values can be joined via 'OR'
+   * Aggregation of calls by the nature of call result (joined via OR)
    */
   callResult?: (
     | 'Completed'
     | 'Abandoned'
-    | 'VoiceMail'
+    | 'Voicemail'
     | 'Unknown'
     | 'Missed'
     | 'Accepted'
   )[];
 
   /**
-   * Aggregation of calls by presence of specific segment. Multiple values can be joined via 'OR'
+   * Aggregation of calls by presence of specific segment (joined via OR)
    */
   callSegments?: CallSegmentFilter[];
 
   /**
    * Aggregation of calls by presence of specific action (joined via OR)
    */
-  callActions?: CallPerformanceActionInfo[];
+  callActions?: CallActionFilter[];
 
   /**
-   * Aggregation of calls by company business hours or after hours.
+   * Aggregation of calls by company's business hours or after hours
    */
   companyHours?: 'BusinessHours' | 'AfterHours';
 
@@ -71,17 +60,17 @@ class PerformanceCallsAdditionalFilters {
   timeSpent?: PerformanceCallsFilterTimeSpentByMailbox;
 
   /**
-   * List of extension identifiers from which the users specified in 'groupBy' received calls. Multiple values can be joined via 'OR'
+   * List of extension Ids from which users specified in groupBy received calls, items are joined via OR condition
    */
   callerExtensionIds?: string[];
 
   /**
-   * List of extension identifiers to which the users specified in 'groupBy' placed calls. Multiple values can be joined via 'OR'
+   * List of extension Ids to which users specified in groupBy placed calls, items are joined via OR condition
    */
   calledExtensionIds?: string[];
 
   /**
-   * Direct numbers the caller dialed. Multiple values can be joined via 'OR'
+   * The direct company numbers the caller called (joined via OR)
    */
   calledNumbers?: string[];
 
@@ -89,5 +78,16 @@ class PerformanceCallsAdditionalFilters {
    * This filter allows to get aggregation of calls that were either within or out of queue SLA. Only applicable to Queues grouping
    */
   queueSla?: 'InSla' | 'OutSla';
+
+  /**
+   * This filter allows to get aggregation of calls based on how the call started from the callee perspective (joined via OR). If the call is outbound relative to the grouping scope, callType is Outbound
+   */
+  callType?: (
+    | 'Direct'
+    | 'FromQueue'
+    | 'ParkRetrieval'
+    | 'Transferred'
+    | 'Outbound'
+  )[];
 }
-export default PerformanceCallsAdditionalFilters;
+export default PerformanceCallsFilters;

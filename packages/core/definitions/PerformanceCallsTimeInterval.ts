@@ -1,13 +1,11 @@
 class PerformanceCallsTimeInterval {
   /**
-   * Starting time in the fromat hh:mm
-   * Required
+   * Time in format hh:mm
    */
   from?: string;
 
   /**
-   * Ending time in the format hh:mm
-   * Required
+   * Time in format hh:mm
    */
   to?: string;
 }

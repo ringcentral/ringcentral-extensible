@@ -1,4 +1,4 @@
-class CallPerformanceActionInfo {
+class CallActionFilter {
   /**
    */
   callAction?:
@@ -10,4 +10,4 @@ class CallPerformanceActionInfo {
     | 'WarmTransfer'
     | 'DTMFTransfer';
 }
-export default CallPerformanceActionInfo;
+export default CallActionFilter;
