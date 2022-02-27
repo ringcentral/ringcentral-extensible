@@ -339,11 +339,15 @@ class WebSocketExtension extends SdkExtension {
     }
   }
 
-  async revoke() {
+  // keepInterval means we do not clear the interval
+  async revoke(keepInterval = false) {
     for (const subscription of this.subscriptions) {
       await subscription.revoke();
     }
     this.subscriptions = [];
+    if (!keepInterval && this.intervalHandle) {
+      clearInterval(this.intervalHandle);
+    }
     if (this.pingServerHandle) {
       clearTimeout(this.pingServerHandle);
     }
