@@ -142,6 +142,9 @@ class WebSocketExtension extends SdkExtension {
     }
     let retriesAttempted = 0;
     const check = async () => {
+      if (!this.enabled) {
+        return;
+      }
       if (this.options.autoRecover?.enabled !== true) {
         return;
       }
@@ -224,6 +227,7 @@ class WebSocketExtension extends SdkExtension {
       await this.connect(true); // connect to WSG and recover
     }
     this.recoverTimestamp = undefined;
+    this.enable();
   }
 
   async pingServer() {
@@ -340,9 +344,6 @@ class WebSocketExtension extends SdkExtension {
       await subscription.revoke();
     }
     this.subscriptions = [];
-    if (this.intervalHandle) {
-      clearInterval(this.intervalHandle);
-    }
     if (this.pingServerHandle) {
       clearTimeout(this.pingServerHandle);
     }
@@ -350,6 +351,7 @@ class WebSocketExtension extends SdkExtension {
     this.wsc = undefined;
     this.wsToken = undefined;
     this.wsTokenExpiresAt = 0;
+    this.disable();
   }
 
   async subscribe(
