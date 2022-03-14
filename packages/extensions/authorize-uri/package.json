@@ -19,6 +19,6 @@
   },
   "dependencies": {
     "@types/urijs": "^1.19.19",
-    "urijs": "^1.19.8"
+    "urijs": "^1.19.10"
   }
 }

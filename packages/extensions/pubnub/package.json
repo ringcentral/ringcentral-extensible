@@ -19,6 +19,6 @@
   },
   "dependencies": {
     "@types/pubnub": "^4.29.6",
-    "pubnub": "^5.0.0"
+    "pubnub": "^5.0.1"
   }
 }

@@ -19,7 +19,7 @@
   },
   "dependencies": {
     "@types/lodash": "^4.14.179",
-    "@types/ws": "^8.5.1",
+    "@types/ws": "^8.5.3",
     "http-status-codes": "^2.2.0",
     "hyperid": "^3.0.1",
     "isomorphic-ws": "^4.0.1",

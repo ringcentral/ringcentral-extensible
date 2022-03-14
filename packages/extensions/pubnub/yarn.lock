@@ -466,10 +466,10 @@ proxy-from-env@^1.0.0:
   resolved "https://registry.yarnpkg.com/proxy-from-env/-/proxy-from-env-1.1.0.tgz#e102f16ca355424865755d2c9e8ea4f24d58c3e2"
   integrity sha512-D+zkORCbA9f1tdWRK0RaCR3GPv50cMxcrz4X8k5LTSUD1Dkw47mKJEZQNunItRTkWwgtaUSo1RVFRIG9ZXiFYg==
 
-pubnub@^5.0.0:
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/pubnub/-/pubnub-5.0.0.tgz#195e1b763af758e1c0bb0bfb9b6b7dbfaad2022e"
-  integrity sha512-oia2VLlO7088nMfDKZbw4RWdbhgiO2YVOlEm26fvrfZL5/MZHwb/QPM+x3Xgyw4+lrGmdzotf3JGFsufqpjLaw==
+pubnub@^5.0.1:
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/pubnub/-/pubnub-5.0.1.tgz#2bc5e7a986e625a02f4d7ebc9e25269e905e8e09"
+  integrity sha512-V2xDmbKviFY4mjuFE4a4uM5K0niLa/0aHu8tGs1cUHEyLt7yG+4zli/LvNb5ZKpcsdN7rojbbiZNd8TZuT+gUg==
   dependencies:
     "@babel/runtime" "^7.10.5"
     "@tsconfig/node12" "^1.0.9"

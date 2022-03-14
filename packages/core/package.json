@@ -19,14 +19,14 @@
   },
   "dependencies": {
     "@types/qs": "^6.9.7",
-    "axios": "^0.26.0",
+    "axios": "^0.26.1",
     "form-data": "^4.0.0",
     "qs": "^6.10.3"
   },
   "devDependencies": {
     "dotenv-override-true": "^6.2.2",
     "ringcentral-code-generator": "^0.3.1",
-    "ts-node": "^10.5.0"
+    "ts-node": "^10.7.0"
   },
   "scripts": {
     "generate": "ts-node -r dotenv-override-true/config code-generator.ts"
