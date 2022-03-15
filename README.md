@@ -52,9 +52,15 @@ RingCentral.config.logger = console;
 Or you could use a third-party logger:
 
 ```ts
-import Logger from 'logplease';
+import winston from 'winston';
 
-const logger = Logger.create('logger name');
+const logger = winston.createLogger({
+  transports: [
+    new winston.transports.Console({
+      format: winston.format.simple(),
+    }),
+  ],
+});
 RingCentral.config.logger = logger;
 ```
 

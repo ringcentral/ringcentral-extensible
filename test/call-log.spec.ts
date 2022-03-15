@@ -1,4 +1,18 @@
+// import RingCentral from '@rc-ex/core';
+// import winston from 'winston';
+
 import {createRingCentral} from './utils';
+
+// const logger = winston.createLogger({
+//   transports: [
+//     new winston.transports.Console({
+//       format: winston.format.simple(),
+//     }),
+//   ],
+// });
+// RingCentral.config.logger = logger;
+
+// RingCentral.config.logger = console;
 
 describe('call log', () => {
   test('list call log', async () => {
