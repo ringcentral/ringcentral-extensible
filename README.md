@@ -39,6 +39,26 @@ This SDK supports [extensions](./packages/extensions). You can enable features b
 If you want to add features to this SDK, create an extension.
 
 
+## Logging
+
+The logging implementation copies [AWS SDK logging](https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/logging-sdk-calls.html).
+
+To enable logging:
+
+```ts
+RingCentral.config.logger = console;
+```
+
+Or you could use a third-party logger:
+
+```ts
+import Logger from 'logplease';
+
+const logger = Logger.create('logger name');
+RingCentral.config.logger = logger;
+```
+
+
 ## Binary content downloading
 
 Some [sample code](./packages/core/samples.md) for binary content downloading may not work.

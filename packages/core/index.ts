@@ -5,6 +5,7 @@ import Scim from './paths/Scim';
 import Rest, {RestOptions, RestRequestConfig} from './Rest';
 import SdkExtension from './SdkExtension';
 import Analytics from './paths/Analytics';
+import RestException from './RestException';
 
 type PasswordFlowOptions = {
   username: string;
@@ -17,7 +18,25 @@ type AuthCodeFlowOptions = {
   code_verifier?: string;
 };
 
+interface Logger {
+  debug: Function;
+  log: Function;
+  info: Function;
+  warn: Function;
+  error: Function;
+}
+
 export class RingCentral {
+  static config: {logger: Logger} = {
+    logger: {
+      debug: () => {},
+      log: () => {},
+      info: () => {},
+      warn: () => {},
+      error: () => {},
+    },
+  };
+
   sdkExtensions: SdkExtension[] = [];
   rest: Rest;
 
@@ -44,7 +63,26 @@ export class RingCentral {
     queryParams?: {},
     config?: RestRequestConfig
   ): Promise<RestResponse<T>> {
-    return this.rest.request<T>(method, endpoint, content, queryParams, config);
+    try {
+      const r = await this.rest.request<T>(
+        method,
+        endpoint,
+        content,
+        queryParams,
+        config
+      );
+      RingCentral.config.logger.log(
+        `[HTTP ${method} ${r.status} ${r.statusText}] ${this.rest.server} ${endpoint}`
+      );
+      return r;
+    } catch (e: any) {
+      if (e.response) {
+        RingCentral.config.logger.log(
+          `[HTTP ${method} ${e.response.status} ${e.response.statusText}] ${this.rest.server} ${endpoint}`
+        );
+      }
+      throw e;
+    }
   }
 
   async get<T>(
