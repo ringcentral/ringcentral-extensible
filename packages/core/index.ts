@@ -71,13 +71,18 @@ export class RingCentral {
         config
       );
       RingCentral.config.logger.info(
-        `[HTTP ${method} ${r.status} ${r.statusText}] ${this.rest.server} ${endpoint}`
+        `[${new Date().toLocaleString()} HTTP ${method} ${r.status} ${
+          r.statusText
+        }] ${this.rest.server} ${endpoint}`
       );
       return r;
     } catch (e: any) {
       if (e.response) {
+        const r = e.response;
         RingCentral.config.logger.info(
-          `[HTTP ${method} ${e.response.status} ${e.response.statusText}] ${this.rest.server} ${endpoint}`
+          `[${new Date().toLocaleString()} HTTP ${method} ${r.status} ${
+            r.statusText
+          }] ${this.rest.server} ${endpoint}`
         );
       }
       throw e;

@@ -64,6 +64,12 @@ const logger = winston.createLogger({
 RingCentral.config.logger = logger;
 ```
 
+A sample log entry:
+
+```
+[3/16/2022, 9:58:47 AM HTTP GET 200 OK] https://platform.devtest.ringcentral.com /restapi/v1.0/account/~/extension/~/call-log
+```
+
 
 ## Binary content downloading
 
