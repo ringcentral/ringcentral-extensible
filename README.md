@@ -64,10 +64,11 @@ const logger = winston.createLogger({
 RingCentral.config.logger = logger;
 ```
 
-A sample log entry:
+Sample log entries:
 
 ```
 [3/16/2022, 9:58:47 AM HTTP GET 200 OK] https://platform.devtest.ringcentral.com /restapi/v1.0/account/~/extension/~/call-log
+[3/16/2022, 5:47:53 PM HTTP POST 401 Unauthorized] https://platform.ringcentral.com /restapi/oauth/token
 ```
 
 
