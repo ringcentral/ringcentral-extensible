@@ -71,6 +71,8 @@ Sample log entries:
 [3/16/2022, 5:47:53 PM HTTP POST 401 Unauthorized] https://platform.ringcentral.com /restapi/oauth/token
 ```
 
+[A demo application printing logs to console](https://github.com/tylerlong/rc-logging-demo-ts).
+
 
 ## Binary content downloading
 
