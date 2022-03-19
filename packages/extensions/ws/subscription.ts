@@ -101,10 +101,6 @@ class Subscription {
     if (!this.subscriptionInfo) {
       return;
     }
-    if (this.timeout) {
-      global.clearTimeout(this.timeout);
-      this.timeout = undefined;
-    }
     try {
       await this.wse.request<SubscriptionInfo>(
         'DELETE',
@@ -130,9 +126,20 @@ class Subscription {
         throw e;
       }
     }
-    this.subscriptionInfo = undefined;
+    this.remove();
+  }
+
+  remove() {
+    if (this.timeout) {
+      global.clearTimeout(this.timeout);
+      this.timeout = undefined;
+    }
     this.enabled = false;
-    this.wse.ws.removeEventListener('message', this.eventListener);
+    this.subscriptionInfo = undefined;
+    if (this.wse.ws) {
+      this.wse.ws.removeEventListener('message', this.eventListener);
+    }
+    this.wse.subscriptions = this.wse.subscriptions.filter(x => x !== this);
   }
 }
 
