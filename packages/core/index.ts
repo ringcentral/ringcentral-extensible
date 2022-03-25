@@ -5,6 +5,7 @@ import Scim from './paths/Scim';
 import Rest, {RestOptions, RestRequestConfig} from './Rest';
 import SdkExtension from './SdkExtension';
 import Analytics from './paths/Analytics';
+import RestException from './RestException';
 
 type PasswordFlowOptions = {
   username: string;
@@ -76,9 +77,10 @@ export class RingCentral {
         }] ${this.rest.server} ${endpoint}`
       );
       return r;
-    } catch (e: any) {
-      if (e.response) {
-        const r = e.response;
+    } catch (e) {
+      const re = e as RestException;
+      if (re.response) {
+        const r = re.response;
         RingCentral.config.logger.info(
           `[${new Date().toLocaleString()} HTTP ${method} ${r.status} ${
             r.statusText
