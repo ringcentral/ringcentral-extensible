@@ -18,7 +18,7 @@
     "access": "public"
   },
   "dependencies": {
-    "@types/lodash": "^4.14.180",
+    "@types/lodash": "^4.14.181",
     "@types/ws": "^8.5.3",
     "http-status-codes": "^2.2.0",
     "hyperid": "^3.0.1",
