@@ -1,7 +1,6 @@
 # RingCentral Extensible SDK
 
 [![Build Status](https://github.com/ringcentral/ringcentral-extensible/workflows/Node.js/badge.svg?branch=master)](https://github.com/ringcentral/ringcentral-extensible/actions)
-[![Code Style: Google](https://img.shields.io/badge/code%20style-google-blueviolet.svg)](https://github.com/google/gts)
 
 RingCentral Extensible is a SDK with a tiny core and lots of extensions.
 It is an endeavour to get rid of bloated SDK. You install extensions on demand.
