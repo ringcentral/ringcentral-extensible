@@ -1,10 +1,8 @@
 {
   "name": "@rc-ex/test",
+  "version": "0.1.0",
   "private": true,
   "license": "MIT",
-  "scripts": {
-    "link": "yarn link @rc-ex/core && yarn link @rc-ex/authorize-uri && yarn link @rc-ex/debug && yarn link @rc-ex/discovery && yarn link @rc-ex/engage-voice && yarn link @rc-ex/events && yarn link @rc-ex/pubnub && yarn link @rc-ex/rate-limit && yarn link @rc-ex/rcsdk && yarn link @rc-ex/retry && yarn link @rc-ex/ws"
-  },
   "devDependencies": {
     "@ringcentral/sdk": "^4.7.2",
     "@types/jest": "^27.4.1",

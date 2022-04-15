@@ -21,6 +21,6 @@
     "@ringcentral/sdk": "^4.7.2"
   },
   "peerDependencies": {
-    "@ringcentral/sdk": "^4.6.1"
+    "@ringcentral/sdk": "^4.7.2"
   }
 }
