@@ -27,15 +27,12 @@ class RetryExtension extends SdkExtension {
   constructor(options: RetryOptions = {}) {
     super();
     this.options = options;
-    this.options.shouldRetry ??= (restException, retriesAttempted) => {
-      return (
-        retriesAttempted < 3 &&
-        [429, 503].includes(restException.response.status)
-      );
-    };
-    this.options.retryInterval ??= (restException, retriesAttempted) => {
-      return 60 * 1000 * Math.pow(2, retriesAttempted); // exponential back off
-    };
+    this.options.shouldRetry ??= (restException, retriesAttempted) => (
+      retriesAttempted < 3
+        && [429, 503].includes(restException.response.status)
+    );
+    this.options.retryInterval ??= (restException, retriesAttempted) => 60 * 1000 * 2 ** retriesAttempted // exponential back off
+    ;
   }
 
   async install(rc: RingCentral) {
@@ -46,7 +43,7 @@ class RetryExtension extends SdkExtension {
       content?: {},
       queryParams?: {},
       config?: RestRequestConfig,
-      retriesAttempted = 0
+      retriesAttempted = 0,
     ): Promise<RestResponse<T>> => {
       if (!this.enabled) {
         return request<T>(method, endpoint, content, queryParams, config);
@@ -65,7 +62,7 @@ class RetryExtension extends SdkExtension {
               content,
               queryParams,
               config,
-              retriesAttempted + 1
+              retriesAttempted + 1,
             );
           }
         }

@@ -1,4 +1,4 @@
-import {RestRequestConfig} from '../../../../Rest';
+import { RestRequestConfig } from '../../../../Rest';
 import {
   ReadCompanyCallLogParameters,
   AccountCallLogResponse,
@@ -6,11 +6,13 @@ import {
   CompanyCallLogRecord,
 } from '../../../../definitions';
 import Parent from '..';
-import {RingCentral} from '../../../..';
+import { RingCentral } from '../../../..';
 
 class Index {
   rc: RingCentral;
+
   parent: Parent;
+
   callRecordId: string | null;
 
   constructor(parent: Parent, callRecordId: string | null = null) {
@@ -18,12 +20,14 @@ class Index {
     this.rc = parent.rc;
     this.callRecordId = callRecordId;
   }
+
   path(withParameter = true): string {
     if (withParameter && this.callRecordId !== null) {
       return `${this.parent.path()}/call-log/${this.callRecordId}`;
     }
     return `${this.parent.path()}/call-log`;
   }
+
   /**
    * Returns call log records filtered by parameters specified.
    * HTTP Method: get
@@ -34,12 +38,12 @@ class Index {
    */
   async list(
     queryParams?: ReadCompanyCallLogParameters,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<AccountCallLogResponse> {
     const r = await this.rc.get<AccountCallLogResponse>(
       this.path(false),
       queryParams,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }
@@ -54,7 +58,7 @@ class Index {
    */
   async get(
     queryParams?: ReadCompanyCallRecordParameters,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<CompanyCallLogRecord> {
     if (this.callRecordId === null) {
       throw new Error('callRecordId must be specified.');
@@ -62,7 +66,7 @@ class Index {
     const r = await this.rc.get<CompanyCallLogRecord>(
       this.path(),
       queryParams,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }

@@ -1,14 +1,16 @@
-import {RestRequestConfig} from '../../../../../Rest';
+import { RestRequestConfig } from '../../../../../Rest';
 import {
   ListCallRecordingCustomGreetingsParameters,
   CallRecordingCustomGreetings,
 } from '../../../../../definitions';
 import Parent from '..';
-import {RingCentral} from '../../../../..';
+import { RingCentral } from '../../../../..';
 
 class Index {
   rc: RingCentral;
+
   parent: Parent;
+
   greetingId: string | null;
 
   constructor(parent: Parent, greetingId: string | null = null) {
@@ -16,12 +18,14 @@ class Index {
     this.rc = parent.rc;
     this.greetingId = greetingId;
   }
+
   path(withParameter = true): string {
     if (withParameter && this.greetingId !== null) {
       return `${this.parent.path()}/custom-greetings/${this.greetingId}`;
     }
     return `${this.parent.path()}/custom-greetings`;
   }
+
   /**
    * Returns call recording custom greetings.
    * HTTP Method: get
@@ -32,12 +36,12 @@ class Index {
    */
   async get(
     queryParams?: ListCallRecordingCustomGreetingsParameters,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<CallRecordingCustomGreetings> {
     const r = await this.rc.get<CallRecordingCustomGreetings>(
       this.path(false),
       queryParams,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }
@@ -54,7 +58,7 @@ class Index {
     const r = await this.rc.delete<string>(
       this.path(false),
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }
@@ -74,7 +78,7 @@ class Index {
     const r = await this.rc.delete<string>(
       this.path(),
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }

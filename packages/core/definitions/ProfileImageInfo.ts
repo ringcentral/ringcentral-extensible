@@ -1,4 +1,4 @@
-import {ProfileImageInfoURI} from './index';
+import { ProfileImageInfoURI } from './index';
 
 /**
  * Information on profile image

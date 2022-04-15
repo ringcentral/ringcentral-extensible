@@ -1,6 +1,6 @@
 import BulkAssign from './BulkAssign';
 import Default from './Default';
-import {RestRequestConfig} from '../../../../Rest';
+import { RestRequestConfig } from '../../../../Rest';
 import {
   ListUserRolesParameters,
   RolesCollectionResource,
@@ -8,11 +8,13 @@ import {
   DeleteCustomRoleParameters,
 } from '../../../../definitions';
 import Parent from '..';
-import {RingCentral} from '../../../..';
+import { RingCentral } from '../../../..';
 
 class Index {
   rc: RingCentral;
+
   parent: Parent;
+
   roleId: string | null;
 
   constructor(parent: Parent, roleId: string | null = null) {
@@ -20,12 +22,14 @@ class Index {
     this.rc = parent.rc;
     this.roleId = roleId;
   }
+
   path(withParameter = true): string {
     if (withParameter && this.roleId !== null) {
       return `${this.parent.path()}/user-role/${this.roleId}`;
     }
     return `${this.parent.path()}/user-role`;
   }
+
   /**
    * Returns the list of account user roles.
    * HTTP Method: get
@@ -36,12 +40,12 @@ class Index {
    */
   async list(
     queryParams?: ListUserRolesParameters,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<RolesCollectionResource> {
     const r = await this.rc.get<RolesCollectionResource>(
       this.path(false),
       queryParams,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }
@@ -56,13 +60,13 @@ class Index {
    */
   async post(
     roleResource: RoleResource,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<string> {
     const r = await this.rc.post<string>(
       this.path(false),
       roleResource,
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }
@@ -82,7 +86,7 @@ class Index {
     const r = await this.rc.get<RoleResource>(
       this.path(),
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }
@@ -97,7 +101,7 @@ class Index {
    */
   async put(
     roleResource: RoleResource,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<string> {
     if (this.roleId === null) {
       throw new Error('roleId must be specified.');
@@ -106,7 +110,7 @@ class Index {
       this.path(),
       roleResource,
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }
@@ -121,7 +125,7 @@ class Index {
    */
   async delete(
     queryParams?: DeleteCustomRoleParameters,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<string> {
     if (this.roleId === null) {
       throw new Error('roleId must be specified.');
@@ -129,7 +133,7 @@ class Index {
     const r = await this.rc.delete<string>(
       this.path(),
       queryParams,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }

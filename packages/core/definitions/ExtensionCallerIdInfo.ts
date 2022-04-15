@@ -1,4 +1,4 @@
-import {CallerIdByDevice, CallerIdByFeature} from './index';
+import { CallerIdByDevice, CallerIdByFeature } from './index';
 
 class ExtensionCallerIdInfo {
   /**

@@ -1,4 +1,4 @@
-import {RestRequestConfig} from '../../../../../Rest';
+import { RestRequestConfig } from '../../../../../Rest';
 import {
   GetExtensionEmergencyLocationsParameters,
   EmergencyLocationsResource,
@@ -7,11 +7,13 @@ import {
   DeleteExtensionEmergencyLocationParameters,
 } from '../../../../../definitions';
 import Parent from '..';
-import {RingCentral} from '../../../../..';
+import { RingCentral } from '../../../../..';
 
 class Index {
   rc: RingCentral;
+
   parent: Parent;
+
   locationId: string | null;
 
   constructor(parent: Parent, locationId: string | null = null) {
@@ -19,12 +21,14 @@ class Index {
     this.rc = parent.rc;
     this.locationId = locationId;
   }
+
   path(withParameter = true): string {
     if (withParameter && this.locationId !== null) {
       return `${this.parent.path()}/emergency-locations/${this.locationId}`;
     }
     return `${this.parent.path()}/emergency-locations`;
   }
+
   /**
    * Returns a list of emergency response locations available for the current user extension.
    * HTTP Method: get
@@ -34,12 +38,12 @@ class Index {
    */
   async list(
     queryParams?: GetExtensionEmergencyLocationsParameters,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<EmergencyLocationsResource> {
     const r = await this.rc.get<EmergencyLocationsResource>(
       this.path(false),
       queryParams,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }
@@ -54,13 +58,13 @@ class Index {
    */
   async post(
     createUserEmergencyLocationRequest: CreateUserEmergencyLocationRequest,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<EmergencyLocationInfo> {
     const r = await this.rc.post<EmergencyLocationInfo>(
       this.path(false),
       createUserEmergencyLocationRequest,
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }
@@ -73,7 +77,7 @@ class Index {
    * App Permission: ReadAccounts
    */
   async get(
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<EmergencyLocationInfo> {
     if (this.locationId === null) {
       throw new Error('locationId must be specified.');
@@ -81,7 +85,7 @@ class Index {
     const r = await this.rc.get<EmergencyLocationInfo>(
       this.path(),
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }
@@ -96,7 +100,7 @@ class Index {
    */
   async put(
     emergencyLocationInfo: EmergencyLocationInfo,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<EmergencyLocationInfo> {
     if (this.locationId === null) {
       throw new Error('locationId must be specified.');
@@ -105,7 +109,7 @@ class Index {
       this.path(),
       emergencyLocationInfo,
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }
@@ -120,7 +124,7 @@ class Index {
    */
   async delete(
     queryParams?: DeleteExtensionEmergencyLocationParameters,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<string> {
     if (this.locationId === null) {
       throw new Error('locationId must be specified.');
@@ -128,7 +132,7 @@ class Index {
     const r = await this.rc.delete<string>(
       this.path(),
       queryParams,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }

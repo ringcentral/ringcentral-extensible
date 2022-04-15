@@ -24,10 +24,10 @@ describe('WebSocket', () => {
     let eventCount = 0;
     await webSocketExtension.subscribe(
       ['/restapi/v1.0/account/~/extension/~/message-store'],
-      event => {
+      (event) => {
         expect(event).toBeDefined();
         eventCount += 1;
-      }
+      },
     );
 
     webSocketExtension.ws.close();
@@ -38,8 +38,8 @@ describe('WebSocket', () => {
       .extension()
       .companyPager()
       .post({
-        from: {extensionNumber: '101'},
-        to: [{extensionNumber: '101'}], // send pager to oneself
+        from: { extensionNumber: '101' },
+        to: [{ extensionNumber: '101' }], // send pager to oneself
         text: 'Hello world',
       });
     const successful = await waitFor({

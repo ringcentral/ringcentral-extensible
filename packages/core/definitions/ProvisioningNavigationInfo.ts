@@ -1,4 +1,4 @@
-import {ProvisioningNavigationInfoUri} from './index';
+import { ProvisioningNavigationInfoUri } from './index';
 
 /**
  * Information on navigation

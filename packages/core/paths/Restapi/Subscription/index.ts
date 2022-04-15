@@ -1,5 +1,5 @@
 import Renew from './Renew';
-import {RestRequestConfig} from '../../../Rest';
+import { RestRequestConfig } from '../../../Rest';
 import {
   RecordsCollectionResourceSubscriptionResponse,
   CreateSubscriptionRequest,
@@ -7,11 +7,13 @@ import {
   ModifySubscriptionRequest,
 } from '../../../definitions';
 import Parent from '..';
-import {RingCentral} from '../../..';
+import { RingCentral } from '../../..';
 
 class Index {
   rc: RingCentral;
+
   parent: Parent;
+
   subscriptionId: string | null;
 
   constructor(parent: Parent, subscriptionId: string | null = null) {
@@ -19,12 +21,14 @@ class Index {
     this.rc = parent.rc;
     this.subscriptionId = subscriptionId;
   }
+
   path(withParameter = true): string {
     if (withParameter && this.subscriptionId !== null) {
       return `${this.parent.path()}/subscription/${this.subscriptionId}`;
     }
     return `${this.parent.path()}/subscription`;
   }
+
   /**
    * Returns the list of subscriptions created by the logged-in user for the currently authorized client application.
    * HTTP Method: get
@@ -32,12 +36,12 @@ class Index {
    * Rate Limit Group: Light
    */
   async list(
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<RecordsCollectionResourceSubscriptionResponse> {
     const r = await this.rc.get<RecordsCollectionResourceSubscriptionResponse>(
       this.path(false),
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }
@@ -50,13 +54,13 @@ class Index {
    */
   async post(
     createSubscriptionRequest: CreateSubscriptionRequest,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<SubscriptionInfo> {
     const r = await this.rc.post<SubscriptionInfo>(
       this.path(false),
       createSubscriptionRequest,
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }
@@ -74,7 +78,7 @@ class Index {
     const r = await this.rc.get<SubscriptionInfo>(
       this.path(),
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }
@@ -87,7 +91,7 @@ class Index {
    */
   async put(
     modifySubscriptionRequest: ModifySubscriptionRequest,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<SubscriptionInfo> {
     if (this.subscriptionId === null) {
       throw new Error('subscriptionId must be specified.');
@@ -96,7 +100,7 @@ class Index {
       this.path(),
       modifySubscriptionRequest,
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }
@@ -114,7 +118,7 @@ class Index {
     const r = await this.rc.delete<string>(
       this.path(),
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }

@@ -1,4 +1,4 @@
-import {GlipPostInfo, GlipNavigationInfo} from './index';
+import { GlipPostInfo, GlipNavigationInfo } from './index';
 
 class GlipPostsList {
   /**

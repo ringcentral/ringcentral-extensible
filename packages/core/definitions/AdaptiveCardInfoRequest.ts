@@ -1,4 +1,4 @@
-import {AdaptiveCardInfoRequestItem} from './index';
+import { AdaptiveCardInfoRequestItem } from './index';
 
 class AdaptiveCardInfoRequest {
   /**

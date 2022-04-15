@@ -1,4 +1,4 @@
-import {PatchOperation} from './index';
+import { PatchOperation } from './index';
 
 class UserPatch {
   /**

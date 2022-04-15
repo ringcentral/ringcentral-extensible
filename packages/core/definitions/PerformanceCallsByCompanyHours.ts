@@ -1,4 +1,4 @@
-import {CallsByCompanyHours} from './index';
+import { CallsByCompanyHours } from './index';
 
 class PerformanceCallsByCompanyHours {
   /**

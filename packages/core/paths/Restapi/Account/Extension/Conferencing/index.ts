@@ -1,23 +1,26 @@
-import {RestRequestConfig} from '../../../../../Rest';
+import { RestRequestConfig } from '../../../../../Rest';
 import {
   ReadConferencingSettingsParameters,
   GetConferencingInfoResponse,
   UpdateConferencingInfoRequest,
 } from '../../../../../definitions';
 import Parent from '..';
-import {RingCentral} from '../../../../..';
+import { RingCentral } from '../../../../..';
 
 class Index {
   rc: RingCentral;
+
   parent: Parent;
 
   constructor(parent: Parent) {
     this.parent = parent;
     this.rc = parent.rc;
   }
+
   path(): string {
     return `${this.parent.path()}/conferencing`;
   }
+
   /**
    * Returns the information on the Free Conference Calling (FCC) feature for a given extension.
    * HTTP Method: get
@@ -28,12 +31,12 @@ class Index {
    */
   async get(
     queryParams?: ReadConferencingSettingsParameters,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<GetConferencingInfoResponse> {
     const r = await this.rc.get<GetConferencingInfoResponse>(
       this.path(),
       queryParams,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }
@@ -48,13 +51,13 @@ class Index {
    */
   async put(
     updateConferencingInfoRequest: UpdateConferencingInfoRequest,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<GetConferencingInfoResponse> {
     const r = await this.rc.put<GetConferencingInfoResponse>(
       this.path(),
       updateConferencingInfoRequest,
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }

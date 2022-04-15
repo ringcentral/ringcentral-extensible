@@ -1,22 +1,25 @@
-import {RestRequestConfig} from '../../../../../Rest';
+import { RestRequestConfig } from '../../../../../Rest';
 import {
   ListPagingGroupDevicesParameters,
   PagingOnlyGroupDevices,
 } from '../../../../../definitions';
 import Parent from '..';
-import {RingCentral} from '../../../../..';
+import { RingCentral } from '../../../../..';
 
 class Index {
   rc: RingCentral;
+
   parent: Parent;
 
   constructor(parent: Parent) {
     this.parent = parent;
     this.rc = parent.rc;
   }
+
   path(): string {
     return `${this.parent.path()}/devices`;
   }
+
   /**
    * Returns the list of paging devices assigned to this group.
    * HTTP Method: get
@@ -27,12 +30,12 @@ class Index {
    */
   async get(
     queryParams?: ListPagingGroupDevicesParameters,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<PagingOnlyGroupDevices> {
     const r = await this.rc.get<PagingOnlyGroupDevices>(
       this.path(),
       queryParams,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }

@@ -1,4 +1,4 @@
-import {SubscriptionInfo} from './index';
+import { SubscriptionInfo } from './index';
 
 class RecordsCollectionResourceSubscriptionResponse {
   /**

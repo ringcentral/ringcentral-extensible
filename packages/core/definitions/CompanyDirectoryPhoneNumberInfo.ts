@@ -21,9 +21,9 @@ class CompanyDirectoryPhoneNumberInfo {
    * Usage type of a phone number
    */
   usageType?:
-    | 'MobileNumber'
-    | 'ContactNumber'
-    | 'DirectNumber'
-    | 'ForwardedNumber';
+  | 'MobileNumber'
+  | 'ContactNumber'
+  | 'DirectNumber'
+  | 'ForwardedNumber';
 }
 export default CompanyDirectoryPhoneNumberInfo;

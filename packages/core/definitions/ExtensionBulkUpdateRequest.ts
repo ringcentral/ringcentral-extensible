@@ -1,4 +1,4 @@
-import {ExtensionBulkUpdateInfo} from './index';
+import { ExtensionBulkUpdateInfo } from './index';
 
 /**
  * List of extensions to be updated

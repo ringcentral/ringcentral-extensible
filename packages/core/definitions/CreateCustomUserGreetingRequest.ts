@@ -1,4 +1,4 @@
-import {Attachment} from './index';
+import { Attachment } from './index';
 
 /**
  * Request body for operation createCustomUserGreeting
@@ -9,13 +9,13 @@ class CreateCustomUserGreetingRequest {
    * Required
    */
   type?:
-    | 'Introductory'
-    | 'Announcement'
-    | 'ConnectingMessage'
-    | 'ConnectingAudio'
-    | 'Voicemail'
-    | 'Unavailable'
-    | 'HoldMusic';
+  | 'Introductory'
+  | 'Announcement'
+  | 'ConnectingMessage'
+  | 'ConnectingAudio'
+  | 'Voicemail'
+  | 'Unavailable'
+  | 'HoldMusic';
 
   /**
    * Internal identifier of an answering rule

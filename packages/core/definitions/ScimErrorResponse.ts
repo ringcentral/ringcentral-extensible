@@ -12,16 +12,16 @@ class ScimErrorResponse {
    * bad request type when status code is 400
    */
   scimType?:
-    | 'uniqueness'
-    | 'tooMany'
-    | 'mutability'
-    | 'sensitive'
-    | 'invalidSyntax'
-    | 'invalidFilter'
-    | 'invalidPath'
-    | 'invalidValue'
-    | 'invalidVers'
-    | 'noTarget';
+  | 'uniqueness'
+  | 'tooMany'
+  | 'mutability'
+  | 'sensitive'
+  | 'invalidSyntax'
+  | 'invalidFilter'
+  | 'invalidPath'
+  | 'invalidValue'
+  | 'invalidVers'
+  | 'noTarget';
 
   /**
    * same as HTTP status code, e.g. 400, 401, etc.

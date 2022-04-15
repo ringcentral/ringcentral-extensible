@@ -1,4 +1,4 @@
-import {AutomaticLocationUpdatesSiteInfo} from './index';
+import { AutomaticLocationUpdatesSiteInfo } from './index';
 
 class AutomaticLocationUpdatesUserInfo {
   /**

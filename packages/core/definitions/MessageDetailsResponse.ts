@@ -43,11 +43,11 @@ class MessageDetailsResponse {
    * Example: Queued
    */
   messageStatus?:
-    | 'Queued'
-    | 'Delivered'
-    | 'Sent'
-    | 'SendingFailed'
-    | 'DeliveryFailed';
+  | 'Queued'
+  | 'Delivered'
+  | 'Sent'
+  | 'SendingFailed'
+  | 'DeliveryFailed';
 
   /**
    * Number of segments of a message

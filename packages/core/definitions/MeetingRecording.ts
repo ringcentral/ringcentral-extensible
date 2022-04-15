@@ -1,4 +1,4 @@
-import {MeetingInfo, MeetingRecordingInfo} from './index';
+import { MeetingInfo, MeetingRecordingInfo } from './index';
 
 class MeetingRecording {
   /**

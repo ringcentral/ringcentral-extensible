@@ -1,19 +1,22 @@
-import {RestRequestConfig} from '../../../../../Rest';
-import {GlipPostMembersListBody} from '../../../../../definitions';
+import { RestRequestConfig } from '../../../../../Rest';
+import { GlipPostMembersListBody } from '../../../../../definitions';
 import Parent from '..';
-import {RingCentral} from '../../../../..';
+import { RingCentral } from '../../../../..';
 
 class Index {
   rc: RingCentral;
+
   parent: Parent;
 
   constructor(parent: Parent) {
     this.parent = parent;
     this.rc = parent.rc;
   }
+
   path(): string {
     return `${this.parent.path()}/add`;
   }
+
   /**
    * Adds members to the specified team. A team is a chat between 2 and more participants assigned with specific name.
    * HTTP Method: post
@@ -24,13 +27,13 @@ class Index {
    */
   async post(
     glipPostMembersListBody: GlipPostMembersListBody,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<string> {
     const r = await this.rc.post<string>(
       this.path(),
       glipPostMembersListBody,
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }

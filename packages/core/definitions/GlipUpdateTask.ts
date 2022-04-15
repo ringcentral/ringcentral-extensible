@@ -33,14 +33,14 @@ class GlipUpdateTask {
   /**
    */
   color?:
-    | 'Black'
-    | 'Red'
-    | 'Orange'
-    | 'Yellow'
-    | 'Green'
-    | 'Blue'
-    | 'Purple'
-    | 'Magenta';
+  | 'Black'
+  | 'Red'
+  | 'Orange'
+  | 'Yellow'
+  | 'Green'
+  | 'Blue'
+  | 'Purple'
+  | 'Magenta';
 
   /**
    * Task section to group/search by. Max allowed length is 100 characters

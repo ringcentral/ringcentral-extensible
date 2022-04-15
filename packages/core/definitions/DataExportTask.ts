@@ -1,4 +1,4 @@
-import {CreatorInfo, SpecificInfo, ExportTaskResultInfo} from './index';
+import { CreatorInfo, SpecificInfo, ExportTaskResultInfo } from './index';
 
 class DataExportTask {
   /**

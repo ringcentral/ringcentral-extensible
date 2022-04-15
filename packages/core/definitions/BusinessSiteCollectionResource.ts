@@ -1,4 +1,4 @@
-import {RolesBusinessSiteResource} from './index';
+import { RolesBusinessSiteResource } from './index';
 
 class BusinessSiteCollectionResource {
   /**

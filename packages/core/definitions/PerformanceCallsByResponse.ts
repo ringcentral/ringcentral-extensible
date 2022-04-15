@@ -1,4 +1,4 @@
-import {CallsByResponse} from './index';
+import { CallsByResponse } from './index';
 
 class PerformanceCallsByResponse {
   /**

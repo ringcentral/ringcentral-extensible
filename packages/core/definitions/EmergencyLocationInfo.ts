@@ -40,12 +40,12 @@ class EmergencyLocationInfo {
    * Resulting status of emergency address synchronization. Returned if `syncEmergencyAddress` parameter is set to 'True'
    */
   syncStatus?:
-    | 'Verified'
-    | 'Updated'
-    | 'Deleted'
-    | 'ActivationProcess'
-    | 'Unsupported'
-    | 'Failed';
+  | 'Verified'
+  | 'Updated'
+  | 'Deleted'
+  | 'ActivationProcess'
+  | 'Unsupported'
+  | 'Failed';
 
   /**
    * Visibility of an emergency response location. If `Private` is set, then location is visible only for the restricted number of users, specified in `owners` array

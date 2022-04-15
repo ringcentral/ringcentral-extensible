@@ -21,12 +21,12 @@ class GetExtensionEmergencyLocationsParameters {
    * Default: +visibility
    */
   orderBy?:
-    | 'name'
-    | 'siteName'
-    | 'address'
-    | 'addressStatus'
-    | 'usageStatus'
-    | 'visibility';
+  | 'name'
+  | 'siteName'
+  | 'address'
+  | 'addressStatus'
+  | 'usageStatus'
+  | 'visibility';
 
   /**
    * Indicates the page size (number of items). The values supported: `Max` or numeric value. If not specified, 100 records are returned per one page

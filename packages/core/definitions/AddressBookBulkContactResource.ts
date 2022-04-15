@@ -1,4 +1,4 @@
-import {AddressBookBulkContactAddressInfo} from './index';
+import { AddressBookBulkContactAddressInfo } from './index';
 
 /**
  * Contact resource

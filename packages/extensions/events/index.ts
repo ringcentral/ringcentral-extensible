@@ -5,9 +5,9 @@ import {
   RestMethod,
 } from '@rc-ex/core/lib/Rest';
 import SdkExtension from '@rc-ex/core/lib/SdkExtension';
-import {GetTokenRequest} from '@rc-ex/core/lib/definitions';
+import { GetTokenRequest } from '@rc-ex/core/lib/definitions';
 import RestException from '@rc-ex/core/lib/RestException';
-import {EventEmitter} from 'events';
+import { EventEmitter } from 'events';
 
 export enum Events {
   beforeRequest = 'beforeRequest',
@@ -34,6 +34,7 @@ export type EventsOptions = {
 
 class EventsExtension extends SdkExtension {
   eventEmitter = new EventEmitter();
+
   options: EventsOptions;
 
   constructor(options: EventsOptions = {}) {
@@ -44,8 +45,8 @@ class EventsExtension extends SdkExtension {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   emit(event: Events, data: any) {
     if (
-      !this.options.enabledEvents ||
-      this.options.enabledEvents.includes(event)
+      !this.options.enabledEvents
+      || this.options.enabledEvents.includes(event)
     ) {
       this.eventEmitter.emit(event, data);
     }
@@ -58,7 +59,7 @@ class EventsExtension extends SdkExtension {
       endpoint: string,
       content?: {},
       queryParams?: {},
-      config?: RestRequestConfig
+      config?: RestRequestConfig,
     ): Promise<RestResponse<T>> => {
       if (!this.enabled) {
         return request<T>(method, endpoint, content, queryParams, config);
@@ -88,7 +89,7 @@ class EventsExtension extends SdkExtension {
           endpoint,
           content,
           queryParams,
-          config
+          config,
         );
         this.emit(Events.requestSuccess, r);
         if (method === 'POST') {

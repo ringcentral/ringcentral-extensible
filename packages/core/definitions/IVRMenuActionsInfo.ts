@@ -1,4 +1,4 @@
-import {IVRMenuExtensionInfo} from './index';
+import { IVRMenuExtensionInfo } from './index';
 
 class IVRMenuActionsInfo {
   /**
@@ -10,17 +10,17 @@ class IVRMenuActionsInfo {
    * Internal identifier of an answering rule
    */
   action?:
-    | 'Connect'
-    | 'Voicemail'
-    | 'DialByName'
-    | 'Transfer'
-    | 'Repeat'
-    | 'ReturnToRoot'
-    | 'ReturnToPrevious'
-    | 'Disconnect'
-    | 'ReturnToTopLevelMenu'
-    | 'DoNothing'
-    | 'ConnectToOperator';
+  | 'Connect'
+  | 'Voicemail'
+  | 'DialByName'
+  | 'Transfer'
+  | 'Repeat'
+  | 'ReturnToRoot'
+  | 'ReturnToPrevious'
+  | 'Disconnect'
+  | 'ReturnToTopLevelMenu'
+  | 'DoNothing'
+  | 'ConnectToOperator';
 
   /**
    */

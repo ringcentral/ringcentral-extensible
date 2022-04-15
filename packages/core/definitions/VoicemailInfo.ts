@@ -1,4 +1,4 @@
-import {RecipientInfo} from './index';
+import { RecipientInfo } from './index';
 
 /**
  * Specifies whether to take a voicemail and who should do it

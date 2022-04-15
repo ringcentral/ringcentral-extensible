@@ -5,12 +5,14 @@ import {
   CreateSubscriptionRequest,
   GetExtensionInfoResponse,
 } from '@rc-ex/core/lib/definitions';
-import PubNub, {PubnubConfig} from 'pubnub';
-import {RestResponse} from '@rc-ex/core/lib/Rest';
+import PubNub, { PubnubConfig } from 'pubnub';
+import { RestResponse } from '@rc-ex/core/lib/Rest';
 
 class PubNubExtension extends SdkExtension {
   rc!: RingCentral;
+
   subscriptions: Subscription[] = [];
+
   extInfo!: GetExtensionInfoResponse;
 
   async install(rc: RingCentral) {
@@ -24,6 +26,7 @@ class PubNubExtension extends SdkExtension {
       subscription.enabled = false;
     }
   }
+
   enable() {
     super.enable();
     for (const subscription of this.subscriptions ?? []) {
@@ -33,7 +36,7 @@ class PubNubExtension extends SdkExtension {
 
   async subscribe(
     eventFilters: string[],
-    callback: (event: {}) => void
+    callback: (event: {}) => void,
   ): Promise<Subscription> {
     const subscription = new Subscription(this, eventFilters, callback);
     await subscription.subscribe();
@@ -51,16 +54,21 @@ class PubNubExtension extends SdkExtension {
 
 export class Subscription {
   pne: PubNubExtension;
+
   eventFilters: string[];
+
   callback: (event: {}) => void;
+
   timeout?: NodeJS.Timeout;
+
   pubnub?: PubNub;
+
   enabled = true;
 
   constructor(
     pne: PubNubExtension,
     eventFilters: string[],
-    callback: (event: {}) => void
+    callback: (event: {}) => void,
   ) {
     this.pne = pne;
     this.eventFilters = eventFilters;
@@ -69,15 +77,17 @@ export class Subscription {
 
   get requestBody(): CreateSubscriptionRequest {
     return {
-      deliveryMode: {transportType: 'PubNub', encryption: true},
+      deliveryMode: { transportType: 'PubNub', encryption: true },
       eventFilters: this.eventFilters,
     };
   }
 
   _subscriptionInfo?: SubscriptionInfo;
+
   get subscriptionInfo(): SubscriptionInfo | undefined {
     return this._subscriptionInfo;
   }
+
   set subscriptionInfo(_subscription) {
     this._subscriptionInfo = _subscription;
     if (this.timeout) {
@@ -103,7 +113,7 @@ export class Subscription {
       useRandomIVs: false,
     } as PubnubConfig); // todo: remove `as PubnubConfig`
     this.pubnub.addListener({
-      message: (message: {message: string}) => {
+      message: (message: { message: string }) => {
         if (!this.enabled) {
           return;
         }
@@ -115,7 +125,7 @@ export class Subscription {
             keyEncoding: 'base64',
             keyLength: 128,
             mode: 'ecb',
-          }
+          },
         );
         this.callback(decrypted);
       },
@@ -135,7 +145,7 @@ export class Subscription {
         .subscription(this.subscriptionInfo!.id)
         .put(this.requestBody);
     } catch (e) {
-      const re = e as {response: RestResponse};
+      const re = e as { response: RestResponse };
       if (re.response && re.response.status === 404) {
         // subscription expired
         await this.subscribe();

@@ -1,22 +1,25 @@
-import {RestRequestConfig} from '../../../../Rest';
+import { RestRequestConfig } from '../../../../Rest';
 import {
   GlipEveryoneInfo,
   UpdateGlipEveryoneRequest,
 } from '../../../../definitions';
 import Parent from '..';
-import {RingCentral} from '../../../..';
+import { RingCentral } from '../../../..';
 
 class Index {
   rc: RingCentral;
+
   parent: Parent;
 
   constructor(parent: Parent) {
     this.parent = parent;
     this.rc = parent.rc;
   }
+
   path(): string {
     return `${this.parent.path()}/everyone`;
   }
+
   /**
    * Returns information about Everyone chat, which is a company level chat including all employees; assigned with specific name.
    * HTTP Method: get
@@ -29,7 +32,7 @@ class Index {
     const r = await this.rc.get<GlipEveryoneInfo>(
       this.path(),
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }
@@ -44,13 +47,13 @@ class Index {
    */
   async patch(
     updateGlipEveryoneRequest: UpdateGlipEveryoneRequest,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<GlipEveryoneInfo> {
     const r = await this.rc.patch<GlipEveryoneInfo>(
       this.path(),
       updateGlipEveryoneRequest,
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }

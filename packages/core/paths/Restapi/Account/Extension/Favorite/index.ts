@@ -1,22 +1,25 @@
-import {RestRequestConfig} from '../../../../../Rest';
+import { RestRequestConfig } from '../../../../../Rest';
 import {
   FavoriteContactList,
   FavoriteCollection,
 } from '../../../../../definitions';
 import Parent from '..';
-import {RingCentral} from '../../../../..';
+import { RingCentral } from '../../../../..';
 
 class Index {
   rc: RingCentral;
+
   parent: Parent;
 
   constructor(parent: Parent) {
     this.parent = parent;
     this.rc = parent.rc;
   }
+
   path(): string {
     return `${this.parent.path()}/favorite`;
   }
+
   /**
    * Returns the list of favorite contacts of the current extension. Favorite contacts include both company contacts (extensions) and personal contacts (address book records).
    * HTTP Method: get
@@ -26,12 +29,12 @@ class Index {
    * User Permission: ReadPersonalContacts
    */
   async get(
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<FavoriteContactList> {
     const r = await this.rc.get<FavoriteContactList>(
       this.path(),
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }
@@ -46,13 +49,13 @@ class Index {
    */
   async put(
     favoriteCollection: FavoriteCollection,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<FavoriteContactList> {
     const r = await this.rc.put<FavoriteContactList>(
       this.path(),
       favoriteCollection,
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }

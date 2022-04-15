@@ -1,10 +1,12 @@
-import {RestRequestConfig} from '../../../../../Rest';
+import { RestRequestConfig } from '../../../../../Rest';
 import Parent from '..';
-import {RingCentral} from '../../../../..';
+import { RingCentral } from '../../../../..';
 
 class Index {
   rc: RingCentral;
+
   parent: Parent;
+
   datasetId: string | null;
 
   constructor(parent: Parent, datasetId: string | null = null) {
@@ -12,12 +14,14 @@ class Index {
     this.rc = parent.rc;
     this.datasetId = datasetId;
   }
+
   path(withParameter = true): string {
     if (withParameter && this.datasetId !== null) {
       return `${this.parent.path()}/datasets/${this.datasetId}`;
     }
     return `${this.parent.path()}/datasets`;
   }
+
   /**
    * Returns the specified dataset by ID. Each dataset is a ZIP archive the size of which is limited to 1 Gb.
    * HTTP Method: get

@@ -6,18 +6,20 @@ import Tasks from './Tasks';
 import Notes from './Notes';
 import Posts from './Posts';
 import Read from './Read';
-import {RestRequestConfig} from '../../../../Rest';
+import { RestRequestConfig } from '../../../../Rest';
 import {
   ListGlipChatsParameters,
   GlipChatsList,
   GlipChatInfo,
 } from '../../../../definitions';
 import Parent from '..';
-import {RingCentral} from '../../../..';
+import { RingCentral } from '../../../..';
 
 class Index {
   rc: RingCentral;
+
   parent: Parent;
+
   chatId: string | null;
 
   constructor(parent: Parent, chatId: string | null = null) {
@@ -25,12 +27,14 @@ class Index {
     this.rc = parent.rc;
     this.chatId = chatId;
   }
+
   path(withParameter = true): string {
     if (withParameter && this.chatId !== null) {
       return `${this.parent.path()}/chats/${this.chatId}`;
     }
     return `${this.parent.path()}/chats`;
   }
+
   /**
    * Returns the list of chats where the user is a member and also public teams that can be joined. All records in response are sorted by creation time of a chat in ascending order. **Note** 'Chat' is a general name for all types of threads icluding *Personal* (user's own me-chat), *Direct* (one on one chat), *Group* (chat of 3-15 participants without specific name), *Team* (chat of 2 and more participants, with a specific name), *Everyone* (company chat including all employees, with a specific name).
    * HTTP Method: get
@@ -41,12 +45,12 @@ class Index {
    */
   async list(
     queryParams?: ListGlipChatsParameters,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<GlipChatsList> {
     const r = await this.rc.get<GlipChatsList>(
       this.path(false),
       queryParams,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }
@@ -66,7 +70,7 @@ class Index {
     const r = await this.rc.get<GlipChatInfo>(
       this.path(),
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }

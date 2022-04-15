@@ -32,18 +32,18 @@ describe('WebSocket session recovery', () => {
     let eventCount = 0;
     await webSocketExtension.subscribe(
       ['/restapi/v1.0/account/~/extension/~/message-store'],
-      event => {
+      (event) => {
         expect(event).toBeDefined();
         eventCount += 1;
-      }
+      },
     );
     // close WebSocket connection to simulate session lost
     // here we don't invoke webSocketExtension.revoke() because that will also revoke all subscriptions created
     webSocketExtension.ws.close();
-    await waitFor({interval: 1000});
+    await waitFor({ interval: 1000 });
     await webSocketExtension.recover();
     expect(webSocketExtension.connectionDetails.recoveryState).toBe(
-      'Successful'
+      'Successful',
     );
     await rc
       .restapi()
@@ -51,8 +51,8 @@ describe('WebSocket session recovery', () => {
       .extension()
       .companyPager()
       .post({
-        from: {extensionNumber: '101'},
-        to: [{extensionNumber: '101'}], // send pager to oneself
+        from: { extensionNumber: '101' },
+        to: [{ extensionNumber: '101' }], // send pager to oneself
         text: 'Hello world',
       });
     const successful = await waitFor({
@@ -88,15 +88,15 @@ describe('WebSocket session recovery', () => {
     let eventCount = 0;
     await webSocketExtension.subscribe(
       ['/restapi/v1.0/account/~/extension/~/message-store'],
-      event => {
+      (event) => {
         expect(event).toBeDefined();
         eventCount += 1;
-      }
+      },
     );
     // close WebSocket connection to simulate session lost
     // here we don't invoke webSocketExtension.revoke() because that will also revoke all subscriptions created
     webSocketExtension.ws.close();
-    await waitFor({interval: 1000});
+    await waitFor({ interval: 1000 });
     await webSocketExtension.connect(false); // connect but do not recover session
     expect(webSocketExtension.connectionDetails.recoveryState).toBeUndefined();
     await rc
@@ -105,8 +105,8 @@ describe('WebSocket session recovery', () => {
       .extension()
       .companyPager()
       .post({
-        from: {extensionNumber: '101'},
-        to: [{extensionNumber: '101'}], // send pager to oneself
+        from: { extensionNumber: '101' },
+        to: [{ extensionNumber: '101' }], // send pager to oneself
         text: 'Hello world',
       });
     const successful = await waitFor({
@@ -141,10 +141,10 @@ describe('WebSocket session recovery', () => {
     let eventCount = 0;
     await webSocketExtension.subscribe(
       ['/restapi/v1.0/account/~/extension/~/message-store'],
-      event => {
+      (event) => {
         expect(event).toBeDefined();
         eventCount += 1;
-      }
+      },
     );
     // already connected, connect again will not cause any issues
     await webSocketExtension.recover();
@@ -156,8 +156,8 @@ describe('WebSocket session recovery', () => {
       .extension()
       .companyPager()
       .post({
-        from: {extensionNumber: '101'},
-        to: [{extensionNumber: '101'}], // send pager to oneself
+        from: { extensionNumber: '101' },
+        to: [{ extensionNumber: '101' }], // send pager to oneself
         text: 'Hello world',
       });
     const successful = await waitFor({

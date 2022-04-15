@@ -1,4 +1,4 @@
-import {GlipAttachmentInfoRequest} from './index';
+import { GlipAttachmentInfoRequest } from './index';
 
 /**
  * Post data. At least one attribute should be provided (text or attachments)

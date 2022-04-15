@@ -1,8 +1,8 @@
 import RingCentral from '@rc-ex/core';
 import SdkExtension from '@rc-ex/core/lib/SdkExtension';
-import {AuthorizeRequest} from '@rc-ex/core/lib/definitions';
-import URI, {QueryDataMap} from 'urijs';
-import {createHash, randomBytes} from 'crypto';
+import { AuthorizeRequest } from '@rc-ex/core/lib/definitions';
+import URI, { QueryDataMap } from 'urijs';
+import { createHash, randomBytes } from 'crypto';
 
 export type AuthorizeUriOptions = {
   baseUri?: string;
@@ -10,7 +10,9 @@ export type AuthorizeUriOptions = {
 
 class AuthorizeUriExtension extends SdkExtension {
   rc!: RingCentral;
+
   codeVerifier?: string;
+
   options: AuthorizeUriOptions;
 
   constructor(options: AuthorizeUriOptions = {}) {

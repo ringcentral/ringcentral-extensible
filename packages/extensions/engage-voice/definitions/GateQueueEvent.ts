@@ -1,4 +1,4 @@
-import {Gate} from './index';
+import { Gate } from './index';
 
 class GateQueueEvent {
   enableDtmf?: string;

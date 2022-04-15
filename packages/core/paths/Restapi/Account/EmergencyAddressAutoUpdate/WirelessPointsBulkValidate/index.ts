@@ -1,22 +1,25 @@
-import {RestRequestConfig} from '../../../../../Rest';
+import { RestRequestConfig } from '../../../../../Rest';
 import {
   ValidateMultipleWirelessPointsRequest,
   ValidateMultipleWirelessPointsResponse,
 } from '../../../../../definitions';
 import Parent from '..';
-import {RingCentral} from '../../../../..';
+import { RingCentral } from '../../../../..';
 
 class Index {
   rc: RingCentral;
+
   parent: Parent;
 
   constructor(parent: Parent) {
     this.parent = parent;
     this.rc = parent.rc;
   }
+
   path(): string {
     return `${this.parent.path()}/wireless-points-bulk-validate`;
   }
+
   /**
    * Validates wireless points before creation or update. The maximum number of wireless points per request is 10 000.
    * HTTP Method: post
@@ -27,13 +30,13 @@ class Index {
    */
   async post(
     validateMultipleWirelessPointsRequest: ValidateMultipleWirelessPointsRequest,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<ValidateMultipleWirelessPointsResponse> {
     const r = await this.rc.post<ValidateMultipleWirelessPointsResponse>(
       this.path(),
       validateMultipleWirelessPointsRequest,
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }

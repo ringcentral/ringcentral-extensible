@@ -1,4 +1,4 @@
-import {UpdateSwitchInfo} from './index';
+import { UpdateSwitchInfo } from './index';
 
 class UpdateMultipleSwitchesRequest {
   /**

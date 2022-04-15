@@ -1,6 +1,6 @@
 import Content from './Content';
 import Utils from '../../../../Utils';
-import {RestRequestConfig} from '../../../../Rest';
+import { RestRequestConfig } from '../../../../Rest';
 import {
   IVRPrompts,
   CreateIVRPromptRequest,
@@ -8,11 +8,13 @@ import {
   UpdateIVRPromptRequest,
 } from '../../../../definitions';
 import Parent from '..';
-import {RingCentral} from '../../../..';
+import { RingCentral } from '../../../..';
 
 class Index {
   rc: RingCentral;
+
   parent: Parent;
+
   promptId: string | null;
 
   constructor(parent: Parent, promptId: string | null = null) {
@@ -20,12 +22,14 @@ class Index {
     this.rc = parent.rc;
     this.promptId = promptId;
   }
+
   path(withParameter = true): string {
     if (withParameter && this.promptId !== null) {
       return `${this.parent.path()}/ivr-prompts/${this.promptId}`;
     }
     return `${this.parent.path()}/ivr-prompts`;
   }
+
   /**
    * Returns the list of IVR prompts.
    * HTTP Method: get
@@ -38,7 +42,7 @@ class Index {
     const r = await this.rc.get<IVRPrompts>(
       this.path(false),
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }
@@ -53,14 +57,14 @@ class Index {
    */
   async post(
     createIVRPromptRequest: CreateIVRPromptRequest,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<PromptInfo> {
     const formData = Utils.getFormData(createIVRPromptRequest);
     const r = await this.rc.post<PromptInfo>(
       this.path(false),
       formData,
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }
@@ -80,7 +84,7 @@ class Index {
     const r = await this.rc.get<PromptInfo>(
       this.path(),
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }
@@ -95,7 +99,7 @@ class Index {
    */
   async put(
     updateIVRPromptRequest: UpdateIVRPromptRequest,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<PromptInfo> {
     if (this.promptId === null) {
       throw new Error('promptId must be specified.');
@@ -104,7 +108,7 @@ class Index {
       this.path(),
       updateIVRPromptRequest,
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }
@@ -124,7 +128,7 @@ class Index {
     const r = await this.rc.delete<string>(
       this.path(),
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }

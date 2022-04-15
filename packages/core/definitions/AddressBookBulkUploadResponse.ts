@@ -1,4 +1,4 @@
-import {AddressBookBulkUploadTaskResult} from './index';
+import { AddressBookBulkUploadTaskResult } from './index';
 
 /**
  * Information on a task for adding multiple contacts to multiple extensions

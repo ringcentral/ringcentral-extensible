@@ -1,5 +1,5 @@
 import Datasets from './Datasets';
-import {RestRequestConfig} from '../../../../Rest';
+import { RestRequestConfig } from '../../../../Rest';
 import {
   ListDataExportTasksParameters,
   DataExportTaskList,
@@ -7,11 +7,13 @@ import {
   DataExportTask,
 } from '../../../../definitions';
 import Parent from '..';
-import {RingCentral} from '../../../..';
+import { RingCentral } from '../../../..';
 
 class Index {
   rc: RingCentral;
+
   parent: Parent;
+
   taskId: string | null;
 
   constructor(parent: Parent, taskId: string | null = null) {
@@ -19,12 +21,14 @@ class Index {
     this.rc = parent.rc;
     this.taskId = taskId;
   }
+
   path(withParameter = true): string {
     if (withParameter && this.taskId !== null) {
       return `${this.parent.path()}/data-export/${this.taskId}`;
     }
     return `${this.parent.path()}/data-export`;
   }
+
   /**
    * Returns the list of Glip data export tasks.
    * HTTP Method: get
@@ -34,12 +38,12 @@ class Index {
    */
   async list(
     queryParams?: ListDataExportTasksParameters,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<DataExportTaskList> {
     const r = await this.rc.get<DataExportTaskList>(
       this.path(false),
       queryParams,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }
@@ -53,13 +57,13 @@ class Index {
    */
   async post(
     createDataExportTaskRequest: CreateDataExportTaskRequest,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<DataExportTask> {
     const r = await this.rc.post<DataExportTask>(
       this.path(false),
       createDataExportTaskRequest,
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }
@@ -78,7 +82,7 @@ class Index {
     const r = await this.rc.get<DataExportTask>(
       this.path(),
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }

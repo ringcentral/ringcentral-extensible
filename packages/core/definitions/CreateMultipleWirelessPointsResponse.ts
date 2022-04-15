@@ -1,4 +1,4 @@
-import {BulkTaskInfoWiCreate} from './index';
+import { BulkTaskInfoWiCreate } from './index';
 
 class CreateMultipleWirelessPointsResponse {
   /**

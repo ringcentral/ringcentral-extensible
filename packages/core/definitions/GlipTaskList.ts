@@ -1,4 +1,4 @@
-import {GlipTaskInfo} from './index';
+import { GlipTaskInfo } from './index';
 
 class GlipTaskList {
   /**

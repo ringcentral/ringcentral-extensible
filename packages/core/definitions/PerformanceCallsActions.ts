@@ -1,4 +1,4 @@
-import {CallsActions} from './index';
+import { CallsActions } from './index';
 
 class PerformanceCallsActions {
   /**

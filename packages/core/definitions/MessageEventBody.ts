@@ -1,4 +1,4 @@
-import {MessageChanges} from './index';
+import { MessageChanges } from './index';
 
 /**
  * Notification payload body

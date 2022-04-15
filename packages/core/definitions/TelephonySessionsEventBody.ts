@@ -1,4 +1,4 @@
-import {OriginInfo, TelephonySessionsEventPartyInfo} from './index';
+import { OriginInfo, TelephonySessionsEventPartyInfo } from './index';
 
 /**
  * Notification payload body

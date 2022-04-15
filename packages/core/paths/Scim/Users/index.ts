@@ -1,5 +1,5 @@
 import DotSearch from './DotSearch';
-import {RestRequestConfig} from '../../../Rest';
+import { RestRequestConfig } from '../../../Rest';
 import {
   SearchViaGet2Parameters,
   UserSearchResponse,
@@ -9,11 +9,13 @@ import {
   UserPatch,
 } from '../../../definitions';
 import Parent from '..';
-import {RingCentral} from '../../..';
+import { RingCentral } from '../../..';
 
 class Index {
   rc: RingCentral;
+
   parent: Parent;
+
   id: string | null;
 
   constructor(parent: Parent, id: string | null = null) {
@@ -21,12 +23,14 @@ class Index {
     this.rc = parent.rc;
     this.id = id;
   }
+
   path(withParameter = true): string {
     if (withParameter && this.id !== null) {
       return `${this.parent.path()}/Users/${this.id}`;
     }
     return `${this.parent.path()}/Users`;
   }
+
   /**
    * Search/List Users
    * HTTP Method: get
@@ -36,12 +40,12 @@ class Index {
    */
   async list(
     queryParams?: SearchViaGet2Parameters,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<UserSearchResponse> {
     const r = await this.rc.get<UserSearchResponse>(
       this.path(false),
       queryParams,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }
@@ -55,13 +59,13 @@ class Index {
    */
   async post(
     createUser: CreateUser,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<UserResponse> {
     const r = await this.rc.post<UserResponse>(
       this.path(false),
       createUser,
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }
@@ -80,7 +84,7 @@ class Index {
     const r = await this.rc.get<UserResponse>(
       this.path(),
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }
@@ -94,7 +98,7 @@ class Index {
    */
   async put(
     user: User,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<UserResponse> {
     if (this.id === null) {
       throw new Error('id must be specified.');
@@ -103,7 +107,7 @@ class Index {
       this.path(),
       user,
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }
@@ -122,7 +126,7 @@ class Index {
     const r = await this.rc.delete<string>(
       this.path(),
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }
@@ -136,7 +140,7 @@ class Index {
    */
   async patch(
     userPatch: UserPatch,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<UserResponse> {
     if (this.id === null) {
       throw new Error('id must be specified.');
@@ -145,7 +149,7 @@ class Index {
       this.path(),
       userPatch,
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }

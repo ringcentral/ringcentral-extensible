@@ -22,9 +22,7 @@ class RcSdkExtension extends SdkExtension {
 
   async install(rc: RingCentral) {
     Object.defineProperty(rc, 'token', {
-      get: async () => {
-        return await this.options.rcSdk.platform().auth().data();
-      },
+      get: async () => this.options.rcSdk.platform().auth().data(),
     });
     const request = rc.request.bind(rc);
     rc.request = async <T>(
@@ -32,13 +30,13 @@ class RcSdkExtension extends SdkExtension {
       endpoint: string,
       content?: {},
       queryParams?: {},
-      config?: RestRequestConfig
+      config?: RestRequestConfig,
     ): Promise<RestResponse<T>> => {
       if (!this.enabled) {
         return request<T>(method, endpoint, content, queryParams, config);
       }
       const r = await this.options.rcSdk.send({
-        method: method,
+        method,
         url: endpoint,
         body: content,
         query: queryParams,
@@ -50,7 +48,7 @@ class RcSdkExtension extends SdkExtension {
         statusText: r.statusText,
         headers: r.headers as unknown as Record<string, string>,
         config: {
-          method: method,
+          method,
           baseURL: r.url.split(endpoint)[0],
           url: endpoint,
           data: content,

@@ -1,4 +1,4 @@
-import {Campaign} from './index';
+import { Campaign } from './index';
 
 class CampaignUnlimitedFieldGroup {
   campaigns?: Campaign[];

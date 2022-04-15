@@ -1,4 +1,4 @@
-import {PhoneNumberCountryInfo, DeviceProvisioningExtensionInfo} from './index';
+import { PhoneNumberCountryInfo, DeviceProvisioningExtensionInfo } from './index';
 
 /**
  * Phone number information
@@ -52,13 +52,13 @@ class PhoneNumberInfoIntId {
    * Usage type of the phone number
    */
   usageType?:
-    | 'MainCompanyNumber'
-    | 'AdditionalCompanyNumber'
-    | 'CompanyNumber'
-    | 'DirectNumber'
-    | 'CompanyFaxNumber'
-    | 'ForwardedNumber'
-    | 'ForwardedCompanyNumber'
-    | 'ContactCenterNumber';
+  | 'MainCompanyNumber'
+  | 'AdditionalCompanyNumber'
+  | 'CompanyNumber'
+  | 'DirectNumber'
+  | 'CompanyFaxNumber'
+  | 'ForwardedNumber'
+  | 'ForwardedCompanyNumber'
+  | 'ContactCenterNumber';
 }
 export default PhoneNumberInfoIntId;

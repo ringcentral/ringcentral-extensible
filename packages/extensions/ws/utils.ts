@@ -1,7 +1,7 @@
-import WS, {MessageEvent} from 'isomorphic-ws';
+import WS, { MessageEvent } from 'isomorphic-ws';
 
-import {WsgMeta, WsgEvent} from './types';
-import {ClosedException, TimeoutException} from './exceptions';
+import { WsgMeta, WsgEvent } from './types';
+import { ClosedException, TimeoutException } from './exceptions';
 
 class Utils {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -12,9 +12,8 @@ class Utils {
         JSON.parse(wsgData.substring(1, index)),
         wsgData.substring(index + 1, wsgData.length - 1),
       ];
-    } else {
-      return JSON.parse(wsgData);
     }
+    return JSON.parse(wsgData);
   }
 
   static debugWebSocket(ws: WS) {
@@ -24,7 +23,7 @@ class Utils {
       console.debug(
         `*** WebSocket outgoing message: ***
 ${JSON.stringify(JSON.parse(str), null, 2)}
-******`
+******`,
       );
     };
     ws.addEventListener('message', (mEvent: MessageEvent) => {
@@ -32,16 +31,16 @@ ${JSON.stringify(JSON.parse(str), null, 2)}
       console.debug(
         `*** WebSocket incoming message: ***
 ${JSON.stringify(JSON.parse(event.data), null, 2)}
-******`
+******`,
       );
     });
-    ws.addEventListener('open', event => {
+    ws.addEventListener('open', (event) => {
       console.debug('WebSocket open event:', event);
     });
-    ws.addEventListener('error', event => {
+    ws.addEventListener('error', (event) => {
       console.debug('WebSocket error event:', event);
     });
-    ws.addEventListener('close', event => {
+    ws.addEventListener('close', (event) => {
       console.debug('WebSocket close event:', event);
     });
   }
@@ -49,7 +48,7 @@ ${JSON.stringify(JSON.parse(event.data), null, 2)}
   static waitForWebSocketMessage(
     ws: WS,
     matchCondition: (meta: WsgMeta) => boolean,
-    timeout = 60000
+    timeout = 60000,
   ) {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     return new Promise<[WsgMeta, any, WsgEvent]>((resolve, reject) => {
@@ -63,7 +62,6 @@ ${JSON.stringify(JSON.parse(event.data), null, 2)}
         ws.removeEventListener('message', handler);
         clearInterval(checkHandle);
         reject(new TimeoutException());
-        return;
       }, timeout);
       const handler = (mEvent: MessageEvent) => {
         const event = mEvent as WsgEvent;
@@ -73,7 +71,6 @@ ${JSON.stringify(JSON.parse(event.data), null, 2)}
           clearInterval(checkHandle);
           clearTimeout(timeoutHandle);
           resolve([meta, body, event]);
-          return;
         }
       };
       ws.addEventListener('message', handler);

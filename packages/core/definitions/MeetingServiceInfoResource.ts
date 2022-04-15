@@ -1,4 +1,4 @@
-import {MeetingExternalUserInfoResource, DialInNumberResource} from './index';
+import { MeetingExternalUserInfoResource, DialInNumberResource } from './index';
 
 class MeetingServiceInfoResource {
   /**

@@ -1,4 +1,4 @@
-import {APSInfo} from './index';
+import { APSInfo } from './index';
 
 class IncomingCallEvent {
   /**

@@ -1,4 +1,4 @@
-import {GlipMemberInfo} from './index';
+import { GlipMemberInfo } from './index';
 
 class GlipChatInfo {
   /**

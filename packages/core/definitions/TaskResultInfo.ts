@@ -1,4 +1,4 @@
-import {TaskResultRecord} from './index';
+import { TaskResultRecord } from './index';
 
 /**
  * Task detailed result. Returned for failed and completed tasks

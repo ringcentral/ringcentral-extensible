@@ -1,6 +1,6 @@
 import DebugExtension from '@rc-ex/debug';
 
-import {createRingCentral} from './utils';
+import { createRingCentral } from './utils';
 
 describe('Debug Extension', () => {
   test('default', async () => {

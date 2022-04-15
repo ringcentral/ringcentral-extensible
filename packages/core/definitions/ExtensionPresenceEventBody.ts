@@ -12,11 +12,11 @@ class ExtensionPresenceEventBody {
    * Telephony presence status. Returned if telephony status is changed.
    */
   telephonyStatus?:
-    | 'NoCall'
-    | 'CallConnected'
-    | 'Ringing'
-    | 'OnHold'
-    | 'ParkedCall';
+  | 'NoCall'
+  | 'CallConnected'
+  | 'Ringing'
+  | 'OnHold'
+  | 'ParkedCall';
 
   /**
    * Order number of a notification to state the chronology
@@ -37,10 +37,10 @@ class ExtensionPresenceEventBody {
    * Extended DnD (Do not Disturb) status
    */
   dndStatus?:
-    | 'TakeAllCalls'
-    | 'DoNotAcceptAnyCalls'
-    | 'DoNotAcceptDepartmentCalls'
-    | 'TakeDepartmentCallsOnly';
+  | 'TakeAllCalls'
+  | 'DoNotAcceptAnyCalls'
+  | 'DoNotAcceptDepartmentCalls'
+  | 'TakeDepartmentCallsOnly';
 
   /**
    * If 'True' enables other extensions to see the extension presence status

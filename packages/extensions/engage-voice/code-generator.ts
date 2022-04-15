@@ -1,8 +1,8 @@
 import fs from 'fs';
 import path from 'path';
-import {spawnSync} from 'child_process';
+import { spawnSync } from 'child_process';
 // eslint-disable-next-line node/no-unpublished-import
-import {pascalCase} from 'change-case';
+import { pascalCase } from 'change-case';
 
 const typesSet = new Set();
 type Type = {
@@ -20,14 +20,14 @@ const normalizeType = (prop: Type): string => {
     return 'number';
   }
   if (prop.type === 'array') {
-    return normalizeType(prop.items!) + '[]';
+    return `${normalizeType(prop.items!)}[]`;
   }
   return prop.type;
 };
 
 let jsonString = fs.readFileSync(
   process.env.PATH_TO_ENGAGE_VOICE_SWAGGER_SPEC!,
-  'utf-8'
+  'utf-8',
 );
 const doc = JSON.parse(jsonString);
 
@@ -35,7 +35,7 @@ const doc = JSON.parse(jsonString);
 let deleted = true;
 while (deleted) {
   deleted = false;
-  const schemas = doc.components.schemas;
+  const { schemas } = doc.components;
   for (const schemaName of Object.keys(schemas)) {
     if (!jsonString.includes(`schemas/${schemaName}"`)) {
       deleted = true;
@@ -47,7 +47,7 @@ while (deleted) {
 }
 
 // doing some sanity check
-const schemas = doc.components.schemas;
+const { schemas } = doc.components;
 for (const schemaName of Object.keys(schemas)) {
   const schema = schemas[schemaName];
   if (schema.type !== 'object' && schema.type !== undefined) {
@@ -92,8 +92,8 @@ ${code}
 // generate definitions/index.ts
 const definitionFiles = fs
   .readdirSync(outputDir)
-  .map(df => df.substring(0, df.length - 3));
+  .map((df) => df.substring(0, df.length - 3));
 const code = definitionFiles
-  .map(df => `export {default as ${df}} from './${df}';`)
+  .map((df) => `export {default as ${df}} from './${df}';`)
   .join('\n');
-fs.writeFileSync(path.join(outputDir, 'index.ts'), code + '\n');
+fs.writeFileSync(path.join(outputDir, 'index.ts'), `${code}\n`);

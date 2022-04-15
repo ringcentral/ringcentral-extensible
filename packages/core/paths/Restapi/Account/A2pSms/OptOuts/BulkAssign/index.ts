@@ -1,22 +1,25 @@
-import {RestRequestConfig} from '../../../../../../Rest';
+import { RestRequestConfig } from '../../../../../../Rest';
 import {
   OptOutBulkAssignRequest,
   OptOutBulkAssignResponse,
 } from '../../../../../../definitions';
 import Parent from '..';
-import {RingCentral} from '../../../../../..';
+import { RingCentral } from '../../../../../..';
 
 class Index {
   rc: RingCentral;
+
   parent: Parent;
 
   constructor(parent: Parent) {
     this.parent = parent;
     this.rc = parent.rc;
   }
+
   path(): string {
     return `${this.parent.path()}/bulk-assign`;
   }
+
   /**
    * Adds multiple opt-outs and/or opt-ins for the specified sender number and a set of recipient numbers.
    * HTTP Method: post
@@ -26,13 +29,13 @@ class Index {
    */
   async post(
     optOutBulkAssignRequest: OptOutBulkAssignRequest,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<OptOutBulkAssignResponse> {
     const r = await this.rc.post<OptOutBulkAssignResponse>(
       this.path(),
       optOutBulkAssignRequest,
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }

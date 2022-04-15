@@ -1,4 +1,4 @@
-import {PresenceNavigationInfoURI} from './index';
+import { PresenceNavigationInfoURI } from './index';
 
 /**
  * Information on navigation

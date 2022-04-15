@@ -1,4 +1,4 @@
-import {PermissionIdResource, RoleIdResource} from './index';
+import { PermissionIdResource, RoleIdResource } from './index';
 
 class ActivePermissionResource {
   /**

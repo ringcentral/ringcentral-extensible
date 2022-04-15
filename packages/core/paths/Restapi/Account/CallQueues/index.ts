@@ -1,7 +1,7 @@
 import BulkAssign from './BulkAssign';
 import Presence from './Presence';
 import Members from './Members';
-import {RestRequestConfig} from '../../../../Rest';
+import { RestRequestConfig } from '../../../../Rest';
 import {
   ListCallQueuesParameters,
   CallQueues,
@@ -9,11 +9,13 @@ import {
   CallQueueUpdateDetails,
 } from '../../../../definitions';
 import Parent from '..';
-import {RingCentral} from '../../../..';
+import { RingCentral } from '../../../..';
 
 class Index {
   rc: RingCentral;
+
   parent: Parent;
+
   groupId: string | null;
 
   constructor(parent: Parent, groupId: string | null = null) {
@@ -21,12 +23,14 @@ class Index {
     this.rc = parent.rc;
     this.groupId = groupId;
   }
+
   path(withParameter = true): string {
     if (withParameter && this.groupId !== null) {
       return `${this.parent.path()}/call-queues/${this.groupId}`;
     }
     return `${this.parent.path()}/call-queues`;
   }
+
   /**
    * Returns call queue group list.
    * HTTP Method: get
@@ -37,12 +41,12 @@ class Index {
    */
   async list(
     queryParams?: ListCallQueuesParameters,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<CallQueues> {
     const r = await this.rc.get<CallQueues>(
       this.path(false),
       queryParams,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }
@@ -62,7 +66,7 @@ class Index {
     const r = await this.rc.get<CallQueueDetails>(
       this.path(),
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }
@@ -77,7 +81,7 @@ class Index {
    */
   async put(
     callQueueUpdateDetails: CallQueueUpdateDetails,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<CallQueueDetails> {
     if (this.groupId === null) {
       throw new Error('groupId must be specified.');
@@ -86,7 +90,7 @@ class Index {
       this.path(),
       callQueueUpdateDetails,
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }

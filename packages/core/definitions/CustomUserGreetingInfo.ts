@@ -1,4 +1,4 @@
-import {CustomGreetingAnsweringRuleInfo} from './index';
+import { CustomGreetingAnsweringRuleInfo } from './index';
 
 class CustomUserGreetingInfo {
   /**
@@ -15,15 +15,15 @@ class CustomUserGreetingInfo {
    * Type of a custom user greeting
    */
   type?:
-    | 'Introductory'
-    | 'Announcement'
-    | 'InterruptPrompt'
-    | 'ConnectingAudio'
-    | 'ConnectingMessage'
-    | 'Voicemail'
-    | 'Unavailable'
-    | 'HoldMusic'
-    | 'PronouncedName';
+  | 'Introductory'
+  | 'Announcement'
+  | 'InterruptPrompt'
+  | 'ConnectingAudio'
+  | 'ConnectingMessage'
+  | 'Voicemail'
+  | 'Unavailable'
+  | 'HoldMusic'
+  | 'PronouncedName';
 
   /**
    * Content media type

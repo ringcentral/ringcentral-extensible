@@ -10,16 +10,18 @@ import Country from './Country';
 import State from './State';
 import Brand from './Brand';
 import Parent from '..';
-import {RingCentral} from '../../..';
+import { RingCentral } from '../../..';
 
 class Index {
   rc: RingCentral;
+
   parent: Parent;
 
   constructor(parent: Parent) {
     this.parent = parent;
     this.rc = parent.rc;
   }
+
   path(): string {
     return `${this.parent.path()}/dictionary`;
   }
@@ -65,7 +67,7 @@ class Index {
   }
 
   permissionCategory(
-    permissionCategoryId: string | null = null
+    permissionCategoryId: string | null = null,
   ): PermissionCategory {
     return new PermissionCategory(this, permissionCategoryId);
   }

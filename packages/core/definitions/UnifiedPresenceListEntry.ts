@@ -1,4 +1,4 @@
-import {UnifiedPresence} from './index';
+import { UnifiedPresence } from './index';
 
 class UnifiedPresenceListEntry {
   /**

@@ -1,4 +1,4 @@
-import {CollectionAgentSkillProfile, DateTime, RequeueShortcut} from './index';
+import { CollectionAgentSkillProfile, DateTime, RequeueShortcut } from './index';
 
 class GateGroupSkill {
   active?: boolean;

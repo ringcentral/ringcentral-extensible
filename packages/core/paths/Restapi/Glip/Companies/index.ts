@@ -1,11 +1,13 @@
-import {RestRequestConfig} from '../../../../Rest';
-import {GlipCompany} from '../../../../definitions';
+import { RestRequestConfig } from '../../../../Rest';
+import { GlipCompany } from '../../../../definitions';
 import Parent from '..';
-import {RingCentral} from '../../../..';
+import { RingCentral } from '../../../..';
 
 class Index {
   rc: RingCentral;
+
   parent: Parent;
+
   companyId: string | null;
 
   constructor(parent: Parent, companyId: string | null = null) {
@@ -13,12 +15,14 @@ class Index {
     this.rc = parent.rc;
     this.companyId = companyId;
   }
+
   path(withParameter = true): string {
     if (withParameter && this.companyId !== null) {
       return `${this.parent.path()}/companies/${this.companyId}`;
     }
     return `${this.parent.path()}/companies`;
   }
+
   /**
    * Returns information about one or more companies by their IDs.
    * HTTP Method: get
@@ -34,7 +38,7 @@ class Index {
     const r = await this.rc.get<GlipCompany>(
       this.path(),
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }

@@ -1,4 +1,4 @@
-import {ChatGroupSkill, ChatGroup, ChatQueue} from './index';
+import { ChatGroupSkill, ChatGroup, ChatQueue } from './index';
 
 class ChatRequeueShortcut {
   chatGroupSkill?: ChatGroupSkill;

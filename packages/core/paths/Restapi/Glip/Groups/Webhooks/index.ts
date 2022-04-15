@@ -1,19 +1,22 @@
-import {RestRequestConfig} from '../../../../../Rest';
-import {GlipWebhookList, GlipWebhookInfo} from '../../../../../definitions';
+import { RestRequestConfig } from '../../../../../Rest';
+import { GlipWebhookList, GlipWebhookInfo } from '../../../../../definitions';
 import Parent from '..';
-import {RingCentral} from '../../../../..';
+import { RingCentral } from '../../../../..';
 
 class Index {
   rc: RingCentral;
+
   parent: Parent;
 
   constructor(parent: Parent) {
     this.parent = parent;
     this.rc = parent.rc;
   }
+
   path(): string {
     return `${this.parent.path()}/webhooks`;
   }
+
   /**
    * Returns webhooks which are available for the current user by group ID.
    * HTTP Method: get
@@ -26,7 +29,7 @@ class Index {
     const r = await this.rc.get<GlipWebhookList>(
       this.path(),
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }
@@ -43,7 +46,7 @@ class Index {
     const r = await this.rc.post<GlipWebhookInfo>(
       this.path(),
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }

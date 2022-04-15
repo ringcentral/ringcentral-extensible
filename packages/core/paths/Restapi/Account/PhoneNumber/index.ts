@@ -1,15 +1,17 @@
-import {RestRequestConfig} from '../../../../Rest';
+import { RestRequestConfig } from '../../../../Rest';
 import {
   ListAccountPhoneNumbersParameters,
   AccountPhoneNumbers,
   CompanyPhoneNumberInfo,
 } from '../../../../definitions';
 import Parent from '..';
-import {RingCentral} from '../../../..';
+import { RingCentral } from '../../../..';
 
 class Index {
   rc: RingCentral;
+
   parent: Parent;
+
   phoneNumberId: string | null;
 
   constructor(parent: Parent, phoneNumberId: string | null = null) {
@@ -17,12 +19,14 @@ class Index {
     this.rc = parent.rc;
     this.phoneNumberId = phoneNumberId;
   }
+
   path(withParameter = true): string {
     if (withParameter && this.phoneNumberId !== null) {
       return `${this.parent.path()}/phone-number/${this.phoneNumberId}`;
     }
     return `${this.parent.path()}/phone-number`;
   }
+
   /**
    * Returns the list of phone numbers assigned to RingCentral customer account. Both company-level and extension-level numbers are returned.
    * HTTP Method: get
@@ -33,12 +37,12 @@ class Index {
    */
   async list(
     queryParams?: ListAccountPhoneNumbersParameters,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<AccountPhoneNumbers> {
     const r = await this.rc.get<AccountPhoneNumbers>(
       this.path(false),
       queryParams,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }
@@ -52,7 +56,7 @@ class Index {
    * User Permission: ReadCompanyPhoneNumbers
    */
   async get(
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<CompanyPhoneNumberInfo> {
     if (this.phoneNumberId === null) {
       throw new Error('phoneNumberId must be specified.');
@@ -60,7 +64,7 @@ class Index {
     const r = await this.rc.get<CompanyPhoneNumberInfo>(
       this.path(),
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }

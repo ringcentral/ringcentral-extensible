@@ -5,10 +5,10 @@ import {
 } from '@rc-ex/core/lib/Rest';
 import RestException from '@rc-ex/core/lib/RestException';
 import hyperid from 'hyperid';
-import {getReasonPhrase} from 'http-status-codes';
+import { getReasonPhrase } from 'http-status-codes';
 
 import WebSocketExtension from './index';
-import {version} from './package.json';
+import { version } from './package.json';
 import Utils from './utils';
 
 const uuid = hyperid();
@@ -19,10 +19,10 @@ export async function request<T>(
   endpoint: string,
   content?: {},
   queryParams?: {},
-  config?: RestRequestConfig
+  config?: RestRequestConfig,
 ): Promise<RestResponse<T>> {
   const _config: RestRequestConfig = {
-    method: method,
+    method,
     baseURL: this.wsToken?.uri,
     url: endpoint,
     data: content,
@@ -52,7 +52,7 @@ export async function request<T>(
   await this.ws.send(JSON.stringify(requestBody));
   const [meta, body] = await Utils.waitForWebSocketMessage(
     this.ws,
-    meta => meta.messageId === messageId
+    (meta) => meta.messageId === messageId,
   );
   const response: RestResponse = {
     data: body as T,
@@ -62,12 +62,11 @@ export async function request<T>(
     config: _config,
   };
   if (
-    meta.type === 'ClientRequest' &&
-    meta.status >= 200 &&
-    meta.status < 300
+    meta.type === 'ClientRequest'
+    && meta.status >= 200
+    && meta.status < 300
   ) {
     return response;
-  } else {
-    throw new RestException(response);
   }
+  throw new RestException(response);
 }

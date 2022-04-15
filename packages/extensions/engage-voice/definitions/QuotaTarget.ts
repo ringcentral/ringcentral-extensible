@@ -1,4 +1,4 @@
-import {QuotaGroup, DateTime} from './index';
+import { QuotaGroup, DateTime } from './index';
 
 class QuotaTarget {
   clientMetadata?: string;

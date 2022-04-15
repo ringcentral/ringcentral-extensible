@@ -1,4 +1,4 @@
-import {AddressBookBulkContactResource, ErrorEntity} from './index';
+import { AddressBookBulkContactResource, ErrorEntity } from './index';
 
 /**
  * Result record on adding multiple contacts to an extension. Returned for completed tasks

@@ -1,19 +1,22 @@
-import {RestRequestConfig} from '../../../../Rest';
-import {SubscriptionInfo} from '../../../../definitions';
+import { RestRequestConfig } from '../../../../Rest';
+import { SubscriptionInfo } from '../../../../definitions';
 import Parent from '..';
-import {RingCentral} from '../../../..';
+import { RingCentral } from '../../../..';
 
 class Index {
   rc: RingCentral;
+
   parent: Parent;
 
   constructor(parent: Parent) {
     this.parent = parent;
     this.rc = parent.rc;
   }
+
   path(): string {
     return `${this.parent.path()}/renew`;
   }
+
   /**
    * Renews an existent subscription by posting request with an empty body.
    * HTTP Method: post
@@ -24,7 +27,7 @@ class Index {
     const r = await this.rc.post<SubscriptionInfo>(
       this.path(),
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }

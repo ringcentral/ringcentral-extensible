@@ -1,19 +1,22 @@
-import {RestRequestConfig} from '../../../../../Rest';
-import {UserVideoConfiguration} from '../../../../../definitions';
+import { RestRequestConfig } from '../../../../../Rest';
+import { UserVideoConfiguration } from '../../../../../definitions';
 import Parent from '..';
-import {RingCentral} from '../../../../..';
+import { RingCentral } from '../../../../..';
 
 class Index {
   rc: RingCentral;
+
   parent: Parent;
 
   constructor(parent: Parent) {
     this.parent = parent;
     this.rc = parent.rc;
   }
+
   path(): string {
     return `${this.parent.path()}/video-configuration`;
   }
+
   /**
    * Returns information about video configuration of the current user.
    * HTTP Method: get
@@ -23,12 +26,12 @@ class Index {
    * User Permission: Meetings
    */
   async get(
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<UserVideoConfiguration> {
     const r = await this.rc.get<UserVideoConfiguration>(
       this.path(),
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }
@@ -42,13 +45,13 @@ class Index {
    */
   async put(
     userVideoConfiguration: UserVideoConfiguration,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<UserVideoConfiguration> {
     const r = await this.rc.put<UserVideoConfiguration>(
       this.path(),
       userVideoConfiguration,
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }

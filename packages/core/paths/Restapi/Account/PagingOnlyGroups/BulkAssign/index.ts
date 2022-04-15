@@ -1,19 +1,22 @@
-import {RestRequestConfig} from '../../../../../Rest';
-import {EditPagingGroupRequest} from '../../../../../definitions';
+import { RestRequestConfig } from '../../../../../Rest';
+import { EditPagingGroupRequest } from '../../../../../definitions';
 import Parent from '..';
-import {RingCentral} from '../../../../..';
+import { RingCentral } from '../../../../..';
 
 class Index {
   rc: RingCentral;
+
   parent: Parent;
 
   constructor(parent: Parent) {
     this.parent = parent;
     this.rc = parent.rc;
   }
+
   path(): string {
     return `${this.parent.path()}/bulk-assign`;
   }
+
   /**
    * Adds and/or removes paging group users and devices.
    * HTTP Method: post
@@ -24,13 +27,13 @@ class Index {
    */
   async post(
     editPagingGroupRequest: EditPagingGroupRequest,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<string> {
     const r = await this.rc.post<string>(
       this.path(),
       editPagingGroupRequest,
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }

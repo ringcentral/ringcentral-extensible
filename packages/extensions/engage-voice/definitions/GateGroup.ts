@@ -1,4 +1,4 @@
-import {DateTime, Gate, GateGroupSkill} from './index';
+import { DateTime, Gate, GateGroupSkill } from './index';
 
 class GateGroup {
   billingKey?: string;

@@ -1,4 +1,4 @@
-import {DateTime} from './index';
+import { DateTime } from './index';
 
 class DateTimeComparableSearchField {
   operator?: string;

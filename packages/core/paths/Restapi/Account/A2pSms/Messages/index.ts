@@ -1,15 +1,17 @@
-import {RestRequestConfig} from '../../../../../Rest';
+import { RestRequestConfig } from '../../../../../Rest';
 import {
   ListA2PSMSParameters,
   MessageListResponse,
   MessageDetailsResponse,
 } from '../../../../../definitions';
 import Parent from '..';
-import {RingCentral} from '../../../../..';
+import { RingCentral } from '../../../../..';
 
 class Index {
   rc: RingCentral;
+
   parent: Parent;
+
   messageId: string | null;
 
   constructor(parent: Parent, messageId: string | null = null) {
@@ -17,12 +19,14 @@ class Index {
     this.rc = parent.rc;
     this.messageId = messageId;
   }
+
   path(withParameter = true): string {
     if (withParameter && this.messageId !== null) {
       return `${this.parent.path()}/messages/${this.messageId}`;
     }
     return `${this.parent.path()}/messages`;
   }
+
   /**
    * Returns the list of outbound/inbound A2P messages sent from/to A2P phone numbers of the current account. The list can be filtered by message batch ID and/or phone number.
    * HTTP Method: get
@@ -32,12 +36,12 @@ class Index {
    */
   async list(
     queryParams?: ListA2PSMSParameters,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<MessageListResponse> {
     const r = await this.rc.get<MessageListResponse>(
       this.path(false),
       queryParams,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }
@@ -50,7 +54,7 @@ class Index {
    * App Permission: A2PSMS
    */
   async get(
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<MessageDetailsResponse> {
     if (this.messageId === null) {
       throw new Error('messageId must be specified.');
@@ -58,7 +62,7 @@ class Index {
     const r = await this.rc.get<MessageDetailsResponse>(
       this.path(),
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }

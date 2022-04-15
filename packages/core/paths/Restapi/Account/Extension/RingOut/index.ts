@@ -1,14 +1,16 @@
-import {RestRequestConfig} from '../../../../../Rest';
+import { RestRequestConfig } from '../../../../../Rest';
 import {
   MakeRingOutRequest,
   GetRingOutStatusResponse,
 } from '../../../../../definitions';
 import Parent from '..';
-import {RingCentral} from '../../../../..';
+import { RingCentral } from '../../../../..';
 
 class Index {
   rc: RingCentral;
+
   parent: Parent;
+
   ringoutId: string | null;
 
   constructor(parent: Parent, ringoutId: string | null = null) {
@@ -16,12 +18,14 @@ class Index {
     this.rc = parent.rc;
     this.ringoutId = ringoutId;
   }
+
   path(withParameter = true): string {
     if (withParameter && this.ringoutId !== null) {
       return `${this.parent.path()}/ring-out/${this.ringoutId}`;
     }
     return `${this.parent.path()}/ring-out`;
   }
+
   /**
    * Makes a 2-leg RingOut call.
    * HTTP Method: post
@@ -31,13 +35,13 @@ class Index {
    */
   async post(
     makeRingOutRequest: MakeRingOutRequest,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<GetRingOutStatusResponse> {
     const r = await this.rc.post<GetRingOutStatusResponse>(
       this.path(false),
       makeRingOutRequest,
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }
@@ -50,7 +54,7 @@ class Index {
    * App Permission: RingOut
    */
   async get(
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<GetRingOutStatusResponse> {
     if (this.ringoutId === null) {
       throw new Error('ringoutId must be specified.');
@@ -58,7 +62,7 @@ class Index {
     const r = await this.rc.get<GetRingOutStatusResponse>(
       this.path(),
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }
@@ -77,7 +81,7 @@ class Index {
     const r = await this.rc.delete<string>(
       this.path(),
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }

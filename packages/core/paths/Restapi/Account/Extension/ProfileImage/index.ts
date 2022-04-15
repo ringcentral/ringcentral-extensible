@@ -1,15 +1,17 @@
 import Utils from '../../../../../Utils';
-import {RestRequestConfig} from '../../../../../Rest';
+import { RestRequestConfig } from '../../../../../Rest';
 import {
   CreateUserProfileImageRequest,
   UpdateUserProfileImageRequest,
 } from '../../../../../definitions';
 import Parent from '..';
-import {RingCentral} from '../../../../..';
+import { RingCentral } from '../../../../..';
 
 class Index {
   rc: RingCentral;
+
   parent: Parent;
+
   scaleSize: string | null;
 
   constructor(parent: Parent, scaleSize: string | null = null) {
@@ -17,12 +19,14 @@ class Index {
     this.rc = parent.rc;
     this.scaleSize = scaleSize;
   }
+
   path(withParameter = true): string {
     if (withParameter && this.scaleSize !== null) {
       return `${this.parent.path()}/profile-image/${this.scaleSize}`;
     }
     return `${this.parent.path()}/profile-image`;
   }
+
   /**
    * Returns a profile image of an extension.
    * HTTP Method: get
@@ -49,14 +53,14 @@ class Index {
    */
   async post(
     createUserProfileImageRequest: CreateUserProfileImageRequest,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<string> {
     const formData = Utils.getFormData(createUserProfileImageRequest);
     const r = await this.rc.post<string>(
       this.path(false),
       formData,
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }
@@ -71,14 +75,14 @@ class Index {
    */
   async put(
     updateUserProfileImageRequest: UpdateUserProfileImageRequest,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<string> {
     const formData = Utils.getFormData(updateUserProfileImageRequest);
     const r = await this.rc.put<string>(
       this.path(false),
       formData,
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }

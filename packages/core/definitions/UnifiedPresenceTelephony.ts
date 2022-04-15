@@ -16,8 +16,8 @@ class UnifiedPresenceTelephony {
    * Telephony DND status. Returned if *DND* feature is switched on
    */
   availability?:
-    | 'TakeAllCalls'
-    | 'DoNotAcceptAnyCalls'
-    | 'DoNotAcceptQueueCalls';
+  | 'TakeAllCalls'
+  | 'DoNotAcceptAnyCalls'
+  | 'DoNotAcceptQueueCalls';
 }
 export default UnifiedPresenceTelephony;

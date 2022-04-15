@@ -1,4 +1,4 @@
-import {PresenceCallQueueInfo} from './index';
+import { PresenceCallQueueInfo } from './index';
 
 class ExtensionCallQueuePresence {
   /**

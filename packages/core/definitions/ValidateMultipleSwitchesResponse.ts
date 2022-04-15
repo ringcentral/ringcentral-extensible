@@ -1,4 +1,4 @@
-import {SwitchValidated} from './index';
+import { SwitchValidated } from './index';
 
 class ValidateMultipleSwitchesResponse {
   /**

@@ -1,4 +1,4 @@
-import {RestRequestConfig} from '../../../../../Rest';
+import { RestRequestConfig } from '../../../../../Rest';
 import {
   ListWirelessPointsParameters,
   WirelessPointsList,
@@ -7,11 +7,13 @@ import {
   UpdateWirelessPoint,
 } from '../../../../../definitions';
 import Parent from '..';
-import {RingCentral} from '../../../../..';
+import { RingCentral } from '../../../../..';
 
 class Index {
   rc: RingCentral;
+
   parent: Parent;
+
   pointId: string | null;
 
   constructor(parent: Parent, pointId: string | null = null) {
@@ -19,12 +21,14 @@ class Index {
     this.rc = parent.rc;
     this.pointId = pointId;
   }
+
   path(withParameter = true): string {
     if (withParameter && this.pointId !== null) {
       return `${this.parent.path()}/wireless-points/${this.pointId}`;
     }
     return `${this.parent.path()}/wireless-points`;
   }
+
   /**
    * Returns account wireless points configured and used for Automatic Location Updates feature.
    * HTTP Method: get
@@ -35,12 +39,12 @@ class Index {
    */
   async list(
     queryParams?: ListWirelessPointsParameters,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<WirelessPointsList> {
     const r = await this.rc.get<WirelessPointsList>(
       this.path(false),
       queryParams,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }
@@ -55,13 +59,13 @@ class Index {
    */
   async post(
     createWirelessPoint: CreateWirelessPoint,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<WirelessPointInfo> {
     const r = await this.rc.post<WirelessPointInfo>(
       this.path(false),
       createWirelessPoint,
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }
@@ -81,7 +85,7 @@ class Index {
     const r = await this.rc.get<WirelessPointInfo>(
       this.path(),
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }
@@ -96,7 +100,7 @@ class Index {
    */
   async put(
     updateWirelessPoint: UpdateWirelessPoint,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<WirelessPointInfo> {
     if (this.pointId === null) {
       throw new Error('pointId must be specified.');
@@ -105,7 +109,7 @@ class Index {
       this.path(),
       updateWirelessPoint,
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }
@@ -125,7 +129,7 @@ class Index {
     const r = await this.rc.delete<string>(
       this.path(),
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }

@@ -1,11 +1,13 @@
 import Webhooks from './Webhooks';
 import Events from './Events';
 import Parent from '..';
-import {RingCentral} from '../../../..';
+import { RingCentral } from '../../../..';
 
 class Index {
   rc: RingCentral;
+
   parent: Parent;
+
   groupId: string | null;
 
   constructor(parent: Parent, groupId: string | null = null) {
@@ -13,6 +15,7 @@ class Index {
     this.rc = parent.rc;
     this.groupId = groupId;
   }
+
   path(withParameter = true): string {
     if (withParameter && this.groupId !== null) {
       return `${this.parent.path()}/groups/${this.groupId}`;

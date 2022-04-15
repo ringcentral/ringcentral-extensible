@@ -1,22 +1,25 @@
-import {RestRequestConfig} from '../../../../../Rest';
+import { RestRequestConfig } from '../../../../../Rest';
 import {
   ValidateMultipleSwitchesRequest,
   ValidateMultipleSwitchesResponse,
 } from '../../../../../definitions';
 import Parent from '..';
-import {RingCentral} from '../../../../..';
+import { RingCentral } from '../../../../..';
 
 class Index {
   rc: RingCentral;
+
   parent: Parent;
 
   constructor(parent: Parent) {
     this.parent = parent;
     this.rc = parent.rc;
   }
+
   path(): string {
     return `${this.parent.path()}/switches-bulk-validate`;
   }
+
   /**
    * Validates switches before creation or update. The maximum number of switches per request is 10 000.
    * HTTP Method: post
@@ -27,13 +30,13 @@ class Index {
    */
   async post(
     validateMultipleSwitchesRequest: ValidateMultipleSwitchesRequest,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<ValidateMultipleSwitchesResponse> {
     const r = await this.rc.post<ValidateMultipleSwitchesResponse>(
       this.path(),
       validateMultipleSwitchesRequest,
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }

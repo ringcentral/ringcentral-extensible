@@ -1,4 +1,4 @@
-import {ChatQueue} from './index';
+import { ChatQueue } from './index';
 
 class ChatPriorityGroup {
   chatPriorityGroupId?: number;

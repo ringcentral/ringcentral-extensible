@@ -1,4 +1,4 @@
-import {AdaptiveCardCreator} from './index';
+import { AdaptiveCardCreator } from './index';
 
 class GlipAdaptiveCardShortInfo {
   /**

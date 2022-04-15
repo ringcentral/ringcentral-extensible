@@ -1,6 +1,6 @@
 import RingCentral from '@rc-ex/core';
 
-import {createRingCentral} from './utils';
+import { createRingCentral } from './utils';
 
 describe('authorize', () => {
   test('password flow', async () => {

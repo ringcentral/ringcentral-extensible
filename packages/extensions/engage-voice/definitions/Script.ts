@@ -1,4 +1,4 @@
-import {Account, DateTime, ScriptGroup} from './index';
+import { Account, DateTime, ScriptGroup } from './index';
 
 class Script {
   account?: Account;

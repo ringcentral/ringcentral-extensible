@@ -1,4 +1,4 @@
-import {CallsByQueueSla} from './index';
+import { CallsByQueueSla } from './index';
 
 class PerformanceCallsByQueueSla {
   /**

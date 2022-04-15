@@ -1,4 +1,4 @@
-import {CallMonitoringExtensionInfo} from './index';
+import { CallMonitoringExtensionInfo } from './index';
 
 class CallMonitoringBulkAssign {
   /**

@@ -1,4 +1,4 @@
-import {DataExportTaskContactInfo} from './index';
+import { DataExportTaskContactInfo } from './index';
 
 /**
  * Information specified in request

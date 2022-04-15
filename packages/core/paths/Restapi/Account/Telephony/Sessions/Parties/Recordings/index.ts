@@ -1,15 +1,17 @@
-import {RestRequestConfig} from '../../../../../../../Rest';
+import { RestRequestConfig } from '../../../../../../../Rest';
 import {
   CallRecordingUpdate,
   PauseResumeCallRecordingParameters,
   CallRecording,
 } from '../../../../../../../definitions';
 import Parent from '..';
-import {RingCentral} from '../../../../../../..';
+import { RingCentral } from '../../../../../../..';
 
 class Index {
   rc: RingCentral;
+
   parent: Parent;
+
   recordingId: string | null;
 
   constructor(parent: Parent, recordingId: string | null = null) {
@@ -17,12 +19,14 @@ class Index {
     this.rc = parent.rc;
     this.recordingId = recordingId;
   }
+
   path(withParameter = true): string {
     if (withParameter && this.recordingId !== null) {
       return `${this.parent.path()}/recordings/${this.recordingId}`;
     }
     return `${this.parent.path()}/recordings`;
   }
+
   /**
    * Starts a new call recording for the party
    * HTTP Method: post
@@ -34,7 +38,7 @@ class Index {
     const r = await this.rc.post<string>(
       this.path(false),
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }
@@ -49,7 +53,7 @@ class Index {
   async patch(
     callRecordingUpdate: CallRecordingUpdate,
     queryParams?: PauseResumeCallRecordingParameters,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<CallRecording> {
     if (this.recordingId === null) {
       throw new Error('recordingId must be specified.');
@@ -58,7 +62,7 @@ class Index {
       this.path(),
       callRecordingUpdate,
       queryParams,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }

@@ -1,4 +1,4 @@
-import {CallsSegments} from './index';
+import { CallsSegments } from './index';
 
 class PerformanceCallsSegments {
   /**

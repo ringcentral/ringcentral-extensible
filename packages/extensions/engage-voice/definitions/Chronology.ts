@@ -1,4 +1,4 @@
-import {DateTimeZone} from './index';
+import { DateTimeZone } from './index';
 
 class Chronology {
   zone?: DateTimeZone;

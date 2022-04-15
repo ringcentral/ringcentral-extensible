@@ -1,5 +1,5 @@
 import RingCentral from '@rc-ex/core';
-import WebSocketExtension, {Events} from '@rc-ex/ws';
+import WebSocketExtension, { Events } from '@rc-ex/ws';
 // import path from 'path';
 // import dotenv from 'dotenv-override-true';
 import waitFor from 'wait-for-async';
@@ -33,13 +33,13 @@ describe('WebSocket', () => {
     // must have at least 1 subscription, otherwise recoveryState = Failed
     await webSocketExtension.subscribe(
       ['/restapi/v1.0/account/~/extension/~'],
-      () => {}
+      () => {},
     );
 
     const oldWS = webSocketExtension.ws;
 
     let count = 0;
-    webSocketExtension.eventEmitter.on(Events.autoRecoverSuccess, ws => {
+    webSocketExtension.eventEmitter.on(Events.autoRecoverSuccess, (ws) => {
       expect(ws).toBeDefined();
       expect(ws).not.toBe(oldWS);
       count += 1;

@@ -1,4 +1,4 @@
-import {CreateAnsweringRuleForwardingNumberInfo} from './index';
+import { CreateAnsweringRuleForwardingNumberInfo } from './index';
 
 class RuleInfo {
   /**

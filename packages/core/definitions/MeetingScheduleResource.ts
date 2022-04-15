@@ -1,4 +1,4 @@
-import {MeetingsTimezoneResource} from './index';
+import { MeetingsTimezoneResource } from './index';
 
 /**
  * Timing of a meeting

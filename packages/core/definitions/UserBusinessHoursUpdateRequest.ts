@@ -1,4 +1,4 @@
-import {UserBusinessHoursScheduleInfo} from './index';
+import { UserBusinessHoursScheduleInfo } from './index';
 
 class UserBusinessHoursUpdateRequest {
   /**

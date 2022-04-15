@@ -1,22 +1,25 @@
-import {RestRequestConfig} from '../../../../../../Rest';
+import { RestRequestConfig } from '../../../../../../Rest';
 import {
   MeetingServiceInfoResource,
   MeetingServiceInfoRequest,
 } from '../../../../../../definitions';
 import Parent from '..';
-import {RingCentral} from '../../../../../..';
+import { RingCentral } from '../../../../../..';
 
 class Index {
   rc: RingCentral;
+
   parent: Parent;
 
   constructor(parent: Parent) {
     this.parent = parent;
     this.rc = parent.rc;
   }
+
   path(): string {
     return `${this.parent.path()}/service-info`;
   }
+
   /**
    * Returns information on dial-in numbers for meetings, support and international dial-in numbers URIs and meeting account information.
    * HTTP Method: get
@@ -26,12 +29,12 @@ class Index {
    * User Permission: Meetings
    */
   async get(
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<MeetingServiceInfoResource> {
     const r = await this.rc.get<MeetingServiceInfoResource>(
       this.path(),
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }
@@ -46,13 +49,13 @@ class Index {
    */
   async patch(
     meetingServiceInfoRequest: MeetingServiceInfoRequest,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<MeetingServiceInfoResource> {
     const r = await this.rc.patch<MeetingServiceInfoResource>(
       this.path(),
       meetingServiceInfoRequest,
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }

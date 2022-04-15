@@ -1,4 +1,4 @@
-import {VoicemailMessageEventBody} from './index';
+import { VoicemailMessageEventBody } from './index';
 
 class VoicemailMessageEvent {
   /**

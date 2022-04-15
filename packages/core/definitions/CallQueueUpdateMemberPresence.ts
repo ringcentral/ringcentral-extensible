@@ -1,4 +1,4 @@
-import {CallQueueMemberId} from './index';
+import { CallQueueMemberId } from './index';
 
 class CallQueueUpdateMemberPresence {
   /**

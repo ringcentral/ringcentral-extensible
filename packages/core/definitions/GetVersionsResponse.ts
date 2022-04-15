@@ -1,4 +1,4 @@
-import {VersionInfo} from './index';
+import { VersionInfo } from './index';
 
 class GetVersionsResponse {
   /**

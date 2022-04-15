@@ -1,4 +1,4 @@
-import {Account, Script} from './index';
+import { Account, Script } from './index';
 
 class ScriptGroup {
   account?: Account;

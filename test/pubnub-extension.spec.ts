@@ -19,11 +19,11 @@ describe('PubNub extension', () => {
     let eventCount = 0;
     await pubNubExtension.subscribe(
       ['/restapi/v1.0/account/~/extension/~/message-store/instant?type=SMS'],
-      body => {
+      (body) => {
         expect(body).not.toBeNull();
         expect(body).toBeDefined();
         eventCount += 1;
-      }
+      },
     );
     await rc
       .restapi()
@@ -31,8 +31,8 @@ describe('PubNub extension', () => {
       .extension()
       .sms()
       .post({
-        from: {phoneNumber: process.env.RINGCENTRAL_USERNAME!},
-        to: [{phoneNumber: process.env.RINGCENTRAL_USERNAME!}], // send sms to oneself
+        from: { phoneNumber: process.env.RINGCENTRAL_USERNAME! },
+        to: [{ phoneNumber: process.env.RINGCENTRAL_USERNAME! }], // send sms to oneself
         text: 'Hello world',
       });
     const successful = await waitFor({

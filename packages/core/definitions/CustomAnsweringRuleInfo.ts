@@ -55,13 +55,13 @@ class CustomAnsweringRuleInfo {
    * Specifies how incoming calls are forwarded
    */
   callHandlingAction?:
-    | 'ForwardCalls'
-    | 'UnconditionalForwarding'
-    | 'AgentQueue'
-    | 'TransferToExtension'
-    | 'TakeMessagesOnly'
-    | 'PlayAnnouncementOnly'
-    | 'SharedLines';
+  | 'ForwardCalls'
+  | 'UnconditionalForwarding'
+  | 'AgentQueue'
+  | 'TransferToExtension'
+  | 'TakeMessagesOnly'
+  | 'PlayAnnouncementOnly'
+  | 'SharedLines';
 
   /**
    */

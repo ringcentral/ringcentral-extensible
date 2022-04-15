@@ -1,4 +1,4 @@
-import {Timestamp} from './index';
+import { Timestamp } from './index';
 
 class Survey {
   accountId?: string;

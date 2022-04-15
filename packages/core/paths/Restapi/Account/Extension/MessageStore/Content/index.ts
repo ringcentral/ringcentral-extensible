@@ -1,11 +1,13 @@
-import {RestRequestConfig} from '../../../../../../Rest';
-import {ReadMessageContentParameters} from '../../../../../../definitions';
+import { RestRequestConfig } from '../../../../../../Rest';
+import { ReadMessageContentParameters } from '../../../../../../definitions';
 import Parent from '..';
-import {RingCentral} from '../../../../../..';
+import { RingCentral } from '../../../../../..';
 
 class Index {
   rc: RingCentral;
+
   parent: Parent;
+
   attachmentId: string | null;
 
   constructor(parent: Parent, attachmentId: string | null = null) {
@@ -13,12 +15,14 @@ class Index {
     this.rc = parent.rc;
     this.attachmentId = attachmentId;
   }
+
   path(withParameter = true): string {
     if (withParameter && this.attachmentId !== null) {
       return `${this.parent.path()}/content/${this.attachmentId}`;
     }
     return `${this.parent.path()}/content`;
   }
+
   /**
    * Returns a specific message attachment data as media stream.
    * HTTP Method: get
@@ -29,7 +33,7 @@ class Index {
    */
   async get(
     queryParams?: ReadMessageContentParameters,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<Buffer> {
     if (this.attachmentId === null) {
       throw new Error('attachmentId must be specified.');

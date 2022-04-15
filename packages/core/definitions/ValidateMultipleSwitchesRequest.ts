@@ -1,4 +1,4 @@
-import {SwitchInfo} from './index';
+import { SwitchInfo } from './index';
 
 class ValidateMultipleSwitchesRequest {
   /**

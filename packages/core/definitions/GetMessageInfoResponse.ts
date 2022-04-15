@@ -82,12 +82,12 @@ class GetMessageInfoResponse {
    * Message status. Different message types may have different allowed status values. For outbound faxes the aggregated message status is returned: If status for at least one recipient is 'Queued', then 'Queued' value is returned If status for at least one recipient is 'SendingFailed', then 'SendingFailed' value is returned In other cases Sent status is returned
    */
   messageStatus?:
-    | 'Queued'
-    | 'Sent'
-    | 'Delivered'
-    | 'DeliveryFailed'
-    | 'SendingFailed'
-    | 'Received';
+  | 'Queued'
+  | 'Sent'
+  | 'Delivered'
+  | 'DeliveryFailed'
+  | 'SendingFailed'
+  | 'Received';
 
   /**
    * 'Pager' only. 'True' if at least one of the message recipients is 'Department' extension
@@ -134,13 +134,13 @@ class GetMessageInfoResponse {
    * Voicemail only. Status of voicemail to text transcription. If VoicemailToText feature is not activated for account, the 'NotAvailable' value is returned
    */
   vmTranscriptionStatus?:
-    | 'NotAvailable'
-    | 'InProgress'
-    | 'TimedOut'
-    | 'Completed'
-    | 'CompletedPartially'
-    | 'Failed'
-    | 'Unknown';
+  | 'NotAvailable'
+  | 'InProgress'
+  | 'TimedOut'
+  | 'Completed'
+  | 'CompletedPartially'
+  | 'Failed'
+  | 'Unknown';
 
   /**
    * Cover page identifier. If coverIndex is set to '0' (zero) cover page is not attached. For the list of available cover page identifiers (1-13) please call the Fax Cover Pages method. If not specified, the default cover page is attached (which is configured in 'Outbound Fax Settings')

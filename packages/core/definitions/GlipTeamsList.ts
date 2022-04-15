@@ -1,4 +1,4 @@
-import {GlipTeamInfo, GlipNavigationInfo} from './index';
+import { GlipTeamInfo, GlipNavigationInfo } from './index';
 
 class GlipTeamsList {
   /**

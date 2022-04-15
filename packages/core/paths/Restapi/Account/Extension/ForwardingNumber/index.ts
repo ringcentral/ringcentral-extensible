@@ -1,4 +1,4 @@
-import {RestRequestConfig} from '../../../../../Rest';
+import { RestRequestConfig } from '../../../../../Rest';
 import {
   ListForwardingNumbersParameters,
   GetExtensionForwardingNumberListResponse,
@@ -7,11 +7,13 @@ import {
   UpdateForwardingNumberRequest,
 } from '../../../../../definitions';
 import Parent from '..';
-import {RingCentral} from '../../../../..';
+import { RingCentral } from '../../../../..';
 
 class Index {
   rc: RingCentral;
+
   parent: Parent;
+
   forwardingNumberId: string | null;
 
   constructor(parent: Parent, forwardingNumberId: string | null = null) {
@@ -19,6 +21,7 @@ class Index {
     this.rc = parent.rc;
     this.forwardingNumberId = forwardingNumberId;
   }
+
   path(withParameter = true): string {
     if (withParameter && this.forwardingNumberId !== null) {
       return `${this.parent.path()}/forwarding-number/${
@@ -27,6 +30,7 @@ class Index {
     }
     return `${this.parent.path()}/forwarding-number`;
   }
+
   /**
    * Returns the list of extension phone numbers used for call forwarding and call flip. The returned list contains all the extension phone numbers used for call forwarding and call flip.
    * HTTP Method: get
@@ -37,12 +41,12 @@ class Index {
    */
   async list(
     queryParams?: ListForwardingNumbersParameters,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<GetExtensionForwardingNumberListResponse> {
     const r = await this.rc.get<GetExtensionForwardingNumberListResponse>(
       this.path(false),
       queryParams,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }
@@ -57,13 +61,13 @@ class Index {
    */
   async post(
     createForwardingNumberRequest: CreateForwardingNumberRequest,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<ForwardingNumberInfo> {
     const r = await this.rc.post<ForwardingNumberInfo>(
       this.path(false),
       createForwardingNumberRequest,
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }
@@ -77,7 +81,7 @@ class Index {
    * User Permission: ReadUserForwardingFlipNumbers
    */
   async get(
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<ForwardingNumberInfo> {
     if (this.forwardingNumberId === null) {
       throw new Error('forwardingNumberId must be specified.');
@@ -85,7 +89,7 @@ class Index {
     const r = await this.rc.get<ForwardingNumberInfo>(
       this.path(),
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }
@@ -100,7 +104,7 @@ class Index {
    */
   async put(
     updateForwardingNumberRequest: UpdateForwardingNumberRequest,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<ForwardingNumberInfo> {
     if (this.forwardingNumberId === null) {
       throw new Error('forwardingNumberId must be specified.');
@@ -109,7 +113,7 @@ class Index {
       this.path(),
       updateForwardingNumberRequest,
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }
@@ -129,7 +133,7 @@ class Index {
     const r = await this.rc.delete<string>(
       this.path(),
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }

@@ -1,4 +1,4 @@
-import {BulkTaskInfoWiUpdate} from './index';
+import { BulkTaskInfoWiUpdate } from './index';
 
 class UpdateMultipleWirelessPointsResponse {
   /**

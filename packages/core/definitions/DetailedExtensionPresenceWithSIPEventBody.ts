@@ -1,4 +1,4 @@
-import {ActiveCallInfo} from './index';
+import { ActiveCallInfo } from './index';
 
 /**
  * Notification payload body
@@ -14,11 +14,11 @@ class DetailedExtensionPresenceWithSIPEventBody {
    * Telephony presence status. Returned if telephony status is changed.
    */
   telephonyStatus?:
-    | 'NoCall'
-    | 'CallConnected'
-    | 'Ringing'
-    | 'OnHold'
-    | 'ParkedCall';
+  | 'NoCall'
+  | 'CallConnected'
+  | 'Ringing'
+  | 'OnHold'
+  | 'ParkedCall';
 
   /**
    * List of the latest 7 active calls on extension
@@ -49,10 +49,10 @@ class DetailedExtensionPresenceWithSIPEventBody {
    * Extended DnD (Do not Disturb) status
    */
   dndStatus?:
-    | 'TakeAllCalls'
-    | 'DoNotAcceptAnyCalls'
-    | 'DoNotAcceptDepartmentCalls'
-    | 'TakeDepartmentCallsOnly';
+  | 'TakeAllCalls'
+  | 'DoNotAcceptAnyCalls'
+  | 'DoNotAcceptDepartmentCalls'
+  | 'TakeDepartmentCallsOnly';
 
   /**
    * If 'True' enables other extensions to see the extension presence status

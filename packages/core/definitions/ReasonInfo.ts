@@ -6,12 +6,12 @@ class ReasonInfo {
    * Reason code
    */
   code?:
-    | 'ServicePlanLimitation'
-    | 'AccountLimitation'
-    | 'ExtensionTypeLimitation'
-    | 'ExtensionLimitation'
-    | 'InsufficientPermissions'
-    | 'ConfigurationLimitation';
+  | 'ServicePlanLimitation'
+  | 'AccountLimitation'
+  | 'ExtensionTypeLimitation'
+  | 'ExtensionLimitation'
+  | 'InsufficientPermissions'
+  | 'ConfigurationLimitation';
 
   /**
    * Reason description

@@ -32,14 +32,16 @@ import CallLog from './CallLog';
 import A2pSms from './A2pSms';
 import Meeting from './Meeting';
 import Device from './Device';
-import {RestRequestConfig} from '../../../Rest';
-import {GetAccountInfoResponse} from '../../../definitions';
+import { RestRequestConfig } from '../../../Rest';
+import { GetAccountInfoResponse } from '../../../definitions';
 import Parent from '..';
-import {RingCentral} from '../../..';
+import { RingCentral } from '../../..';
 
 class Index {
   rc: RingCentral;
+
   parent: Parent;
+
   accountId: string | null;
 
   constructor(parent: Parent, accountId: string | null = '~') {
@@ -47,12 +49,14 @@ class Index {
     this.rc = parent.rc;
     this.accountId = accountId;
   }
+
   path(withParameter = true): string {
     if (withParameter && this.accountId !== null) {
       return `${this.parent.path()}/account/${this.accountId}`;
     }
     return `${this.parent.path()}/account`;
   }
+
   /**
    * Returns basic information about a particular RingCentral customer account.
    * HTTP Method: get
@@ -62,7 +66,7 @@ class Index {
    * User Permission: ReadCompanyInfo
    */
   async get(
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<GetAccountInfoResponse> {
     if (this.accountId === null) {
       throw new Error('accountId must be specified.');
@@ -70,7 +74,7 @@ class Index {
     const r = await this.rc.get<GetAccountInfoResponse>(
       this.path(),
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }

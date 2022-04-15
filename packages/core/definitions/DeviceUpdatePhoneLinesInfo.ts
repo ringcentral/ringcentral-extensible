@@ -1,4 +1,4 @@
-import {UpdateDevicePhoneInfo} from './index';
+import { UpdateDevicePhoneInfo } from './index';
 
 /**
  * Information on phone lines added to a device

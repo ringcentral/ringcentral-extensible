@@ -1,4 +1,4 @@
-import {PronouncedNamePromptInfo} from './index';
+import { PronouncedNamePromptInfo } from './index';
 
 class PronouncedNameInfo {
   /**

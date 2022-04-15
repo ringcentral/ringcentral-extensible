@@ -1,4 +1,4 @@
-import {CallLogRecordDeviceInfo} from './index';
+import { CallLogRecordDeviceInfo } from './index';
 
 /**
  * Information on caller ('from') or callee ('to')

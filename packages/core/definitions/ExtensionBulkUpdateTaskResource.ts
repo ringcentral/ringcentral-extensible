@@ -1,4 +1,4 @@
-import {ExtensionBulkUpdateTaskResult} from './index';
+import { ExtensionBulkUpdateTaskResult } from './index';
 
 /**
  * Information on a task for updating multiple extensions

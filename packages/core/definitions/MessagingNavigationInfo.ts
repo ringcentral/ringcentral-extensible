@@ -1,4 +1,4 @@
-import {MessagingNavigationInfoURI} from './index';
+import { MessagingNavigationInfoURI } from './index';
 
 /**
  * Information on navigation

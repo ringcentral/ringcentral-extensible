@@ -1,4 +1,4 @@
-import {MeetingsCountryResource} from './index';
+import { MeetingsCountryResource } from './index';
 
 class DialInNumberResource {
   /**

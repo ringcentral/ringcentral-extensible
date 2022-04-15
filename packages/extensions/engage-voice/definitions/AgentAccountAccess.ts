@@ -1,4 +1,4 @@
-import {Account, Agent} from './index';
+import { Account, Agent } from './index';
 
 class AgentAccountAccess {
   account?: Account;

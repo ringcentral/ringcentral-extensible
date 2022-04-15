@@ -37,7 +37,7 @@ import Grant from './Grant';
 import Fax from './Fax';
 import Mms from './Mms';
 import Sms from './Sms';
-import {RestRequestConfig} from '../../../../Rest';
+import { RestRequestConfig } from '../../../../Rest';
 import {
   ListExtensionsParameters,
   GetExtensionListResponse,
@@ -48,11 +48,13 @@ import {
   DeleteExtensionParameters,
 } from '../../../../definitions';
 import Parent from '..';
-import {RingCentral} from '../../../..';
+import { RingCentral } from '../../../..';
 
 class Index {
   rc: RingCentral;
+
   parent: Parent;
+
   extensionId: string | null;
 
   constructor(parent: Parent, extensionId: string | null = '~') {
@@ -60,12 +62,14 @@ class Index {
     this.rc = parent.rc;
     this.extensionId = extensionId;
   }
+
   path(withParameter = true): string {
     if (withParameter && this.extensionId !== null) {
       return `${this.parent.path()}/extension/${this.extensionId}`;
     }
     return `${this.parent.path()}/extension`;
   }
+
   /**
    * Returns the list of extensions created for a particular account. All types of extensions are included in this list.
    * HTTP Method: get
@@ -76,12 +80,12 @@ class Index {
    */
   async list(
     queryParams?: ListExtensionsParameters,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<GetExtensionListResponse> {
     const r = await this.rc.get<GetExtensionListResponse>(
       this.path(false),
       queryParams,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }
@@ -96,13 +100,13 @@ class Index {
    */
   async post(
     extensionCreationRequest: ExtensionCreationRequest,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<ExtensionCreationResponse> {
     const r = await this.rc.post<ExtensionCreationResponse>(
       this.path(false),
       extensionCreationRequest,
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }
@@ -116,7 +120,7 @@ class Index {
    * User Permission: ReadExtensions
    */
   async get(
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<GetExtensionInfoResponse> {
     if (this.extensionId === null) {
       throw new Error('extensionId must be specified.');
@@ -124,7 +128,7 @@ class Index {
     const r = await this.rc.get<GetExtensionInfoResponse>(
       this.path(),
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }
@@ -139,7 +143,7 @@ class Index {
    */
   async put(
     extensionUpdateRequest: ExtensionUpdateRequest,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<GetExtensionInfoResponse> {
     if (this.extensionId === null) {
       throw new Error('extensionId must be specified.');
@@ -148,7 +152,7 @@ class Index {
       this.path(),
       extensionUpdateRequest,
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }
@@ -163,7 +167,7 @@ class Index {
    */
   async delete(
     queryParams?: DeleteExtensionParameters,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<string> {
     if (this.extensionId === null) {
       throw new Error('extensionId must be specified.');
@@ -171,7 +175,7 @@ class Index {
     const r = await this.rc.delete<string>(
       this.path(),
       queryParams,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }

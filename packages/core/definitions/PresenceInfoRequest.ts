@@ -6,11 +6,11 @@ class PresenceInfoRequest {
   /**
    */
   dndStatus?:
-    | 'TakeAllCalls'
-    | 'DoNotAcceptDepartmentCalls'
-    | 'TakeDepartmentCallsOnly'
-    | 'DoNotAcceptAnyCalls'
-    | 'Unknown';
+  | 'TakeAllCalls'
+  | 'DoNotAcceptDepartmentCalls'
+  | 'TakeDepartmentCallsOnly'
+  | 'DoNotAcceptAnyCalls'
+  | 'Unknown';
 
   /**
    */

@@ -1,4 +1,4 @@
-import {Chronology, DateTimeZone} from './index';
+import { Chronology, DateTimeZone } from './index';
 
 class DateTime {
   afterNow?: boolean;

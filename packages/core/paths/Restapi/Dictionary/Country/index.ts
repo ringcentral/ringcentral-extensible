@@ -1,15 +1,17 @@
-import {RestRequestConfig} from '../../../../Rest';
+import { RestRequestConfig } from '../../../../Rest';
 import {
   ListCountriesParameters,
   GetCountryListResponse,
   GetCountryInfoDictionaryResponse,
 } from '../../../../definitions';
 import Parent from '..';
-import {RingCentral} from '../../../..';
+import { RingCentral } from '../../../..';
 
 class Index {
   rc: RingCentral;
+
   parent: Parent;
+
   countryId: string | null;
 
   constructor(parent: Parent, countryId: string | null = null) {
@@ -17,12 +19,14 @@ class Index {
     this.rc = parent.rc;
     this.countryId = countryId;
   }
+
   path(withParameter = true): string {
     if (withParameter && this.countryId !== null) {
       return `${this.parent.path()}/country/${this.countryId}`;
     }
     return `${this.parent.path()}/country`;
   }
+
   /**
    * Returns all the countries available for calling.
    * HTTP Method: get
@@ -31,12 +35,12 @@ class Index {
    */
   async list(
     queryParams?: ListCountriesParameters,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<GetCountryListResponse> {
     const r = await this.rc.get<GetCountryListResponse>(
       this.path(false),
       queryParams,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }
@@ -48,7 +52,7 @@ class Index {
    * Rate Limit Group: Light
    */
   async get(
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<GetCountryInfoDictionaryResponse> {
     if (this.countryId === null) {
       throw new Error('countryId must be specified.');
@@ -56,7 +60,7 @@ class Index {
     const r = await this.rc.get<GetCountryInfoDictionaryResponse>(
       this.path(),
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }

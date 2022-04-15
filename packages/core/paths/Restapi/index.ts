@@ -5,24 +5,27 @@ import Dictionary from './Dictionary';
 import Account from './Account';
 import Oauth from './Oauth';
 import Glip from './Glip';
-import {RestRequestConfig} from '../../Rest';
-import {GetVersionsResponse, GetVersionResponse} from '../../definitions';
-import {RingCentral} from '../..';
+import { RestRequestConfig } from '../../Rest';
+import { GetVersionsResponse, GetVersionResponse } from '../../definitions';
+import { RingCentral } from '../..';
 
 class Index {
   rc: RingCentral;
+
   apiVersion: string | null;
 
   constructor(rc: RingCentral, apiVersion: string | null = 'v1.0') {
     this.rc = rc;
     this.apiVersion = apiVersion;
   }
+
   path(withParameter = true): string {
     if (withParameter && this.apiVersion !== null) {
       return `/restapi/${this.apiVersion}`;
     }
     return '/restapi';
   }
+
   /**
    * Returns current API version(s) and server info.
    * HTTP Method: get
@@ -30,12 +33,12 @@ class Index {
    * Rate Limit Group: NoThrottling
    */
   async list(
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<GetVersionsResponse> {
     const r = await this.rc.get<GetVersionsResponse>(
       this.path(false),
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }
@@ -47,7 +50,7 @@ class Index {
    * Rate Limit Group: NoThrottling
    */
   async get(
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<GetVersionResponse> {
     if (this.apiVersion === null) {
       throw new Error('apiVersion must be specified.');
@@ -55,7 +58,7 @@ class Index {
     const r = await this.rc.get<GetVersionResponse>(
       this.path(),
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }

@@ -8,13 +8,13 @@ class OrderBy {
    * Field name by which to sort the contacts
    */
   fieldName?:
-    | 'firstName'
-    | 'lastName'
-    | 'extensionNumber'
-    | 'phoneNumber'
-    | 'email'
-    | 'jobTitle'
-    | 'department';
+  | 'firstName'
+  | 'lastName'
+  | 'extensionNumber'
+  | 'phoneNumber'
+  | 'email'
+  | 'jobTitle'
+  | 'department';
 
   /**
    * Sorting direction

@@ -1,4 +1,4 @@
-import {BusinessAddressInfo} from './index';
+import { BusinessAddressInfo } from './index';
 
 class ModifyAccountBusinessAddressRequest {
   /**

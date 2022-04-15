@@ -1,4 +1,4 @@
-import {GetPresenceExtensionInfo, ActiveCallInfo} from './index';
+import { GetPresenceExtensionInfo, ActiveCallInfo } from './index';
 
 class GetPresenceInfo {
   /**
@@ -15,10 +15,10 @@ class GetPresenceInfo {
    * Extended DnD (Do not Disturb) status. Cannot be set for Department/Announcement/Voicemail (Take Messages Only)/Fax User/Shared Lines Group/Paging Only Group/IVR Menu/Application Extension/Park Location extensions. The 'DoNotAcceptDepartmentCalls' and 'TakeDepartmentCallsOnly' values are applicable only for extensions - members of a Department; if these values are set for department outsiders, the 400 Bad Request error code is returned. The 'TakeDepartmentCallsOnly' status can be set through the old RingCentral user interface and is available for some migrated accounts only.
    */
   dndStatus?:
-    | 'TakeAllCalls'
-    | 'DoNotAcceptAnyCalls'
-    | 'DoNotAcceptDepartmentCalls'
-    | 'TakeDepartmentCallsOnly';
+  | 'TakeAllCalls'
+  | 'DoNotAcceptAnyCalls'
+  | 'DoNotAcceptDepartmentCalls'
+  | 'TakeDepartmentCallsOnly';
 
   /**
    */
@@ -48,11 +48,11 @@ class GetPresenceInfo {
    * Telephony presence status
    */
   telephonyStatus?:
-    | 'NoCall'
-    | 'CallConnected'
-    | 'Ringing'
-    | 'OnHold'
-    | 'ParkedCall';
+  | 'NoCall'
+  | 'CallConnected'
+  | 'Ringing'
+  | 'OnHold'
+  | 'ParkedCall';
 
   /**
    * User-defined presence status (as previously published by the user)

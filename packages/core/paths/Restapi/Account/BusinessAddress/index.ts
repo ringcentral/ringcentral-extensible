@@ -1,22 +1,25 @@
-import {RestRequestConfig} from '../../../../Rest';
+import { RestRequestConfig } from '../../../../Rest';
 import {
   AccountBusinessAddressResource,
   ModifyAccountBusinessAddressRequest,
 } from '../../../../definitions';
 import Parent from '..';
-import {RingCentral} from '../../../..';
+import { RingCentral } from '../../../..';
 
 class Index {
   rc: RingCentral;
+
   parent: Parent;
 
   constructor(parent: Parent) {
     this.parent = parent;
     this.rc = parent.rc;
   }
+
   path(): string {
     return `${this.parent.path()}/business-address`;
   }
+
   /**
    * Returns business address of a company.
    * HTTP Method: get
@@ -26,12 +29,12 @@ class Index {
    * User Permission: ReadCompanyInfo
    */
   async get(
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<AccountBusinessAddressResource> {
     const r = await this.rc.get<AccountBusinessAddressResource>(
       this.path(),
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }
@@ -46,13 +49,13 @@ class Index {
    */
   async put(
     modifyAccountBusinessAddressRequest: ModifyAccountBusinessAddressRequest,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<AccountBusinessAddressResource> {
     const r = await this.rc.put<AccountBusinessAddressResource>(
       this.path(),
       modifyAccountBusinessAddressRequest,
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }

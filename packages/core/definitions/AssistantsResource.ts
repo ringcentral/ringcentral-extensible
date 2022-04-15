@@ -1,4 +1,4 @@
-import {AssistantResource} from './index';
+import { AssistantResource } from './index';
 
 class AssistantsResource {
   /**

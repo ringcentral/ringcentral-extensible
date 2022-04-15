@@ -39,16 +39,17 @@ describe('WebSocket', () => {
     let messageEventCount = 0;
     await webSocketExtension.subscribe(
       ['/restapi/v1.0/account/~/extension/~/message-store'],
-      event => {
+      (event) => {
         expect(event).toBeDefined();
         messageEventCount += 1;
-      }
+      },
     );
 
-    await rc.restapi().account().extension().presence().put({
-      userStatus: 'Busy',
-      message: 'Hello world',
-    });
+    await rc.restapi().account().extension().presence()
+      .put({
+        userStatus: 'Busy',
+        message: 'Hello world',
+      });
 
     await rc
       .restapi()
@@ -56,8 +57,8 @@ describe('WebSocket', () => {
       .extension()
       .companyPager()
       .post({
-        from: {extensionNumber: '101'},
-        to: [{extensionNumber: '101'}], // send pager to oneself
+        from: { extensionNumber: '101' },
+        to: [{ extensionNumber: '101' }], // send pager to oneself
         text: 'Hello world',
       });
 

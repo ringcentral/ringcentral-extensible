@@ -1,22 +1,25 @@
-import {RestRequestConfig} from '../../../../../Rest';
+import { RestRequestConfig } from '../../../../../Rest';
 import {
   CallQueuePresence,
   CallQueueUpdatePresence,
 } from '../../../../../definitions';
 import Parent from '..';
-import {RingCentral} from '../../../../..';
+import { RingCentral } from '../../../../..';
 
 class Index {
   rc: RingCentral;
+
   parent: Parent;
 
   constructor(parent: Parent) {
     this.parent = parent;
     this.rc = parent.rc;
   }
+
   path(): string {
     return `${this.parent.path()}/presence`;
   }
+
   /**
    * Returns presence status of the call queue members.
    * HTTP Method: get
@@ -28,7 +31,7 @@ class Index {
     const r = await this.rc.get<CallQueuePresence>(
       this.path(),
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }
@@ -42,13 +45,13 @@ class Index {
    */
   async put(
     callQueueUpdatePresence: CallQueueUpdatePresence,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<CallQueuePresence> {
     const r = await this.rc.put<CallQueuePresence>(
       this.path(),
       callQueueUpdatePresence,
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }

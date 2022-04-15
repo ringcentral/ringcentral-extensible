@@ -1,4 +1,4 @@
-import {AssignedRoleResource} from './index';
+import { AssignedRoleResource } from './index';
 
 class AssignedRolesResource {
   /**

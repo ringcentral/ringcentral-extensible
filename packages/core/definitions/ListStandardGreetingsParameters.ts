@@ -18,26 +18,26 @@ class ListStandardGreetingsParameters {
    * Type of a greeting, specifying the case when the greeting is played
    */
   type?:
-    | 'Introductory'
-    | 'Announcement'
-    | 'ConnectingMessage'
-    | 'ConnectingAudio'
-    | 'Voicemail'
-    | 'Unavailable'
-    | 'HoldMusic'
-    | 'Company';
+  | 'Introductory'
+  | 'Announcement'
+  | 'ConnectingMessage'
+  | 'ConnectingAudio'
+  | 'Voicemail'
+  | 'Unavailable'
+  | 'HoldMusic'
+  | 'Company';
 
   /**
    * Usage type of a greeting, specifying if the greeting is applied for user extension or department (call queue) extension
    */
   usageType?:
-    | 'UserExtensionAnsweringRule'
-    | 'ExtensionAnsweringRule'
-    | 'DepartmentExtensionAnsweringRule'
-    | 'CompanyAnsweringRule'
-    | 'CompanyAfterHoursAnsweringRule'
-    | 'VoicemailExtensionAnsweringRule'
-    | 'AnnouncementExtensionAnsweringRule'
-    | 'SharedLinesGroupAnsweringRule';
+  | 'UserExtensionAnsweringRule'
+  | 'ExtensionAnsweringRule'
+  | 'DepartmentExtensionAnsweringRule'
+  | 'CompanyAnsweringRule'
+  | 'CompanyAfterHoursAnsweringRule'
+  | 'VoicemailExtensionAnsweringRule'
+  | 'AnnouncementExtensionAnsweringRule'
+  | 'SharedLinesGroupAnsweringRule';
 }
 export default ListStandardGreetingsParameters;

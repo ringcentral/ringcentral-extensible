@@ -1,4 +1,4 @@
-import {Campaign, RemoteHttpService, EmailTemplate} from './index';
+import { Campaign, RemoteHttpService, EmailTemplate } from './index';
 
 class GateDisposition {
   destCampaign?: Campaign;

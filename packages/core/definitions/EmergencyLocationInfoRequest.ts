@@ -1,4 +1,4 @@
-import {EmergencyLocationAddressInfo, ShortSiteInfo} from './index';
+import { EmergencyLocationAddressInfo, ShortSiteInfo } from './index';
 
 class EmergencyLocationInfoRequest {
   /**

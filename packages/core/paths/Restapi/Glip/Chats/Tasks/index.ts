@@ -1,4 +1,4 @@
-import {RestRequestConfig} from '../../../../../Rest';
+import { RestRequestConfig } from '../../../../../Rest';
 import {
   ListChatTasksParameters,
   GlipTaskList,
@@ -6,19 +6,22 @@ import {
   GlipTaskInfo,
 } from '../../../../../definitions';
 import Parent from '..';
-import {RingCentral} from '../../../../..';
+import { RingCentral } from '../../../../..';
 
 class Index {
   rc: RingCentral;
+
   parent: Parent;
 
   constructor(parent: Parent) {
     this.parent = parent;
     this.rc = parent.rc;
   }
+
   path(): string {
     return `${this.parent.path()}/tasks`;
   }
+
   /**
    * Returns the list of tasks of the specified chat.
    * HTTP Method: get
@@ -27,12 +30,12 @@ class Index {
    */
   async get(
     queryParams?: ListChatTasksParameters,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<GlipTaskList> {
     const r = await this.rc.get<GlipTaskList>(
       this.path(),
       queryParams,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }
@@ -45,13 +48,13 @@ class Index {
    */
   async post(
     glipCreateTask: GlipCreateTask,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<GlipTaskInfo> {
     const r = await this.rc.post<GlipTaskInfo>(
       this.path(),
       glipCreateTask,
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }

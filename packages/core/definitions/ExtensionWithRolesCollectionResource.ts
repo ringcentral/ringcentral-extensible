@@ -1,4 +1,4 @@
-import {ExtensionWithRolesResource} from './index';
+import { ExtensionWithRolesResource } from './index';
 
 class ExtensionWithRolesCollectionResource {
   /**

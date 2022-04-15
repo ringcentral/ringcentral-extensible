@@ -1,7 +1,7 @@
 // import RingCentral from '@rc-ex/core';
 // import winston from 'winston';
 
-import {createRingCentral} from './utils';
+import { createRingCentral } from './utils';
 
 // const logger = winston.createLogger({
 //   transports: [
@@ -17,10 +17,11 @@ import {createRingCentral} from './utils';
 describe('call log', () => {
   test('list call log', async () => {
     const rc = await createRingCentral();
-    const callLogs = await rc.restapi().account().extension().callLog().list({
-      dateFrom: '2020-06-08T15:41:00.000Z',
-      dateTo: '2020-06-08T16:12:00.000Z',
-    });
+    const callLogs = await rc.restapi().account().extension().callLog()
+      .list({
+        dateFrom: '2020-06-08T15:41:00.000Z',
+        dateTo: '2020-06-08T16:12:00.000Z',
+      });
     expect(callLogs).not.toBeUndefined();
     expect(callLogs.records).not.toBeUndefined();
     await rc.revoke();

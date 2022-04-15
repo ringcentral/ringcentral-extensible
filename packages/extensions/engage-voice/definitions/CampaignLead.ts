@@ -1,4 +1,6 @@
-import {Campaign, CampaignRedial, DateTime, QuotaTarget} from './index';
+import {
+  Campaign, CampaignRedial, DateTime, QuotaTarget,
+} from './index';
 
 class CampaignLead {
   address1?: string;

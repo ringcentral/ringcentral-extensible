@@ -1,11 +1,13 @@
-import {RestRequestConfig} from '../../../../Rest';
-import {GlipPersonInfo} from '../../../../definitions';
+import { RestRequestConfig } from '../../../../Rest';
+import { GlipPersonInfo } from '../../../../definitions';
 import Parent from '..';
-import {RingCentral} from '../../../..';
+import { RingCentral } from '../../../..';
 
 class Index {
   rc: RingCentral;
+
   parent: Parent;
+
   personId: string | null;
 
   constructor(parent: Parent, personId: string | null = null) {
@@ -13,12 +15,14 @@ class Index {
     this.rc = parent.rc;
     this.personId = personId;
   }
+
   path(withParameter = true): string {
     if (withParameter && this.personId !== null) {
       return `${this.parent.path()}/persons/${this.personId}`;
     }
     return `${this.parent.path()}/persons`;
   }
+
   /**
    * Returns a user or multiple users by their ID(s). Batch request is supported.
    * HTTP Method: get
@@ -34,7 +38,7 @@ class Index {
     const r = await this.rc.get<GlipPersonInfo>(
       this.path(),
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }

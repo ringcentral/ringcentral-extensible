@@ -1,4 +1,4 @@
-import {CampaignLead, DateTime} from './index';
+import { CampaignLead, DateTime } from './index';
 
 class CampaignLeadSearchResultsView {
   address1?: string;

@@ -3,7 +3,7 @@ import dotenv from 'dotenv-override-true';
 import RingCentral from '@rc-ex/core';
 import DebugExtension from '@rc-ex/debug';
 
-dotenv.config({path: path.join(__dirname, '.env.a2p')});
+dotenv.config({ path: path.join(__dirname, '.env.a2p') });
 
 describe('SMS', () => {
   test('send', async () => {

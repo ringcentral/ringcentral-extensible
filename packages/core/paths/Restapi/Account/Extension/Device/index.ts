@@ -1,22 +1,25 @@
-import {RestRequestConfig} from '../../../../../Rest';
+import { RestRequestConfig } from '../../../../../Rest';
 import {
   ListExtensionDevicesParameters,
   GetExtensionDevicesResponse,
 } from '../../../../../definitions';
 import Parent from '..';
-import {RingCentral} from '../../../../..';
+import { RingCentral } from '../../../../..';
 
 class Index {
   rc: RingCentral;
+
   parent: Parent;
 
   constructor(parent: Parent) {
     this.parent = parent;
     this.rc = parent.rc;
   }
+
   path(): string {
     return `${this.parent.path()}/device`;
   }
+
   /**
    * Returns devices of the extension(s) by their ID(s). Batch request is supported
    * HTTP Method: get
@@ -27,12 +30,12 @@ class Index {
    */
   async get(
     queryParams?: ListExtensionDevicesParameters,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<GetExtensionDevicesResponse> {
     const r = await this.rc.get<GetExtensionDevicesResponse>(
       this.path(),
       queryParams,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }

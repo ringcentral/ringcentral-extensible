@@ -1,4 +1,4 @@
-import {PhoneNumberResource} from './index';
+import { PhoneNumberResource } from './index';
 
 class FederatedAccountResource {
   /**

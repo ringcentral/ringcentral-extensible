@@ -12,15 +12,15 @@ class ListDirectoryEntriesParameters {
    * Type of an extension. Please note that legacy 'Department' extension type corresponds to 'Call Queue' extensions in modern RingCentral product terminology
    */
   type?:
-    | 'User'
-    | 'Department'
-    | 'Announcement'
-    | 'Voicemail'
-    | 'SharedLinesGroup'
-    | 'PagingOnly'
-    | 'IvrMenu'
-    | 'ParkLocation'
-    | 'Limited';
+  | 'User'
+  | 'Department'
+  | 'Announcement'
+  | 'Voicemail'
+  | 'SharedLinesGroup'
+  | 'PagingOnly'
+  | 'IvrMenu'
+  | 'ParkLocation'
+  | 'Limited';
 
   /**
    * Page number

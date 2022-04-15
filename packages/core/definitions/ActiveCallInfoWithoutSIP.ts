@@ -1,4 +1,4 @@
-import {CallInfoCQ} from './index';
+import { CallInfoCQ } from './index';
 
 class ActiveCallInfoWithoutSIP {
   /**
@@ -55,11 +55,11 @@ class ActiveCallInfoWithoutSIP {
    * Telephony call status
    */
   telephonyStatus?:
-    | 'NoCall'
-    | 'CallConnected'
-    | 'Ringing'
-    | 'OnHold'
-    | 'ParkedCall';
+  | 'NoCall'
+  | 'CallConnected'
+  | 'Ringing'
+  | 'OnHold'
+  | 'ParkedCall';
 
   /**
    * Telephony identifier of a call session

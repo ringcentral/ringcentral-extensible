@@ -4,7 +4,7 @@ import RestException from '@rc-ex/core/lib/RestException';
 import axios from 'axios';
 import URI from 'urijs';
 import waitFor from 'wait-for-async';
-import {RestResponse} from '@rc-ex/core/lib/Rest';
+import { RestResponse } from '@rc-ex/core/lib/Rest';
 
 export type RetrySettings = {
   retryCount: number;
@@ -35,6 +35,7 @@ export type InitialDiscovery = {
 
 class DiscoveryExtension extends SdkExtension {
   rc!: RingCentral;
+
   options: DiscoveryOptions;
 
   initialDiscovery?: InitialDiscovery;
@@ -68,13 +69,11 @@ class DiscoveryExtension extends SdkExtension {
         const r = await axios.get<InitialDiscovery>(uri.toString());
         this.initialDiscovery = r.data;
         this.rc.rest.server = this.initialDiscovery!.coreApi.baseUri;
-        this.options.initialRetrySettings!.retryCount =
-          this.initialDiscovery!.retryCount;
-        this.options.initialRetrySettings!.retryInterval =
-          this.initialDiscovery!.retryInterval;
+        this.options.initialRetrySettings!.retryCount = this.initialDiscovery!.retryCount;
+        this.options.initialRetrySettings!.retryInterval = this.initialDiscovery!.retryInterval;
         break;
       } catch (e) {
-        const re = e as {response: RestResponse};
+        const re = e as { response: RestResponse };
         if (re.response) {
           if (retryCount < this.options.initialRetrySettings!.retryCount) {
             await waitFor({

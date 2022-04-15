@@ -1,4 +1,4 @@
-import {PermissionCategoryIdResource, PermissionIdResource} from './index';
+import { PermissionCategoryIdResource, PermissionIdResource } from './index';
 
 class PermissionResource {
   /**

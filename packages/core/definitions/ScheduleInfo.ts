@@ -1,4 +1,4 @@
-import {WeeklyScheduleInfo, RangesInfo} from './index';
+import { WeeklyScheduleInfo, RangesInfo } from './index';
 
 /**
  * Schedule when an answering rule should be applied

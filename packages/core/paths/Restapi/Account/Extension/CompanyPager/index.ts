@@ -1,22 +1,25 @@
-import {RestRequestConfig} from '../../../../../Rest';
+import { RestRequestConfig } from '../../../../../Rest';
 import {
   CreateInternalTextMessageRequest,
   GetInternalTextMessageInfoResponse,
 } from '../../../../../definitions';
 import Parent from '..';
-import {RingCentral} from '../../../../..';
+import { RingCentral } from '../../../../..';
 
 class Index {
   rc: RingCentral;
+
   parent: Parent;
 
   constructor(parent: Parent) {
     this.parent = parent;
     this.rc = parent.rc;
   }
+
   path(): string {
     return `${this.parent.path()}/company-pager`;
   }
+
   /**
    * Creates and sends an internal text message.
    * HTTP Method: post
@@ -27,13 +30,13 @@ class Index {
    */
   async post(
     createInternalTextMessageRequest: CreateInternalTextMessageRequest,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<GetInternalTextMessageInfoResponse> {
     const r = await this.rc.post<GetInternalTextMessageInfoResponse>(
       this.path(),
       createInternalTextMessageRequest,
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }

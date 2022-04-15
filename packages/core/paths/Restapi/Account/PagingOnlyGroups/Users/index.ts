@@ -1,22 +1,25 @@
-import {RestRequestConfig} from '../../../../../Rest';
+import { RestRequestConfig } from '../../../../../Rest';
 import {
   ListPagingGroupUsersParameters,
   PagingOnlyGroupUsers,
 } from '../../../../../definitions';
 import Parent from '..';
-import {RingCentral} from '../../../../..';
+import { RingCentral } from '../../../../..';
 
 class Index {
   rc: RingCentral;
+
   parent: Parent;
 
   constructor(parent: Parent) {
     this.parent = parent;
     this.rc = parent.rc;
   }
+
   path(): string {
     return `${this.parent.path()}/users`;
   }
+
   /**
    * Returns the list of users allowed to page this group.
    * HTTP Method: get
@@ -27,12 +30,12 @@ class Index {
    */
   async get(
     queryParams?: ListPagingGroupUsersParameters,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<PagingOnlyGroupUsers> {
     const r = await this.rc.get<PagingOnlyGroupUsers>(
       this.path(),
       queryParams,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }

@@ -1,4 +1,4 @@
-import {TelephonySessionsEventBody} from './index';
+import { TelephonySessionsEventBody } from './index';
 
 class ExtensionTelephonySessionsEvent {
   /**

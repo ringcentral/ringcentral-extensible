@@ -1,4 +1,4 @@
-import {PrimaryCQInfo, AdditionalCQInfo} from './index';
+import { PrimaryCQInfo, AdditionalCQInfo } from './index';
 
 /**
  * Primary/additional CQ information

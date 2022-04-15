@@ -1,4 +1,4 @@
-import {AddressBookBulkContactResource} from './index';
+import { AddressBookBulkContactResource } from './index';
 
 class AddressBookBulkUploadResource {
   /**

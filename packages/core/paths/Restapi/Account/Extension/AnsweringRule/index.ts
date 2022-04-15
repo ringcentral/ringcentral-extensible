@@ -1,4 +1,4 @@
-import {RestRequestConfig} from '../../../../../Rest';
+import { RestRequestConfig } from '../../../../../Rest';
 import {
   ListAnsweringRulesParameters,
   UserAnsweringRuleList,
@@ -9,11 +9,13 @@ import {
   UpdateAnsweringRuleRequest,
 } from '../../../../../definitions';
 import Parent from '..';
-import {RingCentral} from '../../../../..';
+import { RingCentral } from '../../../../..';
 
 class Index {
   rc: RingCentral;
+
   parent: Parent;
+
   ruleId: string | null;
 
   constructor(parent: Parent, ruleId: string | null = null) {
@@ -21,12 +23,14 @@ class Index {
     this.rc = parent.rc;
     this.ruleId = ruleId;
   }
+
   path(withParameter = true): string {
     if (withParameter && this.ruleId !== null) {
       return `${this.parent.path()}/answering-rule/${this.ruleId}`;
     }
     return `${this.parent.path()}/answering-rule`;
   }
+
   /**
    * Returns call handling rules of an extension.
    * HTTP Method: get
@@ -37,12 +41,12 @@ class Index {
    */
   async list(
     queryParams?: ListAnsweringRulesParameters,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<UserAnsweringRuleList> {
     const r = await this.rc.get<UserAnsweringRuleList>(
       this.path(false),
       queryParams,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }
@@ -57,13 +61,13 @@ class Index {
    */
   async post(
     createAnsweringRuleRequest: CreateAnsweringRuleRequest,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<CustomAnsweringRuleInfo> {
     const r = await this.rc.post<CustomAnsweringRuleInfo>(
       this.path(false),
       createAnsweringRuleRequest,
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }
@@ -78,7 +82,7 @@ class Index {
    */
   async get(
     queryParams?: ReadAnsweringRuleParameters,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<AnsweringRuleInfo> {
     if (this.ruleId === null) {
       throw new Error('ruleId must be specified.');
@@ -86,7 +90,7 @@ class Index {
     const r = await this.rc.get<AnsweringRuleInfo>(
       this.path(),
       queryParams,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }
@@ -101,7 +105,7 @@ class Index {
    */
   async put(
     updateAnsweringRuleRequest: UpdateAnsweringRuleRequest,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<AnsweringRuleInfo> {
     if (this.ruleId === null) {
       throw new Error('ruleId must be specified.');
@@ -110,7 +114,7 @@ class Index {
       this.path(),
       updateAnsweringRuleRequest,
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }
@@ -130,7 +134,7 @@ class Index {
     const r = await this.rc.delete<string>(
       this.path(),
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }

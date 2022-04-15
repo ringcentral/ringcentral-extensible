@@ -1,4 +1,4 @@
-import {RestRequestConfig} from '../../../../Rest';
+import { RestRequestConfig } from '../../../../Rest';
 import {
   CustomFieldsResource,
   CustomFieldCreateRequest,
@@ -6,11 +6,13 @@ import {
   CustomFieldUpdateRequest,
 } from '../../../../definitions';
 import Parent from '..';
-import {RingCentral} from '../../../..';
+import { RingCentral } from '../../../..';
 
 class Index {
   rc: RingCentral;
+
   parent: Parent;
+
   fieldId: string | null;
 
   constructor(parent: Parent, fieldId: string | null = null) {
@@ -18,12 +20,14 @@ class Index {
     this.rc = parent.rc;
     this.fieldId = fieldId;
   }
+
   path(withParameter = true): string {
     if (withParameter && this.fieldId !== null) {
       return `${this.parent.path()}/custom-fields/${this.fieldId}`;
     }
     return `${this.parent.path()}/custom-fields`;
   }
+
   /**
    * Returns the list of created custom fields.
    * HTTP Method: get
@@ -33,12 +37,12 @@ class Index {
    * User Permission: ReadUserInfo
    */
   async get(
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<CustomFieldsResource> {
     const r = await this.rc.get<CustomFieldsResource>(
       this.path(false),
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }
@@ -53,13 +57,13 @@ class Index {
    */
   async post(
     customFieldCreateRequest: CustomFieldCreateRequest,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<CustomFieldResource> {
     const r = await this.rc.post<CustomFieldResource>(
       this.path(false),
       customFieldCreateRequest,
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }
@@ -74,7 +78,7 @@ class Index {
    */
   async put(
     customFieldUpdateRequest: CustomFieldUpdateRequest,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<CustomFieldResource> {
     if (this.fieldId === null) {
       throw new Error('fieldId must be specified.');
@@ -83,7 +87,7 @@ class Index {
       this.path(),
       customFieldUpdateRequest,
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }
@@ -103,7 +107,7 @@ class Index {
     const r = await this.rc.delete<string>(
       this.path(),
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }

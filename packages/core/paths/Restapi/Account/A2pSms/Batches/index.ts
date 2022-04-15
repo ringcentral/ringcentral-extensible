@@ -1,4 +1,4 @@
-import {RestRequestConfig} from '../../../../../Rest';
+import { RestRequestConfig } from '../../../../../Rest';
 import {
   ListA2PBatchesParameters,
   MessageBatchListResponse,
@@ -6,11 +6,13 @@ import {
   MessageBatchInfo,
 } from '../../../../../definitions';
 import Parent from '..';
-import {RingCentral} from '../../../../..';
+import { RingCentral } from '../../../../..';
 
 class Index {
   rc: RingCentral;
+
   parent: Parent;
+
   batchId: string | null;
 
   constructor(parent: Parent, batchId: string | null = null) {
@@ -18,12 +20,14 @@ class Index {
     this.rc = parent.rc;
     this.batchId = batchId;
   }
+
   path(withParameter = true): string {
     if (withParameter && this.batchId !== null) {
       return `${this.parent.path()}/batches/${this.batchId}`;
     }
     return `${this.parent.path()}/batches`;
   }
+
   /**
    * Returns the list of A2P batches sent from the current account. The list can be filtered by message batch ID and/or from phone number.
    * HTTP Method: get
@@ -33,12 +37,12 @@ class Index {
    */
   async list(
     queryParams?: ListA2PBatchesParameters,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<MessageBatchListResponse> {
     const r = await this.rc.get<MessageBatchListResponse>(
       this.path(false),
       queryParams,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }
@@ -52,13 +56,13 @@ class Index {
    */
   async post(
     createSMSMessageBatchRequest: CreateSMSMessageBatchRequest,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<MessageBatchInfo> {
     const r = await this.rc.post<MessageBatchInfo>(
       this.path(false),
       createSMSMessageBatchRequest,
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }
@@ -77,7 +81,7 @@ class Index {
     const r = await this.rc.get<MessageBatchInfo>(
       this.path(),
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }

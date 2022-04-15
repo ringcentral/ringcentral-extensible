@@ -1,4 +1,4 @@
-import {MessageStoreCalleeInfoRequest, Attachment} from './index';
+import { MessageStoreCalleeInfoRequest, Attachment } from './index';
 
 /**
  * Request body for operation createFaxMessage

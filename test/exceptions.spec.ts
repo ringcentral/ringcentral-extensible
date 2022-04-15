@@ -1,7 +1,7 @@
-import {RestResponse} from '@rc-ex/core/lib/Rest';
+import { RestResponse } from '@rc-ex/core/lib/Rest';
 import RestException from '@rc-ex/core/lib/RestException';
 
-import {createRingCentral} from './utils';
+import { createRingCentral } from './utils';
 
 describe('Exceptions', () => {
   test('400', async () => {
@@ -14,11 +14,11 @@ describe('Exceptions', () => {
         .account()
         .extension()
         .sms()
-        .post({text: 'Hello world'});
+        .post({ text: 'Hello world' });
     } catch (e) {
       exception = true;
       expect(e instanceof RestException).toBeTruthy();
-      const re = e as {response: RestResponse};
+      const re = e as { response: RestResponse };
       expect(re.response.status).toBe(400);
     } finally {
       expect(exception).toBeTruthy();
@@ -31,13 +31,13 @@ describe('Exceptions', () => {
     let exception = false;
     try {
       await rc.post(
-        rc.restapi().account().extension().path(true) + '/does-not-exist',
-        {text: 'Hello world'}
+        `${rc.restapi().account().extension().path(true)}/does-not-exist`,
+        { text: 'Hello world' },
       );
     } catch (e) {
       exception = true;
       expect(e instanceof RestException).toBeTruthy();
-      const re = e as {response: RestResponse};
+      const re = e as { response: RestResponse };
       expect(re.response.status).toBe(404);
     } finally {
       expect(exception).toBeTruthy();

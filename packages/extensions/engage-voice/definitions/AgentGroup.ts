@@ -1,4 +1,4 @@
-import {Account, CollectionAgent} from './index';
+import { Account, CollectionAgent } from './index';
 
 class AgentGroup {
   account?: Account;

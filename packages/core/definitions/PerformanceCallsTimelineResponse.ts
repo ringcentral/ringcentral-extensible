@@ -1,4 +1,4 @@
-import {TimelineData} from './index';
+import { TimelineData } from './index';
 
 class PerformanceCallsTimelineResponse {
   /**

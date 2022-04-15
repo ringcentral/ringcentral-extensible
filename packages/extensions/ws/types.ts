@@ -27,11 +27,11 @@ export type Wsc = {
 
 export type WsgMeta = {
   type:
-    | 'ClientRequest'
-    | 'ServerNotification'
-    | 'Error'
-    | 'ConnectionDetails'
-    | 'Heartbeat';
+  | 'ClientRequest'
+  | 'ServerNotification'
+  | 'Error'
+  | 'ConnectionDetails'
+  | 'Heartbeat';
   messageId: string;
   status: number;
   headers: {

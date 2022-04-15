@@ -1,20 +1,23 @@
 import Utils from '../../../../../../Utils';
-import {RestRequestConfig} from '../../../../../../Rest';
-import {CreateUserMeetingProfileImageRequest} from '../../../../../../definitions';
+import { RestRequestConfig } from '../../../../../../Rest';
+import { CreateUserMeetingProfileImageRequest } from '../../../../../../definitions';
 import Parent from '..';
-import {RingCentral} from '../../../../../..';
+import { RingCentral } from '../../../../../..';
 
 class Index {
   rc: RingCentral;
+
   parent: Parent;
 
   constructor(parent: Parent) {
     this.parent = parent;
     this.rc = parent.rc;
   }
+
   path(): string {
     return `${this.parent.path()}/profile-image`;
   }
+
   /**
    * Uploads profile picture for user meetings.
    * HTTP Method: post
@@ -23,14 +26,14 @@ class Index {
    */
   async post(
     createUserMeetingProfileImageRequest: CreateUserMeetingProfileImageRequest,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<string> {
     const formData = Utils.getFormData(createUserMeetingProfileImageRequest);
     const r = await this.rc.post<string>(
       this.path(),
       formData,
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }

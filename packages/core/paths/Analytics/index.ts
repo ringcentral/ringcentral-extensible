@@ -1,5 +1,5 @@
 import Phone from './Phone';
-import {RingCentral} from '../..';
+import { RingCentral } from '../..';
 
 class Index {
   rc: RingCentral;
@@ -7,6 +7,7 @@ class Index {
   constructor(rc: RingCentral) {
     this.rc = rc;
   }
+
   path(): string {
     return '/analytics';
   }

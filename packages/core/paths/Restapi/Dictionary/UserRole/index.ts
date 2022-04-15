@@ -1,15 +1,17 @@
-import {RestRequestConfig} from '../../../../Rest';
+import { RestRequestConfig } from '../../../../Rest';
 import {
   ListStandardUserRoleParameters,
   RolesCollectionResource,
   RoleResource,
 } from '../../../../definitions';
 import Parent from '..';
-import {RingCentral} from '../../../..';
+import { RingCentral } from '../../../..';
 
 class Index {
   rc: RingCentral;
+
   parent: Parent;
+
   roleId: string | null;
 
   constructor(parent: Parent, roleId: string | null = null) {
@@ -17,12 +19,14 @@ class Index {
     this.rc = parent.rc;
     this.roleId = roleId;
   }
+
   path(withParameter = true): string {
     if (withParameter && this.roleId !== null) {
       return `${this.parent.path()}/user-role/${this.roleId}`;
     }
     return `${this.parent.path()}/user-role`;
   }
+
   /**
    * Get Standard User Role List
    * HTTP Method: get
@@ -31,12 +35,12 @@ class Index {
    */
   async list(
     queryParams?: ListStandardUserRoleParameters,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<RolesCollectionResource> {
     const r = await this.rc.get<RolesCollectionResource>(
       this.path(false),
       queryParams,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }
@@ -54,7 +58,7 @@ class Index {
     const r = await this.rc.get<RoleResource>(
       this.path(),
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }

@@ -1,18 +1,20 @@
 import Publish from './Publish';
 import Unlock from './Unlock';
 import Lock from './Lock';
-import {RestRequestConfig} from '../../../../Rest';
+import { RestRequestConfig } from '../../../../Rest';
 import {
   GetGlipNoteInfo,
   GlipNoteCreate,
   GlipNoteInfo,
 } from '../../../../definitions';
 import Parent from '..';
-import {RingCentral} from '../../../..';
+import { RingCentral } from '../../../..';
 
 class Index {
   rc: RingCentral;
+
   parent: Parent;
+
   noteId: string | null;
 
   constructor(parent: Parent, noteId: string | null = null) {
@@ -20,12 +22,14 @@ class Index {
     this.rc = parent.rc;
     this.noteId = noteId;
   }
+
   path(withParameter = true): string {
     if (withParameter && this.noteId !== null) {
       return `${this.parent.path()}/notes/${this.noteId}`;
     }
     return `${this.parent.path()}/notes`;
   }
+
   /**
    * Returns the specified note(s). It is possible to fetch up to 50 notes per request.
    * HTTP Method: get
@@ -41,7 +45,7 @@ class Index {
     const r = await this.rc.get<GetGlipNoteInfo>(
       this.path(),
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }
@@ -61,7 +65,7 @@ class Index {
     const r = await this.rc.delete<string>(
       this.path(),
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }
@@ -76,7 +80,7 @@ class Index {
    */
   async patch(
     glipNoteCreate: GlipNoteCreate,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<GlipNoteInfo> {
     if (this.noteId === null) {
       throw new Error('noteId must be specified.');
@@ -85,7 +89,7 @@ class Index {
       this.path(),
       glipNoteCreate,
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }

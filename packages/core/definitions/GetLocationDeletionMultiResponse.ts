@@ -1,4 +1,4 @@
-import {LocationDeletionInfo} from './index';
+import { LocationDeletionInfo } from './index';
 
 class GetLocationDeletionMultiResponse {
   /**

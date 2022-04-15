@@ -1,19 +1,22 @@
-import {RestRequestConfig} from '../../../../../../../Rest';
-import {TransferTarget, CallParty} from '../../../../../../../definitions';
+import { RestRequestConfig } from '../../../../../../../Rest';
+import { TransferTarget, CallParty } from '../../../../../../../definitions';
 import Parent from '..';
-import {RingCentral} from '../../../../../../..';
+import { RingCentral } from '../../../../../../..';
 
 class Index {
   rc: RingCentral;
+
   parent: Parent;
 
   constructor(parent: Parent) {
     this.parent = parent;
     this.rc = parent.rc;
   }
+
   path(): string {
     return `${this.parent.path()}/transfer`;
   }
+
   /**
    * Transfers an answered call to the specified call party. Applicable for a call session in "Answered" or "Hold" state.
    * HTTP Method: post
@@ -23,13 +26,13 @@ class Index {
    */
   async post(
     transferTarget: TransferTarget,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<CallParty> {
     const r = await this.rc.post<CallParty>(
       this.path(),
       transferTarget,
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }

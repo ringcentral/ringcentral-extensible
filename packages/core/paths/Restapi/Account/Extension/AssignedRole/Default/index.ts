@@ -1,19 +1,22 @@
-import {RestRequestConfig} from '../../../../../../Rest';
-import {AssignedRolesResource} from '../../../../../../definitions';
+import { RestRequestConfig } from '../../../../../../Rest';
+import { AssignedRolesResource } from '../../../../../../definitions';
 import Parent from '..';
-import {RingCentral} from '../../../../../..';
+import { RingCentral } from '../../../../../..';
 
 class Index {
   rc: RingCentral;
+
   parent: Parent;
 
   constructor(parent: Parent) {
     this.parent = parent;
     this.rc = parent.rc;
   }
+
   path(): string {
     return `${this.parent.path()}/default`;
   }
+
   /**
    * Assigns the default role to the currently logged-in user extension.
    * HTTP Method: put
@@ -23,12 +26,12 @@ class Index {
    * User Permission: Users
    */
   async put(
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<AssignedRolesResource> {
     const r = await this.rc.put<AssignedRolesResource>(
       this.path(),
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }

@@ -1,19 +1,22 @@
-import {RestRequestConfig} from '../../../../../Rest';
-import {CallQueueBulkAssignResource} from '../../../../../definitions';
+import { RestRequestConfig } from '../../../../../Rest';
+import { CallQueueBulkAssignResource } from '../../../../../definitions';
 import Parent from '..';
-import {RingCentral} from '../../../../..';
+import { RingCentral } from '../../../../..';
 
 class Index {
   rc: RingCentral;
+
   parent: Parent;
 
   constructor(parent: Parent) {
     this.parent = parent;
     this.rc = parent.rc;
   }
+
   path(): string {
     return `${this.parent.path()}/bulk-assign`;
   }
+
   /**
    * Updates a call queue group.
    * HTTP Method: post
@@ -24,13 +27,13 @@ class Index {
    */
   async post(
     callQueueBulkAssignResource: CallQueueBulkAssignResource,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<string> {
     const r = await this.rc.post<string>(
       this.path(),
       callQueueBulkAssignResource,
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }

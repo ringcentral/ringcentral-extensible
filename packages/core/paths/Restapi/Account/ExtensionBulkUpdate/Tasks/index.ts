@@ -1,11 +1,13 @@
-import {RestRequestConfig} from '../../../../../Rest';
-import {ExtensionBulkUpdateTaskResource} from '../../../../../definitions';
+import { RestRequestConfig } from '../../../../../Rest';
+import { ExtensionBulkUpdateTaskResource } from '../../../../../definitions';
 import Parent from '..';
-import {RingCentral} from '../../../../..';
+import { RingCentral } from '../../../../..';
 
 class Index {
   rc: RingCentral;
+
   parent: Parent;
+
   taskId: string | null;
 
   constructor(parent: Parent, taskId: string | null = null) {
@@ -13,12 +15,14 @@ class Index {
     this.rc = parent.rc;
     this.taskId = taskId;
   }
+
   path(withParameter = true): string {
     if (withParameter && this.taskId !== null) {
       return `${this.parent.path()}/tasks/${this.taskId}`;
     }
     return `${this.parent.path()}/tasks`;
   }
+
   /**
    * Returns the status of multiple extension update task
    * HTTP Method: get
@@ -28,7 +32,7 @@ class Index {
    * User Permission: EditExtensionInfo
    */
   async get(
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<ExtensionBulkUpdateTaskResource> {
     if (this.taskId === null) {
       throw new Error('taskId must be specified.');
@@ -36,7 +40,7 @@ class Index {
     const r = await this.rc.get<ExtensionBulkUpdateTaskResource>(
       this.path(),
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }

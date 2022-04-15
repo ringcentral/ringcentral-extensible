@@ -1,4 +1,4 @@
-import {AlertInfo} from './index';
+import { AlertInfo } from './index';
 
 /**
  * Information on a notification

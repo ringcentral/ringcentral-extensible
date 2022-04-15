@@ -1,4 +1,4 @@
-import {AddressBookBulkUploadResource} from './index';
+import { AddressBookBulkUploadResource } from './index';
 
 class AddressBookBulkUploadRequest {
   /**

@@ -71,12 +71,12 @@ class EmergencyServiceAddressResource {
    * Resulting status of emergency address synchronization. Returned if `syncEmergencyAddress` parameter is set to 'True'
    */
   syncStatus?:
-    | 'Verified'
-    | 'Updated'
-    | 'Deleted'
-    | 'NotRequired'
-    | 'Unsupported'
-    | 'Failed';
+  | 'Verified'
+  | 'Updated'
+  | 'Deleted'
+  | 'NotRequired'
+  | 'Unsupported'
+  | 'Failed';
 
   /**
    * Name of an additional contact person. Should be specified for countries except the US, Canada, the UK and Australia.

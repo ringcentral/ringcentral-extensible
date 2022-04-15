@@ -1,19 +1,22 @@
-import {RestRequestConfig} from '../../../../../../../Rest';
-import {CallPartyFlip} from '../../../../../../../definitions';
+import { RestRequestConfig } from '../../../../../../../Rest';
+import { CallPartyFlip } from '../../../../../../../definitions';
 import Parent from '..';
-import {RingCentral} from '../../../../../../..';
+import { RingCentral } from '../../../../../../..';
 
 class Index {
   rc: RingCentral;
+
   parent: Parent;
 
   constructor(parent: Parent) {
     this.parent = parent;
     this.rc = parent.rc;
   }
+
   path(): string {
     return `${this.parent.path()}/flip`;
   }
+
   /**
    * Performs call flip procedure by holding opposite party and calling to the specified target
    * HTTP Method: post
@@ -23,13 +26,13 @@ class Index {
    */
   async post(
     callPartyFlip: CallPartyFlip,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<string> {
     const r = await this.rc.post<string>(
       this.path(),
       callPartyFlip,
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }

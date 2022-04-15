@@ -1,4 +1,4 @@
-import {createRingCentral} from './utils';
+import { createRingCentral } from './utils';
 
 describe('batch get', () => {
   test("get extension's presence info", async () => {
@@ -9,8 +9,8 @@ describe('batch get', () => {
     expect(extensions.records?.length).toBeGreaterThan(1);
     const r = await rc.get(
       `/restapi/v1.0/account/~/extension/${extensions.records
-        ?.map(r => r.id)
-        .join(',')}/presence`
+        ?.map((r) => r.id)
+        .join(',')}/presence`,
     );
     expect(r).not.toBeNull();
     expect(r.data).not.toBeNull();

@@ -1,4 +1,4 @@
-import {CountryInfo} from './index';
+import { CountryInfo } from './index';
 
 /**
  * Information on account brand

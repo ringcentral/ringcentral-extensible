@@ -1,4 +1,4 @@
-import {CallsByDirection} from './index';
+import { CallsByDirection } from './index';
 
 class PerformanceCallsByDirection {
   /**

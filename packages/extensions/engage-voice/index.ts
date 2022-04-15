@@ -1,15 +1,15 @@
 import RingCentral from '@rc-ex/core';
 import SdkExtension from '@rc-ex/core/lib/SdkExtension';
 import RestException from '@rc-ex/core/lib/RestException';
-import axios, {AxiosInstance} from 'axios';
+import axios, { AxiosInstance } from 'axios';
 
-import {version} from './package.json';
 import {
   RestMethod,
   RestRequestConfig,
   RestResponse,
 } from '@rc-ex/core/lib/Rest';
-import {AccessTokenUserDetails} from './definitions';
+import { version } from './package.json';
+import { AccessTokenUserDetails } from './definitions';
 
 type EngageVoiceOptions = {
   server?: string;
@@ -17,8 +17,11 @@ type EngageVoiceOptions = {
 
 class EngageVoiceExtension extends SdkExtension {
   options: EngageVoiceOptions;
+
   rc!: RingCentral;
+
   httpClient!: AxiosInstance;
+
   token?: AccessTokenUserDetails;
 
   constructor(options: EngageVoiceOptions = {}) {
@@ -34,9 +37,7 @@ class EngageVoiceExtension extends SdkExtension {
       headers: {
         'X-User-Agent': `${this.rc.rest.appName}/${this.rc.rest.appVersion} ringcentral-extensible/engage-voice/${version}`,
       },
-      validateStatus: () => {
-        return true;
-      },
+      validateStatus: () => true,
     });
   }
 
@@ -45,7 +46,7 @@ class EngageVoiceExtension extends SdkExtension {
     endpoint: string,
     content?: {},
     queryParams?: {},
-    config?: RestRequestConfig
+    config?: RestRequestConfig,
   ): Promise<RestResponse<T>> {
     const _config: RestRequestConfig = {
       method,
@@ -55,8 +56,8 @@ class EngageVoiceExtension extends SdkExtension {
       ...config,
     };
     if (
-      endpoint !== '/api/auth/login/rc/accesstoken' &&
-      this.token?.accessToken
+      endpoint !== '/api/auth/login/rc/accesstoken'
+      && this.token?.accessToken
     ) {
       _config.headers = {
         ..._config.headers,
@@ -66,42 +67,45 @@ class EngageVoiceExtension extends SdkExtension {
     const r = await this.httpClient.request<T>(_config);
     if (r.status >= 200 && r.status < 300) {
       return r;
-    } else {
-      throw new RestException(r);
     }
+    throw new RestException(r);
   }
 
   async get<T>(endpoint: string, queryParams?: {}, config?: RestRequestConfig) {
     return this.request<T>('GET', endpoint, undefined, queryParams, config);
   }
+
   async delete<T>(
     endpoint: string,
     queryParams?: {},
-    config?: RestRequestConfig
+    config?: RestRequestConfig,
   ) {
     return this.request<T>('DELETE', endpoint, undefined, queryParams, config);
   }
+
   async post<T>(
     endpoint: string,
     content?: {},
     queryParams?: {},
-    config?: RestRequestConfig
+    config?: RestRequestConfig,
   ) {
     return this.request<T>('POST', endpoint, content, queryParams, config);
   }
+
   async put<T>(
     endpoint: string,
     content?: {},
     queryParams?: {},
-    config?: RestRequestConfig
+    config?: RestRequestConfig,
   ) {
     return this.request<T>('PUT', endpoint, content, queryParams, config);
   }
+
   async patch<T>(
     endpoint: string,
     content?: {},
     queryParams?: {},
-    config?: RestRequestConfig
+    config?: RestRequestConfig,
   ) {
     return this.request<T>('PATCH', endpoint, content, queryParams, config);
   }
@@ -116,7 +120,7 @@ class EngageVoiceExtension extends SdkExtension {
       {
         rcTokenType: 'Bearer',
         rcAccessToken: this.rc.token?.access_token,
-      }
+      },
     );
     this.token = r.data;
     return this.token!;

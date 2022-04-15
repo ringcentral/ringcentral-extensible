@@ -1,4 +1,4 @@
-import {GlipAPNSInfo, GCMInfo} from './index';
+import { GlipAPNSInfo, GCMInfo } from './index';
 
 class GlipUnreadMessageCountEvent {
   /**

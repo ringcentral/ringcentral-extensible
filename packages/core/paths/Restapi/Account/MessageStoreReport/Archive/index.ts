@@ -1,11 +1,13 @@
-import {RestRequestConfig} from '../../../../../Rest';
-import {MessageStoreReportArchive} from '../../../../../definitions';
+import { RestRequestConfig } from '../../../../../Rest';
+import { MessageStoreReportArchive } from '../../../../../definitions';
 import Parent from '..';
-import {RingCentral} from '../../../../..';
+import { RingCentral } from '../../../../..';
 
 class Index {
   rc: RingCentral;
+
   parent: Parent;
+
   archiveId: string | null;
 
   constructor(parent: Parent, archiveId: string | null = null) {
@@ -13,12 +15,14 @@ class Index {
     this.rc = parent.rc;
     this.archiveId = archiveId;
   }
+
   path(withParameter = true): string {
     if (withParameter && this.archiveId !== null) {
       return `${this.parent.path()}/archive/${this.archiveId}`;
     }
     return `${this.parent.path()}/archive`;
   }
+
   /**
    * Returns the created report with message data not including attachments.
    * HTTP Method: get
@@ -28,12 +32,12 @@ class Index {
    * User Permission: Users
    */
   async list(
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<MessageStoreReportArchive> {
     const r = await this.rc.get<MessageStoreReportArchive>(
       this.path(false),
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }

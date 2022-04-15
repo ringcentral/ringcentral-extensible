@@ -1,5 +1,5 @@
 import SipInfo from './SipInfo';
-import {RestRequestConfig} from '../../../../Rest';
+import { RestRequestConfig } from '../../../../Rest';
 import {
   ReadDeviceParameters,
   GetDeviceInfoResponse,
@@ -7,11 +7,13 @@ import {
   UpdateDeviceParameters,
 } from '../../../../definitions';
 import Parent from '..';
-import {RingCentral} from '../../../..';
+import { RingCentral } from '../../../..';
 
 class Index {
   rc: RingCentral;
+
   parent: Parent;
+
   deviceId: string | null;
 
   constructor(parent: Parent, deviceId: string | null = null) {
@@ -19,12 +21,14 @@ class Index {
     this.rc = parent.rc;
     this.deviceId = deviceId;
   }
+
   path(withParameter = true): string {
     if (withParameter && this.deviceId !== null) {
       return `${this.parent.path()}/device/${this.deviceId}`;
     }
     return `${this.parent.path()}/device`;
   }
+
   /**
    * Returns account device(s) by their ID(s).
    * HTTP Method: get
@@ -35,7 +39,7 @@ class Index {
    */
   async get(
     queryParams?: ReadDeviceParameters,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<GetDeviceInfoResponse> {
     if (this.deviceId === null) {
       throw new Error('deviceId must be specified.');
@@ -43,7 +47,7 @@ class Index {
     const r = await this.rc.get<GetDeviceInfoResponse>(
       this.path(),
       queryParams,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }
@@ -59,7 +63,7 @@ class Index {
   async put(
     accountDeviceUpdate: AccountDeviceUpdate,
     queryParams?: UpdateDeviceParameters,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<GetDeviceInfoResponse> {
     if (this.deviceId === null) {
       throw new Error('deviceId must be specified.');
@@ -68,7 +72,7 @@ class Index {
       this.path(),
       accountDeviceUpdate,
       queryParams,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }

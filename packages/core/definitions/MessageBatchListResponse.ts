@@ -1,4 +1,4 @@
-import {MessageBatchInfo, PagingResource} from './index';
+import { MessageBatchInfo, PagingResource } from './index';
 
 class MessageBatchListResponse {
   /**

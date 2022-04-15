@@ -1,4 +1,4 @@
-import {CallerIdPhoneInfoRequest} from './index';
+import { CallerIdPhoneInfoRequest } from './index';
 
 class CallerIdByDeviceInfoRequest {
   /**

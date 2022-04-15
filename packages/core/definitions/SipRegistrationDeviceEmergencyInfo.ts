@@ -34,12 +34,12 @@ class SipRegistrationDeviceEmergencyInfo {
    * Resulting status of emergency address synchronization. Returned if `syncEmergencyAddress` parameter is set to 'True'
    */
   syncStatus?:
-    | 'Verified'
-    | 'Updated'
-    | 'Deleted'
-    | 'NotRequired'
-    | 'Unsupported'
-    | 'Failed';
+  | 'Verified'
+  | 'Updated'
+  | 'Deleted'
+  | 'NotRequired'
+  | 'Unsupported'
+  | 'Failed';
 
   /**
    * Ability to register new emergency address for a phone line using devices sharing this line or only main device (line owner)

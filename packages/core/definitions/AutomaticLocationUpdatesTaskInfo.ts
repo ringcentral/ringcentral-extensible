@@ -1,4 +1,4 @@
-import {TaskResultInfo} from './index';
+import { TaskResultInfo } from './index';
 
 class AutomaticLocationUpdatesTaskInfo {
   /**
@@ -25,10 +25,10 @@ class AutomaticLocationUpdatesTaskInfo {
    * Type of a task
    */
   type?:
-    | 'WirelessPointsBulkCreate'
-    | 'WirelessPointsBulkUpdate'
-    | 'SwitchesBulkCreate'
-    | 'SwitchesBulkUpdate';
+  | 'WirelessPointsBulkCreate'
+  | 'WirelessPointsBulkUpdate'
+  | 'SwitchesBulkCreate'
+  | 'SwitchesBulkUpdate';
 
   /**
    */

@@ -1,4 +1,4 @@
-import {LocationUpdatesEmergencyAddressInfoRequest} from './index';
+import { LocationUpdatesEmergencyAddressInfoRequest } from './index';
 
 class CreateUserEmergencyLocationRequest {
   /**

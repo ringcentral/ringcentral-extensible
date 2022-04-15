@@ -1,4 +1,4 @@
-import {Agent, DateTime, CampaignRedial} from './index';
+import { Agent, DateTime, CampaignRedial } from './index';
 
 class CampaignPass {
   agent?: Agent;

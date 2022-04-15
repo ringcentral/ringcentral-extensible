@@ -1,12 +1,14 @@
 import Content from './Content';
-import {RestRequestConfig} from '../../../../Rest';
-import {GetCallRecordingResponse} from '../../../../definitions';
+import { RestRequestConfig } from '../../../../Rest';
+import { GetCallRecordingResponse } from '../../../../definitions';
 import Parent from '..';
-import {RingCentral} from '../../../..';
+import { RingCentral } from '../../../..';
 
 class Index {
   rc: RingCentral;
+
   parent: Parent;
+
   recordingId: string | null;
 
   constructor(parent: Parent, recordingId: string | null = null) {
@@ -14,12 +16,14 @@ class Index {
     this.rc = parent.rc;
     this.recordingId = recordingId;
   }
+
   path(withParameter = true): string {
     if (withParameter && this.recordingId !== null) {
       return `${this.parent.path()}/recording/${this.recordingId}`;
     }
     return `${this.parent.path()}/recording`;
   }
+
   /**
    * Returns call recordings by ID(s).
    * HTTP Method: get
@@ -29,7 +33,7 @@ class Index {
    * User Permission: ReadCallRecording
    */
   async get(
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<GetCallRecordingResponse> {
     if (this.recordingId === null) {
       throw new Error('recordingId must be specified.');
@@ -37,7 +41,7 @@ class Index {
     const r = await this.rc.get<GetCallRecordingResponse>(
       this.path(),
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }

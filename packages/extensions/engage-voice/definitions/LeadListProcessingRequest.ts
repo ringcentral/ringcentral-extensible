@@ -1,4 +1,4 @@
-import {CampaignLead} from './index';
+import { CampaignLead } from './index';
 
 class LeadListProcessingRequest {
   description?: string;

@@ -1,4 +1,4 @@
-import {RestRequestConfig} from '../../../../../Rest';
+import { RestRequestConfig } from '../../../../../Rest';
 import {
   ListChatNotesParameters,
   GlipNotesInfo,
@@ -6,19 +6,22 @@ import {
   GlipNoteInfo,
 } from '../../../../../definitions';
 import Parent from '..';
-import {RingCentral} from '../../../../..';
+import { RingCentral } from '../../../../..';
 
 class Index {
   rc: RingCentral;
+
   parent: Parent;
 
   constructor(parent: Parent) {
     this.parent = parent;
     this.rc = parent.rc;
   }
+
   path(): string {
     return `${this.parent.path()}/notes`;
   }
+
   /**
    * Returns the list of notes created in the specified chat.
    * HTTP Method: get
@@ -29,12 +32,12 @@ class Index {
    */
   async get(
     queryParams?: ListChatNotesParameters,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<GlipNotesInfo> {
     const r = await this.rc.get<GlipNotesInfo>(
       this.path(),
       queryParams,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }
@@ -49,13 +52,13 @@ class Index {
    */
   async post(
     glipNoteCreate: GlipNoteCreate,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<GlipNoteInfo> {
     const r = await this.rc.post<GlipNoteInfo>(
       this.path(),
       glipNoteCreate,
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }

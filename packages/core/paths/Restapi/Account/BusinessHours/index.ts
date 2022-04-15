@@ -1,22 +1,25 @@
-import {RestRequestConfig} from '../../../../Rest';
+import { RestRequestConfig } from '../../../../Rest';
 import {
   CompanyBusinessHours,
   CompanyBusinessHoursUpdateRequest,
 } from '../../../../definitions';
 import Parent from '..';
-import {RingCentral} from '../../../..';
+import { RingCentral } from '../../../..';
 
 class Index {
   rc: RingCentral;
+
   parent: Parent;
 
   constructor(parent: Parent) {
     this.parent = parent;
     this.rc = parent.rc;
   }
+
   path(): string {
     return `${this.parent.path()}/business-hours`;
   }
+
   /**
    * Returns the company business hours schedule. Business hours (and After hours - all the remaining time) schedules are commonly used for setting call handling rules - `business-hours-rule` and `after-hours-rule` correspondingly.
    * HTTP Method: get
@@ -26,12 +29,12 @@ class Index {
    * User Permission: ReadUserAnsweringRules
    */
   async get(
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<CompanyBusinessHours> {
     const r = await this.rc.get<CompanyBusinessHours>(
       this.path(),
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }
@@ -46,13 +49,13 @@ class Index {
    */
   async put(
     companyBusinessHoursUpdateRequest: CompanyBusinessHoursUpdateRequest,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<CompanyBusinessHours> {
     const r = await this.rc.put<CompanyBusinessHours>(
       this.path(),
       companyBusinessHoursUpdateRequest,
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }

@@ -1,4 +1,4 @@
-import {PresetInfo} from './index';
+import { PresetInfo } from './index';
 
 class BlockedCallerGreetingInfo {
   /**

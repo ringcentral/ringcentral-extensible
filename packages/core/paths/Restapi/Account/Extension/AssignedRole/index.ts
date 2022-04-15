@@ -1,23 +1,26 @@
 import Default from './Default';
-import {RestRequestConfig} from '../../../../../Rest';
+import { RestRequestConfig } from '../../../../../Rest';
 import {
   ListUserAssignedRolesParameters,
   AssignedRolesResource,
 } from '../../../../../definitions';
 import Parent from '..';
-import {RingCentral} from '../../../../..';
+import { RingCentral } from '../../../../..';
 
 class Index {
   rc: RingCentral;
+
   parent: Parent;
 
   constructor(parent: Parent) {
     this.parent = parent;
     this.rc = parent.rc;
   }
+
   path(): string {
     return `${this.parent.path()}/assigned-role`;
   }
+
   /**
    * Returns the list of roles assigned to the current extension.
    * HTTP Method: get
@@ -28,12 +31,12 @@ class Index {
    */
   async get(
     queryParams?: ListUserAssignedRolesParameters,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<AssignedRolesResource> {
     const r = await this.rc.get<AssignedRolesResource>(
       this.path(),
       queryParams,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }
@@ -47,13 +50,13 @@ class Index {
    */
   async put(
     assignedRolesResource: AssignedRolesResource,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<AssignedRolesResource> {
     const r = await this.rc.put<AssignedRolesResource>(
       this.path(),
       assignedRolesResource,
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }

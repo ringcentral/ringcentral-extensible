@@ -1,4 +1,4 @@
-import {RestRequestConfig} from '../../../../../Rest';
+import { RestRequestConfig } from '../../../../../Rest';
 import {
   NetworksList,
   CreateNetworkRequest,
@@ -6,11 +6,13 @@ import {
   UpdateNetworkRequest,
 } from '../../../../../definitions';
 import Parent from '..';
-import {RingCentral} from '../../../../..';
+import { RingCentral } from '../../../../..';
 
 class Index {
   rc: RingCentral;
+
   parent: Parent;
+
   networkId: string | null;
 
   constructor(parent: Parent, networkId: string | null = null) {
@@ -18,12 +20,14 @@ class Index {
     this.rc = parent.rc;
     this.networkId = networkId;
   }
+
   path(withParameter = true): string {
     if (withParameter && this.networkId !== null) {
       return `${this.parent.path()}/networks/${this.networkId}`;
     }
     return `${this.parent.path()}/networks`;
   }
+
   /**
    * Returns corporate networks map with emergency addresses assigned to the current account.
    * HTTP Method: get
@@ -36,7 +40,7 @@ class Index {
     const r = await this.rc.get<NetworksList>(
       this.path(false),
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }
@@ -51,13 +55,13 @@ class Index {
    */
   async post(
     createNetworkRequest: CreateNetworkRequest,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<NetworkInfo> {
     const r = await this.rc.post<NetworkInfo>(
       this.path(false),
       createNetworkRequest,
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }
@@ -77,7 +81,7 @@ class Index {
     const r = await this.rc.get<NetworkInfo>(
       this.path(),
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }
@@ -92,7 +96,7 @@ class Index {
    */
   async put(
     updateNetworkRequest: UpdateNetworkRequest,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<string> {
     if (this.networkId === null) {
       throw new Error('networkId must be specified.');
@@ -101,7 +105,7 @@ class Index {
       this.path(),
       updateNetworkRequest,
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }
@@ -121,7 +125,7 @@ class Index {
     const r = await this.rc.delete<string>(
       this.path(),
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }

@@ -1,4 +1,4 @@
-import {EmergencyLocationInfo, ProvisioningPagingInfo} from './index';
+import { EmergencyLocationInfo, ProvisioningPagingInfo } from './index';
 
 class EmergencyLocationsResource {
   /**

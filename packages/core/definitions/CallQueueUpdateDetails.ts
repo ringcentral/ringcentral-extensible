@@ -1,4 +1,4 @@
-import {CallQueueServiceLevelSettings} from './index';
+import { CallQueueServiceLevelSettings } from './index';
 
 class CallQueueUpdateDetails {
   /**

@@ -89,16 +89,16 @@ class ExtensionCreationResponse {
    * Extension type. Please note that legacy 'Department' extension type corresponds to 'Call Queue' extensions in modern RingCentral product terminology
    */
   type?:
-    | 'User'
-    | 'VirtualUser'
-    | 'DigitalUser'
-    | 'Department'
-    | 'Announcement'
-    | 'Voicemail'
-    | 'SharedLinesGroup'
-    | 'PagingOnly'
-    | 'ParkLocation'
-    | 'Limited';
+  | 'User'
+  | 'VirtualUser'
+  | 'DigitalUser'
+  | 'Department'
+  | 'Announcement'
+  | 'Voicemail'
+  | 'SharedLinesGroup'
+  | 'PagingOnly'
+  | 'ParkLocation'
+  | 'Limited';
 
   /**
    * Hides extension from showing in company directory. Supported for extensions of User type only

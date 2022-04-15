@@ -1,4 +1,4 @@
-import {GlipAPSInfo, GlipUnreadMessageCountInfo} from './index';
+import { GlipAPSInfo, GlipUnreadMessageCountInfo } from './index';
 
 /**
  * Apple notification data

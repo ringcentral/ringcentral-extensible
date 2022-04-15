@@ -1,4 +1,4 @@
-import {RNPNavigationInfoUri} from './index';
+import { RNPNavigationInfoUri } from './index';
 
 class RNPNavigationInfo {
   /**

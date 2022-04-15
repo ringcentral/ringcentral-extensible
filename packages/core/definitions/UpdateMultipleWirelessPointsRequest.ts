@@ -1,4 +1,4 @@
-import {UpdateWirelessPoint} from './index';
+import { UpdateWirelessPoint } from './index';
 
 class UpdateMultipleWirelessPointsRequest {
   /**

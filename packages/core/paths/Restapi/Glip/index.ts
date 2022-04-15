@@ -15,16 +15,18 @@ import Notes from './Notes';
 import Teams from './Teams';
 import Chats from './Chats';
 import Parent from '..';
-import {RingCentral} from '../../..';
+import { RingCentral } from '../../..';
 
 class Index {
   rc: RingCentral;
+
   parent: Parent;
 
   constructor(parent: Parent) {
     this.parent = parent;
     this.rc = parent.rc;
   }
+
   path(): string {
     return `${this.parent.path()}/glip`;
   }

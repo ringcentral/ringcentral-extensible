@@ -1,4 +1,4 @@
-import {GlipMentionsInfo} from './index';
+import { GlipMentionsInfo } from './index';
 
 class GlipPostEvent {
   /**

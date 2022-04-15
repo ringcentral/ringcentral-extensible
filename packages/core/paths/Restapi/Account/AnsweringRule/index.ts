@@ -1,4 +1,4 @@
-import {RestRequestConfig} from '../../../../Rest';
+import { RestRequestConfig } from '../../../../Rest';
 import {
   ListCompanyAnsweringRulesParameters,
   CompanyAnsweringRuleList,
@@ -7,11 +7,13 @@ import {
   CompanyAnsweringRuleUpdate,
 } from '../../../../definitions';
 import Parent from '..';
-import {RingCentral} from '../../../..';
+import { RingCentral } from '../../../..';
 
 class Index {
   rc: RingCentral;
+
   parent: Parent;
+
   ruleId: string | null;
 
   constructor(parent: Parent, ruleId: string | null = null) {
@@ -19,12 +21,14 @@ class Index {
     this.rc = parent.rc;
     this.ruleId = ruleId;
   }
+
   path(withParameter = true): string {
     if (withParameter && this.ruleId !== null) {
       return `${this.parent.path()}/answering-rule/${this.ruleId}`;
     }
     return `${this.parent.path()}/answering-rule`;
   }
+
   /**
    * Returns a list of company call handling rules.
    * HTTP Method: get
@@ -35,12 +39,12 @@ class Index {
    */
   async list(
     queryParams?: ListCompanyAnsweringRulesParameters,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<CompanyAnsweringRuleList> {
     const r = await this.rc.get<CompanyAnsweringRuleList>(
       this.path(false),
       queryParams,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }
@@ -55,13 +59,13 @@ class Index {
    */
   async post(
     companyAnsweringRuleRequest: CompanyAnsweringRuleRequest,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<CompanyAnsweringRuleInfo> {
     const r = await this.rc.post<CompanyAnsweringRuleInfo>(
       this.path(false),
       companyAnsweringRuleRequest,
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }
@@ -75,7 +79,7 @@ class Index {
    * User Permission: ReadCompanyAnsweringRules
    */
   async get(
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<CompanyAnsweringRuleInfo> {
     if (this.ruleId === null) {
       throw new Error('ruleId must be specified.');
@@ -83,7 +87,7 @@ class Index {
     const r = await this.rc.get<CompanyAnsweringRuleInfo>(
       this.path(),
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }
@@ -98,7 +102,7 @@ class Index {
    */
   async put(
     companyAnsweringRuleUpdate: CompanyAnsweringRuleUpdate,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<CompanyAnsweringRuleInfo> {
     if (this.ruleId === null) {
       throw new Error('ruleId must be specified.');
@@ -107,7 +111,7 @@ class Index {
       this.path(),
       companyAnsweringRuleUpdate,
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }
@@ -127,7 +131,7 @@ class Index {
     const r = await this.rc.delete<string>(
       this.path(),
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }

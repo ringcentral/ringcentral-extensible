@@ -1,4 +1,4 @@
-import {MessageStatusCounts} from './index';
+import { MessageStatusCounts } from './index';
 
 class MessageStatusesResponse {
   /**

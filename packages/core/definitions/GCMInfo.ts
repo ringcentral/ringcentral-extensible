@@ -1,4 +1,4 @@
-import {GCMData} from './index';
+import { GCMData } from './index';
 
 /**
  * GCM data

@@ -1,4 +1,4 @@
-import {ForwardingNumberInfoRulesCreateRuleRequest} from './index';
+import { ForwardingNumberInfoRulesCreateRuleRequest } from './index';
 
 class RuleInfoCreateRuleRequest {
   /**

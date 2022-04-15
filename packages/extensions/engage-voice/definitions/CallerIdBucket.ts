@@ -1,4 +1,4 @@
-import {CallerIdBucketNumber, DateTime} from './index';
+import { CallerIdBucketNumber, DateTime } from './index';
 
 class CallerIdBucket {
   accountId?: string;

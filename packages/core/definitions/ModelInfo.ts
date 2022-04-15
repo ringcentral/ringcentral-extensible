@@ -1,4 +1,4 @@
-import {AddonInfo} from './index';
+import { AddonInfo } from './index';
 
 /**
  * HardPhone model information

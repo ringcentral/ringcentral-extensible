@@ -1,4 +1,4 @@
-import {ActiveCallInfo, GetPresenceExtensionInfo} from './index';
+import { ActiveCallInfo, GetPresenceExtensionInfo } from './index';
 
 class PresenceInfoResponse {
   /**
@@ -13,11 +13,11 @@ class PresenceInfoResponse {
   /**
    */
   dndStatus?:
-    | 'TakeAllCalls'
-    | 'DoNotAcceptDepartmentCalls'
-    | 'TakeDepartmentCallsOnly'
-    | 'DoNotAcceptAnyCalls'
-    | 'Unknown';
+  | 'TakeAllCalls'
+  | 'DoNotAcceptDepartmentCalls'
+  | 'TakeDepartmentCallsOnly'
+  | 'DoNotAcceptAnyCalls'
+  | 'Unknown';
 
   /**
    */
@@ -52,11 +52,11 @@ class PresenceInfoResponse {
    * Telephony presence status. Returned if telephony status is changed
    */
   telephonyStatus?:
-    | 'NoCall'
-    | 'CallConnected'
-    | 'Ringing'
-    | 'OnHold'
-    | 'ParkedCall';
+  | 'NoCall'
+  | 'CallConnected'
+  | 'Ringing'
+  | 'OnHold'
+  | 'ParkedCall';
 
   /**
    * Aggregated presence status, calculated from a number of sources

@@ -1,4 +1,4 @@
-import {ChatQueue, ChatRequeueShortcutGroup} from './index';
+import { ChatQueue, ChatRequeueShortcutGroup } from './index';
 
 class ChatRequeueShortcutGroupChatQueueAccess {
   chatQueue?: ChatQueue;

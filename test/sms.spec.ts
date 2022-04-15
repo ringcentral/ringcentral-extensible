@@ -1,4 +1,4 @@
-import {createRingCentral} from './utils';
+import { createRingCentral } from './utils';
 
 describe('SMS', () => {
   test('send', async () => {

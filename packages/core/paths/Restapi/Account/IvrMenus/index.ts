@@ -1,11 +1,13 @@
-import {RestRequestConfig} from '../../../../Rest';
-import {IVRMenuInfo} from '../../../../definitions';
+import { RestRequestConfig } from '../../../../Rest';
+import { IVRMenuInfo } from '../../../../definitions';
 import Parent from '..';
-import {RingCentral} from '../../../..';
+import { RingCentral } from '../../../..';
 
 class Index {
   rc: RingCentral;
+
   parent: Parent;
+
   ivrMenuId: string | null;
 
   constructor(parent: Parent, ivrMenuId: string | null = null) {
@@ -13,12 +15,14 @@ class Index {
     this.rc = parent.rc;
     this.ivrMenuId = ivrMenuId;
   }
+
   path(withParameter = true): string {
     if (withParameter && this.ivrMenuId !== null) {
       return `${this.parent.path()}/ivr-menus/${this.ivrMenuId}`;
     }
     return `${this.parent.path()}/ivr-menus`;
   }
+
   /**
    * Creates a company IVR menu.
    * HTTP Method: post
@@ -29,13 +33,13 @@ class Index {
    */
   async post(
     iVRMenuInfo: IVRMenuInfo,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<IVRMenuInfo> {
     const r = await this.rc.post<IVRMenuInfo>(
       this.path(false),
       iVRMenuInfo,
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }
@@ -55,7 +59,7 @@ class Index {
     const r = await this.rc.get<IVRMenuInfo>(
       this.path(),
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }
@@ -70,7 +74,7 @@ class Index {
    */
   async put(
     iVRMenuInfo: IVRMenuInfo,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<IVRMenuInfo> {
     if (this.ivrMenuId === null) {
       throw new Error('ivrMenuId must be specified.');
@@ -79,7 +83,7 @@ class Index {
       this.path(),
       iVRMenuInfo,
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }

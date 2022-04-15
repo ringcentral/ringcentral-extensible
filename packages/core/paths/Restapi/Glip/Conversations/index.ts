@@ -1,4 +1,4 @@
-import {RestRequestConfig} from '../../../../Rest';
+import { RestRequestConfig } from '../../../../Rest';
 import {
   ListGlipConversationsParameters,
   GlipConversationsList,
@@ -6,11 +6,13 @@ import {
   GlipConversationInfo,
 } from '../../../../definitions';
 import Parent from '..';
-import {RingCentral} from '../../../..';
+import { RingCentral } from '../../../..';
 
 class Index {
   rc: RingCentral;
+
   parent: Parent;
+
   chatId: string | null;
 
   constructor(parent: Parent, chatId: string | null = null) {
@@ -18,12 +20,14 @@ class Index {
     this.rc = parent.rc;
     this.chatId = chatId;
   }
+
   path(withParameter = true): string {
     if (withParameter && this.chatId !== null) {
       return `${this.parent.path()}/conversations/${this.chatId}`;
     }
     return `${this.parent.path()}/conversations`;
   }
+
   /**
    * Returns the list of conversations where the user is a member. All records in response are sorted by creation time of a conversation in ascending order. Conversation is a chat of the *Group* type.
    * HTTP Method: get
@@ -34,12 +38,12 @@ class Index {
    */
   async list(
     queryParams?: ListGlipConversationsParameters,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<GlipConversationsList> {
     const r = await this.rc.get<GlipConversationsList>(
       this.path(false),
       queryParams,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }
@@ -54,13 +58,13 @@ class Index {
    */
   async post(
     createGlipConversationRequest: CreateGlipConversationRequest,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<GlipConversationInfo> {
     const r = await this.rc.post<GlipConversationInfo>(
       this.path(false),
       createGlipConversationRequest,
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }
@@ -74,7 +78,7 @@ class Index {
    * User Permission: UnifiedAppDesktop
    */
   async get(
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<GlipConversationInfo> {
     if (this.chatId === null) {
       throw new Error('chatId must be specified.');
@@ -82,7 +86,7 @@ class Index {
     const r = await this.rc.get<GlipConversationInfo>(
       this.path(),
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }

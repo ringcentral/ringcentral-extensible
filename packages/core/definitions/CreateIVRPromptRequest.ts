@@ -1,4 +1,4 @@
-import {Attachment} from './index';
+import { Attachment } from './index';
 
 /**
  * Request body for operation createIVRPrompt

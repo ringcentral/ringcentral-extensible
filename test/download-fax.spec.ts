@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 
-import {createRingCentral} from './utils';
+import { createRingCentral } from './utils';
 
 describe('fax', () => {
   test('download fax', async () => {
@@ -23,7 +23,7 @@ describe('fax', () => {
     const r = await rc.get<Buffer>(
       faxMessages.records?.[0].attachments?.[0].uri ?? '',
       undefined,
-      {responseType: 'arraybuffer'}
+      { responseType: 'arraybuffer' },
     );
     fs.writeFileSync(path.join(__dirname, 'temp.pdf'), r.data);
     await rc.revoke();
@@ -46,7 +46,7 @@ describe('fax', () => {
       return;
     }
     expect(
-      faxMessages.records?.[0].attachments?.[0].uri!.startsWith('https://') // absolute CDN uri
+      faxMessages.records?.[0].attachments?.[0].uri!.startsWith('https://'), // absolute CDN uri
     ).toBeTruthy();
     await rc.revoke();
   });

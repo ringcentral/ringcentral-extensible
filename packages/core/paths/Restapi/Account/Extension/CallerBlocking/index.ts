@@ -1,23 +1,26 @@
 import PhoneNumbers from './PhoneNumbers';
-import {RestRequestConfig} from '../../../../../Rest';
+import { RestRequestConfig } from '../../../../../Rest';
 import {
   CallerBlockingSettings,
   CallerBlockingSettingsUpdate,
 } from '../../../../../definitions';
 import Parent from '..';
-import {RingCentral} from '../../../../..';
+import { RingCentral } from '../../../../..';
 
 class Index {
   rc: RingCentral;
+
   parent: Parent;
 
   constructor(parent: Parent) {
     this.parent = parent;
     this.rc = parent.rc;
   }
+
   path(): string {
     return `${this.parent.path()}/caller-blocking`;
   }
+
   /**
    * Returns the current caller blocking settings of a user.
    * HTTP Method: get
@@ -27,12 +30,12 @@ class Index {
    * User Permission: ReadBlockedNumbers
    */
   async get(
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<CallerBlockingSettings> {
     const r = await this.rc.get<CallerBlockingSettings>(
       this.path(),
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }
@@ -47,13 +50,13 @@ class Index {
    */
   async put(
     callerBlockingSettingsUpdate: CallerBlockingSettingsUpdate,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<CallerBlockingSettings> {
     const r = await this.rc.put<CallerBlockingSettings>(
       this.path(),
       callerBlockingSettingsUpdate,
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }

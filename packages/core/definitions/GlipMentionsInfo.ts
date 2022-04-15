@@ -8,14 +8,14 @@ class GlipMentionsInfo {
    * Type of mention
    */
   type?:
-    | 'Person'
-    | 'Team'
-    | 'File'
-    | 'Link'
-    | 'Event'
-    | 'Task'
-    | 'Note'
-    | 'Card';
+  | 'Person'
+  | 'Team'
+  | 'File'
+  | 'Link'
+  | 'Event'
+  | 'Task'
+  | 'Note'
+  | 'Card';
 
   /**
    * Name of a user

@@ -107,25 +107,25 @@ class GetExtensionInfoResponse {
    * Extension type. Please note that legacy 'Department' extension type corresponds to 'Call Queue' extensions in modern RingCentral product terminology
    */
   type?:
-    | 'User'
-    | 'FaxUser'
-    | 'VirtualUser'
-    | 'DigitalUser'
-    | 'Department'
-    | 'Announcement'
-    | 'Voicemail'
-    | 'SharedLinesGroup'
-    | 'PagingOnly'
-    | 'IvrMenu'
-    | 'ApplicationExtension'
-    | 'ParkLocation'
-    | 'Bot'
-    | 'Room'
-    | 'Limited'
-    | 'Site'
-    | 'ProxyAdmin'
-    | 'DelegatedLinesGroup'
-    | 'GroupCallPickup';
+  | 'User'
+  | 'FaxUser'
+  | 'VirtualUser'
+  | 'DigitalUser'
+  | 'Department'
+  | 'Announcement'
+  | 'Voicemail'
+  | 'SharedLinesGroup'
+  | 'PagingOnly'
+  | 'IvrMenu'
+  | 'ApplicationExtension'
+  | 'ParkLocation'
+  | 'Bot'
+  | 'Room'
+  | 'Limited'
+  | 'Site'
+  | 'ProxyAdmin'
+  | 'DelegatedLinesGroup'
+  | 'GroupCallPickup';
 
   /**
    */

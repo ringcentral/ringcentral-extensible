@@ -1,4 +1,6 @@
-import {Campaign, Gate, GateGroupSkill, GateGroup} from './index';
+import {
+  Campaign, Gate, GateGroupSkill, GateGroup,
+} from './index';
 
 class RequeueShortcut {
   campaign?: Campaign;

@@ -1,4 +1,4 @@
-import {TimeInterval} from './index';
+import { TimeInterval } from './index';
 
 /**
  * Weekly schedule

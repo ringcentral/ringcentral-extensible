@@ -1,4 +1,4 @@
-import {ActionCardBody} from './index';
+import { ActionCardBody } from './index';
 
 class ActionAdaptiveCardInfo {
   /**

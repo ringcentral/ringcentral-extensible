@@ -85,20 +85,20 @@ class ExtensionUpdateRequest {
    * Extension type. Please note that legacy 'Department' extension type corresponds to 'Call Queue' extensions in modern RingCentral product terminology
    */
   type?:
-    | 'User'
-    | 'Fax User'
-    | 'VirtualUser'
-    | 'DigitalUser'
-    | 'Department'
-    | 'Announcement'
-    | 'Voicemail'
-    | 'SharedLinesGroup'
-    | 'PagingOnly'
-    | 'IvrMenu'
-    | 'ApplicationExtension'
-    | 'ParkLocation'
-    | 'DelegatedLinesGroup'
-    | 'GroupCallPickup';
+  | 'User'
+  | 'Fax User'
+  | 'VirtualUser'
+  | 'DigitalUser'
+  | 'Department'
+  | 'Announcement'
+  | 'Voicemail'
+  | 'SharedLinesGroup'
+  | 'PagingOnly'
+  | 'IvrMenu'
+  | 'ApplicationExtension'
+  | 'ParkLocation'
+  | 'DelegatedLinesGroup'
+  | 'GroupCallPickup';
 
   /**
    * List of non-RC internal identifiers assigned to an extension

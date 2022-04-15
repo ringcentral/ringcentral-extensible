@@ -1,19 +1,22 @@
-import {RestRequestConfig} from '../../../../../Rest';
-import {MakeCallOutRequest, CallSession} from '../../../../../definitions';
+import { RestRequestConfig } from '../../../../../Rest';
+import { MakeCallOutRequest, CallSession } from '../../../../../definitions';
 import Parent from '..';
-import {RingCentral} from '../../../../..';
+import { RingCentral } from '../../../../..';
 
 class Index {
   rc: RingCentral;
+
   parent: Parent;
 
   constructor(parent: Parent) {
     this.parent = parent;
     this.rc = parent.rc;
   }
+
   path(): string {
     return `${this.parent.path()}/call-out`;
   }
+
   /**
    * Creates a new outbound call out session. Currently this method is supported for Softphone/Hardphone only, since device IDs for WebRTC/Mobile apps cannot be obtained.
    * HTTP Method: post
@@ -23,13 +26,13 @@ class Index {
    */
   async post(
     makeCallOutRequest: MakeCallOutRequest,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<CallSession> {
     const r = await this.rc.post<CallSession>(
       this.path(),
       makeCallOutRequest,
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }

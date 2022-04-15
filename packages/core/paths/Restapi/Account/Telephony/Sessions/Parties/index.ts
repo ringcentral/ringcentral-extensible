@@ -13,14 +13,16 @@ import Reply from './Reply';
 import Park from './Park';
 import Flip from './Flip';
 import Hold from './Hold';
-import {RestRequestConfig} from '../../../../../../Rest';
-import {CallParty, PartyUpdateRequest} from '../../../../../../definitions';
+import { RestRequestConfig } from '../../../../../../Rest';
+import { CallParty, PartyUpdateRequest } from '../../../../../../definitions';
 import Parent from '..';
-import {RingCentral} from '../../../../../..';
+import { RingCentral } from '../../../../../..';
 
 class Index {
   rc: RingCentral;
+
   parent: Parent;
+
   partyId: string | null;
 
   constructor(parent: Parent, partyId: string | null = null) {
@@ -28,12 +30,14 @@ class Index {
     this.rc = parent.rc;
     this.partyId = partyId;
   }
+
   path(withParameter = true): string {
     if (withParameter && this.partyId !== null) {
       return `${this.parent.path()}/parties/${this.partyId}`;
     }
     return `${this.parent.path()}/parties`;
   }
+
   /**
    * Returns a call party status by ID.
    * HTTP Method: get
@@ -48,7 +52,7 @@ class Index {
     const r = await this.rc.get<CallParty>(
       this.path(),
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }
@@ -67,7 +71,7 @@ class Index {
     const r = await this.rc.delete<string>(
       this.path(),
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }
@@ -81,7 +85,7 @@ class Index {
    */
   async patch(
     partyUpdateRequest: PartyUpdateRequest,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<CallParty> {
     if (this.partyId === null) {
       throw new Error('partyId must be specified.');
@@ -90,7 +94,7 @@ class Index {
       this.path(),
       partyUpdateRequest,
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }

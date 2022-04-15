@@ -1,15 +1,15 @@
-import {AutomaticLocationUpdatesPhoneNumberInfo} from './index';
+import { AutomaticLocationUpdatesPhoneNumberInfo } from './index';
 
 class AutomaticLocationUpdatesPhoneLine {
   /**
    */
   lineType?:
-    | 'Unknown'
-    | 'Standalone'
-    | 'StandaloneFree'
-    | 'BlaPrimary'
-    | 'BlaSecondary'
-    | 'BLF';
+  | 'Unknown'
+  | 'Standalone'
+  | 'StandaloneFree'
+  | 'BlaPrimary'
+  | 'BlaSecondary'
+  | 'BLF';
 
   /**
    */

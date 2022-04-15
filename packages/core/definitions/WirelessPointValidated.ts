@@ -1,4 +1,4 @@
-import {ValidationError} from './index';
+import { ValidationError } from './index';
 
 class WirelessPointValidated {
   /**

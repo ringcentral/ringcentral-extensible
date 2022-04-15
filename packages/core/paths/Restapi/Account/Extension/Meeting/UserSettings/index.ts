@@ -1,19 +1,22 @@
-import {RestRequestConfig} from '../../../../../../Rest';
-import {MeetingUserSettingsResponse} from '../../../../../../definitions';
+import { RestRequestConfig } from '../../../../../../Rest';
+import { MeetingUserSettingsResponse } from '../../../../../../definitions';
 import Parent from '..';
-import {RingCentral} from '../../../../../..';
+import { RingCentral } from '../../../../../..';
 
 class Index {
   rc: RingCentral;
+
   parent: Parent;
 
   constructor(parent: Parent) {
     this.parent = parent;
     this.rc = parent.rc;
   }
+
   path(): string {
     return `${this.parent.path()}/user-settings`;
   }
+
   /**
    * Returns user settings for meetings.
    * HTTP Method: get
@@ -23,12 +26,12 @@ class Index {
    * User Permission: Meetings
    */
   async get(
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<MeetingUserSettingsResponse> {
     const r = await this.rc.get<MeetingUserSettingsResponse>(
       this.path(),
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }

@@ -54,11 +54,11 @@ class AuthorizeRequest {
    * User interface options data
    */
   ui_options?:
-    | 'hide_logo'
-    | 'hide_tos'
-    | 'hide_remember_me'
-    | 'external_popup'
-    | 'old_ui';
+  | 'hide_logo'
+  | 'hide_tos'
+  | 'hide_remember_me'
+  | 'external_popup'
+  | 'old_ui';
 
   /**
    */

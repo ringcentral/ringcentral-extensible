@@ -1,4 +1,4 @@
-import {RestRequestConfig} from '../../../../../Rest';
+import { RestRequestConfig } from '../../../../../Rest';
 import {
   ListAccountSwitchesParameters,
   SwitchesList,
@@ -7,11 +7,13 @@ import {
   UpdateSwitchInfo,
 } from '../../../../../definitions';
 import Parent from '..';
-import {RingCentral} from '../../../../..';
+import { RingCentral } from '../../../../..';
 
 class Index {
   rc: RingCentral;
+
   parent: Parent;
+
   switchId: string | null;
 
   constructor(parent: Parent, switchId: string | null = null) {
@@ -19,12 +21,14 @@ class Index {
     this.rc = parent.rc;
     this.switchId = switchId;
   }
+
   path(withParameter = true): string {
     if (withParameter && this.switchId !== null) {
       return `${this.parent.path()}/switches/${this.switchId}`;
     }
     return `${this.parent.path()}/switches`;
   }
+
   /**
    * Returns corporate map of configured network switches with the assigned emergency addresses for the logged-in account.
    * HTTP Method: get
@@ -35,12 +39,12 @@ class Index {
    */
   async list(
     queryParams?: ListAccountSwitchesParameters,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<SwitchesList> {
     const r = await this.rc.get<SwitchesList>(
       this.path(false),
       queryParams,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }
@@ -55,13 +59,13 @@ class Index {
    */
   async post(
     createSwitchInfo: CreateSwitchInfo,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<SwitchInfo> {
     const r = await this.rc.post<SwitchInfo>(
       this.path(false),
       createSwitchInfo,
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }
@@ -81,7 +85,7 @@ class Index {
     const r = await this.rc.get<SwitchInfo>(
       this.path(),
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }
@@ -96,7 +100,7 @@ class Index {
    */
   async put(
     updateSwitchInfo: UpdateSwitchInfo,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<SwitchInfo> {
     if (this.switchId === null) {
       throw new Error('switchId must be specified.');
@@ -105,7 +109,7 @@ class Index {
       this.path(),
       updateSwitchInfo,
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }
@@ -125,7 +129,7 @@ class Index {
     const r = await this.rc.delete<string>(
       this.path(),
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }

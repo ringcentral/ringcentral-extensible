@@ -1,5 +1,5 @@
 import RingCentral from '@rc-ex/core';
-import {CreateMMSMessage, Attachment} from '@rc-ex/core/lib/definitions';
+import { CreateMMSMessage, Attachment } from '@rc-ex/core/lib/definitions';
 import fs from 'fs';
 import path from 'path';
 
@@ -16,8 +16,8 @@ describe('mms', () => {
       password: process.env.RINGCENTRAL_PASSWORD!,
     });
     const createMMSMessage = new CreateMMSMessage();
-    createMMSMessage.from = {phoneNumber: process.env.RINGCENTRAL_USERNAME!};
-    createMMSMessage.to = [{phoneNumber: process.env.RINGCENTRAL_RECEIVER}];
+    createMMSMessage.from = { phoneNumber: process.env.RINGCENTRAL_USERNAME! };
+    createMMSMessage.to = [{ phoneNumber: process.env.RINGCENTRAL_RECEIVER }];
     const attachment = new Attachment();
     attachment.filename = 'text.png';
     attachment.content = fs.createReadStream(path.join(__dirname, 'test.png'));

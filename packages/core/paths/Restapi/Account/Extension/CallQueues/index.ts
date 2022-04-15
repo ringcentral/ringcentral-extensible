@@ -1,19 +1,22 @@
-import {RestRequestConfig} from '../../../../../Rest';
-import {UserCallQueues} from '../../../../../definitions';
+import { RestRequestConfig } from '../../../../../Rest';
+import { UserCallQueues } from '../../../../../definitions';
 import Parent from '..';
-import {RingCentral} from '../../../../..';
+import { RingCentral } from '../../../../..';
 
 class Index {
   rc: RingCentral;
+
   parent: Parent;
 
   constructor(parent: Parent) {
     this.parent = parent;
     this.rc = parent.rc;
   }
+
   path(): string {
     return `${this.parent.path()}/call-queues`;
   }
+
   /**
    * Updates the list of call queues where the user is an agent. This is a full update request, which means that if any queue where the user is an agent is not mentioned in request, then the user is automatically removed from this queue.
    * HTTP Method: put
@@ -24,13 +27,13 @@ class Index {
    */
   async put(
     userCallQueues: UserCallQueues,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<UserCallQueues> {
     const r = await this.rc.put<UserCallQueues>(
       this.path(),
       userCallQueues,
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }

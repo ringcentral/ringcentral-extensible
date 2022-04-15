@@ -1,4 +1,4 @@
-import {OutboundProxyInfo} from './index';
+import { OutboundProxyInfo } from './index';
 
 class SipInfoResource {
   /**

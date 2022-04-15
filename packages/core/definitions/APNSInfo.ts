@@ -1,4 +1,4 @@
-import {APSInfo} from './index';
+import { APSInfo } from './index';
 
 /**
  * APNS (Apple Push Notification Service) information

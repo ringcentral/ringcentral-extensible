@@ -1,13 +1,13 @@
-import {ActionAdaptiveCardInfo} from './index';
+import { ActionAdaptiveCardInfo } from './index';
 
 class AdaptiveCardAction {
   /**
    */
   type?:
-    | 'Action.ShowCard'
-    | 'Action.Submit'
-    | 'Action.OpenUrl'
-    | 'Action.ToggleVisibility';
+  | 'Action.ShowCard'
+  | 'Action.Submit'
+  | 'Action.OpenUrl'
+  | 'Action.ToggleVisibility';
 
   /**
    */

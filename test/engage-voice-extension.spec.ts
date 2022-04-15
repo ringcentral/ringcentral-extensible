@@ -3,7 +3,7 @@ import EngageVoiceExtension from '@rc-ex/engage-voice';
 import path from 'path';
 import dotenv from 'dotenv-override-true';
 
-dotenv.config({path: path.join(__dirname, '.env.ev')});
+dotenv.config({ path: path.join(__dirname, '.env.ev') });
 
 describe('Engage Voice extension', () => {
   test('default', async () => {

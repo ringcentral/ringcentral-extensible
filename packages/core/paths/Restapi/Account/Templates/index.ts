@@ -1,15 +1,17 @@
-import {RestRequestConfig} from '../../../../Rest';
+import { RestRequestConfig } from '../../../../Rest';
 import {
   ListUserTemplatesParameters,
   UserTemplates,
   TemplateInfo,
 } from '../../../../definitions';
 import Parent from '..';
-import {RingCentral} from '../../../..';
+import { RingCentral } from '../../../..';
 
 class Index {
   rc: RingCentral;
+
   parent: Parent;
+
   templateId: string | null;
 
   constructor(parent: Parent, templateId: string | null = null) {
@@ -17,12 +19,14 @@ class Index {
     this.rc = parent.rc;
     this.templateId = templateId;
   }
+
   path(withParameter = true): string {
     if (withParameter && this.templateId !== null) {
       return `${this.parent.path()}/templates/${this.templateId}`;
     }
     return `${this.parent.path()}/templates`;
   }
+
   /**
    * Returns the list of user templates for the current account.
    * HTTP Method: get
@@ -33,12 +37,12 @@ class Index {
    */
   async list(
     queryParams?: ListUserTemplatesParameters,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<UserTemplates> {
     const r = await this.rc.get<UserTemplates>(
       this.path(false),
       queryParams,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }
@@ -58,7 +62,7 @@ class Index {
     const r = await this.rc.get<TemplateInfo>(
       this.path(),
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }

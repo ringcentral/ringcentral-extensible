@@ -1,4 +1,4 @@
-import {PerformanceCallsTimeInterval} from './index';
+import { PerformanceCallsTimeInterval } from './index';
 
 /**
  * Allows more granular control over time included in the report

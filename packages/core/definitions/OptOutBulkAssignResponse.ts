@@ -1,4 +1,4 @@
-import {BulkAssignOptOuts, BulkAssignOptIns} from './index';
+import { BulkAssignOptOuts, BulkAssignOptIns } from './index';
 
 /**
  * The results of adding opt-outs and opt-ins

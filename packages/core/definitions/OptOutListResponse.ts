@@ -1,4 +1,4 @@
-import {OptOutResponse, PagingResource} from './index';
+import { OptOutResponse, PagingResource } from './index';
 
 /**
  * Opt-out phone numbers information

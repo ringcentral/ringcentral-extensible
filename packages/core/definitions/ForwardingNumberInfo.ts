@@ -1,4 +1,4 @@
-import {CreateForwardingNumberDeviceInfo} from './index';
+import { CreateForwardingNumberDeviceInfo } from './index';
 
 class ForwardingNumberInfo {
   /**
@@ -39,13 +39,13 @@ class ForwardingNumberInfo {
    * Forwarding phone number type
    */
   type?:
-    | 'Home'
-    | 'Mobile'
-    | 'Work'
-    | 'PhoneLine'
-    | 'Outage'
-    | 'Other'
-    | 'BusinessMobilePhone'
-    | 'ExternalCarrier';
+  | 'Home'
+  | 'Mobile'
+  | 'Work'
+  | 'PhoneLine'
+  | 'Outage'
+  | 'Other'
+  | 'BusinessMobilePhone'
+  | 'ExternalCarrier';
 }
 export default ForwardingNumberInfo;

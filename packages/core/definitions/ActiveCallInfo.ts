@@ -1,4 +1,4 @@
-import {DetailedCallInfo, CallInfoCQ} from './index';
+import { DetailedCallInfo, CallInfoCQ } from './index';
 
 class ActiveCallInfo {
   /**
@@ -43,11 +43,11 @@ class ActiveCallInfo {
    * Telephony presence status
    */
   telephonyStatus?:
-    | 'NoCall'
-    | 'CallConnected'
-    | 'Ringing'
-    | 'OnHold'
-    | 'ParkedCall';
+  | 'NoCall'
+  | 'CallConnected'
+  | 'Ringing'
+  | 'OnHold'
+  | 'ParkedCall';
 
   /**
    */

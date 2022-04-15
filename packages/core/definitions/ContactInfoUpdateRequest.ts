@@ -1,4 +1,4 @@
-import {ContactBusinessAddressInfo, PronouncedNameInfo} from './index';
+import { ContactBusinessAddressInfo, PronouncedNameInfo } from './index';
 
 class ContactInfoUpdateRequest {
   /**

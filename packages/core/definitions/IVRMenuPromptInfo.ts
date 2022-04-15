@@ -1,4 +1,4 @@
-import {AudioPromptInfo, PromptLanguageInfo} from './index';
+import { AudioPromptInfo, PromptLanguageInfo } from './index';
 
 /**
  * Prompt metadata

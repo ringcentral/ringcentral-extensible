@@ -17,7 +17,7 @@ class DebugExtension extends SdkExtension {
   constructor(options: DebugOptions = {}) {
     super();
     this.options = options;
-    this.options.loggingAction ??= message => console.debug(message);
+    this.options.loggingAction ??= (message) => console.debug(message);
   }
 
   async install(rc: RingCentral) {
@@ -27,7 +27,7 @@ class DebugExtension extends SdkExtension {
       endpoint: string,
       content?: {},
       queryParams?: {},
-      config?: RestRequestConfig
+      config?: RestRequestConfig,
     ): Promise<RestResponse<T>> => {
       if (!this.enabled) {
         return request<T>(method, endpoint, content, queryParams, config);
@@ -37,7 +37,7 @@ class DebugExtension extends SdkExtension {
         endpoint,
         content,
         queryParams,
-        config
+        config,
       );
       this.options.loggingAction!(Utils.formatTraffic(r));
       return r;

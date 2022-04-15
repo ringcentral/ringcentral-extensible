@@ -1,15 +1,17 @@
-import {RestRequestConfig} from '../../../../Rest';
+import { RestRequestConfig } from '../../../../Rest';
 import {
   ListPermissionsParameters,
   PermissionCollectionResource,
   PermissionResource,
 } from '../../../../definitions';
 import Parent from '..';
-import {RingCentral} from '../../../..';
+import { RingCentral } from '../../../..';
 
 class Index {
   rc: RingCentral;
+
   parent: Parent;
+
   permissionId: string | null;
 
   constructor(parent: Parent, permissionId: string | null = null) {
@@ -17,12 +19,14 @@ class Index {
     this.rc = parent.rc;
     this.permissionId = permissionId;
   }
+
   path(withParameter = true): string {
     if (withParameter && this.permissionId !== null) {
       return `${this.parent.path()}/permission/${this.permissionId}`;
     }
     return `${this.parent.path()}/permission`;
   }
+
   /**
    * Returns a list of extension user permissions.
    * HTTP Method: get
@@ -31,12 +35,12 @@ class Index {
    */
   async list(
     queryParams?: ListPermissionsParameters,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<PermissionCollectionResource> {
     const r = await this.rc.get<PermissionCollectionResource>(
       this.path(false),
       queryParams,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }
@@ -48,7 +52,7 @@ class Index {
    * Rate Limit Group: Light
    */
   async get(
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<PermissionResource> {
     if (this.permissionId === null) {
       throw new Error('permissionId must be specified.');
@@ -56,7 +60,7 @@ class Index {
     const r = await this.rc.get<PermissionResource>(
       this.path(),
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }

@@ -1,4 +1,4 @@
-import {CallerIdDeviceInfoRequest, CallerIdByDeviceInfoRequest} from './index';
+import { CallerIdDeviceInfoRequest, CallerIdByDeviceInfoRequest } from './index';
 
 /**
  * Caller ID settings by device

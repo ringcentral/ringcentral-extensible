@@ -1,22 +1,25 @@
-import {RestRequestConfig} from '../../../../../Rest';
+import { RestRequestConfig } from '../../../../../Rest';
 import {
   ExtensionCallerIdInfo,
   ExtensionCallerIdInfoRequest,
 } from '../../../../../definitions';
 import Parent from '..';
-import {RingCentral} from '../../../../..';
+import { RingCentral } from '../../../../..';
 
 class Index {
   rc: RingCentral;
+
   parent: Parent;
 
   constructor(parent: Parent) {
     this.parent = parent;
     this.rc = parent.rc;
   }
+
   path(): string {
     return `${this.parent.path()}/caller-id`;
   }
+
   /**
    * Returns information on an outbound caller ID of an extension.
    * HTTP Method: get
@@ -26,12 +29,12 @@ class Index {
    * User Permission: ReadCallerIDSettings
    */
   async get(
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<ExtensionCallerIdInfo> {
     const r = await this.rc.get<ExtensionCallerIdInfo>(
       this.path(),
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }
@@ -46,13 +49,13 @@ class Index {
    */
   async put(
     extensionCallerIdInfoRequest: ExtensionCallerIdInfoRequest,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<ExtensionCallerIdInfo> {
     const r = await this.rc.put<ExtensionCallerIdInfo>(
       this.path(),
       extensionCallerIdInfoRequest,
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }

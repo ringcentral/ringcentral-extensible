@@ -1,4 +1,4 @@
-import {PhoneNumberInfoConferencing} from './index';
+import { PhoneNumberInfoConferencing } from './index';
 
 class GetConferencingInfoResponse {
   /**

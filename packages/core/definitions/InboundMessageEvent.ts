@@ -1,4 +1,4 @@
-import {NotificationInfo} from './index';
+import { NotificationInfo } from './index';
 
 class InboundMessageEvent {
   /**

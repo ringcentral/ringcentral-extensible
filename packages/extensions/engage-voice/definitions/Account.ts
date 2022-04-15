@@ -1,4 +1,4 @@
-import {DateTime, MainAccount} from './index';
+import { DateTime, MainAccount } from './index';
 
 class Account {
   accountId?: string;

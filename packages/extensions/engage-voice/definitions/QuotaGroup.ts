@@ -1,4 +1,4 @@
-import {CollectionCampaign, CollectionQuotaTarget} from './index';
+import { CollectionCampaign, CollectionQuotaTarget } from './index';
 
 class QuotaGroup {
   active?: boolean;

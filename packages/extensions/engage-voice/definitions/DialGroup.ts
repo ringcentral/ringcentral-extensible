@@ -1,4 +1,4 @@
-import {AgentDialGroupMember, Campaign} from './index';
+import { AgentDialGroupMember, Campaign } from './index';
 
 class DialGroup {
   agentDialGroupMembers?: AgentDialGroupMember[];

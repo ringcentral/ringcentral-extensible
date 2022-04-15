@@ -1,19 +1,22 @@
-import {RestRequestConfig} from '../../../../../Rest';
-import {AccountLockedSettingResponse} from '../../../../../definitions';
+import { RestRequestConfig } from '../../../../../Rest';
+import { AccountLockedSettingResponse } from '../../../../../definitions';
 import Parent from '..';
-import {RingCentral} from '../../../../..';
+import { RingCentral } from '../../../../..';
 
 class Index {
   rc: RingCentral;
+
   parent: Parent;
 
   constructor(parent: Parent) {
     this.parent = parent;
     this.rc = parent.rc;
   }
+
   path(): string {
     return `${this.parent.path()}/locked-settings`;
   }
+
   /**
    * Returns information on user meeting settings that are locked on account level and therefore cannot be changed by user.
    * HTTP Method: get
@@ -23,12 +26,12 @@ class Index {
    * User Permission: Meetings
    */
   async get(
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<AccountLockedSettingResponse> {
     const r = await this.rc.get<AccountLockedSettingResponse>(
       this.path(),
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }

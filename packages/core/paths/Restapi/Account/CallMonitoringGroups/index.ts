@@ -1,6 +1,6 @@
 import BulkAssign from './BulkAssign';
 import Members from './Members';
-import {RestRequestConfig} from '../../../../Rest';
+import { RestRequestConfig } from '../../../../Rest';
 import {
   ListCallMonitoringGroupsParameters,
   CallMonitoringGroups,
@@ -8,11 +8,13 @@ import {
   CallMonitoringGroup,
 } from '../../../../definitions';
 import Parent from '..';
-import {RingCentral} from '../../../..';
+import { RingCentral } from '../../../..';
 
 class Index {
   rc: RingCentral;
+
   parent: Parent;
+
   groupId: string | null;
 
   constructor(parent: Parent, groupId: string | null = null) {
@@ -20,12 +22,14 @@ class Index {
     this.rc = parent.rc;
     this.groupId = groupId;
   }
+
   path(withParameter = true): string {
     if (withParameter && this.groupId !== null) {
       return `${this.parent.path()}/call-monitoring-groups/${this.groupId}`;
     }
     return `${this.parent.path()}/call-monitoring-groups`;
   }
+
   /**
    * Returns call monitoring groups that can be filtered by some extension.
    * HTTP Method: get
@@ -36,12 +40,12 @@ class Index {
    */
   async get(
     queryParams?: ListCallMonitoringGroupsParameters,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<CallMonitoringGroups> {
     const r = await this.rc.get<CallMonitoringGroups>(
       this.path(false),
       queryParams,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }
@@ -56,13 +60,13 @@ class Index {
    */
   async post(
     createCallMonitoringGroupRequest: CreateCallMonitoringGroupRequest,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<CallMonitoringGroup> {
     const r = await this.rc.post<CallMonitoringGroup>(
       this.path(false),
       createCallMonitoringGroupRequest,
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }
@@ -77,7 +81,7 @@ class Index {
    */
   async put(
     createCallMonitoringGroupRequest: CreateCallMonitoringGroupRequest,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<CallMonitoringGroup> {
     if (this.groupId === null) {
       throw new Error('groupId must be specified.');
@@ -86,7 +90,7 @@ class Index {
       this.path(),
       createCallMonitoringGroupRequest,
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }
@@ -106,7 +110,7 @@ class Index {
     const r = await this.rc.delete<string>(
       this.path(),
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }

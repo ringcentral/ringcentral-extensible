@@ -1,4 +1,4 @@
-import {ExtensionUpdateShortResult, ErrorEntity} from './index';
+import { ExtensionUpdateShortResult, ErrorEntity } from './index';
 
 /**
  * Result record on multiple extension update task

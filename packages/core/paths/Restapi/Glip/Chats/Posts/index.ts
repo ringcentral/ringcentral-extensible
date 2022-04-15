@@ -1,4 +1,4 @@
-import {RestRequestConfig} from '../../../../../Rest';
+import { RestRequestConfig } from '../../../../../Rest';
 import {
   ReadGlipPostsParameters,
   GlipPostsList,
@@ -7,11 +7,13 @@ import {
   GlipPatchPostBody,
 } from '../../../../../definitions';
 import Parent from '..';
-import {RingCentral} from '../../../../..';
+import { RingCentral } from '../../../../..';
 
 class Index {
   rc: RingCentral;
+
   parent: Parent;
+
   postId: string | null;
 
   constructor(parent: Parent, postId: string | null = null) {
@@ -19,12 +21,14 @@ class Index {
     this.rc = parent.rc;
     this.postId = postId;
   }
+
   path(withParameter = true): string {
     if (withParameter && this.postId !== null) {
       return `${this.parent.path()}/posts/${this.postId}`;
     }
     return `${this.parent.path()}/posts`;
   }
+
   /**
    * Returns a list of posts from the specified chat.
    * HTTP Method: get
@@ -35,12 +39,12 @@ class Index {
    */
   async list(
     queryParams?: ReadGlipPostsParameters,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<GlipPostsList> {
     const r = await this.rc.get<GlipPostsList>(
       this.path(false),
       queryParams,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }
@@ -55,13 +59,13 @@ class Index {
    */
   async post(
     glipPostPostBody: GlipPostPostBody,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<GlipPostInfo> {
     const r = await this.rc.post<GlipPostInfo>(
       this.path(false),
       glipPostPostBody,
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }
@@ -81,7 +85,7 @@ class Index {
     const r = await this.rc.get<GlipPostInfo>(
       this.path(),
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }
@@ -101,7 +105,7 @@ class Index {
     const r = await this.rc.delete<string>(
       this.path(),
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }
@@ -116,7 +120,7 @@ class Index {
    */
   async patch(
     glipPatchPostBody: GlipPatchPostBody,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<GlipPostInfo> {
     if (this.postId === null) {
       throw new Error('postId must be specified.');
@@ -125,7 +129,7 @@ class Index {
       this.path(),
       glipPatchPostBody,
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }

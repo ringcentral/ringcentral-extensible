@@ -1,4 +1,4 @@
-import {RestRequestConfig} from '../../../../Rest';
+import { RestRequestConfig } from '../../../../Rest';
 import {
   ListTimezonesParameters,
   GetTimezoneListResponse,
@@ -6,11 +6,13 @@ import {
   GetTimezoneInfoResponse,
 } from '../../../../definitions';
 import Parent from '..';
-import {RingCentral} from '../../../..';
+import { RingCentral } from '../../../..';
 
 class Index {
   rc: RingCentral;
+
   parent: Parent;
+
   timezoneId: string | null;
 
   constructor(parent: Parent, timezoneId: string | null = null) {
@@ -18,12 +20,14 @@ class Index {
     this.rc = parent.rc;
     this.timezoneId = timezoneId;
   }
+
   path(withParameter = true): string {
     if (withParameter && this.timezoneId !== null) {
       return `${this.parent.path()}/timezone/${this.timezoneId}`;
     }
     return `${this.parent.path()}/timezone`;
   }
+
   /**
    * Returns all available timezones.
    * HTTP Method: get
@@ -32,12 +36,12 @@ class Index {
    */
   async list(
     queryParams?: ListTimezonesParameters,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<GetTimezoneListResponse> {
     const r = await this.rc.get<GetTimezoneListResponse>(
       this.path(false),
       queryParams,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }
@@ -50,7 +54,7 @@ class Index {
    */
   async get(
     queryParams?: ReadTimezoneParameters,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<GetTimezoneInfoResponse> {
     if (this.timezoneId === null) {
       throw new Error('timezoneId must be specified.');
@@ -58,7 +62,7 @@ class Index {
     const r = await this.rc.get<GetTimezoneInfoResponse>(
       this.path(),
       queryParams,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }

@@ -78,14 +78,14 @@ class GlipTaskInfo {
    * Font color of a post with the current task
    */
   color?:
-    | 'Black'
-    | 'Red'
-    | 'Orange'
-    | 'Yellow'
-    | 'Green'
-    | 'Blue'
-    | 'Purple'
-    | 'Magenta';
+  | 'Black'
+  | 'Red'
+  | 'Orange'
+  | 'Yellow'
+  | 'Green'
+  | 'Blue'
+  | 'Purple'
+  | 'Magenta';
 
   /**
    * Task section to group/search by

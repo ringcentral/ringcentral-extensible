@@ -14,12 +14,12 @@ class MessageAttachmentInfoIntId {
    * Type of message attachment
    */
   type?:
-    | 'AudioRecording'
-    | 'AudioTranscription'
-    | 'Text'
-    | 'SourceDocument'
-    | 'RenderedDocument'
-    | 'MmsAttachment';
+  | 'AudioRecording'
+  | 'AudioTranscription'
+  | 'Text'
+  | 'SourceDocument'
+  | 'RenderedDocument'
+  | 'MmsAttachment';
 
   /**
    * MIME type for a given attachment, for instance 'audio/wav'

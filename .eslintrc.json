@@ -1,10 +1,14 @@
 {
-  "extends": "./node_modules/gts/",
+  "root": true,
   "ignorePatterns": [
     "**/node_modules/**/*",
     "**/lib/**/*"
   ],
-  "rules": {
-    "node/no-extraneous-import": "off"
-  }
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "extends": [
+    "eslint-config-airbnb-base",
+    "eslint-config-airbnb-typescript/base"
+  ]
 }

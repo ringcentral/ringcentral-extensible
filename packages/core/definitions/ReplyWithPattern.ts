@@ -4,14 +4,14 @@ class ReplyWithPattern {
    * Example: OnMyWay
    */
   pattern?:
-    | 'WillCallYouBack'
-    | 'CallMeBack'
-    | 'OnMyWay'
-    | 'OnTheOtherLine'
-    | 'WillCallYouBackLater'
-    | 'CallMeBackLater'
-    | 'InAMeeting'
-    | 'OnTheOtherLineNoCall';
+  | 'WillCallYouBack'
+  | 'CallMeBack'
+  | 'OnMyWay'
+  | 'OnTheOtherLine'
+  | 'WillCallYouBackLater'
+  | 'CallMeBackLater'
+  | 'InAMeeting'
+  | 'OnTheOtherLineNoCall';
 
   /**
    * Number of time units. Applicable only to WillCallYouBack, CallMeBack patterns.

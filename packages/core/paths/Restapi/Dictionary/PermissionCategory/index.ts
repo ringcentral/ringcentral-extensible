@@ -1,15 +1,17 @@
-import {RestRequestConfig} from '../../../../Rest';
+import { RestRequestConfig } from '../../../../Rest';
 import {
   ListPermissionCategoriesParameters,
   PermissionCategoryCollectionResource,
   PermissionCategoryResource,
 } from '../../../../definitions';
 import Parent from '..';
-import {RingCentral} from '../../../..';
+import { RingCentral } from '../../../..';
 
 class Index {
   rc: RingCentral;
+
   parent: Parent;
+
   permissionCategoryId: string | null;
 
   constructor(parent: Parent, permissionCategoryId: string | null = null) {
@@ -17,6 +19,7 @@ class Index {
     this.rc = parent.rc;
     this.permissionCategoryId = permissionCategoryId;
   }
+
   path(withParameter = true): string {
     if (withParameter && this.permissionCategoryId !== null) {
       return `${this.parent.path()}/permission-category/${
@@ -25,6 +28,7 @@ class Index {
     }
     return `${this.parent.path()}/permission-category`;
   }
+
   /**
    * Returns the list of permission categories.
    * HTTP Method: get
@@ -33,12 +37,12 @@ class Index {
    */
   async list(
     queryParams?: ListPermissionCategoriesParameters,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<PermissionCategoryCollectionResource> {
     const r = await this.rc.get<PermissionCategoryCollectionResource>(
       this.path(false),
       queryParams,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }
@@ -50,7 +54,7 @@ class Index {
    * Rate Limit Group: Light
    */
   async get(
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<PermissionCategoryResource> {
     if (this.permissionCategoryId === null) {
       throw new Error('permissionCategoryId must be specified.');
@@ -58,7 +62,7 @@ class Index {
     const r = await this.rc.get<PermissionCategoryResource>(
       this.path(),
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }

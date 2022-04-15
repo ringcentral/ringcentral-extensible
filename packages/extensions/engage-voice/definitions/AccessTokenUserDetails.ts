@@ -1,4 +1,4 @@
-import {AgentV2, Contact} from './index';
+import { AgentV2, Contact } from './index';
 
 class AccessTokenUserDetails {
   accessToken?: string;

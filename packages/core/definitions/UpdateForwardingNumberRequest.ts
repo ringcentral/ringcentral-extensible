@@ -18,13 +18,13 @@ class UpdateForwardingNumberRequest {
    * Forwarding phone number type
    */
   type?:
-    | 'Home'
-    | 'Mobile'
-    | 'Work'
-    | 'PhoneLine'
-    | 'Outage'
-    | 'Other'
-    | 'BusinessMobilePhone'
-    | 'ExternalCarrier';
+  | 'Home'
+  | 'Mobile'
+  | 'Work'
+  | 'PhoneLine'
+  | 'Outage'
+  | 'Other'
+  | 'BusinessMobilePhone'
+  | 'ExternalCarrier';
 }
 export default UpdateForwardingNumberRequest;

@@ -1,19 +1,22 @@
-import {RestRequestConfig} from '../../../../Rest';
-import {MessageStoreConfiguration} from '../../../../definitions';
+import { RestRequestConfig } from '../../../../Rest';
+import { MessageStoreConfiguration } from '../../../../definitions';
 import Parent from '..';
-import {RingCentral} from '../../../..';
+import { RingCentral } from '../../../..';
 
 class Index {
   rc: RingCentral;
+
   parent: Parent;
 
   constructor(parent: Parent) {
     this.parent = parent;
     this.rc = parent.rc;
   }
+
   path(): string {
     return `${this.parent.path()}/message-store-configuration`;
   }
+
   /**
    * Returns message store settings.
    * HTTP Method: get
@@ -23,12 +26,12 @@ class Index {
    * User Permission: AccountAdministration
    */
   async get(
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<MessageStoreConfiguration> {
     const r = await this.rc.get<MessageStoreConfiguration>(
       this.path(),
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }
@@ -43,13 +46,13 @@ class Index {
    */
   async put(
     messageStoreConfiguration: MessageStoreConfiguration,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<MessageStoreConfiguration> {
     const r = await this.rc.put<MessageStoreConfiguration>(
       this.path(),
       messageStoreConfiguration,
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }

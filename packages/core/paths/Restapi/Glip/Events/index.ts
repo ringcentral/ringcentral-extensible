@@ -1,4 +1,4 @@
-import {RestRequestConfig} from '../../../../Rest';
+import { RestRequestConfig } from '../../../../Rest';
 import {
   ReadGlipEventsParameters,
   GlipEventsInfo,
@@ -6,11 +6,13 @@ import {
   GlipEventInfo,
 } from '../../../../definitions';
 import Parent from '..';
-import {RingCentral} from '../../../..';
+import { RingCentral } from '../../../..';
 
 class Index {
   rc: RingCentral;
+
   parent: Parent;
+
   eventId: string | null;
 
   constructor(parent: Parent, eventId: string | null = null) {
@@ -18,12 +20,14 @@ class Index {
     this.rc = parent.rc;
     this.eventId = eventId;
   }
+
   path(withParameter = true): string {
     if (withParameter && this.eventId !== null) {
       return `${this.parent.path()}/events/${this.eventId}`;
     }
     return `${this.parent.path()}/events`;
   }
+
   /**
    * Returns all calendar events created by the current user.
    * HTTP Method: get
@@ -34,12 +38,12 @@ class Index {
    */
   async list(
     queryParams?: ReadGlipEventsParameters,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<GlipEventsInfo> {
     const r = await this.rc.get<GlipEventsInfo>(
       this.path(false),
       queryParams,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }
@@ -54,13 +58,13 @@ class Index {
    */
   async post(
     glipEventCreate: GlipEventCreate,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<GlipEventInfo> {
     const r = await this.rc.post<GlipEventInfo>(
       this.path(false),
       glipEventCreate,
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }
@@ -80,7 +84,7 @@ class Index {
     const r = await this.rc.get<GlipEventInfo>(
       this.path(),
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }
@@ -95,7 +99,7 @@ class Index {
    */
   async put(
     glipEventCreate: GlipEventCreate,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<GlipEventInfo> {
     if (this.eventId === null) {
       throw new Error('eventId must be specified.');
@@ -104,7 +108,7 @@ class Index {
       this.path(),
       glipEventCreate,
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }
@@ -124,7 +128,7 @@ class Index {
     const r = await this.rc.delete<string>(
       this.path(),
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }

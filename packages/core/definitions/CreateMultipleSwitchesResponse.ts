@@ -1,4 +1,4 @@
-import {BulkTaskInfoSwUpdate} from './index';
+import { BulkTaskInfoSwUpdate } from './index';
 
 /**
  * Information on the task for multiple switches creation

@@ -1,4 +1,4 @@
-import {CollectionCustomDialZone} from './index';
+import { CollectionCustomDialZone } from './index';
 
 class CustomDialZoneGroups {
   accountId?: string;

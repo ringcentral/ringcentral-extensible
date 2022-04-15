@@ -1,4 +1,4 @@
-import {APNSInfo} from './index';
+import { APNSInfo } from './index';
 
 class MissedCallEvent {
   /**

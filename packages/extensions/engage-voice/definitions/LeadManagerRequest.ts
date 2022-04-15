@@ -1,4 +1,4 @@
-import {CampaignLeadSearchCriteria, LeadActionParams} from './index';
+import { CampaignLeadSearchCriteria, LeadActionParams } from './index';
 
 class LeadManagerRequest {
   campaignLeadSearchCriteria?: CampaignLeadSearchCriteria;

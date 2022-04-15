@@ -42,11 +42,11 @@ class UserPhoneNumberInfo {
    * Payment type. 'External' is returned for forwarded numbers which are not terminated in the RingCentral phone system
    */
   paymentType?:
-    | 'External'
-    | 'TollFree'
-    | 'Local'
-    | 'BusinessMobileNumberProvider'
-    | 'ExternalNumberProvider';
+  | 'External'
+  | 'TollFree'
+  | 'Local'
+  | 'BusinessMobileNumberProvider'
+  | 'ExternalNumberProvider';
 
   /**
    * Phone number
@@ -72,18 +72,18 @@ class UserPhoneNumberInfo {
    * Usage type of a phone number. Numbers of 'NumberPool' type will not be returned for phone number list requests
    */
   usageType?:
-    | 'MainCompanyNumber'
-    | 'AdditionalCompanyNumber'
-    | 'CompanyNumber'
-    | 'DirectNumber'
-    | 'CompanyFaxNumber'
-    | 'ForwardedNumber'
-    | 'ForwardedCompanyNumber'
-    | 'ContactCenterNumber'
-    | 'ConferencingNumber'
-    | 'NumberPool'
-    | 'BusinessMobileNumber'
-    | 'IntegrationNumber';
+  | 'MainCompanyNumber'
+  | 'AdditionalCompanyNumber'
+  | 'CompanyNumber'
+  | 'DirectNumber'
+  | 'CompanyFaxNumber'
+  | 'ForwardedNumber'
+  | 'ForwardedCompanyNumber'
+  | 'ContactCenterNumber'
+  | 'ConferencingNumber'
+  | 'NumberPool'
+  | 'BusinessMobileNumber'
+  | 'IntegrationNumber';
 
   /**
    * List of features of a phone number

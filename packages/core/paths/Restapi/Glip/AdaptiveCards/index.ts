@@ -1,15 +1,17 @@
-import {RestRequestConfig} from '../../../../Rest';
+import { RestRequestConfig } from '../../../../Rest';
 import {
   GlipAdaptiveCardInfo,
   GlipAdaptiveCardRequest,
   GlipAdaptiveCardShortInfo,
 } from '../../../../definitions';
 import Parent from '..';
-import {RingCentral} from '../../../..';
+import { RingCentral } from '../../../..';
 
 class Index {
   rc: RingCentral;
+
   parent: Parent;
+
   cardId: string | null;
 
   constructor(parent: Parent, cardId: string | null = null) {
@@ -17,12 +19,14 @@ class Index {
     this.rc = parent.rc;
     this.cardId = cardId;
   }
+
   path(withParameter = true): string {
     if (withParameter && this.cardId !== null) {
       return `${this.parent.path()}/adaptive-cards/${this.cardId}`;
     }
     return `${this.parent.path()}/adaptive-cards`;
   }
+
   /**
    * Returns adaptive card(s) with given id(s).
    * HTTP Method: get
@@ -32,7 +36,7 @@ class Index {
    * User Permission: Glip
    */
   async get(
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<GlipAdaptiveCardInfo> {
     if (this.cardId === null) {
       throw new Error('cardId must be specified.');
@@ -40,7 +44,7 @@ class Index {
     const r = await this.rc.get<GlipAdaptiveCardInfo>(
       this.path(),
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }
@@ -55,7 +59,7 @@ class Index {
    */
   async put(
     glipAdaptiveCardRequest: GlipAdaptiveCardRequest,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<GlipAdaptiveCardShortInfo> {
     if (this.cardId === null) {
       throw new Error('cardId must be specified.');
@@ -64,7 +68,7 @@ class Index {
       this.path(),
       glipAdaptiveCardRequest,
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }
@@ -84,7 +88,7 @@ class Index {
     const r = await this.rc.delete<string>(
       this.path(),
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }

@@ -1,4 +1,4 @@
-import {createRingCentral} from './utils';
+import { createRingCentral } from './utils';
 
 describe('HTTP GET', () => {
   test('get extension info', async () => {

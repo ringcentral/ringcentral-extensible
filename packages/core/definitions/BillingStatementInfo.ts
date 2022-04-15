@@ -1,4 +1,4 @@
-import {BillingStatementCharges, BillingStatementFees} from './index';
+import { BillingStatementCharges, BillingStatementFees } from './index';
 
 /**
  * Billing information. Returned for device update request if `prestatement` query parameter is set to 'true'

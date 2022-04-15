@@ -1,4 +1,4 @@
-import {MeetingExternalUserInfoResource} from './index';
+import { MeetingExternalUserInfoResource } from './index';
 
 class MeetingServiceInfoRequest {
   /**

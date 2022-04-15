@@ -1,13 +1,15 @@
 import Activate from './Activate';
 import Suspend from './Suspend';
-import {RestRequestConfig} from '../../../../Rest';
-import {GlipWebhookList} from '../../../../definitions';
+import { RestRequestConfig } from '../../../../Rest';
+import { GlipWebhookList } from '../../../../definitions';
 import Parent from '..';
-import {RingCentral} from '../../../..';
+import { RingCentral } from '../../../..';
 
 class Index {
   rc: RingCentral;
+
   parent: Parent;
+
   webhookId: string | null;
 
   constructor(parent: Parent, webhookId: string | null = null) {
@@ -15,12 +17,14 @@ class Index {
     this.rc = parent.rc;
     this.webhookId = webhookId;
   }
+
   path(withParameter = true): string {
     if (withParameter && this.webhookId !== null) {
       return `${this.parent.path()}/webhooks/${this.webhookId}`;
     }
     return `${this.parent.path()}/webhooks`;
   }
+
   /**
    * Returns the list of all webhooks associated with the current account.
    * HTTP Method: get
@@ -33,7 +37,7 @@ class Index {
     const r = await this.rc.get<GlipWebhookList>(
       this.path(false),
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }
@@ -53,7 +57,7 @@ class Index {
     const r = await this.rc.get<GlipWebhookList>(
       this.path(),
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }
@@ -73,7 +77,7 @@ class Index {
     const r = await this.rc.delete<string>(
       this.path(),
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }

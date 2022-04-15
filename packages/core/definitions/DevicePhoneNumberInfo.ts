@@ -1,4 +1,4 @@
-import {DevicePhoneNumberCountryInfo} from './index';
+import { DevicePhoneNumberCountryInfo } from './index';
 
 /**
  * Phone number information
@@ -27,14 +27,14 @@ class DevicePhoneNumberInfo {
   /**
    */
   usageType?:
-    | 'CompanyNumber'
-    | 'MainCompanyNumber'
-    | 'AdditionalCompanyNumber'
-    | 'DirectNumber'
-    | 'CompanyFaxNumber'
-    | 'ForwardedNumber'
-    | 'ForwardedCompanyNumber'
-    | 'ContactCenterNumber';
+  | 'CompanyNumber'
+  | 'MainCompanyNumber'
+  | 'AdditionalCompanyNumber'
+  | 'DirectNumber'
+  | 'CompanyFaxNumber'
+  | 'ForwardedNumber'
+  | 'ForwardedCompanyNumber'
+  | 'ContactCenterNumber';
 
   /**
    * Type of a phone number

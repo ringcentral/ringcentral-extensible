@@ -1,4 +1,4 @@
-import {ApplicationContext} from './index';
+import { ApplicationContext } from './index';
 
 class RedirectView {
   applicationContext?: ApplicationContext;

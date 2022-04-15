@@ -1,4 +1,4 @@
-import {KeyInfo, TimelineDataPoint} from './index';
+import { KeyInfo, TimelineDataPoint } from './index';
 
 class TimelineData {
   /**

@@ -1,4 +1,4 @@
-import {FaxMessageEventBody} from './index';
+import { FaxMessageEventBody } from './index';
 
 class FaxMessageEvent {
   /**

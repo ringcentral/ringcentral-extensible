@@ -1,4 +1,4 @@
-import {PartyInfo, OwnerInfo, CallStatusInfo} from './index';
+import { PartyInfo, OwnerInfo, CallStatusInfo } from './index';
 
 class PartySuperviseResponse {
   /**

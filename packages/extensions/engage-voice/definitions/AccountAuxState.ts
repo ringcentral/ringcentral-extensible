@@ -1,4 +1,4 @@
-import {BaseAgentState} from './index';
+import { BaseAgentState } from './index';
 
 class AccountAuxState {
   agentAuxState?: string;

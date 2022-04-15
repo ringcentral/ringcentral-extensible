@@ -1,4 +1,4 @@
-import {CreateSwitchInfo} from './index';
+import { CreateSwitchInfo } from './index';
 
 class CreateMultipleSwitchesRequest {
   /**

@@ -8,8 +8,8 @@ import qs from 'qs';
 import FormData from 'form-data';
 
 import RestException from './RestException';
-import {TokenInfo} from './definitions';
-import {version} from './package.json';
+import { TokenInfo } from './definitions';
+import { version } from './package.json';
 
 export type RestOptions = {
   server?: string;
@@ -27,13 +27,19 @@ export type RestRequestConfig = AxiosRequestConfig;
 
 export default class Rest {
   static sandboxServer = 'https://platform.devtest.ringcentral.com';
+
   static productionServer = 'https://platform.ringcentral.com';
 
   server: string;
+
   clientId: string;
+
   clientSecret?: string;
+
   token?: TokenInfo;
+
   appName: string;
+
   appVersion: string;
 
   httpClient: AxiosInstance;
@@ -50,19 +56,15 @@ export default class Rest {
       headers: {
         'X-User-Agent': `${this.appName}/${this.appVersion} ringcentral-extensible/core/${version}`,
       },
-      validateStatus: () => {
-        return true;
-      },
-      paramsSerializer: params => {
-        return qs.stringify(params, {arrayFormat: 'repeat'});
-      },
+      validateStatus: () => true,
+      paramsSerializer: (params) => qs.stringify(params, { arrayFormat: 'repeat' }),
     });
 
-    this.httpClient.interceptors.request.use(config => {
+    this.httpClient.interceptors.request.use((config) => {
       if (config.data instanceof FormData && config.data.getHeaders) {
         return {
           ...config,
-          headers: {...config.headers, ...config.data.getHeaders()},
+          headers: { ...config.headers, ...config.data.getHeaders() },
         };
       }
       return config;
@@ -74,7 +76,7 @@ export default class Rest {
     endpoint: string,
     content?: {},
     queryParams?: {},
-    config?: RestRequestConfig
+    config?: RestRequestConfig,
   ): Promise<RestResponse<T>> {
     const _config: RestRequestConfig = {
       baseURL: this.server,
@@ -86,8 +88,8 @@ export default class Rest {
     };
     // /restapi/oauth/wstoken uses bearer token
     if (
-      endpoint === '/restapi/oauth/token' ||
-      endpoint === '/restapi/oauth/revoke'
+      endpoint === '/restapi/oauth/token'
+      || endpoint === '/restapi/oauth/revoke'
     ) {
       if (this.clientSecret) {
         // basic token
@@ -109,8 +111,7 @@ export default class Rest {
 
     if (r.status >= 200 && r.status < 300) {
       return r;
-    } else {
-      throw new RestException(r);
     }
+    throw new RestException(r);
   }
 }

@@ -1,4 +1,4 @@
-import {CallQueuePresenceEventBody} from './index';
+import { CallQueuePresenceEventBody } from './index';
 
 class CallQueuePresenceEvent {
   /**

@@ -1,4 +1,4 @@
-import {LocationStateInfo} from './index';
+import { LocationStateInfo } from './index';
 
 class LocationInfo {
   /**

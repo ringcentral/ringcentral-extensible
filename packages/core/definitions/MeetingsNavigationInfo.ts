@@ -1,4 +1,4 @@
-import {MeetingsNavigationInfoUri} from './index';
+import { MeetingsNavigationInfoUri } from './index';
 
 class MeetingsNavigationInfo {
   /**

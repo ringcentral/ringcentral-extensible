@@ -1,4 +1,4 @@
-import {RestRequestConfig} from '../../../../../Rest';
+import { RestRequestConfig } from '../../../../../Rest';
 import {
   ReadUserCallLogParameters,
   UserCallLogResponse,
@@ -7,11 +7,13 @@ import {
   UserCallLogRecord,
 } from '../../../../../definitions';
 import Parent from '..';
-import {RingCentral} from '../../../../..';
+import { RingCentral } from '../../../../..';
 
 class Index {
   rc: RingCentral;
+
   parent: Parent;
+
   callRecordId: string | null;
 
   constructor(parent: Parent, callRecordId: string | null = null) {
@@ -19,12 +21,14 @@ class Index {
     this.rc = parent.rc;
     this.callRecordId = callRecordId;
   }
+
   path(withParameter = true): string {
     if (withParameter && this.callRecordId !== null) {
       return `${this.parent.path()}/call-log/${this.callRecordId}`;
     }
     return `${this.parent.path()}/call-log`;
   }
+
   /**
    * Returns call log records filtered by parameters specified.
    * HTTP Method: get
@@ -35,12 +39,12 @@ class Index {
    */
   async list(
     queryParams?: ReadUserCallLogParameters,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<UserCallLogResponse> {
     const r = await this.rc.get<UserCallLogResponse>(
       this.path(false),
       queryParams,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }
@@ -55,12 +59,12 @@ class Index {
    */
   async delete(
     queryParams?: DeleteUserCallLogParameters,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<string> {
     const r = await this.rc.delete<string>(
       this.path(false),
       queryParams,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }
@@ -75,7 +79,7 @@ class Index {
    */
   async get(
     queryParams?: ReadUserCallRecordParameters,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<UserCallLogRecord> {
     if (this.callRecordId === null) {
       throw new Error('callRecordId must be specified.');
@@ -83,7 +87,7 @@ class Index {
     const r = await this.rc.get<UserCallLogRecord>(
       this.path(),
       queryParams,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }

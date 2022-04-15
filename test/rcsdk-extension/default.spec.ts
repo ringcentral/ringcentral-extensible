@@ -16,7 +16,7 @@ describe('RingCentral extension', () => {
     });
 
     const rc = new RingCentral();
-    const rcSdkExtension = new RcSdkExtension({rcSdk: sdk});
+    const rcSdkExtension = new RcSdkExtension({ rcSdk: sdk });
     await rc.installExtension(rcSdkExtension);
 
     const extensionInfo = await rc.restapi().account().extension().get();

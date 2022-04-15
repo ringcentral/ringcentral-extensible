@@ -1,4 +1,4 @@
-import {createRingCentral} from './utils';
+import { createRingCentral } from './utils';
 
 describe('message store', () => {
   test('every inbound fax should have from info', async () => {
@@ -18,8 +18,8 @@ describe('message store', () => {
       return;
     }
     expect(messageList.records?.length).toBeGreaterThan(0);
-    expect(messageList.records?.filter(r => 'from' in r).length).toBe(
-      messageList.records?.length
+    expect(messageList.records?.filter((r) => 'from' in r).length).toBe(
+      messageList.records?.length,
     );
     const messageInfo = await rc
       .restapi()

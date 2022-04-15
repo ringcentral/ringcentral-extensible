@@ -1,4 +1,4 @@
-import {CustomFieldResource} from './index';
+import { CustomFieldResource } from './index';
 
 class CustomFieldsResource {
   /**

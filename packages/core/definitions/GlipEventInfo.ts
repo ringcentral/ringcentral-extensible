@@ -55,14 +55,14 @@ class GlipEventInfo {
    * Default: Black
    */
   color?:
-    | 'Black'
-    | 'Red'
-    | 'Orange'
-    | 'Yellow'
-    | 'Green'
-    | 'Blue'
-    | 'Purple'
-    | 'Magenta';
+  | 'Black'
+  | 'Red'
+  | 'Orange'
+  | 'Yellow'
+  | 'Green'
+  | 'Blue'
+  | 'Purple'
+  | 'Magenta';
 
   /**
    * Event location

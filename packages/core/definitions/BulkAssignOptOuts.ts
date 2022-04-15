@@ -1,4 +1,4 @@
-import {OptOutBulkAssignFailedEntry} from './index';
+import { OptOutBulkAssignFailedEntry } from './index';
 
 /**
  * Contains successfull and failed opt-outs

@@ -1,30 +1,32 @@
 import _FormData from 'form-data';
 
-import {Attachment} from './definitions';
-import {RestResponse} from './Rest';
+import { Attachment } from './definitions';
+import { RestResponse } from './Rest';
 
 class FormData extends _FormData {
   readableParts: string[] = [];
+
   toJSON(): string {
     return this.readableParts.join('\n');
   }
+
   append(
     key: string,
     value: string | Buffer | Blob | NodeJS.ReadableStream,
-    options?: {filename?: string; contentType?: string}
+    options?: { filename?: string; contentType?: string },
   ): void {
     this.readableParts.push(
       JSON.stringify({
         ...options,
         content: typeof value === 'string' ? value : '<binary data>',
-      })
+      }),
     );
     if (typeof Blob !== 'undefined') {
       // for browser
       if (typeof value === 'string') {
         // plain text file
         // eslint-disable-next-line no-undef
-        value = new Blob([value], {type: options?.contentType});
+        value = new Blob([value], { type: options?.contentType });
       }
       super.append(key, value, options?.filename);
     } else {
@@ -41,38 +43,38 @@ class Utils {
 
     Response:
     ${JSON.stringify(
-      {
-        data: r.data,
-        status: r.status,
-        statusText: r.statusText,
-        headers: r.headers,
-      },
-      null,
-      2
-    )}
+    {
+      data: r.data,
+      status: r.status,
+      statusText: r.statusText,
+      headers: r.headers,
+    },
+    null,
+    2,
+  )}
 
     Request:
     ${JSON.stringify(
-      {
-        method: r.config.method,
-        baseURL: r.config.baseURL,
-        url: r.config.url,
-        params: r.config.params,
-        data: r.config.data,
-        headers: r.config.headers,
-      },
-      null,
-      2
-    )}
+    {
+      method: r.config.method,
+      baseURL: r.config.baseURL,
+      url: r.config.url,
+      params: r.config.params,
+      data: r.config.data,
+      headers: r.config.headers,
+    },
+    null,
+    2,
+  )}
     `;
   }
 
   static isAttachment(obj: {}): boolean {
     return (
-      typeof obj === 'object' &&
-      obj !== null &&
-      'filename' in obj &&
-      'content' in obj
+      typeof obj === 'object'
+      && obj !== null
+      && 'filename' in obj
+      && 'content' in obj
     );
   }
 

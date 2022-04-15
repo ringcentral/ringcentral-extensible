@@ -1,5 +1,5 @@
 import Content from './Content';
-import {RestRequestConfig} from '../../../../../Rest';
+import { RestRequestConfig } from '../../../../../Rest';
 import {
   ListMessagesParameters,
   GetMessageList,
@@ -10,11 +10,13 @@ import {
   DeleteMessageParameters,
 } from '../../../../../definitions';
 import Parent from '..';
-import {RingCentral} from '../../../../..';
+import { RingCentral } from '../../../../..';
 
 class Index {
   rc: RingCentral;
+
   parent: Parent;
+
   messageId: string | null;
 
   constructor(parent: Parent, messageId: string | null = null) {
@@ -22,12 +24,14 @@ class Index {
     this.rc = parent.rc;
     this.messageId = messageId;
   }
+
   path(withParameter = true): string {
     if (withParameter && this.messageId !== null) {
       return `${this.parent.path()}/message-store/${this.messageId}`;
     }
     return `${this.parent.path()}/message-store`;
   }
+
   /**
    * Returns the list of messages from an extension mailbox.
    * HTTP Method: get
@@ -38,12 +42,12 @@ class Index {
    */
   async list(
     queryParams?: ListMessagesParameters,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<GetMessageList> {
     const r = await this.rc.get<GetMessageList>(
       this.path(false),
       queryParams,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }
@@ -58,12 +62,12 @@ class Index {
    */
   async deleteAll(
     queryParams?: DeleteMessageByFilterParameters,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<string> {
     const r = await this.rc.delete<string>(
       this.path(false),
       queryParams,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }
@@ -77,7 +81,7 @@ class Index {
    * User Permission: ReadMessages
    */
   async get(
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<GetMessageInfoResponse> {
     if (this.messageId === null) {
       throw new Error('messageId must be specified.');
@@ -85,7 +89,7 @@ class Index {
     const r = await this.rc.get<GetMessageInfoResponse>(
       this.path(),
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }
@@ -101,7 +105,7 @@ class Index {
   async put(
     updateMessageRequest: UpdateMessageRequest,
     queryParams?: UpdateMessageParameters,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<GetMessageInfoResponse> {
     if (this.messageId === null) {
       throw new Error('messageId must be specified.');
@@ -110,7 +114,7 @@ class Index {
       this.path(),
       updateMessageRequest,
       queryParams,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }
@@ -125,7 +129,7 @@ class Index {
    */
   async delete(
     queryParams?: DeleteMessageParameters,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<string> {
     if (this.messageId === null) {
       throw new Error('messageId must be specified.');
@@ -133,7 +137,7 @@ class Index {
     const r = await this.rc.delete<string>(
       this.path(),
       queryParams,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }

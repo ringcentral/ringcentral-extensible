@@ -1,4 +1,4 @@
-import {DeviceProvisioningNavigationInfoUri} from './index';
+import { DeviceProvisioningNavigationInfoUri } from './index';
 
 /**
  * Information on navigation

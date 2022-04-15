@@ -1,4 +1,4 @@
-import {SiteResource} from './index';
+import { SiteResource } from './index';
 
 /**
  * Call queue member information

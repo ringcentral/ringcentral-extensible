@@ -1,4 +1,4 @@
-import {CallerIdDeviceInfo, CallerIdByDeviceInfo} from './index';
+import { CallerIdDeviceInfo, CallerIdByDeviceInfo } from './index';
 
 /**
  * Caller ID settings by device

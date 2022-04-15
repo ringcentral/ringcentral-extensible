@@ -2,11 +2,13 @@ import BulkAssign from './BulkAssign';
 import Devices from './Devices';
 import Users from './Users';
 import Parent from '..';
-import {RingCentral} from '../../../..';
+import { RingCentral } from '../../../..';
 
 class Index {
   rc: RingCentral;
+
   parent: Parent;
+
   pagingOnlyGroupId: string | null;
 
   constructor(parent: Parent, pagingOnlyGroupId: string | null = null) {
@@ -14,6 +16,7 @@ class Index {
     this.rc = parent.rc;
     this.pagingOnlyGroupId = pagingOnlyGroupId;
   }
+
   path(withParameter = true): string {
     if (withParameter && this.pagingOnlyGroupId !== null) {
       return `${this.parent.path()}/paging-only-groups/${

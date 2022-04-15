@@ -1,4 +1,4 @@
-import {ADGError} from './index';
+import { ADGError } from './index';
 
 /**
  * Format of response in case that any error occurred during request processing

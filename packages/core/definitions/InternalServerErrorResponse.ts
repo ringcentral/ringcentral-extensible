@@ -1,4 +1,4 @@
-import {ErrorBody} from './index';
+import { ErrorBody } from './index';
 
 class InternalServerErrorResponse {
   /**

@@ -1,4 +1,4 @@
-import {AccountView, User} from './index';
+import { AccountView, User } from './index';
 
 class UserLoginView {
   accounts?: AccountView[];

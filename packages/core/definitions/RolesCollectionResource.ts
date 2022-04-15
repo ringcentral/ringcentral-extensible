@@ -1,4 +1,4 @@
-import {RoleResource, RNPPagingInfo, RNPNavigationInfo} from './index';
+import { RoleResource, RNPPagingInfo, RNPNavigationInfo } from './index';
 
 class RolesCollectionResource {
   /**

@@ -1,4 +1,4 @@
-import {LeadListPagePreview} from './index';
+import { LeadListPagePreview } from './index';
 
 class LeadListPreviewResponse {
   mappingColumns?: string[];

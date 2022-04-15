@@ -1,4 +1,4 @@
-import {GlipCreatorInfo, LastModifiedByInfo, LockedByInfo} from './index';
+import { GlipCreatorInfo, LastModifiedByInfo, LockedByInfo } from './index';
 
 class GetGlipNoteInfo {
   /**

@@ -1,4 +1,4 @@
-import {ChatGroupSkill, ChatQueue, DateTime} from './index';
+import { ChatGroupSkill, ChatQueue, DateTime } from './index';
 
 class ChatGroup {
   billingKey?: string;

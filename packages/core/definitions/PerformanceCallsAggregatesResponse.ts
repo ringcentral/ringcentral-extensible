@@ -1,4 +1,4 @@
-import {ResponsePaging, PerformanceCallsData} from './index';
+import { ResponsePaging, PerformanceCallsData } from './index';
 
 class PerformanceCallsAggregatesResponse {
   /**

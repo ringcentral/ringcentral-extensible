@@ -1,8 +1,9 @@
-import {RestMethod, RestResponse} from './Rest';
-import {GetTokenRequest, TokenInfo} from './definitions';
+import Rest, {
+  RestMethod, RestResponse, RestOptions, RestRequestConfig,
+} from './Rest';
+import { GetTokenRequest, TokenInfo } from './definitions';
 import Restapi from './paths/Restapi';
 import Scim from './paths/Scim';
-import Rest, {RestOptions, RestRequestConfig} from './Rest';
 import SdkExtension from './SdkExtension';
 import Analytics from './paths/Analytics';
 import RestException from './RestException';
@@ -27,7 +28,7 @@ interface Logger {
 }
 
 export class RingCentral {
-  static config: {logger: Logger} = {
+  static config: { logger: Logger } = {
     logger: {
       debug: () => {},
       log: () => {},
@@ -38,6 +39,7 @@ export class RingCentral {
   };
 
   sdkExtensions: SdkExtension[] = [];
+
   rest: Rest;
 
   constructor(restOptions?: RestOptions) {
@@ -52,6 +54,7 @@ export class RingCentral {
   get token() {
     return this.rest.token;
   }
+
   set token(token) {
     this.rest.token = token;
   }
@@ -61,7 +64,7 @@ export class RingCentral {
     endpoint: string,
     content?: {},
     queryParams?: {},
-    config?: RestRequestConfig
+    config?: RestRequestConfig,
   ): Promise<RestResponse<T>> {
     try {
       const r = await this.rest.request<T>(
@@ -69,12 +72,12 @@ export class RingCentral {
         endpoint,
         content,
         queryParams,
-        config
+        config,
       );
       RingCentral.config.logger.info(
         `[${new Date().toLocaleString()} HTTP ${method} ${r.status} ${
           r.statusText
-        }] ${this.rest.server} ${endpoint}`
+        }] ${this.rest.server} ${endpoint}`,
       );
       return r;
     } catch (e) {
@@ -84,7 +87,7 @@ export class RingCentral {
         RingCentral.config.logger.info(
           `[${new Date().toLocaleString()} HTTP ${method} ${r.status} ${
             r.statusText
-          }] ${this.rest.server} ${endpoint}`
+          }] ${this.rest.server} ${endpoint}`,
         );
       }
       throw e;
@@ -94,38 +97,42 @@ export class RingCentral {
   async get<T>(
     endpoint: string,
     queryParams?: {},
-    config?: RestRequestConfig
+    config?: RestRequestConfig,
   ): Promise<RestResponse<T>> {
     return this.request<T>('GET', endpoint, undefined, queryParams, config);
   }
+
   async delete<T>(
     endpoint: string,
     queryParams?: {},
-    config?: RestRequestConfig
+    config?: RestRequestConfig,
   ): Promise<RestResponse<T>> {
     return this.request<T>('DELETE', endpoint, undefined, queryParams, config);
   }
+
   async post<T>(
     endpoint: string,
     content?: {},
     queryParams?: {},
-    config?: RestRequestConfig
+    config?: RestRequestConfig,
   ): Promise<RestResponse<T>> {
     return this.request<T>('POST', endpoint, content, queryParams, config);
   }
+
   async put<T>(
     endpoint: string,
     content?: {},
     queryParams?: {},
-    config?: RestRequestConfig
+    config?: RestRequestConfig,
   ): Promise<RestResponse<T>> {
     return this.request<T>('PUT', endpoint, content, queryParams, config);
   }
+
   async patch<T>(
     endpoint: string,
     content: {},
     queryParams?: {},
-    config?: RestRequestConfig
+    config?: RestRequestConfig,
   ): Promise<RestResponse<T>> {
     return this.request<T>('PATCH', endpoint, content, queryParams, config);
   }
@@ -137,7 +144,7 @@ export class RingCentral {
   }
 
   async authorize(
-    options: PasswordFlowOptions | AuthCodeFlowOptions
+    options: PasswordFlowOptions | AuthCodeFlowOptions,
   ): Promise<TokenInfo> {
     const getTokenRequest = new GetTokenRequest();
     if ('username' in options) {
@@ -213,9 +220,8 @@ export class RingCentral {
       // no clientId or clientSecret, the token is from external source, cannot revoke
       return;
     }
-    tokenToRevoke =
-      tokenToRevoke ?? this.token?.access_token ?? this.token?.refresh_token;
-    await this.restapi(null).oauth().revoke().post({token: tokenToRevoke});
+    tokenToRevoke = tokenToRevoke ?? this.token?.access_token ?? this.token?.refresh_token;
+    await this.restapi(null).oauth().revoke().post({ token: tokenToRevoke });
     this.token = undefined;
   }
 

@@ -1,4 +1,4 @@
-import {ArchiveInfo} from './index';
+import { ArchiveInfo } from './index';
 
 class MessageStoreReportArchive {
   /**

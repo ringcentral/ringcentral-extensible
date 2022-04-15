@@ -7,18 +7,18 @@ class AggregatePerformanceCallsGrouping {
    * Required
    */
   groupBy?:
-    | 'CompanyNumbers'
-    | 'Users'
-    | 'Queues'
-    | 'IVRs'
-    | 'SharedLines'
-    | 'UserGroups'
-    | 'Sites'
-    | 'Departments'
-    | 'DepartmentMembers'
-    | 'UserGroupMembers'
-    | 'QueueAgents'
-    | 'SiteMembers';
+  | 'CompanyNumbers'
+  | 'Users'
+  | 'Queues'
+  | 'IVRs'
+  | 'SharedLines'
+  | 'UserGroups'
+  | 'Sites'
+  | 'Departments'
+  | 'DepartmentMembers'
+  | 'UserGroupMembers'
+  | 'QueueAgents'
+  | 'SiteMembers';
 
   /**
    * This field can be used to specify unique identifiers of groups in GroupBy types

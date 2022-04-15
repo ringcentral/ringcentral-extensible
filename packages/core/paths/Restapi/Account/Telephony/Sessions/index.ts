@@ -1,16 +1,18 @@
 import Supervise from './Supervise';
 import Parties from './Parties';
-import {RestRequestConfig} from '../../../../../Rest';
+import { RestRequestConfig } from '../../../../../Rest';
 import {
   ReadCallSessionStatusParameters,
   CallSessionObject,
 } from '../../../../../definitions';
 import Parent from '..';
-import {RingCentral} from '../../../../..';
+import { RingCentral } from '../../../../..';
 
 class Index {
   rc: RingCentral;
+
   parent: Parent;
+
   telephonySessionId: string | null;
 
   constructor(parent: Parent, telephonySessionId: string | null = null) {
@@ -18,12 +20,14 @@ class Index {
     this.rc = parent.rc;
     this.telephonySessionId = telephonySessionId;
   }
+
   path(withParameter = true): string {
     if (withParameter && this.telephonySessionId !== null) {
       return `${this.parent.path()}/sessions/${this.telephonySessionId}`;
     }
     return `${this.parent.path()}/sessions`;
   }
+
   /**
    * Returns the status of a call session by ID.
    * HTTP Method: get
@@ -33,7 +37,7 @@ class Index {
    */
   async get(
     queryParams?: ReadCallSessionStatusParameters,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<CallSessionObject> {
     if (this.telephonySessionId === null) {
       throw new Error('telephonySessionId must be specified.');
@@ -41,7 +45,7 @@ class Index {
     const r = await this.rc.get<CallSessionObject>(
       this.path(),
       queryParams,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }
@@ -60,7 +64,7 @@ class Index {
     const r = await this.rc.delete<string>(
       this.path(),
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }

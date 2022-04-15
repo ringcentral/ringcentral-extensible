@@ -1,4 +1,4 @@
-import {GlipEventInfo, GlipNavigationInfo} from './index';
+import { GlipEventInfo, GlipNavigationInfo } from './index';
 
 class GlipEventsInfo {
   /**

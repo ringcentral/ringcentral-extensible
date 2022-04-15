@@ -1,4 +1,4 @@
-import {CallLogNavigationInfoURI} from './index';
+import { CallLogNavigationInfoURI } from './index';
 
 /**
  * Information on navigation

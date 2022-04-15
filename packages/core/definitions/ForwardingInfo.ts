@@ -1,4 +1,4 @@
-import {RuleInfo} from './index';
+import { RuleInfo } from './index';
 
 /**
  * Forwarding parameters. Returned if 'ForwardCalls' is specified in 'callHandlingAction'. These settings determine the forwarding numbers to which the call will be forwarded

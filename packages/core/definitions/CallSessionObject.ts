@@ -1,4 +1,4 @@
-import {OriginInfo, CallParty} from './index';
+import { OriginInfo, CallParty } from './index';
 
 /**
  * Call session information

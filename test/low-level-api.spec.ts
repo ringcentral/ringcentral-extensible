@@ -1,10 +1,10 @@
 import RingCentral from '@rc-ex/core';
 import Utils from '@rc-ex/core/lib/Utils';
-import {FaxResponse, GetMessageInfoResponse} from '@rc-ex/core/lib/definitions';
+import { FaxResponse, GetMessageInfoResponse } from '@rc-ex/core/lib/definitions';
 import fs from 'fs';
 import path from 'path';
 
-import {createRingCentral} from './utils';
+import { createRingCentral } from './utils';
 
 describe('low level API', () => {
   test('sms', async () => {
@@ -21,7 +21,7 @@ describe('low level API', () => {
           },
         ],
         text: 'hello world',
-      }
+      },
     );
     const messageInfo = r.data;
     expect(messageInfo).not.toBeUndefined();
@@ -40,7 +40,7 @@ describe('low level API', () => {
       password: process.env.RINGCENTRAL_PASSWORD!,
     });
     const requestBody = {
-      to: [{phoneNumber: process.env.RINGCENTRAL_RECEIVER}],
+      to: [{ phoneNumber: process.env.RINGCENTRAL_RECEIVER }],
       attachments: [
         {
           filename: 'test.txt',
@@ -57,7 +57,7 @@ describe('low level API', () => {
     const formData = Utils.getFormData(requestBody);
     const r = await rc.post<FaxResponse>(
       '/restapi/v1.0/account/~/extension/~/fax',
-      formData
+      formData,
     );
     const messageInfo = r.data;
     expect(messageInfo).not.toBeUndefined();

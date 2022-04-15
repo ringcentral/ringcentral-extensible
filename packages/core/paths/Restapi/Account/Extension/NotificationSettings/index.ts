@@ -1,22 +1,25 @@
-import {RestRequestConfig} from '../../../../../Rest';
+import { RestRequestConfig } from '../../../../../Rest';
 import {
   NotificationSettings,
   NotificationSettingsUpdateRequest,
 } from '../../../../../definitions';
 import Parent from '..';
-import {RingCentral} from '../../../../..';
+import { RingCentral } from '../../../../..';
 
 class Index {
   rc: RingCentral;
+
   parent: Parent;
 
   constructor(parent: Parent) {
     this.parent = parent;
     this.rc = parent.rc;
   }
+
   path(): string {
     return `${this.parent.path()}/notification-settings`;
   }
+
   /**
    * Returns notification settings for the current extension.
    *  <p>Knowledge Article: <a href="https://success.ringcentral.com/articles/RC_Knowledge_Article/9740">User Settings - Set up Message Notifications</a></p>
@@ -27,12 +30,12 @@ class Index {
    * User Permission: ReadMessagesNotificationsSettings
    */
   async get(
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<NotificationSettings> {
     const r = await this.rc.get<NotificationSettings>(
       this.path(),
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }
@@ -48,13 +51,13 @@ class Index {
    */
   async put(
     notificationSettingsUpdateRequest: NotificationSettingsUpdateRequest,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<NotificationSettings> {
     const r = await this.rc.put<NotificationSettings>(
       this.path(),
       notificationSettingsUpdateRequest,
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }

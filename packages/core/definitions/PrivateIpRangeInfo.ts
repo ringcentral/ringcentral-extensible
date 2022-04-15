@@ -1,4 +1,4 @@
-import {LocationUpdatesEmergencyAddressInfo} from './index';
+import { LocationUpdatesEmergencyAddressInfo } from './index';
 
 class PrivateIpRangeInfo {
   /**

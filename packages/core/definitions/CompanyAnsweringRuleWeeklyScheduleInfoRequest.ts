@@ -1,4 +1,4 @@
-import {CompanyAnsweringRuleTimeIntervalRequest} from './index';
+import { CompanyAnsweringRuleTimeIntervalRequest } from './index';
 
 /**
  * Weekly schedule. If specified, ranges cannot be specified

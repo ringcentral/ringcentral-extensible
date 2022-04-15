@@ -1,22 +1,25 @@
 import CustomGreetings from './CustomGreetings';
 import BulkAssign from './BulkAssign';
 import Extensions from './Extensions';
-import {RestRequestConfig} from '../../../../Rest';
-import {CallRecordingSettingsResource} from '../../../../definitions';
+import { RestRequestConfig } from '../../../../Rest';
+import { CallRecordingSettingsResource } from '../../../../definitions';
 import Parent from '..';
-import {RingCentral} from '../../../..';
+import { RingCentral } from '../../../..';
 
 class Index {
   rc: RingCentral;
+
   parent: Parent;
 
   constructor(parent: Parent) {
     this.parent = parent;
     this.rc = parent.rc;
   }
+
   path(): string {
     return `${this.parent.path()}/call-recording`;
   }
+
   /**
    * Returns call recording settings.
    * HTTP Method: get
@@ -26,12 +29,12 @@ class Index {
    * User Permission: ReadCompanyInfo
    */
   async get(
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<CallRecordingSettingsResource> {
     const r = await this.rc.get<CallRecordingSettingsResource>(
       this.path(),
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }
@@ -46,13 +49,13 @@ class Index {
    */
   async put(
     callRecordingSettingsResource: CallRecordingSettingsResource,
-    restRequestConfig?: RestRequestConfig
+    restRequestConfig?: RestRequestConfig,
   ): Promise<CallRecordingSettingsResource> {
     const r = await this.rc.put<CallRecordingSettingsResource>(
       this.path(),
       callRecordingSettingsResource,
       undefined,
-      restRequestConfig
+      restRequestConfig,
     );
     return r.data;
   }

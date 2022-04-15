@@ -1,4 +1,4 @@
-import {DeviceAddonInfo} from './index';
+import { DeviceAddonInfo } from './index';
 
 /**
  * HardPhone model information

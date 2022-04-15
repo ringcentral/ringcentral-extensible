@@ -1,4 +1,4 @@
-import {createRingCentral} from './utils';
+import { createRingCentral } from './utils';
 
 describe('fax fail reason', () => {
   test('default', async () => {
@@ -15,11 +15,11 @@ describe('fax fail reason', () => {
       });
     await rc.revoke();
     const failedFaxes = messages.records?.filter(
-      m => m.messageStatus === 'SendingFailed'
+      (m) => m.messageStatus === 'SendingFailed',
     );
     for (const failedFax of failedFaxes ?? []) {
       expect(
-        failedFax.to?.some(t => t.faxErrorCode && t.faxErrorCode.length > 0)
+        failedFax.to?.some((t) => t.faxErrorCode && t.faxErrorCode.length > 0),
       ).toBeTruthy();
     }
   });

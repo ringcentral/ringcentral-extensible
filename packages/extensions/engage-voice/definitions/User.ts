@@ -1,4 +1,4 @@
-import {DateTime, Role} from './index';
+import { DateTime, Role } from './index';
 
 class User {
   children?: User[];
