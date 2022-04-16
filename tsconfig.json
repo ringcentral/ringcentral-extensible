@@ -5,5 +5,5 @@
     "resolveJsonModule": true,
     "lib": ["DOM"],
   },
-  "exclude": ["lib"]
+  "exclude": ["**/lib"]
 }

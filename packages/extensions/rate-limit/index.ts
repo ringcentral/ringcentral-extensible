@@ -11,8 +11,7 @@ class RateLimitExtension extends RetryExtension {
       shouldRetry: (restException, retriesAttempted) => retriesAttempted < (options?.maxRetries ?? 3)
         && restException.response.status === 429,
       retryInterval: (restException, retriesAttempted) => {
-        const rateLimitWindow =
-          restException.response.headers["x-rate-limit-window"];
+        const rateLimitWindow = restException.response.headers['x-rate-limit-window'];
         return (
           (rateLimitWindow
             ? parseInt(rateLimitWindow)
