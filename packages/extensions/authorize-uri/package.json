@@ -20,5 +20,11 @@
   "dependencies": {
     "@types/urijs": "^1.19.19",
     "urijs": "^1.19.11"
+  },
+  "devDependencies": {
+    "@rc-ex/core": "^0.12.4"
+  },
+  "peerDependencies": {
+    "@rc-ex/core": "^0.12.4"
   }
 }

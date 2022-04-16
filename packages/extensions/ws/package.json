@@ -26,5 +26,11 @@
     "lodash": "^4.17.21",
     "wait-for-async": "^0.6.0",
     "ws": "^8.5.0"
+  },
+  "devDependencies": {
+    "@rc-ex/core": "^0.12.4"
+  },
+  "peerDependencies": {
+    "@rc-ex/core": "^0.12.4"
   }
 }

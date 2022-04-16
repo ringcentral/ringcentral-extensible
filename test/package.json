@@ -7,6 +7,9 @@
     "@rc-ex/authorize-uri": "^0.8.5",
     "@rc-ex/core": "^0.12.4",
     "@rc-ex/debug": "^0.8.1",
+    "@rc-ex/discovery": "^0.2.7",
+    "@rc-ex/events": "^0.8.1",
+    "@rc-ex/pubnub": "^0.8.7",
     "@rc-ex/rcsdk": "^0.8.4",
     "@rc-ex/ws": "^0.16.3",
     "@ringcentral/sdk": "^4.7.2",
@@ -16,9 +19,6 @@
     "ts-jest": "^27.1.4",
     "ts-node": "^10.7.0",
     "wait-for-async": "^0.6.0",
-    "winston": "^3.7.2",
-    "@rc-ex/discovery": "^0.2.7",
-    "@rc-ex/events": "^0.8.1",
-    "@rc-ex/pubnub": "^0.8.7"
+    "winston": "^3.7.2"
   }
 }

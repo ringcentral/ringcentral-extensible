@@ -16,5 +16,11 @@
   },
   "publishConfig": {
     "access": "public"
+  },
+  "devDependencies": {
+    "@rc-ex/core": "^0.12.4"
+  },
+  "peerDependencies": {
+    "@rc-ex/core": "^0.12.4"
   }
 }

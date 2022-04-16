@@ -24,7 +24,8 @@ class AuthorizeUriExtension extends SdkExtension {
     this.rc = rc;
   }
 
-  buildUri(authorizeRequest: AuthorizeRequest): string {
+  buildUri(_authorizeRequest: AuthorizeRequest): string {
+    const authorizeRequest = _authorizeRequest;
     if (!authorizeRequest.response_type) {
       authorizeRequest.response_type = 'code';
     }

@@ -18,9 +18,11 @@
     "access": "public"
   },
   "devDependencies": {
+    "@rc-ex/core": "^0.12.4",
     "@ringcentral/sdk": "^4.7.2"
   },
   "peerDependencies": {
+    "@rc-ex/core": "^0.12.4",
     "@ringcentral/sdk": "^4.7.2"
   }
 }
