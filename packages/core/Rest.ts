@@ -88,8 +88,8 @@ export default class Rest {
     };
     // /restapi/oauth/wstoken uses bearer token
     if (
-      endpoint === '/restapi/oauth/token'
-      || endpoint === '/restapi/oauth/revoke'
+      endpoint === '/restapi/oauth/token' ||
+      endpoint === '/restapi/oauth/revoke'
     ) {
       if (this.clientSecret) {
         // basic token

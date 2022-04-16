@@ -4,10 +4,10 @@
   "license": "MIT",
   "description": "RingCentral Extensible SDK",
   "scripts": {
-    "generate": "lerna run generate --scope=@rc-ex/core && eslint . --fix",
-    "upgrade-all": "yarn-upgrade-all -W && yarn workspaces run yarn-upgrade-all && yarn install && yarn reset",
+    "generate": "yarn workspace @rc-ex/core run generate && eslint . --fix",
+    "upgrade-all": "yarn-upgrade-all -W && yarn workspaces run yarn-upgrade-all && yarn install",
     "reset": "lerna exec 'rm -rf lib'",
-    "test": "lerna exec 'yarn jest -w 1 --detectOpenHandles -c jest.config.ts $t' --scope=@rc-ex/test",
+    "test": "yarn workspace @rc-ex/test run jest -w 1 --detectOpenHandles -c jest.config.ts $t",
     "compile": "lerna exec tsc --scope=@rc-ex/core && lerna exec tsc --no-private --ignore=@rc-ex/core",
     "prepublishOnly": "yarn reset && yarn compile"
   },

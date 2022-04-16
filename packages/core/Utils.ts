@@ -50,7 +50,7 @@ class Utils {
       headers: r.headers,
     },
     null,
-    2,
+    2
   )}
 
     Request:
@@ -64,17 +64,17 @@ class Utils {
       headers: r.config.headers,
     },
     null,
-    2,
+    2
   )}
     `;
   }
 
   static isAttachment(obj: {}): boolean {
     return (
-      typeof obj === 'object'
-      && obj !== null
-      && 'filename' in obj
-      && 'content' in obj
+      typeof obj === 'object' &&
+      obj !== null
+      && "filename" in obj
+      && "content" in obj
     );
   }
 

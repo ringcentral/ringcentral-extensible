@@ -1,4 +1,7 @@
-import { PhoneNumberCountryInfo, DeviceProvisioningExtensionInfo } from './index';
+import {
+  PhoneNumberCountryInfo,
+  DeviceProvisioningExtensionInfo,
+} from './index';
 
 /**
  * Phone number information

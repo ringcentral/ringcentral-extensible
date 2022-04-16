@@ -1,5 +1,5 @@
 import {
-  CallStatusInfo, ParkInfo, PartyInfo, OwnerInfo,
+ CallStatusInfo, ParkInfo, PartyInfo, OwnerInfo 
 } from './index';
 
 class ReplyParty {

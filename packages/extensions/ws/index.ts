@@ -114,10 +114,10 @@ class WebSocketExtension extends SdkExtension {
         if (
           // the following cannot be done with WebSocket
           (config?.headers?.['Content-Type'] as string | undefined)?.includes(
-            'multipart/form-data',
+            'multipart/form-data'
           )
-          || config?.responseType === 'arraybuffer'
-          || endpoint.startsWith('/restapi/oauth/') // token, revoke, wstoken
+          || config?.responseType === 'arraybuffer' ||
+          endpoint.startsWith('/restapi/oauth/') // token, revoke, wstoken
         ) {
           return request<T>(method, endpoint, content, queryParams, config);
         }
@@ -269,7 +269,7 @@ class WebSocketExtension extends SdkExtension {
     if (Date.now() > this.wsTokenExpiresAt) {
       const r = await this.rc.post('/restapi/oauth/wstoken');
       this.wsToken = r.data as WsToken;
-      this.wsTokenExpiresAt = Date.now() + (this.wsToken.expires_in - 10) * 1000;
+      this.wsTokenExpiresAt =        Date.now() + (this.wsToken.expires_in - 10) * 1000;
     }
     let wsUri = '';
     if (this.wsToken) {
@@ -328,7 +328,7 @@ class WebSocketExtension extends SdkExtension {
     // get initial ConnectionDetails data
     const [meta, body, event] = await Utils.waitForWebSocketMessage(
       this.ws,
-      (meta) => meta.type === 'ConnectionDetails' || meta.type === 'Error',
+      (meta) => meta.type === 'ConnectionDetails' || meta.type === 'Error'
     );
     if (meta.type === 'Error') {
       throw new ConnectionException(event);
@@ -336,7 +336,9 @@ class WebSocketExtension extends SdkExtension {
     this.connectionDetails = body;
 
     // recover all subscriptions, if there are any
-    for (const subscription of this.subscriptions.filter((sub) => sub.enabled)) {
+    for (const subscription of this.subscriptions.filter(
+      (sub) => sub.enabled,
+    )) {
       // because we have a new ws object
       subscription.setupWsEventListener();
       if (

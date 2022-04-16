@@ -136,7 +136,7 @@ yarn lerna publish
 ## Add dependency
 
 ```
-yarn lerna add ramda --scope=@rc-ex/debug
+yarn workspace @rc-ex/debug add ramda
 ```
 
 

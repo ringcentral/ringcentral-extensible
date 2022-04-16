@@ -62,8 +62,8 @@ export async function request<T>(
     config: _config,
   };
   if (
-    meta.type === 'ClientRequest'
-    && meta.status >= 200
+    meta.type === 'ClientRequest' &&
+    meta.status >= 200
     && meta.status < 300
   ) {
     return response;

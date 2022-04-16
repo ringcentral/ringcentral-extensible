@@ -1,5 +1,8 @@
 import Rest, {
-  RestMethod, RestResponse, RestOptions, RestRequestConfig,
+  RestMethod,
+  RestResponse,
+  RestOptions,
+  RestRequestConfig,
 } from './Rest';
 import { GetTokenRequest, TokenInfo } from './definitions';
 import Restapi from './paths/Restapi';
@@ -220,7 +223,7 @@ export class RingCentral {
       // no clientId or clientSecret, the token is from external source, cannot revoke
       return;
     }
-    tokenToRevoke = tokenToRevoke ?? this.token?.access_token ?? this.token?.refresh_token;
+    tokenToRevoke =      tokenToRevoke ?? this.token?.access_token ?? this.token?.refresh_token;
     await this.restapi(null).oauth().revoke().post({ token: tokenToRevoke });
     this.token = undefined;
   }

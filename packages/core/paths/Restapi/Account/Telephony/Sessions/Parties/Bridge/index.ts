@@ -1,5 +1,8 @@
 import { RestRequestConfig } from '../../../../../../../Rest';
-import { BridgeTargetRequest, CallParty } from '../../../../../../../definitions';
+import {
+  BridgeTargetRequest,
+  CallParty,
+} from '../../../../../../../definitions';
 import Parent from '..';
 import { RingCentral } from '../../../../../../..';
 

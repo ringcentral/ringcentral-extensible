@@ -17,10 +17,10 @@ describe('fax fail reason', () => {
     const failedFaxes = messages.records?.filter(
       (m) => m.messageStatus === 'SendingFailed',
     );
-    for (const failedFax of failedFaxes ?? []) {
+    (failedFaxes ?? []).forEach((failedFax) => {
       expect(
         failedFax.to?.some((t) => t.faxErrorCode && t.faxErrorCode.length > 0),
       ).toBeTruthy();
-    }
+    });
   });
 });

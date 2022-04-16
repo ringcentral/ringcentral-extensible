@@ -24,15 +24,15 @@ describe('authorize', () => {
       clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET!,
       server: process.env.RINGCENTRAL_SERVER_URL!,
     });
-    const _tokenInfo = await rc.login({
+    const tokenInfo = await rc.login({
       username: process.env.RINGCENTRAL_USERNAME!,
       extension: process.env.RINGCENTRAL_EXTENSION!,
       password: process.env.RINGCENTRAL_PASSWORD!,
     });
-    const tokenInfo = await rc.refresh();
-    expect(tokenInfo).not.toBeUndefined();
-    expect(tokenInfo.access_token).not.toBeUndefined();
-    expect(tokenInfo.access_token).not.toEqual(_tokenInfo.access_token);
+    const newTokenInfo = await rc.refresh();
+    expect(newTokenInfo).not.toBeUndefined();
+    expect(newTokenInfo.access_token).not.toBeUndefined();
+    expect(newTokenInfo.access_token).not.toEqual(tokenInfo.access_token);
     await rc.revoke();
   });
   test('revoke', async () => {

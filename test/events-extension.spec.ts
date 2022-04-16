@@ -9,6 +9,7 @@ describe('Event Emitter Extension', () => {
     const eventsExtension = new EventsExtension();
     await rc.installExtension(eventsExtension);
     eventsExtension.eventEmitter.on(Events.requestSuccess, (r) => {
+      // eslint-disable-next-line no-console
       console.log(Utils.formatTraffic(r));
     });
     eventsExtension.disable(); // remove this line to enable events
