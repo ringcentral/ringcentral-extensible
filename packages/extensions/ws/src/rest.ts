@@ -8,8 +8,9 @@ import hyperid from 'hyperid';
 import { getReasonPhrase } from 'http-status-codes';
 
 import WebSocketExtension from './index';
-import { version } from './package.json';
 import Utils from './utils';
+
+const version = '0.16';
 
 const uuid = hyperid();
 

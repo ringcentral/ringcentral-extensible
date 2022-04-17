@@ -1,4 +1,4 @@
-import RetryExtension from '@rc-ex/retry';
+import RetryExtension from '@rc-ex/retry/src';
 
 export type RateLimitOptions = {
   maxRetries?: number;

@@ -9,7 +9,8 @@ import FormData from 'form-data';
 
 import RestException from './RestException';
 import { TokenInfo } from './definitions';
-import { version } from './package.json';
+
+const version = '0.12';
 
 export type RestOptions = {
   server?: string;
