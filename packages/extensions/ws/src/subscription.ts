@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import {
   CreateSubscriptionRequest,
   SubscriptionInfo,
@@ -117,8 +118,7 @@ class Subscription {
         // ignore
         if (this.wse.options.debugMode) {
           console.debug(
-            `Subscription ${
-              this.subscriptionInfo!.id
+            `Subscription ${this.subscriptionInfo!.id
             } doesn't exist on server side`,
           );
         }

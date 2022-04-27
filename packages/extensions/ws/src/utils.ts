@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import WS, { MessageEvent } from 'isomorphic-ws';
 
 import { WsgMeta, WsgEvent } from './types';
@@ -16,7 +17,8 @@ class Utils {
     return JSON.parse(wsgData);
   }
 
-  static debugWebSocket(ws: WS) {
+  static debugWebSocket(_ws: WS) {
+    const ws = _ws;
     const send = ws.send.bind(ws);
     ws.send = async (str: string) => {
       await send(str);
@@ -59,6 +61,7 @@ ${JSON.stringify(JSON.parse(event.data), null, 2)}
         }
       }, 1000);
       const timeoutHandle = setTimeout(() => {
+        // eslint-disable-next-line @typescript-eslint/no-use-before-define
         ws.removeEventListener('message', handler);
         clearInterval(checkHandle);
         reject(new TimeoutException());

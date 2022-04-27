@@ -12,6 +12,7 @@
     "eslint-config-airbnb-typescript/base"
   ],
   "rules": {
-    "max-len": "off"
+    "max-len": "off",
+    "no-underscore-dangle": "off"
   }
 }
