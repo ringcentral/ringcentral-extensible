@@ -18,21 +18,22 @@ describe('PubNub extension', () => {
     await rc.installExtension(pubNubExtension);
     let eventCount = 0;
     await pubNubExtension.subscribe(
-      ['/restapi/v1.0/account/~/extension/~/message-store/instant?type=SMS'],
+      ['/restapi/v1.0/account/~/extension/~/message-store'],
       (body) => {
         expect(body).not.toBeNull();
         expect(body).toBeDefined();
         eventCount += 1;
       },
     );
+    // Rest API call over WebSocket
     await rc
       .restapi()
       .account()
       .extension()
-      .sms()
+      .companyPager()
       .post({
-        from: { phoneNumber: process.env.RINGCENTRAL_USERNAME! },
-        to: [{ phoneNumber: process.env.RINGCENTRAL_USERNAME! }], // send sms to oneself
+        from: { extensionNumber: '101' },
+        to: [{ extensionNumber: '101' }], // send pager to oneself
         text: 'Hello world',
       });
     const successful = await waitFor({
