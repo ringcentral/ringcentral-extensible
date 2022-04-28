@@ -15,15 +15,11 @@
     "max-len": "off",
     "no-underscore-dangle": "off",
     "import/prefer-default-export": "off",
-    "no-param-reassign": [
-      "error",
-      {
-        "props": false
-      }
-    ],
+    "no-param-reassign": "off",
     "@typescript-eslint/no-shadow": "off",
     "import/no-cycle": "off",
     "no-restricted-syntax": "off",
-    "no-continue": "off"
+    "no-continue": "off",
+    "no-template-curly-in-string": "off"
   }
 }

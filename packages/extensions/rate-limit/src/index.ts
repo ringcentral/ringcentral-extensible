@@ -14,7 +14,7 @@ class RateLimitExtension extends RetryExtension {
         const rateLimitWindow = restException.response.headers['x-rate-limit-window'];
         return (
           (rateLimitWindow
-            ? parseInt(rateLimitWindow)
+            ? parseInt(rateLimitWindow, 10)
             : options?.rateLimitWindow ?? 60)
           * 1000
           * 2 ** retriesAttempted // exponential back off
