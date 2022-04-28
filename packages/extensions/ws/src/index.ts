@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import RingCentral from '@rc-ex/core';
 import {
   RestRequestConfig,
@@ -92,9 +93,9 @@ class WebSocketExtension extends SdkExtension {
 
   disable() {
     super.disable();
-    for (const subscription of this.subscriptions ?? []) {
+    (this.subscriptions ?? []).forEach((subscription) => {
       subscription.enabled = false;
-    }
+    });
   }
 
   async install(rc: RingCentral) {
@@ -225,7 +226,7 @@ class WebSocketExtension extends SdkExtension {
     if (
       this.connectionDetails !== undefined
       && Date.now() - this.recoverTimestamp
-        > this.connectionDetails.recoveryTimeout * 1000
+      > this.connectionDetails.recoveryTimeout * 1000
     ) {
       if (this.options.debugMode) {
         console.debug('connect to WSG but do not recover');
