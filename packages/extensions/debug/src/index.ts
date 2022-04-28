@@ -17,6 +17,7 @@ class DebugExtension extends SdkExtension {
   constructor(options: DebugOptions = {}) {
     super();
     this.options = options;
+    // eslint-disable-next-line no-console
     this.options.loggingAction ??= (message) => console.debug(message);
   }
 

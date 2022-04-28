@@ -79,7 +79,7 @@ export default class Rest {
     queryParams?: {},
     config?: RestRequestConfig,
   ): Promise<RestResponse<T>> {
-    const _config: RestRequestConfig = {
+    const newConfig: RestRequestConfig = {
       baseURL: this.server,
       method,
       url: endpoint,
@@ -94,21 +94,21 @@ export default class Rest {
     ) {
       if (this.clientSecret) {
         // basic token
-        _config.auth = {
+        newConfig.auth = {
           username: this.clientId,
           password: this.clientSecret,
         };
       }
       // else: PKCE: https://medium.com/ringcentral-developers/use-authorization-code-pkce-for-ringcentral-api-in-client-app-e9108f04b5f0
-      _config.data = qs.stringify(_config.data);
+      newConfig.data = qs.stringify(newConfig.data);
     } else {
       // bearer token
-      _config.headers = {
-        ..._config.headers,
+      newConfig.headers = {
+        ...newConfig.headers,
         Authorization: `Bearer ${this.token?.access_token}`,
       };
     }
-    const r = await this.httpClient.request<T>(_config);
+    const r = await this.httpClient.request<T>(newConfig);
 
     if (r.status >= 200 && r.status < 300) {
       return r;
