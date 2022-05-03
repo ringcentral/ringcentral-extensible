@@ -20,6 +20,7 @@
     "import/no-cycle": "off",
     "no-restricted-syntax": "off",
     "no-continue": "off",
-    "no-template-curly-in-string": "off"
+    "no-template-curly-in-string": "off",
+    "max-classes-per-file": "off"
   }
 }
