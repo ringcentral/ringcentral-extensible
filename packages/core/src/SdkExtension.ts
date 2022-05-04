@@ -12,7 +12,7 @@ abstract class SdkExtension {
   }
 
   abstract install(rc: RingCentral): Promise<void>;
-  async revoke(): Promise<void> {}
+  abstract revoke(): Promise<void>;
 }
 
 export default SdkExtension;

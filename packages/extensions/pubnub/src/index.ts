@@ -8,50 +8,6 @@ import {
 import PubNub, { PubnubConfig } from 'pubnub';
 import { RestResponse } from '@rc-ex/core/lib/Rest';
 
-class PubNubExtension extends SdkExtension {
-  rc!: RingCentral;
-
-  subscriptions: Subscription[] = [];
-
-  extInfo!: GetExtensionInfoResponse;
-
-  async install(rc: RingCentral) {
-    this.rc = rc;
-    this.extInfo = await this.rc.restapi().account().extension().get();
-  }
-
-  disable() {
-    super.disable();
-    for (const subscription of this.subscriptions ?? []) {
-      subscription.enabled = false;
-    }
-  }
-
-  enable() {
-    super.enable();
-    for (const subscription of this.subscriptions ?? []) {
-      subscription.enabled = true;
-    }
-  }
-
-  async subscribe(
-    eventFilters: string[],
-    callback: (event: {}) => void,
-  ): Promise<Subscription> {
-    const subscription = new Subscription(this, eventFilters, callback);
-    await subscription.subscribe();
-    this.subscriptions.push(subscription);
-    return subscription;
-  }
-
-  async revoke() {
-    for (const subscription of this.subscriptions) {
-      await subscription.revoke();
-    }
-    this.subscriptions = [];
-  }
-}
-
 export class Subscription {
   pne: PubNubExtension;
 
@@ -167,6 +123,50 @@ export class Subscription {
     await this.pne.rc.restapi().subscription(this.subscriptionInfo.id).delete();
     this.subscriptionInfo = undefined;
     this.enabled = false;
+  }
+}
+
+class PubNubExtension extends SdkExtension {
+  rc!: RingCentral;
+
+  subscriptions: Subscription[] = [];
+
+  extInfo!: GetExtensionInfoResponse;
+
+  async install(rc: RingCentral) {
+    this.rc = rc;
+    this.extInfo = await this.rc.restapi().account().extension().get();
+  }
+
+  disable() {
+    super.disable();
+    for (const subscription of this.subscriptions ?? []) {
+      subscription.enabled = false;
+    }
+  }
+
+  enable() {
+    super.enable();
+    for (const subscription of this.subscriptions ?? []) {
+      subscription.enabled = true;
+    }
+  }
+
+  async subscribe(
+    eventFilters: string[],
+    callback: (event: {}) => void,
+  ): Promise<Subscription> {
+    const subscription = new Subscription(this, eventFilters, callback);
+    await subscription.subscribe();
+    this.subscriptions.push(subscription);
+    return subscription;
+  }
+
+  async revoke() {
+    for (const subscription of this.subscriptions) {
+      await subscription.revoke();
+    }
+    this.subscriptions = [];
   }
 }
 

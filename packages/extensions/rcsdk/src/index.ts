@@ -61,6 +61,9 @@ class RcSdkExtension extends SdkExtension {
       throw new RestException(response);
     };
   }
+
+  // eslint-disable-next-line class-methods-use-this, @typescript-eslint/no-empty-function
+  async revoke(): Promise<void> { }
 }
 
 export default RcSdkExtension;

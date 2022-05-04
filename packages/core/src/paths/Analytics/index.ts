@@ -8,6 +8,7 @@ class Index {
     this.rc = rc;
   }
 
+  // eslint-disable-next-line class-methods-use-this
   path(): string {
     return '/analytics';
   }

@@ -30,14 +30,14 @@ interface Logger {
   error: Function;
 }
 
-export class RingCentral {
+class RingCentral {
   static config: { logger: Logger } = {
     logger: {
-      debug: () => {},
-      log: () => {},
-      info: () => {},
-      warn: () => {},
-      error: () => {},
+      debug: () => { },
+      log: () => { },
+      info: () => { },
+      warn: () => { },
+      error: () => { },
     },
   };
 
@@ -78,8 +78,7 @@ export class RingCentral {
         config,
       );
       RingCentral.config.logger.info(
-        `[${new Date().toLocaleString()} HTTP ${method} ${r.status} ${
-          r.statusText
+        `[${new Date().toLocaleString()} HTTP ${method} ${r.status} ${r.statusText
         }] ${this.rest.server} ${endpoint}`,
       );
       return r;
@@ -88,8 +87,7 @@ export class RingCentral {
       if (re.response) {
         const r = re.response;
         RingCentral.config.logger.info(
-          `[${new Date().toLocaleString()} HTTP ${method} ${r.status} ${
-            r.statusText
+          `[${new Date().toLocaleString()} HTTP ${method} ${r.status} ${r.statusText
           }] ${this.rest.server} ${endpoint}`,
         );
       }

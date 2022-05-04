@@ -124,6 +124,9 @@ class EventsExtension extends SdkExtension {
       }
     };
   }
+
+  // eslint-disable-next-line class-methods-use-this, @typescript-eslint/no-empty-function
+  async revoke(): Promise<void> { }
 }
 
 export default EventsExtension;
