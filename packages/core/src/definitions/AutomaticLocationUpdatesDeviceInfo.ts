@@ -1,4 +1,6 @@
-import { AutomaticLocationUpdatesModelInfo, AutomaticLocationUpdatesSiteInfo, AutomaticLocationUpdatesPhoneLine } from './index';
+import AutomaticLocationUpdatesModelInfo from './AutomaticLocationUpdatesModelInfo';
+import AutomaticLocationUpdatesSiteInfo from './AutomaticLocationUpdatesSiteInfo';
+import AutomaticLocationUpdatesPhoneLine from './AutomaticLocationUpdatesPhoneLine';
 
 class AutomaticLocationUpdatesDeviceInfo {
   /**
@@ -40,4 +42,5 @@ class AutomaticLocationUpdatesDeviceInfo {
    */
   phoneLines?: AutomaticLocationUpdatesPhoneLine[];
 }
+
 export default AutomaticLocationUpdatesDeviceInfo;

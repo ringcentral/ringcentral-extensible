@@ -32,4 +32,5 @@ class CallLogPagingInfo {
    */
   totalElements?: number;
 }
+
 export default CallLogPagingInfo;

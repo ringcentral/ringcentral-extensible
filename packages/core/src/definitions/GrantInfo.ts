@@ -1,4 +1,4 @@
-import { ExtensionInfoGrants } from './index';
+import ExtensionInfoGrants from './ExtensionInfoGrants';
 
 class GrantInfo {
   /**
@@ -50,4 +50,5 @@ class GrantInfo {
    */
   callQueueMessages?: boolean;
 }
+
 export default GrantInfo;

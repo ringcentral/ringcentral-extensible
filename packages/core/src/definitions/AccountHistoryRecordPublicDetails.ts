@@ -1,4 +1,4 @@
-import { AccountHistoryRecordDetailsParameters } from './index';
+import AccountHistoryRecordDetailsParameters from './AccountHistoryRecordDetailsParameters';
 
 class AccountHistoryRecordPublicDetails {
   /**
@@ -6,4 +6,5 @@ class AccountHistoryRecordPublicDetails {
    */
   parameters?: AccountHistoryRecordDetailsParameters[];
 }
+
 export default AccountHistoryRecordPublicDetails;

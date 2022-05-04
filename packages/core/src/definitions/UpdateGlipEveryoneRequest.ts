@@ -9,4 +9,5 @@ class UpdateGlipEveryoneRequest {
    */
   description?: string;
 }
+
 export default UpdateGlipEveryoneRequest;

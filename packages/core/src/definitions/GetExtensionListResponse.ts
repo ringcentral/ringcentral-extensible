@@ -1,4 +1,6 @@
-import { GetExtensionListInfoResponse, ProvisioningNavigationInfo, ProvisioningPagingInfo } from './index';
+import GetExtensionListInfoResponse from './GetExtensionListInfoResponse';
+import ProvisioningNavigationInfo from './ProvisioningNavigationInfo';
+import ProvisioningPagingInfo from './ProvisioningPagingInfo';
 
 class GetExtensionListResponse {
   /**
@@ -20,4 +22,5 @@ class GetExtensionListResponse {
    */
   paging?: ProvisioningPagingInfo;
 }
+
 export default GetExtensionListResponse;

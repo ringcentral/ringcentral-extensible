@@ -27,4 +27,5 @@ class ContactBusinessAddressInfo {
    */
   zip?: string;
 }
+
 export default ContactBusinessAddressInfo;

@@ -27,4 +27,5 @@ class AddressBookBulkContactAddressInfo {
    */
   zip?: string;
 }
+
 export default AddressBookBulkContactAddressInfo;

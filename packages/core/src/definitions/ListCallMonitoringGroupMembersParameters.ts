@@ -14,4 +14,5 @@ class ListCallMonitoringGroupMembersParameters {
    */
   perPage?: number;
 }
+
 export default ListCallMonitoringGroupMembersParameters;

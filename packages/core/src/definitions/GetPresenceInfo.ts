@@ -1,4 +1,5 @@
-import { GetPresenceExtensionInfo, ActiveCallInfo } from './index';
+import GetPresenceExtensionInfo from './GetPresenceExtensionInfo';
+import ActiveCallInfo from './ActiveCallInfo';
 
 class GetPresenceInfo {
   /**
@@ -60,4 +61,5 @@ class GetPresenceInfo {
    */
   activeCalls?: ActiveCallInfo[];
 }
+
 export default GetPresenceInfo;

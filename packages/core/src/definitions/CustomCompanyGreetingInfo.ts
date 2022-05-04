@@ -1,4 +1,5 @@
-import { CustomGreetingAnsweringRuleInfo, CustomCompanyGreetingLanguageInfo } from './index';
+import CustomGreetingAnsweringRuleInfo from './CustomGreetingAnsweringRuleInfo';
+import CustomCompanyGreetingLanguageInfo from './CustomCompanyGreetingLanguageInfo';
 
 class CustomCompanyGreetingInfo {
   /**
@@ -34,4 +35,5 @@ class CustomCompanyGreetingInfo {
    */
   language?: CustomCompanyGreetingLanguageInfo;
 }
+
 export default CustomCompanyGreetingInfo;

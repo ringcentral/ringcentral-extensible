@@ -1,4 +1,4 @@
-import { CreateGlipMember } from './index';
+import CreateGlipMember from './CreateGlipMember';
 
 class GlipConversationInfo {
   /**
@@ -28,4 +28,5 @@ class GlipConversationInfo {
    */
   members?: CreateGlipMember[];
 }
+
 export default GlipConversationInfo;

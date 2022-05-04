@@ -1,4 +1,4 @@
-import { OrderBy } from './index';
+import OrderBy from './OrderBy';
 
 class SearchDirectoryEntriesRequest {
   /**
@@ -34,4 +34,5 @@ class SearchDirectoryEntriesRequest {
    */
   perPage?: number;
 }
+
 export default SearchDirectoryEntriesRequest;

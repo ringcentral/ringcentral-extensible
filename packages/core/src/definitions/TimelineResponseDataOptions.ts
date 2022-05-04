@@ -1,4 +1,5 @@
-import { TimelineCountersResponseOptions, TimelineTimersResponseOptions } from './index';
+import TimelineCountersResponseOptions from './TimelineCountersResponseOptions';
+import TimelineTimersResponseOptions from './TimelineTimersResponseOptions';
 
 /**
  * This field provides mapping of possible breakdown options that will be used for aggregation within every time interval
@@ -12,4 +13,5 @@ class TimelineResponseDataOptions {
    */
   timers?: TimelineTimersResponseOptions;
 }
+
 export default TimelineResponseDataOptions;

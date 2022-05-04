@@ -1,4 +1,5 @@
-import { CallHandlingNavigationInfo, CallHandlingPagingInfo } from './index';
+import CallHandlingNavigationInfo from './CallHandlingNavigationInfo';
+import CallHandlingPagingInfo from './CallHandlingPagingInfo';
 
 class DictionaryGreetingInfo {
   /**
@@ -49,4 +50,5 @@ class DictionaryGreetingInfo {
    */
   paging?: CallHandlingPagingInfo;
 }
+
 export default DictionaryGreetingInfo;

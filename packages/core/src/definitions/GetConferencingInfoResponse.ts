@@ -1,4 +1,4 @@
-import { PhoneNumberInfoConferencing } from './index';
+import PhoneNumberInfoConferencing from './PhoneNumberInfoConferencing';
 
 class GetConferencingInfoResponse {
   /**
@@ -41,4 +41,5 @@ class GetConferencingInfoResponse {
    */
   phoneNumbers?: PhoneNumberInfoConferencing[];
 }
+
 export default GetConferencingInfoResponse;

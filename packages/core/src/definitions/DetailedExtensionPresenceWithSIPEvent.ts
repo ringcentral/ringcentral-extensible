@@ -1,4 +1,4 @@
-import { DetailedExtensionPresenceWithSIPEventBody } from './index';
+import DetailedExtensionPresenceWithSIPEventBody from './DetailedExtensionPresenceWithSIPEventBody';
 
 class DetailedExtensionPresenceWithSIPEvent {
   /**
@@ -25,4 +25,5 @@ class DetailedExtensionPresenceWithSIPEvent {
    */
   body?: DetailedExtensionPresenceWithSIPEventBody;
 }
+
 export default DetailedExtensionPresenceWithSIPEvent;

@@ -8,4 +8,5 @@ class RoleIdResource {
    */
   id?: string;
 }
+
 export default RoleIdResource;

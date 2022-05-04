@@ -4,4 +4,5 @@ class UpdateMessageRequest {
    */
   readStatus?: ('Read' | 'Unread');
 }
+
 export default UpdateMessageRequest;

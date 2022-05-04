@@ -1,4 +1,5 @@
-import { DeviceInfoRequest, SIPInfoRequest } from './index';
+import DeviceInfoRequest from './DeviceInfoRequest';
+import SIPInfoRequest from './SIPInfoRequest';
 
 class CreateSipRegistrationRequest {
   /**
@@ -10,4 +11,5 @@ class CreateSipRegistrationRequest {
    */
   sipInfo?: SIPInfoRequest[];
 }
+
 export default CreateSipRegistrationRequest;

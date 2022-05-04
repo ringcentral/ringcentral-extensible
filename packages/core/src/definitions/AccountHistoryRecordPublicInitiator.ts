@@ -26,4 +26,5 @@ class AccountHistoryRecordPublicInitiator {
    */
   role?: string;
 }
+
 export default AccountHistoryRecordPublicInitiator;

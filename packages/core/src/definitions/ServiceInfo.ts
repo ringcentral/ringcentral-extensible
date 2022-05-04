@@ -1,6 +1,8 @@
-import {
-  BillingPlanInfo, BrandInfo, ServicePlanInfo, TargetServicePlanInfo, ContractedCountryInfo,
-} from './index';
+import BillingPlanInfo from './BillingPlanInfo';
+import BrandInfo from './BrandInfo';
+import ServicePlanInfo from './ServicePlanInfo';
+import TargetServicePlanInfo from './TargetServicePlanInfo';
+import ContractedCountryInfo from './ContractedCountryInfo';
 
 /**
  * Account service information, including brand, service plan and billing plan
@@ -31,4 +33,5 @@ class ServiceInfo {
    */
   contractedCountry?: ContractedCountryInfo;
 }
+
 export default ServiceInfo;

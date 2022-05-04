@@ -1,8 +1,9 @@
-import { GlipPreferencesChats } from './index';
+import GlipPreferencesChats from './GlipPreferencesChats';
 
 class GlipPreferencesInfo {
   /**
    */
   chats?: GlipPreferencesChats;
 }
+
 export default GlipPreferencesInfo;

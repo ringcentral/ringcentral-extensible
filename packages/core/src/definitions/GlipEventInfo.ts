@@ -66,4 +66,5 @@ class GlipEventInfo {
    */
   description?: string;
 }
+
 export default GlipEventInfo;

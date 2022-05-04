@@ -1,4 +1,6 @@
-import { UserPhoneNumberInfo, ProvisioningNavigationInfo, ProvisioningPagingInfo } from './index';
+import UserPhoneNumberInfo from './UserPhoneNumberInfo';
+import ProvisioningNavigationInfo from './ProvisioningNavigationInfo';
+import ProvisioningPagingInfo from './ProvisioningPagingInfo';
 
 class GetExtensionPhoneNumbersResponse {
   /**
@@ -22,4 +24,5 @@ class GetExtensionPhoneNumbersResponse {
    */
   paging?: ProvisioningPagingInfo;
 }
+
 export default GetExtensionPhoneNumbersResponse;

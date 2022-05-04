@@ -41,4 +41,5 @@ class CallsActions {
    */
   dtmfTransfer?: number;
 }
+
 export default CallsActions;

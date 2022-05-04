@@ -29,4 +29,5 @@ class ListUserMeetingRecordingsParameters {
    */
   perPage?: number;
 }
+
 export default ListUserMeetingRecordingsParameters;

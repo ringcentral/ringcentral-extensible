@@ -24,4 +24,5 @@ class ListAccountPhoneNumbersParameters {
    */
   status?: ('Normal' | 'Pending' | 'PortedIn' | 'Temporary');
 }
+
 export default ListAccountPhoneNumbersParameters;

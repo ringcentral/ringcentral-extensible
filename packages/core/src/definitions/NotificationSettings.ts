@@ -1,6 +1,9 @@
-import {
-  EmailRecipientInfo, VoicemailsInfo, InboundFaxesInfo, OutboundFaxesInfo, InboundTextsInfo, MissedCallsInfo,
-} from './index';
+import EmailRecipientInfo from './EmailRecipientInfo';
+import VoicemailsInfo from './VoicemailsInfo';
+import InboundFaxesInfo from './InboundFaxesInfo';
+import OutboundFaxesInfo from './OutboundFaxesInfo';
+import InboundTextsInfo from './InboundTextsInfo';
+import MissedCallsInfo from './MissedCallsInfo';
 
 class NotificationSettings {
   /**
@@ -53,4 +56,5 @@ class NotificationSettings {
    */
   missedCalls?: MissedCallsInfo;
 }
+
 export default NotificationSettings;

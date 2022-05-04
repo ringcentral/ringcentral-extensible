@@ -12,4 +12,5 @@ class MakeRingOutCallerInfoRequestFrom {
    */
   forwardingNumberId?: string;
 }
+
 export default MakeRingOutCallerInfoRequestFrom;

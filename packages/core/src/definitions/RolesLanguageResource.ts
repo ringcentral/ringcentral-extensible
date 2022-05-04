@@ -11,4 +11,5 @@ class RolesLanguageResource {
    */
   localeCode?: string;
 }
+
 export default RolesLanguageResource;

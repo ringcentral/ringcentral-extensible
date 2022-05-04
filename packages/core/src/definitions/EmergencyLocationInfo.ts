@@ -1,4 +1,6 @@
-import { EmergencyLocationAddressInfo, ShortSiteInfo, LocationOwnerInfo } from './index';
+import EmergencyLocationAddressInfo from './EmergencyLocationAddressInfo';
+import ShortSiteInfo from './ShortSiteInfo';
+import LocationOwnerInfo from './LocationOwnerInfo';
 
 /**
  * Company emergency response location details
@@ -48,4 +50,5 @@ class EmergencyLocationInfo {
    */
   owners?: LocationOwnerInfo[];
 }
+
 export default EmergencyLocationInfo;

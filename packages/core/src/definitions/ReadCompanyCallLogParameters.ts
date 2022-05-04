@@ -68,4 +68,5 @@ class ReadCompanyCallLogParameters {
    */
   sessionId?: string;
 }
+
 export default ReadCompanyCallLogParameters;

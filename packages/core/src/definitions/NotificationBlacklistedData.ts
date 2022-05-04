@@ -13,4 +13,5 @@ class NotificationBlacklistedData {
    */
   reason?: string;
 }
+
 export default NotificationBlacklistedData;

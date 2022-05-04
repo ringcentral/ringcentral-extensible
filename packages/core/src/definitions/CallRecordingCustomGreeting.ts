@@ -1,4 +1,5 @@
-import { CallRecordingCustomGreetingData, CallRecordingCustomGreetingLanguage } from './index';
+import CallRecordingCustomGreetingData from './CallRecordingCustomGreetingData';
+import CallRecordingCustomGreetingLanguage from './CallRecordingCustomGreetingLanguage';
 
 class CallRecordingCustomGreeting {
   /**
@@ -13,4 +14,5 @@ class CallRecordingCustomGreeting {
    */
   language?: CallRecordingCustomGreetingLanguage;
 }
+
 export default CallRecordingCustomGreeting;

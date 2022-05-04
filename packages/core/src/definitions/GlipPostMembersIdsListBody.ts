@@ -1,4 +1,4 @@
-import { GlipMemberInfo } from './index';
+import GlipMemberInfo from './GlipMemberInfo';
 
 class GlipPostMembersIdsListBody {
   /**
@@ -7,4 +7,5 @@ class GlipPostMembersIdsListBody {
    */
   members?: GlipMemberInfo[];
 }
+
 export default GlipPostMembersIdsListBody;

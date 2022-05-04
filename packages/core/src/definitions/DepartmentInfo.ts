@@ -17,4 +17,5 @@ class DepartmentInfo {
    */
   extensionNumber?: string;
 }
+
 export default DepartmentInfo;

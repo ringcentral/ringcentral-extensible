@@ -1,6 +1,7 @@
-import {
-  PerformanceCallsGrouping, PerformanceCallsTimeSettings, PerformanceCallsFilters, PerformanceCallsResponseDataOptions,
-} from './index';
+import PerformanceCallsGrouping from './PerformanceCallsGrouping';
+import PerformanceCallsTimeSettings from './PerformanceCallsTimeSettings';
+import PerformanceCallsFilters from './PerformanceCallsFilters';
+import PerformanceCallsResponseDataOptions from './PerformanceCallsResponseDataOptions';
 
 class PerformanceCallsAggregatesRequest {
   /**
@@ -21,4 +22,5 @@ class PerformanceCallsAggregatesRequest {
    */
   responseOptions?: PerformanceCallsResponseDataOptions;
 }
+
 export default PerformanceCallsAggregatesRequest;

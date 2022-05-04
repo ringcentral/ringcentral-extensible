@@ -6,4 +6,5 @@ class PickupTarget {
    */
   deviceId?: string;
 }
+
 export default PickupTarget;

@@ -19,4 +19,5 @@ class OutboundFaxesInfo {
    */
   advancedSmsEmailAddresses?: string[];
 }
+
 export default OutboundFaxesInfo;

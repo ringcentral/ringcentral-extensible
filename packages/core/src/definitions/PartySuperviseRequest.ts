@@ -31,4 +31,5 @@ class PartySuperviseRequest {
    */
   mediaSDP?: ('sendOnly' | 'sendRecv');
 }
+
 export default PartySuperviseRequest;

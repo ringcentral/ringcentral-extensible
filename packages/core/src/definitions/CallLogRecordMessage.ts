@@ -17,4 +17,5 @@ class CallLogRecordMessage {
    */
   uri?: string;
 }
+
 export default CallLogRecordMessage;

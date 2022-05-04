@@ -1,6 +1,8 @@
-import {
-  ContactInfo, ExtensionPermissions, ProfileImageInfo, CallQueueExtensionInfo, AutomaticLocationUpdatesSiteInfo,
-} from './index';
+import ContactInfo from './ContactInfo';
+import ExtensionPermissions from './ExtensionPermissions';
+import ProfileImageInfo from './ProfileImageInfo';
+import CallQueueExtensionInfo from './CallQueueExtensionInfo';
+import AutomaticLocationUpdatesSiteInfo from './AutomaticLocationUpdatesSiteInfo';
 
 class GetExtensionListInfoResponse {
   /**
@@ -59,4 +61,5 @@ class GetExtensionListInfoResponse {
    */
   site?: AutomaticLocationUpdatesSiteInfo;
 }
+
 export default GetExtensionListInfoResponse;

@@ -14,4 +14,5 @@ class ReadGlipEventsParameters {
    */
   pageToken?: string;
 }
+
 export default ReadGlipEventsParameters;

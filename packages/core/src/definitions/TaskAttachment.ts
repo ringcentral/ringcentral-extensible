@@ -19,4 +19,5 @@ class TaskAttachment {
    */
   contentUri?: string;
 }
+
 export default TaskAttachment;

@@ -12,4 +12,5 @@ class OwnerInfo {
    */
   extensionId?: string;
 }
+
 export default OwnerInfo;

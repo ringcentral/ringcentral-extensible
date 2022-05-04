@@ -1,4 +1,5 @@
-import { MethodInfo, ShippingAddressInfo } from './index';
+import MethodInfo from './MethodInfo';
+import ShippingAddressInfo from './ShippingAddressInfo';
 
 /**
  * Shipping information, according to which devices (in case of  HardPhone ) or e911 stickers (in case of  SoftPhone  and  OtherPhone ) will be delivered to the customer
@@ -27,4 +28,5 @@ class ShippingInfo {
    */
   address?: ShippingAddressInfo;
 }
+
 export default ShippingInfo;

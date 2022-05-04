@@ -30,4 +30,5 @@ class ListStatesParameters {
    */
   withPhoneNumbers?: boolean;
 }
+
 export default ListStatesParameters;

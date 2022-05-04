@@ -1,4 +1,4 @@
-import { AdaptiveCardInfoRequestItem } from './index';
+import AdaptiveCardInfoRequestItem from './AdaptiveCardInfoRequestItem';
 
 class AdaptiveCardInfoRequest {
   /**
@@ -9,4 +9,5 @@ class AdaptiveCardInfoRequest {
    */
   items?: AdaptiveCardInfoRequestItem[];
 }
+
 export default AdaptiveCardInfoRequest;

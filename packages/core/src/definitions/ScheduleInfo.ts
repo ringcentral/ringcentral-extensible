@@ -1,4 +1,5 @@
-import { WeeklyScheduleInfo, RangesInfo } from './index';
+import WeeklyScheduleInfo from './WeeklyScheduleInfo';
+import RangesInfo from './RangesInfo';
 
 /**
  * Schedule when an answering rule should be applied
@@ -18,4 +19,5 @@ class ScheduleInfo {
    */
   ref?: ('BusinessHours' | 'AfterHours');
 }
+
 export default ScheduleInfo;

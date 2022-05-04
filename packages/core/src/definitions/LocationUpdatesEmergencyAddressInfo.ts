@@ -67,4 +67,5 @@ class LocationUpdatesEmergencyAddressInfo {
    */
   zip?: string;
 }
+
 export default LocationUpdatesEmergencyAddressInfo;

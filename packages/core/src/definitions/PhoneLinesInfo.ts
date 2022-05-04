@@ -1,4 +1,5 @@
-import { PhoneNumberInfoIntId, EmergencyAddress } from './index';
+import PhoneNumberInfoIntId from './PhoneNumberInfoIntId';
+import EmergencyAddress from './EmergencyAddress';
 
 class PhoneLinesInfo {
   /**
@@ -19,4 +20,5 @@ class PhoneLinesInfo {
    */
   emergencyAddress?: EmergencyAddress;
 }
+
 export default PhoneLinesInfo;

@@ -11,4 +11,5 @@ class BasicExtensionInfoResource {
    */
   extensionNumber?: string;
 }
+
 export default BasicExtensionInfoResource;

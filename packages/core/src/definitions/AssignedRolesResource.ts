@@ -1,4 +1,4 @@
-import { AssignedRoleResource } from './index';
+import AssignedRoleResource from './AssignedRoleResource';
 
 class AssignedRolesResource {
   /**
@@ -10,4 +10,5 @@ class AssignedRolesResource {
    */
   records?: AssignedRoleResource[];
 }
+
 export default AssignedRolesResource;

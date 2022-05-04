@@ -8,4 +8,5 @@ class PauseResumeCallRecordingParameters {
    */
   brandId?: string;
 }
+
 export default PauseResumeCallRecordingParameters;

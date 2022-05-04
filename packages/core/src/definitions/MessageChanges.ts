@@ -14,4 +14,5 @@ class MessageChanges {
    */
   updatedCount?: number;
 }
+
 export default MessageChanges;

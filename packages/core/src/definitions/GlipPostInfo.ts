@@ -1,4 +1,5 @@
-import { GlipMessageAttachmentInfo, GlipMentionsInfo } from './index';
+import GlipMessageAttachmentInfo from './GlipMessageAttachmentInfo';
+import GlipMentionsInfo from './GlipMentionsInfo';
 
 class GlipPostInfo {
   /**
@@ -72,4 +73,5 @@ class GlipPostInfo {
    */
   iconEmoji?: string;
 }
+
 export default GlipPostInfo;

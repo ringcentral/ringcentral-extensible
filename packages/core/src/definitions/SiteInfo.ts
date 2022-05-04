@@ -1,4 +1,6 @@
-import { ContactBusinessAddressInfo, RegionalSettings, OperatorInfo } from './index';
+import ContactBusinessAddressInfo from './ContactBusinessAddressInfo';
+import RegionalSettings from './RegionalSettings';
+import OperatorInfo from './OperatorInfo';
 
 class SiteInfo {
   /**
@@ -48,4 +50,5 @@ class SiteInfo {
    */
   code?: string;
 }
+
 export default SiteInfo;

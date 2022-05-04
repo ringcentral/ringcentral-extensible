@@ -1,6 +1,13 @@
-import {
-  ScheduleInfo, CalledNumberInfo, CallersInfo, ForwardingInfo, UnconditionalForwardingInfo, QueueInfo, TransferredExtensionInfo, VoicemailInfo, GreetingInfo, SharedLinesInfo,
-} from './index';
+import ScheduleInfo from './ScheduleInfo';
+import CalledNumberInfo from './CalledNumberInfo';
+import CallersInfo from './CallersInfo';
+import ForwardingInfo from './ForwardingInfo';
+import UnconditionalForwardingInfo from './UnconditionalForwardingInfo';
+import QueueInfo from './QueueInfo';
+import TransferredExtensionInfo from './TransferredExtensionInfo';
+import VoicemailInfo from './VoicemailInfo';
+import GreetingInfo from './GreetingInfo';
+import SharedLinesInfo from './SharedLinesInfo';
 
 class CustomAnsweringRuleInfo {
   /**
@@ -81,4 +88,5 @@ class CustomAnsweringRuleInfo {
    */
   sharedLines?: SharedLinesInfo;
 }
+
 export default CustomAnsweringRuleInfo;

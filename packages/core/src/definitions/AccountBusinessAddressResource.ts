@@ -1,4 +1,4 @@
-import { ContactBusinessAddressInfo } from './index';
+import ContactBusinessAddressInfo from './ContactBusinessAddressInfo';
 
 class AccountBusinessAddressResource {
   /**
@@ -23,4 +23,5 @@ class AccountBusinessAddressResource {
    */
   mainSiteName?: string;
 }
+
 export default AccountBusinessAddressResource;

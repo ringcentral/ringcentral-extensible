@@ -1,4 +1,4 @@
-import { AutomaticLocationUpdatesSiteInfo } from './index';
+import AutomaticLocationUpdatesSiteInfo from './AutomaticLocationUpdatesSiteInfo';
 
 class AutomaticLocationUpdatesUserInfo {
   /**
@@ -34,4 +34,5 @@ class AutomaticLocationUpdatesUserInfo {
    */
   department?: string;
 }
+
 export default AutomaticLocationUpdatesUserInfo;

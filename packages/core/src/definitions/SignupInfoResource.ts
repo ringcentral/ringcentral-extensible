@@ -19,4 +19,5 @@ class SignupInfoResource {
    */
   marketingAccepted?: boolean;
 }
+
 export default SignupInfoResource;

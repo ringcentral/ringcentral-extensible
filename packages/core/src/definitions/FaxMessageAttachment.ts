@@ -29,4 +29,5 @@ class FaxMessageAttachment {
    */
   size?: number;
 }
+
 export default FaxMessageAttachment;

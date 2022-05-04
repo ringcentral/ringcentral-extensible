@@ -32,4 +32,5 @@ class DeviceProvisioningPagingInfo {
    */
   totalElements?: number;
 }
+
 export default DeviceProvisioningPagingInfo;

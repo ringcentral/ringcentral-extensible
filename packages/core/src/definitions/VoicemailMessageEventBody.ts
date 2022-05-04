@@ -1,4 +1,6 @@
-import { NotificationRecipientInfo, SenderInfo, MessageAttachmentInfo } from './index';
+import NotificationRecipientInfo from './NotificationRecipientInfo';
+import SenderInfo from './SenderInfo';
+import MessageAttachmentInfo from './MessageAttachmentInfo';
 
 /**
  * Notification payload body
@@ -83,4 +85,5 @@ class VoicemailMessageEventBody {
    */
   vmTranscriptionStatus?: string;
 }
+
 export default VoicemailMessageEventBody;

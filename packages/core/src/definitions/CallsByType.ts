@@ -29,4 +29,5 @@ class CallsByType {
    */
   outbound?: number;
 }
+
 export default CallsByType;

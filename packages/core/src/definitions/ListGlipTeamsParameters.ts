@@ -14,4 +14,5 @@ class ListGlipTeamsParameters {
    */
   pageToken?: string;
 }
+
 export default ListGlipTeamsParameters;

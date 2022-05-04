@@ -34,4 +34,5 @@ class VoicemailsInfo {
    */
   markAsRead?: boolean;
 }
+
 export default VoicemailsInfo;

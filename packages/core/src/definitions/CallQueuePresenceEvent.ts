@@ -1,4 +1,4 @@
-import { CallQueuePresenceEventBody } from './index';
+import CallQueuePresenceEventBody from './CallQueuePresenceEventBody';
 
 class CallQueuePresenceEvent {
   /**
@@ -25,4 +25,5 @@ class CallQueuePresenceEvent {
    */
   body?: CallQueuePresenceEventBody;
 }
+
 export default CallQueuePresenceEvent;

@@ -17,4 +17,5 @@ class PhoneNumberCountryInfo {
    */
   name?: string;
 }
+
 export default PhoneNumberCountryInfo;

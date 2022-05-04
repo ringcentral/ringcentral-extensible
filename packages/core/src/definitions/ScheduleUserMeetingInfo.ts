@@ -72,4 +72,5 @@ class ScheduleUserMeetingInfo {
    */
   pstnPasswordProtected?: boolean;
 }
+
 export default ScheduleUserMeetingInfo;

@@ -1,4 +1,4 @@
-import { RolesBusinessSiteResource } from './index';
+import RolesBusinessSiteResource from './RolesBusinessSiteResource';
 
 class BusinessSiteCollectionResource {
   /**
@@ -10,4 +10,5 @@ class BusinessSiteCollectionResource {
    */
   records?: RolesBusinessSiteResource[];
 }
+
 export default BusinessSiteCollectionResource;

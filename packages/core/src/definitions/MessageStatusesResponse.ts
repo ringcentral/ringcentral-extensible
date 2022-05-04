@@ -1,4 +1,4 @@
-import { MessageStatusCounts } from './index';
+import MessageStatusCounts from './MessageStatusCounts';
 
 class MessageStatusesResponse {
   /**
@@ -21,4 +21,5 @@ class MessageStatusesResponse {
    */
   sendingFailed?: MessageStatusCounts;
 }
+
 export default MessageStatusesResponse;

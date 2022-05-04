@@ -1,4 +1,4 @@
-import { DeviceAddonInfo } from './index';
+import DeviceAddonInfo from './DeviceAddonInfo';
 
 /**
  * HardPhone model information
@@ -25,4 +25,5 @@ class DeviceModelInfo {
    */
   features?: ('BLA' | 'Intercom' | 'Paging' | 'HELD')[];
 }
+
 export default DeviceModelInfo;

@@ -1,4 +1,4 @@
-import { CreateGlipMember } from './index';
+import CreateGlipMember from './CreateGlipMember';
 
 class GlipPostTeamBody {
   /**
@@ -22,4 +22,5 @@ class GlipPostTeamBody {
    */
   members?: CreateGlipMember[];
 }
+
 export default GlipPostTeamBody;

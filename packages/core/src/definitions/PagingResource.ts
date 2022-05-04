@@ -33,4 +33,5 @@ class PagingResource {
    */
   nextPageToken?: string;
 }
+
 export default PagingResource;

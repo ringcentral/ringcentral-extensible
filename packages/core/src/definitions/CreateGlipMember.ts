@@ -9,4 +9,5 @@ class CreateGlipMember {
    */
   email?: string;
 }
+
 export default CreateGlipMember;

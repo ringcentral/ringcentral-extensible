@@ -1,4 +1,4 @@
-import { ErrorEntity } from './index';
+import ErrorEntity from './ErrorEntity';
 
 class ExtensionUpdateShortResult {
   /**
@@ -15,4 +15,5 @@ class ExtensionUpdateShortResult {
    */
   errors?: ErrorEntity[];
 }
+
 export default ExtensionUpdateShortResult;

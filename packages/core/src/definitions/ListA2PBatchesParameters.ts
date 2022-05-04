@@ -34,4 +34,5 @@ class ListA2PBatchesParameters {
    */
   perPage?: string;
 }
+
 export default ListA2PBatchesParameters;

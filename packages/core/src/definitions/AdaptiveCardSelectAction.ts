@@ -4,4 +4,5 @@ class AdaptiveCardSelectAction {
    */
   type?: ('Action.Submit' | 'Action.OpenUrl' | 'Action.ToggleVisibility');
 }
+
 export default AdaptiveCardSelectAction;

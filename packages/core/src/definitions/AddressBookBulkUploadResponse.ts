@@ -1,4 +1,4 @@
-import { AddressBookBulkUploadTaskResult } from './index';
+import AddressBookBulkUploadTaskResult from './AddressBookBulkUploadTaskResult';
 
 /**
  * Information on a task for adding multiple contacts to multiple extensions
@@ -38,4 +38,5 @@ class AddressBookBulkUploadResponse {
    */
   results?: AddressBookBulkUploadTaskResult;
 }
+
 export default AddressBookBulkUploadResponse;

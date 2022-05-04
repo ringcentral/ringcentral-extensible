@@ -1,4 +1,5 @@
-import { ExtensionUpdateShortResult, ErrorEntity } from './index';
+import ExtensionUpdateShortResult from './ExtensionUpdateShortResult';
+import ErrorEntity from './ErrorEntity';
 
 /**
  * Result record on multiple extension update task
@@ -12,4 +13,5 @@ class ExtensionBulkUpdateTaskResult {
    */
   errors?: ErrorEntity[];
 }
+
 export default ExtensionBulkUpdateTaskResult;

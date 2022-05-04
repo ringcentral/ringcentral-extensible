@@ -32,4 +32,5 @@ class BillingPlanInfo {
    */
   includedPhoneLines?: number;
 }
+
 export default BillingPlanInfo;

@@ -10,4 +10,5 @@ class PerformanceCallsTotal {
    */
   values?: number;
 }
+
 export default PerformanceCallsTotal;

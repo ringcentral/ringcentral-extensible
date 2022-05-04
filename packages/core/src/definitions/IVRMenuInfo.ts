@@ -1,4 +1,6 @@
-import { IVRMenuSiteInfo, IVRMenuPromptInfo, IVRMenuActionsInfo } from './index';
+import IVRMenuSiteInfo from './IVRMenuSiteInfo';
+import IVRMenuPromptInfo from './IVRMenuPromptInfo';
+import IVRMenuActionsInfo from './IVRMenuActionsInfo';
 
 class IVRMenuInfo {
   /**
@@ -34,4 +36,5 @@ class IVRMenuInfo {
    */
   actions?: IVRMenuActionsInfo[];
 }
+
 export default IVRMenuInfo;

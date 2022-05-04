@@ -1,4 +1,5 @@
-import { ActiveCallInfo, GetPresenceExtensionInfo } from './index';
+import ActiveCallInfo from './ActiveCallInfo';
+import GetPresenceExtensionInfo from './GetPresenceExtensionInfo';
 
 class PresenceInfoResponse {
   /**
@@ -53,4 +54,5 @@ class PresenceInfoResponse {
    */
   presenceStatus?: ('Offline' | 'Busy' | 'Available');
 }
+
 export default PresenceInfoResponse;

@@ -50,4 +50,5 @@ class SyncMessagesParameters {
    */
   syncType?: ('FSync' | 'ISync');
 }
+
 export default SyncMessagesParameters;

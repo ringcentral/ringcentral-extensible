@@ -1,4 +1,4 @@
-import { AccountPresenceEventBody } from './index';
+import AccountPresenceEventBody from './AccountPresenceEventBody';
 
 class AccountPresenceEvent {
   /**
@@ -25,4 +25,5 @@ class AccountPresenceEvent {
    */
   body?: AccountPresenceEventBody;
 }
+
 export default AccountPresenceEvent;

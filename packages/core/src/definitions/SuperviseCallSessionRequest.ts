@@ -30,4 +30,5 @@ class SuperviseCallSessionRequest {
    */
   mediaSDP?: ('sendOnly' | 'sendRecv');
 }
+
 export default SuperviseCallSessionRequest;

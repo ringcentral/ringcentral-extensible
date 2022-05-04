@@ -29,4 +29,5 @@ class CompanyContactsPagingInfo {
    */
   pageEnd?: number;
 }
+
 export default CompanyContactsPagingInfo;

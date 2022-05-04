@@ -1,4 +1,4 @@
-import { CallsByOrigin } from './index';
+import CallsByOrigin from './CallsByOrigin';
 
 class PerformanceCallsByOrigin {
   /**
@@ -11,4 +11,5 @@ class PerformanceCallsByOrigin {
    */
   values?: CallsByOrigin;
 }
+
 export default PerformanceCallsByOrigin;

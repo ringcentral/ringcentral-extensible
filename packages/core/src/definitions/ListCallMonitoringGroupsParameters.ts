@@ -19,4 +19,5 @@ class ListCallMonitoringGroupsParameters {
    */
   memberExtensionId?: string;
 }
+
 export default ListCallMonitoringGroupsParameters;

@@ -1,4 +1,4 @@
-import { ForwardingNumberInfoRulesCreateRuleRequest } from './index';
+import ForwardingNumberInfoRulesCreateRuleRequest from './ForwardingNumberInfoRulesCreateRuleRequest';
 
 class RuleInfoCreateRuleRequest {
   /**
@@ -21,4 +21,5 @@ class RuleInfoCreateRuleRequest {
    */
   forwardingNumbers?: ForwardingNumberInfoRulesCreateRuleRequest[];
 }
+
 export default RuleInfoCreateRuleRequest;

@@ -1,4 +1,4 @@
-import { NotificationDeliveryModeRequest } from './index';
+import NotificationDeliveryModeRequest from './NotificationDeliveryModeRequest';
 
 class CreateSubscriptionRequest {
   /**
@@ -17,4 +17,5 @@ class CreateSubscriptionRequest {
    */
   expiresIn?: number;
 }
+
 export default CreateSubscriptionRequest;

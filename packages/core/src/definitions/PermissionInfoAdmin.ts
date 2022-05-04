@@ -7,4 +7,5 @@ class PermissionInfoAdmin {
    */
   enabled?: boolean;
 }
+
 export default PermissionInfoAdmin;

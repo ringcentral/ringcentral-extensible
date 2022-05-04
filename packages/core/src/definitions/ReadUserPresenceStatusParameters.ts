@@ -12,4 +12,5 @@ class ReadUserPresenceStatusParameters {
    */
   sipData?: boolean;
 }
+
 export default ReadUserPresenceStatusParameters;

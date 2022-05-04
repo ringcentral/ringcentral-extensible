@@ -7,4 +7,5 @@ class CallQueueBulkAssignResource {
    */
   removedExtensionIds?: string[];
 }
+
 export default CallQueueBulkAssignResource;

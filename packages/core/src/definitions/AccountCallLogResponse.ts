@@ -1,4 +1,6 @@
-import { CompanyCallLogRecord, CallLogNavigationInfo, CallLogPagingInfo } from './index';
+import CompanyCallLogRecord from './CompanyCallLogRecord';
+import CallLogNavigationInfo from './CallLogNavigationInfo';
+import CallLogPagingInfo from './CallLogPagingInfo';
 
 class AccountCallLogResponse {
   /**
@@ -19,4 +21,5 @@ class AccountCallLogResponse {
    */
   paging?: CallLogPagingInfo;
 }
+
 export default AccountCallLogResponse;

@@ -9,4 +9,5 @@ class CustomFieldCreateRequest {
    */
   displayName?: string;
 }
+
 export default CustomFieldCreateRequest;

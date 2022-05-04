@@ -1,6 +1,7 @@
-import {
-  EmergencyServiceAddressResourceRequest, DeviceEmergencyInfo, DeviceUpdateExtensionInfo, DeviceUpdatePhoneLinesInfo,
-} from './index';
+import EmergencyServiceAddressResourceRequest from './EmergencyServiceAddressResourceRequest';
+import DeviceEmergencyInfo from './DeviceEmergencyInfo';
+import DeviceUpdateExtensionInfo from './DeviceUpdateExtensionInfo';
+import DeviceUpdatePhoneLinesInfo from './DeviceUpdatePhoneLinesInfo';
 
 class AccountDeviceUpdate {
   /**
@@ -29,4 +30,5 @@ class AccountDeviceUpdate {
    */
   name?: string;
 }
+
 export default AccountDeviceUpdate;

@@ -1,4 +1,5 @@
-import { GlipTeamInfo, GlipNavigationInfo } from './index';
+import GlipTeamInfo from './GlipTeamInfo';
+import GlipNavigationInfo from './GlipNavigationInfo';
 
 class GlipTeamsList {
   /**
@@ -11,4 +12,5 @@ class GlipTeamsList {
    */
   navigation?: GlipNavigationInfo;
 }
+
 export default GlipTeamsList;

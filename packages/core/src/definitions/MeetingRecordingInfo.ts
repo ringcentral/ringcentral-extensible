@@ -36,4 +36,5 @@ class MeetingRecordingInfo {
    */
   status?: ('Completed' | 'Processing');
 }
+
 export default MeetingRecordingInfo;

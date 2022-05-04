@@ -1,4 +1,4 @@
-import { CreateForwardingNumberDeviceInfo } from './index';
+import CreateForwardingNumberDeviceInfo from './CreateForwardingNumberDeviceInfo';
 
 class CreateForwardingNumberRequest {
   /**
@@ -25,4 +25,5 @@ class CreateForwardingNumberRequest {
    */
   device?: CreateForwardingNumberDeviceInfo;
 }
+
 export default CreateForwardingNumberRequest;

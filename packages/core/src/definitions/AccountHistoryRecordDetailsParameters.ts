@@ -11,4 +11,5 @@ class AccountHistoryRecordDetailsParameters {
    */
   value?: string;
 }
+
 export default AccountHistoryRecordDetailsParameters;

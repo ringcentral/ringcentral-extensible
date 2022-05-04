@@ -11,4 +11,5 @@ class BridgeTargetRequest {
    */
   partyId?: string;
 }
+
 export default BridgeTargetRequest;

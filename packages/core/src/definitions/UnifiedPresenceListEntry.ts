@@ -1,4 +1,4 @@
-import { UnifiedPresence } from './index';
+import UnifiedPresence from './UnifiedPresence';
 
 class UnifiedPresenceListEntry {
   /**
@@ -15,4 +15,5 @@ class UnifiedPresenceListEntry {
    */
   body?: UnifiedPresence;
 }
+
 export default UnifiedPresenceListEntry;

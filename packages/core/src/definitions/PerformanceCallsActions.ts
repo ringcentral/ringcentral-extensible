@@ -1,4 +1,4 @@
-import { CallsActions } from './index';
+import CallsActions from './CallsActions';
 
 class PerformanceCallsActions {
   /**
@@ -11,4 +11,5 @@ class PerformanceCallsActions {
    */
   values?: CallsActions;
 }
+
 export default PerformanceCallsActions;

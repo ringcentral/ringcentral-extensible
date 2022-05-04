@@ -73,4 +73,5 @@ class AccountHistorySearchPublicRequest {
    */
   excludeActionIds?: ('CHANGE_SECRET_INFO' | 'CHANGE_USER_INFO')[];
 }
+
 export default AccountHistorySearchPublicRequest;

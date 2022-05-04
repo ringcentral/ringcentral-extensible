@@ -1,4 +1,4 @@
-import { TimelineData } from './index';
+import TimelineData from './TimelineData';
 
 class PerformanceCallsTimelineResponse {
   /**
@@ -6,4 +6,5 @@ class PerformanceCallsTimelineResponse {
    */
   data?: TimelineData[];
 }
+
 export default PerformanceCallsTimelineResponse;

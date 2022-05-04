@@ -1,4 +1,4 @@
-import { ProfileImageInfoURI } from './index';
+import ProfileImageInfoURI from './ProfileImageInfoURI';
 
 /**
  * Information on profile image
@@ -31,4 +31,5 @@ class ProfileImageInfo {
    */
   scales?: ProfileImageInfoURI[];
 }
+
 export default ProfileImageInfo;

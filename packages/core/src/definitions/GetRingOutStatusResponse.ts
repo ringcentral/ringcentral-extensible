@@ -1,4 +1,4 @@
-import { RingOutStatusInfo } from './index';
+import RingOutStatusInfo from './RingOutStatusInfo';
 
 class GetRingOutStatusResponse {
   /**
@@ -14,4 +14,5 @@ class GetRingOutStatusResponse {
    */
   status?: RingOutStatusInfo;
 }
+
 export default GetRingOutStatusResponse;

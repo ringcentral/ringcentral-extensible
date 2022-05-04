@@ -16,4 +16,5 @@ class ListPermissionCategoriesParameters {
    */
   servicePlanId?: string;
 }
+
 export default ListPermissionCategoriesParameters;

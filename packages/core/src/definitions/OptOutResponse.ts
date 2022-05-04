@@ -23,4 +23,5 @@ class OptOutResponse {
    */
   source?: ('Recipient' | 'Account' | 'Upstream' | 'Carrier');
 }
+
 export default OptOutResponse;

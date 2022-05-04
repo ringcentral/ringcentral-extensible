@@ -1,4 +1,4 @@
-import { AdaptiveCardCreator } from './index';
+import AdaptiveCardCreator from './AdaptiveCardCreator';
 
 class GlipAdaptiveCardShortInfo {
   /**
@@ -41,4 +41,5 @@ class GlipAdaptiveCardShortInfo {
    */
   chatIds?: string[];
 }
+
 export default GlipAdaptiveCardShortInfo;

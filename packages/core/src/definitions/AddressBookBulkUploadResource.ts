@@ -1,4 +1,4 @@
-import { AddressBookBulkContactResource } from './index';
+import AddressBookBulkContactResource from './AddressBookBulkContactResource';
 
 class AddressBookBulkUploadResource {
   /**
@@ -13,4 +13,5 @@ class AddressBookBulkUploadResource {
    */
   contacts?: AddressBookBulkContactResource[];
 }
+
 export default AddressBookBulkUploadResource;

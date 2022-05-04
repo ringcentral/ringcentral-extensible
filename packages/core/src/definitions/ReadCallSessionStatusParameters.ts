@@ -12,4 +12,5 @@ class ReadCallSessionStatusParameters {
    */
   timeout?: string;
 }
+
 export default ReadCallSessionStatusParameters;

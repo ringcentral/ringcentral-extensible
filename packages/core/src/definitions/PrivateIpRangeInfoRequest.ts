@@ -1,4 +1,4 @@
-import { LocationUpdatesEmergencyAddressInfoRequest } from './index';
+import LocationUpdatesEmergencyAddressInfoRequest from './LocationUpdatesEmergencyAddressInfoRequest';
 
 class PrivateIpRangeInfoRequest {
   /**
@@ -27,4 +27,5 @@ class PrivateIpRangeInfoRequest {
    */
   emergencyLocationId?: string;
 }
+
 export default PrivateIpRangeInfoRequest;

@@ -5,4 +5,5 @@ class AnswerTarget {
    */
   deviceId?: string;
 }
+
 export default AnswerTarget;

@@ -12,4 +12,5 @@ class HostInfoRequest {
    */
   id?: string;
 }
+
 export default HostInfoRequest;

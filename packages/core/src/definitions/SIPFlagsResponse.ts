@@ -33,4 +33,5 @@ class SIPFlagsResponse {
    */
   dscpVideo?: number;
 }
+
 export default SIPFlagsResponse;

@@ -1,6 +1,10 @@
-import {
-  DeviceModelInfo, DeviceExtensionInfo, DeviceEmergencyServiceAddressResource, SipRegistrationDeviceEmergencyInfo, Shipping, DevicePhoneLinesInfo, DeviceSiteInfo,
-} from './index';
+import DeviceModelInfo from './DeviceModelInfo';
+import DeviceExtensionInfo from './DeviceExtensionInfo';
+import DeviceEmergencyServiceAddressResource from './DeviceEmergencyServiceAddressResource';
+import SipRegistrationDeviceEmergencyInfo from './SipRegistrationDeviceEmergencyInfo';
+import Shipping from './Shipping';
+import DevicePhoneLinesInfo from './DevicePhoneLinesInfo';
+import DeviceSiteInfo from './DeviceSiteInfo';
 
 class SipRegistrationDeviceInfo {
   /**
@@ -97,4 +101,5 @@ class SipRegistrationDeviceInfo {
    */
   lastLocationReportTime?: string;
 }
+
 export default SipRegistrationDeviceInfo;

@@ -20,4 +20,5 @@ class SearchRequest {
    */
   startIndex?: number;
 }
+
 export default SearchRequest;

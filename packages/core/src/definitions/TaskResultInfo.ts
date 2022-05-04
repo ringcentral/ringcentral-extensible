@@ -1,4 +1,4 @@
-import { TaskResultRecord } from './index';
+import TaskResultRecord from './TaskResultRecord';
 
 /**
  * Task detailed result. Returned for failed and completed tasks
@@ -9,4 +9,5 @@ class TaskResultInfo {
    */
   records?: TaskResultRecord[];
 }
+
 export default TaskResultInfo;

@@ -37,4 +37,5 @@ class AccountLimits {
    */
   shortExtensionNumberLength?: number;
 }
+
 export default AccountLimits;

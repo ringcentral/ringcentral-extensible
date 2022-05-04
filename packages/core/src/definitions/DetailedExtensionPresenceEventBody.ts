@@ -1,4 +1,4 @@
-import { ActiveCallInfoWithoutSIP } from './index';
+import ActiveCallInfoWithoutSIP from './ActiveCallInfoWithoutSIP';
 
 /**
  * Notification payload body
@@ -70,4 +70,5 @@ class DetailedExtensionPresenceEventBody {
    */
   ownerId?: string;
 }
+
 export default DetailedExtensionPresenceEventBody;

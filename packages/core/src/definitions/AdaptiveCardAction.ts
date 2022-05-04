@@ -1,4 +1,4 @@
-import { ActionAdaptiveCardInfo } from './index';
+import ActionAdaptiveCardInfo from './ActionAdaptiveCardInfo';
 
 class AdaptiveCardAction {
   /**
@@ -17,4 +17,5 @@ class AdaptiveCardAction {
    */
   url?: string;
 }
+
 export default AdaptiveCardAction;

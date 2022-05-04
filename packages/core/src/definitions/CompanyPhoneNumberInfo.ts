@@ -1,6 +1,7 @@
-import {
-  CountryInfo, ExtensionInfo, TemporaryNumberInfo, ContactCenterProvider,
-} from './index';
+import CountryInfo from './CountryInfo';
+import ExtensionInfo from './ExtensionInfo';
+import TemporaryNumberInfo from './TemporaryNumberInfo';
+import ContactCenterProvider from './ContactCenterProvider';
 
 class CompanyPhoneNumberInfo {
   /**
@@ -70,4 +71,5 @@ class CompanyPhoneNumberInfo {
    */
   vanityPattern?: string;
 }
+
 export default CompanyPhoneNumberInfo;

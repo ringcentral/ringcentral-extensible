@@ -13,4 +13,5 @@ class PerformanceCallsGrouping {
    */
   ids?: string[];
 }
+
 export default PerformanceCallsGrouping;

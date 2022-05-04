@@ -1,6 +1,9 @@
-import {
-  BillingInfo, CallLogDelegateInfo, ExtensionInfoCallLog, CallLogCallerInfo, CallLogRecordingInfo, CallLogRecordMessage,
-} from './index';
+import BillingInfo from './BillingInfo';
+import CallLogDelegateInfo from './CallLogDelegateInfo';
+import ExtensionInfoCallLog from './ExtensionInfoCallLog';
+import CallLogCallerInfo from './CallLogCallerInfo';
+import CallLogRecordingInfo from './CallLogRecordingInfo';
+import CallLogRecordMessage from './CallLogRecordMessage';
 
 class CallLogRecordLegInfo {
   /**
@@ -140,4 +143,5 @@ class CallLogRecordLegInfo {
    */
   internalType?: ('Local' | 'LongDistance' | 'International' | 'Sip' | 'RingMe' | 'RingOut' | 'Usual' | 'TollFreeNumber' | 'VerificationNumber' | 'Vma' | 'LocalNumber' | 'ImsOutgoing' | 'ImsIncoming');
 }
+
 export default CallLogRecordLegInfo;

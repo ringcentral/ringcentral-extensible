@@ -33,4 +33,5 @@ class UserAnsweringRuleListPaging {
    */
   pageEnd?: number;
 }
+
 export default UserAnsweringRuleListPaging;

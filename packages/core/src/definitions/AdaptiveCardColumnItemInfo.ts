@@ -31,4 +31,5 @@ class AdaptiveCardColumnItemInfo {
    */
   isSubtle?: boolean;
 }
+
 export default AdaptiveCardColumnItemInfo;

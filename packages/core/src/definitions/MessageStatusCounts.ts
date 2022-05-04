@@ -16,4 +16,5 @@ class MessageStatusCounts {
    */
   errorCodeCounts?: number;
 }
+
 export default MessageStatusCounts;

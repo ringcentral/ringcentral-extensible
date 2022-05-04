@@ -7,4 +7,5 @@ class ReadExtensionCallQueuePresenceParameters {
    */
   editableMemberStatus?: boolean;
 }
+
 export default ReadExtensionCallQueuePresenceParameters;

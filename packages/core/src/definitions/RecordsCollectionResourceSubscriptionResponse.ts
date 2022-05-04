@@ -1,4 +1,4 @@
-import { SubscriptionInfo } from './index';
+import SubscriptionInfo from './SubscriptionInfo';
 
 class RecordsCollectionResourceSubscriptionResponse {
   /**
@@ -10,4 +10,5 @@ class RecordsCollectionResourceSubscriptionResponse {
    */
   records?: SubscriptionInfo[];
 }
+
 export default RecordsCollectionResourceSubscriptionResponse;

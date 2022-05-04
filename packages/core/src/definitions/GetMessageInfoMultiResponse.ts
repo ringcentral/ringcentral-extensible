@@ -1,4 +1,4 @@
-import { MessageBody } from './index';
+import MessageBody from './MessageBody';
 
 class GetMessageInfoMultiResponse {
   /**
@@ -15,4 +15,5 @@ class GetMessageInfoMultiResponse {
    */
   body?: MessageBody;
 }
+
 export default GetMessageInfoMultiResponse;

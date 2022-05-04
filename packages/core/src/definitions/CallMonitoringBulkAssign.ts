@@ -1,4 +1,4 @@
-import { CallMonitoringExtensionInfo } from './index';
+import CallMonitoringExtensionInfo from './CallMonitoringExtensionInfo';
 
 class CallMonitoringBulkAssign {
   /**
@@ -13,4 +13,5 @@ class CallMonitoringBulkAssign {
    */
   removedExtensions?: CallMonitoringExtensionInfo[];
 }
+
 export default CallMonitoringBulkAssign;

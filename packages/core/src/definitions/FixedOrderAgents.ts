@@ -1,4 +1,4 @@
-import { FixedOrderAgentsExtensionInfo } from './index';
+import FixedOrderAgentsExtensionInfo from './FixedOrderAgentsExtensionInfo';
 
 class FixedOrderAgents {
   /**
@@ -10,4 +10,5 @@ class FixedOrderAgents {
    */
   index?: number;
 }
+
 export default FixedOrderAgents;

@@ -27,4 +27,5 @@ class ExtensionInfoGrants {
    */
   type?: ('User' | 'Fax User' | 'VirtualUser' | 'DigitalUser' | 'Department' | 'Announcement' | 'Voicemail' | 'SharedLinesGroup' | 'PagingOnly' | 'IvrMenu' | 'ApplicationExtension' | 'ParkLocation');
 }
+
 export default ExtensionInfoGrants;

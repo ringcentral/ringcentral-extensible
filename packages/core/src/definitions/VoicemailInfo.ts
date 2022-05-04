@@ -1,4 +1,4 @@
-import { RecipientInfo } from './index';
+import RecipientInfo from './RecipientInfo';
 
 /**
  * Specifies whether to take a voicemail and who should do it
@@ -13,4 +13,5 @@ class VoicemailInfo {
    */
   recipient?: RecipientInfo;
 }
+
 export default VoicemailInfo;

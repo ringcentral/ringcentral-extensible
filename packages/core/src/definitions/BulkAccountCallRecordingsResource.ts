@@ -1,4 +1,4 @@
-import { CallRecordingExtensionResource } from './index';
+import CallRecordingExtensionResource from './CallRecordingExtensionResource';
 
 class BulkAccountCallRecordingsResource {
   /**
@@ -13,4 +13,5 @@ class BulkAccountCallRecordingsResource {
    */
   removedExtensions?: CallRecordingExtensionResource[];
 }
+
 export default BulkAccountCallRecordingsResource;

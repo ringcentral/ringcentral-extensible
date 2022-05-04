@@ -4,4 +4,5 @@ class AdaptiveCardCreator {
    */
   id?: string;
 }
+
 export default AdaptiveCardCreator;

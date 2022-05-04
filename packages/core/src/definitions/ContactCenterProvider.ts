@@ -12,4 +12,5 @@ class ContactCenterProvider {
    */
   name?: string;
 }
+
 export default ContactCenterProvider;

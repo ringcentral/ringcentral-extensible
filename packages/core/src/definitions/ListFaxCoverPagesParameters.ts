@@ -14,4 +14,5 @@ class ListFaxCoverPagesParameters {
    */
   perPage?: number;
 }
+
 export default ListFaxCoverPagesParameters;

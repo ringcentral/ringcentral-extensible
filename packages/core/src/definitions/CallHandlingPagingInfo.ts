@@ -32,4 +32,5 @@ class CallHandlingPagingInfo {
    */
   totalElements?: number;
 }
+
 export default CallHandlingPagingInfo;

@@ -1,4 +1,6 @@
-import { ForwardingNumberInfo, CallHandlingNavigationInfo, CallHandlingPagingInfo } from './index';
+import ForwardingNumberInfo from './ForwardingNumberInfo';
+import CallHandlingNavigationInfo from './CallHandlingNavigationInfo';
+import CallHandlingPagingInfo from './CallHandlingPagingInfo';
 
 class GetExtensionForwardingNumberListResponse {
   /**
@@ -19,4 +21,5 @@ class GetExtensionForwardingNumberListResponse {
    */
   paging?: CallHandlingPagingInfo;
 }
+
 export default GetExtensionForwardingNumberListResponse;

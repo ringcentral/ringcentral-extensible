@@ -16,4 +16,5 @@ class PostGlipFile {
    */
   name?: string;
 }
+
 export default PostGlipFile;

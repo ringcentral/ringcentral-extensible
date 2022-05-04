@@ -1,6 +1,11 @@
-import {
-  ModelInfo, ExtensionInfoIntId, DeviceEmergencyInfo, EmergencyServiceAddressResource, PhoneLinesInfo, ShippingInfo, DeviceSiteInfo, BillingStatementInfo,
-} from './index';
+import ModelInfo from './ModelInfo';
+import ExtensionInfoIntId from './ExtensionInfoIntId';
+import DeviceEmergencyInfo from './DeviceEmergencyInfo';
+import EmergencyServiceAddressResource from './EmergencyServiceAddressResource';
+import PhoneLinesInfo from './PhoneLinesInfo';
+import ShippingInfo from './ShippingInfo';
+import DeviceSiteInfo from './DeviceSiteInfo';
+import BillingStatementInfo from './BillingStatementInfo';
 
 class GetDeviceInfoResponse {
   /**
@@ -103,4 +108,5 @@ class GetDeviceInfoResponse {
    */
   billingStatement?: BillingStatementInfo;
 }
+
 export default GetDeviceInfoResponse;

@@ -24,4 +24,5 @@ class ListStandardGreetingsParameters {
    */
   usageType?: ('UserExtensionAnsweringRule' | 'ExtensionAnsweringRule' | 'DepartmentExtensionAnsweringRule' | 'CompanyAnsweringRule' | 'CompanyAfterHoursAnsweringRule' | 'VoicemailExtensionAnsweringRule' | 'AnnouncementExtensionAnsweringRule' | 'SharedLinesGroupAnsweringRule');
 }
+
 export default ListStandardGreetingsParameters;

@@ -1,4 +1,6 @@
-import { UserCallLogRecord, CallLogNavigationInfo, CallLogPagingInfo } from './index';
+import UserCallLogRecord from './UserCallLogRecord';
+import CallLogNavigationInfo from './CallLogNavigationInfo';
+import CallLogPagingInfo from './CallLogPagingInfo';
 
 class UserCallLogResponse {
   /**
@@ -17,4 +19,5 @@ class UserCallLogResponse {
    */
   paging?: CallLogPagingInfo;
 }
+
 export default UserCallLogResponse;

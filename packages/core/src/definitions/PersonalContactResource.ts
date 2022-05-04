@@ -1,4 +1,4 @@
-import { ContactAddressInfo } from './index';
+import ContactAddressInfo from './ContactAddressInfo';
 
 class PersonalContactResource {
   /**
@@ -180,4 +180,5 @@ class PersonalContactResource {
    */
   ringtoneIndex?: string;
 }
+
 export default PersonalContactResource;

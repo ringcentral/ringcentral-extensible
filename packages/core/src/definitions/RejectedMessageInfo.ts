@@ -25,4 +25,5 @@ class RejectedMessageInfo {
    */
   description?: string;
 }
+
 export default RejectedMessageInfo;

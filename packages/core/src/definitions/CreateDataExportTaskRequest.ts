@@ -1,4 +1,4 @@
-import { DataExportTaskContactInfo } from './index';
+import DataExportTaskContactInfo from './DataExportTaskContactInfo';
 
 class CreateDataExportTaskRequest {
   /**
@@ -20,4 +20,5 @@ class CreateDataExportTaskRequest {
    */
   chatIds?: string[];
 }
+
 export default CreateDataExportTaskRequest;

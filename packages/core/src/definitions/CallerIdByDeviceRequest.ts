@@ -1,4 +1,5 @@
-import { CallerIdDeviceInfoRequest, CallerIdByDeviceInfoRequest } from './index';
+import CallerIdDeviceInfoRequest from './CallerIdDeviceInfoRequest';
+import CallerIdByDeviceInfoRequest from './CallerIdByDeviceInfoRequest';
 
 /**
  * Caller ID settings by device
@@ -12,4 +13,5 @@ class CallerIdByDeviceRequest {
    */
   callerId?: CallerIdByDeviceInfoRequest;
 }
+
 export default CallerIdByDeviceRequest;

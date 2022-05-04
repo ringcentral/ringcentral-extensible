@@ -1,6 +1,7 @@
-import {
-  AutomaticLocationUpdatesSiteInfo, PublicIpRangeInfo, PrivateIpRangeInfoRequest, ERLLocationInfo,
-} from './index';
+import AutomaticLocationUpdatesSiteInfo from './AutomaticLocationUpdatesSiteInfo';
+import PublicIpRangeInfo from './PublicIpRangeInfo';
+import PrivateIpRangeInfoRequest from './PrivateIpRangeInfoRequest';
+import ERLLocationInfo from './ERLLocationInfo';
 
 class CreateNetworkRequest {
   /**
@@ -23,4 +24,5 @@ class CreateNetworkRequest {
    */
   emergencyLocation?: ERLLocationInfo;
 }
+
 export default CreateNetworkRequest;

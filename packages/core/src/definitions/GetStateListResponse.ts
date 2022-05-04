@@ -1,4 +1,6 @@
-import { GetStateInfoResponse, ProvisioningNavigationInfo, ProvisioningPagingInfo } from './index';
+import GetStateInfoResponse from './GetStateInfoResponse';
+import ProvisioningNavigationInfo from './ProvisioningNavigationInfo';
+import ProvisioningPagingInfo from './ProvisioningPagingInfo';
 
 class GetStateListResponse {
   /**
@@ -19,4 +21,5 @@ class GetStateListResponse {
    */
   paging?: ProvisioningPagingInfo;
 }
+
 export default GetStateListResponse;

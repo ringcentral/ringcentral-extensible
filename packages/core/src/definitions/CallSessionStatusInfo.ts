@@ -1,4 +1,5 @@
-import { PeerInfo, MobilePickupData } from './index';
+import PeerInfo from './PeerInfo';
+import MobilePickupData from './MobilePickupData';
 
 class CallSessionStatusInfo {
   /**
@@ -21,4 +22,5 @@ class CallSessionStatusInfo {
    */
   mobilePickupData?: MobilePickupData;
 }
+
 export default CallSessionStatusInfo;

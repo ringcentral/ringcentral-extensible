@@ -1,6 +1,7 @@
-import {
-  PersonalContactResource, UserContactsNavigationInfo, UserContactsPagingInfo, UserContactsGroupsInfo,
-} from './index';
+import PersonalContactResource from './PersonalContactResource';
+import UserContactsNavigationInfo from './UserContactsNavigationInfo';
+import UserContactsPagingInfo from './UserContactsPagingInfo';
+import UserContactsGroupsInfo from './UserContactsGroupsInfo';
 
 class ContactList {
   /**
@@ -25,4 +26,5 @@ class ContactList {
    */
   groups?: UserContactsGroupsInfo;
 }
+
 export default ContactList;

@@ -1,4 +1,4 @@
-import { TimeInterval } from './index';
+import TimeInterval from './TimeInterval';
 
 /**
  * Weekly schedule
@@ -39,4 +39,5 @@ class WeeklyScheduleInfo {
    */
   sunday?: TimeInterval[];
 }
+
 export default WeeklyScheduleInfo;

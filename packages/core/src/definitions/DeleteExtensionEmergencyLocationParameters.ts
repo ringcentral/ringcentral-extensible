@@ -7,4 +7,5 @@ class DeleteExtensionEmergencyLocationParameters {
    */
   validateOnly?: boolean;
 }
+
 export default DeleteExtensionEmergencyLocationParameters;

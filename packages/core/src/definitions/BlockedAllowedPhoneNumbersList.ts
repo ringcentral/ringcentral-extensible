@@ -1,4 +1,6 @@
-import { BlockedAllowedPhoneNumberInfo, CallHandlingNavigationInfo, CallHandlingPagingInfo } from './index';
+import BlockedAllowedPhoneNumberInfo from './BlockedAllowedPhoneNumberInfo';
+import CallHandlingNavigationInfo from './CallHandlingNavigationInfo';
+import CallHandlingPagingInfo from './CallHandlingPagingInfo';
 
 /**
  * List of blocked or allowed phone numbers
@@ -21,4 +23,5 @@ class BlockedAllowedPhoneNumbersList {
    */
   paging?: CallHandlingPagingInfo;
 }
+
 export default BlockedAllowedPhoneNumbersList;

@@ -1,4 +1,5 @@
-import { CallerIdByDeviceRequest, CallerIdByFeatureRequest } from './index';
+import CallerIdByDeviceRequest from './CallerIdByDeviceRequest';
+import CallerIdByFeatureRequest from './CallerIdByFeatureRequest';
 
 class ExtensionCallerIdInfoRequest {
   /**
@@ -24,4 +25,5 @@ class ExtensionCallerIdInfoRequest {
    */
   extensionNumberForInternalCalls?: boolean;
 }
+
 export default ExtensionCallerIdInfoRequest;

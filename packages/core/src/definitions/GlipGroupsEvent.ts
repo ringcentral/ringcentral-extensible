@@ -1,4 +1,4 @@
-import { GlipMemberInfo } from './index';
+import GlipMemberInfo from './GlipMemberInfo';
 
 class GlipGroupsEvent {
   /**
@@ -48,4 +48,5 @@ class GlipGroupsEvent {
    */
   eventType?: ('GroupRenamed' | 'GroupJoined' | 'GroupLeft' | 'GroupChanged');
 }
+
 export default GlipGroupsEvent;

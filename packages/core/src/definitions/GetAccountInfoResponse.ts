@@ -1,6 +1,9 @@
-import {
-  AccountOperatorInfo, ServiceInfo, SignupInfoResource, AccountStatusInfo, AccountRegionalSettings, AccountLimits,
-} from './index';
+import AccountOperatorInfo from './AccountOperatorInfo';
+import ServiceInfo from './ServiceInfo';
+import SignupInfoResource from './SignupInfoResource';
+import AccountStatusInfo from './AccountStatusInfo';
+import AccountRegionalSettings from './AccountRegionalSettings';
+import AccountLimits from './AccountLimits';
 
 class GetAccountInfoResponse {
   /**
@@ -79,4 +82,5 @@ class GetAccountInfoResponse {
    */
   limits?: AccountLimits;
 }
+
 export default GetAccountInfoResponse;

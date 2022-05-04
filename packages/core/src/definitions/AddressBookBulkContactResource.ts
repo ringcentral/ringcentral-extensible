@@ -1,4 +1,4 @@
-import { AddressBookBulkContactAddressInfo } from './index';
+import AddressBookBulkContactAddressInfo from './AddressBookBulkContactAddressInfo';
 
 /**
  * Contact resource
@@ -160,4 +160,5 @@ class AddressBookBulkContactResource {
    */
   otherAddress?: AddressBookBulkContactAddressInfo;
 }
+
 export default AddressBookBulkContactResource;

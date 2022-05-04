@@ -1,4 +1,4 @@
-import { ExtensionPresenceEventBody } from './index';
+import ExtensionPresenceEventBody from './ExtensionPresenceEventBody';
 
 class ExtensionPresenceEvent {
   /**
@@ -25,4 +25,5 @@ class ExtensionPresenceEvent {
    */
   body?: ExtensionPresenceEventBody;
 }
+
 export default ExtensionPresenceEvent;

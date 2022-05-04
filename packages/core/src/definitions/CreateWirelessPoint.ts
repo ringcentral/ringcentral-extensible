@@ -1,4 +1,6 @@
-import { AutomaticLocationUpdatesSiteInfo, LocationUpdatesEmergencyAddressInfoRequest, ERLLocationInfo } from './index';
+import AutomaticLocationUpdatesSiteInfo from './AutomaticLocationUpdatesSiteInfo';
+import LocationUpdatesEmergencyAddressInfoRequest from './LocationUpdatesEmergencyAddressInfoRequest';
+import ERLLocationInfo from './ERLLocationInfo';
 
 class CreateWirelessPoint {
   /**
@@ -30,4 +32,5 @@ class CreateWirelessPoint {
    */
   emergencyLocation?: ERLLocationInfo;
 }
+
 export default CreateWirelessPoint;

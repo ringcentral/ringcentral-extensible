@@ -1,4 +1,5 @@
-import { ParamsInfo, ReasonInfo } from './index';
+import ParamsInfo from './ParamsInfo';
+import ReasonInfo from './ReasonInfo';
 
 class FeatureInfo {
   /**
@@ -19,4 +20,5 @@ class FeatureInfo {
    */
   reason?: ReasonInfo;
 }
+
 export default FeatureInfo;

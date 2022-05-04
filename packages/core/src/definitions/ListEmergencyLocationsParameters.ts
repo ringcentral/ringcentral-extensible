@@ -41,4 +41,5 @@ class ListEmergencyLocationsParameters {
    */
   page?: number;
 }
+
 export default ListEmergencyLocationsParameters;

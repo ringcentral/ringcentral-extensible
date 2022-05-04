@@ -9,4 +9,5 @@ class PhoneNumber {
    */
   value?: string;
 }
+
 export default PhoneNumber;

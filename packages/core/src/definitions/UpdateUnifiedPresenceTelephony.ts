@@ -4,4 +4,5 @@ class UpdateUnifiedPresenceTelephony {
    */
   availability?: ('TakeAllCalls' | 'DoNotAcceptAnyCalls' | 'DoNotAcceptQueueCalls');
 }
+
 export default UpdateUnifiedPresenceTelephony;

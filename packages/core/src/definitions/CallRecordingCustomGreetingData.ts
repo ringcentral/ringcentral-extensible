@@ -12,4 +12,5 @@ class CallRecordingCustomGreetingData {
    */
   id?: string;
 }
+
 export default CallRecordingCustomGreetingData;

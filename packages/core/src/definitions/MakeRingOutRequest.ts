@@ -1,6 +1,7 @@
-import {
-  MakeRingOutCallerInfoRequestFrom, MakeRingOutCallerInfoRequestTo, MakeRingOutCallerIdInfo, MakeRingOutCoutryInfo,
-} from './index';
+import MakeRingOutCallerInfoRequestFrom from './MakeRingOutCallerInfoRequestFrom';
+import MakeRingOutCallerInfoRequestTo from './MakeRingOutCallerInfoRequestTo';
+import MakeRingOutCallerIdInfo from './MakeRingOutCallerIdInfo';
+import MakeRingOutCoutryInfo from './MakeRingOutCoutryInfo';
 
 class MakeRingOutRequest {
   /**
@@ -26,4 +27,5 @@ class MakeRingOutRequest {
    */
   country?: MakeRingOutCoutryInfo;
 }
+
 export default MakeRingOutRequest;

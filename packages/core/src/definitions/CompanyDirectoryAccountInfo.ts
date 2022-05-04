@@ -7,4 +7,5 @@ class CompanyDirectoryAccountInfo {
    */
   id?: string;
 }
+
 export default CompanyDirectoryAccountInfo;

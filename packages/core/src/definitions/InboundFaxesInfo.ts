@@ -29,4 +29,5 @@ class InboundFaxesInfo {
    */
   markAsRead?: boolean;
 }
+
 export default InboundFaxesInfo;

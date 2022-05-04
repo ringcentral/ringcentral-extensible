@@ -1,4 +1,4 @@
-import { APNSInfo } from './index';
+import APNSInfo from './APNSInfo';
 
 class MissedCallEvent {
   /**
@@ -102,4 +102,5 @@ class MissedCallEvent {
    */
   ownerId?: string;
 }
+
 export default MissedCallEvent;

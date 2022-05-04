@@ -4,4 +4,5 @@ class ExtensionGreetingLanguageInfoRequest {
    */
   id?: string;
 }
+
 export default ExtensionGreetingLanguageInfoRequest;

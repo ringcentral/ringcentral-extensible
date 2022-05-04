@@ -11,4 +11,5 @@ class DeleteExtensionParameters {
    */
   savePhoneNumbers?: boolean;
 }
+
 export default DeleteExtensionParameters;

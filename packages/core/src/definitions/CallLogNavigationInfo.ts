@@ -1,4 +1,4 @@
-import { CallLogNavigationInfoURI } from './index';
+import CallLogNavigationInfoURI from './CallLogNavigationInfoURI';
 
 /**
  * Information on navigation
@@ -16,4 +16,5 @@ class CallLogNavigationInfo {
    */
   previousPage?: CallLogNavigationInfoURI;
 }
+
 export default CallLogNavigationInfo;

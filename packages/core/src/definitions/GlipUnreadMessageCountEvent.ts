@@ -1,4 +1,5 @@
-import { GlipAPNSInfo, GCMInfo } from './index';
+import GlipAPNSInfo from './GlipAPNSInfo';
+import GCMInfo from './GCMInfo';
 
 class GlipUnreadMessageCountEvent {
   /**
@@ -19,4 +20,5 @@ class GlipUnreadMessageCountEvent {
    */
   ownerId?: string;
 }
+
 export default GlipUnreadMessageCountEvent;

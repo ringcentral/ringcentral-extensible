@@ -22,4 +22,5 @@ class ExtensionInfoEventBody {
    */
   ownerId?: string;
 }
+
 export default ExtensionInfoEventBody;

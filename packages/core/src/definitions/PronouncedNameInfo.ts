@@ -1,4 +1,4 @@
-import { PronouncedNamePromptInfo } from './index';
+import PronouncedNamePromptInfo from './PronouncedNamePromptInfo';
 
 class PronouncedNameInfo {
   /**
@@ -15,4 +15,5 @@ class PronouncedNameInfo {
    */
   prompt?: PronouncedNamePromptInfo;
 }
+
 export default PronouncedNameInfo;

@@ -1,8 +1,9 @@
-import { UpdateWirelessPoint } from './index';
+import UpdateWirelessPoint from './UpdateWirelessPoint';
 
 class UpdateMultipleWirelessPointsRequest {
   /**
    */
   records?: UpdateWirelessPoint[];
 }
+
 export default UpdateMultipleWirelessPointsRequest;

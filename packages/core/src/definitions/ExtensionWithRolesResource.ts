@@ -1,4 +1,4 @@
-import { AssignedRoleResource } from './index';
+import AssignedRoleResource from './AssignedRoleResource';
 
 class ExtensionWithRolesResource {
   /**
@@ -14,4 +14,5 @@ class ExtensionWithRolesResource {
    */
   roles?: AssignedRoleResource[];
 }
+
 export default ExtensionWithRolesResource;

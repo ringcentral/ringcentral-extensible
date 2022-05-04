@@ -4,4 +4,5 @@ class CustomGreetingInfoRequest {
    */
   id?: string;
 }
+
 export default CustomGreetingInfoRequest;

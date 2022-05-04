@@ -16,4 +16,5 @@ class ListStandardUserRoleParameters {
    */
   servicePlanId?: string;
 }
+
 export default ListStandardUserRoleParameters;

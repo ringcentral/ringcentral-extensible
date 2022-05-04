@@ -1,6 +1,8 @@
-import {
-  VoicemailsInfo, InboundFaxesInfo, OutboundFaxesInfo, InboundTextsInfo, MissedCallsInfo,
-} from './index';
+import VoicemailsInfo from './VoicemailsInfo';
+import InboundFaxesInfo from './InboundFaxesInfo';
+import OutboundFaxesInfo from './OutboundFaxesInfo';
+import InboundTextsInfo from './InboundTextsInfo';
+import MissedCallsInfo from './MissedCallsInfo';
 
 class NotificationSettingsUpdateRequest {
   /**
@@ -44,4 +46,5 @@ class NotificationSettingsUpdateRequest {
    */
   includeManagers?: boolean;
 }
+
 export default NotificationSettingsUpdateRequest;

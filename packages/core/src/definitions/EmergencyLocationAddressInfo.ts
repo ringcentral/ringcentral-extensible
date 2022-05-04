@@ -64,4 +64,5 @@ class EmergencyLocationAddressInfo {
    */
   customerName?: string;
 }
+
 export default EmergencyLocationAddressInfo;

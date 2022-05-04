@@ -1,4 +1,4 @@
-import { CallQueueServiceLevelSettings } from './index';
+import CallQueueServiceLevelSettings from './CallQueueServiceLevelSettings';
 
 class CallQueueDetails {
   /**
@@ -30,4 +30,5 @@ class CallQueueDetails {
    */
   editableMemberStatus?: boolean;
 }
+
 export default CallQueueDetails;

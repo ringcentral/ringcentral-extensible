@@ -1,4 +1,4 @@
-import { CallQueueMember } from './index';
+import CallQueueMember from './CallQueueMember';
 
 class CallQueueMemberPresence {
   /**
@@ -15,4 +15,5 @@ class CallQueueMemberPresence {
    */
   acceptCurrentQueueCalls?: boolean;
 }
+
 export default CallQueueMemberPresence;

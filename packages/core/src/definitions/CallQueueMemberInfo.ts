@@ -15,4 +15,5 @@ class CallQueueMemberInfo {
    */
   extensionNumber?: string;
 }
+
 export default CallQueueMemberInfo;

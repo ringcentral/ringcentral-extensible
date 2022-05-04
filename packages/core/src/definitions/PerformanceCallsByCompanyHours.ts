@@ -1,4 +1,4 @@
-import { CallsByCompanyHours } from './index';
+import CallsByCompanyHours from './CallsByCompanyHours';
 
 class PerformanceCallsByCompanyHours {
   /**
@@ -11,4 +11,5 @@ class PerformanceCallsByCompanyHours {
    */
   values?: CallsByCompanyHours;
 }
+
 export default PerformanceCallsByCompanyHours;

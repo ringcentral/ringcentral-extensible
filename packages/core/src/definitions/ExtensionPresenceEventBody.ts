@@ -53,4 +53,5 @@ class ExtensionPresenceEventBody {
    */
   ownerId?: string;
 }
+
 export default ExtensionPresenceEventBody;

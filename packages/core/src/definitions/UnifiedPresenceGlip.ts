@@ -17,4 +17,5 @@ class UnifiedPresenceGlip {
    */
   availability?: ('Available' | 'DND');
 }
+
 export default UnifiedPresenceGlip;

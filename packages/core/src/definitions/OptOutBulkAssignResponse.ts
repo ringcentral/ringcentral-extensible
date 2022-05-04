@@ -1,4 +1,5 @@
-import { BulkAssignOptOuts, BulkAssignOptIns } from './index';
+import BulkAssignOptOuts from './BulkAssignOptOuts';
+import BulkAssignOptIns from './BulkAssignOptIns';
 
 /**
  * The results of adding opt-outs and opt-ins
@@ -12,4 +13,5 @@ class OptOutBulkAssignResponse {
    */
   optIns?: BulkAssignOptIns;
 }
+
 export default OptOutBulkAssignResponse;

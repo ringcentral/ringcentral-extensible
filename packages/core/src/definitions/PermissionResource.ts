@@ -1,4 +1,5 @@
-import { PermissionCategoryIdResource, PermissionIdResource } from './index';
+import PermissionCategoryIdResource from './PermissionCategoryIdResource';
+import PermissionIdResource from './PermissionIdResource';
 
 class PermissionResource {
   /**
@@ -39,4 +40,5 @@ class PermissionResource {
    */
   includedPermissions?: PermissionIdResource[];
 }
+
 export default PermissionResource;

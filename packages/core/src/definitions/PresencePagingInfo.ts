@@ -32,4 +32,5 @@ class PresencePagingInfo {
    */
   totalElements?: number;
 }
+
 export default PresencePagingInfo;

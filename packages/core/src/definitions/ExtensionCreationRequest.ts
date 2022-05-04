@@ -1,6 +1,9 @@
-import {
-  ContactInfoCreationRequest, CustomFieldInfo, ReferenceInfo, RegionalSettings, SiteInfo, ExtensionStatusInfo,
-} from './index';
+import ContactInfoCreationRequest from './ContactInfoCreationRequest';
+import CustomFieldInfo from './CustomFieldInfo';
+import ReferenceInfo from './ReferenceInfo';
+import RegionalSettings from './RegionalSettings';
+import SiteInfo from './SiteInfo';
+import ExtensionStatusInfo from './ExtensionStatusInfo';
 
 class ExtensionCreationRequest {
   /**
@@ -69,4 +72,5 @@ class ExtensionCreationRequest {
    */
   hidden?: boolean;
 }
+
 export default ExtensionCreationRequest;

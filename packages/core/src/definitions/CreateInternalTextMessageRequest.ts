@@ -1,4 +1,4 @@
-import { PagerCallerInfoRequest } from './index';
+import PagerCallerInfoRequest from './PagerCallerInfoRequest';
 
 class CreateInternalTextMessageRequest {
   /**
@@ -22,4 +22,5 @@ class CreateInternalTextMessageRequest {
    */
   to?: PagerCallerInfoRequest[];
 }
+
 export default CreateInternalTextMessageRequest;

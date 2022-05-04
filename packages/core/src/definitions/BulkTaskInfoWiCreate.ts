@@ -22,4 +22,5 @@ class BulkTaskInfoWiCreate {
    */
   lastModifiedTime?: string;
 }
+
 export default BulkTaskInfoWiCreate;

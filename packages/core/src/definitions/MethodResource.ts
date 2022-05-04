@@ -7,4 +7,5 @@ class MethodResource {
    */
   name?: string;
 }
+
 export default MethodResource;

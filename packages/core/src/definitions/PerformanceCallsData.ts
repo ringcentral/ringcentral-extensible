@@ -1,4 +1,6 @@
-import { KeyInfo, PerformanceCallsTimers, PerformanceCallsCounters } from './index';
+import KeyInfo from './KeyInfo';
+import PerformanceCallsTimers from './PerformanceCallsTimers';
+import PerformanceCallsCounters from './PerformanceCallsCounters';
 
 class PerformanceCallsData {
   /**
@@ -19,4 +21,5 @@ class PerformanceCallsData {
    */
   counters?: PerformanceCallsCounters;
 }
+
 export default PerformanceCallsData;

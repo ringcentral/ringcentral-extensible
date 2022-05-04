@@ -1,6 +1,9 @@
-import {
-  CountryInfo, TimezoneInfo, RegionalLanguageInfo, GreetingLanguageInfo, FormattingLocaleInfo, CurrencyInfo,
-} from './index';
+import CountryInfo from './CountryInfo';
+import TimezoneInfo from './TimezoneInfo';
+import RegionalLanguageInfo from './RegionalLanguageInfo';
+import GreetingLanguageInfo from './GreetingLanguageInfo';
+import FormattingLocaleInfo from './FormattingLocaleInfo';
+import CurrencyInfo from './CurrencyInfo';
 
 /**
  * Account level region data (web service Auto-Receptionist settings)
@@ -35,4 +38,5 @@ class AccountRegionalSettings {
    */
   currency?: CurrencyInfo;
 }
+
 export default AccountRegionalSettings;

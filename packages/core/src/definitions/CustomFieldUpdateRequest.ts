@@ -4,4 +4,5 @@ class CustomFieldUpdateRequest {
    */
   displayName?: string;
 }
+
 export default CustomFieldUpdateRequest;

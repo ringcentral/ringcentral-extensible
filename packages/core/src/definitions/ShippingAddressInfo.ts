@@ -97,4 +97,5 @@ class ShippingAddressInfo {
    */
   taxId?: string;
 }
+
 export default ShippingAddressInfo;

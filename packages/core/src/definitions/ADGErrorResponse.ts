@@ -1,4 +1,4 @@
-import { ADGError } from './index';
+import ADGError from './ADGError';
 
 /**
  * Format of response in case that any error occurred during request processing
@@ -9,4 +9,5 @@ class ADGErrorResponse {
    */
   errors?: ADGError[];
 }
+
 export default ADGErrorResponse;

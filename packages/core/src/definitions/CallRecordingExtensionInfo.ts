@@ -19,4 +19,5 @@ class CallRecordingExtensionInfo {
    */
   name?: string;
 }
+
 export default CallRecordingExtensionInfo;

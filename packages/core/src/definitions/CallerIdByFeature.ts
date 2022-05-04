@@ -1,4 +1,4 @@
-import { CallerIdByFeatureInfo } from './index';
+import CallerIdByFeatureInfo from './CallerIdByFeatureInfo';
 
 /**
  * Caller ID settings by feature
@@ -12,4 +12,5 @@ class CallerIdByFeature {
    */
   callerId?: CallerIdByFeatureInfo;
 }
+
 export default CallerIdByFeature;

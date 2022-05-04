@@ -1,6 +1,11 @@
-import {
-  ExtensionStatusInfo, ContactInfoUpdateRequest, ExtensionRegionalSettingRequest, CallQueueInfoRequest, UserTransitionInfo, CustomFieldInfo, AutomaticLocationUpdatesSiteInfo, ReferenceInfo,
-} from './index';
+import ExtensionStatusInfo from './ExtensionStatusInfo';
+import ContactInfoUpdateRequest from './ContactInfoUpdateRequest';
+import ExtensionRegionalSettingRequest from './ExtensionRegionalSettingRequest';
+import CallQueueInfoRequest from './CallQueueInfoRequest';
+import UserTransitionInfo from './UserTransitionInfo';
+import CustomFieldInfo from './CustomFieldInfo';
+import AutomaticLocationUpdatesSiteInfo from './AutomaticLocationUpdatesSiteInfo';
+import ReferenceInfo from './ReferenceInfo';
 
 class ExtensionBulkUpdateInfo {
   /**
@@ -89,4 +94,5 @@ class ExtensionBulkUpdateInfo {
    */
   references?: ReferenceInfo[];
 }
+
 export default ExtensionBulkUpdateInfo;

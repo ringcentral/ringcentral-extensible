@@ -1,4 +1,6 @@
-import { ExtensionDeviceResponse, DeviceProvisioningNavigationInfo, DeviceProvisioningPagingInfo } from './index';
+import ExtensionDeviceResponse from './ExtensionDeviceResponse';
+import DeviceProvisioningNavigationInfo from './DeviceProvisioningNavigationInfo';
+import DeviceProvisioningPagingInfo from './DeviceProvisioningPagingInfo';
 
 class GetExtensionDevicesResponse {
   /**
@@ -22,4 +24,5 @@ class GetExtensionDevicesResponse {
    */
   paging?: DeviceProvisioningPagingInfo;
 }
+
 export default GetExtensionDevicesResponse;

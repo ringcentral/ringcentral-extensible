@@ -35,4 +35,5 @@ class CallsByResult {
    */
   unknown?: number;
 }
+
 export default CallsByResult;

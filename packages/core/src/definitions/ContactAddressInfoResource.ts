@@ -19,4 +19,5 @@ class ContactAddressInfoResource {
    */
   country?: string;
 }
+
 export default ContactAddressInfoResource;

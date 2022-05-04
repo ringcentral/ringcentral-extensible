@@ -1,4 +1,5 @@
-import { BillingStatementCharges, BillingStatementFees } from './index';
+import BillingStatementCharges from './BillingStatementCharges';
+import BillingStatementFees from './BillingStatementFees';
 
 /**
  * Billing information. Returned for device update request if `prestatement` query parameter is set to 'true'
@@ -37,4 +38,5 @@ class BillingStatementInfo {
    */
   totalFreeServiceCredit?: number;
 }
+
 export default BillingStatementInfo;

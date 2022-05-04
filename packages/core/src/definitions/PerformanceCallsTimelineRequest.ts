@@ -1,6 +1,7 @@
-import {
-  PerformanceCallsGrouping, PerformanceCallsTimeSettings, PerformanceCallsFilters, TimelineResponseDataOptions,
-} from './index';
+import PerformanceCallsGrouping from './PerformanceCallsGrouping';
+import PerformanceCallsTimeSettings from './PerformanceCallsTimeSettings';
+import PerformanceCallsFilters from './PerformanceCallsFilters';
+import TimelineResponseDataOptions from './TimelineResponseDataOptions';
 
 class PerformanceCallsTimelineRequest {
   /**
@@ -21,4 +22,5 @@ class PerformanceCallsTimelineRequest {
    */
   responseOptions?: TimelineResponseDataOptions;
 }
+
 export default PerformanceCallsTimelineRequest;

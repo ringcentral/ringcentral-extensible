@@ -18,4 +18,5 @@ class ScimErrorResponse {
    */
   status?: string;
 }
+
 export default ScimErrorResponse;

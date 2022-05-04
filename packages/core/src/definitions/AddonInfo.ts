@@ -11,4 +11,5 @@ class AddonInfo {
    */
   count?: number;
 }
+
 export default AddonInfo;

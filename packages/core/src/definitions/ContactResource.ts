@@ -1,6 +1,8 @@
-import {
-  AccountResource, PhoneNumberResource, AccountDirectoryProfileImageResource, BusinessSiteResource, UserCustomFieldResource,
-} from './index';
+import AccountResource from './AccountResource';
+import PhoneNumberResource from './PhoneNumberResource';
+import AccountDirectoryProfileImageResource from './AccountDirectoryProfileImageResource';
+import BusinessSiteResource from './BusinessSiteResource';
+import UserCustomFieldResource from './UserCustomFieldResource';
 
 class ContactResource {
   /**
@@ -66,4 +68,5 @@ class ContactResource {
    */
   customFields?: UserCustomFieldResource[];
 }
+
 export default ContactResource;

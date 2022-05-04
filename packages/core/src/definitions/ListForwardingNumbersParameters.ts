@@ -14,4 +14,5 @@ class ListForwardingNumbersParameters {
    */
   perPage?: number;
 }
+
 export default ListForwardingNumbersParameters;

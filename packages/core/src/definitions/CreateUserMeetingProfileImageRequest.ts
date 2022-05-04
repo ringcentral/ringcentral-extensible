@@ -9,4 +9,5 @@ class CreateUserMeetingProfileImageRequest {
    */
   profilePic?: string;
 }
+
 export default CreateUserMeetingProfileImageRequest;

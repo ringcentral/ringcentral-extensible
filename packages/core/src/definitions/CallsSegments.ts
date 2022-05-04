@@ -53,4 +53,5 @@ class CallsSegments {
    */
   setup?: number;
 }
+
 export default CallsSegments;

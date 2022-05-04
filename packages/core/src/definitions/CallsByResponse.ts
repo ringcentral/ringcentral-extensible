@@ -23,4 +23,5 @@ class CallsByResponse {
    */
   notConnected?: number;
 }
+
 export default CallsByResponse;

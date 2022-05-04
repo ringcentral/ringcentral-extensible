@@ -1,6 +1,13 @@
-import {
-  ForwardingInfoCreateRuleRequest, CallersInfoRequest, CalledNumberInfo, ScheduleInfo, UnconditionalForwardingInfo, QueueInfo, VoicemailInfo, MissedCallInfo, GreetingInfo, TransferredExtensionInfo,
-} from './index';
+import ForwardingInfoCreateRuleRequest from './ForwardingInfoCreateRuleRequest';
+import CallersInfoRequest from './CallersInfoRequest';
+import CalledNumberInfo from './CalledNumberInfo';
+import ScheduleInfo from './ScheduleInfo';
+import UnconditionalForwardingInfo from './UnconditionalForwardingInfo';
+import QueueInfo from './QueueInfo';
+import VoicemailInfo from './VoicemailInfo';
+import MissedCallInfo from './MissedCallInfo';
+import GreetingInfo from './GreetingInfo';
+import TransferredExtensionInfo from './TransferredExtensionInfo';
 
 class UpdateAnsweringRuleRequest {
   /**
@@ -81,4 +88,5 @@ class UpdateAnsweringRuleRequest {
    */
   transfer?: TransferredExtensionInfo;
 }
+
 export default UpdateAnsweringRuleRequest;

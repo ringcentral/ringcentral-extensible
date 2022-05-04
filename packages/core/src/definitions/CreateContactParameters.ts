@@ -7,4 +7,5 @@ class CreateContactParameters {
    */
   dialingPlan?: string;
 }
+
 export default CreateContactParameters;

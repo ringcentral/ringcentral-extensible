@@ -1,6 +1,13 @@
-import {
-  PerformanceCallsCountersResponseOptionsAllCalls, PerformanceCallsCountersResponseOptionsCallsByDirection, PerformanceCallsCountersResponseOptionsCallsByOrigin, PerformanceCallsCountersResponseOptionsCallsByResponse, PerformanceCallsCountersResponseOptionsCallsSegments, PerformanceCallsCountersResponseOptionsCallsByResult, PerformanceCallsCountersResponseOptionsCallsByCompanyHours, PerformanceCallsCountersResponseOptionsCallsByQueueSla, PerformanceCallsCountersResponseOptionsCallsByActions, PerformanceCallsCountersResponseOptionsCallsByType,
-} from './index';
+import PerformanceCallsCountersResponseOptionsAllCalls from './PerformanceCallsCountersResponseOptionsAllCalls';
+import PerformanceCallsCountersResponseOptionsCallsByDirection from './PerformanceCallsCountersResponseOptionsCallsByDirection';
+import PerformanceCallsCountersResponseOptionsCallsByOrigin from './PerformanceCallsCountersResponseOptionsCallsByOrigin';
+import PerformanceCallsCountersResponseOptionsCallsByResponse from './PerformanceCallsCountersResponseOptionsCallsByResponse';
+import PerformanceCallsCountersResponseOptionsCallsSegments from './PerformanceCallsCountersResponseOptionsCallsSegments';
+import PerformanceCallsCountersResponseOptionsCallsByResult from './PerformanceCallsCountersResponseOptionsCallsByResult';
+import PerformanceCallsCountersResponseOptionsCallsByCompanyHours from './PerformanceCallsCountersResponseOptionsCallsByCompanyHours';
+import PerformanceCallsCountersResponseOptionsCallsByQueueSla from './PerformanceCallsCountersResponseOptionsCallsByQueueSla';
+import PerformanceCallsCountersResponseOptionsCallsByActions from './PerformanceCallsCountersResponseOptionsCallsByActions';
+import PerformanceCallsCountersResponseOptionsCallsByType from './PerformanceCallsCountersResponseOptionsCallsByType';
 
 /**
  * The formula is defined by `aggregationType` and `aggregationInterval` for every counter individually.
@@ -49,4 +56,5 @@ class PerformanceCallsCountersResponseOptions {
    */
   callsByType?: PerformanceCallsCountersResponseOptionsCallsByType;
 }
+
 export default PerformanceCallsCountersResponseOptions;

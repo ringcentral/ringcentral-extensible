@@ -1,4 +1,6 @@
-import { SipRegistrationDeviceInfo, SIPInfoResponse, SIPFlagsResponse } from './index';
+import SipRegistrationDeviceInfo from './SipRegistrationDeviceInfo';
+import SIPInfoResponse from './SIPInfoResponse';
+import SIPFlagsResponse from './SIPFlagsResponse';
 
 class CreateSipRegistrationResponse {
   /**
@@ -25,4 +27,5 @@ class CreateSipRegistrationResponse {
    */
   sipErrorCodes?: string[];
 }
+
 export default CreateSipRegistrationResponse;

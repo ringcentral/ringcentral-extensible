@@ -14,4 +14,5 @@ class ListCallQueueMembersParameters {
    */
   perPage?: number;
 }
+
 export default ListCallQueueMembersParameters;

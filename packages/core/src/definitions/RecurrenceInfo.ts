@@ -47,4 +47,5 @@ class RecurrenceInfo {
    */
   until?: string;
 }
+
 export default RecurrenceInfo;

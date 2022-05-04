@@ -51,4 +51,5 @@ class TokenInfo {
    */
   id_token?: string;
 }
+
 export default TokenInfo;

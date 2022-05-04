@@ -17,4 +17,5 @@ class GreetingLanguageInfo {
    */
   name?: string;
 }
+
 export default GreetingLanguageInfo;

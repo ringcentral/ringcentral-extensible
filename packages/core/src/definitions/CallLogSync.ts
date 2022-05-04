@@ -1,4 +1,5 @@
-import { UserCallLogRecord, SyncInfoCallLog } from './index';
+import UserCallLogRecord from './UserCallLogRecord';
+import SyncInfoCallLog from './SyncInfoCallLog';
 
 class CallLogSync {
   /**
@@ -15,4 +16,5 @@ class CallLogSync {
    */
   syncInfo?: SyncInfoCallLog;
 }
+
 export default CallLogSync;

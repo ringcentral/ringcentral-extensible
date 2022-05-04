@@ -11,4 +11,5 @@ class CallsByOrigin {
    */
   external?: number;
 }
+
 export default CallsByOrigin;

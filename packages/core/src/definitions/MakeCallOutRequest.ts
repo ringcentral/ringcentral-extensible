@@ -1,4 +1,5 @@
-import { MakeCallOutCallerInfoRequestFrom, MakeCallOutCallerInfoRequestTo } from './index';
+import MakeCallOutCallerInfoRequestFrom from './MakeCallOutCallerInfoRequestFrom';
+import MakeCallOutCallerInfoRequestTo from './MakeCallOutCallerInfoRequestTo';
 
 class MakeCallOutRequest {
   /**
@@ -11,4 +12,5 @@ class MakeCallOutRequest {
    */
   to?: MakeCallOutCallerInfoRequestTo;
 }
+
 export default MakeCallOutRequest;

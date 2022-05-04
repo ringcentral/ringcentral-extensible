@@ -1,4 +1,4 @@
-import { ProvisioningNavigationInfoUri } from './index';
+import ProvisioningNavigationInfoUri from './ProvisioningNavigationInfoUri';
 
 /**
  * Information on navigation
@@ -20,4 +20,5 @@ class ProvisioningNavigationInfo {
    */
   lastPage?: ProvisioningNavigationInfoUri;
 }
+
 export default ProvisioningNavigationInfo;

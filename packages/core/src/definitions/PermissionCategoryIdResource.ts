@@ -8,4 +8,5 @@ class PermissionCategoryIdResource {
    */
   id?: string;
 }
+
 export default PermissionCategoryIdResource;

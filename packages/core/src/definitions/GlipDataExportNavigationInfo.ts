@@ -1,4 +1,4 @@
-import { GlipDataExportNavigationInfoUri } from './index';
+import GlipDataExportNavigationInfoUri from './GlipDataExportNavigationInfoUri';
 
 class GlipDataExportNavigationInfo {
   /**
@@ -17,4 +17,5 @@ class GlipDataExportNavigationInfo {
    */
   lastPage?: GlipDataExportNavigationInfoUri;
 }
+
 export default GlipDataExportNavigationInfo;

@@ -1,4 +1,4 @@
-import { AddonInfo } from './index';
+import AddonInfo from './AddonInfo';
 
 /**
  * HardPhone model information
@@ -33,4 +33,5 @@ class ModelInfo {
    */
   lineCount?: number;
 }
+
 export default ModelInfo;

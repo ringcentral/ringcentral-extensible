@@ -4,4 +4,5 @@ class ExtensionLanguageInfoRequest {
    */
   id?: string;
 }
+
 export default ExtensionLanguageInfoRequest;

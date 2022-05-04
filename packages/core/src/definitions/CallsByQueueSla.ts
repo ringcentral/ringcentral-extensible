@@ -11,4 +11,5 @@ class CallsByQueueSla {
    */
   outOfSla?: number;
 }
+
 export default CallsByQueueSla;

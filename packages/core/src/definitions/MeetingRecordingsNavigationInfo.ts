@@ -1,4 +1,4 @@
-import { MeetingRecordingsNavigationInfoUri } from './index';
+import MeetingRecordingsNavigationInfoUri from './MeetingRecordingsNavigationInfoUri';
 
 class MeetingRecordingsNavigationInfo {
   /**
@@ -17,4 +17,5 @@ class MeetingRecordingsNavigationInfo {
    */
   lastPage?: MeetingRecordingsNavigationInfoUri;
 }
+
 export default MeetingRecordingsNavigationInfo;

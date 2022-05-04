@@ -12,4 +12,5 @@ class TemporaryNumberInfo {
    */
   phoneNumber?: string;
 }
+
 export default TemporaryNumberInfo;

@@ -1,4 +1,4 @@
-import { MissedCallExtensionInfo } from './index';
+import MissedCallExtensionInfo from './MissedCallExtensionInfo';
 
 /**
  * Specifies behaviour for the missed call scenario. Returned only if `enabled` parameter of a voicemail is set to 'false'
@@ -13,4 +13,5 @@ class MissedCallInfo {
    */
   extension?: MissedCallExtensionInfo;
 }
+
 export default MissedCallInfo;

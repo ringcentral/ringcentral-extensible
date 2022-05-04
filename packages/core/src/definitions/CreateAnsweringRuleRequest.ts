@@ -1,6 +1,13 @@
-import {
-  CallersInfoRequest, CalledNumberInfo, ScheduleInfo, ForwardingInfo, UnconditionalForwardingInfo, QueueInfo, TransferredExtensionInfo, VoicemailInfo, MissedCallInfo, GreetingInfo,
-} from './index';
+import CallersInfoRequest from './CallersInfoRequest';
+import CalledNumberInfo from './CalledNumberInfo';
+import ScheduleInfo from './ScheduleInfo';
+import ForwardingInfo from './ForwardingInfo';
+import UnconditionalForwardingInfo from './UnconditionalForwardingInfo';
+import QueueInfo from './QueueInfo';
+import TransferredExtensionInfo from './TransferredExtensionInfo';
+import VoicemailInfo from './VoicemailInfo';
+import MissedCallInfo from './MissedCallInfo';
+import GreetingInfo from './GreetingInfo';
 
 class CreateAnsweringRuleRequest {
   /**
@@ -71,4 +78,5 @@ class CreateAnsweringRuleRequest {
    */
   screening?: ('Off' | 'NoCallerId' | 'UnknownCallerId' | 'Always');
 }
+
 export default CreateAnsweringRuleRequest;

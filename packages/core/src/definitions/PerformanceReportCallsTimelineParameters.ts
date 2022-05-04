@@ -7,4 +7,5 @@ class PerformanceReportCallsTimelineParameters {
    */
   interval?: ('Hour' | 'Day' | 'Week' | 'Month');
 }
+
 export default PerformanceReportCallsTimelineParameters;

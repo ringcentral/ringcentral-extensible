@@ -1,4 +1,5 @@
-import { DetailedCallInfo, CallInfoCQ } from './index';
+import DetailedCallInfo from './DetailedCallInfo';
+import CallInfoCQ from './CallInfoCQ';
 
 class ActiveCallInfo {
   /**
@@ -75,4 +76,5 @@ class ActiveCallInfo {
    */
   callInfo?: CallInfoCQ;
 }
+
 export default ActiveCallInfo;

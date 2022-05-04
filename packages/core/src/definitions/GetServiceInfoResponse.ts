@@ -1,6 +1,11 @@
-import {
-  BrandInfo, ContractedCountryInfo, ServicePlanInfo, TargetServicePlanInfo, BillingPlanInfo, ServiceFeatureInfo, AccountLimits, PackageInfo,
-} from './index';
+import BrandInfo from './BrandInfo';
+import ContractedCountryInfo from './ContractedCountryInfo';
+import ServicePlanInfo from './ServicePlanInfo';
+import TargetServicePlanInfo from './TargetServicePlanInfo';
+import BillingPlanInfo from './BillingPlanInfo';
+import ServiceFeatureInfo from './ServiceFeatureInfo';
+import AccountLimits from './AccountLimits';
+import PackageInfo from './PackageInfo';
 
 class GetServiceInfoResponse {
   /**
@@ -46,4 +51,5 @@ class GetServiceInfoResponse {
    */
   package?: PackageInfo;
 }
+
 export default GetServiceInfoResponse;

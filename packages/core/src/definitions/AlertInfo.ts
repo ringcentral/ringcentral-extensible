@@ -12,4 +12,5 @@ class AlertInfo {
    */
   body?: string;
 }
+
 export default AlertInfo;

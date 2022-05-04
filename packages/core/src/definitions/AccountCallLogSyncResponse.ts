@@ -1,4 +1,5 @@
-import { CompanyCallLogRecord, CompanyCallLogSyncInfo } from './index';
+import CompanyCallLogRecord from './CompanyCallLogRecord';
+import CompanyCallLogSyncInfo from './CompanyCallLogSyncInfo';
 
 class AccountCallLogSyncResponse {
   /**
@@ -15,4 +16,5 @@ class AccountCallLogSyncResponse {
    */
   syncInfo?: CompanyCallLogSyncInfo;
 }
+
 export default AccountCallLogSyncResponse;

@@ -19,4 +19,5 @@ class CallHandlingExtensionInfo {
    */
   partnerId?: string;
 }
+
 export default CallHandlingExtensionInfo;

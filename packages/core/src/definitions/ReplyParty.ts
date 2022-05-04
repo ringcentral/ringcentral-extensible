@@ -1,6 +1,7 @@
-import {
-  CallStatusInfo, ParkInfo, PartyInfo, OwnerInfo,
-} from './index';
+import CallStatusInfo from './CallStatusInfo';
+import ParkInfo from './ParkInfo';
+import PartyInfo from './PartyInfo';
+import OwnerInfo from './OwnerInfo';
 
 class ReplyParty {
   /**
@@ -43,4 +44,5 @@ class ReplyParty {
    */
   direction?: ('Inbound' | 'Outbound');
 }
+
 export default ReplyParty;

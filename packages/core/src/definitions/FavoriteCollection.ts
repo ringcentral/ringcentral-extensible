@@ -1,8 +1,9 @@
-import { FavoriteContactResource } from './index';
+import FavoriteContactResource from './FavoriteContactResource';
 
 class FavoriteCollection {
   /**
    */
   records?: FavoriteContactResource[];
 }
+
 export default FavoriteCollection;

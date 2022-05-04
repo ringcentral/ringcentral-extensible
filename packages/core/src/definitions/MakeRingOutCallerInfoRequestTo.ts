@@ -7,4 +7,5 @@ class MakeRingOutCallerInfoRequestTo {
    */
   phoneNumber?: string;
 }
+
 export default MakeRingOutCallerInfoRequestTo;

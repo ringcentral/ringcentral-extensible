@@ -45,4 +45,5 @@ class MessageAttachmentInfo {
    */
   width?: number;
 }
+
 export default MessageAttachmentInfo;

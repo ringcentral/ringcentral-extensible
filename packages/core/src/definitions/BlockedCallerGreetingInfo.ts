@@ -1,4 +1,4 @@
-import { PresetInfo } from './index';
+import PresetInfo from './PresetInfo';
 
 class BlockedCallerGreetingInfo {
   /**
@@ -10,4 +10,5 @@ class BlockedCallerGreetingInfo {
    */
   preset?: PresetInfo;
 }
+
 export default BlockedCallerGreetingInfo;

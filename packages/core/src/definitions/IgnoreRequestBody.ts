@@ -6,4 +6,5 @@ class IgnoreRequestBody {
    */
   deviceId?: string;
 }
+
 export default IgnoreRequestBody;

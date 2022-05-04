@@ -1,4 +1,4 @@
-import { CallQueueId } from './index';
+import CallQueueId from './CallQueueId';
 
 class ExtensionCallQueueUpdatePresence {
   /**
@@ -10,4 +10,5 @@ class ExtensionCallQueueUpdatePresence {
    */
   acceptCalls?: boolean;
 }
+
 export default ExtensionCallQueueUpdatePresence;

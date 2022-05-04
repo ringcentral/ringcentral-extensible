@@ -1,4 +1,4 @@
-import { CallsSegments } from './index';
+import CallsSegments from './CallsSegments';
 
 class PerformanceCallsSegments {
   /**
@@ -11,4 +11,5 @@ class PerformanceCallsSegments {
    */
   values?: CallsSegments;
 }
+
 export default PerformanceCallsSegments;

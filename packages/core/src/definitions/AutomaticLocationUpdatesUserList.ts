@@ -1,4 +1,6 @@
-import { AutomaticLocationUpdatesUserInfo, ProvisioningNavigationInfo, ProvisioningPagingInfo } from './index';
+import AutomaticLocationUpdatesUserInfo from './AutomaticLocationUpdatesUserInfo';
+import ProvisioningNavigationInfo from './ProvisioningNavigationInfo';
+import ProvisioningPagingInfo from './ProvisioningPagingInfo';
 
 class AutomaticLocationUpdatesUserList {
   /**
@@ -18,4 +20,5 @@ class AutomaticLocationUpdatesUserList {
    */
   paging?: ProvisioningPagingInfo;
 }
+
 export default AutomaticLocationUpdatesUserList;

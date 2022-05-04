@@ -1,4 +1,4 @@
-import { LocationDeletionInfo } from './index';
+import LocationDeletionInfo from './LocationDeletionInfo';
 
 class GetLocationDeletionMultiResponse {
   /**
@@ -13,4 +13,5 @@ class GetLocationDeletionMultiResponse {
    */
   emergencyLocations?: LocationDeletionInfo[];
 }
+
 export default GetLocationDeletionMultiResponse;

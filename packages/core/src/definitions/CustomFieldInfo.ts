@@ -13,4 +13,5 @@ class CustomFieldInfo {
    */
   displayName?: string;
 }
+
 export default CustomFieldInfo;

@@ -1,4 +1,4 @@
-import { FederatedAccountResource } from './index';
+import FederatedAccountResource from './FederatedAccountResource';
 
 class FederationResource {
   /**
@@ -21,4 +21,5 @@ class FederationResource {
    */
   lastModifiedTime?: string;
 }
+
 export default FederationResource;

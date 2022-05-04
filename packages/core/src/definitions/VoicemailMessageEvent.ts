@@ -1,4 +1,4 @@
-import { VoicemailMessageEventBody } from './index';
+import VoicemailMessageEventBody from './VoicemailMessageEventBody';
 
 class VoicemailMessageEvent {
   /**
@@ -30,4 +30,5 @@ class VoicemailMessageEvent {
    */
   body?: VoicemailMessageEventBody;
 }
+
 export default VoicemailMessageEvent;

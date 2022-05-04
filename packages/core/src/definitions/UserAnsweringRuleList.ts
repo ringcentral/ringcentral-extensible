@@ -1,4 +1,6 @@
-import { UserAnsweringRuleListRecord, UserAnsweringRuleListPaging, UserAnsweringRuleListNavigation } from './index';
+import UserAnsweringRuleListRecord from './UserAnsweringRuleListRecord';
+import UserAnsweringRuleListPaging from './UserAnsweringRuleListPaging';
+import UserAnsweringRuleListNavigation from './UserAnsweringRuleListNavigation';
 
 class UserAnsweringRuleList {
   /**
@@ -20,4 +22,5 @@ class UserAnsweringRuleList {
    */
   navigation?: UserAnsweringRuleListNavigation;
 }
+
 export default UserAnsweringRuleList;

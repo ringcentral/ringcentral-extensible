@@ -9,4 +9,5 @@ class Photo {
    */
   value?: string;
 }
+
 export default Photo;

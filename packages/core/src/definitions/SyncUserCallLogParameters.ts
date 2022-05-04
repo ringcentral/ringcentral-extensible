@@ -40,4 +40,5 @@ class SyncUserCallLogParameters {
    */
   showDeleted?: boolean;
 }
+
 export default SyncUserCallLogParameters;

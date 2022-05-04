@@ -1,4 +1,5 @@
-import { KeyInfo, TimelineDataPoint } from './index';
+import KeyInfo from './KeyInfo';
+import TimelineDataPoint from './TimelineDataPoint';
 
 class TimelineData {
   /**
@@ -14,4 +15,5 @@ class TimelineData {
    */
   points?: TimelineDataPoint[];
 }
+
 export default TimelineData;

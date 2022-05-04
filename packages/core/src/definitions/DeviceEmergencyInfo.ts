@@ -1,4 +1,5 @@
-import { DeviceEmergencyAddress, DeviceEmergencyLocationInfo } from './index';
+import DeviceEmergencyAddress from './DeviceEmergencyAddress';
+import DeviceEmergencyLocationInfo from './DeviceEmergencyLocationInfo';
 
 /**
  * Device emergency settings
@@ -37,4 +38,5 @@ class DeviceEmergencyInfo {
    */
   addressEditableStatus?: ('MainDevice' | 'AnyDevice');
 }
+
 export default DeviceEmergencyInfo;

@@ -1,4 +1,4 @@
-import { ActivePermissionResource } from './index';
+import ActivePermissionResource from './ActivePermissionResource';
 
 class AuthProfileResource {
   /**
@@ -10,4 +10,5 @@ class AuthProfileResource {
    */
   permissions?: ActivePermissionResource[];
 }
+
 export default AuthProfileResource;

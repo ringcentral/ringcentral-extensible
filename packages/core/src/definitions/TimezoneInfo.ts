@@ -26,4 +26,5 @@ class TimezoneInfo {
    */
   bias?: string;
 }
+
 export default TimezoneInfo;

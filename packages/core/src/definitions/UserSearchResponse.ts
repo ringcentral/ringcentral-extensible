@@ -1,4 +1,4 @@
-import { UserResponse } from './index';
+import UserResponse from './UserResponse';
 
 class UserSearchResponse {
   /**
@@ -25,4 +25,5 @@ class UserSearchResponse {
    */
   totalResults?: number;
 }
+
 export default UserSearchResponse;

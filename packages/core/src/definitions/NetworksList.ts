@@ -1,4 +1,6 @@
-import { NetworkInfo, ProvisioningNavigationInfo, ProvisioningPagingInfo } from './index';
+import NetworkInfo from './NetworkInfo';
+import ProvisioningNavigationInfo from './ProvisioningNavigationInfo';
+import ProvisioningPagingInfo from './ProvisioningPagingInfo';
 
 class NetworksList {
   /**
@@ -18,4 +20,5 @@ class NetworksList {
    */
   paging?: ProvisioningPagingInfo;
 }
+
 export default NetworksList;

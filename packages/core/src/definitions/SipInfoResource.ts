@@ -1,4 +1,4 @@
-import { OutboundProxyInfo } from './index';
+import OutboundProxyInfo from './OutboundProxyInfo';
 
 class SipInfoResource {
   /**
@@ -26,4 +26,5 @@ class SipInfoResource {
    */
   authorizationId?: string;
 }
+
 export default SipInfoResource;

@@ -7,4 +7,5 @@ class MissedCallExtensionInfoExternalNumber {
    */
   phoneNumber?: string;
 }
+
 export default MissedCallExtensionInfoExternalNumber;

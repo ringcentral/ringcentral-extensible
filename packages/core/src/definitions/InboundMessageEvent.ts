@@ -1,4 +1,4 @@
-import { NotificationInfo } from './index';
+import NotificationInfo from './NotificationInfo';
 
 class InboundMessageEvent {
   /**
@@ -30,4 +30,5 @@ class InboundMessageEvent {
    */
   ownerId?: string;
 }
+
 export default InboundMessageEvent;

@@ -1,6 +1,13 @@
-import {
-  PerformanceCallsTotal, PerformanceCallsByDirection, PerformanceCallsByOrigin, PerformanceCallsByResponse, PerformanceCallsSegments, PerformanceCallsByResult, PerformanceCallsActions, PerformanceCallsByCompanyHours, PerformanceCallsByQueueSla, PerformanceCallsByType,
-} from './index';
+import PerformanceCallsTotal from './PerformanceCallsTotal';
+import PerformanceCallsByDirection from './PerformanceCallsByDirection';
+import PerformanceCallsByOrigin from './PerformanceCallsByOrigin';
+import PerformanceCallsByResponse from './PerformanceCallsByResponse';
+import PerformanceCallsSegments from './PerformanceCallsSegments';
+import PerformanceCallsByResult from './PerformanceCallsByResult';
+import PerformanceCallsActions from './PerformanceCallsActions';
+import PerformanceCallsByCompanyHours from './PerformanceCallsByCompanyHours';
+import PerformanceCallsByQueueSla from './PerformanceCallsByQueueSla';
+import PerformanceCallsByType from './PerformanceCallsByType';
 
 /**
  * Call volume data for the specified grouping
@@ -46,4 +53,5 @@ class PerformanceCallsCounters {
    */
   callsByType?: PerformanceCallsByType;
 }
+
 export default PerformanceCallsCounters;

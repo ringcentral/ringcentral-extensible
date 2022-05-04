@@ -1,4 +1,4 @@
-import { LocationStateInfo } from './index';
+import LocationStateInfo from './LocationStateInfo';
 
 class LocationInfo {
   /**
@@ -30,4 +30,5 @@ class LocationInfo {
    */
   state?: LocationStateInfo;
 }
+
 export default LocationInfo;

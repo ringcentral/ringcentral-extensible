@@ -9,4 +9,5 @@ class PerformanceCallsCallSegmentLengthFilter {
    */
   maxValueSeconds?: number;
 }
+
 export default PerformanceCallsCallSegmentLengthFilter;

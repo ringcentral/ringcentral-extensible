@@ -12,4 +12,5 @@ class CustomGreetingAnsweringRuleInfo {
    */
   id?: string;
 }
+
 export default CustomGreetingAnsweringRuleInfo;

@@ -4,4 +4,5 @@ class DefaultUserRoleRequest {
    */
   id?: string;
 }
+
 export default DefaultUserRoleRequest;

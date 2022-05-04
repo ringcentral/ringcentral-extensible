@@ -9,4 +9,5 @@ class UserVideoConfiguration {
    */
   userLicenseType?: ('Paid' | 'Free');
 }
+
 export default UserVideoConfiguration;

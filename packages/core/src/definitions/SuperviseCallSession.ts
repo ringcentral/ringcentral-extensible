@@ -1,6 +1,7 @@
-import {
-  SupervisePartyFrom, SupervisePartyTo, OwnerInfo, CallStatusInfo,
-} from './index';
+import SupervisePartyFrom from './SupervisePartyFrom';
+import SupervisePartyTo from './SupervisePartyTo';
+import OwnerInfo from './OwnerInfo';
+import CallStatusInfo from './CallStatusInfo';
 
 class SuperviseCallSession {
   /**
@@ -49,4 +50,5 @@ class SuperviseCallSession {
    */
   status?: CallStatusInfo;
 }
+
 export default SuperviseCallSession;

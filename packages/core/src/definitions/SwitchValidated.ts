@@ -1,4 +1,4 @@
-import { ValidationError } from './index';
+import ValidationError from './ValidationError';
 
 class SwitchValidated {
   /**
@@ -20,4 +20,5 @@ class SwitchValidated {
    */
   errors?: ValidationError[];
 }
+
 export default SwitchValidated;

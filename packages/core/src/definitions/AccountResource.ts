@@ -1,4 +1,4 @@
-import { PhoneNumberResource } from './index';
+import PhoneNumberResource from './PhoneNumberResource';
 
 class AccountResource {
   /**
@@ -17,4 +17,5 @@ class AccountResource {
    */
   mainNumber?: PhoneNumberResource;
 }
+
 export default AccountResource;

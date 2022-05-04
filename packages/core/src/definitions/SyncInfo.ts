@@ -16,4 +16,5 @@ class SyncInfo {
    */
   olderRecordsExist?: boolean;
 }
+
 export default SyncInfo;

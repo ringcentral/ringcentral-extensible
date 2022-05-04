@@ -9,4 +9,5 @@ class ListFavoriteChatsParameters {
    */
   recordCount?: number;
 }
+
 export default ListFavoriteChatsParameters;

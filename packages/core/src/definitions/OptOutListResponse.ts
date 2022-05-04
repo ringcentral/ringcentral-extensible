@@ -1,4 +1,5 @@
-import { OptOutResponse, PagingResource } from './index';
+import OptOutResponse from './OptOutResponse';
+import PagingResource from './PagingResource';
 
 /**
  * Opt-out phone numbers information
@@ -13,4 +14,5 @@ class OptOutListResponse {
    */
   paging?: PagingResource;
 }
+
 export default OptOutListResponse;

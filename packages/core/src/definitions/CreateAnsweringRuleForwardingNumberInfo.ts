@@ -24,4 +24,5 @@ class CreateAnsweringRuleForwardingNumberInfo {
    */
   type?: ('Home' | 'Mobile' | 'Work' | 'PhoneLine' | 'Outage' | 'Other' | 'BusinessMobilePhone' | 'ExternalCarrier');
 }
+
 export default CreateAnsweringRuleForwardingNumberInfo;

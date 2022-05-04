@@ -1,4 +1,6 @@
-import { CallRecordingExtensionInfo, CallHandlingNavigationInfo, CallHandlingPagingInfo } from './index';
+import CallRecordingExtensionInfo from './CallRecordingExtensionInfo';
+import CallHandlingNavigationInfo from './CallHandlingNavigationInfo';
+import CallHandlingPagingInfo from './CallHandlingPagingInfo';
 
 class CallRecordingExtensions {
   /**
@@ -18,4 +20,5 @@ class CallRecordingExtensions {
    */
   paging?: CallHandlingPagingInfo;
 }
+
 export default CallRecordingExtensions;

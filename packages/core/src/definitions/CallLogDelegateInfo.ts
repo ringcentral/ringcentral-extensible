@@ -12,4 +12,5 @@ class CallLogDelegateInfo {
    */
   name?: string;
 }
+
 export default CallLogDelegateInfo;

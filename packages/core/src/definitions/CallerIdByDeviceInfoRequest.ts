@@ -1,4 +1,4 @@
-import { CallerIdPhoneInfoRequest } from './index';
+import CallerIdPhoneInfoRequest from './CallerIdPhoneInfoRequest';
 
 class CallerIdByDeviceInfoRequest {
   /**
@@ -10,4 +10,5 @@ class CallerIdByDeviceInfoRequest {
    */
   phoneInfo?: CallerIdPhoneInfoRequest;
 }
+
 export default CallerIdByDeviceInfoRequest;

@@ -42,4 +42,5 @@ class EmergencyServiceAddressResourceRequest {
    */
   countryId?: string;
 }
+
 export default EmergencyServiceAddressResourceRequest;

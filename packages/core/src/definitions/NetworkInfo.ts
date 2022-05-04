@@ -1,6 +1,7 @@
-import {
-  AutomaticLocationUpdatesSiteInfo, PublicIpRangeInfo, PrivateIpRangeInfo, ERLLocationInfo,
-} from './index';
+import AutomaticLocationUpdatesSiteInfo from './AutomaticLocationUpdatesSiteInfo';
+import PublicIpRangeInfo from './PublicIpRangeInfo';
+import PrivateIpRangeInfo from './PrivateIpRangeInfo';
+import ERLLocationInfo from './ERLLocationInfo';
 
 class NetworkInfo {
   /**
@@ -33,4 +34,5 @@ class NetworkInfo {
    */
   emergencyLocation?: ERLLocationInfo;
 }
+
 export default NetworkInfo;

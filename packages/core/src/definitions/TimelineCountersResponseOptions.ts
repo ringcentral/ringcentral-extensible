@@ -40,4 +40,5 @@ class TimelineCountersResponseOptions {
    */
   callsByType?: boolean;
 }
+
 export default TimelineCountersResponseOptions;

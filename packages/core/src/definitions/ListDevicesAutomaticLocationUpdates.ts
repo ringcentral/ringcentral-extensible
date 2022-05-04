@@ -1,4 +1,6 @@
-import { AutomaticLocationUpdatesDeviceInfo, ProvisioningNavigationInfo, ProvisioningPagingInfo } from './index';
+import AutomaticLocationUpdatesDeviceInfo from './AutomaticLocationUpdatesDeviceInfo';
+import ProvisioningNavigationInfo from './ProvisioningNavigationInfo';
+import ProvisioningPagingInfo from './ProvisioningPagingInfo';
 
 class ListDevicesAutomaticLocationUpdates {
   /**
@@ -19,4 +21,5 @@ class ListDevicesAutomaticLocationUpdates {
    */
   paging?: ProvisioningPagingInfo;
 }
+
 export default ListDevicesAutomaticLocationUpdates;

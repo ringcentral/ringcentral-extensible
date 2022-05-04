@@ -17,4 +17,5 @@ class UnifiedPresenceTelephony {
    */
   availability?: ('TakeAllCalls' | 'DoNotAcceptAnyCalls' | 'DoNotAcceptQueueCalls');
 }
+
 export default UnifiedPresenceTelephony;

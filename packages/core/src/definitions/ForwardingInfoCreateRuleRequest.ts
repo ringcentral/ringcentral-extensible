@@ -1,4 +1,4 @@
-import { RuleInfoCreateRuleRequest } from './index';
+import RuleInfoCreateRuleRequest from './RuleInfoCreateRuleRequest';
 
 /**
  * Forwarding parameters. Returned if 'ForwardCalls' is specified in 'callHandlingAction'. These settings determine the forwarding numbers to which the call will be forwarded
@@ -40,4 +40,5 @@ class ForwardingInfoCreateRuleRequest {
    */
   mobileTimeout?: boolean;
 }
+
 export default ForwardingInfoCreateRuleRequest;

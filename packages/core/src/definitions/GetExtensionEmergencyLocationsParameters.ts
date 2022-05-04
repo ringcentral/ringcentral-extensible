@@ -38,4 +38,5 @@ class GetExtensionEmergencyLocationsParameters {
    */
   visibility?: ('Private' | 'Public');
 }
+
 export default GetExtensionEmergencyLocationsParameters;

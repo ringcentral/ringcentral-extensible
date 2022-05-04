@@ -27,4 +27,5 @@ class ResponsePaging {
    */
   totalElements?: number;
 }
+
 export default ResponsePaging;

@@ -1,4 +1,4 @@
-import { LocationUpdatesEmergencyAddressInfo } from './index';
+import LocationUpdatesEmergencyAddressInfo from './LocationUpdatesEmergencyAddressInfo';
 
 class PrivateIpRangeInfo {
   /**
@@ -31,4 +31,5 @@ class PrivateIpRangeInfo {
    */
   matched?: boolean;
 }
+
 export default PrivateIpRangeInfo;

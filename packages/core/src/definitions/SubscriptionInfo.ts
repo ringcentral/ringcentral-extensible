@@ -1,4 +1,6 @@
-import { DisabledFilterInfo, NotificationDeliveryMode, NotificationBlacklistedData } from './index';
+import DisabledFilterInfo from './DisabledFilterInfo';
+import NotificationDeliveryMode from './NotificationDeliveryMode';
+import NotificationBlacklistedData from './NotificationBlacklistedData';
 
 class SubscriptionInfo {
   /**
@@ -67,4 +69,5 @@ class SubscriptionInfo {
    */
   registrationId?: string;
 }
+
 export default SubscriptionInfo;

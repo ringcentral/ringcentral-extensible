@@ -1,4 +1,4 @@
-import { GetCountryInfoConferencing } from './index';
+import GetCountryInfoConferencing from './GetCountryInfoConferencing';
 
 class PhoneNumberInfoConferencing {
   /**
@@ -30,4 +30,5 @@ class PhoneNumberInfoConferencing {
    */
   premium?: boolean;
 }
+
 export default PhoneNumberInfoConferencing;

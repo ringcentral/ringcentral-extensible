@@ -107,4 +107,5 @@ class EmergencyServiceAddressResource {
    */
   taxId?: string;
 }
+
 export default EmergencyServiceAddressResource;

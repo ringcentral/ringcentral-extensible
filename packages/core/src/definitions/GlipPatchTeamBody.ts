@@ -14,4 +14,5 @@ class GlipPatchTeamBody {
    */
   description?: string;
 }
+
 export default GlipPatchTeamBody;

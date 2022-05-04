@@ -1,4 +1,4 @@
-import { DataExportTaskContactInfo } from './index';
+import DataExportTaskContactInfo from './DataExportTaskContactInfo';
 
 /**
  * Information specified in request
@@ -23,4 +23,5 @@ class SpecificInfo {
    */
   chatIds?: string[];
 }
+
 export default SpecificInfo;

@@ -1,4 +1,4 @@
-import { UpdateDevicePhoneInfo } from './index';
+import UpdateDevicePhoneInfo from './UpdateDevicePhoneInfo';
 
 /**
  * Information on phone lines added to a device
@@ -9,4 +9,5 @@ class DeviceUpdatePhoneLinesInfo {
    */
   phoneLines?: UpdateDevicePhoneInfo[];
 }
+
 export default DeviceUpdatePhoneLinesInfo;

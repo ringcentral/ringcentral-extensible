@@ -1,4 +1,4 @@
-import { CountryInfo } from './index';
+import CountryInfo from './CountryInfo';
 
 /**
  * Information on account brand
@@ -18,4 +18,5 @@ class BrandInfo {
    */
   homeCountry?: CountryInfo;
 }
+
 export default BrandInfo;

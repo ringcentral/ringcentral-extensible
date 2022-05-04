@@ -1,4 +1,4 @@
-import { FaxMessageEventBody } from './index';
+import FaxMessageEventBody from './FaxMessageEventBody';
 
 class FaxMessageEvent {
   /**
@@ -30,4 +30,5 @@ class FaxMessageEvent {
    */
   body?: FaxMessageEventBody;
 }
+
 export default FaxMessageEvent;

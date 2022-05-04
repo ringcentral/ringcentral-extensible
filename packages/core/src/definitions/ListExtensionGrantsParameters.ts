@@ -17,4 +17,5 @@ class ListExtensionGrantsParameters {
    */
   perPage?: string;
 }
+
 export default ListExtensionGrantsParameters;

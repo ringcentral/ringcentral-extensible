@@ -12,4 +12,5 @@ class LocationStateInfo {
    */
   uri?: string;
 }
+
 export default LocationStateInfo;

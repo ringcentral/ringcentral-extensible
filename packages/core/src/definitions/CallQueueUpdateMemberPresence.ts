@@ -1,4 +1,4 @@
-import { CallQueueMemberId } from './index';
+import CallQueueMemberId from './CallQueueMemberId';
 
 class CallQueueUpdateMemberPresence {
   /**
@@ -10,4 +10,5 @@ class CallQueueUpdateMemberPresence {
    */
   acceptCurrentQueueCalls?: boolean;
 }
+
 export default CallQueueUpdateMemberPresence;

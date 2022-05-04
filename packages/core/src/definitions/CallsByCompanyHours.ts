@@ -11,4 +11,5 @@ class CallsByCompanyHours {
    */
   afterHours?: number;
 }
+
 export default CallsByCompanyHours;

@@ -1,4 +1,6 @@
-import { RoleResource, RNPPagingInfo, RNPNavigationInfo } from './index';
+import RoleResource from './RoleResource';
+import RNPPagingInfo from './RNPPagingInfo';
+import RNPNavigationInfo from './RNPNavigationInfo';
 
 class RolesCollectionResource {
   /**
@@ -18,4 +20,5 @@ class RolesCollectionResource {
    */
   navigation?: RNPNavigationInfo;
 }
+
 export default RolesCollectionResource;

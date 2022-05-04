@@ -1,4 +1,4 @@
-import { QueueShortInfoResource } from './index';
+import QueueShortInfoResource from './QueueShortInfoResource';
 
 class UserCallQueues {
   /**
@@ -6,4 +6,5 @@ class UserCallQueues {
    */
   records?: QueueShortInfoResource[];
 }
+
 export default UserCallQueues;

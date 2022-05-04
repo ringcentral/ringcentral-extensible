@@ -7,4 +7,5 @@ class PerformanceCallsCountersResponseOptionsCallsByDirection {
    */
   aggregationInterval?: ('Hour' | 'Day' | 'Week' | 'Month');
 }
+
 export default PerformanceCallsCountersResponseOptionsCallsByDirection;

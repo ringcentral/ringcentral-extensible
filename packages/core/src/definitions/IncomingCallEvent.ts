@@ -1,4 +1,4 @@
-import { APSInfo } from './index';
+import APSInfo from './APSInfo';
 
 class IncomingCallEvent {
   /**
@@ -102,4 +102,5 @@ class IncomingCallEvent {
    */
   ownerId?: string;
 }
+
 export default IncomingCallEvent;

@@ -1,4 +1,4 @@
-import { CallHandlingNavigationInfoUri } from './index';
+import CallHandlingNavigationInfoUri from './CallHandlingNavigationInfoUri';
 
 /**
  * Information on navigation
@@ -20,4 +20,5 @@ class CallHandlingNavigationInfo {
    */
   lastPage?: CallHandlingNavigationInfoUri;
 }
+
 export default CallHandlingNavigationInfo;

@@ -1,4 +1,4 @@
-import { ScheduleInfoUserBusinessHours } from './index';
+import ScheduleInfoUserBusinessHours from './ScheduleInfoUserBusinessHours';
 
 class GetUserBusinessHoursResponse {
   /**
@@ -10,4 +10,5 @@ class GetUserBusinessHoursResponse {
    */
   schedule?: ScheduleInfoUserBusinessHours;
 }
+
 export default GetUserBusinessHoursResponse;

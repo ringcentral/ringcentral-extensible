@@ -17,4 +17,5 @@ class RegionalLanguageInfo {
    */
   name?: string;
 }
+
 export default RegionalLanguageInfo;

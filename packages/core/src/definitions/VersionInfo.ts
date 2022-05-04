@@ -19,4 +19,5 @@ class VersionInfo {
    */
   uriString?: string;
 }
+
 export default VersionInfo;

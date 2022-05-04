@@ -1,4 +1,6 @@
-import { LanguageInfo, ProvisioningNavigationInfo, ProvisioningPagingInfo } from './index';
+import LanguageInfo from './LanguageInfo';
+import ProvisioningNavigationInfo from './ProvisioningNavigationInfo';
+import ProvisioningPagingInfo from './ProvisioningPagingInfo';
 
 class LanguageList {
   /**
@@ -19,4 +21,5 @@ class LanguageList {
    */
   paging?: ProvisioningPagingInfo;
 }
+
 export default LanguageList;

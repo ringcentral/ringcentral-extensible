@@ -14,4 +14,5 @@ class ListDomesticCountriesParameters {
    */
   perPage?: number;
 }
+
 export default ListDomesticCountriesParameters;

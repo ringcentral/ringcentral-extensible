@@ -36,4 +36,5 @@ class TimelineTimersResponseOptions {
    */
   callsDurationByType?: boolean;
 }
+
 export default TimelineTimersResponseOptions;

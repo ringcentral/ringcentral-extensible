@@ -28,4 +28,5 @@ class TemplateInfo {
    */
   lastModifiedTime?: string;
 }
+
 export default TemplateInfo;

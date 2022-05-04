@@ -27,4 +27,5 @@ class CountryInfo {
    */
   callingCode?: string;
 }
+
 export default CountryInfo;

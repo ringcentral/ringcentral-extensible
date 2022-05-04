@@ -1,4 +1,4 @@
-import { CustomGreetingAnsweringRuleInfo } from './index';
+import CustomGreetingAnsweringRuleInfo from './CustomGreetingAnsweringRuleInfo';
 
 class CustomUserGreetingInfo {
   /**
@@ -30,4 +30,5 @@ class CustomUserGreetingInfo {
    */
   answeringRule?: CustomGreetingAnsweringRuleInfo;
 }
+
 export default CustomUserGreetingInfo;

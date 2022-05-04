@@ -1,4 +1,4 @@
-import { OptOutBulkAssignFailedEntry } from './index';
+import OptOutBulkAssignFailedEntry from './OptOutBulkAssignFailedEntry';
 
 /**
  * Contains successfull and failed opt-ins
@@ -16,4 +16,5 @@ class BulkAssignOptIns {
    */
   failed?: OptOutBulkAssignFailedEntry[];
 }
+
 export default BulkAssignOptIns;

@@ -1,4 +1,4 @@
-import { Attachment } from './index';
+import Attachment from './Attachment';
 
 /**
  * Request body for operation createIVRPrompt
@@ -15,4 +15,5 @@ class CreateIVRPromptRequest {
    */
   name?: string;
 }
+
 export default CreateIVRPromptRequest;

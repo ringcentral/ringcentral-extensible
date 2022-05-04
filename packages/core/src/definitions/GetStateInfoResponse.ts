@@ -1,4 +1,4 @@
-import { GetCountryInfoState } from './index';
+import GetCountryInfoState from './GetCountryInfoState';
 
 class GetStateInfoResponse {
   /**
@@ -25,4 +25,5 @@ class GetStateInfoResponse {
    */
   name?: string;
 }
+
 export default GetStateInfoResponse;

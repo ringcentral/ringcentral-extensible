@@ -1,4 +1,4 @@
-import { AddressBookBulkUploadResource } from './index';
+import AddressBookBulkUploadResource from './AddressBookBulkUploadResource';
 
 class AddressBookBulkUploadRequest {
   /**
@@ -7,4 +7,5 @@ class AddressBookBulkUploadRequest {
    */
   records?: AddressBookBulkUploadResource[];
 }
+
 export default AddressBookBulkUploadRequest;

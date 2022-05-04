@@ -1,6 +1,7 @@
-import {
-  CompanyDirectoryAccountInfo, CompanyDirectoryPhoneNumberInfo, ContactDirectorySiteInfo, CompanyDirectoryProfileImageInfo,
-} from './index';
+import CompanyDirectoryAccountInfo from './CompanyDirectoryAccountInfo';
+import CompanyDirectoryPhoneNumberInfo from './CompanyDirectoryPhoneNumberInfo';
+import ContactDirectorySiteInfo from './ContactDirectorySiteInfo';
+import CompanyDirectoryProfileImageInfo from './CompanyDirectoryProfileImageInfo';
 
 class ContactDirectoryEvent {
   /**
@@ -69,4 +70,5 @@ class ContactDirectoryEvent {
    */
   ownerId?: string;
 }
+
 export default ContactDirectoryEvent;

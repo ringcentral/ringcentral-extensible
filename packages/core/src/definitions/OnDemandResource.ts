@@ -9,4 +9,5 @@ class OnDemandResource {
    */
   retentionPeriod?: number;
 }
+
 export default OnDemandResource;

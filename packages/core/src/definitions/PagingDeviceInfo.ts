@@ -14,4 +14,5 @@ class PagingDeviceInfo {
    */
   name?: string;
 }
+
 export default PagingDeviceInfo;

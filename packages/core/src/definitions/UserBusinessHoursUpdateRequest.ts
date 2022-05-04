@@ -1,8 +1,9 @@
-import { UserBusinessHoursScheduleInfo } from './index';
+import UserBusinessHoursScheduleInfo from './UserBusinessHoursScheduleInfo';
 
 class UserBusinessHoursUpdateRequest {
   /**
    */
   schedule?: UserBusinessHoursScheduleInfo;
 }
+
 export default UserBusinessHoursUpdateRequest;

@@ -1,4 +1,4 @@
-import { BusinessAddressInfo } from './index';
+import BusinessAddressInfo from './BusinessAddressInfo';
 
 class ModifyAccountBusinessAddressRequest {
   /**
@@ -20,4 +20,5 @@ class ModifyAccountBusinessAddressRequest {
    */
   mainSiteName?: string;
 }
+
 export default ModifyAccountBusinessAddressRequest;

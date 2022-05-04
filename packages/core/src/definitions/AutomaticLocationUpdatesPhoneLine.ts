@@ -1,4 +1,4 @@
-import { AutomaticLocationUpdatesPhoneNumberInfo } from './index';
+import AutomaticLocationUpdatesPhoneNumberInfo from './AutomaticLocationUpdatesPhoneNumberInfo';
 
 class AutomaticLocationUpdatesPhoneLine {
   /**
@@ -9,4 +9,5 @@ class AutomaticLocationUpdatesPhoneLine {
    */
   phoneInfo?: AutomaticLocationUpdatesPhoneNumberInfo;
 }
+
 export default AutomaticLocationUpdatesPhoneLine;

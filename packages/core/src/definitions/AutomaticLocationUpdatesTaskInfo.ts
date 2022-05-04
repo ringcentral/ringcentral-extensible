@@ -1,4 +1,4 @@
-import { TaskResultInfo } from './index';
+import TaskResultInfo from './TaskResultInfo';
 
 class AutomaticLocationUpdatesTaskInfo {
   /**
@@ -30,4 +30,5 @@ class AutomaticLocationUpdatesTaskInfo {
    */
   result?: TaskResultInfo;
 }
+
 export default AutomaticLocationUpdatesTaskInfo;

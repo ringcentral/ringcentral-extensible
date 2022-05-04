@@ -1,8 +1,9 @@
-import { BulkTaskInfoWiUpdate } from './index';
+import BulkTaskInfoWiUpdate from './BulkTaskInfoWiUpdate';
 
 class UpdateMultipleWirelessPointsResponse {
   /**
    */
   task?: BulkTaskInfoWiUpdate;
 }
+
 export default UpdateMultipleWirelessPointsResponse;

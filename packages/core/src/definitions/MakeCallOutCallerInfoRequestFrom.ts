@@ -8,4 +8,5 @@ class MakeCallOutCallerInfoRequestFrom {
    */
   deviceId?: string;
 }
+
 export default MakeCallOutCallerInfoRequestFrom;

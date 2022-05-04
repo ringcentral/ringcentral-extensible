@@ -1,6 +1,8 @@
-import {
-  AdaptiveCardCreator, AdaptiveCardInfoRequest, AdaptiveCardAction, AdaptiveCardSelectAction, BackgroundImage,
-} from './index';
+import AdaptiveCardCreator from './AdaptiveCardCreator';
+import AdaptiveCardInfoRequest from './AdaptiveCardInfoRequest';
+import AdaptiveCardAction from './AdaptiveCardAction';
+import AdaptiveCardSelectAction from './AdaptiveCardSelectAction';
+import BackgroundImage from './BackgroundImage';
 
 class GlipAdaptiveCardInfo {
   /**
@@ -89,4 +91,5 @@ class GlipAdaptiveCardInfo {
    */
   verticalContentAlignment?: ('top' | 'center' | 'bottom');
 }
+
 export default GlipAdaptiveCardInfo;

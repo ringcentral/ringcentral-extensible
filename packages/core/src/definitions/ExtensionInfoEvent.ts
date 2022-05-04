@@ -1,4 +1,4 @@
-import { ExtensionInfoEventBody } from './index';
+import ExtensionInfoEventBody from './ExtensionInfoEventBody';
 
 class ExtensionInfoEvent {
   /**
@@ -25,4 +25,5 @@ class ExtensionInfoEvent {
    */
   body?: ExtensionInfoEventBody;
 }
+
 export default ExtensionInfoEvent;

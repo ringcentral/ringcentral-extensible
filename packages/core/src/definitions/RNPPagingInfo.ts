@@ -29,4 +29,5 @@ class RNPPagingInfo {
    */
   pageEnd?: number;
 }
+
 export default RNPPagingInfo;

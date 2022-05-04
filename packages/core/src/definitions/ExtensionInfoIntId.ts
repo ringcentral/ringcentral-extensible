@@ -23,4 +23,5 @@ class ExtensionInfoIntId {
    */
   partnerId?: string;
 }
+
 export default ExtensionInfoIntId;

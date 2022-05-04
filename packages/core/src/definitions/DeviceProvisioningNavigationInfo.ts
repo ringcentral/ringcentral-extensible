@@ -1,4 +1,4 @@
-import { DeviceProvisioningNavigationInfoUri } from './index';
+import DeviceProvisioningNavigationInfoUri from './DeviceProvisioningNavigationInfoUri';
 
 /**
  * Information on navigation
@@ -20,4 +20,5 @@ class DeviceProvisioningNavigationInfo {
    */
   lastPage?: DeviceProvisioningNavigationInfoUri;
 }
+
 export default DeviceProvisioningNavigationInfo;

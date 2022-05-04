@@ -13,4 +13,5 @@ class CreateGlipFileParameters {
    */
   name?: string;
 }
+
 export default CreateGlipFileParameters;

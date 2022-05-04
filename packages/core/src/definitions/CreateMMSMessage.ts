@@ -1,4 +1,6 @@
-import { MessageStoreCallerInfoRequest, MessageCountryInfo, Attachment } from './index';
+import MessageStoreCallerInfoRequest from './MessageStoreCallerInfoRequest';
+import MessageCountryInfo from './MessageCountryInfo';
+import Attachment from './Attachment';
 
 class CreateMMSMessage {
   /**
@@ -27,4 +29,5 @@ class CreateMMSMessage {
    */
   attachments?: Attachment[];
 }
+
 export default CreateMMSMessage;

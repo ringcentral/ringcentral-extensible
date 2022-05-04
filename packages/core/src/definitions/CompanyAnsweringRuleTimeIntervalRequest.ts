@@ -9,4 +9,5 @@ class CompanyAnsweringRuleTimeIntervalRequest {
    */
   to?: string;
 }
+
 export default CompanyAnsweringRuleTimeIntervalRequest;

@@ -16,4 +16,5 @@ class PermissionCategoryResource {
    */
   description?: string;
 }
+
 export default PermissionCategoryResource;

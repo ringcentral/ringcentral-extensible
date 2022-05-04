@@ -1,6 +1,16 @@
-import {
-  GetExtensionAccountInfo, ContactInfo, CustomFieldInfo, DepartmentInfo, ExtensionPermissions, ProfileImageInfo, ReferenceInfo, Roles, RegionalSettings, ExtensionServiceFeatureInfo, ExtensionStatusInfo, CallQueueExtensionInfo, AutomaticLocationUpdatesSiteInfo,
-} from './index';
+import GetExtensionAccountInfo from './GetExtensionAccountInfo';
+import ContactInfo from './ContactInfo';
+import CustomFieldInfo from './CustomFieldInfo';
+import DepartmentInfo from './DepartmentInfo';
+import ExtensionPermissions from './ExtensionPermissions';
+import ProfileImageInfo from './ProfileImageInfo';
+import ReferenceInfo from './ReferenceInfo';
+import Roles from './Roles';
+import RegionalSettings from './RegionalSettings';
+import ExtensionServiceFeatureInfo from './ExtensionServiceFeatureInfo';
+import ExtensionStatusInfo from './ExtensionStatusInfo';
+import CallQueueExtensionInfo from './CallQueueExtensionInfo';
+import AutomaticLocationUpdatesSiteInfo from './AutomaticLocationUpdatesSiteInfo';
 
 class GetExtensionInfoResponse {
   /**
@@ -109,4 +119,5 @@ class GetExtensionInfoResponse {
    */
   site?: AutomaticLocationUpdatesSiteInfo;
 }
+
 export default GetExtensionInfoResponse;

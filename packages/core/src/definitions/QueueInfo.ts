@@ -1,4 +1,6 @@
-import { TransferInfo, FixedOrderAgents, UnconditionalForwardingInfo } from './index';
+import TransferInfo from './TransferInfo';
+import FixedOrderAgents from './FixedOrderAgents';
+import UnconditionalForwardingInfo from './UnconditionalForwardingInfo';
 
 /**
  * Queue settings applied for department (call queue) extension type, with the 'AgentQueue' value specified as a call handling action
@@ -69,4 +71,5 @@ class QueueInfo {
    */
   unconditionalForwarding?: UnconditionalForwardingInfo[];
 }
+
 export default QueueInfo;

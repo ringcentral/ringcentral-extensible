@@ -1,6 +1,7 @@
-import {
-  CompanyDirectoryAccountInfo, CompanyDirectoryPhoneNumberInfo, ContactDirectorySiteInfo, CompanyDirectoryProfileImageInfo,
-} from './index';
+import CompanyDirectoryAccountInfo from './CompanyDirectoryAccountInfo';
+import CompanyDirectoryPhoneNumberInfo from './CompanyDirectoryPhoneNumberInfo';
+import ContactDirectorySiteInfo from './ContactDirectorySiteInfo';
+import CompanyDirectoryProfileImageInfo from './CompanyDirectoryProfileImageInfo';
 
 /**
  * Notification payload body
@@ -70,4 +71,5 @@ class CompanyDirectoryEventBody {
    */
   profileImage?: CompanyDirectoryProfileImageInfo;
 }
+
 export default CompanyDirectoryEventBody;

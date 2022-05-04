@@ -31,4 +31,5 @@ class GlipEveryoneInfo {
    */
   lastModifiedTime?: string;
 }
+
 export default GlipEveryoneInfo;

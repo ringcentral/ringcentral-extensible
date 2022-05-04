@@ -1,4 +1,4 @@
-import { MessageChanges } from './index';
+import MessageChanges from './MessageChanges';
 
 /**
  * Notification payload body
@@ -25,4 +25,5 @@ class MessageEventBody {
    */
   ownerId?: string;
 }
+
 export default MessageEventBody;

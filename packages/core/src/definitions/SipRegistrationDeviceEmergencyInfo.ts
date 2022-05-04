@@ -1,4 +1,5 @@
-import { DeviceEmergencyServiceAddressResource, SipRegistrationDeviceLocationInfo } from './index';
+import DeviceEmergencyServiceAddressResource from './DeviceEmergencyServiceAddressResource';
+import SipRegistrationDeviceLocationInfo from './SipRegistrationDeviceLocationInfo';
 
 /**
  * Emergency response location settings of a device
@@ -47,4 +48,5 @@ class SipRegistrationDeviceEmergencyInfo {
    */
   addressLocationOnly?: boolean;
 }
+
 export default SipRegistrationDeviceEmergencyInfo;

@@ -9,4 +9,5 @@ class MessageStoreCalleeInfoRequest {
    */
   name?: string;
 }
+
 export default MessageStoreCalleeInfoRequest;

@@ -32,4 +32,5 @@ class UserContactsPagingInfo {
    */
   totalElements?: number;
 }
+
 export default UserContactsPagingInfo;

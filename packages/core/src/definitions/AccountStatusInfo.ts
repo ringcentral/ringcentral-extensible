@@ -17,4 +17,5 @@ class AccountStatusInfo {
    */
   till?: string;
 }
+
 export default AccountStatusInfo;

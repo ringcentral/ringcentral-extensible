@@ -1,6 +1,7 @@
-import {
-  NotificationRecipientInfo, SenderInfo, MessageAttachmentInfo, ConversationInfo,
-} from './index';
+import NotificationRecipientInfo from './NotificationRecipientInfo';
+import SenderInfo from './SenderInfo';
+import MessageAttachmentInfo from './MessageAttachmentInfo';
+import ConversationInfo from './ConversationInfo';
 
 /**
  * Notification payload body
@@ -90,4 +91,5 @@ class InstantMessageEventBody {
    */
   ownerId?: string;
 }
+
 export default InstantMessageEventBody;

@@ -7,4 +7,5 @@ class GlipAPSInfo {
    */
   'content-available'?: number;
 }
+
 export default GlipAPSInfo;

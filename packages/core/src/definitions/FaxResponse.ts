@@ -1,4 +1,6 @@
-import { CallerInfoFrom, CallerInfoTo, MessageAttachmentInfoIntId } from './index';
+import CallerInfoFrom from './CallerInfoFrom';
+import CallerInfoTo from './CallerInfoTo';
+import MessageAttachmentInfoIntId from './MessageAttachmentInfoIntId';
 
 class FaxResponse {
   /**
@@ -88,4 +90,5 @@ class FaxResponse {
    */
   coverPageText?: string;
 }
+
 export default FaxResponse;

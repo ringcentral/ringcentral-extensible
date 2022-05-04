@@ -1,4 +1,4 @@
-import { UserContactsNavigationInfoUri } from './index';
+import UserContactsNavigationInfoUri from './UserContactsNavigationInfoUri';
 
 /**
  * Information on navigation
@@ -20,4 +20,5 @@ class UserContactsNavigationInfo {
    */
   lastPage?: UserContactsNavigationInfoUri;
 }
+
 export default UserContactsNavigationInfo;

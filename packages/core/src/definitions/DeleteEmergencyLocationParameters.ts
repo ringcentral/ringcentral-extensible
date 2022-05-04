@@ -12,4 +12,5 @@ class DeleteEmergencyLocationParameters {
    */
   validateOnly?: boolean;
 }
+
 export default DeleteEmergencyLocationParameters;

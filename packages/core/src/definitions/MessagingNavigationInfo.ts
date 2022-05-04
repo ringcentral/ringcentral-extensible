@@ -1,4 +1,4 @@
-import { MessagingNavigationInfoURI } from './index';
+import MessagingNavigationInfoURI from './MessagingNavigationInfoURI';
 
 /**
  * Information on navigation
@@ -20,4 +20,5 @@ class MessagingNavigationInfo {
    */
   lastPage?: MessagingNavigationInfoURI;
 }
+
 export default MessagingNavigationInfo;

@@ -7,4 +7,5 @@ class AssignMultipleDevicesAutomaticLocationUpdates {
    */
   disabledDeviceIds?: string[];
 }
+
 export default AssignMultipleDevicesAutomaticLocationUpdates;

@@ -1,4 +1,5 @@
-import { UpdateUnifiedPresenceGlip, UpdateUnifiedPresenceTelephony } from './index';
+import UpdateUnifiedPresenceGlip from './UpdateUnifiedPresenceGlip';
+import UpdateUnifiedPresenceTelephony from './UpdateUnifiedPresenceTelephony';
 
 class UpdateUnifiedPresence {
   /**
@@ -9,4 +10,5 @@ class UpdateUnifiedPresence {
    */
   telephony?: UpdateUnifiedPresenceTelephony;
 }
+
 export default UpdateUnifiedPresence;

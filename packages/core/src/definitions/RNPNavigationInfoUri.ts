@@ -4,4 +4,5 @@ class RNPNavigationInfoUri {
    */
   uri?: string;
 }
+
 export default RNPNavigationInfoUri;

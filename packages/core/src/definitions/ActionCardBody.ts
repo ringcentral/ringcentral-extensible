@@ -17,4 +17,5 @@ class ActionCardBody {
    */
   placeholder?: string;
 }
+
 export default ActionCardBody;

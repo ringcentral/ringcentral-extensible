@@ -1,4 +1,6 @@
-import { GlipCreatorInfo, LastModifiedByInfo, LockedByInfo } from './index';
+import GlipCreatorInfo from './GlipCreatorInfo';
+import LastModifiedByInfo from './LastModifiedByInfo';
+import LockedByInfo from './LockedByInfo';
 
 class GlipNoteInfo {
   /**
@@ -52,4 +54,5 @@ class GlipNoteInfo {
    */
   type?: ('Note');
 }
+
 export default GlipNoteInfo;

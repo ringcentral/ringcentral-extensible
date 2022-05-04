@@ -14,4 +14,5 @@ class ListBlockedAllowedNumbersParameters {
    */
   status?: ('Blocked' | 'Allowed');
 }
+
 export default ListBlockedAllowedNumbersParameters;

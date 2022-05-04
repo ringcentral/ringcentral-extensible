@@ -12,4 +12,5 @@ class PerformanceCallsFilterTimeSpentByMailbox {
    */
   maxValueSeconds?: number;
 }
+
 export default PerformanceCallsFilterTimeSpentByMailbox;

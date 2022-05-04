@@ -1,4 +1,5 @@
-import { CompanyAnsweringRuleWeeklyScheduleInfoRequest, RangesInfo } from './index';
+import CompanyAnsweringRuleWeeklyScheduleInfoRequest from './CompanyAnsweringRuleWeeklyScheduleInfoRequest';
+import RangesInfo from './RangesInfo';
 
 /**
  * Schedule when an answering rule should be applied
@@ -18,4 +19,5 @@ class CompanyAnsweringRuleScheduleInfoRequest {
    */
   ref?: ('BusinessHours' | 'AfterHours');
 }
+
 export default CompanyAnsweringRuleScheduleInfoRequest;

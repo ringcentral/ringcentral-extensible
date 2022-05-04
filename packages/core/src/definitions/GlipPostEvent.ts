@@ -1,4 +1,4 @@
-import { GlipMentionsInfo } from './index';
+import GlipMentionsInfo from './GlipMentionsInfo';
 
 class GlipPostEvent {
   /**
@@ -58,4 +58,5 @@ class GlipPostEvent {
    */
   lastModifiedTime?: string;
 }
+
 export default GlipPostEvent;

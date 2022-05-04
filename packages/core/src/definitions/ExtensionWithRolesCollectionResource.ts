@@ -1,4 +1,4 @@
-import { ExtensionWithRolesResource } from './index';
+import ExtensionWithRolesResource from './ExtensionWithRolesResource';
 
 class ExtensionWithRolesCollectionResource {
   /**
@@ -10,4 +10,5 @@ class ExtensionWithRolesCollectionResource {
    */
   records?: ExtensionWithRolesResource[];
 }
+
 export default ExtensionWithRolesCollectionResource;

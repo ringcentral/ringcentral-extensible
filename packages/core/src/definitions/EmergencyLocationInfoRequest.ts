@@ -1,4 +1,5 @@
-import { EmergencyLocationAddressInfo, ShortSiteInfo } from './index';
+import EmergencyLocationAddressInfo from './EmergencyLocationAddressInfo';
+import ShortSiteInfo from './ShortSiteInfo';
 
 class EmergencyLocationInfoRequest {
   /**
@@ -35,4 +36,5 @@ class EmergencyLocationInfoRequest {
    */
   visibility?: ('Public');
 }
+
 export default EmergencyLocationInfoRequest;

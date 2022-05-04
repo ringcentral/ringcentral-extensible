@@ -12,4 +12,5 @@ class DataExportTaskContactInfo {
    */
   email?: string;
 }
+
 export default DataExportTaskContactInfo;

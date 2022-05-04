@@ -1,4 +1,6 @@
-import { CompanyPhoneNumberInfo, ProvisioningNavigationInfo, ProvisioningPagingInfo } from './index';
+import CompanyPhoneNumberInfo from './CompanyPhoneNumberInfo';
+import ProvisioningNavigationInfo from './ProvisioningNavigationInfo';
+import ProvisioningPagingInfo from './ProvisioningPagingInfo';
 
 class AccountPhoneNumbers {
   /**
@@ -19,4 +21,5 @@ class AccountPhoneNumbers {
    */
   paging?: ProvisioningPagingInfo;
 }
+
 export default AccountPhoneNumbers;

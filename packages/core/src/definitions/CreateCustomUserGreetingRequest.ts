@@ -1,4 +1,4 @@
-import { Attachment } from './index';
+import Attachment from './Attachment';
 
 /**
  * Request body for operation createCustomUserGreeting
@@ -21,4 +21,5 @@ class CreateCustomUserGreetingRequest {
    */
   binary?: Attachment;
 }
+
 export default CreateCustomUserGreetingRequest;

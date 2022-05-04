@@ -7,4 +7,5 @@ class ParkInfo {
    */
   id?: string;
 }
+
 export default ParkInfo;

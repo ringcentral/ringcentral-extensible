@@ -9,4 +9,5 @@ class CompanyAnsweringRuleCalledNumberInfoRequest {
    */
   phoneNumber?: string;
 }
+
 export default CompanyAnsweringRuleCalledNumberInfoRequest;

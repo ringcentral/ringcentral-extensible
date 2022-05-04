@@ -1,4 +1,4 @@
-import { CallLogRecordDeviceInfo } from './index';
+import CallLogRecordDeviceInfo from './CallLogRecordDeviceInfo';
 
 /**
  * Information on caller ('from') or callee ('to')
@@ -33,4 +33,5 @@ class CallLogCallerInfo {
    */
   device?: CallLogRecordDeviceInfo;
 }
+
 export default CallLogCallerInfo;

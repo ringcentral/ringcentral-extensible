@@ -19,4 +19,5 @@ class ListDataExportTasksParameters {
    */
   perPage?: number;
 }
+
 export default ListDataExportTasksParameters;

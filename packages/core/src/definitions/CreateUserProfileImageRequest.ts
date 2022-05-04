@@ -1,4 +1,4 @@
-import { Attachment } from './index';
+import Attachment from './Attachment';
 
 /**
  * Request body for operation createUserProfileImage
@@ -9,4 +9,5 @@ class CreateUserProfileImageRequest {
    */
   image?: Attachment;
 }
+
 export default CreateUserProfileImageRequest;

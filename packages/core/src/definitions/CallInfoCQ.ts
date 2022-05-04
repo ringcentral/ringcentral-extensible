@@ -1,4 +1,5 @@
-import { PrimaryCQInfo, AdditionalCQInfo } from './index';
+import PrimaryCQInfo from './PrimaryCQInfo';
+import AdditionalCQInfo from './AdditionalCQInfo';
 
 /**
  * Primary/additional CQ information
@@ -12,4 +13,5 @@ class CallInfoCQ {
    */
   additional?: AdditionalCQInfo;
 }
+
 export default CallInfoCQ;

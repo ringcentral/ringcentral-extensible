@@ -1,4 +1,4 @@
-import { TransferExtensionInfo } from './index';
+import TransferExtensionInfo from './TransferExtensionInfo';
 
 class TransferInfo {
   /**
@@ -10,4 +10,5 @@ class TransferInfo {
    */
   action?: ('HoldTimeExpiration' | 'MaxCallers' | 'NoAnswer');
 }
+
 export default TransferInfo;

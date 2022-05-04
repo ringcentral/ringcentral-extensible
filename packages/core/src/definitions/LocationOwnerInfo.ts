@@ -4,4 +4,5 @@ class LocationOwnerInfo {
    */
   id?: string;
 }
+
 export default LocationOwnerInfo;

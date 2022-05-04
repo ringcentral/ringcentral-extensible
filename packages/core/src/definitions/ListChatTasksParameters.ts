@@ -51,4 +51,5 @@ class ListChatTasksParameters {
    */
   recordCount?: number;
 }
+
 export default ListChatTasksParameters;

@@ -1,4 +1,6 @@
-import { PermissionCategoryResource, RNPPagingInfo, RNPNavigationInfo } from './index';
+import PermissionCategoryResource from './PermissionCategoryResource';
+import RNPPagingInfo from './RNPPagingInfo';
+import RNPNavigationInfo from './RNPNavigationInfo';
 
 class PermissionCategoryCollectionResource {
   /**
@@ -18,4 +20,5 @@ class PermissionCategoryCollectionResource {
    */
   navigation?: RNPNavigationInfo;
 }
+
 export default PermissionCategoryCollectionResource;

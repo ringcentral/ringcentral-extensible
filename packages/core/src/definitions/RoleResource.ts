@@ -1,4 +1,4 @@
-import { PermissionIdResource } from './index';
+import PermissionIdResource from './PermissionIdResource';
 
 class RoleResource {
   /**
@@ -44,4 +44,5 @@ class RoleResource {
    */
   permissions?: PermissionIdResource[];
 }
+
 export default RoleResource;

@@ -1,4 +1,4 @@
-import { AssigneeInfo } from './index';
+import AssigneeInfo from './AssigneeInfo';
 
 class GlipCompleteTask {
   /**
@@ -16,4 +16,5 @@ class GlipCompleteTask {
    */
   completenessPercentage?: number;
 }
+
 export default GlipCompleteTask;

@@ -13,4 +13,5 @@ class CreateMessageStoreReportRequest {
    */
   messageTypes?: ('EMail' | 'Fax' | 'SMS' | 'VoiceMail' | 'Pager' | 'Text')[];
 }
+
 export default CreateMessageStoreReportRequest;

@@ -1,4 +1,5 @@
-import { PersonalContactResource, SyncInfo } from './index';
+import PersonalContactResource from './PersonalContactResource';
+import SyncInfo from './SyncInfo';
 
 class AddressBookSync {
   /**
@@ -24,4 +25,5 @@ class AddressBookSync {
    */
   nextPageUri?: string;
 }
+
 export default AddressBookSync;

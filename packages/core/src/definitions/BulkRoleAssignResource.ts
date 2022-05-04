@@ -21,4 +21,5 @@ class BulkRoleAssignResource {
    */
   removedExtensionIds?: string[];
 }
+
 export default BulkRoleAssignResource;

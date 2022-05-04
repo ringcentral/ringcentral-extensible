@@ -9,4 +9,5 @@ class DevicePhoneLinesEmergencyAddressInfo {
    */
   localOnly?: boolean;
 }
+
 export default DevicePhoneLinesEmergencyAddressInfo;

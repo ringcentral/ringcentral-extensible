@@ -8,4 +8,5 @@ class GlipPreferencesChats {
    */
   leftRailMode?: ('SeparateAllChatTypes' | 'SeparateConversationsAndTeams' | 'CombineAllChatTypes');
 }
+
 export default GlipPreferencesChats;

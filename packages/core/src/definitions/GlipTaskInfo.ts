@@ -1,6 +1,7 @@
-import {
-  GlipCreatorInfo, TaskAssigneeInfo, GlipTaskRecurrenceInfo, TaskAttachment,
-} from './index';
+import GlipCreatorInfo from './GlipCreatorInfo';
+import TaskAssigneeInfo from './TaskAssigneeInfo';
+import GlipTaskRecurrenceInfo from './GlipTaskRecurrenceInfo';
+import TaskAttachment from './TaskAttachment';
 
 class GlipTaskInfo {
   /**
@@ -94,4 +95,5 @@ class GlipTaskInfo {
    */
   attachments?: TaskAttachment[];
 }
+
 export default GlipTaskInfo;

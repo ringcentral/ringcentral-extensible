@@ -1,4 +1,4 @@
-import { TelephonySessionsEventBody } from './index';
+import TelephonySessionsEventBody from './TelephonySessionsEventBody';
 
 class AccountTelephonySessionsEvent {
   /**
@@ -30,4 +30,5 @@ class AccountTelephonySessionsEvent {
    */
   body?: TelephonySessionsEventBody;
 }
+
 export default AccountTelephonySessionsEvent;

@@ -32,4 +32,5 @@ class MeetingsCountryResource {
    */
   loginAllowed?: boolean;
 }
+
 export default MeetingsCountryResource;

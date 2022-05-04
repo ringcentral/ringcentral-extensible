@@ -1,4 +1,5 @@
-import { PhoneNumberCountryInfo, DeviceProvisioningExtensionInfo } from './index';
+import PhoneNumberCountryInfo from './PhoneNumberCountryInfo';
+import DeviceProvisioningExtensionInfo from './DeviceProvisioningExtensionInfo';
 
 /**
  * Phone number information
@@ -53,4 +54,5 @@ class PhoneNumberInfoIntId {
    */
   usageType?: ('MainCompanyNumber' | 'AdditionalCompanyNumber' | 'CompanyNumber' | 'DirectNumber' | 'CompanyFaxNumber' | 'ForwardedNumber' | 'ForwardedCompanyNumber' | 'ContactCenterNumber');
 }
+
 export default PhoneNumberInfoIntId;

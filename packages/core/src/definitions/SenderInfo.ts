@@ -22,4 +22,5 @@ class SenderInfo {
    */
   name?: string;
 }
+
 export default SenderInfo;

@@ -1,4 +1,6 @@
-import { CallQueueInfo, ProvisioningNavigationInfo, ProvisioningPagingInfo } from './index';
+import CallQueueInfo from './CallQueueInfo';
+import ProvisioningNavigationInfo from './ProvisioningNavigationInfo';
+import ProvisioningPagingInfo from './ProvisioningPagingInfo';
 
 class CallQueues {
   /**
@@ -23,4 +25,5 @@ class CallQueues {
    */
   paging?: ProvisioningPagingInfo;
 }
+
 export default CallQueues;

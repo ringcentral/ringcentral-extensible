@@ -22,4 +22,5 @@ class CompanyDirectoryPhoneNumberInfo {
    */
   usageType?: ('MobileNumber' | 'ContactNumber' | 'DirectNumber' | 'ForwardedNumber');
 }
+
 export default CompanyDirectoryPhoneNumberInfo;

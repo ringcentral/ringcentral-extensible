@@ -1,4 +1,6 @@
-import { SwitchSiteInfo, LocationUpdatesEmergencyAddressInfoRequest, ERLLocationInfo } from './index';
+import SwitchSiteInfo from './SwitchSiteInfo';
+import LocationUpdatesEmergencyAddressInfoRequest from './LocationUpdatesEmergencyAddressInfoRequest';
+import ERLLocationInfo from './ERLLocationInfo';
 
 class CreateSwitchInfo {
   /**
@@ -29,4 +31,5 @@ class CreateSwitchInfo {
    */
   emergencyLocation?: ERLLocationInfo;
 }
+
 export default CreateSwitchInfo;

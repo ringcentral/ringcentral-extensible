@@ -17,4 +17,5 @@ class CreatorInfo {
    */
   lastName?: string;
 }
+
 export default CreatorInfo;

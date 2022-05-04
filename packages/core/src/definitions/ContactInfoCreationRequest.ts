@@ -1,4 +1,5 @@
-import { ContactBusinessAddressInfo, PronouncedNameInfo } from './index';
+import ContactBusinessAddressInfo from './ContactBusinessAddressInfo';
+import PronouncedNameInfo from './PronouncedNameInfo';
 
 /**
  * Contact Information
@@ -56,4 +57,5 @@ class ContactInfoCreationRequest {
    */
   department?: string;
 }
+
 export default ContactInfoCreationRequest;

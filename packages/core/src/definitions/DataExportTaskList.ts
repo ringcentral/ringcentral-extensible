@@ -1,4 +1,6 @@
-import { DataExportTask, GlipDataExportNavigationInfo, GlipDataExportPagingInfo } from './index';
+import DataExportTask from './DataExportTask';
+import GlipDataExportNavigationInfo from './GlipDataExportNavigationInfo';
+import GlipDataExportPagingInfo from './GlipDataExportPagingInfo';
 
 class DataExportTaskList {
   /**
@@ -13,4 +15,5 @@ class DataExportTaskList {
    */
   paging?: GlipDataExportPagingInfo;
 }
+
 export default DataExportTaskList;

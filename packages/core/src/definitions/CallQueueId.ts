@@ -7,4 +7,5 @@ class CallQueueId {
    */
   id?: string;
 }
+
 export default CallQueueId;

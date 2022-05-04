@@ -1,4 +1,5 @@
-import { CompanyContactsPagingInfo, ContactResource } from './index';
+import CompanyContactsPagingInfo from './CompanyContactsPagingInfo';
+import ContactResource from './ContactResource';
 
 class DirectoryResource {
   /**
@@ -9,4 +10,5 @@ class DirectoryResource {
    */
   records?: ContactResource[];
 }
+
 export default DirectoryResource;

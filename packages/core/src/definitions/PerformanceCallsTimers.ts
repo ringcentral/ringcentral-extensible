@@ -1,6 +1,12 @@
-import {
-  PerformanceCallsTotal, PerformanceCallsByDirection, PerformanceCallsByOrigin, PerformanceCallsByResponse, PerformanceCallsSegments, PerformanceCallsByResult, PerformanceCallsByCompanyHours, PerformanceCallsByQueueSla, PerformanceCallsByType,
-} from './index';
+import PerformanceCallsTotal from './PerformanceCallsTotal';
+import PerformanceCallsByDirection from './PerformanceCallsByDirection';
+import PerformanceCallsByOrigin from './PerformanceCallsByOrigin';
+import PerformanceCallsByResponse from './PerformanceCallsByResponse';
+import PerformanceCallsSegments from './PerformanceCallsSegments';
+import PerformanceCallsByResult from './PerformanceCallsByResult';
+import PerformanceCallsByCompanyHours from './PerformanceCallsByCompanyHours';
+import PerformanceCallsByQueueSla from './PerformanceCallsByQueueSla';
+import PerformanceCallsByType from './PerformanceCallsByType';
 
 /**
  * Call length data for the specified grouping
@@ -42,4 +48,5 @@ class PerformanceCallsTimers {
    */
   callsByType?: PerformanceCallsByType;
 }
+
 export default PerformanceCallsTimers;

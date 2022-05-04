@@ -1,4 +1,5 @@
-import { ResponsePaging, PerformanceCallsData } from './index';
+import ResponsePaging from './ResponsePaging';
+import PerformanceCallsData from './PerformanceCallsData';
 
 class PerformanceCallsAggregatesResponse {
   /**
@@ -11,4 +12,5 @@ class PerformanceCallsAggregatesResponse {
    */
   data?: PerformanceCallsData[];
 }
+
 export default PerformanceCallsAggregatesResponse;

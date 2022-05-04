@@ -23,4 +23,5 @@ class SyncAddressBookParameters {
    */
   pageId?: number;
 }
+
 export default SyncAddressBookParameters;

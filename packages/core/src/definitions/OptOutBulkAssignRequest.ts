@@ -21,4 +21,5 @@ class OptOutBulkAssignRequest {
    */
   optIns?: string[];
 }
+
 export default OptOutBulkAssignRequest;

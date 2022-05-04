@@ -1,4 +1,5 @@
-import { EmergencyLocationInfo, ProvisioningPagingInfo } from './index';
+import EmergencyLocationInfo from './EmergencyLocationInfo';
+import ProvisioningPagingInfo from './ProvisioningPagingInfo';
 
 class EmergencyLocationsResource {
   /**
@@ -9,4 +10,5 @@ class EmergencyLocationsResource {
    */
   paging?: ProvisioningPagingInfo;
 }
+
 export default EmergencyLocationsResource;

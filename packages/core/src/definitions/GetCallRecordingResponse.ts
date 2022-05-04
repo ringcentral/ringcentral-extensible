@@ -19,4 +19,5 @@ class GetCallRecordingResponse {
    */
   duration?: number;
 }
+
 export default GetCallRecordingResponse;

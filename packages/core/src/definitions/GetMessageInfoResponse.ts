@@ -1,6 +1,7 @@
-import {
-  MessageAttachmentInfo, ConversationInfo, MessageStoreCallerInfoResponseFrom, MessageStoreCallerInfoResponseTo,
-} from './index';
+import MessageAttachmentInfo from './MessageAttachmentInfo';
+import ConversationInfo from './ConversationInfo';
+import MessageStoreCallerInfoResponseFrom from './MessageStoreCallerInfoResponseFrom';
+import MessageStoreCallerInfoResponseTo from './MessageStoreCallerInfoResponseTo';
 
 class GetMessageInfoResponse {
   /**
@@ -136,4 +137,5 @@ class GetMessageInfoResponse {
    */
   coverPageText?: string;
 }
+
 export default GetMessageInfoResponse;

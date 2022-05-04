@@ -1,4 +1,6 @@
-import { GetPresenceInfo, PresenceNavigationInfo, PresencePagingInfo } from './index';
+import GetPresenceInfo from './GetPresenceInfo';
+import PresenceNavigationInfo from './PresenceNavigationInfo';
+import PresencePagingInfo from './PresencePagingInfo';
 
 class AccountPresenceInfo {
   /**
@@ -19,4 +21,5 @@ class AccountPresenceInfo {
    */
   paging?: PresencePagingInfo;
 }
+
 export default AccountPresenceInfo;

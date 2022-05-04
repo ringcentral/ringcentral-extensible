@@ -1,4 +1,4 @@
-import { GlipAttachmentInfoRequest } from './index';
+import GlipAttachmentInfoRequest from './GlipAttachmentInfoRequest';
 
 /**
  * Post data. At least one attribute should be provided (text or attachments)
@@ -14,4 +14,5 @@ class GlipPostPostBody {
    */
   attachments?: GlipAttachmentInfoRequest[];
 }
+
 export default GlipPostPostBody;

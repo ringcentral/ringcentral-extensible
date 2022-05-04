@@ -14,4 +14,5 @@ class PeerInfo {
    */
   partyId?: string;
 }
+
 export default PeerInfo;

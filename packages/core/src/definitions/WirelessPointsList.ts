@@ -1,4 +1,6 @@
-import { WirelessPointInfo, ProvisioningNavigationInfo, ProvisioningPagingInfo } from './index';
+import WirelessPointInfo from './WirelessPointInfo';
+import ProvisioningNavigationInfo from './ProvisioningNavigationInfo';
+import ProvisioningPagingInfo from './ProvisioningPagingInfo';
 
 class WirelessPointsList {
   /**
@@ -19,4 +21,5 @@ class WirelessPointsList {
    */
   paging?: ProvisioningPagingInfo;
 }
+
 export default WirelessPointsList;

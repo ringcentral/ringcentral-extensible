@@ -32,4 +32,5 @@ class AccountHistoryRecordTarget {
    */
   siteId?: string;
 }
+
 export default AccountHistoryRecordTarget;

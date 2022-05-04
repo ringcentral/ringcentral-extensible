@@ -19,4 +19,5 @@ class ErrorEntity {
    */
   parameterValue?: string;
 }
+
 export default ErrorEntity;

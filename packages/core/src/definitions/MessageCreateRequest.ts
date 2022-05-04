@@ -15,4 +15,5 @@ class MessageCreateRequest {
    */
   text?: string;
 }
+
 export default MessageCreateRequest;

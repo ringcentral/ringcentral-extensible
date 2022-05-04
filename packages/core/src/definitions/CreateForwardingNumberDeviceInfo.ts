@@ -7,4 +7,5 @@ class CreateForwardingNumberDeviceInfo {
    */
   id?: string;
 }
+
 export default CreateForwardingNumberDeviceInfo;

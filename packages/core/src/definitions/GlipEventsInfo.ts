@@ -1,4 +1,5 @@
-import { GlipEventInfo, GlipNavigationInfo } from './index';
+import GlipEventInfo from './GlipEventInfo';
+import GlipNavigationInfo from './GlipNavigationInfo';
 
 class GlipEventsInfo {
   /**
@@ -10,4 +11,5 @@ class GlipEventsInfo {
    */
   navigation?: GlipNavigationInfo;
 }
+
 export default GlipEventsInfo;

@@ -28,4 +28,5 @@ class ListAccountSwitchesParameters {
    */
   page?: number;
 }
+
 export default ListAccountSwitchesParameters;

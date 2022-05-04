@@ -22,4 +22,5 @@ class ListExtensionPhoneNumbersParameters {
    */
   perPage?: number;
 }
+
 export default ListExtensionPhoneNumbersParameters;

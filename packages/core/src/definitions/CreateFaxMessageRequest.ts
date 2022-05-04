@@ -1,4 +1,5 @@
-import { MessageStoreCalleeInfoRequest, Attachment } from './index';
+import MessageStoreCalleeInfoRequest from './MessageStoreCalleeInfoRequest';
+import Attachment from './Attachment';
 
 /**
  * Request body for operation createFaxMessage
@@ -44,4 +45,5 @@ class CreateFaxMessageRequest {
    */
   attachments?: Attachment[];
 }
+
 export default CreateFaxMessageRequest;

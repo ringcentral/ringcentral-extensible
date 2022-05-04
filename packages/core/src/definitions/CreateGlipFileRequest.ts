@@ -1,4 +1,4 @@
-import { Attachment } from './index';
+import Attachment from './Attachment';
 
 /**
  * Request body for operation createGlipFile
@@ -10,4 +10,5 @@ class CreateGlipFileRequest {
    */
   body?: Attachment;
 }
+
 export default CreateGlipFileRequest;

@@ -7,4 +7,5 @@ class LockedByInfo {
    */
   id?: string;
 }
+
 export default LockedByInfo;

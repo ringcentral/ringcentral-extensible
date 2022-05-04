@@ -7,4 +7,5 @@ class PerformanceCallsCountersResponseOptionsCallsByOrigin {
    */
   aggregationInterval?: ('Hour' | 'Day' | 'Week' | 'Month');
 }
+
 export default PerformanceCallsCountersResponseOptionsCallsByOrigin;

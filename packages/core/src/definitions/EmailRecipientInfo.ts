@@ -29,4 +29,5 @@ class EmailRecipientInfo {
    */
   permission?: ('FullAccess' | 'Messages' | 'MemberManagement');
 }
+
 export default EmailRecipientInfo;

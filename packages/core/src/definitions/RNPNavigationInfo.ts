@@ -1,4 +1,4 @@
-import { RNPNavigationInfoUri } from './index';
+import RNPNavigationInfoUri from './RNPNavigationInfoUri';
 
 class RNPNavigationInfo {
   /**
@@ -17,4 +17,5 @@ class RNPNavigationInfo {
    */
   lastPage?: RNPNavigationInfoUri;
 }
+
 export default RNPNavigationInfo;

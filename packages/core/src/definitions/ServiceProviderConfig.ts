@@ -1,6 +1,7 @@
-import {
-  AuthenticationScheme, BulkSupported, Supported, FilterSupported,
-} from './index';
+import AuthenticationScheme from './AuthenticationScheme';
+import BulkSupported from './BulkSupported';
+import Supported from './Supported';
+import FilterSupported from './FilterSupported';
 
 class ServiceProviderConfig {
   /**
@@ -39,4 +40,5 @@ class ServiceProviderConfig {
    */
   xmlDataFormat?: Supported;
 }
+
 export default ServiceProviderConfig;

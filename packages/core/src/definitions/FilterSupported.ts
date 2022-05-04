@@ -8,4 +8,5 @@ class FilterSupported {
    */
   supported?: boolean;
 }
+
 export default FilterSupported;

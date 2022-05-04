@@ -29,4 +29,5 @@ class MeetingRecordingsPagingInfo {
    */
   totalElements?: number;
 }
+
 export default MeetingRecordingsPagingInfo;

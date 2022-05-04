@@ -29,4 +29,5 @@ class BackgroundImage {
    */
   verticalAlignment?: ('top' | 'center' | 'bottom');
 }
+
 export default BackgroundImage;

@@ -1,4 +1,4 @@
-import { TaskResultRecordErrorsInfo } from './index';
+import TaskResultRecordErrorsInfo from './TaskResultRecordErrorsInfo';
 
 class TaskResultRecord {
   /**
@@ -25,4 +25,5 @@ class TaskResultRecord {
    */
   errors?: TaskResultRecordErrorsInfo[];
 }
+
 export default TaskResultRecord;

@@ -6,4 +6,5 @@ class ListUserAssignedRolesParameters {
    */
   showHidden?: boolean;
 }
+
 export default ListUserAssignedRolesParameters;

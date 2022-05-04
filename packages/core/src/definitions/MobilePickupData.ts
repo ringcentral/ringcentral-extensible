@@ -24,4 +24,5 @@ class MobilePickupData {
    */
   srvLvlExt?: string;
 }
+
 export default MobilePickupData;

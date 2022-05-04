@@ -11,4 +11,5 @@ class CallsByDirection {
    */
   outbound?: number;
 }
+
 export default CallsByDirection;

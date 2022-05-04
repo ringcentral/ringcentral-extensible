@@ -1,6 +1,14 @@
-import {
-  ScheduleInfo, CalledNumberInfo, CallersInfo, ForwardingInfo, UnconditionalForwardingInfo, QueueInfo, TransferredExtensionInfo, VoicemailInfo, GreetingInfo, SharedLinesInfo, MissedCallInfo,
-} from './index';
+import ScheduleInfo from './ScheduleInfo';
+import CalledNumberInfo from './CalledNumberInfo';
+import CallersInfo from './CallersInfo';
+import ForwardingInfo from './ForwardingInfo';
+import UnconditionalForwardingInfo from './UnconditionalForwardingInfo';
+import QueueInfo from './QueueInfo';
+import TransferredExtensionInfo from './TransferredExtensionInfo';
+import VoicemailInfo from './VoicemailInfo';
+import GreetingInfo from './GreetingInfo';
+import SharedLinesInfo from './SharedLinesInfo';
+import MissedCallInfo from './MissedCallInfo';
 
 class AnsweringRuleInfo {
   /**
@@ -85,4 +93,5 @@ class AnsweringRuleInfo {
    */
   missedCall?: MissedCallInfo;
 }
+
 export default AnsweringRuleInfo;

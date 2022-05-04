@@ -1,4 +1,4 @@
-import { GCMData } from './index';
+import GCMData from './GCMData';
 
 /**
  * GCM data
@@ -18,4 +18,5 @@ class GCMInfo {
    */
   data?: GCMData;
 }
+
 export default GCMInfo;

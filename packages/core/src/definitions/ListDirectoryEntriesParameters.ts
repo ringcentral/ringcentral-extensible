@@ -31,4 +31,5 @@ class ListDirectoryEntriesParameters {
    */
   siteId?: string;
 }
+
 export default ListDirectoryEntriesParameters;

@@ -1,4 +1,4 @@
-import { PerformanceCallsTimeInterval } from './index';
+import PerformanceCallsTimeInterval from './PerformanceCallsTimeInterval';
 
 /**
  * Allows more granular control over time included in the report
@@ -19,4 +19,5 @@ class PerformanceCallsAdvancedTimeSettings {
    */
   includeHours?: PerformanceCallsTimeInterval[];
 }
+
 export default PerformanceCallsAdvancedTimeSettings;

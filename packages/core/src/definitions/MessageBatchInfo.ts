@@ -1,4 +1,4 @@
-import { RejectedMessageInfo } from './index';
+import RejectedMessageInfo from './RejectedMessageInfo';
 
 /**
  * Batch of A2P SMS messages. This object provides a specification to send message(s) to many recipients. It contains top-level attributes which apply to all messages. In addition to that, it is possible to override this attribute for each message. This way a single API call may be used to send individual messages to many recipients
@@ -52,4 +52,5 @@ class MessageBatchInfo {
    */
   rejected?: RejectedMessageInfo[];
 }
+
 export default MessageBatchInfo;

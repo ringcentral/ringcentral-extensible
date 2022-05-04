@@ -1,4 +1,6 @@
-import { MeetingScheduleResource, HostInfoRequest, RecurrenceInfo } from './index';
+import MeetingScheduleResource from './MeetingScheduleResource';
+import HostInfoRequest from './HostInfoRequest';
+import RecurrenceInfo from './RecurrenceInfo';
 
 class MeetingRequestResource {
   /**
@@ -75,4 +77,5 @@ class MeetingRequestResource {
    */
   globalDialInCountries?: string[];
 }
+
 export default MeetingRequestResource;

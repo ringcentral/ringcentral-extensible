@@ -21,4 +21,5 @@ class TargetServicePlanInfo {
    */
   freemiumProductType?: ('Freyja' | 'Phoenix');
 }
+
 export default TargetServicePlanInfo;

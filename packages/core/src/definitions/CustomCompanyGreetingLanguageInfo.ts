@@ -22,4 +22,5 @@ class CustomCompanyGreetingLanguageInfo {
    */
   localeCode?: string;
 }
+
 export default CustomCompanyGreetingLanguageInfo;

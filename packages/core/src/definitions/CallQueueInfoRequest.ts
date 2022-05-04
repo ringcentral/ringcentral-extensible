@@ -19,4 +19,5 @@ class CallQueueInfoRequest {
    */
   abandonedThresholdSeconds?: number;
 }
+
 export default CallQueueInfoRequest;

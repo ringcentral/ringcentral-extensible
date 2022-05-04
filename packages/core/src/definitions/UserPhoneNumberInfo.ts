@@ -1,4 +1,6 @@
-import { CountryInfo, ContactCenterProvider, UserPhoneNumberExtensionInfo } from './index';
+import CountryInfo from './CountryInfo';
+import ContactCenterProvider from './ContactCenterProvider';
+import UserPhoneNumberExtensionInfo from './UserPhoneNumberExtensionInfo';
 
 class UserPhoneNumberInfo {
   /**
@@ -69,4 +71,5 @@ class UserPhoneNumberInfo {
    */
   features?: ('CallerId' | 'SmsSender' | 'A2PSmsSender' | 'MmsSender' | 'InternationalSmsSender' | 'Delegated')[];
 }
+
 export default UserPhoneNumberInfo;

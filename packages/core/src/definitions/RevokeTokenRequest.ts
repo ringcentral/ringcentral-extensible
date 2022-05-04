@@ -16,4 +16,5 @@ class RevokeTokenRequest {
    */
   token?: string;
 }
+
 export default RevokeTokenRequest;

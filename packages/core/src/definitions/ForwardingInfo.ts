@@ -1,4 +1,4 @@
-import { RuleInfo } from './index';
+import RuleInfo from './RuleInfo';
 
 /**
  * Forwarding parameters. Returned if 'ForwardCalls' is specified in 'callHandlingAction'. These settings determine the forwarding numbers to which the call will be forwarded
@@ -45,4 +45,5 @@ class ForwardingInfo {
    */
   mobileTimeout?: boolean;
 }
+
 export default ForwardingInfo;

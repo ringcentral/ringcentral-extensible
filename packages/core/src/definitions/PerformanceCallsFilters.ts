@@ -1,6 +1,7 @@
-import {
-  CallSegmentFilter, CallActionFilter, PerformanceCallsFilterByLength, PerformanceCallsFilterTimeSpentByMailbox,
-} from './index';
+import CallSegmentFilter from './CallSegmentFilter';
+import CallActionFilter from './CallActionFilter';
+import PerformanceCallsFilterByLength from './PerformanceCallsFilterByLength';
+import PerformanceCallsFilterTimeSpentByMailbox from './PerformanceCallsFilterTimeSpentByMailbox';
 
 /**
  * Optional filters that limit the scope of calls to be aggregated (joined via AND)
@@ -74,4 +75,5 @@ class PerformanceCallsFilters {
    */
   callType?: ('Direct' | 'FromQueue' | 'ParkRetrieval' | 'Transferred' | 'Outbound')[];
 }
+
 export default PerformanceCallsFilters;

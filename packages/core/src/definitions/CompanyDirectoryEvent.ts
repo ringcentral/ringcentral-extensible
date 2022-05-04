@@ -1,4 +1,4 @@
-import { CompanyDirectoryEventBody } from './index';
+import CompanyDirectoryEventBody from './CompanyDirectoryEventBody';
 
 class CompanyDirectoryEvent {
   /**
@@ -30,4 +30,5 @@ class CompanyDirectoryEvent {
    */
   body?: CompanyDirectoryEventBody;
 }
+
 export default CompanyDirectoryEvent;

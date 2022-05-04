@@ -1,4 +1,5 @@
-import { MessageStoreCallerInfoRequest, MessageCountryInfo } from './index';
+import MessageStoreCallerInfoRequest from './MessageStoreCallerInfoRequest';
+import MessageCountryInfo from './MessageCountryInfo';
 
 class CreateSMSMessage {
   /**
@@ -22,4 +23,5 @@ class CreateSMSMessage {
    */
   country?: MessageCountryInfo;
 }
+
 export default CreateSMSMessage;

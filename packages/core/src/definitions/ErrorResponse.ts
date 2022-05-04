@@ -14,4 +14,5 @@ class ErrorResponse {
    */
   description?: string;
 }
+
 export default ErrorResponse;

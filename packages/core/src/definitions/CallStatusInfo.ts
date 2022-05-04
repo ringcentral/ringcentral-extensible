@@ -1,4 +1,4 @@
-import { PeerInfo } from './index';
+import PeerInfo from './PeerInfo';
 
 /**
  * Status data of a call session
@@ -23,4 +23,5 @@ class CallStatusInfo {
    */
   description?: string;
 }
+
 export default CallStatusInfo;

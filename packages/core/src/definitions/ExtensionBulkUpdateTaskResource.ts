@@ -1,4 +1,4 @@
-import { ExtensionBulkUpdateTaskResult } from './index';
+import ExtensionBulkUpdateTaskResult from './ExtensionBulkUpdateTaskResult';
 
 /**
  * Information on a task for updating multiple extensions
@@ -38,4 +38,5 @@ class ExtensionBulkUpdateTaskResource {
    */
   result?: ExtensionBulkUpdateTaskResult;
 }
+
 export default ExtensionBulkUpdateTaskResource;

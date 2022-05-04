@@ -14,4 +14,5 @@ class MakeCallOutCallerInfoRequestTo {
    */
   extensionNumber?: string;
 }
+
 export default MakeCallOutCallerInfoRequestTo;

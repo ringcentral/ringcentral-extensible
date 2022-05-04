@@ -4,4 +4,5 @@ class CallerIdPhoneInfoRequest {
    */
   id?: string;
 }
+
 export default CallerIdPhoneInfoRequest;

@@ -1,4 +1,6 @@
-import { LocationInfo, ProvisioningNavigationInfo, ProvisioningPagingInfo } from './index';
+import LocationInfo from './LocationInfo';
+import ProvisioningNavigationInfo from './ProvisioningNavigationInfo';
+import ProvisioningPagingInfo from './ProvisioningPagingInfo';
 
 class GetLocationListResponse {
   /**
@@ -21,4 +23,5 @@ class GetLocationListResponse {
    */
   paging?: ProvisioningPagingInfo;
 }
+
 export default GetLocationListResponse;

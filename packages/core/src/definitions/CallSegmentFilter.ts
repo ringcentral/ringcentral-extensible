@@ -1,4 +1,4 @@
-import { PerformanceCallsCallSegmentLengthFilter } from './index';
+import PerformanceCallsCallSegmentLengthFilter from './PerformanceCallsCallSegmentLengthFilter';
 
 class CallSegmentFilter {
   /**
@@ -9,4 +9,5 @@ class CallSegmentFilter {
    */
   callSegmentLength?: PerformanceCallsCallSegmentLengthFilter;
 }
+
 export default CallSegmentFilter;

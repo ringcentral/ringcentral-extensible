@@ -42,4 +42,5 @@ class GlipPersonInfo {
    */
   lastModifiedTime?: string;
 }
+
 export default GlipPersonInfo;

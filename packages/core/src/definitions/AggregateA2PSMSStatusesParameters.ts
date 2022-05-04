@@ -29,4 +29,5 @@ class AggregateA2PSMSStatusesParameters {
    */
   phoneNumber?: string[];
 }
+
 export default AggregateA2PSMSStatusesParameters;

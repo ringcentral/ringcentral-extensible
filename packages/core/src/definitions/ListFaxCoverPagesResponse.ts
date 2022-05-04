@@ -1,4 +1,6 @@
-import { FaxCoverPageInfo, MessagingNavigationInfo, MessagingPagingInfo } from './index';
+import FaxCoverPageInfo from './FaxCoverPageInfo';
+import MessagingNavigationInfo from './MessagingNavigationInfo';
+import MessagingPagingInfo from './MessagingPagingInfo';
 
 class ListFaxCoverPagesResponse {
   /**
@@ -17,4 +19,5 @@ class ListFaxCoverPagesResponse {
    */
   paging?: MessagingPagingInfo;
 }
+
 export default ListFaxCoverPagesResponse;

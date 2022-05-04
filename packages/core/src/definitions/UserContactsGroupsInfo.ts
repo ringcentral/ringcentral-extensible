@@ -7,4 +7,5 @@ class UserContactsGroupsInfo {
    */
   uri?: string;
 }
+
 export default UserContactsGroupsInfo;

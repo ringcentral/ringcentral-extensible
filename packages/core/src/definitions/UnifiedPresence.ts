@@ -1,4 +1,6 @@
-import { UnifiedPresenceGlip, UnifiedPresenceTelephony, UnifiedPresenceMeeting } from './index';
+import UnifiedPresenceGlip from './UnifiedPresenceGlip';
+import UnifiedPresenceTelephony from './UnifiedPresenceTelephony';
+import UnifiedPresenceMeeting from './UnifiedPresenceMeeting';
 
 class UnifiedPresence {
   /**
@@ -18,4 +20,5 @@ class UnifiedPresence {
    */
   meeting?: UnifiedPresenceMeeting;
 }
+
 export default UnifiedPresence;

@@ -29,4 +29,5 @@ class MeetingsPagingInfo {
    */
   pageEnd?: number;
 }
+
 export default MeetingsPagingInfo;

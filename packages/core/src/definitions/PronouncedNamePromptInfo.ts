@@ -13,4 +13,5 @@ class PronouncedNamePromptInfo {
    */
   contentType?: ('audio/mpeg' | 'audio/wav');
 }
+
 export default PronouncedNamePromptInfo;

@@ -7,4 +7,5 @@ class SharedLinesInfo {
    */
   timeout?: number;
 }
+
 export default SharedLinesInfo;

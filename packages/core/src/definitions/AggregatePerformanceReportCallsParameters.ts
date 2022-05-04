@@ -13,4 +13,5 @@ class AggregatePerformanceReportCallsParameters {
    */
   perPage?: number;
 }
+
 export default AggregatePerformanceReportCallsParameters;

@@ -7,4 +7,5 @@ class UnifiedPresenceMeeting {
    */
   status?: ('NoMeeting' | 'InMeeting');
 }
+
 export default UnifiedPresenceMeeting;

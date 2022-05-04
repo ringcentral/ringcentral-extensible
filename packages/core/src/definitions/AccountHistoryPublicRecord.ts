@@ -1,4 +1,6 @@
-import { AccountHistoryRecordPublicInitiator, AccountHistoryRecordTarget, AccountHistoryRecordPublicDetails } from './index';
+import AccountHistoryRecordPublicInitiator from './AccountHistoryRecordPublicInitiator';
+import AccountHistoryRecordTarget from './AccountHistoryRecordTarget';
+import AccountHistoryRecordPublicDetails from './AccountHistoryRecordPublicDetails';
 
 class AccountHistoryPublicRecord {
   /**
@@ -60,4 +62,5 @@ class AccountHistoryPublicRecord {
    */
   details?: AccountHistoryRecordPublicDetails;
 }
+
 export default AccountHistoryPublicRecord;

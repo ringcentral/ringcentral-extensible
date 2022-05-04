@@ -9,4 +9,5 @@ class FaxCoverPageInfo {
    */
   name?: string;
 }
+
 export default FaxCoverPageInfo;

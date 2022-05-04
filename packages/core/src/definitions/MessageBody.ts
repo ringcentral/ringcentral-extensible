@@ -1,6 +1,7 @@
-import {
-  MessageAttachmentInfo, ConversationInfo, MessageSenderInfo, MessageRecipientInfo,
-} from './index';
+import MessageAttachmentInfo from './MessageAttachmentInfo';
+import ConversationInfo from './ConversationInfo';
+import MessageSenderInfo from './MessageSenderInfo';
+import MessageRecipientInfo from './MessageRecipientInfo';
 
 class MessageBody {
   /**
@@ -120,4 +121,5 @@ class MessageBody {
    */
   vmTranscriptionStatus?: ('NotAvailable' | 'InProgress' | 'TimedOut' | 'Completed' | 'CompletedPartially' | 'Failed');
 }
+
 export default MessageBody;

@@ -18,4 +18,5 @@ class DeviceExtensionInfo {
    */
   extensionNumber?: string;
 }
+
 export default DeviceExtensionInfo;

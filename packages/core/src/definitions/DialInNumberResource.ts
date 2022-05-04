@@ -1,4 +1,4 @@
-import { MeetingsCountryResource } from './index';
+import MeetingsCountryResource from './MeetingsCountryResource';
 
 class DialInNumberResource {
   /**
@@ -17,4 +17,5 @@ class DialInNumberResource {
    */
   country?: MeetingsCountryResource;
 }
+
 export default DialInNumberResource;

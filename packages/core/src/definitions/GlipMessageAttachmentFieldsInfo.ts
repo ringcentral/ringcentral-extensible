@@ -15,4 +15,5 @@ class GlipMessageAttachmentFieldsInfo {
    */
   style?: ('Short' | 'Long');
 }
+
 export default GlipMessageAttachmentFieldsInfo;

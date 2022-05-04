@@ -17,4 +17,5 @@ class ListUserRolesParameters {
    */
   perPage?: string;
 }
+
 export default ListUserRolesParameters;

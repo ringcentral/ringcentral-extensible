@@ -14,4 +14,5 @@ class MessageSenderInfo {
    */
   name?: string;
 }
+
 export default MessageSenderInfo;

@@ -1,4 +1,4 @@
-import { GlipChatInfo } from './index';
+import GlipChatInfo from './GlipChatInfo';
 
 class GlipChatsListWithoutNavigation {
   /**
@@ -7,4 +7,5 @@ class GlipChatsListWithoutNavigation {
    */
   records?: GlipChatInfo[];
 }
+
 export default GlipChatsListWithoutNavigation;

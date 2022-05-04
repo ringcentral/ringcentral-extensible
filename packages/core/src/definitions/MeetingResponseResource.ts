@@ -1,6 +1,7 @@
-import {
-  MeetingLinks, MeetingScheduleResource, HostInfoRequest, RecurrenceInfo,
-} from './index';
+import MeetingLinks from './MeetingLinks';
+import MeetingScheduleResource from './MeetingScheduleResource';
+import HostInfoRequest from './HostInfoRequest';
+import RecurrenceInfo from './RecurrenceInfo';
 
 class MeetingResponseResource {
   /**
@@ -103,4 +104,5 @@ class MeetingResponseResource {
    */
   globalDialInCountries?: string[];
 }
+
 export default MeetingResponseResource;

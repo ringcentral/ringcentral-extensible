@@ -1,6 +1,12 @@
-import {
-  ContactInfo, CustomFieldInfo, ExtensionPermissions, ProfileImageInfo, ReferenceInfo, RegionalSettings, ExtensionServiceFeatureInfo, AutomaticLocationUpdatesSiteInfo, ExtensionStatusInfo,
-} from './index';
+import ContactInfo from './ContactInfo';
+import CustomFieldInfo from './CustomFieldInfo';
+import ExtensionPermissions from './ExtensionPermissions';
+import ProfileImageInfo from './ProfileImageInfo';
+import ReferenceInfo from './ReferenceInfo';
+import RegionalSettings from './RegionalSettings';
+import ExtensionServiceFeatureInfo from './ExtensionServiceFeatureInfo';
+import AutomaticLocationUpdatesSiteInfo from './AutomaticLocationUpdatesSiteInfo';
+import ExtensionStatusInfo from './ExtensionStatusInfo';
 
 class ExtensionCreationResponse {
   /**
@@ -87,4 +93,5 @@ class ExtensionCreationResponse {
    */
   hidden?: boolean;
 }
+
 export default ExtensionCreationResponse;

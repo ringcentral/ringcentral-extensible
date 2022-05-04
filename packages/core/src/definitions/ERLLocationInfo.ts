@@ -12,4 +12,5 @@ class ERLLocationInfo {
    */
   name?: string;
 }
+
 export default ERLLocationInfo;

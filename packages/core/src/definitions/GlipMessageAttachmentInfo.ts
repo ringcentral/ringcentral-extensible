@@ -1,4 +1,6 @@
-import { GlipMessageAttachmentAuthorInfo, GlipMessageAttachmentFieldsInfo, GlipMessageAttachmentFootnoteInfo } from './index';
+import GlipMessageAttachmentAuthorInfo from './GlipMessageAttachmentAuthorInfo';
+import GlipMessageAttachmentFieldsInfo from './GlipMessageAttachmentFieldsInfo';
+import GlipMessageAttachmentFootnoteInfo from './GlipMessageAttachmentFootnoteInfo';
 
 class GlipMessageAttachmentInfo {
   /**
@@ -112,4 +114,5 @@ class GlipMessageAttachmentInfo {
    */
   description?: string;
 }
+
 export default GlipMessageAttachmentInfo;

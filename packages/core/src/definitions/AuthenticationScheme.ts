@@ -19,4 +19,5 @@ class AuthenticationScheme {
    */
   primary?: boolean;
 }
+
 export default AuthenticationScheme;

@@ -4,4 +4,5 @@ class ExtensionTimezoneInfoRequest {
    */
   id?: string;
 }
+
 export default ExtensionTimezoneInfoRequest;

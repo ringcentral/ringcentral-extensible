@@ -32,4 +32,5 @@ class GetCountryInfoConferencing {
    */
   name?: string;
 }
+
 export default GetCountryInfoConferencing;

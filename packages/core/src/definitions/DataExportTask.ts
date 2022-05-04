@@ -1,4 +1,6 @@
-import { CreatorInfo, SpecificInfo, ExportTaskResultInfo } from './index';
+import CreatorInfo from './CreatorInfo';
+import SpecificInfo from './SpecificInfo';
+import ExportTaskResultInfo from './ExportTaskResultInfo';
 
 class DataExportTask {
   /**
@@ -39,4 +41,5 @@ class DataExportTask {
    */
   datasets?: ExportTaskResultInfo[];
 }
+
 export default DataExportTask;

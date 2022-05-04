@@ -47,4 +47,5 @@ class NotificationDeliveryMode {
    */
   registrationId?: string;
 }
+
 export default NotificationDeliveryMode;

@@ -31,4 +31,5 @@ class PhoneNumberResource {
    */
   primary?: boolean;
 }
+
 export default PhoneNumberResource;

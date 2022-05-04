@@ -1,4 +1,4 @@
-import { ConferencePhoneNumberInfo } from './index';
+import ConferencePhoneNumberInfo from './ConferencePhoneNumberInfo';
 
 class UpdateConferencingInfoRequest {
   /**
@@ -11,4 +11,5 @@ class UpdateConferencingInfoRequest {
    */
   allowJoinBeforeHost?: boolean;
 }
+
 export default UpdateConferencingInfoRequest;

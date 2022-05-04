@@ -1,4 +1,4 @@
-import { ReplyWithPattern } from './index';
+import ReplyWithPattern from './ReplyWithPattern';
 
 class CallPartyReply {
   /**
@@ -10,4 +10,5 @@ class CallPartyReply {
    */
   replyWithPattern?: ReplyWithPattern;
 }
+
 export default CallPartyReply;

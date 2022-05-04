@@ -9,4 +9,5 @@ class PerformanceCallsTimeInterval {
    */
   to?: string;
 }
+
 export default PerformanceCallsTimeInterval;

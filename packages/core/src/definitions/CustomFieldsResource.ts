@@ -1,8 +1,9 @@
-import { CustomFieldResource } from './index';
+import CustomFieldResource from './CustomFieldResource';
 
 class CustomFieldsResource {
   /**
    */
   records?: CustomFieldResource[];
 }
+
 export default CustomFieldsResource;

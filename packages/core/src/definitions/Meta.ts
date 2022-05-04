@@ -21,4 +21,5 @@ class Meta {
    */
   resourceType?: ('User' | 'Group');
 }
+
 export default Meta;

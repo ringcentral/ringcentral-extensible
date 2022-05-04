@@ -18,4 +18,5 @@ class AddBlockedAllowedPhoneNumber {
    */
   status?: ('Blocked' | 'Allowed');
 }
+
 export default AddBlockedAllowedPhoneNumber;

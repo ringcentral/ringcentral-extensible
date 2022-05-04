@@ -1,4 +1,4 @@
-import { IVRMenuExtensionInfo } from './index';
+import IVRMenuExtensionInfo from './IVRMenuExtensionInfo';
 
 class IVRMenuActionsInfo {
   /**
@@ -20,4 +20,5 @@ class IVRMenuActionsInfo {
    */
   phoneNumber?: string;
 }
+
 export default IVRMenuActionsInfo;

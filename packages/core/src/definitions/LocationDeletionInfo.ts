@@ -1,4 +1,4 @@
-import { LocationDeletionErrorInfo } from './index';
+import LocationDeletionErrorInfo from './LocationDeletionErrorInfo';
 
 class LocationDeletionInfo {
   /**
@@ -18,4 +18,5 @@ class LocationDeletionInfo {
    */
   errors?: LocationDeletionErrorInfo;
 }
+
 export default LocationDeletionInfo;

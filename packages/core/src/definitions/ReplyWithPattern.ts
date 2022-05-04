@@ -17,4 +17,5 @@ class ReplyWithPattern {
    */
   timeUnit?: ('Minute' | 'Hour' | 'Day');
 }
+
 export default ReplyWithPattern;

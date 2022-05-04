@@ -1,4 +1,4 @@
-import { AlertInfo } from './index';
+import AlertInfo from './AlertInfo';
 
 /**
  * Information on a notification
@@ -28,4 +28,5 @@ class NotificationInfo {
    */
   category?: string;
 }
+
 export default NotificationInfo;

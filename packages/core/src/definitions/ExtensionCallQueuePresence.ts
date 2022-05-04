@@ -1,4 +1,4 @@
-import { PresenceCallQueueInfo } from './index';
+import PresenceCallQueueInfo from './PresenceCallQueueInfo';
 
 class ExtensionCallQueuePresence {
   /**
@@ -10,4 +10,5 @@ class ExtensionCallQueuePresence {
    */
   acceptCalls?: boolean;
 }
+
 export default ExtensionCallQueuePresence;

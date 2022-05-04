@@ -1,4 +1,5 @@
-import { AddressBookBulkContactResource, ErrorEntity } from './index';
+import AddressBookBulkContactResource from './AddressBookBulkContactResource';
+import ErrorEntity from './ErrorEntity';
 
 /**
  * Result record on adding multiple contacts to an extension. Returned for completed tasks
@@ -22,4 +23,5 @@ class AddressBookBulkUploadTaskResult {
    */
   errors?: ErrorEntity[];
 }
+
 export default AddressBookBulkUploadTaskResult;

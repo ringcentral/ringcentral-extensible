@@ -49,4 +49,5 @@ class GetCountryInfoDictionaryResponse {
    */
   freeSoftphoneLine?: boolean;
 }
+
 export default GetCountryInfoDictionaryResponse;

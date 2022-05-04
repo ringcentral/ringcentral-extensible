@@ -7,4 +7,5 @@ class AssistedUserResource {
    */
   name?: string;
 }
+
 export default AssistedUserResource;

@@ -1,4 +1,5 @@
-import { CallPartyInfo, CallSessionStatusInfo } from './index';
+import CallPartyInfo from './CallPartyInfo';
+import CallSessionStatusInfo from './CallSessionStatusInfo';
 
 class TelephonySessionsEventPartyInfo {
   /**
@@ -29,4 +30,5 @@ class TelephonySessionsEventPartyInfo {
    */
   status?: CallSessionStatusInfo;
 }
+
 export default TelephonySessionsEventPartyInfo;

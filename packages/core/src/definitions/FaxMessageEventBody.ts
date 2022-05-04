@@ -1,4 +1,6 @@
-import { NotificationRecipientInfo, SenderInfo, FaxMessageAttachment } from './index';
+import NotificationRecipientInfo from './NotificationRecipientInfo';
+import SenderInfo from './SenderInfo';
+import FaxMessageAttachment from './FaxMessageAttachment';
 
 /**
  * Notification payload body
@@ -86,4 +88,5 @@ class FaxMessageEventBody {
    */
   faxPageCount?: number;
 }
+
 export default FaxMessageEventBody;

@@ -17,4 +17,5 @@ class RingOutStatusInfo {
    */
   calleeStatus?: ('Invalid' | 'Success' | 'InProgress' | 'Busy' | 'NoAnswer' | 'Rejected' | 'GenericError' | 'Finished' | 'InternationalDisabled' | 'DestinationBlocked' | 'NotEnoughFunds' | 'NoSuchUser');
 }
+
 export default RingOutStatusInfo;

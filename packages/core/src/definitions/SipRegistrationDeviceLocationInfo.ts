@@ -12,4 +12,5 @@ class SipRegistrationDeviceLocationInfo {
    */
   name?: string;
 }
+
 export default SipRegistrationDeviceLocationInfo;

@@ -14,4 +14,5 @@ class ListGlipConversationsParameters {
    */
   pageToken?: string;
 }
+
 export default ListGlipConversationsParameters;

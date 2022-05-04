@@ -7,4 +7,5 @@ class ReadConferencingSettingsParameters {
    */
   countryId?: string;
 }
+
 export default ReadConferencingSettingsParameters;

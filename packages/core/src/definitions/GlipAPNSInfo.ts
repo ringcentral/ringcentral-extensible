@@ -1,4 +1,5 @@
-import { GlipAPSInfo, GlipUnreadMessageCountInfo } from './index';
+import GlipAPSInfo from './GlipAPSInfo';
+import GlipUnreadMessageCountInfo from './GlipUnreadMessageCountInfo';
 
 /**
  * Apple notification data
@@ -33,4 +34,5 @@ class GlipAPNSInfo {
    */
   body?: GlipUnreadMessageCountInfo;
 }
+
 export default GlipAPNSInfo;

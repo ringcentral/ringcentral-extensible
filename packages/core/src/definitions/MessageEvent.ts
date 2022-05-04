@@ -1,4 +1,4 @@
-import { MessageEventBody } from './index';
+import MessageEventBody from './MessageEventBody';
 
 class MessageEvent {
   /**
@@ -25,4 +25,5 @@ class MessageEvent {
    */
   body?: MessageEventBody;
 }
+
 export default MessageEvent;

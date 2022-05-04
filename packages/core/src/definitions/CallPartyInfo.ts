@@ -14,4 +14,5 @@ class CallPartyInfo {
    */
   extensionId?: string;
 }
+
 export default CallPartyInfo;

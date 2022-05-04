@@ -1,4 +1,4 @@
-import { AdaptiveCardColumnInfo } from './index';
+import AdaptiveCardColumnInfo from './AdaptiveCardColumnInfo';
 
 class AdaptiveCardInfoRequestItem {
   /**
@@ -21,4 +21,5 @@ class AdaptiveCardInfoRequestItem {
    */
   columns?: AdaptiveCardColumnInfo[];
 }
+
 export default AdaptiveCardInfoRequestItem;

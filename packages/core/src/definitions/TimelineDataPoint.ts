@@ -1,4 +1,5 @@
-import { PerformanceCallsTimers, PerformanceCallsCounters } from './index';
+import PerformanceCallsTimers from './PerformanceCallsTimers';
+import PerformanceCallsCounters from './PerformanceCallsCounters';
 
 class TimelineDataPoint {
   /**
@@ -15,4 +16,5 @@ class TimelineDataPoint {
    */
   counters?: PerformanceCallsCounters;
 }
+
 export default TimelineDataPoint;

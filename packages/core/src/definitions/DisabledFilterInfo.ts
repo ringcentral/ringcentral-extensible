@@ -14,4 +14,5 @@ class DisabledFilterInfo {
    */
   message?: string;
 }
+
 export default DisabledFilterInfo;

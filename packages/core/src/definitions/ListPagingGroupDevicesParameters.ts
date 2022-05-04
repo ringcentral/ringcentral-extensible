@@ -14,4 +14,5 @@ class ListPagingGroupDevicesParameters {
    */
   perPage?: number;
 }
+
 export default ListPagingGroupDevicesParameters;

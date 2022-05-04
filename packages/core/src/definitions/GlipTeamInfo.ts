@@ -41,4 +41,5 @@ class GlipTeamInfo {
    */
   lastModifiedTime?: string;
 }
+
 export default GlipTeamInfo;

@@ -1,4 +1,6 @@
-import { GetCountryInfoDictionaryResponse, ProvisioningNavigationInfo, ProvisioningPagingInfo } from './index';
+import GetCountryInfoDictionaryResponse from './GetCountryInfoDictionaryResponse';
+import ProvisioningNavigationInfo from './ProvisioningNavigationInfo';
+import ProvisioningPagingInfo from './ProvisioningPagingInfo';
 
 class GetCountryListResponse {
   /**
@@ -22,4 +24,5 @@ class GetCountryListResponse {
    */
   paging?: ProvisioningPagingInfo;
 }
+
 export default GetCountryListResponse;

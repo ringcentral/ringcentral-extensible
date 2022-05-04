@@ -1,4 +1,4 @@
-import { SiteResource } from './index';
+import SiteResource from './SiteResource';
 
 /**
  * Call queue member information
@@ -23,4 +23,5 @@ class CallQueueMember {
    */
   site?: SiteResource;
 }
+
 export default CallQueueMember;

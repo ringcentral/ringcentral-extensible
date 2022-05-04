@@ -18,4 +18,5 @@ class GlipMessageAttachmentFootnoteInfo {
    */
   time?: string;
 }
+
 export default GlipMessageAttachmentFootnoteInfo;

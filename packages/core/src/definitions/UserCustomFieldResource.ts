@@ -7,4 +7,5 @@ class UserCustomFieldResource {
    */
   value?: string;
 }
+
 export default UserCustomFieldResource;

@@ -8,4 +8,5 @@ class CreateCustomUserGreetingParameters {
    */
   apply?: boolean;
 }
+
 export default CreateCustomUserGreetingParameters;

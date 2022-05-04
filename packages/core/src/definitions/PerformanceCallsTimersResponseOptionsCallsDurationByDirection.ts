@@ -7,4 +7,5 @@ class PerformanceCallsTimersResponseOptionsCallsDurationByDirection {
    */
   aggregationInterval?: ('Hour' | 'Day' | 'Week' | 'Month');
 }
+
 export default PerformanceCallsTimersResponseOptionsCallsDurationByDirection;

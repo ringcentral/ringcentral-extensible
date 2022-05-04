@@ -24,4 +24,5 @@ class AssignedRoleResource {
    */
   siteRestricted?: boolean;
 }
+
 export default AssignedRoleResource;

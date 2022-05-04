@@ -15,4 +15,5 @@ class OutboundProxyInfo {
    */
   proxyTLS?: string;
 }
+
 export default OutboundProxyInfo;

@@ -32,4 +32,5 @@ class MessagingPagingInfo {
    */
   totalElements?: number;
 }
+
 export default MessagingPagingInfo;

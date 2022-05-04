@@ -1,4 +1,4 @@
-import { GlipMemberInfo } from './index';
+import GlipMemberInfo from './GlipMemberInfo';
 
 class GlipChatInfo {
   /**
@@ -47,4 +47,5 @@ class GlipChatInfo {
    */
   members?: GlipMemberInfo[];
 }
+
 export default GlipChatInfo;

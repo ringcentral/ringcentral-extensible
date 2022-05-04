@@ -10,4 +10,5 @@ class ReadUserFeaturesParameters {
    */
   featureId?: string[];
 }
+
 export default ReadUserFeaturesParameters;

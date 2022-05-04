@@ -14,4 +14,5 @@ class GlipMentionsInfo {
    */
   name?: string;
 }
+
 export default GlipMentionsInfo;

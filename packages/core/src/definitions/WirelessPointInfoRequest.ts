@@ -1,4 +1,5 @@
-import { AutomaticLocationUpdatesSiteInfo, LocationUpdatesEmergencyAddressInfoRequest } from './index';
+import AutomaticLocationUpdatesSiteInfo from './AutomaticLocationUpdatesSiteInfo';
+import LocationUpdatesEmergencyAddressInfoRequest from './LocationUpdatesEmergencyAddressInfoRequest';
 
 class WirelessPointInfoRequest {
   /**
@@ -29,4 +30,5 @@ class WirelessPointInfoRequest {
    */
   emergencyLocationId?: string;
 }
+
 export default WirelessPointInfoRequest;

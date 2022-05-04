@@ -1,6 +1,8 @@
-import {
-  CallStatusInfo, ParkInfo, PartyInfo, OwnerInfo, RecordingInfo,
-} from './index';
+import CallStatusInfo from './CallStatusInfo';
+import ParkInfo from './ParkInfo';
+import PartyInfo from './PartyInfo';
+import OwnerInfo from './OwnerInfo';
+import RecordingInfo from './RecordingInfo';
 
 /**
  * Information on a party of a call session
@@ -66,4 +68,5 @@ class CallParty {
    */
   recordings?: RecordingInfo[];
 }
+
 export default CallParty;

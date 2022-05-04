@@ -40,4 +40,5 @@ class RolesCountryResource {
    */
   signupAllowed?: boolean;
 }
+
 export default RolesCountryResource;

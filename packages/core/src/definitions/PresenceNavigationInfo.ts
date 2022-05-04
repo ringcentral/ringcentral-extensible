@@ -1,4 +1,4 @@
-import { PresenceNavigationInfoURI } from './index';
+import PresenceNavigationInfoURI from './PresenceNavigationInfoURI';
 
 /**
  * Information on navigation
@@ -20,4 +20,5 @@ class PresenceNavigationInfo {
    */
   lastPage?: PresenceNavigationInfoURI;
 }
+
 export default PresenceNavigationInfo;

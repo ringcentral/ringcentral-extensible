@@ -1,6 +1,10 @@
-import {
-  ModelInfo, ExtensionInfoIntId, EmergencyServiceAddressResource, DeviceEmergencyInfo, PhoneLinesInfo, ShippingInfo, DeviceSiteInfo,
-} from './index';
+import ModelInfo from './ModelInfo';
+import ExtensionInfoIntId from './ExtensionInfoIntId';
+import EmergencyServiceAddressResource from './EmergencyServiceAddressResource';
+import DeviceEmergencyInfo from './DeviceEmergencyInfo';
+import PhoneLinesInfo from './PhoneLinesInfo';
+import ShippingInfo from './ShippingInfo';
+import DeviceSiteInfo from './DeviceSiteInfo';
 
 class ExtensionDeviceResponse {
   /**
@@ -99,4 +103,5 @@ class ExtensionDeviceResponse {
    */
   lastLocationReportTime?: string;
 }
+
 export default ExtensionDeviceResponse;

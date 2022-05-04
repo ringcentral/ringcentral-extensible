@@ -34,4 +34,5 @@ class ListChatNotesParameters {
    */
   recordCount?: number;
 }
+
 export default ListChatNotesParameters;

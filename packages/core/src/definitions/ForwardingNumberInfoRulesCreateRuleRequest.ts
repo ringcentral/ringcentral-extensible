@@ -24,4 +24,5 @@ class ForwardingNumberInfoRulesCreateRuleRequest {
    */
   label?: string;
 }
+
 export default ForwardingNumberInfoRulesCreateRuleRequest;

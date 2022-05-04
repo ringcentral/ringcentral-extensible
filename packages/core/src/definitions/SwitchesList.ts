@@ -1,4 +1,6 @@
-import { SwitchInfo, ProvisioningNavigationInfo, ProvisioningPagingInfo } from './index';
+import SwitchInfo from './SwitchInfo';
+import ProvisioningNavigationInfo from './ProvisioningNavigationInfo';
+import ProvisioningPagingInfo from './ProvisioningPagingInfo';
 
 class SwitchesList {
   /**
@@ -19,4 +21,5 @@ class SwitchesList {
    */
   paging?: ProvisioningPagingInfo;
 }
+
 export default SwitchesList;

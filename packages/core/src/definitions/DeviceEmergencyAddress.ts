@@ -64,4 +64,5 @@ class DeviceEmergencyAddress {
    */
   countryName?: string;
 }
+
 export default DeviceEmergencyAddress;

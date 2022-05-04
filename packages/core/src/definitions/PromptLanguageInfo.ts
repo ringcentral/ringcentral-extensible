@@ -22,4 +22,5 @@ class PromptLanguageInfo {
    */
   localeCode?: string;
 }
+
 export default PromptLanguageInfo;

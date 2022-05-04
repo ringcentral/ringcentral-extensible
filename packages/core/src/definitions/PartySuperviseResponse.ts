@@ -1,4 +1,6 @@
-import { PartyInfo, OwnerInfo, CallStatusInfo } from './index';
+import PartyInfo from './PartyInfo';
+import OwnerInfo from './OwnerInfo';
+import CallStatusInfo from './CallStatusInfo';
 
 class PartySuperviseResponse {
   /**
@@ -47,4 +49,5 @@ class PartySuperviseResponse {
    */
   status?: CallStatusInfo;
 }
+
 export default PartySuperviseResponse;

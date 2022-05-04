@@ -22,4 +22,5 @@ class AutomaticLocationUpdatesSiteInfo {
    */
   code?: string;
 }
+
 export default AutomaticLocationUpdatesSiteInfo;

@@ -4,4 +4,5 @@ class AutomaticLocationUpdatesSiteInfoRequest {
    */
   id?: string;
 }
+
 export default AutomaticLocationUpdatesSiteInfoRequest;

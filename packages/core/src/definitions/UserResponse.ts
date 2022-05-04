@@ -1,6 +1,10 @@
-import {
-  UserAddress, Email, Name, PhoneNumber, Photo, EnterpriseUser, Meta,
-} from './index';
+import UserAddress from './UserAddress';
+import Email from './Email';
+import Name from './Name';
+import PhoneNumber from './PhoneNumber';
+import Photo from './Photo';
+import EnterpriseUser from './EnterpriseUser';
+import Meta from './Meta';
 
 class UserResponse {
   /**
@@ -59,4 +63,5 @@ class UserResponse {
    */
   meta?: Meta;
 }
+
 export default UserResponse;

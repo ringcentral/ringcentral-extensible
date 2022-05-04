@@ -20,4 +20,5 @@ class RolesTimezoneResource {
    */
   bias?: string;
 }
+
 export default RolesTimezoneResource;

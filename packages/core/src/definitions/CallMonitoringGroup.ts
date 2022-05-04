@@ -14,4 +14,5 @@ class CallMonitoringGroup {
    */
   name?: string;
 }
+
 export default CallMonitoringGroup;

@@ -24,4 +24,5 @@ class NotificationRecipientInfo {
    */
   name?: string;
 }
+
 export default NotificationRecipientInfo;

@@ -1,4 +1,6 @@
-import { BasicExtensionInfoResource, RolesRegionalSettingsResource, ContactAddressInfoResource } from './index';
+import BasicExtensionInfoResource from './BasicExtensionInfoResource';
+import RolesRegionalSettingsResource from './RolesRegionalSettingsResource';
+import ContactAddressInfoResource from './ContactAddressInfoResource';
 
 class RolesBusinessSiteResource {
   /**
@@ -38,4 +40,5 @@ class RolesBusinessSiteResource {
    */
   businessAddress?: ContactAddressInfoResource;
 }
+
 export default RolesBusinessSiteResource;

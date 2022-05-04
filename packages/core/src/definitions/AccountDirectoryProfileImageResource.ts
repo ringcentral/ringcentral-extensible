@@ -7,4 +7,5 @@ class AccountDirectoryProfileImageResource {
    */
   uri?: string;
 }
+
 export default AccountDirectoryProfileImageResource;

@@ -1,4 +1,4 @@
-import { InstantMessageEventBody } from './index';
+import InstantMessageEventBody from './InstantMessageEventBody';
 
 class InstantMessageEvent {
   /**
@@ -25,4 +25,5 @@ class InstantMessageEvent {
    */
   body?: InstantMessageEventBody;
 }
+
 export default InstantMessageEvent;

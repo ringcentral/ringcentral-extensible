@@ -1,4 +1,4 @@
-import { AccountHistoryPublicRecord } from './index';
+import AccountHistoryPublicRecord from './AccountHistoryPublicRecord';
 
 class AccountHistorySearchPublicResponse {
   /**
@@ -6,4 +6,5 @@ class AccountHistorySearchPublicResponse {
    */
   records?: AccountHistoryPublicRecord[];
 }
+
 export default AccountHistorySearchPublicResponse;

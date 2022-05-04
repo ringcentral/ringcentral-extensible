@@ -1,4 +1,4 @@
-import { DevicePhoneNumberCountryInfo } from './index';
+import DevicePhoneNumberCountryInfo from './DevicePhoneNumberCountryInfo';
 
 /**
  * Phone number information
@@ -33,4 +33,5 @@ class DevicePhoneNumberInfo {
    */
   type?: ('VoiceFax' | 'FaxOnly' | 'VoiceOnly');
 }
+
 export default DevicePhoneNumberInfo;

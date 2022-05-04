@@ -19,4 +19,5 @@ class UpdateForwardingNumberRequest {
    */
   type?: ('Home' | 'Mobile' | 'Work' | 'PhoneLine' | 'Outage' | 'Other' | 'BusinessMobilePhone' | 'ExternalCarrier');
 }
+
 export default UpdateForwardingNumberRequest;

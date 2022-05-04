@@ -32,4 +32,5 @@ class ProvisioningPagingInfo {
    */
   totalElements?: number;
 }
+
 export default ProvisioningPagingInfo;

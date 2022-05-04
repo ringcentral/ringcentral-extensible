@@ -17,4 +17,5 @@ class ForwardTarget {
    */
   extensionNumber?: string;
 }
+
 export default ForwardTarget;

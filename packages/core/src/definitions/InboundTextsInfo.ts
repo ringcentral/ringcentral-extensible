@@ -19,4 +19,5 @@ class InboundTextsInfo {
    */
   advancedSmsEmailAddresses?: string[];
 }
+
 export default InboundTextsInfo;

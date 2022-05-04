@@ -17,4 +17,5 @@ class CallQueuePresenceEventBody {
    */
   acceptCalls?: boolean;
 }
+
 export default CallQueuePresenceEventBody;

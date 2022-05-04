@@ -14,4 +14,5 @@ class ListTimezonesParameters {
    */
   perPage?: string;
 }
+
 export default ListTimezonesParameters;

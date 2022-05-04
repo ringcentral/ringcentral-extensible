@@ -1,6 +1,7 @@
-import {
-  RolesTimezoneResource, RolesCountryResource, RolesLanguageResource, CurrencyResource,
-} from './index';
+import RolesTimezoneResource from './RolesTimezoneResource';
+import RolesCountryResource from './RolesCountryResource';
+import RolesLanguageResource from './RolesLanguageResource';
+import CurrencyResource from './CurrencyResource';
 
 class RolesRegionalSettingsResource {
   /**
@@ -31,4 +32,5 @@ class RolesRegionalSettingsResource {
    */
   currency?: CurrencyResource;
 }
+
 export default RolesRegionalSettingsResource;

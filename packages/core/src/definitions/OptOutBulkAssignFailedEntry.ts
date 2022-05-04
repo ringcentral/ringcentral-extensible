@@ -14,4 +14,5 @@ class OptOutBulkAssignFailedEntry {
    */
   errorMessage?: string;
 }
+
 export default OptOutBulkAssignFailedEntry;

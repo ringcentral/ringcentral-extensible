@@ -1,4 +1,4 @@
-import { CompanyAnsweringRuleTimeIntervalRequest } from './index';
+import CompanyAnsweringRuleTimeIntervalRequest from './CompanyAnsweringRuleTimeIntervalRequest';
 
 /**
  * Weekly schedule. If specified, ranges cannot be specified
@@ -39,4 +39,5 @@ class CompanyAnsweringRuleWeeklyScheduleInfoRequest {
    */
   sunday?: CompanyAnsweringRuleTimeIntervalRequest[];
 }
+
 export default CompanyAnsweringRuleWeeklyScheduleInfoRequest;

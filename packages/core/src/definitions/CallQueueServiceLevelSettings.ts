@@ -22,4 +22,5 @@ class CallQueueServiceLevelSettings {
    */
   abandonedThresholdSeconds?: number;
 }
+
 export default CallQueueServiceLevelSettings;

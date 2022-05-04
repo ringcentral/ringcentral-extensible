@@ -40,4 +40,5 @@ class MeetingExternalUserInfoResource {
    */
   usePmiForInstantMeetings?: boolean;
 }
+
 export default MeetingExternalUserInfoResource;

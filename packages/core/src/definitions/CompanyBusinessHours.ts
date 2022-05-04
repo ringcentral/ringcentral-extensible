@@ -1,4 +1,4 @@
-import { CompanyBusinessHoursScheduleInfo } from './index';
+import CompanyBusinessHoursScheduleInfo from './CompanyBusinessHoursScheduleInfo';
 
 class CompanyBusinessHours {
   /**
@@ -10,4 +10,5 @@ class CompanyBusinessHours {
    */
   schedule?: CompanyBusinessHoursScheduleInfo;
 }
+
 export default CompanyBusinessHours;

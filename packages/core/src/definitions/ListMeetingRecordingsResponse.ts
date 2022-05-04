@@ -1,4 +1,6 @@
-import { MeetingRecording, MeetingRecordingsPagingInfo, MeetingRecordingsNavigationInfo } from './index';
+import MeetingRecording from './MeetingRecording';
+import MeetingRecordingsPagingInfo from './MeetingRecordingsPagingInfo';
+import MeetingRecordingsNavigationInfo from './MeetingRecordingsNavigationInfo';
 
 class ListMeetingRecordingsResponse {
   /**
@@ -13,4 +15,5 @@ class ListMeetingRecordingsResponse {
    */
   navigation?: MeetingRecordingsNavigationInfo;
 }
+
 export default ListMeetingRecordingsResponse;

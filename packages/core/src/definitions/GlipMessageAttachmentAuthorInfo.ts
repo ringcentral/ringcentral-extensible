@@ -17,4 +17,5 @@ class GlipMessageAttachmentAuthorInfo {
    */
   iconUri?: string;
 }
+
 export default GlipMessageAttachmentAuthorInfo;

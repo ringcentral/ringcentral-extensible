@@ -13,4 +13,5 @@ class PerformanceCallsTimeRange {
    */
   timeTo?: string;
 }
+
 export default PerformanceCallsTimeRange;

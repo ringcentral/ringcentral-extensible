@@ -1,6 +1,8 @@
-import {
-  CompanyAnsweringRuleCallersInfoRequest, CompanyAnsweringRuleCalledNumberInfoRequest, CompanyAnsweringRuleScheduleInfo, CompanyAnsweringRuleExtensionInfoRequest, GreetingInfo,
-} from './index';
+import CompanyAnsweringRuleCallersInfoRequest from './CompanyAnsweringRuleCallersInfoRequest';
+import CompanyAnsweringRuleCalledNumberInfoRequest from './CompanyAnsweringRuleCalledNumberInfoRequest';
+import CompanyAnsweringRuleScheduleInfo from './CompanyAnsweringRuleScheduleInfo';
+import CompanyAnsweringRuleExtensionInfoRequest from './CompanyAnsweringRuleExtensionInfoRequest';
+import GreetingInfo from './GreetingInfo';
 
 class CompanyAnsweringRuleInfo {
   /**
@@ -58,4 +60,5 @@ class CompanyAnsweringRuleInfo {
    */
   greetings?: GreetingInfo[];
 }
+
 export default CompanyAnsweringRuleInfo;

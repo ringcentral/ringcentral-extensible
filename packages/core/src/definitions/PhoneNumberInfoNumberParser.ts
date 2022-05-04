@@ -1,4 +1,4 @@
-import { GetCountryInfoNumberParser } from './index';
+import GetCountryInfoNumberParser from './GetCountryInfoNumberParser';
 
 class PhoneNumberInfoNumberParser {
   /**
@@ -65,4 +65,5 @@ class PhoneNumberInfoNumberParser {
    */
   dtmfPostfix?: string;
 }
+
 export default PhoneNumberInfoNumberParser;

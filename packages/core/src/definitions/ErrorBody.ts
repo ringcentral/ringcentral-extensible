@@ -9,4 +9,5 @@ class ErrorBody {
    */
   message?: string;
 }
+
 export default ErrorBody;

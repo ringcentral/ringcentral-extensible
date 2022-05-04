@@ -53,4 +53,5 @@ class AccountPresenceEventBody {
    */
   ownerId?: string;
 }
+
 export default AccountPresenceEventBody;

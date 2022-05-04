@@ -1,6 +1,9 @@
-import {
-  UserAddress, Email, Name, PhoneNumber, Photo, EnterpriseUser,
-} from './index';
+import UserAddress from './UserAddress';
+import Email from './Email';
+import Name from './Name';
+import PhoneNumber from './PhoneNumber';
+import Photo from './Photo';
+import EnterpriseUser from './EnterpriseUser';
 
 class CreateUser {
   /**
@@ -50,4 +53,5 @@ class CreateUser {
    */
   userName?: string;
 }
+
 export default CreateUser;

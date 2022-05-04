@@ -1,4 +1,4 @@
-import { CallsByResponse } from './index';
+import CallsByResponse from './CallsByResponse';
 
 class PerformanceCallsByResponse {
   /**
@@ -11,4 +11,5 @@ class PerformanceCallsByResponse {
    */
   values?: CallsByResponse;
 }
+
 export default PerformanceCallsByResponse;

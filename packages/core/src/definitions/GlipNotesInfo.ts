@@ -1,4 +1,5 @@
-import { GlipNoteInfo, GlipNavigationInfo } from './index';
+import GlipNoteInfo from './GlipNoteInfo';
+import GlipNavigationInfo from './GlipNavigationInfo';
 
 class GlipNotesInfo {
   /**
@@ -9,4 +10,5 @@ class GlipNotesInfo {
    */
   navigation?: GlipNavigationInfo;
 }
+
 export default GlipNotesInfo;

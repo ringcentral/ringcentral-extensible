@@ -1,4 +1,5 @@
-import { OriginInfo, TelephonySessionsEventPartyInfo } from './index';
+import OriginInfo from './OriginInfo';
+import TelephonySessionsEventPartyInfo from './TelephonySessionsEventPartyInfo';
 
 /**
  * Notification payload body
@@ -38,4 +39,5 @@ class TelephonySessionsEventBody {
    */
   parties?: TelephonySessionsEventPartyInfo[];
 }
+
 export default TelephonySessionsEventBody;

@@ -1,4 +1,4 @@
-import { ExtensionFavoritesEventBody } from './index';
+import ExtensionFavoritesEventBody from './ExtensionFavoritesEventBody';
 
 class ExtensionFavoritesEvent {
   /**
@@ -25,4 +25,5 @@ class ExtensionFavoritesEvent {
    */
   body?: ExtensionFavoritesEventBody;
 }
+
 export default ExtensionFavoritesEvent;

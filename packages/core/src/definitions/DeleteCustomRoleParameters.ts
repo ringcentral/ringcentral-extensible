@@ -7,4 +7,5 @@ class DeleteCustomRoleParameters {
    */
   validateOnly?: boolean;
 }
+
 export default DeleteCustomRoleParameters;

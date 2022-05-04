@@ -76,4 +76,5 @@ class MessageDetailsResponse {
    */
   errorCode?: string;
 }
+
 export default MessageDetailsResponse;

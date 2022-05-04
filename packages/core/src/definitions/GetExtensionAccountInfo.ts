@@ -12,4 +12,5 @@ class GetExtensionAccountInfo {
    */
   uri?: string;
 }
+
 export default GetExtensionAccountInfo;

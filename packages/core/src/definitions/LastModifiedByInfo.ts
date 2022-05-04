@@ -7,4 +7,5 @@ class LastModifiedByInfo {
    */
   id?: string;
 }
+
 export default LastModifiedByInfo;

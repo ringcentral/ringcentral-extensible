@@ -1,4 +1,4 @@
-import { CreateGlipMember } from './index';
+import CreateGlipMember from './CreateGlipMember';
 
 class CreateGlipConversationRequest {
   /**
@@ -7,4 +7,5 @@ class CreateGlipConversationRequest {
    */
   members?: CreateGlipMember[];
 }
+
 export default CreateGlipConversationRequest;

@@ -18,4 +18,5 @@ class SyncInfoCallLog {
    */
   syncTime?: string;
 }
+
 export default SyncInfoCallLog;

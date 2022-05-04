@@ -1,4 +1,5 @@
-import { GetMessageInfoResponse, SyncInfoMessages } from './index';
+import GetMessageInfoResponse from './GetMessageInfoResponse';
+import SyncInfoMessages from './SyncInfoMessages';
 
 class GetMessageSyncResponse {
   /**
@@ -17,4 +18,5 @@ class GetMessageSyncResponse {
    */
   syncInfo?: SyncInfoMessages;
 }
+
 export default GetMessageSyncResponse;

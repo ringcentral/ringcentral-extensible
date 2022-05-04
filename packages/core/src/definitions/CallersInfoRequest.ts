@@ -9,4 +9,5 @@ class CallersInfoRequest {
    */
   name?: string;
 }
+
 export default CallersInfoRequest;

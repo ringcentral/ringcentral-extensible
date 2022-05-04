@@ -22,4 +22,5 @@ class CallLogRecordingInfo {
    */
   contentUri?: string;
 }
+
 export default CallLogRecordingInfo;

@@ -17,4 +17,5 @@ class IVRMenuExtensionInfo {
    */
   name?: string;
 }
+
 export default IVRMenuExtensionInfo;

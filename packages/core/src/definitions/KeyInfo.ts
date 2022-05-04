@@ -10,4 +10,5 @@ class KeyInfo {
    */
   name?: string;
 }
+
 export default KeyInfo;

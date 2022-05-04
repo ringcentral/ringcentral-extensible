@@ -9,4 +9,5 @@ class EmergencyAddress {
    */
   localOnly?: boolean;
 }
+
 export default EmergencyAddress;

@@ -1,4 +1,4 @@
-import { UserAnsweringRuleListNavigationPage } from './index';
+import UserAnsweringRuleListNavigationPage from './UserAnsweringRuleListNavigationPage';
 
 class UserAnsweringRuleListNavigation {
   /**
@@ -17,4 +17,5 @@ class UserAnsweringRuleListNavigation {
    */
   lastPage?: UserAnsweringRuleListNavigationPage;
 }
+
 export default UserAnsweringRuleListNavigation;

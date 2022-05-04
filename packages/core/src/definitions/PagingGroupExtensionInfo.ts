@@ -19,4 +19,5 @@ class PagingGroupExtensionInfo {
    */
   name?: string;
 }
+
 export default PagingGroupExtensionInfo;

@@ -1,4 +1,5 @@
-import { DevicePhoneLinesEmergencyAddressInfo, DevicePhoneNumberInfo } from './index';
+import DevicePhoneLinesEmergencyAddressInfo from './DevicePhoneLinesEmergencyAddressInfo';
+import DevicePhoneNumberInfo from './DevicePhoneNumberInfo';
 
 class DevicePhoneLinesInfo {
   /**
@@ -19,4 +20,5 @@ class DevicePhoneLinesInfo {
    */
   phoneInfo?: DevicePhoneNumberInfo;
 }
+
 export default DevicePhoneLinesInfo;

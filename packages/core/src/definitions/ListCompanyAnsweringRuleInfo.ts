@@ -1,4 +1,5 @@
-import { CalledNumberInfo, CompanyAnsweringRuleExtensionInfo } from './index';
+import CalledNumberInfo from './CalledNumberInfo';
+import CompanyAnsweringRuleExtensionInfo from './CompanyAnsweringRuleExtensionInfo';
 
 class ListCompanyAnsweringRuleInfo {
   /**
@@ -36,4 +37,5 @@ class ListCompanyAnsweringRuleInfo {
    */
   extension?: CompanyAnsweringRuleExtensionInfo;
 }
+
 export default ListCompanyAnsweringRuleInfo;

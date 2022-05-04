@@ -1,4 +1,5 @@
-import { PermissionIdResource, RoleIdResource } from './index';
+import PermissionIdResource from './PermissionIdResource';
+import RoleIdResource from './RoleIdResource';
 
 class ActivePermissionResource {
   /**
@@ -13,4 +14,5 @@ class ActivePermissionResource {
    */
   scopes?: ('Account' | 'AllExtensions' | 'Federation' | 'NonUserExtensions' | 'RoleBased' | 'Self' | 'UserExtensions')[];
 }
+
 export default ActivePermissionResource;

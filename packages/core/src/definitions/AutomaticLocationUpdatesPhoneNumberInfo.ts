@@ -10,4 +10,5 @@ class AutomaticLocationUpdatesPhoneNumberInfo {
    */
   phoneNumber?: string;
 }
+
 export default AutomaticLocationUpdatesPhoneNumberInfo;

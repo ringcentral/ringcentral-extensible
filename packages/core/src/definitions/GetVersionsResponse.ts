@@ -1,4 +1,4 @@
-import { VersionInfo } from './index';
+import VersionInfo from './VersionInfo';
 
 class GetVersionsResponse {
   /**
@@ -21,4 +21,5 @@ class GetVersionsResponse {
    */
   serverRevision?: string;
 }
+
 export default GetVersionsResponse;

@@ -1,4 +1,4 @@
-import { ExtensionBulkUpdateInfo } from './index';
+import ExtensionBulkUpdateInfo from './ExtensionBulkUpdateInfo';
 
 /**
  * List of extensions to be updated
@@ -9,4 +9,5 @@ class ExtensionBulkUpdateRequest {
    */
   records?: ExtensionBulkUpdateInfo[];
 }
+
 export default ExtensionBulkUpdateRequest;

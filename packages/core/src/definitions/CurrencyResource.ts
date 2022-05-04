@@ -19,4 +19,5 @@ class CurrencyResource {
    */
   minorSymbol?: string;
 }
+
 export default CurrencyResource;

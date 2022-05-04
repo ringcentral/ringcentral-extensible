@@ -9,4 +9,5 @@ class CallMonitoringExtensionInfo {
    */
   permissions?: ('Monitoring' | 'Monitored')[];
 }
+
 export default CallMonitoringExtensionInfo;

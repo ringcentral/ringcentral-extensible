@@ -1,4 +1,5 @@
-import { MeetingInfo, MeetingRecordingInfo } from './index';
+import MeetingInfo from './MeetingInfo';
+import MeetingRecordingInfo from './MeetingRecordingInfo';
 
 class MeetingRecording {
   /**
@@ -9,4 +10,5 @@ class MeetingRecording {
    */
   recording?: MeetingRecordingInfo[];
 }
+
 export default MeetingRecording;

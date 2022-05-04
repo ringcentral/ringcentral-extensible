@@ -22,4 +22,5 @@ class OperatorInfo {
    */
   name?: string;
 }
+
 export default OperatorInfo;

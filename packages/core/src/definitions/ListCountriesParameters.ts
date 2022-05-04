@@ -34,4 +34,5 @@ class ListCountriesParameters {
    */
   freeSoftphoneLine?: boolean;
 }
+
 export default ListCountriesParameters;

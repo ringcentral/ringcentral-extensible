@@ -9,4 +9,5 @@ class GlipAttachmentInfoRequest {
    */
   type?: ('File' | 'Note' | 'Event' | 'Card');
 }
+
 export default GlipAttachmentInfoRequest;

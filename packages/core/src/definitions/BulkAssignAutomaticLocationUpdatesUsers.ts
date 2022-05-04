@@ -7,4 +7,5 @@ class BulkAssignAutomaticLocationUpdatesUsers {
    */
   disabledUserIds?: string[];
 }
+
 export default BulkAssignAutomaticLocationUpdatesUsers;

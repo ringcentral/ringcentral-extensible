@@ -1,4 +1,5 @@
-import { AudioPromptInfo, PromptLanguageInfo } from './index';
+import AudioPromptInfo from './AudioPromptInfo';
+import PromptLanguageInfo from './PromptLanguageInfo';
 
 /**
  * Prompt metadata
@@ -22,4 +23,5 @@ class IVRMenuPromptInfo {
    */
   language?: PromptLanguageInfo;
 }
+
 export default IVRMenuPromptInfo;
