@@ -8,16 +8,11 @@ class PresenceInfoResponse {
 
   /**
    */
-  userStatus?: 'Offline' | 'Busy' | 'Available';
+  userStatus?: ('Offline' | 'Busy' | 'Available');
 
   /**
    */
-  dndStatus?:
-  | 'TakeAllCalls'
-  | 'DoNotAcceptDepartmentCalls'
-  | 'TakeDepartmentCallsOnly'
-  | 'DoNotAcceptAnyCalls'
-  | 'Unknown';
+  dndStatus?: ('TakeAllCalls' | 'DoNotAcceptDepartmentCalls' | 'TakeDepartmentCallsOnly' | 'DoNotAcceptAnyCalls' | 'Unknown');
 
   /**
    */
@@ -46,21 +41,16 @@ class PresenceInfoResponse {
   /**
    * Meetings presence status
    */
-  meetingStatus?: 'Connected' | 'Disconnected';
+  meetingStatus?: ('Connected' | 'Disconnected');
 
   /**
    * Telephony presence status. Returned if telephony status is changed
    */
-  telephonyStatus?:
-  | 'NoCall'
-  | 'CallConnected'
-  | 'Ringing'
-  | 'OnHold'
-  | 'ParkedCall';
+  telephonyStatus?: ('NoCall' | 'CallConnected' | 'Ringing' | 'OnHold' | 'ParkedCall');
 
   /**
    * Aggregated presence status, calculated from a number of sources
    */
-  presenceStatus?: 'Offline' | 'Busy' | 'Available';
+  presenceStatus?: ('Offline' | 'Busy' | 'Available');
 }
 export default PresenceInfoResponse;

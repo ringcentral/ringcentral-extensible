@@ -16,7 +16,7 @@ import Hold from './Hold';
 import { RestRequestConfig } from '../../../../../../Rest';
 import { CallParty, PartyUpdateRequest } from '../../../../../../definitions';
 import Parent from '..';
-import { RingCentral } from '../../../../../..';
+import RingCentral from '../../../../../..';
 
 class Index {
   rc: RingCentral;
@@ -49,11 +49,7 @@ class Index {
     if (this.partyId === null) {
       throw new Error('partyId must be specified.');
     }
-    const r = await this.rc.get<CallParty>(
-      this.path(),
-      undefined,
-      restRequestConfig,
-    );
+    const r = await this.rc.get<CallParty>(this.path(), undefined, restRequestConfig);
     return r.data;
   }
 
@@ -68,11 +64,7 @@ class Index {
     if (this.partyId === null) {
       throw new Error('partyId must be specified.');
     }
-    const r = await this.rc.delete<string>(
-      this.path(),
-      undefined,
-      restRequestConfig,
-    );
+    const r = await this.rc.delete<string>(this.path(), undefined, restRequestConfig);
     return r.data;
   }
 
@@ -83,19 +75,11 @@ class Index {
    * Rate Limit Group: Light
    * App Permission: CallControl
    */
-  async patch(
-    partyUpdateRequest: PartyUpdateRequest,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<CallParty> {
+  async patch(partyUpdateRequest: PartyUpdateRequest, restRequestConfig?: RestRequestConfig): Promise<CallParty> {
     if (this.partyId === null) {
       throw new Error('partyId must be specified.');
     }
-    const r = await this.rc.patch<CallParty>(
-      this.path(),
-      partyUpdateRequest,
-      undefined,
-      restRequestConfig,
-    );
+    const r = await this.rc.patch<CallParty>(this.path(), partyUpdateRequest, undefined, restRequestConfig);
     return r.data;
   }
 
@@ -155,7 +139,7 @@ class Index {
     return new Supervise(this);
   }
 
-  recordings(recordingId: string | null = null): Recordings {
+  recordings(recordingId: (string | null) = null): Recordings {
     return new Recordings(this, recordingId);
   }
 }

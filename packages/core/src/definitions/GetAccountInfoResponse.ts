@@ -1,10 +1,5 @@
 import {
-  AccountOperatorInfo,
-  ServiceInfo,
-  SignupInfoResource,
-  AccountStatusInfo,
-  AccountRegionalSettings,
-  AccountLimits,
+  AccountOperatorInfo, ServiceInfo, SignupInfoResource, AccountStatusInfo, AccountRegionalSettings, AccountLimits,
 } from './index';
 
 class GetAccountInfoResponse {
@@ -46,7 +41,7 @@ class GetAccountInfoResponse {
    * Specifies account configuration wizard state (web service setup)
    * Default: NotStarted
    */
-  setupWizardState?: 'NotStarted' | 'Incomplete' | 'Completed';
+  setupWizardState?: ('NotStarted' | 'Incomplete' | 'Completed');
 
   /**
    */
@@ -55,7 +50,7 @@ class GetAccountInfoResponse {
   /**
    * Status of the current account
    */
-  status?: 'Initial' | 'Confirmed' | 'Unconfirmed' | 'Disabled';
+  status?: ('Initial' | 'Confirmed' | 'Unconfirmed' | 'Disabled');
 
   /**
    */

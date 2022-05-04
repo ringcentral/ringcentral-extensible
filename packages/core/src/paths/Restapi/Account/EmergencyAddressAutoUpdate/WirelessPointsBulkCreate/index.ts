@@ -1,10 +1,7 @@
 import { RestRequestConfig } from '../../../../../Rest';
-import {
-  CreateMultipleWirelessPointsRequest,
-  CreateMultipleWirelessPointsResponse,
-} from '../../../../../definitions';
+import { CreateMultipleWirelessPointsRequest, CreateMultipleWirelessPointsResponse } from '../../../../../definitions';
 import Parent from '..';
-import { RingCentral } from '../../../../..';
+import RingCentral from '../../../../..';
 
 class Index {
   rc: RingCentral;
@@ -28,16 +25,8 @@ class Index {
    * App Permission: EditAccounts
    * User Permission: ConfigureEmergencyMaps
    */
-  async post(
-    createMultipleWirelessPointsRequest: CreateMultipleWirelessPointsRequest,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<CreateMultipleWirelessPointsResponse> {
-    const r = await this.rc.post<CreateMultipleWirelessPointsResponse>(
-      this.path(),
-      createMultipleWirelessPointsRequest,
-      undefined,
-      restRequestConfig,
-    );
+  async post(createMultipleWirelessPointsRequest: CreateMultipleWirelessPointsRequest, restRequestConfig?: RestRequestConfig): Promise<CreateMultipleWirelessPointsResponse> {
+    const r = await this.rc.post<CreateMultipleWirelessPointsResponse>(this.path(), createMultipleWirelessPointsRequest, undefined, restRequestConfig);
     return r.data;
   }
 }

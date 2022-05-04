@@ -1,6 +1,6 @@
 /**
  * Request body for operation getToken
- */
+*/
 class GetTokenRequest {
   /**
    * Phone number linked to an account or extension in E.164 format with or without leading '+' sign
@@ -22,13 +22,7 @@ class GetTokenRequest {
    * Grant type
    * Default: password
    */
-  grant_type?:
-  | 'authorization_code'
-  | 'password'
-  | 'refresh_token'
-  | 'client_credentials'
-  | 'urn:ietf:params:oauth:grant-type:jwt-bearer'
-  | 'partner_jwt';
+  grant_type?: ('authorization_code' | 'password' | 'refresh_token' | 'client_credentials' | 'urn:ietf:params:oauth:grant-type:jwt-bearer' | 'partner_jwt');
 
   /**
    * Authorization code

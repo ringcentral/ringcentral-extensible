@@ -1,15 +1,11 @@
 import {
-  TimelinePerformanceCallsGrouping,
-  PerformanceCallsTimeSettings,
-  PerformanceCallsFilters,
-  TimelineResponseDataOptions,
+  PerformanceCallsGrouping, PerformanceCallsTimeSettings, PerformanceCallsFilters, TimelineResponseDataOptions,
 } from './index';
 
 class PerformanceCallsTimelineRequest {
   /**
-   * Required
    */
-  grouping?: TimelinePerformanceCallsGrouping;
+  grouping?: PerformanceCallsGrouping;
 
   /**
    * Required

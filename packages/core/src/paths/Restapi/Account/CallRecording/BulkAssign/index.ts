@@ -1,7 +1,7 @@
 import { RestRequestConfig } from '../../../../../Rest';
 import { BulkAccountCallRecordingsResource } from '../../../../../definitions';
 import Parent from '..';
-import { RingCentral } from '../../../../..';
+import RingCentral from '../../../../..';
 
 class Index {
   rc: RingCentral;
@@ -25,16 +25,8 @@ class Index {
    * App Permission: ReadAccounts
    * User Permission: ReadCompanyInfo
    */
-  async post(
-    bulkAccountCallRecordingsResource: BulkAccountCallRecordingsResource,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<string> {
-    const r = await this.rc.post<string>(
-      this.path(),
-      bulkAccountCallRecordingsResource,
-      undefined,
-      restRequestConfig,
-    );
+  async post(bulkAccountCallRecordingsResource: BulkAccountCallRecordingsResource, restRequestConfig?: RestRequestConfig): Promise<string> {
+    const r = await this.rc.post<string>(this.path(), bulkAccountCallRecordingsResource, undefined, restRequestConfig);
     return r.data;
   }
 }

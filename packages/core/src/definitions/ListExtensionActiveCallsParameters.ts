@@ -1,6 +1,6 @@
 /**
  * Query parameters for operation listExtensionActiveCalls
- */
+*/
 class ListExtensionActiveCallsParameters {
   /**
    * The direction for the result records. If not specified, both inbound and outbound records are returned. Multiple values are accepted
@@ -11,7 +11,7 @@ class ListExtensionActiveCallsParameters {
    * View of call records. The same view parameter specified for FSync will be applied for ISync, the view cannot be changed for ISync
    * Default: Simple
    */
-  view?: 'Simple' | 'Detailed';
+  view?: ('Simple' | 'Detailed');
 
   /**
    * Call type of a record. If not specified, all call types are returned. Multiple values are accepted

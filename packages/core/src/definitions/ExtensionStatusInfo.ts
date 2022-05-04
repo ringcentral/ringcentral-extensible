@@ -1,6 +1,6 @@
 /**
  * Status information (reason, comment). Returned for 'Disabled' status only
- */
+*/
 class ExtensionStatusInfo {
   /**
    * A free-form user comment, describing the status change reason
@@ -10,10 +10,6 @@ class ExtensionStatusInfo {
   /**
    * Type of suspension
    */
-  reason?:
-  | 'Voluntarily'
-  | 'Involuntarily'
-  | 'SuspendedVoluntarily'
-  | 'SuspendedVoluntarily2';
+  reason?: ('Voluntarily' | 'Involuntarily' | 'SuspendedVoluntarily' | 'SuspendedVoluntarily2');
 }
 export default ExtensionStatusInfo;

@@ -2,12 +2,12 @@ import { MessageStoreCalleeInfoRequest, Attachment } from './index';
 
 /**
  * Request body for operation createFaxMessage
- */
+*/
 class CreateFaxMessageRequest {
   /**
    * Resolution of Fax
    */
-  faxResolution?: 'High' | 'Low';
+  faxResolution?: ('High' | 'Low');
 
   /**
    * To Phone Number

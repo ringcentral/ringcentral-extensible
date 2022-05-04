@@ -14,7 +14,7 @@ class GlipPostInfo {
   /**
    * Type of a post
    */
-  type?: 'TextMessage' | 'PersonJoined' | 'PersonsAdded';
+  type?: ('TextMessage' | 'PersonJoined' | 'PersonsAdded');
 
   /**
    * For 'TextMessage' post type only. Text of a message

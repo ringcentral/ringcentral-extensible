@@ -1,6 +1,6 @@
 /**
  * Deprecated. Information on call owner
- */
+*/
 class OwnerInfo {
   /**
    * Internal identifier of an account that monitors a call

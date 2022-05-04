@@ -2,7 +2,7 @@ import { ContactCenterProvider } from './index';
 
 /**
  * Information on the extension, to which the phone number is assigned. Returned only for the request of Account phone number list
- */
+*/
 class UserPhoneNumberExtensionInfo {
   /**
    * Internal identifier of an extension
@@ -28,20 +28,7 @@ class UserPhoneNumberExtensionInfo {
   /**
    * Extension type. Please note that legacy 'Department' extension type corresponds to 'Call Queue' extensions in modern RingCentral product terminology
    */
-  type?:
-  | 'User'
-  | 'FaxUser'
-  | 'VirtualUser'
-  | 'DigitalUser'
-  | 'Department'
-  | 'Announcement'
-  | 'Voicemail'
-  | 'SharedLinesGroup'
-  | 'PagingOnly'
-  | 'IvrMenu'
-  | 'ApplicationExtension'
-  | 'ParkLocation'
-  | 'Site';
+  type?: ('User' | 'FaxUser' | 'VirtualUser' | 'DigitalUser' | 'Department' | 'Announcement' | 'Voicemail' | 'SharedLinesGroup' | 'PagingOnly' | 'IvrMenu' | 'ApplicationExtension' | 'ParkLocation' | 'Site');
 
   /**
    */

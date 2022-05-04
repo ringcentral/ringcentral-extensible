@@ -7,18 +7,11 @@ class OrderBy {
   /**
    * Field name by which to sort the contacts
    */
-  fieldName?:
-  | 'firstName'
-  | 'lastName'
-  | 'extensionNumber'
-  | 'phoneNumber'
-  | 'email'
-  | 'jobTitle'
-  | 'department';
+  fieldName?: ('firstName' | 'lastName' | 'extensionNumber' | 'phoneNumber' | 'email' | 'jobTitle' | 'department');
 
   /**
    * Sorting direction
    */
-  direction?: 'Asc' | 'Desc';
+  direction?: ('Asc' | 'Desc');
 }
 export default OrderBy;

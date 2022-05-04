@@ -1,8 +1,5 @@
 import {
-  GlipCreatorInfo,
-  TaskAssigneeInfo,
-  GlipTaskRecurrenceInfo,
-  TaskAttachment,
+  GlipCreatorInfo, TaskAssigneeInfo, GlipTaskRecurrenceInfo, TaskAttachment,
 } from './index';
 
 class GlipTaskInfo {
@@ -26,7 +23,7 @@ class GlipTaskInfo {
   /**
    * Type of a task
    */
-  type?: 'Task';
+  type?: ('Task');
 
   /**
    */
@@ -40,7 +37,7 @@ class GlipTaskInfo {
   /**
    * Status of task execution
    */
-  status?: 'Pending' | 'InProgress' | 'Completed';
+  status?: ('Pending' | 'InProgress' | 'Completed');
 
   /**
    * Name/subject of a task
@@ -54,7 +51,7 @@ class GlipTaskInfo {
   /**
    * Specifies how to determine task completeness
    */
-  completenessCondition?: 'Simple' | 'AllAssignees' | 'Percentage';
+  completenessCondition?: ('Simple' | 'AllAssignees' | 'Percentage');
 
   /**
    * Current completeness percentage of the task with the specified percentage completeness condition
@@ -77,15 +74,7 @@ class GlipTaskInfo {
   /**
    * Font color of a post with the current task
    */
-  color?:
-  | 'Black'
-  | 'Red'
-  | 'Orange'
-  | 'Yellow'
-  | 'Green'
-  | 'Blue'
-  | 'Purple'
-  | 'Magenta';
+  color?: ('Black' | 'Red' | 'Orange' | 'Yellow' | 'Green' | 'Blue' | 'Purple' | 'Magenta');
 
   /**
    * Task section to group/search by

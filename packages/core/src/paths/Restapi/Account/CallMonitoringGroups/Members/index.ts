@@ -1,10 +1,7 @@
 import { RestRequestConfig } from '../../../../../Rest';
-import {
-  ListCallMonitoringGroupMembersParameters,
-  CallMonitoringGroupMemberList,
-} from '../../../../../definitions';
+import { ListCallMonitoringGroupMembersParameters, CallMonitoringGroupMemberList } from '../../../../../definitions';
 import Parent from '..';
-import { RingCentral } from '../../../../..';
+import RingCentral from '../../../../..';
 
 class Index {
   rc: RingCentral;
@@ -28,15 +25,8 @@ class Index {
    * App Permission: ReadAccounts
    * User Permission: ReadExtensions
    */
-  async get(
-    queryParams?: ListCallMonitoringGroupMembersParameters,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<CallMonitoringGroupMemberList> {
-    const r = await this.rc.get<CallMonitoringGroupMemberList>(
-      this.path(),
-      queryParams,
-      restRequestConfig,
-    );
+  async get(queryParams?: ListCallMonitoringGroupMembersParameters, restRequestConfig?: RestRequestConfig): Promise<CallMonitoringGroupMemberList> {
+    const r = await this.rc.get<CallMonitoringGroupMemberList>(this.path(), queryParams, restRequestConfig);
     return r.data;
   }
 }

@@ -7,13 +7,9 @@ import Notes from './Notes';
 import Posts from './Posts';
 import Read from './Read';
 import { RestRequestConfig } from '../../../../Rest';
-import {
-  ListGlipChatsParameters,
-  GlipChatsList,
-  GlipChatInfo,
-} from '../../../../definitions';
+import { ListGlipChatsParameters, GlipChatsList, GlipChatInfo } from '../../../../definitions';
 import Parent from '..';
-import { RingCentral } from '../../../..';
+import RingCentral from '../../../..';
 
 class Index {
   rc: RingCentral;
@@ -43,15 +39,8 @@ class Index {
    * App Permission: TeamMessaging
    * User Permission: UnifiedAppDesktop
    */
-  async list(
-    queryParams?: ListGlipChatsParameters,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<GlipChatsList> {
-    const r = await this.rc.get<GlipChatsList>(
-      this.path(false),
-      queryParams,
-      restRequestConfig,
-    );
+  async list(queryParams?: ListGlipChatsParameters, restRequestConfig?: RestRequestConfig): Promise<GlipChatsList> {
+    const r = await this.rc.get<GlipChatsList>(this.path(false), queryParams, restRequestConfig);
     return r.data;
   }
 
@@ -67,11 +56,7 @@ class Index {
     if (this.chatId === null) {
       throw new Error('chatId must be specified.');
     }
-    const r = await this.rc.get<GlipChatInfo>(
-      this.path(),
-      undefined,
-      restRequestConfig,
-    );
+    const r = await this.rc.get<GlipChatInfo>(this.path(), undefined, restRequestConfig);
     return r.data;
   }
 
@@ -79,7 +64,7 @@ class Index {
     return new Read(this);
   }
 
-  posts(postId: string | null = null): Posts {
+  posts(postId: (string | null) = null): Posts {
     return new Posts(this, postId);
   }
 

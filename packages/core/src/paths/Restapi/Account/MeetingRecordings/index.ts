@@ -1,10 +1,7 @@
 import { RestRequestConfig } from '../../../../Rest';
-import {
-  ListAccountMeetingRecordingsParameters,
-  ListMeetingRecordingsResponse,
-} from '../../../../definitions';
+import { ListAccountMeetingRecordingsParameters, ListMeetingRecordingsResponse } from '../../../../definitions';
 import Parent from '..';
-import { RingCentral } from '../../../..';
+import RingCentral from '../../../..';
 
 class Index {
   rc: RingCentral;
@@ -28,15 +25,8 @@ class Index {
    * App Permission: Meetings
    * User Permission: MeetingsRecordings
    */
-  async get(
-    queryParams?: ListAccountMeetingRecordingsParameters,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<ListMeetingRecordingsResponse> {
-    const r = await this.rc.get<ListMeetingRecordingsResponse>(
-      this.path(),
-      queryParams,
-      restRequestConfig,
-    );
+  async get(queryParams?: ListAccountMeetingRecordingsParameters, restRequestConfig?: RestRequestConfig): Promise<ListMeetingRecordingsResponse> {
+    const r = await this.rc.get<ListMeetingRecordingsResponse>(this.path(), queryParams, restRequestConfig);
     return r.data;
   }
 }

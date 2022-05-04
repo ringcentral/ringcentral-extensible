@@ -1,6 +1,6 @@
 /**
  * Information on a home country of a conference phone number
- */
+*/
 class GetCountryInfoConferencing {
   /**
    * Internal identifier of a country

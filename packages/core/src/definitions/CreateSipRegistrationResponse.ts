@@ -1,8 +1,4 @@
-import {
-  SipRegistrationDeviceInfo,
-  SIPInfoResponse,
-  SIPFlagsResponse,
-} from './index';
+import { SipRegistrationDeviceInfo, SIPInfoResponse, SIPFlagsResponse } from './index';
 
 class CreateSipRegistrationResponse {
   /**

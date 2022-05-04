@@ -1,6 +1,6 @@
 /**
  * Query parameters for operation listUserAssignedRoles
- */
+*/
 class ListUserAssignedRolesParameters {
   /**
    */

@@ -1,8 +1,4 @@
-import {
-  UserCallLogRecord,
-  CallLogNavigationInfo,
-  CallLogPagingInfo,
-} from './index';
+import { UserCallLogRecord, CallLogNavigationInfo, CallLogPagingInfo } from './index';
 
 class UserCallLogResponse {
   /**

@@ -2,7 +2,7 @@ import BulkAssign from './BulkAssign';
 import Devices from './Devices';
 import Users from './Users';
 import Parent from '..';
-import { RingCentral } from '../../../..';
+import RingCentral from '../../../..';
 
 class Index {
   rc: RingCentral;
@@ -19,9 +19,7 @@ class Index {
 
   path(withParameter = true): string {
     if (withParameter && this.pagingOnlyGroupId !== null) {
-      return `${this.parent.path()}/paging-only-groups/${
-        this.pagingOnlyGroupId
-      }`;
+      return `${this.parent.path()}/paging-only-groups/${this.pagingOnlyGroupId}`;
     }
     return `${this.parent.path()}/paging-only-groups`;
   }

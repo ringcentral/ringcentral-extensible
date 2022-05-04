@@ -1,13 +1,10 @@
 import Datasets from './Datasets';
 import { RestRequestConfig } from '../../../../Rest';
 import {
-  ListDataExportTasksParameters,
-  DataExportTaskList,
-  CreateDataExportTaskRequest,
-  DataExportTask,
+  ListDataExportTasksParameters, DataExportTaskList, CreateDataExportTaskRequest, DataExportTask,
 } from '../../../../definitions';
 import Parent from '..';
-import { RingCentral } from '../../../..';
+import RingCentral from '../../../..';
 
 class Index {
   rc: RingCentral;
@@ -36,15 +33,8 @@ class Index {
    * Rate Limit Group: Medium
    * App Permission: Glip
    */
-  async list(
-    queryParams?: ListDataExportTasksParameters,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<DataExportTaskList> {
-    const r = await this.rc.get<DataExportTaskList>(
-      this.path(false),
-      queryParams,
-      restRequestConfig,
-    );
+  async list(queryParams?: ListDataExportTasksParameters, restRequestConfig?: RestRequestConfig): Promise<DataExportTaskList> {
+    const r = await this.rc.get<DataExportTaskList>(this.path(false), queryParams, restRequestConfig);
     return r.data;
   }
 
@@ -55,16 +45,8 @@ class Index {
    * Rate Limit Group: Heavy
    * App Permission: Glip
    */
-  async post(
-    createDataExportTaskRequest: CreateDataExportTaskRequest,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<DataExportTask> {
-    const r = await this.rc.post<DataExportTask>(
-      this.path(false),
-      createDataExportTaskRequest,
-      undefined,
-      restRequestConfig,
-    );
+  async post(createDataExportTaskRequest: CreateDataExportTaskRequest, restRequestConfig?: RestRequestConfig): Promise<DataExportTask> {
+    const r = await this.rc.post<DataExportTask>(this.path(false), createDataExportTaskRequest, undefined, restRequestConfig);
     return r.data;
   }
 
@@ -79,15 +61,11 @@ class Index {
     if (this.taskId === null) {
       throw new Error('taskId must be specified.');
     }
-    const r = await this.rc.get<DataExportTask>(
-      this.path(),
-      undefined,
-      restRequestConfig,
-    );
+    const r = await this.rc.get<DataExportTask>(this.path(), undefined, restRequestConfig);
     return r.data;
   }
 
-  datasets(datasetId: string | null = null): Datasets {
+  datasets(datasetId: (string | null) = null): Datasets {
     return new Datasets(this, datasetId);
   }
 }

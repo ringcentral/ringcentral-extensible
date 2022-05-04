@@ -1,10 +1,7 @@
 import { RestRequestConfig } from '../../../../../Rest';
-import {
-  SyncAddressBookParameters,
-  AddressBookSync,
-} from '../../../../../definitions';
+import { SyncAddressBookParameters, AddressBookSync } from '../../../../../definitions';
 import Parent from '..';
-import { RingCentral } from '../../../../..';
+import RingCentral from '../../../../..';
 
 class Index {
   rc: RingCentral;
@@ -28,15 +25,8 @@ class Index {
    * App Permission: ReadContacts
    * User Permission: ReadPersonalContacts
    */
-  async get(
-    queryParams?: SyncAddressBookParameters,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<AddressBookSync> {
-    const r = await this.rc.get<AddressBookSync>(
-      this.path(),
-      queryParams,
-      restRequestConfig,
-    );
+  async get(queryParams?: SyncAddressBookParameters, restRequestConfig?: RestRequestConfig): Promise<AddressBookSync> {
+    const r = await this.rc.get<AddressBookSync>(this.path(), queryParams, restRequestConfig);
     return r.data;
   }
 }

@@ -1,19 +1,12 @@
 import {
-  PerformanceCallsCountersResponseOptionsAllCalls,
-  PerformanceCallsCountersResponseOptionsCallsByDirection,
-  PerformanceCallsCountersResponseOptionsCallsByOrigin,
-  PerformanceCallsCountersResponseOptionsCallsByResponse,
-  PerformanceCallsCountersResponseOptionsCallsSegments,
-  PerformanceCallsCountersResponseOptionsCallsByResult,
-  PerformanceCallsCountersResponseOptionsCallsByCompanyHours,
-  PerformanceCallsCountersResponseOptionsCallsByQueueSla,
-  PerformanceCallsCountersResponseOptionsCallsByActions,
-  PerformanceCallsCountersResponseOptionsCallsByType,
+  PerformanceCallsCountersResponseOptionsAllCalls, PerformanceCallsCountersResponseOptionsCallsByDirection, PerformanceCallsCountersResponseOptionsCallsByOrigin, PerformanceCallsCountersResponseOptionsCallsByResponse, PerformanceCallsCountersResponseOptionsCallsSegments, PerformanceCallsCountersResponseOptionsCallsByResult, PerformanceCallsCountersResponseOptionsCallsByCompanyHours, PerformanceCallsCountersResponseOptionsCallsByQueueSla, PerformanceCallsCountersResponseOptionsCallsByActions, PerformanceCallsCountersResponseOptionsCallsByType,
 } from './index';
 
 /**
- * The formula is defined by `aggregationType` and `aggregationInterval` for every counter individually. If `aggregationType` is `Sum` or `Percent`, `aggregationInterval` is not supported. If `aggregationType` is `Min`, `Max` or `Average`,`aggregationInterval` is required
- */
+ * The formula is defined by `aggregationType` and `aggregationInterval` for every counter individually.
+ * If `aggregationType` is `Sum` or `Percent`, `aggregationInterval` is not supported.
+ * If `aggregationType` is `Min`, `Max` or `Average`, `aggregationInterval` is required
+*/
 class PerformanceCallsCountersResponseOptions {
   /**
    */

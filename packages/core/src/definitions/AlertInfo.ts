@@ -1,6 +1,6 @@
 /**
  * Alert information
- */
+*/
 class AlertInfo {
   /**
    * Title of a message

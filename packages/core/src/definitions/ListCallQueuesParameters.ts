@@ -1,6 +1,6 @@
 /**
  * Query parameters for operation listCallQueues
- */
+*/
 class ListCallQueuesParameters {
   /**
    * Indicates the page number to retrieve. Only positive number values are accepted

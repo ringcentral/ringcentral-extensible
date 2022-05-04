@@ -1,10 +1,7 @@
 import { RestRequestConfig } from '../../../../../Rest';
-import {
-  ListRecentChatsParameters,
-  GlipChatsListWithoutNavigation,
-} from '../../../../../definitions';
+import { ListRecentChatsParameters, GlipChatsListWithoutNavigation } from '../../../../../definitions';
 import Parent from '..';
-import { RingCentral } from '../../../../..';
+import RingCentral from '../../../../..';
 
 class Index {
   rc: RingCentral;
@@ -28,15 +25,8 @@ class Index {
    * App Permission: TeamMessaging
    * User Permission: UnifiedAppDesktop
    */
-  async get(
-    queryParams?: ListRecentChatsParameters,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<GlipChatsListWithoutNavigation> {
-    const r = await this.rc.get<GlipChatsListWithoutNavigation>(
-      this.path(),
-      queryParams,
-      restRequestConfig,
-    );
+  async get(queryParams?: ListRecentChatsParameters, restRequestConfig?: RestRequestConfig): Promise<GlipChatsListWithoutNavigation> {
+    const r = await this.rc.get<GlipChatsListWithoutNavigation>(this.path(), queryParams, restRequestConfig);
     return r.data;
   }
 }

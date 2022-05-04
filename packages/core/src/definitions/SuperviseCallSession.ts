@@ -1,8 +1,5 @@
 import {
-  SupervisePartyFrom,
-  SupervisePartyTo,
-  OwnerInfo,
-  CallStatusInfo,
+  SupervisePartyFrom, SupervisePartyTo, OwnerInfo, CallStatusInfo,
 } from './index';
 
 class SuperviseCallSession {
@@ -17,7 +14,7 @@ class SuperviseCallSession {
   /**
    * Direction of a call
    */
-  direction?: 'Outbound' | 'Inbound';
+  direction?: ('Outbound' | 'Inbound');
 
   /**
    * Internal identifier of a party that monitors a call

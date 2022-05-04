@@ -1,6 +1,6 @@
 /**
  * resource metadata
- */
+*/
 class Meta {
   /**
    * Format: date-time
@@ -19,6 +19,6 @@ class Meta {
 
   /**
    */
-  resourceType?: 'User' | 'Group';
+  resourceType?: ('User' | 'Group');
 }
 export default Meta;

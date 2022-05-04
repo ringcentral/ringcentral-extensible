@@ -2,7 +2,7 @@ import { AlertInfo } from './index';
 
 /**
  * Information on a notification
- */
+*/
 class NotificationInfo {
   /**
    */

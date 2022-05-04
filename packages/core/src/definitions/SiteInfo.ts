@@ -1,8 +1,4 @@
-import {
-  ContactBusinessAddressInfo,
-  RegionalSettings,
-  OperatorInfo,
-} from './index';
+import { ContactBusinessAddressInfo, RegionalSettings, OperatorInfo } from './index';
 
 class SiteInfo {
   /**

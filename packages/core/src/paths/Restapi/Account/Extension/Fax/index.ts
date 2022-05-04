@@ -1,11 +1,8 @@
 import Utils from '../../../../../Utils';
 import { RestRequestConfig } from '../../../../../Rest';
-import {
-  CreateFaxMessageRequest,
-  FaxResponse,
-} from '../../../../../definitions';
+import { CreateFaxMessageRequest, FaxResponse } from '../../../../../definitions';
 import Parent from '..';
-import { RingCentral } from '../../../../..';
+import RingCentral from '../../../../..';
 
 class Index {
   rc: RingCentral;
@@ -29,17 +26,9 @@ class Index {
    * App Permission: Faxes
    * User Permission: OutboundFaxes
    */
-  async post(
-    createFaxMessageRequest: CreateFaxMessageRequest,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<FaxResponse> {
+  async post(createFaxMessageRequest: CreateFaxMessageRequest, restRequestConfig?: RestRequestConfig): Promise<FaxResponse> {
     const formData = Utils.getFormData(createFaxMessageRequest);
-    const r = await this.rc.post<FaxResponse>(
-      this.path(),
-      formData,
-      undefined,
-      restRequestConfig,
-    );
+    const r = await this.rc.post<FaxResponse>(this.path(), formData, undefined, restRequestConfig);
     return r.data;
   }
 }

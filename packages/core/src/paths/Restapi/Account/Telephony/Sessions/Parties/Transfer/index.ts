@@ -1,7 +1,7 @@
 import { RestRequestConfig } from '../../../../../../../Rest';
 import { TransferTarget, CallParty } from '../../../../../../../definitions';
 import Parent from '..';
-import { RingCentral } from '../../../../../../..';
+import RingCentral from '../../../../../../..';
 
 class Index {
   rc: RingCentral;
@@ -24,16 +24,8 @@ class Index {
    * Rate Limit Group: Light
    * App Permission: CallControl
    */
-  async post(
-    transferTarget: TransferTarget,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<CallParty> {
-    const r = await this.rc.post<CallParty>(
-      this.path(),
-      transferTarget,
-      undefined,
-      restRequestConfig,
-    );
+  async post(transferTarget: TransferTarget, restRequestConfig?: RestRequestConfig): Promise<CallParty> {
+    const r = await this.rc.post<CallParty>(this.path(), transferTarget, undefined, restRequestConfig);
     return r.data;
   }
 }

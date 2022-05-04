@@ -1,10 +1,7 @@
 import { RestRequestConfig } from '../../../../../Rest';
-import {
-  CreateMultipleSwitchesRequest,
-  CreateMultipleSwitchesResponse,
-} from '../../../../../definitions';
+import { CreateMultipleSwitchesRequest, CreateMultipleSwitchesResponse } from '../../../../../definitions';
 import Parent from '..';
-import { RingCentral } from '../../../../..';
+import RingCentral from '../../../../..';
 
 class Index {
   rc: RingCentral;
@@ -28,16 +25,8 @@ class Index {
    * App Permission: EditAccounts
    * User Permission: ConfigureEmergencyMaps
    */
-  async post(
-    createMultipleSwitchesRequest: CreateMultipleSwitchesRequest,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<CreateMultipleSwitchesResponse> {
-    const r = await this.rc.post<CreateMultipleSwitchesResponse>(
-      this.path(),
-      createMultipleSwitchesRequest,
-      undefined,
-      restRequestConfig,
-    );
+  async post(createMultipleSwitchesRequest: CreateMultipleSwitchesRequest, restRequestConfig?: RestRequestConfig): Promise<CreateMultipleSwitchesResponse> {
+    const r = await this.rc.post<CreateMultipleSwitchesResponse>(this.path(), createMultipleSwitchesRequest, undefined, restRequestConfig);
     return r.data;
   }
 }

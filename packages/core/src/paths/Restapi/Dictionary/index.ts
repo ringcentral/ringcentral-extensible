@@ -10,7 +10,7 @@ import Country from './Country';
 import State from './State';
 import Brand from './Brand';
 import Parent from '..';
-import { RingCentral } from '../../..';
+import RingCentral from '../../..';
 
 class Index {
   rc: RingCentral;
@@ -26,27 +26,27 @@ class Index {
     return `${this.parent.path()}/dictionary`;
   }
 
-  brand(brandId: string | null = null): Brand {
+  brand(brandId: (string | null) = null): Brand {
     return new Brand(this, brandId);
   }
 
-  state(stateId: string | null = null): State {
+  state(stateId: (string | null) = null): State {
     return new State(this, stateId);
   }
 
-  country(countryId: string | null = null): Country {
+  country(countryId: (string | null) = null): Country {
     return new Country(this, countryId);
   }
 
-  greeting(greetingId: string | null = null): Greeting {
+  greeting(greetingId: (string | null) = null): Greeting {
     return new Greeting(this, greetingId);
   }
 
-  language(languageId: string | null = null): Language {
+  language(languageId: (string | null) = null): Language {
     return new Language(this, languageId);
   }
 
-  timezone(timezoneId: string | null = null): Timezone {
+  timezone(timezoneId: (string | null) = null): Timezone {
     return new Timezone(this, timezoneId);
   }
 
@@ -54,11 +54,11 @@ class Index {
     return new Location(this);
   }
 
-  userRole(roleId: string | null = null): UserRole {
+  userRole(roleId: (string | null) = null): UserRole {
     return new UserRole(this, roleId);
   }
 
-  permission(permissionId: string | null = null): Permission {
+  permission(permissionId: (string | null) = null): Permission {
     return new Permission(this, permissionId);
   }
 
@@ -66,9 +66,7 @@ class Index {
     return new FaxCoverPage(this);
   }
 
-  permissionCategory(
-    permissionCategoryId: string | null = null,
-  ): PermissionCategory {
+  permissionCategory(permissionCategoryId: (string | null) = null): PermissionCategory {
     return new PermissionCategory(this, permissionCategoryId);
   }
 }

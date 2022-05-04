@@ -7,6 +7,6 @@ class TaskAssigneeInfo {
   /**
    * Status of the task execution by assignee
    */
-  status?: 'Pending' | 'Completed';
+  status?: ('Pending' | 'Completed');
 }
 export default TaskAssigneeInfo;

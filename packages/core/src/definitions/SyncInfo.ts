@@ -1,7 +1,7 @@
 class SyncInfo {
   /**
    */
-  syncType?: 'FSync' | 'ISync';
+  syncType?: ('FSync' | 'ISync');
 
   /**
    */

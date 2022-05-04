@@ -1,12 +1,8 @@
 import Search from './Search';
 import { RestRequestConfig } from '../../../../../Rest';
-import {
-  ListDirectoryEntriesParameters,
-  DirectoryResource,
-  ContactResource,
-} from '../../../../../definitions';
+import { ListDirectoryEntriesParameters, DirectoryResource, ContactResource } from '../../../../../definitions';
 import Parent from '..';
-import { RingCentral } from '../../../../..';
+import RingCentral from '../../../../..';
 
 class Index {
   rc: RingCentral;
@@ -35,15 +31,8 @@ class Index {
    * Rate Limit Group: Medium
    * App Permission: ReadAccounts
    */
-  async list(
-    queryParams?: ListDirectoryEntriesParameters,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<DirectoryResource> {
-    const r = await this.rc.get<DirectoryResource>(
-      this.path(false),
-      queryParams,
-      restRequestConfig,
-    );
+  async list(queryParams?: ListDirectoryEntriesParameters, restRequestConfig?: RestRequestConfig): Promise<DirectoryResource> {
+    const r = await this.rc.get<DirectoryResource>(this.path(false), queryParams, restRequestConfig);
     return r.data;
   }
 
@@ -58,11 +47,7 @@ class Index {
     if (this.entryId === null) {
       throw new Error('entryId must be specified.');
     }
-    const r = await this.rc.get<ContactResource>(
-      this.path(),
-      undefined,
-      restRequestConfig,
-    );
+    const r = await this.rc.get<ContactResource>(this.path(), undefined, restRequestConfig);
     return r.data;
   }
 

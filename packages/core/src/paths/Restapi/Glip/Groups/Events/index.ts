@@ -1,7 +1,7 @@
 import { RestRequestConfig } from '../../../../../Rest';
 import { GlipEventInfo, GlipEventCreate } from '../../../../../definitions';
 import Parent from '..';
-import { RingCentral } from '../../../../..';
+import RingCentral from '../../../../..';
 
 class Index {
   rc: RingCentral;
@@ -26,11 +26,7 @@ class Index {
    * User Permission: UnifiedAppDesktop
    */
   async get(restRequestConfig?: RestRequestConfig): Promise<GlipEventInfo> {
-    const r = await this.rc.get<GlipEventInfo>(
-      this.path(),
-      undefined,
-      restRequestConfig,
-    );
+    const r = await this.rc.get<GlipEventInfo>(this.path(), undefined, restRequestConfig);
     return r.data;
   }
 
@@ -42,16 +38,8 @@ class Index {
    * App Permission: TeamMessaging
    * User Permission: UnifiedAppDesktop
    */
-  async post(
-    glipEventCreate: GlipEventCreate,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<GlipEventInfo> {
-    const r = await this.rc.post<GlipEventInfo>(
-      this.path(),
-      glipEventCreate,
-      undefined,
-      restRequestConfig,
-    );
+  async post(glipEventCreate: GlipEventCreate, restRequestConfig?: RestRequestConfig): Promise<GlipEventInfo> {
+    const r = await this.rc.post<GlipEventInfo>(this.path(), glipEventCreate, undefined, restRequestConfig);
     return r.data;
   }
 }

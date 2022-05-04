@@ -1,8 +1,4 @@
-import {
-  AutomaticLocationUpdatesModelInfo,
-  AutomaticLocationUpdatesSiteInfo,
-  AutomaticLocationUpdatesPhoneLine,
-} from './index';
+import { AutomaticLocationUpdatesModelInfo, AutomaticLocationUpdatesSiteInfo, AutomaticLocationUpdatesPhoneLine } from './index';
 
 class AutomaticLocationUpdatesDeviceInfo {
   /**
@@ -14,7 +10,7 @@ class AutomaticLocationUpdatesDeviceInfo {
    * Device type
    * Default: HardPhone
    */
-  type?: 'HardPhone' | 'SoftPhone' | 'OtherPhone';
+  type?: ('HardPhone' | 'SoftPhone' | 'OtherPhone');
 
   /**
    * Serial number for HardPhone (is returned only when the phone is shipped and provisioned)

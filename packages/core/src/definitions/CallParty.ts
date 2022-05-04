@@ -1,14 +1,10 @@
 import {
-  CallStatusInfo,
-  ParkInfo,
-  PartyInfo,
-  OwnerInfo,
-  RecordingInfo,
+  CallStatusInfo, ParkInfo, PartyInfo, OwnerInfo, RecordingInfo,
 } from './index';
 
 /**
  * Information on a party of a call session
- */
+*/
 class CallParty {
   /**
    * Internal identifier of a party
@@ -48,22 +44,22 @@ class CallParty {
   /**
    * Direction of a call
    */
-  direction?: 'Inbound' | 'Outbound';
+  direction?: ('Inbound' | 'Outbound');
 
   /**
    * A party's role in the conference scenarios. For calls of 'Conference' type only
    */
-  conferenceRole?: 'Host' | 'Participant';
+  conferenceRole?: ('Host' | 'Participant');
 
   /**
    * A party's role in 'Ring Me'/'RingOut' scenarios. For calls of 'Ringout' type only
    */
-  ringOutRole?: 'Initiator' | 'Target';
+  ringOutRole?: ('Initiator' | 'Target');
 
   /**
    * A party's role in 'Ring Me'/'RingOut' scenarios. For calls of 'Ringme' type only
    */
-  ringMeRole?: 'Initiator' | 'Target';
+  ringMeRole?: ('Initiator' | 'Target');
 
   /**
    * Active recordings list

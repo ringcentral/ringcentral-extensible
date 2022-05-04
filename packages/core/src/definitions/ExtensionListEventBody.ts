@@ -1,6 +1,6 @@
 /**
  * Notification payload body
- */
+*/
 class ExtensionListEventBody {
   /**
    * Internal identifier of an extension
@@ -10,7 +10,7 @@ class ExtensionListEventBody {
   /**
    * Type of extension info change
    */
-  eventType?: 'Create' | 'Update' | 'Delete';
+  eventType?: ('Create' | 'Update' | 'Delete');
 
   /**
    * Internal identifier of a subscription owner extension

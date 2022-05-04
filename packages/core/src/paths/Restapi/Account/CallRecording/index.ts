@@ -4,7 +4,7 @@ import Extensions from './Extensions';
 import { RestRequestConfig } from '../../../../Rest';
 import { CallRecordingSettingsResource } from '../../../../definitions';
 import Parent from '..';
-import { RingCentral } from '../../../..';
+import RingCentral from '../../../..';
 
 class Index {
   rc: RingCentral;
@@ -28,14 +28,8 @@ class Index {
    * App Permission: ReadAccounts
    * User Permission: ReadCompanyInfo
    */
-  async get(
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<CallRecordingSettingsResource> {
-    const r = await this.rc.get<CallRecordingSettingsResource>(
-      this.path(),
-      undefined,
-      restRequestConfig,
-    );
+  async get(restRequestConfig?: RestRequestConfig): Promise<CallRecordingSettingsResource> {
+    const r = await this.rc.get<CallRecordingSettingsResource>(this.path(), undefined, restRequestConfig);
     return r.data;
   }
 
@@ -47,16 +41,8 @@ class Index {
    * App Permission: EditAccounts
    * User Permission: EditCompanyInfo
    */
-  async put(
-    callRecordingSettingsResource: CallRecordingSettingsResource,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<CallRecordingSettingsResource> {
-    const r = await this.rc.put<CallRecordingSettingsResource>(
-      this.path(),
-      callRecordingSettingsResource,
-      undefined,
-      restRequestConfig,
-    );
+  async put(callRecordingSettingsResource: CallRecordingSettingsResource, restRequestConfig?: RestRequestConfig): Promise<CallRecordingSettingsResource> {
+    const r = await this.rc.put<CallRecordingSettingsResource>(this.path(), callRecordingSettingsResource, undefined, restRequestConfig);
     return r.data;
   }
 
@@ -68,7 +54,7 @@ class Index {
     return new BulkAssign(this);
   }
 
-  customGreetings(greetingId: string | null = null): CustomGreetings {
+  customGreetings(greetingId: (string | null) = null): CustomGreetings {
     return new CustomGreetings(this, greetingId);
   }
 }

@@ -1,10 +1,7 @@
 import { RestRequestConfig } from '../../../../../Rest';
-import {
-  GlipAdaptiveCardRequest,
-  GlipAdaptiveCardShortInfo,
-} from '../../../../../definitions';
+import { GlipAdaptiveCardRequest, GlipAdaptiveCardShortInfo } from '../../../../../definitions';
 import Parent from '..';
-import { RingCentral } from '../../../../..';
+import RingCentral from '../../../../..';
 
 class Index {
   rc: RingCentral;
@@ -28,16 +25,8 @@ class Index {
    * App Permission: TeamMessaging
    * User Permission: UnifiedAppDesktop
    */
-  async post(
-    glipAdaptiveCardRequest: GlipAdaptiveCardRequest,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<GlipAdaptiveCardShortInfo> {
-    const r = await this.rc.post<GlipAdaptiveCardShortInfo>(
-      this.path(),
-      glipAdaptiveCardRequest,
-      undefined,
-      restRequestConfig,
-    );
+  async post(glipAdaptiveCardRequest: GlipAdaptiveCardRequest, restRequestConfig?: RestRequestConfig): Promise<GlipAdaptiveCardShortInfo> {
+    const r = await this.rc.post<GlipAdaptiveCardShortInfo>(this.path(), glipAdaptiveCardRequest, undefined, restRequestConfig);
     return r.data;
   }
 }

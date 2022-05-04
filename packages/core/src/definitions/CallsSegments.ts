@@ -46,5 +46,11 @@ class CallsSegments {
    * Format: double
    */
   vmGreetings?: number;
+
+  /**
+   * Required
+   * Format: double
+   */
+  setup?: number;
 }
 export default CallsSegments;

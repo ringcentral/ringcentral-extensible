@@ -23,7 +23,7 @@ class AutomaticLocationUpdatesUserInfo {
   /**
    * User extension type
    */
-  type?: 'User' | 'Limited';
+  type?: ('User' | 'Limited');
 
   /**
    */

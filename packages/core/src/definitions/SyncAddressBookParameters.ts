@@ -1,11 +1,11 @@
 /**
  * Query parameters for operation syncAddressBook
- */
+*/
 class SyncAddressBookParameters {
   /**
    * Type of synchronization
    */
-  syncType?: 'FSync' | 'ISync';
+  syncType?: ('FSync' | 'ISync');
 
   /**
    * Value of syncToken property of the last sync request response

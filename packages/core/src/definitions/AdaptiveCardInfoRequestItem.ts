@@ -3,7 +3,7 @@ import { AdaptiveCardColumnInfo } from './index';
 class AdaptiveCardInfoRequestItem {
   /**
    */
-  type?: 'TextBlock' | 'ColumnSet' | 'Column' | 'FactSet';
+  type?: ('TextBlock' | 'ColumnSet' | 'Column' | 'FactSet');
 
   /**
    */

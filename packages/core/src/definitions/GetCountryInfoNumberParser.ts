@@ -1,6 +1,6 @@
 /**
  * Information on a user home country || Information on a country the phone number belongs to
- */
+*/
 class GetCountryInfoNumberParser {
   /**
    * Internal identifier of a country

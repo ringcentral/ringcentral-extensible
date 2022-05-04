@@ -12,14 +12,7 @@ class MessageStoreReport {
   /**
    * Status of a message store report task
    */
-  status?:
-  | 'Accepted'
-  | 'Pending'
-  | 'InProgress'
-  | 'AttemptFailed'
-  | 'Failed'
-  | 'Completed'
-  | 'Cancelled';
+  status?: ('Accepted' | 'Pending' | 'InProgress' | 'AttemptFailed' | 'Failed' | 'Completed' | 'Cancelled');
 
   /**
    * Internal identifier of an account

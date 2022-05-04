@@ -1,10 +1,7 @@
 import { RestRequestConfig } from '../../../../../Rest';
-import {
-  ValidateMultipleWirelessPointsRequest,
-  ValidateMultipleWirelessPointsResponse,
-} from '../../../../../definitions';
+import { ValidateMultipleWirelessPointsRequest, ValidateMultipleWirelessPointsResponse } from '../../../../../definitions';
 import Parent from '..';
-import { RingCentral } from '../../../../..';
+import RingCentral from '../../../../..';
 
 class Index {
   rc: RingCentral;
@@ -28,16 +25,8 @@ class Index {
    * App Permission: EditAccounts
    * User Permission: ConfigureEmergencyMaps
    */
-  async post(
-    validateMultipleWirelessPointsRequest: ValidateMultipleWirelessPointsRequest,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<ValidateMultipleWirelessPointsResponse> {
-    const r = await this.rc.post<ValidateMultipleWirelessPointsResponse>(
-      this.path(),
-      validateMultipleWirelessPointsRequest,
-      undefined,
-      restRequestConfig,
-    );
+  async post(validateMultipleWirelessPointsRequest: ValidateMultipleWirelessPointsRequest, restRequestConfig?: RestRequestConfig): Promise<ValidateMultipleWirelessPointsResponse> {
+    const r = await this.rc.post<ValidateMultipleWirelessPointsResponse>(this.path(), validateMultipleWirelessPointsRequest, undefined, restRequestConfig);
     return r.data;
   }
 }

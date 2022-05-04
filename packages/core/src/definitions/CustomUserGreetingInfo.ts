@@ -14,21 +14,12 @@ class CustomUserGreetingInfo {
   /**
    * Type of a custom user greeting
    */
-  type?:
-  | 'Introductory'
-  | 'Announcement'
-  | 'InterruptPrompt'
-  | 'ConnectingAudio'
-  | 'ConnectingMessage'
-  | 'Voicemail'
-  | 'Unavailable'
-  | 'HoldMusic'
-  | 'PronouncedName';
+  type?: ('Introductory' | 'Announcement' | 'InterruptPrompt' | 'ConnectingAudio' | 'ConnectingMessage' | 'Voicemail' | 'Unavailable' | 'HoldMusic' | 'PronouncedName');
 
   /**
    * Content media type
    */
-  contentType?: 'audio/mpeg' | 'audio/wav';
+  contentType?: ('audio/mpeg' | 'audio/wav');
 
   /**
    * Link to a greeting content (audio file)

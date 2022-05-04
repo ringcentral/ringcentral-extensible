@@ -1,12 +1,9 @@
 import { RestRequestConfig } from '../../../../../Rest';
 import {
-  NetworksList,
-  CreateNetworkRequest,
-  NetworkInfo,
-  UpdateNetworkRequest,
+  NetworksList, CreateNetworkRequest, NetworkInfo, UpdateNetworkRequest,
 } from '../../../../../definitions';
 import Parent from '..';
-import { RingCentral } from '../../../../..';
+import RingCentral from '../../../../..';
 
 class Index {
   rc: RingCentral;
@@ -37,11 +34,7 @@ class Index {
    * User Permission: ConfigureEmergencyMaps
    */
   async list(restRequestConfig?: RestRequestConfig): Promise<NetworksList> {
-    const r = await this.rc.get<NetworksList>(
-      this.path(false),
-      undefined,
-      restRequestConfig,
-    );
+    const r = await this.rc.get<NetworksList>(this.path(false), undefined, restRequestConfig);
     return r.data;
   }
 
@@ -53,16 +46,8 @@ class Index {
    * App Permission: EditAccounts
    * User Permission: ConfigureEmergencyMaps
    */
-  async post(
-    createNetworkRequest: CreateNetworkRequest,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<NetworkInfo> {
-    const r = await this.rc.post<NetworkInfo>(
-      this.path(false),
-      createNetworkRequest,
-      undefined,
-      restRequestConfig,
-    );
+  async post(createNetworkRequest: CreateNetworkRequest, restRequestConfig?: RestRequestConfig): Promise<NetworkInfo> {
+    const r = await this.rc.post<NetworkInfo>(this.path(false), createNetworkRequest, undefined, restRequestConfig);
     return r.data;
   }
 
@@ -78,11 +63,7 @@ class Index {
     if (this.networkId === null) {
       throw new Error('networkId must be specified.');
     }
-    const r = await this.rc.get<NetworkInfo>(
-      this.path(),
-      undefined,
-      restRequestConfig,
-    );
+    const r = await this.rc.get<NetworkInfo>(this.path(), undefined, restRequestConfig);
     return r.data;
   }
 
@@ -94,19 +75,11 @@ class Index {
    * App Permission: EditAccounts
    * User Permission: ConfigureEmergencyMaps
    */
-  async put(
-    updateNetworkRequest: UpdateNetworkRequest,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<string> {
+  async put(updateNetworkRequest: UpdateNetworkRequest, restRequestConfig?: RestRequestConfig): Promise<string> {
     if (this.networkId === null) {
       throw new Error('networkId must be specified.');
     }
-    const r = await this.rc.put<string>(
-      this.path(),
-      updateNetworkRequest,
-      undefined,
-      restRequestConfig,
-    );
+    const r = await this.rc.put<string>(this.path(), updateNetworkRequest, undefined, restRequestConfig);
     return r.data;
   }
 
@@ -122,11 +95,7 @@ class Index {
     if (this.networkId === null) {
       throw new Error('networkId must be specified.');
     }
-    const r = await this.rc.delete<string>(
-      this.path(),
-      undefined,
-      restRequestConfig,
-    );
+    const r = await this.rc.delete<string>(this.path(), undefined, restRequestConfig);
     return r.data;
   }
 }

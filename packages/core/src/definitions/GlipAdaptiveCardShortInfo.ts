@@ -25,7 +25,7 @@ class GlipAdaptiveCardShortInfo {
 
   /**
    */
-  type?: 'AdaptiveCard';
+  type?: ('AdaptiveCard');
 
   /**
    * Version of an adaptive card. Filled on server-side

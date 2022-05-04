@@ -1,6 +1,6 @@
 import { RestRequestConfig } from '../../../../../Rest';
 import Parent from '..';
-import { RingCentral } from '../../../../..';
+import RingCentral from '../../../../..';
 
 class Index {
   rc: RingCentral;
@@ -25,10 +25,7 @@ class Index {
    * User Permission: ReadCompanyGreetings
    */
   async get(restRequestConfig?: RestRequestConfig): Promise<Buffer> {
-    const r = await this.rc.get<Buffer>(this.path(), undefined, {
-      ...restRequestConfig,
-      responseType: 'arraybuffer',
-    });
+    const r = await this.rc.get<Buffer>(this.path(), undefined, { ...restRequestConfig, responseType: 'arraybuffer' });
     return r.data;
   }
 }

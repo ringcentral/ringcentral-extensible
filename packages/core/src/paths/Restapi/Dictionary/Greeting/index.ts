@@ -1,11 +1,7 @@
 import { RestRequestConfig } from '../../../../Rest';
-import {
-  ListStandardGreetingsParameters,
-  DictionaryGreetingList,
-  DictionaryGreetingInfo,
-} from '../../../../definitions';
+import { ListStandardGreetingsParameters, DictionaryGreetingList, DictionaryGreetingInfo } from '../../../../definitions';
 import Parent from '..';
-import { RingCentral } from '../../../..';
+import RingCentral from '../../../..';
 
 class Index {
   rc: RingCentral;
@@ -33,15 +29,8 @@ class Index {
    * Endpoint: /restapi/{apiVersion}/dictionary/greeting
    * Rate Limit Group: Medium
    */
-  async list(
-    queryParams?: ListStandardGreetingsParameters,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<DictionaryGreetingList> {
-    const r = await this.rc.get<DictionaryGreetingList>(
-      this.path(false),
-      queryParams,
-      restRequestConfig,
-    );
+  async list(queryParams?: ListStandardGreetingsParameters, restRequestConfig?: RestRequestConfig): Promise<DictionaryGreetingList> {
+    const r = await this.rc.get<DictionaryGreetingList>(this.path(false), queryParams, restRequestConfig);
     return r.data;
   }
 
@@ -51,17 +40,11 @@ class Index {
    * Endpoint: /restapi/{apiVersion}/dictionary/greeting/{greetingId}
    * Rate Limit Group: Medium
    */
-  async get(
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<DictionaryGreetingInfo> {
+  async get(restRequestConfig?: RestRequestConfig): Promise<DictionaryGreetingInfo> {
     if (this.greetingId === null) {
       throw new Error('greetingId must be specified.');
     }
-    const r = await this.rc.get<DictionaryGreetingInfo>(
-      this.path(),
-      undefined,
-      restRequestConfig,
-    );
+    const r = await this.rc.get<DictionaryGreetingInfo>(this.path(), undefined, restRequestConfig);
     return r.data;
   }
 }

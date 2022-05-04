@@ -1,19 +1,10 @@
 import {
-  PerformanceCallsTotal,
-  PerformanceCallsByDirection,
-  PerformanceCallsByOrigin,
-  PerformanceCallsByResponse,
-  PerformanceCallsSegments,
-  PerformanceCallsByResult,
-  PerformanceCallsActions,
-  PerformanceCallsByCompanyHours,
-  PerformanceCallsByQueueSla,
-  PerformanceCallsByType,
+  PerformanceCallsTotal, PerformanceCallsByDirection, PerformanceCallsByOrigin, PerformanceCallsByResponse, PerformanceCallsSegments, PerformanceCallsByResult, PerformanceCallsActions, PerformanceCallsByCompanyHours, PerformanceCallsByQueueSla, PerformanceCallsByType,
 } from './index';
 
 /**
  * Call volume data for the specified grouping
- */
+*/
 class PerformanceCallsCounters {
   /**
    */

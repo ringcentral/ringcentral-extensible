@@ -3,13 +3,9 @@ import ServiceInfo from './ServiceInfo';
 import Invitation from './Invitation';
 import End from './End';
 import { RestRequestConfig } from '../../../../../Rest';
-import {
-  MeetingsResource,
-  MeetingRequestResource,
-  MeetingResponseResource,
-} from '../../../../../definitions';
+import { MeetingsResource, MeetingRequestResource, MeetingResponseResource } from '../../../../../definitions';
 import Parent from '..';
-import { RingCentral } from '../../../../..';
+import RingCentral from '../../../../..';
 
 class Index {
   rc: RingCentral;
@@ -40,11 +36,7 @@ class Index {
    * User Permission: Meetings
    */
   async list(restRequestConfig?: RestRequestConfig): Promise<MeetingsResource> {
-    const r = await this.rc.get<MeetingsResource>(
-      this.path(false),
-      undefined,
-      restRequestConfig,
-    );
+    const r = await this.rc.get<MeetingsResource>(this.path(false), undefined, restRequestConfig);
     return r.data;
   }
 
@@ -56,16 +48,8 @@ class Index {
    * App Permission: Meetings
    * User Permission: Meetings
    */
-  async post(
-    meetingRequestResource: MeetingRequestResource,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<MeetingResponseResource> {
-    const r = await this.rc.post<MeetingResponseResource>(
-      this.path(false),
-      meetingRequestResource,
-      undefined,
-      restRequestConfig,
-    );
+  async post(meetingRequestResource: MeetingRequestResource, restRequestConfig?: RestRequestConfig): Promise<MeetingResponseResource> {
+    const r = await this.rc.post<MeetingResponseResource>(this.path(false), meetingRequestResource, undefined, restRequestConfig);
     return r.data;
   }
 
@@ -77,17 +61,11 @@ class Index {
    * App Permission: Meetings
    * User Permission: Meetings
    */
-  async get(
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<MeetingResponseResource> {
+  async get(restRequestConfig?: RestRequestConfig): Promise<MeetingResponseResource> {
     if (this.meetingId === null) {
       throw new Error('meetingId must be specified.');
     }
-    const r = await this.rc.get<MeetingResponseResource>(
-      this.path(),
-      undefined,
-      restRequestConfig,
-    );
+    const r = await this.rc.get<MeetingResponseResource>(this.path(), undefined, restRequestConfig);
     return r.data;
   }
 
@@ -99,19 +77,11 @@ class Index {
    * App Permission: Meetings
    * User Permission: Meetings
    */
-  async put(
-    meetingRequestResource: MeetingRequestResource,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<MeetingResponseResource> {
+  async put(meetingRequestResource: MeetingRequestResource, restRequestConfig?: RestRequestConfig): Promise<MeetingResponseResource> {
     if (this.meetingId === null) {
       throw new Error('meetingId must be specified.');
     }
-    const r = await this.rc.put<MeetingResponseResource>(
-      this.path(),
-      meetingRequestResource,
-      undefined,
-      restRequestConfig,
-    );
+    const r = await this.rc.put<MeetingResponseResource>(this.path(), meetingRequestResource, undefined, restRequestConfig);
     return r.data;
   }
 
@@ -127,11 +97,7 @@ class Index {
     if (this.meetingId === null) {
       throw new Error('meetingId must be specified.');
     }
-    const r = await this.rc.delete<string>(
-      this.path(),
-      undefined,
-      restRequestConfig,
-    );
+    const r = await this.rc.delete<string>(this.path(), undefined, restRequestConfig);
     return r.data;
   }
 

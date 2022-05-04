@@ -1,6 +1,6 @@
 /**
  * Query parameters for operation deleteMessageByFilter
- */
+*/
 class DeleteMessageByFilterParameters {
   /**
    */
@@ -16,6 +16,6 @@ class DeleteMessageByFilterParameters {
    * Type of messages to be deleted
    * Default: All
    */
-  type?: 'Fax' | 'SMS' | 'VoiceMail' | 'Pager' | 'Text' | 'All';
+  type?: ('Fax' | 'SMS' | 'VoiceMail' | 'Pager' | 'Text' | 'All');
 }
 export default DeleteMessageByFilterParameters;

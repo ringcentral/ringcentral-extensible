@@ -1,7 +1,7 @@
 import { RestRequestConfig } from '../../../../../Rest';
 import { GlipCompleteTask } from '../../../../../definitions';
 import Parent from '..';
-import { RingCentral } from '../../../../..';
+import RingCentral from '../../../../..';
 
 class Index {
   rc: RingCentral;
@@ -23,16 +23,8 @@ class Index {
    * Endpoint: /restapi/{apiVersion}/glip/tasks/{taskId}/complete
    * Rate Limit Group: Medium
    */
-  async post(
-    glipCompleteTask: GlipCompleteTask,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<string> {
-    const r = await this.rc.post<string>(
-      this.path(),
-      glipCompleteTask,
-      undefined,
-      restRequestConfig,
-    );
+  async post(glipCompleteTask: GlipCompleteTask, restRequestConfig?: RestRequestConfig): Promise<string> {
+    const r = await this.rc.post<string>(this.path(), glipCompleteTask, undefined, restRequestConfig);
     return r.data;
   }
 }

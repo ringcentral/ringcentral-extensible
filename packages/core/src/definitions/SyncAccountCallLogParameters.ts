@@ -1,12 +1,12 @@
 /**
  * Query parameters for operation syncAccountCallLog
- */
+*/
 class SyncAccountCallLogParameters {
   /**
    * Type of synchronization.
    * Default: FSync
    */
-  syncType?: 'FSync' | 'ISync';
+  syncType?: ('FSync' | 'ISync');
 
   /**
    * Value of syncToken property of last sync request response
@@ -33,7 +33,7 @@ class SyncAccountCallLogParameters {
    * View of call records. The same view parameter specified for FSync will be applied for ISync, the view cannot be changed for ISync
    * Default: Simple
    */
-  view?: 'Simple' | 'Detailed';
+  view?: ('Simple' | 'Detailed');
 
   /**
    * Supported for ISync. If 'True' then deleted call records are returned

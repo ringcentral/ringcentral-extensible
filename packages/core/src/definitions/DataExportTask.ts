@@ -24,7 +24,7 @@ class DataExportTask {
   /**
    * Task status
    */
-  status?: 'Accepted' | 'InProgress' | 'Completed' | 'Failed' | 'Expired';
+  status?: ('Accepted' | 'InProgress' | 'Completed' | 'Failed' | 'Expired');
 
   /**
    */

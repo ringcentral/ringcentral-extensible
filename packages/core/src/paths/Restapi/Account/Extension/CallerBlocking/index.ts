@@ -1,11 +1,8 @@
 import PhoneNumbers from './PhoneNumbers';
 import { RestRequestConfig } from '../../../../../Rest';
-import {
-  CallerBlockingSettings,
-  CallerBlockingSettingsUpdate,
-} from '../../../../../definitions';
+import { CallerBlockingSettings, CallerBlockingSettingsUpdate } from '../../../../../definitions';
 import Parent from '..';
-import { RingCentral } from '../../../../..';
+import RingCentral from '../../../../..';
 
 class Index {
   rc: RingCentral;
@@ -29,14 +26,8 @@ class Index {
    * App Permission: ReadAccounts
    * User Permission: ReadBlockedNumbers
    */
-  async get(
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<CallerBlockingSettings> {
-    const r = await this.rc.get<CallerBlockingSettings>(
-      this.path(),
-      undefined,
-      restRequestConfig,
-    );
+  async get(restRequestConfig?: RestRequestConfig): Promise<CallerBlockingSettings> {
+    const r = await this.rc.get<CallerBlockingSettings>(this.path(), undefined, restRequestConfig);
     return r.data;
   }
 
@@ -48,20 +39,12 @@ class Index {
    * App Permission: EditExtensions
    * User Permission: EditBlockedNumbers
    */
-  async put(
-    callerBlockingSettingsUpdate: CallerBlockingSettingsUpdate,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<CallerBlockingSettings> {
-    const r = await this.rc.put<CallerBlockingSettings>(
-      this.path(),
-      callerBlockingSettingsUpdate,
-      undefined,
-      restRequestConfig,
-    );
+  async put(callerBlockingSettingsUpdate: CallerBlockingSettingsUpdate, restRequestConfig?: RestRequestConfig): Promise<CallerBlockingSettings> {
+    const r = await this.rc.put<CallerBlockingSettings>(this.path(), callerBlockingSettingsUpdate, undefined, restRequestConfig);
     return r.data;
   }
 
-  phoneNumbers(blockedNumberId: string | null = null): PhoneNumbers {
+  phoneNumbers(blockedNumberId: (string | null) = null): PhoneNumbers {
     return new PhoneNumbers(this, blockedNumberId);
   }
 }

@@ -1,10 +1,7 @@
 import { RestRequestConfig } from '../../../../../Rest';
-import {
-  CallQueuePresence,
-  CallQueueUpdatePresence,
-} from '../../../../../definitions';
+import { CallQueuePresence, CallQueueUpdatePresence } from '../../../../../definitions';
 import Parent from '..';
-import { RingCentral } from '../../../../..';
+import RingCentral from '../../../../..';
 
 class Index {
   rc: RingCentral;
@@ -28,11 +25,7 @@ class Index {
    * App Permission: ReadPresence
    */
   async get(restRequestConfig?: RestRequestConfig): Promise<CallQueuePresence> {
-    const r = await this.rc.get<CallQueuePresence>(
-      this.path(),
-      undefined,
-      restRequestConfig,
-    );
+    const r = await this.rc.get<CallQueuePresence>(this.path(), undefined, restRequestConfig);
     return r.data;
   }
 
@@ -43,16 +36,8 @@ class Index {
    * Rate Limit Group: Medium
    * App Permission: EditPresence
    */
-  async put(
-    callQueueUpdatePresence: CallQueueUpdatePresence,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<CallQueuePresence> {
-    const r = await this.rc.put<CallQueuePresence>(
-      this.path(),
-      callQueueUpdatePresence,
-      undefined,
-      restRequestConfig,
-    );
+  async put(callQueueUpdatePresence: CallQueueUpdatePresence, restRequestConfig?: RestRequestConfig): Promise<CallQueuePresence> {
+    const r = await this.rc.put<CallQueuePresence>(this.path(), callQueueUpdatePresence, undefined, restRequestConfig);
     return r.data;
   }
 }

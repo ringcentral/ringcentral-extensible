@@ -1,12 +1,5 @@
 import {
-  BrandInfo,
-  ContractedCountryInfo,
-  ServicePlanInfo,
-  TargetServicePlanInfo,
-  BillingPlanInfo,
-  ServiceFeatureInfo,
-  AccountLimits,
-  PackageInfo,
+  BrandInfo, ContractedCountryInfo, ServicePlanInfo, TargetServicePlanInfo, BillingPlanInfo, ServiceFeatureInfo, AccountLimits, PackageInfo,
 } from './index';
 
 class GetServiceInfoResponse {

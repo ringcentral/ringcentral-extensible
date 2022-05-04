@@ -1,8 +1,4 @@
-import {
-  GetCountryInfoDictionaryResponse,
-  ProvisioningNavigationInfo,
-  ProvisioningPagingInfo,
-} from './index';
+import { GetCountryInfoDictionaryResponse, ProvisioningNavigationInfo, ProvisioningPagingInfo } from './index';
 
 class GetCountryListResponse {
   /**

@@ -1,10 +1,5 @@
 import {
-  ContactInfoCreationRequest,
-  CustomFieldInfo,
-  ReferenceInfo,
-  RegionalSettings,
-  SiteInfo,
-  ExtensionStatusInfo,
+  ContactInfoCreationRequest, CustomFieldInfo, ReferenceInfo, RegionalSettings, SiteInfo, ExtensionStatusInfo,
 } from './index';
 
 class ExtensionCreationRequest {
@@ -49,7 +44,7 @@ class ExtensionCreationRequest {
    * Specifies extension configuration wizard state (web service setup).
    * Default: NotStarted
    */
-  setupWizardState?: 'NotStarted' | 'Incomplete' | 'Completed';
+  setupWizardState?: ('NotStarted' | 'Incomplete' | 'Completed');
 
   /**
    */
@@ -58,7 +53,7 @@ class ExtensionCreationRequest {
   /**
    * Extension current state
    */
-  status?: 'Enabled' | 'Disabled' | 'NotActivated' | 'Unassigned' | 'Frozen';
+  status?: ('Enabled' | 'Disabled' | 'NotActivated' | 'Unassigned' | 'Frozen');
 
   /**
    */
@@ -67,17 +62,7 @@ class ExtensionCreationRequest {
   /**
    * Extension type. Please note that legacy 'Department' extension type corresponds to 'Call Queue' extensions in modern RingCentral product terminology
    */
-  type?:
-  | 'User'
-  | 'VirtualUser'
-  | 'DigitalUser'
-  | 'Department'
-  | 'Announcement'
-  | 'Voicemail'
-  | 'SharedLinesGroup'
-  | 'PagingOnly'
-  | 'ParkLocation'
-  | 'Limited';
+  type?: ('User' | 'VirtualUser' | 'DigitalUser' | 'Department' | 'Announcement' | 'Voicemail' | 'SharedLinesGroup' | 'PagingOnly' | 'ParkLocation' | 'Limited');
 
   /**
    * Hides extension from showing in company directory. Supported for extensions of User type only. For unassigned extensions the value is set to 'True' by default. For assigned extensions the value is set to 'False' by default

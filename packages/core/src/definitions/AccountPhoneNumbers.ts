@@ -1,8 +1,4 @@
-import {
-  CompanyPhoneNumberInfo,
-  ProvisioningNavigationInfo,
-  ProvisioningPagingInfo,
-} from './index';
+import { CompanyPhoneNumberInfo, ProvisioningNavigationInfo, ProvisioningPagingInfo } from './index';
 
 class AccountPhoneNumbers {
   /**

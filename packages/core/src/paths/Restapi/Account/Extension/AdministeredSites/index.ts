@@ -1,10 +1,7 @@
 import { RestRequestConfig } from '../../../../../Rest';
-import {
-  BusinessSiteCollectionRequest,
-  BusinessSiteCollectionResource,
-} from '../../../../../definitions';
+import { BusinessSiteCollectionRequest, BusinessSiteCollectionResource } from '../../../../../definitions';
 import Parent from '..';
-import { RingCentral } from '../../../../..';
+import RingCentral from '../../../../..';
 
 class Index {
   rc: RingCentral;
@@ -29,11 +26,7 @@ class Index {
    * User Permission: ReadExtensions
    */
   async get(restRequestConfig?: RestRequestConfig): Promise<string> {
-    const r = await this.rc.get<string>(
-      this.path(),
-      undefined,
-      restRequestConfig,
-    );
+    const r = await this.rc.get<string>(this.path(), undefined, restRequestConfig);
     return r.data;
   }
 
@@ -45,16 +38,8 @@ class Index {
    * App Permission: EditAccounts
    * User Permission: EditAssignedRoles
    */
-  async put(
-    businessSiteCollectionRequest: BusinessSiteCollectionRequest,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<BusinessSiteCollectionResource> {
-    const r = await this.rc.put<BusinessSiteCollectionResource>(
-      this.path(),
-      businessSiteCollectionRequest,
-      undefined,
-      restRequestConfig,
-    );
+  async put(businessSiteCollectionRequest: BusinessSiteCollectionRequest, restRequestConfig?: RestRequestConfig): Promise<BusinessSiteCollectionResource> {
+    const r = await this.rc.put<BusinessSiteCollectionResource>(this.path(), businessSiteCollectionRequest, undefined, restRequestConfig);
     return r.data;
   }
 }

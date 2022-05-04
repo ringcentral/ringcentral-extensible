@@ -1,6 +1,6 @@
 /**
  * Meeting recording settings locked on account level
- */
+*/
 class UserMeetingRecordingSetting {
   /**
    * Allows hosts and participants to record a meeting to a local file
@@ -41,7 +41,7 @@ class UserMeetingRecordingSetting {
    * Automatical recording (local/cloud/none) of meetings as they start
    * Default: local
    */
-  autoRecording?: 'local' | 'cloud' | 'none';
+  autoRecording?: ('local' | 'cloud' | 'none');
 
   /**
    * Automatical deletion of cloud recordings

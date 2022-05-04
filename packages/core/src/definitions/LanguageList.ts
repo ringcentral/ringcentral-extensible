@@ -1,8 +1,4 @@
-import {
-  LanguageInfo,
-  ProvisioningNavigationInfo,
-  ProvisioningPagingInfo,
-} from './index';
+import { LanguageInfo, ProvisioningNavigationInfo, ProvisioningPagingInfo } from './index';
 
 class LanguageList {
   /**

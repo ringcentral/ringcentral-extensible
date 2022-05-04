@@ -1,11 +1,7 @@
 import { RestRequestConfig } from '../../../../../Rest';
-import {
-  ListA2PSMSParameters,
-  MessageListResponse,
-  MessageDetailsResponse,
-} from '../../../../../definitions';
+import { ListA2PSMSParameters, MessageListResponse, MessageDetailsResponse } from '../../../../../definitions';
 import Parent from '..';
-import { RingCentral } from '../../../../..';
+import RingCentral from '../../../../..';
 
 class Index {
   rc: RingCentral;
@@ -34,15 +30,8 @@ class Index {
    * Rate Limit Group: Light
    * App Permission: A2PSMS
    */
-  async list(
-    queryParams?: ListA2PSMSParameters,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<MessageListResponse> {
-    const r = await this.rc.get<MessageListResponse>(
-      this.path(false),
-      queryParams,
-      restRequestConfig,
-    );
+  async list(queryParams?: ListA2PSMSParameters, restRequestConfig?: RestRequestConfig): Promise<MessageListResponse> {
+    const r = await this.rc.get<MessageListResponse>(this.path(false), queryParams, restRequestConfig);
     return r.data;
   }
 
@@ -53,17 +42,11 @@ class Index {
    * Rate Limit Group: Light
    * App Permission: A2PSMS
    */
-  async get(
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<MessageDetailsResponse> {
+  async get(restRequestConfig?: RestRequestConfig): Promise<MessageDetailsResponse> {
     if (this.messageId === null) {
       throw new Error('messageId must be specified.');
     }
-    const r = await this.rc.get<MessageDetailsResponse>(
-      this.path(),
-      undefined,
-      restRequestConfig,
-    );
+    const r = await this.rc.get<MessageDetailsResponse>(this.path(), undefined, restRequestConfig);
     return r.data;
   }
 }

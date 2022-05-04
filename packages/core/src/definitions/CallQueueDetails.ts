@@ -19,7 +19,7 @@ class CallQueueDetails {
   /**
    * Call queue status
    */
-  status?: 'Enabled' | 'Disabled' | 'NotActivated';
+  status?: ('Enabled' | 'Disabled' | 'NotActivated');
 
   /**
    */

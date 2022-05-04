@@ -1,10 +1,7 @@
 import { RestRequestConfig } from '../../../../../../Rest';
-import {
-  OptOutBulkAssignRequest,
-  OptOutBulkAssignResponse,
-} from '../../../../../../definitions';
+import { OptOutBulkAssignRequest, OptOutBulkAssignResponse } from '../../../../../../definitions';
 import Parent from '..';
-import { RingCentral } from '../../../../../..';
+import RingCentral from '../../../../../..';
 
 class Index {
   rc: RingCentral;
@@ -27,16 +24,8 @@ class Index {
    * Rate Limit Group: Light
    * App Permission: A2PSMS
    */
-  async post(
-    optOutBulkAssignRequest: OptOutBulkAssignRequest,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<OptOutBulkAssignResponse> {
-    const r = await this.rc.post<OptOutBulkAssignResponse>(
-      this.path(),
-      optOutBulkAssignRequest,
-      undefined,
-      restRequestConfig,
-    );
+  async post(optOutBulkAssignRequest: OptOutBulkAssignRequest, restRequestConfig?: RestRequestConfig): Promise<OptOutBulkAssignResponse> {
+    const r = await this.rc.post<OptOutBulkAssignResponse>(this.path(), optOutBulkAssignRequest, undefined, restRequestConfig);
     return r.data;
   }
 }

@@ -2,7 +2,7 @@ import Conference from './Conference';
 import CallOut from './CallOut';
 import Sessions from './Sessions';
 import Parent from '..';
-import { RingCentral } from '../../../..';
+import RingCentral from '../../../..';
 
 class Index {
   rc: RingCentral;
@@ -18,7 +18,7 @@ class Index {
     return `${this.parent.path()}/telephony`;
   }
 
-  sessions(telephonySessionId: string | null = null): Sessions {
+  sessions(telephonySessionId: (string | null) = null): Sessions {
     return new Sessions(this, telephonySessionId);
   }
 

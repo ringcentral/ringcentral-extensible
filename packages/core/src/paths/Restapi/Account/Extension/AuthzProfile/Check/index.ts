@@ -1,10 +1,7 @@
 import { RestRequestConfig } from '../../../../../../Rest';
-import {
-  CheckUserPermissionParameters,
-  AuthProfileCheckResource,
-} from '../../../../../../definitions';
+import { CheckUserPermissionParameters, AuthProfileCheckResource } from '../../../../../../definitions';
 import Parent from '..';
-import { RingCentral } from '../../../../../..';
+import RingCentral from '../../../../../..';
 
 class Index {
   rc: RingCentral;
@@ -26,15 +23,8 @@ class Index {
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/authz-profile/check
    * Rate Limit Group: Light
    */
-  async get(
-    queryParams?: CheckUserPermissionParameters,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<AuthProfileCheckResource> {
-    const r = await this.rc.get<AuthProfileCheckResource>(
-      this.path(),
-      queryParams,
-      restRequestConfig,
-    );
+  async get(queryParams?: CheckUserPermissionParameters, restRequestConfig?: RestRequestConfig): Promise<AuthProfileCheckResource> {
+    const r = await this.rc.get<AuthProfileCheckResource>(this.path(), queryParams, restRequestConfig);
     return r.data;
   }
 }

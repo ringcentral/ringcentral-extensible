@@ -1,8 +1,4 @@
-import {
-  AutomaticLocationUpdatesUserInfo,
-  ProvisioningNavigationInfo,
-  ProvisioningPagingInfo,
-} from './index';
+import { AutomaticLocationUpdatesUserInfo, ProvisioningNavigationInfo, ProvisioningPagingInfo } from './index';
 
 class AutomaticLocationUpdatesUserList {
   /**

@@ -1,8 +1,4 @@
-import {
-  GrantInfo,
-  ProvisioningNavigationInfo,
-  ProvisioningPagingInfo,
-} from './index';
+import { GrantInfo, ProvisioningNavigationInfo, ProvisioningPagingInfo } from './index';
 
 class GetExtensionGrantListResponse {
   /**

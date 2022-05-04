@@ -2,13 +2,9 @@ import Publish from './Publish';
 import Unlock from './Unlock';
 import Lock from './Lock';
 import { RestRequestConfig } from '../../../../Rest';
-import {
-  GetGlipNoteInfo,
-  GlipNoteCreate,
-  GlipNoteInfo,
-} from '../../../../definitions';
+import { GetGlipNoteInfo, GlipNoteCreate, GlipNoteInfo } from '../../../../definitions';
 import Parent from '..';
-import { RingCentral } from '../../../..';
+import RingCentral from '../../../..';
 
 class Index {
   rc: RingCentral;
@@ -42,11 +38,7 @@ class Index {
     if (this.noteId === null) {
       throw new Error('noteId must be specified.');
     }
-    const r = await this.rc.get<GetGlipNoteInfo>(
-      this.path(),
-      undefined,
-      restRequestConfig,
-    );
+    const r = await this.rc.get<GetGlipNoteInfo>(this.path(), undefined, restRequestConfig);
     return r.data;
   }
 
@@ -62,11 +54,7 @@ class Index {
     if (this.noteId === null) {
       throw new Error('noteId must be specified.');
     }
-    const r = await this.rc.delete<string>(
-      this.path(),
-      undefined,
-      restRequestConfig,
-    );
+    const r = await this.rc.delete<string>(this.path(), undefined, restRequestConfig);
     return r.data;
   }
 
@@ -78,19 +66,11 @@ class Index {
    * App Permission: TeamMessaging
    * User Permission: UnifiedAppDesktop
    */
-  async patch(
-    glipNoteCreate: GlipNoteCreate,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<GlipNoteInfo> {
+  async patch(glipNoteCreate: GlipNoteCreate, restRequestConfig?: RestRequestConfig): Promise<GlipNoteInfo> {
     if (this.noteId === null) {
       throw new Error('noteId must be specified.');
     }
-    const r = await this.rc.patch<GlipNoteInfo>(
-      this.path(),
-      glipNoteCreate,
-      undefined,
-      restRequestConfig,
-    );
+    const r = await this.rc.patch<GlipNoteInfo>(this.path(), glipNoteCreate, undefined, restRequestConfig);
     return r.data;
   }
 

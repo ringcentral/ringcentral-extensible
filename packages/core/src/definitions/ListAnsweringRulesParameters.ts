@@ -1,16 +1,16 @@
 /**
  * Query parameters for operation listAnsweringRules
- */
+*/
 class ListAnsweringRulesParameters {
   /**
    * Filters custom call handling rules of the extension
    */
-  type?: 'Custom';
+  type?: ('Custom');
 
   /**
    * Default: Simple
    */
-  view?: 'Detailed' | 'Simple';
+  view?: ('Detailed' | 'Simple');
 
   /**
    * If true, then only active call handling rules are returned

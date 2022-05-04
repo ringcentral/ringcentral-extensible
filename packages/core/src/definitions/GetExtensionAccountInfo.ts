@@ -1,6 +1,6 @@
 /**
  * Account information
- */
+*/
 class GetExtensionAccountInfo {
   /**
    * Internal identifier of an account

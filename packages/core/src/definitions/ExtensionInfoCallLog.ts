@@ -1,6 +1,6 @@
 /**
  * Information on extension
- */
+*/
 class ExtensionInfoCallLog {
   /**
    * Internal identifier of an extension

@@ -3,7 +3,7 @@ import { ActionCardBody } from './index';
 class ActionAdaptiveCardInfo {
   /**
    */
-  type?: 'AdaptiveCard';
+  type?: ('AdaptiveCard');
 
   /**
    */

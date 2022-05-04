@@ -1,14 +1,9 @@
 import { RestRequestConfig } from '../../../../../../Rest';
 import {
-  ListContactsParameters,
-  ContactList,
-  PersonalContactRequest,
-  CreateContactParameters,
-  PersonalContactResource,
-  UpdateContactParameters,
+  ListContactsParameters, ContactList, PersonalContactRequest, CreateContactParameters, PersonalContactResource, UpdateContactParameters,
 } from '../../../../../../definitions';
 import Parent from '..';
-import { RingCentral } from '../../../../../..';
+import RingCentral from '../../../../../..';
 
 class Index {
   rc: RingCentral;
@@ -38,15 +33,8 @@ class Index {
    * App Permission: ReadContacts
    * User Permission: ReadPersonalContacts
    */
-  async list(
-    queryParams?: ListContactsParameters,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<ContactList> {
-    const r = await this.rc.get<ContactList>(
-      this.path(false),
-      queryParams,
-      restRequestConfig,
-    );
+  async list(queryParams?: ListContactsParameters, restRequestConfig?: RestRequestConfig): Promise<ContactList> {
+    const r = await this.rc.get<ContactList>(this.path(false), queryParams, restRequestConfig);
     return r.data;
   }
 
@@ -58,17 +46,8 @@ class Index {
    * App Permission: Contacts
    * User Permission: EditPersonalContacts
    */
-  async post(
-    personalContactRequest: PersonalContactRequest,
-    queryParams?: CreateContactParameters,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<PersonalContactResource> {
-    const r = await this.rc.post<PersonalContactResource>(
-      this.path(false),
-      personalContactRequest,
-      queryParams,
-      restRequestConfig,
-    );
+  async post(personalContactRequest: PersonalContactRequest, queryParams?: CreateContactParameters, restRequestConfig?: RestRequestConfig): Promise<PersonalContactResource> {
+    const r = await this.rc.post<PersonalContactResource>(this.path(false), personalContactRequest, queryParams, restRequestConfig);
     return r.data;
   }
 
@@ -80,17 +59,11 @@ class Index {
    * App Permission: ReadContacts
    * User Permission: ReadPersonalContacts
    */
-  async get(
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<PersonalContactResource> {
+  async get(restRequestConfig?: RestRequestConfig): Promise<PersonalContactResource> {
     if (this.contactId === null) {
       throw new Error('contactId must be specified.');
     }
-    const r = await this.rc.get<PersonalContactResource>(
-      this.path(),
-      undefined,
-      restRequestConfig,
-    );
+    const r = await this.rc.get<PersonalContactResource>(this.path(), undefined, restRequestConfig);
     return r.data;
   }
 
@@ -102,20 +75,11 @@ class Index {
    * App Permission: Contacts
    * User Permission: EditPersonalContacts
    */
-  async put(
-    personalContactRequest: PersonalContactRequest,
-    queryParams?: UpdateContactParameters,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<PersonalContactResource> {
+  async put(personalContactRequest: PersonalContactRequest, queryParams?: UpdateContactParameters, restRequestConfig?: RestRequestConfig): Promise<PersonalContactResource> {
     if (this.contactId === null) {
       throw new Error('contactId must be specified.');
     }
-    const r = await this.rc.put<PersonalContactResource>(
-      this.path(),
-      personalContactRequest,
-      queryParams,
-      restRequestConfig,
-    );
+    const r = await this.rc.put<PersonalContactResource>(this.path(), personalContactRequest, queryParams, restRequestConfig);
     return r.data;
   }
 
@@ -131,11 +95,7 @@ class Index {
     if (this.contactId === null) {
       throw new Error('contactId must be specified.');
     }
-    const r = await this.rc.delete<string>(
-      this.path(),
-      undefined,
-      restRequestConfig,
-    );
+    const r = await this.rc.delete<string>(this.path(), undefined, restRequestConfig);
     return r.data;
   }
 }

@@ -1,6 +1,6 @@
 /**
  * Query parameters for operation listPermissions
- */
+*/
 class ListPermissionsParameters {
   /**
    * Default: 1

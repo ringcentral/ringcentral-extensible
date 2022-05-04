@@ -7,7 +7,7 @@ class TaskAttachment {
   /**
    * Attachment type (currently only `File` value is supported).
    */
-  type?: 'File';
+  type?: ('File');
 
   /**
    * Name of the attached file (including extension name).

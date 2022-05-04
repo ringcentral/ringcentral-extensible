@@ -1,8 +1,4 @@
-import {
-  GetMessageInfoResponse,
-  MessagingNavigationInfo,
-  MessagingPagingInfo,
-} from './index';
+import { GetMessageInfoResponse, MessagingNavigationInfo, MessagingPagingInfo } from './index';
 
 class GetMessageList {
   /**

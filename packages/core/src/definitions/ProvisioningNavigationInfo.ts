@@ -2,7 +2,7 @@ import { ProvisioningNavigationInfoUri } from './index';
 
 /**
  * Information on navigation
- */
+*/
 class ProvisioningNavigationInfo {
   /**
    */

@@ -1,6 +1,6 @@
 /**
  * Information on the extension, to which the phone number is assigned. Returned only for the request of Account phone number list
- */
+*/
 class DeviceProvisioningExtensionInfo {
   /**
    * Internal identifier of an extension

@@ -1,10 +1,7 @@
 import { RestRequestConfig } from '../../../../../Rest';
-import {
-  ExtensionCallerIdInfo,
-  ExtensionCallerIdInfoRequest,
-} from '../../../../../definitions';
+import { ExtensionCallerIdInfo, ExtensionCallerIdInfoRequest } from '../../../../../definitions';
 import Parent from '..';
-import { RingCentral } from '../../../../..';
+import RingCentral from '../../../../..';
 
 class Index {
   rc: RingCentral;
@@ -28,14 +25,8 @@ class Index {
    * App Permission: ReadAccounts
    * User Permission: ReadCallerIDSettings
    */
-  async get(
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<ExtensionCallerIdInfo> {
-    const r = await this.rc.get<ExtensionCallerIdInfo>(
-      this.path(),
-      undefined,
-      restRequestConfig,
-    );
+  async get(restRequestConfig?: RestRequestConfig): Promise<ExtensionCallerIdInfo> {
+    const r = await this.rc.get<ExtensionCallerIdInfo>(this.path(), undefined, restRequestConfig);
     return r.data;
   }
 
@@ -47,16 +38,8 @@ class Index {
    * App Permission: EditExtensions
    * User Permission: EditCallerIDSettings
    */
-  async put(
-    extensionCallerIdInfoRequest: ExtensionCallerIdInfoRequest,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<ExtensionCallerIdInfo> {
-    const r = await this.rc.put<ExtensionCallerIdInfo>(
-      this.path(),
-      extensionCallerIdInfoRequest,
-      undefined,
-      restRequestConfig,
-    );
+  async put(extensionCallerIdInfoRequest: ExtensionCallerIdInfoRequest, restRequestConfig?: RestRequestConfig): Promise<ExtensionCallerIdInfo> {
+    const r = await this.rc.put<ExtensionCallerIdInfo>(this.path(), extensionCallerIdInfoRequest, undefined, restRequestConfig);
     return r.data;
   }
 }

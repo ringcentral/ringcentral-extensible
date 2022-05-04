@@ -3,13 +3,7 @@ import { AutomaticLocationUpdatesPhoneNumberInfo } from './index';
 class AutomaticLocationUpdatesPhoneLine {
   /**
    */
-  lineType?:
-  | 'Unknown'
-  | 'Standalone'
-  | 'StandaloneFree'
-  | 'BlaPrimary'
-  | 'BlaSecondary'
-  | 'BLF';
+  lineType?: ('Unknown' | 'Standalone' | 'StandaloneFree' | 'BlaPrimary' | 'BlaSecondary' | 'BLF');
 
   /**
    */

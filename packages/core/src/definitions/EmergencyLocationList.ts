@@ -1,8 +1,4 @@
-import {
-  EmergencyLocationInfo,
-  ProvisioningNavigationInfo,
-  ProvisioningPagingInfo,
-} from './index';
+import { EmergencyLocationInfo, ProvisioningNavigationInfo, ProvisioningPagingInfo } from './index';
 
 class EmergencyLocationList {
   /**

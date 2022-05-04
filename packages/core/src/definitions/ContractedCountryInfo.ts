@@ -1,6 +1,6 @@
 /**
  * Information on the contracted country of account
- */
+*/
 class ContractedCountryInfo {
   /**
    * Identifier of a contracted country

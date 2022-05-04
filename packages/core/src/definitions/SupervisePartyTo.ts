@@ -1,6 +1,6 @@
 /**
  * Information about a call party that is monitored
- */
+*/
 class SupervisePartyTo {
   /**
    * Phone number of a party

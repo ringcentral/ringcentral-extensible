@@ -2,7 +2,7 @@ import { ContactBusinessAddressInfo, PronouncedNameInfo } from './index';
 
 /**
  * Contact detailed information
- */
+*/
 class ContactInfo {
   /**
    * For User extension type only. Extension user first name

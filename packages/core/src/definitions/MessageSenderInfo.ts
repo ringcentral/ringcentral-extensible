@@ -1,6 +1,6 @@
 /**
  * Sender information
- */
+*/
 class MessageSenderInfo {
   /**
    */

@@ -1,7 +1,7 @@
 import { RestRequestConfig } from '../../../../../../Rest';
 import { PublicMeetingInvitationResponse } from '../../../../../../definitions';
 import Parent from '..';
-import { RingCentral } from '../../../../../..';
+import RingCentral from '../../../../../..';
 
 class Index {
   rc: RingCentral;
@@ -25,14 +25,8 @@ class Index {
    * App Permission: Meetings
    * User Permission: Meetings
    */
-  async get(
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<PublicMeetingInvitationResponse> {
-    const r = await this.rc.get<PublicMeetingInvitationResponse>(
-      this.path(),
-      undefined,
-      restRequestConfig,
-    );
+  async get(restRequestConfig?: RestRequestConfig): Promise<PublicMeetingInvitationResponse> {
+    const r = await this.rc.get<PublicMeetingInvitationResponse>(this.path(), undefined, restRequestConfig);
     return r.data;
   }
 }

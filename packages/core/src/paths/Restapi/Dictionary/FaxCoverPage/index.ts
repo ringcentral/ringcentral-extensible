@@ -1,10 +1,7 @@
 import { RestRequestConfig } from '../../../../Rest';
-import {
-  ListFaxCoverPagesParameters,
-  ListFaxCoverPagesResponse,
-} from '../../../../definitions';
+import { ListFaxCoverPagesParameters, ListFaxCoverPagesResponse } from '../../../../definitions';
 import Parent from '..';
-import { RingCentral } from '../../../..';
+import RingCentral from '../../../..';
 
 class Index {
   rc: RingCentral;
@@ -26,15 +23,8 @@ class Index {
    * Endpoint: /restapi/{apiVersion}/dictionary/fax-cover-page
    * Rate Limit Group: Light
    */
-  async get(
-    queryParams?: ListFaxCoverPagesParameters,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<ListFaxCoverPagesResponse> {
-    const r = await this.rc.get<ListFaxCoverPagesResponse>(
-      this.path(),
-      queryParams,
-      restRequestConfig,
-    );
+  async get(queryParams?: ListFaxCoverPagesParameters, restRequestConfig?: RestRequestConfig): Promise<ListFaxCoverPagesResponse> {
+    const r = await this.rc.get<ListFaxCoverPagesResponse>(this.path(), queryParams, restRequestConfig);
     return r.data;
   }
 }

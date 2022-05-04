@@ -1,8 +1,4 @@
-import {
-  MeetingResponseResource,
-  MeetingsPagingInfo,
-  MeetingsNavigationInfo,
-} from './index';
+import { MeetingResponseResource, MeetingsPagingInfo, MeetingsNavigationInfo } from './index';
 
 class MeetingsResource {
   /**

@@ -1,10 +1,5 @@
 import {
-  UserAddress,
-  Email,
-  Name,
-  PhoneNumber,
-  Photo,
-  EnterpriseUser,
+  UserAddress, Email, Name, PhoneNumber, Photo, EnterpriseUser,
 } from './index';
 
 class CreateUser {
@@ -43,7 +38,7 @@ class CreateUser {
   /**
    * Required
    */
-  schemas?: 'urn:ietf:params:scim:schemas:core:2.0:User'[];
+  schemas?: ('urn:ietf:params:scim:schemas:core:2.0:User')[];
 
   /**
    */

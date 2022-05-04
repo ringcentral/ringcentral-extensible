@@ -1,7 +1,7 @@
 import { RestRequestConfig } from '../../../../../Rest';
 import { FederationResource } from '../../../../../definitions';
 import Parent from '..';
-import { RingCentral } from '../../../../..';
+import RingCentral from '../../../../..';
 
 class Index {
   rc: RingCentral;
@@ -25,14 +25,8 @@ class Index {
    * App Permission: ReadAccounts
    * User Permission: ReadCompanyInfo
    */
-  async get(
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<FederationResource> {
-    const r = await this.rc.get<FederationResource>(
-      this.path(),
-      undefined,
-      restRequestConfig,
-    );
+  async get(restRequestConfig?: RestRequestConfig): Promise<FederationResource> {
+    const r = await this.rc.get<FederationResource>(this.path(), undefined, restRequestConfig);
     return r.data;
   }
 }

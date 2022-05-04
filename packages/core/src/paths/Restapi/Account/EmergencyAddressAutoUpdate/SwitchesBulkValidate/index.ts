@@ -1,10 +1,7 @@
 import { RestRequestConfig } from '../../../../../Rest';
-import {
-  ValidateMultipleSwitchesRequest,
-  ValidateMultipleSwitchesResponse,
-} from '../../../../../definitions';
+import { ValidateMultipleSwitchesRequest, ValidateMultipleSwitchesResponse } from '../../../../../definitions';
 import Parent from '..';
-import { RingCentral } from '../../../../..';
+import RingCentral from '../../../../..';
 
 class Index {
   rc: RingCentral;
@@ -28,16 +25,8 @@ class Index {
    * App Permission: EditAccounts
    * User Permission: ConfigureEmergencyMaps
    */
-  async post(
-    validateMultipleSwitchesRequest: ValidateMultipleSwitchesRequest,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<ValidateMultipleSwitchesResponse> {
-    const r = await this.rc.post<ValidateMultipleSwitchesResponse>(
-      this.path(),
-      validateMultipleSwitchesRequest,
-      undefined,
-      restRequestConfig,
-    );
+  async post(validateMultipleSwitchesRequest: ValidateMultipleSwitchesRequest, restRequestConfig?: RestRequestConfig): Promise<ValidateMultipleSwitchesResponse> {
+    const r = await this.rc.post<ValidateMultipleSwitchesResponse>(this.path(), validateMultipleSwitchesRequest, undefined, restRequestConfig);
     return r.data;
   }
 }

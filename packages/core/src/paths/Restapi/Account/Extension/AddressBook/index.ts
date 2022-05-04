@@ -1,6 +1,6 @@
 import Contact from './Contact';
 import Parent from '..';
-import { RingCentral } from '../../../../..';
+import RingCentral from '../../../../..';
 
 class Index {
   rc: RingCentral;
@@ -16,7 +16,7 @@ class Index {
     return `${this.parent.path()}/address-book`;
   }
 
-  contact(contactId: string | null = null): Contact {
+  contact(contactId: (string | null) = null): Contact {
     return new Contact(this, contactId);
   }
 }

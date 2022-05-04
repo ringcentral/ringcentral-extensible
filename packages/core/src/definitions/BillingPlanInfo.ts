@@ -1,6 +1,6 @@
 /**
  * Information on account billing plan
- */
+*/
 class BillingPlanInfo {
   /**
    * Internal identifier of a billing plan
@@ -15,7 +15,7 @@ class BillingPlanInfo {
   /**
    * Duration period
    */
-  durationUnit?: 'Day' | 'Month' | 'Year';
+  durationUnit?: ('Day' | 'Month' | 'Year');
 
   /**
    * Number of duration units
@@ -25,7 +25,7 @@ class BillingPlanInfo {
   /**
    * Billing plan type
    */
-  type?: 'Initial' | 'Regular' | 'Suspended' | 'Trial' | 'TrialNoCC' | 'Free';
+  type?: ('Initial' | 'Regular' | 'Suspended' | 'Trial' | 'TrialNoCC' | 'Free');
 
   /**
    * Included digital lines count

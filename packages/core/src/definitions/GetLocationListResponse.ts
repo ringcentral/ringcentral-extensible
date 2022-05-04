@@ -1,8 +1,4 @@
-import {
-  LocationInfo,
-  ProvisioningNavigationInfo,
-  ProvisioningPagingInfo,
-} from './index';
+import { LocationInfo, ProvisioningNavigationInfo, ProvisioningPagingInfo } from './index';
 
 class GetLocationListResponse {
   /**

@@ -1,7 +1,7 @@
 import { RestRequestConfig } from '../../../../Rest';
 import { MessageStoreConfiguration } from '../../../../definitions';
 import Parent from '..';
-import { RingCentral } from '../../../..';
+import RingCentral from '../../../..';
 
 class Index {
   rc: RingCentral;
@@ -25,14 +25,8 @@ class Index {
    * App Permission: EditAccounts
    * User Permission: AccountAdministration
    */
-  async get(
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<MessageStoreConfiguration> {
-    const r = await this.rc.get<MessageStoreConfiguration>(
-      this.path(),
-      undefined,
-      restRequestConfig,
-    );
+  async get(restRequestConfig?: RestRequestConfig): Promise<MessageStoreConfiguration> {
+    const r = await this.rc.get<MessageStoreConfiguration>(this.path(), undefined, restRequestConfig);
     return r.data;
   }
 
@@ -44,16 +38,8 @@ class Index {
    * App Permission: EditAccounts
    * User Permission: AccountAdministration
    */
-  async put(
-    messageStoreConfiguration: MessageStoreConfiguration,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<MessageStoreConfiguration> {
-    const r = await this.rc.put<MessageStoreConfiguration>(
-      this.path(),
-      messageStoreConfiguration,
-      undefined,
-      restRequestConfig,
-    );
+  async put(messageStoreConfiguration: MessageStoreConfiguration, restRequestConfig?: RestRequestConfig): Promise<MessageStoreConfiguration> {
+    const r = await this.rc.put<MessageStoreConfiguration>(this.path(), messageStoreConfiguration, undefined, restRequestConfig);
     return r.data;
   }
 }

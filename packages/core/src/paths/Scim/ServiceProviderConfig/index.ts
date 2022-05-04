@@ -1,7 +1,7 @@
 import { RestRequestConfig } from '../../../Rest';
 import { ServiceProviderConfig } from '../../../definitions';
 import Parent from '..';
-import { RingCentral } from '../../..';
+import RingCentral from '../../..';
 
 class Index {
   rc: RingCentral;
@@ -23,14 +23,8 @@ class Index {
    * Endpoint: /scim/{version}/ServiceProviderConfig
    * Rate Limit Group: NoThrottling
    */
-  async get(
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<ServiceProviderConfig> {
-    const r = await this.rc.get<ServiceProviderConfig>(
-      this.path(),
-      undefined,
-      restRequestConfig,
-    );
+  async get(restRequestConfig?: RestRequestConfig): Promise<ServiceProviderConfig> {
+    const r = await this.rc.get<ServiceProviderConfig>(this.path(), undefined, restRequestConfig);
     return r.data;
   }
 }

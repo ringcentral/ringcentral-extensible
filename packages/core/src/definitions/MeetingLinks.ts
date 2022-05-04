@@ -1,6 +1,6 @@
 /**
  * Meeting links
- */
+*/
 class MeetingLinks {
   /**
    */

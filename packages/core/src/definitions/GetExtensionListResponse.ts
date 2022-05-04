@@ -1,8 +1,4 @@
-import {
-  GetExtensionListInfoResponse,
-  ProvisioningNavigationInfo,
-  ProvisioningPagingInfo,
-} from './index';
+import { GetExtensionListInfoResponse, ProvisioningNavigationInfo, ProvisioningPagingInfo } from './index';
 
 class GetExtensionListResponse {
   /**

@@ -1,6 +1,6 @@
 /**
  * Company business address
- */
+*/
 class BusinessAddressInfo {
   /**
    * Name of a country

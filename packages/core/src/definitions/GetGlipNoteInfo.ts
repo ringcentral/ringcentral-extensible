@@ -41,7 +41,7 @@ class GetGlipNoteInfo {
   /**
    * Note publishing status. Any note is created in 'Draft' status. After it is posted it becomes 'Active'
    */
-  status?: 'Active' | 'Draft';
+  status?: ('Active' | 'Draft');
 
   /**
    * Creation time
@@ -55,6 +55,6 @@ class GetGlipNoteInfo {
 
   /**
    */
-  type?: 'Note';
+  type?: ('Note');
 }
 export default GetGlipNoteInfo;

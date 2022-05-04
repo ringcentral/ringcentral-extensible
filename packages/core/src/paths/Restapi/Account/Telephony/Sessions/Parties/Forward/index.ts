@@ -1,7 +1,7 @@
 import { RestRequestConfig } from '../../../../../../../Rest';
 import { ForwardTarget, CallParty } from '../../../../../../../definitions';
 import Parent from '..';
-import { RingCentral } from '../../../../../../..';
+import RingCentral from '../../../../../../..';
 
 class Index {
   rc: RingCentral;
@@ -24,16 +24,8 @@ class Index {
    * Rate Limit Group: Light
    * App Permission: CallControl
    */
-  async post(
-    forwardTarget: ForwardTarget,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<CallParty> {
-    const r = await this.rc.post<CallParty>(
-      this.path(),
-      forwardTarget,
-      undefined,
-      restRequestConfig,
-    );
+  async post(forwardTarget: ForwardTarget, restRequestConfig?: RestRequestConfig): Promise<CallParty> {
+    const r = await this.rc.post<CallParty>(this.path(), forwardTarget, undefined, restRequestConfig);
     return r.data;
   }
 }

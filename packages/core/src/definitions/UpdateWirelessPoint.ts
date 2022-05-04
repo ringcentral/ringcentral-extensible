@@ -1,8 +1,4 @@
-import {
-  AutomaticLocationUpdatesSiteInfo,
-  LocationUpdatesEmergencyAddressInfoRequest,
-  ERLLocationInfo,
-} from './index';
+import { AutomaticLocationUpdatesSiteInfo, LocationUpdatesEmergencyAddressInfoRequest, ERLLocationInfo } from './index';
 
 class UpdateWirelessPoint {
   /**

@@ -1,7 +1,7 @@
 import { RestRequestConfig } from '../../../../Rest';
 import { GlipPersonInfo } from '../../../../definitions';
 import Parent from '..';
-import { RingCentral } from '../../../..';
+import RingCentral from '../../../..';
 
 class Index {
   rc: RingCentral;
@@ -35,11 +35,7 @@ class Index {
     if (this.personId === null) {
       throw new Error('personId must be specified.');
     }
-    const r = await this.rc.get<GlipPersonInfo>(
-      this.path(),
-      undefined,
-      restRequestConfig,
-    );
+    const r = await this.rc.get<GlipPersonInfo>(this.path(), undefined, restRequestConfig);
     return r.data;
   }
 }

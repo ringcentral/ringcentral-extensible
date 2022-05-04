@@ -2,7 +2,7 @@ import { Attachment } from './index';
 
 /**
  * Request body for operation createIVRPrompt
- */
+*/
 class CreateIVRPromptRequest {
   /**
    * Audio file that will be used as a prompt. Attachment cannot be empty, only audio files are supported

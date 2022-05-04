@@ -9,7 +9,7 @@ class ExtensionUpdateShortResult {
   /**
    * Extension update status
    */
-  status?: 'Fail' | 'Success';
+  status?: ('Fail' | 'Success');
 
   /**
    */

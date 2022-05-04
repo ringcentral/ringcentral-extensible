@@ -1,8 +1,4 @@
-import {
-  GlipMessageAttachmentAuthorInfo,
-  GlipMessageAttachmentFieldsInfo,
-  GlipMessageAttachmentFootnoteInfo,
-} from './index';
+import { GlipMessageAttachmentAuthorInfo, GlipMessageAttachmentFieldsInfo, GlipMessageAttachmentFootnoteInfo } from './index';
 
 class GlipMessageAttachmentInfo {
   /**
@@ -14,7 +10,7 @@ class GlipMessageAttachmentInfo {
    * Type of an attachment
    * Default: Card
    */
-  type?: 'Card' | 'Event' | 'File' | 'Note' | 'Task';
+  type?: ('Card' | 'Event' | 'File' | 'Note' | 'Task');
 
   /**
    * A string of default text that will be rendered in the case that the client does not support Interactive Messages
@@ -82,7 +78,7 @@ class GlipMessageAttachmentInfo {
   /**
    * Event recurrence settings.
    */
-  recurrence?: 'None' | 'Day' | 'Weekday' | 'Week' | 'Month' | 'Year';
+  recurrence?: ('None' | 'Day' | 'Weekday' | 'Week' | 'Month' | 'Year');
 
   /**
    * Condition of ending
@@ -98,21 +94,13 @@ class GlipMessageAttachmentInfo {
    * Iterations end datetime for periodic events
    * Default: None
    */
-  endingOn?: 'None' | 'Count' | 'Date';
+  endingOn?: ('None' | 'Count' | 'Date');
 
   /**
    * Color of Event title, including its presentation in Calendar; or the color of the side border of an interactive message of a Card
    * Default: Black
    */
-  color?:
-  | 'Black'
-  | 'Red'
-  | 'Orange'
-  | 'Yellow'
-  | 'Green'
-  | 'Blue'
-  | 'Purple'
-  | 'Magenta';
+  color?: ('Black' | 'Red' | 'Orange' | 'Yellow' | 'Green' | 'Blue' | 'Purple' | 'Magenta');
 
   /**
    * Event location

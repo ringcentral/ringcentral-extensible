@@ -1,8 +1,5 @@
 import {
-  CompanyDirectoryAccountInfo,
-  CompanyDirectoryPhoneNumberInfo,
-  ContactDirectorySiteInfo,
-  CompanyDirectoryProfileImageInfo,
+  CompanyDirectoryAccountInfo, CompanyDirectoryPhoneNumberInfo, ContactDirectorySiteInfo, CompanyDirectoryProfileImageInfo,
 } from './index';
 
 class ContactDirectoryEvent {
@@ -24,7 +21,7 @@ class ContactDirectoryEvent {
   /**
    * Status of an extension
    */
-  status?: 'Disabled' | 'Enabled' | 'NotActivated';
+  status?: ('Disabled' | 'Enabled' | 'NotActivated');
 
   /**
    * First name of an extension user

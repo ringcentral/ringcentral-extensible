@@ -15,7 +15,7 @@ class MeetingRecordingInfo {
 
   /**
    */
-  contentType?: 'video/mp4' | 'audio/m4a' | 'text/plain';
+  contentType?: ('video/mp4' | 'audio/m4a' | 'text/plain');
 
   /**
    * Format: int32
@@ -34,6 +34,6 @@ class MeetingRecordingInfo {
 
   /**
    */
-  status?: 'Completed' | 'Processing';
+  status?: ('Completed' | 'Processing');
 }
 export default MeetingRecordingInfo;

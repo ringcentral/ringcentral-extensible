@@ -1,10 +1,7 @@
 import { RestRequestConfig } from '../../../../../Rest';
-import {
-  ListDomesticCountriesParameters,
-  GetCountryListResponse,
-} from '../../../../../definitions';
+import { ListDomesticCountriesParameters, GetCountryListResponse } from '../../../../../definitions';
 import Parent from '..';
-import { RingCentral } from '../../../../..';
+import RingCentral from '../../../../..';
 
 class Index {
   rc: RingCentral;
@@ -21,9 +18,7 @@ class Index {
 
   path(withParameter = true): string {
     if (withParameter && this.contractedCountryId !== null) {
-      return `${this.parent.path()}/contracted-country/${
-        this.contractedCountryId
-      }`;
+      return `${this.parent.path()}/contracted-country/${this.contractedCountryId}`;
     }
     return `${this.parent.path()}/contracted-country`;
   }
@@ -34,18 +29,11 @@ class Index {
    * Endpoint: /restapi/{apiVersion}/dictionary/brand/{brandId}/contracted-country/{contractedCountryId}
    * Rate Limit Group: Light
    */
-  async get(
-    queryParams?: ListDomesticCountriesParameters,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<GetCountryListResponse> {
+  async get(queryParams?: ListDomesticCountriesParameters, restRequestConfig?: RestRequestConfig): Promise<GetCountryListResponse> {
     if (this.contractedCountryId === null) {
       throw new Error('contractedCountryId must be specified.');
     }
-    const r = await this.rc.get<GetCountryListResponse>(
-      this.path(),
-      queryParams,
-      restRequestConfig,
-    );
+    const r = await this.rc.get<GetCountryListResponse>(this.path(), queryParams, restRequestConfig);
     return r.data;
   }
 }

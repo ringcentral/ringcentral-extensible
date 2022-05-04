@@ -1,16 +1,10 @@
 import Content from './Content';
 import { RestRequestConfig } from '../../../../../Rest';
 import {
-  ListMessagesParameters,
-  GetMessageList,
-  DeleteMessageByFilterParameters,
-  GetMessageInfoResponse,
-  UpdateMessageRequest,
-  UpdateMessageParameters,
-  DeleteMessageParameters,
+  ListMessagesParameters, GetMessageList, DeleteMessageByFilterParameters, GetMessageInfoResponse, UpdateMessageRequest, UpdateMessageParameters, DeleteMessageParameters,
 } from '../../../../../definitions';
 import Parent from '..';
-import { RingCentral } from '../../../../..';
+import RingCentral from '../../../../..';
 
 class Index {
   rc: RingCentral;
@@ -40,15 +34,8 @@ class Index {
    * App Permission: ReadMessages
    * User Permission: ReadMessages
    */
-  async list(
-    queryParams?: ListMessagesParameters,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<GetMessageList> {
-    const r = await this.rc.get<GetMessageList>(
-      this.path(false),
-      queryParams,
-      restRequestConfig,
-    );
+  async list(queryParams?: ListMessagesParameters, restRequestConfig?: RestRequestConfig): Promise<GetMessageList> {
+    const r = await this.rc.get<GetMessageList>(this.path(false), queryParams, restRequestConfig);
     return r.data;
   }
 
@@ -60,15 +47,8 @@ class Index {
    * App Permission: EditMessages
    * User Permission: EditMessages
    */
-  async deleteAll(
-    queryParams?: DeleteMessageByFilterParameters,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<string> {
-    const r = await this.rc.delete<string>(
-      this.path(false),
-      queryParams,
-      restRequestConfig,
-    );
+  async deleteAll(queryParams?: DeleteMessageByFilterParameters, restRequestConfig?: RestRequestConfig): Promise<string> {
+    const r = await this.rc.delete<string>(this.path(false), queryParams, restRequestConfig);
     return r.data;
   }
 
@@ -80,17 +60,11 @@ class Index {
    * App Permission: ReadMessages
    * User Permission: ReadMessages
    */
-  async get(
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<GetMessageInfoResponse> {
+  async get(restRequestConfig?: RestRequestConfig): Promise<GetMessageInfoResponse> {
     if (this.messageId === null) {
       throw new Error('messageId must be specified.');
     }
-    const r = await this.rc.get<GetMessageInfoResponse>(
-      this.path(),
-      undefined,
-      restRequestConfig,
-    );
+    const r = await this.rc.get<GetMessageInfoResponse>(this.path(), undefined, restRequestConfig);
     return r.data;
   }
 
@@ -102,20 +76,11 @@ class Index {
    * App Permission: EditMessages
    * User Permission: EditMessages
    */
-  async put(
-    updateMessageRequest: UpdateMessageRequest,
-    queryParams?: UpdateMessageParameters,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<GetMessageInfoResponse> {
+  async put(updateMessageRequest: UpdateMessageRequest, queryParams?: UpdateMessageParameters, restRequestConfig?: RestRequestConfig): Promise<GetMessageInfoResponse> {
     if (this.messageId === null) {
       throw new Error('messageId must be specified.');
     }
-    const r = await this.rc.put<GetMessageInfoResponse>(
-      this.path(),
-      updateMessageRequest,
-      queryParams,
-      restRequestConfig,
-    );
+    const r = await this.rc.put<GetMessageInfoResponse>(this.path(), updateMessageRequest, queryParams, restRequestConfig);
     return r.data;
   }
 
@@ -127,22 +92,15 @@ class Index {
    * App Permission: EditMessages
    * User Permission: EditMessages
    */
-  async delete(
-    queryParams?: DeleteMessageParameters,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<string> {
+  async delete(queryParams?: DeleteMessageParameters, restRequestConfig?: RestRequestConfig): Promise<string> {
     if (this.messageId === null) {
       throw new Error('messageId must be specified.');
     }
-    const r = await this.rc.delete<string>(
-      this.path(),
-      queryParams,
-      restRequestConfig,
-    );
+    const r = await this.rc.delete<string>(this.path(), queryParams, restRequestConfig);
     return r.data;
   }
 
-  content(attachmentId: string | null = null): Content {
+  content(attachmentId: (string | null) = null): Content {
     return new Content(this, attachmentId);
   }
 }

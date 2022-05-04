@@ -1,10 +1,10 @@
 class PerformanceCallsTimersResponseOptionsCallsDurationByDirection {
   /**
    */
-  aggregationType?: 'Sum' | 'Average' | 'Max' | 'Min' | 'Percent';
+  aggregationType?: ('Sum' | 'Average' | 'Max' | 'Min' | 'Percent');
 
   /**
    */
-  aggregationInterval?: 'Hour' | 'Day' | 'Week' | 'Month';
+  aggregationInterval?: ('Hour' | 'Day' | 'Week' | 'Month');
 }
 export default PerformanceCallsTimersResponseOptionsCallsDurationByDirection;

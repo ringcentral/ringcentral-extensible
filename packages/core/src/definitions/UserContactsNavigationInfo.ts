@@ -2,7 +2,7 @@ import { UserContactsNavigationInfoUri } from './index';
 
 /**
  * Information on navigation
- */
+*/
 class UserContactsNavigationInfo {
   /**
    */

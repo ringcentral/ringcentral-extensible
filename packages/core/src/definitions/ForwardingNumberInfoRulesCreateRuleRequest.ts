@@ -7,15 +7,7 @@ class ForwardingNumberInfoRulesCreateRuleRequest {
   /**
    * Forwarding phone number type
    */
-  type?:
-  | 'Home'
-  | 'Mobile'
-  | 'Work'
-  | 'PhoneLine'
-  | 'Outage'
-  | 'Other'
-  | 'BusinessMobilePhone'
-  | 'ExternalCarrier';
+  type?: ('Home' | 'Mobile' | 'Work' | 'PhoneLine' | 'Outage' | 'Other' | 'BusinessMobilePhone' | 'ExternalCarrier');
 
   /**
    * Canonical URI of a forwarding/call flip phone number

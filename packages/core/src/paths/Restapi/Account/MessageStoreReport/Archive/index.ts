@@ -1,7 +1,7 @@
 import { RestRequestConfig } from '../../../../../Rest';
 import { MessageStoreReportArchive } from '../../../../../definitions';
 import Parent from '..';
-import { RingCentral } from '../../../../..';
+import RingCentral from '../../../../..';
 
 class Index {
   rc: RingCentral;
@@ -31,14 +31,8 @@ class Index {
    * App Permission: ReadMessages
    * User Permission: Users
    */
-  async list(
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<MessageStoreReportArchive> {
-    const r = await this.rc.get<MessageStoreReportArchive>(
-      this.path(false),
-      undefined,
-      restRequestConfig,
-    );
+  async list(restRequestConfig?: RestRequestConfig): Promise<MessageStoreReportArchive> {
+    const r = await this.rc.get<MessageStoreReportArchive>(this.path(false), undefined, restRequestConfig);
     return r.data;
   }
 
@@ -54,10 +48,7 @@ class Index {
     if (this.archiveId === null) {
       throw new Error('archiveId must be specified.');
     }
-    const r = await this.rc.get<Buffer>(this.path(), undefined, {
-      ...restRequestConfig,
-      responseType: 'arraybuffer',
-    });
+    const r = await this.rc.get<Buffer>(this.path(), undefined, { ...restRequestConfig, responseType: 'arraybuffer' });
     return r.data;
   }
 }

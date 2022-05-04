@@ -1,9 +1,5 @@
 import {
-  ExtensionCountryInfoRequest,
-  ExtensionTimezoneInfoRequest,
-  ExtensionLanguageInfoRequest,
-  ExtensionGreetingLanguageInfoRequest,
-  ExtensionFormattingLocaleInfoRequest,
+  ExtensionCountryInfoRequest, ExtensionTimezoneInfoRequest, ExtensionLanguageInfoRequest, ExtensionGreetingLanguageInfoRequest, ExtensionFormattingLocaleInfoRequest,
 } from './index';
 
 class ExtensionRegionalSettingRequest {
@@ -31,6 +27,6 @@ class ExtensionRegionalSettingRequest {
    * Time format setting
    * Default: 12h
    */
-  timeFormat?: '12h' | '24h';
+  timeFormat?: ('12h' | '24h');
 }
 export default ExtensionRegionalSettingRequest;

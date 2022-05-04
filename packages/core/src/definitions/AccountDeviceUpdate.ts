@@ -1,8 +1,5 @@
 import {
-  EmergencyServiceAddressResourceRequest,
-  DeviceEmergencyInfo,
-  DeviceUpdateExtensionInfo,
-  DeviceUpdatePhoneLinesInfo,
+  EmergencyServiceAddressResourceRequest, DeviceEmergencyInfo, DeviceUpdateExtensionInfo, DeviceUpdatePhoneLinesInfo,
 } from './index';
 
 class AccountDeviceUpdate {

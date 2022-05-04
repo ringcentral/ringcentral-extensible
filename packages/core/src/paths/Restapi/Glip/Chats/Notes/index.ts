@@ -1,12 +1,9 @@
 import { RestRequestConfig } from '../../../../../Rest';
 import {
-  ListChatNotesParameters,
-  GlipNotesInfo,
-  GlipNoteCreate,
-  GlipNoteInfo,
+  ListChatNotesParameters, GlipNotesInfo, GlipNoteCreate, GlipNoteInfo,
 } from '../../../../../definitions';
 import Parent from '..';
-import { RingCentral } from '../../../../..';
+import RingCentral from '../../../../..';
 
 class Index {
   rc: RingCentral;
@@ -30,15 +27,8 @@ class Index {
    * App Permission: TeamMessaging
    * User Permission: UnifiedAppDesktop
    */
-  async get(
-    queryParams?: ListChatNotesParameters,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<GlipNotesInfo> {
-    const r = await this.rc.get<GlipNotesInfo>(
-      this.path(),
-      queryParams,
-      restRequestConfig,
-    );
+  async get(queryParams?: ListChatNotesParameters, restRequestConfig?: RestRequestConfig): Promise<GlipNotesInfo> {
+    const r = await this.rc.get<GlipNotesInfo>(this.path(), queryParams, restRequestConfig);
     return r.data;
   }
 
@@ -50,16 +40,8 @@ class Index {
    * App Permission: TeamMessaging
    * User Permission: UnifiedAppDesktop
    */
-  async post(
-    glipNoteCreate: GlipNoteCreate,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<GlipNoteInfo> {
-    const r = await this.rc.post<GlipNoteInfo>(
-      this.path(),
-      glipNoteCreate,
-      undefined,
-      restRequestConfig,
-    );
+  async post(glipNoteCreate: GlipNoteCreate, restRequestConfig?: RestRequestConfig): Promise<GlipNoteInfo> {
+    const r = await this.rc.post<GlipNoteInfo>(this.path(), glipNoteCreate, undefined, restRequestConfig);
     return r.data;
   }
 }

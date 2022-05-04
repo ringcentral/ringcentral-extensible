@@ -1,8 +1,4 @@
-import {
-  CallRecordingExtensionInfo,
-  CallHandlingNavigationInfo,
-  CallHandlingPagingInfo,
-} from './index';
+import { CallRecordingExtensionInfo, CallHandlingNavigationInfo, CallHandlingPagingInfo } from './index';
 
 class CallRecordingExtensions {
   /**

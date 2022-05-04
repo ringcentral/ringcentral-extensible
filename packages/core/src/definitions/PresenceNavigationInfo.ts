@@ -2,7 +2,7 @@ import { PresenceNavigationInfoURI } from './index';
 
 /**
  * Information on navigation
- */
+*/
 class PresenceNavigationInfo {
   /**
    */

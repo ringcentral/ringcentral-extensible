@@ -1,11 +1,7 @@
 import { RestRequestConfig } from '../../../../Rest';
-import {
-  ListUserTemplatesParameters,
-  UserTemplates,
-  TemplateInfo,
-} from '../../../../definitions';
+import { ListUserTemplatesParameters, UserTemplates, TemplateInfo } from '../../../../definitions';
 import Parent from '..';
-import { RingCentral } from '../../../..';
+import RingCentral from '../../../..';
 
 class Index {
   rc: RingCentral;
@@ -35,15 +31,8 @@ class Index {
    * App Permission: ReadAccounts
    * User Permission: ReadCompanyInfo
    */
-  async list(
-    queryParams?: ListUserTemplatesParameters,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<UserTemplates> {
-    const r = await this.rc.get<UserTemplates>(
-      this.path(false),
-      queryParams,
-      restRequestConfig,
-    );
+  async list(queryParams?: ListUserTemplatesParameters, restRequestConfig?: RestRequestConfig): Promise<UserTemplates> {
+    const r = await this.rc.get<UserTemplates>(this.path(false), queryParams, restRequestConfig);
     return r.data;
   }
 
@@ -59,11 +48,7 @@ class Index {
     if (this.templateId === null) {
       throw new Error('templateId must be specified.');
     }
-    const r = await this.rc.get<TemplateInfo>(
-      this.path(),
-      undefined,
-      restRequestConfig,
-    );
+    const r = await this.rc.get<TemplateInfo>(this.path(), undefined, restRequestConfig);
     return r.data;
   }
 }

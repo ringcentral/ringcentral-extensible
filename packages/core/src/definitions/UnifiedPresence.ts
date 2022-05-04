@@ -1,14 +1,10 @@
-import {
-  UnifiedPresenceGlip,
-  UnifiedPresenceTelephony,
-  UnifiedPresenceMeeting,
-} from './index';
+import { UnifiedPresenceGlip, UnifiedPresenceTelephony, UnifiedPresenceMeeting } from './index';
 
 class UnifiedPresence {
   /**
    * Aggregated presence status of the user
    */
-  status?: 'Available' | 'Offline' | 'DND' | 'Busy';
+  status?: ('Available' | 'Offline' | 'DND' | 'Busy');
 
   /**
    */

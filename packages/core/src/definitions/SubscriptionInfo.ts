@@ -1,8 +1,4 @@
-import {
-  DisabledFilterInfo,
-  NotificationDeliveryMode,
-  NotificationBlacklistedData,
-} from './index';
+import { DisabledFilterInfo, NotificationDeliveryMode, NotificationBlacklistedData } from './index';
 
 class SubscriptionInfo {
   /**
@@ -39,7 +35,7 @@ class SubscriptionInfo {
   /**
    * Subscription status
    */
-  status?: 'Active' | 'Suspended' | 'Blacklisted';
+  status?: ('Active' | 'Suspended' | 'Blacklisted');
 
   /**
    * Subscription creation datetime in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format including timezone, for example 2016-03-10T18:07:52.534Z
@@ -59,7 +55,7 @@ class SubscriptionInfo {
   /**
    * Notifications transportation provider name
    */
-  transportType?: 'PubNub' | 'WebHook' | 'RC/APNS' | 'RC/GCM';
+  transportType?: ('PubNub' | 'WebHook' | 'RC/APNS' | 'RC/GCM');
 
   /**
    * Name of a certificate. Supported for 'RC/APNS' and 'RC/GCM' transport types

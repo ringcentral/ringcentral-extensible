@@ -3,7 +3,7 @@ import { AdaptiveCardInfoRequestItem } from './index';
 class AdaptiveCardInfoRequest {
   /**
    */
-  type?: 'Container';
+  type?: ('Container');
 
   /**
    */

@@ -1,8 +1,4 @@
-import {
-  PagingDeviceInfo,
-  ProvisioningNavigationInfo,
-  ProvisioningPagingInfo,
-} from './index';
+import { PagingDeviceInfo, ProvisioningNavigationInfo, ProvisioningPagingInfo } from './index';
 
 class PagingOnlyGroupDevices {
   /**

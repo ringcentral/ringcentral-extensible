@@ -1,6 +1,6 @@
 /**
  * Query parameters for operation listBlockedAllowedNumbers
- */
+*/
 class ListBlockedAllowedNumbersParameters {
   /**
    */
@@ -12,6 +12,6 @@ class ListBlockedAllowedNumbersParameters {
 
   /**
    */
-  status?: 'Blocked' | 'Allowed';
+  status?: ('Blocked' | 'Allowed');
 }
 export default ListBlockedAllowedNumbersParameters;

@@ -6,14 +6,10 @@ import Join from './Join';
 import Add from './Add';
 import { RestRequestConfig } from '../../../../Rest';
 import {
-  ListGlipTeamsParameters,
-  GlipTeamsList,
-  GlipPostTeamBody,
-  GlipTeamInfo,
-  GlipPatchTeamBody,
+  ListGlipTeamsParameters, GlipTeamsList, GlipPostTeamBody, GlipTeamInfo, GlipPatchTeamBody,
 } from '../../../../definitions';
 import Parent from '..';
-import { RingCentral } from '../../../..';
+import RingCentral from '../../../..';
 
 class Index {
   rc: RingCentral;
@@ -43,15 +39,8 @@ class Index {
    * App Permission: TeamMessaging
    * User Permission: UnifiedAppDesktop
    */
-  async list(
-    queryParams?: ListGlipTeamsParameters,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<GlipTeamsList> {
-    const r = await this.rc.get<GlipTeamsList>(
-      this.path(false),
-      queryParams,
-      restRequestConfig,
-    );
+  async list(queryParams?: ListGlipTeamsParameters, restRequestConfig?: RestRequestConfig): Promise<GlipTeamsList> {
+    const r = await this.rc.get<GlipTeamsList>(this.path(false), queryParams, restRequestConfig);
     return r.data;
   }
 
@@ -63,16 +52,8 @@ class Index {
    * App Permission: TeamMessaging
    * User Permission: UnifiedAppDesktop
    */
-  async post(
-    glipPostTeamBody: GlipPostTeamBody,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<GlipTeamInfo> {
-    const r = await this.rc.post<GlipTeamInfo>(
-      this.path(false),
-      glipPostTeamBody,
-      undefined,
-      restRequestConfig,
-    );
+  async post(glipPostTeamBody: GlipPostTeamBody, restRequestConfig?: RestRequestConfig): Promise<GlipTeamInfo> {
+    const r = await this.rc.post<GlipTeamInfo>(this.path(false), glipPostTeamBody, undefined, restRequestConfig);
     return r.data;
   }
 
@@ -88,11 +69,7 @@ class Index {
     if (this.chatId === null) {
       throw new Error('chatId must be specified.');
     }
-    const r = await this.rc.get<GlipTeamInfo>(
-      this.path(),
-      undefined,
-      restRequestConfig,
-    );
+    const r = await this.rc.get<GlipTeamInfo>(this.path(), undefined, restRequestConfig);
     return r.data;
   }
 
@@ -108,11 +85,7 @@ class Index {
     if (this.chatId === null) {
       throw new Error('chatId must be specified.');
     }
-    const r = await this.rc.delete<string>(
-      this.path(),
-      undefined,
-      restRequestConfig,
-    );
+    const r = await this.rc.delete<string>(this.path(), undefined, restRequestConfig);
     return r.data;
   }
 
@@ -124,19 +97,11 @@ class Index {
    * App Permission: TeamMessaging
    * User Permission: UnifiedAppDesktop
    */
-  async patch(
-    glipPatchTeamBody: GlipPatchTeamBody,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<GlipTeamInfo> {
+  async patch(glipPatchTeamBody: GlipPatchTeamBody, restRequestConfig?: RestRequestConfig): Promise<GlipTeamInfo> {
     if (this.chatId === null) {
       throw new Error('chatId must be specified.');
     }
-    const r = await this.rc.patch<GlipTeamInfo>(
-      this.path(),
-      glipPatchTeamBody,
-      undefined,
-      restRequestConfig,
-    );
+    const r = await this.rc.patch<GlipTeamInfo>(this.path(), glipPatchTeamBody, undefined, restRequestConfig);
     return r.data;
   }
 

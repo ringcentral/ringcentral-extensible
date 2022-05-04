@@ -1,8 +1,4 @@
-import {
-  AutomaticLocationUpdatesDeviceInfo,
-  ProvisioningNavigationInfo,
-  ProvisioningPagingInfo,
-} from './index';
+import { AutomaticLocationUpdatesDeviceInfo, ProvisioningNavigationInfo, ProvisioningPagingInfo } from './index';
 
 class ListDevicesAutomaticLocationUpdates {
   /**

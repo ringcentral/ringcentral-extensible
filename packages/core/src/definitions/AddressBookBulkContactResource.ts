@@ -2,7 +2,7 @@ import { AddressBookBulkContactAddressInfo } from './index';
 
 /**
  * Contact resource
- */
+*/
 class AddressBookBulkContactResource {
   /**
    * Email of a contact

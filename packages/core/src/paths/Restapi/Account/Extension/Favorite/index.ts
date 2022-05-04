@@ -1,10 +1,7 @@
 import { RestRequestConfig } from '../../../../../Rest';
-import {
-  FavoriteContactList,
-  FavoriteCollection,
-} from '../../../../../definitions';
+import { FavoriteContactList, FavoriteCollection } from '../../../../../definitions';
 import Parent from '..';
-import { RingCentral } from '../../../../..';
+import RingCentral from '../../../../..';
 
 class Index {
   rc: RingCentral;
@@ -28,14 +25,8 @@ class Index {
    * App Permission: ReadContacts
    * User Permission: ReadPersonalContacts
    */
-  async get(
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<FavoriteContactList> {
-    const r = await this.rc.get<FavoriteContactList>(
-      this.path(),
-      undefined,
-      restRequestConfig,
-    );
+  async get(restRequestConfig?: RestRequestConfig): Promise<FavoriteContactList> {
+    const r = await this.rc.get<FavoriteContactList>(this.path(), undefined, restRequestConfig);
     return r.data;
   }
 
@@ -47,16 +38,8 @@ class Index {
    * App Permission: Contacts
    * User Permission: EditPersonalContacts
    */
-  async put(
-    favoriteCollection: FavoriteCollection,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<FavoriteContactList> {
-    const r = await this.rc.put<FavoriteContactList>(
-      this.path(),
-      favoriteCollection,
-      undefined,
-      restRequestConfig,
-    );
+  async put(favoriteCollection: FavoriteCollection, restRequestConfig?: RestRequestConfig): Promise<FavoriteContactList> {
+    const r = await this.rc.put<FavoriteContactList>(this.path(), favoriteCollection, undefined, restRequestConfig);
     return r.data;
   }
 }

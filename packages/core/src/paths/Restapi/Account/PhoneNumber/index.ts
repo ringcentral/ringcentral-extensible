@@ -1,11 +1,7 @@
 import { RestRequestConfig } from '../../../../Rest';
-import {
-  ListAccountPhoneNumbersParameters,
-  AccountPhoneNumbers,
-  CompanyPhoneNumberInfo,
-} from '../../../../definitions';
+import { ListAccountPhoneNumbersParameters, AccountPhoneNumbers, CompanyPhoneNumberInfo } from '../../../../definitions';
 import Parent from '..';
-import { RingCentral } from '../../../..';
+import RingCentral from '../../../..';
 
 class Index {
   rc: RingCentral;
@@ -35,15 +31,8 @@ class Index {
    * App Permission: ReadAccounts
    * User Permission: ReadCompanyPhoneNumbers
    */
-  async list(
-    queryParams?: ListAccountPhoneNumbersParameters,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<AccountPhoneNumbers> {
-    const r = await this.rc.get<AccountPhoneNumbers>(
-      this.path(false),
-      queryParams,
-      restRequestConfig,
-    );
+  async list(queryParams?: ListAccountPhoneNumbersParameters, restRequestConfig?: RestRequestConfig): Promise<AccountPhoneNumbers> {
+    const r = await this.rc.get<AccountPhoneNumbers>(this.path(false), queryParams, restRequestConfig);
     return r.data;
   }
 
@@ -55,17 +44,11 @@ class Index {
    * App Permission: ReadAccounts
    * User Permission: ReadCompanyPhoneNumbers
    */
-  async get(
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<CompanyPhoneNumberInfo> {
+  async get(restRequestConfig?: RestRequestConfig): Promise<CompanyPhoneNumberInfo> {
     if (this.phoneNumberId === null) {
       throw new Error('phoneNumberId must be specified.');
     }
-    const r = await this.rc.get<CompanyPhoneNumberInfo>(
-      this.path(),
-      undefined,
-      restRequestConfig,
-    );
+    const r = await this.rc.get<CompanyPhoneNumberInfo>(this.path(), undefined, restRequestConfig);
     return r.data;
   }
 }

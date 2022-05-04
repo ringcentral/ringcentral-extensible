@@ -1,13 +1,10 @@
 import SipInfo from './SipInfo';
 import { RestRequestConfig } from '../../../../Rest';
 import {
-  ReadDeviceParameters,
-  GetDeviceInfoResponse,
-  AccountDeviceUpdate,
-  UpdateDeviceParameters,
+  ReadDeviceParameters, GetDeviceInfoResponse, AccountDeviceUpdate, UpdateDeviceParameters,
 } from '../../../../definitions';
 import Parent from '..';
-import { RingCentral } from '../../../..';
+import RingCentral from '../../../..';
 
 class Index {
   rc: RingCentral;
@@ -37,18 +34,11 @@ class Index {
    * App Permission: ReadAccounts
    * User Permission: ReadCompanyDevices
    */
-  async get(
-    queryParams?: ReadDeviceParameters,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<GetDeviceInfoResponse> {
+  async get(queryParams?: ReadDeviceParameters, restRequestConfig?: RestRequestConfig): Promise<GetDeviceInfoResponse> {
     if (this.deviceId === null) {
       throw new Error('deviceId must be specified.');
     }
-    const r = await this.rc.get<GetDeviceInfoResponse>(
-      this.path(),
-      queryParams,
-      restRequestConfig,
-    );
+    const r = await this.rc.get<GetDeviceInfoResponse>(this.path(), queryParams, restRequestConfig);
     return r.data;
   }
 
@@ -60,20 +50,11 @@ class Index {
    * App Permission: EditAccounts
    * User Permission: EditCompanyDevices
    */
-  async put(
-    accountDeviceUpdate: AccountDeviceUpdate,
-    queryParams?: UpdateDeviceParameters,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<GetDeviceInfoResponse> {
+  async put(accountDeviceUpdate: AccountDeviceUpdate, queryParams?: UpdateDeviceParameters, restRequestConfig?: RestRequestConfig): Promise<GetDeviceInfoResponse> {
     if (this.deviceId === null) {
       throw new Error('deviceId must be specified.');
     }
-    const r = await this.rc.put<GetDeviceInfoResponse>(
-      this.path(),
-      accountDeviceUpdate,
-      queryParams,
-      restRequestConfig,
-    );
+    const r = await this.rc.put<GetDeviceInfoResponse>(this.path(), accountDeviceUpdate, queryParams, restRequestConfig);
     return r.data;
   }
 

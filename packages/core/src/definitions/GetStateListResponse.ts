@@ -1,8 +1,4 @@
-import {
-  GetStateInfoResponse,
-  ProvisioningNavigationInfo,
-  ProvisioningPagingInfo,
-} from './index';
+import { GetStateInfoResponse, ProvisioningNavigationInfo, ProvisioningPagingInfo } from './index';
 
 class GetStateListResponse {
   /**

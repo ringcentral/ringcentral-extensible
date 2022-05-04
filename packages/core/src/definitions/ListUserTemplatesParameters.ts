@@ -1,10 +1,10 @@
 /**
  * Query parameters for operation listUserTemplates
- */
+*/
 class ListUserTemplatesParameters {
   /**
    */
-  type?: 'UserSettings' | 'CallHandling';
+  type?: ('UserSettings' | 'CallHandling');
 
   /**
    */

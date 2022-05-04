@@ -7,7 +7,7 @@ import Oauth from './Oauth';
 import Glip from './Glip';
 import { RestRequestConfig } from '../../Rest';
 import { GetVersionsResponse, GetVersionResponse } from '../../definitions';
-import { RingCentral } from '../..';
+import RingCentral from '../..';
 
 class Index {
   rc: RingCentral;
@@ -32,14 +32,8 @@ class Index {
    * Endpoint: /restapi
    * Rate Limit Group: NoThrottling
    */
-  async list(
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<GetVersionsResponse> {
-    const r = await this.rc.get<GetVersionsResponse>(
-      this.path(false),
-      undefined,
-      restRequestConfig,
-    );
+  async list(restRequestConfig?: RestRequestConfig): Promise<GetVersionsResponse> {
+    const r = await this.rc.get<GetVersionsResponse>(this.path(false), undefined, restRequestConfig);
     return r.data;
   }
 
@@ -49,17 +43,11 @@ class Index {
    * Endpoint: /restapi/{apiVersion}
    * Rate Limit Group: NoThrottling
    */
-  async get(
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<GetVersionResponse> {
+  async get(restRequestConfig?: RestRequestConfig): Promise<GetVersionResponse> {
     if (this.apiVersion === null) {
       throw new Error('apiVersion must be specified.');
     }
-    const r = await this.rc.get<GetVersionResponse>(
-      this.path(),
-      undefined,
-      restRequestConfig,
-    );
+    const r = await this.rc.get<GetVersionResponse>(this.path(), undefined, restRequestConfig);
     return r.data;
   }
 
@@ -71,7 +59,7 @@ class Index {
     return new Oauth(this);
   }
 
-  account(accountId: string | null = '~'): Account {
+  account(accountId: (string | null) = '~'): Account {
     return new Account(this, accountId);
   }
 
@@ -83,7 +71,7 @@ class Index {
     return new ClientInfo(this);
   }
 
-  subscription(subscriptionId: string | null = null): Subscription {
+  subscription(subscriptionId: (string | null) = null): Subscription {
     return new Subscription(this, subscriptionId);
   }
 

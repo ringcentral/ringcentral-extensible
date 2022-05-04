@@ -1,8 +1,4 @@
-import {
-  BasicExtensionInfoResource,
-  RolesRegionalSettingsResource,
-  ContactAddressInfoResource,
-} from './index';
+import { BasicExtensionInfoResource, RolesRegionalSettingsResource, ContactAddressInfoResource } from './index';
 
 class RolesBusinessSiteResource {
   /**

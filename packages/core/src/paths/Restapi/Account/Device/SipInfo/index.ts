@@ -1,7 +1,7 @@
 import { RestRequestConfig } from '../../../../../Rest';
 import { SipInfoResource } from '../../../../../definitions';
 import Parent from '..';
-import { RingCentral } from '../../../../..';
+import RingCentral from '../../../../..';
 
 class Index {
   rc: RingCentral;
@@ -26,11 +26,7 @@ class Index {
    * User Permission: ReadCompanyDevices
    */
   async get(restRequestConfig?: RestRequestConfig): Promise<SipInfoResource> {
-    const r = await this.rc.get<SipInfoResource>(
-      this.path(),
-      undefined,
-      restRequestConfig,
-    );
+    const r = await this.rc.get<SipInfoResource>(this.path(), undefined, restRequestConfig);
     return r.data;
   }
 }

@@ -1,6 +1,6 @@
 /**
  * Sender of a pager message.
- */
+*/
 class PagerCallerInfoRequest {
   /**
    * Extension identifier

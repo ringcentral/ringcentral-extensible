@@ -1,11 +1,7 @@
 import { RestRequestConfig } from '../../../../../Rest';
-import {
-  ReadConferencingSettingsParameters,
-  GetConferencingInfoResponse,
-  UpdateConferencingInfoRequest,
-} from '../../../../../definitions';
+import { ReadConferencingSettingsParameters, GetConferencingInfoResponse, UpdateConferencingInfoRequest } from '../../../../../definitions';
 import Parent from '..';
-import { RingCentral } from '../../../../..';
+import RingCentral from '../../../../..';
 
 class Index {
   rc: RingCentral;
@@ -29,15 +25,8 @@ class Index {
    * App Permission: ReadAccounts
    * User Permission: OrganizeConference
    */
-  async get(
-    queryParams?: ReadConferencingSettingsParameters,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<GetConferencingInfoResponse> {
-    const r = await this.rc.get<GetConferencingInfoResponse>(
-      this.path(),
-      queryParams,
-      restRequestConfig,
-    );
+  async get(queryParams?: ReadConferencingSettingsParameters, restRequestConfig?: RestRequestConfig): Promise<GetConferencingInfoResponse> {
+    const r = await this.rc.get<GetConferencingInfoResponse>(this.path(), queryParams, restRequestConfig);
     return r.data;
   }
 
@@ -49,16 +38,8 @@ class Index {
    * App Permission: EditExtensions
    * User Permission: OrganizeConference
    */
-  async put(
-    updateConferencingInfoRequest: UpdateConferencingInfoRequest,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<GetConferencingInfoResponse> {
-    const r = await this.rc.put<GetConferencingInfoResponse>(
-      this.path(),
-      updateConferencingInfoRequest,
-      undefined,
-      restRequestConfig,
-    );
+  async put(updateConferencingInfoRequest: UpdateConferencingInfoRequest, restRequestConfig?: RestRequestConfig): Promise<GetConferencingInfoResponse> {
+    const r = await this.rc.put<GetConferencingInfoResponse>(this.path(), updateConferencingInfoRequest, undefined, restRequestConfig);
     return r.data;
   }
 }

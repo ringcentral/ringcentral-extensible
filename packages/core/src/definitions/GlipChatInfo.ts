@@ -9,7 +9,7 @@ class GlipChatInfo {
   /**
    * Type of a chat
    */
-  type?: 'Everyone' | 'Team' | 'Group' | 'Direct' | 'Personal';
+  type?: ('Everyone' | 'Team' | 'Group' | 'Direct' | 'Personal');
 
   /**
    * For 'Team' chat type only. Team access level.
@@ -29,7 +29,7 @@ class GlipChatInfo {
   /**
    * For 'Team' chat type only. Team status.
    */
-  status?: 'Active' | 'Archived';
+  status?: ('Active' | 'Archived');
 
   /**
    * Chat creation datetime in ISO 8601 format

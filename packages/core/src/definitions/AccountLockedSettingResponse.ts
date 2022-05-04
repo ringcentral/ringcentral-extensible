@@ -1,8 +1,4 @@
-import {
-  ScheduleUserMeetingInfo,
-  UserMeetingRecordingSetting,
-  TelephonyLockedSettings,
-} from './index';
+import { ScheduleUserMeetingInfo, UserMeetingRecordingSetting, TelephonyLockedSettings } from './index';
 
 class AccountLockedSettingResponse {
   /**

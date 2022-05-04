@@ -1,7 +1,7 @@
 import { RestRequestConfig } from '../../../../Rest';
 import { LanguageList, LanguageInfo } from '../../../../definitions';
 import Parent from '..';
-import { RingCentral } from '../../../..';
+import RingCentral from '../../../..';
 
 class Index {
   rc: RingCentral;
@@ -30,11 +30,7 @@ class Index {
    * Rate Limit Group: Light
    */
   async list(restRequestConfig?: RestRequestConfig): Promise<LanguageList> {
-    const r = await this.rc.get<LanguageList>(
-      this.path(false),
-      undefined,
-      restRequestConfig,
-    );
+    const r = await this.rc.get<LanguageList>(this.path(false), undefined, restRequestConfig);
     return r.data;
   }
 
@@ -48,11 +44,7 @@ class Index {
     if (this.languageId === null) {
       throw new Error('languageId must be specified.');
     }
-    const r = await this.rc.get<LanguageInfo>(
-      this.path(),
-      undefined,
-      restRequestConfig,
-    );
+    const r = await this.rc.get<LanguageInfo>(this.path(), undefined, restRequestConfig);
     return r.data;
   }
 }

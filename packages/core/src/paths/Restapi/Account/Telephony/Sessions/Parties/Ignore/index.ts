@@ -1,7 +1,7 @@
 import { RestRequestConfig } from '../../../../../../../Rest';
 import { IgnoreRequestBody } from '../../../../../../../definitions';
 import Parent from '..';
-import { RingCentral } from '../../../../../../..';
+import RingCentral from '../../../../../../..';
 
 class Index {
   rc: RingCentral;
@@ -24,16 +24,8 @@ class Index {
    * Rate Limit Group: Light
    * App Permission: CallControl
    */
-  async post(
-    ignoreRequestBody: IgnoreRequestBody,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<string> {
-    const r = await this.rc.post<string>(
-      this.path(),
-      ignoreRequestBody,
-      undefined,
-      restRequestConfig,
-    );
+  async post(ignoreRequestBody: IgnoreRequestBody, restRequestConfig?: RestRequestConfig): Promise<string> {
+    const r = await this.rc.post<string>(this.path(), ignoreRequestBody, undefined, restRequestConfig);
     return r.data;
   }
 }

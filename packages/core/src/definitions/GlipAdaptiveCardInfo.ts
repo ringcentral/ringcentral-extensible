@@ -1,9 +1,5 @@
 import {
-  AdaptiveCardCreator,
-  AdaptiveCardInfoRequest,
-  AdaptiveCardAction,
-  AdaptiveCardSelectAction,
-  BackgroundImage,
+  AdaptiveCardCreator, AdaptiveCardInfoRequest, AdaptiveCardAction, AdaptiveCardSelectAction, BackgroundImage,
 } from './index';
 
 class GlipAdaptiveCardInfo {
@@ -32,7 +28,7 @@ class GlipAdaptiveCardInfo {
 
   /**
    */
-  type?: 'AdaptiveCard';
+  type?: ('AdaptiveCard');
 
   /**
    * Version of an adaptive card
@@ -86,11 +82,11 @@ class GlipAdaptiveCardInfo {
   /**
    * The 2-letter ISO-639-1 language used in the card. Used to localize any date/time functions
    */
-  lang?: 'en' | 'fr' | 'es';
+  lang?: ('en' | 'fr' | 'es');
 
   /**
    * Defines how the content should be aligned vertically within the container. Only relevant for fixed-height cards, or cards with a `minHeight` specified
    */
-  verticalContentAlignment?: 'top' | 'center' | 'bottom';
+  verticalContentAlignment?: ('top' | 'center' | 'bottom');
 }
 export default GlipAdaptiveCardInfo;

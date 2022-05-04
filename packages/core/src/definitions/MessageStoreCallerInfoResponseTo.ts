@@ -21,52 +21,12 @@ class MessageStoreCallerInfoResponseTo {
   /**
    * Status of a message. Returned for outbound fax messages only
    */
-  messageStatus?:
-  | 'Queued'
-  | 'Sent'
-  | 'Delivered'
-  | 'DeliveryFailed'
-  | 'SendingFailed'
-  | 'Received';
+  messageStatus?: ('Queued' | 'Sent' | 'Delivered' | 'DeliveryFailed' | 'SendingFailed' | 'Received');
 
   /**
    * Error code returned in case of fax sending failure. Returned if messageStatus value is 'SendingFailed'. Supported for fax messages only
    */
-  faxErrorCode?:
-  | 'AllLinesInUse'
-  | 'Undefined'
-  | 'NoFaxSendPermission'
-  | 'NoInternationalPermission'
-  | 'NoFaxMachine'
-  | 'NoAnswer'
-  | 'LineBusy'
-  | 'CallerHungUp'
-  | 'NotEnoughCredits'
-  | 'SentPartially'
-  | 'InternationalCallingDisabled'
-  | 'DestinationCountryDisabled'
-  | 'UnknownCountryCode'
-  | 'NotAccepted'
-  | 'InvalidNumber'
-  | 'CallDeclined'
-  | 'TooManyCallsPerLine'
-  | 'CallFailed'
-  | 'RenderingFailed'
-  | 'TooManyPages'
-  | 'ReturnToDBQueue'
-  | 'NoCallTime'
-  | 'WrongNumber'
-  | 'ProhibitedNumber'
-  | 'InternalError'
-  | 'FaxSendingProhibited'
-  | 'ThePhoneIsBlacklisted'
-  | 'UserNotFound'
-  | 'ConvertError'
-  | 'DBGeneralError'
-  | 'SkypeBillingFailed'
-  | 'AccountSuspended'
-  | 'ProhibitedDestination'
-  | 'InternationalDisabled';
+  faxErrorCode?: ('AllLinesInUse' | 'Undefined' | 'NoFaxSendPermission' | 'NoInternationalPermission' | 'NoFaxMachine' | 'NoAnswer' | 'LineBusy' | 'CallerHungUp' | 'NotEnoughCredits' | 'SentPartially' | 'InternationalCallingDisabled' | 'DestinationCountryDisabled' | 'UnknownCountryCode' | 'NotAccepted' | 'InvalidNumber' | 'CallDeclined' | 'TooManyCallsPerLine' | 'CallFailed' | 'RenderingFailed' | 'TooManyPages' | 'ReturnToDBQueue' | 'NoCallTime' | 'WrongNumber' | 'ProhibitedNumber' | 'InternalError' | 'FaxSendingProhibited' | 'ThePhoneIsBlacklisted' | 'UserNotFound' | 'ConvertError' | 'DBGeneralError' | 'SkypeBillingFailed' | 'AccountSuspended' | 'ProhibitedDestination' | 'InternationalDisabled');
 
   /**
    * Symbolic name associated with a party. If the phone does not belong to the known extension, only the location is returned, the name is not determined then

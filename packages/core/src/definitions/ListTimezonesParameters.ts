@@ -1,6 +1,6 @@
 /**
  * Query parameters for operation listTimezones
- */
+*/
 class ListTimezonesParameters {
   /**
    * Indicates the page number to retrieve. Only positive number values are accepted

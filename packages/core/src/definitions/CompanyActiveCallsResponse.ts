@@ -1,8 +1,4 @@
-import {
-  CompanyCallLogRecord,
-  CallLogNavigationInfo,
-  CallLogPagingInfo,
-} from './index';
+import { CompanyCallLogRecord, CallLogNavigationInfo, CallLogPagingInfo } from './index';
 
 class CompanyActiveCallsResponse {
   /**

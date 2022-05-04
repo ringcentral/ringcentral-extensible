@@ -1,6 +1,6 @@
 /**
  * Query parameters for operation listEmergencyLocations
- */
+*/
 class ListEmergencyLocationsParameters {
   /**
    * Filters entries containing the specified substring in address and name fields. The characters range is 0-64; not case-sensitive. If empty then the filter is ignored
@@ -14,11 +14,11 @@ class ListEmergencyLocationsParameters {
 
   /**
    */
-  addressStatus?: 'Valid' | 'Invalid';
+  addressStatus?: ('Valid' | 'Invalid');
 
   /**
    */
-  usageStatus?: 'Active' | 'Inactive';
+  usageStatus?: ('Active' | 'Inactive');
 
   /**
    */
@@ -28,7 +28,7 @@ class ListEmergencyLocationsParameters {
    * Comma-separated list of fields to order results prefixed by plus sign '+' (ascending order) or minus sign '-' (descending order). The default value is `+address`
    * Default: +address
    */
-  orderBy?: 'name' | 'siteName' | 'address' | 'addressStatus' | 'usageStatus';
+  orderBy?: ('name' | 'siteName' | 'address' | 'addressStatus' | 'usageStatus');
 
   /**
    * Indicates the page size (number of items). The values supported: `Max` or numeric value. If not specified, 100 records are returned per one page

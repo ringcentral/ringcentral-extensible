@@ -2,7 +2,7 @@ import Check from './Check';
 import { RestRequestConfig } from '../../../../../Rest';
 import { AuthProfileResource } from '../../../../../definitions';
 import Parent from '..';
-import { RingCentral } from '../../../../..';
+import RingCentral from '../../../../..';
 
 class Index {
   rc: RingCentral;
@@ -24,14 +24,8 @@ class Index {
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/authz-profile
    * Rate Limit Group: Medium
    */
-  async get(
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<AuthProfileResource> {
-    const r = await this.rc.get<AuthProfileResource>(
-      this.path(),
-      undefined,
-      restRequestConfig,
-    );
+  async get(restRequestConfig?: RestRequestConfig): Promise<AuthProfileResource> {
+    const r = await this.rc.get<AuthProfileResource>(this.path(), undefined, restRequestConfig);
     return r.data;
   }
 

@@ -1,6 +1,6 @@
 /**
  * Task creator information
- */
+*/
 class CreatorInfo {
   /**
    * Internal identifier of a user

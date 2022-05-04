@@ -1,12 +1,9 @@
 import { RestRequestConfig } from '../../../../../Rest';
 import {
-  ListA2PBatchesParameters,
-  MessageBatchListResponse,
-  CreateSMSMessageBatchRequest,
-  MessageBatchInfo,
+  ListA2PBatchesParameters, MessageBatchListResponse, CreateSMSMessageBatchRequest, MessageBatchInfo,
 } from '../../../../../definitions';
 import Parent from '..';
-import { RingCentral } from '../../../../..';
+import RingCentral from '../../../../..';
 
 class Index {
   rc: RingCentral;
@@ -35,15 +32,8 @@ class Index {
    * Rate Limit Group: Light
    * App Permission: A2PSMS
    */
-  async list(
-    queryParams?: ListA2PBatchesParameters,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<MessageBatchListResponse> {
-    const r = await this.rc.get<MessageBatchListResponse>(
-      this.path(false),
-      queryParams,
-      restRequestConfig,
-    );
+  async list(queryParams?: ListA2PBatchesParameters, restRequestConfig?: RestRequestConfig): Promise<MessageBatchListResponse> {
+    const r = await this.rc.get<MessageBatchListResponse>(this.path(false), queryParams, restRequestConfig);
     return r.data;
   }
 
@@ -54,16 +44,8 @@ class Index {
    * Rate Limit Group: Light
    * App Permission: A2PSMS
    */
-  async post(
-    createSMSMessageBatchRequest: CreateSMSMessageBatchRequest,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<MessageBatchInfo> {
-    const r = await this.rc.post<MessageBatchInfo>(
-      this.path(false),
-      createSMSMessageBatchRequest,
-      undefined,
-      restRequestConfig,
-    );
+  async post(createSMSMessageBatchRequest: CreateSMSMessageBatchRequest, restRequestConfig?: RestRequestConfig): Promise<MessageBatchInfo> {
+    const r = await this.rc.post<MessageBatchInfo>(this.path(false), createSMSMessageBatchRequest, undefined, restRequestConfig);
     return r.data;
   }
 
@@ -78,11 +60,7 @@ class Index {
     if (this.batchId === null) {
       throw new Error('batchId must be specified.');
     }
-    const r = await this.rc.get<MessageBatchInfo>(
-      this.path(),
-      undefined,
-      restRequestConfig,
-    );
+    const r = await this.rc.get<MessageBatchInfo>(this.path(), undefined, restRequestConfig);
     return r.data;
   }
 }

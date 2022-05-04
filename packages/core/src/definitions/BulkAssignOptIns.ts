@@ -2,7 +2,7 @@ import { OptOutBulkAssignFailedEntry } from './index';
 
 /**
  * Contains successfull and failed opt-ins
- */
+*/
 class BulkAssignOptIns {
   /**
    * Recipients' phone numbers which opt-ins were successfully added for.

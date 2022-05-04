@@ -1,10 +1,7 @@
 import { RestRequestConfig } from '../../../../../../Rest';
-import {
-  MeetingServiceInfoResource,
-  MeetingServiceInfoRequest,
-} from '../../../../../../definitions';
+import { MeetingServiceInfoResource, MeetingServiceInfoRequest } from '../../../../../../definitions';
 import Parent from '..';
-import { RingCentral } from '../../../../../..';
+import RingCentral from '../../../../../..';
 
 class Index {
   rc: RingCentral;
@@ -28,14 +25,8 @@ class Index {
    * App Permission: Meetings
    * User Permission: Meetings
    */
-  async get(
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<MeetingServiceInfoResource> {
-    const r = await this.rc.get<MeetingServiceInfoResource>(
-      this.path(),
-      undefined,
-      restRequestConfig,
-    );
+  async get(restRequestConfig?: RestRequestConfig): Promise<MeetingServiceInfoResource> {
+    const r = await this.rc.get<MeetingServiceInfoResource>(this.path(), undefined, restRequestConfig);
     return r.data;
   }
 
@@ -47,16 +38,8 @@ class Index {
    * App Permission: Meetings
    * User Permission: Meetings
    */
-  async patch(
-    meetingServiceInfoRequest: MeetingServiceInfoRequest,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<MeetingServiceInfoResource> {
-    const r = await this.rc.patch<MeetingServiceInfoResource>(
-      this.path(),
-      meetingServiceInfoRequest,
-      undefined,
-      restRequestConfig,
-    );
+  async patch(meetingServiceInfoRequest: MeetingServiceInfoRequest, restRequestConfig?: RestRequestConfig): Promise<MeetingServiceInfoResource> {
+    const r = await this.rc.patch<MeetingServiceInfoResource>(this.path(), meetingServiceInfoRequest, undefined, restRequestConfig);
     return r.data;
   }
 }

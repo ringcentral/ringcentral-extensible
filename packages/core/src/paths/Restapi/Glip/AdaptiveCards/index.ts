@@ -1,11 +1,7 @@
 import { RestRequestConfig } from '../../../../Rest';
-import {
-  GlipAdaptiveCardInfo,
-  GlipAdaptiveCardRequest,
-  GlipAdaptiveCardShortInfo,
-} from '../../../../definitions';
+import { GlipAdaptiveCardInfo, GlipAdaptiveCardRequest, GlipAdaptiveCardShortInfo } from '../../../../definitions';
 import Parent from '..';
-import { RingCentral } from '../../../..';
+import RingCentral from '../../../..';
 
 class Index {
   rc: RingCentral;
@@ -35,17 +31,11 @@ class Index {
    * App Permission: TeamMessaging
    * User Permission: Glip
    */
-  async get(
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<GlipAdaptiveCardInfo> {
+  async get(restRequestConfig?: RestRequestConfig): Promise<GlipAdaptiveCardInfo> {
     if (this.cardId === null) {
       throw new Error('cardId must be specified.');
     }
-    const r = await this.rc.get<GlipAdaptiveCardInfo>(
-      this.path(),
-      undefined,
-      restRequestConfig,
-    );
+    const r = await this.rc.get<GlipAdaptiveCardInfo>(this.path(), undefined, restRequestConfig);
     return r.data;
   }
 
@@ -57,19 +47,11 @@ class Index {
    * App Permission: TeamMessaging
    * User Permission: UnifiedAppDesktop
    */
-  async put(
-    glipAdaptiveCardRequest: GlipAdaptiveCardRequest,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<GlipAdaptiveCardShortInfo> {
+  async put(glipAdaptiveCardRequest: GlipAdaptiveCardRequest, restRequestConfig?: RestRequestConfig): Promise<GlipAdaptiveCardShortInfo> {
     if (this.cardId === null) {
       throw new Error('cardId must be specified.');
     }
-    const r = await this.rc.put<GlipAdaptiveCardShortInfo>(
-      this.path(),
-      glipAdaptiveCardRequest,
-      undefined,
-      restRequestConfig,
-    );
+    const r = await this.rc.put<GlipAdaptiveCardShortInfo>(this.path(), glipAdaptiveCardRequest, undefined, restRequestConfig);
     return r.data;
   }
 
@@ -85,11 +67,7 @@ class Index {
     if (this.cardId === null) {
       throw new Error('cardId must be specified.');
     }
-    const r = await this.rc.delete<string>(
-      this.path(),
-      undefined,
-      restRequestConfig,
-    );
+    const r = await this.rc.delete<string>(this.path(), undefined, restRequestConfig);
     return r.data;
   }
 }

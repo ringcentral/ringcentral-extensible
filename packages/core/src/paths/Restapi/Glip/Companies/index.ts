@@ -1,7 +1,7 @@
 import { RestRequestConfig } from '../../../../Rest';
 import { GlipCompany } from '../../../../definitions';
 import Parent from '..';
-import { RingCentral } from '../../../..';
+import RingCentral from '../../../..';
 
 class Index {
   rc: RingCentral;
@@ -35,11 +35,7 @@ class Index {
     if (this.companyId === null) {
       throw new Error('companyId must be specified.');
     }
-    const r = await this.rc.get<GlipCompany>(
-      this.path(),
-      undefined,
-      restRequestConfig,
-    );
+    const r = await this.rc.get<GlipCompany>(this.path(), undefined, restRequestConfig);
     return r.data;
   }
 }

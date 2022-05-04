@@ -1,6 +1,6 @@
 /**
  * Site data
- */
+*/
 class DeviceSiteInfo {
   /**
    * Internal identifier of a site

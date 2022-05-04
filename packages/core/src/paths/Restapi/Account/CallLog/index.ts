@@ -1,12 +1,9 @@
 import { RestRequestConfig } from '../../../../Rest';
 import {
-  ReadCompanyCallLogParameters,
-  AccountCallLogResponse,
-  ReadCompanyCallRecordParameters,
-  CompanyCallLogRecord,
+  ReadCompanyCallLogParameters, AccountCallLogResponse, ReadCompanyCallRecordParameters, CompanyCallLogRecord,
 } from '../../../../definitions';
 import Parent from '..';
-import { RingCentral } from '../../../..';
+import RingCentral from '../../../..';
 
 class Index {
   rc: RingCentral;
@@ -36,15 +33,8 @@ class Index {
    * App Permission: ReadCallLog
    * User Permission: FullCompanyCallLog
    */
-  async list(
-    queryParams?: ReadCompanyCallLogParameters,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<AccountCallLogResponse> {
-    const r = await this.rc.get<AccountCallLogResponse>(
-      this.path(false),
-      queryParams,
-      restRequestConfig,
-    );
+  async list(queryParams?: ReadCompanyCallLogParameters, restRequestConfig?: RestRequestConfig): Promise<AccountCallLogResponse> {
+    const r = await this.rc.get<AccountCallLogResponse>(this.path(false), queryParams, restRequestConfig);
     return r.data;
   }
 
@@ -56,18 +46,11 @@ class Index {
    * App Permission: ReadCallLog
    * User Permission: FullCompanyCallLog
    */
-  async get(
-    queryParams?: ReadCompanyCallRecordParameters,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<CompanyCallLogRecord> {
+  async get(queryParams?: ReadCompanyCallRecordParameters, restRequestConfig?: RestRequestConfig): Promise<CompanyCallLogRecord> {
     if (this.callRecordId === null) {
       throw new Error('callRecordId must be specified.');
     }
-    const r = await this.rc.get<CompanyCallLogRecord>(
-      this.path(),
-      queryParams,
-      restRequestConfig,
-    );
+    const r = await this.rc.get<CompanyCallLogRecord>(this.path(), queryParams, restRequestConfig);
     return r.data;
   }
 }

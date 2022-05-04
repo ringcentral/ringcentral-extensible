@@ -1,8 +1,4 @@
-import {
-  MeetingScheduleResource,
-  HostInfoRequest,
-  RecurrenceInfo,
-} from './index';
+import { MeetingScheduleResource, HostInfoRequest, RecurrenceInfo } from './index';
 
 class MeetingRequestResource {
   /**
@@ -12,7 +8,7 @@ class MeetingRequestResource {
 
   /**
    */
-  meetingType?: 'Instant' | 'Scheduled' | 'ScheduledRecurring' | 'Recurring';
+  meetingType?: ('Instant' | 'Scheduled' | 'ScheduledRecurring' | 'Recurring');
 
   /**
    */
@@ -57,7 +53,7 @@ class MeetingRequestResource {
    * Automatic record type
    * Default: none
    */
-  autoRecordType?: 'local' | 'cloud' | 'none';
+  autoRecordType?: ('local' | 'cloud' | 'none');
 
   /**
    * If true, then only signed-in users can join this meeting

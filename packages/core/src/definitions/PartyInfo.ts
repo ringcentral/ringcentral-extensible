@@ -1,6 +1,6 @@
 /**
  * Information on a calling/called party
- */
+*/
 class PartyInfo {
   /**
    * Phone number of a party

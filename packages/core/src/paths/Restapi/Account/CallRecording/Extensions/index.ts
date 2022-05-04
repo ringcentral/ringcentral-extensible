@@ -1,7 +1,7 @@
 import { RestRequestConfig } from '../../../../../Rest';
 import { CallRecordingExtensions } from '../../../../../definitions';
 import Parent from '..';
-import { RingCentral } from '../../../../..';
+import RingCentral from '../../../../..';
 
 class Index {
   rc: RingCentral;
@@ -25,14 +25,8 @@ class Index {
    * App Permission: ReadAccounts
    * User Permission: ReadCompanyInfo
    */
-  async get(
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<CallRecordingExtensions> {
-    const r = await this.rc.get<CallRecordingExtensions>(
-      this.path(),
-      undefined,
-      restRequestConfig,
-    );
+  async get(restRequestConfig?: RestRequestConfig): Promise<CallRecordingExtensions> {
+    const r = await this.rc.get<CallRecordingExtensions>(this.path(), undefined, restRequestConfig);
     return r.data;
   }
 }

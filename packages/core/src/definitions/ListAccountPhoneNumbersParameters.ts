@@ -1,6 +1,6 @@
 /**
  * Query parameters for operation listAccountPhoneNumbers
- */
+*/
 class ListAccountPhoneNumbersParameters {
   /**
    * Indicates the page number to retrieve. Only positive number values are accepted
@@ -17,24 +17,11 @@ class ListAccountPhoneNumbersParameters {
   /**
    * Usage type of a phone number
    */
-  usageType?: (
-    | 'MainCompanyNumber'
-    | 'AdditionalCompanyNumber'
-    | 'CompanyNumber'
-    | 'DirectNumber'
-    | 'CompanyFaxNumber'
-    | 'ForwardedNumber'
-    | 'ForwardedCompanyNumber'
-    | 'ContactCenterNumber'
-    | 'ConferencingNumber'
-    | 'MeetingsNumber'
-    | 'BusinessMobileNumber'
-    | 'IntegrationNumber'
-  )[];
+  usageType?: ('MainCompanyNumber' | 'AdditionalCompanyNumber' | 'CompanyNumber' | 'DirectNumber' | 'CompanyFaxNumber' | 'ForwardedNumber' | 'ForwardedCompanyNumber' | 'ContactCenterNumber' | 'ConferencingNumber' | 'MeetingsNumber' | 'BusinessMobileNumber' | 'IntegrationNumber')[];
 
   /**
    * Status of a phone number. Multiple values are supported
    */
-  status?: 'Normal' | 'Pending' | 'PortedIn' | 'Temporary';
+  status?: ('Normal' | 'Pending' | 'PortedIn' | 'Temporary');
 }
 export default ListAccountPhoneNumbersParameters;

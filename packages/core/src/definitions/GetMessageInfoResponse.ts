@@ -1,8 +1,5 @@
 import {
-  MessageAttachmentInfo,
-  ConversationInfo,
-  MessageStoreCallerInfoResponseFrom,
-  MessageStoreCallerInfoResponseTo,
+  MessageAttachmentInfo, ConversationInfo, MessageStoreCallerInfoResponseFrom, MessageStoreCallerInfoResponseTo,
 } from './index';
 
 class GetMessageInfoResponse {
@@ -30,7 +27,7 @@ class GetMessageInfoResponse {
   /**
    * Message availability status. Message in 'Deleted' state is still preserved with all its attachments and can be restored. 'Purged' means that all attachments are already deleted and the message itself is about to be physically deleted shortly
    */
-  availability?: 'Alive' | 'Deleted' | 'Purged';
+  availability?: ('Alive' | 'Deleted' | 'Purged');
 
   /**
    * SMS and Pager only. Identifier of a conversation the message belongs to
@@ -56,7 +53,7 @@ class GetMessageInfoResponse {
   /**
    * Message direction. Note that for some message types not all directions are allowed. For example voicemail messages can be only inbound
    */
-  direction?: 'Inbound' | 'Outbound';
+  direction?: ('Inbound' | 'Outbound');
 
   /**
    * Fax only. Page count in a fax message
@@ -66,7 +63,7 @@ class GetMessageInfoResponse {
   /**
    * Fax only. Resolution of a fax message. 'High' for black and white image scanned at 200 dpi, 'Low' for black and white image scanned at 100 dpi
    */
-  faxResolution?: 'High' | 'Low';
+  faxResolution?: ('High' | 'Low');
 
   /**
    */
@@ -81,13 +78,7 @@ class GetMessageInfoResponse {
   /**
    * Message status. Different message types may have different allowed status values. For outbound faxes the aggregated message status is returned: If status for at least one recipient is 'Queued', then 'Queued' value is returned If status for at least one recipient is 'SendingFailed', then 'SendingFailed' value is returned In other cases Sent status is returned
    */
-  messageStatus?:
-  | 'Queued'
-  | 'Sent'
-  | 'Delivered'
-  | 'DeliveryFailed'
-  | 'SendingFailed'
-  | 'Received';
+  messageStatus?: ('Queued' | 'Sent' | 'Delivered' | 'DeliveryFailed' | 'SendingFailed' | 'Received');
 
   /**
    * 'Pager' only. 'True' if at least one of the message recipients is 'Department' extension
@@ -97,12 +88,12 @@ class GetMessageInfoResponse {
   /**
    * Message priority
    */
-  priority?: 'Normal' | 'High';
+  priority?: ('Normal' | 'High');
 
   /**
    * Message read status
    */
-  readStatus?: 'Read' | 'Unread';
+  readStatus?: ('Read' | 'Unread');
 
   /**
    * SMS only. The datetime when outbound SMS was delivered to recipient's handset in ISO 8601 format including timezone, for example 2016-03-10T18:07:52.534Z. It is filled only if the carrier sends a delivery receipt to RingCentral
@@ -128,19 +119,12 @@ class GetMessageInfoResponse {
   /**
    * Message type
    */
-  type?: 'Fax' | 'SMS' | 'VoiceMail' | 'Pager' | 'Text';
+  type?: ('Fax' | 'SMS' | 'VoiceMail' | 'Pager' | 'Text');
 
   /**
    * Voicemail only. Status of voicemail to text transcription. If VoicemailToText feature is not activated for account, the 'NotAvailable' value is returned
    */
-  vmTranscriptionStatus?:
-  | 'NotAvailable'
-  | 'InProgress'
-  | 'TimedOut'
-  | 'Completed'
-  | 'CompletedPartially'
-  | 'Failed'
-  | 'Unknown';
+  vmTranscriptionStatus?: ('NotAvailable' | 'InProgress' | 'TimedOut' | 'Completed' | 'CompletedPartially' | 'Failed' | 'Unknown');
 
   /**
    * Cover page identifier. If coverIndex is set to '0' (zero) cover page is not attached. For the list of available cover page identifiers (1-13) please call the Fax Cover Pages method. If not specified, the default cover page is attached (which is configured in 'Outbound Fax Settings')

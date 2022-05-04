@@ -1,13 +1,10 @@
 import {
-  NotificationRecipientInfo,
-  SenderInfo,
-  MessageAttachmentInfo,
-  ConversationInfo,
+  NotificationRecipientInfo, SenderInfo, MessageAttachmentInfo, ConversationInfo,
 } from './index';
 
 /**
  * Notification payload body
- */
+*/
 class InstantMessageEventBody {
   /**
    * Internal identifier of a message

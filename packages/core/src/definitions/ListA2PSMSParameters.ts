@@ -1,6 +1,6 @@
 /**
  * Query parameters for operation listA2PSMS
- */
+*/
 class ListA2PSMSParameters {
   /**
    * Internal identifier of a message batch used for filtering records
@@ -12,13 +12,13 @@ class ListA2PSMSParameters {
    * Direction of a message to filter the message list result. By default there is no filter applied - both Inbound and Outbound messages are returned
    * Example: Outbound
    */
-  direction?: 'Inbound' | 'Outbound';
+  direction?: ('Inbound' | 'Outbound');
 
   /**
    * Indicates if the response has to be detailed, includes text in the response if detailed
    * Default: Simple
    */
-  view?: 'Simple' | 'Detailed';
+  view?: ('Simple' | 'Detailed');
 
   /**
    * Date to filter message list result. Messages with `creationTime` later than or equal to `dateFrom` value are returned. The default value is 1 day before the current datetime

@@ -1,11 +1,8 @@
 import Tasks from './Tasks';
 import { RestRequestConfig } from '../../../../Rest';
-import {
-  ExtensionBulkUpdateRequest,
-  ExtensionBulkUpdateTaskResource,
-} from '../../../../definitions';
+import { ExtensionBulkUpdateRequest, ExtensionBulkUpdateTaskResource } from '../../../../definitions';
 import Parent from '..';
-import { RingCentral } from '../../../..';
+import RingCentral from '../../../..';
 
 class Index {
   rc: RingCentral;
@@ -29,20 +26,12 @@ class Index {
    * App Permission: EditExtensions
    * User Permission: EditExtensionInfo
    */
-  async post(
-    extensionBulkUpdateRequest: ExtensionBulkUpdateRequest,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<ExtensionBulkUpdateTaskResource> {
-    const r = await this.rc.post<ExtensionBulkUpdateTaskResource>(
-      this.path(),
-      extensionBulkUpdateRequest,
-      undefined,
-      restRequestConfig,
-    );
+  async post(extensionBulkUpdateRequest: ExtensionBulkUpdateRequest, restRequestConfig?: RestRequestConfig): Promise<ExtensionBulkUpdateTaskResource> {
+    const r = await this.rc.post<ExtensionBulkUpdateTaskResource>(this.path(), extensionBulkUpdateRequest, undefined, restRequestConfig);
     return r.data;
   }
 
-  tasks(taskId: string | null = null): Tasks {
+  tasks(taskId: (string | null) = null): Tasks {
     return new Tasks(this, taskId);
   }
 }

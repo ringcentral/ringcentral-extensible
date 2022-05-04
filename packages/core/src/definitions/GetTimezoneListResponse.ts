@@ -1,8 +1,4 @@
-import {
-  GetTimezoneInfoResponse,
-  ProvisioningNavigationInfo,
-  ProvisioningPagingInfo,
-} from './index';
+import { GetTimezoneInfoResponse, ProvisioningNavigationInfo, ProvisioningPagingInfo } from './index';
 
 class GetTimezoneListResponse {
   /**

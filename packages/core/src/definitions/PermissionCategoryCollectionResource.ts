@@ -1,8 +1,4 @@
-import {
-  PermissionCategoryResource,
-  RNPPagingInfo,
-  RNPNavigationInfo,
-} from './index';
+import { PermissionCategoryResource, RNPPagingInfo, RNPNavigationInfo } from './index';
 
 class PermissionCategoryCollectionResource {
   /**

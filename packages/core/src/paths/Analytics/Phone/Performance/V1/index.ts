@@ -1,6 +1,6 @@
 import Accounts from './Accounts';
 import Parent from '..';
-import { RingCentral } from '../../../../..';
+import RingCentral from '../../../../..';
 
 class Index {
   rc: RingCentral;
@@ -16,7 +16,7 @@ class Index {
     return `${this.parent.path()}/v1`;
   }
 
-  accounts(accountId: string | null = null): Accounts {
+  accounts(accountId: (string | null) = null): Accounts {
     return new Accounts(this, accountId);
   }
 }

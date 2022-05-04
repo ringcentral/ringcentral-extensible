@@ -1,6 +1,6 @@
 /**
  * Query parameters for operation listChatNotes
- */
+*/
 class ListChatNotesParameters {
   /**
    * The end datetime for resulting records in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format including timezone, e.g. 2019-03-10T18:23:45. The default value is Now.
@@ -20,7 +20,7 @@ class ListChatNotesParameters {
   /**
    * Status of notes to be fetched; if not specified all notes are fetched by default.
    */
-  status?: 'Active' | 'Draft';
+  status?: ('Active' | 'Draft');
 
   /**
    * Pagination token

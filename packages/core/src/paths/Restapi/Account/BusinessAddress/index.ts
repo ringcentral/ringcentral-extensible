@@ -1,10 +1,7 @@
 import { RestRequestConfig } from '../../../../Rest';
-import {
-  AccountBusinessAddressResource,
-  ModifyAccountBusinessAddressRequest,
-} from '../../../../definitions';
+import { AccountBusinessAddressResource, ModifyAccountBusinessAddressRequest } from '../../../../definitions';
 import Parent from '..';
-import { RingCentral } from '../../../..';
+import RingCentral from '../../../..';
 
 class Index {
   rc: RingCentral;
@@ -28,14 +25,8 @@ class Index {
    * App Permission: ReadAccounts
    * User Permission: ReadCompanyInfo
    */
-  async get(
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<AccountBusinessAddressResource> {
-    const r = await this.rc.get<AccountBusinessAddressResource>(
-      this.path(),
-      undefined,
-      restRequestConfig,
-    );
+  async get(restRequestConfig?: RestRequestConfig): Promise<AccountBusinessAddressResource> {
+    const r = await this.rc.get<AccountBusinessAddressResource>(this.path(), undefined, restRequestConfig);
     return r.data;
   }
 
@@ -47,16 +38,8 @@ class Index {
    * App Permission: EditAccounts
    * User Permission: EditCompanyInfo
    */
-  async put(
-    modifyAccountBusinessAddressRequest: ModifyAccountBusinessAddressRequest,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<AccountBusinessAddressResource> {
-    const r = await this.rc.put<AccountBusinessAddressResource>(
-      this.path(),
-      modifyAccountBusinessAddressRequest,
-      undefined,
-      restRequestConfig,
-    );
+  async put(modifyAccountBusinessAddressRequest: ModifyAccountBusinessAddressRequest, restRequestConfig?: RestRequestConfig): Promise<AccountBusinessAddressResource> {
+    const r = await this.rc.put<AccountBusinessAddressResource>(this.path(), modifyAccountBusinessAddressRequest, undefined, restRequestConfig);
     return r.data;
   }
 }

@@ -2,7 +2,7 @@ import { CompanyAnsweringRuleTimeIntervalRequest } from './index';
 
 /**
  * Weekly schedule. If specified, ranges cannot be specified
- */
+*/
 class CompanyAnsweringRuleWeeklyScheduleInfoRequest {
   /**
    * Time interval for a particular day

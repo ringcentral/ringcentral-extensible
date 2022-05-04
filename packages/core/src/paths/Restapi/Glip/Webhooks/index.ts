@@ -3,7 +3,7 @@ import Suspend from './Suspend';
 import { RestRequestConfig } from '../../../../Rest';
 import { GlipWebhookList } from '../../../../definitions';
 import Parent from '..';
-import { RingCentral } from '../../../..';
+import RingCentral from '../../../..';
 
 class Index {
   rc: RingCentral;
@@ -34,11 +34,7 @@ class Index {
    * User Permission: UnifiedAppDesktop
    */
   async list(restRequestConfig?: RestRequestConfig): Promise<GlipWebhookList> {
-    const r = await this.rc.get<GlipWebhookList>(
-      this.path(false),
-      undefined,
-      restRequestConfig,
-    );
+    const r = await this.rc.get<GlipWebhookList>(this.path(false), undefined, restRequestConfig);
     return r.data;
   }
 
@@ -54,11 +50,7 @@ class Index {
     if (this.webhookId === null) {
       throw new Error('webhookId must be specified.');
     }
-    const r = await this.rc.get<GlipWebhookList>(
-      this.path(),
-      undefined,
-      restRequestConfig,
-    );
+    const r = await this.rc.get<GlipWebhookList>(this.path(), undefined, restRequestConfig);
     return r.data;
   }
 
@@ -74,11 +66,7 @@ class Index {
     if (this.webhookId === null) {
       throw new Error('webhookId must be specified.');
     }
-    const r = await this.rc.delete<string>(
-      this.path(),
-      undefined,
-      restRequestConfig,
-    );
+    const r = await this.rc.delete<string>(this.path(), undefined, restRequestConfig);
     return r.data;
   }
 

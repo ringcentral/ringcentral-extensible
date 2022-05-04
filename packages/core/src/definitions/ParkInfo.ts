@@ -1,6 +1,6 @@
 /**
  * Call park information
- */
+*/
 class ParkInfo {
   /**
    * Call park identifier

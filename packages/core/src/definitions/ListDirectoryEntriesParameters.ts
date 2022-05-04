@@ -1,6 +1,6 @@
 /**
  * Query parameters for operation listDirectoryEntries
- */
+*/
 class ListDirectoryEntriesParameters {
   /**
    * If 'True' then contacts of all accounts in federation are returned. If 'False' then only contacts of the current account are returned, and account section is eliminated in this case
@@ -11,16 +11,7 @@ class ListDirectoryEntriesParameters {
   /**
    * Type of an extension. Please note that legacy 'Department' extension type corresponds to 'Call Queue' extensions in modern RingCentral product terminology
    */
-  type?:
-  | 'User'
-  | 'Department'
-  | 'Announcement'
-  | 'Voicemail'
-  | 'SharedLinesGroup'
-  | 'PagingOnly'
-  | 'IvrMenu'
-  | 'ParkLocation'
-  | 'Limited';
+  type?: ('User' | 'Department' | 'Announcement' | 'Voicemail' | 'SharedLinesGroup' | 'PagingOnly' | 'IvrMenu' | 'ParkLocation' | 'Limited');
 
   /**
    * Page number

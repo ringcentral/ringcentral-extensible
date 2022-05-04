@@ -1,13 +1,5 @@
 import {
-  ContactInfo,
-  CustomFieldInfo,
-  ExtensionPermissions,
-  ProfileImageInfo,
-  ReferenceInfo,
-  RegionalSettings,
-  ExtensionServiceFeatureInfo,
-  AutomaticLocationUpdatesSiteInfo,
-  ExtensionStatusInfo,
+  ContactInfo, CustomFieldInfo, ExtensionPermissions, ProfileImageInfo, ReferenceInfo, RegionalSettings, ExtensionServiceFeatureInfo, AutomaticLocationUpdatesSiteInfo, ExtensionStatusInfo,
 } from './index';
 
 class ExtensionCreationResponse {
@@ -70,7 +62,7 @@ class ExtensionCreationResponse {
   /**
    * Specifies extension configuration wizard state (web service setup). The default value is 'NotStarted'
    */
-  setupWizardState?: 'NotStarted' | 'Incomplete' | 'Completed';
+  setupWizardState?: ('NotStarted' | 'Incomplete' | 'Completed');
 
   /**
    */
@@ -79,7 +71,7 @@ class ExtensionCreationResponse {
   /**
    * Extension current state. If 'Unassigned' is specified, then extensions without ‘extensionNumber’ are returned. If not specified, then all extensions are returned
    */
-  status?: 'Enabled' | 'Disabled' | 'Frozen' | 'NotActivated' | 'Unassigned';
+  status?: ('Enabled' | 'Disabled' | 'Frozen' | 'NotActivated' | 'Unassigned');
 
   /**
    */
@@ -88,17 +80,7 @@ class ExtensionCreationResponse {
   /**
    * Extension type. Please note that legacy 'Department' extension type corresponds to 'Call Queue' extensions in modern RingCentral product terminology
    */
-  type?:
-  | 'User'
-  | 'VirtualUser'
-  | 'DigitalUser'
-  | 'Department'
-  | 'Announcement'
-  | 'Voicemail'
-  | 'SharedLinesGroup'
-  | 'PagingOnly'
-  | 'ParkLocation'
-  | 'Limited';
+  type?: ('User' | 'VirtualUser' | 'DigitalUser' | 'Department' | 'Announcement' | 'Voicemail' | 'SharedLinesGroup' | 'PagingOnly' | 'ParkLocation' | 'Limited');
 
   /**
    * Hides extension from showing in company directory. Supported for extensions of User type only

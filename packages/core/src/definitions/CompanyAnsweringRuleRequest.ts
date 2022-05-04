@@ -1,8 +1,5 @@
 import {
-  CompanyAnsweringRuleCallersInfoRequest,
-  CompanyAnsweringRuleCalledNumberInfo,
-  CompanyAnsweringRuleScheduleInfoRequest,
-  GreetingInfo,
+  CompanyAnsweringRuleCallersInfoRequest, CompanyAnsweringRuleCalledNumberInfo, CompanyAnsweringRuleScheduleInfoRequest, GreetingInfo,
 } from './index';
 
 class CompanyAnsweringRuleRequest {
@@ -20,7 +17,7 @@ class CompanyAnsweringRuleRequest {
   /**
    * Type of an answering rule, the default value is 'Custom' = ['BusinessHours', 'AfterHours', 'Custom']
    */
-  type?: 'BusinessHours' | 'AfterHours' | 'Custom';
+  type?: ('BusinessHours' | 'AfterHours' | 'Custom');
 
   /**
    * Answering rule will be applied when calls are received from the specified caller(s)
@@ -39,7 +36,7 @@ class CompanyAnsweringRuleRequest {
   /**
    * Specifies how incoming calls are forwarded. The default value is 'Operator' 'Operator' - play company greeting and forward to operator extension 'Disconnect' - play company greeting and disconnect 'Bypass' - bypass greeting to go to selected extension = ['Operator', 'Disconnect', 'Bypass']
    */
-  callHandlingAction?: 'Operator' | 'Disconnect' | 'Bypass';
+  callHandlingAction?: ('Operator' | 'Disconnect' | 'Bypass');
 
   /**
    * Extension to which the call is forwarded in 'Bypass' mode

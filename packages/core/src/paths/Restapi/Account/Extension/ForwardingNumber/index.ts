@@ -1,13 +1,9 @@
 import { RestRequestConfig } from '../../../../../Rest';
 import {
-  ListForwardingNumbersParameters,
-  GetExtensionForwardingNumberListResponse,
-  CreateForwardingNumberRequest,
-  ForwardingNumberInfo,
-  UpdateForwardingNumberRequest,
+  ListForwardingNumbersParameters, GetExtensionForwardingNumberListResponse, CreateForwardingNumberRequest, ForwardingNumberInfo, UpdateForwardingNumberRequest,
 } from '../../../../../definitions';
 import Parent from '..';
-import { RingCentral } from '../../../../..';
+import RingCentral from '../../../../..';
 
 class Index {
   rc: RingCentral;
@@ -24,9 +20,7 @@ class Index {
 
   path(withParameter = true): string {
     if (withParameter && this.forwardingNumberId !== null) {
-      return `${this.parent.path()}/forwarding-number/${
-        this.forwardingNumberId
-      }`;
+      return `${this.parent.path()}/forwarding-number/${this.forwardingNumberId}`;
     }
     return `${this.parent.path()}/forwarding-number`;
   }
@@ -39,15 +33,8 @@ class Index {
    * App Permission: ReadAccounts
    * User Permission: ReadUserForwardingFlipNumbers
    */
-  async list(
-    queryParams?: ListForwardingNumbersParameters,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<GetExtensionForwardingNumberListResponse> {
-    const r = await this.rc.get<GetExtensionForwardingNumberListResponse>(
-      this.path(false),
-      queryParams,
-      restRequestConfig,
-    );
+  async list(queryParams?: ListForwardingNumbersParameters, restRequestConfig?: RestRequestConfig): Promise<GetExtensionForwardingNumberListResponse> {
+    const r = await this.rc.get<GetExtensionForwardingNumberListResponse>(this.path(false), queryParams, restRequestConfig);
     return r.data;
   }
 
@@ -59,16 +46,8 @@ class Index {
    * App Permission: EditExtensions
    * User Permission: EditUserForwardingFlipNumbers
    */
-  async post(
-    createForwardingNumberRequest: CreateForwardingNumberRequest,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<ForwardingNumberInfo> {
-    const r = await this.rc.post<ForwardingNumberInfo>(
-      this.path(false),
-      createForwardingNumberRequest,
-      undefined,
-      restRequestConfig,
-    );
+  async post(createForwardingNumberRequest: CreateForwardingNumberRequest, restRequestConfig?: RestRequestConfig): Promise<ForwardingNumberInfo> {
+    const r = await this.rc.post<ForwardingNumberInfo>(this.path(false), createForwardingNumberRequest, undefined, restRequestConfig);
     return r.data;
   }
 
@@ -80,17 +59,11 @@ class Index {
    * App Permission: ReadAccounts
    * User Permission: ReadUserForwardingFlipNumbers
    */
-  async get(
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<ForwardingNumberInfo> {
+  async get(restRequestConfig?: RestRequestConfig): Promise<ForwardingNumberInfo> {
     if (this.forwardingNumberId === null) {
       throw new Error('forwardingNumberId must be specified.');
     }
-    const r = await this.rc.get<ForwardingNumberInfo>(
-      this.path(),
-      undefined,
-      restRequestConfig,
-    );
+    const r = await this.rc.get<ForwardingNumberInfo>(this.path(), undefined, restRequestConfig);
     return r.data;
   }
 
@@ -102,19 +75,11 @@ class Index {
    * App Permission: EditExtensions
    * User Permission: EditUserForwardingFlipNumbers
    */
-  async put(
-    updateForwardingNumberRequest: UpdateForwardingNumberRequest,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<ForwardingNumberInfo> {
+  async put(updateForwardingNumberRequest: UpdateForwardingNumberRequest, restRequestConfig?: RestRequestConfig): Promise<ForwardingNumberInfo> {
     if (this.forwardingNumberId === null) {
       throw new Error('forwardingNumberId must be specified.');
     }
-    const r = await this.rc.put<ForwardingNumberInfo>(
-      this.path(),
-      updateForwardingNumberRequest,
-      undefined,
-      restRequestConfig,
-    );
+    const r = await this.rc.put<ForwardingNumberInfo>(this.path(), updateForwardingNumberRequest, undefined, restRequestConfig);
     return r.data;
   }
 
@@ -130,11 +95,7 @@ class Index {
     if (this.forwardingNumberId === null) {
       throw new Error('forwardingNumberId must be specified.');
     }
-    const r = await this.rc.delete<string>(
-      this.path(),
-      undefined,
-      restRequestConfig,
-    );
+    const r = await this.rc.delete<string>(this.path(), undefined, restRequestConfig);
     return r.data;
   }
 }

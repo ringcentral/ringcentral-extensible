@@ -1,6 +1,6 @@
 /**
  * Brief information on a phone number country
- */
+*/
 class DevicePhoneNumberCountryInfo {
   /**
    * Internal identifier of a home country

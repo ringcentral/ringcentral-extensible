@@ -1,8 +1,4 @@
-import {
-  SwitchSiteInfo,
-  LocationUpdatesEmergencyAddressInfo,
-  ERLLocationInfo,
-} from './index';
+import { SwitchSiteInfo, LocationUpdatesEmergencyAddressInfo, ERLLocationInfo } from './index';
 
 class SwitchInfo {
   /**

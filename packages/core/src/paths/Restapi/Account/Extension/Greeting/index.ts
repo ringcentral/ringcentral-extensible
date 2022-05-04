@@ -1,12 +1,8 @@
 import Utils from '../../../../../Utils';
 import { RestRequestConfig } from '../../../../../Rest';
-import {
-  CreateCustomUserGreetingRequest,
-  CreateCustomUserGreetingParameters,
-  CustomUserGreetingInfo,
-} from '../../../../../definitions';
+import { CreateCustomUserGreetingRequest, CreateCustomUserGreetingParameters, CustomUserGreetingInfo } from '../../../../../definitions';
 import Parent from '..';
-import { RingCentral } from '../../../../..';
+import RingCentral from '../../../../..';
 
 class Index {
   rc: RingCentral;
@@ -36,18 +32,9 @@ class Index {
    * App Permission: EditExtensions
    * User Permission: EditUserAnsweringRules
    */
-  async post(
-    createCustomUserGreetingRequest: CreateCustomUserGreetingRequest,
-    queryParams?: CreateCustomUserGreetingParameters,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<CustomUserGreetingInfo> {
+  async post(createCustomUserGreetingRequest: CreateCustomUserGreetingRequest, queryParams?: CreateCustomUserGreetingParameters, restRequestConfig?: RestRequestConfig): Promise<CustomUserGreetingInfo> {
     const formData = Utils.getFormData(createCustomUserGreetingRequest);
-    const r = await this.rc.post<CustomUserGreetingInfo>(
-      this.path(false),
-      formData,
-      queryParams,
-      restRequestConfig,
-    );
+    const r = await this.rc.post<CustomUserGreetingInfo>(this.path(false), formData, queryParams, restRequestConfig);
     return r.data;
   }
 
@@ -59,17 +46,11 @@ class Index {
    * App Permission: ReadAccounts
    * User Permission: ReadUserInfo
    */
-  async get(
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<CustomUserGreetingInfo> {
+  async get(restRequestConfig?: RestRequestConfig): Promise<CustomUserGreetingInfo> {
     if (this.greetingId === null) {
       throw new Error('greetingId must be specified.');
     }
-    const r = await this.rc.get<CustomUserGreetingInfo>(
-      this.path(),
-      undefined,
-      restRequestConfig,
-    );
+    const r = await this.rc.get<CustomUserGreetingInfo>(this.path(), undefined, restRequestConfig);
     return r.data;
   }
 }

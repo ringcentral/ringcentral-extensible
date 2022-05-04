@@ -1,10 +1,7 @@
 import { RestRequestConfig } from '../../../../../Rest';
-import {
-  ListExtensionDevicesParameters,
-  GetExtensionDevicesResponse,
-} from '../../../../../definitions';
+import { ListExtensionDevicesParameters, GetExtensionDevicesResponse } from '../../../../../definitions';
 import Parent from '..';
-import { RingCentral } from '../../../../..';
+import RingCentral from '../../../../..';
 
 class Index {
   rc: RingCentral;
@@ -28,15 +25,8 @@ class Index {
    * App Permission: ReadAccounts
    * User Permission: ReadUserDevices
    */
-  async get(
-    queryParams?: ListExtensionDevicesParameters,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<GetExtensionDevicesResponse> {
-    const r = await this.rc.get<GetExtensionDevicesResponse>(
-      this.path(),
-      queryParams,
-      restRequestConfig,
-    );
+  async get(queryParams?: ListExtensionDevicesParameters, restRequestConfig?: RestRequestConfig): Promise<GetExtensionDevicesResponse> {
+    const r = await this.rc.get<GetExtensionDevicesResponse>(this.path(), queryParams, restRequestConfig);
     return r.data;
   }
 }

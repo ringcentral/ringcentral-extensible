@@ -1,8 +1,4 @@
-import {
-  DictionaryGreetingInfo,
-  CallHandlingNavigationInfo,
-  CallHandlingPagingInfo,
-} from './index';
+import { DictionaryGreetingInfo, CallHandlingNavigationInfo, CallHandlingPagingInfo } from './index';
 
 class DictionaryGreetingList {
   /**

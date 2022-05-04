@@ -1,11 +1,8 @@
 import BulkAssign from './BulkAssign';
 import { RestRequestConfig } from '../../../../../Rest';
-import {
-  ListAutomaticLocationUpdatesUsersParameters,
-  AutomaticLocationUpdatesUserList,
-} from '../../../../../definitions';
+import { ListAutomaticLocationUpdatesUsersParameters, AutomaticLocationUpdatesUserList } from '../../../../../definitions';
 import Parent from '..';
-import { RingCentral } from '../../../../..';
+import RingCentral from '../../../../..';
 
 class Index {
   rc: RingCentral;
@@ -29,15 +26,8 @@ class Index {
    * App Permission: EditAccounts
    * User Permission: ConfigureEmergencyMaps
    */
-  async get(
-    queryParams?: ListAutomaticLocationUpdatesUsersParameters,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<AutomaticLocationUpdatesUserList> {
-    const r = await this.rc.get<AutomaticLocationUpdatesUserList>(
-      this.path(),
-      queryParams,
-      restRequestConfig,
-    );
+  async get(queryParams?: ListAutomaticLocationUpdatesUsersParameters, restRequestConfig?: RestRequestConfig): Promise<AutomaticLocationUpdatesUserList> {
+    const r = await this.rc.get<AutomaticLocationUpdatesUserList>(this.path(), queryParams, restRequestConfig);
     return r.data;
   }
 

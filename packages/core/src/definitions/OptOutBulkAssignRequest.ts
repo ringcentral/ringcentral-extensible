@@ -1,6 +1,6 @@
 /**
  * Consists of `from` field and `optOuts` and `optIns` lists. Both `optOuts` and `optIns` can be empty but not simultaneously - at least one of the lists must be entered."
- */
+*/
 class OptOutBulkAssignRequest {
   /**
    * The phone number of a sender which the recipients should be opted out from or opted in to

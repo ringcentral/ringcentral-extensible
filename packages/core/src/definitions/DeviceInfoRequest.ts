@@ -1,6 +1,6 @@
 /**
  * Device information
- */
+*/
 class DeviceInfoRequest {
   /**
    * Device unique identifier, retrieved at previous session (if any)

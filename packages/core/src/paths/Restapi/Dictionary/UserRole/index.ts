@@ -1,11 +1,7 @@
 import { RestRequestConfig } from '../../../../Rest';
-import {
-  ListStandardUserRoleParameters,
-  RolesCollectionResource,
-  RoleResource,
-} from '../../../../definitions';
+import { ListStandardUserRoleParameters, RolesCollectionResource, RoleResource } from '../../../../definitions';
 import Parent from '..';
-import { RingCentral } from '../../../..';
+import RingCentral from '../../../..';
 
 class Index {
   rc: RingCentral;
@@ -33,15 +29,8 @@ class Index {
    * Endpoint: /restapi/{apiVersion}/dictionary/user-role
    * Rate Limit Group: Light
    */
-  async list(
-    queryParams?: ListStandardUserRoleParameters,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<RolesCollectionResource> {
-    const r = await this.rc.get<RolesCollectionResource>(
-      this.path(false),
-      queryParams,
-      restRequestConfig,
-    );
+  async list(queryParams?: ListStandardUserRoleParameters, restRequestConfig?: RestRequestConfig): Promise<RolesCollectionResource> {
+    const r = await this.rc.get<RolesCollectionResource>(this.path(false), queryParams, restRequestConfig);
     return r.data;
   }
 
@@ -55,11 +44,7 @@ class Index {
     if (this.roleId === null) {
       throw new Error('roleId must be specified.');
     }
-    const r = await this.rc.get<RoleResource>(
-      this.path(),
-      undefined,
-      restRequestConfig,
-    );
+    const r = await this.rc.get<RoleResource>(this.path(), undefined, restRequestConfig);
     return r.data;
   }
 }

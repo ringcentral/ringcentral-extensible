@@ -2,7 +2,7 @@ import { AddressBookBulkContactResource, ErrorEntity } from './index';
 
 /**
  * Result record on adding multiple contacts to an extension. Returned for completed tasks
- */
+*/
 class AddressBookBulkUploadTaskResult {
   /**
    * Internal identifier of an extension
@@ -16,7 +16,7 @@ class AddressBookBulkUploadTaskResult {
   /**
    * Adding contact status
    */
-  status?: 'Success' | 'Fail';
+  status?: ('Success' | 'Fail');
 
   /**
    */

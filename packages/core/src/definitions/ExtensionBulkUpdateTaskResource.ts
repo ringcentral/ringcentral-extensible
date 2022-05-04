@@ -2,7 +2,7 @@ import { ExtensionBulkUpdateTaskResult } from './index';
 
 /**
  * Information on a task for updating multiple extensions
- */
+*/
 class ExtensionBulkUpdateTaskResource {
   /**
    * Link to a task resource
@@ -20,7 +20,7 @@ class ExtensionBulkUpdateTaskResource {
    * Task status
    * Required
    */
-  status?: 'Accepted' | 'InProgress' | 'Completed' | 'Failed';
+  status?: ('Accepted' | 'InProgress' | 'Completed' | 'Failed');
 
   /**
    * Task creation datetime

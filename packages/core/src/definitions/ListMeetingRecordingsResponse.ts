@@ -1,8 +1,4 @@
-import {
-  MeetingRecording,
-  MeetingRecordingsPagingInfo,
-  MeetingRecordingsNavigationInfo,
-} from './index';
+import { MeetingRecording, MeetingRecordingsPagingInfo, MeetingRecordingsNavigationInfo } from './index';
 
 class ListMeetingRecordingsResponse {
   /**

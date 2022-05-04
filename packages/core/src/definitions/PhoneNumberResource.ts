@@ -19,11 +19,7 @@ class PhoneNumberResource {
   /**
    * Usage type of a phone number
    */
-  usageType?:
-  | 'MobileNumber'
-  | 'ContactNumber'
-  | 'DirectNumber'
-  | 'ForwardedNumber';
+  usageType?: ('MobileNumber' | 'ContactNumber' | 'DirectNumber' | 'ForwardedNumber');
 
   /**
    * Specifies if a phone number should be hidden or not

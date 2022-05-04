@@ -1,11 +1,11 @@
 /**
  * Sync information (type, token and time)
- */
+*/
 class CompanyCallLogSyncInfo {
   /**
    * Type of synchronization
    */
-  syncType?: 'FSync' | 'ISync';
+  syncType?: ('FSync' | 'ISync');
 
   /**
    * Synchronization token

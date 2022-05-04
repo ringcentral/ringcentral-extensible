@@ -2,7 +2,7 @@ import { AddressBookBulkUploadTaskResult } from './index';
 
 /**
  * Information on a task for adding multiple contacts to multiple extensions
- */
+*/
 class AddressBookBulkUploadResponse {
   /**
    * Internal identifier of a task
@@ -20,7 +20,7 @@ class AddressBookBulkUploadResponse {
    * Task status
    * Required
    */
-  status?: 'Accepted' | 'InProgress' | 'Completed' | 'Failed';
+  status?: ('Accepted' | 'InProgress' | 'Completed' | 'Failed');
 
   /**
    * Datetime of a task creation

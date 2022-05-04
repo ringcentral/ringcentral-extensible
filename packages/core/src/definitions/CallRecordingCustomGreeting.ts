@@ -1,12 +1,9 @@
-import {
-  CallRecordingCustomGreetingData,
-  CallRecordingCustomGreetingLanguage,
-} from './index';
+import { CallRecordingCustomGreetingData, CallRecordingCustomGreetingLanguage } from './index';
 
 class CallRecordingCustomGreeting {
   /**
    */
-  type?: 'StartRecording' | 'StopRecording' | 'AutomaticRecording';
+  type?: ('StartRecording' | 'StopRecording' | 'AutomaticRecording');
 
   /**
    */

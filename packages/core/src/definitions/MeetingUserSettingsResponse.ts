@@ -1,8 +1,4 @@
-import {
-  UserMeetingRecordingSetting,
-  ScheduleUserMeetingInfo,
-  TelephonyUserMeetingSettings,
-} from './index';
+import { UserMeetingRecordingSetting, ScheduleUserMeetingInfo, TelephonyUserMeetingSettings } from './index';
 
 class MeetingUserSettingsResponse {
   /**

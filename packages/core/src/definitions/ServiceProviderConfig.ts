@@ -1,8 +1,5 @@
 import {
-  AuthenticationScheme,
-  BulkSupported,
-  Supported,
-  FilterSupported,
+  AuthenticationScheme, BulkSupported, Supported, FilterSupported,
 } from './index';
 
 class ServiceProviderConfig {
@@ -32,7 +29,7 @@ class ServiceProviderConfig {
 
   /**
    */
-  schemas?: 'urn:ietf:params:scim:schemas:core:2.0:ServiceProviderConfig'[];
+  schemas?: ('urn:ietf:params:scim:schemas:core:2.0:ServiceProviderConfig')[];
 
   /**
    */

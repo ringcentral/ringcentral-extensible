@@ -1,8 +1,4 @@
-import {
-  ExtensionDeviceResponse,
-  DeviceProvisioningNavigationInfo,
-  DeviceProvisioningPagingInfo,
-} from './index';
+import { ExtensionDeviceResponse, DeviceProvisioningNavigationInfo, DeviceProvisioningPagingInfo } from './index';
 
 class GetExtensionDevicesResponse {
   /**

@@ -1,6 +1,6 @@
 /**
  * Address for emergency cases. The same emergency address is assigned to all the numbers of one device
- */
+*/
 class EmergencyServiceAddressResource {
   /**
    */
@@ -70,13 +70,7 @@ class EmergencyServiceAddressResource {
   /**
    * Resulting status of emergency address synchronization. Returned if `syncEmergencyAddress` parameter is set to 'True'
    */
-  syncStatus?:
-  | 'Verified'
-  | 'Updated'
-  | 'Deleted'
-  | 'NotRequired'
-  | 'Unsupported'
-  | 'Failed';
+  syncStatus?: ('Verified' | 'Updated' | 'Deleted' | 'NotRequired' | 'Unsupported' | 'Failed');
 
   /**
    * Name of an additional contact person. Should be specified for countries except the US, Canada, the UK and Australia.
@@ -106,7 +100,7 @@ class EmergencyServiceAddressResource {
   /**
    * Status of digital line provisioning
    */
-  lineProvisioningStatus?: 'Provisioning' | 'Valid' | 'Invalid';
+  lineProvisioningStatus?: ('Provisioning' | 'Valid' | 'Invalid');
 
   /**
    * Internal identifier of a tax

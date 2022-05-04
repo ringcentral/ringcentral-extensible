@@ -14,7 +14,7 @@ class SwitchValidated {
   /**
    * Validation result status
    */
-  status?: 'Valid' | 'Invalid';
+  status?: ('Valid' | 'Invalid');
 
   /**
    */

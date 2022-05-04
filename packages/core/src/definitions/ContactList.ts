@@ -1,8 +1,5 @@
 import {
-  PersonalContactResource,
-  UserContactsNavigationInfo,
-  UserContactsPagingInfo,
-  UserContactsGroupsInfo,
+  PersonalContactResource, UserContactsNavigationInfo, UserContactsPagingInfo, UserContactsGroupsInfo,
 } from './index';
 
 class ContactList {

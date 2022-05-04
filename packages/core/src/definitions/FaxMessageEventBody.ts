@@ -1,12 +1,8 @@
-import {
-  NotificationRecipientInfo,
-  SenderInfo,
-  FaxMessageAttachment,
-} from './index';
+import { NotificationRecipientInfo, SenderInfo, FaxMessageAttachment } from './index';
 
 /**
  * Notification payload body
- */
+*/
 class FaxMessageEventBody {
   /**
    * Internal identifier of a message
@@ -24,7 +20,7 @@ class FaxMessageEventBody {
   /**
    * Type of a message
    */
-  type?: 'Fax';
+  type?: ('Fax');
 
   /**
    * Message creation datetime in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format including timezone, for example *2016-03-10T18:07:52.534Z*

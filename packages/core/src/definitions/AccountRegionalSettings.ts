@@ -1,15 +1,10 @@
 import {
-  CountryInfo,
-  TimezoneInfo,
-  RegionalLanguageInfo,
-  GreetingLanguageInfo,
-  FormattingLocaleInfo,
-  CurrencyInfo,
+  CountryInfo, TimezoneInfo, RegionalLanguageInfo, GreetingLanguageInfo, FormattingLocaleInfo, CurrencyInfo,
 } from './index';
 
 /**
  * Account level region data (web service Auto-Receptionist settings)
- */
+*/
 class AccountRegionalSettings {
   /**
    */
@@ -34,7 +29,7 @@ class AccountRegionalSettings {
   /**
    * Time format setting. The default value is '12h' = ['12h', '24h']
    */
-  timeFormat?: '12h' | '24h';
+  timeFormat?: ('12h' | '24h');
 
   /**
    */

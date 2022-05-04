@@ -1,10 +1,7 @@
 import { RestRequestConfig } from '../../../../../../Rest';
-import {
-  SearchDirectoryEntriesRequest,
-  DirectoryResource,
-} from '../../../../../../definitions';
+import { SearchDirectoryEntriesRequest, DirectoryResource } from '../../../../../../definitions';
 import Parent from '..';
-import { RingCentral } from '../../../../../..';
+import RingCentral from '../../../../../..';
 
 class Index {
   rc: RingCentral;
@@ -28,16 +25,8 @@ class Index {
    * App Permission: ReadAccounts
    * User Permission: ReadExtensions
    */
-  async post(
-    searchDirectoryEntriesRequest: SearchDirectoryEntriesRequest,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<DirectoryResource> {
-    const r = await this.rc.post<DirectoryResource>(
-      this.path(),
-      searchDirectoryEntriesRequest,
-      undefined,
-      restRequestConfig,
-    );
+  async post(searchDirectoryEntriesRequest: SearchDirectoryEntriesRequest, restRequestConfig?: RestRequestConfig): Promise<DirectoryResource> {
+    const r = await this.rc.post<DirectoryResource>(this.path(), searchDirectoryEntriesRequest, undefined, restRequestConfig);
     return r.data;
   }
 }

@@ -1,8 +1,4 @@
-import {
-  CallMonitoringGroup,
-  ProvisioningNavigationInfo,
-  ProvisioningPagingInfo,
-} from './index';
+import { CallMonitoringGroup, ProvisioningNavigationInfo, ProvisioningPagingInfo } from './index';
 
 class CallMonitoringGroups {
   /**

@@ -1,7 +1,7 @@
 import { RestRequestConfig } from '../../../../../Rest';
 import { EditPagingGroupRequest } from '../../../../../definitions';
 import Parent from '..';
-import { RingCentral } from '../../../../..';
+import RingCentral from '../../../../..';
 
 class Index {
   rc: RingCentral;
@@ -25,16 +25,8 @@ class Index {
    * App Permission: EditAccounts
    * User Permission: Groups
    */
-  async post(
-    editPagingGroupRequest: EditPagingGroupRequest,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<string> {
-    const r = await this.rc.post<string>(
-      this.path(),
-      editPagingGroupRequest,
-      undefined,
-      restRequestConfig,
-    );
+  async post(editPagingGroupRequest: EditPagingGroupRequest, restRequestConfig?: RestRequestConfig): Promise<string> {
+    const r = await this.rc.post<string>(this.path(), editPagingGroupRequest, undefined, restRequestConfig);
     return r.data;
   }
 }

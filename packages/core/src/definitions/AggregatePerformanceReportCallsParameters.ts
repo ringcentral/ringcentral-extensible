@@ -1,6 +1,6 @@
 /**
  * Query parameters for operation aggregatePerformanceReportCalls
- */
+*/
 class AggregatePerformanceReportCallsParameters {
   /**
    * The current page number

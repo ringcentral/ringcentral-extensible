@@ -16,7 +16,7 @@ class UserAnsweringRuleListRecord {
   /**
    * Type of an answering rule
    */
-  type?: 'BusinessHours' | 'AfterHours' | 'Custom';
+  type?: ('BusinessHours' | 'AfterHours' | 'Custom');
 
   /**
    * Name of an answering rule specified by user

@@ -1,7 +1,7 @@
 import { RestRequestConfig } from '../../../../../Rest';
 import { UserCallQueues } from '../../../../../definitions';
 import Parent from '..';
-import { RingCentral } from '../../../../..';
+import RingCentral from '../../../../..';
 
 class Index {
   rc: RingCentral;
@@ -25,16 +25,8 @@ class Index {
    * App Permission: EditAccounts
    * User Permission: EditCallQueuePresence
    */
-  async put(
-    userCallQueues: UserCallQueues,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<UserCallQueues> {
-    const r = await this.rc.put<UserCallQueues>(
-      this.path(),
-      userCallQueues,
-      undefined,
-      restRequestConfig,
-    );
+  async put(userCallQueues: UserCallQueues, restRequestConfig?: RestRequestConfig): Promise<UserCallQueues> {
+    const r = await this.rc.put<UserCallQueues>(this.path(), userCallQueues, undefined, restRequestConfig);
     return r.data;
   }
 }

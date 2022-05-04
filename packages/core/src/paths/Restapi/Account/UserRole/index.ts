@@ -2,13 +2,10 @@ import BulkAssign from './BulkAssign';
 import Default from './Default';
 import { RestRequestConfig } from '../../../../Rest';
 import {
-  ListUserRolesParameters,
-  RolesCollectionResource,
-  RoleResource,
-  DeleteCustomRoleParameters,
+  ListUserRolesParameters, RolesCollectionResource, RoleResource, DeleteCustomRoleParameters,
 } from '../../../../definitions';
 import Parent from '..';
-import { RingCentral } from '../../../..';
+import RingCentral from '../../../..';
 
 class Index {
   rc: RingCentral;
@@ -38,15 +35,8 @@ class Index {
    * App Permission: ReadAccounts
    * User Permission: ReadUserRoles
    */
-  async list(
-    queryParams?: ListUserRolesParameters,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<RolesCollectionResource> {
-    const r = await this.rc.get<RolesCollectionResource>(
-      this.path(false),
-      queryParams,
-      restRequestConfig,
-    );
+  async list(queryParams?: ListUserRolesParameters, restRequestConfig?: RestRequestConfig): Promise<RolesCollectionResource> {
+    const r = await this.rc.get<RolesCollectionResource>(this.path(false), queryParams, restRequestConfig);
     return r.data;
   }
 
@@ -58,16 +48,8 @@ class Index {
    * App Permission: RoleManagement
    * User Permission: EditUserRoles
    */
-  async post(
-    roleResource: RoleResource,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<string> {
-    const r = await this.rc.post<string>(
-      this.path(false),
-      roleResource,
-      undefined,
-      restRequestConfig,
-    );
+  async post(roleResource: RoleResource, restRequestConfig?: RestRequestConfig): Promise<string> {
+    const r = await this.rc.post<string>(this.path(false), roleResource, undefined, restRequestConfig);
     return r.data;
   }
 
@@ -83,11 +65,7 @@ class Index {
     if (this.roleId === null) {
       throw new Error('roleId must be specified.');
     }
-    const r = await this.rc.get<RoleResource>(
-      this.path(),
-      undefined,
-      restRequestConfig,
-    );
+    const r = await this.rc.get<RoleResource>(this.path(), undefined, restRequestConfig);
     return r.data;
   }
 
@@ -99,19 +77,11 @@ class Index {
    * App Permission: RoleManagement
    * User Permission: EditUserRoles
    */
-  async put(
-    roleResource: RoleResource,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<string> {
+  async put(roleResource: RoleResource, restRequestConfig?: RestRequestConfig): Promise<string> {
     if (this.roleId === null) {
       throw new Error('roleId must be specified.');
     }
-    const r = await this.rc.put<string>(
-      this.path(),
-      roleResource,
-      undefined,
-      restRequestConfig,
-    );
+    const r = await this.rc.put<string>(this.path(), roleResource, undefined, restRequestConfig);
     return r.data;
   }
 
@@ -123,18 +93,11 @@ class Index {
    * App Permission: RoleManagement
    * User Permission: EditUserRoles
    */
-  async delete(
-    queryParams?: DeleteCustomRoleParameters,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<string> {
+  async delete(queryParams?: DeleteCustomRoleParameters, restRequestConfig?: RestRequestConfig): Promise<string> {
     if (this.roleId === null) {
       throw new Error('roleId must be specified.');
     }
-    const r = await this.rc.delete<string>(
-      this.path(),
-      queryParams,
-      restRequestConfig,
-    );
+    const r = await this.rc.delete<string>(this.path(), queryParams, restRequestConfig);
     return r.data;
   }
 

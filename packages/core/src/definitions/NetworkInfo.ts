@@ -1,8 +1,5 @@
 import {
-  AutomaticLocationUpdatesSiteInfo,
-  PublicIpRangeInfo,
-  PrivateIpRangeInfo,
-  ERLLocationInfo,
+  AutomaticLocationUpdatesSiteInfo, PublicIpRangeInfo, PrivateIpRangeInfo, ERLLocationInfo,
 } from './index';
 
 class NetworkInfo {

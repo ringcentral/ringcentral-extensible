@@ -1,10 +1,7 @@
 import { RestRequestConfig } from '../../../../../../../Rest';
-import {
-  BridgeTargetRequest,
-  CallParty,
-} from '../../../../../../../definitions';
+import { BridgeTargetRequest, CallParty } from '../../../../../../../definitions';
 import Parent from '..';
-import { RingCentral } from '../../../../../../..';
+import RingCentral from '../../../../../../..';
 
 class Index {
   rc: RingCentral;
@@ -27,16 +24,8 @@ class Index {
    * Rate Limit Group: Light
    * App Permission: CallControl
    */
-  async post(
-    bridgeTargetRequest: BridgeTargetRequest,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<CallParty> {
-    const r = await this.rc.post<CallParty>(
-      this.path(),
-      bridgeTargetRequest,
-      undefined,
-      restRequestConfig,
-    );
+  async post(bridgeTargetRequest: BridgeTargetRequest, restRequestConfig?: RestRequestConfig): Promise<CallParty> {
+    const r = await this.rc.post<CallParty>(this.path(), bridgeTargetRequest, undefined, restRequestConfig);
     return r.data;
   }
 }

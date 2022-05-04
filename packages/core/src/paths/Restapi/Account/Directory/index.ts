@@ -1,7 +1,7 @@
 import Federation from './Federation';
 import Entries from './Entries';
 import Parent from '..';
-import { RingCentral } from '../../../..';
+import RingCentral from '../../../..';
 
 class Index {
   rc: RingCentral;
@@ -17,7 +17,7 @@ class Index {
     return `${this.parent.path()}/directory`;
   }
 
-  entries(entryId: string | null = null): Entries {
+  entries(entryId: (string | null) = null): Entries {
     return new Entries(this, entryId);
   }
 

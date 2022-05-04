@@ -2,13 +2,10 @@ import Content from './Content';
 import Utils from '../../../../Utils';
 import { RestRequestConfig } from '../../../../Rest';
 import {
-  IVRPrompts,
-  CreateIVRPromptRequest,
-  PromptInfo,
-  UpdateIVRPromptRequest,
+  IVRPrompts, CreateIVRPromptRequest, PromptInfo, UpdateIVRPromptRequest,
 } from '../../../../definitions';
 import Parent from '..';
-import { RingCentral } from '../../../..';
+import RingCentral from '../../../..';
 
 class Index {
   rc: RingCentral;
@@ -39,11 +36,7 @@ class Index {
    * User Permission: ReadCompanyGreetings
    */
   async list(restRequestConfig?: RestRequestConfig): Promise<IVRPrompts> {
-    const r = await this.rc.get<IVRPrompts>(
-      this.path(false),
-      undefined,
-      restRequestConfig,
-    );
+    const r = await this.rc.get<IVRPrompts>(this.path(false), undefined, restRequestConfig);
     return r.data;
   }
 
@@ -55,17 +48,9 @@ class Index {
    * App Permission: EditAccounts
    * User Permission: EditCompanyGreetings
    */
-  async post(
-    createIVRPromptRequest: CreateIVRPromptRequest,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<PromptInfo> {
+  async post(createIVRPromptRequest: CreateIVRPromptRequest, restRequestConfig?: RestRequestConfig): Promise<PromptInfo> {
     const formData = Utils.getFormData(createIVRPromptRequest);
-    const r = await this.rc.post<PromptInfo>(
-      this.path(false),
-      formData,
-      undefined,
-      restRequestConfig,
-    );
+    const r = await this.rc.post<PromptInfo>(this.path(false), formData, undefined, restRequestConfig);
     return r.data;
   }
 
@@ -81,11 +66,7 @@ class Index {
     if (this.promptId === null) {
       throw new Error('promptId must be specified.');
     }
-    const r = await this.rc.get<PromptInfo>(
-      this.path(),
-      undefined,
-      restRequestConfig,
-    );
+    const r = await this.rc.get<PromptInfo>(this.path(), undefined, restRequestConfig);
     return r.data;
   }
 
@@ -97,19 +78,11 @@ class Index {
    * App Permission: EditAccounts
    * User Permission: EditCompanyGreetings
    */
-  async put(
-    updateIVRPromptRequest: UpdateIVRPromptRequest,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<PromptInfo> {
+  async put(updateIVRPromptRequest: UpdateIVRPromptRequest, restRequestConfig?: RestRequestConfig): Promise<PromptInfo> {
     if (this.promptId === null) {
       throw new Error('promptId must be specified.');
     }
-    const r = await this.rc.put<PromptInfo>(
-      this.path(),
-      updateIVRPromptRequest,
-      undefined,
-      restRequestConfig,
-    );
+    const r = await this.rc.put<PromptInfo>(this.path(), updateIVRPromptRequest, undefined, restRequestConfig);
     return r.data;
   }
 
@@ -125,11 +98,7 @@ class Index {
     if (this.promptId === null) {
       throw new Error('promptId must be specified.');
     }
-    const r = await this.rc.delete<string>(
-      this.path(),
-      undefined,
-      restRequestConfig,
-    );
+    const r = await this.rc.delete<string>(this.path(), undefined, restRequestConfig);
     return r.data;
   }
 

@@ -1,6 +1,6 @@
 /**
  * Information on a language set as regional
- */
+*/
 class RegionalLanguageInfo {
   /**
    * Internal identifier of a language set as regional

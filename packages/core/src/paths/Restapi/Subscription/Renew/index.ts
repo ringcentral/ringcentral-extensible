@@ -1,7 +1,7 @@
 import { RestRequestConfig } from '../../../../Rest';
 import { SubscriptionInfo } from '../../../../definitions';
 import Parent from '..';
-import { RingCentral } from '../../../..';
+import RingCentral from '../../../..';
 
 class Index {
   rc: RingCentral;
@@ -24,11 +24,7 @@ class Index {
    * Rate Limit Group: Light
    */
   async post(restRequestConfig?: RestRequestConfig): Promise<SubscriptionInfo> {
-    const r = await this.rc.post<SubscriptionInfo>(
-      this.path(),
-      undefined,
-      restRequestConfig,
-    );
+    const r = await this.rc.post<SubscriptionInfo>(this.path(), undefined, restRequestConfig);
     return r.data;
   }
 }

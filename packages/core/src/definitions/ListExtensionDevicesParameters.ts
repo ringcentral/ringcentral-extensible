@@ -1,16 +1,16 @@
 /**
  * Query parameters for operation listExtensionDevices
- */
+*/
 class ListExtensionDevicesParameters {
   /**
    * Pooling type of a device
    */
-  linePooling?: 'Host' | 'Guest' | 'None';
+  linePooling?: ('Host' | 'Guest' | 'None');
 
   /**
    * Device feature or multiple features supported
    */
-  feature?: 'Intercom' | 'Paging' | 'BLA' | 'HELD';
+  feature?: ('Intercom' | 'Paging' | 'BLA' | 'HELD');
 
   /**
    * Number of a page to be returned

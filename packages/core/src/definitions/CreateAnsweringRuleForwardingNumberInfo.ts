@@ -22,14 +22,6 @@ class CreateAnsweringRuleForwardingNumberInfo {
   /**
    * Type of a forwarding number
    */
-  type?:
-  | 'Home'
-  | 'Mobile'
-  | 'Work'
-  | 'PhoneLine'
-  | 'Outage'
-  | 'Other'
-  | 'BusinessMobilePhone'
-  | 'ExternalCarrier';
+  type?: ('Home' | 'Mobile' | 'Work' | 'PhoneLine' | 'Outage' | 'Other' | 'BusinessMobilePhone' | 'ExternalCarrier');
 }
 export default CreateAnsweringRuleForwardingNumberInfo;

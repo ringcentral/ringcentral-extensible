@@ -9,7 +9,7 @@ class PhoneLinesInfo {
   /**
    * Type of phone line
    */
-  lineType?: 'Standalone' | 'StandaloneFree' | 'BlaPrimary' | 'BlaSecondary';
+  lineType?: ('Standalone' | 'StandaloneFree' | 'BlaPrimary' | 'BlaSecondary');
 
   /**
    */

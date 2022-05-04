@@ -1,10 +1,7 @@
 import { RestRequestConfig } from '../../../../../Rest';
-import {
-  ListCallRecordingCustomGreetingsParameters,
-  CallRecordingCustomGreetings,
-} from '../../../../../definitions';
+import { ListCallRecordingCustomGreetingsParameters, CallRecordingCustomGreetings } from '../../../../../definitions';
 import Parent from '..';
-import { RingCentral } from '../../../../..';
+import RingCentral from '../../../../..';
 
 class Index {
   rc: RingCentral;
@@ -34,15 +31,8 @@ class Index {
    * App Permission: ReadAccounts
    * User Permission: ReadCompanyInfo
    */
-  async get(
-    queryParams?: ListCallRecordingCustomGreetingsParameters,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<CallRecordingCustomGreetings> {
-    const r = await this.rc.get<CallRecordingCustomGreetings>(
-      this.path(false),
-      queryParams,
-      restRequestConfig,
-    );
+  async get(queryParams?: ListCallRecordingCustomGreetingsParameters, restRequestConfig?: RestRequestConfig): Promise<CallRecordingCustomGreetings> {
+    const r = await this.rc.get<CallRecordingCustomGreetings>(this.path(false), queryParams, restRequestConfig);
     return r.data;
   }
 
@@ -55,11 +45,7 @@ class Index {
    * User Permission: EditCompanyInfo
    */
   async deleteAll(restRequestConfig?: RestRequestConfig): Promise<string> {
-    const r = await this.rc.delete<string>(
-      this.path(false),
-      undefined,
-      restRequestConfig,
-    );
+    const r = await this.rc.delete<string>(this.path(false), undefined, restRequestConfig);
     return r.data;
   }
 
@@ -75,11 +61,7 @@ class Index {
     if (this.greetingId === null) {
       throw new Error('greetingId must be specified.');
     }
-    const r = await this.rc.delete<string>(
-      this.path(),
-      undefined,
-      restRequestConfig,
-    );
+    const r = await this.rc.delete<string>(this.path(), undefined, restRequestConfig);
     return r.data;
   }
 }

@@ -1,12 +1,12 @@
 /**
  * Request body for operation authorize
- */
+*/
 class AuthorizeRequest {
   /**
    * Determines authorization flow: **code** - Authorization Code, **token** - Implicit Grant
    * Required
    */
-  response_type?: 'code' | 'token';
+  response_type?: ('code' | 'token');
 
   /**
    * This is a callback URI which determines where the response is sent. The value of this parameter must exactly match one of the URIs you have provided for your app upon registration
@@ -33,12 +33,12 @@ class AuthorizeRequest {
   /**
    * Style of login form. The default value is 'page'. The 'popup' and 'touch' values are featured for mobile applications
    */
-  display?: 'page' | 'popup' | 'touch' | 'mobile';
+  display?: ('page' | 'popup' | 'touch' | 'mobile');
 
   /**
    * Specifies which login form will be displayed. Space-separated set of the following values: 'login' - official RingCentral login form, 'sso' - Single Sign-On login form, 'consent' - form to show the requested scope and prompt user for consent. Either 'login' or 'sso' (or both) must be specified. The default value is 'login&sso'
    */
-  prompt?: 'login' | 'sso' | 'consent';
+  prompt?: ('login' | 'sso' | 'consent');
 
   /**
    * Localization code of a language. Overwrites 'Accept-Language' header value
@@ -53,12 +53,7 @@ class AuthorizeRequest {
   /**
    * User interface options data
    */
-  ui_options?:
-  | 'hide_logo'
-  | 'hide_tos'
-  | 'hide_remember_me'
-  | 'external_popup'
-  | 'old_ui';
+  ui_options?: ('hide_logo' | 'hide_tos' | 'hide_remember_me' | 'external_popup' | 'old_ui');
 
   /**
    */
@@ -86,7 +81,7 @@ class AuthorizeRequest {
 
   /**
    */
-  code_challenge_method?: 'plain' | 'S256';
+  code_challenge_method?: ('plain' | 'S256');
 
   /**
    */

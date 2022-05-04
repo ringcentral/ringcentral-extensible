@@ -3,7 +3,7 @@ import OptOuts from './OptOuts';
 import Messages from './Messages';
 import Batches from './Batches';
 import Parent from '..';
-import { RingCentral } from '../../../..';
+import RingCentral from '../../../..';
 
 class Index {
   rc: RingCentral;
@@ -19,11 +19,11 @@ class Index {
     return `${this.parent.path()}/a2p-sms`;
   }
 
-  batches(batchId: string | null = null): Batches {
+  batches(batchId: (string | null) = null): Batches {
     return new Batches(this, batchId);
   }
 
-  messages(messageId: string | null = null): Messages {
+  messages(messageId: (string | null) = null): Messages {
     return new Messages(this, messageId);
   }
 

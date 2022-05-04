@@ -1,8 +1,4 @@
-import {
-  ListCompanyAnsweringRuleInfo,
-  CallHandlingPagingInfo,
-  CallHandlingNavigationInfo,
-} from './index';
+import { ListCompanyAnsweringRuleInfo, CallHandlingPagingInfo, CallHandlingNavigationInfo } from './index';
 
 class CompanyAnsweringRuleList {
   /**

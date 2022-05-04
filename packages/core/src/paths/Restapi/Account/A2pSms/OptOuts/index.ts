@@ -1,11 +1,8 @@
 import BulkAssign from './BulkAssign';
 import { RestRequestConfig } from '../../../../../Rest';
-import {
-  ReadA2PSMSOptOutsParameters,
-  OptOutListResponse,
-} from '../../../../../definitions';
+import { ReadA2PSMSOptOutsParameters, OptOutListResponse } from '../../../../../definitions';
 import Parent from '..';
-import { RingCentral } from '../../../../..';
+import RingCentral from '../../../../..';
 
 class Index {
   rc: RingCentral;
@@ -28,15 +25,8 @@ class Index {
    * Rate Limit Group: Light
    * App Permission: A2PSMS
    */
-  async get(
-    queryParams?: ReadA2PSMSOptOutsParameters,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<OptOutListResponse> {
-    const r = await this.rc.get<OptOutListResponse>(
-      this.path(),
-      queryParams,
-      restRequestConfig,
-    );
+  async get(queryParams?: ReadA2PSMSOptOutsParameters, restRequestConfig?: RestRequestConfig): Promise<OptOutListResponse> {
+    const r = await this.rc.get<OptOutListResponse>(this.path(), queryParams, restRequestConfig);
     return r.data;
   }
 

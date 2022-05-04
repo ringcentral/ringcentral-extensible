@@ -1,10 +1,7 @@
 import { RestRequestConfig } from '../../../../Rest';
-import {
-  GlipEveryoneInfo,
-  UpdateGlipEveryoneRequest,
-} from '../../../../definitions';
+import { GlipEveryoneInfo, UpdateGlipEveryoneRequest } from '../../../../definitions';
 import Parent from '..';
-import { RingCentral } from '../../../..';
+import RingCentral from '../../../..';
 
 class Index {
   rc: RingCentral;
@@ -29,11 +26,7 @@ class Index {
    * User Permission: UnifiedAppDesktop
    */
   async get(restRequestConfig?: RestRequestConfig): Promise<GlipEveryoneInfo> {
-    const r = await this.rc.get<GlipEveryoneInfo>(
-      this.path(),
-      undefined,
-      restRequestConfig,
-    );
+    const r = await this.rc.get<GlipEveryoneInfo>(this.path(), undefined, restRequestConfig);
     return r.data;
   }
 
@@ -45,16 +38,8 @@ class Index {
    * App Permission: TeamMessaging
    * User Permission: UnifiedAppDesktop
    */
-  async patch(
-    updateGlipEveryoneRequest: UpdateGlipEveryoneRequest,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<GlipEveryoneInfo> {
-    const r = await this.rc.patch<GlipEveryoneInfo>(
-      this.path(),
-      updateGlipEveryoneRequest,
-      undefined,
-      restRequestConfig,
-    );
+  async patch(updateGlipEveryoneRequest: UpdateGlipEveryoneRequest, restRequestConfig?: RestRequestConfig): Promise<GlipEveryoneInfo> {
+    const r = await this.rc.patch<GlipEveryoneInfo>(this.path(), updateGlipEveryoneRequest, undefined, restRequestConfig);
     return r.data;
   }
 }

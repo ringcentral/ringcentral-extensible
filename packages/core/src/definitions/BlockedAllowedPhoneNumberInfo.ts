@@ -1,6 +1,6 @@
 /**
  * Information on a blocked/allowed phone number
- */
+*/
 class BlockedAllowedPhoneNumberInfo {
   /**
    * Link to a blocked/allowed phone number
@@ -25,6 +25,6 @@ class BlockedAllowedPhoneNumberInfo {
   /**
    * Status of a phone number
    */
-  status?: 'Blocked' | 'Allowed';
+  status?: ('Blocked' | 'Allowed');
 }
 export default BlockedAllowedPhoneNumberInfo;

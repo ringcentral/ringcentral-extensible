@@ -1,6 +1,6 @@
 /**
  * Contact address information
- */
+*/
 class AddressBookBulkContactAddressInfo {
   /**
    * Country name of extension user company. Not returned for Address Book

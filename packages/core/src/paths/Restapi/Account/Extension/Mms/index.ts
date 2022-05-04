@@ -1,11 +1,8 @@
 import Utils from '../../../../../Utils';
 import { RestRequestConfig } from '../../../../../Rest';
-import {
-  CreateMMSMessage,
-  GetSMSMessageInfoResponse,
-} from '../../../../../definitions';
+import { CreateMMSMessage, GetSMSMessageInfoResponse } from '../../../../../definitions';
 import Parent from '..';
-import { RingCentral } from '../../../../..';
+import RingCentral from '../../../../..';
 
 class Index {
   rc: RingCentral;
@@ -29,17 +26,9 @@ class Index {
    * App Permission: SMS
    * User Permission: OutboundSMS
    */
-  async post(
-    CreateMMSMessage: CreateMMSMessage,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<GetSMSMessageInfoResponse> {
+  async post(CreateMMSMessage: CreateMMSMessage, restRequestConfig?: RestRequestConfig): Promise<GetSMSMessageInfoResponse> {
     const formData = Utils.getFormData(CreateMMSMessage);
-    const r = await this.rc.post<GetSMSMessageInfoResponse>(
-      this.path(),
-      formData,
-      undefined,
-      restRequestConfig,
-    );
+    const r = await this.rc.post<GetSMSMessageInfoResponse>(this.path(), formData, undefined, restRequestConfig);
     return r.data;
   }
 }

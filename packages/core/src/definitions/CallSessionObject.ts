@@ -2,7 +2,7 @@ import { OriginInfo, CallParty } from './index';
 
 /**
  * Call session information
- */
+*/
 class CallSessionObject {
   /**
    * Internal identifier of a call session

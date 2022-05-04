@@ -36,7 +36,7 @@ class GlipNoteInfo {
   /**
    * Note publishing status. Any note is created in 'Draft' status. After it is posted it becomes 'Active'
    */
-  status?: 'Active' | 'Draft';
+  status?: ('Active' | 'Draft');
 
   /**
    * Creation time
@@ -50,6 +50,6 @@ class GlipNoteInfo {
 
   /**
    */
-  type?: 'Note';
+  type?: ('Note');
 }
 export default GlipNoteInfo;

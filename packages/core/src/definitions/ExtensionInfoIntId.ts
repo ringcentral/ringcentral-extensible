@@ -1,6 +1,6 @@
 /**
  * This attribute can be omitted for unassigned devices
- */
+*/
 class ExtensionInfoIntId {
   /**
    * Internal identifier of an extension

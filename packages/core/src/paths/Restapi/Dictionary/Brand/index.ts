@@ -1,6 +1,6 @@
 import ContractedCountry from './ContractedCountry';
 import Parent from '..';
-import { RingCentral } from '../../../..';
+import RingCentral from '../../../..';
 
 class Index {
   rc: RingCentral;
@@ -22,9 +22,7 @@ class Index {
     return `${this.parent.path()}/brand`;
   }
 
-  contractedCountry(
-    contractedCountryId: string | null = null,
-  ): ContractedCountry {
+  contractedCountry(contractedCountryId: (string | null) = null): ContractedCountry {
     return new ContractedCountry(this, contractedCountryId);
   }
 }

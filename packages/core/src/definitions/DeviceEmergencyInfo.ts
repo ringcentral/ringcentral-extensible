@@ -2,7 +2,7 @@ import { DeviceEmergencyAddress, DeviceEmergencyLocationInfo } from './index';
 
 /**
  * Device emergency settings
- */
+*/
 class DeviceEmergencyInfo {
   /**
    */
@@ -20,27 +20,21 @@ class DeviceEmergencyInfo {
   /**
    * Emergency address status
    */
-  addressStatus?: 'Valid' | 'Invalid' | 'Provisioning';
+  addressStatus?: ('Valid' | 'Invalid' | 'Provisioning');
 
   /**
    * Visibility of an emergency response location. If `Private` is set, then location is visible only for the restricted number of users, specified in `owners` array
    */
-  visibility?: 'Private' | 'Public';
+  visibility?: ('Private' | 'Public');
 
   /**
    * Resulting status of emergency address synchronization. Returned if `syncEmergencyAddress` parameter is set to 'True'
    */
-  syncStatus?:
-  | 'Verified'
-  | 'Updated'
-  | 'Deleted'
-  | 'NotRequired'
-  | 'Unsupported'
-  | 'Failed';
+  syncStatus?: ('Verified' | 'Updated' | 'Deleted' | 'NotRequired' | 'Unsupported' | 'Failed');
 
   /**
    * Ability to register new emergency address for a phone line using devices sharing this line or only main device (line owner)
    */
-  addressEditableStatus?: 'MainDevice' | 'AnyDevice';
+  addressEditableStatus?: ('MainDevice' | 'AnyDevice');
 }
 export default DeviceEmergencyInfo;

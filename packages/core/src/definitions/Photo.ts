@@ -2,7 +2,7 @@ class Photo {
   /**
    * Required
    */
-  type?: 'photo';
+  type?: ('photo');
 
   /**
    * Required

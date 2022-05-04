@@ -9,7 +9,7 @@ class GlipConversationInfo {
   /**
    * Type of a conversation
    */
-  type?: 'Direct' | 'Personal' | 'Group';
+  type?: ('Direct' | 'Personal' | 'Group');
 
   /**
    * Conversation creation datetime in ISO 8601 format

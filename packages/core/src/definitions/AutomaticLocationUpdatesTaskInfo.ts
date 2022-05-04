@@ -9,7 +9,7 @@ class AutomaticLocationUpdatesTaskInfo {
   /**
    * Status of a task
    */
-  status?: 'Accepted' | 'InProgress' | 'Completed' | 'Failed';
+  status?: ('Accepted' | 'InProgress' | 'Completed' | 'Failed');
 
   /**
    * Task creation time
@@ -24,11 +24,7 @@ class AutomaticLocationUpdatesTaskInfo {
   /**
    * Type of a task
    */
-  type?:
-  | 'WirelessPointsBulkCreate'
-  | 'WirelessPointsBulkUpdate'
-  | 'SwitchesBulkCreate'
-  | 'SwitchesBulkUpdate';
+  type?: ('WirelessPointsBulkCreate' | 'WirelessPointsBulkUpdate' | 'SwitchesBulkCreate' | 'SwitchesBulkUpdate');
 
   /**
    */

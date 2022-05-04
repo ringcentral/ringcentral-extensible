@@ -35,7 +35,7 @@ class GlipEventCreate {
   /**
    * Event recurrence settings. For non-periodic events the value is 'None'. Must be greater or equal to event duration: 1- Day/Weekday; 7 - Week; 28 - Month; 365 - Year
    */
-  recurrence?: 'None' | 'Day' | 'Weekday' | 'Week' | 'Month' | 'Year';
+  recurrence?: ('None' | 'Day' | 'Weekday' | 'Week' | 'Month' | 'Year');
 
   /**
    * Condition of ending
@@ -51,21 +51,13 @@ class GlipEventCreate {
    * Iterations end datetime for periodic events.
    * Default: None
    */
-  endingOn?: 'None' | 'Count' | 'Date';
+  endingOn?: ('None' | 'Count' | 'Date');
 
   /**
    * Color of Event title (including its presentation in Calendar)
    * Default: Black
    */
-  color?:
-  | 'Black'
-  | 'Red'
-  | 'Orange'
-  | 'Yellow'
-  | 'Green'
-  | 'Blue'
-  | 'Purple'
-  | 'Magenta';
+  color?: ('Black' | 'Red' | 'Orange' | 'Yellow' | 'Green' | 'Blue' | 'Purple' | 'Magenta');
 
   /**
    * Event location

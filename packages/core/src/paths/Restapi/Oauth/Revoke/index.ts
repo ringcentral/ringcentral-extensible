@@ -1,7 +1,7 @@
 import { RestRequestConfig } from '../../../../Rest';
 import { RevokeTokenRequest } from '../../../../definitions';
 import Parent from '..';
-import { RingCentral } from '../../../..';
+import RingCentral from '../../../..';
 
 class Index {
   rc: RingCentral;
@@ -23,16 +23,8 @@ class Index {
    * Endpoint: /restapi/oauth/revoke
    * Rate Limit Group: Auth
    */
-  async post(
-    revokeTokenRequest: RevokeTokenRequest,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<string> {
-    const r = await this.rc.post<string>(
-      this.path(),
-      revokeTokenRequest,
-      undefined,
-      restRequestConfig,
-    );
+  async post(revokeTokenRequest: RevokeTokenRequest, restRequestConfig?: RestRequestConfig): Promise<string> {
+    const r = await this.rc.post<string>(this.path(), revokeTokenRequest, undefined, restRequestConfig);
     return r.data;
   }
 }

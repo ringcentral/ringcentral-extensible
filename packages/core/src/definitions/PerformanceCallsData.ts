@@ -1,12 +1,8 @@
-import {
-  KeyInfo,
-  PerformanceCallsTimers,
-  PerformanceCallsCounters,
-} from './index';
+import { KeyInfo, PerformanceCallsTimers, PerformanceCallsCounters } from './index';
 
 class PerformanceCallsData {
   /**
-   * Grouping key.
+   * Grouping key
    * Required
    */
   key?: string;

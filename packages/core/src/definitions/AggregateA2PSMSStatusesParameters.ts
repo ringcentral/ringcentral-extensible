@@ -1,6 +1,6 @@
 /**
  * Query parameters for operation aggregateA2PSMSStatuses
- */
+*/
 class AggregateA2PSMSStatusesParameters {
   /**
    * Date to filter message list result. Messages with `creationTime` later than or equal to `dateFrom` value are returned. The default value is 1 day before the current datetime
@@ -22,7 +22,7 @@ class AggregateA2PSMSStatusesParameters {
   /**
    * Direction of a message to filter the message list result. By default there is no filter applied - both Inbound and Outbound messages are returned
    */
-  direction?: 'Inbound' | 'Outbound';
+  direction?: ('Inbound' | 'Outbound');
 
   /**
    * List of phone numbers (specified in 'to' or 'from' fields of a message) to filter the results. Maximum number of phone numbers allowed to be specified as filters is 15

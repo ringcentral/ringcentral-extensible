@@ -1,10 +1,7 @@
 import { RestRequestConfig } from '../../../../Rest';
-import {
-  ReadAccountPresenceParameters,
-  AccountPresenceInfo,
-} from '../../../../definitions';
+import { ReadAccountPresenceParameters, AccountPresenceInfo } from '../../../../definitions';
 import Parent from '..';
-import { RingCentral } from '../../../..';
+import RingCentral from '../../../..';
 
 class Index {
   rc: RingCentral;
@@ -28,15 +25,8 @@ class Index {
    * App Permission: ReadPresence
    * User Permission: ReadPresenceStatus
    */
-  async get(
-    queryParams?: ReadAccountPresenceParameters,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<AccountPresenceInfo> {
-    const r = await this.rc.get<AccountPresenceInfo>(
-      this.path(),
-      queryParams,
-      restRequestConfig,
-    );
+  async get(queryParams?: ReadAccountPresenceParameters, restRequestConfig?: RestRequestConfig): Promise<AccountPresenceInfo> {
+    const r = await this.rc.get<AccountPresenceInfo>(this.path(), queryParams, restRequestConfig);
     return r.data;
   }
 }

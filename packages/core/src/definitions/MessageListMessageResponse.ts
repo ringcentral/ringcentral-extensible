@@ -1,6 +1,6 @@
 /**
  * Infomation on a message returned within the specified batch
- */
+*/
 class MessageListMessageResponse {
   /**
    * Internal identifier of a message
@@ -43,12 +43,7 @@ class MessageListMessageResponse {
    * Current status of a message
    * Example: Queued
    */
-  messageStatus?:
-  | 'Queued'
-  | 'Delivered'
-  | 'Sent'
-  | 'SendingFailed'
-  | 'DeliveryFailed';
+  messageStatus?: ('Queued' | 'Delivered' | 'Sent' | 'SendingFailed' | 'DeliveryFailed');
 
   /**
    * Number of segments of a message
@@ -73,7 +68,7 @@ class MessageListMessageResponse {
    * Indicates whether the message was outbound or inbound
    * Example: out
    */
-  direction?: 'Inbound' | 'Outbound';
+  direction?: ('Inbound' | 'Outbound');
 
   /**
    * The RC error code of the message sending failure reason

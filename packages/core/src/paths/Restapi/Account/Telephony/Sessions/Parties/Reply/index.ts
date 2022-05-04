@@ -1,7 +1,7 @@
 import { RestRequestConfig } from '../../../../../../../Rest';
 import { CallPartyReply, ReplyParty } from '../../../../../../../definitions';
 import Parent from '..';
-import { RingCentral } from '../../../../../../..';
+import RingCentral from '../../../../../../..';
 
 class Index {
   rc: RingCentral;
@@ -24,16 +24,8 @@ class Index {
    * Rate Limit Group: Light
    * App Permission: CallControl
    */
-  async post(
-    callPartyReply: CallPartyReply,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<ReplyParty> {
-    const r = await this.rc.post<ReplyParty>(
-      this.path(),
-      callPartyReply,
-      undefined,
-      restRequestConfig,
-    );
+  async post(callPartyReply: CallPartyReply, restRequestConfig?: RestRequestConfig): Promise<ReplyParty> {
+    const r = await this.rc.post<ReplyParty>(this.path(), callPartyReply, undefined, restRequestConfig);
     return r.data;
   }
 }

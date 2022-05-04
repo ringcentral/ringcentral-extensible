@@ -42,7 +42,7 @@ class SIPInfoResponse {
   /**
    * Preferred transport. SIP info will be returned for this transport if supported
    */
-  transport?: 'UDP' | 'TCP' | 'TLS' | 'WS' | 'WSS';
+  transport?: ('UDP' | 'TCP' | 'TLS' | 'WS' | 'WSS');
 
   /**
    * For TLS transport only Base64 encoded certificate

@@ -1,6 +1,6 @@
 import ServiceProviderConfig from './ServiceProviderConfig';
 import Users from './Users';
-import { RingCentral } from '../..';
+import RingCentral from '../..';
 
 class Index {
   rc: RingCentral;
@@ -19,7 +19,7 @@ class Index {
     return '/scim';
   }
 
-  users(id: string | null = null): Users {
+  users(id: (string | null) = null): Users {
     return new Users(this, id);
   }
 

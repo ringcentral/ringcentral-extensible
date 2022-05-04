@@ -1,7 +1,7 @@
 import { RestRequestConfig } from '../../../../../Rest';
 import { AddressBookBulkUploadResponse } from '../../../../../definitions';
 import Parent from '..';
-import { RingCentral } from '../../../../..';
+import RingCentral from '../../../../..';
 
 class Index {
   rc: RingCentral;
@@ -31,17 +31,11 @@ class Index {
    * App Permission: Contacts
    * User Permission: EditPersonalContacts
    */
-  async get(
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<AddressBookBulkUploadResponse> {
+  async get(restRequestConfig?: RestRequestConfig): Promise<AddressBookBulkUploadResponse> {
     if (this.taskId === null) {
       throw new Error('taskId must be specified.');
     }
-    const r = await this.rc.get<AddressBookBulkUploadResponse>(
-      this.path(),
-      undefined,
-      restRequestConfig,
-    );
+    const r = await this.rc.get<AddressBookBulkUploadResponse>(this.path(), undefined, restRequestConfig);
     return r.data;
   }
 }

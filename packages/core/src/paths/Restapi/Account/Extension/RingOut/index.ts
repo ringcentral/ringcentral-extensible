@@ -1,10 +1,7 @@
 import { RestRequestConfig } from '../../../../../Rest';
-import {
-  MakeRingOutRequest,
-  GetRingOutStatusResponse,
-} from '../../../../../definitions';
+import { MakeRingOutRequest, GetRingOutStatusResponse } from '../../../../../definitions';
 import Parent from '..';
-import { RingCentral } from '../../../../..';
+import RingCentral from '../../../../..';
 
 class Index {
   rc: RingCentral;
@@ -33,16 +30,8 @@ class Index {
    * Rate Limit Group: Heavy
    * App Permission: RingOut
    */
-  async post(
-    makeRingOutRequest: MakeRingOutRequest,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<GetRingOutStatusResponse> {
-    const r = await this.rc.post<GetRingOutStatusResponse>(
-      this.path(false),
-      makeRingOutRequest,
-      undefined,
-      restRequestConfig,
-    );
+  async post(makeRingOutRequest: MakeRingOutRequest, restRequestConfig?: RestRequestConfig): Promise<GetRingOutStatusResponse> {
+    const r = await this.rc.post<GetRingOutStatusResponse>(this.path(false), makeRingOutRequest, undefined, restRequestConfig);
     return r.data;
   }
 
@@ -53,17 +42,11 @@ class Index {
    * Rate Limit Group: Light
    * App Permission: RingOut
    */
-  async get(
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<GetRingOutStatusResponse> {
+  async get(restRequestConfig?: RestRequestConfig): Promise<GetRingOutStatusResponse> {
     if (this.ringoutId === null) {
       throw new Error('ringoutId must be specified.');
     }
-    const r = await this.rc.get<GetRingOutStatusResponse>(
-      this.path(),
-      undefined,
-      restRequestConfig,
-    );
+    const r = await this.rc.get<GetRingOutStatusResponse>(this.path(), undefined, restRequestConfig);
     return r.data;
   }
 
@@ -78,11 +61,7 @@ class Index {
     if (this.ringoutId === null) {
       throw new Error('ringoutId must be specified.');
     }
-    const r = await this.rc.delete<string>(
-      this.path(),
-      undefined,
-      restRequestConfig,
-    );
+    const r = await this.rc.delete<string>(this.path(), undefined, restRequestConfig);
     return r.data;
   }
 }

@@ -1,7 +1,7 @@
 import { RestRequestConfig } from '../../../../../Rest';
 import { BulkRoleAssignResource } from '../../../../../definitions';
 import Parent from '..';
-import { RingCentral } from '../../../../..';
+import RingCentral from '../../../../..';
 
 class Index {
   rc: RingCentral;
@@ -25,16 +25,8 @@ class Index {
    * App Permission: RoleManagement
    * User Permission: EditUserRoles
    */
-  async post(
-    bulkRoleAssignResource: BulkRoleAssignResource,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<string> {
-    const r = await this.rc.post<string>(
-      this.path(),
-      bulkRoleAssignResource,
-      undefined,
-      restRequestConfig,
-    );
+  async post(bulkRoleAssignResource: BulkRoleAssignResource, restRequestConfig?: RestRequestConfig): Promise<string> {
+    const r = await this.rc.post<string>(this.path(), bulkRoleAssignResource, undefined, restRequestConfig);
     return r.data;
   }
 }

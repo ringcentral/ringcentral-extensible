@@ -1,12 +1,12 @@
 /**
  * Query parameters for operation listLocations
- */
+*/
 class ListLocationsParameters {
   /**
    * Sorts results by the property specified
    * Default: City
    */
-  orderBy?: 'Npa' | 'City';
+  orderBy?: ('Npa' | 'City');
 
   /**
    * Indicates the page number to retrieve. Only positive number values are accepted

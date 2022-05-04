@@ -1,12 +1,8 @@
-import {
-  NotificationRecipientInfo,
-  SenderInfo,
-  MessageAttachmentInfo,
-} from './index';
+import { NotificationRecipientInfo, SenderInfo, MessageAttachmentInfo } from './index';
 
 /**
  * Notification payload body
- */
+*/
 class VoicemailMessageEventBody {
   /**
    * Internal identifier of a message
@@ -25,7 +21,7 @@ class VoicemailMessageEventBody {
   /**
    * Type of a message
    */
-  type?: 'Voicemail';
+  type?: ('Voicemail');
 
   /**
    * Message creation datetime in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format including timezone, for example *2019-03-10T18:07:52.534Z*
@@ -58,7 +54,7 @@ class VoicemailMessageEventBody {
    * Message direction
    * Default: Inbound
    */
-  direction?: 'Inbound' | 'Outbound';
+  direction?: ('Inbound' | 'Outbound');
 
   /**
    * Message availability status

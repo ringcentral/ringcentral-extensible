@@ -1,12 +1,8 @@
 import Complete from './Complete';
 import { RestRequestConfig } from '../../../../Rest';
-import {
-  GlipTaskInfo,
-  GlipUpdateTask,
-  GlipTaskList,
-} from '../../../../definitions';
+import { GlipTaskInfo, GlipUpdateTask, GlipTaskList } from '../../../../definitions';
 import Parent from '..';
-import { RingCentral } from '../../../..';
+import RingCentral from '../../../..';
 
 class Index {
   rc: RingCentral;
@@ -38,11 +34,7 @@ class Index {
     if (this.taskId === null) {
       throw new Error('taskId must be specified.');
     }
-    const r = await this.rc.get<GlipTaskInfo>(
-      this.path(),
-      undefined,
-      restRequestConfig,
-    );
+    const r = await this.rc.get<GlipTaskInfo>(this.path(), undefined, restRequestConfig);
     return r.data;
   }
 
@@ -56,11 +48,7 @@ class Index {
     if (this.taskId === null) {
       throw new Error('taskId must be specified.');
     }
-    const r = await this.rc.delete<string>(
-      this.path(),
-      undefined,
-      restRequestConfig,
-    );
+    const r = await this.rc.delete<string>(this.path(), undefined, restRequestConfig);
     return r.data;
   }
 
@@ -70,19 +58,11 @@ class Index {
    * Endpoint: /restapi/{apiVersion}/glip/tasks/{taskId}
    * Rate Limit Group: Medium
    */
-  async patch(
-    glipUpdateTask: GlipUpdateTask,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<GlipTaskList> {
+  async patch(glipUpdateTask: GlipUpdateTask, restRequestConfig?: RestRequestConfig): Promise<GlipTaskList> {
     if (this.taskId === null) {
       throw new Error('taskId must be specified.');
     }
-    const r = await this.rc.patch<GlipTaskList>(
-      this.path(),
-      glipUpdateTask,
-      undefined,
-      restRequestConfig,
-    );
+    const r = await this.rc.patch<GlipTaskList>(this.path(), glipUpdateTask, undefined, restRequestConfig);
     return r.data;
   }
 

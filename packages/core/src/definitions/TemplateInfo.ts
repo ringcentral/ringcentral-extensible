@@ -11,7 +11,7 @@ class TemplateInfo {
 
   /**
    */
-  type?: 'UserSettings' | 'CallHandling';
+  type?: ('UserSettings' | 'CallHandling');
 
   /**
    * Name of a template

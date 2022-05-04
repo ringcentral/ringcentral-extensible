@@ -1,13 +1,9 @@
 import { RestRequestConfig } from '../../../../../Rest';
 import {
-  ReadGlipPostsParameters,
-  GlipPostsList,
-  GlipPostPostBody,
-  GlipPostInfo,
-  GlipPatchPostBody,
+  ReadGlipPostsParameters, GlipPostsList, GlipPostPostBody, GlipPostInfo, GlipPatchPostBody,
 } from '../../../../../definitions';
 import Parent from '..';
-import { RingCentral } from '../../../../..';
+import RingCentral from '../../../../..';
 
 class Index {
   rc: RingCentral;
@@ -37,15 +33,8 @@ class Index {
    * App Permission: TeamMessaging
    * User Permission: UnifiedAppDesktop
    */
-  async list(
-    queryParams?: ReadGlipPostsParameters,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<GlipPostsList> {
-    const r = await this.rc.get<GlipPostsList>(
-      this.path(false),
-      queryParams,
-      restRequestConfig,
-    );
+  async list(queryParams?: ReadGlipPostsParameters, restRequestConfig?: RestRequestConfig): Promise<GlipPostsList> {
+    const r = await this.rc.get<GlipPostsList>(this.path(false), queryParams, restRequestConfig);
     return r.data;
   }
 
@@ -57,16 +46,8 @@ class Index {
    * App Permission: TeamMessaging
    * User Permission: UnifiedAppDesktop
    */
-  async post(
-    glipPostPostBody: GlipPostPostBody,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<GlipPostInfo> {
-    const r = await this.rc.post<GlipPostInfo>(
-      this.path(false),
-      glipPostPostBody,
-      undefined,
-      restRequestConfig,
-    );
+  async post(glipPostPostBody: GlipPostPostBody, restRequestConfig?: RestRequestConfig): Promise<GlipPostInfo> {
+    const r = await this.rc.post<GlipPostInfo>(this.path(false), glipPostPostBody, undefined, restRequestConfig);
     return r.data;
   }
 
@@ -82,11 +63,7 @@ class Index {
     if (this.postId === null) {
       throw new Error('postId must be specified.');
     }
-    const r = await this.rc.get<GlipPostInfo>(
-      this.path(),
-      undefined,
-      restRequestConfig,
-    );
+    const r = await this.rc.get<GlipPostInfo>(this.path(), undefined, restRequestConfig);
     return r.data;
   }
 
@@ -102,11 +79,7 @@ class Index {
     if (this.postId === null) {
       throw new Error('postId must be specified.');
     }
-    const r = await this.rc.delete<string>(
-      this.path(),
-      undefined,
-      restRequestConfig,
-    );
+    const r = await this.rc.delete<string>(this.path(), undefined, restRequestConfig);
     return r.data;
   }
 
@@ -118,19 +91,11 @@ class Index {
    * App Permission: TeamMessaging
    * User Permission: UnifiedAppDesktop
    */
-  async patch(
-    glipPatchPostBody: GlipPatchPostBody,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<GlipPostInfo> {
+  async patch(glipPatchPostBody: GlipPatchPostBody, restRequestConfig?: RestRequestConfig): Promise<GlipPostInfo> {
     if (this.postId === null) {
       throw new Error('postId must be specified.');
     }
-    const r = await this.rc.patch<GlipPostInfo>(
-      this.path(),
-      glipPatchPostBody,
-      undefined,
-      restRequestConfig,
-    );
+    const r = await this.rc.patch<GlipPostInfo>(this.path(), glipPatchPostBody, undefined, restRequestConfig);
     return r.data;
   }
 }

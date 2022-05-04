@@ -1,11 +1,8 @@
 import Archive from './Archive';
 import { RestRequestConfig } from '../../../../Rest';
-import {
-  CreateMessageStoreReportRequest,
-  MessageStoreReport,
-} from '../../../../definitions';
+import { CreateMessageStoreReportRequest, MessageStoreReport } from '../../../../definitions';
 import Parent from '..';
-import { RingCentral } from '../../../..';
+import RingCentral from '../../../..';
 
 class Index {
   rc: RingCentral;
@@ -35,16 +32,8 @@ class Index {
    * App Permission: ReadMessages
    * User Permission: Users
    */
-  async post(
-    createMessageStoreReportRequest: CreateMessageStoreReportRequest,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<MessageStoreReport> {
-    const r = await this.rc.post<MessageStoreReport>(
-      this.path(false),
-      createMessageStoreReportRequest,
-      undefined,
-      restRequestConfig,
-    );
+  async post(createMessageStoreReportRequest: CreateMessageStoreReportRequest, restRequestConfig?: RestRequestConfig): Promise<MessageStoreReport> {
+    const r = await this.rc.post<MessageStoreReport>(this.path(false), createMessageStoreReportRequest, undefined, restRequestConfig);
     return r.data;
   }
 
@@ -56,21 +45,15 @@ class Index {
    * App Permission: ReadMessages
    * User Permission: Users
    */
-  async get(
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<MessageStoreReport> {
+  async get(restRequestConfig?: RestRequestConfig): Promise<MessageStoreReport> {
     if (this.taskId === null) {
       throw new Error('taskId must be specified.');
     }
-    const r = await this.rc.get<MessageStoreReport>(
-      this.path(),
-      undefined,
-      restRequestConfig,
-    );
+    const r = await this.rc.get<MessageStoreReport>(this.path(), undefined, restRequestConfig);
     return r.data;
   }
 
-  archive(archiveId: string | null = null): Archive {
+  archive(archiveId: (string | null) = null): Archive {
     return new Archive(this, archiveId);
   }
 }

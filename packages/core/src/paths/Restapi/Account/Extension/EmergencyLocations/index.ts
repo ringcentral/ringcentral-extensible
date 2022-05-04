@@ -1,13 +1,9 @@
 import { RestRequestConfig } from '../../../../../Rest';
 import {
-  GetExtensionEmergencyLocationsParameters,
-  EmergencyLocationsResource,
-  CreateUserEmergencyLocationRequest,
-  EmergencyLocationInfo,
-  DeleteExtensionEmergencyLocationParameters,
+  GetExtensionEmergencyLocationsParameters, EmergencyLocationsResource, CreateUserEmergencyLocationRequest, EmergencyLocationInfo, DeleteExtensionEmergencyLocationParameters,
 } from '../../../../../definitions';
 import Parent from '..';
-import { RingCentral } from '../../../../..';
+import RingCentral from '../../../../..';
 
 class Index {
   rc: RingCentral;
@@ -36,15 +32,8 @@ class Index {
    * Rate Limit Group: Light
    * App Permission: ReadAccounts
    */
-  async list(
-    queryParams?: GetExtensionEmergencyLocationsParameters,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<EmergencyLocationsResource> {
-    const r = await this.rc.get<EmergencyLocationsResource>(
-      this.path(false),
-      queryParams,
-      restRequestConfig,
-    );
+  async list(queryParams?: GetExtensionEmergencyLocationsParameters, restRequestConfig?: RestRequestConfig): Promise<EmergencyLocationsResource> {
+    const r = await this.rc.get<EmergencyLocationsResource>(this.path(false), queryParams, restRequestConfig);
     return r.data;
   }
 
@@ -56,16 +45,8 @@ class Index {
    * App Permission: EditAccounts
    * User Permission: EmergencyFramework
    */
-  async post(
-    createUserEmergencyLocationRequest: CreateUserEmergencyLocationRequest,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<EmergencyLocationInfo> {
-    const r = await this.rc.post<EmergencyLocationInfo>(
-      this.path(false),
-      createUserEmergencyLocationRequest,
-      undefined,
-      restRequestConfig,
-    );
+  async post(createUserEmergencyLocationRequest: CreateUserEmergencyLocationRequest, restRequestConfig?: RestRequestConfig): Promise<EmergencyLocationInfo> {
+    const r = await this.rc.post<EmergencyLocationInfo>(this.path(false), createUserEmergencyLocationRequest, undefined, restRequestConfig);
     return r.data;
   }
 
@@ -76,17 +57,11 @@ class Index {
    * Rate Limit Group: Light
    * App Permission: ReadAccounts
    */
-  async get(
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<EmergencyLocationInfo> {
+  async get(restRequestConfig?: RestRequestConfig): Promise<EmergencyLocationInfo> {
     if (this.locationId === null) {
       throw new Error('locationId must be specified.');
     }
-    const r = await this.rc.get<EmergencyLocationInfo>(
-      this.path(),
-      undefined,
-      restRequestConfig,
-    );
+    const r = await this.rc.get<EmergencyLocationInfo>(this.path(), undefined, restRequestConfig);
     return r.data;
   }
 
@@ -98,19 +73,11 @@ class Index {
    * App Permission: EditAccounts
    * User Permission: EmergencyFramework
    */
-  async put(
-    emergencyLocationInfo: EmergencyLocationInfo,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<EmergencyLocationInfo> {
+  async put(emergencyLocationInfo: EmergencyLocationInfo, restRequestConfig?: RestRequestConfig): Promise<EmergencyLocationInfo> {
     if (this.locationId === null) {
       throw new Error('locationId must be specified.');
     }
-    const r = await this.rc.put<EmergencyLocationInfo>(
-      this.path(),
-      emergencyLocationInfo,
-      undefined,
-      restRequestConfig,
-    );
+    const r = await this.rc.put<EmergencyLocationInfo>(this.path(), emergencyLocationInfo, undefined, restRequestConfig);
     return r.data;
   }
 
@@ -122,18 +89,11 @@ class Index {
    * App Permission: EditAccounts
    * User Permission: EmergencyFramework
    */
-  async delete(
-    queryParams?: DeleteExtensionEmergencyLocationParameters,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<string> {
+  async delete(queryParams?: DeleteExtensionEmergencyLocationParameters, restRequestConfig?: RestRequestConfig): Promise<string> {
     if (this.locationId === null) {
       throw new Error('locationId must be specified.');
     }
-    const r = await this.rc.delete<string>(
-      this.path(),
-      queryParams,
-      restRequestConfig,
-    );
+    const r = await this.rc.delete<string>(this.path(), queryParams, restRequestConfig);
     return r.data;
   }
 }

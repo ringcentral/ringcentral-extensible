@@ -1,6 +1,6 @@
 /**
  * Query parameters for operation listChatTasks
- */
+*/
 class ListChatTasksParameters {
   /**
    * The end datetime for resulting records in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format including timezone, e.g. 2019-03-10T18:23:45Z
@@ -26,7 +26,7 @@ class ListChatTasksParameters {
   /**
    * Task assignment status
    */
-  assignmentStatus?: 'Unassigned' | 'Assigned';
+  assignmentStatus?: ('Unassigned' | 'Assigned');
 
   /**
    * Internal identifier of a task assignee
@@ -36,7 +36,7 @@ class ListChatTasksParameters {
   /**
    * Task execution status by assignee(-s) specified in assigneeId
    */
-  assigneeStatus?: 'Pending' | 'Completed';
+  assigneeStatus?: ('Pending' | 'Completed');
 
   /**
    * Token of the current page. If token is omitted then the first page should be returned

@@ -1,12 +1,9 @@
 import { RestRequestConfig } from '../../../../Rest';
 import {
-  ListTimezonesParameters,
-  GetTimezoneListResponse,
-  ReadTimezoneParameters,
-  GetTimezoneInfoResponse,
+  ListTimezonesParameters, GetTimezoneListResponse, ReadTimezoneParameters, GetTimezoneInfoResponse,
 } from '../../../../definitions';
 import Parent from '..';
-import { RingCentral } from '../../../..';
+import RingCentral from '../../../..';
 
 class Index {
   rc: RingCentral;
@@ -34,15 +31,8 @@ class Index {
    * Endpoint: /restapi/{apiVersion}/dictionary/timezone
    * Rate Limit Group: Light
    */
-  async list(
-    queryParams?: ListTimezonesParameters,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<GetTimezoneListResponse> {
-    const r = await this.rc.get<GetTimezoneListResponse>(
-      this.path(false),
-      queryParams,
-      restRequestConfig,
-    );
+  async list(queryParams?: ListTimezonesParameters, restRequestConfig?: RestRequestConfig): Promise<GetTimezoneListResponse> {
+    const r = await this.rc.get<GetTimezoneListResponse>(this.path(false), queryParams, restRequestConfig);
     return r.data;
   }
 
@@ -52,18 +42,11 @@ class Index {
    * Endpoint: /restapi/{apiVersion}/dictionary/timezone/{timezoneId}
    * Rate Limit Group: Light
    */
-  async get(
-    queryParams?: ReadTimezoneParameters,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<GetTimezoneInfoResponse> {
+  async get(queryParams?: ReadTimezoneParameters, restRequestConfig?: RestRequestConfig): Promise<GetTimezoneInfoResponse> {
     if (this.timezoneId === null) {
       throw new Error('timezoneId must be specified.');
     }
-    const r = await this.rc.get<GetTimezoneInfoResponse>(
-      this.path(),
-      queryParams,
-      restRequestConfig,
-    );
+    const r = await this.rc.get<GetTimezoneInfoResponse>(this.path(), queryParams, restRequestConfig);
     return r.data;
   }
 }

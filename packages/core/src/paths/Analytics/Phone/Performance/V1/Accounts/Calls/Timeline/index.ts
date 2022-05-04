@@ -1,11 +1,7 @@
 import { RestRequestConfig } from '../../../../../../../../Rest';
-import {
-  PerformanceCallsTimelineRequest,
-  PerformanceReportCallsTimelineParameters,
-  PerformanceCallsTimelineResponse,
-} from '../../../../../../../../definitions';
+import { PerformanceCallsTimelineRequest, PerformanceReportCallsTimelineParameters, PerformanceCallsTimelineResponse } from '../../../../../../../../definitions';
 import Parent from '..';
-import { RingCentral } from '../../../../../../../..';
+import RingCentral from '../../../../../../../..';
 
 class Index {
   rc: RingCentral;
@@ -22,23 +18,14 @@ class Index {
   }
 
   /**
-   * Returns time-value data aggregations filtered by parameters specified.
+   * Returns time-value data aggregations filtered by parameters specified
    * HTTP Method: post
    * Endpoint: /analytics/phone/performance/v1/accounts/{accountId}/calls/timeline
    * Rate Limit Group: Light
    * App Permission: Analytics
    */
-  async post(
-    performanceCallsTimelineRequest: PerformanceCallsTimelineRequest,
-    queryParams?: PerformanceReportCallsTimelineParameters,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<PerformanceCallsTimelineResponse> {
-    const r = await this.rc.post<PerformanceCallsTimelineResponse>(
-      this.path(),
-      performanceCallsTimelineRequest,
-      queryParams,
-      restRequestConfig,
-    );
+  async post(performanceCallsTimelineRequest: PerformanceCallsTimelineRequest, queryParams?: PerformanceReportCallsTimelineParameters, restRequestConfig?: RestRequestConfig): Promise<PerformanceCallsTimelineResponse> {
+    const r = await this.rc.post<PerformanceCallsTimelineResponse>(this.path(), performanceCallsTimelineRequest, queryParams, restRequestConfig);
     return r.data;
   }
 }

@@ -1,11 +1,7 @@
 import { RestRequestConfig } from '../../../../Rest';
-import {
-  ListPermissionsParameters,
-  PermissionCollectionResource,
-  PermissionResource,
-} from '../../../../definitions';
+import { ListPermissionsParameters, PermissionCollectionResource, PermissionResource } from '../../../../definitions';
 import Parent from '..';
-import { RingCentral } from '../../../..';
+import RingCentral from '../../../..';
 
 class Index {
   rc: RingCentral;
@@ -33,15 +29,8 @@ class Index {
    * Endpoint: /restapi/{apiVersion}/dictionary/permission
    * Rate Limit Group: Light
    */
-  async list(
-    queryParams?: ListPermissionsParameters,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<PermissionCollectionResource> {
-    const r = await this.rc.get<PermissionCollectionResource>(
-      this.path(false),
-      queryParams,
-      restRequestConfig,
-    );
+  async list(queryParams?: ListPermissionsParameters, restRequestConfig?: RestRequestConfig): Promise<PermissionCollectionResource> {
+    const r = await this.rc.get<PermissionCollectionResource>(this.path(false), queryParams, restRequestConfig);
     return r.data;
   }
 
@@ -51,17 +40,11 @@ class Index {
    * Endpoint: /restapi/{apiVersion}/dictionary/permission/{permissionId}
    * Rate Limit Group: Light
    */
-  async get(
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<PermissionResource> {
+  async get(restRequestConfig?: RestRequestConfig): Promise<PermissionResource> {
     if (this.permissionId === null) {
       throw new Error('permissionId must be specified.');
     }
-    const r = await this.rc.get<PermissionResource>(
-      this.path(),
-      undefined,
-      restRequestConfig,
-    );
+    const r = await this.rc.get<PermissionResource>(this.path(), undefined, restRequestConfig);
     return r.data;
   }
 }

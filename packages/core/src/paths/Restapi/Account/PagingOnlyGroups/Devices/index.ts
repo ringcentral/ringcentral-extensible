@@ -1,10 +1,7 @@
 import { RestRequestConfig } from '../../../../../Rest';
-import {
-  ListPagingGroupDevicesParameters,
-  PagingOnlyGroupDevices,
-} from '../../../../../definitions';
+import { ListPagingGroupDevicesParameters, PagingOnlyGroupDevices } from '../../../../../definitions';
 import Parent from '..';
-import { RingCentral } from '../../../../..';
+import RingCentral from '../../../../..';
 
 class Index {
   rc: RingCentral;
@@ -28,15 +25,8 @@ class Index {
    * App Permission: ReadAccounts
    * User Permission: ReadCompanyDevices
    */
-  async get(
-    queryParams?: ListPagingGroupDevicesParameters,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<PagingOnlyGroupDevices> {
-    const r = await this.rc.get<PagingOnlyGroupDevices>(
-      this.path(),
-      queryParams,
-      restRequestConfig,
-    );
+  async get(queryParams?: ListPagingGroupDevicesParameters, restRequestConfig?: RestRequestConfig): Promise<PagingOnlyGroupDevices> {
+    const r = await this.rc.get<PagingOnlyGroupDevices>(this.path(), queryParams, restRequestConfig);
     return r.data;
   }
 }

@@ -1,12 +1,8 @@
-import {
-  EmergencyLocationAddressInfo,
-  ShortSiteInfo,
-  LocationOwnerInfo,
-} from './index';
+import { EmergencyLocationAddressInfo, ShortSiteInfo, LocationOwnerInfo } from './index';
 
 /**
  * Company emergency response location details
- */
+*/
 class EmergencyLocationInfo {
   /**
    * Internal identifier of the emergency response location
@@ -29,29 +25,23 @@ class EmergencyLocationInfo {
   /**
    * Emergency address status
    */
-  addressStatus?: 'Valid' | 'Invalid' | 'Provisioning';
+  addressStatus?: ('Valid' | 'Invalid' | 'Provisioning');
 
   /**
    * Status of emergency response location usage.
    */
-  usageStatus?: 'Active' | 'Inactive';
+  usageStatus?: ('Active' | 'Inactive');
 
   /**
    * Resulting status of emergency address synchronization. Returned if `syncEmergencyAddress` parameter is set to 'True'
    */
-  syncStatus?:
-  | 'Verified'
-  | 'Updated'
-  | 'Deleted'
-  | 'ActivationProcess'
-  | 'Unsupported'
-  | 'Failed';
+  syncStatus?: ('Verified' | 'Updated' | 'Deleted' | 'ActivationProcess' | 'Unsupported' | 'Failed');
 
   /**
    * Visibility of an emergency response location. If `Private` is set, then location is visible only for the restricted number of users, specified in `owners` array
    * Default: Public
    */
-  visibility?: 'Private' | 'Public';
+  visibility?: ('Private' | 'Public');
 
   /**
    * List of private location owners

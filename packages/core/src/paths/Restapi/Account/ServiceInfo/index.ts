@@ -1,7 +1,7 @@
 import { RestRequestConfig } from '../../../../Rest';
 import { GetServiceInfoResponse } from '../../../../definitions';
 import Parent from '..';
-import { RingCentral } from '../../../..';
+import RingCentral from '../../../..';
 
 class Index {
   rc: RingCentral;
@@ -25,14 +25,8 @@ class Index {
    * App Permission: ReadAccounts
    * User Permission: ReadServicePlanInfo
    */
-  async get(
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<GetServiceInfoResponse> {
-    const r = await this.rc.get<GetServiceInfoResponse>(
-      this.path(),
-      undefined,
-      restRequestConfig,
-    );
+  async get(restRequestConfig?: RestRequestConfig): Promise<GetServiceInfoResponse> {
+    const r = await this.rc.get<GetServiceInfoResponse>(this.path(), undefined, restRequestConfig);
     return r.data;
   }
 }

@@ -1,6 +1,6 @@
 /**
  * Scheduling meeting settings locked on account level || Settings defining how to schedule user meetingsxs
- */
+*/
 class ScheduleUserMeetingInfo {
   /**
    * If true, then only signed-in users can join this meeting
@@ -60,7 +60,7 @@ class ScheduleUserMeetingInfo {
   /**
    * Specifies whether to require a password for meetings using Personal Meeting ID (PMI). The supported values are: 'none', 'all' and 'jbhOnly' (joined before host only)
    */
-  requirePasswordForPmiMeetings?: 'all' | 'none' | 'jbhOnly';
+  requirePasswordForPmiMeetings?: ('all' | 'none' | 'jbhOnly');
 
   /**
    * The default password for Personal Meeting ID (PMI) meetings

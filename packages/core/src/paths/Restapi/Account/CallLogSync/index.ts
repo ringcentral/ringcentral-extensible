@@ -1,10 +1,7 @@
 import { RestRequestConfig } from '../../../../Rest';
-import {
-  SyncAccountCallLogParameters,
-  AccountCallLogSyncResponse,
-} from '../../../../definitions';
+import { SyncAccountCallLogParameters, AccountCallLogSyncResponse } from '../../../../definitions';
 import Parent from '..';
-import { RingCentral } from '../../../..';
+import RingCentral from '../../../..';
 
 class Index {
   rc: RingCentral;
@@ -28,15 +25,8 @@ class Index {
    * App Permission: ReadCallLog
    * User Permission: ReadCallLog
    */
-  async get(
-    queryParams?: SyncAccountCallLogParameters,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<AccountCallLogSyncResponse> {
-    const r = await this.rc.get<AccountCallLogSyncResponse>(
-      this.path(),
-      queryParams,
-      restRequestConfig,
-    );
+  async get(queryParams?: SyncAccountCallLogParameters, restRequestConfig?: RestRequestConfig): Promise<AccountCallLogSyncResponse> {
+    const r = await this.rc.get<AccountCallLogSyncResponse>(this.path(), queryParams, restRequestConfig);
     return r.data;
   }
 }

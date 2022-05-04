@@ -1,13 +1,10 @@
 import {
-  CompanyDirectoryAccountInfo,
-  CompanyDirectoryPhoneNumberInfo,
-  ContactDirectorySiteInfo,
-  CompanyDirectoryProfileImageInfo,
+  CompanyDirectoryAccountInfo, CompanyDirectoryPhoneNumberInfo, ContactDirectorySiteInfo, CompanyDirectoryProfileImageInfo,
 } from './index';
 
 /**
  * Notification payload body
- */
+*/
 class CompanyDirectoryEventBody {
   /**
    * Internal identifier of an extension
@@ -27,7 +24,7 @@ class CompanyDirectoryEventBody {
   /**
    * Status of an extension
    */
-  status?: 'Enabled' | 'NotActivated' | 'Disabled';
+  status?: ('Enabled' | 'NotActivated' | 'Disabled');
 
   /**
    * First name of a user extension

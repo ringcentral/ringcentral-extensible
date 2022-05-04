@@ -1,10 +1,7 @@
 import { RestRequestConfig } from '../../../../../../../Rest';
-import {
-  PartySuperviseRequest,
-  PartySuperviseResponse,
-} from '../../../../../../../definitions';
+import { PartySuperviseRequest, PartySuperviseResponse } from '../../../../../../../definitions';
 import Parent from '..';
-import { RingCentral } from '../../../../../../..';
+import RingCentral from '../../../../../../..';
 
 class Index {
   rc: RingCentral;
@@ -27,16 +24,8 @@ class Index {
    * Rate Limit Group: Light
    * App Permission: CallControl
    */
-  async post(
-    partySuperviseRequest: PartySuperviseRequest,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<PartySuperviseResponse> {
-    const r = await this.rc.post<PartySuperviseResponse>(
-      this.path(),
-      partySuperviseRequest,
-      undefined,
-      restRequestConfig,
-    );
+  async post(partySuperviseRequest: PartySuperviseRequest, restRequestConfig?: RestRequestConfig): Promise<PartySuperviseResponse> {
+    const r = await this.rc.post<PartySuperviseResponse>(this.path(), partySuperviseRequest, undefined, restRequestConfig);
     return r.data;
   }
 }

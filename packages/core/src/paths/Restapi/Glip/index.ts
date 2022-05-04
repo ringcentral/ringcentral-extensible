@@ -10,12 +10,13 @@ import Persons from './Persons';
 import Events from './Events';
 import Recent from './Recent';
 import Groups from './Groups';
+import Files from './Files';
 import Tasks from './Tasks';
 import Notes from './Notes';
 import Teams from './Teams';
 import Chats from './Chats';
 import Parent from '..';
-import { RingCentral } from '../../..';
+import RingCentral from '../../..';
 
 class Index {
   rc: RingCentral;
@@ -31,23 +32,27 @@ class Index {
     return `${this.parent.path()}/glip`;
   }
 
-  chats(chatId: string | null = null): Chats {
+  chats(chatId: (string | null) = null): Chats {
     return new Chats(this, chatId);
   }
 
-  teams(chatId: string | null = null): Teams {
+  teams(chatId: (string | null) = null): Teams {
     return new Teams(this, chatId);
   }
 
-  notes(noteId: string | null = null): Notes {
+  notes(noteId: (string | null) = null): Notes {
     return new Notes(this, noteId);
   }
 
-  tasks(taskId: string | null = null): Tasks {
+  tasks(taskId: (string | null) = null): Tasks {
     return new Tasks(this, taskId);
   }
 
-  groups(groupId: string | null = null): Groups {
+  files(): Files {
+    return new Files(this);
+  }
+
+  groups(groupId: (string | null) = null): Groups {
     return new Groups(this, groupId);
   }
 
@@ -55,15 +60,15 @@ class Index {
     return new Recent(this);
   }
 
-  events(eventId: string | null = null): Events {
+  events(eventId: (string | null) = null): Events {
     return new Events(this, eventId);
   }
 
-  persons(personId: string | null = null): Persons {
+  persons(personId: (string | null) = null): Persons {
     return new Persons(this, personId);
   }
 
-  webhooks(webhookId: string | null = null): Webhooks {
+  webhooks(webhookId: (string | null) = null): Webhooks {
     return new Webhooks(this, webhookId);
   }
 
@@ -71,7 +76,7 @@ class Index {
     return new Everyone(this);
   }
 
-  companies(companyId: string | null = null): Companies {
+  companies(companyId: (string | null) = null): Companies {
     return new Companies(this, companyId);
   }
 
@@ -79,7 +84,7 @@ class Index {
     return new Favorites(this);
   }
 
-  dataExport(taskId: string | null = null): DataExport {
+  dataExport(taskId: (string | null) = null): DataExport {
     return new DataExport(this, taskId);
   }
 
@@ -87,11 +92,11 @@ class Index {
     return new Preferences(this);
   }
 
-  conversations(chatId: string | null = null): Conversations {
+  conversations(chatId: (string | null) = null): Conversations {
     return new Conversations(this, chatId);
   }
 
-  adaptiveCards(cardId: string | null = null): AdaptiveCards {
+  adaptiveCards(cardId: (string | null) = null): AdaptiveCards {
     return new AdaptiveCards(this, cardId);
   }
 }

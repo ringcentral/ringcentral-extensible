@@ -1,8 +1,8 @@
 import { ErrorBody } from './index';
 
-class InvalidRequestResponse {
+class BadRequest {
   /**
    */
   errors?: ErrorBody[];
 }
-export default InvalidRequestResponse;
+export default BadRequest;

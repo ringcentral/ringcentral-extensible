@@ -17,7 +17,7 @@ class EmailRecipientInfo {
   /**
    * Current state of an extension
    */
-  status?: 'Enabled' | 'Disable' | 'NotActivated' | 'Unassigned';
+  status?: ('Enabled' | 'Disable' | 'NotActivated' | 'Unassigned');
 
   /**
    * List of user email addresses from extension notification settings. By default main email address from contact information is returned
@@ -27,6 +27,6 @@ class EmailRecipientInfo {
   /**
    * Call queue manager permission
    */
-  permission?: 'FullAccess' | 'Messages' | 'MemberManagement';
+  permission?: ('FullAccess' | 'Messages' | 'MemberManagement');
 }
 export default EmailRecipientInfo;

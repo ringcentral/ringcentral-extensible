@@ -1,6 +1,6 @@
 /**
  * Information on the state this location belongs to
- */
+*/
 class LocationStateInfo {
   /**
    * Internal identifier of a state

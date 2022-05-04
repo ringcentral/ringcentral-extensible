@@ -1,6 +1,6 @@
 /**
  * Detailed information on a message
- */
+*/
 class MessageDetailsResponse {
   /**
    * Internal identifier of a message
@@ -42,12 +42,7 @@ class MessageDetailsResponse {
    * Current status of a message
    * Example: Queued
    */
-  messageStatus?:
-  | 'Queued'
-  | 'Delivered'
-  | 'Sent'
-  | 'SendingFailed'
-  | 'DeliveryFailed';
+  messageStatus?: ('Queued' | 'Delivered' | 'Sent' | 'SendingFailed' | 'DeliveryFailed');
 
   /**
    * Number of segments of a message
@@ -73,7 +68,7 @@ class MessageDetailsResponse {
    * Indicates whether the message is outbound or inbound
    * Example: out
    */
-  direction?: 'Inbound' | 'Outbound';
+  direction?: ('Inbound' | 'Outbound');
 
   /**
    * RC error code of the message sending failure reason

@@ -1,8 +1,4 @@
-import {
-  OnDemandResource,
-  AutomaticRecordingResource,
-  GreetingResource,
-} from './index';
+import { OnDemandResource, AutomaticRecordingResource, GreetingResource } from './index';
 
 class CallRecordingSettingsResource {
   /**

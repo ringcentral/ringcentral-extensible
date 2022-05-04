@@ -1,21 +1,21 @@
 /**
  * SIP flags data
- */
+*/
 class SIPFlagsResponse {
   /**
    * If 'True' VoIP calling feature is enabled
    */
-  voipFeatureEnabled?: 'True' | 'False';
+  voipFeatureEnabled?: ('True' | 'False');
 
   /**
    * If 'True' the request is sent from IP address of a country blocked for VoIP calling
    */
-  voipCountryBlocked?: 'True' | 'False';
+  voipCountryBlocked?: ('True' | 'False');
 
   /**
    * If 'True' outbound calls are enabled
    */
-  outboundCallsEnabled?: 'True' | 'False';
+  outboundCallsEnabled?: ('True' | 'False');
 
   /**
    */

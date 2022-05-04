@@ -2,7 +2,7 @@ import { CallHandlingNavigationInfoUri } from './index';
 
 /**
  * Information on navigation
- */
+*/
 class CallHandlingNavigationInfo {
   /**
    */

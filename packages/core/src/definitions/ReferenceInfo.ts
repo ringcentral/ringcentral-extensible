@@ -7,6 +7,6 @@ class ReferenceInfo {
   /**
    * Type of external identifier
    */
-  type?: 'PartnerId' | 'CustomerDirectoryId';
+  type?: ('PartnerId' | 'CustomerDirectoryId');
 }
 export default ReferenceInfo;

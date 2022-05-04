@@ -1,12 +1,9 @@
 import { RestRequestConfig } from '../../../../Rest';
 import {
-  ReadGlipEventsParameters,
-  GlipEventsInfo,
-  GlipEventCreate,
-  GlipEventInfo,
+  ReadGlipEventsParameters, GlipEventsInfo, GlipEventCreate, GlipEventInfo,
 } from '../../../../definitions';
 import Parent from '..';
-import { RingCentral } from '../../../..';
+import RingCentral from '../../../..';
 
 class Index {
   rc: RingCentral;
@@ -36,15 +33,8 @@ class Index {
    * App Permission: TeamMessaging
    * User Permission: UnifiedAppDesktop
    */
-  async list(
-    queryParams?: ReadGlipEventsParameters,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<GlipEventsInfo> {
-    const r = await this.rc.get<GlipEventsInfo>(
-      this.path(false),
-      queryParams,
-      restRequestConfig,
-    );
+  async list(queryParams?: ReadGlipEventsParameters, restRequestConfig?: RestRequestConfig): Promise<GlipEventsInfo> {
+    const r = await this.rc.get<GlipEventsInfo>(this.path(false), queryParams, restRequestConfig);
     return r.data;
   }
 
@@ -56,16 +46,8 @@ class Index {
    * App Permission: TeamMessaging
    * User Permission: UnifiedAppDesktop
    */
-  async post(
-    glipEventCreate: GlipEventCreate,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<GlipEventInfo> {
-    const r = await this.rc.post<GlipEventInfo>(
-      this.path(false),
-      glipEventCreate,
-      undefined,
-      restRequestConfig,
-    );
+  async post(glipEventCreate: GlipEventCreate, restRequestConfig?: RestRequestConfig): Promise<GlipEventInfo> {
+    const r = await this.rc.post<GlipEventInfo>(this.path(false), glipEventCreate, undefined, restRequestConfig);
     return r.data;
   }
 
@@ -81,11 +63,7 @@ class Index {
     if (this.eventId === null) {
       throw new Error('eventId must be specified.');
     }
-    const r = await this.rc.get<GlipEventInfo>(
-      this.path(),
-      undefined,
-      restRequestConfig,
-    );
+    const r = await this.rc.get<GlipEventInfo>(this.path(), undefined, restRequestConfig);
     return r.data;
   }
 
@@ -97,19 +75,11 @@ class Index {
    * App Permission: TeamMessaging
    * User Permission: UnifiedAppDesktop
    */
-  async put(
-    glipEventCreate: GlipEventCreate,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<GlipEventInfo> {
+  async put(glipEventCreate: GlipEventCreate, restRequestConfig?: RestRequestConfig): Promise<GlipEventInfo> {
     if (this.eventId === null) {
       throw new Error('eventId must be specified.');
     }
-    const r = await this.rc.put<GlipEventInfo>(
-      this.path(),
-      glipEventCreate,
-      undefined,
-      restRequestConfig,
-    );
+    const r = await this.rc.put<GlipEventInfo>(this.path(), glipEventCreate, undefined, restRequestConfig);
     return r.data;
   }
 
@@ -125,11 +95,7 @@ class Index {
     if (this.eventId === null) {
       throw new Error('eventId must be specified.');
     }
-    const r = await this.rc.delete<string>(
-      this.path(),
-      undefined,
-      restRequestConfig,
-    );
+    const r = await this.rc.delete<string>(this.path(), undefined, restRequestConfig);
     return r.data;
   }
 }

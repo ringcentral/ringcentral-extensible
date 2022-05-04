@@ -1,12 +1,9 @@
 import { RestRequestConfig } from '../../../../../../Rest';
 import {
-  ListBlockedAllowedNumbersParameters,
-  BlockedAllowedPhoneNumbersList,
-  AddBlockedAllowedPhoneNumber,
-  BlockedAllowedPhoneNumberInfo,
+  ListBlockedAllowedNumbersParameters, BlockedAllowedPhoneNumbersList, AddBlockedAllowedPhoneNumber, BlockedAllowedPhoneNumberInfo,
 } from '../../../../../../definitions';
 import Parent from '..';
-import { RingCentral } from '../../../../../..';
+import RingCentral from '../../../../../..';
 
 class Index {
   rc: RingCentral;
@@ -36,15 +33,8 @@ class Index {
    * App Permission: ReadAccounts
    * User Permission: ReadBlockedNumbers
    */
-  async list(
-    queryParams?: ListBlockedAllowedNumbersParameters,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<BlockedAllowedPhoneNumbersList> {
-    const r = await this.rc.get<BlockedAllowedPhoneNumbersList>(
-      this.path(false),
-      queryParams,
-      restRequestConfig,
-    );
+  async list(queryParams?: ListBlockedAllowedNumbersParameters, restRequestConfig?: RestRequestConfig): Promise<BlockedAllowedPhoneNumbersList> {
+    const r = await this.rc.get<BlockedAllowedPhoneNumbersList>(this.path(false), queryParams, restRequestConfig);
     return r.data;
   }
 
@@ -56,16 +46,8 @@ class Index {
    * App Permission: EditExtensions
    * User Permission: EditBlockedNumbers
    */
-  async post(
-    addBlockedAllowedPhoneNumber: AddBlockedAllowedPhoneNumber,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<BlockedAllowedPhoneNumberInfo> {
-    const r = await this.rc.post<BlockedAllowedPhoneNumberInfo>(
-      this.path(false),
-      addBlockedAllowedPhoneNumber,
-      undefined,
-      restRequestConfig,
-    );
+  async post(addBlockedAllowedPhoneNumber: AddBlockedAllowedPhoneNumber, restRequestConfig?: RestRequestConfig): Promise<BlockedAllowedPhoneNumberInfo> {
+    const r = await this.rc.post<BlockedAllowedPhoneNumberInfo>(this.path(false), addBlockedAllowedPhoneNumber, undefined, restRequestConfig);
     return r.data;
   }
 
@@ -77,17 +59,11 @@ class Index {
    * App Permission: ReadAccounts
    * User Permission: ReadBlockedNumbers
    */
-  async get(
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<BlockedAllowedPhoneNumberInfo> {
+  async get(restRequestConfig?: RestRequestConfig): Promise<BlockedAllowedPhoneNumberInfo> {
     if (this.blockedNumberId === null) {
       throw new Error('blockedNumberId must be specified.');
     }
-    const r = await this.rc.get<BlockedAllowedPhoneNumberInfo>(
-      this.path(),
-      undefined,
-      restRequestConfig,
-    );
+    const r = await this.rc.get<BlockedAllowedPhoneNumberInfo>(this.path(), undefined, restRequestConfig);
     return r.data;
   }
 
@@ -99,19 +75,11 @@ class Index {
    * App Permission: EditExtensions
    * User Permission: EditBlockedNumbers
    */
-  async put(
-    addBlockedAllowedPhoneNumber: AddBlockedAllowedPhoneNumber,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<BlockedAllowedPhoneNumberInfo> {
+  async put(addBlockedAllowedPhoneNumber: AddBlockedAllowedPhoneNumber, restRequestConfig?: RestRequestConfig): Promise<BlockedAllowedPhoneNumberInfo> {
     if (this.blockedNumberId === null) {
       throw new Error('blockedNumberId must be specified.');
     }
-    const r = await this.rc.put<BlockedAllowedPhoneNumberInfo>(
-      this.path(),
-      addBlockedAllowedPhoneNumber,
-      undefined,
-      restRequestConfig,
-    );
+    const r = await this.rc.put<BlockedAllowedPhoneNumberInfo>(this.path(), addBlockedAllowedPhoneNumber, undefined, restRequestConfig);
     return r.data;
   }
 
@@ -127,11 +95,7 @@ class Index {
     if (this.blockedNumberId === null) {
       throw new Error('blockedNumberId must be specified.');
     }
-    const r = await this.rc.delete<string>(
-      this.path(),
-      undefined,
-      restRequestConfig,
-    );
+    const r = await this.rc.delete<string>(this.path(), undefined, restRequestConfig);
     return r.data;
   }
 }

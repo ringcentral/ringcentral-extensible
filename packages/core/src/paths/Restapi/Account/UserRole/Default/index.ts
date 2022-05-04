@@ -1,7 +1,7 @@
 import { RestRequestConfig } from '../../../../../Rest';
 import { DefaultUserRoleRequest } from '../../../../../definitions';
 import Parent from '..';
-import { RingCentral } from '../../../../..';
+import RingCentral from '../../../../..';
 
 class Index {
   rc: RingCentral;
@@ -26,11 +26,7 @@ class Index {
    * User Permission: Roles
    */
   async get(restRequestConfig?: RestRequestConfig): Promise<string> {
-    const r = await this.rc.get<string>(
-      this.path(),
-      undefined,
-      restRequestConfig,
-    );
+    const r = await this.rc.get<string>(this.path(), undefined, restRequestConfig);
     return r.data;
   }
 
@@ -42,16 +38,8 @@ class Index {
    * App Permission: RoleManagement
    * User Permission: Roles
    */
-  async put(
-    defaultUserRoleRequest: DefaultUserRoleRequest,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<string> {
-    const r = await this.rc.put<string>(
-      this.path(),
-      defaultUserRoleRequest,
-      undefined,
-      restRequestConfig,
-    );
+  async put(defaultUserRoleRequest: DefaultUserRoleRequest, restRequestConfig?: RestRequestConfig): Promise<string> {
+    const r = await this.rc.put<string>(this.path(), defaultUserRoleRequest, undefined, restRequestConfig);
     return r.data;
   }
 }

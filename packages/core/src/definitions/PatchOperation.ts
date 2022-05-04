@@ -2,7 +2,7 @@ class PatchOperation {
   /**
    * Required
    */
-  op?: 'add' | 'replace' | 'remove';
+  op?: ('add' | 'replace' | 'remove');
 
   /**
    */

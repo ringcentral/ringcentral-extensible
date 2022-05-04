@@ -1,10 +1,7 @@
 import { RestRequestConfig } from '../../../../../Rest';
-import {
-  ListCallQueueMembersParameters,
-  CallQueueMembers,
-} from '../../../../../definitions';
+import { ListCallQueueMembersParameters, CallQueueMembers } from '../../../../../definitions';
 import Parent from '..';
-import { RingCentral } from '../../../../..';
+import RingCentral from '../../../../..';
 
 class Index {
   rc: RingCentral;
@@ -28,15 +25,8 @@ class Index {
    * App Permission: ReadAccounts
    * User Permission: ReadExtensions
    */
-  async get(
-    queryParams?: ListCallQueueMembersParameters,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<CallQueueMembers> {
-    const r = await this.rc.get<CallQueueMembers>(
-      this.path(),
-      queryParams,
-      restRequestConfig,
-    );
+  async get(queryParams?: ListCallQueueMembersParameters, restRequestConfig?: RestRequestConfig): Promise<CallQueueMembers> {
+    const r = await this.rc.get<CallQueueMembers>(this.path(), queryParams, restRequestConfig);
     return r.data;
   }
 }

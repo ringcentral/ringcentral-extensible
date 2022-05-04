@@ -1,13 +1,9 @@
 import { RestRequestConfig } from '../../../../../Rest';
 import {
-  ReadUserCallLogParameters,
-  UserCallLogResponse,
-  DeleteUserCallLogParameters,
-  ReadUserCallRecordParameters,
-  UserCallLogRecord,
+  ReadUserCallLogParameters, UserCallLogResponse, DeleteUserCallLogParameters, ReadUserCallRecordParameters, UserCallLogRecord,
 } from '../../../../../definitions';
 import Parent from '..';
-import { RingCentral } from '../../../../..';
+import RingCentral from '../../../../..';
 
 class Index {
   rc: RingCentral;
@@ -37,15 +33,8 @@ class Index {
    * App Permission: ReadCallLog
    * User Permission: ReadCallLog
    */
-  async list(
-    queryParams?: ReadUserCallLogParameters,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<UserCallLogResponse> {
-    const r = await this.rc.get<UserCallLogResponse>(
-      this.path(false),
-      queryParams,
-      restRequestConfig,
-    );
+  async list(queryParams?: ReadUserCallLogParameters, restRequestConfig?: RestRequestConfig): Promise<UserCallLogResponse> {
+    const r = await this.rc.get<UserCallLogResponse>(this.path(false), queryParams, restRequestConfig);
     return r.data;
   }
 
@@ -57,15 +46,8 @@ class Index {
    * App Permission: EditCallLog
    * User Permission: EditCallLog
    */
-  async delete(
-    queryParams?: DeleteUserCallLogParameters,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<string> {
-    const r = await this.rc.delete<string>(
-      this.path(false),
-      queryParams,
-      restRequestConfig,
-    );
+  async delete(queryParams?: DeleteUserCallLogParameters, restRequestConfig?: RestRequestConfig): Promise<string> {
+    const r = await this.rc.delete<string>(this.path(false), queryParams, restRequestConfig);
     return r.data;
   }
 
@@ -77,18 +59,11 @@ class Index {
    * App Permission: ReadCallLog
    * User Permission: ReadCallLog
    */
-  async get(
-    queryParams?: ReadUserCallRecordParameters,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<UserCallLogRecord> {
+  async get(queryParams?: ReadUserCallRecordParameters, restRequestConfig?: RestRequestConfig): Promise<UserCallLogRecord> {
     if (this.callRecordId === null) {
       throw new Error('callRecordId must be specified.');
     }
-    const r = await this.rc.get<UserCallLogRecord>(
-      this.path(),
-      queryParams,
-      restRequestConfig,
-    );
+    const r = await this.rc.get<UserCallLogRecord>(this.path(), queryParams, restRequestConfig);
     return r.data;
   }
 }

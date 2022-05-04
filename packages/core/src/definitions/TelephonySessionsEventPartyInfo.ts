@@ -15,7 +15,7 @@ class TelephonySessionsEventPartyInfo {
 
   /**
    */
-  direction?: 'Inbound' | 'Outbound';
+  direction?: ('Inbound' | 'Outbound');
 
   /**
    */

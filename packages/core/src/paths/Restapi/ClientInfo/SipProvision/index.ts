@@ -1,10 +1,7 @@
 import { RestRequestConfig } from '../../../../Rest';
-import {
-  CreateSipRegistrationRequest,
-  CreateSipRegistrationResponse,
-} from '../../../../definitions';
+import { CreateSipRegistrationRequest, CreateSipRegistrationResponse } from '../../../../definitions';
 import Parent from '..';
-import { RingCentral } from '../../../..';
+import RingCentral from '../../../..';
 
 class Index {
   rc: RingCentral;
@@ -27,16 +24,8 @@ class Index {
    * Rate Limit Group: Heavy
    * App Permission: VoipCalling
    */
-  async post(
-    createSipRegistrationRequest: CreateSipRegistrationRequest,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<CreateSipRegistrationResponse> {
-    const r = await this.rc.post<CreateSipRegistrationResponse>(
-      this.path(),
-      createSipRegistrationRequest,
-      undefined,
-      restRequestConfig,
-    );
+  async post(createSipRegistrationRequest: CreateSipRegistrationRequest, restRequestConfig?: RestRequestConfig): Promise<CreateSipRegistrationResponse> {
+    const r = await this.rc.post<CreateSipRegistrationResponse>(this.path(), createSipRegistrationRequest, undefined, restRequestConfig);
     return r.data;
   }
 }

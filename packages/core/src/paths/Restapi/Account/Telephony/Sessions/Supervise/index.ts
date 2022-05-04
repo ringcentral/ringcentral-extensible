@@ -1,10 +1,7 @@
 import { RestRequestConfig } from '../../../../../../Rest';
-import {
-  SuperviseCallSessionRequest,
-  SuperviseCallSession,
-} from '../../../../../../definitions';
+import { SuperviseCallSessionRequest, SuperviseCallSession } from '../../../../../../definitions';
 import Parent from '..';
-import { RingCentral } from '../../../../../..';
+import RingCentral from '../../../../../..';
 
 class Index {
   rc: RingCentral;
@@ -27,16 +24,8 @@ class Index {
    * Rate Limit Group: Light
    * App Permission: CallControl
    */
-  async post(
-    superviseCallSessionRequest: SuperviseCallSessionRequest,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<SuperviseCallSession> {
-    const r = await this.rc.post<SuperviseCallSession>(
-      this.path(),
-      superviseCallSessionRequest,
-      undefined,
-      restRequestConfig,
-    );
+  async post(superviseCallSessionRequest: SuperviseCallSessionRequest, restRequestConfig?: RestRequestConfig): Promise<SuperviseCallSession> {
+    const r = await this.rc.post<SuperviseCallSession>(this.path(), superviseCallSessionRequest, undefined, restRequestConfig);
     return r.data;
   }
 }

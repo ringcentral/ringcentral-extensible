@@ -1,8 +1,4 @@
-import {
-  IVRMenuSiteInfo,
-  IVRMenuPromptInfo,
-  IVRMenuActionsInfo,
-} from './index';
+import { IVRMenuSiteInfo, IVRMenuPromptInfo, IVRMenuActionsInfo } from './index';
 
 class IVRMenuInfo {
   /**

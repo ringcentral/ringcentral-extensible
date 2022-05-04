@@ -1,8 +1,4 @@
-import {
-  PromptInfo,
-  CallHandlingNavigationInfo,
-  CallHandlingPagingInfo,
-} from './index';
+import { PromptInfo, CallHandlingNavigationInfo, CallHandlingPagingInfo } from './index';
 
 class IVRPrompts {
   /**

@@ -1,8 +1,4 @@
-import {
-  TemplateInfo,
-  ProvisioningNavigationInfo,
-  ProvisioningPagingInfo,
-} from './index';
+import { TemplateInfo, ProvisioningNavigationInfo, ProvisioningPagingInfo } from './index';
 
 class UserTemplates {
   /**

@@ -1,9 +1,5 @@
 import {
-  ContactInfo,
-  ExtensionPermissions,
-  ProfileImageInfo,
-  CallQueueExtensionInfo,
-  AutomaticLocationUpdatesSiteInfo,
+  ContactInfo, ExtensionPermissions, ProfileImageInfo, CallQueueExtensionInfo, AutomaticLocationUpdatesSiteInfo,
 } from './index';
 
 class GetExtensionListInfoResponse {
@@ -43,31 +39,12 @@ class GetExtensionListInfoResponse {
   /**
    * Extension current state. If 'Unassigned' is specified, then extensions without ‘extensionNumber’ are returned. If not specified, then all extensions are returned
    */
-  status?: 'Enabled' | 'Disabled' | 'Frozen' | 'NotActivated' | 'Unassigned';
+  status?: ('Enabled' | 'Disabled' | 'Frozen' | 'NotActivated' | 'Unassigned');
 
   /**
    * Extension type. Please note that legacy 'Department' extension type corresponds to 'Call Queue' extensions in modern RingCentral product terminology
    */
-  type?:
-  | 'User'
-  | 'FaxUser'
-  | 'VirtualUser'
-  | 'DigitalUser'
-  | 'Department'
-  | 'Announcement'
-  | 'Voicemail'
-  | 'SharedLinesGroup'
-  | 'PagingOnly'
-  | 'IvrMenu'
-  | 'ApplicationExtension'
-  | 'ParkLocation'
-  | 'Bot'
-  | 'Room'
-  | 'Limited'
-  | 'Site'
-  | 'ProxyAdmin'
-  | 'DelegatedLinesGroup'
-  | 'GroupCallPickup';
+  type?: ('User' | 'FaxUser' | 'VirtualUser' | 'DigitalUser' | 'Department' | 'Announcement' | 'Voicemail' | 'SharedLinesGroup' | 'PagingOnly' | 'IvrMenu' | 'ApplicationExtension' | 'ParkLocation' | 'Bot' | 'Room' | 'Limited' | 'Site' | 'ProxyAdmin' | 'DelegatedLinesGroup' | 'GroupCallPickup');
 
   /**
    */

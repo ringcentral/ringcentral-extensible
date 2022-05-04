@@ -1,10 +1,7 @@
 import { RestRequestConfig } from '../../../../../Rest';
-import {
-  ListExtensionGrantsParameters,
-  GetExtensionGrantListResponse,
-} from '../../../../../definitions';
+import { ListExtensionGrantsParameters, GetExtensionGrantListResponse } from '../../../../../definitions';
 import Parent from '..';
-import { RingCentral } from '../../../../..';
+import RingCentral from '../../../../..';
 
 class Index {
   rc: RingCentral;
@@ -28,15 +25,8 @@ class Index {
    * App Permission: ReadAccounts
    * User Permission: ReadExtensions
    */
-  async get(
-    queryParams?: ListExtensionGrantsParameters,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<GetExtensionGrantListResponse> {
-    const r = await this.rc.get<GetExtensionGrantListResponse>(
-      this.path(),
-      queryParams,
-      restRequestConfig,
-    );
+  async get(queryParams?: ListExtensionGrantsParameters, restRequestConfig?: RestRequestConfig): Promise<GetExtensionGrantListResponse> {
+    const r = await this.rc.get<GetExtensionGrantListResponse>(this.path(), queryParams, restRequestConfig);
     return r.data;
   }
 }

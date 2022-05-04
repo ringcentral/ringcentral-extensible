@@ -1,7 +1,7 @@
 import Aggregate from './Aggregate';
 import Timeline from './Timeline';
 import Parent from '..';
-import { RingCentral } from '../../../../../../..';
+import RingCentral from '../../../../../../..';
 
 class Index {
   rc: RingCentral;

@@ -1,26 +1,16 @@
 /**
  * Query parameters for operation listExtensionPhoneNumbers
- */
+*/
 class ListExtensionPhoneNumbersParameters {
   /**
    * Status of a phone number. Multiple values are supported
    */
-  status?: 'Normal' | 'Pending' | 'PortedIn' | 'Temporary';
+  status?: ('Normal' | 'Pending' | 'PortedIn' | 'Temporary');
 
   /**
    * Usage type of a phone number
    */
-  usageType?: (
-    | 'MainCompanyNumber'
-    | 'AdditionalCompanyNumber'
-    | 'CompanyNumber'
-    | 'DirectNumber'
-    | 'CompanyFaxNumber'
-    | 'ForwardedNumber'
-    | 'ForwardedCompanyNumber'
-    | 'BusinessMobileNumber'
-    | 'IntegrationNumber'
-  )[];
+  usageType?: ('MainCompanyNumber' | 'AdditionalCompanyNumber' | 'CompanyNumber' | 'DirectNumber' | 'CompanyFaxNumber' | 'ForwardedNumber' | 'ForwardedCompanyNumber' | 'BusinessMobileNumber' | 'IntegrationNumber')[];
 
   /**
    * Indicates the page number to retrieve. Only positive number values are allowed. Default value is '1'

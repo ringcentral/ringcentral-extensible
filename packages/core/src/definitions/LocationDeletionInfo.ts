@@ -12,7 +12,7 @@ class LocationDeletionInfo {
   /**
    * Identifies the possibility and status of emergency location deletion
    */
-  deletion?: 'Failed' | 'Completed' | 'Forbidden' | 'Restricted' | 'Allowed';
+  deletion?: ('Failed' | 'Completed' | 'Forbidden' | 'Restricted' | 'Allowed');
 
   /**
    */

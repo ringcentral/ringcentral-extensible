@@ -1,8 +1,4 @@
-import {
-  UserAnsweringRuleListRecord,
-  UserAnsweringRuleListPaging,
-  UserAnsweringRuleListNavigation,
-} from './index';
+import { UserAnsweringRuleListRecord, UserAnsweringRuleListPaging, UserAnsweringRuleListNavigation } from './index';
 
 class UserAnsweringRuleList {
   /**

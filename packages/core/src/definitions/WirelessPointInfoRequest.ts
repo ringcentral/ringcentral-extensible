@@ -1,7 +1,4 @@
-import {
-  AutomaticLocationUpdatesSiteInfo,
-  LocationUpdatesEmergencyAddressInfoRequest,
-} from './index';
+import { AutomaticLocationUpdatesSiteInfo, LocationUpdatesEmergencyAddressInfoRequest } from './index';
 
 class WirelessPointInfoRequest {
   /**

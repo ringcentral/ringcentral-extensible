@@ -1,10 +1,5 @@
 import {
-  EmailRecipientInfo,
-  VoicemailsInfo,
-  InboundFaxesInfo,
-  OutboundFaxesInfo,
-  InboundTextsInfo,
-  MissedCallsInfo,
+  EmailRecipientInfo, VoicemailsInfo, InboundFaxesInfo, OutboundFaxesInfo, InboundTextsInfo, MissedCallsInfo,
 } from './index';
 
 class NotificationSettings {

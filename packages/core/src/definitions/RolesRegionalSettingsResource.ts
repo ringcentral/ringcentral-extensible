@@ -1,8 +1,5 @@
 import {
-  RolesTimezoneResource,
-  RolesCountryResource,
-  RolesLanguageResource,
-  CurrencyResource,
+  RolesTimezoneResource, RolesCountryResource, RolesLanguageResource, CurrencyResource,
 } from './index';
 
 class RolesRegionalSettingsResource {
@@ -28,7 +25,7 @@ class RolesRegionalSettingsResource {
 
   /**
    */
-  timeFormat?: '12h' | '24h';
+  timeFormat?: ('12h' | '24h');
 
   /**
    */

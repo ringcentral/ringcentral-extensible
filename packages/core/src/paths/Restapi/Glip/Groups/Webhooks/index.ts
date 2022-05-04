@@ -1,7 +1,7 @@
 import { RestRequestConfig } from '../../../../../Rest';
 import { GlipWebhookList, GlipWebhookInfo } from '../../../../../definitions';
 import Parent from '..';
-import { RingCentral } from '../../../../..';
+import RingCentral from '../../../../..';
 
 class Index {
   rc: RingCentral;
@@ -26,11 +26,7 @@ class Index {
    * User Permission: UnifiedAppDesktop
    */
   async get(restRequestConfig?: RestRequestConfig): Promise<GlipWebhookList> {
-    const r = await this.rc.get<GlipWebhookList>(
-      this.path(),
-      undefined,
-      restRequestConfig,
-    );
+    const r = await this.rc.get<GlipWebhookList>(this.path(), undefined, restRequestConfig);
     return r.data;
   }
 
@@ -43,11 +39,7 @@ class Index {
    * User Permission: UnifiedAppDesktop
    */
   async post(restRequestConfig?: RestRequestConfig): Promise<GlipWebhookInfo> {
-    const r = await this.rc.post<GlipWebhookInfo>(
-      this.path(),
-      undefined,
-      restRequestConfig,
-    );
+    const r = await this.rc.post<GlipWebhookInfo>(this.path(), undefined, restRequestConfig);
     return r.data;
   }
 }

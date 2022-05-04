@@ -1,6 +1,6 @@
 /**
  * Query parameters for operation syncMessages
- */
+*/
 class SyncMessagesParameters {
   /**
    * Conversation identifier for the resulting messages. Meaningful for SMS and Pager messages only.
@@ -48,6 +48,6 @@ class SyncMessagesParameters {
   /**
    * Type of message synchronization
    */
-  syncType?: 'FSync' | 'ISync';
+  syncType?: ('FSync' | 'ISync');
 }
 export default SyncMessagesParameters;

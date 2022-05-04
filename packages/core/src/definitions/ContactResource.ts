@@ -1,9 +1,5 @@
 import {
-  AccountResource,
-  PhoneNumberResource,
-  AccountDirectoryProfileImageResource,
-  BusinessSiteResource,
-  UserCustomFieldResource,
+  AccountResource, PhoneNumberResource, AccountDirectoryProfileImageResource, BusinessSiteResource, UserCustomFieldResource,
 } from './index';
 
 class ContactResource {

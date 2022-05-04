@@ -1,9 +1,5 @@
 import {
-  VoicemailsInfo,
-  InboundFaxesInfo,
-  OutboundFaxesInfo,
-  InboundTextsInfo,
-  MissedCallsInfo,
+  VoicemailsInfo, InboundFaxesInfo, OutboundFaxesInfo, InboundTextsInfo, MissedCallsInfo,
 } from './index';
 
 class NotificationSettingsUpdateRequest {

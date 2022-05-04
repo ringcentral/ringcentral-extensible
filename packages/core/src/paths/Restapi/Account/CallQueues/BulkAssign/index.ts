@@ -1,7 +1,7 @@
 import { RestRequestConfig } from '../../../../../Rest';
 import { CallQueueBulkAssignResource } from '../../../../../definitions';
 import Parent from '..';
-import { RingCentral } from '../../../../..';
+import RingCentral from '../../../../..';
 
 class Index {
   rc: RingCentral;
@@ -25,16 +25,8 @@ class Index {
    * App Permission: EditExtensions
    * User Permission: Groups
    */
-  async post(
-    callQueueBulkAssignResource: CallQueueBulkAssignResource,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<string> {
-    const r = await this.rc.post<string>(
-      this.path(),
-      callQueueBulkAssignResource,
-      undefined,
-      restRequestConfig,
-    );
+  async post(callQueueBulkAssignResource: CallQueueBulkAssignResource, restRequestConfig?: RestRequestConfig): Promise<string> {
+    const r = await this.rc.post<string>(this.path(), callQueueBulkAssignResource, undefined, restRequestConfig);
     return r.data;
   }
 }

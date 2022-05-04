@@ -1,7 +1,7 @@
 import { RestRequestConfig } from '../../../../Rest';
 import { GlipPreferencesInfo } from '../../../../definitions';
 import Parent from '..';
-import { RingCentral } from '../../../..';
+import RingCentral from '../../../..';
 
 class Index {
   rc: RingCentral;
@@ -25,14 +25,8 @@ class Index {
    * App Permission: TeamMessaging
    * User Permission: UnifiedAppDesktop
    */
-  async get(
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<GlipPreferencesInfo> {
-    const r = await this.rc.get<GlipPreferencesInfo>(
-      this.path(),
-      undefined,
-      restRequestConfig,
-    );
+  async get(restRequestConfig?: RestRequestConfig): Promise<GlipPreferencesInfo> {
+    const r = await this.rc.get<GlipPreferencesInfo>(this.path(), undefined, restRequestConfig);
     return r.data;
   }
 }

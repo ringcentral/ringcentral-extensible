@@ -1,12 +1,9 @@
 import { RestRequestConfig } from '../../../../Rest';
 import {
-  CustomFieldsResource,
-  CustomFieldCreateRequest,
-  CustomFieldResource,
-  CustomFieldUpdateRequest,
+  CustomFieldsResource, CustomFieldCreateRequest, CustomFieldResource, CustomFieldUpdateRequest,
 } from '../../../../definitions';
 import Parent from '..';
-import { RingCentral } from '../../../..';
+import RingCentral from '../../../..';
 
 class Index {
   rc: RingCentral;
@@ -36,14 +33,8 @@ class Index {
    * App Permission: ReadAccounts
    * User Permission: ReadUserInfo
    */
-  async get(
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<CustomFieldsResource> {
-    const r = await this.rc.get<CustomFieldsResource>(
-      this.path(false),
-      undefined,
-      restRequestConfig,
-    );
+  async get(restRequestConfig?: RestRequestConfig): Promise<CustomFieldsResource> {
+    const r = await this.rc.get<CustomFieldsResource>(this.path(false), undefined, restRequestConfig);
     return r.data;
   }
 
@@ -55,16 +46,8 @@ class Index {
    * App Permission: EditAccounts
    * User Permission: Users
    */
-  async post(
-    customFieldCreateRequest: CustomFieldCreateRequest,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<CustomFieldResource> {
-    const r = await this.rc.post<CustomFieldResource>(
-      this.path(false),
-      customFieldCreateRequest,
-      undefined,
-      restRequestConfig,
-    );
+  async post(customFieldCreateRequest: CustomFieldCreateRequest, restRequestConfig?: RestRequestConfig): Promise<CustomFieldResource> {
+    const r = await this.rc.post<CustomFieldResource>(this.path(false), customFieldCreateRequest, undefined, restRequestConfig);
     return r.data;
   }
 
@@ -76,19 +59,11 @@ class Index {
    * App Permission: EditAccounts
    * User Permission: Users
    */
-  async put(
-    customFieldUpdateRequest: CustomFieldUpdateRequest,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<CustomFieldResource> {
+  async put(customFieldUpdateRequest: CustomFieldUpdateRequest, restRequestConfig?: RestRequestConfig): Promise<CustomFieldResource> {
     if (this.fieldId === null) {
       throw new Error('fieldId must be specified.');
     }
-    const r = await this.rc.put<CustomFieldResource>(
-      this.path(),
-      customFieldUpdateRequest,
-      undefined,
-      restRequestConfig,
-    );
+    const r = await this.rc.put<CustomFieldResource>(this.path(), customFieldUpdateRequest, undefined, restRequestConfig);
     return r.data;
   }
 
@@ -104,11 +79,7 @@ class Index {
     if (this.fieldId === null) {
       throw new Error('fieldId must be specified.');
     }
-    const r = await this.rc.delete<string>(
-      this.path(),
-      undefined,
-      restRequestConfig,
-    );
+    const r = await this.rc.delete<string>(this.path(), undefined, restRequestConfig);
     return r.data;
   }
 }

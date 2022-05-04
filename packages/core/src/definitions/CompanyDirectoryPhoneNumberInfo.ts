@@ -1,6 +1,6 @@
 /**
  * Extension phone number information
- */
+*/
 class CompanyDirectoryPhoneNumberInfo {
   /**
    * Extension phone number in E.164 format
@@ -10,7 +10,7 @@ class CompanyDirectoryPhoneNumberInfo {
   /**
    * Type of a phone number
    */
-  type?: 'VoiceFax' | 'FaxOnly' | 'VoiceOnly';
+  type?: ('VoiceFax' | 'FaxOnly' | 'VoiceOnly');
 
   /**
    * Specifies if a phone number should be hidden or not. Returned only if the value is 'True'
@@ -20,10 +20,6 @@ class CompanyDirectoryPhoneNumberInfo {
   /**
    * Usage type of a phone number
    */
-  usageType?:
-  | 'MobileNumber'
-  | 'ContactNumber'
-  | 'DirectNumber'
-  | 'ForwardedNumber';
+  usageType?: ('MobileNumber' | 'ContactNumber' | 'DirectNumber' | 'ForwardedNumber');
 }
 export default CompanyDirectoryPhoneNumberInfo;

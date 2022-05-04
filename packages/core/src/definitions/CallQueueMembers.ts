@@ -1,8 +1,4 @@
-import {
-  CallQueueMemberInfo,
-  ProvisioningNavigationInfo,
-  ProvisioningPagingInfo,
-} from './index';
+import { CallQueueMemberInfo, ProvisioningNavigationInfo, ProvisioningPagingInfo } from './index';
 
 class CallQueueMembers {
   /**

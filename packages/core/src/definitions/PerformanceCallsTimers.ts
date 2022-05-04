@@ -1,18 +1,10 @@
 import {
-  PerformanceCallsTotal,
-  PerformanceCallsByDirection,
-  PerformanceCallsByOrigin,
-  PerformanceCallsByResponse,
-  PerformanceCallsSegments,
-  PerformanceCallsByResult,
-  PerformanceCallsByCompanyHours,
-  PerformanceCallsByQueueSla,
-  PerformanceCallsByType,
+  PerformanceCallsTotal, PerformanceCallsByDirection, PerformanceCallsByOrigin, PerformanceCallsByResponse, PerformanceCallsSegments, PerformanceCallsByResult, PerformanceCallsByCompanyHours, PerformanceCallsByQueueSla, PerformanceCallsByType,
 } from './index';
 
 /**
  * Call length data for the specified grouping
- */
+*/
 class PerformanceCallsTimers {
   /**
    */

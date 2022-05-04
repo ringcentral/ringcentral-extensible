@@ -1,7 +1,7 @@
 import { RestRequestConfig } from '../../../../../Rest';
 import { CallSessionObject } from '../../../../../definitions';
 import Parent from '..';
-import { RingCentral } from '../../../../..';
+import RingCentral from '../../../../..';
 
 class Index {
   rc: RingCentral;
@@ -24,14 +24,8 @@ class Index {
    * Rate Limit Group: Heavy
    * App Permission: CallControl
    */
-  async post(
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<CallSessionObject> {
-    const r = await this.rc.post<CallSessionObject>(
-      this.path(),
-      undefined,
-      restRequestConfig,
-    );
+  async post(restRequestConfig?: RestRequestConfig): Promise<CallSessionObject> {
+    const r = await this.rc.post<CallSessionObject>(this.path(), undefined, restRequestConfig);
     return r.data;
   }
 }

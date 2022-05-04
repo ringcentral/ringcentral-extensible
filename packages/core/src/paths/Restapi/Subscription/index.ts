@@ -1,13 +1,10 @@
 import Renew from './Renew';
 import { RestRequestConfig } from '../../../Rest';
 import {
-  RecordsCollectionResourceSubscriptionResponse,
-  CreateSubscriptionRequest,
-  SubscriptionInfo,
-  ModifySubscriptionRequest,
+  RecordsCollectionResourceSubscriptionResponse, CreateSubscriptionRequest, SubscriptionInfo, ModifySubscriptionRequest,
 } from '../../../definitions';
 import Parent from '..';
-import { RingCentral } from '../../..';
+import RingCentral from '../../..';
 
 class Index {
   rc: RingCentral;
@@ -35,14 +32,8 @@ class Index {
    * Endpoint: /restapi/{apiVersion}/subscription
    * Rate Limit Group: Light
    */
-  async list(
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<RecordsCollectionResourceSubscriptionResponse> {
-    const r = await this.rc.get<RecordsCollectionResourceSubscriptionResponse>(
-      this.path(false),
-      undefined,
-      restRequestConfig,
-    );
+  async list(restRequestConfig?: RestRequestConfig): Promise<RecordsCollectionResourceSubscriptionResponse> {
+    const r = await this.rc.get<RecordsCollectionResourceSubscriptionResponse>(this.path(false), undefined, restRequestConfig);
     return r.data;
   }
 
@@ -52,16 +43,8 @@ class Index {
    * Endpoint: /restapi/{apiVersion}/subscription
    * Rate Limit Group: Medium
    */
-  async post(
-    createSubscriptionRequest: CreateSubscriptionRequest,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<SubscriptionInfo> {
-    const r = await this.rc.post<SubscriptionInfo>(
-      this.path(false),
-      createSubscriptionRequest,
-      undefined,
-      restRequestConfig,
-    );
+  async post(createSubscriptionRequest: CreateSubscriptionRequest, restRequestConfig?: RestRequestConfig): Promise<SubscriptionInfo> {
+    const r = await this.rc.post<SubscriptionInfo>(this.path(false), createSubscriptionRequest, undefined, restRequestConfig);
     return r.data;
   }
 
@@ -75,11 +58,7 @@ class Index {
     if (this.subscriptionId === null) {
       throw new Error('subscriptionId must be specified.');
     }
-    const r = await this.rc.get<SubscriptionInfo>(
-      this.path(),
-      undefined,
-      restRequestConfig,
-    );
+    const r = await this.rc.get<SubscriptionInfo>(this.path(), undefined, restRequestConfig);
     return r.data;
   }
 
@@ -89,19 +68,11 @@ class Index {
    * Endpoint: /restapi/{apiVersion}/subscription/{subscriptionId}
    * Rate Limit Group: Medium
    */
-  async put(
-    modifySubscriptionRequest: ModifySubscriptionRequest,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<SubscriptionInfo> {
+  async put(modifySubscriptionRequest: ModifySubscriptionRequest, restRequestConfig?: RestRequestConfig): Promise<SubscriptionInfo> {
     if (this.subscriptionId === null) {
       throw new Error('subscriptionId must be specified.');
     }
-    const r = await this.rc.put<SubscriptionInfo>(
-      this.path(),
-      modifySubscriptionRequest,
-      undefined,
-      restRequestConfig,
-    );
+    const r = await this.rc.put<SubscriptionInfo>(this.path(), modifySubscriptionRequest, undefined, restRequestConfig);
     return r.data;
   }
 
@@ -115,11 +86,7 @@ class Index {
     if (this.subscriptionId === null) {
       throw new Error('subscriptionId must be specified.');
     }
-    const r = await this.rc.delete<string>(
-      this.path(),
-      undefined,
-      restRequestConfig,
-    );
+    const r = await this.rc.delete<string>(this.path(), undefined, restRequestConfig);
     return r.data;
   }
 

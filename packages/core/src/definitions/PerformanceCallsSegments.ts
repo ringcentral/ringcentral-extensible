@@ -4,7 +4,7 @@ class PerformanceCallsSegments {
   /**
    * Required
    */
-  valueType?: 'Percent' | 'Seconds' | 'Instances';
+  valueType?: ('Percent' | 'Seconds' | 'Instances');
 
   /**
    * Required

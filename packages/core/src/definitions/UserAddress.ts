@@ -22,6 +22,6 @@ class UserAddress {
   /**
    * Required
    */
-  type?: 'work';
+  type?: ('work');
 }
 export default UserAddress;

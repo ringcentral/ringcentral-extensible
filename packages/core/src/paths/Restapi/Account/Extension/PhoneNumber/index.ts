@@ -1,10 +1,7 @@
 import { RestRequestConfig } from '../../../../../Rest';
-import {
-  ListExtensionPhoneNumbersParameters,
-  GetExtensionPhoneNumbersResponse,
-} from '../../../../../definitions';
+import { ListExtensionPhoneNumbersParameters, GetExtensionPhoneNumbersResponse } from '../../../../../definitions';
 import Parent from '..';
-import { RingCentral } from '../../../../..';
+import RingCentral from '../../../../..';
 
 class Index {
   rc: RingCentral;
@@ -28,15 +25,8 @@ class Index {
    * App Permission: ReadAccounts
    * User Permission: ReadUserPhoneNumbers
    */
-  async get(
-    queryParams?: ListExtensionPhoneNumbersParameters,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<GetExtensionPhoneNumbersResponse> {
-    const r = await this.rc.get<GetExtensionPhoneNumbersResponse>(
-      this.path(),
-      queryParams,
-      restRequestConfig,
-    );
+  async get(queryParams?: ListExtensionPhoneNumbersParameters, restRequestConfig?: RestRequestConfig): Promise<GetExtensionPhoneNumbersResponse> {
+    const r = await this.rc.get<GetExtensionPhoneNumbersResponse>(this.path(), queryParams, restRequestConfig);
     return r.data;
   }
 }

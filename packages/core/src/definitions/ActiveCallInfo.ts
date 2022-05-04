@@ -7,7 +7,7 @@ class ActiveCallInfo {
 
   /**
    */
-  direction?: 'Inbound' | 'Outbound';
+  direction?: ('Inbound' | 'Outbound');
 
   /**
    * Identifies if a call belongs to the call queue
@@ -42,12 +42,7 @@ class ActiveCallInfo {
   /**
    * Telephony presence status
    */
-  telephonyStatus?:
-  | 'NoCall'
-  | 'CallConnected'
-  | 'Ringing'
-  | 'OnHold'
-  | 'ParkedCall';
+  telephonyStatus?: ('NoCall' | 'CallConnected' | 'Ringing' | 'OnHold' | 'ParkedCall');
 
   /**
    */

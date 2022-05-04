@@ -1,8 +1,4 @@
-import {
-  DataExportTask,
-  GlipDataExportNavigationInfo,
-  GlipDataExportPagingInfo,
-} from './index';
+import { DataExportTask, GlipDataExportNavigationInfo, GlipDataExportPagingInfo } from './index';
 
 class DataExportTaskList {
   /**

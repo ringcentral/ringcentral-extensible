@@ -2,22 +2,22 @@ import { BlockedCallerGreetingInfo } from './index';
 
 /**
  * Returns the lists of blocked and allowed phone numbers
- */
+*/
 class CallerBlockingSettingsUpdate {
   /**
    * Call blocking options: either specific or all calls and faxes
    */
-  mode?: 'Specific' | 'All';
+  mode?: ('Specific' | 'All');
 
   /**
    * Determines how to handle calls with no caller ID in 'Specific' mode
    */
-  noCallerId?: 'BlockCallsAndFaxes' | 'BlockFaxes' | 'Allow';
+  noCallerId?: ('BlockCallsAndFaxes' | 'BlockFaxes' | 'Allow');
 
   /**
    * Blocking settings for pay phones
    */
-  payPhones?: 'Block' | 'Allow';
+  payPhones?: ('Block' | 'Allow');
 
   /**
    * List of greetings played for blocked callers

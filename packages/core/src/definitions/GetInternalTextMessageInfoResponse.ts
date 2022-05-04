@@ -1,8 +1,5 @@
 import {
-  MessageAttachmentInfo,
-  ConversationInfo,
-  MessageStoreCallerInfoResponseFrom,
-  MessageStoreCallerInfoResponseTo,
+  MessageAttachmentInfo, ConversationInfo, MessageStoreCallerInfoResponseFrom, MessageStoreCallerInfoResponseTo,
 } from './index';
 
 class GetInternalTextMessageInfoResponse {
@@ -25,7 +22,7 @@ class GetInternalTextMessageInfoResponse {
   /**
    * Message availability status. Message in 'Deleted' state is still preserved with all its attachments and can be restored. 'Purged' means that all attachments are already deleted and the message itself is about to be physically deleted shortly
    */
-  availability?: 'Alive' | 'Deleted' | 'Purged';
+  availability?: ('Alive' | 'Deleted' | 'Purged');
 
   /**
    * SMS and Pager only. Identifier of a conversation that the message belongs to
@@ -46,7 +43,7 @@ class GetInternalTextMessageInfoResponse {
   /**
    * Message direction. Note that for some message types not all directions are allowed. For example voicemail messages can be only inbound
    */
-  direction?: 'Inbound' | 'Outbound';
+  direction?: ('Inbound' | 'Outbound');
 
   /**
    */
@@ -61,13 +58,7 @@ class GetInternalTextMessageInfoResponse {
   /**
    * Message status. Different message types may have different allowed status values. For outbound faxes the aggregated message status is returned: If status for at least one recipient is 'Queued', then 'Queued' value is returned If status for at least one recipient is 'SendingFailed', then 'SendingFailed' value is returned In other cases Sent status is returned
    */
-  messageStatus?:
-  | 'Queued'
-  | 'Sent'
-  | 'Delivered'
-  | 'DeliveryFailed'
-  | 'SendingFailed'
-  | 'Received';
+  messageStatus?: ('Queued' | 'Sent' | 'Delivered' | 'DeliveryFailed' | 'SendingFailed' | 'Received');
 
   /**
    * 'Pager' only. 'True' if at least one of the message recipients is 'Department' extension
@@ -77,12 +68,12 @@ class GetInternalTextMessageInfoResponse {
   /**
    * Message priority
    */
-  priority?: 'Normal' | 'High';
+  priority?: ('Normal' | 'High');
 
   /**
    * Message read status
    */
-  readStatus?: 'Read' | 'Unread';
+  readStatus?: ('Read' | 'Unread');
 
   /**
    * Message subject. For SMS and Pager messages it replicates message text which is also returned as an attachment
@@ -97,6 +88,6 @@ class GetInternalTextMessageInfoResponse {
   /**
    * Message type
    */
-  type?: 'Fax' | 'SMS' | 'VoiceMail' | 'Pager' | 'Text';
+  type?: ('Fax' | 'SMS' | 'VoiceMail' | 'Pager' | 'Text');
 }
 export default GetInternalTextMessageInfoResponse;

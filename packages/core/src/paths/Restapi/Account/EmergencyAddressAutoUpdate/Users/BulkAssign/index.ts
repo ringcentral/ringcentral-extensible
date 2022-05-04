@@ -1,7 +1,7 @@
 import { RestRequestConfig } from '../../../../../../Rest';
 import { BulkAssignAutomaticLocationUpdatesUsers } from '../../../../../../definitions';
 import Parent from '..';
-import { RingCentral } from '../../../../../..';
+import RingCentral from '../../../../../..';
 
 class Index {
   rc: RingCentral;
@@ -25,16 +25,8 @@ class Index {
    * App Permission: EditAccounts
    * User Permission: ConfigureEmergencyMaps
    */
-  async post(
-    bulkAssignAutomaticLocationUpdatesUsers: BulkAssignAutomaticLocationUpdatesUsers,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<string> {
-    const r = await this.rc.post<string>(
-      this.path(),
-      bulkAssignAutomaticLocationUpdatesUsers,
-      undefined,
-      restRequestConfig,
-    );
+  async post(bulkAssignAutomaticLocationUpdatesUsers: BulkAssignAutomaticLocationUpdatesUsers, restRequestConfig?: RestRequestConfig): Promise<string> {
+    const r = await this.rc.post<string>(this.path(), bulkAssignAutomaticLocationUpdatesUsers, undefined, restRequestConfig);
     return r.data;
   }
 }

@@ -1,8 +1,4 @@
-import {
-  NetworkInfo,
-  ProvisioningNavigationInfo,
-  ProvisioningPagingInfo,
-} from './index';
+import { NetworkInfo, ProvisioningNavigationInfo, ProvisioningPagingInfo } from './index';
 
 class NetworksList {
   /**

@@ -1,6 +1,6 @@
 import { RestRequestConfig } from '../../../../../Rest';
 import Parent from '..';
-import { RingCentral } from '../../../../..';
+import RingCentral from '../../../../..';
 
 class Index {
   rc: RingCentral;
@@ -33,10 +33,7 @@ class Index {
     if (this.datasetId === null) {
       throw new Error('datasetId must be specified.');
     }
-    const r = await this.rc.get<Buffer>(this.path(), undefined, {
-      ...restRequestConfig,
-      responseType: 'arraybuffer',
-    });
+    const r = await this.rc.get<Buffer>(this.path(), undefined, { ...restRequestConfig, responseType: 'arraybuffer' });
     return r.data;
   }
 }

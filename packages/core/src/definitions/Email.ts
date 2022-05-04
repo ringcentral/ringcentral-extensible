@@ -2,7 +2,7 @@ class Email {
   /**
    * Required
    */
-  type?: 'work';
+  type?: ('work');
 
   /**
    * Required

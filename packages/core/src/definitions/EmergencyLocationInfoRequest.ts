@@ -22,17 +22,17 @@ class EmergencyLocationInfoRequest {
   /**
    * Emergency address status
    */
-  addressStatus?: 'Valid' | 'Invalid';
+  addressStatus?: ('Valid' | 'Invalid');
 
   /**
    * Status of emergency response location usage.
    */
-  usageStatus?: 'Active' | 'Inactive';
+  usageStatus?: ('Active' | 'Inactive');
 
   /**
    * Visibility of an emergency response location. If `Private` is set, then location is visible only for restricted number of users, specified in `owners` array
    * Default: Public
    */
-  visibility?: 'Public';
+  visibility?: ('Public');
 }
 export default EmergencyLocationInfoRequest;

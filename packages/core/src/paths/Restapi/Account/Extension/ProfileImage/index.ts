@@ -1,11 +1,8 @@
 import Utils from '../../../../../Utils';
 import { RestRequestConfig } from '../../../../../Rest';
-import {
-  CreateUserProfileImageRequest,
-  UpdateUserProfileImageRequest,
-} from '../../../../../definitions';
+import { CreateUserProfileImageRequest, UpdateUserProfileImageRequest } from '../../../../../definitions';
 import Parent from '..';
-import { RingCentral } from '../../../../..';
+import RingCentral from '../../../../..';
 
 class Index {
   rc: RingCentral;
@@ -36,10 +33,7 @@ class Index {
    * User Permission: ReadExtensions
    */
   async list(restRequestConfig?: RestRequestConfig): Promise<Buffer> {
-    const r = await this.rc.get<Buffer>(this.path(false), undefined, {
-      ...restRequestConfig,
-      responseType: 'arraybuffer',
-    });
+    const r = await this.rc.get<Buffer>(this.path(false), undefined, { ...restRequestConfig, responseType: 'arraybuffer' });
     return r.data;
   }
 
@@ -51,17 +45,9 @@ class Index {
    * App Permission: EditExtensions
    * User Permission: EditUserInfo
    */
-  async post(
-    createUserProfileImageRequest: CreateUserProfileImageRequest,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<string> {
+  async post(createUserProfileImageRequest: CreateUserProfileImageRequest, restRequestConfig?: RestRequestConfig): Promise<string> {
     const formData = Utils.getFormData(createUserProfileImageRequest);
-    const r = await this.rc.post<string>(
-      this.path(false),
-      formData,
-      undefined,
-      restRequestConfig,
-    );
+    const r = await this.rc.post<string>(this.path(false), formData, undefined, restRequestConfig);
     return r.data;
   }
 
@@ -73,17 +59,9 @@ class Index {
    * App Permission: EditExtensions
    * User Permission: EditUserInfo
    */
-  async put(
-    updateUserProfileImageRequest: UpdateUserProfileImageRequest,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<string> {
+  async put(updateUserProfileImageRequest: UpdateUserProfileImageRequest, restRequestConfig?: RestRequestConfig): Promise<string> {
     const formData = Utils.getFormData(updateUserProfileImageRequest);
-    const r = await this.rc.put<string>(
-      this.path(false),
-      formData,
-      undefined,
-      restRequestConfig,
-    );
+    const r = await this.rc.put<string>(this.path(false), formData, undefined, restRequestConfig);
     return r.data;
   }
 
@@ -99,10 +77,7 @@ class Index {
     if (this.scaleSize === null) {
       throw new Error('scaleSize must be specified.');
     }
-    const r = await this.rc.get<Buffer>(this.path(), undefined, {
-      ...restRequestConfig,
-      responseType: 'arraybuffer',
-    });
+    const r = await this.rc.get<Buffer>(this.path(), undefined, { ...restRequestConfig, responseType: 'arraybuffer' });
     return r.data;
   }
 }

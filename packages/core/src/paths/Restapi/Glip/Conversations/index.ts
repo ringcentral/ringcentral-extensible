@@ -1,12 +1,9 @@
 import { RestRequestConfig } from '../../../../Rest';
 import {
-  ListGlipConversationsParameters,
-  GlipConversationsList,
-  CreateGlipConversationRequest,
-  GlipConversationInfo,
+  ListGlipConversationsParameters, GlipConversationsList, CreateGlipConversationRequest, GlipConversationInfo,
 } from '../../../../definitions';
 import Parent from '..';
-import { RingCentral } from '../../../..';
+import RingCentral from '../../../..';
 
 class Index {
   rc: RingCentral;
@@ -36,15 +33,8 @@ class Index {
    * App Permission: TeamMessaging
    * User Permission: UnifiedAppDesktop
    */
-  async list(
-    queryParams?: ListGlipConversationsParameters,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<GlipConversationsList> {
-    const r = await this.rc.get<GlipConversationsList>(
-      this.path(false),
-      queryParams,
-      restRequestConfig,
-    );
+  async list(queryParams?: ListGlipConversationsParameters, restRequestConfig?: RestRequestConfig): Promise<GlipConversationsList> {
+    const r = await this.rc.get<GlipConversationsList>(this.path(false), queryParams, restRequestConfig);
     return r.data;
   }
 
@@ -56,16 +46,8 @@ class Index {
    * App Permission: TeamMessaging
    * User Permission: UnifiedAppDesktop
    */
-  async post(
-    createGlipConversationRequest: CreateGlipConversationRequest,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<GlipConversationInfo> {
-    const r = await this.rc.post<GlipConversationInfo>(
-      this.path(false),
-      createGlipConversationRequest,
-      undefined,
-      restRequestConfig,
-    );
+  async post(createGlipConversationRequest: CreateGlipConversationRequest, restRequestConfig?: RestRequestConfig): Promise<GlipConversationInfo> {
+    const r = await this.rc.post<GlipConversationInfo>(this.path(false), createGlipConversationRequest, undefined, restRequestConfig);
     return r.data;
   }
 
@@ -77,17 +59,11 @@ class Index {
    * App Permission: TeamMessaging
    * User Permission: UnifiedAppDesktop
    */
-  async get(
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<GlipConversationInfo> {
+  async get(restRequestConfig?: RestRequestConfig): Promise<GlipConversationInfo> {
     if (this.chatId === null) {
       throw new Error('chatId must be specified.');
     }
-    const r = await this.rc.get<GlipConversationInfo>(
-      this.path(),
-      undefined,
-      restRequestConfig,
-    );
+    const r = await this.rc.get<GlipConversationInfo>(this.path(), undefined, restRequestConfig);
     return r.data;
   }
 }

@@ -1,12 +1,9 @@
 import Supervise from './Supervise';
 import Parties from './Parties';
 import { RestRequestConfig } from '../../../../../Rest';
-import {
-  ReadCallSessionStatusParameters,
-  CallSessionObject,
-} from '../../../../../definitions';
+import { ReadCallSessionStatusParameters, CallSessionObject } from '../../../../../definitions';
 import Parent from '..';
-import { RingCentral } from '../../../../..';
+import RingCentral from '../../../../..';
 
 class Index {
   rc: RingCentral;
@@ -35,18 +32,11 @@ class Index {
    * Rate Limit Group: Light
    * App Permission: CallControl
    */
-  async get(
-    queryParams?: ReadCallSessionStatusParameters,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<CallSessionObject> {
+  async get(queryParams?: ReadCallSessionStatusParameters, restRequestConfig?: RestRequestConfig): Promise<CallSessionObject> {
     if (this.telephonySessionId === null) {
       throw new Error('telephonySessionId must be specified.');
     }
-    const r = await this.rc.get<CallSessionObject>(
-      this.path(),
-      queryParams,
-      restRequestConfig,
-    );
+    const r = await this.rc.get<CallSessionObject>(this.path(), queryParams, restRequestConfig);
     return r.data;
   }
 
@@ -61,15 +51,11 @@ class Index {
     if (this.telephonySessionId === null) {
       throw new Error('telephonySessionId must be specified.');
     }
-    const r = await this.rc.delete<string>(
-      this.path(),
-      undefined,
-      restRequestConfig,
-    );
+    const r = await this.rc.delete<string>(this.path(), undefined, restRequestConfig);
     return r.data;
   }
 
-  parties(partyId: string | null = null): Parties {
+  parties(partyId: (string | null) = null): Parties {
     return new Parties(this, partyId);
   }
 

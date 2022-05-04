@@ -29,7 +29,7 @@ class PermissionResource {
   /**
    * Site compatibility flag set for permission
    */
-  siteCompatible?: 'Incompatible' | 'Compatible' | 'Independent';
+  siteCompatible?: ('Incompatible' | 'Compatible' | 'Independent');
 
   /**
    */

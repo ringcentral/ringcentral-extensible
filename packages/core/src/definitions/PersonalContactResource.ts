@@ -10,7 +10,7 @@ class PersonalContactResource {
   /**
    * This property has a special meaning only on Address Book Sync (e.g. a contact can be `Deleted`). For simple contact list reading it has always the default value - `Alive`
    */
-  availability?: 'Alive' | 'Deleted' | 'Purged';
+  availability?: ('Alive' | 'Deleted' | 'Purged');
 
   /**
    * Email of the contact

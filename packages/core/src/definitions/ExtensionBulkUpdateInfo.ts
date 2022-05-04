@@ -1,12 +1,5 @@
 import {
-  ExtensionStatusInfo,
-  ContactInfoUpdateRequest,
-  ExtensionRegionalSettingRequest,
-  CallQueueInfoRequest,
-  UserTransitionInfo,
-  CustomFieldInfo,
-  AutomaticLocationUpdatesSiteInfo,
-  ReferenceInfo,
+  ExtensionStatusInfo, ContactInfoUpdateRequest, ExtensionRegionalSettingRequest, CallQueueInfoRequest, UserTransitionInfo, CustomFieldInfo, AutomaticLocationUpdatesSiteInfo, ReferenceInfo,
 } from './index';
 
 class ExtensionBulkUpdateInfo {
@@ -17,7 +10,7 @@ class ExtensionBulkUpdateInfo {
 
   /**
    */
-  status?: 'Disabled' | 'Enabled' | 'NotActivated' | 'Frozen';
+  status?: ('Disabled' | 'Enabled' | 'NotActivated' | 'Frozen');
 
   /**
    */
@@ -48,7 +41,7 @@ class ExtensionBulkUpdateInfo {
 
   /**
    */
-  setupWizardState?: 'NotStarted' | 'Incomplete' | 'Completed';
+  setupWizardState?: ('NotStarted' | 'Incomplete' | 'Completed');
 
   /**
    * Additional extension identifier created by partner application and applied on client side
@@ -89,20 +82,7 @@ class ExtensionBulkUpdateInfo {
   /**
    * Extension type. Please note that legacy 'Department' extension type corresponds to 'Call Queue' extensions in modern RingCentral product terminology
    */
-  type?:
-  | 'User'
-  | 'Fax User'
-  | 'VirtualUser'
-  | 'DigitalUser'
-  | 'Department'
-  | 'Announcement'
-  | 'Voicemail'
-  | 'SharedLinesGroup'
-  | 'PagingOnly'
-  | 'IvrMenu'
-  | 'ApplicationExtension'
-  | 'ParkLocation'
-  | 'DelegatedLinesGroup';
+  type?: ('User' | 'Fax User' | 'VirtualUser' | 'DigitalUser' | 'Department' | 'Announcement' | 'Voicemail' | 'SharedLinesGroup' | 'PagingOnly' | 'IvrMenu' | 'ApplicationExtension' | 'ParkLocation' | 'DelegatedLinesGroup');
 
   /**
    * List of non-RC internal identifiers assigned to an extension

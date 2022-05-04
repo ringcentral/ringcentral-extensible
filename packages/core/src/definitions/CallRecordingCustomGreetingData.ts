@@ -1,6 +1,6 @@
 /**
  * Custom greeting data
- */
+*/
 class CallRecordingCustomGreetingData {
   /**
    * Link to a custom company greeting

@@ -1,8 +1,4 @@
-import {
-  AssigneeInfo,
-  GlipTaskRecurrenceInfo,
-  GlipAttachmentInfoRequest,
-} from './index';
+import { AssigneeInfo, GlipTaskRecurrenceInfo, GlipAttachmentInfoRequest } from './index';
 
 class GlipUpdateTask {
   /**
@@ -16,7 +12,7 @@ class GlipUpdateTask {
 
   /**
    */
-  completenessCondition?: 'Simple' | 'AllAssignees' | 'Percentage';
+  completenessCondition?: ('Simple' | 'AllAssignees' | 'Percentage');
 
   /**
    * Task start date in UTC time zone
@@ -32,15 +28,7 @@ class GlipUpdateTask {
 
   /**
    */
-  color?:
-  | 'Black'
-  | 'Red'
-  | 'Orange'
-  | 'Yellow'
-  | 'Green'
-  | 'Blue'
-  | 'Purple'
-  | 'Magenta';
+  color?: ('Black' | 'Red' | 'Orange' | 'Yellow' | 'Green' | 'Blue' | 'Purple' | 'Magenta');
 
   /**
    * Task section to group/search by. Max allowed length is 100 characters

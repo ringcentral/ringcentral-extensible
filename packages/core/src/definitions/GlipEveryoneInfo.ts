@@ -7,7 +7,7 @@ class GlipEveryoneInfo {
   /**
    * Type of a chat
    */
-  type?: 'Everyone';
+  type?: ('Everyone');
 
   /**
    * Chat name

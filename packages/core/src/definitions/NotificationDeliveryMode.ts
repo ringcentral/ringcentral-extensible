@@ -1,6 +1,6 @@
 /**
  * Delivery mode data
- */
+*/
 class NotificationDeliveryMode {
   /**
    * Optional parameter. Specifies if the message will be encrypted or not
@@ -35,7 +35,7 @@ class NotificationDeliveryMode {
   /**
    * Notifications transportation provider name
    */
-  transportType?: 'PubNub' | 'WebHook' | 'RC/APNS' | 'RC/GCM';
+  transportType?: ('PubNub' | 'WebHook' | 'RC/APNS' | 'RC/GCM');
 
   /**
    * Name of a certificate. Supported for 'RC/APNS' and 'RC/GCM' transport types

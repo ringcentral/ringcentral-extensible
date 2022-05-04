@@ -20,7 +20,7 @@ class ListCompanyAnsweringRuleInfo {
   /**
    * Type of an answering rule, the default value is 'Custom' = ['BusinessHours', 'AfterHours', 'Custom']
    */
-  type?: 'BusinessHours' | 'AfterHours' | 'Custom';
+  type?: ('BusinessHours' | 'AfterHours' | 'Custom');
 
   /**
    * Name of an answering rule specified by user. Max number of symbols is 30. The default value is 'My Rule N' where 'N' is the first free number

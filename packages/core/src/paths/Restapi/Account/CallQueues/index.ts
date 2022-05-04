@@ -3,13 +3,10 @@ import Presence from './Presence';
 import Members from './Members';
 import { RestRequestConfig } from '../../../../Rest';
 import {
-  ListCallQueuesParameters,
-  CallQueues,
-  CallQueueDetails,
-  CallQueueUpdateDetails,
+  ListCallQueuesParameters, CallQueues, CallQueueDetails, CallQueueUpdateDetails,
 } from '../../../../definitions';
 import Parent from '..';
-import { RingCentral } from '../../../..';
+import RingCentral from '../../../..';
 
 class Index {
   rc: RingCentral;
@@ -39,15 +36,8 @@ class Index {
    * App Permission: ReadAccounts
    * User Permission: ReadExtensions
    */
-  async list(
-    queryParams?: ListCallQueuesParameters,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<CallQueues> {
-    const r = await this.rc.get<CallQueues>(
-      this.path(false),
-      queryParams,
-      restRequestConfig,
-    );
+  async list(queryParams?: ListCallQueuesParameters, restRequestConfig?: RestRequestConfig): Promise<CallQueues> {
+    const r = await this.rc.get<CallQueues>(this.path(false), queryParams, restRequestConfig);
     return r.data;
   }
 
@@ -63,11 +53,7 @@ class Index {
     if (this.groupId === null) {
       throw new Error('groupId must be specified.');
     }
-    const r = await this.rc.get<CallQueueDetails>(
-      this.path(),
-      undefined,
-      restRequestConfig,
-    );
+    const r = await this.rc.get<CallQueueDetails>(this.path(), undefined, restRequestConfig);
     return r.data;
   }
 
@@ -79,19 +65,11 @@ class Index {
    * App Permission: EditExtensions
    * User Permission: EditUserInfo
    */
-  async put(
-    callQueueUpdateDetails: CallQueueUpdateDetails,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<CallQueueDetails> {
+  async put(callQueueUpdateDetails: CallQueueUpdateDetails, restRequestConfig?: RestRequestConfig): Promise<CallQueueDetails> {
     if (this.groupId === null) {
       throw new Error('groupId must be specified.');
     }
-    const r = await this.rc.put<CallQueueDetails>(
-      this.path(),
-      callQueueUpdateDetails,
-      undefined,
-      restRequestConfig,
-    );
+    const r = await this.rc.put<CallQueueDetails>(this.path(), callQueueUpdateDetails, undefined, restRequestConfig);
     return r.data;
   }
 

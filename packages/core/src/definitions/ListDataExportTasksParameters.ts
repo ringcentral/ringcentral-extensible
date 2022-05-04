@@ -1,11 +1,11 @@
 /**
  * Query parameters for operation listDataExportTasks
- */
+*/
 class ListDataExportTasksParameters {
   /**
    * Status of the task(s) to be returned. Multiple values are supported
    */
-  status?: 'Accepted' | 'InProgress' | 'Completed' | 'Failed' | 'Expired';
+  status?: ('Accepted' | 'InProgress' | 'Completed' | 'Failed' | 'Expired');
 
   /**
    * Page number to be retrieved; value range is > 0

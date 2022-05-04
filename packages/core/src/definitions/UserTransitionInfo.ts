@@ -1,6 +1,6 @@
 /**
  * For NotActivated extensions only. Welcome email settings
- */
+*/
 class UserTransitionInfo {
   /**
    * Specifies if a welcome/activation email is sent to the existing users during account confirmation

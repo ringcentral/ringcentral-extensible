@@ -1,6 +1,6 @@
 /**
  * Query parameters for operation listCountries
- */
+*/
 class ListCountriesParameters {
   /**
    * Specifies whether login with the phone numbers of this country is enabled or not

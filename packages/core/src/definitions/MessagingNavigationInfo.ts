@@ -2,7 +2,7 @@ import { MessagingNavigationInfoURI } from './index';
 
 /**
  * Information on navigation
- */
+*/
 class MessagingNavigationInfo {
   /**
    */

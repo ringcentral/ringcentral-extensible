@@ -1,11 +1,7 @@
 import { RestRequestConfig } from '../../../../../Rest';
-import {
-  GetUserBusinessHoursResponse,
-  UserBusinessHoursUpdateRequest,
-  UserBusinessHoursUpdateResponse,
-} from '../../../../../definitions';
+import { GetUserBusinessHoursResponse, UserBusinessHoursUpdateRequest, UserBusinessHoursUpdateResponse } from '../../../../../definitions';
 import Parent from '..';
-import { RingCentral } from '../../../../..';
+import RingCentral from '../../../../..';
 
 class Index {
   rc: RingCentral;
@@ -29,14 +25,8 @@ class Index {
    * App Permission: ReadAccounts
    * User Permission: ReadExtensions
    */
-  async get(
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<GetUserBusinessHoursResponse> {
-    const r = await this.rc.get<GetUserBusinessHoursResponse>(
-      this.path(),
-      undefined,
-      restRequestConfig,
-    );
+  async get(restRequestConfig?: RestRequestConfig): Promise<GetUserBusinessHoursResponse> {
+    const r = await this.rc.get<GetUserBusinessHoursResponse>(this.path(), undefined, restRequestConfig);
     return r.data;
   }
 
@@ -48,16 +38,8 @@ class Index {
    * App Permission: EditExtensions
    * User Permission: EditUserAnsweringRules
    */
-  async put(
-    userBusinessHoursUpdateRequest: UserBusinessHoursUpdateRequest,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<UserBusinessHoursUpdateResponse> {
-    const r = await this.rc.put<UserBusinessHoursUpdateResponse>(
-      this.path(),
-      userBusinessHoursUpdateRequest,
-      undefined,
-      restRequestConfig,
-    );
+  async put(userBusinessHoursUpdateRequest: UserBusinessHoursUpdateRequest, restRequestConfig?: RestRequestConfig): Promise<UserBusinessHoursUpdateResponse> {
+    const r = await this.rc.put<UserBusinessHoursUpdateResponse>(this.path(), userBusinessHoursUpdateRequest, undefined, restRequestConfig);
     return r.data;
   }
 }

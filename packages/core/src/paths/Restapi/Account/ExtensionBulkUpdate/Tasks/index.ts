@@ -1,7 +1,7 @@
 import { RestRequestConfig } from '../../../../../Rest';
 import { ExtensionBulkUpdateTaskResource } from '../../../../../definitions';
 import Parent from '..';
-import { RingCentral } from '../../../../..';
+import RingCentral from '../../../../..';
 
 class Index {
   rc: RingCentral;
@@ -31,17 +31,11 @@ class Index {
    * App Permission: EditExtensions
    * User Permission: EditExtensionInfo
    */
-  async get(
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<ExtensionBulkUpdateTaskResource> {
+  async get(restRequestConfig?: RestRequestConfig): Promise<ExtensionBulkUpdateTaskResource> {
     if (this.taskId === null) {
       throw new Error('taskId must be specified.');
     }
-    const r = await this.rc.get<ExtensionBulkUpdateTaskResource>(
-      this.path(),
-      undefined,
-      restRequestConfig,
-    );
+    const r = await this.rc.get<ExtensionBulkUpdateTaskResource>(this.path(), undefined, restRequestConfig);
     return r.data;
   }
 }

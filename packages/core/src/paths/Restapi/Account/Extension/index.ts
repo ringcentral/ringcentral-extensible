@@ -39,16 +39,10 @@ import Mms from './Mms';
 import Sms from './Sms';
 import { RestRequestConfig } from '../../../../Rest';
 import {
-  ListExtensionsParameters,
-  GetExtensionListResponse,
-  ExtensionCreationRequest,
-  ExtensionCreationResponse,
-  GetExtensionInfoResponse,
-  ExtensionUpdateRequest,
-  DeleteExtensionParameters,
+  ListExtensionsParameters, GetExtensionListResponse, ExtensionCreationRequest, ExtensionCreationResponse, GetExtensionInfoResponse, ExtensionUpdateRequest, DeleteExtensionParameters,
 } from '../../../../definitions';
 import Parent from '..';
-import { RingCentral } from '../../../..';
+import RingCentral from '../../../..';
 
 class Index {
   rc: RingCentral;
@@ -78,15 +72,8 @@ class Index {
    * App Permission: ReadAccounts
    * User Permission: ReadExtensions
    */
-  async list(
-    queryParams?: ListExtensionsParameters,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<GetExtensionListResponse> {
-    const r = await this.rc.get<GetExtensionListResponse>(
-      this.path(false),
-      queryParams,
-      restRequestConfig,
-    );
+  async list(queryParams?: ListExtensionsParameters, restRequestConfig?: RestRequestConfig): Promise<GetExtensionListResponse> {
+    const r = await this.rc.get<GetExtensionListResponse>(this.path(false), queryParams, restRequestConfig);
     return r.data;
   }
 
@@ -98,16 +85,8 @@ class Index {
    * App Permission: EditAccounts
    * User Permission: AddRemoveUsers
    */
-  async post(
-    extensionCreationRequest: ExtensionCreationRequest,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<ExtensionCreationResponse> {
-    const r = await this.rc.post<ExtensionCreationResponse>(
-      this.path(false),
-      extensionCreationRequest,
-      undefined,
-      restRequestConfig,
-    );
+  async post(extensionCreationRequest: ExtensionCreationRequest, restRequestConfig?: RestRequestConfig): Promise<ExtensionCreationResponse> {
+    const r = await this.rc.post<ExtensionCreationResponse>(this.path(false), extensionCreationRequest, undefined, restRequestConfig);
     return r.data;
   }
 
@@ -119,17 +98,11 @@ class Index {
    * App Permission: ReadAccounts
    * User Permission: ReadExtensions
    */
-  async get(
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<GetExtensionInfoResponse> {
+  async get(restRequestConfig?: RestRequestConfig): Promise<GetExtensionInfoResponse> {
     if (this.extensionId === null) {
       throw new Error('extensionId must be specified.');
     }
-    const r = await this.rc.get<GetExtensionInfoResponse>(
-      this.path(),
-      undefined,
-      restRequestConfig,
-    );
+    const r = await this.rc.get<GetExtensionInfoResponse>(this.path(), undefined, restRequestConfig);
     return r.data;
   }
 
@@ -141,19 +114,11 @@ class Index {
    * App Permission: EditExtensions
    * User Permission: EditUserInfo OR EditUserCredentials
    */
-  async put(
-    extensionUpdateRequest: ExtensionUpdateRequest,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<GetExtensionInfoResponse> {
+  async put(extensionUpdateRequest: ExtensionUpdateRequest, restRequestConfig?: RestRequestConfig): Promise<GetExtensionInfoResponse> {
     if (this.extensionId === null) {
       throw new Error('extensionId must be specified.');
     }
-    const r = await this.rc.put<GetExtensionInfoResponse>(
-      this.path(),
-      extensionUpdateRequest,
-      undefined,
-      restRequestConfig,
-    );
+    const r = await this.rc.put<GetExtensionInfoResponse>(this.path(), extensionUpdateRequest, undefined, restRequestConfig);
     return r.data;
   }
 
@@ -165,18 +130,11 @@ class Index {
    * App Permission: EditAccounts
    * User Permission: AddRemoveUsers
    */
-  async delete(
-    queryParams?: DeleteExtensionParameters,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<string> {
+  async delete(queryParams?: DeleteExtensionParameters, restRequestConfig?: RestRequestConfig): Promise<string> {
     if (this.extensionId === null) {
       throw new Error('extensionId must be specified.');
     }
-    const r = await this.rc.delete<string>(
-      this.path(),
-      queryParams,
-      restRequestConfig,
-    );
+    const r = await this.rc.delete<string>(this.path(), queryParams, restRequestConfig);
     return r.data;
   }
 
@@ -200,19 +158,19 @@ class Index {
     return new Device(this);
   }
 
-  meeting(meetingId: string | null = null): Meeting {
+  meeting(meetingId: (string | null) = null): Meeting {
     return new Meeting(this, meetingId);
   }
 
-  callLog(callRecordId: string | null = null): CallLog {
+  callLog(callRecordId: (string | null) = null): CallLog {
     return new CallLog(this, callRecordId);
   }
 
-  greeting(greetingId: string | null = null): Greeting {
+  greeting(greetingId: (string | null) = null): Greeting {
     return new Greeting(this, greetingId);
   }
 
-  ringOut(ringoutId: string | null = null): RingOut {
+  ringOut(ringoutId: (string | null) = null): RingOut {
     return new RingOut(this, ringoutId);
   }
 
@@ -256,11 +214,11 @@ class Index {
     return new Conferencing(this);
   }
 
-  messageStore(messageId: string | null = null): MessageStore {
+  messageStore(messageId: (string | null) = null): MessageStore {
     return new MessageStore(this, messageId);
   }
 
-  profileImage(scaleSize: string | null = null): ProfileImage {
+  profileImage(scaleSize: (string | null) = null): ProfileImage {
     return new ProfileImage(this, scaleSize);
   }
 
@@ -280,7 +238,7 @@ class Index {
     return new AssignedRole(this);
   }
 
-  answeringRule(ruleId: string | null = null): AnsweringRule {
+  answeringRule(ruleId: (string | null) = null): AnsweringRule {
     return new AnsweringRule(this, ruleId);
   }
 
@@ -296,7 +254,7 @@ class Index {
     return new UnifiedPresence(this);
   }
 
-  forwardingNumber(forwardingNumberId: string | null = null): ForwardingNumber {
+  forwardingNumber(forwardingNumberId: (string | null) = null): ForwardingNumber {
     return new ForwardingNumber(this, forwardingNumberId);
   }
 
@@ -312,7 +270,7 @@ class Index {
     return new AdministeredSites(this);
   }
 
-  emergencyLocations(locationId: string | null = null): EmergencyLocations {
+  emergencyLocations(locationId: (string | null) = null): EmergencyLocations {
     return new EmergencyLocations(this, locationId);
   }
 

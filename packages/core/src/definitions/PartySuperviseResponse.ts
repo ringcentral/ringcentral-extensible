@@ -12,7 +12,7 @@ class PartySuperviseResponse {
   /**
    * Direction of a call
    */
-  direction?: 'Outbound' | 'Inbound';
+  direction?: ('Outbound' | 'Inbound');
 
   /**
    * Internal identifier of a party that monitors a call

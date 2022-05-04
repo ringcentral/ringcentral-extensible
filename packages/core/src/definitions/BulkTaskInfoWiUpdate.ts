@@ -1,6 +1,6 @@
 /**
  * Information on the task for multiple wireless points update
- */
+*/
 class BulkTaskInfoWiUpdate {
   /**
    * Internal identifier of a task for multiple switches creation
@@ -10,7 +10,7 @@ class BulkTaskInfoWiUpdate {
   /**
    * Status of a task
    */
-  status?: 'Accepted' | 'Failed';
+  status?: ('Accepted' | 'Failed');
 
   /**
    * Task creation time

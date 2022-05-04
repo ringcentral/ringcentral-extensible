@@ -2,7 +2,7 @@ import { GlipAPSInfo, GlipUnreadMessageCountInfo } from './index';
 
 /**
  * Apple notification data
- */
+*/
 class GlipAPNSInfo {
   /**
    */

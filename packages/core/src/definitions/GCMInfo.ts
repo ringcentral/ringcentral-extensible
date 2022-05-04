@@ -2,12 +2,12 @@ import { GCMData } from './index';
 
 /**
  * GCM data
- */
+*/
 class GCMInfo {
   /**
    * Notification priority, if the value is 'high' then notification is turned on even if the application is in background
    */
-  priority?: 'high' | 'normal';
+  priority?: ('high' | 'normal');
 
   /**
    * Notification lifetime value in seconds, the default value is 30 seconds

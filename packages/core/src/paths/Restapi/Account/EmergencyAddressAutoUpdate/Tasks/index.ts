@@ -1,7 +1,7 @@
 import { RestRequestConfig } from '../../../../../Rest';
 import { AutomaticLocationUpdatesTaskInfo } from '../../../../../definitions';
 import Parent from '..';
-import { RingCentral } from '../../../../..';
+import RingCentral from '../../../../..';
 
 class Index {
   rc: RingCentral;
@@ -31,17 +31,11 @@ class Index {
    * App Permission: EditAccounts
    * User Permission: ConfigureEmergencyMaps
    */
-  async get(
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<AutomaticLocationUpdatesTaskInfo> {
+  async get(restRequestConfig?: RestRequestConfig): Promise<AutomaticLocationUpdatesTaskInfo> {
     if (this.taskId === null) {
       throw new Error('taskId must be specified.');
     }
-    const r = await this.rc.get<AutomaticLocationUpdatesTaskInfo>(
-      this.path(),
-      undefined,
-      restRequestConfig,
-    );
+    const r = await this.rc.get<AutomaticLocationUpdatesTaskInfo>(this.path(), undefined, restRequestConfig);
     return r.data;
   }
 }

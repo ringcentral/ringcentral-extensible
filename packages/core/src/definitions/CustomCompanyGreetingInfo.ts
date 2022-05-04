@@ -1,7 +1,4 @@
-import {
-  CustomGreetingAnsweringRuleInfo,
-  CustomCompanyGreetingLanguageInfo,
-} from './index';
+import { CustomGreetingAnsweringRuleInfo, CustomCompanyGreetingLanguageInfo } from './index';
 
 class CustomCompanyGreetingInfo {
   /**
@@ -17,12 +14,12 @@ class CustomCompanyGreetingInfo {
   /**
    * Type of a company greeting
    */
-  type?: 'Company' | 'StartRecording' | 'StopRecording' | 'AutomaticRecording';
+  type?: ('Company' | 'StartRecording' | 'StopRecording' | 'AutomaticRecording');
 
   /**
    * Content media type
    */
-  contentType?: 'audio/mpeg' | 'audio/wav';
+  contentType?: ('audio/mpeg' | 'audio/wav');
 
   /**
    * Link to a greeting content (audio file)

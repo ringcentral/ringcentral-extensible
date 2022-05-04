@@ -1,11 +1,8 @@
 import Utils from '../../../../Utils';
 import { RestRequestConfig } from '../../../../Rest';
-import {
-  CreateCompanyGreetingRequest,
-  CustomCompanyGreetingInfo,
-} from '../../../../definitions';
+import { CreateCompanyGreetingRequest, CustomCompanyGreetingInfo } from '../../../../definitions';
 import Parent from '..';
-import { RingCentral } from '../../../..';
+import RingCentral from '../../../..';
 
 class Index {
   rc: RingCentral;
@@ -29,17 +26,9 @@ class Index {
    * App Permission: EditAccounts
    * User Permission: ReadUserInfo
    */
-  async post(
-    createCompanyGreetingRequest: CreateCompanyGreetingRequest,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<CustomCompanyGreetingInfo> {
+  async post(createCompanyGreetingRequest: CreateCompanyGreetingRequest, restRequestConfig?: RestRequestConfig): Promise<CustomCompanyGreetingInfo> {
     const formData = Utils.getFormData(createCompanyGreetingRequest);
-    const r = await this.rc.post<CustomCompanyGreetingInfo>(
-      this.path(),
-      formData,
-      undefined,
-      restRequestConfig,
-    );
+    const r = await this.rc.post<CustomCompanyGreetingInfo>(this.path(), formData, undefined, restRequestConfig);
     return r.data;
   }
 }

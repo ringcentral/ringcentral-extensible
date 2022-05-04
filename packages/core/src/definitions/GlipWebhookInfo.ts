@@ -34,6 +34,6 @@ class GlipWebhookInfo {
   /**
    * Current status of a webhook
    */
-  status?: 'Active' | 'Suspended' | 'Deleted';
+  status?: ('Active' | 'Suspended' | 'Deleted');
 }
 export default GlipWebhookInfo;

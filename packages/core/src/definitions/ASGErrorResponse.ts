@@ -1,6 +1,6 @@
 /**
  * Error response
- */
+*/
 class ASGErrorResponse {
   /**
    * Error code

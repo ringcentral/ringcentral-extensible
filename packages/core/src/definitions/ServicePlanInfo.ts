@@ -1,6 +1,6 @@
 /**
  * Information on account service plan
- */
+*/
 class ServicePlanInfo {
   /**
    * Internal identifier of a service plan
@@ -19,6 +19,6 @@ class ServicePlanInfo {
 
   /**
    */
-  freemiumProductType?: 'Freyja' | 'Phoenix';
+  freemiumProductType?: ('Freyja' | 'Phoenix');
 }
 export default ServicePlanInfo;

@@ -1,7 +1,7 @@
 import { RestRequestConfig } from '../../../../../../Rest';
 import { ReadMessageContentParameters } from '../../../../../../definitions';
 import Parent from '..';
-import { RingCentral } from '../../../../../..';
+import RingCentral from '../../../../../..';
 
 class Index {
   rc: RingCentral;
@@ -31,17 +31,11 @@ class Index {
    * App Permission: ReadMessages
    * User Permission: ReadMessageContent
    */
-  async get(
-    queryParams?: ReadMessageContentParameters,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<Buffer> {
+  async get(queryParams?: ReadMessageContentParameters, restRequestConfig?: RestRequestConfig): Promise<Buffer> {
     if (this.attachmentId === null) {
       throw new Error('attachmentId must be specified.');
     }
-    const r = await this.rc.get<Buffer>(this.path(), queryParams, {
-      ...restRequestConfig,
-      responseType: 'arraybuffer',
-    });
+    const r = await this.rc.get<Buffer>(this.path(), queryParams, { ...restRequestConfig, responseType: 'arraybuffer' });
     return r.data;
   }
 }

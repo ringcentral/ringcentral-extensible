@@ -1,6 +1,6 @@
 /**
  * Query parameters for operation searchViaGet2
- */
+*/
 class SearchViaGet2Parameters {
   /**
    * only support 'userName' or 'email' filter expressions for now

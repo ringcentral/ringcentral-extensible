@@ -1,7 +1,7 @@
 import { RestRequestConfig } from '../../../../../../Rest';
 import { AssignMultipleDevicesAutomaticLocationUpdates } from '../../../../../../definitions';
 import Parent from '..';
-import { RingCentral } from '../../../../../..';
+import RingCentral from '../../../../../..';
 
 class Index {
   rc: RingCentral;
@@ -25,16 +25,8 @@ class Index {
    * App Permission: EditAccounts
    * User Permission: ConfigureEmergencyMaps
    */
-  async post(
-    assignMultipleDevicesAutomaticLocationUpdates: AssignMultipleDevicesAutomaticLocationUpdates,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<string> {
-    const r = await this.rc.post<string>(
-      this.path(),
-      assignMultipleDevicesAutomaticLocationUpdates,
-      undefined,
-      restRequestConfig,
-    );
+  async post(assignMultipleDevicesAutomaticLocationUpdates: AssignMultipleDevicesAutomaticLocationUpdates, restRequestConfig?: RestRequestConfig): Promise<string> {
+    const r = await this.rc.post<string>(this.path(), assignMultipleDevicesAutomaticLocationUpdates, undefined, restRequestConfig);
     return r.data;
   }
 }

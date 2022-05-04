@@ -1,8 +1,5 @@
 import {
-  MeetingLinks,
-  MeetingScheduleResource,
-  HostInfoRequest,
-  RecurrenceInfo,
+  MeetingLinks, MeetingScheduleResource, HostInfoRequest, RecurrenceInfo,
 } from './index';
 
 class MeetingResponseResource {
@@ -29,7 +26,7 @@ class MeetingResponseResource {
 
   /**
    */
-  meetingType?: 'Instant' | 'Scheduled' | 'ScheduledRecurring' | 'Recurring';
+  meetingType?: ('Instant' | 'Scheduled' | 'ScheduledRecurring' | 'Recurring');
 
   /**
    * Meeting password
@@ -84,7 +81,7 @@ class MeetingResponseResource {
    * Automatic record type
    * Default: none
    */
-  autoRecordType?: 'local' | 'cloud' | 'none';
+  autoRecordType?: ('local' | 'cloud' | 'none');
 
   /**
    * If true, then only signed-in users can join this meeting

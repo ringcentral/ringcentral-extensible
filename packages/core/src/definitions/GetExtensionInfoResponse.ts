@@ -1,17 +1,5 @@
 import {
-  GetExtensionAccountInfo,
-  ContactInfo,
-  CustomFieldInfo,
-  DepartmentInfo,
-  ExtensionPermissions,
-  ProfileImageInfo,
-  ReferenceInfo,
-  Roles,
-  RegionalSettings,
-  ExtensionServiceFeatureInfo,
-  ExtensionStatusInfo,
-  CallQueueExtensionInfo,
-  AutomaticLocationUpdatesSiteInfo,
+  GetExtensionAccountInfo, ContactInfo, CustomFieldInfo, DepartmentInfo, ExtensionPermissions, ProfileImageInfo, ReferenceInfo, Roles, RegionalSettings, ExtensionServiceFeatureInfo, ExtensionStatusInfo, CallQueueExtensionInfo, AutomaticLocationUpdatesSiteInfo,
 } from './index';
 
 class GetExtensionInfoResponse {
@@ -92,12 +80,12 @@ class GetExtensionInfoResponse {
    * Specifies extension configuration wizard state (web service setup).
    * Default: NotStarted
    */
-  setupWizardState?: 'NotStarted' | 'Incomplete' | 'Completed';
+  setupWizardState?: ('NotStarted' | 'Incomplete' | 'Completed');
 
   /**
    * Extension current state. If 'Unassigned' is specified, then extensions without ‘extensionNumber’ are returned. If not specified, then all extensions are returned
    */
-  status?: 'Enabled' | 'Disabled' | 'Frozen' | 'NotActivated' | 'Unassigned';
+  status?: ('Enabled' | 'Disabled' | 'Frozen' | 'NotActivated' | 'Unassigned');
 
   /**
    */
@@ -106,26 +94,7 @@ class GetExtensionInfoResponse {
   /**
    * Extension type. Please note that legacy 'Department' extension type corresponds to 'Call Queue' extensions in modern RingCentral product terminology
    */
-  type?:
-  | 'User'
-  | 'FaxUser'
-  | 'VirtualUser'
-  | 'DigitalUser'
-  | 'Department'
-  | 'Announcement'
-  | 'Voicemail'
-  | 'SharedLinesGroup'
-  | 'PagingOnly'
-  | 'IvrMenu'
-  | 'ApplicationExtension'
-  | 'ParkLocation'
-  | 'Bot'
-  | 'Room'
-  | 'Limited'
-  | 'Site'
-  | 'ProxyAdmin'
-  | 'DelegatedLinesGroup'
-  | 'GroupCallPickup';
+  type?: ('User' | 'FaxUser' | 'VirtualUser' | 'DigitalUser' | 'Department' | 'Announcement' | 'Voicemail' | 'SharedLinesGroup' | 'PagingOnly' | 'IvrMenu' | 'ApplicationExtension' | 'ParkLocation' | 'Bot' | 'Room' | 'Limited' | 'Site' | 'ProxyAdmin' | 'DelegatedLinesGroup' | 'GroupCallPickup');
 
   /**
    */
