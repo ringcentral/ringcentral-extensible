@@ -1,16 +1,15 @@
-import { RestRequestConfig } from '../../../../Rest';
-import { LanguageList, LanguageInfo } from '../../../../definitions';
-import Parent from '..';
-import RingCentral from '../../../..';
+import LanguageInfo from '../../../../definitions/LanguageInfo';
+import LanguageList from '../../../../definitions/LanguageList';
+import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
 
 class Index {
-  rc: RingCentral;
+  rc: RingCentralInterface;
 
-  parent: Parent;
+  parent: ParentInterface;
 
   languageId: string | null;
 
-  constructor(parent: Parent, languageId: string | null = null) {
+  constructor(parent: ParentInterface, languageId: string | null = null) {
     this.parent = parent;
     this.rc = parent.rc;
     this.languageId = languageId;

@@ -1932,7 +1932,7 @@ await rc.revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - `result` is of type [GlipWebhookList](./src/definitions/GlipWebhookList.ts)
 
-[Try it out](https://developer.ringcentral.com/api-reference#Glip-Webhooks-listGlipWebhooks) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Incoming-Webhooks-listGlipWebhooks) in API Explorer.
 
 ## readGlipWebhook
 Get Webhook
@@ -1955,7 +1955,7 @@ await rc.revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - `result` is of type [GlipWebhookList](./src/definitions/GlipWebhookList.ts)
 
-[Try it out](https://developer.ringcentral.com/api-reference#Glip-Webhooks-readGlipWebhook) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Incoming-Webhooks-readGlipWebhook) in API Explorer.
 
 ## deleteGlipWebhook
 Delete Webhook
@@ -1978,7 +1978,7 @@ await rc.revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - `result` is an empty string
 
-[Try it out](https://developer.ringcentral.com/api-reference#Glip-Webhooks-deleteGlipWebhook) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Incoming-Webhooks-deleteGlipWebhook) in API Explorer.
 
 ## listSubscriptions
 Get Subscription List
@@ -4096,7 +4096,7 @@ await rc.revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - `result` is of type [GlipWebhookInfo](./src/definitions/GlipWebhookInfo.ts)
 
-[Try it out](https://developer.ringcentral.com/api-reference#Glip-Webhooks-createGlipGroupWebhook) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Incoming-Webhooks-createGlipGroupWebhook) in API Explorer.
 
 ## publishNote
 Publish Note
@@ -4260,7 +4260,7 @@ await rc.revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - `result` is an empty string
 
-[Try it out](https://developer.ringcentral.com/api-reference#Glip-Webhooks-activateGlipWebhook) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Incoming-Webhooks-activateGlipWebhook) in API Explorer.
 
 ## suspendGlipWebhook
 Suspend Webhook
@@ -4283,7 +4283,7 @@ await rc.revoke();
 - Parameter `apiVersion` is optional with default value `v1.0`
 - `result` is an empty string
 
-[Try it out](https://developer.ringcentral.com/api-reference#Glip-Webhooks-suspendGlipWebhook) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Incoming-Webhooks-suspendGlipWebhook) in API Explorer.
 
 ## parsePhoneNumber
 Parse Phone Number

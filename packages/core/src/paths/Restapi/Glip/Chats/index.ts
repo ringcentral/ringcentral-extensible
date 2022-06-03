@@ -6,19 +6,19 @@ import Tasks from './Tasks';
 import Notes from './Notes';
 import Posts from './Posts';
 import Read from './Read';
-import { RestRequestConfig } from '../../../../Rest';
-import { ListGlipChatsParameters, GlipChatsList, GlipChatInfo } from '../../../../definitions';
-import Parent from '..';
-import RingCentral from '../../../..';
+import GlipChatInfo from '../../../../definitions/GlipChatInfo';
+import GlipChatsList from '../../../../definitions/GlipChatsList';
+import ListGlipChatsParameters from '../../../../definitions/ListGlipChatsParameters';
+import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
 
 class Index {
-  rc: RingCentral;
+  rc: RingCentralInterface;
 
-  parent: Parent;
+  parent: ParentInterface;
 
   chatId: string | null;
 
-  constructor(parent: Parent, chatId: string | null = null) {
+  constructor(parent: ParentInterface, chatId: string | null = null) {
     this.parent = parent;
     this.rc = parent.rc;
     this.chatId = chatId;

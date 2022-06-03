@@ -1,16 +1,15 @@
-import { RestRequestConfig } from '../../../../../Rest';
-import { ListDomesticCountriesParameters, GetCountryListResponse } from '../../../../../definitions';
-import Parent from '..';
-import RingCentral from '../../../../..';
+import GetCountryListResponse from '../../../../../definitions/GetCountryListResponse';
+import ListDomesticCountriesParameters from '../../../../../definitions/ListDomesticCountriesParameters';
+import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
-  rc: RingCentral;
+  rc: RingCentralInterface;
 
-  parent: Parent;
+  parent: ParentInterface;
 
   contractedCountryId: string | null;
 
-  constructor(parent: Parent, contractedCountryId: string | null = null) {
+  constructor(parent: ParentInterface, contractedCountryId: string | null = null) {
     this.parent = parent;
     this.rc = parent.rc;
     this.contractedCountryId = contractedCountryId;

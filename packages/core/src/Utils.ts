@@ -1,7 +1,7 @@
 import _FormData from 'form-data';
 
-import { Attachment } from './definitions';
-import { RestResponse } from './Rest';
+import Attachment from './definitions/Attachment';
+import { RestResponse } from './types';
 
 class FormData extends _FormData {
   readableParts: string[] = [];
@@ -37,8 +37,7 @@ class FormData extends _FormData {
 
 class Utils {
   static formatTraffic(r: RestResponse): string {
-    return `HTTP ${r.status} ${r.statusText}${
-      r.data.message ? ` - ${r.data.message}` : ''
+    return `HTTP ${r.status} ${r.statusText}${r.data.message ? ` - ${r.data.message}` : ''
     }
 
     Response:

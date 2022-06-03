@@ -16,7 +16,7 @@
     "@types/jest": "^28.1.0",
     "dotenv-override-true": "^6.2.2",
     "jest": "^28.1.0",
-    "ts-jest": "^28.0.3",
+    "ts-jest": "^28.0.4",
     "ts-node": "^10.8.0",
     "wait-for-async": "^0.6.0",
     "winston": "^3.7.2"

@@ -1,16 +1,16 @@
-import { RestRequestConfig } from '../../../../Rest';
-import { ListPermissionCategoriesParameters, PermissionCategoryCollectionResource, PermissionCategoryResource } from '../../../../definitions';
-import Parent from '..';
-import RingCentral from '../../../..';
+import PermissionCategoryResource from '../../../../definitions/PermissionCategoryResource';
+import PermissionCategoryCollectionResource from '../../../../definitions/PermissionCategoryCollectionResource';
+import ListPermissionCategoriesParameters from '../../../../definitions/ListPermissionCategoriesParameters';
+import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
 
 class Index {
-  rc: RingCentral;
+  rc: RingCentralInterface;
 
-  parent: Parent;
+  parent: ParentInterface;
 
   permissionCategoryId: string | null;
 
-  constructor(parent: Parent, permissionCategoryId: string | null = null) {
+  constructor(parent: ParentInterface, permissionCategoryId: string | null = null) {
     this.parent = parent;
     this.rc = parent.rc;
     this.permissionCategoryId = permissionCategoryId;

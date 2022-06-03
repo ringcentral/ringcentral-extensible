@@ -1,18 +1,18 @@
-import { RestRequestConfig } from '../../../../Rest';
-import {
-  ListCompanyAnsweringRulesParameters, CompanyAnsweringRuleList, CompanyAnsweringRuleRequest, CompanyAnsweringRuleInfo, CompanyAnsweringRuleUpdate,
-} from '../../../../definitions';
-import Parent from '..';
-import RingCentral from '../../../..';
+import CompanyAnsweringRuleUpdate from '../../../../definitions/CompanyAnsweringRuleUpdate';
+import CompanyAnsweringRuleInfo from '../../../../definitions/CompanyAnsweringRuleInfo';
+import CompanyAnsweringRuleRequest from '../../../../definitions/CompanyAnsweringRuleRequest';
+import CompanyAnsweringRuleList from '../../../../definitions/CompanyAnsweringRuleList';
+import ListCompanyAnsweringRulesParameters from '../../../../definitions/ListCompanyAnsweringRulesParameters';
+import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
 
 class Index {
-  rc: RingCentral;
+  rc: RingCentralInterface;
 
-  parent: Parent;
+  parent: ParentInterface;
 
   ruleId: string | null;
 
-  constructor(parent: Parent, ruleId: string | null = null) {
+  constructor(parent: ParentInterface, ruleId: string | null = null) {
     this.parent = parent;
     this.rc = parent.rc;
     this.ruleId = ruleId;

@@ -1,14 +1,12 @@
-import { RestRequestConfig } from '../../../../../Rest';
-import { EditPagingGroupRequest } from '../../../../../definitions';
-import Parent from '..';
-import RingCentral from '../../../../..';
+import EditPagingGroupRequest from '../../../../../definitions/EditPagingGroupRequest';
+import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
-  rc: RingCentral;
+  rc: RingCentralInterface;
 
-  parent: Parent;
+  parent: ParentInterface;
 
-  constructor(parent: Parent) {
+  constructor(parent: ParentInterface) {
     this.parent = parent;
     this.rc = parent.rc;
   }

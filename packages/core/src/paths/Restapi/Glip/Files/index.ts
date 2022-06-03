@@ -1,15 +1,15 @@
 import Utils from '../../../../Utils';
-import { RestRequestConfig } from '../../../../Rest';
-import { CreateGlipFileRequest, CreateGlipFileParameters, PostGlipFile } from '../../../../definitions';
-import Parent from '..';
-import RingCentral from '../../../..';
+import PostGlipFile from '../../../../definitions/PostGlipFile';
+import CreateGlipFileParameters from '../../../../definitions/CreateGlipFileParameters';
+import CreateGlipFileRequest from '../../../../definitions/CreateGlipFileRequest';
+import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
 
 class Index {
-  rc: RingCentral;
+  rc: RingCentralInterface;
 
-  parent: Parent;
+  parent: ParentInterface;
 
-  constructor(parent: Parent) {
+  constructor(parent: ParentInterface) {
     this.parent = parent;
     this.rc = parent.rc;
   }

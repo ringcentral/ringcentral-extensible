@@ -1,13 +1,13 @@
 import ServiceProviderConfig from './ServiceProviderConfig';
 import Users from './Users';
-import RingCentral from '../..';
+import { RingCentralInterface } from '../../types';
 
 class Index {
-  rc: RingCentral;
+  rc: RingCentralInterface;
 
   version: string | null;
 
-  constructor(rc: RingCentral, version: string | null = 'v2') {
+  constructor(rc: RingCentralInterface, version: string | null = 'v2') {
     this.rc = rc;
     this.version = version;
   }

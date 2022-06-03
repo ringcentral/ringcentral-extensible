@@ -1,17 +1,16 @@
 import Utils from '../../../../../Utils';
-import { RestRequestConfig } from '../../../../../Rest';
-import { CreateUserProfileImageRequest, UpdateUserProfileImageRequest } from '../../../../../definitions';
-import Parent from '..';
-import RingCentral from '../../../../..';
+import UpdateUserProfileImageRequest from '../../../../../definitions/UpdateUserProfileImageRequest';
+import CreateUserProfileImageRequest from '../../../../../definitions/CreateUserProfileImageRequest';
+import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
-  rc: RingCentral;
+  rc: RingCentralInterface;
 
-  parent: Parent;
+  parent: ParentInterface;
 
   scaleSize: string | null;
 
-  constructor(parent: Parent, scaleSize: string | null = null) {
+  constructor(parent: ParentInterface, scaleSize: string | null = null) {
     this.parent = parent;
     this.rc = parent.rc;
     this.scaleSize = scaleSize;

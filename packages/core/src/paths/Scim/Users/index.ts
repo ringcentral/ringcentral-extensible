@@ -1,19 +1,20 @@
 import DotSearch from './DotSearch';
-import { RestRequestConfig } from '../../../Rest';
-import {
-  SearchViaGet2Parameters, UserSearchResponse, CreateUser, UserResponse, User, UserPatch,
-} from '../../../definitions';
-import Parent from '..';
-import RingCentral from '../../..';
+import UserPatch from '../../../definitions/UserPatch';
+import User from '../../../definitions/User';
+import UserResponse from '../../../definitions/UserResponse';
+import CreateUser from '../../../definitions/CreateUser';
+import UserSearchResponse from '../../../definitions/UserSearchResponse';
+import SearchViaGet2Parameters from '../../../definitions/SearchViaGet2Parameters';
+import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../types';
 
 class Index {
-  rc: RingCentral;
+  rc: RingCentralInterface;
 
-  parent: Parent;
+  parent: ParentInterface;
 
   id: string | null;
 
-  constructor(parent: Parent, id: string | null = null) {
+  constructor(parent: ParentInterface, id: string | null = null) {
     this.parent = parent;
     this.rc = parent.rc;
     this.id = id;

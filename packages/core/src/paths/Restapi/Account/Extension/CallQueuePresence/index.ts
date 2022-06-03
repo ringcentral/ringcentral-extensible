@@ -1,14 +1,14 @@
-import { RestRequestConfig } from '../../../../../Rest';
-import { ReadExtensionCallQueuePresenceParameters, ExtensionCallQueuePresenceList, ExtensionCallQueueUpdatePresenceList } from '../../../../../definitions';
-import Parent from '..';
-import RingCentral from '../../../../..';
+import ExtensionCallQueueUpdatePresenceList from '../../../../../definitions/ExtensionCallQueueUpdatePresenceList';
+import ExtensionCallQueuePresenceList from '../../../../../definitions/ExtensionCallQueuePresenceList';
+import ReadExtensionCallQueuePresenceParameters from '../../../../../definitions/ReadExtensionCallQueuePresenceParameters';
+import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
-  rc: RingCentral;
+  rc: RingCentralInterface;
 
-  parent: Parent;
+  parent: ParentInterface;
 
-  constructor(parent: Parent) {
+  constructor(parent: ParentInterface) {
     this.parent = parent;
     this.rc = parent.rc;
   }

@@ -1,18 +1,17 @@
-import { RestRequestConfig } from '../../../../Rest';
-import {
-  ListGlipConversationsParameters, GlipConversationsList, CreateGlipConversationRequest, GlipConversationInfo,
-} from '../../../../definitions';
-import Parent from '..';
-import RingCentral from '../../../..';
+import GlipConversationInfo from '../../../../definitions/GlipConversationInfo';
+import CreateGlipConversationRequest from '../../../../definitions/CreateGlipConversationRequest';
+import GlipConversationsList from '../../../../definitions/GlipConversationsList';
+import ListGlipConversationsParameters from '../../../../definitions/ListGlipConversationsParameters';
+import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
 
 class Index {
-  rc: RingCentral;
+  rc: RingCentralInterface;
 
-  parent: Parent;
+  parent: ParentInterface;
 
   chatId: string | null;
 
-  constructor(parent: Parent, chatId: string | null = null) {
+  constructor(parent: ParentInterface, chatId: string | null = null) {
     this.parent = parent;
     this.rc = parent.rc;
     this.chatId = chatId;

@@ -1,16 +1,16 @@
-import { RestRequestConfig } from '../../../../Rest';
-import { ListStandardGreetingsParameters, DictionaryGreetingList, DictionaryGreetingInfo } from '../../../../definitions';
-import Parent from '..';
-import RingCentral from '../../../..';
+import DictionaryGreetingInfo from '../../../../definitions/DictionaryGreetingInfo';
+import DictionaryGreetingList from '../../../../definitions/DictionaryGreetingList';
+import ListStandardGreetingsParameters from '../../../../definitions/ListStandardGreetingsParameters';
+import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
 
 class Index {
-  rc: RingCentral;
+  rc: RingCentralInterface;
 
-  parent: Parent;
+  parent: ParentInterface;
 
   greetingId: string | null;
 
-  constructor(parent: Parent, greetingId: string | null = null) {
+  constructor(parent: ParentInterface, greetingId: string | null = null) {
     this.parent = parent;
     this.rc = parent.rc;
     this.greetingId = greetingId;

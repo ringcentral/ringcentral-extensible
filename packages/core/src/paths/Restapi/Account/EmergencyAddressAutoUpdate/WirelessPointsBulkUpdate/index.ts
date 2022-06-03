@@ -1,14 +1,13 @@
-import { RestRequestConfig } from '../../../../../Rest';
-import { UpdateMultipleWirelessPointsRequest, UpdateMultipleWirelessPointsResponse } from '../../../../../definitions';
-import Parent from '..';
-import RingCentral from '../../../../..';
+import UpdateMultipleWirelessPointsResponse from '../../../../../definitions/UpdateMultipleWirelessPointsResponse';
+import UpdateMultipleWirelessPointsRequest from '../../../../../definitions/UpdateMultipleWirelessPointsRequest';
+import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
-  rc: RingCentral;
+  rc: RingCentralInterface;
 
-  parent: Parent;
+  parent: ParentInterface;
 
-  constructor(parent: Parent) {
+  constructor(parent: ParentInterface) {
     this.parent = parent;
     this.rc = parent.rc;
   }

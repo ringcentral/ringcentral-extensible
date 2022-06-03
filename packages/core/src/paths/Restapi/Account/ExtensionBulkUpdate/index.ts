@@ -1,15 +1,14 @@
 import Tasks from './Tasks';
-import { RestRequestConfig } from '../../../../Rest';
-import { ExtensionBulkUpdateRequest, ExtensionBulkUpdateTaskResource } from '../../../../definitions';
-import Parent from '..';
-import RingCentral from '../../../..';
+import ExtensionBulkUpdateTaskResource from '../../../../definitions/ExtensionBulkUpdateTaskResource';
+import ExtensionBulkUpdateRequest from '../../../../definitions/ExtensionBulkUpdateRequest';
+import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
 
 class Index {
-  rc: RingCentral;
+  rc: RingCentralInterface;
 
-  parent: Parent;
+  parent: ParentInterface;
 
-  constructor(parent: Parent) {
+  constructor(parent: ParentInterface) {
     this.parent = parent;
     this.rc = parent.rc;
   }

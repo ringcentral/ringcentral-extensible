@@ -1,15 +1,15 @@
-import Rest, {
-  RestMethod,
-  RestResponse,
-  RestOptions,
-  RestRequestConfig,
-} from './Rest';
-import { GetTokenRequest, TokenInfo } from './definitions';
+import Rest from './Rest';
+import GetTokenRequest from './definitions/GetTokenRequest';
+import TokenInfo from './definitions/TokenInfo';
 import Restapi from './paths/Restapi';
 import Scim from './paths/Scim';
 import SdkExtension from './SdkExtension';
 import Analytics from './paths/Analytics';
 import RestException from './RestException';
+import {
+  RestRequestConfig, RestResponse, RingCentralInterface, RestMethod,
+  RestOptions,
+} from './types';
 
 type PasswordFlowOptions = {
   username: string;
@@ -30,8 +30,8 @@ interface Logger {
   error: Function;
 }
 
-class RingCentral {
-  static config: { logger: Logger } = {
+class RingCentral implements RingCentralInterface {
+  static config: { logger : Logger } = {
     logger: {
       debug: () => { },
       log: () => { },

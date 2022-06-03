@@ -1,17 +1,17 @@
 /* eslint-disable no-console */
 import RingCentral from '@rc-ex/core';
 import {
+  RestMethod,
   RestRequestConfig,
   RestResponse,
-  RestMethod,
-} from '@rc-ex/core/lib/Rest';
+} from '@rc-ex/core/lib/types';
 import SdkExtension from '@rc-ex/core/lib/SdkExtension';
 import WS, { OPEN, CONNECTING, MessageEvent } from 'isomorphic-ws';
 import hyperid from 'hyperid';
 import { EventEmitter } from 'events';
 import waitFor from 'wait-for-async';
 import RestException from '@rc-ex/core/lib/RestException';
-import { SubscriptionInfo } from '@rc-ex/core/lib/definitions';
+import SubscriptionInfo from '@rc-ex/core/lib/definitions/SubscriptionInfo';
 import debounce from 'lodash/debounce';
 
 import { request } from './rest';
@@ -21,9 +21,10 @@ import {
   WebSocketOptions,
   WsgEvent,
   Wsc,
+  WebSocketExtensionInterface,
 } from './types';
 import Subscription from './subscription';
-import { ConnectionException } from './exceptions';
+import ConnectionException from './exceptions/ConnectionException';
 import Utils from './utils';
 
 const uuid = hyperid();
@@ -376,7 +377,7 @@ class WebSocketExtension extends SdkExtension {
     callback: (event: {}) => void,
     cache: SubscriptionInfo | undefined | null = undefined,
   ) {
-    const subscription = new Subscription(this, eventFilters, callback);
+    const subscription = new Subscription(this as WebSocketExtensionInterface, eventFilters, callback);
     if (cache === undefined || cache === null) {
       await subscription.subscribe();
     } else {

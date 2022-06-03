@@ -1,16 +1,14 @@
-import { RestRequestConfig } from '../../../../../Rest';
-import { AutomaticLocationUpdatesTaskInfo } from '../../../../../definitions';
-import Parent from '..';
-import RingCentral from '../../../../..';
+import AutomaticLocationUpdatesTaskInfo from '../../../../../definitions/AutomaticLocationUpdatesTaskInfo';
+import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
-  rc: RingCentral;
+  rc: RingCentralInterface;
 
-  parent: Parent;
+  parent: ParentInterface;
 
   taskId: string | null;
 
-  constructor(parent: Parent, taskId: string | null = null) {
+  constructor(parent: ParentInterface, taskId: string | null = null) {
     this.parent = parent;
     this.rc = parent.rc;
     this.taskId = taskId;

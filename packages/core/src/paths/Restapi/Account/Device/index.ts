@@ -1,19 +1,18 @@
 import SipInfo from './SipInfo';
-import { RestRequestConfig } from '../../../../Rest';
-import {
-  ReadDeviceParameters, GetDeviceInfoResponse, AccountDeviceUpdate, UpdateDeviceParameters,
-} from '../../../../definitions';
-import Parent from '..';
-import RingCentral from '../../../..';
+import UpdateDeviceParameters from '../../../../definitions/UpdateDeviceParameters';
+import AccountDeviceUpdate from '../../../../definitions/AccountDeviceUpdate';
+import GetDeviceInfoResponse from '../../../../definitions/GetDeviceInfoResponse';
+import ReadDeviceParameters from '../../../../definitions/ReadDeviceParameters';
+import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
 
 class Index {
-  rc: RingCentral;
+  rc: RingCentralInterface;
 
-  parent: Parent;
+  parent: ParentInterface;
 
   deviceId: string | null;
 
-  constructor(parent: Parent, deviceId: string | null = null) {
+  constructor(parent: ParentInterface, deviceId: string | null = null) {
     this.parent = parent;
     this.rc = parent.rc;
     this.deviceId = deviceId;

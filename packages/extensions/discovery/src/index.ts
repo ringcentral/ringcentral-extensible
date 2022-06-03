@@ -4,7 +4,7 @@ import RestException from '@rc-ex/core/lib/RestException';
 import axios from 'axios';
 import URI from 'urijs';
 import waitFor from 'wait-for-async';
-import { RestResponse } from '@rc-ex/core/lib/Rest';
+import { RestResponse } from '@rc-ex/core/lib/types';
 
 export type RetrySettings = {
   retryCount: number;

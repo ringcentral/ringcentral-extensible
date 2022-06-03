@@ -1,3 +1,7 @@
+import RingCentral from '@rc-ex/core';
+import { RestMethod, RestRequestConfig, RestResponse } from '@rc-ex/core/lib/types';
+import WS from 'isomorphic-ws';
+
 export type WsToken = {
   uri: string;
   ws_access_token: string;
@@ -56,3 +60,21 @@ export type ConnectionDetails = {
   recoveryState?: 'Successful' | 'Failed';
   recoveryErrorCode?: string;
 };
+
+export interface WebSocketExtensionInterface {
+  options: WebSocketOptions;
+  subscriptions: SubscriptionInterface[];
+  ws: WS;
+  wsToken?: WsToken;
+  rc: RingCentral;
+  request<T>(
+    method: RestMethod,
+    endpoint: string,
+    content?: {},
+    queryParams?: {},
+    config?: RestRequestConfig,
+  ): Promise<RestResponse<T>>;
+}
+
+export interface SubscriptionInterface {
+}

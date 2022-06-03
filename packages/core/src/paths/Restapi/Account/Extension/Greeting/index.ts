@@ -1,17 +1,17 @@
 import Utils from '../../../../../Utils';
-import { RestRequestConfig } from '../../../../../Rest';
-import { CreateCustomUserGreetingRequest, CreateCustomUserGreetingParameters, CustomUserGreetingInfo } from '../../../../../definitions';
-import Parent from '..';
-import RingCentral from '../../../../..';
+import CustomUserGreetingInfo from '../../../../../definitions/CustomUserGreetingInfo';
+import CreateCustomUserGreetingParameters from '../../../../../definitions/CreateCustomUserGreetingParameters';
+import CreateCustomUserGreetingRequest from '../../../../../definitions/CreateCustomUserGreetingRequest';
+import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
-  rc: RingCentral;
+  rc: RingCentralInterface;
 
-  parent: Parent;
+  parent: ParentInterface;
 
   greetingId: string | null;
 
-  constructor(parent: Parent, greetingId: string | null = null) {
+  constructor(parent: ParentInterface, greetingId: string | null = null) {
     this.parent = parent;
     this.rc = parent.rc;
     this.greetingId = greetingId;

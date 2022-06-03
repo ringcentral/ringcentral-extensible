@@ -1,18 +1,17 @@
-import { RestRequestConfig } from '../../../../Rest';
-import {
-  ReadGlipEventsParameters, GlipEventsInfo, GlipEventCreate, GlipEventInfo,
-} from '../../../../definitions';
-import Parent from '..';
-import RingCentral from '../../../..';
+import GlipEventInfo from '../../../../definitions/GlipEventInfo';
+import GlipEventCreate from '../../../../definitions/GlipEventCreate';
+import GlipEventsInfo from '../../../../definitions/GlipEventsInfo';
+import ReadGlipEventsParameters from '../../../../definitions/ReadGlipEventsParameters';
+import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
 
 class Index {
-  rc: RingCentral;
+  rc: RingCentralInterface;
 
-  parent: Parent;
+  parent: ParentInterface;
 
   eventId: string | null;
 
-  constructor(parent: Parent, eventId: string | null = null) {
+  constructor(parent: ParentInterface, eventId: string | null = null) {
     this.parent = parent;
     this.rc = parent.rc;
     this.eventId = eventId;

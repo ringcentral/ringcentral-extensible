@@ -1,19 +1,18 @@
 import Datasets from './Datasets';
-import { RestRequestConfig } from '../../../../Rest';
-import {
-  ListDataExportTasksParameters, DataExportTaskList, CreateDataExportTaskRequest, DataExportTask,
-} from '../../../../definitions';
-import Parent from '..';
-import RingCentral from '../../../..';
+import DataExportTask from '../../../../definitions/DataExportTask';
+import CreateDataExportTaskRequest from '../../../../definitions/CreateDataExportTaskRequest';
+import DataExportTaskList from '../../../../definitions/DataExportTaskList';
+import ListDataExportTasksParameters from '../../../../definitions/ListDataExportTasksParameters';
+import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
 
 class Index {
-  rc: RingCentral;
+  rc: RingCentralInterface;
 
-  parent: Parent;
+  parent: ParentInterface;
 
   taskId: string | null;
 
-  constructor(parent: Parent, taskId: string | null = null) {
+  constructor(parent: ParentInterface, taskId: string | null = null) {
     this.parent = parent;
     this.rc = parent.rc;
     this.taskId = taskId;

@@ -1,18 +1,19 @@
-import { RestRequestConfig } from '../../../../../../Rest';
-import {
-  ListContactsParameters, ContactList, PersonalContactRequest, CreateContactParameters, PersonalContactResource, UpdateContactParameters,
-} from '../../../../../../definitions';
-import Parent from '..';
-import RingCentral from '../../../../../..';
+import UpdateContactParameters from '../../../../../../definitions/UpdateContactParameters';
+import PersonalContactResource from '../../../../../../definitions/PersonalContactResource';
+import CreateContactParameters from '../../../../../../definitions/CreateContactParameters';
+import PersonalContactRequest from '../../../../../../definitions/PersonalContactRequest';
+import ContactList from '../../../../../../definitions/ContactList';
+import ListContactsParameters from '../../../../../../definitions/ListContactsParameters';
+import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../types';
 
 class Index {
-  rc: RingCentral;
+  rc: RingCentralInterface;
 
-  parent: Parent;
+  parent: ParentInterface;
 
   contactId: string | null;
 
-  constructor(parent: Parent, contactId: string | null = null) {
+  constructor(parent: ParentInterface, contactId: string | null = null) {
     this.parent = parent;
     this.rc = parent.rc;
     this.contactId = contactId;

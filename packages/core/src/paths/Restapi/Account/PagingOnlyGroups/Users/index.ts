@@ -1,14 +1,13 @@
-import { RestRequestConfig } from '../../../../../Rest';
-import { ListPagingGroupUsersParameters, PagingOnlyGroupUsers } from '../../../../../definitions';
-import Parent from '..';
-import RingCentral from '../../../../..';
+import PagingOnlyGroupUsers from '../../../../../definitions/PagingOnlyGroupUsers';
+import ListPagingGroupUsersParameters from '../../../../../definitions/ListPagingGroupUsersParameters';
+import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
-  rc: RingCentral;
+  rc: RingCentralInterface;
 
-  parent: Parent;
+  parent: ParentInterface;
 
-  constructor(parent: Parent) {
+  constructor(parent: ParentInterface) {
     this.parent = parent;
     this.rc = parent.rc;
   }

@@ -2,20 +2,22 @@ import {
   RestMethod,
   RestRequestConfig,
   RestResponse,
-} from '@rc-ex/core/lib/Rest';
+} from '@rc-ex/core/lib/types';
 import RestException from '@rc-ex/core/lib/RestException';
 import hyperid from 'hyperid';
 import { getReasonPhrase } from 'http-status-codes';
 
-import WebSocketExtension from './index';
 import Utils from './utils';
+import {
+  WebSocketExtensionInterface,
+} from './types';
 
 const version = '0.16';
 
 const uuid = hyperid();
 
 export async function request<T>(
-  this: WebSocketExtension,
+  this: WebSocketExtensionInterface,
   method: RestMethod,
   endpoint: string,
   content?: {},

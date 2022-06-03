@@ -1,19 +1,21 @@
 import Content from './Content';
-import { RestRequestConfig } from '../../../../../Rest';
-import {
-  ListMessagesParameters, GetMessageList, DeleteMessageByFilterParameters, GetMessageInfoResponse, UpdateMessageRequest, UpdateMessageParameters, DeleteMessageParameters,
-} from '../../../../../definitions';
-import Parent from '..';
-import RingCentral from '../../../../..';
+import DeleteMessageParameters from '../../../../../definitions/DeleteMessageParameters';
+import UpdateMessageParameters from '../../../../../definitions/UpdateMessageParameters';
+import UpdateMessageRequest from '../../../../../definitions/UpdateMessageRequest';
+import GetMessageInfoResponse from '../../../../../definitions/GetMessageInfoResponse';
+import DeleteMessageByFilterParameters from '../../../../../definitions/DeleteMessageByFilterParameters';
+import GetMessageList from '../../../../../definitions/GetMessageList';
+import ListMessagesParameters from '../../../../../definitions/ListMessagesParameters';
+import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
-  rc: RingCentral;
+  rc: RingCentralInterface;
 
-  parent: Parent;
+  parent: ParentInterface;
 
   messageId: string | null;
 
-  constructor(parent: Parent, messageId: string | null = null) {
+  constructor(parent: ParentInterface, messageId: string | null = null) {
     this.parent = parent;
     this.rc = parent.rc;
     this.messageId = messageId;

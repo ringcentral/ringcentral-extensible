@@ -1,16 +1,16 @@
-import { RestRequestConfig } from '../../../../Rest';
-import { ListUserTemplatesParameters, UserTemplates, TemplateInfo } from '../../../../definitions';
-import Parent from '..';
-import RingCentral from '../../../..';
+import TemplateInfo from '../../../../definitions/TemplateInfo';
+import UserTemplates from '../../../../definitions/UserTemplates';
+import ListUserTemplatesParameters from '../../../../definitions/ListUserTemplatesParameters';
+import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
 
 class Index {
-  rc: RingCentral;
+  rc: RingCentralInterface;
 
-  parent: Parent;
+  parent: ParentInterface;
 
   templateId: string | null;
 
-  constructor(parent: Parent, templateId: string | null = null) {
+  constructor(parent: ParentInterface, templateId: string | null = null) {
     this.parent = parent;
     this.rc = parent.rc;
     this.templateId = templateId;

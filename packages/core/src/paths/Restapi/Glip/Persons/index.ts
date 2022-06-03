@@ -1,16 +1,14 @@
-import { RestRequestConfig } from '../../../../Rest';
-import { GlipPersonInfo } from '../../../../definitions';
-import Parent from '..';
-import RingCentral from '../../../..';
+import GlipPersonInfo from '../../../../definitions/GlipPersonInfo';
+import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
 
 class Index {
-  rc: RingCentral;
+  rc: RingCentralInterface;
 
-  parent: Parent;
+  parent: ParentInterface;
 
   personId: string | null;
 
-  constructor(parent: Parent, personId: string | null = null) {
+  constructor(parent: ParentInterface, personId: string | null = null) {
     this.parent = parent;
     this.rc = parent.rc;
     this.personId = personId;

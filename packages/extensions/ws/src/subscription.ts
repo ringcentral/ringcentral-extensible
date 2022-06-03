@@ -1,17 +1,14 @@
 /* eslint-disable no-console */
-import {
-  CreateSubscriptionRequest,
-  SubscriptionInfo,
-} from '@rc-ex/core/lib/definitions';
-import { RestResponse } from '@rc-ex/core/lib/Rest';
+import CreateSubscriptionRequest from '@rc-ex/core/lib/definitions/CreateSubscriptionRequest';
+import SubscriptionInfo from '@rc-ex/core/lib/definitions/SubscriptionInfo';
+import { RestResponse } from '@rc-ex/core/lib/types';
 import { MessageEvent } from 'ws';
 
-import WebSocketExtension from './index';
-import { WsgEvent, WsgMeta } from './types';
+import { WsgEvent, WsgMeta, WebSocketExtensionInterface } from './types';
 import Utils from './utils';
 
 class Subscription {
-  wse: WebSocketExtension;
+  wse: WebSocketExtensionInterface;
 
   eventFilters: string[];
 
@@ -22,7 +19,7 @@ class Subscription {
   enabled = true;
 
   constructor(
-    wse: WebSocketExtension,
+    wse: WebSocketExtensionInterface,
     eventFilters: string[],
     callback: (event: {}) => void,
   ) {

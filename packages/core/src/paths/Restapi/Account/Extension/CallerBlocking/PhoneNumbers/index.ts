@@ -1,18 +1,17 @@
-import { RestRequestConfig } from '../../../../../../Rest';
-import {
-  ListBlockedAllowedNumbersParameters, BlockedAllowedPhoneNumbersList, AddBlockedAllowedPhoneNumber, BlockedAllowedPhoneNumberInfo,
-} from '../../../../../../definitions';
-import Parent from '..';
-import RingCentral from '../../../../../..';
+import BlockedAllowedPhoneNumberInfo from '../../../../../../definitions/BlockedAllowedPhoneNumberInfo';
+import AddBlockedAllowedPhoneNumber from '../../../../../../definitions/AddBlockedAllowedPhoneNumber';
+import BlockedAllowedPhoneNumbersList from '../../../../../../definitions/BlockedAllowedPhoneNumbersList';
+import ListBlockedAllowedNumbersParameters from '../../../../../../definitions/ListBlockedAllowedNumbersParameters';
+import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../types';
 
 class Index {
-  rc: RingCentral;
+  rc: RingCentralInterface;
 
-  parent: Parent;
+  parent: ParentInterface;
 
   blockedNumberId: string | null;
 
-  constructor(parent: Parent, blockedNumberId: string | null = null) {
+  constructor(parent: ParentInterface, blockedNumberId: string | null = null) {
     this.parent = parent;
     this.rc = parent.rc;
     this.blockedNumberId = blockedNumberId;

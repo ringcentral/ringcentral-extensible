@@ -1,18 +1,17 @@
-import { RestRequestConfig } from '../../../../Rest';
-import {
-  CustomFieldsResource, CustomFieldCreateRequest, CustomFieldResource, CustomFieldUpdateRequest,
-} from '../../../../definitions';
-import Parent from '..';
-import RingCentral from '../../../..';
+import CustomFieldUpdateRequest from '../../../../definitions/CustomFieldUpdateRequest';
+import CustomFieldResource from '../../../../definitions/CustomFieldResource';
+import CustomFieldCreateRequest from '../../../../definitions/CustomFieldCreateRequest';
+import CustomFieldsResource from '../../../../definitions/CustomFieldsResource';
+import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
 
 class Index {
-  rc: RingCentral;
+  rc: RingCentralInterface;
 
-  parent: Parent;
+  parent: ParentInterface;
 
   fieldId: string | null;
 
-  constructor(parent: Parent, fieldId: string | null = null) {
+  constructor(parent: ParentInterface, fieldId: string | null = null) {
     this.parent = parent;
     this.rc = parent.rc;
     this.fieldId = fieldId;

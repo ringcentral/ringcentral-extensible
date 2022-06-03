@@ -1,15 +1,14 @@
 import Utils from '../../../../../Utils';
-import { RestRequestConfig } from '../../../../../Rest';
-import { CreateFaxMessageRequest, FaxResponse } from '../../../../../definitions';
-import Parent from '..';
-import RingCentral from '../../../../..';
+import FaxResponse from '../../../../../definitions/FaxResponse';
+import CreateFaxMessageRequest from '../../../../../definitions/CreateFaxMessageRequest';
+import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
-  rc: RingCentral;
+  rc: RingCentralInterface;
 
-  parent: Parent;
+  parent: ParentInterface;
 
-  constructor(parent: Parent) {
+  constructor(parent: ParentInterface) {
     this.parent = parent;
     this.rc = parent.rc;
   }

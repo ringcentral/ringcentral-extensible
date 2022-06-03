@@ -1,18 +1,18 @@
-import { RestRequestConfig } from '../../../../../Rest';
-import {
-  ListAccountSwitchesParameters, SwitchesList, CreateSwitchInfo, SwitchInfo, UpdateSwitchInfo,
-} from '../../../../../definitions';
-import Parent from '..';
-import RingCentral from '../../../../..';
+import UpdateSwitchInfo from '../../../../../definitions/UpdateSwitchInfo';
+import SwitchInfo from '../../../../../definitions/SwitchInfo';
+import CreateSwitchInfo from '../../../../../definitions/CreateSwitchInfo';
+import SwitchesList from '../../../../../definitions/SwitchesList';
+import ListAccountSwitchesParameters from '../../../../../definitions/ListAccountSwitchesParameters';
+import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
-  rc: RingCentral;
+  rc: RingCentralInterface;
 
-  parent: Parent;
+  parent: ParentInterface;
 
   switchId: string | null;
 
-  constructor(parent: Parent, switchId: string | null = null) {
+  constructor(parent: ParentInterface, switchId: string | null = null) {
     this.parent = parent;
     this.rc = parent.rc;
     this.switchId = switchId;

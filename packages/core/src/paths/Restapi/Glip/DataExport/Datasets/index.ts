@@ -1,15 +1,13 @@
-import { RestRequestConfig } from '../../../../../Rest';
-import Parent from '..';
-import RingCentral from '../../../../..';
+import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
-  rc: RingCentral;
+  rc: RingCentralInterface;
 
-  parent: Parent;
+  parent: ParentInterface;
 
   datasetId: string | null;
 
-  constructor(parent: Parent, datasetId: string | null = null) {
+  constructor(parent: ParentInterface, datasetId: string | null = null) {
     this.parent = parent;
     this.rc = parent.rc;
     this.datasetId = datasetId;

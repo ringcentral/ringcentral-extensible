@@ -1,18 +1,18 @@
-import { RestRequestConfig } from '../../../../../Rest';
-import {
-  ListForwardingNumbersParameters, GetExtensionForwardingNumberListResponse, CreateForwardingNumberRequest, ForwardingNumberInfo, UpdateForwardingNumberRequest,
-} from '../../../../../definitions';
-import Parent from '..';
-import RingCentral from '../../../../..';
+import UpdateForwardingNumberRequest from '../../../../../definitions/UpdateForwardingNumberRequest';
+import ForwardingNumberInfo from '../../../../../definitions/ForwardingNumberInfo';
+import CreateForwardingNumberRequest from '../../../../../definitions/CreateForwardingNumberRequest';
+import GetExtensionForwardingNumberListResponse from '../../../../../definitions/GetExtensionForwardingNumberListResponse';
+import ListForwardingNumbersParameters from '../../../../../definitions/ListForwardingNumbersParameters';
+import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
-  rc: RingCentral;
+  rc: RingCentralInterface;
 
-  parent: Parent;
+  parent: ParentInterface;
 
   forwardingNumberId: string | null;
 
-  constructor(parent: Parent, forwardingNumberId: string | null = null) {
+  constructor(parent: ParentInterface, forwardingNumberId: string | null = null) {
     this.parent = parent;
     this.rc = parent.rc;
     this.forwardingNumberId = forwardingNumberId;

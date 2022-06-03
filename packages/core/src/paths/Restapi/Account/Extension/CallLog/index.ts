@@ -1,18 +1,18 @@
-import { RestRequestConfig } from '../../../../../Rest';
-import {
-  ReadUserCallLogParameters, UserCallLogResponse, DeleteUserCallLogParameters, ReadUserCallRecordParameters, UserCallLogRecord,
-} from '../../../../../definitions';
-import Parent from '..';
-import RingCentral from '../../../../..';
+import UserCallLogRecord from '../../../../../definitions/UserCallLogRecord';
+import ReadUserCallRecordParameters from '../../../../../definitions/ReadUserCallRecordParameters';
+import DeleteUserCallLogParameters from '../../../../../definitions/DeleteUserCallLogParameters';
+import UserCallLogResponse from '../../../../../definitions/UserCallLogResponse';
+import ReadUserCallLogParameters from '../../../../../definitions/ReadUserCallLogParameters';
+import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
-  rc: RingCentral;
+  rc: RingCentralInterface;
 
-  parent: Parent;
+  parent: ParentInterface;
 
   callRecordId: string | null;
 
-  constructor(parent: Parent, callRecordId: string | null = null) {
+  constructor(parent: ParentInterface, callRecordId: string | null = null) {
     this.parent = parent;
     this.rc = parent.rc;
     this.callRecordId = callRecordId;

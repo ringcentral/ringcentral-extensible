@@ -1,16 +1,16 @@
-import { RestRequestConfig } from '../../../../Rest';
-import { ListAccountPhoneNumbersParameters, AccountPhoneNumbers, CompanyPhoneNumberInfo } from '../../../../definitions';
-import Parent from '..';
-import RingCentral from '../../../..';
+import CompanyPhoneNumberInfo from '../../../../definitions/CompanyPhoneNumberInfo';
+import AccountPhoneNumbers from '../../../../definitions/AccountPhoneNumbers';
+import ListAccountPhoneNumbersParameters from '../../../../definitions/ListAccountPhoneNumbersParameters';
+import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
 
 class Index {
-  rc: RingCentral;
+  rc: RingCentralInterface;
 
-  parent: Parent;
+  parent: ParentInterface;
 
   phoneNumberId: string | null;
 
-  constructor(parent: Parent, phoneNumberId: string | null = null) {
+  constructor(parent: ParentInterface, phoneNumberId: string | null = null) {
     this.parent = parent;
     this.rc = parent.rc;
     this.phoneNumberId = phoneNumberId;

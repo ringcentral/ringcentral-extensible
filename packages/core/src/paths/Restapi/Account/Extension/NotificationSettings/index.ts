@@ -1,14 +1,13 @@
-import { RestRequestConfig } from '../../../../../Rest';
-import { NotificationSettings, NotificationSettingsUpdateRequest } from '../../../../../definitions';
-import Parent from '..';
-import RingCentral from '../../../../..';
+import NotificationSettingsUpdateRequest from '../../../../../definitions/NotificationSettingsUpdateRequest';
+import NotificationSettings from '../../../../../definitions/NotificationSettings';
+import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
-  rc: RingCentral;
+  rc: RingCentralInterface;
 
-  parent: Parent;
+  parent: ParentInterface;
 
-  constructor(parent: Parent) {
+  constructor(parent: ParentInterface) {
     this.parent = parent;
     this.rc = parent.rc;
   }

@@ -1,17 +1,15 @@
 import Content from './Content';
-import { RestRequestConfig } from '../../../../Rest';
-import { GetCallRecordingResponse } from '../../../../definitions';
-import Parent from '..';
-import RingCentral from '../../../..';
+import GetCallRecordingResponse from '../../../../definitions/GetCallRecordingResponse';
+import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
 
 class Index {
-  rc: RingCentral;
+  rc: RingCentralInterface;
 
-  parent: Parent;
+  parent: ParentInterface;
 
   recordingId: string | null;
 
-  constructor(parent: Parent, recordingId: string | null = null) {
+  constructor(parent: ParentInterface, recordingId: string | null = null) {
     this.parent = parent;
     this.rc = parent.rc;
     this.recordingId = recordingId;

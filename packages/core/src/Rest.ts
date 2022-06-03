@@ -1,30 +1,19 @@
 import axios, {
-  Method,
-  AxiosResponse,
-  AxiosRequestConfig,
   AxiosInstance,
 } from 'axios';
 import qs from 'qs';
 import FormData from 'form-data';
 
 import RestException from './RestException';
-import { TokenInfo } from './definitions';
+import TokenInfo from './definitions/TokenInfo';
+import {
+  RestMethod,
+  RestOptions,
+  RestRequestConfig,
+  RestResponse,
+} from './types';
 
 const version = '0.12';
-
-export type RestOptions = {
-  server?: string;
-  clientId?: string;
-  clientSecret?: string;
-  token?: TokenInfo;
-  appName?: string;
-  appVersion?: string;
-};
-
-export type RestMethod = Method;
-// eslint-disable-next-line @typescript-eslint/no-explicit-any,@typescript-eslint/no-unused-vars
-export type RestResponse<T = any> = AxiosResponse<T>;
-export type RestRequestConfig = AxiosRequestConfig;
 
 export default class Rest {
   static sandboxServer = 'https://platform.devtest.ringcentral.com';

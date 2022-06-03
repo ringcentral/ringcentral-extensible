@@ -1,8 +1,6 @@
-import {
-  CreateFaxMessageRequest,
-  Attachment,
-  FaxResponse,
-} from '@rc-ex/core/lib/definitions';
+import CreateFaxMessageRequest from '@rc-ex/core/lib/definitions/CreateFaxMessageRequest';
+import Attachment from '@rc-ex/core/lib/definitions/Attachment';
+import FaxResponse from '@rc-ex/core/lib/definitions/FaxResponse';
 import Utils from '@rc-ex/core/lib/Utils';
 import fs from 'fs';
 import path from 'path';

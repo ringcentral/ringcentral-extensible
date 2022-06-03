@@ -1,21 +1,20 @@
 import BulkAssign from './BulkAssign';
 import Presence from './Presence';
 import Members from './Members';
-import { RestRequestConfig } from '../../../../Rest';
-import {
-  ListCallQueuesParameters, CallQueues, CallQueueDetails, CallQueueUpdateDetails,
-} from '../../../../definitions';
-import Parent from '..';
-import RingCentral from '../../../..';
+import CallQueueUpdateDetails from '../../../../definitions/CallQueueUpdateDetails';
+import CallQueueDetails from '../../../../definitions/CallQueueDetails';
+import CallQueues from '../../../../definitions/CallQueues';
+import ListCallQueuesParameters from '../../../../definitions/ListCallQueuesParameters';
+import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
 
 class Index {
-  rc: RingCentral;
+  rc: RingCentralInterface;
 
-  parent: Parent;
+  parent: ParentInterface;
 
   groupId: string | null;
 
-  constructor(parent: Parent, groupId: string | null = null) {
+  constructor(parent: ParentInterface, groupId: string | null = null) {
     this.parent = parent;
     this.rc = parent.rc;
     this.groupId = groupId;

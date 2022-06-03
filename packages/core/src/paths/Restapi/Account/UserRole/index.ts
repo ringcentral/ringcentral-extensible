@@ -1,20 +1,19 @@
 import BulkAssign from './BulkAssign';
 import Default from './Default';
-import { RestRequestConfig } from '../../../../Rest';
-import {
-  ListUserRolesParameters, RolesCollectionResource, RoleResource, DeleteCustomRoleParameters,
-} from '../../../../definitions';
-import Parent from '..';
-import RingCentral from '../../../..';
+import DeleteCustomRoleParameters from '../../../../definitions/DeleteCustomRoleParameters';
+import RoleResource from '../../../../definitions/RoleResource';
+import RolesCollectionResource from '../../../../definitions/RolesCollectionResource';
+import ListUserRolesParameters from '../../../../definitions/ListUserRolesParameters';
+import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
 
 class Index {
-  rc: RingCentral;
+  rc: RingCentralInterface;
 
-  parent: Parent;
+  parent: ParentInterface;
 
   roleId: string | null;
 
-  constructor(parent: Parent, roleId: string | null = null) {
+  constructor(parent: ParentInterface, roleId: string | null = null) {
     this.parent = parent;
     this.rc = parent.rc;
     this.roleId = roleId;

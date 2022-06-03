@@ -1,16 +1,16 @@
-import { RestRequestConfig } from '../../../../../Rest';
-import { ListA2PSMSParameters, MessageListResponse, MessageDetailsResponse } from '../../../../../definitions';
-import Parent from '..';
-import RingCentral from '../../../../..';
+import MessageDetailsResponse from '../../../../../definitions/MessageDetailsResponse';
+import MessageListResponse from '../../../../../definitions/MessageListResponse';
+import ListA2PSMSParameters from '../../../../../definitions/ListA2PSMSParameters';
+import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
-  rc: RingCentral;
+  rc: RingCentralInterface;
 
-  parent: Parent;
+  parent: ParentInterface;
 
   messageId: string | null;
 
-  constructor(parent: Parent, messageId: string | null = null) {
+  constructor(parent: ParentInterface, messageId: string | null = null) {
     this.parent = parent;
     this.rc = parent.rc;
     this.messageId = messageId;

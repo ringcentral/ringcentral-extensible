@@ -37,21 +37,23 @@ import Grant from './Grant';
 import Fax from './Fax';
 import Mms from './Mms';
 import Sms from './Sms';
-import { RestRequestConfig } from '../../../../Rest';
-import {
-  ListExtensionsParameters, GetExtensionListResponse, ExtensionCreationRequest, ExtensionCreationResponse, GetExtensionInfoResponse, ExtensionUpdateRequest, DeleteExtensionParameters,
-} from '../../../../definitions';
-import Parent from '..';
-import RingCentral from '../../../..';
+import DeleteExtensionParameters from '../../../../definitions/DeleteExtensionParameters';
+import ExtensionUpdateRequest from '../../../../definitions/ExtensionUpdateRequest';
+import GetExtensionInfoResponse from '../../../../definitions/GetExtensionInfoResponse';
+import ExtensionCreationResponse from '../../../../definitions/ExtensionCreationResponse';
+import ExtensionCreationRequest from '../../../../definitions/ExtensionCreationRequest';
+import GetExtensionListResponse from '../../../../definitions/GetExtensionListResponse';
+import ListExtensionsParameters from '../../../../definitions/ListExtensionsParameters';
+import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
 
 class Index {
-  rc: RingCentral;
+  rc: RingCentralInterface;
 
-  parent: Parent;
+  parent: ParentInterface;
 
   extensionId: string | null;
 
-  constructor(parent: Parent, extensionId: string | null = '~') {
+  constructor(parent: ParentInterface, extensionId: string | null = '~') {
     this.parent = parent;
     this.rc = parent.rc;
     this.extensionId = extensionId;

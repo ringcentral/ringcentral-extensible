@@ -1,14 +1,14 @@
-import { RestRequestConfig } from '../../../../../../../../Rest';
-import { PerformanceCallsTimelineRequest, PerformanceReportCallsTimelineParameters, PerformanceCallsTimelineResponse } from '../../../../../../../../definitions';
-import Parent from '..';
-import RingCentral from '../../../../../../../..';
+import PerformanceCallsTimelineResponse from '../../../../../../../../definitions/PerformanceCallsTimelineResponse';
+import PerformanceReportCallsTimelineParameters from '../../../../../../../../definitions/PerformanceReportCallsTimelineParameters';
+import PerformanceCallsTimelineRequest from '../../../../../../../../definitions/PerformanceCallsTimelineRequest';
+import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../../../types';
 
 class Index {
-  rc: RingCentral;
+  rc: RingCentralInterface;
 
-  parent: Parent;
+  parent: ParentInterface;
 
-  constructor(parent: Parent) {
+  constructor(parent: ParentInterface) {
     this.parent = parent;
     this.rc = parent.rc;
   }

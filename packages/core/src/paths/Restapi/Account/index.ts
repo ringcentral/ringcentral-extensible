@@ -33,19 +33,17 @@ import CallLog from './CallLog';
 import A2pSms from './A2pSms';
 import Meeting from './Meeting';
 import Device from './Device';
-import { RestRequestConfig } from '../../../Rest';
-import { GetAccountInfoResponse } from '../../../definitions';
-import Parent from '..';
-import RingCentral from '../../..';
+import GetAccountInfoResponse from '../../../definitions/GetAccountInfoResponse';
+import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../types';
 
 class Index {
-  rc: RingCentral;
+  rc: RingCentralInterface;
 
-  parent: Parent;
+  parent: ParentInterface;
 
   accountId: string | null;
 
-  constructor(parent: Parent, accountId: string | null = '~') {
+  constructor(parent: ParentInterface, accountId: string | null = '~') {
     this.parent = parent;
     this.rc = parent.rc;
     this.accountId = accountId;

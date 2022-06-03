@@ -3,9 +3,9 @@ import {
   RestRequestConfig,
   RestResponse,
   RestMethod,
-} from '@rc-ex/core/lib/Rest';
+} from '@rc-ex/core/lib/types';
 import SdkExtension from '@rc-ex/core/lib/SdkExtension';
-import { GetTokenRequest } from '@rc-ex/core/lib/definitions';
+import GetTokenRequest from '@rc-ex/core/lib/definitions/GetTokenRequest';
 import RestException from '@rc-ex/core/lib/RestException';
 import { EventEmitter } from 'events';
 

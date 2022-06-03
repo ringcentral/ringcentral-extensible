@@ -1,18 +1,18 @@
-import { RestRequestConfig } from '../../../../../Rest';
-import {
-  ReadGlipPostsParameters, GlipPostsList, GlipPostPostBody, GlipPostInfo, GlipPatchPostBody,
-} from '../../../../../definitions';
-import Parent from '..';
-import RingCentral from '../../../../..';
+import GlipPatchPostBody from '../../../../../definitions/GlipPatchPostBody';
+import GlipPostInfo from '../../../../../definitions/GlipPostInfo';
+import GlipPostPostBody from '../../../../../definitions/GlipPostPostBody';
+import GlipPostsList from '../../../../../definitions/GlipPostsList';
+import ReadGlipPostsParameters from '../../../../../definitions/ReadGlipPostsParameters';
+import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
-  rc: RingCentral;
+  rc: RingCentralInterface;
 
-  parent: Parent;
+  parent: ParentInterface;
 
   postId: string | null;
 
-  constructor(parent: Parent, postId: string | null = null) {
+  constructor(parent: ParentInterface, postId: string | null = null) {
     this.parent = parent;
     this.rc = parent.rc;
     this.postId = postId;

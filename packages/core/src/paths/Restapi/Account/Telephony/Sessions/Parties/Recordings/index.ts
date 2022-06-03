@@ -1,16 +1,16 @@
-import { RestRequestConfig } from '../../../../../../../Rest';
-import { CallRecordingUpdate, PauseResumeCallRecordingParameters, CallRecording } from '../../../../../../../definitions';
-import Parent from '..';
-import RingCentral from '../../../../../../..';
+import CallRecording from '../../../../../../../definitions/CallRecording';
+import PauseResumeCallRecordingParameters from '../../../../../../../definitions/PauseResumeCallRecordingParameters';
+import CallRecordingUpdate from '../../../../../../../definitions/CallRecordingUpdate';
+import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../../types';
 
 class Index {
-  rc: RingCentral;
+  rc: RingCentralInterface;
 
-  parent: Parent;
+  parent: ParentInterface;
 
   recordingId: string | null;
 
-  constructor(parent: Parent, recordingId: string | null = null) {
+  constructor(parent: ParentInterface, recordingId: string | null = null) {
     this.parent = parent;
     this.rc = parent.rc;
     this.recordingId = recordingId;

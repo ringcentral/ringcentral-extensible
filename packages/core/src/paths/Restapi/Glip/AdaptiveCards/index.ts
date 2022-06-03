@@ -1,16 +1,16 @@
-import { RestRequestConfig } from '../../../../Rest';
-import { GlipAdaptiveCardInfo, GlipAdaptiveCardRequest, GlipAdaptiveCardShortInfo } from '../../../../definitions';
-import Parent from '..';
-import RingCentral from '../../../..';
+import GlipAdaptiveCardShortInfo from '../../../../definitions/GlipAdaptiveCardShortInfo';
+import GlipAdaptiveCardRequest from '../../../../definitions/GlipAdaptiveCardRequest';
+import GlipAdaptiveCardInfo from '../../../../definitions/GlipAdaptiveCardInfo';
+import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
 
 class Index {
-  rc: RingCentral;
+  rc: RingCentralInterface;
 
-  parent: Parent;
+  parent: ParentInterface;
 
   cardId: string | null;
 
-  constructor(parent: Parent, cardId: string | null = null) {
+  constructor(parent: ParentInterface, cardId: string | null = null) {
     this.parent = parent;
     this.rc = parent.rc;
     this.cardId = cardId;

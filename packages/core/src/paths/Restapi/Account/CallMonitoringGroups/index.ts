@@ -1,20 +1,19 @@
 import BulkAssign from './BulkAssign';
 import Members from './Members';
-import { RestRequestConfig } from '../../../../Rest';
-import {
-  ListCallMonitoringGroupsParameters, CallMonitoringGroups, CreateCallMonitoringGroupRequest, CallMonitoringGroup,
-} from '../../../../definitions';
-import Parent from '..';
-import RingCentral from '../../../..';
+import CallMonitoringGroup from '../../../../definitions/CallMonitoringGroup';
+import CreateCallMonitoringGroupRequest from '../../../../definitions/CreateCallMonitoringGroupRequest';
+import CallMonitoringGroups from '../../../../definitions/CallMonitoringGroups';
+import ListCallMonitoringGroupsParameters from '../../../../definitions/ListCallMonitoringGroupsParameters';
+import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
 
 class Index {
-  rc: RingCentral;
+  rc: RingCentralInterface;
 
-  parent: Parent;
+  parent: ParentInterface;
 
   groupId: string | null;
 
-  constructor(parent: Parent, groupId: string | null = null) {
+  constructor(parent: ParentInterface, groupId: string | null = null) {
     this.parent = parent;
     this.rc = parent.rc;
     this.groupId = groupId;

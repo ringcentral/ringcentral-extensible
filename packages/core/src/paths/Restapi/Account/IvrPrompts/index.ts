@@ -1,20 +1,19 @@
 import Content from './Content';
 import Utils from '../../../../Utils';
-import { RestRequestConfig } from '../../../../Rest';
-import {
-  IVRPrompts, CreateIVRPromptRequest, PromptInfo, UpdateIVRPromptRequest,
-} from '../../../../definitions';
-import Parent from '..';
-import RingCentral from '../../../..';
+import UpdateIVRPromptRequest from '../../../../definitions/UpdateIVRPromptRequest';
+import PromptInfo from '../../../../definitions/PromptInfo';
+import CreateIVRPromptRequest from '../../../../definitions/CreateIVRPromptRequest';
+import IVRPrompts from '../../../../definitions/IVRPrompts';
+import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
 
 class Index {
-  rc: RingCentral;
+  rc: RingCentralInterface;
 
-  parent: Parent;
+  parent: ParentInterface;
 
   promptId: string | null;
 
-  constructor(parent: Parent, promptId: string | null = null) {
+  constructor(parent: ParentInterface, promptId: string | null = null) {
     this.parent = parent;
     this.rc = parent.rc;
     this.promptId = promptId;

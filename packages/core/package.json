@@ -25,7 +25,7 @@
   },
   "devDependencies": {
     "dotenv-override-true": "^6.2.2",
-    "ringcentral-code-generator": "^0.3.3",
+    "ringcentral-code-generator": "^0.3.7",
     "ts-node": "^10.8.0"
   },
   "scripts": {

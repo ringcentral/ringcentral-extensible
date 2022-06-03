@@ -1,18 +1,17 @@
-import { RestRequestConfig } from '../../../../../Rest';
-import {
-  ListA2PBatchesParameters, MessageBatchListResponse, CreateSMSMessageBatchRequest, MessageBatchInfo,
-} from '../../../../../definitions';
-import Parent from '..';
-import RingCentral from '../../../../..';
+import MessageBatchInfo from '../../../../../definitions/MessageBatchInfo';
+import CreateSMSMessageBatchRequest from '../../../../../definitions/CreateSMSMessageBatchRequest';
+import MessageBatchListResponse from '../../../../../definitions/MessageBatchListResponse';
+import ListA2PBatchesParameters from '../../../../../definitions/ListA2PBatchesParameters';
+import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
-  rc: RingCentral;
+  rc: RingCentralInterface;
 
-  parent: Parent;
+  parent: ParentInterface;
 
   batchId: string | null;
 
-  constructor(parent: Parent, batchId: string | null = null) {
+  constructor(parent: ParentInterface, batchId: string | null = null) {
     this.parent = parent;
     this.rc = parent.rc;
     this.batchId = batchId;

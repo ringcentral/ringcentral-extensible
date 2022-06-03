@@ -1,19 +1,18 @@
 import Renew from './Renew';
-import { RestRequestConfig } from '../../../Rest';
-import {
-  RecordsCollectionResourceSubscriptionResponse, CreateSubscriptionRequest, SubscriptionInfo, ModifySubscriptionRequest,
-} from '../../../definitions';
-import Parent from '..';
-import RingCentral from '../../..';
+import ModifySubscriptionRequest from '../../../definitions/ModifySubscriptionRequest';
+import SubscriptionInfo from '../../../definitions/SubscriptionInfo';
+import CreateSubscriptionRequest from '../../../definitions/CreateSubscriptionRequest';
+import RecordsCollectionResourceSubscriptionResponse from '../../../definitions/RecordsCollectionResourceSubscriptionResponse';
+import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../types';
 
 class Index {
-  rc: RingCentral;
+  rc: RingCentralInterface;
 
-  parent: Parent;
+  parent: ParentInterface;
 
   subscriptionId: string | null;
 
-  constructor(parent: Parent, subscriptionId: string | null = null) {
+  constructor(parent: ParentInterface, subscriptionId: string | null = null) {
     this.parent = parent;
     this.rc = parent.rc;
     this.subscriptionId = subscriptionId;
@@ -63,7 +62,7 @@ class Index {
   }
 
   /**
-   * Updates the existent subscription. The client application can extend/narrow the events for which it receives notifications within the frame of one subscription. If event filters are specified, calling this method modifies them for the existing subscription. The method also allows to set the subscription expiration time. If other than `events` and `expiresIn` parameters are passed in request they will be ignored. If the request body is empty then the specified subscription will be just renewed without any event filter change and with expiration time default.
+   * Updates the existent subscription. The client application can extend/narrow the events for which it receives notifications within the frame of one subscription. If event filters are specified, calling this method modifies them for the existing subscription. The method also allows to set the subscription expiration time.  If other than `events` and `expiresIn` parameters are passed in request they will be ignored. If the request body is empty then the specified subscription will be just renewed without any event filter change and with expiration time default.
    * HTTP Method: put
    * Endpoint: /restapi/{apiVersion}/subscription/{subscriptionId}
    * Rate Limit Group: Medium

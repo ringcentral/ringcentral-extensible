@@ -1,10 +1,10 @@
 import Phone from './Phone';
-import RingCentral from '../..';
+import { RingCentralInterface } from '../../types';
 
 class Index {
-  rc: RingCentral;
+  rc: RingCentralInterface;
 
-  constructor(rc: RingCentral) {
+  constructor(rc: RingCentralInterface) {
     this.rc = rc;
   }
 

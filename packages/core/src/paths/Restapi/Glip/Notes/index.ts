@@ -1,19 +1,19 @@
 import Publish from './Publish';
 import Unlock from './Unlock';
 import Lock from './Lock';
-import { RestRequestConfig } from '../../../../Rest';
-import { GetGlipNoteInfo, GlipNoteCreate, GlipNoteInfo } from '../../../../definitions';
-import Parent from '..';
-import RingCentral from '../../../..';
+import GlipNoteInfo from '../../../../definitions/GlipNoteInfo';
+import GlipNoteCreate from '../../../../definitions/GlipNoteCreate';
+import GetGlipNoteInfo from '../../../../definitions/GetGlipNoteInfo';
+import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
 
 class Index {
-  rc: RingCentral;
+  rc: RingCentralInterface;
 
-  parent: Parent;
+  parent: ParentInterface;
 
   noteId: string | null;
 
-  constructor(parent: Parent, noteId: string | null = null) {
+  constructor(parent: ParentInterface, noteId: string | null = null) {
     this.parent = parent;
     this.rc = parent.rc;
     this.noteId = noteId;

@@ -1,18 +1,16 @@
 import Activate from './Activate';
 import Suspend from './Suspend';
-import { RestRequestConfig } from '../../../../Rest';
-import { GlipWebhookList } from '../../../../definitions';
-import Parent from '..';
-import RingCentral from '../../../..';
+import GlipWebhookList from '../../../../definitions/GlipWebhookList';
+import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
 
 class Index {
-  rc: RingCentral;
+  rc: RingCentralInterface;
 
-  parent: Parent;
+  parent: ParentInterface;
 
   webhookId: string | null;
 
-  constructor(parent: Parent, webhookId: string | null = null) {
+  constructor(parent: ParentInterface, webhookId: string | null = null) {
     this.parent = parent;
     this.rc = parent.rc;
     this.webhookId = webhookId;

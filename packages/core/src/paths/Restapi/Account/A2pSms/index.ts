@@ -2,15 +2,14 @@ import Statuses from './Statuses';
 import OptOuts from './OptOuts';
 import Messages from './Messages';
 import Batches from './Batches';
-import Parent from '..';
-import RingCentral from '../../../..';
+import { RingCentralInterface, ParentInterface } from '../../../../types';
 
 class Index {
-  rc: RingCentral;
+  rc: RingCentralInterface;
 
-  parent: Parent;
+  parent: ParentInterface;
 
-  constructor(parent: Parent) {
+  constructor(parent: ParentInterface) {
     this.parent = parent;
     this.rc = parent.rc;
   }

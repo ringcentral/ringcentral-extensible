@@ -1,16 +1,15 @@
-import { RestRequestConfig } from '../../../../../Rest';
-import { MakeRingOutRequest, GetRingOutStatusResponse } from '../../../../../definitions';
-import Parent from '..';
-import RingCentral from '../../../../..';
+import GetRingOutStatusResponse from '../../../../../definitions/GetRingOutStatusResponse';
+import MakeRingOutRequest from '../../../../../definitions/MakeRingOutRequest';
+import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
-  rc: RingCentral;
+  rc: RingCentralInterface;
 
-  parent: Parent;
+  parent: ParentInterface;
 
   ringoutId: string | null;
 
-  constructor(parent: Parent, ringoutId: string | null = null) {
+  constructor(parent: ParentInterface, ringoutId: string | null = null) {
     this.parent = parent;
     this.rc = parent.rc;
     this.ringoutId = ringoutId;

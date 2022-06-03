@@ -1,18 +1,18 @@
-import { RestRequestConfig } from '../../../../../Rest';
-import {
-  ListWirelessPointsParameters, WirelessPointsList, CreateWirelessPoint, WirelessPointInfo, UpdateWirelessPoint,
-} from '../../../../../definitions';
-import Parent from '..';
-import RingCentral from '../../../../..';
+import UpdateWirelessPoint from '../../../../../definitions/UpdateWirelessPoint';
+import WirelessPointInfo from '../../../../../definitions/WirelessPointInfo';
+import CreateWirelessPoint from '../../../../../definitions/CreateWirelessPoint';
+import WirelessPointsList from '../../../../../definitions/WirelessPointsList';
+import ListWirelessPointsParameters from '../../../../../definitions/ListWirelessPointsParameters';
+import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
-  rc: RingCentral;
+  rc: RingCentralInterface;
 
-  parent: Parent;
+  parent: ParentInterface;
 
   pointId: string | null;
 
-  constructor(parent: Parent, pointId: string | null = null) {
+  constructor(parent: ParentInterface, pointId: string | null = null) {
     this.parent = parent;
     this.rc = parent.rc;
     this.pointId = pointId;

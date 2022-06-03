@@ -1,15 +1,14 @@
 import ContractedCountry from './ContractedCountry';
-import Parent from '..';
-import RingCentral from '../../../..';
+import { RingCentralInterface, ParentInterface } from '../../../../types';
 
 class Index {
-  rc: RingCentral;
+  rc: RingCentralInterface;
 
-  parent: Parent;
+  parent: ParentInterface;
 
   brandId: string | null;
 
-  constructor(parent: Parent, brandId: string | null = null) {
+  constructor(parent: ParentInterface, brandId: string | null = null) {
     this.parent = parent;
     this.rc = parent.rc;
     this.brandId = brandId;

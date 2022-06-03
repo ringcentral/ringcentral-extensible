@@ -1,18 +1,18 @@
-import { RestRequestConfig } from '../../../../Rest';
-import {
-  ListEmergencyLocationsParameters, EmergencyLocationList, EmergencyLocationInfoRequest, EmergencyLocationInfo, DeleteEmergencyLocationParameters,
-} from '../../../../definitions';
-import Parent from '..';
-import RingCentral from '../../../..';
+import DeleteEmergencyLocationParameters from '../../../../definitions/DeleteEmergencyLocationParameters';
+import EmergencyLocationInfo from '../../../../definitions/EmergencyLocationInfo';
+import EmergencyLocationInfoRequest from '../../../../definitions/EmergencyLocationInfoRequest';
+import EmergencyLocationList from '../../../../definitions/EmergencyLocationList';
+import ListEmergencyLocationsParameters from '../../../../definitions/ListEmergencyLocationsParameters';
+import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
 
 class Index {
-  rc: RingCentral;
+  rc: RingCentralInterface;
 
-  parent: Parent;
+  parent: ParentInterface;
 
   locationId: string | null;
 
-  constructor(parent: Parent, locationId: string | null = null) {
+  constructor(parent: ParentInterface, locationId: string | null = null) {
     this.parent = parent;
     this.rc = parent.rc;
     this.locationId = locationId;

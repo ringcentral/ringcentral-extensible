@@ -1,16 +1,15 @@
 import Webhooks from './Webhooks';
 import Events from './Events';
-import Parent from '..';
-import RingCentral from '../../../..';
+import { RingCentralInterface, ParentInterface } from '../../../../types';
 
 class Index {
-  rc: RingCentral;
+  rc: RingCentralInterface;
 
-  parent: Parent;
+  parent: ParentInterface;
 
   groupId: string | null;
 
-  constructor(parent: Parent, groupId: string | null = null) {
+  constructor(parent: ParentInterface, groupId: string | null = null) {
     this.parent = parent;
     this.rc = parent.rc;
     this.groupId = groupId;

@@ -1,18 +1,20 @@
-import { RestRequestConfig } from '../../../../../Rest';
-import {
-  ListAnsweringRulesParameters, UserAnsweringRuleList, CreateAnsweringRuleRequest, CustomAnsweringRuleInfo, ReadAnsweringRuleParameters, AnsweringRuleInfo, UpdateAnsweringRuleRequest,
-} from '../../../../../definitions';
-import Parent from '..';
-import RingCentral from '../../../../..';
+import UpdateAnsweringRuleRequest from '../../../../../definitions/UpdateAnsweringRuleRequest';
+import AnsweringRuleInfo from '../../../../../definitions/AnsweringRuleInfo';
+import ReadAnsweringRuleParameters from '../../../../../definitions/ReadAnsweringRuleParameters';
+import CustomAnsweringRuleInfo from '../../../../../definitions/CustomAnsweringRuleInfo';
+import CreateAnsweringRuleRequest from '../../../../../definitions/CreateAnsweringRuleRequest';
+import UserAnsweringRuleList from '../../../../../definitions/UserAnsweringRuleList';
+import ListAnsweringRulesParameters from '../../../../../definitions/ListAnsweringRulesParameters';
+import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
-  rc: RingCentral;
+  rc: RingCentralInterface;
 
-  parent: Parent;
+  parent: ParentInterface;
 
   ruleId: string | null;
 
-  constructor(parent: Parent, ruleId: string | null = null) {
+  constructor(parent: ParentInterface, ruleId: string | null = null) {
     this.parent = parent;
     this.rc = parent.rc;
     this.ruleId = ruleId;

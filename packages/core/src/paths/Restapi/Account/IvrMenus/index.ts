@@ -1,16 +1,14 @@
-import { RestRequestConfig } from '../../../../Rest';
-import { IVRMenuInfo } from '../../../../definitions';
-import Parent from '..';
-import RingCentral from '../../../..';
+import IVRMenuInfo from '../../../../definitions/IVRMenuInfo';
+import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
 
 class Index {
-  rc: RingCentral;
+  rc: RingCentralInterface;
 
-  parent: Parent;
+  parent: ParentInterface;
 
   ivrMenuId: string | null;
 
-  constructor(parent: Parent, ivrMenuId: string | null = null) {
+  constructor(parent: ParentInterface, ivrMenuId: string | null = null) {
     this.parent = parent;
     this.rc = parent.rc;
     this.ivrMenuId = ivrMenuId;

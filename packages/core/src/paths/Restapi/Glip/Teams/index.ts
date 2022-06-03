@@ -4,21 +4,21 @@ import Remove from './Remove';
 import Leave from './Leave';
 import Join from './Join';
 import Add from './Add';
-import { RestRequestConfig } from '../../../../Rest';
-import {
-  ListGlipTeamsParameters, GlipTeamsList, GlipPostTeamBody, GlipTeamInfo, GlipPatchTeamBody,
-} from '../../../../definitions';
-import Parent from '..';
-import RingCentral from '../../../..';
+import GlipPatchTeamBody from '../../../../definitions/GlipPatchTeamBody';
+import GlipTeamInfo from '../../../../definitions/GlipTeamInfo';
+import GlipPostTeamBody from '../../../../definitions/GlipPostTeamBody';
+import GlipTeamsList from '../../../../definitions/GlipTeamsList';
+import ListGlipTeamsParameters from '../../../../definitions/ListGlipTeamsParameters';
+import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
 
 class Index {
-  rc: RingCentral;
+  rc: RingCentralInterface;
 
-  parent: Parent;
+  parent: ParentInterface;
 
   chatId: string | null;
 
-  constructor(parent: Parent, chatId: string | null = null) {
+  constructor(parent: ParentInterface, chatId: string | null = null) {
     this.parent = parent;
     this.rc = parent.rc;
     this.chatId = chatId;

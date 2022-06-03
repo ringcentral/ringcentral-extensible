@@ -1,18 +1,17 @@
-import { RestRequestConfig } from '../../../../../Rest';
-import {
-  NetworksList, CreateNetworkRequest, NetworkInfo, UpdateNetworkRequest,
-} from '../../../../../definitions';
-import Parent from '..';
-import RingCentral from '../../../../..';
+import UpdateNetworkRequest from '../../../../../definitions/UpdateNetworkRequest';
+import NetworkInfo from '../../../../../definitions/NetworkInfo';
+import CreateNetworkRequest from '../../../../../definitions/CreateNetworkRequest';
+import NetworksList from '../../../../../definitions/NetworksList';
+import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
-  rc: RingCentral;
+  rc: RingCentralInterface;
 
-  parent: Parent;
+  parent: ParentInterface;
 
   networkId: string | null;
 
-  constructor(parent: Parent, networkId: string | null = null) {
+  constructor(parent: ParentInterface, networkId: string | null = null) {
     this.parent = parent;
     this.rc = parent.rc;
     this.networkId = networkId;

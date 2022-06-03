@@ -5,16 +5,16 @@ import Dictionary from './Dictionary';
 import Account from './Account';
 import Oauth from './Oauth';
 import Glip from './Glip';
-import { RestRequestConfig } from '../../Rest';
-import { GetVersionsResponse, GetVersionResponse } from '../../definitions';
-import RingCentral from '../..';
+import GetVersionResponse from '../../definitions/GetVersionResponse';
+import GetVersionsResponse from '../../definitions/GetVersionsResponse';
+import { RingCentralInterface, RestRequestConfig } from '../../types';
 
 class Index {
-  rc: RingCentral;
+  rc: RingCentralInterface;
 
   apiVersion: string | null;
 
-  constructor(rc: RingCentral, apiVersion: string | null = 'v1.0') {
+  constructor(rc: RingCentralInterface, apiVersion: string | null = 'v1.0') {
     this.rc = rc;
     this.apiVersion = apiVersion;
   }

@@ -1,18 +1,17 @@
 import Supervise from './Supervise';
 import Parties from './Parties';
-import { RestRequestConfig } from '../../../../../Rest';
-import { ReadCallSessionStatusParameters, CallSessionObject } from '../../../../../definitions';
-import Parent from '..';
-import RingCentral from '../../../../..';
+import CallSessionObject from '../../../../../definitions/CallSessionObject';
+import ReadCallSessionStatusParameters from '../../../../../definitions/ReadCallSessionStatusParameters';
+import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
-  rc: RingCentral;
+  rc: RingCentralInterface;
 
-  parent: Parent;
+  parent: ParentInterface;
 
   telephonySessionId: string | null;
 
-  constructor(parent: Parent, telephonySessionId: string | null = null) {
+  constructor(parent: ParentInterface, telephonySessionId: string | null = null) {
     this.parent = parent;
     this.rc = parent.rc;
     this.telephonySessionId = telephonySessionId;

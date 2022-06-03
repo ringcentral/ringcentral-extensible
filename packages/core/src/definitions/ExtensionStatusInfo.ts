@@ -10,7 +10,7 @@ class ExtensionStatusInfo {
   /**
    * Type of suspension
    */
-  reason?: ('Voluntarily' | 'Involuntarily' | 'SuspendedVoluntarily' | 'SuspendedVoluntarily2');
+  reason?: ('Voluntarily' | 'Involuntarily' | 'SuspendedVoluntarily');
 }
 
 export default ExtensionStatusInfo;

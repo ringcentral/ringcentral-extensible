@@ -1,4 +1,4 @@
-import { RestResponse } from '@rc-ex/core/lib/Rest';
+import { RestResponse } from '@rc-ex/core/lib/types';
 import RestException from '@rc-ex/core/lib/RestException';
 
 import { createRingCentral } from './utils';

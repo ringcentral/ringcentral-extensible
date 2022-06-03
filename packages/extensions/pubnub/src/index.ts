@@ -1,12 +1,10 @@
 import RingCentral from '@rc-ex/core';
 import SdkExtension from '@rc-ex/core/lib/SdkExtension';
-import {
-  SubscriptionInfo,
-  CreateSubscriptionRequest,
-  GetExtensionInfoResponse,
-} from '@rc-ex/core/lib/definitions';
+import SubscriptionInfo from '@rc-ex/core/lib/definitions/SubscriptionInfo';
+import CreateSubscriptionRequest from '@rc-ex/core/lib/definitions/CreateSubscriptionRequest';
+import GetExtensionInfoResponse from '@rc-ex/core/lib/definitions/GetExtensionInfoResponse';
 import PubNub, { PubnubConfig } from 'pubnub';
-import { RestResponse } from '@rc-ex/core/lib/Rest';
+import { RestResponse } from '@rc-ex/core/lib/types';
 
 export class Subscription {
   pne: PubNubExtension;

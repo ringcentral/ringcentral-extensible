@@ -3,7 +3,7 @@ import {
   RestRequestConfig,
   RestResponse,
   RestMethod,
-} from '@rc-ex/core/lib/Rest';
+} from '@rc-ex/core/lib/types';
 import SdkExtension from '@rc-ex/core/lib/SdkExtension';
 import RestException from '@rc-ex/core/lib/RestException';
 import waitFor from 'wait-for-async';

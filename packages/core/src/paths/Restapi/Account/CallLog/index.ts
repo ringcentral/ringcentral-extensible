@@ -1,18 +1,17 @@
-import { RestRequestConfig } from '../../../../Rest';
-import {
-  ReadCompanyCallLogParameters, AccountCallLogResponse, ReadCompanyCallRecordParameters, CompanyCallLogRecord,
-} from '../../../../definitions';
-import Parent from '..';
-import RingCentral from '../../../..';
+import CompanyCallLogRecord from '../../../../definitions/CompanyCallLogRecord';
+import ReadCompanyCallRecordParameters from '../../../../definitions/ReadCompanyCallRecordParameters';
+import AccountCallLogResponse from '../../../../definitions/AccountCallLogResponse';
+import ReadCompanyCallLogParameters from '../../../../definitions/ReadCompanyCallLogParameters';
+import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
 
 class Index {
-  rc: RingCentral;
+  rc: RingCentralInterface;
 
-  parent: Parent;
+  parent: ParentInterface;
 
   callRecordId: string | null;
 
-  constructor(parent: Parent, callRecordId: string | null = null) {
+  constructor(parent: ParentInterface, callRecordId: string | null = null) {
     this.parent = parent;
     this.rc = parent.rc;
     this.callRecordId = callRecordId;

@@ -1,17 +1,17 @@
 import Search from './Search';
-import { RestRequestConfig } from '../../../../../Rest';
-import { ListDirectoryEntriesParameters, DirectoryResource, ContactResource } from '../../../../../definitions';
-import Parent from '..';
-import RingCentral from '../../../../..';
+import ContactResource from '../../../../../definitions/ContactResource';
+import DirectoryResource from '../../../../../definitions/DirectoryResource';
+import ListDirectoryEntriesParameters from '../../../../../definitions/ListDirectoryEntriesParameters';
+import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
-  rc: RingCentral;
+  rc: RingCentralInterface;
 
-  parent: Parent;
+  parent: ParentInterface;
 
   entryId: string | null;
 
-  constructor(parent: Parent, entryId: string | null = null) {
+  constructor(parent: ParentInterface, entryId: string | null = null) {
     this.parent = parent;
     this.rc = parent.rc;
     this.entryId = entryId;

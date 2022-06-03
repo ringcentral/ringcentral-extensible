@@ -1,5 +1,4 @@
-import { RestResponse } from './Rest';
-
+import { RestResponse } from './types';
 import Utils from './Utils';
 
 class RestException extends Error {

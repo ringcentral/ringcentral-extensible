@@ -1,14 +1,14 @@
-import { RestRequestConfig } from '../../../../../Rest';
-import { ReadConferencingSettingsParameters, GetConferencingInfoResponse, UpdateConferencingInfoRequest } from '../../../../../definitions';
-import Parent from '..';
-import RingCentral from '../../../../..';
+import UpdateConferencingInfoRequest from '../../../../../definitions/UpdateConferencingInfoRequest';
+import GetConferencingInfoResponse from '../../../../../definitions/GetConferencingInfoResponse';
+import ReadConferencingSettingsParameters from '../../../../../definitions/ReadConferencingSettingsParameters';
+import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
-  rc: RingCentral;
+  rc: RingCentralInterface;
 
-  parent: Parent;
+  parent: ParentInterface;
 
-  constructor(parent: Parent) {
+  constructor(parent: ParentInterface) {
     this.parent = parent;
     this.rc = parent.rc;
   }

@@ -2,19 +2,19 @@ import UserSettings from './UserSettings';
 import ServiceInfo from './ServiceInfo';
 import Invitation from './Invitation';
 import End from './End';
-import { RestRequestConfig } from '../../../../../Rest';
-import { MeetingsResource, MeetingRequestResource, MeetingResponseResource } from '../../../../../definitions';
-import Parent from '..';
-import RingCentral from '../../../../..';
+import MeetingResponseResource from '../../../../../definitions/MeetingResponseResource';
+import MeetingRequestResource from '../../../../../definitions/MeetingRequestResource';
+import MeetingsResource from '../../../../../definitions/MeetingsResource';
+import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
-  rc: RingCentral;
+  rc: RingCentralInterface;
 
-  parent: Parent;
+  parent: ParentInterface;
 
   meetingId: string | null;
 
-  constructor(parent: Parent, meetingId: string | null = null) {
+  constructor(parent: ParentInterface, meetingId: string | null = null) {
     this.parent = parent;
     this.rc = parent.rc;
     this.meetingId = meetingId;

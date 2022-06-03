@@ -1,17 +1,16 @@
 import BulkAssign from './BulkAssign';
 import Devices from './Devices';
 import Users from './Users';
-import Parent from '..';
-import RingCentral from '../../../..';
+import { RingCentralInterface, ParentInterface } from '../../../../types';
 
 class Index {
-  rc: RingCentral;
+  rc: RingCentralInterface;
 
-  parent: Parent;
+  parent: ParentInterface;
 
   pagingOnlyGroupId: string | null;
 
-  constructor(parent: Parent, pagingOnlyGroupId: string | null = null) {
+  constructor(parent: ParentInterface, pagingOnlyGroupId: string | null = null) {
     this.parent = parent;
     this.rc = parent.rc;
     this.pagingOnlyGroupId = pagingOnlyGroupId;

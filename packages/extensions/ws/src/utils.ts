@@ -2,7 +2,8 @@
 import WS, { MessageEvent } from 'isomorphic-ws';
 
 import { WsgMeta, WsgEvent } from './types';
-import { ClosedException, TimeoutException } from './exceptions';
+import ClosedException from './exceptions/ClosedException';
+import TimeoutException from './exceptions/TimeoutException';
 
 class Utils {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any

@@ -1,15 +1,14 @@
 import Calls from './Calls';
-import Parent from '..';
-import RingCentral from '../../../../../..';
+import { RingCentralInterface, ParentInterface } from '../../../../../../types';
 
 class Index {
-  rc: RingCentral;
+  rc: RingCentralInterface;
 
-  parent: Parent;
+  parent: ParentInterface;
 
   accountId: string | null;
 
-  constructor(parent: Parent, accountId: string | null = null) {
+  constructor(parent: ParentInterface, accountId: string | null = null) {
     this.parent = parent;
     this.rc = parent.rc;
     this.accountId = accountId;

@@ -1,4 +1,4 @@
-import RingCentral from './index';
+import { RingCentralInterface } from './types';
 
 abstract class SdkExtension {
   enabled = true;
@@ -11,7 +11,7 @@ abstract class SdkExtension {
     this.enabled = false;
   }
 
-  abstract install(rc: RingCentral): Promise<void>;
+  abstract install(rc: RingCentralInterface): Promise<void>;
   abstract revoke(): Promise<void>;
 }
 
