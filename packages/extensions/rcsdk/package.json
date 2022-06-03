@@ -22,7 +22,7 @@
     "@ringcentral/sdk": "^4.7.2"
   },
   "peerDependencies": {
-    "@rc-ex/core": "^0.12.4",
+    "@rc-ex/core": "^0.13.0",
     "@ringcentral/sdk": "^4.7.2"
   }
 }

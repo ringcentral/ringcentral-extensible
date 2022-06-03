@@ -1802,10 +1802,10 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-17.0.24.tgz#20ba1bf69c1b4ab405c7a01e950c4f446b05029f"
   integrity sha512-aveCYRQbgTH9Pssp1voEP7HiuWlD2jW2BO56w+bVrJn04i61yh6mRfoKO6hEYQD9vF+W8Chkwc6j1M36uPkx4g==
 
-"@types/node@^17.0.38":
-  version "17.0.38"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-17.0.38.tgz#f8bb07c371ccb1903f3752872c89f44006132947"
-  integrity sha512-5jY9RhV7c0Z4Jy09G+NIDTsCZ5G0L5n+Z+p+Y7t5VJHM30bgwzSjVtlcBxqAj+6L/swIlvtOSzr8rBk/aNyV2g==
+"@types/node@^17.0.39":
+  version "17.0.39"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-17.0.39.tgz#3652d82e2a16b4ea679d5ea3143b816c91b7e113"
+  integrity sha512-JDU3YLlnPK3WDao6/DlXLOgSNpG13ct+CwIO17V8q0/9fWJyeMJJ/VyZ1lv8kDprihvZMydzVwf0tQOqGiY2Nw==
 
 "@types/normalize-package-data@^2.4.0":
   version "2.4.1"
@@ -7132,10 +7132,10 @@ rimraf@^3.0.0, rimraf@^3.0.2:
   dependencies:
     glob "^7.1.3"
 
-ringcentral-code-generator@^0.3.7:
-  version "0.3.7"
-  resolved "https://registry.yarnpkg.com/ringcentral-code-generator/-/ringcentral-code-generator-0.3.7.tgz#48a16daedde507bcf25221b751cf79af5ddeb0dc"
-  integrity sha512-a/uV+3MdPv8lPzren6AU15fZytzJkaiDmezgeZYx6MkDGWWE7/2P/81aOOF+0tbQWddbTt2GpmR4WI//YAvWeQ==
+ringcentral-code-generator@^0.4.0:
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/ringcentral-code-generator/-/ringcentral-code-generator-0.4.0.tgz#b8126c70c2dcce74732c351729d16fba6e17158e"
+  integrity sha512-UieB8PkwMsfR3qWP+C10mp1ODobDsvS5I30x4yc7eWODyPi3xdPfvyC2De6/0oO6BBLjZuPlyqKO6hVZQmuNPQ==
   dependencies:
     "@types/js-yaml" "^4.0.5"
     "@types/ramda" "^0.28.13"

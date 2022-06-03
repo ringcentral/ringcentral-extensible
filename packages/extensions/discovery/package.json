@@ -27,6 +27,6 @@
     "@rc-ex/core": "^0.13.0"
   },
   "peerDependencies": {
-    "@rc-ex/core": "^0.12.4"
+    "@rc-ex/core": "^0.13.0"
   }
 }
