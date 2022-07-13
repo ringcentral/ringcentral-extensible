@@ -1,6 +1,6 @@
 {
   "name": "@rc-ex/pubnub",
-  "version": "0.9.1",
+  "version": "0.9.2",
   "description": "PubNub extension for ringcentral-extensible project",
   "author": "Tyler Liu <tyler.liu@ringcentral.com>",
   "homepage": "https://github.com/ringcentral/ringcentral-extensible/tree/master/packages/extensions/pubnub",
@@ -22,7 +22,7 @@
     "pubnub": "^7.2.0"
   },
   "devDependencies": {
-    "@rc-ex/core": "^0.13.1"
+    "@rc-ex/core": "^0.14.0"
   },
   "peerDependencies": {
     "@rc-ex/core": "^0.13.1"
