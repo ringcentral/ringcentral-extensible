@@ -3,7 +3,7 @@ import BlockedCallerGreetingInfo from './BlockedCallerGreetingInfo';
 /**
  * Returns the lists of blocked and allowed phone numbers
 */
-class CallerBlockingSettings {
+interface CallerBlockingSettings {
   /**
    * Call blocking options: either specific or all calls and faxes
    */

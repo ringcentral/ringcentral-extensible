@@ -1,4 +1,4 @@
-class MessageStatusCounts {
+interface MessageStatusCounts {
   /**
    * Format: int64
    */

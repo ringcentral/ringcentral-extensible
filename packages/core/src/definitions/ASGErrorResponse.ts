@@ -1,7 +1,7 @@
 /**
  * Error response
 */
-class ASGErrorResponse {
+interface ASGErrorResponse {
   /**
    * Error code
    */

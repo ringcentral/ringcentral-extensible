@@ -1,7 +1,7 @@
 /**
  * International Calling permission
 */
-class PermissionInfoInt {
+interface PermissionInfoInt {
   /**
    * Specifies if a permission is enabled or not
    */

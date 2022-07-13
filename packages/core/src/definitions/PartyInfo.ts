@@ -1,7 +1,7 @@
 /**
  * Information on a calling/called party
 */
-class PartyInfo {
+interface PartyInfo {
   /**
    * Phone number of a party
    */

@@ -1,7 +1,7 @@
 import DeviceInfoRequest from './DeviceInfoRequest';
 import SIPInfoRequest from './SIPInfoRequest';
 
-class CreateSipRegistrationRequest {
+interface CreateSipRegistrationRequest {
   /**
    */
   device?: DeviceInfoRequest;

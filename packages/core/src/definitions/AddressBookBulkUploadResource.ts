@@ -1,6 +1,6 @@
 import AddressBookBulkContactResource from './AddressBookBulkContactResource';
 
-class AddressBookBulkUploadResource {
+interface AddressBookBulkUploadResource {
   /**
    * Internal identifier of an extension
    * Required

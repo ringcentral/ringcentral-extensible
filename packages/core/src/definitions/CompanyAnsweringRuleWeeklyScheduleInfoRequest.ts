@@ -3,7 +3,7 @@ import CompanyAnsweringRuleTimeIntervalRequest from './CompanyAnsweringRuleTimeI
 /**
  * Weekly schedule. If specified, ranges cannot be specified
 */
-class CompanyAnsweringRuleWeeklyScheduleInfoRequest {
+interface CompanyAnsweringRuleWeeklyScheduleInfoRequest {
   /**
    * Time interval for a particular day
    */

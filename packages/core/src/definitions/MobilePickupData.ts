@@ -1,4 +1,4 @@
-class MobilePickupData {
+interface MobilePickupData {
   /**
    * List of extension IDs, configured to pick up a call from Desktop/Mobile applications
    */

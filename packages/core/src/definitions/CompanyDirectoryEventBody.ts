@@ -6,7 +6,7 @@ import CompanyDirectoryProfileImageInfo from './CompanyDirectoryProfileImageInfo
 /**
  * Notification payload body
 */
-class CompanyDirectoryEventBody {
+interface CompanyDirectoryEventBody {
   /**
    * Internal identifier of an extension
    */

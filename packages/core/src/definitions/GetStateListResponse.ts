@@ -2,7 +2,7 @@ import GetStateInfoResponse from './GetStateInfoResponse';
 import ProvisioningNavigationInfo from './ProvisioningNavigationInfo';
 import ProvisioningPagingInfo from './ProvisioningPagingInfo';
 
-class GetStateListResponse {
+interface GetStateListResponse {
   /**
    * Link to the states list resource
    */

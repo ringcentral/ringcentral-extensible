@@ -1,4 +1,4 @@
-class InboundTextsInfo {
+interface InboundTextsInfo {
   /**
    * Email notification flag
    */

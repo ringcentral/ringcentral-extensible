@@ -1,4 +1,4 @@
-class AdaptiveCardColumnItemInfo {
+interface AdaptiveCardColumnItemInfo {
   /**
    */
   type?: string;

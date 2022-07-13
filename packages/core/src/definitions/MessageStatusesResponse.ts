@@ -1,6 +1,6 @@
 import MessageStatusCounts from './MessageStatusCounts';
 
-class MessageStatusesResponse {
+interface MessageStatusesResponse {
   /**
    */
   queued?: MessageStatusCounts;

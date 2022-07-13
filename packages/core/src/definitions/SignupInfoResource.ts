@@ -1,7 +1,7 @@
 /**
  * Account sign up data
 */
-class SignupInfoResource {
+interface SignupInfoResource {
   /**
    */
   tosAccepted?: boolean;

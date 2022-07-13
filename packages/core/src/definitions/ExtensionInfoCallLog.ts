@@ -1,7 +1,7 @@
 /**
  * Information on extension
 */
-class ExtensionInfoCallLog {
+interface ExtensionInfoCallLog {
   /**
    * Internal identifier of an extension
    * Format: int64

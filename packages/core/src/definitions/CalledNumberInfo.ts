@@ -1,4 +1,4 @@
-class CalledNumberInfo {
+interface CalledNumberInfo {
   /**
    * Called phone number
    */

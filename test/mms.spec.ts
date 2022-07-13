@@ -16,10 +16,10 @@ describe('mms', () => {
       extension: process.env.RINGCENTRAL_EXTENSION!,
       password: process.env.RINGCENTRAL_PASSWORD!,
     });
-    const createMMSMessage = new CreateMMSMessage();
+    const createMMSMessage: CreateMMSMessage = {};
     createMMSMessage.from = { phoneNumber: process.env.RINGCENTRAL_USERNAME! };
     createMMSMessage.to = [{ phoneNumber: process.env.RINGCENTRAL_RECEIVER }];
-    const attachment = new Attachment();
+    const attachment: Attachment = {};
     attachment.filename = 'text.png';
     attachment.content = fs.createReadStream(path.join(__dirname, 'test.png'));
     attachment.contentType = 'image/png';

@@ -3,7 +3,7 @@ import ProvisioningNavigationInfoUri from './ProvisioningNavigationInfoUri';
 /**
  * Information on navigation
 */
-class ProvisioningNavigationInfo {
+interface ProvisioningNavigationInfo {
   /**
    */
   firstPage?: ProvisioningNavigationInfoUri;

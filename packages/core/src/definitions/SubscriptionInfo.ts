@@ -2,7 +2,7 @@ import DisabledFilterInfo from './DisabledFilterInfo';
 import NotificationDeliveryMode from './NotificationDeliveryMode';
 import NotificationBlacklistedData from './NotificationBlacklistedData';
 
-class SubscriptionInfo {
+interface SubscriptionInfo {
   /**
    * Internal identifier of a subscription
    */

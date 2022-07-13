@@ -1,7 +1,7 @@
 /**
  * Query parameters for operation listCallMonitoringGroupMembers
 */
-class ListCallMonitoringGroupMembersParameters {
+interface ListCallMonitoringGroupMembersParameters {
   /**
    * Indicates the page number to retrieve. Only positive number values are allowed
    * Default: 1

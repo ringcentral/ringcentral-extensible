@@ -1,7 +1,7 @@
 /**
  * Meeting recording settings locked on account level
 */
-class UserMeetingRecordingSetting {
+interface UserMeetingRecordingSetting {
   /**
    * Allows hosts and participants to record a meeting to a local file
    */

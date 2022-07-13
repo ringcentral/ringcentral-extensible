@@ -1,6 +1,6 @@
 import GlipTaskInfo from './GlipTaskInfo';
 
-class GlipTaskList {
+interface GlipTaskList {
   /**
    */
   records?: GlipTaskInfo[];

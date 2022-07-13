@@ -1,4 +1,4 @@
-class PresenceInfoRequest {
+interface PresenceInfoRequest {
   /**
    */
   userStatus?: ('Offline' | 'Busy' | 'Available');

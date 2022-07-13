@@ -2,7 +2,7 @@ import ScheduleUserMeetingInfo from './ScheduleUserMeetingInfo';
 import UserMeetingRecordingSetting from './UserMeetingRecordingSetting';
 import TelephonyLockedSettings from './TelephonyLockedSettings';
 
-class AccountLockedSettingResponse {
+interface AccountLockedSettingResponse {
   /**
    */
   scheduleMeeting?: ScheduleUserMeetingInfo;

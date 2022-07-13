@@ -1,6 +1,6 @@
 import GlipMentionsInfo from './GlipMentionsInfo';
 
-class GlipPostEvent {
+interface GlipPostEvent {
   /**
    * Internal identifier of a post
    */

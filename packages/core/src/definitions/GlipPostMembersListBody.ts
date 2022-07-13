@@ -1,6 +1,6 @@
 import CreateGlipMember from './CreateGlipMember';
 
-class GlipPostMembersListBody {
+interface GlipPostMembersListBody {
   /**
    * List of glip members
    * Required

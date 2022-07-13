@@ -2,7 +2,7 @@ import PermissionResource from './PermissionResource';
 import RNPPagingInfo from './RNPPagingInfo';
 import RNPNavigationInfo from './RNPNavigationInfo';
 
-class PermissionCollectionResource {
+interface PermissionCollectionResource {
   /**
    * Format: uri
    */

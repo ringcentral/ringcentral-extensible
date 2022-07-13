@@ -1,7 +1,7 @@
 /**
  * Call park information
 */
-class ParkInfo {
+interface ParkInfo {
   /**
    * Call park identifier
    */

@@ -1,4 +1,4 @@
-class GetVersionResponse {
+interface GetVersionResponse {
   /**
    * Canonical URI of the version info resource
    */

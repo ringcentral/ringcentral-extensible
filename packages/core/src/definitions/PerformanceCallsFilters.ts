@@ -6,7 +6,7 @@ import PerformanceCallsFilterTimeSpentByMailbox from './PerformanceCallsFilterTi
 /**
  * Optional filters that limit the scope of calls to be aggregated (joined via AND)
 */
-class PerformanceCallsFilters {
+interface PerformanceCallsFilters {
   /**
    * Specifies whether the call was inbound or outbound relative to the scope specified in grouping object. Not applicable to internal calls with company scope (when grouping is not specified)
    */

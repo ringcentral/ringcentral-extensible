@@ -1,6 +1,6 @@
 import SubscriptionInfo from './SubscriptionInfo';
 
-class RecordsCollectionResourceSubscriptionResponse {
+interface RecordsCollectionResourceSubscriptionResponse {
   /**
    * Format: uri
    */

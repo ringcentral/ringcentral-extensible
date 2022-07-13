@@ -1,6 +1,6 @@
 import MeetingRecordingsNavigationInfoUri from './MeetingRecordingsNavigationInfoUri';
 
-class MeetingRecordingsNavigationInfo {
+interface MeetingRecordingsNavigationInfo {
   /**
    */
   firstPage?: MeetingRecordingsNavigationInfoUri;

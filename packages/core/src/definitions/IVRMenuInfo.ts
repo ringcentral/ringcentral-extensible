@@ -2,7 +2,7 @@ import IVRMenuSiteInfo from './IVRMenuSiteInfo';
 import IVRMenuPromptInfo from './IVRMenuPromptInfo';
 import IVRMenuActionsInfo from './IVRMenuActionsInfo';
 
-class IVRMenuInfo {
+interface IVRMenuInfo {
   /**
    * Internal identifier of an IVR Menu extension
    */

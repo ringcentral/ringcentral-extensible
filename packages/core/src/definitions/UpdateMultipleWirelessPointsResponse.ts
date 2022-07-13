@@ -1,6 +1,6 @@
 import BulkTaskInfoWiUpdate from './BulkTaskInfoWiUpdate';
 
-class UpdateMultipleWirelessPointsResponse {
+interface UpdateMultipleWirelessPointsResponse {
   /**
    */
   task?: BulkTaskInfoWiUpdate;

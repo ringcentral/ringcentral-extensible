@@ -1,4 +1,4 @@
-class PermissionIdResource {
+interface PermissionIdResource {
   /**
    */
   uri?: string;

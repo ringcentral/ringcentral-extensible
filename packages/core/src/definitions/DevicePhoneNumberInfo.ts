@@ -3,7 +3,7 @@ import DevicePhoneNumberCountryInfo from './DevicePhoneNumberCountryInfo';
 /**
  * Phone number information
 */
-class DevicePhoneNumberInfo {
+interface DevicePhoneNumberInfo {
   /**
    * Internal identifier of a phone number
    * Format: int64

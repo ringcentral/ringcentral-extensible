@@ -1,7 +1,7 @@
 import MakeCallOutCallerInfoRequestFrom from './MakeCallOutCallerInfoRequestFrom';
 import MakeCallOutCallerInfoRequestTo from './MakeCallOutCallerInfoRequestTo';
 
-class MakeCallOutRequest {
+interface MakeCallOutRequest {
   /**
    * Required
    */

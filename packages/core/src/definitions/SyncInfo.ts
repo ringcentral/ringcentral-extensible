@@ -1,4 +1,4 @@
-class SyncInfo {
+interface SyncInfo {
   /**
    */
   syncType?: ('FSync' | 'ISync');

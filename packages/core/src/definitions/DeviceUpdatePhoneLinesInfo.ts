@@ -3,7 +3,7 @@ import UpdateDevicePhoneInfo from './UpdateDevicePhoneInfo';
 /**
  * Information on phone lines added to a device
 */
-class DeviceUpdatePhoneLinesInfo {
+interface DeviceUpdatePhoneLinesInfo {
   /**
    * Information on phone lines added to a device
    */

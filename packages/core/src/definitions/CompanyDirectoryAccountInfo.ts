@@ -1,7 +1,7 @@
 /**
  * Account data of an extension
 */
-class CompanyDirectoryAccountInfo {
+interface CompanyDirectoryAccountInfo {
   /**
    * Internal identifier of an account
    */

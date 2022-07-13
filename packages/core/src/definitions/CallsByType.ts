@@ -1,4 +1,4 @@
-class CallsByType {
+interface CallsByType {
   /**
    * Required
    * Format: double

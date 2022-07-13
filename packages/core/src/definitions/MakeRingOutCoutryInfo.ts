@@ -1,7 +1,7 @@
 /**
  * Optional. Dialing plan country data. If not specified, then extension home country is applied by default
 */
-class MakeRingOutCoutryInfo {
+interface MakeRingOutCoutryInfo {
   /**
    * Dialing plan country identifier
    */

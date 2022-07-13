@@ -6,7 +6,7 @@ import Photo from './Photo';
 import EnterpriseUser from './EnterpriseUser';
 import Meta from './Meta';
 
-class UserResponse {
+interface UserResponse {
   /**
    * user status
    */

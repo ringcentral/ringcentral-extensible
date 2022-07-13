@@ -1,7 +1,7 @@
 import UserCallLogRecord from './UserCallLogRecord';
 import SyncInfoCallLog from './SyncInfoCallLog';
 
-class CallLogSync {
+interface CallLogSync {
   /**
    * Link to the list of call log records with sync information
    */

@@ -1,7 +1,7 @@
 /**
  * Information about a call party that is monitored
 */
-class SupervisePartyTo {
+interface SupervisePartyTo {
   /**
    * Phone number of a party
    */

@@ -3,7 +3,7 @@ import TaskResultRecord from './TaskResultRecord';
 /**
  * Task detailed result. Returned for failed and completed tasks
 */
-class TaskResultInfo {
+interface TaskResultInfo {
   /**
    * Detailed task results by elements from initial request
    */

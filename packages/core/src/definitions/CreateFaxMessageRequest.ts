@@ -4,7 +4,7 @@ import Attachment from './Attachment';
 /**
  * Request body for operation createFaxMessage
 */
-class CreateFaxMessageRequest {
+interface CreateFaxMessageRequest {
   /**
    * Resolution of Fax
    */

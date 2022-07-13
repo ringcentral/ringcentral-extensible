@@ -1,4 +1,4 @@
-class ReferenceInfo {
+interface ReferenceInfo {
   /**
    * Non-RC identifier of an extension
    */

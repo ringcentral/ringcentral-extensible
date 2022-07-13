@@ -1,6 +1,6 @@
 import UserAnsweringRuleListNavigationPage from './UserAnsweringRuleListNavigationPage';
 
-class UserAnsweringRuleListNavigation {
+interface UserAnsweringRuleListNavigation {
   /**
    */
   firstPage?: UserAnsweringRuleListNavigationPage;

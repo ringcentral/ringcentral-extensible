@@ -1,6 +1,6 @@
 import PresetInfo from './PresetInfo';
 
-class BlockedCallerGreetingInfo {
+interface BlockedCallerGreetingInfo {
   /**
    * Type of a greeting
    */

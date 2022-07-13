@@ -1,4 +1,4 @@
-class TemplateInfo {
+interface TemplateInfo {
   /**
    * Link to a template
    */

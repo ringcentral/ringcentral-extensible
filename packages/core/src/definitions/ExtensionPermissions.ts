@@ -4,7 +4,7 @@ import PermissionInfoInt from './PermissionInfoInt';
 /**
  * Extension permissions, corresponding to the Service Web permissions 'Admin' and 'InternationalCalling'
 */
-class ExtensionPermissions {
+interface ExtensionPermissions {
   /**
    */
   admin?: PermissionInfoAdmin;

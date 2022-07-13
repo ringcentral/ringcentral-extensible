@@ -1,7 +1,7 @@
 /**
  * Notification payload body
 */
-class ExtensionPresenceEventBody {
+interface ExtensionPresenceEventBody {
   /**
    * Internal identifier of an extension. Optional parameter
    * Default: ~

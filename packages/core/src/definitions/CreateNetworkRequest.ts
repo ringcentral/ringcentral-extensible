@@ -3,7 +3,7 @@ import PublicIpRangeInfo from './PublicIpRangeInfo';
 import PrivateIpRangeInfoRequest from './PrivateIpRangeInfoRequest';
 import ERLLocationInfo from './ERLLocationInfo';
 
-class CreateNetworkRequest {
+interface CreateNetworkRequest {
   /**
    */
   name?: string;

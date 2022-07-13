@@ -1,6 +1,6 @@
 import GlipMemberInfo from './GlipMemberInfo';
 
-class GlipChatInfo {
+interface GlipChatInfo {
   /**
    * Internal identifier of a chat
    */

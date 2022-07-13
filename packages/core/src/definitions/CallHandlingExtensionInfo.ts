@@ -1,4 +1,4 @@
-class CallHandlingExtensionInfo {
+interface CallHandlingExtensionInfo {
   /**
    * Internal identifier of an extension
    */

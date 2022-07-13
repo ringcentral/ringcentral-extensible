@@ -5,7 +5,7 @@ import RegionalSettings from './RegionalSettings';
 import SiteInfo from './SiteInfo';
 import ExtensionStatusInfo from './ExtensionStatusInfo';
 
-class ExtensionCreationRequest {
+interface ExtensionCreationRequest {
   /**
    */
   contact?: ContactInfoCreationRequest;

@@ -1,7 +1,7 @@
 import MeetingInfo from './MeetingInfo';
 import MeetingRecordingInfo from './MeetingRecordingInfo';
 
-class MeetingRecording {
+interface MeetingRecording {
   /**
    */
   meeting?: MeetingInfo;

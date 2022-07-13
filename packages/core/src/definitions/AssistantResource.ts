@@ -1,4 +1,4 @@
-class AssistantResource {
+interface AssistantResource {
   /**
    */
   id?: string;

@@ -3,7 +3,7 @@ import GlipAttachmentInfoRequest from './GlipAttachmentInfoRequest';
 /**
  * Post data. At least one attribute should be provided (text or attachments)
 */
-class GlipPostPostBody {
+interface GlipPostPostBody {
   /**
    * Text of a post. Maximum length is 10000 symbols. Mentions can be added in .md format `![:Type](id)`
    */

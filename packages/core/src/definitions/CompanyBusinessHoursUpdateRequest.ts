@@ -1,6 +1,6 @@
 import CompanyBusinessHoursScheduleInfo from './CompanyBusinessHoursScheduleInfo';
 
-class CompanyBusinessHoursUpdateRequest {
+interface CompanyBusinessHoursUpdateRequest {
   /**
    */
   schedule?: CompanyBusinessHoursScheduleInfo;

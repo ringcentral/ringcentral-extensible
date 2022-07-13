@@ -1,6 +1,6 @@
 import LocationStateInfo from './LocationStateInfo';
 
-class LocationInfo {
+interface LocationInfo {
   /**
    * Canonical URI of a location
    */

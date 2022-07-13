@@ -1,7 +1,7 @@
 import ContactBusinessAddressInfo from './ContactBusinessAddressInfo';
 import PronouncedNameInfo from './PronouncedNameInfo';
 
-class ContactInfoUpdateRequest {
+interface ContactInfoUpdateRequest {
   /**
    * For User extension type only. Extension user first name
    */

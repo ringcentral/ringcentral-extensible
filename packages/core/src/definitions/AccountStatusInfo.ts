@@ -1,7 +1,7 @@
 /**
  * Status information (reason, comment, lifetime). Returned for 'Disabled' status only
 */
-class AccountStatusInfo {
+interface AccountStatusInfo {
   /**
    * A free-form user comment, describing the status change reason
    */

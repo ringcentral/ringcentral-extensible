@@ -4,7 +4,7 @@ import AdaptiveCardAction from './AdaptiveCardAction';
 import AdaptiveCardSelectAction from './AdaptiveCardSelectAction';
 import BackgroundImage from './BackgroundImage';
 
-class GlipAdaptiveCardInfo {
+interface GlipAdaptiveCardInfo {
   /**
    * Internal identifier of an adaptive card
    */

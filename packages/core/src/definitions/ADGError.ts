@@ -1,7 +1,7 @@
 /**
  * Description of an error occurred during request processing. This data type can be used only in readonly mode, no writing is allowed
 */
-class ADGError {
+interface ADGError {
   /**
    * Code that characterizes this error. Code uniqly identifies the source of the error.
    */

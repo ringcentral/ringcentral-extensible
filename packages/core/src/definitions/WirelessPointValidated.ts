@@ -1,6 +1,6 @@
 import ValidationError from './ValidationError';
 
-class WirelessPointValidated {
+interface WirelessPointValidated {
   /**
    * Internal identifier of a wireless point
    */

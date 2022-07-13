@@ -1,7 +1,7 @@
 /**
  * User interface language data
 */
-class LanguageInfo {
+interface LanguageInfo {
   /**
    * Internal identifier of a language
    */

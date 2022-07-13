@@ -2,7 +2,7 @@ import UserMeetingRecordingSetting from './UserMeetingRecordingSetting';
 import ScheduleUserMeetingInfo from './ScheduleUserMeetingInfo';
 import TelephonyUserMeetingSettings from './TelephonyUserMeetingSettings';
 
-class MeetingUserSettingsResponse {
+interface MeetingUserSettingsResponse {
   /**
    */
   recording?: UserMeetingRecordingSetting;

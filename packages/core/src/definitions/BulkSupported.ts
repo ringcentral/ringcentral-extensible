@@ -1,4 +1,4 @@
-class BulkSupported {
+interface BulkSupported {
   /**
    * Format: int32
    */

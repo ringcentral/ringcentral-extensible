@@ -1,7 +1,7 @@
 /**
  * Error response
 */
-class ErrorResponse {
+interface ErrorResponse {
   /**
    * Error code
    * Example: CMN-101

@@ -1,4 +1,4 @@
-class ExtensionLanguageInfoRequest {
+interface ExtensionLanguageInfoRequest {
   /**
    * internal Identifier of a language
    */

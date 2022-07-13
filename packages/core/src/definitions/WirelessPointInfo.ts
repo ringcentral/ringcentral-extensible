@@ -2,7 +2,7 @@ import AutomaticLocationUpdatesSiteInfo from './AutomaticLocationUpdatesSiteInfo
 import LocationUpdatesEmergencyAddressInfo from './LocationUpdatesEmergencyAddressInfo';
 import ERLLocationInfo from './ERLLocationInfo';
 
-class WirelessPointInfo {
+interface WirelessPointInfo {
   /**
    * Link to the wireless point resource
    */

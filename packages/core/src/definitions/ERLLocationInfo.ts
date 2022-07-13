@@ -1,7 +1,7 @@
 /**
  * Emergency response location information
 */
-class ERLLocationInfo {
+interface ERLLocationInfo {
   /**
    * Internal identifier of an emergency response location
    */

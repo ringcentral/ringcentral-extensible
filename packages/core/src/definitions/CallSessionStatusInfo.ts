@@ -1,7 +1,7 @@
 import PeerInfo from './PeerInfo';
 import MobilePickupData from './MobilePickupData';
 
-class CallSessionStatusInfo {
+interface CallSessionStatusInfo {
   /**
    */
   code?: string;

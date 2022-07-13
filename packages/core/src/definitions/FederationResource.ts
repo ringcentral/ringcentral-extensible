@@ -1,6 +1,6 @@
 import FederatedAccountResource from './FederatedAccountResource';
 
-class FederationResource {
+interface FederationResource {
   /**
    */
   accounts?: FederatedAccountResource[];

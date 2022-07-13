@@ -1,7 +1,7 @@
 /**
  * Query parameters for operation listA2PBatches
 */
-class ListA2PBatchesParameters {
+interface ListA2PBatchesParameters {
   /**
    * The default is 24 hours before `dateTo`
    * Format: date-time

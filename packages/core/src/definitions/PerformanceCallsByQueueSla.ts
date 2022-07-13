@@ -1,6 +1,6 @@
 import CallsByQueueSla from './CallsByQueueSla';
 
-class PerformanceCallsByQueueSla {
+interface PerformanceCallsByQueueSla {
   /**
    * Required
    */

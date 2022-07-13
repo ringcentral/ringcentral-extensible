@@ -3,7 +3,7 @@ import RecipientInfo from './RecipientInfo';
 /**
  * Specifies whether to take a voicemail and who should do it
 */
-class VoicemailInfo {
+interface VoicemailInfo {
   /**
    * If 'True' then voicemails are allowed to be received
    */

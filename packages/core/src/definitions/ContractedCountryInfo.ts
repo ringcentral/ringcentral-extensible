@@ -1,7 +1,7 @@
 /**
  * Information on the contracted country of account
 */
-class ContractedCountryInfo {
+interface ContractedCountryInfo {
   /**
    * Identifier of a contracted country
    */

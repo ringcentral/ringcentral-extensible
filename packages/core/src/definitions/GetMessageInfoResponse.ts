@@ -3,7 +3,7 @@ import ConversationInfo from './ConversationInfo';
 import MessageStoreCallerInfoResponseFrom from './MessageStoreCallerInfoResponseFrom';
 import MessageStoreCallerInfoResponseTo from './MessageStoreCallerInfoResponseTo';
 
-class GetMessageInfoResponse {
+interface GetMessageInfoResponse {
   /**
    * Internal identifier of a message
    * Format: int64

@@ -1,7 +1,7 @@
 /**
  * Query parameters for operation readGlipPosts
 */
-class ReadGlipPostsParameters {
+interface ReadGlipPostsParameters {
   /**
    * Max number of posts to be fetched by one request (not more than 250)
    * Maximum: 250

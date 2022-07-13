@@ -1,4 +1,4 @@
-class CallsActions {
+interface CallsActions {
   /**
    * Required
    * Format: double

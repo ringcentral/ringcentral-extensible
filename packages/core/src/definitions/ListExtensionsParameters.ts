@@ -1,7 +1,7 @@
 /**
  * Query parameters for operation listExtensions
 */
-class ListExtensionsParameters {
+interface ListExtensionsParameters {
   /**
    * Number of extension to be retrieved
    */

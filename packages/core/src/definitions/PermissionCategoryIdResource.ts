@@ -1,4 +1,4 @@
-class PermissionCategoryIdResource {
+interface PermissionCategoryIdResource {
   /**
    * Format: uri
    */

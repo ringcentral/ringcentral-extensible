@@ -3,7 +3,7 @@ import Attachment from './Attachment';
 /**
  * Request body for operation createUserProfileImage
 */
-class CreateUserProfileImageRequest {
+interface CreateUserProfileImageRequest {
   /**
    * Required
    */

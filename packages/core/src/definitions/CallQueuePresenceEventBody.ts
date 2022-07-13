@@ -1,7 +1,7 @@
 /**
  * Notification payload body
 */
-class CallQueuePresenceEventBody {
+interface CallQueuePresenceEventBody {
   /**
    * Agent extension ID
    */

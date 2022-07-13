@@ -1,7 +1,7 @@
 /**
  * Message footer information
 */
-class GlipMessageAttachmentFootnoteInfo {
+interface GlipMessageAttachmentFootnoteInfo {
   /**
    * Text of a footer
    */

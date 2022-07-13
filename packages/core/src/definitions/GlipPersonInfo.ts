@@ -1,4 +1,4 @@
-class GlipPersonInfo {
+interface GlipPersonInfo {
   /**
    * Internal identifier of a user
    * Required

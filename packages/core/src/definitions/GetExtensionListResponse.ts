@@ -2,7 +2,7 @@ import GetExtensionListInfoResponse from './GetExtensionListInfoResponse';
 import ProvisioningNavigationInfo from './ProvisioningNavigationInfo';
 import ProvisioningPagingInfo from './ProvisioningPagingInfo';
 
-class GetExtensionListResponse {
+interface GetExtensionListResponse {
   /**
    * Link to the extension list resource
    */

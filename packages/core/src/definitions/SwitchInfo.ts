@@ -2,7 +2,7 @@ import SwitchSiteInfo from './SwitchSiteInfo';
 import LocationUpdatesEmergencyAddressInfo from './LocationUpdatesEmergencyAddressInfo';
 import ERLLocationInfo from './ERLLocationInfo';
 
-class SwitchInfo {
+interface SwitchInfo {
   /**
    * Link to the network switch resource
    */

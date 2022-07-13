@@ -1,6 +1,6 @@
 import GlipMemberInfo from './GlipMemberInfo';
 
-class GlipPostMembersIdsListBody {
+interface GlipPostMembersIdsListBody {
   /**
    * Identifier(s) of chat members.
    * Required

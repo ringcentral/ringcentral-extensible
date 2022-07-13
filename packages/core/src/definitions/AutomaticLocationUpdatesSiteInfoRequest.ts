@@ -1,4 +1,4 @@
-class AutomaticLocationUpdatesSiteInfoRequest {
+interface AutomaticLocationUpdatesSiteInfoRequest {
   /**
    * Internal identifier of a site
    */

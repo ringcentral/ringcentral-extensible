@@ -14,7 +14,7 @@ import PerformanceCallsTimersResponseOptionsCallsDurationByType from './Performa
  * If `aggregationType` is `Min`, `Max` or `Average`, `aggregationInterval` is supported, but not required.
  * If left empty, aggregation will be performed on per-call basis
 */
-class PerformanceCallsTimersResponseOptions {
+interface PerformanceCallsTimersResponseOptions {
   /**
    */
   allCallsDuration?: PerformanceCallsTimersResponseOptionsAllCallsDuration;

@@ -3,7 +3,7 @@ import RuleInfo from './RuleInfo';
 /**
  * Forwarding parameters. Returned if 'ForwardCalls' is specified in 'callHandlingAction'. These settings determine the forwarding numbers to which the call will be forwarded
 */
-class ForwardingInfo {
+interface ForwardingInfo {
   /**
    * Specifies if the user's softphone(s) are notified before forwarding the incoming call to desk phones and forwarding numbers
    */

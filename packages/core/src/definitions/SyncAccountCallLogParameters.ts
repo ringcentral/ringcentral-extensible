@@ -1,7 +1,7 @@
 /**
  * Query parameters for operation syncAccountCallLog
 */
-class SyncAccountCallLogParameters {
+interface SyncAccountCallLogParameters {
   /**
    * Type of synchronization.
    * Default: FSync

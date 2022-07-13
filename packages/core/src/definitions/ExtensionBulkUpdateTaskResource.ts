@@ -3,7 +3,7 @@ import ExtensionBulkUpdateTaskResult from './ExtensionBulkUpdateTaskResult';
 /**
  * Information on a task for updating multiple extensions
 */
-class ExtensionBulkUpdateTaskResource {
+interface ExtensionBulkUpdateTaskResource {
   /**
    * Link to a task resource
    * Required

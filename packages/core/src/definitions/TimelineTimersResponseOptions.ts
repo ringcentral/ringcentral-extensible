@@ -1,4 +1,4 @@
-class TimelineTimersResponseOptions {
+interface TimelineTimersResponseOptions {
   /**
    */
   allCallsDuration?: boolean;

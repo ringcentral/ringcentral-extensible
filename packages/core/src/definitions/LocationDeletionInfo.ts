@@ -1,6 +1,6 @@
 import LocationDeletionErrorInfo from './LocationDeletionErrorInfo';
 
-class LocationDeletionInfo {
+interface LocationDeletionInfo {
   /**
    */
   id?: string;

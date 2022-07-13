@@ -1,4 +1,4 @@
-class RoleIdResource {
+interface RoleIdResource {
   /**
    * Format: uri
    */

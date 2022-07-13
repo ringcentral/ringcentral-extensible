@@ -3,7 +3,7 @@ import UserContactsNavigationInfo from './UserContactsNavigationInfo';
 import UserContactsPagingInfo from './UserContactsPagingInfo';
 import UserContactsGroupsInfo from './UserContactsGroupsInfo';
 
-class ContactList {
+interface ContactList {
   /**
    * link to the list of user personal contacts
    */

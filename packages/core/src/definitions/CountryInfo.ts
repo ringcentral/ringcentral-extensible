@@ -1,7 +1,7 @@
 /**
  * Country information
 */
-class CountryInfo {
+interface CountryInfo {
   /**
    * Internal identifier of a home country
    */

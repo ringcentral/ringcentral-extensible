@@ -1,7 +1,7 @@
 /**
  * Pagination details
 */
-class PagingResource {
+interface PagingResource {
   /**
    * Page token of the current response list
    * Example: pgt1

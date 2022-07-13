@@ -1,7 +1,7 @@
 /**
  * Call queue information
 */
-class CallQueueId {
+interface CallQueueId {
   /**
    * Internal identifier of a call queue
    */

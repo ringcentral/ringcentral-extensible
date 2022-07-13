@@ -1,7 +1,7 @@
 import DetailedCallInfo from './DetailedCallInfo';
 import CallInfoCQ from './CallInfoCQ';
 
-class ActiveCallInfo {
+interface ActiveCallInfo {
   /**
    */
   id?: string;

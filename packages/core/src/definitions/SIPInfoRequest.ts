@@ -1,4 +1,4 @@
-class SIPInfoRequest {
+interface SIPInfoRequest {
   /**
    * Supported transport. SIP info will be returned for this transport if supported
    */

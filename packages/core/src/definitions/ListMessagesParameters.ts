@@ -1,7 +1,7 @@
 /**
  * Query parameters for operation listMessages
 */
-class ListMessagesParameters {
+interface ListMessagesParameters {
   /**
    * Specifies the availability status for the resulting messages. Multiple values are accepted
    */

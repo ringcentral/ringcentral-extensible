@@ -3,7 +3,7 @@ import Attachment from './Attachment';
 /**
  * Request body for operation createCustomUserGreeting
 */
-class CreateCustomUserGreetingRequest {
+interface CreateCustomUserGreetingRequest {
   /**
    * Type of a greeting, specifying the case when the greeting is played.
    * Required

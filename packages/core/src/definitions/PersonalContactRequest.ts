@@ -1,6 +1,6 @@
 import ContactAddressInfo from './ContactAddressInfo';
 
-class PersonalContactRequest {
+interface PersonalContactRequest {
   /**
    * First name of the contact
    * Example: Charlie

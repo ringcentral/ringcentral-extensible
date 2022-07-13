@@ -1,4 +1,4 @@
-class BillingStatementCharges {
+interface BillingStatementCharges {
   /**
    */
   description?: string;

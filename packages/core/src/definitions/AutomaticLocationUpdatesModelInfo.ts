@@ -1,7 +1,7 @@
 /**
  * HardPhone model information
 */
-class AutomaticLocationUpdatesModelInfo {
+interface AutomaticLocationUpdatesModelInfo {
   /**
    * Device model identifier
    */

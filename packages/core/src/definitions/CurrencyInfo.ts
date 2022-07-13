@@ -1,7 +1,7 @@
 /**
  * Currency information
 */
-class CurrencyInfo {
+interface CurrencyInfo {
   /**
    * Internal identifier of a currency
    * Format: int64

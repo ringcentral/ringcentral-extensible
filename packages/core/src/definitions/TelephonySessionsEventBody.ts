@@ -4,7 +4,7 @@ import TelephonySessionsEventPartyInfo from './TelephonySessionsEventPartyInfo';
 /**
  * Notification payload body
 */
-class TelephonySessionsEventBody {
+interface TelephonySessionsEventBody {
   /**
    * Order number of a notification to state the chronology
    */

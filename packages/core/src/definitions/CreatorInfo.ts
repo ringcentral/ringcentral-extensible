@@ -1,7 +1,7 @@
 /**
  * Task creator information
 */
-class CreatorInfo {
+interface CreatorInfo {
   /**
    * Internal identifier of a user
    */

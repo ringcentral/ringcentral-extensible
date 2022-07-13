@@ -3,7 +3,7 @@ import TaskAssigneeInfo from './TaskAssigneeInfo';
 import GlipTaskRecurrenceInfo from './GlipTaskRecurrenceInfo';
 import TaskAttachment from './TaskAttachment';
 
-class GlipTaskInfo {
+interface GlipTaskInfo {
   /**
    * Internal identifier of a task
    */

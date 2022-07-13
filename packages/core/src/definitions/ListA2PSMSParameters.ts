@@ -1,7 +1,7 @@
 /**
  * Query parameters for operation listA2PSMS
 */
-class ListA2PSMSParameters {
+interface ListA2PSMSParameters {
   /**
    * Internal identifier of a message batch used for filtering records
    * Example: 1234

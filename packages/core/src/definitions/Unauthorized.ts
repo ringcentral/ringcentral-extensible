@@ -1,6 +1,6 @@
 import ErrorBody from './ErrorBody';
 
-class Unauthorized {
+interface Unauthorized {
   /**
    */
   errors?: ErrorBody[];

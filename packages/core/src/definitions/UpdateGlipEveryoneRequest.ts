@@ -1,4 +1,4 @@
-class UpdateGlipEveryoneRequest {
+interface UpdateGlipEveryoneRequest {
   /**
    * Everyone chat name. Maximum number of characters supported is 250
    */

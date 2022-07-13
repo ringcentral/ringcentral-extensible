@@ -1,4 +1,4 @@
-class GlipTaskRecurrenceInfo {
+interface GlipTaskRecurrenceInfo {
   /**
    * Task recurrence settings. For non-periodic tasks the value is 'None'
    */

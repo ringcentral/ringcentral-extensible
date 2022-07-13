@@ -1,6 +1,6 @@
 import FavoriteContactResource from './FavoriteContactResource';
 
-class FavoriteContactList {
+interface FavoriteContactList {
   /**
    */
   uri?: string;

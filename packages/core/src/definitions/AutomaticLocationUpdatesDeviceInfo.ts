@@ -2,7 +2,7 @@ import AutomaticLocationUpdatesModelInfo from './AutomaticLocationUpdatesModelIn
 import AutomaticLocationUpdatesSiteInfo from './AutomaticLocationUpdatesSiteInfo';
 import AutomaticLocationUpdatesPhoneLine from './AutomaticLocationUpdatesPhoneLine';
 
-class AutomaticLocationUpdatesDeviceInfo {
+interface AutomaticLocationUpdatesDeviceInfo {
   /**
    * Internal identifier of a device
    */

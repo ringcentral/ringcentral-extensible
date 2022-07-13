@@ -3,7 +3,7 @@ import AlertInfo from './AlertInfo';
 /**
  * Information on a notification
 */
-class NotificationInfo {
+interface NotificationInfo {
   /**
    */
   alert?: AlertInfo;

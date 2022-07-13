@@ -1,6 +1,6 @@
 import ValidationError from './ValidationError';
 
-class SwitchValidated {
+interface SwitchValidated {
   /**
    * Internal identifier of a switch
    */

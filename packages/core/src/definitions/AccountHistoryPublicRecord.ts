@@ -2,7 +2,7 @@ import AccountHistoryRecordPublicInitiator from './AccountHistoryRecordPublicIni
 import AccountHistoryRecordTarget from './AccountHistoryRecordTarget';
 import AccountHistoryRecordPublicDetails from './AccountHistoryRecordPublicDetails';
 
-class AccountHistoryPublicRecord {
+interface AccountHistoryPublicRecord {
   /**
    * Internal record identifier
    * Example: 9835bead-397b-4ba8-b457-73f07ab79997

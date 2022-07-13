@@ -1,6 +1,6 @@
 import CallQueueUpdateMemberPresence from './CallQueueUpdateMemberPresence';
 
-class CallQueueUpdatePresence {
+interface CallQueueUpdatePresence {
   /**
    */
   records?: CallQueueUpdateMemberPresence[];

@@ -1,6 +1,6 @@
 import RingOutStatusInfo from './RingOutStatusInfo';
 
-class GetRingOutStatusResponse {
+interface GetRingOutStatusResponse {
   /**
    * Internal identifier of a RingOut call
    */

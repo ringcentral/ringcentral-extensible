@@ -1,4 +1,4 @@
-class ReplyWithPattern {
+interface ReplyWithPattern {
   /**
    * Predefined reply pattern name.
    * Example: OnMyWay

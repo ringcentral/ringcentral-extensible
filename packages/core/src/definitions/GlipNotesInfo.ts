@@ -1,7 +1,7 @@
 import GlipNoteInfo from './GlipNoteInfo';
 import GlipNavigationInfo from './GlipNavigationInfo';
 
-class GlipNotesInfo {
+interface GlipNotesInfo {
   /**
    */
   records?: GlipNoteInfo[];

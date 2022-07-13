@@ -4,7 +4,7 @@ import PromptLanguageInfo from './PromptLanguageInfo';
 /**
  * Prompt metadata
 */
-class IVRMenuPromptInfo {
+interface IVRMenuPromptInfo {
   /**
    * Prompt mode: custom media or text
    */

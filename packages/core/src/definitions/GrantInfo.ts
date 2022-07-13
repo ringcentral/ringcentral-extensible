@@ -1,6 +1,6 @@
 import ExtensionInfoGrants from './ExtensionInfoGrants';
 
-class GrantInfo {
+interface GrantInfo {
   /**
    * Canonical URI of a grant
    */

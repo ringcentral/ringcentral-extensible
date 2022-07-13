@@ -1,7 +1,7 @@
 /**
  * Canonical URI for the corresponding page of the list
 */
-class PresenceNavigationInfoURI {
+interface PresenceNavigationInfoURI {
   /**
    */
   uri?: string;

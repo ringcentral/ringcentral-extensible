@@ -1,6 +1,6 @@
 import CallsSegments from './CallsSegments';
 
-class PerformanceCallsSegments {
+interface PerformanceCallsSegments {
   /**
    * Required
    */

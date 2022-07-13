@@ -2,7 +2,7 @@ import GetMessageInfoResponse from './GetMessageInfoResponse';
 import MessagingNavigationInfo from './MessagingNavigationInfo';
 import MessagingPagingInfo from './MessagingPagingInfo';
 
-class GetMessageList {
+interface GetMessageList {
   /**
    * Link to the list of user messages
    */

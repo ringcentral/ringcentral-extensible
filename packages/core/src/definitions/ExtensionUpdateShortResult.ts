@@ -1,6 +1,6 @@
 import ErrorEntity from './ErrorEntity';
 
-class ExtensionUpdateShortResult {
+interface ExtensionUpdateShortResult {
   /**
    * Internal identifier of an extension
    */

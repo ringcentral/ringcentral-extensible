@@ -3,7 +3,7 @@ import CompanyAnsweringRuleCalledNumberInfo from './CompanyAnsweringRuleCalledNu
 import CompanyAnsweringRuleScheduleInfoRequest from './CompanyAnsweringRuleScheduleInfoRequest';
 import GreetingInfo from './GreetingInfo';
 
-class CompanyAnsweringRuleRequest {
+interface CompanyAnsweringRuleRequest {
   /**
    * Name of an answering rule specified by user. Max number of symbols is 30. The default value is 'My Rule N' where 'N' is the first free number
    */

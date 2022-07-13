@@ -1,7 +1,7 @@
 /**
  * Site Data
 */
-class ContactDirectorySiteInfo {
+interface ContactDirectorySiteInfo {
   /**
    * Internal Identifier of a site
    */

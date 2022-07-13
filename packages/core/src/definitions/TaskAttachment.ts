@@ -1,4 +1,4 @@
-class TaskAttachment {
+interface TaskAttachment {
   /**
    * Internal identifier of a file
    */

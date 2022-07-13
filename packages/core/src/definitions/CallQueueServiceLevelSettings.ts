@@ -1,7 +1,7 @@
 /**
  * Call queue service level settings
 */
-class CallQueueServiceLevelSettings {
+interface CallQueueServiceLevelSettings {
   /**
    * Target percentage of calls that must be answered by agents within the service level time threshold
    */

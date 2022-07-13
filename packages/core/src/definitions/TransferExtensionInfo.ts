@@ -1,4 +1,4 @@
-class TransferExtensionInfo {
+interface TransferExtensionInfo {
   /**
    * Internal identifier of an extension the call is transferred to
    */

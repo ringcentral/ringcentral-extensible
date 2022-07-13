@@ -9,7 +9,7 @@ import VoicemailInfo from './VoicemailInfo';
 import GreetingInfo from './GreetingInfo';
 import SharedLinesInfo from './SharedLinesInfo';
 
-class CustomAnsweringRuleInfo {
+interface CustomAnsweringRuleInfo {
   /**
    * Canonical URI to an answering rule resource
    */

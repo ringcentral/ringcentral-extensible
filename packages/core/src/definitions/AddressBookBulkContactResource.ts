@@ -3,7 +3,7 @@ import AddressBookBulkContactAddressInfo from './AddressBookBulkContactAddressIn
 /**
  * Contact resource
 */
-class AddressBookBulkContactResource {
+interface AddressBookBulkContactResource {
   /**
    * Email of a contact
    * Example: charlie.williams@example.com

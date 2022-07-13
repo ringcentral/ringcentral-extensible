@@ -1,6 +1,6 @@
 import CallsByCompanyHours from './CallsByCompanyHours';
 
-class PerformanceCallsByCompanyHours {
+interface PerformanceCallsByCompanyHours {
   /**
    * Required
    */

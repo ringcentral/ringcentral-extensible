@@ -1,4 +1,4 @@
-class OutboundFaxesInfo {
+interface OutboundFaxesInfo {
   /**
    * Email notification flag
    */

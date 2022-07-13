@@ -1,4 +1,4 @@
-class FaxMessageAttachment {
+interface FaxMessageAttachment {
   /**
    * Internal identifier of a message attachment
    */

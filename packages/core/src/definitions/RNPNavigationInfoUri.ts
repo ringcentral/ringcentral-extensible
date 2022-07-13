@@ -1,4 +1,4 @@
-class RNPNavigationInfoUri {
+interface RNPNavigationInfoUri {
   /**
    * Format: uri
    */

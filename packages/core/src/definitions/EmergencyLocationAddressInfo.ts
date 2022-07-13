@@ -1,4 +1,4 @@
-class EmergencyLocationAddressInfo {
+interface EmergencyLocationAddressInfo {
   /**
    * Country name
    */

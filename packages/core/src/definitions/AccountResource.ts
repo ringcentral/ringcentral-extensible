@@ -1,6 +1,6 @@
 import PhoneNumberResource from './PhoneNumberResource';
 
-class AccountResource {
+interface AccountResource {
   /**
    */
   companyName?: string;

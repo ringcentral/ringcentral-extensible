@@ -1,7 +1,7 @@
 /**
  * Query parameters for operation listBlockedAllowedNumbers
 */
-class ListBlockedAllowedNumbersParameters {
+interface ListBlockedAllowedNumbersParameters {
   /**
    */
   page?: number;

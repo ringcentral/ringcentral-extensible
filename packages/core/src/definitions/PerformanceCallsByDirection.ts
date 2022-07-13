@@ -1,6 +1,6 @@
 import CallsByDirection from './CallsByDirection';
 
-class PerformanceCallsByDirection {
+interface PerformanceCallsByDirection {
   /**
    * Required
    */

@@ -3,7 +3,7 @@ import GCMData from './GCMData';
 /**
  * GCM data
 */
-class GCMInfo {
+interface GCMInfo {
   /**
    * Notification priority, if the value is 'high' then notification is turned on even if the application is in background
    */

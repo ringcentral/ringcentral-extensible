@@ -1,7 +1,7 @@
 /**
  * Request body for operation revokeToken
 */
-class RevokeTokenRequest {
+interface RevokeTokenRequest {
   /**
    */
   client_assertion_type?: string;

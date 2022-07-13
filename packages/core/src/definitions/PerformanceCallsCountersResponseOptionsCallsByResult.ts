@@ -1,4 +1,4 @@
-class PerformanceCallsCountersResponseOptionsCallsByResult {
+interface PerformanceCallsCountersResponseOptionsCallsByResult {
   /**
    */
   aggregationType?: ('Sum' | 'Average' | 'Max' | 'Min' | 'Percent');

@@ -8,7 +8,7 @@ import CurrencyInfo from './CurrencyInfo';
 /**
  * Account level region data (web service Auto-Receptionist settings)
 */
-class AccountRegionalSettings {
+interface AccountRegionalSettings {
   /**
    */
   homeCountry?: CountryInfo;

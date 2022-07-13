@@ -1,6 +1,6 @@
 import WirelessPointInfoRequest from './WirelessPointInfoRequest';
 
-class ValidateMultipleWirelessPointsRequest {
+interface ValidateMultipleWirelessPointsRequest {
   /**
    */
   records?: WirelessPointInfoRequest[];

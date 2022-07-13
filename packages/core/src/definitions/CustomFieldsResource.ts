@@ -1,6 +1,6 @@
 import CustomFieldResource from './CustomFieldResource';
 
-class CustomFieldsResource {
+interface CustomFieldsResource {
   /**
    */
   records?: CustomFieldResource[];

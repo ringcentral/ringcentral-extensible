@@ -1,4 +1,4 @@
-class PatchOperation {
+interface PatchOperation {
   /**
    * Required
    */

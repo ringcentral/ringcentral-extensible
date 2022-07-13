@@ -6,7 +6,7 @@ import Shipping from './Shipping';
 import DevicePhoneLinesInfo from './DevicePhoneLinesInfo';
 import DeviceSiteInfo from './DeviceSiteInfo';
 
-class SipRegistrationDeviceInfo {
+interface SipRegistrationDeviceInfo {
   /**
    * Link to a device resource
    */

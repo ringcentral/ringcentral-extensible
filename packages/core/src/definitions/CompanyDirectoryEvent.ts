@@ -1,6 +1,6 @@
 import CompanyDirectoryEventBody from './CompanyDirectoryEventBody';
 
-class CompanyDirectoryEvent {
+interface CompanyDirectoryEvent {
   /**
    * Universally unique identifier of a notification
    */

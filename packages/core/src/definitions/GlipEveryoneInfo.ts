@@ -1,4 +1,4 @@
-class GlipEveryoneInfo {
+interface GlipEveryoneInfo {
   /**
    * Internal identifier of a chat
    */

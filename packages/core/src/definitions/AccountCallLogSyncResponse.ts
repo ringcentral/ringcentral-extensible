@@ -1,7 +1,7 @@
 import CompanyCallLogRecord from './CompanyCallLogRecord';
 import CompanyCallLogSyncInfo from './CompanyCallLogSyncInfo';
 
-class AccountCallLogSyncResponse {
+interface AccountCallLogSyncResponse {
   /**
    * Link to account call log sync resource
    */

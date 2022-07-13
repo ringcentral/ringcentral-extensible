@@ -1,6 +1,6 @@
 import CreateGlipMember from './CreateGlipMember';
 
-class GlipPostTeamBody {
+interface GlipPostTeamBody {
   /**
    * Team access level.
    */

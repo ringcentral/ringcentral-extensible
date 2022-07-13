@@ -1,7 +1,7 @@
 /**
  * Attachment is a file to be uploaded
 */
-class Attachment {
+interface Attachment {
   /**
    * Filename with extension
    * Example: example.png

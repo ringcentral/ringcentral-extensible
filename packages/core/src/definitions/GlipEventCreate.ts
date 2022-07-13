@@ -1,4 +1,4 @@
-class GlipEventCreate {
+interface GlipEventCreate {
   /**
    * Internal identifier of an event
    */

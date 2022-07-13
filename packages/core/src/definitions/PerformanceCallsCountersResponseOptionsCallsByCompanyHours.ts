@@ -1,4 +1,4 @@
-class PerformanceCallsCountersResponseOptionsCallsByCompanyHours {
+interface PerformanceCallsCountersResponseOptionsCallsByCompanyHours {
   /**
    */
   aggregationType?: ('Sum' | 'Average' | 'Max' | 'Min' | 'Percent');

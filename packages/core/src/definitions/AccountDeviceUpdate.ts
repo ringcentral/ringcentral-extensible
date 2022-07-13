@@ -3,7 +3,7 @@ import DeviceEmergencyInfo from './DeviceEmergencyInfo';
 import DeviceUpdateExtensionInfo from './DeviceUpdateExtensionInfo';
 import DeviceUpdatePhoneLinesInfo from './DeviceUpdatePhoneLinesInfo';
 
-class AccountDeviceUpdate {
+interface AccountDeviceUpdate {
   /**
    */
   emergencyServiceAddress?: EmergencyServiceAddressResourceRequest;

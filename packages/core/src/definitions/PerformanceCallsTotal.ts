@@ -1,4 +1,4 @@
-class PerformanceCallsTotal {
+interface PerformanceCallsTotal {
   /**
    * Required
    */

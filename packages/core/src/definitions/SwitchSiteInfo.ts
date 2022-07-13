@@ -1,7 +1,7 @@
 /**
  * Site data
 */
-class SwitchSiteInfo {
+interface SwitchSiteInfo {
   /**
    * Internal identifier of a site. The company identifier value is 'main-site'
    */

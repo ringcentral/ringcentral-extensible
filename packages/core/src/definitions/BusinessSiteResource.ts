@@ -1,4 +1,4 @@
-class BusinessSiteResource {
+interface BusinessSiteResource {
   /**
    */
   id?: string;

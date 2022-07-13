@@ -1,4 +1,4 @@
-class FixedOrderAgentsExtensionInfo {
+interface FixedOrderAgentsExtensionInfo {
   /**
    * Internal identifier of an extension
    */

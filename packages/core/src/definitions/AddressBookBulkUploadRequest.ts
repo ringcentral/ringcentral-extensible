@@ -1,6 +1,6 @@
 import AddressBookBulkUploadResource from './AddressBookBulkUploadResource';
 
-class AddressBookBulkUploadRequest {
+interface AddressBookBulkUploadRequest {
   /**
    * List of extensions which contacts have to be updated
    * Required

@@ -1,6 +1,6 @@
 import FixedOrderAgentsExtensionInfo from './FixedOrderAgentsExtensionInfo';
 
-class FixedOrderAgents {
+interface FixedOrderAgents {
   /**
    */
   extension?: FixedOrderAgentsExtensionInfo;

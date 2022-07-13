@@ -1,4 +1,4 @@
-class DefaultUserRoleRequest {
+interface DefaultUserRoleRequest {
   /**
    * Internal identifier of a user role to be set as default
    */

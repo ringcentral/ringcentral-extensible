@@ -1,7 +1,7 @@
 import GetPresenceExtensionInfo from './GetPresenceExtensionInfo';
 import ActiveCallInfo from './ActiveCallInfo';
 
-class GetPresenceInfo {
+interface GetPresenceInfo {
   /**
    * Canonical URI of a presence info resource
    */

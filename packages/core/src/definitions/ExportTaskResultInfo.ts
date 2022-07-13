@@ -1,4 +1,4 @@
-class ExportTaskResultInfo {
+interface ExportTaskResultInfo {
   /**
    * Internal identifier of a dataset
    */

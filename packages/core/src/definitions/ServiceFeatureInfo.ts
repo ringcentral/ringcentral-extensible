@@ -1,4 +1,4 @@
-class ServiceFeatureInfo {
+interface ServiceFeatureInfo {
   /**
    * Feature name
    */

@@ -4,7 +4,7 @@ import PagingResource from './PagingResource';
 /**
  * Opt-out phone numbers information
 */
-class OptOutListResponse {
+interface OptOutListResponse {
   /**
    * List of individual opt-out number records
    */

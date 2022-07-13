@@ -12,7 +12,7 @@ import ExtensionStatusInfo from './ExtensionStatusInfo';
 import CallQueueExtensionInfo from './CallQueueExtensionInfo';
 import AutomaticLocationUpdatesSiteInfo from './AutomaticLocationUpdatesSiteInfo';
 
-class GetExtensionInfoResponse {
+interface GetExtensionInfoResponse {
   /**
    * Internal identifier of an extension
    * Format: int64

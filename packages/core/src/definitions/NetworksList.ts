@@ -2,7 +2,7 @@ import NetworkInfo from './NetworkInfo';
 import ProvisioningNavigationInfo from './ProvisioningNavigationInfo';
 import ProvisioningPagingInfo from './ProvisioningPagingInfo';
 
-class NetworksList {
+interface NetworksList {
   /**
    * Link to a networks resource
    */

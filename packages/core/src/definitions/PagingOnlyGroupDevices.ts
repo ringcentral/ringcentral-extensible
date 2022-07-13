@@ -2,7 +2,7 @@ import PagingDeviceInfo from './PagingDeviceInfo';
 import ProvisioningNavigationInfo from './ProvisioningNavigationInfo';
 import ProvisioningPagingInfo from './ProvisioningPagingInfo';
 
-class PagingOnlyGroupDevices {
+interface PagingOnlyGroupDevices {
   /**
    * Link to the list of devices assigned to the paging only group
    */

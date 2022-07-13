@@ -1,4 +1,4 @@
-class MeetingsCountryResource {
+interface MeetingsCountryResource {
   /**
    * Format: uri
    */

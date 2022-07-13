@@ -1,6 +1,6 @@
 import InstantMessageEventBody from './InstantMessageEventBody';
 
-class InstantMessageEvent {
+interface InstantMessageEvent {
   /**
    * Universally unique identifier of a notification
    */

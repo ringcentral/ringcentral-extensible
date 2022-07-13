@@ -1,7 +1,7 @@
 import EmergencyLocationInfo from './EmergencyLocationInfo';
 import ProvisioningPagingInfo from './ProvisioningPagingInfo';
 
-class EmergencyLocationsResource {
+interface EmergencyLocationsResource {
   /**
    */
   records?: EmergencyLocationInfo[];

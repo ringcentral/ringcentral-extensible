@@ -1,7 +1,7 @@
 import CustomGreetingAnsweringRuleInfo from './CustomGreetingAnsweringRuleInfo';
 import CustomCompanyGreetingLanguageInfo from './CustomCompanyGreetingLanguageInfo';
 
-class CustomCompanyGreetingInfo {
+interface CustomCompanyGreetingInfo {
   /**
    * Link to an extension custom greeting
    */

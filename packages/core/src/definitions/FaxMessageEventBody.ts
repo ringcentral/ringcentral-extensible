@@ -5,7 +5,7 @@ import FaxMessageAttachment from './FaxMessageAttachment';
 /**
  * Notification payload body
 */
-class FaxMessageEventBody {
+interface FaxMessageEventBody {
   /**
    * Internal identifier of a message
    */

@@ -1,6 +1,6 @@
 import GlipDataExportNavigationInfoUri from './GlipDataExportNavigationInfoUri';
 
-class GlipDataExportNavigationInfo {
+interface GlipDataExportNavigationInfo {
   /**
    */
   firstPage?: GlipDataExportNavigationInfoUri;

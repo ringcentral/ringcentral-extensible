@@ -5,7 +5,7 @@ import CallLogCallerInfo from './CallLogCallerInfo';
 import CallLogRecordingInfo from './CallLogRecordingInfo';
 import CallLogRecordMessage from './CallLogRecordMessage';
 
-class CallLogRecordLegInfo {
+interface CallLogRecordLegInfo {
   /**
    * Action description of the call operation
    */

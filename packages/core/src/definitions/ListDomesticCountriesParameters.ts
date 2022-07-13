@@ -1,7 +1,7 @@
 /**
  * Query parameters for operation listDomesticCountries
 */
-class ListDomesticCountriesParameters {
+interface ListDomesticCountriesParameters {
   /**
    * Indicates the page number to retrieve. Only positive number values are accepted
    * Default: 1

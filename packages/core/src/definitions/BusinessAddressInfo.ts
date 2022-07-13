@@ -1,7 +1,7 @@
 /**
  * Company business address
 */
-class BusinessAddressInfo {
+interface BusinessAddressInfo {
   /**
    * Name of a country
    */

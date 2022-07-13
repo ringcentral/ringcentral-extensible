@@ -2,7 +2,7 @@ import LanguageInfo from './LanguageInfo';
 import ProvisioningNavigationInfo from './ProvisioningNavigationInfo';
 import ProvisioningPagingInfo from './ProvisioningPagingInfo';
 
-class LanguageList {
+interface LanguageList {
   /**
    * Canonical URI of the language list resource
    */

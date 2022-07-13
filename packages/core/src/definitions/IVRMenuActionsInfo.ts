@@ -1,6 +1,6 @@
 import IVRMenuExtensionInfo from './IVRMenuExtensionInfo';
 
-class IVRMenuActionsInfo {
+interface IVRMenuActionsInfo {
   /**
    * Key. The following values are supported: numeric: '1' to '9' Star Hash NoInput
    */

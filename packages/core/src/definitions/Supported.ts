@@ -1,4 +1,4 @@
-class Supported {
+interface Supported {
   /**
    */
   supported?: boolean;

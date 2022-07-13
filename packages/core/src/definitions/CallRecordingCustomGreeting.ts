@@ -1,7 +1,7 @@
 import CallRecordingCustomGreetingData from './CallRecordingCustomGreetingData';
 import CallRecordingCustomGreetingLanguage from './CallRecordingCustomGreetingLanguage';
 
-class CallRecordingCustomGreeting {
+interface CallRecordingCustomGreeting {
   /**
    */
   type?: ('StartRecording' | 'StopRecording' | 'AutomaticRecording');

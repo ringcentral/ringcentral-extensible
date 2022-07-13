@@ -1,4 +1,4 @@
-class GlipPreferencesChats {
+interface GlipPreferencesChats {
   /**
    */
   maxCount?: number;

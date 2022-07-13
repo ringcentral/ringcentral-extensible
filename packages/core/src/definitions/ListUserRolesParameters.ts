@@ -1,7 +1,7 @@
 /**
  * Query parameters for operation listUserRoles
 */
-class ListUserRolesParameters {
+interface ListUserRolesParameters {
   /**
    * Specifies whether to return custom or predefined only roles. If not specified, all roles are returned
    */

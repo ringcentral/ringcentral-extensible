@@ -1,6 +1,6 @@
 import TransferExtensionInfo from './TransferExtensionInfo';
 
-class TransferInfo {
+interface TransferInfo {
   /**
    */
   extension?: TransferExtensionInfo;

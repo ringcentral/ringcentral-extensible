@@ -3,7 +3,7 @@ import ExtensionInfo from './ExtensionInfo';
 import TemporaryNumberInfo from './TemporaryNumberInfo';
 import ContactCenterProvider from './ContactCenterProvider';
 
-class CompanyPhoneNumberInfo {
+interface CompanyPhoneNumberInfo {
   /**
    * Link to a company phone number resource
    */

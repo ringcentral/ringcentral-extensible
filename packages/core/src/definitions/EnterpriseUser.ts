@@ -1,4 +1,4 @@
-class EnterpriseUser {
+interface EnterpriseUser {
   /**
    */
   department?: string;

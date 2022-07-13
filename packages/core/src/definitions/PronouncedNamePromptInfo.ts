@@ -1,4 +1,4 @@
-class PronouncedNamePromptInfo {
+interface PronouncedNamePromptInfo {
   /**
    */
   id?: string;

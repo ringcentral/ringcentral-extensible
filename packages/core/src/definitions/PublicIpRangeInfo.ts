@@ -1,4 +1,4 @@
-class PublicIpRangeInfo {
+interface PublicIpRangeInfo {
   /**
    */
   id?: string;

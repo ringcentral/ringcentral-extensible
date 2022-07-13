@@ -1,6 +1,6 @@
 import APNSInfo from './APNSInfo';
 
-class MissedCallEvent {
+interface MissedCallEvent {
   /**
    * Universally unique identifier of a notification
    */

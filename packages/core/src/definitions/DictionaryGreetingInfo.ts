@@ -1,7 +1,7 @@
 import CallHandlingNavigationInfo from './CallHandlingNavigationInfo';
 import CallHandlingPagingInfo from './CallHandlingPagingInfo';
 
-class DictionaryGreetingInfo {
+interface DictionaryGreetingInfo {
   /**
    * Internal identifier of a greeting
    */

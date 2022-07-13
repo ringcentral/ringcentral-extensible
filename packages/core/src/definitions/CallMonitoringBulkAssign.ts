@@ -1,6 +1,6 @@
 import CallMonitoringExtensionInfo from './CallMonitoringExtensionInfo';
 
-class CallMonitoringBulkAssign {
+interface CallMonitoringBulkAssign {
   /**
    */
   addedExtensions?: CallMonitoringExtensionInfo[];

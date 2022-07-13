@@ -1,4 +1,4 @@
-class BulkRoleAssignResource {
+interface BulkRoleAssignResource {
   /**
    * Example: true
    */

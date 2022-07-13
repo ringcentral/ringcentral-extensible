@@ -1,7 +1,7 @@
 /**
  * Query parameters for operation listFaxCoverPages
 */
-class ListFaxCoverPagesParameters {
+interface ListFaxCoverPagesParameters {
   /**
    * Indicates the page number to retrieve. Only positive number values are accepted
    * Default: 1

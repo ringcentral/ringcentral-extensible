@@ -1,4 +1,4 @@
-class CallsByResponse {
+interface CallsByResponse {
   /**
    * Required
    * Format: double

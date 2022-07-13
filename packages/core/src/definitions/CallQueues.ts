@@ -2,7 +2,7 @@ import CallQueueInfo from './CallQueueInfo';
 import ProvisioningNavigationInfo from './ProvisioningNavigationInfo';
 import ProvisioningPagingInfo from './ProvisioningPagingInfo';
 
-class CallQueues {
+interface CallQueues {
   /**
    * Link to a call queues resource
    * Required

@@ -1,6 +1,6 @@
 import ExtensionGrantListEventBody from './ExtensionGrantListEventBody';
 
-class ExtensionGrantListEvent {
+interface ExtensionGrantListEvent {
   /**
    * Universally unique identifier of a notification
    */

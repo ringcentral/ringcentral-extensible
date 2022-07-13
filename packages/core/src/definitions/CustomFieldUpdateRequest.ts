@@ -1,4 +1,4 @@
-class CustomFieldUpdateRequest {
+interface CustomFieldUpdateRequest {
   /**
    * Custom field display name
    */

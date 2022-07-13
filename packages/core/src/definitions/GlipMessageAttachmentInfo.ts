@@ -2,7 +2,7 @@ import GlipMessageAttachmentAuthorInfo from './GlipMessageAttachmentAuthorInfo';
 import GlipMessageAttachmentFieldsInfo from './GlipMessageAttachmentFieldsInfo';
 import GlipMessageAttachmentFootnoteInfo from './GlipMessageAttachmentFootnoteInfo';
 
-class GlipMessageAttachmentInfo {
+interface GlipMessageAttachmentInfo {
   /**
    * Internal identifier of an attachment
    */

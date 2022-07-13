@@ -2,7 +2,7 @@ import AutomaticLocationUpdatesUserInfo from './AutomaticLocationUpdatesUserInfo
 import ProvisioningNavigationInfo from './ProvisioningNavigationInfo';
 import ProvisioningPagingInfo from './ProvisioningPagingInfo';
 
-class AutomaticLocationUpdatesUserList {
+interface AutomaticLocationUpdatesUserList {
   /**
    * Link to the users list resource
    */

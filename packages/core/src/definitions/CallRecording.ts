@@ -1,4 +1,4 @@
-class CallRecording {
+interface CallRecording {
   /**
    * Internal identifier of a call recording
    */

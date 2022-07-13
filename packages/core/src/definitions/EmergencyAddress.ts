@@ -1,4 +1,4 @@
-class EmergencyAddress {
+interface EmergencyAddress {
   /**
    * 'True' if specifying of emergency address is required
    */

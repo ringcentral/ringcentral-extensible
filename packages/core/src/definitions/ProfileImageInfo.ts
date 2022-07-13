@@ -3,7 +3,7 @@ import ProfileImageInfoURI from './ProfileImageInfoURI';
 /**
  * Information on profile image
 */
-class ProfileImageInfo {
+interface ProfileImageInfo {
   /**
    * Link to a profile image. If an image is not uploaded for an extension, only uri is returned
    * Required

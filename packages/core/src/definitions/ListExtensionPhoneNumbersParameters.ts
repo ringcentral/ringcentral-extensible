@@ -1,7 +1,7 @@
 /**
  * Query parameters for operation listExtensionPhoneNumbers
 */
-class ListExtensionPhoneNumbersParameters {
+interface ListExtensionPhoneNumbersParameters {
   /**
    * Status of a phone number. Multiple values are supported
    */

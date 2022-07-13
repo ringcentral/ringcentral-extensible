@@ -1,7 +1,7 @@
 /**
  * Extension phone number information
 */
-class CompanyDirectoryPhoneNumberInfo {
+interface CompanyDirectoryPhoneNumberInfo {
   /**
    * Extension phone number in E.164 format
    */

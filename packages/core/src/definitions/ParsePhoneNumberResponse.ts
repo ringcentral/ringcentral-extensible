@@ -1,7 +1,7 @@
 import GetCountryInfoNumberParser from './GetCountryInfoNumberParser';
 import PhoneNumberInfoNumberParser from './PhoneNumberInfoNumberParser';
 
-class ParsePhoneNumberResponse {
+interface ParsePhoneNumberResponse {
   /**
    * Canonical URI of a resource
    */

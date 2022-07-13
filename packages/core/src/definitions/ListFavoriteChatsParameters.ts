@@ -1,7 +1,7 @@
 /**
  * Query parameters for operation listFavoriteChats
 */
-class ListFavoriteChatsParameters {
+interface ListFavoriteChatsParameters {
   /**
    * Max number of chats to be fetched by one request (Not more than 250).
    * Maximum: 250

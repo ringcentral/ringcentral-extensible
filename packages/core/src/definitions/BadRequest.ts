@@ -1,6 +1,6 @@
 import ErrorBody from './ErrorBody';
 
-class BadRequest {
+interface BadRequest {
   /**
    */
   errors?: ErrorBody[];

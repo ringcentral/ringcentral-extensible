@@ -1,6 +1,6 @@
 import ReplyWithPattern from './ReplyWithPattern';
 
-class CallPartyReply {
+interface CallPartyReply {
   /**
    * Text to reply
    */

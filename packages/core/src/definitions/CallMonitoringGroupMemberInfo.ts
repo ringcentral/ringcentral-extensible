@@ -1,4 +1,4 @@
-class CallMonitoringGroupMemberInfo {
+interface CallMonitoringGroupMemberInfo {
   /**
    * Link to a call monitoring group member
    */

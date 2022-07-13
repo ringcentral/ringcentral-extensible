@@ -2,7 +2,7 @@ import PromptInfo from './PromptInfo';
 import CallHandlingNavigationInfo from './CallHandlingNavigationInfo';
 import CallHandlingPagingInfo from './CallHandlingPagingInfo';
 
-class IVRPrompts {
+interface IVRPrompts {
   /**
    * Link to prompts library resource
    */

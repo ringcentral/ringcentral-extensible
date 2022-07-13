@@ -1,7 +1,7 @@
 /**
  * Extension information
 */
-class ExtensionInfoGrants {
+interface ExtensionInfoGrants {
   /**
    * Internal identifier of an extension
    */

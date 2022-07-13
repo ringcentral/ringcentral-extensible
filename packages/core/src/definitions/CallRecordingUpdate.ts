@@ -1,4 +1,4 @@
-class CallRecordingUpdate {
+interface CallRecordingUpdate {
   /**
    * Recording status
    */

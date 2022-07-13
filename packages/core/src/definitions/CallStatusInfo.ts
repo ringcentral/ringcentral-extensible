@@ -3,7 +3,7 @@ import PeerInfo from './PeerInfo';
 /**
  * Status data of a call session
 */
-class CallStatusInfo {
+interface CallStatusInfo {
   /**
    * Status code of a call
    */

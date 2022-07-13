@@ -2,7 +2,7 @@ import TemplateInfo from './TemplateInfo';
 import ProvisioningNavigationInfo from './ProvisioningNavigationInfo';
 import ProvisioningPagingInfo from './ProvisioningPagingInfo';
 
-class UserTemplates {
+interface UserTemplates {
   /**
    * Link to user templates resource
    */

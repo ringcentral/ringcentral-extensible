@@ -1,4 +1,4 @@
-class CallMonitoringExtensionInfo {
+interface CallMonitoringExtensionInfo {
   /**
    * Internal identifier of an extension. Only the following extension types are allowed: User, DigitalUser, VirtualUser, FaxUser, Limited
    */

@@ -5,7 +5,7 @@ import OutboundFaxesInfo from './OutboundFaxesInfo';
 import InboundTextsInfo from './InboundTextsInfo';
 import MissedCallsInfo from './MissedCallsInfo';
 
-class NotificationSettings {
+interface NotificationSettings {
   /**
    * Canonical URI of notifications settings resource
    */

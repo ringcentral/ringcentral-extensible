@@ -1,4 +1,4 @@
-class GlipMessageAttachmentFieldsInfo {
+interface GlipMessageAttachmentFieldsInfo {
   /**
    * Title of an individual field
    */

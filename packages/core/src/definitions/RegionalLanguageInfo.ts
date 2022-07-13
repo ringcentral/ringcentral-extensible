@@ -1,7 +1,7 @@
 /**
  * Information on a language set as regional
 */
-class RegionalLanguageInfo {
+interface RegionalLanguageInfo {
   /**
    * Internal identifier of a language set as regional
    */

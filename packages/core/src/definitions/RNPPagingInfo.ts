@@ -1,4 +1,4 @@
-class RNPPagingInfo {
+interface RNPPagingInfo {
   /**
    * Format: int32
    */

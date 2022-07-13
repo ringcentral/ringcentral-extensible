@@ -1,6 +1,6 @@
 import BulkTaskInfoSwUpdate from './BulkTaskInfoSwUpdate';
 
-class UpdateMultipleSwitchesResponse {
+interface UpdateMultipleSwitchesResponse {
   /**
    */
   task?: BulkTaskInfoSwUpdate;

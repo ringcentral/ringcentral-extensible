@@ -1,7 +1,7 @@
 import ParamsInfo from './ParamsInfo';
 import ReasonInfo from './ReasonInfo';
 
-class FeatureInfo {
+interface FeatureInfo {
   /**
    * Internal identifier of a feature
    */

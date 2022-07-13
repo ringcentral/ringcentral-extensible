@@ -4,7 +4,7 @@ import PagingResource from './PagingResource';
 /**
  * List of messages retrieved for an account and other filter criteria such as `batchId` and `fromPhoneNumber` specified in the request
 */
-class MessageListResponse {
+interface MessageListResponse {
   /**
    * An array containing individual messages
    */

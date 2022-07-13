@@ -1,7 +1,7 @@
 /**
  * Session origin details
 */
-class OriginInfo {
+interface OriginInfo {
   /**
    * Session origin type
    */

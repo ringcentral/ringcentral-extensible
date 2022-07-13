@@ -1,6 +1,6 @@
 import CallRecordingExtensionResource from './CallRecordingExtensionResource';
 
-class BulkAccountCallRecordingsResource {
+interface BulkAccountCallRecordingsResource {
   /**
    */
   addedExtensions?: CallRecordingExtensionResource[];

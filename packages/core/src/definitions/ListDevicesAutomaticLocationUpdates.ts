@@ -2,7 +2,7 @@ import AutomaticLocationUpdatesDeviceInfo from './AutomaticLocationUpdatesDevice
 import ProvisioningNavigationInfo from './ProvisioningNavigationInfo';
 import ProvisioningPagingInfo from './ProvisioningPagingInfo';
 
-class ListDevicesAutomaticLocationUpdates {
+interface ListDevicesAutomaticLocationUpdates {
   /**
    * Link to devices resource
    */

@@ -4,7 +4,7 @@ import AdditionalCQInfo from './AdditionalCQInfo';
 /**
  * Primary/additional CQ information
 */
-class CallInfoCQ {
+interface CallInfoCQ {
   /**
    */
   primary?: PrimaryCQInfo;

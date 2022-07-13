@@ -1,6 +1,6 @@
 import CallQueueServiceLevelSettings from './CallQueueServiceLevelSettings';
 
-class CallQueueDetails {
+interface CallQueueDetails {
   /**
    * Internal identifier of a call queue
    */

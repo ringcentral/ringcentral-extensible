@@ -1,4 +1,4 @@
-class UserVideoConfiguration {
+interface UserVideoConfiguration {
   /**
    * Video provider of the user
    */

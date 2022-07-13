@@ -1,7 +1,7 @@
 import MessageStoreCallerInfoRequest from './MessageStoreCallerInfoRequest';
 import MessageCountryInfo from './MessageCountryInfo';
 
-class CreateSMSMessage {
+interface CreateSMSMessage {
   /**
    * Required
    */

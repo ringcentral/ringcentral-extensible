@@ -1,7 +1,7 @@
 /**
  * Information on address book groups
 */
-class UserContactsGroupsInfo {
+interface UserContactsGroupsInfo {
   /**
    * Link to the list of address book groups
    */

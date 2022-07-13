@@ -1,4 +1,4 @@
-class GlipNoteCreate {
+interface GlipNoteCreate {
   /**
    * Title of a note. Max allowed length is 250 characters
    * Required

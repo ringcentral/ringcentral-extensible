@@ -7,7 +7,7 @@ import CustomFieldInfo from './CustomFieldInfo';
 import AutomaticLocationUpdatesSiteInfo from './AutomaticLocationUpdatesSiteInfo';
 import ReferenceInfo from './ReferenceInfo';
 
-class ExtensionBulkUpdateInfo {
+interface ExtensionBulkUpdateInfo {
   /**
    * Internal identifier of an extension
    */

@@ -1,4 +1,4 @@
-class ConferencePhoneNumberInfo {
+interface ConferencePhoneNumberInfo {
   /**
    * Dial-in phone number to connect to a conference
    */

@@ -1,6 +1,6 @@
 import CallQueuePresenceEventBody from './CallQueuePresenceEventBody';
 
-class CallQueuePresenceEvent {
+interface CallQueuePresenceEvent {
   /**
    * Universally unique identifier of a notification
    */

@@ -1,6 +1,6 @@
 import TelephonySessionsEventBody from './TelephonySessionsEventBody';
 
-class AccountTelephonySessionsEvent {
+interface AccountTelephonySessionsEvent {
   /**
    * Universally unique identifier of a notification
    */

@@ -3,7 +3,7 @@ import PerformanceCallsTimeInterval from './PerformanceCallsTimeInterval';
 /**
  * Allows more granular control over time included in the report
 */
-class PerformanceCallsAdvancedTimeSettings {
+interface PerformanceCallsAdvancedTimeSettings {
   /**
    * Name of the timezone that will be used for `includeDays` and `includeHours` filters. For example 'America/Los_Angeles', 'Europe/Moscow'. See also *[Time Zones](https://www.iana.org/time-zones)*
    */

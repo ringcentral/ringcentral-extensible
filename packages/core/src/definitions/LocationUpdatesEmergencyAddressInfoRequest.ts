@@ -1,7 +1,7 @@
 /**
  * Emergency address assigned to the switch. Only one of a pair `emergencyAddress` or `emergencyLocationId` should be specified, otherwise the error is returned
 */
-class LocationUpdatesEmergencyAddressInfoRequest {
+interface LocationUpdatesEmergencyAddressInfoRequest {
   /**
    * Country name
    */

@@ -1,7 +1,7 @@
 /**
  * Query parameters for operation listUserTemplates
 */
-class ListUserTemplatesParameters {
+interface ListUserTemplatesParameters {
   /**
    */
   type?: ('UserSettings' | 'CallHandling');

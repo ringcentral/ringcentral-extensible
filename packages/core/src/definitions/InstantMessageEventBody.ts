@@ -6,7 +6,7 @@ import ConversationInfo from './ConversationInfo';
 /**
  * Notification payload body
 */
-class InstantMessageEventBody {
+interface InstantMessageEventBody {
   /**
    * Internal identifier of a message
    */

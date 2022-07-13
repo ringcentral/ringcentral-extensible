@@ -1,7 +1,7 @@
 /**
  * Query parameters for operation performanceReportCallsTimeline
 */
-class PerformanceReportCallsTimelineParameters {
+interface PerformanceReportCallsTimelineParameters {
   /**
    * Aggregation interval
    */

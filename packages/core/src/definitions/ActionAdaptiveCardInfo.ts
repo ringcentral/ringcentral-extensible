@@ -1,6 +1,6 @@
 import ActionCardBody from './ActionCardBody';
 
-class ActionAdaptiveCardInfo {
+interface ActionAdaptiveCardInfo {
   /**
    */
   type?: ('AdaptiveCard');

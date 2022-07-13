@@ -3,7 +3,7 @@ import OptOutBulkAssignFailedEntry from './OptOutBulkAssignFailedEntry';
 /**
  * Contains successfull and failed opt-ins
 */
-class BulkAssignOptIns {
+interface BulkAssignOptIns {
   /**
    * Recipients' phone numbers which opt-ins were successfully added for.
    * Example: ["15551237799"]

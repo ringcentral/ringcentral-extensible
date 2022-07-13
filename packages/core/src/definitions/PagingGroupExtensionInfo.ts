@@ -1,4 +1,4 @@
-class PagingGroupExtensionInfo {
+interface PagingGroupExtensionInfo {
   /**
    * Internal identifier of a paging group user extension
    */

@@ -1,6 +1,6 @@
 import CallQueueServiceLevelSettings from './CallQueueServiceLevelSettings';
 
-class CallQueueUpdateDetails {
+interface CallQueueUpdateDetails {
   /**
    */
   serviceLevelSettings?: CallQueueServiceLevelSettings;

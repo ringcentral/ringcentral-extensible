@@ -6,7 +6,7 @@ import CallLogRecordMessage from './CallLogRecordMessage';
 import CallLogDelegateInfo from './CallLogDelegateInfo';
 import CallLogRecordingInfo from './CallLogRecordingInfo';
 
-class UserCallLogRecord {
+interface UserCallLogRecord {
   /**
    * Internal identifier of a cal log record
    */

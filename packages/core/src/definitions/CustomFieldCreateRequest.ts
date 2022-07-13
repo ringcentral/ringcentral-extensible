@@ -1,4 +1,4 @@
-class CustomFieldCreateRequest {
+interface CustomFieldCreateRequest {
   /**
    * Object category to attach custom fields
    */

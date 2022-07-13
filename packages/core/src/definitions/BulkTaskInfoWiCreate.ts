@@ -1,7 +1,7 @@
 /**
  * Information on the task for multiple wireless points creation
 */
-class BulkTaskInfoWiCreate {
+interface BulkTaskInfoWiCreate {
   /**
    * Internal identifier of a task for multiple switches creation
    */

@@ -2,7 +2,7 @@ import WirelessPointInfo from './WirelessPointInfo';
 import ProvisioningNavigationInfo from './ProvisioningNavigationInfo';
 import ProvisioningPagingInfo from './ProvisioningPagingInfo';
 
-class WirelessPointsList {
+interface WirelessPointsList {
   /**
    * Link to the wireless point list resource
    */

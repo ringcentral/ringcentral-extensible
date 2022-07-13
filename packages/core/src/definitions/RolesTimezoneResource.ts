@@ -1,4 +1,4 @@
-class RolesTimezoneResource {
+interface RolesTimezoneResource {
   /**
    * Format: uri
    */

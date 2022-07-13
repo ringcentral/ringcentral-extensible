@@ -1,7 +1,7 @@
 /**
  * Notification payload body
 */
-class ExtensionListEventBody {
+interface ExtensionListEventBody {
   /**
    * Internal identifier of an extension
    */

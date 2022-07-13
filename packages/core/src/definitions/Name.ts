@@ -1,4 +1,4 @@
-class Name {
+interface Name {
   /**
    * Required
    */

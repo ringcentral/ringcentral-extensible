@@ -12,7 +12,7 @@ import PerformanceCallsByType from './PerformanceCallsByType';
 /**
  * Call volume data for the specified grouping
 */
-class PerformanceCallsCounters {
+interface PerformanceCallsCounters {
   /**
    */
   allCalls?: PerformanceCallsTotal;

@@ -2,7 +2,7 @@ import CompanyPhoneNumberInfo from './CompanyPhoneNumberInfo';
 import ProvisioningNavigationInfo from './ProvisioningNavigationInfo';
 import ProvisioningPagingInfo from './ProvisioningPagingInfo';
 
-class AccountPhoneNumbers {
+interface AccountPhoneNumbers {
   /**
    * Link to the list of account phone numbers
    */

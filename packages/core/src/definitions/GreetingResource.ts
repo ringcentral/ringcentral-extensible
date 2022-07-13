@@ -1,4 +1,4 @@
-class GreetingResource {
+interface GreetingResource {
   /**
    */
   type?: ('StartRecording' | 'StopRecording' | 'AutomaticRecording');

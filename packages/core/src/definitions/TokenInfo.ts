@@ -1,4 +1,4 @@
-class TokenInfo {
+interface TokenInfo {
   /**
    * Access token to pass to subsequent API requests
    * Example: U1BCMDFUMDRKV1MwMXxzLFSvXdw5PHMsVLEn_MrtcyxUsw

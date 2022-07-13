@@ -2,7 +2,7 @@ import SipRegistrationDeviceInfo from './SipRegistrationDeviceInfo';
 import SIPInfoResponse from './SIPInfoResponse';
 import SIPFlagsResponse from './SIPFlagsResponse';
 
-class CreateSipRegistrationResponse {
+interface CreateSipRegistrationResponse {
   /**
    */
   device?: SipRegistrationDeviceInfo;

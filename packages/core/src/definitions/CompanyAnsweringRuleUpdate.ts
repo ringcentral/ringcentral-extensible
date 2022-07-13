@@ -3,7 +3,7 @@ import CompanyAnsweringRuleCalledNumberInfo from './CompanyAnsweringRuleCalledNu
 import CompanyAnsweringRuleScheduleInfoRequest from './CompanyAnsweringRuleScheduleInfoRequest';
 import GreetingInfo from './GreetingInfo';
 
-class CompanyAnsweringRuleUpdate {
+interface CompanyAnsweringRuleUpdate {
   /**
    * Specifies if the rule is active or inactive. The default value is 'True'
    * Default: true

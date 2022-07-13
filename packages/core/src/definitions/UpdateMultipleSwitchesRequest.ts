@@ -1,6 +1,6 @@
 import UpdateSwitchInfo from './UpdateSwitchInfo';
 
-class UpdateMultipleSwitchesRequest {
+interface UpdateMultipleSwitchesRequest {
   /**
    */
   records?: UpdateSwitchInfo[];

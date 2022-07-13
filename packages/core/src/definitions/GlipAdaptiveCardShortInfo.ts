@@ -1,6 +1,6 @@
 import AdaptiveCardCreator from './AdaptiveCardCreator';
 
-class GlipAdaptiveCardShortInfo {
+interface GlipAdaptiveCardShortInfo {
   /**
    * Internal identifier of an adaptive card
    */

@@ -1,6 +1,6 @@
 import LocationUpdatesEmergencyAddressInfoRequest from './LocationUpdatesEmergencyAddressInfoRequest';
 
-class PrivateIpRangeInfoRequest {
+interface PrivateIpRangeInfoRequest {
   /**
    */
   id?: string;

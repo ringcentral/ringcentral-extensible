@@ -1,6 +1,6 @@
 import APSInfo from './APSInfo';
 
-class IncomingCallEvent {
+interface IncomingCallEvent {
   /**
    */
   aps?: APSInfo;

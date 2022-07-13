@@ -2,7 +2,7 @@ import MeetingScheduleResource from './MeetingScheduleResource';
 import HostInfoRequest from './HostInfoRequest';
 import RecurrenceInfo from './RecurrenceInfo';
 
-class MeetingRequestResource {
+interface MeetingRequestResource {
   /**
    * Custom topic of a meeting
    */

@@ -1,4 +1,4 @@
-class CallersInfoRequest {
+interface CallersInfoRequest {
   /**
    * Phone number of a caller
    */

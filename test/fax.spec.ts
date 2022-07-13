@@ -10,15 +10,15 @@ import { createRingCentral } from './utils';
 describe('fax', () => {
   test('send fax', async () => {
     const rc = await createRingCentral();
-    const createFaxMessageRequest = new CreateFaxMessageRequest();
+    const createFaxMessageRequest: CreateFaxMessageRequest = {};
     createFaxMessageRequest.to = [
       { phoneNumber: process.env.RINGCENTRAL_RECEIVER },
     ];
-    const attachment1 = new Attachment();
+    const attachment1: Attachment = {};
     attachment1.filename = 'text.txt';
     attachment1.content = 'hello world';
     attachment1.contentType = 'text/plain';
-    const attachment2 = new Attachment();
+    const attachment2: Attachment = {};
     attachment2.filename = 'text.png';
     attachment2.content = fs.createReadStream(path.join(__dirname, 'test.png'));
     attachment2.contentType = 'image/png';
@@ -36,11 +36,11 @@ describe('fax', () => {
 
   test('send fax - low level api', async () => {
     const rc = await createRingCentral();
-    const attachment1 = new Attachment();
+    const attachment1: Attachment = {};
     attachment1.filename = 'text.txt';
     attachment1.content = 'hello world';
     attachment1.contentType = 'text/plain';
-    const attachment2 = new Attachment();
+    const attachment2: Attachment = {};
     attachment2.filename = 'text.png';
     attachment2.content = fs.createReadStream(path.join(__dirname, 'test.png'));
     attachment2.contentType = 'image/png';

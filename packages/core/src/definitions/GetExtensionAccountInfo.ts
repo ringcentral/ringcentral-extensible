@@ -1,7 +1,7 @@
 /**
  * Account information
 */
-class GetExtensionAccountInfo {
+interface GetExtensionAccountInfo {
   /**
    * Internal identifier of an account
    */

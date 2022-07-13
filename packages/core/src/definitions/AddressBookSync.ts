@@ -1,7 +1,7 @@
 import PersonalContactResource from './PersonalContactResource';
 import SyncInfo from './SyncInfo';
 
-class AddressBookSync {
+interface AddressBookSync {
   /**
    * Format: uri
    */

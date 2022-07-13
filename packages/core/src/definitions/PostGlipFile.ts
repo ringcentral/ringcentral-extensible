@@ -1,4 +1,4 @@
-class PostGlipFile {
+interface PostGlipFile {
   /**
    * Internal identifier of a file
    * Required

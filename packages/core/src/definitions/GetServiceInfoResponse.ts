@@ -7,7 +7,7 @@ import ServiceFeatureInfo from './ServiceFeatureInfo';
 import AccountLimits from './AccountLimits';
 import PackageInfo from './PackageInfo';
 
-class GetServiceInfoResponse {
+interface GetServiceInfoResponse {
   /**
    * Canonical URI of the account Service Info resource
    */

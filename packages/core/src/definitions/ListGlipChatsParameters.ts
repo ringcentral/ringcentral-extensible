@@ -1,7 +1,7 @@
 /**
  * Query parameters for operation listGlipChats
 */
-class ListGlipChatsParameters {
+interface ListGlipChatsParameters {
   /**
    * Type of chats to be fetched. By default all type of chats will be fetched
    */

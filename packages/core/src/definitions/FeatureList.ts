@@ -1,6 +1,6 @@
 import FeatureInfo from './FeatureInfo';
 
-class FeatureList {
+interface FeatureList {
   /**
    */
   records?: FeatureInfo[];

@@ -1,7 +1,7 @@
 /**
  * Query parameters for operation listCallRecordingCustomGreetings
 */
-class ListCallRecordingCustomGreetingsParameters {
+interface ListCallRecordingCustomGreetingsParameters {
   /**
    */
   type?: ('StartRecording' | 'StopRecording' | 'AutomaticRecording');

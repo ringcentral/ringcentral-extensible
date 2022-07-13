@@ -1,6 +1,6 @@
 import UnifiedPresence from './UnifiedPresence';
 
-class UnifiedPresenceListEntry {
+interface UnifiedPresenceListEntry {
   /**
    * Internal identifier of the resource
    */

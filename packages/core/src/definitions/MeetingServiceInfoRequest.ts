@@ -1,6 +1,6 @@
 import MeetingExternalUserInfoResource from './MeetingExternalUserInfoResource';
 
-class MeetingServiceInfoRequest {
+interface MeetingServiceInfoRequest {
   /**
    */
   externalUserInfo?: MeetingExternalUserInfoResource;

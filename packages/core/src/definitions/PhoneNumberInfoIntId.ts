@@ -4,7 +4,7 @@ import DeviceProvisioningExtensionInfo from './DeviceProvisioningExtensionInfo';
 /**
  * Phone number information
 */
-class PhoneNumberInfoIntId {
+interface PhoneNumberInfoIntId {
   /**
    * Internal identifier of a phone number
    * Format: int64

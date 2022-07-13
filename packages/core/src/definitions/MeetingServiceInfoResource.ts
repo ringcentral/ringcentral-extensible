@@ -1,7 +1,7 @@
 import MeetingExternalUserInfoResource from './MeetingExternalUserInfoResource';
 import DialInNumberResource from './DialInNumberResource';
 
-class MeetingServiceInfoResource {
+interface MeetingServiceInfoResource {
   /**
    * Format: uri
    */

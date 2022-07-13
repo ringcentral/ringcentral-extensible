@@ -4,7 +4,7 @@ import ErrorEntity from './ErrorEntity';
 /**
  * Result record on multiple extension update task
 */
-class ExtensionBulkUpdateTaskResult {
+interface ExtensionBulkUpdateTaskResult {
   /**
    */
   affectedItems?: ExtensionUpdateShortResult[];

@@ -1,6 +1,6 @@
 import CreateSwitchInfo from './CreateSwitchInfo';
 
-class CreateMultipleSwitchesRequest {
+interface CreateMultipleSwitchesRequest {
   /**
    */
   records?: CreateSwitchInfo[];

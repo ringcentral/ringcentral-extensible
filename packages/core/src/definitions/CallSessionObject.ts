@@ -4,7 +4,7 @@ import CallParty from './CallParty';
 /**
  * Call session information
 */
-class CallSessionObject {
+interface CallSessionObject {
   /**
    * Internal identifier of a call session
    */

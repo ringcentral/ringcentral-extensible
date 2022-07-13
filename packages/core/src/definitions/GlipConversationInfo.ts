@@ -1,6 +1,6 @@
 import CreateGlipMember from './CreateGlipMember';
 
-class GlipConversationInfo {
+interface GlipConversationInfo {
   /**
    * Internal identifier of a conversation
    */

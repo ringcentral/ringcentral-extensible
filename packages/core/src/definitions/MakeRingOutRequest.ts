@@ -3,7 +3,7 @@ import MakeRingOutCallerInfoRequestTo from './MakeRingOutCallerInfoRequestTo';
 import MakeRingOutCallerIdInfo from './MakeRingOutCallerIdInfo';
 import MakeRingOutCoutryInfo from './MakeRingOutCoutryInfo';
 
-class MakeRingOutRequest {
+interface MakeRingOutRequest {
   /**
    * Required
    */

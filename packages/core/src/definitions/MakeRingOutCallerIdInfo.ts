@@ -1,7 +1,7 @@
 /**
  * The number which will be displayed to the called party
 */
-class MakeRingOutCallerIdInfo {
+interface MakeRingOutCallerIdInfo {
   /**
    * Phone number in E.164 format
    */

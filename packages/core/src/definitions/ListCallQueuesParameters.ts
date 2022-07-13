@@ -1,7 +1,7 @@
 /**
  * Query parameters for operation listCallQueues
 */
-class ListCallQueuesParameters {
+interface ListCallQueuesParameters {
   /**
    * Indicates the page number to retrieve. Only positive number values are accepted
    * Default: 1

@@ -1,7 +1,7 @@
 /**
  * Query parameters for operation listExtensionActiveCalls
 */
-class ListExtensionActiveCallsParameters {
+interface ListExtensionActiveCallsParameters {
   /**
    * The direction for the result records. If not specified, both inbound and outbound records are returned. Multiple values are accepted
    */

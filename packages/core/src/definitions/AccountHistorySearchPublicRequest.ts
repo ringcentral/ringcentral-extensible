@@ -1,4 +1,4 @@
-class AccountHistorySearchPublicRequest {
+interface AccountHistorySearchPublicRequest {
   /**
    * UTC formatted datetime (RFC3339)
  *

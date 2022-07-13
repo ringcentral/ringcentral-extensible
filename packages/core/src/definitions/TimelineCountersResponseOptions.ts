@@ -1,4 +1,4 @@
-class TimelineCountersResponseOptions {
+interface TimelineCountersResponseOptions {
   /**
    */
   allCalls?: boolean;

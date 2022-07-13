@@ -1,4 +1,4 @@
-class TaskResultRecordErrorsInfo {
+interface TaskResultRecordErrorsInfo {
   /**
    */
   errorCode?: string;

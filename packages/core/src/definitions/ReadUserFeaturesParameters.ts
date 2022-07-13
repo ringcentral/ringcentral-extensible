@@ -1,7 +1,7 @@
 /**
  * Query parameters for operation readUserFeatures
 */
-class ReadUserFeaturesParameters {
+interface ReadUserFeaturesParameters {
   /**
    */
   availableOnly?: boolean;

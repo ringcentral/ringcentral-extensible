@@ -1,4 +1,4 @@
-class AssistedUserResource {
+interface AssistedUserResource {
   /**
    */
   id?: string;

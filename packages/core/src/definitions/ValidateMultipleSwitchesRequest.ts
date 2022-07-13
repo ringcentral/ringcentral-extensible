@@ -1,6 +1,6 @@
 import SwitchInfo from './SwitchInfo';
 
-class ValidateMultipleSwitchesRequest {
+interface ValidateMultipleSwitchesRequest {
   /**
    */
   records?: SwitchInfo[];

@@ -1,4 +1,4 @@
-class CallsByCompanyHours {
+interface CallsByCompanyHours {
   /**
    * Required
    * Format: double

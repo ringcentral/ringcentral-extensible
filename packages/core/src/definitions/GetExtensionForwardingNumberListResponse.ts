@@ -2,7 +2,7 @@ import ForwardingNumberInfo from './ForwardingNumberInfo';
 import CallHandlingNavigationInfo from './CallHandlingNavigationInfo';
 import CallHandlingPagingInfo from './CallHandlingPagingInfo';
 
-class GetExtensionForwardingNumberListResponse {
+interface GetExtensionForwardingNumberListResponse {
   /**
    * Link to the forwarding number list resource
    */

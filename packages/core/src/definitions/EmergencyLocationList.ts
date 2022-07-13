@@ -2,7 +2,7 @@ import EmergencyLocationInfo from './EmergencyLocationInfo';
 import ProvisioningNavigationInfo from './ProvisioningNavigationInfo';
 import ProvisioningPagingInfo from './ProvisioningPagingInfo';
 
-class EmergencyLocationList {
+interface EmergencyLocationList {
   /**
    * Link to the emergency location list resource
    */

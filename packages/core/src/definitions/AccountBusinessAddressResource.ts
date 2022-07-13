@@ -1,6 +1,6 @@
 import ContactBusinessAddressInfo from './ContactBusinessAddressInfo';
 
-class AccountBusinessAddressResource {
+interface AccountBusinessAddressResource {
   /**
    * Format: uri
    */

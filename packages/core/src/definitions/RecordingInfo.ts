@@ -1,4 +1,4 @@
-class RecordingInfo {
+interface RecordingInfo {
   /**
    * Internal identifier of a recording resource
    */

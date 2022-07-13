@@ -1,4 +1,4 @@
-class PerformanceCallsTimersResponseOptionsCallsDurationByQueueSla {
+interface PerformanceCallsTimersResponseOptionsCallsDurationByQueueSla {
   /**
    */
   aggregationType?: ('Sum' | 'Average' | 'Max' | 'Min' | 'Percent');

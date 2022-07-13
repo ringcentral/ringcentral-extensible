@@ -1,6 +1,6 @@
 import GlipPreferencesChats from './GlipPreferencesChats';
 
-class GlipPreferencesInfo {
+interface GlipPreferencesInfo {
   /**
    */
   chats?: GlipPreferencesChats;

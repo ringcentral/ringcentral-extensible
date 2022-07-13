@@ -1,4 +1,4 @@
-class CreateCallMonitoringGroupRequest {
+interface CreateCallMonitoringGroupRequest {
   /**
    * Name of a group
    * Required

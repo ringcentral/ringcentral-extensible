@@ -1,7 +1,7 @@
 /**
  * Additional info about the key
 */
-class KeyInfo {
+interface KeyInfo {
   /**
    */
   extensionNumber?: string;

@@ -1,4 +1,4 @@
-class UserAddress {
+interface UserAddress {
   /**
    */
   country?: string;

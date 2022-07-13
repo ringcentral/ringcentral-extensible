@@ -1,7 +1,7 @@
 /**
  * This attribute can be omitted for unassigned devices
 */
-class ExtensionInfoIntId {
+interface ExtensionInfoIntId {
   /**
    * Internal identifier of an extension
    * Format: int64

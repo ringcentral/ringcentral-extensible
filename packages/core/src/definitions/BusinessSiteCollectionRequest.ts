@@ -1,6 +1,6 @@
 import RolesBusinessSiteResource from './RolesBusinessSiteResource';
 
-class BusinessSiteCollectionRequest {
+interface BusinessSiteCollectionRequest {
   /**
    */
   records?: RolesBusinessSiteResource[];

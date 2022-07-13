@@ -4,7 +4,7 @@ import CompanyAnsweringRuleScheduleInfo from './CompanyAnsweringRuleScheduleInfo
 import CompanyAnsweringRuleExtensionInfoRequest from './CompanyAnsweringRuleExtensionInfoRequest';
 import GreetingInfo from './GreetingInfo';
 
-class CompanyAnsweringRuleInfo {
+interface CompanyAnsweringRuleInfo {
   /**
    * Internal identifier of an answering rule
    */

@@ -5,7 +5,7 @@ import LocationOwnerInfo from './LocationOwnerInfo';
 /**
  * Company emergency response location details
 */
-class EmergencyLocationInfo {
+interface EmergencyLocationInfo {
   /**
    * Internal identifier of the emergency response location
    */

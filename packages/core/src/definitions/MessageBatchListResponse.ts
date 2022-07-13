@@ -1,7 +1,7 @@
 import MessageBatchInfo from './MessageBatchInfo';
 import PagingResource from './PagingResource';
 
-class MessageBatchListResponse {
+interface MessageBatchListResponse {
   /**
    */
   records?: MessageBatchInfo[];

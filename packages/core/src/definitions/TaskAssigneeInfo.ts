@@ -1,4 +1,4 @@
-class TaskAssigneeInfo {
+interface TaskAssigneeInfo {
   /**
    * Internal identifier of an assignee
    */

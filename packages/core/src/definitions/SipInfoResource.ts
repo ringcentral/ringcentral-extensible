@@ -1,6 +1,6 @@
 import OutboundProxyInfo from './OutboundProxyInfo';
 
-class SipInfoResource {
+interface SipInfoResource {
   /**
    * SIP domain
    */

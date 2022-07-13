@@ -1,4 +1,4 @@
-class CompanyContactsPagingInfo {
+interface CompanyContactsPagingInfo {
   /**
    * Format: int32
    */

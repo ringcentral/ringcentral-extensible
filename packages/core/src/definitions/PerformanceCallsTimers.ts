@@ -11,7 +11,7 @@ import PerformanceCallsByType from './PerformanceCallsByType';
 /**
  * Call length data for the specified grouping
 */
-class PerformanceCallsTimers {
+interface PerformanceCallsTimers {
   /**
    */
   allCalls?: PerformanceCallsTotal;

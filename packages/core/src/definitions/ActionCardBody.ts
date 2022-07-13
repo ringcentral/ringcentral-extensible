@@ -1,4 +1,4 @@
-class ActionCardBody {
+interface ActionCardBody {
   /**
    */
   type?: ('Input.Text');

@@ -1,4 +1,4 @@
-class LocationDeletionErrorInfo {
+interface LocationDeletionErrorInfo {
   /**
    * Error code
    */

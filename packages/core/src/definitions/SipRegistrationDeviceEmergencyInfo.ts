@@ -4,7 +4,7 @@ import SipRegistrationDeviceLocationInfo from './SipRegistrationDeviceLocationIn
 /**
  * Emergency response location settings of a device
 */
-class SipRegistrationDeviceEmergencyInfo {
+interface SipRegistrationDeviceEmergencyInfo {
   /**
    */
   address?: DeviceEmergencyServiceAddressResource;

@@ -1,4 +1,4 @@
-class AdaptiveCardCreator {
+interface AdaptiveCardCreator {
   /**
    * Internal identifier of a creator
    */

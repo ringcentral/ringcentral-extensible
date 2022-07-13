@@ -1,6 +1,6 @@
 import NotificationDeliveryModeRequest from './NotificationDeliveryModeRequest';
 
-class CreateSubscriptionRequest {
+interface CreateSubscriptionRequest {
   /**
    * Collection of URIs to API resources
    * Required

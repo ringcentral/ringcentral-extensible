@@ -1,11 +1,11 @@
-class EditPagingGroupRequest {
+interface EditPagingGroupRequest {
   /**
    * List of users that will be allowed to page a group specified
    */
   addedUserIds?: string[];
 
   /**
-   * List of users that will be unallowed to page a group specified
+   * List of users that will be disallowed to page a group specified
    */
   removedUserIds?: string[];
 

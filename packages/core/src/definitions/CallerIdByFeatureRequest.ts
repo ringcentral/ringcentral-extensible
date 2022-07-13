@@ -3,7 +3,7 @@ import CallerIdByFeatureInfoRequest from './CallerIdByFeatureInfoRequest';
 /**
  * Caller ID settings by feature
 */
-class CallerIdByFeatureRequest {
+interface CallerIdByFeatureRequest {
   /**
    */
   feature?: ('RingOut' | 'RingMe' | 'CallFlip' | 'FaxNumber' | 'AdditionalSoftphone' | 'Alternate' | 'CommonPhone' | 'MobileApp' | 'Delegated');

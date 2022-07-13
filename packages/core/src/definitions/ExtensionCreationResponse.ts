@@ -8,7 +8,7 @@ import ExtensionServiceFeatureInfo from './ExtensionServiceFeatureInfo';
 import AutomaticLocationUpdatesSiteInfo from './AutomaticLocationUpdatesSiteInfo';
 import ExtensionStatusInfo from './ExtensionStatusInfo';
 
-class ExtensionCreationResponse {
+interface ExtensionCreationResponse {
   /**
    * Internal identifier of an extension
    * Format: int64

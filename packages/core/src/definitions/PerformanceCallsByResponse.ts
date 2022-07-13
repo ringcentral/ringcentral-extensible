@@ -1,6 +1,6 @@
 import CallsByResponse from './CallsByResponse';
 
-class PerformanceCallsByResponse {
+interface PerformanceCallsByResponse {
   /**
    * Required
    */

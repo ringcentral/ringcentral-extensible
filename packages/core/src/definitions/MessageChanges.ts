@@ -1,4 +1,4 @@
-class MessageChanges {
+interface MessageChanges {
   /**
    * Message type
    */

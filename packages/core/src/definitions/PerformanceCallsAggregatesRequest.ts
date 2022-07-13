@@ -3,7 +3,7 @@ import PerformanceCallsTimeSettings from './PerformanceCallsTimeSettings';
 import PerformanceCallsFilters from './PerformanceCallsFilters';
 import PerformanceCallsResponseDataOptions from './PerformanceCallsResponseDataOptions';
 
-class PerformanceCallsAggregatesRequest {
+interface PerformanceCallsAggregatesRequest {
   /**
    */
   grouping?: PerformanceCallsGrouping;

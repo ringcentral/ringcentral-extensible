@@ -1,4 +1,4 @@
-class FilterSupported {
+interface FilterSupported {
   /**
    * Format: int32
    */

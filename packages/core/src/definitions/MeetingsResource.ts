@@ -2,7 +2,7 @@ import MeetingResponseResource from './MeetingResponseResource';
 import MeetingsPagingInfo from './MeetingsPagingInfo';
 import MeetingsNavigationInfo from './MeetingsNavigationInfo';
 
-class MeetingsResource {
+interface MeetingsResource {
   /**
    * Format: uri
    */

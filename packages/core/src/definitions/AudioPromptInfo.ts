@@ -1,7 +1,7 @@
 /**
  * For 'Audio' mode only. Prompt media reference
 */
-class AudioPromptInfo {
+interface AudioPromptInfo {
   /**
    * Link to a prompt audio file
    */

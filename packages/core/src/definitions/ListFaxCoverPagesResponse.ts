@@ -2,7 +2,7 @@ import FaxCoverPageInfo from './FaxCoverPageInfo';
 import MessagingNavigationInfo from './MessagingNavigationInfo';
 import MessagingPagingInfo from './MessagingPagingInfo';
 
-class ListFaxCoverPagesResponse {
+interface ListFaxCoverPagesResponse {
   /**
    */
   uri?: string;

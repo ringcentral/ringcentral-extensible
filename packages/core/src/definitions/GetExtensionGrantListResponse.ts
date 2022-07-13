@@ -2,7 +2,7 @@ import GrantInfo from './GrantInfo';
 import ProvisioningNavigationInfo from './ProvisioningNavigationInfo';
 import ProvisioningPagingInfo from './ProvisioningPagingInfo';
 
-class GetExtensionGrantListResponse {
+interface GetExtensionGrantListResponse {
   /**
    * Link to the list of extension grants
    */

@@ -1,4 +1,4 @@
-class DeviceEmergencyAddress {
+interface DeviceEmergencyAddress {
   /**
    * Name of a customer
    */

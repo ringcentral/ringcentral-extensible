@@ -2,7 +2,7 @@ import GetTimezoneInfoResponse from './GetTimezoneInfoResponse';
 import ProvisioningNavigationInfo from './ProvisioningNavigationInfo';
 import ProvisioningPagingInfo from './ProvisioningPagingInfo';
 
-class GetTimezoneListResponse {
+interface GetTimezoneListResponse {
   /**
    * Link to the timezone list resource
    */

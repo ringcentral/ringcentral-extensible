@@ -3,7 +3,7 @@ import CallHandlingNavigationInfoUri from './CallHandlingNavigationInfoUri';
 /**
  * Information on navigation
 */
-class CallHandlingNavigationInfo {
+interface CallHandlingNavigationInfo {
   /**
    */
   firstPage?: CallHandlingNavigationInfoUri;

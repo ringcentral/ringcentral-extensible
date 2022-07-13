@@ -1,4 +1,4 @@
-class OutboundProxyInfo {
+interface OutboundProxyInfo {
   /**
    * Geographical region
    * Example: APAC

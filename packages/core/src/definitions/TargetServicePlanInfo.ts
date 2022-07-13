@@ -1,7 +1,7 @@
 /**
  * Information on account target service plan
 */
-class TargetServicePlanInfo {
+interface TargetServicePlanInfo {
   /**
    * Internal identifier of a target service plan
    */

@@ -2,7 +2,7 @@ import CallMonitoringGroup from './CallMonitoringGroup';
 import ProvisioningNavigationInfo from './ProvisioningNavigationInfo';
 import ProvisioningPagingInfo from './ProvisioningPagingInfo';
 
-class CallMonitoringGroups {
+interface CallMonitoringGroups {
   /**
    * Link to a call monitoring groups resource
    * Required

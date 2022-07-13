@@ -1,7 +1,7 @@
 /**
  * Meeting recurrence information
 */
-class RecurrenceInfo {
+interface RecurrenceInfo {
   /**
    * Recurrence time frame
    */

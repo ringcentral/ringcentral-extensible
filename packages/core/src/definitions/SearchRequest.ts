@@ -1,4 +1,4 @@
-class SearchRequest {
+interface SearchRequest {
   /**
    * page size
    * Format: int32

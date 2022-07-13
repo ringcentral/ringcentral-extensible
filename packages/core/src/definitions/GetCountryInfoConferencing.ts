@@ -1,7 +1,7 @@
 /**
  * Information on a home country of a conference phone number
 */
-class GetCountryInfoConferencing {
+interface GetCountryInfoConferencing {
   /**
    * Internal identifier of a country
    */

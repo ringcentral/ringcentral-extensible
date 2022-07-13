@@ -1,7 +1,7 @@
 import EmergencyLocationAddressInfo from './EmergencyLocationAddressInfo';
 import ShortSiteInfo from './ShortSiteInfo';
 
-class EmergencyLocationInfoRequest {
+interface EmergencyLocationInfoRequest {
   /**
    * Internal identifier of the emergency response location
    */

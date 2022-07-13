@@ -1,6 +1,6 @@
 import AssistantResource from './AssistantResource';
 
-class AssistantsResource {
+interface AssistantsResource {
   /**
    */
   records?: AssistantResource[];

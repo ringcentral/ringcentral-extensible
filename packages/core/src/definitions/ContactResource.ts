@@ -4,7 +4,7 @@ import AccountDirectoryProfileImageResource from './AccountDirectoryProfileImage
 import BusinessSiteResource from './BusinessSiteResource';
 import UserCustomFieldResource from './UserCustomFieldResource';
 
-class ContactResource {
+interface ContactResource {
   /**
    */
   account?: AccountResource;

@@ -1,6 +1,6 @@
 import ActivePermissionResource from './ActivePermissionResource';
 
-class AuthProfileCheckResource {
+interface AuthProfileCheckResource {
   /**
    * Format: uri
    */

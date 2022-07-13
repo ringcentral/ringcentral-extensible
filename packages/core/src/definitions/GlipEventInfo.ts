@@ -1,4 +1,4 @@
-class GlipEventInfo {
+interface GlipEventInfo {
   /**
    * Internal identifier of an event
    */

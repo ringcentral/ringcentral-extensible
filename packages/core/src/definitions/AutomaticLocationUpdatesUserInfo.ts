@@ -1,6 +1,6 @@
 import AutomaticLocationUpdatesSiteInfo from './AutomaticLocationUpdatesSiteInfo';
 
-class AutomaticLocationUpdatesUserInfo {
+interface AutomaticLocationUpdatesUserInfo {
   /**
    * Internal identifier of a device
    */

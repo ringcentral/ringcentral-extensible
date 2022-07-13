@@ -1,4 +1,4 @@
-class PartySuperviseRequest {
+interface PartySuperviseRequest {
   /**
    * Supervising mode
    * Required

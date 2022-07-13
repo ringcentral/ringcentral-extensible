@@ -3,7 +3,7 @@ import BulkSupported from './BulkSupported';
 import Supported from './Supported';
 import FilterSupported from './FilterSupported';
 
-class ServiceProviderConfig {
+interface ServiceProviderConfig {
   /**
    */
   authenticationSchemes?: AuthenticationScheme[];

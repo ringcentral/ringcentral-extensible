@@ -7,7 +7,7 @@ import RecordingInfo from './RecordingInfo';
 /**
  * Information on a party of a call session
 */
-class CallParty {
+interface CallParty {
   /**
    * Internal identifier of a party
    */

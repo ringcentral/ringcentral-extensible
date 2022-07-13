@@ -1,6 +1,6 @@
 import WirelessPointValidated from './WirelessPointValidated';
 
-class ValidateMultipleWirelessPointsResponse {
+interface ValidateMultipleWirelessPointsResponse {
   /**
    */
   records?: WirelessPointValidated[];

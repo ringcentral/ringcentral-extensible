@@ -1,4 +1,4 @@
-class MessageCountryInfo {
+interface MessageCountryInfo {
   /**
    * Internal identifier of a country
    */

@@ -1,6 +1,6 @@
 import CallsActions from './CallsActions';
 
-class PerformanceCallsActions {
+interface PerformanceCallsActions {
   /**
    * Required
    */

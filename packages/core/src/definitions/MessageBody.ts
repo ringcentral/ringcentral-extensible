@@ -3,7 +3,7 @@ import ConversationInfo from './ConversationInfo';
 import MessageSenderInfo from './MessageSenderInfo';
 import MessageRecipientInfo from './MessageRecipientInfo';
 
-class MessageBody {
+interface MessageBody {
   /**
    * Canonical URI of a message
    */

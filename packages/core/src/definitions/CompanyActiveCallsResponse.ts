@@ -2,7 +2,7 @@ import CompanyCallLogRecord from './CompanyCallLogRecord';
 import CallLogNavigationInfo from './CallLogNavigationInfo';
 import CallLogPagingInfo from './CallLogPagingInfo';
 
-class CompanyActiveCallsResponse {
+interface CompanyActiveCallsResponse {
   /**
    * Link to the list of company active call records
    */

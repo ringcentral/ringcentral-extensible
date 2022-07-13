@@ -1,6 +1,6 @@
 import ScheduleInfoUserBusinessHours from './ScheduleInfoUserBusinessHours';
 
-class GetUserBusinessHoursResponse {
+interface GetUserBusinessHoursResponse {
   /**
    * Canonical URI of a business-hours resource
    */

@@ -1,4 +1,4 @@
-class CallPartyFlip {
+interface CallPartyFlip {
   /**
    * Call flip id
    */

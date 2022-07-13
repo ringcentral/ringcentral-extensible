@@ -1,7 +1,7 @@
 /**
  * Query parameters for operation readA2PSMSOptOuts
 */
-class ReadA2PSMSOptOutsParameters {
+interface ReadA2PSMSOptOutsParameters {
   /**
    * The sender's phone number in [E.164](https://www.itu.int/rec/T-REC-E.164-201011-I) format for filtering messages. The asterisk value "*" means any number in `from` field
    * Example: 15551234455
@@ -9,7 +9,7 @@ class ReadA2PSMSOptOutsParameters {
   from?: string;
 
   /**
-   * The reciever's phone number (`to` field) in [E.164](https://www.itu.int/rec/T-REC-E.164-201011-I) format for filtering messages
+   * The receiver's phone number (`to` field) in [E.164](https://www.itu.int/rec/T-REC-E.164-201011-I) format for filtering messages
    * Example: 15551237755
    */
   to?: string;

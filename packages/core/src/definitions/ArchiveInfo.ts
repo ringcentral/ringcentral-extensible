@@ -1,4 +1,4 @@
-class ArchiveInfo {
+interface ArchiveInfo {
   /**
    * Archive size in bytes
    */

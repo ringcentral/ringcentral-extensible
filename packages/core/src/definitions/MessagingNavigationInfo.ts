@@ -3,7 +3,7 @@ import MessagingNavigationInfoURI from './MessagingNavigationInfoURI';
 /**
  * Information on navigation
 */
-class MessagingNavigationInfo {
+interface MessagingNavigationInfo {
   /**
    */
   firstPage?: MessagingNavigationInfoURI;

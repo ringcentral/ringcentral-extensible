@@ -4,7 +4,7 @@ import ExtensionLanguageInfoRequest from './ExtensionLanguageInfoRequest';
 import ExtensionGreetingLanguageInfoRequest from './ExtensionGreetingLanguageInfoRequest';
 import ExtensionFormattingLocaleInfoRequest from './ExtensionFormattingLocaleInfoRequest';
 
-class ExtensionRegionalSettingRequest {
+interface ExtensionRegionalSettingRequest {
   /**
    */
   homeCountry?: ExtensionCountryInfoRequest;

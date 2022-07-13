@@ -1,4 +1,4 @@
-class RolesCountryResource {
+interface RolesCountryResource {
   /**
    * Format: uri
    */

@@ -1,7 +1,7 @@
 /**
  * Query parameters for operation readDevice
 */
-class ReadDeviceParameters {
+interface ReadDeviceParameters {
   /**
    * Specifies if emergency address should be synchronized or not
    */

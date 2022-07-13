@@ -1,6 +1,6 @@
 import ContactAddressInfo from './ContactAddressInfo';
 
-class PersonalContactResource {
+interface PersonalContactResource {
   /**
    * Canonical URI of the contact
    * Example: https://platform.ringcentral.com/restapi/v1.0/account/230919004/extension/230919004/address-book/contact/623045004

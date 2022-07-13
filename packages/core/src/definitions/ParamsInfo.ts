@@ -1,4 +1,4 @@
-class ParamsInfo {
+interface ParamsInfo {
   /**
    * Parameter name
    */

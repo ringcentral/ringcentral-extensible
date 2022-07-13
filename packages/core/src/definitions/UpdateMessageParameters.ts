@@ -1,7 +1,7 @@
 /**
  * Query parameters for operation updateMessage
 */
-class UpdateMessageParameters {
+interface UpdateMessageParameters {
   /**
    */
   dateFrom?: string;

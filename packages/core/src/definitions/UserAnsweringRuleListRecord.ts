@@ -1,6 +1,6 @@
 import SharedLinesInfo from './SharedLinesInfo';
 
-class UserAnsweringRuleListRecord {
+interface UserAnsweringRuleListRecord {
   /**
    * Canonical URI to an answering rule resource
    * Example: https://platform.ringcentral.com/restapi/v1.0/account/240913004/extension/240972004/answering-rule/business-hours-rule

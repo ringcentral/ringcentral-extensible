@@ -3,7 +3,7 @@ import Attachment from './Attachment';
 /**
  * Request body for operation updateUserProfileImage
 */
-class UpdateUserProfileImageRequest {
+interface UpdateUserProfileImageRequest {
   /**
    */
   image?: Attachment;

@@ -3,7 +3,7 @@ import AddonInfo from './AddonInfo';
 /**
  * HardPhone model information
 */
-class ModelInfo {
+interface ModelInfo {
   /**
    * Internal identifier of a HardPhone device model
    */

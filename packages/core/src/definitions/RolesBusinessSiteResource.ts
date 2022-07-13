@@ -2,7 +2,7 @@ import BasicExtensionInfoResource from './BasicExtensionInfoResource';
 import RolesRegionalSettingsResource from './RolesRegionalSettingsResource';
 import ContactAddressInfoResource from './ContactAddressInfoResource';
 
-class RolesBusinessSiteResource {
+interface RolesBusinessSiteResource {
   /**
    * Required
    */

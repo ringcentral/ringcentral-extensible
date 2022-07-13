@@ -1,7 +1,7 @@
 /**
  * Shipping method information
 */
-class MethodInfo {
+interface MethodInfo {
   /**
    * Method identifier. The default value is 1 (Ground)
    */

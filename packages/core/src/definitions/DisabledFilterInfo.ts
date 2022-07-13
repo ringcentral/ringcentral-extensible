@@ -1,4 +1,4 @@
-class DisabledFilterInfo {
+interface DisabledFilterInfo {
   /**
    * Event filter that is disabled for the user
    */

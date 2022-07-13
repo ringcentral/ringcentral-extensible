@@ -9,7 +9,7 @@ import VoicemailInfo from './VoicemailInfo';
 import MissedCallInfo from './MissedCallInfo';
 import GreetingInfo from './GreetingInfo';
 
-class CreateAnsweringRuleRequest {
+interface CreateAnsweringRuleRequest {
   /**
    * Specifies if the rule is active or inactive. The default value is 'True'
    */

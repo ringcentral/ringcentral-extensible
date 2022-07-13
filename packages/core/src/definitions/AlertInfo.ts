@@ -1,7 +1,7 @@
 /**
  * Alert information
 */
-class AlertInfo {
+interface AlertInfo {
   /**
    * Title of a message
    */

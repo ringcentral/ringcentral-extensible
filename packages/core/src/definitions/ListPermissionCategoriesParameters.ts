@@ -1,7 +1,7 @@
 /**
  * Query parameters for operation listPermissionCategories
 */
-class ListPermissionCategoriesParameters {
+interface ListPermissionCategoriesParameters {
   /**
    * Default: 1
    */

@@ -1,7 +1,7 @@
 /**
  * Delivery mode data
 */
-class NotificationDeliveryMode {
+interface NotificationDeliveryMode {
   /**
    * Optional parameter. Specifies if the message will be encrypted or not
    */

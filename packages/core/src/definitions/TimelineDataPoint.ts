@@ -1,7 +1,7 @@
 import PerformanceCallsTimers from './PerformanceCallsTimers';
 import PerformanceCallsCounters from './PerformanceCallsCounters';
 
-class TimelineDataPoint {
+interface TimelineDataPoint {
   /**
    * Required
    * Format: date-time

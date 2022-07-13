@@ -1,4 +1,4 @@
-class PerformanceCallsCallSegmentLengthFilter {
+interface PerformanceCallsCallSegmentLengthFilter {
   /**
    * Format: int64
    */

@@ -6,7 +6,7 @@ import PhoneLinesInfo from './PhoneLinesInfo';
 import ShippingInfo from './ShippingInfo';
 import DeviceSiteInfo from './DeviceSiteInfo';
 
-class ExtensionDeviceResponse {
+interface ExtensionDeviceResponse {
   /**
    * Internal identifier of a device
    */
@@ -26,7 +26,7 @@ class ExtensionDeviceResponse {
    * Device type
    * Default: HardPhone
    */
-  type?: ('Room' | 'SoftPhone' | 'OtherPhone' | 'HardPhone' | 'Paging');
+  type?: ('Room' | 'SoftPhone' | 'OtherPhone' | 'HardPhone' | 'Paging' | 'WebRTC');
 
   /**
    * Device name. Mandatory if ordering  SoftPhone  or  OtherPhone. Optional for  HardPhone. If not specified for HardPhone, then device model name is used as device name

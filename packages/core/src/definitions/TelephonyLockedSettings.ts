@@ -1,4 +1,4 @@
-class TelephonyLockedSettings {
+interface TelephonyLockedSettings {
   /**
    * ThirdParty audio option
    */

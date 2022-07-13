@@ -2,7 +2,7 @@ import PartyInfo from './PartyInfo';
 import OwnerInfo from './OwnerInfo';
 import CallStatusInfo from './CallStatusInfo';
 
-class PartySuperviseResponse {
+interface PartySuperviseResponse {
   /**
    */
   from?: PartyInfo;

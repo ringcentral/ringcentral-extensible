@@ -2,7 +2,7 @@ import DataExportTask from './DataExportTask';
 import GlipDataExportNavigationInfo from './GlipDataExportNavigationInfo';
 import GlipDataExportPagingInfo from './GlipDataExportPagingInfo';
 
-class DataExportTaskList {
+interface DataExportTaskList {
   /**
    */
   tasks?: DataExportTask[];

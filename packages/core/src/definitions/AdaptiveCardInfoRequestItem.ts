@@ -1,6 +1,6 @@
 import AdaptiveCardColumnInfo from './AdaptiveCardColumnInfo';
 
-class AdaptiveCardInfoRequestItem {
+interface AdaptiveCardInfoRequestItem {
   /**
    */
   type?: ('TextBlock' | 'ColumnSet' | 'Column' | 'FactSet');

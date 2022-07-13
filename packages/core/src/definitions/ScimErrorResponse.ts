@@ -1,4 +1,4 @@
-class ScimErrorResponse {
+interface ScimErrorResponse {
   /**
    * detail error message
    */

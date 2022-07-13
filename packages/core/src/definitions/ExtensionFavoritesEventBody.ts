@@ -1,7 +1,7 @@
 /**
  * Notification payload body
 */
-class ExtensionFavoritesEventBody {
+interface ExtensionFavoritesEventBody {
   /**
    * Internal identifier of an extension
    */

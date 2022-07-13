@@ -1,7 +1,7 @@
 import PermissionCategoryIdResource from './PermissionCategoryIdResource';
 import PermissionIdResource from './PermissionIdResource';
 
-class PermissionResource {
+interface PermissionResource {
   /**
    * Format: uri
    */

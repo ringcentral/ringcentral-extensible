@@ -5,7 +5,7 @@ import UnconditionalForwardingInfo from './UnconditionalForwardingInfo';
 /**
  * Queue settings applied for department (call queue) extension type, with the 'AgentQueue' value specified as a call handling action
 */
-class QueueInfo {
+interface QueueInfo {
   /**
    * Specifies how calls are transferred to group members
    */

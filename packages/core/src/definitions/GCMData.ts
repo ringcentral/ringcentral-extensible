@@ -1,7 +1,7 @@
 /**
  * GCM data
 */
-class GCMData {
+interface GCMData {
   /**
    * Event filter URI
    */

@@ -1,4 +1,4 @@
-class AssigneeInfo {
+interface AssigneeInfo {
   /**
    * Internal identifier of an assignee
    */

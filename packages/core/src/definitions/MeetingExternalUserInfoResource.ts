@@ -1,4 +1,4 @@
-class MeetingExternalUserInfoResource {
+interface MeetingExternalUserInfoResource {
   /**
    * Format: uri
    */

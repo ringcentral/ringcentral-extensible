@@ -1,4 +1,4 @@
-class TelephonyUserMeetingSettings {
+interface TelephonyUserMeetingSettings {
   /**
    * ThirdParty audio option
    */

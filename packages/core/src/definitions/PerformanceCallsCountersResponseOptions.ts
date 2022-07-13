@@ -14,7 +14,7 @@ import PerformanceCallsCountersResponseOptionsCallsByType from './PerformanceCal
  * If `aggregationType` is `Sum` or `Percent`, `aggregationInterval` is not supported.
  * If `aggregationType` is `Min`, `Max` or `Average`, `aggregationInterval` is required
 */
-class PerformanceCallsCountersResponseOptions {
+interface PerformanceCallsCountersResponseOptions {
   /**
    */
   allCalls?: PerformanceCallsCountersResponseOptionsAllCalls;

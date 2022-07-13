@@ -1,7 +1,7 @@
 import PhoneNumberInfoIntId from './PhoneNumberInfoIntId';
 import EmergencyAddress from './EmergencyAddress';
 
-class PhoneLinesInfo {
+interface PhoneLinesInfo {
   /**
    * Internal identifier of a phone line
    */

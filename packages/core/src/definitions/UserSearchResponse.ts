@@ -1,6 +1,6 @@
 import UserResponse from './UserResponse';
 
-class UserSearchResponse {
+interface UserSearchResponse {
   /**
    * user list
    */

@@ -1,7 +1,7 @@
 /**
  * Extension site
 */
-class SiteResource {
+interface SiteResource {
   /**
    * Site extension identifier
    */

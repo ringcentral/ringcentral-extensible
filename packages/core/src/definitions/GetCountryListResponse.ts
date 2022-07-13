@@ -2,7 +2,7 @@ import GetCountryInfoDictionaryResponse from './GetCountryInfoDictionaryResponse
 import ProvisioningNavigationInfo from './ProvisioningNavigationInfo';
 import ProvisioningPagingInfo from './ProvisioningPagingInfo';
 
-class GetCountryListResponse {
+interface GetCountryListResponse {
   /**
    * Link to the list of countries supported
    */

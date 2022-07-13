@@ -1,4 +1,4 @@
-class ShortSiteInfo {
+interface ShortSiteInfo {
   /**
    * Internal identifier of a site extension
    */

@@ -1,4 +1,4 @@
-class Roles {
+interface Roles {
   /**
    * Link to a role
    * Format: uri

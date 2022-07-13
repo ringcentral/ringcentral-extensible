@@ -2,7 +2,7 @@ import DictionaryGreetingInfo from './DictionaryGreetingInfo';
 import CallHandlingNavigationInfo from './CallHandlingNavigationInfo';
 import CallHandlingPagingInfo from './CallHandlingPagingInfo';
 
-class DictionaryGreetingList {
+interface DictionaryGreetingList {
   /**
    * Canonical URI of greetings list resource
    */

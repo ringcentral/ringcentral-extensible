@@ -1,6 +1,6 @@
 import GetCountryInfoConferencing from './GetCountryInfoConferencing';
 
-class PhoneNumberInfoConferencing {
+interface PhoneNumberInfoConferencing {
   /**
    */
   country?: GetCountryInfoConferencing;

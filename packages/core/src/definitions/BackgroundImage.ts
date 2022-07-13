@@ -1,7 +1,7 @@
 /**
  * Specifies a background image oa a card. Acceptable formats are PNG, JPEG, and GIF
 */
-class BackgroundImage {
+interface BackgroundImage {
   /**
    * Must be `BackgroundImage`
    */

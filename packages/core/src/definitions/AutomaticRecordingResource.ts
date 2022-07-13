@@ -1,4 +1,4 @@
-class AutomaticRecordingResource {
+interface AutomaticRecordingResource {
   /**
    * Flag for controlling Automatic Call Recording settings
    */

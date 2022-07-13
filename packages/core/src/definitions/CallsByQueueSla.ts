@@ -1,4 +1,4 @@
-class CallsByQueueSla {
+interface CallsByQueueSla {
   /**
    * Required
    * Format: double

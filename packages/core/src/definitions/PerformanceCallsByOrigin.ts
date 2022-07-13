@@ -1,6 +1,6 @@
 import CallsByOrigin from './CallsByOrigin';
 
-class PerformanceCallsByOrigin {
+interface PerformanceCallsByOrigin {
   /**
    * Required
    */

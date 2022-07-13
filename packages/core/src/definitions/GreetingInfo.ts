@@ -1,7 +1,7 @@
 import PresetInfo from './PresetInfo';
 import CustomGreetingInfoRequest from './CustomGreetingInfoRequest';
 
-class GreetingInfo {
+interface GreetingInfo {
   /**
    * Type of a greeting, specifying the case when the greeting is played.
    */

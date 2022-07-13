@@ -2,7 +2,7 @@ import ContactBusinessAddressInfo from './ContactBusinessAddressInfo';
 import RegionalSettings from './RegionalSettings';
 import OperatorInfo from './OperatorInfo';
 
-class SiteInfo {
+interface SiteInfo {
   /**
    * Internal identifier of a site extension
    */

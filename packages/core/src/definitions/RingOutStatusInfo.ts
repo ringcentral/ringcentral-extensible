@@ -1,7 +1,7 @@
 /**
  * RingOut status information
 */
-class RingOutStatusInfo {
+interface RingOutStatusInfo {
   /**
    * Status of a call
    */

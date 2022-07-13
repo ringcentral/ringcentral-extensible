@@ -1,6 +1,6 @@
 import AccountHistoryRecordDetailsParameters from './AccountHistoryRecordDetailsParameters';
 
-class AccountHistoryRecordPublicDetails {
+interface AccountHistoryRecordPublicDetails {
   /**
    * Event details (additional parameters)
    */

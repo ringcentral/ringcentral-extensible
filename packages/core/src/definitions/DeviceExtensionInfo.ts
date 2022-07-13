@@ -1,7 +1,7 @@
 /**
  * Internal identifier of an extension the device should be assigned to
 */
-class DeviceExtensionInfo {
+interface DeviceExtensionInfo {
   /**
    * Internal identifier of an extension
    * Format: int64

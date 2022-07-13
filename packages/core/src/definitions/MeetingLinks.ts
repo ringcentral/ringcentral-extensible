@@ -1,7 +1,7 @@
 /**
  * Meeting links
 */
-class MeetingLinks {
+interface MeetingLinks {
   /**
    */
   startUri?: string;

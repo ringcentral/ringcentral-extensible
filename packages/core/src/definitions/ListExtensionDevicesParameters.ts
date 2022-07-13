@@ -1,7 +1,7 @@
 /**
  * Query parameters for operation listExtensionDevices
 */
-class ListExtensionDevicesParameters {
+interface ListExtensionDevicesParameters {
   /**
    * Pooling type of a device
    */

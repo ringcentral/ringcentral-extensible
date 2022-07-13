@@ -1,7 +1,7 @@
 import UpdateUnifiedPresenceGlip from './UpdateUnifiedPresenceGlip';
 import UpdateUnifiedPresenceTelephony from './UpdateUnifiedPresenceTelephony';
 
-class UpdateUnifiedPresence {
+interface UpdateUnifiedPresence {
   /**
    */
   glip?: UpdateUnifiedPresenceGlip;

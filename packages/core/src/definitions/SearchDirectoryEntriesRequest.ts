@@ -1,6 +1,6 @@
 import OrderBy from './OrderBy';
 
-class SearchDirectoryEntriesRequest {
+interface SearchDirectoryEntriesRequest {
   /**
    * String value to filter the contacts. The value specified is searched through the following fields: `firstName`, `lastName`, `extensionNumber`, `phoneNumber`, `email`, `jobTitle`, `department`
    */

@@ -2,7 +2,7 @@ import UserCallLogRecord from './UserCallLogRecord';
 import CallLogNavigationInfo from './CallLogNavigationInfo';
 import CallLogPagingInfo from './CallLogPagingInfo';
 
-class UserCallLogResponse {
+interface UserCallLogResponse {
   /**
    * List of call log records
    * Required

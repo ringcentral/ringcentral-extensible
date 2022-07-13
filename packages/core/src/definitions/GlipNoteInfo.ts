@@ -2,7 +2,7 @@ import GlipCreatorInfo from './GlipCreatorInfo';
 import LastModifiedByInfo from './LastModifiedByInfo';
 import LockedByInfo from './LockedByInfo';
 
-class GlipNoteInfo {
+interface GlipNoteInfo {
   /**
    * Internal identifier of a note
    */

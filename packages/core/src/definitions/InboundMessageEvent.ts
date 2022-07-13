@@ -1,6 +1,6 @@
 import NotificationInfo from './NotificationInfo';
 
-class InboundMessageEvent {
+interface InboundMessageEvent {
   /**
    */
   aps?: NotificationInfo;

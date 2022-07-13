@@ -1,6 +1,6 @@
 import AssignedRoleResource from './AssignedRoleResource';
 
-class ExtensionWithRolesResource {
+interface ExtensionWithRolesResource {
   /**
    * Format: uri
    */

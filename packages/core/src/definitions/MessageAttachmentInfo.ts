@@ -1,4 +1,4 @@
-class MessageAttachmentInfo {
+interface MessageAttachmentInfo {
   /**
    * Internal identifier of a message attachment
    * Format: int64

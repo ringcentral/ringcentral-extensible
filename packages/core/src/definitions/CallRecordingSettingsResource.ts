@@ -2,7 +2,7 @@ import OnDemandResource from './OnDemandResource';
 import AutomaticRecordingResource from './AutomaticRecordingResource';
 import GreetingResource from './GreetingResource';
 
-class CallRecordingSettingsResource {
+interface CallRecordingSettingsResource {
   /**
    */
   onDemand?: OnDemandResource;

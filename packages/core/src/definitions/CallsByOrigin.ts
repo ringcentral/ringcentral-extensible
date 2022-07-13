@@ -1,4 +1,4 @@
-class CallsByOrigin {
+interface CallsByOrigin {
   /**
    * Required
    * Format: double

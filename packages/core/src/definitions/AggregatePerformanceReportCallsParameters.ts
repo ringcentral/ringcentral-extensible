@@ -1,7 +1,7 @@
 /**
  * Query parameters for operation aggregatePerformanceReportCalls
 */
-class AggregatePerformanceReportCallsParameters {
+interface AggregatePerformanceReportCallsParameters {
   /**
    * The current page number
    * Minimum: 1

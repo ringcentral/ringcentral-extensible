@@ -3,7 +3,7 @@ import CompanyDirectoryPhoneNumberInfo from './CompanyDirectoryPhoneNumberInfo';
 import ContactDirectorySiteInfo from './ContactDirectorySiteInfo';
 import CompanyDirectoryProfileImageInfo from './CompanyDirectoryProfileImageInfo';
 
-class ContactDirectoryEvent {
+interface ContactDirectoryEvent {
   /**
    * Internal identifier of an extension
    */

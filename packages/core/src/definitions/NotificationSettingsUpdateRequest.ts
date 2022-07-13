@@ -4,7 +4,7 @@ import OutboundFaxesInfo from './OutboundFaxesInfo';
 import InboundTextsInfo from './InboundTextsInfo';
 import MissedCallsInfo from './MissedCallsInfo';
 
-class NotificationSettingsUpdateRequest {
+interface NotificationSettingsUpdateRequest {
   /**
    * List of notification recipient email addresses. Should not be empty if 'includeManagers' parameter is set to false
    */

@@ -1,7 +1,7 @@
 /**
  * Sender information
 */
-class MessageSenderInfo {
+interface MessageSenderInfo {
   /**
    */
   extensionNumber?: string;

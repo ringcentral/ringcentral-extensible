@@ -1,4 +1,4 @@
-class ValidationError {
+interface ValidationError {
   /**
    * Error code
    */

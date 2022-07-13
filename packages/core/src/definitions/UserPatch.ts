@@ -1,6 +1,6 @@
 import PatchOperation from './PatchOperation';
 
-class UserPatch {
+interface UserPatch {
   /**
    * patch operations list
    * Required

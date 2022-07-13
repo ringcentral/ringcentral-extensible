@@ -3,7 +3,7 @@ import MeetingsTimezoneResource from './MeetingsTimezoneResource';
 /**
  * Timing of a meeting
 */
-class MeetingScheduleResource {
+interface MeetingScheduleResource {
   /**
    */
   startTime?: string;

@@ -1,7 +1,7 @@
 /**
  * Information on extension that the device is assigned to
 */
-class DeviceUpdateExtensionInfo {
+interface DeviceUpdateExtensionInfo {
   /**
    * Internal identifier of an extension
    */

@@ -1,4 +1,4 @@
-class AssignMultipleDevicesAutomaticLocationUpdates {
+interface AssignMultipleDevicesAutomaticLocationUpdates {
   /**
    */
   enabledDeviceIds?: string[];

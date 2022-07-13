@@ -1,7 +1,7 @@
 /**
  * Notification delivery settings
 */
-class NotificationDeliveryModeRequest {
+interface NotificationDeliveryModeRequest {
   /**
    * Notifications transportation provider name
    */

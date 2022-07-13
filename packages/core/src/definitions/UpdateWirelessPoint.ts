@@ -2,7 +2,7 @@ import AutomaticLocationUpdatesSiteInfo from './AutomaticLocationUpdatesSiteInfo
 import LocationUpdatesEmergencyAddressInfoRequest from './LocationUpdatesEmergencyAddressInfoRequest';
 import ERLLocationInfo from './ERLLocationInfo';
 
-class UpdateWirelessPoint {
+interface UpdateWirelessPoint {
   /**
    * Internal identifier of a wireless point
    */

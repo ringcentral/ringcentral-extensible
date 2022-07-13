@@ -1,6 +1,6 @@
 import ExtensionCallQueuePresence from './ExtensionCallQueuePresence';
 
-class ExtensionCallQueuePresenceList {
+interface ExtensionCallQueuePresenceList {
   /**
    */
   records?: ExtensionCallQueuePresence[];

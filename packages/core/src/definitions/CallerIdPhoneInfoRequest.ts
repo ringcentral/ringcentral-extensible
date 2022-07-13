@@ -1,4 +1,4 @@
-class CallerIdPhoneInfoRequest {
+interface CallerIdPhoneInfoRequest {
   /**
    * Internal identifier of a phone number
    */

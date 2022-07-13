@@ -1,6 +1,6 @@
 import CallInfoCQ from './CallInfoCQ';
 
-class ActiveCallInfoWithoutSIP {
+interface ActiveCallInfoWithoutSIP {
   /**
    * Internal identifier of a call
    */

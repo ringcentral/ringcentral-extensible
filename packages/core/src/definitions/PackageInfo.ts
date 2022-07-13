@@ -1,4 +1,4 @@
-class PackageInfo {
+interface PackageInfo {
   /**
    * Billing package version
    */

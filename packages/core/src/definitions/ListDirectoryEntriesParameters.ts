@@ -1,7 +1,7 @@
 /**
  * Query parameters for operation listDirectoryEntries
 */
-class ListDirectoryEntriesParameters {
+interface ListDirectoryEntriesParameters {
   /**
    * If 'True' then contacts of all accounts in federation are returned. If 'False' then only contacts of the current account are returned, and account section is eliminated in this case
    * Default: true

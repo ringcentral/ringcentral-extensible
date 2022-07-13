@@ -1,7 +1,7 @@
 /**
  * Query parameters for operation readUserCallLog
 */
-class ReadUserCallLogParameters {
+interface ReadUserCallLogParameters {
   /**
    * Extension number of a user. If specified, returns call log for a particular extension only
    */
@@ -14,7 +14,7 @@ class ReadUserCallLogParameters {
   showBlocked?: boolean;
 
   /**
-   * Phone number of a caller/callee in e.164 format without a plus sign '+'. If specified, all incoming and outcoming calls with this phone number are returned
+   * Phone number of a caller/callee in e.164 format without a plus sign '+'. If specified, all incoming and outgoing calls with this phone number are returned
    * Example: 12053320032
    */
   phoneNumber?: string;

@@ -1,6 +1,6 @@
 import PagerCallerInfoRequest from './PagerCallerInfoRequest';
 
-class CreateInternalTextMessageRequest {
+interface CreateInternalTextMessageRequest {
   /**
    */
   from?: PagerCallerInfoRequest;

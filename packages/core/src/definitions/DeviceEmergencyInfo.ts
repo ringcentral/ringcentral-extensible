@@ -4,7 +4,7 @@ import DeviceEmergencyLocationInfo from './DeviceEmergencyLocationInfo';
 /**
  * Device emergency settings
 */
-class DeviceEmergencyInfo {
+interface DeviceEmergencyInfo {
   /**
    */
   address?: DeviceEmergencyAddress;

@@ -1,6 +1,6 @@
 import PermissionIdResource from './PermissionIdResource';
 
-class RoleResource {
+interface RoleResource {
   /**
    * Format: uri
    */

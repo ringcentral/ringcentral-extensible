@@ -1,7 +1,7 @@
 /**
  * Query parameters for operation deleteMessage
 */
-class DeleteMessageParameters {
+interface DeleteMessageParameters {
   /**
    * If the value is 'True', then the message is purged immediately with all the attachments
    */

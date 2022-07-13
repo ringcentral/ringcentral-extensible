@@ -3,7 +3,7 @@ import MessageChanges from './MessageChanges';
 /**
  * Notification payload body
 */
-class MessageEventBody {
+interface MessageEventBody {
   /**
    * Internal identifier of an extension
    */

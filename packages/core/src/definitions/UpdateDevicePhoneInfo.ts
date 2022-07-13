@@ -1,4 +1,4 @@
-class UpdateDevicePhoneInfo {
+interface UpdateDevicePhoneInfo {
   /**
    * Internal identifier of a phone number
    */

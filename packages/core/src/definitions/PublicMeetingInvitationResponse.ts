@@ -1,4 +1,4 @@
-class PublicMeetingInvitationResponse {
+interface PublicMeetingInvitationResponse {
   /**
    * Meeting invitation
    */

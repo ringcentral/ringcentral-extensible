@@ -1,7 +1,7 @@
 /**
  * Query parameters for operation updateDevice
 */
-class UpdateDeviceParameters {
+interface UpdateDeviceParameters {
   /**
    */
   prestatement?: boolean;

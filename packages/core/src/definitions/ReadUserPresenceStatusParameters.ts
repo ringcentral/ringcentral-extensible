@@ -1,7 +1,7 @@
 /**
  * Query parameters for operation readUserPresenceStatus
 */
-class ReadUserPresenceStatusParameters {
+interface ReadUserPresenceStatusParameters {
   /**
    * Whether to return detailed telephony state
    */

@@ -1,7 +1,7 @@
 import GlipPostInfo from './GlipPostInfo';
 import GlipNavigationInfo from './GlipNavigationInfo';
 
-class GlipPostsList {
+interface GlipPostsList {
   /**
    * List of posts
    * Required

@@ -1,6 +1,6 @@
 import FaxMessageEventBody from './FaxMessageEventBody';
 
-class FaxMessageEvent {
+interface FaxMessageEvent {
   /**
    * Universally unique identifier of a notification
    */

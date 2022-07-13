@@ -1,4 +1,4 @@
-class CompanyAnsweringRuleTimeIntervalRequest {
+interface CompanyAnsweringRuleTimeIntervalRequest {
   /**
    * Time in format hh:mm
    */

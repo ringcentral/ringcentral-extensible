@@ -1,4 +1,4 @@
-class PresetInfo {
+interface PresetInfo {
   /**
    * Link to a greeting resource
    */

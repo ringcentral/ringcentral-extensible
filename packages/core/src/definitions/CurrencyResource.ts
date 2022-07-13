@@ -1,4 +1,4 @@
-class CurrencyResource {
+interface CurrencyResource {
   /**
    */
   id?: string;

@@ -1,7 +1,7 @@
 /**
  * Request body for operation authorize
 */
-class AuthorizeRequest {
+interface AuthorizeRequest {
   /**
    * Determines authorization flow: **code** - Authorization Code, **token** - Implicit Grant
    * Required

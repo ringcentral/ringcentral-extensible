@@ -3,7 +3,7 @@ import CallLogNavigationInfoURI from './CallLogNavigationInfoURI';
 /**
  * Information on navigation
 */
-class CallLogNavigationInfo {
+interface CallLogNavigationInfo {
   /**
    */
   firstPage?: CallLogNavigationInfoURI;

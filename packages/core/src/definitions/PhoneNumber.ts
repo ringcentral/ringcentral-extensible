@@ -1,4 +1,4 @@
-class PhoneNumber {
+interface PhoneNumber {
   /**
    * Required
    */

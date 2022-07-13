@@ -1,7 +1,7 @@
 /**
  * Company emergency response location details
 */
-class SipRegistrationDeviceLocationInfo {
+interface SipRegistrationDeviceLocationInfo {
   /**
    * Internal identifier of an emergency response location
    */

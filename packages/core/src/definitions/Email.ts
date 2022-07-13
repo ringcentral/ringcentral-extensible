@@ -1,4 +1,4 @@
-class Email {
+interface Email {
   /**
    * Required
    */

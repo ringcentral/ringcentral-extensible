@@ -1,7 +1,7 @@
 /**
  * Conditional aggregation of calls based on the time spent by specified mailbox(es) on call
 */
-class PerformanceCallsFilterTimeSpentByMailbox {
+interface PerformanceCallsFilterTimeSpentByMailbox {
   /**
    * Format: int64
    */

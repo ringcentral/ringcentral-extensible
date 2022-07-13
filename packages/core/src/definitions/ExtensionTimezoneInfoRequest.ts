@@ -1,4 +1,4 @@
-class ExtensionTimezoneInfoRequest {
+interface ExtensionTimezoneInfoRequest {
   /**
    * internal Identifier of a timezone
    */

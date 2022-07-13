@@ -1,4 +1,4 @@
-class AccountHistoryRecordDetailsParameters {
+interface AccountHistoryRecordDetailsParameters {
   /**
    * Required
    * Example: settingName

@@ -1,4 +1,4 @@
-class MeetingRecordingInfo {
+interface MeetingRecordingInfo {
   /**
    * Unique identifier of a meeting instance
    */

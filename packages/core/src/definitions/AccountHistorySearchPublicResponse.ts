@@ -1,6 +1,6 @@
 import AccountHistoryPublicRecord from './AccountHistoryPublicRecord';
 
-class AccountHistorySearchPublicResponse {
+interface AccountHistorySearchPublicResponse {
   /**
    * List of Records
    */

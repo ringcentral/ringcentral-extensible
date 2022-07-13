@@ -1,4 +1,4 @@
-class AssignedRoleResource {
+interface AssignedRoleResource {
   /**
    * Internal identifier of a role
    */

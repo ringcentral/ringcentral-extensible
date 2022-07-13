@@ -1,7 +1,7 @@
 /**
  * Recipient data
 */
-class RecipientInfo {
+interface RecipientInfo {
   /**
    * Link to a recipient extension resource
    */

@@ -1,7 +1,7 @@
 /**
  * Query parameters for operation listStates
 */
-class ListStatesParameters {
+interface ListStatesParameters {
   /**
    * If set to 'True' then states for all countries are returned and `countryId` is ignored, even if specified. If the value is empty then the parameter is ignored
    */

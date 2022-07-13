@@ -3,7 +3,7 @@ import AdaptiveCardAction from './AdaptiveCardAction';
 import AdaptiveCardSelectAction from './AdaptiveCardSelectAction';
 import BackgroundImage from './BackgroundImage';
 
-class GlipAdaptiveCardRequest {
+interface GlipAdaptiveCardRequest {
   /**
    * Type of atttachment. This field is mandatory and filled on server side - will be ignored if set in request body
    * Required

@@ -1,7 +1,7 @@
 /**
  * Query parameters for operation checkUserPermission
 */
-class CheckUserPermissionParameters {
+interface CheckUserPermissionParameters {
   /**
    */
   permissionId?: string;

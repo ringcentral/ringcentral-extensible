@@ -1,7 +1,7 @@
 /**
  * Query parameters for operation readMessageContent
 */
-class ReadMessageContentParameters {
+interface ReadMessageContentParameters {
   /**
    * Content disposition of a response
    * Default: Inline

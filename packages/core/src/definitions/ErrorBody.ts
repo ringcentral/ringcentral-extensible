@@ -1,4 +1,4 @@
-class ErrorBody {
+interface ErrorBody {
   /**
    * Required
    */

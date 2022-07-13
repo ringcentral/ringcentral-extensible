@@ -1,4 +1,4 @@
-class DeviceAddonInfo {
+interface DeviceAddonInfo {
   /**
    */
   id?: string;

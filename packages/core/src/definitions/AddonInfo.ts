@@ -1,4 +1,4 @@
-class AddonInfo {
+interface AddonInfo {
   /**
    */
   id?: string;

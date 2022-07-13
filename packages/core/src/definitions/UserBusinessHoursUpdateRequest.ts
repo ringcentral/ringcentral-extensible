@@ -1,6 +1,6 @@
 import UserBusinessHoursScheduleInfo from './UserBusinessHoursScheduleInfo';
 
-class UserBusinessHoursUpdateRequest {
+interface UserBusinessHoursUpdateRequest {
   /**
    */
   schedule?: UserBusinessHoursScheduleInfo;

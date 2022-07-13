@@ -1,7 +1,7 @@
 import GlipTeamInfo from './GlipTeamInfo';
 import GlipNavigationInfo from './GlipNavigationInfo';
 
-class GlipTeamsList {
+interface GlipTeamsList {
   /**
    * List of teams
    * Required

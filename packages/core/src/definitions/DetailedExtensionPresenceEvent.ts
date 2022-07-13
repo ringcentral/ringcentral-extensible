@@ -1,6 +1,6 @@
 import DetailedExtensionPresenceEventBody from './DetailedExtensionPresenceEventBody';
 
-class DetailedExtensionPresenceEvent {
+interface DetailedExtensionPresenceEvent {
   /**
    * Universally unique identifier of a notification
    */

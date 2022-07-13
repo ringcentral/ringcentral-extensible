@@ -1,4 +1,4 @@
-class ModifySubscriptionRequest {
+interface ModifySubscriptionRequest {
   /**
    * Collection of URIs to API resources
    * Required

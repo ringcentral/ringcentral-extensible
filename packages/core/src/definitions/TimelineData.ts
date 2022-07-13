@@ -1,7 +1,7 @@
 import KeyInfo from './KeyInfo';
 import TimelineDataPoint from './TimelineDataPoint';
 
-class TimelineData {
+interface TimelineData {
   /**
    * Required
    */

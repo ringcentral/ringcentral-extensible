@@ -1,6 +1,6 @@
 import PerformanceCallsCallSegmentLengthFilter from './PerformanceCallsCallSegmentLengthFilter';
 
-class CallSegmentFilter {
+interface CallSegmentFilter {
   /**
    */
   callSegment?: ('Ringing' | 'LiveTalk' | 'Hold' | 'Park' | 'Transfer' | 'IvrPrompt' | 'Voicemail' | 'VmGreeting' | 'Setup');

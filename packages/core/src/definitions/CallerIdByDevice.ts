@@ -4,7 +4,7 @@ import CallerIdByDeviceInfo from './CallerIdByDeviceInfo';
 /**
  * Caller ID settings by device
 */
-class CallerIdByDevice {
+interface CallerIdByDevice {
   /**
    */
   device?: CallerIdDeviceInfo;

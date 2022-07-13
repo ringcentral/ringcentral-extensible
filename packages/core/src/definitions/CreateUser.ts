@@ -5,7 +5,7 @@ import PhoneNumber from './PhoneNumber';
 import Photo from './Photo';
 import EnterpriseUser from './EnterpriseUser';
 
-class CreateUser {
+interface CreateUser {
   /**
    * User status
    */

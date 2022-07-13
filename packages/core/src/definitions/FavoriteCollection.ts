@@ -1,6 +1,6 @@
 import FavoriteContactResource from './FavoriteContactResource';
 
-class FavoriteCollection {
+interface FavoriteCollection {
   /**
    */
   records?: FavoriteContactResource[];

@@ -1,4 +1,4 @@
-class CallerInfoTo {
+interface CallerInfoTo {
   /**
    */
   phoneNumber?: string;

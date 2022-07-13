@@ -1,4 +1,4 @@
-class ProfileImageInfoURI {
+interface ProfileImageInfoURI {
   /**
    */
   uri?: string;

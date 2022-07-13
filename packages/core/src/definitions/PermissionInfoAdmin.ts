@@ -1,7 +1,7 @@
 /**
  * Admin permission
 */
-class PermissionInfoAdmin {
+interface PermissionInfoAdmin {
   /**
    * Specifies if a permission is enabled or not
    */

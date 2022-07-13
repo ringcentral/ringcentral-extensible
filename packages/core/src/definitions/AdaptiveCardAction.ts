@@ -1,6 +1,6 @@
 import ActionAdaptiveCardInfo from './ActionAdaptiveCardInfo';
 
-class AdaptiveCardAction {
+interface AdaptiveCardAction {
   /**
    */
   type?: ('Action.ShowCard' | 'Action.Submit' | 'Action.OpenUrl' | 'Action.ToggleVisibility');

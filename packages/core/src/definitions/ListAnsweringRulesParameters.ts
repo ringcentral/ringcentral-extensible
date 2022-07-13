@@ -1,7 +1,7 @@
 /**
  * Query parameters for operation listAnsweringRules
 */
-class ListAnsweringRulesParameters {
+interface ListAnsweringRulesParameters {
   /**
    * Filters custom call handling rules of the extension
    */

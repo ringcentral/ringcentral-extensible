@@ -1,7 +1,7 @@
 /**
  * Information about the author
 */
-class GlipMessageAttachmentAuthorInfo {
+interface GlipMessageAttachmentAuthorInfo {
   /**
    * Name of a message author
    */

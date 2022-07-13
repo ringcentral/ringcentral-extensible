@@ -3,7 +3,7 @@ import PublicIpRangeInfo from './PublicIpRangeInfo';
 import PrivateIpRangeInfo from './PrivateIpRangeInfo';
 import ERLLocationInfo from './ERLLocationInfo';
 
-class NetworkInfo {
+interface NetworkInfo {
   /**
    * Internal identifier of a network
    */

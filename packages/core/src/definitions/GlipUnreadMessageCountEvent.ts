@@ -1,7 +1,7 @@
 import GlipAPNSInfo from './GlipAPNSInfo';
 import GCMInfo from './GCMInfo';
 
-class GlipUnreadMessageCountEvent {
+interface GlipUnreadMessageCountEvent {
   /**
    * Universally unique identifier of a notification
    */

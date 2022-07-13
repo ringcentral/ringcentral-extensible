@@ -1,6 +1,6 @@
 import SwitchValidated from './SwitchValidated';
 
-class ValidateMultipleSwitchesResponse {
+interface ValidateMultipleSwitchesResponse {
   /**
    */
   records?: SwitchValidated[];

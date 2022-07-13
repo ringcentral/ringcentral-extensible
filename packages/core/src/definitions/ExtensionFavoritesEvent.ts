@@ -1,6 +1,6 @@
 import ExtensionFavoritesEventBody from './ExtensionFavoritesEventBody';
 
-class ExtensionFavoritesEvent {
+interface ExtensionFavoritesEvent {
   /**
    * Universally unique identifier of a notification
    */

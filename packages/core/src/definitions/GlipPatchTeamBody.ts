@@ -1,4 +1,4 @@
-class GlipPatchTeamBody {
+interface GlipPatchTeamBody {
   /**
    * Team access level
    */

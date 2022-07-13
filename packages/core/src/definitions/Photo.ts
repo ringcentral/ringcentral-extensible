@@ -1,4 +1,4 @@
-class Photo {
+interface Photo {
   /**
    * Required
    */

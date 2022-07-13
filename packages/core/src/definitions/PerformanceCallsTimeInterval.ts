@@ -1,4 +1,4 @@
-class PerformanceCallsTimeInterval {
+interface PerformanceCallsTimeInterval {
   /**
    * Time in format hh:mm
    */

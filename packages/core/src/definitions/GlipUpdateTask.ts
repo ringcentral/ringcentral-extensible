@@ -2,7 +2,7 @@ import AssigneeInfo from './AssigneeInfo';
 import GlipTaskRecurrenceInfo from './GlipTaskRecurrenceInfo';
 import GlipAttachmentInfoRequest from './GlipAttachmentInfoRequest';
 
-class GlipUpdateTask {
+interface GlipUpdateTask {
   /**
    * Task name/subject. Max allowed length is 250 characters.
    */

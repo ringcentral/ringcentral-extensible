@@ -2,7 +2,7 @@ import KeyInfo from './KeyInfo';
 import PerformanceCallsTimers from './PerformanceCallsTimers';
 import PerformanceCallsCounters from './PerformanceCallsCounters';
 
-class PerformanceCallsData {
+interface PerformanceCallsData {
   /**
    * Grouping key
    * Required

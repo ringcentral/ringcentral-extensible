@@ -1,7 +1,7 @@
 /**
  * Sync information (type, token and time)
 */
-class CompanyCallLogSyncInfo {
+interface CompanyCallLogSyncInfo {
   /**
    * Type of synchronization
    */

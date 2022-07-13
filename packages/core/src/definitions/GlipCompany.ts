@@ -1,4 +1,4 @@
-class GlipCompany {
+interface GlipCompany {
   /**
    * Internal identifier of a Glip company (RC account)
    * Required

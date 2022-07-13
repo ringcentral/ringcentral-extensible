@@ -3,7 +3,7 @@ import UserContactsNavigationInfoUri from './UserContactsNavigationInfoUri';
 /**
  * Information on navigation
 */
-class UserContactsNavigationInfo {
+interface UserContactsNavigationInfo {
   /**
    */
   firstPage?: UserContactsNavigationInfoUri;

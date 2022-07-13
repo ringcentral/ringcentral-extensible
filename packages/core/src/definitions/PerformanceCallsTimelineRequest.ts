@@ -3,7 +3,7 @@ import PerformanceCallsTimeSettings from './PerformanceCallsTimeSettings';
 import PerformanceCallsFilters from './PerformanceCallsFilters';
 import TimelineResponseDataOptions from './TimelineResponseDataOptions';
 
-class PerformanceCallsTimelineRequest {
+interface PerformanceCallsTimelineRequest {
   /**
    */
   grouping?: PerformanceCallsGrouping;

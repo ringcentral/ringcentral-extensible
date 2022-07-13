@@ -1,6 +1,6 @@
 import LocationDeletionInfo from './LocationDeletionInfo';
 
-class GetLocationDeletionMultiResponse {
+interface GetLocationDeletionMultiResponse {
   /**
    */
   deletion?: ('Forbidden' | 'Restricted' | 'Allowed');

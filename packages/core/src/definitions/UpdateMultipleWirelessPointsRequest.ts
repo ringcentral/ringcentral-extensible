@@ -1,6 +1,6 @@
 import UpdateWirelessPoint from './UpdateWirelessPoint';
 
-class UpdateMultipleWirelessPointsRequest {
+interface UpdateMultipleWirelessPointsRequest {
   /**
    */
   records?: UpdateWirelessPoint[];

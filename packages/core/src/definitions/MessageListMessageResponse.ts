@@ -1,7 +1,7 @@
 /**
- * Infomation on a message returned within the specified batch
+ * Information on a message returned within the specified batch
 */
-class MessageListMessageResponse {
+interface MessageListMessageResponse {
   /**
    * Internal identifier of a message
    * Format: int32

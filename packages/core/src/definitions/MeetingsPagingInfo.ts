@@ -1,4 +1,4 @@
-class MeetingsPagingInfo {
+interface MeetingsPagingInfo {
   /**
    * Format: int32
    */

@@ -3,7 +3,7 @@ import APSInfo from './APSInfo';
 /**
  * APNS (Apple Push Notification Service) information
 */
-class APNSInfo {
+interface APNSInfo {
   /**
    */
   aps?: APSInfo;

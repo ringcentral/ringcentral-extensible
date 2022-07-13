@@ -1,7 +1,7 @@
 /**
  * Call queue information
 */
-class PresenceCallQueueInfo {
+interface PresenceCallQueueInfo {
   /**
    * Internal identifier of a call queue
    */

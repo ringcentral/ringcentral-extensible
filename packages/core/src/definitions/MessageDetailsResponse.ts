@@ -1,7 +1,7 @@
 /**
  * Detailed information on a message
 */
-class MessageDetailsResponse {
+interface MessageDetailsResponse {
   /**
    * Internal identifier of a message
    * Example: 1234

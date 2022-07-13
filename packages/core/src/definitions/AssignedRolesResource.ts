@@ -1,6 +1,6 @@
 import AssignedRoleResource from './AssignedRoleResource';
 
-class AssignedRolesResource {
+interface AssignedRolesResource {
   /**
    * Format: uri
    */

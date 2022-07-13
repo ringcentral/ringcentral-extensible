@@ -1,4 +1,4 @@
-class NotificationRecipientInfo {
+interface NotificationRecipientInfo {
   /**
    * Phone number in E.164 (with '+' sign) format
    */

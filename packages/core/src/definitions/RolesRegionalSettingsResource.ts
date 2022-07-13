@@ -3,7 +3,7 @@ import RolesCountryResource from './RolesCountryResource';
 import RolesLanguageResource from './RolesLanguageResource';
 import CurrencyResource from './CurrencyResource';
 
-class RolesRegionalSettingsResource {
+interface RolesRegionalSettingsResource {
   /**
    */
   timezone?: RolesTimezoneResource;

@@ -1,7 +1,7 @@
 import ResponsePaging from './ResponsePaging';
 import PerformanceCallsData from './PerformanceCallsData';
 
-class PerformanceCallsAggregatesResponse {
+interface PerformanceCallsAggregatesResponse {
   /**
    * Required
    */

@@ -1,4 +1,4 @@
-class PromptInfo {
+interface PromptInfo {
   /**
    * Internal identifier of a prompt
    */

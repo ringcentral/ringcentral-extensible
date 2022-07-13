@@ -7,7 +7,7 @@ import ShippingInfo from './ShippingInfo';
 import DeviceSiteInfo from './DeviceSiteInfo';
 import BillingStatementInfo from './BillingStatementInfo';
 
-class GetDeviceInfoResponse {
+interface GetDeviceInfoResponse {
   /**
    * Internal identifier of a device
    */
@@ -27,7 +27,7 @@ class GetDeviceInfoResponse {
    * Device type
    * Default: HardPhone
    */
-  type?: ('BLA' | 'SoftPhone' | 'OtherPhone' | 'HardPhone' | 'WebPhone' | 'Paging' | 'Room');
+  type?: ('BLA' | 'SoftPhone' | 'OtherPhone' | 'HardPhone' | 'WebPhone' | 'Paging' | 'Room' | 'WebRTC');
 
   /**
    * Device name. Mandatory if ordering  SoftPhone  or  OtherPhone. Optional for  HardPhone. If not specified for HardPhone, then device model name is used as device name

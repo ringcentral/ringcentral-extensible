@@ -1,7 +1,7 @@
 /**
  * Information on a country the state belongs to
 */
-class GetCountryInfoState {
+interface GetCountryInfoState {
   /**
    * Internal identifier of a state
    */

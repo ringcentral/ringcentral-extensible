@@ -1,7 +1,7 @@
 /**
  * Information on a blocked/allowed phone number
 */
-class BlockedAllowedPhoneNumberInfo {
+interface BlockedAllowedPhoneNumberInfo {
   /**
    * Link to a blocked/allowed phone number
    */

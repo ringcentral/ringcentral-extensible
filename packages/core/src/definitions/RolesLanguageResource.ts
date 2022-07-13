@@ -1,4 +1,4 @@
-class RolesLanguageResource {
+interface RolesLanguageResource {
   /**
    */
   id?: string;

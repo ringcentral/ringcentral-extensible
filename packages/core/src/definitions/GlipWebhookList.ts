@@ -1,6 +1,6 @@
 import GlipWebhookInfo from './GlipWebhookInfo';
 
-class GlipWebhookList {
+interface GlipWebhookList {
   /**
    */
   records?: GlipWebhookInfo[];

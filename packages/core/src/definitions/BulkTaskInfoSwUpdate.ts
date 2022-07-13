@@ -1,7 +1,7 @@
 /**
  * Information on the task for multiple switches update
 */
-class BulkTaskInfoSwUpdate {
+interface BulkTaskInfoSwUpdate {
   /**
    * Internal identifier of a task for multiple switches creation
    */

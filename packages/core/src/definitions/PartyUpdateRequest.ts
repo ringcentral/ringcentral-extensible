@@ -1,6 +1,6 @@
 import PartyUpdateInfo from './PartyUpdateInfo';
 
-class PartyUpdateRequest {
+interface PartyUpdateRequest {
   /**
    */
   party?: PartyUpdateInfo;

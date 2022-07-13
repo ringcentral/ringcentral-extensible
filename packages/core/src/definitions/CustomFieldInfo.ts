@@ -1,4 +1,4 @@
-class CustomFieldInfo {
+interface CustomFieldInfo {
   /**
    * Internal identifier of a custom field
    */

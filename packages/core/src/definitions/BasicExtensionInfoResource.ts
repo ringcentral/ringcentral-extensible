@@ -1,4 +1,4 @@
-class BasicExtensionInfoResource {
+interface BasicExtensionInfoResource {
   /**
    */
   id?: string;

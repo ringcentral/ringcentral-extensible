@@ -2,7 +2,7 @@ import ExtensionDeviceResponse from './ExtensionDeviceResponse';
 import DeviceProvisioningNavigationInfo from './DeviceProvisioningNavigationInfo';
 import DeviceProvisioningPagingInfo from './DeviceProvisioningPagingInfo';
 
-class GetExtensionDevicesResponse {
+interface GetExtensionDevicesResponse {
   /**
    * Link to the list of extension devices
    */

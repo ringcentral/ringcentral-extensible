@@ -1,6 +1,6 @@
 import TaskResultInfo from './TaskResultInfo';
 
-class AutomaticLocationUpdatesTaskInfo {
+interface AutomaticLocationUpdatesTaskInfo {
   /**
    * Internal identifier of a task
    */

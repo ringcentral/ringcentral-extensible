@@ -3,7 +3,7 @@ import RuleInfoCreateRuleRequest from './RuleInfoCreateRuleRequest';
 /**
  * Forwarding parameters. Returned if 'ForwardCalls' is specified in 'callHandlingAction'. These settings determine the forwarding numbers to which the call will be forwarded
 */
-class ForwardingInfoCreateRuleRequest {
+interface ForwardingInfoCreateRuleRequest {
   /**
    * Specifies if the first ring on desktop/mobile apps is enabled. The default value is 'True'
    */

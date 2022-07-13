@@ -7,7 +7,7 @@ import ContractedCountryInfo from './ContractedCountryInfo';
 /**
  * Account service information, including brand, service plan and billing plan
 */
-class ServiceInfo {
+interface ServiceInfo {
   /**
    * Canonical URI of a service info resource
    */

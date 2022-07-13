@@ -1,7 +1,7 @@
 /**
  * Sync type, token and time
 */
-class SyncInfoMessages {
+interface SyncInfoMessages {
   /**
    * Type of synchronization
    */

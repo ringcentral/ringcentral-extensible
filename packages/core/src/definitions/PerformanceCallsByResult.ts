@@ -1,6 +1,6 @@
 import CallsByResult from './CallsByResult';
 
-class PerformanceCallsByResult {
+interface PerformanceCallsByResult {
   /**
    * Required
    */

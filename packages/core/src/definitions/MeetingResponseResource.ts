@@ -3,7 +3,7 @@ import MeetingScheduleResource from './MeetingScheduleResource';
 import HostInfoRequest from './HostInfoRequest';
 import RecurrenceInfo from './RecurrenceInfo';
 
-class MeetingResponseResource {
+interface MeetingResponseResource {
   /**
    * Link to a meeting resource
    * Format: uri

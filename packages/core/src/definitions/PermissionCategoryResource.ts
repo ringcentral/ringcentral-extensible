@@ -1,4 +1,4 @@
-class PermissionCategoryResource {
+interface PermissionCategoryResource {
   /**
    * Format: uri
    */

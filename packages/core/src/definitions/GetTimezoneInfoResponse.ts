@@ -1,4 +1,4 @@
-class GetTimezoneInfoResponse {
+interface GetTimezoneInfoResponse {
   /**
    * Internal identifier of a timezone
    */

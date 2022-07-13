@@ -2,7 +2,7 @@ import RoleResource from './RoleResource';
 import RNPPagingInfo from './RNPPagingInfo';
 import RNPNavigationInfo from './RNPNavigationInfo';
 
-class RolesCollectionResource {
+interface RolesCollectionResource {
   /**
    * Format: uri
    */

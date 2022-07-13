@@ -2,7 +2,7 @@ import CallerInfoFrom from './CallerInfoFrom';
 import CallerInfoTo from './CallerInfoTo';
 import MessageAttachmentInfoIntId from './MessageAttachmentInfoIntId';
 
-class FaxResponse {
+interface FaxResponse {
   /**
    * Internal identifier of a message
    * Format: int64

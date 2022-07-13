@@ -1,6 +1,6 @@
 import VersionInfo from './VersionInfo';
 
-class GetVersionsResponse {
+interface GetVersionsResponse {
   /**
    * Canonical URI of the API version
    */

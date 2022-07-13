@@ -1,4 +1,4 @@
-class ResponsePaging {
+interface ResponsePaging {
   /**
    * The current page number
    * Required

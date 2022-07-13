@@ -1,6 +1,6 @@
 import RNPNavigationInfoUri from './RNPNavigationInfoUri';
 
-class RNPNavigationInfo {
+interface RNPNavigationInfo {
   /**
    */
   nextPage?: RNPNavigationInfoUri;

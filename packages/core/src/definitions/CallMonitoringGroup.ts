@@ -1,4 +1,4 @@
-class CallMonitoringGroup {
+interface CallMonitoringGroup {
   /**
    * Link to a call monitoring group resource
    */

@@ -1,6 +1,6 @@
 import CreateWirelessPoint from './CreateWirelessPoint';
 
-class CreateMultipleWirelessPointsRequest {
+interface CreateMultipleWirelessPointsRequest {
   /**
    */
   records?: CreateWirelessPoint[];

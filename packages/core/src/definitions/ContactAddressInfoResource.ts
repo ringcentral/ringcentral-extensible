@@ -1,4 +1,4 @@
-class ContactAddressInfoResource {
+interface ContactAddressInfoResource {
   /**
    */
   street?: string;

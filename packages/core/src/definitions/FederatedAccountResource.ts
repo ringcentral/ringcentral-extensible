@@ -1,6 +1,6 @@
 import PhoneNumberResource from './PhoneNumberResource';
 
-class FederatedAccountResource {
+interface FederatedAccountResource {
   /**
    */
   companyName?: string;

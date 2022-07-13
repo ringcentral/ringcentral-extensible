@@ -6,7 +6,7 @@ import CallLogRecordingInfo from './CallLogRecordingInfo';
 import CallLogRecordLegInfo from './CallLogRecordLegInfo';
 import BillingInfo from './BillingInfo';
 
-class CompanyCallLogRecord {
+interface CompanyCallLogRecord {
   /**
    * Internal identifier of a cal log record
    */

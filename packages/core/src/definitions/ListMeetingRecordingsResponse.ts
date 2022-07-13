@@ -2,7 +2,7 @@ import MeetingRecording from './MeetingRecording';
 import MeetingRecordingsPagingInfo from './MeetingRecordingsPagingInfo';
 import MeetingRecordingsNavigationInfo from './MeetingRecordingsNavigationInfo';
 
-class ListMeetingRecordingsResponse {
+interface ListMeetingRecordingsResponse {
   /**
    */
   records?: MeetingRecording[];

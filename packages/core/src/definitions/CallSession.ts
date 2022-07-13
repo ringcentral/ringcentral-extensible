@@ -1,6 +1,6 @@
 import CallSessionObject from './CallSessionObject';
 
-class CallSession {
+interface CallSession {
   /**
    */
   session?: CallSessionObject;

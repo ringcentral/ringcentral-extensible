@@ -1,4 +1,4 @@
-class TimeInterval {
+interface TimeInterval {
   /**
    * Time in format hh:mm
    */

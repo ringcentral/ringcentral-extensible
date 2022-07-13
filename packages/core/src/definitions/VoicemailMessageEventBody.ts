@@ -5,7 +5,7 @@ import MessageAttachmentInfo from './MessageAttachmentInfo';
 /**
  * Notification payload body
 */
-class VoicemailMessageEventBody {
+interface VoicemailMessageEventBody {
   /**
    * Internal identifier of a message
    */

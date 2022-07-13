@@ -10,7 +10,7 @@ import GreetingInfo from './GreetingInfo';
 import SharedLinesInfo from './SharedLinesInfo';
 import MissedCallInfo from './MissedCallInfo';
 
-class AnsweringRuleInfo {
+interface AnsweringRuleInfo {
   /**
    * Canonical URI to an answering rule resource
    */

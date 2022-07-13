@@ -1,4 +1,4 @@
-class VersionInfo {
+interface VersionInfo {
   /**
    * Canonical URI of API versions
    */

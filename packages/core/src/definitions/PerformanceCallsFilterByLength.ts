@@ -1,7 +1,7 @@
 /**
  * Conditional aggregation of calls based on the overall call length
 */
-class PerformanceCallsFilterByLength {
+interface PerformanceCallsFilterByLength {
   /**
    * Format: int64
    */

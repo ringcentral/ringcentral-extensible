@@ -1,4 +1,4 @@
-class EmailRecipientInfo {
+interface EmailRecipientInfo {
   /**
    * Internal identifier of an extension
    */

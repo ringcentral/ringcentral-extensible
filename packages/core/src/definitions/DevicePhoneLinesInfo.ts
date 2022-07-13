@@ -1,7 +1,7 @@
 import DevicePhoneLinesEmergencyAddressInfo from './DevicePhoneLinesEmergencyAddressInfo';
 import DevicePhoneNumberInfo from './DevicePhoneNumberInfo';
 
-class DevicePhoneLinesInfo {
+interface DevicePhoneLinesInfo {
   /**
    * Internal identifier of a phone line
    */

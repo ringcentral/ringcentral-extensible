@@ -3,7 +3,7 @@ import DataExportTaskContactInfo from './DataExportTaskContactInfo';
 /**
  * Information specified in request
 */
-class SpecificInfo {
+interface SpecificInfo {
   /**
    * Starting time for data collection
    */

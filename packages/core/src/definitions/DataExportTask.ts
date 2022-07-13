@@ -2,7 +2,7 @@ import CreatorInfo from './CreatorInfo';
 import SpecificInfo from './SpecificInfo';
 import ExportTaskResultInfo from './ExportTaskResultInfo';
 
-class DataExportTask {
+interface DataExportTask {
   /**
    * Canonical URI of a task
    */

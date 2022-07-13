@@ -1,4 +1,4 @@
-class CustomCompanyGreetingAnsweringRuleInfo {
+interface CustomCompanyGreetingAnsweringRuleInfo {
   /**
    */
   id?: string;

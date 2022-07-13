@@ -1,4 +1,4 @@
-class UserCustomFieldResource {
+interface UserCustomFieldResource {
   /**
    */
   id?: string;

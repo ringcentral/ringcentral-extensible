@@ -1,7 +1,7 @@
 /**
  * Canonical URI for the corresponding page of the list
 */
-class CallHandlingNavigationInfoUri {
+interface CallHandlingNavigationInfoUri {
   /**
    */
   uri?: string;

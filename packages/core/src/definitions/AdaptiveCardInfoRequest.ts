@@ -1,6 +1,6 @@
 import AdaptiveCardInfoRequestItem from './AdaptiveCardInfoRequestItem';
 
-class AdaptiveCardInfoRequest {
+interface AdaptiveCardInfoRequest {
   /**
    */
   type?: ('Container');

@@ -1,4 +1,4 @@
-class SuperviseCallSessionRequest {
+interface SuperviseCallSessionRequest {
   /**
    * Supervising mode
    * Required

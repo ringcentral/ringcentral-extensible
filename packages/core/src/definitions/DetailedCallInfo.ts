@@ -1,4 +1,4 @@
-class DetailedCallInfo {
+interface DetailedCallInfo {
   /**
    */
   callId?: string;

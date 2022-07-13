@@ -2,7 +2,7 @@ import GetPresenceInfo from './GetPresenceInfo';
 import PresenceNavigationInfo from './PresenceNavigationInfo';
 import PresencePagingInfo from './PresencePagingInfo';
 
-class AccountPresenceInfo {
+interface AccountPresenceInfo {
   /**
    * Canonical URI of account presence resource
    */

@@ -1,7 +1,7 @@
 /**
  * Query parameters for operation deleteExtension
 */
-class DeleteExtensionParameters {
+interface DeleteExtensionParameters {
   /**
    */
   savePhoneLines?: boolean;

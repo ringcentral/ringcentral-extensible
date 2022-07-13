@@ -1,6 +1,6 @@
 import RolesBusinessSiteResource from './RolesBusinessSiteResource';
 
-class BusinessSiteCollectionResource {
+interface BusinessSiteCollectionResource {
   /**
    * Format: uri
    */

@@ -1,6 +1,6 @@
 import MeetingsCountryResource from './MeetingsCountryResource';
 
-class DialInNumberResource {
+interface DialInNumberResource {
   /**
    */
   phoneNumber?: string;

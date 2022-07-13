@@ -1,7 +1,7 @@
 /**
  * Query parameters for operation listAccountSwitches
 */
-class ListAccountSwitchesParameters {
+interface ListAccountSwitchesParameters {
   /**
    * Internal identifier of a site. To filter Main Site (Company) main-site must be specified. Supported only If multi-site feature is enabled for the account
    */

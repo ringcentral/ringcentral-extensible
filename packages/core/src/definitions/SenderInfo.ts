@@ -1,7 +1,7 @@
 /**
  * Extension Type. For GCM transport type '_from' property should be used || Message sender information
 */
-class SenderInfo {
+interface SenderInfo {
   /**
    * Phone number in E.164 (with '+' sign) format
    */

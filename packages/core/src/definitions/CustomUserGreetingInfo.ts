@@ -1,6 +1,6 @@
 import CustomGreetingAnsweringRuleInfo from './CustomGreetingAnsweringRuleInfo';
 
-class CustomUserGreetingInfo {
+interface CustomUserGreetingInfo {
   /**
    * Link to a custom user greeting
    */

@@ -1,7 +1,7 @@
 /**
  * Sender of a pager message.
 */
-class PagerCallerInfoRequest {
+interface PagerCallerInfoRequest {
   /**
    * Extension identifier
    * Example: 123456789

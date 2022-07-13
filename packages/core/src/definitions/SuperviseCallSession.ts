@@ -3,7 +3,7 @@ import SupervisePartyTo from './SupervisePartyTo';
 import OwnerInfo from './OwnerInfo';
 import CallStatusInfo from './CallStatusInfo';
 
-class SuperviseCallSession {
+interface SuperviseCallSession {
   /**
    */
   from?: SupervisePartyFrom;

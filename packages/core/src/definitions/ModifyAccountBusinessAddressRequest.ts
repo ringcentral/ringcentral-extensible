@@ -1,6 +1,6 @@
 import BusinessAddressInfo from './BusinessAddressInfo';
 
-class ModifyAccountBusinessAddressRequest {
+interface ModifyAccountBusinessAddressRequest {
   /**
    * Company business name
    */

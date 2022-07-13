@@ -1,7 +1,7 @@
 import CallerIdByDeviceRequest from './CallerIdByDeviceRequest';
 import CallerIdByFeatureRequest from './CallerIdByFeatureRequest';
 
-class ExtensionCallerIdInfoRequest {
+interface ExtensionCallerIdInfoRequest {
   /**
    * Canonical URL of a caller ID resource
    */

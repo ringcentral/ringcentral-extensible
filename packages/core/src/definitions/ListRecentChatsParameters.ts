@@ -1,7 +1,7 @@
 /**
  * Query parameters for operation listRecentChats
 */
-class ListRecentChatsParameters {
+interface ListRecentChatsParameters {
   /**
    * Type of chats to be fetched. By default all chat types are returned
    */

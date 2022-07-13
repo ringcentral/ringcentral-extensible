@@ -4,7 +4,7 @@ import PronouncedNameInfo from './PronouncedNameInfo';
 /**
  * Contact detailed information
 */
-class ContactInfo {
+interface ContactInfo {
   /**
    * For User extension type only. Extension user first name
    */

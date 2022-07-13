@@ -4,7 +4,7 @@ import ProfileImageInfo from './ProfileImageInfo';
 import CallQueueExtensionInfo from './CallQueueExtensionInfo';
 import AutomaticLocationUpdatesSiteInfo from './AutomaticLocationUpdatesSiteInfo';
 
-class GetExtensionListInfoResponse {
+interface GetExtensionListInfoResponse {
   /**
    * Internal identifier of an extension
    * Format: int64

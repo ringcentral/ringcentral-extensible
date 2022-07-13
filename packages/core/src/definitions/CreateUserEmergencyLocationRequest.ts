@@ -1,6 +1,6 @@
 import LocationUpdatesEmergencyAddressInfoRequest from './LocationUpdatesEmergencyAddressInfoRequest';
 
-class CreateUserEmergencyLocationRequest {
+interface CreateUserEmergencyLocationRequest {
   /**
    * Name of a new personal emergency response location
    */

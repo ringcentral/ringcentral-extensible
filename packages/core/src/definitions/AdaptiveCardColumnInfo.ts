@@ -1,6 +1,6 @@
 import AdaptiveCardColumnItemInfo from './AdaptiveCardColumnItemInfo';
 
-class AdaptiveCardColumnInfo {
+interface AdaptiveCardColumnInfo {
   /**
    */
   type?: string;

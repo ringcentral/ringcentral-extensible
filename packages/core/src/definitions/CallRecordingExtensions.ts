@@ -2,7 +2,7 @@ import CallRecordingExtensionInfo from './CallRecordingExtensionInfo';
 import CallHandlingNavigationInfo from './CallHandlingNavigationInfo';
 import CallHandlingPagingInfo from './CallHandlingPagingInfo';
 
-class CallRecordingExtensions {
+interface CallRecordingExtensions {
   /**
    * Link to call recording extension list resource
    */

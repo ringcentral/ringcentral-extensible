@@ -1,7 +1,7 @@
 import AutomaticLocationUpdatesSiteInfo from './AutomaticLocationUpdatesSiteInfo';
 import LocationUpdatesEmergencyAddressInfoRequest from './LocationUpdatesEmergencyAddressInfoRequest';
 
-class WirelessPointInfoRequest {
+interface WirelessPointInfoRequest {
   /**
    * Internal identifier of a wireless point
    */

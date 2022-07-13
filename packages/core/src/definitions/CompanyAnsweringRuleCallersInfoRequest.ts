@@ -1,4 +1,4 @@
-class CompanyAnsweringRuleCallersInfoRequest {
+interface CompanyAnsweringRuleCallersInfoRequest {
   /**
    * Phone number of a caller
    */

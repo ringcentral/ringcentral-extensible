@@ -4,7 +4,7 @@ import PerformanceCallsTimersResponseOptions from './PerformanceCallsTimersRespo
 /**
  * This field provides mapping of possible breakdown options for call aggregation and aggregation formula
 */
-class PerformanceCallsResponseDataOptions {
+interface PerformanceCallsResponseDataOptions {
   /**
    */
   counters?: PerformanceCallsCountersResponseOptions;

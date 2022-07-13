@@ -1,4 +1,4 @@
-class CallQueueMemberInfo {
+interface CallQueueMemberInfo {
   /**
    * Link to a call queue member
    */

@@ -9,7 +9,7 @@ import MissedCallInfo from './MissedCallInfo';
 import GreetingInfo from './GreetingInfo';
 import TransferredExtensionInfo from './TransferredExtensionInfo';
 
-class UpdateAnsweringRuleRequest {
+interface UpdateAnsweringRuleRequest {
   /**
    * Identifier of an answering rule
    */

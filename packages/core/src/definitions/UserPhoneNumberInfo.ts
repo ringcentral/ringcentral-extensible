@@ -2,7 +2,7 @@ import CountryInfo from './CountryInfo';
 import ContactCenterProvider from './ContactCenterProvider';
 import UserPhoneNumberExtensionInfo from './UserPhoneNumberExtensionInfo';
 
-class UserPhoneNumberInfo {
+interface UserPhoneNumberInfo {
   /**
    * Link to the user's phone number resource
    */

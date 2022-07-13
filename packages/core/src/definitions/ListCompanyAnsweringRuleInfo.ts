@@ -1,7 +1,7 @@
 import CalledNumberInfo from './CalledNumberInfo';
 import CompanyAnsweringRuleExtensionInfo from './CompanyAnsweringRuleExtensionInfo';
 
-class ListCompanyAnsweringRuleInfo {
+interface ListCompanyAnsweringRuleInfo {
   /**
    * Internal identifier of an answering rule
    */

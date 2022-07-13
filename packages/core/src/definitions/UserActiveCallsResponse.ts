@@ -2,7 +2,7 @@ import UserCallLogRecord from './UserCallLogRecord';
 import CallLogNavigationInfo from './CallLogNavigationInfo';
 import CallLogPagingInfo from './CallLogPagingInfo';
 
-class UserActiveCallsResponse {
+interface UserActiveCallsResponse {
   /**
    * Link to the list of user active call records
    */

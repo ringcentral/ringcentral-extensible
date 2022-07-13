@@ -1,4 +1,4 @@
-class PerformanceCallsCountersResponseOptionsCallsByQueueSla {
+interface PerformanceCallsCountersResponseOptionsCallsByQueueSla {
   /**
    */
   aggregationType?: ('Sum' | 'Average' | 'Max' | 'Min' | 'Percent');

@@ -1,4 +1,4 @@
-class CallRecordingExtensionResource {
+interface CallRecordingExtensionResource {
   /**
    * Internal identifier of an extension
    */

@@ -1,7 +1,7 @@
 /**
  * Information on account billing plan
 */
-class BillingPlanInfo {
+interface BillingPlanInfo {
   /**
    * Internal identifier of a billing plan
    */

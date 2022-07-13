@@ -1,7 +1,7 @@
 /**
  * Query parameters for operation syncMessages
 */
-class SyncMessagesParameters {
+interface SyncMessagesParameters {
   /**
    * Conversation identifier for the resulting messages. Meaningful for SMS and Pager messages only.
    * Format: int64

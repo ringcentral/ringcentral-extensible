@@ -1,6 +1,6 @@
 import CreateAnsweringRuleForwardingNumberInfo from './CreateAnsweringRuleForwardingNumberInfo';
 
-class RuleInfo {
+interface RuleInfo {
   /**
    * Forwarding number (or group) ordinal
    */

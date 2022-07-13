@@ -1,7 +1,7 @@
 /**
  * Notification payload body
 */
-class ExtensionGrantListEventBody {
+interface ExtensionGrantListEventBody {
   /**
    * Internal identifier of an extension
    */

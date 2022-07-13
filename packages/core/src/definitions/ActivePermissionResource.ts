@@ -1,7 +1,7 @@
 import PermissionIdResource from './PermissionIdResource';
 import RoleIdResource from './RoleIdResource';
 
-class ActivePermissionResource {
+interface ActivePermissionResource {
   /**
    */
   permission?: PermissionIdResource;

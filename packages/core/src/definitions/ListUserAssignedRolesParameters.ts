@@ -1,7 +1,7 @@
 /**
  * Query parameters for operation listUserAssignedRoles
 */
-class ListUserAssignedRolesParameters {
+interface ListUserAssignedRolesParameters {
   /**
    */
   showHidden?: boolean;

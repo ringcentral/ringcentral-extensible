@@ -1,7 +1,7 @@
 /**
  * Note creator information
 */
-class GlipCreatorInfo {
+interface GlipCreatorInfo {
   /**
    * Internal identifier of a user who created a note/task
    */

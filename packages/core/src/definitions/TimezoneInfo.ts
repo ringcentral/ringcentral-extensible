@@ -1,7 +1,7 @@
 /**
  * Extension timezone information
 */
-class TimezoneInfo {
+interface TimezoneInfo {
   /**
    * Internal identifier of a timezone
    */

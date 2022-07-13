@@ -31,7 +31,7 @@ interface Logger {
 }
 
 class RingCentral implements RingCentralInterface {
-  static config: { logger : Logger } = {
+  static config: { logger: Logger } = {
     logger: {
       debug: () => { },
       log: () => { },
@@ -147,7 +147,7 @@ class RingCentral implements RingCentralInterface {
   async authorize(
     options: PasswordFlowOptions | AuthCodeFlowOptions,
   ): Promise<TokenInfo> {
-    const getTokenRequest = new GetTokenRequest();
+    const getTokenRequest: GetTokenRequest = {};
     if ('username' in options) {
       getTokenRequest.grant_type = 'password';
       getTokenRequest.username = options.username;
@@ -195,7 +195,7 @@ class RingCentral implements RingCentralInterface {
     if (!tokenToRefresh) {
       throw new Error('tokenToRefresh must be specified.');
     }
-    const getTokenRequest = new GetTokenRequest();
+    const getTokenRequest: GetTokenRequest = {};
     getTokenRequest.grant_type = 'refresh_token';
     getTokenRequest.refresh_token = tokenToRefresh;
     return this.getToken(getTokenRequest);

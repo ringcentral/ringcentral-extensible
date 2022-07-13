@@ -1,4 +1,4 @@
-class MeetingsNavigationInfoUri {
+interface MeetingsNavigationInfoUri {
   /**
    * Format: uri
    */

@@ -1,7 +1,7 @@
 /**
  * resource metadata
 */
-class Meta {
+interface Meta {
   /**
    * Format: date-time
    */

@@ -1,4 +1,4 @@
-class CallsByDirection {
+interface CallsByDirection {
   /**
    * Required
    * Format: double

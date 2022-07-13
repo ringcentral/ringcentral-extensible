@@ -7,7 +7,7 @@ import FormattingLocaleInfo from './FormattingLocaleInfo';
 /**
  * Regional data (timezone, home country, language) of an extension/account. The default is Company (Auto-Receptionist) settings
 */
-class RegionalSettings {
+interface RegionalSettings {
   /**
    */
   homeCountry?: CountryInfo;

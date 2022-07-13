@@ -24,7 +24,7 @@ class Index {
   }
 
   /**
-   * Creates a task to collect all account messages within the specified time interval. Maximum number of simaltaneous tasks per account is 2.
+   * Creates a task to collect all account messages within the specified time interval. Maximum number of simultaneous tasks per account is 2.
    * HTTP Method: post
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/message-store-report
    * Rate Limit Group: Heavy

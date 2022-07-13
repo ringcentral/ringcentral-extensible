@@ -1,6 +1,6 @@
 import CallQueueMember from './CallQueueMember';
 
-class CallQueueMemberPresence {
+interface CallQueueMemberPresence {
   /**
    */
   member?: CallQueueMember;

@@ -1,4 +1,4 @@
-class BulkAssignAutomaticLocationUpdatesUsers {
+interface BulkAssignAutomaticLocationUpdatesUsers {
   /**
    */
   enabledUserIds?: string[];

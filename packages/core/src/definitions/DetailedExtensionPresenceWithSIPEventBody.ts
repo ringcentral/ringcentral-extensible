@@ -3,7 +3,7 @@ import ActiveCallInfo from './ActiveCallInfo';
 /**
  * Notification payload body
 */
-class DetailedExtensionPresenceWithSIPEventBody {
+interface DetailedExtensionPresenceWithSIPEventBody {
   /**
    * Internal identifier of an extension
    * Default: ~

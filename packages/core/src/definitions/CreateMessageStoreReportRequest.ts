@@ -1,4 +1,4 @@
-class CreateMessageStoreReportRequest {
+interface CreateMessageStoreReportRequest {
   /**
    * Only messages created before the date will be collected. The default value is current time
    */

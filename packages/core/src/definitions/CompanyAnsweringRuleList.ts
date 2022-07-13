@@ -2,7 +2,7 @@ import ListCompanyAnsweringRuleInfo from './ListCompanyAnsweringRuleInfo';
 import CallHandlingPagingInfo from './CallHandlingPagingInfo';
 import CallHandlingNavigationInfo from './CallHandlingNavigationInfo';
 
-class CompanyAnsweringRuleList {
+interface CompanyAnsweringRuleList {
   /**
    * Link to an answering rule resource
    */

@@ -1,7 +1,7 @@
 /**
  * Query parameters for operation listStandardUserRole
 */
-class ListStandardUserRoleParameters {
+interface ListStandardUserRoleParameters {
   /**
    * Default: 1
    */

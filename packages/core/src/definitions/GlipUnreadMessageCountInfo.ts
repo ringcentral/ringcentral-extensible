@@ -1,7 +1,7 @@
 /**
  * Unread messages data
 */
-class GlipUnreadMessageCountInfo {
+interface GlipUnreadMessageCountInfo {
   /**
    * Count of glip unread messages
    */

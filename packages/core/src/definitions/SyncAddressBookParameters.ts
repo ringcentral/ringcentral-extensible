@@ -1,7 +1,7 @@
 /**
  * Query parameters for operation syncAddressBook
 */
-class SyncAddressBookParameters {
+interface SyncAddressBookParameters {
   /**
    * Type of synchronization
    */

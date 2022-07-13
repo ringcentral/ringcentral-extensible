@@ -1,4 +1,4 @@
-class ExtensionCountryInfoRequest {
+interface ExtensionCountryInfoRequest {
   /**
    * internal Identifier of a country
    */

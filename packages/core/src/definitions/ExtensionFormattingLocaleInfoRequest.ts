@@ -1,4 +1,4 @@
-class ExtensionFormattingLocaleInfoRequest {
+interface ExtensionFormattingLocaleInfoRequest {
   /**
    * Internal Identifier of a formatting language
    */

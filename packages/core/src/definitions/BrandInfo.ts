@@ -3,7 +3,7 @@ import CountryInfo from './CountryInfo';
 /**
  * Information on account brand
 */
-class BrandInfo {
+interface BrandInfo {
   /**
    * Internal identifier of a brand
    */

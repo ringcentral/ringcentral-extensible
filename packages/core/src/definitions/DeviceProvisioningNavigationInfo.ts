@@ -3,7 +3,7 @@ import DeviceProvisioningNavigationInfoUri from './DeviceProvisioningNavigationI
 /**
  * Information on navigation
 */
-class DeviceProvisioningNavigationInfo {
+interface DeviceProvisioningNavigationInfo {
   /**
    */
   firstPage?: DeviceProvisioningNavigationInfoUri;

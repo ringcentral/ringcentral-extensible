@@ -1,6 +1,6 @@
 import BulkTaskInfoWiCreate from './BulkTaskInfoWiCreate';
 
-class CreateMultipleWirelessPointsResponse {
+interface CreateMultipleWirelessPointsResponse {
   /**
    */
   task?: BulkTaskInfoWiCreate;

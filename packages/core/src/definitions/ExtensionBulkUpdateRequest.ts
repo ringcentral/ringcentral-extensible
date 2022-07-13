@@ -3,7 +3,7 @@ import ExtensionBulkUpdateInfo from './ExtensionBulkUpdateInfo';
 /**
  * List of extensions to be updated
 */
-class ExtensionBulkUpdateRequest {
+interface ExtensionBulkUpdateRequest {
   /**
    * Required
    */

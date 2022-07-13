@@ -1,4 +1,4 @@
-class MethodResource {
+interface MethodResource {
   /**
    */
   id?: string;

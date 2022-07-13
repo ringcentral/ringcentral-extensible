@@ -3,7 +3,7 @@ import SiteResource from './SiteResource';
 /**
  * Call queue member information
 */
-class CallQueueMember {
+interface CallQueueMember {
   /**
    * Internal identifier of an extension
    */

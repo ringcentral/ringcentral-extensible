@@ -1,4 +1,4 @@
-class CallsSegments {
+interface CallsSegments {
   /**
    * Required
    * Format: double

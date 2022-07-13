@@ -1,4 +1,4 @@
-class PagingDeviceInfo {
+interface PagingDeviceInfo {
   /**
    * Internal identifier of a paging device
    */

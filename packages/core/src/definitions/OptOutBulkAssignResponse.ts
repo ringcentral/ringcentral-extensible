@@ -4,7 +4,7 @@ import BulkAssignOptIns from './BulkAssignOptIns';
 /**
  * The results of adding opt-outs and opt-ins
 */
-class OptOutBulkAssignResponse {
+interface OptOutBulkAssignResponse {
   /**
    */
   optOuts?: BulkAssignOptOuts;

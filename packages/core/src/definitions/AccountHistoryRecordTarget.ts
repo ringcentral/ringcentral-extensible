@@ -1,7 +1,7 @@
 /**
  * Action target object (company/extension)
 */
-class AccountHistoryRecordTarget {
+interface AccountHistoryRecordTarget {
   /**
    * Extension identifier of the affected entity or 0 for Company level
    * Example: 404611540004

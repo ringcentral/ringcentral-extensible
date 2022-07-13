@@ -1,4 +1,4 @@
-class MessageRecipientInfo {
+interface MessageRecipientInfo {
   /**
    */
   extensionNumber?: string;

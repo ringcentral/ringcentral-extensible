@@ -1,7 +1,7 @@
 /**
  * Device information
 */
-class DeviceInfoRequest {
+interface DeviceInfoRequest {
   /**
    * Device unique identifier, retrieved at previous session (if any)
    */

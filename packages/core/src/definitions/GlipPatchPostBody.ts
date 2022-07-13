@@ -1,4 +1,4 @@
-class GlipPatchPostBody {
+interface GlipPatchPostBody {
   /**
    * Post text.
    */

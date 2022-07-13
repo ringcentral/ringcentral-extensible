@@ -1,7 +1,7 @@
 /**
  * This field specifies the dimensions by which the response should be grouped and specific IDs to narrow the response. If this field is undefined or null, the response will contain one record with data aggregated by the whole company
 */
-class PerformanceCallsGrouping {
+interface PerformanceCallsGrouping {
   /**
    * This field describes the options by which the response should be grouped. See also [Call Aggregate reports](https://developers.ringcentral.com/guide/analytics/aggregate) or [Call Timeline reports](https://developers.ringcentral.com/guide/analytics/timeline) pages in the developer guide for more information.
    * Required

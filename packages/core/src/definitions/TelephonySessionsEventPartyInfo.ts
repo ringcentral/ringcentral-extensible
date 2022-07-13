@@ -1,7 +1,7 @@
 import CallPartyInfo from './CallPartyInfo';
 import CallSessionStatusInfo from './CallSessionStatusInfo';
 
-class TelephonySessionsEventPartyInfo {
+interface TelephonySessionsEventPartyInfo {
   /**
    */
   accountId?: string;

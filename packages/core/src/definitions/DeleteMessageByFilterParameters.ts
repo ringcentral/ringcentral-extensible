@@ -1,7 +1,7 @@
 /**
  * Query parameters for operation deleteMessageByFilter
 */
-class DeleteMessageByFilterParameters {
+interface DeleteMessageByFilterParameters {
   /**
    */
   conversationId?: string[];

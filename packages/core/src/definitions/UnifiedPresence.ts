@@ -2,7 +2,7 @@ import UnifiedPresenceGlip from './UnifiedPresenceGlip';
 import UnifiedPresenceTelephony from './UnifiedPresenceTelephony';
 import UnifiedPresenceMeeting from './UnifiedPresenceMeeting';
 
-class UnifiedPresence {
+interface UnifiedPresence {
   /**
    * Aggregated presence status of the user
    */

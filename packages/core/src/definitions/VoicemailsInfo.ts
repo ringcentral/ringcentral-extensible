@@ -1,4 +1,4 @@
-class VoicemailsInfo {
+interface VoicemailsInfo {
   /**
    * Email notification flag
    */

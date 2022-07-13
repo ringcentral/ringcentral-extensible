@@ -1,4 +1,4 @@
-class MeetingsTimezoneResource {
+interface MeetingsTimezoneResource {
   /**
    * Format: uri
    */

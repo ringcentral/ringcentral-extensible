@@ -3,7 +3,7 @@ import ParkInfo from './ParkInfo';
 import PartyInfo from './PartyInfo';
 import OwnerInfo from './OwnerInfo';
 
-class ReplyParty {
+interface ReplyParty {
   /**
    * Internal identifier of a party
    */

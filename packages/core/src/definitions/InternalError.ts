@@ -1,6 +1,6 @@
 import ErrorBody from './ErrorBody';
 
-class InternalError {
+interface InternalError {
   /**
    */
   errors?: ErrorBody[];

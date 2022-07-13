@@ -1,7 +1,7 @@
 /**
  * Query parameters for operation parsePhoneNumber
 */
-class ParsePhoneNumberParameters {
+interface ParsePhoneNumberParameters {
   /**
    * Internal identifier of a home country. The default value is ISO code (ISO 3166) of the user's home country or brand country, if the user is undefined
    */

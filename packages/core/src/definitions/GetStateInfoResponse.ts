@@ -1,6 +1,6 @@
 import GetCountryInfoState from './GetCountryInfoState';
 
-class GetStateInfoResponse {
+interface GetStateInfoResponse {
   /**
    * Internal identifier of a state
    */

@@ -7,7 +7,7 @@ import CustomFieldInfo from './CustomFieldInfo';
 import AutomaticLocationUpdatesSiteInfoRequest from './AutomaticLocationUpdatesSiteInfoRequest';
 import ReferenceInfo from './ReferenceInfo';
 
-class ExtensionUpdateRequest {
+interface ExtensionUpdateRequest {
   /**
    */
   status?: ('Disabled' | 'Enabled' | 'NotActivated' | 'Frozen');
@@ -69,11 +69,6 @@ class ExtensionUpdateRequest {
   /**
    */
   customFields?: CustomFieldInfo[];
-
-  /**
-   * Hides extension from showing in company directory. Supported for extensions of User type only
-   */
-  hidden?: boolean;
 
   /**
    */

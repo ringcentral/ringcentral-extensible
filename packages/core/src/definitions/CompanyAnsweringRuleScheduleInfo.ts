@@ -4,7 +4,7 @@ import RangesInfo from './RangesInfo';
 /**
  * Schedule when an answering rule should be applied
 */
-class CompanyAnsweringRuleScheduleInfo {
+interface CompanyAnsweringRuleScheduleInfo {
   /**
    */
   weeklyRanges?: CompanyAnsweringRuleWeeklyScheduleInfoRequest;

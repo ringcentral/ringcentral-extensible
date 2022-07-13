@@ -1,4 +1,4 @@
-class GetCallRecordingResponse {
+interface GetCallRecordingResponse {
   /**
    * Internal identifier of a call recording
    */

@@ -1,7 +1,7 @@
 /**
  * Brief information on a phone number country
 */
-class PhoneNumberCountryInfo {
+interface PhoneNumberCountryInfo {
   /**
    * Internal identifier of a home country
    */

@@ -1,7 +1,7 @@
 /**
  * Query parameters for operation listLocations
 */
-class ListLocationsParameters {
+interface ListLocationsParameters {
   /**
    * Sorts results by the property specified
    * Default: City

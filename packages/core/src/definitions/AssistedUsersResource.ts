@@ -1,6 +1,6 @@
 import AssistedUserResource from './AssistedUserResource';
 
-class AssistedUsersResource {
+interface AssistedUsersResource {
   /**
    */
   records?: AssistedUserResource[];

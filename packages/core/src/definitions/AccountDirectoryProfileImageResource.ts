@@ -1,4 +1,4 @@
-class AccountDirectoryProfileImageResource {
+interface AccountDirectoryProfileImageResource {
   /**
    */
   etag?: string;

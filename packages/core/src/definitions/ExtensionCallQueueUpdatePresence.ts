@@ -1,6 +1,6 @@
 import CallQueueId from './CallQueueId';
 
-class ExtensionCallQueueUpdatePresence {
+interface ExtensionCallQueueUpdatePresence {
   /**
    */
   callQueue?: CallQueueId;

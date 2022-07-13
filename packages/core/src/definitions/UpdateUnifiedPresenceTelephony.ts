@@ -1,4 +1,4 @@
-class UpdateUnifiedPresenceTelephony {
+interface UpdateUnifiedPresenceTelephony {
   /**
    * Telephony DND status
    */

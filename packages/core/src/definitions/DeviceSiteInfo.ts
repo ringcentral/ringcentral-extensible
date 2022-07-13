@@ -1,7 +1,7 @@
 /**
  * Site data
 */
-class DeviceSiteInfo {
+interface DeviceSiteInfo {
   /**
    * Internal identifier of a site
    */

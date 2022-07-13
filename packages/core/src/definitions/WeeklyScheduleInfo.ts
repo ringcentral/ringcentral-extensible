@@ -3,7 +3,7 @@ import TimeInterval from './TimeInterval';
 /**
  * Weekly schedule
 */
-class WeeklyScheduleInfo {
+interface WeeklyScheduleInfo {
   /**
    * Time intervals for a particular day
    */

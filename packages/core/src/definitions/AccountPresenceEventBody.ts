@@ -1,7 +1,7 @@
 /**
  * Notification payload body
 */
-class AccountPresenceEventBody {
+interface AccountPresenceEventBody {
   /**
    * Internal identifier of an extension. Optional parameter
    * Default: ~

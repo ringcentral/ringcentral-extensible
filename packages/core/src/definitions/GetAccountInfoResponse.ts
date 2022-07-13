@@ -5,7 +5,7 @@ import AccountStatusInfo from './AccountStatusInfo';
 import AccountRegionalSettings from './AccountRegionalSettings';
 import AccountLimits from './AccountLimits';
 
-class GetAccountInfoResponse {
+interface GetAccountInfoResponse {
   /**
    * Internal identifier of an account
    * Format: int64

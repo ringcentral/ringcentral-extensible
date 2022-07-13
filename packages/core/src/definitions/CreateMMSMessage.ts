@@ -2,7 +2,7 @@ import MessageStoreCallerInfoRequest from './MessageStoreCallerInfoRequest';
 import MessageCountryInfo from './MessageCountryInfo';
 import Attachment from './Attachment';
 
-class CreateMMSMessage {
+interface CreateMMSMessage {
   /**
    * Required
    */

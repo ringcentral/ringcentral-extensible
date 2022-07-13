@@ -1,6 +1,6 @@
 import ArchiveInfo from './ArchiveInfo';
 
-class MessageStoreReportArchive {
+interface MessageStoreReportArchive {
   /**
    */
   records?: ArchiveInfo[];

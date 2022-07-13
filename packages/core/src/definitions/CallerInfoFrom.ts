@@ -1,7 +1,7 @@
 /**
  * Sender information
 */
-class CallerInfoFrom {
+interface CallerInfoFrom {
   /**
    */
   phoneNumber?: string;

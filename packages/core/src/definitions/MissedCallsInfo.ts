@@ -1,4 +1,4 @@
-class MissedCallsInfo {
+interface MissedCallsInfo {
   /**
    * Email notification flag
    */

@@ -1,4 +1,4 @@
-class PerformanceCallsTimersResponseOptionsCallsDurationByResult {
+interface PerformanceCallsTimersResponseOptionsCallsDurationByResult {
   /**
    */
   aggregationType?: ('Sum' | 'Average' | 'Max' | 'Min' | 'Percent');

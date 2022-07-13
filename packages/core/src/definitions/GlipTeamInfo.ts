@@ -1,4 +1,4 @@
-class GlipTeamInfo {
+interface GlipTeamInfo {
   /**
    * Internal identifier of a team
    */

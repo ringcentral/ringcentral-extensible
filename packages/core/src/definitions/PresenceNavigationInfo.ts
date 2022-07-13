@@ -3,7 +3,7 @@ import PresenceNavigationInfoURI from './PresenceNavigationInfoURI';
 /**
  * Information on navigation
 */
-class PresenceNavigationInfo {
+interface PresenceNavigationInfo {
   /**
    */
   firstPage?: PresenceNavigationInfoURI;

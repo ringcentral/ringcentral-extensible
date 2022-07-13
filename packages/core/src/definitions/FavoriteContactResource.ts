@@ -1,4 +1,4 @@
-class FavoriteContactResource {
+interface FavoriteContactResource {
   /**
    * Format: int64
    */

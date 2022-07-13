@@ -1,4 +1,4 @@
-class PhoneNumberResource {
+interface PhoneNumberResource {
   /**
    */
   formattedPhoneNumber?: string;

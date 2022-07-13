@@ -1,7 +1,7 @@
 /**
  * Query parameters for operation listExtensionGrants
 */
-class ListExtensionGrantsParameters {
+interface ListExtensionGrantsParameters {
   /**
    * Type of extension to be returned. Multiple values are supported. Please note that legacy 'Department' extension type corresponds to 'Call Queue' extensions in modern RingCentral product terminology
    */
