@@ -26,7 +26,7 @@ import RingCentral from '@rc-ex/core';
 
 ## Usage
 
-#### [Sample code for all endpoints](./packages/core/samples.md)
+#### [Sample code for all endpoints](./packages/core/src/samples.md)
 
 You can also find lots of useful code snippets from [test cases](./test).
 
@@ -75,7 +75,7 @@ Sample log entries:
 
 ## Binary content downloading
 
-Some [sample code](./packages/core/samples.md) for binary content downloading may not work.
+Some [sample code](./packages/core/src/samples.md) for binary content downloading may not work.
 
 Because RingCentral is gradually migrating binary content to CDN such as `media.ringcentral.com`.
 
@@ -98,7 +98,7 @@ const content = await rc.restapi().account().extension().messageStore(message.id
 
 But not all binary content has been migrated to CDN.
 If the resource to download provides you with a CDN uri, use that CDN uri.
-If there is no CDN uri provided, construct the uri as [sample code](./packages/core/samples.md) shows.
+If there is no CDN uri provided, construct the uri as [sample code](./packages/core/src/samples.md) shows.
 
 
 ## For maintainers
