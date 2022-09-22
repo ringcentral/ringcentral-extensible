@@ -11,6 +11,9 @@ import {
   RestOptions,
 } from './types';
 
+type JwtFlowOptions = {
+  jwt: string;
+};
 type PasswordFlowOptions = {
   username: string;
   extension?: string;
@@ -145,7 +148,7 @@ class RingCentral implements RingCentralInterface {
   }
 
   async authorize(
-    options: PasswordFlowOptions | AuthCodeFlowOptions,
+    options: PasswordFlowOptions | AuthCodeFlowOptions | JwtFlowOptions,
   ): Promise<TokenInfo> {
     const getTokenRequest: GetTokenRequest = {};
     if ('username' in options) {
@@ -159,6 +162,9 @@ class RingCentral implements RingCentralInterface {
       getTokenRequest.redirect_uri = options.redirect_uri;
       // PKCE: https://medium.com/ringcentral-developers/use-authorization-code-pkce-for-ringcentral-api-in-client-app-e9108f04b5f0
       getTokenRequest.code_verifier = options.code_verifier;
+    } else if ('jwt' in options) {
+      getTokenRequest.grant_type = 'urn:ietf:params:oauth:grant-type:jwt-bearer';
+      getTokenRequest.assertion = options.jwt;
     } else {
       throw new Error('Unsupported authorization flow');
     }
