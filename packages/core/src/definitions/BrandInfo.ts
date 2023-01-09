@@ -1,4 +1,4 @@
-import CountryInfo from './CountryInfo';
+import CountryInfoShortModel from './CountryInfoShortModel';
 
 /**
  * Information on account brand
@@ -16,7 +16,7 @@ interface BrandInfo {
 
   /**
    */
-  homeCountry?: CountryInfo;
+  homeCountry?: CountryInfoShortModel;
 }
 
 export default BrandInfo;

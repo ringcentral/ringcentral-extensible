@@ -6,11 +6,13 @@ import DataExportTaskContactInfo from './DataExportTaskContactInfo';
 interface SpecificInfo {
   /**
    * Starting time for data collection
+   * Format: date-time
    */
   timeFrom?: string;
 
   /**
    * Ending time for data collection
+   * Format: date-time
    */
   timeTo?: string;
 

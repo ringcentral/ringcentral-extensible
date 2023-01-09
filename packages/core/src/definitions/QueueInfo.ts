@@ -3,7 +3,9 @@ import FixedOrderAgents from './FixedOrderAgents';
 import UnconditionalForwardingInfo from './UnconditionalForwardingInfo';
 
 /**
- * Queue settings applied for department (call queue) extension type, with the 'AgentQueue' value specified as a call handling action
+ * Queue settings applied for department (call queue) extension type,
+ * with the 'AgentQueue' value specified as a call handling action
+ *
 */
 interface QueueInfo {
   /**
@@ -33,6 +35,7 @@ interface QueueInfo {
 
   /**
    * Connecting audio interruption message period in seconds
+   * Format: int32
    */
   holdAudioInterruptionPeriod?: number;
 
@@ -44,21 +47,29 @@ interface QueueInfo {
 
   /**
    * Maximum time in seconds to wait for a call queue member before trying the next member
+   * Format: int32
    */
   agentTimeout?: number;
 
   /**
-   * Minimum post-call wrap up time in seconds before agent status is automatically set; the value range is from 180 to 300
+   * Minimum post-call wrap up time in seconds before agent status
+ *  is automatically set; the value range is from 180 to 300
+   * Maximum: 300
+   * Minimum: 180
+   * Format: int32
    */
   wrapUpTime?: number;
 
   /**
    * Maximum hold time in seconds to wait for an available call queue member
+   * Format: int32
    */
   holdTime?: number;
 
   /**
    * Maximum count of callers on hold; the limitation is 25 callers
+   * Maximum: 25
+   * Format: int32
    */
   maxCallers?: number;
 

@@ -1,8 +1,6 @@
-/**
- * Canonical URI for the corresponding page of the list
-*/
 interface CallLogNavigationInfoURI {
   /**
+   * Format: uri
    */
   uri?: string;
 }

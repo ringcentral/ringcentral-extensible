@@ -5,6 +5,7 @@ import MeetingsTimezoneResource from './MeetingsTimezoneResource';
 */
 interface MeetingScheduleResource {
   /**
+   * Format: date-time
    */
   startTime?: string;
 

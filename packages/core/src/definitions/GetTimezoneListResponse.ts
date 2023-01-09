@@ -5,6 +5,7 @@ import ProvisioningPagingInfo from './ProvisioningPagingInfo';
 interface GetTimezoneListResponse {
   /**
    * Link to the timezone list resource
+   * Format: uri
    */
   uri?: string;
 

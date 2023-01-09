@@ -1,23 +1,28 @@
 interface PhoneNumberResource {
   /**
+   * Example: +1 (205) 6812029
    */
   formattedPhoneNumber?: string;
 
   /**
+   * Example: 12056812029
    */
   phoneNumber?: string;
 
   /**
+   * Example: VoiceFax
    */
   type?: string;
 
   /**
    * Custom user name of a phone number, if any
+   * Example: Boss
    */
   label?: string;
 
   /**
    * Usage type of a phone number
+   * Example: DirectNumber
    */
   usageType?: ('MobileNumber' | 'ContactNumber' | 'DirectNumber' | 'ForwardedNumber');
 

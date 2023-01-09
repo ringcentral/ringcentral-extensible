@@ -3,34 +3,40 @@
 */
 interface ListCompanyActiveCallsParameters {
   /**
-   * The direction for the result records. If not specified, both inbound and outbound records are returned. Multiple values are accepted
+   * The direction of call records to be included in the result. If omitted, both
+ *  inbound and outbound calls are returned. Multiple values are supported
    */
   direction?: ('Inbound' | 'Outbound')[];
 
   /**
-   * View of call records. The same view parameter specified for FSync will be applied for ISync, the view cannot be changed for ISync
+   * Defines the level of details for returned call records
    * Default: Simple
    */
   view?: ('Simple' | 'Detailed');
 
   /**
-   * Call type of a record. If not specified, all call types are returned. Multiple values are accepted
+   * The type of call records to be included in the result.
+ *  If omitted, all call types are returned. Multiple values are supported
    */
   type?: ('Voice' | 'Fax')[];
 
   /**
-   * Call transport type. 'PSTN' specifies that a call leg is initiated from the PSTN network provider; 'VoIP' - from an RC phone. By default this filter is disabled
+   * The type of call transport. Multiple values are supported. By default this filter is disabled
    */
   transport?: ('PSTN' | 'VoIP')[];
 
   /**
    * Indicates the page number to retrieve. Only positive number values are accepted
+   * Minimum: 1
+   * Format: int32
    * Default: 1
    */
   page?: number;
 
   /**
    * Indicates the page size (number of items)
+   * Minimum: 1
+   * Format: int32
    * Default: 100
    */
   perPage?: number;

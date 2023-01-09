@@ -44,7 +44,7 @@ describe('fax', () => {
     attachment2.filename = 'text.png';
     attachment2.content = fs.createReadStream(path.join(__dirname, 'test.png'));
     attachment2.contentType = 'image/png';
-    const formData = Utils.getFormData({
+    const formData = await Utils.getFormData({
       attachments: [attachment1, attachment2],
       to: [{ phoneNumber: process.env.RINGCENTRAL_RECEIVER, name: 'To Name' }],
     });

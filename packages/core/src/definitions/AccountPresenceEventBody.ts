@@ -4,7 +4,6 @@
 interface AccountPresenceEventBody {
   /**
    * Internal identifier of an extension. Optional parameter
-   * Default: ~
    */
   extensionId?: string;
 
@@ -15,6 +14,7 @@ interface AccountPresenceEventBody {
 
   /**
    * Order number of a notification to state the chronology
+   * Format: int32
    */
   sequence?: number;
 

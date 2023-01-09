@@ -5,7 +5,8 @@ interface CallLogRecordDeviceInfo {
   id?: string;
 
   /**
-   * string to a device
+   * Canonical URI of a device resource
+   * Format: uri
    */
   uri?: string;
 }

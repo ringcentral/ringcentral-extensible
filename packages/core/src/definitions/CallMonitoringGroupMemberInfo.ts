@@ -1,6 +1,7 @@
 interface CallMonitoringGroupMemberInfo {
   /**
    * Link to a call monitoring group member
+   * Format: uri
    */
   uri?: string;
 

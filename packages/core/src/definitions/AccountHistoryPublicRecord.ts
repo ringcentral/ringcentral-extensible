@@ -26,13 +26,13 @@ interface AccountHistoryPublicRecord {
   actionId?: string;
 
   /**
-   * Operation: "CREATE", "UPDATE", or "DELETE"
+   * Operation: "CREATE", "UPDATE", "DELETE" or custom
    * Example: UPDATE
    */
   eventType?: string;
 
   /**
-   * Account which is related with the particular record.
+   * Account identifier which is related with the particular record.
    * Example: 403858014008
    */
   accountId?: string;
@@ -48,7 +48,7 @@ interface AccountHistoryPublicRecord {
   target?: AccountHistoryRecordTarget;
 
   /**
-   * IP-address of a client. If not specified RCClientIp header value is used
+   * IP-address of a client.
    * Example: 192.168.42.6
    */
   clientIp?: string;

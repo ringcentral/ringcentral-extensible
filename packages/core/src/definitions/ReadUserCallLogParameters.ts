@@ -3,84 +3,100 @@
 */
 interface ReadUserCallLogParameters {
   /**
-   * Extension number of a user. If specified, returns call log for a particular extension only
+   * Short extension number of a user. If specified, returns call log for this particular extension only.
+ *  Cannot be combined with `phoneNumber` filter
+   * Example: 101
    */
   extensionNumber?: string;
 
   /**
-   * If 'True' then calls from/to blocked numbers are returned
-   * Default: true
-   */
-  showBlocked?: boolean;
-
-  /**
-   * Phone number of a caller/callee in e.164 format without a plus sign '+'. If specified, all incoming and outgoing calls with this phone number are returned
+   * Phone number of a caller/callee in e.164 format without a '+' sign. If specified, all incoming/outgoing calls
+ *  from/to this phone number are returned.
    * Example: 12053320032
    */
   phoneNumber?: string;
 
   /**
-   * The direction for the resulting records. If not specified, both inbound and outbound records are returned. Multiple values are accepted
+   * Indicates then calls from/to blocked numbers are returned
+   * Default: true
+   */
+  showBlocked?: boolean;
+
+  /**
+   * The direction of call records to be included in the result. If omitted, both
+ *  inbound and outbound calls are returned. Multiple values are supported
    */
   direction?: ('Inbound' | 'Outbound')[];
 
   /**
-   * Internal identifier of a session
+   * Internal identifier of a call session
    */
   sessionId?: string;
 
   /**
-   * Call type of a record. It is allowed to specify more than one type. If not specified, all call types are returned. Multiple values are accepted
+   * The type of call records to be included in the result.
+ *  If omitted, all call types are returned. Multiple values are supported
    */
   type?: ('Voice' | 'Fax')[];
 
   /**
-   * Call transport type. 'PSTN' specifies that a call leg is initiated from the PSTN network provider; 'VoIP' - from an RC phone. By default this filter is disabled
+   * The type of call transport. Multiple values are supported. By default this filter is disabled
    */
   transport?: ('PSTN' | 'VoIP')[];
 
   /**
-   * View of call records. The same view parameter specified for FSync will be applied for ISync, the view cannot be changed for ISync
+   * Defines the level of details for returned call records
    * Default: Simple
    */
   view?: ('Simple' | 'Detailed');
 
   /**
-   * **Deprecated**. Supported for compatibility reasons. `True` if only recorded calls are returned. If both `withRecording` and `recordingType` are specified, then `withRecording` is ignored
+   * Deprecated, replaced with `recordingType` filter, still supported for compatibility reasons.
+ *  Indicates if only recorded calls should be returned.
+ *
+ *  If both `withRecording` and `recordingType` parameters are specified, then `withRecording` is ignored'
    */
   withRecording?: boolean;
 
   /**
-   * Type of a call recording. If not specified, then calls without recordings are also returned
+   * Indicates that call records with recordings of particular type should be returned.
+ *  If omitted, then calls with and without recordings are returned
    */
   recordingType?: ('Automatic' | 'OnDemand' | 'All');
 
   /**
-   * The end datetime for resulting records in (ISO 8601)[https://en.wikipedia.org/wiki/ISO_8601] format including timezone, for example 2016-03-10T18:07:52.534Z. The default value is current time
+   * The end of the time range to return call records in ISO 8601 format including timezone,
+ *  for example 2016-03-10T18:07:52.534Z. The default value is current time
    * Format: date-time
    */
   dateTo?: string;
 
   /**
-   * The start datetime for resulting records in (ISO 8601)[https://en.wikipedia.org/wiki/ISO_8601] format including timezone, for example 2016-03-10T18:07:52.534Z. The default value is dateTo minus 24 hours
+   * The beginning of the time range to return call records in ISO 8601 format including timezone,
+ *  for example 2016-03-10T18:07:52.534Z. The default value is `dateTo` minus 24 hours
    * Format: date-time
    */
   dateFrom?: string;
 
   /**
    * Indicates the page number to retrieve. Only positive number values are allowed
+   * Minimum: 1
+   * Format: int32
    * Default: 1
    */
   page?: number;
 
   /**
-   * Indicates the page size (number of items). The default value is 100. The maximum value is 1000, for detailed call log - 250
+   * Indicates the page size (number of items). The default value is 100.
+ *  The maximum value for `Simple` view is 1000, for `Detailed` view - 250
+   * Minimum: 1
+   * Format: int32
    * Default: 100
    */
   perPage?: number;
 
   /**
-   * If 'True' then deleted calls are returned
+   * Indicates that deleted calls records should be returned
    */
   showDeleted?: boolean;
 }

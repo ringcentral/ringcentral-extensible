@@ -2,6 +2,7 @@ import UserSettings from './UserSettings';
 import ServiceInfo from './ServiceInfo';
 import Invitation from './Invitation';
 import End from './End';
+import DeleteMeetingParameters from '../../../../../definitions/DeleteMeetingParameters';
 import MeetingResponseResource from '../../../../../definitions/MeetingResponseResource';
 import MeetingRequestResource from '../../../../../definitions/MeetingRequestResource';
 import MeetingsResource from '../../../../../definitions/MeetingsResource';
@@ -28,7 +29,9 @@ class Index {
   }
 
   /**
-   * Returns a list of user meetings scheduled for the future (meetings of 'Instant' type are not included).
+   * Returns a list of user meetings scheduled for the future (meetings
+ * of 'Instant' type are not included).
+ *
    * HTTP Method: get
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/meeting
    * Rate Limit Group: Light
@@ -54,7 +57,7 @@ class Index {
   }
 
   /**
-   * Returns a particular meetings details by ID.
+   * Returns a particular meeting details by ID.
    * HTTP Method: get
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/meeting/{meetingId}
    * Rate Limit Group: Light
@@ -93,11 +96,27 @@ class Index {
    * App Permission: Meetings
    * User Permission: Meetings
    */
-  async delete(restRequestConfig?: RestRequestConfig): Promise<string> {
+  async delete(queryParams?: DeleteMeetingParameters, restRequestConfig?: RestRequestConfig): Promise<string> {
     if (this.meetingId === null) {
       throw new Error('meetingId must be specified.');
     }
-    const r = await this.rc.delete<string>(this.path(), undefined, restRequestConfig);
+    const r = await this.rc.delete<string>(this.path(), queryParams, restRequestConfig);
+    return r.data;
+  }
+
+  /**
+   * Modifies a particular meeting.
+   * HTTP Method: patch
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/meeting/{meetingId}
+   * Rate Limit Group: Medium
+   * App Permission: Meetings
+   * User Permission: Meetings
+   */
+  async patch(meetingRequestResource: MeetingRequestResource, restRequestConfig?: RestRequestConfig): Promise<MeetingResponseResource> {
+    if (this.meetingId === null) {
+      throw new Error('meetingId must be specified.');
+    }
+    const r = await this.rc.patch<MeetingResponseResource>(this.path(), meetingRequestResource, undefined, restRequestConfig);
     return r.data;
   }
 

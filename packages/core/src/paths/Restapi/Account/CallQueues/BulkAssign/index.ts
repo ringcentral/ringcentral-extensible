@@ -16,7 +16,8 @@ class Index {
   }
 
   /**
-   * Updates a call queue group.
+   * Assigns multiple call queue members to call queue group.
+ *
    * HTTP Method: post
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/call-queues/{groupId}/bulk-assign
    * Rate Limit Group: Heavy

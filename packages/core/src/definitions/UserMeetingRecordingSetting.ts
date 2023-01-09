@@ -38,19 +38,20 @@ interface UserMeetingRecordingSetting {
   showTimestamp?: boolean;
 
   /**
-   * Automatical recording (local/cloud/none) of meetings as they start
+   * Automatic recording (local/cloud/none) of meetings as they start
    * Default: local
    */
   autoRecording?: ('local' | 'cloud' | 'none');
 
   /**
-   * Automatical deletion of cloud recordings
+   * Automatic deletion of cloud recordings
    * Default: false
    */
   autoDeleteCmr?: string;
 
   /**
-   * A specified number of days for automatical deletion of cloud recordings, the value range is 1-60
+   * A specified number of days for automatic deletion of cloud recordings, the value range is 1-60
+   * Format: int32
    */
   autoDeleteCmrDays?: number;
 }

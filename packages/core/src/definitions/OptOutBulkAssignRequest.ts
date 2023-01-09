@@ -11,13 +11,13 @@ interface OptOutBulkAssignRequest {
 
   /**
    * The list of phone numbers to be opted out
-   * Example: ["15551237755", "15551237756"]
+   * Example: 15551237755,15551237756
    */
   optOuts?: string[];
 
   /**
    * The list of phone numbers to be opted in
-   * Example: ["15551237799", "15551237798"]
+   * Example: 15551237799,15551237798
    */
   optIns?: string[];
 }

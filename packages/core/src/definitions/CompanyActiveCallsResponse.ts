@@ -5,6 +5,7 @@ import CallLogPagingInfo from './CallLogPagingInfo';
 interface CompanyActiveCallsResponse {
   /**
    * Link to the list of company active call records
+   * Format: uri
    */
   uri?: string;
 

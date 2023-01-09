@@ -2,6 +2,7 @@ import FavoriteContactResource from './FavoriteContactResource';
 
 interface FavoriteContactList {
   /**
+   * Format: uri
    */
   uri?: string;
 

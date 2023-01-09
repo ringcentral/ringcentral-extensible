@@ -1,6 +1,6 @@
 import ListCompanyAnsweringRuleInfo from './ListCompanyAnsweringRuleInfo';
-import CallHandlingPagingInfo from './CallHandlingPagingInfo';
-import CallHandlingNavigationInfo from './CallHandlingNavigationInfo';
+import EnumeratedPaging from './EnumeratedPaging';
+import NavigationInfo from './NavigationInfo';
 
 interface CompanyAnsweringRuleList {
   /**
@@ -15,11 +15,11 @@ interface CompanyAnsweringRuleList {
 
   /**
    */
-  paging?: CallHandlingPagingInfo;
+  paging?: EnumeratedPaging;
 
   /**
    */
-  navigation?: CallHandlingNavigationInfo;
+  navigation?: NavigationInfo;
 }
 
 export default CompanyAnsweringRuleList;

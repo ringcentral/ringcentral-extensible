@@ -5,6 +5,7 @@ import ProvisioningPagingInfo from './ProvisioningPagingInfo';
 interface AutomaticLocationUpdatesUserList {
   /**
    * Link to the users list resource
+   * Format: uri
    */
   uri?: string;
 

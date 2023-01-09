@@ -5,6 +5,7 @@ import ProvisioningPagingInfo from './ProvisioningPagingInfo';
 interface GetExtensionGrantListResponse {
   /**
    * Link to the list of extension grants
+   * Format: uri
    */
   uri?: string;
 

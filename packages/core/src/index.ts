@@ -108,10 +108,11 @@ class RingCentral implements RingCentralInterface {
 
   async delete<T>(
     endpoint: string,
+    content?: {},
     queryParams?: {},
     config?: RestRequestConfig,
   ): Promise<RestResponse<T>> {
-    return this.request<T>('DELETE', endpoint, undefined, queryParams, config);
+    return this.request<T>('DELETE', endpoint, content, queryParams, config);
   }
 
   async post<T>(

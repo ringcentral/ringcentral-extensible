@@ -7,6 +7,7 @@ interface ReplyWithPattern {
 
   /**
    * Number of time units. Applicable only to WillCallYouBack, CallMeBack patterns.
+   * Format: int32
    * Example: 5
    */
   time?: number;

@@ -17,7 +17,10 @@ class Index {
   }
 
   /**
-   * Returns the list of favorite contacts of the current extension. Favorite contacts include both company contacts (extensions) and personal contacts (address book records).
+   * Returns the list of favorite contacts of the current extension.
+ * Favorite contacts include both company contacts (extensions) and personal
+ * contacts (address book records).
+ *
    * HTTP Method: get
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/favorite
    * Rate Limit Group: Light
@@ -30,7 +33,11 @@ class Index {
   }
 
   /**
-   * Updates the list of favorite contacts of the current extension. Favorite contacts include both company contacts (extensions) and personal contacts (address book records).**Please note**: currently personal address book size is limited to 10 000 contacts.
+   * Updates the list of favorite contacts of the current extension.
+ * Favorite contacts include both company contacts (extensions) and personal
+ * contacts (address book records).**Please note**: Currently personal address
+ * book size is limited to 10 000 contacts.
+ *
    * HTTP Method: put
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/favorite
    * Rate Limit Group: Medium

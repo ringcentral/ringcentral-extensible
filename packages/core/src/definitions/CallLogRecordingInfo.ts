@@ -1,5 +1,5 @@
 /**
- * Call recording data. Returned if the call is recorded - `withRecording` parameter is set to 'True' in this case
+ * Call recording data. Returned if the call was recorded
 */
 interface CallLogRecordingInfo {
   /**
@@ -9,6 +9,7 @@ interface CallLogRecordingInfo {
 
   /**
    * Link to the call recording metadata resource
+   * Format: uri
    */
   uri?: string;
 
@@ -18,7 +19,9 @@ interface CallLogRecordingInfo {
   type?: ('Automatic' | 'OnDemand');
 
   /**
-   * Link to the call recording binary content
+   * Link to a call recording binary content. Has to be retrieved with proper authorization
+ *  (access token must be passed via `Authorization` header or query parameter)
+   * Format: uri
    */
   contentUri?: string;
 }

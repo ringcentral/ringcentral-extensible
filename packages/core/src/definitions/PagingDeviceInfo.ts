@@ -6,6 +6,7 @@ interface PagingDeviceInfo {
 
   /**
    * Link to a paging device resource
+   * Format: uri
    */
   uri?: string;
 

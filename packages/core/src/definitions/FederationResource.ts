@@ -6,6 +6,7 @@ interface FederationResource {
   accounts?: FederatedAccountResource[];
 
   /**
+   * Format: date-time
    */
   creationTime?: string;
 
@@ -18,8 +19,14 @@ interface FederationResource {
   id?: string;
 
   /**
+   * Format: date-time
    */
   lastModifiedTime?: string;
+
+  /**
+   * Federation type
+   */
+  type?: ('Regular' | 'AdminOnly');
 }
 
 export default FederationResource;

@@ -1,14 +1,18 @@
 /**
- * Please note that legacy 'Department' extension type corresponds to 'Call Queue' extensions in modern RingCentral product terminology
+ * Please note that legacy 'Department' extension type corresponds to
+ * 'Call Queue' extensions in modern RingCentral product terminology
+ *
 */
 interface DepartmentInfo {
   /**
    * Internal identifier of a department extension
+   * Format: uri
    */
   id?: string;
 
   /**
-   * Canonical URI of a department extension
+   * Canonical URI of an extension resource
+   * Format: uri
    */
   uri?: string;
 

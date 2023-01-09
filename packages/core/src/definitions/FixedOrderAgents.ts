@@ -7,6 +7,7 @@ interface FixedOrderAgents {
 
   /**
    * Ordinal of an agent (call queue member)
+   * Format: int32
    */
   index?: number;
 }

@@ -1,5 +1,7 @@
 /**
- * Status information (reason, comment, lifetime). Returned for 'Disabled' status only
+ * Status information (reason, comment, lifetime). Returned for 'Disabled'
+ * status only
+ *
 */
 interface AccountStatusInfo {
   /**
@@ -13,7 +15,8 @@ interface AccountStatusInfo {
   reason?: ('SuspendedVoluntarily' | 'SuspendedInvoluntarily' | 'UserResumed');
 
   /**
-   * Date until which the account will get deleted. The default value is 30 days since current date
+   * Date until which an account will get deleted. The default
+ *  value is 30 days since the current date
    */
   till?: string;
 }

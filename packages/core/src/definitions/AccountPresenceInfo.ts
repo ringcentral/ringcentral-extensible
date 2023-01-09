@@ -5,6 +5,7 @@ import PresencePagingInfo from './PresencePagingInfo';
 interface AccountPresenceInfo {
   /**
    * Canonical URI of account presence resource
+   * Format: uri
    */
   uri?: string;
 

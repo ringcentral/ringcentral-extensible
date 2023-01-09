@@ -18,6 +18,7 @@ interface MeetingRequestResource {
 
   /**
    * Meeting password
+   * Format: password
    */
   password?: string;
 
@@ -76,6 +77,10 @@ interface MeetingRequestResource {
    * List of global dial-in countries (eg. US, UK, AU, etc.)
    */
   globalDialInCountries?: string[];
+
+  /**
+   */
+  alternativeHosts?: string;
 }
 
 export default MeetingRequestResource;

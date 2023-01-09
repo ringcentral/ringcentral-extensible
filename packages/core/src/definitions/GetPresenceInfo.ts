@@ -4,6 +4,7 @@ import ActiveCallInfo from './ActiveCallInfo';
 interface GetPresenceInfo {
   /**
    * Canonical URI of a presence info resource
+   * Format: uri
    */
   uri?: string;
 

@@ -1,10 +1,10 @@
 /**
- * Information on a message returned within the specified batch
+ * The short detail of the message in the get batch response
 */
 interface MessageListMessageResponse {
   /**
-   * Internal identifier of a message
-   * Format: int32
+   * The Id of the message
+   * Format: int64
    * Example: 1234
    */
   id?: number;
@@ -65,8 +65,7 @@ interface MessageListMessageResponse {
   cost?: number;
 
   /**
-   * Indicates whether the message was outbound or inbound
-   * Example: out
+   * Direction of the SMS message
    */
   direction?: ('Inbound' | 'Outbound');
 

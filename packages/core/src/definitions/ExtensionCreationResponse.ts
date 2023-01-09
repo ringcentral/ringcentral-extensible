@@ -17,6 +17,7 @@ interface ExtensionCreationResponse {
 
   /**
    * Canonical URI of an extension
+   * Format: uri
    */
   uri?: string;
 
@@ -29,17 +30,25 @@ interface ExtensionCreationResponse {
   customFields?: CustomFieldInfo[];
 
   /**
-   * Number of extension
+   * Extension number
    */
   extensionNumber?: string;
 
   /**
-   * Extension name. For user extension types the value is a combination of the specified first name and last name
+   * Extension name. For user extension types the value is a combination
+ *  of the specified first name and last name
    */
   name?: string;
 
   /**
-   * For Partner Applications Internal identifier of an extension created by partner. The RingCentral supports the mapping of accounts and stores the corresponding account ID/extension ID for each partner ID of a client application. In request URIs partner IDs are accepted instead of regular RingCentral native IDs as path parameters using pid = XXX clause. Though in response URIs contain the corresponding account IDs and extension IDs. In all request and response bodies these values are reflected via partnerId attributes of account and extension
+   * For Partner Applications Internal identifier of an extension
+ *  created by partner. The RingCentral supports the mapping of accounts and
+ *  stores the corresponding account ID/extension ID for each partner ID of
+ *  a client application. In request URIs partner IDs are accepted instead
+ *  of regular RingCentral native IDs as path parameters using pid = XXX clause.
+ *  Though in response URIs contain the corresponding account IDs and extension
+ *  IDs. In all request and response bodies these values are reflected via
+ *  partnerId attributes of account and extension
    */
   partnerId?: string;
 
@@ -61,12 +70,15 @@ interface ExtensionCreationResponse {
   regionalSettings?: RegionalSettings;
 
   /**
-   * Extension service features returned in response only when the logged-in user requests his/her own extension info, see also Extension Service Features
+   * Extension service features returned in response only when the
+ *  logged-in user requests his/her own extension info, see also Extension
+ *  Service Features
    */
   serviceFeatures?: ExtensionServiceFeatureInfo[];
 
   /**
-   * Specifies extension configuration wizard state (web service setup). The default value is 'NotStarted'
+   * Specifies extension configuration wizard state (web service
+ *  setup). The default value is 'NotStarted'
    */
   setupWizardState?: ('NotStarted' | 'Incomplete' | 'Completed');
 
@@ -75,7 +87,9 @@ interface ExtensionCreationResponse {
   site?: AutomaticLocationUpdatesSiteInfo;
 
   /**
-   * Extension current state. If 'Unassigned' is specified, then extensions without ‘extensionNumber’ are returned. If not specified, then all extensions are returned
+   * Extension current state. If 'Unassigned' is specified, then
+ *  extensions without ‘extensionNumber’ are returned. If not specified, then
+ *  all extensions are returned
    */
   status?: ('Enabled' | 'Disabled' | 'Frozen' | 'NotActivated' | 'Unassigned');
 
@@ -84,12 +98,14 @@ interface ExtensionCreationResponse {
   statusInfo?: ExtensionStatusInfo;
 
   /**
-   * Extension type. Please note that legacy 'Department' extension type corresponds to 'Call Queue' extensions in modern RingCentral product terminology
+   * Extension type. Please note that legacy 'Department' extension type
+ *  corresponds to 'Call Queue' extensions in modern RingCentral product terminology
    */
   type?: ('User' | 'VirtualUser' | 'DigitalUser' | 'Department' | 'Announcement' | 'Voicemail' | 'SharedLinesGroup' | 'PagingOnly' | 'ParkLocation' | 'Limited');
 
   /**
-   * Hides extension from showing in company directory. Supported for extensions of User type only
+   * Hides an extension from showing in company directory. Supported
+ *  for extensions of 'User' type only
    */
   hidden?: boolean;
 }

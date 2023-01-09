@@ -1,12 +1,14 @@
-import CompanyContactsPagingInfo from './CompanyContactsPagingInfo';
+import PagingInfo from './PagingInfo';
 import ContactResource from './ContactResource';
 
 interface DirectoryResource {
   /**
+   * Required
    */
-  paging?: CompanyContactsPagingInfo;
+  paging?: PagingInfo;
 
   /**
+   * Required
    */
   records?: ContactResource[];
 }

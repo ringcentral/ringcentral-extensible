@@ -1,5 +1,7 @@
 /**
- * Site Fax/SMS recipient (operator) reference. Multi-level IVR should be enabled
+ * Site Fax/SMS recipient (operator) reference. Multi-level IVR should
+ * be enabled
+ *
 */
 interface OperatorInfo {
   /**
@@ -9,6 +11,7 @@ interface OperatorInfo {
 
   /**
    * Link to an operator resource
+   * Format: uri
    */
   uri?: string;
 

@@ -4,7 +4,8 @@ import ProvisioningPagingInfo from './ProvisioningPagingInfo';
 
 interface PagingOnlyGroupUsers {
   /**
-   * Link to the list of users allowed to page the Paging Only group
+   * Link to a list of users allowed to page the Paging Only group
+   * Format: uri
    */
   uri?: string;
 

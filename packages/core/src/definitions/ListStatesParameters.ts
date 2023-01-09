@@ -3,7 +3,9 @@
 */
 interface ListStatesParameters {
   /**
-   * If set to 'True' then states for all countries are returned and `countryId` is ignored, even if specified. If the value is empty then the parameter is ignored
+   * If set to 'True' then states of all countries are returned and
+ *  `countryId` is ignored, even if specified. If the value is empty
+ *  then the parameter is ignored
    */
   allCountries?: boolean;
 
@@ -14,19 +16,23 @@ interface ListStatesParameters {
   countryId?: number;
 
   /**
-   * Indicates the page number to retrieve. Only positive number values are accepted
+   * Indicates a page number to retrieve. Only positive number values
+ *  are accepted
+   * Format: int32
    * Default: 1
    */
   page?: number;
 
   /**
-   * Indicates the page size (number of items)
+   * Indicates a page size (number of items)
+   * Format: int32
    * Default: 100
    */
   perPage?: number;
 
   /**
-   * If 'True', the list of states with phone numbers available for buying is returned
+   * If 'True' the list of states with phone numbers available for
+ *  buying is returned
    */
   withPhoneNumbers?: boolean;
 }

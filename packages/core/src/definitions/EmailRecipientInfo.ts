@@ -20,7 +20,8 @@ interface EmailRecipientInfo {
   status?: ('Enabled' | 'Disable' | 'NotActivated' | 'Unassigned');
 
   /**
-   * List of user email addresses from extension notification settings. By default main email address from contact information is returned
+   * List of user email addresses from extension notification settings.
+ *  By default main email address from contact information is returned
    */
   emailAddresses?: string[];
 

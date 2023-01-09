@@ -1,11 +1,9 @@
 import AddressBookBulkContactAddressInfo from './AddressBookBulkContactAddressInfo';
 
-/**
- * Contact resource
-*/
 interface AddressBookBulkContactResource {
   /**
    * Email of a contact
+   * Format: email
    * Example: charlie.williams@example.com
    */
   email?: string;
@@ -66,85 +64,87 @@ interface AddressBookBulkContactResource {
 
   /**
    * Second email of a contact
-   * Example: charlie.williams2@example.com
+   * Format: email
+   * Example: charlie-example@gmail.com
    */
   email2?: string;
 
   /**
-   * Third email of a contact
-   * Example: charlie.williams3@example.com
+   * Third email of the contact
+   * Format: email
+   * Example: theboss-example@hotmail.com
    */
   email3?: string;
 
   /**
    * Home phone number of a contact in e.164 (with "+") format
-   * Example: +15551234567
+   * Example: 15551234567
    */
   homePhone?: string;
 
   /**
-   * 2nd home phone number of a contact in e.164 (with "+") format
-   * Example: +15551234567
+   * Second home phone number of a contact in e.164 (with "+") format
+   * Example: 15551234567
    */
   homePhone2?: string;
 
   /**
    * Business phone of a contact in e.164 (with "+") format
-   * Example: +15551234567
+   * Example: 15551234567
    */
   businessPhone?: string;
 
   /**
-   * 2nd business phone of a contact in e.164 (with "+") format
-   * Example: +15551234567
+   * Second business phone of a contact in e.164 (with "+") format
+   * Example: 15551234567
    */
   businessPhone2?: string;
 
   /**
-   * Mobile phone of a contact in e.164 (with "+") format
-   * Example: +15551234567
+   * Mobile phone of the contact in e.164 (with "+") format
+   * Example: 15551234567
    */
   mobilePhone?: string;
 
   /**
    * Business fax number of a contact in e.164 (with "+") format
-   * Example: +15551234567
+   * Example: 15551234567
    */
   businessFax?: string;
 
   /**
    * Company number of a contact in e.164 (with "+") format
-   * Example: +15551234567
+   * Example: 15551234567
    */
   companyPhone?: string;
 
   /**
    * Phone number of a contact assistant in e.164 (with "+") format
-   * Example: +15551234567
+   * Example: 15551234567
    */
   assistantPhone?: string;
 
   /**
    * Car phone number of a contact in e.164 (with "+") format
-   * Example: +15551234567
+   * Example: 15551234567
    */
   carPhone?: string;
 
   /**
    * Other phone number of a contact in e.164 (with "+") format
-   * Example: +15551234567
+   * Example: 15551234567
    */
   otherPhone?: string;
 
   /**
    * Other fax number of a contact in e.164 (with "+") format
-   * Example: +15551234567
+   * Example: 15551234567
    */
   otherFax?: string;
 
   /**
    * Callback phone number of a contact in e.164 (with "+") format
-   * Example: +15551234567
+   * Example: 15551234567
    */
   callbackPhone?: string;
 

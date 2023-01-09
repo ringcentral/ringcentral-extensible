@@ -10,12 +10,14 @@ interface EditPagingGroupRequest {
   removedUserIds?: string[];
 
   /**
-   * List of account devices that will be assigned to a paging group specified
+   * List of account devices that will be assigned to a paging group
+ *  specified
    */
   addedDeviceIds?: string[];
 
   /**
-   * List of account devices that will be unassigned from a paging group specified
+   * List of account devices that will be unassigned from a paging
+ *  group specified
    */
   removedDeviceIds?: string[];
 }

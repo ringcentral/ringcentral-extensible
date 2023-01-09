@@ -11,10 +11,7 @@ interface UpdateNetworkRequest {
   id?: string;
 
   /**
-   */
-  uri?: string;
-
-  /**
+   * Required
    */
   name?: string;
 
@@ -23,10 +20,12 @@ interface UpdateNetworkRequest {
   site?: AutomaticLocationUpdatesSiteInfo;
 
   /**
+   * Required
    */
   publicIpRanges?: PublicIpRangeInfo[];
 
   /**
+   * Required
    */
   privateIpRanges?: PrivateIpRangeInfoRequest[];
 

@@ -1,5 +1,5 @@
 /**
- * Information on the state this location belongs to
+ * Information on a state this location belongs to
 */
 interface LocationStateInfo {
   /**
@@ -9,6 +9,7 @@ interface LocationStateInfo {
 
   /**
    * Link to a state resource
+   * Format: uri
    */
   uri?: string;
 }

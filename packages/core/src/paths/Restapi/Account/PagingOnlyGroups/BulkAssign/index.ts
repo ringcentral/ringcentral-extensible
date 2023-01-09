@@ -17,6 +17,7 @@ class Index {
 
   /**
    * Adds and/or removes paging group users and devices.
+ *
    * HTTP Method: post
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/paging-only-groups/{pagingOnlyGroupId}/bulk-assign
    * Rate Limit Group: Heavy

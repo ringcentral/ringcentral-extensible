@@ -1,4 +1,4 @@
-import RuleInfoCreateRuleRequest from './RuleInfoCreateRuleRequest';
+import ForwardingRuleCreateRequest from './ForwardingRuleCreateRequest';
 
 /**
  * Forwarding parameters. Returned if 'ForwardCalls' is specified in 'callHandlingAction'. These settings determine the forwarding numbers to which the call will be forwarded
@@ -16,6 +16,7 @@ interface ForwardingInfoCreateRuleRequest {
 
   /**
    * Specifies delay between ring on apps and starting of a call forwarding. To activate this parameter use the value > 0, and turn off the `softPhonesAlwaysRing` setting. If the value is 1 or 0, the `softPhonesAlwaysRing` setting cannot be turned off
+   * Format: int32
    */
   softPhonesRingCount?: number;
 
@@ -33,7 +34,7 @@ interface ForwardingInfoCreateRuleRequest {
   /**
    * Information on a call forwarding rule
    */
-  rules?: RuleInfoCreateRuleRequest[];
+  rules?: ForwardingRuleCreateRequest[];
 
   /**
    * Deprecated parameter. Specifies if mobile timeout is activated for the rule

@@ -3,6 +3,7 @@
 */
 interface PresenceNavigationInfoURI {
   /**
+   * Format: uri
    */
   uri?: string;
 }

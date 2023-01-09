@@ -1,15 +1,19 @@
+import CallsByCompanyHoursBreakdown from './CallsByCompanyHoursBreakdown';
+
+/**
+ * Data for calls with breakdown by company hours (BusinessHours, AfterHours)
+*/
 interface CallsByCompanyHours {
   /**
+   * Unit of the result value
    * Required
-   * Format: double
    */
-  businessHours?: number;
+  valueType?: ('Percent' | 'Seconds' | 'Instances');
 
   /**
    * Required
-   * Format: double
    */
-  afterHours?: number;
+  values?: CallsByCompanyHoursBreakdown;
 }
 
 export default CallsByCompanyHours;

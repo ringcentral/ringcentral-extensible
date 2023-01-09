@@ -1,5 +1,5 @@
 /**
- * Scheduling meeting settings locked on account level || Settings defining how to schedule user meetingsxs
+ * Scheduling meeting settings locked on account level || Settings defining how to schedule user meetings
 */
 interface ScheduleUserMeetingInfo {
   /**
@@ -71,6 +71,10 @@ interface ScheduleUserMeetingInfo {
    * Specifies whether to generate and require a password for participants joining by phone
    */
   pstnPasswordProtected?: boolean;
+
+  /**
+   */
+  muteParticipantsOnEntry?: boolean;
 }
 
 export default ScheduleUserMeetingInfo;

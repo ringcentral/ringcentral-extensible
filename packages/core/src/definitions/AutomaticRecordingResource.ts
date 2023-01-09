@@ -21,16 +21,19 @@ interface AutomaticRecordingResource {
 
   /**
    * Total amount of extension that are used in call recordings
+   * Format: int32
    */
   extensionCount?: number;
 
   /**
    * Retention period of a call recording, the default value is 90 days
+   * Format: int32
    */
   retentionPeriod?: number;
 
   /**
-   * Max number of automatic call recordings per account, the default value is 100 000
+   * Maximum number of automatic call recordings per account, the default value is 100 000
+   * Format: int32
    */
   maxNumberLimit?: number;
 }

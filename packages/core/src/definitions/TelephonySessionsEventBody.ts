@@ -7,6 +7,7 @@ import TelephonySessionsEventPartyInfo from './TelephonySessionsEventPartyInfo';
 interface TelephonySessionsEventBody {
   /**
    * Order number of a notification to state the chronology
+   * Format: int64
    */
   sequence?: number;
 
@@ -27,6 +28,7 @@ interface TelephonySessionsEventBody {
 
   /**
    * The call start datetime in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format including timezone, for example *2016-03-10T18:07:52.534Z*
+   * Format: date-time
    */
   eventTime?: string;
 

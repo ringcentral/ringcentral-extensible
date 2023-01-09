@@ -1,6 +1,6 @@
 interface ExtensionCountryInfoRequest {
   /**
-   * internal Identifier of a country
+   * Internal identifier of a country
    */
   id?: string;
 }

@@ -1,3 +1,5 @@
+import GlobalDialInCountryResponse from './GlobalDialInCountryResponse';
+
 interface TelephonyUserMeetingSettings {
   /**
    * ThirdParty audio option
@@ -8,6 +10,10 @@ interface TelephonyUserMeetingSettings {
    * Users can join the meeting using the existing 3rd party audio configuration
    */
   audioConferenceInfo?: boolean;
+
+  /**
+   */
+  globalDialCountries?: GlobalDialInCountryResponse[];
 }
 
 export default TelephonyUserMeetingSettings;

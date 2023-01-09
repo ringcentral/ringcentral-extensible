@@ -9,6 +9,7 @@ interface DataExportTaskContactInfo {
 
   /**
    * Email address of a contact
+   * Format: email
    */
   email?: string;
 }

@@ -4,6 +4,7 @@
 interface HostInfoRequest {
   /**
    * Link to the meeting host resource
+   * Format: uri
    */
   uri?: string;
 

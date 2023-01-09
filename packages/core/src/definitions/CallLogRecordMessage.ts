@@ -14,6 +14,7 @@ interface CallLogRecordMessage {
 
   /**
    * Link to a message resource
+   * Format: uri
    */
   uri?: string;
 }

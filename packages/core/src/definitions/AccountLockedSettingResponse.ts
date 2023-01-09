@@ -1,19 +1,14 @@
-import ScheduleUserMeetingInfo from './ScheduleUserMeetingInfo';
-import UserMeetingRecordingSetting from './UserMeetingRecordingSetting';
-import TelephonyLockedSettings from './TelephonyLockedSettings';
+import ScheduleMeetingResponse from './ScheduleMeetingResponse';
+import AccountLockSettingRecordResponse from './AccountLockSettingRecordResponse';
 
 interface AccountLockedSettingResponse {
   /**
    */
-  scheduleMeeting?: ScheduleUserMeetingInfo;
+  scheduleMeeting?: ScheduleMeetingResponse;
 
   /**
    */
-  recording?: UserMeetingRecordingSetting;
-
-  /**
-   */
-  telephony?: TelephonyLockedSettings;
+  recording?: AccountLockSettingRecordResponse;
 }
 
 export default AccountLockedSettingResponse;

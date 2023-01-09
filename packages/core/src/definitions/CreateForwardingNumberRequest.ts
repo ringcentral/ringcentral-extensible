@@ -3,6 +3,7 @@ import CreateForwardingNumberDeviceInfo from './CreateForwardingNumberDeviceInfo
 interface CreateForwardingNumberRequest {
   /**
    * Number assigned to the call flip phone number, corresponds to the shortcut dial number
+   * Format: int32
    */
   flipNumber?: number;
 

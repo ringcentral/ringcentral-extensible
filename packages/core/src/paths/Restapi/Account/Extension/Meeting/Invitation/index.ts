@@ -16,7 +16,7 @@ class Index {
   }
 
   /**
-   * Returns a meeting invitation by ID.
+   * Returns a Meeting Invitation by ID.
    * HTTP Method: get
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/meeting/{meetingId}/invitation
    * Rate Limit Group: Light

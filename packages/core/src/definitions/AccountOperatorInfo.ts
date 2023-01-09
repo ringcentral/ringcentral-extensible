@@ -1,9 +1,12 @@
 /**
- * Operator's extension information. This extension will receive all calls and messages intended for the operator.
+ * Operator extension information. This extension will receive
+ * all calls and messages addressed to an operator.
+ *
 */
 interface AccountOperatorInfo {
   /**
    * Link to an operator extension resource
+   * Format: uri
    */
   uri?: string;
 

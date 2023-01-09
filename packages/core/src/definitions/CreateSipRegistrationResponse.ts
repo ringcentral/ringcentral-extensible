@@ -1,9 +1,10 @@
 import SipRegistrationDeviceInfo from './SipRegistrationDeviceInfo';
-import SIPInfoResponse from './SIPInfoResponse';
-import SIPFlagsResponse from './SIPFlagsResponse';
+import SipInfoResponse from './SipInfoResponse';
+import SipFlagsResponse from './SipFlagsResponse';
 
 interface CreateSipRegistrationResponse {
   /**
+   * Required
    */
   device?: SipRegistrationDeviceInfo;
 
@@ -11,21 +12,27 @@ interface CreateSipRegistrationResponse {
    * SIP settings for device
    * Required
    */
-  sipInfo?: SIPInfoResponse[];
+  sipInfo?: SipInfoResponse[];
 
   /**
    * SIP PSTN settings for device
    */
-  sipInfoPstn?: SIPInfoResponse[];
+  sipInfoPstn?: SipInfoResponse[];
 
   /**
    * Required
    */
-  sipFlags?: SIPFlagsResponse;
+  sipFlags?: SipFlagsResponse;
 
   /**
    */
   sipErrorCodes?: string[];
+
+  /**
+   * Suggested interval in seconds to periodically call SIP-provision API and update the local cache
+   * Format: int32
+   */
+  pollingInterval?: number;
 }
 
 export default CreateSipRegistrationResponse;

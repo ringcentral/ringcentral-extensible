@@ -15,7 +15,7 @@ interface CustomCompanyGreetingInfo {
   /**
    * Type of a company greeting
    */
-  type?: ('Company' | 'StartRecording' | 'StopRecording' | 'AutomaticRecording');
+  type?: ('Company' | 'StartRecording' | 'StopRecording' | 'AutomaticRecording' | 'TemplateGreeting');
 
   /**
    * Content media type

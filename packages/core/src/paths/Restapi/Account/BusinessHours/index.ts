@@ -22,7 +22,7 @@ class Index {
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/business-hours
    * Rate Limit Group: Light
    * App Permission: ReadAccounts
-   * User Permission: ReadUserAnsweringRules
+   * User Permission: ReadCompanyAnsweringRules
    */
   async get(restRequestConfig?: RestRequestConfig): Promise<CompanyBusinessHours> {
     const r = await this.rc.get<CompanyBusinessHours>(this.path(), undefined, restRequestConfig);

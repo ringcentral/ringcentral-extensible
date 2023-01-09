@@ -2,7 +2,7 @@ import OptOutResponse from './OptOutResponse';
 import PagingResource from './PagingResource';
 
 /**
- * Opt-out phone numbers information
+ * The list of opt outs
 */
 interface OptOutListResponse {
   /**

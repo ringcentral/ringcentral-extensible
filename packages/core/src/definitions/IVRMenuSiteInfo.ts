@@ -1,7 +1,7 @@
 /**
  * Site data
 */
-interface IVRMenuSiteInfo {
+interface IvrMenuSiteInfo {
   /**
    * Internal identifier of a site. If the value is not specified in request, then the `main-site` default value is used
    */
@@ -13,4 +13,4 @@ interface IVRMenuSiteInfo {
   name?: string;
 }
 
-export default IVRMenuSiteInfo;
+export default IvrMenuSiteInfo;

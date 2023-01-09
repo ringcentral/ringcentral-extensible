@@ -1,21 +1,22 @@
 interface TaskAttachment {
   /**
-   * Internal identifier of a file
+   * File ID.
    */
   id?: string;
 
   /**
-   * Attachment type (currently only `File` value is supported).
+   * Possible value: File. Attachment type (currently, only File is possible).
    */
   type?: ('File');
 
   /**
-   * Name of the attached file (including extension name).
+   * Name of the attached file (incl. extension name).
    */
   name?: string;
 
   /**
-   * Link to an attachment content
+   * URI
+   * Format: uri
    */
   contentUri?: string;
 }

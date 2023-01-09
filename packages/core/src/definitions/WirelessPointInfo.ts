@@ -1,10 +1,11 @@
-import AutomaticLocationUpdatesSiteInfo from './AutomaticLocationUpdatesSiteInfo';
-import LocationUpdatesEmergencyAddressInfo from './LocationUpdatesEmergencyAddressInfo';
+import EmergencyAddressAutoUpdateSiteInfo from './EmergencyAddressAutoUpdateSiteInfo';
+import EmergencyAddressInfo from './EmergencyAddressInfo';
 import ERLLocationInfo from './ERLLocationInfo';
 
 interface WirelessPointInfo {
   /**
    * Link to the wireless point resource
+   * Format: uri
    */
   uri?: string;
 
@@ -14,22 +15,25 @@ interface WirelessPointInfo {
   id?: string;
 
   /**
-   * Unique 48-bit identifier of the wireless access point complying with MAC address conventions
+   * Unique 48-bit identifier of the wireless access point that follows MAC address conventions
+   * Required
    */
   bssid?: string;
 
   /**
    * Wireless access point name
+   * Required
    */
   name?: string;
 
   /**
    */
-  site?: AutomaticLocationUpdatesSiteInfo;
+  site?: EmergencyAddressAutoUpdateSiteInfo;
 
   /**
+   * Required
    */
-  emergencyAddress?: LocationUpdatesEmergencyAddressInfo;
+  emergencyAddress?: EmergencyAddressInfo;
 
   /**
    */

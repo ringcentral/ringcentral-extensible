@@ -10,7 +10,7 @@ interface CallerBlockingSettings {
   mode?: ('Specific' | 'All');
 
   /**
-   * Determines how to handle calls with no caller ID in 'Specific' mode
+   * Determines how to handle calls with no caller ID in `Specific` mode
    */
   noCallerId?: ('BlockCallsAndFaxes' | 'BlockFaxes' | 'Allow');
 

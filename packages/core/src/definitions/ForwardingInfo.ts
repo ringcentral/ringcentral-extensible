@@ -1,4 +1,4 @@
-import RuleInfo from './RuleInfo';
+import ForwardingRuleInfo from './ForwardingRuleInfo';
 
 /**
  * Forwarding parameters. Returned if 'ForwardCalls' is specified in 'callHandlingAction'. These settings determine the forwarding numbers to which the call will be forwarded
@@ -16,6 +16,7 @@ interface ForwardingInfo {
 
   /**
    * Number of rings before forwarding starts
+   * Format: int32
    */
   softPhonesRingCount?: number;
 
@@ -33,10 +34,10 @@ interface ForwardingInfo {
   /**
    * Information on a call forwarding rule
    */
-  rules?: RuleInfo[];
+  rules?: ForwardingRuleInfo[];
 
   /**
-   * Specifies if desktop and mobile applications of the user are notified  before (true) or after (false) forwarding the incoming call to desk phones and forwarding numbers. Applicable only if `notifyMySoftPhones` parameter is set to `true`
+   * Specifies if desktop and mobile applications of the user are notified before (true) or after (false) forwarding the incoming call to desk phones and forwarding numbers. Applicable only if `notifyMySoftPhones` parameter is set to `true`
    */
   softPhonesPositionTop?: boolean;
 

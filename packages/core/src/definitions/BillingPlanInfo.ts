@@ -19,6 +19,7 @@ interface BillingPlanInfo {
 
   /**
    * Number of duration units
+   * Format: int32
    */
   duration?: number;
 
@@ -29,6 +30,7 @@ interface BillingPlanInfo {
 
   /**
    * Included digital lines count
+   * Format: int32
    */
   includedPhoneLines?: number;
 }

@@ -8,7 +8,8 @@ interface GetExtensionAccountInfo {
   id?: string;
 
   /**
-   * Canonical URI of an account
+   * Canonical URI of an account resource
+   * Format: uri
    */
   uri?: string;
 }

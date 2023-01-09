@@ -7,6 +7,7 @@ import MessageStoreReport from './MessageStoreReport';
 import EmergencyLocations from './EmergencyLocations';
 import MeetingRecordings from './MeetingRecordings';
 import PagingOnlyGroups from './PagingOnlyGroups';
+import ForwardAllCalls from './ForwardAllCalls';
 import BusinessAddress from './BusinessAddress';
 import CallRecording from './CallRecording';
 import BusinessHours from './BusinessHours';
@@ -14,8 +15,8 @@ import AnsweringRule from './AnsweringRule';
 import AssignedRole from './AssignedRole';
 import CallLogSync from './CallLogSync';
 import CustomFields from './CustomFields';
-import ServiceInfo from './ServiceInfo';
 import ActiveCalls from './ActiveCalls';
+import ServiceInfo from './ServiceInfo';
 import PhoneNumber from './PhoneNumber';
 import CallQueues from './CallQueues';
 import IvrPrompts from './IvrPrompts';
@@ -30,8 +31,8 @@ import Directory from './Directory';
 import Greeting from './Greeting';
 import Presence from './Presence';
 import CallLog from './CallLog';
-import A2pSms from './A2pSms';
 import Meeting from './Meeting';
+import A2pSms from './A2pSms';
 import Device from './Device';
 import GetAccountInfoResponse from '../../../definitions/GetAccountInfoResponse';
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../types';
@@ -57,7 +58,9 @@ class Index {
   }
 
   /**
-   * Returns basic information about a particular RingCentral customer account.
+   * Returns basic information about a particular RingCentral
+ * customer account.
+ *
    * HTTP Method: get
    * Endpoint: /restapi/{apiVersion}/account/{accountId}
    * Rate Limit Group: Light
@@ -76,12 +79,12 @@ class Index {
     return new Device(this, deviceId);
   }
 
-  meeting(): Meeting {
-    return new Meeting(this);
-  }
-
   a2pSms(): A2pSms {
     return new A2pSms(this);
+  }
+
+  meeting(meetingId: (string | null) = null): Meeting {
+    return new Meeting(this, meetingId);
   }
 
   callLog(callRecordId: (string | null) = null): CallLog {
@@ -140,12 +143,12 @@ class Index {
     return new PhoneNumber(this, phoneNumberId);
   }
 
-  activeCalls(): ActiveCalls {
-    return new ActiveCalls(this);
-  }
-
   serviceInfo(): ServiceInfo {
     return new ServiceInfo(this);
+  }
+
+  activeCalls(): ActiveCalls {
+    return new ActiveCalls(this);
   }
 
   customFields(fieldId: (string | null) = null): CustomFields {
@@ -174,6 +177,10 @@ class Index {
 
   businessAddress(): BusinessAddress {
     return new BusinessAddress(this);
+  }
+
+  forwardAllCalls(): ForwardAllCalls {
+    return new ForwardAllCalls(this);
   }
 
   pagingOnlyGroups(pagingOnlyGroupId: (string | null) = null): PagingOnlyGroups {

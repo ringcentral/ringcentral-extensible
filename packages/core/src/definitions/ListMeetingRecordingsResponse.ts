@@ -1,11 +1,11 @@
-import MeetingRecording from './MeetingRecording';
+import MeetingRecordings from './MeetingRecordings';
 import MeetingRecordingsPagingInfo from './MeetingRecordingsPagingInfo';
 import MeetingRecordingsNavigationInfo from './MeetingRecordingsNavigationInfo';
 
 interface ListMeetingRecordingsResponse {
   /**
    */
-  records?: MeetingRecording[];
+  records?: MeetingRecordings[];
 
   /**
    */

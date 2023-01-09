@@ -6,6 +6,7 @@ interface CallerIdDeviceInfo {
 
   /**
    * Link to a device resource
+   * Format: uri
    */
   uri?: string;
 

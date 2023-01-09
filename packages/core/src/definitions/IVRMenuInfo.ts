@@ -1,5 +1,5 @@
-import IVRMenuSiteInfo from './IVRMenuSiteInfo';
-import IVRMenuPromptInfo from './IVRMenuPromptInfo';
+import IvrMenuSiteInfo from './IvrMenuSiteInfo';
+import IvrMenuPromptInfo from './IvrMenuPromptInfo';
 import IVRMenuActionsInfo from './IVRMenuActionsInfo';
 
 interface IVRMenuInfo {
@@ -25,11 +25,11 @@ interface IVRMenuInfo {
 
   /**
    */
-  site?: IVRMenuSiteInfo;
+  site?: IvrMenuSiteInfo;
 
   /**
    */
-  prompt?: IVRMenuPromptInfo;
+  prompt?: IvrMenuPromptInfo;
 
   /**
    * Keys handling settings

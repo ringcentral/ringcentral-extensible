@@ -6,6 +6,7 @@ interface PagingGroupExtensionInfo {
 
   /**
    * Link to a paging group user extension
+   * Format: uri
    */
   uri?: string;
 

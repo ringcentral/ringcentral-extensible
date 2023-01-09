@@ -7,7 +7,8 @@ interface WirelessPointValidated {
   id?: string;
 
   /**
-   * Unique 48-bit identifier of the wireless access point complying with MAC address conventions
+   * Unique 48-bit identifier of the wireless access point that
+ *  follows MAC address conventions
    */
   bssid?: string;
 

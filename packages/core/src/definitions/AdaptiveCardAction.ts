@@ -14,6 +14,7 @@ interface AdaptiveCardAction {
   card?: ActionAdaptiveCardInfo;
 
   /**
+   * Format: uri
    */
   url?: string;
 }

@@ -17,13 +17,15 @@ class Index {
   }
 
   /**
-   * Uploads profile picture for user meetings.
+   * Uploads profile picture for user meetings
    * HTTP Method: post
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/meeting-configuration/profile-image
    * Rate Limit Group: Light
+   * App Permission: Meetings
+   * User Permission: Meetings
    */
   async post(createUserMeetingProfileImageRequest: CreateUserMeetingProfileImageRequest, restRequestConfig?: RestRequestConfig): Promise<string> {
-    const formData = Utils.getFormData(createUserMeetingProfileImageRequest);
+    const formData = await Utils.getFormData(createUserMeetingProfileImageRequest);
     const r = await this.rc.post<string>(this.path(), formData, undefined, restRequestConfig);
     return r.data;
   }

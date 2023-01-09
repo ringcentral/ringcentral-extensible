@@ -43,6 +43,7 @@ interface ActiveCallInfoWithoutSIP {
 
   /**
    * Time when the call is actually started
+   * Format: date-time
    */
   startTime?: string;
 
@@ -52,14 +53,14 @@ interface ActiveCallInfoWithoutSIP {
   sessionId?: string;
 
   /**
-   * Telephony call status
-   */
-  telephonyStatus?: ('NoCall' | 'CallConnected' | 'Ringing' | 'OnHold' | 'ParkedCall');
-
-  /**
    * Telephony identifier of a call session
    */
   telephonySessionId?: string;
+
+  /**
+   * Telephony call status
+   */
+  telephonyStatus?: ('NoCall' | 'CallConnected' | 'Ringing' | 'OnHold' | 'ParkedCall');
 
   /**
    * Type of call termination. Supported for calls in 'NoCall' status. If the returned termination type is 'intermediate' it means the call is not actually ended, the connection is established on one of the devices

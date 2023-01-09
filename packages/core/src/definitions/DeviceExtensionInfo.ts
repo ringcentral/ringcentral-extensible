@@ -1,6 +1,3 @@
-/**
- * Internal identifier of an extension the device should be assigned to
-*/
 interface DeviceExtensionInfo {
   /**
    * Internal identifier of an extension
@@ -9,12 +6,13 @@ interface DeviceExtensionInfo {
   id?: number;
 
   /**
-   * Link to an extension resource
+   * Canonical URL of an extension resource
+   * Format: uri
    */
   uri?: string;
 
   /**
-   * Number of extension
+   * Short extension number
    */
   extensionNumber?: string;
 }

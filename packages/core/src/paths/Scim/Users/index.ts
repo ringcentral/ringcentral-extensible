@@ -1,10 +1,9 @@
 import DotSearch from './DotSearch';
-import UserPatch from '../../../definitions/UserPatch';
-import User from '../../../definitions/User';
-import UserResponse from '../../../definitions/UserResponse';
-import CreateUser from '../../../definitions/CreateUser';
-import UserSearchResponse from '../../../definitions/UserSearchResponse';
-import SearchViaGet2Parameters from '../../../definitions/SearchViaGet2Parameters';
+import ScimUserPatch from '../../../definitions/ScimUserPatch';
+import ScimUserResponse from '../../../definitions/ScimUserResponse';
+import ScimUser from '../../../definitions/ScimUser';
+import ScimUserSearchResponse from '../../../definitions/ScimUserSearchResponse';
+import ScimSearchViaGet2Parameters from '../../../definitions/ScimSearchViaGet2Parameters';
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../types';
 
 class Index {
@@ -12,102 +11,102 @@ class Index {
 
   parent: ParentInterface;
 
-  id: string | null;
+  scimUserId: string | null;
 
-  constructor(parent: ParentInterface, id: string | null = null) {
+  constructor(parent: ParentInterface, scimUserId: string | null = null) {
     this.parent = parent;
     this.rc = parent.rc;
-    this.id = id;
+    this.scimUserId = scimUserId;
   }
 
   path(withParameter = true): string {
-    if (withParameter && this.id !== null) {
-      return `${this.parent.path()}/Users/${this.id}`;
+    if (withParameter && this.scimUserId !== null) {
+      return `${this.parent.path()}/Users/${this.scimUserId}`;
     }
     return `${this.parent.path()}/Users`;
   }
 
   /**
-   * Search/List Users
+   * Returns the list of users satisfying search criteria
    * HTTP Method: get
    * Endpoint: /scim/{version}/Users
    * Rate Limit Group: Light
    * App Permission: ReadAccounts
    */
-  async list(queryParams?: SearchViaGet2Parameters, restRequestConfig?: RestRequestConfig): Promise<UserSearchResponse> {
-    const r = await this.rc.get<UserSearchResponse>(this.path(false), queryParams, restRequestConfig);
+  async list(queryParams?: ScimSearchViaGet2Parameters, restRequestConfig?: RestRequestConfig): Promise<ScimUserSearchResponse> {
+    const r = await this.rc.get<ScimUserSearchResponse>(this.path(false), queryParams, restRequestConfig);
     return r.data;
   }
 
   /**
-   * Create User
+   * Creates a new user
    * HTTP Method: post
    * Endpoint: /scim/{version}/Users
    * Rate Limit Group: Heavy
    * App Permission: EditAccounts
    */
-  async post(createUser: CreateUser, restRequestConfig?: RestRequestConfig): Promise<UserResponse> {
-    const r = await this.rc.post<UserResponse>(this.path(false), createUser, undefined, restRequestConfig);
+  async post(scimUser: ScimUser, restRequestConfig?: RestRequestConfig): Promise<ScimUserResponse> {
+    const r = await this.rc.post<ScimUserResponse>(this.path(false), scimUser, undefined, restRequestConfig);
     return r.data;
   }
 
   /**
-   * Get User
+   * Returns a user by ID
    * HTTP Method: get
-   * Endpoint: /scim/{version}/Users/{id}
+   * Endpoint: /scim/{version}/Users/{scimUserId}
    * Rate Limit Group: Light
    * App Permission: ReadAccounts
    */
-  async get(restRequestConfig?: RestRequestConfig): Promise<UserResponse> {
-    if (this.id === null) {
-      throw new Error('id must be specified.');
+  async get(restRequestConfig?: RestRequestConfig): Promise<ScimUserResponse> {
+    if (this.scimUserId === null) {
+      throw new Error('scimUserId must be specified.');
     }
-    const r = await this.rc.get<UserResponse>(this.path(), undefined, restRequestConfig);
+    const r = await this.rc.get<ScimUserResponse>(this.path(), undefined, restRequestConfig);
     return r.data;
   }
 
   /**
-   * Update/Replace User
+   * Updates a user
    * HTTP Method: put
-   * Endpoint: /scim/{version}/Users/{id}
+   * Endpoint: /scim/{version}/Users/{scimUserId}
    * Rate Limit Group: Heavy
    * App Permission: EditAccounts
    */
-  async put(user: User, restRequestConfig?: RestRequestConfig): Promise<UserResponse> {
-    if (this.id === null) {
-      throw new Error('id must be specified.');
+  async put(scimUser: ScimUser, restRequestConfig?: RestRequestConfig): Promise<ScimUserResponse> {
+    if (this.scimUserId === null) {
+      throw new Error('scimUserId must be specified.');
     }
-    const r = await this.rc.put<UserResponse>(this.path(), user, undefined, restRequestConfig);
+    const r = await this.rc.put<ScimUserResponse>(this.path(), scimUser, undefined, restRequestConfig);
     return r.data;
   }
 
   /**
-   * Delete User
+   * Deletes a user
    * HTTP Method: delete
-   * Endpoint: /scim/{version}/Users/{id}
+   * Endpoint: /scim/{version}/Users/{scimUserId}
    * Rate Limit Group: Heavy
    * App Permission: EditAccounts
    */
   async delete(restRequestConfig?: RestRequestConfig): Promise<string> {
-    if (this.id === null) {
-      throw new Error('id must be specified.');
+    if (this.scimUserId === null) {
+      throw new Error('scimUserId must be specified.');
     }
     const r = await this.rc.delete<string>(this.path(), undefined, restRequestConfig);
     return r.data;
   }
 
   /**
-   * Update/Patch User
+   * Updates a user (partial update)
    * HTTP Method: patch
-   * Endpoint: /scim/{version}/Users/{id}
+   * Endpoint: /scim/{version}/Users/{scimUserId}
    * Rate Limit Group: Heavy
    * App Permission: EditAccounts
    */
-  async patch(userPatch: UserPatch, restRequestConfig?: RestRequestConfig): Promise<UserResponse> {
-    if (this.id === null) {
-      throw new Error('id must be specified.');
+  async patch(scimUserPatch: ScimUserPatch, restRequestConfig?: RestRequestConfig): Promise<ScimUserResponse> {
+    if (this.scimUserId === null) {
+      throw new Error('scimUserId must be specified.');
     }
-    const r = await this.rc.patch<UserResponse>(this.path(), userPatch, undefined, restRequestConfig);
+    const r = await this.rc.patch<ScimUserResponse>(this.path(), scimUserPatch, undefined, restRequestConfig);
     return r.data;
   }
 

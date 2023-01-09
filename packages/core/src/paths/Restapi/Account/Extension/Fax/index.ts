@@ -26,7 +26,7 @@ class Index {
    * User Permission: OutboundFaxes
    */
   async post(createFaxMessageRequest: CreateFaxMessageRequest, restRequestConfig?: RestRequestConfig): Promise<FaxResponse> {
-    const formData = Utils.getFormData(createFaxMessageRequest);
+    const formData = await Utils.getFormData(createFaxMessageRequest);
     const r = await this.rc.post<FaxResponse>(this.path(), formData, undefined, restRequestConfig);
     return r.data;
   }

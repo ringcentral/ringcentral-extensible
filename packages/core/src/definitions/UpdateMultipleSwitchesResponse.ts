@@ -1,9 +1,9 @@
-import BulkTaskInfoSwUpdate from './BulkTaskInfoSwUpdate';
+import BulkTaskInfo from './BulkTaskInfo';
 
 interface UpdateMultipleSwitchesResponse {
   /**
    */
-  task?: BulkTaskInfoSwUpdate;
+  task?: BulkTaskInfo;
 }
 
 export default UpdateMultipleSwitchesResponse;

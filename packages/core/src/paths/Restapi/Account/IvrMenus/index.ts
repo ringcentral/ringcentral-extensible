@@ -1,4 +1,5 @@
 import IVRMenuInfo from '../../../../definitions/IVRMenuInfo';
+import IVRMenuList from '../../../../definitions/IVRMenuList';
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
 
 class Index {
@@ -19,6 +20,18 @@ class Index {
       return `${this.parent.path()}/ivr-menus/${this.ivrMenuId}`;
     }
     return `${this.parent.path()}/ivr-menus`;
+  }
+
+  /**
+   * Returns a company IVR menus.
+   * HTTP Method: get
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/ivr-menus
+   * Rate Limit Group: Medium
+   * App Permission: ReadAccounts
+   */
+  async list(restRequestConfig?: RestRequestConfig): Promise<IVRMenuList> {
+    const r = await this.rc.get<IVRMenuList>(this.path(false), undefined, restRequestConfig);
+    return r.data;
   }
 
   /**

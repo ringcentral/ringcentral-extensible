@@ -10,6 +10,7 @@ export interface RingCentralInterface {
 
   delete<T>(
     endpoint: string,
+    content?: {},
     queryParams?: {},
     config?: RestRequestConfig,
   ): Promise<RestResponse<T>>;

@@ -1,6 +1,3 @@
-/**
- * Information on a user home country || Information on a country the phone number belongs to
-*/
 interface GetCountryInfoNumberParser {
   /**
    * Internal identifier of a country
@@ -8,27 +5,27 @@ interface GetCountryInfoNumberParser {
   id?: string;
 
   /**
-   * Canonical URI of a country
+   * Canonical URI of a country resource
+   * Format: uri
    */
   uri?: string;
 
   /**
-   * Country calling code defined by ITU-T recommendations E.123 and E.164, see Calling Codes
+   * Country calling code defined by ITU-T recommendations `E.123`
+ *  and `E.164`, see Calling Codes
+   * Example: 1
    */
   callingCode?: string;
 
   /**
-   * Emergency calling feature availability/emergency address requirement indicator
-   */
-  emergencyCalling?: boolean;
-
-  /**
-   * Country code according to the ISO standard, see ISO 3166
+   * Country code in `ISO 3166` alpha-2 format
+   * Example: US
    */
   isoCode?: string;
 
   /**
-   * Official name of a country
+   * The official name of the country.
+   * Example: United States
    */
   name?: string;
 }

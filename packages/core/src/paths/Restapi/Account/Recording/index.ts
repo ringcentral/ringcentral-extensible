@@ -1,4 +1,3 @@
-import Content from './Content';
 import GetCallRecordingResponse from '../../../../definitions/GetCallRecordingResponse';
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
 
@@ -36,10 +35,6 @@ class Index {
     }
     const r = await this.rc.get<GetCallRecordingResponse>(this.path(), undefined, restRequestConfig);
     return r.data;
-  }
-
-  content(): Content {
-    return new Content(this);
   }
 }
 export default Index;

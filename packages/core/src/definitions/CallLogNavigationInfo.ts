@@ -1,8 +1,5 @@
 import CallLogNavigationInfoURI from './CallLogNavigationInfoURI';
 
-/**
- * Information on navigation
-*/
 interface CallLogNavigationInfo {
   /**
    */

@@ -25,6 +25,7 @@ class Index {
 
   /**
    * Returns the list of user templates for the current account.
+ *
    * HTTP Method: get
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/templates
    * Rate Limit Group: Medium
@@ -38,6 +39,7 @@ class Index {
 
   /**
    * Returns the user template by ID.
+ *
    * HTTP Method: get
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/templates/{templateId}
    * Rate Limit Group: Light

@@ -4,7 +4,8 @@ import ProvisioningPagingInfo from './ProvisioningPagingInfo';
 
 interface GetStateListResponse {
   /**
-   * Link to the states list resource
+   * Link to a states list resource
+   * Format: uri
    */
   uri?: string;
 

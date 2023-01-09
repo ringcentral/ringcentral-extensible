@@ -1,13 +1,15 @@
-import PerformanceCallsCallSegmentLengthFilter from './PerformanceCallsCallSegmentLengthFilter';
+import CallSegmentLengthFilter from './CallSegmentLengthFilter';
 
 interface CallSegmentFilter {
   /**
+   * Call segment for filtering
+   * Required
    */
-  callSegment?: ('Ringing' | 'LiveTalk' | 'Hold' | 'Park' | 'Transfer' | 'IvrPrompt' | 'Voicemail' | 'VmGreeting' | 'Setup');
+  segment?: ('Ringing' | 'LiveTalk' | 'Hold' | 'Park' | 'Transfer' | 'IvrPrompt' | 'Voicemail' | 'VmGreeting' | 'Setup');
 
   /**
    */
-  callSegmentLength?: PerformanceCallsCallSegmentLengthFilter;
+  length?: CallSegmentLengthFilter;
 }
 
 export default CallSegmentFilter;

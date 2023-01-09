@@ -4,8 +4,8 @@ import Permission from './Permission';
 import UserRole from './UserRole';
 import Location from './Location';
 import Timezone from './Timezone';
-import Language from './Language';
 import Greeting from './Greeting';
+import Language from './Language';
 import Country from './Country';
 import State from './State';
 import Brand from './Brand';
@@ -37,12 +37,12 @@ class Index {
     return new Country(this, countryId);
   }
 
-  greeting(greetingId: (string | null) = null): Greeting {
-    return new Greeting(this, greetingId);
-  }
-
   language(languageId: (string | null) = null): Language {
     return new Language(this, languageId);
+  }
+
+  greeting(greetingId: (string | null) = null): Greeting {
+    return new Greeting(this, greetingId);
   }
 
   timezone(timezoneId: (string | null) = null): Timezone {

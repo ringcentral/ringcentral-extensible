@@ -1,4 +1,4 @@
-import CountryInfo from './CountryInfo';
+import CountryInfoShortModel from './CountryInfoShortModel';
 import TimezoneInfo from './TimezoneInfo';
 import RegionalLanguageInfo from './RegionalLanguageInfo';
 import GreetingLanguageInfo from './GreetingLanguageInfo';
@@ -7,11 +7,12 @@ import CurrencyInfo from './CurrencyInfo';
 
 /**
  * Account level region data (web service Auto-Receptionist settings)
+ *
 */
 interface AccountRegionalSettings {
   /**
    */
-  homeCountry?: CountryInfo;
+  homeCountry?: CountryInfoShortModel;
 
   /**
    */

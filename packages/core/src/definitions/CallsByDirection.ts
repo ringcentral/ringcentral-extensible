@@ -1,15 +1,19 @@
+import CallsByDirectionBreakdown from './CallsByDirectionBreakdown';
+
+/**
+ * Data for calls with breakdown by direction (Inbound, Outbound)
+*/
 interface CallsByDirection {
   /**
+   * Unit of the result value
    * Required
-   * Format: double
    */
-  inbound?: number;
+  valueType?: ('Percent' | 'Seconds' | 'Instances');
 
   /**
    * Required
-   * Format: double
    */
-  outbound?: number;
+  values?: CallsByDirectionBreakdown;
 }
 
 export default CallsByDirection;

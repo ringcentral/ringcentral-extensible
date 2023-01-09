@@ -19,6 +19,7 @@ class Index {
 
   /**
    * Updates multiple extensions at once. Maximum 500 extensions can be updated per request.
+ *
    * HTTP Method: post
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension-bulk-update
    * Rate Limit Group: Heavy

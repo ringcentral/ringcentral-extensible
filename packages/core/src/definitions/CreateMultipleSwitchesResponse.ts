@@ -1,12 +1,12 @@
-import BulkTaskInfoSwUpdate from './BulkTaskInfoSwUpdate';
+import BulkTaskInfo from './BulkTaskInfo';
 
 /**
- * Information on the task for multiple switches creation
+ * Information on a task for multiple switches creation
 */
 interface CreateMultipleSwitchesResponse {
   /**
    */
-  task?: BulkTaskInfoSwUpdate;
+  task?: BulkTaskInfo[];
 }
 
 export default CreateMultipleSwitchesResponse;

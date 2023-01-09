@@ -12,10 +12,12 @@ interface DetailedCallInfo {
   fromTag?: string;
 
   /**
+   * Format: uri
    */
   remoteUri?: string;
 
   /**
+   * Format: uri
    */
   localUri?: string;
 

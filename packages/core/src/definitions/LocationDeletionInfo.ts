@@ -10,7 +10,8 @@ interface LocationDeletionInfo {
   name?: string;
 
   /**
-   * Identifies the possibility and status of emergency location deletion
+   * Identifies the possibility and status of emergency location
+ *  deletion
    */
   deletion?: ('Failed' | 'Completed' | 'Forbidden' | 'Restricted' | 'Allowed');
 

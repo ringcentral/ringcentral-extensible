@@ -9,16 +9,19 @@ interface LanguageInfo {
 
   /**
    * Canonical URI of a language
+   * Format: uri
    */
   uri?: string;
 
   /**
-   * Indicates whether a language is available as greeting language
+   * Indicates whether a language is available as
+ *  greeting language
    */
   greeting?: boolean;
 
   /**
-   * Indicates whether a language is available as formatting locale
+   * Indicates whether a language is available as
+ *  formatting locale
    */
   formattingLocale?: boolean;
 
@@ -28,7 +31,8 @@ interface LanguageInfo {
   localeCode?: string;
 
   /**
-   * Country code according to the ISO standard, see [ISO 3166](https://www.iso.org/iso-3166-country-codes.html)
+   * Country code according to the ISO standard, see
+ *  [ISO 3166](https://www.iso.org/iso-3166-country-codes.html)
    */
   isoCode?: string;
 

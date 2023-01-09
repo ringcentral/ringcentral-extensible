@@ -1,5 +1,5 @@
 import UserAnsweringRuleListRecord from './UserAnsweringRuleListRecord';
-import UserAnsweringRuleListPaging from './UserAnsweringRuleListPaging';
+import EnumeratedPaging from './EnumeratedPaging';
 import UserAnsweringRuleListNavigation from './UserAnsweringRuleListNavigation';
 
 interface UserAnsweringRuleList {
@@ -16,7 +16,7 @@ interface UserAnsweringRuleList {
 
   /**
    */
-  paging?: UserAnsweringRuleListPaging;
+  paging?: EnumeratedPaging;
 
   /**
    */

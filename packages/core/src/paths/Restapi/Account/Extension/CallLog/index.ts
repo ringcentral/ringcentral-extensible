@@ -1,5 +1,4 @@
 import UserCallLogRecord from '../../../../../definitions/UserCallLogRecord';
-import ReadUserCallRecordParameters from '../../../../../definitions/ReadUserCallRecordParameters';
 import DeleteUserCallLogParameters from '../../../../../definitions/DeleteUserCallLogParameters';
 import UserCallLogResponse from '../../../../../definitions/UserCallLogResponse';
 import ReadUserCallLogParameters from '../../../../../definitions/ReadUserCallLogParameters';
@@ -59,11 +58,11 @@ class Index {
    * App Permission: ReadCallLog
    * User Permission: ReadCallLog
    */
-  async get(queryParams?: ReadUserCallRecordParameters, restRequestConfig?: RestRequestConfig): Promise<UserCallLogRecord> {
+  async get(restRequestConfig?: RestRequestConfig): Promise<UserCallLogRecord> {
     if (this.callRecordId === null) {
       throw new Error('callRecordId must be specified.');
     }
-    const r = await this.rc.get<UserCallLogRecord>(this.path(), queryParams, restRequestConfig);
+    const r = await this.rc.get<UserCallLogRecord>(this.path(), undefined, restRequestConfig);
     return r.data;
   }
 }

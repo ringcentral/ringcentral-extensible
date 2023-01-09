@@ -6,7 +6,7 @@ interface IncomingCallEvent {
   aps?: APSInfo;
 
   /**
-   * Event filter URI
+   * Event filter name
    */
   event?: string;
 
@@ -21,14 +21,13 @@ interface IncomingCallEvent {
   subscriptionId?: string;
 
   /**
-   * The datetime of a call action in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format including timezone, for example 2016-03-10T18:07:52.534Z
+   * The timestamp of a call action in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format including timezone, for example 2016-03-10T18:07:52.534Z
    * Format: date-time
    */
   timestamp?: string;
 
   /**
    * Internal identifier of an extension
-   * Default: ~
    */
   extensionId?: string;
 
@@ -94,6 +93,7 @@ interface IncomingCallEvent {
 
   /**
    * Notification lifetime value in seconds, the default value is 30 seconds
+   * Format: int32
    */
   pn_ttl?: number;
 

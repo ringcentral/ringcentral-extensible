@@ -1,5 +1,7 @@
 /**
- * Status information (reason, comment). Returned for 'Disabled' status only
+ * Status information (reason, comment). Returned for 'Disabled'
+ * status only
+ *
 */
 interface ExtensionStatusInfo {
   /**

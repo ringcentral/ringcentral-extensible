@@ -8,7 +8,7 @@ interface CreateCompanyGreetingRequest {
    * Type of a greeting, specifying the case when the greeting is played.
    * Required
    */
-  type?: ('Company' | 'StartRecording' | 'StopRecording' | 'AutomaticRecording');
+  type?: ('Company' | 'StartRecording' | 'StopRecording' | 'AutomaticRecording' | 'TemplateGreeting');
 
   /**
    * Internal identifier of an answering rule

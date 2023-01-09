@@ -7,7 +7,7 @@ interface CallStatusInfo {
   /**
    * Status code of a call
    */
-  code?: ('Setup' | 'Proceeding' | 'Answered' | 'Disconnected' | 'Gone' | 'Parked' | 'Hold' | 'VoiceMail' | 'FaxReceive' | 'VoiceMailScreening');
+  code?: ('Setup' | 'Proceeding' | 'Answered' | 'Disconnected' | 'Gone' | 'Parked' | 'Hold' | 'VoiceMail' | 'FaxReceive' | 'Tds' | 'VoiceMailScreening');
 
   /**
    */

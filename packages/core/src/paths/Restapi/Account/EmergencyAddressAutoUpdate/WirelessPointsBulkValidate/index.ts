@@ -17,7 +17,9 @@ class Index {
   }
 
   /**
-   * Validates wireless points before creation or update. The maximum number of wireless points per request is 10 000.
+   * Validates wireless points before creation or update. The maximum
+ * number of wireless points per request is 10 000.
+ *
    * HTTP Method: post
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/wireless-points-bulk-validate
    * Rate Limit Group: Heavy

@@ -8,10 +8,12 @@ interface MeetingServiceInfoResource {
   uri?: string;
 
   /**
+   * Format: uri
    */
   supportUri?: string;
 
   /**
+   * Format: uri
    */
   intlDialInNumbersUri?: string;
 

@@ -18,6 +18,7 @@ class Index {
 
   /**
    * Synchronizes user contacts.
+ *
    * HTTP Method: get
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/address-book-sync
    * Rate Limit Group: Heavy

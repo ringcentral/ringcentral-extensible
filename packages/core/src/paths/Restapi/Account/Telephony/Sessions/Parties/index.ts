@@ -5,14 +5,15 @@ import Transfer from './Transfer';
 import Forward from './Forward';
 import Pickup from './Pickup';
 import Answer from './Answer';
-import Bridge from './Bridge';
-import Ignore from './Ignore';
 import Reject from './Reject';
+import Ignore from './Ignore';
+import Bridge from './Bridge';
 import Unhold from './Unhold';
 import Reply from './Reply';
-import Park from './Park';
-import Flip from './Flip';
 import Hold from './Hold';
+import Flip from './Flip';
+import Park from './Park';
+import Play from './Play';
 import PartyUpdateRequest from '../../../../../../definitions/PartyUpdateRequest';
 import CallParty from '../../../../../../definitions/CallParty';
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../types';
@@ -53,11 +54,11 @@ class Index {
   }
 
   /**
-   * Removes a party from a call session by ID. A party can be deleted only if supervised or parked. It is possible to delete only one conference participant per request.
+   * Deletes a party from a call session by ID. A party can be deleted only if supervised or parked. It is possible to delete only one conference participant per request.
    * HTTP Method: delete
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}
    * Rate Limit Group: Light
-   * App Permission: TelephonySessions
+   * App Permission: CallControl
    */
   async delete(restRequestConfig?: RestRequestConfig): Promise<string> {
     if (this.partyId === null) {
@@ -68,7 +69,7 @@ class Index {
   }
 
   /**
-   * Modifies a call party by ID. There is a known limitation for Mute scenario - mute via REST API doesn't work with mute placed via RingCentral apps or HardPhone. It means that if you muted participant via Call Control API and Ringcentral Desktop app you need to unmute both endpoints to bring the media back.
+   * Modifies a call party by ID. There is a known limitation for Mute scenario - mute via REST API doesn't work with mute placed via RingCentral apps or HardPhone. It means that if you muted participant via Call Control API and RingCentral Desktop app you need to unmute both endpoints to bring the media back.
    * HTTP Method: patch
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}
    * Rate Limit Group: Light
@@ -82,16 +83,20 @@ class Index {
     return r.data;
   }
 
-  hold(): Hold {
-    return new Hold(this);
+  play(playId: (string | null) = null): Play {
+    return new Play(this, playId);
+  }
+
+  park(): Park {
+    return new Park(this);
   }
 
   flip(): Flip {
     return new Flip(this);
   }
 
-  park(): Park {
-    return new Park(this);
+  hold(): Hold {
+    return new Hold(this);
   }
 
   reply(): Reply {
@@ -102,16 +107,16 @@ class Index {
     return new Unhold(this);
   }
 
-  reject(): Reject {
-    return new Reject(this);
+  bridge(): Bridge {
+    return new Bridge(this);
   }
 
   ignore(): Ignore {
     return new Ignore(this);
   }
 
-  bridge(): Bridge {
-    return new Bridge(this);
+  reject(): Reject {
+    return new Reject(this);
   }
 
   answer(): Answer {

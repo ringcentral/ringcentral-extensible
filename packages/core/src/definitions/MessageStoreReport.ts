@@ -1,11 +1,13 @@
 interface MessageStoreReport {
   /**
    * Internal identifier of a message store report task
+   * Example: 400142200026-400142200026-bd162f24028442489385eb3f44c18354
    */
   id?: string;
 
   /**
-   * Link to a task
+   * Canonical URI of a task
+   * Format: uri
    */
   uri?: string;
 
@@ -25,26 +27,32 @@ interface MessageStoreReport {
   extensionId?: string;
 
   /**
-   * Task creation time
-   */
-  creationTime?: string;
-
-  /**
-   * Time of the last task modification
-   */
-  lastModifiedTime?: string;
-
-  /**
-   * Only messages created before the date will be collected. The default value is current time
+   * The end of the time range to collect message records in ISO 8601 format including timezone
+   * Format: date-time
    */
   dateTo?: string;
 
   /**
-   * Only messages created after (or including) the date will be collected. The default value is current time minus 24 hours
+   * The beginning of the time range to collect call log records in ISO 8601 format including timezone
+   * Format: date-time
    */
   dateFrom?: string;
 
   /**
+   * The time when this task was started
+   * Format: date-time
+   */
+  startTime?: string;
+
+  /**
+   * The time when this task was finished
+   * Format: date-time
+   */
+  finishTime?: string;
+
+  /**
+   * Type of messages to be collected.
+   * Example: Fax,VoiceMail
    */
   messageTypes?: ('EMail' | 'Fax' | 'SMS' | 'VoiceMail' | 'Pager' | 'Text')[];
 }

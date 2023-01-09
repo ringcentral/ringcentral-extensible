@@ -3,7 +3,8 @@
 */
 interface ListContactsParameters {
   /**
-   * If specified, only contacts whose First name or Last name start with the mentioned substring are returned. Case-insensitive
+   * If specified, only contacts which 'First name' or 'Last name' start
+ *  with the mentioned substring will be returned. Case-insensitive
    */
   startsWith?: string;
 
@@ -13,18 +14,28 @@ interface ListContactsParameters {
   sortBy?: ('FirstName' | 'LastName' | 'Company')[];
 
   /**
-   * Indicates the page number to retrieve. Only positive number values are accepted
+   * The number of the result set page to display
+   * Maximum: 1000
+   * Minimum: 1
+   * Format: int32
+   * Example: 1
    * Default: 1
    */
   page?: number;
 
   /**
-   * Indicates the page size (number of items)
+   * The number of items per page. If provided value in the request
+ *  is greater than a maximum, the maximum value is applied
+   * Maximum: 1000
+   * Minimum: 1
+   * Format: int32
+   * Example: 100
    * Default: 100
    */
   perPage?: number;
 
   /**
+   * Phone number in e.164 format
    */
   phoneNumber?: string[];
 }

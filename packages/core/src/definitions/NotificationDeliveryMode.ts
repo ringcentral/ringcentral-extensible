@@ -1,51 +1,58 @@
-/**
- * Delivery mode data
-*/
 interface NotificationDeliveryMode {
   /**
-   * Optional parameter. Specifies if the message will be encrypted or not
+   * Notifications transport name, e.g. "WebHook"
+   * Required
    */
-  encryption?: boolean;
+  transportType?: ('PubNub' | 'RC/APNS' | 'RC/GCM' | 'WebHook' | 'WebSocket');
 
   /**
-   * PubNub channel name
+   * For a "WebHook" transport - URL of a consumer service (cannot be changed during subscription update)
+   * Example: https://acme.com/myservice/webhook
    */
   address?: string;
 
   /**
-   * PubNub subscriber credentials required to subscribe to the channel
+   * Optional parameter. Specifies if the message will be encrypted
+ *  or not. If request contains any presence event filter the value by default
+ *  is 'true' (even if specified as 'false'). If request contains only message
+ *  event filters the value by default is 'false'
    */
-  subscriberKey?: string;
+  encryption?: boolean;
 
   /**
-   * PubNub subscriber credentials required to subscribe to the channel. Optional (for PubNub transport type only)
-   */
-  secretKey?: string;
-
-  /**
-   * Encryption algorithm 'AES' (for PubNub transport type only)
-   */
-  encryptionAlgorithm?: string;
-
-  /**
-   * Key for notification message decryption (for PubNub transport type only)
-   */
-  encryptionKey?: string;
-
-  /**
-   * Notifications transportation provider name
-   */
-  transportType?: ('PubNub' | 'WebHook' | 'RC/APNS' | 'RC/GCM');
-
-  /**
-   * Name of a certificate. Supported for 'RC/APNS' and 'RC/GCM' transport types
+   * Certificate name (for "RC/APNS" and "RC/GCM" transport types only)
    */
   certificateName?: string;
 
   /**
-   * Identifier of a registration. Supported for 'RC/APNS' and 'RC/GCM' transport types
+   * Registration identifier (for "RC/APNS" and "RC/GCM" transport types only)
    */
   registrationId?: string;
+
+  /**
+   * Subscription verification token ensuring data security (For "Webhook" transport type only)
+   */
+  verificationToken?: string;
+
+  /**
+   * PubNub subscriber credentials required to subscribe to the channel (for "PubNub" transport type only)
+   */
+  subscriberKey?: string;
+
+  /**
+   * PubNub subscriber credentials required to subscribe to the channel (for "PubNub" transport type only)
+   */
+  secretKey?: string;
+
+  /**
+   * Encryption algorithm "AES" (for "PubNub" transport type only)
+   */
+  encryptionAlgorithm?: string;
+
+  /**
+   * Key for notification message decryption (for "PubNub" transport type only)
+   */
+  encryptionKey?: string;
 }
 
 export default NotificationDeliveryMode;

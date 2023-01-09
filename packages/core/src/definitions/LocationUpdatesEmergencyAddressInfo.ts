@@ -1,5 +1,8 @@
 /**
- * Emergency address information (or information assigned to the switch or wireless point - in case of using them). Only one of a pair `emergencyAddress` or `emergencyLocationId` should be specified, otherwise the error is returned
+ * Emergency address information (or information assigned to the switch or
+ * wireless point - in case of using them). Only one of a pair `emergencyAddress`
+ * or `emergencyLocationId` should be specified, otherwise an error is returned
+ *
 */
 interface LocationUpdatesEmergencyAddressInfo {
   /**

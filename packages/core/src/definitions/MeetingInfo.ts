@@ -13,6 +13,7 @@ interface MeetingInfo {
   topic?: string;
 
   /**
+   * Format: date-time
    */
   startTime?: string;
 }

@@ -1,10 +1,10 @@
-import AutomaticLocationUpdatesSiteInfo from './AutomaticLocationUpdatesSiteInfo';
-import LocationUpdatesEmergencyAddressInfoRequest from './LocationUpdatesEmergencyAddressInfoRequest';
-import ERLLocationInfo from './ERLLocationInfo';
+import EmergencyAddressAutoUpdateSiteInfo from './EmergencyAddressAutoUpdateSiteInfo';
+import EmergencyAddressInfo from './EmergencyAddressInfo';
+import EmergencyLocationInfo from './EmergencyLocationInfo';
 
 interface CreateWirelessPoint {
   /**
-   * Unique 48-bit identifier of wireless access point complying with MAC address conventions. The Mask is XX:XX:XX:XX:XX:XX, where X can be a symbol in the range of 0-9 or A-F
+   * Unique 48-bit identifier of wireless access point that follows MAC address conventions.  Mask: XX:XX:XX:XX:XX:XX, where X can be a symbol in the range of 0-9 or A-F
    * Required
    */
   bssid?: string;
@@ -17,20 +17,15 @@ interface CreateWirelessPoint {
 
   /**
    */
-  site?: AutomaticLocationUpdatesSiteInfo;
+  site?: EmergencyAddressAutoUpdateSiteInfo;
 
   /**
    */
-  emergencyAddress?: LocationUpdatesEmergencyAddressInfoRequest;
-
-  /**
-   * Deprecated. Internal identifier of the emergency response location (address). Only one of a pair `emergencyAddress` or `emergencyLocationId` should be specified, otherwise the error is returned
-   */
-  emergencyLocationId?: string;
+  emergencyAddress?: EmergencyAddressInfo;
 
   /**
    */
-  emergencyLocation?: ERLLocationInfo;
+  emergencyLocation?: EmergencyLocationInfo;
 }
 
 export default CreateWirelessPoint;

@@ -1,27 +1,19 @@
+import CallsByResponseBreakdown from './CallsByResponseBreakdown';
+
+/**
+ * Data for calls with breakdown by response (Answered, NotAnswered, Connected, NotConnected)
+*/
 interface CallsByResponse {
   /**
+   * Unit of the result value
    * Required
-   * Format: double
    */
-  answered?: number;
+  valueType?: ('Percent' | 'Seconds' | 'Instances');
 
   /**
    * Required
-   * Format: double
    */
-  notAnswered?: number;
-
-  /**
-   * Required
-   * Format: double
-   */
-  connected?: number;
-
-  /**
-   * Required
-   * Format: double
-   */
-  notConnected?: number;
+  values?: CallsByResponseBreakdown;
 }
 
 export default CallsByResponse;

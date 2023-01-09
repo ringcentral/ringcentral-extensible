@@ -1,5 +1,5 @@
-import UserSearchResponse from '../../../../definitions/UserSearchResponse';
-import SearchRequest from '../../../../definitions/SearchRequest';
+import ScimUserSearchResponse from '../../../../definitions/ScimUserSearchResponse';
+import ScimSearchRequest from '../../../../definitions/ScimSearchRequest';
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
 
 class Index {
@@ -17,14 +17,14 @@ class Index {
   }
 
   /**
-   * Search/List Users
+   * Returns the list of users satisfying search criteria
    * HTTP Method: post
    * Endpoint: /scim/{version}/Users/dotSearch
    * Rate Limit Group: Light
    * App Permission: ReadAccounts
    */
-  async post(searchRequest: SearchRequest, restRequestConfig?: RestRequestConfig): Promise<UserSearchResponse> {
-    const r = await this.rc.post<UserSearchResponse>(this.path(), searchRequest, undefined, restRequestConfig);
+  async post(scimSearchRequest: ScimSearchRequest, restRequestConfig?: RestRequestConfig): Promise<ScimUserSearchResponse> {
+    const r = await this.rc.post<ScimUserSearchResponse>(this.path(), scimSearchRequest, undefined, restRequestConfig);
     return r.data;
   }
 }

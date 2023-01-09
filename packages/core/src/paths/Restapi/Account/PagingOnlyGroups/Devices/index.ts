@@ -17,7 +17,8 @@ class Index {
   }
 
   /**
-   * Returns the list of paging devices assigned to this group.
+   * Returns a list of paging devices assigned to this group.
+ *
    * HTTP Method: get
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/paging-only-groups/{pagingOnlyGroupId}/devices
    * Rate Limit Group: Light

@@ -26,7 +26,7 @@ class Index {
    * User Permission: ReadUserInfo
    */
   async post(createCompanyGreetingRequest: CreateCompanyGreetingRequest, restRequestConfig?: RestRequestConfig): Promise<CustomCompanyGreetingInfo> {
-    const formData = Utils.getFormData(createCompanyGreetingRequest);
+    const formData = await Utils.getFormData(createCompanyGreetingRequest);
     const r = await this.rc.post<CustomCompanyGreetingInfo>(this.path(), formData, undefined, restRequestConfig);
     return r.data;
   }

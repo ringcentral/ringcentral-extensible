@@ -15,12 +15,20 @@ interface ReadA2PSMSOptOutsParameters {
   to?: string;
 
   /**
-   * Token of the page to be retrieved
+   * The status (opted out, opted in, or both) to be used as the filter
+   * Example: optout
+   * Default: optout
+   */
+  status?: ('optout' | 'optin' | 'all');
+
+  /**
+   * The page token of the page to be retrieved
+   * Example: pgt1
    */
   pageToken?: string;
 
   /**
-   * Number of records to be returned for the page
+   * The number of records to be returned for the page
    * Format: int32
    * Example: 5
    * Default: 1000

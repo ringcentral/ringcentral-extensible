@@ -6,6 +6,7 @@ interface CallQueues {
   /**
    * Link to a call queues resource
    * Required
+   * Format: uri
    */
   uri?: string;
 

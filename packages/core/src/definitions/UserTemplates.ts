@@ -5,6 +5,7 @@ import ProvisioningPagingInfo from './ProvisioningPagingInfo';
 interface UserTemplates {
   /**
    * Link to user templates resource
+   * Format: uri
    */
   uri?: string;
 

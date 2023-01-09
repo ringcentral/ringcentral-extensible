@@ -11,10 +11,13 @@ interface AccountBusinessAddressResource {
   businessAddress?: ContactBusinessAddressInfo;
 
   /**
+   * Company business name
    */
   company?: string;
 
   /**
+   * Company business email address
+   * Format: email
    */
   email?: string;
 

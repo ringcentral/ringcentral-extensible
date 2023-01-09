@@ -8,17 +8,18 @@ interface DeviceInfoRequest {
   id?: string;
 
   /**
-   * Supported for iOS devices only. Certificate name (used by iOS applications for APNS subscription)
+   * Supported for iOS devices only. Certificate name (used by iOS
+ *  applications for APNS subscription)
    */
   appExternalId?: string;
 
   /**
-   * Supported for SoftPhone only. Computer name
+   * Computer name (for SoftPhone only).
    */
   computerName?: string;
 
   /**
-   * Serial number for HardPhone; `endpoint_id` for softphone and mobile applications. Returned only when the phone is shipped and provisioned
+   * Endpoint/device instance identifier for Softphone and mobile applications.
    */
   serial?: string;
 }

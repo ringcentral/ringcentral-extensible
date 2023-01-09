@@ -1,23 +1,10 @@
-import AddressBookBulkContactResource from './AddressBookBulkContactResource';
+import AddressBookBulkUploadResource from './AddressBookBulkUploadResource';
 import ErrorEntity from './ErrorEntity';
 
-/**
- * Result record on adding multiple contacts to an extension. Returned for completed tasks
-*/
 interface AddressBookBulkUploadTaskResult {
   /**
-   * Internal identifier of an extension
    */
-  extensionId?: string;
-
-  /**
-   */
-  contact?: AddressBookBulkContactResource;
-
-  /**
-   * Adding contact status
-   */
-  status?: ('Success' | 'Fail');
+  affectedItems?: AddressBookBulkUploadResource[];
 
   /**
    */

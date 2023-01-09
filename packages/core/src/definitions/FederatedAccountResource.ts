@@ -15,10 +15,12 @@ interface FederatedAccountResource {
   federatedName?: string;
 
   /**
+   * Required
    */
   id?: string;
 
   /**
+   * Format: date-time
    */
   linkCreationTime?: string;
 

@@ -23,7 +23,8 @@ class Index {
   }
 
   /**
-   * Returns the information about supported languages.
+   * Returns information about the supported languages.
+ *
    * HTTP Method: get
    * Endpoint: /restapi/{apiVersion}/dictionary/language
    * Rate Limit Group: Light
@@ -34,7 +35,8 @@ class Index {
   }
 
   /**
-   * Returns language by ID.
+   * Returns a language by ID.
+ *
    * HTTP Method: get
    * Endpoint: /restapi/{apiVersion}/dictionary/language/{languageId}
    * Rate Limit Group: Light

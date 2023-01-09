@@ -24,7 +24,8 @@ class Index {
   }
 
   /**
-   * Returns all the states of a certain country
+   * Returns all states of a certain country.
+ *
    * HTTP Method: get
    * Endpoint: /restapi/{apiVersion}/dictionary/state
    * Rate Limit Group: Light
@@ -35,7 +36,8 @@ class Index {
   }
 
   /**
-   * Returns the information on a specific state.
+   * Returns information on a specific state by ID.
+ *
    * HTTP Method: get
    * Endpoint: /restapi/{apiVersion}/dictionary/state/{stateId}
    * Rate Limit Group: Light

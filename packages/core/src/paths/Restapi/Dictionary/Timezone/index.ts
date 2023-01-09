@@ -26,6 +26,7 @@ class Index {
 
   /**
    * Returns all available timezones.
+ *
    * HTTP Method: get
    * Endpoint: /restapi/{apiVersion}/dictionary/timezone
    * Rate Limit Group: Light
@@ -36,7 +37,8 @@ class Index {
   }
 
   /**
-   * Returns the information on a certain timezone.
+   * Returns information on a certain timezone.
+ *
    * HTTP Method: get
    * Endpoint: /restapi/{apiVersion}/dictionary/timezone/{timezoneId}
    * Rate Limit Group: Light

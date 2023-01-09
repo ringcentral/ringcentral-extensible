@@ -1,48 +1,20 @@
-import PermissionIdResource from './PermissionIdResource';
-
 interface RoleResource {
   /**
-   * Format: uri
-   */
-  uri?: string;
-
-  /**
+   * Required
    */
   id?: string;
 
   /**
    */
+  name?: string;
+
+  /**
+   */
+  domain?: string;
+
+  /**
+   */
   displayName?: string;
-
-  /**
-   */
-  description?: string;
-
-  /**
-   * Site compatibility of a user role
-   */
-  siteCompatible?: boolean;
-
-  /**
-   */
-  custom?: boolean;
-
-  /**
-   */
-  scope?: string;
-
-  /**
-   */
-  hidden?: boolean;
-
-  /**
-   * Format: date-time
-   */
-  lastUpdated?: string;
-
-  /**
-   */
-  permissions?: PermissionIdResource[];
 }
 
 export default RoleResource;

@@ -1,5 +1,6 @@
-import GetCountryListResponse from '../../../../../definitions/GetCountryListResponse';
+import CountryListDictionaryModel from '../../../../../definitions/CountryListDictionaryModel';
 import ListDomesticCountriesParameters from '../../../../../definitions/ListDomesticCountriesParameters';
+import ContractedCountryListResponse from '../../../../../definitions/ContractedCountryListResponse';
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
@@ -23,16 +24,28 @@ class Index {
   }
 
   /**
-   * Returns the list of domestic countries by contracted country and brand of the account.
+   * Returns the list of contracted countries for the given brand.
+   * HTTP Method: get
+   * Endpoint: /restapi/{apiVersion}/dictionary/brand/{brandId}/contracted-country
+   * Rate Limit Group: Light
+   */
+  async list(restRequestConfig?: RestRequestConfig): Promise<ContractedCountryListResponse> {
+    const r = await this.rc.get<ContractedCountryListResponse>(this.path(false), undefined, restRequestConfig);
+    return r.data;
+  }
+
+  /**
+   * Returns the list of domestic countries for account contracted country and brand.
+ *
    * HTTP Method: get
    * Endpoint: /restapi/{apiVersion}/dictionary/brand/{brandId}/contracted-country/{contractedCountryId}
    * Rate Limit Group: Light
    */
-  async get(queryParams?: ListDomesticCountriesParameters, restRequestConfig?: RestRequestConfig): Promise<GetCountryListResponse> {
+  async get(queryParams?: ListDomesticCountriesParameters, restRequestConfig?: RestRequestConfig): Promise<CountryListDictionaryModel> {
     if (this.contractedCountryId === null) {
       throw new Error('contractedCountryId must be specified.');
     }
-    const r = await this.rc.get<GetCountryListResponse>(this.path(), queryParams, restRequestConfig);
+    const r = await this.rc.get<CountryListDictionaryModel>(this.path(), queryParams, restRequestConfig);
     return r.data;
   }
 }

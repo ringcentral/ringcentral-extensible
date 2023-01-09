@@ -3,6 +3,7 @@
 */
 interface MeetingRecordingsNavigationInfoUri {
   /**
+   * Format: uri
    */
   uri?: string;
 }

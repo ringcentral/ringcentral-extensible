@@ -17,13 +17,18 @@ class Index {
   }
 
   /**
-   * Returns access tokens for making API requests
+   * Returns access (and potentially refresh) tokens for making API requests.
+ *
+ * Depending on client application type
+ * requests to this endpoint may require authentication with HTTP Basic scheme
+ * using registered client ID and client secret as login and password, correspondingly.
+ *
    * HTTP Method: post
    * Endpoint: /restapi/oauth/token
    * Rate Limit Group: Auth
    */
-  async post(getTokenRequest: GetTokenRequest, restRequestConfig?: RestRequestConfig): Promise<TokenInfo> {
-    const r = await this.rc.post<TokenInfo>(this.path(), getTokenRequest, undefined, restRequestConfig);
+  async post(GetTokenRequest: GetTokenRequest, restRequestConfig?: RestRequestConfig): Promise<TokenInfo> {
+    const r = await this.rc.post<TokenInfo>(this.path(), GetTokenRequest, undefined, restRequestConfig);
     return r.data;
   }
 }

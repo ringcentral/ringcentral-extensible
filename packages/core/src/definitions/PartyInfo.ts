@@ -1,6 +1,3 @@
-/**
- * Information on a calling/called party
-*/
 interface PartyInfo {
   /**
    * Phone number of a party

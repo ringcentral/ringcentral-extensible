@@ -18,6 +18,7 @@ class Index {
 
   /**
    * Returns all available locations for a certain state.
+ *
    * HTTP Method: get
    * Endpoint: /restapi/{apiVersion}/dictionary/location
    * Rate Limit Group: Light

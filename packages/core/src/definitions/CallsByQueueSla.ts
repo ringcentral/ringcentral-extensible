@@ -1,15 +1,19 @@
+import CallsByQueueSlaBreakdown from './CallsByQueueSlaBreakdown';
+
+/**
+ * Data for calls with breakdown by queue SLA (InSLA, OutSLA). This counter is only applicable to Queues grouping
+*/
 interface CallsByQueueSla {
   /**
+   * Unit of the result value
    * Required
-   * Format: double
    */
-  inSla?: number;
+  valueType?: ('Percent' | 'Seconds' | 'Instances');
 
   /**
    * Required
-   * Format: double
    */
-  outOfSla?: number;
+  values?: CallsByQueueSlaBreakdown;
 }
 
 export default CallsByQueueSla;

@@ -14,28 +14,33 @@ interface ListExtensionsParameters {
   email?: string;
 
   /**
-   * Indicates the page number to retrieve. Only positive number values are allowed
-   * Format: int64
+   * Indicates a page number to retrieve. Only positive number values
+ *  are allowed
+   * Format: int32
    * Default: 1
    */
   page?: number;
 
   /**
-   * Indicates the page size (number of items)
-   * Format: int64
+   * Indicates a page size (number of items)
+   * Format: int32
    * Default: 100
    */
   perPage?: number;
 
   /**
-   * Extension current state. Multiple values are supported. If 'Unassigned' is specified, then extensions without `extensionNumber` attribute are returned. If not specified, then all extensions are returned.
+   * Extension current state. Multiple values are supported. If 'Unassigned'
+ *  is specified, then extensions without `extensionNumber` attribute are returned.
+ *  If not specified, then all extensions are returned
    */
   status?: ('Enabled' | 'Disabled' | 'NotActivated' | 'Unassigned')[];
 
   /**
-   * Extension type. Multiple values are supported. Please note that legacy 'Department' extension type corresponds to 'Call Queue' extensions in modern RingCentral product terminology
+   * Extension type. Multiple values are supported. Please note
+ *  that legacy 'Department' extension type corresponds to 'Call Queue'
+ *  extensions in modern RingCentral product terminology
    */
-  type?: ('User' | 'FaxUser' | 'VirtualUser' | 'DigitalUser' | 'Department' | 'Announcement' | 'Voicemail' | 'SharedLinesGroup' | 'PagingOnly' | 'IvrMenu' | 'ApplicationExtension' | 'ParkLocation' | 'Limited' | 'Bot' | 'ProxyAdmin' | 'DelegatedLinesGroup')[];
+  type?: ('User' | 'FaxUser' | 'FlexibleUser' | 'VirtualUser' | 'DigitalUser' | 'Department' | 'Announcement' | 'Voicemail' | 'SharedLinesGroup' | 'PagingOnly' | 'IvrMenu' | 'ApplicationExtension' | 'ParkLocation' | 'Limited' | 'Bot' | 'ProxyAdmin' | 'DelegatedLinesGroup')[];
 }
 
 export default ListExtensionsParameters;

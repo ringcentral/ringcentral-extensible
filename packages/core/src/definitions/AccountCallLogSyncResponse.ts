@@ -1,9 +1,10 @@
 import CompanyCallLogRecord from './CompanyCallLogRecord';
-import CompanyCallLogSyncInfo from './CompanyCallLogSyncInfo';
+import CallLogSyncInfo from './CallLogSyncInfo';
 
 interface AccountCallLogSyncResponse {
   /**
    * Link to account call log sync resource
+   * Format: uri
    */
   uri?: string;
 
@@ -14,7 +15,7 @@ interface AccountCallLogSyncResponse {
 
   /**
    */
-  syncInfo?: CompanyCallLogSyncInfo;
+  syncInfo?: CallLogSyncInfo;
 }
 
 export default AccountCallLogSyncResponse;

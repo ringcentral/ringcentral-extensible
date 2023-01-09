@@ -8,6 +8,7 @@ interface ModifyAccountBusinessAddressRequest {
 
   /**
    * Company business email address
+   * Format: email
    */
   email?: string;
 

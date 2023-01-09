@@ -1,17 +1,19 @@
-import BulkAssignOptOuts from './BulkAssignOptOuts';
-import BulkAssignOptIns from './BulkAssignOptIns';
+import OptOutBulkAssignResponseOptIns from './OptOutBulkAssignResponseOptIns';
+import OptOutBulkAssignResponseOptOuts from './OptOutBulkAssignResponseOptOuts';
 
 /**
  * The results of adding opt-outs and opt-ins
 */
 interface OptOutBulkAssignResponse {
   /**
+   * Contains successful and failed opt-ins
    */
-  optOuts?: BulkAssignOptOuts;
+  optIns?: OptOutBulkAssignResponseOptIns;
 
   /**
+   * Contains successful and failed opt-outs
    */
-  optIns?: BulkAssignOptIns;
+  optOuts?: OptOutBulkAssignResponseOptOuts;
 }
 
 export default OptOutBulkAssignResponse;

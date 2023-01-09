@@ -1,4 +1,4 @@
-import Phone from './Phone';
+import Calls from './Calls';
 import { RingCentralInterface } from '../../types';
 
 class Index {
@@ -12,8 +12,8 @@ class Index {
     return '/analytics';
   }
 
-  phone(): Phone {
-    return new Phone(this);
+  calls(version: (string | null) = 'v1'): Calls {
+    return new Calls(this, version);
   }
 }
 export default Index;

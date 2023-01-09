@@ -1,6 +1,6 @@
 import ForwardingNumberInfo from './ForwardingNumberInfo';
-import CallHandlingNavigationInfo from './CallHandlingNavigationInfo';
-import CallHandlingPagingInfo from './CallHandlingPagingInfo';
+import NavigationInfo from './NavigationInfo';
+import EnumeratedPaging from './EnumeratedPaging';
 
 interface GetExtensionForwardingNumberListResponse {
   /**
@@ -15,11 +15,11 @@ interface GetExtensionForwardingNumberListResponse {
 
   /**
    */
-  navigation?: CallHandlingNavigationInfo;
+  navigation?: NavigationInfo;
 
   /**
    */
-  paging?: CallHandlingPagingInfo;
+  paging?: EnumeratedPaging;
 }
 
 export default GetExtensionForwardingNumberListResponse;

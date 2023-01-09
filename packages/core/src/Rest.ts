@@ -2,7 +2,7 @@ import axios, {
   AxiosInstance,
 } from 'axios';
 import qs from 'qs';
-import FormData from 'form-data';
+import { boundary } from './FormData';
 
 import RestException from './RestException';
 import TokenInfo from './definitions/TokenInfo';
@@ -51,10 +51,10 @@ export default class Rest {
     });
 
     this.httpClient.interceptors.request.use((config) => {
-      if (config.data instanceof FormData && config.data.getHeaders) {
+      if (Buffer.isBuffer(config.data)) {
         return {
           ...config,
-          headers: { ...config.headers, ...config.data.getHeaders() },
+          headers: { ...config.headers, 'Content-Type': `multipart/form-data; boundary=${boundary}` },
         };
       }
       return config;

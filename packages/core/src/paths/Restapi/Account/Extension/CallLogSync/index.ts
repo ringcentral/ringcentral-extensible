@@ -17,7 +17,7 @@ class Index {
   }
 
   /**
-   * Synchronizes call log records.
+   * Synchronizes call log records
    * HTTP Method: get
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/call-log-sync
    * Rate Limit Group: Heavy

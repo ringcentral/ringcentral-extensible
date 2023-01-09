@@ -41,9 +41,8 @@ interface CompanyAnsweringRuleUpdate {
   type?: ('BusinessHours' | 'AfterHours' | 'Custom');
 
   /**
-   * Internal identifier of the extension the call is forwarded to. Supported for 'Bypass' mode only (that should be specified in `callHandlingAction` field)
    */
-  extension?: string;
+  extension?: CompanyAnsweringRuleCallersInfoRequest;
 
   /**
    * Greetings applied for an answering rule; only predefined greetings can be applied, see Dictionary Greeting List

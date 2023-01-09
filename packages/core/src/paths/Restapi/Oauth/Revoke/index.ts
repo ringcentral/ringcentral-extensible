@@ -16,13 +16,18 @@ class Index {
   }
 
   /**
-   * Revokes access/refresh token. Requests to this endpoint must be authenticated with HTTP Basic scheme using the application key and application secret as login and password, correspondingly.
+   * Revokes previously issued access and refresh token.
+ *
+ * Depending on client application type
+ * requests to this endpoint may require authentication with HTTP Basic scheme
+ * using registered client ID and client secret as login and password, correspondingly.
+ *
    * HTTP Method: post
    * Endpoint: /restapi/oauth/revoke
    * Rate Limit Group: Auth
    */
-  async post(revokeTokenRequest: RevokeTokenRequest, restRequestConfig?: RestRequestConfig): Promise<string> {
-    const r = await this.rc.post<string>(this.path(), revokeTokenRequest, undefined, restRequestConfig);
+  async post(RevokeTokenRequest: RevokeTokenRequest, restRequestConfig?: RestRequestConfig): Promise<string> {
+    const r = await this.rc.post<string>(this.path(), RevokeTokenRequest, undefined, restRequestConfig);
     return r.data;
   }
 }

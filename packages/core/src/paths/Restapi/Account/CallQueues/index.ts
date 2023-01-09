@@ -28,7 +28,8 @@ class Index {
   }
 
   /**
-   * Returns call queue group list.
+   * Returns call queues list.
+ *
    * HTTP Method: get
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/call-queues
    * Rate Limit Group: Medium
@@ -42,6 +43,7 @@ class Index {
 
   /**
    * Returns basic information on a call queue group extension.
+ *
    * HTTP Method: get
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/call-queues/{groupId}
    * Rate Limit Group: Light
@@ -58,6 +60,7 @@ class Index {
 
   /**
    * Updates information on a call queue group extension.
+ *
    * HTTP Method: put
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/call-queues/{groupId}
    * Rate Limit Group: Light

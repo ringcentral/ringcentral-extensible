@@ -16,7 +16,7 @@ interface AutomaticLocationUpdatesUserInfo {
   extensionNumber?: string;
 
   /**
-   * Specifies if Automatic Location Updates feature is enabled
+   * Specifies whether Automatic Location Updates feature is enabled
    */
   featureEnabled?: boolean;
 

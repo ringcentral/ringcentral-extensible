@@ -1,6 +1,7 @@
 interface TemplateInfo {
   /**
    * Link to a template
+   * Format: uri
    */
   uri?: string;
 
@@ -20,11 +21,13 @@ interface TemplateInfo {
 
   /**
    * Time of a template creation
+   * Format: date-time
    */
   creationTime?: string;
 
   /**
    * Time of the last template modification
+   * Format: date-time
    */
   lastModifiedTime?: string;
 }

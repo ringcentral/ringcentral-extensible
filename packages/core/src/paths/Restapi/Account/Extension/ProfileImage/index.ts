@@ -25,6 +25,7 @@ class Index {
 
   /**
    * Returns a profile image of an extension.
+ *
    * HTTP Method: get
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/profile-image
    * Rate Limit Group: Medium
@@ -38,6 +39,7 @@ class Index {
 
   /**
    * Uploads the extension profile image.
+ *
    * HTTP Method: post
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/profile-image
    * Rate Limit Group: Heavy
@@ -45,13 +47,14 @@ class Index {
    * User Permission: EditUserInfo
    */
   async post(createUserProfileImageRequest: CreateUserProfileImageRequest, restRequestConfig?: RestRequestConfig): Promise<string> {
-    const formData = Utils.getFormData(createUserProfileImageRequest);
+    const formData = await Utils.getFormData(createUserProfileImageRequest);
     const r = await this.rc.post<string>(this.path(false), formData, undefined, restRequestConfig);
     return r.data;
   }
 
   /**
-   * Updates the extension profile image
+   * Updates the extension profile image.
+ *
    * HTTP Method: put
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/profile-image
    * Rate Limit Group: Heavy
@@ -59,13 +62,28 @@ class Index {
    * User Permission: EditUserInfo
    */
   async put(updateUserProfileImageRequest: UpdateUserProfileImageRequest, restRequestConfig?: RestRequestConfig): Promise<string> {
-    const formData = Utils.getFormData(updateUserProfileImageRequest);
+    const formData = await Utils.getFormData(updateUserProfileImageRequest);
     const r = await this.rc.put<string>(this.path(false), formData, undefined, restRequestConfig);
     return r.data;
   }
 
   /**
-   * Returns scaled profile image of an extension.
+   * Deletes the user profile image.
+ *
+   * HTTP Method: delete
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/profile-image
+   * Rate Limit Group: Medium
+   * App Permission: EditExtensions
+   * User Permission: EditUserInfo
+   */
+  async delete(restRequestConfig?: RestRequestConfig): Promise<string> {
+    const r = await this.rc.delete<string>(this.path(false), undefined, restRequestConfig);
+    return r.data;
+  }
+
+  /**
+   * Returns the scaled profile image of an extension.
+ *
    * HTTP Method: get
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/profile-image/{scaleSize}
    * Rate Limit Group: Light

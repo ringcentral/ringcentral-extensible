@@ -17,7 +17,9 @@ class Index {
   }
 
   /**
-   * Updates multiple switches in corporate map. The maximum number of switches per request is 10 000; limitation for account is 10 000.
+   * Updates multiple switches in corporate map. The maximum number
+ * of switches per request is 10 000; limitation for account is 10 000.
+ *
    * HTTP Method: post
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/switches-bulk-update
    * Rate Limit Group: Heavy

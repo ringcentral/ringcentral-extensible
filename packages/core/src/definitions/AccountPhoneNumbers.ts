@@ -4,7 +4,8 @@ import ProvisioningPagingInfo from './ProvisioningPagingInfo';
 
 interface AccountPhoneNumbers {
   /**
-   * Link to the list of account phone numbers
+   * Link to a list of account phone numbers
+   * Format: uri
    */
   uri?: string;
 

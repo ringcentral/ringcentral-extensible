@@ -1,15 +1,21 @@
 interface CreateMessageStoreReportRequest {
   /**
-   * Only messages created before the date will be collected. The default value is current time
+   * The end of the time range to collect message records in ISO 8601 format including timezone.
+ *  Default is the current time
+   * Format: date-time
    */
   dateTo?: string;
 
   /**
-   * Only messages created after (or including) the date will be collected. The default value is current time minus 24 hours
+   * The beginning of the time range to collect call log records in ISO 8601 format including timezone.
+ *  Default is the current time minus 24 hours
+   * Format: date-time
    */
   dateFrom?: string;
 
   /**
+   * Types of messages to be collected. If not specified, all messages without message type filtering will be returned. Multiple values are accepted
+   * Example: Fax,VoiceMail
    */
   messageTypes?: ('EMail' | 'Fax' | 'SMS' | 'VoiceMail' | 'Pager' | 'Text')[];
 }

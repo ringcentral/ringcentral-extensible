@@ -4,6 +4,7 @@ interface AdaptiveCardColumnItemInfo {
   type?: string;
 
   /**
+   * Format: uri
    */
   url?: string;
 

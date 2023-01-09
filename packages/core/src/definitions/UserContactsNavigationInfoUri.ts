@@ -1,8 +1,9 @@
 /**
- * Canonical URI for the corresponding page of the list
+ * Canonical URI for a corresponding page of a list
 */
 interface UserContactsNavigationInfoUri {
   /**
+   * Format: uri
    */
   uri?: string;
 }

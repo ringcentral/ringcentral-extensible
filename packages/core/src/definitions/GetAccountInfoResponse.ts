@@ -14,6 +14,7 @@ interface GetAccountInfoResponse {
 
   /**
    * Canonical URI of an account
+   * Format: uri
    */
   uri?: string;
 
@@ -32,7 +33,8 @@ interface GetAccountInfoResponse {
   operator?: AccountOperatorInfo;
 
   /**
-   * Additional account identifier, created by partner application and applied on client side
+   * Additional account identifier, created by partner application
+ *  and applied on client side
    */
   partnerId?: string;
 
@@ -64,17 +66,23 @@ interface GetAccountInfoResponse {
   regionalSettings?: AccountRegionalSettings;
 
   /**
-   * Specifies whether an account is included into any federation of accounts or not
+   * Specifies whether an account is included into any federation
+ *  of accounts or not
    */
   federated?: boolean;
 
   /**
-   * If outbound call prefix is not specified, or set to null (0), then the parameter is not returned; the supported value range is 2-9
+   * If outbound call prefix is not specified, or set to null (0),
+ *  then the parameter is not returned; the supported value range is 2-9
+   * Format: int32
    */
   outboundCallPrefix?: number;
 
   /**
-   * Customer facing identifier. Returned for accounts with the turned off PBX features. Equals to main company number in [E.164](https://www.itu.int/rec/T-REC-E.164-201011-I) (without '+' sign)format
+   * Customer facing identifier. Returned for accounts with the
+ *  turned off PBX features. Equals to main company number in
+ *  [E.164](https://www.itu.int/rec/T-REC-E.164-201011-I)
+ *  (without ''+'' sign)format
    */
   cfid?: string;
 

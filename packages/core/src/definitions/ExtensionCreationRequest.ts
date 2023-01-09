@@ -20,12 +20,14 @@ interface ExtensionCreationRequest {
   customFields?: CustomFieldInfo[];
 
   /**
-   * Password for extension. If not specified, the password is auto-generated
+   * Password for extension. If not specified, the password
+ *  is auto-generated
    */
   password?: string;
 
   /**
-   * List of non-RC internal identifiers assigned to an extension
+   * List of non-RC internal identifiers assigned to an
+ *  extension
    */
   references?: ReferenceInfo[];
 
@@ -34,7 +36,8 @@ interface ExtensionCreationRequest {
   regionalSettings?: RegionalSettings;
 
   /**
-   * Additional extension identifier, created by partner application and applied on client side
+   * Additional extension identifier, created by partner application
+ *  and applied on client side
    */
   partnerId?: string;
 
@@ -44,7 +47,8 @@ interface ExtensionCreationRequest {
   ivrPin?: string;
 
   /**
-   * Specifies extension configuration wizard state (web service setup).
+   * Specifies extension configuration wizard state (web service
+ *  setup).
    * Default: NotStarted
    */
   setupWizardState?: ('NotStarted' | 'Incomplete' | 'Completed');
@@ -63,12 +67,17 @@ interface ExtensionCreationRequest {
   statusInfo?: ExtensionStatusInfo;
 
   /**
-   * Extension type. Please note that legacy 'Department' extension type corresponds to 'Call Queue' extensions in modern RingCentral product terminology
+   * Extension type. Please note that legacy 'Department' extension type
+ *  corresponds to 'Call Queue' extensions in modern RingCentral product
+ *  terminology
    */
   type?: ('User' | 'VirtualUser' | 'DigitalUser' | 'Department' | 'Announcement' | 'Voicemail' | 'SharedLinesGroup' | 'PagingOnly' | 'ParkLocation' | 'Limited');
 
   /**
-   * Hides extension from showing in company directory. Supported for extensions of User type only. For unassigned extensions the value is set to 'True' by default. For assigned extensions the value is set to 'False' by default
+   * Hides extension from showing in company directory. Supported
+ *  for extensions of 'User' type only. For unassigned extensions the value
+ *  is set to 'True' by default. For assigned extensions the value is set
+ *  to 'False' by default
    */
   hidden?: boolean;
 }

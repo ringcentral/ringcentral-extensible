@@ -6,6 +6,7 @@ interface GetTimezoneInfoResponse {
 
   /**
    * Canonical URI of a timezone
+   * Format: uri
    */
   uri?: string;
 

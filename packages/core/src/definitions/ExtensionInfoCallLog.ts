@@ -1,6 +1,3 @@
-/**
- * Information on extension
-*/
 interface ExtensionInfoCallLog {
   /**
    * Internal identifier of an extension
@@ -10,6 +7,7 @@ interface ExtensionInfoCallLog {
 
   /**
    * Canonical URI of an extension
+   * Format: uri
    */
   uri?: string;
 }

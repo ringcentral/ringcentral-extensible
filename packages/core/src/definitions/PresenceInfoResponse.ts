@@ -4,6 +4,7 @@ import GetPresenceExtensionInfo from './GetPresenceExtensionInfo';
 interface PresenceInfoResponse {
   /**
    * Link to the presence resource
+   * Format: uri
    */
   uri?: string;
 

@@ -1,4 +1,4 @@
-import SuperviseCallSession from '../../../../../../definitions/SuperviseCallSession';
+import SuperviseCallSessionResponse from '../../../../../../definitions/SuperviseCallSessionResponse';
 import SuperviseCallSessionRequest from '../../../../../../definitions/SuperviseCallSessionRequest';
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../types';
 
@@ -23,8 +23,8 @@ class Index {
    * Rate Limit Group: Light
    * App Permission: CallControl
    */
-  async post(superviseCallSessionRequest: SuperviseCallSessionRequest, restRequestConfig?: RestRequestConfig): Promise<SuperviseCallSession> {
-    const r = await this.rc.post<SuperviseCallSession>(this.path(), superviseCallSessionRequest, undefined, restRequestConfig);
+  async post(superviseCallSessionRequest: SuperviseCallSessionRequest, restRequestConfig?: RestRequestConfig): Promise<SuperviseCallSessionResponse> {
+    const r = await this.rc.post<SuperviseCallSessionResponse>(this.path(), superviseCallSessionRequest, undefined, restRequestConfig);
     return r.data;
   }
 }

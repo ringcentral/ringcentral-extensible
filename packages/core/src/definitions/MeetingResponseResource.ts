@@ -2,6 +2,7 @@ import MeetingLinks from './MeetingLinks';
 import MeetingScheduleResource from './MeetingScheduleResource';
 import HostInfoRequest from './HostInfoRequest';
 import RecurrenceInfo from './RecurrenceInfo';
+import MeetingOccurrenceInfo from './MeetingOccurrenceInfo';
 
 interface MeetingResponseResource {
   /**
@@ -76,7 +77,7 @@ interface MeetingResponseResource {
 
   /**
    */
-  reccurence?: RecurrenceInfo;
+  recurrence?: RecurrenceInfo;
 
   /**
    * Automatic record type
@@ -95,6 +96,10 @@ interface MeetingResponseResource {
   muteParticipantsOnEntry?: boolean;
 
   /**
+   */
+  occurrences?: MeetingOccurrenceInfo[];
+
+  /**
    * If true, then the waiting room for participants is enabled
    */
   enableWaitingRoom?: boolean;
@@ -103,6 +108,10 @@ interface MeetingResponseResource {
    * List of global dial-in countries (eg. US, UK, AU, etc.)
    */
   globalDialInCountries?: string[];
+
+  /**
+   */
+  alternativeHosts?: string;
 }
 
 export default MeetingResponseResource;

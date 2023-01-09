@@ -23,6 +23,7 @@ class Index {
 
   /**
    * Returns the status of a task on adding multiple contacts to multiple extensions.
+ *
    * HTTP Method: get
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/address-book-bulk-upload/tasks/{taskId}
    * Rate Limit Group: Light

@@ -1,5 +1,5 @@
 import DeleteExtensionEmergencyLocationParameters from '../../../../../definitions/DeleteExtensionEmergencyLocationParameters';
-import EmergencyLocationInfo from '../../../../../definitions/EmergencyLocationInfo';
+import EmergencyLocationResource from '../../../../../definitions/EmergencyLocationResource';
 import CreateUserEmergencyLocationRequest from '../../../../../definitions/CreateUserEmergencyLocationRequest';
 import EmergencyLocationsResource from '../../../../../definitions/EmergencyLocationsResource';
 import GetExtensionEmergencyLocationsParameters from '../../../../../definitions/GetExtensionEmergencyLocationsParameters';
@@ -26,7 +26,7 @@ class Index {
   }
 
   /**
-   * Returns a list of emergency response locations available for the current user extension.
+   * Returns a list of emergency response locations available for the particular extension.
    * HTTP Method: get
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/emergency-locations
    * Rate Limit Group: Light
@@ -45,44 +45,48 @@ class Index {
    * App Permission: EditAccounts
    * User Permission: EmergencyFramework
    */
-  async post(createUserEmergencyLocationRequest: CreateUserEmergencyLocationRequest, restRequestConfig?: RestRequestConfig): Promise<EmergencyLocationInfo> {
-    const r = await this.rc.post<EmergencyLocationInfo>(this.path(false), createUserEmergencyLocationRequest, undefined, restRequestConfig);
+  async post(createUserEmergencyLocationRequest: CreateUserEmergencyLocationRequest, restRequestConfig?: RestRequestConfig): Promise<EmergencyLocationResource> {
+    const r = await this.rc.post<EmergencyLocationResource>(this.path(false), createUserEmergencyLocationRequest, undefined, restRequestConfig);
     return r.data;
   }
 
   /**
-   * Returns personal emergency response location for the current user.
+   * Returns a personal emergency response location for the current user.
    * HTTP Method: get
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/emergency-locations/{locationId}
    * Rate Limit Group: Light
    * App Permission: ReadAccounts
    */
-  async get(restRequestConfig?: RestRequestConfig): Promise<EmergencyLocationInfo> {
+  async get(restRequestConfig?: RestRequestConfig): Promise<EmergencyLocationResource> {
     if (this.locationId === null) {
       throw new Error('locationId must be specified.');
     }
-    const r = await this.rc.get<EmergencyLocationInfo>(this.path(), undefined, restRequestConfig);
+    const r = await this.rc.get<EmergencyLocationResource>(this.path(), undefined, restRequestConfig);
     return r.data;
   }
 
   /**
    * Updates a personal emergency response location by the current user or admin.
+ *
    * HTTP Method: put
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/emergency-locations/{locationId}
    * Rate Limit Group: Light
    * App Permission: EditAccounts
    * User Permission: EmergencyFramework
    */
-  async put(emergencyLocationInfo: EmergencyLocationInfo, restRequestConfig?: RestRequestConfig): Promise<EmergencyLocationInfo> {
+  async put(emergencyLocationResource: EmergencyLocationResource, restRequestConfig?: RestRequestConfig): Promise<EmergencyLocationResource> {
     if (this.locationId === null) {
       throw new Error('locationId must be specified.');
     }
-    const r = await this.rc.put<EmergencyLocationInfo>(this.path(), emergencyLocationInfo, undefined, restRequestConfig);
+    const r = await this.rc.put<EmergencyLocationResource>(this.path(), emergencyLocationResource, undefined, restRequestConfig);
     return r.data;
   }
 
   /**
-   * Deletes a personal emergency response location by ID by the current user or admin. Multiple personal emergency response locations can be deleted by one API call
+   * Deletes a personal emergency response location by ID by
+ * the current user or admin. Multiple personal emergency response
+ * locations can be deleted by single API call.
+ *
    * HTTP Method: delete
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/emergency-locations/{locationId}
    * Rate Limit Group: Heavy

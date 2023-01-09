@@ -6,7 +6,6 @@ import ActiveCallInfoWithoutSIP from './ActiveCallInfoWithoutSIP';
 interface DetailedExtensionPresenceEventBody {
   /**
    * Internal identifier of an extension
-   * Default: ~
    */
   extensionId?: string;
 
@@ -22,6 +21,7 @@ interface DetailedExtensionPresenceEventBody {
 
   /**
    * Order number of a notification to state the chronology
+   * Format: int32
    */
   sequence?: number;
 
@@ -62,6 +62,7 @@ interface DetailedExtensionPresenceEventBody {
 
   /**
    * Total number of active calls on extension at the present moment
+   * Format: int32
    */
   totalActiveCalls?: number;
 

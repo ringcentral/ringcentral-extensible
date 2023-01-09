@@ -1,4 +1,6 @@
 import ServiceProviderConfig from './ServiceProviderConfig';
+import ResourceTypes from './ResourceTypes';
+import Schemas from './Schemas';
 import Users from './Users';
 import { RingCentralInterface } from '../../types';
 
@@ -19,8 +21,16 @@ class Index {
     return '/scim';
   }
 
-  users(id: (string | null) = null): Users {
-    return new Users(this, id);
+  users(scimUserId: (string | null) = null): Users {
+    return new Users(this, scimUserId);
+  }
+
+  schemas(uri: (string | null) = null): Schemas {
+    return new Schemas(this, uri);
+  }
+
+  resourceTypes(type: (string | null) = null): ResourceTypes {
+    return new ResourceTypes(this, type);
   }
 
   serviceProviderConfig(): ServiceProviderConfig {

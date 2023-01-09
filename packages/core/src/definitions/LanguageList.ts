@@ -5,6 +5,7 @@ import ProvisioningPagingInfo from './ProvisioningPagingInfo';
 interface LanguageList {
   /**
    * Canonical URI of the language list resource
+   * Format: uri
    */
   uri?: string;
 

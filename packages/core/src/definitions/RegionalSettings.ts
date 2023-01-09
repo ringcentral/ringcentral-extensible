@@ -1,16 +1,18 @@
-import CountryInfo from './CountryInfo';
+import CountryInfoShortModel from './CountryInfoShortModel';
 import TimezoneInfo from './TimezoneInfo';
 import RegionalLanguageInfo from './RegionalLanguageInfo';
 import GreetingLanguageInfo from './GreetingLanguageInfo';
 import FormattingLocaleInfo from './FormattingLocaleInfo';
 
 /**
- * Regional data (timezone, home country, language) of an extension/account. The default is Company (Auto-Receptionist) settings
+ * Regional data (timezone, home country, language) of an extension/account.
+ * The default is Company (Auto-Receptionist) settings
+ *
 */
 interface RegionalSettings {
   /**
    */
-  homeCountry?: CountryInfo;
+  homeCountry?: CountryInfoShortModel;
 
   /**
    */

@@ -33,7 +33,7 @@ class Index {
    * User Permission: EditUserAnsweringRules
    */
   async post(createCustomUserGreetingRequest: CreateCustomUserGreetingRequest, queryParams?: CreateCustomUserGreetingParameters, restRequestConfig?: RestRequestConfig): Promise<CustomUserGreetingInfo> {
-    const formData = Utils.getFormData(createCustomUserGreetingRequest);
+    const formData = await Utils.getFormData(createCustomUserGreetingRequest);
     const r = await this.rc.post<CustomUserGreetingInfo>(this.path(false), formData, queryParams, restRequestConfig);
     return r.data;
   }

@@ -10,7 +10,7 @@ interface DeviceAddonInfo {
   /**
    * Format: int32
    */
-  count?: string;
+  count?: number;
 }
 
 export default DeviceAddonInfo;

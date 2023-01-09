@@ -5,6 +5,7 @@ import ERLLocationInfo from './ERLLocationInfo';
 
 interface CreateNetworkRequest {
   /**
+   * Required
    */
   name?: string;
 
@@ -13,10 +14,12 @@ interface CreateNetworkRequest {
   site?: AutomaticLocationUpdatesSiteInfo;
 
   /**
+   * Required
    */
   publicIpRanges?: PublicIpRangeInfo[];
 
   /**
+   * Required
    */
   privateIpRanges?: PrivateIpRangeInfoRequest[];
 

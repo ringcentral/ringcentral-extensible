@@ -1,39 +1,39 @@
-import _FormData from 'form-data';
+import FormData from './FormData';
 
 import Attachment from './definitions/Attachment';
 import { RestResponse } from './types';
 
-class FormData extends _FormData {
-  readableParts: string[] = [];
+// class FormDataBackup {
+//   readableParts: string[] = [];
 
-  toJSON(): string {
-    return this.readableParts.join('\n');
-  }
+//   toJSON(): string {
+//     return this.readableParts.join('\n');
+//   }
 
-  append(
-    key: string,
-    value: string | Buffer | Blob | NodeJS.ReadableStream,
-    options?: { filename?: string; contentType?: string },
-  ): void {
-    this.readableParts.push(
-      JSON.stringify({
-        ...options,
-        content: typeof value === 'string' ? value : '<binary data>',
-      }),
-    );
-    if (typeof Blob !== 'undefined') {
-      // for browser
-      if (typeof value === 'string') {
-        // plain text file
-        // eslint-disable-next-line no-undef
-        value = new Blob([value], { type: options?.contentType });
-      }
-      super.append(key, value, options?.filename);
-    } else {
-      super.append(key, value, options);
-    }
-  }
-}
+//   append(
+//     key: string,
+//     value: string | Buffer | Blob | NodeJS.ReadableStream,
+//     options?: { filename?: string; contentType?: string },
+//   ): void {
+//     this.readableParts.push(
+//       JSON.stringify({
+//         ...options,
+//         content: typeof value === 'string' ? value : '<binary data>',
+//       }),
+//     );
+//     if (typeof Blob !== 'undefined') {
+//       // for browser
+//       if (typeof value === 'string') {
+//         // plain text file
+//         // eslint-disable-next-line no-undef
+//         value = new Blob([value], { type: options?.contentType });
+//       }
+//       super.append(key, value, options?.filename);
+//     } else {
+//       super.append(key, value, options);
+//     }
+//   }
+// }
 
 class Utils {
   static formatTraffic(r: RestResponse): string {
@@ -59,7 +59,7 @@ class Utils {
       baseURL: r.config.baseURL,
       url: r.config.url,
       params: r.config.params,
-      data: r.config.data,
+      data: Buffer.isBuffer(r.config.data) ? '<Buffer>' : r.config.data,
       headers: r.config.headers,
     },
     null,
@@ -77,7 +77,7 @@ class Utils {
     );
   }
 
-  static getFormData(...objects: {}[]): FormData {
+  static getFormData(...objects: {}[]): Promise<Buffer> {
     const formData = new FormData();
     const obj = Object.assign({}, ...objects);
     const attachments: Attachment[] = [];
@@ -97,17 +97,11 @@ class Utils {
         delete obj[key];
       }
     }
-    formData.append('files[]', JSON.stringify(obj), {
-      filename: 'request.json',
-      contentType: 'application/json',
-    });
+    formData.append('request.json', 'application/json', JSON.stringify(obj));
     for (const attachment of attachments) {
-      formData.append('files[]', attachment.content!, {
-        filename: attachment.filename,
-        contentType: attachment.contentType,
-      });
+      formData.append(attachment.filename!, attachment.contentType!, attachment.content!);
     }
-    return formData;
+    return formData.getBody();
   }
 }
 

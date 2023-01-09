@@ -25,6 +25,7 @@ interface CallSessionObject {
 
   /**
    * Date and time of the latest session update represented in Unix time format
+   * Format: date-time
    */
   creationTime?: string;
 }

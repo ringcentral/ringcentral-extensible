@@ -5,6 +5,7 @@ interface PronouncedNamePromptInfo {
 
   /**
    * Link to a prompt resource
+   * Format: uri
    */
   contentUri?: string;
 

@@ -1,10 +1,11 @@
-import CountryInfo from './CountryInfo';
+import CountryInfoBasicModel from './CountryInfoBasicModel';
 import ContactCenterProvider from './ContactCenterProvider';
 import UserPhoneNumberExtensionInfo from './UserPhoneNumberExtensionInfo';
 
 interface UserPhoneNumberInfo {
   /**
-   * Link to the user's phone number resource
+   * Link to the user phone number resource
+   * Format: uri
    */
   uri?: string;
 
@@ -16,7 +17,7 @@ interface UserPhoneNumberInfo {
 
   /**
    */
-  country?: CountryInfo;
+  country?: CountryInfoBasicModel;
 
   /**
    */
@@ -60,6 +61,11 @@ interface UserPhoneNumberInfo {
    * Phone number type
    */
   type?: ('VoiceFax' | 'FaxOnly' | 'VoiceOnly');
+
+  /**
+   * Extension sub-type, if applicable. For any unsupported sub-types the 'Unknown' value will be returned
+   */
+  subType?: ('VideoPro' | 'VideoProPlus' | 'DigitalSignage' | 'Unknown');
 
   /**
    * Usage type of a phone number. Numbers of 'NumberPool' type will not be returned for phone number list requests

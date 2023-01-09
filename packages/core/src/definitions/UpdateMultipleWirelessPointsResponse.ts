@@ -1,9 +1,9 @@
-import BulkTaskInfoWiUpdate from './BulkTaskInfoWiUpdate';
+import BulkTaskInfo from './BulkTaskInfo';
 
 interface UpdateMultipleWirelessPointsResponse {
   /**
    */
-  task?: BulkTaskInfoWiUpdate;
+  task?: BulkTaskInfo;
 }
 
 export default UpdateMultipleWirelessPointsResponse;

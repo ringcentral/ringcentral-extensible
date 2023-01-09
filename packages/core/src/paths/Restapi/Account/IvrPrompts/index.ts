@@ -3,7 +3,7 @@ import Utils from '../../../../Utils';
 import UpdateIVRPromptRequest from '../../../../definitions/UpdateIVRPromptRequest';
 import PromptInfo from '../../../../definitions/PromptInfo';
 import CreateIVRPromptRequest from '../../../../definitions/CreateIVRPromptRequest';
-import IVRPrompts from '../../../../definitions/IVRPrompts';
+import IvrPrompts from '../../../../definitions/IvrPrompts';
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
 
 class Index {
@@ -34,8 +34,8 @@ class Index {
    * App Permission: ReadAccounts
    * User Permission: ReadCompanyGreetings
    */
-  async list(restRequestConfig?: RestRequestConfig): Promise<IVRPrompts> {
-    const r = await this.rc.get<IVRPrompts>(this.path(false), undefined, restRequestConfig);
+  async list(restRequestConfig?: RestRequestConfig): Promise<IvrPrompts> {
+    const r = await this.rc.get<IvrPrompts>(this.path(false), undefined, restRequestConfig);
     return r.data;
   }
 
@@ -48,7 +48,7 @@ class Index {
    * User Permission: EditCompanyGreetings
    */
   async post(createIVRPromptRequest: CreateIVRPromptRequest, restRequestConfig?: RestRequestConfig): Promise<PromptInfo> {
-    const formData = Utils.getFormData(createIVRPromptRequest);
+    const formData = await Utils.getFormData(createIVRPromptRequest);
     const r = await this.rc.post<PromptInfo>(this.path(false), formData, undefined, restRequestConfig);
     return r.data;
   }

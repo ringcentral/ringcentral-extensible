@@ -10,6 +10,7 @@ interface SiteInfo {
 
   /**
    * Link to a site resource
+   * Format: uri
    */
   uri?: string;
 
@@ -24,12 +25,14 @@ interface SiteInfo {
   extensionNumber?: string;
 
   /**
-   * Custom name of a caller. Max number of characters is 15 (only alphabetical symbols, numbers and commas are supported)
+   * Custom name of a caller. Max number of characters is 15 (only
+ *  alphabetical symbols, numbers and commas are supported)
    */
   callerIdName?: string;
 
   /**
-   * Extension user email
+   * Site extension contact email
+   * Format: email
    */
   email?: string;
 

@@ -1,6 +1,6 @@
 interface ExtensionTimezoneInfoRequest {
   /**
-   * internal Identifier of a timezone
+   * Internal identifier of a timezone
    */
   id?: string;
 }

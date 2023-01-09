@@ -5,6 +5,7 @@ import ProvisioningPagingInfo from './ProvisioningPagingInfo';
 interface GetLocationListResponse {
   /**
    * Link to the location list resource
+   * Format: uri
    */
   uri?: string;
 

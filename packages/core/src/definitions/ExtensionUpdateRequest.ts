@@ -44,7 +44,8 @@ interface ExtensionUpdateRequest {
   setupWizardState?: ('NotStarted' | 'Incomplete' | 'Completed');
 
   /**
-   * Additional extension identifier, created by partner application and applied on client side
+   * Additional extension identifier, created by partner application
+ *  and applied on client side
    */
   partnerId?: string;
 
@@ -75,9 +76,17 @@ interface ExtensionUpdateRequest {
   site?: AutomaticLocationUpdatesSiteInfoRequest;
 
   /**
-   * Extension type. Please note that legacy 'Department' extension type corresponds to 'Call Queue' extensions in modern RingCentral product terminology
+   * Extension type. Please note that legacy 'Department' extension
+ *  type corresponds to 'Call Queue' extensions in modern RingCentral
+ *  product terminology
    */
-  type?: ('User' | 'Fax User' | 'VirtualUser' | 'DigitalUser' | 'Department' | 'Announcement' | 'Voicemail' | 'SharedLinesGroup' | 'PagingOnly' | 'IvrMenu' | 'ApplicationExtension' | 'ParkLocation' | 'DelegatedLinesGroup' | 'GroupCallPickup');
+  type?: ('User' | 'FaxUser' | 'FlexibleUser' | 'VirtualUser' | 'DigitalUser' | 'Department' | 'Announcement' | 'Voicemail' | 'SharedLinesGroup' | 'PagingOnly' | 'IvrMenu' | 'ApplicationExtension' | 'ParkLocation' | 'DelegatedLinesGroup' | 'GroupCallPickup');
+
+  /**
+   * Extension sub-type, if applicable. For any unsupported sub-types
+ *  the 'Unknown' value will be returned
+   */
+  subType?: ('VideoPro' | 'VideoProPlus' | 'DigitalSignage' | 'Unknown');
 
   /**
    * List of non-RC internal identifiers assigned to an extension

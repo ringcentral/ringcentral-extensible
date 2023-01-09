@@ -23,6 +23,17 @@ interface ListExtensionDevicesParameters {
    * Default: 100
    */
   perPage?: string;
+
+  /**
+   * Device type
+   * Default: HardPhone
+   */
+  line?: ('Room' | 'SoftPhone' | 'OtherPhone' | 'HardPhone' | 'Paging' | 'WebRTC');
+
+  /**
+   * Type of phone line
+   */
+  lineType?: ('Standalone' | 'StandaloneFree' | 'BlaPrimary' | 'BlaSecondary');
 }
 
 export default ListExtensionDevicesParameters;

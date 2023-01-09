@@ -4,12 +4,14 @@ import ProvisioningPagingInfo from './ProvisioningPagingInfo';
 
 interface ListDevicesAutomaticLocationUpdates {
   /**
-   * Link to devices resource
+   * Link to a devices resource
+   * Format: uri
    */
   uri?: string;
 
   /**
-   * List of users' devices with the current status of Emergency Address Auto Update Feature
+   * List of the user(s) devices with the current status of Emergency
+ *  Address Auto Update Feature
    */
   records?: AutomaticLocationUpdatesDeviceInfo[];
 

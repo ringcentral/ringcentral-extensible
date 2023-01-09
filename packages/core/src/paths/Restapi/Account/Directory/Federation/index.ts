@@ -1,4 +1,5 @@
 import FederationResource from '../../../../../definitions/FederationResource';
+import ReadDirectoryFederationParameters from '../../../../../definitions/ReadDirectoryFederationParameters';
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
@@ -23,8 +24,8 @@ class Index {
    * App Permission: ReadAccounts
    * User Permission: ReadCompanyInfo
    */
-  async get(restRequestConfig?: RestRequestConfig): Promise<FederationResource> {
-    const r = await this.rc.get<FederationResource>(this.path(), undefined, restRequestConfig);
+  async get(queryParams?: ReadDirectoryFederationParameters, restRequestConfig?: RestRequestConfig): Promise<FederationResource> {
+    const r = await this.rc.get<FederationResource>(this.path(), queryParams, restRequestConfig);
     return r.data;
   }
 }

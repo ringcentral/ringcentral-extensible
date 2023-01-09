@@ -18,6 +18,7 @@ class Index {
 
   /**
    * Returns information on an outbound caller ID of an extension.
+ *
    * HTTP Method: get
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/caller-id
    * Rate Limit Group: Light
@@ -31,6 +32,7 @@ class Index {
 
   /**
    * Updates outbound caller ID information of an extension.
+ *
    * HTTP Method: put
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/caller-id
    * Rate Limit Group: Medium

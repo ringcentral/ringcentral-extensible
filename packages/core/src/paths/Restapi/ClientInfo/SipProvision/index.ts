@@ -17,7 +17,8 @@ class Index {
   }
 
   /**
-   * Creates SIP registration of a device/application (WebPhone, Mobile, softphone).
+   * Creates SIP registration of a device/application (WebPhone, Mobile, Softphone).
+ *
    * HTTP Method: post
    * Endpoint: /restapi/{apiVersion}/client-info/sip-provision
    * Rate Limit Group: Heavy

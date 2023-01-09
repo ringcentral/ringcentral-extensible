@@ -1,39 +1,19 @@
+import CallsByResultBreakdown from './CallsByResultBreakdown';
+
+/**
+ * Data for calls with breakdown by result (Completed, Abandoned, Voicemail, Unknown, Missed, Accepted)
+*/
 interface CallsByResult {
   /**
+   * Unit of the result value
    * Required
-   * Format: double
    */
-  completed?: number;
+  valueType?: ('Percent' | 'Seconds' | 'Instances');
 
   /**
    * Required
-   * Format: double
    */
-  abandoned?: number;
-
-  /**
-   * Required
-   * Format: double
-   */
-  voicemail?: number;
-
-  /**
-   * Required
-   * Format: double
-   */
-  missed?: number;
-
-  /**
-   * Required
-   * Format: double
-   */
-  accepted?: number;
-
-  /**
-   * Required
-   * Format: double
-   */
-  unknown?: number;
+  values?: CallsByResultBreakdown;
 }
 
 export default CallsByResult;

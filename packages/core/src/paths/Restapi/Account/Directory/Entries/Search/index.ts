@@ -1,4 +1,5 @@
 import DirectoryResource from '../../../../../../definitions/DirectoryResource';
+import SearchDirectoryEntriesParameters from '../../../../../../definitions/SearchDirectoryEntriesParameters';
 import SearchDirectoryEntriesRequest from '../../../../../../definitions/SearchDirectoryEntriesRequest';
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../types';
 
@@ -24,8 +25,8 @@ class Index {
    * App Permission: ReadAccounts
    * User Permission: ReadExtensions
    */
-  async post(searchDirectoryEntriesRequest: SearchDirectoryEntriesRequest, restRequestConfig?: RestRequestConfig): Promise<DirectoryResource> {
-    const r = await this.rc.post<DirectoryResource>(this.path(), searchDirectoryEntriesRequest, undefined, restRequestConfig);
+  async post(searchDirectoryEntriesRequest: SearchDirectoryEntriesRequest, queryParams?: SearchDirectoryEntriesParameters, restRequestConfig?: RestRequestConfig): Promise<DirectoryResource> {
+    const r = await this.rc.post<DirectoryResource>(this.path(), searchDirectoryEntriesRequest, queryParams, restRequestConfig);
     return r.data;
   }
 }

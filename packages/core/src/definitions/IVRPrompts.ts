@@ -1,8 +1,8 @@
 import PromptInfo from './PromptInfo';
-import CallHandlingNavigationInfo from './CallHandlingNavigationInfo';
-import CallHandlingPagingInfo from './CallHandlingPagingInfo';
+import NavigationInfo from './NavigationInfo';
+import EnumeratedPaging from './EnumeratedPaging';
 
-interface IVRPrompts {
+interface IvrPrompts {
   /**
    * Link to prompts library resource
    */
@@ -15,11 +15,11 @@ interface IVRPrompts {
 
   /**
    */
-  navigation?: CallHandlingNavigationInfo;
+  navigation?: NavigationInfo;
 
   /**
    */
-  paging?: CallHandlingPagingInfo;
+  paging?: EnumeratedPaging;
 }
 
-export default IVRPrompts;
+export default IvrPrompts;

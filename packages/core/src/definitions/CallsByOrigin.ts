@@ -1,15 +1,19 @@
+import CallsByOriginBreakdown from './CallsByOriginBreakdown';
+
+/**
+ * Data for calls with breakdown by origin (Internal, External)
+*/
 interface CallsByOrigin {
   /**
+   * Unit of the result value
    * Required
-   * Format: double
    */
-  internal?: number;
+  valueType?: ('Percent' | 'Seconds' | 'Instances');
 
   /**
    * Required
-   * Format: double
    */
-  external?: number;
+  values?: CallsByOriginBreakdown;
 }
 
 export default CallsByOrigin;

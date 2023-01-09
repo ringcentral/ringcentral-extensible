@@ -1,4 +1,4 @@
-interface SIPInfoResponse {
+interface SipInfoResponse {
   /**
    * User credentials
    */
@@ -6,6 +6,7 @@ interface SIPInfoResponse {
 
   /**
    * User password
+   * Format: password
    */
   password?: string;
 
@@ -20,22 +21,22 @@ interface SIPInfoResponse {
   domain?: string;
 
   /**
-   * SIP outbound proxy
+   * SIP outbound proxy server address (in the format <host:port>)
    */
   outboundProxy?: string;
 
   /**
-   * SIP outbound IPv6 proxy
+   * SIP outbound IPv6 proxy server address (in the format <host:port>)
    */
   outboundProxyIPv6?: string;
 
   /**
-   * SIP outbound proxy backup
+   * SIP outbound proxy server backup address (in the format <host:port>)
    */
   outboundProxyBackup?: string;
 
   /**
-   * SIP outbound IPv6 proxy backup
+   * SIP outbound IPv6 proxy server backup address (in the format <host:port>)
    */
   outboundProxyIPv6Backup?: string;
 
@@ -45,14 +46,23 @@ interface SIPInfoResponse {
   transport?: ('UDP' | 'TCP' | 'TLS' | 'WS' | 'WSS');
 
   /**
-   * For TLS transport only Base64 encoded certificate
+   * For TLS transport only, Base64 encoded certificate
    */
   certificate?: string;
 
   /**
-   * The interval in seconds after which the app must try to switch back to primary proxy if it was previously switched to backup. If this parameter is not returned, the app must stay on backup proxy and try to switch to primary proxy after the next SIP-provision call.
+   * The interval in seconds after which the app must try to switch
+ *  back to primary proxy if it was previously switched to backup. If this
+ *  parameter is not returned, the app must stay on backup proxy and try to
+ *  switch to primary proxy after the next SIP-provision call.
+   * Format: int32
    */
   switchBackInterval?: number;
+
+  /**
+   * List of stun servers in the format <host:port>
+   */
+  stunServers?: string[];
 }
 
-export default SIPInfoResponse;
+export default SipInfoResponse;

@@ -4,7 +4,8 @@ import ProvisioningPagingInfo from './ProvisioningPagingInfo';
 
 interface GetExtensionPhoneNumbersResponse {
   /**
-   * Link to the user's phone number list resource
+   * Link to the user phone number list resource
+   * Format: uri
    */
   uri?: string;
 

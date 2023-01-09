@@ -1,4 +1,4 @@
-import ServiceProviderConfig from '../../../definitions/ServiceProviderConfig';
+import ScimProviderConfig from '../../../definitions/ScimProviderConfig';
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../types';
 
 class Index {
@@ -16,13 +16,14 @@ class Index {
   }
 
   /**
-   * Get Service Provider Config
+   * Returns SCIM service provider configuration
    * HTTP Method: get
    * Endpoint: /scim/{version}/ServiceProviderConfig
-   * Rate Limit Group: NoThrottling
+   * Rate Limit Group: Light
+   * App Permission: ReadAccounts
    */
-  async get(restRequestConfig?: RestRequestConfig): Promise<ServiceProviderConfig> {
-    const r = await this.rc.get<ServiceProviderConfig>(this.path(), undefined, restRequestConfig);
+  async get(restRequestConfig?: RestRequestConfig): Promise<ScimProviderConfig> {
+    const r = await this.rc.get<ScimProviderConfig>(this.path(), undefined, restRequestConfig);
     return r.data;
   }
 }

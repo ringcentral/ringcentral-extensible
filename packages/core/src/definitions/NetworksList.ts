@@ -5,6 +5,7 @@ import ProvisioningPagingInfo from './ProvisioningPagingInfo';
 interface NetworksList {
   /**
    * Link to a networks resource
+   * Format: uri
    */
   uri?: string;
 

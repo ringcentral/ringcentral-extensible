@@ -26,7 +26,9 @@ class Index {
   }
 
   /**
-   * Returns account wireless points configured and used for Automatic Location Updates feature.
+   * Returns account wireless points configured and used for Automatic
+ * Location Updates feature.
+ *
    * HTTP Method: get
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/wireless-points
    * Rate Limit Group: Medium
@@ -39,7 +41,9 @@ class Index {
   }
 
   /**
-   * Creates a new wireless point in network configuration with the emergency address assigned.
+   * Creates a new wireless point in network configuration with the
+ * emergency address assigned.
+ *
    * HTTP Method: post
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/wireless-points
    * Rate Limit Group: Heavy
@@ -52,7 +56,9 @@ class Index {
   }
 
   /**
-   * Returns the specified wireless access point of a corporate map with the emergency address assigned.
+   * Returns the specified wireless access point of a corporate map
+ * with the emergency address assigned.
+ *
    * HTTP Method: get
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/wireless-points/{pointId}
    * Rate Limit Group: Medium
@@ -68,7 +74,9 @@ class Index {
   }
 
   /**
-   * Updates the specified wireless access point of a corporate map by ID.
+   * Updates the specified wireless access point of a corporate map
+ * by ID.
+ *
    * HTTP Method: put
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/wireless-points/{pointId}
    * Rate Limit Group: Heavy

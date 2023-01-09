@@ -1,7 +1,8 @@
 import DeleteEmergencyLocationParameters from '../../../../definitions/DeleteEmergencyLocationParameters';
-import EmergencyLocationInfo from '../../../../definitions/EmergencyLocationInfo';
+import ReadEmergencyLocationParameters from '../../../../definitions/ReadEmergencyLocationParameters';
+import EmergencyLocationResource from '../../../../definitions/EmergencyLocationResource';
 import EmergencyLocationInfoRequest from '../../../../definitions/EmergencyLocationInfoRequest';
-import EmergencyLocationList from '../../../../definitions/EmergencyLocationList';
+import EmergencyLocationsResource from '../../../../definitions/EmergencyLocationsResource';
 import ListEmergencyLocationsParameters from '../../../../definitions/ListEmergencyLocationsParameters';
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
 
@@ -26,28 +27,28 @@ class Index {
   }
 
   /**
-   * Returns emergency response locations of the current account.
+   * Returns emergency response locations for the current account.
    * HTTP Method: get
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/emergency-locations
    * Rate Limit Group: Light
    * App Permission: ReadAccounts
    * User Permission: ConfigureEmergencyMaps
    */
-  async list(queryParams?: ListEmergencyLocationsParameters, restRequestConfig?: RestRequestConfig): Promise<EmergencyLocationList> {
-    const r = await this.rc.get<EmergencyLocationList>(this.path(false), queryParams, restRequestConfig);
+  async list(queryParams?: ListEmergencyLocationsParameters, restRequestConfig?: RestRequestConfig): Promise<EmergencyLocationsResource> {
+    const r = await this.rc.get<EmergencyLocationsResource>(this.path(false), queryParams, restRequestConfig);
     return r.data;
   }
 
   /**
-   * Creates a new emergency response location for the company.
+   * Creates a new emergency response location for a company.
    * HTTP Method: post
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/emergency-locations
    * Rate Limit Group: Medium
    * App Permission: EditAccounts
    * User Permission: ConfigureEmergencyMaps
    */
-  async post(emergencyLocationInfoRequest: EmergencyLocationInfoRequest, restRequestConfig?: RestRequestConfig): Promise<string> {
-    const r = await this.rc.post<string>(this.path(false), emergencyLocationInfoRequest, undefined, restRequestConfig);
+  async post(emergencyLocationInfoRequest: EmergencyLocationInfoRequest, restRequestConfig?: RestRequestConfig): Promise<EmergencyLocationResource> {
+    const r = await this.rc.post<EmergencyLocationResource>(this.path(false), emergencyLocationInfoRequest, undefined, restRequestConfig);
     return r.data;
   }
 
@@ -59,11 +60,11 @@ class Index {
    * App Permission: EditAccounts
    * User Permission: ConfigureEmergencyMaps
    */
-  async get(restRequestConfig?: RestRequestConfig): Promise<EmergencyLocationInfo> {
+  async get(queryParams?: ReadEmergencyLocationParameters, restRequestConfig?: RestRequestConfig): Promise<EmergencyLocationResource> {
     if (this.locationId === null) {
       throw new Error('locationId must be specified.');
     }
-    const r = await this.rc.get<EmergencyLocationInfo>(this.path(), undefined, restRequestConfig);
+    const r = await this.rc.get<EmergencyLocationResource>(this.path(), queryParams, restRequestConfig);
     return r.data;
   }
 
@@ -75,11 +76,11 @@ class Index {
    * App Permission: EditAccounts
    * User Permission: ConfigureEmergencyMaps
    */
-  async put(emergencyLocationInfoRequest: EmergencyLocationInfoRequest, restRequestConfig?: RestRequestConfig): Promise<EmergencyLocationInfo> {
+  async put(emergencyLocationInfoRequest: EmergencyLocationInfoRequest, restRequestConfig?: RestRequestConfig): Promise<EmergencyLocationResource> {
     if (this.locationId === null) {
       throw new Error('locationId must be specified.');
     }
-    const r = await this.rc.put<EmergencyLocationInfo>(this.path(), emergencyLocationInfoRequest, undefined, restRequestConfig);
+    const r = await this.rc.put<EmergencyLocationResource>(this.path(), emergencyLocationInfoRequest, undefined, restRequestConfig);
     return r.data;
   }
 

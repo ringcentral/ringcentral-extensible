@@ -4,7 +4,7 @@ import PromptLanguageInfo from './PromptLanguageInfo';
 /**
  * Prompt metadata
 */
-interface IVRMenuPromptInfo {
+interface IvrMenuPromptInfo {
   /**
    * Prompt mode: custom media or text
    */
@@ -24,4 +24,4 @@ interface IVRMenuPromptInfo {
   language?: PromptLanguageInfo;
 }
 
-export default IVRMenuPromptInfo;
+export default IvrMenuPromptInfo;

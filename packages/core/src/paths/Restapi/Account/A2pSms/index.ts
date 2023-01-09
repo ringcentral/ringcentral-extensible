@@ -1,5 +1,5 @@
-import Statuses from './Statuses';
 import OptOuts from './OptOuts';
+import Statuses from './Statuses';
 import Messages from './Messages';
 import Batches from './Batches';
 import { RingCentralInterface, ParentInterface } from '../../../../types';
@@ -26,12 +26,12 @@ class Index {
     return new Messages(this, messageId);
   }
 
-  optOuts(): OptOuts {
-    return new OptOuts(this);
-  }
-
   statuses(): Statuses {
     return new Statuses(this);
+  }
+
+  optOuts(): OptOuts {
+    return new OptOuts(this);
   }
 }
 export default Index;

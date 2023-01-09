@@ -1,10 +1,11 @@
 import SwitchSiteInfo from './SwitchSiteInfo';
-import LocationUpdatesEmergencyAddressInfo from './LocationUpdatesEmergencyAddressInfo';
-import ERLLocationInfo from './ERLLocationInfo';
+import EmergencyAddressInfo from './EmergencyAddressInfo';
+import EmergencyLocationInfo from './EmergencyLocationInfo';
 
 interface SwitchInfo {
   /**
    * Link to the network switch resource
+   * Format: uri
    */
   uri?: string;
 
@@ -29,16 +30,11 @@ interface SwitchInfo {
 
   /**
    */
-  emergencyAddress?: LocationUpdatesEmergencyAddressInfo;
-
-  /**
-   * Deprecated. Emergency response location (address) internal identifier. Only one of a pair `emergencyAddress` or `emergencyLocationId` should be specified, otherwise the error is returned
-   */
-  emergencyLocationId?: string;
+  emergencyAddress?: EmergencyAddressInfo;
 
   /**
    */
-  emergencyLocation?: ERLLocationInfo;
+  emergencyLocation?: EmergencyLocationInfo;
 }
 
 export default SwitchInfo;

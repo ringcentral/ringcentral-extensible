@@ -1,5 +1,5 @@
 /**
- * Extension site
+ * Site extension information
 */
 interface SiteResource {
   /**

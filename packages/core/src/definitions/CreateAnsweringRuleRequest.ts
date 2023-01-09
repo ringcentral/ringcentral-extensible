@@ -17,11 +17,13 @@ interface CreateAnsweringRuleRequest {
 
   /**
    * Type of an answering rule. The 'Custom' value should be specified
+   * Required
    */
   type?: string;
 
   /**
    * Name of an answering rule specified by user
+   * Required
    */
   name?: string;
 

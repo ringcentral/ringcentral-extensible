@@ -1,9 +1,9 @@
-import WirelessPointInfoRequest from './WirelessPointInfoRequest';
+import WirelessPointInfo from './WirelessPointInfo';
 
 interface ValidateMultipleWirelessPointsRequest {
   /**
    */
-  records?: WirelessPointInfoRequest[];
+  records?: WirelessPointInfo[];
 }
 
 export default ValidateMultipleWirelessPointsRequest;

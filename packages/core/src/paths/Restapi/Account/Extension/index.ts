@@ -1,11 +1,12 @@
 import MeetingsConfiguration from './MeetingsConfiguration';
 import NotificationSettings from './NotificationSettings';
 import MeetingConfiguration from './MeetingConfiguration';
-import VideoConfiguration from './VideoConfiguration';
 import CallQueuePresence from './CallQueuePresence';
+import VideoConfiguration from './VideoConfiguration';
 import EmergencyLocations from './EmergencyLocations';
-import AdministeredSites from './AdministeredSites';
 import MeetingRecordings from './MeetingRecordings';
+import AdministeredSites from './AdministeredSites';
+import OverflowSettings from './OverflowSettings';
 import AddressBookSync from './AddressBookSync';
 import ForwardingNumber from './ForwardingNumber';
 import UnifiedPresence from './UnifiedPresence';
@@ -16,27 +17,27 @@ import AssignedRole from './AssignedRole';
 import AuthzProfile from './AuthzProfile';
 import CompanyPager from './CompanyPager';
 import CallLogSync from './CallLogSync';
-import ProfileImage from './ProfileImage';
 import MessageStore from './MessageStore';
-import Conferencing from './Conferencing';
+import ProfileImage from './ProfileImage';
 import PhoneNumber from './PhoneNumber';
-import MessageSync from './MessageSync';
 import ActiveCalls from './ActiveCalls';
+import MessageSync from './MessageSync';
+import Conferencing from './Conferencing';
 import AddressBook from './AddressBook';
 import CallQueues from './CallQueues';
 import CallerId from './CallerId';
 import Features from './Features';
-import Favorite from './Favorite';
 import Presence from './Presence';
+import Favorite from './Favorite';
 import RingOut from './RingOut';
 import Greeting from './Greeting';
 import CallLog from './CallLog';
 import Meeting from './Meeting';
 import Device from './Device';
 import Grant from './Grant';
-import Fax from './Fax';
 import Mms from './Mms';
 import Sms from './Sms';
+import Fax from './Fax';
 import DeleteExtensionParameters from '../../../../definitions/DeleteExtensionParameters';
 import ExtensionUpdateRequest from '../../../../definitions/ExtensionUpdateRequest';
 import GetExtensionInfoResponse from '../../../../definitions/GetExtensionInfoResponse';
@@ -67,7 +68,9 @@ class Index {
   }
 
   /**
-   * Returns the list of extensions created for a particular account. All types of extensions are included in this list.
+   * Returns the list of extensions created for a particular account.
+ * All types of extensions are included in this list.
+ *
    * HTTP Method: get
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension
    * Rate Limit Group: Medium
@@ -81,6 +84,7 @@ class Index {
 
   /**
    * Creates an extension.
+ *
    * HTTP Method: post
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension
    * Rate Limit Group: Medium
@@ -93,7 +97,8 @@ class Index {
   }
 
   /**
-   * Returns basic information about a particular extension.
+   * Returns basic information about a particular extension of an account.
+ *
    * HTTP Method: get
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}
    * Rate Limit Group: Light
@@ -109,7 +114,8 @@ class Index {
   }
 
   /**
-   * Updates user settings.
+   * Updates the user settings.
+ *
    * HTTP Method: put
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}
    * Rate Limit Group: Medium
@@ -125,7 +131,17 @@ class Index {
   }
 
   /**
-   * Deletes extension(s) by ID(s). When an extension is being deleted the default API behavior is as follows: ⋅⋅* user's direct numbers are preserved by becoming additional company numbers; ⋅⋅* user's digital lines (both device & associated phone number) are deleted. You can change this behavior using the filters: ..* create unassigned extensions for each digital line of the deleted extension by setting the query parameter `savePhoneLines` to `true` in request path; ..* remove direct numbers of the deleted extension by setting the query parameter `savePhoneNumbers` to `false` in request path
+   * Deletes extension(s) by ID(s). When an extension is being deleted
+ * the default API behavior is as follows:
+ * - user's direct numbers are preserved by becoming additional company numbers;
+ * - user's digital lines (both device & associated phone number) are deleted.
+ *
+ * You can change this behavior using the filters:
+ * - create unassigned extensions for each digital line of the deleted extension by
+ *   setting the query parameter `savePhoneLines` to `true` in request path;
+ * - remove direct numbers of the deleted extension by setting the `savePhoneNumbers`
+ *   query parameter to `false` in request path
+ *
    * HTTP Method: delete
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}
    * Rate Limit Group: Medium
@@ -140,16 +156,16 @@ class Index {
     return r.data;
   }
 
+  fax(): Fax {
+    return new Fax(this);
+  }
+
   sms(): Sms {
     return new Sms(this);
   }
 
   mms(): Mms {
     return new Mms(this);
-  }
-
-  fax(): Fax {
-    return new Fax(this);
   }
 
   grant(): Grant {
@@ -176,12 +192,12 @@ class Index {
     return new RingOut(this, ringoutId);
   }
 
-  presence(): Presence {
-    return new Presence(this);
-  }
-
   favorite(): Favorite {
     return new Favorite(this);
+  }
+
+  presence(): Presence {
+    return new Presence(this);
   }
 
   features(): Features {
@@ -200,28 +216,28 @@ class Index {
     return new AddressBook(this);
   }
 
-  activeCalls(): ActiveCalls {
-    return new ActiveCalls(this);
+  conferencing(): Conferencing {
+    return new Conferencing(this);
   }
 
   messageSync(): MessageSync {
     return new MessageSync(this);
   }
 
+  activeCalls(): ActiveCalls {
+    return new ActiveCalls(this);
+  }
+
   phoneNumber(): PhoneNumber {
     return new PhoneNumber(this);
   }
 
-  conferencing(): Conferencing {
-    return new Conferencing(this);
+  profileImage(scaleSize: (string | null) = null): ProfileImage {
+    return new ProfileImage(this, scaleSize);
   }
 
   messageStore(messageId: (string | null) = null): MessageStore {
     return new MessageStore(this, messageId);
-  }
-
-  profileImage(scaleSize: (string | null) = null): ProfileImage {
-    return new ProfileImage(this, scaleSize);
   }
 
   callLogSync(): CallLogSync {
@@ -264,24 +280,28 @@ class Index {
     return new AddressBookSync(this);
   }
 
-  meetingRecordings(): MeetingRecordings {
-    return new MeetingRecordings(this);
+  overflowSettings(): OverflowSettings {
+    return new OverflowSettings(this);
   }
 
   administeredSites(): AdministeredSites {
     return new AdministeredSites(this);
   }
 
+  meetingRecordings(): MeetingRecordings {
+    return new MeetingRecordings(this);
+  }
+
   emergencyLocations(locationId: (string | null) = null): EmergencyLocations {
     return new EmergencyLocations(this, locationId);
   }
 
-  callQueuePresence(): CallQueuePresence {
-    return new CallQueuePresence(this);
-  }
-
   videoConfiguration(): VideoConfiguration {
     return new VideoConfiguration(this);
+  }
+
+  callQueuePresence(): CallQueuePresence {
+    return new CallQueuePresence(this);
   }
 
   meetingConfiguration(): MeetingConfiguration {

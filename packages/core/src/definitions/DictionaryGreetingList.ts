@@ -1,6 +1,6 @@
 import DictionaryGreetingInfo from './DictionaryGreetingInfo';
-import CallHandlingNavigationInfo from './CallHandlingNavigationInfo';
-import CallHandlingPagingInfo from './CallHandlingPagingInfo';
+import NavigationInfo from './NavigationInfo';
+import EnumeratedPaging from './EnumeratedPaging';
 
 interface DictionaryGreetingList {
   /**
@@ -15,11 +15,11 @@ interface DictionaryGreetingList {
 
   /**
    */
-  navigation?: CallHandlingNavigationInfo;
+  navigation?: NavigationInfo;
 
   /**
    */
-  paging?: CallHandlingPagingInfo;
+  paging?: EnumeratedPaging;
 }
 
 export default DictionaryGreetingList;

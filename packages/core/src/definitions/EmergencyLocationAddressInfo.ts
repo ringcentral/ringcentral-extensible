@@ -50,7 +50,8 @@ interface EmergencyLocationAddressInfo {
   street?: string;
 
   /**
-   * Second line address (apartment, suite, unit, building, floor, etc.)
+   * Second line address (apartment, suite, unit, building, floor,
+ *  etc.)
    */
   street2?: string;
 

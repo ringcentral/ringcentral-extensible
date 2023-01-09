@@ -14,12 +14,14 @@ interface DataExportTask {
   id?: string;
 
   /**
-   * Task creation datetime
+   * Task creation timestamp
+   * Format: date-time
    */
   creationTime?: string;
 
   /**
-   * Task last modification datetime
+   * Task last modification timestamp
+   * Format: date-time
    */
   lastModifiedTime?: string;
 
@@ -37,7 +39,7 @@ interface DataExportTask {
   specific?: SpecificInfo;
 
   /**
-   * Data collection sets. Returned by task ID
+   * Data collection archives. Returned by task ID
    */
   datasets?: ExportTaskResultInfo[];
 }

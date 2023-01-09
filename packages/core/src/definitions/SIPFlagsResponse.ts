@@ -1,37 +1,40 @@
 /**
- * SIP flags data
+ * SIP flags information
 */
-interface SIPFlagsResponse {
+interface SipFlagsResponse {
   /**
-   * If 'True' VoIP calling feature is enabled
+   * Indicates that VoIP calling feature is enabled
    */
-  voipFeatureEnabled?: ('True' | 'False');
+  voipFeatureEnabled?: boolean;
 
   /**
-   * If 'True' the request is sent from IP address of a country blocked for VoIP calling
+   * Indicates that the request is sent from IP address of a country where VoIP calling is disallowed
    */
-  voipCountryBlocked?: ('True' | 'False');
+  voipCountryBlocked?: boolean;
 
   /**
-   * If 'True' outbound calls are enabled
+   * Indicates that outbound calls are enabled
    */
-  outboundCallsEnabled?: ('True' | 'False');
+  outboundCallsEnabled?: boolean;
 
   /**
    */
   dscpEnabled?: boolean;
 
   /**
+   * Format: int32
    */
   dscpSignaling?: number;
 
   /**
+   * Format: int32
    */
   dscpVoice?: number;
 
   /**
+   * Format: int32
    */
   dscpVideo?: number;
 }
 
-export default SIPFlagsResponse;
+export default SipFlagsResponse;

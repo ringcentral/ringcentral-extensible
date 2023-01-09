@@ -1,6 +1,7 @@
 interface CallQueueInfo {
   /**
    * Link to a call queue
+   * Format: uri
    */
   uri?: string;
 

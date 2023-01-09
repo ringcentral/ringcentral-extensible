@@ -1,33 +1,19 @@
+import CallsByTypeBreakdown from './CallsByTypeBreakdown';
+
+/**
+ * Data for calls with breakdown by type (Direct, FromQueue, ParkRetrieval, Transferred, Outbound, Overflow)
+*/
 interface CallsByType {
   /**
+   * Unit of the result value
    * Required
-   * Format: double
    */
-  direct?: number;
+  valueType?: ('Percent' | 'Seconds' | 'Instances');
 
   /**
    * Required
-   * Format: double
    */
-  fromQueue?: number;
-
-  /**
-   * Required
-   * Format: double
-   */
-  parkRetrieval?: number;
-
-  /**
-   * Required
-   * Format: double
-   */
-  transferred?: number;
-
-  /**
-   * Required
-   * Format: double
-   */
-  outbound?: number;
+  values?: CallsByTypeBreakdown;
 }
 
 export default CallsByType;

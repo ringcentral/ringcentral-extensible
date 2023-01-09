@@ -22,7 +22,6 @@ class Index {
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/meeting-recordings
    * Rate Limit Group: Medium
    * App Permission: Meetings
-   * User Permission: MeetingsRecordings
    */
   async get(queryParams?: ListUserMeetingRecordingsParameters, restRequestConfig?: RestRequestConfig): Promise<ListMeetingRecordingsResponse> {
     const r = await this.rc.get<ListMeetingRecordingsResponse>(this.path(), queryParams, restRequestConfig);

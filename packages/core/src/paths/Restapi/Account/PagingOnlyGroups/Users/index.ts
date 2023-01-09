@@ -17,7 +17,8 @@ class Index {
   }
 
   /**
-   * Returns the list of users allowed to page this group.
+   * Returns a list of users allowed to page this group.
+ *
    * HTTP Method: get
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/paging-only-groups/{pagingOnlyGroupId}/users
    * Rate Limit Group: Light

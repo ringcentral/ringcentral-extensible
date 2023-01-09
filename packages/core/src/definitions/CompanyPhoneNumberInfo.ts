@@ -1,4 +1,4 @@
-import CountryInfo from './CountryInfo';
+import CountryInfoBasicModel from './CountryInfoBasicModel';
 import ExtensionInfo from './ExtensionInfo';
 import TemporaryNumberInfo from './TemporaryNumberInfo';
 import ContactCenterProvider from './ContactCenterProvider';
@@ -6,6 +6,7 @@ import ContactCenterProvider from './ContactCenterProvider';
 interface CompanyPhoneNumberInfo {
   /**
    * Link to a company phone number resource
+   * Format: uri
    */
   uri?: string;
 
@@ -17,7 +18,7 @@ interface CompanyPhoneNumberInfo {
 
   /**
    */
-  country?: CountryInfo;
+  country?: CountryInfoBasicModel;
 
   /**
    */
@@ -34,7 +35,8 @@ interface CompanyPhoneNumberInfo {
   location?: string;
 
   /**
-   * Payment type. 'External' is returned for forwarded numbers which are not terminated in the RingCentral phone system
+   * Payment type. 'External' is returned for forwarded numbers
+ *  which are not terminated in the RingCentral phone system
    */
   paymentType?: ('External' | 'TollFree' | 'Local' | 'BusinessMobileNumberProvider' | 'ExternalNumberProvider');
 
@@ -44,7 +46,9 @@ interface CompanyPhoneNumberInfo {
   phoneNumber?: string;
 
   /**
-   * Status of a phone number. If the value is 'Normal', the phone number is ready to be used. If the value is 'Pending' it is an external number not yet ported to RingCentral.
+   * Status of a phone number. If the value is 'Normal', the phone
+ *  number is ready to be used. If the value is 'Pending' it is an
+ *  external number not yet ported to RingCentral.
    */
   status?: ('Normal' | 'Pending' | 'PortedIn' | 'Temporary');
 
@@ -54,7 +58,9 @@ interface CompanyPhoneNumberInfo {
   type?: ('VoiceFax' | 'FaxOnly' | 'VoiceOnly');
 
   /**
-   * Usage type of a phone number. Usage type of a phone number. Numbers of 'NumberPool' type wont't be returned for phone number list requests
+   * Usage type of a phone number. Usage type of a phone number.
+ *  Numbers of 'NumberPool' type wont't be returned for phone number list
+ *  requests
    */
   usageType?: ('MainCompanyNumber' | 'AdditionalCompanyNumber' | 'CompanyNumber' | 'DirectNumber' | 'CompanyFaxNumber' | 'ForwardedNumber' | 'ForwardedCompanyNumber' | 'ContactCenterNumber' | 'ConferencingNumber' | 'MeetingsNumber' | 'NumberPool' | 'BusinessMobileNumber' | 'IntegrationNumber');
 

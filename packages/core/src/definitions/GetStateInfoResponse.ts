@@ -1,4 +1,4 @@
-import GetCountryInfoState from './GetCountryInfoState';
+import CountryInfoMinimalModel from './CountryInfoMinimalModel';
 
 interface GetStateInfoResponse {
   /**
@@ -8,12 +8,13 @@ interface GetStateInfoResponse {
 
   /**
    * Canonical URI of a state
+   * Format: uri
    */
   uri?: string;
 
   /**
    */
-  country?: GetCountryInfoState;
+  country?: CountryInfoMinimalModel;
 
   /**
    * Short code for a state (2-letter usually)

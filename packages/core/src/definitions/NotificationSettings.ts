@@ -8,11 +8,14 @@ import MissedCallsInfo from './MissedCallsInfo';
 interface NotificationSettings {
   /**
    * Canonical URI of notifications settings resource
+   * Format: uri
    */
   uri?: string;
 
   /**
-   * List of extensions specified as email notification recipients. Returned only for call queues where queue managers are assigned as user extensions.
+   * List of extensions specified as email notification recipients.
+ *  Returned only for call queues where queue managers are assigned as user
+ *  extensions.
    */
   emailRecipients?: EmailRecipientInfo[];
 
@@ -22,7 +25,8 @@ interface NotificationSettings {
   emailAddresses?: string[];
 
   /**
-   * Specifies if managers' emails are included in the list of emails to which notifications are sent
+   * Specifies if managers' emails are included in the list of emails to which
+ *  notifications are sent
    */
   includeManagers?: boolean;
 
@@ -32,7 +36,11 @@ interface NotificationSettings {
   smsEmailAddresses?: string[];
 
   /**
-   * Specifies notifications settings mode. If 'True' then advanced mode is on, it allows using different emails and/or phone numbers for each notification type. If 'False' then basic mode is on. Advanced mode settings are returned in both modes, if specified once, but if basic mode is switched on, they are not applied
+   * Specifies notifications settings mode. If 'True' then advanced
+ *  mode is on, it allows using different emails and/or phone numbers for
+ *  each notification type. If 'False' then basic mode is on. Advanced mode
+ *  settings are returned in both modes, if specified once, but if basic mode
+ *  is switched on, they are not applied
    */
   advancedMode?: boolean;
 

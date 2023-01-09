@@ -11,6 +11,7 @@ interface NetworkInfo {
 
   /**
    * Link to a network resource
+   * Format: uri
    */
   uri?: string;
 

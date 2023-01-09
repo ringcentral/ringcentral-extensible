@@ -3,18 +3,22 @@
 */
 interface ListEmergencyLocationsParameters {
   /**
-   * Filters entries containing the specified substring in address and name fields. The characters range is 0-64; not case-sensitive. If empty then the filter is ignored
+   * Internal identifier of a site for filtering. To indicate company main
+ *  site `main-site` value should be specified. Supported only if multi-site feature
+ *  is enabled for the account. Multiple values are supported.
+   */
+  siteId?: string[];
+
+  /**
+   * Filters entries containing the specified substring in 'address'
+ *  and 'name' fields. The character range is 0-64; not case-sensitive.
+ *  If empty then the filter is ignored
    */
   searchString?: string;
 
   /**
-   * Internal identifier of a site for filtering. To filter by Main Site (Company) `main-site` value should be specified
    */
-  siteId?: string;
-
-  /**
-   */
-  addressStatus?: ('Valid' | 'Invalid');
+  addressStatus?: ('Valid' | 'Invalid' | 'Provisioning');
 
   /**
    */
@@ -25,24 +29,25 @@ interface ListEmergencyLocationsParameters {
   domesticCountryId?: string;
 
   /**
-   * Comma-separated list of fields to order results prefixed by plus sign '+' (ascending order) or minus sign '-' (descending order).
- *  Possible field entries are:
- *  - `name`;
- *  - `siteName`;
- *  - `address`;
- *  - `addressStatus`;
- *  - `usageStatus`.
+   * Comma-separated list of fields to order results, prefixed by
+ *  plus sign '+' (ascending order) or minus sign '-' (descending order)
    * Default: +address
    */
-  orderBy?: string;
+  orderBy?: ('+name' | '+siteName' | '+address' | '+addressStatus' | '+usageStatus' | '-name' | '-siteName' | '-address' | '-addressStatus' | '-usageStatus');
 
   /**
-   * Indicates the page size (number of items). The values supported: `Max` or numeric value. If not specified, 100 records are returned per one page
+   * Indicates a page size (number of items). The values
+ *  supported: `Max` or numeric value. If not specified,
+ *  100 records are returned per one page
+   * Format: int32
+   * Default: 100
    */
   perPage?: number;
 
   /**
-   * Indicates the page number to retrieve. Only positive number values are supported
+   * Indicates the page number to retrieve. Only positive number values
+ *  are supported
+   * Format: int32
    * Default: 1
    */
   page?: number;

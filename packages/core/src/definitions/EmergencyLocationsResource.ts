@@ -1,14 +1,14 @@
-import EmergencyLocationInfo from './EmergencyLocationInfo';
-import ProvisioningPagingInfo from './ProvisioningPagingInfo';
+import EmergencyLocationResource from './EmergencyLocationResource';
+import EmergencyLocationsPaging from './EmergencyLocationsPaging';
 
 interface EmergencyLocationsResource {
   /**
    */
-  records?: EmergencyLocationInfo[];
+  records?: EmergencyLocationResource[];
 
   /**
    */
-  paging?: ProvisioningPagingInfo;
+  paging?: EmergencyLocationsPaging;
 }
 
 export default EmergencyLocationsResource;

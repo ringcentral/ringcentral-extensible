@@ -4,6 +4,7 @@ import PhoneNumberInfoNumberParser from './PhoneNumberInfoNumberParser';
 interface ParsePhoneNumberResponse {
   /**
    * Canonical URI of a resource
+   * Format: uri
    */
   uri?: string;
 
@@ -13,7 +14,7 @@ interface ParsePhoneNumberResponse {
   homeCountry?: GetCountryInfoNumberParser;
 
   /**
-   * Parsed phone numbers data
+   * Parsed phone numbers information
    * Required
    */
   phoneNumbers?: PhoneNumberInfoNumberParser[];

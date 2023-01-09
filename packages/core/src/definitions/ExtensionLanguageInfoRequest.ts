@@ -1,6 +1,6 @@
 interface ExtensionLanguageInfoRequest {
   /**
-   * internal Identifier of a language
+   * Internal identifier of a language
    */
   id?: string;
 }

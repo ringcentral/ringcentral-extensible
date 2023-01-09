@@ -1,5 +1,7 @@
 /**
- * Emergency address assigned to the switch. Only one of a pair `emergencyAddress` or `emergencyLocationId` should be specified, otherwise the error is returned
+ * Emergency address assigned to the switch. Only one of a pair `emergencyAddress`
+ * or `emergencyLocationId` should be specified, otherwise the error is returned
+ *
 */
 interface LocationUpdatesEmergencyAddressInfoRequest {
   /**
@@ -58,7 +60,8 @@ interface LocationUpdatesEmergencyAddressInfoRequest {
   street?: string;
 
   /**
-   * Second line address (apartment, suite, unit, building, floor, etc.)
+   * Second line address (apartment, suite, unit, building, floor,
+ *  etc.)
    */
   street2?: string;
 

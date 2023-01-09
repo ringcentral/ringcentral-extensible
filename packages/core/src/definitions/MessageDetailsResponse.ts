@@ -1,5 +1,5 @@
 /**
- * Detailed information on a message
+ * Complete details of the message
 */
 interface MessageDetailsResponse {
   /**
@@ -65,13 +65,12 @@ interface MessageDetailsResponse {
   batchId?: string;
 
   /**
-   * Indicates whether the message is outbound or inbound
-   * Example: out
+   * Direction of the SMS message
    */
   direction?: ('Inbound' | 'Outbound');
 
   /**
-   * RC error code of the message sending failure reason
+   * The RC error code of the message sending failure reason
    * Example: SMS-RC-503
    */
   errorCode?: string;

@@ -3,11 +3,13 @@ import PhoneNumberInfoConferencing from './PhoneNumberInfoConferencing';
 interface GetConferencingInfoResponse {
   /**
    * Canonical URI of a conferencing
+   * Format: uri
    */
   uri?: string;
 
   /**
-   * Determines if host user allows conference participants to join before the host
+   * Determines if host user allows conference participants to join
+ *  before the host
    */
   allowJoinBeforeHost?: boolean;
 
@@ -17,7 +19,7 @@ interface GetConferencingInfoResponse {
   hostCode?: string;
 
   /**
-   * Internal parameter specifying conferencing engine
+   * Internal parameter specifying a conferencing engine
    */
   mode?: string;
 
@@ -27,17 +29,24 @@ interface GetConferencingInfoResponse {
   participantCode?: string;
 
   /**
-   * Primary conference phone number for user's home country returned in [E.164](https://www.itu.int/rec/T-REC-E.164-201011-I) format
+   * Primary conference phone number for user's home country returned
+ *  in [E.164](https://www.itu.int/rec/T-REC-E.164-201011-I) format
    */
   phoneNumber?: string;
 
   /**
-   * Short URL leading to the service web page Tap to Join for audio conference bridge
+   * Short URL leading to the service web page Tap to Join for audio
+ *  conference bridge
+   * Format: uri
    */
   tapToJoinUri?: string;
 
   /**
-   * List of multiple dial-in phone numbers to connect to audio conference service, relevant for user's brand. Each number is given with the country and location information, in order to let the user choose the less expensive way to connect to a conference. The first number in the list is the primary conference number, that is default and domestic
+   * List of multiple dial-in phone numbers to connect to audio
+ *  conference service, relevant for the user's brand. Each number is given with
+ *  the country and location information, in order to let the user choose
+ *  less expensive way to connect to a conference. The first number in
+ *  the list is a primary conference number, that is default and domestic
    */
   phoneNumbers?: PhoneNumberInfoConferencing[];
 }

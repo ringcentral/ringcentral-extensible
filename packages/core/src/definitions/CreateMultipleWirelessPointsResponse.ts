@@ -1,9 +1,9 @@
-import BulkTaskInfoWiCreate from './BulkTaskInfoWiCreate';
+import BulkTaskInfo from './BulkTaskInfo';
 
 interface CreateMultipleWirelessPointsResponse {
   /**
    */
-  task?: BulkTaskInfoWiCreate;
+  task?: BulkTaskInfo;
 }
 
 export default CreateMultipleWirelessPointsResponse;

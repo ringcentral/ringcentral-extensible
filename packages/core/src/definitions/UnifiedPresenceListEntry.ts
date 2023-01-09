@@ -8,6 +8,7 @@ interface UnifiedPresenceListEntry {
 
   /**
    * Status code of resource retrieval
+   * Format: int32
    */
   status?: number;
 

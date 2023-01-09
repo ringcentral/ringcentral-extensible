@@ -4,9 +4,8 @@ import ClientInfo from './ClientInfo';
 import Dictionary from './Dictionary';
 import Account from './Account';
 import Oauth from './Oauth';
-import Glip from './Glip';
-import GetVersionResponse from '../../definitions/GetVersionResponse';
-import GetVersionsResponse from '../../definitions/GetVersionsResponse';
+import ApiVersionInfo from '../../definitions/ApiVersionInfo';
+import ApiVersionsList from '../../definitions/ApiVersionsList';
 import { RingCentralInterface, RestRequestConfig } from '../../types';
 
 class Index {
@@ -32,8 +31,8 @@ class Index {
    * Endpoint: /restapi
    * Rate Limit Group: NoThrottling
    */
-  async list(restRequestConfig?: RestRequestConfig): Promise<GetVersionsResponse> {
-    const r = await this.rc.get<GetVersionsResponse>(this.path(false), undefined, restRequestConfig);
+  async list(restRequestConfig?: RestRequestConfig): Promise<ApiVersionsList> {
+    const r = await this.rc.get<ApiVersionsList>(this.path(false), undefined, restRequestConfig);
     return r.data;
   }
 
@@ -43,16 +42,12 @@ class Index {
    * Endpoint: /restapi/{apiVersion}
    * Rate Limit Group: NoThrottling
    */
-  async get(restRequestConfig?: RestRequestConfig): Promise<GetVersionResponse> {
+  async get(restRequestConfig?: RestRequestConfig): Promise<ApiVersionInfo> {
     if (this.apiVersion === null) {
       throw new Error('apiVersion must be specified.');
     }
-    const r = await this.rc.get<GetVersionResponse>(this.path(), undefined, restRequestConfig);
+    const r = await this.rc.get<ApiVersionInfo>(this.path(), undefined, restRequestConfig);
     return r.data;
-  }
-
-  glip(): Glip {
-    return new Glip(this);
   }
 
   oauth(): Oauth {

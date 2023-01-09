@@ -9,13 +9,16 @@ interface ListLocationsParameters {
   orderBy?: ('Npa' | 'City');
 
   /**
-   * Indicates the page number to retrieve. Only positive number values are accepted
+   * Indicates a page number to retrieve. Only positive number values
+ *  are accepted
+   * Format: int32
    * Default: 1
    */
   page?: number;
 
   /**
-   * Indicates the page size (number of items)
+   * Indicates a page size (number of items)
+   * Format: int32
    * Default: 100
    */
   perPage?: number;
@@ -26,7 +29,7 @@ interface ListLocationsParameters {
   stateId?: string;
 
   /**
-   * Specifies if nxx codes are returned
+   * Specifies if `nxx` codes are returned
    */
   withNxx?: boolean;
 }

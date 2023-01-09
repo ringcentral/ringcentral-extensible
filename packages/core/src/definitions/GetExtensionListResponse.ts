@@ -4,7 +4,8 @@ import ProvisioningPagingInfo from './ProvisioningPagingInfo';
 
 interface GetExtensionListResponse {
   /**
-   * Link to the extension list resource
+   * Link to an extension list resource
+   * Format: uri
    */
   uri?: string;
 

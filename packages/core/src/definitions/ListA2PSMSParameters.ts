@@ -3,16 +3,30 @@
 */
 interface ListA2PSMSParameters {
   /**
-   * Internal identifier of a message batch used for filtering records
-   * Example: 1234
+   * Internal identifier of a message batch to filter the response
+   * Example: 55577
    */
   batchId?: string;
 
   /**
-   * Direction of a message to filter the message list result. By default there is no filter applied - both Inbound and Outbound messages are returned
-   * Example: Outbound
+   * Direction of the SMS message
+   * Example: Inbound
    */
   direction?: ('Inbound' | 'Outbound');
+
+  /**
+   * The end of the time range to filter the results in ISO 8601 format including timezone. Default is the 'dateTo' minus 24 hours
+   * Format: date-time
+   * Example: Mon Nov 09 2020 08:07:52 GMT-0800 (Pacific Standard Time)
+   */
+  dateFrom?: string;
+
+  /**
+   * The end of the time range to filter the results in ISO 8601 format including timezone. Default is the current time
+   * Format: date-time
+   * Example: Wed Nov 25 2020 08:07:52 GMT-0800 (Pacific Standard Time)
+   */
+  dateTo?: string;
 
   /**
    * Indicates if the response has to be detailed, includes text in the response if detailed
@@ -21,31 +35,19 @@ interface ListA2PSMSParameters {
   view?: ('Simple' | 'Detailed');
 
   /**
-   * Date to filter message list result. Messages with `creationTime` later than or equal to `dateFrom` value are returned. The default value is 1 day before the current datetime
-   * Example: 2020-11-09T16:07:52.597Z
-   */
-  dateFrom?: string;
-
-  /**
-   * Date to filter message list result. Messages with `creationTime` earlier than `dateTo` value are returned. The default is the current datetime
-   * Example: 2020-11-25T16:07:52.597Z
-   */
-  dateTo?: string;
-
-  /**
    * List of phone numbers (specified in 'to' or 'from' fields of a message) to filter the results. Maximum number of phone numbers allowed to be specified as filters is 15
-   * Example: phoneNumber=15551234455&phoneNumber=15551235577
+   * Example: 15551234455,15551235577
    */
   phoneNumber?: string[];
 
   /**
-   * Token of a page to be retrieved
+   * The page token of the page to be retrieved.
    * Example: pgt1
    */
   pageToken?: string;
 
   /**
-   * Number of messages to be returned per request
+   * The number of messages to be returned per request
    * Format: int32
    * Example: 1
    * Default: 1000

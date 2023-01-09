@@ -3,10 +3,12 @@
 */
 interface KeyInfo {
   /**
+   * Extension's number
    */
   extensionNumber?: string;
 
   /**
+   * Extension's name
    */
   name?: string;
 }

@@ -30,17 +30,22 @@ interface ContactInfo {
   jobTitle?: string;
 
   /**
-   * Email of extension user
+   * Contact email of extension user
+   * Format: email
    */
   email?: string;
 
   /**
-   * Extension user contact phone number in [E.164](https://www.itu.int/rec/T-REC-E.164-201011-I) (with '+' sign) format
+   * Extension user contact phone number in
+ *  [E.164](https://www.itu.int/rec/T-REC-E.164-201011-I)
+ *  (with '+' sign) format
    */
   businessPhone?: string;
 
   /**
-   * Extension user mobile (**non** Toll Free) phone number in [E.164](https://www.itu.int/rec/T-REC-E.164-201011-I) (with '+' sign) format
+   * Extension user mobile (**non** Toll Free) phone number in
+ *  [E.164](https://www.itu.int/rec/T-REC-E.164-201011-I)
+ *  (with '+' sign) format
    */
   mobilePhone?: string;
 
@@ -49,7 +54,8 @@ interface ContactInfo {
   businessAddress?: ContactBusinessAddressInfo;
 
   /**
-   * If 'True' then contact email is enabled as login name for this user. Please note that email should be unique in this case.
+   * If 'True' then contact email is enabled as login name for this
+ *  user. Please note that email should be unique in this case.
    */
   emailAsLoginName?: boolean;
 

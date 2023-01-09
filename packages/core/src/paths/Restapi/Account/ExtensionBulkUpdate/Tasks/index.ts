@@ -22,7 +22,8 @@ class Index {
   }
 
   /**
-   * Returns the status of multiple extension update task
+   * Returns a status of a task to update multiple extensions.
+ *
    * HTTP Method: get
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension-bulk-update/tasks/{taskId}
    * Rate Limit Group: Light

@@ -26,7 +26,7 @@ class Index {
    * User Permission: OutboundSMS
    */
   async post(CreateSMSMessage: CreateSMSMessage, restRequestConfig?: RestRequestConfig): Promise<GetSMSMessageInfoResponse> {
-    const formData = Utils.getFormData(CreateSMSMessage);
+    const formData = await Utils.getFormData(CreateSMSMessage);
     const r = await this.rc.post<GetSMSMessageInfoResponse>(this.path(), formData, undefined, restRequestConfig);
     return r.data;
   }

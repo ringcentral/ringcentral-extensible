@@ -2,6 +2,7 @@ import AddressBookBulkUploadTaskResult from './AddressBookBulkUploadTaskResult';
 
 /**
  * Information on a task for adding multiple contacts to multiple extensions
+ *
 */
 interface AddressBookBulkUploadResponse {
   /**
@@ -13,6 +14,7 @@ interface AddressBookBulkUploadResponse {
   /**
    * Link for the task status retrieval
    * Required
+   * Format: uri
    */
   uri?: string;
 
@@ -25,12 +27,14 @@ interface AddressBookBulkUploadResponse {
   /**
    * Datetime of a task creation
    * Required
+   * Format: date-time
    */
   creationTime?: string;
 
   /**
    * Datetime of a task latest update
    * Required
+   * Format: date-time
    */
   lastModifiedTime?: string;
 

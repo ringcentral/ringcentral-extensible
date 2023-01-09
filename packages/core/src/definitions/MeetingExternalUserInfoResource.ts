@@ -36,6 +36,10 @@ interface MeetingExternalUserInfoResource {
   personalLink?: string;
 
   /**
+   */
+  personalLinkName?: string;
+
+  /**
    * Enables using personal meeting ID for instant meetings
    */
   usePmiForInstantMeetings?: boolean;

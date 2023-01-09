@@ -1,5 +1,7 @@
 /**
- * Extension user business address. The default is Company (Auto-Receptionist) settings
+ * Extension user business address. The default is
+ * Company (Auto-Receptionist) settings
+ *
 */
 interface ContactBusinessAddressInfo {
   /**
@@ -8,7 +10,8 @@ interface ContactBusinessAddressInfo {
   country?: string;
 
   /**
-   * State/province name of an extension user company. Mandatory for the USA, UK and Canada
+   * State/province name of an extension user company. Mandatory
+ *  for the USA, UK and Canada
    */
   state?: string;
 

@@ -1,36 +1,40 @@
-/**
- * Request body for operation getToken
-*/
 interface GetTokenRequest {
   /**
-   * Phone number linked to an account or extension in E.164 format with or without leading '+' sign
+   * For `password` grant type only. User login name: email or phone number in E.164 format
    */
   username?: string;
 
   /**
-   * User's password
+   * For `password` grant type only. User's password
    * Format: password
    */
   password?: string;
 
   /**
-   * Optional. Extension short number. If company number is specified as a username, and extension is not specified, the server will attempt to authenticate client as main company administrator
+   * For `password` grant type only. Optional. Extension short number. If company number
+ *  is specified as a username, and extension is not specified, the
+ *  server will attempt to authenticate client as main company administrator
+ *
+ *  DEPRECATED: use extension number embedded into username string like `+16501234567*101`
    */
   extension?: string;
 
   /**
    * Grant type
-   * Default: password
+   * Required
    */
-  grant_type?: ('authorization_code' | 'password' | 'refresh_token' | 'client_credentials' | 'urn:ietf:params:oauth:grant-type:jwt-bearer' | 'partner_jwt');
+  grant_type?: ('authorization_code' | 'password' | 'refresh_token' | 'client_credentials' | 'urn:ietf:params:oauth:grant-type:jwt-bearer' | 'urn:ietf:params:oauth:grant-type:device_code' | 'partner_jwt');
 
   /**
-   * Authorization code
+   * For `authorization_code` grant type only. User's authorization code
    */
   code?: string;
 
   /**
-   * This is a callback URI which determines where the response is sent. The value of this parameter must exactly match one of the URIs you have provided for your app upon registration
+   * For `authorization_code` grant type only. This is a callback URI which determines where the response
+ *  is sent. The value of this parameter must exactly match one of
+ *  the URIs you have provided for your app upon registration
+   * Format: uri
    */
   redirect_uri?: string;
 
@@ -38,7 +42,7 @@ interface GetTokenRequest {
    * Access token lifetime in seconds
    * Maximum: 3600
    * Minimum: 600
-   * Format: int64
+   * Format: int32
    * Default: 3600
    */
   access_token_ttl?: number;
@@ -46,23 +50,26 @@ interface GetTokenRequest {
   /**
    * Refresh token lifetime in seconds
    * Maximum: 604800
-   * Format: int64
+   * Format: int32
    * Default: 604800
    */
   refresh_token_ttl?: number;
 
   /**
-   * List of API permissions to be used with access token. Can be omitted when requesting all permissions defined during the application registration phase
+   * List of application permissions to be used with access token.
+ *  By default the scope includes all permissions configured during
+ *  the application registration phase
    */
   scope?: string;
 
   /**
-   * Previously issued refresh token. This is the only formData field used for the Refresh Token Flow.
+   * For `refresh_token` grant type only. Previously issued refresh token.
    */
   refresh_token?: string;
 
   /**
-   * The unique identifier of a client application. If not specified, the previously specified or auto generated value is used by default
+   * The unique identifier of a client application instance. If not
+ *  specified, the derived or auto generated value will be used
    */
   endpoint_id?: string;
 
@@ -71,6 +78,7 @@ interface GetTokenRequest {
   pin?: string;
 
   /**
+   * OAuth client identifier (if not specified via `Authorization` header)
    */
   client_id?: string;
 
@@ -83,14 +91,17 @@ interface GetTokenRequest {
   partner_account_id?: string;
 
   /**
+   * Client assertion type
    */
   client_assertion_type?: string;
 
   /**
+   * Client assertion
    */
   client_assertion?: string;
 
   /**
+   * For `jwt_bearer` grant type only. Assertion
    */
   assertion?: string;
 
@@ -99,8 +110,13 @@ interface GetTokenRequest {
   brand_id?: string;
 
   /**
+   * PKCE code verifier
    */
   code_verifier?: string;
+
+  /**
+   */
+  device_code?: string;
 }
 
 export default GetTokenRequest;

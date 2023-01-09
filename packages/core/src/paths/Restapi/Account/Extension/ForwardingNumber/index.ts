@@ -1,8 +1,9 @@
 import UpdateForwardingNumberRequest from '../../../../../definitions/UpdateForwardingNumberRequest';
+import ForwardingNumberResource from '../../../../../definitions/ForwardingNumberResource';
+import DeleteForwardingNumbersRequest from '../../../../../definitions/DeleteForwardingNumbersRequest';
 import ForwardingNumberInfo from '../../../../../definitions/ForwardingNumberInfo';
 import CreateForwardingNumberRequest from '../../../../../definitions/CreateForwardingNumberRequest';
 import GetExtensionForwardingNumberListResponse from '../../../../../definitions/GetExtensionForwardingNumberListResponse';
-import ListForwardingNumbersParameters from '../../../../../definitions/ListForwardingNumbersParameters';
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
@@ -26,15 +27,18 @@ class Index {
   }
 
   /**
-   * Returns the list of extension phone numbers used for call forwarding and call flip. The returned list contains all the extension phone numbers used for call forwarding and call flip.
+   * Returns the list of extension phone numbers used for call forwarding
+ * and call flip. The returned list contains all the extension phone numbers
+ * used for call forwarding and call flip.
+ *
    * HTTP Method: get
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/forwarding-number
    * Rate Limit Group: Light
    * App Permission: ReadAccounts
    * User Permission: ReadUserForwardingFlipNumbers
    */
-  async list(queryParams?: ListForwardingNumbersParameters, restRequestConfig?: RestRequestConfig): Promise<GetExtensionForwardingNumberListResponse> {
-    const r = await this.rc.get<GetExtensionForwardingNumberListResponse>(this.path(false), queryParams, restRequestConfig);
+  async list(restRequestConfig?: RestRequestConfig): Promise<GetExtensionForwardingNumberListResponse> {
+    const r = await this.rc.get<GetExtensionForwardingNumberListResponse>(this.path(false), undefined, restRequestConfig);
     return r.data;
   }
 
@@ -52,6 +56,19 @@ class Index {
   }
 
   /**
+   * Deletes multiple forwarding numbers from the forwarding number list by IDs.
+   * HTTP Method: delete
+   * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/forwarding-number
+   * Rate Limit Group: Medium
+   * App Permission: EditExtensions
+   * User Permission: EditUserForwardingFlipNumbers
+   */
+  async deleteAll(deleteForwardingNumbersRequest: DeleteForwardingNumbersRequest, restRequestConfig?: RestRequestConfig): Promise<string> {
+    const r = await this.rc.delete<string>(this.path(false), deleteForwardingNumbersRequest, undefined, restRequestConfig);
+    return r.data;
+  }
+
+  /**
    * Returns a specific forwarding number.
    * HTTP Method: get
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/forwarding-number/{forwardingNumberId}
@@ -59,11 +76,11 @@ class Index {
    * App Permission: ReadAccounts
    * User Permission: ReadUserForwardingFlipNumbers
    */
-  async get(restRequestConfig?: RestRequestConfig): Promise<ForwardingNumberInfo> {
+  async get(restRequestConfig?: RestRequestConfig): Promise<ForwardingNumberResource> {
     if (this.forwardingNumberId === null) {
       throw new Error('forwardingNumberId must be specified.');
     }
-    const r = await this.rc.get<ForwardingNumberInfo>(this.path(), undefined, restRequestConfig);
+    const r = await this.rc.get<ForwardingNumberResource>(this.path(), undefined, restRequestConfig);
     return r.data;
   }
 

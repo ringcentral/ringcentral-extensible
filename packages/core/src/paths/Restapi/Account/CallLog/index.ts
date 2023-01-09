@@ -1,5 +1,4 @@
 import CompanyCallLogRecord from '../../../../definitions/CompanyCallLogRecord';
-import ReadCompanyCallRecordParameters from '../../../../definitions/ReadCompanyCallRecordParameters';
 import AccountCallLogResponse from '../../../../definitions/AccountCallLogResponse';
 import ReadCompanyCallLogParameters from '../../../../definitions/ReadCompanyCallLogParameters';
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
@@ -38,18 +37,18 @@ class Index {
   }
 
   /**
-   * Returns individual call log record(s) by ID(s). Batch request is supported.
+   * Returns individual call log record(s) by ID. Batch syntax is supported.
    * HTTP Method: get
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/call-log/{callRecordId}
    * Rate Limit Group: Heavy
    * App Permission: ReadCallLog
    * User Permission: FullCompanyCallLog
    */
-  async get(queryParams?: ReadCompanyCallRecordParameters, restRequestConfig?: RestRequestConfig): Promise<CompanyCallLogRecord> {
+  async get(restRequestConfig?: RestRequestConfig): Promise<CompanyCallLogRecord> {
     if (this.callRecordId === null) {
       throw new Error('callRecordId must be specified.');
     }
-    const r = await this.rc.get<CompanyCallLogRecord>(this.path(), queryParams, restRequestConfig);
+    const r = await this.rc.get<CompanyCallLogRecord>(this.path(), undefined, restRequestConfig);
     return r.data;
   }
 }

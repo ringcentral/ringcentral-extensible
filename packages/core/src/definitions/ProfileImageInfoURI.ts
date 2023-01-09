@@ -1,5 +1,6 @@
 interface ProfileImageInfoURI {
   /**
+   * Format: uri
    */
   uri?: string;
 }

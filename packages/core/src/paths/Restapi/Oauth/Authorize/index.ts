@@ -16,12 +16,24 @@ class Index {
   }
 
   /**
-   * Returns a link to a login page location.
+   * Performs OAuth 2.0 authorization (GET version)
+   * HTTP Method: get
+   * Endpoint: /restapi/oauth/authorize
+   * Rate Limit Group: Auth
+   */
+  async get(restRequestConfig?: RestRequestConfig): Promise<string> {
+    const r = await this.rc.get<string>(this.path(), undefined, restRequestConfig);
+    return r.data;
+  }
+
+  /**
+   * Performs OAuth 2.0 authorization (POST version)
    * HTTP Method: post
    * Endpoint: /restapi/oauth/authorize
+   * Rate Limit Group: Auth
    */
-  async post(authorizeRequest: AuthorizeRequest, restRequestConfig?: RestRequestConfig): Promise<string> {
-    const r = await this.rc.post<string>(this.path(), authorizeRequest, undefined, restRequestConfig);
+  async post(AuthorizeRequest: AuthorizeRequest, restRequestConfig?: RestRequestConfig): Promise<string> {
+    const r = await this.rc.post<string>(this.path(), AuthorizeRequest, undefined, restRequestConfig);
     return r.data;
   }
 }

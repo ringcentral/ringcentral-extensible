@@ -2,14 +2,17 @@ import BillingPlanInfo from './BillingPlanInfo';
 import BrandInfo from './BrandInfo';
 import ServicePlanInfo from './ServicePlanInfo';
 import TargetServicePlanInfo from './TargetServicePlanInfo';
-import ContractedCountryInfo from './ContractedCountryInfo';
+import CountryInfoShortModel from './CountryInfoShortModel';
 
 /**
- * Account service information, including brand, service plan and billing plan
+ * Account service information, including brand, service plan and
+ * billing plan
+ *
 */
 interface ServiceInfo {
   /**
    * Canonical URI of a service info resource
+   * Format: uri
    */
   uri?: string;
 
@@ -31,7 +34,7 @@ interface ServiceInfo {
 
   /**
    */
-  contractedCountry?: ContractedCountryInfo;
+  contractedCountry?: CountryInfoShortModel;
 }
 
 export default ServiceInfo;

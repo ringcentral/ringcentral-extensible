@@ -14,6 +14,7 @@ interface CompanyCallLogRecord {
 
   /**
    * Canonical URI of a call log record
+   * Format: uri
    */
   uri?: string;
 
@@ -32,7 +33,8 @@ interface CompanyCallLogRecord {
   telephonySessionId?: string;
 
   /**
-   * Call transport
+   * The type of a call transport. 'PSTN' indicates that a call leg was initiated
+ *  from the PSTN network provider; 'VoIP' - from an RC phone.
    */
   transport?: ('PSTN' | 'VoIP');
 
@@ -45,12 +47,12 @@ interface CompanyCallLogRecord {
   to?: CallLogCallerInfo;
 
   /**
-   * Call type
+   * The type of a call
    */
   type?: ('Voice' | 'Fax');
 
   /**
-   * Call direction
+   * The direction of a call
    */
   direction?: ('Inbound' | 'Outbound');
 
@@ -68,31 +70,28 @@ interface CompanyCallLogRecord {
   deleted?: boolean;
 
   /**
-   * Action description of the call operation
+   * The internal action corresponding to the call operation
    */
-  action?: ('Unknown' | 'Phone Login' | 'Calling Card' | 'VoIP Call' | 'Phone Call' | 'Paging' | 'Hunting' | 'Call Park' | 'Monitoring' | 'Text Relay' | 'External Application' | 'Park Location' | 'CallOut-CallMe' | 'Conference Call' | 'Move' | 'RC Meetings' | 'Accept Call' | 'FindMe' | 'FollowMe' | 'RingMe' | 'Transfer' | 'Call Return' | 'Ring Directly' | 'RingOut Web' | 'RingOut PC' | 'RingOut Mobile' | 'Emergency' | 'E911 Update' | 'Support' | 'Incoming Fax' | 'Outgoing Fax');
+  action?: ('Unknown' | 'Phone Call' | 'Phone Login' | 'Calling Card' | 'VoIP Call' | 'Paging' | 'Hunting' | 'Call Park' | 'Monitoring' | 'Text Relay' | 'External Application' | 'Park Location' | 'CallOut-CallMe' | 'Conference Call' | 'Move' | 'RC Meetings' | 'Accept Call' | 'FindMe' | 'FollowMe' | 'RingMe' | 'Transfer' | 'Call Return' | 'Ring Directly' | 'RingOut Web' | 'RingOut PC' | 'RingOut Mobile' | '411 Info' | 'Emergency' | 'E911 Update' | 'Support' | 'Incoming Fax' | 'Outgoing Fax');
 
   /**
-   * Status description of the call operation
+   * The result of the call operation
    */
-  result?: ('Unknown' | 'Accepted' | 'Call connected' | 'In Progress' | 'Voicemail' | 'Reply' | 'Missed' | 'Busy' | 'Rejected' | 'No Answer' | 'Hang Up' | 'Blocked' | 'Suspended account' | 'Call Failed' | 'Call Failure' | 'Internal Error' | 'IP Phone Offline' | 'No Calling Credit' | 'Restricted Number' | 'Wrong Number' | 'Answered Not Accepted' | 'Stopped' | 'International Disabled' | 'International Restricted' | 'Abandoned' | 'Declined' | 'Received' | 'Fax on Demand' | 'Partial Receive' | 'Receive Error' | 'Fax Receipt Error' | 'Sent' | 'Fax Partially Sent' | 'Send Error' | 'Fax Not Sent' | 'Fax Poor Line');
-
-  /**
-   */
-  reason?: ('Accepted' | 'Connected' | 'line Busy' | 'Not Answered' | 'No Answer' | 'Hang Up' | 'Stopped' | 'Internal Error' | 'No Credit' | 'Restricted Number' | 'Wrong Number' | 'International Disabled' | 'International Restricted' | 'Bad Number' | 'Info 411 Restricted' | 'Customer 611 Restricted' | 'No Digital Line' | 'Failed Try Again' | 'Max Call Limit' | 'Too Many Calls' | 'Calls Not Accepted' | 'Number Not Allowed' | 'Number Blocked' | 'Number Disabled' | 'Resource Error' | 'Call Loop' | 'Fax Not Received' | 'Fax Partially Sent' | 'Fax Not Sent' | 'Fax Poor Line' | 'Fax Prepare Error' | 'Fax Save Error' | 'Fax Send Error' | 'DescNoE911Address');
+  result?: ('Unknown' | 'Accepted' | 'Call connected' | 'In Progress' | 'Voicemail' | 'Reply' | 'Missed' | 'Busy' | 'Rejected' | 'No Answer' | 'Hang Up' | 'Blocked' | 'ResultEmpty' | 'Suspended account' | 'Call Failed' | 'Call Failure' | 'Internal Error' | 'IP Phone Offline' | 'No Calling Credit' | 'Not Allowed' | 'Restricted Number' | 'Wrong Number' | 'Answered Not Accepted' | 'Stopped' | 'Poor Line Quality' | 'International Disabled' | 'International Restricted' | 'Abandoned' | 'Declined' | 'Received' | 'Fax on Demand' | 'Partial Receive' | 'Receive Error' | 'Fax Receipt Error' | 'Fax Partially Sent' | 'No fax machine' | 'Send Error' | 'Sent' | 'Fax Not Sent' | 'Fax Poor Line');
 
   /**
    */
   reasonDescription?: string;
 
   /**
-   * The call start datetime in (ISO 8601)[https://en.wikipedia.org/wiki/ISO_8601] format including timezone, for example 2016-03-10T18:07:52.534Z
+   * The call start datetime in ISO 8601 format including timezone, for example 2016-03-10T18:07:52.534Z
    * Format: date-time
    */
   startTime?: string;
 
   /**
    * Call duration in seconds
+   * Format: int32
    */
   duration?: number;
 
@@ -115,13 +114,15 @@ interface CompanyCallLogRecord {
   billing?: BillingInfo;
 
   /**
-   * For 'Detailed' view only. The datetime when the call log record was modified in (ISO 8601)[https://en.wikipedia.org/wiki/ISO_8601] format including timezone, for example 2016-03-10T18:07:52.534Z
+   * For 'Detailed' view only. The datetime when the call log record
+ *  was modified in (ISO 8601)[https://en.wikipedia.org/wiki/ISO_8601] format
+ *  including timezone, for example *2016-03-10T18:07:52.534Z*
    * Format: date-time
    */
   lastModifiedTime?: string;
 
   /**
-   * Internal type of a call
+   * The internal type of the call
    */
   internalType?: ('Local' | 'LongDistance' | 'International' | 'Sip' | 'RingMe' | 'RingOut' | 'Usual' | 'TollFreeNumber' | 'VerificationNumber' | 'Vma' | 'LocalNumber' | 'ImsOutgoing' | 'ImsIncoming');
 }

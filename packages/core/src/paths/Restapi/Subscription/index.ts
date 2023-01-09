@@ -1,8 +1,8 @@
 import Renew from './Renew';
-import ModifySubscriptionRequest from '../../../definitions/ModifySubscriptionRequest';
+import UpdateSubscriptionRequest from '../../../definitions/UpdateSubscriptionRequest';
 import SubscriptionInfo from '../../../definitions/SubscriptionInfo';
 import CreateSubscriptionRequest from '../../../definitions/CreateSubscriptionRequest';
-import RecordsCollectionResourceSubscriptionResponse from '../../../definitions/RecordsCollectionResourceSubscriptionResponse';
+import SubscriptionListResource from '../../../definitions/SubscriptionListResource';
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../types';
 
 class Index {
@@ -26,18 +26,19 @@ class Index {
   }
 
   /**
-   * Returns the list of subscriptions created by the logged-in user for the currently authorized client application.
+   * Returns a list of subscriptions created by the user for the current authorized client application.
+ *
    * HTTP Method: get
    * Endpoint: /restapi/{apiVersion}/subscription
    * Rate Limit Group: Light
    */
-  async list(restRequestConfig?: RestRequestConfig): Promise<RecordsCollectionResourceSubscriptionResponse> {
-    const r = await this.rc.get<RecordsCollectionResourceSubscriptionResponse>(this.path(false), undefined, restRequestConfig);
+  async list(restRequestConfig?: RestRequestConfig): Promise<SubscriptionListResource> {
+    const r = await this.rc.get<SubscriptionListResource>(this.path(false), undefined, restRequestConfig);
     return r.data;
   }
 
   /**
-   * Creates a new subscription.
+   * Creates a new subscription for the current authorized user / client application.
    * HTTP Method: post
    * Endpoint: /restapi/{apiVersion}/subscription
    * Rate Limit Group: Medium
@@ -48,7 +49,7 @@ class Index {
   }
 
   /**
-   * Returns the requested subscription by ID.
+   * Returns the existing subscription by ID.
    * HTTP Method: get
    * Endpoint: /restapi/{apiVersion}/subscription/{subscriptionId}
    * Rate Limit Group: Light
@@ -62,21 +63,28 @@ class Index {
   }
 
   /**
-   * Updates the existent subscription. The client application can extend/narrow the events for which it receives notifications within the frame of one subscription. If event filters are specified, calling this method modifies them for the existing subscription. The method also allows to set the subscription expiration time. If other than `events` and `expiresIn` parameters are passed in request they will be ignored. If the request body is empty then the specified subscription will be just renewed without any event filter change and with expiration time default.
+   * Updates the existing subscription. The client application can extend/narrow
+ * the list of events for which it receives notifications within this subscription.
+ * If event filters are specified, calling this method modifies them for the
+ * existing subscription. The method also allows to set the subscription expiration time.
+ * If other than `events` and `expiresIn` parameters are passed in the request they will be ignored.
+ * If the request body is empty then the specified subscription will be just renewed without any
+ * event filter modifications and with default expiration time.
+ *
    * HTTP Method: put
    * Endpoint: /restapi/{apiVersion}/subscription/{subscriptionId}
    * Rate Limit Group: Medium
    */
-  async put(modifySubscriptionRequest: ModifySubscriptionRequest, restRequestConfig?: RestRequestConfig): Promise<SubscriptionInfo> {
+  async put(updateSubscriptionRequest: UpdateSubscriptionRequest, restRequestConfig?: RestRequestConfig): Promise<SubscriptionInfo> {
     if (this.subscriptionId === null) {
       throw new Error('subscriptionId must be specified.');
     }
-    const r = await this.rc.put<SubscriptionInfo>(this.path(), modifySubscriptionRequest, undefined, restRequestConfig);
+    const r = await this.rc.put<SubscriptionInfo>(this.path(), updateSubscriptionRequest, undefined, restRequestConfig);
     return r.data;
   }
 
   /**
-   * Cancels the existent subscription.
+   * Cancels the existing subscription.
    * HTTP Method: delete
    * Endpoint: /restapi/{apiVersion}/subscription/{subscriptionId}
    * Rate Limit Group: Medium

@@ -5,7 +5,8 @@ import UserContactsGroupsInfo from './UserContactsGroupsInfo';
 
 interface ContactList {
   /**
-   * link to the list of user personal contacts
+   * Link to the list of user personal contacts
+   * Format: uri
    */
   uri?: string;
 

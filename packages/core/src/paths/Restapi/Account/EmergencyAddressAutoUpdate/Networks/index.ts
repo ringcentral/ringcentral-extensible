@@ -2,6 +2,7 @@ import UpdateNetworkRequest from '../../../../../definitions/UpdateNetworkReques
 import NetworkInfo from '../../../../../definitions/NetworkInfo';
 import CreateNetworkRequest from '../../../../../definitions/CreateNetworkRequest';
 import NetworksList from '../../../../../definitions/NetworksList';
+import ListNetworksParameters from '../../../../../definitions/ListNetworksParameters';
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
@@ -25,20 +26,24 @@ class Index {
   }
 
   /**
-   * Returns corporate networks map with emergency addresses assigned to the current account.
+   * Returns a corporate network map with emergency addresses assigned
+ * to the current account.
+ *
    * HTTP Method: get
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/networks
    * Rate Limit Group: Heavy
    * App Permission: EditAccounts
    * User Permission: ConfigureEmergencyMaps
    */
-  async list(restRequestConfig?: RestRequestConfig): Promise<NetworksList> {
-    const r = await this.rc.get<NetworksList>(this.path(false), undefined, restRequestConfig);
+  async list(queryParams?: ListNetworksParameters, restRequestConfig?: RestRequestConfig): Promise<NetworksList> {
+    const r = await this.rc.get<NetworksList>(this.path(false), queryParams, restRequestConfig);
     return r.data;
   }
 
   /**
-   * Creates a new network in corporate ethernet map for assignment of emergency addresses to network access points.
+   * Creates a new network in a corporate ethernet map for assignment
+ * of emergency addresses to network access points.
+ *
    * HTTP Method: post
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/networks
    * Rate Limit Group: Heavy
@@ -51,7 +56,9 @@ class Index {
   }
 
   /**
-   * Returns the specified network with emergency addresses assigned to the current account.
+   * Returns the specified network with emergency addresses assigned
+ * to the current account.
+ *
    * HTTP Method: get
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/networks/{networkId}
    * Rate Limit Group: Medium
@@ -67,23 +74,27 @@ class Index {
   }
 
   /**
-   * Updates network in corporate ethernet map for assignment of emergency addresses to network access points.
+   * Updates a network in a corporate ethernet map for assignment of emergency
+ * addresses to network access points.
+ *
    * HTTP Method: put
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/networks/{networkId}
    * Rate Limit Group: Heavy
    * App Permission: EditAccounts
    * User Permission: ConfigureEmergencyMaps
    */
-  async put(updateNetworkRequest: UpdateNetworkRequest, restRequestConfig?: RestRequestConfig): Promise<string> {
+  async put(updateNetworkRequest: UpdateNetworkRequest, restRequestConfig?: RestRequestConfig): Promise<NetworkInfo> {
     if (this.networkId === null) {
       throw new Error('networkId must be specified.');
     }
-    const r = await this.rc.put<string>(this.path(), updateNetworkRequest, undefined, restRequestConfig);
+    const r = await this.rc.put<NetworkInfo>(this.path(), updateNetworkRequest, undefined, restRequestConfig);
     return r.data;
   }
 
   /**
-   * Deletes network(s) in corporate ethernet map for Automatic Location Updates feature.
+   * Deletes network(s) in a corporate ethernet map for Automatic Location
+ * Updates feature.
+ *
    * HTTP Method: delete
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/networks/{networkId}
    * Rate Limit Group: Heavy

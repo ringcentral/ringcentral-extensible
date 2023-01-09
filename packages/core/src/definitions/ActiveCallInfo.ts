@@ -37,6 +37,7 @@ interface ActiveCallInfo {
 
   /**
    * Time when the call is actually started
+   * Format: date-time
    */
   startTime?: string;
 

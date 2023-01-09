@@ -10,6 +10,7 @@ interface GetPresenceExtensionInfo {
 
   /**
    * Canonical URI of an extension
+   * Format: uri
    */
   uri?: string;
 
