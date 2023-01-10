@@ -35,7 +35,7 @@ export async function request<T>(
   newConfig.headers = {
     ...newConfig.headers,
     'X-User-Agent': `${this.rc.rest!.appName}/${this.rc.rest!.appVersion} ringcentral-extensible/ws/${version}`,
-  };
+  } as any;
   const messageId = uuid();
   const requestBody = [
     {

@@ -115,7 +115,7 @@ class WebSocketExtension extends SdkExtension {
         }
         if (
           // the following cannot be done with WebSocket
-          (config?.headers?.['Content-Type'] as string | undefined)?.includes(
+          (config?.headers?.getContentType?.toString())?.includes(
             'multipart/form-data',
           )
           || config?.responseType === 'arraybuffer'

@@ -47,14 +47,16 @@ export default class Rest {
         'X-User-Agent': `${this.appName}/${this.appVersion} ringcentral-extensible/core/${version}`,
       },
       validateStatus: () => true,
-      paramsSerializer: (params) => qs.stringify(params, { arrayFormat: 'repeat' }),
+      paramsSerializer: {
+        serialize: (params) => qs.stringify(params, { arrayFormat: 'repeat' }),
+      },
     });
 
     this.httpClient.interceptors.request.use((config) => {
       if (Buffer.isBuffer(config.data)) {
         return {
           ...config,
-          headers: { ...config.headers, 'Content-Type': `multipart/form-data; boundary=${boundary}` },
+          headers: { ...config.headers, 'Content-Type': `multipart/form-data; boundary=${boundary}` } as any,
         };
       }
       return config;
@@ -95,7 +97,7 @@ export default class Rest {
       newConfig.headers = {
         ...newConfig.headers,
         Authorization: `Bearer ${this.token?.access_token}`,
-      };
+      } as any;
     }
     const r = await this.httpClient.request<T>(newConfig);
 
