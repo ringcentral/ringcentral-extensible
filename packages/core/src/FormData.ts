@@ -37,7 +37,7 @@ class FormData {
       const { filename: fileName, contentType, content } = formFile;
       let temp = `--${boundary}\r\n`;
       temp += `Content-Type: ${contentType}\r\n`;
-      temp += `Content-Disposition: form-data; name="${fileName}"; filename="${fileName}"\r\n\r\n`;
+      temp += `Content-Disposition: form-data; name="attachment"; filename="${fileName}"\r\n\r\n`;
       formData = Buffer.concat([formData, Buffer.from(temp, 'utf-8')]);
       let fileBuffer = Buffer.alloc(0);
       if (typeof content === 'string') {
