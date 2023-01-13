@@ -25,7 +25,7 @@
     "@rc-ex/core": "file:../../core"
   },
   "peerDependencies": {
-    "@rc-ex/core": ">=1.0.0"
+    "@rc-ex/core": ">0.9"
   },
   "yarn-upgrade-all": {
     "ignore": [
