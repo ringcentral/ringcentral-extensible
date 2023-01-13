@@ -21,9 +21,14 @@
     "@rc-ex/retry": "^1.0.1-alpha.0"
   },
   "devDependencies": {
-    "@rc-ex/core": "^1.0.1-alpha.0"
+    "@rc-ex/core": "file:../../core"
   },
   "peerDependencies": {
-    "@rc-ex/core": "^1.0.1-alpha.0"
+    "@rc-ex/core": ">=1.0.0"
+  },
+  "yarn-upgrade-all": {
+    "ignore": [
+      "@rc-ex/core"
+    ]
   }
 }

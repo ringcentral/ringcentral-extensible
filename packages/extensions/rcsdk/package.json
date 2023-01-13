@@ -18,11 +18,16 @@
     "access": "public"
   },
   "devDependencies": {
-    "@rc-ex/core": "^1.0.1-alpha.0",
+    "@rc-ex/core": "file:../../core",
     "@ringcentral/sdk": "^4.7.3"
   },
   "peerDependencies": {
-    "@rc-ex/core": "^1.0.1-alpha.0",
+    "@rc-ex/core": ">=1.0.0",
     "@ringcentral/sdk": "^4.7.3"
+  },
+  "yarn-upgrade-all": {
+    "ignore": [
+      "@rc-ex/core"
+    ]
   }
 }
