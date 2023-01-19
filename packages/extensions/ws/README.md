@@ -2,6 +2,8 @@
 
 WebSocket Extension adds support for WebSocket protocol.
 
+Please do read this article: [Create WebSocket subscriptions using RingCentral JavaScript SDKs](https://medium.com/@tylerlong/create-websocket-subscriptions-using-ringcentral-javascript-sdks-1204ce5843b8).
+
 
 ## Install
 
