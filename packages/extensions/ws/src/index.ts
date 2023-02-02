@@ -6,7 +6,7 @@ import {
   RestResponse,
 } from '@rc-ex/core/lib/types';
 import SdkExtension from '@rc-ex/core/lib/SdkExtension';
-import WS, { OPEN, CONNECTING, MessageEvent } from 'isomorphic-ws';
+import WS, { MessageEvent } from 'isomorphic-ws';
 import hyperid from 'hyperid';
 import { EventEmitter } from 'events';
 import waitFor from 'wait-for-async';
@@ -26,6 +26,9 @@ import {
 import Subscription from './subscription';
 import ConnectionException from './exceptions/ConnectionException';
 import Utils from './utils';
+
+const CONNECTING = 0;
+const OPEN = 1;
 
 const uuid = hyperid();
 
