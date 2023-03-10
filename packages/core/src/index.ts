@@ -10,6 +10,7 @@ import {
   RestRequestConfig, RestResponse, RingCentralInterface, RestMethod,
   RestOptions,
 } from './types';
+import TeamMessaging from './paths/TeamMessaging';
 
 type JwtFlowOptions = {
   jwt: string;
@@ -243,6 +244,10 @@ class RingCentral implements RingCentralInterface {
 
   analytics(): Analytics {
     return new Analytics(this);
+  }
+
+  teamMessaging(version: string | null = 'v1'): TeamMessaging {
+    return new TeamMessaging(this, version);
   }
 }
 
