@@ -1,4 +1,4 @@
-import SDK from '@ringcentral/sdk';
+import { SDK } from '@ringcentral/sdk';
 import waitFor from 'wait-for-async';
 // import dotenv from 'dotenv-override-true';
 // import path from 'path';

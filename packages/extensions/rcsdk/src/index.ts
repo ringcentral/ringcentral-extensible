@@ -53,7 +53,7 @@ class RcSdkExtension extends SdkExtension {
           url: endpoint,
           data: content,
           params: queryParams,
-        },
+        } as any,
       };
       if (r.ok) {
         return response;

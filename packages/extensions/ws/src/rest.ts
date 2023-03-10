@@ -60,7 +60,7 @@ export async function request<T>(
     status: meta.status,
     statusText: getReasonPhrase(meta.status),
     headers: meta.headers,
-    config: newConfig,
+    config: newConfig as any,
   };
   if (
     meta.type === 'ClientRequest'
