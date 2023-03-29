@@ -13,12 +13,12 @@
     "@rc-ex/rcsdk": "^1.0.6",
     "@rc-ex/ws": "^1.0.6",
     "@ringcentral/sdk": "^4.7.4",
-    "@types/jest": "^29.4.0",
+    "@types/jest": "^29.5.0",
     "dotenv-override-true": "^6.2.2",
     "jest": "^29.5.0",
     "ts-jest": "^29.0.5",
     "ts-node": "^10.9.1",
-    "wait-for-async": "^0.6.0",
+    "wait-for-async": "^0.6.1",
     "winston": "^3.8.2"
   }
 }
