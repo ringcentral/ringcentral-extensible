@@ -3,38 +3,6 @@ import FormData from './FormData';
 import Attachment from './definitions/Attachment';
 import { RestResponse } from './types';
 
-// class FormDataBackup {
-//   readableParts: string[] = [];
-
-//   toJSON(): string {
-//     return this.readableParts.join('\n');
-//   }
-
-//   append(
-//     key: string,
-//     value: string | Buffer | Blob | NodeJS.ReadableStream,
-//     options?: { filename?: string; contentType?: string },
-//   ): void {
-//     this.readableParts.push(
-//       JSON.stringify({
-//         ...options,
-//         content: typeof value === 'string' ? value : '<binary data>',
-//       }),
-//     );
-//     if (typeof Blob !== 'undefined') {
-//       // for browser
-//       if (typeof value === 'string') {
-//         // plain text file
-//         // eslint-disable-next-line no-undef
-//         value = new Blob([value], { type: options?.contentType });
-//       }
-//       super.append(key, value, options?.filename);
-//     } else {
-//       super.append(key, value, options);
-//     }
-//   }
-// }
-
 class Utils {
   static formatTraffic(r: RestResponse): string {
     return `HTTP ${r.status} ${r.statusText}${r.data.message ? ` - ${r.data.message}` : ''
@@ -80,7 +48,6 @@ class Utils {
   static getFormData(...objects: {}[]): Promise<Buffer> {
     const formData = new FormData();
     const obj = Object.assign({}, ...objects);
-    const attachments: Attachment[] = [];
     for (const key of Object.keys(obj)) {
       const value = obj[key];
       if (value === undefined || value === null) {
@@ -88,18 +55,26 @@ class Utils {
         continue;
       }
       if (Utils.isAttachment(value)) {
-        attachments.push(value);
+        const attachment = value as Attachment;
+        formData.append({
+          name: key, filename: attachment.filename!, contentType: attachment.contentType!, content: attachment.content!,
+        });
         delete obj[key];
         continue;
       }
       if (Array.isArray(value) && Utils.isAttachment(value[0])) {
-        attachments.push(...value);
+        for (const attachment of value) {
+          formData.append({
+            name: key, filename: attachment.filename!, contentType: attachment.contentType!, content: attachment.content!,
+          });
+        }
         delete obj[key];
       }
     }
-    formData.append('request.json', 'application/json', JSON.stringify(obj));
-    for (const attachment of attachments) {
-      formData.append(attachment.filename!, attachment.contentType!, attachment.content!);
+    if (Object.keys(obj).length > 0) {
+      formData.prepend({
+        name: 'request.json', filename: 'request.json', contentType: 'application/json', content: JSON.stringify(obj),
+      });
     }
     return formData.getBody();
   }

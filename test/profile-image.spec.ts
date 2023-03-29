@@ -1,6 +1,6 @@
 import RingCentral from '@rc-ex/core';
-// import fs from 'fs';
-// import path from 'path';
+import fs from 'fs';
+import path from 'path';
 
 describe('Profile image', () => {
   test('download', async () => {
@@ -14,15 +14,40 @@ describe('Profile image', () => {
       extension: process.env.RINGCENTRAL_EXTENSION!,
       password: process.env.RINGCENTRAL_PASSWORD!,
     });
-    // comment out because of 503 Service Unavailable
-    // const buffer = await rc
-    //   .restapi()
-    //   .account()
-    //   .extension()
-    //   .profileImage()
-    //   .list();
-    // expect(buffer.constructor.name).toBe('Buffer');
-    // fs.writeFileSync(path.join(__dirname, 'temp.png'), buffer);
+    const buffer = await rc
+      .restapi()
+      .account()
+      .extension()
+      .profileImage()
+      .list();
+    expect(buffer.constructor.name).toBe('Buffer');
+    fs.writeFileSync(path.join(__dirname, 'temp.png'), buffer);
+    await rc.revoke();
+  });
+
+  test('upload', async () => {
+    const rc = new RingCentral({
+      clientId: process.env.RINGCENTRAL_CLIENT_ID!,
+      clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET!,
+      server: process.env.RINGCENTRAL_SERVER_URL!,
+    });
+    await rc.login({
+      username: process.env.RINGCENTRAL_USERNAME!,
+      extension: process.env.RINGCENTRAL_EXTENSION!,
+      password: process.env.RINGCENTRAL_PASSWORD!,
+    });
+    await rc
+      .restapi()
+      .account()
+      .extension()
+      .profileImage()
+      .post({
+        image: {
+          filename: 'rc.png',
+          contentType: 'image/png',
+          content: fs.readFileSync('./test.png'),
+        },
+      });
     await rc.revoke();
   });
 

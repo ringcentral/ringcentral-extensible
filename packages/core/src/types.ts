@@ -56,3 +56,10 @@ export type RestOptions = {
 };
 
 export type RestMethod = Method;
+
+export interface FormFile {
+  name: string;
+  filename: string;
+  contentType: string;
+  content: string | Buffer | Blob | NodeJS.ReadableStream;
+}
