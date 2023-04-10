@@ -207,20 +207,19 @@ class WebSocketExtension extends SdkExtension {
     // browser only code end
   }
 
-  recover() {
-    if (!this._recoverPromise) {
-      this._recoverPromise = (async () => {
-        try {
-          const res = await this._recover();
-          this._recoverPromise = undefined;
-          return res;
-        } catch (e) {
-          this._recoverPromise = undefined;
-          throw e;
-        }
-      })();
+  async recover() {
+    if (this._recoverPromise) {
+      return this._recoverPromise;
     }
-    return this._recoverPromise;
+    this._recoverPromise = this._recover();
+    try {
+      await this._recoverPromise;
+      this._recoverPromise = undefined;
+    } catch (ex) {
+      this._recoverPromise = undefined;
+      throw ex;
+    }
+    return undefined;
   }
 
   async _recover() {
@@ -277,20 +276,19 @@ class WebSocketExtension extends SdkExtension {
     }
   }
 
-  connect(recoverSession?: boolean) {
-    if (!this._connectPromise) {
-      this._connectPromise = (async () => {
-        try {
-          const res = await this._connect(recoverSession);
-          this._connectPromise = undefined;
-          return res;
-        } catch (e) {
-          this._connectPromise = undefined;
-          throw e;
-        }
-      })();
+  async connect(recoverSession?: boolean) {
+    if (this._connectPromise) {
+      return this._connectPromise;
     }
-    return this._connectPromise;
+    this._connectPromise = this._connect(recoverSession);
+    try {
+      await this._connectPromise;
+      this._connectPromise = undefined;
+    } catch (ex) {
+      this._connectPromise = undefined;
+      throw ex;
+    }
+    return undefined;
   }
 
   async _connect(recoverSession = false) {
