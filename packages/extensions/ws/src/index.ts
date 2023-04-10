@@ -277,7 +277,7 @@ class WebSocketExtension extends SdkExtension {
     }
   }
 
-  connect(recoverSession: boolean) {
+  connect(recoverSession?: boolean) {
     if (!this._connectPromise) {
       this._connectPromise = (async () => {
         try {
