@@ -12,7 +12,6 @@ import { EventEmitter } from 'events';
 import waitFor from 'wait-for-async';
 import RestException from '@rc-ex/core/lib/RestException';
 import SubscriptionInfo from '@rc-ex/core/lib/definitions/SubscriptionInfo';
-import debounce from 'lodash/debounce';
 
 import { request } from './rest';
 import {
@@ -59,9 +58,9 @@ class WebSocketExtension extends SdkExtension {
 
   subscriptions: Subscription[] = [];
 
-  recover: Function;
+  _recoverPromise?: Promise<void>;
 
-  connect: Function;
+  _connectPromise?: Promise<void>;
 
   // for auto recover
   intervalHandle?: NodeJS.Timeout;
@@ -85,14 +84,6 @@ class WebSocketExtension extends SdkExtension {
       return Math.min(8000, interval);
     };
     this.options.autoRecover.pingServerInterval ??= 30000;
-    this.recover = debounce(this._recover, 1000, {
-      leading: true,
-      trailing: false,
-    });
-    this.connect = debounce(this._connect, 1000, {
-      leading: true,
-      trailing: false,
-    });
   }
 
   disable() {
@@ -216,6 +207,22 @@ class WebSocketExtension extends SdkExtension {
     // browser only code end
   }
 
+  recover() {
+    if (!this._recoverPromise) {
+      this._recoverPromise = (async () => {
+        try {
+          const res = await this._recover();
+          this._recoverPromise = undefined;
+          return res;
+        } catch (e) {
+          this._recoverPromise = undefined;
+          throw e;
+        }
+      })();
+    }
+    return this._recoverPromise;
+  }
+
   async _recover() {
     if (this.ws?.readyState === OPEN || this.ws?.readyState === CONNECTING) {
       return;
@@ -268,6 +275,22 @@ class WebSocketExtension extends SdkExtension {
     } catch (e) {
       this.ws?.close(); // Explicitly mark WS as closed
     }
+  }
+
+  connect(recoverSession: boolean) {
+    if (!this._connectPromise) {
+      this._connectPromise = (async () => {
+        try {
+          const res = await this._connect(recoverSession);
+          this._connectPromise = undefined;
+          return res;
+        } catch (e) {
+          this._connectPromise = undefined;
+          throw e;
+        }
+      })();
+    }
+    return this._connectPromise;
   }
 
   async _connect(recoverSession = false) {
