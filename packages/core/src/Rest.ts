@@ -13,7 +13,7 @@ import {
   RestResponse,
 } from './types';
 
-const version = '1.0.0-alpha';
+const version = '1.1.3';
 
 export default class Rest {
   static sandboxServer = 'https://platform.devtest.ringcentral.com';
