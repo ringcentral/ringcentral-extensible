@@ -1,6 +1,7 @@
 interface PresetInfo {
   /**
    * Link to a greeting resource
+   * Format: uri
    */
   uri?: string;
 

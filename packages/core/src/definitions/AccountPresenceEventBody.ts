@@ -4,6 +4,7 @@
 interface AccountPresenceEventBody {
   /**
    * Internal identifier of an extension. Optional parameter
+   * Default: ~
    */
   extensionId?: string;
 

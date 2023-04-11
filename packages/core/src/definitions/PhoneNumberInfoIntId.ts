@@ -30,7 +30,8 @@ interface PhoneNumberInfoIntId {
   location?: string;
 
   /**
-   * Payment type. 'External' is returned for forwarded numbers which are not terminated in the RingCentral phone system
+   * Payment type. 'External' is returned for forwarded numbers
+ *  which are not terminated in the RingCentral phone system
    */
   paymentType?: ('External' | 'TollFree' | 'Local');
 
@@ -40,7 +41,9 @@ interface PhoneNumberInfoIntId {
   phoneNumber?: string;
 
   /**
-   * Status of a phone number. If the value is 'Normal', the phone number is ready to be used. Otherwise it is an external number not yet ported to RingCentral
+   * Status of a phone number. If the value is 'Normal', the phone
+ *  number is ready to be used. Otherwise it is an external number not yet
+ *  ported to RingCentral
    */
   status?: string;
 

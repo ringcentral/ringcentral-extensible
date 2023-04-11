@@ -1,4 +1,4 @@
-import ActiveCallsResponse from '../../../../../definitions/ActiveCallsResponse';
+import CallLogResponse from '../../../../../definitions/CallLogResponse';
 import ListExtensionActiveCallsParameters from '../../../../../definitions/ListExtensionActiveCallsParameters';
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
@@ -26,8 +26,8 @@ class Index {
    * App Permission: ReadCallLog
    * User Permission: ReadCallLog
    */
-  async get(queryParams?: ListExtensionActiveCallsParameters, restRequestConfig?: RestRequestConfig): Promise<ActiveCallsResponse> {
-    const r = await this.rc.get<ActiveCallsResponse>(this.path(), queryParams, restRequestConfig);
+  async get(queryParams?: ListExtensionActiveCallsParameters, restRequestConfig?: RestRequestConfig): Promise<CallLogResponse> {
+    const r = await this.rc.get<CallLogResponse>(this.path(), queryParams, restRequestConfig);
     return r.data;
   }
 }

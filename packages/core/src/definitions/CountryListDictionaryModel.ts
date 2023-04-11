@@ -1,6 +1,6 @@
 import CountryInfoDictionaryModel from './CountryInfoDictionaryModel';
-import ProvisioningNavigationInfo from './ProvisioningNavigationInfo';
-import ProvisioningPagingInfo from './ProvisioningPagingInfo';
+import PageNavigationModel from './PageNavigationModel';
+import EnumeratedPagingModel from './EnumeratedPagingModel';
 
 interface CountryListDictionaryModel {
   /**
@@ -18,12 +18,12 @@ interface CountryListDictionaryModel {
   /**
    * Required
    */
-  navigation?: ProvisioningNavigationInfo;
+  navigation?: PageNavigationModel;
 
   /**
    * Required
    */
-  paging?: ProvisioningPagingInfo;
+  paging?: EnumeratedPagingModel;
 }
 
 export default CountryListDictionaryModel;

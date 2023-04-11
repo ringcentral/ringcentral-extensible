@@ -18,6 +18,7 @@ class Index {
 
   /**
    * Adds multiple opt-outs and/or opt-ins for the specified sender number and a set of recipient numbers.
+ *
    * HTTP Method: post
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/a2p-sms/opt-outs/bulk-assign
    * Rate Limit Group: Light

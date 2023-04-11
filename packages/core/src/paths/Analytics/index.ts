@@ -12,8 +12,8 @@ class Index {
     return '/analytics';
   }
 
-  calls(version: (string | null) = 'v1'): Calls {
-    return new Calls(this, version);
+  calls(): Calls {
+    return new Calls(this);
   }
 }
 export default Index;

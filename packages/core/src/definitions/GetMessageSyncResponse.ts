@@ -4,6 +4,7 @@ import SyncInfoMessages from './SyncInfoMessages';
 interface GetMessageSyncResponse {
   /**
    * Link to the message sync resource
+   * Format: uri
    */
   uri?: string;
 

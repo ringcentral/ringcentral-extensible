@@ -1,6 +1,6 @@
 import SwitchInfo from './SwitchInfo';
-import ProvisioningNavigationInfo from './ProvisioningNavigationInfo';
-import ProvisioningPagingInfo from './ProvisioningPagingInfo';
+import PageNavigationModel from './PageNavigationModel';
+import EnumeratedPagingModel from './EnumeratedPagingModel';
 
 interface SwitchesList {
   /**
@@ -10,11 +10,11 @@ interface SwitchesList {
 
   /**
    */
-  navigation?: ProvisioningNavigationInfo;
+  navigation?: PageNavigationModel;
 
   /**
    */
-  paging?: ProvisioningPagingInfo;
+  paging?: EnumeratedPagingModel;
 }
 
 export default SwitchesList;

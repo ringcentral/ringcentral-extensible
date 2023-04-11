@@ -3,37 +3,46 @@
 */
 interface ListExtensionDevicesParameters {
   /**
+   * The result set page number (1-indexed) to return
+   * Maximum: 1000
+   * Minimum: 1
+   * Format: int32
+   * Example: 1
+   * Default: 1
+   */
+  page?: number;
+
+  /**
+   * The number of items per page. If provided value in the request
+ *  is greater than a maximum, the maximum value is applied
+   * Maximum: 1000
+   * Minimum: 1
+   * Format: int32
+   * Example: 100
+   * Default: 100
+   */
+  perPage?: number;
+
+  /**
    * Pooling type of a device
    */
   linePooling?: ('Host' | 'Guest' | 'None');
 
   /**
-   * Device feature or multiple features supported
+   * Device feature
    */
-  feature?: ('Intercom' | 'Paging' | 'BLA' | 'HELD');
-
-  /**
-   * Number of a page to be returned
-   * Default: 1
-   */
-  page?: string;
-
-  /**
-   * Number of records per page to be returned
-   * Default: 100
-   */
-  perPage?: string;
+  feature?: ('BLA' | 'CommonPhone' | 'Intercom' | 'Paging' | 'HELD');
 
   /**
    * Device type
    * Default: HardPhone
    */
-  line?: ('Room' | 'SoftPhone' | 'OtherPhone' | 'HardPhone' | 'Paging' | 'WebRTC');
+  type?: ('HardPhone' | 'SoftPhone' | 'OtherPhone' | 'MobileDevice' | 'BLA' | 'Paging' | 'WebPhone' | 'Room');
 
   /**
-   * Type of phone line
+   * The type of a phone line
    */
-  lineType?: ('Standalone' | 'StandaloneFree' | 'BlaPrimary' | 'BlaSecondary');
+  lineType?: ('Unknown' | 'Standalone' | 'StandaloneFree' | 'BlaPrimary' | 'BlaSecondary');
 }
 
 export default ListExtensionDevicesParameters;

@@ -3,6 +3,7 @@
 */
 interface ListAssignedRolesParameters {
   /**
+   * Specifies if hidden roles are shown or not
    */
   showHidden?: boolean;
 }

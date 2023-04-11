@@ -17,7 +17,9 @@ class Index {
   }
 
   /**
-   * Returns the list of user permissions granted at authorization procedure. Please note: Some permissions may be restricted by extension type.
+   * Returns a list of user permissions granted at authorization procedure.
+ * Please note: Some permissions may be restricted by extension type.
+ *
    * HTTP Method: get
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/authz-profile
    * Rate Limit Group: Medium

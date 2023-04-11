@@ -9,6 +9,7 @@ interface CustomCompanyGreetingLanguageInfo {
 
   /**
    * Link to a greeting language
+   * Format: uri
    */
   uri?: string;
 

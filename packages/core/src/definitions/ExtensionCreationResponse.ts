@@ -5,7 +5,7 @@ import ProfileImageInfo from './ProfileImageInfo';
 import ReferenceInfo from './ReferenceInfo';
 import RegionalSettings from './RegionalSettings';
 import ExtensionServiceFeatureInfo from './ExtensionServiceFeatureInfo';
-import AutomaticLocationUpdatesSiteInfo from './AutomaticLocationUpdatesSiteInfo';
+import ProvisioningSiteInfo from './ProvisioningSiteInfo';
 import ExtensionStatusInfo from './ExtensionStatusInfo';
 
 interface ExtensionCreationResponse {
@@ -84,7 +84,7 @@ interface ExtensionCreationResponse {
 
   /**
    */
-  site?: AutomaticLocationUpdatesSiteInfo;
+  site?: ProvisioningSiteInfo;
 
   /**
    * Extension current state. If 'Unassigned' is specified, then

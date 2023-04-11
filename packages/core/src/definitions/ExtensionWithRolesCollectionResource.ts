@@ -1,4 +1,6 @@
 import ExtensionWithRolesResource from './ExtensionWithRolesResource';
+import EnumeratedPagingModel from './EnumeratedPagingModel';
+import PageNavigationModel from './PageNavigationModel';
 
 interface ExtensionWithRolesCollectionResource {
   /**
@@ -9,6 +11,14 @@ interface ExtensionWithRolesCollectionResource {
   /**
    */
   records?: ExtensionWithRolesResource[];
+
+  /**
+   */
+  paging?: EnumeratedPagingModel;
+
+  /**
+   */
+  navigation?: PageNavigationModel;
 }
 
 export default ExtensionWithRolesCollectionResource;

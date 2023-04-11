@@ -12,6 +12,7 @@ interface GetInternalTextMessageInfoResponse {
 
   /**
    * Canonical URI of a message
+   * Format: uri
    */
   uri?: string;
 
@@ -21,12 +22,16 @@ interface GetInternalTextMessageInfoResponse {
   attachments?: MessageAttachmentInfo[];
 
   /**
-   * Message availability status. Message in 'Deleted' state is still preserved with all its attachments and can be restored. 'Purged' means that all attachments are already deleted and the message itself is about to be physically deleted shortly
+   * Message availability status. Message in 'Deleted' state is still
+ *  preserved with all its attachments and can be restored. 'Purged' means
+ *  that all attachments are already deleted and the message itself is about
+ *  to be physically deleted shortly
    */
   availability?: ('Alive' | 'Deleted' | 'Purged');
 
   /**
-   * SMS and Pager only. Identifier of a conversation that the message belongs to
+   * SMS and Pager only. Identifier of a conversation that the message
+ *  belongs to
    * Format: int64
    */
   conversationId?: number;
@@ -36,13 +41,16 @@ interface GetInternalTextMessageInfoResponse {
   conversation?: ConversationInfo;
 
   /**
-   * Message creation datetime in ISO 8601 format including timezone, for example 2016-03-10T18:07:52.534Z
+   * Message creation datetime in ISO 8601 format including timezone,
+ *  for example 2016-03-10T18:07:52.534Z
    * Format: date-time
    */
   creationTime?: string;
 
   /**
-   * Message direction. Note that for some message types not all directions are allowed. For example voicemail messages can be only inbound
+   * Text message direction. Note that for some message types not all
+ *  directions are allowed. For example voicemail messages can
+ *  be only inbound
    */
   direction?: ('Inbound' | 'Outbound');
 
@@ -51,18 +59,25 @@ interface GetInternalTextMessageInfoResponse {
   from?: MessageStoreCallerInfoResponseFrom;
 
   /**
-   * The datetime when the message was modified on server in ISO 8601 format including timezone, for example 2016-03-10T18:07:52.534Z
+   * Datetime when the message was modified on server in ISO
+ *  8601 format including timezone, for example 2016-03-10T18:07:52.534Z
    * Format: date-time
    */
   lastModifiedTime?: string;
 
   /**
-   * Message status. Different message types may have different allowed status values. For outbound faxes the aggregated message status is returned: If status for at least one recipient is 'Queued', then 'Queued' value is returned If status for at least one recipient is 'SendingFailed', then 'SendingFailed' value is returned In other cases Sent status is returned
+   * Message status. Different message types may have different
+ *  allowed status values. For outbound faxes the aggregated message status
+ *  is returned. If, for outbound message, a status for at least one recipient is 'Queued', then
+ *  the 'Queued' value is returned. If a status for at least one recipient is
+ *  'SendingFailed', then the 'SendingFailed' value is returned. In other cases
+ *  the 'Sent' status is returned
    */
   messageStatus?: ('Queued' | 'Sent' | 'Delivered' | 'DeliveryFailed' | 'SendingFailed' | 'Received');
 
   /**
-   * 'Pager' only. 'True' if at least one of the message recipients is 'Department' extension
+   * Pager only. 'True' if at least one of a message recipients
+ *  is 'Department' extension
    */
   pgToDepartment?: boolean;
 
@@ -77,7 +92,8 @@ interface GetInternalTextMessageInfoResponse {
   readStatus?: ('Read' | 'Unread');
 
   /**
-   * Message subject. For SMS and Pager messages it replicates message text which is also returned as an attachment
+   * Message subject. For SMS and Pager messages it replicates message
+ *  text which is also returned as an attachment
    */
   subject?: string;
 

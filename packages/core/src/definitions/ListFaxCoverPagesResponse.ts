@@ -1,9 +1,10 @@
 import FaxCoverPageInfo from './FaxCoverPageInfo';
-import MessagingNavigationInfo from './MessagingNavigationInfo';
-import MessagingPagingInfo from './MessagingPagingInfo';
+import PageNavigationModel from './PageNavigationModel';
+import EnumeratedPagingModel from './EnumeratedPagingModel';
 
 interface ListFaxCoverPagesResponse {
   /**
+   * Format: uri
    */
   uri?: string;
 
@@ -13,11 +14,11 @@ interface ListFaxCoverPagesResponse {
 
   /**
    */
-  navigation?: MessagingNavigationInfo;
+  navigation?: PageNavigationModel;
 
   /**
    */
-  paging?: MessagingPagingInfo;
+  paging?: EnumeratedPagingModel;
 }
 
 export default ListFaxCoverPagesResponse;

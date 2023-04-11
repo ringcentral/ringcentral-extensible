@@ -9,6 +9,7 @@ interface ConversationInfo {
 
   /**
    * Deprecated. Link to a conversation resource
+   * Format: uri
    */
   uri?: string;
 }

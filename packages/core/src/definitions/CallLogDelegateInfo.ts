@@ -4,6 +4,7 @@
 interface CallLogDelegateInfo {
   /**
    * Internal identifier of a Secretary extension
+   * Required
    */
   id?: string;
 

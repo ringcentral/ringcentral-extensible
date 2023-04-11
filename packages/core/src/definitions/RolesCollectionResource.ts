@@ -1,6 +1,6 @@
 import RoleResource from './RoleResource';
-import RNPPagingInfo from './RNPPagingInfo';
-import RNPNavigationInfo from './RNPNavigationInfo';
+import EnumeratedPagingModel from './EnumeratedPagingModel';
+import PageNavigationModel from './PageNavigationModel';
 
 interface RolesCollectionResource {
   /**
@@ -14,11 +14,11 @@ interface RolesCollectionResource {
 
   /**
    */
-  paging?: RNPPagingInfo;
+  paging?: EnumeratedPagingModel;
 
   /**
    */
-  navigation?: RNPNavigationInfo;
+  navigation?: PageNavigationModel;
 }
 
 export default RolesCollectionResource;

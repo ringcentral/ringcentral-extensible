@@ -26,8 +26,8 @@ class Index {
    * Endpoint: /restapi/oauth/revoke
    * Rate Limit Group: Auth
    */
-  async post(RevokeTokenRequest: RevokeTokenRequest, restRequestConfig?: RestRequestConfig): Promise<string> {
-    const r = await this.rc.post<string>(this.path(), RevokeTokenRequest, undefined, restRequestConfig);
+  async post(revokeTokenRequest: RevokeTokenRequest, restRequestConfig?: RestRequestConfig): Promise<string> {
+    const r = await this.rc.post<string>(this.path(), revokeTokenRequest, undefined, restRequestConfig);
     return r.data;
   }
 }

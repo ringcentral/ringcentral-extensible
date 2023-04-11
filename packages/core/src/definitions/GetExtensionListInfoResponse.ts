@@ -2,7 +2,7 @@ import ContactInfo from './ContactInfo';
 import ExtensionPermissions from './ExtensionPermissions';
 import ProfileImageInfo from './ProfileImageInfo';
 import CallQueueExtensionInfo from './CallQueueExtensionInfo';
-import AutomaticLocationUpdatesSiteInfo from './AutomaticLocationUpdatesSiteInfo';
+import ProvisioningSiteInfo from './ProvisioningSiteInfo';
 
 interface GetExtensionListInfoResponse {
   /**
@@ -72,7 +72,7 @@ interface GetExtensionListInfoResponse {
 
   /**
    */
-  site?: AutomaticLocationUpdatesSiteInfo;
+  site?: ProvisioningSiteInfo;
 }
 
 export default GetExtensionListInfoResponse;

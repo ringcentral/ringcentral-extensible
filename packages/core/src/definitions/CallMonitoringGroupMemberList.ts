@@ -1,6 +1,6 @@
 import CallMonitoringGroupMemberInfo from './CallMonitoringGroupMemberInfo';
-import ProvisioningNavigationInfo from './ProvisioningNavigationInfo';
-import ProvisioningPagingInfo from './ProvisioningPagingInfo';
+import PageNavigationModel from './PageNavigationModel';
+import EnumeratedPagingModel from './EnumeratedPagingModel';
 
 interface CallMonitoringGroupMemberList {
   /**
@@ -19,12 +19,12 @@ interface CallMonitoringGroupMemberList {
   /**
    * Required
    */
-  navigation?: ProvisioningNavigationInfo;
+  navigation?: PageNavigationModel;
 
   /**
    * Required
    */
-  paging?: ProvisioningPagingInfo;
+  paging?: EnumeratedPagingModel;
 }
 
 export default CallMonitoringGroupMemberList;

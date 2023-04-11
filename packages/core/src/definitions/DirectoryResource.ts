@@ -1,11 +1,11 @@
-import PagingInfo from './PagingInfo';
+import EnumeratedPagingModel from './EnumeratedPagingModel';
 import ContactResource from './ContactResource';
 
 interface DirectoryResource {
   /**
    * Required
    */
-  paging?: PagingInfo;
+  paging?: EnumeratedPagingModel;
 
   /**
    * Required

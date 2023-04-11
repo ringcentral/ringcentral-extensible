@@ -10,6 +10,7 @@ interface IVRMenuInfo {
 
   /**
    * Link to an IVR Menu extension resource
+   * Format: uri
    */
   uri?: string;
 

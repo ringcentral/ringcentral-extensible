@@ -1,6 +1,7 @@
 interface ExtensionPresenceEventBody {
   /**
    * Internal identifier of an extension. Optional parameter
+   * Default: ~
    */
   extensionId?: string;
 

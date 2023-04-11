@@ -1,6 +1,6 @@
 import UserPhoneNumberInfo from './UserPhoneNumberInfo';
-import ProvisioningNavigationInfo from './ProvisioningNavigationInfo';
-import ProvisioningPagingInfo from './ProvisioningPagingInfo';
+import PageNavigationModel from './PageNavigationModel';
+import EnumeratedPagingModel from './EnumeratedPagingModel';
 
 interface GetExtensionPhoneNumbersResponse {
   /**
@@ -18,12 +18,12 @@ interface GetExtensionPhoneNumbersResponse {
   /**
    * Required
    */
-  navigation?: ProvisioningNavigationInfo;
+  navigation?: PageNavigationModel;
 
   /**
    * Required
    */
-  paging?: ProvisioningPagingInfo;
+  paging?: EnumeratedPagingModel;
 }
 
 export default GetExtensionPhoneNumbersResponse;

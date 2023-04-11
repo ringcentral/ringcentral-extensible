@@ -1,10 +1,11 @@
 import CallRecordingExtensionInfo from './CallRecordingExtensionInfo';
-import NavigationInfo from './NavigationInfo';
-import EnumeratedPaging from './EnumeratedPaging';
+import PageNavigationModel from './PageNavigationModel';
+import EnumeratedPagingModel from './EnumeratedPagingModel';
 
 interface CallRecordingExtensions {
   /**
    * Link to call recording extension list resource
+   * Format: uri
    */
   uri?: string;
 
@@ -14,11 +15,11 @@ interface CallRecordingExtensions {
 
   /**
    */
-  navigation?: NavigationInfo;
+  navigation?: PageNavigationModel;
 
   /**
    */
-  paging?: EnumeratedPaging;
+  paging?: EnumeratedPagingModel;
 }
 
 export default CallRecordingExtensions;

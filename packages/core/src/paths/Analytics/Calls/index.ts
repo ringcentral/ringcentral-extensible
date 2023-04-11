@@ -1,4 +1,4 @@
-import Accounts from './Accounts';
+import V1 from './V1';
 import { RingCentralInterface, ParentInterface } from '../../../types';
 
 class Index {
@@ -6,23 +6,17 @@ class Index {
 
   parent: ParentInterface;
 
-  version: string | null;
-
-  constructor(parent: ParentInterface, version: string | null = 'v1') {
+  constructor(parent: ParentInterface) {
     this.parent = parent;
     this.rc = parent.rc;
-    this.version = version;
   }
 
-  path(withParameter = true): string {
-    if (withParameter && this.version !== null) {
-      return `${this.parent.path()}/calls/${this.version}`;
-    }
+  path(): string {
     return `${this.parent.path()}/calls`;
   }
 
-  accounts(accountId: (string | null) = null): Accounts {
-    return new Accounts(this, accountId);
+  v1(): V1 {
+    return new V1(this);
   }
 }
 export default Index;

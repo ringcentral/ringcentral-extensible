@@ -26,6 +26,11 @@ interface ListCompanyActiveCallsParameters {
   transport?: ('PSTN' | 'VoIP')[];
 
   /**
+   * Conference call type: RCC or RC Meetings. If not specified, no conference call filter applied
+   */
+  conferenceType?: ('AudioConferencing' | 'Meetings')[];
+
+  /**
    * Indicates the page number to retrieve. Only positive number values are accepted
    * Minimum: 1
    * Format: int32

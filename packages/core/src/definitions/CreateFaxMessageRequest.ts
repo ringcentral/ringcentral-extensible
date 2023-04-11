@@ -1,4 +1,4 @@
-import MessageStoreCalleeInfoRequest from './MessageStoreCalleeInfoRequest';
+import FaxReceiver from './FaxReceiver';
 import Attachment from './Attachment';
 
 /**
@@ -6,18 +6,21 @@ import Attachment from './Attachment';
 */
 interface CreateFaxMessageRequest {
   /**
-   * Resolution of Fax
+   * Fax only. Resolution of a fax message. 'High' for black and
+ *  white image scanned at 200 dpi, 'Low' for black and white image scanned
+ *  at 100 dpi
    */
   faxResolution?: ('High' | 'Low');
 
   /**
-   * To Phone Number
+   * Recipient's phone number
    * Required
    */
-  to?: MessageStoreCalleeInfoRequest[];
+  to?: FaxReceiver[];
 
   /**
-   * Timestamp to send fax at. If not specified (current or the past), the fax is sent immediately
+   * Timestamp to send a fax at. If not specified, current or the past
+ *  a fax message is sent immediately
    * Format: date-time
    */
   sendTime?: string;
@@ -28,20 +31,22 @@ interface CreateFaxMessageRequest {
   isoCode?: string;
 
   /**
-   * Cover page identifier. If coverIndex is set to '0' (zero) cover page is not attached. For the list of available cover page identifiers (1-13) please call the Fax Cover Pages method. If not specified, the default cover page is attached (which is configured in 'Outbound Fax Settings')
+   * Cover page identifier. If `coverIndex` is set to '0' (zero) a cover page
+ *  is not attached. For a list of available cover page identifiers (1-13)
+ *  please call the Fax Cover Pages method. If not specified, the default cover
+ *  page is attached (which is configured in 'Outbound Fax Settings')
    * Format: int32
    */
   coverIndex?: number;
 
   /**
-   * Cover page text, entered by the fax sender and printed on the cover page. Maximum length is limited to 1024 symbols
+   * Cover page text, entered by a fax sender and printed
+ *  on a cover page. Maximum length is limited to 1024 symbols
    */
   coverPageText?: string;
 
   /**
-   * File to upload
    * Required
-   * Format: binary
    */
   attachments?: Attachment[];
 }

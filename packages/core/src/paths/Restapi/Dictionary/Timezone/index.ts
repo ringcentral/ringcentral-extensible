@@ -1,5 +1,4 @@
 import GetTimezoneInfoResponse from '../../../../definitions/GetTimezoneInfoResponse';
-import ReadTimezoneParameters from '../../../../definitions/ReadTimezoneParameters';
 import GetTimezoneListResponse from '../../../../definitions/GetTimezoneListResponse';
 import ListTimezonesParameters from '../../../../definitions/ListTimezonesParameters';
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
@@ -43,11 +42,11 @@ class Index {
    * Endpoint: /restapi/{apiVersion}/dictionary/timezone/{timezoneId}
    * Rate Limit Group: Light
    */
-  async get(queryParams?: ReadTimezoneParameters, restRequestConfig?: RestRequestConfig): Promise<GetTimezoneInfoResponse> {
+  async get(restRequestConfig?: RestRequestConfig): Promise<GetTimezoneInfoResponse> {
     if (this.timezoneId === null) {
       throw new Error('timezoneId must be specified.');
     }
-    const r = await this.rc.get<GetTimezoneInfoResponse>(this.path(), queryParams, restRequestConfig);
+    const r = await this.rc.get<GetTimezoneInfoResponse>(this.path(), undefined, restRequestConfig);
     return r.data;
   }
 }

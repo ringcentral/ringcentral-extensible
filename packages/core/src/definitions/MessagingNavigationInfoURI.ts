@@ -3,6 +3,7 @@
 */
 interface MessagingNavigationInfoURI {
   /**
+   * Format: uri
    */
   uri?: string;
 }

@@ -16,7 +16,7 @@ class Index {
   }
 
   /**
-   * Returns account default user role.
+   * Returns the default user role of the current account.
    * HTTP Method: get
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/user-role/default
    * Rate Limit Group: Light
@@ -29,7 +29,7 @@ class Index {
   }
 
   /**
-   * Updates account default user role.
+   * Updates the account default user role.
    * HTTP Method: put
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/user-role/default
    * Rate Limit Group: Medium

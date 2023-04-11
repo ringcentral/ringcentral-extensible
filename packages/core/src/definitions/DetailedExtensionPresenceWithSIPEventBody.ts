@@ -6,6 +6,7 @@ import ActiveCallInfo from './ActiveCallInfo';
 interface DetailedExtensionPresenceWithSIPEventBody {
   /**
    * Internal identifier of an extension
+   * Default: ~
    */
   extensionId?: string;
 

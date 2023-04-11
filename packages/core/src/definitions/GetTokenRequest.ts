@@ -23,7 +23,7 @@ interface GetTokenRequest {
    * Grant type
    * Required
    */
-  grant_type?: ('authorization_code' | 'password' | 'refresh_token' | 'client_credentials' | 'urn:ietf:params:oauth:grant-type:jwt-bearer' | 'urn:ietf:params:oauth:grant-type:device_code' | 'partner_jwt');
+  grant_type?: ('authorization_code' | 'password' | 'refresh_token' | 'client_credentials' | 'urn:ietf:params:oauth:grant-type:jwt-bearer' | 'urn:ietf:params:oauth:grant-type:device_code');
 
   /**
    * For `authorization_code` grant type only. User's authorization code

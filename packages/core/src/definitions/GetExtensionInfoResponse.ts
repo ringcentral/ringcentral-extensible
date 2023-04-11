@@ -10,7 +10,7 @@ import RegionalSettings from './RegionalSettings';
 import ExtensionServiceFeatureInfo from './ExtensionServiceFeatureInfo';
 import ExtensionStatusInfo from './ExtensionStatusInfo';
 import CallQueueExtensionInfo from './CallQueueExtensionInfo';
-import AutomaticLocationUpdatesSiteInfo from './AutomaticLocationUpdatesSiteInfo';
+import ProvisioningSiteInfo from './ProvisioningSiteInfo';
 
 interface GetExtensionInfoResponse {
   /**
@@ -144,7 +144,7 @@ interface GetExtensionInfoResponse {
 
   /**
    */
-  site?: AutomaticLocationUpdatesSiteInfo;
+  site?: ProvisioningSiteInfo;
 }
 
 export default GetExtensionInfoResponse;

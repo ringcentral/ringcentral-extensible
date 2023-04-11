@@ -3,6 +3,7 @@ import IVRMenuListInfo from './IVRMenuListInfo';
 interface IVRMenuList {
   /**
    * Link to an IVR Menu list
+   * Format: uri
    */
   uri?: string;
 

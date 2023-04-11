@@ -1,4 +1,5 @@
 import Attachment from './Attachment';
+import GreetingAnsweringRuleId from './GreetingAnsweringRuleId';
 
 /**
  * Request body for operation createCustomUserGreeting
@@ -11,16 +12,14 @@ interface CreateCustomUserGreetingRequest {
   type?: ('Introductory' | 'Announcement' | 'ConnectingMessage' | 'ConnectingAudio' | 'Voicemail' | 'Unavailable' | 'HoldMusic' | 'TemplateGreeting');
 
   /**
-   * Internal identifier of an answering rule
-   * Required
-   */
-  answeringRuleId?: string;
-
-  /**
    * Media file to upload
    * Required
    */
   binary?: Attachment;
+
+  /**
+   */
+  answeringRule?: GreetingAnsweringRuleId;
 }
 
 export default CreateCustomUserGreetingRequest;

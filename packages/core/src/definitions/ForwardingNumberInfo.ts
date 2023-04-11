@@ -8,6 +8,7 @@ interface ForwardingNumberInfo {
 
   /**
    * Canonical URI of a forwarding/call flip phone number
+   * Format: uri
    */
   uri?: string;
 

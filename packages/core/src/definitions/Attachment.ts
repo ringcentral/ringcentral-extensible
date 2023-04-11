@@ -3,8 +3,7 @@
 */
 interface Attachment {
   /**
-   * Filename with extension
-   * Example: example.png
+   * Filename with extension, such as "image.png"
    */
   filename?: string;
 

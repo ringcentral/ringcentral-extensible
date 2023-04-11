@@ -28,6 +28,7 @@ interface IncomingCallEvent {
 
   /**
    * Internal identifier of an extension
+   * Default: ~
    */
   extensionId?: string;
 

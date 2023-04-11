@@ -18,15 +18,18 @@ class Index {
   }
 
   /**
-   * Creates and sends media messages. Sending MMS messages simultaneously to different recipients is limited up to 50 requests per minute; relevant for all client applications.
+   * Creates and sends a new media message or multiple messages. Sending MMS
+ * messages simultaneously to different recipients is limited up to 50
+ * requests per minute; relevant for all client applications.
+ *
    * HTTP Method: post
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/mms
    * Rate Limit Group: Medium
    * App Permission: SMS
    * User Permission: OutboundSMS
    */
-  async post(CreateMMSMessage: CreateMMSMessage, restRequestConfig?: RestRequestConfig): Promise<GetSMSMessageInfoResponse> {
-    const formData = await Utils.getFormData(CreateMMSMessage);
+  async post(createMMSMessage: CreateMMSMessage, restRequestConfig?: RestRequestConfig): Promise<GetSMSMessageInfoResponse> {
+    const formData = await Utils.getFormData(createMMSMessage);
     const r = await this.rc.post<GetSMSMessageInfoResponse>(this.path(), formData, undefined, restRequestConfig);
     return r.data;
   }

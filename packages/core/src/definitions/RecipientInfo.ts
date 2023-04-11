@@ -4,6 +4,7 @@
 interface RecipientInfo {
   /**
    * Link to a recipient extension resource
+   * Format: uri
    */
   uri?: string;
 

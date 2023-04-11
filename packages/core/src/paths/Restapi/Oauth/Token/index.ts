@@ -27,8 +27,8 @@ class Index {
    * Endpoint: /restapi/oauth/token
    * Rate Limit Group: Auth
    */
-  async post(GetTokenRequest: GetTokenRequest, restRequestConfig?: RestRequestConfig): Promise<TokenInfo> {
-    const r = await this.rc.post<TokenInfo>(this.path(), GetTokenRequest, undefined, restRequestConfig);
+  async post(getTokenRequest: GetTokenRequest, restRequestConfig?: RestRequestConfig): Promise<TokenInfo> {
+    const r = await this.rc.post<TokenInfo>(this.path(), getTokenRequest, undefined, restRequestConfig);
     return r.data;
   }
 }

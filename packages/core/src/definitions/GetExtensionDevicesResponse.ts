@@ -1,10 +1,11 @@
-import ExtensionDeviceResponse from './ExtensionDeviceResponse';
-import DeviceProvisioningNavigationInfo from './DeviceProvisioningNavigationInfo';
-import DeviceProvisioningPagingInfo from './DeviceProvisioningPagingInfo';
+import DeviceResource from './DeviceResource';
+import PageNavigationModel from './PageNavigationModel';
+import EnumeratedPagingModel from './EnumeratedPagingModel';
 
 interface GetExtensionDevicesResponse {
   /**
-   * Link to the list of extension devices
+   * Link to a list of extension devices
+   * Format: uri
    */
   uri?: string;
 
@@ -12,17 +13,17 @@ interface GetExtensionDevicesResponse {
    * List of extension devices
    * Required
    */
-  records?: ExtensionDeviceResponse[];
+  records?: DeviceResource[];
 
   /**
    * Required
    */
-  navigation?: DeviceProvisioningNavigationInfo;
+  navigation?: PageNavigationModel;
 
   /**
    * Required
    */
-  paging?: DeviceProvisioningPagingInfo;
+  paging?: EnumeratedPagingModel;
 }
 
 export default GetExtensionDevicesResponse;

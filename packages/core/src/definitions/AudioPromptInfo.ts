@@ -4,6 +4,7 @@
 interface AudioPromptInfo {
   /**
    * Link to a prompt audio file
+   * Format: uri
    */
   uri?: string;
 

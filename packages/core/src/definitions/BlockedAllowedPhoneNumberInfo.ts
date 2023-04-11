@@ -4,6 +4,7 @@
 interface BlockedAllowedPhoneNumberInfo {
   /**
    * Link to a blocked/allowed phone number
+   * Format: uri
    */
   uri?: string;
 

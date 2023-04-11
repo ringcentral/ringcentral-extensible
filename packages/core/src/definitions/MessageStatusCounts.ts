@@ -1,18 +1,23 @@
 /**
- * The count of the status
+ * Message status parameters
 */
 interface MessageStatusCounts {
   /**
-   * The count of the status
+   * Total cost of all messages with this status code
+   * Format: float
+   */
+  cost?: number;
+
+  /**
+   * Count of messages with this status code
    * Format: int64
    * Example: 7
    */
   count?: number;
 
   /**
-   * Format: int64
    */
-  errorCodeCounts?: number;
+  errorCodeCounts?: object;
 }
 
 export default MessageStatusCounts;

@@ -5,7 +5,6 @@ import CallMonitoringGroups from './CallMonitoringGroups';
 import ExtensionBulkUpdate from './ExtensionBulkUpdate';
 import MessageStoreReport from './MessageStoreReport';
 import EmergencyLocations from './EmergencyLocations';
-import MeetingRecordings from './MeetingRecordings';
 import PagingOnlyGroups from './PagingOnlyGroups';
 import ForwardAllCalls from './ForwardAllCalls';
 import BusinessAddress from './BusinessAddress';
@@ -31,9 +30,9 @@ import Directory from './Directory';
 import Greeting from './Greeting';
 import Presence from './Presence';
 import CallLog from './CallLog';
-import Meeting from './Meeting';
 import A2pSms from './A2pSms';
 import Device from './Device';
+import Sites from './Sites';
 import GetAccountInfoResponse from '../../../definitions/GetAccountInfoResponse';
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../types';
 
@@ -75,16 +74,16 @@ class Index {
     return r.data;
   }
 
+  sites(siteId: (string | null) = null): Sites {
+    return new Sites(this, siteId);
+  }
+
   device(deviceId: (string | null) = null): Device {
     return new Device(this, deviceId);
   }
 
   a2pSms(): A2pSms {
     return new A2pSms(this);
-  }
-
-  meeting(meetingId: (string | null) = null): Meeting {
-    return new Meeting(this, meetingId);
   }
 
   callLog(callRecordId: (string | null) = null): CallLog {
@@ -185,10 +184,6 @@ class Index {
 
   pagingOnlyGroups(pagingOnlyGroupId: (string | null) = null): PagingOnlyGroups {
     return new PagingOnlyGroups(this, pagingOnlyGroupId);
-  }
-
-  meetingRecordings(): MeetingRecordings {
-    return new MeetingRecordings(this);
   }
 
   emergencyLocations(locationId: (string | null) = null): EmergencyLocations {

@@ -27,7 +27,7 @@ class Index {
   }
 
   /**
-   * Returns the list of account user roles.
+   * Returns a list of account user roles.
    * HTTP Method: get
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/user-role
    * Rate Limit Group: Medium
@@ -40,7 +40,7 @@ class Index {
   }
 
   /**
-   * Creates custom user role.
+   * Creates a custom user role.
    * HTTP Method: post
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/user-role
    * Rate Limit Group: Medium
@@ -53,7 +53,7 @@ class Index {
   }
 
   /**
-   * Returns a user role on the current account by ID.
+   * Returns a user role assigned to the current account.
    * HTTP Method: get
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/user-role/{roleId}
    * Rate Limit Group: Light
@@ -69,7 +69,7 @@ class Index {
   }
 
   /**
-   * Updates a user role on the current account by ID.
+   * Updates a user role assigned to the current account by ID.
    * HTTP Method: put
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/user-role/{roleId}
    * Rate Limit Group: Medium
@@ -85,7 +85,7 @@ class Index {
   }
 
   /**
-   * Deletes custom user role by ID.
+   * Deletes a custom user role by ID.
    * HTTP Method: delete
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/user-role/{roleId}
    * Rate Limit Group: Medium

@@ -1,6 +1,7 @@
 interface PromptInfo {
   /**
    * Internal identifier of a prompt
+   * Format: uri
    */
   uri?: string;
 
@@ -16,6 +17,7 @@ interface PromptInfo {
 
   /**
    * Link to a prompt media content
+   * Format: uri
    */
   contentUri?: string;
 

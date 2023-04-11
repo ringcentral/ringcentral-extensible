@@ -16,7 +16,7 @@ class Index {
   }
 
   /**
-   * Get Device SIP Info
+   * Returns device SIP information.
    * HTTP Method: get
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/device/{deviceId}/sip-info
    * Rate Limit Group: Light

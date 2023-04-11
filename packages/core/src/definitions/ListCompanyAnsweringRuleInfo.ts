@@ -9,6 +9,7 @@ interface ListCompanyAnsweringRuleInfo {
 
   /**
    * Canonical URI of an answering rule
+   * Format: uri
    */
   uri?: string;
 

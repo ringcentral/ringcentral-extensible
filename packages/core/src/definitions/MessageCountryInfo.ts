@@ -6,6 +6,7 @@ interface MessageCountryInfo {
 
   /**
    * Canonical URI of a country
+   * Format: uri
    */
   uri?: string;
 

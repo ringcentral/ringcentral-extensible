@@ -4,6 +4,7 @@ import DeleteForwardingNumbersRequest from '../../../../../definitions/DeleteFor
 import ForwardingNumberInfo from '../../../../../definitions/ForwardingNumberInfo';
 import CreateForwardingNumberRequest from '../../../../../definitions/CreateForwardingNumberRequest';
 import GetExtensionForwardingNumberListResponse from '../../../../../definitions/GetExtensionForwardingNumberListResponse';
+import ListForwardingNumbersParameters from '../../../../../definitions/ListForwardingNumbersParameters';
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
@@ -37,8 +38,8 @@ class Index {
    * App Permission: ReadAccounts
    * User Permission: ReadUserForwardingFlipNumbers
    */
-  async list(restRequestConfig?: RestRequestConfig): Promise<GetExtensionForwardingNumberListResponse> {
-    const r = await this.rc.get<GetExtensionForwardingNumberListResponse>(this.path(false), undefined, restRequestConfig);
+  async list(queryParams?: ListForwardingNumbersParameters, restRequestConfig?: RestRequestConfig): Promise<GetExtensionForwardingNumberListResponse> {
+    const r = await this.rc.get<GetExtensionForwardingNumberListResponse>(this.path(false), queryParams, restRequestConfig);
     return r.data;
   }
 

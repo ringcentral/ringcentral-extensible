@@ -2,7 +2,7 @@ import ForwardingNumberId from './ForwardingNumberId';
 
 interface DeleteForwardingNumbersRequest {
   /**
-   * List of forwarding number ids
+   * List of forwarding number IDs
    */
   records?: ForwardingNumberId[];
 }

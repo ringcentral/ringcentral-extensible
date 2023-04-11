@@ -103,10 +103,6 @@ interface AuthorizeRequest {
   /**
    */
   code_challenge_method?: ('plain' | 'S256');
-
-  /**
-   */
-  discovery?: boolean;
 }
 
 export default AuthorizeRequest;

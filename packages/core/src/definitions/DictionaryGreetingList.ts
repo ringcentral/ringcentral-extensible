@@ -1,10 +1,11 @@
 import DictionaryGreetingInfo from './DictionaryGreetingInfo';
-import NavigationInfo from './NavigationInfo';
-import EnumeratedPaging from './EnumeratedPaging';
+import PageNavigationModel from './PageNavigationModel';
+import EnumeratedPagingModel from './EnumeratedPagingModel';
 
 interface DictionaryGreetingList {
   /**
    * Canonical URI of greetings list resource
+   * Format: uri
    */
   uri?: string;
 
@@ -15,11 +16,11 @@ interface DictionaryGreetingList {
 
   /**
    */
-  navigation?: NavigationInfo;
+  navigation?: PageNavigationModel;
 
   /**
    */
-  paging?: EnumeratedPaging;
+  paging?: EnumeratedPagingModel;
 }
 
 export default DictionaryGreetingList;

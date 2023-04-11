@@ -1,6 +1,6 @@
 import CallQueueInfo from './CallQueueInfo';
-import ProvisioningNavigationInfo from './ProvisioningNavigationInfo';
-import ProvisioningPagingInfo from './ProvisioningPagingInfo';
+import PageNavigationModel from './PageNavigationModel';
+import EnumeratedPagingModel from './EnumeratedPagingModel';
 
 interface CallQueues {
   /**
@@ -19,12 +19,12 @@ interface CallQueues {
   /**
    * Required
    */
-  navigation?: ProvisioningNavigationInfo;
+  navigation?: PageNavigationModel;
 
   /**
    * Required
    */
-  paging?: ProvisioningPagingInfo;
+  paging?: EnumeratedPagingModel;
 }
 
 export default CallQueues;

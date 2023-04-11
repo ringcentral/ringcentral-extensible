@@ -4,6 +4,7 @@ import CustomCompanyGreetingLanguageInfo from './CustomCompanyGreetingLanguageIn
 interface CustomCompanyGreetingInfo {
   /**
    * Link to an extension custom greeting
+   * Format: uri
    */
   uri?: string;
 
@@ -24,6 +25,7 @@ interface CustomCompanyGreetingInfo {
 
   /**
    * Link to a greeting content (audio file)
+   * Format: uri
    */
   contentUri?: string;
 

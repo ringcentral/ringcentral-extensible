@@ -1,6 +1,6 @@
 import ExtensionInfo from './ExtensionInfo';
-import ProvisioningNavigationInfo from './ProvisioningNavigationInfo';
-import ProvisioningPagingInfo from './ProvisioningPagingInfo';
+import PageNavigationModel from './PageNavigationModel';
+import EnumeratedPagingModel from './EnumeratedPagingModel';
 
 /**
  * Please note that legacy 'Department' extension type corresponds to
@@ -21,11 +21,11 @@ interface DepartmentMemberList {
 
   /**
    */
-  navigation?: ProvisioningNavigationInfo;
+  navigation?: PageNavigationModel;
 
   /**
    */
-  paging?: ProvisioningPagingInfo;
+  paging?: EnumeratedPagingModel;
 }
 
 export default DepartmentMemberList;

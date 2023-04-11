@@ -1,10 +1,11 @@
 import UserAnsweringRuleListRecord from './UserAnsweringRuleListRecord';
-import EnumeratedPaging from './EnumeratedPaging';
-import UserAnsweringRuleListNavigation from './UserAnsweringRuleListNavigation';
+import EnumeratedPagingModel from './EnumeratedPagingModel';
+import PageNavigationModel from './PageNavigationModel';
 
 interface UserAnsweringRuleList {
   /**
    * Canonical URI of an answering rule list resource
+   * Format: uri
    * Example: https://platform.ringcentral.com/restapi/v1.0/account/240913004/extension/240972004/answering-rule?page=1&perPage=100
    */
   uri?: string;
@@ -16,11 +17,11 @@ interface UserAnsweringRuleList {
 
   /**
    */
-  paging?: EnumeratedPaging;
+  paging?: EnumeratedPagingModel;
 
   /**
    */
-  navigation?: UserAnsweringRuleListNavigation;
+  navigation?: PageNavigationModel;
 }
 
 export default UserAnsweringRuleList;

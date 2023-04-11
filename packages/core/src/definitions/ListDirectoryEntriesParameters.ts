@@ -14,6 +14,11 @@ interface ListDirectoryEntriesParameters {
   type?: ('User' | 'Department' | 'Announcement' | 'Voicemail' | 'SharedLinesGroup' | 'PagingOnly' | 'IvrMenu' | 'ParkLocation' | 'Limited' | 'External');
 
   /**
+   * Type of extension group
+   */
+  typeGroup?: ('User' | 'NonUser');
+
+  /**
    * Page number
    * Format: int32
    * Default: 1

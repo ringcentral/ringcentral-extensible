@@ -1,6 +1,6 @@
 import GrantInfo from './GrantInfo';
-import ProvisioningNavigationInfo from './ProvisioningNavigationInfo';
-import ProvisioningPagingInfo from './ProvisioningPagingInfo';
+import PageNavigationModel from './PageNavigationModel';
+import EnumeratedPagingModel from './EnumeratedPagingModel';
 
 interface GetExtensionGrantListResponse {
   /**
@@ -18,12 +18,12 @@ interface GetExtensionGrantListResponse {
   /**
    * Required
    */
-  navigation?: ProvisioningNavigationInfo;
+  navigation?: PageNavigationModel;
 
   /**
    * Required
    */
-  paging?: ProvisioningPagingInfo;
+  paging?: EnumeratedPagingModel;
 }
 
 export default GetExtensionGrantListResponse;

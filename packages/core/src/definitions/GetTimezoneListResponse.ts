@@ -1,6 +1,6 @@
 import GetTimezoneInfoResponse from './GetTimezoneInfoResponse';
-import ProvisioningNavigationInfo from './ProvisioningNavigationInfo';
-import ProvisioningPagingInfo from './ProvisioningPagingInfo';
+import PageNavigationModel from './PageNavigationModel';
+import EnumeratedPagingModel from './EnumeratedPagingModel';
 
 interface GetTimezoneListResponse {
   /**
@@ -18,12 +18,12 @@ interface GetTimezoneListResponse {
   /**
    * Required
    */
-  navigation?: ProvisioningNavigationInfo;
+  navigation?: PageNavigationModel;
 
   /**
    * Required
    */
-  paging?: ProvisioningPagingInfo;
+  paging?: EnumeratedPagingModel;
 }
 
 export default GetTimezoneListResponse;

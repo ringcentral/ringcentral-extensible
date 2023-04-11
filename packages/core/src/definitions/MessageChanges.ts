@@ -1,16 +1,19 @@
 interface MessageChanges {
   /**
-   * Message type
+   * Type of messages to be collected
+   * Example: Fax
    */
-  type?: ('Voicemail' | 'SMS' | 'Fax' | 'Pager');
+  type?: ('EMail' | 'Fax' | 'SMS' | 'VoiceMail' | 'Pager' | 'Text');
 
   /**
-   * The number of new messages. Can be omitted if the value is zero
+   * Number of new messages. Can be omitted if the value is zero
+   * Format: int32
    */
   newCount?: number;
 
   /**
-   * The number of updated messages. Can be omitted if the value is zero
+   * Number of updated messages. Can be omitted if the value is zero
+   * Format: int32
    */
   updatedCount?: number;
 }

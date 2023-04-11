@@ -3,15 +3,10 @@
 */
 interface DeleteMessageParameters {
   /**
-   * If the value is 'True', then the message is purged immediately with all the attachments
+   * If the value is `true`, then the message is purged immediately
+ *  with all the attachments
    */
   purge?: boolean;
-
-  /**
-   * Internal identifier of a message thread
-   * Format: int64
-   */
-  conversationId?: number;
 }
 
 export default DeleteMessageParameters;

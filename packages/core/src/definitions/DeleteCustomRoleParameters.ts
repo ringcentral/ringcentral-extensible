@@ -3,7 +3,8 @@
 */
 interface DeleteCustomRoleParameters {
   /**
-   * Specifies that role should be validated prior to deletion whether it can be deleted or not
+   * Specifies that role should be validated prior to deletion, whether
+ *  it can be deleted or not
    */
   validateOnly?: boolean;
 }

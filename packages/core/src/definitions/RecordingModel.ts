@@ -1,0 +1,56 @@
+import ApiError from './ApiError';
+import RecordingSharedStatusModel from './RecordingSharedStatusModel';
+
+interface RecordingModel {
+  /**
+   * Internal object ID
+   * Example: 78654321
+   */
+  id?: string;
+
+  /**
+   * Object creation time
+   * Required
+   * Format: date-time
+   */
+  creationTime?: string;
+
+  /**
+   * Object last modification time
+   * Required
+   * Format: date-time
+   */
+  lastModifiedTime?: string;
+
+  /**
+   * Recording status
+   * Required
+   * Example: Available
+   */
+  status?: ('Processing' | 'Available' | 'Failed' | 'Purged');
+
+  /**
+   */
+  failureReason?: ApiError;
+
+  /**
+   * Recording duration in seconds
+   * Minimum: 1
+   * Format: int32
+   * Example: 3600
+   */
+  duration?: number;
+
+  /**
+   */
+  shared?: RecordingSharedStatusModel;
+
+  /**
+   * Time after which recording shared link cannot be accessed by recipients.
+   * Format: date-time
+   * Example: 2023-10-01T10:05:00.000Z
+   */
+  sharedUriExpirationTime?: string;
+}
+
+export default RecordingModel;

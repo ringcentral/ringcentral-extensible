@@ -24,7 +24,7 @@ class Index {
   }
 
   /**
-   * Get Standard User Role List
+   * Returns a list of standard user roles.
    * HTTP Method: get
    * Endpoint: /restapi/{apiVersion}/dictionary/user-role
    * Rate Limit Group: Light
@@ -35,7 +35,7 @@ class Index {
   }
 
   /**
-   * Returns standard user role.
+   * Returns a standard user role by ID.
    * HTTP Method: get
    * Endpoint: /restapi/{apiVersion}/dictionary/user-role/{roleId}
    * Rate Limit Group: Light

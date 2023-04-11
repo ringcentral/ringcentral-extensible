@@ -38,7 +38,7 @@ interface ReadCompanyCallLogParameters {
    * Deprecated, replaced with `recordingType` filter, still supported for compatibility reasons.
  *  Indicates if only recorded calls should be returned.
  *
- *  If both `withRecording` and `recordingType` parameters are specified, then `withRecording` is ignored'
+ *  If both `withRecording` and `recordingType` parameters are specified, then `withRecording` is ignored
    */
   withRecording?: boolean;
 
@@ -66,6 +66,11 @@ interface ReadCompanyCallLogParameters {
    * Internal identifier of a call session
    */
   sessionId?: string;
+
+  /**
+   * Internal identifier of a telephony session
+   */
+  telephonySessionId?: string;
 
   /**
    * Indicates the page number to retrieve. Only positive number values are accepted

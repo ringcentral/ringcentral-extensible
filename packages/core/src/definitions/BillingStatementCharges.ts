@@ -4,6 +4,7 @@ interface BillingStatementCharges {
   description?: string;
 
   /**
+   * Format: double
    */
   amount?: number;
 
@@ -12,6 +13,7 @@ interface BillingStatementCharges {
   feature?: string;
 
   /**
+   * Format: double
    */
   freeServiceCredit?: number;
 }

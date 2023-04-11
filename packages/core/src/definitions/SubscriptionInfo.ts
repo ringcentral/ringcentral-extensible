@@ -13,6 +13,8 @@ interface SubscriptionInfo {
   /**
    * Internal identifier of a subscription
    * Required
+   * Format: uuid
+   * Example: 95fecfc9-9cdc-4e94-a78a-89fd65889d37
    */
   id?: string;
 
@@ -23,12 +25,14 @@ interface SubscriptionInfo {
   eventFilters?: string[];
 
   /**
-   * The list of event filter names corresponding to events the user is not subscribed to due to certain limitations
+   * The list of event filter names corresponding to events the user is not subscribed to due to
+ *  certain limitations
    */
   disabledFilters?: DisabledFilterInfo[];
 
   /**
-   * Subscription expiration datetime in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format including timezone, for example *2016-03-10T18:07:52.534Z*
+   * Subscription expiration time in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
+ *  format including timezone, for example *2016-03-10T18:07:52.534Z*
    * Required
    * Format: date-time
    */
@@ -36,6 +40,7 @@ interface SubscriptionInfo {
 
   /**
    * Subscription lifetime in seconds
+   * Minimum: 1
    * Format: int32
    */
   expiresIn?: number;
@@ -47,7 +52,8 @@ interface SubscriptionInfo {
   status?: ('Active' | 'Suspended' | 'Blacklisted');
 
   /**
-   * Subscription creation datetime in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format including timezone, for example *2016-03-10T18:07:52.534*
+   * Subscription creation time in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
+ *  format including timezone, for example *2016-03-10T18:07:52.534*
    * Required
    * Format: date-time
    */

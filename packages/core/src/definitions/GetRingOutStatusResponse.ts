@@ -7,6 +7,8 @@ interface GetRingOutStatusResponse {
   id?: string;
 
   /**
+   * Link to a RingOut call resource
+   * Format: uri
    */
   uri?: string;
 

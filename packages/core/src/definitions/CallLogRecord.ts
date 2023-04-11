@@ -1,26 +1,58 @@
-import CallLogCallerInfo from './CallLogCallerInfo';
-import CallLogRecordingInfo from './CallLogRecordingInfo';
-import ActiveCallsRecordExtensionInfo from './ActiveCallsRecordExtensionInfo';
-import CallLogDelegateInfo from './CallLogDelegateInfo';
 import CallLogRecordLegInfo from './CallLogRecordLegInfo';
+import ExtensionInfoCallLog from './ExtensionInfoCallLog';
+import CallLogRecordTransferTarget from './CallLogRecordTransferTarget';
+import CallLogRecordTransferee from './CallLogRecordTransferee';
+import CallLogFromParty from './CallLogFromParty';
+import CallLogToParty from './CallLogToParty';
 import CallLogRecordMessage from './CallLogRecordMessage';
+import CallLogDelegateInfo from './CallLogDelegateInfo';
+import CallLogRecordingInfo from './CallLogRecordingInfo';
+import BillingInfo from './BillingInfo';
 
+/**
+ * Base schema for CallLogRecord and CallLogRecordLegInfo
+*/
 interface CallLogRecord {
   /**
-   * Internal identifier of a cal log record
+   * Internal identifier of a call log record
+   * Required
    */
   id?: string;
 
   /**
    * Canonical URI of a call log record
+   * Required
    * Format: uri
    */
   uri?: string;
 
   /**
    * Internal identifier of a call session
+   * Required
    */
   sessionId?: string;
+
+  /**
+   * Indicates whether the record is deleted. Returned for deleted records, for ISync requests
+   */
+  deleted?: boolean;
+
+  /**
+   * For 'Detailed' view only. Leg description
+   */
+  legs?: CallLogRecordLegInfo[];
+
+  /**
+   * For 'Detailed' view only. The datetime when the call log record
+ *  was modified in (ISO 8601)[https://en.wikipedia.org/wiki/ISO_8601] format
+ *  including timezone, for example *2016-03-10T18:07:52.534Z*
+   * Format: date-time
+   */
+  lastModifiedTime?: string;
+
+  /**
+   */
+  extension?: ExtensionInfoCallLog;
 
   /**
    * Telephony identifier of a call session
@@ -28,32 +60,68 @@ interface CallLogRecord {
   telephonySessionId?: string;
 
   /**
+   * Call session identifier, required for Telephony REST API
    */
-  from?: CallLogCallerInfo;
+  sipUuidInfo?: string;
 
   /**
    */
-  to?: CallLogCallerInfo;
+  transferTarget?: CallLogRecordTransferTarget;
+
+  /**
+   */
+  transferee?: CallLogRecordTransferee;
+
+  /**
+   * Internal Identifier of Participant
+   */
+  partyId?: string;
+
+  /**
+   * The type of a call transport. 'PSTN' indicates that a call leg was initiated
+ *  from the PSTN network provider; 'VoIP' - from an RC phone.
+   * Required
+   */
+  transport?: ('PSTN' | 'VoIP');
+
+  /**
+   */
+  from?: CallLogFromParty;
+
+  /**
+   */
+  to?: CallLogToParty;
 
   /**
    * The type of a call
+   * Required
    */
   type?: ('Voice' | 'Fax');
 
   /**
    * The direction of a call
+   * Required
    */
   direction?: ('Inbound' | 'Outbound');
 
   /**
-   * The internal action corresponding to the call operation
    */
-  action?: ('Unknown' | 'Phone Call' | 'Phone Login' | 'Calling Card' | 'VoIP Call' | 'Paging' | 'Hunting' | 'Call Park' | 'Monitoring' | 'Text Relay' | 'External Application' | 'Park Location' | 'CallOut-CallMe' | 'Conference Call' | 'Move' | 'RC Meetings' | 'Accept Call' | 'FindMe' | 'FollowMe' | 'RingMe' | 'Transfer' | 'Call Return' | 'Ring Directly' | 'RingOut Web' | 'RingOut PC' | 'RingOut Mobile' | '411 Info' | 'Emergency' | 'E911 Update' | 'Support' | 'Incoming Fax' | 'Outgoing Fax');
+  message?: CallLogRecordMessage;
+
+  /**
+   */
+  delegate?: CallLogDelegateInfo;
+
+  /**
+   * The internal action corresponding to the call operation
+   * Required
+   */
+  action?: ('Accept Call' | 'Barge In Call' | 'Call Park' | 'Call Return' | 'CallOut-CallMe' | 'Calling Card' | 'Conference Call' | 'E911 Update' | 'Emergency' | 'External Application' | 'FindMe' | 'FollowMe' | 'FreeSPDL' | 'Hunting' | 'Incoming Fax' | 'Monitoring' | 'Move' | 'Outgoing Fax' | 'Paging' | 'Park Location' | 'Phone Call' | 'Phone Login' | 'Pickup' | 'RC Meetings' | 'Ring Directly' | 'RingMe' | 'RingOut Mobile' | 'RingOut PC' | 'RingOut Web' | 'Sip Forwarding' | 'Support' | 'Text Relay' | 'Transfer' | 'Unknown' | 'VoIP Call');
 
   /**
    * The result of the call operation
    */
-  result?: ('Unknown' | 'Accepted' | 'Call connected' | 'In Progress' | 'Voicemail' | 'Reply' | 'Missed' | 'Busy' | 'Rejected' | 'No Answer' | 'Hang Up' | 'Blocked' | 'ResultEmpty' | 'Suspended account' | 'Call Failed' | 'Call Failure' | 'Internal Error' | 'IP Phone Offline' | 'No Calling Credit' | 'Not Allowed' | 'Restricted Number' | 'Wrong Number' | 'Answered Not Accepted' | 'Stopped' | 'Poor Line Quality' | 'International Disabled' | 'International Restricted' | 'Abandoned' | 'Declined' | 'Received' | 'Fax on Demand' | 'Partial Receive' | 'Receive Error' | 'Fax Receipt Error' | 'Fax Partially Sent' | 'No fax machine' | 'Send Error' | 'Sent' | 'Fax Not Sent' | 'Fax Poor Line');
+  result?: ('911' | '933' | 'Abandoned' | 'Accepted' | 'Answered Not Accepted' | 'Blocked' | 'Busy' | 'Call Failed' | 'Call Failure' | 'Call connected' | 'Carrier is not active' | 'Declined' | 'EDGE trunk misconfigured' | 'Fax Not Sent' | 'Fax Partially Sent' | 'Fax Poor Line' | 'Fax Receipt Error' | 'Fax on Demand' | 'Hang Up' | 'IP Phone Offline' | 'In Progress' | 'Internal Error' | 'International Disabled' | 'International Restricted' | 'Missed' | 'No Answer' | 'No Calling Credit' | 'Not Allowed' | 'Partial Receive' | 'Phone Login' | 'Receive Error' | 'Received' | 'Rejected' | 'Reply' | 'Restricted Number' | 'Send Error' | 'Sent' | 'Sent to Voicemail' | 'Stopped' | 'Suspended account' | 'Unknown' | 'Voicemail' | 'Wrong Number');
 
   /**
    * The reason of the call result:
@@ -90,60 +158,52 @@ interface CallLogRecord {
  *    * `Fax Prepare Error` - An internal error occurred when preparing the fax. Please try again
  *    * `Fax Save Error` - An internal error occurred when saving the fax. Please try again
  *    * `Fax Send Error` - An error occurred when sending the fax. Please try again
- *    * `DescNoE911Address` - The call was rejected due to no E911 address
+ *    * `Emergency Address not defined` - The call was rejected due to no E911 address
+ *    * `Carrier is not active` - The call was rejected due to carrier inactivity
+ *    * `EDGE trunk misconfigured` - The call was rejected due to error in EDGE trunk configuration
+ *    * `Internal Call Error` - An internal error occurred when making the call. Please try again
+ *    * `Receive Error` - Fax receive error
    */
-  reason?: ('Accepted' | 'Connected' | 'line Busy' | 'Not Answered' | 'No Answer' | 'Hang Up' | 'Stopped' | 'Internal Error' | 'No Credit' | 'Restricted Number' | 'Wrong Number' | 'International Disabled' | 'International Restricted' | 'Bad Number' | 'Info 411 Restricted' | 'Customer 611 Restricted' | 'No Digital Line' | 'Failed Try Again' | 'Max Call Limit' | 'Too Many Calls' | 'Calls Not Accepted' | 'Number Not Allowed' | 'Number Blocked' | 'Number Disabled' | 'Resource Error' | 'Call Loop' | 'Fax Not Received' | 'Fax Partially Sent' | 'Fax Not Sent' | 'Fax Poor Line' | 'Fax Prepare Error' | 'Fax Save Error' | 'Fax Send Error' | 'DescNoE911Address');
+  reason?: ('Accepted' | 'Bad Number' | 'Call Loop' | 'Calls Not Accepted' | 'Carrier is not active' | 'Connected' | 'Customer 611 Restricted' | 'EDGE trunk misconfigured' | 'Emergency Address not defined' | 'Failed Try Again' | 'Fax Not Received' | 'Fax Not Sent' | 'Fax Partially Sent' | 'Fax Poor Line' | 'Fax Prepare Error' | 'Fax Save Error' | 'Fax Send Error' | 'Hang Up' | 'Info 411 Restricted' | 'Internal Call Error' | 'Internal Error' | 'International Disabled' | 'International Restricted' | 'Line Busy' | 'Max Call Limit' | 'No Answer' | 'No Credit' | 'No Digital Line' | 'Not Answered' | 'Number Blocked' | 'Number Disabled' | 'Number Not Allowed' | 'Receive Error' | 'Resource Error' | 'Restricted Number' | 'Stopped' | 'Too Many Calls' | 'Unknown' | 'Wrong Number');
+
+  /**
+   * The detailed reason description of the call result
+   */
+  reasonDescription?: string;
 
   /**
    * The call start datetime in ISO 8601 format including timezone, for example 2016-03-10T18:07:52.534Z
+   * Required
    * Format: date-time
    */
   startTime?: string;
 
   /**
    * Call duration in seconds
+   * Required
    * Format: int32
    */
   duration?: number;
+
+  /**
+   * Call duration in milliseconds
+   * Required
+   * Format: int32
+   */
+  durationMs?: number;
 
   /**
    */
   recording?: CallLogRecordingInfo;
 
   /**
-   * For 'Detailed' view only. The datetime when the call log record was modified in ISO 8601 format including timezone, for example 2016-03-10T18:07:52.534Z
-   * Format: date-time
+   * Indicates that the recording is too short and therefore wouldn't be returned. The flag is not returned if the value is false
    */
-  lastModifiedTime?: string;
-
-  /**
-   * The type of a call transport. 'PSTN' indicates that a call leg was initiated
- *  from the PSTN network provider; 'VoIP' - from an RC phone.
-   */
-  transport?: ('PSTN' | 'VoIP');
+  shortRecording?: boolean;
 
   /**
    */
-  extension?: ActiveCallsRecordExtensionInfo;
-
-  /**
-   */
-  delegate?: CallLogDelegateInfo;
-
-  /**
-   * For 'Detailed' view only. Leg description
-   * Required
-   */
-  legs?: CallLogRecordLegInfo[];
-
-  /**
-   */
-  message?: CallLogRecordMessage;
-
-  /**
-   * Returned only if this call was deleted. Value is set to 'True' in this case
-   */
-  deleted?: boolean;
+  billing?: BillingInfo;
 
   /**
    * The internal type of the call

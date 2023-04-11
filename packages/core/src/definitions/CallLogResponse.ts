@@ -1,0 +1,29 @@
+import CallLogRecord from './CallLogRecord';
+import PageNavigationModel from './PageNavigationModel';
+import EnumeratedPagingModel from './EnumeratedPagingModel';
+
+interface CallLogResponse {
+  /**
+   * Link to the list of company/user call log records
+   * Format: uri
+   */
+  uri?: string;
+
+  /**
+   * List of call log records
+   * Required
+   */
+  records?: CallLogRecord[];
+
+  /**
+   * Required
+   */
+  navigation?: PageNavigationModel;
+
+  /**
+   * Required
+   */
+  paging?: EnumeratedPagingModel;
+}
+
+export default CallLogResponse;

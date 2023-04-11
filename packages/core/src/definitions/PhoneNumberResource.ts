@@ -5,7 +5,7 @@ interface PhoneNumberResource {
   formattedPhoneNumber?: string;
 
   /**
-   * Example: 12056812029
+   * Example: +12056812029
    */
   phoneNumber?: string;
 

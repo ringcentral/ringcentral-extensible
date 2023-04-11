@@ -7,6 +7,7 @@ interface IVRMenuListInfo {
 
   /**
    * Link to an IVR Menu extension resource
+   * Format: uri
    * Example: https://api-example.rincentral.com/restapi/v1.0/account/5936989006/ivr-menus/7258440006
    */
   uri?: string;

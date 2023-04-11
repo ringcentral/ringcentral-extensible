@@ -1,6 +1,7 @@
-import UserCallLogRecord from '../../../../../definitions/UserCallLogRecord';
+import CallLogRecord from '../../../../../definitions/CallLogRecord';
+import ReadUserCallRecordParameters from '../../../../../definitions/ReadUserCallRecordParameters';
 import DeleteUserCallLogParameters from '../../../../../definitions/DeleteUserCallLogParameters';
-import UserCallLogResponse from '../../../../../definitions/UserCallLogResponse';
+import CallLogResponse from '../../../../../definitions/CallLogResponse';
 import ReadUserCallLogParameters from '../../../../../definitions/ReadUserCallLogParameters';
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
@@ -32,8 +33,8 @@ class Index {
    * App Permission: ReadCallLog
    * User Permission: ReadCallLog
    */
-  async list(queryParams?: ReadUserCallLogParameters, restRequestConfig?: RestRequestConfig): Promise<UserCallLogResponse> {
-    const r = await this.rc.get<UserCallLogResponse>(this.path(false), queryParams, restRequestConfig);
+  async list(queryParams?: ReadUserCallLogParameters, restRequestConfig?: RestRequestConfig): Promise<CallLogResponse> {
+    const r = await this.rc.get<CallLogResponse>(this.path(false), queryParams, restRequestConfig);
     return r.data;
   }
 
@@ -58,11 +59,11 @@ class Index {
    * App Permission: ReadCallLog
    * User Permission: ReadCallLog
    */
-  async get(restRequestConfig?: RestRequestConfig): Promise<UserCallLogRecord> {
+  async get(queryParams?: ReadUserCallRecordParameters, restRequestConfig?: RestRequestConfig): Promise<CallLogRecord> {
     if (this.callRecordId === null) {
       throw new Error('callRecordId must be specified.');
     }
-    const r = await this.rc.get<UserCallLogRecord>(this.path(), undefined, restRequestConfig);
+    const r = await this.rc.get<CallLogRecord>(this.path(), queryParams, restRequestConfig);
     return r.data;
   }
 }

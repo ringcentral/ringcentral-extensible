@@ -28,6 +28,7 @@ interface MissedCallEvent {
 
   /**
    * Internal identifier of an extension
+   * Default: ~
    */
   extensionId?: string;
 

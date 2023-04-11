@@ -4,6 +4,7 @@
 interface PromptLanguageInfo {
   /**
    * Link to a prompt language
+   * Format: uri
    */
   uri?: string;
 

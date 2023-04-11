@@ -1,5 +1,5 @@
-import NavigationInfo from './NavigationInfo';
-import EnumeratedPaging from './EnumeratedPaging';
+import PageNavigationModel from './PageNavigationModel';
+import EnumeratedPagingModel from './EnumeratedPagingModel';
 
 interface DictionaryGreetingInfo {
   /**
@@ -9,6 +9,7 @@ interface DictionaryGreetingInfo {
 
   /**
    * Link to a greeting
+   * Format: uri
    */
   uri?: string;
 
@@ -29,6 +30,7 @@ interface DictionaryGreetingInfo {
 
   /**
    * Link to a greeting content (audio file), if any
+   * Format: uri
    */
   contentUri?: string;
 
@@ -44,11 +46,11 @@ interface DictionaryGreetingInfo {
 
   /**
    */
-  navigation?: NavigationInfo;
+  navigation?: PageNavigationModel;
 
   /**
    */
-  paging?: EnumeratedPaging;
+  paging?: EnumeratedPagingModel;
 }
 
 export default DictionaryGreetingInfo;

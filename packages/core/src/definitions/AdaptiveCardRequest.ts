@@ -36,7 +36,7 @@ interface AdaptiveCardRequest {
   fallbackText?: string;
 
   /**
-   * Specifies the background image of a card
+   * Specifies a background image oa a card. Acceptable formats are PNG, JPEG, and GIF
    */
   backgroundImage?: BackgroundImage;
 

@@ -4,7 +4,7 @@ import ExtensionRegionalSettingRequest from './ExtensionRegionalSettingRequest';
 import CallQueueInfoRequest from './CallQueueInfoRequest';
 import UserTransitionInfo from './UserTransitionInfo';
 import CustomFieldInfo from './CustomFieldInfo';
-import AutomaticLocationUpdatesSiteInfo from './AutomaticLocationUpdatesSiteInfo';
+import ProvisioningSiteInfo from './ProvisioningSiteInfo';
 import ReferenceInfo from './ReferenceInfo';
 
 interface ExtensionBulkUpdateInfo {
@@ -83,7 +83,7 @@ interface ExtensionBulkUpdateInfo {
 
   /**
    */
-  site?: AutomaticLocationUpdatesSiteInfo;
+  site?: ProvisioningSiteInfo;
 
   /**
    * Extension type. Please note that legacy 'Department' extension

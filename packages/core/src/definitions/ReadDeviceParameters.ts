@@ -3,7 +3,7 @@
 */
 interface ReadDeviceParameters {
   /**
-   * Specifies if emergency address should be synchronized or not
+   * Specifies if an emergency address should be synchronized or not
    */
   syncEmergencyAddress?: boolean;
 }

@@ -5,6 +5,9 @@ import Restapi from './paths/Restapi';
 import Scim from './paths/Scim';
 import SdkExtension from './SdkExtension';
 import Analytics from './paths/Analytics';
+import Ai from './paths/Ai';
+import Rcvideo from './paths/Rcvideo';
+import Webinar from './paths/Webinar';
 import RestException from './RestException';
 import {
   RestRequestConfig, RestResponse, RingCentralInterface, RestMethod,
@@ -246,8 +249,20 @@ class RingCentral implements RingCentralInterface {
     return new Analytics(this);
   }
 
-  teamMessaging(version: string | null = 'v1'): TeamMessaging {
-    return new TeamMessaging(this, version);
+  teamMessaging(): TeamMessaging {
+    return new TeamMessaging(this);
+  }
+
+  ai(): Ai {
+    return new Ai(this);
+  }
+
+  rcvideo(): Rcvideo {
+    return new Rcvideo(this);
+  }
+
+  webinar(): Webinar {
+    return new Webinar(this);
   }
 }
 

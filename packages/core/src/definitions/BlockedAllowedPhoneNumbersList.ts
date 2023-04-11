@@ -1,6 +1,6 @@
 import BlockedAllowedPhoneNumberInfo from './BlockedAllowedPhoneNumberInfo';
-import NavigationInfo from './NavigationInfo';
-import EnumeratedPaging from './EnumeratedPaging';
+import PageNavigationModel from './PageNavigationModel';
+import EnumeratedPagingModel from './EnumeratedPagingModel';
 
 /**
  * List of blocked or allowed phone numbers
@@ -8,6 +8,7 @@ import EnumeratedPaging from './EnumeratedPaging';
 interface BlockedAllowedPhoneNumbersList {
   /**
    * Link to a list of blocked/allowed phone numbers resource
+   * Format: uri
    */
   uri?: string;
 
@@ -17,11 +18,11 @@ interface BlockedAllowedPhoneNumbersList {
 
   /**
    */
-  navigation?: NavigationInfo;
+  navigation?: PageNavigationModel;
 
   /**
    */
-  paging?: EnumeratedPaging;
+  paging?: EnumeratedPagingModel;
 }
 
 export default BlockedAllowedPhoneNumbersList;

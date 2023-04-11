@@ -1,5 +1,5 @@
-import BusinessSiteCollectionResource from '../../../../../definitions/BusinessSiteCollectionResource';
 import BusinessSiteCollectionRequest from '../../../../../definitions/BusinessSiteCollectionRequest';
+import BusinessSiteCollectionResource from '../../../../../definitions/BusinessSiteCollectionResource';
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
@@ -17,20 +17,22 @@ class Index {
   }
 
   /**
-   * Returns the list of sites administered by the current user.
+   * Returns a list of sites administered by the current user.
    * HTTP Method: get
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/administered-sites
    * Rate Limit Group: Medium
    * App Permission: ReadAccounts
    * User Permission: ReadExtensions
    */
-  async get(restRequestConfig?: RestRequestConfig): Promise<string> {
-    const r = await this.rc.get<string>(this.path(), undefined, restRequestConfig);
+  async get(restRequestConfig?: RestRequestConfig): Promise<BusinessSiteCollectionResource> {
+    const r = await this.rc.get<BusinessSiteCollectionResource>(this.path(), undefined, restRequestConfig);
     return r.data;
   }
 
   /**
-   * Updates user administered sites. Note: only IDs of records are used for update.
+   * Updates the sites administered by the current user.
+ * Please note: Only IDs of records are used for update.
+ *
    * HTTP Method: put
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/administered-sites
    * Rate Limit Group: Medium

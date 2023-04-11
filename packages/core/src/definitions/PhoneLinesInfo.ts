@@ -8,9 +8,9 @@ interface PhoneLinesInfo {
   id?: string;
 
   /**
-   * Type of phone line
+   * The type of a phone line
    */
-  lineType?: ('Standalone' | 'StandaloneFree' | 'BlaPrimary' | 'BlaSecondary');
+  lineType?: ('Unknown' | 'Standalone' | 'StandaloneFree' | 'BlaPrimary' | 'BlaSecondary');
 
   /**
    */

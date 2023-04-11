@@ -1,18 +1,18 @@
 interface CustomFieldResource {
   /**
-   * Custom field identifier
+   * Example: 1032854
    */
   id?: string;
 
   /**
-   * Object category to attach custom fields
+   * Example: Rank
    */
-  category?: ('User');
+  name?: string;
 
   /**
-   * Custom field display name
+   * Example: 5
    */
-  displayName?: string;
+  value?: string;
 }
 
 export default CustomFieldResource;

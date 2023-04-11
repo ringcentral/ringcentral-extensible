@@ -1,10 +1,11 @@
 import ListCompanyAnsweringRuleInfo from './ListCompanyAnsweringRuleInfo';
-import EnumeratedPaging from './EnumeratedPaging';
-import NavigationInfo from './NavigationInfo';
+import EnumeratedPagingModel from './EnumeratedPagingModel';
+import PageNavigationModel from './PageNavigationModel';
 
 interface CompanyAnsweringRuleList {
   /**
    * Link to an answering rule resource
+   * Format: uri
    */
   uri?: string;
 
@@ -15,11 +16,11 @@ interface CompanyAnsweringRuleList {
 
   /**
    */
-  paging?: EnumeratedPaging;
+  paging?: EnumeratedPagingModel;
 
   /**
    */
-  navigation?: NavigationInfo;
+  navigation?: PageNavigationModel;
 }
 
 export default CompanyAnsweringRuleList;

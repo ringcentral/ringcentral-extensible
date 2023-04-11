@@ -82,8 +82,9 @@ interface UpdateAnsweringRuleRequest {
  *  callers are asked to say their name before connecting; 'Always' - the
  *  callers are always asked to say their name before connecting. The default
  *  value is 'Off'
+   * Default: Off
    */
-  screening?: ('false' | 'NoCallerId' | 'UnknownCallerId' | 'Always');
+  screening?: ('Off' | 'NoCallerId' | 'UnknownCallerId' | 'Always');
 
   /**
    * Indicates whether inactive numbers should be returned or not

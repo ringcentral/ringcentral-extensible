@@ -3,6 +3,7 @@ import CustomGreetingAnsweringRuleInfo from './CustomGreetingAnsweringRuleInfo';
 interface CustomUserGreetingInfo {
   /**
    * Link to a custom user greeting
+   * Format: uri
    */
   uri?: string;
 
@@ -23,6 +24,7 @@ interface CustomUserGreetingInfo {
 
   /**
    * Link to a greeting content (audio file)
+   * Format: uri
    */
   contentUri?: string;
 

@@ -32,8 +32,8 @@ class Index {
    * Endpoint: /restapi/oauth/authorize
    * Rate Limit Group: Auth
    */
-  async post(AuthorizeRequest: AuthorizeRequest, restRequestConfig?: RestRequestConfig): Promise<string> {
-    const r = await this.rc.post<string>(this.path(), AuthorizeRequest, undefined, restRequestConfig);
+  async post(authorizeRequest: AuthorizeRequest, restRequestConfig?: RestRequestConfig): Promise<string> {
+    const r = await this.rc.post<string>(this.path(), authorizeRequest, undefined, restRequestConfig);
     return r.data;
   }
 }

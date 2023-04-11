@@ -4,6 +4,7 @@
 interface IVRMenuExtensionInfo {
   /**
    * Link to an extension resource
+   * Format: uri
    */
   uri?: string;
 

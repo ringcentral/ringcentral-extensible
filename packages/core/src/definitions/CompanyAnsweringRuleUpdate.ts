@@ -5,18 +5,21 @@ import GreetingInfo from './GreetingInfo';
 
 interface CompanyAnsweringRuleUpdate {
   /**
-   * Specifies if the rule is active or inactive. The default value is 'True'
+   * Specifies if a rule is active or inactive. The default value is 'True'
    * Default: true
    */
   enabled?: boolean;
 
   /**
-   * Name of an answering rule specified by user. Max number of symbols is 30. The default value is 'My Rule N' where 'N' is the first free number
+   * Name of an answering rule specified by user. Max number of
+ *  symbols is 30. The default value is 'My Rule N' where 'N' is the first
+ *  free number
    */
   name?: string;
 
   /**
-   * Answering rule will be applied when calls are received from the specified caller(s)
+   * Answering rule will be applied when calls are received from
+ *  the specified caller(s)
    */
   callers?: CompanyAnsweringRuleCallersInfoRequest[];
 
@@ -45,7 +48,8 @@ interface CompanyAnsweringRuleUpdate {
   extension?: CompanyAnsweringRuleCallersInfoRequest;
 
   /**
-   * Greetings applied for an answering rule; only predefined greetings can be applied, see Dictionary Greeting List
+   * Greetings applied for an answering rule; only predefined greetings
+ *  can be applied, see Dictionary Greeting List
    */
   greetings?: GreetingInfo[];
 }

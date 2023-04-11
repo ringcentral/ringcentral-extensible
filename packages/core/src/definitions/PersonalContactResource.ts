@@ -100,73 +100,73 @@ interface PersonalContactResource {
 
   /**
    * Home phone number of a contact in e.164 (with "+") format
-   * Example: 15551234567
+   * Example: +15551234567
    */
   homePhone?: string;
 
   /**
    * Second home phone number of a contact in e.164 (with "+") format
-   * Example: 15551234567
+   * Example: +15551234567
    */
   homePhone2?: string;
 
   /**
    * Business phone of the contact in e.164 (with "+") format
-   * Example: 15551234567
+   * Example: +15551234567
    */
   businessPhone?: string;
 
   /**
    * Second business phone of a contact in e.164 (with "+") format
-   * Example: 15551234567
+   * Example: +15551234567
    */
   businessPhone2?: string;
 
   /**
    * Mobile phone of a contact in e.164 (with "+") format
-   * Example: 15551234567
+   * Example: +15551234567
    */
   mobilePhone?: string;
 
   /**
    * Business fax number of a contact in e.164 (with "+") format
-   * Example: 15551234567
+   * Example: +15551234567
    */
   businessFax?: string;
 
   /**
    * Company number of a contact in e.164 (with "+") format
-   * Example: 15551234567
+   * Example: +15551234567
    */
   companyPhone?: string;
 
   /**
    * Phone number of a contact assistant in e.164 (with "+") format
-   * Example: 15551234567
+   * Example: +15551234567
    */
   assistantPhone?: string;
 
   /**
    * Car phone number of a contact in e.164 (with "+") format
-   * Example: 15551234567
+   * Example: +15551234567
    */
   carPhone?: string;
 
   /**
    * Other phone number of a contact in e.164 (with "+") format
-   * Example: 15551234567
+   * Example: +15551234567
    */
   otherPhone?: string;
 
   /**
    * Other fax number of a contact in e.164 (with "+") format
-   * Example: 15551234567
+   * Example: +15551234567
    */
   otherFax?: string;
 
   /**
    * Callback phone number of a contact in e.164 (with "+") format
-   * Example: 15551234567
+   * Example: +15551234567
    */
   callbackPhone?: string;
 

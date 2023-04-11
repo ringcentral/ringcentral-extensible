@@ -13,7 +13,7 @@ interface TMAttachmentFootnoteInfo {
   /**
    * Message creation datetime in ISO 8601 format including timezone
    * Format: date-time
-   * Example: Thu Mar 10 2016 10:07:52 GMT-0800 (Pacific Standard Time)
+   * Example: 2016-03-10T18:07:52.534Z
    */
   time?: string;
 }

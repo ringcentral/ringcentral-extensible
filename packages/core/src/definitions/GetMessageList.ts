@@ -4,7 +4,8 @@ import MessagingPagingInfo from './MessagingPagingInfo';
 
 interface GetMessageList {
   /**
-   * Link to the list of user messages
+   * Link to a list of user messages
+   * Format: uri
    */
   uri?: string;
 

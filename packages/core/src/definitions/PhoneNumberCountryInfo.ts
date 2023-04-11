@@ -9,6 +9,7 @@ interface PhoneNumberCountryInfo {
 
   /**
    * Canonical URI of a home country
+   * Format: uri
    */
   uri?: string;
 

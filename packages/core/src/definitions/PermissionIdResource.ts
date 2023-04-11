@@ -1,5 +1,6 @@
 interface PermissionIdResource {
   /**
+   * Format: uri
    */
   uri?: string;
 

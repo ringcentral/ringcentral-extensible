@@ -2,7 +2,7 @@ import AccountResource from './AccountResource';
 import PhoneNumberResource from './PhoneNumberResource';
 import AccountDirectoryProfileImageResource from './AccountDirectoryProfileImageResource';
 import BusinessSiteResource from './BusinessSiteResource';
-import RoleResource from './RoleResource';
+import DirectoryRoleResource from './DirectoryRoleResource';
 import CallQueueResource from './CallQueueResource';
 import CustomFieldResource from './CustomFieldResource';
 import GroupResource from './GroupResource';
@@ -90,7 +90,7 @@ interface ContactResource {
 
   /**
    */
-  role?: RoleResource;
+  role?: DirectoryRoleResource;
 
   /**
    */
@@ -111,6 +111,11 @@ interface ContactResource {
   /**
    */
   integration?: ExternalIntegrationResource;
+
+  /**
+   * Example: 3
+   */
+  subType?: string;
 }
 
 export default ContactResource;

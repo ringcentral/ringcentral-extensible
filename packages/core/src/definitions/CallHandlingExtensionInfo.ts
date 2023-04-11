@@ -6,6 +6,7 @@ interface CallHandlingExtensionInfo {
 
   /**
    * Canonical URI of an extension
+   * Format: uri
    */
   uri?: string;
 

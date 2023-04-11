@@ -1,13 +1,18 @@
 interface EmergencyAddress {
   /**
-   * 'True' if specifying of emergency address is required
+   * If set to 'True' then specifying emergency address is required
    */
   required?: boolean;
 
   /**
-   * 'True' if only local emergency address can be specified
+   * If set to 'True' then only local emergency address can be specified
    */
   localOnly?: boolean;
+
+  /**
+   * This status is associated with a phone line provision state
+   */
+  lineProvisioningStatus?: ('Valid' | 'Provisioning' | 'Invalid');
 }
 
 export default EmergencyAddress;

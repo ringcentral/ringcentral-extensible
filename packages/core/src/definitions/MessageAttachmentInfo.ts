@@ -7,6 +7,7 @@ interface MessageAttachmentInfo {
 
   /**
    * Canonical URI of a message attachment
+   * Format: uri
    */
   uri?: string;
 
@@ -21,7 +22,9 @@ interface MessageAttachmentInfo {
   contentType?: string;
 
   /**
-   * Supported for `Voicemail` only. Duration of a voicemail in seconds
+   * Supported for `Voicemail` only. Duration of a voicemail in
+ *  seconds
+   * Format: int32
    */
   vmDuration?: number;
 
@@ -32,16 +35,19 @@ interface MessageAttachmentInfo {
 
   /**
    * Size of attachment in bytes
+   * Format: int32
    */
   size?: number;
 
   /**
    * Attachment height in pixels if available
+   * Format: int32
    */
   height?: number;
 
   /**
    * Attachment width in pixels if available
+   * Format: int32
    */
   width?: number;
 }

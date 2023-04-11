@@ -6,6 +6,7 @@ import ActiveCallInfoWithoutSIP from './ActiveCallInfoWithoutSIP';
 interface DetailedExtensionPresenceEventBody {
   /**
    * Internal identifier of an extension
+   * Default: ~
    */
   extensionId?: string;
 

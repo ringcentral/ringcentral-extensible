@@ -1,12 +1,28 @@
-import MessageStatuses from './MessageStatuses';
+import MessageStatusCounts from './MessageStatusCounts';
 
 /**
- * The statuses of the messages filtered by batch/account/phone numbers.
+ * The messages status object with details of each status
 */
 interface MessageStatusesResponse {
   /**
    */
-  messageStatuses?: MessageStatuses;
+  queued?: MessageStatusCounts;
+
+  /**
+   */
+  delivered?: MessageStatusCounts;
+
+  /**
+   */
+  deliveryFailed?: MessageStatusCounts;
+
+  /**
+   */
+  sent?: MessageStatusCounts;
+
+  /**
+   */
+  sendingFailed?: MessageStatusCounts;
 }
 
 export default MessageStatusesResponse;

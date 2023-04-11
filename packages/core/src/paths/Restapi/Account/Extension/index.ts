@@ -1,10 +1,7 @@
-import MeetingsConfiguration from './MeetingsConfiguration';
 import NotificationSettings from './NotificationSettings';
-import MeetingConfiguration from './MeetingConfiguration';
 import CallQueuePresence from './CallQueuePresence';
 import VideoConfiguration from './VideoConfiguration';
 import EmergencyLocations from './EmergencyLocations';
-import MeetingRecordings from './MeetingRecordings';
 import AdministeredSites from './AdministeredSites';
 import OverflowSettings from './OverflowSettings';
 import AddressBookSync from './AddressBookSync';
@@ -32,13 +29,11 @@ import Favorite from './Favorite';
 import RingOut from './RingOut';
 import Greeting from './Greeting';
 import CallLog from './CallLog';
-import Meeting from './Meeting';
 import Device from './Device';
 import Grant from './Grant';
 import Mms from './Mms';
 import Sms from './Sms';
 import Fax from './Fax';
-import DeleteExtensionParameters from '../../../../definitions/DeleteExtensionParameters';
 import ExtensionUpdateRequest from '../../../../definitions/ExtensionUpdateRequest';
 import GetExtensionInfoResponse from '../../../../definitions/GetExtensionInfoResponse';
 import ExtensionCreationResponse from '../../../../definitions/ExtensionCreationResponse';
@@ -130,32 +125,6 @@ class Index {
     return r.data;
   }
 
-  /**
-   * Deletes extension(s) by ID(s). When an extension is being deleted
- * the default API behavior is as follows:
- * - user's direct numbers are preserved by becoming additional company numbers;
- * - user's digital lines (both device & associated phone number) are deleted.
- *
- * You can change this behavior using the filters:
- * - create unassigned extensions for each digital line of the deleted extension by
- *   setting the query parameter `savePhoneLines` to `true` in request path;
- * - remove direct numbers of the deleted extension by setting the `savePhoneNumbers`
- *   query parameter to `false` in request path
- *
-   * HTTP Method: delete
-   * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}
-   * Rate Limit Group: Medium
-   * App Permission: EditAccounts
-   * User Permission: AddRemoveUsers
-   */
-  async delete(queryParams?: DeleteExtensionParameters, restRequestConfig?: RestRequestConfig): Promise<string> {
-    if (this.extensionId === null) {
-      throw new Error('extensionId must be specified.');
-    }
-    const r = await this.rc.delete<string>(this.path(), queryParams, restRequestConfig);
-    return r.data;
-  }
-
   fax(): Fax {
     return new Fax(this);
   }
@@ -174,10 +143,6 @@ class Index {
 
   device(): Device {
     return new Device(this);
-  }
-
-  meeting(meetingId: (string | null) = null): Meeting {
-    return new Meeting(this, meetingId);
   }
 
   callLog(callRecordId: (string | null) = null): CallLog {
@@ -288,10 +253,6 @@ class Index {
     return new AdministeredSites(this);
   }
 
-  meetingRecordings(): MeetingRecordings {
-    return new MeetingRecordings(this);
-  }
-
   emergencyLocations(locationId: (string | null) = null): EmergencyLocations {
     return new EmergencyLocations(this, locationId);
   }
@@ -304,16 +265,8 @@ class Index {
     return new CallQueuePresence(this);
   }
 
-  meetingConfiguration(): MeetingConfiguration {
-    return new MeetingConfiguration(this);
-  }
-
   notificationSettings(): NotificationSettings {
     return new NotificationSettings(this);
-  }
-
-  meetingsConfiguration(): MeetingsConfiguration {
-    return new MeetingsConfiguration(this);
   }
 }
 export default Index;

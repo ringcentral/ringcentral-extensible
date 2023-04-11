@@ -5,6 +5,7 @@ interface CallRecordingExtensionResource {
   id?: string;
 
   /**
+   * Format: uri
    */
   uri?: string;
 

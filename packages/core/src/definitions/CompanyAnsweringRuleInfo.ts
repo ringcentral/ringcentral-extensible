@@ -12,6 +12,7 @@ interface CompanyAnsweringRuleInfo {
 
   /**
    * Canonical URI of an answering rule
+   * Format: uri
    */
   uri?: string;
 

@@ -1,22 +1,20 @@
 import Attachment from './Attachment';
+import GreetingAnsweringRuleId from './GreetingAnsweringRuleId';
 
 /**
  * Request body for operation createCompanyGreeting
 */
 interface CreateCompanyGreetingRequest {
   /**
-   * Type of a greeting, specifying the case when the greeting is played.
+   * Type of a greeting, specifying the case when the greeting
+ *  is played.
    * Required
    */
   type?: ('Company' | 'StartRecording' | 'StopRecording' | 'AutomaticRecording' | 'TemplateGreeting');
 
   /**
-   * Internal identifier of an answering rule
-   */
-  answeringRuleId?: string;
-
-  /**
-   * Internal identifier of a language. See Get Language List
+   * Internal identifier of a language. See Get Language
+ *  List
    */
   languageId?: string;
 
@@ -25,6 +23,10 @@ interface CreateCompanyGreetingRequest {
    * Required
    */
   binary?: Attachment;
+
+  /**
+   */
+  answeringRule?: GreetingAnsweringRuleId;
 }
 
 export default CreateCompanyGreetingRequest;

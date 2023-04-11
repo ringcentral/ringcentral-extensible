@@ -61,7 +61,7 @@ interface SearchDirectoryEntriesRequest {
   extensionStatuses?: ('Enabled' | 'Disabled' | 'NotActivated')[];
 
   /**
-   * Types of extension to filter the contacts.
+   * Types of extension to filter the contacts
    */
   extensionTypes?: ('User' | 'Department' | 'Announcement' | 'Voicemail' | 'DigitalUser' | 'VirtualUser' | 'FaxUser' | 'PagingOnly' | 'SharedLinesGroup' | 'IvrMenu' | 'ApplicationExtension' | 'ParkLocation' | 'Limited' | 'Site' | 'DelegatedLinesGroup' | 'FlexibleUser')[];
 

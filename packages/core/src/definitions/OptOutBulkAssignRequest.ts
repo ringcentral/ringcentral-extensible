@@ -5,19 +5,19 @@ interface OptOutBulkAssignRequest {
   /**
    * The phone number of a sender which the recipients should be opted out from or opted in to
    * Required
-   * Example: 15551234455
+   * Example: +15551234455
    */
   from?: string;
 
   /**
    * The list of phone numbers to be opted out
-   * Example: 15551237755,15551237756
+   * Example: +15551237755,+15551237756
    */
   optOuts?: string[];
 
   /**
    * The list of phone numbers to be opted in
-   * Example: 15551237799,15551237798
+   * Example: +15551237799,+15551237798
    */
   optIns?: string[];
 }

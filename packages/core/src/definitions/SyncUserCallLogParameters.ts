@@ -4,11 +4,12 @@
 interface SyncUserCallLogParameters {
   /**
    * Type of call log synchronization request: full or incremental sync
+   * Default: FSync
    */
   syncType?: ('FSync' | 'ISync');
 
   /**
-   * Value of syncToken property of last sync request response
+   * Value of syncToken property of last sync request response. Mandatory parameter for 'ISync' sync type
    */
   syncToken?: string;
 
@@ -25,7 +26,7 @@ interface SyncUserCallLogParameters {
   recordCount?: number;
 
   /**
-   * Type of calls to be returned. The default value is 'All'
+   * Type of calls to be returned
    */
   statusGroup?: ('Missed' | 'All')[];
 
@@ -39,6 +40,20 @@ interface SyncUserCallLogParameters {
    * Supported for `ISync` mode. Indicates that deleted call records should be returned
    */
   showDeleted?: boolean;
+
+  /**
+   * Deprecated, replaced with `recordingType` filter, still supported for compatibility reasons.
+ *  Indicates if only recorded calls should be returned.
+ *
+ *  If both `withRecording` and `recordingType` parameters are specified, then `withRecording` is ignored
+   */
+  withRecording?: boolean;
+
+  /**
+   * Indicates that call records with recordings of particular type should be returned.
+ *  If omitted, then calls with and without recordings are returned
+   */
+  recordingType?: ('Automatic' | 'OnDemand' | 'All');
 }
 
 export default SyncUserCallLogParameters;

@@ -18,7 +18,6 @@ interface CallQueueInfoRequest {
   slaThresholdSeconds?: number;
 
   /**
-   * Format: int32
    */
   includeAbandonedCalls?: boolean;
 

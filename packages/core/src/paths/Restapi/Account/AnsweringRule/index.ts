@@ -2,6 +2,7 @@ import CompanyAnsweringRuleUpdate from '../../../../definitions/CompanyAnswering
 import CompanyAnsweringRuleInfo from '../../../../definitions/CompanyAnsweringRuleInfo';
 import CompanyAnsweringRuleRequest from '../../../../definitions/CompanyAnsweringRuleRequest';
 import CompanyAnsweringRuleList from '../../../../definitions/CompanyAnsweringRuleList';
+import ListCompanyAnsweringRulesParameters from '../../../../definitions/ListCompanyAnsweringRulesParameters';
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
 
 class Index {
@@ -32,8 +33,8 @@ class Index {
    * App Permission: ReadAccounts
    * User Permission: ReadCompanyAnsweringRules
    */
-  async list(restRequestConfig?: RestRequestConfig): Promise<CompanyAnsweringRuleList> {
-    const r = await this.rc.get<CompanyAnsweringRuleList>(this.path(false), undefined, restRequestConfig);
+  async list(queryParams?: ListCompanyAnsweringRulesParameters, restRequestConfig?: RestRequestConfig): Promise<CompanyAnsweringRuleList> {
+    const r = await this.rc.get<CompanyAnsweringRuleList>(this.path(false), queryParams, restRequestConfig);
     return r.data;
   }
 

@@ -21,7 +21,7 @@ class Index {
    * HTTP Method: get
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/video-configuration
    * Rate Limit Group: Light
-   * App Permission: Meetings
+   * App Permission: VideoInternal
    * User Permission: Meetings
    */
   async get(restRequestConfig?: RestRequestConfig): Promise<UserVideoConfiguration> {
@@ -35,7 +35,7 @@ class Index {
    * HTTP Method: put
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/video-configuration
    * Rate Limit Group: Light
-   * App Permission: Meetings
+   * App Permission: VideoInternal
    */
   async put(userVideoConfiguration: UserVideoConfiguration, restRequestConfig?: RestRequestConfig): Promise<UserVideoConfiguration> {
     const r = await this.rc.put<UserVideoConfiguration>(this.path(), userVideoConfiguration, undefined, restRequestConfig);

@@ -1,6 +1,6 @@
 import CompanyPhoneNumberInfo from './CompanyPhoneNumberInfo';
-import ProvisioningNavigationInfo from './ProvisioningNavigationInfo';
-import ProvisioningPagingInfo from './ProvisioningPagingInfo';
+import PageNavigationModel from './PageNavigationModel';
+import EnumeratedPagingModel from './EnumeratedPagingModel';
 
 interface AccountPhoneNumbers {
   /**
@@ -16,11 +16,11 @@ interface AccountPhoneNumbers {
 
   /**
    */
-  navigation?: ProvisioningNavigationInfo;
+  navigation?: PageNavigationModel;
 
   /**
    */
-  paging?: ProvisioningPagingInfo;
+  paging?: EnumeratedPagingModel;
 }
 
 export default AccountPhoneNumbers;

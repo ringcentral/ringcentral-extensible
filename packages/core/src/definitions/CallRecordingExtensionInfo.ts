@@ -6,6 +6,7 @@ interface CallRecordingExtensionInfo {
 
   /**
    * Link to an extension resource
+   * Format: uri
    */
   uri?: string;
 

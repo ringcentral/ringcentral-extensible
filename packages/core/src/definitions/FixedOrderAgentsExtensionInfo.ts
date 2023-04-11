@@ -6,6 +6,7 @@ interface FixedOrderAgentsExtensionInfo {
 
   /**
    * Canonical URI of an extension
+   * Format: uri
    */
   uri?: string;
 

@@ -20,6 +20,11 @@ interface ExternalIntegrationResource {
   displayName?: string;
 
   /**
+   * Example: Account
+   */
+  routingType?: string;
+
+  /**
    * Example: 1726
    */
   outboundEdgeId?: string;

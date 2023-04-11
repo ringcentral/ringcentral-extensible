@@ -7,11 +7,12 @@ interface MessageAttachmentInfoIntId {
 
   /**
    * Canonical URI of a message attachment
+   * Format: uri
    */
   uri?: string;
 
   /**
-   * Type of message attachment
+   * Type of a message attachment
    */
   type?: ('AudioRecording' | 'AudioTranscription' | 'Text' | 'SourceDocument' | 'RenderedDocument' | 'MmsAttachment');
 
@@ -21,17 +22,13 @@ interface MessageAttachmentInfoIntId {
   contentType?: string;
 
   /**
-   * Voicemail only Duration of the voicemail in seconds
-   */
-  vmDuration?: number;
-
-  /**
    * Name of a file attached
    */
   filename?: string;
 
   /**
-   * Size of attachment in bytes
+   * Size of an attachment in bytes
+   * Format: int32
    */
   size?: number;
 }

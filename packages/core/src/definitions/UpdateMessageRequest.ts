@@ -1,6 +1,7 @@
 interface UpdateMessageRequest {
   /**
-   * Read status of a message to be changed. Multiple values are accepted
+   * Message read status
+   * Required
    */
   readStatus?: ('Read' | 'Unread');
 }

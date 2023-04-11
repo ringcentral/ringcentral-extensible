@@ -9,6 +9,7 @@ interface RolesBusinessSiteResource {
   id?: string;
 
   /**
+   * Format: email
    */
   email?: string;
 

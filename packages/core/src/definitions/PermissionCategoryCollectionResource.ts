@@ -1,6 +1,6 @@
 import PermissionCategoryResource from './PermissionCategoryResource';
-import RNPPagingInfo from './RNPPagingInfo';
-import RNPNavigationInfo from './RNPNavigationInfo';
+import EnumeratedPagingModel from './EnumeratedPagingModel';
+import PageNavigationModel from './PageNavigationModel';
 
 interface PermissionCategoryCollectionResource {
   /**
@@ -14,11 +14,11 @@ interface PermissionCategoryCollectionResource {
 
   /**
    */
-  paging?: RNPPagingInfo;
+  paging?: EnumeratedPagingModel;
 
   /**
    */
-  navigation?: RNPNavigationInfo;
+  navigation?: PageNavigationModel;
 }
 
 export default PermissionCategoryCollectionResource;

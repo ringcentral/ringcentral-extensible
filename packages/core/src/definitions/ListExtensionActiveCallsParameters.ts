@@ -21,6 +21,16 @@ interface ListExtensionActiveCallsParameters {
   type?: ('Voice' | 'Fax')[];
 
   /**
+   * The type of call transport. Multiple values are supported. By default this filter is disabled
+   */
+  transport?: ('PSTN' | 'VoIP')[];
+
+  /**
+   * Conference call type: RCC or RC Meetings. If not specified, no conference call filter applied
+   */
+  conferenceType?: ('AudioConferencing' | 'Meetings')[];
+
+  /**
    * Indicates the page number to retrieve. Only positive number values are allowed
    * Format: int32
    * Default: 1

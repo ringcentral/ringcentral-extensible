@@ -1,5 +1,3 @@
-import CustomGreetingAnsweringRuleInfoRequest from './CustomGreetingAnsweringRuleInfoRequest';
-
 /**
  * Query parameters for operation createCustomUserGreeting
 */
@@ -11,10 +9,6 @@ interface CreateCustomUserGreetingParameters {
    * Default: true
    */
   apply?: boolean;
-
-  /**
-   */
-  answeringRule?: CustomGreetingAnsweringRuleInfoRequest;
 }
 
 export default CreateCustomUserGreetingParameters;

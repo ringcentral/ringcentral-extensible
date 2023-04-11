@@ -30,6 +30,7 @@ interface ModelInfo {
 
   /**
    * Max supported count of phone lines
+   * Format: int32
    */
   lineCount?: number;
 }

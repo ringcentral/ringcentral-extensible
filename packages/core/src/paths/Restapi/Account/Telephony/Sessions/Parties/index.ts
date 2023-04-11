@@ -1,3 +1,4 @@
+import PromoteToRcv from './PromoteToRcv';
 import Recordings from './Recordings';
 import Supervise from './Supervise';
 import BringIn from './BringIn';
@@ -10,6 +11,7 @@ import Ignore from './Ignore';
 import Bridge from './Bridge';
 import Unhold from './Unhold';
 import Reply from './Reply';
+import Move from './Move';
 import Hold from './Hold';
 import Flip from './Flip';
 import Park from './Park';
@@ -99,6 +101,10 @@ class Index {
     return new Hold(this);
   }
 
+  move(): Move {
+    return new Move(this);
+  }
+
   reply(): Reply {
     return new Reply(this);
   }
@@ -145,6 +151,10 @@ class Index {
 
   recordings(recordingId: (string | null) = null): Recordings {
     return new Recordings(this, recordingId);
+  }
+
+  promoteToRcv(): PromoteToRcv {
+    return new PromoteToRcv(this);
   }
 }
 export default Index;

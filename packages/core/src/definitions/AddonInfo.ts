@@ -8,6 +8,7 @@ interface AddonInfo {
   name?: string;
 
   /**
+   * Format: int32
    */
   count?: number;
 }
