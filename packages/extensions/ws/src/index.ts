@@ -38,6 +38,7 @@ export enum Events {
   autoRecoverError = 'autoRecoverError',
   newWebSocketObject = 'newWebSocketObject',
   newWsc = 'newWsc',
+  connectionReady = 'connectionReady',
 }
 
 class WebSocketExtension extends SdkExtension {
@@ -339,6 +340,9 @@ class WebSocketExtension extends SdkExtension {
       throw new ConnectionException(event);
     }
     this.connectionDetails = body;
+
+    // fired when ws connection is ready for creating subscription
+    this.eventEmitter.emit(Events.connectionReady, this.ws);
 
     // recover all subscriptions, if there are any
     for (const subscription of this.subscriptions.filter(
