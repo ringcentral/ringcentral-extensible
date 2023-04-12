@@ -45,7 +45,7 @@ class Subscription {
 
   get requestBody(): CreateSubscriptionRequest {
     return {
-      deliveryMode: { transportType: 'WebSocket' },
+      deliveryMode: { transportType: 'WebSocket' as any }, // because WebSocket is not in spec
       eventFilters: this.eventFilters,
     };
   }

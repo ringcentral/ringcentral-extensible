@@ -1210,7 +1210,7 @@
     esquery "^1.0.1"
 
 "@rc-ex/core@file:packages/core":
-  version "1.1.3"
+  version "1.2.0"
   dependencies:
     "@types/qs" "^6.9.7"
     axios "^1.3.5"
@@ -1368,11 +1368,6 @@
   resolved "https://registry.yarnpkg.com/@types/json5/-/json5-0.0.29.tgz#ee28707ae94e11d2b827bcbe5270bcea7f3e71ee"
   integrity sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==
 
-"@types/lodash@^4.14.192":
-  version "4.14.192"
-  resolved "https://registry.npmjs.org/@types/lodash/-/lodash-4.14.192.tgz#5790406361a2852d332d41635d927f1600811285"
-  integrity sha512-km+Vyn3BYm5ytMO13k9KTp27O75rbQ0NFw+U//g+PX7VZyjCioXaRFisqSIJRECljcTv73G3i6BpglNGHgUQ5A==
-
 "@types/minimatch@^3.0.3":
   version "3.0.5"
   resolved "https://registry.yarnpkg.com/@types/minimatch/-/minimatch-3.0.5.tgz#1001cc5e6a3704b83c236027e77f2f58ea010f40"
@@ -1413,12 +1408,12 @@
   resolved "https://registry.npmjs.org/@types/qs/-/qs-6.9.7.tgz#63bb7d067db107cc1e457c303bc25d511febf6cb"
   integrity sha512-FGa1F62FT09qcrueBA6qYTrJPVDzah9a+493+o2PCXsesWHIn27G98TsSMs3WPNbZIEj4+VJf6saSFpvD+3Zsw==
 
-"@types/ramda@^0.28.21":
-  version "0.28.23"
-  resolved "https://registry.yarnpkg.com/@types/ramda/-/ramda-0.28.23.tgz#d04279865a86c330c03c99ac61161d9905f276f5"
-  integrity sha512-9TYWiwkew+mCMsL7jZ+kkzy6QXn8PL5/SKmBPmjgUlTpkokZWTBr+OhiIUDztpAEbslWyt24NNfEmZUBFmnXig==
+"@types/ramda@^0.28.24":
+  version "0.28.24"
+  resolved "https://registry.npmjs.org/@types/ramda/-/ramda-0.28.24.tgz#0dc1924109a5acb283bd2b5ef83fbd215c78377e"
+  integrity sha512-VxCMFlrqYFzsarNI0b9RZS2fistW3/CGwslZ9pCrx0xCNC4utASpYPEDMg3wgzeb04mNlxb4BYAiqqSOdqjdIQ==
   dependencies:
-    ts-toolbelt "^6.15.1"
+    types-ramda "^0.29.1"
 
 "@types/semver@^7.3.12":
   version "7.3.13"
@@ -6683,10 +6678,10 @@ quick-lru@^4.0.1:
   resolved "https://registry.yarnpkg.com/quick-lru/-/quick-lru-4.0.1.tgz#5b8878f113a58217848c6482026c73e1ba57727f"
   integrity sha512-ARhCpm70fzdcvNQfPoy49IaanKkTlRWF2JMzqhcJbhSFRZv7nPTvZJdcY7301IPmvW+/p0RgIWnQDLJxifsQ7g==
 
-ramda@^0.28.0:
-  version "0.28.0"
-  resolved "https://registry.yarnpkg.com/ramda/-/ramda-0.28.0.tgz#acd785690100337e8b063cab3470019be427cc97"
-  integrity sha512-9QnLuG/kPVgWvMQ4aODhsBUFKOUmnbUnsSXACv+NCQZcHbeb+v8Lodp8OVxtRULN1/xOyYLLaL6npE6dMq5QTA==
+ramda@^0.29.0:
+  version "0.29.0"
+  resolved "https://registry.npmjs.org/ramda/-/ramda-0.29.0.tgz#fbbb67a740a754c8a4cbb41e2a6e0eb8507f55fb"
+  integrity sha512-BBea6L67bYLtdbOqfp8f58fPMqEwx0doL+pAi8TZyp2YWz8R9G8z9x75CZI8W+ftqhFHCpEX2cRnUUXK130iKA==
 
 raw-body@^2.2.0:
   version "2.5.2"
@@ -6939,26 +6934,27 @@ rimraf@^4.4.1:
   dependencies:
     glob "^9.2.0"
 
-ringcentral-code-generator@^0.5.2:
-  version "0.5.2"
-  resolved "https://registry.npmjs.org/ringcentral-code-generator/-/ringcentral-code-generator-0.5.2.tgz#8759d75d4f6231a03a16388de8bf424aa1d65e98"
-  integrity sha512-13lF4LTQfAOrJX/J0PNzyyZc3TyvGF7uxEliI4w4YoInVASl7wSJQOoStlMSAS6qc3joY0WopqlcXrBP7mpp4g==
+ringcentral-code-generator@^0.6.1:
+  version "0.6.1"
+  resolved "https://registry.npmjs.org/ringcentral-code-generator/-/ringcentral-code-generator-0.6.1.tgz#ee617975af1af464c5f3d8ecdb1e8b93dcebb247"
+  integrity sha512-NRQsxQhAsrL61aINXbj9zHRyszCnXyH0LZnuy98mezgAX7NwpxkvCPfkGVR8Z6EX6Qq0NG+A8mQ55bUkv6fhiA==
   dependencies:
     "@types/js-yaml" "^4.0.5"
-    "@types/ramda" "^0.28.21"
+    "@types/ramda" "^0.28.24"
     change-case "^4.1.2"
     js-yaml "^4.1.0"
     openapi-types "^12.1.0"
-    ramda "^0.28.0"
-    ringcentral-open-api-parser "^0.8.10"
+    ramda "^0.29.0"
+    ringcentral-open-api-parser "^0.10.0"
 
-ringcentral-open-api-parser@^0.8.10:
-  version "0.8.13"
-  resolved "https://registry.yarnpkg.com/ringcentral-open-api-parser/-/ringcentral-open-api-parser-0.8.13.tgz#0adc2aac5fb6bd82bff4bcf91e74b4e1c4c5d750"
-  integrity sha512-18cOZeuddz601r6VGP9/3tA/nBN8SjWwctWF9K0acHo9l1WmqwZ98etkO+xmEISnEDpEtOAS4jpqyK89btIFHg==
+ringcentral-open-api-parser@^0.10.0:
+  version "0.10.0"
+  resolved "https://registry.npmjs.org/ringcentral-open-api-parser/-/ringcentral-open-api-parser-0.10.0.tgz#3ed1b94428fd07654fe577f2138eecc786ce533d"
+  integrity sha512-nZtaB8s31Qvhf8lwnrEX0lKvi71XbUMVvfypYVg8qzeY+wqriVt7j+ictqagYHStcNXqzHvirNyPELDormIrWA==
   dependencies:
+    js-yaml "^4.1.0"
+    lodash "^4.17.21"
     openapi-types "^12.1.0"
-    ramda "^0.28.0"
 
 run-async@^2.4.0:
   version "2.4.1"
@@ -7618,10 +7614,10 @@ ts-node@^10.9.1:
     v8-compile-cache-lib "^3.0.1"
     yn "3.1.1"
 
-ts-toolbelt@^6.15.1:
-  version "6.15.5"
-  resolved "https://registry.yarnpkg.com/ts-toolbelt/-/ts-toolbelt-6.15.5.tgz#cb3b43ed725cb63644782c64fbcad7d8f28c0a83"
-  integrity sha512-FZIXf1ksVyLcfr7M317jbB67XFJhOO1YqdTcuGaq9q5jLUoTikukZ+98TPjKiP2jC5CgmYdWWYs0s2nLSU0/1A==
+ts-toolbelt@^9.6.0:
+  version "9.6.0"
+  resolved "https://registry.npmjs.org/ts-toolbelt/-/ts-toolbelt-9.6.0.tgz#50a25426cfed500d4a09bd1b3afb6f28879edfd5"
+  integrity sha512-nsZd8ZeNUzukXPlJmTBwUAuABDe/9qtVDelJeT/qW0ow3ZS3BsQJtNkan1802aM9Uf68/Y8ljw86Hu0h5IUW3w==
 
 tsconfig-paths@^3.14.1:
   version "3.14.2"
@@ -7741,6 +7737,13 @@ typedarray@^0.0.6:
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha512-/aCDEGatGvZ2BIk+HmLf4ifCJFwvKFNb9/JeZPMulfgFracn9QFcAf5GO8B/mweUjSoblS5In0cWhqpfs/5PQA==
+
+types-ramda@^0.29.1:
+  version "0.29.1"
+  resolved "https://registry.npmjs.org/types-ramda/-/types-ramda-0.29.1.tgz#08c6ddf583ba359ec1113c7069e30a44ef73896d"
+  integrity sha512-pdEF8VXcBTSu3fPupZahieG6Lh8eBWPtcaH/OB5QPCoN2hz4vBbspoMLB3X9kwzXRD3lwD4/j0hwj3Z/PAzzcA==
+  dependencies:
+    ts-toolbelt "^9.6.0"
 
 "typescript@^3 || ^4":
   version "4.9.5"
