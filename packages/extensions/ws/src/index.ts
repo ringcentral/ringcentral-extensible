@@ -158,6 +158,7 @@ class WebSocketExtension extends SdkExtension {
       }
     }
     let retriesAttempted = 0;
+    let checking = false;
     const check = async () => {
       if (!this.enabled) {
         return;
@@ -165,6 +166,10 @@ class WebSocketExtension extends SdkExtension {
       if (this.options.autoRecover?.enabled !== true) {
         return;
       }
+      if (checking) {
+        return;
+      }
+      checking = true;
       if (this.ws?.readyState !== OPEN && this.ws?.readyState !== CONNECTING) {
         clearInterval(this.intervalHandle!);
         try {
@@ -196,6 +201,7 @@ class WebSocketExtension extends SdkExtension {
           this.options.autoRecover!.checkInterval!(retriesAttempted),
         );
       }
+      checking = false;
     };
     this.intervalHandle = setInterval(
       check,
