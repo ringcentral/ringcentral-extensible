@@ -210,7 +210,22 @@ class WebSocketExtension extends SdkExtension {
     // browser only code end
   }
 
+  _recoverPromise?: Promise<void>;
+
   async recover() {
+    if (this._recoverPromise) {
+      return this._recoverPromise;
+    }
+    this._recoverPromise = this._recover();
+    try {
+      await this._recoverPromise;
+    } finally {
+      this._recoverPromise = undefined;
+    }
+    return undefined;
+  }
+
+  async _recover() {
     if (this.ws?.readyState === OPEN || this.ws?.readyState === CONNECTING) {
       return;
     }
@@ -264,7 +279,22 @@ class WebSocketExtension extends SdkExtension {
     }
   }
 
-  async connect(recoverSession = false) {
+  _connectPromise?: Promise<void>;
+
+  async connect(recoverSession?: boolean) {
+    if (this._connectPromise) {
+      return this._connectPromise;
+    }
+    this._connectPromise = this._connect(recoverSession);
+    try {
+      await this._connectPromise;
+    } finally {
+      this._connectPromise = undefined;
+    }
+    return undefined;
+  }
+
+  async _connect(recoverSession = false) {
     if (Date.now() > this.wsTokenExpiresAt) {
       const r = await this.rc.post('/restapi/oauth/wstoken');
       this.wsToken = r.data as WsToken;
