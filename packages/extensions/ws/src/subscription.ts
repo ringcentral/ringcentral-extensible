@@ -50,24 +50,7 @@ class Subscription {
     };
   }
 
-  _subscriptionInfo?: SubscriptionInfo;
-
-  get subscriptionInfo(): SubscriptionInfo | undefined {
-    return this._subscriptionInfo;
-  }
-
-  set subscriptionInfo(_subscription) {
-    this._subscriptionInfo = _subscription;
-    if (this.timeout) {
-      global.clearTimeout(this.timeout);
-      this.timeout = undefined;
-    }
-    if (_subscription) {
-      this.timeout = global.setTimeout(() => {
-        this.refresh();
-      }, ((_subscription.expiresIn ?? 900) - 120) * 1000);
-    }
-  }
+  subscriptionInfo?: SubscriptionInfo;
 
   async subscribe() {
     this.subscriptionInfo = (
