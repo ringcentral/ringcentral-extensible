@@ -63,7 +63,7 @@ export type ConnectionDetails = {
 
 export interface WebSocketExtensionInterface {
   options: WebSocketOptions;
-  subscriptions: SubscriptionInterface[];
+  subscription?: SubscriptionInterface;
   ws: WS;
   wsToken?: WsToken;
   rc: RingCentral;

@@ -124,7 +124,7 @@ class Subscription {
     if (this.wse.ws) {
       this.wse.ws.removeEventListener('message', this.eventListener);
     }
-    this.wse.subscriptions = this.wse.subscriptions.filter((x) => x !== this);
+    this.wse.subscription = undefined;
   }
 }
 

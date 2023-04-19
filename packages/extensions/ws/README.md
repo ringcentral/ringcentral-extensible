@@ -2,7 +2,7 @@
 
 WebSocket Extension adds support for WebSocket protocol.
 
-Please do read this article: [Create WebSocket subscriptions using RingCentral JavaScript SDKs](https://medium.com/@tylerlong/create-websocket-subscriptions-using-ringcentral-javascript-sdks-1204ce5843b8).
+Please read this article: [Create WebSocket subscriptions using RingCentral JavaScript SDKs](https://medium.com/@tylerlong/create-websocket-subscriptions-using-ringcentral-javascript-sdks-1204ce5843b8).
 
 
 ## Install
@@ -46,6 +46,10 @@ const extInfo = await rc.restapi().account().extension().get();
 console.log(extInfo.id);
 ```
 
+## Known limitations
+
+Each `WebSocketExtension` can only have 1 subscription. Trying to invoke `subscribe` multiple times will **override** the previous subscriptions.
+If you need to create multiple subscriptions, you need to create multiple `WebSocketExtension`.
 
 ## WebSocketOptions
 

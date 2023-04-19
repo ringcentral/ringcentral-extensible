@@ -57,7 +57,7 @@ class WebSocketExtension extends SdkExtension {
 
   wsc?: Wsc;
 
-  subscriptions: Subscription[] = [];
+  subscription?: Subscription;
 
   // for auto recover
   intervalHandle?: NodeJS.Timeout;
@@ -85,9 +85,9 @@ class WebSocketExtension extends SdkExtension {
 
   disable() {
     super.disable();
-    (this.subscriptions ?? []).forEach((subscription) => {
-      subscription.enabled = false;
-    });
+    if (this.subscription) {
+      this.subscription.enabled = false;
+    }
   }
 
   async install(rc: RingCentral) {
@@ -367,28 +367,24 @@ class WebSocketExtension extends SdkExtension {
     // fired when ws connection is ready for creating subscription
     this.eventEmitter.emit(Events.connectionReady, this.ws);
 
-    // recover all subscriptions, if there are any
-    for (const subscription of this.subscriptions.filter(
-      (sub) => sub.enabled,
-    )) {
+    // recover the subscription, if it exists and enabled
+    if (this.subscription && this.subscription.enabled) {
       // because we have a new ws object
-      subscription.setupWsEventListener();
+      this.subscription.setupWsEventListener();
       if (
         !recoverSession
         || this.connectionDetails.recoveryState === 'Failed'
       ) {
         // create new subscription if don't recover existing one
-        await subscription.subscribe();
+        await this.subscription.subscribe();
       }
     }
   }
 
   // keepInterval means we do not clear the interval
   async revoke(keepInterval = false) {
-    for (const subscription of this.subscriptions) {
-      await subscription.revoke();
-    }
-    this.subscriptions = [];
+    await this.subscription?.revoke();
+    this.subscription = undefined;
     if (!keepInterval && this.intervalHandle) {
       clearInterval(this.intervalHandle);
     }
@@ -414,7 +410,7 @@ class WebSocketExtension extends SdkExtension {
       subscription.subscriptionInfo = cache;
       await subscription.refresh();
     }
-    this.subscriptions.push(subscription);
+    this.subscription = subscription;
     return subscription;
   }
 }
