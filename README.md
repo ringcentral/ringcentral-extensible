@@ -128,6 +128,8 @@ t=auto-recover yarn test
 
 ## Publish
 
+Update version number in `packages/core/src/Rest.ts`
+
 ```
 yarn lerna publish
 ```
