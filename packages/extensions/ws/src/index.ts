@@ -295,7 +295,7 @@ class WebSocketExtension extends SdkExtension {
   }
 
   async _connect(recoverSession = false) {
-    if (Date.now() > this.wsTokenExpiresAt) {
+    if (!this.wsToken || Date.now() > this.wsTokenExpiresAt) {
       const r = await this.rc.post('/restapi/oauth/wstoken');
       this.wsToken = r.data as WsToken;
       // `expires_in` default value is 600 seconds. That's why we `* 0.8`
