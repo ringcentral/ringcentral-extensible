@@ -295,17 +295,15 @@ class WebSocketExtension extends SdkExtension {
   }
 
   async _connect(recoverSession = false) {
-    if (Date.now() > this.wsTokenExpiresAt) {
+    if (!this.wsToken || Date.now() > this.wsTokenExpiresAt) {
       const r = await this.rc.post('/restapi/oauth/wstoken');
       this.wsToken = r.data as WsToken;
-      this.wsTokenExpiresAt = Date.now() + (this.wsToken.expires_in - 10) * 1000;
+      // `expires_in` default value is 600 seconds. That's why we `* 0.8`
+      this.wsTokenExpiresAt = Date.now() + (this.wsToken.expires_in * 0.8) * 1000;
     }
-    let wsUri = '';
-    if (this.wsToken) {
-      wsUri = `${this.wsToken.uri}?access_token=${this.wsToken.ws_access_token}`;
-      if (recoverSession && this.wsc) {
-        wsUri += `&wsc=${this.wsc.token}`;
-      }
+    let wsUri = `${this.wsToken!.uri}?access_token=${this.wsToken!.ws_access_token}`;
+    if (recoverSession && this.wsc) {
+      wsUri += `&wsc=${this.wsc.token}`;
     }
     this.ws = new WS(wsUri);
     this.eventEmitter.emit(Events.newWebSocketObject, this.ws);
