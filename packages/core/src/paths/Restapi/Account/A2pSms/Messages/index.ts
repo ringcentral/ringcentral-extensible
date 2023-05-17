@@ -4,23 +4,23 @@ import ListA2PSMSParameters from '../../../../../definitions/ListA2PSMSParameter
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  messageId: string | null;
+  public messageId: string | null;
 
-  constructor(parent: ParentInterface, messageId: string | null = null) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface, messageId: string | null = null) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
     this.messageId = messageId;
   }
 
-  path(withParameter = true): string {
+  public path(withParameter = true): string {
     if (withParameter && this.messageId !== null) {
-      return `${this.parent.path()}/messages/${this.messageId}`;
+      return `${this._parent.path()}/messages/${this.messageId}`;
     }
-    return `${this.parent.path()}/messages`;
+    return `${this._parent.path()}/messages`;
   }
 
   /**
@@ -30,7 +30,7 @@ class Index {
    * Rate Limit Group: Light
    * App Permission: A2PSMS
    */
-  async list(queryParams?: ListA2PSMSParameters, restRequestConfig?: RestRequestConfig): Promise<MessageListResponse> {
+  public async list(queryParams?: ListA2PSMSParameters, restRequestConfig?: RestRequestConfig): Promise<MessageListResponse> {
     const r = await this.rc.get<MessageListResponse>(this.path(false), queryParams, restRequestConfig);
     return r.data;
   }
@@ -42,7 +42,7 @@ class Index {
    * Rate Limit Group: Light
    * App Permission: A2PSMS
    */
-  async get(restRequestConfig?: RestRequestConfig): Promise<MessageDetailsResponse> {
+  public async get(restRequestConfig?: RestRequestConfig): Promise<MessageDetailsResponse> {
     if (this.messageId === null) {
       throw new Error('messageId must be specified.');
     }

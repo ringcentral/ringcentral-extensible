@@ -4,23 +4,23 @@ import CallRecordingUpdate from '../../../../../../../definitions/CallRecordingU
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  recordingId: string | null;
+  public recordingId: string | null;
 
-  constructor(parent: ParentInterface, recordingId: string | null = null) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface, recordingId: string | null = null) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
     this.recordingId = recordingId;
   }
 
-  path(withParameter = true): string {
+  public path(withParameter = true): string {
     if (withParameter && this.recordingId !== null) {
-      return `${this.parent.path()}/recordings/${this.recordingId}`;
+      return `${this._parent.path()}/recordings/${this.recordingId}`;
     }
-    return `${this.parent.path()}/recordings`;
+    return `${this._parent.path()}/recordings`;
   }
 
   /**
@@ -30,7 +30,7 @@ class Index {
    * Rate Limit Group: Light
    * App Permission: CallControl
    */
-  async post(restRequestConfig?: RestRequestConfig): Promise<string> {
+  public async post(restRequestConfig?: RestRequestConfig): Promise<string> {
     const r = await this.rc.post<string>(this.path(false), undefined, restRequestConfig);
     return r.data;
   }
@@ -42,7 +42,7 @@ class Index {
    * Rate Limit Group: Light
    * App Permission: CallControl
    */
-  async patch(callRecordingUpdate: CallRecordingUpdate, queryParams?: PauseResumeCallRecordingParameters, restRequestConfig?: RestRequestConfig): Promise<CallRecording> {
+  public async patch(callRecordingUpdate: CallRecordingUpdate, queryParams?: PauseResumeCallRecordingParameters, restRequestConfig?: RestRequestConfig): Promise<CallRecording> {
     if (this.recordingId === null) {
       throw new Error('recordingId must be specified.');
     }

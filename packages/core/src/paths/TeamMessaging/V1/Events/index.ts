@@ -5,23 +5,23 @@ import ReadGlipEventsNewParameters from '../../../../definitions/ReadGlipEventsN
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  eventId: string | null;
+  public eventId: string | null;
 
-  constructor(parent: ParentInterface, eventId: string | null = null) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface, eventId: string | null = null) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
     this.eventId = eventId;
   }
 
-  path(withParameter = true): string {
+  public path(withParameter = true): string {
     if (withParameter && this.eventId !== null) {
-      return `${this.parent.path()}/events/${this.eventId}`;
+      return `${this._parent.path()}/events/${this.eventId}`;
     }
-    return `${this.parent.path()}/events`;
+    return `${this._parent.path()}/events`;
   }
 
   /**
@@ -31,7 +31,7 @@ class Index {
    * Rate Limit Group: Medium
    * App Permission: TeamMessaging
    */
-  async list(queryParams?: ReadGlipEventsNewParameters, restRequestConfig?: RestRequestConfig): Promise<TMEventList> {
+  public async list(queryParams?: ReadGlipEventsNewParameters, restRequestConfig?: RestRequestConfig): Promise<TMEventList> {
     const r = await this.rc.get<TMEventList>(this.path(false), queryParams, restRequestConfig);
     return r.data;
   }
@@ -43,7 +43,7 @@ class Index {
    * Rate Limit Group: Medium
    * App Permission: TeamMessaging
    */
-  async post(tMCreateEventRequest: TMCreateEventRequest, restRequestConfig?: RestRequestConfig): Promise<TMEventInfo> {
+  public async post(tMCreateEventRequest: TMCreateEventRequest, restRequestConfig?: RestRequestConfig): Promise<TMEventInfo> {
     const r = await this.rc.post<TMEventInfo>(this.path(false), tMCreateEventRequest, undefined, restRequestConfig);
     return r.data;
   }
@@ -55,7 +55,7 @@ class Index {
    * Rate Limit Group: Medium
    * App Permission: TeamMessaging
    */
-  async get(restRequestConfig?: RestRequestConfig): Promise<TMEventInfo> {
+  public async get(restRequestConfig?: RestRequestConfig): Promise<TMEventInfo> {
     if (this.eventId === null) {
       throw new Error('eventId must be specified.');
     }
@@ -70,7 +70,7 @@ class Index {
    * Rate Limit Group: Medium
    * App Permission: TeamMessaging
    */
-  async put(tMCreateEventRequest: TMCreateEventRequest, restRequestConfig?: RestRequestConfig): Promise<TMEventInfo> {
+  public async put(tMCreateEventRequest: TMCreateEventRequest, restRequestConfig?: RestRequestConfig): Promise<TMEventInfo> {
     if (this.eventId === null) {
       throw new Error('eventId must be specified.');
     }
@@ -85,7 +85,7 @@ class Index {
    * Rate Limit Group: Medium
    * App Permission: TeamMessaging
    */
-  async delete(restRequestConfig?: RestRequestConfig): Promise<string> {
+  public async delete(restRequestConfig?: RestRequestConfig): Promise<string> {
     if (this.eventId === null) {
       throw new Error('eventId must be specified.');
     }

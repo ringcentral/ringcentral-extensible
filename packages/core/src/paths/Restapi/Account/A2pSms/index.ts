@@ -5,32 +5,32 @@ import Batches from './Batches';
 import { RingCentralInterface, ParentInterface } from '../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  constructor(parent: ParentInterface) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
   }
 
-  path(): string {
-    return `${this.parent.path()}/a2p-sms`;
+  public path(withParameter = false): string {
+    return `${this._parent.path()}/a2p-sms`;
   }
 
-  batches(batchId: (string | null) = null): Batches {
+  public batches(batchId: (string | null) = null): Batches {
     return new Batches(this, batchId);
   }
 
-  messages(messageId: (string | null) = null): Messages {
+  public messages(messageId: (string | null) = null): Messages {
     return new Messages(this, messageId);
   }
 
-  statuses(): Statuses {
+  public statuses(): Statuses {
     return new Statuses(this);
   }
 
-  optOuts(): OptOuts {
+  public optOuts(): OptOuts {
     return new OptOuts(this);
   }
 }

@@ -4,27 +4,29 @@ import DiarizeInput from '../../../../../../definitions/DiarizeInput';
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  constructor(parent: ParentInterface) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
   }
 
-  path(): string {
-    return `${this.parent.path()}/speaker-diarize`;
+  public path(withParameter = false): string {
+    return `${this._parent.path()}/speaker-diarize`;
   }
 
   /**
-   * Returns Speaker Diarization to the provided webhook uri.
+   * Identifies who said what. Speaker diarization will identify the speaker for each segment
+ * so you can tell who spoke the sentence, paragraph, or phrase.
+ *
    * HTTP Method: post
    * Endpoint: /ai/audio/v1/async/speaker-diarize
    * Rate Limit Group: Heavy
    * App Permission: AI
    */
-  async post(diarizeInput: DiarizeInput, queryParams?: CaiSpeakerDiarizeParameters, restRequestConfig?: RestRequestConfig): Promise<CaiAsyncApiResponse> {
+  public async post(diarizeInput: DiarizeInput, queryParams?: CaiSpeakerDiarizeParameters, restRequestConfig?: RestRequestConfig): Promise<CaiAsyncApiResponse> {
     const r = await this.rc.post<CaiAsyncApiResponse>(this.path(), diarizeInput, queryParams, restRequestConfig);
     return r.data;
   }

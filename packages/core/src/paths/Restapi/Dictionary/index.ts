@@ -12,60 +12,60 @@ import Brand from './Brand';
 import { RingCentralInterface, ParentInterface } from '../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  constructor(parent: ParentInterface) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
   }
 
-  path(): string {
-    return `${this.parent.path()}/dictionary`;
+  public path(withParameter = false): string {
+    return `${this._parent.path()}/dictionary`;
   }
 
-  brand(brandId: (string | null) = null): Brand {
+  public brand(brandId: (string | null) = null): Brand {
     return new Brand(this, brandId);
   }
 
-  state(stateId: (string | null) = null): State {
+  public state(stateId: (string | null) = null): State {
     return new State(this, stateId);
   }
 
-  country(countryId: (string | null) = null): Country {
+  public country(countryId: (string | null) = null): Country {
     return new Country(this, countryId);
   }
 
-  language(languageId: (string | null) = null): Language {
+  public language(languageId: (string | null) = null): Language {
     return new Language(this, languageId);
   }
 
-  greeting(greetingId: (string | null) = null): Greeting {
+  public greeting(greetingId: (string | null) = null): Greeting {
     return new Greeting(this, greetingId);
   }
 
-  timezone(timezoneId: (string | null) = null): Timezone {
+  public timezone(timezoneId: (string | null) = null): Timezone {
     return new Timezone(this, timezoneId);
   }
 
-  location(): Location {
+  public location(): Location {
     return new Location(this);
   }
 
-  userRole(roleId: (string | null) = null): UserRole {
+  public userRole(roleId: (string | null) = null): UserRole {
     return new UserRole(this, roleId);
   }
 
-  permission(permissionId: (string | null) = null): Permission {
+  public permission(permissionId: (string | null) = null): Permission {
     return new Permission(this, permissionId);
   }
 
-  faxCoverPage(): FaxCoverPage {
+  public faxCoverPage(): FaxCoverPage {
     return new FaxCoverPage(this);
   }
 
-  permissionCategory(permissionCategoryId: (string | null) = null): PermissionCategory {
+  public permissionCategory(permissionCategoryId: (string | null) = null): PermissionCategory {
     return new PermissionCategory(this, permissionCategoryId);
   }
 }

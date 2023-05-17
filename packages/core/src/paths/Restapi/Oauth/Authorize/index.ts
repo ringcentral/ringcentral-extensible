@@ -2,17 +2,17 @@ import AuthorizeRequest from '../../../../definitions/AuthorizeRequest';
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  constructor(parent: ParentInterface) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
   }
 
-  path(): string {
-    return `${this.parent.path()}/authorize`;
+  public path(withParameter = false): string {
+    return `${this._parent.path()}/authorize`;
   }
 
   /**
@@ -21,7 +21,7 @@ class Index {
    * Endpoint: /restapi/oauth/authorize
    * Rate Limit Group: Auth
    */
-  async get(restRequestConfig?: RestRequestConfig): Promise<string> {
+  public async get(restRequestConfig?: RestRequestConfig): Promise<string> {
     const r = await this.rc.get<string>(this.path(), undefined, restRequestConfig);
     return r.data;
   }
@@ -32,7 +32,7 @@ class Index {
    * Endpoint: /restapi/oauth/authorize
    * Rate Limit Group: Auth
    */
-  async post(authorizeRequest: AuthorizeRequest, restRequestConfig?: RestRequestConfig): Promise<string> {
+  public async post(authorizeRequest: AuthorizeRequest, restRequestConfig?: RestRequestConfig): Promise<string> {
     const r = await this.rc.post<string>(this.path(), authorizeRequest, undefined, restRequestConfig);
     return r.data;
   }

@@ -4,23 +4,23 @@ import ListStandardUserRoleParameters from '../../../../definitions/ListStandard
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  roleId: string | null;
+  public roleId: string | null;
 
-  constructor(parent: ParentInterface, roleId: string | null = null) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface, roleId: string | null = null) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
     this.roleId = roleId;
   }
 
-  path(withParameter = true): string {
+  public path(withParameter = true): string {
     if (withParameter && this.roleId !== null) {
-      return `${this.parent.path()}/user-role/${this.roleId}`;
+      return `${this._parent.path()}/user-role/${this.roleId}`;
     }
-    return `${this.parent.path()}/user-role`;
+    return `${this._parent.path()}/user-role`;
   }
 
   /**
@@ -29,7 +29,7 @@ class Index {
    * Endpoint: /restapi/{apiVersion}/dictionary/user-role
    * Rate Limit Group: Light
    */
-  async list(queryParams?: ListStandardUserRoleParameters, restRequestConfig?: RestRequestConfig): Promise<RolesCollectionResource> {
+  public async list(queryParams?: ListStandardUserRoleParameters, restRequestConfig?: RestRequestConfig): Promise<RolesCollectionResource> {
     const r = await this.rc.get<RolesCollectionResource>(this.path(false), queryParams, restRequestConfig);
     return r.data;
   }
@@ -40,7 +40,7 @@ class Index {
    * Endpoint: /restapi/{apiVersion}/dictionary/user-role/{roleId}
    * Rate Limit Group: Light
    */
-  async get(restRequestConfig?: RestRequestConfig): Promise<RoleResource> {
+  public async get(restRequestConfig?: RestRequestConfig): Promise<RoleResource> {
     if (this.roleId === null) {
       throw new Error('roleId must be specified.');
     }

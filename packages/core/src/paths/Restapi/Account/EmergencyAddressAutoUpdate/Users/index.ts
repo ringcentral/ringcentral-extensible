@@ -4,17 +4,17 @@ import ListAutomaticLocationUpdatesUsersParameters from '../../../../../definiti
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  constructor(parent: ParentInterface) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
   }
 
-  path(): string {
-    return `${this.parent.path()}/users`;
+  public path(withParameter = false): string {
+    return `${this._parent.path()}/users`;
   }
 
   /**
@@ -27,12 +27,12 @@ class Index {
    * App Permission: EditAccounts
    * User Permission: ConfigureEmergencyMaps
    */
-  async get(queryParams?: ListAutomaticLocationUpdatesUsersParameters, restRequestConfig?: RestRequestConfig): Promise<AutomaticLocationUpdatesUserList> {
+  public async get(queryParams?: ListAutomaticLocationUpdatesUsersParameters, restRequestConfig?: RestRequestConfig): Promise<AutomaticLocationUpdatesUserList> {
     const r = await this.rc.get<AutomaticLocationUpdatesUserList>(this.path(), queryParams, restRequestConfig);
     return r.data;
   }
 
-  bulkAssign(): BulkAssign {
+  public bulkAssign(): BulkAssign {
     return new BulkAssign(this);
   }
 }

@@ -2,20 +2,20 @@ import Jobs from './Jobs';
 import { RingCentralInterface, ParentInterface } from '../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  constructor(parent: ParentInterface) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
   }
 
-  path(): string {
-    return `${this.parent.path()}/v1`;
+  public path(withParameter = false): string {
+    return `${this._parent.path(false)}/v1`;
   }
 
-  jobs(jobId: (string | null) = null): Jobs {
+  public jobs(jobId: (string | null) = null): Jobs {
     return new Jobs(this, jobId);
   }
 }

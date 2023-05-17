@@ -37,23 +37,23 @@ import GetAccountInfoResponse from '../../../definitions/GetAccountInfoResponse'
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  accountId: string | null;
+  public accountId: string | null;
 
-  constructor(parent: ParentInterface, accountId: string | null = '~') {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface, accountId: string | null = '~') {
+    this._parent = _parent;
+    this.rc = _parent.rc;
     this.accountId = accountId;
   }
 
-  path(withParameter = true): string {
+  public path(withParameter = true): string {
     if (withParameter && this.accountId !== null) {
-      return `${this.parent.path()}/account/${this.accountId}`;
+      return `${this._parent.path()}/account/${this.accountId}`;
     }
-    return `${this.parent.path()}/account`;
+    return `${this._parent.path()}/account`;
   }
 
   /**
@@ -66,7 +66,7 @@ class Index {
    * App Permission: ReadAccounts
    * User Permission: ReadCompanyInfo
    */
-  async get(restRequestConfig?: RestRequestConfig): Promise<GetAccountInfoResponse> {
+  public async get(restRequestConfig?: RestRequestConfig): Promise<GetAccountInfoResponse> {
     if (this.accountId === null) {
       throw new Error('accountId must be specified.');
     }
@@ -74,143 +74,143 @@ class Index {
     return r.data;
   }
 
-  sites(siteId: (string | null) = null): Sites {
+  public sites(siteId: (string | null) = null): Sites {
     return new Sites(this, siteId);
   }
 
-  device(deviceId: (string | null) = null): Device {
+  public device(deviceId: (string | null) = null): Device {
     return new Device(this, deviceId);
   }
 
-  a2pSms(): A2pSms {
+  public a2pSms(): A2pSms {
     return new A2pSms(this);
   }
 
-  callLog(callRecordId: (string | null) = null): CallLog {
+  public callLog(callRecordId: (string | null) = null): CallLog {
     return new CallLog(this, callRecordId);
   }
 
-  presence(): Presence {
+  public presence(): Presence {
     return new Presence(this);
   }
 
-  greeting(): Greeting {
+  public greeting(): Greeting {
     return new Greeting(this);
   }
 
-  directory(): Directory {
+  public directory(): Directory {
     return new Directory(this);
   }
 
-  telephony(): Telephony {
+  public telephony(): Telephony {
     return new Telephony(this);
   }
 
-  recording(recordingId: (string | null) = null): Recording {
+  public recording(recordingId: (string | null) = null): Recording {
     return new Recording(this, recordingId);
   }
 
-  extension(extensionId: (string | null) = '~'): Extension {
+  public extension(extensionId: (string | null) = '~'): Extension {
     return new Extension(this, extensionId);
   }
 
-  templates(templateId: (string | null) = null): Templates {
+  public templates(templateId: (string | null) = null): Templates {
     return new Templates(this, templateId);
   }
 
-  ivrMenus(ivrMenuId: (string | null) = null): IvrMenus {
+  public ivrMenus(ivrMenuId: (string | null) = null): IvrMenus {
     return new IvrMenus(this, ivrMenuId);
   }
 
-  userRole(roleId: (string | null) = null): UserRole {
+  public userRole(roleId: (string | null) = null): UserRole {
     return new UserRole(this, roleId);
   }
 
-  auditTrail(): AuditTrail {
+  public auditTrail(): AuditTrail {
     return new AuditTrail(this);
   }
 
-  ivrPrompts(promptId: (string | null) = null): IvrPrompts {
+  public ivrPrompts(promptId: (string | null) = null): IvrPrompts {
     return new IvrPrompts(this, promptId);
   }
 
-  callQueues(groupId: (string | null) = null): CallQueues {
+  public callQueues(groupId: (string | null) = null): CallQueues {
     return new CallQueues(this, groupId);
   }
 
-  phoneNumber(phoneNumberId: (string | null) = null): PhoneNumber {
+  public phoneNumber(phoneNumberId: (string | null) = null): PhoneNumber {
     return new PhoneNumber(this, phoneNumberId);
   }
 
-  serviceInfo(): ServiceInfo {
+  public serviceInfo(): ServiceInfo {
     return new ServiceInfo(this);
   }
 
-  activeCalls(): ActiveCalls {
+  public activeCalls(): ActiveCalls {
     return new ActiveCalls(this);
   }
 
-  customFields(fieldId: (string | null) = null): CustomFields {
+  public customFields(fieldId: (string | null) = null): CustomFields {
     return new CustomFields(this, fieldId);
   }
 
-  callLogSync(): CallLogSync {
+  public callLogSync(): CallLogSync {
     return new CallLogSync(this);
   }
 
-  assignedRole(): AssignedRole {
+  public assignedRole(): AssignedRole {
     return new AssignedRole(this);
   }
 
-  answeringRule(ruleId: (string | null) = null): AnsweringRule {
+  public answeringRule(ruleId: (string | null) = null): AnsweringRule {
     return new AnsweringRule(this, ruleId);
   }
 
-  businessHours(): BusinessHours {
+  public businessHours(): BusinessHours {
     return new BusinessHours(this);
   }
 
-  callRecording(): CallRecording {
+  public callRecording(): CallRecording {
     return new CallRecording(this);
   }
 
-  businessAddress(): BusinessAddress {
+  public businessAddress(): BusinessAddress {
     return new BusinessAddress(this);
   }
 
-  forwardAllCalls(): ForwardAllCalls {
+  public forwardAllCalls(): ForwardAllCalls {
     return new ForwardAllCalls(this);
   }
 
-  pagingOnlyGroups(pagingOnlyGroupId: (string | null) = null): PagingOnlyGroups {
+  public pagingOnlyGroups(pagingOnlyGroupId: (string | null) = null): PagingOnlyGroups {
     return new PagingOnlyGroups(this, pagingOnlyGroupId);
   }
 
-  emergencyLocations(locationId: (string | null) = null): EmergencyLocations {
+  public emergencyLocations(locationId: (string | null) = null): EmergencyLocations {
     return new EmergencyLocations(this, locationId);
   }
 
-  messageStoreReport(taskId: (string | null) = null): MessageStoreReport {
+  public messageStoreReport(taskId: (string | null) = null): MessageStoreReport {
     return new MessageStoreReport(this, taskId);
   }
 
-  extensionBulkUpdate(): ExtensionBulkUpdate {
+  public extensionBulkUpdate(): ExtensionBulkUpdate {
     return new ExtensionBulkUpdate(this);
   }
 
-  callMonitoringGroups(groupId: (string | null) = null): CallMonitoringGroups {
+  public callMonitoringGroups(groupId: (string | null) = null): CallMonitoringGroups {
     return new CallMonitoringGroups(this, groupId);
   }
 
-  addressBookBulkUpload(): AddressBookBulkUpload {
+  public addressBookBulkUpload(): AddressBookBulkUpload {
     return new AddressBookBulkUpload(this);
   }
 
-  messageStoreConfiguration(): MessageStoreConfiguration {
+  public messageStoreConfiguration(): MessageStoreConfiguration {
     return new MessageStoreConfiguration(this);
   }
 
-  emergencyAddressAutoUpdate(): EmergencyAddressAutoUpdate {
+  public emergencyAddressAutoUpdate(): EmergencyAddressAutoUpdate {
     return new EmergencyAddressAutoUpdate(this);
   }
 }

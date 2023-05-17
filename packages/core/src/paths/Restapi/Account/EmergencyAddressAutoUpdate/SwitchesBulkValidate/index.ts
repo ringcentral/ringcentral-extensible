@@ -3,17 +3,17 @@ import ValidateMultipleSwitchesRequest from '../../../../../definitions/Validate
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  constructor(parent: ParentInterface) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
   }
 
-  path(): string {
-    return `${this.parent.path()}/switches-bulk-validate`;
+  public path(withParameter = false): string {
+    return `${this._parent.path()}/switches-bulk-validate`;
   }
 
   /**
@@ -26,7 +26,7 @@ class Index {
    * App Permission: EditAccounts
    * User Permission: ConfigureEmergencyMaps
    */
-  async post(validateMultipleSwitchesRequest: ValidateMultipleSwitchesRequest, restRequestConfig?: RestRequestConfig): Promise<ValidateMultipleSwitchesResponse> {
+  public async post(validateMultipleSwitchesRequest: ValidateMultipleSwitchesRequest, restRequestConfig?: RestRequestConfig): Promise<ValidateMultipleSwitchesResponse> {
     const r = await this.rc.post<ValidateMultipleSwitchesResponse>(this.path(), validateMultipleSwitchesRequest, undefined, restRequestConfig);
     return r.data;
   }

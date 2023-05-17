@@ -3,17 +3,17 @@ import ValidateMultipleWirelessPointsRequest from '../../../../../definitions/Va
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  constructor(parent: ParentInterface) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
   }
 
-  path(): string {
-    return `${this.parent.path()}/wireless-points-bulk-validate`;
+  public path(withParameter = false): string {
+    return `${this._parent.path()}/wireless-points-bulk-validate`;
   }
 
   /**
@@ -26,7 +26,7 @@ class Index {
    * App Permission: EditAccounts
    * User Permission: ConfigureEmergencyMaps
    */
-  async post(validateMultipleWirelessPointsRequest: ValidateMultipleWirelessPointsRequest, restRequestConfig?: RestRequestConfig): Promise<ValidateMultipleWirelessPointsResponse> {
+  public async post(validateMultipleWirelessPointsRequest: ValidateMultipleWirelessPointsRequest, restRequestConfig?: RestRequestConfig): Promise<ValidateMultipleWirelessPointsResponse> {
     const r = await this.rc.post<ValidateMultipleWirelessPointsResponse>(this.path(), validateMultipleWirelessPointsRequest, undefined, restRequestConfig);
     return r.data;
   }

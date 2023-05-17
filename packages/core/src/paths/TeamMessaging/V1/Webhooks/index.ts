@@ -4,23 +4,23 @@ import TMWebhookList from '../../../../definitions/TMWebhookList';
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  webhookId: string | null;
+  public webhookId: string | null;
 
-  constructor(parent: ParentInterface, webhookId: string | null = null) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface, webhookId: string | null = null) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
     this.webhookId = webhookId;
   }
 
-  path(withParameter = true): string {
+  public path(withParameter = true): string {
     if (withParameter && this.webhookId !== null) {
-      return `${this.parent.path()}/webhooks/${this.webhookId}`;
+      return `${this._parent.path()}/webhooks/${this.webhookId}`;
     }
-    return `${this.parent.path()}/webhooks`;
+    return `${this._parent.path()}/webhooks`;
   }
 
   /**
@@ -30,7 +30,7 @@ class Index {
    * Rate Limit Group: Medium
    * App Permission: TeamMessaging
    */
-  async list(restRequestConfig?: RestRequestConfig): Promise<TMWebhookList> {
+  public async list(restRequestConfig?: RestRequestConfig): Promise<TMWebhookList> {
     const r = await this.rc.get<TMWebhookList>(this.path(false), undefined, restRequestConfig);
     return r.data;
   }
@@ -42,7 +42,7 @@ class Index {
    * Rate Limit Group: Medium
    * App Permission: TeamMessaging
    */
-  async get(restRequestConfig?: RestRequestConfig): Promise<TMWebhookList> {
+  public async get(restRequestConfig?: RestRequestConfig): Promise<TMWebhookList> {
     if (this.webhookId === null) {
       throw new Error('webhookId must be specified.');
     }
@@ -57,7 +57,7 @@ class Index {
    * Rate Limit Group: Medium
    * App Permission: TeamMessaging
    */
-  async delete(restRequestConfig?: RestRequestConfig): Promise<string> {
+  public async delete(restRequestConfig?: RestRequestConfig): Promise<string> {
     if (this.webhookId === null) {
       throw new Error('webhookId must be specified.');
     }
@@ -65,11 +65,11 @@ class Index {
     return r.data;
   }
 
-  suspend(): Suspend {
+  public suspend(): Suspend {
     return new Suspend(this);
   }
 
-  activate(): Activate {
+  public activate(): Activate {
     return new Activate(this);
   }
 }

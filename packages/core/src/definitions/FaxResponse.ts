@@ -1,5 +1,5 @@
 import MessageStoreCallerInfoResponseFrom from './MessageStoreCallerInfoResponseFrom';
-import MessageStoreCallerInfoResponseTo from './MessageStoreCallerInfoResponseTo';
+import FaxResponseTo from './FaxResponseTo';
 import MessageAttachmentInfoIntId from './MessageAttachmentInfoIntId';
 
 interface FaxResponse {
@@ -27,7 +27,7 @@ interface FaxResponse {
   /**
    * Recipient information
    */
-  to?: MessageStoreCallerInfoResponseTo[];
+  to?: FaxResponseTo[];
 
   /**
    * Message creation datetime in ISO 8601 format including timezone,

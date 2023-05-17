@@ -13,64 +13,64 @@ import Tasks from './Tasks';
 import { RingCentralInterface, ParentInterface } from '../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  constructor(parent: ParentInterface) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
   }
 
-  path(): string {
-    return `${this.parent.path()}/emergency-address-auto-update`;
+  public path(withParameter = false): string {
+    return `${this._parent.path()}/emergency-address-auto-update`;
   }
 
-  tasks(taskId: (string | null) = null): Tasks {
+  public tasks(taskId: (string | null) = null): Tasks {
     return new Tasks(this, taskId);
   }
 
-  users(): Users {
+  public users(): Users {
     return new Users(this);
   }
 
-  devices(): Devices {
+  public devices(): Devices {
     return new Devices(this);
   }
 
-  networks(networkId: (string | null) = null): Networks {
+  public networks(networkId: (string | null) = null): Networks {
     return new Networks(this, networkId);
   }
 
-  switches(switchId: (string | null) = null): Switches {
+  public switches(switchId: (string | null) = null): Switches {
     return new Switches(this, switchId);
   }
 
-  wirelessPoints(pointId: (string | null) = null): WirelessPoints {
+  public wirelessPoints(pointId: (string | null) = null): WirelessPoints {
     return new WirelessPoints(this, pointId);
   }
 
-  switchesBulkCreate(): SwitchesBulkCreate {
+  public switchesBulkCreate(): SwitchesBulkCreate {
     return new SwitchesBulkCreate(this);
   }
 
-  switchesBulkUpdate(): SwitchesBulkUpdate {
+  public switchesBulkUpdate(): SwitchesBulkUpdate {
     return new SwitchesBulkUpdate(this);
   }
 
-  switchesBulkValidate(): SwitchesBulkValidate {
+  public switchesBulkValidate(): SwitchesBulkValidate {
     return new SwitchesBulkValidate(this);
   }
 
-  wirelessPointsBulkCreate(): WirelessPointsBulkCreate {
+  public wirelessPointsBulkCreate(): WirelessPointsBulkCreate {
     return new WirelessPointsBulkCreate(this);
   }
 
-  wirelessPointsBulkUpdate(): WirelessPointsBulkUpdate {
+  public wirelessPointsBulkUpdate(): WirelessPointsBulkUpdate {
     return new WirelessPointsBulkUpdate(this);
   }
 
-  wirelessPointsBulkValidate(): WirelessPointsBulkValidate {
+  public wirelessPointsBulkValidate(): WirelessPointsBulkValidate {
     return new WirelessPointsBulkValidate(this);
   }
 }

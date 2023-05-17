@@ -3,17 +3,17 @@ import AccountDeviceUpdate from '../../../../../definitions/AccountDeviceUpdate'
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  constructor(parent: ParentInterface) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
   }
 
-  path(): string {
-    return `${this.parent.path()}/emergency`;
+  public path(withParameter = false): string {
+    return `${this._parent.path()}/emergency`;
   }
 
   /**
@@ -24,7 +24,7 @@ class Index {
    * App Permission: EditAccounts
    * User Permission: EditCompanyDevices
    */
-  async put(accountDeviceUpdate: AccountDeviceUpdate, restRequestConfig?: RestRequestConfig): Promise<DeviceResource> {
+  public async put(accountDeviceUpdate: AccountDeviceUpdate, restRequestConfig?: RestRequestConfig): Promise<DeviceResource> {
     const r = await this.rc.put<DeviceResource>(this.path(), accountDeviceUpdate, undefined, restRequestConfig);
     return r.data;
   }

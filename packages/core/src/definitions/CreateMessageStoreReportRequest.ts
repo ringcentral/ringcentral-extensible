@@ -17,7 +17,7 @@ interface CreateMessageStoreReportRequest {
    * Types of messages to be collected. If not specified, all messages without message type filtering will be returned. Multiple values are accepted
    * Example: Fax,VoiceMail
    */
-  messageTypes?: ('EMail' | 'Fax' | 'SMS' | 'VoiceMail' | 'Pager' | 'Text')[];
+  messageTypes?: ('Fax' | 'SMS' | 'VoiceMail' | 'Pager')[];
 }
 
 export default CreateMessageStoreReportRequest;

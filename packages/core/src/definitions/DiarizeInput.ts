@@ -8,7 +8,7 @@ interface DiarizeInput {
   /**
    * The encoding of the original audio
    * Required
-   * Example: Mpeg
+   * Example: Wav
    */
   encoding?: ('Mpeg' | 'Mp4' | 'Wav' | 'Webm' | 'Webp' | 'Aac' | 'Avi' | 'Ogg');
 
@@ -27,7 +27,7 @@ interface DiarizeInput {
 
   /**
    * Type of the audio
-   * Example: Meeting
+   * Example: CallCenter
    */
   audioType?: ('CallCenter' | 'Meeting' | 'EarningsCalls' | 'Interview' | 'PressConference' | 'Voicemail');
 
@@ -39,7 +39,7 @@ interface DiarizeInput {
   /**
    * Number of speakers in the file, omit parameter if unknown
    * Format: int32
-   * Example: 3
+   * Example: 2
    */
   speakerCount?: number;
 

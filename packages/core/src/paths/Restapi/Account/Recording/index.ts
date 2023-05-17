@@ -2,23 +2,23 @@ import GetCallRecordingResponse from '../../../../definitions/GetCallRecordingRe
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  recordingId: string | null;
+  public recordingId: string | null;
 
-  constructor(parent: ParentInterface, recordingId: string | null = null) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface, recordingId: string | null = null) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
     this.recordingId = recordingId;
   }
 
-  path(withParameter = true): string {
+  public path(withParameter = true): string {
     if (withParameter && this.recordingId !== null) {
-      return `${this.parent.path()}/recording/${this.recordingId}`;
+      return `${this._parent.path()}/recording/${this.recordingId}`;
     }
-    return `${this.parent.path()}/recording`;
+    return `${this._parent.path()}/recording`;
   }
 
   /**
@@ -29,7 +29,7 @@ class Index {
    * App Permission: ReadCallRecording
    * User Permission: ReadCallRecording
    */
-  async get(restRequestConfig?: RestRequestConfig): Promise<GetCallRecordingResponse> {
+  public async get(restRequestConfig?: RestRequestConfig): Promise<GetCallRecordingResponse> {
     if (this.recordingId === null) {
       throw new Error('recordingId must be specified.');
     }

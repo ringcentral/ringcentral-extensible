@@ -1,4 +1,4 @@
-import MethodInfo from './MethodInfo';
+import ShippingMethodInfo from './ShippingMethodInfo';
 import ShippingAddressInfo from './ShippingAddressInfo';
 
 /**
@@ -28,7 +28,7 @@ interface ShippingInfo {
 
   /**
    */
-  method?: MethodInfo;
+  method?: ShippingMethodInfo;
 
   /**
    */

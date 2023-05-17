@@ -62,13 +62,13 @@ interface WcsWebinarSettingsModel {
 
   /**
    * Indicates if Panelists have to be authenticated users
-   * Default: AuthenticatedCoworker
+   * Default: Guest
    */
   panelistAuthentication?: ('Guest' | 'AuthenticatedUser' | 'AuthenticatedCoworker');
 
   /**
    * Indicates if attendees have to be authenticated users
-   * Default: AuthenticatedCoworker
+   * Default: Guest
    */
   attendeeAuthentication?: ('Guest' | 'AuthenticatedUser' | 'AuthenticatedCoworker');
 
@@ -131,6 +131,12 @@ interface WcsWebinarSettingsModel {
    * Default: true
    */
   externalLivestreamEnabled?: boolean;
+
+  /**
+   * Indicate if the moderated Q&A enabled for webinar
+   * Default: true
+   */
+  moderatedQnAEnabled?: boolean;
 }
 
 export default WcsWebinarSettingsModel;

@@ -4,34 +4,34 @@ import Users from './Users';
 import { RingCentralInterface, ParentInterface } from '../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  pagingOnlyGroupId: string | null;
+  public pagingOnlyGroupId: string | null;
 
-  constructor(parent: ParentInterface, pagingOnlyGroupId: string | null = null) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface, pagingOnlyGroupId: string | null = null) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
     this.pagingOnlyGroupId = pagingOnlyGroupId;
   }
 
-  path(withParameter = true): string {
+  public path(withParameter = true): string {
     if (withParameter && this.pagingOnlyGroupId !== null) {
-      return `${this.parent.path()}/paging-only-groups/${this.pagingOnlyGroupId}`;
+      return `${this._parent.path()}/paging-only-groups/${this.pagingOnlyGroupId}`;
     }
-    return `${this.parent.path()}/paging-only-groups`;
+    return `${this._parent.path()}/paging-only-groups`;
   }
 
-  users(): Users {
+  public users(): Users {
     return new Users(this);
   }
 
-  devices(): Devices {
+  public devices(): Devices {
     return new Devices(this);
   }
 
-  bulkAssign(): BulkAssign {
+  public bulkAssign(): BulkAssign {
     return new BulkAssign(this);
   }
 }

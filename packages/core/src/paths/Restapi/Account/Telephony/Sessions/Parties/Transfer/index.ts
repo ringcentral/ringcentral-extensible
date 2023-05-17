@@ -3,17 +3,17 @@ import TransferTarget from '../../../../../../../definitions/TransferTarget';
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  constructor(parent: ParentInterface) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
   }
 
-  path(): string {
-    return `${this.parent.path()}/transfer`;
+  public path(withParameter = false): string {
+    return `${this._parent.path()}/transfer`;
   }
 
   /**
@@ -23,7 +23,7 @@ class Index {
    * Rate Limit Group: Light
    * App Permission: CallControl
    */
-  async post(transferTarget: TransferTarget, restRequestConfig?: RestRequestConfig): Promise<CallParty> {
+  public async post(transferTarget: TransferTarget, restRequestConfig?: RestRequestConfig): Promise<CallParty> {
     const r = await this.rc.post<CallParty>(this.path(), transferTarget, undefined, restRequestConfig);
     return r.data;
   }

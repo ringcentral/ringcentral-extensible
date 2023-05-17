@@ -3,24 +3,24 @@ import Entries from './Entries';
 import { RingCentralInterface, ParentInterface } from '../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  constructor(parent: ParentInterface) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
   }
 
-  path(): string {
-    return `${this.parent.path()}/directory`;
+  public path(withParameter = false): string {
+    return `${this._parent.path()}/directory`;
   }
 
-  entries(entryId: (string | null) = null): Entries {
+  public entries(entryId: (string | null) = null): Entries {
     return new Entries(this, entryId);
   }
 
-  federation(): Federation {
+  public federation(): Federation {
     return new Federation(this);
   }
 }

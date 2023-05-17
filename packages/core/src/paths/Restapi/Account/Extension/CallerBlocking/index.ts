@@ -4,17 +4,17 @@ import CallerBlockingSettings from '../../../../../definitions/CallerBlockingSet
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  constructor(parent: ParentInterface) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
   }
 
-  path(): string {
-    return `${this.parent.path()}/caller-blocking`;
+  public path(withParameter = false): string {
+    return `${this._parent.path()}/caller-blocking`;
   }
 
   /**
@@ -25,7 +25,7 @@ class Index {
    * App Permission: ReadAccounts
    * User Permission: ReadBlockedNumbers
    */
-  async get(restRequestConfig?: RestRequestConfig): Promise<CallerBlockingSettings> {
+  public async get(restRequestConfig?: RestRequestConfig): Promise<CallerBlockingSettings> {
     const r = await this.rc.get<CallerBlockingSettings>(this.path(), undefined, restRequestConfig);
     return r.data;
   }
@@ -38,12 +38,12 @@ class Index {
    * App Permission: EditExtensions
    * User Permission: EditBlockedNumbers
    */
-  async put(callerBlockingSettingsUpdate: CallerBlockingSettingsUpdate, restRequestConfig?: RestRequestConfig): Promise<CallerBlockingSettings> {
+  public async put(callerBlockingSettingsUpdate: CallerBlockingSettingsUpdate, restRequestConfig?: RestRequestConfig): Promise<CallerBlockingSettings> {
     const r = await this.rc.put<CallerBlockingSettings>(this.path(), callerBlockingSettingsUpdate, undefined, restRequestConfig);
     return r.data;
   }
 
-  phoneNumbers(blockedNumberId: (string | null) = null): PhoneNumbers {
+  public phoneNumbers(blockedNumberId: (string | null) = null): PhoneNumbers {
     return new PhoneNumbers(this, blockedNumberId);
   }
 }

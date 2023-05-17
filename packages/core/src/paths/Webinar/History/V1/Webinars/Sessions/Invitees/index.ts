@@ -4,23 +4,23 @@ import RcwHistoryListInviteesParameters from '../../../../../../../definitions/R
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  inviteeId: string | null;
+  public inviteeId: string | null;
 
-  constructor(parent: ParentInterface, inviteeId: string | null = null) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface, inviteeId: string | null = null) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
     this.inviteeId = inviteeId;
   }
 
-  path(withParameter = true): string {
+  public path(withParameter = true): string {
     if (withParameter && this.inviteeId !== null) {
-      return `${this.parent.path()}/invitees/${this.inviteeId}`;
+      return `${this._parent.path()}/invitees/${this.inviteeId}`;
     }
-    return `${this.parent.path()}/invitees`;
+    return `${this._parent.path()}/invitees`;
   }
 
   /**
@@ -32,7 +32,7 @@ class Index {
    * Rate Limit Group: Heavy
    * App Permission: ReadWebinars
    */
-  async list(queryParams?: RcwHistoryListInviteesParameters, restRequestConfig?: RestRequestConfig): Promise<InviteeListResource> {
+  public async list(queryParams?: RcwHistoryListInviteesParameters, restRequestConfig?: RestRequestConfig): Promise<InviteeListResource> {
     const r = await this.rc.get<InviteeListResource>(this.path(false), queryParams, restRequestConfig);
     return r.data;
   }
@@ -44,7 +44,7 @@ class Index {
    * Rate Limit Group: Heavy
    * App Permission: ReadWebinars
    */
-  async get(restRequestConfig?: RestRequestConfig): Promise<InviteeModel> {
+  public async get(restRequestConfig?: RestRequestConfig): Promise<InviteeModel> {
     if (this.inviteeId === null) {
       throw new Error('inviteeId must be specified.');
     }

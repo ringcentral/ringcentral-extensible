@@ -2,23 +2,23 @@ import AddressBookBulkUploadResponse from '../../../../../definitions/AddressBoo
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  taskId: string | null;
+  public taskId: string | null;
 
-  constructor(parent: ParentInterface, taskId: string | null = null) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface, taskId: string | null = null) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
     this.taskId = taskId;
   }
 
-  path(withParameter = true): string {
+  public path(withParameter = true): string {
     if (withParameter && this.taskId !== null) {
-      return `${this.parent.path()}/tasks/${this.taskId}`;
+      return `${this._parent.path()}/tasks/${this.taskId}`;
     }
-    return `${this.parent.path()}/tasks`;
+    return `${this._parent.path()}/tasks`;
   }
 
   /**
@@ -30,7 +30,7 @@ class Index {
    * App Permission: Contacts
    * User Permission: EditPersonalContacts
    */
-  async get(restRequestConfig?: RestRequestConfig): Promise<AddressBookBulkUploadResponse> {
+  public async get(restRequestConfig?: RestRequestConfig): Promise<AddressBookBulkUploadResponse> {
     if (this.taskId === null) {
       throw new Error('taskId must be specified.');
     }

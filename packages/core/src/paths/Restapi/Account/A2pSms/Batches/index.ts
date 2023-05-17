@@ -5,23 +5,23 @@ import ListA2PBatchesParameters from '../../../../../definitions/ListA2PBatchesP
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  batchId: string | null;
+  public batchId: string | null;
 
-  constructor(parent: ParentInterface, batchId: string | null = null) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface, batchId: string | null = null) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
     this.batchId = batchId;
   }
 
-  path(withParameter = true): string {
+  public path(withParameter = true): string {
     if (withParameter && this.batchId !== null) {
-      return `${this.parent.path()}/batches/${this.batchId}`;
+      return `${this._parent.path()}/batches/${this.batchId}`;
     }
-    return `${this.parent.path()}/batches`;
+    return `${this._parent.path()}/batches`;
   }
 
   /**
@@ -33,7 +33,7 @@ class Index {
    * Rate Limit Group: Light
    * App Permission: A2PSMS
    */
-  async list(queryParams?: ListA2PBatchesParameters, restRequestConfig?: RestRequestConfig): Promise<BatchListResponse> {
+  public async list(queryParams?: ListA2PBatchesParameters, restRequestConfig?: RestRequestConfig): Promise<BatchListResponse> {
     const r = await this.rc.get<BatchListResponse>(this.path(false), queryParams, restRequestConfig);
     return r.data;
   }
@@ -48,7 +48,7 @@ class Index {
    * Rate Limit Group: Light
    * App Permission: A2PSMS
    */
-  async post(messageBatchCreateRequest: MessageBatchCreateRequest, restRequestConfig?: RestRequestConfig): Promise<MessageBatchResponse> {
+  public async post(messageBatchCreateRequest: MessageBatchCreateRequest, restRequestConfig?: RestRequestConfig): Promise<MessageBatchResponse> {
     const r = await this.rc.post<MessageBatchResponse>(this.path(false), messageBatchCreateRequest, undefined, restRequestConfig);
     return r.data;
   }
@@ -60,7 +60,7 @@ class Index {
    * Rate Limit Group: Light
    * App Permission: A2PSMS
    */
-  async get(restRequestConfig?: RestRequestConfig): Promise<MessageBatchResponse> {
+  public async get(restRequestConfig?: RestRequestConfig): Promise<MessageBatchResponse> {
     if (this.batchId === null) {
       throw new Error('batchId must be specified.');
     }

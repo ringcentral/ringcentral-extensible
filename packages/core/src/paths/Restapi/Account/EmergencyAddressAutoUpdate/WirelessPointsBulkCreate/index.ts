@@ -3,17 +3,17 @@ import CreateMultipleWirelessPointsRequest from '../../../../../definitions/Crea
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  constructor(parent: ParentInterface) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
   }
 
-  path(): string {
-    return `${this.parent.path()}/wireless-points-bulk-create`;
+  public path(withParameter = false): string {
+    return `${this._parent.path()}/wireless-points-bulk-create`;
   }
 
   /**
@@ -27,7 +27,7 @@ class Index {
    * App Permission: EditAccounts
    * User Permission: ConfigureEmergencyMaps
    */
-  async post(createMultipleWirelessPointsRequest: CreateMultipleWirelessPointsRequest, restRequestConfig?: RestRequestConfig): Promise<CreateMultipleWirelessPointsResponse> {
+  public async post(createMultipleWirelessPointsRequest: CreateMultipleWirelessPointsRequest, restRequestConfig?: RestRequestConfig): Promise<CreateMultipleWirelessPointsResponse> {
     const r = await this.rc.post<CreateMultipleWirelessPointsResponse>(this.path(), createMultipleWirelessPointsRequest, undefined, restRequestConfig);
     return r.data;
   }

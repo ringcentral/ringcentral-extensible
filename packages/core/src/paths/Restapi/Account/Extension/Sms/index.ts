@@ -4,17 +4,17 @@ import CreateSMSMessage from '../../../../../definitions/CreateSMSMessage';
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  constructor(parent: ParentInterface) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
   }
 
-  path(): string {
-    return `${this.parent.path()}/sms`;
+  public path(withParameter = false): string {
+    return `${this._parent.path()}/sms`;
   }
 
   /**
@@ -31,7 +31,7 @@ class Index {
    * App Permission: SMS
    * User Permission: OutboundSMS
    */
-  async post(createSMSMessage: CreateSMSMessage, restRequestConfig?: RestRequestConfig): Promise<GetSMSMessageInfoResponse> {
+  public async post(createSMSMessage: CreateSMSMessage, restRequestConfig?: RestRequestConfig): Promise<GetSMSMessageInfoResponse> {
     const formData = await Utils.getFormData(createSMSMessage);
     const r = await this.rc.post<GetSMSMessageInfoResponse>(this.path(), formData, undefined, restRequestConfig);
     return r.data;

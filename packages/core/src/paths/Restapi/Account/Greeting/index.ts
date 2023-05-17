@@ -4,17 +4,17 @@ import CreateCompanyGreetingRequest from '../../../../definitions/CreateCompanyG
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  constructor(parent: ParentInterface) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
   }
 
-  path(): string {
-    return `${this.parent.path()}/greeting`;
+  public path(withParameter = false): string {
+    return `${this._parent.path()}/greeting`;
   }
 
   /**
@@ -25,7 +25,7 @@ class Index {
    * App Permission: EditAccounts
    * User Permission: ReadUserInfo
    */
-  async post(createCompanyGreetingRequest: CreateCompanyGreetingRequest, restRequestConfig?: RestRequestConfig): Promise<CustomCompanyGreetingInfo> {
+  public async post(createCompanyGreetingRequest: CreateCompanyGreetingRequest, restRequestConfig?: RestRequestConfig): Promise<CustomCompanyGreetingInfo> {
     const formData = await Utils.getFormData(createCompanyGreetingRequest);
     const r = await this.rc.post<CustomCompanyGreetingInfo>(this.path(), formData, undefined, restRequestConfig);
     return r.data;

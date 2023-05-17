@@ -5,35 +5,35 @@ import Users from './Users';
 import { RingCentralInterface } from '../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  version: string | null;
+  public version: string | null;
 
-  constructor(rc: RingCentralInterface, version: string | null = 'v2') {
+  public constructor(rc: RingCentralInterface, version: string | null = 'v2') {
     this.rc = rc;
     this.version = version;
   }
 
-  path(withParameter = true): string {
+  public path(withParameter = true): string {
     if (withParameter && this.version !== null) {
       return `/scim/${this.version}`;
     }
     return '/scim';
   }
 
-  users(scimUserId: (string | null) = null): Users {
+  public users(scimUserId: (string | null) = null): Users {
     return new Users(this, scimUserId);
   }
 
-  schemas(uri: (string | null) = null): Schemas {
+  public schemas(uri: (string | null) = null): Schemas {
     return new Schemas(this, uri);
   }
 
-  resourceTypes(type: (string | null) = null): ResourceTypes {
+  public resourceTypes(type: (string | null) = null): ResourceTypes {
     return new ResourceTypes(this, type);
   }
 
-  serviceProviderConfig(): ServiceProviderConfig {
+  public serviceProviderConfig(): ServiceProviderConfig {
     return new ServiceProviderConfig(this);
   }
 }

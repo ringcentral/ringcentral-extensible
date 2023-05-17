@@ -5,29 +5,29 @@ import Text from './Text';
 import { RingCentralInterface } from '../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  constructor(rc: RingCentralInterface) {
+  public constructor(rc: RingCentralInterface) {
     this.rc = rc;
   }
 
-  path(): string {
+  public path(withParameter = false): string {
     return '/ai';
   }
 
-  text(): Text {
+  public text(): Text {
     return new Text(this);
   }
 
-  audio(): Audio {
+  public audio(): Audio {
     return new Audio(this);
   }
 
-  status(): Status {
+  public status(): Status {
     return new Status(this);
   }
 
-  insights(): Insights {
+  public insights(): Insights {
     return new Insights(this);
   }
 }

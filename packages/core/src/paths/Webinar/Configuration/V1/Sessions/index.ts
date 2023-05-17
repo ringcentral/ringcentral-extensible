@@ -3,17 +3,17 @@ import RcwConfigListAllSessionsParameters from '../../../../../definitions/RcwCo
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  constructor(parent: ParentInterface) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
   }
 
-  path(): string {
-    return `${this.parent.path()}/sessions`;
+  public path(withParameter = false): string {
+    return `${this._parent.path()}/sessions`;
   }
 
   /**
@@ -25,7 +25,7 @@ class Index {
    * Rate Limit Group: Heavy
    * App Permission: ReadWebinars
    */
-  async get(queryParams?: RcwConfigListAllSessionsParameters, restRequestConfig?: RestRequestConfig): Promise<WcsSessionGlobalListResource> {
+  public async get(queryParams?: RcwConfigListAllSessionsParameters, restRequestConfig?: RestRequestConfig): Promise<WcsSessionGlobalListResource> {
     const r = await this.rc.get<WcsSessionGlobalListResource>(this.path(), queryParams, restRequestConfig);
     return r.data;
   }

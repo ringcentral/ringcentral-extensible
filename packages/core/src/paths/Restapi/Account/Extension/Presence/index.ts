@@ -5,17 +5,17 @@ import ReadUserPresenceStatusParameters from '../../../../../definitions/ReadUse
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  constructor(parent: ParentInterface) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
   }
 
-  path(): string {
-    return `${this.parent.path()}/presence`;
+  public path(withParameter = false): string {
+    return `${this._parent.path()}/presence`;
   }
 
   /**
@@ -26,7 +26,7 @@ class Index {
    * App Permission: ReadPresence
    * User Permission: ReadPresenceStatus
    */
-  async get(queryParams?: ReadUserPresenceStatusParameters, restRequestConfig?: RestRequestConfig): Promise<GetPresenceInfo> {
+  public async get(queryParams?: ReadUserPresenceStatusParameters, restRequestConfig?: RestRequestConfig): Promise<GetPresenceInfo> {
     const r = await this.rc.get<GetPresenceInfo>(this.path(), queryParams, restRequestConfig);
     return r.data;
   }
@@ -38,7 +38,7 @@ class Index {
    * Rate Limit Group: Medium
    * App Permission: EditPresence
    */
-  async put(presenceInfoRequest: PresenceInfoRequest, restRequestConfig?: RestRequestConfig): Promise<PresenceInfoResponse> {
+  public async put(presenceInfoRequest: PresenceInfoRequest, restRequestConfig?: RestRequestConfig): Promise<PresenceInfoResponse> {
     const r = await this.rc.put<PresenceInfoResponse>(this.path(), presenceInfoRequest, undefined, restRequestConfig);
     return r.data;
   }

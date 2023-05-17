@@ -2,26 +2,26 @@ import ContractedCountry from './ContractedCountry';
 import { RingCentralInterface, ParentInterface } from '../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  brandId: string | null;
+  public brandId: string | null;
 
-  constructor(parent: ParentInterface, brandId: string | null = null) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface, brandId: string | null = null) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
     this.brandId = brandId;
   }
 
-  path(withParameter = true): string {
+  public path(withParameter = true): string {
     if (withParameter && this.brandId !== null) {
-      return `${this.parent.path()}/brand/${this.brandId}`;
+      return `${this._parent.path()}/brand/${this.brandId}`;
     }
-    return `${this.parent.path()}/brand`;
+    return `${this._parent.path()}/brand`;
   }
 
-  contractedCountry(contractedCountryId: (string | null) = null): ContractedCountry {
+  public contractedCountry(contractedCountryId: (string | null) = null): ContractedCountry {
     return new ContractedCountry(this, contractedCountryId);
   }
 }

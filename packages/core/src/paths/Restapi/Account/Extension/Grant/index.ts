@@ -3,17 +3,17 @@ import ListExtensionGrantsParameters from '../../../../../definitions/ListExtens
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  constructor(parent: ParentInterface) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
   }
 
-  path(): string {
-    return `${this.parent.path()}/grant`;
+  public path(withParameter = false): string {
+    return `${this._parent.path()}/grant`;
   }
 
   /**
@@ -28,7 +28,7 @@ class Index {
    * App Permission: ReadAccounts
    * User Permission: ReadExtensions
    */
-  async get(queryParams?: ListExtensionGrantsParameters, restRequestConfig?: RestRequestConfig): Promise<GetExtensionGrantListResponse> {
+  public async get(queryParams?: ListExtensionGrantsParameters, restRequestConfig?: RestRequestConfig): Promise<GetExtensionGrantListResponse> {
     const r = await this.rc.get<GetExtensionGrantListResponse>(this.path(), queryParams, restRequestConfig);
     return r.data;
   }

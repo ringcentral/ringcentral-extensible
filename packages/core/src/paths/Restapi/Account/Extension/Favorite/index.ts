@@ -3,17 +3,17 @@ import FavoriteContactList from '../../../../../definitions/FavoriteContactList'
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  constructor(parent: ParentInterface) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
   }
 
-  path(): string {
-    return `${this.parent.path()}/favorite`;
+  public path(withParameter = false): string {
+    return `${this._parent.path()}/favorite`;
   }
 
   /**
@@ -27,7 +27,7 @@ class Index {
    * App Permission: ReadContacts
    * User Permission: ReadPersonalContacts
    */
-  async get(restRequestConfig?: RestRequestConfig): Promise<FavoriteContactList> {
+  public async get(restRequestConfig?: RestRequestConfig): Promise<FavoriteContactList> {
     const r = await this.rc.get<FavoriteContactList>(this.path(), undefined, restRequestConfig);
     return r.data;
   }
@@ -44,7 +44,7 @@ class Index {
    * App Permission: Contacts
    * User Permission: EditPersonalContacts
    */
-  async put(favoriteCollection: FavoriteCollection, restRequestConfig?: RestRequestConfig): Promise<FavoriteContactList> {
+  public async put(favoriteCollection: FavoriteCollection, restRequestConfig?: RestRequestConfig): Promise<FavoriteContactList> {
     const r = await this.rc.put<FavoriteContactList>(this.path(), favoriteCollection, undefined, restRequestConfig);
     return r.data;
   }

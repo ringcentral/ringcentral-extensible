@@ -3,17 +3,17 @@ import CallQueueOverflowSettings from '../../../../../definitions/CallQueueOverf
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  constructor(parent: ParentInterface) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
   }
 
-  path(): string {
-    return `${this.parent.path()}/overflow-settings`;
+  public path(withParameter = false): string {
+    return `${this._parent.path()}/overflow-settings`;
   }
 
   /**
@@ -25,7 +25,7 @@ class Index {
    * App Permission: ReadAccounts
    * User Permission: CallQueueToCallQueue
    */
-  async get(restRequestConfig?: RestRequestConfig): Promise<CallQueueOverflowSettings> {
+  public async get(restRequestConfig?: RestRequestConfig): Promise<CallQueueOverflowSettings> {
     const r = await this.rc.get<CallQueueOverflowSettings>(this.path(), undefined, restRequestConfig);
     return r.data;
   }
@@ -39,7 +39,7 @@ class Index {
    * App Permission: EditExtensions
    * User Permission: CallQueueToCallQueue
    */
-  async put(callQueueOverflowSettingsRequestResource: CallQueueOverflowSettingsRequestResource, restRequestConfig?: RestRequestConfig): Promise<CallQueueOverflowSettings> {
+  public async put(callQueueOverflowSettingsRequestResource: CallQueueOverflowSettingsRequestResource, restRequestConfig?: RestRequestConfig): Promise<CallQueueOverflowSettings> {
     const r = await this.rc.put<CallQueueOverflowSettings>(this.path(), callQueueOverflowSettingsRequestResource, undefined, restRequestConfig);
     return r.data;
   }

@@ -3,17 +3,17 @@ import SyncMessagesParameters from '../../../../../definitions/SyncMessagesParam
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  constructor(parent: ParentInterface) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
   }
 
-  path(): string {
-    return `${this.parent.path()}/message-sync`;
+  public path(withParameter = false): string {
+    return `${this._parent.path()}/message-sync`;
   }
 
   /**
@@ -24,7 +24,7 @@ class Index {
    * App Permission: ReadMessages
    * User Permission: ReadMessages
    */
-  async get(queryParams?: SyncMessagesParameters, restRequestConfig?: RestRequestConfig): Promise<GetMessageSyncResponse> {
+  public async get(queryParams?: SyncMessagesParameters, restRequestConfig?: RestRequestConfig): Promise<GetMessageSyncResponse> {
     const r = await this.rc.get<GetMessageSyncResponse>(this.path(), queryParams, restRequestConfig);
     return r.data;
   }

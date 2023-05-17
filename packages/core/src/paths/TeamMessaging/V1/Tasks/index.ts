@@ -5,23 +5,23 @@ import TMTaskInfo from '../../../../definitions/TMTaskInfo';
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  taskId: string | null;
+  public taskId: string | null;
 
-  constructor(parent: ParentInterface, taskId: string | null = null) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface, taskId: string | null = null) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
     this.taskId = taskId;
   }
 
-  path(withParameter = true): string {
+  public path(withParameter = true): string {
     if (withParameter && this.taskId !== null) {
-      return `${this.parent.path()}/tasks/${this.taskId}`;
+      return `${this._parent.path()}/tasks/${this.taskId}`;
     }
-    return `${this.parent.path()}/tasks`;
+    return `${this._parent.path()}/tasks`;
   }
 
   /**
@@ -31,7 +31,7 @@ class Index {
    * Rate Limit Group: Medium
    * App Permission: TeamMessaging
    */
-  async get(restRequestConfig?: RestRequestConfig): Promise<TMTaskInfo> {
+  public async get(restRequestConfig?: RestRequestConfig): Promise<TMTaskInfo> {
     if (this.taskId === null) {
       throw new Error('taskId must be specified.');
     }
@@ -46,7 +46,7 @@ class Index {
    * Rate Limit Group: Medium
    * App Permission: TeamMessaging
    */
-  async delete(restRequestConfig?: RestRequestConfig): Promise<string> {
+  public async delete(restRequestConfig?: RestRequestConfig): Promise<string> {
     if (this.taskId === null) {
       throw new Error('taskId must be specified.');
     }
@@ -61,7 +61,7 @@ class Index {
    * Rate Limit Group: Medium
    * App Permission: TeamMessaging
    */
-  async patch(tMUpdateTaskRequest: TMUpdateTaskRequest, restRequestConfig?: RestRequestConfig): Promise<TMTaskList> {
+  public async patch(tMUpdateTaskRequest: TMUpdateTaskRequest, restRequestConfig?: RestRequestConfig): Promise<TMTaskList> {
     if (this.taskId === null) {
       throw new Error('taskId must be specified.');
     }
@@ -69,7 +69,7 @@ class Index {
     return r.data;
   }
 
-  complete(): Complete {
+  public complete(): Complete {
     return new Complete(this);
   }
 }

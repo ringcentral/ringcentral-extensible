@@ -3,17 +3,17 @@ import BusinessSiteCollectionResource from '../../../../../definitions/BusinessS
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  constructor(parent: ParentInterface) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
   }
 
-  path(): string {
-    return `${this.parent.path()}/administered-sites`;
+  public path(withParameter = false): string {
+    return `${this._parent.path()}/administered-sites`;
   }
 
   /**
@@ -24,7 +24,7 @@ class Index {
    * App Permission: ReadAccounts
    * User Permission: ReadExtensions
    */
-  async get(restRequestConfig?: RestRequestConfig): Promise<BusinessSiteCollectionResource> {
+  public async get(restRequestConfig?: RestRequestConfig): Promise<BusinessSiteCollectionResource> {
     const r = await this.rc.get<BusinessSiteCollectionResource>(this.path(), undefined, restRequestConfig);
     return r.data;
   }
@@ -39,7 +39,7 @@ class Index {
    * App Permission: EditAccounts
    * User Permission: EditAssignedRoles
    */
-  async put(businessSiteCollectionRequest: BusinessSiteCollectionRequest, restRequestConfig?: RestRequestConfig): Promise<BusinessSiteCollectionResource> {
+  public async put(businessSiteCollectionRequest: BusinessSiteCollectionRequest, restRequestConfig?: RestRequestConfig): Promise<BusinessSiteCollectionResource> {
     const r = await this.rc.put<BusinessSiteCollectionResource>(this.path(), businessSiteCollectionRequest, undefined, restRequestConfig);
     return r.data;
   }

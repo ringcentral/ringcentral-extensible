@@ -3,17 +3,17 @@ import ReadDirectoryFederationParameters from '../../../../../definitions/ReadDi
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  constructor(parent: ParentInterface) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
   }
 
-  path(): string {
-    return `${this.parent.path()}/federation`;
+  public path(withParameter = false): string {
+    return `${this._parent.path()}/federation`;
   }
 
   /**
@@ -24,7 +24,7 @@ class Index {
    * App Permission: ReadAccounts
    * User Permission: ReadCompanyInfo
    */
-  async get(queryParams?: ReadDirectoryFederationParameters, restRequestConfig?: RestRequestConfig): Promise<FederationResource> {
+  public async get(queryParams?: ReadDirectoryFederationParameters, restRequestConfig?: RestRequestConfig): Promise<FederationResource> {
     const r = await this.rc.get<FederationResource>(this.path(), queryParams, restRequestConfig);
     return r.data;
   }

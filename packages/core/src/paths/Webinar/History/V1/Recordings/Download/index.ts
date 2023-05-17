@@ -3,17 +3,17 @@ import RcwHistoryGetRecordingDownloadParameters from '../../../../../../definiti
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  constructor(parent: ParentInterface) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
   }
 
-  path(): string {
-    return `${this.parent.path()}/download`;
+  public path(withParameter = false): string {
+    return `${this._parent.path()}/download`;
   }
 
   /**
@@ -27,7 +27,7 @@ class Index {
    * Rate Limit Group: Heavy
    * App Permission: ReadWebinars
    */
-  async get(queryParams?: RcwHistoryGetRecordingDownloadParameters, restRequestConfig?: RestRequestConfig): Promise<RecordingDownloadModel> {
+  public async get(queryParams?: RcwHistoryGetRecordingDownloadParameters, restRequestConfig?: RestRequestConfig): Promise<RecordingDownloadModel> {
     const r = await this.rc.get<RecordingDownloadModel>(this.path(), queryParams, restRequestConfig);
     return r.data;
   }

@@ -7,23 +7,23 @@ import ListCallMonitoringGroupsParameters from '../../../../definitions/ListCall
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  groupId: string | null;
+  public groupId: string | null;
 
-  constructor(parent: ParentInterface, groupId: string | null = null) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface, groupId: string | null = null) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
     this.groupId = groupId;
   }
 
-  path(withParameter = true): string {
+  public path(withParameter = true): string {
     if (withParameter && this.groupId !== null) {
-      return `${this.parent.path()}/call-monitoring-groups/${this.groupId}`;
+      return `${this._parent.path()}/call-monitoring-groups/${this.groupId}`;
     }
-    return `${this.parent.path()}/call-monitoring-groups`;
+    return `${this._parent.path()}/call-monitoring-groups`;
   }
 
   /**
@@ -35,7 +35,7 @@ class Index {
    * App Permission: ReadAccounts
    * User Permission: ReadExtensions
    */
-  async get(queryParams?: ListCallMonitoringGroupsParameters, restRequestConfig?: RestRequestConfig): Promise<CallMonitoringGroups> {
+  public async get(queryParams?: ListCallMonitoringGroupsParameters, restRequestConfig?: RestRequestConfig): Promise<CallMonitoringGroups> {
     const r = await this.rc.get<CallMonitoringGroups>(this.path(false), queryParams, restRequestConfig);
     return r.data;
   }
@@ -49,7 +49,7 @@ class Index {
    * App Permission: EditExtensions
    * User Permission: Groups
    */
-  async post(createCallMonitoringGroupRequest: CreateCallMonitoringGroupRequest, restRequestConfig?: RestRequestConfig): Promise<CallMonitoringGroup> {
+  public async post(createCallMonitoringGroupRequest: CreateCallMonitoringGroupRequest, restRequestConfig?: RestRequestConfig): Promise<CallMonitoringGroup> {
     const r = await this.rc.post<CallMonitoringGroup>(this.path(false), createCallMonitoringGroupRequest, undefined, restRequestConfig);
     return r.data;
   }
@@ -63,7 +63,7 @@ class Index {
    * App Permission: EditExtensions
    * User Permission: Groups
    */
-  async put(createCallMonitoringGroupRequest: CreateCallMonitoringGroupRequest, restRequestConfig?: RestRequestConfig): Promise<CallMonitoringGroup> {
+  public async put(createCallMonitoringGroupRequest: CreateCallMonitoringGroupRequest, restRequestConfig?: RestRequestConfig): Promise<CallMonitoringGroup> {
     if (this.groupId === null) {
       throw new Error('groupId must be specified.');
     }
@@ -80,7 +80,7 @@ class Index {
    * App Permission: EditExtensions
    * User Permission: Groups
    */
-  async delete(restRequestConfig?: RestRequestConfig): Promise<string> {
+  public async delete(restRequestConfig?: RestRequestConfig): Promise<string> {
     if (this.groupId === null) {
       throw new Error('groupId must be specified.');
     }
@@ -88,11 +88,11 @@ class Index {
     return r.data;
   }
 
-  members(): Members {
+  public members(): Members {
     return new Members(this);
   }
 
-  bulkAssign(): BulkAssign {
+  public bulkAssign(): BulkAssign {
     return new BulkAssign(this);
   }
 }

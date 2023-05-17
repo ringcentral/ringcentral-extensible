@@ -7,23 +7,23 @@ import RcwConfigListInviteesParameters from '../../../../../../../definitions/Rc
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  inviteeId: string | null;
+  public inviteeId: string | null;
 
-  constructor(parent: ParentInterface, inviteeId: string | null = null) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface, inviteeId: string | null = null) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
     this.inviteeId = inviteeId;
   }
 
-  path(withParameter = true): string {
+  public path(withParameter = true): string {
     if (withParameter && this.inviteeId !== null) {
-      return `${this.parent.path()}/invitees/${this.inviteeId}`;
+      return `${this._parent.path()}/invitees/${this.inviteeId}`;
     }
-    return `${this.parent.path()}/invitees`;
+    return `${this._parent.path()}/invitees`;
   }
 
   /**
@@ -36,7 +36,7 @@ class Index {
    * Rate Limit Group: Heavy
    * App Permission: ReadWebinars
    */
-  async list(queryParams?: RcwConfigListInviteesParameters, restRequestConfig?: RestRequestConfig): Promise<WcsInviteeListResource> {
+  public async list(queryParams?: RcwConfigListInviteesParameters, restRequestConfig?: RestRequestConfig): Promise<WcsInviteeListResource> {
     const r = await this.rc.get<WcsInviteeListResource>(this.path(false), queryParams, restRequestConfig);
     return r.data;
   }
@@ -58,7 +58,7 @@ class Index {
    * Rate Limit Group: Heavy
    * App Permission: EditWebinars
    */
-  async patch(bulkUpdateInviteesRequest: BulkUpdateInviteesRequest, restRequestConfig?: RestRequestConfig): Promise<BulkUpdateInviteesResponse> {
+  public async patch(bulkUpdateInviteesRequest: BulkUpdateInviteesRequest, restRequestConfig?: RestRequestConfig): Promise<BulkUpdateInviteesResponse> {
     const r = await this.rc.patch<BulkUpdateInviteesResponse>(this.path(false), bulkUpdateInviteesRequest, undefined, restRequestConfig);
     return r.data;
   }
@@ -70,7 +70,7 @@ class Index {
    * Rate Limit Group: Heavy
    * App Permission: ReadWebinars
    */
-  async get(restRequestConfig?: RestRequestConfig): Promise<InviteeResource> {
+  public async get(restRequestConfig?: RestRequestConfig): Promise<InviteeResource> {
     if (this.inviteeId === null) {
       throw new Error('inviteeId must be specified.');
     }
@@ -90,7 +90,7 @@ class Index {
    * Rate Limit Group: Heavy
    * App Permission: EditWebinars
    */
-  async put(updateInviteeRequest: UpdateInviteeRequest, restRequestConfig?: RestRequestConfig): Promise<InviteeResource> {
+  public async put(updateInviteeRequest: UpdateInviteeRequest, restRequestConfig?: RestRequestConfig): Promise<InviteeResource> {
     if (this.inviteeId === null) {
       throw new Error('inviteeId must be specified.');
     }
@@ -107,7 +107,7 @@ class Index {
    * Rate Limit Group: Heavy
    * App Permission: EditWebinars
    */
-  async delete(restRequestConfig?: RestRequestConfig): Promise<string> {
+  public async delete(restRequestConfig?: RestRequestConfig): Promise<string> {
     if (this.inviteeId === null) {
       throw new Error('inviteeId must be specified.');
     }

@@ -4,17 +4,17 @@ import TimelineRequest from '../../../../../../../definitions/TimelineRequest';
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  constructor(parent: ParentInterface) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
   }
 
-  path(): string {
-    return `${this.parent.path()}/fetch`;
+  public path(withParameter = false): string {
+    return `${this._parent.path()}/fetch`;
   }
 
   /**
@@ -24,7 +24,7 @@ class Index {
    * Rate Limit Group: Light
    * App Permission: Analytics
    */
-  async post(timelineRequest: TimelineRequest, queryParams?: AnalyticsCallsTimelineFetchParameters, restRequestConfig?: RestRequestConfig): Promise<TimelineResponse> {
+  public async post(timelineRequest: TimelineRequest, queryParams?: AnalyticsCallsTimelineFetchParameters, restRequestConfig?: RestRequestConfig): Promise<TimelineResponse> {
     const r = await this.rc.post<TimelineResponse>(this.path(), timelineRequest, queryParams, restRequestConfig);
     return r.data;
   }

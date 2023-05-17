@@ -3,30 +3,30 @@ import Timeline from './Timeline';
 import { RingCentralInterface, ParentInterface } from '../../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  accountId: string | null;
+  public accountId: string | null;
 
-  constructor(parent: ParentInterface, accountId: string | null = null) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface, accountId: string | null = null) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
     this.accountId = accountId;
   }
 
-  path(withParameter = true): string {
+  public path(withParameter = true): string {
     if (withParameter && this.accountId !== null) {
-      return `${this.parent.path()}/accounts/${this.accountId}`;
+      return `${this._parent.path()}/accounts/${this.accountId}`;
     }
-    return `${this.parent.path()}/accounts`;
+    return `${this._parent.path()}/accounts`;
   }
 
-  timeline(): Timeline {
+  public timeline(): Timeline {
     return new Timeline(this);
   }
 
-  aggregation(): Aggregation {
+  public aggregation(): Aggregation {
     return new Aggregation(this);
   }
 }

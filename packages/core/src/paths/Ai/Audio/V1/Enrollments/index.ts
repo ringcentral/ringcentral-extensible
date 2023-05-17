@@ -6,23 +6,23 @@ import CaiEnrollmentsListParameters from '../../../../../definitions/CaiEnrollme
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  enrollmentId: string | null;
+  public enrollmentId: string | null;
 
-  constructor(parent: ParentInterface, enrollmentId: string | null = null) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface, enrollmentId: string | null = null) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
     this.enrollmentId = enrollmentId;
   }
 
-  path(withParameter = true): string {
+  public path(withParameter = true): string {
     if (withParameter && this.enrollmentId !== null) {
-      return `${this.parent.path()}/enrollments/${this.enrollmentId}`;
+      return `${this._parent.path()}/enrollments/${this.enrollmentId}`;
     }
-    return `${this.parent.path()}/enrollments`;
+    return `${this._parent.path()}/enrollments`;
   }
 
   /**
@@ -32,7 +32,7 @@ class Index {
    * Rate Limit Group: Heavy
    * App Permission: AI
    */
-  async list(queryParams?: CaiEnrollmentsListParameters, restRequestConfig?: RestRequestConfig): Promise<ListEnrolledSpeakers> {
+  public async list(queryParams?: CaiEnrollmentsListParameters, restRequestConfig?: RestRequestConfig): Promise<ListEnrolledSpeakers> {
     const r = await this.rc.get<ListEnrolledSpeakers>(this.path(false), queryParams, restRequestConfig);
     return r.data;
   }
@@ -44,7 +44,7 @@ class Index {
    * Rate Limit Group: Heavy
    * App Permission: AI
    */
-  async post(enrollmentInput: EnrollmentInput, restRequestConfig?: RestRequestConfig): Promise<EnrollmentStatus> {
+  public async post(enrollmentInput: EnrollmentInput, restRequestConfig?: RestRequestConfig): Promise<EnrollmentStatus> {
     const r = await this.rc.post<EnrollmentStatus>(this.path(false), enrollmentInput, undefined, restRequestConfig);
     return r.data;
   }
@@ -56,7 +56,7 @@ class Index {
    * Rate Limit Group: Heavy
    * App Permission: AI
    */
-  async get(restRequestConfig?: RestRequestConfig): Promise<EnrollmentStatus> {
+  public async get(restRequestConfig?: RestRequestConfig): Promise<EnrollmentStatus> {
     if (this.enrollmentId === null) {
       throw new Error('enrollmentId must be specified.');
     }
@@ -71,7 +71,7 @@ class Index {
    * Rate Limit Group: Heavy
    * App Permission: AI
    */
-  async delete(restRequestConfig?: RestRequestConfig): Promise<string> {
+  public async delete(restRequestConfig?: RestRequestConfig): Promise<string> {
     if (this.enrollmentId === null) {
       throw new Error('enrollmentId must be specified.');
     }
@@ -86,7 +86,7 @@ class Index {
    * Rate Limit Group: Heavy
    * App Permission: AI
    */
-  async patch(enrollmentPatchInput: EnrollmentPatchInput, restRequestConfig?: RestRequestConfig): Promise<EnrollmentStatus> {
+  public async patch(enrollmentPatchInput: EnrollmentPatchInput, restRequestConfig?: RestRequestConfig): Promise<EnrollmentStatus> {
     if (this.enrollmentId === null) {
       throw new Error('enrollmentId must be specified.');
     }

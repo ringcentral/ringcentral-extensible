@@ -4,23 +4,23 @@ import ListVideoMeetingsParameters from '../../../../../definitions/ListVideoMee
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  meetingId: string | null;
+  public meetingId: string | null;
 
-  constructor(parent: ParentInterface, meetingId: string | null = null) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface, meetingId: string | null = null) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
     this.meetingId = meetingId;
   }
 
-  path(withParameter = true): string {
+  public path(withParameter = true): string {
     if (withParameter && this.meetingId !== null) {
-      return `${this.parent.path()}/meetings/${this.meetingId}`;
+      return `${this._parent.path()}/meetings/${this.meetingId}`;
     }
-    return `${this.parent.path()}/meetings`;
+    return `${this._parent.path()}/meetings`;
   }
 
   /**
@@ -30,7 +30,7 @@ class Index {
    * Rate Limit Group: Light
    * App Permission: Video
    */
-  async list(queryParams?: ListVideoMeetingsParameters, restRequestConfig?: RestRequestConfig): Promise<MeetingPage> {
+  public async list(queryParams?: ListVideoMeetingsParameters, restRequestConfig?: RestRequestConfig): Promise<MeetingPage> {
     const r = await this.rc.get<MeetingPage>(this.path(false), queryParams, restRequestConfig);
     return r.data;
   }
@@ -42,7 +42,7 @@ class Index {
    * Rate Limit Group: Light
    * App Permission: Video
    */
-  async get(restRequestConfig?: RestRequestConfig): Promise<Meeting> {
+  public async get(restRequestConfig?: RestRequestConfig): Promise<Meeting> {
     if (this.meetingId === null) {
       throw new Error('meetingId must be specified.');
     }

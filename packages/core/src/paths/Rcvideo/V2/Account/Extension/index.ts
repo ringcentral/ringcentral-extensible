@@ -2,26 +2,26 @@ import Bridges from './Bridges';
 import { RingCentralInterface, ParentInterface } from '../../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  extensionId: string | null;
+  public extensionId: string | null;
 
-  constructor(parent: ParentInterface, extensionId: string | null = null) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface, extensionId: string | null = null) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
     this.extensionId = extensionId;
   }
 
-  path(withParameter = true): string {
+  public path(withParameter = true): string {
     if (withParameter && this.extensionId !== null) {
-      return `${this.parent.path()}/extension/${this.extensionId}`;
+      return `${this._parent.path()}/extension/${this.extensionId}`;
     }
-    return `${this.parent.path()}/extension`;
+    return `${this._parent.path()}/extension`;
   }
 
-  bridges(): Bridges {
+  public bridges(): Bridges {
     return new Bridges(this);
   }
 }

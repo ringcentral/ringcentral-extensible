@@ -6,23 +6,23 @@ import ListWirelessPointsParameters from '../../../../../definitions/ListWireles
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  pointId: string | null;
+  public pointId: string | null;
 
-  constructor(parent: ParentInterface, pointId: string | null = null) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface, pointId: string | null = null) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
     this.pointId = pointId;
   }
 
-  path(withParameter = true): string {
+  public path(withParameter = true): string {
     if (withParameter && this.pointId !== null) {
-      return `${this.parent.path()}/wireless-points/${this.pointId}`;
+      return `${this._parent.path()}/wireless-points/${this.pointId}`;
     }
-    return `${this.parent.path()}/wireless-points`;
+    return `${this._parent.path()}/wireless-points`;
   }
 
   /**
@@ -35,7 +35,7 @@ class Index {
    * App Permission: EditAccounts
    * User Permission: ConfigureEmergencyMaps
    */
-  async list(queryParams?: ListWirelessPointsParameters, restRequestConfig?: RestRequestConfig): Promise<WirelessPointsList> {
+  public async list(queryParams?: ListWirelessPointsParameters, restRequestConfig?: RestRequestConfig): Promise<WirelessPointsList> {
     const r = await this.rc.get<WirelessPointsList>(this.path(false), queryParams, restRequestConfig);
     return r.data;
   }
@@ -50,7 +50,7 @@ class Index {
    * App Permission: EditAccounts
    * User Permission: ConfigureEmergencyMaps
    */
-  async post(createWirelessPoint: CreateWirelessPoint, restRequestConfig?: RestRequestConfig): Promise<WirelessPointInfo> {
+  public async post(createWirelessPoint: CreateWirelessPoint, restRequestConfig?: RestRequestConfig): Promise<WirelessPointInfo> {
     const r = await this.rc.post<WirelessPointInfo>(this.path(false), createWirelessPoint, undefined, restRequestConfig);
     return r.data;
   }
@@ -65,7 +65,7 @@ class Index {
    * App Permission: EditAccounts
    * User Permission: ConfigureEmergencyMaps
    */
-  async get(restRequestConfig?: RestRequestConfig): Promise<WirelessPointInfo> {
+  public async get(restRequestConfig?: RestRequestConfig): Promise<WirelessPointInfo> {
     if (this.pointId === null) {
       throw new Error('pointId must be specified.');
     }
@@ -83,7 +83,7 @@ class Index {
    * App Permission: EditAccounts
    * User Permission: ConfigureEmergencyMaps
    */
-  async put(updateWirelessPoint: UpdateWirelessPoint, restRequestConfig?: RestRequestConfig): Promise<WirelessPointInfo> {
+  public async put(updateWirelessPoint: UpdateWirelessPoint, restRequestConfig?: RestRequestConfig): Promise<WirelessPointInfo> {
     if (this.pointId === null) {
       throw new Error('pointId must be specified.');
     }
@@ -99,7 +99,7 @@ class Index {
    * App Permission: EditAccounts
    * User Permission: ConfigureEmergencyMaps
    */
-  async delete(restRequestConfig?: RestRequestConfig): Promise<string> {
+  public async delete(restRequestConfig?: RestRequestConfig): Promise<string> {
     if (this.pointId === null) {
       throw new Error('pointId must be specified.');
     }

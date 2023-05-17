@@ -3,17 +3,17 @@ import RcvListDelegatorsParameters from '../../../../../../definitions/RcvListDe
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  constructor(parent: ParentInterface) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
   }
 
-  path(): string {
-    return `${this.parent.path()}/delegators`;
+  public path(withParameter = false): string {
+    return `${this._parent.path()}/delegators`;
   }
 
   /**
@@ -23,7 +23,7 @@ class Index {
    * Rate Limit Group: Medium
    * App Permission: Video
    */
-  async get(queryParams?: RcvListDelegatorsParameters, restRequestConfig?: RestRequestConfig): Promise<DelegatorsListResult> {
+  public async get(queryParams?: RcvListDelegatorsParameters, restRequestConfig?: RestRequestConfig): Promise<DelegatorsListResult> {
     const r = await this.rc.get<DelegatorsListResult>(this.path(), queryParams, restRequestConfig);
     return r.data;
   }

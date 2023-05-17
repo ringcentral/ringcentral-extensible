@@ -2,17 +2,17 @@ import Calls from './Calls';
 import { RingCentralInterface } from '../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  constructor(rc: RingCentralInterface) {
+  public constructor(rc: RingCentralInterface) {
     this.rc = rc;
   }
 
-  path(): string {
+  public path(withParameter = false): string {
     return '/analytics';
   }
 
-  calls(): Calls {
+  public calls(): Calls {
     return new Calls(this);
   }
 }

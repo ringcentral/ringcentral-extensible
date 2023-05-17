@@ -1,4 +1,3 @@
-import PromoteToRcv from './PromoteToRcv';
 import Recordings from './Recordings';
 import Supervise from './Supervise';
 import BringIn from './BringIn';
@@ -11,33 +10,31 @@ import Ignore from './Ignore';
 import Bridge from './Bridge';
 import Unhold from './Unhold';
 import Reply from './Reply';
-import Move from './Move';
 import Hold from './Hold';
 import Flip from './Flip';
 import Park from './Park';
-import Play from './Play';
 import PartyUpdateRequest from '../../../../../../definitions/PartyUpdateRequest';
 import CallParty from '../../../../../../definitions/CallParty';
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  partyId: string | null;
+  public partyId: string | null;
 
-  constructor(parent: ParentInterface, partyId: string | null = null) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface, partyId: string | null = null) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
     this.partyId = partyId;
   }
 
-  path(withParameter = true): string {
+  public path(withParameter = true): string {
     if (withParameter && this.partyId !== null) {
-      return `${this.parent.path()}/parties/${this.partyId}`;
+      return `${this._parent.path()}/parties/${this.partyId}`;
     }
-    return `${this.parent.path()}/parties`;
+    return `${this._parent.path()}/parties`;
   }
 
   /**
@@ -47,7 +44,7 @@ class Index {
    * Rate Limit Group: Light
    * App Permission: CallControl
    */
-  async get(restRequestConfig?: RestRequestConfig): Promise<CallParty> {
+  public async get(restRequestConfig?: RestRequestConfig): Promise<CallParty> {
     if (this.partyId === null) {
       throw new Error('partyId must be specified.');
     }
@@ -62,7 +59,7 @@ class Index {
    * Rate Limit Group: Light
    * App Permission: CallControl
    */
-  async delete(restRequestConfig?: RestRequestConfig): Promise<string> {
+  public async delete(restRequestConfig?: RestRequestConfig): Promise<string> {
     if (this.partyId === null) {
       throw new Error('partyId must be specified.');
     }
@@ -77,7 +74,7 @@ class Index {
    * Rate Limit Group: Light
    * App Permission: CallControl
    */
-  async patch(partyUpdateRequest: PartyUpdateRequest, restRequestConfig?: RestRequestConfig): Promise<CallParty> {
+  public async patch(partyUpdateRequest: PartyUpdateRequest, restRequestConfig?: RestRequestConfig): Promise<CallParty> {
     if (this.partyId === null) {
       throw new Error('partyId must be specified.');
     }
@@ -85,76 +82,64 @@ class Index {
     return r.data;
   }
 
-  play(playId: (string | null) = null): Play {
-    return new Play(this, playId);
-  }
-
-  park(): Park {
+  public park(): Park {
     return new Park(this);
   }
 
-  flip(): Flip {
+  public flip(): Flip {
     return new Flip(this);
   }
 
-  hold(): Hold {
+  public hold(): Hold {
     return new Hold(this);
   }
 
-  move(): Move {
-    return new Move(this);
-  }
-
-  reply(): Reply {
+  public reply(): Reply {
     return new Reply(this);
   }
 
-  unhold(): Unhold {
+  public unhold(): Unhold {
     return new Unhold(this);
   }
 
-  bridge(): Bridge {
+  public bridge(): Bridge {
     return new Bridge(this);
   }
 
-  ignore(): Ignore {
+  public ignore(): Ignore {
     return new Ignore(this);
   }
 
-  reject(): Reject {
+  public reject(): Reject {
     return new Reject(this);
   }
 
-  answer(): Answer {
+  public answer(): Answer {
     return new Answer(this);
   }
 
-  pickup(): Pickup {
+  public pickup(): Pickup {
     return new Pickup(this);
   }
 
-  forward(): Forward {
+  public forward(): Forward {
     return new Forward(this);
   }
 
-  transfer(): Transfer {
+  public transfer(): Transfer {
     return new Transfer(this);
   }
 
-  bringIn(): BringIn {
+  public bringIn(): BringIn {
     return new BringIn(this);
   }
 
-  supervise(): Supervise {
+  public supervise(): Supervise {
     return new Supervise(this);
   }
 
-  recordings(recordingId: (string | null) = null): Recordings {
+  public recordings(recordingId: (string | null) = null): Recordings {
     return new Recordings(this, recordingId);
-  }
-
-  promoteToRcv(): PromoteToRcv {
-    return new PromoteToRcv(this);
   }
 }
 export default Index;

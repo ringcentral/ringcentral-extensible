@@ -8,23 +8,23 @@ import TMNoteWithBodyInfo from '../../../../definitions/TMNoteWithBodyInfo';
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  noteId: string | null;
+  public noteId: string | null;
 
-  constructor(parent: ParentInterface, noteId: string | null = null) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface, noteId: string | null = null) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
     this.noteId = noteId;
   }
 
-  path(withParameter = true): string {
+  public path(withParameter = true): string {
     if (withParameter && this.noteId !== null) {
-      return `${this.parent.path()}/notes/${this.noteId}`;
+      return `${this._parent.path()}/notes/${this.noteId}`;
     }
-    return `${this.parent.path()}/notes`;
+    return `${this._parent.path()}/notes`;
   }
 
   /**
@@ -34,7 +34,7 @@ class Index {
    * Rate Limit Group: Medium
    * App Permission: TeamMessaging
    */
-  async get(restRequestConfig?: RestRequestConfig): Promise<TMNoteWithBodyInfo> {
+  public async get(restRequestConfig?: RestRequestConfig): Promise<TMNoteWithBodyInfo> {
     if (this.noteId === null) {
       throw new Error('noteId must be specified.');
     }
@@ -49,7 +49,7 @@ class Index {
    * Rate Limit Group: Medium
    * App Permission: TeamMessaging
    */
-  async delete(restRequestConfig?: RestRequestConfig): Promise<string> {
+  public async delete(restRequestConfig?: RestRequestConfig): Promise<string> {
     if (this.noteId === null) {
       throw new Error('noteId must be specified.');
     }
@@ -64,7 +64,7 @@ class Index {
    * Rate Limit Group: Medium
    * App Permission: TeamMessaging
    */
-  async patch(tMCreateNoteRequest: TMCreateNoteRequest, queryParams?: PatchNoteNewParameters, restRequestConfig?: RestRequestConfig): Promise<TMNoteInfo> {
+  public async patch(tMCreateNoteRequest: TMCreateNoteRequest, queryParams?: PatchNoteNewParameters, restRequestConfig?: RestRequestConfig): Promise<TMNoteInfo> {
     if (this.noteId === null) {
       throw new Error('noteId must be specified.');
     }
@@ -72,15 +72,15 @@ class Index {
     return r.data;
   }
 
-  lock(): Lock {
+  public lock(): Lock {
     return new Lock(this);
   }
 
-  unlock(): Unlock {
+  public unlock(): Unlock {
     return new Unlock(this);
   }
 
-  publish(): Publish {
+  public publish(): Publish {
     return new Publish(this);
   }
 }

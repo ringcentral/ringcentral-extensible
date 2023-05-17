@@ -4,23 +4,23 @@ import ListAccountPhoneNumbersParameters from '../../../../definitions/ListAccou
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  phoneNumberId: string | null;
+  public phoneNumberId: string | null;
 
-  constructor(parent: ParentInterface, phoneNumberId: string | null = null) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface, phoneNumberId: string | null = null) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
     this.phoneNumberId = phoneNumberId;
   }
 
-  path(withParameter = true): string {
+  public path(withParameter = true): string {
     if (withParameter && this.phoneNumberId !== null) {
-      return `${this.parent.path()}/phone-number/${this.phoneNumberId}`;
+      return `${this._parent.path()}/phone-number/${this.phoneNumberId}`;
     }
-    return `${this.parent.path()}/phone-number`;
+    return `${this._parent.path()}/phone-number`;
   }
 
   /**
@@ -33,7 +33,7 @@ class Index {
    * App Permission: ReadAccounts
    * User Permission: ReadCompanyPhoneNumbers
    */
-  async list(queryParams?: ListAccountPhoneNumbersParameters, restRequestConfig?: RestRequestConfig): Promise<AccountPhoneNumbers> {
+  public async list(queryParams?: ListAccountPhoneNumbersParameters, restRequestConfig?: RestRequestConfig): Promise<AccountPhoneNumbers> {
     const r = await this.rc.get<AccountPhoneNumbers>(this.path(false), queryParams, restRequestConfig);
     return r.data;
   }
@@ -48,7 +48,7 @@ class Index {
    * App Permission: ReadAccounts
    * User Permission: ReadCompanyPhoneNumbers
    */
-  async get(restRequestConfig?: RestRequestConfig): Promise<CompanyPhoneNumberInfo> {
+  public async get(restRequestConfig?: RestRequestConfig): Promise<CompanyPhoneNumberInfo> {
     if (this.phoneNumberId === null) {
       throw new Error('phoneNumberId must be specified.');
     }

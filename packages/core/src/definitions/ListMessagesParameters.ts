@@ -45,7 +45,7 @@ interface ListMessagesParameters {
    * Type of resulting messages. If not specified, all messages
  *  without message type filtering are returned. Multiple values are accepted
    */
-  messageType?: ('EMail' | 'Fax' | 'SMS' | 'VoiceMail' | 'Pager' | 'Text')[];
+  messageType?: ('Fax' | 'SMS' | 'VoiceMail' | 'Pager')[];
 
   /**
    * Read status for resulting messages. Multiple values are

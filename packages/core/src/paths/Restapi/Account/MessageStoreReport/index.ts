@@ -4,23 +4,23 @@ import CreateMessageStoreReportRequest from '../../../../definitions/CreateMessa
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  taskId: string | null;
+  public taskId: string | null;
 
-  constructor(parent: ParentInterface, taskId: string | null = null) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface, taskId: string | null = null) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
     this.taskId = taskId;
   }
 
-  path(withParameter = true): string {
+  public path(withParameter = true): string {
     if (withParameter && this.taskId !== null) {
-      return `${this.parent.path()}/message-store-report/${this.taskId}`;
+      return `${this._parent.path()}/message-store-report/${this.taskId}`;
     }
-    return `${this.parent.path()}/message-store-report`;
+    return `${this._parent.path()}/message-store-report`;
   }
 
   /**
@@ -33,7 +33,7 @@ class Index {
    * App Permission: ReadMessages
    * User Permission: Users
    */
-  async post(createMessageStoreReportRequest: CreateMessageStoreReportRequest, restRequestConfig?: RestRequestConfig): Promise<MessageStoreReport> {
+  public async post(createMessageStoreReportRequest: CreateMessageStoreReportRequest, restRequestConfig?: RestRequestConfig): Promise<MessageStoreReport> {
     const r = await this.rc.post<MessageStoreReport>(this.path(false), createMessageStoreReportRequest, undefined, restRequestConfig);
     return r.data;
   }
@@ -46,7 +46,7 @@ class Index {
    * App Permission: ReadMessages
    * User Permission: Users
    */
-  async get(restRequestConfig?: RestRequestConfig): Promise<MessageStoreReport> {
+  public async get(restRequestConfig?: RestRequestConfig): Promise<MessageStoreReport> {
     if (this.taskId === null) {
       throw new Error('taskId must be specified.');
     }
@@ -54,7 +54,7 @@ class Index {
     return r.data;
   }
 
-  archive(archiveId: (string | null) = null): Archive {
+  public archive(archiveId: (string | null) = null): Archive {
     return new Archive(this, archiveId);
   }
 }

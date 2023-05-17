@@ -3,23 +3,23 @@ import GetBridgeByWebPinParameters from '../../../../../../definitions/GetBridge
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  pin: string | null;
+  public pin: string | null;
 
-  constructor(parent: ParentInterface, pin: string | null = null) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface, pin: string | null = null) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
     this.pin = pin;
   }
 
-  path(withParameter = true): string {
+  public path(withParameter = true): string {
     if (withParameter && this.pin !== null) {
-      return `${this.parent.path()}/web/${this.pin}`;
+      return `${this._parent.path()}/web/${this.pin}`;
     }
-    return `${this.parent.path()}/web`;
+    return `${this._parent.path()}/web`;
   }
 
   /**
@@ -31,7 +31,7 @@ class Index {
    * Rate Limit Group: Medium
    * App Permission: Video
    */
-  async get(queryParams?: GetBridgeByWebPinParameters, restRequestConfig?: RestRequestConfig): Promise<BridgeResponse> {
+  public async get(queryParams?: GetBridgeByWebPinParameters, restRequestConfig?: RestRequestConfig): Promise<BridgeResponse> {
     if (this.pin === null) {
       throw new Error('pin must be specified.');
     }

@@ -7,23 +7,23 @@ import RcwConfigListWebinarsParameters from '../../../../../definitions/RcwConfi
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  webinarId: string | null;
+  public webinarId: string | null;
 
-  constructor(parent: ParentInterface, webinarId: string | null = null) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface, webinarId: string | null = null) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
     this.webinarId = webinarId;
   }
 
-  path(withParameter = true): string {
+  public path(withParameter = true): string {
     if (withParameter && this.webinarId !== null) {
-      return `${this.parent.path()}/webinars/${this.webinarId}`;
+      return `${this._parent.path()}/webinars/${this.webinarId}`;
     }
-    return `${this.parent.path()}/webinars`;
+    return `${this._parent.path()}/webinars`;
   }
 
   /**
@@ -34,7 +34,7 @@ class Index {
    * Rate Limit Group: Heavy
    * App Permission: ReadWebinars
    */
-  async list(queryParams?: RcwConfigListWebinarsParameters, restRequestConfig?: RestRequestConfig): Promise<WebinarListResource> {
+  public async list(queryParams?: RcwConfigListWebinarsParameters, restRequestConfig?: RestRequestConfig): Promise<WebinarListResource> {
     const r = await this.rc.get<WebinarListResource>(this.path(false), queryParams, restRequestConfig);
     return r.data;
   }
@@ -54,7 +54,7 @@ class Index {
    * Rate Limit Group: Heavy
    * App Permission: EditWebinars
    */
-  async post(webinarCreationRequest: WebinarCreationRequest, restRequestConfig?: RestRequestConfig): Promise<WcsWebinarResource> {
+  public async post(webinarCreationRequest: WebinarCreationRequest, restRequestConfig?: RestRequestConfig): Promise<WcsWebinarResource> {
     const r = await this.rc.post<WcsWebinarResource>(this.path(false), webinarCreationRequest, undefined, restRequestConfig);
     return r.data;
   }
@@ -68,7 +68,7 @@ class Index {
    * Rate Limit Group: Heavy
    * App Permission: ReadWebinars
    */
-  async get(restRequestConfig?: RestRequestConfig): Promise<WcsWebinarResource> {
+  public async get(restRequestConfig?: RestRequestConfig): Promise<WcsWebinarResource> {
     if (this.webinarId === null) {
       throw new Error('webinarId must be specified.');
     }
@@ -77,7 +77,7 @@ class Index {
   }
 
   /**
-   * Deletes a Webinar by ID. All child objects (Sessions, Participants) will be also deleted.
+   * Deletes a Webinar by ID. All child objects (Sessions, Invitees) will be also deleted.
  * It is disallowed to delete a Webinar which has at least one Session in 'Active' or 'Finished' state.
  *
    * HTTP Method: delete
@@ -85,7 +85,7 @@ class Index {
    * Rate Limit Group: Heavy
    * App Permission: EditWebinars
    */
-  async delete(restRequestConfig?: RestRequestConfig): Promise<string> {
+  public async delete(restRequestConfig?: RestRequestConfig): Promise<string> {
     if (this.webinarId === null) {
       throw new Error('webinarId must be specified.');
     }
@@ -106,7 +106,7 @@ class Index {
    * Rate Limit Group: Heavy
    * App Permission: EditWebinars
    */
-  async patch(webinarBaseModel: WebinarBaseModel, restRequestConfig?: RestRequestConfig): Promise<WcsWebinarResource> {
+  public async patch(webinarBaseModel: WebinarBaseModel, restRequestConfig?: RestRequestConfig): Promise<WcsWebinarResource> {
     if (this.webinarId === null) {
       throw new Error('webinarId must be specified.');
     }
@@ -114,7 +114,7 @@ class Index {
     return r.data;
   }
 
-  sessions(sessionId: (string | null) = null): Sessions {
+  public sessions(sessionId: (string | null) = null): Sessions {
     return new Sessions(this, sessionId);
   }
 }

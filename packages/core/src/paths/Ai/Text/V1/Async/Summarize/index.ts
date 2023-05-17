@@ -4,17 +4,17 @@ import SummaryInput from '../../../../../../definitions/SummaryInput';
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  constructor(parent: ParentInterface) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
   }
 
-  path(): string {
-    return `${this.parent.path()}/summarize`;
+  public path(withParameter = false): string {
+    return `${this._parent.path()}/summarize`;
   }
 
   /**
@@ -24,7 +24,7 @@ class Index {
    * Rate Limit Group: Heavy
    * App Permission: AI
    */
-  async post(summaryInput: SummaryInput, queryParams?: CaiSummarizeParameters, restRequestConfig?: RestRequestConfig): Promise<CaiAsyncApiResponse> {
+  public async post(summaryInput: SummaryInput, queryParams?: CaiSummarizeParameters, restRequestConfig?: RestRequestConfig): Promise<CaiAsyncApiResponse> {
     const r = await this.rc.post<CaiAsyncApiResponse>(this.path(), summaryInput, queryParams, restRequestConfig);
     return r.data;
   }

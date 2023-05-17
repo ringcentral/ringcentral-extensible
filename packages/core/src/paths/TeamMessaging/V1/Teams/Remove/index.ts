@@ -2,17 +2,17 @@ import TMRemoveTeamMembersRequest from '../../../../../definitions/TMRemoveTeamM
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  constructor(parent: ParentInterface) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
   }
 
-  path(): string {
-    return `${this.parent.path()}/remove`;
+  public path(withParameter = false): string {
+    return `${this._parent.path()}/remove`;
   }
 
   /**
@@ -22,7 +22,7 @@ class Index {
    * Rate Limit Group: Medium
    * App Permission: TeamMessaging
    */
-  async post(tMRemoveTeamMembersRequest: TMRemoveTeamMembersRequest, restRequestConfig?: RestRequestConfig): Promise<string> {
+  public async post(tMRemoveTeamMembersRequest: TMRemoveTeamMembersRequest, restRequestConfig?: RestRequestConfig): Promise<string> {
     const r = await this.rc.post<string>(this.path(), tMRemoveTeamMembersRequest, undefined, restRequestConfig);
     return r.data;
   }

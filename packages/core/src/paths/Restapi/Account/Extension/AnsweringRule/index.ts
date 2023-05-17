@@ -8,23 +8,23 @@ import ListAnsweringRulesParameters from '../../../../../definitions/ListAnsweri
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  ruleId: string | null;
+  public ruleId: string | null;
 
-  constructor(parent: ParentInterface, ruleId: string | null = null) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface, ruleId: string | null = null) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
     this.ruleId = ruleId;
   }
 
-  path(withParameter = true): string {
+  public path(withParameter = true): string {
     if (withParameter && this.ruleId !== null) {
-      return `${this.parent.path()}/answering-rule/${this.ruleId}`;
+      return `${this._parent.path()}/answering-rule/${this.ruleId}`;
     }
-    return `${this.parent.path()}/answering-rule`;
+    return `${this._parent.path()}/answering-rule`;
   }
 
   /**
@@ -35,7 +35,7 @@ class Index {
    * App Permission: ReadAccounts
    * User Permission: ReadUserAnsweringRules
    */
-  async list(queryParams?: ListAnsweringRulesParameters, restRequestConfig?: RestRequestConfig): Promise<UserAnsweringRuleList> {
+  public async list(queryParams?: ListAnsweringRulesParameters, restRequestConfig?: RestRequestConfig): Promise<UserAnsweringRuleList> {
     const r = await this.rc.get<UserAnsweringRuleList>(this.path(false), queryParams, restRequestConfig);
     return r.data;
   }
@@ -48,7 +48,7 @@ class Index {
    * App Permission: EditExtensions
    * User Permission: EditUserAnsweringRules
    */
-  async post(createAnsweringRuleRequest: CreateAnsweringRuleRequest, restRequestConfig?: RestRequestConfig): Promise<CustomAnsweringRuleInfo> {
+  public async post(createAnsweringRuleRequest: CreateAnsweringRuleRequest, restRequestConfig?: RestRequestConfig): Promise<CustomAnsweringRuleInfo> {
     const r = await this.rc.post<CustomAnsweringRuleInfo>(this.path(false), createAnsweringRuleRequest, undefined, restRequestConfig);
     return r.data;
   }
@@ -61,7 +61,7 @@ class Index {
    * App Permission: ReadAccounts
    * User Permission: ReadUserAnsweringRules
    */
-  async get(queryParams?: ReadAnsweringRuleParameters, restRequestConfig?: RestRequestConfig): Promise<AnsweringRuleInfo> {
+  public async get(queryParams?: ReadAnsweringRuleParameters, restRequestConfig?: RestRequestConfig): Promise<AnsweringRuleInfo> {
     if (this.ruleId === null) {
       throw new Error('ruleId must be specified.');
     }
@@ -77,7 +77,7 @@ class Index {
    * App Permission: EditExtensions
    * User Permission: EditUserAnsweringRules
    */
-  async put(updateAnsweringRuleRequest: UpdateAnsweringRuleRequest, restRequestConfig?: RestRequestConfig): Promise<AnsweringRuleInfo> {
+  public async put(updateAnsweringRuleRequest: UpdateAnsweringRuleRequest, restRequestConfig?: RestRequestConfig): Promise<AnsweringRuleInfo> {
     if (this.ruleId === null) {
       throw new Error('ruleId must be specified.');
     }
@@ -93,7 +93,7 @@ class Index {
    * App Permission: EditExtensions
    * User Permission: EditUserAnsweringRules
    */
-  async delete(restRequestConfig?: RestRequestConfig): Promise<string> {
+  public async delete(restRequestConfig?: RestRequestConfig): Promise<string> {
     if (this.ruleId === null) {
       throw new Error('ruleId must be specified.');
     }

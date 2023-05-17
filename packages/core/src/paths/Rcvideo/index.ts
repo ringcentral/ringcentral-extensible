@@ -3,21 +3,21 @@ import V1 from './V1';
 import { RingCentralInterface } from '../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  constructor(rc: RingCentralInterface) {
+  public constructor(rc: RingCentralInterface) {
     this.rc = rc;
   }
 
-  path(): string {
+  public path(withParameter = false): string {
     return '/rcvideo';
   }
 
-  v1(): V1 {
+  public v1(): V1 {
     return new V1(this);
   }
 
-  v2(): V2 {
+  public v2(): V2 {
     return new V2(this);
   }
 }

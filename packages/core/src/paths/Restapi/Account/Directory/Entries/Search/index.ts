@@ -4,17 +4,17 @@ import SearchDirectoryEntriesRequest from '../../../../../../definitions/SearchD
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  constructor(parent: ParentInterface) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
   }
 
-  path(): string {
-    return `${this.parent.path()}/search`;
+  public path(withParameter = false): string {
+    return `${this._parent.path()}/search`;
   }
 
   /**
@@ -25,7 +25,7 @@ class Index {
    * App Permission: ReadAccounts
    * User Permission: ReadExtensions
    */
-  async post(searchDirectoryEntriesRequest: SearchDirectoryEntriesRequest, queryParams?: SearchDirectoryEntriesParameters, restRequestConfig?: RestRequestConfig): Promise<DirectoryResource> {
+  public async post(searchDirectoryEntriesRequest: SearchDirectoryEntriesRequest, queryParams?: SearchDirectoryEntriesParameters, restRequestConfig?: RestRequestConfig): Promise<DirectoryResource> {
     const r = await this.rc.post<DirectoryResource>(this.path(), searchDirectoryEntriesRequest, queryParams, restRequestConfig);
     return r.data;
   }

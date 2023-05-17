@@ -3,17 +3,17 @@ import CallPartyReply from '../../../../../../../definitions/CallPartyReply';
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  constructor(parent: ParentInterface) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
   }
 
-  path(): string {
-    return `${this.parent.path()}/reply`;
+  public path(withParameter = false): string {
+    return `${this._parent.path()}/reply`;
   }
 
   /**
@@ -23,7 +23,7 @@ class Index {
    * Rate Limit Group: Light
    * App Permission: CallControl
    */
-  async post(callPartyReply: CallPartyReply, restRequestConfig?: RestRequestConfig): Promise<ReplyParty> {
+  public async post(callPartyReply: CallPartyReply, restRequestConfig?: RestRequestConfig): Promise<ReplyParty> {
     const r = await this.rc.post<ReplyParty>(this.path(), callPartyReply, undefined, restRequestConfig);
     return r.data;
   }

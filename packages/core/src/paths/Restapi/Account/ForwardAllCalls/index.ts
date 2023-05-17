@@ -2,17 +2,17 @@ import ForwardAllCompanyCallsInfo from '../../../../definitions/ForwardAllCompan
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  constructor(parent: ParentInterface) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
   }
 
-  path(): string {
-    return `${this.parent.path()}/forward-all-calls`;
+  public path(withParameter = false): string {
+    return `${this._parent.path()}/forward-all-calls`;
   }
 
   /**
@@ -23,7 +23,7 @@ class Index {
    * App Permission: ReadAccounts
    * User Permission: ReadCompanyAnsweringRules
    */
-  async get(restRequestConfig?: RestRequestConfig): Promise<ForwardAllCompanyCallsInfo> {
+  public async get(restRequestConfig?: RestRequestConfig): Promise<ForwardAllCompanyCallsInfo> {
     const r = await this.rc.get<ForwardAllCompanyCallsInfo>(this.path(), undefined, restRequestConfig);
     return r.data;
   }
@@ -36,7 +36,7 @@ class Index {
    * App Permission: EditAccounts
    * User Permission: EditCompanyAnsweringRules
    */
-  async patch(forwardAllCompanyCallsInfo: ForwardAllCompanyCallsInfo, restRequestConfig?: RestRequestConfig): Promise<ForwardAllCompanyCallsInfo> {
+  public async patch(forwardAllCompanyCallsInfo: ForwardAllCompanyCallsInfo, restRequestConfig?: RestRequestConfig): Promise<ForwardAllCompanyCallsInfo> {
     const r = await this.rc.patch<ForwardAllCompanyCallsInfo>(this.path(), forwardAllCompanyCallsInfo, undefined, restRequestConfig);
     return r.data;
   }

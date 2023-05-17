@@ -3,17 +3,17 @@ import AnswerTarget from '../../../../../../../definitions/AnswerTarget';
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  constructor(parent: ParentInterface) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
   }
 
-  path(): string {
-    return `${this.parent.path()}/answer`;
+  public path(withParameter = false): string {
+    return `${this._parent.path()}/answer`;
   }
 
   /**
@@ -23,7 +23,7 @@ class Index {
    * Rate Limit Group: Light
    * App Permission: CallControl
    */
-  async post(answerTarget: AnswerTarget, restRequestConfig?: RestRequestConfig): Promise<CallParty> {
+  public async post(answerTarget: AnswerTarget, restRequestConfig?: RestRequestConfig): Promise<CallParty> {
     const r = await this.rc.post<CallParty>(this.path(), answerTarget, undefined, restRequestConfig);
     return r.data;
   }

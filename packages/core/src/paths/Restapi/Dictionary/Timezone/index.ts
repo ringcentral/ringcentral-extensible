@@ -4,23 +4,23 @@ import ListTimezonesParameters from '../../../../definitions/ListTimezonesParame
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  timezoneId: string | null;
+  public timezoneId: string | null;
 
-  constructor(parent: ParentInterface, timezoneId: string | null = null) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface, timezoneId: string | null = null) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
     this.timezoneId = timezoneId;
   }
 
-  path(withParameter = true): string {
+  public path(withParameter = true): string {
     if (withParameter && this.timezoneId !== null) {
-      return `${this.parent.path()}/timezone/${this.timezoneId}`;
+      return `${this._parent.path()}/timezone/${this.timezoneId}`;
     }
-    return `${this.parent.path()}/timezone`;
+    return `${this._parent.path()}/timezone`;
   }
 
   /**
@@ -30,7 +30,7 @@ class Index {
    * Endpoint: /restapi/{apiVersion}/dictionary/timezone
    * Rate Limit Group: Light
    */
-  async list(queryParams?: ListTimezonesParameters, restRequestConfig?: RestRequestConfig): Promise<GetTimezoneListResponse> {
+  public async list(queryParams?: ListTimezonesParameters, restRequestConfig?: RestRequestConfig): Promise<GetTimezoneListResponse> {
     const r = await this.rc.get<GetTimezoneListResponse>(this.path(false), queryParams, restRequestConfig);
     return r.data;
   }
@@ -42,7 +42,7 @@ class Index {
    * Endpoint: /restapi/{apiVersion}/dictionary/timezone/{timezoneId}
    * Rate Limit Group: Light
    */
-  async get(restRequestConfig?: RestRequestConfig): Promise<GetTimezoneInfoResponse> {
+  public async get(restRequestConfig?: RestRequestConfig): Promise<GetTimezoneInfoResponse> {
     if (this.timezoneId === null) {
       throw new Error('timezoneId must be specified.');
     }

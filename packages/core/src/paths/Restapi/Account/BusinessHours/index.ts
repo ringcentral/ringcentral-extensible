@@ -3,17 +3,17 @@ import CompanyBusinessHours from '../../../../definitions/CompanyBusinessHours';
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  constructor(parent: ParentInterface) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
   }
 
-  path(): string {
-    return `${this.parent.path()}/business-hours`;
+  public path(withParameter = false): string {
+    return `${this._parent.path()}/business-hours`;
   }
 
   /**
@@ -24,7 +24,7 @@ class Index {
    * App Permission: ReadAccounts
    * User Permission: ReadCompanyAnsweringRules
    */
-  async get(restRequestConfig?: RestRequestConfig): Promise<CompanyBusinessHours> {
+  public async get(restRequestConfig?: RestRequestConfig): Promise<CompanyBusinessHours> {
     const r = await this.rc.get<CompanyBusinessHours>(this.path(), undefined, restRequestConfig);
     return r.data;
   }
@@ -37,7 +37,7 @@ class Index {
    * App Permission: EditExtensions
    * User Permission: EditUserAnsweringRules
    */
-  async put(companyBusinessHoursUpdateRequest: CompanyBusinessHoursUpdateRequest, restRequestConfig?: RestRequestConfig): Promise<CompanyBusinessHours> {
+  public async put(companyBusinessHoursUpdateRequest: CompanyBusinessHoursUpdateRequest, restRequestConfig?: RestRequestConfig): Promise<CompanyBusinessHours> {
     const r = await this.rc.put<CompanyBusinessHours>(this.path(), companyBusinessHoursUpdateRequest, undefined, restRequestConfig);
     return r.data;
   }

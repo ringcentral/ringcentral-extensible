@@ -5,17 +5,17 @@ import CallRecordingSettingsResource from '../../../../definitions/CallRecording
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  constructor(parent: ParentInterface) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
   }
 
-  path(): string {
-    return `${this.parent.path()}/call-recording`;
+  public path(withParameter = false): string {
+    return `${this._parent.path()}/call-recording`;
   }
 
   /**
@@ -26,7 +26,7 @@ class Index {
    * App Permission: ReadAccounts
    * User Permission: ReadCompanyInfo
    */
-  async get(restRequestConfig?: RestRequestConfig): Promise<CallRecordingSettingsResource> {
+  public async get(restRequestConfig?: RestRequestConfig): Promise<CallRecordingSettingsResource> {
     const r = await this.rc.get<CallRecordingSettingsResource>(this.path(), undefined, restRequestConfig);
     return r.data;
   }
@@ -39,20 +39,20 @@ class Index {
    * App Permission: EditAccounts
    * User Permission: EditCompanyInfo
    */
-  async put(callRecordingSettingsResource: CallRecordingSettingsResource, restRequestConfig?: RestRequestConfig): Promise<CallRecordingSettingsResource> {
+  public async put(callRecordingSettingsResource: CallRecordingSettingsResource, restRequestConfig?: RestRequestConfig): Promise<CallRecordingSettingsResource> {
     const r = await this.rc.put<CallRecordingSettingsResource>(this.path(), callRecordingSettingsResource, undefined, restRequestConfig);
     return r.data;
   }
 
-  extensions(): Extensions {
+  public extensions(): Extensions {
     return new Extensions(this);
   }
 
-  bulkAssign(): BulkAssign {
+  public bulkAssign(): BulkAssign {
     return new BulkAssign(this);
   }
 
-  customGreetings(greetingId: (string | null) = null): CustomGreetings {
+  public customGreetings(greetingId: (string | null) = null): CustomGreetings {
     return new CustomGreetings(this, greetingId);
   }
 }

@@ -5,23 +5,23 @@ import ListGlipConversationsNewParameters from '../../../../definitions/ListGlip
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  chatId: string | null;
+  public chatId: string | null;
 
-  constructor(parent: ParentInterface, chatId: string | null = null) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface, chatId: string | null = null) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
     this.chatId = chatId;
   }
 
-  path(withParameter = true): string {
+  public path(withParameter = true): string {
     if (withParameter && this.chatId !== null) {
-      return `${this.parent.path()}/conversations/${this.chatId}`;
+      return `${this._parent.path()}/conversations/${this.chatId}`;
     }
-    return `${this.parent.path()}/conversations`;
+    return `${this._parent.path()}/conversations`;
   }
 
   /**
@@ -31,7 +31,7 @@ class Index {
    * Rate Limit Group: Medium
    * App Permission: TeamMessaging
    */
-  async list(queryParams?: ListGlipConversationsNewParameters, restRequestConfig?: RestRequestConfig): Promise<TMConversationList> {
+  public async list(queryParams?: ListGlipConversationsNewParameters, restRequestConfig?: RestRequestConfig): Promise<TMConversationList> {
     const r = await this.rc.get<TMConversationList>(this.path(false), queryParams, restRequestConfig);
     return r.data;
   }
@@ -43,7 +43,7 @@ class Index {
    * Rate Limit Group: Medium
    * App Permission: TeamMessaging
    */
-  async post(createConversationRequest: CreateConversationRequest, restRequestConfig?: RestRequestConfig): Promise<TMConversationInfo> {
+  public async post(createConversationRequest: CreateConversationRequest, restRequestConfig?: RestRequestConfig): Promise<TMConversationInfo> {
     const r = await this.rc.post<TMConversationInfo>(this.path(false), createConversationRequest, undefined, restRequestConfig);
     return r.data;
   }
@@ -55,7 +55,7 @@ class Index {
    * Rate Limit Group: Light
    * App Permission: TeamMessaging
    */
-  async get(restRequestConfig?: RestRequestConfig): Promise<TMConversationInfo> {
+  public async get(restRequestConfig?: RestRequestConfig): Promise<TMConversationInfo> {
     if (this.chatId === null) {
       throw new Error('chatId must be specified.');
     }

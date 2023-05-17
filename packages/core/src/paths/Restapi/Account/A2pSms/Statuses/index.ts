@@ -3,17 +3,17 @@ import AggregateA2PSMSStatusesParameters from '../../../../../definitions/Aggreg
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  constructor(parent: ParentInterface) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
   }
 
-  path(): string {
-    return `${this.parent.path()}/statuses`;
+  public path(withParameter = false): string {
+    return `${this._parent.path()}/statuses`;
   }
 
   /**
@@ -23,7 +23,7 @@ class Index {
    * Rate Limit Group: Light
    * App Permission: A2PSMS
    */
-  async get(queryParams?: AggregateA2PSMSStatusesParameters, restRequestConfig?: RestRequestConfig): Promise<MessageStatusesResponse> {
+  public async get(queryParams?: AggregateA2PSMSStatusesParameters, restRequestConfig?: RestRequestConfig): Promise<MessageStatusesResponse> {
     const r = await this.rc.get<MessageStatusesResponse>(this.path(), queryParams, restRequestConfig);
     return r.data;
   }

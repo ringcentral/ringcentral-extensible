@@ -6,23 +6,23 @@ import ReadGlipPostsNewParameters from '../../../../../definitions/ReadGlipPosts
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  postId: string | null;
+  public postId: string | null;
 
-  constructor(parent: ParentInterface, postId: string | null = null) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface, postId: string | null = null) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
     this.postId = postId;
   }
 
-  path(withParameter = true): string {
+  public path(withParameter = true): string {
     if (withParameter && this.postId !== null) {
-      return `${this.parent.path()}/posts/${this.postId}`;
+      return `${this._parent.path()}/posts/${this.postId}`;
     }
-    return `${this.parent.path()}/posts`;
+    return `${this._parent.path()}/posts`;
   }
 
   /**
@@ -32,7 +32,7 @@ class Index {
    * Rate Limit Group: Medium
    * App Permission: TeamMessaging
    */
-  async list(queryParams?: ReadGlipPostsNewParameters, restRequestConfig?: RestRequestConfig): Promise<TMPostsList> {
+  public async list(queryParams?: ReadGlipPostsNewParameters, restRequestConfig?: RestRequestConfig): Promise<TMPostsList> {
     const r = await this.rc.get<TMPostsList>(this.path(false), queryParams, restRequestConfig);
     return r.data;
   }
@@ -44,7 +44,7 @@ class Index {
    * Rate Limit Group: Medium
    * App Permission: TeamMessaging
    */
-  async post(tMCreatePostRequest: TMCreatePostRequest, restRequestConfig?: RestRequestConfig): Promise<TMPostInfo> {
+  public async post(tMCreatePostRequest: TMCreatePostRequest, restRequestConfig?: RestRequestConfig): Promise<TMPostInfo> {
     const r = await this.rc.post<TMPostInfo>(this.path(false), tMCreatePostRequest, undefined, restRequestConfig);
     return r.data;
   }
@@ -56,7 +56,7 @@ class Index {
    * Rate Limit Group: Light
    * App Permission: TeamMessaging
    */
-  async get(restRequestConfig?: RestRequestConfig): Promise<TMPostInfo> {
+  public async get(restRequestConfig?: RestRequestConfig): Promise<TMPostInfo> {
     if (this.postId === null) {
       throw new Error('postId must be specified.');
     }
@@ -71,7 +71,7 @@ class Index {
    * Rate Limit Group: Medium
    * App Permission: TeamMessaging
    */
-  async delete(restRequestConfig?: RestRequestConfig): Promise<string> {
+  public async delete(restRequestConfig?: RestRequestConfig): Promise<string> {
     if (this.postId === null) {
       throw new Error('postId must be specified.');
     }
@@ -86,7 +86,7 @@ class Index {
    * Rate Limit Group: Medium
    * App Permission: TeamMessaging
    */
-  async patch(tMUpdatePostRequest: TMUpdatePostRequest, restRequestConfig?: RestRequestConfig): Promise<TMPostInfo> {
+  public async patch(tMUpdatePostRequest: TMUpdatePostRequest, restRequestConfig?: RestRequestConfig): Promise<TMPostInfo> {
     if (this.postId === null) {
       throw new Error('postId must be specified.');
     }

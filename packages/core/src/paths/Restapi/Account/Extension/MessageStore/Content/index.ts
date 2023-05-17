@@ -2,23 +2,23 @@ import ReadMessageContentParameters from '../../../../../../definitions/ReadMess
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  attachmentId: string | null;
+  public attachmentId: string | null;
 
-  constructor(parent: ParentInterface, attachmentId: string | null = null) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface, attachmentId: string | null = null) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
     this.attachmentId = attachmentId;
   }
 
-  path(withParameter = true): string {
+  public path(withParameter = true): string {
     if (withParameter && this.attachmentId !== null) {
-      return `${this.parent.path()}/content/${this.attachmentId}`;
+      return `${this._parent.path()}/content/${this.attachmentId}`;
     }
-    return `${this.parent.path()}/content`;
+    return `${this._parent.path()}/content`;
   }
 
   /**
@@ -29,7 +29,7 @@ class Index {
    * App Permission: ReadMessages
    * User Permission: ReadMessageContent
    */
-  async get(queryParams?: ReadMessageContentParameters, restRequestConfig?: RestRequestConfig): Promise<Buffer> {
+  public async get(queryParams?: ReadMessageContentParameters, restRequestConfig?: RestRequestConfig): Promise<Buffer> {
     if (this.attachmentId === null) {
       throw new Error('attachmentId must be specified.');
     }

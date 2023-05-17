@@ -8,7 +8,7 @@ interface IdentifyInput {
   /**
    * The encoding of the original audio
    * Required
-   * Example: Mpeg
+   * Example: Wav
    */
   encoding?: ('Mpeg' | 'Mp4' | 'Wav' | 'Webm' | 'Webp' | 'Aac' | 'Avi' | 'Ogg');
 
@@ -27,7 +27,7 @@ interface IdentifyInput {
 
   /**
    * Type of the audio
-   * Example: Meeting
+   * Example: CallCenter
    */
   audioType?: ('CallCenter' | 'Meeting' | 'EarningsCalls' | 'Interview' | 'PressConference' | 'Voicemail');
 

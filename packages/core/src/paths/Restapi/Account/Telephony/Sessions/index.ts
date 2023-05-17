@@ -5,23 +5,23 @@ import ReadCallSessionStatusParameters from '../../../../../definitions/ReadCall
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  telephonySessionId: string | null;
+  public telephonySessionId: string | null;
 
-  constructor(parent: ParentInterface, telephonySessionId: string | null = null) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface, telephonySessionId: string | null = null) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
     this.telephonySessionId = telephonySessionId;
   }
 
-  path(withParameter = true): string {
+  public path(withParameter = true): string {
     if (withParameter && this.telephonySessionId !== null) {
-      return `${this.parent.path()}/sessions/${this.telephonySessionId}`;
+      return `${this._parent.path()}/sessions/${this.telephonySessionId}`;
     }
-    return `${this.parent.path()}/sessions`;
+    return `${this._parent.path()}/sessions`;
   }
 
   /**
@@ -31,7 +31,7 @@ class Index {
    * Rate Limit Group: Light
    * App Permission: CallControl
    */
-  async get(queryParams?: ReadCallSessionStatusParameters, restRequestConfig?: RestRequestConfig): Promise<CallSessionObject> {
+  public async get(queryParams?: ReadCallSessionStatusParameters, restRequestConfig?: RestRequestConfig): Promise<CallSessionObject> {
     if (this.telephonySessionId === null) {
       throw new Error('telephonySessionId must be specified.');
     }
@@ -46,7 +46,7 @@ class Index {
    * Rate Limit Group: Light
    * App Permission: CallControl
    */
-  async delete(restRequestConfig?: RestRequestConfig): Promise<string> {
+  public async delete(restRequestConfig?: RestRequestConfig): Promise<string> {
     if (this.telephonySessionId === null) {
       throw new Error('telephonySessionId must be specified.');
     }
@@ -54,11 +54,11 @@ class Index {
     return r.data;
   }
 
-  parties(partyId: (string | null) = null): Parties {
+  public parties(partyId: (string | null) = null): Parties {
     return new Parties(this, partyId);
   }
 
-  supervise(): Supervise {
+  public supervise(): Supervise {
     return new Supervise(this);
   }
 }

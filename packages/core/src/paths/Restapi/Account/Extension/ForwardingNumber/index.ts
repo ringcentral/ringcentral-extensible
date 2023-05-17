@@ -8,23 +8,23 @@ import ListForwardingNumbersParameters from '../../../../../definitions/ListForw
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  forwardingNumberId: string | null;
+  public forwardingNumberId: string | null;
 
-  constructor(parent: ParentInterface, forwardingNumberId: string | null = null) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface, forwardingNumberId: string | null = null) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
     this.forwardingNumberId = forwardingNumberId;
   }
 
-  path(withParameter = true): string {
+  public path(withParameter = true): string {
     if (withParameter && this.forwardingNumberId !== null) {
-      return `${this.parent.path()}/forwarding-number/${this.forwardingNumberId}`;
+      return `${this._parent.path()}/forwarding-number/${this.forwardingNumberId}`;
     }
-    return `${this.parent.path()}/forwarding-number`;
+    return `${this._parent.path()}/forwarding-number`;
   }
 
   /**
@@ -38,7 +38,7 @@ class Index {
    * App Permission: ReadAccounts
    * User Permission: ReadUserForwardingFlipNumbers
    */
-  async list(queryParams?: ListForwardingNumbersParameters, restRequestConfig?: RestRequestConfig): Promise<GetExtensionForwardingNumberListResponse> {
+  public async list(queryParams?: ListForwardingNumbersParameters, restRequestConfig?: RestRequestConfig): Promise<GetExtensionForwardingNumberListResponse> {
     const r = await this.rc.get<GetExtensionForwardingNumberListResponse>(this.path(false), queryParams, restRequestConfig);
     return r.data;
   }
@@ -51,7 +51,7 @@ class Index {
    * App Permission: EditExtensions
    * User Permission: EditUserForwardingFlipNumbers
    */
-  async post(createForwardingNumberRequest: CreateForwardingNumberRequest, restRequestConfig?: RestRequestConfig): Promise<ForwardingNumberInfo> {
+  public async post(createForwardingNumberRequest: CreateForwardingNumberRequest, restRequestConfig?: RestRequestConfig): Promise<ForwardingNumberInfo> {
     const r = await this.rc.post<ForwardingNumberInfo>(this.path(false), createForwardingNumberRequest, undefined, restRequestConfig);
     return r.data;
   }
@@ -64,7 +64,7 @@ class Index {
    * App Permission: EditExtensions
    * User Permission: EditUserForwardingFlipNumbers
    */
-  async deleteAll(deleteForwardingNumbersRequest: DeleteForwardingNumbersRequest, restRequestConfig?: RestRequestConfig): Promise<string> {
+  public async deleteAll(deleteForwardingNumbersRequest: DeleteForwardingNumbersRequest, restRequestConfig?: RestRequestConfig): Promise<string> {
     const r = await this.rc.delete<string>(this.path(false), deleteForwardingNumbersRequest, undefined, restRequestConfig);
     return r.data;
   }
@@ -77,7 +77,7 @@ class Index {
    * App Permission: ReadAccounts
    * User Permission: ReadUserForwardingFlipNumbers
    */
-  async get(restRequestConfig?: RestRequestConfig): Promise<ForwardingNumberResource> {
+  public async get(restRequestConfig?: RestRequestConfig): Promise<ForwardingNumberResource> {
     if (this.forwardingNumberId === null) {
       throw new Error('forwardingNumberId must be specified.');
     }
@@ -93,7 +93,7 @@ class Index {
    * App Permission: EditExtensions
    * User Permission: EditUserForwardingFlipNumbers
    */
-  async put(updateForwardingNumberRequest: UpdateForwardingNumberRequest, restRequestConfig?: RestRequestConfig): Promise<ForwardingNumberInfo> {
+  public async put(updateForwardingNumberRequest: UpdateForwardingNumberRequest, restRequestConfig?: RestRequestConfig): Promise<ForwardingNumberInfo> {
     if (this.forwardingNumberId === null) {
       throw new Error('forwardingNumberId must be specified.');
     }
@@ -109,7 +109,7 @@ class Index {
    * App Permission: EditExtensions
    * User Permission: EditUserForwardingFlipNumbers
    */
-  async delete(restRequestConfig?: RestRequestConfig): Promise<string> {
+  public async delete(restRequestConfig?: RestRequestConfig): Promise<string> {
     if (this.forwardingNumberId === null) {
       throw new Error('forwardingNumberId must be specified.');
     }

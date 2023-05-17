@@ -10,23 +10,23 @@ import ListGlipChatsNewParameters from '../../../../definitions/ListGlipChatsNew
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  chatId: string | null;
+  public chatId: string | null;
 
-  constructor(parent: ParentInterface, chatId: string | null = null) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface, chatId: string | null = null) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
     this.chatId = chatId;
   }
 
-  path(withParameter = true): string {
+  public path(withParameter = true): string {
     if (withParameter && this.chatId !== null) {
-      return `${this.parent.path()}/chats/${this.chatId}`;
+      return `${this._parent.path()}/chats/${this.chatId}`;
     }
-    return `${this.parent.path()}/chats`;
+    return `${this._parent.path()}/chats`;
   }
 
   /**
@@ -49,7 +49,7 @@ class Index {
    * Rate Limit Group: Medium
    * App Permission: TeamMessaging
    */
-  async list(queryParams?: ListGlipChatsNewParameters, restRequestConfig?: RestRequestConfig): Promise<TMChatList> {
+  public async list(queryParams?: ListGlipChatsNewParameters, restRequestConfig?: RestRequestConfig): Promise<TMChatList> {
     const r = await this.rc.get<TMChatList>(this.path(false), queryParams, restRequestConfig);
     return r.data;
   }
@@ -64,7 +64,7 @@ class Index {
    * Rate Limit Group: Light
    * App Permission: TeamMessaging
    */
-  async get(restRequestConfig?: RestRequestConfig): Promise<TMChatInfo> {
+  public async get(restRequestConfig?: RestRequestConfig): Promise<TMChatInfo> {
     if (this.chatId === null) {
       throw new Error('chatId must be specified.');
     }
@@ -72,27 +72,27 @@ class Index {
     return r.data;
   }
 
-  posts(postId: (string | null) = null): Posts {
+  public posts(postId: (string | null) = null): Posts {
     return new Posts(this, postId);
   }
 
-  tasks(): Tasks {
+  public tasks(): Tasks {
     return new Tasks(this);
   }
 
-  notes(): Notes {
+  public notes(): Notes {
     return new Notes(this);
   }
 
-  favorite(): Favorite {
+  public favorite(): Favorite {
     return new Favorite(this);
   }
 
-  unfavorite(): Unfavorite {
+  public unfavorite(): Unfavorite {
     return new Unfavorite(this);
   }
 
-  adaptiveCards(): AdaptiveCards {
+  public adaptiveCards(): AdaptiveCards {
     return new AdaptiveCards(this);
   }
 }

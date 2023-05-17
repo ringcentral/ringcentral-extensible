@@ -77,8 +77,8 @@ interface SessionGlobalListEntry {
   description?: string;
 
   /**
-   * Session status from Configuration service
-   * Example: Finished
+   * Session status (for the purposes of Configuration service)
+   * Example: Scheduled
    */
   status?: ('Scheduled' | 'Active' | 'Finished');
 

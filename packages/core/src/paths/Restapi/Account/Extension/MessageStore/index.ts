@@ -9,23 +9,23 @@ import ListMessagesParameters from '../../../../../definitions/ListMessagesParam
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  messageId: string | null;
+  public messageId: string | null;
 
-  constructor(parent: ParentInterface, messageId: string | null = null) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface, messageId: string | null = null) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
     this.messageId = messageId;
   }
 
-  path(withParameter = true): string {
+  public path(withParameter = true): string {
     if (withParameter && this.messageId !== null) {
-      return `${this.parent.path()}/message-store/${this.messageId}`;
+      return `${this._parent.path()}/message-store/${this.messageId}`;
     }
-    return `${this.parent.path()}/message-store`;
+    return `${this._parent.path()}/message-store`;
   }
 
   /**
@@ -36,7 +36,7 @@ class Index {
    * App Permission: ReadMessages
    * User Permission: ReadMessages
    */
-  async list(queryParams?: ListMessagesParameters, restRequestConfig?: RestRequestConfig): Promise<GetMessageList> {
+  public async list(queryParams?: ListMessagesParameters, restRequestConfig?: RestRequestConfig): Promise<GetMessageList> {
     const r = await this.rc.get<GetMessageList>(this.path(false), queryParams, restRequestConfig);
     return r.data;
   }
@@ -55,7 +55,7 @@ class Index {
    * App Permission: EditMessages
    * User Permission: EditMessages
    */
-  async deleteAll(queryParams?: DeleteMessageByFilterParameters, restRequestConfig?: RestRequestConfig): Promise<string> {
+  public async deleteAll(queryParams?: DeleteMessageByFilterParameters, restRequestConfig?: RestRequestConfig): Promise<string> {
     const r = await this.rc.delete<string>(this.path(false), queryParams, restRequestConfig);
     return r.data;
   }
@@ -70,7 +70,7 @@ class Index {
    * App Permission: ReadMessages
    * User Permission: ReadMessages
    */
-  async get(restRequestConfig?: RestRequestConfig): Promise<GetMessageInfoResponse> {
+  public async get(restRequestConfig?: RestRequestConfig): Promise<GetMessageInfoResponse> {
     if (this.messageId === null) {
       throw new Error('messageId must be specified.');
     }
@@ -94,7 +94,7 @@ class Index {
    * App Permission: EditMessages
    * User Permission: EditMessages
    */
-  async put(updateMessageRequest: UpdateMessageRequest, restRequestConfig?: RestRequestConfig): Promise<GetMessageInfoResponse> {
+  public async put(updateMessageRequest: UpdateMessageRequest, restRequestConfig?: RestRequestConfig): Promise<GetMessageInfoResponse> {
     if (this.messageId === null) {
       throw new Error('messageId must be specified.');
     }
@@ -115,7 +115,7 @@ class Index {
    * App Permission: EditMessages
    * User Permission: EditMessages
    */
-  async delete(deleteMessageBulkRequest: string[], queryParams?: DeleteMessageParameters, restRequestConfig?: RestRequestConfig): Promise<string> {
+  public async delete(deleteMessageBulkRequest: string[], queryParams?: DeleteMessageParameters, restRequestConfig?: RestRequestConfig): Promise<string> {
     if (this.messageId === null) {
       throw new Error('messageId must be specified.');
     }
@@ -140,7 +140,7 @@ class Index {
    * App Permission: EditMessages
    * User Permission: EditMessages
    */
-  async patch(patchMessageRequest: PatchMessageRequest, restRequestConfig?: RestRequestConfig): Promise<GetMessageInfoResponse> {
+  public async patch(patchMessageRequest: PatchMessageRequest, restRequestConfig?: RestRequestConfig): Promise<GetMessageInfoResponse> {
     if (this.messageId === null) {
       throw new Error('messageId must be specified.');
     }
@@ -148,7 +148,7 @@ class Index {
     return r.data;
   }
 
-  content(attachmentId: (string | null) = null): Content {
+  public content(attachmentId: (string | null) = null): Content {
     return new Content(this, attachmentId);
   }
 }

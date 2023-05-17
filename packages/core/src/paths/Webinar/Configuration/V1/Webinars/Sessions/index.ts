@@ -4,23 +4,23 @@ import WcsSessionBaseModel from '../../../../../../definitions/WcsSessionBaseMod
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  sessionId: string | null;
+  public sessionId: string | null;
 
-  constructor(parent: ParentInterface, sessionId: string | null = null) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface, sessionId: string | null = null) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
     this.sessionId = sessionId;
   }
 
-  path(withParameter = true): string {
+  public path(withParameter = true): string {
     if (withParameter && this.sessionId !== null) {
-      return `${this.parent.path()}/sessions/${this.sessionId}`;
+      return `${this._parent.path()}/sessions/${this.sessionId}`;
     }
-    return `${this.parent.path()}/sessions`;
+    return `${this._parent.path()}/sessions`;
   }
 
   /**
@@ -30,7 +30,7 @@ class Index {
    * Rate Limit Group: Heavy
    * App Permission: EditWebinars
    */
-  async post(wcsSessionBaseModel: WcsSessionBaseModel, restRequestConfig?: RestRequestConfig): Promise<WcsSessionResource> {
+  public async post(wcsSessionBaseModel: WcsSessionBaseModel, restRequestConfig?: RestRequestConfig): Promise<WcsSessionResource> {
     const r = await this.rc.post<WcsSessionResource>(this.path(false), wcsSessionBaseModel, undefined, restRequestConfig);
     return r.data;
   }
@@ -42,7 +42,7 @@ class Index {
    * Rate Limit Group: Heavy
    * App Permission: ReadWebinars
    */
-  async get(restRequestConfig?: RestRequestConfig): Promise<WcsSessionResource> {
+  public async get(restRequestConfig?: RestRequestConfig): Promise<WcsSessionResource> {
     if (this.sessionId === null) {
       throw new Error('sessionId must be specified.');
     }
@@ -59,7 +59,7 @@ class Index {
    * Rate Limit Group: Heavy
    * App Permission: EditWebinars
    */
-  async delete(restRequestConfig?: RestRequestConfig): Promise<string> {
+  public async delete(restRequestConfig?: RestRequestConfig): Promise<string> {
     if (this.sessionId === null) {
       throw new Error('sessionId must be specified.');
     }
@@ -78,7 +78,7 @@ class Index {
    * Rate Limit Group: Heavy
    * App Permission: EditWebinars
    */
-  async patch(wcsSessionBaseModel: WcsSessionBaseModel, restRequestConfig?: RestRequestConfig): Promise<WcsSessionResource> {
+  public async patch(wcsSessionBaseModel: WcsSessionBaseModel, restRequestConfig?: RestRequestConfig): Promise<WcsSessionResource> {
     if (this.sessionId === null) {
       throw new Error('sessionId must be specified.');
     }
@@ -86,7 +86,7 @@ class Index {
     return r.data;
   }
 
-  invitees(inviteeId: (string | null) = null): Invitees {
+  public invitees(inviteeId: (string | null) = null): Invitees {
     return new Invitees(this, inviteeId);
   }
 }

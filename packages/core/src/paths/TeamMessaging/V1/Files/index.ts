@@ -5,17 +5,17 @@ import CreateGlipFileNewRequest from '../../../../definitions/CreateGlipFileNewR
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  constructor(parent: ParentInterface) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
   }
 
-  path(): string {
-    return `${this.parent.path()}/files`;
+  public path(withParameter = false): string {
+    return `${this._parent.path()}/files`;
   }
 
   /**
@@ -25,7 +25,7 @@ class Index {
    * Rate Limit Group: Heavy
    * App Permission: TeamMessaging
    */
-  async post(createGlipFileNewRequest: CreateGlipFileNewRequest, queryParams?: CreateGlipFileNewParameters, restRequestConfig?: RestRequestConfig): Promise<TMAddFileRequest> {
+  public async post(createGlipFileNewRequest: CreateGlipFileNewRequest, queryParams?: CreateGlipFileNewParameters, restRequestConfig?: RestRequestConfig): Promise<TMAddFileRequest> {
     const formData = await Utils.getFormData(createGlipFileNewRequest);
     const r = await this.rc.post<TMAddFileRequest>(this.path(), formData, queryParams, restRequestConfig);
     return r.data;

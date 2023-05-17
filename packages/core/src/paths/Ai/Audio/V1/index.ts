@@ -3,24 +3,24 @@ import Async from './Async';
 import { RingCentralInterface, ParentInterface } from '../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  constructor(parent: ParentInterface) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
   }
 
-  path(): string {
-    return `${this.parent.path()}/v1`;
+  public path(withParameter = false): string {
+    return `${this._parent.path(false)}/v1`;
   }
 
-  async(): Async {
+  public async(): Async {
     return new Async(this);
   }
 
-  enrollments(enrollmentId: (string | null) = null): Enrollments {
+  public enrollments(enrollmentId: (string | null) = null): Enrollments {
     return new Enrollments(this, enrollmentId);
   }
 }

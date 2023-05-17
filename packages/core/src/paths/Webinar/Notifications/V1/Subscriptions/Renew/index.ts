@@ -2,17 +2,17 @@ import SubscriptionInfo from '../../../../../../definitions/SubscriptionInfo';
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  constructor(parent: ParentInterface) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
   }
 
-  path(): string {
-    return `${this.parent.path()}/renew`;
+  public path(withParameter = false): string {
+    return `${this._parent.path()}/renew`;
   }
 
   /**
@@ -21,7 +21,7 @@ class Index {
    * Endpoint: /webinar/notifications/v1/subscriptions/{subscriptionId}/renew
    * Rate Limit Group: Light
    */
-  async post(restRequestConfig?: RestRequestConfig): Promise<SubscriptionInfo> {
+  public async post(restRequestConfig?: RestRequestConfig): Promise<SubscriptionInfo> {
     const r = await this.rc.post<SubscriptionInfo>(this.path(), undefined, restRequestConfig);
     return r.data;
   }

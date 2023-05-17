@@ -13,7 +13,7 @@ interface CreateFaxMessageRequest {
   faxResolution?: ('High' | 'Low');
 
   /**
-   * Recipient's phone number
+   * Recipient's phone number(s)
    * Required
    */
   to?: FaxReceiver[];

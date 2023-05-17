@@ -4,17 +4,17 @@ import AddressBookBulkUploadRequest from '../../../../definitions/AddressBookBul
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  constructor(parent: ParentInterface) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
   }
 
-  path(): string {
-    return `${this.parent.path()}/address-book-bulk-upload`;
+  public path(withParameter = false): string {
+    return `${this._parent.path()}/address-book-bulk-upload`;
   }
 
   /**
@@ -30,12 +30,12 @@ class Index {
    * App Permission: Contacts
    * User Permission: EditPersonalContacts
    */
-  async post(addressBookBulkUploadRequest: AddressBookBulkUploadRequest, restRequestConfig?: RestRequestConfig): Promise<AddressBookBulkUploadResponse> {
+  public async post(addressBookBulkUploadRequest: AddressBookBulkUploadRequest, restRequestConfig?: RestRequestConfig): Promise<AddressBookBulkUploadResponse> {
     const r = await this.rc.post<AddressBookBulkUploadResponse>(this.path(), addressBookBulkUploadRequest, undefined, restRequestConfig);
     return r.data;
   }
 
-  tasks(taskId: (string | null) = null): Tasks {
+  public tasks(taskId: (string | null) = null): Tasks {
     return new Tasks(this, taskId);
   }
 }

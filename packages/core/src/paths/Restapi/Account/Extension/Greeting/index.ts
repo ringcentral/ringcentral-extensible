@@ -5,23 +5,23 @@ import CreateCustomUserGreetingRequest from '../../../../../definitions/CreateCu
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  greetingId: string | null;
+  public greetingId: string | null;
 
-  constructor(parent: ParentInterface, greetingId: string | null = null) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface, greetingId: string | null = null) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
     this.greetingId = greetingId;
   }
 
-  path(withParameter = true): string {
+  public path(withParameter = true): string {
     if (withParameter && this.greetingId !== null) {
-      return `${this.parent.path()}/greeting/${this.greetingId}`;
+      return `${this._parent.path()}/greeting/${this.greetingId}`;
     }
-    return `${this.parent.path()}/greeting`;
+    return `${this._parent.path()}/greeting`;
   }
 
   /**
@@ -32,7 +32,7 @@ class Index {
    * App Permission: EditExtensions
    * User Permission: EditUserAnsweringRules
    */
-  async post(createCustomUserGreetingRequest: CreateCustomUserGreetingRequest, queryParams?: CreateCustomUserGreetingParameters, restRequestConfig?: RestRequestConfig): Promise<CustomUserGreetingInfo> {
+  public async post(createCustomUserGreetingRequest: CreateCustomUserGreetingRequest, queryParams?: CreateCustomUserGreetingParameters, restRequestConfig?: RestRequestConfig): Promise<CustomUserGreetingInfo> {
     const formData = await Utils.getFormData(createCustomUserGreetingRequest);
     const r = await this.rc.post<CustomUserGreetingInfo>(this.path(false), formData, queryParams, restRequestConfig);
     return r.data;
@@ -46,7 +46,7 @@ class Index {
    * App Permission: ReadAccounts
    * User Permission: ReadUserInfo
    */
-  async get(restRequestConfig?: RestRequestConfig): Promise<CustomUserGreetingInfo> {
+  public async get(restRequestConfig?: RestRequestConfig): Promise<CustomUserGreetingInfo> {
     if (this.greetingId === null) {
       throw new Error('greetingId must be specified.');
     }

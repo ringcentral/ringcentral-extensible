@@ -1,4 +1,5 @@
 import ContactInfoCreationRequest from './ContactInfoCreationRequest';
+import ExtensionCreationRequestCostCenter from './ExtensionCreationRequestCostCenter';
 import CustomFieldInfo from './CustomFieldInfo';
 import ReferenceInfo from './ReferenceInfo';
 import RegionalSettings from './RegionalSettings';
@@ -14,6 +15,11 @@ interface ExtensionCreationRequest {
    * Number of extension
    */
   extensionNumber?: string;
+
+  /**
+   * Cost center information
+   */
+  costCenter?: ExtensionCreationRequestCostCenter;
 
   /**
    */

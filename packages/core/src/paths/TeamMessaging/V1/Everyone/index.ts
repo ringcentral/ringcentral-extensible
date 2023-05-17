@@ -3,17 +3,17 @@ import EveryoneTeamInfo from '../../../../definitions/EveryoneTeamInfo';
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  constructor(parent: ParentInterface) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
   }
 
-  path(): string {
-    return `${this.parent.path()}/everyone`;
+  public path(withParameter = false): string {
+    return `${this._parent.path()}/everyone`;
   }
 
   /**
@@ -23,7 +23,7 @@ class Index {
    * Rate Limit Group: Light
    * App Permission: TeamMessaging
    */
-  async get(restRequestConfig?: RestRequestConfig): Promise<EveryoneTeamInfo> {
+  public async get(restRequestConfig?: RestRequestConfig): Promise<EveryoneTeamInfo> {
     const r = await this.rc.get<EveryoneTeamInfo>(this.path(), undefined, restRequestConfig);
     return r.data;
   }
@@ -35,7 +35,7 @@ class Index {
    * Rate Limit Group: Medium
    * App Permission: TeamMessaging
    */
-  async patch(updateEveryoneTeamRequest: UpdateEveryoneTeamRequest, restRequestConfig?: RestRequestConfig): Promise<EveryoneTeamInfo> {
+  public async patch(updateEveryoneTeamRequest: UpdateEveryoneTeamRequest, restRequestConfig?: RestRequestConfig): Promise<EveryoneTeamInfo> {
     const r = await this.rc.patch<EveryoneTeamInfo>(this.path(), updateEveryoneTeamRequest, undefined, restRequestConfig);
     return r.data;
   }

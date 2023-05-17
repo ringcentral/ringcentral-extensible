@@ -54,7 +54,7 @@ interface MessageStoreReport {
    * Type of messages to be collected.
    * Example: Fax,VoiceMail
    */
-  messageTypes?: ('EMail' | 'Fax' | 'SMS' | 'VoiceMail' | 'Pager' | 'Text')[];
+  messageTypes?: ('Fax' | 'SMS' | 'VoiceMail' | 'Pager')[];
 }
 
 export default MessageStoreReport;

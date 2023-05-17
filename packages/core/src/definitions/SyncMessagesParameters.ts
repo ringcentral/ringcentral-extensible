@@ -41,7 +41,7 @@ interface SyncMessagesParameters {
    * Type for the resulting messages. If not specified, all types
  *  of messages are returned. Multiple values are accepted
    */
-  messageType?: ('EMail' | 'Fax' | 'SMS' | 'VoiceMail' | 'Pager' | 'Text')[];
+  messageType?: ('Fax' | 'SMS' | 'VoiceMail' | 'Pager')[];
 
   /**
    * Limits the number of records to be returned (works in combination

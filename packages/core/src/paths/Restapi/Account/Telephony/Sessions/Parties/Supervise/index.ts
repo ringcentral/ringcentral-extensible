@@ -3,17 +3,17 @@ import PartySuperviseRequest from '../../../../../../../definitions/PartySupervi
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  constructor(parent: ParentInterface) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
   }
 
-  path(): string {
-    return `${this.parent.path()}/supervise`;
+  public path(withParameter = false): string {
+    return `${this._parent.path()}/supervise`;
   }
 
   /**
@@ -23,7 +23,7 @@ class Index {
    * Rate Limit Group: Light
    * App Permission: CallControl
    */
-  async post(partySuperviseRequest: PartySuperviseRequest, restRequestConfig?: RestRequestConfig): Promise<PartySuperviseResponse> {
+  public async post(partySuperviseRequest: PartySuperviseRequest, restRequestConfig?: RestRequestConfig): Promise<PartySuperviseResponse> {
     const r = await this.rc.post<PartySuperviseResponse>(this.path(), partySuperviseRequest, undefined, restRequestConfig);
     return r.data;
   }

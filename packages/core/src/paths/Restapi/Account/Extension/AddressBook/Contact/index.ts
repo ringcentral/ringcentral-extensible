@@ -8,23 +8,23 @@ import ListContactsParameters from '../../../../../../definitions/ListContactsPa
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  contactId: string | null;
+  public contactId: string | null;
 
-  constructor(parent: ParentInterface, contactId: string | null = null) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface, contactId: string | null = null) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
     this.contactId = contactId;
   }
 
-  path(withParameter = true): string {
+  public path(withParameter = true): string {
     if (withParameter && this.contactId !== null) {
-      return `${this.parent.path()}/contact/${this.contactId}`;
+      return `${this._parent.path()}/contact/${this.contactId}`;
     }
-    return `${this.parent.path()}/contact`;
+    return `${this._parent.path()}/contact`;
   }
 
   /**
@@ -36,7 +36,7 @@ class Index {
    * App Permission: ReadContacts
    * User Permission: ReadPersonalContacts
    */
-  async list(queryParams?: ListContactsParameters, restRequestConfig?: RestRequestConfig): Promise<ContactList> {
+  public async list(queryParams?: ListContactsParameters, restRequestConfig?: RestRequestConfig): Promise<ContactList> {
     const r = await this.rc.get<ContactList>(this.path(false), queryParams, restRequestConfig);
     return r.data;
   }
@@ -50,7 +50,7 @@ class Index {
    * App Permission: Contacts
    * User Permission: EditPersonalContacts
    */
-  async post(personalContactRequest: PersonalContactRequest, queryParams?: CreateContactParameters, restRequestConfig?: RestRequestConfig): Promise<PersonalContactResource> {
+  public async post(personalContactRequest: PersonalContactRequest, queryParams?: CreateContactParameters, restRequestConfig?: RestRequestConfig): Promise<PersonalContactResource> {
     const r = await this.rc.post<PersonalContactResource>(this.path(false), personalContactRequest, queryParams, restRequestConfig);
     return r.data;
   }
@@ -64,7 +64,7 @@ class Index {
    * App Permission: ReadContacts
    * User Permission: ReadPersonalContacts
    */
-  async get(restRequestConfig?: RestRequestConfig): Promise<PersonalContactResource> {
+  public async get(restRequestConfig?: RestRequestConfig): Promise<PersonalContactResource> {
     if (this.contactId === null) {
       throw new Error('contactId must be specified.');
     }
@@ -81,7 +81,7 @@ class Index {
    * App Permission: Contacts
    * User Permission: EditPersonalContacts
    */
-  async put(personalContactRequest: PersonalContactRequest, queryParams?: UpdateContactParameters, restRequestConfig?: RestRequestConfig): Promise<PersonalContactResource> {
+  public async put(personalContactRequest: PersonalContactRequest, queryParams?: UpdateContactParameters, restRequestConfig?: RestRequestConfig): Promise<PersonalContactResource> {
     if (this.contactId === null) {
       throw new Error('contactId must be specified.');
     }
@@ -98,7 +98,7 @@ class Index {
    * App Permission: Contacts
    * User Permission: EditPersonalContacts
    */
-  async delete(restRequestConfig?: RestRequestConfig): Promise<string> {
+  public async delete(restRequestConfig?: RestRequestConfig): Promise<string> {
     if (this.contactId === null) {
       throw new Error('contactId must be specified.');
     }
@@ -107,7 +107,8 @@ class Index {
   }
 
   /**
-   * Updates particular values of a personal contact attributes specified in request (partial resource update).
+   * Updates particular values of a personal contact attributes specified in request (partial resource update). Omitted attributes will remain unchanged.
+ * If any attribute is passed in request body with the null value, then this attribute value will be removed.
  *
    * HTTP Method: patch
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/address-book/contact/{contactId}
@@ -115,7 +116,7 @@ class Index {
    * App Permission: Contacts
    * User Permission: EditPersonalContacts
    */
-  async patch(personalContactRequest: PersonalContactRequest, queryParams?: PatchContactParameters, restRequestConfig?: RestRequestConfig): Promise<PersonalContactResource> {
+  public async patch(personalContactRequest: PersonalContactRequest, queryParams?: PatchContactParameters, restRequestConfig?: RestRequestConfig): Promise<PersonalContactResource> {
     if (this.contactId === null) {
       throw new Error('contactId must be specified.');
     }

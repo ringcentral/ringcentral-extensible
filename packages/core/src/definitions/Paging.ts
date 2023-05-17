@@ -1,9 +1,9 @@
 /**
- * Paging
+ * Paging information
 */
 interface Paging {
   /**
-   * Current page offset token
+   * Current offset token
    */
   currentPageToken?: string;
 

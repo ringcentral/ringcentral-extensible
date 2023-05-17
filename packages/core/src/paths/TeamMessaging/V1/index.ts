@@ -17,80 +17,80 @@ import Tasks from './Tasks';
 import { RingCentralInterface, ParentInterface } from '../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  constructor(parent: ParentInterface) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
   }
 
-  path(): string {
-    return `${this.parent.path()}/v1`;
+  public path(withParameter = false): string {
+    return `${this._parent.path(false)}/v1`;
   }
 
-  tasks(taskId: (string | null) = null): Tasks {
+  public tasks(taskId: (string | null) = null): Tasks {
     return new Tasks(this, taskId);
   }
 
-  chats(chatId: (string | null) = null): Chats {
+  public chats(chatId: (string | null) = null): Chats {
     return new Chats(this, chatId);
   }
 
-  teams(chatId: (string | null) = null): Teams {
+  public teams(chatId: (string | null) = null): Teams {
     return new Teams(this, chatId);
   }
 
-  notes(noteId: (string | null) = null): Notes {
+  public notes(noteId: (string | null) = null): Notes {
     return new Notes(this, noteId);
   }
 
-  files(): Files {
+  public files(): Files {
     return new Files(this);
   }
 
-  groups(groupId: (string | null) = null): Groups {
+  public groups(groupId: (string | null) = null): Groups {
     return new Groups(this, groupId);
   }
 
-  recent(): Recent {
+  public recent(): Recent {
     return new Recent(this);
   }
 
-  events(eventId: (string | null) = null): Events {
+  public events(eventId: (string | null) = null): Events {
     return new Events(this, eventId);
   }
 
-  persons(personId: (string | null) = null): Persons {
+  public persons(personId: (string | null) = null): Persons {
     return new Persons(this, personId);
   }
 
-  webhooks(webhookId: (string | null) = null): Webhooks {
+  public webhooks(webhookId: (string | null) = null): Webhooks {
     return new Webhooks(this, webhookId);
   }
 
-  everyone(): Everyone {
+  public everyone(): Everyone {
     return new Everyone(this);
   }
 
-  companies(companyId: (string | null) = null): Companies {
+  public companies(companyId: (string | null) = null): Companies {
     return new Companies(this, companyId);
   }
 
-  favorites(): Favorites {
+  public favorites(): Favorites {
     return new Favorites(this);
   }
 
-  dataExport(taskId: (string | null) = null): DataExport {
+  public dataExport(taskId: (string | null) = null): DataExport {
     return new DataExport(this, taskId);
   }
 
-  conversations(chatId: (string | null) = null): Conversations {
+  public conversations(chatId: (string | null) = null): Conversations {
     return new Conversations(this, chatId);
   }
 
-  adaptiveCards(cardId: (string | null) = null): AdaptiveCards {
+  public adaptiveCards(cardId: (string | null) = null): AdaptiveCards {
     return new AdaptiveCards(this, cardId);
   }
 }

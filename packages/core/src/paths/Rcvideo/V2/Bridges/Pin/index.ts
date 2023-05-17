@@ -3,24 +3,24 @@ import Web from './Web';
 import { RingCentralInterface, ParentInterface } from '../../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  constructor(parent: ParentInterface) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
   }
 
-  path(): string {
-    return `${this.parent.path()}/pin`;
+  public path(withParameter = false): string {
+    return `${this._parent.path(false)}/pin`;
   }
 
-  web(pin: (string | null) = null): Web {
+  public web(pin: (string | null) = null): Web {
     return new Web(this, pin);
   }
 
-  pstn(pin: (string | null) = null): Pstn {
+  public pstn(pin: (string | null) = null): Pstn {
     return new Pstn(this, pin);
   }
 }

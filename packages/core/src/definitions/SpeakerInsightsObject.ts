@@ -3,7 +3,7 @@ import SpeakerInsightsUnit from './SpeakerInsightsUnit';
 interface SpeakerInsightsObject {
   /**
    * Format: int32
-   * Example: 3
+   * Example: 2
    */
   speakerCount?: number;
 

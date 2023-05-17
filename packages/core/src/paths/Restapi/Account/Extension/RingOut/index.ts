@@ -3,23 +3,23 @@ import MakeRingOutRequest from '../../../../../definitions/MakeRingOutRequest';
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  ringoutId: string | null;
+  public ringoutId: string | null;
 
-  constructor(parent: ParentInterface, ringoutId: string | null = null) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface, ringoutId: string | null = null) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
     this.ringoutId = ringoutId;
   }
 
-  path(withParameter = true): string {
+  public path(withParameter = true): string {
     if (withParameter && this.ringoutId !== null) {
-      return `${this.parent.path()}/ring-out/${this.ringoutId}`;
+      return `${this._parent.path()}/ring-out/${this.ringoutId}`;
     }
-    return `${this.parent.path()}/ring-out`;
+    return `${this._parent.path()}/ring-out`;
   }
 
   /**
@@ -29,7 +29,7 @@ class Index {
    * Rate Limit Group: Heavy
    * App Permission: RingOut
    */
-  async post(makeRingOutRequest: MakeRingOutRequest, restRequestConfig?: RestRequestConfig): Promise<GetRingOutStatusResponse> {
+  public async post(makeRingOutRequest: MakeRingOutRequest, restRequestConfig?: RestRequestConfig): Promise<GetRingOutStatusResponse> {
     const r = await this.rc.post<GetRingOutStatusResponse>(this.path(false), makeRingOutRequest, undefined, restRequestConfig);
     return r.data;
   }
@@ -41,7 +41,7 @@ class Index {
    * Rate Limit Group: Light
    * App Permission: RingOut
    */
-  async get(restRequestConfig?: RestRequestConfig): Promise<GetRingOutStatusResponse> {
+  public async get(restRequestConfig?: RestRequestConfig): Promise<GetRingOutStatusResponse> {
     if (this.ringoutId === null) {
       throw new Error('ringoutId must be specified.');
     }
@@ -56,7 +56,7 @@ class Index {
    * Rate Limit Group: Heavy
    * App Permission: RingOut
    */
-  async delete(restRequestConfig?: RestRequestConfig): Promise<string> {
+  public async delete(restRequestConfig?: RestRequestConfig): Promise<string> {
     if (this.ringoutId === null) {
       throw new Error('ringoutId must be specified.');
     }

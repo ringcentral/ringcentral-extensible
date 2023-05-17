@@ -3,23 +3,23 @@ import RegSessionModel from '../../../../../definitions/RegSessionModel';
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  sessionId: string | null;
+  public sessionId: string | null;
 
-  constructor(parent: ParentInterface, sessionId: string | null = null) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface, sessionId: string | null = null) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
     this.sessionId = sessionId;
   }
 
-  path(withParameter = true): string {
+  public path(withParameter = true): string {
     if (withParameter && this.sessionId !== null) {
-      return `${this.parent.path()}/sessions/${this.sessionId}`;
+      return `${this._parent.path()}/sessions/${this.sessionId}`;
     }
-    return `${this.parent.path()}/sessions`;
+    return `${this._parent.path()}/sessions`;
   }
 
   /**
@@ -33,7 +33,7 @@ class Index {
    * Rate Limit Group: Heavy
    * App Permission: ReadWebinars
    */
-  async get(restRequestConfig?: RestRequestConfig): Promise<RegSessionModel> {
+  public async get(restRequestConfig?: RestRequestConfig): Promise<RegSessionModel> {
     if (this.sessionId === null) {
       throw new Error('sessionId must be specified.');
     }
@@ -56,7 +56,7 @@ class Index {
    * Rate Limit Group: Heavy
    * App Permission: EditWebinars
    */
-  async patch(regSessionModel: RegSessionModel, restRequestConfig?: RestRequestConfig): Promise<RegSessionModel> {
+  public async patch(regSessionModel: RegSessionModel, restRequestConfig?: RestRequestConfig): Promise<RegSessionModel> {
     if (this.sessionId === null) {
       throw new Error('sessionId must be specified.');
     }
@@ -64,7 +64,7 @@ class Index {
     return r.data;
   }
 
-  registrants(registrantId: (string | null) = null): Registrants {
+  public registrants(registrantId: (string | null) = null): Registrants {
     return new Registrants(this, registrantId);
   }
 }

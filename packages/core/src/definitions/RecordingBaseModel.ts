@@ -1,5 +1,4 @@
 import ApiError from './ApiError';
-import RecordingSharedStatusModel from './RecordingSharedStatusModel';
 
 interface RecordingBaseModel {
   /**
@@ -22,8 +21,11 @@ interface RecordingBaseModel {
   duration?: number;
 
   /**
+   * Indicates if Host or Admin has shared a recording.
+ *  Can be set to true only then recording status is 'Available'.
+   * Example: true
    */
-  shared?: RecordingSharedStatusModel;
+  shared?: boolean;
 
   /**
    * Time after which recording shared link cannot be accessed by recipients.

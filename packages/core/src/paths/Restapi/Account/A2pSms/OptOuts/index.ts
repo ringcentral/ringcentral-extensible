@@ -4,17 +4,17 @@ import ReadA2PSMSOptOutsParameters from '../../../../../definitions/ReadA2PSMSOp
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  constructor(parent: ParentInterface) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
   }
 
-  path(): string {
-    return `${this.parent.path()}/opt-outs`;
+  public path(withParameter = false): string {
+    return `${this._parent.path()}/opt-outs`;
   }
 
   /**
@@ -24,12 +24,12 @@ class Index {
    * Rate Limit Group: Light
    * App Permission: A2PSMS
    */
-  async get(queryParams?: ReadA2PSMSOptOutsParameters, restRequestConfig?: RestRequestConfig): Promise<OptOutListResponse> {
+  public async get(queryParams?: ReadA2PSMSOptOutsParameters, restRequestConfig?: RestRequestConfig): Promise<OptOutListResponse> {
     const r = await this.rc.get<OptOutListResponse>(this.path(), queryParams, restRequestConfig);
     return r.data;
   }
 
-  bulkAssign(): BulkAssign {
+  public bulkAssign(): BulkAssign {
     return new BulkAssign(this);
   }
 }

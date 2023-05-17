@@ -7,23 +7,23 @@ import IvrPrompts from '../../../../definitions/IvrPrompts';
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  promptId: string | null;
+  public promptId: string | null;
 
-  constructor(parent: ParentInterface, promptId: string | null = null) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface, promptId: string | null = null) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
     this.promptId = promptId;
   }
 
-  path(withParameter = true): string {
+  public path(withParameter = true): string {
     if (withParameter && this.promptId !== null) {
-      return `${this.parent.path()}/ivr-prompts/${this.promptId}`;
+      return `${this._parent.path()}/ivr-prompts/${this.promptId}`;
     }
-    return `${this.parent.path()}/ivr-prompts`;
+    return `${this._parent.path()}/ivr-prompts`;
   }
 
   /**
@@ -34,7 +34,7 @@ class Index {
    * App Permission: ReadAccounts
    * User Permission: ReadCompanyGreetings
    */
-  async list(restRequestConfig?: RestRequestConfig): Promise<IvrPrompts> {
+  public async list(restRequestConfig?: RestRequestConfig): Promise<IvrPrompts> {
     const r = await this.rc.get<IvrPrompts>(this.path(false), undefined, restRequestConfig);
     return r.data;
   }
@@ -47,7 +47,7 @@ class Index {
    * App Permission: EditAccounts
    * User Permission: EditCompanyGreetings
    */
-  async post(createIVRPromptRequest: CreateIVRPromptRequest, restRequestConfig?: RestRequestConfig): Promise<PromptInfo> {
+  public async post(createIVRPromptRequest: CreateIVRPromptRequest, restRequestConfig?: RestRequestConfig): Promise<PromptInfo> {
     const formData = await Utils.getFormData(createIVRPromptRequest);
     const r = await this.rc.post<PromptInfo>(this.path(false), formData, undefined, restRequestConfig);
     return r.data;
@@ -61,7 +61,7 @@ class Index {
    * App Permission: ReadAccounts
    * User Permission: ReadCompanyGreetings
    */
-  async get(restRequestConfig?: RestRequestConfig): Promise<PromptInfo> {
+  public async get(restRequestConfig?: RestRequestConfig): Promise<PromptInfo> {
     if (this.promptId === null) {
       throw new Error('promptId must be specified.');
     }
@@ -77,7 +77,7 @@ class Index {
    * App Permission: EditAccounts
    * User Permission: EditCompanyGreetings
    */
-  async put(updateIVRPromptRequest: UpdateIVRPromptRequest, restRequestConfig?: RestRequestConfig): Promise<PromptInfo> {
+  public async put(updateIVRPromptRequest: UpdateIVRPromptRequest, restRequestConfig?: RestRequestConfig): Promise<PromptInfo> {
     if (this.promptId === null) {
       throw new Error('promptId must be specified.');
     }
@@ -93,7 +93,7 @@ class Index {
    * App Permission: EditAccounts
    * User Permission: EditCompanyGreetings
    */
-  async delete(restRequestConfig?: RestRequestConfig): Promise<string> {
+  public async delete(restRequestConfig?: RestRequestConfig): Promise<string> {
     if (this.promptId === null) {
       throw new Error('promptId must be specified.');
     }
@@ -101,7 +101,7 @@ class Index {
     return r.data;
   }
 
-  content(): Content {
+  public content(): Content {
     return new Content(this);
   }
 }

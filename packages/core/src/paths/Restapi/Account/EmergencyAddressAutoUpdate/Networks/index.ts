@@ -6,23 +6,23 @@ import ListNetworksParameters from '../../../../../definitions/ListNetworksParam
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  networkId: string | null;
+  public networkId: string | null;
 
-  constructor(parent: ParentInterface, networkId: string | null = null) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface, networkId: string | null = null) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
     this.networkId = networkId;
   }
 
-  path(withParameter = true): string {
+  public path(withParameter = true): string {
     if (withParameter && this.networkId !== null) {
-      return `${this.parent.path()}/networks/${this.networkId}`;
+      return `${this._parent.path()}/networks/${this.networkId}`;
     }
-    return `${this.parent.path()}/networks`;
+    return `${this._parent.path()}/networks`;
   }
 
   /**
@@ -35,7 +35,7 @@ class Index {
    * App Permission: EditAccounts
    * User Permission: ConfigureEmergencyMaps
    */
-  async list(queryParams?: ListNetworksParameters, restRequestConfig?: RestRequestConfig): Promise<NetworksList> {
+  public async list(queryParams?: ListNetworksParameters, restRequestConfig?: RestRequestConfig): Promise<NetworksList> {
     const r = await this.rc.get<NetworksList>(this.path(false), queryParams, restRequestConfig);
     return r.data;
   }
@@ -50,7 +50,7 @@ class Index {
    * App Permission: EditAccounts
    * User Permission: ConfigureEmergencyMaps
    */
-  async post(createNetworkRequest: CreateNetworkRequest, restRequestConfig?: RestRequestConfig): Promise<NetworkInfo> {
+  public async post(createNetworkRequest: CreateNetworkRequest, restRequestConfig?: RestRequestConfig): Promise<NetworkInfo> {
     const r = await this.rc.post<NetworkInfo>(this.path(false), createNetworkRequest, undefined, restRequestConfig);
     return r.data;
   }
@@ -65,7 +65,7 @@ class Index {
    * App Permission: EditAccounts
    * User Permission: ConfigureEmergencyMaps
    */
-  async get(restRequestConfig?: RestRequestConfig): Promise<NetworkInfo> {
+  public async get(restRequestConfig?: RestRequestConfig): Promise<NetworkInfo> {
     if (this.networkId === null) {
       throw new Error('networkId must be specified.');
     }
@@ -83,7 +83,7 @@ class Index {
    * App Permission: EditAccounts
    * User Permission: ConfigureEmergencyMaps
    */
-  async put(updateNetworkRequest: UpdateNetworkRequest, restRequestConfig?: RestRequestConfig): Promise<NetworkInfo> {
+  public async put(updateNetworkRequest: UpdateNetworkRequest, restRequestConfig?: RestRequestConfig): Promise<NetworkInfo> {
     if (this.networkId === null) {
       throw new Error('networkId must be specified.');
     }
@@ -101,7 +101,7 @@ class Index {
    * App Permission: EditAccounts
    * User Permission: ConfigureEmergencyMaps
    */
-  async delete(restRequestConfig?: RestRequestConfig): Promise<string> {
+  public async delete(restRequestConfig?: RestRequestConfig): Promise<string> {
     if (this.networkId === null) {
       throw new Error('networkId must be specified.');
     }

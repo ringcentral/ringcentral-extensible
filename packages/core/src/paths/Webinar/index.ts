@@ -5,29 +5,29 @@ import History from './History';
 import { RingCentralInterface } from '../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  constructor(rc: RingCentralInterface) {
+  public constructor(rc: RingCentralInterface) {
     this.rc = rc;
   }
 
-  path(): string {
+  public path(withParameter = false): string {
     return '/webinar';
   }
 
-  history(): History {
+  public history(): History {
     return new History(this);
   }
 
-  registration(): Registration {
+  public registration(): Registration {
     return new Registration(this);
   }
 
-  notifications(): Notifications {
+  public notifications(): Notifications {
     return new Notifications(this);
   }
 
-  configuration(): Configuration {
+  public configuration(): Configuration {
     return new Configuration(this);
   }
 }

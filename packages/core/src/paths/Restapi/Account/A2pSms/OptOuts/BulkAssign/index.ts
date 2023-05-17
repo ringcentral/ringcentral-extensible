@@ -3,17 +3,17 @@ import OptOutBulkAssignRequest from '../../../../../../definitions/OptOutBulkAss
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  constructor(parent: ParentInterface) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
   }
 
-  path(): string {
-    return `${this.parent.path()}/bulk-assign`;
+  public path(withParameter = false): string {
+    return `${this._parent.path()}/bulk-assign`;
   }
 
   /**
@@ -24,7 +24,7 @@ class Index {
    * Rate Limit Group: Light
    * App Permission: A2PSMS
    */
-  async post(optOutBulkAssignRequest: OptOutBulkAssignRequest, restRequestConfig?: RestRequestConfig): Promise<OptOutBulkAssignResponse> {
+  public async post(optOutBulkAssignRequest: OptOutBulkAssignRequest, restRequestConfig?: RestRequestConfig): Promise<OptOutBulkAssignResponse> {
     const r = await this.rc.post<OptOutBulkAssignResponse>(this.path(), optOutBulkAssignRequest, undefined, restRequestConfig);
     return r.data;
   }

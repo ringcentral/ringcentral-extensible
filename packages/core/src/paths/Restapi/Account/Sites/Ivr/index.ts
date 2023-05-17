@@ -3,17 +3,17 @@ import SiteIVRSettings from '../../../../../definitions/SiteIVRSettings';
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  constructor(parent: ParentInterface) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
   }
 
-  path(): string {
-    return `${this.parent.path()}/ivr`;
+  public path(withParameter = false): string {
+    return `${this._parent.path()}/ivr`;
   }
 
   /**
@@ -25,7 +25,7 @@ class Index {
    * App Permission: ReadAccounts
    * User Permission: ReadExtensions
    */
-  async get(restRequestConfig?: RestRequestConfig): Promise<SiteIVRSettings> {
+  public async get(restRequestConfig?: RestRequestConfig): Promise<SiteIVRSettings> {
     const r = await this.rc.get<SiteIVRSettings>(this.path(), undefined, restRequestConfig);
     return r.data;
   }
@@ -39,7 +39,7 @@ class Index {
    * App Permission: EditAccounts
    * User Permission: Sites
    */
-  async put(siteIVRSettingsUpdate: SiteIVRSettingsUpdate, restRequestConfig?: RestRequestConfig): Promise<SiteIVRSettings> {
+  public async put(siteIVRSettingsUpdate: SiteIVRSettingsUpdate, restRequestConfig?: RestRequestConfig): Promise<SiteIVRSettings> {
     const r = await this.rc.put<SiteIVRSettings>(this.path(), siteIVRSettingsUpdate, undefined, restRequestConfig);
     return r.data;
   }

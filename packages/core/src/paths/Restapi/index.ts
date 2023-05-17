@@ -4,21 +4,22 @@ import ClientInfo from './ClientInfo';
 import Dictionary from './Dictionary';
 import Account from './Account';
 import Oauth from './Oauth';
+import V2 from './V2';
 import ApiVersionInfo from '../../definitions/ApiVersionInfo';
 import ApiVersionsList from '../../definitions/ApiVersionsList';
 import { RingCentralInterface, RestRequestConfig } from '../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  apiVersion: string | null;
+  public apiVersion: string | null;
 
-  constructor(rc: RingCentralInterface, apiVersion: string | null = 'v1.0') {
+  public constructor(rc: RingCentralInterface, apiVersion: string | null = 'v1.0') {
     this.rc = rc;
     this.apiVersion = apiVersion;
   }
 
-  path(withParameter = true): string {
+  public path(withParameter = true): string {
     if (withParameter && this.apiVersion !== null) {
       return `/restapi/${this.apiVersion}`;
     }
@@ -31,7 +32,7 @@ class Index {
    * Endpoint: /restapi
    * Rate Limit Group: NoThrottling
    */
-  async list(restRequestConfig?: RestRequestConfig): Promise<ApiVersionsList> {
+  public async list(restRequestConfig?: RestRequestConfig): Promise<ApiVersionsList> {
     const r = await this.rc.get<ApiVersionsList>(this.path(false), undefined, restRequestConfig);
     return r.data;
   }
@@ -42,7 +43,7 @@ class Index {
    * Endpoint: /restapi/{apiVersion}
    * Rate Limit Group: NoThrottling
    */
-  async get(restRequestConfig?: RestRequestConfig): Promise<ApiVersionInfo> {
+  public async get(restRequestConfig?: RestRequestConfig): Promise<ApiVersionInfo> {
     if (this.apiVersion === null) {
       throw new Error('apiVersion must be specified.');
     }
@@ -50,27 +51,31 @@ class Index {
     return r.data;
   }
 
-  oauth(): Oauth {
+  public v2(): V2 {
+    return new V2(this);
+  }
+
+  public oauth(): Oauth {
     return new Oauth(this);
   }
 
-  account(accountId: (string | null) = '~'): Account {
+  public account(accountId: (string | null) = '~'): Account {
     return new Account(this, accountId);
   }
 
-  dictionary(): Dictionary {
+  public dictionary(): Dictionary {
     return new Dictionary(this);
   }
 
-  clientInfo(): ClientInfo {
+  public clientInfo(): ClientInfo {
     return new ClientInfo(this);
   }
 
-  subscription(subscriptionId: (string | null) = null): Subscription {
+  public subscription(subscriptionId: (string | null) = null): Subscription {
     return new Subscription(this, subscriptionId);
   }
 
-  numberParser(): NumberParser {
+  public numberParser(): NumberParser {
     return new NumberParser(this);
   }
 }

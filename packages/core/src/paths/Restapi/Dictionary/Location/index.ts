@@ -3,17 +3,17 @@ import ListLocationsParameters from '../../../../definitions/ListLocationsParame
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  constructor(parent: ParentInterface) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
   }
 
-  path(): string {
-    return `${this.parent.path()}/location`;
+  public path(withParameter = false): string {
+    return `${this._parent.path()}/location`;
   }
 
   /**
@@ -23,7 +23,7 @@ class Index {
    * Endpoint: /restapi/{apiVersion}/dictionary/location
    * Rate Limit Group: Light
    */
-  async get(queryParams?: ListLocationsParameters, restRequestConfig?: RestRequestConfig): Promise<GetLocationListResponse> {
+  public async get(queryParams?: ListLocationsParameters, restRequestConfig?: RestRequestConfig): Promise<GetLocationListResponse> {
     const r = await this.rc.get<GetLocationListResponse>(this.path(), queryParams, restRequestConfig);
     return r.data;
   }

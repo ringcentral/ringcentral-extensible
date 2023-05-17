@@ -5,23 +5,23 @@ import ListDirectoryEntriesParameters from '../../../../../definitions/ListDirec
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  entryId: string | null;
+  public entryId: string | null;
 
-  constructor(parent: ParentInterface, entryId: string | null = null) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface, entryId: string | null = null) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
     this.entryId = entryId;
   }
 
-  path(withParameter = true): string {
+  public path(withParameter = true): string {
     if (withParameter && this.entryId !== null) {
-      return `${this.parent.path()}/entries/${this.entryId}`;
+      return `${this._parent.path()}/entries/${this.entryId}`;
     }
-    return `${this.parent.path()}/entries`;
+    return `${this._parent.path()}/entries`;
   }
 
   /**
@@ -31,7 +31,7 @@ class Index {
    * Rate Limit Group: Medium
    * App Permission: ReadAccounts
    */
-  async list(queryParams?: ListDirectoryEntriesParameters, restRequestConfig?: RestRequestConfig): Promise<DirectoryResource> {
+  public async list(queryParams?: ListDirectoryEntriesParameters, restRequestConfig?: RestRequestConfig): Promise<DirectoryResource> {
     const r = await this.rc.get<DirectoryResource>(this.path(false), queryParams, restRequestConfig);
     return r.data;
   }
@@ -43,7 +43,7 @@ class Index {
    * Rate Limit Group: Medium
    * App Permission: ReadAccounts
    */
-  async get(restRequestConfig?: RestRequestConfig): Promise<ContactResource> {
+  public async get(restRequestConfig?: RestRequestConfig): Promise<ContactResource> {
     if (this.entryId === null) {
       throw new Error('entryId must be specified.');
     }
@@ -51,7 +51,7 @@ class Index {
     return r.data;
   }
 
-  search(): Search {
+  public search(): Search {
     return new Search(this);
   }
 }

@@ -3,17 +3,17 @@ import SyncUserCallLogParameters from '../../../../../definitions/SyncUserCallLo
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  constructor(parent: ParentInterface) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
   }
 
-  path(): string {
-    return `${this.parent.path()}/call-log-sync`;
+  public path(withParameter = false): string {
+    return `${this._parent.path()}/call-log-sync`;
   }
 
   /**
@@ -24,7 +24,7 @@ class Index {
    * App Permission: ReadCallLog
    * User Permission: ReadCallLog
    */
-  async get(queryParams?: SyncUserCallLogParameters, restRequestConfig?: RestRequestConfig): Promise<CallLogSyncResponse> {
+  public async get(queryParams?: SyncUserCallLogParameters, restRequestConfig?: RestRequestConfig): Promise<CallLogSyncResponse> {
     const r = await this.rc.get<CallLogSyncResponse>(this.path(), queryParams, restRequestConfig);
     return r.data;
   }

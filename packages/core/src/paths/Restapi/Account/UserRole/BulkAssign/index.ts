@@ -2,17 +2,17 @@ import BulkRoleAssignResource from '../../../../../definitions/BulkRoleAssignRes
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  constructor(parent: ParentInterface) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
   }
 
-  path(): string {
-    return `${this.parent.path()}/bulk-assign`;
+  public path(withParameter = false): string {
+    return `${this._parent.path()}/bulk-assign`;
   }
 
   /**
@@ -23,7 +23,7 @@ class Index {
    * App Permission: RoleManagement
    * User Permission: EditUserRoles
    */
-  async post(bulkRoleAssignResource: BulkRoleAssignResource, restRequestConfig?: RestRequestConfig): Promise<string> {
+  public async post(bulkRoleAssignResource: BulkRoleAssignResource, restRequestConfig?: RestRequestConfig): Promise<string> {
     const r = await this.rc.post<string>(this.path(), bulkRoleAssignResource, undefined, restRequestConfig);
     return r.data;
   }

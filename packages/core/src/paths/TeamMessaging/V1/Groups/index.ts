@@ -3,30 +3,30 @@ import Events from './Events';
 import { RingCentralInterface, ParentInterface } from '../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  groupId: string | null;
+  public groupId: string | null;
 
-  constructor(parent: ParentInterface, groupId: string | null = null) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface, groupId: string | null = null) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
     this.groupId = groupId;
   }
 
-  path(withParameter = true): string {
+  public path(withParameter = true): string {
     if (withParameter && this.groupId !== null) {
-      return `${this.parent.path()}/groups/${this.groupId}`;
+      return `${this._parent.path()}/groups/${this.groupId}`;
     }
-    return `${this.parent.path()}/groups`;
+    return `${this._parent.path()}/groups`;
   }
 
-  events(): Events {
+  public events(): Events {
     return new Events(this);
   }
 
-  webhooks(): Webhooks {
+  public webhooks(): Webhooks {
     return new Webhooks(this);
   }
 }

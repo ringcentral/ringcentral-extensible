@@ -3,17 +3,17 @@ import CreateInternalTextMessageRequest from '../../../../../definitions/CreateI
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  constructor(parent: ParentInterface) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
   }
 
-  path(): string {
-    return `${this.parent.path()}/company-pager`;
+  public path(withParameter = false): string {
+    return `${this._parent.path()}/company-pager`;
   }
 
   /**
@@ -24,7 +24,7 @@ class Index {
    * App Permission: InternalMessages
    * User Permission: InternalSMS
    */
-  async post(createInternalTextMessageRequest: CreateInternalTextMessageRequest, restRequestConfig?: RestRequestConfig): Promise<GetInternalTextMessageInfoResponse> {
+  public async post(createInternalTextMessageRequest: CreateInternalTextMessageRequest, restRequestConfig?: RestRequestConfig): Promise<GetInternalTextMessageInfoResponse> {
     const r = await this.rc.post<GetInternalTextMessageInfoResponse>(this.path(), createInternalTextMessageRequest, undefined, restRequestConfig);
     return r.data;
   }

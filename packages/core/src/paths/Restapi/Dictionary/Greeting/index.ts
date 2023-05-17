@@ -4,23 +4,23 @@ import ListStandardGreetingsParameters from '../../../../definitions/ListStandar
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  greetingId: string | null;
+  public greetingId: string | null;
 
-  constructor(parent: ParentInterface, greetingId: string | null = null) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface, greetingId: string | null = null) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
     this.greetingId = greetingId;
   }
 
-  path(withParameter = true): string {
+  public path(withParameter = true): string {
     if (withParameter && this.greetingId !== null) {
-      return `${this.parent.path()}/greeting/${this.greetingId}`;
+      return `${this._parent.path()}/greeting/${this.greetingId}`;
     }
-    return `${this.parent.path()}/greeting`;
+    return `${this._parent.path()}/greeting`;
   }
 
   /**
@@ -32,7 +32,7 @@ class Index {
    * Endpoint: /restapi/{apiVersion}/dictionary/greeting
    * Rate Limit Group: Medium
    */
-  async list(queryParams?: ListStandardGreetingsParameters, restRequestConfig?: RestRequestConfig): Promise<DictionaryGreetingList> {
+  public async list(queryParams?: ListStandardGreetingsParameters, restRequestConfig?: RestRequestConfig): Promise<DictionaryGreetingList> {
     const r = await this.rc.get<DictionaryGreetingList>(this.path(false), queryParams, restRequestConfig);
     return r.data;
   }
@@ -43,7 +43,7 @@ class Index {
    * Endpoint: /restapi/{apiVersion}/dictionary/greeting/{greetingId}
    * Rate Limit Group: Medium
    */
-  async get(restRequestConfig?: RestRequestConfig): Promise<DictionaryGreetingInfo> {
+  public async get(restRequestConfig?: RestRequestConfig): Promise<DictionaryGreetingInfo> {
     if (this.greetingId === null) {
       throw new Error('greetingId must be specified.');
     }

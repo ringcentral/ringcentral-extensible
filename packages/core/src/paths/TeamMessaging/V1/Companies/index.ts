@@ -2,23 +2,23 @@ import TMCompanyInfo from '../../../../definitions/TMCompanyInfo';
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  companyId: string | null;
+  public companyId: string | null;
 
-  constructor(parent: ParentInterface, companyId: string | null = null) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface, companyId: string | null = null) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
     this.companyId = companyId;
   }
 
-  path(withParameter = true): string {
+  public path(withParameter = true): string {
     if (withParameter && this.companyId !== null) {
-      return `${this.parent.path()}/companies/${this.companyId}`;
+      return `${this._parent.path()}/companies/${this.companyId}`;
     }
-    return `${this.parent.path()}/companies`;
+    return `${this._parent.path()}/companies`;
   }
 
   /**
@@ -28,7 +28,7 @@ class Index {
    * Rate Limit Group: Light
    * App Permission: TeamMessaging
    */
-  async get(restRequestConfig?: RestRequestConfig): Promise<TMCompanyInfo> {
+  public async get(restRequestConfig?: RestRequestConfig): Promise<TMCompanyInfo> {
     if (this.companyId === null) {
       throw new Error('companyId must be specified.');
     }

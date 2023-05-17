@@ -2,23 +2,23 @@ import MessageStoreReportArchive from '../../../../../definitions/MessageStoreRe
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  archiveId: string | null;
+  public archiveId: string | null;
 
-  constructor(parent: ParentInterface, archiveId: string | null = null) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface, archiveId: string | null = null) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
     this.archiveId = archiveId;
   }
 
-  path(withParameter = true): string {
+  public path(withParameter = true): string {
     if (withParameter && this.archiveId !== null) {
-      return `${this.parent.path()}/archive/${this.archiveId}`;
+      return `${this._parent.path()}/archive/${this.archiveId}`;
     }
-    return `${this.parent.path()}/archive`;
+    return `${this._parent.path()}/archive`;
   }
 
   /**
@@ -29,7 +29,7 @@ class Index {
    * App Permission: ReadMessages
    * User Permission: Users
    */
-  async list(restRequestConfig?: RestRequestConfig): Promise<MessageStoreReportArchive> {
+  public async list(restRequestConfig?: RestRequestConfig): Promise<MessageStoreReportArchive> {
     const r = await this.rc.get<MessageStoreReportArchive>(this.path(false), undefined, restRequestConfig);
     return r.data;
   }
@@ -42,7 +42,7 @@ class Index {
    * App Permission: ReadMessages
    * User Permission: Users
    */
-  async get(restRequestConfig?: RestRequestConfig): Promise<Buffer> {
+  public async get(restRequestConfig?: RestRequestConfig): Promise<Buffer> {
     if (this.archiveId === null) {
       throw new Error('archiveId must be specified.');
     }

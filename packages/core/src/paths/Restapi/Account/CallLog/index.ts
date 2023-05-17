@@ -5,23 +5,23 @@ import ReadCompanyCallLogParameters from '../../../../definitions/ReadCompanyCal
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  callRecordId: string | null;
+  public callRecordId: string | null;
 
-  constructor(parent: ParentInterface, callRecordId: string | null = null) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface, callRecordId: string | null = null) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
     this.callRecordId = callRecordId;
   }
 
-  path(withParameter = true): string {
+  public path(withParameter = true): string {
     if (withParameter && this.callRecordId !== null) {
-      return `${this.parent.path()}/call-log/${this.callRecordId}`;
+      return `${this._parent.path()}/call-log/${this.callRecordId}`;
     }
-    return `${this.parent.path()}/call-log`;
+    return `${this._parent.path()}/call-log`;
   }
 
   /**
@@ -32,7 +32,7 @@ class Index {
    * App Permission: ReadCallLog
    * User Permission: FullCompanyCallLog
    */
-  async list(queryParams?: ReadCompanyCallLogParameters, restRequestConfig?: RestRequestConfig): Promise<CallLogResponse> {
+  public async list(queryParams?: ReadCompanyCallLogParameters, restRequestConfig?: RestRequestConfig): Promise<CallLogResponse> {
     const r = await this.rc.get<CallLogResponse>(this.path(false), queryParams, restRequestConfig);
     return r.data;
   }
@@ -45,7 +45,7 @@ class Index {
    * App Permission: ReadCallLog
    * User Permission: FullCompanyCallLog
    */
-  async get(queryParams?: ReadCompanyCallRecordParameters, restRequestConfig?: RestRequestConfig): Promise<CallLogRecord> {
+  public async get(queryParams?: ReadCompanyCallRecordParameters, restRequestConfig?: RestRequestConfig): Promise<CallLogRecord> {
     if (this.callRecordId === null) {
       throw new Error('callRecordId must be specified.');
     }

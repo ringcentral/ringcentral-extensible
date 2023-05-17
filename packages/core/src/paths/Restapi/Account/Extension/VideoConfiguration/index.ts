@@ -2,17 +2,17 @@ import UserVideoConfiguration from '../../../../../definitions/UserVideoConfigur
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  constructor(parent: ParentInterface) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
   }
 
-  path(): string {
-    return `${this.parent.path()}/video-configuration`;
+  public path(withParameter = false): string {
+    return `${this._parent.path()}/video-configuration`;
   }
 
   /**
@@ -21,24 +21,11 @@ class Index {
    * HTTP Method: get
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/video-configuration
    * Rate Limit Group: Light
-   * App Permission: VideoInternal
+   * App Permission: ReadAccounts
    * User Permission: Meetings
    */
-  async get(restRequestConfig?: RestRequestConfig): Promise<UserVideoConfiguration> {
+  public async get(restRequestConfig?: RestRequestConfig): Promise<UserVideoConfiguration> {
     const r = await this.rc.get<UserVideoConfiguration>(this.path(), undefined, restRequestConfig);
-    return r.data;
-  }
-
-  /**
-   * Allows to update user video configuration settings, for example video provider.
- *
-   * HTTP Method: put
-   * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/video-configuration
-   * Rate Limit Group: Light
-   * App Permission: VideoInternal
-   */
-  async put(userVideoConfiguration: UserVideoConfiguration, restRequestConfig?: RestRequestConfig): Promise<UserVideoConfiguration> {
-    const r = await this.rc.put<UserVideoConfiguration>(this.path(), userVideoConfiguration, undefined, restRequestConfig);
     return r.data;
   }
 }

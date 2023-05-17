@@ -4,17 +4,17 @@ import CreateBridgeRequest from '../../../../../../definitions/CreateBridgeReque
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  constructor(parent: ParentInterface) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
   }
 
-  path(): string {
-    return `${this.parent.path()}/bridges`;
+  public path(withParameter = false): string {
+    return `${this._parent.path()}/bridges`;
   }
 
   /**
@@ -27,12 +27,12 @@ class Index {
    * Rate Limit Group: Heavy
    * App Permission: Video
    */
-  async post(createBridgeRequest: CreateBridgeRequest, restRequestConfig?: RestRequestConfig): Promise<BridgeResponse> {
+  public async post(createBridgeRequest: CreateBridgeRequest, restRequestConfig?: RestRequestConfig): Promise<BridgeResponse> {
     const r = await this.rc.post<BridgeResponse>(this.path(), createBridgeRequest, undefined, restRequestConfig);
     return r.data;
   }
 
-  default(): Default {
+  public default(): Default {
     return new Default(this);
   }
 }

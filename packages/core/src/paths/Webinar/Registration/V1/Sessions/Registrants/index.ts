@@ -7,23 +7,23 @@ import RcwRegListRegistrantsParameters from '../../../../../../definitions/RcwRe
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  registrantId: string | null;
+  public registrantId: string | null;
 
-  constructor(parent: ParentInterface, registrantId: string | null = null) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface, registrantId: string | null = null) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
     this.registrantId = registrantId;
   }
 
-  path(withParameter = true): string {
+  public path(withParameter = true): string {
     if (withParameter && this.registrantId !== null) {
-      return `${this.parent.path()}/registrants/${this.registrantId}`;
+      return `${this._parent.path()}/registrants/${this.registrantId}`;
     }
-    return `${this.parent.path()}/registrants`;
+    return `${this._parent.path()}/registrants`;
   }
 
   /**
@@ -37,7 +37,7 @@ class Index {
    * Rate Limit Group: Heavy
    * App Permission: ReadWebinars
    */
-  async list(queryParams?: RcwRegListRegistrantsParameters, restRequestConfig?: RestRequestConfig): Promise<RegistrantListResource> {
+  public async list(queryParams?: RcwRegListRegistrantsParameters, restRequestConfig?: RestRequestConfig): Promise<RegistrantListResource> {
     const r = await this.rc.get<RegistrantListResource>(this.path(false), queryParams, restRequestConfig);
     return r.data;
   }
@@ -55,7 +55,7 @@ class Index {
    * Rate Limit Group: Heavy
    * App Permission: EditWebinars
    */
-  async post(registrantBaseModel: RegistrantBaseModel, restRequestConfig?: RestRequestConfig): Promise<RegistrantModelResponsePost> {
+  public async post(registrantBaseModel: RegistrantBaseModel, restRequestConfig?: RestRequestConfig): Promise<RegistrantModelResponsePost> {
     const r = await this.rc.post<RegistrantModelResponsePost>(this.path(false), registrantBaseModel, undefined, restRequestConfig);
     return r.data;
   }
@@ -71,7 +71,7 @@ class Index {
    * Rate Limit Group: Heavy
    * App Permission: ReadWebinars
    */
-  async get(queryParams?: RcwRegGetRegistrantParameters, restRequestConfig?: RestRequestConfig): Promise<RegistrantModel> {
+  public async get(queryParams?: RcwRegGetRegistrantParameters, restRequestConfig?: RestRequestConfig): Promise<RegistrantModel> {
     if (this.registrantId === null) {
       throw new Error('registrantId must be specified.');
     }
@@ -92,7 +92,7 @@ class Index {
    * Rate Limit Group: Heavy
    * App Permission: EditWebinars
    */
-  async delete(restRequestConfig?: RestRequestConfig): Promise<string> {
+  public async delete(restRequestConfig?: RestRequestConfig): Promise<string> {
     if (this.registrantId === null) {
       throw new Error('registrantId must be specified.');
     }

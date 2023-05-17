@@ -3,24 +3,24 @@ import Account from './Account';
 import { RingCentralInterface, ParentInterface } from '../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  constructor(parent: ParentInterface) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
   }
 
-  path(): string {
-    return `${this.parent.path()}/v2`;
+  public path(withParameter = false): string {
+    return `${this._parent.path(false)}/v2`;
   }
 
-  account(accountId: (string | null) = null): Account {
+  public account(accountId: (string | null) = null): Account {
     return new Account(this, accountId);
   }
 
-  bridges(bridgeId: (string | null) = null): Bridges {
+  public bridges(bridgeId: (string | null) = null): Bridges {
     return new Bridges(this, bridgeId);
   }
 }

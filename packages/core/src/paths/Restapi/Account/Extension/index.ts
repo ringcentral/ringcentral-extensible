@@ -43,23 +43,23 @@ import ListExtensionsParameters from '../../../../definitions/ListExtensionsPara
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  extensionId: string | null;
+  public extensionId: string | null;
 
-  constructor(parent: ParentInterface, extensionId: string | null = '~') {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface, extensionId: string | null = '~') {
+    this._parent = _parent;
+    this.rc = _parent.rc;
     this.extensionId = extensionId;
   }
 
-  path(withParameter = true): string {
+  public path(withParameter = true): string {
     if (withParameter && this.extensionId !== null) {
-      return `${this.parent.path()}/extension/${this.extensionId}`;
+      return `${this._parent.path()}/extension/${this.extensionId}`;
     }
-    return `${this.parent.path()}/extension`;
+    return `${this._parent.path()}/extension`;
   }
 
   /**
@@ -72,7 +72,7 @@ class Index {
    * App Permission: ReadAccounts
    * User Permission: ReadExtensions
    */
-  async list(queryParams?: ListExtensionsParameters, restRequestConfig?: RestRequestConfig): Promise<GetExtensionListResponse> {
+  public async list(queryParams?: ListExtensionsParameters, restRequestConfig?: RestRequestConfig): Promise<GetExtensionListResponse> {
     const r = await this.rc.get<GetExtensionListResponse>(this.path(false), queryParams, restRequestConfig);
     return r.data;
   }
@@ -86,7 +86,7 @@ class Index {
    * App Permission: EditAccounts
    * User Permission: AddRemoveUsers
    */
-  async post(extensionCreationRequest: ExtensionCreationRequest, restRequestConfig?: RestRequestConfig): Promise<ExtensionCreationResponse> {
+  public async post(extensionCreationRequest: ExtensionCreationRequest, restRequestConfig?: RestRequestConfig): Promise<ExtensionCreationResponse> {
     const r = await this.rc.post<ExtensionCreationResponse>(this.path(false), extensionCreationRequest, undefined, restRequestConfig);
     return r.data;
   }
@@ -100,7 +100,7 @@ class Index {
    * App Permission: ReadAccounts
    * User Permission: ReadExtensions
    */
-  async get(restRequestConfig?: RestRequestConfig): Promise<GetExtensionInfoResponse> {
+  public async get(restRequestConfig?: RestRequestConfig): Promise<GetExtensionInfoResponse> {
     if (this.extensionId === null) {
       throw new Error('extensionId must be specified.');
     }
@@ -117,7 +117,7 @@ class Index {
    * App Permission: EditExtensions
    * User Permission: EditUserInfo OR EditUserCredentials
    */
-  async put(extensionUpdateRequest: ExtensionUpdateRequest, restRequestConfig?: RestRequestConfig): Promise<GetExtensionInfoResponse> {
+  public async put(extensionUpdateRequest: ExtensionUpdateRequest, restRequestConfig?: RestRequestConfig): Promise<GetExtensionInfoResponse> {
     if (this.extensionId === null) {
       throw new Error('extensionId must be specified.');
     }
@@ -125,147 +125,147 @@ class Index {
     return r.data;
   }
 
-  fax(): Fax {
+  public fax(): Fax {
     return new Fax(this);
   }
 
-  sms(): Sms {
+  public sms(): Sms {
     return new Sms(this);
   }
 
-  mms(): Mms {
+  public mms(): Mms {
     return new Mms(this);
   }
 
-  grant(): Grant {
+  public grant(): Grant {
     return new Grant(this);
   }
 
-  device(): Device {
+  public device(): Device {
     return new Device(this);
   }
 
-  callLog(callRecordId: (string | null) = null): CallLog {
+  public callLog(callRecordId: (string | null) = null): CallLog {
     return new CallLog(this, callRecordId);
   }
 
-  greeting(greetingId: (string | null) = null): Greeting {
+  public greeting(greetingId: (string | null) = null): Greeting {
     return new Greeting(this, greetingId);
   }
 
-  ringOut(ringoutId: (string | null) = null): RingOut {
+  public ringOut(ringoutId: (string | null) = null): RingOut {
     return new RingOut(this, ringoutId);
   }
 
-  favorite(): Favorite {
+  public favorite(): Favorite {
     return new Favorite(this);
   }
 
-  presence(): Presence {
+  public presence(): Presence {
     return new Presence(this);
   }
 
-  features(): Features {
+  public features(): Features {
     return new Features(this);
   }
 
-  callerId(): CallerId {
+  public callerId(): CallerId {
     return new CallerId(this);
   }
 
-  callQueues(): CallQueues {
+  public callQueues(): CallQueues {
     return new CallQueues(this);
   }
 
-  addressBook(): AddressBook {
+  public addressBook(): AddressBook {
     return new AddressBook(this);
   }
 
-  conferencing(): Conferencing {
+  public conferencing(): Conferencing {
     return new Conferencing(this);
   }
 
-  messageSync(): MessageSync {
+  public messageSync(): MessageSync {
     return new MessageSync(this);
   }
 
-  activeCalls(): ActiveCalls {
+  public activeCalls(): ActiveCalls {
     return new ActiveCalls(this);
   }
 
-  phoneNumber(): PhoneNumber {
+  public phoneNumber(): PhoneNumber {
     return new PhoneNumber(this);
   }
 
-  profileImage(scaleSize: (string | null) = null): ProfileImage {
+  public profileImage(scaleSize: (string | null) = null): ProfileImage {
     return new ProfileImage(this, scaleSize);
   }
 
-  messageStore(messageId: (string | null) = null): MessageStore {
+  public messageStore(messageId: (string | null) = null): MessageStore {
     return new MessageStore(this, messageId);
   }
 
-  callLogSync(): CallLogSync {
+  public callLogSync(): CallLogSync {
     return new CallLogSync(this);
   }
 
-  companyPager(): CompanyPager {
+  public companyPager(): CompanyPager {
     return new CompanyPager(this);
   }
 
-  authzProfile(): AuthzProfile {
+  public authzProfile(): AuthzProfile {
     return new AuthzProfile(this);
   }
 
-  assignedRole(): AssignedRole {
+  public assignedRole(): AssignedRole {
     return new AssignedRole(this);
   }
 
-  answeringRule(ruleId: (string | null) = null): AnsweringRule {
+  public answeringRule(ruleId: (string | null) = null): AnsweringRule {
     return new AnsweringRule(this, ruleId);
   }
 
-  businessHours(): BusinessHours {
+  public businessHours(): BusinessHours {
     return new BusinessHours(this);
   }
 
-  callerBlocking(): CallerBlocking {
+  public callerBlocking(): CallerBlocking {
     return new CallerBlocking(this);
   }
 
-  unifiedPresence(): UnifiedPresence {
+  public unifiedPresence(): UnifiedPresence {
     return new UnifiedPresence(this);
   }
 
-  forwardingNumber(forwardingNumberId: (string | null) = null): ForwardingNumber {
+  public forwardingNumber(forwardingNumberId: (string | null) = null): ForwardingNumber {
     return new ForwardingNumber(this, forwardingNumberId);
   }
 
-  addressBookSync(): AddressBookSync {
+  public addressBookSync(): AddressBookSync {
     return new AddressBookSync(this);
   }
 
-  overflowSettings(): OverflowSettings {
+  public overflowSettings(): OverflowSettings {
     return new OverflowSettings(this);
   }
 
-  administeredSites(): AdministeredSites {
+  public administeredSites(): AdministeredSites {
     return new AdministeredSites(this);
   }
 
-  emergencyLocations(locationId: (string | null) = null): EmergencyLocations {
+  public emergencyLocations(locationId: (string | null) = null): EmergencyLocations {
     return new EmergencyLocations(this, locationId);
   }
 
-  videoConfiguration(): VideoConfiguration {
+  public videoConfiguration(): VideoConfiguration {
     return new VideoConfiguration(this);
   }
 
-  callQueuePresence(): CallQueuePresence {
+  public callQueuePresence(): CallQueuePresence {
     return new CallQueuePresence(this);
   }
 
-  notificationSettings(): NotificationSettings {
+  public notificationSettings(): NotificationSettings {
     return new NotificationSettings(this);
   }
 }

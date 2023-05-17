@@ -4,28 +4,28 @@ import SpeechToText from './SpeechToText';
 import { RingCentralInterface, ParentInterface } from '../../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  constructor(parent: ParentInterface) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
   }
 
-  path(): string {
-    return `${this.parent.path()}/async`;
+  public path(withParameter = false): string {
+    return `${this._parent.path(false)}/async`;
   }
 
-  speechToText(): SpeechToText {
+  public speechToText(): SpeechToText {
     return new SpeechToText(this);
   }
 
-  speakerDiarize(): SpeakerDiarize {
+  public speakerDiarize(): SpeakerDiarize {
     return new SpeakerDiarize(this);
   }
 
-  speakerIdentify(): SpeakerIdentify {
+  public speakerIdentify(): SpeakerIdentify {
     return new SpeakerIdentify(this);
   }
 }

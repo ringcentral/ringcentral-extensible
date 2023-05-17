@@ -5,23 +5,23 @@ import CustomFieldList from '../../../../definitions/CustomFieldList';
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  fieldId: string | null;
+  public fieldId: string | null;
 
-  constructor(parent: ParentInterface, fieldId: string | null = null) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface, fieldId: string | null = null) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
     this.fieldId = fieldId;
   }
 
-  path(withParameter = true): string {
+  public path(withParameter = true): string {
     if (withParameter && this.fieldId !== null) {
-      return `${this.parent.path()}/custom-fields/${this.fieldId}`;
+      return `${this._parent.path()}/custom-fields/${this.fieldId}`;
     }
-    return `${this.parent.path()}/custom-fields`;
+    return `${this._parent.path()}/custom-fields`;
   }
 
   /**
@@ -32,7 +32,7 @@ class Index {
    * App Permission: ReadAccounts
    * User Permission: ReadUserInfo
    */
-  async get(restRequestConfig?: RestRequestConfig): Promise<CustomFieldList> {
+  public async get(restRequestConfig?: RestRequestConfig): Promise<CustomFieldList> {
     const r = await this.rc.get<CustomFieldList>(this.path(false), undefined, restRequestConfig);
     return r.data;
   }
@@ -45,7 +45,7 @@ class Index {
    * App Permission: EditAccounts
    * User Permission: Users
    */
-  async post(customFieldCreateRequest: CustomFieldCreateRequest, restRequestConfig?: RestRequestConfig): Promise<CustomFieldModel> {
+  public async post(customFieldCreateRequest: CustomFieldCreateRequest, restRequestConfig?: RestRequestConfig): Promise<CustomFieldModel> {
     const r = await this.rc.post<CustomFieldModel>(this.path(false), customFieldCreateRequest, undefined, restRequestConfig);
     return r.data;
   }
@@ -58,7 +58,7 @@ class Index {
    * App Permission: EditAccounts
    * User Permission: Users
    */
-  async put(customFieldUpdateRequest: CustomFieldUpdateRequest, restRequestConfig?: RestRequestConfig): Promise<CustomFieldModel> {
+  public async put(customFieldUpdateRequest: CustomFieldUpdateRequest, restRequestConfig?: RestRequestConfig): Promise<CustomFieldModel> {
     if (this.fieldId === null) {
       throw new Error('fieldId must be specified.');
     }
@@ -74,7 +74,7 @@ class Index {
    * App Permission: EditAccounts
    * User Permission: Users
    */
-  async delete(restRequestConfig?: RestRequestConfig): Promise<string> {
+  public async delete(restRequestConfig?: RestRequestConfig): Promise<string> {
     if (this.fieldId === null) {
       throw new Error('fieldId must be specified.');
     }

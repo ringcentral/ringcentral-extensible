@@ -5,23 +5,23 @@ import RcwHistoryListRecordingsParameters from '../../../../../definitions/RcwHi
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  recordingId: string | null;
+  public recordingId: string | null;
 
-  constructor(parent: ParentInterface, recordingId: string | null = null) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface, recordingId: string | null = null) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
     this.recordingId = recordingId;
   }
 
-  path(withParameter = true): string {
+  public path(withParameter = true): string {
     if (withParameter && this.recordingId !== null) {
-      return `${this.parent.path()}/recordings/${this.recordingId}`;
+      return `${this._parent.path()}/recordings/${this.recordingId}`;
     }
-    return `${this.parent.path()}/recordings`;
+    return `${this._parent.path()}/recordings`;
   }
 
   /**
@@ -32,7 +32,7 @@ class Index {
    * Rate Limit Group: Heavy
    * App Permission: ReadWebinars
    */
-  async list(queryParams?: RcwHistoryListRecordingsParameters, restRequestConfig?: RestRequestConfig): Promise<RecordingListResource> {
+  public async list(queryParams?: RcwHistoryListRecordingsParameters, restRequestConfig?: RestRequestConfig): Promise<RecordingListResource> {
     const r = await this.rc.get<RecordingListResource>(this.path(false), queryParams, restRequestConfig);
     return r.data;
   }
@@ -46,7 +46,7 @@ class Index {
    * Rate Limit Group: Heavy
    * App Permission: ReadWebinars
    */
-  async get(restRequestConfig?: RestRequestConfig): Promise<RecordingItemExtendedModel> {
+  public async get(restRequestConfig?: RestRequestConfig): Promise<RecordingItemExtendedModel> {
     if (this.recordingId === null) {
       throw new Error('recordingId must be specified.');
     }
@@ -54,7 +54,7 @@ class Index {
     return r.data;
   }
 
-  download(): Download {
+  public download(): Download {
     return new Download(this);
   }
 }

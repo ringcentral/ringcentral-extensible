@@ -4,17 +4,17 @@ import ParsePhoneNumberRequest from '../../../../definitions/ParsePhoneNumberReq
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  constructor(parent: ParentInterface) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
   }
 
-  path(): string {
-    return `${this.parent.path()}/parse`;
+  public path(withParameter = false): string {
+    return `${this._parent.path()}/parse`;
   }
 
   /**
@@ -23,7 +23,7 @@ class Index {
    * Endpoint: /restapi/{apiVersion}/number-parser/parse
    * Rate Limit Group: Light
    */
-  async post(parsePhoneNumberRequest: ParsePhoneNumberRequest, queryParams?: ParsePhoneNumberParameters, restRequestConfig?: RestRequestConfig): Promise<ParsePhoneNumberResponse> {
+  public async post(parsePhoneNumberRequest: ParsePhoneNumberRequest, queryParams?: ParsePhoneNumberParameters, restRequestConfig?: RestRequestConfig): Promise<ParsePhoneNumberResponse> {
     const r = await this.rc.post<ParsePhoneNumberResponse>(this.path(), parsePhoneNumberRequest, queryParams, restRequestConfig);
     return r.data;
   }

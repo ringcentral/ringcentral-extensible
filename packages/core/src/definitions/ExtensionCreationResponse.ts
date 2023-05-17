@@ -1,4 +1,5 @@
 import ContactInfo from './ContactInfo';
+import ExtensionCreationResponseCostCenter from './ExtensionCreationResponseCostCenter';
 import CustomFieldInfo from './CustomFieldInfo';
 import ExtensionPermissions from './ExtensionPermissions';
 import ProfileImageInfo from './ProfileImageInfo';
@@ -24,6 +25,11 @@ interface ExtensionCreationResponse {
   /**
    */
   contact?: ContactInfo;
+
+  /**
+   * Cost center information
+   */
+  costCenter?: ExtensionCreationResponseCostCenter;
 
   /**
    */

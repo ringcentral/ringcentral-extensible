@@ -2,17 +2,17 @@ import ScimProviderConfig from '../../../definitions/ScimProviderConfig';
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  constructor(parent: ParentInterface) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
   }
 
-  path(): string {
-    return `${this.parent.path()}/ServiceProviderConfig`;
+  public path(withParameter = false): string {
+    return `${this._parent.path()}/ServiceProviderConfig`;
   }
 
   /**
@@ -22,7 +22,7 @@ class Index {
    * Rate Limit Group: Light
    * App Permission: ReadAccounts
    */
-  async get(restRequestConfig?: RestRequestConfig): Promise<ScimProviderConfig> {
+  public async get(restRequestConfig?: RestRequestConfig): Promise<ScimProviderConfig> {
     const r = await this.rc.get<ScimProviderConfig>(this.path(), undefined, restRequestConfig);
     return r.data;
   }

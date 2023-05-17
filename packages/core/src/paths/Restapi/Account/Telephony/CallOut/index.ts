@@ -3,17 +3,17 @@ import MakeCallOutRequest from '../../../../../definitions/MakeCallOutRequest';
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  constructor(parent: ParentInterface) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
   }
 
-  path(): string {
-    return `${this.parent.path()}/call-out`;
+  public path(withParameter = false): string {
+    return `${this._parent.path()}/call-out`;
   }
 
   /**
@@ -23,7 +23,7 @@ class Index {
    * Rate Limit Group: Heavy
    * App Permission: CallControl
    */
-  async post(makeCallOutRequest: MakeCallOutRequest, restRequestConfig?: RestRequestConfig): Promise<CallSession> {
+  public async post(makeCallOutRequest: MakeCallOutRequest, restRequestConfig?: RestRequestConfig): Promise<CallSession> {
     const r = await this.rc.post<CallSession>(this.path(), makeCallOutRequest, undefined, restRequestConfig);
     return r.data;
   }

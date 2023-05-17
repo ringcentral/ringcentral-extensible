@@ -6,23 +6,23 @@ import SubscriptionListResource from '../../../../../definitions/SubscriptionLis
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  subscriptionId: string | null;
+  public subscriptionId: string | null;
 
-  constructor(parent: ParentInterface, subscriptionId: string | null = null) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface, subscriptionId: string | null = null) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
     this.subscriptionId = subscriptionId;
   }
 
-  path(withParameter = true): string {
+  public path(withParameter = true): string {
     if (withParameter && this.subscriptionId !== null) {
-      return `${this.parent.path()}/subscriptions/${this.subscriptionId}`;
+      return `${this._parent.path()}/subscriptions/${this.subscriptionId}`;
     }
-    return `${this.parent.path()}/subscriptions`;
+    return `${this._parent.path()}/subscriptions`;
   }
 
   /**
@@ -31,7 +31,7 @@ class Index {
    * Endpoint: /webinar/notifications/v1/subscriptions
    * Rate Limit Group: Light
    */
-  async list(restRequestConfig?: RestRequestConfig): Promise<SubscriptionListResource> {
+  public async list(restRequestConfig?: RestRequestConfig): Promise<SubscriptionListResource> {
     const r = await this.rc.get<SubscriptionListResource>(this.path(false), undefined, restRequestConfig);
     return r.data;
   }
@@ -42,7 +42,7 @@ class Index {
    * Endpoint: /webinar/notifications/v1/subscriptions
    * Rate Limit Group: Medium
    */
-  async post(createWebhookSubscriptionRequest: CreateWebhookSubscriptionRequest, restRequestConfig?: RestRequestConfig): Promise<SubscriptionInfo> {
+  public async post(createWebhookSubscriptionRequest: CreateWebhookSubscriptionRequest, restRequestConfig?: RestRequestConfig): Promise<SubscriptionInfo> {
     const r = await this.rc.post<SubscriptionInfo>(this.path(false), createWebhookSubscriptionRequest, undefined, restRequestConfig);
     return r.data;
   }
@@ -53,7 +53,7 @@ class Index {
    * Endpoint: /webinar/notifications/v1/subscriptions/{subscriptionId}
    * Rate Limit Group: Light
    */
-  async get(restRequestConfig?: RestRequestConfig): Promise<SubscriptionInfo> {
+  public async get(restRequestConfig?: RestRequestConfig): Promise<SubscriptionInfo> {
     if (this.subscriptionId === null) {
       throw new Error('subscriptionId must be specified.');
     }
@@ -74,7 +74,7 @@ class Index {
    * Endpoint: /webinar/notifications/v1/subscriptions/{subscriptionId}
    * Rate Limit Group: Medium
    */
-  async put(updateSubscriptionRequest: UpdateSubscriptionRequest, restRequestConfig?: RestRequestConfig): Promise<SubscriptionInfo> {
+  public async put(updateSubscriptionRequest: UpdateSubscriptionRequest, restRequestConfig?: RestRequestConfig): Promise<SubscriptionInfo> {
     if (this.subscriptionId === null) {
       throw new Error('subscriptionId must be specified.');
     }
@@ -88,7 +88,7 @@ class Index {
    * Endpoint: /webinar/notifications/v1/subscriptions/{subscriptionId}
    * Rate Limit Group: Medium
    */
-  async delete(restRequestConfig?: RestRequestConfig): Promise<string> {
+  public async delete(restRequestConfig?: RestRequestConfig): Promise<string> {
     if (this.subscriptionId === null) {
       throw new Error('subscriptionId must be specified.');
     }
@@ -96,7 +96,7 @@ class Index {
     return r.data;
   }
 
-  renew(): Renew {
+  public renew(): Renew {
     return new Renew(this);
   }
 }

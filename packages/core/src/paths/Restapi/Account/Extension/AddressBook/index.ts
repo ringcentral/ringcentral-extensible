@@ -2,20 +2,20 @@ import Contact from './Contact';
 import { RingCentralInterface, ParentInterface } from '../../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  constructor(parent: ParentInterface) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
   }
 
-  path(): string {
-    return `${this.parent.path()}/address-book`;
+  public path(withParameter = false): string {
+    return `${this._parent.path()}/address-book`;
   }
 
-  contact(contactId: (string | null) = null): Contact {
+  public contact(contactId: (string | null) = null): Contact {
     return new Contact(this, contactId);
   }
 }

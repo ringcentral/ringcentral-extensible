@@ -4,23 +4,23 @@ import ContractedCountryListResponse from '../../../../../definitions/Contracted
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  contractedCountryId: string | null;
+  public contractedCountryId: string | null;
 
-  constructor(parent: ParentInterface, contractedCountryId: string | null = null) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface, contractedCountryId: string | null = null) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
     this.contractedCountryId = contractedCountryId;
   }
 
-  path(withParameter = true): string {
+  public path(withParameter = true): string {
     if (withParameter && this.contractedCountryId !== null) {
-      return `${this.parent.path()}/contracted-country/${this.contractedCountryId}`;
+      return `${this._parent.path()}/contracted-country/${this.contractedCountryId}`;
     }
-    return `${this.parent.path()}/contracted-country`;
+    return `${this._parent.path()}/contracted-country`;
   }
 
   /**
@@ -29,7 +29,7 @@ class Index {
    * Endpoint: /restapi/{apiVersion}/dictionary/brand/{brandId}/contracted-country
    * Rate Limit Group: Light
    */
-  async list(restRequestConfig?: RestRequestConfig): Promise<ContractedCountryListResponse> {
+  public async list(restRequestConfig?: RestRequestConfig): Promise<ContractedCountryListResponse> {
     const r = await this.rc.get<ContractedCountryListResponse>(this.path(false), undefined, restRequestConfig);
     return r.data;
   }
@@ -41,7 +41,7 @@ class Index {
    * Endpoint: /restapi/{apiVersion}/dictionary/brand/{brandId}/contracted-country/{contractedCountryId}
    * Rate Limit Group: Light
    */
-  async get(queryParams?: ListDomesticCountriesParameters, restRequestConfig?: RestRequestConfig): Promise<CountryListDictionaryModel> {
+  public async get(queryParams?: ListDomesticCountriesParameters, restRequestConfig?: RestRequestConfig): Promise<CountryListDictionaryModel> {
     if (this.contractedCountryId === null) {
       throw new Error('contractedCountryId must be specified.');
     }

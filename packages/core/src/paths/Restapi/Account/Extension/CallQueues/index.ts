@@ -2,17 +2,17 @@ import UserCallQueues from '../../../../../definitions/UserCallQueues';
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  constructor(parent: ParentInterface) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
   }
 
-  path(): string {
-    return `${this.parent.path()}/call-queues`;
+  public path(withParameter = false): string {
+    return `${this._parent.path()}/call-queues`;
   }
 
   /**
@@ -27,7 +27,7 @@ class Index {
    * App Permission: EditAccounts
    * User Permission: EditCallQueuePresence
    */
-  async put(userCallQueues: UserCallQueues, restRequestConfig?: RestRequestConfig): Promise<UserCallQueues> {
+  public async put(userCallQueues: UserCallQueues, restRequestConfig?: RestRequestConfig): Promise<UserCallQueues> {
     const r = await this.rc.put<UserCallQueues>(this.path(), userCallQueues, undefined, restRequestConfig);
     return r.data;
   }

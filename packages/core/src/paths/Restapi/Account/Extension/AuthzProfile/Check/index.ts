@@ -3,17 +3,17 @@ import CheckUserPermissionParameters from '../../../../../../definitions/CheckUs
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  constructor(parent: ParentInterface) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
   }
 
-  path(): string {
-    return `${this.parent.path()}/check`;
+  public path(withParameter = false): string {
+    return `${this._parent.path()}/check`;
   }
 
   /**
@@ -22,7 +22,7 @@ class Index {
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/authz-profile/check
    * Rate Limit Group: Light
    */
-  async get(queryParams?: CheckUserPermissionParameters, restRequestConfig?: RestRequestConfig): Promise<AuthProfileCheckResource> {
+  public async get(queryParams?: CheckUserPermissionParameters, restRequestConfig?: RestRequestConfig): Promise<AuthProfileCheckResource> {
     const r = await this.rc.get<AuthProfileCheckResource>(this.path(), queryParams, restRequestConfig);
     return r.data;
   }

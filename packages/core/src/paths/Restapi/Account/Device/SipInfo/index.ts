@@ -2,17 +2,17 @@ import SipInfoResource from '../../../../../definitions/SipInfoResource';
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  constructor(parent: ParentInterface) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
   }
 
-  path(): string {
-    return `${this.parent.path()}/sip-info`;
+  public path(withParameter = false): string {
+    return `${this._parent.path()}/sip-info`;
   }
 
   /**
@@ -23,7 +23,7 @@ class Index {
    * App Permission: ReadAccounts
    * User Permission: ReadCompanyDevices
    */
-  async get(restRequestConfig?: RestRequestConfig): Promise<SipInfoResource> {
+  public async get(restRequestConfig?: RestRequestConfig): Promise<SipInfoResource> {
     const r = await this.rc.get<SipInfoResource>(this.path(), undefined, restRequestConfig);
     return r.data;
   }

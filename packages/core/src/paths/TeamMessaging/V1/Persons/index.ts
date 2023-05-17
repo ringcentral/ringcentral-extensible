@@ -2,23 +2,23 @@ import TMPersonInfo from '../../../../definitions/TMPersonInfo';
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  personId: string | null;
+  public personId: string | null;
 
-  constructor(parent: ParentInterface, personId: string | null = null) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface, personId: string | null = null) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
     this.personId = personId;
   }
 
-  path(withParameter = true): string {
+  public path(withParameter = true): string {
     if (withParameter && this.personId !== null) {
-      return `${this.parent.path()}/persons/${this.personId}`;
+      return `${this._parent.path()}/persons/${this.personId}`;
     }
-    return `${this.parent.path()}/persons`;
+    return `${this._parent.path()}/persons`;
   }
 
   /**
@@ -28,7 +28,7 @@ class Index {
    * Rate Limit Group: Light
    * App Permission: TeamMessaging
    */
-  async get(restRequestConfig?: RestRequestConfig): Promise<TMPersonInfo> {
+  public async get(restRequestConfig?: RestRequestConfig): Promise<TMPersonInfo> {
     if (this.personId === null) {
       throw new Error('personId must be specified.');
     }

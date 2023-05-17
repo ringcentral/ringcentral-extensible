@@ -3,17 +3,17 @@ import ReadExtensionFeaturesParameters from '../../../../../definitions/ReadExte
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  constructor(parent: ParentInterface) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
   }
 
-  path(): string {
-    return `${this.parent.path()}/features`;
+  public path(withParameter = false): string {
+    return `${this._parent.path()}/features`;
   }
 
   /**
@@ -52,7 +52,7 @@ class Index {
    * App Permission: ReadAccounts
    * User Permission: ReadExtensions
    */
-  async get(queryParams?: ReadExtensionFeaturesParameters, restRequestConfig?: RestRequestConfig): Promise<FeatureList> {
+  public async get(queryParams?: ReadExtensionFeaturesParameters, restRequestConfig?: RestRequestConfig): Promise<FeatureList> {
     const r = await this.rc.get<FeatureList>(this.path(), queryParams, restRequestConfig);
     return r.data;
   }

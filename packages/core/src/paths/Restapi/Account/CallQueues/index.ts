@@ -8,27 +8,27 @@ import ListCallQueuesParameters from '../../../../definitions/ListCallQueuesPara
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  groupId: string | null;
+  public groupId: string | null;
 
-  constructor(parent: ParentInterface, groupId: string | null = null) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface, groupId: string | null = null) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
     this.groupId = groupId;
   }
 
-  path(withParameter = true): string {
+  public path(withParameter = true): string {
     if (withParameter && this.groupId !== null) {
-      return `${this.parent.path()}/call-queues/${this.groupId}`;
+      return `${this._parent.path()}/call-queues/${this.groupId}`;
     }
-    return `${this.parent.path()}/call-queues`;
+    return `${this._parent.path()}/call-queues`;
   }
 
   /**
-   * Returns call queues list.
+   * Returns a call queue list.
  *
    * HTTP Method: get
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/call-queues
@@ -36,7 +36,7 @@ class Index {
    * App Permission: ReadAccounts
    * User Permission: ReadExtensions
    */
-  async list(queryParams?: ListCallQueuesParameters, restRequestConfig?: RestRequestConfig): Promise<CallQueues> {
+  public async list(queryParams?: ListCallQueuesParameters, restRequestConfig?: RestRequestConfig): Promise<CallQueues> {
     const r = await this.rc.get<CallQueues>(this.path(false), queryParams, restRequestConfig);
     return r.data;
   }
@@ -50,7 +50,7 @@ class Index {
    * App Permission: ReadAccounts
    * User Permission: ReadExtensions
    */
-  async get(restRequestConfig?: RestRequestConfig): Promise<CallQueueDetails> {
+  public async get(restRequestConfig?: RestRequestConfig): Promise<CallQueueDetails> {
     if (this.groupId === null) {
       throw new Error('groupId must be specified.');
     }
@@ -67,7 +67,7 @@ class Index {
    * App Permission: EditExtensions
    * User Permission: EditUserInfo
    */
-  async put(callQueueUpdateDetails: CallQueueUpdateDetails, restRequestConfig?: RestRequestConfig): Promise<CallQueueDetails> {
+  public async put(callQueueUpdateDetails: CallQueueUpdateDetails, restRequestConfig?: RestRequestConfig): Promise<CallQueueDetails> {
     if (this.groupId === null) {
       throw new Error('groupId must be specified.');
     }
@@ -75,15 +75,15 @@ class Index {
     return r.data;
   }
 
-  members(): Members {
+  public members(): Members {
     return new Members(this);
   }
 
-  presence(): Presence {
+  public presence(): Presence {
     return new Presence(this);
   }
 
-  bulkAssign(): BulkAssign {
+  public bulkAssign(): BulkAssign {
     return new BulkAssign(this);
   }
 }

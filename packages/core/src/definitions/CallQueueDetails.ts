@@ -29,6 +29,12 @@ interface CallQueueDetails {
    * Allows members to change their queue status
    */
   editableMemberStatus?: boolean;
+
+  /**
+   * Alert timer or pickup setting. Delay time in seconds before call queue group members are notified when calls are queued
+   * Format: int32
+   */
+  alertTimer?: number;
 }
 
 export default CallQueueDetails;

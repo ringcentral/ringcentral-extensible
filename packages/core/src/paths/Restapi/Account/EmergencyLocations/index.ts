@@ -7,23 +7,23 @@ import ListEmergencyLocationsParameters from '../../../../definitions/ListEmerge
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  locationId: string | null;
+  public locationId: string | null;
 
-  constructor(parent: ParentInterface, locationId: string | null = null) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface, locationId: string | null = null) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
     this.locationId = locationId;
   }
 
-  path(withParameter = true): string {
+  public path(withParameter = true): string {
     if (withParameter && this.locationId !== null) {
-      return `${this.parent.path()}/emergency-locations/${this.locationId}`;
+      return `${this._parent.path()}/emergency-locations/${this.locationId}`;
     }
-    return `${this.parent.path()}/emergency-locations`;
+    return `${this._parent.path()}/emergency-locations`;
   }
 
   /**
@@ -34,7 +34,7 @@ class Index {
    * App Permission: ReadAccounts
    * User Permission: ConfigureEmergencyMaps
    */
-  async list(queryParams?: ListEmergencyLocationsParameters, restRequestConfig?: RestRequestConfig): Promise<EmergencyLocationsResource> {
+  public async list(queryParams?: ListEmergencyLocationsParameters, restRequestConfig?: RestRequestConfig): Promise<EmergencyLocationsResource> {
     const r = await this.rc.get<EmergencyLocationsResource>(this.path(false), queryParams, restRequestConfig);
     return r.data;
   }
@@ -47,7 +47,7 @@ class Index {
    * App Permission: EditAccounts
    * User Permission: ConfigureEmergencyMaps
    */
-  async post(emergencyLocationInfoRequest: EmergencyLocationInfoRequest, restRequestConfig?: RestRequestConfig): Promise<EmergencyLocationResource> {
+  public async post(emergencyLocationInfoRequest: EmergencyLocationInfoRequest, restRequestConfig?: RestRequestConfig): Promise<EmergencyLocationResource> {
     const r = await this.rc.post<EmergencyLocationResource>(this.path(false), emergencyLocationInfoRequest, undefined, restRequestConfig);
     return r.data;
   }
@@ -60,7 +60,7 @@ class Index {
    * App Permission: EditAccounts
    * User Permission: ConfigureEmergencyMaps
    */
-  async get(queryParams?: ReadEmergencyLocationParameters, restRequestConfig?: RestRequestConfig): Promise<EmergencyLocationResource> {
+  public async get(queryParams?: ReadEmergencyLocationParameters, restRequestConfig?: RestRequestConfig): Promise<EmergencyLocationResource> {
     if (this.locationId === null) {
       throw new Error('locationId must be specified.');
     }
@@ -76,7 +76,7 @@ class Index {
    * App Permission: EditAccounts
    * User Permission: ConfigureEmergencyMaps
    */
-  async put(emergencyLocationInfoRequest: EmergencyLocationInfoRequest, restRequestConfig?: RestRequestConfig): Promise<EmergencyLocationResource> {
+  public async put(emergencyLocationInfoRequest: EmergencyLocationInfoRequest, restRequestConfig?: RestRequestConfig): Promise<EmergencyLocationResource> {
     if (this.locationId === null) {
       throw new Error('locationId must be specified.');
     }
@@ -92,7 +92,7 @@ class Index {
    * App Permission: EditAccounts
    * User Permission: ConfigureEmergencyMaps
    */
-  async delete(queryParams?: DeleteEmergencyLocationParameters, restRequestConfig?: RestRequestConfig): Promise<string> {
+  public async delete(queryParams?: DeleteEmergencyLocationParameters, restRequestConfig?: RestRequestConfig): Promise<string> {
     if (this.locationId === null) {
       throw new Error('locationId must be specified.');
     }

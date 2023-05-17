@@ -2,17 +2,17 @@ import V1 from './V1';
 import { RingCentralInterface } from '../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  constructor(rc: RingCentralInterface) {
+  public constructor(rc: RingCentralInterface) {
     this.rc = rc;
   }
 
-  path(): string {
+  public path(withParameter = false): string {
     return '/team-messaging';
   }
 
-  v1(): V1 {
+  public v1(): V1 {
     return new V1(this);
   }
 }

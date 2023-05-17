@@ -4,28 +4,28 @@ import Account from './Account';
 import { RingCentralInterface, ParentInterface } from '../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  constructor(parent: ParentInterface) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
   }
 
-  path(): string {
-    return `${this.parent.path()}/v1`;
+  public path(withParameter = false): string {
+    return `${this._parent.path(false)}/v1`;
   }
 
-  account(accountId: (string | null) = null): Account {
+  public account(accountId: (string | null) = null): Account {
     return new Account(this, accountId);
   }
 
-  history(): History {
+  public history(): History {
     return new History(this);
   }
 
-  accounts(accountId: (string | null) = null): Accounts {
+  public accounts(accountId: (string | null) = null): Accounts {
     return new Accounts(this, accountId);
   }
 }

@@ -3,17 +3,17 @@ import CreateMultipleSwitchesRequest from '../../../../../definitions/CreateMult
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  constructor(parent: ParentInterface) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
   }
 
-  path(): string {
-    return `${this.parent.path()}/switches-bulk-create`;
+  public path(withParameter = false): string {
+    return `${this._parent.path()}/switches-bulk-create`;
   }
 
   /**
@@ -26,7 +26,7 @@ class Index {
    * App Permission: EditAccounts
    * User Permission: ConfigureEmergencyMaps
    */
-  async post(createMultipleSwitchesRequest: CreateMultipleSwitchesRequest, restRequestConfig?: RestRequestConfig): Promise<CreateMultipleSwitchesResponse> {
+  public async post(createMultipleSwitchesRequest: CreateMultipleSwitchesRequest, restRequestConfig?: RestRequestConfig): Promise<CreateMultipleSwitchesResponse> {
     const r = await this.rc.post<CreateMultipleSwitchesResponse>(this.path(), createMultipleSwitchesRequest, undefined, restRequestConfig);
     return r.data;
   }

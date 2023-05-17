@@ -4,23 +4,23 @@ import ListUserTemplatesParameters from '../../../../definitions/ListUserTemplat
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  templateId: string | null;
+  public templateId: string | null;
 
-  constructor(parent: ParentInterface, templateId: string | null = null) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface, templateId: string | null = null) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
     this.templateId = templateId;
   }
 
-  path(withParameter = true): string {
+  public path(withParameter = true): string {
     if (withParameter && this.templateId !== null) {
-      return `${this.parent.path()}/templates/${this.templateId}`;
+      return `${this._parent.path()}/templates/${this.templateId}`;
     }
-    return `${this.parent.path()}/templates`;
+    return `${this._parent.path()}/templates`;
   }
 
   /**
@@ -32,7 +32,7 @@ class Index {
    * App Permission: ReadAccounts
    * User Permission: ReadCompanyInfo
    */
-  async list(queryParams?: ListUserTemplatesParameters, restRequestConfig?: RestRequestConfig): Promise<UserTemplates> {
+  public async list(queryParams?: ListUserTemplatesParameters, restRequestConfig?: RestRequestConfig): Promise<UserTemplates> {
     const r = await this.rc.get<UserTemplates>(this.path(false), queryParams, restRequestConfig);
     return r.data;
   }
@@ -46,7 +46,7 @@ class Index {
    * App Permission: ReadAccounts
    * User Permission: ReadCompanyInfo
    */
-  async get(restRequestConfig?: RestRequestConfig): Promise<TemplateInfo> {
+  public async get(restRequestConfig?: RestRequestConfig): Promise<TemplateInfo> {
     if (this.templateId === null) {
       throw new Error('templateId must be specified.');
     }

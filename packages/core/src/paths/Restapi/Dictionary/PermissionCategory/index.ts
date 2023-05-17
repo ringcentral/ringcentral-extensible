@@ -4,23 +4,23 @@ import ListPermissionCategoriesParameters from '../../../../definitions/ListPerm
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  permissionCategoryId: string | null;
+  public permissionCategoryId: string | null;
 
-  constructor(parent: ParentInterface, permissionCategoryId: string | null = null) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface, permissionCategoryId: string | null = null) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
     this.permissionCategoryId = permissionCategoryId;
   }
 
-  path(withParameter = true): string {
+  public path(withParameter = true): string {
     if (withParameter && this.permissionCategoryId !== null) {
-      return `${this.parent.path()}/permission-category/${this.permissionCategoryId}`;
+      return `${this._parent.path()}/permission-category/${this.permissionCategoryId}`;
     }
-    return `${this.parent.path()}/permission-category`;
+    return `${this._parent.path()}/permission-category`;
   }
 
   /**
@@ -29,7 +29,7 @@ class Index {
    * Endpoint: /restapi/{apiVersion}/dictionary/permission-category
    * Rate Limit Group: Light
    */
-  async list(queryParams?: ListPermissionCategoriesParameters, restRequestConfig?: RestRequestConfig): Promise<PermissionCategoryCollectionResource> {
+  public async list(queryParams?: ListPermissionCategoriesParameters, restRequestConfig?: RestRequestConfig): Promise<PermissionCategoryCollectionResource> {
     const r = await this.rc.get<PermissionCategoryCollectionResource>(this.path(false), queryParams, restRequestConfig);
     return r.data;
   }
@@ -40,7 +40,7 @@ class Index {
    * Endpoint: /restapi/{apiVersion}/dictionary/permission-category/{permissionCategoryId}
    * Rate Limit Group: Light
    */
-  async get(restRequestConfig?: RestRequestConfig): Promise<PermissionCategoryResource> {
+  public async get(restRequestConfig?: RestRequestConfig): Promise<PermissionCategoryResource> {
     if (this.permissionCategoryId === null) {
       throw new Error('permissionCategoryId must be specified.');
     }

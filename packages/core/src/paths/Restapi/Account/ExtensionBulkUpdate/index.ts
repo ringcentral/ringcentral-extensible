@@ -4,17 +4,17 @@ import ExtensionBulkUpdateRequest from '../../../../definitions/ExtensionBulkUpd
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  constructor(parent: ParentInterface) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
   }
 
-  path(): string {
-    return `${this.parent.path()}/extension-bulk-update`;
+  public path(withParameter = false): string {
+    return `${this._parent.path()}/extension-bulk-update`;
   }
 
   /**
@@ -26,12 +26,12 @@ class Index {
    * App Permission: EditExtensions
    * User Permission: EditExtensionInfo
    */
-  async post(extensionBulkUpdateRequest: ExtensionBulkUpdateRequest, restRequestConfig?: RestRequestConfig): Promise<ExtensionBulkUpdateTaskResource> {
+  public async post(extensionBulkUpdateRequest: ExtensionBulkUpdateRequest, restRequestConfig?: RestRequestConfig): Promise<ExtensionBulkUpdateTaskResource> {
     const r = await this.rc.post<ExtensionBulkUpdateTaskResource>(this.path(), extensionBulkUpdateRequest, undefined, restRequestConfig);
     return r.data;
   }
 
-  tasks(taskId: (string | null) = null): Tasks {
+  public tasks(taskId: (string | null) = null): Tasks {
     return new Tasks(this, taskId);
   }
 }

@@ -4,28 +4,28 @@ import Sessions from './Sessions';
 import { RingCentralInterface, ParentInterface } from '../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  constructor(parent: ParentInterface) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
   }
 
-  path(): string {
-    return `${this.parent.path()}/telephony`;
+  public path(withParameter = false): string {
+    return `${this._parent.path()}/telephony`;
   }
 
-  sessions(telephonySessionId: (string | null) = null): Sessions {
+  public sessions(telephonySessionId: (string | null) = null): Sessions {
     return new Sessions(this, telephonySessionId);
   }
 
-  callOut(): CallOut {
+  public callOut(): CallOut {
     return new CallOut(this);
   }
 
-  conference(): Conference {
+  public conference(): Conference {
     return new Conference(this);
   }
 }

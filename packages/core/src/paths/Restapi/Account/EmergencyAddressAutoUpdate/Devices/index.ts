@@ -4,17 +4,17 @@ import ListDevicesAutomaticLocationUpdatesParameters from '../../../../../defini
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  constructor(parent: ParentInterface) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
   }
 
-  path(): string {
-    return `${this.parent.path()}/devices`;
+  public path(withParameter = false): string {
+    return `${this._parent.path()}/devices`;
   }
 
   /**
@@ -27,12 +27,12 @@ class Index {
    * App Permission: EditAccounts
    * User Permission: ConfigureEmergencyMaps
    */
-  async get(queryParams?: ListDevicesAutomaticLocationUpdatesParameters, restRequestConfig?: RestRequestConfig): Promise<ListDevicesAutomaticLocationUpdates> {
+  public async get(queryParams?: ListDevicesAutomaticLocationUpdatesParameters, restRequestConfig?: RestRequestConfig): Promise<ListDevicesAutomaticLocationUpdates> {
     const r = await this.rc.get<ListDevicesAutomaticLocationUpdates>(this.path(), queryParams, restRequestConfig);
     return r.data;
   }
 
-  bulkAssign(): BulkAssign {
+  public bulkAssign(): BulkAssign {
     return new BulkAssign(this);
   }
 }

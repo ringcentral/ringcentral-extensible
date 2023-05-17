@@ -5,23 +5,23 @@ import GetBridgeParameters from '../../../../definitions/GetBridgeParameters';
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  bridgeId: string | null;
+  public bridgeId: string | null;
 
-  constructor(parent: ParentInterface, bridgeId: string | null = null) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface, bridgeId: string | null = null) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
     this.bridgeId = bridgeId;
   }
 
-  path(withParameter = true): string {
+  public path(withParameter = true): string {
     if (withParameter && this.bridgeId !== null) {
-      return `${this.parent.path()}/bridges/${this.bridgeId}`;
+      return `${this._parent.path()}/bridges/${this.bridgeId}`;
     }
-    return `${this.parent.path()}/bridges`;
+    return `${this._parent.path()}/bridges`;
   }
 
   /**
@@ -31,7 +31,7 @@ class Index {
    * Rate Limit Group: Medium
    * App Permission: Video
    */
-  async get(queryParams?: GetBridgeParameters, restRequestConfig?: RestRequestConfig): Promise<BridgeResponse> {
+  public async get(queryParams?: GetBridgeParameters, restRequestConfig?: RestRequestConfig): Promise<BridgeResponse> {
     if (this.bridgeId === null) {
       throw new Error('bridgeId must be specified.');
     }
@@ -48,7 +48,7 @@ class Index {
    * Rate Limit Group: Medium
    * App Permission: Video
    */
-  async delete(restRequestConfig?: RestRequestConfig): Promise<string> {
+  public async delete(restRequestConfig?: RestRequestConfig): Promise<string> {
     if (this.bridgeId === null) {
       throw new Error('bridgeId must be specified.');
     }
@@ -65,7 +65,7 @@ class Index {
    * Rate Limit Group: Medium
    * App Permission: Video
    */
-  async patch(updateBridgeRequest: UpdateBridgeRequest, restRequestConfig?: RestRequestConfig): Promise<BridgeResponse> {
+  public async patch(updateBridgeRequest: UpdateBridgeRequest, restRequestConfig?: RestRequestConfig): Promise<BridgeResponse> {
     if (this.bridgeId === null) {
       throw new Error('bridgeId must be specified.');
     }
@@ -73,7 +73,7 @@ class Index {
     return r.data;
   }
 
-  pin(): Pin {
+  public pin(): Pin {
     return new Pin(this);
   }
 }

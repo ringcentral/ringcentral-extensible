@@ -3,17 +3,17 @@ import ExtensionCallerIdInfo from '../../../../../definitions/ExtensionCallerIdI
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  constructor(parent: ParentInterface) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
   }
 
-  path(): string {
-    return `${this.parent.path()}/caller-id`;
+  public path(withParameter = false): string {
+    return `${this._parent.path()}/caller-id`;
   }
 
   /**
@@ -25,7 +25,7 @@ class Index {
    * App Permission: ReadAccounts
    * User Permission: ReadCallerIDSettings
    */
-  async get(restRequestConfig?: RestRequestConfig): Promise<ExtensionCallerIdInfo> {
+  public async get(restRequestConfig?: RestRequestConfig): Promise<ExtensionCallerIdInfo> {
     const r = await this.rc.get<ExtensionCallerIdInfo>(this.path(), undefined, restRequestConfig);
     return r.data;
   }
@@ -39,7 +39,7 @@ class Index {
    * App Permission: EditExtensions
    * User Permission: EditCallerIDSettings
    */
-  async put(extensionCallerIdInfoRequest: ExtensionCallerIdInfoRequest, restRequestConfig?: RestRequestConfig): Promise<ExtensionCallerIdInfo> {
+  public async put(extensionCallerIdInfoRequest: ExtensionCallerIdInfoRequest, restRequestConfig?: RestRequestConfig): Promise<ExtensionCallerIdInfo> {
     const r = await this.rc.put<ExtensionCallerIdInfo>(this.path(), extensionCallerIdInfoRequest, undefined, restRequestConfig);
     return r.data;
   }

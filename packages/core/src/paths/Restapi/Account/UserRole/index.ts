@@ -7,23 +7,23 @@ import ListUserRolesParameters from '../../../../definitions/ListUserRolesParame
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  roleId: string | null;
+  public roleId: string | null;
 
-  constructor(parent: ParentInterface, roleId: string | null = null) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface, roleId: string | null = null) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
     this.roleId = roleId;
   }
 
-  path(withParameter = true): string {
+  public path(withParameter = true): string {
     if (withParameter && this.roleId !== null) {
-      return `${this.parent.path()}/user-role/${this.roleId}`;
+      return `${this._parent.path()}/user-role/${this.roleId}`;
     }
-    return `${this.parent.path()}/user-role`;
+    return `${this._parent.path()}/user-role`;
   }
 
   /**
@@ -34,7 +34,7 @@ class Index {
    * App Permission: ReadAccounts
    * User Permission: ReadUserRoles
    */
-  async list(queryParams?: ListUserRolesParameters, restRequestConfig?: RestRequestConfig): Promise<RolesCollectionResource> {
+  public async list(queryParams?: ListUserRolesParameters, restRequestConfig?: RestRequestConfig): Promise<RolesCollectionResource> {
     const r = await this.rc.get<RolesCollectionResource>(this.path(false), queryParams, restRequestConfig);
     return r.data;
   }
@@ -47,7 +47,7 @@ class Index {
    * App Permission: RoleManagement
    * User Permission: EditUserRoles
    */
-  async post(roleResource: RoleResource, restRequestConfig?: RestRequestConfig): Promise<string> {
+  public async post(roleResource: RoleResource, restRequestConfig?: RestRequestConfig): Promise<string> {
     const r = await this.rc.post<string>(this.path(false), roleResource, undefined, restRequestConfig);
     return r.data;
   }
@@ -60,7 +60,7 @@ class Index {
    * App Permission: ReadAccounts
    * User Permission: ReadUserRoles
    */
-  async get(restRequestConfig?: RestRequestConfig): Promise<RoleResource> {
+  public async get(restRequestConfig?: RestRequestConfig): Promise<RoleResource> {
     if (this.roleId === null) {
       throw new Error('roleId must be specified.');
     }
@@ -76,7 +76,7 @@ class Index {
    * App Permission: RoleManagement
    * User Permission: EditUserRoles
    */
-  async put(roleResource: RoleResource, restRequestConfig?: RestRequestConfig): Promise<string> {
+  public async put(roleResource: RoleResource, restRequestConfig?: RestRequestConfig): Promise<string> {
     if (this.roleId === null) {
       throw new Error('roleId must be specified.');
     }
@@ -92,7 +92,7 @@ class Index {
    * App Permission: RoleManagement
    * User Permission: EditUserRoles
    */
-  async delete(queryParams?: DeleteCustomRoleParameters, restRequestConfig?: RestRequestConfig): Promise<string> {
+  public async delete(queryParams?: DeleteCustomRoleParameters, restRequestConfig?: RestRequestConfig): Promise<string> {
     if (this.roleId === null) {
       throw new Error('roleId must be specified.');
     }
@@ -100,11 +100,11 @@ class Index {
     return r.data;
   }
 
-  default(): Default {
+  public default(): Default {
     return new Default(this);
   }
 
-  bulkAssign(): BulkAssign {
+  public bulkAssign(): BulkAssign {
     return new BulkAssign(this);
   }
 }

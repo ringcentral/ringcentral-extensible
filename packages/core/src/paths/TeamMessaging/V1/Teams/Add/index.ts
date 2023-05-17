@@ -2,17 +2,17 @@ import TMAddTeamMembersRequest from '../../../../../definitions/TMAddTeamMembers
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  constructor(parent: ParentInterface) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
   }
 
-  path(): string {
-    return `${this.parent.path()}/add`;
+  public path(withParameter = false): string {
+    return `${this._parent.path()}/add`;
   }
 
   /**
@@ -22,7 +22,7 @@ class Index {
    * Rate Limit Group: Medium
    * App Permission: TeamMessaging
    */
-  async post(tMAddTeamMembersRequest: TMAddTeamMembersRequest, restRequestConfig?: RestRequestConfig): Promise<string> {
+  public async post(tMAddTeamMembersRequest: TMAddTeamMembersRequest, restRequestConfig?: RestRequestConfig): Promise<string> {
     const r = await this.rc.post<string>(this.path(), tMAddTeamMembersRequest, undefined, restRequestConfig);
     return r.data;
   }

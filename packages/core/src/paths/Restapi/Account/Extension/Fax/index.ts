@@ -4,17 +4,17 @@ import CreateFaxMessageRequest from '../../../../../definitions/CreateFaxMessage
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  constructor(parent: ParentInterface) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
   }
 
-  path(): string {
-    return `${this.parent.path()}/fax`;
+  public path(withParameter = false): string {
+    return `${this._parent.path()}/fax`;
   }
 
   /**
@@ -28,7 +28,7 @@ class Index {
    * App Permission: Faxes
    * User Permission: OutboundFaxes
    */
-  async post(createFaxMessageRequest: CreateFaxMessageRequest, restRequestConfig?: RestRequestConfig): Promise<FaxResponse> {
+  public async post(createFaxMessageRequest: CreateFaxMessageRequest, restRequestConfig?: RestRequestConfig): Promise<FaxResponse> {
     const formData = await Utils.getFormData(createFaxMessageRequest);
     const r = await this.rc.post<FaxResponse>(this.path(), formData, undefined, restRequestConfig);
     return r.data;

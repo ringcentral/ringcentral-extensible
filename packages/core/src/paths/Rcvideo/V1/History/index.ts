@@ -2,20 +2,20 @@ import Meetings from './Meetings';
 import { RingCentralInterface, ParentInterface } from '../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  constructor(parent: ParentInterface) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
   }
 
-  path(): string {
-    return `${this.parent.path()}/history`;
+  public path(withParameter = false): string {
+    return `${this._parent.path(false)}/history`;
   }
 
-  meetings(meetingId: (string | null) = null): Meetings {
+  public meetings(meetingId: (string | null) = null): Meetings {
     return new Meetings(this, meetingId);
   }
 }

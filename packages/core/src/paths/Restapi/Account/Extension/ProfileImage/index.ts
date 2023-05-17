@@ -4,23 +4,23 @@ import CreateUserProfileImageRequest from '../../../../../definitions/CreateUser
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  scaleSize: string | null;
+  public scaleSize: string | null;
 
-  constructor(parent: ParentInterface, scaleSize: string | null = null) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface, scaleSize: string | null = null) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
     this.scaleSize = scaleSize;
   }
 
-  path(withParameter = true): string {
+  public path(withParameter = true): string {
     if (withParameter && this.scaleSize !== null) {
-      return `${this.parent.path()}/profile-image/${this.scaleSize}`;
+      return `${this._parent.path()}/profile-image/${this.scaleSize}`;
     }
-    return `${this.parent.path()}/profile-image`;
+    return `${this._parent.path()}/profile-image`;
   }
 
   /**
@@ -32,7 +32,7 @@ class Index {
    * App Permission: ReadAccounts
    * User Permission: ReadExtensions
    */
-  async list(restRequestConfig?: RestRequestConfig): Promise<Buffer> {
+  public async list(restRequestConfig?: RestRequestConfig): Promise<Buffer> {
     const r = await this.rc.get<Buffer>(this.path(false), undefined, { ...restRequestConfig, responseType: 'arraybuffer' });
     return r.data;
   }
@@ -46,7 +46,7 @@ class Index {
    * App Permission: EditExtensions
    * User Permission: EditUserInfo
    */
-  async post(createUserProfileImageRequest: CreateUserProfileImageRequest, restRequestConfig?: RestRequestConfig): Promise<string> {
+  public async post(createUserProfileImageRequest: CreateUserProfileImageRequest, restRequestConfig?: RestRequestConfig): Promise<string> {
     const formData = await Utils.getFormData(createUserProfileImageRequest);
     const r = await this.rc.post<string>(this.path(false), formData, undefined, restRequestConfig);
     return r.data;
@@ -61,7 +61,7 @@ class Index {
    * App Permission: EditExtensions
    * User Permission: EditUserInfo
    */
-  async put(updateUserProfileImageRequest: UpdateUserProfileImageRequest, restRequestConfig?: RestRequestConfig): Promise<string> {
+  public async put(updateUserProfileImageRequest: UpdateUserProfileImageRequest, restRequestConfig?: RestRequestConfig): Promise<string> {
     const formData = await Utils.getFormData(updateUserProfileImageRequest);
     const r = await this.rc.put<string>(this.path(false), formData, undefined, restRequestConfig);
     return r.data;
@@ -76,7 +76,7 @@ class Index {
    * App Permission: EditExtensions
    * User Permission: EditUserInfo
    */
-  async delete(restRequestConfig?: RestRequestConfig): Promise<string> {
+  public async delete(restRequestConfig?: RestRequestConfig): Promise<string> {
     const r = await this.rc.delete<string>(this.path(false), undefined, restRequestConfig);
     return r.data;
   }
@@ -90,7 +90,7 @@ class Index {
    * App Permission: ReadAccounts
    * User Permission: ReadExtensions
    */
-  async get(restRequestConfig?: RestRequestConfig): Promise<Buffer> {
+  public async get(restRequestConfig?: RestRequestConfig): Promise<Buffer> {
     if (this.scaleSize === null) {
       throw new Error('scaleSize must be specified.');
     }

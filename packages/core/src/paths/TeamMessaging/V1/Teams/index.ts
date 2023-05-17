@@ -12,23 +12,23 @@ import ListGlipTeamsNewParameters from '../../../../definitions/ListGlipTeamsNew
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  chatId: string | null;
+  public chatId: string | null;
 
-  constructor(parent: ParentInterface, chatId: string | null = null) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface, chatId: string | null = null) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
     this.chatId = chatId;
   }
 
-  path(withParameter = true): string {
+  public path(withParameter = true): string {
     if (withParameter && this.chatId !== null) {
-      return `${this.parent.path()}/teams/${this.chatId}`;
+      return `${this._parent.path()}/teams/${this.chatId}`;
     }
-    return `${this.parent.path()}/teams`;
+    return `${this._parent.path()}/teams`;
   }
 
   /**
@@ -38,7 +38,7 @@ class Index {
    * Rate Limit Group: Medium
    * App Permission: TeamMessaging
    */
-  async list(queryParams?: ListGlipTeamsNewParameters, restRequestConfig?: RestRequestConfig): Promise<TMTeamList> {
+  public async list(queryParams?: ListGlipTeamsNewParameters, restRequestConfig?: RestRequestConfig): Promise<TMTeamList> {
     const r = await this.rc.get<TMTeamList>(this.path(false), queryParams, restRequestConfig);
     return r.data;
   }
@@ -50,7 +50,7 @@ class Index {
    * Rate Limit Group: Medium
    * App Permission: TeamMessaging
    */
-  async post(tMCreateTeamRequest: TMCreateTeamRequest, restRequestConfig?: RestRequestConfig): Promise<TMTeamInfo> {
+  public async post(tMCreateTeamRequest: TMCreateTeamRequest, restRequestConfig?: RestRequestConfig): Promise<TMTeamInfo> {
     const r = await this.rc.post<TMTeamInfo>(this.path(false), tMCreateTeamRequest, undefined, restRequestConfig);
     return r.data;
   }
@@ -62,7 +62,7 @@ class Index {
    * Rate Limit Group: Light
    * App Permission: TeamMessaging
    */
-  async get(restRequestConfig?: RestRequestConfig): Promise<TMTeamInfo> {
+  public async get(restRequestConfig?: RestRequestConfig): Promise<TMTeamInfo> {
     if (this.chatId === null) {
       throw new Error('chatId must be specified.');
     }
@@ -77,7 +77,7 @@ class Index {
    * Rate Limit Group: Medium
    * App Permission: TeamMessaging
    */
-  async delete(restRequestConfig?: RestRequestConfig): Promise<string> {
+  public async delete(restRequestConfig?: RestRequestConfig): Promise<string> {
     if (this.chatId === null) {
       throw new Error('chatId must be specified.');
     }
@@ -92,7 +92,7 @@ class Index {
    * Rate Limit Group: Medium
    * App Permission: TeamMessaging
    */
-  async patch(tMUpdateTeamRequest: TMUpdateTeamRequest, restRequestConfig?: RestRequestConfig): Promise<TMTeamInfo> {
+  public async patch(tMUpdateTeamRequest: TMUpdateTeamRequest, restRequestConfig?: RestRequestConfig): Promise<TMTeamInfo> {
     if (this.chatId === null) {
       throw new Error('chatId must be specified.');
     }
@@ -100,27 +100,27 @@ class Index {
     return r.data;
   }
 
-  add(): Add {
+  public add(): Add {
     return new Add(this);
   }
 
-  join(): Join {
+  public join(): Join {
     return new Join(this);
   }
 
-  leave(): Leave {
+  public leave(): Leave {
     return new Leave(this);
   }
 
-  remove(): Remove {
+  public remove(): Remove {
     return new Remove(this);
   }
 
-  archive(): Archive {
+  public archive(): Archive {
     return new Archive(this);
   }
 
-  unarchive(): Unarchive {
+  public unarchive(): Unarchive {
     return new Unarchive(this);
   }
 }

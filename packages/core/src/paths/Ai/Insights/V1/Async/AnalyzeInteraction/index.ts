@@ -4,27 +4,28 @@ import InteractionInput from '../../../../../../definitions/InteractionInput';
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  constructor(parent: ParentInterface) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
   }
 
-  path(): string {
-    return `${this.parent.path()}/analyze-interaction`;
+  public path(withParameter = false): string {
+    return `${this._parent.path()}/analyze-interaction`;
   }
 
   /**
-   * Returns Interaction Analytics to the provided webhook uri.
+   * Returns multiple insights including summaries, emotion, key phrases, questions asked, and more in a single API call.
+ *
    * HTTP Method: post
    * Endpoint: /ai/insights/v1/async/analyze-interaction
    * Rate Limit Group: Heavy
    * App Permission: AI
    */
-  async post(interactionInput: InteractionInput, queryParams?: CaiAnalyzeInteractionParameters, restRequestConfig?: RestRequestConfig): Promise<CaiAsyncApiResponse> {
+  public async post(interactionInput: InteractionInput, queryParams?: CaiAnalyzeInteractionParameters, restRequestConfig?: RestRequestConfig): Promise<CaiAsyncApiResponse> {
     const r = await this.rc.post<CaiAsyncApiResponse>(this.path(), interactionInput, queryParams, restRequestConfig);
     return r.data;
   }

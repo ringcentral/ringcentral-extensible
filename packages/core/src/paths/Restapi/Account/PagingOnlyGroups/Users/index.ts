@@ -3,17 +3,17 @@ import ListPagingGroupUsersParameters from '../../../../../definitions/ListPagin
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  constructor(parent: ParentInterface) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
   }
 
-  path(): string {
-    return `${this.parent.path()}/users`;
+  public path(withParameter = false): string {
+    return `${this._parent.path()}/users`;
   }
 
   /**
@@ -25,7 +25,7 @@ class Index {
    * App Permission: ReadAccounts
    * User Permission: ReadUserInfo
    */
-  async get(queryParams?: ListPagingGroupUsersParameters, restRequestConfig?: RestRequestConfig): Promise<PagingOnlyGroupUsers> {
+  public async get(queryParams?: ListPagingGroupUsersParameters, restRequestConfig?: RestRequestConfig): Promise<PagingOnlyGroupUsers> {
     const r = await this.rc.get<PagingOnlyGroupUsers>(this.path(), queryParams, restRequestConfig);
     return r.data;
   }

@@ -4,23 +4,23 @@ import ListPermissionsParameters from '../../../../definitions/ListPermissionsPa
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  permissionId: string | null;
+  public permissionId: string | null;
 
-  constructor(parent: ParentInterface, permissionId: string | null = null) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface, permissionId: string | null = null) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
     this.permissionId = permissionId;
   }
 
-  path(withParameter = true): string {
+  public path(withParameter = true): string {
     if (withParameter && this.permissionId !== null) {
-      return `${this.parent.path()}/permission/${this.permissionId}`;
+      return `${this._parent.path()}/permission/${this.permissionId}`;
     }
-    return `${this.parent.path()}/permission`;
+    return `${this._parent.path()}/permission`;
   }
 
   /**
@@ -29,7 +29,7 @@ class Index {
    * Endpoint: /restapi/{apiVersion}/dictionary/permission
    * Rate Limit Group: Light
    */
-  async list(queryParams?: ListPermissionsParameters, restRequestConfig?: RestRequestConfig): Promise<PermissionCollectionResource> {
+  public async list(queryParams?: ListPermissionsParameters, restRequestConfig?: RestRequestConfig): Promise<PermissionCollectionResource> {
     const r = await this.rc.get<PermissionCollectionResource>(this.path(false), queryParams, restRequestConfig);
     return r.data;
   }
@@ -40,7 +40,7 @@ class Index {
    * Endpoint: /restapi/{apiVersion}/dictionary/permission/{permissionId}
    * Rate Limit Group: Light
    */
-  async get(restRequestConfig?: RestRequestConfig): Promise<PermissionResource> {
+  public async get(restRequestConfig?: RestRequestConfig): Promise<PermissionResource> {
     if (this.permissionId === null) {
       throw new Error('permissionId must be specified.');
     }

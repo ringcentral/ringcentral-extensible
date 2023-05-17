@@ -4,17 +4,17 @@ import ListUserAssignedRolesParameters from '../../../../../definitions/ListUser
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  constructor(parent: ParentInterface) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
   }
 
-  path(): string {
-    return `${this.parent.path()}/assigned-role`;
+  public path(withParameter = false): string {
+    return `${this._parent.path()}/assigned-role`;
   }
 
   /**
@@ -25,7 +25,7 @@ class Index {
    * App Permission: ReadAccounts
    * User Permission: ReadExtensions
    */
-  async get(queryParams?: ListUserAssignedRolesParameters, restRequestConfig?: RestRequestConfig): Promise<AssignedRolesResource> {
+  public async get(queryParams?: ListUserAssignedRolesParameters, restRequestConfig?: RestRequestConfig): Promise<AssignedRolesResource> {
     const r = await this.rc.get<AssignedRolesResource>(this.path(), queryParams, restRequestConfig);
     return r.data;
   }
@@ -38,12 +38,12 @@ class Index {
    * App Permission: RoleManagement
    * User Permission: EditAssignedRoles
    */
-  async put(assignedRolesResource: AssignedRolesResource, restRequestConfig?: RestRequestConfig): Promise<AssignedRolesResource> {
+  public async put(assignedRolesResource: AssignedRolesResource, restRequestConfig?: RestRequestConfig): Promise<AssignedRolesResource> {
     const r = await this.rc.put<AssignedRolesResource>(this.path(), assignedRolesResource, undefined, restRequestConfig);
     return r.data;
   }
 
-  default(): Default {
+  public default(): Default {
     return new Default(this);
   }
 }

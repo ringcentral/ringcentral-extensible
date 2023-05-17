@@ -7,23 +7,23 @@ import ReadDeviceParameters from '../../../../definitions/ReadDeviceParameters';
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
 
 class Index {
-  rc: RingCentralInterface;
+  public rc: RingCentralInterface;
 
-  parent: ParentInterface;
+  public _parent: ParentInterface;
 
-  deviceId: string | null;
+  public deviceId: string | null;
 
-  constructor(parent: ParentInterface, deviceId: string | null = null) {
-    this.parent = parent;
-    this.rc = parent.rc;
+  public constructor(_parent: ParentInterface, deviceId: string | null = null) {
+    this._parent = _parent;
+    this.rc = _parent.rc;
     this.deviceId = deviceId;
   }
 
-  path(withParameter = true): string {
+  public path(withParameter = true): string {
     if (withParameter && this.deviceId !== null) {
-      return `${this.parent.path()}/device/${this.deviceId}`;
+      return `${this._parent.path()}/device/${this.deviceId}`;
     }
-    return `${this.parent.path()}/device`;
+    return `${this._parent.path()}/device`;
   }
 
   /**
@@ -34,7 +34,7 @@ class Index {
    * App Permission: ReadAccounts
    * User Permission: ReadCompanyDevices
    */
-  async get(queryParams?: ReadDeviceParameters, restRequestConfig?: RestRequestConfig): Promise<DeviceResource> {
+  public async get(queryParams?: ReadDeviceParameters, restRequestConfig?: RestRequestConfig): Promise<DeviceResource> {
     if (this.deviceId === null) {
       throw new Error('deviceId must be specified.');
     }
@@ -50,7 +50,7 @@ class Index {
    * App Permission: EditAccounts
    * User Permission: EditCompanyDevices
    */
-  async put(accountDeviceUpdate: AccountDeviceUpdate, queryParams?: UpdateDeviceParameters, restRequestConfig?: RestRequestConfig): Promise<DeviceResource> {
+  public async put(accountDeviceUpdate: AccountDeviceUpdate, queryParams?: UpdateDeviceParameters, restRequestConfig?: RestRequestConfig): Promise<DeviceResource> {
     if (this.deviceId === null) {
       throw new Error('deviceId must be specified.');
     }
@@ -58,11 +58,11 @@ class Index {
     return r.data;
   }
 
-  sipInfo(): SipInfo {
+  public sipInfo(): SipInfo {
     return new SipInfo(this);
   }
 
-  emergency(): Emergency {
+  public emergency(): Emergency {
     return new Emergency(this);
   }
 }
