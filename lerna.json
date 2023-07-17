@@ -5,6 +5,5 @@
     "packages/core",
     "packages/extensions/*",
     "test"
-  ],
-  "useWorkspaces": true
+  ]
 }

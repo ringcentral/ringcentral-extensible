@@ -12,16 +12,16 @@
     "prepublishOnly": "yarn reset && yarn compile"
   },
   "devDependencies": {
-    "@types/node": "^20.1.7",
-    "@typescript-eslint/eslint-plugin": "^5.59.6",
-    "@typescript-eslint/parser": "^5.59.6",
-    "eslint": "^8.40.0",
+    "@types/node": "^20.4.2",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "eslint": "^8.45.0",
     "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-config-airbnb-typescript": "^17.0.0",
+    "eslint-config-airbnb-typescript": "^17.1.0",
     "eslint-plugin-import": "^2.27.5",
     "gts": "^3.1.1",
-    "lerna": "^6.6.2",
-    "typescript": "^5.0.4",
+    "lerna": "^7.1.4",
+    "typescript": "^5.1.6",
     "yarn-upgrade-all": "^0.7.2"
   },
   "workspaces": [
