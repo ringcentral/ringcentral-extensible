@@ -157,6 +157,10 @@ class RingCentral implements RingCentralInterface {
   ): Promise<TokenInfo> {
     const getTokenRequest: GetTokenRequest = {};
     if ('username' in options) {
+      // eslint-disable-next-line no-console
+      console.warn(
+        'Username/password authentication is deprecated. Please migrate to the JWT grant type.',
+      );
       getTokenRequest.grant_type = 'password';
       getTokenRequest.username = options.username;
       getTokenRequest.extension = options.extension;
@@ -177,19 +181,9 @@ class RingCentral implements RingCentralInterface {
   }
 
   /**
-   * Each time you call token endpoint using this flow a new client session starts.
-   * It is associated with the issued token pair: access token and refresh token, returned in response to this request.
-   * To continue the session you can refresh the obtained access token and refresh token as many times as you need, using Refresh Token flow or the same flow.
-   * To start another client session you should call token endpoint using this flow again.
-   *
-   * Please consider that only 5 simultaneously active sessions per extension per application are supported.
-   * Thus if you exceed the number of sessions started per extension per application, the oldest one is ended.
-   *
-   * https://developers.ringcentral.com/api-reference/Get-Token
-   *
-   * @param options PasswordLoginFlowOpts
+   * Just a synonym of authorize
    */
-  async login(options: PasswordFlowOptions): Promise<TokenInfo> {
+  async login(options: PasswordFlowOptions | AuthCodeFlowOptions | JwtFlowOptions): Promise<TokenInfo> {
     return this.authorize(options);
   }
 
