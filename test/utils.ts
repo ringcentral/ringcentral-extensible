@@ -8,9 +8,7 @@ export const createRingCentral = async (): Promise<RingCentral> => {
     server: process.env.RINGCENTRAL_SERVER_URL!,
   });
   await rc.login({
-    username: process.env.RINGCENTRAL_USERNAME!,
-    extension: process.env.RINGCENTRAL_EXTENSION!,
-    password: process.env.RINGCENTRAL_PASSWORD!,
+    jwt: process.env.RINGCENTRAL_JWT_TOKEN!,
   });
   return rc;
 };

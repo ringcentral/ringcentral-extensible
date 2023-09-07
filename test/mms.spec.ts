@@ -3,19 +3,11 @@ import CreateMMSMessage from '@rc-ex/core/lib/definitions/CreateMMSMessage';
 import Attachment from '@rc-ex/core/lib/definitions/Attachment';
 import fs from 'fs';
 import path from 'path';
+import { createRingCentral } from './utils';
 
 describe('mms', () => {
   test('send mms', async () => {
-    const rc = new RingCentral({
-      clientId: process.env.RINGCENTRAL_CLIENT_ID!,
-      clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET!,
-      server: process.env.RINGCENTRAL_SERVER_URL!,
-    });
-    await rc.login({
-      username: process.env.RINGCENTRAL_USERNAME!,
-      extension: process.env.RINGCENTRAL_EXTENSION!,
-      password: process.env.RINGCENTRAL_PASSWORD!,
-    });
+    const rc = await createRingCentral();
     const createMMSMessage: CreateMMSMessage = {};
     createMMSMessage.from = { phoneNumber: process.env.RINGCENTRAL_USERNAME! };
     createMMSMessage.to = [{ phoneNumber: process.env.RINGCENTRAL_RECEIVER }];

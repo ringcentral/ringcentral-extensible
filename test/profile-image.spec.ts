@@ -1,19 +1,11 @@
 import RingCentral from '@rc-ex/core';
 import fs from 'fs';
 import path from 'path';
+import { createRingCentral } from './utils';
 
 describe('Profile image', () => {
   test('download', async () => {
-    const rc = new RingCentral({
-      clientId: process.env.RINGCENTRAL_CLIENT_ID!,
-      clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET!,
-      server: process.env.RINGCENTRAL_SERVER_URL!,
-    });
-    await rc.login({
-      username: process.env.RINGCENTRAL_USERNAME!,
-      extension: process.env.RINGCENTRAL_EXTENSION!,
-      password: process.env.RINGCENTRAL_PASSWORD!,
-    });
+    const rc = await createRingCentral();
     const buffer = await rc
       .restapi()
       .account()
@@ -26,16 +18,7 @@ describe('Profile image', () => {
   });
 
   test('upload', async () => {
-    const rc = new RingCentral({
-      clientId: process.env.RINGCENTRAL_CLIENT_ID!,
-      clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET!,
-      server: process.env.RINGCENTRAL_SERVER_URL!,
-    });
-    await rc.login({
-      username: process.env.RINGCENTRAL_USERNAME!,
-      extension: process.env.RINGCENTRAL_EXTENSION!,
-      password: process.env.RINGCENTRAL_PASSWORD!,
-    });
+    const rc = await createRingCentral();
     await rc
       .restapi()
       .account()

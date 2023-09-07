@@ -1,25 +1,17 @@
 import RingCentral from '@rc-ex/core';
 import PubNubExtension from '@rc-ex/pubnub';
 import waitFor from 'wait-for-async';
+import { createRingCentral } from './utils';
 
 describe('PubNub extension', () => {
   test('default', async () => {
-    const rc = new RingCentral({
-      clientId: process.env.RINGCENTRAL_CLIENT_ID!,
-      clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET!,
-      server: process.env.RINGCENTRAL_SERVER_URL!,
-    });
-    await rc.login({
-      username: process.env.RINGCENTRAL_USERNAME!,
-      extension: process.env.RINGCENTRAL_EXTENSION!,
-      password: process.env.RINGCENTRAL_PASSWORD!,
-    });
+    const rc = await createRingCentral();
     const pubNubExtension = new PubNubExtension();
     await rc.installExtension(pubNubExtension);
     let eventCount = 0;
     await pubNubExtension.subscribe(
       ['/restapi/v1.0/account/~/extension/~/message-store'],
-      (body) => {
+      (body: any) => {
         expect(body).not.toBeNull();
         expect(body).toBeDefined();
         eventCount += 1;

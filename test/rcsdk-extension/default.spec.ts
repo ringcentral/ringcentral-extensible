@@ -10,9 +10,7 @@ describe('RingCentral extension', () => {
       server: process.env.RINGCENTRAL_SERVER_URL!,
     });
     await sdk.login({
-      username: process.env.RINGCENTRAL_USERNAME!,
-      extension: process.env.RINGCENTRAL_EXTENSION!,
-      password: process.env.RINGCENTRAL_PASSWORD!,
+      jwt: process.env.RINGCENTRAL_JWT_TOKEN,
     });
 
     const rc = new RingCentral();

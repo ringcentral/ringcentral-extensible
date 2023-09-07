@@ -1,21 +1,13 @@
 import RingCentral from '@rc-ex/core';
 import WebSocketExtension from '@rc-ex/ws';
 import waitFor from 'wait-for-async';
+import { createRingCentral } from '../utils';
 
 jest.setTimeout(999999999);
 
 describe('WebSocket', () => {
   test('auto recover', async () => {
-    const rc = new RingCentral({
-      clientId: process.env.RINGCENTRAL_CLIENT_ID!,
-      clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET!,
-      server: process.env.RINGCENTRAL_SERVER_URL!,
-    });
-    await rc.login({
-      username: process.env.RINGCENTRAL_USERNAME!,
-      extension: process.env.RINGCENTRAL_EXTENSION!,
-      password: process.env.RINGCENTRAL_PASSWORD!,
-    });
+    const rc = await createRingCentral();
     const webSocketExtension = new WebSocketExtension({
       // debugMode: true,
     });
@@ -24,7 +16,7 @@ describe('WebSocket', () => {
     let eventCount = 0;
     await webSocketExtension.subscribe(
       ['/restapi/v1.0/account/~/extension/~/message-store'],
-      (event) => {
+      (event: any) => {
         expect(event).toBeDefined();
         eventCount += 1;
       },
