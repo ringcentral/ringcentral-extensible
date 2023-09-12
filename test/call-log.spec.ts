@@ -1,4 +1,3 @@
-// import RingCentral from '@rc-ex/core';
 // import winston from 'winston';
 
 import { createRingCentral } from './utils';

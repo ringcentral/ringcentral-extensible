@@ -1,4 +1,3 @@
-import RingCentral from '@rc-ex/core';
 import Utils from '@rc-ex/core/lib/Utils';
 import FaxResponse from '@rc-ex/core/lib/definitions/FaxResponse';
 import GetMessageInfoResponse from '@rc-ex/core/lib/definitions/GetMessageInfoResponse';

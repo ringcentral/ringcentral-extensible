@@ -1,4 +1,3 @@
-// import RingCentral from '@rc-ex/core';
 // import {
 //   MeetingRequestResource,
 //   MeetingScheduleResource,

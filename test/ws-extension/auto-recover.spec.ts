@@ -1,4 +1,3 @@
-import RingCentral from '@rc-ex/core';
 import WebSocketExtension from '@rc-ex/ws';
 import waitFor from 'wait-for-async';
 import { createRingCentral } from '../utils';

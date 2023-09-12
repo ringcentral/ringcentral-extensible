@@ -1,4 +1,3 @@
-import RingCentral from '@rc-ex/core';
 import { createRingCentral } from './utils';
 
 describe('manage token', () => {

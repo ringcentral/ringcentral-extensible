@@ -1,4 +1,3 @@
-import RingCentral from '@rc-ex/core';
 import WebSocketExtension, { Events } from '@rc-ex/ws';
 import waitFor from 'wait-for-async';
 

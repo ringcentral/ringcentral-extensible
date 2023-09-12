@@ -1,4 +1,3 @@
-import RingCentral from '@rc-ex/core';
 import PubNubExtension from '@rc-ex/pubnub';
 import waitFor from 'wait-for-async';
 import { createRingCentral } from './utils';

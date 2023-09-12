@@ -1,4 +1,3 @@
-import RingCentral from '@rc-ex/core';
 import WebSocketExtension from '@rc-ex/ws';
 
 import { createRingCentral } from '../utils';

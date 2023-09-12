@@ -1,6 +1,5 @@
 import path from 'path';
 import dotenv from 'dotenv-override-true';
-import RingCentral from '@rc-ex/core';
 import DebugExtension from '@rc-ex/debug';
 import { createRingCentral } from './utils';
 

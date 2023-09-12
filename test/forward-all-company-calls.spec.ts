@@ -1,15 +1,13 @@
-import { createRingCentral } from './utils';
+// import { createRingCentral } from './utils';
 
 describe('Forward all company calls', () => {
   test('patch', async () => {
-    // todo: uncomment, error message: Parameter [extension] value is invalid.
-    // const rc = await createRingCentral();
-    // const r = await rc.restapi().account().forwardAllCalls().patch({
-    //   extension: { id: rc.token?.owner_id },
-    //   enabled: false,
-    //   callHandlingAction: 'Bypass',
-    // });
-    // console.log(JSON.stringify(r, null, 2));
-    // await rc.revoke();
+  // todo: uncomment, "FACC rule is not found."
+    //     const rc = await createRingCentral();
+    //     const r = await rc.restapi().account().forwardAllCalls().patch({
+    //       enabled: false,
+    //     });
+    //     expect(r.enabled).toBe(false);
+    //     await rc.revoke();
   });
 });

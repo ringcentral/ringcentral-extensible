@@ -1,4 +1,3 @@
-import RingCentral from '@rc-ex/core';
 import fs from 'fs';
 import path from 'path';
 import { createRingCentral } from './utils';
