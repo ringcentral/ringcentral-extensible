@@ -139,11 +139,7 @@ By default lerna check git tag to determine which packages to publish.
 
 ### NPM 2FA
 
-Login npmjs.com to configure 2FA, set up authenticator app.
-
-`yarn login` to specify username and email.
-
-Before publish, it will ask for a one time password, which could be found in the authenticator app.
+I don't know how to make it work with lerna and I have to disable it via npmjs.com GUI: I disabled "Require two-factor authentication for write actions".
 
 
 ## Add dependency
