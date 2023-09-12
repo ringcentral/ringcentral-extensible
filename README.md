@@ -105,11 +105,7 @@ If there is no CDN uri provided, construct the uri as [sample code](./packages/c
 
 ### Regenerate code using latest swagger spec
 
-Make a copy of the `packages/core/.env.sample` file and name it `packages/core/.env`, edit it to specify path to swagger spec file.
-
-```
-yarn generate
-```
+Please refer to the [RingCentral Code Generator](https://github.com/tylerlong/ringcentral-code-generator-typescript) project.
 
 
 ### Test
