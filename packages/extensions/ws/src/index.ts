@@ -259,13 +259,16 @@ class WebSocketExtension extends SdkExtension {
     if (this.options.autoRecover?.enabled !== true) {
       return;
     }
+    if (this.ws?.readyState !== OPEN) {
+      return;
+    }
     try {
-      if (this.ws?.ping) {
+      if (this.ws.ping) {
         // node.js
-        this.ws?.ping();
+        this.ws.ping();
       } else {
         // browser
-        await this.ws?.send(
+        await this.ws.send(
           JSON.stringify([
             {
               type: 'Heartbeat',
@@ -275,7 +278,7 @@ class WebSocketExtension extends SdkExtension {
         );
       }
     } catch (e) {
-      this.ws?.close(); // Explicitly mark WS as closed
+      this.ws.close(); // Explicitly mark WS as closed
     }
   }
 
