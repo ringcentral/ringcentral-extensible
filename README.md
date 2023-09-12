@@ -131,8 +131,19 @@ t=auto-recover yarn test
 Update version number in `packages/core/src/Rest.ts`
 
 ```
-yarn lerna publish
+yarn lerna publish from-package
 ```
+
+By default lerna check git tag to determine which packages to publish.
+`from-package` will make lerna check npmjs.com instead.
+
+### NPM 2FA
+
+Login npmjs.com to configure 2FA, set up authenticator app.
+
+`yarn login` to specify username and email.
+
+Before publish, it will ask for a one time password, which could be found in the authenticator app.
 
 
 ## Add dependency
