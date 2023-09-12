@@ -18,8 +18,8 @@
     "access": "public"
   },
   "dependencies": {
-    "@types/urijs": "^1.19.19",
-    "axios": "^1.4.0",
+    "@types/urijs": "^1.19.20",
+    "axios": "^1.5.0",
     "urijs": "^1.19.11",
     "wait-for-async": "^0.6.1"
   },

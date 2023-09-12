@@ -23,7 +23,7 @@
     "hyperid": "^3.1.1",
     "isomorphic-ws": "^5.0.0",
     "wait-for-async": "^0.6.1",
-    "ws": "^8.13.0"
+    "ws": "^8.14.1"
   },
   "devDependencies": {
     "@rc-ex/core": "file:../../core"

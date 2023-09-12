@@ -39,7 +39,7 @@ class FormData {
         fileBuffer = Buffer.from(await formFile.content.arrayBuffer());
       } else {
         // NodeJS.ReadableStream
-        fileBuffer = await stream2buffer(formFile.content);
+        fileBuffer = await stream2buffer(formFile.content as unknown as Stream);
       }
       buffer = Buffer.concat([buffer, fileBuffer]);
     }
