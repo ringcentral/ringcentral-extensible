@@ -18,6 +18,13 @@ interface SignupInfoResource {
    * Updates 'Send Marketing Information' flag on web interface
    */
   marketingAccepted?: boolean;
+
+  /**
+   * The timestamp of account creation
+   * Format: date-time
+   * Example: 2023-03-10T18:07:52.534Z
+   */
+  creationTime?: string;
 }
 
 export default SignupInfoResource;

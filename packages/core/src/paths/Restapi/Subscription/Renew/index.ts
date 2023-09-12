@@ -17,6 +17,9 @@ class Index {
 
   /**
    * Renews the existing subscription (this request comes with empty body).
+ *
+ * Please note that `WebSocket` subscriptions are renewed automatically while websocket session is alive.
+ *
    * HTTP Method: post
    * Endpoint: /restapi/{apiVersion}/subscription/{subscriptionId}/renew
    * Rate Limit Group: Light

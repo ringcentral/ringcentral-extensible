@@ -33,6 +33,12 @@ interface SessionLivestreamMinimalModel {
   previousLivestreamStatus?: ('Initialized' | 'Authorized' | 'Configured' | 'PublishSetup' | 'Publishing' | 'Paused' | 'Error' | 'Break' | 'Deleted' | 'Completed');
 
   /**
+   * Time at which the session started to publish media to livestream service provider.
+   * Format: date-time
+   */
+  livestreamStartTime?: string;
+
+  /**
    */
   error?: ApiError;
 }

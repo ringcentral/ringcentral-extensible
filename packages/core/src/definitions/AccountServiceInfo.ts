@@ -6,6 +6,7 @@ import BillingPlanInfo from './BillingPlanInfo';
 import ServiceFeatureInfo from './ServiceFeatureInfo';
 import AccountLimits from './AccountLimits';
 import PackageInfo from './PackageInfo';
+import UBrandInfo from './UBrandInfo';
 
 /**
  * Account service information, including brand, service plan and billing plan
@@ -55,6 +56,10 @@ interface AccountServiceInfo {
   /**
    */
   package?: PackageInfo;
+
+  /**
+   */
+  uBrand?: UBrandInfo;
 }
 
 export default AccountServiceInfo;

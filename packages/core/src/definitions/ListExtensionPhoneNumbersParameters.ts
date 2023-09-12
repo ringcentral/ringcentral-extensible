@@ -10,7 +10,7 @@ interface ListExtensionPhoneNumbersParameters {
   /**
    * Usage type of a phone number
    */
-  usageType?: ('MainCompanyNumber' | 'AdditionalCompanyNumber' | 'CompanyNumber' | 'DirectNumber' | 'CompanyFaxNumber' | 'ForwardedNumber' | 'ForwardedCompanyNumber' | 'BusinessMobileNumber' | 'IntegrationNumber')[];
+  usageType?: ('MainCompanyNumber' | 'AdditionalCompanyNumber' | 'CompanyNumber' | 'DirectNumber' | 'CompanyFaxNumber' | 'ForwardedNumber' | 'ForwardedCompanyNumber' | 'BusinessMobileNumber' | 'PartnerBusinessMobileNumber' | 'IntegrationNumber')[];
 
   /**
    * Indicates a page number to retrieve. Only positive number values

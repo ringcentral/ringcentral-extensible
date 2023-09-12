@@ -26,12 +26,14 @@ interface ListDirectoryEntriesParameters {
   page?: number;
 
   /**
-   * Records count to be returned per one page. The default value is 1000. Specific keyword values: `all` - all records are returned in one page; `max` - maximum count of records that can be returned in one page
+   * Records count to be returned per one page. It can be either integer or string with the specific keyword values:
+ *  - `all` - all records are returned in one page
+ *  - `max` - maximum count of records that can be returned in one page
    * Maximum: 2000
    * Format: int32
    * Default: 1000
    */
-  perPage?: number;
+  perPage?: ('max' | 'all');
 
   /**
    * Internal identifier of the business site to which extensions belong

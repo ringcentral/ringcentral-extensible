@@ -62,7 +62,7 @@ interface CompanyPhoneNumberInfo {
  *  Numbers of 'NumberPool' type wont't be returned for phone number list
  *  requests
    */
-  usageType?: ('MainCompanyNumber' | 'AdditionalCompanyNumber' | 'CompanyNumber' | 'DirectNumber' | 'CompanyFaxNumber' | 'ForwardedNumber' | 'ForwardedCompanyNumber' | 'ContactCenterNumber' | 'ConferencingNumber' | 'MeetingsNumber' | 'NumberPool' | 'BusinessMobileNumber' | 'IntegrationNumber');
+  usageType?: ('MainCompanyNumber' | 'AdditionalCompanyNumber' | 'CompanyNumber' | 'DirectNumber' | 'CompanyFaxNumber' | 'ForwardedNumber' | 'ForwardedCompanyNumber' | 'ContactCenterNumber' | 'ConferencingNumber' | 'MeetingsNumber' | 'NumberPool' | 'BusinessMobileNumber' | 'PartnerBusinessMobileNumber' | 'IntegrationNumber');
 
   /**
    */
@@ -76,6 +76,11 @@ interface CompanyPhoneNumberInfo {
    * Vanity pattern for this number. Returned only when vanity search option is requested. Vanity pattern corresponds to request parameters nxx plus line or numberPattern
    */
   vanityPattern?: string;
+
+  /**
+   * Specifies if a phone number is primary, i.e. displayed as 'main number' and called by default
+   */
+  primary?: boolean;
 }
 
 export default CompanyPhoneNumberInfo;

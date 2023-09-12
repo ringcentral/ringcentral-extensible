@@ -12,6 +12,11 @@ interface EmergencyLocationInfo {
    * Emergency response location name
    */
   name?: string;
+
+  /**
+   * Address format id
+   */
+  addressFormatId?: string;
 }
 
 export default EmergencyLocationInfo;

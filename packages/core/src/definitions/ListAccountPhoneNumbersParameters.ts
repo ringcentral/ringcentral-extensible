@@ -20,7 +20,7 @@ interface ListAccountPhoneNumbersParameters {
   /**
    * Usage type of a phone number
    */
-  usageType?: ('MainCompanyNumber' | 'AdditionalCompanyNumber' | 'CompanyNumber' | 'DirectNumber' | 'CompanyFaxNumber' | 'ForwardedNumber' | 'ForwardedCompanyNumber' | 'ContactCenterNumber' | 'ConferencingNumber' | 'MeetingsNumber' | 'BusinessMobileNumber' | 'IntegrationNumber')[];
+  usageType?: ('MainCompanyNumber' | 'AdditionalCompanyNumber' | 'CompanyNumber' | 'DirectNumber' | 'CompanyFaxNumber' | 'ForwardedNumber' | 'ForwardedCompanyNumber' | 'ContactCenterNumber' | 'ConferencingNumber' | 'MeetingsNumber' | 'BusinessMobileNumber' | 'PartnerBusinessMobileNumber' | 'IntegrationNumber')[];
 
   /**
    * Status of a phone number. Multiple values are supported

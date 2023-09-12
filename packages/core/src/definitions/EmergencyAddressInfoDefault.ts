@@ -1,24 +1,25 @@
 /**
- * Automatically determined emergency address. If `emergencyAddressState`
- * value is 'Assigned', then this address is assigned to the current device.
- * If `emergencyAddressState` value is 'Unconfirmed', then the specified address
- * must be confirmed by the user before being registered as emergency address
- * for the current device. In all other cases the value is null
+ * Emergency address information (or information assigned to the
+ * switch or wireless point - in case of using them). Only one of a pair
+ * `emergencyAddress` or `emergencyLocationId` should be specified,
+ * otherwise an error is returned
  *
 */
-interface DeviceEmergencyAddress {
+interface EmergencyAddressInfoDefault {
   /**
    * Name of a customer
    */
   customerName?: string;
 
   /**
-   * Street address, line 1 - street address, P.O. box, company name, c/o
+   * Street address, line 1 - street address, P.O. box, company
+ *  name, c/o
    */
   street?: string;
 
   /**
-   * Street address, line 2 - apartment, suite, unit, building, floor, etc.
+   * Street address, line 2 - apartment, suite, unit, building,
+ *  floor, etc.
    */
   street2?: string;
 
@@ -80,4 +81,4 @@ interface DeviceEmergencyAddress {
   syncStatus?: ('Verified' | 'Updated' | 'Deleted' | 'NotRequired' | 'Unsupported' | 'Failed');
 }
 
-export default DeviceEmergencyAddress;
+export default EmergencyAddressInfoDefault;

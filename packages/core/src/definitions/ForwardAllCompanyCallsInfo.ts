@@ -4,7 +4,7 @@ import ForwardAllCallsReason from './ForwardAllCallsReason';
 
 interface ForwardAllCompanyCallsInfo {
   /**
-   * Indicates whether the Forward All Company Calls feature is enabled or disabled for account
+   * Indicates whether the *Forward All Company Calls* feature is enabled or disabled for an account
    */
   enabled?: boolean;
 

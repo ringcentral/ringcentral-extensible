@@ -1,5 +1,5 @@
 import SwitchSiteInfo from './SwitchSiteInfo';
-import EmergencyAddressInfo from './EmergencyAddressInfo';
+import EmergencyAddressInfoDefault from './EmergencyAddressInfoDefault';
 
 interface UpdateSwitchInfo {
   /**
@@ -15,6 +15,11 @@ interface UpdateSwitchInfo {
   chassisId?: string;
 
   /**
+   * Switch entity extension for better diversity. Should be used together with chassisId.
+   */
+  port?: string;
+
+  /**
    * Name of a network switch
    */
   name?: string;
@@ -25,7 +30,7 @@ interface UpdateSwitchInfo {
 
   /**
    */
-  emergencyAddress?: EmergencyAddressInfo;
+  emergencyAddress?: EmergencyAddressInfoDefault;
 }
 
 export default UpdateSwitchInfo;

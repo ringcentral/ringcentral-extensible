@@ -1,4 +1,4 @@
-import EmergencyLocationAddressInfo from './EmergencyLocationAddressInfo';
+import EmergencyLocationResourceAddress from './EmergencyLocationResourceAddress';
 import ShortSiteInfo from './ShortSiteInfo';
 import LocationOwnerInfo from './LocationOwnerInfo';
 
@@ -13,7 +13,7 @@ interface EmergencyLocationResource {
 
   /**
    */
-  address?: EmergencyLocationAddressInfo;
+  address?: EmergencyLocationResourceAddress;
 
   /**
    * Emergency response location name
@@ -56,6 +56,11 @@ interface EmergencyLocationResource {
    * List of private location owners
    */
   owners?: LocationOwnerInfo[];
+
+  /**
+   * Address format id
+   */
+  addressFormatId?: string;
 }
 
 export default EmergencyLocationResource;

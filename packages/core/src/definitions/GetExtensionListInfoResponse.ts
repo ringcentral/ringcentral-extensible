@@ -3,6 +3,7 @@ import ExtensionPermissions from './ExtensionPermissions';
 import ProfileImageInfo from './ProfileImageInfo';
 import CallQueueExtensionInfo from './CallQueueExtensionInfo';
 import ProvisioningSiteInfo from './ProvisioningSiteInfo';
+import AssignedCountryInfo from './AssignedCountryInfo';
 
 interface GetExtensionListInfoResponse {
   /**
@@ -73,6 +74,10 @@ interface GetExtensionListInfoResponse {
   /**
    */
   site?: ProvisioningSiteInfo;
+
+  /**
+   */
+  assignedCountry?: AssignedCountryInfo;
 }
 
 export default GetExtensionListInfoResponse;

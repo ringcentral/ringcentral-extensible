@@ -1,8 +1,16 @@
+/**
+ * Transfer extension settings, set/returned if `callHandlingAction` is specified as `TransferToExtension`
+*/
 interface TransferExtensionInfo {
   /**
-   * Internal identifier of an extension the call is transferred to
+   * Internal identifier of an extension
    */
   id?: string;
+
+  /**
+   * Canonical URI of an extension resource
+   */
+  uri?: string;
 
   /**
    * Extension name

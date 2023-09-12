@@ -1,18 +1,9 @@
 import CallLogRecordDeviceInfo from './CallLogRecordDeviceInfo';
 
 /**
- * Target caller info
+ * Target caller information
 */
 interface CallLogToParty {
-  /**
-   * Contains party location (city, state) if one can be determined from phoneNumber. This property is filled only when phoneNumber is not empty and server can calculate location information from it (for example, this information is unavailable for US toll-free numbers)
-   */
-  location?: string;
-
-  /**
-   */
-  device?: CallLogRecordDeviceInfo;
-
   /**
    * Phone number of a party. Usually it is a plain number including country and area code like 18661234567. But sometimes it could be returned from database with some formatting applied, for example (866)123-4567. This property is filled in all cases where parties communicate by means of global phone numbers, for example when calling to direct numbers or sending/receiving SMS
    */
@@ -34,7 +25,16 @@ interface CallLogToParty {
   name?: string;
 
   /**
-   * The dialed phone number without modifications. Returned for outbound calls and Overlay accounts
+   * Contains party location (city, state) if one can be determined from phoneNumber. This property is filled only when phoneNumber is not empty and server can calculate location information from it (for example, this information is unavailable for US toll-free numbers)
+   */
+  location?: string;
+
+  /**
+   */
+  device?: CallLogRecordDeviceInfo;
+
+  /**
+   * Dialed phone number without any format modifications. Returned for outbound calls
    */
   dialedPhoneNumber?: string;
 }

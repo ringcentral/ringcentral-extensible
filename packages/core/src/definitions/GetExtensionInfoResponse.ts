@@ -11,6 +11,7 @@ import ExtensionServiceFeatureInfo from './ExtensionServiceFeatureInfo';
 import ExtensionStatusInfo from './ExtensionStatusInfo';
 import CallQueueExtensionInfo from './CallQueueExtensionInfo';
 import ProvisioningSiteInfo from './ProvisioningSiteInfo';
+import AssignedCountryInfo from './AssignedCountryInfo';
 
 interface GetExtensionInfoResponse {
   /**
@@ -102,8 +103,7 @@ interface GetExtensionInfoResponse {
   serviceFeatures?: ExtensionServiceFeatureInfo[];
 
   /**
-   * Specifies extension configuration wizard state (web service
- *  setup).
+   * Specifies extension configuration wizard state (web service setup)
    * Default: NotStarted
    */
   setupWizardState?: ('NotStarted' | 'Incomplete' | 'Completed');
@@ -145,6 +145,10 @@ interface GetExtensionInfoResponse {
   /**
    */
   site?: ProvisioningSiteInfo;
+
+  /**
+   */
+  assignedCountry?: AssignedCountryInfo;
 }
 
 export default GetExtensionInfoResponse;

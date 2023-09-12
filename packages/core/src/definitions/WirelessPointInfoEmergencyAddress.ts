@@ -1,11 +1,4 @@
-/**
- * Emergency address information (or information assigned to the
- * switch or wireless point - in case of using them). Only one of a pair
- * `emergencyAddress` or `emergencyLocationId` should be specified,
- * otherwise an error is returned
- *
-*/
-interface EmergencyAddressInfo {
+interface WirelessPointInfoEmergencyAddress {
   /**
    * Name of a customer
    */
@@ -79,6 +72,21 @@ interface EmergencyAddressInfo {
  *  to 'True'
    */
   syncStatus?: ('Verified' | 'Updated' | 'Deleted' | 'NotRequired' | 'Unsupported' | 'Failed');
+
+  /**
+   * (Optional) Building name
+   */
+  buildingName?: string;
+
+  /**
+   * Street type
+   */
+  streetType?: string;
+
+  /**
+   * Building/street number
+   */
+  buildingNumber?: string;
 }
 
-export default EmergencyAddressInfo;
+export default WirelessPointInfoEmergencyAddress;

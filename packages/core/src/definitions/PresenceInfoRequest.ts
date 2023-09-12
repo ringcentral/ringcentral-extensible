@@ -22,6 +22,12 @@ interface PresenceInfoRequest {
   /**
    */
   pickUpCallsOnHold?: boolean;
+
+  /**
+   * Configures the user presence visibility. When the `allowSeeMyPresence` parameter is set to 'True',
+ *  the following visibility options are supported via this parameter - All, None, PermittedUsers
+   */
+  callerIdVisibility?: ('All' | 'None' | 'PermittedUsers');
 }
 
 export default PresenceInfoRequest;

@@ -31,7 +31,7 @@ interface AccountPhoneNumberInfo {
    * Usage type of a phone number
    * Required
    */
-  usageType?: ('MainCompanyNumber' | 'DirectNumber' | 'Inventory' | 'AdditionalCompanyNumber' | 'CompanyNumber' | 'PhoneLine' | 'CompanyFaxNumber' | 'ForwardedNumber' | 'ForwardedCompanyNumber' | 'ContactCenterNumber' | 'ConferencingNumber' | 'MeetingsNumber' | 'BusinessMobileNumber' | 'ELIN');
+  usageType?: ('MainCompanyNumber' | 'DirectNumber' | 'Inventory' | 'InventoryPartnerBusinessMobileNumber' | 'PartnerBusinessMobileNumber' | 'AdditionalCompanyNumber' | 'CompanyNumber' | 'PhoneLine' | 'CompanyFaxNumber' | 'ForwardedNumber' | 'ForwardedCompanyNumber' | 'ContactCenterNumber' | 'ConferencingNumber' | 'MeetingsNumber' | 'BusinessMobileNumber' | 'ELIN');
 
   /**
    * Status of a phone number. If the value is 'Normal', the phone number is ready to be used. Otherwise it is an external number not yet ported to RingCentral

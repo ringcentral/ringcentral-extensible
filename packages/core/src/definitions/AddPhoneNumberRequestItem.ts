@@ -8,11 +8,12 @@ interface AddPhoneNumberRequestItem {
   phoneNumber?: string;
 
   /**
-   * Only "Inventory" is supported now.
- *  Later we may support other values like "ForwardedNumber" etc.
+   * Usage type of a phone number. Currently we support the following three enum values: 'Inventory', 'InventoryPartnerBusinessMobileNumber' and 'PartnerBusinessMobileNumber'.
+ *  Later we may support other values like 'ForwardedNumber' etc.
    * Required
+   * Default: Inventory
    */
-  usageType?: ('Inventory');
+  usageType?: ('Inventory' | 'InventoryPartnerBusinessMobileNumber' | 'PartnerBusinessMobileNumber');
 }
 
 export default AddPhoneNumberRequestItem;

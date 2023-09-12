@@ -1,7 +1,6 @@
 import SendActivationEmail from './SendActivationEmail';
 import SendWelcomeEmail from './SendWelcomeEmail';
 import BatchProvisioning from './BatchProvisioning';
-import ForwardedNumbers from './ForwardedNumbers';
 import DeviceInventory from './DeviceInventory';
 import PhoneNumbers from './PhoneNumbers';
 import Extensions from './Extensions';
@@ -64,10 +63,6 @@ class Index {
 
   public deviceInventory(): DeviceInventory {
     return new DeviceInventory(this);
-  }
-
-  public forwardedNumbers(): ForwardedNumbers {
-    return new ForwardedNumbers(this);
   }
 
   public batchProvisioning(): BatchProvisioning {

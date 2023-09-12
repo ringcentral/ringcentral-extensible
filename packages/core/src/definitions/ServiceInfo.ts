@@ -3,9 +3,10 @@ import BrandInfo from './BrandInfo';
 import ServicePlanInfo from './ServicePlanInfo';
 import TargetServicePlanInfo from './TargetServicePlanInfo';
 import CountryInfoShortModel from './CountryInfoShortModel';
+import UBrandInfo from './UBrandInfo';
 
 /**
- * Account service information, including brand, service plan and
+ * Account service information, including brand, sub-brand, service plan and
  * billing plan
  *
 */
@@ -35,6 +36,10 @@ interface ServiceInfo {
   /**
    */
   contractedCountry?: CountryInfoShortModel;
+
+  /**
+   */
+  uBrand?: UBrandInfo;
 }
 
 export default ServiceInfo;

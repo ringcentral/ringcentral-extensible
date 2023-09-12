@@ -4,7 +4,7 @@
  * or `emergencyLocationId` should be specified, otherwise an error is returned
  *
 */
-interface LocationUpdatesEmergencyAddressInfo {
+interface LocationUpdatesEmergencyAddressInfoAu {
   /**
    * Country name
    */
@@ -69,6 +69,21 @@ interface LocationUpdatesEmergencyAddressInfo {
    * Postal (Zip) code
    */
   zip?: string;
+
+  /**
+   * (Optional) Building name
+   */
+  buildingName?: string;
+
+  /**
+   * Street type
+   */
+  streetType?: string;
+
+  /**
+   * Building/street number
+   */
+  buildingNumber?: string;
 }
 
-export default LocationUpdatesEmergencyAddressInfo;
+export default LocationUpdatesEmergencyAddressInfoAu;

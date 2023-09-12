@@ -31,8 +31,7 @@ interface LanguageInfo {
   localeCode?: string;
 
   /**
-   * Country code according to the ISO standard, see
- *  [ISO 3166](https://www.iso.org/iso-3166-country-codes.html)
+   * Country code according to the ISO standard, see [ISO 3166](https://www.iso.org/iso-3166-country-codes.html)
    */
   isoCode?: string;
 
@@ -45,6 +44,16 @@ interface LanguageInfo {
    * Indicates whether a language is available as UI language
    */
   ui?: boolean;
+
+  /**
+   * Time format
+   */
+  timeFormat?: string;
+
+  /**
+   * Date format
+   */
+  dateFormat?: string;
 }
 
 export default LanguageInfo;

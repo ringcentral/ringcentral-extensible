@@ -110,7 +110,6 @@ class Index {
 
   /**
    * Updates the user settings.
- *
    * HTTP Method: put
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}
    * Rate Limit Group: Medium

@@ -10,9 +10,8 @@ interface UserTransitionInfo {
   sendWelcomeEmailsToUsers?: boolean;
 
   /**
-   * Specifies if a welcome/activation email is sent to
- *  the new users (within extension status changing from
- *  'Unassigned' to 'NotActivated/Disabled')"
+   * Specifies if a welcome/activation email is sent to the new users (within extension status changing from
+ *  'Unassigned' to 'NotActivated/Disabled')
    */
   sendWelcomeEmail?: boolean;
 }

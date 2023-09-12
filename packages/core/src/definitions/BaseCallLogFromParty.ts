@@ -1,9 +1,9 @@
 /**
- * Sender/initiator caller info
+ * Sender/initiator caller information
 */
 interface BaseCallLogFromParty {
   /**
-   * The dialer phone number without modifications. Returned for inbound calls and Overlay accounts
+   * Dialer phone number without any format modifications. Returned for inbound calls
    */
   dialerPhoneNumber?: string;
 }

@@ -17,7 +17,7 @@ class Index {
   }
 
   /**
-   * Adds BYOD devices to an account in bulk
+   * Adds multiple BYOD (customer provided) devices to an account.
    * HTTP Method: post
    * Endpoint: /restapi/v2/accounts/{accountId}/devices/bulk-add
    * Rate Limit Group: Heavy

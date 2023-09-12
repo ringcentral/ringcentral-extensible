@@ -24,12 +24,6 @@ interface WcsSessionBaseModel {
   timeZone?: string;
 
   /**
-   * Session locale code. Can't be blank or null
-   * Example: en-US
-   */
-  localeCode?: string;
-
-  /**
    * The time offset (positive, in seconds) indicating how much in advance
  *  (comparing to "scheduledStartTime") panel members should join for the pre-webinar team sync
    * Format: int32

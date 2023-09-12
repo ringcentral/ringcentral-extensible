@@ -1,6 +1,6 @@
 import DeviceModelInfo from './DeviceModelInfo';
 import DeviceExtensionInfo from './DeviceExtensionInfo';
-import DeviceEmergencyServiceAddressResource from './DeviceEmergencyServiceAddressResource';
+import DeviceEmergencyServiceAddressResourceDefault from './DeviceEmergencyServiceAddressResourceDefault';
 import SipRegistrationDeviceEmergencyInfo from './SipRegistrationDeviceEmergencyInfo';
 import ShippingInfo from './ShippingInfo';
 import DevicePhoneLinesInfo from './DevicePhoneLinesInfo';
@@ -63,7 +63,7 @@ interface SipRegistrationDeviceInfo {
 
   /**
    */
-  emergencyServiceAddress?: DeviceEmergencyServiceAddressResource;
+  emergencyServiceAddress?: DeviceEmergencyServiceAddressResourceDefault;
 
   /**
    */

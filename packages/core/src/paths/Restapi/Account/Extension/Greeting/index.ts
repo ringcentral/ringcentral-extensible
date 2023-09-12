@@ -1,3 +1,4 @@
+import Content from './Content';
 import Utils from '../../../../../Utils';
 import CustomUserGreetingInfo from '../../../../../definitions/CustomUserGreetingInfo';
 import CreateCustomUserGreetingParameters from '../../../../../definitions/CreateCustomUserGreetingParameters';
@@ -52,6 +53,10 @@ class Index {
     }
     const r = await this.rc.get<CustomUserGreetingInfo>(this.path(), undefined, restRequestConfig);
     return r.data;
+  }
+
+  public content(): Content {
+    return new Content(this);
   }
 }
 export default Index;

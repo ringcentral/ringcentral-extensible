@@ -1,4 +1,5 @@
 import CallParty from '../../../../../../../definitions/CallParty';
+import HoldCallPartyRequest from '../../../../../../../definitions/HoldCallPartyRequest';
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../../types';
 
 class Index {
@@ -22,8 +23,8 @@ class Index {
    * Rate Limit Group: Light
    * App Permission: CallControl
    */
-  public async post(restRequestConfig?: RestRequestConfig): Promise<CallParty> {
-    const r = await this.rc.post<CallParty>(this.path(), undefined, restRequestConfig);
+  public async post(holdCallPartyRequest: HoldCallPartyRequest, restRequestConfig?: RestRequestConfig): Promise<CallParty> {
+    const r = await this.rc.post<CallParty>(this.path(), holdCallPartyRequest, undefined, restRequestConfig);
     return r.data;
   }
 }

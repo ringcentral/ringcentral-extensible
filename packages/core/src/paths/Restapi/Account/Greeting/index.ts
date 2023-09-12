@@ -1,3 +1,4 @@
+import Content from './Content';
 import Utils from '../../../../Utils';
 import CustomCompanyGreetingInfo from '../../../../definitions/CustomCompanyGreetingInfo';
 import CreateCompanyGreetingRequest from '../../../../definitions/CreateCompanyGreetingRequest';
@@ -29,6 +30,10 @@ class Index {
     const formData = await Utils.getFormData(createCompanyGreetingRequest);
     const r = await this.rc.post<CustomCompanyGreetingInfo>(this.path(), formData, undefined, restRequestConfig);
     return r.data;
+  }
+
+  public content(): Content {
+    return new Content(this);
   }
 }
 export default Index;

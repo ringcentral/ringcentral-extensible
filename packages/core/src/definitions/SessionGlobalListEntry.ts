@@ -51,12 +51,6 @@ interface SessionGlobalListEntry {
   timeZone?: string;
 
   /**
-   * Session locale code. Can't be blank or null
-   * Example: en-US
-   */
-  localeCode?: string;
-
-  /**
    * The time offset (positive, in seconds) indicating how much in advance
  *  (comparing to "scheduledStartTime") panel members should join for the pre-webinar team sync
    * Format: int32
@@ -88,6 +82,12 @@ interface SessionGlobalListEntry {
    * Example: https://v.ringcentral.com/w/join/de7yd8ew7yfsdfjh899843rgj
    */
   hostJoinUri?: string;
+
+  /**
+   * Session locale code. Can't be blank or null
+   * Example: en-US
+   */
+  localeCode?: string;
 }
 
 export default SessionGlobalListEntry;

@@ -1,5 +1,6 @@
 import Check from './Check';
 import AuthProfileResource from '../../../../../definitions/AuthProfileResource';
+import ReadAuthorizationProfileParameters from '../../../../../definitions/ReadAuthorizationProfileParameters';
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
@@ -24,8 +25,8 @@ class Index {
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/authz-profile
    * Rate Limit Group: Medium
    */
-  public async get(restRequestConfig?: RestRequestConfig): Promise<AuthProfileResource> {
-    const r = await this.rc.get<AuthProfileResource>(this.path(), undefined, restRequestConfig);
+  public async get(queryParams?: ReadAuthorizationProfileParameters, restRequestConfig?: RestRequestConfig): Promise<AuthProfileResource> {
+    const r = await this.rc.get<AuthProfileResource>(this.path(), queryParams, restRequestConfig);
     return r.data;
   }
 

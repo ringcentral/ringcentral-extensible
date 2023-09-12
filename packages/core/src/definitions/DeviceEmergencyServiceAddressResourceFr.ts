@@ -1,7 +1,7 @@
 /**
  * Address for emergency cases. The same emergency address is assigned to all the numbers of one device
 */
-interface DeviceEmergencyServiceAddressResource {
+interface DeviceEmergencyServiceAddressResourceFr {
   /**
    */
   street?: string;
@@ -66,6 +66,16 @@ interface DeviceEmergencyServiceAddressResource {
    * Specifies if emergency address is out of country
    */
   outOfCountry?: boolean;
+
+  /**
+   * (Optional) Building name
+   */
+  buildingName?: string;
+
+  /**
+   * Building/street number
+   */
+  buildingNumber?: string;
 }
 
-export default DeviceEmergencyServiceAddressResource;
+export default DeviceEmergencyServiceAddressResourceFr;

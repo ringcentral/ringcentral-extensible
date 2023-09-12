@@ -1,4 +1,4 @@
-import UserAnsweringRuleListRecord from './UserAnsweringRuleListRecord';
+import AnsweringRuleInfo from './AnsweringRuleInfo';
 import EnumeratedPagingModel from './EnumeratedPagingModel';
 import PageNavigationModel from './PageNavigationModel';
 
@@ -13,7 +13,7 @@ interface UserAnsweringRuleList {
   /**
    * List of answering rules
    */
-  records?: UserAnsweringRuleListRecord[];
+  records?: AnsweringRuleInfo[];
 
   /**
    */

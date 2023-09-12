@@ -27,10 +27,10 @@ interface SearchDirectoryEntriesParameters {
   extensionStatus?: string;
 
   /**
-   * Extension types
+   * Type of extension to filter the contacts
    * Example: User
    */
-  extensionType?: string;
+  extensionType?: ('User' | 'Department' | 'Announcement' | 'Voicemail' | 'DigitalUser' | 'VirtualUser' | 'FaxUser' | 'PagingOnly' | 'SharedLinesGroup' | 'IvrMenu' | 'ApplicationExtension' | 'ParkLocation' | 'Limited' | 'Bot' | 'Site' | 'Room' | 'ProxyAdmin' | 'DelegatedLinesGroup' | 'FlexibleUser' | 'GroupCallPickup' | 'RoomConnector');
 }
 
 export default SearchDirectoryEntriesParameters;

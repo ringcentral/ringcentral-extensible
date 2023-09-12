@@ -5,7 +5,7 @@ interface SpeakerInsightsUnit {
    * Required
    * Example: TalkToListenRatio
    */
-  name?: ('Energy' | 'Pace' | 'TalkToListenRatio');
+  name?: ('Energy' | 'Pace' | 'TalkToListenRatio' | 'Patience' | 'LongestMonologue' | 'FillerWordRate' | 'TalkingSpeed' | 'TalkTime' | 'QuestionsAsked' | 'Tone' | 'Interruptions');
 
   /**
    * Required

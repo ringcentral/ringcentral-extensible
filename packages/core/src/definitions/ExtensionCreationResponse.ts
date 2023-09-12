@@ -8,6 +8,7 @@ import RegionalSettings from './RegionalSettings';
 import ExtensionServiceFeatureInfo from './ExtensionServiceFeatureInfo';
 import ProvisioningSiteInfo from './ProvisioningSiteInfo';
 import ExtensionStatusInfo from './ExtensionStatusInfo';
+import AssignedCountryInfo from './AssignedCountryInfo';
 
 interface ExtensionCreationResponse {
   /**
@@ -114,6 +115,10 @@ interface ExtensionCreationResponse {
  *  for extensions of 'User' type only
    */
   hidden?: boolean;
+
+  /**
+   */
+  assignedCountry?: AssignedCountryInfo;
 }
 
 export default ExtensionCreationResponse;

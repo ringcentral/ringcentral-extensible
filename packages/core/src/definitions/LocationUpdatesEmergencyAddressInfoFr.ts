@@ -1,4 +1,10 @@
-interface EmergencyLocationAddressInfo {
+/**
+ * Emergency address information (or information assigned to the switch or
+ * wireless point - in case of using them). Only one of a pair `emergencyAddress`
+ * or `emergencyLocationId` should be specified, otherwise an error is returned
+ *
+*/
+interface LocationUpdatesEmergencyAddressInfoFr {
   /**
    * Country name
    */
@@ -18,6 +24,11 @@ interface EmergencyLocationAddressInfo {
    * Full name of a country
    */
   countryName?: string;
+
+  /**
+   * Customer name
+   */
+  customerName?: string;
 
   /**
    * State/Province name. Mandatory for the USA, the UK and Canada
@@ -50,8 +61,7 @@ interface EmergencyLocationAddressInfo {
   street?: string;
 
   /**
-   * Second line address (apartment, suite, unit, building, floor,
- *  etc.)
+   * Second line address (apartment, suite, unit, building, floor, etc.)
    */
   street2?: string;
 
@@ -61,9 +71,14 @@ interface EmergencyLocationAddressInfo {
   zip?: string;
 
   /**
-   * Customer name
+   * (Optional) Building name
    */
-  customerName?: string;
+  buildingName?: string;
+
+  /**
+   * Building/street number
+   */
+  buildingNumber?: string;
 }
 
-export default EmergencyLocationAddressInfo;
+export default LocationUpdatesEmergencyAddressInfoFr;

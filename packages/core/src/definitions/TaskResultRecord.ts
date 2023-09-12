@@ -17,6 +17,11 @@ interface TaskResultRecord {
   chassisId?: string;
 
   /**
+   * Switch entity extension for better diversity. Should be used together with chassisId.
+   */
+  port?: string;
+
+  /**
    * Operation status
    */
   status?: string;

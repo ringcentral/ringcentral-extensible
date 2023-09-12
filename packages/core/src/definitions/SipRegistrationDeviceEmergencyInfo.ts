@@ -1,4 +1,4 @@
-import DeviceEmergencyServiceAddressResource from './DeviceEmergencyServiceAddressResource';
+import SipRegistrationDeviceEmergencyInfoAddress from './SipRegistrationDeviceEmergencyInfoAddress';
 import SipRegistrationDeviceLocationInfo from './SipRegistrationDeviceLocationInfo';
 
 /**
@@ -6,8 +6,9 @@ import SipRegistrationDeviceLocationInfo from './SipRegistrationDeviceLocationIn
 */
 interface SipRegistrationDeviceEmergencyInfo {
   /**
+   * Address for emergency cases. The same emergency address is assigned to all the numbers of one device
    */
-  address?: DeviceEmergencyServiceAddressResource;
+  address?: SipRegistrationDeviceEmergencyInfoAddress;
 
   /**
    */

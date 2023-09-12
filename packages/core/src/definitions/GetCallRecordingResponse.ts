@@ -14,8 +14,9 @@ interface GetCallRecordingResponse {
   contentUri?: string;
 
   /**
-   * Call recording file format. Supported format is audio/x-wav
+   * Call recording file MIME format. Supported format is `audio/wav` and `audio/mpeg`
    * Required
+   * Example: audio/wav
    */
   contentType?: string;
 

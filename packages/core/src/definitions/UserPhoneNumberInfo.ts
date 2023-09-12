@@ -48,7 +48,7 @@ interface UserPhoneNumberInfo {
   phoneNumber?: string;
 
   /**
-   * Specifies if the number is primary, i.e. displayed as 'main number' and called by default
+   * Specifies if a phone number is primary, i.e. displayed as 'main number' and called by default
    */
   primary?: boolean;
 
@@ -70,7 +70,7 @@ interface UserPhoneNumberInfo {
   /**
    * Usage type of a phone number. Numbers of 'NumberPool' type will not be returned for phone number list requests
    */
-  usageType?: ('MainCompanyNumber' | 'AdditionalCompanyNumber' | 'CompanyNumber' | 'DirectNumber' | 'CompanyFaxNumber' | 'ForwardedNumber' | 'ForwardedCompanyNumber' | 'ContactCenterNumber' | 'ConferencingNumber' | 'NumberPool' | 'BusinessMobileNumber' | 'IntegrationNumber');
+  usageType?: ('MainCompanyNumber' | 'AdditionalCompanyNumber' | 'CompanyNumber' | 'DirectNumber' | 'CompanyFaxNumber' | 'ForwardedNumber' | 'ForwardedCompanyNumber' | 'ContactCenterNumber' | 'ConferencingNumber' | 'NumberPool' | 'BusinessMobileNumber' | 'PartnerBusinessMobileNumber' | 'IntegrationNumber');
 
   /**
    * List of features of a phone number

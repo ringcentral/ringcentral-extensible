@@ -1,4 +1,5 @@
 import Utils from '../../../../../Utils';
+import ReadScaledProfileImageParameters from '../../../../../definitions/ReadScaledProfileImageParameters';
 import UpdateUserProfileImageRequest from '../../../../../definitions/UpdateUserProfileImageRequest';
 import CreateUserProfileImageRequest from '../../../../../definitions/CreateUserProfileImageRequest';
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
@@ -84,17 +85,18 @@ class Index {
   /**
    * Returns the scaled profile image of an extension.
  *
+ * **This API must be called via media API entry point, e.g. https://media.ringcentral.com**
+ *
    * HTTP Method: get
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/profile-image/{scaleSize}
-   * Rate Limit Group: Light
+   * Rate Limit Group: Medium
    * App Permission: ReadAccounts
-   * User Permission: ReadExtensions
    */
-  public async get(restRequestConfig?: RestRequestConfig): Promise<Buffer> {
+  public async get(queryParams?: ReadScaledProfileImageParameters, restRequestConfig?: RestRequestConfig): Promise<Buffer> {
     if (this.scaleSize === null) {
       throw new Error('scaleSize must be specified.');
     }
-    const r = await this.rc.get<Buffer>(this.path(), undefined, { ...restRequestConfig, responseType: 'arraybuffer' });
+    const r = await this.rc.get<Buffer>(this.path(), queryParams, { ...restRequestConfig, responseType: 'arraybuffer' });
     return r.data;
   }
 }

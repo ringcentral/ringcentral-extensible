@@ -17,7 +17,7 @@ class Index {
   }
 
   /**
-   * Creates user extensions with BYOD devices in bulk.
+   * Creates multiple user extensions with BYOD (customer provided) devices.
  * If "extensionNumber" is not specified, the next available extension number will be assigned.
  *
    * HTTP Method: post

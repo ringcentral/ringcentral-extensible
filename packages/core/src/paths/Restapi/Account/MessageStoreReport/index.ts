@@ -54,8 +54,8 @@ class Index {
     return r.data;
   }
 
-  public archive(archiveId: (string | null) = null): Archive {
-    return new Archive(this, archiveId);
+  public archive(): Archive {
+    return new Archive(this);
   }
 }
 export default Index;

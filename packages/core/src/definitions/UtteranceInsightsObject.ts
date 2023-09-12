@@ -1,3 +1,4 @@
+import WordTimingsUnit from './WordTimingsUnit';
 import UtteranceInsightsUnit from './UtteranceInsightsUnit';
 
 interface UtteranceInsightsObject {
@@ -31,6 +32,10 @@ interface UtteranceInsightsObject {
    * Example: JohnDoe
    */
   speakerId?: string;
+
+  /**
+   */
+  wordTimings?: WordTimingsUnit[];
 
   /**
    */

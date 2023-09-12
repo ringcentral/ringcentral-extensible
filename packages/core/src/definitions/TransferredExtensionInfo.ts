@@ -1,14 +1,9 @@
-import CallHandlingExtensionInfo from './CallHandlingExtensionInfo';
+import TransferredExtension from './TransferredExtension';
 
-/**
- * Transfer settings applied for department (call queue) extension
- * type, returned if CallHandlingAction is set to `TransferToExtension`
- *
-*/
 interface TransferredExtensionInfo {
   /**
    */
-  extension?: CallHandlingExtensionInfo;
+  extension?: TransferredExtension;
 }
 
 export default TransferredExtensionInfo;

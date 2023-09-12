@@ -1,5 +1,6 @@
 import Sessions from './Sessions';
 import Webinars from './Webinars';
+import Company from './Company';
 import { RingCentralInterface, ParentInterface } from '../../../../types';
 
 class Index {
@@ -14,6 +15,10 @@ class Index {
 
   public path(withParameter = false): string {
     return `${this._parent.path(false)}/v1`;
+  }
+
+  public company(): Company {
+    return new Company(this);
   }
 
   public webinars(webinarId: (string | null) = null): Webinars {

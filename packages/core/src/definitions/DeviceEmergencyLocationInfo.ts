@@ -11,6 +11,11 @@ interface DeviceEmergencyLocationInfo {
    * Location name
    */
   name?: string;
+
+  /**
+   * Address format id
+   */
+  addressFormatId?: string;
 }
 
 export default DeviceEmergencyLocationInfo;

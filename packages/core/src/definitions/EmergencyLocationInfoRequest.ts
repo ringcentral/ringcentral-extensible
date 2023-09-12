@@ -1,4 +1,4 @@
-import EmergencyLocationAddressInfo from './EmergencyLocationAddressInfo';
+import EmergencyLocationInfoRequestAddress from './EmergencyLocationInfoRequestAddress';
 import ShortSiteInfo from './ShortSiteInfo';
 
 interface EmergencyLocationInfoRequest {
@@ -9,7 +9,7 @@ interface EmergencyLocationInfoRequest {
 
   /**
    */
-  address?: EmergencyLocationAddressInfo;
+  address?: EmergencyLocationInfoRequestAddress;
 
   /**
    * Emergency response location name
@@ -29,6 +29,11 @@ interface EmergencyLocationInfoRequest {
    * Status of an emergency response location usage.
    */
   usageStatus?: ('Active' | 'Inactive');
+
+  /**
+   * Address format id
+   */
+  addressFormatId?: string;
 
   /**
    * Visibility of an emergency response location. If `Private`

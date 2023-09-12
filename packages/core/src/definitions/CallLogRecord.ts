@@ -1,4 +1,3 @@
-import CallLogRecordLegInfo from './CallLogRecordLegInfo';
 import ExtensionInfoCallLog from './ExtensionInfoCallLog';
 import CallLogRecordTransferTarget from './CallLogRecordTransferTarget';
 import CallLogRecordTransferee from './CallLogRecordTransferee';
@@ -8,48 +7,12 @@ import CallLogRecordMessage from './CallLogRecordMessage';
 import CallLogDelegateInfo from './CallLogDelegateInfo';
 import CallLogRecordingInfo from './CallLogRecordingInfo';
 import BillingInfo from './BillingInfo';
+import CallLogRecordLegInfo from './CallLogRecordLegInfo';
 
 /**
- * Base schema for CallLogRecord and CallLogRecordLegInfo
+ * Call log record
 */
 interface CallLogRecord {
-  /**
-   * Internal identifier of a call log record
-   * Required
-   */
-  id?: string;
-
-  /**
-   * Canonical URI of a call log record
-   * Required
-   * Format: uri
-   */
-  uri?: string;
-
-  /**
-   * Internal identifier of a call session
-   * Required
-   */
-  sessionId?: string;
-
-  /**
-   * Indicates whether the record is deleted. Returned for deleted records, for ISync requests
-   */
-  deleted?: boolean;
-
-  /**
-   * For 'Detailed' view only. Leg description
-   */
-  legs?: CallLogRecordLegInfo[];
-
-  /**
-   * For 'Detailed' view only. The datetime when the call log record
- *  was modified in (ISO 8601)[https://en.wikipedia.org/wiki/ISO_8601] format
- *  including timezone, for example *2016-03-10T18:07:52.534Z*
-   * Format: date-time
-   */
-  lastModifiedTime?: string;
-
   /**
    */
   extension?: ExtensionInfoCallLog;
@@ -209,6 +172,43 @@ interface CallLogRecord {
    * The internal type of the call
    */
   internalType?: ('Local' | 'LongDistance' | 'International' | 'Sip' | 'RingMe' | 'RingOut' | 'Usual' | 'TollFreeNumber' | 'VerificationNumber' | 'Vma' | 'LocalNumber' | 'ImsOutgoing' | 'ImsIncoming');
+
+  /**
+   * Internal identifier of a call log record
+   * Required
+   */
+  id?: string;
+
+  /**
+   * Canonical URI of a call log record
+   * Required
+   * Format: uri
+   */
+  uri?: string;
+
+  /**
+   * Internal identifier of a call session
+   * Required
+   */
+  sessionId?: string;
+
+  /**
+   * Indicates whether the record is deleted. Returned for deleted records, for ISync requests
+   */
+  deleted?: boolean;
+
+  /**
+   * For 'Detailed' view only. Leg description
+   */
+  legs?: CallLogRecordLegInfo[];
+
+  /**
+   * For 'Detailed' view only. The datetime when the call log record
+ *  was modified in (ISO 8601)[https://en.wikipedia.org/wiki/ISO_8601] format
+ *  including timezone, for example *2016-03-10T18:07:52.534Z*
+   * Format: date-time
+   */
+  lastModifiedTime?: string;
 }
 
 export default CallLogRecord;

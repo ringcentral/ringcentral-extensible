@@ -1,4 +1,4 @@
-import DeviceEmergencyAddress from './DeviceEmergencyAddress';
+import DeviceEmergencyInfoAddress from './DeviceEmergencyInfoAddress';
 import DeviceEmergencyLocationInfo from './DeviceEmergencyLocationInfo';
 
 /**
@@ -6,8 +6,13 @@ import DeviceEmergencyLocationInfo from './DeviceEmergencyLocationInfo';
 */
 interface DeviceEmergencyInfo {
   /**
+   * Automatically determined emergency address. If `emergencyAddressState`
+ *  value is 'Assigned', then this address is assigned to the current device.
+ *  If `emergencyAddressState` value is 'Unconfirmed', then the specified address
+ *  must be confirmed by the user before being registered as emergency address
+ *  for the current device. In all other cases the value is null
    */
-  address?: DeviceEmergencyAddress;
+  address?: DeviceEmergencyInfoAddress;
 
   /**
    */

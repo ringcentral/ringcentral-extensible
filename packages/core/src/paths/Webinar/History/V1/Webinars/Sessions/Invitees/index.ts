@@ -24,7 +24,7 @@ class Index {
   }
 
   /**
-   * Returns the list of Invitees (co-hosts and panelists) of a given Webinar Session.
+   * Returns the list of Invitees (co-hosts and panelists) of a given Webinar Session (host interface).
  * An implicit record created for a Webinar 'Host' is always returned.
  *
    * HTTP Method: get
@@ -38,7 +38,7 @@ class Index {
   }
 
   /**
-   * Returns a historical session invitee information by ID
+   * Returns a historical session invitee information by ID (host interface).
    * HTTP Method: get
    * Endpoint: /webinar/history/v1/webinars/{webinarId}/sessions/{sessionId}/invitees/{inviteeId}
    * Rate Limit Group: Heavy

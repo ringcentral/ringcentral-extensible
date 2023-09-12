@@ -21,7 +21,7 @@ interface ContactResource {
    * Contact type
    * Example: User
    */
-  type?: ('User' | 'Department' | 'Announcement' | 'Voicemail' | 'SharedLinesGroup' | 'PagingOnly' | 'ParkLocation' | 'IvrMenu' | 'Limited' | 'ApplicationExtension' | 'Site' | 'Bot' | 'Room' | 'ProxyAdmin' | 'DelegatedLinesGroup' | 'GroupCallPickup' | 'External' | 'Unknown');
+  type?: ('User' | 'Department' | 'Announcement' | 'Voicemail' | 'SharedLinesGroup' | 'PagingOnly' | 'ParkLocation' | 'IvrMenu' | 'Limited' | 'ApplicationExtension' | 'Site' | 'Bot' | 'Room' | 'ProxyAdmin' | 'DelegatedLinesGroup' | 'GroupCallPickup' | 'External' | 'RoomConnector' | 'Unknown');
 
   /**
    * Contact status

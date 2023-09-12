@@ -9,20 +9,9 @@ import CallLogRecordingInfo from './CallLogRecordingInfo';
 import BillingInfo from './BillingInfo';
 
 /**
- * Base schema for CallLogRecord and CallLogRecordLegInfo
+ * Call leg record
 */
 interface CallLogRecordLegInfo {
-  /**
-   * Leg type
-   * Required
-   */
-  legType?: ('SipForwarding' | 'ServiceMinus2' | 'ServiceMinus3' | 'PstnToSip' | 'Accept' | 'FindMe' | 'FollowMe' | 'TestCall' | 'FaxSent' | 'CallBack' | 'CallingCard' | 'RingDirectly' | 'RingOutWebToSubscriber' | 'RingOutWebToCaller' | 'SipToPstnMetered' | 'RingOutClientToSubscriber' | 'RingOutClientToCaller' | 'RingMe' | 'TransferCall' | 'SipToPstnUnmetered' | 'RingOutDeviceToSubscriber' | 'RingOutDeviceToCaller' | 'RingOutOneLegToCaller' | 'ExtensionToExtension' | 'CallPark' | 'PagingServer' | 'Hunting' | 'OutgoingFreeSpDl' | 'ParkLocation' | 'ConferenceCall' | 'MobileApp' | 'MoveToConference' | 'Unknown' | 'MeetingsCall' | 'SilentMonitoring' | 'Monitoring' | 'Pickup' | 'ImsCall' | 'JoinCall' | 'TextRelay');
-
-  /**
-   * Returned for 'Detailed' call log. Specifies if the leg is master-leg
-   */
-  master?: boolean;
-
   /**
    */
   extension?: ExtensionInfoCallLog;
@@ -182,6 +171,17 @@ interface CallLogRecordLegInfo {
    * The internal type of the call
    */
   internalType?: ('Local' | 'LongDistance' | 'International' | 'Sip' | 'RingMe' | 'RingOut' | 'Usual' | 'TollFreeNumber' | 'VerificationNumber' | 'Vma' | 'LocalNumber' | 'ImsOutgoing' | 'ImsIncoming');
+
+  /**
+   * Leg type
+   * Required
+   */
+  legType?: ('SipForwarding' | 'ServiceMinus2' | 'ServiceMinus3' | 'PstnToSip' | 'Accept' | 'FindMe' | 'FollowMe' | 'TestCall' | 'FaxSent' | 'CallBack' | 'CallingCard' | 'RingDirectly' | 'RingOutWebToSubscriber' | 'RingOutWebToCaller' | 'SipToPstnMetered' | 'RingOutClientToSubscriber' | 'RingOutClientToCaller' | 'RingMe' | 'TransferCall' | 'SipToPstnUnmetered' | 'RingOutDeviceToSubscriber' | 'RingOutDeviceToCaller' | 'RingOutOneLegToCaller' | 'ExtensionToExtension' | 'CallPark' | 'PagingServer' | 'Hunting' | 'OutgoingFreeSpDl' | 'ParkLocation' | 'ConferenceCall' | 'MobileApp' | 'MoveToConference' | 'Unknown' | 'MeetingsCall' | 'SilentMonitoring' | 'Monitoring' | 'Pickup' | 'ImsCall' | 'JoinCall' | 'TextRelay');
+
+  /**
+   * Returned for 'Detailed' call log. Specifies if the leg is master-leg
+   */
+  master?: boolean;
 }
 
 export default CallLogRecordLegInfo;

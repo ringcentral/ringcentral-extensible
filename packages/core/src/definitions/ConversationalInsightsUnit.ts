@@ -5,7 +5,7 @@ interface ConversationalInsightsUnit {
    * Required
    * Example: KeyPhrases
    */
-  name?: ('ExtractiveSummary' | 'AbstractiveSummaryLong' | 'AbstractiveSummaryShort' | 'KeyPhrases' | 'Tasks' | 'Titles' | 'QuestionsAsked');
+  name?: ('ExtractiveSummary' | 'AbstractiveSummaryLong' | 'AbstractiveSummaryShort' | 'KeyPhrases' | 'Tasks' | 'Titles' | 'QuestionsAsked' | 'OverallSentiment' | 'Topics');
 
   /**
    * Required

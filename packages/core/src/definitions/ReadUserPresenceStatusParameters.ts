@@ -3,12 +3,12 @@
 */
 interface ReadUserPresenceStatusParameters {
   /**
-   * Whether to return detailed telephony state
+   * Specifies whether to return a detailed telephony state or not
    */
   detailedTelephonyState?: boolean;
 
   /**
-   * Whether to return SIP data
+   * Specifies whether to return SIP data or not
    */
   sipData?: boolean;
 }

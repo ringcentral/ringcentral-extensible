@@ -23,7 +23,7 @@ class Index {
   }
 
   /**
-   * Returns a historical webinar information by ID.
+   * Returns a historical webinar information by ID (host interface)
    * HTTP Method: get
    * Endpoint: /webinar/history/v1/webinars/{webinarId}
    * Rate Limit Group: Heavy

@@ -1,3 +1,4 @@
+import Self from './Self';
 import ParticipantListResource from '../../../../../../../definitions/ParticipantListResource';
 import RcwHistoryListParticipantsParameters from '../../../../../../../definitions/RcwHistoryListParticipantsParameters';
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../../types';
@@ -17,7 +18,7 @@ class Index {
   }
 
   /**
-   * Returns the list of participants of a given Webinar Session.
+   * Returns the list of participants of a given Webinar Session (host interface).
  *
    * HTTP Method: get
    * Endpoint: /webinar/history/v1/webinars/{webinarId}/sessions/{sessionId}/participants
@@ -27,6 +28,10 @@ class Index {
   public async get(queryParams?: RcwHistoryListParticipantsParameters, restRequestConfig?: RestRequestConfig): Promise<ParticipantListResource> {
     const r = await this.rc.get<ParticipantListResource>(this.path(), queryParams, restRequestConfig);
     return r.data;
+  }
+
+  public self(): Self {
+    return new Self(this);
   }
 }
 export default Index;

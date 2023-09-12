@@ -1,5 +1,5 @@
 import EmergencyAddressAutoUpdateSiteInfo from './EmergencyAddressAutoUpdateSiteInfo';
-import EmergencyAddressInfo from './EmergencyAddressInfo';
+import EmergencyAddressInfoDefault from './EmergencyAddressInfoDefault';
 import EmergencyLocationInfo from './EmergencyLocationInfo';
 
 interface CreateWirelessPoint {
@@ -21,7 +21,7 @@ interface CreateWirelessPoint {
 
   /**
    */
-  emergencyAddress?: EmergencyAddressInfo;
+  emergencyAddress?: EmergencyAddressInfoDefault;
 
   /**
    */

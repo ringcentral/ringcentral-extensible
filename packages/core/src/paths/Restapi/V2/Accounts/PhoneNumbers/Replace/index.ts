@@ -17,8 +17,8 @@ class Index {
   }
 
   /**
-   * Replaces (swaps) phone numbers from inventory to main, company, direct or company fax numbers.
- * Used to replace temporary numbers when porting process is complete.
+   * Replaces (swaps) phone numbers from Inventory with the main, company, direct or company fax numbers.
+ * This method is used to replace temporary numbers when the porting process is complete.
  *
    * HTTP Method: post
    * Endpoint: /restapi/v2/accounts/{accountId}/phone-numbers/{phoneNumberId}/replace

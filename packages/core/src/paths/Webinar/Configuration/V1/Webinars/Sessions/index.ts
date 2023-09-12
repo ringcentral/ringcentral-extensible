@@ -1,6 +1,6 @@
 import Invitees from './Invitees';
 import WcsSessionResource from '../../../../../../definitions/WcsSessionResource';
-import WcsSessionBaseModel from '../../../../../../definitions/WcsSessionBaseModel';
+import WcsSessionWithLocaleCodeModel from '../../../../../../definitions/WcsSessionWithLocaleCodeModel';
 import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../types';
 
 class Index {
@@ -30,8 +30,8 @@ class Index {
    * Rate Limit Group: Heavy
    * App Permission: EditWebinars
    */
-  public async post(wcsSessionBaseModel: WcsSessionBaseModel, restRequestConfig?: RestRequestConfig): Promise<WcsSessionResource> {
-    const r = await this.rc.post<WcsSessionResource>(this.path(false), wcsSessionBaseModel, undefined, restRequestConfig);
+  public async post(wcsSessionWithLocaleCodeModel: WcsSessionWithLocaleCodeModel, restRequestConfig?: RestRequestConfig): Promise<WcsSessionResource> {
+    const r = await this.rc.post<WcsSessionResource>(this.path(false), wcsSessionWithLocaleCodeModel, undefined, restRequestConfig);
     return r.data;
   }
 
@@ -78,11 +78,11 @@ class Index {
    * Rate Limit Group: Heavy
    * App Permission: EditWebinars
    */
-  public async patch(wcsSessionBaseModel: WcsSessionBaseModel, restRequestConfig?: RestRequestConfig): Promise<WcsSessionResource> {
+  public async patch(wcsSessionWithLocaleCodeModel: WcsSessionWithLocaleCodeModel, restRequestConfig?: RestRequestConfig): Promise<WcsSessionResource> {
     if (this.sessionId === null) {
       throw new Error('sessionId must be specified.');
     }
-    const r = await this.rc.patch<WcsSessionResource>(this.path(), wcsSessionBaseModel, undefined, restRequestConfig);
+    const r = await this.rc.patch<WcsSessionResource>(this.path(), wcsSessionWithLocaleCodeModel, undefined, restRequestConfig);
     return r.data;
   }
 

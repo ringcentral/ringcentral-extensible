@@ -22,10 +22,10 @@ interface SearchDirectoryEntriesRequest {
   showAdminOnlyContacts?: boolean;
 
   /**
-   * Type of extension to filter the contacts
-   * Example: FaxUser
+   * Type of directory contact to filter
+   * Example: User
    */
-  extensionType?: ('User' | 'Department' | 'Announcement' | 'Voicemail' | 'DigitalUser' | 'VirtualUser' | 'FaxUser' | 'PagingOnly' | 'SharedLinesGroup' | 'IvrMenu' | 'ApplicationExtension' | 'ParkLocation' | 'Limited' | 'Site' | 'DelegatedLinesGroup' | 'FlexibleUser');
+  extensionType?: ('User' | 'Department' | 'Announcement' | 'Voicemail' | 'SharedLinesGroup' | 'PagingOnly' | 'ParkLocation' | 'IvrMenu' | 'Limited' | 'ApplicationExtension' | 'Site' | 'Bot' | 'Room' | 'DelegatedLinesGroup' | 'GroupCallPickup' | 'External');
 
   /**
    * Internal identifier of the business site to which extensions belong
@@ -63,7 +63,7 @@ interface SearchDirectoryEntriesRequest {
   /**
    * Types of extension to filter the contacts
    */
-  extensionTypes?: ('User' | 'Department' | 'Announcement' | 'Voicemail' | 'DigitalUser' | 'VirtualUser' | 'FaxUser' | 'PagingOnly' | 'SharedLinesGroup' | 'IvrMenu' | 'ApplicationExtension' | 'ParkLocation' | 'Limited' | 'Site' | 'DelegatedLinesGroup' | 'FlexibleUser')[];
+  extensionTypes?: ('User' | 'Department' | 'Announcement' | 'Voicemail' | 'DigitalUser' | 'VirtualUser' | 'FaxUser' | 'PagingOnly' | 'SharedLinesGroup' | 'IvrMenu' | 'ApplicationExtension' | 'ParkLocation' | 'Limited' | 'Bot' | 'Site' | 'Room' | 'ProxyAdmin' | 'DelegatedLinesGroup' | 'FlexibleUser' | 'GroupCallPickup' | 'RoomConnector')[];
 
   /**
    * Sorting settings

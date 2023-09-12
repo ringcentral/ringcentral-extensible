@@ -134,9 +134,8 @@ interface WcsWebinarSettingsModel {
 
   /**
    * Indicate if the moderated Q&A enabled for webinar
-   * Default: true
    */
-  moderatedQnAEnabled?: boolean;
+  moderatedQnaEnabled?: boolean;
 }
 
 export default WcsWebinarSettingsModel;
