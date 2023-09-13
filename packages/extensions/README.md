@@ -65,9 +65,3 @@ PubNub Extension adds PubNub notifications feature.
 ## [Authorize URI Extension](./authorize-uri)
 
 Authorize URI Extension provides utility methods to easily build URIs for OAuth.
-
-
-## [Engage Voice Extension](./engage-voice)
-
-Engage Voice Extension adds support for RingCentral Engage Voice API.
-
