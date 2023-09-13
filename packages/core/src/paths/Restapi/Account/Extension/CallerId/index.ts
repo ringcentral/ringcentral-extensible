@@ -12,7 +12,7 @@ class Index {
     this.rc = _parent.rc;
   }
 
-  public path(withParameter = false): string {
+  public path(): string {
     return `${this._parent.path()}/caller-id`;
   }
 

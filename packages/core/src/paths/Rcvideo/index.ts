@@ -9,7 +9,7 @@ class Index {
     this.rc = rc;
   }
 
-  public path(withParameter = false): string {
+  public path(): string {
     return '/rcvideo';
   }
 
