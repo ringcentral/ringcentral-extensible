@@ -7,7 +7,6 @@
     "@rc-ex/authorize-uri": "^1.1.3",
     "@rc-ex/core": "^1.3.3",
     "@rc-ex/debug": "^1.1.3",
-    "@rc-ex/discovery": "^1.1.3",
     "@rc-ex/events": "^1.1.3",
     "@rc-ex/pubnub": "^1.1.3",
     "@rc-ex/rcsdk": "^1.1.3",

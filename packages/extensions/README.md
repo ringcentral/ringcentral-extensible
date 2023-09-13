@@ -71,7 +71,3 @@ Authorize URI Extension provides utility methods to easily build URIs for OAuth.
 
 Engage Voice Extension adds support for RingCentral Engage Voice API.
 
-
-## [Discovery Extension](./discovery)
-
-Discovery Extension adds support for entry point discovery.
