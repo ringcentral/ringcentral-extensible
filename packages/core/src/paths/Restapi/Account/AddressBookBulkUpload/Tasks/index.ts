@@ -1,5 +1,5 @@
-import AddressBookBulkUploadResponse from '../../../../../definitions/AddressBookBulkUploadResponse';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import type AddressBookBulkUploadResponse from '../../../../../definitions/AddressBookBulkUploadResponse';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -23,7 +23,7 @@ class Index {
 
   /**
    * Returns the status of a task on adding multiple contacts to multiple extensions.
- *
+   *
    * HTTP Method: get
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/address-book-bulk-upload/tasks/{taskId}
    * Rate Limit Group: Light

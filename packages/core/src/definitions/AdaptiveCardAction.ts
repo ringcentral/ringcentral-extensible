@@ -1,9 +1,9 @@
-import ActionAdaptiveCardInfo from './ActionAdaptiveCardInfo';
+import type ActionAdaptiveCardInfo from './ActionAdaptiveCardInfo';
 
 interface AdaptiveCardAction {
   /**
    */
-  type?: ('Action.ShowCard' | 'Action.Submit' | 'Action.OpenUrl' | 'Action.ToggleVisibility');
+  type?: 'Action.ShowCard' | 'Action.Submit' | 'Action.OpenUrl' | 'Action.ToggleVisibility';
 
   /**
    */

@@ -3,12 +3,12 @@ interface PubNubDeliveryMode {
    * The transport type for this subscription, or the channel by which an app should be notified of an event
    * Required
    */
-  transportType?: ('PubNub');
+  transportType?: 'PubNub';
 
   /**
    * Optional. Specifies if notification messages will be encrypted
- *  or not. Please note that for some event filters (e.g. presence) encryption is mandatory and
- *  `false` value provided by caller will be ignored.
+   *  or not. Please note that for some event filters (e.g. presence) encryption is mandatory and
+   *  `false` value provided by caller will be ignored.
    * Required
    */
   encryption?: boolean;
@@ -34,13 +34,13 @@ interface PubNubDeliveryMode {
 
   /**
    * (Only for a "PubNub" transport, returned only if `encryption` is `true`)
- *  Encryption algorithm used
+   *  Encryption algorithm used
    */
-  encryptionAlgorithm?: ('AES');
+  encryptionAlgorithm?: 'AES';
 
   /**
    * (Only for a "PubNub" transport, returned only if `encryption` is `true`)
- *  Cryptographic key to decrypt PubNub notification messages
+   *  Cryptographic key to decrypt PubNub notification messages
    */
   encryptionKey?: string;
 }

@@ -1,4 +1,4 @@
-import WirelessPointInfo from './WirelessPointInfo';
+import type WirelessPointInfo from './WirelessPointInfo';
 
 interface ValidateMultipleWirelessPointsRequest {
   /**

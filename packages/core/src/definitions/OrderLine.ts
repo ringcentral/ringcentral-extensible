@@ -1,6 +1,6 @@
 /**
  * Particular license or device sku to be ordered (base)
-*/
+ */
 interface OrderLine {
   /**
    * The number of items of this kind

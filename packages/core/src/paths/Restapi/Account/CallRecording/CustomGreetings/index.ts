@@ -1,6 +1,6 @@
-import CallRecordingCustomGreetings from '../../../../../definitions/CallRecordingCustomGreetings';
-import ListCallRecordingCustomGreetingsParameters from '../../../../../definitions/ListCallRecordingCustomGreetingsParameters';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import type CallRecordingCustomGreetings from '../../../../../definitions/CallRecordingCustomGreetings';
+import type ListCallRecordingCustomGreetingsParameters from '../../../../../definitions/ListCallRecordingCustomGreetingsParameters';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -30,7 +30,10 @@ class Index {
    * App Permission: ReadAccounts
    * User Permission: ReadCompanyInfo
    */
-  public async get(queryParams?: ListCallRecordingCustomGreetingsParameters, restRequestConfig?: RestRequestConfig): Promise<CallRecordingCustomGreetings> {
+  public async get(
+    queryParams?: ListCallRecordingCustomGreetingsParameters,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<CallRecordingCustomGreetings> {
     const r = await this.rc.get<CallRecordingCustomGreetings>(this.path(false), queryParams, restRequestConfig);
     return r.data;
   }

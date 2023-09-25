@@ -1,6 +1,6 @@
 /**
  * Particular license or device sku to be ordered (base)
-*/
+ */
 interface LicensesStatisticsResponseItem {
   /**
    * The number of items of this kind

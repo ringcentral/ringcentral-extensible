@@ -1,5 +1,5 @@
-import ScimSchemaExtension from './ScimSchemaExtension';
-import ScimMeta from './ScimMeta';
+import type ScimSchemaExtension from './ScimSchemaExtension';
+import type ScimMeta from './ScimMeta';
 
 interface ScimResourceTypeResponse {
   /**
@@ -27,7 +27,7 @@ interface ScimResourceTypeResponse {
   /**
    * Required
    */
-  schema?: ('urn:ietf:params:scim:schemas:core:2.0:User');
+  schema?: 'urn:ietf:params:scim:schemas:core:2.0:User';
 
   /**
    */

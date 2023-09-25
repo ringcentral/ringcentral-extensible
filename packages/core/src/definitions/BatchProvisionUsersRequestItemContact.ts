@@ -26,7 +26,7 @@ interface BatchProvisionUsersRequestItemContact {
 
   /**
    * Indicates that contact email is enabled as login name for this user.
- *  Please note that email must be unique in this case.
+   *  Please note that email must be unique in this case.
    * Default: true
    */
   emailAsLoginName?: boolean;

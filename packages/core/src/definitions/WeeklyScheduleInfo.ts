@@ -1,8 +1,8 @@
-import TimeInterval from './TimeInterval';
+import type TimeInterval from './TimeInterval';
 
 /**
  * Weekly schedule
-*/
+ */
 interface WeeklyScheduleInfo {
   /**
    * Time intervals for a particular day

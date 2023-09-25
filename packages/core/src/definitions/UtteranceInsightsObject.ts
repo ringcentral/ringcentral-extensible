@@ -1,5 +1,5 @@
-import WordTimingsUnit from './WordTimingsUnit';
-import UtteranceInsightsUnit from './UtteranceInsightsUnit';
+import type WordTimingsUnit from './WordTimingsUnit';
+import type UtteranceInsightsUnit from './UtteranceInsightsUnit';
 
 interface UtteranceInsightsObject {
   /**

@@ -1,11 +1,11 @@
-import ExtensionStatusInfo from './ExtensionStatusInfo';
-import ContactInfoUpdateRequest from './ContactInfoUpdateRequest';
-import ExtensionRegionalSettingRequest from './ExtensionRegionalSettingRequest';
-import CallQueueInfoRequest from './CallQueueInfoRequest';
-import UserTransitionInfo from './UserTransitionInfo';
-import CustomFieldInfo from './CustomFieldInfo';
-import ProvisioningSiteInfo from './ProvisioningSiteInfo';
-import ReferenceInfo from './ReferenceInfo';
+import type ExtensionStatusInfo from './ExtensionStatusInfo';
+import type ContactInfoUpdateRequest from './ContactInfoUpdateRequest';
+import type ExtensionRegionalSettingRequest from './ExtensionRegionalSettingRequest';
+import type CallQueueInfoRequest from './CallQueueInfoRequest';
+import type UserTransitionInfo from './UserTransitionInfo';
+import type CustomFieldInfo from './CustomFieldInfo';
+import type ProvisioningSiteInfo from './ProvisioningSiteInfo';
+import type ReferenceInfo from './ReferenceInfo';
 
 interface ExtensionBulkUpdateInfo {
   /**
@@ -15,7 +15,7 @@ interface ExtensionBulkUpdateInfo {
 
   /**
    */
-  status?: ('Disabled' | 'Enabled' | 'NotActivated' | 'Frozen');
+  status?: 'Disabled' | 'Enabled' | 'NotActivated' | 'Frozen';
 
   /**
    */
@@ -46,11 +46,11 @@ interface ExtensionBulkUpdateInfo {
 
   /**
    */
-  setupWizardState?: ('NotStarted' | 'Incomplete' | 'Completed');
+  setupWizardState?: 'NotStarted' | 'Incomplete' | 'Completed';
 
   /**
    * Additional extension identifier created by partner application
- *  and applied on client side
+   *  and applied on client side
    */
   partnerId?: string;
 
@@ -87,10 +87,23 @@ interface ExtensionBulkUpdateInfo {
 
   /**
    * Extension type. Please note that legacy 'Department' extension
- *  type corresponds to 'Call Queue' extensions in modern RingCentral
- *  product terminology
+   *  type corresponds to 'Call Queue' extensions in modern RingCentral
+   *  product terminology
    */
-  type?: ('User' | 'FaxUser' | 'VirtualUser' | 'DigitalUser' | 'Department' | 'Announcement' | 'Voicemail' | 'SharedLinesGroup' | 'PagingOnly' | 'IvrMenu' | 'ApplicationExtension' | 'ParkLocation' | 'DelegatedLinesGroup');
+  type?:
+    | 'User'
+    | 'FaxUser'
+    | 'VirtualUser'
+    | 'DigitalUser'
+    | 'Department'
+    | 'Announcement'
+    | 'Voicemail'
+    | 'SharedLinesGroup'
+    | 'PagingOnly'
+    | 'IvrMenu'
+    | 'ApplicationExtension'
+    | 'ParkLocation'
+    | 'DelegatedLinesGroup';
 
   /**
    * List of non-RC internal identifiers assigned to an extension

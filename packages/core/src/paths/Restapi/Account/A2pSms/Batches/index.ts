@@ -1,8 +1,8 @@
-import MessageBatchResponse from '../../../../../definitions/MessageBatchResponse';
-import MessageBatchCreateRequest from '../../../../../definitions/MessageBatchCreateRequest';
-import BatchListResponse from '../../../../../definitions/BatchListResponse';
-import ListA2PBatchesParameters from '../../../../../definitions/ListA2PBatchesParameters';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import type MessageBatchResponse from '../../../../../definitions/MessageBatchResponse';
+import type MessageBatchCreateRequest from '../../../../../definitions/MessageBatchCreateRequest';
+import type BatchListResponse from '../../../../../definitions/BatchListResponse';
+import type ListA2PBatchesParameters from '../../../../../definitions/ListA2PBatchesParameters';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -26,30 +26,41 @@ class Index {
 
   /**
    * Returns the list of A2P batches sent from the current account.
- * The list can be filtered by message batch ID and/or from phone number.
- *
+   * The list can be filtered by message batch ID and/or from phone number.
+   *
    * HTTP Method: get
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/a2p-sms/batches
    * Rate Limit Group: Light
    * App Permission: A2PSMS
    */
-  public async list(queryParams?: ListA2PBatchesParameters, restRequestConfig?: RestRequestConfig): Promise<BatchListResponse> {
+  public async list(
+    queryParams?: ListA2PBatchesParameters,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<BatchListResponse> {
     const r = await this.rc.get<BatchListResponse>(this.path(false), queryParams, restRequestConfig);
     return r.data;
   }
 
   /**
    * Allows to send high volume of A2P (Application-to-Person) SMS messages
- * (in message batches). Only phone number with the `A2PSmsSender` feature can
- * be used as a sender.
- *
+   * (in message batches). Only phone number with the `A2PSmsSender` feature can
+   * be used as a sender.
+   *
    * HTTP Method: post
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/a2p-sms/batches
    * Rate Limit Group: Light
    * App Permission: A2PSMS
    */
-  public async post(messageBatchCreateRequest: MessageBatchCreateRequest, restRequestConfig?: RestRequestConfig): Promise<MessageBatchResponse> {
-    const r = await this.rc.post<MessageBatchResponse>(this.path(false), messageBatchCreateRequest, undefined, restRequestConfig);
+  public async post(
+    messageBatchCreateRequest: MessageBatchCreateRequest,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<MessageBatchResponse> {
+    const r = await this.rc.post<MessageBatchResponse>(
+      this.path(false),
+      messageBatchCreateRequest,
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 

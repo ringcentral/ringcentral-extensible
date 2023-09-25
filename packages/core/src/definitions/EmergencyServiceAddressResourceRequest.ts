@@ -3,7 +3,7 @@
  * numbers of a single device. If the emergency address is also specified in
  * `emergency` resource, then this value is ignored
  *
-*/
+ */
 interface EmergencyServiceAddressResourceRequest {
   /**
    */

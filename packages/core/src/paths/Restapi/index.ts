@@ -5,9 +5,9 @@ import Dictionary from './Dictionary';
 import Account from './Account';
 import Oauth from './Oauth';
 import V2 from './V2';
-import ApiVersionInfo from '../../definitions/ApiVersionInfo';
-import ApiVersionsList from '../../definitions/ApiVersionsList';
-import { RingCentralInterface, RestRequestConfig } from '../../types';
+import type ApiVersionInfo from '../../definitions/ApiVersionInfo';
+import type ApiVersionsList from '../../definitions/ApiVersionsList';
+import type { RingCentralInterface, RestRequestConfig } from '../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -59,7 +59,7 @@ class Index {
     return new Oauth(this);
   }
 
-  public account(accountId: (string | null) = '~'): Account {
+  public account(accountId: string | null = '~'): Account {
     return new Account(this, accountId);
   }
 
@@ -71,7 +71,7 @@ class Index {
     return new ClientInfo(this);
   }
 
-  public subscription(subscriptionId: (string | null) = null): Subscription {
+  public subscription(subscriptionId: string | null = null): Subscription {
     return new Subscription(this, subscriptionId);
   }
 

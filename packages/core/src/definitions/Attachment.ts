@@ -1,6 +1,6 @@
 /**
  * Attachment is a file to be uploaded
-*/
+ */
 interface Attachment {
   /**
    * Filename with extension, such as "image.png"

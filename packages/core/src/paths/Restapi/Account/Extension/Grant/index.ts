@@ -1,6 +1,6 @@
-import GetExtensionGrantListResponse from '../../../../../definitions/GetExtensionGrantListResponse';
-import ListExtensionGrantsParameters from '../../../../../definitions/ListExtensionGrantsParameters';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import type GetExtensionGrantListResponse from '../../../../../definitions/GetExtensionGrantListResponse';
+import type ListExtensionGrantsParameters from '../../../../../definitions/ListExtensionGrantsParameters';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -18,17 +18,20 @@ class Index {
 
   /**
    * Returns the list of extensions with information on grants
- * given to the current extension regarding them. Currently the list of grants
- * include: picking up a call, monitoring, calling or receiving a call on behalf
- * of somebody, call delegation and calling paging groups.
- *
+   * given to the current extension regarding them. Currently the list of grants
+   * include: picking up a call, monitoring, calling or receiving a call on behalf
+   * of somebody, call delegation and calling paging groups.
+   *
    * HTTP Method: get
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/grant
    * Rate Limit Group: Light
    * App Permission: ReadAccounts
    * User Permission: ReadExtensions
    */
-  public async get(queryParams?: ListExtensionGrantsParameters, restRequestConfig?: RestRequestConfig): Promise<GetExtensionGrantListResponse> {
+  public async get(
+    queryParams?: ListExtensionGrantsParameters,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<GetExtensionGrantListResponse> {
     const r = await this.rc.get<GetExtensionGrantListResponse>(this.path(), queryParams, restRequestConfig);
     return r.data;
   }

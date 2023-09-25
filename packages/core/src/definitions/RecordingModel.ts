@@ -1,4 +1,4 @@
-import ApiError from './ApiError';
+import type ApiError from './ApiError';
 
 interface RecordingModel {
   /**
@@ -26,7 +26,7 @@ interface RecordingModel {
    * Required
    * Example: Available
    */
-  status?: ('Processing' | 'Available' | 'Failed' | 'Purged');
+  status?: 'Processing' | 'Available' | 'Failed' | 'Purged';
 
   /**
    */
@@ -42,7 +42,7 @@ interface RecordingModel {
 
   /**
    * Indicates if Host or Admin has shared a recording.
- *  Can be set to true only then recording status is 'Available'.
+   *  Can be set to true only then recording status is 'Available'.
    * Example: true
    */
   shared?: boolean;

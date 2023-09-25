@@ -1,11 +1,11 @@
-import PermissionInfoAdmin from './PermissionInfoAdmin';
-import PermissionInfoInt from './PermissionInfoInt';
+import type PermissionInfoAdmin from './PermissionInfoAdmin';
+import type PermissionInfoInt from './PermissionInfoInt';
 
 /**
  * Extension permissions, corresponding to the Service Web permissions
  * 'Admin' and 'InternationalCalling'
  *
-*/
+ */
 interface ExtensionPermissions {
   /**
    */

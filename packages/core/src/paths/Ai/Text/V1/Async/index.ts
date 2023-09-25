@@ -1,6 +1,6 @@
 import Punctuate from './Punctuate';
 import Summarize from './Summarize';
-import { RingCentralInterface, ParentInterface } from '../../../../../types';
+import type { RingCentralInterface, ParentInterface } from '../../../../../types';
 
 class Index {
   public rc: RingCentralInterface;

@@ -1,11 +1,11 @@
-import AddDeviceToInventoryRequestSite from './AddDeviceToInventoryRequestSite';
+import type AddDeviceToInventoryRequestSite from './AddDeviceToInventoryRequestSite';
 
 interface AddDeviceToInventoryRequest {
   /**
    * Device type. Use `OtherPhone` to indicate BYOD (customer provided) device
    * Required
    */
-  type?: ('OtherPhone');
+  type?: 'OtherPhone';
 
   /**
    * Quantity of devices (total quantity should not exceed 50)

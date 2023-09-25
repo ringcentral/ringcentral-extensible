@@ -1,6 +1,6 @@
 /**
  * Meeting links
-*/
+ */
 interface MeetingLinks {
   /**
    * Format: uri

@@ -1,10 +1,10 @@
-import ContactInfoCreationRequest from './ContactInfoCreationRequest';
-import ExtensionCreationRequestCostCenter from './ExtensionCreationRequestCostCenter';
-import CustomFieldInfo from './CustomFieldInfo';
-import ReferenceInfo from './ReferenceInfo';
-import RegionalSettings from './RegionalSettings';
-import SiteInfo from './SiteInfo';
-import ExtensionStatusInfo from './ExtensionStatusInfo';
+import type ContactInfoCreationRequest from './ContactInfoCreationRequest';
+import type ExtensionCreationRequestCostCenter from './ExtensionCreationRequestCostCenter';
+import type CustomFieldInfo from './CustomFieldInfo';
+import type ReferenceInfo from './ReferenceInfo';
+import type RegionalSettings from './RegionalSettings';
+import type SiteInfo from './SiteInfo';
+import type ExtensionStatusInfo from './ExtensionStatusInfo';
 
 interface ExtensionCreationRequest {
   /**
@@ -27,13 +27,13 @@ interface ExtensionCreationRequest {
 
   /**
    * Password for extension. If not specified, the password
- *  is auto-generated
+   *  is auto-generated
    */
   password?: string;
 
   /**
    * List of non-RC internal identifiers assigned to an
- *  extension
+   *  extension
    */
   references?: ReferenceInfo[];
 
@@ -43,7 +43,7 @@ interface ExtensionCreationRequest {
 
   /**
    * Additional extension identifier, created by partner application
- *  and applied on client side
+   *  and applied on client side
    */
   partnerId?: string;
 
@@ -54,10 +54,10 @@ interface ExtensionCreationRequest {
 
   /**
    * Specifies extension configuration wizard state (web service
- *  setup).
+   *  setup).
    * Default: NotStarted
    */
-  setupWizardState?: ('NotStarted' | 'Incomplete' | 'Completed');
+  setupWizardState?: 'NotStarted' | 'Incomplete' | 'Completed';
 
   /**
    */
@@ -66,7 +66,7 @@ interface ExtensionCreationRequest {
   /**
    * Extension current state
    */
-  status?: ('Enabled' | 'Disabled' | 'NotActivated' | 'Unassigned' | 'Frozen');
+  status?: 'Enabled' | 'Disabled' | 'NotActivated' | 'Unassigned' | 'Frozen';
 
   /**
    */
@@ -74,16 +74,26 @@ interface ExtensionCreationRequest {
 
   /**
    * Extension type. Please note that legacy 'Department' extension type
- *  corresponds to 'Call Queue' extensions in modern RingCentral product
- *  terminology
+   *  corresponds to 'Call Queue' extensions in modern RingCentral product
+   *  terminology
    */
-  type?: ('User' | 'VirtualUser' | 'DigitalUser' | 'Department' | 'Announcement' | 'Voicemail' | 'SharedLinesGroup' | 'PagingOnly' | 'ParkLocation' | 'Limited');
+  type?:
+    | 'User'
+    | 'VirtualUser'
+    | 'DigitalUser'
+    | 'Department'
+    | 'Announcement'
+    | 'Voicemail'
+    | 'SharedLinesGroup'
+    | 'PagingOnly'
+    | 'ParkLocation'
+    | 'Limited';
 
   /**
    * Hides extension from showing in company directory. Supported
- *  for extensions of 'User' type only. For unassigned extensions the value
- *  is set to 'True' by default. For assigned extensions the value is set
- *  to 'False' by default
+   *  for extensions of 'User' type only. For unassigned extensions the value
+   *  is set to 'True' by default. For assigned extensions the value is set
+   *  to 'False' by default
    */
   hidden?: boolean;
 }

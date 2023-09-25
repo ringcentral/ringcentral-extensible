@@ -1,4 +1,4 @@
-import PrivateIpRangeInfoEmergencyAddress from './PrivateIpRangeInfoEmergencyAddress';
+import type PrivateIpRangeInfoEmergencyAddress from './PrivateIpRangeInfoEmergencyAddress';
 
 interface PrivateIpRangeInfo {
   /**
@@ -20,15 +20,15 @@ interface PrivateIpRangeInfo {
 
   /**
    * Emergency address information (or information assigned to the switch or
- *  wireless point - in case of using them). Only one of a pair `emergencyAddress`
- *  or `emergencyLocationId` should be specified, otherwise an error is returned
+   *  wireless point - in case of using them). Only one of a pair `emergencyAddress`
+   *  or `emergencyLocationId` should be specified, otherwise an error is returned
    */
   emergencyAddress?: PrivateIpRangeInfoEmergencyAddress;
 
   /**
    * Emergency response location (address) internal identifier.
- *  Only one of a pair `emergencyAddress` or `emergencyLocationId` should
- *  be specified, otherwise an error is returned
+   *  Only one of a pair `emergencyAddress` or `emergencyLocationId` should
+   *  be specified, otherwise an error is returned
    */
   emergencyLocationId?: string;
 

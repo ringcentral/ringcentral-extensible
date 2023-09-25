@@ -1,5 +1,5 @@
-import CallSession from '../../../../../definitions/CallSession';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import type CallSession from '../../../../../definitions/CallSession';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
   public rc: RingCentralInterface;

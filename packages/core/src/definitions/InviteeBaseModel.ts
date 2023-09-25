@@ -1,8 +1,8 @@
-import RcwDomainUserModel from './RcwDomainUserModel';
+import type RcwDomainUserModel from './RcwDomainUserModel';
 
 /**
  * The attribute declaration to indicate webinar session participant/invitee role
-*/
+ */
 interface InviteeBaseModel {
   /**
    * Internal object ID
@@ -55,22 +55,22 @@ interface InviteeBaseModel {
 
   /**
    * The role of the webinar session participant/invitee.
- *  See also: [Understanding Webinar Roles](https://support.ringcentral.com/webinar/getting-started/understanding-ringcentral-webinar-roles.html)
+   *  See also: [Understanding Webinar Roles](https://support.ringcentral.com/webinar/getting-started/understanding-ringcentral-webinar-roles.html)
    * Required
    * Example: Panelist
    */
-  role?: ('Panelist' | 'CoHost' | 'Host' | 'Attendee');
+  role?: 'Panelist' | 'CoHost' | 'Host' | 'Attendee';
 
   /**
    * The type of the webinar invitee
    * Default: User
    */
-  type?: ('User' | 'Room');
+  type?: 'User' | 'Room';
 
   /**
    * Indicates if invite/cancellation emails have to be sent to this invitee.
- *  For "Host" it cannot be set to false.
- *  If it is true it can't be changed back to false.
+   *  For "Host" it cannot be set to false.
+   *  If it is true it can't be changed back to false.
    * Default: true
    */
   sendInvite?: boolean;

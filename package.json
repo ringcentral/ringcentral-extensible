@@ -1,17 +1,22 @@
 {
   "name": "ringcentral-extensible",
-  "license": "MIT",
   "version": "0.1.0",
   "private": "true",
-  "scripts": {
-    "lint": "eslint --fix '**/*.{ts,tsx,js,jsx}' && prettier --write . && sort-package-json",
-    "test": "yarn workspace @rc-ex/test run jest -w 1 --detectOpenHandles -c jest.config.ts $t",
-    "upgrade-all": "yarn-upgrade-all -W && yarn workspaces run yarn-upgrade-all && yarn install",
-    "reset": "lerna exec 'rm -rf lib'",
-    "compile": "lerna exec tsc --scope=@rc-ex/core && lerna exec tsc --no-private --ignore=@rc-ex/core",
-    "prepublishOnly": "yarn reset && yarn compile"
-  },
   "description": "RingCentral Extensible SDK",
+  "license": "MIT",
+  "workspaces": [
+    "packages/core",
+    "packages/extensions/*",
+    "test"
+  ],
+  "scripts": {
+    "compile": "lerna exec tsc --scope=@rc-ex/core && lerna exec tsc --no-private --ignore=@rc-ex/core",
+    "lint": "eslint --fix '**/*.{ts,tsx,js,jsx}' && prettier --write . && sort-package-json",
+    "prepublishOnly": "yarn reset && yarn compile",
+    "reset": "lerna exec 'rm -rf lib'",
+    "test": "yarn workspace @rc-ex/test run jest -w 1 --detectOpenHandles -c jest.config.ts $t",
+    "upgrade-all": "yarn-upgrade-all -W && yarn workspaces run yarn-upgrade-all && yarn install"
+  },
   "devDependencies": {
     "@types/node": "^20.6.0",
     "@typescript-eslint/eslint-plugin": "^6.7.0",
@@ -27,10 +32,5 @@
     "ttpt": "^0.6.6",
     "typescript": "^5.2.2",
     "yarn-upgrade-all": "^0.7.2"
-  },
-  "workspaces": [
-    "packages/core",
-    "packages/extensions/*",
-    "test"
-  ]
+  }
 }

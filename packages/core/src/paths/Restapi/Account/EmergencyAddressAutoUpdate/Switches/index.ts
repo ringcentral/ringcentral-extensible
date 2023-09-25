@@ -1,9 +1,9 @@
-import UpdateSwitchInfo from '../../../../../definitions/UpdateSwitchInfo';
-import SwitchInfo from '../../../../../definitions/SwitchInfo';
-import CreateSwitchInfo from '../../../../../definitions/CreateSwitchInfo';
-import SwitchesList from '../../../../../definitions/SwitchesList';
-import ListAccountSwitchesParameters from '../../../../../definitions/ListAccountSwitchesParameters';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import type UpdateSwitchInfo from '../../../../../definitions/UpdateSwitchInfo';
+import type SwitchInfo from '../../../../../definitions/SwitchInfo';
+import type CreateSwitchInfo from '../../../../../definitions/CreateSwitchInfo';
+import type SwitchesList from '../../../../../definitions/SwitchesList';
+import type ListAccountSwitchesParameters from '../../../../../definitions/ListAccountSwitchesParameters';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -27,23 +27,26 @@ class Index {
 
   /**
    * Returns a corporate map of configured network switches with the assigned
- * emergency addresses for the logged-in account.
- *
+   * emergency addresses for the logged-in account.
+   *
    * HTTP Method: get
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/switches
    * Rate Limit Group: Heavy
    * App Permission: EditAccounts
    * User Permission: ConfigureEmergencyMaps
    */
-  public async list(queryParams?: ListAccountSwitchesParameters, restRequestConfig?: RestRequestConfig): Promise<SwitchesList> {
+  public async list(
+    queryParams?: ListAccountSwitchesParameters,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<SwitchesList> {
     const r = await this.rc.get<SwitchesList>(this.path(false), queryParams, restRequestConfig);
     return r.data;
   }
 
   /**
    * Creates a new switch in corporate map based on chassis ID and used
- * for Automatic Locations Update feature.
- *
+   * for Automatic Locations Update feature.
+   *
    * HTTP Method: post
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/switches
    * Rate Limit Group: Heavy
@@ -73,9 +76,9 @@ class Index {
 
   /**
    * Updates switch. Partial update is not supported, all switch parameters
- * should be specified. If null value is received or parameter is missing, its
- * value is removed.
- *
+   * should be specified. If null value is received or parameter is missing, its
+   * value is removed.
+   *
    * HTTP Method: put
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/switches/{switchId}
    * Rate Limit Group: Heavy
@@ -92,8 +95,8 @@ class Index {
 
   /**
    * Deletes wireless switch(es) in a network configuration for Automatic
- * Location Updates feature.
- *
+   * Location Updates feature.
+   *
    * HTTP Method: delete
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/switches/{switchId}
    * Rate Limit Group: Heavy

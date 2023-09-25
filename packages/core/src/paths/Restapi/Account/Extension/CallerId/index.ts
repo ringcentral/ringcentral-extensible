@@ -1,6 +1,6 @@
-import ExtensionCallerIdInfoRequest from '../../../../../definitions/ExtensionCallerIdInfoRequest';
-import ExtensionCallerIdInfo from '../../../../../definitions/ExtensionCallerIdInfo';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import type ExtensionCallerIdInfoRequest from '../../../../../definitions/ExtensionCallerIdInfoRequest';
+import type ExtensionCallerIdInfo from '../../../../../definitions/ExtensionCallerIdInfo';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -18,7 +18,7 @@ class Index {
 
   /**
    * Returns information on an outbound caller ID of an extension.
- *
+   *
    * HTTP Method: get
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/caller-id
    * Rate Limit Group: Light
@@ -32,15 +32,23 @@ class Index {
 
   /**
    * Updates outbound caller ID information of an extension.
- *
+   *
    * HTTP Method: put
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/caller-id
    * Rate Limit Group: Medium
    * App Permission: EditExtensions
    * User Permission: EditCallerIDSettings
    */
-  public async put(extensionCallerIdInfoRequest: ExtensionCallerIdInfoRequest, restRequestConfig?: RestRequestConfig): Promise<ExtensionCallerIdInfo> {
-    const r = await this.rc.put<ExtensionCallerIdInfo>(this.path(), extensionCallerIdInfoRequest, undefined, restRequestConfig);
+  public async put(
+    extensionCallerIdInfoRequest: ExtensionCallerIdInfoRequest,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<ExtensionCallerIdInfo> {
+    const r = await this.rc.put<ExtensionCallerIdInfo>(
+      this.path(),
+      extensionCallerIdInfoRequest,
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

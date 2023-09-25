@@ -1,6 +1,6 @@
 /**
  * Company business address
-*/
+ */
 interface BusinessAddressInfo {
   /**
    * Name of a country

@@ -1,6 +1,6 @@
 import Bridges from './Bridges';
 import Account from './Account';
-import { RingCentralInterface, ParentInterface } from '../../../types';
+import type { RingCentralInterface, ParentInterface } from '../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -16,11 +16,11 @@ class Index {
     return `${this._parent.path(false)}/v2`;
   }
 
-  public account(accountId: (string | null) = null): Account {
+  public account(accountId: string | null = null): Account {
     return new Account(this, accountId);
   }
 
-  public bridges(bridgeId: (string | null) = null): Bridges {
+  public bridges(bridgeId: string | null = null): Bridges {
     return new Bridges(this, bridgeId);
   }
 }

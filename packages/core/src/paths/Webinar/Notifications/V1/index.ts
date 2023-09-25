@@ -1,5 +1,5 @@
 import Subscriptions from './Subscriptions';
-import { RingCentralInterface, ParentInterface } from '../../../../types';
+import type { RingCentralInterface, ParentInterface } from '../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -15,7 +15,7 @@ class Index {
     return `${this._parent.path(false)}/v1`;
   }
 
-  public subscriptions(subscriptionId: (string | null) = null): Subscriptions {
+  public subscriptions(subscriptionId: string | null = null): Subscriptions {
     return new Subscriptions(this, subscriptionId);
   }
 }

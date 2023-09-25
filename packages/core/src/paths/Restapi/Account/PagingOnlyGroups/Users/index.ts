@@ -1,6 +1,6 @@
-import PagingOnlyGroupUsers from '../../../../../definitions/PagingOnlyGroupUsers';
-import ListPagingGroupUsersParameters from '../../../../../definitions/ListPagingGroupUsersParameters';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import type PagingOnlyGroupUsers from '../../../../../definitions/PagingOnlyGroupUsers';
+import type ListPagingGroupUsersParameters from '../../../../../definitions/ListPagingGroupUsersParameters';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -18,14 +18,17 @@ class Index {
 
   /**
    * Returns a list of users allowed to page this group.
- *
+   *
    * HTTP Method: get
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/paging-only-groups/{pagingOnlyGroupId}/users
    * Rate Limit Group: Light
    * App Permission: ReadAccounts
    * User Permission: ReadUserInfo
    */
-  public async get(queryParams?: ListPagingGroupUsersParameters, restRequestConfig?: RestRequestConfig): Promise<PagingOnlyGroupUsers> {
+  public async get(
+    queryParams?: ListPagingGroupUsersParameters,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<PagingOnlyGroupUsers> {
     const r = await this.rc.get<PagingOnlyGroupUsers>(this.path(), queryParams, restRequestConfig);
     return r.data;
   }

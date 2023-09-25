@@ -1,6 +1,6 @@
-import EmergencyAddressAutoUpdateSiteInfo from './EmergencyAddressAutoUpdateSiteInfo';
-import WirelessPointInfoEmergencyAddress from './WirelessPointInfoEmergencyAddress';
-import ERLLocationInfo from './ERLLocationInfo';
+import type EmergencyAddressAutoUpdateSiteInfo from './EmergencyAddressAutoUpdateSiteInfo';
+import type WirelessPointInfoEmergencyAddress from './WirelessPointInfoEmergencyAddress';
+import type ERLLocationInfo from './ERLLocationInfo';
 
 interface WirelessPointInfo {
   /**
@@ -32,9 +32,9 @@ interface WirelessPointInfo {
 
   /**
    * Emergency address information (or information assigned to the
- *  switch or wireless point - in case of using them). Only one of a pair
- *  `emergencyAddress` or `emergencyLocationId` should be specified,
- *  otherwise an error is returned
+   *  switch or wireless point - in case of using them). Only one of a pair
+   *  `emergencyAddress` or `emergencyLocationId` should be specified,
+   *  otherwise an error is returned
    * Required
    */
   emergencyAddress?: WirelessPointInfoEmergencyAddress;

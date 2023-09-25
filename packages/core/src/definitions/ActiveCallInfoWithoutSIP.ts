@@ -1,4 +1,4 @@
-import CallInfoCQ from './CallInfoCQ';
+import type CallInfoCQ from './CallInfoCQ';
 
 interface ActiveCallInfoWithoutSIP {
   /**
@@ -9,7 +9,7 @@ interface ActiveCallInfoWithoutSIP {
   /**
    * Call direction
    */
-  direction?: ('Inbound' | 'Outbound');
+  direction?: 'Inbound' | 'Outbound';
 
   /**
    * Identifies if a call belongs to the call queue
@@ -60,12 +60,12 @@ interface ActiveCallInfoWithoutSIP {
   /**
    * Telephony call status
    */
-  telephonyStatus?: ('NoCall' | 'CallConnected' | 'Ringing' | 'OnHold' | 'ParkedCall');
+  telephonyStatus?: 'NoCall' | 'CallConnected' | 'Ringing' | 'OnHold' | 'ParkedCall';
 
   /**
    * Type of call termination. Supported for calls in 'NoCall' status. If the returned termination type is 'intermediate' it means the call is not actually ended, the connection is established on one of the devices
    */
-  terminationType?: ('final' | 'intermediate');
+  terminationType?: 'final' | 'intermediate';
 
   /**
    */

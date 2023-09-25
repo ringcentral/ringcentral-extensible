@@ -1,7 +1,7 @@
-import MakeRingOutCallerInfoRequestFrom from './MakeRingOutCallerInfoRequestFrom';
-import MakeRingOutCallerInfoRequestTo from './MakeRingOutCallerInfoRequestTo';
-import MakeRingOutCallerIdInfo from './MakeRingOutCallerIdInfo';
-import MakeRingOutCountryInfo from './MakeRingOutCountryInfo';
+import type MakeRingOutCallerInfoRequestFrom from './MakeRingOutCallerInfoRequestFrom';
+import type MakeRingOutCallerInfoRequestTo from './MakeRingOutCallerInfoRequestTo';
+import type MakeRingOutCallerIdInfo from './MakeRingOutCallerIdInfo';
+import type MakeRingOutCountryInfo from './MakeRingOutCountryInfo';
 
 interface MakeRingOutRequest {
   /**
@@ -20,7 +20,7 @@ interface MakeRingOutRequest {
 
   /**
    * Audio prompt that a calling party hears when a call
- *  is connected
+   *  is connected
    */
   playPrompt?: boolean;
 

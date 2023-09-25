@@ -1,6 +1,6 @@
-import AccountHistoryRecordPublicInitiator from './AccountHistoryRecordPublicInitiator';
-import AccountHistoryRecordTarget from './AccountHistoryRecordTarget';
-import AccountHistoryRecordPublicDetails from './AccountHistoryRecordPublicDetails';
+import type AccountHistoryRecordPublicInitiator from './AccountHistoryRecordPublicInitiator';
+import type AccountHistoryRecordTarget from './AccountHistoryRecordTarget';
+import type AccountHistoryRecordPublicDetails from './AccountHistoryRecordPublicDetails';
 
 interface AccountHistoryPublicRecord {
   /**

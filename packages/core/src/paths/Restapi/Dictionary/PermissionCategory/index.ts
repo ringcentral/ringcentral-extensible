@@ -1,7 +1,7 @@
-import PermissionCategoryResource from '../../../../definitions/PermissionCategoryResource';
-import PermissionCategoryCollectionResource from '../../../../definitions/PermissionCategoryCollectionResource';
-import ListPermissionCategoriesParameters from '../../../../definitions/ListPermissionCategoriesParameters';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
+import type PermissionCategoryResource from '../../../../definitions/PermissionCategoryResource';
+import type PermissionCategoryCollectionResource from '../../../../definitions/PermissionCategoryCollectionResource';
+import type ListPermissionCategoriesParameters from '../../../../definitions/ListPermissionCategoriesParameters';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -29,7 +29,10 @@ class Index {
    * Endpoint: /restapi/{apiVersion}/dictionary/permission-category
    * Rate Limit Group: Light
    */
-  public async list(queryParams?: ListPermissionCategoriesParameters, restRequestConfig?: RestRequestConfig): Promise<PermissionCategoryCollectionResource> {
+  public async list(
+    queryParams?: ListPermissionCategoriesParameters,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<PermissionCategoryCollectionResource> {
     const r = await this.rc.get<PermissionCategoryCollectionResource>(this.path(false), queryParams, restRequestConfig);
     return r.data;
   }

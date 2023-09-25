@@ -1,4 +1,4 @@
-import BulkOperationExtensionReference from './BulkOperationExtensionReference';
+import type BulkOperationExtensionReference from './BulkOperationExtensionReference';
 
 interface BulkAddDevicesSuccessItem {
   /**

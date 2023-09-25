@@ -1,5 +1,5 @@
 import Contact from './Contact';
-import { RingCentralInterface, ParentInterface } from '../../../../../types';
+import type { RingCentralInterface, ParentInterface } from '../../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -15,7 +15,7 @@ class Index {
     return `${this._parent.path()}/address-book`;
   }
 
-  public contact(contactId: (string | null) = null): Contact {
+  public contact(contactId: string | null = null): Contact {
     return new Contact(this, contactId);
   }
 }

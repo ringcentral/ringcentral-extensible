@@ -13,13 +13,10 @@ describe('WebSocket', () => {
     await rc.installExtension(webSocketExtension);
 
     let eventCount = 0;
-    await webSocketExtension.subscribe(
-      ['/restapi/v1.0/account/~/extension/~/message-store'],
-      (event: any) => {
-        expect(event).toBeDefined();
-        eventCount += 1;
-      },
-    );
+    await webSocketExtension.subscribe(['/restapi/v1.0/account/~/extension/~/message-store'], (event: any) => {
+      expect(event).toBeDefined();
+      eventCount += 1;
+    });
 
     webSocketExtension.ws.close();
 

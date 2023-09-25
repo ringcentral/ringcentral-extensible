@@ -1,4 +1,4 @@
-import ApiError from './ApiError';
+import type ApiError from './ApiError';
 
 interface LicenseAssignmentResponseEntry {
   /**
@@ -20,7 +20,7 @@ interface LicenseAssignmentResponseEntry {
 
   /**
    * The list of errors occurred during processing of particular item of bulk operation.
- *  Returned only if `bulkItemSuccess` is false
+   *  Returned only if `bulkItemSuccess` is false
    */
   bulkItemErrors?: ApiError[];
 }

@@ -4,12 +4,12 @@ import Remove from './Remove';
 import Leave from './Leave';
 import Join from './Join';
 import Add from './Add';
-import TMUpdateTeamRequest from '../../../../definitions/TMUpdateTeamRequest';
-import TMTeamInfo from '../../../../definitions/TMTeamInfo';
-import TMCreateTeamRequest from '../../../../definitions/TMCreateTeamRequest';
-import TMTeamList from '../../../../definitions/TMTeamList';
-import ListGlipTeamsNewParameters from '../../../../definitions/ListGlipTeamsNewParameters';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
+import type TMUpdateTeamRequest from '../../../../definitions/TMUpdateTeamRequest';
+import type TMTeamInfo from '../../../../definitions/TMTeamInfo';
+import type TMCreateTeamRequest from '../../../../definitions/TMCreateTeamRequest';
+import type TMTeamList from '../../../../definitions/TMTeamList';
+import type ListGlipTeamsNewParameters from '../../../../definitions/ListGlipTeamsNewParameters';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -38,7 +38,10 @@ class Index {
    * Rate Limit Group: Medium
    * App Permission: TeamMessaging
    */
-  public async list(queryParams?: ListGlipTeamsNewParameters, restRequestConfig?: RestRequestConfig): Promise<TMTeamList> {
+  public async list(
+    queryParams?: ListGlipTeamsNewParameters,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<TMTeamList> {
     const r = await this.rc.get<TMTeamList>(this.path(false), queryParams, restRequestConfig);
     return r.data;
   }
@@ -50,7 +53,10 @@ class Index {
    * Rate Limit Group: Medium
    * App Permission: TeamMessaging
    */
-  public async post(tMCreateTeamRequest: TMCreateTeamRequest, restRequestConfig?: RestRequestConfig): Promise<TMTeamInfo> {
+  public async post(
+    tMCreateTeamRequest: TMCreateTeamRequest,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<TMTeamInfo> {
     const r = await this.rc.post<TMTeamInfo>(this.path(false), tMCreateTeamRequest, undefined, restRequestConfig);
     return r.data;
   }
@@ -92,7 +98,10 @@ class Index {
    * Rate Limit Group: Medium
    * App Permission: TeamMessaging
    */
-  public async patch(tMUpdateTeamRequest: TMUpdateTeamRequest, restRequestConfig?: RestRequestConfig): Promise<TMTeamInfo> {
+  public async patch(
+    tMUpdateTeamRequest: TMUpdateTeamRequest,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<TMTeamInfo> {
     if (this.chatId === null) {
       throw new Error('chatId must be specified.');
     }

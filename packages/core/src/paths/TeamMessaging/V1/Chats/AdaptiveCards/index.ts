@@ -1,6 +1,6 @@
-import AdaptiveCardShortInfo from '../../../../../definitions/AdaptiveCardShortInfo';
-import AdaptiveCardRequest from '../../../../../definitions/AdaptiveCardRequest';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import type AdaptiveCardShortInfo from '../../../../../definitions/AdaptiveCardShortInfo';
+import type AdaptiveCardRequest from '../../../../../definitions/AdaptiveCardRequest';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -23,7 +23,10 @@ class Index {
    * Rate Limit Group: Medium
    * App Permission: TeamMessaging
    */
-  public async post(adaptiveCardRequest: AdaptiveCardRequest, restRequestConfig?: RestRequestConfig): Promise<AdaptiveCardShortInfo> {
+  public async post(
+    adaptiveCardRequest: AdaptiveCardRequest,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<AdaptiveCardShortInfo> {
     const r = await this.rc.post<AdaptiveCardShortInfo>(this.path(), adaptiveCardRequest, undefined, restRequestConfig);
     return r.data;
   }

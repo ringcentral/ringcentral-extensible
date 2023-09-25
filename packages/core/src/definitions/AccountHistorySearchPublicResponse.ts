@@ -1,4 +1,4 @@
-import AccountHistoryPublicRecord from './AccountHistoryPublicRecord';
+import type AccountHistoryPublicRecord from './AccountHistoryPublicRecord';
 
 interface AccountHistorySearchPublicResponse {
   /**

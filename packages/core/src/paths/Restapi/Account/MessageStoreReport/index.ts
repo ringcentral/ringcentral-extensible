@@ -1,7 +1,7 @@
 import Archive from './Archive';
-import MessageStoreReport from '../../../../definitions/MessageStoreReport';
-import CreateMessageStoreReportRequest from '../../../../definitions/CreateMessageStoreReportRequest';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
+import type MessageStoreReport from '../../../../definitions/MessageStoreReport';
+import type CreateMessageStoreReportRequest from '../../../../definitions/CreateMessageStoreReportRequest';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -25,16 +25,24 @@ class Index {
 
   /**
    * Creates a task to collect all account messages within the specified
- * time interval. Maximum number of simultaneous tasks per account is 2.
- *
+   * time interval. Maximum number of simultaneous tasks per account is 2.
+   *
    * HTTP Method: post
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/message-store-report
    * Rate Limit Group: Heavy
    * App Permission: ReadMessages
    * User Permission: Users
    */
-  public async post(createMessageStoreReportRequest: CreateMessageStoreReportRequest, restRequestConfig?: RestRequestConfig): Promise<MessageStoreReport> {
-    const r = await this.rc.post<MessageStoreReport>(this.path(false), createMessageStoreReportRequest, undefined, restRequestConfig);
+  public async post(
+    createMessageStoreReportRequest: CreateMessageStoreReportRequest,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<MessageStoreReport> {
+    const r = await this.rc.post<MessageStoreReport>(
+      this.path(false),
+      createMessageStoreReportRequest,
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 

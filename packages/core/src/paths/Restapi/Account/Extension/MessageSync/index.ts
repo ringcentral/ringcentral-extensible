@@ -1,6 +1,6 @@
-import GetMessageSyncResponse from '../../../../../definitions/GetMessageSyncResponse';
-import SyncMessagesParameters from '../../../../../definitions/SyncMessagesParameters';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import type GetMessageSyncResponse from '../../../../../definitions/GetMessageSyncResponse';
+import type SyncMessagesParameters from '../../../../../definitions/SyncMessagesParameters';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -24,7 +24,10 @@ class Index {
    * App Permission: ReadMessages
    * User Permission: ReadMessages
    */
-  public async get(queryParams?: SyncMessagesParameters, restRequestConfig?: RestRequestConfig): Promise<GetMessageSyncResponse> {
+  public async get(
+    queryParams?: SyncMessagesParameters,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<GetMessageSyncResponse> {
     const r = await this.rc.get<GetMessageSyncResponse>(this.path(), queryParams, restRequestConfig);
     return r.data;
   }

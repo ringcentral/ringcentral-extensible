@@ -1,10 +1,10 @@
 /**
  * Query parameters for operation listMessages
-*/
+ */
 interface ListMessagesParameters {
   /**
    * Specifies the availability status for resulting messages.
- *  Multiple values are accepted
+   *  Multiple values are accepted
    */
   availability?: ('Alive' | 'Deleted' | 'Purged')[];
 
@@ -15,47 +15,47 @@ interface ListMessagesParameters {
 
   /**
    * Start datetime for resulting messages in ISO 8601 format
- *  including timezone, for example 2016-03-10T18:07:52.534Z. The default value
- *  is dateTo minus 24 hours
+   *  including timezone, for example 2016-03-10T18:07:52.534Z. The default value
+   *  is dateTo minus 24 hours
    * Format: date-time
    */
   dateFrom?: string;
 
   /**
    * End datetime for resulting messages in ISO 8601 format including
- *  timezone, for example 2016-03-10T18:07:52.534Z. The default value is current
- *  time
+   *  timezone, for example 2016-03-10T18:07:52.534Z. The default value is current
+   *  time
    * Format: date-time
    */
   dateTo?: string;
 
   /**
    * Direction for resulting messages. If not specified, both
- *  inbound and outbound messages are returned. Multiple values are accepted
+   *  inbound and outbound messages are returned. Multiple values are accepted
    */
   direction?: ('Inbound' | 'Outbound')[];
 
   /**
    * If 'True', then the latest messages per every conversation ID
- *  are returned
+   *  are returned
    */
   distinctConversations?: boolean;
 
   /**
    * Type of resulting messages. If not specified, all messages
- *  without message type filtering are returned. Multiple values are accepted
+   *  without message type filtering are returned. Multiple values are accepted
    */
   messageType?: ('Fax' | 'SMS' | 'VoiceMail' | 'Pager')[];
 
   /**
    * Read status for resulting messages. Multiple values are
- *  accepted
+   *  accepted
    */
   readStatus?: ('Read' | 'Unread')[];
 
   /**
    * Indicates a page number to retrieve. Only positive number values
- *  are accepted
+   *  are accepted
    * Format: int32
    * Default: 1
    */
@@ -70,7 +70,7 @@ interface ListMessagesParameters {
 
   /**
    * Phone number. If specified, messages are returned for this
- *  particular phone number only
+   *  particular phone number only
    */
   phoneNumber?: string;
 }

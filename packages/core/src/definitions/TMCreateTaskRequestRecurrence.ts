@@ -3,13 +3,13 @@ interface TMCreateTaskRequestRecurrence {
    * Task recurrence settings.
    * Default: None
    */
-  schedule?: ('None' | 'Daily' | 'Weekdays' | 'Weekly' | 'Monthly' | 'Yearly');
+  schedule?: 'None' | 'Daily' | 'Weekdays' | 'Weekly' | 'Monthly' | 'Yearly';
 
   /**
    * Task ending condition.
    * Default: None
    */
-  endingCondition?: ('None' | 'Count' | 'Date');
+  endingCondition?: 'None' | 'Count' | 'Date';
 
   /**
    * Count of iterations of periodic tasks.

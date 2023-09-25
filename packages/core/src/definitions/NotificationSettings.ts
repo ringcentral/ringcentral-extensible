@@ -1,9 +1,9 @@
-import EmailRecipientInfo from './EmailRecipientInfo';
-import VoicemailsInfo from './VoicemailsInfo';
-import InboundFaxesInfo from './InboundFaxesInfo';
-import OutboundFaxesInfo from './OutboundFaxesInfo';
-import InboundTextsInfo from './InboundTextsInfo';
-import MissedCallsInfo from './MissedCallsInfo';
+import type EmailRecipientInfo from './EmailRecipientInfo';
+import type VoicemailsInfo from './VoicemailsInfo';
+import type InboundFaxesInfo from './InboundFaxesInfo';
+import type OutboundFaxesInfo from './OutboundFaxesInfo';
+import type InboundTextsInfo from './InboundTextsInfo';
+import type MissedCallsInfo from './MissedCallsInfo';
 
 interface NotificationSettings {
   /**
@@ -14,8 +14,8 @@ interface NotificationSettings {
 
   /**
    * List of extensions specified as email notification recipients.
- *  Returned only for call queues where queue managers are assigned as user
- *  extensions.
+   *  Returned only for call queues where queue managers are assigned as user
+   *  extensions.
    */
   emailRecipients?: EmailRecipientInfo[];
 
@@ -26,7 +26,7 @@ interface NotificationSettings {
 
   /**
    * Specifies if managers' emails are included in the list of emails to which
- *  notifications are sent
+   *  notifications are sent
    */
   includeManagers?: boolean;
 
@@ -37,10 +37,10 @@ interface NotificationSettings {
 
   /**
    * Specifies notifications settings mode. If 'True' then advanced
- *  mode is on, it allows using different emails and/or phone numbers for
- *  each notification type. If 'False' then basic mode is on. Advanced mode
- *  settings are returned in both modes, if specified once, but if basic mode
- *  is switched on, they are not applied
+   *  mode is on, it allows using different emails and/or phone numbers for
+   *  each notification type. If 'False' then basic mode is on. Advanced mode
+   *  settings are returned in both modes, if specified once, but if basic mode
+   *  is switched on, they are not applied
    */
   advancedMode?: boolean;
 

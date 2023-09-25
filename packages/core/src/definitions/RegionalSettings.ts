@@ -1,14 +1,14 @@
-import CountryInfoShortModel from './CountryInfoShortModel';
-import TimezoneInfo from './TimezoneInfo';
-import RegionalLanguageInfo from './RegionalLanguageInfo';
-import GreetingLanguageInfo from './GreetingLanguageInfo';
-import FormattingLocaleInfo from './FormattingLocaleInfo';
+import type CountryInfoShortModel from './CountryInfoShortModel';
+import type TimezoneInfo from './TimezoneInfo';
+import type RegionalLanguageInfo from './RegionalLanguageInfo';
+import type GreetingLanguageInfo from './GreetingLanguageInfo';
+import type FormattingLocaleInfo from './FormattingLocaleInfo';
 
 /**
  * Regional data (timezone, home country, language) of an extension/account.
  * The default is Company (Auto-Receptionist) settings
  *
-*/
+ */
 interface RegionalSettings {
   /**
    */
@@ -33,7 +33,7 @@ interface RegionalSettings {
   /**
    * Time format setting. The default value is '12h' = ['12h', '24h']
    */
-  timeFormat?: ('12h' | '24h');
+  timeFormat?: '12h' | '24h';
 }
 
 export default RegionalSettings;

@@ -1,8 +1,8 @@
-import AlertInfo from './AlertInfo';
+import type AlertInfo from './AlertInfo';
 
 /**
  * Information on a notification
-*/
+ */
 interface NotificationInfo {
   /**
    */

@@ -1,8 +1,8 @@
-import BatchProvisionUsersRequestItem from './BatchProvisionUsersRequestItem';
+import type BatchProvisionUsersRequestItem from './BatchProvisionUsersRequestItem';
 
 /**
  * Describes request for user extension provisioning
-*/
+ */
 interface BatchProvisionUsersRequest {
   /**
    * Required

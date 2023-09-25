@@ -1,6 +1,6 @@
 /**
  * Query parameters for operation listAccountMeetingRecordings
-*/
+ */
 interface ListAccountMeetingRecordingsParameters {
   /**
    * Internal identifier of a meeting. Either `meetingId` or `meetingStartTime`/`meetingEndTime` can be specified
@@ -9,16 +9,16 @@ interface ListAccountMeetingRecordingsParameters {
 
   /**
    * Recordings of meetings started after the time specified will
- *  be returned. Either `meetingId` or `meetingStartTime`/`meetingEndTime` can
- *  be specified
+   *  be returned. Either `meetingId` or `meetingStartTime`/`meetingEndTime` can
+   *  be specified
    * Format: date-time
    */
   meetingStartTimeFrom?: string;
 
   /**
    * Recordings of meetings started before the time specified will
- *  be returned. The default value is current time. Either `meetingId` or `meetingStartTime`/`meetingEndTime`
- *  can be specified
+   *  be returned. The default value is current time. Either `meetingId` or `meetingStartTime`/`meetingEndTime`
+   *  can be specified
    * Format: date-time
    */
   meetingStartTimeTo?: string;

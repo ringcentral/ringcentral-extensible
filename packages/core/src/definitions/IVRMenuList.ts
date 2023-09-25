@@ -1,4 +1,4 @@
-import IVRMenuListInfo from './IVRMenuListInfo';
+import type IVRMenuListInfo from './IVRMenuListInfo';
 
 interface IVRMenuList {
   /**

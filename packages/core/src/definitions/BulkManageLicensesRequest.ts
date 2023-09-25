@@ -1,8 +1,8 @@
-import LicenseAssignmentEntry from './LicenseAssignmentEntry';
+import type LicenseAssignmentEntry from './LicenseAssignmentEntry';
 
 /**
  * Request to assign/unassign licenses
-*/
+ */
 interface BulkManageLicensesRequest {
   /**
    */

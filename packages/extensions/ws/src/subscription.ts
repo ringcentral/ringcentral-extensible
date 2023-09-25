@@ -1,68 +1,56 @@
 /* eslint-disable no-console */
-import CreateSubscriptionRequest from '@rc-ex/core/lib/definitions/CreateSubscriptionRequest';
-import SubscriptionInfo from '@rc-ex/core/lib/definitions/SubscriptionInfo';
-import { RestResponse } from '@rc-ex/core/lib/types';
-import { MessageEvent } from 'ws';
+import type CreateSubscriptionRequest from '@rc-ex/core/lib/definitions/CreateSubscriptionRequest';
+import type SubscriptionInfo from '@rc-ex/core/lib/definitions/SubscriptionInfo';
+import type { RestResponse } from '@rc-ex/core/lib/types';
+import type { MessageEvent } from 'ws';
 
-import { WsgEvent, WsgMeta, WebSocketExtensionInterface } from './types';
+import type { WsgEvent, WsgMeta, WebSocketExtensionInterface } from './types';
 import Utils from './utils';
 
 class Subscription {
-  wse: WebSocketExtensionInterface;
+  public subscriptionInfo?: SubscriptionInfo;
 
-  eventFilters: string[];
+  public wse: WebSocketExtensionInterface;
 
-  eventListener: (event: MessageEvent) => void;
+  public eventFilters: string[];
 
-  timeout?: NodeJS.Timeout;
+  public eventListener: (event: MessageEvent) => void;
 
-  enabled = true;
+  public timeout?: NodeJS.Timeout;
 
-  constructor(
-    wse: WebSocketExtensionInterface,
-    eventFilters: string[],
-    callback: (event: {}) => void,
-  ) {
+  public enabled = true;
+
+  public constructor(wse: WebSocketExtensionInterface, eventFilters: string[], callback: (event: {}) => void) {
     this.wse = wse;
     this.eventFilters = eventFilters;
     this.eventListener = (mEvent: MessageEvent) => {
       const event = mEvent as WsgEvent;
       const [meta, body]: [WsgMeta, { subscriptionId: string }] = Utils.splitWsgData(event.data);
-      if (
-        this.enabled
-        && meta.type === 'ServerNotification'
-        && body.subscriptionId === this.subscriptionInfo!.id
-      ) {
+      if (this.enabled && meta.type === 'ServerNotification' && body.subscriptionId === this.subscriptionInfo!.id) {
         callback(body);
       }
     };
     this.setupWsEventListener();
   }
 
-  setupWsEventListener() {
+  public setupWsEventListener() {
     this.wse.ws.addEventListener('message', this.eventListener);
   }
 
-  get requestBody(): CreateSubscriptionRequest {
+  public get requestBody(): CreateSubscriptionRequest {
     return {
       deliveryMode: { transportType: 'WebSocket' as any }, // because WebSocket is not in spec
       eventFilters: this.eventFilters,
     };
   }
 
-  subscriptionInfo?: SubscriptionInfo;
-
-  async subscribe() {
+  public async subscribe() {
     this.subscriptionInfo = (
-      await this.wse.request<SubscriptionInfo>(
-        'POST',
-        '/restapi/v1.0/subscription',
-        this.requestBody,
-      )
+      await this.wse.request<SubscriptionInfo>('POST', '/restapi/v1.0/subscription', this.requestBody)
     ).data;
   }
 
-  async refresh() {
+  public async refresh() {
     if (!this.subscriptionInfo) {
       return;
     }
@@ -83,24 +71,18 @@ class Subscription {
     }
   }
 
-  async revoke() {
+  public async revoke() {
     if (!this.subscriptionInfo) {
       return;
     }
     try {
-      await this.wse.request<SubscriptionInfo>(
-        'DELETE',
-        `/restapi/v1.0/subscription/${this.subscriptionInfo!.id}`,
-      );
+      await this.wse.request<SubscriptionInfo>('DELETE', `/restapi/v1.0/subscription/${this.subscriptionInfo!.id}`);
     } catch (e) {
       const re = e as { response: RestResponse };
       if (re.response && re.response.status === 404) {
         // ignore
         if (this.wse.options.debugMode) {
-          console.debug(
-            `Subscription ${this.subscriptionInfo!.id
-            } doesn't exist on server side`,
-          );
+          console.debug(`Subscription ${this.subscriptionInfo!.id} doesn't exist on server side`);
         }
       } else if (re.response && re.response.status === 401) {
         // ignore
@@ -114,7 +96,7 @@ class Subscription {
     this.remove();
   }
 
-  remove() {
+  public remove() {
     if (this.timeout) {
       global.clearTimeout(this.timeout);
       this.timeout = undefined;

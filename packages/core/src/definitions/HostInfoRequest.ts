@@ -1,6 +1,6 @@
 /**
  * Meeting host information
-*/
+ */
 interface HostInfoRequest {
   /**
    * Link to the meeting host resource

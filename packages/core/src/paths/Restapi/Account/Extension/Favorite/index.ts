@@ -1,6 +1,6 @@
-import FavoriteCollection from '../../../../../definitions/FavoriteCollection';
-import FavoriteContactList from '../../../../../definitions/FavoriteContactList';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import type FavoriteCollection from '../../../../../definitions/FavoriteCollection';
+import type FavoriteContactList from '../../../../../definitions/FavoriteContactList';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -18,9 +18,9 @@ class Index {
 
   /**
    * Returns the list of favorite contacts of the current extension.
- * Favorite contacts include both company contacts (extensions) and personal
- * contacts (address book records).
- *
+   * Favorite contacts include both company contacts (extensions) and personal
+   * contacts (address book records).
+   *
    * HTTP Method: get
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/favorite
    * Rate Limit Group: Light
@@ -34,17 +34,20 @@ class Index {
 
   /**
    * Updates the list of favorite contacts of the current extension.
- * Favorite contacts include both company contacts (extensions) and personal
- * contacts (address book records).**Please note**: Currently personal address
- * book size is limited to 10 000 contacts.
- *
+   * Favorite contacts include both company contacts (extensions) and personal
+   * contacts (address book records).**Please note**: Currently personal address
+   * book size is limited to 10 000 contacts.
+   *
    * HTTP Method: put
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/favorite
    * Rate Limit Group: Medium
    * App Permission: Contacts
    * User Permission: EditPersonalContacts
    */
-  public async put(favoriteCollection: FavoriteCollection, restRequestConfig?: RestRequestConfig): Promise<FavoriteContactList> {
+  public async put(
+    favoriteCollection: FavoriteCollection,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<FavoriteContactList> {
     const r = await this.rc.put<FavoriteContactList>(this.path(), favoriteCollection, undefined, restRequestConfig);
     return r.data;
   }

@@ -1,5 +1,5 @@
-import MessageStoreConfiguration from '../../../../definitions/MessageStoreConfiguration';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
+import type MessageStoreConfiguration from '../../../../definitions/MessageStoreConfiguration';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -36,8 +36,16 @@ class Index {
    * App Permission: EditAccounts
    * User Permission: AccountAdministration
    */
-  public async put(messageStoreConfiguration: MessageStoreConfiguration, restRequestConfig?: RestRequestConfig): Promise<MessageStoreConfiguration> {
-    const r = await this.rc.put<MessageStoreConfiguration>(this.path(), messageStoreConfiguration, undefined, restRequestConfig);
+  public async put(
+    messageStoreConfiguration: MessageStoreConfiguration,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<MessageStoreConfiguration> {
+    const r = await this.rc.put<MessageStoreConfiguration>(
+      this.path(),
+      messageStoreConfiguration,
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

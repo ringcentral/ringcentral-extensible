@@ -1,4 +1,4 @@
-import ExtensionGrantListEventBody from './ExtensionGrantListEventBody';
+import type ExtensionGrantListEventBody from './ExtensionGrantListEventBody';
 
 interface ExtensionGrantListEvent {
   /**
@@ -13,8 +13,8 @@ interface ExtensionGrantListEvent {
 
   /**
    * Datetime of sending a notification in
- *  [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
- *  format including timezone, for example *2016-03-10T18:07:52.534Z*
+   *  [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
+   *  format including timezone, for example *2016-03-10T18:07:52.534Z*
    */
   timestamp?: string;
 

@@ -1,6 +1,6 @@
-import ExtensionWithRolesCollectionResource from '../../../../definitions/ExtensionWithRolesCollectionResource';
-import ListAssignedRolesParameters from '../../../../definitions/ListAssignedRolesParameters';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
+import type ExtensionWithRolesCollectionResource from '../../../../definitions/ExtensionWithRolesCollectionResource';
+import type ListAssignedRolesParameters from '../../../../definitions/ListAssignedRolesParameters';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -24,7 +24,10 @@ class Index {
    * App Permission: ReadAccounts
    * User Permission: ReadAssignedRoles
    */
-  public async get(queryParams?: ListAssignedRolesParameters, restRequestConfig?: RestRequestConfig): Promise<ExtensionWithRolesCollectionResource> {
+  public async get(
+    queryParams?: ListAssignedRolesParameters,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<ExtensionWithRolesCollectionResource> {
     const r = await this.rc.get<ExtensionWithRolesCollectionResource>(this.path(), queryParams, restRequestConfig);
     return r.data;
   }

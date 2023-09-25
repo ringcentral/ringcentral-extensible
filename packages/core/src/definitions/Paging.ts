@@ -1,6 +1,6 @@
 /**
  * Paging information
-*/
+ */
 interface Paging {
   /**
    * Current offset token

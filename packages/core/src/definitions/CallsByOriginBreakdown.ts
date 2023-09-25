@@ -1,6 +1,6 @@
 /**
  * Result breakdown by origin
-*/
+ */
 interface CallsByOriginBreakdown {
   /**
    * Value for Internal origin

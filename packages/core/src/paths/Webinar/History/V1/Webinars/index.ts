@@ -1,6 +1,6 @@
 import Sessions from './Sessions';
-import WebinarResource from '../../../../../definitions/WebinarResource';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import type WebinarResource from '../../../../../definitions/WebinarResource';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -37,7 +37,7 @@ class Index {
     return r.data;
   }
 
-  public sessions(sessionId: (string | null) = null): Sessions {
+  public sessions(sessionId: string | null = null): Sessions {
     return new Sessions(this, sessionId);
   }
 }

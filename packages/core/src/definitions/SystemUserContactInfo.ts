@@ -1,6 +1,6 @@
 /**
  * Personal contact information
-*/
+ */
 interface SystemUserContactInfo {
   /**
    * Given name
@@ -39,7 +39,7 @@ interface SystemUserContactInfo {
 
   /**
    * Short number of an extension.
- *  Actual max length depends on system length limit for extension.
+   *  Actual max length depends on system length limit for extension.
    * Required
    * Example: 205
    */

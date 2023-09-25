@@ -1,9 +1,9 @@
-import TMUpdatePostRequest from '../../../../../definitions/TMUpdatePostRequest';
-import TMPostInfo from '../../../../../definitions/TMPostInfo';
-import TMCreatePostRequest from '../../../../../definitions/TMCreatePostRequest';
-import TMPostsList from '../../../../../definitions/TMPostsList';
-import ReadGlipPostsNewParameters from '../../../../../definitions/ReadGlipPostsNewParameters';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import type TMUpdatePostRequest from '../../../../../definitions/TMUpdatePostRequest';
+import type TMPostInfo from '../../../../../definitions/TMPostInfo';
+import type TMCreatePostRequest from '../../../../../definitions/TMCreatePostRequest';
+import type TMPostsList from '../../../../../definitions/TMPostsList';
+import type ReadGlipPostsNewParameters from '../../../../../definitions/ReadGlipPostsNewParameters';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -32,7 +32,10 @@ class Index {
    * Rate Limit Group: Medium
    * App Permission: TeamMessaging
    */
-  public async list(queryParams?: ReadGlipPostsNewParameters, restRequestConfig?: RestRequestConfig): Promise<TMPostsList> {
+  public async list(
+    queryParams?: ReadGlipPostsNewParameters,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<TMPostsList> {
     const r = await this.rc.get<TMPostsList>(this.path(false), queryParams, restRequestConfig);
     return r.data;
   }
@@ -44,7 +47,10 @@ class Index {
    * Rate Limit Group: Medium
    * App Permission: TeamMessaging
    */
-  public async post(tMCreatePostRequest: TMCreatePostRequest, restRequestConfig?: RestRequestConfig): Promise<TMPostInfo> {
+  public async post(
+    tMCreatePostRequest: TMCreatePostRequest,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<TMPostInfo> {
     const r = await this.rc.post<TMPostInfo>(this.path(false), tMCreatePostRequest, undefined, restRequestConfig);
     return r.data;
   }
@@ -86,7 +92,10 @@ class Index {
    * Rate Limit Group: Medium
    * App Permission: TeamMessaging
    */
-  public async patch(tMUpdatePostRequest: TMUpdatePostRequest, restRequestConfig?: RestRequestConfig): Promise<TMPostInfo> {
+  public async patch(
+    tMUpdatePostRequest: TMUpdatePostRequest,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<TMPostInfo> {
     if (this.postId === null) {
       throw new Error('postId must be specified.');
     }

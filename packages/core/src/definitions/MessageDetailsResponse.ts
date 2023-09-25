@@ -1,6 +1,6 @@
 /**
  * Complete details of the message
-*/
+ */
 interface MessageDetailsResponse {
   /**
    * Internal identifier of a message
@@ -42,7 +42,7 @@ interface MessageDetailsResponse {
    * Current status of a message
    * Example: Queued
    */
-  messageStatus?: ('Queued' | 'Delivered' | 'Sent' | 'SendingFailed' | 'DeliveryFailed');
+  messageStatus?: 'Queued' | 'Delivered' | 'Sent' | 'SendingFailed' | 'DeliveryFailed';
 
   /**
    * Number of segments of a message
@@ -67,7 +67,7 @@ interface MessageDetailsResponse {
   /**
    * Direction of the SMS message
    */
-  direction?: ('Inbound' | 'Outbound');
+  direction?: 'Inbound' | 'Outbound';
 
   /**
    * The RC error code of the message sending failure reason

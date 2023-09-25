@@ -1,7 +1,7 @@
-import ScimAuthenticationScheme from './ScimAuthenticationScheme';
-import ScimBulkSupported from './ScimBulkSupported';
-import ScimSupported from './ScimSupported';
-import ScimFilterSupported from './ScimFilterSupported';
+import type ScimAuthenticationScheme from './ScimAuthenticationScheme';
+import type ScimBulkSupported from './ScimBulkSupported';
+import type ScimSupported from './ScimSupported';
+import type ScimFilterSupported from './ScimFilterSupported';
 
 interface ScimProviderConfig {
   /**
@@ -30,7 +30,7 @@ interface ScimProviderConfig {
 
   /**
    */
-  schemas?: ('urn:ietf:params:scim:schemas:core:2.0:ServiceProviderConfig')[];
+  schemas?: 'urn:ietf:params:scim:schemas:core:2.0:ServiceProviderConfig'[];
 
   /**
    */

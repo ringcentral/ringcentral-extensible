@@ -1,7 +1,7 @@
 import PhoneNumbers from './PhoneNumbers';
-import CallerBlockingSettingsUpdate from '../../../../../definitions/CallerBlockingSettingsUpdate';
-import CallerBlockingSettings from '../../../../../definitions/CallerBlockingSettings';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import type CallerBlockingSettingsUpdate from '../../../../../definitions/CallerBlockingSettingsUpdate';
+import type CallerBlockingSettings from '../../../../../definitions/CallerBlockingSettings';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -38,12 +38,20 @@ class Index {
    * App Permission: EditExtensions
    * User Permission: EditBlockedNumbers
    */
-  public async put(callerBlockingSettingsUpdate: CallerBlockingSettingsUpdate, restRequestConfig?: RestRequestConfig): Promise<CallerBlockingSettings> {
-    const r = await this.rc.put<CallerBlockingSettings>(this.path(), callerBlockingSettingsUpdate, undefined, restRequestConfig);
+  public async put(
+    callerBlockingSettingsUpdate: CallerBlockingSettingsUpdate,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<CallerBlockingSettings> {
+    const r = await this.rc.put<CallerBlockingSettings>(
+      this.path(),
+      callerBlockingSettingsUpdate,
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 
-  public phoneNumbers(blockedNumberId: (string | null) = null): PhoneNumbers {
+  public phoneNumbers(blockedNumberId: string | null = null): PhoneNumbers {
     return new PhoneNumbers(this, blockedNumberId);
   }
 }

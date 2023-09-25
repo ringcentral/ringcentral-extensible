@@ -1,7 +1,7 @@
-import RolesTimezoneResource from './RolesTimezoneResource';
-import RolesCountryResource from './RolesCountryResource';
-import RolesLanguageResource from './RolesLanguageResource';
-import CurrencyResource from './CurrencyResource';
+import type RolesTimezoneResource from './RolesTimezoneResource';
+import type RolesCountryResource from './RolesCountryResource';
+import type RolesLanguageResource from './RolesLanguageResource';
+import type CurrencyResource from './CurrencyResource';
 
 interface RolesRegionalSettingsResource {
   /**
@@ -26,7 +26,7 @@ interface RolesRegionalSettingsResource {
 
   /**
    */
-  timeFormat?: ('12h' | '24h');
+  timeFormat?: '12h' | '24h';
 
   /**
    */

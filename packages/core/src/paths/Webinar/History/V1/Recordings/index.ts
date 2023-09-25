@@ -1,8 +1,8 @@
 import Download from './Download';
-import RecordingItemExtendedModel from '../../../../../definitions/RecordingItemExtendedModel';
-import RecordingListResource from '../../../../../definitions/RecordingListResource';
-import RcwHistoryListRecordingsParameters from '../../../../../definitions/RcwHistoryListRecordingsParameters';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import type RecordingItemExtendedModel from '../../../../../definitions/RecordingItemExtendedModel';
+import type RecordingListResource from '../../../../../definitions/RecordingListResource';
+import type RcwHistoryListRecordingsParameters from '../../../../../definitions/RcwHistoryListRecordingsParameters';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -26,21 +26,24 @@ class Index {
 
   /**
    * Returns the list of webinar recordings for a given webinar host user
- *
+   *
    * HTTP Method: get
    * Endpoint: /webinar/history/v1/recordings
    * Rate Limit Group: Heavy
    * App Permission: ReadWebinars
    */
-  public async list(queryParams?: RcwHistoryListRecordingsParameters, restRequestConfig?: RestRequestConfig): Promise<RecordingListResource> {
+  public async list(
+    queryParams?: RcwHistoryListRecordingsParameters,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<RecordingListResource> {
     const r = await this.rc.get<RecordingListResource>(this.path(false), queryParams, restRequestConfig);
     return r.data;
   }
 
   /**
    * Returns the webinar recording by ID (Webinar host's interface).
- * This API also returns sharing link if sharing is enabled.
- *
+   * This API also returns sharing link if sharing is enabled.
+   *
    * HTTP Method: get
    * Endpoint: /webinar/history/v1/recordings/{recordingId}
    * Rate Limit Group: Heavy

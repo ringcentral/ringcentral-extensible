@@ -1,4 +1,4 @@
-import SummaryOutputUnit from './SummaryOutputUnit';
+import type SummaryOutputUnit from './SummaryOutputUnit';
 
 interface SummaryApiResponse {
   /**

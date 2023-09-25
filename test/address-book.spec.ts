@@ -3,13 +3,7 @@ import { createRingCentral } from './utils';
 describe('Address Book', () => {
   test('contacts', async () => {
     const rc = await createRingCentral();
-    const r = await rc
-      .restapi()
-      .account()
-      .extension()
-      .addressBook()
-      .contact()
-      .list();
+    const r = await rc.restapi().account().extension().addressBook().contact().list();
     expect(r).toBeDefined();
     expect(r.records).toBeDefined();
     expect(r.records!.length).toBeGreaterThanOrEqual(0); // by default address book is empty

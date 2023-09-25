@@ -1,6 +1,6 @@
 import Utils from '@rc-ex/core/lib/Utils';
-import FaxResponse from '@rc-ex/core/lib/definitions/FaxResponse';
-import GetMessageInfoResponse from '@rc-ex/core/lib/definitions/GetMessageInfoResponse';
+import type FaxResponse from '@rc-ex/core/lib/definitions/FaxResponse';
+import type GetMessageInfoResponse from '@rc-ex/core/lib/definitions/GetMessageInfoResponse';
 import fs from 'fs';
 import path from 'path';
 
@@ -9,20 +9,17 @@ import { createRingCentral } from './utils';
 describe('low level API', () => {
   test('sms', async () => {
     const rc = await createRingCentral();
-    const r = await rc.post<GetMessageInfoResponse>(
-      '/restapi/v1.0/account/~/extension/~/sms',
-      {
-        from: {
-          phoneNumber: process.env.RINGCENTRAL_USERNAME!,
-        },
-        to: [
-          {
-            phoneNumber: process.env.RINGCENTRAL_RECEIVER,
-          },
-        ],
-        text: 'hello world',
+    const r = await rc.post<GetMessageInfoResponse>('/restapi/v1.0/account/~/extension/~/sms', {
+      from: {
+        phoneNumber: process.env.RINGCENTRAL_USERNAME!,
       },
-    );
+      to: [
+        {
+          phoneNumber: process.env.RINGCENTRAL_RECEIVER,
+        },
+      ],
+      text: 'hello world',
+    });
     const messageInfo = r.data;
     expect(messageInfo).not.toBeUndefined();
     expect(messageInfo.id).not.toBeUndefined();
@@ -46,10 +43,7 @@ describe('low level API', () => {
       ],
     };
     const formData = await Utils.getFormData(requestBody);
-    const r = await rc.post<FaxResponse>(
-      '/restapi/v1.0/account/~/extension/~/fax',
-      formData,
-    );
+    const r = await rc.post<FaxResponse>('/restapi/v1.0/account/~/extension/~/fax', formData);
     const messageInfo = r.data;
     expect(messageInfo).not.toBeUndefined();
     expect(messageInfo.id).not.toBeUndefined();

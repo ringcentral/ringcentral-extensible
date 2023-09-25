@@ -12,7 +12,7 @@ interface EmergencyAddress {
   /**
    * This status is associated with a phone line provision state
    */
-  lineProvisioningStatus?: ('Valid' | 'Provisioning' | 'Invalid');
+  lineProvisioningStatus?: 'Valid' | 'Provisioning' | 'Invalid';
 }
 
 export default EmergencyAddress;

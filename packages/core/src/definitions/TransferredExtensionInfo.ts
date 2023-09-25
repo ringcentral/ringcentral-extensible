@@ -1,4 +1,4 @@
-import TransferredExtension from './TransferredExtension';
+import type TransferredExtension from './TransferredExtension';
 
 interface TransferredExtensionInfo {
   /**

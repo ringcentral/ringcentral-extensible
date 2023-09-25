@@ -1,8 +1,8 @@
-import TMTaskInfo from '../../../../../definitions/TMTaskInfo';
-import TMCreateTaskRequest from '../../../../../definitions/TMCreateTaskRequest';
-import TMTaskList from '../../../../../definitions/TMTaskList';
-import ListChatTasksNewParameters from '../../../../../definitions/ListChatTasksNewParameters';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import type TMTaskInfo from '../../../../../definitions/TMTaskInfo';
+import type TMCreateTaskRequest from '../../../../../definitions/TMCreateTaskRequest';
+import type TMTaskList from '../../../../../definitions/TMTaskList';
+import type ListChatTasksNewParameters from '../../../../../definitions/ListChatTasksNewParameters';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -25,7 +25,10 @@ class Index {
    * Rate Limit Group: Heavy
    * App Permission: TeamMessaging
    */
-  public async get(queryParams?: ListChatTasksNewParameters, restRequestConfig?: RestRequestConfig): Promise<TMTaskList> {
+  public async get(
+    queryParams?: ListChatTasksNewParameters,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<TMTaskList> {
     const r = await this.rc.get<TMTaskList>(this.path(), queryParams, restRequestConfig);
     return r.data;
   }
@@ -37,7 +40,10 @@ class Index {
    * Rate Limit Group: Medium
    * App Permission: TeamMessaging
    */
-  public async post(tMCreateTaskRequest: TMCreateTaskRequest, restRequestConfig?: RestRequestConfig): Promise<TMTaskInfo> {
+  public async post(
+    tMCreateTaskRequest: TMCreateTaskRequest,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<TMTaskInfo> {
     const r = await this.rc.post<TMTaskInfo>(this.path(), tMCreateTaskRequest, undefined, restRequestConfig);
     return r.data;
   }

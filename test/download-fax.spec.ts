@@ -20,11 +20,9 @@ describe('fax', () => {
       await rc.revoke();
       return;
     }
-    const r = await rc.get<Buffer>(
-      faxMessages.records?.[0].attachments?.[0].uri ?? '',
-      undefined,
-      { responseType: 'arraybuffer' },
-    );
+    const r = await rc.get<Buffer>(faxMessages.records?.[0].attachments?.[0].uri ?? '', undefined, {
+      responseType: 'arraybuffer',
+    });
     fs.writeFileSync(path.join(__dirname, 'temp.pdf'), r.data);
     await rc.revoke();
   });

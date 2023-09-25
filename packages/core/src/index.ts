@@ -1,33 +1,30 @@
 import Rest from './Rest';
-import GetTokenRequest from './definitions/GetTokenRequest';
-import TokenInfo from './definitions/TokenInfo';
+import type GetTokenRequest from './definitions/GetTokenRequest';
+import type TokenInfo from './definitions/TokenInfo';
 import Restapi from './paths/Restapi';
 import Scim from './paths/Scim';
-import SdkExtension from './SdkExtension';
+import type SdkExtension from './SdkExtension';
 import Analytics from './paths/Analytics';
 import Ai from './paths/Ai';
 import Rcvideo from './paths/Rcvideo';
 import Webinar from './paths/Webinar';
-import RestException from './RestException';
-import {
-  RestRequestConfig, RestResponse, RingCentralInterface, RestMethod,
-  RestOptions,
-} from './types';
+import type RestException from './RestException';
+import type { RestRequestConfig, RestResponse, RingCentralInterface, RestMethod, RestOptions } from './types';
 import TeamMessaging from './paths/TeamMessaging';
 
-type JwtFlowOptions = {
+interface JwtFlowOptions {
   jwt: string;
-};
-type PasswordFlowOptions = {
+}
+interface PasswordFlowOptions {
   username: string;
   extension?: string;
   password: string;
-};
-type AuthCodeFlowOptions = {
+}
+interface AuthCodeFlowOptions {
   code: string;
   redirect_uri: string;
   code_verifier?: string;
-};
+}
 
 interface Logger {
   debug: Function;
@@ -38,38 +35,39 @@ interface Logger {
 }
 
 class RingCentral implements RingCentralInterface {
-  static config: { logger: Logger } = {
+  public static config: { logger: Logger } = {
     logger: {
-      debug: () => { },
-      log: () => { },
-      info: () => { },
-      warn: () => { },
-      error: () => { },
+      debug: () => {},
+      log: () => {},
+      info: () => {},
+      warn: () => {},
+      error: () => {},
     },
   };
 
-  sdkExtensions: SdkExtension[] = [];
+  public sdkExtensions: SdkExtension[] = [];
 
-  rest: Rest;
+  public rest: Rest;
 
-  constructor(restOptions?: RestOptions) {
+  public constructor(restOptions?: RestOptions) {
     this.rest = new Rest(restOptions ?? {});
   }
 
-  async installExtension(sdkExtension: SdkExtension) {
+  public async installExtension(sdkExtension: SdkExtension) {
     await sdkExtension.install(this);
     this.sdkExtensions.push(sdkExtension);
   }
 
-  get token() {
+  public get token() {
     return this.rest.token;
   }
 
-  set token(token) {
+  public set token(token) {
     this.rest.token = token;
   }
 
-  async request<T>(
+  // eslint-disable-next-line max-params
+  public async request<T>(
     method: RestMethod,
     endpoint: string,
     content?: {},
@@ -77,16 +75,9 @@ class RingCentral implements RingCentralInterface {
     config?: RestRequestConfig,
   ): Promise<RestResponse<T>> {
     try {
-      const r = await this.rest.request<T>(
-        method,
-        endpoint,
-        content,
-        queryParams,
-        config,
-      );
+      const r = await this.rest.request<T>(method, endpoint, content, queryParams, config);
       RingCentral.config.logger.info(
-        `[${new Date().toLocaleString()} HTTP ${method} ${r.status} ${r.statusText
-        }] ${this.rest.server} ${endpoint}`,
+        `[${new Date().toLocaleString()} HTTP ${method} ${r.status} ${r.statusText}] ${this.rest.server} ${endpoint}`,
       );
       return r;
     } catch (e) {
@@ -94,23 +85,19 @@ class RingCentral implements RingCentralInterface {
       if (re.response) {
         const r = re.response;
         RingCentral.config.logger.info(
-          `[${new Date().toLocaleString()} HTTP ${method} ${r.status} ${r.statusText
-          }] ${this.rest.server} ${endpoint}`,
+          `[${new Date().toLocaleString()} HTTP ${method} ${r.status} ${r.statusText}] ${this.rest.server} ${endpoint}`,
         );
       }
       throw e;
     }
   }
 
-  async get<T>(
-    endpoint: string,
-    queryParams?: {},
-    config?: RestRequestConfig,
-  ): Promise<RestResponse<T>> {
+  public async get<T>(endpoint: string, queryParams?: {}, config?: RestRequestConfig): Promise<RestResponse<T>> {
     return this.request<T>('GET', endpoint, undefined, queryParams, config);
   }
 
-  async delete<T>(
+  // eslint-disable-next-line max-params
+  public async delete<T>(
     endpoint: string,
     content?: {},
     queryParams?: {},
@@ -119,7 +106,8 @@ class RingCentral implements RingCentralInterface {
     return this.request<T>('DELETE', endpoint, content, queryParams, config);
   }
 
-  async post<T>(
+  // eslint-disable-next-line max-params
+  public async post<T>(
     endpoint: string,
     content?: {},
     queryParams?: {},
@@ -128,7 +116,8 @@ class RingCentral implements RingCentralInterface {
     return this.request<T>('POST', endpoint, content, queryParams, config);
   }
 
-  async put<T>(
+  // eslint-disable-next-line max-params
+  public async put<T>(
     endpoint: string,
     content?: {},
     queryParams?: {},
@@ -137,7 +126,8 @@ class RingCentral implements RingCentralInterface {
     return this.request<T>('PUT', endpoint, content, queryParams, config);
   }
 
-  async patch<T>(
+  // eslint-disable-next-line max-params
+  public async patch<T>(
     endpoint: string,
     content: {},
     queryParams?: {},
@@ -146,21 +136,17 @@ class RingCentral implements RingCentralInterface {
     return this.request<T>('PATCH', endpoint, content, queryParams, config);
   }
 
-  async getToken(getTokenRequest: GetTokenRequest): Promise<TokenInfo> {
+  public async getToken(getTokenRequest: GetTokenRequest): Promise<TokenInfo> {
     getTokenRequest.client_id = this.rest.clientId;
     this.token = await this.restapi(null).oauth().token().post(getTokenRequest);
     return this.token;
   }
 
-  async authorize(
-    options: PasswordFlowOptions | AuthCodeFlowOptions | JwtFlowOptions,
-  ): Promise<TokenInfo> {
+  public async authorize(options: PasswordFlowOptions | AuthCodeFlowOptions | JwtFlowOptions): Promise<TokenInfo> {
     const getTokenRequest: GetTokenRequest = {};
     if ('username' in options) {
       // eslint-disable-next-line no-console
-      console.warn(
-        'Username/password authentication is deprecated. Please migrate to the JWT grant type.',
-      );
+      console.warn('Username/password authentication is deprecated. Please migrate to the JWT grant type.');
       getTokenRequest.grant_type = 'password';
       getTokenRequest.username = options.username;
       getTokenRequest.extension = options.extension;
@@ -183,7 +169,7 @@ class RingCentral implements RingCentralInterface {
   /**
    * Just a synonym of authorize
    */
-  async login(options: PasswordFlowOptions | AuthCodeFlowOptions | JwtFlowOptions): Promise<TokenInfo> {
+  public async login(options: PasswordFlowOptions | AuthCodeFlowOptions | JwtFlowOptions): Promise<TokenInfo> {
     return this.authorize(options);
   }
 
@@ -195,7 +181,7 @@ class RingCentral implements RingCentralInterface {
    *
    * @param refreshToken Refresh Token
    */
-  async refresh(refreshToken?: string): Promise<TokenInfo> {
+  public async refresh(refreshToken?: string): Promise<TokenInfo> {
     const tokenToRefresh = refreshToken ?? this.token?.refresh_token;
     if (!tokenToRefresh) {
       throw new Error('tokenToRefresh must be specified.');
@@ -214,7 +200,7 @@ class RingCentral implements RingCentralInterface {
    *
    * @param tokenToRevoke AccessToken
    */
-  async revoke(tokenToRevoke?: string) {
+  public async revoke(tokenToRevoke?: string) {
     for (const sdkExtension of this.sdkExtensions) {
       await sdkExtension.revoke();
     }
@@ -226,36 +212,36 @@ class RingCentral implements RingCentralInterface {
       // no clientId or clientSecret, the token is from external source, cannot revoke
       return;
     }
-    tokenToRevoke = tokenToRevoke ?? this.token?.access_token ?? this.token?.refresh_token;
-    await this.restapi(null).oauth().revoke().post({ token: tokenToRevoke });
+    const temp = tokenToRevoke ?? this.token?.access_token ?? this.token?.refresh_token;
+    await this.restapi(null).oauth().revoke().post({ token: temp });
     this.token = undefined;
   }
 
-  restapi(apiVersion: string | null = 'v1.0'): Restapi {
+  public restapi(apiVersion: string | null = 'v1.0'): Restapi {
     return new Restapi(this, apiVersion);
   }
 
-  scim(version: string | null = 'v2'): Scim {
+  public scim(version: string | null = 'v2'): Scim {
     return new Scim(this, version);
   }
 
-  analytics(): Analytics {
+  public analytics(): Analytics {
     return new Analytics(this);
   }
 
-  teamMessaging(): TeamMessaging {
+  public teamMessaging(): TeamMessaging {
     return new TeamMessaging(this);
   }
 
-  ai(): Ai {
+  public ai(): Ai {
     return new Ai(this);
   }
 
-  rcvideo(): Rcvideo {
+  public rcvideo(): Rcvideo {
     return new Rcvideo(this);
   }
 
-  webinar(): Webinar {
+  public webinar(): Webinar {
     return new Webinar(this);
   }
 }

@@ -1,5 +1,5 @@
-import ReadIVRPromptContentParameters from '../../../../../definitions/ReadIVRPromptContentParameters';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import type ReadIVRPromptContentParameters from '../../../../../definitions/ReadIVRPromptContentParameters';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -22,8 +22,14 @@ class Index {
    * Rate Limit Group: Heavy
    * App Permission: ReadAccounts
    */
-  public async get(queryParams?: ReadIVRPromptContentParameters, restRequestConfig?: RestRequestConfig): Promise<Buffer> {
-    const r = await this.rc.get<Buffer>(this.path(), queryParams, { ...restRequestConfig, responseType: 'arraybuffer' });
+  public async get(
+    queryParams?: ReadIVRPromptContentParameters,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<Buffer> {
+    const r = await this.rc.get<Buffer>(this.path(), queryParams, {
+      ...restRequestConfig,
+      responseType: 'arraybuffer',
+    });
     return r.data;
   }
 }

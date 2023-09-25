@@ -1,10 +1,10 @@
 /**
  * Query parameters for operation listContacts
-*/
+ */
 interface ListContactsParameters {
   /**
    * If specified, only contacts which 'First name' or 'Last name' start
- *  with the mentioned substring will be returned. Case-insensitive
+   *  with the mentioned substring will be returned. Case-insensitive
    */
   startsWith?: string;
 
@@ -25,7 +25,7 @@ interface ListContactsParameters {
 
   /**
    * The number of items per page. If provided value in the request
- *  is greater than a maximum, the maximum value is applied
+   *  is greater than a maximum, the maximum value is applied
    * Maximum: 1000
    * Minimum: 1
    * Format: int32

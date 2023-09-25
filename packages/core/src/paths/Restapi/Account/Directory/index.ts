@@ -1,6 +1,6 @@
 import Federation from './Federation';
 import Entries from './Entries';
-import { RingCentralInterface, ParentInterface } from '../../../../types';
+import type { RingCentralInterface, ParentInterface } from '../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -16,7 +16,7 @@ class Index {
     return `${this._parent.path()}/directory`;
   }
 
-  public entries(entryId: (string | null) = null): Entries {
+  public entries(entryId: string | null = null): Entries {
     return new Entries(this, entryId);
   }
 

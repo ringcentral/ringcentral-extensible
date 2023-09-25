@@ -1,6 +1,6 @@
-import NotificationSettingsUpdateRequest from '../../../../../definitions/NotificationSettingsUpdateRequest';
-import NotificationSettings from '../../../../../definitions/NotificationSettings';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import type NotificationSettingsUpdateRequest from '../../../../../definitions/NotificationSettingsUpdateRequest';
+import type NotificationSettings from '../../../../../definitions/NotificationSettings';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -18,9 +18,9 @@ class Index {
 
   /**
    * Returns notification settings for the current extension.
- *
- * Knowledge Article: [User Settings - Set Up Message Notifications](https://success.ringcentral.com/articles/RC_Knowledge_Article/9740)
- *
+   *
+   * Knowledge Article: [User Settings - Set Up Message Notifications](https://success.ringcentral.com/articles/RC_Knowledge_Article/9740)
+   *
    * HTTP Method: get
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/notification-settings
    * Rate Limit Group: Light
@@ -34,16 +34,24 @@ class Index {
 
   /**
    * Updates notification settings for the current extension.
- * Knowledge Article: [User Settings - Set Up Message Notifications](https://success.ringcentral.com/articles/RC_Knowledge_Article/9740)
- *
+   * Knowledge Article: [User Settings - Set Up Message Notifications](https://success.ringcentral.com/articles/RC_Knowledge_Article/9740)
+   *
    * HTTP Method: put
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/notification-settings
    * Rate Limit Group: Medium
    * App Permission: EditExtensions
    * User Permission: EditMessagesNotificationsSettings
    */
-  public async put(notificationSettingsUpdateRequest: NotificationSettingsUpdateRequest, restRequestConfig?: RestRequestConfig): Promise<NotificationSettings> {
-    const r = await this.rc.put<NotificationSettings>(this.path(), notificationSettingsUpdateRequest, undefined, restRequestConfig);
+  public async put(
+    notificationSettingsUpdateRequest: NotificationSettingsUpdateRequest,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<NotificationSettings> {
+    const r = await this.rc.put<NotificationSettings>(
+      this.path(),
+      notificationSettingsUpdateRequest,
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

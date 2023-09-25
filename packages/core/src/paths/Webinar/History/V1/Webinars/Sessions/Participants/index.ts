@@ -1,7 +1,7 @@
 import Self from './Self';
-import ParticipantListResource from '../../../../../../../definitions/ParticipantListResource';
-import RcwHistoryListParticipantsParameters from '../../../../../../../definitions/RcwHistoryListParticipantsParameters';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../../types';
+import type ParticipantListResource from '../../../../../../../definitions/ParticipantListResource';
+import type RcwHistoryListParticipantsParameters from '../../../../../../../definitions/RcwHistoryListParticipantsParameters';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -19,13 +19,16 @@ class Index {
 
   /**
    * Returns the list of participants of a given Webinar Session (host interface).
- *
+   *
    * HTTP Method: get
    * Endpoint: /webinar/history/v1/webinars/{webinarId}/sessions/{sessionId}/participants
    * Rate Limit Group: Heavy
    * App Permission: ReadWebinars
    */
-  public async get(queryParams?: RcwHistoryListParticipantsParameters, restRequestConfig?: RestRequestConfig): Promise<ParticipantListResource> {
+  public async get(
+    queryParams?: RcwHistoryListParticipantsParameters,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<ParticipantListResource> {
     const r = await this.rc.get<ParticipantListResource>(this.path(), queryParams, restRequestConfig);
     return r.data;
   }

@@ -1,4 +1,4 @@
-import TMTaskListRecords from './TMTaskListRecords';
+import type TMTaskListRecords from './TMTaskListRecords';
 
 interface TMTaskList {
   /**

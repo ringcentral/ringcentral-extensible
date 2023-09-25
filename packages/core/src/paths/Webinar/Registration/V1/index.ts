@@ -1,5 +1,5 @@
 import Sessions from './Sessions';
-import { RingCentralInterface, ParentInterface } from '../../../../types';
+import type { RingCentralInterface, ParentInterface } from '../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -15,7 +15,7 @@ class Index {
     return `${this._parent.path(false)}/v1`;
   }
 
-  public sessions(sessionId: (string | null) = null): Sessions {
+  public sessions(sessionId: string | null = null): Sessions {
     return new Sessions(this, sessionId);
   }
 }

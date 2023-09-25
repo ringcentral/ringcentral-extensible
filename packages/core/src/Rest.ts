@@ -1,40 +1,34 @@
-import axios, {
-  AxiosInstance,
-} from 'axios';
+import type { AxiosInstance } from 'axios';
+import axios from 'axios';
 import qs from 'qs';
 import { boundary } from './FormData';
 
 import RestException from './RestException';
-import TokenInfo from './definitions/TokenInfo';
-import {
-  RestMethod,
-  RestOptions,
-  RestRequestConfig,
-  RestResponse,
-} from './types';
+import type TokenInfo from './definitions/TokenInfo';
+import type { RestMethod, RestOptions, RestRequestConfig, RestResponse } from './types';
 
 const version = '1.3.3';
 
 export default class Rest {
-  static sandboxServer = 'https://platform.devtest.ringcentral.com';
+  public static sandboxServer = 'https://platform.devtest.ringcentral.com';
 
-  static productionServer = 'https://platform.ringcentral.com';
+  public static productionServer = 'https://platform.ringcentral.com';
 
-  server: string;
+  public server: string;
 
-  clientId: string;
+  public clientId: string;
 
-  clientSecret?: string;
+  public clientSecret?: string;
 
-  token?: TokenInfo;
+  public token?: TokenInfo;
 
-  appName: string;
+  public appName: string;
 
-  appVersion: string;
+  public appVersion: string;
 
-  httpClient: AxiosInstance;
+  public httpClient: AxiosInstance;
 
-  constructor(options: RestOptions) {
+  public constructor(options: RestOptions) {
     this.server = options.server ?? Rest.sandboxServer;
     this.clientId = options.clientId ?? '';
     this.clientSecret = options.clientSecret;
@@ -63,7 +57,8 @@ export default class Rest {
     });
   }
 
-  async request<T>(
+  // eslint-disable-next-line max-params
+  public async request<T>(
     method: RestMethod,
     endpoint: string,
     content?: {},
@@ -79,10 +74,7 @@ export default class Rest {
       ...config,
     };
     // /restapi/oauth/wstoken uses bearer token
-    if (
-      endpoint === '/restapi/oauth/token'
-      || endpoint === '/restapi/oauth/revoke'
-    ) {
+    if (endpoint === '/restapi/oauth/token' || endpoint === '/restapi/oauth/revoke') {
       if (this.clientSecret) {
         // basic token
         newConfig.auth = {

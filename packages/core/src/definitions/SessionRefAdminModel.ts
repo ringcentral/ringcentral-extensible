@@ -1,4 +1,4 @@
-import WebinarRefModel from './WebinarRefModel';
+import type WebinarRefModel from './WebinarRefModel';
 
 interface SessionRefAdminModel {
   /**

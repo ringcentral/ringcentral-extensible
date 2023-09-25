@@ -2,7 +2,7 @@
  * Operator extension information. This extension will receive
  * all calls and messages addressed to an operator.
  *
-*/
+ */
 interface AccountOperatorInfo {
   /**
    * Link to an operator extension resource

@@ -1,6 +1,6 @@
 /**
  * Various settings which define behavior of this Webinar's Sessions
-*/
+ */
 interface WcsWebinarSettingsModel {
   /**
    * Indicates if recording is enabled (if false all other recording settings cannot be enabled)
@@ -27,13 +27,13 @@ interface WcsWebinarSettingsModel {
 
   /**
    * DEPRECATED AND REPLACED BY 'pastSessionDeletionEnabled' setting.
- *  Indicates if recording can be deleted (this setting is read-only at webinar level)
+   *  Indicates if recording can be deleted (this setting is read-only at webinar level)
    */
   recordingDeletionEnabled?: boolean;
 
   /**
    * Indicates if deletion of past session along with its artifacts is enabled for Host.
- *  This setting is read-only at webinar level
+   *  This setting is read-only at webinar level
    */
   pastSessionDeletionEnabled?: boolean;
 
@@ -64,20 +64,20 @@ interface WcsWebinarSettingsModel {
    * Indicates if Panelists have to be authenticated users
    * Default: Guest
    */
-  panelistAuthentication?: ('Guest' | 'AuthenticatedUser' | 'AuthenticatedCoworker');
+  panelistAuthentication?: 'Guest' | 'AuthenticatedUser' | 'AuthenticatedCoworker';
 
   /**
    * Indicates if attendees have to be authenticated users
    * Default: Guest
    */
-  attendeeAuthentication?: ('Guest' | 'AuthenticatedUser' | 'AuthenticatedCoworker');
+  attendeeAuthentication?: 'Guest' | 'AuthenticatedUser' | 'AuthenticatedCoworker';
 
   /**
    * Indicates who can access webinar artifacts. Applies to recordings at present.
- *  Applicable to other artifacts such as Q&A, Polls in the future.
+   *  Applicable to other artifacts such as Q&A, Polls in the future.
    * Default: AuthenticatedUser
    */
-  artifactsAccessAuthentication?: ('Guest' | 'AuthenticatedUser' | 'AuthenticatedCoworker');
+  artifactsAccessAuthentication?: 'Guest' | 'AuthenticatedUser' | 'AuthenticatedCoworker';
 
   /**
    * Indicates if dial-in PSTN audio option is enabled for Panelists
@@ -86,7 +86,7 @@ interface WcsWebinarSettingsModel {
 
   /**
    * Webinar password. If company-level "passwordEnabled" is true and "password" is null / omitted,
- *  the backend generates the password
+   *  the backend generates the password
    */
   password?: string;
 

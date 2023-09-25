@@ -1,4 +1,4 @@
-import AutomaticLocationUpdatesSiteInfo from './AutomaticLocationUpdatesSiteInfo';
+import type AutomaticLocationUpdatesSiteInfo from './AutomaticLocationUpdatesSiteInfo';
 
 interface AutomaticLocationUpdatesUserInfo {
   /**
@@ -23,7 +23,7 @@ interface AutomaticLocationUpdatesUserInfo {
   /**
    * User extension type
    */
-  type?: ('User' | 'Limited');
+  type?: 'User' | 'Limited';
 
   /**
    */

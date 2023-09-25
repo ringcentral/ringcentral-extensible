@@ -1,6 +1,6 @@
-import DisabledFilterInfo from './DisabledFilterInfo';
-import NotificationDeliveryMode from './NotificationDeliveryMode';
-import SubscriptionInfoBlacklistedData from './SubscriptionInfoBlacklistedData';
+import type DisabledFilterInfo from './DisabledFilterInfo';
+import type NotificationDeliveryMode from './NotificationDeliveryMode';
+import type SubscriptionInfoBlacklistedData from './SubscriptionInfoBlacklistedData';
 
 interface SubscriptionInfo {
   /**
@@ -26,13 +26,13 @@ interface SubscriptionInfo {
 
   /**
    * The list of event filter names corresponding to events the user is not subscribed to due to
- *  certain limitations
+   *  certain limitations
    */
   disabledFilters?: DisabledFilterInfo[];
 
   /**
    * Subscription expiration time in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
- *  format including timezone, for example *2016-03-10T18:07:52.534Z*
+   *  format including timezone, for example *2016-03-10T18:07:52.534Z*
    * Required
    * Format: date-time
    */
@@ -49,11 +49,11 @@ interface SubscriptionInfo {
    * Subscription status
    * Required
    */
-  status?: ('Active' | 'Suspended' | 'Blacklisted');
+  status?: 'Active' | 'Suspended' | 'Blacklisted';
 
   /**
    * Subscription creation time in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
- *  format including timezone, for example *2016-03-10T18:07:52.534*
+   *  format including timezone, for example *2016-03-10T18:07:52.534*
    * Required
    * Format: date-time
    */

@@ -1,6 +1,6 @@
-import BridgeResponse from '../../../../../../definitions/BridgeResponse';
-import GetBridgeByPstnPinParameters from '../../../../../../definitions/GetBridgeByPstnPinParameters';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../types';
+import type BridgeResponse from '../../../../../../definitions/BridgeResponse';
+import type GetBridgeByPstnPinParameters from '../../../../../../definitions/GetBridgeByPstnPinParameters';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -29,7 +29,10 @@ class Index {
    * Rate Limit Group: Medium
    * App Permission: Video
    */
-  public async get(queryParams?: GetBridgeByPstnPinParameters, restRequestConfig?: RestRequestConfig): Promise<BridgeResponse> {
+  public async get(
+    queryParams?: GetBridgeByPstnPinParameters,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<BridgeResponse> {
     if (this.pin === null) {
       throw new Error('pin must be specified.');
     }

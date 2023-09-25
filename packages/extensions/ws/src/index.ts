@@ -1,27 +1,17 @@
 /* eslint-disable no-console */
-import RingCentral from '@rc-ex/core';
-import {
-  RestMethod,
-  RestRequestConfig,
-  RestResponse,
-} from '@rc-ex/core/lib/types';
+import type RingCentral from '@rc-ex/core';
+import type { RestMethod, RestRequestConfig, RestResponse } from '@rc-ex/core/lib/types';
 import SdkExtension from '@rc-ex/core/lib/SdkExtension';
-import WS, { MessageEvent } from 'isomorphic-ws';
+import type { MessageEvent } from 'isomorphic-ws';
+import WS from 'isomorphic-ws';
 import hyperid from 'hyperid';
 import { EventEmitter } from 'events';
 import waitFor from 'wait-for-async';
 import RestException from '@rc-ex/core/lib/RestException';
-import SubscriptionInfo from '@rc-ex/core/lib/definitions/SubscriptionInfo';
+import type SubscriptionInfo from '@rc-ex/core/lib/definitions/SubscriptionInfo';
 
 import { request } from './rest';
-import {
-  WsToken,
-  ConnectionDetails,
-  WebSocketOptions,
-  WsgEvent,
-  Wsc,
-  WebSocketExtensionInterface,
-} from './types';
+import type { WsToken, ConnectionDetails, WebSocketOptions, WsgEvent, Wsc, WebSocketExtensionInterface } from './types';
 import Subscription from './subscription';
 import ConnectionException from './exceptions/ConnectionException';
 import Utils from './utils';
@@ -41,34 +31,38 @@ export enum Events {
 }
 
 class WebSocketExtension extends SdkExtension {
-  eventEmitter = new EventEmitter();
+  public eventEmitter = new EventEmitter();
 
-  options: WebSocketOptions;
+  public options: WebSocketOptions;
 
-  rc!: RingCentral;
+  public rc!: RingCentral;
 
-  wsToken?: WsToken;
+  public wsToken?: WsToken;
 
-  wsTokenExpiresAt = 0;
+  public wsTokenExpiresAt = 0;
 
-  ws!: WS;
+  public ws!: WS;
 
-  connectionDetails!: ConnectionDetails;
+  public connectionDetails!: ConnectionDetails;
 
-  wsc?: Wsc;
+  public wsc?: Wsc;
 
-  subscription?: Subscription;
+  public subscription?: Subscription;
 
   // for auto recover
-  intervalHandle?: NodeJS.Timeout;
+  public intervalHandle?: NodeJS.Timeout;
 
-  recoverTimestamp?: number;
+  public recoverTimestamp?: number;
 
-  pingServerHandle?: NodeJS.Timeout;
+  public pingServerHandle?: NodeJS.Timeout;
 
-  request = request; // request method was moved to another file to keep this file short
+  public _recoverPromise?: Promise<void>;
 
-  constructor(options: WebSocketOptions = {}) {
+  public _connectPromise?: Promise<void>;
+
+  public request = request; // request method was moved to another file to keep this file short
+
+  public constructor(options: WebSocketOptions = {}) {
     super();
     this.options = options;
     this.options.restOverWebSocket ??= false;
@@ -83,14 +77,14 @@ class WebSocketExtension extends SdkExtension {
     this.options.autoRecover.pingServerInterval ??= 30000;
   }
 
-  disable() {
+  public disable() {
     super.disable();
     if (this.subscription) {
       this.subscription.enabled = false;
     }
   }
 
-  async install(rc: RingCentral) {
+  public async install(rc: RingCentral) {
     this.rc = rc;
     if (this.options.restOverWebSocket) {
       const request = rc.request.bind(rc);
@@ -100,19 +94,18 @@ class WebSocketExtension extends SdkExtension {
         content?: {},
         queryParams?: {},
         config?: RestRequestConfig,
+        // eslint-disable-next-line max-params
       ): Promise<RestResponse<T>> => {
         if (!this.enabled || !this.options.restOverWebSocket) {
-          return request<T>(method, endpoint, content, queryParams, config);
+          return request(method, endpoint, content, queryParams, config);
         }
         if (
           // the following cannot be done with WebSocket
-          (config?.headers?.getContentType?.toString())?.includes(
-            'multipart/form-data',
-          )
-          || config?.responseType === 'arraybuffer'
-          || endpoint.startsWith('/restapi/oauth/') // token, revoke, wstoken
+          config?.headers?.getContentType?.toString()?.includes('multipart/form-data') ||
+          config?.responseType === 'arraybuffer' ||
+          endpoint.startsWith('/restapi/oauth/') // token, revoke, wstoken
         ) {
-          return request<T>(method, endpoint, content, queryParams, config);
+          return request(method, endpoint, content, queryParams, config);
         }
         return this.request<T>(method, endpoint, content, queryParams, config);
       };
@@ -163,9 +156,7 @@ class WebSocketExtension extends SdkExtension {
           await this.recover();
           retriesAttempted = 0;
           if (this.options.debugMode) {
-            console.debug(
-              `Auto recover done, recoveryState: ${this.connectionDetails.recoveryState}`,
-            );
+            console.debug(`Auto recover done, recoveryState: ${this.connectionDetails.recoveryState}`);
           }
           this.eventEmitter.emit(
             this.connectionDetails.recoveryState === 'Successful'
@@ -183,17 +174,11 @@ class WebSocketExtension extends SdkExtension {
           }
           this.eventEmitter.emit(Events.autoRecoverError, e);
         }
-        this.intervalHandle = setInterval(
-          check,
-          this.options.autoRecover!.checkInterval!(retriesAttempted),
-        );
+        this.intervalHandle = setInterval(check, this.options.autoRecover!.checkInterval!(retriesAttempted));
       }
       checking = false;
     };
-    this.intervalHandle = setInterval(
-      check,
-      this.options.autoRecover!.checkInterval!(retriesAttempted),
-    );
+    this.intervalHandle = setInterval(check, this.options.autoRecover!.checkInterval!(retriesAttempted));
 
     // browser only code start
     if (typeof window !== 'undefined' && window.addEventListener) {
@@ -210,9 +195,7 @@ class WebSocketExtension extends SdkExtension {
     // browser only code end
   }
 
-  _recoverPromise?: Promise<void>;
-
-  async recover() {
+  public async recover() {
     if (this._recoverPromise) {
       return this._recoverPromise;
     }
@@ -225,7 +208,7 @@ class WebSocketExtension extends SdkExtension {
     return undefined;
   }
 
-  async _recover() {
+  public async _recover() {
     if (this.ws?.readyState === OPEN || this.ws?.readyState === CONNECTING) {
       return;
     }
@@ -237,9 +220,8 @@ class WebSocketExtension extends SdkExtension {
       this.recoverTimestamp = Date.now();
     }
     if (
-      this.connectionDetails !== undefined
-      && Date.now() - this.recoverTimestamp
-      > this.connectionDetails.recoveryTimeout * 1000
+      this.connectionDetails !== undefined &&
+      Date.now() - this.recoverTimestamp > this.connectionDetails.recoveryTimeout * 1000
     ) {
       if (this.options.debugMode) {
         console.debug('connect to WSG but do not recover');
@@ -255,7 +237,7 @@ class WebSocketExtension extends SdkExtension {
     this.enable();
   }
 
-  async pingServer() {
+  public async pingServer() {
     if (this.options.autoRecover?.enabled !== true) {
       return;
     }
@@ -282,9 +264,7 @@ class WebSocketExtension extends SdkExtension {
     }
   }
 
-  _connectPromise?: Promise<void>;
-
-  async connect(recoverSession?: boolean) {
+  public async connect(recoverSession?: boolean) {
     if (this._connectPromise) {
       return this._connectPromise;
     }
@@ -297,12 +277,12 @@ class WebSocketExtension extends SdkExtension {
     return undefined;
   }
 
-  async _connect(recoverSession = false) {
+  public async _connect(recoverSession = false) {
     if (!this.wsToken || Date.now() > this.wsTokenExpiresAt) {
       const r = await this.rc.post('/restapi/oauth/wstoken');
       this.wsToken = r.data as WsToken;
       // `expires_in` default value is 600 seconds. That's why we `* 0.8`
-      this.wsTokenExpiresAt = Date.now() + (this.wsToken.expires_in * 0.8) * 1000;
+      this.wsTokenExpiresAt = Date.now() + this.wsToken.expires_in * 0.8 * 1000;
     }
     let wsUri = `${this.wsToken!.uri}?access_token=${this.wsToken!.ws_access_token}`;
     if (recoverSession && this.wsc) {
@@ -328,10 +308,7 @@ class WebSocketExtension extends SdkExtension {
         if (this.pingServerHandle) {
           clearTimeout(this.pingServerHandle);
         }
-        this.pingServerHandle = setTimeout(
-          () => this.pingServer(),
-          this.options.autoRecover!.pingServerInterval,
-        );
+        this.pingServerHandle = setTimeout(() => this.pingServer(), this.options.autoRecover!.pingServerInterval);
       });
     }
 
@@ -345,10 +322,10 @@ class WebSocketExtension extends SdkExtension {
       const event = mEvent as WsgEvent;
       const [meta, body] = Utils.splitWsgData(event.data);
       if (
-        meta.wsc
-        && (!this.wsc
-          || (meta.type === 'ConnectionDetails' && body.recoveryState)
-          || this.wsc.sequence < meta.wsc.sequence)
+        meta.wsc &&
+        (!this.wsc ||
+          (meta.type === 'ConnectionDetails' && body.recoveryState) ||
+          this.wsc.sequence < meta.wsc.sequence)
       ) {
         this.wsc = meta.wsc;
         this.eventEmitter.emit(Events.newWsc, this.wsc);
@@ -372,10 +349,7 @@ class WebSocketExtension extends SdkExtension {
     if (this.subscription && this.subscription.enabled) {
       // because we have a new ws object
       this.subscription.setupWsEventListener();
-      if (
-        !recoverSession
-        || this.connectionDetails.recoveryState === 'Failed'
-      ) {
+      if (!recoverSession || this.connectionDetails.recoveryState === 'Failed') {
         // create new subscription if don't recover existing one
         await this.subscription.subscribe();
       }
@@ -383,7 +357,7 @@ class WebSocketExtension extends SdkExtension {
   }
 
   // keepInterval means we do not clear the interval
-  async revoke(keepInterval = false) {
+  public async revoke(keepInterval = false) {
     await this.subscription?.revoke();
     this.subscription = undefined;
     if (!keepInterval && this.intervalHandle) {
@@ -399,7 +373,7 @@ class WebSocketExtension extends SdkExtension {
     this.disable();
   }
 
-  async subscribe(
+  public async subscribe(
     eventFilters: string[],
     callback: (event: {}) => void,
     cache: SubscriptionInfo | undefined | null = undefined,

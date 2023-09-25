@@ -1,5 +1,5 @@
-import RecordingItemModel from './RecordingItemModel';
-import RcwPagingModel from './RcwPagingModel';
+import type RecordingItemModel from './RecordingItemModel';
+import type RcwPagingModel from './RcwPagingModel';
 
 interface RecordingListResource {
   /**

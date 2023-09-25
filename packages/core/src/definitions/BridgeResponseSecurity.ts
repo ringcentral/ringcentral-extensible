@@ -1,4 +1,4 @@
-import BridgeResponseSecurityPassword from './BridgeResponseSecurityPassword';
+import type BridgeResponseSecurityPassword from './BridgeResponseSecurityPassword';
 
 interface BridgeResponseSecurity {
   /**

@@ -1,6 +1,6 @@
 /**
  * Information about an extension this device is assigned to
-*/
+ */
 interface BulkOperationExtensionReference {
   /**
    * Internal identifier of a RingCentral  extension

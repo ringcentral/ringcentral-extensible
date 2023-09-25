@@ -1,6 +1,6 @@
-import UtteranceInsightsObject from './UtteranceInsightsObject';
-import SpeakerInsightsObject from './SpeakerInsightsObject';
-import ConversationalInsightsUnit from './ConversationalInsightsUnit';
+import type UtteranceInsightsObject from './UtteranceInsightsObject';
+import type SpeakerInsightsObject from './SpeakerInsightsObject';
+import type ConversationalInsightsUnit from './ConversationalInsightsUnit';
 
 interface InteractionApiResponseResponse {
   /**

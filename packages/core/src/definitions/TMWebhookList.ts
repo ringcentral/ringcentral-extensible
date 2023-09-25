@@ -1,4 +1,4 @@
-import TMWebhookInfo from './TMWebhookInfo';
+import type TMWebhookInfo from './TMWebhookInfo';
 
 interface TMWebhookList {
   /**

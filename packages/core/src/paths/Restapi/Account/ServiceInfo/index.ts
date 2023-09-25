@@ -1,5 +1,5 @@
-import AccountServiceInfo from '../../../../definitions/AccountServiceInfo';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
+import type AccountServiceInfo from '../../../../definitions/AccountServiceInfo';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -17,8 +17,8 @@ class Index {
 
   /**
    * Returns the information about service plan, available features
- * and limitations for a particular RingCentral customer account.
- *
+   * and limitations for a particular RingCentral customer account.
+   *
    * HTTP Method: get
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/service-info
    * Rate Limit Group: Light

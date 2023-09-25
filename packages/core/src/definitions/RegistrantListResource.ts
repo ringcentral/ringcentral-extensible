@@ -1,5 +1,5 @@
-import RegistrantModel from './RegistrantModel';
-import RcwPagingForwardModel from './RcwPagingForwardModel';
+import type RegistrantModel from './RegistrantModel';
+import type RcwPagingForwardModel from './RcwPagingForwardModel';
 
 interface RegistrantListResource {
   /**

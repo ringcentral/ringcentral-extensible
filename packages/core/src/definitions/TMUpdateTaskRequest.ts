@@ -1,6 +1,6 @@
-import TMUpdateTaskRequestAssignees from './TMUpdateTaskRequestAssignees';
-import TMUpdateTaskRequestRecurrence from './TMUpdateTaskRequestRecurrence';
-import TMAttachmentInfo from './TMAttachmentInfo';
+import type TMUpdateTaskRequestAssignees from './TMUpdateTaskRequestAssignees';
+import type TMUpdateTaskRequestRecurrence from './TMUpdateTaskRequestRecurrence';
+import type TMAttachmentInfo from './TMAttachmentInfo';
 
 interface TMUpdateTaskRequest {
   /**
@@ -14,7 +14,7 @@ interface TMUpdateTaskRequest {
 
   /**
    */
-  completenessCondition?: ('Simple' | 'AllAssignees' | 'Percentage');
+  completenessCondition?: 'Simple' | 'AllAssignees' | 'Percentage';
 
   /**
    * Task start date in UTC time zone.
@@ -30,7 +30,7 @@ interface TMUpdateTaskRequest {
 
   /**
    */
-  color?: ('Black' | 'Red' | 'Orange' | 'Yellow' | 'Green' | 'Blue' | 'Purple' | 'Magenta');
+  color?: 'Black' | 'Red' | 'Orange' | 'Yellow' | 'Green' | 'Blue' | 'Purple' | 'Magenta';
 
   /**
    * Task section to group / search by. Max allowed length is 100 characters.

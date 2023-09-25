@@ -1,9 +1,9 @@
-import CloudRecording from './CloudRecording';
-import Paging from './Paging';
+import type CloudRecording from './CloudRecording';
+import type Paging from './Paging';
 
 /**
  * Recordings page
-*/
+ */
 interface CloudRecordings {
   /**
    * Recordings array

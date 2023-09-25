@@ -1,6 +1,6 @@
 /**
  * Top IVR Menu extension
-*/
+ */
 interface SiteIVRTopMenuUpdate {
   /**
    * Internal identifier of an IVR menu extension

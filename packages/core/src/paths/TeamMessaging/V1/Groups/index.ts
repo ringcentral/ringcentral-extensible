@@ -1,6 +1,6 @@
 import Webhooks from './Webhooks';
 import Events from './Events';
-import { RingCentralInterface, ParentInterface } from '../../../../types';
+import type { RingCentralInterface, ParentInterface } from '../../../../types';
 
 class Index {
   public rc: RingCentralInterface;

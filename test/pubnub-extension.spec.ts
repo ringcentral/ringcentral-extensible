@@ -8,14 +8,11 @@ describe('PubNub extension', () => {
     const pubNubExtension = new PubNubExtension();
     await rc.installExtension(pubNubExtension);
     let eventCount = 0;
-    await pubNubExtension.subscribe(
-      ['/restapi/v1.0/account/~/extension/~/message-store'],
-      (body: any) => {
-        expect(body).not.toBeNull();
-        expect(body).toBeDefined();
-        eventCount += 1;
-      },
-    );
+    await pubNubExtension.subscribe(['/restapi/v1.0/account/~/extension/~/message-store'], (body: any) => {
+      expect(body).not.toBeNull();
+      expect(body).toBeDefined();
+      eventCount += 1;
+    });
     // Rest API call over WebSocket
     await rc
       .restapi()

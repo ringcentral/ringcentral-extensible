@@ -1,9 +1,9 @@
-import ApiError from './ApiError';
+import type ApiError from './ApiError';
 
 interface DeletePhoneNumbersResponseItem {
   /**
    * Indicates if this item was processed successfully during bulk operation.
- *  If false, `bulkItemErrors` attribute contains the list of errors
+   *  If false, `bulkItemErrors` attribute contains the list of errors
    * Required
    * Example: true
    */
@@ -11,7 +11,7 @@ interface DeletePhoneNumbersResponseItem {
 
   /**
    * The list of errors occurred during processing of particular item of bulk operation.
- *  Returned only if `bulkItemSuccessful` is false
+   *  Returned only if `bulkItemSuccessful` is false
    */
   bulkItemErrors?: ApiError[];
 

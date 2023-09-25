@@ -1,16 +1,16 @@
-import AllCalls from './AllCalls';
-import CallsByDirection from './CallsByDirection';
-import CallsByOrigin from './CallsByOrigin';
-import CallsByResponse from './CallsByResponse';
-import CallsBySegments from './CallsBySegments';
-import CallsByResult from './CallsByResult';
-import CallsByCompanyHours from './CallsByCompanyHours';
-import CallsByQueueSla from './CallsByQueueSla';
-import CallsByType from './CallsByType';
+import type AllCalls from './AllCalls';
+import type CallsByDirection from './CallsByDirection';
+import type CallsByOrigin from './CallsByOrigin';
+import type CallsByResponse from './CallsByResponse';
+import type CallsBySegments from './CallsBySegments';
+import type CallsByResult from './CallsByResult';
+import type CallsByCompanyHours from './CallsByCompanyHours';
+import type CallsByQueueSla from './CallsByQueueSla';
+import type CallsByType from './CallsByType';
 
 /**
  * Call length data for the specified grouping
-*/
+ */
 interface CallsTimers {
   /**
    */

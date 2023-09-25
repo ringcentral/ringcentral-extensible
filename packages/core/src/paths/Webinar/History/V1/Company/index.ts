@@ -1,6 +1,6 @@
 import Recordings from './Recordings';
 import Sessions from './Sessions';
-import { RingCentralInterface, ParentInterface } from '../../../../../types';
+import type { RingCentralInterface, ParentInterface } from '../../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -20,7 +20,7 @@ class Index {
     return new Sessions(this);
   }
 
-  public recordings(recordingId: (string | null) = null): Recordings {
+  public recordings(recordingId: string | null = null): Recordings {
     return new Recordings(this, recordingId);
   }
 }

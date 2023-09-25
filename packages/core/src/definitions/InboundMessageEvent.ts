@@ -1,4 +1,4 @@
-import NotificationInfo from './NotificationInfo';
+import type NotificationInfo from './NotificationInfo';
 
 interface InboundMessageEvent {
   /**

@@ -1,15 +1,15 @@
-import RingCentral from '@rc-ex/core';
-import { RestMethod, RestRequestConfig, RestResponse } from '@rc-ex/core/lib/types';
-import WS from 'isomorphic-ws';
+import type RingCentral from '@rc-ex/core';
+import type { RestMethod, RestRequestConfig, RestResponse } from '@rc-ex/core/lib/types';
+import type WS from 'isomorphic-ws';
 
-export type WsToken = {
+export interface WsToken {
   uri: string;
   ws_access_token: string;
   expires_in: number;
-};
+}
 
 export type CheckInterval = (retriesAttempted: number) => number;
-export type WebSocketOptions = {
+export interface WebSocketOptions {
   restOverWebSocket?: boolean;
   debugMode?: boolean;
   autoRecover?: {
@@ -18,38 +18,33 @@ export type WebSocketOptions = {
     pingServerInterval?: number;
   };
   wscToken?: string;
-};
+}
 
-export type WsgEvent = {
+export interface WsgEvent {
   data: string;
-};
+}
 
-export type Wsc = {
+export interface Wsc {
   token: string;
   sequence: number;
-};
+}
 
-export type WsgMeta = {
-  type:
-  | 'ClientRequest'
-  | 'ServerNotification'
-  | 'Error'
-  | 'ConnectionDetails'
-  | 'Heartbeat';
+export interface WsgMeta {
+  type: 'ClientRequest' | 'ServerNotification' | 'Error' | 'ConnectionDetails' | 'Heartbeat';
   messageId: string;
   status: number;
   headers: {
     [key: string]: string;
   };
   wsc?: Wsc;
-};
+}
 
-export type WsgError = {
+export interface WsgError {
   errorCode: string;
   message: string;
-};
+}
 
-export type ConnectionDetails = {
+export interface ConnectionDetails {
   creationTime: string;
   maxConnectionsPerSession: number;
   recoveryBufferSize: number;
@@ -59,7 +54,7 @@ export type ConnectionDetails = {
   maxActiveRequests: number;
   recoveryState?: 'Successful' | 'Failed';
   recoveryErrorCode?: string;
-};
+}
 
 export interface WebSocketExtensionInterface {
   options: WebSocketOptions;
@@ -67,14 +62,15 @@ export interface WebSocketExtensionInterface {
   ws: WS;
   wsToken?: WsToken;
   rc: RingCentral;
-  request<T>(
+  request: <T>(
     method: RestMethod,
     endpoint: string,
     content?: {},
     queryParams?: {},
     config?: RestRequestConfig,
-  ): Promise<RestResponse<T>>;
+  ) => Promise<RestResponse<T>>;
 }
 
 export interface SubscriptionInterface {
+  eventFilters: string[];
 }

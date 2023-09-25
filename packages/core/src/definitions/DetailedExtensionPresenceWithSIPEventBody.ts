@@ -1,8 +1,8 @@
-import ActiveCallInfo from './ActiveCallInfo';
+import type ActiveCallInfo from './ActiveCallInfo';
 
 /**
  * Notification payload body
-*/
+ */
 interface DetailedExtensionPresenceWithSIPEventBody {
   /**
    * Internal identifier of an extension
@@ -13,7 +13,7 @@ interface DetailedExtensionPresenceWithSIPEventBody {
   /**
    * Telephony presence status. Returned if telephony status is changed.
    */
-  telephonyStatus?: ('NoCall' | 'CallConnected' | 'Ringing' | 'OnHold' | 'ParkedCall');
+  telephonyStatus?: 'NoCall' | 'CallConnected' | 'Ringing' | 'OnHold' | 'ParkedCall';
 
   /**
    * List of the latest 7 active calls on extension
@@ -29,22 +29,22 @@ interface DetailedExtensionPresenceWithSIPEventBody {
   /**
    * Aggregated presence status, calculated from a number of sources
    */
-  presenceStatus?: ('Offline' | 'Busy' | 'Available');
+  presenceStatus?: 'Offline' | 'Busy' | 'Available';
 
   /**
    * User-defined presence status (as previously published by the user)
    */
-  userStatus?: ('Offline' | 'Busy' | 'Available');
+  userStatus?: 'Offline' | 'Busy' | 'Available';
 
   /**
    * Meetings presence status
    */
-  meetingStatus?: ('Connected' | 'Disconnected');
+  meetingStatus?: 'Connected' | 'Disconnected';
 
   /**
    * Extended DnD (Do not Disturb) status
    */
-  dndStatus?: ('TakeAllCalls' | 'DoNotAcceptAnyCalls' | 'DoNotAcceptDepartmentCalls' | 'TakeDepartmentCallsOnly');
+  dndStatus?: 'TakeAllCalls' | 'DoNotAcceptAnyCalls' | 'DoNotAcceptDepartmentCalls' | 'TakeDepartmentCallsOnly';
 
   /**
    * If 'True' enables other extensions to see the extension presence status

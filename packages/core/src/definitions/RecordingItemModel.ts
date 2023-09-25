@@ -1,5 +1,5 @@
-import ApiError from './ApiError';
-import SessionRefModel from './SessionRefModel';
+import type ApiError from './ApiError';
+import type SessionRefModel from './SessionRefModel';
 
 interface RecordingItemModel {
   /**
@@ -27,7 +27,7 @@ interface RecordingItemModel {
    * Required
    * Example: Available
    */
-  status?: ('Processing' | 'Available' | 'Failed' | 'Purged');
+  status?: 'Processing' | 'Available' | 'Failed' | 'Purged';
 
   /**
    */
@@ -43,7 +43,7 @@ interface RecordingItemModel {
 
   /**
    * Indicates if Host or Admin has shared a recording.
- *  Can be set to true only then recording status is 'Available'.
+   *  Can be set to true only then recording status is 'Available'.
    * Example: true
    */
   shared?: boolean;

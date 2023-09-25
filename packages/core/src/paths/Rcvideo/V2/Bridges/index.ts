@@ -1,8 +1,8 @@
 import Pin from './Pin';
-import UpdateBridgeRequest from '../../../../definitions/UpdateBridgeRequest';
-import BridgeResponse from '../../../../definitions/BridgeResponse';
-import GetBridgeParameters from '../../../../definitions/GetBridgeParameters';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
+import type UpdateBridgeRequest from '../../../../definitions/UpdateBridgeRequest';
+import type BridgeResponse from '../../../../definitions/BridgeResponse';
+import type GetBridgeParameters from '../../../../definitions/GetBridgeParameters';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -41,8 +41,8 @@ class Index {
 
   /**
    * Deletes a bridge by **bridgeId** identifier.
- * Deletion can only be done by bridge owner, his delegate or any user who has the **Super Admin** privilege.
- *
+   * Deletion can only be done by bridge owner, his delegate or any user who has the **Super Admin** privilege.
+   *
    * HTTP Method: delete
    * Endpoint: /rcvideo/v2/bridges/{bridgeId}
    * Rate Limit Group: Medium
@@ -58,14 +58,17 @@ class Index {
 
   /**
    * Updates a bridge by **bridgeId** identifier. The request body should contain JSON object with updating properties.
- * Update can only be done by bridge owner, his delegate or any user who has the **Super Admin** privilege.
- *
+   * Update can only be done by bridge owner, his delegate or any user who has the **Super Admin** privilege.
+   *
    * HTTP Method: patch
    * Endpoint: /rcvideo/v2/bridges/{bridgeId}
    * Rate Limit Group: Medium
    * App Permission: Video
    */
-  public async patch(updateBridgeRequest: UpdateBridgeRequest, restRequestConfig?: RestRequestConfig): Promise<BridgeResponse> {
+  public async patch(
+    updateBridgeRequest: UpdateBridgeRequest,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<BridgeResponse> {
     if (this.bridgeId === null) {
       throw new Error('bridgeId must be specified.');
     }

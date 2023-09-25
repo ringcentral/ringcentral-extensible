@@ -1,10 +1,10 @@
-import DeviceModelInfo from './DeviceModelInfo';
-import DeviceExtensionInfo from './DeviceExtensionInfo';
-import DeviceEmergencyServiceAddressResourceDefault from './DeviceEmergencyServiceAddressResourceDefault';
-import SipRegistrationDeviceEmergencyInfo from './SipRegistrationDeviceEmergencyInfo';
-import ShippingInfo from './ShippingInfo';
-import DevicePhoneLinesInfo from './DevicePhoneLinesInfo';
-import DeviceSiteInfo from './DeviceSiteInfo';
+import type DeviceModelInfo from './DeviceModelInfo';
+import type DeviceExtensionInfo from './DeviceExtensionInfo';
+import type DeviceEmergencyServiceAddressResourceDefault from './DeviceEmergencyServiceAddressResourceDefault';
+import type SipRegistrationDeviceEmergencyInfo from './SipRegistrationDeviceEmergencyInfo';
+import type ShippingInfo from './ShippingInfo';
+import type DevicePhoneLinesInfo from './DevicePhoneLinesInfo';
+import type DeviceSiteInfo from './DeviceSiteInfo';
 
 interface SipRegistrationDeviceInfo {
   /**
@@ -21,30 +21,30 @@ interface SipRegistrationDeviceInfo {
   /**
    * Device type
    */
-  type?: ('HardPhone' | 'SoftPhone' | 'OtherPhone' | 'Paging' | 'WebPhone' | 'Room');
+  type?: 'HardPhone' | 'SoftPhone' | 'OtherPhone' | 'Paging' | 'WebPhone' | 'Room';
 
   /**
    * Device identification number (stock keeping unit) in the format
- *  TP-ID [-AT-AC], where TP is device type (HP for RC HardPhone, DV for all
- *  other devices including softphone); ID - device model ID; AT -addon type
- *  ID; AC - addon count (if any). For example 'HP-56-2-2'
+   *  TP-ID [-AT-AC], where TP is device type (HP for RC HardPhone, DV for all
+   *  other devices including softphone); ID - device model ID; AT -addon type
+   *  ID; AC - addon count (if any). For example 'HP-56-2-2'
    */
   sku?: string;
 
   /**
    */
-  status?: ('Online' | 'Offline');
+  status?: 'Online' | 'Offline';
 
   /**
    * Device name. Mandatory if ordering  SoftPhone or OtherPhone.
- *  Optional for  HardPhone. If not specified for HardPhone, then device  model  name
- *  is used as device  name
+   *  Optional for  HardPhone. If not specified for HardPhone, then device  model  name
+   *  is used as device  name
    */
   name?: string;
 
   /**
    * Serial number for HardPhone (is returned only when the phone
- *  is shipped and provisioned); endpoint_id for Softphone and mobile applications
+   *  is shipped and provisioned); endpoint_id for Softphone and mobile applications
    */
   serial?: string;
 
@@ -80,8 +80,8 @@ interface SipRegistrationDeviceInfo {
 
   /**
    * Box billing identifier of a device. Applicable only for HardPhones.
- *  It is an alternative way to identify the device to be ordered. Either
- *  model  structure, or  boxBillingId  must be specified forT?HardPhone
+   *  It is an alternative way to identify the device to be ordered. Either
+   *  model  structure, or  boxBillingId  must be specified forT?HardPhone
    * Format: int64
    */
   boxBillingId?: number;
@@ -93,17 +93,17 @@ interface SipRegistrationDeviceInfo {
 
   /**
    * Pooling type of a deviceHost - device with standalone paid
- *  phone line which can be linked to Glip/Softphone instanceGuest - device
- *  with a linked phone lineNone - device without a phone line or with specific
- *  line (free, BLA, etc.) = ['Host', 'Guest', 'None']
+   *  phone line which can be linked to Glip/Softphone instanceGuest - device
+   *  with a linked phone lineNone - device without a phone line or with specific
+   *  line (free, BLA, etc.) = ['Host', 'Guest', 'None']
    */
-  linePooling?: ('Host' | 'Guest' | 'None');
+  linePooling?: 'Host' | 'Guest' | 'None';
 
   /**
    * Network location status. 'True' if the device is located in
- *  the configured corporate network (On-Net); 'False' for Off-Net location.
- *  Parameter is not returned if `EmergencyAddressAutoUpdate` feature is not
- *  enabled for the account/user, or if device network location is not determined
+   *  the configured corporate network (On-Net); 'False' for Off-Net location.
+   *  Parameter is not returned if `EmergencyAddressAutoUpdate` feature is not
+   *  enabled for the account/user, or if device network location is not determined
    */
   inCompanyNet?: boolean;
 
@@ -113,7 +113,7 @@ interface SipRegistrationDeviceInfo {
 
   /**
    * Timestamp of receiving last location report in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
- *  format including timezone, for example *2016-03-10T18:07:52.534Z
+   *  format including timezone, for example *2016-03-10T18:07:52.534Z
    * Format: date-time
    */
   lastLocationReportTime?: string;

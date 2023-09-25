@@ -1,7 +1,7 @@
-import GetStateInfoResponse from '../../../../definitions/GetStateInfoResponse';
-import GetStateListResponse from '../../../../definitions/GetStateListResponse';
-import ListStatesParameters from '../../../../definitions/ListStatesParameters';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
+import type GetStateInfoResponse from '../../../../definitions/GetStateInfoResponse';
+import type GetStateListResponse from '../../../../definitions/GetStateListResponse';
+import type ListStatesParameters from '../../../../definitions/ListStatesParameters';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -25,19 +25,22 @@ class Index {
 
   /**
    * Returns all states of a certain country.
- *
+   *
    * HTTP Method: get
    * Endpoint: /restapi/{apiVersion}/dictionary/state
    * Rate Limit Group: Light
    */
-  public async list(queryParams?: ListStatesParameters, restRequestConfig?: RestRequestConfig): Promise<GetStateListResponse> {
+  public async list(
+    queryParams?: ListStatesParameters,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<GetStateListResponse> {
     const r = await this.rc.get<GetStateListResponse>(this.path(false), queryParams, restRequestConfig);
     return r.data;
   }
 
   /**
    * Returns information on a specific state by ID.
- *
+   *
    * HTTP Method: get
    * Endpoint: /restapi/{apiVersion}/dictionary/state/{stateId}
    * Rate Limit Group: Light

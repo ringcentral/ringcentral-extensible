@@ -1,9 +1,9 @@
-import AddressBookBulkUploadTaskResult from './AddressBookBulkUploadTaskResult';
+import type AddressBookBulkUploadTaskResult from './AddressBookBulkUploadTaskResult';
 
 /**
  * Information on a task for adding multiple contacts to multiple extensions
  *
-*/
+ */
 interface AddressBookBulkUploadResponse {
   /**
    * Internal identifier of a task
@@ -22,7 +22,7 @@ interface AddressBookBulkUploadResponse {
    * Task status
    * Required
    */
-  status?: ('Accepted' | 'InProgress' | 'Completed' | 'Failed');
+  status?: 'Accepted' | 'InProgress' | 'Completed' | 'Failed';
 
   /**
    * Datetime of a task creation

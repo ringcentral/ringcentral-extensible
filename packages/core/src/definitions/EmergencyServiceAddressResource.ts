@@ -2,7 +2,7 @@
  * Address for emergency cases. The same emergency address is assigned
  * to all the numbers of one device
  *
-*/
+ */
 interface EmergencyServiceAddressResource {
   /**
    */
@@ -71,46 +71,46 @@ interface EmergencyServiceAddressResource {
 
   /**
    * Resulting status of emergency address synchronization. Returned
- *  if `syncEmergencyAddress` parameter is set to 'True'
+   *  if `syncEmergencyAddress` parameter is set to 'True'
    */
-  syncStatus?: ('Verified' | 'Updated' | 'Deleted' | 'NotRequired' | 'Unsupported' | 'Failed');
+  syncStatus?: 'Verified' | 'Updated' | 'Deleted' | 'NotRequired' | 'Unsupported' | 'Failed';
 
   /**
    * Name of an additional contact person. Should be specified for
- *  countries except the US, Canada, the UK and Australia.
+   *  countries except the US, Canada, the UK and Australia.
    */
   additionalCustomerName?: string;
 
   /**
    * Email of a primary contact person (receiver). Should be specified
- *  for countries except the US, Canada, the UK and Australia.
+   *  for countries except the US, Canada, the UK and Australia.
    * Format: email
    */
   customerEmail?: string;
 
   /**
    * Email of an additional contact person. Should be specified
- *  for countries except the US, Canada, the UK and Australia.
+   *  for countries except the US, Canada, the UK and Australia.
    * Format: email
    */
   additionalCustomerEmail?: string;
 
   /**
    * Phone number of a primary contact person (receiver). Should
- *  be specified for countries except the US, Canada, the UK and Australia
+   *  be specified for countries except the US, Canada, the UK and Australia
    */
   customerPhone?: string;
 
   /**
    * Phone number of an additional contact person. Should be specified
- *  for countries except the US, Canada, the UK & Australia.
+   *  for countries except the US, Canada, the UK & Australia.
    */
   additionalCustomerPhone?: string;
 
   /**
    * Status of digital line provisioning
    */
-  lineProvisioningStatus?: ('Provisioning' | 'Valid' | 'Invalid');
+  lineProvisioningStatus?: 'Provisioning' | 'Valid' | 'Invalid';
 
   /**
    * Internal identifier of a tax

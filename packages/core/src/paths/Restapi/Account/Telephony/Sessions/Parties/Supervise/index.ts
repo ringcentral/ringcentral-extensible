@@ -1,6 +1,6 @@
-import PartySuperviseResponse from '../../../../../../../definitions/PartySuperviseResponse';
-import PartySuperviseRequest from '../../../../../../../definitions/PartySuperviseRequest';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../../types';
+import type PartySuperviseResponse from '../../../../../../../definitions/PartySuperviseResponse';
+import type PartySuperviseRequest from '../../../../../../../definitions/PartySuperviseRequest';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -23,8 +23,16 @@ class Index {
    * Rate Limit Group: Light
    * App Permission: CallControl
    */
-  public async post(partySuperviseRequest: PartySuperviseRequest, restRequestConfig?: RestRequestConfig): Promise<PartySuperviseResponse> {
-    const r = await this.rc.post<PartySuperviseResponse>(this.path(), partySuperviseRequest, undefined, restRequestConfig);
+  public async post(
+    partySuperviseRequest: PartySuperviseRequest,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<PartySuperviseResponse> {
+    const r = await this.rc.post<PartySuperviseResponse>(
+      this.path(),
+      partySuperviseRequest,
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

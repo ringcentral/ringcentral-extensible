@@ -1,5 +1,5 @@
-import TMCompleteTaskRequest from '../../../../../definitions/TMCompleteTaskRequest';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import type TMCompleteTaskRequest from '../../../../../definitions/TMCompleteTaskRequest';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -22,7 +22,10 @@ class Index {
    * Rate Limit Group: Medium
    * App Permission: TeamMessaging
    */
-  public async post(tMCompleteTaskRequest: TMCompleteTaskRequest, restRequestConfig?: RestRequestConfig): Promise<string> {
+  public async post(
+    tMCompleteTaskRequest: TMCompleteTaskRequest,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<string> {
     const r = await this.rc.post<string>(this.path(), tMCompleteTaskRequest, undefined, restRequestConfig);
     return r.data;
   }

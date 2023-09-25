@@ -1,5 +1,5 @@
-import SubscriptionInfo from '../../../../definitions/SubscriptionInfo';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
+import type SubscriptionInfo from '../../../../definitions/SubscriptionInfo';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -17,9 +17,9 @@ class Index {
 
   /**
    * Renews the existing subscription (this request comes with empty body).
- *
- * Please note that `WebSocket` subscriptions are renewed automatically while websocket session is alive.
- *
+   *
+   * Please note that `WebSocket` subscriptions are renewed automatically while websocket session is alive.
+   *
    * HTTP Method: post
    * Endpoint: /restapi/{apiVersion}/subscription/{subscriptionId}/renew
    * Rate Limit Group: Light

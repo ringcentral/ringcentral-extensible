@@ -1,4 +1,4 @@
-import IVRMenuExtensionInfo from './IVRMenuExtensionInfo';
+import type IVRMenuExtensionInfo from './IVRMenuExtensionInfo';
 
 interface IVRMenuActionsInfo {
   /**
@@ -9,7 +9,18 @@ interface IVRMenuActionsInfo {
   /**
    * Internal identifier of an answering rule
    */
-  action?: ('Connect' | 'Voicemail' | 'DialByName' | 'Transfer' | 'Repeat' | 'ReturnToRoot' | 'ReturnToPrevious' | 'Disconnect' | 'ReturnToTopLevelMenu' | 'DoNothing' | 'ConnectToOperator');
+  action?:
+    | 'Connect'
+    | 'Voicemail'
+    | 'DialByName'
+    | 'Transfer'
+    | 'Repeat'
+    | 'ReturnToRoot'
+    | 'ReturnToPrevious'
+    | 'Disconnect'
+    | 'ReturnToTopLevelMenu'
+    | 'DoNothing'
+    | 'ConnectToOperator';
 
   /**
    */

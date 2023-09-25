@@ -1,4 +1,4 @@
-import ValidationError from './ValidationError';
+import type ValidationError from './ValidationError';
 
 interface SwitchValidated {
   /**
@@ -19,7 +19,7 @@ interface SwitchValidated {
   /**
    * Validation result status
    */
-  status?: ('Valid' | 'Invalid');
+  status?: 'Valid' | 'Invalid';
 
   /**
    */

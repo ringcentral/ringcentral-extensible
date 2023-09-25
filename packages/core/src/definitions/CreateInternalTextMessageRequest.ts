@@ -1,4 +1,4 @@
-import PagerCallerInfoRequest from './PagerCallerInfoRequest';
+import type PagerCallerInfoRequest from './PagerCallerInfoRequest';
 
 interface CreateInternalTextMessageRequest {
   /**
@@ -13,9 +13,9 @@ interface CreateInternalTextMessageRequest {
 
   /**
    * Text of a pager message. Max length is 1024 symbols (2-byte
- *  UTF-16 encoded). If a character is encoded in 4 bytes in UTF-16 it is
- *  treated as 2 characters, thus restricting the maximum message length to
- *  512 symbols
+   *  UTF-16 encoded). If a character is encoded in 4 bytes in UTF-16 it is
+   *  treated as 2 characters, thus restricting the maximum message length to
+   *  512 symbols
    * Required
    * Example: hello world
    */
@@ -23,7 +23,7 @@ interface CreateInternalTextMessageRequest {
 
   /**
    * Optional if `replyOn` parameter is specified. Receiver of a pager
- *  message.
+   *  message.
    */
   to?: PagerCallerInfoRequest[];
 }

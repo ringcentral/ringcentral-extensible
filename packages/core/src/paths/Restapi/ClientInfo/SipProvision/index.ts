@@ -1,6 +1,6 @@
-import CreateSipRegistrationResponse from '../../../../definitions/CreateSipRegistrationResponse';
-import CreateSipRegistrationRequest from '../../../../definitions/CreateSipRegistrationRequest';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
+import type CreateSipRegistrationResponse from '../../../../definitions/CreateSipRegistrationResponse';
+import type CreateSipRegistrationRequest from '../../../../definitions/CreateSipRegistrationRequest';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -18,14 +18,22 @@ class Index {
 
   /**
    * Creates SIP registration of a device/application (WebPhone, Mobile, Softphone).
- *
+   *
    * HTTP Method: post
    * Endpoint: /restapi/{apiVersion}/client-info/sip-provision
    * Rate Limit Group: Heavy
    * App Permission: VoipCalling
    */
-  public async post(createSipRegistrationRequest: CreateSipRegistrationRequest, restRequestConfig?: RestRequestConfig): Promise<CreateSipRegistrationResponse> {
-    const r = await this.rc.post<CreateSipRegistrationResponse>(this.path(), createSipRegistrationRequest, undefined, restRequestConfig);
+  public async post(
+    createSipRegistrationRequest: CreateSipRegistrationRequest,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<CreateSipRegistrationResponse> {
+    const r = await this.rc.post<CreateSipRegistrationResponse>(
+      this.path(),
+      createSipRegistrationRequest,
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

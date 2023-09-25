@@ -1,5 +1,5 @@
-import ExtensionBulkUpdateTaskResource from '../../../../../definitions/ExtensionBulkUpdateTaskResource';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import type ExtensionBulkUpdateTaskResource from '../../../../../definitions/ExtensionBulkUpdateTaskResource';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -23,7 +23,7 @@ class Index {
 
   /**
    * Returns a status of a task to update multiple extensions.
- *
+   *
    * HTTP Method: get
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension-bulk-update/tasks/{taskId}
    * Rate Limit Group: Light

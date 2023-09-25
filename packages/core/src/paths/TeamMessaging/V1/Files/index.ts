@@ -1,8 +1,8 @@
 import Utils from '../../../../Utils';
-import TMAddFileRequest from '../../../../definitions/TMAddFileRequest';
-import CreateGlipFileNewParameters from '../../../../definitions/CreateGlipFileNewParameters';
-import CreateGlipFileNewRequest from '../../../../definitions/CreateGlipFileNewRequest';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
+import type TMAddFileRequest from '../../../../definitions/TMAddFileRequest';
+import type CreateGlipFileNewParameters from '../../../../definitions/CreateGlipFileNewParameters';
+import type CreateGlipFileNewRequest from '../../../../definitions/CreateGlipFileNewRequest';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -25,7 +25,11 @@ class Index {
    * Rate Limit Group: Heavy
    * App Permission: TeamMessaging
    */
-  public async post(createGlipFileNewRequest: CreateGlipFileNewRequest, queryParams?: CreateGlipFileNewParameters, restRequestConfig?: RestRequestConfig): Promise<TMAddFileRequest> {
+  public async post(
+    createGlipFileNewRequest: CreateGlipFileNewRequest,
+    queryParams?: CreateGlipFileNewParameters,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<TMAddFileRequest> {
     const formData = await Utils.getFormData(createGlipFileNewRequest);
     const r = await this.rc.post<TMAddFileRequest>(this.path(), formData, queryParams, restRequestConfig);
     return r.data;

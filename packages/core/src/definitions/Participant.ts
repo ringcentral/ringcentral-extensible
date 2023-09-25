@@ -1,6 +1,6 @@
 /**
  * Participant information
-*/
+ */
 interface Participant {
   /**
    * id

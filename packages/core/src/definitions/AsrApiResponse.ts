@@ -1,9 +1,9 @@
-import AsrApiResponseResponse from './AsrApiResponseResponse';
+import type AsrApiResponseResponse from './AsrApiResponseResponse';
 
 interface AsrApiResponse {
   /**
    */
-  status?: ('Success' | 'Fail');
+  status?: 'Success' | 'Fail';
 
   /**
    */

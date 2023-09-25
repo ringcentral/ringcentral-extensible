@@ -1,6 +1,6 @@
 /**
  * Recipient data
-*/
+ */
 interface RecipientInfo {
   /**
    * Link to a recipient extension resource

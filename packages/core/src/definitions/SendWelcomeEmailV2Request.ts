@@ -1,6 +1,6 @@
 /**
  * Request body for operation sendWelcomeEmailV2
-*/
+ */
 interface SendWelcomeEmailV2Request {
   /**
    * Format: email

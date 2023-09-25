@@ -1,6 +1,6 @@
 /**
  * Paging information
-*/
+ */
 interface ResponsePaging {
   /**
    * The current page number

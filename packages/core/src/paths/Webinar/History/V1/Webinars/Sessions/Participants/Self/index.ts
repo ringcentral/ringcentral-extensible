@@ -1,5 +1,5 @@
-import ParticipantReducedModel from '../../../../../../../../definitions/ParticipantReducedModel';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../../../types';
+import type ParticipantReducedModel from '../../../../../../../../definitions/ParticipantReducedModel';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -17,8 +17,8 @@ class Index {
 
   /**
    * Returns the participant information specific to a webinar session. Accessible by any authenticated participant.
- * For a non-authenticated participant, API returns error.
- *
+   * For a non-authenticated participant, API returns error.
+   *
    * HTTP Method: get
    * Endpoint: /webinar/history/v1/webinars/{webinarId}/sessions/{sessionId}/participants/self
    * Rate Limit Group: Heavy

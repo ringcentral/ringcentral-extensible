@@ -14,7 +14,7 @@ interface MessageAttachmentInfoIntId {
   /**
    * Type of a message attachment
    */
-  type?: ('AudioRecording' | 'AudioTranscription' | 'Text' | 'SourceDocument' | 'RenderedDocument' | 'MmsAttachment');
+  type?: 'AudioRecording' | 'AudioTranscription' | 'Text' | 'SourceDocument' | 'RenderedDocument' | 'MmsAttachment';
 
   /**
    * MIME type for a given attachment, for instance 'audio/wav'

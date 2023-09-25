@@ -6,8 +6,8 @@ import PhoneNumbers from './PhoneNumbers';
 import Extensions from './Extensions';
 import Licenses from './Licenses';
 import Devices from './Devices';
-import AccountInfo from '../../../../definitions/AccountInfo';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
+import type AccountInfo from '../../../../definitions/AccountInfo';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -57,7 +57,7 @@ class Index {
     return new Extensions(this);
   }
 
-  public phoneNumbers(phoneNumberId: (string | null) = null): PhoneNumbers {
+  public phoneNumbers(phoneNumberId: string | null = null): PhoneNumbers {
     return new PhoneNumbers(this, phoneNumberId);
   }
 

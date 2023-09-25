@@ -1,6 +1,6 @@
 /**
  * Query parameters for operation listA2PBatches
-*/
+ */
 interface ListA2PBatchesParameters {
   /**
    * The end of the time range to filter the results in ISO 8601 format including timezone. Default is the 'dateTo' minus 24 hours

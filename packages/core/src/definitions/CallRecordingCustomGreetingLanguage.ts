@@ -1,6 +1,6 @@
 /**
  * Custom greeting language
-*/
+ */
 interface CallRecordingCustomGreetingLanguage {
   /**
    * Link to a language

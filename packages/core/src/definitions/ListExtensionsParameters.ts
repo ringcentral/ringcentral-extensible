@@ -1,6 +1,6 @@
 /**
  * Query parameters for operation listExtensions
-*/
+ */
 interface ListExtensionsParameters {
   /**
    * Number of extension to be retrieved
@@ -15,7 +15,7 @@ interface ListExtensionsParameters {
 
   /**
    * Indicates a page number to retrieve. Only positive number values
- *  are allowed
+   *  are allowed
    * Format: int32
    * Default: 1
    */
@@ -30,17 +30,35 @@ interface ListExtensionsParameters {
 
   /**
    * Extension current state. Multiple values are supported. If 'Unassigned'
- *  is specified, then extensions without `extensionNumber` attribute are returned.
- *  If not specified, then all extensions are returned
+   *  is specified, then extensions without `extensionNumber` attribute are returned.
+   *  If not specified, then all extensions are returned
    */
   status?: ('Enabled' | 'Disabled' | 'NotActivated' | 'Unassigned')[];
 
   /**
    * Extension type. Multiple values are supported. Please note
- *  that legacy 'Department' extension type corresponds to 'Call Queue'
- *  extensions in modern RingCentral product terminology
+   *  that legacy 'Department' extension type corresponds to 'Call Queue'
+   *  extensions in modern RingCentral product terminology
    */
-  type?: ('User' | 'FaxUser' | 'FlexibleUser' | 'VirtualUser' | 'DigitalUser' | 'Department' | 'Announcement' | 'Voicemail' | 'SharedLinesGroup' | 'PagingOnly' | 'IvrMenu' | 'ApplicationExtension' | 'ParkLocation' | 'Limited' | 'Bot' | 'ProxyAdmin' | 'DelegatedLinesGroup')[];
+  type?: (
+    | 'User'
+    | 'FaxUser'
+    | 'FlexibleUser'
+    | 'VirtualUser'
+    | 'DigitalUser'
+    | 'Department'
+    | 'Announcement'
+    | 'Voicemail'
+    | 'SharedLinesGroup'
+    | 'PagingOnly'
+    | 'IvrMenu'
+    | 'ApplicationExtension'
+    | 'ParkLocation'
+    | 'Limited'
+    | 'Bot'
+    | 'ProxyAdmin'
+    | 'DelegatedLinesGroup'
+  )[];
 }
 
 export default ListExtensionsParameters;

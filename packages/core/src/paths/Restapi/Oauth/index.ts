@@ -1,7 +1,7 @@
 import Authorize from './Authorize';
 import Revoke from './Revoke';
 import Token from './Token';
-import { RingCentralInterface, ParentInterface } from '../../../types';
+import type { RingCentralInterface, ParentInterface } from '../../../types';
 
 class Index {
   public rc: RingCentralInterface;

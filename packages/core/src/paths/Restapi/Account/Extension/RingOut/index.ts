@@ -1,6 +1,6 @@
-import GetRingOutStatusResponse from '../../../../../definitions/GetRingOutStatusResponse';
-import MakeRingOutRequest from '../../../../../definitions/MakeRingOutRequest';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import type GetRingOutStatusResponse from '../../../../../definitions/GetRingOutStatusResponse';
+import type MakeRingOutRequest from '../../../../../definitions/MakeRingOutRequest';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -29,8 +29,16 @@ class Index {
    * Rate Limit Group: Heavy
    * App Permission: RingOut
    */
-  public async post(makeRingOutRequest: MakeRingOutRequest, restRequestConfig?: RestRequestConfig): Promise<GetRingOutStatusResponse> {
-    const r = await this.rc.post<GetRingOutStatusResponse>(this.path(false), makeRingOutRequest, undefined, restRequestConfig);
+  public async post(
+    makeRingOutRequest: MakeRingOutRequest,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<GetRingOutStatusResponse> {
+    const r = await this.rc.post<GetRingOutStatusResponse>(
+      this.path(false),
+      makeRingOutRequest,
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 

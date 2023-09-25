@@ -1,5 +1,5 @@
-import TMChatInfo from './TMChatInfo';
-import TMNavigationInfo from './TMNavigationInfo';
+import type TMChatInfo from './TMChatInfo';
+import type TMNavigationInfo from './TMNavigationInfo';
 
 interface TMChatList {
   /**

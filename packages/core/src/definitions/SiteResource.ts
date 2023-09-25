@@ -1,6 +1,6 @@
 /**
  * Site extension information
-*/
+ */
 interface SiteResource {
   /**
    * Site extension identifier

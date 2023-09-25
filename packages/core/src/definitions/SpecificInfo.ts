@@ -1,8 +1,8 @@
-import DataExportTaskContactInfo from './DataExportTaskContactInfo';
+import type DataExportTaskContactInfo from './DataExportTaskContactInfo';
 
 /**
  * Information specified in request
-*/
+ */
 interface SpecificInfo {
   /**
    * Starting time for data collection

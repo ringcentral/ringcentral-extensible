@@ -1,6 +1,6 @@
-import DictionaryGreetingInfo from './DictionaryGreetingInfo';
-import PageNavigationModel from './PageNavigationModel';
-import EnumeratedPagingModel from './EnumeratedPagingModel';
+import type DictionaryGreetingInfo from './DictionaryGreetingInfo';
+import type PageNavigationModel from './PageNavigationModel';
+import type EnumeratedPagingModel from './EnumeratedPagingModel';
 
 interface DictionaryGreetingList {
   /**

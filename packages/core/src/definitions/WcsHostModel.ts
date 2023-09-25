@@ -1,8 +1,8 @@
-import RcwDomainUserModel from './RcwDomainUserModel';
+import type RcwDomainUserModel from './RcwDomainUserModel';
 
 /**
  * The internal IDs of RC-authenticated users.
-*/
+ */
 interface WcsHostModel {
   /**
    * Describes host's license, 'true' - license is active

@@ -9,7 +9,7 @@ import Language from './Language';
 import Country from './Country';
 import State from './State';
 import Brand from './Brand';
-import { RingCentralInterface, ParentInterface } from '../../../types';
+import type { RingCentralInterface, ParentInterface } from '../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -25,27 +25,27 @@ class Index {
     return `${this._parent.path()}/dictionary`;
   }
 
-  public brand(brandId: (string | null) = null): Brand {
+  public brand(brandId: string | null = null): Brand {
     return new Brand(this, brandId);
   }
 
-  public state(stateId: (string | null) = null): State {
+  public state(stateId: string | null = null): State {
     return new State(this, stateId);
   }
 
-  public country(countryId: (string | null) = null): Country {
+  public country(countryId: string | null = null): Country {
     return new Country(this, countryId);
   }
 
-  public language(languageId: (string | null) = null): Language {
+  public language(languageId: string | null = null): Language {
     return new Language(this, languageId);
   }
 
-  public greeting(greetingId: (string | null) = null): Greeting {
+  public greeting(greetingId: string | null = null): Greeting {
     return new Greeting(this, greetingId);
   }
 
-  public timezone(timezoneId: (string | null) = null): Timezone {
+  public timezone(timezoneId: string | null = null): Timezone {
     return new Timezone(this, timezoneId);
   }
 
@@ -53,11 +53,11 @@ class Index {
     return new Location(this);
   }
 
-  public userRole(roleId: (string | null) = null): UserRole {
+  public userRole(roleId: string | null = null): UserRole {
     return new UserRole(this, roleId);
   }
 
-  public permission(permissionId: (string | null) = null): Permission {
+  public permission(permissionId: string | null = null): Permission {
     return new Permission(this, permissionId);
   }
 
@@ -65,7 +65,7 @@ class Index {
     return new FaxCoverPage(this);
   }
 
-  public permissionCategory(permissionCategoryId: (string | null) = null): PermissionCategory {
+  public permissionCategory(permissionCategoryId: string | null = null): PermissionCategory {
     return new PermissionCategory(this, permissionCategoryId);
   }
 }

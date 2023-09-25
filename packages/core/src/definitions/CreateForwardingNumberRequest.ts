@@ -1,4 +1,4 @@
-import CreateForwardingNumberDeviceInfo from './CreateForwardingNumberDeviceInfo';
+import type CreateForwardingNumberDeviceInfo from './CreateForwardingNumberDeviceInfo';
 
 interface CreateForwardingNumberRequest {
   /**
@@ -20,7 +20,7 @@ interface CreateForwardingNumberRequest {
   /**
    * Forwarding/Call flip phone type. If specified, 'label' attribute value is ignored. The default value is 'Other'
    */
-  type?: ('PhoneLine' | 'Home' | 'Mobile' | 'Work' | 'Other');
+  type?: 'PhoneLine' | 'Home' | 'Mobile' | 'Work' | 'Other';
 
   /**
    */

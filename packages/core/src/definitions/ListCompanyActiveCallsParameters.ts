@@ -1,10 +1,10 @@
 /**
  * Query parameters for operation listCompanyActiveCalls
-*/
+ */
 interface ListCompanyActiveCallsParameters {
   /**
    * The direction of call records to be included in the result. If omitted, both
- *  inbound and outbound calls are returned. Multiple values are supported
+   *  inbound and outbound calls are returned. Multiple values are supported
    */
   direction?: ('Inbound' | 'Outbound')[];
 
@@ -12,11 +12,11 @@ interface ListCompanyActiveCallsParameters {
    * Defines the level of details for returned call records
    * Default: Simple
    */
-  view?: ('Simple' | 'Detailed');
+  view?: 'Simple' | 'Detailed';
 
   /**
    * The type of call records to be included in the result.
- *  If omitted, all call types are returned. Multiple values are supported
+   *  If omitted, all call types are returned. Multiple values are supported
    */
   type?: ('Voice' | 'Fax')[];
 

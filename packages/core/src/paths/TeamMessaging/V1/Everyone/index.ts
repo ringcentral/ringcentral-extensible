@@ -1,6 +1,6 @@
-import UpdateEveryoneTeamRequest from '../../../../definitions/UpdateEveryoneTeamRequest';
-import EveryoneTeamInfo from '../../../../definitions/EveryoneTeamInfo';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
+import type UpdateEveryoneTeamRequest from '../../../../definitions/UpdateEveryoneTeamRequest';
+import type EveryoneTeamInfo from '../../../../definitions/EveryoneTeamInfo';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -35,8 +35,16 @@ class Index {
    * Rate Limit Group: Medium
    * App Permission: TeamMessaging
    */
-  public async patch(updateEveryoneTeamRequest: UpdateEveryoneTeamRequest, restRequestConfig?: RestRequestConfig): Promise<EveryoneTeamInfo> {
-    const r = await this.rc.patch<EveryoneTeamInfo>(this.path(), updateEveryoneTeamRequest, undefined, restRequestConfig);
+  public async patch(
+    updateEveryoneTeamRequest: UpdateEveryoneTeamRequest,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<EveryoneTeamInfo> {
+    const r = await this.rc.patch<EveryoneTeamInfo>(
+      this.path(),
+      updateEveryoneTeamRequest,
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

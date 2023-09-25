@@ -1,13 +1,13 @@
-import ForwardingInfoCreateRuleRequest from './ForwardingInfoCreateRuleRequest';
-import CallersInfoRequest from './CallersInfoRequest';
-import CalledNumberInfo from './CalledNumberInfo';
-import ScheduleInfo from './ScheduleInfo';
-import UnconditionalForwardingInfo from './UnconditionalForwardingInfo';
-import QueueInfo from './QueueInfo';
-import VoicemailInfo from './VoicemailInfo';
-import MissedCallInfo from './MissedCallInfo';
-import GreetingInfo from './GreetingInfo';
-import TransferredExtensionInfo from './TransferredExtensionInfo';
+import type ForwardingInfoCreateRuleRequest from './ForwardingInfoCreateRuleRequest';
+import type CallersInfoRequest from './CallersInfoRequest';
+import type CalledNumberInfo from './CalledNumberInfo';
+import type ScheduleInfo from './ScheduleInfo';
+import type UnconditionalForwardingInfo from './UnconditionalForwardingInfo';
+import type QueueInfo from './QueueInfo';
+import type VoicemailInfo from './VoicemailInfo';
+import type MissedCallInfo from './MissedCallInfo';
+import type GreetingInfo from './GreetingInfo';
+import type TransferredExtensionInfo from './TransferredExtensionInfo';
 
 interface UpdateAnsweringRuleRequest {
   /**
@@ -46,12 +46,19 @@ interface UpdateAnsweringRuleRequest {
   /**
    * Specifies how incoming calls are forwarded
    */
-  callHandlingAction?: ('ForwardCalls' | 'UnconditionalForwarding' | 'AgentQueue' | 'TransferToExtension' | 'TakeMessagesOnly' | 'PlayAnnouncementOnly' | 'SharedLines');
+  callHandlingAction?:
+    | 'ForwardCalls'
+    | 'UnconditionalForwarding'
+    | 'AgentQueue'
+    | 'TransferToExtension'
+    | 'TakeMessagesOnly'
+    | 'PlayAnnouncementOnly'
+    | 'SharedLines';
 
   /**
    * Type of an answering rule
    */
-  type?: ('BusinessHours' | 'AfterHours' | 'Custom');
+  type?: 'BusinessHours' | 'AfterHours' | 'Custom';
 
   /**
    */
@@ -71,20 +78,20 @@ interface UpdateAnsweringRuleRequest {
 
   /**
    * Greetings applied for an answering rule; only predefined greetings
- *  can be applied, see Dictionary Greeting List
+   *  can be applied, see Dictionary Greeting List
    */
   greetings?: GreetingInfo[];
 
   /**
    * Call screening status. 'Off' - no call screening; 'NoCallerId'
- *  - if caller ID is missing, then callers are asked to say their name before
- *  connecting; 'UnknownCallerId' - if caller ID is not in contact list, then
- *  callers are asked to say their name before connecting; 'Always' - the
- *  callers are always asked to say their name before connecting. The default
- *  value is 'Off'
+   *  - if caller ID is missing, then callers are asked to say their name before
+   *  connecting; 'UnknownCallerId' - if caller ID is not in contact list, then
+   *  callers are asked to say their name before connecting; 'Always' - the
+   *  callers are always asked to say their name before connecting. The default
+   *  value is 'Off'
    * Default: Off
    */
-  screening?: ('Off' | 'NoCallerId' | 'UnknownCallerId' | 'Always');
+  screening?: 'Off' | 'NoCallerId' | 'UnknownCallerId' | 'Always';
 
   /**
    * Indicates whether inactive numbers should be returned or not

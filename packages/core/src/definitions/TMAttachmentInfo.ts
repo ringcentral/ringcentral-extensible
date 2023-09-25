@@ -7,7 +7,7 @@ interface TMAttachmentInfo {
   /**
    * Type of an attachment
    */
-  type?: ('File' | 'Note' | 'Event' | 'Card');
+  type?: 'File' | 'Note' | 'Event' | 'Card';
 }
 
 export default TMAttachmentInfo;

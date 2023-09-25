@@ -1,7 +1,7 @@
 import BulkAssign from './BulkAssign';
-import LicensesStatisticsResponse from '../../../../../definitions/LicensesStatisticsResponse';
-import ListLicensesV2Parameters from '../../../../../definitions/ListLicensesV2Parameters';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import type LicensesStatisticsResponse from '../../../../../definitions/LicensesStatisticsResponse';
+import type ListLicensesV2Parameters from '../../../../../definitions/ListLicensesV2Parameters';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -19,16 +19,19 @@ class Index {
 
   /**
    * Returns the information about account licenses.
- * License blocks are grouped by "skuId", "assigned" flag and "costCenterId".
- * Only recurring licenses are returned.
- *
+   * License blocks are grouped by "skuId", "assigned" flag and "costCenterId".
+   * Only recurring licenses are returned.
+   *
    * HTTP Method: get
    * Endpoint: /restapi/v2/accounts/{accountId}/licenses
    * Rate Limit Group: Light
    * App Permission: ReadAccounts
    * User Permission: LicensesAndInventory
    */
-  public async get(queryParams?: ListLicensesV2Parameters, restRequestConfig?: RestRequestConfig): Promise<LicensesStatisticsResponse> {
+  public async get(
+    queryParams?: ListLicensesV2Parameters,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<LicensesStatisticsResponse> {
     const r = await this.rc.get<LicensesStatisticsResponse>(this.path(), queryParams, restRequestConfig);
     return r.data;
   }

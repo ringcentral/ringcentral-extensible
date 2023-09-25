@@ -1,7 +1,7 @@
-import AggregationResponse from '../../../../../../../definitions/AggregationResponse';
-import AnalyticsCallsAggregationFetchParameters from '../../../../../../../definitions/AnalyticsCallsAggregationFetchParameters';
-import AggregationRequest from '../../../../../../../definitions/AggregationRequest';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../../types';
+import type AggregationResponse from '../../../../../../../definitions/AggregationResponse';
+import type AnalyticsCallsAggregationFetchParameters from '../../../../../../../definitions/AnalyticsCallsAggregationFetchParameters';
+import type AggregationRequest from '../../../../../../../definitions/AggregationRequest';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -24,7 +24,11 @@ class Index {
    * Rate Limit Group: Light
    * App Permission: Analytics
    */
-  public async post(aggregationRequest: AggregationRequest, queryParams?: AnalyticsCallsAggregationFetchParameters, restRequestConfig?: RestRequestConfig): Promise<AggregationResponse> {
+  public async post(
+    aggregationRequest: AggregationRequest,
+    queryParams?: AnalyticsCallsAggregationFetchParameters,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<AggregationResponse> {
     const r = await this.rc.post<AggregationResponse>(this.path(), aggregationRequest, queryParams, restRequestConfig);
     return r.data;
   }

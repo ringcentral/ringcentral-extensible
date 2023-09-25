@@ -1,10 +1,10 @@
 /**
  * Billing information related to the call. Returned for 'Detailed' view only
-*/
+ */
 interface BillingInfo {
   /**
    * Cost per minute, paid and already included in your RingCentral service plan.
- *  For example International Calls
+   *  For example International Calls
    * Format: double
    */
   costIncluded?: number;

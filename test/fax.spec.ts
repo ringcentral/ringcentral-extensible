@@ -1,6 +1,6 @@
-import CreateFaxMessageRequest from '@rc-ex/core/lib/definitions/CreateFaxMessageRequest';
-import Attachment from '@rc-ex/core/lib/definitions/Attachment';
-import FaxResponse from '@rc-ex/core/lib/definitions/FaxResponse';
+import type CreateFaxMessageRequest from '@rc-ex/core/lib/definitions/CreateFaxMessageRequest';
+import type Attachment from '@rc-ex/core/lib/definitions/Attachment';
+import type FaxResponse from '@rc-ex/core/lib/definitions/FaxResponse';
 import Utils from '@rc-ex/core/lib/Utils';
 import fs from 'fs';
 import path from 'path';
@@ -11,9 +11,7 @@ describe('fax', () => {
   test('send fax', async () => {
     const rc = await createRingCentral();
     const createFaxMessageRequest: CreateFaxMessageRequest = {};
-    createFaxMessageRequest.to = [
-      { phoneNumber: process.env.RINGCENTRAL_RECEIVER },
-    ];
+    createFaxMessageRequest.to = [{ phoneNumber: process.env.RINGCENTRAL_RECEIVER }];
     const attachment1: Attachment = {};
     attachment1.filename = 'text.txt';
     attachment1.content = 'hello world';
@@ -23,12 +21,7 @@ describe('fax', () => {
     attachment2.content = fs.createReadStream(path.join(__dirname, 'test.png'));
     attachment2.contentType = 'image/png';
     createFaxMessageRequest.attachments = [attachment1, attachment2];
-    const messageInfo = await rc
-      .restapi()
-      .account()
-      .extension()
-      .fax()
-      .post(createFaxMessageRequest);
+    const messageInfo = await rc.restapi().account().extension().fax().post(createFaxMessageRequest);
     expect(messageInfo).not.toBeUndefined();
     expect(messageInfo.id).not.toBeUndefined();
     await rc.revoke();
@@ -48,10 +41,7 @@ describe('fax', () => {
       attachments: [attachment1, attachment2],
       to: [{ phoneNumber: process.env.RINGCENTRAL_RECEIVER, name: 'To Name' }],
     });
-    const r = await rc.post<FaxResponse>(
-      '/restapi/v1.0/account/~/extension/~/fax',
-      formData,
-    );
+    const r = await rc.post<FaxResponse>('/restapi/v1.0/account/~/extension/~/fax', formData);
     const messageInfo = r.data;
     expect(messageInfo).not.toBeUndefined();
     expect(messageInfo.id).not.toBeUndefined();

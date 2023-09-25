@@ -1,10 +1,10 @@
-import TMCompleteTaskRequestAssignees from './TMCompleteTaskRequestAssignees';
+import type TMCompleteTaskRequestAssignees from './TMCompleteTaskRequestAssignees';
 
 interface TMCompleteTaskRequest {
   /**
    * Completeness status
    */
-  status?: ('Incomplete' | 'Complete');
+  status?: 'Incomplete' | 'Complete';
 
   /**
    */

@@ -1,4 +1,4 @@
-import ContactAddressInfo from './ContactAddressInfo';
+import type ContactAddressInfo from './ContactAddressInfo';
 
 interface PersonalContactRequest {
   /**

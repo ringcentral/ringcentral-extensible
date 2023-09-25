@@ -1,6 +1,6 @@
 /**
  * Account sub-brand information
-*/
+ */
 interface UBrandInfo {
   /**
    * Sub-brand unique ID

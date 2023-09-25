@@ -2,7 +2,7 @@ import Configuration from './Configuration';
 import Notifications from './Notifications';
 import Registration from './Registration';
 import History from './History';
-import { RingCentralInterface } from '../../types';
+import type { RingCentralInterface } from '../../types';
 
 class Index {
   public rc: RingCentralInterface;

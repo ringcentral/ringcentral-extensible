@@ -4,7 +4,7 @@ interface EnrollmentPatchInput {
    * Required
    * Example: Wav
    */
-  encoding?: ('Mpeg' | 'Mp4' | 'Wav' | 'Webm' | 'Webp' | 'Aac' | 'Avi' | 'Ogg');
+  encoding?: 'Mpeg' | 'Mp4' | 'Wav' | 'Webm' | 'Webp' | 'Aac' | 'Avi' | 'Ogg';
 
   /**
    * Language spoken in the audio file.

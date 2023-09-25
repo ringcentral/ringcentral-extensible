@@ -1,9 +1,9 @@
 import Renew from './Renew';
-import UpdateSubscriptionRequest from '../../../../../definitions/UpdateSubscriptionRequest';
-import SubscriptionInfo from '../../../../../definitions/SubscriptionInfo';
-import CreateWebhookSubscriptionRequest from '../../../../../definitions/CreateWebhookSubscriptionRequest';
-import SubscriptionListResource from '../../../../../definitions/SubscriptionListResource';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import type UpdateSubscriptionRequest from '../../../../../definitions/UpdateSubscriptionRequest';
+import type SubscriptionInfo from '../../../../../definitions/SubscriptionInfo';
+import type CreateWebhookSubscriptionRequest from '../../../../../definitions/CreateWebhookSubscriptionRequest';
+import type SubscriptionListResource from '../../../../../definitions/SubscriptionListResource';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -42,8 +42,16 @@ class Index {
    * Endpoint: /webinar/notifications/v1/subscriptions
    * Rate Limit Group: Medium
    */
-  public async post(createWebhookSubscriptionRequest: CreateWebhookSubscriptionRequest, restRequestConfig?: RestRequestConfig): Promise<SubscriptionInfo> {
-    const r = await this.rc.post<SubscriptionInfo>(this.path(false), createWebhookSubscriptionRequest, undefined, restRequestConfig);
+  public async post(
+    createWebhookSubscriptionRequest: CreateWebhookSubscriptionRequest,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<SubscriptionInfo> {
+    const r = await this.rc.post<SubscriptionInfo>(
+      this.path(false),
+      createWebhookSubscriptionRequest,
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -63,18 +71,21 @@ class Index {
 
   /**
    * Updates the existing subscription. The client application can extend/narrow
- * the list of events for which it receives notifications within this subscription.
- * If event filters are specified, calling this method modifies them for the
- * existing subscription. The method also allows to set the subscription expiration time.
- * If other than `events` and `expiresIn` parameters are passed in the request they will be ignored.
- * If the request body is empty then the specified subscription will be just renewed without any
- * event filter modifications and with default expiration time.
- *
+   * the list of events for which it receives notifications within this subscription.
+   * If event filters are specified, calling this method modifies them for the
+   * existing subscription. The method also allows to set the subscription expiration time.
+   * If other than `events` and `expiresIn` parameters are passed in the request they will be ignored.
+   * If the request body is empty then the specified subscription will be just renewed without any
+   * event filter modifications and with default expiration time.
+   *
    * HTTP Method: put
    * Endpoint: /webinar/notifications/v1/subscriptions/{subscriptionId}
    * Rate Limit Group: Medium
    */
-  public async put(updateSubscriptionRequest: UpdateSubscriptionRequest, restRequestConfig?: RestRequestConfig): Promise<SubscriptionInfo> {
+  public async put(
+    updateSubscriptionRequest: UpdateSubscriptionRequest,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<SubscriptionInfo> {
     if (this.subscriptionId === null) {
       throw new Error('subscriptionId must be specified.');
     }

@@ -1,6 +1,6 @@
-import SiteIVRSettingsUpdate from '../../../../../definitions/SiteIVRSettingsUpdate';
-import SiteIVRSettings from '../../../../../definitions/SiteIVRSettings';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import type SiteIVRSettingsUpdate from '../../../../../definitions/SiteIVRSettingsUpdate';
+import type SiteIVRSettings from '../../../../../definitions/SiteIVRSettings';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -18,7 +18,7 @@ class Index {
 
   /**
    * Returns IVR settings for a site specified in path.
- *
+   *
    * HTTP Method: get
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/sites/{siteId}/ivr
    * Rate Limit Group: Medium
@@ -32,14 +32,17 @@ class Index {
 
   /**
    * Updates IVR settings for a site specified in path.
- *
+   *
    * HTTP Method: put
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/sites/{siteId}/ivr
    * Rate Limit Group: Medium
    * App Permission: EditAccounts
    * User Permission: Sites
    */
-  public async put(siteIVRSettingsUpdate: SiteIVRSettingsUpdate, restRequestConfig?: RestRequestConfig): Promise<SiteIVRSettings> {
+  public async put(
+    siteIVRSettingsUpdate: SiteIVRSettingsUpdate,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<SiteIVRSettings> {
     const r = await this.rc.put<SiteIVRSettings>(this.path(), siteIVRSettingsUpdate, undefined, restRequestConfig);
     return r.data;
   }

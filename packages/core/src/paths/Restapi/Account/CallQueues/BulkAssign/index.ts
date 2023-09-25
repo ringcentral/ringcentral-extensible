@@ -1,5 +1,5 @@
-import CallQueueBulkAssignResource from '../../../../../definitions/CallQueueBulkAssignResource';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import type CallQueueBulkAssignResource from '../../../../../definitions/CallQueueBulkAssignResource';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -17,14 +17,17 @@ class Index {
 
   /**
    * Assigns multiple call queue members to call queue group.
- *
+   *
    * HTTP Method: post
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/call-queues/{groupId}/bulk-assign
    * Rate Limit Group: Heavy
    * App Permission: EditExtensions
    * User Permission: Groups
    */
-  public async post(callQueueBulkAssignResource: CallQueueBulkAssignResource, restRequestConfig?: RestRequestConfig): Promise<string> {
+  public async post(
+    callQueueBulkAssignResource: CallQueueBulkAssignResource,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<string> {
     const r = await this.rc.post<string>(this.path(), callQueueBulkAssignResource, undefined, restRequestConfig);
     return r.data;
   }

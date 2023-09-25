@@ -1,6 +1,6 @@
 /**
  * Query parameters for operation aggregateA2PSMSStatuses
-*/
+ */
 interface AggregateA2PSMSStatusesParameters {
   /**
    * Internal identifier of a message batch to filter the response
@@ -12,7 +12,7 @@ interface AggregateA2PSMSStatusesParameters {
    * Direction of the SMS message
    * Example: Inbound
    */
-  direction?: ('Inbound' | 'Outbound');
+  direction?: 'Inbound' | 'Outbound';
 
   /**
    * The end of the time range to filter the results in ISO 8601 format including timezone. Default is the 'dateTo' minus 24 hours

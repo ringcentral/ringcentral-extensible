@@ -1,16 +1,16 @@
-import ExtensionStatusInfo from './ExtensionStatusInfo';
-import ContactInfoUpdateRequest from './ContactInfoUpdateRequest';
-import ExtensionRegionalSettingRequest from './ExtensionRegionalSettingRequest';
-import CallQueueInfoRequest from './CallQueueInfoRequest';
-import UserTransitionInfo from './UserTransitionInfo';
-import CustomFieldInfo from './CustomFieldInfo';
-import SiteReference from './SiteReference';
-import ReferenceInfo from './ReferenceInfo';
+import type ExtensionStatusInfo from './ExtensionStatusInfo';
+import type ContactInfoUpdateRequest from './ContactInfoUpdateRequest';
+import type ExtensionRegionalSettingRequest from './ExtensionRegionalSettingRequest';
+import type CallQueueInfoRequest from './CallQueueInfoRequest';
+import type UserTransitionInfo from './UserTransitionInfo';
+import type CustomFieldInfo from './CustomFieldInfo';
+import type SiteReference from './SiteReference';
+import type ReferenceInfo from './ReferenceInfo';
 
 interface ExtensionUpdateRequest {
   /**
    */
-  status?: ('Disabled' | 'Enabled' | 'NotActivated' | 'Frozen');
+  status?: 'Disabled' | 'Enabled' | 'NotActivated' | 'Frozen';
 
   /**
    */
@@ -41,11 +41,11 @@ interface ExtensionUpdateRequest {
 
   /**
    */
-  setupWizardState?: ('NotStarted' | 'Incomplete' | 'Completed');
+  setupWizardState?: 'NotStarted' | 'Incomplete' | 'Completed';
 
   /**
    * Additional extension identifier, created by partner application
- *  and applied on client side
+   *  and applied on client side
    */
   partnerId?: string;
 
@@ -77,16 +77,31 @@ interface ExtensionUpdateRequest {
 
   /**
    * Extension type. Please note that legacy 'Department' extension
- *  type corresponds to 'Call Queue' extensions in modern RingCentral
- *  product terminology
+   *  type corresponds to 'Call Queue' extensions in modern RingCentral
+   *  product terminology
    */
-  type?: ('User' | 'FaxUser' | 'FlexibleUser' | 'VirtualUser' | 'DigitalUser' | 'Department' | 'Announcement' | 'Voicemail' | 'SharedLinesGroup' | 'PagingOnly' | 'IvrMenu' | 'ApplicationExtension' | 'ParkLocation' | 'DelegatedLinesGroup' | 'GroupCallPickup');
+  type?:
+    | 'User'
+    | 'FaxUser'
+    | 'FlexibleUser'
+    | 'VirtualUser'
+    | 'DigitalUser'
+    | 'Department'
+    | 'Announcement'
+    | 'Voicemail'
+    | 'SharedLinesGroup'
+    | 'PagingOnly'
+    | 'IvrMenu'
+    | 'ApplicationExtension'
+    | 'ParkLocation'
+    | 'DelegatedLinesGroup'
+    | 'GroupCallPickup';
 
   /**
    * Extension sub-type, if applicable. For any unsupported sub-types
- *  the 'Unknown' value will be returned
+   *  the 'Unknown' value will be returned
    */
-  subType?: ('VideoPro' | 'VideoProPlus' | 'DigitalSignage' | 'Unknown');
+  subType?: 'VideoPro' | 'VideoProPlus' | 'DigitalSignage' | 'Unknown';
 
   /**
    * List of non-RC internal identifiers assigned to an extension

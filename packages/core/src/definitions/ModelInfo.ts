@@ -1,8 +1,8 @@
-import AddonInfo from './AddonInfo';
+import type AddonInfo from './AddonInfo';
 
 /**
  * HardPhone model information
-*/
+ */
 interface ModelInfo {
   /**
    * Internal identifier of a HardPhone device model

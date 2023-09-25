@@ -1,9 +1,9 @@
-import OriginInfo from './OriginInfo';
-import TelephonySessionsEventPartyInfo from './TelephonySessionsEventPartyInfo';
+import type OriginInfo from './OriginInfo';
+import type TelephonySessionsEventPartyInfo from './TelephonySessionsEventPartyInfo';
 
 /**
  * Notification payload body
-*/
+ */
 interface TelephonySessionsEventBody {
   /**
    * Order number of a notification to state the chronology

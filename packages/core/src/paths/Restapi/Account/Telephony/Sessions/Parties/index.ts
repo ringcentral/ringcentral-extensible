@@ -13,9 +13,9 @@ import Reply from './Reply';
 import Hold from './Hold';
 import Flip from './Flip';
 import Park from './Park';
-import PartyUpdateRequest from '../../../../../../definitions/PartyUpdateRequest';
-import CallParty from '../../../../../../definitions/CallParty';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../types';
+import type PartyUpdateRequest from '../../../../../../definitions/PartyUpdateRequest';
+import type CallParty from '../../../../../../definitions/CallParty';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -74,7 +74,10 @@ class Index {
    * Rate Limit Group: Light
    * App Permission: CallControl
    */
-  public async patch(partyUpdateRequest: PartyUpdateRequest, restRequestConfig?: RestRequestConfig): Promise<CallParty> {
+  public async patch(
+    partyUpdateRequest: PartyUpdateRequest,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<CallParty> {
     if (this.partyId === null) {
       throw new Error('partyId must be specified.');
     }
@@ -138,7 +141,7 @@ class Index {
     return new Supervise(this);
   }
 
-  public recordings(recordingId: (string | null) = null): Recordings {
+  public recordings(recordingId: string | null = null): Recordings {
     return new Recordings(this, recordingId);
   }
 }

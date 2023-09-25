@@ -1,6 +1,6 @@
-import AnsweringRuleInfo from './AnsweringRuleInfo';
-import EnumeratedPagingModel from './EnumeratedPagingModel';
-import PageNavigationModel from './PageNavigationModel';
+import type AnsweringRuleInfo from './AnsweringRuleInfo';
+import type EnumeratedPagingModel from './EnumeratedPagingModel';
+import type PageNavigationModel from './PageNavigationModel';
 
 interface UserAnsweringRuleList {
   /**

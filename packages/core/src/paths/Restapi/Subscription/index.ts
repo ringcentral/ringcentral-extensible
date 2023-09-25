@@ -1,9 +1,9 @@
 import Renew from './Renew';
-import UpdateSubscriptionRequest from '../../../definitions/UpdateSubscriptionRequest';
-import SubscriptionInfo from '../../../definitions/SubscriptionInfo';
-import CreateSubscriptionRequest from '../../../definitions/CreateSubscriptionRequest';
-import SubscriptionListResource from '../../../definitions/SubscriptionListResource';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../types';
+import type UpdateSubscriptionRequest from '../../../definitions/UpdateSubscriptionRequest';
+import type SubscriptionInfo from '../../../definitions/SubscriptionInfo';
+import type CreateSubscriptionRequest from '../../../definitions/CreateSubscriptionRequest';
+import type SubscriptionListResource from '../../../definitions/SubscriptionListResource';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -27,7 +27,7 @@ class Index {
 
   /**
    * Returns a list of subscriptions created by the user for the current authorized client application.
- *
+   *
    * HTTP Method: get
    * Endpoint: /restapi/{apiVersion}/subscription
    * Rate Limit Group: Light
@@ -39,45 +39,53 @@ class Index {
 
   /**
    * This API allows client applications to register a new subscription so that it
- * can be notified of events when they occur on the platform.
- *
- * A subscription relates to a set of events that a client application would like
- * to be informed of and the delivery channel by which they will be notified of
- * those events. How subscriptions are established depends upon the notification
- * channel the client application would like to use to receive the event
- * notification. For example, to create a webhook a developer would create a
- * subscription via a REST API call, while specifying a list of events or "event
- * filters" to be notified of, a transport type of `WebHook`, and the address or
- * URL to which they would like the webhook delivered.
- *
- * However, developers wishing to subscribe to a set of events via a WebSocket
- * channel, would first connect to the WebSocket gateway, and then issue their
- * subscription request over the WebSocket itself, as opposed to making a REST
- * API call to this endpoint.
- *
- * While the protocol for establishing a subscription may vary depending upon
- * the delivery channel for that subscription, the schemas used for representing
- * a subscription are the same across all delivery modes.
- *
- * Subscriptions are currently limited to 20 subscriptions per user/extension (for particular application).
- *
- * RingCentral currently supports the following delivery modes for event subscriptions:
- *
- * * [WebHook](https://developers.ringcentral.com/guide/notifications/webhooks/quick-start) - to receive event notifications as an HTTP POST to a given URL
- * * [WebSocket](https://developers.ringcentral.com/guide/notifications/websockets/quick-start) - to receive real-time events over a persistent WebSocket connection
- * * [PubNub](https://developers.ringcentral.com/guide/notifications/push-notifications/quick-start) (deprecated) - to receive a push notification sent directly to a client application
- *
- * Developers should be aware that the PubNub delivery mode is currently
- * deprecated and will be removed in 2024. Developers are encouraged to
- * [migrate their client applications to use WebSockets](https://developers.ringcentral.com/guide/notifications/websockets/migration/)
- * instead.
- *
+   * can be notified of events when they occur on the platform.
+   *
+   * A subscription relates to a set of events that a client application would like
+   * to be informed of and the delivery channel by which they will be notified of
+   * those events. How subscriptions are established depends upon the notification
+   * channel the client application would like to use to receive the event
+   * notification. For example, to create a webhook a developer would create a
+   * subscription via a REST API call, while specifying a list of events or "event
+   * filters" to be notified of, a transport type of `WebHook`, and the address or
+   * URL to which they would like the webhook delivered.
+   *
+   * However, developers wishing to subscribe to a set of events via a WebSocket
+   * channel, would first connect to the WebSocket gateway, and then issue their
+   * subscription request over the WebSocket itself, as opposed to making a REST
+   * API call to this endpoint.
+   *
+   * While the protocol for establishing a subscription may vary depending upon
+   * the delivery channel for that subscription, the schemas used for representing
+   * a subscription are the same across all delivery modes.
+   *
+   * Subscriptions are currently limited to 20 subscriptions per user/extension (for particular application).
+   *
+   * RingCentral currently supports the following delivery modes for event subscriptions:
+   *
+   * * [WebHook](https://developers.ringcentral.com/guide/notifications/webhooks/quick-start) - to receive event notifications as an HTTP POST to a given URL
+   * * [WebSocket](https://developers.ringcentral.com/guide/notifications/websockets/quick-start) - to receive real-time events over a persistent WebSocket connection
+   * * [PubNub](https://developers.ringcentral.com/guide/notifications/push-notifications/quick-start) (deprecated) - to receive a push notification sent directly to a client application
+   *
+   * Developers should be aware that the PubNub delivery mode is currently
+   * deprecated and will be removed in 2024. Developers are encouraged to
+   * [migrate their client applications to use WebSockets](https://developers.ringcentral.com/guide/notifications/websockets/migration/)
+   * instead.
+   *
    * HTTP Method: post
    * Endpoint: /restapi/{apiVersion}/subscription
    * Rate Limit Group: Medium
    */
-  public async post(createSubscriptionRequest: CreateSubscriptionRequest, restRequestConfig?: RestRequestConfig): Promise<SubscriptionInfo> {
-    const r = await this.rc.post<SubscriptionInfo>(this.path(false), createSubscriptionRequest, undefined, restRequestConfig);
+  public async post(
+    createSubscriptionRequest: CreateSubscriptionRequest,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<SubscriptionInfo> {
+    const r = await this.rc.post<SubscriptionInfo>(
+      this.path(false),
+      createSubscriptionRequest,
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -97,22 +105,25 @@ class Index {
 
   /**
    * Updates the existing subscription. The client application can extend or narrow
- * the list of events for which it receives notifications within the current subscription.
- * If event filters are specified, calling this method modifies them for the
- * existing subscription. The method also allows one to set an expiration time for the
- * subscription itself.
- *
- * If parameters other than `events` and `expiresIn` are specified in the request they will be ignored.
- * If the request body is empty then the specified subscription will be renewed without any
- * event filter modifications and using the default expiration time.
- *
- * Please note that `WebSocket` subscriptions cannot be updated via HTTP interface.
- *
+   * the list of events for which it receives notifications within the current subscription.
+   * If event filters are specified, calling this method modifies them for the
+   * existing subscription. The method also allows one to set an expiration time for the
+   * subscription itself.
+   *
+   * If parameters other than `events` and `expiresIn` are specified in the request they will be ignored.
+   * If the request body is empty then the specified subscription will be renewed without any
+   * event filter modifications and using the default expiration time.
+   *
+   * Please note that `WebSocket` subscriptions cannot be updated via HTTP interface.
+   *
    * HTTP Method: put
    * Endpoint: /restapi/{apiVersion}/subscription/{subscriptionId}
    * Rate Limit Group: Medium
    */
-  public async put(updateSubscriptionRequest: UpdateSubscriptionRequest, restRequestConfig?: RestRequestConfig): Promise<SubscriptionInfo> {
+  public async put(
+    updateSubscriptionRequest: UpdateSubscriptionRequest,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<SubscriptionInfo> {
     if (this.subscriptionId === null) {
       throw new Error('subscriptionId must be specified.');
     }

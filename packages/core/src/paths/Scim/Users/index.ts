@@ -1,10 +1,10 @@
 import DotSearch from './DotSearch';
-import ScimUserPatch from '../../../definitions/ScimUserPatch';
-import ScimUserResponse from '../../../definitions/ScimUserResponse';
-import ScimUser from '../../../definitions/ScimUser';
-import ScimUserSearchResponse from '../../../definitions/ScimUserSearchResponse';
-import ScimSearchViaGet2Parameters from '../../../definitions/ScimSearchViaGet2Parameters';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../types';
+import type ScimUserPatch from '../../../definitions/ScimUserPatch';
+import type ScimUserResponse from '../../../definitions/ScimUserResponse';
+import type ScimUser from '../../../definitions/ScimUser';
+import type ScimUserSearchResponse from '../../../definitions/ScimUserSearchResponse';
+import type ScimSearchViaGet2Parameters from '../../../definitions/ScimSearchViaGet2Parameters';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -33,7 +33,10 @@ class Index {
    * Rate Limit Group: Light
    * App Permission: ReadAccounts
    */
-  public async list(queryParams?: ScimSearchViaGet2Parameters, restRequestConfig?: RestRequestConfig): Promise<ScimUserSearchResponse> {
+  public async list(
+    queryParams?: ScimSearchViaGet2Parameters,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<ScimUserSearchResponse> {
     const r = await this.rc.get<ScimUserSearchResponse>(this.path(false), queryParams, restRequestConfig);
     return r.data;
   }

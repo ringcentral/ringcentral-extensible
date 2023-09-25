@@ -1,10 +1,10 @@
 /**
  * Query parameters for operation listTimezones
-*/
+ */
 interface ListTimezonesParameters {
   /**
    * Indicates a page number to retrieve. Only positive number values
- *  are allowed. Default value is '1'
+   *  are allowed. Default value is '1'
    * Format: int32
    * Default: 1
    */

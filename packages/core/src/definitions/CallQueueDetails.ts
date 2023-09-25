@@ -1,4 +1,4 @@
-import CallQueueServiceLevelSettings from './CallQueueServiceLevelSettings';
+import type CallQueueServiceLevelSettings from './CallQueueServiceLevelSettings';
 
 interface CallQueueDetails {
   /**
@@ -19,7 +19,7 @@ interface CallQueueDetails {
   /**
    * Call queue status
    */
-  status?: ('Enabled' | 'Disabled' | 'NotActivated');
+  status?: 'Enabled' | 'Disabled' | 'NotActivated';
 
   /**
    */

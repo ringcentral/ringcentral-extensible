@@ -1,5 +1,5 @@
-import CallParty from '../../../../../../../definitions/CallParty';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../../types';
+import type CallParty from '../../../../../../../definitions/CallParty';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../../types';
 
 class Index {
   public rc: RingCentralInterface;

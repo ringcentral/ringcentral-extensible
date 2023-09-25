@@ -1,11 +1,11 @@
 import BulkAssign from './BulkAssign';
 import Presence from './Presence';
 import Members from './Members';
-import CallQueueUpdateDetails from '../../../../definitions/CallQueueUpdateDetails';
-import CallQueueDetails from '../../../../definitions/CallQueueDetails';
-import CallQueues from '../../../../definitions/CallQueues';
-import ListCallQueuesParameters from '../../../../definitions/ListCallQueuesParameters';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
+import type CallQueueUpdateDetails from '../../../../definitions/CallQueueUpdateDetails';
+import type CallQueueDetails from '../../../../definitions/CallQueueDetails';
+import type CallQueues from '../../../../definitions/CallQueues';
+import type ListCallQueuesParameters from '../../../../definitions/ListCallQueuesParameters';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -29,21 +29,24 @@ class Index {
 
   /**
    * Returns a call queue list.
- *
+   *
    * HTTP Method: get
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/call-queues
    * Rate Limit Group: Medium
    * App Permission: ReadAccounts
    * User Permission: ReadExtensions
    */
-  public async list(queryParams?: ListCallQueuesParameters, restRequestConfig?: RestRequestConfig): Promise<CallQueues> {
+  public async list(
+    queryParams?: ListCallQueuesParameters,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<CallQueues> {
     const r = await this.rc.get<CallQueues>(this.path(false), queryParams, restRequestConfig);
     return r.data;
   }
 
   /**
    * Returns basic information on a call queue group extension.
- *
+   *
    * HTTP Method: get
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/call-queues/{groupId}
    * Rate Limit Group: Light
@@ -60,14 +63,17 @@ class Index {
 
   /**
    * Updates information on a call queue group extension.
- *
+   *
    * HTTP Method: put
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/call-queues/{groupId}
    * Rate Limit Group: Light
    * App Permission: EditExtensions
    * User Permission: EditUserInfo
    */
-  public async put(callQueueUpdateDetails: CallQueueUpdateDetails, restRequestConfig?: RestRequestConfig): Promise<CallQueueDetails> {
+  public async put(
+    callQueueUpdateDetails: CallQueueUpdateDetails,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<CallQueueDetails> {
     if (this.groupId === null) {
       throw new Error('groupId must be specified.');
     }

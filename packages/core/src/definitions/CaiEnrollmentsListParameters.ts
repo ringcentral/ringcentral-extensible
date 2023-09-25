@@ -1,6 +1,6 @@
 /**
  * Query parameters for operation caiEnrollmentsList
-*/
+ */
 interface CaiEnrollmentsListParameters {
   /**
    * Indicates if partially enrolled speakers should be returned

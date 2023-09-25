@@ -34,7 +34,7 @@ interface TMEventInfo {
   /**
    * Event recurrence settings
    */
-  recurrence?: ('None' | 'Day' | 'Weekday' | 'Week' | 'Month' | 'Year');
+  recurrence?: 'None' | 'Day' | 'Weekday' | 'Week' | 'Month' | 'Year';
 
   /**
    * Condition of ending
@@ -51,13 +51,13 @@ interface TMEventInfo {
    * Iterations end datetime for periodic events
    * Default: None
    */
-  endingOn?: ('None' | 'Count' | 'Date');
+  endingOn?: 'None' | 'Count' | 'Date';
 
   /**
    * Color of Event title (including its presentation in Calendar)
    * Default: Black
    */
-  color?: ('Black' | 'Red' | 'Orange' | 'Yellow' | 'Green' | 'Blue' | 'Purple' | 'Magenta');
+  color?: 'Black' | 'Red' | 'Orange' | 'Yellow' | 'Green' | 'Blue' | 'Purple' | 'Magenta';
 
   /**
    * Event location

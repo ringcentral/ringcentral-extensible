@@ -1,7 +1,7 @@
 /**
  * Formatting language preferences for numbers, dates and currencies
  *
-*/
+ */
 interface FormattingLocaleInfo {
   /**
    * Internal identifier of a formatting language

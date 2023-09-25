@@ -1,11 +1,7 @@
-import RingCentral from '@rc-ex/core';
-import {
-  RestRequestConfig,
-  RestResponse,
-  RestMethod,
-} from '@rc-ex/core/lib/types';
+import type RingCentral from '@rc-ex/core';
+import type { RestRequestConfig, RestResponse, RestMethod } from '@rc-ex/core/lib/types';
 import SdkExtension from '@rc-ex/core/lib/SdkExtension';
-import GetTokenRequest from '@rc-ex/core/lib/definitions/GetTokenRequest';
+import type GetTokenRequest from '@rc-ex/core/lib/definitions/GetTokenRequest';
 import RestException from '@rc-ex/core/lib/RestException';
 import { EventEmitter } from 'events';
 
@@ -28,31 +24,28 @@ export enum Events {
   rateLimitError = 'rateLimitError',
 }
 
-export type EventsOptions = {
+export interface EventsOptions {
   enabledEvents?: Events[];
-};
+}
 
 class EventsExtension extends SdkExtension {
-  eventEmitter = new EventEmitter();
+  public eventEmitter = new EventEmitter();
 
-  options: EventsOptions;
+  public options: EventsOptions;
 
-  constructor(options: EventsOptions = {}) {
+  public constructor(options: EventsOptions = {}) {
     super();
     this.options = options;
   }
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  emit(event: Events, data: any) {
-    if (
-      !this.options.enabledEvents
-      || this.options.enabledEvents.includes(event)
-    ) {
+  public emit(event: Events, data: any) {
+    if (!this.options.enabledEvents || this.options.enabledEvents.includes(event)) {
       this.eventEmitter.emit(event, data);
     }
   }
 
-  async install(rc: RingCentral) {
+  public async install(rc: RingCentral) {
     const request = rc.request.bind(rc);
     rc.request = async <T>(
       method: RestMethod,
@@ -60,9 +53,10 @@ class EventsExtension extends SdkExtension {
       content?: {},
       queryParams?: {},
       config?: RestRequestConfig,
+      // eslint-disable-next-line max-params
     ): Promise<RestResponse<T>> => {
       if (!this.enabled) {
-        return request<T>(method, endpoint, content, queryParams, config);
+        return request(method, endpoint, content, queryParams, config);
       }
       const params = {
         method,
@@ -84,13 +78,7 @@ class EventsExtension extends SdkExtension {
         }
       }
       try {
-        const r = await request<T>(
-          method,
-          endpoint,
-          content,
-          queryParams,
-          config,
-        );
+        const r = await request(method, endpoint, content, queryParams, config);
         this.emit(Events.requestSuccess, r);
         if (method === 'POST') {
           if (endpoint === '/restapi/oauth/token') {
@@ -126,7 +114,7 @@ class EventsExtension extends SdkExtension {
   }
 
   // eslint-disable-next-line class-methods-use-this, @typescript-eslint/no-empty-function
-  async revoke(): Promise<void> { }
+  public async revoke(): Promise<void> {}
 }
 
 export default EventsExtension;

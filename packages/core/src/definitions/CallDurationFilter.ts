@@ -1,6 +1,6 @@
 /**
  * Filtering of calls based on the overall call length
-*/
+ */
 interface CallDurationFilter {
   /**
    * Minimum duration of call in seconds

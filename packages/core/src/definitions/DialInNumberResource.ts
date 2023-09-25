@@ -1,4 +1,4 @@
-import MeetingsCountryResource from './MeetingsCountryResource';
+import type MeetingsCountryResource from './MeetingsCountryResource';
 
 interface DialInNumberResource {
   /**

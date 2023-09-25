@@ -1,8 +1,8 @@
-import MessagingNavigationInfoURI from './MessagingNavigationInfoURI';
+import type MessagingNavigationInfoURI from './MessagingNavigationInfoURI';
 
 /**
  * Information on navigation
-*/
+ */
 interface MessagingNavigationInfo {
   /**
    */

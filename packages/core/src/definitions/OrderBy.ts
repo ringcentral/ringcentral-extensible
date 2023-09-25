@@ -11,14 +11,14 @@ interface OrderBy {
    * Field name by which to sort the contacts
    * Example: department
    */
-  fieldName?: ('firstName' | 'lastName' | 'extensionNumber' | 'phoneNumber' | 'email' | 'jobTitle' | 'department');
+  fieldName?: 'firstName' | 'lastName' | 'extensionNumber' | 'phoneNumber' | 'email' | 'jobTitle' | 'department';
 
   /**
    * Sorting direction
    * Example: Asc
    * Default: Asc
    */
-  direction?: ('Asc' | 'Desc');
+  direction?: 'Asc' | 'Desc';
 }
 
 export default OrderBy;

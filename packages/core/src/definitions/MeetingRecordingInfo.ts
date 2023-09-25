@@ -16,7 +16,7 @@ interface MeetingRecordingInfo {
 
   /**
    */
-  contentType?: ('video/mp4' | 'audio/m4a' | 'text/vtt');
+  contentType?: 'video/mp4' | 'audio/m4a' | 'text/vtt';
 
   /**
    * Format: int32
@@ -37,7 +37,7 @@ interface MeetingRecordingInfo {
 
   /**
    */
-  status?: ('Completed' | 'Processing');
+  status?: 'Completed' | 'Processing';
 }
 
 export default MeetingRecordingInfo;

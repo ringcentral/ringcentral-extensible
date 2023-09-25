@@ -22,7 +22,7 @@ interface RcwPagingForwardModel {
 
   /**
    * Previous page token (absent for the first page of the result set)
- *  May be omitted if the result set does not support backward navigation.
+   *  May be omitted if the result set does not support backward navigation.
    */
   previousPageToken?: string;
 }

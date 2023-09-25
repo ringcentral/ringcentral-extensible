@@ -4,13 +4,11 @@ Rate limit extension handles rate limit automatically by delaying and retrying A
 
 This extension is based on the [Retry Extension](../retry).
 
-
 ## Install
 
 ```
 yarn add @rc-ex/rate-limit
 ```
-
 
 ## Usage
 
@@ -22,7 +20,6 @@ const rc = new RingCentral(...);
 const rateLimitExtension = new RateLimitExtension(rateLimitOptions);
 await rc.installExtension(rateLimitExtension);
 ```
-
 
 ## RateLimitOptions
 
@@ -40,7 +37,6 @@ type RateLimitOptions = {
 `maxRetries` defines maximum times of retries before aborting.
 
 Default value is 3.
-
 
 ### rateLimitWindow
 

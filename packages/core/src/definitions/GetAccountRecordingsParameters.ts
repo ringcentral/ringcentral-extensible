@@ -1,6 +1,6 @@
 /**
  * Query parameters for operation getAccountRecordings
-*/
+ */
 interface GetAccountRecordingsParameters {
   /**
    * Token to get the next page

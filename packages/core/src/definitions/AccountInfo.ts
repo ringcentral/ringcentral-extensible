@@ -1,6 +1,6 @@
-import PostalAddress from './PostalAddress';
-import ServiceInfoV2 from './ServiceInfoV2';
-import SystemUserContactInfo from './SystemUserContactInfo';
+import type PostalAddress from './PostalAddress';
+import type ServiceInfoV2 from './ServiceInfoV2';
+import type SystemUserContactInfo from './SystemUserContactInfo';
 
 interface AccountInfo {
   /**
@@ -12,7 +12,7 @@ interface AccountInfo {
 
   /**
    * External account ID. Used as a primary key to link accounts between
- *  RingCentral and partner systems.
+   *  RingCentral and partner systems.
    * Example: acme-us-12345
    */
   externalAccountId?: string;
@@ -28,7 +28,7 @@ interface AccountInfo {
    * Required
    * Example: Confirmed
    */
-  status?: ('Initial' | 'Unconfirmed' | 'Confirmed' | 'Disabled');
+  status?: 'Initial' | 'Unconfirmed' | 'Confirmed' | 'Disabled';
 
   /**
    * Company name

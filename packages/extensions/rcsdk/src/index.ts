@@ -1,26 +1,22 @@
-import RingCentral from '@rc-ex/core';
-import {
-  RestRequestConfig,
-  RestResponse,
-  RestMethod,
-} from '@rc-ex/core/lib/types';
+import type RingCentral from '@rc-ex/core';
+import type { RestRequestConfig, RestResponse, RestMethod } from '@rc-ex/core/lib/types';
 import SdkExtension from '@rc-ex/core/lib/SdkExtension';
 import RestException from '@rc-ex/core/lib/RestException';
-import SDK from '@ringcentral/sdk';
+import type SDK from '@ringcentral/sdk';
 
-export type RcSdkOptions = {
+export interface RcSdkOptions {
   rcSdk: SDK;
-};
+}
 
 class RcSdkExtension extends SdkExtension {
-  options: RcSdkOptions;
+  public options: RcSdkOptions;
 
-  constructor(options: RcSdkOptions) {
+  public constructor(options: RcSdkOptions) {
     super();
     this.options = options;
   }
 
-  async install(rc: RingCentral) {
+  public async install(rc: RingCentral) {
     Object.defineProperty(rc, 'token', {
       get: async () => this.options.rcSdk.platform().auth().data(),
     });
@@ -31,9 +27,10 @@ class RcSdkExtension extends SdkExtension {
       content?: {},
       queryParams?: {},
       config?: RestRequestConfig,
+      // eslint-disable-next-line max-params
     ): Promise<RestResponse<T>> => {
       if (!this.enabled) {
-        return request<T>(method, endpoint, content, queryParams, config);
+        return request(method, endpoint, content, queryParams, config);
       }
       const r = await this.options.rcSdk.send({
         method,
@@ -63,7 +60,7 @@ class RcSdkExtension extends SdkExtension {
   }
 
   // eslint-disable-next-line class-methods-use-this, @typescript-eslint/no-empty-function
-  async revoke(): Promise<void> { }
+  public async revoke(): Promise<void> {}
 }
 
 export default RcSdkExtension;

@@ -1,14 +1,14 @@
-import CountryInfoShortModel from './CountryInfoShortModel';
-import TimezoneInfo from './TimezoneInfo';
-import RegionalLanguageInfo from './RegionalLanguageInfo';
-import GreetingLanguageInfo from './GreetingLanguageInfo';
-import FormattingLocaleInfo from './FormattingLocaleInfo';
-import CurrencyInfo from './CurrencyInfo';
+import type CountryInfoShortModel from './CountryInfoShortModel';
+import type TimezoneInfo from './TimezoneInfo';
+import type RegionalLanguageInfo from './RegionalLanguageInfo';
+import type GreetingLanguageInfo from './GreetingLanguageInfo';
+import type FormattingLocaleInfo from './FormattingLocaleInfo';
+import type CurrencyInfo from './CurrencyInfo';
 
 /**
  * Account level region data (web service Auto-Receptionist settings)
  *
-*/
+ */
 interface AccountRegionalSettings {
   /**
    */
@@ -33,7 +33,7 @@ interface AccountRegionalSettings {
   /**
    * Time format setting. The default value is '12h' = ['12h', '24h']
    */
-  timeFormat?: ('12h' | '24h');
+  timeFormat?: '12h' | '24h';
 
   /**
    */

@@ -1,24 +1,22 @@
 /* eslint-disable no-console */
-import WS, { MessageEvent } from 'isomorphic-ws';
+import type { MessageEvent } from 'isomorphic-ws';
+import type WS from 'isomorphic-ws';
 
-import { WsgMeta, WsgEvent } from './types';
+import type { WsgMeta, WsgEvent } from './types';
 import ClosedException from './exceptions/ClosedException';
 import TimeoutException from './exceptions/TimeoutException';
 
 class Utils {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  static splitWsgData(wsgData: string): [WsgMeta, any] {
+  public static splitWsgData(wsgData: string): [WsgMeta, any] {
     if (wsgData.includes(',--Boundary')) {
       const index = wsgData.indexOf(',--Boundary');
-      return [
-        JSON.parse(wsgData.substring(1, index)),
-        wsgData.substring(index + 1, wsgData.length - 1),
-      ];
+      return [JSON.parse(wsgData.substring(1, index)), wsgData.substring(index + 1, wsgData.length - 1)];
     }
     return JSON.parse(wsgData);
   }
 
-  static debugWebSocket(_ws: WS) {
+  public static debugWebSocket(_ws: WS) {
     const ws = _ws;
     const send = ws.send.bind(ws);
     ws.send = async (str: string) => {
@@ -48,11 +46,7 @@ ${JSON.stringify(JSON.parse(event.data), null, 2)}
     });
   }
 
-  static waitForWebSocketMessage(
-    ws: WS,
-    matchCondition: (meta: WsgMeta) => boolean,
-    timeout = 60000,
-  ) {
+  public static waitForWebSocketMessage(ws: WS, matchCondition: (meta: WsgMeta) => boolean, timeout = 60000) {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     return new Promise<[WsgMeta, any, WsgEvent]>((resolve, reject) => {
       const checkHandle = setInterval(() => {

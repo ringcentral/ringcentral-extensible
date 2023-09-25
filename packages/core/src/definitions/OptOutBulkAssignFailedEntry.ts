@@ -1,6 +1,6 @@
 /**
  * Represents a failure of adding opt-out / opt-in. A pair of a recipient phone number and an error message
-*/
+ */
 interface OptOutBulkAssignFailedEntry {
   /**
    * A recipient phone number

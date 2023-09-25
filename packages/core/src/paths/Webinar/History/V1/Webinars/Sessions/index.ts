@@ -1,7 +1,7 @@
 import Participants from './Participants';
 import Invitees from './Invitees';
-import SessionResource from '../../../../../../definitions/SessionResource';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../types';
+import type SessionResource from '../../../../../../definitions/SessionResource';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -38,7 +38,7 @@ class Index {
     return r.data;
   }
 
-  public invitees(inviteeId: (string | null) = null): Invitees {
+  public invitees(inviteeId: string | null = null): Invitees {
     return new Invitees(this, inviteeId);
   }
 

@@ -1,16 +1,16 @@
 /**
  * Query parameters for operation listAnsweringRules
-*/
+ */
 interface ListAnsweringRulesParameters {
   /**
    * Filters custom call handling rules of the extension
    */
-  type?: ('Custom');
+  type?: 'Custom';
 
   /**
    * Default: Simple
    */
-  view?: ('Detailed' | 'Simple');
+  view?: 'Detailed' | 'Simple';
 
   /**
    * If true, then only active call handling rules are returned
@@ -29,7 +29,7 @@ interface ListAnsweringRulesParameters {
 
   /**
    * The number of items per page. If provided value in the request
- *  is greater than a maximum, the maximum value is applied
+   *  is greater than a maximum, the maximum value is applied
    * Maximum: 1000
    * Minimum: 1
    * Format: int32

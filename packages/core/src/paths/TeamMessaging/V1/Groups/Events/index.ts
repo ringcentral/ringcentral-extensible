@@ -1,6 +1,6 @@
-import TMCreateEventRequest from '../../../../../definitions/TMCreateEventRequest';
-import TMEventInfo from '../../../../../definitions/TMEventInfo';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import type TMCreateEventRequest from '../../../../../definitions/TMCreateEventRequest';
+import type TMEventInfo from '../../../../../definitions/TMEventInfo';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -35,7 +35,10 @@ class Index {
    * Rate Limit Group: Medium
    * App Permission: TeamMessaging
    */
-  public async post(tMCreateEventRequest: TMCreateEventRequest, restRequestConfig?: RestRequestConfig): Promise<TMEventInfo> {
+  public async post(
+    tMCreateEventRequest: TMCreateEventRequest,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<TMEventInfo> {
     const r = await this.rc.post<TMEventInfo>(this.path(), tMCreateEventRequest, undefined, restRequestConfig);
     return r.data;
   }

@@ -1,6 +1,6 @@
-import ScimUserSearchResponse from '../../../../definitions/ScimUserSearchResponse';
-import ScimSearchRequest from '../../../../definitions/ScimSearchRequest';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
+import type ScimUserSearchResponse from '../../../../definitions/ScimUserSearchResponse';
+import type ScimSearchRequest from '../../../../definitions/ScimSearchRequest';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -23,7 +23,10 @@ class Index {
    * Rate Limit Group: Light
    * App Permission: ReadAccounts
    */
-  public async post(scimSearchRequest: ScimSearchRequest, restRequestConfig?: RestRequestConfig): Promise<ScimUserSearchResponse> {
+  public async post(
+    scimSearchRequest: ScimSearchRequest,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<ScimUserSearchResponse> {
     const r = await this.rc.post<ScimUserSearchResponse>(this.path(), scimSearchRequest, undefined, restRequestConfig);
     return r.data;
   }

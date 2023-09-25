@@ -1,6 +1,6 @@
 /**
  * Query parameters for operation listAssignedRoles
-*/
+ */
 interface ListAssignedRolesParameters {
   /**
    * Specifies if hidden roles are shown or not

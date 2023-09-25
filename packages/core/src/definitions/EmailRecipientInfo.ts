@@ -17,18 +17,18 @@ interface EmailRecipientInfo {
   /**
    * Current state of an extension
    */
-  status?: ('Enabled' | 'Disable' | 'NotActivated' | 'Unassigned');
+  status?: 'Enabled' | 'Disable' | 'NotActivated' | 'Unassigned';
 
   /**
    * List of user email addresses from extension notification settings.
- *  By default main email address from contact information is returned
+   *  By default main email address from contact information is returned
    */
   emailAddresses?: string[];
 
   /**
    * Call queue manager permission
    */
-  permission?: ('FullAccess' | 'Messages' | 'MemberManagement');
+  permission?: 'FullAccess' | 'Messages' | 'MemberManagement';
 }
 
 export default EmailRecipientInfo;

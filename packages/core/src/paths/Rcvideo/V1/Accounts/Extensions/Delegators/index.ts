@@ -1,6 +1,6 @@
-import DelegatorsListResult from '../../../../../../definitions/DelegatorsListResult';
-import RcvListDelegatorsParameters from '../../../../../../definitions/RcvListDelegatorsParameters';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../types';
+import type DelegatorsListResult from '../../../../../../definitions/DelegatorsListResult';
+import type RcvListDelegatorsParameters from '../../../../../../definitions/RcvListDelegatorsParameters';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -23,7 +23,10 @@ class Index {
    * Rate Limit Group: Medium
    * App Permission: Video
    */
-  public async get(queryParams?: RcvListDelegatorsParameters, restRequestConfig?: RestRequestConfig): Promise<DelegatorsListResult> {
+  public async get(
+    queryParams?: RcvListDelegatorsParameters,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<DelegatorsListResult> {
     const r = await this.rc.get<DelegatorsListResult>(this.path(), queryParams, restRequestConfig);
     return r.data;
   }

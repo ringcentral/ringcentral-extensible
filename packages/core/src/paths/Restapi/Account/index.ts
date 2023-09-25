@@ -33,8 +33,8 @@ import CallLog from './CallLog';
 import A2pSms from './A2pSms';
 import Device from './Device';
 import Sites from './Sites';
-import GetAccountInfoResponse from '../../../definitions/GetAccountInfoResponse';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../types';
+import type GetAccountInfoResponse from '../../../definitions/GetAccountInfoResponse';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -58,8 +58,8 @@ class Index {
 
   /**
    * Returns basic information about a particular RingCentral
- * customer account.
- *
+   * customer account.
+   *
    * HTTP Method: get
    * Endpoint: /restapi/{apiVersion}/account/{accountId}
    * Rate Limit Group: Light
@@ -74,11 +74,11 @@ class Index {
     return r.data;
   }
 
-  public sites(siteId: (string | null) = null): Sites {
+  public sites(siteId: string | null = null): Sites {
     return new Sites(this, siteId);
   }
 
-  public device(deviceId: (string | null) = null): Device {
+  public device(deviceId: string | null = null): Device {
     return new Device(this, deviceId);
   }
 
@@ -86,7 +86,7 @@ class Index {
     return new A2pSms(this);
   }
 
-  public callLog(callRecordId: (string | null) = null): CallLog {
+  public callLog(callRecordId: string | null = null): CallLog {
     return new CallLog(this, callRecordId);
   }
 
@@ -106,23 +106,23 @@ class Index {
     return new Telephony(this);
   }
 
-  public recording(recordingId: (string | null) = null): Recording {
+  public recording(recordingId: string | null = null): Recording {
     return new Recording(this, recordingId);
   }
 
-  public extension(extensionId: (string | null) = '~'): Extension {
+  public extension(extensionId: string | null = '~'): Extension {
     return new Extension(this, extensionId);
   }
 
-  public templates(templateId: (string | null) = null): Templates {
+  public templates(templateId: string | null = null): Templates {
     return new Templates(this, templateId);
   }
 
-  public ivrMenus(ivrMenuId: (string | null) = null): IvrMenus {
+  public ivrMenus(ivrMenuId: string | null = null): IvrMenus {
     return new IvrMenus(this, ivrMenuId);
   }
 
-  public userRole(roleId: (string | null) = null): UserRole {
+  public userRole(roleId: string | null = null): UserRole {
     return new UserRole(this, roleId);
   }
 
@@ -130,15 +130,15 @@ class Index {
     return new AuditTrail(this);
   }
 
-  public ivrPrompts(promptId: (string | null) = null): IvrPrompts {
+  public ivrPrompts(promptId: string | null = null): IvrPrompts {
     return new IvrPrompts(this, promptId);
   }
 
-  public callQueues(groupId: (string | null) = null): CallQueues {
+  public callQueues(groupId: string | null = null): CallQueues {
     return new CallQueues(this, groupId);
   }
 
-  public phoneNumber(phoneNumberId: (string | null) = null): PhoneNumber {
+  public phoneNumber(phoneNumberId: string | null = null): PhoneNumber {
     return new PhoneNumber(this, phoneNumberId);
   }
 
@@ -150,7 +150,7 @@ class Index {
     return new ActiveCalls(this);
   }
 
-  public customFields(fieldId: (string | null) = null): CustomFields {
+  public customFields(fieldId: string | null = null): CustomFields {
     return new CustomFields(this, fieldId);
   }
 
@@ -162,7 +162,7 @@ class Index {
     return new AssignedRole(this);
   }
 
-  public answeringRule(ruleId: (string | null) = null): AnsweringRule {
+  public answeringRule(ruleId: string | null = null): AnsweringRule {
     return new AnsweringRule(this, ruleId);
   }
 
@@ -182,15 +182,15 @@ class Index {
     return new ForwardAllCalls(this);
   }
 
-  public pagingOnlyGroups(pagingOnlyGroupId: (string | null) = null): PagingOnlyGroups {
+  public pagingOnlyGroups(pagingOnlyGroupId: string | null = null): PagingOnlyGroups {
     return new PagingOnlyGroups(this, pagingOnlyGroupId);
   }
 
-  public emergencyLocations(locationId: (string | null) = null): EmergencyLocations {
+  public emergencyLocations(locationId: string | null = null): EmergencyLocations {
     return new EmergencyLocations(this, locationId);
   }
 
-  public messageStoreReport(taskId: (string | null) = null): MessageStoreReport {
+  public messageStoreReport(taskId: string | null = null): MessageStoreReport {
     return new MessageStoreReport(this, taskId);
   }
 
@@ -198,7 +198,7 @@ class Index {
     return new ExtensionBulkUpdate(this);
   }
 
-  public callMonitoringGroups(groupId: (string | null) = null): CallMonitoringGroups {
+  public callMonitoringGroups(groupId: string | null = null): CallMonitoringGroups {
     return new CallMonitoringGroups(this, groupId);
   }
 

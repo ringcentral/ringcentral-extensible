@@ -1,10 +1,10 @@
-import Host from './Host';
-import Participant from './Participant';
-import Recording from './Recording';
+import type Host from './Host';
+import type Participant from './Participant';
+import type Recording from './Recording';
 
 /**
  * Meeting information
-*/
+ */
 interface Meeting {
   /**
    * call id
@@ -48,13 +48,13 @@ interface Meeting {
    * meeting type
    * Required
    */
-  type?: ('Meeting' | 'Call');
+  type?: 'Meeting' | 'Call';
 
   /**
    * meeting status
    * Required
    */
-  status?: ('InProgress' | 'Done');
+  status?: 'InProgress' | 'Done';
 
   /**
    * Required

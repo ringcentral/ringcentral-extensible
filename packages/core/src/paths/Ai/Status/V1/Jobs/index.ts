@@ -1,5 +1,5 @@
-import JobStatusResponse from '../../../../../definitions/JobStatusResponse';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import type JobStatusResponse from '../../../../../definitions/JobStatusResponse';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
   public rc: RingCentralInterface;

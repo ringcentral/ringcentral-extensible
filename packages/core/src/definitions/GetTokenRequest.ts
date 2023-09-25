@@ -12,10 +12,10 @@ interface GetTokenRequest {
 
   /**
    * For `password` grant type only. Optional. Extension short number. If company number
- *  is specified as a username, and extension is not specified, the
- *  server will attempt to authenticate client as main company administrator
- *
- *  DEPRECATED: use extension number embedded into username string like `+16501234567*101`
+   *  is specified as a username, and extension is not specified, the
+   *  server will attempt to authenticate client as main company administrator
+   *
+   *  DEPRECATED: use extension number embedded into username string like `+16501234567*101`
    */
   extension?: string;
 
@@ -23,7 +23,19 @@ interface GetTokenRequest {
    * Grant type
    * Required
    */
-  grant_type?: ('authorization_code' | 'password' | 'refresh_token' | 'client_credentials' | 'urn:ietf:params:oauth:grant-type:jwt-bearer' | 'urn:ietf:params:oauth:grant-type:device_code' | 'device_certificate' | 'partner_jwt' | 'guest' | 'personal_jwt' | 'otp' | 'ivr_pin');
+  grant_type?:
+    | 'authorization_code'
+    | 'password'
+    | 'refresh_token'
+    | 'client_credentials'
+    | 'urn:ietf:params:oauth:grant-type:jwt-bearer'
+    | 'urn:ietf:params:oauth:grant-type:device_code'
+    | 'device_certificate'
+    | 'partner_jwt'
+    | 'guest'
+    | 'personal_jwt'
+    | 'otp'
+    | 'ivr_pin';
 
   /**
    * For `authorization_code` grant type only. User's authorization code
@@ -32,8 +44,8 @@ interface GetTokenRequest {
 
   /**
    * For `authorization_code` grant type only. This is a callback URI which determines where the response
- *  is sent. The value of this parameter must exactly match one of
- *  the URIs you have provided for your app upon registration
+   *  is sent. The value of this parameter must exactly match one of
+   *  the URIs you have provided for your app upon registration
    * Format: uri
    */
   redirect_uri?: string;
@@ -57,8 +69,8 @@ interface GetTokenRequest {
 
   /**
    * List of application permissions to be used with access token.
- *  By default the scope includes all permissions configured during
- *  the application registration phase
+   *  By default the scope includes all permissions configured during
+   *  the application registration phase
    */
   scope?: string;
 
@@ -69,7 +81,7 @@ interface GetTokenRequest {
 
   /**
    * The unique identifier of a client application instance. If not
- *  specified, the derived or auto generated value will be used
+   *  specified, the derived or auto generated value will be used
    */
   endpoint_id?: string;
 

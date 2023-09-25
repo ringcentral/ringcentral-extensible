@@ -1,6 +1,6 @@
-import NetworkInfo from './NetworkInfo';
-import PageNavigationModel from './PageNavigationModel';
-import EnumeratedPagingModel from './EnumeratedPagingModel';
+import type NetworkInfo from './NetworkInfo';
+import type PageNavigationModel from './PageNavigationModel';
+import type EnumeratedPagingModel from './EnumeratedPagingModel';
 
 interface NetworksList {
   /**

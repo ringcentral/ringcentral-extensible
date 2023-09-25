@@ -1,7 +1,7 @@
-import CountryInfoDictionaryModel from '../../../../definitions/CountryInfoDictionaryModel';
-import CountryListDictionaryModel from '../../../../definitions/CountryListDictionaryModel';
-import ListCountriesParameters from '../../../../definitions/ListCountriesParameters';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
+import type CountryInfoDictionaryModel from '../../../../definitions/CountryInfoDictionaryModel';
+import type CountryListDictionaryModel from '../../../../definitions/CountryListDictionaryModel';
+import type ListCountriesParameters from '../../../../definitions/ListCountriesParameters';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -25,19 +25,22 @@ class Index {
 
   /**
    * Returns all countries available for calling.
- *
+   *
    * HTTP Method: get
    * Endpoint: /restapi/{apiVersion}/dictionary/country
    * Rate Limit Group: Light
    */
-  public async list(queryParams?: ListCountriesParameters, restRequestConfig?: RestRequestConfig): Promise<CountryListDictionaryModel> {
+  public async list(
+    queryParams?: ListCountriesParameters,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<CountryListDictionaryModel> {
     const r = await this.rc.get<CountryListDictionaryModel>(this.path(false), queryParams, restRequestConfig);
     return r.data;
   }
 
   /**
    * Returns information on a specific country.
- *
+   *
    * HTTP Method: get
    * Endpoint: /restapi/{apiVersion}/dictionary/country/{countryId}
    * Rate Limit Group: Light

@@ -1,6 +1,6 @@
 /**
  * Query parameters for operation readA2PSMSOptOuts
-*/
+ */
 interface ReadA2PSMSOptOutsParameters {
   /**
    * The sender's phone number in [E.164](https://www.itu.int/rec/T-REC-E.164-201011-I) format for filtering messages. The asterisk value "*" means any number in `from` field
@@ -19,7 +19,7 @@ interface ReadA2PSMSOptOutsParameters {
    * Example: optout
    * Default: optout
    */
-  status?: ('optout' | 'optin' | 'all');
+  status?: 'optout' | 'optin' | 'all';
 
   /**
    * The page token of the page to be retrieved

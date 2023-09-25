@@ -1,5 +1,5 @@
-import EmergencyAddressAutoUpdateSiteInfo from './EmergencyAddressAutoUpdateSiteInfo';
-import EmergencyAddressInfoDefault from './EmergencyAddressInfoDefault';
+import type EmergencyAddressAutoUpdateSiteInfo from './EmergencyAddressAutoUpdateSiteInfo';
+import type EmergencyAddressInfoDefault from './EmergencyAddressInfoDefault';
 
 interface UpdateWirelessPoint {
   /**
@@ -9,8 +9,8 @@ interface UpdateWirelessPoint {
 
   /**
    * Unique 48-bit identifier of wireless access point that follows
- *  MAC address conventions. Mask: XX:XX:XX:XX:XX:XX, where X can be a symbol
- *  in the range of 0-9 or A-F
+   *  MAC address conventions. Mask: XX:XX:XX:XX:XX:XX, where X can be a symbol
+   *  in the range of 0-9 or A-F
    */
   bssid?: string;
 

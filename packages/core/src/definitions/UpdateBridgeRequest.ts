@@ -1,6 +1,6 @@
-import BridgePinsWithoutPstn from './BridgePinsWithoutPstn';
-import BridgeRequestSecurity from './BridgeRequestSecurity';
-import BridgePreferences from './BridgePreferences';
+import type BridgePinsWithoutPstn from './BridgePinsWithoutPstn';
+import type BridgeRequestSecurity from './BridgeRequestSecurity';
+import type BridgePreferences from './BridgePreferences';
 
 interface UpdateBridgeRequest {
   /**

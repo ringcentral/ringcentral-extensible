@@ -1,8 +1,8 @@
-import TMAttachmentInfo from './TMAttachmentInfo';
+import type TMAttachmentInfo from './TMAttachmentInfo';
 
 /**
  * Post data. At least one attribute should be provided (text or attachments)
-*/
+ */
 interface TMCreatePostRequest {
   /**
    * Text of a post. Maximum length is 10000 symbols. Mentions can be added in .md format `![:Type](id)`

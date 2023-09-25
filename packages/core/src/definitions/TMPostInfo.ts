@@ -1,5 +1,5 @@
-import TMMessageAttachmentInfo from './TMMessageAttachmentInfo';
-import TMMentionsInfo from './TMMentionsInfo';
+import type TMMessageAttachmentInfo from './TMMessageAttachmentInfo';
+import type TMMentionsInfo from './TMMentionsInfo';
 
 interface TMPostInfo {
   /**
@@ -15,7 +15,7 @@ interface TMPostInfo {
   /**
    * Type of a post
    */
-  type?: ('TextMessage' | 'PersonJoined' | 'PersonsAdded');
+  type?: 'TextMessage' | 'PersonJoined' | 'PersonsAdded';
 
   /**
    * For 'TextMessage' post type only. Text of a message

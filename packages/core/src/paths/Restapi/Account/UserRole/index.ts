@@ -1,10 +1,10 @@
 import BulkAssign from './BulkAssign';
 import Default from './Default';
-import DeleteCustomRoleParameters from '../../../../definitions/DeleteCustomRoleParameters';
-import RoleResource from '../../../../definitions/RoleResource';
-import RolesCollectionResource from '../../../../definitions/RolesCollectionResource';
-import ListUserRolesParameters from '../../../../definitions/ListUserRolesParameters';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
+import type DeleteCustomRoleParameters from '../../../../definitions/DeleteCustomRoleParameters';
+import type RoleResource from '../../../../definitions/RoleResource';
+import type RolesCollectionResource from '../../../../definitions/RolesCollectionResource';
+import type ListUserRolesParameters from '../../../../definitions/ListUserRolesParameters';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -34,7 +34,10 @@ class Index {
    * App Permission: ReadAccounts
    * User Permission: ReadUserRoles
    */
-  public async list(queryParams?: ListUserRolesParameters, restRequestConfig?: RestRequestConfig): Promise<RolesCollectionResource> {
+  public async list(
+    queryParams?: ListUserRolesParameters,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<RolesCollectionResource> {
     const r = await this.rc.get<RolesCollectionResource>(this.path(false), queryParams, restRequestConfig);
     return r.data;
   }
@@ -92,7 +95,10 @@ class Index {
    * App Permission: RoleManagement
    * User Permission: EditUserRoles
    */
-  public async delete(queryParams?: DeleteCustomRoleParameters, restRequestConfig?: RestRequestConfig): Promise<string> {
+  public async delete(
+    queryParams?: DeleteCustomRoleParameters,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<string> {
     if (this.roleId === null) {
       throw new Error('roleId must be specified.');
     }

@@ -27,7 +27,7 @@ interface ForwardingNumberResource {
   /**
    * Forwarding phone number type
    */
-  type?: ('Home' | 'Mobile' | 'Work' | 'PhoneLine' | 'Outage' | 'Other');
+  type?: 'Home' | 'Mobile' | 'Work' | 'PhoneLine' | 'Outage' | 'Other';
 }
 
 export default ForwardingNumberResource;

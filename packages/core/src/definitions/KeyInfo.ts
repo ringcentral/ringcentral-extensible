@@ -1,6 +1,6 @@
 /**
  * Additional info about the key
-*/
+ */
 interface KeyInfo {
   /**
    * Extension's number

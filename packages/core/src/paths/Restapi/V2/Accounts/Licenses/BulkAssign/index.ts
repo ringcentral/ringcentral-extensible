@@ -1,6 +1,6 @@
-import BulkManageLicensesResponse from '../../../../../../definitions/BulkManageLicensesResponse';
-import BulkManageLicensesRequest from '../../../../../../definitions/BulkManageLicensesRequest';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../types';
+import type BulkManageLicensesResponse from '../../../../../../definitions/BulkManageLicensesResponse';
+import type BulkManageLicensesRequest from '../../../../../../definitions/BulkManageLicensesRequest';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -23,8 +23,16 @@ class Index {
    * Rate Limit Group: Heavy
    * App Permission: EditAccounts
    */
-  public async post(bulkManageLicensesRequest: BulkManageLicensesRequest, restRequestConfig?: RestRequestConfig): Promise<BulkManageLicensesResponse> {
-    const r = await this.rc.post<BulkManageLicensesResponse>(this.path(), bulkManageLicensesRequest, undefined, restRequestConfig);
+  public async post(
+    bulkManageLicensesRequest: BulkManageLicensesRequest,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<BulkManageLicensesResponse> {
+    const r = await this.rc.post<BulkManageLicensesResponse>(
+      this.path(),
+      bulkManageLicensesRequest,
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

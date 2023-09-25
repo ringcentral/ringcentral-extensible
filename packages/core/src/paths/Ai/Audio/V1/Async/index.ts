@@ -1,7 +1,7 @@
 import SpeakerIdentify from './SpeakerIdentify';
 import SpeakerDiarize from './SpeakerDiarize';
 import SpeechToText from './SpeechToText';
-import { RingCentralInterface, ParentInterface } from '../../../../../types';
+import type { RingCentralInterface, ParentInterface } from '../../../../../types';
 
 class Index {
   public rc: RingCentralInterface;

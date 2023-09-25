@@ -1,10 +1,10 @@
-import CallRecordingCustomGreetingData from './CallRecordingCustomGreetingData';
-import CallRecordingCustomGreetingLanguage from './CallRecordingCustomGreetingLanguage';
+import type CallRecordingCustomGreetingData from './CallRecordingCustomGreetingData';
+import type CallRecordingCustomGreetingLanguage from './CallRecordingCustomGreetingLanguage';
 
 interface CallRecordingCustomGreeting {
   /**
    */
-  type?: ('StartRecording' | 'StopRecording' | 'AutomaticRecording');
+  type?: 'StartRecording' | 'StopRecording' | 'AutomaticRecording';
 
   /**
    */

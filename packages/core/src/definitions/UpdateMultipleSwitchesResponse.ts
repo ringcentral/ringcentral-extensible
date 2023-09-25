@@ -1,4 +1,4 @@
-import BulkTaskInfo from './BulkTaskInfo';
+import type BulkTaskInfo from './BulkTaskInfo';
 
 interface UpdateMultipleSwitchesResponse {
   /**

@@ -1,13 +1,13 @@
-import ScheduleInfo from './ScheduleInfo';
-import CalledNumberInfo from './CalledNumberInfo';
-import CallersInfo from './CallersInfo';
-import ForwardingInfo from './ForwardingInfo';
-import UnconditionalForwardingInfo from './UnconditionalForwardingInfo';
-import QueueInfo from './QueueInfo';
-import TransferredExtensionInfo from './TransferredExtensionInfo';
-import VoicemailInfo from './VoicemailInfo';
-import GreetingInfo from './GreetingInfo';
-import SharedLinesInfo from './SharedLinesInfo';
+import type ScheduleInfo from './ScheduleInfo';
+import type CalledNumberInfo from './CalledNumberInfo';
+import type CallersInfo from './CallersInfo';
+import type ForwardingInfo from './ForwardingInfo';
+import type UnconditionalForwardingInfo from './UnconditionalForwardingInfo';
+import type QueueInfo from './QueueInfo';
+import type TransferredExtensionInfo from './TransferredExtensionInfo';
+import type VoicemailInfo from './VoicemailInfo';
+import type GreetingInfo from './GreetingInfo';
+import type SharedLinesInfo from './SharedLinesInfo';
 
 interface CustomAnsweringRuleInfo {
   /**
@@ -24,7 +24,7 @@ interface CustomAnsweringRuleInfo {
   /**
    * Type of an answering rule
    */
-  type?: ('BusinessHours' | 'AfterHours' | 'Custom');
+  type?: 'BusinessHours' | 'AfterHours' | 'Custom';
 
   /**
    * Name of an answering rule specified by user
@@ -53,7 +53,14 @@ interface CustomAnsweringRuleInfo {
   /**
    * Specifies how incoming calls are forwarded
    */
-  callHandlingAction?: ('ForwardCalls' | 'UnconditionalForwarding' | 'AgentQueue' | 'TransferToExtension' | 'TakeMessagesOnly' | 'PlayAnnouncementOnly' | 'SharedLines');
+  callHandlingAction?:
+    | 'ForwardCalls'
+    | 'UnconditionalForwarding'
+    | 'AgentQueue'
+    | 'TransferToExtension'
+    | 'TakeMessagesOnly'
+    | 'PlayAnnouncementOnly'
+    | 'SharedLines';
 
   /**
    */
@@ -84,7 +91,7 @@ interface CustomAnsweringRuleInfo {
    * Call screening status. 'Off' - no call screening; 'NoCallerId' - if caller ID is missing, then callers are asked to say their name before connecting; 'UnknownCallerId' - if caller ID is not in contact list, then callers are asked to say their name before connecting; 'Always' - the callers are always asked to say their name before connecting. The default value is 'Off'
    * Default: Off
    */
-  screening?: ('Off' | 'NoCallerId' | 'UnknownCallerId' | 'Always');
+  screening?: 'Off' | 'NoCallerId' | 'UnknownCallerId' | 'Always';
 
   /**
    */

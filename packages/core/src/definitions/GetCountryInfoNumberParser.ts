@@ -12,7 +12,7 @@ interface GetCountryInfoNumberParser {
 
   /**
    * Country calling code defined by ITU-T recommendations `E.123`
- *  and `E.164`, see Calling Codes
+   *  and `E.164`, see Calling Codes
    * Example: 1
    */
   callingCode?: string;

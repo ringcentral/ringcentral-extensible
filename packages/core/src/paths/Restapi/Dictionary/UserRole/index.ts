@@ -1,7 +1,7 @@
-import RoleResource from '../../../../definitions/RoleResource';
-import RolesCollectionResource from '../../../../definitions/RolesCollectionResource';
-import ListStandardUserRoleParameters from '../../../../definitions/ListStandardUserRoleParameters';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
+import type RoleResource from '../../../../definitions/RoleResource';
+import type RolesCollectionResource from '../../../../definitions/RolesCollectionResource';
+import type ListStandardUserRoleParameters from '../../../../definitions/ListStandardUserRoleParameters';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -29,7 +29,10 @@ class Index {
    * Endpoint: /restapi/{apiVersion}/dictionary/user-role
    * Rate Limit Group: Light
    */
-  public async list(queryParams?: ListStandardUserRoleParameters, restRequestConfig?: RestRequestConfig): Promise<RolesCollectionResource> {
+  public async list(
+    queryParams?: ListStandardUserRoleParameters,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<RolesCollectionResource> {
     const r = await this.rc.get<RolesCollectionResource>(this.path(false), queryParams, restRequestConfig);
     return r.data;
   }

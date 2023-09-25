@@ -1,11 +1,11 @@
-import ExtensionFilters from './ExtensionFilters';
-import CallSegmentFilter from './CallSegmentFilter';
-import CallDurationFilter from './CallDurationFilter';
-import TimeSpentFilter from './TimeSpentFilter';
+import type ExtensionFilters from './ExtensionFilters';
+import type CallSegmentFilter from './CallSegmentFilter';
+import type CallDurationFilter from './CallDurationFilter';
+import type TimeSpentFilter from './TimeSpentFilter';
 
 /**
  * Optional filters that limit the scope of calls (joined via AND)
-*/
+ */
 interface CallFilters {
   /**
    */

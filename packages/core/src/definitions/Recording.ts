@@ -1,8 +1,8 @@
-import JsValue from './JsValue';
+import type JsValue from './JsValue';
 
 /**
  * Recording information
-*/
+ */
 interface Recording {
   /**
    * recording id
@@ -27,13 +27,13 @@ interface Recording {
   /**
    * recording status
    */
-  status?: ('Processing' | 'Processed' | 'Error' | 'Corrupted' | 'InProgress');
+  status?: 'Processing' | 'Processed' | 'Error' | 'Corrupted' | 'InProgress';
 
   /**
    * availability status
    * Required
    */
-  availabilityStatus?: ('Alive' | 'Deleted' | 'Purged' | 'NotAvailable');
+  availabilityStatus?: 'Alive' | 'Deleted' | 'Purged' | 'NotAvailable';
 }
 
 export default Recording;

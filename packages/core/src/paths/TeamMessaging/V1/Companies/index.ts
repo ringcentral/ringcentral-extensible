@@ -1,5 +1,5 @@
-import TMCompanyInfo from '../../../../definitions/TMCompanyInfo';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
+import type TMCompanyInfo from '../../../../definitions/TMCompanyInfo';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
 
 class Index {
   public rc: RingCentralInterface;

@@ -1,15 +1,15 @@
-import BillingPlanInfo from './BillingPlanInfo';
-import BrandInfo from './BrandInfo';
-import ServicePlanInfo from './ServicePlanInfo';
-import TargetServicePlanInfo from './TargetServicePlanInfo';
-import CountryInfoShortModel from './CountryInfoShortModel';
-import UBrandInfo from './UBrandInfo';
+import type BillingPlanInfo from './BillingPlanInfo';
+import type BrandInfo from './BrandInfo';
+import type ServicePlanInfo from './ServicePlanInfo';
+import type TargetServicePlanInfo from './TargetServicePlanInfo';
+import type CountryInfoShortModel from './CountryInfoShortModel';
+import type UBrandInfo from './UBrandInfo';
 
 /**
  * Account service information, including brand, sub-brand, service plan and
  * billing plan
  *
-*/
+ */
 interface ServiceInfo {
   /**
    * Canonical URI of a service info resource

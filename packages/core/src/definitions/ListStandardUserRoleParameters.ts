@@ -1,6 +1,6 @@
 /**
  * Query parameters for operation listStandardUserRole
-*/
+ */
 interface ListStandardUserRoleParameters {
   /**
    * Internal identifier of a service plan.
@@ -19,7 +19,7 @@ interface ListStandardUserRoleParameters {
 
   /**
    * The number of items per page. If provided value in the request
- *  is greater than a maximum, the maximum value is applied
+   *  is greater than a maximum, the maximum value is applied
    * Maximum: 1000
    * Minimum: 1
    * Format: int32

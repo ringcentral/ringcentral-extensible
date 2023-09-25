@@ -2,7 +2,7 @@
  * Status information (reason, comment). Returned for 'Disabled'
  * status only
  *
-*/
+ */
 interface ExtensionStatusInfo {
   /**
    * A free-form user comment, describing the status change reason
@@ -12,7 +12,7 @@ interface ExtensionStatusInfo {
   /**
    * Type of suspension
    */
-  reason?: ('Voluntarily' | 'Involuntarily' | 'SuspendedVoluntarily');
+  reason?: 'Voluntarily' | 'Involuntarily' | 'SuspendedVoluntarily';
 }
 
 export default ExtensionStatusInfo;

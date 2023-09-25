@@ -1,4 +1,4 @@
-import DeleteDeviceFromInventoryRequestRecords from './DeleteDeviceFromInventoryRequestRecords';
+import type DeleteDeviceFromInventoryRequestRecords from './DeleteDeviceFromInventoryRequestRecords';
 
 interface DeleteDeviceFromInventoryRequest {
   /**

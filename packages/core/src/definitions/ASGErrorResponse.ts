@@ -1,6 +1,6 @@
 /**
  * Error response
-*/
+ */
 interface ASGErrorResponse {
   /**
    * Error code

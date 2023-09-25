@@ -1,8 +1,8 @@
 import CustomGreetings from './CustomGreetings';
 import BulkAssign from './BulkAssign';
 import Extensions from './Extensions';
-import CallRecordingSettingsResource from '../../../../definitions/CallRecordingSettingsResource';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
+import type CallRecordingSettingsResource from '../../../../definitions/CallRecordingSettingsResource';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -39,8 +39,16 @@ class Index {
    * App Permission: EditAccounts
    * User Permission: EditCompanyInfo
    */
-  public async put(callRecordingSettingsResource: CallRecordingSettingsResource, restRequestConfig?: RestRequestConfig): Promise<CallRecordingSettingsResource> {
-    const r = await this.rc.put<CallRecordingSettingsResource>(this.path(), callRecordingSettingsResource, undefined, restRequestConfig);
+  public async put(
+    callRecordingSettingsResource: CallRecordingSettingsResource,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<CallRecordingSettingsResource> {
+    const r = await this.rc.put<CallRecordingSettingsResource>(
+      this.path(),
+      callRecordingSettingsResource,
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -52,7 +60,7 @@ class Index {
     return new BulkAssign(this);
   }
 
-  public customGreetings(greetingId: (string | null) = null): CustomGreetings {
+  public customGreetings(greetingId: string | null = null): CustomGreetings {
     return new CustomGreetings(this, greetingId);
   }
 }

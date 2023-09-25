@@ -1,8 +1,8 @@
-import CountryInfoShortModel from './CountryInfoShortModel';
+import type CountryInfoShortModel from './CountryInfoShortModel';
 
 /**
  * Information on account brand
-*/
+ */
 interface BrandInfo {
   /**
    * Internal identifier of a brand

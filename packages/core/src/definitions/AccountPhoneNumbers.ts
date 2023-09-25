@@ -1,6 +1,6 @@
-import CompanyPhoneNumberInfo from './CompanyPhoneNumberInfo';
-import PageNavigationModel from './PageNavigationModel';
-import EnumeratedPagingModel from './EnumeratedPagingModel';
+import type CompanyPhoneNumberInfo from './CompanyPhoneNumberInfo';
+import type PageNavigationModel from './PageNavigationModel';
+import type EnumeratedPagingModel from './EnumeratedPagingModel';
 
 interface AccountPhoneNumbers {
   /**

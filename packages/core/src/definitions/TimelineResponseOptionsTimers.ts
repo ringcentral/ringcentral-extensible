@@ -1,6 +1,6 @@
 /**
  * Options for selecting breakdown for calls duration
-*/
+ */
 interface TimelineResponseOptionsTimers {
   /**
    * Include data for all calls duration

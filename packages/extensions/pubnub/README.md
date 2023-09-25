@@ -2,13 +2,11 @@
 
 PubNub Extension adds PubNub notifications feature.
 
-
 ## Install
 
 ```
 yarn add @rc-ex/pubnub
 ```
-
 
 ## Usage
 

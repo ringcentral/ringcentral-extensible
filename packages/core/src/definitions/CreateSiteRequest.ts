@@ -1,6 +1,6 @@
-import ContactBusinessAddressInfo from './ContactBusinessAddressInfo';
-import RegionalSettings from './RegionalSettings';
-import SiteOperatorReference from './SiteOperatorReference';
+import type ContactBusinessAddressInfo from './ContactBusinessAddressInfo';
+import type RegionalSettings from './RegionalSettings';
+import type SiteOperatorReference from './SiteOperatorReference';
 
 interface CreateSiteRequest {
   /**
@@ -15,7 +15,7 @@ interface CreateSiteRequest {
 
   /**
    * Custom name of a caller. Max number of characters is 15 (only
- *  alphabetical symbols, numbers and commas are supported)
+   *  alphabetical symbols, numbers and commas are supported)
    */
   callerIdName?: string;
 

@@ -14,7 +14,7 @@ import Notes from './Notes';
 import Teams from './Teams';
 import Chats from './Chats';
 import Tasks from './Tasks';
-import { RingCentralInterface, ParentInterface } from '../../../types';
+import type { RingCentralInterface, ParentInterface } from '../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -30,19 +30,19 @@ class Index {
     return `${this._parent.path(false)}/v1`;
   }
 
-  public tasks(taskId: (string | null) = null): Tasks {
+  public tasks(taskId: string | null = null): Tasks {
     return new Tasks(this, taskId);
   }
 
-  public chats(chatId: (string | null) = null): Chats {
+  public chats(chatId: string | null = null): Chats {
     return new Chats(this, chatId);
   }
 
-  public teams(chatId: (string | null) = null): Teams {
+  public teams(chatId: string | null = null): Teams {
     return new Teams(this, chatId);
   }
 
-  public notes(noteId: (string | null) = null): Notes {
+  public notes(noteId: string | null = null): Notes {
     return new Notes(this, noteId);
   }
 
@@ -50,7 +50,7 @@ class Index {
     return new Files(this);
   }
 
-  public groups(groupId: (string | null) = null): Groups {
+  public groups(groupId: string | null = null): Groups {
     return new Groups(this, groupId);
   }
 
@@ -58,15 +58,15 @@ class Index {
     return new Recent(this);
   }
 
-  public events(eventId: (string | null) = null): Events {
+  public events(eventId: string | null = null): Events {
     return new Events(this, eventId);
   }
 
-  public persons(personId: (string | null) = null): Persons {
+  public persons(personId: string | null = null): Persons {
     return new Persons(this, personId);
   }
 
-  public webhooks(webhookId: (string | null) = null): Webhooks {
+  public webhooks(webhookId: string | null = null): Webhooks {
     return new Webhooks(this, webhookId);
   }
 
@@ -74,7 +74,7 @@ class Index {
     return new Everyone(this);
   }
 
-  public companies(companyId: (string | null) = null): Companies {
+  public companies(companyId: string | null = null): Companies {
     return new Companies(this, companyId);
   }
 
@@ -82,15 +82,15 @@ class Index {
     return new Favorites(this);
   }
 
-  public dataExport(taskId: (string | null) = null): DataExport {
+  public dataExport(taskId: string | null = null): DataExport {
     return new DataExport(this, taskId);
   }
 
-  public conversations(chatId: (string | null) = null): Conversations {
+  public conversations(chatId: string | null = null): Conversations {
     return new Conversations(this, chatId);
   }
 
-  public adaptiveCards(cardId: (string | null) = null): AdaptiveCards {
+  public adaptiveCards(cardId: string | null = null): AdaptiveCards {
     return new AdaptiveCards(this, cardId);
   }
 }

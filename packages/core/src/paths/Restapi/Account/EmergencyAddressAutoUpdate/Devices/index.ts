@@ -1,7 +1,7 @@
 import BulkAssign from './BulkAssign';
-import ListDevicesAutomaticLocationUpdates from '../../../../../definitions/ListDevicesAutomaticLocationUpdates';
-import ListDevicesAutomaticLocationUpdatesParameters from '../../../../../definitions/ListDevicesAutomaticLocationUpdatesParameters';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import type ListDevicesAutomaticLocationUpdates from '../../../../../definitions/ListDevicesAutomaticLocationUpdates';
+import type ListDevicesAutomaticLocationUpdatesParameters from '../../../../../definitions/ListDevicesAutomaticLocationUpdatesParameters';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -19,15 +19,18 @@ class Index {
 
   /**
    * Returns a list of common devices with their status of Automatic
- * Location Updates feature.
- *
+   * Location Updates feature.
+   *
    * HTTP Method: get
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/devices
    * Rate Limit Group: Medium
    * App Permission: EditAccounts
    * User Permission: ConfigureEmergencyMaps
    */
-  public async get(queryParams?: ListDevicesAutomaticLocationUpdatesParameters, restRequestConfig?: RestRequestConfig): Promise<ListDevicesAutomaticLocationUpdates> {
+  public async get(
+    queryParams?: ListDevicesAutomaticLocationUpdatesParameters,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<ListDevicesAutomaticLocationUpdates> {
     const r = await this.rc.get<ListDevicesAutomaticLocationUpdates>(this.path(), queryParams, restRequestConfig);
     return r.data;
   }

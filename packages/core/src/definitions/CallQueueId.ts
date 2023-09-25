@@ -1,6 +1,6 @@
 /**
  * Call queue information
-*/
+ */
 interface CallQueueId {
   /**
    * Internal identifier of a call queue

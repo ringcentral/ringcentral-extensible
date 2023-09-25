@@ -1,8 +1,8 @@
-import PageNavigationUri from './PageNavigationUri';
+import type PageNavigationUri from './PageNavigationUri';
 
 /**
  * Links to other pages of the current result set
-*/
+ */
 interface PageNavigationModel {
   /**
    */

@@ -1,7 +1,7 @@
-import CompanyPhoneNumberInfo from '../../../../definitions/CompanyPhoneNumberInfo';
-import AccountPhoneNumbers from '../../../../definitions/AccountPhoneNumbers';
-import ListAccountPhoneNumbersParameters from '../../../../definitions/ListAccountPhoneNumbersParameters';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
+import type CompanyPhoneNumberInfo from '../../../../definitions/CompanyPhoneNumberInfo';
+import type AccountPhoneNumbers from '../../../../definitions/AccountPhoneNumbers';
+import type ListAccountPhoneNumbersParameters from '../../../../definitions/ListAccountPhoneNumbersParameters';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -25,23 +25,26 @@ class Index {
 
   /**
    * Returns the list of phone numbers assigned to RingCentral customer
- * account. Both company-level and extension-level numbers are returned.
- *
+   * account. Both company-level and extension-level numbers are returned.
+   *
    * HTTP Method: get
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/phone-number
    * Rate Limit Group: Heavy
    * App Permission: ReadAccounts
    * User Permission: ReadCompanyPhoneNumbers
    */
-  public async list(queryParams?: ListAccountPhoneNumbersParameters, restRequestConfig?: RestRequestConfig): Promise<AccountPhoneNumbers> {
+  public async list(
+    queryParams?: ListAccountPhoneNumbersParameters,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<AccountPhoneNumbers> {
     const r = await this.rc.get<AccountPhoneNumbers>(this.path(false), queryParams, restRequestConfig);
     return r.data;
   }
 
   /**
    * Returns phone number(s) belonging to a certain account or extension
- * by phoneNumberId(s). Batch request is supported.
- *
+   * by phoneNumberId(s). Batch request is supported.
+   *
    * HTTP Method: get
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/phone-number/{phoneNumberId}
    * Rate Limit Group: Light

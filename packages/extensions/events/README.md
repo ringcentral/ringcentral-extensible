@@ -2,13 +2,11 @@
 
 This extension emits API call related events.
 
-
 ## Install
 
 ```
 yarn add @rc-ex/events
 ```
-
 
 ## Usage
 
@@ -26,7 +24,6 @@ eventsExtension.eventEmitter.on(Events.requestSuccess, r => {
 ```
 
 For a working sample, please check this [test case](../../../test/events-extension.spec.ts).
-
 
 ## EventsOptions
 

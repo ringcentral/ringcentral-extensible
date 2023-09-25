@@ -1,5 +1,5 @@
-import SessionGlobalListEntry from './SessionGlobalListEntry';
-import RcwPagingModel from './RcwPagingModel';
+import type SessionGlobalListEntry from './SessionGlobalListEntry';
+import type RcwPagingModel from './RcwPagingModel';
 
 interface WcsSessionGlobalListResource {
   /**

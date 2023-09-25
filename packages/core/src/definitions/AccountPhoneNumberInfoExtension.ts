@@ -7,7 +7,7 @@ interface AccountPhoneNumberInfoExtension {
 
   /**
    * Short number of an extension.
- *  Actual max length depends on system length limit for extension.
+   *  Actual max length depends on system length limit for extension.
    * Example: 205
    */
   extensionNumber?: string;

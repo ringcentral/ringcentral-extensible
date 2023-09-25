@@ -1,11 +1,16 @@
 interface PresenceInfoRequest {
   /**
    */
-  userStatus?: ('Offline' | 'Busy' | 'Available');
+  userStatus?: 'Offline' | 'Busy' | 'Available';
 
   /**
    */
-  dndStatus?: ('TakeAllCalls' | 'DoNotAcceptDepartmentCalls' | 'TakeDepartmentCallsOnly' | 'DoNotAcceptAnyCalls' | 'Unknown');
+  dndStatus?:
+    | 'TakeAllCalls'
+    | 'DoNotAcceptDepartmentCalls'
+    | 'TakeDepartmentCallsOnly'
+    | 'DoNotAcceptAnyCalls'
+    | 'Unknown';
 
   /**
    */
@@ -25,9 +30,9 @@ interface PresenceInfoRequest {
 
   /**
    * Configures the user presence visibility. When the `allowSeeMyPresence` parameter is set to 'True',
- *  the following visibility options are supported via this parameter - All, None, PermittedUsers
+   *  the following visibility options are supported via this parameter - All, None, PermittedUsers
    */
-  callerIdVisibility?: ('All' | 'None' | 'PermittedUsers');
+  callerIdVisibility?: 'All' | 'None' | 'PermittedUsers';
 }
 
 export default PresenceInfoRequest;

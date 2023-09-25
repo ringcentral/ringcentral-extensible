@@ -1,6 +1,6 @@
-import AutomaticLocationUpdatesDeviceInfo from './AutomaticLocationUpdatesDeviceInfo';
-import PageNavigationModel from './PageNavigationModel';
-import EnumeratedPagingModel from './EnumeratedPagingModel';
+import type AutomaticLocationUpdatesDeviceInfo from './AutomaticLocationUpdatesDeviceInfo';
+import type PageNavigationModel from './PageNavigationModel';
+import type EnumeratedPagingModel from './EnumeratedPagingModel';
 
 interface ListDevicesAutomaticLocationUpdates {
   /**
@@ -11,7 +11,7 @@ interface ListDevicesAutomaticLocationUpdates {
 
   /**
    * List of the user(s) devices with the current status of Emergency
- *  Address Auto Update Feature
+   *  Address Auto Update Feature
    */
   records?: AutomaticLocationUpdatesDeviceInfo[];
 

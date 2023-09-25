@@ -3,7 +3,7 @@ interface EnrollmentStatus {
    * Quality of the enrollment.
    * Example: Average
    */
-  enrollmentQuality?: ('Poor' | 'Average' | 'Good' | 'High');
+  enrollmentQuality?: 'Poor' | 'Average' | 'Good' | 'High';
 
   /**
    * Status of the enrollment.

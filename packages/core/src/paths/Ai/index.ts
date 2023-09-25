@@ -2,7 +2,7 @@ import Insights from './Insights';
 import Status from './Status';
 import Audio from './Audio';
 import Text from './Text';
-import { RingCentralInterface } from '../../types';
+import type { RingCentralInterface } from '../../types';
 
 class Index {
   public rc: RingCentralInterface;

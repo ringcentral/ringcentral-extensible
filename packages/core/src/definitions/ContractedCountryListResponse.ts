@@ -1,4 +1,4 @@
-import ContractedCountryListResponseRecords from './ContractedCountryListResponseRecords';
+import type ContractedCountryListResponseRecords from './ContractedCountryListResponseRecords';
 
 interface ContractedCountryListResponse {
   /**

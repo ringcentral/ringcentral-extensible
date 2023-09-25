@@ -1,5 +1,5 @@
-import DetailedCallInfo from './DetailedCallInfo';
-import CallInfoCQ from './CallInfoCQ';
+import type DetailedCallInfo from './DetailedCallInfo';
+import type CallInfoCQ from './CallInfoCQ';
 
 interface ActiveCallInfo {
   /**
@@ -8,7 +8,7 @@ interface ActiveCallInfo {
 
   /**
    */
-  direction?: ('Inbound' | 'Outbound');
+  direction?: 'Inbound' | 'Outbound';
 
   /**
    * Identifies if a call belongs to the call queue
@@ -44,7 +44,7 @@ interface ActiveCallInfo {
   /**
    * Telephony presence status
    */
-  telephonyStatus?: ('NoCall' | 'CallConnected' | 'Ringing' | 'OnHold' | 'ParkedCall');
+  telephonyStatus?: 'NoCall' | 'CallConnected' | 'Ringing' | 'OnHold' | 'ParkedCall';
 
   /**
    */

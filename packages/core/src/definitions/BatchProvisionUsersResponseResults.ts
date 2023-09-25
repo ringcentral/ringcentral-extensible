@@ -1,5 +1,5 @@
-import BatchProvisionUsersResponseResultsExtension from './BatchProvisionUsersResponseResultsExtension';
-import ApiErrorWithParameter from './ApiErrorWithParameter';
+import type BatchProvisionUsersResponseResultsExtension from './BatchProvisionUsersResponseResultsExtension';
+import type ApiErrorWithParameter from './ApiErrorWithParameter';
 
 interface BatchProvisionUsersResponseResults {
   /**

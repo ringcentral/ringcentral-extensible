@@ -1,8 +1,8 @@
-import ExtensionCountryInfoRequest from './ExtensionCountryInfoRequest';
-import ExtensionTimezoneInfoRequest from './ExtensionTimezoneInfoRequest';
-import ExtensionLanguageInfoRequest from './ExtensionLanguageInfoRequest';
-import ExtensionGreetingLanguageInfoRequest from './ExtensionGreetingLanguageInfoRequest';
-import ExtensionFormattingLocaleInfoRequest from './ExtensionFormattingLocaleInfoRequest';
+import type ExtensionCountryInfoRequest from './ExtensionCountryInfoRequest';
+import type ExtensionTimezoneInfoRequest from './ExtensionTimezoneInfoRequest';
+import type ExtensionLanguageInfoRequest from './ExtensionLanguageInfoRequest';
+import type ExtensionGreetingLanguageInfoRequest from './ExtensionGreetingLanguageInfoRequest';
+import type ExtensionFormattingLocaleInfoRequest from './ExtensionFormattingLocaleInfoRequest';
 
 interface ExtensionRegionalSettingRequest {
   /**
@@ -29,7 +29,7 @@ interface ExtensionRegionalSettingRequest {
    * Time format setting
    * Default: 12h
    */
-  timeFormat?: ('12h' | '24h');
+  timeFormat?: '12h' | '24h';
 }
 
 export default ExtensionRegionalSettingRequest;

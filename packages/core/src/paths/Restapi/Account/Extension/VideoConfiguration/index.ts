@@ -1,5 +1,5 @@
-import UserVideoConfiguration from '../../../../../definitions/UserVideoConfiguration';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import type UserVideoConfiguration from '../../../../../definitions/UserVideoConfiguration';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -17,7 +17,7 @@ class Index {
 
   /**
    * Returns information about video configuration settings of the current user.
- *
+   *
    * HTTP Method: get
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/video-configuration
    * Rate Limit Group: Light

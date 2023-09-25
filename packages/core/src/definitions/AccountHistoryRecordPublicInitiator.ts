@@ -1,6 +1,6 @@
 /**
  * Event initiator info
-*/
+ */
 interface AccountHistoryRecordPublicInitiator {
   /**
    * Current user extension identifier

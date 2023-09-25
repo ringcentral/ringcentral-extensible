@@ -5,7 +5,7 @@
  * must be confirmed by the user before being registered as emergency address
  * for the current device. In all other cases the value is null
  *
-*/
+ */
 interface DeviceEmergencyAddressDefault {
   /**
    * Name of a customer
@@ -74,10 +74,10 @@ interface DeviceEmergencyAddressDefault {
 
   /**
    * Resulting status of emergency address synchronization. Returned
- *  for 'Get Device Info' request if `syncEmergencyAddress` parameter is set
- *  to 'True'
+   *  for 'Get Device Info' request if `syncEmergencyAddress` parameter is set
+   *  to 'True'
    */
-  syncStatus?: ('Verified' | 'Updated' | 'Deleted' | 'NotRequired' | 'Unsupported' | 'Failed');
+  syncStatus?: 'Verified' | 'Updated' | 'Deleted' | 'NotRequired' | 'Unsupported' | 'Failed';
 }
 
 export default DeviceEmergencyAddressDefault;

@@ -1,7 +1,7 @@
-import CaiAsyncApiResponse from '../../../../../../definitions/CaiAsyncApiResponse';
-import CaiSpeechToTextParameters from '../../../../../../definitions/CaiSpeechToTextParameters';
-import AsrInput from '../../../../../../definitions/AsrInput';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../types';
+import type CaiAsyncApiResponse from '../../../../../../definitions/CaiAsyncApiResponse';
+import type CaiSpeechToTextParameters from '../../../../../../definitions/CaiSpeechToTextParameters';
+import type AsrInput from '../../../../../../definitions/AsrInput';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -24,7 +24,11 @@ class Index {
    * Rate Limit Group: Heavy
    * App Permission: AI
    */
-  public async post(asrInput: AsrInput, queryParams?: CaiSpeechToTextParameters, restRequestConfig?: RestRequestConfig): Promise<CaiAsyncApiResponse> {
+  public async post(
+    asrInput: AsrInput,
+    queryParams?: CaiSpeechToTextParameters,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<CaiAsyncApiResponse> {
     const r = await this.rc.post<CaiAsyncApiResponse>(this.path(), asrInput, queryParams, restRequestConfig);
     return r.data;
   }

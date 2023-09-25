@@ -1,5 +1,5 @@
 import V1 from './V1';
-import { RingCentralInterface } from '../../types';
+import type { RingCentralInterface } from '../../types';
 
 class Index {
   public rc: RingCentralInterface;

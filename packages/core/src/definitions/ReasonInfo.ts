@@ -2,12 +2,18 @@
  * Reason for the feature unavailability. Returned only if `available`
  * is set to 'False'
  *
-*/
+ */
 interface ReasonInfo {
   /**
    * Reason code
    */
-  code?: ('ServicePlanLimitation' | 'AccountLimitation' | 'ExtensionTypeLimitation' | 'ExtensionLimitation' | 'InsufficientPermissions' | 'ConfigurationLimitation');
+  code?:
+    | 'ServicePlanLimitation'
+    | 'AccountLimitation'
+    | 'ExtensionTypeLimitation'
+    | 'ExtensionLimitation'
+    | 'InsufficientPermissions'
+    | 'ConfigurationLimitation';
 
   /**
    * Reason description

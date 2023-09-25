@@ -43,7 +43,7 @@ interface SipInfoResponse {
   /**
    * Preferred transport. SIP info will be returned for this transport if supported
    */
-  transport?: ('UDP' | 'TCP' | 'TLS' | 'WSS');
+  transport?: 'UDP' | 'TCP' | 'TLS' | 'WSS';
 
   /**
    * For TLS transport only, Base64 encoded certificate
@@ -52,9 +52,9 @@ interface SipInfoResponse {
 
   /**
    * The interval in seconds after which the app must try to switch
- *  back to primary proxy if it was previously switched to backup. If this
- *  parameter is not returned, the app must stay on backup proxy and try to
- *  switch to primary proxy after the next SIP-provision call.
+   *  back to primary proxy if it was previously switched to backup. If this
+   *  parameter is not returned, the app must stay on backup proxy and try to
+   *  switch to primary proxy after the next SIP-provision call.
    * Format: int32
    */
   switchBackInterval?: number;

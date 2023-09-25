@@ -1,4 +1,4 @@
-import ApiError from './ApiError';
+import type ApiError from './ApiError';
 
 interface DeleteDeviceFromInventoryResponseRecords {
   /**
@@ -13,7 +13,7 @@ interface DeleteDeviceFromInventoryResponseRecords {
 
   /**
    * The list of errors occurred during processing of particular item of bulk operation.
- *  Returned only if `bulkItemSuccessful` is false
+   *  Returned only if `bulkItemSuccessful` is false
    */
   bulkItemErrors?: ApiError[];
 }

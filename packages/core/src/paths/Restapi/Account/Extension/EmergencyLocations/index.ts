@@ -1,9 +1,9 @@
-import DeleteExtensionEmergencyLocationParameters from '../../../../../definitions/DeleteExtensionEmergencyLocationParameters';
-import EmergencyLocationResource from '../../../../../definitions/EmergencyLocationResource';
-import CreateUserEmergencyLocationRequest from '../../../../../definitions/CreateUserEmergencyLocationRequest';
-import EmergencyLocationsResource from '../../../../../definitions/EmergencyLocationsResource';
-import GetExtensionEmergencyLocationsParameters from '../../../../../definitions/GetExtensionEmergencyLocationsParameters';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import type DeleteExtensionEmergencyLocationParameters from '../../../../../definitions/DeleteExtensionEmergencyLocationParameters';
+import type EmergencyLocationResource from '../../../../../definitions/EmergencyLocationResource';
+import type CreateUserEmergencyLocationRequest from '../../../../../definitions/CreateUserEmergencyLocationRequest';
+import type EmergencyLocationsResource from '../../../../../definitions/EmergencyLocationsResource';
+import type GetExtensionEmergencyLocationsParameters from '../../../../../definitions/GetExtensionEmergencyLocationsParameters';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -32,7 +32,10 @@ class Index {
    * Rate Limit Group: Light
    * App Permission: ReadAccounts
    */
-  public async list(queryParams?: GetExtensionEmergencyLocationsParameters, restRequestConfig?: RestRequestConfig): Promise<EmergencyLocationsResource> {
+  public async list(
+    queryParams?: GetExtensionEmergencyLocationsParameters,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<EmergencyLocationsResource> {
     const r = await this.rc.get<EmergencyLocationsResource>(this.path(false), queryParams, restRequestConfig);
     return r.data;
   }
@@ -45,8 +48,16 @@ class Index {
    * App Permission: EditAccounts
    * User Permission: EmergencyFramework
    */
-  public async post(createUserEmergencyLocationRequest: CreateUserEmergencyLocationRequest, restRequestConfig?: RestRequestConfig): Promise<EmergencyLocationResource> {
-    const r = await this.rc.post<EmergencyLocationResource>(this.path(false), createUserEmergencyLocationRequest, undefined, restRequestConfig);
+  public async post(
+    createUserEmergencyLocationRequest: CreateUserEmergencyLocationRequest,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<EmergencyLocationResource> {
+    const r = await this.rc.post<EmergencyLocationResource>(
+      this.path(false),
+      createUserEmergencyLocationRequest,
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -67,33 +78,44 @@ class Index {
 
   /**
    * Updates a personal emergency response location by the current user or admin.
- *
+   *
    * HTTP Method: put
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/emergency-locations/{locationId}
    * Rate Limit Group: Light
    * App Permission: EditAccounts
    * User Permission: EmergencyFramework
    */
-  public async put(emergencyLocationResource: EmergencyLocationResource, restRequestConfig?: RestRequestConfig): Promise<EmergencyLocationResource> {
+  public async put(
+    emergencyLocationResource: EmergencyLocationResource,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<EmergencyLocationResource> {
     if (this.locationId === null) {
       throw new Error('locationId must be specified.');
     }
-    const r = await this.rc.put<EmergencyLocationResource>(this.path(), emergencyLocationResource, undefined, restRequestConfig);
+    const r = await this.rc.put<EmergencyLocationResource>(
+      this.path(),
+      emergencyLocationResource,
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 
   /**
    * Deletes a personal emergency response location by ID by
- * the current user or admin. Multiple personal emergency response
- * locations can be deleted by single API call.
- *
+   * the current user or admin. Multiple personal emergency response
+   * locations can be deleted by single API call.
+   *
    * HTTP Method: delete
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/emergency-locations/{locationId}
    * Rate Limit Group: Heavy
    * App Permission: EditAccounts
    * User Permission: EmergencyFramework
    */
-  public async delete(queryParams?: DeleteExtensionEmergencyLocationParameters, restRequestConfig?: RestRequestConfig): Promise<string> {
+  public async delete(
+    queryParams?: DeleteExtensionEmergencyLocationParameters,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<string> {
     if (this.locationId === null) {
       throw new Error('locationId must be specified.');
     }

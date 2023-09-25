@@ -17,7 +17,7 @@ interface EmotionSegment {
    * Required
    * Example: Neutral
    */
-  emotion?: ('Anger' | 'Excitement' | 'Frustration' | 'Joy' | 'Sadness' | 'Neutral');
+  emotion?: 'Anger' | 'Excitement' | 'Frustration' | 'Joy' | 'Sadness' | 'Neutral';
 
   /**
    * Format: float

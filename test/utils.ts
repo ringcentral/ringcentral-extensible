@@ -1,6 +1,5 @@
 import RingCentral from '@rc-ex/core';
 
-// eslint-disable-next-line import/prefer-default-export
 export const createRingCentral = async (): Promise<RingCentral> => {
   const rc = new RingCentral({
     clientId: process.env.RINGCENTRAL_CLIENT_ID!,

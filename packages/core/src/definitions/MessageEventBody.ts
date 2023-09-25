@@ -1,8 +1,8 @@
-import MessageChanges from './MessageChanges';
+import type MessageChanges from './MessageChanges';
 
 /**
  * Notification payload body
-*/
+ */
 interface MessageEventBody {
   /**
    * Internal identifier of an extension

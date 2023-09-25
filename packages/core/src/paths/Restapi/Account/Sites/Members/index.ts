@@ -1,5 +1,5 @@
-import SiteMembersList from '../../../../../definitions/SiteMembersList';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import type SiteMembersList from '../../../../../definitions/SiteMembersList';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -17,7 +17,7 @@ class Index {
 
   /**
    * Returns members of a site specified in path.
- *
+   *
    * HTTP Method: get
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/sites/{siteId}/members
    * Rate Limit Group: Medium

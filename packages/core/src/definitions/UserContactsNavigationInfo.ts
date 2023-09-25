@@ -1,8 +1,8 @@
-import UserContactsNavigationInfoUri from './UserContactsNavigationInfoUri';
+import type UserContactsNavigationInfoUri from './UserContactsNavigationInfoUri';
 
 /**
  * Information on navigation
-*/
+ */
 interface UserContactsNavigationInfo {
   /**
    */

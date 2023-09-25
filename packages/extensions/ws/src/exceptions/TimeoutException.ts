@@ -1,5 +1,5 @@
 class TimeoutException extends Error {
-  constructor(message?: string) {
+  public constructor(message?: string) {
     super(message ?? 'Failed to receive expected WebSocket message in time.');
   }
 }

@@ -1,4 +1,4 @@
-import WcsWebinarSettingsModel from './WcsWebinarSettingsModel';
+import type WcsWebinarSettingsModel from './WcsWebinarSettingsModel';
 
 interface WebinarBaseModel {
   /**

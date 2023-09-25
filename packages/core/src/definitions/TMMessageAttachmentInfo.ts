@@ -1,6 +1,6 @@
-import TMAttachmentAuthorInfo from './TMAttachmentAuthorInfo';
-import TMAttachmentFieldsInfo from './TMAttachmentFieldsInfo';
-import TMAttachmentFootnoteInfo from './TMAttachmentFootnoteInfo';
+import type TMAttachmentAuthorInfo from './TMAttachmentAuthorInfo';
+import type TMAttachmentFieldsInfo from './TMAttachmentFieldsInfo';
+import type TMAttachmentFootnoteInfo from './TMAttachmentFootnoteInfo';
 
 interface TMMessageAttachmentInfo {
   /**
@@ -12,7 +12,7 @@ interface TMMessageAttachmentInfo {
    * Type of an attachment
    * Default: Card
    */
-  type?: ('Card' | 'Event' | 'File' | 'Note' | 'Task');
+  type?: 'Card' | 'Event' | 'File' | 'Note' | 'Task';
 
   /**
    * A string of default text that will be rendered in the case that the client does not support Interactive Messages
@@ -84,7 +84,7 @@ interface TMMessageAttachmentInfo {
   /**
    * Event recurrence settings.
    */
-  recurrence?: ('None' | 'Day' | 'Weekday' | 'Week' | 'Month' | 'Year');
+  recurrence?: 'None' | 'Day' | 'Weekday' | 'Week' | 'Month' | 'Year';
 
   /**
    * Condition of ending
@@ -101,13 +101,13 @@ interface TMMessageAttachmentInfo {
    * Iterations end datetime for periodic events
    * Default: None
    */
-  endingOn?: ('None' | 'Count' | 'Date');
+  endingOn?: 'None' | 'Count' | 'Date';
 
   /**
    * Color of Event title, including its presentation in Calendar; or the color of the side border of an interactive message of a Card
    * Default: Black
    */
-  color?: ('Black' | 'Red' | 'Orange' | 'Yellow' | 'Green' | 'Blue' | 'Purple' | 'Magenta');
+  color?: 'Black' | 'Red' | 'Orange' | 'Yellow' | 'Green' | 'Blue' | 'Purple' | 'Magenta';
 
   /**
    * Event location

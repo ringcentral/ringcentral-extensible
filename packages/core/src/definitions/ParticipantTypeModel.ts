@@ -4,7 +4,7 @@ interface ParticipantTypeModel {
    * Required
    * Default: User
    */
-  type?: ('User' | 'Room');
+  type?: 'User' | 'Room';
 }
 
 export default ParticipantTypeModel;

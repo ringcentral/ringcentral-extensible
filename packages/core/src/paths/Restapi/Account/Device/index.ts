@@ -1,10 +1,10 @@
 import Emergency from './Emergency';
 import SipInfo from './SipInfo';
-import UpdateDeviceParameters from '../../../../definitions/UpdateDeviceParameters';
-import AccountDeviceUpdate from '../../../../definitions/AccountDeviceUpdate';
-import DeviceResource from '../../../../definitions/DeviceResource';
-import ReadDeviceParameters from '../../../../definitions/ReadDeviceParameters';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
+import type UpdateDeviceParameters from '../../../../definitions/UpdateDeviceParameters';
+import type AccountDeviceUpdate from '../../../../definitions/AccountDeviceUpdate';
+import type DeviceResource from '../../../../definitions/DeviceResource';
+import type ReadDeviceParameters from '../../../../definitions/ReadDeviceParameters';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -50,7 +50,11 @@ class Index {
    * App Permission: EditAccounts
    * User Permission: EditCompanyDevices
    */
-  public async put(accountDeviceUpdate: AccountDeviceUpdate, queryParams?: UpdateDeviceParameters, restRequestConfig?: RestRequestConfig): Promise<DeviceResource> {
+  public async put(
+    accountDeviceUpdate: AccountDeviceUpdate,
+    queryParams?: UpdateDeviceParameters,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<DeviceResource> {
     if (this.deviceId === null) {
       throw new Error('deviceId must be specified.');
     }

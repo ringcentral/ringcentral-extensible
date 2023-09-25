@@ -1,6 +1,6 @@
 /**
  * Query parameters for operation updateDevice
-*/
+ */
 interface UpdateDeviceParameters {
   /**
    */

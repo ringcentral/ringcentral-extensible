@@ -1,6 +1,6 @@
-import PartyInfo from './PartyInfo';
-import OwnerInfo from './OwnerInfo';
-import CallStatusInfo from './CallStatusInfo';
+import type PartyInfo from './PartyInfo';
+import type OwnerInfo from './OwnerInfo';
+import type CallStatusInfo from './CallStatusInfo';
 
 interface PartySuperviseResponse {
   /**
@@ -14,7 +14,7 @@ interface PartySuperviseResponse {
   /**
    * Direction of a call
    */
-  direction?: ('Outbound' | 'Inbound');
+  direction?: 'Outbound' | 'Inbound';
 
   /**
    * Internal identifier of a party that monitors a call

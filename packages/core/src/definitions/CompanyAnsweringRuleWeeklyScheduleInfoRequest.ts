@@ -1,8 +1,8 @@
-import CompanyAnsweringRuleTimeIntervalRequest from './CompanyAnsweringRuleTimeIntervalRequest';
+import type CompanyAnsweringRuleTimeIntervalRequest from './CompanyAnsweringRuleTimeIntervalRequest';
 
 /**
  * Weekly schedule. If specified, ranges cannot be specified
-*/
+ */
 interface CompanyAnsweringRuleWeeklyScheduleInfoRequest {
   /**
    * Time interval for a particular day

@@ -1,4 +1,4 @@
-import ForwardingNumberInfoRulesCreateRuleRequest from './ForwardingNumberInfoRulesCreateRuleRequest';
+import type ForwardingNumberInfoRulesCreateRuleRequest from './ForwardingNumberInfoRulesCreateRuleRequest';
 
 interface ForwardingRuleCreateRequest {
   /**
@@ -9,7 +9,7 @@ interface ForwardingRuleCreateRequest {
 
   /**
    * Number of rings for a forwarding number (or group). For inactive
- *  numbers the default value ('4') is returned
+   *  numbers the default value ('4') is returned
    * Format: int32
    */
   ringCount?: number;

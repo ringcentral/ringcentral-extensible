@@ -1,9 +1,9 @@
-import ContactInfo from './ContactInfo';
-import ExtensionPermissions from './ExtensionPermissions';
-import ProfileImageInfo from './ProfileImageInfo';
-import CallQueueExtensionInfo from './CallQueueExtensionInfo';
-import ProvisioningSiteInfo from './ProvisioningSiteInfo';
-import AssignedCountryInfo from './AssignedCountryInfo';
+import type ContactInfo from './ContactInfo';
+import type ExtensionPermissions from './ExtensionPermissions';
+import type ProfileImageInfo from './ProfileImageInfo';
+import type CallQueueExtensionInfo from './CallQueueExtensionInfo';
+import type ProvisioningSiteInfo from './ProvisioningSiteInfo';
+import type AssignedCountryInfo from './AssignedCountryInfo';
 
 interface GetExtensionListInfoResponse {
   /**
@@ -29,7 +29,7 @@ interface GetExtensionListInfoResponse {
 
   /**
    * Extension name. For user extension types the value is a combination
- *  of the specified first name and last name
+   *  of the specified first name and last name
    */
   name?: string;
 
@@ -43,23 +43,43 @@ interface GetExtensionListInfoResponse {
 
   /**
    * Extension current state. If 'Unassigned' is specified, then
- *  extensions without ‘extensionNumber’ are returned. If not specified,
- *  then all extensions are returned
+   *  extensions without ‘extensionNumber’ are returned. If not specified,
+   *  then all extensions are returned
    */
-  status?: ('Enabled' | 'Disabled' | 'Frozen' | 'NotActivated' | 'Unassigned');
+  status?: 'Enabled' | 'Disabled' | 'Frozen' | 'NotActivated' | 'Unassigned';
 
   /**
    * Extension type. Please note that legacy 'Department' extension type
- *  corresponds to 'Call Queue' extensions in modern RingCentral product
- *  terminology
+   *  corresponds to 'Call Queue' extensions in modern RingCentral product
+   *  terminology
    */
-  type?: ('User' | 'FaxUser' | 'FlexibleUser' | 'VirtualUser' | 'DigitalUser' | 'Department' | 'Announcement' | 'Voicemail' | 'SharedLinesGroup' | 'PagingOnly' | 'IvrMenu' | 'ApplicationExtension' | 'ParkLocation' | 'Bot' | 'Room' | 'Limited' | 'Site' | 'ProxyAdmin' | 'DelegatedLinesGroup' | 'GroupCallPickup');
+  type?:
+    | 'User'
+    | 'FaxUser'
+    | 'FlexibleUser'
+    | 'VirtualUser'
+    | 'DigitalUser'
+    | 'Department'
+    | 'Announcement'
+    | 'Voicemail'
+    | 'SharedLinesGroup'
+    | 'PagingOnly'
+    | 'IvrMenu'
+    | 'ApplicationExtension'
+    | 'ParkLocation'
+    | 'Bot'
+    | 'Room'
+    | 'Limited'
+    | 'Site'
+    | 'ProxyAdmin'
+    | 'DelegatedLinesGroup'
+    | 'GroupCallPickup';
 
   /**
    * Extension sub-type, if applicable. For any unsupported sub-types the
- *  'Unknown' value will be returned"
+   *  'Unknown' value will be returned"
    */
-  subType?: ('VideoPro' | 'VideoProPlus' | 'DigitalSignage' | 'Unknown');
+  subType?: 'VideoPro' | 'VideoProPlus' | 'DigitalSignage' | 'Unknown';
 
   /**
    */
@@ -67,7 +87,7 @@ interface GetExtensionListInfoResponse {
 
   /**
    * Hides extension from showing in company directory.
- *  Supported for extensions of User type only
+   *  Supported for extensions of User type only
    */
   hidden?: boolean;
 

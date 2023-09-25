@@ -2,7 +2,7 @@
  * Site Fax/SMS recipient (operator) reference. Multi-level IVR should
  * be enabled
  *
-*/
+ */
 interface OperatorInfo {
   /**
    * Internal identifier of an operator

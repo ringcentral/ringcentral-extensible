@@ -1,4 +1,3 @@
-// eslint-disable-next-line import/no-extraneous-dependencies
 import generate from 'ringcentral-code-generator';
 import path from 'path';
 

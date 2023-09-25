@@ -1,4 +1,4 @@
-import DiarizeSegment from './DiarizeSegment';
+import type DiarizeSegment from './DiarizeSegment';
 
 interface DiarizedObject {
   /**

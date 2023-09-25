@@ -1,4 +1,4 @@
-import BulkAddDevicesItem from './BulkAddDevicesItem';
+import type BulkAddDevicesItem from './BulkAddDevicesItem';
 
 interface BulkAddDevicesRequest {
   /**

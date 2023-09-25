@@ -1,4 +1,4 @@
-import AccountPhoneNumberInfoExtension from './AccountPhoneNumberInfoExtension';
+import type AccountPhoneNumberInfoExtension from './AccountPhoneNumberInfoExtension';
 
 interface AccountPhoneNumberInfo {
   /**
@@ -18,26 +18,42 @@ interface AccountPhoneNumberInfo {
   /**
    * Type of a phone number
    */
-  type?: ('VoiceFax' | 'VoiceOnly' | 'FaxOnly');
+  type?: 'VoiceFax' | 'VoiceOnly' | 'FaxOnly';
 
   /**
    * Indicates if a number is toll or toll-free
    * Required
    * Example: Toll
    */
-  tollType?: ('Toll' | 'TollFree');
+  tollType?: 'Toll' | 'TollFree';
 
   /**
    * Usage type of a phone number
    * Required
    */
-  usageType?: ('MainCompanyNumber' | 'DirectNumber' | 'Inventory' | 'InventoryPartnerBusinessMobileNumber' | 'PartnerBusinessMobileNumber' | 'AdditionalCompanyNumber' | 'CompanyNumber' | 'PhoneLine' | 'CompanyFaxNumber' | 'ForwardedNumber' | 'ForwardedCompanyNumber' | 'ContactCenterNumber' | 'ConferencingNumber' | 'MeetingsNumber' | 'BusinessMobileNumber' | 'ELIN');
+  usageType?:
+    | 'MainCompanyNumber'
+    | 'DirectNumber'
+    | 'Inventory'
+    | 'InventoryPartnerBusinessMobileNumber'
+    | 'PartnerBusinessMobileNumber'
+    | 'AdditionalCompanyNumber'
+    | 'CompanyNumber'
+    | 'PhoneLine'
+    | 'CompanyFaxNumber'
+    | 'ForwardedNumber'
+    | 'ForwardedCompanyNumber'
+    | 'ContactCenterNumber'
+    | 'ConferencingNumber'
+    | 'MeetingsNumber'
+    | 'BusinessMobileNumber'
+    | 'ELIN';
 
   /**
    * Status of a phone number. If the value is 'Normal', the phone number is ready to be used. Otherwise it is an external number not yet ported to RingCentral
    * Required
    */
-  status?: ('Normal' | 'Pending' | 'PortedIn' | 'Temporary' | 'Unknown');
+  status?: 'Normal' | 'Pending' | 'PortedIn' | 'Temporary' | 'Unknown';
 
   /**
    * Reference to the extension this number is assigned to. Omitted for company numbers

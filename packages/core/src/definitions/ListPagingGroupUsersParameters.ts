@@ -1,10 +1,10 @@
 /**
  * Query parameters for operation listPagingGroupUsers
-*/
+ */
 interface ListPagingGroupUsersParameters {
   /**
    * Indicates a page number to retrieve. Only positive number values
- *  are accepted
+   *  are accepted
    * Format: int32
    * Default: 1
    */

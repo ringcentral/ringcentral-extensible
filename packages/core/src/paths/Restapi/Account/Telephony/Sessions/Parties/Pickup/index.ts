@@ -1,6 +1,6 @@
-import CallParty from '../../../../../../../definitions/CallParty';
-import PickupTarget from '../../../../../../../definitions/PickupTarget';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../../types';
+import type CallParty from '../../../../../../../definitions/CallParty';
+import type PickupTarget from '../../../../../../../definitions/PickupTarget';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../../types';
 
 class Index {
   public rc: RingCentralInterface;

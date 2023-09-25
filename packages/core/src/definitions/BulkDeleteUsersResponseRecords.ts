@@ -1,4 +1,4 @@
-import ApiError from './ApiError';
+import type ApiError from './ApiError';
 
 interface BulkDeleteUsersResponseRecords {
   /**
@@ -9,14 +9,14 @@ interface BulkDeleteUsersResponseRecords {
 
   /**
    * Indicates if this item was processed successfully during bulk operation.
- *  If false, `bulkItemErrors` attribute contains the list of errors
+   *  If false, `bulkItemErrors` attribute contains the list of errors
    * Example: true
    */
   bulkItemSuccessful?: boolean;
 
   /**
    * The list of errors occurred during processing of particular item of bulk operation.
- *  Returned only if `bulkItemSuccessful` is false
+   *  Returned only if `bulkItemSuccessful` is false
    */
   bulkItemErrors?: ApiError[];
 }

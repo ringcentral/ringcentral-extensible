@@ -1,6 +1,6 @@
-import DeviceResource from '../../../../../definitions/DeviceResource';
-import AccountDeviceUpdate from '../../../../../definitions/AccountDeviceUpdate';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import type DeviceResource from '../../../../../definitions/DeviceResource';
+import type AccountDeviceUpdate from '../../../../../definitions/AccountDeviceUpdate';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -24,7 +24,10 @@ class Index {
    * App Permission: EditAccounts
    * User Permission: EditCompanyDevices
    */
-  public async put(accountDeviceUpdate: AccountDeviceUpdate, restRequestConfig?: RestRequestConfig): Promise<DeviceResource> {
+  public async put(
+    accountDeviceUpdate: AccountDeviceUpdate,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<DeviceResource> {
     const r = await this.rc.put<DeviceResource>(this.path(), accountDeviceUpdate, undefined, restRequestConfig);
     return r.data;
   }

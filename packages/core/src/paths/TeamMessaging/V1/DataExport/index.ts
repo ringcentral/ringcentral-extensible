@@ -1,8 +1,8 @@
-import DataExportTask from '../../../../definitions/DataExportTask';
-import CreateDataExportTaskRequest from '../../../../definitions/CreateDataExportTaskRequest';
-import DataExportTaskList from '../../../../definitions/DataExportTaskList';
-import ListDataExportTasksNewParameters from '../../../../definitions/ListDataExportTasksNewParameters';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
+import type DataExportTask from '../../../../definitions/DataExportTask';
+import type CreateDataExportTaskRequest from '../../../../definitions/CreateDataExportTaskRequest';
+import type DataExportTaskList from '../../../../definitions/DataExportTaskList';
+import type ListDataExportTasksNewParameters from '../../../../definitions/ListDataExportTasksNewParameters';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -32,7 +32,10 @@ class Index {
    * App Permission: TeamMessaging
    * User Permission: Glip
    */
-  public async list(queryParams?: ListDataExportTasksNewParameters, restRequestConfig?: RestRequestConfig): Promise<DataExportTaskList> {
+  public async list(
+    queryParams?: ListDataExportTasksNewParameters,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<DataExportTaskList> {
     const r = await this.rc.get<DataExportTaskList>(this.path(false), queryParams, restRequestConfig);
     return r.data;
   }
@@ -45,8 +48,16 @@ class Index {
    * App Permission: TeamMessaging
    * User Permission: Glip
    */
-  public async post(createDataExportTaskRequest: CreateDataExportTaskRequest, restRequestConfig?: RestRequestConfig): Promise<DataExportTask> {
-    const r = await this.rc.post<DataExportTask>(this.path(false), createDataExportTaskRequest, undefined, restRequestConfig);
+  public async post(
+    createDataExportTaskRequest: CreateDataExportTaskRequest,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<DataExportTask> {
+    const r = await this.rc.post<DataExportTask>(
+      this.path(false),
+      createDataExportTaskRequest,
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 

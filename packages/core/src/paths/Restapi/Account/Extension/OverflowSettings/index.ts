@@ -1,6 +1,6 @@
-import CallQueueOverflowSettingsRequestResource from '../../../../../definitions/CallQueueOverflowSettingsRequestResource';
-import CallQueueOverflowSettings from '../../../../../definitions/CallQueueOverflowSettings';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import type CallQueueOverflowSettingsRequestResource from '../../../../../definitions/CallQueueOverflowSettingsRequestResource';
+import type CallQueueOverflowSettings from '../../../../../definitions/CallQueueOverflowSettings';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -18,7 +18,7 @@ class Index {
 
   /**
    * Returns overflow settings for a call queue specified in path.
- *
+   *
    * HTTP Method: get
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{callQueueId}/overflow-settings
    * Rate Limit Group: Heavy
@@ -32,15 +32,23 @@ class Index {
 
   /**
    * Updates overflow settings for a call queue specified in path.
- *
+   *
    * HTTP Method: put
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{callQueueId}/overflow-settings
    * Rate Limit Group: Heavy
    * App Permission: EditExtensions
    * User Permission: CallQueueToCallQueue
    */
-  public async put(callQueueOverflowSettingsRequestResource: CallQueueOverflowSettingsRequestResource, restRequestConfig?: RestRequestConfig): Promise<CallQueueOverflowSettings> {
-    const r = await this.rc.put<CallQueueOverflowSettings>(this.path(), callQueueOverflowSettingsRequestResource, undefined, restRequestConfig);
+  public async put(
+    callQueueOverflowSettingsRequestResource: CallQueueOverflowSettingsRequestResource,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<CallQueueOverflowSettings> {
+    const r = await this.rc.put<CallQueueOverflowSettings>(
+      this.path(),
+      callQueueOverflowSettingsRequestResource,
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

@@ -1,11 +1,11 @@
 import Publish from './Publish';
 import Unlock from './Unlock';
 import Lock from './Lock';
-import TMNoteInfo from '../../../../definitions/TMNoteInfo';
-import PatchNoteNewParameters from '../../../../definitions/PatchNoteNewParameters';
-import TMCreateNoteRequest from '../../../../definitions/TMCreateNoteRequest';
-import TMNoteWithBodyInfo from '../../../../definitions/TMNoteWithBodyInfo';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
+import type TMNoteInfo from '../../../../definitions/TMNoteInfo';
+import type PatchNoteNewParameters from '../../../../definitions/PatchNoteNewParameters';
+import type TMCreateNoteRequest from '../../../../definitions/TMCreateNoteRequest';
+import type TMNoteWithBodyInfo from '../../../../definitions/TMNoteWithBodyInfo';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -64,7 +64,11 @@ class Index {
    * Rate Limit Group: Medium
    * App Permission: TeamMessaging
    */
-  public async patch(tMCreateNoteRequest: TMCreateNoteRequest, queryParams?: PatchNoteNewParameters, restRequestConfig?: RestRequestConfig): Promise<TMNoteInfo> {
+  public async patch(
+    tMCreateNoteRequest: TMCreateNoteRequest,
+    queryParams?: PatchNoteNewParameters,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<TMNoteInfo> {
     if (this.noteId === null) {
       throw new Error('noteId must be specified.');
     }

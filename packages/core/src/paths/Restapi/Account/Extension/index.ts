@@ -34,13 +34,13 @@ import Grant from './Grant';
 import Mms from './Mms';
 import Sms from './Sms';
 import Fax from './Fax';
-import ExtensionUpdateRequest from '../../../../definitions/ExtensionUpdateRequest';
-import GetExtensionInfoResponse from '../../../../definitions/GetExtensionInfoResponse';
-import ExtensionCreationResponse from '../../../../definitions/ExtensionCreationResponse';
-import ExtensionCreationRequest from '../../../../definitions/ExtensionCreationRequest';
-import GetExtensionListResponse from '../../../../definitions/GetExtensionListResponse';
-import ListExtensionsParameters from '../../../../definitions/ListExtensionsParameters';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
+import type ExtensionUpdateRequest from '../../../../definitions/ExtensionUpdateRequest';
+import type GetExtensionInfoResponse from '../../../../definitions/GetExtensionInfoResponse';
+import type ExtensionCreationResponse from '../../../../definitions/ExtensionCreationResponse';
+import type ExtensionCreationRequest from '../../../../definitions/ExtensionCreationRequest';
+import type GetExtensionListResponse from '../../../../definitions/GetExtensionListResponse';
+import type ListExtensionsParameters from '../../../../definitions/ListExtensionsParameters';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -64,36 +64,47 @@ class Index {
 
   /**
    * Returns the list of extensions created for a particular account.
- * All types of extensions are included in this list.
- *
+   * All types of extensions are included in this list.
+   *
    * HTTP Method: get
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension
    * Rate Limit Group: Medium
    * App Permission: ReadAccounts
    * User Permission: ReadExtensions
    */
-  public async list(queryParams?: ListExtensionsParameters, restRequestConfig?: RestRequestConfig): Promise<GetExtensionListResponse> {
+  public async list(
+    queryParams?: ListExtensionsParameters,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<GetExtensionListResponse> {
     const r = await this.rc.get<GetExtensionListResponse>(this.path(false), queryParams, restRequestConfig);
     return r.data;
   }
 
   /**
    * Creates an extension.
- *
+   *
    * HTTP Method: post
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension
    * Rate Limit Group: Medium
    * App Permission: EditAccounts
    * User Permission: AddRemoveUsers
    */
-  public async post(extensionCreationRequest: ExtensionCreationRequest, restRequestConfig?: RestRequestConfig): Promise<ExtensionCreationResponse> {
-    const r = await this.rc.post<ExtensionCreationResponse>(this.path(false), extensionCreationRequest, undefined, restRequestConfig);
+  public async post(
+    extensionCreationRequest: ExtensionCreationRequest,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<ExtensionCreationResponse> {
+    const r = await this.rc.post<ExtensionCreationResponse>(
+      this.path(false),
+      extensionCreationRequest,
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 
   /**
    * Returns basic information about a particular extension of an account.
- *
+   *
    * HTTP Method: get
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}
    * Rate Limit Group: Light
@@ -116,11 +127,19 @@ class Index {
    * App Permission: EditExtensions
    * User Permission: EditUserInfo OR EditUserCredentials
    */
-  public async put(extensionUpdateRequest: ExtensionUpdateRequest, restRequestConfig?: RestRequestConfig): Promise<GetExtensionInfoResponse> {
+  public async put(
+    extensionUpdateRequest: ExtensionUpdateRequest,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<GetExtensionInfoResponse> {
     if (this.extensionId === null) {
       throw new Error('extensionId must be specified.');
     }
-    const r = await this.rc.put<GetExtensionInfoResponse>(this.path(), extensionUpdateRequest, undefined, restRequestConfig);
+    const r = await this.rc.put<GetExtensionInfoResponse>(
+      this.path(),
+      extensionUpdateRequest,
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -144,15 +163,15 @@ class Index {
     return new Device(this);
   }
 
-  public callLog(callRecordId: (string | null) = null): CallLog {
+  public callLog(callRecordId: string | null = null): CallLog {
     return new CallLog(this, callRecordId);
   }
 
-  public greeting(greetingId: (string | null) = null): Greeting {
+  public greeting(greetingId: string | null = null): Greeting {
     return new Greeting(this, greetingId);
   }
 
-  public ringOut(ringoutId: (string | null) = null): RingOut {
+  public ringOut(ringoutId: string | null = null): RingOut {
     return new RingOut(this, ringoutId);
   }
 
@@ -196,11 +215,11 @@ class Index {
     return new PhoneNumber(this);
   }
 
-  public profileImage(scaleSize: (string | null) = null): ProfileImage {
+  public profileImage(scaleSize: string | null = null): ProfileImage {
     return new ProfileImage(this, scaleSize);
   }
 
-  public messageStore(messageId: (string | null) = null): MessageStore {
+  public messageStore(messageId: string | null = null): MessageStore {
     return new MessageStore(this, messageId);
   }
 
@@ -220,7 +239,7 @@ class Index {
     return new AssignedRole(this);
   }
 
-  public answeringRule(ruleId: (string | null) = null): AnsweringRule {
+  public answeringRule(ruleId: string | null = null): AnsweringRule {
     return new AnsweringRule(this, ruleId);
   }
 
@@ -236,7 +255,7 @@ class Index {
     return new UnifiedPresence(this);
   }
 
-  public forwardingNumber(forwardingNumberId: (string | null) = null): ForwardingNumber {
+  public forwardingNumber(forwardingNumberId: string | null = null): ForwardingNumber {
     return new ForwardingNumber(this, forwardingNumberId);
   }
 
@@ -252,7 +271,7 @@ class Index {
     return new AdministeredSites(this);
   }
 
-  public emergencyLocations(locationId: (string | null) = null): EmergencyLocations {
+  public emergencyLocations(locationId: string | null = null): EmergencyLocations {
     return new EmergencyLocations(this, locationId);
   }
 

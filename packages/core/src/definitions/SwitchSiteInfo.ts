@@ -1,7 +1,7 @@
 interface SwitchSiteInfo {
   /**
    * Internal identifier of a site. The company identifier value
- *  is 'main-site'
+   *  is 'main-site'
    */
   id?: string;
 

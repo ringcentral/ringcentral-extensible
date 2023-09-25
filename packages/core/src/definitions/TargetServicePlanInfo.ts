@@ -1,6 +1,6 @@
 /**
  * Information on account target service plan
-*/
+ */
 interface TargetServicePlanInfo {
   /**
    * Internal identifier of a target service plan
@@ -19,7 +19,7 @@ interface TargetServicePlanInfo {
 
   /**
    */
-  freemiumProductType?: ('Freyja' | 'Phoenix');
+  freemiumProductType?: 'Freyja' | 'Phoenix';
 }
 
 export default TargetServicePlanInfo;

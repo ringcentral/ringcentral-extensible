@@ -1,6 +1,6 @@
-import KeyInfo from './KeyInfo';
-import CallsTimers from './CallsTimers';
-import CallsCounters from './CallsCounters';
+import type KeyInfo from './KeyInfo';
+import type CallsTimers from './CallsTimers';
+import type CallsCounters from './CallsCounters';
 
 interface AggregationResponseRecord {
   /**

@@ -1,6 +1,6 @@
-import CallQueueInfo from './CallQueueInfo';
-import PageNavigationModel from './PageNavigationModel';
-import EnumeratedPagingModel from './EnumeratedPagingModel';
+import type CallQueueInfo from './CallQueueInfo';
+import type PageNavigationModel from './PageNavigationModel';
+import type EnumeratedPagingModel from './EnumeratedPagingModel';
 
 interface CallQueues {
   /**

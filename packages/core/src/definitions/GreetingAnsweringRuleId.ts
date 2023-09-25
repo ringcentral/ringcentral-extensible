@@ -1,6 +1,6 @@
 /**
  * Greeting's answering rule id
-*/
+ */
 interface GreetingAnsweringRuleId {
   /**
    * Internal identifier of an answering rule

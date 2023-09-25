@@ -1,6 +1,6 @@
-import LocationInfo from './LocationInfo';
-import PageNavigationModel from './PageNavigationModel';
-import EnumeratedPagingModel from './EnumeratedPagingModel';
+import type LocationInfo from './LocationInfo';
+import type PageNavigationModel from './PageNavigationModel';
+import type EnumeratedPagingModel from './EnumeratedPagingModel';
 
 interface GetLocationListResponse {
   /**

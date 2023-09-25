@@ -1,8 +1,8 @@
-import CustomFieldUpdateRequest from '../../../../definitions/CustomFieldUpdateRequest';
-import CustomFieldModel from '../../../../definitions/CustomFieldModel';
-import CustomFieldCreateRequest from '../../../../definitions/CustomFieldCreateRequest';
-import CustomFieldList from '../../../../definitions/CustomFieldList';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
+import type CustomFieldUpdateRequest from '../../../../definitions/CustomFieldUpdateRequest';
+import type CustomFieldModel from '../../../../definitions/CustomFieldModel';
+import type CustomFieldCreateRequest from '../../../../definitions/CustomFieldCreateRequest';
+import type CustomFieldList from '../../../../definitions/CustomFieldList';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -45,8 +45,16 @@ class Index {
    * App Permission: EditAccounts
    * User Permission: Users
    */
-  public async post(customFieldCreateRequest: CustomFieldCreateRequest, restRequestConfig?: RestRequestConfig): Promise<CustomFieldModel> {
-    const r = await this.rc.post<CustomFieldModel>(this.path(false), customFieldCreateRequest, undefined, restRequestConfig);
+  public async post(
+    customFieldCreateRequest: CustomFieldCreateRequest,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<CustomFieldModel> {
+    const r = await this.rc.post<CustomFieldModel>(
+      this.path(false),
+      customFieldCreateRequest,
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -58,7 +66,10 @@ class Index {
    * App Permission: EditAccounts
    * User Permission: Users
    */
-  public async put(customFieldUpdateRequest: CustomFieldUpdateRequest, restRequestConfig?: RestRequestConfig): Promise<CustomFieldModel> {
+  public async put(
+    customFieldUpdateRequest: CustomFieldUpdateRequest,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<CustomFieldModel> {
     if (this.fieldId === null) {
       throw new Error('fieldId must be specified.');
     }

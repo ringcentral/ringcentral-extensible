@@ -1,13 +1,13 @@
-import AccountResource from './AccountResource';
-import PhoneNumberResource from './PhoneNumberResource';
-import AccountDirectoryProfileImageResource from './AccountDirectoryProfileImageResource';
-import BusinessSiteResource from './BusinessSiteResource';
-import DirectoryRoleResource from './DirectoryRoleResource';
-import CallQueueResource from './CallQueueResource';
-import CustomFieldResource from './CustomFieldResource';
-import GroupResource from './GroupResource';
-import CostCenterResource from './CostCenterResource';
-import ExternalIntegrationResource from './ExternalIntegrationResource';
+import type AccountResource from './AccountResource';
+import type PhoneNumberResource from './PhoneNumberResource';
+import type AccountDirectoryProfileImageResource from './AccountDirectoryProfileImageResource';
+import type BusinessSiteResource from './BusinessSiteResource';
+import type DirectoryRoleResource from './DirectoryRoleResource';
+import type CallQueueResource from './CallQueueResource';
+import type CustomFieldResource from './CustomFieldResource';
+import type GroupResource from './GroupResource';
+import type CostCenterResource from './CostCenterResource';
+import type ExternalIntegrationResource from './ExternalIntegrationResource';
 
 interface ContactResource {
   /**
@@ -21,13 +21,32 @@ interface ContactResource {
    * Contact type
    * Example: User
    */
-  type?: ('User' | 'Department' | 'Announcement' | 'Voicemail' | 'SharedLinesGroup' | 'PagingOnly' | 'ParkLocation' | 'IvrMenu' | 'Limited' | 'ApplicationExtension' | 'Site' | 'Bot' | 'Room' | 'ProxyAdmin' | 'DelegatedLinesGroup' | 'GroupCallPickup' | 'External' | 'RoomConnector' | 'Unknown');
+  type?:
+    | 'User'
+    | 'Department'
+    | 'Announcement'
+    | 'Voicemail'
+    | 'SharedLinesGroup'
+    | 'PagingOnly'
+    | 'ParkLocation'
+    | 'IvrMenu'
+    | 'Limited'
+    | 'ApplicationExtension'
+    | 'Site'
+    | 'Bot'
+    | 'Room'
+    | 'ProxyAdmin'
+    | 'DelegatedLinesGroup'
+    | 'GroupCallPickup'
+    | 'External'
+    | 'RoomConnector'
+    | 'Unknown';
 
   /**
    * Contact status
    * Example: Enabled
    */
-  status?: ('Enabled' | 'Disabled' | 'Frozen' | 'NotActivated' | 'Unassigned' | 'Unknown');
+  status?: 'Enabled' | 'Disabled' | 'Frozen' | 'NotActivated' | 'Unassigned' | 'Unknown';
 
   /**
    */

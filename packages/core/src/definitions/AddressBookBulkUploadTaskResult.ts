@@ -1,5 +1,5 @@
-import AddressBookBulkUploadResource from './AddressBookBulkUploadResource';
-import ErrorEntity from './ErrorEntity';
+import type AddressBookBulkUploadResource from './AddressBookBulkUploadResource';
+import type ErrorEntity from './ErrorEntity';
 
 interface AddressBookBulkUploadTaskResult {
   /**

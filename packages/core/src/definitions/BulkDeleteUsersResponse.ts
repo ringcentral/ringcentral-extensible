@@ -1,4 +1,4 @@
-import BulkDeleteUsersResponseRecords from './BulkDeleteUsersResponseRecords';
+import type BulkDeleteUsersResponseRecords from './BulkDeleteUsersResponseRecords';
 
 interface BulkDeleteUsersResponse {
   /**

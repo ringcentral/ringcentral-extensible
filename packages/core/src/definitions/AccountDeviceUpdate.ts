@@ -1,7 +1,7 @@
-import EmergencyServiceAddressResourceRequest from './EmergencyServiceAddressResourceRequest';
-import DeviceEmergencyInfo from './DeviceEmergencyInfo';
-import DeviceUpdateExtensionInfo from './DeviceUpdateExtensionInfo';
-import DeviceUpdatePhoneLinesInfo from './DeviceUpdatePhoneLinesInfo';
+import type EmergencyServiceAddressResourceRequest from './EmergencyServiceAddressResourceRequest';
+import type DeviceEmergencyInfo from './DeviceEmergencyInfo';
+import type DeviceUpdateExtensionInfo from './DeviceUpdateExtensionInfo';
+import type DeviceUpdatePhoneLinesInfo from './DeviceUpdatePhoneLinesInfo';
 
 interface AccountDeviceUpdate {
   /**
@@ -22,7 +22,7 @@ interface AccountDeviceUpdate {
 
   /**
    * Supported only for devices assigned to Limited extensions.
- *  If true, enables users to log in to this phone as a common phone
+   *  If true, enables users to log in to this phone as a common phone
    */
   useAsCommonPhone?: boolean;
 

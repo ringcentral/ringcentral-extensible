@@ -3,7 +3,7 @@ interface UtteranceInsightsUnit {
    * Required
    * Example: Emotion
    */
-  name?: ('Emotion');
+  name?: 'Emotion';
 
   /**
    * Required

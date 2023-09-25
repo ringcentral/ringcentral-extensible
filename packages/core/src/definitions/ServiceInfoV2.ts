@@ -1,9 +1,9 @@
-import ServiceInfoPackage from './ServiceInfoPackage';
-import ServiceInfoBrand from './ServiceInfoBrand';
+import type ServiceInfoPackage from './ServiceInfoPackage';
+import type ServiceInfoBrand from './ServiceInfoBrand';
 
 /**
  * Service Plan information (billing package, brand, etc)
-*/
+ */
 interface ServiceInfoV2 {
   /**
    * Required

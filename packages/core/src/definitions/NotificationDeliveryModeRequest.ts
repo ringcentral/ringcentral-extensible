@@ -1,12 +1,12 @@
 /**
  * Notification delivery transport information
-*/
+ */
 interface NotificationDeliveryModeRequest {
   /**
    * The transport type for this subscription, or the channel by which an app should be notified of an event
    * Required
    */
-  transportType?: ('WebHook' | 'RC/APNS' | 'RC/GCM' | 'PubNub');
+  transportType?: 'WebHook' | 'RC/APNS' | 'RC/GCM' | 'PubNub';
 
   /**
    * The URL to which notifications should be delivered. This is only applicable for the `WebHook` transport type, for which it is a required field.
@@ -36,8 +36,8 @@ interface NotificationDeliveryModeRequest {
 
   /**
    * Optional. Specifies if notification messages will be encrypted
- *  or not. Please note that for some event filters (e.g. presence) encryption is mandatory and
- *  `false` value provided by caller will be ignored.
+   *  or not. Please note that for some event filters (e.g. presence) encryption is mandatory and
+   *  `false` value provided by caller will be ignored.
    */
   encryption?: boolean;
 }

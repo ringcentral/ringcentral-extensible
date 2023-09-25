@@ -1,4 +1,4 @@
-import TMChatInfo from './TMChatInfo';
+import type TMChatInfo from './TMChatInfo';
 
 interface TMChatListWithoutNavigation {
   /**

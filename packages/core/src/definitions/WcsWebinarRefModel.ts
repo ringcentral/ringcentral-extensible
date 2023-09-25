@@ -1,4 +1,4 @@
-import RcwLinkedUserModel from './RcwLinkedUserModel';
+import type RcwLinkedUserModel from './RcwLinkedUserModel';
 
 interface WcsWebinarRefModel {
   /**

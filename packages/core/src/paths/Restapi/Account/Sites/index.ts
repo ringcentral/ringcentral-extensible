@@ -1,11 +1,11 @@
 import BulkAssign from './BulkAssign';
 import Members from './Members';
 import Ivr from './Ivr';
-import SiteUpdateRequest from '../../../../definitions/SiteUpdateRequest';
-import SiteInfo from '../../../../definitions/SiteInfo';
-import CreateSiteRequest from '../../../../definitions/CreateSiteRequest';
-import SitesList from '../../../../definitions/SitesList';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
+import type SiteUpdateRequest from '../../../../definitions/SiteUpdateRequest';
+import type SiteInfo from '../../../../definitions/SiteInfo';
+import type CreateSiteRequest from '../../../../definitions/CreateSiteRequest';
+import type SitesList from '../../../../definitions/SitesList';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -29,7 +29,7 @@ class Index {
 
   /**
    * Returns a list of sites for the specified account.
- *
+   *
    * HTTP Method: get
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/sites
    * Rate Limit Group: Light
@@ -43,7 +43,7 @@ class Index {
 
   /**
    * Creates a site for the specified account.
- *
+   *
    * HTTP Method: post
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/sites
    * Rate Limit Group: Medium
@@ -56,7 +56,7 @@ class Index {
 
   /**
    * Returns a site by ID.
- *
+   *
    * HTTP Method: get
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/sites/{siteId}
    * Rate Limit Group: Light
@@ -73,7 +73,7 @@ class Index {
 
   /**
    * Updates a site specified in path.
- *
+   *
    * HTTP Method: put
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/sites/{siteId}
    * Rate Limit Group: Light
@@ -90,7 +90,7 @@ class Index {
 
   /**
    * Deletes a site specified in path.
- *
+   *
    * HTTP Method: delete
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/sites/{siteId}
    * Rate Limit Group: Light

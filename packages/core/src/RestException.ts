@@ -1,12 +1,12 @@
-import { RestResponse } from './types';
+import type { RestResponse } from './types';
 import Utils from './Utils';
 
 class RestException extends Error {
-  response: RestResponse;
+  public response: RestResponse;
 
-  message: string;
+  public message: string;
 
-  constructor(r: RestResponse) {
+  public constructor(r: RestResponse) {
     const message = Utils.formatTraffic(r);
     super(message);
     Object.setPrototypeOf(this, RestException.prototype);

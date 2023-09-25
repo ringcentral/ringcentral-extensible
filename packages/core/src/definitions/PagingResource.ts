@@ -1,6 +1,6 @@
 /**
  * Pagination details
-*/
+ */
 interface PagingResource {
   /**
    * Page token of the current response list

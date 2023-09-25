@@ -1,6 +1,6 @@
-import CloudRecordings from '../../../../../../definitions/CloudRecordings';
-import GetExtensionRecordingsParameters from '../../../../../../definitions/GetExtensionRecordingsParameters';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../types';
+import type CloudRecordings from '../../../../../../definitions/CloudRecordings';
+import type GetExtensionRecordingsParameters from '../../../../../../definitions/GetExtensionRecordingsParameters';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -23,7 +23,10 @@ class Index {
    * Rate Limit Group: Light
    * App Permission: Video
    */
-  public async get(queryParams?: GetExtensionRecordingsParameters, restRequestConfig?: RestRequestConfig): Promise<CloudRecordings> {
+  public async get(
+    queryParams?: GetExtensionRecordingsParameters,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<CloudRecordings> {
     const r = await this.rc.get<CloudRecordings>(this.path(), queryParams, restRequestConfig);
     return r.data;
   }

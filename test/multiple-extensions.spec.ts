@@ -36,13 +36,10 @@ describe('extensions', () => {
 
     // setup subscription
     let eventCount = 0;
-    await webSocketExtension.subscribe(
-      ['/restapi/v1.0/account/~/extension/~/message-store'],
-      (event) => {
-        expect(event).toBeDefined();
-        eventCount += 1;
-      },
-    );
+    await webSocketExtension.subscribe(['/restapi/v1.0/account/~/extension/~/message-store'], (event) => {
+      expect(event).toBeDefined();
+      eventCount += 1;
+    });
 
     // Rest API call over WebSocket
     await rc

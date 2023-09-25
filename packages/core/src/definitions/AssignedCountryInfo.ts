@@ -1,6 +1,6 @@
 /**
  * Information on a country assigned to an extension user. Returned for the User extension type only
-*/
+ */
 interface AssignedCountryInfo {
   /**
    * Internal identifier of an assigned country

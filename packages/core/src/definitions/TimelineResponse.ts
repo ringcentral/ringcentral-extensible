@@ -1,5 +1,5 @@
-import ResponsePaging from './ResponsePaging';
-import TimelineResponseData from './TimelineResponseData';
+import type ResponsePaging from './ResponsePaging';
+import type TimelineResponseData from './TimelineResponseData';
 
 interface TimelineResponse {
   /**

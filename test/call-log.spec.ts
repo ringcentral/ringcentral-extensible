@@ -16,11 +16,10 @@ import { createRingCentral } from './utils';
 describe('call log', () => {
   test('list call log', async () => {
     const rc = await createRingCentral();
-    const callLogs = await rc.restapi().account().extension().callLog()
-      .list({
-        dateFrom: '2020-06-08T15:41:00.000Z',
-        dateTo: '2020-06-08T16:12:00.000Z',
-      });
+    const callLogs = await rc.restapi().account().extension().callLog().list({
+      dateFrom: '2020-06-08T15:41:00.000Z',
+      dateTo: '2020-06-08T16:12:00.000Z',
+    });
     expect(callLogs).not.toBeUndefined();
     expect(callLogs.records).not.toBeUndefined();
     await rc.revoke();
@@ -28,16 +27,11 @@ describe('call log', () => {
 
   test('call log sync', async () => {
     const rc = await createRingCentral();
-    const callLogs = await rc
-      .restapi()
-      .account()
-      .extension()
-      .callLogSync()
-      .get({
-        syncType: 'FSync',
-        dateFrom: '2020-06-08T15:41:00.000Z',
-        recordCount: 5,
-      });
+    const callLogs = await rc.restapi().account().extension().callLogSync().get({
+      syncType: 'FSync',
+      dateFrom: '2020-06-08T15:41:00.000Z',
+      recordCount: 5,
+    });
     expect(callLogs).not.toBeUndefined();
     expect(callLogs.records).not.toBeUndefined();
 

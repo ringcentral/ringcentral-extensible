@@ -1,5 +1,5 @@
-import UserCallQueues from '../../../../../definitions/UserCallQueues';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import type UserCallQueues from '../../../../../definitions/UserCallQueues';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -17,10 +17,10 @@ class Index {
 
   /**
    * Updates a list of call queues where the user is an agent. This
- * is a full update request, which means that if any call queue where the user is
- * an agent is not mentioned in request, then the user is automatically removed
- * from this queue.
- *
+   * is a full update request, which means that if any call queue where the user is
+   * an agent is not mentioned in request, then the user is automatically removed
+   * from this queue.
+   *
    * HTTP Method: put
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/call-queues
    * Rate Limit Group: Medium

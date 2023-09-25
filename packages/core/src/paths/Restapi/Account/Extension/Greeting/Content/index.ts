@@ -1,5 +1,5 @@
-import ReadGreetingContentParameters from '../../../../../../definitions/ReadGreetingContentParameters';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../types';
+import type ReadGreetingContentParameters from '../../../../../../definitions/ReadGreetingContentParameters';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -17,16 +17,22 @@ class Index {
 
   /**
    * Returns extension-level greeting media contents.
- *
- * **This API must be called via media API entry point, e.g. https://media.ringcentral.com**
- *
+   *
+   * **This API must be called via media API entry point, e.g. https://media.ringcentral.com**
+   *
    * HTTP Method: get
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/greeting/{greetingId}/content
    * Rate Limit Group: Heavy
    * App Permission: ReadAccounts
    */
-  public async get(queryParams?: ReadGreetingContentParameters, restRequestConfig?: RestRequestConfig): Promise<Buffer> {
-    const r = await this.rc.get<Buffer>(this.path(), queryParams, { ...restRequestConfig, responseType: 'arraybuffer' });
+  public async get(
+    queryParams?: ReadGreetingContentParameters,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<Buffer> {
+    const r = await this.rc.get<Buffer>(this.path(), queryParams, {
+      ...restRequestConfig,
+      responseType: 'arraybuffer',
+    });
     return r.data;
   }
 }

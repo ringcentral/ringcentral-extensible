@@ -1,9 +1,9 @@
-import AutomaticLocationUpdatesPhoneNumberInfo from './AutomaticLocationUpdatesPhoneNumberInfo';
+import type AutomaticLocationUpdatesPhoneNumberInfo from './AutomaticLocationUpdatesPhoneNumberInfo';
 
 interface AutomaticLocationUpdatesPhoneLine {
   /**
    */
-  lineType?: ('Unknown' | 'Standalone' | 'StandaloneFree' | 'BlaPrimary' | 'BlaSecondary' | 'BLF');
+  lineType?: 'Unknown' | 'Standalone' | 'StandaloneFree' | 'BlaPrimary' | 'BlaSecondary' | 'BLF';
 
   /**
    */

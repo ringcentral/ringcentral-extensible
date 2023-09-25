@@ -1,6 +1,6 @@
-import BusinessSiteCollectionRequest from '../../../../../definitions/BusinessSiteCollectionRequest';
-import BusinessSiteCollectionResource from '../../../../../definitions/BusinessSiteCollectionResource';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import type BusinessSiteCollectionRequest from '../../../../../definitions/BusinessSiteCollectionRequest';
+import type BusinessSiteCollectionResource from '../../../../../definitions/BusinessSiteCollectionResource';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -31,16 +31,24 @@ class Index {
 
   /**
    * Updates the sites administered by the current user.
- * Please note: Only IDs of records are used for update.
- *
+   * Please note: Only IDs of records are used for update.
+   *
    * HTTP Method: put
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/administered-sites
    * Rate Limit Group: Medium
    * App Permission: EditAccounts
    * User Permission: EditAssignedRoles
    */
-  public async put(businessSiteCollectionRequest: BusinessSiteCollectionRequest, restRequestConfig?: RestRequestConfig): Promise<BusinessSiteCollectionResource> {
-    const r = await this.rc.put<BusinessSiteCollectionResource>(this.path(), businessSiteCollectionRequest, undefined, restRequestConfig);
+  public async put(
+    businessSiteCollectionRequest: BusinessSiteCollectionRequest,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<BusinessSiteCollectionResource> {
+    const r = await this.rc.put<BusinessSiteCollectionResource>(
+      this.path(),
+      businessSiteCollectionRequest,
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

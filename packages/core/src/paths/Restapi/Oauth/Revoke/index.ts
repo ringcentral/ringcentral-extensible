@@ -1,5 +1,5 @@
-import RevokeTokenRequest from '../../../../definitions/RevokeTokenRequest';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
+import type RevokeTokenRequest from '../../../../definitions/RevokeTokenRequest';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -17,11 +17,11 @@ class Index {
 
   /**
    * Revokes previously issued access and refresh token.
- *
- * Depending on client application type
- * requests to this endpoint may require authentication with HTTP Basic scheme
- * using registered client ID and client secret as login and password, correspondingly.
- *
+   *
+   * Depending on client application type
+   * requests to this endpoint may require authentication with HTTP Basic scheme
+   * using registered client ID and client secret as login and password, correspondingly.
+   *
    * HTTP Method: post
    * Endpoint: /restapi/oauth/revoke
    * Rate Limit Group: Auth

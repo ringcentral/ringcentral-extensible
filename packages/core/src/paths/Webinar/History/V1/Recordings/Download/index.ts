@@ -1,6 +1,6 @@
-import RecordingDownloadModel from '../../../../../../definitions/RecordingDownloadModel';
-import RcwHistoryGetRecordingDownloadParameters from '../../../../../../definitions/RcwHistoryGetRecordingDownloadParameters';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../types';
+import type RecordingDownloadModel from '../../../../../../definitions/RecordingDownloadModel';
+import type RcwHistoryGetRecordingDownloadParameters from '../../../../../../definitions/RcwHistoryGetRecordingDownloadParameters';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -18,16 +18,19 @@ class Index {
 
   /**
    * Returns the webinar recording download link (both Webinar host's and admin interface).
- *
- * If called by a webinar host, the API returns error (403) if recording downloading is prohibited by company settings.
- * The admin user who has "WebinarSettings" permission should be able to download recording regardless of current company settings.
- *
+   *
+   * If called by a webinar host, the API returns error (403) if recording downloading is prohibited by company settings.
+   * The admin user who has "WebinarSettings" permission should be able to download recording regardless of current company settings.
+   *
    * HTTP Method: get
    * Endpoint: /webinar/history/v1/recordings/{recordingId}/download
    * Rate Limit Group: Heavy
    * App Permission: ReadWebinars
    */
-  public async get(queryParams?: RcwHistoryGetRecordingDownloadParameters, restRequestConfig?: RestRequestConfig): Promise<RecordingDownloadModel> {
+  public async get(
+    queryParams?: RcwHistoryGetRecordingDownloadParameters,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<RecordingDownloadModel> {
     const r = await this.rc.get<RecordingDownloadModel>(this.path(), queryParams, restRequestConfig);
     return r.data;
   }

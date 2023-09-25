@@ -1,4 +1,4 @@
-import MessageCreateRequest from './MessageCreateRequest';
+import type MessageCreateRequest from './MessageCreateRequest';
 
 /**
  * Batch of A2P SMS messages. This object provides specification to
@@ -7,7 +7,7 @@ import MessageCreateRequest from './MessageCreateRequest';
  * to override this attribute for each message. This way a single API call may
  * be used to send individual messages to many recipients.
  *
-*/
+ */
 interface MessageBatchCreateRequest {
   /**
    * Sender's phone number in [E.164](https://www.itu.int/rec/T-REC-E.164-201011-I) format.

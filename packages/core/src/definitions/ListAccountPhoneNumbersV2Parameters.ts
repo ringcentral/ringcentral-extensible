@@ -1,6 +1,6 @@
 /**
  * Query parameters for operation listAccountPhoneNumbersV2
-*/
+ */
 interface ListAccountPhoneNumbersV2Parameters {
   /**
    * The result set page number (1-indexed) to return
@@ -14,7 +14,7 @@ interface ListAccountPhoneNumbersV2Parameters {
 
   /**
    * The number of items per page. If provided value in the request
- *  is greater than a maximum, the maximum value is applied
+   *  is greater than a maximum, the maximum value is applied
    * Maximum: 1000
    * Minimum: 1
    * Format: int32
@@ -31,7 +31,24 @@ interface ListAccountPhoneNumbersV2Parameters {
   /**
    * Usage type(s) of phone numbers to be returned
    */
-  usageType?: ('MainCompanyNumber' | 'DirectNumber' | 'Inventory' | 'InventoryPartnerBusinessMobileNumber' | 'PartnerBusinessMobileNumber' | 'AdditionalCompanyNumber' | 'CompanyNumber' | 'PhoneLine' | 'CompanyFaxNumber' | 'ForwardedNumber' | 'ForwardedCompanyNumber' | 'ContactCenterNumber' | 'ConferencingNumber' | 'MeetingsNumber' | 'BusinessMobileNumber' | 'ELIN')[];
+  usageType?: (
+    | 'MainCompanyNumber'
+    | 'DirectNumber'
+    | 'Inventory'
+    | 'InventoryPartnerBusinessMobileNumber'
+    | 'PartnerBusinessMobileNumber'
+    | 'AdditionalCompanyNumber'
+    | 'CompanyNumber'
+    | 'PhoneLine'
+    | 'CompanyFaxNumber'
+    | 'ForwardedNumber'
+    | 'ForwardedCompanyNumber'
+    | 'ContactCenterNumber'
+    | 'ConferencingNumber'
+    | 'MeetingsNumber'
+    | 'BusinessMobileNumber'
+    | 'ELIN'
+  )[];
 
   /**
    * Status(es) of phone numbers to be returned
@@ -42,18 +59,18 @@ interface ListAccountPhoneNumbersV2Parameters {
    * Indicates if a number is toll or toll-free
    * Example: Toll
    */
-  tollType?: ('Toll' | 'TollFree');
+  tollType?: 'Toll' | 'TollFree';
 
   /**
    * Extension status
    */
-  extensionStatus?: ('Enabled' | 'Disabled' | 'Frozen' | 'NotActivated' | 'Unassigned');
+  extensionStatus?: 'Enabled' | 'Disabled' | 'Frozen' | 'NotActivated' | 'Unassigned';
 
   /**
    * Phone number in e.164 format to be searched for.
- *  Parameter value can include wildcards (e.g. ''+165012345**'')
- *  or be an exact number ''+16501234500'' - single number is searched in that case.
- *  Make sure you escape the ''+'' in the URL as ''%2B'''
+   *  Parameter value can include wildcards (e.g. ''+165012345**'')
+   *  or be an exact number ''+16501234500'' - single number is searched in that case.
+   *  Make sure you escape the ''+'' in the URL as ''%2B'''
    */
   phoneNumber?: string;
 }

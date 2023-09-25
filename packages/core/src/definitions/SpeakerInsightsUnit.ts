@@ -1,11 +1,22 @@
-import SpeakerInsightsValuesItems from './SpeakerInsightsValuesItems';
+import type SpeakerInsightsValuesItems from './SpeakerInsightsValuesItems';
 
 interface SpeakerInsightsUnit {
   /**
    * Required
    * Example: TalkToListenRatio
    */
-  name?: ('Energy' | 'Pace' | 'TalkToListenRatio' | 'Patience' | 'LongestMonologue' | 'FillerWordRate' | 'TalkingSpeed' | 'TalkTime' | 'QuestionsAsked' | 'Tone' | 'Interruptions');
+  name?:
+    | 'Energy'
+    | 'Pace'
+    | 'TalkToListenRatio'
+    | 'Patience'
+    | 'LongestMonologue'
+    | 'FillerWordRate'
+    | 'TalkingSpeed'
+    | 'TalkTime'
+    | 'QuestionsAsked'
+    | 'Tone'
+    | 'Interruptions';
 
   /**
    * Required

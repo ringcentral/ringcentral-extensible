@@ -1,9 +1,9 @@
 import Content from './Content';
 import Utils from '../../../../../Utils';
-import CustomUserGreetingInfo from '../../../../../definitions/CustomUserGreetingInfo';
-import CreateCustomUserGreetingParameters from '../../../../../definitions/CreateCustomUserGreetingParameters';
-import CreateCustomUserGreetingRequest from '../../../../../definitions/CreateCustomUserGreetingRequest';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import type CustomUserGreetingInfo from '../../../../../definitions/CustomUserGreetingInfo';
+import type CreateCustomUserGreetingParameters from '../../../../../definitions/CreateCustomUserGreetingParameters';
+import type CreateCustomUserGreetingRequest from '../../../../../definitions/CreateCustomUserGreetingRequest';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -33,7 +33,11 @@ class Index {
    * App Permission: EditExtensions
    * User Permission: EditUserAnsweringRules
    */
-  public async post(createCustomUserGreetingRequest: CreateCustomUserGreetingRequest, queryParams?: CreateCustomUserGreetingParameters, restRequestConfig?: RestRequestConfig): Promise<CustomUserGreetingInfo> {
+  public async post(
+    createCustomUserGreetingRequest: CreateCustomUserGreetingRequest,
+    queryParams?: CreateCustomUserGreetingParameters,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<CustomUserGreetingInfo> {
     const formData = await Utils.getFormData(createCustomUserGreetingRequest);
     const r = await this.rc.post<CustomUserGreetingInfo>(this.path(false), formData, queryParams, restRequestConfig);
     return r.data;

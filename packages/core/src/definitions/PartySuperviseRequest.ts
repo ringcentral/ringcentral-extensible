@@ -4,7 +4,7 @@ interface PartySuperviseRequest {
    * Required
    * Example: Listen
    */
-  mode?: ('Listen');
+  mode?: 'Listen';
 
   /**
    * Internal identifier of a supervisor's device
@@ -29,7 +29,7 @@ interface PartySuperviseRequest {
   /**
    * Specifies session description protocol (SDP) setting. The possible values are 'sendOnly' (only sending) meaning one-way audio streaming; and 'sendRecv' (sending/receiving) meaning two-way audio streaming
    */
-  mediaSDP?: ('sendOnly' | 'sendRecv');
+  mediaSDP?: 'sendOnly' | 'sendRecv';
 }
 
 export default PartySuperviseRequest;

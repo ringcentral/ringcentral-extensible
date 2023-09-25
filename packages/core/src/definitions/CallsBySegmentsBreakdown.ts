@@ -1,6 +1,6 @@
 /**
  * Result breakdown by segments
-*/
+ */
 interface CallsBySegmentsBreakdown {
   /**
    * Value for Ringing segment

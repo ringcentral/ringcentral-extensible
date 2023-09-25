@@ -1,7 +1,7 @@
-import CallRecording from '../../../../../../../definitions/CallRecording';
-import PauseResumeCallRecordingParameters from '../../../../../../../definitions/PauseResumeCallRecordingParameters';
-import CallRecordingUpdate from '../../../../../../../definitions/CallRecordingUpdate';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../../types';
+import type CallRecording from '../../../../../../../definitions/CallRecording';
+import type PauseResumeCallRecordingParameters from '../../../../../../../definitions/PauseResumeCallRecordingParameters';
+import type CallRecordingUpdate from '../../../../../../../definitions/CallRecordingUpdate';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -42,7 +42,11 @@ class Index {
    * Rate Limit Group: Light
    * App Permission: CallControl
    */
-  public async patch(callRecordingUpdate: CallRecordingUpdate, queryParams?: PauseResumeCallRecordingParameters, restRequestConfig?: RestRequestConfig): Promise<CallRecording> {
+  public async patch(
+    callRecordingUpdate: CallRecordingUpdate,
+    queryParams?: PauseResumeCallRecordingParameters,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<CallRecording> {
     if (this.recordingId === null) {
       throw new Error('recordingId must be specified.');
     }

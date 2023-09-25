@@ -1,85 +1,77 @@
-import RingCentral from '@rc-ex/core';
+import type RingCentral from '@rc-ex/core';
 import SdkExtension from '@rc-ex/core/lib/SdkExtension';
-import SubscriptionInfo from '@rc-ex/core/lib/definitions/SubscriptionInfo';
-import CreateSubscriptionRequest from '@rc-ex/core/lib/definitions/CreateSubscriptionRequest';
-import PubNub, { PubnubConfig } from 'pubnub';
-import { RestResponse } from '@rc-ex/core/lib/types';
+import type SubscriptionInfo from '@rc-ex/core/lib/definitions/SubscriptionInfo';
+import type CreateSubscriptionRequest from '@rc-ex/core/lib/definitions/CreateSubscriptionRequest';
+import PubNub from 'pubnub';
+import type { RestResponse } from '@rc-ex/core/lib/types';
 
 export class Subscription {
-  pne: PubNubExtension;
+  public pne: PubNubExtension;
 
-  eventFilters: string[];
+  public eventFilters: string[];
 
-  callback: (event: {}) => void;
+  public callback: (event: {}) => void;
 
-  timeout?: NodeJS.Timeout;
+  public timeout?: NodeJS.Timeout;
 
-  pubnub?: PubNub;
+  public pubnub?: PubNub;
 
-  enabled = true;
+  public enabled = true;
 
-  constructor(
-    pne: PubNubExtension,
-    eventFilters: string[],
-    callback: (event: {}) => void,
-  ) {
+  public _subscriptionInfo?: SubscriptionInfo;
+
+  public constructor(pne: PubNubExtension, eventFilters: string[], callback: (event: {}) => void) {
     this.pne = pne;
     this.eventFilters = eventFilters;
     this.callback = callback;
   }
 
-  get requestBody(): CreateSubscriptionRequest {
+  public get requestBody(): CreateSubscriptionRequest {
     return {
       deliveryMode: { transportType: 'PubNub', encryption: true },
       eventFilters: this.eventFilters,
     };
   }
 
-  _subscriptionInfo?: SubscriptionInfo;
-
-  get subscriptionInfo(): SubscriptionInfo | undefined {
+  public get subscriptionInfo(): SubscriptionInfo | undefined {
     return this._subscriptionInfo;
   }
 
-  set subscriptionInfo(_subscription) {
+  public set subscriptionInfo(_subscription) {
     this._subscriptionInfo = _subscription;
     if (this.timeout) {
       global.clearTimeout(this.timeout);
       this.timeout = undefined;
     }
     if (_subscription) {
-      this.timeout = global.setTimeout(() => {
-        this.refresh();
-      }, ((_subscription.expiresIn ?? 900) - 120) * 1000);
+      this.timeout = global.setTimeout(
+        () => {
+          this.refresh();
+        },
+        ((_subscription.expiresIn ?? 900) - 120) * 1000,
+      );
     }
   }
 
-  async subscribe() {
-    this.subscriptionInfo = await this.pne.rc
-      .restapi()
-      .subscription()
-      .post(this.requestBody);
+  public async subscribe() {
+    this.subscriptionInfo = await this.pne.rc.restapi().subscription().post(this.requestBody);
     this.pubnub = new PubNub({
       userId: this.pne.rc.token!.owner_id,
       subscribeKey: this.subscriptionInfo!.deliveryMode!.subscriberKey!,
       origin: 'ringcentral.pubnubapi.com',
       useRandomIVs: false,
-    } as PubnubConfig); // todo: remove `as PubnubConfig`
+    });
     this.pubnub.addListener({
       message: (message: { message: string }) => {
         if (!this.enabled) {
           return;
         }
-        const decrypted = this.pubnub!.decrypt(
-          message.message,
-          this.subscriptionInfo!.deliveryMode!.encryptionKey,
-          {
-            encryptKey: false,
-            keyEncoding: 'base64',
-            keyLength: 128,
-            mode: 'ecb',
-          },
-        );
+        const decrypted = this.pubnub!.decrypt(message.message, this.subscriptionInfo!.deliveryMode!.encryptionKey, {
+          encryptKey: false,
+          keyEncoding: 'base64',
+          keyLength: 128,
+          mode: 'ecb',
+        });
         this.callback(decrypted);
       },
     });
@@ -88,15 +80,12 @@ export class Subscription {
     });
   }
 
-  async refresh() {
+  public async refresh() {
     if (!this.subscriptionInfo) {
       return;
     }
     try {
-      this.subscriptionInfo = await this.pne.rc
-        .restapi()
-        .subscription(this.subscriptionInfo!.id)
-        .put(this.requestBody);
+      this.subscriptionInfo = await this.pne.rc.restapi().subscription(this.subscriptionInfo!.id).put(this.requestBody);
     } catch (e) {
       const re = e as { response: RestResponse };
       if (re.response && re.response.status === 404) {
@@ -106,7 +95,7 @@ export class Subscription {
     }
   }
 
-  async revoke() {
+  public async revoke() {
     if (!this.subscriptionInfo) {
       return;
     }
@@ -124,39 +113,36 @@ export class Subscription {
 }
 
 class PubNubExtension extends SdkExtension {
-  rc!: RingCentral;
+  public rc!: RingCentral;
 
-  subscriptions: Subscription[] = [];
+  public subscriptions: Subscription[] = [];
 
-  async install(rc: RingCentral) {
+  public async install(rc: RingCentral) {
     this.rc = rc;
   }
 
-  disable() {
+  public disable() {
     super.disable();
     for (const subscription of this.subscriptions ?? []) {
       subscription.enabled = false;
     }
   }
 
-  enable() {
+  public enable() {
     super.enable();
     for (const subscription of this.subscriptions ?? []) {
       subscription.enabled = true;
     }
   }
 
-  async subscribe(
-    eventFilters: string[],
-    callback: (event: {}) => void,
-  ): Promise<Subscription> {
+  public async subscribe(eventFilters: string[], callback: (event: {}) => void): Promise<Subscription> {
     const subscription = new Subscription(this, eventFilters, callback);
     await subscription.subscribe();
     this.subscriptions.push(subscription);
     return subscription;
   }
 
-  async revoke() {
+  public async revoke() {
     for (const subscription of this.subscriptions) {
       await subscription.revoke();
     }

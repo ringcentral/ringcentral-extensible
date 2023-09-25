@@ -1,6 +1,6 @@
-import BridgeResponse from '../../../../../../definitions/BridgeResponse';
-import GetBridgeByWebPinParameters from '../../../../../../definitions/GetBridgeByWebPinParameters';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../types';
+import type BridgeResponse from '../../../../../../definitions/BridgeResponse';
+import type GetBridgeByWebPinParameters from '../../../../../../definitions/GetBridgeByWebPinParameters';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -24,14 +24,17 @@ class Index {
 
   /**
    * Finds a bridge by short identifier (Web PIN). Also it can be used to find a default bridge by the alias
- * (personal meeting name).
- *
+   * (personal meeting name).
+   *
    * HTTP Method: get
    * Endpoint: /rcvideo/v2/bridges/pin/web/{pin}
    * Rate Limit Group: Medium
    * App Permission: Video
    */
-  public async get(queryParams?: GetBridgeByWebPinParameters, restRequestConfig?: RestRequestConfig): Promise<BridgeResponse> {
+  public async get(
+    queryParams?: GetBridgeByWebPinParameters,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<BridgeResponse> {
     if (this.pin === null) {
       throw new Error('pin must be specified.');
     }

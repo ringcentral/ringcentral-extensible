@@ -1,6 +1,6 @@
 /**
  * Company emergency response location details
-*/
+ */
 interface SipRegistrationDeviceLocationInfo {
   /**
    * Internal identifier of an emergency response location

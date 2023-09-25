@@ -1,15 +1,15 @@
-import BatchProvisionUsersRequestItemContact from './BatchProvisionUsersRequestItemContact';
-import BatchProvisionUsersRequestItemCostCenter from './BatchProvisionUsersRequestItemCostCenter';
-import BatchProvisionUsersRequestItemRoles from './BatchProvisionUsersRequestItemRoles';
-import BatchProvisionUsersRequestItemDevices from './BatchProvisionUsersRequestItemDevices';
+import type BatchProvisionUsersRequestItemContact from './BatchProvisionUsersRequestItemContact';
+import type BatchProvisionUsersRequestItemCostCenter from './BatchProvisionUsersRequestItemCostCenter';
+import type BatchProvisionUsersRequestItemRoles from './BatchProvisionUsersRequestItemRoles';
+import type BatchProvisionUsersRequestItemDevices from './BatchProvisionUsersRequestItemDevices';
 
 /**
  * Describes request for user extension provisioning
-*/
+ */
 interface BatchProvisionUsersRequestItem {
   /**
    * Short number of an extension.
- *  Actual max length depends on system length limit for extension.
+   *  Actual max length depends on system length limit for extension.
    * Example: 205
    */
   extensionNumber?: string;
@@ -19,7 +19,7 @@ interface BatchProvisionUsersRequestItem {
    * Required
    * Default: Enabled
    */
-  status?: ('Enabled');
+  status?: 'Enabled';
 
   /**
    * Personal contact information
@@ -41,7 +41,7 @@ interface BatchProvisionUsersRequestItem {
 
   /**
    * Specifies if a welcome/activation email is sent to the new users (within extension status changing from
- *  'Unassigned' to 'NotActivated/Disabled')
+   *  'Unassigned' to 'NotActivated/Disabled')
    * Default: true
    */
   sendWelcomeEmail?: boolean;

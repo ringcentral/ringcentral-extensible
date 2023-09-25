@@ -1,9 +1,9 @@
-import OptOutResponse from './OptOutResponse';
-import PagingResource from './PagingResource';
+import type OptOutResponse from './OptOutResponse';
+import type PagingResource from './PagingResource';
 
 /**
  * The list of opt outs
-*/
+ */
 interface OptOutListResponse {
   /**
    * List of individual opt-out number records

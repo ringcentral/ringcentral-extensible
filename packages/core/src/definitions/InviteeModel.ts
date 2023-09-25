@@ -1,8 +1,8 @@
-import RcwDomainUserModel from './RcwDomainUserModel';
+import type RcwDomainUserModel from './RcwDomainUserModel';
 
 /**
  * The internal IDs of RC-authenticated users.
-*/
+ */
 interface InviteeModel {
   /**
    * Internal object ID
@@ -24,19 +24,19 @@ interface InviteeModel {
 
   /**
    * The role of the webinar session participant/invitee.
- *  See also: [Understanding Webinar Roles](https://support.ringcentral.com/webinar/getting-started/understanding-ringcentral-webinar-roles.html)
+   *  See also: [Understanding Webinar Roles](https://support.ringcentral.com/webinar/getting-started/understanding-ringcentral-webinar-roles.html)
    * Required
    * Example: Panelist
    */
-  role?: ('Panelist' | 'CoHost' | 'Host' | 'Attendee');
+  role?: 'Panelist' | 'CoHost' | 'Host' | 'Attendee';
 
   /**
    * The role of the webinar session participant/invitee.
- *  See also: [Understanding Webinar Roles](https://support.ringcentral.com/webinar/getting-started/understanding-ringcentral-webinar-roles.html)
+   *  See also: [Understanding Webinar Roles](https://support.ringcentral.com/webinar/getting-started/understanding-ringcentral-webinar-roles.html)
    * Required
    * Example: Panelist
    */
-  originalRole?: ('Panelist' | 'CoHost' | 'Host' | 'Attendee');
+  originalRole?: 'Panelist' | 'CoHost' | 'Host' | 'Attendee';
 
   /**
    */
@@ -53,7 +53,7 @@ interface InviteeModel {
    * Required
    * Default: User
    */
-  type?: ('User' | 'Room');
+  type?: 'User' | 'Room';
 
   /**
    * User's contact email

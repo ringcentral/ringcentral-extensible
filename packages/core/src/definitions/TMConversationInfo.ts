@@ -1,4 +1,4 @@
-import TMChatMemberInfo from './TMChatMemberInfo';
+import type TMChatMemberInfo from './TMChatMemberInfo';
 
 interface TMConversationInfo {
   /**
@@ -9,7 +9,7 @@ interface TMConversationInfo {
   /**
    * Type of a conversation
    */
-  type?: ('Direct' | 'Personal' | 'Group');
+  type?: 'Direct' | 'Personal' | 'Group';
 
   /**
    * Conversation creation datetime in ISO 8601 format

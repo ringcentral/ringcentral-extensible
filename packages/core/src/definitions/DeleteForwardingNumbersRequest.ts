@@ -1,4 +1,4 @@
-import ForwardingNumberId from './ForwardingNumberId';
+import type ForwardingNumberId from './ForwardingNumberId';
 
 interface DeleteForwardingNumbersRequest {
   /**

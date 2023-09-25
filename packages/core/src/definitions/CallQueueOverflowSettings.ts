@@ -1,4 +1,4 @@
-import CallQueueOverflowAgent from './CallQueueOverflowAgent';
+import type CallQueueOverflowAgent from './CallQueueOverflowAgent';
 
 interface CallQueueOverflowSettings {
   /**

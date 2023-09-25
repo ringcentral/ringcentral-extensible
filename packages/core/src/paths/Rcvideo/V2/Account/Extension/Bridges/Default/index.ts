@@ -1,5 +1,5 @@
-import BridgeResponse from '../../../../../../../definitions/BridgeResponse';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../../types';
+import type BridgeResponse from '../../../../../../../definitions/BridgeResponse';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -17,8 +17,8 @@ class Index {
 
   /**
    * Returns a default bridge (PMI) for the user specified by **accountId**
- * and **extensionId** identifiers.
- *
+   * and **extensionId** identifiers.
+   *
    * HTTP Method: get
    * Endpoint: /rcvideo/v2/account/{accountId}/extension/{extensionId}/bridges/default
    * Rate Limit Group: Medium

@@ -1,5 +1,5 @@
-import CreateForwardingNumberDeviceInfo from './CreateForwardingNumberDeviceInfo';
-import ForwardingNumberInfoExtension from './ForwardingNumberInfoExtension';
+import type CreateForwardingNumberDeviceInfo from './CreateForwardingNumberDeviceInfo';
+import type ForwardingNumberInfoExtension from './ForwardingNumberInfoExtension';
 
 interface ForwardingNumberInfo {
   /**
@@ -40,7 +40,16 @@ interface ForwardingNumberInfo {
   /**
    * Forwarding phone number type
    */
-  type?: ('Home' | 'Mobile' | 'Work' | 'PhoneLine' | 'Outage' | 'Other' | 'BusinessMobilePhone' | 'ExternalCarrier' | 'ExtensionApps');
+  type?:
+    | 'Home'
+    | 'Mobile'
+    | 'Work'
+    | 'PhoneLine'
+    | 'Outage'
+    | 'Other'
+    | 'BusinessMobilePhone'
+    | 'ExternalCarrier'
+    | 'ExtensionApps';
 
   /**
    * Extension information. Returned only if extension type is 'ExtensionApps'

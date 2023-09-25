@@ -1,7 +1,7 @@
-import CountryListDictionaryModel from '../../../../../definitions/CountryListDictionaryModel';
-import ListDomesticCountriesParameters from '../../../../../definitions/ListDomesticCountriesParameters';
-import ContractedCountryListResponse from '../../../../../definitions/ContractedCountryListResponse';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import type CountryListDictionaryModel from '../../../../../definitions/CountryListDictionaryModel';
+import type ListDomesticCountriesParameters from '../../../../../definitions/ListDomesticCountriesParameters';
+import type ContractedCountryListResponse from '../../../../../definitions/ContractedCountryListResponse';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -36,12 +36,15 @@ class Index {
 
   /**
    * Returns the list of domestic countries for account contracted country and brand.
- *
+   *
    * HTTP Method: get
    * Endpoint: /restapi/{apiVersion}/dictionary/brand/{brandId}/contracted-country/{contractedCountryId}
    * Rate Limit Group: Light
    */
-  public async get(queryParams?: ListDomesticCountriesParameters, restRequestConfig?: RestRequestConfig): Promise<CountryListDictionaryModel> {
+  public async get(
+    queryParams?: ListDomesticCountriesParameters,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<CountryListDictionaryModel> {
     if (this.contractedCountryId === null) {
       throw new Error('contractedCountryId must be specified.');
     }

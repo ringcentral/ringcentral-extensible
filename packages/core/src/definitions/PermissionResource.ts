@@ -1,5 +1,5 @@
-import PermissionCategoryIdResource from './PermissionCategoryIdResource';
-import PermissionIdResource from './PermissionIdResource';
+import type PermissionCategoryIdResource from './PermissionCategoryIdResource';
+import type PermissionIdResource from './PermissionIdResource';
 
 interface PermissionResource {
   /**
@@ -30,7 +30,7 @@ interface PermissionResource {
   /**
    * Site compatibility flag set for permission
    */
-  siteCompatible?: ('Incompatible' | 'Compatible' | 'Independent');
+  siteCompatible?: 'Incompatible' | 'Compatible' | 'Independent';
 
   /**
    */

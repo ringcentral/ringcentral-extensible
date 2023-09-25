@@ -1,6 +1,6 @@
 /**
  * Postal address/location
-*/
+ */
 interface PostalAddress {
   /**
    * Street address

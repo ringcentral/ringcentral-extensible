@@ -1,5 +1,5 @@
 import Meetings from './Meetings';
-import { RingCentralInterface, ParentInterface } from '../../../../types';
+import type { RingCentralInterface, ParentInterface } from '../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -15,7 +15,7 @@ class Index {
     return `${this._parent.path(false)}/history`;
   }
 
-  public meetings(meetingId: (string | null) = null): Meetings {
+  public meetings(meetingId: string | null = null): Meetings {
     return new Meetings(this, meetingId);
   }
 }

@@ -7,7 +7,7 @@ interface TMTeamInfo {
   /**
    * Type of a chat
    */
-  type?: ('Team');
+  type?: 'Team';
 
   /**
    * Team access level
@@ -27,7 +27,7 @@ interface TMTeamInfo {
   /**
    * Team status
    */
-  status?: ('Active' | 'Archived');
+  status?: 'Active' | 'Archived';
 
   /**
    * Team creation datetime in ISO 8601 format

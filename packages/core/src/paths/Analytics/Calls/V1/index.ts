@@ -1,5 +1,5 @@
 import Accounts from './Accounts';
-import { RingCentralInterface, ParentInterface } from '../../../../types';
+import type { RingCentralInterface, ParentInterface } from '../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -15,7 +15,7 @@ class Index {
     return `${this._parent.path(false)}/v1`;
   }
 
-  public accounts(accountId: (string | null) = null): Accounts {
+  public accounts(accountId: string | null = null): Accounts {
     return new Accounts(this, accountId);
   }
 }

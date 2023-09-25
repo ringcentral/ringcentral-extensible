@@ -1,6 +1,6 @@
 /**
  * Query parameters for operation listBlockedAllowedNumbers
-*/
+ */
 interface ListBlockedAllowedNumbersParameters {
   /**
    * The result set page number (1-indexed) to return
@@ -14,7 +14,7 @@ interface ListBlockedAllowedNumbersParameters {
 
   /**
    * The number of items per page. If provided value in the request
- *  is greater than a maximum, the maximum value is applied
+   *  is greater than a maximum, the maximum value is applied
    * Maximum: 1000
    * Minimum: 1
    * Format: int32
@@ -27,7 +27,7 @@ interface ListBlockedAllowedNumbersParameters {
    * Status of a phone number
    * Default: Blocked
    */
-  status?: ('Blocked' | 'Allowed');
+  status?: 'Blocked' | 'Allowed';
 }
 
 export default ListBlockedAllowedNumbersParameters;

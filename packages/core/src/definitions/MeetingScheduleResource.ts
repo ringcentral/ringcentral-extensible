@@ -1,8 +1,8 @@
-import MeetingsTimezoneResource from './MeetingsTimezoneResource';
+import type MeetingsTimezoneResource from './MeetingsTimezoneResource';
 
 /**
  * Timing of a meeting
-*/
+ */
 interface MeetingScheduleResource {
   /**
    * Format: date-time

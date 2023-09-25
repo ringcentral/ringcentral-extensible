@@ -1,5 +1,5 @@
 import Extensions from './Extensions';
-import { RingCentralInterface, ParentInterface } from '../../../../types';
+import type { RingCentralInterface, ParentInterface } from '../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -21,7 +21,7 @@ class Index {
     return `${this._parent.path()}/accounts`;
   }
 
-  public extensions(extensionId: (string | null) = null): Extensions {
+  public extensions(extensionId: string | null = null): Extensions {
     return new Extensions(this, extensionId);
   }
 }

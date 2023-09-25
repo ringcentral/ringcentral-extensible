@@ -1,6 +1,6 @@
-import TokenInfo from '../../../../definitions/TokenInfo';
-import GetTokenRequest from '../../../../definitions/GetTokenRequest';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
+import type TokenInfo from '../../../../definitions/TokenInfo';
+import type GetTokenRequest from '../../../../definitions/GetTokenRequest';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -18,11 +18,11 @@ class Index {
 
   /**
    * Returns access (and potentially refresh) tokens for making API requests.
- *
- * Depending on client application type
- * requests to this endpoint may require authentication with HTTP Basic scheme
- * using registered client ID and client secret as login and password, correspondingly.
- *
+   *
+   * Depending on client application type
+   * requests to this endpoint may require authentication with HTTP Basic scheme
+   * using registered client ID and client secret as login and password, correspondingly.
+   *
    * HTTP Method: post
    * Endpoint: /restapi/oauth/token
    * Rate Limit Group: Auth

@@ -1,6 +1,6 @@
-import MeetingRecordings from './MeetingRecordings';
-import MeetingRecordingsPagingInfo from './MeetingRecordingsPagingInfo';
-import MeetingRecordingsNavigationInfo from './MeetingRecordingsNavigationInfo';
+import type MeetingRecordings from './MeetingRecordings';
+import type MeetingRecordingsPagingInfo from './MeetingRecordingsPagingInfo';
+import type MeetingRecordingsNavigationInfo from './MeetingRecordingsNavigationInfo';
 
 interface ListMeetingRecordingsResponse {
   /**

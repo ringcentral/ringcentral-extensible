@@ -1,5 +1,5 @@
-import PermissionIdResource from './PermissionIdResource';
-import RoleIdResource from './RoleIdResource';
+import type PermissionIdResource from './PermissionIdResource';
+import type RoleIdResource from './RoleIdResource';
 
 interface ActivePermissionResource {
   /**
@@ -12,7 +12,15 @@ interface ActivePermissionResource {
 
   /**
    */
-  scopes?: ('Account' | 'AllExtensions' | 'Federation' | 'NonUserExtensions' | 'RoleBased' | 'Self' | 'UserExtensions')[];
+  scopes?: (
+    | 'Account'
+    | 'AllExtensions'
+    | 'Federation'
+    | 'NonUserExtensions'
+    | 'RoleBased'
+    | 'Self'
+    | 'UserExtensions'
+  )[];
 }
 
 export default ActivePermissionResource;

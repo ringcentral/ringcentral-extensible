@@ -1,4 +1,4 @@
-import RejectedRecipientResponseResource from './RejectedRecipientResponseResource';
+import type RejectedRecipientResponseResource from './RejectedRecipientResponseResource';
 
 /**
  * Batch of A2P SMS messages. This object provides a specification
@@ -6,7 +6,7 @@ import RejectedRecipientResponseResource from './RejectedRecipientResponseResour
  * to that, it is possible to override this attribute for each message. This
  * way a single API call may be used to send individual messages to many recipients
  *
-*/
+ */
 interface MessageBatchResponse {
   /**
    * Unique identifier of the message batch
@@ -44,7 +44,7 @@ interface MessageBatchResponse {
    * Current status of a message batch
    * Example: Processing
    */
-  status?: ('Processing' | 'Completed');
+  status?: 'Processing' | 'Completed';
 
   /**
    * The time at which the batch was created

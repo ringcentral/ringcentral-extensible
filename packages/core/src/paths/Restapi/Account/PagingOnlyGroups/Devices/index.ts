@@ -1,6 +1,6 @@
-import PagingOnlyGroupDevices from '../../../../../definitions/PagingOnlyGroupDevices';
-import ListPagingGroupDevicesParameters from '../../../../../definitions/ListPagingGroupDevicesParameters';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import type PagingOnlyGroupDevices from '../../../../../definitions/PagingOnlyGroupDevices';
+import type ListPagingGroupDevicesParameters from '../../../../../definitions/ListPagingGroupDevicesParameters';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -18,14 +18,17 @@ class Index {
 
   /**
    * Returns a list of paging devices assigned to this group.
- *
+   *
    * HTTP Method: get
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/paging-only-groups/{pagingOnlyGroupId}/devices
    * Rate Limit Group: Light
    * App Permission: ReadAccounts
    * User Permission: ReadCompanyDevices
    */
-  public async get(queryParams?: ListPagingGroupDevicesParameters, restRequestConfig?: RestRequestConfig): Promise<PagingOnlyGroupDevices> {
+  public async get(
+    queryParams?: ListPagingGroupDevicesParameters,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<PagingOnlyGroupDevices> {
     const r = await this.rc.get<PagingOnlyGroupDevices>(this.path(), queryParams, restRequestConfig);
     return r.data;
   }

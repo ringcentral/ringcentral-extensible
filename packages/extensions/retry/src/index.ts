@@ -1,38 +1,28 @@
-import RingCentral from '@rc-ex/core';
-import {
-  RestRequestConfig,
-  RestResponse,
-  RestMethod,
-} from '@rc-ex/core/lib/types';
+import type RingCentral from '@rc-ex/core';
+import type { RestRequestConfig, RestResponse, RestMethod } from '@rc-ex/core/lib/types';
 import SdkExtension from '@rc-ex/core/lib/SdkExtension';
 import RestException from '@rc-ex/core/lib/RestException';
 import waitFor from 'wait-for-async';
 
-export type ShouldRetry = (
-  restException: RestException,
-  retriesAttempted: number
-) => boolean;
-export type RetryInterval = (
-  restException: RestException,
-  retriesAttempted: number
-) => number;
-export type RetryOptions = {
+export type ShouldRetry = (restException: RestException, retriesAttempted: number) => boolean;
+export type RetryInterval = (restException: RestException, retriesAttempted: number) => number;
+export interface RetryOptions {
   shouldRetry?: ShouldRetry;
   retryInterval?: RetryInterval;
-};
+}
 
 class RetryExtension extends SdkExtension {
-  options: RetryOptions;
+  public options: RetryOptions;
 
-  constructor(options: RetryOptions = {}) {
+  public constructor(options: RetryOptions = {}) {
     super();
     this.options = options;
-    this.options.shouldRetry ??= (restException, retriesAttempted) => retriesAttempted < 3
-      && [429, 503].includes(restException.response.status);
+    this.options.shouldRetry ??= (restException, retriesAttempted) =>
+      retriesAttempted < 3 && [429, 503].includes(restException.response.status);
     this.options.retryInterval ??= (restException, retriesAttempted) => 60 * 1000 * 2 ** retriesAttempted; // exponential back off
   }
 
-  async install(rc: RingCentral) {
+  public async install(rc: RingCentral) {
     const request = rc.request.bind(rc);
     const newRequest = async <T>(
       method: RestMethod,
@@ -41,26 +31,20 @@ class RetryExtension extends SdkExtension {
       queryParams?: {},
       config?: RestRequestConfig,
       retriesAttempted = 0,
+      // eslint-disable-next-line max-params
     ): Promise<RestResponse<T>> => {
       if (!this.enabled) {
-        return request<T>(method, endpoint, content, queryParams, config);
+        return request(method, endpoint, content, queryParams, config);
       }
       try {
-        return await request<T>(method, endpoint, content, queryParams, config);
+        return await request(method, endpoint, content, queryParams, config);
       } catch (e) {
         if (e instanceof RestException) {
           if (this.options.shouldRetry!(e, retriesAttempted)) {
             await waitFor({
               interval: this.options.retryInterval!(e, retriesAttempted),
             });
-            return await newRequest<T>(
-              method,
-              endpoint,
-              content,
-              queryParams,
-              config,
-              retriesAttempted + 1,
-            );
+            return await newRequest<T>(method, endpoint, content, queryParams, config, retriesAttempted + 1);
           }
         }
         throw e;
@@ -70,7 +54,7 @@ class RetryExtension extends SdkExtension {
   }
 
   // eslint-disable-next-line class-methods-use-this, @typescript-eslint/no-empty-function
-  async revoke(): Promise<void> { }
+  public async revoke(): Promise<void> {}
 }
 
 export default RetryExtension;

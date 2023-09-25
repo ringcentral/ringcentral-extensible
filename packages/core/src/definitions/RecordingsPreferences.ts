@@ -1,8 +1,8 @@
-import EveryoneCanControl from './EveryoneCanControl';
+import type EveryoneCanControl from './EveryoneCanControl';
 
 /**
  * Recordings preferences
-*/
+ */
 interface RecordingsPreferences {
   /**
    */

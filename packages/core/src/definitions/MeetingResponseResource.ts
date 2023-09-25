@@ -1,8 +1,8 @@
-import MeetingLinks from './MeetingLinks';
-import MeetingScheduleResource from './MeetingScheduleResource';
-import HostInfoRequest from './HostInfoRequest';
-import RecurrenceInfo from './RecurrenceInfo';
-import MeetingOccurrenceInfo from './MeetingOccurrenceInfo';
+import type MeetingLinks from './MeetingLinks';
+import type MeetingScheduleResource from './MeetingScheduleResource';
+import type HostInfoRequest from './HostInfoRequest';
+import type RecurrenceInfo from './RecurrenceInfo';
+import type MeetingOccurrenceInfo from './MeetingOccurrenceInfo';
 
 interface MeetingResponseResource {
   /**
@@ -28,7 +28,7 @@ interface MeetingResponseResource {
 
   /**
    */
-  meetingType?: ('Instant' | 'Scheduled' | 'ScheduledRecurring' | 'Recurring');
+  meetingType?: 'Instant' | 'Scheduled' | 'ScheduledRecurring' | 'Recurring';
 
   /**
    * Meeting password
@@ -83,7 +83,7 @@ interface MeetingResponseResource {
    * Automatic record type
    * Default: none
    */
-  autoRecordType?: ('local' | 'cloud' | 'none');
+  autoRecordType?: 'local' | 'cloud' | 'none';
 
   /**
    * If true, then only signed-in users can join this meeting

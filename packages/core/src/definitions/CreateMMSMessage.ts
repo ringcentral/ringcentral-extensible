@@ -1,6 +1,6 @@
-import MessageStoreCallerInfoRequest from './MessageStoreCallerInfoRequest';
-import MessageCountryInfo from './MessageCountryInfo';
-import Attachment from './Attachment';
+import type MessageStoreCallerInfoRequest from './MessageStoreCallerInfoRequest';
+import type MessageCountryInfo from './MessageCountryInfo';
+import type Attachment from './Attachment';
 
 interface CreateMMSMessage {
   /**
@@ -16,8 +16,8 @@ interface CreateMMSMessage {
 
   /**
    * Text of a message. Max length is 1000 symbols (2-byte UTF-16
- *  encoded). If a character is encoded in 4 bytes in UTF-16 it is treated
- *  as 2 characters, thus restricting the maximum message length to 500 symbols
+   *  encoded). If a character is encoded in 4 bytes in UTF-16 it is treated
+   *  as 2 characters, thus restricting the maximum message length to 500 symbols
    */
   text?: string;
 

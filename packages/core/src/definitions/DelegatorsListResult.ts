@@ -1,4 +1,4 @@
-import Delegate from './Delegate';
+import type Delegate from './Delegate';
 
 interface DelegatorsListResult {
   /**

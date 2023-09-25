@@ -1,5 +1,5 @@
-import AssignedRolesResource from '../../../../../../definitions/AssignedRolesResource';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../types';
+import type AssignedRolesResource from '../../../../../../definitions/AssignedRolesResource';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../types';
 
 class Index {
   public rc: RingCentralInterface;

@@ -4,7 +4,7 @@
  * `emergencyAddress` or `emergencyLocationId` should be specified,
  * otherwise an error is returned
  *
-*/
+ */
 interface EmergencyAddressInfoDefault {
   /**
    * Name of a customer
@@ -13,13 +13,13 @@ interface EmergencyAddressInfoDefault {
 
   /**
    * Street address, line 1 - street address, P.O. box, company
- *  name, c/o
+   *  name, c/o
    */
   street?: string;
 
   /**
    * Street address, line 2 - apartment, suite, unit, building,
- *  floor, etc.
+   *  floor, etc.
    */
   street2?: string;
 
@@ -75,10 +75,10 @@ interface EmergencyAddressInfoDefault {
 
   /**
    * Resulting status of emergency address synchronization. Returned
- *  for 'Get Device Info' request if `syncEmergencyAddress` parameter is set
- *  to 'True'
+   *  for 'Get Device Info' request if `syncEmergencyAddress` parameter is set
+   *  to 'True'
    */
-  syncStatus?: ('Verified' | 'Updated' | 'Deleted' | 'NotRequired' | 'Unsupported' | 'Failed');
+  syncStatus?: 'Verified' | 'Updated' | 'Deleted' | 'NotRequired' | 'Unsupported' | 'Failed';
 }
 
 export default EmergencyAddressInfoDefault;

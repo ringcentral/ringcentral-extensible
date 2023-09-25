@@ -1,11 +1,11 @@
-import UpdateAnsweringRuleRequest from '../../../../../definitions/UpdateAnsweringRuleRequest';
-import AnsweringRuleInfo from '../../../../../definitions/AnsweringRuleInfo';
-import ReadAnsweringRuleParameters from '../../../../../definitions/ReadAnsweringRuleParameters';
-import CustomAnsweringRuleInfo from '../../../../../definitions/CustomAnsweringRuleInfo';
-import CreateAnsweringRuleRequest from '../../../../../definitions/CreateAnsweringRuleRequest';
-import UserAnsweringRuleList from '../../../../../definitions/UserAnsweringRuleList';
-import ListAnsweringRulesParameters from '../../../../../definitions/ListAnsweringRulesParameters';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import type UpdateAnsweringRuleRequest from '../../../../../definitions/UpdateAnsweringRuleRequest';
+import type AnsweringRuleInfo from '../../../../../definitions/AnsweringRuleInfo';
+import type ReadAnsweringRuleParameters from '../../../../../definitions/ReadAnsweringRuleParameters';
+import type CustomAnsweringRuleInfo from '../../../../../definitions/CustomAnsweringRuleInfo';
+import type CreateAnsweringRuleRequest from '../../../../../definitions/CreateAnsweringRuleRequest';
+import type UserAnsweringRuleList from '../../../../../definitions/UserAnsweringRuleList';
+import type ListAnsweringRulesParameters from '../../../../../definitions/ListAnsweringRulesParameters';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -35,7 +35,10 @@ class Index {
    * App Permission: ReadAccounts
    * User Permission: ReadUserAnsweringRules
    */
-  public async list(queryParams?: ListAnsweringRulesParameters, restRequestConfig?: RestRequestConfig): Promise<UserAnsweringRuleList> {
+  public async list(
+    queryParams?: ListAnsweringRulesParameters,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<UserAnsweringRuleList> {
     const r = await this.rc.get<UserAnsweringRuleList>(this.path(false), queryParams, restRequestConfig);
     return r.data;
   }
@@ -48,8 +51,16 @@ class Index {
    * App Permission: EditExtensions
    * User Permission: EditUserAnsweringRules
    */
-  public async post(createAnsweringRuleRequest: CreateAnsweringRuleRequest, restRequestConfig?: RestRequestConfig): Promise<CustomAnsweringRuleInfo> {
-    const r = await this.rc.post<CustomAnsweringRuleInfo>(this.path(false), createAnsweringRuleRequest, undefined, restRequestConfig);
+  public async post(
+    createAnsweringRuleRequest: CreateAnsweringRuleRequest,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<CustomAnsweringRuleInfo> {
+    const r = await this.rc.post<CustomAnsweringRuleInfo>(
+      this.path(false),
+      createAnsweringRuleRequest,
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -61,7 +72,10 @@ class Index {
    * App Permission: ReadAccounts
    * User Permission: ReadUserAnsweringRules
    */
-  public async get(queryParams?: ReadAnsweringRuleParameters, restRequestConfig?: RestRequestConfig): Promise<AnsweringRuleInfo> {
+  public async get(
+    queryParams?: ReadAnsweringRuleParameters,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<AnsweringRuleInfo> {
     if (this.ruleId === null) {
       throw new Error('ruleId must be specified.');
     }
@@ -77,11 +91,19 @@ class Index {
    * App Permission: EditExtensions
    * User Permission: EditUserAnsweringRules
    */
-  public async put(updateAnsweringRuleRequest: UpdateAnsweringRuleRequest, restRequestConfig?: RestRequestConfig): Promise<AnsweringRuleInfo> {
+  public async put(
+    updateAnsweringRuleRequest: UpdateAnsweringRuleRequest,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<AnsweringRuleInfo> {
     if (this.ruleId === null) {
       throw new Error('ruleId must be specified.');
     }
-    const r = await this.rc.put<AnsweringRuleInfo>(this.path(), updateAnsweringRuleRequest, undefined, restRequestConfig);
+    const r = await this.rc.put<AnsweringRuleInfo>(
+      this.path(),
+      updateAnsweringRuleRequest,
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 

@@ -1,7 +1,7 @@
 import Invitees from './Invitees';
-import WcsSessionResource from '../../../../../../definitions/WcsSessionResource';
-import WcsSessionWithLocaleCodeModel from '../../../../../../definitions/WcsSessionWithLocaleCodeModel';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../types';
+import type WcsSessionResource from '../../../../../../definitions/WcsSessionResource';
+import type WcsSessionWithLocaleCodeModel from '../../../../../../definitions/WcsSessionWithLocaleCodeModel';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -30,8 +30,16 @@ class Index {
    * Rate Limit Group: Heavy
    * App Permission: EditWebinars
    */
-  public async post(wcsSessionWithLocaleCodeModel: WcsSessionWithLocaleCodeModel, restRequestConfig?: RestRequestConfig): Promise<WcsSessionResource> {
-    const r = await this.rc.post<WcsSessionResource>(this.path(false), wcsSessionWithLocaleCodeModel, undefined, restRequestConfig);
+  public async post(
+    wcsSessionWithLocaleCodeModel: WcsSessionWithLocaleCodeModel,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<WcsSessionResource> {
+    const r = await this.rc.post<WcsSessionResource>(
+      this.path(false),
+      wcsSessionWithLocaleCodeModel,
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -52,8 +60,8 @@ class Index {
 
   /**
    * Deletes a Webinar Session. All child objects (Invitees) will be also deleted.
- * It is disallowed to delete a Session which is in 'Active' or 'Finished' state
- *
+   * It is disallowed to delete a Session which is in 'Active' or 'Finished' state
+   *
    * HTTP Method: delete
    * Endpoint: /webinar/configuration/v1/webinars/{webinarId}/sessions/{sessionId}
    * Rate Limit Group: Heavy
@@ -69,24 +77,32 @@ class Index {
 
   /**
    * Updates a Webinar Session. The payload may contain certain attributes from the Session resource
- * (it is a partial update). Changing the 'status' field usually invokes certain workflow actions.
- * Updating a Session in 'Active' or 'Finished' status is prohibited.
- * Some status transitions (for example, to 'Active" or 'Finished') may be prohibited.
- *
+   * (it is a partial update). Changing the 'status' field usually invokes certain workflow actions.
+   * Updating a Session in 'Active' or 'Finished' status is prohibited.
+   * Some status transitions (for example, to 'Active" or 'Finished') may be prohibited.
+   *
    * HTTP Method: patch
    * Endpoint: /webinar/configuration/v1/webinars/{webinarId}/sessions/{sessionId}
    * Rate Limit Group: Heavy
    * App Permission: EditWebinars
    */
-  public async patch(wcsSessionWithLocaleCodeModel: WcsSessionWithLocaleCodeModel, restRequestConfig?: RestRequestConfig): Promise<WcsSessionResource> {
+  public async patch(
+    wcsSessionWithLocaleCodeModel: WcsSessionWithLocaleCodeModel,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<WcsSessionResource> {
     if (this.sessionId === null) {
       throw new Error('sessionId must be specified.');
     }
-    const r = await this.rc.patch<WcsSessionResource>(this.path(), wcsSessionWithLocaleCodeModel, undefined, restRequestConfig);
+    const r = await this.rc.patch<WcsSessionResource>(
+      this.path(),
+      wcsSessionWithLocaleCodeModel,
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 
-  public invitees(inviteeId: (string | null) = null): Invitees {
+  public invitees(inviteeId: string | null = null): Invitees {
     return new Invitees(this, inviteeId);
   }
 }

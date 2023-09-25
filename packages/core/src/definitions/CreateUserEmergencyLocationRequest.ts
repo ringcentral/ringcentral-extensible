@@ -1,4 +1,4 @@
-import CreateUserEmergencyLocationRequestAddress from './CreateUserEmergencyLocationRequestAddress';
+import type CreateUserEmergencyLocationRequestAddress from './CreateUserEmergencyLocationRequestAddress';
 
 interface CreateUserEmergencyLocationRequest {
   /**

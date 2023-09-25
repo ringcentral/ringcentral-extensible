@@ -1,5 +1,5 @@
-import MessageStoreReportArchive from '../../../../../definitions/MessageStoreReportArchive';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import type MessageStoreReportArchive from '../../../../../definitions/MessageStoreReportArchive';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
   public rc: RingCentralInterface;

@@ -1,7 +1,7 @@
 import Sessions from './Sessions';
 import Webinars from './Webinars';
 import Company from './Company';
-import { RingCentralInterface, ParentInterface } from '../../../../types';
+import type { RingCentralInterface, ParentInterface } from '../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -21,7 +21,7 @@ class Index {
     return new Company(this);
   }
 
-  public webinars(webinarId: (string | null) = null): Webinars {
+  public webinars(webinarId: string | null = null): Webinars {
     return new Webinars(this, webinarId);
   }
 

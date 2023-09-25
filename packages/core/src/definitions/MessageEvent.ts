@@ -1,4 +1,4 @@
-import MessageEventBody from './MessageEventBody';
+import type MessageEventBody from './MessageEventBody';
 
 interface MessageEvent {
   /**

@@ -1,4 +1,4 @@
-import DeviceDefinition from './DeviceDefinition';
+import type DeviceDefinition from './DeviceDefinition';
 
 interface BatchProvisionUsersRequestItemDevices {
   /**

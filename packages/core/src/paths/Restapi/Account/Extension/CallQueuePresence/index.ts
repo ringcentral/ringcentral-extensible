@@ -1,7 +1,7 @@
-import ExtensionCallQueueUpdatePresenceList from '../../../../../definitions/ExtensionCallQueueUpdatePresenceList';
-import ExtensionCallQueuePresenceList from '../../../../../definitions/ExtensionCallQueuePresenceList';
-import ReadExtensionCallQueuePresenceParameters from '../../../../../definitions/ReadExtensionCallQueuePresenceParameters';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import type ExtensionCallQueueUpdatePresenceList from '../../../../../definitions/ExtensionCallQueueUpdatePresenceList';
+import type ExtensionCallQueuePresenceList from '../../../../../definitions/ExtensionCallQueuePresenceList';
+import type ReadExtensionCallQueuePresenceParameters from '../../../../../definitions/ReadExtensionCallQueuePresenceParameters';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -24,7 +24,10 @@ class Index {
    * Rate Limit Group: Light
    * App Permission: ReadPresence
    */
-  public async get(queryParams?: ReadExtensionCallQueuePresenceParameters, restRequestConfig?: RestRequestConfig): Promise<ExtensionCallQueuePresenceList> {
+  public async get(
+    queryParams?: ReadExtensionCallQueuePresenceParameters,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<ExtensionCallQueuePresenceList> {
     const r = await this.rc.get<ExtensionCallQueuePresenceList>(this.path(), queryParams, restRequestConfig);
     return r.data;
   }
@@ -36,8 +39,16 @@ class Index {
    * Rate Limit Group: Medium
    * App Permission: EditPresence
    */
-  public async put(extensionCallQueueUpdatePresenceList: ExtensionCallQueueUpdatePresenceList, restRequestConfig?: RestRequestConfig): Promise<ExtensionCallQueuePresenceList> {
-    const r = await this.rc.put<ExtensionCallQueuePresenceList>(this.path(), extensionCallQueueUpdatePresenceList, undefined, restRequestConfig);
+  public async put(
+    extensionCallQueueUpdatePresenceList: ExtensionCallQueueUpdatePresenceList,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<ExtensionCallQueuePresenceList> {
+    const r = await this.rc.put<ExtensionCallQueuePresenceList>(
+      this.path(),
+      extensionCallQueueUpdatePresenceList,
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

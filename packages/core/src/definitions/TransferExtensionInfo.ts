@@ -1,6 +1,6 @@
 /**
  * Transfer extension settings, set/returned if `callHandlingAction` is specified as `TransferToExtension`
-*/
+ */
 interface TransferExtensionInfo {
   /**
    * Internal identifier of an extension

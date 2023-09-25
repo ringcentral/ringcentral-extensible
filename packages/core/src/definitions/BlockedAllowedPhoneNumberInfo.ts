@@ -1,6 +1,6 @@
 /**
  * Information on a blocked/allowed phone number
-*/
+ */
 interface BlockedAllowedPhoneNumberInfo {
   /**
    * Link to a blocked/allowed phone number
@@ -27,7 +27,7 @@ interface BlockedAllowedPhoneNumberInfo {
    * Status of a phone number
    * Default: Blocked
    */
-  status?: ('Blocked' | 'Allowed');
+  status?: 'Blocked' | 'Allowed';
 }
 
 export default BlockedAllowedPhoneNumberInfo;

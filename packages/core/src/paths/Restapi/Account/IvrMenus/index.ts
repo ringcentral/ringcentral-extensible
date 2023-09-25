@@ -1,6 +1,6 @@
-import IVRMenuInfo from '../../../../definitions/IVRMenuInfo';
-import IVRMenuList from '../../../../definitions/IVRMenuList';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
+import type IVRMenuInfo from '../../../../definitions/IVRMenuInfo';
+import type IVRMenuList from '../../../../definitions/IVRMenuList';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
 
 class Index {
   public rc: RingCentralInterface;

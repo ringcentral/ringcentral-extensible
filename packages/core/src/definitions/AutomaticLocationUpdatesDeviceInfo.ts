@@ -1,6 +1,6 @@
-import AutomaticLocationUpdatesModelInfo from './AutomaticLocationUpdatesModelInfo';
-import AutomaticLocationUpdatesSiteInfo from './AutomaticLocationUpdatesSiteInfo';
-import AutomaticLocationUpdatesPhoneLine from './AutomaticLocationUpdatesPhoneLine';
+import type AutomaticLocationUpdatesModelInfo from './AutomaticLocationUpdatesModelInfo';
+import type AutomaticLocationUpdatesSiteInfo from './AutomaticLocationUpdatesSiteInfo';
+import type AutomaticLocationUpdatesPhoneLine from './AutomaticLocationUpdatesPhoneLine';
 
 interface AutomaticLocationUpdatesDeviceInfo {
   /**
@@ -12,7 +12,7 @@ interface AutomaticLocationUpdatesDeviceInfo {
    * Device type
    * Default: HardPhone
    */
-  type?: ('HardPhone' | 'SoftPhone' | 'OtherPhone');
+  type?: 'HardPhone' | 'SoftPhone' | 'OtherPhone';
 
   /**
    * Serial number for HardPhone (is returned only when the phone is shipped and provisioned)

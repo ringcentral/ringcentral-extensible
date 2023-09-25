@@ -1,7 +1,7 @@
-import MessageDetailsResponse from '../../../../../definitions/MessageDetailsResponse';
-import MessageListResponse from '../../../../../definitions/MessageListResponse';
-import ListA2PSMSParameters from '../../../../../definitions/ListA2PSMSParameters';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import type MessageDetailsResponse from '../../../../../definitions/MessageDetailsResponse';
+import type MessageListResponse from '../../../../../definitions/MessageListResponse';
+import type ListA2PSMSParameters from '../../../../../definitions/ListA2PSMSParameters';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -30,7 +30,10 @@ class Index {
    * Rate Limit Group: Light
    * App Permission: A2PSMS
    */
-  public async list(queryParams?: ListA2PSMSParameters, restRequestConfig?: RestRequestConfig): Promise<MessageListResponse> {
+  public async list(
+    queryParams?: ListA2PSMSParameters,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<MessageListResponse> {
     const r = await this.rc.get<MessageListResponse>(this.path(false), queryParams, restRequestConfig);
     return r.data;
   }

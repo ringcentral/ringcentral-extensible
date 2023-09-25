@@ -1,8 +1,8 @@
-import MessageStatusCounts from './MessageStatusCounts';
+import type MessageStatusCounts from './MessageStatusCounts';
 
 /**
  * The messages status object with details of each status
-*/
+ */
 interface MessageStatusesResponse {
   /**
    */

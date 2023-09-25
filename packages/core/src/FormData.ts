@@ -1,6 +1,6 @@
-import { Stream } from 'stream';
+import type { Stream } from 'stream';
 
-import { FormFile } from './types';
+import type { FormFile } from './types';
 
 async function stream2buffer(stream: Stream): Promise<Buffer> {
   return new Promise<Buffer>((resolve, reject) => {
@@ -13,17 +13,17 @@ async function stream2buffer(stream: Stream): Promise<Buffer> {
 
 export const boundary = 'ad05fc42-a66d-4a94-b807-f1c91136c17b';
 class FormData {
-  files: FormFile[] = [];
+  public files: FormFile[] = [];
 
-  append(formFile: FormFile) {
+  public append(formFile: FormFile) {
     this.files.push(formFile);
   }
 
-  prepend(formFile: FormFile) {
+  public prepend(formFile: FormFile) {
     this.files.unshift(formFile);
   }
 
-  async getBody() {
+  public async getBody() {
     let buffer = Buffer.alloc(0);
     for (const formFile of this.files) {
       let temp = `--${boundary}\r\n`;
@@ -43,10 +43,7 @@ class FormData {
       }
       buffer = Buffer.concat([buffer, fileBuffer]);
     }
-    return Buffer.concat([
-      buffer,
-      Buffer.from(`\r\n--${boundary}--\r\n`, 'utf8'),
-    ]);
+    return Buffer.concat([buffer, Buffer.from(`\r\n--${boundary}--\r\n`, 'utf8')]);
   }
 }
 

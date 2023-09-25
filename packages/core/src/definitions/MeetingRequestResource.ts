@@ -1,6 +1,6 @@
-import MeetingScheduleResource from './MeetingScheduleResource';
-import HostInfoRequest from './HostInfoRequest';
-import RecurrenceInfo from './RecurrenceInfo';
+import type MeetingScheduleResource from './MeetingScheduleResource';
+import type HostInfoRequest from './HostInfoRequest';
+import type RecurrenceInfo from './RecurrenceInfo';
 
 interface MeetingRequestResource {
   /**
@@ -10,7 +10,7 @@ interface MeetingRequestResource {
 
   /**
    */
-  meetingType?: ('Instant' | 'Scheduled' | 'ScheduledRecurring' | 'Recurring');
+  meetingType?: 'Instant' | 'Scheduled' | 'ScheduledRecurring' | 'Recurring';
 
   /**
    */
@@ -56,7 +56,7 @@ interface MeetingRequestResource {
    * Automatic record type
    * Default: none
    */
-  autoRecordType?: ('local' | 'cloud' | 'none');
+  autoRecordType?: 'local' | 'cloud' | 'none';
 
   /**
    * If true, then only signed-in users can join this meeting

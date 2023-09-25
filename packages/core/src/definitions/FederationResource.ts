@@ -1,4 +1,4 @@
-import FederatedAccountResource from './FederatedAccountResource';
+import type FederatedAccountResource from './FederatedAccountResource';
 
 interface FederationResource {
   /**
@@ -26,7 +26,7 @@ interface FederationResource {
   /**
    * Federation type
    */
-  type?: ('Regular' | 'AdminOnly');
+  type?: 'Regular' | 'AdminOnly';
 }
 
 export default FederationResource;

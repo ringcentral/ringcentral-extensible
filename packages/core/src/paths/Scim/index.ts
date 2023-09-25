@@ -2,7 +2,7 @@ import ServiceProviderConfig from './ServiceProviderConfig';
 import ResourceTypes from './ResourceTypes';
 import Schemas from './Schemas';
 import Users from './Users';
-import { RingCentralInterface } from '../../types';
+import type { RingCentralInterface } from '../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -21,15 +21,15 @@ class Index {
     return '/scim';
   }
 
-  public users(scimUserId: (string | null) = null): Users {
+  public users(scimUserId: string | null = null): Users {
     return new Users(this, scimUserId);
   }
 
-  public schemas(uri: (string | null) = null): Schemas {
+  public schemas(uri: string | null = null): Schemas {
     return new Schemas(this, uri);
   }
 
-  public resourceTypes(type: (string | null) = null): ResourceTypes {
+  public resourceTypes(type: string | null = null): ResourceTypes {
     return new ResourceTypes(this, type);
   }
 

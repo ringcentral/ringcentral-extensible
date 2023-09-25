@@ -1,7 +1,7 @@
-import CountryInfoBasicModel from './CountryInfoBasicModel';
-import ExtensionInfo from './ExtensionInfo';
-import TemporaryNumberInfo from './TemporaryNumberInfo';
-import ContactCenterProvider from './ContactCenterProvider';
+import type CountryInfoBasicModel from './CountryInfoBasicModel';
+import type ExtensionInfo from './ExtensionInfo';
+import type TemporaryNumberInfo from './TemporaryNumberInfo';
+import type ContactCenterProvider from './ContactCenterProvider';
 
 interface CompanyPhoneNumberInfo {
   /**
@@ -36,9 +36,9 @@ interface CompanyPhoneNumberInfo {
 
   /**
    * Payment type. 'External' is returned for forwarded numbers
- *  which are not terminated in the RingCentral phone system
+   *  which are not terminated in the RingCentral phone system
    */
-  paymentType?: ('External' | 'TollFree' | 'Local' | 'BusinessMobileNumberProvider' | 'ExternalNumberProvider');
+  paymentType?: 'External' | 'TollFree' | 'Local' | 'BusinessMobileNumberProvider' | 'ExternalNumberProvider';
 
   /**
    * Phone number
@@ -47,22 +47,36 @@ interface CompanyPhoneNumberInfo {
 
   /**
    * Status of a phone number. If the value is 'Normal', the phone
- *  number is ready to be used. If the value is 'Pending' it is an
- *  external number not yet ported to RingCentral.
+   *  number is ready to be used. If the value is 'Pending' it is an
+   *  external number not yet ported to RingCentral.
    */
-  status?: ('Normal' | 'Pending' | 'PortedIn' | 'Temporary');
+  status?: 'Normal' | 'Pending' | 'PortedIn' | 'Temporary';
 
   /**
    * Phone number type
    */
-  type?: ('VoiceFax' | 'FaxOnly' | 'VoiceOnly');
+  type?: 'VoiceFax' | 'FaxOnly' | 'VoiceOnly';
 
   /**
    * Usage type of a phone number. Usage type of a phone number.
- *  Numbers of 'NumberPool' type wont't be returned for phone number list
- *  requests
+   *  Numbers of 'NumberPool' type wont't be returned for phone number list
+   *  requests
    */
-  usageType?: ('MainCompanyNumber' | 'AdditionalCompanyNumber' | 'CompanyNumber' | 'DirectNumber' | 'CompanyFaxNumber' | 'ForwardedNumber' | 'ForwardedCompanyNumber' | 'ContactCenterNumber' | 'ConferencingNumber' | 'MeetingsNumber' | 'NumberPool' | 'BusinessMobileNumber' | 'PartnerBusinessMobileNumber' | 'IntegrationNumber');
+  usageType?:
+    | 'MainCompanyNumber'
+    | 'AdditionalCompanyNumber'
+    | 'CompanyNumber'
+    | 'DirectNumber'
+    | 'CompanyFaxNumber'
+    | 'ForwardedNumber'
+    | 'ForwardedCompanyNumber'
+    | 'ContactCenterNumber'
+    | 'ConferencingNumber'
+    | 'MeetingsNumber'
+    | 'NumberPool'
+    | 'BusinessMobileNumber'
+    | 'PartnerBusinessMobileNumber'
+    | 'IntegrationNumber';
 
   /**
    */

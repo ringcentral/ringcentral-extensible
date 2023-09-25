@@ -1,6 +1,6 @@
-import CallParty from '../../../../../../../definitions/CallParty';
-import HoldCallPartyRequest from '../../../../../../../definitions/HoldCallPartyRequest';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../../types';
+import type CallParty from '../../../../../../../definitions/CallParty';
+import type HoldCallPartyRequest from '../../../../../../../definitions/HoldCallPartyRequest';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -23,7 +23,10 @@ class Index {
    * Rate Limit Group: Light
    * App Permission: CallControl
    */
-  public async post(holdCallPartyRequest: HoldCallPartyRequest, restRequestConfig?: RestRequestConfig): Promise<CallParty> {
+  public async post(
+    holdCallPartyRequest: HoldCallPartyRequest,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<CallParty> {
     const r = await this.rc.post<CallParty>(this.path(), holdCallPartyRequest, undefined, restRequestConfig);
     return r.data;
   }

@@ -1,5 +1,5 @@
 import Jobs from './Jobs';
-import { RingCentralInterface, ParentInterface } from '../../../../types';
+import type { RingCentralInterface, ParentInterface } from '../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -15,7 +15,7 @@ class Index {
     return `${this._parent.path(false)}/v1`;
   }
 
-  public jobs(jobId: (string | null) = null): Jobs {
+  public jobs(jobId: string | null = null): Jobs {
     return new Jobs(this, jobId);
   }
 }

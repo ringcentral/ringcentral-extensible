@@ -1,7 +1,7 @@
 import Conference from './Conference';
 import CallOut from './CallOut';
 import Sessions from './Sessions';
-import { RingCentralInterface, ParentInterface } from '../../../../types';
+import type { RingCentralInterface, ParentInterface } from '../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -17,7 +17,7 @@ class Index {
     return `${this._parent.path()}/telephony`;
   }
 
-  public sessions(telephonySessionId: (string | null) = null): Sessions {
+  public sessions(telephonySessionId: string | null = null): Sessions {
     return new Sessions(this, telephonySessionId);
   }
 

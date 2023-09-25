@@ -1,9 +1,9 @@
-import ScimUserAddress from './ScimUserAddress';
-import ScimEmail from './ScimEmail';
-import ScimName from './ScimName';
-import ScimPhoneNumber from './ScimPhoneNumber';
-import ScimPhoto from './ScimPhoto';
-import ScimEnterpriseUser from './ScimEnterpriseUser';
+import type ScimUserAddress from './ScimUserAddress';
+import type ScimEmail from './ScimEmail';
+import type ScimName from './ScimName';
+import type ScimPhoneNumber from './ScimPhoneNumber';
+import type ScimPhoto from './ScimPhoto';
+import type ScimEnterpriseUser from './ScimEnterpriseUser';
 
 interface ScimUser {
   /**
@@ -46,7 +46,7 @@ interface ScimUser {
   /**
    * Required
    */
-  schemas?: ('urn:ietf:params:scim:schemas:core:2.0:User')[];
+  schemas?: 'urn:ietf:params:scim:schemas:core:2.0:User'[];
 
   /**
    * User title

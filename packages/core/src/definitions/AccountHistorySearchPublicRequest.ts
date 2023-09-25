@@ -50,13 +50,13 @@ interface AccountHistorySearchPublicRequest {
 
   /**
    * The (sub)string to search, applied to the following fields:
- *
- *  - initiator.name
- *  - initiator.role
- *  - initiator.extensionNumber
- *  - target.name
- *  - target.extensionNumber
- *  - details.parameters.value
+   *
+   *  - initiator.name
+   *  - initiator.role
+   *  - initiator.extensionNumber
+   *  - target.name
+   *  - target.extensionNumber
+   *  - details.parameters.value
    * Example: 542617
    */
   searchString?: string;

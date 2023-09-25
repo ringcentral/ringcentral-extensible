@@ -1,4 +1,4 @@
-import HostModel from './HostModel';
+import type HostModel from './HostModel';
 
 interface WebinarRefModel {
   /**

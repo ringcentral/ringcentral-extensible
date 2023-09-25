@@ -1,9 +1,9 @@
-import SummaryApiResponse from './SummaryApiResponse';
+import type SummaryApiResponse from './SummaryApiResponse';
 
 interface SummaryApiOutput {
   /**
    */
-  status?: ('Success' | 'Fail');
+  status?: 'Success' | 'Fail';
 
   /**
    */

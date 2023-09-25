@@ -1,7 +1,7 @@
-import GetTimezoneInfoResponse from '../../../../definitions/GetTimezoneInfoResponse';
-import GetTimezoneListResponse from '../../../../definitions/GetTimezoneListResponse';
-import ListTimezonesParameters from '../../../../definitions/ListTimezonesParameters';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
+import type GetTimezoneInfoResponse from '../../../../definitions/GetTimezoneInfoResponse';
+import type GetTimezoneListResponse from '../../../../definitions/GetTimezoneListResponse';
+import type ListTimezonesParameters from '../../../../definitions/ListTimezonesParameters';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -25,19 +25,22 @@ class Index {
 
   /**
    * Returns all available timezones.
- *
+   *
    * HTTP Method: get
    * Endpoint: /restapi/{apiVersion}/dictionary/timezone
    * Rate Limit Group: Light
    */
-  public async list(queryParams?: ListTimezonesParameters, restRequestConfig?: RestRequestConfig): Promise<GetTimezoneListResponse> {
+  public async list(
+    queryParams?: ListTimezonesParameters,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<GetTimezoneListResponse> {
     const r = await this.rc.get<GetTimezoneListResponse>(this.path(false), queryParams, restRequestConfig);
     return r.data;
   }
 
   /**
    * Returns information on a certain timezone.
- *
+   *
    * HTTP Method: get
    * Endpoint: /restapi/{apiVersion}/dictionary/timezone/{timezoneId}
    * Rate Limit Group: Light

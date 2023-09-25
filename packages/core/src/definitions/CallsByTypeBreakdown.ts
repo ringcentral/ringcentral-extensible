@@ -1,6 +1,6 @@
 /**
  * Result breakdown by type
-*/
+ */
 interface CallsByTypeBreakdown {
   /**
    * Value for Direct type

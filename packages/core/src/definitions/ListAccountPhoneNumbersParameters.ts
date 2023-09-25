@@ -1,10 +1,10 @@
 /**
  * Query parameters for operation listAccountPhoneNumbers
-*/
+ */
 interface ListAccountPhoneNumbersParameters {
   /**
    * Indicates a page number to retrieve. Only positive number values
- *  are accepted
+   *  are accepted
    * Format: int32
    * Default: 1
    */
@@ -20,12 +20,26 @@ interface ListAccountPhoneNumbersParameters {
   /**
    * Usage type of a phone number
    */
-  usageType?: ('MainCompanyNumber' | 'AdditionalCompanyNumber' | 'CompanyNumber' | 'DirectNumber' | 'CompanyFaxNumber' | 'ForwardedNumber' | 'ForwardedCompanyNumber' | 'ContactCenterNumber' | 'ConferencingNumber' | 'MeetingsNumber' | 'BusinessMobileNumber' | 'PartnerBusinessMobileNumber' | 'IntegrationNumber')[];
+  usageType?: (
+    | 'MainCompanyNumber'
+    | 'AdditionalCompanyNumber'
+    | 'CompanyNumber'
+    | 'DirectNumber'
+    | 'CompanyFaxNumber'
+    | 'ForwardedNumber'
+    | 'ForwardedCompanyNumber'
+    | 'ContactCenterNumber'
+    | 'ConferencingNumber'
+    | 'MeetingsNumber'
+    | 'BusinessMobileNumber'
+    | 'PartnerBusinessMobileNumber'
+    | 'IntegrationNumber'
+  )[];
 
   /**
    * Status of a phone number. Multiple values are supported
    */
-  status?: ('Normal' | 'Pending' | 'PortedIn' | 'Temporary');
+  status?: 'Normal' | 'Pending' | 'PortedIn' | 'Temporary';
 }
 
 export default ListAccountPhoneNumbersParameters;

@@ -1,7 +1,7 @@
-import CaiAsyncApiResponse from '../../../../../../definitions/CaiAsyncApiResponse';
-import CaiSummarizeParameters from '../../../../../../definitions/CaiSummarizeParameters';
-import SummaryInput from '../../../../../../definitions/SummaryInput';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../types';
+import type CaiAsyncApiResponse from '../../../../../../definitions/CaiAsyncApiResponse';
+import type CaiSummarizeParameters from '../../../../../../definitions/CaiSummarizeParameters';
+import type SummaryInput from '../../../../../../definitions/SummaryInput';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -24,7 +24,11 @@ class Index {
    * Rate Limit Group: Heavy
    * App Permission: AI
    */
-  public async post(summaryInput: SummaryInput, queryParams?: CaiSummarizeParameters, restRequestConfig?: RestRequestConfig): Promise<CaiAsyncApiResponse> {
+  public async post(
+    summaryInput: SummaryInput,
+    queryParams?: CaiSummarizeParameters,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<CaiAsyncApiResponse> {
     const r = await this.rc.post<CaiAsyncApiResponse>(this.path(), summaryInput, queryParams, restRequestConfig);
     return r.data;
   }

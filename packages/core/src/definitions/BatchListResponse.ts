@@ -1,9 +1,9 @@
-import MessageBatchResponse from './MessageBatchResponse';
-import PagingResource from './PagingResource';
+import type MessageBatchResponse from './MessageBatchResponse';
+import type PagingResource from './PagingResource';
 
 /**
  * The list of batches retrieved for an account and other filter criteria such as fromPhoneNumber, date specified in the request.
-*/
+ */
 interface BatchListResponse {
   /**
    * An array containing individual batches

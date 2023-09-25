@@ -22,7 +22,7 @@ interface ScimUserAddress {
   /**
    * Required
    */
-  type?: ('work');
+  type?: 'work';
 }
 
 export default ScimUserAddress;

@@ -1,9 +1,9 @@
-import TimelineResponseOptionsCounters from './TimelineResponseOptionsCounters';
-import TimelineResponseOptionsTimers from './TimelineResponseOptionsTimers';
+import type TimelineResponseOptionsCounters from './TimelineResponseOptionsCounters';
+import type TimelineResponseOptionsTimers from './TimelineResponseOptionsTimers';
 
 /**
  * Counters and timers options for calls breakdown
-*/
+ */
 interface TimelineResponseOptions {
   /**
    */

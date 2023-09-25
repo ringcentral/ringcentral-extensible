@@ -1,5 +1,5 @@
-import SendWelcomeEmailV2Request from '../../../../../definitions/SendWelcomeEmailV2Request';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import type SendWelcomeEmailV2Request from '../../../../../definitions/SendWelcomeEmailV2Request';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -23,7 +23,10 @@ class Index {
    * App Permission: EditExtensions
    * User Permission: Users
    */
-  public async post(sendWelcomeEmailV2Request: SendWelcomeEmailV2Request, restRequestConfig?: RestRequestConfig): Promise<string> {
+  public async post(
+    sendWelcomeEmailV2Request: SendWelcomeEmailV2Request,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<string> {
     const r = await this.rc.post<string>(this.path(), sendWelcomeEmailV2Request, undefined, restRequestConfig);
     return r.data;
   }

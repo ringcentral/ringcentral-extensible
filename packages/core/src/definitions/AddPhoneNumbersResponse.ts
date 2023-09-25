@@ -1,4 +1,4 @@
-import AddPhoneNumbersResponseItem from './AddPhoneNumbersResponseItem';
+import type AddPhoneNumbersResponseItem from './AddPhoneNumbersResponseItem';
 
 interface AddPhoneNumbersResponse {
   /**

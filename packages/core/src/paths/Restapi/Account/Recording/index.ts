@@ -1,6 +1,6 @@
 import Content from './Content';
-import GetCallRecordingResponse from '../../../../definitions/GetCallRecordingResponse';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
+import type GetCallRecordingResponse from '../../../../definitions/GetCallRecordingResponse';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
 
 class Index {
   public rc: RingCentralInterface;

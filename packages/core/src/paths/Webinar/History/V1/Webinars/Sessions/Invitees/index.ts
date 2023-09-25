@@ -1,7 +1,7 @@
-import InviteeModel from '../../../../../../../definitions/InviteeModel';
-import InviteeListResource from '../../../../../../../definitions/InviteeListResource';
-import RcwHistoryListInviteesParameters from '../../../../../../../definitions/RcwHistoryListInviteesParameters';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../../types';
+import type InviteeModel from '../../../../../../../definitions/InviteeModel';
+import type InviteeListResource from '../../../../../../../definitions/InviteeListResource';
+import type RcwHistoryListInviteesParameters from '../../../../../../../definitions/RcwHistoryListInviteesParameters';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -25,14 +25,17 @@ class Index {
 
   /**
    * Returns the list of Invitees (co-hosts and panelists) of a given Webinar Session (host interface).
- * An implicit record created for a Webinar 'Host' is always returned.
- *
+   * An implicit record created for a Webinar 'Host' is always returned.
+   *
    * HTTP Method: get
    * Endpoint: /webinar/history/v1/webinars/{webinarId}/sessions/{sessionId}/invitees
    * Rate Limit Group: Heavy
    * App Permission: ReadWebinars
    */
-  public async list(queryParams?: RcwHistoryListInviteesParameters, restRequestConfig?: RestRequestConfig): Promise<InviteeListResource> {
+  public async list(
+    queryParams?: RcwHistoryListInviteesParameters,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<InviteeListResource> {
     const r = await this.rc.get<InviteeListResource>(this.path(false), queryParams, restRequestConfig);
     return r.data;
   }

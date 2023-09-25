@@ -1,4 +1,4 @@
-import CountryInfoShortModel from './CountryInfoShortModel';
+import type CountryInfoShortModel from './CountryInfoShortModel';
 
 interface PhoneNumberInfoConferencing {
   /**
@@ -7,8 +7,8 @@ interface PhoneNumberInfoConferencing {
 
   /**
    * The value should be 'True' if the number is default for the conference. Default
- *  conference number is a domestic number that can be set by user (otherwise
- *  it is set by the system). Only one default number per country is allowed
+   *  conference number is a domestic number that can be set by user (otherwise
+   *  it is set by the system). Only one default number per country is allowed
    */
   default?: boolean;
 
@@ -29,7 +29,7 @@ interface PhoneNumberInfoConferencing {
 
   /**
    * Indicates if the number is 'premium' (account phone number
- *  with the `ConferencingNumber` usageType)
+   *  with the `ConferencingNumber` usageType)
    */
   premium?: boolean;
 }

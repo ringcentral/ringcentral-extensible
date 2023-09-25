@@ -1,6 +1,6 @@
 /**
  * Query parameters for operation deleteMessageByFilter
-*/
+ */
 interface DeleteMessageByFilterParameters {
   /**
    */
@@ -8,7 +8,7 @@ interface DeleteMessageByFilterParameters {
 
   /**
    * Messages received earlier then the date specified will be deleted.
- *  The default value is current datetime
+   *  The default value is current datetime
    * Format: date-time
    */
   dateTo?: string;
@@ -17,7 +17,7 @@ interface DeleteMessageByFilterParameters {
    * Type of messages to be deleted
    * Default: All
    */
-  type?: ('Fax' | 'SMS' | 'VoiceMail' | 'Pager' | 'Text' | 'All');
+  type?: 'Fax' | 'SMS' | 'VoiceMail' | 'Pager' | 'Text' | 'All';
 }
 
 export default DeleteMessageByFilterParameters;

@@ -1,9 +1,9 @@
-import CallLogRecord from '../../../../../definitions/CallLogRecord';
-import ReadUserCallRecordParameters from '../../../../../definitions/ReadUserCallRecordParameters';
-import DeleteUserCallLogParameters from '../../../../../definitions/DeleteUserCallLogParameters';
-import CallLogResponse from '../../../../../definitions/CallLogResponse';
-import ReadUserCallLogParameters from '../../../../../definitions/ReadUserCallLogParameters';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import type CallLogRecord from '../../../../../definitions/CallLogRecord';
+import type ReadUserCallRecordParameters from '../../../../../definitions/ReadUserCallRecordParameters';
+import type DeleteUserCallLogParameters from '../../../../../definitions/DeleteUserCallLogParameters';
+import type CallLogResponse from '../../../../../definitions/CallLogResponse';
+import type ReadUserCallLogParameters from '../../../../../definitions/ReadUserCallLogParameters';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -33,7 +33,10 @@ class Index {
    * App Permission: ReadCallLog
    * User Permission: ReadCallLog
    */
-  public async list(queryParams?: ReadUserCallLogParameters, restRequestConfig?: RestRequestConfig): Promise<CallLogResponse> {
+  public async list(
+    queryParams?: ReadUserCallLogParameters,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<CallLogResponse> {
     const r = await this.rc.get<CallLogResponse>(this.path(false), queryParams, restRequestConfig);
     return r.data;
   }
@@ -46,7 +49,10 @@ class Index {
    * App Permission: EditCallLog
    * User Permission: EditCallLog
    */
-  public async delete(queryParams?: DeleteUserCallLogParameters, restRequestConfig?: RestRequestConfig): Promise<string> {
+  public async delete(
+    queryParams?: DeleteUserCallLogParameters,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<string> {
     const r = await this.rc.delete<string>(this.path(false), queryParams, restRequestConfig);
     return r.data;
   }
@@ -59,7 +65,10 @@ class Index {
    * App Permission: ReadCallLog
    * User Permission: ReadCallLog
    */
-  public async get(queryParams?: ReadUserCallRecordParameters, restRequestConfig?: RestRequestConfig): Promise<CallLogRecord> {
+  public async get(
+    queryParams?: ReadUserCallRecordParameters,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<CallLogRecord> {
     if (this.callRecordId === null) {
       throw new Error('callRecordId must be specified.');
     }

@@ -1,4 +1,4 @@
-import ApiErrorWithParameter from './ApiErrorWithParameter';
+import type ApiErrorWithParameter from './ApiErrorWithParameter';
 
 interface BatchProvisionErrorItem {
   /**

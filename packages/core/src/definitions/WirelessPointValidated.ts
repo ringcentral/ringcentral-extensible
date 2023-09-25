@@ -1,4 +1,4 @@
-import ValidationError from './ValidationError';
+import type ValidationError from './ValidationError';
 
 interface WirelessPointValidated {
   /**
@@ -8,14 +8,14 @@ interface WirelessPointValidated {
 
   /**
    * Unique 48-bit identifier of the wireless access point that
- *  follows MAC address conventions
+   *  follows MAC address conventions
    */
   bssid?: string;
 
   /**
    * Validation result status
    */
-  status?: ('Valid' | 'Invalid');
+  status?: 'Valid' | 'Invalid';
 
   /**
    */

@@ -1,4 +1,4 @@
-import GetCountryInfoNumberParser from './GetCountryInfoNumberParser';
+import type GetCountryInfoNumberParser from './GetCountryInfoNumberParser';
 
 interface PhoneNumberInfoNumberParser {
   /**
@@ -13,12 +13,12 @@ interface PhoneNumberInfoNumberParser {
 
   /**
    * Area code of location. The portion of the [E.164](https://www.itu.int/rec/T-REC-E.164-201011-I)
- *  number that identifies a specific geographic region/numbering area of
- *  the national numbering plan (NANP); that can be summarized as `NPA-NXX-xxxx`
- *  and covers Canada, the United States, parts of the Caribbean Sea, and
- *  some Atlantic and Pacific islands.
- *  See [North American Numbering Plan](https://en.wikipedia.org/wiki/North_American_Numbering_Plan)
- *  for details
+   *  number that identifies a specific geographic region/numbering area of
+   *  the national numbering plan (NANP); that can be summarized as `NPA-NXX-xxxx`
+   *  and covers Canada, the United States, parts of the Caribbean Sea, and
+   *  some Atlantic and Pacific islands.
+   *  See [North American Numbering Plan](https://en.wikipedia.org/wiki/North_American_Numbering_Plan)
+   *  for details
    * Example: 650
    */
   areaCode?: string;

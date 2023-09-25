@@ -1,4 +1,4 @@
-import OrderBy from './OrderBy';
+import type OrderBy from './OrderBy';
 
 interface SearchDirectoryEntriesRequest {
   /**
@@ -9,7 +9,16 @@ interface SearchDirectoryEntriesRequest {
   /**
    * The list of field to be searched for
    */
-  searchFields?: ('firstName' | 'lastName' | 'extensionNumber' | 'phoneNumber' | 'email' | 'jobTitle' | 'department' | 'customFieldValue')[];
+  searchFields?: (
+    | 'firstName'
+    | 'lastName'
+    | 'extensionNumber'
+    | 'phoneNumber'
+    | 'email'
+    | 'jobTitle'
+    | 'department'
+    | 'customFieldValue'
+  )[];
 
   /**
    * If 'True' then contacts of all accounts in federation are returned, if it is in federation, account section will be returned. If 'False' then only contacts of the current account are returned, and account section is eliminated in this case
@@ -25,7 +34,23 @@ interface SearchDirectoryEntriesRequest {
    * Type of directory contact to filter
    * Example: User
    */
-  extensionType?: ('User' | 'Department' | 'Announcement' | 'Voicemail' | 'SharedLinesGroup' | 'PagingOnly' | 'ParkLocation' | 'IvrMenu' | 'Limited' | 'ApplicationExtension' | 'Site' | 'Bot' | 'Room' | 'DelegatedLinesGroup' | 'GroupCallPickup' | 'External');
+  extensionType?:
+    | 'User'
+    | 'Department'
+    | 'Announcement'
+    | 'Voicemail'
+    | 'SharedLinesGroup'
+    | 'PagingOnly'
+    | 'ParkLocation'
+    | 'IvrMenu'
+    | 'Limited'
+    | 'ApplicationExtension'
+    | 'Site'
+    | 'Bot'
+    | 'Room'
+    | 'DelegatedLinesGroup'
+    | 'GroupCallPickup'
+    | 'External';
 
   /**
    * Internal identifier of the business site to which extensions belong
@@ -63,7 +88,29 @@ interface SearchDirectoryEntriesRequest {
   /**
    * Types of extension to filter the contacts
    */
-  extensionTypes?: ('User' | 'Department' | 'Announcement' | 'Voicemail' | 'DigitalUser' | 'VirtualUser' | 'FaxUser' | 'PagingOnly' | 'SharedLinesGroup' | 'IvrMenu' | 'ApplicationExtension' | 'ParkLocation' | 'Limited' | 'Bot' | 'Site' | 'Room' | 'ProxyAdmin' | 'DelegatedLinesGroup' | 'FlexibleUser' | 'GroupCallPickup' | 'RoomConnector')[];
+  extensionTypes?: (
+    | 'User'
+    | 'Department'
+    | 'Announcement'
+    | 'Voicemail'
+    | 'DigitalUser'
+    | 'VirtualUser'
+    | 'FaxUser'
+    | 'PagingOnly'
+    | 'SharedLinesGroup'
+    | 'IvrMenu'
+    | 'ApplicationExtension'
+    | 'ParkLocation'
+    | 'Limited'
+    | 'Bot'
+    | 'Site'
+    | 'Room'
+    | 'ProxyAdmin'
+    | 'DelegatedLinesGroup'
+    | 'FlexibleUser'
+    | 'GroupCallPickup'
+    | 'RoomConnector'
+  )[];
 
   /**
    * Sorting settings

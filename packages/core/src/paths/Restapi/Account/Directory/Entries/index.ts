@@ -1,8 +1,8 @@
 import Search from './Search';
-import ContactResource from '../../../../../definitions/ContactResource';
-import DirectoryResource from '../../../../../definitions/DirectoryResource';
-import ListDirectoryEntriesParameters from '../../../../../definitions/ListDirectoryEntriesParameters';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import type ContactResource from '../../../../../definitions/ContactResource';
+import type DirectoryResource from '../../../../../definitions/DirectoryResource';
+import type ListDirectoryEntriesParameters from '../../../../../definitions/ListDirectoryEntriesParameters';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -31,7 +31,10 @@ class Index {
    * Rate Limit Group: Medium
    * App Permission: ReadAccounts
    */
-  public async list(queryParams?: ListDirectoryEntriesParameters, restRequestConfig?: RestRequestConfig): Promise<DirectoryResource> {
+  public async list(
+    queryParams?: ListDirectoryEntriesParameters,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<DirectoryResource> {
     const r = await this.rc.get<DirectoryResource>(this.path(false), queryParams, restRequestConfig);
     return r.data;
   }

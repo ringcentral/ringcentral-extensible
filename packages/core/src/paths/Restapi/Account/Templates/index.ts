@@ -1,7 +1,7 @@
-import TemplateInfo from '../../../../definitions/TemplateInfo';
-import UserTemplates from '../../../../definitions/UserTemplates';
-import ListUserTemplatesParameters from '../../../../definitions/ListUserTemplatesParameters';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
+import type TemplateInfo from '../../../../definitions/TemplateInfo';
+import type UserTemplates from '../../../../definitions/UserTemplates';
+import type ListUserTemplatesParameters from '../../../../definitions/ListUserTemplatesParameters';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -25,21 +25,24 @@ class Index {
 
   /**
    * Returns the list of user templates for the current account.
- *
+   *
    * HTTP Method: get
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/templates
    * Rate Limit Group: Medium
    * App Permission: ReadAccounts
    * User Permission: ReadCompanyInfo
    */
-  public async list(queryParams?: ListUserTemplatesParameters, restRequestConfig?: RestRequestConfig): Promise<UserTemplates> {
+  public async list(
+    queryParams?: ListUserTemplatesParameters,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<UserTemplates> {
     const r = await this.rc.get<UserTemplates>(this.path(false), queryParams, restRequestConfig);
     return r.data;
   }
 
   /**
    * Returns the user template by ID.
- *
+   *
    * HTTP Method: get
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/templates/{templateId}
    * Rate Limit Group: Light

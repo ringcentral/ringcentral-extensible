@@ -1,5 +1,5 @@
-import CallerIdByDevice from './CallerIdByDevice';
-import CallerIdByFeature from './CallerIdByFeature';
+import type CallerIdByDevice from './CallerIdByDevice';
+import type CallerIdByFeature from './CallerIdByFeature';
 
 interface ExtensionCallerIdInfo {
   /**
@@ -18,13 +18,13 @@ interface ExtensionCallerIdInfo {
 
   /**
    * If 'True', then user first name and last name will be used
- *  as caller ID when making outbound calls from extension
+   *  as caller ID when making outbound calls from extension
    */
   extensionNameForOutboundCalls?: boolean;
 
   /**
    * If 'True', then extension number will be used as caller ID
- *  when making internal calls
+   *  when making internal calls
    */
   extensionNumberForInternalCalls?: boolean;
 }

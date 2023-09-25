@@ -1,5 +1,5 @@
-import KeyInfo from './KeyInfo';
-import TimelineResponsePoint from './TimelineResponsePoint';
+import type KeyInfo from './KeyInfo';
+import type TimelineResponsePoint from './TimelineResponsePoint';
 
 interface TimelineResponseRecord {
   /**

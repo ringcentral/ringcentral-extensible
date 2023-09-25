@@ -1,4 +1,4 @@
-import WordSegment from './WordSegment';
+import type WordSegment from './WordSegment';
 
 interface AsrApiResponseResponse {
   /**

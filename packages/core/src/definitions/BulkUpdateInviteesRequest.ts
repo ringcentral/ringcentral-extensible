@@ -1,6 +1,6 @@
-import AddInviteeRequest from './AddInviteeRequest';
-import BulkUpdateInviteesRequestUpdatedInvitees from './BulkUpdateInviteesRequestUpdatedInvitees';
-import RcwResourceIdModel from './RcwResourceIdModel';
+import type AddInviteeRequest from './AddInviteeRequest';
+import type BulkUpdateInviteesRequestUpdatedInvitees from './BulkUpdateInviteesRequestUpdatedInvitees';
+import type RcwResourceIdModel from './RcwResourceIdModel';
 
 interface BulkUpdateInviteesRequest {
   /**

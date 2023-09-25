@@ -1,5 +1,5 @@
-import CustomGreetingAnsweringRuleInfo from './CustomGreetingAnsweringRuleInfo';
-import CustomCompanyGreetingLanguageInfo from './CustomCompanyGreetingLanguageInfo';
+import type CustomGreetingAnsweringRuleInfo from './CustomGreetingAnsweringRuleInfo';
+import type CustomCompanyGreetingLanguageInfo from './CustomCompanyGreetingLanguageInfo';
 
 interface CustomCompanyGreetingInfo {
   /**
@@ -16,12 +16,12 @@ interface CustomCompanyGreetingInfo {
   /**
    * Type of a company greeting
    */
-  type?: ('Company' | 'StartRecording' | 'StopRecording' | 'AutomaticRecording' | 'TemplateGreeting');
+  type?: 'Company' | 'StartRecording' | 'StopRecording' | 'AutomaticRecording' | 'TemplateGreeting';
 
   /**
    * Content media type
    */
-  contentType?: ('audio/mpeg' | 'audio/wav');
+  contentType?: 'audio/mpeg' | 'audio/wav';
 
   /**
    * Link to a greeting content (audio file)

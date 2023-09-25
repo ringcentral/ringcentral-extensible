@@ -1,7 +1,7 @@
 interface AddressBookBulkContactAddressInfo {
   /**
    * Country name of the extension user company. Not returned for Address
- *  Book
+   *  Book
    */
   country?: string;
 

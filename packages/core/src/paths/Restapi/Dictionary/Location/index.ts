@@ -1,6 +1,6 @@
-import GetLocationListResponse from '../../../../definitions/GetLocationListResponse';
-import ListLocationsParameters from '../../../../definitions/ListLocationsParameters';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
+import type GetLocationListResponse from '../../../../definitions/GetLocationListResponse';
+import type ListLocationsParameters from '../../../../definitions/ListLocationsParameters';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -18,12 +18,15 @@ class Index {
 
   /**
    * Returns all available locations for a certain state.
- *
+   *
    * HTTP Method: get
    * Endpoint: /restapi/{apiVersion}/dictionary/location
    * Rate Limit Group: Light
    */
-  public async get(queryParams?: ListLocationsParameters, restRequestConfig?: RestRequestConfig): Promise<GetLocationListResponse> {
+  public async get(
+    queryParams?: ListLocationsParameters,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<GetLocationListResponse> {
     const r = await this.rc.get<GetLocationListResponse>(this.path(), queryParams, restRequestConfig);
     return r.data;
   }

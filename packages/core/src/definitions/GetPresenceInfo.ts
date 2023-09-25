@@ -1,5 +1,5 @@
-import GetPresenceExtensionInfo from './GetPresenceExtensionInfo';
-import ActiveCallInfo from './ActiveCallInfo';
+import type GetPresenceExtensionInfo from './GetPresenceExtensionInfo';
+import type ActiveCallInfo from './ActiveCallInfo';
 
 interface GetPresenceInfo {
   /**
@@ -15,21 +15,21 @@ interface GetPresenceInfo {
 
   /**
    * Configures the user presence visibility. When the `allowSeeMyPresence` parameter is set to 'True',
- *  the following visibility options are supported via this parameter - All, None, PermittedUsers
+   *  the following visibility options are supported via this parameter - All, None, PermittedUsers
    */
-  callerIdVisibility?: ('All' | 'None' | 'PermittedUsers');
+  callerIdVisibility?: 'All' | 'None' | 'PermittedUsers';
 
   /**
    * Extended DnD (Do not Disturb) status. Cannot be set for Department/Announcement/Voicemail
- *  (Take Messages Only)/Fax User/Shared Lines Group/Paging Only Group/IVR
- *  Menu/Application Extension/Park Location extensions. The 'DoNotAcceptDepartmentCalls'
- *  and 'TakeDepartmentCallsOnly' values are applicable only for extensions
- *  - members of a Department; if these values are set for department outsiders,
- *  the 400 Bad Request error code is returned. The 'TakeDepartmentCallsOnly'
- *  status can be set through the old RingCentral user interface and is available
- *  for some migrated accounts only.
+   *  (Take Messages Only)/Fax User/Shared Lines Group/Paging Only Group/IVR
+   *  Menu/Application Extension/Park Location extensions. The 'DoNotAcceptDepartmentCalls'
+   *  and 'TakeDepartmentCallsOnly' values are applicable only for extensions
+   *  - members of a Department; if these values are set for department outsiders,
+   *  the 400 Bad Request error code is returned. The 'TakeDepartmentCallsOnly'
+   *  status can be set through the old RingCentral user interface and is available
+   *  for some migrated accounts only.
    */
-  dndStatus?: ('TakeAllCalls' | 'DoNotAcceptAnyCalls' | 'DoNotAcceptDepartmentCalls' | 'TakeDepartmentCallsOnly');
+  dndStatus?: 'TakeAllCalls' | 'DoNotAcceptAnyCalls' | 'DoNotAcceptDepartmentCalls' | 'TakeDepartmentCallsOnly';
 
   /**
    */
@@ -48,7 +48,7 @@ interface GetPresenceInfo {
   /**
    * Aggregated presence status, calculated from a number of sources
    */
-  presenceStatus?: ('Offline' | 'Busy' | 'Available');
+  presenceStatus?: 'Offline' | 'Busy' | 'Available';
 
   /**
    * If 'True' enables to ring extension phone, if any user monitored by this extension is ringing
@@ -58,17 +58,17 @@ interface GetPresenceInfo {
   /**
    * Telephony presence status
    */
-  telephonyStatus?: ('NoCall' | 'CallConnected' | 'Ringing' | 'OnHold' | 'ParkedCall');
+  telephonyStatus?: 'NoCall' | 'CallConnected' | 'Ringing' | 'OnHold' | 'ParkedCall';
 
   /**
    * User-defined presence status (as previously published by the user)
    */
-  userStatus?: ('Offline' | 'Busy' | 'Available');
+  userStatus?: 'Offline' | 'Busy' | 'Available';
 
   /**
    * RingCentral Meetings presence
    */
-  meetingStatus?: ('Connected' | 'Disconnected');
+  meetingStatus?: 'Connected' | 'Disconnected';
 
   /**
    * Information on active calls

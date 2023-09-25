@@ -1,6 +1,6 @@
-import GetExtensionPhoneNumbersResponse from '../../../../../definitions/GetExtensionPhoneNumbersResponse';
-import ListExtensionPhoneNumbersParameters from '../../../../../definitions/ListExtensionPhoneNumbersParameters';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import type GetExtensionPhoneNumbersResponse from '../../../../../definitions/GetExtensionPhoneNumbersResponse';
+import type ListExtensionPhoneNumbersParameters from '../../../../../definitions/ListExtensionPhoneNumbersParameters';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -18,18 +18,21 @@ class Index {
 
   /**
    * Returns the list of phone numbers that are used by a particular extension,
- * can be filtered by the phone number type. The returned list contains all
- * numbers which are directly mapped to the given extension. Plus the features
- * and company-level numbers that may be used when performing different operations
- * on behalf of this extension.
- *
+   * can be filtered by the phone number type. The returned list contains all
+   * numbers which are directly mapped to the given extension. Plus the features
+   * and company-level numbers that may be used when performing different operations
+   * on behalf of this extension.
+   *
    * HTTP Method: get
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/phone-number
    * Rate Limit Group: Light
    * App Permission: ReadAccounts
    * User Permission: ReadUserPhoneNumbers
    */
-  public async get(queryParams?: ListExtensionPhoneNumbersParameters, restRequestConfig?: RestRequestConfig): Promise<GetExtensionPhoneNumbersResponse> {
+  public async get(
+    queryParams?: ListExtensionPhoneNumbersParameters,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<GetExtensionPhoneNumbersResponse> {
     const r = await this.rc.get<GetExtensionPhoneNumbersResponse>(this.path(), queryParams, restRequestConfig);
     return r.data;
   }

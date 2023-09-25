@@ -1,7 +1,7 @@
-import CaiAsyncApiResponse from '../../../../../../definitions/CaiAsyncApiResponse';
-import CaiPunctuateParameters from '../../../../../../definitions/CaiPunctuateParameters';
-import PunctuateInput from '../../../../../../definitions/PunctuateInput';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../types';
+import type CaiAsyncApiResponse from '../../../../../../definitions/CaiAsyncApiResponse';
+import type CaiPunctuateParameters from '../../../../../../definitions/CaiPunctuateParameters';
+import type PunctuateInput from '../../../../../../definitions/PunctuateInput';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -24,7 +24,11 @@ class Index {
    * Rate Limit Group: Heavy
    * App Permission: AI
    */
-  public async post(punctuateInput: PunctuateInput, queryParams?: CaiPunctuateParameters, restRequestConfig?: RestRequestConfig): Promise<CaiAsyncApiResponse> {
+  public async post(
+    punctuateInput: PunctuateInput,
+    queryParams?: CaiPunctuateParameters,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<CaiAsyncApiResponse> {
     const r = await this.rc.post<CaiAsyncApiResponse>(this.path(), punctuateInput, queryParams, restRequestConfig);
     return r.data;
   }

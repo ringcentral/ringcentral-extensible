@@ -1,13 +1,13 @@
-import LocationDeletionInfo from './LocationDeletionInfo';
+import type LocationDeletionInfo from './LocationDeletionInfo';
 
 interface GetLocationDeletionMultiResponse {
   /**
    */
-  deletion?: ('Forbidden' | 'Restricted' | 'Allowed');
+  deletion?: 'Forbidden' | 'Restricted' | 'Allowed';
 
   /**
    */
-  reassignment?: ('Forbidden' | 'Allowed');
+  reassignment?: 'Forbidden' | 'Allowed';
 
   /**
    */

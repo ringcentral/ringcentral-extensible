@@ -1,6 +1,6 @@
-import AutomaticLocationUpdatesUserInfo from './AutomaticLocationUpdatesUserInfo';
-import PageNavigationModel from './PageNavigationModel';
-import EnumeratedPagingModel from './EnumeratedPagingModel';
+import type AutomaticLocationUpdatesUserInfo from './AutomaticLocationUpdatesUserInfo';
+import type PageNavigationModel from './PageNavigationModel';
+import type EnumeratedPagingModel from './EnumeratedPagingModel';
 
 interface AutomaticLocationUpdatesUserList {
   /**

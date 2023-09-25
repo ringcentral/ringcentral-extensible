@@ -1,4 +1,4 @@
-import TMAddTeamMembersRequestMembers from './TMAddTeamMembersRequestMembers';
+import type TMAddTeamMembersRequestMembers from './TMAddTeamMembersRequestMembers';
 
 interface TMAddTeamMembersRequest {
   /**

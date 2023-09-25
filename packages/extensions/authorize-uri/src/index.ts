@@ -1,30 +1,31 @@
-import RingCentral from '@rc-ex/core';
+import type RingCentral from '@rc-ex/core';
 import SdkExtension from '@rc-ex/core/lib/SdkExtension';
-import AuthorizeRequest from '@rc-ex/core/lib/definitions/AuthorizeRequest';
-import URI, { QueryDataMap } from 'urijs';
+import type AuthorizeRequest from '@rc-ex/core/lib/definitions/AuthorizeRequest';
+import type { QueryDataMap } from 'urijs';
+import URI from 'urijs';
 import { createHash, randomBytes } from 'crypto';
 
-export type AuthorizeUriOptions = {
+export interface AuthorizeUriOptions {
   baseUri?: string;
-};
+}
 
 class AuthorizeUriExtension extends SdkExtension {
-  rc!: RingCentral;
+  public rc!: RingCentral;
 
-  codeVerifier?: string;
+  public codeVerifier?: string;
 
-  options: AuthorizeUriOptions;
+  public options: AuthorizeUriOptions;
 
-  constructor(options: AuthorizeUriOptions = {}) {
+  public constructor(options: AuthorizeUriOptions = {}) {
     super();
     this.options = options;
   }
 
-  async install(rc: RingCentral) {
+  public async install(rc: RingCentral) {
     this.rc = rc;
   }
 
-  buildUri(_authorizeRequest: AuthorizeRequest): string {
+  public buildUri(_authorizeRequest: AuthorizeRequest): string {
     const authorizeRequest = _authorizeRequest;
     if (!authorizeRequest.response_type) {
       authorizeRequest.response_type = 'code';
@@ -35,11 +36,7 @@ class AuthorizeUriExtension extends SdkExtension {
 
     // PKCE: https://medium.com/ringcentral-developers/use-authorization-code-pkce-for-ringcentral-api-in-client-app-e9108f04b5f0
     if (authorizeRequest.code_challenge_method === 'S256') {
-      this.codeVerifier = randomBytes(32)
-        .toString('base64')
-        .replace(/\+/g, '-')
-        .replace(/\//g, '_')
-        .replace(/=/g, '');
+      this.codeVerifier = randomBytes(32).toString('base64').replace(/\+/g, '-').replace(/\//g, '_').replace(/=/g, '');
       authorizeRequest.code_challenge = createHash('sha256')
         .update(this.codeVerifier)
         .digest()
@@ -59,7 +56,7 @@ class AuthorizeUriExtension extends SdkExtension {
   }
 
   // eslint-disable-next-line class-methods-use-this, @typescript-eslint/no-empty-function
-  async revoke(): Promise<void> { }
+  public async revoke(): Promise<void> {}
 }
 
 export default AuthorizeUriExtension;

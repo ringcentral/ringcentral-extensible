@@ -1,9 +1,9 @@
-import PunctuateApiResponse from './PunctuateApiResponse';
+import type PunctuateApiResponse from './PunctuateApiResponse';
 
 interface PunctuateApiOutput {
   /**
    */
-  status?: ('Success' | 'Fail');
+  status?: 'Success' | 'Fail';
 
   /**
    */

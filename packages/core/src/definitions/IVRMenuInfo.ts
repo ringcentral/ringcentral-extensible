@@ -1,6 +1,6 @@
-import IvrMenuSiteInfo from './IvrMenuSiteInfo';
-import IvrMenuPromptInfo from './IvrMenuPromptInfo';
-import IVRMenuActionsInfo from './IVRMenuActionsInfo';
+import type IvrMenuSiteInfo from './IvrMenuSiteInfo';
+import type IvrMenuPromptInfo from './IvrMenuPromptInfo';
+import type IVRMenuActionsInfo from './IVRMenuActionsInfo';
 
 interface IVRMenuInfo {
   /**

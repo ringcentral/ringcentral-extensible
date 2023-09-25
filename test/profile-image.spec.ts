@@ -5,12 +5,7 @@ import { createRingCentral } from './utils';
 describe('Profile image', () => {
   test('download', async () => {
     const rc = await createRingCentral();
-    const buffer = await rc
-      .restapi()
-      .account()
-      .extension()
-      .profileImage()
-      .list();
+    const buffer = await rc.restapi().account().extension().profileImage().list();
     expect(buffer.constructor.name).toBe('Buffer');
     fs.writeFileSync(path.join(__dirname, 'temp.png'), buffer);
     await rc.revoke();
@@ -54,17 +49,14 @@ describe('Profile image', () => {
     //   extension: process.env.RINGCENTRAL_EXTENSION2!,
     //   password: process.env.RINGCENTRAL_PASSWORD2!,
     // });
-
     // const buffer = await rc
     //   .restapi()
     //   .account()
     //   .extension(rc2.token?.owner_id)
     //   .profileImage()
     //   .list();
-
     // expect(buffer.constructor.name).toBe('Buffer');
     // fs.writeFileSync(path.join(__dirname, 'temp.png'), buffer);
-
     // await rc.revoke();
   });
 });

@@ -1,6 +1,6 @@
-import CreatorInfo from './CreatorInfo';
-import SpecificInfo from './SpecificInfo';
-import ExportTaskResultInfo from './ExportTaskResultInfo';
+import type CreatorInfo from './CreatorInfo';
+import type SpecificInfo from './SpecificInfo';
+import type ExportTaskResultInfo from './ExportTaskResultInfo';
 
 interface DataExportTask {
   /**
@@ -28,7 +28,7 @@ interface DataExportTask {
   /**
    * Task status
    */
-  status?: ('Accepted' | 'InProgress' | 'Completed' | 'Failed' | 'Expired');
+  status?: 'Accepted' | 'InProgress' | 'Completed' | 'Failed' | 'Expired';
 
   /**
    */

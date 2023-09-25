@@ -1,4 +1,4 @@
-import WcsWebinarRefModel from './WcsWebinarRefModel';
+import type WcsWebinarRefModel from './WcsWebinarRefModel';
 
 interface SessionGlobalListEntry {
   /**
@@ -52,7 +52,7 @@ interface SessionGlobalListEntry {
 
   /**
    * The time offset (positive, in seconds) indicating how much in advance
- *  (comparing to "scheduledStartTime") panel members should join for the pre-webinar team sync
+   *  (comparing to "scheduledStartTime") panel members should join for the pre-webinar team sync
    * Format: int32
    * Example: 900
    */
@@ -74,7 +74,7 @@ interface SessionGlobalListEntry {
    * Session status (for the purposes of Configuration service)
    * Example: Scheduled
    */
-  status?: ('Scheduled' | 'Active' | 'Finished');
+  status?: 'Scheduled' | 'Active' | 'Finished';
 
   /**
    * The URI to join the webinar as a host

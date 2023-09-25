@@ -1,6 +1,6 @@
 import Pstn from './Pstn';
 import Web from './Web';
-import { RingCentralInterface, ParentInterface } from '../../../../../types';
+import type { RingCentralInterface, ParentInterface } from '../../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -16,11 +16,11 @@ class Index {
     return `${this._parent.path(false)}/pin`;
   }
 
-  public web(pin: (string | null) = null): Web {
+  public web(pin: string | null = null): Web {
     return new Web(this, pin);
   }
 
-  public pstn(pin: (string | null) = null): Pstn {
+  public pstn(pin: string | null = null): Pstn {
     return new Pstn(this, pin);
   }
 }

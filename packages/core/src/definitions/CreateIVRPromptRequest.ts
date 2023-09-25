@@ -1,8 +1,8 @@
-import Attachment from './Attachment';
+import type Attachment from './Attachment';
 
 /**
  * Request body for operation createIVRPrompt
-*/
+ */
 interface CreateIVRPromptRequest {
   /**
    * Audio file that will be used as a prompt. Attachment cannot be empty, only audio files are supported

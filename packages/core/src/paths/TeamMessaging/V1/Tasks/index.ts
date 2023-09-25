@@ -1,8 +1,8 @@
 import Complete from './Complete';
-import TMTaskList from '../../../../definitions/TMTaskList';
-import TMUpdateTaskRequest from '../../../../definitions/TMUpdateTaskRequest';
-import TMTaskInfo from '../../../../definitions/TMTaskInfo';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
+import type TMTaskList from '../../../../definitions/TMTaskList';
+import type TMUpdateTaskRequest from '../../../../definitions/TMUpdateTaskRequest';
+import type TMTaskInfo from '../../../../definitions/TMTaskInfo';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -61,7 +61,10 @@ class Index {
    * Rate Limit Group: Medium
    * App Permission: TeamMessaging
    */
-  public async patch(tMUpdateTaskRequest: TMUpdateTaskRequest, restRequestConfig?: RestRequestConfig): Promise<TMTaskList> {
+  public async patch(
+    tMUpdateTaskRequest: TMUpdateTaskRequest,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<TMTaskList> {
     if (this.taskId === null) {
       throw new Error('taskId must be specified.');
     }

@@ -1,7 +1,7 @@
 /**
  * Information on language used for telephony greetings
  *
-*/
+ */
 interface GreetingLanguageInfo {
   /**
    * Internal identifier of a greeting language

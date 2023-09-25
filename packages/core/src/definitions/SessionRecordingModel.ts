@@ -1,4 +1,4 @@
-import RecordingModel from './RecordingModel';
+import type RecordingModel from './RecordingModel';
 
 interface SessionRecordingModel {
   /**

@@ -1,6 +1,6 @@
 /**
  * The indication of a number to be deleted - either "id" or "phoneNumber" must be specified.
-*/
+ */
 interface DeletePhoneNumbersRequestItem {
   /**
    * Internal unique identifier of a phone number

@@ -1,5 +1,5 @@
 import Calls from './Calls';
-import { RingCentralInterface } from '../../types';
+import type { RingCentralInterface } from '../../types';
 
 class Index {
   public rc: RingCentralInterface;

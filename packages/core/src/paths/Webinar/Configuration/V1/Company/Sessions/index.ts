@@ -1,6 +1,6 @@
-import WcsSessionGlobalListResource from '../../../../../../definitions/WcsSessionGlobalListResource';
-import RcwConfigListAllCompanySessionsParameters from '../../../../../../definitions/RcwConfigListAllCompanySessionsParameters';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../types';
+import type WcsSessionGlobalListResource from '../../../../../../definitions/WcsSessionGlobalListResource';
+import type RcwConfigListAllCompanySessionsParameters from '../../../../../../definitions/RcwConfigListAllCompanySessionsParameters';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -18,15 +18,18 @@ class Index {
 
   /**
    * Returns the list of Webinar Sessions hosted by all company users or particular user(s) sorted by
- * 'scheduledStartTime' or 'creationTime' (if 'scheduledStartTime' is not set) in the ascending ordered.
- * The user must have "WebinarSettings" permission granted otherwise the API returns HTTP 403.
- *
+   * 'scheduledStartTime' or 'creationTime' (if 'scheduledStartTime' is not set) in the ascending ordered.
+   * The user must have "WebinarSettings" permission granted otherwise the API returns HTTP 403.
+   *
    * HTTP Method: get
    * Endpoint: /webinar/configuration/v1/company/sessions
    * Rate Limit Group: Heavy
    * App Permission: ReadWebinars
    */
-  public async get(queryParams?: RcwConfigListAllCompanySessionsParameters, restRequestConfig?: RestRequestConfig): Promise<WcsSessionGlobalListResource> {
+  public async get(
+    queryParams?: RcwConfigListAllCompanySessionsParameters,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<WcsSessionGlobalListResource> {
     const r = await this.rc.get<WcsSessionGlobalListResource>(this.path(), queryParams, restRequestConfig);
     return r.data;
   }

@@ -66,10 +66,10 @@ interface DeviceEmergencyInfoAddress {
 
   /**
    * Resulting status of emergency address synchronization. Returned
- *  for 'Get Device Info' request if `syncEmergencyAddress` parameter is set
- *  to 'True'
+   *  for 'Get Device Info' request if `syncEmergencyAddress` parameter is set
+   *  to 'True'
    */
-  syncStatus?: ('Verified' | 'Updated' | 'Deleted' | 'NotRequired' | 'Unsupported' | 'Failed');
+  syncStatus?: 'Verified' | 'Updated' | 'Deleted' | 'NotRequired' | 'Unsupported' | 'Failed';
 
   /**
    * (Optional) Building name

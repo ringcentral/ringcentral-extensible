@@ -1,5 +1,5 @@
-import BulkOperationExtensionReference from './BulkOperationExtensionReference';
-import ApiErrorWithParameter from './ApiErrorWithParameter';
+import type BulkOperationExtensionReference from './BulkOperationExtensionReference';
+import type ApiErrorWithParameter from './ApiErrorWithParameter';
 
 interface BulkAddDevicesResponseResults {
   /**

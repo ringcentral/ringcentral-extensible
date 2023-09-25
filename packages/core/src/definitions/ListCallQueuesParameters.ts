@@ -1,10 +1,10 @@
 /**
  * Query parameters for operation listCallQueues
-*/
+ */
 interface ListCallQueuesParameters {
   /**
    * Indicates a page number to retrieve. Only positive number values
- *  are accepted
+   *  are accepted
    * Format: int32
    * Default: 1
    */
@@ -19,7 +19,7 @@ interface ListCallQueuesParameters {
 
   /**
    * Internal identifier of an extension that is a member of every
- *  group within the result
+   *  group within the result
    */
   memberExtensionId?: string;
 }

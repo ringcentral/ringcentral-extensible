@@ -1,12 +1,12 @@
 /**
  * Notification delivery transport information
-*/
+ */
 interface NotificationDeliveryMode {
   /**
    * The transport type for this subscription, or the channel by which an app should be notified of an event
    * Required
    */
-  transportType?: ('WebHook' | 'RC/APNS' | 'RC/GCM' | 'PubNub' | 'WebSocket');
+  transportType?: 'WebHook' | 'RC/APNS' | 'RC/GCM' | 'PubNub' | 'WebSocket';
 
   /**
    * PubNub channel name
@@ -18,8 +18,8 @@ interface NotificationDeliveryMode {
 
   /**
    * Optional. Specifies if notification messages will be encrypted
- *  or not. Please note that for some event filters (e.g. presence) encryption is mandatory and
- *  `false` value provided by caller will be ignored.
+   *  or not. Please note that for some event filters (e.g. presence) encryption is mandatory and
+   *  `false` value provided by caller will be ignored.
    * Required
    */
   encryption?: boolean;
@@ -51,13 +51,13 @@ interface NotificationDeliveryMode {
 
   /**
    * (Only for a "PubNub" transport, returned only if `encryption` is `true`)
- *  Encryption algorithm used
+   *  Encryption algorithm used
    */
-  encryptionAlgorithm?: ('AES');
+  encryptionAlgorithm?: 'AES';
 
   /**
    * (Only for a "PubNub" transport, returned only if `encryption` is `true`)
- *  Cryptographic key to decrypt PubNub notification messages
+   *  Cryptographic key to decrypt PubNub notification messages
    */
   encryptionKey?: string;
 }

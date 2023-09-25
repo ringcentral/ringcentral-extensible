@@ -1,6 +1,6 @@
-import TMChatListWithoutNavigation from '../../../../../definitions/TMChatListWithoutNavigation';
-import ListRecentChatsNewParameters from '../../../../../definitions/ListRecentChatsNewParameters';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import type TMChatListWithoutNavigation from '../../../../../definitions/TMChatListWithoutNavigation';
+import type ListRecentChatsNewParameters from '../../../../../definitions/ListRecentChatsNewParameters';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -23,7 +23,10 @@ class Index {
    * Rate Limit Group: Light
    * App Permission: TeamMessaging
    */
-  public async get(queryParams?: ListRecentChatsNewParameters, restRequestConfig?: RestRequestConfig): Promise<TMChatListWithoutNavigation> {
+  public async get(
+    queryParams?: ListRecentChatsNewParameters,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<TMChatListWithoutNavigation> {
     const r = await this.rc.get<TMChatListWithoutNavigation>(this.path(), queryParams, restRequestConfig);
     return r.data;
   }

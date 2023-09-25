@@ -1,4 +1,4 @@
-import ScimResourceTypeResponse from './ScimResourceTypeResponse';
+import type ScimResourceTypeResponse from './ScimResourceTypeResponse';
 
 interface ScimResourceTypeSearchResponse {
   /**
@@ -13,7 +13,7 @@ interface ScimResourceTypeSearchResponse {
 
   /**
    */
-  schemas?: ('urn:ietf:params:scim:api:messages:2.0:ListResponse')[];
+  schemas?: 'urn:ietf:params:scim:api:messages:2.0:ListResponse'[];
 
   /**
    * Format: int64

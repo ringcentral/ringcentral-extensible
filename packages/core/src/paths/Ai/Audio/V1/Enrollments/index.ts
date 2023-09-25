@@ -1,9 +1,9 @@
-import EnrollmentPatchInput from '../../../../../definitions/EnrollmentPatchInput';
-import EnrollmentStatus from '../../../../../definitions/EnrollmentStatus';
-import EnrollmentInput from '../../../../../definitions/EnrollmentInput';
-import ListEnrolledSpeakers from '../../../../../definitions/ListEnrolledSpeakers';
-import CaiEnrollmentsListParameters from '../../../../../definitions/CaiEnrollmentsListParameters';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import type EnrollmentPatchInput from '../../../../../definitions/EnrollmentPatchInput';
+import type EnrollmentStatus from '../../../../../definitions/EnrollmentStatus';
+import type EnrollmentInput from '../../../../../definitions/EnrollmentInput';
+import type ListEnrolledSpeakers from '../../../../../definitions/ListEnrolledSpeakers';
+import type CaiEnrollmentsListParameters from '../../../../../definitions/CaiEnrollmentsListParameters';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -32,7 +32,10 @@ class Index {
    * Rate Limit Group: Heavy
    * App Permission: AI
    */
-  public async list(queryParams?: CaiEnrollmentsListParameters, restRequestConfig?: RestRequestConfig): Promise<ListEnrolledSpeakers> {
+  public async list(
+    queryParams?: CaiEnrollmentsListParameters,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<ListEnrolledSpeakers> {
     const r = await this.rc.get<ListEnrolledSpeakers>(this.path(false), queryParams, restRequestConfig);
     return r.data;
   }
@@ -44,7 +47,10 @@ class Index {
    * Rate Limit Group: Heavy
    * App Permission: AI
    */
-  public async post(enrollmentInput: EnrollmentInput, restRequestConfig?: RestRequestConfig): Promise<EnrollmentStatus> {
+  public async post(
+    enrollmentInput: EnrollmentInput,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<EnrollmentStatus> {
     const r = await this.rc.post<EnrollmentStatus>(this.path(false), enrollmentInput, undefined, restRequestConfig);
     return r.data;
   }
@@ -86,7 +92,10 @@ class Index {
    * Rate Limit Group: Heavy
    * App Permission: AI
    */
-  public async patch(enrollmentPatchInput: EnrollmentPatchInput, restRequestConfig?: RestRequestConfig): Promise<EnrollmentStatus> {
+  public async patch(
+    enrollmentPatchInput: EnrollmentPatchInput,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<EnrollmentStatus> {
     if (this.enrollmentId === null) {
       throw new Error('enrollmentId must be specified.');
     }

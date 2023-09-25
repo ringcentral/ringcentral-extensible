@@ -1,5 +1,5 @@
-import BulkAccountCallRecordingsResource from '../../../../../definitions/BulkAccountCallRecordingsResource';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import type BulkAccountCallRecordingsResource from '../../../../../definitions/BulkAccountCallRecordingsResource';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -23,7 +23,10 @@ class Index {
    * App Permission: ReadAccounts
    * User Permission: ReadCompanyInfo
    */
-  public async post(bulkAccountCallRecordingsResource: BulkAccountCallRecordingsResource, restRequestConfig?: RestRequestConfig): Promise<string> {
+  public async post(
+    bulkAccountCallRecordingsResource: BulkAccountCallRecordingsResource,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<string> {
     const r = await this.rc.post<string>(this.path(), bulkAccountCallRecordingsResource, undefined, restRequestConfig);
     return r.data;
   }

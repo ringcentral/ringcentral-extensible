@@ -20,7 +20,7 @@ interface CallRecordingExtensionResource {
   /**
    * Direction of call
    */
-  callDirection?: ('Outbound' | 'Inbound' | 'All');
+  callDirection?: 'Outbound' | 'Inbound' | 'All';
 }
 
 export default CallRecordingExtensionResource;

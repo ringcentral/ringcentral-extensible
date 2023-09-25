@@ -7,7 +7,7 @@ interface GetCallRecordingResponse {
 
   /**
    * Link to a call recording binary content. Has to be retrieved with proper authorization
- *  (access token must be passed via `Authorization` header or query parameter)
+   *  (access token must be passed via `Authorization` header or query parameter)
    * Required
    * Format: uri
    */

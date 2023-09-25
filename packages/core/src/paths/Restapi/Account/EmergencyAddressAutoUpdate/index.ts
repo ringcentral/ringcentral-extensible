@@ -10,7 +10,7 @@ import Networks from './Networks';
 import Devices from './Devices';
 import Users from './Users';
 import Tasks from './Tasks';
-import { RingCentralInterface, ParentInterface } from '../../../../types';
+import type { RingCentralInterface, ParentInterface } from '../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -26,7 +26,7 @@ class Index {
     return `${this._parent.path()}/emergency-address-auto-update`;
   }
 
-  public tasks(taskId: (string | null) = null): Tasks {
+  public tasks(taskId: string | null = null): Tasks {
     return new Tasks(this, taskId);
   }
 
@@ -38,15 +38,15 @@ class Index {
     return new Devices(this);
   }
 
-  public networks(networkId: (string | null) = null): Networks {
+  public networks(networkId: string | null = null): Networks {
     return new Networks(this, networkId);
   }
 
-  public switches(switchId: (string | null) = null): Switches {
+  public switches(switchId: string | null = null): Switches {
     return new Switches(this, switchId);
   }
 
-  public wirelessPoints(pointId: (string | null) = null): WirelessPoints {
+  public wirelessPoints(pointId: string | null = null): WirelessPoints {
     return new WirelessPoints(this, pointId);
   }
 

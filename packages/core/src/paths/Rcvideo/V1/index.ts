@@ -1,7 +1,7 @@
 import Accounts from './Accounts';
 import History from './History';
 import Account from './Account';
-import { RingCentralInterface, ParentInterface } from '../../../types';
+import type { RingCentralInterface, ParentInterface } from '../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -17,7 +17,7 @@ class Index {
     return `${this._parent.path(false)}/v1`;
   }
 
-  public account(accountId: (string | null) = null): Account {
+  public account(accountId: string | null = null): Account {
     return new Account(this, accountId);
   }
 
@@ -25,7 +25,7 @@ class Index {
     return new History(this);
   }
 
-  public accounts(accountId: (string | null) = null): Accounts {
+  public accounts(accountId: string | null = null): Accounts {
     return new Accounts(this, accountId);
   }
 }

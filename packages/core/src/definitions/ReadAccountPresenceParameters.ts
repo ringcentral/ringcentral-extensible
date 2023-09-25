@@ -1,6 +1,6 @@
 /**
  * Query parameters for operation readAccountPresence
-*/
+ */
 interface ReadAccountPresenceParameters {
   /**
    * Whether to return detailed telephony state

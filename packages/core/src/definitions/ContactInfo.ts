@@ -1,9 +1,9 @@
-import ContactBusinessAddressInfo from './ContactBusinessAddressInfo';
-import PronouncedNameInfo from './PronouncedNameInfo';
+import type ContactBusinessAddressInfo from './ContactBusinessAddressInfo';
+import type PronouncedNameInfo from './PronouncedNameInfo';
 
 /**
  * Contact detailed information
-*/
+ */
 interface ContactInfo {
   /**
    * For User extension type only. Extension user first name
@@ -37,15 +37,15 @@ interface ContactInfo {
 
   /**
    * Extension user contact phone number in
- *  [E.164](https://www.itu.int/rec/T-REC-E.164-201011-I)
- *  (with '+' sign) format
+   *  [E.164](https://www.itu.int/rec/T-REC-E.164-201011-I)
+   *  (with '+' sign) format
    */
   businessPhone?: string;
 
   /**
    * Extension user mobile (**non** Toll Free) phone number in
- *  [E.164](https://www.itu.int/rec/T-REC-E.164-201011-I)
- *  (with '+' sign) format
+   *  [E.164](https://www.itu.int/rec/T-REC-E.164-201011-I)
+   *  (with '+' sign) format
    */
   mobilePhone?: string;
 
@@ -55,7 +55,7 @@ interface ContactInfo {
 
   /**
    * If 'True' then contact email is enabled as login name for this
- *  user. Please note that email should be unique in this case.
+   *  user. Please note that email should be unique in this case.
    */
   emailAsLoginName?: boolean;
 

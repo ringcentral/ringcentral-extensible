@@ -1,4 +1,4 @@
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
   public rc: RingCentralInterface;

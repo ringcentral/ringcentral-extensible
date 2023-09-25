@@ -1,10 +1,10 @@
-import NotificationRecipientInfo from './NotificationRecipientInfo';
-import SenderInfo from './SenderInfo';
-import MessageAttachmentInfo from './MessageAttachmentInfo';
+import type NotificationRecipientInfo from './NotificationRecipientInfo';
+import type SenderInfo from './SenderInfo';
+import type MessageAttachmentInfo from './MessageAttachmentInfo';
 
 /**
  * Notification payload body
-*/
+ */
 interface VoicemailMessageEventBody {
   /**
    * Internal identifier of a message
@@ -23,18 +23,18 @@ interface VoicemailMessageEventBody {
   /**
    * Type of a message
    */
-  type?: ('Voicemail');
+  type?: 'Voicemail';
 
   /**
    * Message creation datetime in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
- *  format including timezone, for example *2019-03-10T18:07:52.534Z*
+   *  format including timezone, for example *2019-03-10T18:07:52.534Z*
    * Format: date-time
    */
   creationTime?: string;
 
   /**
    * Datetime when a message was modified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
- *  format including timezone, for example *2019-03-10T18:07:52.534Z*
+   *  format including timezone, for example *2019-03-10T18:07:52.534Z*
    * Format: date-time
    */
   lastModifiedTime?: string;
@@ -42,12 +42,12 @@ interface VoicemailMessageEventBody {
   /**
    * Message read status
    */
-  readStatus?: ('Read' | 'Unread');
+  readStatus?: 'Read' | 'Unread';
 
   /**
    * Message priority
    */
-  priority?: ('Normal' | 'High');
+  priority?: 'Normal' | 'High';
 
   /**
    * Message attachment data
@@ -56,18 +56,18 @@ interface VoicemailMessageEventBody {
 
   /**
    * Text message direction. Note that for some message types not all
- *  directions are allowed. For example voicemail messages can
- *  be only inbound
+   *  directions are allowed. For example voicemail messages can
+   *  be only inbound
    */
-  direction?: ('Inbound' | 'Outbound');
+  direction?: 'Inbound' | 'Outbound';
 
   /**
    * Message availability status. Message in 'Deleted' state is still
- *  preserved with all its attachments and can be restored. 'Purged' means
- *  that all attachments are already deleted and the message itself is about
- *  to be physically deleted shortly
+   *  preserved with all its attachments and can be restored. 'Purged' means
+   *  that all attachments are already deleted and the message itself is about
+   *  to be physically deleted shortly
    */
-  availability?: ('Alive' | 'Deleted' | 'Purged');
+  availability?: 'Alive' | 'Deleted' | 'Purged';
 
   /**
    * Message subject. It replicates message text which is also returned as an attachment
@@ -76,13 +76,13 @@ interface VoicemailMessageEventBody {
 
   /**
    * Message status. Different message types may have different
- *  allowed status values. For outbound faxes the aggregated message status
- *  is returned. If, for outbound message, a status for at least one recipient is 'Queued', then
- *  the 'Queued' value is returned. If a status for at least one recipient is
- *  'SendingFailed', then the 'SendingFailed' value is returned. In other cases
- *  the 'Sent' status is returned
+   *  allowed status values. For outbound faxes the aggregated message status
+   *  is returned. If, for outbound message, a status for at least one recipient is 'Queued', then
+   *  the 'Queued' value is returned. If a status for at least one recipient is
+   *  'SendingFailed', then the 'SendingFailed' value is returned. In other cases
+   *  the 'Sent' status is returned
    */
-  messageStatus?: ('Queued' | 'Sent' | 'Delivered' | 'DeliveryFailed' | 'SendingFailed' | 'Received');
+  messageStatus?: 'Queued' | 'Sent' | 'Delivered' | 'DeliveryFailed' | 'SendingFailed' | 'Received';
 
   /**
    * Internal identifier of a conversation this message belongs to

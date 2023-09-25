@@ -1,10 +1,10 @@
 import Content from './Content';
 import Utils from '../../../../Utils';
-import UpdateIVRPromptRequest from '../../../../definitions/UpdateIVRPromptRequest';
-import PromptInfo from '../../../../definitions/PromptInfo';
-import CreateIVRPromptRequest from '../../../../definitions/CreateIVRPromptRequest';
-import IvrPrompts from '../../../../definitions/IvrPrompts';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
+import type UpdateIVRPromptRequest from '../../../../definitions/UpdateIVRPromptRequest';
+import type PromptInfo from '../../../../definitions/PromptInfo';
+import type CreateIVRPromptRequest from '../../../../definitions/CreateIVRPromptRequest';
+import type IvrPrompts from '../../../../definitions/IvrPrompts';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -47,7 +47,10 @@ class Index {
    * App Permission: EditAccounts
    * User Permission: EditCompanyGreetings
    */
-  public async post(createIVRPromptRequest: CreateIVRPromptRequest, restRequestConfig?: RestRequestConfig): Promise<PromptInfo> {
+  public async post(
+    createIVRPromptRequest: CreateIVRPromptRequest,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<PromptInfo> {
     const formData = await Utils.getFormData(createIVRPromptRequest);
     const r = await this.rc.post<PromptInfo>(this.path(false), formData, undefined, restRequestConfig);
     return r.data;
@@ -77,7 +80,10 @@ class Index {
    * App Permission: EditAccounts
    * User Permission: EditCompanyGreetings
    */
-  public async put(updateIVRPromptRequest: UpdateIVRPromptRequest, restRequestConfig?: RestRequestConfig): Promise<PromptInfo> {
+  public async put(
+    updateIVRPromptRequest: UpdateIVRPromptRequest,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<PromptInfo> {
     if (this.promptId === null) {
       throw new Error('promptId must be specified.');
     }

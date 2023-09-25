@@ -1,4 +1,4 @@
-import AssistedUserResource from './AssistedUserResource';
+import type AssistedUserResource from './AssistedUserResource';
 
 interface AssistedUsersResource {
   /**

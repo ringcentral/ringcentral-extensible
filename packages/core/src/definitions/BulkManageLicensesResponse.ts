@@ -1,4 +1,4 @@
-import LicenseAssignmentResponseEntry from './LicenseAssignmentResponseEntry';
+import type LicenseAssignmentResponseEntry from './LicenseAssignmentResponseEntry';
 
 interface BulkManageLicensesResponse {
   /**

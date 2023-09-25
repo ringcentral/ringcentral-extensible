@@ -1,8 +1,8 @@
 import Supervise from './Supervise';
 import Parties from './Parties';
-import CallSessionObject from '../../../../../definitions/CallSessionObject';
-import ReadCallSessionStatusParameters from '../../../../../definitions/ReadCallSessionStatusParameters';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import type CallSessionObject from '../../../../../definitions/CallSessionObject';
+import type ReadCallSessionStatusParameters from '../../../../../definitions/ReadCallSessionStatusParameters';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -31,7 +31,10 @@ class Index {
    * Rate Limit Group: Light
    * App Permission: CallControl
    */
-  public async get(queryParams?: ReadCallSessionStatusParameters, restRequestConfig?: RestRequestConfig): Promise<CallSessionObject> {
+  public async get(
+    queryParams?: ReadCallSessionStatusParameters,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<CallSessionObject> {
     if (this.telephonySessionId === null) {
       throw new Error('telephonySessionId must be specified.');
     }
@@ -54,7 +57,7 @@ class Index {
     return r.data;
   }
 
-  public parties(partyId: (string | null) = null): Parties {
+  public parties(partyId: string | null = null): Parties {
     return new Parties(this, partyId);
   }
 

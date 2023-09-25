@@ -1,6 +1,6 @@
 import Registrants from './Registrants';
-import RegSessionModel from '../../../../../definitions/RegSessionModel';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import type RegSessionModel from '../../../../../definitions/RegSessionModel';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -24,10 +24,10 @@ class Index {
 
   /**
    * Returns a registration Session information by ID.
- *
- * A caller must be an authorized user: either a host of the webinar or an IT Admin:
- * a user from host's account with "WebinarSettings" permission.
- *
+   *
+   * A caller must be an authorized user: either a host of the webinar or an IT Admin:
+   * a user from host's account with "WebinarSettings" permission.
+   *
    * HTTP Method: get
    * Endpoint: /webinar/registration/v1/sessions/{sessionId}
    * Rate Limit Group: Heavy
@@ -43,20 +43,23 @@ class Index {
 
   /**
    * Updates a Session by ID.
- *
- * This is a PARTIAL update (PATCH), client may call it providing only attributes which are to be changed.
- *
- * A caller must be an authorized user: either a host of the webinar or an IT Admin:
- * a user from host's account with "WebinarSettings" permission.
- *
- * If a session record with given ID doesn't exist on Registration Service side the API should return HTTP 404.
- *
+   *
+   * This is a PARTIAL update (PATCH), client may call it providing only attributes which are to be changed.
+   *
+   * A caller must be an authorized user: either a host of the webinar or an IT Admin:
+   * a user from host's account with "WebinarSettings" permission.
+   *
+   * If a session record with given ID doesn't exist on Registration Service side the API should return HTTP 404.
+   *
    * HTTP Method: patch
    * Endpoint: /webinar/registration/v1/sessions/{sessionId}
    * Rate Limit Group: Heavy
    * App Permission: EditWebinars
    */
-  public async patch(regSessionModel: RegSessionModel, restRequestConfig?: RestRequestConfig): Promise<RegSessionModel> {
+  public async patch(
+    regSessionModel: RegSessionModel,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<RegSessionModel> {
     if (this.sessionId === null) {
       throw new Error('sessionId must be specified.');
     }
@@ -64,7 +67,7 @@ class Index {
     return r.data;
   }
 
-  public registrants(registrantId: (string | null) = null): Registrants {
+  public registrants(registrantId: string | null = null): Registrants {
     return new Registrants(this, registrantId);
   }
 }

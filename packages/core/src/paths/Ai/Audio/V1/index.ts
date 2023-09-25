@@ -1,6 +1,6 @@
 import Enrollments from './Enrollments';
 import Async from './Async';
-import { RingCentralInterface, ParentInterface } from '../../../../types';
+import type { RingCentralInterface, ParentInterface } from '../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -20,7 +20,7 @@ class Index {
     return new Async(this);
   }
 
-  public enrollments(enrollmentId: (string | null) = null): Enrollments {
+  public enrollments(enrollmentId: string | null = null): Enrollments {
     return new Enrollments(this, enrollmentId);
   }
 }

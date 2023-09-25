@@ -1,8 +1,8 @@
-import TMConversationInfo from '../../../../definitions/TMConversationInfo';
-import CreateConversationRequest from '../../../../definitions/CreateConversationRequest';
-import TMConversationList from '../../../../definitions/TMConversationList';
-import ListGlipConversationsNewParameters from '../../../../definitions/ListGlipConversationsNewParameters';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
+import type TMConversationInfo from '../../../../definitions/TMConversationInfo';
+import type CreateConversationRequest from '../../../../definitions/CreateConversationRequest';
+import type TMConversationList from '../../../../definitions/TMConversationList';
+import type ListGlipConversationsNewParameters from '../../../../definitions/ListGlipConversationsNewParameters';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -31,7 +31,10 @@ class Index {
    * Rate Limit Group: Medium
    * App Permission: TeamMessaging
    */
-  public async list(queryParams?: ListGlipConversationsNewParameters, restRequestConfig?: RestRequestConfig): Promise<TMConversationList> {
+  public async list(
+    queryParams?: ListGlipConversationsNewParameters,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<TMConversationList> {
     const r = await this.rc.get<TMConversationList>(this.path(false), queryParams, restRequestConfig);
     return r.data;
   }
@@ -43,8 +46,16 @@ class Index {
    * Rate Limit Group: Medium
    * App Permission: TeamMessaging
    */
-  public async post(createConversationRequest: CreateConversationRequest, restRequestConfig?: RestRequestConfig): Promise<TMConversationInfo> {
-    const r = await this.rc.post<TMConversationInfo>(this.path(false), createConversationRequest, undefined, restRequestConfig);
+  public async post(
+    createConversationRequest: CreateConversationRequest,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<TMConversationInfo> {
+    const r = await this.rc.post<TMConversationInfo>(
+      this.path(false),
+      createConversationRequest,
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 

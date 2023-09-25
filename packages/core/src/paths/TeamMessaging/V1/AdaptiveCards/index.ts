@@ -1,7 +1,7 @@
-import AdaptiveCardShortInfo from '../../../../definitions/AdaptiveCardShortInfo';
-import AdaptiveCardRequest from '../../../../definitions/AdaptiveCardRequest';
-import AdaptiveCardInfo from '../../../../definitions/AdaptiveCardInfo';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
+import type AdaptiveCardShortInfo from '../../../../definitions/AdaptiveCardShortInfo';
+import type AdaptiveCardRequest from '../../../../definitions/AdaptiveCardRequest';
+import type AdaptiveCardInfo from '../../../../definitions/AdaptiveCardInfo';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -45,7 +45,10 @@ class Index {
    * Rate Limit Group: Medium
    * App Permission: TeamMessaging
    */
-  public async put(adaptiveCardRequest: AdaptiveCardRequest, restRequestConfig?: RestRequestConfig): Promise<AdaptiveCardShortInfo> {
+  public async put(
+    adaptiveCardRequest: AdaptiveCardRequest,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<AdaptiveCardShortInfo> {
     if (this.cardId === null) {
       throw new Error('cardId must be specified.');
     }

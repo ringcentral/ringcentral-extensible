@@ -1,4 +1,4 @@
-import ApiError from './ApiError';
+import type ApiError from './ApiError';
 
 interface SessionLivestreamMinimalModel {
   /**
@@ -17,20 +17,40 @@ interface SessionLivestreamMinimalModel {
 
   /**
    * Last known state of the livestream as notified by Webinar Livestreaming Controller Service (WLCS).
- *  Value may not be consistent with latest state, especially for livestream associated with OAuth2.0 based service providers.
- *  Thus, state must be obtained directly from WLCS
+   *  Value may not be consistent with latest state, especially for livestream associated with OAuth2.0 based service providers.
+   *  Thus, state must be obtained directly from WLCS
    * Required
    * Example: Initialized
    */
-  livestreamStatus?: ('Initialized' | 'Authorized' | 'Configured' | 'PublishSetup' | 'Publishing' | 'Paused' | 'Error' | 'Break' | 'Deleted' | 'Completed');
+  livestreamStatus?:
+    | 'Initialized'
+    | 'Authorized'
+    | 'Configured'
+    | 'PublishSetup'
+    | 'Publishing'
+    | 'Paused'
+    | 'Error'
+    | 'Break'
+    | 'Deleted'
+    | 'Completed';
 
   /**
    * Last known state of the livestream as notified by Webinar Livestreaming Controller Service (WLCS).
- *  Value may not be consistent with latest state, especially for livestream associated with OAuth2.0 based service providers.
- *  Thus, state must be obtained directly from WLCS
+   *  Value may not be consistent with latest state, especially for livestream associated with OAuth2.0 based service providers.
+   *  Thus, state must be obtained directly from WLCS
    * Example: Initialized
    */
-  previousLivestreamStatus?: ('Initialized' | 'Authorized' | 'Configured' | 'PublishSetup' | 'Publishing' | 'Paused' | 'Error' | 'Break' | 'Deleted' | 'Completed');
+  previousLivestreamStatus?:
+    | 'Initialized'
+    | 'Authorized'
+    | 'Configured'
+    | 'PublishSetup'
+    | 'Publishing'
+    | 'Paused'
+    | 'Error'
+    | 'Break'
+    | 'Deleted'
+    | 'Completed';
 
   /**
    * Time at which the session started to publish media to livestream service provider.

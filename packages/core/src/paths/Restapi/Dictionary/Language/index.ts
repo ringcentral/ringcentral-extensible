@@ -1,6 +1,6 @@
-import LanguageInfo from '../../../../definitions/LanguageInfo';
-import LanguageList from '../../../../definitions/LanguageList';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
+import type LanguageInfo from '../../../../definitions/LanguageInfo';
+import type LanguageList from '../../../../definitions/LanguageList';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -24,7 +24,7 @@ class Index {
 
   /**
    * Returns information about the supported languages.
- *
+   *
    * HTTP Method: get
    * Endpoint: /restapi/{apiVersion}/dictionary/language
    * Rate Limit Group: Light
@@ -36,7 +36,7 @@ class Index {
 
   /**
    * Returns a language by ID.
- *
+   *
    * HTTP Method: get
    * Endpoint: /restapi/{apiVersion}/dictionary/language/{languageId}
    * Rate Limit Group: Light

@@ -1,15 +1,15 @@
 /**
  * Query parameters for operation listUserTemplates
-*/
+ */
 interface ListUserTemplatesParameters {
   /**
    * Type of a template
    */
-  type?: ('UserSettings' | 'CallHandling');
+  type?: 'UserSettings' | 'CallHandling';
 
   /**
    * Indicates a page number to retrieve. Only positive number values
- *  are allowed. Default value is '1'
+   *  are allowed. Default value is '1'
    * Format: int32
    * Default: 1
    */

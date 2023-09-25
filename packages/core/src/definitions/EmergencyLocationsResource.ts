@@ -1,5 +1,5 @@
-import EmergencyLocationResource from './EmergencyLocationResource';
-import EmergencyLocationsPaging from './EmergencyLocationsPaging';
+import type EmergencyLocationResource from './EmergencyLocationResource';
+import type EmergencyLocationsPaging from './EmergencyLocationsPaging';
 
 interface EmergencyLocationsResource {
   /**

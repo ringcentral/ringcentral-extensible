@@ -1,6 +1,6 @@
 /**
  * Extension timezone information
-*/
+ */
 interface TimezoneInfo {
   /**
    * Internal identifier of a timezone

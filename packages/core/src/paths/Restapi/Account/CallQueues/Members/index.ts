@@ -1,6 +1,6 @@
-import CallQueueMembers from '../../../../../definitions/CallQueueMembers';
-import ListCallQueueMembersParameters from '../../../../../definitions/ListCallQueueMembersParameters';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import type CallQueueMembers from '../../../../../definitions/CallQueueMembers';
+import type ListCallQueueMembersParameters from '../../../../../definitions/ListCallQueueMembersParameters';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -18,14 +18,17 @@ class Index {
 
   /**
    * Returns a list of call queue group members.
- *
+   *
    * HTTP Method: get
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/call-queues/{groupId}/members
    * Rate Limit Group: Light
    * App Permission: ReadAccounts
    * User Permission: ReadExtensions
    */
-  public async get(queryParams?: ListCallQueueMembersParameters, restRequestConfig?: RestRequestConfig): Promise<CallQueueMembers> {
+  public async get(
+    queryParams?: ListCallQueueMembersParameters,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<CallQueueMembers> {
     const r = await this.rc.get<CallQueueMembers>(this.path(), queryParams, restRequestConfig);
     return r.data;
   }

@@ -1,4 +1,4 @@
-import SiteInfo from './SiteInfo';
+import type SiteInfo from './SiteInfo';
 
 interface SitesList {
   /**

@@ -17,7 +17,7 @@ interface CallQueueOverflowAgent {
   /**
    * Queue current state (Enabled/Disabled)
    */
-  status?: ('Disabled' | 'Enabled');
+  status?: 'Disabled' | 'Enabled';
 }
 
 export default CallQueueOverflowAgent;

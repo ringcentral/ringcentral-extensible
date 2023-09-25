@@ -1,6 +1,6 @@
 /**
  * Query parameters for operation listVideoMeetings
-*/
+ */
 interface ListVideoMeetingsParameters {
   /**
    * Search text
@@ -21,7 +21,7 @@ interface ListVideoMeetingsParameters {
   /**
    * Type of returned data
    */
-  type?: ('All' | 'My' | 'Deleted' | 'Shared');
+  type?: 'All' | 'My' | 'Deleted' | 'Shared';
 }
 
 export default ListVideoMeetingsParameters;

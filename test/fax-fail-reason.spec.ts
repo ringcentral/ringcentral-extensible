@@ -14,13 +14,9 @@ describe('fax fail reason', () => {
         dateFrom: '2010-04-15T17:18:00.000Z',
       });
     await rc.revoke();
-    const failedFaxes = messages.records?.filter(
-      (m) => m.messageStatus === 'SendingFailed',
-    );
-    (failedFaxes ?? []).forEach((failedFax) => {
-      expect(
-        failedFax.to?.some((t) => t.faxErrorCode && t.faxErrorCode.length > 0),
-      ).toBeTruthy();
-    });
+    const failedFaxes = messages.records?.filter((m) => m.messageStatus === 'SendingFailed');
+    for (const failedFax of failedFaxes ?? []) {
+      expect(failedFax.to?.some((t) => t.faxErrorCode && t.faxErrorCode.length > 0)).toBeTruthy();
+    }
   });
 });

@@ -1,6 +1,6 @@
 /**
  * Query parameters for operation listGlipConversationsNew
-*/
+ */
 interface ListGlipConversationsNewParameters {
   /**
    * Number of conversations to be fetched by one request. The maximum value is 250, by default - 30

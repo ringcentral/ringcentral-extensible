@@ -1,7 +1,7 @@
-import Meeting from '../../../../../definitions/Meeting';
-import MeetingPage from '../../../../../definitions/MeetingPage';
-import ListVideoMeetingsParameters from '../../../../../definitions/ListVideoMeetingsParameters';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import type Meeting from '../../../../../definitions/Meeting';
+import type MeetingPage from '../../../../../definitions/MeetingPage';
+import type ListVideoMeetingsParameters from '../../../../../definitions/ListVideoMeetingsParameters';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -30,7 +30,10 @@ class Index {
    * Rate Limit Group: Light
    * App Permission: Video
    */
-  public async list(queryParams?: ListVideoMeetingsParameters, restRequestConfig?: RestRequestConfig): Promise<MeetingPage> {
+  public async list(
+    queryParams?: ListVideoMeetingsParameters,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<MeetingPage> {
     const r = await this.rc.get<MeetingPage>(this.path(false), queryParams, restRequestConfig);
     return r.data;
   }

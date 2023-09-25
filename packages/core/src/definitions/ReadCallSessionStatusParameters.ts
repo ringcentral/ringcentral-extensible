@@ -1,6 +1,6 @@
 /**
  * Query parameters for operation readCallSessionStatus
-*/
+ */
 interface ReadCallSessionStatusParameters {
   /**
    * The date and time of a call session latest change

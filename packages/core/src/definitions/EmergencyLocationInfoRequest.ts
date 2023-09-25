@@ -1,5 +1,5 @@
-import EmergencyLocationInfoRequestAddress from './EmergencyLocationInfoRequestAddress';
-import ShortSiteInfo from './ShortSiteInfo';
+import type EmergencyLocationInfoRequestAddress from './EmergencyLocationInfoRequestAddress';
+import type ShortSiteInfo from './ShortSiteInfo';
 
 interface EmergencyLocationInfoRequest {
   /**
@@ -23,12 +23,12 @@ interface EmergencyLocationInfoRequest {
   /**
    * Emergency address status
    */
-  addressStatus?: ('Valid' | 'Invalid');
+  addressStatus?: 'Valid' | 'Invalid';
 
   /**
    * Status of an emergency response location usage.
    */
-  usageStatus?: ('Active' | 'Inactive');
+  usageStatus?: 'Active' | 'Inactive';
 
   /**
    * Address format id
@@ -37,11 +37,11 @@ interface EmergencyLocationInfoRequest {
 
   /**
    * Visibility of an emergency response location. If `Private`
- *  is set, then a location is visible only for restricted number of users,
- *  specified in `owners` array
+   *  is set, then a location is visible only for restricted number of users,
+   *  specified in `owners` array
    * Default: Public
    */
-  visibility?: ('Public');
+  visibility?: 'Public';
 }
 
 export default EmergencyLocationInfoRequest;

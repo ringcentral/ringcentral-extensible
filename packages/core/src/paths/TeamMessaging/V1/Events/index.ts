@@ -1,8 +1,8 @@
-import TMEventInfo from '../../../../definitions/TMEventInfo';
-import TMCreateEventRequest from '../../../../definitions/TMCreateEventRequest';
-import TMEventList from '../../../../definitions/TMEventList';
-import ReadGlipEventsNewParameters from '../../../../definitions/ReadGlipEventsNewParameters';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
+import type TMEventInfo from '../../../../definitions/TMEventInfo';
+import type TMCreateEventRequest from '../../../../definitions/TMCreateEventRequest';
+import type TMEventList from '../../../../definitions/TMEventList';
+import type ReadGlipEventsNewParameters from '../../../../definitions/ReadGlipEventsNewParameters';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -31,7 +31,10 @@ class Index {
    * Rate Limit Group: Medium
    * App Permission: TeamMessaging
    */
-  public async list(queryParams?: ReadGlipEventsNewParameters, restRequestConfig?: RestRequestConfig): Promise<TMEventList> {
+  public async list(
+    queryParams?: ReadGlipEventsNewParameters,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<TMEventList> {
     const r = await this.rc.get<TMEventList>(this.path(false), queryParams, restRequestConfig);
     return r.data;
   }
@@ -43,7 +46,10 @@ class Index {
    * Rate Limit Group: Medium
    * App Permission: TeamMessaging
    */
-  public async post(tMCreateEventRequest: TMCreateEventRequest, restRequestConfig?: RestRequestConfig): Promise<TMEventInfo> {
+  public async post(
+    tMCreateEventRequest: TMCreateEventRequest,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<TMEventInfo> {
     const r = await this.rc.post<TMEventInfo>(this.path(false), tMCreateEventRequest, undefined, restRequestConfig);
     return r.data;
   }
@@ -70,7 +76,10 @@ class Index {
    * Rate Limit Group: Medium
    * App Permission: TeamMessaging
    */
-  public async put(tMCreateEventRequest: TMCreateEventRequest, restRequestConfig?: RestRequestConfig): Promise<TMEventInfo> {
+  public async put(
+    tMCreateEventRequest: TMCreateEventRequest,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<TMEventInfo> {
     if (this.eventId === null) {
       throw new Error('eventId must be specified.');
     }

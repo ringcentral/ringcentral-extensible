@@ -1,19 +1,19 @@
-import AggregationResponseOptionsTimersAllCallsDuration from './AggregationResponseOptionsTimersAllCallsDuration';
-import AggregationResponseOptionsTimersCallsDurationByDirection from './AggregationResponseOptionsTimersCallsDurationByDirection';
-import AggregationResponseOptionsTimersCallsDurationByOrigin from './AggregationResponseOptionsTimersCallsDurationByOrigin';
-import AggregationResponseOptionsTimersCallsDurationByResponse from './AggregationResponseOptionsTimersCallsDurationByResponse';
-import AggregationResponseOptionsTimersCallsSegmentsDuration from './AggregationResponseOptionsTimersCallsSegmentsDuration';
-import AggregationResponseOptionsTimersCallsDurationByResult from './AggregationResponseOptionsTimersCallsDurationByResult';
-import AggregationResponseOptionsTimersCallsDurationByCompanyHours from './AggregationResponseOptionsTimersCallsDurationByCompanyHours';
-import AggregationResponseOptionsTimersCallsDurationByQueueSla from './AggregationResponseOptionsTimersCallsDurationByQueueSla';
-import AggregationResponseOptionsTimersCallsDurationByType from './AggregationResponseOptionsTimersCallsDurationByType';
+import type AggregationResponseOptionsTimersAllCallsDuration from './AggregationResponseOptionsTimersAllCallsDuration';
+import type AggregationResponseOptionsTimersCallsDurationByDirection from './AggregationResponseOptionsTimersCallsDurationByDirection';
+import type AggregationResponseOptionsTimersCallsDurationByOrigin from './AggregationResponseOptionsTimersCallsDurationByOrigin';
+import type AggregationResponseOptionsTimersCallsDurationByResponse from './AggregationResponseOptionsTimersCallsDurationByResponse';
+import type AggregationResponseOptionsTimersCallsSegmentsDuration from './AggregationResponseOptionsTimersCallsSegmentsDuration';
+import type AggregationResponseOptionsTimersCallsDurationByResult from './AggregationResponseOptionsTimersCallsDurationByResult';
+import type AggregationResponseOptionsTimersCallsDurationByCompanyHours from './AggregationResponseOptionsTimersCallsDurationByCompanyHours';
+import type AggregationResponseOptionsTimersCallsDurationByQueueSla from './AggregationResponseOptionsTimersCallsDurationByQueueSla';
+import type AggregationResponseOptionsTimersCallsDurationByType from './AggregationResponseOptionsTimersCallsDurationByType';
 
 /**
  * The formula is defined by `aggregationType` and `aggregationInterval` for every timer individually.
  * If `aggregationType` is `Sum` or `Percent`, `aggregationInterval` is not supported.
  * If `aggregationType` is `Min`, `Max` or `Average`, `aggregationInterval` is supported, but not required.
  * If left empty, aggregation will be performed on per-call basis
-*/
+ */
 interface AggregationResponseOptionsTimers {
   /**
    * Aggregation of all calls duration

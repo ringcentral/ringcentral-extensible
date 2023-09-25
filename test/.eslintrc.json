@@ -1,9 +1,0 @@
-{
-  "extends": "../.eslintrc.json",
-  "env": {
-    "jest": true
-  },
-  "rules": {
-    "node/no-unpublished-import": "off"
-  }
-}

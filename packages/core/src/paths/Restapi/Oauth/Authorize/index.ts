@@ -1,5 +1,5 @@
-import AuthorizeRequest from '../../../../definitions/AuthorizeRequest';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
+import type AuthorizeRequest from '../../../../definitions/AuthorizeRequest';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
 
 class Index {
   public rc: RingCentralInterface;

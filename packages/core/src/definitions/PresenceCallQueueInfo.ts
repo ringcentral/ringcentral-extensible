@@ -1,6 +1,6 @@
 /**
  * Call queue information
-*/
+ */
 interface PresenceCallQueueInfo {
   /**
    * Internal identifier of a call queue

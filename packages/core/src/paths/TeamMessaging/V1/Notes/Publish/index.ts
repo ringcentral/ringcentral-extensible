@@ -1,5 +1,5 @@
-import TMNoteInfo from '../../../../../definitions/TMNoteInfo';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import type TMNoteInfo from '../../../../../definitions/TMNoteInfo';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
   public rc: RingCentralInterface;

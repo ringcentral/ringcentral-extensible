@@ -1,7 +1,7 @@
 import Check from './Check';
-import AuthProfileResource from '../../../../../definitions/AuthProfileResource';
-import ReadAuthorizationProfileParameters from '../../../../../definitions/ReadAuthorizationProfileParameters';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import type AuthProfileResource from '../../../../../definitions/AuthProfileResource';
+import type ReadAuthorizationProfileParameters from '../../../../../definitions/ReadAuthorizationProfileParameters';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -19,13 +19,16 @@ class Index {
 
   /**
    * Returns a list of user permissions granted at authorization procedure.
- * Please note: Some permissions may be restricted by extension type.
- *
+   * Please note: Some permissions may be restricted by extension type.
+   *
    * HTTP Method: get
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/authz-profile
    * Rate Limit Group: Medium
    */
-  public async get(queryParams?: ReadAuthorizationProfileParameters, restRequestConfig?: RestRequestConfig): Promise<AuthProfileResource> {
+  public async get(
+    queryParams?: ReadAuthorizationProfileParameters,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<AuthProfileResource> {
     const r = await this.rc.get<AuthProfileResource>(this.path(), queryParams, restRequestConfig);
     return r.data;
   }

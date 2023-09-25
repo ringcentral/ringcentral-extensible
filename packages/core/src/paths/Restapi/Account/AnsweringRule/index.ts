@@ -1,9 +1,9 @@
-import CompanyAnsweringRuleUpdate from '../../../../definitions/CompanyAnsweringRuleUpdate';
-import CompanyAnsweringRuleInfo from '../../../../definitions/CompanyAnsweringRuleInfo';
-import CompanyAnsweringRuleRequest from '../../../../definitions/CompanyAnsweringRuleRequest';
-import CompanyAnsweringRuleList from '../../../../definitions/CompanyAnsweringRuleList';
-import ListCompanyAnsweringRulesParameters from '../../../../definitions/ListCompanyAnsweringRulesParameters';
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
+import type CompanyAnsweringRuleUpdate from '../../../../definitions/CompanyAnsweringRuleUpdate';
+import type CompanyAnsweringRuleInfo from '../../../../definitions/CompanyAnsweringRuleInfo';
+import type CompanyAnsweringRuleRequest from '../../../../definitions/CompanyAnsweringRuleRequest';
+import type CompanyAnsweringRuleList from '../../../../definitions/CompanyAnsweringRuleList';
+import type ListCompanyAnsweringRulesParameters from '../../../../definitions/ListCompanyAnsweringRulesParameters';
+import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
@@ -33,7 +33,10 @@ class Index {
    * App Permission: ReadAccounts
    * User Permission: ReadCompanyAnsweringRules
    */
-  public async list(queryParams?: ListCompanyAnsweringRulesParameters, restRequestConfig?: RestRequestConfig): Promise<CompanyAnsweringRuleList> {
+  public async list(
+    queryParams?: ListCompanyAnsweringRulesParameters,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<CompanyAnsweringRuleList> {
     const r = await this.rc.get<CompanyAnsweringRuleList>(this.path(false), queryParams, restRequestConfig);
     return r.data;
   }
@@ -46,8 +49,16 @@ class Index {
    * App Permission: EditAccounts
    * User Permission: EditCompanyAnsweringRules
    */
-  public async post(companyAnsweringRuleRequest: CompanyAnsweringRuleRequest, restRequestConfig?: RestRequestConfig): Promise<CompanyAnsweringRuleInfo> {
-    const r = await this.rc.post<CompanyAnsweringRuleInfo>(this.path(false), companyAnsweringRuleRequest, undefined, restRequestConfig);
+  public async post(
+    companyAnsweringRuleRequest: CompanyAnsweringRuleRequest,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<CompanyAnsweringRuleInfo> {
+    const r = await this.rc.post<CompanyAnsweringRuleInfo>(
+      this.path(false),
+      companyAnsweringRuleRequest,
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -75,11 +86,19 @@ class Index {
    * App Permission: EditAccounts
    * User Permission: EditCompanyAnsweringRules
    */
-  public async put(companyAnsweringRuleUpdate: CompanyAnsweringRuleUpdate, restRequestConfig?: RestRequestConfig): Promise<CompanyAnsweringRuleInfo> {
+  public async put(
+    companyAnsweringRuleUpdate: CompanyAnsweringRuleUpdate,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<CompanyAnsweringRuleInfo> {
     if (this.ruleId === null) {
       throw new Error('ruleId must be specified.');
     }
-    const r = await this.rc.put<CompanyAnsweringRuleInfo>(this.path(), companyAnsweringRuleUpdate, undefined, restRequestConfig);
+    const r = await this.rc.put<CompanyAnsweringRuleInfo>(
+      this.path(),
+      companyAnsweringRuleUpdate,
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 

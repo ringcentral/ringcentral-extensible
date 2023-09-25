@@ -1,6 +1,6 @@
 /**
  * Specifies filtering based on extension ids
-*/
+ */
 interface ExtensionFilters {
   /**
    * List of extension ids to match against incoming calls, joined via OR condition. Only applicable for `groupByMembers` options and Users, IVRs, SharedLines and Queues in `groupBy`
