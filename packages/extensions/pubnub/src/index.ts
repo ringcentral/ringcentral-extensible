@@ -56,7 +56,7 @@ export class Subscription {
   public async subscribe() {
     this.subscriptionInfo = await this.pne.rc.restapi().subscription().post(this.requestBody);
     this.pubnub = new PubNub({
-      userId: this.pne.rc.token!.owner_id,
+      userId: this.pne.rc.token!.owner_id!,
       subscribeKey: this.subscriptionInfo!.deliveryMode!.subscriberKey!,
       origin: 'ringcentral.pubnubapi.com',
       useRandomIVs: false,

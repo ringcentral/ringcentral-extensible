@@ -78,7 +78,7 @@ class EventsExtension extends SdkExtension {
         }
       }
       try {
-        const r = await request(method, endpoint, content, queryParams, config);
+        const r = await request<T>(method, endpoint, content, queryParams, config);
         this.emit(Events.requestSuccess, r);
         if (method === 'POST') {
           if (endpoint === '/restapi/oauth/token') {

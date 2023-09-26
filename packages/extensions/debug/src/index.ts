@@ -30,7 +30,7 @@ class DebugExtension extends SdkExtension {
       if (!this.enabled) {
         return request(method, endpoint, content, queryParams, config);
       }
-      const r = await request(method, endpoint, content, queryParams, config);
+      const r = await request<T>(method, endpoint, content, queryParams, config);
       this.options.loggingAction!(Utils.formatTraffic(r));
       return r;
     };
