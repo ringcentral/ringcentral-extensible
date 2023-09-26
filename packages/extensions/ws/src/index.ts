@@ -214,6 +214,7 @@ class WebSocketExtension extends SdkExtension {
     }
     if (!this.wsc || !this.wsc.token) {
       await this.connect(false); // connect to WSG but do not recover
+      this.enable();
       return;
     }
     if (this.recoverTimestamp === undefined) {
