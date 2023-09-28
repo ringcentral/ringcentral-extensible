@@ -7,7 +7,7 @@ import RestException from './RestException';
 import type TokenInfo from './definitions/TokenInfo';
 import type { RestMethod, RestOptions, RestRequestConfig, RestResponse } from './types';
 
-const version = '1.3.3';
+const version = '1.3.4';
 
 export default class Rest {
   public static sandboxServer = 'https://platform.devtest.ringcentral.com';
