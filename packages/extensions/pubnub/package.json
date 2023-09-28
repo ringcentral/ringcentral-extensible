@@ -18,7 +18,7 @@
     "access": "public"
   },
   "dependencies": {
-    "@types/pubnub": "^7.3.2",
+    "@types/pubnub": "^7.3.3",
     "pubnub": "^7.3.3"
   },
   "devDependencies": {
