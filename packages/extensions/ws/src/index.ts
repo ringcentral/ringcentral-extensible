@@ -74,7 +74,7 @@ class WebSocketExtension extends SdkExtension {
       const interval = 2000 + 2000 * retriesAttempted;
       return Math.min(8000, interval);
     };
-    this.options.autoRecover.pingServerInterval ??= 30000;
+    this.options.autoRecover.pingServerInterval ??= 60000;
   }
 
   public disable() {
@@ -245,20 +245,14 @@ class WebSocketExtension extends SdkExtension {
       return;
     }
     try {
-      if (this.ws.ping) {
-        // node.js
-        this.ws.ping();
-      } else {
-        // browser
-        await this.ws.send(
-          JSON.stringify([
-            {
-              type: 'Heartbeat',
-              messageId: uuid(),
-            },
-          ]),
-        );
-      }
+      await this.ws.send(
+        JSON.stringify([
+          {
+            type: 'Heartbeat',
+            messageId: uuid(),
+          },
+        ]),
+      );
     } catch (e) {
       this.ws.close(); // Explicitly mark WS as closed
     }
