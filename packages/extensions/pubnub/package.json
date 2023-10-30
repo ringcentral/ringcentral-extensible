@@ -23,5 +23,11 @@
   },
   "devDependencies": {
     "@rc-ex/core": "file:../../core"
+  },
+  "yarn-upgrade-all": {
+    "ignore": [
+      "pubnub",
+      "@types/pubnub"
+    ]
   }
 }

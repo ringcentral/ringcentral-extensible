@@ -18,8 +18,8 @@
     "access": "public"
   },
   "dependencies": {
-    "@types/qs": "^6.9.8",
-    "axios": "^1.5.1",
+    "@types/qs": "^6.9.9",
+    "axios": "^1.6.0",
     "qs": "^6.11.2"
   },
   "devDependencies": {
