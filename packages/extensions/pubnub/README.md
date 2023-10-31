@@ -2,6 +2,8 @@
 
 PubNub Extension adds PubNub notifications feature.
 
+It is deprecated. Please use [WebSocket Extension](../ws) instead.
+
 ## Install
 
 ```
@@ -25,3 +27,11 @@ const subscription = await pubNubExtension.subscribe(
     }
 );
 ```
+
+## Known issue
+
+The last pubnub version I tested is 7.3.3. I confirmed that it worked.
+
+However, after I upgrade to pubnub 7.4.x, it stopped working. I don't know why.
+
+We are not going to spend time on it any more because pubnub support is deprecated.

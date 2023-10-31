@@ -49,9 +49,11 @@ RingCentral Extension makes [@ringcentral/sdk](https://www.npmjs.com/package/@ri
 
 WebSocket Extension adds support for WebSocket protocol.
 
-## [PubNub Extension](./pubnub)
+## Deprecated: [PubNub Extension](./pubnub)
 
 PubNub Extension adds PubNub notifications feature.
+
+It is deprecated. Please use [WebSocket Extension](./ws) instead.
 
 ## [Authorize URI Extension](./authorize-uri)
 
