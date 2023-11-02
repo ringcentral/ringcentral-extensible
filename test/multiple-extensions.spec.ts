@@ -42,14 +42,15 @@ describe('extensions', () => {
     });
 
     // Rest API call over WebSocket
+    const token = await rc.token; // because rc.token is an async all to get token from rcsdk
     await rc
       .restapi()
       .account()
       .extension()
       .companyPager()
       .post({
-        from: { extensionNumber: '101' },
-        to: [{ extensionNumber: '101' }], // send pager to oneself
+        from: { extensionId: token!.owner_id! },
+        to: [{ extensionId: token!.owner_id! }], // send pager to oneself
         text: 'Hello world',
       });
 

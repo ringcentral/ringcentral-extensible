@@ -20,8 +20,8 @@ describe('PubNub extension', () => {
       .extension()
       .companyPager()
       .post({
-        from: { extensionNumber: '101' },
-        to: [{ extensionNumber: '101' }], // send pager to oneself
+        from: { extensionId: rc.token!.owner_id! },
+        to: [{ extensionId: rc.token!.owner_id! }], // send pager to oneself
         text: 'Hello world',
       });
     const successful = await waitFor({
