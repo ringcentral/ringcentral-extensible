@@ -18,19 +18,19 @@
     "upgrade-all": "yarn-upgrade-all -W && yarn workspaces run yarn-upgrade-all && yarn install"
   },
   "devDependencies": {
-    "@types/node": "^20.8.9",
-    "@typescript-eslint/eslint-plugin": "^6.9.1",
-    "@typescript-eslint/parser": "^6.9.1",
-    "eslint": "^8.52.0",
+    "@types/node": "^20.10.6",
+    "@typescript-eslint/eslint-plugin": "^6.17.0",
+    "@typescript-eslint/parser": "^6.17.0",
+    "eslint": "^8.56.0",
     "eslint-config-alloy": "^5.1.2",
-    "eslint-config-prettier": "^9.0.0",
-    "eslint-plugin-prettier": "^5.0.1",
-    "lerna": "^7.4.1",
-    "prettier": "^3.0.3",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.1.2",
+    "lerna": "^8.0.1",
+    "prettier": "^3.1.1",
     "sort-package-json": "^2.6.0",
-    "ts-node": "^10.9.1",
-    "ttpt": "^0.6.6",
-    "typescript": "^5.2.2",
+    "ts-node": "^10.9.2",
+    "ttpt": "^0.8.2",
+    "typescript": "^5.3.3",
     "yarn-upgrade-all": "^0.7.2"
   }
 }

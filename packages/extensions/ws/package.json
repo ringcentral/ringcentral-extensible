@@ -18,12 +18,12 @@
     "access": "public"
   },
   "dependencies": {
-    "@types/ws": "^8.5.8",
+    "@types/ws": "^8.5.10",
     "http-status-codes": "^2.3.0",
     "hyperid": "^3.1.1",
     "isomorphic-ws": "^5.0.0",
     "wait-for-async": "^0.6.1",
-    "ws": "^8.14.2"
+    "ws": "^8.16.0"
   },
   "devDependencies": {
     "@rc-ex/core": "file:../../core"
