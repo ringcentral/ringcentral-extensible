@@ -5,18 +5,15 @@ import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '.
 
 class Index {
   public rc: RingCentralInterface;
-
   public _parent: ParentInterface;
 
   public constructor(_parent: ParentInterface) {
     this._parent = _parent;
     this.rc = _parent.rc;
   }
-
   public path(): string {
     return `${this._parent.path()}/opt-outs`;
   }
-
   /**
    * Returns the list of numbers opted out from the account. The list can be filtered by `to`/`from` phone number query parameters. Specifying `text/csv` in the Accept header downloads the data in CSV format.
    * HTTP Method: get

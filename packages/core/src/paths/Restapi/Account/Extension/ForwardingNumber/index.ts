@@ -9,9 +9,7 @@ import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '.
 
 class Index {
   public rc: RingCentralInterface;
-
   public _parent: ParentInterface;
-
   public forwardingNumberId: string | null;
 
   public constructor(_parent: ParentInterface, forwardingNumberId: string | null = null) {
@@ -19,14 +17,12 @@ class Index {
     this.rc = _parent.rc;
     this.forwardingNumberId = forwardingNumberId;
   }
-
   public path(withParameter = true): string {
     if (withParameter && this.forwardingNumberId !== null) {
       return `${this._parent.path()}/forwarding-number/${this.forwardingNumberId}`;
     }
     return `${this._parent.path()}/forwarding-number`;
   }
-
   /**
    * Returns the list of extension phone numbers used for call forwarding
    * and call flip. The returned list contains all the extension phone numbers

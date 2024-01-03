@@ -5,9 +5,7 @@ import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '.
 
 class Index {
   public rc: RingCentralInterface;
-
   public _parent: ParentInterface;
-
   public meetingId: string | null;
 
   public constructor(_parent: ParentInterface, meetingId: string | null = null) {
@@ -15,14 +13,12 @@ class Index {
     this.rc = _parent.rc;
     this.meetingId = meetingId;
   }
-
   public path(withParameter = true): string {
     if (withParameter && this.meetingId !== null) {
       return `${this._parent.path()}/meetings/${this.meetingId}`;
     }
     return `${this._parent.path()}/meetings`;
   }
-
   /**
    * Returns the list of user meetings.
    * HTTP Method: get

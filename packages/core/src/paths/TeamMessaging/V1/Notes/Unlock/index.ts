@@ -2,18 +2,15 @@ import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '.
 
 class Index {
   public rc: RingCentralInterface;
-
   public _parent: ParentInterface;
 
   public constructor(_parent: ParentInterface) {
     this._parent = _parent;
     this.rc = _parent.rc;
   }
-
   public path(): string {
     return `${this._parent.path()}/unlock`;
   }
-
   /**
    * Unlocks a note letting other users edit this note. Once the note is locked (by another user) it cannot be unlocked during 5 hours since the lock datetime.
    * HTTP Method: post

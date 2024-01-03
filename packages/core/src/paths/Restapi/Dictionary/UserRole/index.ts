@@ -5,9 +5,7 @@ import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '.
 
 class Index {
   public rc: RingCentralInterface;
-
   public _parent: ParentInterface;
-
   public roleId: string | null;
 
   public constructor(_parent: ParentInterface, roleId: string | null = null) {
@@ -15,14 +13,12 @@ class Index {
     this.rc = _parent.rc;
     this.roleId = roleId;
   }
-
   public path(withParameter = true): string {
     if (withParameter && this.roleId !== null) {
       return `${this._parent.path()}/user-role/${this.roleId}`;
     }
     return `${this._parent.path()}/user-role`;
   }
-
   /**
    * Returns a list of standard user roles.
    * HTTP Method: get

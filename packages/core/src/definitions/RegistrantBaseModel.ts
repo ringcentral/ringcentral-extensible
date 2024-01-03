@@ -1,5 +1,3 @@
-import type RegAnswerModel from './RegAnswerModel';
-
 interface RegistrantBaseModel {
   /**
    * First (given) name
@@ -68,11 +66,6 @@ interface RegistrantBaseModel {
    * ID of session participant (from Runtime Service - if this registrant attended the webinar)
    */
   participantId?: string;
-
-  /**
-   * Answers on custom registration questions
-   */
-  questionnaire?: RegAnswerModel[];
 }
 
 export default RegistrantBaseModel;

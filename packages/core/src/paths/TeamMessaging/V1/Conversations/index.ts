@@ -6,9 +6,7 @@ import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '.
 
 class Index {
   public rc: RingCentralInterface;
-
   public _parent: ParentInterface;
-
   public chatId: string | null;
 
   public constructor(_parent: ParentInterface, chatId: string | null = null) {
@@ -16,14 +14,12 @@ class Index {
     this.rc = _parent.rc;
     this.chatId = chatId;
   }
-
   public path(withParameter = true): string {
     if (withParameter && this.chatId !== null) {
       return `${this._parent.path()}/conversations/${this.chatId}`;
     }
     return `${this._parent.path()}/conversations`;
   }
-
   /**
    * Returns the list of conversations where the user is a member. All records in response are sorted by creation time of a conversation in ascending order. Conversation is a chat of the *Group* type.
    * HTTP Method: get

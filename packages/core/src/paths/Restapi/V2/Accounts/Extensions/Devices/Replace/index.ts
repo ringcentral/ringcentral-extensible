@@ -3,18 +3,15 @@ import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '.
 
 class Index {
   public rc: RingCentralInterface;
-
   public _parent: ParentInterface;
 
   public constructor(_parent: ParentInterface) {
     this._parent = _parent;
     this.rc = _parent.rc;
   }
-
   public path(): string {
     return `${this._parent.path()}/replace`;
   }
-
   /**
    * Replaces the user device with another device, which is assigned to an extension or is stored in the inventory of the same account.
    * Currently the following device types can be swapped - HardPhone and OtherPhone.

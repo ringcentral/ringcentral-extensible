@@ -26,6 +26,11 @@ interface Participant {
    * caller id
    */
   callerId?: string;
+
+  /**
+   * pass-thru parameter in join url
+   */
+  correlationId?: string;
 }
 
 export default Participant;

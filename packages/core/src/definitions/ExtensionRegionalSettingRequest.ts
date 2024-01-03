@@ -3,6 +3,7 @@ import type ExtensionTimezoneInfoRequest from './ExtensionTimezoneInfoRequest';
 import type ExtensionLanguageInfoRequest from './ExtensionLanguageInfoRequest';
 import type ExtensionGreetingLanguageInfoRequest from './ExtensionGreetingLanguageInfoRequest';
 import type ExtensionFormattingLocaleInfoRequest from './ExtensionFormattingLocaleInfoRequest';
+import type ExtensionCurrencyInfoRequest from './ExtensionCurrencyInfoRequest';
 
 interface ExtensionRegionalSettingRequest {
   /**
@@ -24,6 +25,10 @@ interface ExtensionRegionalSettingRequest {
   /**
    */
   formattingLocale?: ExtensionFormattingLocaleInfoRequest;
+
+  /**
+   */
+  currency?: ExtensionCurrencyInfoRequest;
 
   /**
    * Time format setting

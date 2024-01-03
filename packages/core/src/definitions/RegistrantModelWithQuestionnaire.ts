@@ -1,6 +1,6 @@
 import type RegAnswerModel from './RegAnswerModel';
 
-interface RegistrantModel {
+interface RegistrantModelWithQuestionnaire {
   /**
    * Internal object ID
    * Example: 78654321
@@ -95,4 +95,4 @@ interface RegistrantModel {
   questionnaire?: RegAnswerModel[];
 }
 
-export default RegistrantModel;
+export default RegistrantModelWithQuestionnaire;

@@ -3,9 +3,7 @@ import type { RingCentralInterface, ParentInterface } from '../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
-
   public _parent: ParentInterface;
-
   public brandId: string | null;
 
   public constructor(_parent: ParentInterface, brandId: string | null = null) {
@@ -13,7 +11,6 @@ class Index {
     this.rc = _parent.rc;
     this.brandId = brandId;
   }
-
   public path(withParameter = true): string {
     if (withParameter && this.brandId !== null) {
       return `${this._parent.path()}/brand/${this.brandId}`;

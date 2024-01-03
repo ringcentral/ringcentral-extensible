@@ -5,18 +5,15 @@ import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '.
 
 class Index {
   public rc: RingCentralInterface;
-
   public _parent: ParentInterface;
 
   public constructor(_parent: ParentInterface) {
     this._parent = _parent;
     this.rc = _parent.rc;
   }
-
   public path(): string {
     return `${this._parent.path()}/address-book-bulk-upload`;
   }
-
   /**
    * Uploads multiple contacts for multiple extensions at once.
    * Maximum 500 extensions can be uploaded per request. Max amount

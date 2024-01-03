@@ -19,7 +19,7 @@ interface UserPhoneNumberExtensionInfo {
   uri?: string;
 
   /**
-   * Number of extension
+   * Extension short number
    */
   extensionNumber?: string;
 

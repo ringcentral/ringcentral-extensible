@@ -8,6 +8,7 @@ import EmergencyLocations from './EmergencyLocations';
 import PagingOnlyGroups from './PagingOnlyGroups';
 import ForwardAllCalls from './ForwardAllCalls';
 import BusinessAddress from './BusinessAddress';
+import CallRecordings from './CallRecordings';
 import CallRecording from './CallRecording';
 import BusinessHours from './BusinessHours';
 import AnsweringRule from './AnsweringRule';
@@ -38,9 +39,7 @@ import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '.
 
 class Index {
   public rc: RingCentralInterface;
-
   public _parent: ParentInterface;
-
   public accountId: string | null;
 
   public constructor(_parent: ParentInterface, accountId: string | null = '~') {
@@ -48,17 +47,14 @@ class Index {
     this.rc = _parent.rc;
     this.accountId = accountId;
   }
-
   public path(withParameter = true): string {
     if (withParameter && this.accountId !== null) {
       return `${this._parent.path()}/account/${this.accountId}`;
     }
     return `${this._parent.path()}/account`;
   }
-
   /**
-   * Returns basic information about a particular RingCentral
-   * customer account.
+   * Returns basic information about a particular RingCentral customer account.
    *
    * HTTP Method: get
    * Endpoint: /restapi/{apiVersion}/account/{accountId}
@@ -172,6 +168,10 @@ class Index {
 
   public callRecording(): CallRecording {
     return new CallRecording(this);
+  }
+
+  public callRecordings(): CallRecordings {
+    return new CallRecordings(this);
   }
 
   public businessAddress(): BusinessAddress {

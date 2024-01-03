@@ -9,9 +9,7 @@ import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '.
 
 class Index {
   public rc: RingCentralInterface;
-
   public _parent: ParentInterface;
-
   public ruleId: string | null;
 
   public constructor(_parent: ParentInterface, ruleId: string | null = null) {
@@ -19,14 +17,12 @@ class Index {
     this.rc = _parent.rc;
     this.ruleId = ruleId;
   }
-
   public path(withParameter = true): string {
     if (withParameter && this.ruleId !== null) {
       return `${this._parent.path()}/answering-rule/${this.ruleId}`;
     }
     return `${this._parent.path()}/answering-rule`;
   }
-
   /**
    * Returns call handling rules of an extension.
    * HTTP Method: get

@@ -47,9 +47,9 @@ interface InteractionInput {
 
   /**
    * Optional set of speakers to be identified from the call.
-   * Example: enrollmentId1,enrollmentId2
+   * Example: speakerId1,speakerId2
    */
-  enrollmentIds?: string[];
+  speakerIds?: string[];
 
   /**
    * Apply voice activity detection.
@@ -65,6 +65,7 @@ interface InteractionInput {
     | 'AbstractiveSummaryLong'
     | 'AbstractiveSummaryShort'
     | 'ExtractiveSummary'
+    | 'Topics'
     | 'TalkToListenRatio'
     | 'Energy'
     | 'Pace'

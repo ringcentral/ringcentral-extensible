@@ -5,9 +5,7 @@ import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '.
 
 class Index {
   public rc: RingCentralInterface;
-
   public _parent: ParentInterface;
-
   public greetingId: string | null;
 
   public constructor(_parent: ParentInterface, greetingId: string | null = null) {
@@ -15,14 +13,12 @@ class Index {
     this.rc = _parent.rc;
     this.greetingId = greetingId;
   }
-
   public path(withParameter = true): string {
     if (withParameter && this.greetingId !== null) {
       return `${this._parent.path()}/greeting/${this.greetingId}`;
     }
     return `${this._parent.path()}/greeting`;
   }
-
   /**
    * Returns the list of predefined standard greetings. Custom greetings
    * recorded by user are not returned in response to this request. See Get Extension

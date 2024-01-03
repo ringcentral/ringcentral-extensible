@@ -4,18 +4,15 @@ import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '.
 
 class Index {
   public rc: RingCentralInterface;
-
   public _parent: ParentInterface;
 
   public constructor(_parent: ParentInterface) {
     this._parent = _parent;
     this.rc = _parent.rc;
   }
-
   public path(): string {
     return `${this._parent.path()}/download`;
   }
-
   /**
    * Returns the webinar recording download link (both Webinar host's and admin interface).
    *

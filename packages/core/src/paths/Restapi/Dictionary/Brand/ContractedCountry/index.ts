@@ -5,9 +5,7 @@ import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '.
 
 class Index {
   public rc: RingCentralInterface;
-
   public _parent: ParentInterface;
-
   public contractedCountryId: string | null;
 
   public constructor(_parent: ParentInterface, contractedCountryId: string | null = null) {
@@ -15,14 +13,12 @@ class Index {
     this.rc = _parent.rc;
     this.contractedCountryId = contractedCountryId;
   }
-
   public path(withParameter = true): string {
     if (withParameter && this.contractedCountryId !== null) {
       return `${this._parent.path()}/contracted-country/${this.contractedCountryId}`;
     }
     return `${this._parent.path()}/contracted-country`;
   }
-
   /**
    * Returns the list of contracted countries for the given brand.
    * HTTP Method: get

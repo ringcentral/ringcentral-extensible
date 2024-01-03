@@ -12,7 +12,14 @@ interface ExtensionStatusInfo {
   /**
    * Type of suspension
    */
-  reason?: 'Voluntarily' | 'Involuntarily' | 'SuspendedVoluntarily';
+  reason?: 'SuspendedVoluntarily' | 'SuspendedInvoluntarily' | 'CancelledVoluntarily' | 'CancelledInvoluntarily';
+
+  /**
+   * Date until which an account will get deleted. The default
+   *  value is 30 days since the current date
+   * Format: date-time
+   */
+  till?: string;
 }
 
 export default ExtensionStatusInfo;

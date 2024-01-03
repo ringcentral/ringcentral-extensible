@@ -5,9 +5,7 @@ import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '.
 
 class Index {
   public rc: RingCentralInterface;
-
   public _parent: ParentInterface;
-
   public stateId: string | null;
 
   public constructor(_parent: ParentInterface, stateId: string | null = null) {
@@ -15,14 +13,12 @@ class Index {
     this.rc = _parent.rc;
     this.stateId = stateId;
   }
-
   public path(withParameter = true): string {
     if (withParameter && this.stateId !== null) {
       return `${this._parent.path()}/state/${this.stateId}`;
     }
     return `${this._parent.path()}/state`;
   }
-
   /**
    * Returns all states of a certain country.
    *

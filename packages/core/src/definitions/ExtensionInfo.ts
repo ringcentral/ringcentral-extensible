@@ -6,8 +6,9 @@
 interface ExtensionInfo {
   /**
    * Internal identifier of an extension
+   * Format: int64
    */
-  id?: string;
+  id?: number;
 
   /**
    * Canonical URI of an extension
@@ -21,7 +22,7 @@ interface ExtensionInfo {
   name?: string;
 
   /**
-   * Number of extension
+   * Extension short number
    */
   extensionNumber?: string;
 

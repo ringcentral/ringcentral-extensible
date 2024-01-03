@@ -3,16 +3,15 @@
  */
 interface RecipientInfo {
   /**
-   * Link to a recipient extension resource
+   * Link to a voicemail recipient extension resource
    * Format: uri
    */
   uri?: string;
 
   /**
-   * Internal identifier of a recipient extension
-   * Format: int64
+   * Internal identifier of a voicemail recipient
    */
-  id?: number;
+  id?: string;
 }
 
 export default RecipientInfo;

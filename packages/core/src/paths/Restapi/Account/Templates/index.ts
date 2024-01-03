@@ -5,9 +5,7 @@ import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '.
 
 class Index {
   public rc: RingCentralInterface;
-
   public _parent: ParentInterface;
-
   public templateId: string | null;
 
   public constructor(_parent: ParentInterface, templateId: string | null = null) {
@@ -15,14 +13,12 @@ class Index {
     this.rc = _parent.rc;
     this.templateId = templateId;
   }
-
   public path(withParameter = true): string {
     if (withParameter && this.templateId !== null) {
       return `${this._parent.path()}/templates/${this.templateId}`;
     }
     return `${this._parent.path()}/templates`;
   }
-
   /**
    * Returns the list of user templates for the current account.
    *

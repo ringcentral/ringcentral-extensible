@@ -24,7 +24,7 @@ interface EnrollmentInput {
    * Required
    * Example: JohnDoe
    */
-  enrollmentId?: string;
+  speakerId?: string;
 }
 
 export default EnrollmentInput;

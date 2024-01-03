@@ -4,9 +4,7 @@ import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '.
 
 class Index {
   public rc: RingCentralInterface;
-
   public _parent: ParentInterface;
-
   public sessionId: string | null;
 
   public constructor(_parent: ParentInterface, sessionId: string | null = null) {
@@ -14,14 +12,12 @@ class Index {
     this.rc = _parent.rc;
     this.sessionId = sessionId;
   }
-
   public path(withParameter = true): string {
     if (withParameter && this.sessionId !== null) {
       return `${this._parent.path()}/sessions/${this.sessionId}`;
     }
     return `${this._parent.path()}/sessions`;
   }
-
   /**
    * Returns a registration Session information by ID.
    *

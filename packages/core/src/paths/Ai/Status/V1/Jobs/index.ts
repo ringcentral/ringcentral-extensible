@@ -3,9 +3,7 @@ import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '.
 
 class Index {
   public rc: RingCentralInterface;
-
   public _parent: ParentInterface;
-
   public jobId: string | null;
 
   public constructor(_parent: ParentInterface, jobId: string | null = null) {
@@ -13,14 +11,12 @@ class Index {
     this.rc = _parent.rc;
     this.jobId = jobId;
   }
-
   public path(withParameter = true): string {
     if (withParameter && this.jobId !== null) {
       return `${this._parent.path()}/jobs/${this.jobId}`;
     }
     return `${this._parent.path()}/jobs`;
   }
-
   /**
    * Returns async task status by Job ID
    * HTTP Method: get

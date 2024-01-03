@@ -1,6 +1,6 @@
 interface TMCreateTaskRequestAssignees {
   /**
-   * Assignee Id
+   * Internal identifier of an assignee
    */
   id?: string;
 }

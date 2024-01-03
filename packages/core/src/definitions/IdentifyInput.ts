@@ -34,9 +34,9 @@ interface IdentifyInput {
   /**
    * Set of enrolled speakers to be identified from the media.
    * Required
-   * Example: enrollmentId1,enrollmentId2
+   * Example: speakerId1,speakerId2
    */
-  enrollmentIds?: string[];
+  speakerIds?: string[];
 
   /**
    * Apply voice activity detection.

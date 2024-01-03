@@ -6,9 +6,7 @@ import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '.
 
 class Index {
   public rc: RingCentralInterface;
-
   public _parent: ParentInterface;
-
   public recordingId: string | null;
 
   public constructor(_parent: ParentInterface, recordingId: string | null = null) {
@@ -16,14 +14,12 @@ class Index {
     this.rc = _parent.rc;
     this.recordingId = recordingId;
   }
-
   public path(withParameter = true): string {
     if (withParameter && this.recordingId !== null) {
       return `${this._parent.path()}/recordings/${this.recordingId}`;
     }
     return `${this._parent.path()}/recordings`;
   }
-
   /**
    * Returns the list of webinar recordings for a given webinar host user
    *

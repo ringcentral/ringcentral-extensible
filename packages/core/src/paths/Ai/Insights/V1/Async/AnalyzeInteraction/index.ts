@@ -5,18 +5,15 @@ import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '.
 
 class Index {
   public rc: RingCentralInterface;
-
   public _parent: ParentInterface;
 
   public constructor(_parent: ParentInterface) {
     this._parent = _parent;
     this.rc = _parent.rc;
   }
-
   public path(): string {
     return `${this._parent.path()}/analyze-interaction`;
   }
-
   /**
    * Returns multiple insights including summaries, emotion, key phrases, questions asked, and more in a single API call.
    *

@@ -1,3 +1,4 @@
+import type StatusInfo from './StatusInfo';
 import type PostalAddress from './PostalAddress';
 import type ServiceInfoV2 from './ServiceInfoV2';
 import type SystemUserContactInfo from './SystemUserContactInfo';
@@ -29,6 +30,10 @@ interface AccountInfo {
    * Example: Confirmed
    */
   status?: 'Initial' | 'Unconfirmed' | 'Confirmed' | 'Disabled';
+
+  /**
+   */
+  statusInfo?: StatusInfo;
 
   /**
    * Company name

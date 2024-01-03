@@ -4,18 +4,15 @@ import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '.
 
 class Index {
   public rc: RingCentralInterface;
-
   public _parent: ParentInterface;
 
   public constructor(_parent: ParentInterface) {
     this._parent = _parent;
     this.rc = _parent.rc;
   }
-
   public path(): string {
     return `${this._parent.path()}/wireless-points-bulk-validate`;
   }
-
   /**
    * Validates wireless points before creation or update. The maximum
    * number of wireless points per request is 10 000.

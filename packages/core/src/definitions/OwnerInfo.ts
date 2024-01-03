@@ -1,5 +1,5 @@
 /**
- * Deprecated. Information on call owner
+ * Deprecated. Information on a call owner
  */
 interface OwnerInfo {
   /**

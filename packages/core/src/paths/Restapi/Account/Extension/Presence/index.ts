@@ -6,18 +6,15 @@ import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '.
 
 class Index {
   public rc: RingCentralInterface;
-
   public _parent: ParentInterface;
 
   public constructor(_parent: ParentInterface) {
     this._parent = _parent;
     this.rc = _parent.rc;
   }
-
   public path(): string {
     return `${this._parent.path()}/presence`;
   }
-
   /**
    * Returns the presence status of an extension or several extensions
    * by their ID(s). Batch request is supported. The `presenceStatus` is returned

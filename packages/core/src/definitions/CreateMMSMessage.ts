@@ -1,5 +1,5 @@
 import type MessageStoreCallerInfoRequest from './MessageStoreCallerInfoRequest';
-import type MessageCountryInfo from './MessageCountryInfo';
+import type SmsRequestCountryInfo from './SmsRequestCountryInfo';
 import type Attachment from './Attachment';
 
 interface CreateMMSMessage {
@@ -23,7 +23,7 @@ interface CreateMMSMessage {
 
   /**
    */
-  country?: MessageCountryInfo;
+  country?: SmsRequestCountryInfo;
 
   /**
    * Media file(s) to upload

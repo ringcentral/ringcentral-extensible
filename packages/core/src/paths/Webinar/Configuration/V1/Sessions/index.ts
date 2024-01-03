@@ -4,18 +4,15 @@ import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '.
 
 class Index {
   public rc: RingCentralInterface;
-
   public _parent: ParentInterface;
 
   public constructor(_parent: ParentInterface) {
     this._parent = _parent;
     this.rc = _parent.rc;
   }
-
   public path(): string {
     return `${this._parent.path()}/sessions`;
   }
-
   /**
    * Returns the list of Webinar Sessions hosted by a current authorized user sorted by
    * 'scheduledStartTime' or 'creationTime' (if 'scheduledStartTime' is not set) in the ascending order

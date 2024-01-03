@@ -3,9 +3,7 @@ import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '.
 
 class Index {
   public rc: RingCentralInterface;
-
   public _parent: ParentInterface;
-
   public companyId: string | null;
 
   public constructor(_parent: ParentInterface, companyId: string | null = null) {
@@ -13,14 +11,12 @@ class Index {
     this.rc = _parent.rc;
     this.companyId = companyId;
   }
-
   public path(withParameter = true): string {
     if (withParameter && this.companyId !== null) {
       return `${this._parent.path()}/companies/${this.companyId}`;
     }
     return `${this._parent.path()}/companies`;
   }
-
   /**
    * Returns information about one or more companies by their IDs.
    * HTTP Method: get

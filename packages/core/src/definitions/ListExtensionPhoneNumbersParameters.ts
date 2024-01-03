@@ -3,7 +3,7 @@
  */
 interface ListExtensionPhoneNumbersParameters {
   /**
-   * Status of a phone number. Multiple values are supported
+   * Status of a phone number
    */
   status?: 'Normal' | 'Pending' | 'PortedIn' | 'Temporary';
 

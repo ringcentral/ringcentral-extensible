@@ -9,9 +9,7 @@ import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '.
 
 class Index {
   public rc: RingCentralInterface;
-
   public _parent: ParentInterface;
-
   public noteId: string | null;
 
   public constructor(_parent: ParentInterface, noteId: string | null = null) {
@@ -19,14 +17,12 @@ class Index {
     this.rc = _parent.rc;
     this.noteId = noteId;
   }
-
   public path(withParameter = true): string {
     if (withParameter && this.noteId !== null) {
       return `${this._parent.path()}/notes/${this.noteId}`;
     }
     return `${this._parent.path()}/notes`;
   }
-
   /**
    * Returns the specified note(s). It is possible to fetch up to 50 notes per request.
    * HTTP Method: get

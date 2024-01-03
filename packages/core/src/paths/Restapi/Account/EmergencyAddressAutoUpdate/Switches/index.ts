@@ -7,9 +7,7 @@ import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '.
 
 class Index {
   public rc: RingCentralInterface;
-
   public _parent: ParentInterface;
-
   public switchId: string | null;
 
   public constructor(_parent: ParentInterface, switchId: string | null = null) {
@@ -17,14 +15,12 @@ class Index {
     this.rc = _parent.rc;
     this.switchId = switchId;
   }
-
   public path(withParameter = true): string {
     if (withParameter && this.switchId !== null) {
       return `${this._parent.path()}/switches/${this.switchId}`;
     }
     return `${this._parent.path()}/switches`;
   }
-
   /**
    * Returns a corporate map of configured network switches with the assigned
    * emergency addresses for the logged-in account.

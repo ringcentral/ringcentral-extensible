@@ -10,8 +10,6 @@ interface ConversationalInsightsUnit {
     | 'AbstractiveSummaryLong'
     | 'AbstractiveSummaryShort'
     | 'KeyPhrases'
-    | 'Tasks'
-    | 'Titles'
     | 'QuestionsAsked'
     | 'OverallSentiment'
     | 'Topics';

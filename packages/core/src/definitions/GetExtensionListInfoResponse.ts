@@ -23,7 +23,7 @@ interface GetExtensionListInfoResponse {
   contact?: ContactInfo;
 
   /**
-   * Number of an extension
+   * Extension short number
    */
   extensionNumber?: string;
 

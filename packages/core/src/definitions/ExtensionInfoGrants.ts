@@ -40,7 +40,8 @@ interface ExtensionInfoGrants {
     | 'PagingOnly'
     | 'IvrMenu'
     | 'ApplicationExtension'
-    | 'ParkLocation';
+    | 'ParkLocation'
+    | 'DelegatedLinesGroup';
 }
 
 export default ExtensionInfoGrants;

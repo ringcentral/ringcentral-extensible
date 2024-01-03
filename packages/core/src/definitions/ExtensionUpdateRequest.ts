@@ -17,16 +17,6 @@ interface ExtensionUpdateRequest {
   statusInfo?: ExtensionStatusInfo;
 
   /**
-   * Type of suspension
-   */
-  reason?: string;
-
-  /**
-   * Free Form user comment
-   */
-  comment?: string;
-
-  /**
    * Extension number available
    */
   extensionNumber?: string;
@@ -101,7 +91,7 @@ interface ExtensionUpdateRequest {
    * Extension sub-type, if applicable. For any unsupported sub-types
    *  the 'Unknown' value will be returned
    */
-  subType?: 'VideoPro' | 'VideoProPlus' | 'DigitalSignage' | 'Unknown';
+  subType?: 'VideoPro' | 'VideoProPlus' | 'DigitalSignageOnlyRooms' | 'Unknown';
 
   /**
    * List of non-RC internal identifiers assigned to an extension

@@ -1,5 +1,5 @@
 import type MessageStoreCallerInfoRequest from './MessageStoreCallerInfoRequest';
-import type MessageCountryInfo from './MessageCountryInfo';
+import type SmsRequestCountryInfo from './SmsRequestCountryInfo';
 
 interface CreateSMSMessage {
   /**
@@ -23,7 +23,7 @@ interface CreateSMSMessage {
 
   /**
    */
-  country?: MessageCountryInfo;
+  country?: SmsRequestCountryInfo;
 }
 
 export default CreateSMSMessage;

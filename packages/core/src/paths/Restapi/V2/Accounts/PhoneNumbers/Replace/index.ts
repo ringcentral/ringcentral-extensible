@@ -4,18 +4,15 @@ import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '.
 
 class Index {
   public rc: RingCentralInterface;
-
   public _parent: ParentInterface;
 
   public constructor(_parent: ParentInterface) {
     this._parent = _parent;
     this.rc = _parent.rc;
   }
-
   public path(): string {
     return `${this._parent.path()}/replace`;
   }
-
   /**
    * Replaces (swaps) phone numbers from Inventory with the main, company, direct or company fax numbers.
    * This method is used to replace temporary numbers when the porting process is complete.

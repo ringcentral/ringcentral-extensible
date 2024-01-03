@@ -6,14 +6,12 @@ import type { RingCentralInterface } from '../../types';
 
 class Index {
   public rc: RingCentralInterface;
-
   public version: string | null;
 
   public constructor(rc: RingCentralInterface, version: string | null = 'v2') {
     this.rc = rc;
     this.version = version;
   }
-
   public path(withParameter = true): string {
     if (withParameter && this.version !== null) {
       return `/scim/${this.version}`;

@@ -10,9 +10,7 @@ import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '.
 
 class Index {
   public rc: RingCentralInterface;
-
   public _parent: ParentInterface;
-
   public messageId: string | null;
 
   public constructor(_parent: ParentInterface, messageId: string | null = null) {
@@ -20,14 +18,12 @@ class Index {
     this.rc = _parent.rc;
     this.messageId = messageId;
   }
-
   public path(withParameter = true): string {
     if (withParameter && this.messageId !== null) {
       return `${this._parent.path()}/message-store/${this.messageId}`;
     }
     return `${this._parent.path()}/message-store`;
   }
-
   /**
    * Returns a list of messages from an extension mailbox.
    * HTTP Method: get

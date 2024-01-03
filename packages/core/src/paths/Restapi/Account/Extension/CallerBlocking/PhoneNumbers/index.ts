@@ -6,9 +6,7 @@ import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '.
 
 class Index {
   public rc: RingCentralInterface;
-
   public _parent: ParentInterface;
-
   public blockedNumberId: string | null;
 
   public constructor(_parent: ParentInterface, blockedNumberId: string | null = null) {
@@ -16,14 +14,12 @@ class Index {
     this.rc = _parent.rc;
     this.blockedNumberId = blockedNumberId;
   }
-
   public path(withParameter = true): string {
     if (withParameter && this.blockedNumberId !== null) {
       return `${this._parent.path()}/phone-numbers/${this.blockedNumberId}`;
     }
     return `${this._parent.path()}/phone-numbers`;
   }
-
   /**
    * Returns the lists of blocked and allowed phone numbers.
    * HTTP Method: get

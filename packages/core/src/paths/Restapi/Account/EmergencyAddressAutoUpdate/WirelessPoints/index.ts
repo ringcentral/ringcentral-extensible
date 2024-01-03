@@ -7,9 +7,7 @@ import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '.
 
 class Index {
   public rc: RingCentralInterface;
-
   public _parent: ParentInterface;
-
   public pointId: string | null;
 
   public constructor(_parent: ParentInterface, pointId: string | null = null) {
@@ -17,14 +15,12 @@ class Index {
     this.rc = _parent.rc;
     this.pointId = pointId;
   }
-
   public path(withParameter = true): string {
     if (withParameter && this.pointId !== null) {
       return `${this._parent.path()}/wireless-points/${this.pointId}`;
     }
     return `${this._parent.path()}/wireless-points`;
   }
-
   /**
    * Returns account wireless points configured and used for Automatic
    * Location Updates feature.

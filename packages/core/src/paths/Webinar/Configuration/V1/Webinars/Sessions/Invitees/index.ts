@@ -8,9 +8,7 @@ import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '.
 
 class Index {
   public rc: RingCentralInterface;
-
   public _parent: ParentInterface;
-
   public inviteeId: string | null;
 
   public constructor(_parent: ParentInterface, inviteeId: string | null = null) {
@@ -18,14 +16,12 @@ class Index {
     this.rc = _parent.rc;
     this.inviteeId = inviteeId;
   }
-
   public path(withParameter = true): string {
     if (withParameter && this.inviteeId !== null) {
       return `${this._parent.path()}/invitees/${this.inviteeId}`;
     }
     return `${this._parent.path()}/invitees`;
   }
-
   /**
    * Returns the list of Invitees (co-hosts and panelists in phase 1
    * and also invited attendees in subsequent phases) of a given Webinar Session.

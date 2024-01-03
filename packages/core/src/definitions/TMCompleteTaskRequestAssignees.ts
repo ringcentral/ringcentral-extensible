@@ -1,6 +1,6 @@
 interface TMCompleteTaskRequestAssignees {
   /**
-   * Assignee Id
+   * Internal identifier of an assignee
    */
   id?: string;
 }

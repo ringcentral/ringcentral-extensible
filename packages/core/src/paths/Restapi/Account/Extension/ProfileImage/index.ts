@@ -6,9 +6,7 @@ import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '.
 
 class Index {
   public rc: RingCentralInterface;
-
   public _parent: ParentInterface;
-
   public scaleSize: string | null;
 
   public constructor(_parent: ParentInterface, scaleSize: string | null = null) {
@@ -16,14 +14,12 @@ class Index {
     this.rc = _parent.rc;
     this.scaleSize = scaleSize;
   }
-
   public path(withParameter = true): string {
     if (withParameter && this.scaleSize !== null) {
       return `${this._parent.path()}/profile-image/${this.scaleSize}`;
     }
     return `${this._parent.path()}/profile-image`;
   }
-
   /**
    * Returns a profile image of an extension.
    *

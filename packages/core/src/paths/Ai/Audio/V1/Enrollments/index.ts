@@ -7,24 +7,20 @@ import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '.
 
 class Index {
   public rc: RingCentralInterface;
-
   public _parent: ParentInterface;
+  public speakerId: string | null;
 
-  public enrollmentId: string | null;
-
-  public constructor(_parent: ParentInterface, enrollmentId: string | null = null) {
+  public constructor(_parent: ParentInterface, speakerId: string | null = null) {
     this._parent = _parent;
     this.rc = _parent.rc;
-    this.enrollmentId = enrollmentId;
+    this.speakerId = speakerId;
   }
-
   public path(withParameter = true): string {
-    if (withParameter && this.enrollmentId !== null) {
-      return `${this._parent.path()}/enrollments/${this.enrollmentId}`;
+    if (withParameter && this.speakerId !== null) {
+      return `${this._parent.path()}/enrollments/${this.speakerId}`;
     }
     return `${this._parent.path()}/enrollments`;
   }
-
   /**
    * Returns the List of Enrolled Speakers
    * HTTP Method: get
@@ -58,13 +54,13 @@ class Index {
   /**
    * Get The Status of Enrollment for the provided Speaker.
    * HTTP Method: get
-   * Endpoint: /ai/audio/v1/enrollments/{enrollmentId}
+   * Endpoint: /ai/audio/v1/enrollments/{speakerId}
    * Rate Limit Group: Heavy
    * App Permission: AI
    */
   public async get(restRequestConfig?: RestRequestConfig): Promise<EnrollmentStatus> {
-    if (this.enrollmentId === null) {
-      throw new Error('enrollmentId must be specified.');
+    if (this.speakerId === null) {
+      throw new Error('speakerId must be specified.');
     }
     const r = await this.rc.get<EnrollmentStatus>(this.path(), undefined, restRequestConfig);
     return r.data;
@@ -73,13 +69,13 @@ class Index {
   /**
    * Delete The Enrollment for the provided Speaker.
    * HTTP Method: delete
-   * Endpoint: /ai/audio/v1/enrollments/{enrollmentId}
+   * Endpoint: /ai/audio/v1/enrollments/{speakerId}
    * Rate Limit Group: Heavy
    * App Permission: AI
    */
   public async delete(restRequestConfig?: RestRequestConfig): Promise<string> {
-    if (this.enrollmentId === null) {
-      throw new Error('enrollmentId must be specified.');
+    if (this.speakerId === null) {
+      throw new Error('speakerId must be specified.');
     }
     const r = await this.rc.delete<string>(this.path(), undefined, restRequestConfig);
     return r.data;
@@ -88,7 +84,7 @@ class Index {
   /**
    * Add newer audio data to improve an existing speaker enrollment
    * HTTP Method: patch
-   * Endpoint: /ai/audio/v1/enrollments/{enrollmentId}
+   * Endpoint: /ai/audio/v1/enrollments/{speakerId}
    * Rate Limit Group: Heavy
    * App Permission: AI
    */
@@ -96,8 +92,8 @@ class Index {
     enrollmentPatchInput: EnrollmentPatchInput,
     restRequestConfig?: RestRequestConfig,
   ): Promise<EnrollmentStatus> {
-    if (this.enrollmentId === null) {
-      throw new Error('enrollmentId must be specified.');
+    if (this.speakerId === null) {
+      throw new Error('speakerId must be specified.');
     }
     const r = await this.rc.patch<EnrollmentStatus>(this.path(), enrollmentPatchInput, undefined, restRequestConfig);
     return r.data;

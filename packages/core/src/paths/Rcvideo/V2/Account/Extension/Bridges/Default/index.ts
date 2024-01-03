@@ -3,18 +3,15 @@ import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '.
 
 class Index {
   public rc: RingCentralInterface;
-
   public _parent: ParentInterface;
 
   public constructor(_parent: ParentInterface) {
     this._parent = _parent;
     this.rc = _parent.rc;
   }
-
   public path(): string {
     return `${this._parent.path()}/default`;
   }
-
   /**
    * Returns a default bridge (PMI) for the user specified by **accountId**
    * and **extensionId** identifiers.

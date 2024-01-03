@@ -1,11 +1,11 @@
-import type RegistrantModel from './RegistrantModel';
+import type RegistrantModelWithQuestionnaire from './RegistrantModelWithQuestionnaire';
 import type RcwPagingForwardModel from './RcwPagingForwardModel';
 
 interface RegistrantListResource {
   /**
    * Required
    */
-  records?: RegistrantModel[];
+  records?: RegistrantModelWithQuestionnaire[];
 
   /**
    * Required

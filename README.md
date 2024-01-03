@@ -131,7 +131,6 @@ By default lerna check git tag to determine which packages to publish.
 
 As I just tried, it works without `from-package` option.
 
-
 ### NPM 2FA
 
 I don't know how to make it work with lerna and I have to disable it via npmjs.com GUI: I disabled "Require two-factor authentication for write actions".

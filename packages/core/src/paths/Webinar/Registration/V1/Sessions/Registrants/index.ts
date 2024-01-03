@@ -1,16 +1,14 @@
-import type RegistrantModel from '../../../../../../definitions/RegistrantModel';
+import type RegistrantModelWithQuestionnaire from '../../../../../../definitions/RegistrantModelWithQuestionnaire';
 import type RcwRegGetRegistrantParameters from '../../../../../../definitions/RcwRegGetRegistrantParameters';
-import type RegistrantModelResponsePost from '../../../../../../definitions/RegistrantModelResponsePost';
-import type RegistrantBaseModel from '../../../../../../definitions/RegistrantBaseModel';
+import type RegistrantModelResponsePostWithQuestionnaire from '../../../../../../definitions/RegistrantModelResponsePostWithQuestionnaire';
+import type RegistrantBaseModelWithQuestionnaire from '../../../../../../definitions/RegistrantBaseModelWithQuestionnaire';
 import type RegistrantListResource from '../../../../../../definitions/RegistrantListResource';
 import type RcwRegListRegistrantsParameters from '../../../../../../definitions/RcwRegListRegistrantsParameters';
 import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../types';
 
 class Index {
   public rc: RingCentralInterface;
-
   public _parent: ParentInterface;
-
   public registrantId: string | null;
 
   public constructor(_parent: ParentInterface, registrantId: string | null = null) {
@@ -18,14 +16,12 @@ class Index {
     this.rc = _parent.rc;
     this.registrantId = registrantId;
   }
-
   public path(withParameter = true): string {
     if (withParameter && this.registrantId !== null) {
       return `${this._parent.path()}/registrants/${this.registrantId}`;
     }
     return `${this._parent.path()}/registrants`;
   }
-
   /**
    * Returns the list of Registrants ordered by "id" ascending.
    *
@@ -59,12 +55,12 @@ class Index {
    * App Permission: EditWebinars
    */
   public async post(
-    registrantBaseModel: RegistrantBaseModel,
+    registrantBaseModelWithQuestionnaire: RegistrantBaseModelWithQuestionnaire,
     restRequestConfig?: RestRequestConfig,
-  ): Promise<RegistrantModelResponsePost> {
-    const r = await this.rc.post<RegistrantModelResponsePost>(
+  ): Promise<RegistrantModelResponsePostWithQuestionnaire> {
+    const r = await this.rc.post<RegistrantModelResponsePostWithQuestionnaire>(
       this.path(false),
-      registrantBaseModel,
+      registrantBaseModelWithQuestionnaire,
       undefined,
       restRequestConfig,
     );
@@ -85,11 +81,11 @@ class Index {
   public async get(
     queryParams?: RcwRegGetRegistrantParameters,
     restRequestConfig?: RestRequestConfig,
-  ): Promise<RegistrantModel> {
+  ): Promise<RegistrantModelWithQuestionnaire> {
     if (this.registrantId === null) {
       throw new Error('registrantId must be specified.');
     }
-    const r = await this.rc.get<RegistrantModel>(this.path(), queryParams, restRequestConfig);
+    const r = await this.rc.get<RegistrantModelWithQuestionnaire>(this.path(), queryParams, restRequestConfig);
     return r.data;
   }
 

@@ -9,9 +9,7 @@ import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '.
 
 class Index {
   public rc: RingCentralInterface;
-
   public _parent: ParentInterface;
-
   public groupId: string | null;
 
   public constructor(_parent: ParentInterface, groupId: string | null = null) {
@@ -19,14 +17,12 @@ class Index {
     this.rc = _parent.rc;
     this.groupId = groupId;
   }
-
   public path(withParameter = true): string {
     if (withParameter && this.groupId !== null) {
       return `${this._parent.path()}/call-queues/${this.groupId}`;
     }
     return `${this._parent.path()}/call-queues`;
   }
-
   /**
    * Returns a call queue list.
    *

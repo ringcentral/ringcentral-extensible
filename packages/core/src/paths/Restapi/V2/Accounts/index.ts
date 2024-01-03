@@ -11,9 +11,7 @@ import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '.
 
 class Index {
   public rc: RingCentralInterface;
-
   public _parent: ParentInterface;
-
   public accountId: string | null;
 
   public constructor(_parent: ParentInterface, accountId: string | null = '~') {
@@ -21,14 +19,12 @@ class Index {
     this.rc = _parent.rc;
     this.accountId = accountId;
   }
-
   public path(withParameter = true): string {
     if (withParameter && this.accountId !== null) {
       return `${this._parent.path()}/accounts/${this.accountId}`;
     }
     return `${this._parent.path()}/accounts`;
   }
-
   /**
    * Returns basic information about particular RingCentral account
    * HTTP Method: get
@@ -45,8 +41,8 @@ class Index {
     return r.data;
   }
 
-  public devices(): Devices {
-    return new Devices(this);
+  public devices(deviceId: string | null = null): Devices {
+    return new Devices(this, deviceId);
   }
 
   public licenses(): Licenses {

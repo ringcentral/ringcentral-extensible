@@ -13,9 +13,7 @@ import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '.
 
 class Index {
   public rc: RingCentralInterface;
-
   public _parent: ParentInterface;
-
   public chatId: string | null;
 
   public constructor(_parent: ParentInterface, chatId: string | null = null) {
@@ -23,14 +21,12 @@ class Index {
     this.rc = _parent.rc;
     this.chatId = chatId;
   }
-
   public path(withParameter = true): string {
     if (withParameter && this.chatId !== null) {
       return `${this._parent.path()}/teams/${this.chatId}`;
     }
     return `${this._parent.path()}/teams`;
   }
-
   /**
    * Returns the list of teams where the user is a member (both archived and active) combined with a list of public teams that can be joined by the current user. All records in response are sorted by creation time of a chat in ascending order. A team is a chat between 2 and more (unlimited number) participants assigned with specific name.
    * HTTP Method: get

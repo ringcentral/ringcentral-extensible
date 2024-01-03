@@ -19,9 +19,7 @@ import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '.
 
 class Index {
   public rc: RingCentralInterface;
-
   public _parent: ParentInterface;
-
   public partyId: string | null;
 
   public constructor(_parent: ParentInterface, partyId: string | null = null) {
@@ -29,14 +27,12 @@ class Index {
     this.rc = _parent.rc;
     this.partyId = partyId;
   }
-
   public path(withParameter = true): string {
     if (withParameter && this.partyId !== null) {
       return `${this._parent.path()}/parties/${this.partyId}`;
     }
     return `${this._parent.path()}/parties`;
   }
-
   /**
    * Returns a call party status by ID.
    * HTTP Method: get

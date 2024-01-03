@@ -48,7 +48,7 @@ interface GetExtensionInfoResponse {
   departments?: DepartmentInfo[];
 
   /**
-   * Number of extension
+   * Extension short number
    */
   extensionNumber?: string;
 
@@ -140,6 +140,7 @@ interface GetExtensionInfoResponse {
     | 'ParkLocation'
     | 'Bot'
     | 'Room'
+    | 'RoomConnector'
     | 'Limited'
     | 'Site'
     | 'ProxyAdmin'

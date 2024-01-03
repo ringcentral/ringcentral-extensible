@@ -5,9 +5,7 @@ import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '.
 
 class Index {
   public rc: RingCentralInterface;
-
   public _parent: ParentInterface;
-
   public permissionId: string | null;
 
   public constructor(_parent: ParentInterface, permissionId: string | null = null) {
@@ -15,14 +13,12 @@ class Index {
     this.rc = _parent.rc;
     this.permissionId = permissionId;
   }
-
   public path(withParameter = true): string {
     if (withParameter && this.permissionId !== null) {
       return `${this._parent.path()}/permission/${this.permissionId}`;
     }
     return `${this._parent.path()}/permission`;
   }
-
   /**
    * Returns a list of extension user permissions.
    * HTTP Method: get

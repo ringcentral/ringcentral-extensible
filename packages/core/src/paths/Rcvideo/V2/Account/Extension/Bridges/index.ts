@@ -5,18 +5,15 @@ import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '.
 
 class Index {
   public rc: RingCentralInterface;
-
   public _parent: ParentInterface;
 
   public constructor(_parent: ParentInterface) {
     this._parent = _parent;
     this.rc = _parent.rc;
   }
-
   public path(): string {
     return `${this._parent.path()}/bridges`;
   }
-
   /**
    * Creates a new bridge for the user specified by **accountId** and **extensionId** identifiers. The request body
    * should contain JSON object which describes properties of the new bridge.

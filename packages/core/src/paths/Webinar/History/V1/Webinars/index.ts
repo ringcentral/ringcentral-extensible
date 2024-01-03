@@ -4,9 +4,7 @@ import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '.
 
 class Index {
   public rc: RingCentralInterface;
-
   public _parent: ParentInterface;
-
   public webinarId: string | null;
 
   public constructor(_parent: ParentInterface, webinarId: string | null = null) {
@@ -14,14 +12,12 @@ class Index {
     this.rc = _parent.rc;
     this.webinarId = webinarId;
   }
-
   public path(withParameter = true): string {
     if (withParameter && this.webinarId !== null) {
       return `${this._parent.path()}/webinars/${this.webinarId}`;
     }
     return `${this._parent.path()}/webinars`;
   }
-
   /**
    * Returns a historical webinar information by ID (host interface)
    * HTTP Method: get

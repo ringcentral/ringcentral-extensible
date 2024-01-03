@@ -5,21 +5,19 @@ import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '.
 
 class Index {
   public rc: RingCentralInterface;
-
   public _parent: ParentInterface;
 
   public constructor(_parent: ParentInterface) {
     this._parent = _parent;
     this.rc = _parent.rc;
   }
-
   public path(): string {
     return `${this._parent.path()}/extensions`;
   }
-
   /**
    * Deletes user extension(s) and either keeps or destroys the assets - numbers and devices.
    * Multiple extensions can be deleted with a single API call.
+   * **Please note:** This API cannot be tested on Sandbox.
    *
    * HTTP Method: delete
    * Endpoint: /restapi/v2/accounts/{accountId}/extensions

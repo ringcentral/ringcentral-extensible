@@ -5,9 +5,7 @@ import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '.
 
 class Index {
   public rc: RingCentralInterface;
-
   public _parent: ParentInterface;
-
   public webhookId: string | null;
 
   public constructor(_parent: ParentInterface, webhookId: string | null = null) {
@@ -15,14 +13,12 @@ class Index {
     this.rc = _parent.rc;
     this.webhookId = webhookId;
   }
-
   public path(withParameter = true): string {
     if (withParameter && this.webhookId !== null) {
       return `${this._parent.path()}/webhooks/${this.webhookId}`;
     }
     return `${this._parent.path()}/webhooks`;
   }
-
   /**
    * Returns the list of all webhooks associated with the current account.
    * HTTP Method: get

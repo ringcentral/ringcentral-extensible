@@ -60,6 +60,12 @@ interface GrantInfo {
    *  in the queue referenced in extension object
    */
   callQueueMessages?: boolean;
+
+  /**
+   * Specifies whether the user referenced in extension object is sharing voicemails
+   *  with the current extension
+   */
+  sharedVoicemails?: boolean;
 }
 
 export default GrantInfo;

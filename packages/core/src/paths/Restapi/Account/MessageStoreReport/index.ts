@@ -5,9 +5,7 @@ import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '.
 
 class Index {
   public rc: RingCentralInterface;
-
   public _parent: ParentInterface;
-
   public taskId: string | null;
 
   public constructor(_parent: ParentInterface, taskId: string | null = null) {
@@ -15,14 +13,12 @@ class Index {
     this.rc = _parent.rc;
     this.taskId = taskId;
   }
-
   public path(withParameter = true): string {
     if (withParameter && this.taskId !== null) {
       return `${this._parent.path()}/message-store-report/${this.taskId}`;
     }
     return `${this._parent.path()}/message-store-report`;
   }
-
   /**
    * Creates a task to collect all account messages within the specified
    * time interval. Maximum number of simultaneous tasks per account is 2.

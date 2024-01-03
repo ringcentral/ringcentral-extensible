@@ -7,7 +7,6 @@ class Index {
   public constructor(rc: RingCentralInterface) {
     this.rc = rc;
   }
-
   public path(): string {
     return '/team-messaging';
   }

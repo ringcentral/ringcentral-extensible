@@ -5,18 +5,18 @@ import type TaskAttachment from './TaskAttachment';
 
 interface TMTaskInfo {
   /**
-   * Task Id
+   * Internal identifier of a task
    */
   id?: string;
 
   /**
-   * Task creation date/time in UTC time zone.
+   * Task creation date/time in UTC time zone
    * Format: date-time
    */
   creationTime?: string;
 
   /**
-   * Task the last modified time in UTC time zone.
+   * Task the last modified time in UTC time zone
    * Format: date-time
    */
   lastModifiedTime?: string;
@@ -31,27 +31,27 @@ interface TMTaskInfo {
   creator?: TMTaskInfoCreator;
 
   /**
-   * Chat IDs where the task is posted or shared.
+   * Internal identifiers of the chats where the task is posted or shared
    */
   chatIds?: string[];
 
   /**
-   * Task execution status.
+   * Task execution status
    */
   status?: 'Pending' | 'InProgress' | 'Completed';
 
   /**
-   * Task name/subject.
+   * Task name/subject
    */
   subject?: string;
 
   /**
-   * Task name/subject.
+   * Task name/subject
    */
   assignees?: TMTaskInfoAssignees[];
 
   /**
-   * How the task completeness should be determined.
+   * How the task completeness should be determined
    */
   completenessCondition?: 'Simple' | 'AllAssignees' | 'Percentage';
 
@@ -63,29 +63,29 @@ interface TMTaskInfo {
   completenessPercentage?: number;
 
   /**
-   * Task start date.
+   * Task start date
    * Format: date-time
    */
   startDate?: string;
 
   /**
-   * Task due date/time.
+   * Task due date/time
    * Format: date-time
    */
   dueDate?: string;
 
   /**
-   * Font color of a post with the current task.
+   * Font color of a post with the current task
    */
   color?: 'Black' | 'Red' | 'Orange' | 'Yellow' | 'Green' | 'Blue' | 'Purple' | 'Magenta';
 
   /**
-   * Task section to group / search by.
+   * Task section to group / search by
    */
   section?: string;
 
   /**
-   * Task details.
+   * Task details
    */
   description?: string;
 

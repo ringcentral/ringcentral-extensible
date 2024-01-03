@@ -33,7 +33,7 @@ interface PhoneNumberInfoIntId {
    * Payment type. 'External' is returned for forwarded numbers
    *  which are not terminated in the RingCentral phone system
    */
-  paymentType?: 'External' | 'TollFree' | 'Local';
+  paymentType?: 'External' | 'Local';
 
   /**
    * Phone number

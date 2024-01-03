@@ -6,9 +6,7 @@ import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '.
 
 class Index {
   public rc: RingCentralInterface;
-
   public _parent: ParentInterface;
-
   public batchId: string | null;
 
   public constructor(_parent: ParentInterface, batchId: string | null = null) {
@@ -16,14 +14,12 @@ class Index {
     this.rc = _parent.rc;
     this.batchId = batchId;
   }
-
   public path(withParameter = true): string {
     if (withParameter && this.batchId !== null) {
       return `${this._parent.path()}/batches/${this.batchId}`;
     }
     return `${this._parent.path()}/batches`;
   }
-
   /**
    * Returns the list of A2P batches sent from the current account.
    * The list can be filtered by message batch ID and/or from phone number.

@@ -17,13 +17,13 @@ interface TMUpdateTaskRequest {
   completenessCondition?: 'Simple' | 'AllAssignees' | 'Percentage';
 
   /**
-   * Task start date in UTC time zone.
+   * Task start date in UTC time zone
    * Format: date-time
    */
   startDate?: string;
 
   /**
-   * Task due date/time in UTC time zone.
+   * Task due date/time in UTC time zone
    * Format: date-time
    */
   dueDate?: string;
@@ -38,7 +38,7 @@ interface TMUpdateTaskRequest {
   section?: string;
 
   /**
-   * Task details. Max allowed length is 102400 characters (100kB).
+   * Task details. Max allowed length is 102400 characters (100kB)
    */
   description?: string;
 

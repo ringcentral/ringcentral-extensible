@@ -1,5 +1,11 @@
 interface AssignedRoleResource {
   /**
+   * Link to an assigned role resource
+   * Format: uri
+   */
+  uri?: string;
+
+  /**
    * Internal identifier of a role
    */
   id?: string;

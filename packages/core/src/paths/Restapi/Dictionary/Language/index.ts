@@ -4,9 +4,7 @@ import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '.
 
 class Index {
   public rc: RingCentralInterface;
-
   public _parent: ParentInterface;
-
   public languageId: string | null;
 
   public constructor(_parent: ParentInterface, languageId: string | null = null) {
@@ -14,14 +12,12 @@ class Index {
     this.rc = _parent.rc;
     this.languageId = languageId;
   }
-
   public path(withParameter = true): string {
     if (withParameter && this.languageId !== null) {
       return `${this._parent.path()}/language/${this.languageId}`;
     }
     return `${this._parent.path()}/language`;
   }
-
   /**
    * Returns information about the supported languages.
    *

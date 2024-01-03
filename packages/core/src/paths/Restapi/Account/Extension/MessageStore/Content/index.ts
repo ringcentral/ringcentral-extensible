@@ -3,9 +3,7 @@ import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '.
 
 class Index {
   public rc: RingCentralInterface;
-
   public _parent: ParentInterface;
-
   public attachmentId: string | null;
 
   public constructor(_parent: ParentInterface, attachmentId: string | null = null) {
@@ -13,14 +11,12 @@ class Index {
     this.rc = _parent.rc;
     this.attachmentId = attachmentId;
   }
-
   public path(withParameter = true): string {
     if (withParameter && this.attachmentId !== null) {
       return `${this._parent.path()}/content/${this.attachmentId}`;
     }
     return `${this._parent.path()}/content`;
   }
-
   /**
    * Returns media content of a message attachment.
    * The content is typically an audio file (`audio/mpeg` or `audio/wav`) for voicemails,

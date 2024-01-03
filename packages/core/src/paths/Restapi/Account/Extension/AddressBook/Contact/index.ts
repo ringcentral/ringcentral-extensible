@@ -9,9 +9,7 @@ import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '.
 
 class Index {
   public rc: RingCentralInterface;
-
   public _parent: ParentInterface;
-
   public contactId: string | null;
 
   public constructor(_parent: ParentInterface, contactId: string | null = null) {
@@ -19,14 +17,12 @@ class Index {
     this.rc = _parent.rc;
     this.contactId = contactId;
   }
-
   public path(withParameter = true): string {
     if (withParameter && this.contactId !== null) {
       return `${this._parent.path()}/contact/${this.contactId}`;
     }
     return `${this._parent.path()}/contact`;
   }
-
   /**
    * Returns the user personal contacts.
    *

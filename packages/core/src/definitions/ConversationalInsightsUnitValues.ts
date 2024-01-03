@@ -26,6 +26,7 @@ interface ConversationalInsightsUnitValues {
   end?: number;
 
   /**
+   * Paragraph index of the long summary.
    * Example: 0
    */
   groupId?: string;

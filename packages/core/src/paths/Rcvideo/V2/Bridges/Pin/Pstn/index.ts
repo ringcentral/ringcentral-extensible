@@ -4,9 +4,7 @@ import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '.
 
 class Index {
   public rc: RingCentralInterface;
-
   public _parent: ParentInterface;
-
   public pin: string | null;
 
   public constructor(_parent: ParentInterface, pin: string | null = null) {
@@ -14,14 +12,12 @@ class Index {
     this.rc = _parent.rc;
     this.pin = pin;
   }
-
   public path(withParameter = true): string {
     if (withParameter && this.pin !== null) {
       return `${this._parent.path()}/pstn/${this.pin}`;
     }
     return `${this._parent.path()}/pstn`;
   }
-
   /**
    * Finds a bridge by Host or Participant PSTN PIN.
    * HTTP Method: get

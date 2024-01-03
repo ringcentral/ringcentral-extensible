@@ -5,9 +5,7 @@ import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '.
 
 class Index {
   public rc: RingCentralInterface;
-
   public _parent: ParentInterface;
-
   public messageId: string | null;
 
   public constructor(_parent: ParentInterface, messageId: string | null = null) {
@@ -15,14 +13,12 @@ class Index {
     this.rc = _parent.rc;
     this.messageId = messageId;
   }
-
   public path(withParameter = true): string {
     if (withParameter && this.messageId !== null) {
       return `${this._parent.path()}/messages/${this.messageId}`;
     }
     return `${this._parent.path()}/messages`;
   }
-
   /**
    * Returns the list of outbound/inbound A2P messages sent from/to A2P phone numbers of the current account. The list can be filtered by message batch ID and/or phone number.
    * HTTP Method: get

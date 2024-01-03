@@ -9,9 +9,7 @@ import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '.
 
 class Index {
   public rc: RingCentralInterface;
-
   public _parent: ParentInterface;
-
   public siteId: string | null;
 
   public constructor(_parent: ParentInterface, siteId: string | null = null) {
@@ -19,14 +17,12 @@ class Index {
     this.rc = _parent.rc;
     this.siteId = siteId;
   }
-
   public path(withParameter = true): string {
     if (withParameter && this.siteId !== null) {
       return `${this._parent.path()}/sites/${this.siteId}`;
     }
     return `${this._parent.path()}/sites`;
   }
-
   /**
    * Returns a list of sites for the specified account.
    *

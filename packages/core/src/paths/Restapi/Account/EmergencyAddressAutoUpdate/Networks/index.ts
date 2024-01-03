@@ -7,9 +7,7 @@ import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '.
 
 class Index {
   public rc: RingCentralInterface;
-
   public _parent: ParentInterface;
-
   public networkId: string | null;
 
   public constructor(_parent: ParentInterface, networkId: string | null = null) {
@@ -17,14 +15,12 @@ class Index {
     this.rc = _parent.rc;
     this.networkId = networkId;
   }
-
   public path(withParameter = true): string {
     if (withParameter && this.networkId !== null) {
       return `${this._parent.path()}/networks/${this.networkId}`;
     }
     return `${this._parent.path()}/networks`;
   }
-
   /**
    * Returns a corporate network map with emergency addresses assigned
    * to the current account.

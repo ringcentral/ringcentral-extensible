@@ -1,9 +1,14 @@
-import type TMTaskListRecords from './TMTaskListRecords';
+import type TMTaskInfo from './TMTaskInfo';
+import type TMNavigationInfo from './TMNavigationInfo';
 
 interface TMTaskList {
   /**
    */
-  records?: TMTaskListRecords[];
+  records?: TMTaskInfo[];
+
+  /**
+   */
+  navigation?: TMNavigationInfo;
 }
 
 export default TMTaskList;

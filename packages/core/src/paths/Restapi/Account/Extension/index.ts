@@ -44,9 +44,7 @@ import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '.
 
 class Index {
   public rc: RingCentralInterface;
-
   public _parent: ParentInterface;
-
   public extensionId: string | null;
 
   public constructor(_parent: ParentInterface, extensionId: string | null = '~') {
@@ -54,14 +52,12 @@ class Index {
     this.rc = _parent.rc;
     this.extensionId = extensionId;
   }
-
   public path(withParameter = true): string {
     if (withParameter && this.extensionId !== null) {
       return `${this._parent.path()}/extension/${this.extensionId}`;
     }
     return `${this._parent.path()}/extension`;
   }
-
   /**
    * Returns the list of extensions created for a particular account.
    * All types of extensions are included in this list.

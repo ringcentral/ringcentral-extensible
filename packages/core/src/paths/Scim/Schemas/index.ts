@@ -4,9 +4,7 @@ import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '.
 
 class Index {
   public rc: RingCentralInterface;
-
   public _parent: ParentInterface;
-
   public uri: string | null;
 
   public constructor(_parent: ParentInterface, uri: string | null = null) {
@@ -14,14 +12,12 @@ class Index {
     this.rc = _parent.rc;
     this.uri = uri;
   }
-
   public path(withParameter = true): string {
     if (withParameter && this.uri !== null) {
       return `${this._parent.path()}/Schemas/${this.uri}`;
     }
     return `${this._parent.path()}/Schemas`;
   }
-
   /**
    * Returns the list of schemas
    * HTTP Method: get

@@ -8,9 +8,7 @@ import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '.
 
 class Index {
   public rc: RingCentralInterface;
-
   public _parent: ParentInterface;
-
   public promptId: string | null;
 
   public constructor(_parent: ParentInterface, promptId: string | null = null) {
@@ -18,14 +16,12 @@ class Index {
     this.rc = _parent.rc;
     this.promptId = promptId;
   }
-
   public path(withParameter = true): string {
     if (withParameter && this.promptId !== null) {
       return `${this._parent.path()}/ivr-prompts/${this.promptId}`;
     }
     return `${this._parent.path()}/ivr-prompts`;
   }
-
   /**
    * Returns the list of IVR prompts.
    * HTTP Method: get

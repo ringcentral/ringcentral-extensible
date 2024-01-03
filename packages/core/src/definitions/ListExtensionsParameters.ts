@@ -3,7 +3,7 @@
  */
 interface ListExtensionsParameters {
   /**
-   * Number of extension to be retrieved
+   * Extension short number to filter records
    */
   extensionNumber?: string;
 

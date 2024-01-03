@@ -12,12 +12,12 @@ interface ExtensionCreationRequest {
   contact?: ContactInfoCreationRequest;
 
   /**
-   * Number of extension
+   * Extension short number
    */
   extensionNumber?: string;
 
   /**
-   * Cost center information
+   * Cost center information. Applicable if Cost Center feature is enabled. The default is root cost center value
    */
   costCenter?: ExtensionCreationRequestCostCenter;
 
@@ -81,6 +81,7 @@ interface ExtensionCreationRequest {
     | 'User'
     | 'VirtualUser'
     | 'DigitalUser'
+    | 'FlexibleUser'
     | 'Department'
     | 'Announcement'
     | 'Voicemail'

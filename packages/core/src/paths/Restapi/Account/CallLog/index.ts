@@ -6,9 +6,7 @@ import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '.
 
 class Index {
   public rc: RingCentralInterface;
-
   public _parent: ParentInterface;
-
   public callRecordId: string | null;
 
   public constructor(_parent: ParentInterface, callRecordId: string | null = null) {
@@ -16,14 +14,12 @@ class Index {
     this.rc = _parent.rc;
     this.callRecordId = callRecordId;
   }
-
   public path(withParameter = true): string {
     if (withParameter && this.callRecordId !== null) {
       return `${this._parent.path()}/call-log/${this.callRecordId}`;
     }
     return `${this._parent.path()}/call-log`;
   }
-
   /**
    * Returns call log records filtered by parameters specified.
    * HTTP Method: get

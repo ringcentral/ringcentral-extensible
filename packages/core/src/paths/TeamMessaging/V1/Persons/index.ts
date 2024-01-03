@@ -3,9 +3,7 @@ import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '.
 
 class Index {
   public rc: RingCentralInterface;
-
   public _parent: ParentInterface;
-
   public personId: string | null;
 
   public constructor(_parent: ParentInterface, personId: string | null = null) {
@@ -13,14 +11,12 @@ class Index {
     this.rc = _parent.rc;
     this.personId = personId;
   }
-
   public path(withParameter = true): string {
     if (withParameter && this.personId !== null) {
       return `${this._parent.path()}/persons/${this.personId}`;
     }
     return `${this._parent.path()}/persons`;
   }
-
   /**
    * Returns a user or multiple users by their ID(s). Batch request is supported.
    * HTTP Method: get

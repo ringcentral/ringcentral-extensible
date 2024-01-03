@@ -6,6 +6,7 @@
 interface MessageStoreCallerInfoRequest {
   /**
    * Phone number in E.164 format
+   * Required
    */
   phoneNumber?: string;
 }

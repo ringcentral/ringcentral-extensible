@@ -11,21 +11,18 @@ import type { RingCentralInterface, RestRequestConfig } from '../../types';
 
 class Index {
   public rc: RingCentralInterface;
-
   public apiVersion: string | null;
 
   public constructor(rc: RingCentralInterface, apiVersion: string | null = 'v1.0') {
     this.rc = rc;
     this.apiVersion = apiVersion;
   }
-
   public path(withParameter = true): string {
     if (withParameter && this.apiVersion !== null) {
       return `/restapi/${this.apiVersion}`;
     }
     return '/restapi';
   }
-
   /**
    * Returns current API version(s) and server info.
    * HTTP Method: get

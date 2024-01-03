@@ -5,9 +5,7 @@ import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '.
 
 class Index {
   public rc: RingCentralInterface;
-
   public _parent: ParentInterface;
-
   public cardId: string | null;
 
   public constructor(_parent: ParentInterface, cardId: string | null = null) {
@@ -15,14 +13,12 @@ class Index {
     this.rc = _parent.rc;
     this.cardId = cardId;
   }
-
   public path(withParameter = true): string {
     if (withParameter && this.cardId !== null) {
       return `${this._parent.path()}/adaptive-cards/${this.cardId}`;
     }
     return `${this._parent.path()}/adaptive-cards`;
   }
-
   /**
    * Returns adaptive card(s) with given id(s).
    * HTTP Method: get

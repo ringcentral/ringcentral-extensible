@@ -4,9 +4,7 @@ import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '.
 
 class Index {
   public rc: RingCentralInterface;
-
   public _parent: ParentInterface;
-
   public type: string | null;
 
   public constructor(_parent: ParentInterface, type: string | null = null) {
@@ -14,14 +12,12 @@ class Index {
     this.rc = _parent.rc;
     this.type = type;
   }
-
   public path(withParameter = true): string {
     if (withParameter && this.type !== null) {
       return `${this._parent.path()}/ResourceTypes/${this.type}`;
     }
     return `${this._parent.path()}/ResourceTypes`;
   }
-
   /**
    * Returns the list of supported SCIM resource types
    * HTTP Method: get

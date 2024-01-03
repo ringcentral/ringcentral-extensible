@@ -3,9 +3,7 @@ import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '.
 
 class Index {
   public rc: RingCentralInterface;
-
   public _parent: ParentInterface;
-
   public taskId: string | null;
 
   public constructor(_parent: ParentInterface, taskId: string | null = null) {
@@ -13,14 +11,12 @@ class Index {
     this.rc = _parent.rc;
     this.taskId = taskId;
   }
-
   public path(withParameter = true): string {
     if (withParameter && this.taskId !== null) {
       return `${this._parent.path()}/tasks/${this.taskId}`;
     }
     return `${this._parent.path()}/tasks`;
   }
-
   /**
    * Returns a status of a task to update multiple extensions.
    *

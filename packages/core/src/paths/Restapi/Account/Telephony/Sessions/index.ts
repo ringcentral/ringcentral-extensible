@@ -6,9 +6,7 @@ import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '.
 
 class Index {
   public rc: RingCentralInterface;
-
   public _parent: ParentInterface;
-
   public telephonySessionId: string | null;
 
   public constructor(_parent: ParentInterface, telephonySessionId: string | null = null) {
@@ -16,14 +14,12 @@ class Index {
     this.rc = _parent.rc;
     this.telephonySessionId = telephonySessionId;
   }
-
   public path(withParameter = true): string {
     if (withParameter && this.telephonySessionId !== null) {
       return `${this._parent.path()}/sessions/${this.telephonySessionId}`;
     }
     return `${this._parent.path()}/sessions`;
   }
-
   /**
    * Returns the status of a call session by ID.
    * HTTP Method: get

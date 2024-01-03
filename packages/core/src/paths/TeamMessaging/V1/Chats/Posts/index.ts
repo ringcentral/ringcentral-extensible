@@ -7,9 +7,7 @@ import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '.
 
 class Index {
   public rc: RingCentralInterface;
-
   public _parent: ParentInterface;
-
   public postId: string | null;
 
   public constructor(_parent: ParentInterface, postId: string | null = null) {
@@ -17,14 +15,12 @@ class Index {
     this.rc = _parent.rc;
     this.postId = postId;
   }
-
   public path(withParameter = true): string {
     if (withParameter && this.postId !== null) {
       return `${this._parent.path()}/posts/${this.postId}`;
     }
     return `${this._parent.path()}/posts`;
   }
-
   /**
    * Returns a list of posts from the specified chat.
    * HTTP Method: get

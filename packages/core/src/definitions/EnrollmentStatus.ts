@@ -16,7 +16,7 @@ interface EnrollmentStatus {
    * Required
    * Example: JohnDoe
    */
-  enrollmentId?: string;
+  speakerId?: string;
 
   /**
    * Total speech duration of the enrollment in seconds.

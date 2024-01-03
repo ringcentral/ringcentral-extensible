@@ -10,9 +10,7 @@ import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '.
 
 class Index {
   public rc: RingCentralInterface;
-
   public _parent: ParentInterface;
-
   public phoneNumberId: string | null;
 
   public constructor(_parent: ParentInterface, phoneNumberId: string | null = null) {
@@ -20,14 +18,12 @@ class Index {
     this.rc = _parent.rc;
     this.phoneNumberId = phoneNumberId;
   }
-
   public path(withParameter = true): string {
     if (withParameter && this.phoneNumberId !== null) {
       return `${this._parent.path()}/phone-numbers/${this.phoneNumberId}`;
     }
     return `${this._parent.path()}/phone-numbers`;
   }
-
   /**
    * Returns the list of phone numbers assigned to RingCentral customer
    * account. Both company-level and extension-level numbers are returned.

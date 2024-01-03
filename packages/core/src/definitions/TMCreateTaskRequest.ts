@@ -4,7 +4,7 @@ import type TMAttachmentInfo from './TMAttachmentInfo';
 
 interface TMCreateTaskRequest {
   /**
-   * Task name/subject. Max allowed length is 250 characters.
+   * Task name/subject. Max allowed length is 250 characters
    * Required
    */
   subject?: string;

@@ -5,9 +5,7 @@ import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '.
 
 class Index {
   public rc: RingCentralInterface;
-
   public _parent: ParentInterface;
-
   public taskId: string | null;
 
   public constructor(_parent: ParentInterface, taskId: string | null = null) {
@@ -15,14 +13,12 @@ class Index {
     this.rc = _parent.rc;
     this.taskId = taskId;
   }
-
   public path(withParameter = true): string {
     if (withParameter && this.taskId !== null) {
       return `${this._parent.path()}/bulk-add/${this.taskId}`;
     }
     return `${this._parent.path()}/bulk-add`;
   }
-
   /**
    * Adds phone numbers to the account Inventory as unassigned. Currently we support the following three enum values: 'Inventory',
    * 'InventoryPartnerBusinessMobileNumber' and 'PartnerBusinessMobileNumber'. Later we may support some other values like 'ForwardedNumber', etc.

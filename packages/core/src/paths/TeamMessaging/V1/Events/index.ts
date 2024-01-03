@@ -6,9 +6,7 @@ import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '.
 
 class Index {
   public rc: RingCentralInterface;
-
   public _parent: ParentInterface;
-
   public eventId: string | null;
 
   public constructor(_parent: ParentInterface, eventId: string | null = null) {
@@ -16,14 +14,12 @@ class Index {
     this.rc = _parent.rc;
     this.eventId = eventId;
   }
-
   public path(withParameter = true): string {
     if (withParameter && this.eventId !== null) {
       return `${this._parent.path()}/events/${this.eventId}`;
     }
     return `${this._parent.path()}/events`;
   }
-
   /**
    * Returns all calendar events created by the current user.
    * HTTP Method: get

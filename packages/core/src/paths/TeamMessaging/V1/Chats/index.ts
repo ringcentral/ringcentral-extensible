@@ -11,9 +11,7 @@ import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '.
 
 class Index {
   public rc: RingCentralInterface;
-
   public _parent: ParentInterface;
-
   public chatId: string | null;
 
   public constructor(_parent: ParentInterface, chatId: string | null = null) {
@@ -21,14 +19,12 @@ class Index {
     this.rc = _parent.rc;
     this.chatId = chatId;
   }
-
   public path(withParameter = true): string {
     if (withParameter && this.chatId !== null) {
       return `${this._parent.path()}/chats/${this.chatId}`;
     }
     return `${this._parent.path()}/chats`;
   }
-
   /**
    * Returns the list of chats where the user is a member and also public teams that can be joined.
    *

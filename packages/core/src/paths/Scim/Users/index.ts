@@ -8,9 +8,7 @@ import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '.
 
 class Index {
   public rc: RingCentralInterface;
-
   public _parent: ParentInterface;
-
   public scimUserId: string | null;
 
   public constructor(_parent: ParentInterface, scimUserId: string | null = null) {
@@ -18,14 +16,12 @@ class Index {
     this.rc = _parent.rc;
     this.scimUserId = scimUserId;
   }
-
   public path(withParameter = true): string {
     if (withParameter && this.scimUserId !== null) {
       return `${this._parent.path()}/Users/${this.scimUserId}`;
     }
     return `${this._parent.path()}/Users`;
   }
-
   /**
    * Returns the list of users satisfying search criteria
    * HTTP Method: get

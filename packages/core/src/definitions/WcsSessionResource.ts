@@ -44,6 +44,13 @@ interface WcsSessionResource {
   timeZone?: string;
 
   /**
+   * Localized time zone description.
+   * Required
+   * Example: Eastern Time (America/New_York)
+   */
+  localizedTimeZoneDescription?: string;
+
+  /**
    * The time offset (positive, in seconds) indicating how much in advance
    *  (comparing to "scheduledStartTime") panel members should join for the pre-webinar team sync
    * Format: int32

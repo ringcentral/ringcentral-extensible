@@ -6,9 +6,7 @@ import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '.
 
 class Index {
   public rc: RingCentralInterface;
-
   public _parent: ParentInterface;
-
   public fieldId: string | null;
 
   public constructor(_parent: ParentInterface, fieldId: string | null = null) {
@@ -16,14 +14,12 @@ class Index {
     this.rc = _parent.rc;
     this.fieldId = fieldId;
   }
-
   public path(withParameter = true): string {
     if (withParameter && this.fieldId !== null) {
       return `${this._parent.path()}/custom-fields/${this.fieldId}`;
     }
     return `${this._parent.path()}/custom-fields`;
   }
-
   /**
    * Returns the list of created custom fields.
    * HTTP Method: get

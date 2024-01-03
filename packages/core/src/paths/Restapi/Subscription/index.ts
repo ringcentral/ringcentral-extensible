@@ -7,9 +7,7 @@ import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '.
 
 class Index {
   public rc: RingCentralInterface;
-
   public _parent: ParentInterface;
-
   public subscriptionId: string | null;
 
   public constructor(_parent: ParentInterface, subscriptionId: string | null = null) {
@@ -17,14 +15,12 @@ class Index {
     this.rc = _parent.rc;
     this.subscriptionId = subscriptionId;
   }
-
   public path(withParameter = true): string {
     if (withParameter && this.subscriptionId !== null) {
       return `${this._parent.path()}/subscription/${this.subscriptionId}`;
     }
     return `${this._parent.path()}/subscription`;
   }
-
   /**
    * Returns a list of subscriptions created by the user for the current authorized client application.
    *

@@ -4,18 +4,15 @@ import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '.
 
 class Index {
   public rc: RingCentralInterface;
-
   public _parent: ParentInterface;
 
   public constructor(_parent: ParentInterface) {
     this._parent = _parent;
     this.rc = _parent.rc;
   }
-
   public path(): string {
     return `${this._parent.path()}/search`;
   }
-
   /**
    * Returns the audit trail data with specific filters applied.
    * Audit trail searching is limited to the last 10,000 records or last 180 days, whichever comes first.

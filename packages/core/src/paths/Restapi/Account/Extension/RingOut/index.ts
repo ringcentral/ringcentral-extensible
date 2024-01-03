@@ -4,9 +4,7 @@ import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '.
 
 class Index {
   public rc: RingCentralInterface;
-
   public _parent: ParentInterface;
-
   public ringoutId: string | null;
 
   public constructor(_parent: ParentInterface, ringoutId: string | null = null) {
@@ -14,14 +12,12 @@ class Index {
     this.rc = _parent.rc;
     this.ringoutId = ringoutId;
   }
-
   public path(withParameter = true): string {
     if (withParameter && this.ringoutId !== null) {
       return `${this._parent.path()}/ring-out/${this.ringoutId}`;
     }
     return `${this._parent.path()}/ring-out`;
   }
-
   /**
    * Makes a 2-legged RingOut call.
    * HTTP Method: post

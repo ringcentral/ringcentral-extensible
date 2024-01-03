@@ -7,9 +7,7 @@ import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '.
 
 class Index {
   public rc: RingCentralInterface;
-
   public _parent: ParentInterface;
-
   public locationId: string | null;
 
   public constructor(_parent: ParentInterface, locationId: string | null = null) {
@@ -17,14 +15,12 @@ class Index {
     this.rc = _parent.rc;
     this.locationId = locationId;
   }
-
   public path(withParameter = true): string {
     if (withParameter && this.locationId !== null) {
       return `${this._parent.path()}/emergency-locations/${this.locationId}`;
     }
     return `${this._parent.path()}/emergency-locations`;
   }
-
   /**
    * Returns a list of emergency response locations available for the particular extension.
    * HTTP Method: get

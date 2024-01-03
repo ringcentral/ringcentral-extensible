@@ -1,6 +1,6 @@
 import type RegAnswerModel from './RegAnswerModel';
 
-interface RegistrantModelResponsePost {
+interface RegistrantModelResponsePostWithQuestionnaire {
   /**
    * Internal object ID
    * Example: 78654321
@@ -101,4 +101,4 @@ interface RegistrantModelResponsePost {
   icalendarSequence?: number;
 }
 
-export default RegistrantModelResponsePost;
+export default RegistrantModelResponsePostWithQuestionnaire;

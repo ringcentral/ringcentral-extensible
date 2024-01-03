@@ -1,6 +1,6 @@
 interface TMTaskInfoCreator {
   /**
-   * Creator Id
+   * Internal identifier of a task creator
    */
   id?: string;
 }
