@@ -110,7 +110,7 @@ class Index {
     if (this.ruleId === null) {
       throw new Error('ruleId must be specified.');
     }
-    const r = await this.rc.delete<string>(this.path(), undefined, undefined, restRequestConfig);
+    const r = await this.rc.delete<string>(this.path(), {}, undefined, restRequestConfig);
     return r.data;
   }
 }

@@ -117,7 +117,7 @@ class Index {
     if (this.locationId === null) {
       throw new Error('locationId must be specified.');
     }
-    const r = await this.rc.delete<string>(this.path(), undefined, queryParams, restRequestConfig);
+    const r = await this.rc.delete<string>(this.path(), {}, queryParams, restRequestConfig);
     return r.data;
   }
 }

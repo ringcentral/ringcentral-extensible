@@ -103,7 +103,7 @@ class Index {
     if (this.switchId === null) {
       throw new Error('switchId must be specified.');
     }
-    const r = await this.rc.delete<string>(this.path(), undefined, undefined, restRequestConfig);
+    const r = await this.rc.delete<string>(this.path(), {}, undefined, restRequestConfig);
     return r.data;
   }
 }

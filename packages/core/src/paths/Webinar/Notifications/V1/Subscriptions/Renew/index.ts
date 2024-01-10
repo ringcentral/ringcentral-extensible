@@ -19,7 +19,7 @@ class Index {
    * Rate Limit Group: Light
    */
   public async post(restRequestConfig?: RestRequestConfig): Promise<SubscriptionInfo> {
-    const r = await this.rc.post<SubscriptionInfo>(this.path(), undefined, undefined, restRequestConfig);
+    const r = await this.rc.post<SubscriptionInfo>(this.path(), {}, undefined, restRequestConfig);
     return r.data;
   }
 }

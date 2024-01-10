@@ -85,7 +85,7 @@ class Index {
     if (this.fieldId === null) {
       throw new Error('fieldId must be specified.');
     }
-    const r = await this.rc.delete<string>(this.path(), undefined, undefined, restRequestConfig);
+    const r = await this.rc.delete<string>(this.path(), {}, undefined, restRequestConfig);
     return r.data;
   }
 }

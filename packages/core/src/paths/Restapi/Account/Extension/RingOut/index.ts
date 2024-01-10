@@ -64,7 +64,7 @@ class Index {
     if (this.ringoutId === null) {
       throw new Error('ringoutId must be specified.');
     }
-    const r = await this.rc.delete<string>(this.path(), undefined, undefined, restRequestConfig);
+    const r = await this.rc.delete<string>(this.path(), {}, undefined, restRequestConfig);
     return r.data;
   }
 }

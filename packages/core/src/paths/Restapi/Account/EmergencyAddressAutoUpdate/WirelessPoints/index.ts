@@ -113,7 +113,7 @@ class Index {
     if (this.pointId === null) {
       throw new Error('pointId must be specified.');
     }
-    const r = await this.rc.delete<string>(this.path(), undefined, undefined, restRequestConfig);
+    const r = await this.rc.delete<string>(this.path(), {}, undefined, restRequestConfig);
     return r.data;
   }
 }

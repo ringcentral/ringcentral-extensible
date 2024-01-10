@@ -20,7 +20,7 @@ class Index {
    * App Permission: CallControl
    */
   public async post(restRequestConfig?: RestRequestConfig): Promise<CallSession> {
-    const r = await this.rc.post<CallSession>(this.path(), undefined, undefined, restRequestConfig);
+    const r = await this.rc.post<CallSession>(this.path(), {}, undefined, restRequestConfig);
     return r.data;
   }
 }

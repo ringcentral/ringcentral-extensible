@@ -43,7 +43,7 @@ class Index {
    * User Permission: EditCompanyInfo
    */
   public async deleteAll(restRequestConfig?: RestRequestConfig): Promise<string> {
-    const r = await this.rc.delete<string>(this.path(false), undefined, undefined, restRequestConfig);
+    const r = await this.rc.delete<string>(this.path(false), {}, undefined, restRequestConfig);
     return r.data;
   }
 
@@ -59,7 +59,7 @@ class Index {
     if (this.greetingId === null) {
       throw new Error('greetingId must be specified.');
     }
-    const r = await this.rc.delete<string>(this.path(), undefined, undefined, restRequestConfig);
+    const r = await this.rc.delete<string>(this.path(), {}, undefined, restRequestConfig);
     return r.data;
   }
 }

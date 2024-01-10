@@ -21,7 +21,7 @@ class Index {
    * User Permission: Users
    */
   public async put(restRequestConfig?: RestRequestConfig): Promise<AssignedRolesResource> {
-    const r = await this.rc.put<AssignedRolesResource>(this.path(), undefined, undefined, restRequestConfig);
+    const r = await this.rc.put<AssignedRolesResource>(this.path(), {}, undefined, restRequestConfig);
     return r.data;
   }
 }

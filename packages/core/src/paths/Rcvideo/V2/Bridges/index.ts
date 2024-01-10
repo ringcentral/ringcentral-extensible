@@ -48,7 +48,7 @@ class Index {
     if (this.bridgeId === null) {
       throw new Error('bridgeId must be specified.');
     }
-    const r = await this.rc.delete<string>(this.path(), undefined, undefined, restRequestConfig);
+    const r = await this.rc.delete<string>(this.path(), {}, undefined, restRequestConfig);
     return r.data;
   }
 

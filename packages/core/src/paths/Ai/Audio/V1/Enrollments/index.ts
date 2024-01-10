@@ -77,7 +77,7 @@ class Index {
     if (this.speakerId === null) {
       throw new Error('speakerId must be specified.');
     }
-    const r = await this.rc.delete<string>(this.path(), undefined, undefined, restRequestConfig);
+    const r = await this.rc.delete<string>(this.path(), {}, undefined, restRequestConfig);
     return r.data;
   }
 
