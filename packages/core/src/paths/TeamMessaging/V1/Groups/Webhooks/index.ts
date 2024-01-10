@@ -33,7 +33,7 @@ class Index {
    * App Permission: TeamMessaging
    */
   public async post(restRequestConfig?: RestRequestConfig): Promise<TMWebhookInfo> {
-    const r = await this.rc.post<TMWebhookInfo>(this.path(), undefined, restRequestConfig);
+    const r = await this.rc.post<TMWebhookInfo>(this.path(), undefined, undefined, restRequestConfig);
     return r.data;
   }
 }

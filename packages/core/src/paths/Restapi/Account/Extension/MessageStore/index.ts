@@ -58,7 +58,7 @@ class Index {
     queryParams?: DeleteMessageByFilterParameters,
     restRequestConfig?: RestRequestConfig,
   ): Promise<string> {
-    const r = await this.rc.delete<string>(this.path(false), queryParams, restRequestConfig);
+    const r = await this.rc.delete<string>(this.path(false), undefined, queryParams, restRequestConfig);
     return r.data;
   }
 

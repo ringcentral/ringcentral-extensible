@@ -99,7 +99,7 @@ class Index {
     if (this.subscriptionId === null) {
       throw new Error('subscriptionId must be specified.');
     }
-    const r = await this.rc.delete<string>(this.path(), undefined, restRequestConfig);
+    const r = await this.rc.delete<string>(this.path(), undefined, undefined, restRequestConfig);
     return r.data;
   }
 

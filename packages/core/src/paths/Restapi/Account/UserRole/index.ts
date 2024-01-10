@@ -98,7 +98,7 @@ class Index {
     if (this.roleId === null) {
       throw new Error('roleId must be specified.');
     }
-    const r = await this.rc.delete<string>(this.path(), queryParams, restRequestConfig);
+    const r = await this.rc.delete<string>(this.path(), undefined, queryParams, restRequestConfig);
     return r.data;
   }
 

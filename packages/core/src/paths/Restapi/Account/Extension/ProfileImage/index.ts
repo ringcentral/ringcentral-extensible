@@ -83,7 +83,7 @@ class Index {
    * User Permission: EditUserInfo
    */
   public async delete(restRequestConfig?: RestRequestConfig): Promise<string> {
-    const r = await this.rc.delete<string>(this.path(false), undefined, restRequestConfig);
+    const r = await this.rc.delete<string>(this.path(false), undefined, undefined, restRequestConfig);
     return r.data;
   }
 

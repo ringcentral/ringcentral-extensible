@@ -83,7 +83,7 @@ class Index {
     if (this.chatId === null) {
       throw new Error('chatId must be specified.');
     }
-    const r = await this.rc.delete<string>(this.path(), undefined, restRequestConfig);
+    const r = await this.rc.delete<string>(this.path(), undefined, undefined, restRequestConfig);
     return r.data;
   }
 

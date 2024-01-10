@@ -19,7 +19,7 @@ class Index {
    * App Permission: TeamMessaging
    */
   public async post(restRequestConfig?: RestRequestConfig): Promise<string> {
-    const r = await this.rc.post<string>(this.path(), undefined, restRequestConfig);
+    const r = await this.rc.post<string>(this.path(), undefined, undefined, restRequestConfig);
     return r.data;
   }
 }

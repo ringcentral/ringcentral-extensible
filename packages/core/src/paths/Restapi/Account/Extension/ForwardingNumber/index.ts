@@ -140,7 +140,7 @@ class Index {
     if (this.forwardingNumberId === null) {
       throw new Error('forwardingNumberId must be specified.');
     }
-    const r = await this.rc.delete<string>(this.path(), undefined, restRequestConfig);
+    const r = await this.rc.delete<string>(this.path(), undefined, undefined, restRequestConfig);
     return r.data;
   }
 }
