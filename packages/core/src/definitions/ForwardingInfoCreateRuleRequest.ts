@@ -5,12 +5,12 @@ import type ForwardingRuleCreateRequest from './ForwardingRuleCreateRequest';
  */
 interface ForwardingInfoCreateRuleRequest {
   /**
-   * Specifies if the first ring on desktop/mobile apps is enabled. The default value is 'True'
+   * Specifies if the first ring on desktop/mobile apps is enabled. The default value is `true`
    */
   notifyMySoftPhones?: boolean;
 
   /**
-   * Deprecated parameter. Specifies if the administrator's softphone (desktop application) is notified before forwarding the incoming call to desk phones and forwarding numbers. The default value is 'True'.
+   * Deprecated parameter. Specifies if the administrator's softphone (desktop application) is notified before forwarding the incoming call to desk phones and forwarding numbers. The default value is `true`.
    */
   notifyAdminSoftPhones?: boolean;
 
@@ -21,7 +21,7 @@ interface ForwardingInfoCreateRuleRequest {
   softPhonesRingCount?: number;
 
   /**
-   * Specifies that desktop and mobile applications of the user will ring till the end of their forwarding list. If set to 'True' then `softPhonesRingCount` is ignored
+   * Specifies that desktop and mobile applications of the user will ring till the end of their forwarding list. If set to `true` then `softPhonesRingCount` is ignored
    * Default: true
    */
   softPhonesAlwaysRing?: boolean;

@@ -71,7 +71,7 @@ interface ExtensionServiceFeatureInfo {
 
   /**
    * Reason for limitation of a particular service feature. Returned
-   *  only if the enabled parameter value is 'False', see Service Feature
+   *  only if the enabled parameter value is `false`, see Service Feature
    *  Limitations and Reasons. When retrieving service features for an extension,
    *  the reasons for limitations, if any, are returned in response
    */

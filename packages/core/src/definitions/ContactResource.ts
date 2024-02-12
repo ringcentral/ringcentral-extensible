@@ -132,9 +132,10 @@ interface ContactResource {
   integration?: ExternalIntegrationResource;
 
   /**
-   * Example: 3
+   * Extension subtype
+   * Example: Unknown
    */
-  subType?: string;
+  subType?: 'Unknown' | 'VideoPro' | 'VideoProPlus' | 'DigitalSignage' | 'Emergency';
 }
 
 export default ContactResource;

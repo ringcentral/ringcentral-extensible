@@ -24,7 +24,7 @@ interface ListExtensionDevicesParameters {
   perPage?: number;
 
   /**
-   * Pooling type of a device - Host - a device with standalone paid phone line which can be linked to a soft client instance - Guest - a device with a linked phone line - None - a device without a phone line or with specific line (free, BLA, etc.)
+   * Pooling type of device - Host - a device with standalone paid phone line which can be linked to a soft client instance - Guest - a device with a linked phone line - None - a device without a phone line or with specific line (free, BLA, etc.)
    */
   linePooling?: 'Host' | 'Guest' | 'None';
 
@@ -40,7 +40,7 @@ interface ListExtensionDevicesParameters {
   type?: 'HardPhone' | 'SoftPhone' | 'OtherPhone' | 'MobileDevice' | 'BLA' | 'Paging' | 'WebPhone' | 'WebRTC' | 'Room';
 
   /**
-   * The type of a phone line
+   * The type of phone line
    */
   lineType?: 'Unknown' | 'Standalone' | 'StandaloneFree' | 'BlaPrimary' | 'BlaSecondary';
 }

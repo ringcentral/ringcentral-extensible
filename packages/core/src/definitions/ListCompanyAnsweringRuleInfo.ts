@@ -14,7 +14,7 @@ interface ListCompanyAnsweringRuleInfo {
   uri?: string;
 
   /**
-   * Specifies if the rule is active or inactive. The default value is 'True'
+   * Specifies if the rule is active or inactive. The default value is `true`
    * Default: true
    */
   enabled?: boolean;

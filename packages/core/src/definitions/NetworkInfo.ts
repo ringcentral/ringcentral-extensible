@@ -1,7 +1,6 @@
 import type AutomaticLocationUpdatesSiteInfo from './AutomaticLocationUpdatesSiteInfo';
 import type PublicIpRangeInfo from './PublicIpRangeInfo';
 import type PrivateIpRangeInfo from './PrivateIpRangeInfo';
-import type ERLLocationInfo from './ERLLocationInfo';
 
 interface NetworkInfo {
   /**
@@ -30,10 +29,6 @@ interface NetworkInfo {
   /**
    */
   privateIpRanges?: PrivateIpRangeInfo[];
-
-  /**
-   */
-  emergencyLocation?: ERLLocationInfo;
 }
 
 export default NetworkInfo;

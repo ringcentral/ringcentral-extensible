@@ -3,7 +3,7 @@
  */
 interface ListRecentChatsNewParameters {
   /**
-   * Type of chats to be fetched. By default all chat types are returned
+   * Type of chats to be fetched. By default, all chat types are returned
    */
   type?: ('Everyone' | 'Group' | 'Personal' | 'Direct' | 'Team')[];
 

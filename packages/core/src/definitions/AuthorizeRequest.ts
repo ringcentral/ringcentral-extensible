@@ -23,7 +23,7 @@ interface AuthorizeRequest {
   client_id?: string;
 
   /**
-   * Client state. Returned back to the client at the end of the flow
+   * Client state. Returned to the client at the end of the flow
    */
   state?: string;
 
@@ -45,6 +45,7 @@ interface AuthorizeRequest {
   /**
    * Specifies which login form will be displayed. Space-separated
    *  set of the following values:
+   *
    *  - **login** - RingCentral native login form,
    *  - **sso** - Single Sign-On login form,
    *  - **consent** - form to show the requested scope and prompt user for consent.

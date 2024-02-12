@@ -1,4 +1,4 @@
-interface CreateUserEmergencyLocationRequestAddress {
+interface CommonEmergencyLocationAddressInfoDefault {
   /**
    * Country name
    */
@@ -45,7 +45,7 @@ interface CreateUserEmergencyLocationRequestAddress {
   city?: string;
 
   /**
-   * The name of the street (The field is utilised as 'streetName' field for FR addresses)
+   * First line address
    */
   street?: string;
 
@@ -64,26 +64,6 @@ interface CreateUserEmergencyLocationRequestAddress {
    * Customer name
    */
   customerName?: string;
-
-  /**
-   * Company name
-   */
-  companyName?: string;
-
-  /**
-   * (Optional) Building name
-   */
-  buildingName?: string;
-
-  /**
-   * Street type
-   */
-  streetType?: string;
-
-  /**
-   * Building/street number
-   */
-  buildingNumber?: string;
 }
 
-export default CreateUserEmergencyLocationRequestAddress;
+export default CommonEmergencyLocationAddressInfoDefault;

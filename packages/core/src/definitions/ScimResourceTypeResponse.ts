@@ -3,7 +3,7 @@ import type ScimMeta from './ScimMeta';
 
 interface ScimResourceTypeResponse {
   /**
-   * Unique resource type id, same value as the "name" attribute
+   * Unique resource type ID, same value as the "name" attribute
    */
   id?: string;
 

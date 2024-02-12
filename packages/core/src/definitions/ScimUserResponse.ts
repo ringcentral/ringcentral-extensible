@@ -22,12 +22,12 @@ interface ScimUserResponse {
   emails?: ScimEmail[];
 
   /**
-   * External unique resource id defined by provisioning client
+   * External unique resource ID defined by provisioning client
    */
   externalId?: string;
 
   /**
-   * Unique resource id defined by RingCentral
+   * Unique resource ID defined by RingCentral
    */
   id?: string;
 

@@ -20,8 +20,8 @@ class Index {
     return `${this._parent.path()}/bulk-add`;
   }
   /**
-   * Adds phone numbers to the account Inventory as unassigned. Currently we support the following three enum values: 'Inventory',
-   * 'InventoryPartnerBusinessMobileNumber' and 'PartnerBusinessMobileNumber'. Later we may support some other values like 'ForwardedNumber', etc.
+   * Adds phone numbers to the account Inventory as unassigned. Currently, we support the following values: `Inventory`,
+   * `InventoryPartnerBusinessMobileNumber` and `PartnerBusinessMobileNumber`. Later we may support some other values like `ForwardedNumber`, etc.
    *
    * HTTP Method: post
    * Endpoint: /restapi/v2/accounts/{accountId}/phone-numbers/bulk-add

@@ -1,5 +1,5 @@
 import type SwitchSiteInfo from './SwitchSiteInfo';
-import type EmergencyAddressInfoDefault from './EmergencyAddressInfoDefault';
+import type EmergencyAddressInfo from './EmergencyAddressInfo';
 
 interface UpdateSwitchInfo {
   /**
@@ -30,7 +30,7 @@ interface UpdateSwitchInfo {
 
   /**
    */
-  emergencyAddress?: EmergencyAddressInfoDefault;
+  emergencyAddress?: EmergencyAddressInfo;
 }
 
 export default UpdateSwitchInfo;

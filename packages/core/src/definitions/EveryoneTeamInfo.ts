@@ -5,7 +5,7 @@ interface EveryoneTeamInfo {
   id?: string;
 
   /**
-   * Type of a chat
+   * Type of chat
    */
   type?: 'Everyone';
 

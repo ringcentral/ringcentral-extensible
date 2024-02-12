@@ -15,7 +15,7 @@ interface ModelInfo {
   name?: string;
 
   /**
-   * Addons description
+   * Add-ons description
    */
   addons?: AddonInfo[];
 

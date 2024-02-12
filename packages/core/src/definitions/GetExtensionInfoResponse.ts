@@ -1,5 +1,6 @@
 import type GetExtensionAccountInfo from './GetExtensionAccountInfo';
 import type ContactInfo from './ContactInfo';
+import type CostCenterInfo from './CostCenterInfo';
 import type CustomFieldInfo from './CustomFieldInfo';
 import type DepartmentInfo from './DepartmentInfo';
 import type ExtensionPermissions from './ExtensionPermissions';
@@ -36,6 +37,10 @@ interface GetExtensionInfoResponse {
 
   /**
    */
+  costCenter?: CostCenterInfo;
+
+  /**
+   */
   customFields?: CustomFieldInfo[];
 
   /**
@@ -67,7 +72,7 @@ interface GetExtensionInfoResponse {
    *  created by partner. The RingCentral supports mapping of accounts and
    *  stores the corresponding account ID/extension ID for each partner ID of
    *  a client application. In request URIs partner IDs are accepted instead
-   *  of regular RingCentral native IDs as path parameters using pid = XXX clause.
+   *  of regular RingCentral native IDs as path parameters using `pid=XXX` clause.
    *  Though in response URIs contain the corresponding account IDs and extension
    *  IDs. In all request and response bodies these values are reflected via
    *  partnerId attributes of account and extension
@@ -110,7 +115,7 @@ interface GetExtensionInfoResponse {
 
   /**
    * Extension current state. If 'Unassigned' is specified, then
-   *  extensions without ‘extensionNumber’ are returned. If not specified,
+   *  extensions without `extensionNumber` are returned. If not specified,
    *  then all extensions are returned
    */
   status?: 'Enabled' | 'Disabled' | 'Frozen' | 'NotActivated' | 'Unassigned';
@@ -148,8 +153,8 @@ interface GetExtensionInfoResponse {
     | 'GroupCallPickup';
 
   /**
-   * Extension sub-type, if applicable. For any unsupported sub-types the
-   *  'Unknown' value will be returned"
+   * Extension subtype, if applicable. For any unsupported subtypes the
+   *  `Unknown` value will be returned
    */
   subType?: 'VideoPro' | 'VideoProPlus' | 'DigitalSignage' | 'Unknown';
 

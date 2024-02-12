@@ -2,7 +2,7 @@ import type DeletePhoneNumbersRequestItem from './DeletePhoneNumbersRequestItem'
 
 interface DeletePhoneNumbersRequest {
   /**
-   * List of phone numbers or phone ids to be deleted
+   * List of phone numbers or phone IDs to be deleted
    * Required
    */
   records?: DeletePhoneNumbersRequestItem[];

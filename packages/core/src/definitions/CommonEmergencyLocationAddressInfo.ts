@@ -1,4 +1,4 @@
-interface EmergencyLocationAddressInfoFr {
+interface CommonEmergencyLocationAddressInfo {
   /**
    * Country name
    */
@@ -45,24 +45,9 @@ interface EmergencyLocationAddressInfoFr {
   city?: string;
 
   /**
-   * The name of the street (The field is utilised as 'streetName' field for FR addresses)
+   * The name of the street (The field is utilized as 'streetName' field for FR addresses)
    */
   street?: string;
-
-  /**
-   * Company name
-   */
-  companyName?: string;
-
-  /**
-   * (Optional) Building name
-   */
-  buildingName?: string;
-
-  /**
-   * Building/street number
-   */
-  buildingNumber?: string;
 
   /**
    * Second line address (apartment, suite, unit, building, floor,
@@ -79,6 +64,26 @@ interface EmergencyLocationAddressInfoFr {
    * Customer name
    */
   customerName?: string;
+
+  /**
+   * Company name
+   */
+  companyName?: string;
+
+  /**
+   * (Optional) Building name
+   */
+  buildingName?: string;
+
+  /**
+   * Street type
+   */
+  streetType?: string;
+
+  /**
+   * Building/street number
+   */
+  buildingNumber?: string;
 }
 
-export default EmergencyLocationAddressInfoFr;
+export default CommonEmergencyLocationAddressInfo;

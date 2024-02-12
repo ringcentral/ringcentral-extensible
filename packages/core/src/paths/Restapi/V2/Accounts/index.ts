@@ -4,7 +4,6 @@ import BatchProvisioning from './BatchProvisioning';
 import DeviceInventory from './DeviceInventory';
 import PhoneNumbers from './PhoneNumbers';
 import Extensions from './Extensions';
-import Licenses from './Licenses';
 import Devices from './Devices';
 import type AccountInfo from '../../../../definitions/AccountInfo';
 import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
@@ -43,10 +42,6 @@ class Index {
 
   public devices(deviceId: string | null = null): Devices {
     return new Devices(this, deviceId);
-  }
-
-  public licenses(): Licenses {
-    return new Licenses(this);
   }
 
   public extensions(): Extensions {

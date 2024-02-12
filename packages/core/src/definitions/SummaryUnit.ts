@@ -1,5 +1,6 @@
 interface SummaryUnit {
   /**
+   * Required
    * Example: JohnDoe
    */
   speakerId?: string;
@@ -11,12 +12,14 @@ interface SummaryUnit {
   text?: string;
 
   /**
+   * Required
    * Format: float
    * Example: 0.3
    */
   start?: number;
 
   /**
+   * Required
    * Format: float
    * Example: 5.1
    */

@@ -1,4 +1,5 @@
 import type LocationUpdatesEmergencyAddressInfoRequest from './LocationUpdatesEmergencyAddressInfoRequest';
+import type ERLLocationInfo from './ERLLocationInfo';
 
 interface PrivateIpRangeInfoRequest {
   /**
@@ -28,6 +29,10 @@ interface PrivateIpRangeInfoRequest {
    *  be specified, otherwise the error is returned
    */
   emergencyLocationId?: string;
+
+  /**
+   */
+  emergencyLocation?: ERLLocationInfo;
 }
 
 export default PrivateIpRangeInfoRequest;

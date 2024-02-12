@@ -17,9 +17,9 @@ interface NotificationSettingsUpdateRequest {
   smsEmailAddresses?: string[];
 
   /**
-   * Specifies notifications settings mode. If 'True' then advanced
+   * Specifies notifications settings mode. If `true` then advanced
    *  mode is on, it allows using different emails and/or phone numbers for
-   *  each notification type. If 'False' then basic mode is on. Advanced mode
+   *  each notification type. If `false` then basic mode is on. Advanced mode
    *  settings are returned in both modes, if specified once, but if basic mode
    *  is switched on, they are not applied
    */
@@ -47,7 +47,7 @@ interface NotificationSettingsUpdateRequest {
 
   /**
    * Specifies if managers' emails are included in the list of emails to
-   *  which notifications are sent. If not specified, then the value is 'True'
+   *  which notifications are sent. If not specified, then the value is `true`
    * Default: true
    */
   includeManagers?: boolean;

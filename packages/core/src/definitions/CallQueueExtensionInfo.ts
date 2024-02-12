@@ -20,7 +20,7 @@ interface CallQueueExtensionInfo {
   slaThresholdSeconds?: number;
 
   /**
-   * If 'True' abandoned calls (hanged up prior to being served)
+   * If `true` abandoned calls (hanged up prior to being served)
    *  are included into service level calculation
    */
   includeAbandonedCalls?: boolean;

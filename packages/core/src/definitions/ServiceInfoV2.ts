@@ -2,7 +2,7 @@ import type ServiceInfoPackage from './ServiceInfoPackage';
 import type ServiceInfoBrand from './ServiceInfoBrand';
 
 /**
- * Service Plan information (billing package, brand, etc)
+ * Service Plan information (billing package, brand, etc.)
  */
 interface ServiceInfoV2 {
   /**

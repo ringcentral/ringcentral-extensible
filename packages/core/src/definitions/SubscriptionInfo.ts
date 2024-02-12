@@ -13,7 +13,6 @@ interface SubscriptionInfo {
   /**
    * Internal identifier of a subscription
    * Required
-   * Format: uuid
    * Example: 95fecfc9-9cdc-4e94-a78a-89fd65889d37
    */
   id?: string;

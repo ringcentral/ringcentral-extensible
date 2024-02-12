@@ -7,7 +7,7 @@ interface TMChatInfo {
   id?: string;
 
   /**
-   * Type of a chat
+   * Type of chat
    */
   type?: 'Everyone' | 'Team' | 'Group' | 'Direct' | 'Personal';
 

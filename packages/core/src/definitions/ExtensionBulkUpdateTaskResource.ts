@@ -25,14 +25,14 @@ interface ExtensionBulkUpdateTaskResource {
   status?: 'Accepted' | 'InProgress' | 'Completed' | 'Failed';
 
   /**
-   * Task creation datetime
+   * Task creation date/time
    * Required
    * Format: date-time
    */
   creationTime?: string;
 
   /**
-   * Task latest update datetime
+   * Task latest update date/time
    * Required
    * Format: date-time
    */

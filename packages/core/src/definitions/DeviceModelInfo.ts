@@ -5,7 +5,7 @@ import type DeviceAddonInfo from './DeviceAddonInfo';
  */
 interface DeviceModelInfo {
   /**
-   * Addon identifier. For HardPhones of certain types, which are compatible with this addon identifier
+   * Addon identifier. For HardPhones of certain types, which are compatible with this add-on identifier
    */
   id?: string;
 
@@ -15,7 +15,7 @@ interface DeviceModelInfo {
   name?: string;
 
   /**
-   * Addons description
+   * Add-ons description
    * Required
    */
   addons?: DeviceAddonInfo[];

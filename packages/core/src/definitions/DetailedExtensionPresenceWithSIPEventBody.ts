@@ -47,17 +47,17 @@ interface DetailedExtensionPresenceWithSIPEventBody {
   dndStatus?: 'TakeAllCalls' | 'DoNotAcceptAnyCalls' | 'DoNotAcceptDepartmentCalls' | 'TakeDepartmentCallsOnly';
 
   /**
-   * If 'True' enables other extensions to see the extension presence status
+   * If `true` enables other extensions to see the extension presence status
    */
   allowSeeMyPresence?: boolean;
 
   /**
-   * If 'True' enables to ring extension phone, if any user monitored by this extension is ringing
+   * If `true` enables to ring extension phone, if any user monitored by this extension is ringing
    */
   ringOnMonitoredCall?: boolean;
 
   /**
-   * If 'True' enables the extension user to pick up a monitored line on hold
+   * If `true` enables the extension user to pick up a monitored line on hold
    */
   pickUpCallsOnHold?: boolean;
 

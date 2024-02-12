@@ -3,7 +3,7 @@
  */
 interface ListStatesParameters {
   /**
-   * If set to 'True' then states of all countries are returned and
+   * If set to `true` then states of all countries are returned and
    *  `countryId` is ignored, even if specified. If the value is empty
    *  then the parameter is ignored
    */
@@ -31,7 +31,7 @@ interface ListStatesParameters {
   perPage?: number;
 
   /**
-   * If 'True' the list of states with phone numbers available for
+   * If `true` the list of states with phone numbers available for
    *  buying is returned
    */
   withPhoneNumbers?: boolean;

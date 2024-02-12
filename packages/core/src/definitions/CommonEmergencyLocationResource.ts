@@ -1,11 +1,11 @@
-import type EmergencyLocationResourceAddress from './EmergencyLocationResourceAddress';
+import type CommonEmergencyLocationAddressInfo from './CommonEmergencyLocationAddressInfo';
 import type ShortSiteInfo from './ShortSiteInfo';
 import type LocationOwnerInfo from './LocationOwnerInfo';
 
 /**
  * Company emergency response location details
  */
-interface EmergencyLocationResource {
+interface CommonEmergencyLocationResource {
   /**
    * Internal identifier of an emergency response location
    */
@@ -13,7 +13,7 @@ interface EmergencyLocationResource {
 
   /**
    */
-  address?: EmergencyLocationResourceAddress;
+  address?: CommonEmergencyLocationAddressInfo;
 
   /**
    * Emergency response location name
@@ -36,7 +36,7 @@ interface EmergencyLocationResource {
 
   /**
    * Resulting status of emergency address synchronization. Returned
-   *  if `syncEmergencyAddress` parameter is set to 'True'
+   *  if `syncEmergencyAddress` parameter is set to `true`
    */
   syncStatus?: 'Verified' | 'Updated' | 'Deleted' | 'ActivationProcess' | 'NotRequired' | 'Unsupported' | 'Failed';
 
@@ -58,9 +58,9 @@ interface EmergencyLocationResource {
   owners?: LocationOwnerInfo[];
 
   /**
-   * Address format id
+   * Address format ID
    */
   addressFormatId?: string;
 }
 
-export default EmergencyLocationResource;
+export default CommonEmergencyLocationResource;

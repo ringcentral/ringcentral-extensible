@@ -15,7 +15,7 @@ class Index {
     return `${this._parent.path()}/summarize`;
   }
   /**
-   * Returns Conversational Summarization to webhook uri.
+   * Returns Conversational Summarization to webhook uri for segmented transcript of audios with start,end,speakerId, text(alphanumeric and punctuations).
    * HTTP Method: post
    * Endpoint: /ai/text/v1/async/summarize
    * Rate Limit Group: Heavy

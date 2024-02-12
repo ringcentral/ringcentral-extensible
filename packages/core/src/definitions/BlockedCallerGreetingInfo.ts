@@ -2,7 +2,7 @@ import type PresetInfo from './PresetInfo';
 
 interface BlockedCallerGreetingInfo {
   /**
-   * Type of a greeting
+   * Type of greeting
    */
   type?: string;
 

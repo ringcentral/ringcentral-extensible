@@ -11,7 +11,7 @@ interface PromptInfo {
   id?: string;
 
   /**
-   * Type of a prompt media content
+   * Type of prompt media content
    */
   contentType?: string;
 

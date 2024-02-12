@@ -9,12 +9,12 @@ interface GetPresenceInfo {
   uri?: string;
 
   /**
-   * If set to 'True' - enables other extensions to see the extension presence status
+   * If set to `true` - enables other extensions to see the extension presence status
    */
   allowSeeMyPresence?: boolean;
 
   /**
-   * Configures the user presence visibility. When the `allowSeeMyPresence` parameter is set to 'True',
+   * Configures the user presence visibility. When the `allowSeeMyPresence` parameter is set to `true`,
    *  the following visibility options are supported via this parameter - All, None, PermittedUsers
    */
   callerIdVisibility?: 'All' | 'None' | 'PermittedUsers';
@@ -41,7 +41,7 @@ interface GetPresenceInfo {
   message?: string;
 
   /**
-   * If 'True' enables the extension user to pick up a monitored line on hold
+   * If `true` enables the extension user to pick up a monitored line on hold
    */
   pickUpCallsOnHold?: boolean;
 
@@ -51,7 +51,7 @@ interface GetPresenceInfo {
   presenceStatus?: 'Offline' | 'Busy' | 'Available';
 
   /**
-   * If 'True' enables to ring extension phone, if any user monitored by this extension is ringing
+   * If `true` enables to ring extension phone, if any user monitored by this extension is ringing
    */
   ringOnMonitoredCall?: boolean;
 

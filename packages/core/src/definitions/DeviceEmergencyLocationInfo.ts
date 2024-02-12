@@ -13,7 +13,7 @@ interface DeviceEmergencyLocationInfo {
   name?: string;
 
   /**
-   * Address format id
+   * Address format ID
    */
   addressFormatId?: string;
 }

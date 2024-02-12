@@ -13,7 +13,7 @@ interface TMPostInfo {
   groupId?: string;
 
   /**
-   * Type of a post
+   * Type of post
    */
   type?: 'TextMessage' | 'PersonJoined' | 'PersonsAdded';
 

@@ -14,7 +14,7 @@ interface EmergencyLocationInfo {
   name?: string;
 
   /**
-   * Address format id
+   * Address format ID
    */
   addressFormatId?: string;
 }

@@ -8,7 +8,7 @@ interface ListExtensionPhoneNumbersParameters {
   status?: 'Normal' | 'Pending' | 'PortedIn' | 'Temporary';
 
   /**
-   * Usage type of a phone number
+   * Usage type of phone number
    */
   usageType?: (
     | 'MainCompanyNumber'

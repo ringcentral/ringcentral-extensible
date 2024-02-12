@@ -4,6 +4,7 @@ import type ProfileImageInfo from './ProfileImageInfo';
 import type CallQueueExtensionInfo from './CallQueueExtensionInfo';
 import type ProvisioningSiteInfo from './ProvisioningSiteInfo';
 import type AssignedCountryInfo from './AssignedCountryInfo';
+import type CostCenterInfo from './CostCenterInfo';
 
 interface GetExtensionListInfoResponse {
   /**
@@ -43,7 +44,7 @@ interface GetExtensionListInfoResponse {
 
   /**
    * Extension current state. If 'Unassigned' is specified, then
-   *  extensions without ‘extensionNumber’ are returned. If not specified,
+   *  extensions without `extensionNumber` are returned. If not specified,
    *  then all extensions are returned
    */
   status?: 'Enabled' | 'Disabled' | 'Frozen' | 'NotActivated' | 'Unassigned';
@@ -76,8 +77,8 @@ interface GetExtensionListInfoResponse {
     | 'GroupCallPickup';
 
   /**
-   * Extension sub-type, if applicable. For any unsupported sub-types the
-   *  'Unknown' value will be returned"
+   * Extension subtype, if applicable. For any unsupported subtypes the
+   *  `Unknown` value will be returned
    */
   subType?: 'VideoPro' | 'VideoProPlus' | 'DigitalSignage' | 'Unknown';
 
@@ -98,6 +99,10 @@ interface GetExtensionListInfoResponse {
   /**
    */
   assignedCountry?: AssignedCountryInfo;
+
+  /**
+   */
+  costCenter?: CostCenterInfo;
 }
 
 export default GetExtensionListInfoResponse;

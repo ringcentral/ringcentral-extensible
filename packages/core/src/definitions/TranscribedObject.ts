@@ -1,3 +1,4 @@
+import type UtteranceObject from './UtteranceObject';
 import type WordSegment from './WordSegment';
 
 interface TranscribedObject {
@@ -7,6 +8,11 @@ interface TranscribedObject {
    * Example: 2
    */
   speakerCount?: number;
+
+  /**
+   * Speaker wise utterances. Field is set only when enableSpeakerDiarization is true.
+   */
+  utterances?: UtteranceObject[];
 
   /**
    * Required

@@ -1,4 +1,4 @@
-import type CreateUserEmergencyLocationRequestAddress from './CreateUserEmergencyLocationRequestAddress';
+import type CommonEmergencyLocationAddressInfo from './CommonEmergencyLocationAddressInfo';
 
 interface CreateUserEmergencyLocationRequest {
   /**
@@ -7,13 +7,13 @@ interface CreateUserEmergencyLocationRequest {
   name?: string;
 
   /**
-   * Address format id
+   * Address format ID
    */
   addressFormatId?: string;
 
   /**
    */
-  address?: CreateUserEmergencyLocationRequestAddress;
+  address?: CommonEmergencyLocationAddressInfo;
 }
 
 export default CreateUserEmergencyLocationRequest;

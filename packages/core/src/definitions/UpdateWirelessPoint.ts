@@ -1,5 +1,5 @@
 import type EmergencyAddressAutoUpdateSiteInfo from './EmergencyAddressAutoUpdateSiteInfo';
-import type EmergencyAddressInfoDefault from './EmergencyAddressInfoDefault';
+import type EmergencyAddressInfo from './EmergencyAddressInfo';
 
 interface UpdateWirelessPoint {
   /**
@@ -25,7 +25,7 @@ interface UpdateWirelessPoint {
 
   /**
    */
-  emergencyAddress?: EmergencyAddressInfoDefault;
+  emergencyAddress?: EmergencyAddressInfo;
 }
 
 export default UpdateWirelessPoint;

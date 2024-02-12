@@ -6,7 +6,7 @@ import type GreetingAnsweringRuleId from './GreetingAnsweringRuleId';
  */
 interface CreateCompanyGreetingRequest {
   /**
-   * Type of a greeting, specifying the case when the greeting
+   * Type of greeting, specifying the case when the greeting
    *  is played.
    * Required
    */

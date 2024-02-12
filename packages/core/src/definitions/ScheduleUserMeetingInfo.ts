@@ -53,7 +53,7 @@ interface ScheduleUserMeetingInfo {
   defaultPasswordForScheduledMeetings?: string;
 
   /**
-   * A random password will be generated for an instant meeting, if set to 'True'. If you use PMI for your instant meetings, this option will be disabled
+   * A random password will be generated for an instant meeting, if set to `true`. If you use PMI for your instant meetings, this option will be disabled
    */
   requirePasswordForInstantMeetings?: boolean;
 

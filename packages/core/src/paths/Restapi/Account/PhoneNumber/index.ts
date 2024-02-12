@@ -38,8 +38,8 @@ class Index {
   }
 
   /**
-   * Returns phone number(s) belonging to a certain account or extension
-   * by phoneNumberId(s). Batch request is supported.
+   * Returns phone number(s) belonging to a certain account or extension by phoneNumberId(s).
+   * [Batch request syntax](https://developers.ringcentral.com/api-reference/Batch-Requests) is supported.
    *
    * HTTP Method: get
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/phone-number/{phoneNumberId}

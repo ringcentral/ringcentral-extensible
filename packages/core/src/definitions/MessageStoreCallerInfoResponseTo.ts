@@ -20,7 +20,7 @@ interface MessageStoreCallerInfoResponseTo {
   location?: string;
 
   /**
-   * The 'True' value specifies that message is sent exactly to this recipient.
+   * The `true` value specifies that message is sent exactly to this recipient.
    *  Returned in the `to` field for group MMS. Useful if one extension has several
    *  phone numbers'
    */

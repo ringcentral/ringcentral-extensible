@@ -21,7 +21,7 @@ interface CreateAnsweringRuleForwardingNumberInfo {
   label?: string;
 
   /**
-   * Type of a forwarding number
+   * Type of forwarding number
    */
   type?:
     | 'Home'

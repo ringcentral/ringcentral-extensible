@@ -19,7 +19,10 @@ interface QueueInfo {
   transfer?: TransferInfo[];
 
   /**
-   * Specifies the type of action to be taken if: members are available but no one answers, or all members are busy/unavailable. This option is available for Business hours only. For simultaneous transfer mode only 'WaitPrimaryMembers' and 'WaitPrimaryAndOverflowMembers' are supported
+   * Specifies the type of action to be taken if: members are available
+   *  but no one answers, or all members are busy/unavailable. This option is
+   *  available for Business hours only. For simultaneous transfer mode only
+   *  'WaitPrimaryMembers' and 'WaitPrimaryAndOverflowMembers' are supported
    */
   noAnswerAction?:
     | 'WaitPrimaryMembers'
@@ -45,7 +48,10 @@ interface QueueInfo {
   holdAudioInterruptionPeriod?: number;
 
   /**
-   * Specifies the type of action to be taken after the hold time (waiting for an available call queue member) expires. If 'TransferToExtension' option is selected, the extension specified in `transfer` field is used. The default value is `Voicemail`
+   * Specifies the type of action to be taken after the hold time
+   *  (waiting for an available call queue member) expires. If 'TransferToExtension'
+   *  option is selected, the extension specified in `transfer` field is used.
+   *  The default value is `Voicemail`
    * Default: Voicemail
    */
   holdTimeExpirationAction?: 'TransferToExtension' | 'UnconditionalForwarding' | 'Voicemail';
@@ -58,10 +64,10 @@ interface QueueInfo {
 
   /**
    * Minimum post-call wrap up time in seconds before agent status
-   *  is automatically set; the value range is from 180 to 300
+   *  is automatically set; the value range is from 0 to 300 sec.
    * Maximum: 300
-   * Minimum: 180
    * Format: int32
+   * Default: 15
    */
   wrapUpTime?: number;
 

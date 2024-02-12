@@ -35,7 +35,9 @@ interface TMCreateEventRequest {
   allDay?: boolean;
 
   /**
-   * Event recurrence settings. For non-periodic events the value is 'None'. Must be greater or equal to event duration: 1- Day/Weekday; 7 - Week; 28 - Month; 365 - Year
+   * Event recurrence settings. For non-periodic events the value
+   *  is `None`. Must be greater or equal to event duration: 1- Day/Weekday;
+   *  7 - Week; 28 - Month; 365 - Year
    */
   recurrence?: 'None' | 'Day' | 'Weekday' | 'Week' | 'Month' | 'Year';
 
@@ -45,7 +47,8 @@ interface TMCreateEventRequest {
   endingCondition?: string;
 
   /**
-   * Count of iterations. For periodic events only. Value range is 1 - 10. Must be specified if 'endingCondition' is 'Count'
+   * Count of iterations. For periodic events only. Value range
+   *  is 1 - 10. Must be specified if `endingCondition` is `Count`
    * Format: int32
    */
   endingAfter?: number;

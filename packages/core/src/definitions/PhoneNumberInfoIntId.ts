@@ -20,7 +20,7 @@ interface PhoneNumberInfoIntId {
   extension?: DeviceProvisioningExtensionInfo;
 
   /**
-   * Custom user name of a phone number, if any
+   * Custom user-defined name of a phone number, if any
    */
   label?: string;
 
@@ -42,7 +42,7 @@ interface PhoneNumberInfoIntId {
 
   /**
    * Status of a phone number. If the value is 'Normal', the phone
-   *  number is ready to be used. Otherwise it is an external number not yet
+   *  number is ready to be used. Otherwise, it is an external number not yet
    *  ported to RingCentral
    */
   status?: string;

@@ -1,5 +1,6 @@
 /**
  * Temporary phone number, if any. Returned for phone numbers in `Pending` porting status only
+ *
  */
 interface TemporaryNumberInfo {
   /**
@@ -8,7 +9,8 @@ interface TemporaryNumberInfo {
   id?: string;
 
   /**
-   * Temporary phone number in [E.164](https://www.itu.int/rec/T-REC-E.164-201011-I) (with '+' sign) format
+   * Temporary phone number in [E.164](https://www.itu.int/rec/T-REC-E.164-201011-I)
+   *  (with '+' sign) format
    */
   phoneNumber?: string;
 }

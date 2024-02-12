@@ -28,7 +28,7 @@ interface UserPhoneNumberInfo {
   extension?: UserPhoneNumberExtensionInfo;
 
   /**
-   * Custom user name of a phone number, if any
+   * Custom user-defined name of a phone number, if any
    */
   label?: string;
 
@@ -38,7 +38,8 @@ interface UserPhoneNumberInfo {
   location?: string;
 
   /**
-   * Payment type. 'External' is returned for forwarded numbers which are not terminated in the RingCentral phone system
+   * Payment type. 'External' is returned for forwarded numbers
+   *  which are not terminated in the RingCentral phone system
    */
   paymentType?: 'External' | 'TollFree' | 'Local' | 'BusinessMobileNumberProvider' | 'ExternalNumberProvider';
 
@@ -48,12 +49,14 @@ interface UserPhoneNumberInfo {
   phoneNumber?: string;
 
   /**
-   * Specifies if a phone number is primary, i.e. displayed as 'main number' and called by default
+   * Indicates if a phone number is primary, i.e. displayed as 'main number' and called by default
    */
   primary?: boolean;
 
   /**
-   * Status of a phone number. If the value is 'Normal', the phone number is ready to be used. Otherwise it is an external number not yet ported to RingCentral
+   * Status of a phone number. If the value is 'Normal', the phone
+   *  number is ready to be used. Otherwise, it is an external number not yet
+   *  ported to RingCentral
    */
   status?: 'Normal' | 'Pending' | 'PortedIn' | 'Temporary';
 
@@ -63,12 +66,12 @@ interface UserPhoneNumberInfo {
   type?: 'VoiceFax' | 'FaxOnly' | 'VoiceOnly';
 
   /**
-   * Extension sub-type, if applicable. For any unsupported sub-types the 'Unknown' value will be returned
+   * Extension subtype, if applicable. For any unsupported subtypes the 'Unknown' value will be returned
    */
   subType?: 'VideoPro' | 'VideoProPlus' | 'DigitalSignage' | 'Unknown';
 
   /**
-   * Usage type of a phone number. Numbers of 'NumberPool' type will not be returned for phone number list requests
+   * Usage type of phone number. Numbers of 'NumberPool' type will not be returned for phone number list requests
    */
   usageType?:
     | 'MainCompanyNumber'

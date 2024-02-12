@@ -37,7 +37,7 @@ interface DevicePhoneNumberInfo {
     | 'ContactCenterNumber';
 
   /**
-   * Type of a phone number
+   * Type of phone number
    */
   type?: 'VoiceFax' | 'FaxOnly' | 'VoiceOnly';
 }

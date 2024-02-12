@@ -19,7 +19,7 @@ interface DictionaryGreetingInfo {
   name?: string;
 
   /**
-   * Usage type of a greeting, specifying if the greeting is applied for user extension or department (call queue) extension.
+   * Usage type of greeting, specifying if the greeting is applied for user extension or department (call queue) extension.
    */
   usageType?:
     | 'UserExtensionAnsweringRule'
@@ -46,7 +46,7 @@ interface DictionaryGreetingInfo {
   contentUri?: string;
 
   /**
-   * Type of a greeting, specifying the case when the greeting is played.
+   * Type of greeting, specifying the case when the greeting is played.
    */
   type?:
     | 'Introductory'

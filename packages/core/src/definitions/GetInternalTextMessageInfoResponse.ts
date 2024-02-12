@@ -41,7 +41,7 @@ interface GetInternalTextMessageInfoResponse {
   conversation?: ConversationInfo;
 
   /**
-   * Message creation datetime in ISO 8601 format including timezone,
+   * Message creation date/time in ISO 8601 format including timezone,
    *  for example 2016-03-10T18:07:52.534Z
    * Format: date-time
    */
@@ -59,7 +59,7 @@ interface GetInternalTextMessageInfoResponse {
   from?: MessageStoreCallerInfoResponseFrom;
 
   /**
-   * Datetime when the message was modified on server in ISO
+   * Date/time when the message was modified on server in ISO
    *  8601 format including timezone, for example 2016-03-10T18:07:52.534Z
    * Format: date-time
    */
@@ -76,7 +76,7 @@ interface GetInternalTextMessageInfoResponse {
   messageStatus?: 'Queued' | 'Sent' | 'Delivered' | 'DeliveryFailed' | 'SendingFailed' | 'Received';
 
   /**
-   * Pager only. 'True' if at least one of a message recipients
+   * Pager only. `true` if at least one of a message recipients
    *  is 'Department' extension
    */
   pgToDepartment?: boolean;

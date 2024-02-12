@@ -29,7 +29,7 @@ class Index {
 
   /**
    * Updates the business address of a company that account is linked
-   * to. Batch request is supported.
+   * to.
    *
    * HTTP Method: put
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/business-address

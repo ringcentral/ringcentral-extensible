@@ -2,7 +2,9 @@ import type OrderBy from './OrderBy';
 
 interface SearchDirectoryEntriesRequest {
   /**
-   * String value to filter the contacts. The value specified is searched through the following fields: `firstName`, `lastName`, `extensionNumber`, `phoneNumber`, `email`, `jobTitle`, `department`, `customFieldValue`
+   * String value to filter the contacts. The value specified is
+   *  searched through the following fields: `firstName`, `lastName`, `extensionNumber`, `phoneNumber`, `email`,
+   *  `jobTitle`, `department`, `customFieldValue`
    */
   searchString?: string;
 
@@ -21,7 +23,7 @@ interface SearchDirectoryEntriesRequest {
   )[];
 
   /**
-   * If 'True' then contacts of all accounts in federation are returned, if it is in federation, account section will be returned. If 'False' then only contacts of the current account are returned, and account section is eliminated in this case
+   * If `true` then contacts of all accounts in federation are returned, if it is in federation, account section will be returned. If `false` then only contacts of the current account are returned, and account section is eliminated in this case
    */
   showFederated?: boolean;
 

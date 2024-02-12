@@ -3,6 +3,7 @@ import type ContactInfoUpdateRequest from './ContactInfoUpdateRequest';
 import type ExtensionRegionalSettingRequest from './ExtensionRegionalSettingRequest';
 import type CallQueueInfoRequest from './CallQueueInfoRequest';
 import type UserTransitionInfo from './UserTransitionInfo';
+import type CostCenterInfo from './CostCenterInfo';
 import type CustomFieldInfo from './CustomFieldInfo';
 import type ProvisioningSiteInfo from './ProvisioningSiteInfo';
 import type ReferenceInfo from './ReferenceInfo';
@@ -71,6 +72,10 @@ interface ExtensionBulkUpdateInfo {
   /**
    */
   transition?: UserTransitionInfo;
+
+  /**
+   */
+  costCenter?: CostCenterInfo;
 
   /**
    */

@@ -21,19 +21,19 @@ interface VoicemailMessageEventBody {
   from?: SenderInfo;
 
   /**
-   * Type of a message
+   * Type of message
    */
   type?: 'Voicemail';
 
   /**
-   * Message creation datetime in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
+   * Message creation date/time in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
    *  format including timezone, for example *2019-03-10T18:07:52.534Z*
    * Format: date-time
    */
   creationTime?: string;
 
   /**
-   * Datetime when a message was modified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
+   * Date/time when a message was modified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
    *  format including timezone, for example *2019-03-10T18:07:52.534Z*
    * Format: date-time
    */

@@ -51,7 +51,7 @@ class Index {
    *
    * In other words, this method will not delete numbers which are in use on the account - extension direct numbers,
    * main number, etc. It is possible to indicate phone numbers to be deleted using their IDs or exact string values
-   * in e.164 format. However the same lookup method (by ID or by value) must be used for all numbers within the same API call.
+   * in e.164 format. However, the same lookup method (by ID or by value) must be used for all numbers within the same API call.
    *
    * HTTP Method: delete
    * Endpoint: /restapi/v2/accounts/{accountId}/phone-numbers

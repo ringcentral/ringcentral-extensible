@@ -20,7 +20,7 @@ interface ADGError {
     | "ErrorCode{code='ADG-105', httpStatus=404, description='Current account is not linked to any federation.'}"
     | "ErrorCode{code='ADG-107', httpStatus=404, description='Account not found.'}"
     | "ErrorCode{code='ADG-122', httpStatus=404, description='Contact not found.'}"
-    | "ErrorCode{code=''ADG-200'', httpStatus=404, description=''Invalid URI''}";
+    | "ErrorCode{code='ADG-200', httpStatus=404, description='Invalid URI'}";
 
   /**
    * Message that describes the error. This message can be used in UI.

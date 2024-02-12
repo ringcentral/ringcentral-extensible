@@ -9,7 +9,7 @@ interface CallLogRecordMessage {
   id?: string;
 
   /**
-   * Type of a message
+   * Type of message
    * Required
    */
   type?: string;

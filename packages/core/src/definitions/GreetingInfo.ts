@@ -3,7 +3,7 @@ import type CustomGreetingInfoRequest from './CustomGreetingInfoRequest';
 
 interface GreetingInfo {
   /**
-   * Type of a greeting, specifying the case when the greeting is played.
+   * Type of greeting, specifying the case when the greeting is played.
    */
   type?:
     | 'Introductory'

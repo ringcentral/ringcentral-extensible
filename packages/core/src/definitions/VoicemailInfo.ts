@@ -5,7 +5,7 @@ import type RecipientInfo from './RecipientInfo';
  */
 interface VoicemailInfo {
   /**
-   * If 'True' then voicemails are allowed to be received
+   * If `true` then voicemails are allowed to be received
    */
   enabled?: boolean;
 

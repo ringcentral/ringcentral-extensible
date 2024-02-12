@@ -14,12 +14,12 @@ interface DeviceInfoRequest {
   appExternalId?: string;
 
   /**
-   * Computer name (for SoftPhone only).
+   * Computer name (for devices of `SoftPhone` type only)
    */
   computerName?: string;
 
   /**
-   * Endpoint/device instance identifier for Softphone and mobile applications.
+   * Endpoint/device instance identifier for Softphone and mobile applications
    */
   serial?: string;
 }

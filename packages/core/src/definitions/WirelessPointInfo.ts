@@ -1,5 +1,5 @@
 import type EmergencyAddressAutoUpdateSiteInfo from './EmergencyAddressAutoUpdateSiteInfo';
-import type WirelessPointInfoEmergencyAddress from './WirelessPointInfoEmergencyAddress';
+import type EmergencyAddressInfo from './EmergencyAddressInfo';
 import type ERLLocationInfo from './ERLLocationInfo';
 
 interface WirelessPointInfo {
@@ -31,13 +31,9 @@ interface WirelessPointInfo {
   site?: EmergencyAddressAutoUpdateSiteInfo;
 
   /**
-   * Emergency address information (or information assigned to the
-   *  switch or wireless point - in case of using them). Only one of a pair
-   *  `emergencyAddress` or `emergencyLocationId` should be specified,
-   *  otherwise an error is returned
    * Required
    */
-  emergencyAddress?: WirelessPointInfoEmergencyAddress;
+  emergencyAddress?: EmergencyAddressInfo;
 
   /**
    */

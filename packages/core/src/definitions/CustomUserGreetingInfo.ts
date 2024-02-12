@@ -13,7 +13,7 @@ interface CustomUserGreetingInfo {
   id?: string;
 
   /**
-   * Type of a custom user greeting
+   * Type of custom user greeting
    */
   type?:
     | 'Introductory'

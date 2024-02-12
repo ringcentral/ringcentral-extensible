@@ -5,7 +5,7 @@ import type ApiError from './ApiError';
  */
 interface ApiErrorResponseModel {
   /**
-   * The array of errors (there will be just one in the most of cases)
+   * The array of errors (there will be just one in the most of the cases)
    * Required
    */
   errors?: ApiError[];

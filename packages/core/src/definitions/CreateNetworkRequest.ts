@@ -1,7 +1,6 @@
 import type AutomaticLocationUpdatesSiteInfo from './AutomaticLocationUpdatesSiteInfo';
 import type PublicIpRangeInfo from './PublicIpRangeInfo';
 import type PrivateIpRangeInfoRequest from './PrivateIpRangeInfoRequest';
-import type ERLLocationInfo from './ERLLocationInfo';
 
 interface CreateNetworkRequest {
   /**
@@ -22,10 +21,6 @@ interface CreateNetworkRequest {
    * Required
    */
   privateIpRanges?: PrivateIpRangeInfoRequest[];
-
-  /**
-   */
-  emergencyLocation?: ERLLocationInfo;
 }
 
 export default CreateNetworkRequest;

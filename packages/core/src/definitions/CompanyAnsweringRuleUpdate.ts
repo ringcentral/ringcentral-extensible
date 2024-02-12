@@ -5,7 +5,7 @@ import type GreetingInfo from './GreetingInfo';
 
 interface CompanyAnsweringRuleUpdate {
   /**
-   * Specifies if a rule is active or inactive. The default value is 'True'
+   * Specifies if a rule is active or inactive. The default value is `true`
    * Default: true
    */
   enabled?: boolean;

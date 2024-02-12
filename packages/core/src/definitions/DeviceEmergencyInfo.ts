@@ -1,4 +1,4 @@
-import type DeviceEmergencyInfoAddress from './DeviceEmergencyInfoAddress';
+import type EmergencyAddressInfo from './EmergencyAddressInfo';
 import type DeviceEmergencyLocationInfo from './DeviceEmergencyLocationInfo';
 
 /**
@@ -6,13 +6,8 @@ import type DeviceEmergencyLocationInfo from './DeviceEmergencyLocationInfo';
  */
 interface DeviceEmergencyInfo {
   /**
-   * Automatically determined emergency address. If `emergencyAddressState`
-   *  value is 'Assigned', then this address is assigned to the current device.
-   *  If `emergencyAddressState` value is 'Unconfirmed', then the specified address
-   *  must be confirmed by the user before being registered as emergency address
-   *  for the current device. In all other cases the value is null
    */
-  address?: DeviceEmergencyInfoAddress;
+  address?: EmergencyAddressInfo;
 
   /**
    */
@@ -37,7 +32,7 @@ interface DeviceEmergencyInfo {
 
   /**
    * Resulting status of the emergency address synchronization. Returned
-   *  if `syncEmergencyAddress` parameter is set to 'True'
+   *  if `syncEmergencyAddress` parameter is set to `true`
    */
   syncStatus?: 'Verified' | 'Updated' | 'Deleted' | 'NotRequired' | 'Unsupported' | 'Failed';
 

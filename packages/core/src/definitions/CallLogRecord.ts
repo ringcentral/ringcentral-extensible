@@ -41,7 +41,7 @@ interface CallLogRecord {
   partyId?: string;
 
   /**
-   * The type of a call transport. 'PSTN' indicates that a call leg was initiated
+   * The type of call transport. 'PSTN' indicates that a call leg was initiated
    *  from the PSTN network provider; 'VoIP' - from an RC phone.
    * Required
    */
@@ -56,7 +56,7 @@ interface CallLogRecord {
   to?: CallLogToParty;
 
   /**
-   * The type of a call
+   * The type of call
    * Required
    */
   type?: 'Voice' | 'Fax';
@@ -74,6 +74,11 @@ interface CallLogRecord {
   /**
    */
   delegate?: CallLogDelegateInfo;
+
+  /**
+   * Call delegation type
+   */
+  delegationType?: 'Coworker' | 'Unknown';
 
   /**
    * The internal action corresponding to the call operation

@@ -3,7 +3,7 @@
  */
 interface ListUserTemplatesParameters {
   /**
-   * Type of a template
+   * Type of template
    */
   type?: 'UserSettings' | 'CallHandling';
 

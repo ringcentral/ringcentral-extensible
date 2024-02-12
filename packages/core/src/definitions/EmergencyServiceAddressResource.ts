@@ -71,7 +71,7 @@ interface EmergencyServiceAddressResource {
 
   /**
    * Resulting status of emergency address synchronization. Returned
-   *  if `syncEmergencyAddress` parameter is set to 'True'
+   *  if `syncEmergencyAddress` parameter is set to `true`
    */
   syncStatus?: 'Verified' | 'Updated' | 'Deleted' | 'NotRequired' | 'Unsupported' | 'Failed';
 

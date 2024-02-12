@@ -24,10 +24,10 @@ interface SipRegistrationDeviceInfo {
   type?: 'HardPhone' | 'SoftPhone' | 'OtherPhone' | 'Paging' | 'WebPhone' | 'Room';
 
   /**
-   * Device identification number (stock keeping unit) in the format
-   *  TP-ID [-AT-AC], where TP is device type (HP for RC HardPhone, DV for all
-   *  other devices including softphone); ID - device model ID; AT -addon type
-   *  ID; AC - addon count (if any). For example 'HP-56-2-2'
+   * Device identification number (SKU, Stock Keeping Unit) in the format
+   *  TP-ID [-AT-AC], where TP is device type (HP for RC desk phones, DV for all
+   *  other devices including soft phones); ID - device model ID; AT - add-on type
+   *  ID; AC - add-on count (if any). For example 'HP-56-2-2'
    */
   sku?: string;
 
@@ -37,7 +37,7 @@ interface SipRegistrationDeviceInfo {
 
   /**
    * Device name. Mandatory if ordering  SoftPhone or OtherPhone.
-   *  Optional for  HardPhone. If not specified for HardPhone, then device  model  name
+   *  Optional for HardPhone. If not specified for HardPhone, then device  model  name
    *  is used as device  name
    */
   name?: string;
@@ -49,7 +49,7 @@ interface SipRegistrationDeviceInfo {
   serial?: string;
 
   /**
-   * Computer name for Softphone devices
+   * Computer name (for devices of `SoftPhone` type only)
    */
   computerName?: string;
 
@@ -92,16 +92,17 @@ interface SipRegistrationDeviceInfo {
   useAsCommonPhone?: boolean;
 
   /**
-   * Pooling type of a deviceHost - device with standalone paid
-   *  phone line which can be linked to Glip/Softphone instanceGuest - device
-   *  with a linked phone lineNone - device without a phone line or with specific
-   *  line (free, BLA, etc.) = ['Host', 'Guest', 'None']
+   * Pooling type of device:
+   *  - `Host` - device with standalone paid
+   *    phone line which can be linked to soft phone client instance
+   *  - `Guest` - device with a linked phone line
+   *  - `None` - device without a phone line or with specific line (free, BLA, etc.)
    */
   linePooling?: 'Host' | 'Guest' | 'None';
 
   /**
-   * Network location status. 'True' if the device is located in
-   *  the configured corporate network (On-Net); 'False' for Off-Net location.
+   * Network location status. `true` if the device is located in
+   *  the configured corporate network (On-Net); `false` for Off-Net location.
    *  Parameter is not returned if `EmergencyAddressAutoUpdate` feature is not
    *  enabled for the account/user, or if device network location is not determined
    */

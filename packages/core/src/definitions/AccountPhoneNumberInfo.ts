@@ -16,7 +16,7 @@ interface AccountPhoneNumberInfo {
   phoneNumber?: string;
 
   /**
-   * Type of a phone number
+   * Type of phone number
    */
   type?: 'VoiceFax' | 'VoiceOnly' | 'FaxOnly';
 
@@ -28,7 +28,7 @@ interface AccountPhoneNumberInfo {
   tollType?: 'Toll' | 'TollFree';
 
   /**
-   * Usage type of a phone number
+   * Usage type of phone number
    * Required
    */
   usageType?:
@@ -50,7 +50,7 @@ interface AccountPhoneNumberInfo {
     | 'ELIN';
 
   /**
-   * Status of a phone number. If the value is 'Normal', the phone number is ready to be used. Otherwise it is an external number not yet ported to RingCentral
+   * Status of a phone number. If the value is 'Normal', the phone number is ready to be used. Otherwise, it is an external number not yet ported to RingCentral
    * Required
    */
   status?: 'Normal' | 'Pending' | 'PortedIn' | 'Temporary' | 'Unknown';

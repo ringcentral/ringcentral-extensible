@@ -21,7 +21,7 @@ interface PhoneNumberResource {
   label?: string;
 
   /**
-   * Usage type of a phone number
+   * Usage type of phone number
    * Example: DirectNumber
    */
   usageType?: 'MobileNumber' | 'ContactNumber' | 'DirectNumber' | 'ForwardedNumber';

@@ -25,14 +25,14 @@ interface AddressBookBulkUploadResponse {
   status?: 'Accepted' | 'InProgress' | 'Completed' | 'Failed';
 
   /**
-   * Datetime of a task creation
+   * Date/time of a task creation
    * Required
    * Format: date-time
    */
   creationTime?: string;
 
   /**
-   * Datetime of a task latest update
+   * Date/time of a task latest update
    * Required
    * Format: date-time
    */

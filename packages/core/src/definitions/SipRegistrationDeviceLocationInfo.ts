@@ -13,7 +13,7 @@ interface SipRegistrationDeviceLocationInfo {
   name?: string;
 
   /**
-   * Address format id
+   * Address format ID
    */
   addressFormatId?: string;
 }

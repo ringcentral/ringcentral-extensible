@@ -47,7 +47,7 @@ interface GetMessageInfoResponse {
   conversation?: ConversationInfo;
 
   /**
-   * Message creation datetime in ISO 8601 format including timezone,
+   * Message creation date/time in ISO 8601 format including timezone,
    *  for example 2016-03-10T18:07:52.534Z
    * Format: date-time
    */
@@ -83,7 +83,7 @@ interface GetMessageInfoResponse {
   from?: MessageStoreCallerInfoResponseFrom;
 
   /**
-   * The datetime when the message was modified on server in ISO
+   * The date/time when the message was modified on server in ISO
    *  8601 format including timezone, for example 2016-03-10T18:07:52.534Z
    * Format: date-time
    */
@@ -100,7 +100,7 @@ interface GetMessageInfoResponse {
   messageStatus?: 'Queued' | 'Sent' | 'Delivered' | 'DeliveryFailed' | 'SendingFailed' | 'Received';
 
   /**
-   * Pager only. 'True' if at least one of the message recipients is
+   * Pager only. `true` if at least one of the message recipients is
    *  'Department' extension
    */
   pgToDepartment?: boolean;
@@ -116,7 +116,7 @@ interface GetMessageInfoResponse {
   readStatus?: 'Read' | 'Unread';
 
   /**
-   * SMS only. Datetime when outbound SMS was delivered to recipient's
+   * SMS only. Date/time when outbound SMS was delivered to recipient's
    *  handset in ISO 8601 format including timezone, for example
    *  2016-03-10T18:07:52.534Z. It is filled only if a carrier sends a delivery
    *  receipt to RingCentral

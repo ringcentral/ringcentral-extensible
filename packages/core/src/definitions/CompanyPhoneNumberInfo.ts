@@ -25,7 +25,7 @@ interface CompanyPhoneNumberInfo {
   extension?: ExtensionInfo;
 
   /**
-   * Custom user name of a phone number, if any
+   * Custom user-defined name of a phone number, if any
    */
   label?: string;
 
@@ -58,8 +58,8 @@ interface CompanyPhoneNumberInfo {
   type?: 'VoiceFax' | 'FaxOnly' | 'VoiceOnly';
 
   /**
-   * Usage type of a phone number. Usage type of a phone number.
-   *  Numbers of 'NumberPool' type wont't be returned for phone number list
+   * Usage type of phone number. Usage type of phone number.
+   *  Numbers of 'NumberPool' type are not returned in phone number list
    *  requests
    */
   usageType?:
@@ -87,7 +87,7 @@ interface CompanyPhoneNumberInfo {
   contactCenterProvider?: ContactCenterProvider;
 
   /**
-   * Vanity pattern for this number. Returned only when vanity search option is requested. Vanity pattern corresponds to request parameters nxx plus line or numberPattern
+   * Vanity pattern for this number. Returned only when vanity search option is requested. Vanity pattern corresponds to request parameters `nxx` plus `line` or `numberPattern`
    */
   vanityPattern?: string;
 

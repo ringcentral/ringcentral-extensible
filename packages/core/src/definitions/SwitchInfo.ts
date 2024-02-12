@@ -1,5 +1,5 @@
 import type SwitchSiteInfo from './SwitchSiteInfo';
-import type SwitchInfoEmergencyAddress from './SwitchInfoEmergencyAddress';
+import type EmergencyAddressInfo from './EmergencyAddressInfo';
 import type EmergencyLocationInfo from './EmergencyLocationInfo';
 
 interface SwitchInfo {
@@ -34,12 +34,8 @@ interface SwitchInfo {
   site?: SwitchSiteInfo;
 
   /**
-   * Emergency address information (or information assigned to the
-   *  switch or wireless point - in case of using them). Only one of a pair
-   *  `emergencyAddress` or `emergencyLocationId` should be specified,
-   *  otherwise an error is returned
    */
-  emergencyAddress?: SwitchInfoEmergencyAddress;
+  emergencyAddress?: EmergencyAddressInfo;
 
   /**
    */

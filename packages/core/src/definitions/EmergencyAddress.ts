@@ -1,11 +1,11 @@
 interface EmergencyAddress {
   /**
-   * If set to 'True' then specifying emergency address is required
+   * If set to `true` then specifying emergency address is required
    */
   required?: boolean;
 
   /**
-   * If set to 'True' then only local emergency address can be specified
+   * If set to `true` then only local emergency address can be specified
    */
   localOnly?: boolean;
 

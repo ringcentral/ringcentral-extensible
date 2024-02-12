@@ -2,12 +2,12 @@ import type AssignPhoneNumberRequestExtension from './AssignPhoneNumberRequestEx
 
 interface AssignPhoneNumberRequest {
   /**
-   * Type of a phone number
+   * Type of phone number
    */
   type?: 'VoiceFax' | 'VoiceOnly' | 'FaxOnly';
 
   /**
-   * Target usage type of a phone number (only listed values are supported)
+   * Target usage type of phone number (only listed values are supported)
    * Required
    */
   usageType?: 'MainCompanyNumber' | 'CompanyNumber' | 'DirectNumber' | 'PhoneLine';

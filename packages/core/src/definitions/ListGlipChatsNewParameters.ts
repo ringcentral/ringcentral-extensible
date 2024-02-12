@@ -3,7 +3,7 @@
  */
 interface ListGlipChatsNewParameters {
   /**
-   * Type of chats to be fetched. By default all type of chats will be fetched
+   * Type of chats to be fetched. By default, all type of chats will be fetched
    */
   type?: ('Personal' | 'Direct' | 'Group' | 'Team' | 'Everyone')[];
 

@@ -1,5 +1,5 @@
 import type ContactInfo from './ContactInfo';
-import type ExtensionCreationResponseCostCenter from './ExtensionCreationResponseCostCenter';
+import type CostCenterInfo from './CostCenterInfo';
 import type CustomFieldInfo from './CustomFieldInfo';
 import type ExtensionPermissions from './ExtensionPermissions';
 import type ProfileImageInfo from './ProfileImageInfo';
@@ -28,9 +28,8 @@ interface ExtensionCreationResponse {
   contact?: ContactInfo;
 
   /**
-   * Cost center information
    */
-  costCenter?: ExtensionCreationResponseCostCenter;
+  costCenter?: CostCenterInfo;
 
   /**
    */
@@ -52,7 +51,7 @@ interface ExtensionCreationResponse {
    *  created by partner. The RingCentral supports the mapping of accounts and
    *  stores the corresponding account ID/extension ID for each partner ID of
    *  a client application. In request URIs partner IDs are accepted instead
-   *  of regular RingCentral native IDs as path parameters using pid = XXX clause.
+   *  of regular RingCentral native IDs as path parameters using `pid=XXX` clause.
    *  Though in response URIs contain the corresponding account IDs and extension
    *  IDs. In all request and response bodies these values are reflected via
    *  partnerId attributes of account and extension
@@ -95,7 +94,7 @@ interface ExtensionCreationResponse {
 
   /**
    * Extension current state. If 'Unassigned' is specified, then
-   *  extensions without ‘extensionNumber’ are returned. If not specified, then
+   *  extensions without `extensionNumber` are returned. If not specified, then
    *  all extensions are returned
    */
   status?: 'Enabled' | 'Disabled' | 'Frozen' | 'NotActivated' | 'Unassigned';

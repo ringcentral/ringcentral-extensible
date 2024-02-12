@@ -88,7 +88,7 @@ interface ExtensionUpdateRequest {
     | 'GroupCallPickup';
 
   /**
-   * Extension sub-type, if applicable. For any unsupported sub-types
+   * Extension subtype, if applicable. For any unsupported subtypes
    *  the 'Unknown' value will be returned
    */
   subType?: 'VideoPro' | 'VideoProPlus' | 'DigitalSignageOnlyRooms' | 'Unknown';

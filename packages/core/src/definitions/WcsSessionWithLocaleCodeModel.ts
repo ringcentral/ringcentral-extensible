@@ -25,7 +25,6 @@ interface WcsSessionWithLocaleCodeModel {
 
   /**
    * Localized time zone description.
-   * Required
    * Example: Eastern Time (America/New_York)
    */
   localizedTimeZoneDescription?: string;

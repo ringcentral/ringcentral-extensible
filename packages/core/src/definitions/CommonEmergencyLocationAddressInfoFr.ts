@@ -1,4 +1,4 @@
-interface EmergencyLocationAddressInfoAu {
+interface CommonEmergencyLocationAddressInfoFr {
   /**
    * Country name
    */
@@ -45,7 +45,7 @@ interface EmergencyLocationAddressInfoAu {
   city?: string;
 
   /**
-   * The name of the street (The field is utilised as 'streetName' field for Au addresses)
+   * The name of the street (The field is utilized as 'streetName' field for FR addresses)
    */
   street?: string;
 
@@ -58,11 +58,6 @@ interface EmergencyLocationAddressInfoAu {
    * (Optional) Building name
    */
   buildingName?: string;
-
-  /**
-   * Street type
-   */
-  streetType?: string;
 
   /**
    * Building/street number
@@ -86,4 +81,4 @@ interface EmergencyLocationAddressInfoAu {
   customerName?: string;
 }
 
-export default EmergencyLocationAddressInfoAu;
+export default CommonEmergencyLocationAddressInfoFr;

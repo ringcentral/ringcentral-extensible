@@ -1,10 +1,10 @@
-import type EmergencyLocationResource from './EmergencyLocationResource';
+import type CommonEmergencyLocationResource from './CommonEmergencyLocationResource';
 import type EmergencyLocationsPaging from './EmergencyLocationsPaging';
 
 interface EmergencyLocationsResource {
   /**
    */
-  records?: EmergencyLocationResource[];
+  records?: CommonEmergencyLocationResource[];
 
   /**
    */

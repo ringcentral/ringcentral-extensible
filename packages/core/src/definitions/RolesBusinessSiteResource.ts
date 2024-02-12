@@ -4,6 +4,11 @@ import type ContactAddressInfoResource from './ContactAddressInfoResource';
 
 interface RolesBusinessSiteResource {
   /**
+   * Link to a business site resource
+   */
+  uri?: string;
+
+  /**
    * Required
    */
   id?: string;

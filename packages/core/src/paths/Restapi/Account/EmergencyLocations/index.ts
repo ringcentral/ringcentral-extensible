@@ -1,6 +1,6 @@
 import type DeleteEmergencyLocationParameters from '../../../../definitions/DeleteEmergencyLocationParameters';
 import type ReadEmergencyLocationParameters from '../../../../definitions/ReadEmergencyLocationParameters';
-import type EmergencyLocationResource from '../../../../definitions/EmergencyLocationResource';
+import type CommonEmergencyLocationResource from '../../../../definitions/CommonEmergencyLocationResource';
 import type EmergencyLocationInfoRequest from '../../../../definitions/EmergencyLocationInfoRequest';
 import type EmergencyLocationsResource from '../../../../definitions/EmergencyLocationsResource';
 import type ListEmergencyLocationsParameters from '../../../../definitions/ListEmergencyLocationsParameters';
@@ -49,8 +49,8 @@ class Index {
   public async post(
     emergencyLocationInfoRequest: EmergencyLocationInfoRequest,
     restRequestConfig?: RestRequestConfig,
-  ): Promise<EmergencyLocationResource> {
-    const r = await this.rc.post<EmergencyLocationResource>(
+  ): Promise<CommonEmergencyLocationResource> {
+    const r = await this.rc.post<CommonEmergencyLocationResource>(
       this.path(false),
       emergencyLocationInfoRequest,
       undefined,
@@ -70,11 +70,11 @@ class Index {
   public async get(
     queryParams?: ReadEmergencyLocationParameters,
     restRequestConfig?: RestRequestConfig,
-  ): Promise<EmergencyLocationResource> {
+  ): Promise<CommonEmergencyLocationResource> {
     if (this.locationId === null) {
       throw new Error('locationId must be specified.');
     }
-    const r = await this.rc.get<EmergencyLocationResource>(this.path(), queryParams, restRequestConfig);
+    const r = await this.rc.get<CommonEmergencyLocationResource>(this.path(), queryParams, restRequestConfig);
     return r.data;
   }
 
@@ -89,11 +89,11 @@ class Index {
   public async put(
     emergencyLocationInfoRequest: EmergencyLocationInfoRequest,
     restRequestConfig?: RestRequestConfig,
-  ): Promise<EmergencyLocationResource> {
+  ): Promise<CommonEmergencyLocationResource> {
     if (this.locationId === null) {
       throw new Error('locationId must be specified.');
     }
-    const r = await this.rc.put<EmergencyLocationResource>(
+    const r = await this.rc.put<CommonEmergencyLocationResource>(
       this.path(),
       emergencyLocationInfoRequest,
       undefined,

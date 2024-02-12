@@ -11,6 +11,11 @@ interface SipInfoResponse {
   password?: string;
 
   /**
+   * Supported authorization types and their priority for clients
+   */
+  authorizationTypes?: ('SipDigest' | 'BearerToken')[];
+
+  /**
    * Identifier for SIP authorization
    */
   authorizationId?: string;

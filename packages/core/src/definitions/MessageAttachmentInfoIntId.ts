@@ -12,7 +12,7 @@ interface MessageAttachmentInfoIntId {
   uri?: string;
 
   /**
-   * Type of a message attachment
+   * Type of message attachment
    */
   type?: 'AudioRecording' | 'AudioTranscription' | 'Text' | 'SourceDocument' | 'RenderedDocument' | 'MmsAttachment';
 

@@ -24,7 +24,7 @@ interface AutomaticLocationUpdatesTaskInfo {
   lastModifiedTime?: string;
 
   /**
-   * Type of a task
+   * Type of task
    */
   type?: 'WirelessPointsBulkCreate' | 'WirelessPointsBulkUpdate' | 'SwitchesBulkCreate' | 'SwitchesBulkUpdate';
 

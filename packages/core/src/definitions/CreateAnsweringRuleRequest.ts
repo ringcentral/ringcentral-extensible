@@ -12,7 +12,7 @@ import type GreetingInfo from './GreetingInfo';
 interface CreateAnsweringRuleRequest {
   /**
    * Specifies if the rule is active or inactive. The default value
-   *  is 'True'
+   *  is `true`
    */
   enabled?: boolean;
 

@@ -7,7 +7,7 @@ interface TMConversationInfo {
   id?: string;
 
   /**
-   * Type of a conversation
+   * Type of conversation
    */
   type?: 'Direct' | 'Personal' | 'Group';
 

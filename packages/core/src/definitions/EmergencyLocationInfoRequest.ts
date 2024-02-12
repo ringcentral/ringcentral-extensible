@@ -1,4 +1,4 @@
-import type EmergencyLocationInfoRequestAddress from './EmergencyLocationInfoRequestAddress';
+import type CommonEmergencyLocationAddressInfo from './CommonEmergencyLocationAddressInfo';
 import type ShortSiteInfo from './ShortSiteInfo';
 
 interface EmergencyLocationInfoRequest {
@@ -9,7 +9,7 @@ interface EmergencyLocationInfoRequest {
 
   /**
    */
-  address?: EmergencyLocationInfoRequestAddress;
+  address?: CommonEmergencyLocationAddressInfo;
 
   /**
    * Emergency response location name
@@ -31,7 +31,7 @@ interface EmergencyLocationInfoRequest {
   usageStatus?: 'Active' | 'Inactive';
 
   /**
-   * Address format id
+   * Address format ID
    */
   addressFormatId?: string;
 

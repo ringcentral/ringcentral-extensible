@@ -1,5 +1,5 @@
 import type SwitchSiteInfo from './SwitchSiteInfo';
-import type EmergencyAddressInfoDefault from './EmergencyAddressInfoDefault';
+import type EmergencyAddressInfo from './EmergencyAddressInfo';
 import type EmergencyLocationInfo from './EmergencyLocationInfo';
 
 interface CreateSwitchInfo {
@@ -25,7 +25,7 @@ interface CreateSwitchInfo {
 
   /**
    */
-  emergencyAddress?: EmergencyAddressInfoDefault;
+  emergencyAddress?: EmergencyAddressInfo;
 
   /**
    */

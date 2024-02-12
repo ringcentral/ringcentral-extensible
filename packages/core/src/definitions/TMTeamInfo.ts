@@ -5,7 +5,7 @@ interface TMTeamInfo {
   id?: string;
 
   /**
-   * Type of a chat
+   * Type of chat
    */
   type?: 'Team';
 

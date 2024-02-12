@@ -18,7 +18,7 @@ interface ListAccountPhoneNumbersParameters {
   perPage?: number;
 
   /**
-   * Usage type of a phone number
+   * Usage type of phone number
    */
   usageType?: (
     | 'MainCompanyNumber'
@@ -37,7 +37,7 @@ interface ListAccountPhoneNumbersParameters {
   )[];
 
   /**
-   * Status of a phone number. Multiple values are supported
+   * Status of a phone number
    */
   status?: 'Normal' | 'Pending' | 'PortedIn' | 'Temporary';
 }

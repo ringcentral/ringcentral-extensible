@@ -8,7 +8,7 @@ interface PartyUpdateInfo {
   muted?: boolean;
 
   /**
-   * If 'True' then the party is not connected to a session voice conference, 'False' means the party is connected to other parties in a session
+   * If `true` then the party is not connected to a session voice conference, `false` means the party is connected to other parties in a session
    */
   standAlone?: boolean;
 }

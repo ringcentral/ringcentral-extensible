@@ -1,5 +1,5 @@
 import type ContactInfoCreationRequest from './ContactInfoCreationRequest';
-import type ExtensionCreationRequestCostCenter from './ExtensionCreationRequestCostCenter';
+import type CostCenterInfo from './CostCenterInfo';
 import type CustomFieldInfo from './CustomFieldInfo';
 import type ReferenceInfo from './ReferenceInfo';
 import type RegionalSettings from './RegionalSettings';
@@ -17,23 +17,20 @@ interface ExtensionCreationRequest {
   extensionNumber?: string;
 
   /**
-   * Cost center information. Applicable if Cost Center feature is enabled. The default is root cost center value
    */
-  costCenter?: ExtensionCreationRequestCostCenter;
+  costCenter?: CostCenterInfo;
 
   /**
    */
   customFields?: CustomFieldInfo[];
 
   /**
-   * Password for extension. If not specified, the password
-   *  is auto-generated
+   * Password for extension. If not specified, the password is auto-generated
    */
   password?: string;
 
   /**
-   * List of non-RC internal identifiers assigned to an
-   *  extension
+   * List of non-RC internal identifiers assigned to an extension
    */
   references?: ReferenceInfo[];
 
@@ -93,8 +90,8 @@ interface ExtensionCreationRequest {
   /**
    * Hides extension from showing in company directory. Supported
    *  for extensions of 'User' type only. For unassigned extensions the value
-   *  is set to 'True' by default. For assigned extensions the value is set
-   *  to 'False' by default
+   *  is set to `true` by default. For assigned extensions the value is set
+   *  to `false` by default
    */
   hidden?: boolean;
 }

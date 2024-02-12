@@ -1,4 +1,4 @@
-interface EmergencyLocationResourceAddress {
+interface EmergencyAddressInfo {
   /**
    * Country name
    */
@@ -45,7 +45,7 @@ interface EmergencyLocationResourceAddress {
   city?: string;
 
   /**
-   * The name of the street (The field is utilised as 'streetName' field for FR addresses)
+   * The name of the street (The field is utilized as 'streetName' field for FR addresses)
    */
   street?: string;
 
@@ -84,6 +84,13 @@ interface EmergencyLocationResourceAddress {
    * Building/street number
    */
   buildingNumber?: string;
+
+  /**
+   * Resulting status of emergency address synchronization. Returned
+   *  for 'Get Device Info' request if `syncEmergencyAddress` parameter is set
+   *  to `true`
+   */
+  syncStatus?: 'Verified' | 'Updated' | 'Deleted' | 'NotRequired' | 'Unsupported' | 'Failed';
 }
 
-export default EmergencyLocationResourceAddress;
+export default EmergencyAddressInfo;

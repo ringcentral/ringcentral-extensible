@@ -1,6 +1,6 @@
 /**
  * Reason for the feature unavailability. Returned only if `available`
- * is set to 'False'
+ * is set to `false`
  *
  */
 interface ReasonInfo {
