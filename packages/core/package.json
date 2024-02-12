@@ -19,12 +19,12 @@
   },
   "dependencies": {
     "@types/qs": "^6.9.11",
-    "axios": "^1.6.5",
+    "axios": "^1.6.7",
     "qs": "^6.11.2"
   },
   "devDependencies": {
     "dotenv-override-true": "^6.2.2",
-    "ringcentral-code-generator": "^0.6.8",
+    "ringcentral-code-generator": "^0.6.10",
     "ts-node": "^10.9.2"
   },
   "scripts": {
