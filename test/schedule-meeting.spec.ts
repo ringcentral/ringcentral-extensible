@@ -48,9 +48,7 @@ describe('schedule meeting', () => {
     //   server: process.env.RINGCENTRAL_SERVER_URL!,
     // });
     // await rc2.login({
-    //   username: process.env.RINGCENTRAL_USERNAME2!,
-    //   extension: process.env.RINGCENTRAL_EXTENSION2!,
-    //   password: process.env.RINGCENTRAL_PASSWORD2!,
+    //   jwt: process.env.RINGCENTRAL_JWT_TOKEN2!,
     // });
     // const ext2 = await rc2.restapi().account().extension().get();
     // // schedule a meeting

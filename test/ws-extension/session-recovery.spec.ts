@@ -143,9 +143,7 @@ describe('WebSocket session recovery', () => {
   //     server: process.env.RINGCENTRAL_SERVER_URL!,
   //   });
   //   await rc.login({
-  //     username: process.env.RINGCENTRAL_USERNAME!,
-  //     extension: process.env.RINGCENTRAL_EXTENSION!,
-  //     password: process.env.RINGCENTRAL_PASSWORD!,
+  //     jwt: process.env.RINGCENTRAL_JWT_TOKEN!,
   //   });
   //   const webSocketExtension = new WebSocketExtension({
   //     // debugMode: true,
@@ -183,8 +181,8 @@ describe('WebSocket session recovery', () => {
   //     .extension()
   //     .sms()
   //     .post({
-  //       from: {phoneNumber: process.env.RINGCENTRAL_USERNAME!},
-  //       to: [{phoneNumber: process.env.RINGCENTRAL_USERNAME!}], // send sms to oneself
+  //       from: {phoneNumber: process.env.RINGCENTRAL_SENDER!},
+  //       to: [{phoneNumber: process.env.RINGCENTRAL_SENDER!}], // send sms to oneself
   //       text: 'Hello world',
   //     });
   //   const successful = await waitFor({

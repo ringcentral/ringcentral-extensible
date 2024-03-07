@@ -8,7 +8,7 @@ on:
 
 jobs:
   build:
-    environment: sandbox
+    environment: prod
     runs-on: ubuntu-latest
 
     steps:
@@ -25,5 +25,5 @@ jobs:
         RINGCENTRAL_CLIENT_ID: ${{ secrets.RINGCENTRAL_CLIENT_ID }}
         RINGCENTRAL_CLIENT_SECRET: ${{ secrets.RINGCENTRAL_CLIENT_SECRET }}
         RINGCENTRAL_JWT_TOKEN: ${{ secrets.RINGCENTRAL_JWT_TOKEN }}
-        RINGCENTRAL_USERNAME: ${{ secrets.RINGCENTRAL_USERNAME }}
+        RINGCENTRAL_SENDER: ${{ secrets.RINGCENTRAL_SENDER }}
         RINGCENTRAL_RECEIVER: ${{ secrets.RINGCENTRAL_RECEIVER }}

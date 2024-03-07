@@ -8,17 +8,16 @@ describe('mms', () => {
   test('send mms', async () => {
     const rc = await createRingCentral();
     const createMMSMessage: CreateMMSMessage = {};
-    createMMSMessage.from = { phoneNumber: process.env.RINGCENTRAL_USERNAME! };
+    createMMSMessage.from = { phoneNumber: process.env.RINGCENTRAL_SENDER! };
     createMMSMessage.to = [{ phoneNumber: process.env.RINGCENTRAL_RECEIVER }];
     const attachment: Attachment = {};
     attachment.filename = 'text.png';
     attachment.content = fs.createReadStream(path.join(__dirname, 'test.png'));
     attachment.contentType = 'image/png';
     createMMSMessage.attachments = [attachment];
-    // sandbox doesn't support mms
-    // const messageInfo = await rc.restapi().account().extension().mms().post(createMMSMessage);
-    // expect(messageInfo).not.toBeUndefined();
-    // expect(messageInfo.id).not.toBeUndefined();
+    const messageInfo = await rc.restapi().account().extension().mms().post(createMMSMessage);
+    expect(messageInfo).not.toBeUndefined();
+    expect(messageInfo.id).not.toBeUndefined();
     await rc.revoke();
   });
 });
