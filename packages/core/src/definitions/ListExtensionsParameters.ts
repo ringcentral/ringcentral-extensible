@@ -58,6 +58,7 @@ interface ListExtensionsParameters {
     | 'Bot'
     | 'ProxyAdmin'
     | 'DelegatedLinesGroup'
+    | 'Site'
   )[];
 }
 

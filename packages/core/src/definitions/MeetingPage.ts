@@ -6,11 +6,13 @@ import type Paging from './Paging';
  */
 interface MeetingPage {
   /**
-   * meetings array
+   * Meetings array
+   * Required
    */
   meetings?: Meeting[];
 
   /**
+   * Required
    */
   paging?: Paging;
 }

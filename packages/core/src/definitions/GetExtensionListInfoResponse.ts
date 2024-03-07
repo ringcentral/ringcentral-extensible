@@ -80,7 +80,7 @@ interface GetExtensionListInfoResponse {
    * Extension subtype, if applicable. For any unsupported subtypes the
    *  `Unknown` value will be returned
    */
-  subType?: 'VideoPro' | 'VideoProPlus' | 'DigitalSignage' | 'Unknown';
+  subType?: 'VideoPro' | 'VideoProPlus' | 'DigitalSignage' | 'Unknown' | 'Emergency';
 
   /**
    */

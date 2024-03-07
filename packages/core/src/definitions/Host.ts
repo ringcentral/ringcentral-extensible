@@ -3,17 +3,17 @@
  */
 interface Host {
   /**
-   * account id
+   * Account id
    */
   accountId?: string;
 
   /**
-   * extension id
+   * Extension id
    */
   extensionId?: string;
 
   /**
-   * displayName
+   * Display name
    */
   displayName?: string;
 }

@@ -68,7 +68,7 @@ interface UserPhoneNumberInfo {
   /**
    * Extension subtype, if applicable. For any unsupported subtypes the 'Unknown' value will be returned
    */
-  subType?: 'VideoPro' | 'VideoProPlus' | 'DigitalSignage' | 'Unknown';
+  subType?: 'VideoPro' | 'VideoProPlus' | 'DigitalSignage' | 'Unknown' | 'Emergency';
 
   /**
    * Usage type of phone number. Numbers of 'NumberPool' type will not be returned for phone number list requests

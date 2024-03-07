@@ -7,6 +7,7 @@ import OverflowSettings from './OverflowSettings';
 import AddressBookSync from './AddressBookSync';
 import ForwardingNumber from './ForwardingNumber';
 import UnifiedPresence from './UnifiedPresence';
+import AssignableRoles from './AssignableRoles';
 import CallerBlocking from './CallerBlocking';
 import BusinessHours from './BusinessHours';
 import AnsweringRule from './AnsweringRule';
@@ -245,6 +246,10 @@ class Index {
 
   public callerBlocking(): CallerBlocking {
     return new CallerBlocking(this);
+  }
+
+  public assignableRoles(): AssignableRoles {
+    return new AssignableRoles(this);
   }
 
   public unifiedPresence(): UnifiedPresence {

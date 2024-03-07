@@ -7,51 +7,51 @@ import type Recording from './Recording';
  */
 interface Meeting {
   /**
-   * call id
+   * Call id
    * Required
    */
   id?: string;
 
   /**
-   * bridge id
+   * Bridge id
    * Required
    */
   bridgeId?: string;
 
   /**
-   * short bridge id
+   * Short bridge id
    * Required
    */
   shortId?: string;
 
   /**
-   * start time ISO 8601
+   * Start time ISO 8601
    * Required
    * Format: date-time
    */
   startTime?: string;
 
   /**
-   * duration second
+   * Duration second
    * Format: int32
    * Example: 36
    */
   duration?: number;
 
   /**
-   * meetings name
+   * Meetings name
    * Required
    */
   displayName?: string;
 
   /**
-   * meeting type
+   * Meeting type
    * Required
    */
   type?: 'Meeting' | 'Call';
 
   /**
-   * meeting status
+   * Meeting status
    * Required
    */
   status?: 'InProgress' | 'Done';
@@ -62,23 +62,40 @@ interface Meeting {
   hostInfo?: Host;
 
   /**
-   * chat id
+   * Describe access rights which has participants to meeting
+   * Required
    */
-  chatId?: string;
+  rights?: ('delete' | 'download' | 'share')[];
 
   /**
-   * participants list
+   * During meeting AI team analyze code and after meeting finished generates text summary about this meeting
+   */
+  longSummary?: string;
+
+  /**
+   * During meeting AI team analyze code and after meeting finished generates text summary about this meeting
+   */
+  shortSummary?: string;
+
+  /**
+   * During meeting AI team analyze code and after meeting finished generates key words used in meeting
+   */
+  keywords?: string[];
+
+  /**
+   * List of the participants in the meeting
    * Required
    */
   participants?: Participant[];
 
   /**
-   * recording information
+   * Recording information
+   * Required
    */
   recordings?: Recording[];
 
   /**
-   * chat location
+   * Chat location
    */
   chatUrl?: string;
 }

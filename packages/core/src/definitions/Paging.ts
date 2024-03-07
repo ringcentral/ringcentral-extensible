@@ -4,6 +4,7 @@
 interface Paging {
   /**
    * Current offset token
+   * Required
    */
   currentPageToken?: string;
 

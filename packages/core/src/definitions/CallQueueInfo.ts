@@ -19,6 +19,16 @@ interface CallQueueInfo {
    * Name of a call queue
    */
   name?: string;
+
+  /**
+   * Call queue status
+   */
+  status?: 'Enabled' | 'Disabled' | 'NotActivated';
+
+  /**
+   * Indicates whether it is an emergency call queue extension or not
+   */
+  subType?: 'Emergency';
 }
 
 export default CallQueueInfo;

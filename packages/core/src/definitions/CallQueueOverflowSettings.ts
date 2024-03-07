@@ -1,4 +1,4 @@
-import type CallQueueOverflowAgent from './CallQueueOverflowAgent';
+import type CallQueueInfo from './CallQueueInfo';
 
 interface CallQueueOverflowSettings {
   /**
@@ -8,7 +8,7 @@ interface CallQueueOverflowSettings {
 
   /**
    */
-  items?: CallQueueOverflowAgent[];
+  items?: CallQueueInfo[];
 }
 
 export default CallQueueOverflowSettings;

@@ -91,7 +91,7 @@ interface ExtensionUpdateRequest {
    * Extension subtype, if applicable. For any unsupported subtypes
    *  the 'Unknown' value will be returned
    */
-  subType?: 'VideoPro' | 'VideoProPlus' | 'DigitalSignageOnlyRooms' | 'Unknown';
+  subType?: 'VideoPro' | 'VideoProPlus' | 'DigitalSignageOnlyRooms' | 'Unknown' | 'Emergency';
 
   /**
    * List of non-RC internal identifiers assigned to an extension

@@ -57,6 +57,29 @@ interface TokenInfo {
    * OIDC ID token (if OpenId Connect flow was activated during authorization)
    */
   id_token?: string;
+
+  /**
+   * OAuth session ID
+   */
+  session_id?: string;
+
+  /**
+   * Absolute value of session expiration time as ISO datetime
+   * Format: date-time
+   */
+  session_expiration_time?: string;
+
+  /**
+   * Remaining time (in seconds) until session expiration due to absolute timeout
+   * Format: int32
+   */
+  session_expires_in?: number;
+
+  /**
+   * Nominal session idle timeout in seconds
+   * Format: int32
+   */
+  session_idle_timeout?: number;
 }
 
 export default TokenInfo;

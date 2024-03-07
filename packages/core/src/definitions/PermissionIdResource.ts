@@ -1,3 +1,5 @@
+import type PermissionsCapabilities from './PermissionsCapabilities';
+
 interface PermissionIdResource {
   /**
    * Format: uri
@@ -22,6 +24,10 @@ interface PermissionIdResource {
    * Specifies if the permission can be assigned by the account administrator
    */
   assignable?: boolean;
+
+  /**
+   */
+  permissionsCapabilities?: PermissionsCapabilities;
 }
 
 export default PermissionIdResource;

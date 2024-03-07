@@ -1,4 +1,4 @@
-import type StatusInfo from './StatusInfo';
+import type AccountStatusInfo from './AccountStatusInfo';
 import type PostalAddress from './PostalAddress';
 import type ServiceInfoV2 from './ServiceInfoV2';
 import type SystemUserContactInfo from './SystemUserContactInfo';
@@ -33,7 +33,7 @@ interface AccountInfo {
 
   /**
    */
-  statusInfo?: StatusInfo;
+  statusInfo?: AccountStatusInfo;
 
   /**
    * Company name

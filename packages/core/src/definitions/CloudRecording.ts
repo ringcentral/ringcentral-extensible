@@ -42,10 +42,21 @@ interface CloudRecording {
   hostInfo?: Host;
 
   /**
-   * Link to the recording file
+   * Link to the recording file. Not used anymore by Web team
    * Required
    */
-  downloadLink?: string;
+  mediaLink?: string;
+
+  /**
+   * Encrypted link to the recording file
+   * Required
+   */
+  url?: string;
+
+  /**
+   * Date after which recording will be deleted
+   */
+  expiresIn?: string;
 }
 
 export default CloudRecording;

@@ -1,5 +1,4 @@
 import type DelegatorsListResult from '../../../../../../definitions/DelegatorsListResult';
-import type RcvListDelegatorsParameters from '../../../../../../definitions/RcvListDelegatorsParameters';
 import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../types';
 
 class Index {
@@ -20,11 +19,8 @@ class Index {
    * Rate Limit Group: Medium
    * App Permission: Video
    */
-  public async get(
-    queryParams?: RcvListDelegatorsParameters,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<DelegatorsListResult> {
-    const r = await this.rc.get<DelegatorsListResult>(this.path(), queryParams, restRequestConfig);
+  public async get(restRequestConfig?: RestRequestConfig): Promise<DelegatorsListResult> {
+    const r = await this.rc.get<DelegatorsListResult>(this.path(), undefined, restRequestConfig);
     return r.data;
   }
 }

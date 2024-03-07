@@ -14,7 +14,9 @@ class Index {
     return `${this._parent.path()}/recordings`;
   }
   /**
-   * Returns the list of meeting recordings belonging to all account users.
+   * Returns all account recordings.
+   * This endpoint is used in Admin recording service, not regular web
+   *
    * HTTP Method: get
    * Endpoint: /rcvideo/v1/account/{accountId}/recordings
    * Rate Limit Group: Light

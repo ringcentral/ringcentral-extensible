@@ -1,6 +1,7 @@
 import BulkAssign from './BulkAssign';
 import Default from './Default';
 import type DeleteCustomRoleParameters from '../../../../definitions/DeleteCustomRoleParameters';
+import type ReadUserRoleParameters from '../../../../definitions/ReadUserRoleParameters';
 import type RoleResource from '../../../../definitions/RoleResource';
 import type RolesCollectionResource from '../../../../definitions/RolesCollectionResource';
 import type ListUserRolesParameters from '../../../../definitions/ListUserRolesParameters';
@@ -59,11 +60,11 @@ class Index {
    * App Permission: ReadAccounts
    * User Permission: ReadUserRoles
    */
-  public async get(restRequestConfig?: RestRequestConfig): Promise<RoleResource> {
+  public async get(queryParams?: ReadUserRoleParameters, restRequestConfig?: RestRequestConfig): Promise<RoleResource> {
     if (this.roleId === null) {
       throw new Error('roleId must be specified.');
     }
-    const r = await this.rc.get<RoleResource>(this.path(), undefined, restRequestConfig);
+    const r = await this.rc.get<RoleResource>(this.path(), queryParams, restRequestConfig);
     return r.data;
   }
 
@@ -75,11 +76,11 @@ class Index {
    * App Permission: RoleManagement
    * User Permission: EditUserRoles
    */
-  public async put(roleResource: RoleResource, restRequestConfig?: RestRequestConfig): Promise<string> {
+  public async put(roleResource: RoleResource, restRequestConfig?: RestRequestConfig): Promise<RoleResource> {
     if (this.roleId === null) {
       throw new Error('roleId must be specified.');
     }
-    const r = await this.rc.put<string>(this.path(), roleResource, undefined, restRequestConfig);
+    const r = await this.rc.put<RoleResource>(this.path(), roleResource, undefined, restRequestConfig);
     return r.data;
   }
 

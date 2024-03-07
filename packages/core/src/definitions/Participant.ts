@@ -3,32 +3,39 @@
  */
 interface Participant {
   /**
+   * Participant type
+   * Required
+   */
+  type?: string;
+
+  /**
    * id
+   * Required
    */
   id?: string;
 
   /**
-   * account id
+   * Account id
    */
   accountId?: string;
 
   /**
-   * extension id
+   * Extension id
    */
   extensionId?: string;
 
   /**
-   * displayName
+   * Display name
    */
   displayName?: string;
 
   /**
-   * caller id
+   * Caller id
    */
   callerId?: string;
 
   /**
-   * pass-thru parameter in join url
+   * Pass-thru parameter in join url
    */
   correlationId?: string;
 }

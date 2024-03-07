@@ -5,7 +5,7 @@ interface SipInfoResponse {
   username?: string;
 
   /**
-   * User password
+   * User password. Not returned if SipDigest is not enabled
    * Format: password
    */
   password?: string;

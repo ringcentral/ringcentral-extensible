@@ -27,6 +27,12 @@ interface ListStandardUserRoleParameters {
    * Default: 100
    */
   perPage?: number;
+
+  /**
+   * Specifies whether to return advanced permissions capabilities within `permissionsCapabilities` resource.
+   *  The default value is false.
+   */
+  advancedPermissions?: boolean;
 }
 
 export default ListStandardUserRoleParameters;

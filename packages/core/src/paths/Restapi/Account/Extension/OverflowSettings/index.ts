@@ -15,7 +15,6 @@ class Index {
   }
   /**
    * Returns overflow settings for a call queue specified in path.
-   *
    * HTTP Method: get
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{callQueueId}/overflow-settings
    * Rate Limit Group: Heavy

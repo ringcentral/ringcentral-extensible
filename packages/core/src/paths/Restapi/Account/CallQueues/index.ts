@@ -1,7 +1,6 @@
 import BulkAssign from './BulkAssign';
 import Presence from './Presence';
 import Members from './Members';
-import type CallQueueUpdateDetails from '../../../../definitions/CallQueueUpdateDetails';
 import type CallQueueDetails from '../../../../definitions/CallQueueDetails';
 import type CallQueues from '../../../../definitions/CallQueues';
 import type ListCallQueuesParameters from '../../../../definitions/ListCallQueuesParameters';
@@ -25,7 +24,6 @@ class Index {
   }
   /**
    * Returns a call queue list.
-   *
    * HTTP Method: get
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/call-queues
    * Rate Limit Group: Medium
@@ -42,7 +40,6 @@ class Index {
 
   /**
    * Returns basic information on a call queue group extension.
-   *
    * HTTP Method: get
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/call-queues/{groupId}
    * Rate Limit Group: Light
@@ -67,13 +64,13 @@ class Index {
    * User Permission: EditUserInfo
    */
   public async put(
-    callQueueUpdateDetails: CallQueueUpdateDetails,
+    callQueueDetails: CallQueueDetails,
     restRequestConfig?: RestRequestConfig,
   ): Promise<CallQueueDetails> {
     if (this.groupId === null) {
       throw new Error('groupId must be specified.');
     }
-    const r = await this.rc.put<CallQueueDetails>(this.path(), callQueueUpdateDetails, undefined, restRequestConfig);
+    const r = await this.rc.put<CallQueueDetails>(this.path(), callQueueDetails, undefined, restRequestConfig);
     return r.data;
   }
 
