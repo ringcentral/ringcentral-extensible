@@ -29,7 +29,7 @@ export default class Rest {
   public httpClient: AxiosInstance;
 
   public constructor(options: RestOptions) {
-    this.server = options.server ?? Rest.sandboxServer;
+    this.server = options.server ?? Rest.productionServer;
     this.clientId = options.clientId ?? '';
     this.clientSecret = options.clientSecret;
     this.token = options.token ?? undefined;
