@@ -50,6 +50,10 @@ interface AccountPhoneNumberInfo {
     | 'ELIN';
 
   /**
+   */
+  byocNumber?: boolean;
+
+  /**
    * Status of a phone number. If the value is 'Normal', the phone number is ready to be used. Otherwise, it is an external number not yet ported to RingCentral
    * Required
    */

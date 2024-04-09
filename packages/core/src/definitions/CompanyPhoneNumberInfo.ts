@@ -38,7 +38,13 @@ interface CompanyPhoneNumberInfo {
    * Payment type. 'External' is returned for forwarded numbers
    *  which are not terminated in the RingCentral phone system
    */
-  paymentType?: 'External' | 'TollFree' | 'Local' | 'BusinessMobileNumberProvider' | 'ExternalNumberProvider';
+  paymentType?:
+    | 'External'
+    | 'TollFree'
+    | 'Local'
+    | 'BusinessMobileNumberProvider'
+    | 'ExternalNumberProvider'
+    | 'ExternalNumberProviderTollFree';
 
   /**
    * Phone number

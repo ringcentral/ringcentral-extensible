@@ -87,21 +87,22 @@ interface TMMessageAttachmentInfo {
   recurrence?: 'None' | 'Day' | 'Weekday' | 'Week' | 'Month' | 'Year';
 
   /**
-   * Condition of ending
+   * Condition of ending an event
    */
-  endingCondition?: string;
+  endingCondition?: 'None' | 'Count' | 'Date';
 
   /**
-   * Count of iterations. For periodic events only
+   * Count of event iterations. For periodic events only. Value range is 1 - 10.
+   *  Must be specified if `endingCondition` is `Count`
    * Format: int32
    */
   endingAfter?: number;
 
   /**
-   * Iterations end datetime for periodic events
-   * Default: None
+   * Iterations ending datetime for periodic events in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format
+   * Format: date-time
    */
-  endingOn?: 'None' | 'Count' | 'Date';
+  endingOn?: string;
 
   /**
    * Color of Event title, including its presentation in Calendar; or the color of the side border of an interactive message of a Card

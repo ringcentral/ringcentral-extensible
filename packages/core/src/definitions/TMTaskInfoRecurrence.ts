@@ -18,7 +18,7 @@ interface TMTaskInfoRecurrence {
   endingAfter?: number;
 
   /**
-   * End date of periodic task
+   * End date of a periodic task in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format
    * Format: date-time
    */
   endingOn?: string;

@@ -48,7 +48,7 @@ interface SubscriptionInfo {
    * Subscription status
    * Required
    */
-  status?: 'Active' | 'Suspended' | 'Blacklisted';
+  status?: 'Active' | 'Blacklisted';
 
   /**
    * Subscription creation time in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)

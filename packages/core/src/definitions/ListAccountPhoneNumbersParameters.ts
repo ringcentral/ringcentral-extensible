@@ -37,6 +37,18 @@ interface ListAccountPhoneNumbersParameters {
   )[];
 
   /**
+   * Payment type. 'External' is returned for forwarded numbers
+   *  which are not terminated in the RingCentral phone system
+   */
+  paymentType?:
+    | 'External'
+    | 'TollFree'
+    | 'Local'
+    | 'BusinessMobileNumberProvider'
+    | 'ExternalNumberProvider'
+    | 'ExternalNumberProviderTollFree';
+
+  /**
    * Status of a phone number
    */
   status?: 'Normal' | 'Pending' | 'PortedIn' | 'Temporary';

@@ -8,9 +8,9 @@ interface SocMsgListIdentitiesParameters {
   sourceId?: string;
 
   /**
-   * Filter based on the specified identityGroupId.
+   * Filter based on the specified identityGroupIds (separated by commas).
    */
-  identityGroupId?: string;
+  identityGroupIds?: string[];
 
   /**
    * Filter based on the specified userId.

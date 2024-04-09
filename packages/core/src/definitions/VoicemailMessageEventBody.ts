@@ -8,8 +8,9 @@ import type MessageAttachmentInfo from './MessageAttachmentInfo';
 interface VoicemailMessageEventBody {
   /**
    * Internal identifier of a message
+   * Format: int64
    */
-  id?: string;
+  id?: number;
 
   /**
    * Message receiver(s) information
@@ -85,14 +86,17 @@ interface VoicemailMessageEventBody {
   messageStatus?: 'Queued' | 'Sent' | 'Delivered' | 'DeliveryFailed' | 'SendingFailed' | 'Received';
 
   /**
-   * Internal identifier of a conversation this message belongs to
+   * Status of a voicemail to text transcription. Specifies if a voicemail message transcription is already completed or not
+   *  If 'VoicemailToText' feature is not activated for account, the 'NotAvailable' value is returned
    */
-  conversationId?: string;
-
-  /**
-   * Specifies if a voicemail message transcription is already completed or not
-   */
-  vmTranscriptionStatus?: string;
+  vmTranscriptionStatus?:
+    | 'NotAvailable'
+    | 'InProgress'
+    | 'TimedOut'
+    | 'Completed'
+    | 'CompletedPartially'
+    | 'Failed'
+    | 'Unknown';
 }
 
 export default VoicemailMessageEventBody;

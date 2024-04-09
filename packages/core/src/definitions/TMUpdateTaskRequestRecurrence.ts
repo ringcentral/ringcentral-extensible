@@ -6,7 +6,7 @@ interface TMUpdateTaskRequestRecurrence {
   schedule?: 'None' | 'Daily' | 'Weekdays' | 'Weekly' | 'Monthly' | 'Yearly';
 
   /**
-   * Task ending condition.
+   * Task ending condition
    */
   endingCondition?: 'None' | 'Count' | 'Date';
 
@@ -19,7 +19,7 @@ interface TMUpdateTaskRequestRecurrence {
   endingAfter?: number;
 
   /**
-   * The end date of periodic task in UTC time zone
+   * End date of a periodic task in UTC time zone
    * Format: date-time
    */
   endingOn?: string;

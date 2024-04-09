@@ -13,7 +13,9 @@ class Index {
     return `${this._parent.path()}/call-recordings`;
   }
   /**
-   * Deletes company call recordings by their IDs.
+   * Deletes company call recordings by their IDs. *Please note:* This method deletes the recording file itself,
+   * not the record of it in the call log.
+   *
    * HTTP Method: delete
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/call-recordings
    * Rate Limit Group: Heavy

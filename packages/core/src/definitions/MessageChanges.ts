@@ -15,6 +15,11 @@ interface MessageChanges {
    * Format: int32
    */
   updatedCount?: number;
+
+  /**
+   * Identifiers of the new messages, applicable for all message types
+   */
+  newMessageIds?: number[];
 }
 
 export default MessageChanges;

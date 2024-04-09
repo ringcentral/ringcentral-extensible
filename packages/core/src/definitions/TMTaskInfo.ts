@@ -90,7 +90,7 @@ interface TMTaskInfo {
   description?: string;
 
   /**
-   * Task details.
+   * Task details
    */
   recurrence?: TMTaskInfoRecurrence;
 

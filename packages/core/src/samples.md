@@ -8505,7 +8505,7 @@ await rc.revoke();
 - `analyticsCallsAggregationFetchParameters` is of type [AnalyticsCallsAggregationFetchParameters](./definitions/AnalyticsCallsAggregationFetchParameters.ts)
 - `result` is of type [AggregationResponse](./definitions/AggregationResponse.ts)
 
-[Try it out](https://developer.ringcentral.com/api-reference#Line-Of-Business-Analytics-analyticsCallsAggregationFetch) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Business-Analytics-analyticsCallsAggregationFetch) in API Explorer.
 
 ## analyticsCallsTimelineFetch
 
@@ -8537,7 +8537,7 @@ await rc.revoke();
 - `analyticsCallsTimelineFetchParameters` is of type [AnalyticsCallsTimelineFetchParameters](./definitions/AnalyticsCallsTimelineFetchParameters.ts)
 - `result` is of type [TimelineResponse](./definitions/TimelineResponse.ts)
 
-[Try it out](https://developer.ringcentral.com/api-reference#Line-Of-Business-Analytics-analyticsCallsTimelineFetch) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Business-Analytics-analyticsCallsTimelineFetch) in API Explorer.
 
 ## socMsgAnonymizeIdentity
 

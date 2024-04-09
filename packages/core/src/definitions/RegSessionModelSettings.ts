@@ -25,6 +25,12 @@ interface RegSessionModelSettings {
    * Indicates that work email address is required for registration.
    */
   workEmailRequired?: boolean;
+
+  /**
+   * Indicates that recording will be shown after the webinar and in emails.
+   * Default: true
+   */
+  viewRecording?: boolean;
 }
 
 export default RegSessionModelSettings;

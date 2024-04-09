@@ -67,6 +67,11 @@ interface ListAccountPhoneNumbersV2Parameters {
   extensionStatus?: 'Enabled' | 'Disabled' | 'Frozen' | 'NotActivated' | 'Unassigned';
 
   /**
+   * The parameter reflects whether this number is BYOC or not
+   */
+  byocNumber?: boolean;
+
+  /**
    * Phone number in e.164 format to be searched for.
    *  Parameter value can include wildcards (e.g. "+165012345**")
    *  or be an exact number "+16501234500" - single number is searched in that case.

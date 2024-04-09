@@ -7,7 +7,7 @@ interface ConversationalInsightsUnitValues {
 
   /**
    * Required
-   * Example: RingCentral MVP
+   * Example: RingCentral
    */
   value?: string;
 
