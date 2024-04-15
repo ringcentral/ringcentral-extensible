@@ -74,11 +74,7 @@ export default class Rest {
       ...config,
     };
     // /restapi/oauth/wstoken uses bearer token
-    if (
-      endpoint === '/restapi/oauth/token' ||
-      endpoint === '/restapi/oauth/revoke' ||
-      endpoint === '/restapi/oauth/initiate-otp'
-    ) {
+    if (endpoint === '/restapi/oauth/token' || endpoint === '/restapi/oauth/revoke') {
       if (this.clientSecret) {
         // basic token
         newConfig.auth = {
