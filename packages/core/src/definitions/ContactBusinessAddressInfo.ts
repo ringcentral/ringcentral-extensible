@@ -1,32 +1,32 @@
 /**
- * Extension user business address. The default is
+ * User's business address. The default is
  * Company (Auto-Receptionist) settings
  *
  */
 interface ContactBusinessAddressInfo {
   /**
-   * Country name of an extension user company
+   * Country name of a user's company
    */
   country?: string;
 
   /**
-   * State/province name of an extension user company. Mandatory
+   * State/province name of a user's company. Mandatory
    *  for the USA, UK and Canada
    */
   state?: string;
 
   /**
-   * City name of an extension user company
+   * City name of a user's company
    */
   city?: string;
 
   /**
-   * Street address of an extension user company
+   * Street address of a user's company
    */
   street?: string;
 
   /**
-   * Zip code of an extension user company
+   * Zip code of a user's company
    */
   zip?: string;
 }

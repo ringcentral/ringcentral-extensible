@@ -1,7 +1,8 @@
 import type DeleteEmergencyLocationParameters from '../../../../definitions/DeleteEmergencyLocationParameters';
-import type ReadEmergencyLocationParameters from '../../../../definitions/ReadEmergencyLocationParameters';
 import type CommonEmergencyLocationResource from '../../../../definitions/CommonEmergencyLocationResource';
-import type EmergencyLocationInfoRequest from '../../../../definitions/EmergencyLocationInfoRequest';
+import type ReadEmergencyLocationParameters from '../../../../definitions/ReadEmergencyLocationParameters';
+import type EmergencyLocationResponseResource from '../../../../definitions/EmergencyLocationResponseResource';
+import type EmergencyLocationRequestResource from '../../../../definitions/EmergencyLocationRequestResource';
 import type EmergencyLocationsResource from '../../../../definitions/EmergencyLocationsResource';
 import type ListEmergencyLocationsParameters from '../../../../definitions/ListEmergencyLocationsParameters';
 import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
@@ -47,12 +48,12 @@ class Index {
    * User Permission: ConfigureEmergencyMaps
    */
   public async post(
-    emergencyLocationInfoRequest: EmergencyLocationInfoRequest,
+    emergencyLocationRequestResource: EmergencyLocationRequestResource,
     restRequestConfig?: RestRequestConfig,
-  ): Promise<CommonEmergencyLocationResource> {
-    const r = await this.rc.post<CommonEmergencyLocationResource>(
+  ): Promise<EmergencyLocationResponseResource> {
+    const r = await this.rc.post<EmergencyLocationResponseResource>(
       this.path(false),
-      emergencyLocationInfoRequest,
+      emergencyLocationRequestResource,
       undefined,
       restRequestConfig,
     );
@@ -87,15 +88,15 @@ class Index {
    * User Permission: ConfigureEmergencyMaps
    */
   public async put(
-    emergencyLocationInfoRequest: EmergencyLocationInfoRequest,
+    emergencyLocationRequestResource: EmergencyLocationRequestResource,
     restRequestConfig?: RestRequestConfig,
-  ): Promise<CommonEmergencyLocationResource> {
+  ): Promise<EmergencyLocationResponseResource> {
     if (this.locationId === null) {
       throw new Error('locationId must be specified.');
     }
-    const r = await this.rc.put<CommonEmergencyLocationResource>(
+    const r = await this.rc.put<EmergencyLocationResponseResource>(
       this.path(),
-      emergencyLocationInfoRequest,
+      emergencyLocationRequestResource,
       undefined,
       restRequestConfig,
     );

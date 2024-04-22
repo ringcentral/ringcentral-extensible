@@ -3521,30 +3521,6 @@ await rc.revoke();
 
 [Try it out](https://developer.ringcentral.com/api-reference#Identities-socMsgGetIdentity) in API Explorer.
 
-## socMsgImportIdentity
-
-Import Identity
-
-| Name             | Value                                       |
-| ---------------- | ------------------------------------------- |
-| HTTP Method      | `POST`                                      |
-| Endpoint         | `/cx/social-messaging/v1/identities/import` |
-| Rate Limit Group | `Light`                                     |
-| App Permission   | `SocialMessaging`                           |
-| User Permission  | `N/A`                                       |
-
-```ts
-const rc = new RingCentral({ clientId, clientSecret, serverURL });
-await rc.authorize({ jwt });
-var result = await rc.cx().socialMessaging().v1().identities().import().post(importIdentityRequest);
-await rc.revoke();
-```
-
-- `importIdentityRequest` is of type [ImportIdentityRequest](./definitions/ImportIdentityRequest.ts)
-- `result` is an empty string
-
-[Try it out](https://developer.ringcentral.com/api-reference#Identities-socMsgImportIdentity) in API Explorer.
-
 ## getExtensionRecordings
 
 List User Recordings
@@ -4003,7 +3979,7 @@ await rc.revoke();
 
 ## readA2PSMSOptOuts
 
-Get Opted Out Numbers
+List Opted Out Numbers
 
 | Name             | Value                                                        |
 | ---------------- | ------------------------------------------------------------ |
@@ -4676,6 +4652,31 @@ await rc.revoke();
 
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Recording-Settings-updateCallRecordingSettings) in API Explorer.
 
+## listCallRecordingExtensions
+
+Get Call Recording Extension List
+
+| Name             | Value                                                                 |
+| ---------------- | --------------------------------------------------------------------- |
+| HTTP Method      | `GET`                                                                 |
+| Endpoint         | `/restapi/{apiVersion}/account/{accountId}/call-recording/extensions` |
+| Rate Limit Group | `Medium`                                                              |
+| App Permission   | `ReadAccounts`                                                        |
+| User Permission  | `ReadCompanyInfo`                                                     |
+
+```ts
+const rc = new RingCentral({ clientId, clientSecret, serverURL });
+await rc.authorize({ jwt });
+var result = await rc.restapi(apiVersion).account(accountId).callRecording().extensions().get();
+await rc.revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- `result` is of type [CallRecordingExtensions](./definitions/CallRecordingExtensions.ts)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Call-Recording-Settings-listCallRecordingExtensions) in API Explorer.
+
 ## deleteCompanyCallRecordings
 
 Delete Company Call Recordings
@@ -5015,14 +5016,18 @@ Add Emergency Location
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).emergencyLocations().post(emergencyLocationInfoRequest);
+var result = await rc
+  .restapi(apiVersion)
+  .account(accountId)
+  .emergencyLocations()
+  .post(emergencyLocationRequestResource);
 await rc.revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `emergencyLocationInfoRequest` is of type [EmergencyLocationInfoRequest](./definitions/EmergencyLocationInfoRequest.ts)
-- `result` is of type [CommonEmergencyLocationResource](./definitions/CommonEmergencyLocationResource.ts)
+- `emergencyLocationRequestResource` is of type [EmergencyLocationRequestResource](./definitions/EmergencyLocationRequestResource.ts)
+- `result` is of type [EmergencyLocationResponseResource](./definitions/EmergencyLocationResponseResource.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-createEmergencyLocation) in API Explorer.
 
@@ -5075,14 +5080,14 @@ var result = await rc
   .restapi(apiVersion)
   .account(accountId)
   .emergencyLocations(locationId)
-  .put(emergencyLocationInfoRequest);
+  .put(emergencyLocationRequestResource);
 await rc.revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `emergencyLocationInfoRequest` is of type [EmergencyLocationInfoRequest](./definitions/EmergencyLocationInfoRequest.ts)
-- `result` is of type [CommonEmergencyLocationResource](./definitions/CommonEmergencyLocationResource.ts)
+- `emergencyLocationRequestResource` is of type [EmergencyLocationRequestResource](./definitions/EmergencyLocationRequestResource.ts)
+- `result` is of type [EmergencyLocationResponseResource](./definitions/EmergencyLocationResponseResource.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-updateEmergencyLocation) in API Explorer.
 
@@ -5338,7 +5343,7 @@ List User Assigned Roles
 | Endpoint         | `/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/assigned-role` |
 | Rate Limit Group | `Light`                                                                           |
 | App Permission   | `ReadAccounts`                                                                    |
-| User Permission  | `ReadExtensions`                                                                  |
+| User Permission  | `ReadAssignedRoles`                                                               |
 
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, serverURL });
@@ -5636,6 +5641,64 @@ await rc.revoke();
 - `result` is of type [UserCallQueues](./definitions/UserCallQueues.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Queues-updateUserCallQueues) in API Explorer.
+
+## readCallerBlockingSettings
+
+Get Caller Blocking Settings
+
+| Name             | Value                                                                               |
+| ---------------- | ----------------------------------------------------------------------------------- |
+| HTTP Method      | `GET`                                                                               |
+| Endpoint         | `/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/caller-blocking` |
+| Rate Limit Group | `Light`                                                                             |
+| App Permission   | `ReadAccounts`                                                                      |
+| User Permission  | `ReadBlockedNumbers`                                                                |
+
+```ts
+const rc = new RingCentral({ clientId, clientSecret, serverURL });
+await rc.authorize({ jwt });
+var result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).callerBlocking().get();
+await rc.revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- Parameter `extensionId` is optional with default value `~`
+- `result` is of type [CallerBlockingSettings](./definitions/CallerBlockingSettings.ts)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Call-Blocking-readCallerBlockingSettings) in API Explorer.
+
+## updateCallerBlockingSettings
+
+Update Caller Blocking Settings
+
+| Name             | Value                                                                               |
+| ---------------- | ----------------------------------------------------------------------------------- |
+| HTTP Method      | `PUT`                                                                               |
+| Endpoint         | `/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/caller-blocking` |
+| Rate Limit Group | `Light`                                                                             |
+| App Permission   | `EditExtensions`                                                                    |
+| User Permission  | `EditBlockedNumbers`                                                                |
+
+```ts
+const rc = new RingCentral({ clientId, clientSecret, serverURL });
+await rc.authorize({ jwt });
+var result = await rc
+  .restapi(apiVersion)
+  .account(accountId)
+  .extension(extensionId)
+  .callerBlocking()
+  .put(callerBlockingSettingsUpdate);
+await rc.revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- Parameter `extensionId` is optional with default value `~`
+- `callerBlockingSettingsUpdate` is of type [CallerBlockingSettingsUpdate](./definitions/CallerBlockingSettingsUpdate.ts)
+- `result` is of type [CallerBlockingSettings](./definitions/CallerBlockingSettings.ts)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Call-Blocking-updateCallerBlockingSettings) in API Explorer.
 
 ## readExtensionCallerId
 
@@ -8134,64 +8197,6 @@ await rc.revoke();
 
 [Try it out](https://developer.ringcentral.com/api-reference#Historical-Webinars-rcwHistoryGetSession) in API Explorer.
 
-## readCallerBlockingSettings
-
-Get Caller Blocking Settings
-
-| Name             | Value                                                                               |
-| ---------------- | ----------------------------------------------------------------------------------- |
-| HTTP Method      | `GET`                                                                               |
-| Endpoint         | `/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/caller-blocking` |
-| Rate Limit Group | `Light`                                                                             |
-| App Permission   | `ReadAccounts`                                                                      |
-| User Permission  | `ReadBlockedNumbers`                                                                |
-
-```ts
-const rc = new RingCentral({ clientId, clientSecret, serverURL });
-await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).callerBlocking().get();
-await rc.revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- Parameter `accountId` is optional with default value `~`
-- Parameter `extensionId` is optional with default value `~`
-- `result` is of type [CallerBlockingSettings](./definitions/CallerBlockingSettings.ts)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Blocking-readCallerBlockingSettings) in API Explorer.
-
-## updateCallerBlockingSettings
-
-Update Caller Blocking Settings
-
-| Name             | Value                                                                               |
-| ---------------- | ----------------------------------------------------------------------------------- |
-| HTTP Method      | `PUT`                                                                               |
-| Endpoint         | `/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/caller-blocking` |
-| Rate Limit Group | `Light`                                                                             |
-| App Permission   | `EditExtensions`                                                                    |
-| User Permission  | `EditBlockedNumbers`                                                                |
-
-```ts
-const rc = new RingCentral({ clientId, clientSecret, serverURL });
-await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .extension(extensionId)
-  .callerBlocking()
-  .put(callerBlockingSettingsUpdate);
-await rc.revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- Parameter `accountId` is optional with default value `~`
-- Parameter `extensionId` is optional with default value `~`
-- `callerBlockingSettingsUpdate` is of type [CallerBlockingSettingsUpdate](./definitions/CallerBlockingSettingsUpdate.ts)
-- `result` is of type [CallerBlockingSettings](./definitions/CallerBlockingSettings.ts)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Blocking-updateCallerBlockingSettings) in API Explorer.
-
 ## listExtensionPhoneNumbers
 
 Get Extension Phone Number List
@@ -8539,52 +8544,6 @@ await rc.revoke();
 
 [Try it out](https://developer.ringcentral.com/api-reference#Business-Analytics-analyticsCallsTimelineFetch) in API Explorer.
 
-## socMsgAnonymizeIdentity
-
-Anonymize Identity
-
-| Name             | Value                                                       |
-| ---------------- | ----------------------------------------------------------- |
-| HTTP Method      | `POST`                                                      |
-| Endpoint         | `/cx/social-messaging/v1/identities/{identityId}/anonymize` |
-| Rate Limit Group | `Light`                                                     |
-| App Permission   | `SocialMessaging`                                           |
-| User Permission  | `N/A`                                                       |
-
-```ts
-const rc = new RingCentral({ clientId, clientSecret, serverURL });
-await rc.authorize({ jwt });
-var result = await rc.cx().socialMessaging().v1().identities(identityId).anonymize().post();
-await rc.revoke();
-```
-
-- `result` is an empty string
-
-[Try it out](https://developer.ringcentral.com/api-reference#Identities-socMsgAnonymizeIdentity) in API Explorer.
-
-## socMsgDeanonymizeIdentity
-
-Deanonymize Identity
-
-| Name             | Value                                                         |
-| ---------------- | ------------------------------------------------------------- |
-| HTTP Method      | `POST`                                                        |
-| Endpoint         | `/cx/social-messaging/v1/identities/{identityId}/deanonymize` |
-| Rate Limit Group | `Light`                                                       |
-| App Permission   | `SocialMessaging`                                             |
-| User Permission  | `N/A`                                                         |
-
-```ts
-const rc = new RingCentral({ clientId, clientSecret, serverURL });
-await rc.authorize({ jwt });
-var result = await rc.cx().socialMessaging().v1().identities(identityId).deanonymize().post();
-await rc.revoke();
-```
-
-- `result` is an empty string
-
-[Try it out](https://developer.ringcentral.com/api-reference#Identities-socMsgDeanonymizeIdentity) in API Explorer.
-
 ## getDefaultBridge
 
 Get User's Default Bridge
@@ -8853,31 +8812,6 @@ await rc.revoke();
 - `result` is an empty string
 
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Recording-Settings-updateCallRecordingExtensionList) in API Explorer.
-
-## listCallRecordingExtensions
-
-Get Call Recording Extension List
-
-| Name             | Value                                                                 |
-| ---------------- | --------------------------------------------------------------------- |
-| HTTP Method      | `GET`                                                                 |
-| Endpoint         | `/restapi/{apiVersion}/account/{accountId}/call-recording/extensions` |
-| Rate Limit Group | `Medium`                                                              |
-| App Permission   | `ReadAccounts`                                                        |
-| User Permission  | `ReadCompanyInfo`                                                     |
-
-```ts
-const rc = new RingCentral({ clientId, clientSecret, serverURL });
-await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).callRecording().extensions().get();
-await rc.revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- Parameter `accountId` is optional with default value `~`
-- `result` is of type [CallRecordingExtensions](./definitions/CallRecordingExtensions.ts)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Recording-Settings-listCallRecordingExtensions) in API Explorer.
 
 ## getExtensionBulkUpdateTask
 
@@ -9438,7 +9372,7 @@ await rc.revoke();
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
 - `createUserEmergencyLocationRequest` is of type [CreateUserEmergencyLocationRequest](./definitions/CreateUserEmergencyLocationRequest.ts)
-- `result` is of type [CommonEmergencyLocationResource](./definitions/CommonEmergencyLocationResource.ts)
+- `result` is of type [EmergencyLocationResponseResource](./definitions/EmergencyLocationResponseResource.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-createExtensionEmergencyLocation) in API Explorer.
 
@@ -9493,15 +9427,15 @@ var result = await rc
   .account(accountId)
   .extension(extensionId)
   .emergencyLocations(locationId)
-  .put(emergencyLocationInfoRequest);
+  .put(emergencyLocationRequestResource);
 await rc.revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
-- `emergencyLocationInfoRequest` is of type [EmergencyLocationInfoRequest](./definitions/EmergencyLocationInfoRequest.ts)
-- `result` is of type [CommonEmergencyLocationResource](./definitions/CommonEmergencyLocationResource.ts)
+- `emergencyLocationRequestResource` is of type [EmergencyLocationRequestResource](./definitions/EmergencyLocationRequestResource.ts)
+- `result` is of type [EmergencyLocationResponseResource](./definitions/EmergencyLocationResponseResource.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-updateExtensionEmergencyLocation) in API Explorer.
 
@@ -9763,6 +9697,43 @@ await rc.revoke();
 Please refer to [Binary content downloading](/README.md#Binary-content-downloading).
 
 [Try it out](https://developer.ringcentral.com/api-reference#Greetings-readGreetingContent) in API Explorer.
+
+## readMessageContent
+
+Get Message Attachment Content
+
+| Name             | Value                                                                                                                |
+| ---------------- | -------------------------------------------------------------------------------------------------------------------- |
+| HTTP Method      | `GET`                                                                                                                |
+| Endpoint         | `/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/message-store/{messageId}/content/{attachmentId}` |
+| Rate Limit Group | `Medium`                                                                                                             |
+| App Permission   | `ReadMessages`                                                                                                       |
+| User Permission  | `N/A`                                                                                                                |
+
+```ts
+const rc = new RingCentral({ clientId, clientSecret, serverURL });
+await rc.authorize({ jwt });
+var result = await rc
+  .restapi(apiVersion)
+  .account(accountId)
+  .extension(extensionId)
+  .messageStore(messageId)
+  .content(attachmentId)
+  .get(readMessageContentParameters);
+await rc.revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- Parameter `extensionId` is optional with default value `~`
+- `readMessageContentParameters` is of type [ReadMessageContentParameters](./definitions/ReadMessageContentParameters.ts)
+- `result` is of type `byte[]`
+
+### ❗❗❗ Code sample above may not work
+
+Please refer to [Binary content downloading](/README.md#Binary-content-downloading).
+
+[Try it out](https://developer.ringcentral.com/api-reference#Message-Store-readMessageContent) in API Explorer.
 
 ## readUnifiedPresence
 
@@ -10079,6 +10050,71 @@ await rc.revoke();
 - `result` is of type [CallParty](./definitions/CallParty.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Control-updateCallParty) in API Explorer.
+
+## callFlipParty
+
+Call Flip on Party
+
+| Name             | Value                                                                                                      |
+| ---------------- | ---------------------------------------------------------------------------------------------------------- |
+| HTTP Method      | `POST`                                                                                                     |
+| Endpoint         | `/restapi/{apiVersion}/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/flip` |
+| Rate Limit Group | `Light`                                                                                                    |
+| App Permission   | `CallControl`                                                                                              |
+| User Permission  | `N/A`                                                                                                      |
+
+```ts
+const rc = new RingCentral({ clientId, clientSecret, serverURL });
+await rc.authorize({ jwt });
+var result = await rc
+  .restapi(apiVersion)
+  .account(accountId)
+  .telephony()
+  .sessions(telephonySessionId)
+  .parties(partyId)
+  .flip()
+  .post(callPartyFlip);
+await rc.revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- `callPartyFlip` is of type [CallPartyFlip](./definitions/CallPartyFlip.ts)
+- `result` is an empty string
+
+[Try it out](https://developer.ringcentral.com/api-reference#Call-Control-callFlipParty) in API Explorer.
+
+## callParkParty
+
+Call Park
+
+| Name             | Value                                                                                                      |
+| ---------------- | ---------------------------------------------------------------------------------------------------------- |
+| HTTP Method      | `POST`                                                                                                     |
+| Endpoint         | `/restapi/{apiVersion}/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/park` |
+| Rate Limit Group | `Light`                                                                                                    |
+| App Permission   | `CallControl`                                                                                              |
+| User Permission  | `N/A`                                                                                                      |
+
+```ts
+const rc = new RingCentral({ clientId, clientSecret, serverURL });
+await rc.authorize({ jwt });
+var result = await rc
+  .restapi(apiVersion)
+  .account(accountId)
+  .telephony()
+  .sessions(telephonySessionId)
+  .parties(partyId)
+  .park()
+  .post();
+await rc.revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- `result` is of type [CallParty](./definitions/CallParty.ts)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Call-Control-callParkParty) in API Explorer.
 
 ## superviseCallSession
 
@@ -11605,43 +11641,6 @@ await rc.revoke();
 
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Blocking-deleteBlockedAllowedNumber) in API Explorer.
 
-## readMessageContent
-
-Get Message Attachment Content
-
-| Name             | Value                                                                                                                |
-| ---------------- | -------------------------------------------------------------------------------------------------------------------- |
-| HTTP Method      | `GET`                                                                                                                |
-| Endpoint         | `/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/message-store/{messageId}/content/{attachmentId}` |
-| Rate Limit Group | `Medium`                                                                                                             |
-| App Permission   | `ReadMessages`                                                                                                       |
-| User Permission  | `N/A`                                                                                                                |
-
-```ts
-const rc = new RingCentral({ clientId, clientSecret, serverURL });
-await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .extension(extensionId)
-  .messageStore(messageId)
-  .content(attachmentId)
-  .get(readMessageContentParameters);
-await rc.revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- Parameter `accountId` is optional with default value `~`
-- Parameter `extensionId` is optional with default value `~`
-- `readMessageContentParameters` is of type [ReadMessageContentParameters](./definitions/ReadMessageContentParameters.ts)
-- `result` is of type `byte[]`
-
-### ❗❗❗ Code sample above may not work
-
-Please refer to [Binary content downloading](/README.md#Binary-content-downloading).
-
-[Try it out](https://developer.ringcentral.com/api-reference#Message-Store-readMessageContent) in API Explorer.
-
 ## readNotificationSettings
 
 Get Notification Settings
@@ -11799,39 +11798,6 @@ await rc.revoke();
 
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Control-bridgeCallParty) in API Explorer.
 
-## callFlipParty
-
-Call Flip on Party
-
-| Name             | Value                                                                                                      |
-| ---------------- | ---------------------------------------------------------------------------------------------------------- |
-| HTTP Method      | `POST`                                                                                                     |
-| Endpoint         | `/restapi/{apiVersion}/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/flip` |
-| Rate Limit Group | `Light`                                                                                                    |
-| App Permission   | `CallControl`                                                                                              |
-| User Permission  | `N/A`                                                                                                      |
-
-```ts
-const rc = new RingCentral({ clientId, clientSecret, serverURL });
-await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .telephony()
-  .sessions(telephonySessionId)
-  .parties(partyId)
-  .flip()
-  .post(callPartyFlip);
-await rc.revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- Parameter `accountId` is optional with default value `~`
-- `callPartyFlip` is of type [CallPartyFlip](./definitions/CallPartyFlip.ts)
-- `result` is an empty string
-
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Control-callFlipParty) in API Explorer.
-
 ## forwardCallParty
 
 Forward Call Party
@@ -11930,38 +11896,6 @@ await rc.revoke();
 - `result` is an empty string
 
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Control-ignoreCallInQueue) in API Explorer.
-
-## callParkParty
-
-Call Park
-
-| Name             | Value                                                                                                      |
-| ---------------- | ---------------------------------------------------------------------------------------------------------- |
-| HTTP Method      | `POST`                                                                                                     |
-| Endpoint         | `/restapi/{apiVersion}/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/park` |
-| Rate Limit Group | `Light`                                                                                                    |
-| App Permission   | `CallControl`                                                                                              |
-| User Permission  | `N/A`                                                                                                      |
-
-```ts
-const rc = new RingCentral({ clientId, clientSecret, serverURL });
-await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .telephony()
-  .sessions(telephonySessionId)
-  .parties(partyId)
-  .park()
-  .post();
-await rc.revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- Parameter `accountId` is optional with default value `~`
-- `result` is of type [CallParty](./definitions/CallParty.ts)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Control-callParkParty) in API Explorer.
 
 ## pickupCallParty
 

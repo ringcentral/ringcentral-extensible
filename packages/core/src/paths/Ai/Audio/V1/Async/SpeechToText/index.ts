@@ -15,7 +15,7 @@ class Index {
     return `${this._parent.path()}/speech-to-text`;
   }
   /**
-   * Returns Speech to Text Conversion to the provided webhook uri.
+   * Returns Speech to Text Conversion to the provided webhook URI.
    * HTTP Method: post
    * Endpoint: /ai/audio/v1/async/speech-to-text
    * Rate Limit Group: Heavy

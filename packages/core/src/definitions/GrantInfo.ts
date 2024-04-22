@@ -62,6 +62,11 @@ interface GrantInfo {
   callQueueMessages?: boolean;
 
   /**
+   * Specifies whether the current extension is granted *Forward All Calls (FAC)* permission
+   */
+  callQueueFacSetup?: boolean;
+
+  /**
    * Specifies whether the user referenced in extension object is sharing voicemails
    *  with the current extension
    */

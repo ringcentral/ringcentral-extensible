@@ -43,10 +43,9 @@ interface GetAccountInfoResponse {
   serviceInfo?: ServiceInfo;
 
   /**
-   * Specifies account configuration wizard state (web service setup)
-   * Default: NotStarted
+   * Initial configuration wizard state
    */
-  setupWizardState?: 'NotStarted' | 'Incomplete' | 'Completed';
+  setupWizardState?: 'NotStarted' | 'Incomplete' | 'Completed' | 'Unknown';
 
   /**
    */

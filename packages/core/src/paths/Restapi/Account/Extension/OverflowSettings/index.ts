@@ -28,7 +28,6 @@ class Index {
 
   /**
    * Updates overflow settings for a call queue specified in path.
-   *
    * HTTP Method: put
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{callQueueId}/overflow-settings
    * Rate Limit Group: Heavy

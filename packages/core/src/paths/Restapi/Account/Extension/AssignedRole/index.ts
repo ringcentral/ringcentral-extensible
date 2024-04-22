@@ -20,7 +20,7 @@ class Index {
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/assigned-role
    * Rate Limit Group: Light
    * App Permission: ReadAccounts
-   * User Permission: ReadExtensions
+   * User Permission: ReadAssignedRoles
    */
   public async get(
     queryParams?: ListUserAssignedRolesParameters,

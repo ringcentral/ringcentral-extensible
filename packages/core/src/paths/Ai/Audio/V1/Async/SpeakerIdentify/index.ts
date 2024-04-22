@@ -15,7 +15,7 @@ class Index {
     return `${this._parent.path()}/speaker-identify`;
   }
   /**
-   * Returns Speaker Identification to the provided webhook uri.
+   * Returns Speaker Identification to the provided webhook URI.
    * HTTP Method: post
    * Endpoint: /ai/audio/v1/async/speaker-identify
    * Rate Limit Group: Heavy

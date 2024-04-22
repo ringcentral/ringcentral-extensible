@@ -51,7 +51,7 @@ interface SyncMessagesParameters {
   recordCount?: number;
 
   /**
-   * Value of syncToken property of last sync request response
+   * A `syncToken` value from the previous sync response (for `ISync` mode only, mandatory)
    */
   syncToken?: string;
 

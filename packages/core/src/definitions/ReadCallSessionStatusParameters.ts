@@ -8,7 +8,8 @@ interface ReadCallSessionStatusParameters {
   timestamp?: string;
 
   /**
-   * The time frame of awaiting for a status change before sending the resulting one in response
+   * The time frame of awaiting for a status change before sending
+   *  the resulting one in response
    */
   timeout?: string;
 }

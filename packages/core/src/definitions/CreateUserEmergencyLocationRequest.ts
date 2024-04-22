@@ -12,6 +12,11 @@ interface CreateUserEmergencyLocationRequest {
   addressFormatId?: string;
 
   /**
+   * If 'true' address validation for non-us addresses is skipped
+   */
+  trusted?: boolean;
+
+  /**
    */
   address?: CommonEmergencyLocationAddressInfo;
 }

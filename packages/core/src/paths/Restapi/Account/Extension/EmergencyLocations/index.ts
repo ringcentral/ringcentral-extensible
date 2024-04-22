@@ -1,6 +1,7 @@
 import type DeleteExtensionEmergencyLocationParameters from '../../../../../definitions/DeleteExtensionEmergencyLocationParameters';
-import type EmergencyLocationInfoRequest from '../../../../../definitions/EmergencyLocationInfoRequest';
+import type EmergencyLocationRequestResource from '../../../../../definitions/EmergencyLocationRequestResource';
 import type CommonEmergencyLocationResource from '../../../../../definitions/CommonEmergencyLocationResource';
+import type EmergencyLocationResponseResource from '../../../../../definitions/EmergencyLocationResponseResource';
 import type CreateUserEmergencyLocationRequest from '../../../../../definitions/CreateUserEmergencyLocationRequest';
 import type EmergencyLocationsResource from '../../../../../definitions/EmergencyLocationsResource';
 import type GetExtensionEmergencyLocationsParameters from '../../../../../definitions/GetExtensionEmergencyLocationsParameters';
@@ -48,8 +49,8 @@ class Index {
   public async post(
     createUserEmergencyLocationRequest: CreateUserEmergencyLocationRequest,
     restRequestConfig?: RestRequestConfig,
-  ): Promise<CommonEmergencyLocationResource> {
-    const r = await this.rc.post<CommonEmergencyLocationResource>(
+  ): Promise<EmergencyLocationResponseResource> {
+    const r = await this.rc.post<EmergencyLocationResponseResource>(
       this.path(false),
       createUserEmergencyLocationRequest,
       undefined,
@@ -83,15 +84,15 @@ class Index {
    * User Permission: EmergencyFramework
    */
   public async put(
-    emergencyLocationInfoRequest: EmergencyLocationInfoRequest,
+    emergencyLocationRequestResource: EmergencyLocationRequestResource,
     restRequestConfig?: RestRequestConfig,
-  ): Promise<CommonEmergencyLocationResource> {
+  ): Promise<EmergencyLocationResponseResource> {
     if (this.locationId === null) {
       throw new Error('locationId must be specified.');
     }
-    const r = await this.rc.put<CommonEmergencyLocationResource>(
+    const r = await this.rc.put<EmergencyLocationResponseResource>(
       this.path(),
-      emergencyLocationInfoRequest,
+      emergencyLocationRequestResource,
       undefined,
       restRequestConfig,
     );

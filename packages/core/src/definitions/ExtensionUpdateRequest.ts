@@ -30,6 +30,8 @@ interface ExtensionUpdateRequest {
   regionalSettings?: ExtensionRegionalSettingRequest;
 
   /**
+   * Initial configuration wizard state
+   * Default: NotStarted
    */
   setupWizardState?: 'NotStarted' | 'Incomplete' | 'Completed';
 

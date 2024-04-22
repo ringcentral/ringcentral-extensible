@@ -54,7 +54,7 @@ interface TokenInfo {
   endpoint_id?: string;
 
   /**
-   * OIDC ID token (if OpenId Connect flow was activated during authorization)
+   * OIDC ID token (if OpenID Connect flow was activated during authorization)
    */
   id_token?: string;
 
@@ -64,13 +64,13 @@ interface TokenInfo {
   session_id?: string;
 
   /**
-   * Absolute value of session expiration time as ISO datetime
+   * Absolute value of session expiration time as an ISO timestamp
    * Format: date-time
    */
   session_expiration_time?: string;
 
   /**
-   * Remaining time (in seconds) until session expiration due to absolute timeout
+   * Remaining time (in seconds) until session expiration due to the absolute timeout
    * Format: int32
    */
   session_expires_in?: number;

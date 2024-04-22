@@ -1,6 +1,3 @@
-import Deanonymize from './Deanonymize';
-import Anonymize from './Anonymize';
-import Import from './Import';
 import type SocMsgListIdentitiesParameters from '../../../../../definitions/SocMsgListIdentitiesParameters';
 import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
@@ -58,18 +55,6 @@ class Index {
     }
     const r = await this.rc.get<string>(this.path(), undefined, restRequestConfig);
     return r.data;
-  }
-
-  public import(): Import {
-    return new Import(this);
-  }
-
-  public anonymize(): Anonymize {
-    return new Anonymize(this);
-  }
-
-  public deanonymize(): Deanonymize {
-    return new Deanonymize(this);
   }
 }
 export default Index;

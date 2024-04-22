@@ -20,7 +20,10 @@ interface SyncAccountCallLogParameters {
   dateFrom?: string;
 
   /**
-   * For 'FSync' the parameter is mandatory, it limits the number of records to be returned in response. For 'ISync' it specifies with how many records to extend sync frame to the past, the maximum number of records is 250
+   * For `FSync` mode this parameter is mandatory, it limits the number of records to be returned in response.
+   *
+   *  For `ISync` mode this parameter specifies the number of records to extend the sync frame with to the past
+   *  (the maximum number of records is 250)
    * Minimum: 1
    * Format: int32
    */

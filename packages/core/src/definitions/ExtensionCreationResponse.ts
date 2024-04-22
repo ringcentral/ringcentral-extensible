@@ -83,8 +83,8 @@ interface ExtensionCreationResponse {
   serviceFeatures?: ExtensionServiceFeatureInfo[];
 
   /**
-   * Specifies extension configuration wizard state (web service
-   *  setup). The default value is 'NotStarted'
+   * Initial configuration wizard state
+   * Default: NotStarted
    */
   setupWizardState?: 'NotStarted' | 'Incomplete' | 'Completed';
 
