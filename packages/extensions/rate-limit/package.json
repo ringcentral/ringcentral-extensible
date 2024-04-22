@@ -1,6 +1,6 @@
 {
   "name": "@rc-ex/rate-limit",
-  "version": "1.1.13",
+  "version": "1.1.14",
   "description": "Rate limit extension for ringcentral-extensible project",
   "author": "Tyler Liu <tyler.liu@ringcentral.com>",
   "homepage": "https://github.com/ringcentral/ringcentral-extensible/tree/master/packages/extensions/rate-limit",
@@ -18,7 +18,7 @@
     "access": "public"
   },
   "dependencies": {
-    "@rc-ex/retry": "^1.1.13"
+    "@rc-ex/retry": "^1.1.14"
   },
   "devDependencies": {
     "@rc-ex/core": "file:../../core"
