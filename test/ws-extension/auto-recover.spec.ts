@@ -1,12 +1,12 @@
 import WebSocketExtension from '@rc-ex/ws';
 import waitFor from 'wait-for-async';
-import { createRingCentral } from '../utils';
+import ReusableRestClient from '../reusable-rest-client';
 
 jest.setTimeout(999999999);
 
 describe('WebSocket', () => {
   test('auto recover', async () => {
-    const rc = await createRingCentral();
+    const rc = await ReusableRestClient.getInstance();
     const webSocketExtension = new WebSocketExtension({
       // debugMode: true,
     });
@@ -35,7 +35,7 @@ describe('WebSocket', () => {
       interval: 1000,
       times: 60,
     });
-    await rc.revoke();
     expect(successful).toBeTruthy();
+    await webSocketExtension.revoke();
   });
 });

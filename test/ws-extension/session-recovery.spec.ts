@@ -1,12 +1,12 @@
 import WebSocketExtension from '@rc-ex/ws';
 import waitFor from 'wait-for-async';
-import { createRingCentral } from '../utils';
+import ReusableRestClient from '../reusable-rest-client';
 
 jest.setTimeout(99999999); // to test recover failed
 
 describe('WebSocket session recovery', () => {
   test('default ', async () => {
-    const rc = await createRingCentral();
+    const rc = await ReusableRestClient.getInstance();
     const webSocketExtension = new WebSocketExtension({
       // debugMode: true,
       restOverWebSocket: true,
@@ -45,16 +45,16 @@ describe('WebSocket session recovery', () => {
       interval: 1000,
       times: 20,
     });
-    await rc.revoke();
     expect(successful).toBeTruthy();
     expect(eventCount).toBeGreaterThan(0);
+    await webSocketExtension.revoke();
   });
 
   test('connect but do not recover session ', async () => {
     if (process.env.IS_LAB_ENV !== 'true') {
       return;
     }
-    const rc = await createRingCentral();
+    const rc = await ReusableRestClient.getInstance();
     const webSocketExtension = new WebSocketExtension({
       // debugMode: true,
       restOverWebSocket: true,
@@ -87,16 +87,16 @@ describe('WebSocket session recovery', () => {
       interval: 1000,
       times: 20,
     });
-    await rc.revoke();
     expect(successful).toBeTruthy();
     expect(eventCount).toBeGreaterThan(0);
+    await webSocketExtension.revoke();
   });
 
   test('re-connect existing session', async () => {
     if (process.env.IS_LAB_ENV !== 'true') {
       return;
     }
-    const rc = await createRingCentral();
+    const rc = await ReusableRestClient.getInstance();
     const webSocketExtension = new WebSocketExtension({
       // debugMode: true,
     });
@@ -126,9 +126,9 @@ describe('WebSocket session recovery', () => {
       interval: 1000,
       times: 20,
     });
-    await rc.revoke();
     expect(successful).toBeTruthy();
     expect(eventCount).toBeGreaterThan(0);
+    await webSocketExtension.revoke();
   });
 
   // comment out because it takes too long to finish.
@@ -190,7 +190,7 @@ describe('WebSocket session recovery', () => {
   //     interval: 1000,
   //     times: 30,
   //   });
-  //   await rc.revoke();
+  //   await webSocketExtension.revoke();
   //   expect(successful).toBeTruthy();
   //   expect(eventCount).toBeGreaterThan(0);
   // });

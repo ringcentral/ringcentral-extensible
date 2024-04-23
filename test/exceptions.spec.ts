@@ -1,11 +1,11 @@
 import type { RestResponse } from '@rc-ex/core/lib/types';
 import RestException from '@rc-ex/core/lib/RestException';
 
-import { createRingCentral } from './utils';
+import ReusableRestClient from './reusable-rest-client';
 
 describe('Exceptions', () => {
   test('400', async () => {
-    const rc = await createRingCentral();
+    const rc = await ReusableRestClient.getInstance();
     let exception = false;
     try {
       // no to number
@@ -18,11 +18,10 @@ describe('Exceptions', () => {
     } finally {
       expect(exception).toBeTruthy();
     }
-    await rc.revoke();
   });
 
   test('404', async () => {
-    const rc = await createRingCentral();
+    const rc = await ReusableRestClient.getInstance();
     let exception = false;
     try {
       await rc.post(`${rc.restapi().account().extension().path(true)}/does-not-exist`, { text: 'Hello world' });
@@ -34,6 +33,5 @@ describe('Exceptions', () => {
     } finally {
       expect(exception).toBeTruthy();
     }
-    await rc.revoke();
   });
 });

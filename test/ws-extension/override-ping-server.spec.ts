@@ -1,11 +1,11 @@
 import WebSocketExtension from '@rc-ex/ws';
 
-import { createRingCentral } from '../utils';
+import ReusableRestClient from '../reusable-rest-client';
 // import waitFor from 'wait-for-async';
 
 describe('WebSocket', () => {
   test('Override pingServer', async () => {
-    const rc = await createRingCentral();
+    const rc = await ReusableRestClient.getInstance();
     const webSocketExtension = new WebSocketExtension({
       // debugMode: true,
     });
@@ -14,6 +14,6 @@ describe('WebSocket', () => {
       await webSocketExtension.request('get', '/restapi/v1.0/status');
     };
     // await waitFor({interval: 90000});
-    await rc.revoke();
+    await webSocketExtension.revoke();
   });
 });

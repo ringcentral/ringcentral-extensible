@@ -4,11 +4,11 @@ import type GetSMSMessageInfoResponse from '@rc-ex/core/lib/definitions/GetSMSMe
 import fs from 'fs';
 import path from 'path';
 
-import { createRingCentral } from './utils';
+import ReusableRestClient from './reusable-rest-client';
 
 describe('low level API', () => {
   test('sms', async () => {
-    const rc = await createRingCentral();
+    const rc = await ReusableRestClient.getInstance();
     const r = await rc.post<GetSMSMessageInfoResponse>('/restapi/v1.0/account/~/extension/~/sms', {
       from: {
         phoneNumber: process.env.RINGCENTRAL_SENDER!,
@@ -23,10 +23,9 @@ describe('low level API', () => {
     const messageInfo = r.data;
     expect(messageInfo).not.toBeUndefined();
     expect(messageInfo.id).not.toBeUndefined();
-    await rc.revoke();
   });
   test('fax', async () => {
-    const rc = await createRingCentral();
+    const rc = await ReusableRestClient.getInstance();
     const requestBody = {
       to: [{ phoneNumber: process.env.RINGCENTRAL_RECEIVER }],
       attachments: [
@@ -47,6 +46,5 @@ describe('low level API', () => {
     const messageInfo = r.data;
     expect(messageInfo).not.toBeUndefined();
     expect(messageInfo.id).not.toBeUndefined();
-    await rc.revoke();
   });
 });

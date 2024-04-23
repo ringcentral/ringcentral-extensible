@@ -1,10 +1,10 @@
 import PubNubExtension from '@rc-ex/pubnub';
 import waitFor from 'wait-for-async';
-import { createRingCentral } from './utils';
+import ReusableRestClient from './reusable-rest-client';
 
 describe('PubNub extension', () => {
   test('default', async () => {
-    const rc = await createRingCentral();
+    const rc = await ReusableRestClient.getInstance();
     const pubNubExtension = new PubNubExtension();
     await rc.installExtension(pubNubExtension);
     let eventCount = 0;
@@ -29,8 +29,8 @@ describe('PubNub extension', () => {
       interval: 1000,
       times: 30,
     });
-    await rc.revoke();
     expect(successful).toBeTruthy();
     expect(eventCount).toBeGreaterThan(0);
+    await pubNubExtension.revoke();
   });
 });

@@ -1,8 +1,8 @@
-import { createRingCentral } from './utils';
+import ReusableRestClient from './reusable-rest-client';
 
 describe('batch get', () => {
   test("get extension's presence info", async () => {
-    const rc = await createRingCentral();
+    const rc = await ReusableRestClient.getInstance();
     const extensions = await rc.restapi().account().extension().list({
       perPage: 30,
     }); // batch requests limited to 30 max
@@ -13,6 +13,5 @@ describe('batch get', () => {
     expect(r).not.toBeNull();
     expect(r.data).not.toBeNull();
     expect(r.data).toContain('--Boundary');
-    await rc.revoke();
   });
 });

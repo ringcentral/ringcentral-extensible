@@ -1,18 +1,17 @@
 import fs from 'fs';
 import path from 'path';
-import { createRingCentral } from './utils';
+import ReusableRestClient from './reusable-rest-client';
 
 describe('Profile image', () => {
   test('download', async () => {
-    const rc = await createRingCentral();
+    const rc = await ReusableRestClient.getInstance();
     const buffer = await rc.restapi().account().extension().profileImage().list();
     expect(buffer.constructor.name).toBe('Buffer');
     fs.writeFileSync(path.join(__dirname, 'temp.png'), buffer);
-    await rc.revoke();
   });
 
   test('upload', async () => {
-    const rc = await createRingCentral();
+    const rc = await ReusableRestClient.getInstance();
     await rc
       .restapi()
       .account()
@@ -25,7 +24,6 @@ describe('Profile image', () => {
           content: fs.readFileSync('./test.png'),
         },
       });
-    await rc.revoke();
   });
 
   test('download others', async () => {

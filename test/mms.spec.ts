@@ -2,11 +2,11 @@ import type CreateMMSMessage from '@rc-ex/core/lib/definitions/CreateMMSMessage'
 import type Attachment from '@rc-ex/core/lib/definitions/Attachment';
 import fs from 'fs';
 import path from 'path';
-import { createRingCentral } from './utils';
+import ReusableRestClient from './reusable-rest-client';
 
 describe('mms', () => {
   test('send mms', async () => {
-    const rc = await createRingCentral();
+    const rc = await ReusableRestClient.getInstance();
     const createMMSMessage: CreateMMSMessage = {};
     createMMSMessage.from = { phoneNumber: process.env.RINGCENTRAL_SENDER! };
     createMMSMessage.to = [{ phoneNumber: process.env.RINGCENTRAL_RECEIVER }];
@@ -18,6 +18,5 @@ describe('mms', () => {
     const messageInfo = await rc.restapi().account().extension().mms().post(createMMSMessage);
     expect(messageInfo).not.toBeUndefined();
     expect(messageInfo.id).not.toBeUndefined();
-    await rc.revoke();
   });
 });

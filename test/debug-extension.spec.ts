@@ -1,14 +1,14 @@
 import DebugExtension from '@rc-ex/debug';
 
-import { createRingCentral } from './utils';
+import ReusableRestClient from './reusable-rest-client';
 
 describe('Debug Extension', () => {
   test('default', async () => {
-    const rc = await createRingCentral();
+    const rc = await ReusableRestClient.getInstance();
     const debugExtension = new DebugExtension();
     await rc.installExtension(debugExtension);
     debugExtension.disable(); // remove this line to print API traffic
     await rc.restapi().account().extension().get();
-    await rc.revoke();
+    await debugExtension.revoke();
   });
 });

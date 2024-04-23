@@ -1,7 +1,7 @@
 import path from 'path';
 import dotenv from 'dotenv-override-true';
 import DebugExtension from '@rc-ex/debug';
-import { createRingCentral } from './utils';
+import ReusableRestClient from './reusable-rest-client';
 
 dotenv.config({ path: path.join(__dirname, '.env.a2p') });
 
@@ -10,7 +10,7 @@ describe('SMS', () => {
     if (process.env.IS_A2P_ENV !== 'true') {
       return;
     }
-    const rc = await createRingCentral();
+    const rc = await ReusableRestClient.getInstance();
     const debugExtension = new DebugExtension();
     rc.installExtension(debugExtension);
     debugExtension.disable();
@@ -30,6 +30,6 @@ describe('SMS', () => {
         ],
       });
     expect(messageBatchResponse).not.toBeUndefined();
-    await rc.revoke();
+    await debugExtension.revoke();
   });
 });

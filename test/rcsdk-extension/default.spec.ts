@@ -22,5 +22,6 @@ describe('RingCentral extension', () => {
     expect(extensionInfo.extensionNumber).toBeDefined();
 
     await sdk.logout();
+    await rcSdkExtension.revoke();
   });
 });

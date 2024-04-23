@@ -1,17 +1,16 @@
-import { createRingCentral } from './utils';
+import ReusableRestClient from './reusable-rest-client';
 
 describe('Address Book', () => {
   test('contacts', async () => {
-    const rc = await createRingCentral();
+    const rc = await ReusableRestClient.getInstance();
     const r = await rc.restapi().account().extension().addressBook().contact().list();
     expect(r).toBeDefined();
     expect(r.records).toBeDefined();
     expect(r.records!.length).toBeGreaterThanOrEqual(0); // by default address book is empty
-    await rc.revoke();
   });
 
   test('extensions', async () => {
-    const rc = await createRingCentral();
+    const rc = await ReusableRestClient.getInstance();
     const r = await rc
       .restapi()
       .account()
@@ -21,6 +20,5 @@ describe('Address Book', () => {
     expect(r).toBeDefined();
     expect(r.records).toBeDefined();
     expect(r.records!.length).toBeGreaterThan(0);
-    await rc.revoke();
   });
 });

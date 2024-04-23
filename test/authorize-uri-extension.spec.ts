@@ -17,5 +17,6 @@ describe('Authorize URI Extension', () => {
     expect(authorizeUri).toBeDefined();
     expect(authorizeUri.indexOf('state=hello')).not.toBe(-1);
     expect(authorizeUri.startsWith(rc.rest.server)).toBeTruthy();
+    await authorizeUriExtension.revoke();
   });
 });

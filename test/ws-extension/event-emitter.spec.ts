@@ -1,11 +1,11 @@
 import WebSocketExtension, { Events } from '@rc-ex/ws';
 import waitFor from 'wait-for-async';
 
-import { createRingCentral } from '../utils';
+import ReusableRestClient from '../reusable-rest-client';
 
 describe('WebSocket', () => {
   test('event emitter', async () => {
-    const rc = await createRingCentral();
+    const rc = await ReusableRestClient.getInstance();
     const webSocketExtension = new WebSocketExtension({
       autoRecover: {
         enabled: true,
@@ -46,6 +46,6 @@ describe('WebSocket', () => {
     expect(newWS).not.toBe(oldWS);
 
     expect(result).toBeTruthy();
-    await rc.revoke();
+    await webSocketExtension.revoke();
   });
 });

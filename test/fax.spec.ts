@@ -5,11 +5,11 @@ import Utils from '@rc-ex/core/lib/Utils';
 import fs from 'fs';
 import path from 'path';
 
-import { createRingCentral } from './utils';
+import ReusableRestClient from './reusable-rest-client';
 
 describe('fax', () => {
   test('send fax', async () => {
-    const rc = await createRingCentral();
+    const rc = await ReusableRestClient.getInstance();
     const createFaxMessageRequest: CreateFaxMessageRequest = {};
     createFaxMessageRequest.to = [{ phoneNumber: process.env.RINGCENTRAL_RECEIVER }];
     const attachment1: Attachment = {};
@@ -24,11 +24,10 @@ describe('fax', () => {
     const messageInfo = await rc.restapi().account().extension().fax().post(createFaxMessageRequest);
     expect(messageInfo).not.toBeUndefined();
     expect(messageInfo.id).not.toBeUndefined();
-    await rc.revoke();
   });
 
   test('send fax - low level api', async () => {
-    const rc = await createRingCentral();
+    const rc = await ReusableRestClient.getInstance();
     const attachment1: Attachment = {};
     attachment1.filename = 'text.txt';
     attachment1.content = 'hello world';
@@ -45,6 +44,5 @@ describe('fax', () => {
     const messageInfo = r.data;
     expect(messageInfo).not.toBeUndefined();
     expect(messageInfo.id).not.toBeUndefined();
-    await rc.revoke();
   });
 });

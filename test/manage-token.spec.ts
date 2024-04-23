@@ -1,8 +1,8 @@
-import { createRingCentral } from './utils';
+import ReusableRestClient from './reusable-rest-client';
 
 describe('manage token', () => {
   test('get and set token', async () => {
-    const rc = await createRingCentral();
+    const rc = await ReusableRestClient.getInstance();
 
     // get token
     const tokenInfo = rc.token;
@@ -20,6 +20,5 @@ describe('manage token', () => {
     const extensionInfo = await rc.restapi().account().extension().get();
     expect(extensionInfo).not.toBeUndefined();
     expect(extensionInfo.id).not.toBeUndefined();
-    await rc.revoke();
   });
 });

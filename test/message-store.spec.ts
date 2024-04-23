@@ -1,8 +1,8 @@
-import { createRingCentral } from './utils';
+import ReusableRestClient from './reusable-rest-client';
 
 describe('message store', () => {
   test('every inbound fax should have from info', async () => {
-    const rc = await createRingCentral();
+    const rc = await ReusableRestClient.getInstance();
     const messageList = await rc
       .restapi()
       .account()
@@ -14,7 +14,6 @@ describe('message store', () => {
         dateFrom: '2010-04-15T17:18:00.000Z',
       });
     if (messageList.records?.length === 0) {
-      await rc.revoke();
       return;
     }
     expect(messageList.records?.length).toBeGreaterThan(0);
@@ -26,6 +25,5 @@ describe('message store', () => {
       .messageStore(messageList.records?.[0].id?.toString())
       .get();
     expect(messageInfo.from).toBeDefined();
-    await rc.revoke();
   });
 });

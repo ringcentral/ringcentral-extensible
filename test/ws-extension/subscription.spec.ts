@@ -1,6 +1,6 @@
 import WebSocketExtension from '@rc-ex/ws';
 import waitFor from 'wait-for-async';
-import { createRingCentral } from '../utils';
+import ReusableRestClient from '../reusable-rest-client';
 // import path from 'path';
 // import dotenv from 'dotenv-override-true';
 
@@ -11,7 +11,7 @@ describe('WebSocket', () => {
     // if (process.env.IS_LAB_ENV !== 'true') {
     //   return;
     // }
-    const rc = await createRingCentral();
+    const rc = await ReusableRestClient.getInstance();
     const webSocketExtension = new WebSocketExtension({
       // debugMode: true,
       // restOverWebSocket: true,
@@ -62,6 +62,6 @@ describe('WebSocket', () => {
     });
     expect(successful2).toBeTruthy();
 
-    await rc.revoke();
+    await webSocketExtension.revoke();
   });
 });

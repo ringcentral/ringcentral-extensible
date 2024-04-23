@@ -1,8 +1,8 @@
-import { createRingCentral } from './utils';
+import ReusableRestClient from './reusable-rest-client';
 
 describe('SMS', () => {
   test('send', async () => {
-    const rc = await createRingCentral();
+    const rc = await ReusableRestClient.getInstance();
     const messageInfo = await rc
       .restapi()
       .account()
@@ -21,6 +21,5 @@ describe('SMS', () => {
       });
     expect(messageInfo).not.toBeUndefined();
     expect(messageInfo.id).not.toBeUndefined();
-    await rc.revoke();
   });
 });

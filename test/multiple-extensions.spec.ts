@@ -59,11 +59,11 @@ describe('extensions', () => {
       interval: 1000,
       times: 30,
     });
-    await rc.revoke();
     expect(successful).toBeTruthy();
     expect(eventCount).toBeGreaterThan(0);
 
     await sdk.logout();
-    await rc.revoke();
+    await rcSdkExtension.revoke();
+    await webSocketExtension.revoke();
   });
 });
