@@ -18,6 +18,6 @@
     "ts-jest": "^29.1.2",
     "ts-node": "^10.9.2",
     "wait-for-async": "^0.6.1",
-    "winston": "^3.12.0"
+    "winston": "^3.13.0"
   }
 }

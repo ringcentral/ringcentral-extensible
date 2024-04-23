@@ -18,13 +18,13 @@
     "access": "public"
   },
   "dependencies": {
-    "@types/qs": "^6.9.12",
+    "@types/qs": "^6.9.15",
     "axios": "^1.6.8",
-    "qs": "^6.12.0"
+    "qs": "^6.12.1"
   },
   "devDependencies": {
     "dotenv-override-true": "^6.2.2",
-    "ringcentral-code-generator": "^0.6.11",
+    "ringcentral-code-generator": "^0.6.13",
     "ts-node": "^10.9.2"
   },
   "scripts": {
