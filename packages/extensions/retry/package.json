@@ -1,6 +1,6 @@
 {
   "name": "@rc-ex/retry",
-  "version": "1.1.14",
+  "version": "1.1.15",
   "description": "Retry extension for ringcentral-extensible project",
   "author": "Tyler Liu <tyler.liu@ringcentral.com>",
   "homepage": "https://github.com/ringcentral/ringcentral-extensible/tree/master/packages/extensions/retry",
