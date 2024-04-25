@@ -5938,9 +5938,9 @@ proxy-from-env@^1.1.0:
   integrity sha512-D+zkORCbA9f1tdWRK0RaCR3GPv50cMxcrz4X8k5LTSUD1Dkw47mKJEZQNunItRTkWwgtaUSo1RVFRIG9ZXiFYg==
 
 pubnub@^7.3.3:
-  version "7.3.3"
-  resolved "https://registry.yarnpkg.com/pubnub/-/pubnub-7.3.3.tgz#a68f66149e01cc83f071be9c9bc3dd128d8ff16a"
-  integrity sha512-JyHqgNUmF5RTllfk2pLcvzrP1//t/05Wj70ha5P9+C7jYGMslsmCymnfN7qfvbhKDmCgGdUPpsmCJwfyKU16EA==
+  version "7.4.0"
+  resolved "https://registry.yarnpkg.com/pubnub/-/pubnub-7.4.0.tgz#b9faf13914db1374885071a9e9895cdb91c075f4"
+  integrity sha512-lCO+uD2MQUIDn5K5KFlCKNk2gbsP1pP0I1UhFZyMhIJgVrmvTAasctXXt4NJia8yPJOMDq0WEr44vr0LhJxuoQ==
   dependencies:
     agentkeepalive "^3.5.2"
     buffer "^6.0.3"
