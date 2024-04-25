@@ -58,3 +58,7 @@ It is deprecated. Please use [WebSocket Extension](./ws) instead.
 ## [Authorize URI Extension](./authorize-uri)
 
 Authorize URI Extension provides utility methods to easily build URIs for OAuth.
+
+## [Auto Refresh Extension](./auto-refresh)
+
+Auto Refresh Extension automatically refreshes token every 30 minutes (configurable).
