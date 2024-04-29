@@ -10,7 +10,7 @@ class AutoRefreshExtension extends SdkExtension {
   public options: AutoRefreshOptions;
   private timeout?: NodeJS.Timeout;
 
-  public constructor(options: AutoRefreshOptions = {interval: 1000 * 60 * 30}) {
+  public constructor(options: AutoRefreshOptions = { interval: 1000 * 60 * 30 }) {
     super();
     this.options = options;
   }
@@ -27,7 +27,7 @@ class AutoRefreshExtension extends SdkExtension {
   }
 
   public stop() {
-    if(this.timeout) {
+    if (this.timeout) {
       clearInterval(this.timeout);
       this.timeout = undefined;
     }
