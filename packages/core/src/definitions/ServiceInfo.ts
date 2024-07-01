@@ -39,7 +39,7 @@ interface ServiceInfo {
 
   /**
    */
-  ubrand?: UBrandInfo;
+  uBrand?: UBrandInfo;
 }
 
 export default ServiceInfo;

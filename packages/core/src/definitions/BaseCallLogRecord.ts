@@ -42,7 +42,6 @@ interface BaseCallLogRecord {
   /**
    * The type of call transport. 'PSTN' indicates that a call leg was initiated
    *  from the PSTN network provider; 'VoIP' - from an RC phone.
-   * Required
    */
   transport?: 'PSTN' | 'VoIP';
 

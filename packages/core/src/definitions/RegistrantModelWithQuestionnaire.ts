@@ -58,6 +58,11 @@ interface RegistrantModelWithQuestionnaire {
   cancellationUri?: string;
 
   /**
+   * Indicates if the registrant was registered to on-demand webinar
+   */
+  registeredPostWebinar?: boolean;
+
+  /**
    * Visitor ID passed from registration page
    */
   visitorId?: string;

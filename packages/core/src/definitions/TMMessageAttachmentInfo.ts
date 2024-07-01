@@ -1,6 +1,7 @@
 import type TMAttachmentAuthorInfo from './TMAttachmentAuthorInfo';
 import type TMAttachmentFieldsInfo from './TMAttachmentFieldsInfo';
 import type TMAttachmentFootnoteInfo from './TMAttachmentFootnoteInfo';
+import type EventRecurrenceInfo from './EventRecurrenceInfo';
 
 interface TMMessageAttachmentInfo {
   /**
@@ -82,27 +83,8 @@ interface TMMessageAttachmentInfo {
   allDay?: boolean;
 
   /**
-   * Event recurrence settings.
    */
-  recurrence?: 'None' | 'Day' | 'Weekday' | 'Week' | 'Month' | 'Year';
-
-  /**
-   * Condition of ending an event
-   */
-  endingCondition?: 'None' | 'Count' | 'Date';
-
-  /**
-   * Count of event iterations. For periodic events only. Value range is 1 - 10.
-   *  Must be specified if `endingCondition` is `Count`
-   * Format: int32
-   */
-  endingAfter?: number;
-
-  /**
-   * Iterations ending datetime for periodic events in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format
-   * Format: date-time
-   */
-  endingOn?: string;
+  recurrence?: EventRecurrenceInfo;
 
   /**
    * Color of Event title, including its presentation in Calendar; or the color of the side border of an interactive message of a Card

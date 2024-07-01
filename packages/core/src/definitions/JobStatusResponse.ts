@@ -1,3 +1,5 @@
+import type JobStatusResponseResponse from './JobStatusResponseResponse';
+
 interface JobStatusResponse {
   /**
    */
@@ -17,6 +19,14 @@ interface JobStatusResponse {
    * Format: date-time
    */
   expirationTime?: string;
+
+  /**
+   */
+  status?: 'Success' | 'Fail';
+
+  /**
+   */
+  response?: JobStatusResponseResponse;
 }
 
 export default JobStatusResponse;

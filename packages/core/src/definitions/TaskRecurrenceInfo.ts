@@ -1,12 +1,16 @@
-interface TMUpdateTaskRequestRecurrence {
+/**
+ * Task information
+ */
+interface TaskRecurrenceInfo {
   /**
-   * Task recurrence settings.
+   * Recurrence settings of a task. None for non-periodic tasks
    * Default: None
    */
   schedule?: 'None' | 'Daily' | 'Weekdays' | 'Weekly' | 'Monthly' | 'Yearly';
 
   /**
-   * Task ending condition
+   * Ending condition of a task
+   * Default: None
    */
   endingCondition?: 'None' | 'Count' | 'Date';
 
@@ -19,10 +23,11 @@ interface TMUpdateTaskRequestRecurrence {
   endingAfter?: number;
 
   /**
-   * End date of a periodic task in UTC time zone
+   * End date of a periodic task in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
+   *  format, UTC time zone
    * Format: date-time
    */
   endingOn?: string;
 }
 
-export default TMUpdateTaskRequestRecurrence;
+export default TaskRecurrenceInfo;

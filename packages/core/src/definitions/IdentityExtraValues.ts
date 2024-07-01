@@ -1,5 +1,5 @@
 /**
- * Additional data to store along the identity.
+ * Additional data to store along with identity
  */
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 interface IdentityExtraValues {}

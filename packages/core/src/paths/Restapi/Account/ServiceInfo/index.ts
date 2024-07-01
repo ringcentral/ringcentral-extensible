@@ -20,7 +20,7 @@ class Index {
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/service-info
    * Rate Limit Group: Light
    * App Permission: ReadAccounts
-   * User Permission: ReadServicePlanInfo
+   * User Permission: ReadCompanyInfo
    */
   public async get(restRequestConfig?: RestRequestConfig): Promise<AccountServiceInfo> {
     const r = await this.rc.get<AccountServiceInfo>(this.path(), undefined, restRequestConfig);

@@ -1,24 +1,24 @@
 /**
- * Query parameters for operation socMsgListIdentities
+ * Query parameters for operation listSocialMessagingIdentities
  */
-interface SocMsgListIdentitiesParameters {
+interface ListSocialMessagingIdentitiesParameters {
   /**
-   * Filter based on the specified sourceId.
+   * Filter based on the specified `sourceId`
    */
   sourceId?: string;
 
   /**
-   * Filter based on the specified identityGroupIds (separated by commas).
+   * Filter based on the specified `identityGroupIds` (separated by commas)
    */
   identityGroupIds?: string[];
 
   /**
-   * Filter based on the specified userId.
+   * Filter based on the specified `userId`
    */
   userId?: string;
 
   /**
-   * Filter based on the specified uuid.
+   * Filter based on the specified `uuid`
    */
   uuid?: string;
 
@@ -47,4 +47,4 @@ interface SocMsgListIdentitiesParameters {
   perPage?: number;
 }
 
-export default SocMsgListIdentitiesParameters;
+export default ListSocialMessagingIdentitiesParameters;

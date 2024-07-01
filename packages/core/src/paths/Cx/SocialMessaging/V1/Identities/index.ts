@@ -1,4 +1,4 @@
-import type SocMsgListIdentitiesParameters from '../../../../../definitions/SocMsgListIdentitiesParameters';
+import type ListSocialMessagingIdentitiesParameters from '../../../../../definitions/ListSocialMessagingIdentitiesParameters';
 import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
 
 class Index {
@@ -18,15 +18,14 @@ class Index {
     return `${this._parent.path()}/identities`;
   }
   /**
-   * List identities by creation date. The default order is descending.
+   * Returns a list of identities filtered by creation date. The default order is descending.
    *
-   * The account context of this request is determined by the RC Account Id associated with the access token provided
-   * in the Authorization header.
+   * The account context of this request is determined by the RC Account ID associated with
+   * the access token provided in the Authorization header.
    *
-   * The query parameters provided shall be considered an AND operation to filter the list.
+   * The query parameters provided will be considered an AND operation to filter the list.
    *
-   * A query parameter not specified or a query parameter provided with no value is treated as not required for
-   * filtering the list.
+   * A query parameter which is not specified or provided with the null value will be ignored.
    *
    * HTTP Method: get
    * Endpoint: /cx/social-messaging/v1/identities
@@ -34,7 +33,7 @@ class Index {
    * App Permission: SocialMessaging
    */
   public async list(
-    queryParams?: SocMsgListIdentitiesParameters,
+    queryParams?: ListSocialMessagingIdentitiesParameters,
     restRequestConfig?: RestRequestConfig,
   ): Promise<string> {
     const r = await this.rc.get<string>(this.path(false), queryParams, restRequestConfig);
@@ -42,8 +41,7 @@ class Index {
   }
 
   /**
-   * Renders an identity from given id.
-   *
+   * Returns an identity by ID specified in path.
    * HTTP Method: get
    * Endpoint: /cx/social-messaging/v1/identities/{identityId}
    * Rate Limit Group: Light

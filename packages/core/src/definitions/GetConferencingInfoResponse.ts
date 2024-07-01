@@ -35,6 +35,12 @@ interface GetConferencingInfoResponse {
   phoneNumber?: string;
 
   /**
+   * Link to a branded support page
+   * Example: http://success.ringcentral.com
+   */
+  supportUri?: string;
+
+  /**
    * Short URL leading to the service web page Tap to Join for audio
    *  conference bridge
    * Format: uri

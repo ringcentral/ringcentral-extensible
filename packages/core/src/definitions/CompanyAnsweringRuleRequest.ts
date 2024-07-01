@@ -1,6 +1,7 @@
 import type CompanyAnsweringRuleCallersInfoRequest from './CompanyAnsweringRuleCallersInfoRequest';
 import type CompanyAnsweringRuleCalledNumberInfo from './CompanyAnsweringRuleCalledNumberInfo';
 import type CompanyAnsweringRuleScheduleInfoRequest from './CompanyAnsweringRuleScheduleInfoRequest';
+import type CompanyAnsweringRuleExtensionInfoRequest from './CompanyAnsweringRuleExtensionInfoRequest';
 import type GreetingInfo from './GreetingInfo';
 
 interface CompanyAnsweringRuleRequest {
@@ -41,7 +42,7 @@ interface CompanyAnsweringRuleRequest {
 
   /**
    */
-  extension?: CompanyAnsweringRuleCallersInfoRequest;
+  extension?: CompanyAnsweringRuleExtensionInfoRequest;
 
   /**
    * Greetings applied for an answering rule; only predefined greetings can be applied, see Dictionary Greeting List

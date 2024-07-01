@@ -1,4 +1,5 @@
 import type AuthorizeRequest from '../../../../definitions/AuthorizeRequest';
+import type AuthorizeParameters from '../../../../definitions/AuthorizeParameters';
 import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
 
 class Index {
@@ -13,18 +14,32 @@ class Index {
     return `${this._parent.path()}/authorize`;
   }
   /**
-   * Performs OAuth 2.0 authorization (GET version)
+   * Performs Authentication of the End-User by sending the User Agent to the Authorization Server's
+   * Authorization Endpoint for Authentication and Authorization,
+   * using request parameters defined by OAuth 2.0 [RFC-6749](https://datatracker.ietf.org/doc/html/rfc6749#section-3.1)
+   * and additional parameters and parameter values defined by
+   * [OpenID Connect Core 1.0](https://openid.net/specs/openid-connect-core-1_0.html#AuthorizationEndpoint).
+   *
+   * This is the version that uses HTTP `GET` method.
+   *
    * HTTP Method: get
    * Endpoint: /restapi/oauth/authorize
    * Rate Limit Group: Auth
    */
-  public async get(restRequestConfig?: RestRequestConfig): Promise<string> {
-    const r = await this.rc.get<string>(this.path(), undefined, restRequestConfig);
+  public async get(queryParams?: AuthorizeParameters, restRequestConfig?: RestRequestConfig): Promise<string> {
+    const r = await this.rc.get<string>(this.path(), queryParams, restRequestConfig);
     return r.data;
   }
 
   /**
-   * Performs OAuth 2.0 authorization (POST version)
+   * Performs Authentication of the End-User by sending the User Agent to the Authorization Server's
+   * Authorization Endpoint for Authentication and Authorization,
+   * using request parameters defined by OAuth 2.0 [RFC-6749](https://datatracker.ietf.org/doc/html/rfc6749#section-3.1)
+   * and additional parameters and parameter values defined by
+   * [OpenID Connect Core 1.0](https://openid.net/specs/openid-connect-core-1_0.html#AuthorizationEndpoint).
+   *
+   * This is the version that uses HTTP `POST` method.
+   *
    * HTTP Method: post
    * Endpoint: /restapi/oauth/authorize
    * Rate Limit Group: Auth

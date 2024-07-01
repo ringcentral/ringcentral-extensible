@@ -1,3 +1,4 @@
+import MessageStoreTemplates from './MessageStoreTemplates';
 import NotificationSettings from './NotificationSettings';
 import CallQueuePresence from './CallQueuePresence';
 import VideoConfiguration from './VideoConfiguration';
@@ -286,6 +287,10 @@ class Index {
 
   public notificationSettings(): NotificationSettings {
     return new NotificationSettings(this);
+  }
+
+  public messageStoreTemplates(templateId: string | null = null): MessageStoreTemplates {
+    return new MessageStoreTemplates(this, templateId);
   }
 }
 export default Index;

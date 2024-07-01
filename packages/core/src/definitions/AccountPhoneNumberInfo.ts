@@ -1,3 +1,4 @@
+import type ContactCenterProvider from './ContactCenterProvider';
 import type AccountPhoneNumberInfoExtension from './AccountPhoneNumberInfoExtension';
 
 interface AccountPhoneNumberInfo {
@@ -52,6 +53,10 @@ interface AccountPhoneNumberInfo {
   /**
    */
   byocNumber?: boolean;
+
+  /**
+   */
+  contactCenterProvider?: ContactCenterProvider;
 
   /**
    * Status of a phone number. If the value is 'Normal', the phone number is ready to be used. Otherwise, it is an external number not yet ported to RingCentral

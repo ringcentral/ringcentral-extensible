@@ -90,6 +90,11 @@ interface MessageStoreCallerInfoResponseTo {
    *  sending/receiving SMS
    */
   phoneNumber?: string;
+
+  /**
+   * Internal identifier of a message recipient
+   */
+  recipientId?: string;
 }
 
 export default MessageStoreCallerInfoResponseTo;

@@ -1,4 +1,5 @@
 import type AssignPhoneNumberRequestExtension from './AssignPhoneNumberRequestExtension';
+import type ContactCenterProvider from './ContactCenterProvider';
 
 interface AssignPhoneNumberRequest {
   /**
@@ -10,7 +11,7 @@ interface AssignPhoneNumberRequest {
    * Target usage type of phone number (only listed values are supported)
    * Required
    */
-  usageType?: 'MainCompanyNumber' | 'CompanyNumber' | 'DirectNumber' | 'PhoneLine';
+  usageType?: 'MainCompanyNumber' | 'CompanyNumber' | 'DirectNumber' | 'PhoneLine' | 'ContactCenterNumber';
 
   /**
    */
@@ -19,6 +20,10 @@ interface AssignPhoneNumberRequest {
   /**
    */
   costCenterId?: string;
+
+  /**
+   */
+  contactCenterProvider?: ContactCenterProvider;
 }
 
 export default AssignPhoneNumberRequest;

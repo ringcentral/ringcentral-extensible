@@ -1,5 +1,10 @@
 interface FaxResponseTo {
   /**
+   * Internal identifier of a fax recipient
+   */
+  recipientId?: string;
+
+  /**
    * Phone number in E.164 (with '+' sign) format
    * Example: +18661234567
    */
@@ -19,6 +24,14 @@ interface FaxResponseTo {
    *  the 'Sent' status is returned
    */
   messageStatus?: 'Queued' | 'Sent' | 'Delivered' | 'DeliveryFailed' | 'SendingFailed' | 'Received';
+
+  /**
+   * Contains party location (city, state) if one can be determined
+   *  from phoneNumber. This property is filled only when phoneNumber is not
+   *  empty and server can calculate location information from it (for example,
+   *  this information is unavailable for US toll-free numbers)
+   */
+  location?: string;
 }
 
 export default FaxResponseTo;

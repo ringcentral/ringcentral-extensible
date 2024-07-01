@@ -34,6 +34,11 @@ interface RegistrantMinimalModel {
    * Example: https://abcde12345.webinar.ringcentral.com/register?jlt=iuyef77fsj473wn10ashjfk34&action=cancel
    */
   cancellationUri?: string;
+
+  /**
+   * Indicates if the registrant was registered to on-demand webinar
+   */
+  registeredPostWebinar?: boolean;
 }
 
 export default RegistrantMinimalModel;

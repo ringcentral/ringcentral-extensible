@@ -1,23 +1,20 @@
+/**
+ * Token endpoint request parameters used in the "Guest" authorization flow with the `guest` grant type
+ */
 interface GetTokenRequest {
   /**
-   * For `password` grant type only. User login name: email or phone number in E.164 format
+   * Client assertion type for the `client_secret_jwt` or `private_key_jwt` client authentication types,
+   *  as defined by [RFC-7523](https://datatracker.ietf.org/doc/html/rfc7523#section-2.2).
+   *  This parameter is mandatory if the client authentication is required and a client decided to use one of these authentication types
    */
-  username?: string;
+  client_assertion_type?: 'urn:ietf:params:oauth:client-assertion-type:jwt-bearer';
 
   /**
-   * For `password` grant type only. User's password
-   * Format: password
+   * Client assertion (JWT) for the `client_secret_jwt` or `private_key_jwt` client authentication types,
+   *  as defined by [RFC-7523](https://datatracker.ietf.org/doc/html/rfc7523#section-2.2).
+   *  This parameter is mandatory if the client authentication is required and a client decided to use one of these authentication types
    */
-  password?: string;
-
-  /**
-   * For `password` grant type only. Optional. Extension short number. If company number
-   *  is specified as a username, and extension is not specified, the
-   *  server will attempt to authenticate client as main company administrator
-   *
-   *  DEPRECATED: use extension number embedded into username string like `+16501234567*101`
-   */
-  extension?: string;
+  client_assertion?: string;
 
   /**
    * Grant type
@@ -38,17 +35,25 @@ interface GetTokenRequest {
     | 'ivr_pin';
 
   /**
-   * For `authorization_code` grant type only. User's authorization code
+   * The list of application permissions (OAuth scopes) requested.
+   *  By default, it includes all permissions configured on
+   *  the client application registration
    */
-  code?: string;
+  scope?: string;
 
   /**
-   * For `authorization_code` grant type only. This is a callback URI which determines where the response
-   *  is sent. The value of this parameter must exactly match one of
-   *  the URIs you have provided for your app upon registration
-   * Format: uri
+   * The registered identifier of a client application.
+   *  Used to identify a client ONLY if the client authentication is not required and
+   *  corresponding credentials are not provided with this request
+   * Example: AZwEVwGEcfGet2PCouA7K6
    */
-  redirect_uri?: string;
+  client_id?: string;
+
+  /**
+   * The unique identifier of a client application instance. If not
+   *  specified, the derived or auto-generated value will be used
+   */
+  endpoint_id?: string;
 
   /**
    * Access token lifetime in seconds
@@ -68,72 +73,110 @@ interface GetTokenRequest {
   refresh_token_ttl?: number;
 
   /**
-   * List of application permissions to be used with access token.
-   *  By default, the scope includes all permissions configured during
-   *  the application registration phase
+   * For `otp` grant type only.
+   *  One-time password code
+   * Required
    */
-  scope?: string;
+  code?: string;
 
   /**
-   * For `refresh_token` grant type only. Previously issued refresh token.
+   * For `authorization_code` grant type only. This is a callback URI which determines where the response
+   *  is sent. The value of this parameter must exactly match one of
+   *  the URIs you have provided for your app upon registration
+   * Format: uri
    */
-  refresh_token?: string;
+  redirect_uri?: string;
 
   /**
-   * The unique identifier of a client application instance. If not
-   *  specified, the derived or auto generated value will be used
-   */
-  endpoint_id?: string;
-
-  /**
-   */
-  pin?: string;
-
-  /**
-   * OAuth client identifier (if not specified via `Authorization` header)
-   */
-  client_id?: string;
-
-  /**
-   */
-  account_id?: string;
-
-  /**
-   */
-  partner_account_id?: string;
-
-  /**
-   * Client assertion type
-   */
-  client_assertion_type?: string;
-
-  /**
-   * Client assertion
-   */
-  client_assertion?: string;
-
-  /**
-   * For `jwt_bearer` grant type only. Assertion
-   */
-  assertion?: string;
-
-  /**
-   */
-  brand_id?: string;
-
-  /**
-   * PKCE code verifier
+   * For `authorization_code` grant type only.
+   *  The code verifier as defined by  the PKCE specification -
+   *  [RFC-7636 "Proof Key for Code Exchange by OAuth Public Clients"](https://datatracker.ietf.org/doc/html/rfc7636)
    */
   code_verifier?: string;
 
   /**
+   * For `password` grant type only. User login name: email or phone number in E.164 format
+   * Required
+   */
+  username?: string;
+
+  /**
+   * For `password` grant type only. User's password
+   * Required
+   * Format: password
+   */
+  password?: string;
+
+  /**
+   * For `password` grant type only. Optional. Extension short number. If a company number
+   *  is specified as a username, and extension is not specified, the
+   *  server will attempt to authenticate client as main company administrator
+   *
+   *  DEPRECATED: use extension number embedded into username string like `+16501234567*101`
+   */
+  extension?: string;
+
+  /**
+   * IVR pin for pin-based authentication.
+   *
+   *  DEPRECATED: use a dedicated `ivr_pin` grant type instead
+   */
+  pin?: string;
+
+  /**
+   * For `urn:ietf:params:oauth:grant-type:jwt-bearer` or `partner_jwt` grant types only.
+   *  Authorization grant assertion (JWT)
+   *  as defined by [RFC-7523](https://datatracker.ietf.org/doc/html/rfc7523#section-2.1).
+   * Required
+   */
+  assertion?: string;
+
+  /**
+   * For `refresh_token` grant type only. Previously issued refresh token.
+   * Required
+   */
+  refresh_token?: string;
+
+  /**
+   * For `ivr_pin` grant type only. User's IVR pin.
+   * Required
+   */
+  ivr_pin?: string;
+
+  /**
+   * For `urn:ietf:params:oauth:grant-type:device_code` grant type only.
+   *  The device verification code as defined by [RFC-8628](https://datatracker.ietf.org/doc/html/rfc8628#section-3.4)
+   * Required
    */
   device_code?: string;
 
   /**
-   * For `ivr_pin` grant type only. IVR pin.
+   * RingCentral Brand identifier.
+   * Required
    */
-  ivr_pin?: string;
+  brand_id?: string;
+
+  /**
+   * RingCentral internal account ID
+   * Required
+   */
+  account_id?: string;
+
+  /**
+   * The ID of the account on RingCentral partner's side
+   * Required
+   */
+  partner_account_id?: string;
+
+  /**
+   * Resource type for the guest access.
+   */
+  resource_type?: string;
+
+  /**
+   * Resource URL for the guest access.
+   */
+  resource?: string;
 }
 
 export default GetTokenRequest;

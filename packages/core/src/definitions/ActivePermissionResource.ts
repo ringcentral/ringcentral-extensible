@@ -12,7 +12,7 @@ interface ActivePermissionResource {
 
   /**
    */
-  scope?: (
+  scopes?: (
     | 'Account'
     | 'AllExtensions'
     | 'Federation'

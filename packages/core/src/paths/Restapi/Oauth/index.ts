@@ -1,5 +1,3 @@
-import SessionInfo from './SessionInfo';
-import Introspect from './Introspect';
 import Authorize from './Authorize';
 import Revoke from './Revoke';
 import Token from './Token';
@@ -27,14 +25,6 @@ class Index {
 
   public authorize(): Authorize {
     return new Authorize(this);
-  }
-
-  public introspect(): Introspect {
-    return new Introspect(this);
-  }
-
-  public sessionInfo(): SessionInfo {
-    return new SessionInfo(this);
   }
 }
 export default Index;

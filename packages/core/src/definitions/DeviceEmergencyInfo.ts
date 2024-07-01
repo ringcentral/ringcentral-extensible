@@ -1,4 +1,4 @@
-import type EmergencyAddressInfo from './EmergencyAddressInfo';
+import type CommonEmergencyLocationAddressInfoDefault from './CommonEmergencyLocationAddressInfoDefault';
 import type DeviceEmergencyLocationInfo from './DeviceEmergencyLocationInfo';
 
 /**
@@ -7,7 +7,7 @@ import type DeviceEmergencyLocationInfo from './DeviceEmergencyLocationInfo';
 interface DeviceEmergencyInfo {
   /**
    */
-  address?: EmergencyAddressInfo;
+  address?: CommonEmergencyLocationAddressInfoDefault;
 
   /**
    */

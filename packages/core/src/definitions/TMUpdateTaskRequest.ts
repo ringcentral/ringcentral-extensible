@@ -1,5 +1,5 @@
 import type TMUpdateTaskRequestAssignees from './TMUpdateTaskRequestAssignees';
-import type TMUpdateTaskRequestRecurrence from './TMUpdateTaskRequestRecurrence';
+import type TaskRecurrenceInfo from './TaskRecurrenceInfo';
 import type TMAttachmentInfo from './TMAttachmentInfo';
 
 interface TMUpdateTaskRequest {
@@ -44,7 +44,7 @@ interface TMUpdateTaskRequest {
 
   /**
    */
-  recurrence?: TMUpdateTaskRequestRecurrence;
+  recurrence?: TaskRecurrenceInfo;
 
   /**
    */

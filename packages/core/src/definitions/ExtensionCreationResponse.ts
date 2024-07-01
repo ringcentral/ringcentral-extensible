@@ -111,6 +111,7 @@ interface ExtensionCreationResponse {
     | 'User'
     | 'VirtualUser'
     | 'DigitalUser'
+    | 'FlexibleUser'
     | 'Department'
     | 'Announcement'
     | 'Voicemail'

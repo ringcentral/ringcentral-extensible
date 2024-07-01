@@ -37,7 +37,15 @@ interface RoleResource {
   /**
    * Specifies resource for permission
    */
-  scope?: 'Account' | 'AllExtensions' | 'Federation' | 'NonUserExtensions' | 'RoleBased' | 'Self' | 'UserExtensions';
+  scope?:
+    | 'Account'
+    | 'AllExtensions'
+    | 'Federation'
+    | 'Group'
+    | 'NonUserExtensions'
+    | 'RoleBased'
+    | 'Self'
+    | 'UserExtensions';
 
   /**
    */

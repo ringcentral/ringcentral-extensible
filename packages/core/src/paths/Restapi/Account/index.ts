@@ -1,6 +1,7 @@
 import EmergencyAddressAutoUpdate from './EmergencyAddressAutoUpdate';
 import MessageStoreConfiguration from './MessageStoreConfiguration';
 import AddressBookBulkUpload from './AddressBookBulkUpload';
+import MessageStoreTemplates from './MessageStoreTemplates';
 import CallMonitoringGroups from './CallMonitoringGroups';
 import ExtensionBulkUpdate from './ExtensionBulkUpdate';
 import MessageStoreReport from './MessageStoreReport';
@@ -200,6 +201,10 @@ class Index {
 
   public callMonitoringGroups(groupId: string | null = null): CallMonitoringGroups {
     return new CallMonitoringGroups(this, groupId);
+  }
+
+  public messageStoreTemplates(templateId: string | null = null): MessageStoreTemplates {
+    return new MessageStoreTemplates(this, templateId);
   }
 
   public addressBookBulkUpload(): AddressBookBulkUpload {

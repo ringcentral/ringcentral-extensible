@@ -1,6 +1,6 @@
 import type TMTaskInfoCreator from './TMTaskInfoCreator';
 import type TMTaskInfoAssignees from './TMTaskInfoAssignees';
-import type TMTaskInfoRecurrence from './TMTaskInfoRecurrence';
+import type TaskRecurrenceInfo from './TaskRecurrenceInfo';
 import type TaskAttachment from './TaskAttachment';
 
 interface TMTaskInfo {
@@ -90,9 +90,8 @@ interface TMTaskInfo {
   description?: string;
 
   /**
-   * Task details
    */
-  recurrence?: TMTaskInfoRecurrence;
+  recurrence?: TaskRecurrenceInfo;
 
   /**
    */
