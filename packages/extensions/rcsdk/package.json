@@ -19,6 +19,6 @@
   },
   "devDependencies": {
     "@rc-ex/core": "file:../../core",
-    "@ringcentral/sdk": "^5.0.1"
+    "@ringcentral/sdk": "^5.0.3"
   }
 }
