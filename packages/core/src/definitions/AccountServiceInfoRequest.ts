@@ -5,7 +5,7 @@ import type TargetServicePlanInfo from './TargetServicePlanInfo';
 import type BillingPlanInfo from './BillingPlanInfo';
 import type ServiceFeatureInfo from './ServiceFeatureInfo';
 import type AccountLimits from './AccountLimits';
-import type PackageInfo from './PackageInfo';
+import type BillingPackageInfo from './BillingPackageInfo';
 
 /**
  * Account service information, including brand, service plan and billing plan
@@ -54,7 +54,7 @@ interface AccountServiceInfoRequest {
 
   /**
    */
-  package?: PackageInfo;
+  package?: BillingPackageInfo;
 }
 
 export default AccountServiceInfoRequest;

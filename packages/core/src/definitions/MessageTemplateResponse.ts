@@ -1,4 +1,4 @@
-import type TemplateInfo from './TemplateInfo';
+import type MessageTemplateInfo from './MessageTemplateInfo';
 import type Site from './Site';
 
 interface MessageTemplateResponse {
@@ -14,7 +14,7 @@ interface MessageTemplateResponse {
 
   /**
    */
-  body?: TemplateInfo;
+  body?: MessageTemplateInfo;
 
   /**
    * Specifies if a template is available on a user (Personal) or a company (Company) level

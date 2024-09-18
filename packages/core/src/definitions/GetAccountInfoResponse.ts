@@ -52,9 +52,9 @@ interface GetAccountInfoResponse {
   signupInfo?: SignupInfoResource;
 
   /**
-   * Status of the current account
+   * Status of an account
    */
-  status?: 'Initial' | 'Confirmed' | 'Unconfirmed' | 'Disabled';
+  status?: 'Initial' | 'Unconfirmed' | 'Confirmed' | 'Disabled';
 
   /**
    */

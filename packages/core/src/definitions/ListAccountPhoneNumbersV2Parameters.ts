@@ -51,7 +51,9 @@ interface ListAccountPhoneNumbersV2Parameters {
   )[];
 
   /**
-   * Status of a phone number. If the value is 'Normal', the phone number is ready to be used. Otherwise, it is an external number not yet ported to RingCentral
+   * Status of a phone number. If the value is `Normal`, the phone
+   *  number is ready to be used. Otherwise, it is an external number not yet
+   *  ported to RingCentral
    */
   status?: 'Normal' | 'Pending' | 'PortedIn' | 'Temporary' | 'Unknown';
 

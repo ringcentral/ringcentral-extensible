@@ -15,7 +15,9 @@ interface AccountStatusInfo {
   comment?: string;
 
   /**
-   * Date after which the account will get deleted. Parameter can be used to overwrite default retention period
+   * Date after which the disabled account will get deleted.
+   *  Parameter can be used to overwrite default retention period
+   *  (that is 30 days after disabling the account)
    * Format: date-time
    * Example: 2023-03-26T11:30:45.940Z
    */

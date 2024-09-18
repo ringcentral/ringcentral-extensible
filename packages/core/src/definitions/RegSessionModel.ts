@@ -38,6 +38,13 @@ interface RegSessionModel {
   registrantCount?: number;
 
   /**
+   * The current number of post webinar registrants
+   * Format: int32
+   * Example: 10
+   */
+  postWebinarRegistrantCount?: number;
+
+  /**
    * Indicates that there are non-test registrants
    * Required
    * Example: true

@@ -18,7 +18,7 @@ class Index {
     return `${this._parent.path()}/identities`;
   }
   /**
-   * Returns a list of identities filtered by creation date. The default order is descending.
+   * Returns a list of identities ordered by creation date. The default order is descending.
    *
    * The account context of this request is determined by the RC Account ID associated with
    * the access token provided in the Authorization header.

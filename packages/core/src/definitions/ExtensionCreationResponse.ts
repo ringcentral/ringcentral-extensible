@@ -93,9 +93,7 @@ interface ExtensionCreationResponse {
   site?: ProvisioningSiteInfo;
 
   /**
-   * Extension current state. If 'Unassigned' is specified, then
-   *  extensions without `extensionNumber` are returned. If not specified, then
-   *  all extensions are returned
+   * Extension status
    */
   status?: 'Enabled' | 'Disabled' | 'Frozen' | 'NotActivated' | 'Unassigned';
 

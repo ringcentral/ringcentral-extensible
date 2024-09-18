@@ -41,6 +41,17 @@ interface RegSessionModelSettings {
    * Indicates that recording exists for the session.
    */
   recordingExist?: boolean;
+
+  /**
+   * Indicates that post webinar registration will be opened automatically when webinar ends.
+   */
+  autoOpenPostWebinarRegistration?: boolean;
+
+  /**
+   * The time after which the post webinar will be closed automatically.
+   * Format: date-time
+   */
+  postWebinarRegistrationClosingTime?: string;
 }
 
 export default RegSessionModelSettings;

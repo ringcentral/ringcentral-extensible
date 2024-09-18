@@ -17,6 +17,7 @@ interface ListEmergencyLocationsParameters {
   searchString?: string;
 
   /**
+   * Emergency address status
    */
   addressStatus?: 'Valid' | 'Invalid' | 'Provisioning';
 

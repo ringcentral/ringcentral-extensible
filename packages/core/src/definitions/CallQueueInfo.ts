@@ -1,3 +1,5 @@
+import type SiteBasicInfo from './SiteBasicInfo';
+
 interface CallQueueInfo {
   /**
    * Link to a call queue
@@ -21,7 +23,7 @@ interface CallQueueInfo {
   name?: string;
 
   /**
-   * Call queue status
+   * Group extension status
    */
   status?: 'Enabled' | 'Disabled' | 'NotActivated';
 
@@ -29,6 +31,10 @@ interface CallQueueInfo {
    * Indicates whether it is an emergency call queue extension or not
    */
   subType?: 'Emergency';
+
+  /**
+   */
+  site?: SiteBasicInfo;
 }
 
 export default CallQueueInfo;

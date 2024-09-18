@@ -38,6 +38,15 @@ interface CreateSiteRequest {
   operator?: SiteOperatorReference;
 
   /**
+   * Site access status for cross-site limitation
+   */
+  siteAccess?: 'Limited' | 'Unlimited';
+
+  /**
+   */
+  accessibleSiteIds?: string[];
+
+  /**
    * Site code value
    */
   code?: string;

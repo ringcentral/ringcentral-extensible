@@ -1,5 +1,5 @@
 import type MessageBatchResponse from './MessageBatchResponse';
-import type PagingResource from './PagingResource';
+import type NonEnumeratedPagingModel from './NonEnumeratedPagingModel';
 
 /**
  * The list of batches retrieved for an account and other filter criteria such as fromPhoneNumber, date specified in the request.
@@ -12,7 +12,7 @@ interface BatchListResponse {
 
   /**
    */
-  paging?: PagingResource;
+  paging?: NonEnumeratedPagingModel;
 }
 
 export default BatchListResponse;

@@ -22,6 +22,11 @@ interface ListCallMonitoringGroupsParameters {
    *  group within the result
    */
   memberExtensionId?: string;
+
+  /**
+   * Internal identifier of a site
+   */
+  siteId?: string;
 }
 
 export default ListCallMonitoringGroupsParameters;

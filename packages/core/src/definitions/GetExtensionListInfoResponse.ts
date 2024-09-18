@@ -43,14 +43,12 @@ interface GetExtensionListInfoResponse {
   profileImage?: ProfileImageInfo;
 
   /**
-   * Extension current state. If 'Unassigned' is specified, then
-   *  extensions without `extensionNumber` are returned. If not specified,
-   *  then all extensions are returned
+   * Extension status
    */
   status?: 'Enabled' | 'Disabled' | 'Frozen' | 'NotActivated' | 'Unassigned';
 
   /**
-   * Extension type. Please note that legacy 'Department' extension type
+   * Extension type. Please note that legacy `Department` extension type
    *  corresponds to 'Call Queue' extensions in modern RingCentral product
    *  terminology
    */
@@ -103,6 +101,13 @@ interface GetExtensionListInfoResponse {
   /**
    */
   costCenter?: CostCenterInfo;
+
+  /**
+   * Extension creation date/time, in ISO 8601 format
+   * Format: date-time
+   * Example: 2024-06-06T07:01:14.123Z
+   */
+  creationTime?: string;
 }
 
 export default GetExtensionListInfoResponse;

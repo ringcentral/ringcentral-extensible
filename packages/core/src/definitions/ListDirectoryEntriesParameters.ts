@@ -3,6 +3,12 @@
  */
 interface ListDirectoryEntriesParameters {
   /**
+   * Flag to enable cross-site limitation checking
+   * Example: true
+   */
+  accessibleSitesOnly?: boolean;
+
+  /**
    * If `true` then contacts of all accounts in federation are returned. If `false` then only contacts of the current account are returned, and account section is eliminated in this case
    * Default: true
    */

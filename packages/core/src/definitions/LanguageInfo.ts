@@ -31,7 +31,8 @@ interface LanguageInfo {
   localeCode?: string;
 
   /**
-   * Country code according to the ISO standard, see [ISO 3166](https://www.iso.org/iso-3166-country-codes.html)
+   * Two-letter country code in [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) format
+   * Example: US
    */
   isoCode?: string;
 

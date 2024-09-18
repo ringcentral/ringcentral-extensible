@@ -1,4 +1,4 @@
-import type AnsweringRuleInfo from './AnsweringRuleInfo';
+import type CallHandlingRuleInfo from './CallHandlingRuleInfo';
 import type EnumeratedPagingModel from './EnumeratedPagingModel';
 import type PageNavigationModel from './PageNavigationModel';
 
@@ -13,7 +13,7 @@ interface UserAnsweringRuleList {
   /**
    * List of answering rules
    */
-  records?: AnsweringRuleInfo[];
+  records?: CallHandlingRuleInfo[];
 
   /**
    */

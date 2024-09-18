@@ -60,9 +60,9 @@ interface ExtensionCreationRequest {
   site?: SiteInfo;
 
   /**
-   * Extension current state
+   * Extension status
    */
-  status?: 'Enabled' | 'Disabled' | 'NotActivated' | 'Unassigned' | 'Frozen';
+  status?: 'Enabled' | 'Disabled' | 'Frozen' | 'NotActivated' | 'Unassigned';
 
   /**
    */

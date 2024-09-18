@@ -45,6 +45,11 @@ interface SiteInfo {
   regionalSettings?: RegionalSettings;
 
   /**
+   * Site access status for cross-site limitation
+   */
+  siteAccess?: 'Limited' | 'Unlimited';
+
+  /**
    */
   operator?: OperatorInfo;
 

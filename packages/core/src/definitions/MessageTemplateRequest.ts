@@ -1,4 +1,4 @@
-import type TemplateInfo from './TemplateInfo';
+import type MessageTemplateInfo from './MessageTemplateInfo';
 import type Site from './Site';
 
 interface MessageTemplateRequest {
@@ -11,7 +11,7 @@ interface MessageTemplateRequest {
   /**
    * Required
    */
-  body?: TemplateInfo;
+  body?: MessageTemplateInfo;
 
   /**
    */

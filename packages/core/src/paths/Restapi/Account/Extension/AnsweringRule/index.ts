@@ -1,5 +1,5 @@
 import type UpdateAnsweringRuleRequest from '../../../../../definitions/UpdateAnsweringRuleRequest';
-import type AnsweringRuleInfo from '../../../../../definitions/AnsweringRuleInfo';
+import type CallHandlingRuleInfo from '../../../../../definitions/CallHandlingRuleInfo';
 import type ReadAnsweringRuleParameters from '../../../../../definitions/ReadAnsweringRuleParameters';
 import type CustomAnsweringRuleInfo from '../../../../../definitions/CustomAnsweringRuleInfo';
 import type CreateAnsweringRuleRequest from '../../../../../definitions/CreateAnsweringRuleRequest';
@@ -71,11 +71,11 @@ class Index {
   public async get(
     queryParams?: ReadAnsweringRuleParameters,
     restRequestConfig?: RestRequestConfig,
-  ): Promise<AnsweringRuleInfo> {
+  ): Promise<CallHandlingRuleInfo> {
     if (this.ruleId === null) {
       throw new Error('ruleId must be specified.');
     }
-    const r = await this.rc.get<AnsweringRuleInfo>(this.path(), queryParams, restRequestConfig);
+    const r = await this.rc.get<CallHandlingRuleInfo>(this.path(), queryParams, restRequestConfig);
     return r.data;
   }
 
@@ -90,11 +90,11 @@ class Index {
   public async put(
     updateAnsweringRuleRequest: UpdateAnsweringRuleRequest,
     restRequestConfig?: RestRequestConfig,
-  ): Promise<AnsweringRuleInfo> {
+  ): Promise<CallHandlingRuleInfo> {
     if (this.ruleId === null) {
       throw new Error('ruleId must be specified.');
     }
-    const r = await this.rc.put<AnsweringRuleInfo>(
+    const r = await this.rc.put<CallHandlingRuleInfo>(
       this.path(),
       updateAnsweringRuleRequest,
       undefined,

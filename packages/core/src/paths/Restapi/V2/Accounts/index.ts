@@ -3,6 +3,7 @@ import SendWelcomeEmail from './SendWelcomeEmail';
 import BatchProvisioning from './BatchProvisioning';
 import DeviceInventory from './DeviceInventory';
 import PhoneNumbers from './PhoneNumbers';
+import CostCenters from './CostCenters';
 import Extensions from './Extensions';
 import Devices from './Devices';
 import type AccountInfo from '../../../../definitions/AccountInfo';
@@ -46,6 +47,10 @@ class Index {
 
   public extensions(): Extensions {
     return new Extensions(this);
+  }
+
+  public costCenters(): CostCenters {
+    return new CostCenters(this);
   }
 
   public phoneNumbers(phoneNumberId: string | null = null): PhoneNumbers {

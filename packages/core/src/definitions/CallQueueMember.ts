@@ -1,4 +1,4 @@
-import type SiteResource from './SiteResource';
+import type SiteBasicInfo from './SiteBasicInfo';
 
 /**
  * Call queue member information
@@ -21,7 +21,7 @@ interface CallQueueMember {
 
   /**
    */
-  site?: SiteResource;
+  site?: SiteBasicInfo;
 }
 
 export default CallQueueMember;

@@ -14,6 +14,9 @@ class Index {
   }
   /**
    * Returns media content of an IVR prompt by ID.
+   *
+   * **This API must be called via media API entry point, e.g. https://media.ringcentral.com**
+   *
    * HTTP Method: get
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/ivr-prompts/{promptId}/content
    * Rate Limit Group: Heavy

@@ -6,6 +6,7 @@
 interface DeviceCodeTokenRequest {
   /**
    * Grant type
+   * Required
    */
   grant_type?: 'urn:ietf:params:oauth:grant-type:device_code';
 

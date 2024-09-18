@@ -1,20 +1,18 @@
-import type ContentAttachment from './ContentAttachment';
+import type SocMsgContentAttachment from './SocMsgContentAttachment';
 import type ContentBodyFormatted from './ContentBodyFormatted';
 import type ContentContextData from './ContentContextData';
 
 interface ContentModel {
   /**
-   * An array containing the attachments that are attached to the content.
+   * Array of attachments to be added to the content
    * Required
    */
-  attachments?: ContentAttachment[];
+  attachments?: SocMsgContentAttachment[];
 
   /**
-   * Identity identifier of the author of content.
-   *
-   *  Not mandatory on creation, by default it uses the token's user first identity on channel.
+   * Identity identifier of the content author. Not mandatory on creation,
+   *  by default it uses the token's user first identity on channel
    * Required
-   * Example: 541014e17aa58d8ccf000023
    */
   authorIdentityId?: string;
 
@@ -28,26 +26,23 @@ interface ContentModel {
   autoSubmitted?: boolean;
 
   /**
-   * The content's body.
+   * Content body. On creation this field is mandatory except for WhatsApp content
+   *  using templates. The following are the channels supported and their **max length**
+   *  restrictions (in brackets):
    *
-   *  On creation this field is mandatory except for WhatsApp content using templates.
-   *
-   *  The following are the max length restrictions for the different channels supported.
-   *  Channel and max length
-   *    * Apple Messages For Business (max length 10000)
-   *    * Email (max length 262144)
-   *    * RingCX Digital Messaging (max length 1024)
-   *    * Facebook (max length 8000)
-   *    * GoogleBusinessMessages (max length 3000)
-   *    * Google My Business (max length 4000)
-   *    * Instagram (max length 950)
-   *    * Instagram Messaging (max length 1000)
-   *    * LinkedIn (max length 3000)
-   *    * Messenger (max length 2000)
-   *    * Twitter (max length 280)
-   *    * Viber (max length 7000)
-   *    * WhatsApp (max length 3800)
-   *    * Youtube (max length 8000)
+   *    - *Apple Messages For Business* (10000)
+   *    - *Email* (262144)
+   *    - *RingCX Digital Messaging* (1024)
+   *    - *Facebook* (8000)
+   *    - *Google My Business* (4000)
+   *    - *Instagram* (950)
+   *    - *Instagram Messaging* (1000)
+   *    - *LinkedIn* (3000)
+   *    - *Messenger* (2000)
+   *    - *Twitter* (280)
+   *    - *Viber* (7000)
+   *    - *WhatsApp* (3800)
+   *    - *Youtube* (8000)
    * Required
    * Example: Body of the content
    */
@@ -59,17 +54,26 @@ interface ContentModel {
   bodyFormatted?: ContentBodyFormatted;
 
   /**
-   * Values can be Text or Html.
+   * Content input format
    * Required
    */
   bodyInputFormat?: 'Text' | 'Html';
 
   /**
-   * List of the category identifiers of the content.
+   * List of the category identifiers of the content
    * Required
    * Example: 541014e17aa58d8ccf000023,541014e17aa58d8ccf002023
    */
   categoryIds?: string[];
+
+  /**
+   * Direction of the content.
+   *
+   *  * Incoming contents are received from a channel.
+   *  * Outgoing contents are exported to a channel.
+   * Example: Incoming
+   */
+  contentDirection?: 'Incoming' | 'Outgoing';
 
   /**
    */
@@ -84,83 +88,81 @@ interface ContentModel {
   creationTime?: string;
 
   /**
-   * Created from of the content.
+   * Source of content
    * Required
    */
   createdFrom?: 'Synchronizer' | 'Interface' | 'Api' | 'AutoSurvey' | 'AutoResponseTrigger' | 'AutoRequestEmail';
 
   /**
-   * RC user id of the creator
+   * RingCentral user identifier of the creator
    * Required
    * Example: 2683222036
    */
   creatorId?: string;
 
   /**
+   * True if the content is the first in the thread.
+   */
+  firstInThread?: boolean;
+
+  /**
    * External categories of the content.
-   *
-   *  Present only if the content has foreignCategories.
+   *  Returned only if the content has `foreignCategories`
    * Example: foreign_category_id
    */
   foreignCategories?: string[];
 
   /**
-   * Identifier of the content.
+   * Content identifier
    * Required
-   * Example: 541014e17aa58d8ccf000023
    */
   id?: string;
 
   /**
-   * The identity identifier of the content to which this content is a reply to.
+   * Identifier of the content identity to which this content is a reply to.
+   *  If the channel does not support discussion initiation, this parameter is mandatory
    * Required
-   * Example: 541014e17asdd8ccf000023
    */
   inReplyToAuthorIdentityId?: string;
 
   /**
-   * The content identifier to which this content is a reply to.
-   *
-   *  On creation, if omitted, a new discussion will be created. If the channel does not support to initiate discussion this parameter is mandatory.
+   * Content identifier to which this content is a reply to. On creation, if omitted,
+   *  a new discussion will be created. If the channel does not support discussion initiation,
+   *  this parameter is mandatory
    * Required
-   * Example: 123414e17asdd8ccf000023
    */
   inReplyToContentId?: string;
 
   /**
-   * The intervention identifier of the content.
+   * Intervention identifier of the content
    * Required
-   * Example: 123415437asdd8ccf000023
    */
   interventionId?: string;
 
   /**
-   * Language of the content.
+   * Language of the content
    * Required
    * Example: En
    */
   language?: string;
 
   /**
-   * True if the content is publicly visible on the remote channel (default).
-   *
-   *  Private content is NOT supported on every channel.
+   * If set to `true`, then the content is publicly visible on remote channel.
+   *  Private content is NOT supported on every channel
    * Required
    * Default: true
    */
   public?: boolean;
 
   /**
-   * True if the content is published on the remote channel.
+   * If set to `true`, then the content is published on remote channel
    * Required
    * Example: true
    */
   published?: boolean;
 
   /**
-   * Rating of the content.
-   *
-   *  Present only if the content supports rating and rating is filled.
+   * Rating of content. Present only if the content supports rating and rating is filled
    * Required
    * Format: int32
    * Example: 4
@@ -168,30 +170,27 @@ interface ContentModel {
   rating?: number;
 
   /**
-   * True if the content has been deleted on the remote channel.
+   * Set to `true` if content has been deleted on remote channel
    * Required
    */
   remotelyDeleted?: boolean;
 
   /**
-   * Identifier of the channel.
-   *
-   *  On creation if `inReplyToContentId` is specified, the channel will be determined from it. Otherwise, this parameter is mandatory.
+   * Channel identifier.
    * Required
-   * Example: fff415437asdd8ccf000023
+   * Example: 506d9e817aa58d1259000f12
    */
-  sourceId?: string;
+  channelId?: string;
 
   /**
-   * Type of the channel.
+   * Type of a channel
    * Required
    */
-  sourceType?:
+  channelType?:
     | 'AppleMessagesForBusiness'
     | 'Email'
     | 'EngageMessaging'
     | 'Facebook'
-    | 'GoogleBusinessMessages'
     | 'GoogleMyBusiness'
     | 'Instagram'
     | 'InstagramMessaging'
@@ -203,50 +202,47 @@ interface ContentModel {
     | 'Youtube';
 
   /**
-   * External Uri of the content channel.
+   * External URI of a content channel
    * Required
    * Format: uri
    */
-  sourceUri?: string;
+  channelUri?: string;
 
   /**
-   * Content status.
+   * Content status
    * Required
    */
   status?: 'New' | 'Assigned' | 'Replied' | 'UserReply' | 'UserInitiated' | 'Ignored';
 
   /**
-   * Synchronization status.
+   * Synchronization status
    * Required
    * Example: success
    */
   synchronizationStatus?: string;
 
   /**
-   * Synchronization error details.
+   * Synchronization error details
    * Required
    */
   synchronizationError?: string;
 
   /**
-   * Content thread identifier of the content.
+   * Content thread identifier
    * Required
    */
   threadId?: string;
 
   /**
-   * Applicable to Email channels only.
-   *
-   *  The subject of the email.
-   *
-   *  This field is mandatory when initiating a discussion.
+   * Applicable to Email channels only. The subject of the email.
+   *  This field is mandatory when initiating a discussion
    * Required
    * Example: An email title
    */
   title?: string;
 
   /**
-   * Type of the content.
+   * Type of the content
    * Required
    * Example: Email
    */
@@ -294,7 +290,7 @@ interface ContentModel {
   lastModifiedTime?: string;
 
   /**
-   * Types of structured messages that can be used to reply to this type of message.
+   * Types of structured messages that can be used to reply to this type of message
    * Required
    */
   capabilitiesSupported?: string[];

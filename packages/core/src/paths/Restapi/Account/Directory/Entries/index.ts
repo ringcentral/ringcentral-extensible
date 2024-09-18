@@ -1,5 +1,6 @@
 import Search from './Search';
 import type ContactResource from '../../../../../definitions/ContactResource';
+import type ReadDirectoryEntryParameters from '../../../../../definitions/ReadDirectoryEntryParameters';
 import type DirectoryResource from '../../../../../definitions/DirectoryResource';
 import type ListDirectoryEntriesParameters from '../../../../../definitions/ListDirectoryEntriesParameters';
 import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
@@ -42,11 +43,14 @@ class Index {
    * Rate Limit Group: Medium
    * App Permission: ReadAccounts
    */
-  public async get(restRequestConfig?: RestRequestConfig): Promise<ContactResource> {
+  public async get(
+    queryParams?: ReadDirectoryEntryParameters,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<ContactResource> {
     if (this.entryId === null) {
       throw new Error('entryId must be specified.');
     }
-    const r = await this.rc.get<ContactResource>(this.path(), undefined, restRequestConfig);
+    const r = await this.rc.get<ContactResource>(this.path(), queryParams, restRequestConfig);
     return r.data;
   }
 

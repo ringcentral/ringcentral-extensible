@@ -1,6 +1,6 @@
 import type MeetingRecordings from './MeetingRecordings';
-import type MeetingRecordingsPagingInfo from './MeetingRecordingsPagingInfo';
-import type MeetingRecordingsNavigationInfo from './MeetingRecordingsNavigationInfo';
+import type EnumeratedPagingModel from './EnumeratedPagingModel';
+import type PageNavigationModel from './PageNavigationModel';
 
 interface ListMeetingRecordingsResponse {
   /**
@@ -9,11 +9,11 @@ interface ListMeetingRecordingsResponse {
 
   /**
    */
-  paging?: MeetingRecordingsPagingInfo;
+  paging?: EnumeratedPagingModel;
 
   /**
    */
-  navigation?: MeetingRecordingsNavigationInfo;
+  navigation?: PageNavigationModel;
 }
 
 export default ListMeetingRecordingsResponse;

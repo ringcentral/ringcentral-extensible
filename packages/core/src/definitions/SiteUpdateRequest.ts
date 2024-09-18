@@ -37,6 +37,15 @@ interface SiteUpdateRequest {
   /**
    */
   operator?: OperatorInfo;
+
+  /**
+   * Site access status for cross-site limitation
+   */
+  siteAccess?: 'Limited' | 'Unlimited';
+
+  /**
+   */
+  accessibleSiteIds?: string[];
 }
 
 export default SiteUpdateRequest;

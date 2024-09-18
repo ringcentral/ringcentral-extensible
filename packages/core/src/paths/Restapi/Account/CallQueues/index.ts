@@ -1,8 +1,9 @@
 import BulkAssign from './BulkAssign';
 import Presence from './Presence';
 import Members from './Members';
+import type CallQueueDetailsForUpdate from '../../../../definitions/CallQueueDetailsForUpdate';
 import type CallQueueDetails from '../../../../definitions/CallQueueDetails';
-import type CallQueues from '../../../../definitions/CallQueues';
+import type CallQueueList from '../../../../definitions/CallQueueList';
 import type ListCallQueuesParameters from '../../../../definitions/ListCallQueuesParameters';
 import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
 
@@ -33,8 +34,8 @@ class Index {
   public async list(
     queryParams?: ListCallQueuesParameters,
     restRequestConfig?: RestRequestConfig,
-  ): Promise<CallQueues> {
-    const r = await this.rc.get<CallQueues>(this.path(false), queryParams, restRequestConfig);
+  ): Promise<CallQueueList> {
+    const r = await this.rc.get<CallQueueList>(this.path(false), queryParams, restRequestConfig);
     return r.data;
   }
 
@@ -64,13 +65,13 @@ class Index {
    * User Permission: EditUserInfo
    */
   public async put(
-    callQueueDetails: CallQueueDetails,
+    callQueueDetailsForUpdate: CallQueueDetailsForUpdate,
     restRequestConfig?: RestRequestConfig,
   ): Promise<CallQueueDetails> {
     if (this.groupId === null) {
       throw new Error('groupId must be specified.');
     }
-    const r = await this.rc.put<CallQueueDetails>(this.path(), callQueueDetails, undefined, restRequestConfig);
+    const r = await this.rc.put<CallQueueDetails>(this.path(), callQueueDetailsForUpdate, undefined, restRequestConfig);
     return r.data;
   }
 

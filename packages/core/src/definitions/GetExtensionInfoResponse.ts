@@ -114,9 +114,7 @@ interface GetExtensionInfoResponse {
   setupWizardState?: 'NotStarted' | 'Incomplete' | 'Completed';
 
   /**
-   * Extension current state. If 'Unassigned' is specified, then
-   *  extensions without `extensionNumber` are returned. If not specified,
-   *  then all extensions are returned
+   * Extension status
    */
   status?: 'Enabled' | 'Disabled' | 'Frozen' | 'NotActivated' | 'Unassigned';
 
@@ -175,6 +173,18 @@ interface GetExtensionInfoResponse {
   /**
    */
   assignedCountry?: AssignedCountryInfo;
+
+  /**
+   * Extension creation date/time, in ISO 8601 format
+   * Format: date-time
+   * Example: 2024-06-06T07:01:14.123Z
+   */
+  creationTime?: string;
+
+  /**
+   * Site access status for cross-site limitation
+   */
+  siteAccess?: 'Limited' | 'Unlimited';
 }
 
 export default GetExtensionInfoResponse;

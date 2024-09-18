@@ -1,5 +1,5 @@
 import type OptOutResponse from './OptOutResponse';
-import type PagingResource from './PagingResource';
+import type NonEnumeratedPagingModel from './NonEnumeratedPagingModel';
 
 /**
  * The list of opt outs
@@ -12,7 +12,7 @@ interface OptOutListResponse {
 
   /**
    */
-  paging?: PagingResource;
+  paging?: NonEnumeratedPagingModel;
 }
 
 export default OptOutListResponse;

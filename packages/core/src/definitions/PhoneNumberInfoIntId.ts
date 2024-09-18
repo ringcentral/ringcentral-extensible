@@ -48,9 +48,9 @@ interface PhoneNumberInfoIntId {
   status?: string;
 
   /**
-   * Phone number type
+   * Type of a phone number
    */
-  type?: 'VoiceFax' | 'FaxOnly' | 'VoiceOnly';
+  type?: 'VoiceFax' | 'VoiceOnly' | 'FaxOnly';
 
   /**
    * Usage type of the phone number

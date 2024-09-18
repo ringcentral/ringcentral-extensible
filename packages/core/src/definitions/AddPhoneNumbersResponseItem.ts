@@ -27,6 +27,11 @@ interface AddPhoneNumbersResponseItem {
    * Example: +16501234567
    */
   phoneNumber?: string;
+
+  /**
+   * Phone number activation status. Determine whether phone number migration is completed on the partner side.
+   */
+  activationStatus?: 'Active' | 'Inactive';
 }
 
 export default AddPhoneNumbersResponseItem;

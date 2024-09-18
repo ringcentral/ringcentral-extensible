@@ -14,7 +14,7 @@ interface CustomCompanyGreetingInfo {
   id?: string;
 
   /**
-   * Type of company greeting
+   * Type of a company greeting
    */
   type?: 'Company' | 'StartRecording' | 'StopRecording' | 'AutomaticRecording' | 'TemplateGreeting';
 

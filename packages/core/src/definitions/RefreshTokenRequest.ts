@@ -6,6 +6,7 @@
 interface RefreshTokenRequest {
   /**
    * Grant type
+   * Required
    */
   grant_type?: 'refresh_token';
 

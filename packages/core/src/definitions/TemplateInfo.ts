@@ -1,12 +1,35 @@
-/**
- * Text message template information
- */
 interface TemplateInfo {
   /**
-   * Text of a message template. Maximum length is 1000 symbols (2-byte UTF-16 encoded)
-   * Required
+   * Link to a template
+   * Format: uri
    */
-  text?: string;
+  uri?: string;
+
+  /**
+   * Internal identifier of a template
+   */
+  id?: string;
+
+  /**
+   */
+  type?: 'UserSettings' | 'CallHandling';
+
+  /**
+   * Name of a template
+   */
+  name?: string;
+
+  /**
+   * Time of a template creation
+   * Format: date-time
+   */
+  creationTime?: string;
+
+  /**
+   * Time of the last template modification
+   * Format: date-time
+   */
+  lastModifiedTime?: string;
 }
 
 export default TemplateInfo;

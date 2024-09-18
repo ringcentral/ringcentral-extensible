@@ -3,6 +3,7 @@ import type ParkInfo from './ParkInfo';
 import type PartyInfo from './PartyInfo';
 import type OwnerInfo from './OwnerInfo';
 import type RecordingInfo from './RecordingInfo';
+import type MetaData from './MetaData';
 
 /**
  * Information on a party of a call session
@@ -73,6 +74,11 @@ interface CallParty {
    * Active recordings list
    */
   recordings?: RecordingInfo[];
+
+  /**
+   * Call metadata.
+   */
+  metadata?: MetaData[];
 }
 
 export default CallParty;

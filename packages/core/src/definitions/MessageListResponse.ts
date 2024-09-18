@@ -1,5 +1,5 @@
 import type MessageListMessageResponse from './MessageListMessageResponse';
-import type PagingResource from './PagingResource';
+import type NonEnumeratedPagingModel from './NonEnumeratedPagingModel';
 
 /**
  * List of messages retrieved for an account and other filter criteria such as `batchId` and `fromPhoneNumber` specified in the request
@@ -12,7 +12,7 @@ interface MessageListResponse {
 
   /**
    */
-  paging?: PagingResource;
+  paging?: NonEnumeratedPagingModel;
 }
 
 export default MessageListResponse;

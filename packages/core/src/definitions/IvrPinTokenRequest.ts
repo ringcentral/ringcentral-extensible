@@ -5,6 +5,7 @@
 interface IvrPinTokenRequest {
   /**
    * Grant type
+   * Required
    */
   grant_type?: 'ivr_pin';
 

@@ -1,4 +1,4 @@
-interface GreetingResource {
+interface CallRecordingGreetingResource {
   /**
    */
   type?: 'StartRecording' | 'StopRecording' | 'AutomaticRecording';
@@ -11,4 +11,4 @@ interface GreetingResource {
   mode?: 'Default' | 'Custom';
 }
 
-export default GreetingResource;
+export default CallRecordingGreetingResource;

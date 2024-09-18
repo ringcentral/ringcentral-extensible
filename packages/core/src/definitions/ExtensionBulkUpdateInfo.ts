@@ -15,8 +15,9 @@ interface ExtensionBulkUpdateInfo {
   id?: string;
 
   /**
+   * Extension status
    */
-  status?: 'Disabled' | 'Enabled' | 'NotActivated' | 'Frozen';
+  status?: 'Enabled' | 'Disabled' | 'Frozen' | 'NotActivated';
 
   /**
    */

@@ -74,6 +74,11 @@ interface IdentityModel {
   identityGroupId?: string;
 
   /**
+   * Either Agent or Customer
+   */
+  identityType?: 'Agent' | 'Customer';
+
+  /**
    * LastName.
    * Example: Doe
    */
@@ -100,7 +105,6 @@ interface IdentityModel {
     | 'Email'
     | 'EngageMessaging'
     | 'Facebook'
-    | 'GoogleBusinessMessages'
     | 'GoogleMyBusiness'
     | 'Instagram'
     | 'Linkedin'

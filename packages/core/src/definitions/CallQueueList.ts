@@ -2,7 +2,7 @@ import type CallQueueInfo from './CallQueueInfo';
 import type PageNavigationModel from './PageNavigationModel';
 import type EnumeratedPagingModel from './EnumeratedPagingModel';
 
-interface CallQueues {
+interface CallQueueList {
   /**
    * Link to a call queues resource
    * Required
@@ -27,4 +27,4 @@ interface CallQueues {
   paging?: EnumeratedPagingModel;
 }
 
-export default CallQueues;
+export default CallQueueList;

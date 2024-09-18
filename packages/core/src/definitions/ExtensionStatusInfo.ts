@@ -1,6 +1,5 @@
 /**
- * Status information (reason, comment). Returned for 'Disabled'
- * status only
+ * Status information (reason, comment). Returned for `Disabled` extensions only
  *
  */
 interface ExtensionStatusInfo {
@@ -12,14 +11,7 @@ interface ExtensionStatusInfo {
   /**
    * Type of suspension
    */
-  reason?: 'SuspendedVoluntarily' | 'SuspendedInvoluntarily' | 'CancelledVoluntarily' | 'CancelledInvoluntarily';
-
-  /**
-   * Date until which an account will get deleted. The default
-   *  value is 30 days since the current date
-   * Format: date-time
-   */
-  till?: string;
+  reason?: 'Voluntarily' | 'Involuntarily';
 }
 
 export default ExtensionStatusInfo;

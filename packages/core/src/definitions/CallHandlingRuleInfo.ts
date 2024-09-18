@@ -10,7 +10,7 @@ import type GreetingInfo from './GreetingInfo';
 import type SharedLinesInfo from './SharedLinesInfo';
 import type MissedCallInfo from './MissedCallInfo';
 
-interface AnsweringRuleInfo {
+interface CallHandlingRuleInfo {
   /**
    * Canonical URI to an answering rule resource
    * Format: uri
@@ -103,4 +103,4 @@ interface AnsweringRuleInfo {
   missedCall?: MissedCallInfo;
 }
 
-export default AnsweringRuleInfo;
+export default CallHandlingRuleInfo;

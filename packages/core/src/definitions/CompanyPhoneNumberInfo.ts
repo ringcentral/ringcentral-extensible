@@ -52,16 +52,16 @@ interface CompanyPhoneNumberInfo {
   phoneNumber?: string;
 
   /**
-   * Status of a phone number. If the value is 'Normal', the phone
-   *  number is ready to be used. If the value is 'Pending' it is an
-   *  external number not yet ported to RingCentral.
+   * Status of a phone number. If the value is `Normal`, the phone
+   *  number is ready to be used. Otherwise, it is an external number not yet
+   *  ported to RingCentral
    */
-  status?: 'Normal' | 'Pending' | 'PortedIn' | 'Temporary';
+  status?: 'Normal' | 'Pending' | 'PortedIn' | 'Temporary' | 'Unknown';
 
   /**
-   * Phone number type
+   * Type of a phone number
    */
-  type?: 'VoiceFax' | 'FaxOnly' | 'VoiceOnly';
+  type?: 'VoiceFax' | 'VoiceOnly' | 'FaxOnly';
 
   /**
    * Usage type of phone number. Usage type of phone number.
@@ -101,6 +101,11 @@ interface CompanyPhoneNumberInfo {
    * Specifies if a phone number is primary, i.e. displayed as 'main number' and called by default
    */
   primary?: boolean;
+
+  /**
+   * Phone number activation status. Determine whether phone number migration is completed on the partner side.
+   */
+  activationStatus?: 'Active' | 'Inactive';
 }
 
 export default CompanyPhoneNumberInfo;

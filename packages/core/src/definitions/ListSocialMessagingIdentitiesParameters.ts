@@ -3,14 +3,19 @@
  */
 interface ListSocialMessagingIdentitiesParameters {
   /**
-   * Filter based on the specified `sourceId`
+   * Filter based on the specified channelId.
    */
-  sourceId?: string;
+  channelId?: string;
 
   /**
    * Filter based on the specified `identityGroupIds` (separated by commas)
    */
   identityGroupIds?: string[];
+
+  /**
+   * Either Agent or Customer
+   */
+  identityType?: 'Agent' | 'Customer';
 
   /**
    * Filter based on the specified `userId`
@@ -23,11 +28,17 @@ interface ListSocialMessagingIdentitiesParameters {
   uuid?: string;
 
   /**
-   * Ordering by creationTime is descending by default.
+   * Ordering by creationTime and lastModifiedTime is descending by default.
    * Example: +creationTime
    * Default: -creationTime
    */
-  orderBy?: '-creationTime' | '+creationTime' | 'creationTime';
+  orderBy?:
+    | '-creationTime'
+    | '+creationTime'
+    | 'creationTime'
+    | '-lastModifiedTime'
+    | '+lastModifiedTime'
+    | 'lastModifiedTime';
 
   /**
    * The token indicating the particular page of the result set to be retrieved.

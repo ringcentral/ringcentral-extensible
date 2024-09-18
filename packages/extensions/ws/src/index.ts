@@ -253,6 +253,7 @@ class WebSocketExtension extends SdkExtension {
           },
         ]),
       );
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
     } catch (e) {
       this.ws.close(); // Explicitly mark WS as closed
     }

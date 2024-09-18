@@ -6,6 +6,7 @@
 interface AuthCodeTokenRequest {
   /**
    * Grant type
+   * Required
    */
   grant_type?: 'authorization_code';
 

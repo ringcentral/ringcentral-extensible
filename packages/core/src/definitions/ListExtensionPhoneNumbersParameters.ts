@@ -3,9 +3,11 @@
  */
 interface ListExtensionPhoneNumbersParameters {
   /**
-   * Status of a phone number
+   * Status of a phone number. If the value is `Normal`, the phone
+   *  number is ready to be used. Otherwise, it is an external number not yet
+   *  ported to RingCentral
    */
-  status?: 'Normal' | 'Pending' | 'PortedIn' | 'Temporary';
+  status?: 'Normal' | 'Pending' | 'PortedIn' | 'Temporary' | 'Unknown';
 
   /**
    * Usage type of phone number

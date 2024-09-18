@@ -1,6 +1,6 @@
 import type TMCreateTaskRequestAssignees from './TMCreateTaskRequestAssignees';
 import type TaskRecurrenceInfo from './TaskRecurrenceInfo';
-import type TMAttachmentInfo from './TMAttachmentInfo';
+import type TaskAttachment from './TaskAttachment';
 
 interface TMCreateTaskRequest {
   /**
@@ -52,7 +52,7 @@ interface TMCreateTaskRequest {
 
   /**
    */
-  attachments?: TMAttachmentInfo[];
+  attachments?: TaskAttachment[];
 }
 
 export default TMCreateTaskRequest;

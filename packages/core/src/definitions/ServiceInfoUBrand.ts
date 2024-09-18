@@ -7,12 +7,6 @@ interface ServiceInfoUBrand {
    * Example: 111.222
    */
   id?: string;
-
-  /**
-   * Sub-brand name
-   * Example: Sub-brand name
-   */
-  name?: string;
 }
 
 export default ServiceInfoUBrand;

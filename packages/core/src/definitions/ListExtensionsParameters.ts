@@ -29,11 +29,11 @@ interface ListExtensionsParameters {
   perPage?: number;
 
   /**
-   * Extension current state. Multiple values are supported. If 'Unassigned'
+   * Extension status. Multiple values are supported. If `Unassigned`
    *  is specified, then extensions without `extensionNumber` attribute are returned.
    *  If not specified, then all extensions are returned
    */
-  status?: ('Enabled' | 'Disabled' | 'NotActivated' | 'Unassigned')[];
+  status?: ('Enabled' | 'Disabled' | 'Frozen' | 'NotActivated' | 'Unassigned')[];
 
   /**
    * Extension type. Multiple values are supported. Please note

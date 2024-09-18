@@ -1,13 +1,13 @@
-import type ExtensionUpdateShortResult from './ExtensionUpdateShortResult';
+import type ExtensionBulkUpdateTaskResultAffectedItems from './ExtensionBulkUpdateTaskResultAffectedItems';
 import type ErrorEntity from './ErrorEntity';
 
 /**
- * Result record on multiple extension update task
+ * Resulting record of a task on multiple extensions update
  */
 interface ExtensionBulkUpdateTaskResult {
   /**
    */
-  affectedItems?: ExtensionUpdateShortResult[];
+  affectedItems?: ExtensionBulkUpdateTaskResultAffectedItems;
 
   /**
    */

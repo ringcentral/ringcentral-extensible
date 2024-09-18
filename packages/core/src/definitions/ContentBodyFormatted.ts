@@ -1,5 +1,5 @@
 /**
- * Text and HTML formatted versions of the content body.
+ * Text and HTML formatted versions of the content body
  */
 interface ContentBodyFormatted {
   /**

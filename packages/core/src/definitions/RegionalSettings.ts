@@ -31,7 +31,8 @@ interface RegionalSettings {
   formattingLocale?: FormattingLocaleInfo;
 
   /**
-   * Time format setting. The default value is '12h' = ['12h', '24h']
+   * Time format (12-hours or 24-hours).
+   * Default: 12h
    */
   timeFormat?: '12h' | '24h';
 }

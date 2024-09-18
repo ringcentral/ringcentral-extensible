@@ -5,7 +5,7 @@ import type TargetServicePlanInfo from './TargetServicePlanInfo';
 import type BillingPlanInfo from './BillingPlanInfo';
 import type ServiceFeatureInfo from './ServiceFeatureInfo';
 import type AccountLimits from './AccountLimits';
-import type PackageInfo from './PackageInfo';
+import type BillingPackageInfo from './BillingPackageInfo';
 import type UBrandInfo from './UBrandInfo';
 
 /**
@@ -55,7 +55,7 @@ interface AccountServiceInfo {
 
   /**
    */
-  package?: PackageInfo;
+  package?: BillingPackageInfo;
 
   /**
    */

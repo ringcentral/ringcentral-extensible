@@ -1,6 +1,6 @@
 import type MeetingResponseResource from './MeetingResponseResource';
-import type MeetingsPagingInfo from './MeetingsPagingInfo';
-import type MeetingsNavigationInfo from './MeetingsNavigationInfo';
+import type EnumeratedPagingModel from './EnumeratedPagingModel';
+import type PageNavigationModel from './PageNavigationModel';
 
 interface MeetingsResource {
   /**
@@ -14,11 +14,11 @@ interface MeetingsResource {
 
   /**
    */
-  paging?: MeetingsPagingInfo;
+  paging?: EnumeratedPagingModel;
 
   /**
    */
-  navigation?: MeetingsNavigationInfo;
+  navigation?: PageNavigationModel;
 }
 
 export default MeetingsResource;

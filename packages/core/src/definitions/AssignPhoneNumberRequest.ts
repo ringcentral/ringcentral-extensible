@@ -3,7 +3,7 @@ import type ContactCenterProvider from './ContactCenterProvider';
 
 interface AssignPhoneNumberRequest {
   /**
-   * Type of phone number
+   * Type of a phone number
    */
   type?: 'VoiceFax' | 'VoiceOnly' | 'FaxOnly';
 
@@ -11,7 +11,7 @@ interface AssignPhoneNumberRequest {
    * Target usage type of phone number (only listed values are supported)
    * Required
    */
-  usageType?: 'MainCompanyNumber' | 'CompanyNumber' | 'DirectNumber' | 'PhoneLine' | 'ContactCenterNumber';
+  usageType?: 'MainCompanyNumber' | 'CompanyNumber' | 'DirectNumber' | 'ContactCenterNumber';
 
   /**
    */

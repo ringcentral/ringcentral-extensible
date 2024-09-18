@@ -6,6 +6,7 @@
 interface JwtTokenRequest {
   /**
    * Grant type
+   * Required
    */
   grant_type?: 'urn:ietf:params:oauth:grant-type:jwt-bearer' | 'partner_jwt';
 

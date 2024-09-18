@@ -6,6 +6,7 @@
 interface RopcTokenRequest {
   /**
    * Grant type
+   * Required
    */
   grant_type?: 'password';
 

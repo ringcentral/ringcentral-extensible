@@ -1,3 +1,4 @@
+import type SiteBasicInfo from './SiteBasicInfo';
 import type CallQueueServiceLevelSettings from './CallQueueServiceLevelSettings';
 
 interface CallQueueDetails {
@@ -23,7 +24,7 @@ interface CallQueueDetails {
   name?: string;
 
   /**
-   * Call queue status
+   * Group extension status
    */
   status?: 'Enabled' | 'Disabled' | 'NotActivated';
 
@@ -31,6 +32,10 @@ interface CallQueueDetails {
    * Indicates whether it is an emergency call queue extension or not
    */
   subType?: 'Emergency';
+
+  /**
+   */
+  site?: SiteBasicInfo;
 
   /**
    */

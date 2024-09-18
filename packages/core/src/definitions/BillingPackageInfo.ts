@@ -1,4 +1,4 @@
-interface PackageInfo {
+interface BillingPackageInfo {
   /**
    * Billing package version
    */
@@ -10,4 +10,4 @@ interface PackageInfo {
   id?: string;
 }
 
-export default PackageInfo;
+export default BillingPackageInfo;

@@ -3,6 +3,12 @@
  */
 interface SearchDirectoryEntriesParameters {
   /**
+   * Flag to enable cross-site limitation checking
+   * Example: true
+   */
+  accessibleSitesOnly?: boolean;
+
+  /**
    * A list of Account IDs
    * Example: 400131426008
    */

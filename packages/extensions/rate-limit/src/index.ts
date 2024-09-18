@@ -13,7 +13,7 @@ class RateLimitExtension extends RetryExtension {
       retryInterval: (restException, retriesAttempted) => {
         const rateLimitWindow = restException.response.headers['x-rate-limit-window'];
         return (
-          (rateLimitWindow ? parseInt(rateLimitWindow, 10) : options?.rateLimitWindow ?? 60) *
+          (rateLimitWindow ? parseInt(rateLimitWindow, 10) : (options?.rateLimitWindow ?? 60)) *
           1000 *
           2 ** retriesAttempted // exponential back off
         );

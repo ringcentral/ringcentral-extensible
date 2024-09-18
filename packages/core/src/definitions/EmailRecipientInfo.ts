@@ -15,9 +15,9 @@ interface EmailRecipientInfo {
   extensionNumber?: string;
 
   /**
-   * Current state of an extension
+   * Extension status
    */
-  status?: 'Enabled' | 'Disable' | 'NotActivated' | 'Unassigned';
+  status?: 'Enabled' | 'Disabled' | 'Frozen' | 'NotActivated' | 'Unassigned';
 
   /**
    * List of user email addresses from extension notification settings.

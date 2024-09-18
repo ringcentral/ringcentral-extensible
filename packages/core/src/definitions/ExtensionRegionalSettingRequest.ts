@@ -31,7 +31,7 @@ interface ExtensionRegionalSettingRequest {
   currency?: ExtensionCurrencyInfoRequest;
 
   /**
-   * Time format setting
+   * Time format (12-hours or 24-hours).
    * Default: 12h
    */
   timeFormat?: '12h' | '24h';

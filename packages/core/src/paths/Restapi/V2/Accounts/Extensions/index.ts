@@ -1,3 +1,4 @@
+import CallFlipNumbers from './CallFlipNumbers';
 import Devices from './Devices';
 import type BulkDeleteUsersResponse from '../../../../../definitions/BulkDeleteUsersResponse';
 import type BulkDeleteUsersRequest from '../../../../../definitions/BulkDeleteUsersRequest';
@@ -41,6 +42,10 @@ class Index {
 
   public devices(deviceId: string | null = null): Devices {
     return new Devices(this, deviceId);
+  }
+
+  public callFlipNumbers(): CallFlipNumbers {
+    return new CallFlipNumbers(this);
   }
 }
 export default Index;

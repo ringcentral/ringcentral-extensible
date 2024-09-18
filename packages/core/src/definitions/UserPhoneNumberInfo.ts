@@ -60,16 +60,16 @@ interface UserPhoneNumberInfo {
   primary?: boolean;
 
   /**
-   * Status of a phone number. If the value is 'Normal', the phone
+   * Status of a phone number. If the value is `Normal`, the phone
    *  number is ready to be used. Otherwise, it is an external number not yet
    *  ported to RingCentral
    */
-  status?: 'Normal' | 'Pending' | 'PortedIn' | 'Temporary';
+  status?: 'Normal' | 'Pending' | 'PortedIn' | 'Temporary' | 'Unknown';
 
   /**
-   * Phone number type
+   * Type of a phone number
    */
-  type?: 'VoiceFax' | 'FaxOnly' | 'VoiceOnly';
+  type?: 'VoiceFax' | 'VoiceOnly' | 'FaxOnly';
 
   /**
    * Extension subtype, if applicable. For any unsupported subtypes the 'Unknown' value will be returned

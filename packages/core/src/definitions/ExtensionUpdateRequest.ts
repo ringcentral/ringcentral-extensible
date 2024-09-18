@@ -9,8 +9,9 @@ import type ReferenceInfo from './ReferenceInfo';
 
 interface ExtensionUpdateRequest {
   /**
+   * Extension status
    */
-  status?: 'Disabled' | 'Enabled' | 'NotActivated' | 'Frozen';
+  status?: 'Enabled' | 'Disabled' | 'Frozen' | 'NotActivated';
 
   /**
    */

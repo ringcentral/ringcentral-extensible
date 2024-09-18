@@ -13,11 +13,6 @@ interface ServiceInfoPlan {
   name?: string;
 
   /**
-   * Edition of a service plan
-   */
-  edition?: string;
-
-  /**
    */
   freemiumProductType?: 'Freyja' | 'Phoenix';
 }
