@@ -208,12 +208,16 @@ class RingCentral implements RingCentralInterface {
       // nothing to revoke
       return;
     }
-    if (!this.rest.clientId || !this.rest.clientSecret) {
-      // no clientId or clientSecret, the token is from external source, cannot revoke
+    if (!this.rest.clientId) {
+      // if no clientId, the token is from external source, cannot revoke
+      // no clientSecret is fine, since PKCE doesn't have clientSecret
       return;
     }
     const temp = tokenToRevoke ?? this.token?.access_token ?? this.token?.refresh_token;
-    await this.restapi(null).oauth().revoke().post({ token: temp });
+    await this.restapi(null)
+      .oauth()
+      .revoke()
+      .post({ token: temp, client_id: this.rest.clientId } as any); // todo: spec doesn't allow client_id
     this.token = undefined;
   }
 
