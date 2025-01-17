@@ -18,11 +18,11 @@
     "access": "public"
   },
   "dependencies": {
-    "@types/ws": "^8.5.12",
+    "@types/ws": "^8.5.13",
     "http-status-codes": "^2.3.0",
     "hyperid": "^3.3.0",
     "isomorphic-ws": "^5.0.0",
-    "wait-for-async": "^0.7.0",
+    "wait-for-async": "^0.7.9",
     "ws": "^8.18.0"
   },
   "devDependencies": {
