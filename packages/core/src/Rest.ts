@@ -1,18 +1,23 @@
-import type { AxiosInstance } from 'axios';
-import axios from 'axios';
-import qs from 'qs';
-import { boundary } from './FormData';
+import type { AxiosInstance } from "axios";
+import axios from "axios";
+import qs from "qs";
+import { boundary } from "./FormData";
 
-import RestException from './RestException';
-import type TokenInfo from './definitions/TokenInfo';
-import type { RestMethod, RestOptions, RestRequestConfig, RestResponse } from './types';
+import RestException from "./RestException";
+import type TokenInfo from "./definitions/TokenInfo";
+import type {
+  RestMethod,
+  RestOptions,
+  RestRequestConfig,
+  RestResponse,
+} from "./types";
 
-const version = '1.3.x';
+const version = "1.5.0";
 
 export default class Rest {
-  public static sandboxServer = 'https://platform.devtest.ringcentral.com';
+  public static sandboxServer = "https://platform.devtest.ringcentral.com";
 
-  public static productionServer = 'https://platform.ringcentral.com';
+  public static productionServer = "https://platform.ringcentral.com";
 
   public server: string;
 
@@ -30,19 +35,20 @@ export default class Rest {
 
   public constructor(options: RestOptions) {
     this.server = options.server ?? Rest.productionServer;
-    this.clientId = options.clientId ?? '';
+    this.clientId = options.clientId ?? "";
     this.clientSecret = options.clientSecret;
     this.token = options.token ?? undefined;
-    this.appName = options.appName ?? 'Unknown';
-    this.appVersion = options.appVersion ?? '0.0.1';
+    this.appName = options.appName ?? "Unknown";
+    this.appVersion = options.appVersion ?? "0.0.1";
 
     this.httpClient = axios.create({
       headers: {
-        'X-User-Agent': `${this.appName}/${this.appVersion} ringcentral-extensible/core/${version}`,
+        "X-User-Agent":
+          `${this.appName}/${this.appVersion} ringcentral-extensible/core/${version}`,
       },
       validateStatus: () => true,
       paramsSerializer: {
-        serialize: (params) => qs.stringify(params, { arrayFormat: 'repeat' }),
+        serialize: (params) => qs.stringify(params, { arrayFormat: "repeat" }),
       },
     });
 
@@ -50,7 +56,10 @@ export default class Rest {
       if (Buffer.isBuffer(config.data)) {
         return {
           ...config,
-          headers: { ...config.headers, 'Content-Type': `multipart/form-data; boundary=${boundary}` } as any,
+          headers: {
+            ...config.headers,
+            "Content-Type": `multipart/form-data; boundary=${boundary}`,
+          } as any,
         };
       }
       return config;
@@ -74,7 +83,10 @@ export default class Rest {
       ...config,
     };
     // /restapi/oauth/wstoken uses bearer token
-    if (endpoint === '/restapi/oauth/token' || endpoint === '/restapi/oauth/revoke') {
+    if (
+      endpoint === "/restapi/oauth/token" ||
+      endpoint === "/restapi/oauth/revoke"
+    ) {
       if (this.clientSecret) {
         // basic token
         newConfig.auth = {
