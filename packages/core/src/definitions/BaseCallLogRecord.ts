@@ -263,15 +263,13 @@ interface BaseCallLogRecord {
 
   /**
    * Call duration in seconds
-   * Required
-   * Format: int32
+   * Format: int64
    */
   duration?: number;
 
   /**
    * Call duration in milliseconds
-   * Required
-   * Format: int32
+   * Format: int64
    */
   durationMs?: number;
 
@@ -304,7 +302,8 @@ interface BaseCallLogRecord {
     | 'Vma'
     | 'LocalNumber'
     | 'ImsOutgoing'
-    | 'ImsIncoming';
+    | 'ImsIncoming'
+    | 'Unknown';
 }
 
 export default BaseCallLogRecord;

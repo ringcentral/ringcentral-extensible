@@ -41,12 +41,11 @@ class Index {
   }
 
   /**
-   * Deletes conversation(s) by conversation ID(s). Batch request is
-   * supported, max number of IDs passed as query/path parameters is 50. Alternative
-   * syntax is supported - user conversations can be deleted by passing multiple
-   * IDs in request body as an array of string, max number of conversation IDs
-   * passed in request body is 100. In this case asterisk is used in the path instead
-   * of IDs
+   * Deletes conversation(s) by conversation ID(s).
+   * [Batch request syntax](https://developers.ringcentral.com/guide/basics/batch-requests) is supported - maximum number
+   * of IDs passed as query/path parameters is 50. Alternative syntax is supported - the user's conversations can be deleted
+   * by passing multiple IDs in request body as an array of string. Maximum number of conversation IDs passed in request body
+   * is 100. In this case asterisk '*' is used in the path instead of IDs.
    *
    * HTTP Method: delete
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/message-store
@@ -64,7 +63,8 @@ class Index {
 
   /**
    * Returns an individual message record or multiple records by the given message ID(s).
-   * The length of inbound messages is unlimited. Bulk syntax is supported.
+   * The length of inbound messages is unlimited. [Bulk syntax](https://developers.ringcentral.com/guide/basics/batch-requests)
+   * is supported.
    *
    * HTTP Method: get
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/message-store/{messageId}
@@ -83,12 +83,11 @@ class Index {
   /**
    * Updates message(s) by their ID(s). Currently, only the `readStatus`
    * can be updated using this method.
-   *
-   * Bulk syntax is supported, max number of IDs passed as query/path
-   * parameters is 50. Alternative bulk syntax is also supported - user messages can be updated
-   * by passing multiple IDs in request body as an array of string, max number
-   * of IDs passed in the body is 1000. In this case asterisk is used in the
-   * path instead of IDs.
+   * [Bulk syntax](https://developers.ringcentral.com/guide/basics/batch-requests) is supported,
+   * maximum number of IDs passed as query/path parameters is 50. Alternative bulk syntax is also
+   * supported - the user's messages can be updated by passing multiple IDs in request body as
+   * an array of string, maximum number of IDs passed in the body is 1000. In this case asterisk '*'
+   * is used in the path instead of IDs.
    *
    * HTTP Method: put
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/message-store/{messageId}

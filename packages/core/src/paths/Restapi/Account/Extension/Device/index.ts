@@ -14,8 +14,8 @@ class Index {
     return `${this._parent.path()}/device`;
   }
   /**
-   * Returns devices of an extension or multiple extensions by their ID(s). Batch request
-   * is supported.
+   * Returns devices of an extension or multiple extensions by their ID(s).
+   * [Batch request syntax](https://developers.ringcentral.com/guide/basics/batch-requests) is supported.
    *
    * HTTP Method: get
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/device

@@ -63,9 +63,9 @@ interface SyncMessagesParameters {
   syncType?: 'FSync' | 'ISync';
 
   /**
-   * This query parameter will filter voicemail messages based on its owner.
-   *  This parameter should be controlled by the 'SharedVoicemail' feature.
-   *  If the feature is disabled this filter shouldn't be applied.
+   * Filters voicemail messages based on the owner extension. Supported if the 'SharedVoicemail'
+   *  feature is enabled.
+   * Default: Personal
    */
   voicemailOwner?: string[];
 }

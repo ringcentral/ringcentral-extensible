@@ -29,9 +29,9 @@ interface ListExtensionDevicesParameters {
   linePooling?: 'Host' | 'Guest' | 'None';
 
   /**
-   * Device feature
+   * Device feature or multiple features supported
    */
-  feature?: 'BLA' | 'CommonPhone' | 'Intercom' | 'Paging' | 'HELD';
+  feature?: ('BLA' | 'CommonPhone' | 'Intercom' | 'Paging' | 'HELD')[];
 
   /**
    * Device type

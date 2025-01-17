@@ -2,11 +2,7 @@ import type AccountResource from './AccountResource';
 import type PhoneNumberResource from './PhoneNumberResource';
 import type AccountDirectoryProfileImageResource from './AccountDirectoryProfileImageResource';
 import type BusinessSiteResource from './BusinessSiteResource';
-import type DirectoryRoleResource from './DirectoryRoleResource';
-import type CallQueueResource from './CallQueueResource';
 import type CustomFieldResource from './CustomFieldResource';
-import type GroupResource from './GroupResource';
-import type CostCenterResource from './CostCenterResource';
 import type ExternalIntegrationResource from './ExternalIntegrationResource';
 
 interface ContactResource {
@@ -109,33 +105,11 @@ interface ContactResource {
 
   /**
    */
-  role?: DirectoryRoleResource;
-
-  /**
-   */
-  callQueues?: CallQueueResource[];
-
-  /**
-   */
   customFields?: CustomFieldResource[];
 
   /**
    */
-  groups?: GroupResource[];
-
-  /**
-   */
-  costCenter?: CostCenterResource;
-
-  /**
-   */
   integration?: ExternalIntegrationResource;
-
-  /**
-   * Extension subtype
-   * Example: Unknown
-   */
-  subType?: 'Unknown' | 'VideoPro' | 'VideoProPlus' | 'DigitalSignage' | 'Emergency';
 }
 
 export default ContactResource;

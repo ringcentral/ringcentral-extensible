@@ -133,6 +133,11 @@ interface DeviceResource {
   /**
    */
   billingStatement?: BillingStatementInfo;
+
+  /**
+   * Ability to access the Voicemail without being prompted to enter a PIN from the hard phone
+   */
+  automaticVoicemailLogin?: boolean;
 }
 
 export default DeviceResource;

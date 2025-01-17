@@ -9,7 +9,7 @@ interface AccountPresenceEventBody {
   extensionId?: string;
 
   /**
-   * Telephony presence status. Returned if telephony status is changed.
+   * Telephony presence status. Returned if telephony status is changed
    */
   telephonyStatus?: 'NoCall' | 'CallConnected' | 'Ringing' | 'OnHold' | 'ParkedCall';
 
@@ -33,6 +33,11 @@ interface AccountPresenceEventBody {
    * Extended DnD (Do not Disturb) status
    */
   dndStatus?: 'TakeAllCalls' | 'DoNotAcceptAnyCalls' | 'DoNotAcceptDepartmentCalls' | 'TakeDepartmentCallsOnly';
+
+  /**
+   * Meetings presence status. Specifies if a user is on a meeting
+   */
+  meetingStatus?: 'Connected' | 'Disconnected';
 
   /**
    * If `true` enables other extensions to see the extension presence status

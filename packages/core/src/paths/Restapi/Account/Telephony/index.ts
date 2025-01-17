@@ -1,6 +1,7 @@
 import Conference from './Conference';
 import CallOut from './CallOut';
 import Sessions from './Sessions';
+import Metadata from './Metadata';
 import type { RingCentralInterface, ParentInterface } from '../../../../types';
 
 class Index {
@@ -13,6 +14,10 @@ class Index {
   }
   public path(): string {
     return `${this._parent.path()}/telephony`;
+  }
+
+  public metadata(): Metadata {
+    return new Metadata(this);
   }
 
   public sessions(telephonySessionId: string | null = null): Sessions {

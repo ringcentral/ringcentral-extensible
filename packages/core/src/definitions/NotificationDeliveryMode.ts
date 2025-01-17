@@ -6,7 +6,7 @@ interface NotificationDeliveryMode {
    * The transport type for this subscription, or the channel by which an app should be notified of an event
    * Required
    */
-  transportType?: 'WebHook' | 'RC/APNS' | 'RC/GCM' | 'PubNub' | 'WebSocket';
+  transportType?: 'WebHook' | 'RC/APNS' | 'RC/GCM' | 'PubNub' | 'WebSocket' | 'Internal';
 
   /**
    * PubNub channel name
@@ -60,6 +60,13 @@ interface NotificationDeliveryMode {
    *  Cryptographic key to decrypt PubNub notification messages
    */
   encryptionKey?: string;
+
+  /**
+   * The name of internal channel (defined in the backend service configuration) to deliver notifications through.
+   * Required
+   * Example: my-server-channel
+   */
+  configName?: string;
 }
 
 export default NotificationDeliveryMode;

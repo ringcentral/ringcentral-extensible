@@ -1,3 +1,4 @@
+import Ringsense from './Ringsense';
 import Insights from './Insights';
 import Status from './Status';
 import Audio from './Audio';
@@ -28,6 +29,10 @@ class Index {
 
   public insights(): Insights {
     return new Insights(this);
+  }
+
+  public ringsense(): Ringsense {
+    return new Ringsense(this);
   }
 }
 export default Index;

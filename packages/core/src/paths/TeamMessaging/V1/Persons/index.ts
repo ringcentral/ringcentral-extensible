@@ -18,7 +18,9 @@ class Index {
     return `${this._parent.path()}/persons`;
   }
   /**
-   * Returns a user or multiple users by their ID(s). Batch request is supported.
+   * Returns a user or multiple users by their ID(s).
+   * [Batch requests](https://developers.ringcentral.com/guide/basics/batch-requests) are supported.
+   *
    * HTTP Method: get
    * Endpoint: /team-messaging/v1/persons/{personId}
    * Rate Limit Group: Light

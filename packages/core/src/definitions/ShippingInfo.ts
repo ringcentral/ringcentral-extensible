@@ -14,7 +14,7 @@ interface ShippingInfo {
    *  Finally, it is changed to `Shipped` which means that the distributor has shipped the device.
    * Example: Shipped
    */
-  status?: 'Initial' | 'Accepted' | 'Shipped';
+  status?: 'Initial' | 'Accepted' | 'Shipped' | "Won't ship";
 
   /**
    * Shipping carrier name. Appears only if the device status is 'Shipped'

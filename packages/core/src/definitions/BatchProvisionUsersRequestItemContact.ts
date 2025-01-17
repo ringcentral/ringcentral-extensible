@@ -1,3 +1,5 @@
+import type TransitionInfo from './TransitionInfo';
+
 interface BatchProvisionUsersRequestItemContact {
   /**
    * Given name
@@ -30,6 +32,10 @@ interface BatchProvisionUsersRequestItemContact {
    * Default: true
    */
   emailAsLoginName?: boolean;
+
+  /**
+   */
+  transition?: TransitionInfo;
 }
 
 export default BatchProvisionUsersRequestItemContact;

@@ -2,6 +2,7 @@ import type MessageAttachmentInfo from './MessageAttachmentInfo';
 import type ConversationInfo from './ConversationInfo';
 import type MessageStoreCallerInfoResponseFrom from './MessageStoreCallerInfoResponseFrom';
 import type MessageStoreCallerInfoResponseTo from './MessageStoreCallerInfoResponseTo';
+import type VoicemailOwnerResource from './VoicemailOwnerResource';
 
 interface GetMessageInfoResponse {
   /**
@@ -171,6 +172,10 @@ interface GetMessageInfoResponse {
    *  cover page. Maximum length is limited to 1024 symbols
    */
   coverPageText?: string;
+
+  /**
+   */
+  owner?: VoicemailOwnerResource;
 }
 
 export default GetMessageInfoResponse;

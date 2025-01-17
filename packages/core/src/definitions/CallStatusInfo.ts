@@ -1,4 +1,5 @@
 import type PeerInfo from './PeerInfo';
+import type MobilePickupData from './MobilePickupData';
 
 /**
  * Status data of a call session
@@ -21,11 +22,7 @@ interface CallStatusInfo {
     | 'VoiceMailScreening';
 
   /**
-   */
-  peerId?: PeerInfo;
-
-  /**
-   * Reason for call termination. For 'Disconnected' code only
+   * Reason for a call status, might be specified for some codes
    */
   reason?:
     | 'Pickup'
@@ -56,12 +53,31 @@ interface CallStatusInfo {
     | 'CallReplied'
     | 'CallSwitch'
     | 'CallFinished'
-    | 'CallDropped';
+    | 'CallDropped'
+    | 'Voicemail';
 
   /**
    * Optional message
    */
   description?: string;
+
+  /**
+   * Call park data. Returned for calls in 'Parked' state
+   */
+  parkData?: string;
+
+  /**
+   */
+  peerId?: PeerInfo;
+
+  /**
+   */
+  mobilePickupData?: MobilePickupData;
+
+  /**
+   * Specifies if it's a conference call
+   */
+  rcc?: boolean;
 }
 
 export default CallStatusInfo;

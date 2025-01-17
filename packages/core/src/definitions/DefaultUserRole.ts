@@ -15,6 +15,11 @@ interface DefaultUserRole {
    * Example: My Custom User Role
    */
   displayName?: string;
+
+  /**
+   * Site compatibility of a user role
+   */
+  siteCompatible?: boolean;
 }
 
 export default DefaultUserRole;

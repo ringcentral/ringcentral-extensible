@@ -16,6 +16,17 @@ interface TMMessageAttachmentInfo {
   type?: 'Card' | 'Event' | 'File' | 'Note' | 'Task';
 
   /**
+   * Link to a binary content
+   * Format: uri
+   */
+  contentUri?: string;
+
+  /**
+   * Name of a file
+   */
+  name?: string;
+
+  /**
    * A string of default text that will be rendered in the case that the client does not support Interactive Messages
    */
   fallback?: string;

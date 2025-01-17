@@ -1,10 +1,10 @@
-import type ScimUserResponse from './ScimUserResponse';
+import type ScimUserShortInfo from './ScimUserShortInfo';
 
 interface ScimUserSearchResponse {
   /**
    * User list
    */
-  Resources?: ScimUserResponse[];
+  Resources?: ScimUserShortInfo[];
 
   /**
    * Format: int64

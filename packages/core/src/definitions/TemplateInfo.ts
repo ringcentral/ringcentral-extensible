@@ -11,8 +11,13 @@ interface TemplateInfo {
   id?: string;
 
   /**
+   * Description of a template
    */
-  type?: 'UserSettings' | 'CallHandling';
+  description?: string;
+
+  /**
+   */
+  type?: 'UserSettings' | 'CallHandling' | 'LimitedExtensions';
 
   /**
    * Name of a template

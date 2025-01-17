@@ -37,7 +37,9 @@ class Index {
   }
 
   /**
-   * Returns individual call log record(s) by ID. Batch syntax is supported.
+   * Returns individual call log record(s) by ID.
+   * [Batch syntax](https://developers.ringcentral.com/guide/basics/batch-requests) is supported.
+   *
    * HTTP Method: get
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/call-log/{callRecordId}
    * Rate Limit Group: Heavy

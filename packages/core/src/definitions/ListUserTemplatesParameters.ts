@@ -5,7 +5,7 @@ interface ListUserTemplatesParameters {
   /**
    * Type of template
    */
-  type?: 'UserSettings' | 'CallHandling';
+  type?: 'UserSettings' | 'CallHandling' | 'LimitedExtensions';
 
   /**
    * Indicates a page number to retrieve. Only positive number values

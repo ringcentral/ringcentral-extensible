@@ -68,7 +68,7 @@ interface GetTokenRequest {
 
   /**
    * Refresh token lifetime in seconds
-   * Maximum: 604800
+   * Maximum: 2592000
    * Format: int32
    * Default: 604800
    */

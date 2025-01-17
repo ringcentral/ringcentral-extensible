@@ -93,6 +93,12 @@ interface ExtensionCreationRequest {
    *  to `false` by default
    */
   hidden?: boolean;
+
+  /**
+   * Extension name. For user extension types the value is a combination
+   *  of the specified first name and last name
+   */
+  name?: string;
 }
 
 export default ExtensionCreationRequest;

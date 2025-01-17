@@ -263,15 +263,13 @@ interface CallLogRecordLegInfo {
 
   /**
    * Call duration in seconds
-   * Required
-   * Format: int32
+   * Format: int64
    */
   duration?: number;
 
   /**
    * Call duration in milliseconds
-   * Required
-   * Format: int32
+   * Format: int64
    */
   durationMs?: number;
 
@@ -304,7 +302,8 @@ interface CallLogRecordLegInfo {
     | 'Vma'
     | 'LocalNumber'
     | 'ImsOutgoing'
-    | 'ImsIncoming';
+    | 'ImsIncoming'
+    | 'Unknown';
 
   /**
    * Leg type
@@ -340,6 +339,7 @@ interface CallLogRecordLegInfo {
     | 'Hunting'
     | 'OutgoingFreeSpDl'
     | 'ParkLocation'
+    | 'CallMeCallOut'
     | 'ConferenceCall'
     | 'MobileApp'
     | 'MoveToConference'
@@ -350,7 +350,8 @@ interface CallLogRecordLegInfo {
     | 'Pickup'
     | 'ImsCall'
     | 'JoinCall'
-    | 'TextRelay';
+    | 'TextRelay'
+    | 'IvaCall';
 
   /**
    * Returned for 'Detailed' call log. Specifies if the leg is master-leg
