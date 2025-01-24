@@ -14,7 +14,6 @@ interface ADGError {
     | "ErrorCode{code='ADG-102', httpStatus=405, description='Method not allowed.'}"
     | "ErrorCode{code='ADG-111', httpStatus=400, description='Need Content-Type header.'}"
     | "ErrorCode{code='ADG-112', httpStatus=400, description='Request body is invalid.'}"
-    // eslint-disable-next-line no-template-curly-in-string
     | "ErrorCode{code='ADG-121', httpStatus=400, description='Parameter [${paramName}] is invalid. ${additionalInfo:-}'}"
     | "ErrorCode{code='ADG-115', httpStatus=415, description='Unsupported Media Type.'}"
     | "ErrorCode{code='ADG-105', httpStatus=404, description='Current account is not linked to any federation.'}"

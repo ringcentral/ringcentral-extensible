@@ -43,7 +43,6 @@ class RetryExtension extends SdkExtension {
       queryParams?: {},
       config?: RestRequestConfig,
       retriesAttempted = 0,
-      // eslint-disable-next-line max-params
     ): Promise<RestResponse<T>> => {
       if (!this.enabled) {
         return request(method, endpoint, content, queryParams, config);
@@ -72,7 +71,6 @@ class RetryExtension extends SdkExtension {
     rc.request = newRequest;
   }
 
-  // eslint-disable-next-line class-methods-use-this, @typescript-eslint/no-empty-function
   public async revoke(): Promise<void> {}
 }
 

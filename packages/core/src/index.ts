@@ -72,7 +72,6 @@ class RingCentral implements RingCentralInterface {
     this.rest.token = token;
   }
 
-  // eslint-disable-next-line max-params
   public async request<T>(
     method: RestMethod,
     endpoint: string,
@@ -116,7 +115,6 @@ class RingCentral implements RingCentralInterface {
     return this.request<T>("GET", endpoint, undefined, queryParams, config);
   }
 
-  // eslint-disable-next-line max-params
   public async delete<T>(
     endpoint: string,
     content?: {},
@@ -126,7 +124,6 @@ class RingCentral implements RingCentralInterface {
     return this.request<T>("DELETE", endpoint, content, queryParams, config);
   }
 
-  // eslint-disable-next-line max-params
   public async post<T>(
     endpoint: string,
     content?: {},
@@ -136,7 +133,6 @@ class RingCentral implements RingCentralInterface {
     return this.request<T>("POST", endpoint, content, queryParams, config);
   }
 
-  // eslint-disable-next-line max-params
   public async put<T>(
     endpoint: string,
     content?: {},
@@ -146,7 +142,6 @@ class RingCentral implements RingCentralInterface {
     return this.request<T>("PUT", endpoint, content, queryParams, config);
   }
 
-  // eslint-disable-next-line max-params
   public async patch<T>(
     endpoint: string,
     content: {},
@@ -167,7 +162,6 @@ class RingCentral implements RingCentralInterface {
   ): Promise<TokenInfo> {
     const getTokenRequest: GetTokenRequest = {};
     if ("username" in options) {
-      // eslint-disable-next-line no-console
       console.warn(
         "Username/password authentication is deprecated. Please migrate to the JWT grant type.",
       );

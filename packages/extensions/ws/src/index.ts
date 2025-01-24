@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 import type RingCentral from "@rc-ex/core";
 import type {
   RestMethod,
@@ -105,7 +104,6 @@ class WebSocketExtension extends SdkExtension {
         content?: {},
         queryParams?: {},
         config?: RestRequestConfig,
-        // eslint-disable-next-line max-params
       ): Promise<RestResponse<T>> => {
         if (!this.enabled || !this.options.restOverWebSocket) {
           return request(method, endpoint, content, queryParams, config);
@@ -275,7 +273,6 @@ class WebSocketExtension extends SdkExtension {
           },
         ]),
       );
-      // eslint-disable-next-line @typescript-eslint/no-unused-vars
     } catch (e) {
       this.ws.close(); // Explicitly mark WS as closed
     }

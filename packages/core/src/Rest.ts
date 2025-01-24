@@ -66,7 +66,6 @@ export default class Rest {
     });
   }
 
-  // eslint-disable-next-line max-params
   public async request<T>(
     method: RestMethod,
     endpoint: string,

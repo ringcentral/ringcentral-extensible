@@ -56,7 +56,6 @@ class AuthorizeUriExtension extends SdkExtension {
     return uri.search(authorizeRequest as QueryDataMap).toString();
   }
 
-  // eslint-disable-next-line class-methods-use-this, @typescript-eslint/no-empty-function
   public async revoke(): Promise<void> {}
 }
 

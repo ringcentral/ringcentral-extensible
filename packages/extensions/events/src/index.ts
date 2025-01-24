@@ -42,7 +42,6 @@ class EventsExtension extends SdkExtension {
     this.options = options;
   }
 
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   public emit(event: Events, data: any) {
     if (
       !this.options.enabledEvents || this.options.enabledEvents.includes(event)
@@ -59,7 +58,6 @@ class EventsExtension extends SdkExtension {
       content?: {},
       queryParams?: {},
       config?: RestRequestConfig,
-      // eslint-disable-next-line max-params
     ): Promise<RestResponse<T>> => {
       if (!this.enabled) {
         return request(method, endpoint, content, queryParams, config);
@@ -125,7 +123,6 @@ class EventsExtension extends SdkExtension {
     };
   }
 
-  // eslint-disable-next-line class-methods-use-this, @typescript-eslint/no-empty-function
   public async revoke(): Promise<void> {}
 }
 

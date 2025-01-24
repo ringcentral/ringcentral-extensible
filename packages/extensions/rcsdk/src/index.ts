@@ -31,7 +31,6 @@ class RcSdkExtension extends SdkExtension {
       content?: {},
       queryParams?: {},
       config?: RestRequestConfig,
-      // eslint-disable-next-line max-params
     ): Promise<RestResponse<T>> => {
       if (!this.enabled) {
         return request(method, endpoint, content, queryParams, config);
@@ -63,7 +62,6 @@ class RcSdkExtension extends SdkExtension {
     };
   }
 
-  // eslint-disable-next-line class-methods-use-this, @typescript-eslint/no-empty-function
   public async revoke(): Promise<void> {}
 }
 

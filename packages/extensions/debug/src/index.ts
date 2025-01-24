@@ -17,7 +17,6 @@ class DebugExtension extends SdkExtension {
   public constructor(options: DebugOptions = {}) {
     super();
     this.options = options;
-    // eslint-disable-next-line no-console
     this.options.loggingAction ??= (message) => console.debug(message);
   }
 
@@ -29,7 +28,6 @@ class DebugExtension extends SdkExtension {
       content?: {},
       queryParams?: {},
       config?: RestRequestConfig,
-      // eslint-disable-next-line max-params
     ): Promise<RestResponse<T>> => {
       if (!this.enabled) {
         return request(method, endpoint, content, queryParams, config);
@@ -46,7 +44,6 @@ class DebugExtension extends SdkExtension {
     };
   }
 
-  // eslint-disable-next-line class-methods-use-this, @typescript-eslint/no-empty-function
   public async revoke(): Promise<void> {}
 }
 

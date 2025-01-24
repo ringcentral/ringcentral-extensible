@@ -14,7 +14,6 @@ const version = "0.16";
 
 const uuid = hyperid();
 
-// eslint-disable-next-line max-params
 export async function request<T>(
   this: WebSocketExtensionInterface,
   method: RestMethod,
