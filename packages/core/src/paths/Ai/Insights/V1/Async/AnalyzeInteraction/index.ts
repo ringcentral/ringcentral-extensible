@@ -1,7 +1,11 @@
-import type CaiAsyncApiResponse from '../../../../../../definitions/CaiAsyncApiResponse';
-import type CaiAnalyzeInteractionParameters from '../../../../../../definitions/CaiAnalyzeInteractionParameters';
-import type InteractionInput from '../../../../../../definitions/InteractionInput';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../types';
+import type CaiAsyncApiResponse from "../../../../../../definitions/CaiAsyncApiResponse";
+import type CaiAnalyzeInteractionParameters from "../../../../../../definitions/CaiAnalyzeInteractionParameters";
+import type InteractionInput from "../../../../../../definitions/InteractionInput";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -27,7 +31,12 @@ class Index {
     queryParams?: CaiAnalyzeInteractionParameters,
     restRequestConfig?: RestRequestConfig,
   ): Promise<CaiAsyncApiResponse> {
-    const r = await this.rc.post<CaiAsyncApiResponse>(this.path(), interactionInput, queryParams, restRequestConfig);
+    const r = await this.rc.post<CaiAsyncApiResponse>(
+      this.path(),
+      interactionInput,
+      queryParams,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

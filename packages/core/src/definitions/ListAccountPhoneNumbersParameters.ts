@@ -21,19 +21,19 @@ interface ListAccountPhoneNumbersParameters {
    * Usage type of phone number
    */
   usageType?: (
-    | 'MainCompanyNumber'
-    | 'AdditionalCompanyNumber'
-    | 'CompanyNumber'
-    | 'DirectNumber'
-    | 'CompanyFaxNumber'
-    | 'ForwardedNumber'
-    | 'ForwardedCompanyNumber'
-    | 'ContactCenterNumber'
-    | 'ConferencingNumber'
-    | 'MeetingsNumber'
-    | 'BusinessMobileNumber'
-    | 'PartnerBusinessMobileNumber'
-    | 'IntegrationNumber'
+    | "MainCompanyNumber"
+    | "AdditionalCompanyNumber"
+    | "CompanyNumber"
+    | "DirectNumber"
+    | "CompanyFaxNumber"
+    | "ForwardedNumber"
+    | "ForwardedCompanyNumber"
+    | "ContactCenterNumber"
+    | "ConferencingNumber"
+    | "MeetingsNumber"
+    | "BusinessMobileNumber"
+    | "PartnerBusinessMobileNumber"
+    | "IntegrationNumber"
   )[];
 
   /**
@@ -41,19 +41,19 @@ interface ListAccountPhoneNumbersParameters {
    *  which are not terminated in the RingCentral phone system
    */
   paymentType?:
-    | 'External'
-    | 'TollFree'
-    | 'Local'
-    | 'BusinessMobileNumberProvider'
-    | 'ExternalNumberProvider'
-    | 'ExternalNumberProviderTollFree';
+    | "External"
+    | "TollFree"
+    | "Local"
+    | "BusinessMobileNumberProvider"
+    | "ExternalNumberProvider"
+    | "ExternalNumberProviderTollFree";
 
   /**
    * Status of a phone number. If the value is `Normal`, the phone
    *  number is ready to be used. Otherwise, it is an external number not yet
    *  ported to RingCentral
    */
-  status?: 'Normal' | 'Pending' | 'PortedIn' | 'Temporary' | 'Unknown';
+  status?: "Normal" | "Pending" | "PortedIn" | "Temporary" | "Unknown";
 }
 
 export default ListAccountPhoneNumbersParameters;

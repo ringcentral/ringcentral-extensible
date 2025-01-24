@@ -1,6 +1,10 @@
-import type MessageStatusesResponse from '../../../../../definitions/MessageStatusesResponse';
-import type AggregateA2PSMSStatusesParameters from '../../../../../definitions/AggregateA2PSMSStatusesParameters';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import type MessageStatusesResponse from "../../../../../definitions/MessageStatusesResponse";
+import type AggregateA2PSMSStatusesParameters from "../../../../../definitions/AggregateA2PSMSStatusesParameters";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -24,7 +28,11 @@ class Index {
     queryParams?: AggregateA2PSMSStatusesParameters,
     restRequestConfig?: RestRequestConfig,
   ): Promise<MessageStatusesResponse> {
-    const r = await this.rc.get<MessageStatusesResponse>(this.path(), queryParams, restRequestConfig);
+    const r = await this.rc.get<MessageStatusesResponse>(
+      this.path(),
+      queryParams,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

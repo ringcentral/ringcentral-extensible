@@ -7,7 +7,7 @@ interface RcwHistoryGetRecordingDownloadParameters {
    * Example: Video
    * Default: Video
    */
-  recordingMediaType?: 'Video' | 'Audio';
+  recordingMediaType?: "Video" | "Audio";
 }
 
 export default RcwHistoryGetRecordingDownloadParameters;

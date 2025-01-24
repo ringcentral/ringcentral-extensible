@@ -1,5 +1,9 @@
-import type CallParty from '../../../../../../../definitions/CallParty';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../../types';
+import type CallParty from "../../../../../../../definitions/CallParty";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -20,7 +24,12 @@ class Index {
    * App Permission: CallControl
    */
   public async post(restRequestConfig?: RestRequestConfig): Promise<CallParty> {
-    const r = await this.rc.post<CallParty>(this.path(), {}, undefined, restRequestConfig);
+    const r = await this.rc.post<CallParty>(
+      this.path(),
+      {},
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

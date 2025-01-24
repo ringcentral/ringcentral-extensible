@@ -1,15 +1,14 @@
-import type BrandInfo from './BrandInfo';
-import type CountryInfoShortModel from './CountryInfoShortModel';
-import type ServicePlanInfo from './ServicePlanInfo';
-import type TargetServicePlanInfo from './TargetServicePlanInfo';
-import type BillingPlanInfo from './BillingPlanInfo';
-import type ServiceFeatureInfo from './ServiceFeatureInfo';
-import type AccountLimits from './AccountLimits';
-import type BillingPackageInfo from './BillingPackageInfo';
+import type BrandInfo from "./BrandInfo";
+import type CountryInfoShortModel from "./CountryInfoShortModel";
+import type ServicePlanInfo from "./ServicePlanInfo";
+import type TargetServicePlanInfo from "./TargetServicePlanInfo";
+import type BillingPlanInfo from "./BillingPlanInfo";
+import type ServiceFeatureInfo from "./ServiceFeatureInfo";
+import type AccountLimits from "./AccountLimits";
+import type BillingPackageInfo from "./BillingPackageInfo";
 
 /**
  * Account service information, including brand, service plan and billing plan
- *
  */
 interface AccountServiceInfoRequest {
   /**
@@ -23,24 +22,19 @@ interface AccountServiceInfoRequest {
    */
   servicePlanName?: string;
 
-  /**
-   */
+  /** */
   brand?: BrandInfo;
 
-  /**
-   */
+  /** */
   contractedCountry?: CountryInfoShortModel;
 
-  /**
-   */
+  /** */
   servicePlan?: ServicePlanInfo;
 
-  /**
-   */
+  /** */
   targetServicePlan?: TargetServicePlanInfo;
 
-  /**
-   */
+  /** */
   billingPlan?: BillingPlanInfo;
 
   /**
@@ -48,12 +42,10 @@ interface AccountServiceInfoRequest {
    */
   serviceFeatures?: ServiceFeatureInfo[];
 
-  /**
-   */
+  /** */
   limits?: AccountLimits;
 
-  /**
-   */
+  /** */
   package?: BillingPackageInfo;
 }
 

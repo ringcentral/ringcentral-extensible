@@ -1,5 +1,5 @@
-import ContractedCountry from './ContractedCountry';
-import type { RingCentralInterface, ParentInterface } from '../../../../types';
+import ContractedCountry from "./ContractedCountry";
+import type { ParentInterface, RingCentralInterface } from "../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -18,7 +18,9 @@ class Index {
     return `${this._parent.path()}/brand`;
   }
 
-  public contractedCountry(contractedCountryId: string | null = null): ContractedCountry {
+  public contractedCountry(
+    contractedCountryId: string | null = null,
+  ): ContractedCountry {
     return new ContractedCountry(this, contractedCountryId);
   }
 }

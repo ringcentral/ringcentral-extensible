@@ -1,5 +1,5 @@
-import type SessionGlobalResource from './SessionGlobalResource';
-import type RcwPagingModel from './RcwPagingModel';
+import type SessionGlobalResource from "./SessionGlobalResource";
+import type RcwPagingModel from "./RcwPagingModel";
 
 interface SessionGlobalListResource {
   /**

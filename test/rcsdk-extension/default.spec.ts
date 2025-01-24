@@ -1,9 +1,9 @@
-import RingCentral from '@rc-ex/core';
-import RcSdkExtension from '@rc-ex/rcsdk';
-import { SDK } from '@ringcentral/sdk';
+import RingCentral from "@rc-ex/core";
+import RcSdkExtension from "@rc-ex/rcsdk";
+import { SDK } from "@ringcentral/sdk";
 
-describe('RingCentral extension', () => {
-  test('default', async () => {
+describe("RingCentral extension", () => {
+  test("default", async () => {
     const sdk = new SDK({
       clientId: process.env.RINGCENTRAL_CLIENT_ID!,
       clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET!,

@@ -1,6 +1,10 @@
-import type CreateSipRegistrationResponse from '../../../../definitions/CreateSipRegistrationResponse';
-import type CreateSipRegistrationRequest from '../../../../definitions/CreateSipRegistrationRequest';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
+import type CreateSipRegistrationResponse from "../../../../definitions/CreateSipRegistrationResponse";
+import type CreateSipRegistrationRequest from "../../../../definitions/CreateSipRegistrationRequest";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../types";
 
 class Index {
   public rc: RingCentralInterface;

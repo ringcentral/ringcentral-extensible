@@ -1,7 +1,7 @@
-import type MessageAttachmentInfo from './MessageAttachmentInfo';
-import type ConversationInfo from './ConversationInfo';
-import type MessageStoreCallerInfoResponseFrom from './MessageStoreCallerInfoResponseFrom';
-import type MessageStoreCallerInfoResponseTo from './MessageStoreCallerInfoResponseTo';
+import type MessageAttachmentInfo from "./MessageAttachmentInfo";
+import type ConversationInfo from "./ConversationInfo";
+import type MessageStoreCallerInfoResponseFrom from "./MessageStoreCallerInfoResponseFrom";
+import type MessageStoreCallerInfoResponseTo from "./MessageStoreCallerInfoResponseTo";
 
 interface GetInternalTextMessageInfoResponse {
   /**
@@ -27,7 +27,7 @@ interface GetInternalTextMessageInfoResponse {
    *  that all attachments are already deleted and the message itself is about
    *  to be physically deleted shortly
    */
-  availability?: 'Alive' | 'Deleted' | 'Purged';
+  availability?: "Alive" | "Deleted" | "Purged";
 
   /**
    * SMS and Pager only. Identifier of a conversation that the message
@@ -36,8 +36,7 @@ interface GetInternalTextMessageInfoResponse {
    */
   conversationId?: number;
 
-  /**
-   */
+  /** */
   conversation?: ConversationInfo;
 
   /**
@@ -52,10 +51,9 @@ interface GetInternalTextMessageInfoResponse {
    *  directions are allowed. For example voicemail messages can
    *  be only inbound
    */
-  direction?: 'Inbound' | 'Outbound';
+  direction?: "Inbound" | "Outbound";
 
-  /**
-   */
+  /** */
   from?: MessageStoreCallerInfoResponseFrom;
 
   /**
@@ -73,7 +71,13 @@ interface GetInternalTextMessageInfoResponse {
    *  'SendingFailed', then the 'SendingFailed' value is returned. In other cases
    *  the 'Sent' status is returned
    */
-  messageStatus?: 'Queued' | 'Sent' | 'Delivered' | 'DeliveryFailed' | 'SendingFailed' | 'Received';
+  messageStatus?:
+    | "Queued"
+    | "Sent"
+    | "Delivered"
+    | "DeliveryFailed"
+    | "SendingFailed"
+    | "Received";
 
   /**
    * Pager only. `true` if at least one of a message recipients
@@ -84,12 +88,12 @@ interface GetInternalTextMessageInfoResponse {
   /**
    * Message priority
    */
-  priority?: 'Normal' | 'High';
+  priority?: "Normal" | "High";
 
   /**
    * Message read status
    */
-  readStatus?: 'Read' | 'Unread';
+  readStatus?: "Read" | "Unread";
 
   /**
    * Message subject. For SMS and Pager messages it replicates message
@@ -105,7 +109,7 @@ interface GetInternalTextMessageInfoResponse {
   /**
    * Message type
    */
-  type?: 'Fax' | 'SMS' | 'VoiceMail' | 'Pager' | 'Text';
+  type?: "Fax" | "SMS" | "VoiceMail" | "Pager" | "Text";
 }
 
 export default GetInternalTextMessageInfoResponse;

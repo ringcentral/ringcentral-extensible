@@ -1,4 +1,4 @@
-import type MeetingsTimezoneResource from './MeetingsTimezoneResource';
+import type MeetingsTimezoneResource from "./MeetingsTimezoneResource";
 
 /**
  * Timing of a meeting
@@ -14,8 +14,7 @@ interface MeetingScheduleResource {
    */
   durationInMinutes?: number;
 
-  /**
-   */
+  /** */
   timeZone?: MeetingsTimezoneResource;
 }
 

@@ -4,12 +4,10 @@ interface MeetingsCountryResource {
    */
   uri?: string;
 
-  /**
-   */
+  /** */
   id?: string;
 
-  /**
-   */
+  /** */
   name?: string;
 
   /**
@@ -26,16 +24,13 @@ interface MeetingsCountryResource {
    */
   callingCode?: string;
 
-  /**
-   */
+  /** */
   emergencyCalling?: boolean;
 
-  /**
-   */
+  /** */
   numberSelling?: boolean;
 
-  /**
-   */
+  /** */
   loginAllowed?: boolean;
 }
 

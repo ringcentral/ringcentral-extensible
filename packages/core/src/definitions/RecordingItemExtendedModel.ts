@@ -1,5 +1,5 @@
-import type ApiError from './ApiError';
-import type SessionRefModel from './SessionRefModel';
+import type ApiError from "./ApiError";
+import type SessionRefModel from "./SessionRefModel";
 
 interface RecordingItemExtendedModel {
   /**
@@ -27,10 +27,9 @@ interface RecordingItemExtendedModel {
    * Required
    * Example: Available
    */
-  status?: 'Processing' | 'Available' | 'Failed' | 'Purged';
+  status?: "Processing" | "Available" | "Failed" | "Purged";
 
-  /**
-   */
+  /** */
   failureReason?: ApiError;
 
   /**
@@ -63,8 +62,7 @@ interface RecordingItemExtendedModel {
    */
   recordingSharedUri?: string;
 
-  /**
-   */
+  /** */
   session?: SessionRefModel;
 }
 

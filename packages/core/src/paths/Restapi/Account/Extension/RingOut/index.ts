@@ -1,13 +1,20 @@
-import type GetRingOutStatusResponse from '../../../../../definitions/GetRingOutStatusResponse';
-import type MakeRingOutRequest from '../../../../../definitions/MakeRingOutRequest';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import type GetRingOutStatusResponse from "../../../../../definitions/GetRingOutStatusResponse";
+import type MakeRingOutRequest from "../../../../../definitions/MakeRingOutRequest";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
   public _parent: ParentInterface;
   public ringoutId: string | null;
 
-  public constructor(_parent: ParentInterface, ringoutId: string | null = null) {
+  public constructor(
+    _parent: ParentInterface,
+    ringoutId: string | null = null,
+  ) {
     this._parent = _parent;
     this.rc = _parent.rc;
     this.ringoutId = ringoutId;
@@ -45,11 +52,17 @@ class Index {
    * Rate Limit Group: Light
    * App Permission: RingOut
    */
-  public async get(restRequestConfig?: RestRequestConfig): Promise<GetRingOutStatusResponse> {
+  public async get(
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<GetRingOutStatusResponse> {
     if (this.ringoutId === null) {
-      throw new Error('ringoutId must be specified.');
+      throw new Error("ringoutId must be specified.");
     }
-    const r = await this.rc.get<GetRingOutStatusResponse>(this.path(), undefined, restRequestConfig);
+    const r = await this.rc.get<GetRingOutStatusResponse>(
+      this.path(),
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -62,9 +75,14 @@ class Index {
    */
   public async delete(restRequestConfig?: RestRequestConfig): Promise<string> {
     if (this.ringoutId === null) {
-      throw new Error('ringoutId must be specified.');
+      throw new Error("ringoutId must be specified.");
     }
-    const r = await this.rc.delete<string>(this.path(), {}, undefined, restRequestConfig);
+    const r = await this.rc.delete<string>(
+      this.path(),
+      {},
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

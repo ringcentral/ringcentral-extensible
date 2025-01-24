@@ -12,7 +12,7 @@ interface RcwHistoryListAllCompanySessionsParameters {
    * Filter to return only webinar sessions in certain status. Multiple values are supported.
    * Example: Active,Finished
    */
-  status?: ('Scheduled' | 'Active' | 'Finished')[];
+  status?: ("Scheduled" | "Active" | "Finished")[];
 
   /**
    * The beginning of the time window by 'endTime' .

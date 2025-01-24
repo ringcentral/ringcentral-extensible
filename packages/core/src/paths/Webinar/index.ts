@@ -1,8 +1,8 @@
-import Configuration from './Configuration';
-import Notifications from './Notifications';
-import Registration from './Registration';
-import History from './History';
-import type { RingCentralInterface } from '../../types';
+import Configuration from "./Configuration";
+import Notifications from "./Notifications";
+import Registration from "./Registration";
+import History from "./History";
+import type { RingCentralInterface } from "../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -11,7 +11,7 @@ class Index {
     this.rc = rc;
   }
   public path(): string {
-    return '/webinar';
+    return "/webinar";
   }
 
   public history(): History {

@@ -1,5 +1,5 @@
-import type RingCentral from '@rc-ex/core';
-import SdkExtension from '@rc-ex/core/lib/SdkExtension';
+import type RingCentral from "@rc-ex/core";
+import SdkExtension from "@rc-ex/core/lib/SdkExtension";
 
 export interface AutoRefreshOptions {
   interval: number;
@@ -10,7 +10,9 @@ class AutoRefreshExtension extends SdkExtension {
   public options: AutoRefreshOptions;
   private timeout?: NodeJS.Timeout;
 
-  public constructor(options: AutoRefreshOptions = { interval: 1000 * 60 * 30 }) {
+  public constructor(
+    options: AutoRefreshOptions = { interval: 1000 * 60 * 30 },
+  ) {
     super();
     this.options = options;
   }

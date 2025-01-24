@@ -17,7 +17,7 @@ interface EmailRecipientInfo {
   /**
    * Extension status
    */
-  status?: 'Enabled' | 'Disabled' | 'Frozen' | 'NotActivated' | 'Unassigned';
+  status?: "Enabled" | "Disabled" | "Frozen" | "NotActivated" | "Unassigned";
 
   /**
    * List of user email addresses from extension notification settings.
@@ -28,7 +28,7 @@ interface EmailRecipientInfo {
   /**
    * Call queue manager permission
    */
-  permission?: 'FullAccess' | 'Messages' | 'MemberManagement';
+  permission?: "FullAccess" | "Messages" | "MemberManagement";
 }
 
 export default EmailRecipientInfo;

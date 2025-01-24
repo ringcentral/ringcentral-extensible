@@ -1,16 +1,23 @@
-import Renew from './Renew';
-import type UpdateSubscriptionRequest from '../../../../../definitions/UpdateSubscriptionRequest';
-import type SubscriptionInfo from '../../../../../definitions/SubscriptionInfo';
-import type CreateWebhookSubscriptionRequest from '../../../../../definitions/CreateWebhookSubscriptionRequest';
-import type SubscriptionListResource from '../../../../../definitions/SubscriptionListResource';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import Renew from "./Renew";
+import type UpdateSubscriptionRequest from "../../../../../definitions/UpdateSubscriptionRequest";
+import type SubscriptionInfo from "../../../../../definitions/SubscriptionInfo";
+import type CreateWebhookSubscriptionRequest from "../../../../../definitions/CreateWebhookSubscriptionRequest";
+import type SubscriptionListResource from "../../../../../definitions/SubscriptionListResource";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
   public _parent: ParentInterface;
   public subscriptionId: string | null;
 
-  public constructor(_parent: ParentInterface, subscriptionId: string | null = null) {
+  public constructor(
+    _parent: ParentInterface,
+    subscriptionId: string | null = null,
+  ) {
     this._parent = _parent;
     this.rc = _parent.rc;
     this.subscriptionId = subscriptionId;
@@ -27,8 +34,14 @@ class Index {
    * Endpoint: /webinar/notifications/v1/subscriptions
    * Rate Limit Group: Light
    */
-  public async list(restRequestConfig?: RestRequestConfig): Promise<SubscriptionListResource> {
-    const r = await this.rc.get<SubscriptionListResource>(this.path(false), undefined, restRequestConfig);
+  public async list(
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<SubscriptionListResource> {
+    const r = await this.rc.get<SubscriptionListResource>(
+      this.path(false),
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -57,11 +70,17 @@ class Index {
    * Endpoint: /webinar/notifications/v1/subscriptions/{subscriptionId}
    * Rate Limit Group: Light
    */
-  public async get(restRequestConfig?: RestRequestConfig): Promise<SubscriptionInfo> {
+  public async get(
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<SubscriptionInfo> {
     if (this.subscriptionId === null) {
-      throw new Error('subscriptionId must be specified.');
+      throw new Error("subscriptionId must be specified.");
     }
-    const r = await this.rc.get<SubscriptionInfo>(this.path(), undefined, restRequestConfig);
+    const r = await this.rc.get<SubscriptionInfo>(
+      this.path(),
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -83,9 +102,14 @@ class Index {
     restRequestConfig?: RestRequestConfig,
   ): Promise<SubscriptionInfo> {
     if (this.subscriptionId === null) {
-      throw new Error('subscriptionId must be specified.');
+      throw new Error("subscriptionId must be specified.");
     }
-    const r = await this.rc.put<SubscriptionInfo>(this.path(), updateSubscriptionRequest, undefined, restRequestConfig);
+    const r = await this.rc.put<SubscriptionInfo>(
+      this.path(),
+      updateSubscriptionRequest,
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -97,9 +121,14 @@ class Index {
    */
   public async delete(restRequestConfig?: RestRequestConfig): Promise<string> {
     if (this.subscriptionId === null) {
-      throw new Error('subscriptionId must be specified.');
+      throw new Error("subscriptionId must be specified.");
     }
-    const r = await this.rc.delete<string>(this.path(), {}, undefined, restRequestConfig);
+    const r = await this.rc.delete<string>(
+      this.path(),
+      {},
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 

@@ -1,8 +1,12 @@
-import Content from './Content';
-import Utils from '../../../../Utils';
-import type CustomCompanyGreetingInfo from '../../../../definitions/CustomCompanyGreetingInfo';
-import type CreateCompanyGreetingRequest from '../../../../definitions/CreateCompanyGreetingRequest';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
+import Content from "./Content";
+import Utils from "../../../../Utils";
+import type CustomCompanyGreetingInfo from "../../../../definitions/CustomCompanyGreetingInfo";
+import type CreateCompanyGreetingRequest from "../../../../definitions/CreateCompanyGreetingRequest";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -28,7 +32,12 @@ class Index {
     restRequestConfig?: RestRequestConfig,
   ): Promise<CustomCompanyGreetingInfo> {
     const formData = await Utils.getFormData(createCompanyGreetingRequest);
-    const r = await this.rc.post<CustomCompanyGreetingInfo>(this.path(), formData, undefined, restRequestConfig);
+    const r = await this.rc.post<CustomCompanyGreetingInfo>(
+      this.path(),
+      formData,
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 

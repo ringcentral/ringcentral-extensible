@@ -1,6 +1,10 @@
-import type NotificationSettingsUpdateRequest from '../../../../../definitions/NotificationSettingsUpdateRequest';
-import type NotificationSettings from '../../../../../definitions/NotificationSettings';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import type NotificationSettingsUpdateRequest from "../../../../../definitions/NotificationSettingsUpdateRequest";
+import type NotificationSettings from "../../../../../definitions/NotificationSettings";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -24,8 +28,14 @@ class Index {
    * App Permission: ReadAccounts
    * User Permission: ReadMessagesNotificationsSettings
    */
-  public async get(restRequestConfig?: RestRequestConfig): Promise<NotificationSettings> {
-    const r = await this.rc.get<NotificationSettings>(this.path(), undefined, restRequestConfig);
+  public async get(
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<NotificationSettings> {
+    const r = await this.rc.get<NotificationSettings>(
+      this.path(),
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 

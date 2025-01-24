@@ -1,4 +1,4 @@
-import type TelephonySessionsEventBody from './TelephonySessionsEventBody';
+import type TelephonySessionsEventBody from "./TelephonySessionsEventBody";
 
 interface AccountTelephonySessionsEvent {
   /**
@@ -26,8 +26,7 @@ interface AccountTelephonySessionsEvent {
    */
   ownerId?: string;
 
-  /**
-   */
+  /** */
   body?: TelephonySessionsEventBody;
 }
 

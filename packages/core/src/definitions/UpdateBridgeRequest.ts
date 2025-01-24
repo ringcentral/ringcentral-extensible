@@ -1,6 +1,6 @@
-import type BridgePinsWithoutPstn from './BridgePinsWithoutPstn';
-import type BridgeRequestSecurity from './BridgeRequestSecurity';
-import type BridgePreferences from './BridgePreferences';
+import type BridgePinsWithoutPstn from "./BridgePinsWithoutPstn";
+import type BridgeRequestSecurity from "./BridgeRequestSecurity";
+import type BridgePreferences from "./BridgePreferences";
 
 interface UpdateBridgeRequest {
   /**
@@ -9,16 +9,13 @@ interface UpdateBridgeRequest {
    */
   name?: string;
 
-  /**
-   */
+  /** */
   pins?: BridgePinsWithoutPstn;
 
-  /**
-   */
+  /** */
   security?: BridgeRequestSecurity;
 
-  /**
-   */
+  /** */
   preferences?: BridgePreferences;
 }
 

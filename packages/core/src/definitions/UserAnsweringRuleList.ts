@@ -1,6 +1,6 @@
-import type CallHandlingRuleInfo from './CallHandlingRuleInfo';
-import type EnumeratedPagingModel from './EnumeratedPagingModel';
-import type PageNavigationModel from './PageNavigationModel';
+import type CallHandlingRuleInfo from "./CallHandlingRuleInfo";
+import type EnumeratedPagingModel from "./EnumeratedPagingModel";
+import type PageNavigationModel from "./PageNavigationModel";
 
 interface UserAnsweringRuleList {
   /**
@@ -15,12 +15,10 @@ interface UserAnsweringRuleList {
    */
   records?: CallHandlingRuleInfo[];
 
-  /**
-   */
+  /** */
   paging?: EnumeratedPagingModel;
 
-  /**
-   */
+  /** */
   navigation?: PageNavigationModel;
 }
 

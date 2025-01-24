@@ -1,4 +1,4 @@
-import type RolesBusinessSiteResource from './RolesBusinessSiteResource';
+import type RolesBusinessSiteResource from "./RolesBusinessSiteResource";
 
 interface BusinessSiteCollectionResource {
   /**
@@ -6,8 +6,7 @@ interface BusinessSiteCollectionResource {
    */
   uri?: string;
 
-  /**
-   */
+  /** */
   records?: RolesBusinessSiteResource[];
 }
 

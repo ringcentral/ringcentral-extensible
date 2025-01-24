@@ -1,5 +1,8 @@
-import Fetch from './Fetch';
-import type { RingCentralInterface, ParentInterface } from '../../../../../../types';
+import Fetch from "./Fetch";
+import type {
+  ParentInterface,
+  RingCentralInterface,
+} from "../../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;

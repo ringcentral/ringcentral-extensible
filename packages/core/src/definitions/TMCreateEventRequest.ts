@@ -1,4 +1,4 @@
-import type EventRecurrenceInfo from './EventRecurrenceInfo';
+import type EventRecurrenceInfo from "./EventRecurrenceInfo";
 
 interface TMCreateEventRequest {
   /**
@@ -36,15 +36,22 @@ interface TMCreateEventRequest {
    */
   allDay?: boolean;
 
-  /**
-   */
+  /** */
   recurrence?: EventRecurrenceInfo;
 
   /**
    * Color of Event title (including its presentation in Calendar)
    * Default: Black
    */
-  color?: 'Black' | 'Red' | 'Orange' | 'Yellow' | 'Green' | 'Blue' | 'Purple' | 'Magenta';
+  color?:
+    | "Black"
+    | "Red"
+    | "Orange"
+    | "Yellow"
+    | "Green"
+    | "Blue"
+    | "Purple"
+    | "Magenta";
 
   /**
    * Event location

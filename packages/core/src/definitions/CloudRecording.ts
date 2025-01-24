@@ -1,4 +1,4 @@
-import type Host from './Host';
+import type Host from "./Host";
 
 /**
  * Recording information

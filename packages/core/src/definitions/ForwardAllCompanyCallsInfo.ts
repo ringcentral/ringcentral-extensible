@@ -1,6 +1,6 @@
-import type RangesInfo from './RangesInfo';
-import type ExtensionShortInfoResource from './ExtensionShortInfoResource';
-import type ForwardAllCallsReason from './ForwardAllCallsReason';
+import type RangesInfo from "./RangesInfo";
+import type ExtensionShortInfoResource from "./ExtensionShortInfoResource";
+import type ForwardAllCallsReason from "./ForwardAllCallsReason";
 
 interface ForwardAllCompanyCallsInfo {
   /**
@@ -20,14 +20,12 @@ interface ForwardAllCompanyCallsInfo {
    *  - bypass greeting to go to selected extension = ['Operator', 'Disconnect',
    *  'Bypass']
    */
-  callHandlingAction?: 'Operator' | 'Disconnect' | 'Bypass';
+  callHandlingAction?: "Operator" | "Disconnect" | "Bypass";
 
-  /**
-   */
+  /** */
   extension?: ExtensionShortInfoResource;
 
-  /**
-   */
+  /** */
   reason?: ForwardAllCallsReason;
 }
 

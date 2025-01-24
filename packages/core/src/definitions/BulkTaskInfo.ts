@@ -7,7 +7,7 @@ interface BulkTaskInfo {
   /**
    * Status of a task
    */
-  status?: 'Accepted' | 'Failed';
+  status?: "Accepted" | "Failed";
 
   /**
    * Task creation time

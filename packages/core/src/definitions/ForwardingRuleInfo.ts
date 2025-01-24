@@ -1,4 +1,4 @@
-import type CreateAnsweringRuleForwardingNumberInfo from './CreateAnsweringRuleForwardingNumberInfo';
+import type CreateAnsweringRuleForwardingNumberInfo from "./CreateAnsweringRuleForwardingNumberInfo";
 
 interface ForwardingRuleInfo {
   /**

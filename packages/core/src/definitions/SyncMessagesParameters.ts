@@ -29,7 +29,7 @@ interface SyncMessagesParameters {
    * Direction for the resulting messages. If not specified, both
    *  inbound and outbound messages are returned. Multiple values are accepted
    */
-  direction?: ('Inbound' | 'Outbound')[];
+  direction?: ("Inbound" | "Outbound")[];
 
   /**
    * If `true`, then the latest messages per every conversation ID
@@ -41,7 +41,7 @@ interface SyncMessagesParameters {
    * Type for the resulting messages. If not specified, all types
    *  of messages are returned. Multiple values are accepted
    */
-  messageType?: ('Fax' | 'SMS' | 'VoiceMail' | 'Pager')[];
+  messageType?: ("Fax" | "SMS" | "VoiceMail" | "Pager")[];
 
   /**
    * Limits the number of records to be returned (works in combination
@@ -60,7 +60,7 @@ interface SyncMessagesParameters {
    *    - FSync -- full sync
    *    - ISync -- incremental sync
    */
-  syncType?: 'FSync' | 'ISync';
+  syncType?: "FSync" | "ISync";
 
   /**
    * Filters voicemail messages based on the owner extension. Supported if the 'SharedVoicemail'

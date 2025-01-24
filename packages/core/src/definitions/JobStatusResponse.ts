@@ -1,8 +1,7 @@
-import type JobStatusResponseResponse from './JobStatusResponseResponse';
+import type JobStatusResponseResponse from "./JobStatusResponseResponse";
 
 interface JobStatusResponse {
-  /**
-   */
+  /** */
   jobId?: string;
 
   /**
@@ -20,12 +19,10 @@ interface JobStatusResponse {
    */
   expirationTime?: string;
 
-  /**
-   */
-  status?: 'Success' | 'Fail';
+  /** */
+  status?: "Success" | "Fail";
 
-  /**
-   */
+  /** */
   response?: JobStatusResponseResponse;
 }
 

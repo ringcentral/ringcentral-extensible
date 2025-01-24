@@ -1,8 +1,8 @@
-import type CompanyAnsweringRuleCallersInfoRequest from './CompanyAnsweringRuleCallersInfoRequest';
-import type CompanyAnsweringRuleCalledNumberInfoRequest from './CompanyAnsweringRuleCalledNumberInfoRequest';
-import type CompanyAnsweringRuleScheduleInfo from './CompanyAnsweringRuleScheduleInfo';
-import type CompanyAnsweringRuleExtensionInfoRequest from './CompanyAnsweringRuleExtensionInfoRequest';
-import type GreetingInfo from './GreetingInfo';
+import type CompanyAnsweringRuleCallersInfoRequest from "./CompanyAnsweringRuleCallersInfoRequest";
+import type CompanyAnsweringRuleCalledNumberInfoRequest from "./CompanyAnsweringRuleCalledNumberInfoRequest";
+import type CompanyAnsweringRuleScheduleInfo from "./CompanyAnsweringRuleScheduleInfo";
+import type CompanyAnsweringRuleExtensionInfoRequest from "./CompanyAnsweringRuleExtensionInfoRequest";
+import type GreetingInfo from "./GreetingInfo";
 
 interface CompanyAnsweringRuleInfo {
   /**
@@ -26,7 +26,7 @@ interface CompanyAnsweringRuleInfo {
    * Type of an answering rule
    * Default: Custom
    */
-  type?: 'BusinessHours' | 'AfterHours' | 'Custom';
+  type?: "BusinessHours" | "AfterHours" | "Custom";
 
   /**
    * Name of an answering rule specified by user. Max number of symbols is 30. The default value is 'My Rule N' where 'N' is the first free number
@@ -43,17 +43,15 @@ interface CompanyAnsweringRuleInfo {
    */
   calledNumbers?: CompanyAnsweringRuleCalledNumberInfoRequest[];
 
-  /**
-   */
+  /** */
   schedule?: CompanyAnsweringRuleScheduleInfo;
 
   /**
    * Specifies how incoming calls are forwarded. The default value is 'Operator' 'Operator' - play company greeting and forward to operator extension 'Disconnect' - play company greeting and disconnect 'Bypass' - bypass greeting to go to selected extension = ['Operator', 'Disconnect', 'Bypass']
    */
-  callHandlingAction?: 'Operator' | 'Disconnect' | 'Bypass';
+  callHandlingAction?: "Operator" | "Disconnect" | "Bypass";
 
-  /**
-   */
+  /** */
   extension?: CompanyAnsweringRuleExtensionInfoRequest;
 
   /**

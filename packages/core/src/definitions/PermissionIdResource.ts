@@ -1,4 +1,4 @@
-import type PermissionsCapabilities from './PermissionsCapabilities';
+import type PermissionsCapabilities from "./PermissionsCapabilities";
 
 interface PermissionIdResource {
   /**
@@ -6,14 +6,13 @@ interface PermissionIdResource {
    */
   uri?: string;
 
-  /**
-   */
+  /** */
   id?: string;
 
   /**
    * Site compatibility flag set for permission
    */
-  siteCompatible?: 'Compatible' | 'Incompatible' | 'Independent';
+  siteCompatible?: "Compatible" | "Incompatible" | "Independent";
 
   /**
    * Specifies if the permission is editable on UI (if set to `true`) or not (if set to `false`)
@@ -25,8 +24,7 @@ interface PermissionIdResource {
    */
   assignable?: boolean;
 
-  /**
-   */
+  /** */
   permissionsCapabilities?: PermissionsCapabilities;
 }
 

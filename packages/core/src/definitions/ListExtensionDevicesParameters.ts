@@ -26,23 +26,37 @@ interface ListExtensionDevicesParameters {
   /**
    * Pooling type of device - Host - a device with standalone paid phone line which can be linked to a soft client instance - Guest - a device with a linked phone line - None - a device without a phone line or with specific line (free, BLA, etc.)
    */
-  linePooling?: 'Host' | 'Guest' | 'None';
+  linePooling?: "Host" | "Guest" | "None";
 
   /**
    * Device feature or multiple features supported
    */
-  feature?: ('BLA' | 'CommonPhone' | 'Intercom' | 'Paging' | 'HELD')[];
+  feature?: ("BLA" | "CommonPhone" | "Intercom" | "Paging" | "HELD")[];
 
   /**
    * Device type
    * Default: HardPhone
    */
-  type?: 'HardPhone' | 'SoftPhone' | 'OtherPhone' | 'MobileDevice' | 'BLA' | 'Paging' | 'WebPhone' | 'WebRTC' | 'Room';
+  type?:
+    | "HardPhone"
+    | "SoftPhone"
+    | "OtherPhone"
+    | "MobileDevice"
+    | "BLA"
+    | "Paging"
+    | "WebPhone"
+    | "WebRTC"
+    | "Room";
 
   /**
    * The type of phone line
    */
-  lineType?: 'Unknown' | 'Standalone' | 'StandaloneFree' | 'BlaPrimary' | 'BlaSecondary';
+  lineType?:
+    | "Unknown"
+    | "Standalone"
+    | "StandaloneFree"
+    | "BlaPrimary"
+    | "BlaSecondary";
 }
 
 export default ListExtensionDevicesParameters;

@@ -1,4 +1,4 @@
-import type ExtensionGrantListEventBody from './ExtensionGrantListEventBody';
+import type ExtensionGrantListEventBody from "./ExtensionGrantListEventBody";
 
 interface ExtensionGrantListEvent {
   /**
@@ -23,8 +23,7 @@ interface ExtensionGrantListEvent {
    */
   subscriptionId?: string;
 
-  /**
-   */
+  /** */
   body?: ExtensionGrantListEventBody;
 }
 

@@ -1,14 +1,14 @@
-import type ContactInfo from './ContactInfo';
-import type CostCenterInfo from './CostCenterInfo';
-import type CustomFieldInfo from './CustomFieldInfo';
-import type ExtensionPermissions from './ExtensionPermissions';
-import type ProfileImageInfo from './ProfileImageInfo';
-import type ReferenceInfo from './ReferenceInfo';
-import type RegionalSettings from './RegionalSettings';
-import type ExtensionServiceFeatureInfo from './ExtensionServiceFeatureInfo';
-import type ProvisioningSiteInfo from './ProvisioningSiteInfo';
-import type ExtensionStatusInfo from './ExtensionStatusInfo';
-import type AssignedCountryInfo from './AssignedCountryInfo';
+import type ContactInfo from "./ContactInfo";
+import type CostCenterInfo from "./CostCenterInfo";
+import type CustomFieldInfo from "./CustomFieldInfo";
+import type ExtensionPermissions from "./ExtensionPermissions";
+import type ProfileImageInfo from "./ProfileImageInfo";
+import type ReferenceInfo from "./ReferenceInfo";
+import type RegionalSettings from "./RegionalSettings";
+import type ExtensionServiceFeatureInfo from "./ExtensionServiceFeatureInfo";
+import type ProvisioningSiteInfo from "./ProvisioningSiteInfo";
+import type ExtensionStatusInfo from "./ExtensionStatusInfo";
+import type AssignedCountryInfo from "./AssignedCountryInfo";
 
 interface ExtensionCreationResponse {
   /**
@@ -23,16 +23,13 @@ interface ExtensionCreationResponse {
    */
   uri?: string;
 
-  /**
-   */
+  /** */
   contact?: ContactInfo;
 
-  /**
-   */
+  /** */
   costCenter?: CostCenterInfo;
 
-  /**
-   */
+  /** */
   customFields?: CustomFieldInfo[];
 
   /**
@@ -58,12 +55,10 @@ interface ExtensionCreationResponse {
    */
   partnerId?: string;
 
-  /**
-   */
+  /** */
   permissions?: ExtensionPermissions;
 
-  /**
-   */
+  /** */
   profileImage?: ProfileImageInfo;
 
   /**
@@ -71,8 +66,7 @@ interface ExtensionCreationResponse {
    */
   references?: ReferenceInfo[];
 
-  /**
-   */
+  /** */
   regionalSettings?: RegionalSettings;
 
   /**
@@ -86,19 +80,17 @@ interface ExtensionCreationResponse {
    * Initial configuration wizard state
    * Default: NotStarted
    */
-  setupWizardState?: 'NotStarted' | 'Incomplete' | 'Completed';
+  setupWizardState?: "NotStarted" | "Incomplete" | "Completed";
 
-  /**
-   */
+  /** */
   site?: ProvisioningSiteInfo;
 
   /**
    * Extension status
    */
-  status?: 'Enabled' | 'Disabled' | 'Frozen' | 'NotActivated' | 'Unassigned';
+  status?: "Enabled" | "Disabled" | "Frozen" | "NotActivated" | "Unassigned";
 
-  /**
-   */
+  /** */
   statusInfo?: ExtensionStatusInfo;
 
   /**
@@ -106,17 +98,17 @@ interface ExtensionCreationResponse {
    *  corresponds to 'Call Queue' extensions in modern RingCentral product terminology
    */
   type?:
-    | 'User'
-    | 'VirtualUser'
-    | 'DigitalUser'
-    | 'FlexibleUser'
-    | 'Department'
-    | 'Announcement'
-    | 'Voicemail'
-    | 'SharedLinesGroup'
-    | 'PagingOnly'
-    | 'ParkLocation'
-    | 'Limited';
+    | "User"
+    | "VirtualUser"
+    | "DigitalUser"
+    | "FlexibleUser"
+    | "Department"
+    | "Announcement"
+    | "Voicemail"
+    | "SharedLinesGroup"
+    | "PagingOnly"
+    | "ParkLocation"
+    | "Limited";
 
   /**
    * Hides an extension from showing in company directory. Supported
@@ -124,8 +116,7 @@ interface ExtensionCreationResponse {
    */
   hidden?: boolean;
 
-  /**
-   */
+  /** */
   assignedCountry?: AssignedCountryInfo;
 }
 

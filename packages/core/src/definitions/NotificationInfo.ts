@@ -1,11 +1,10 @@
-import type AlertInfo from './AlertInfo';
+import type AlertInfo from "./AlertInfo";
 
 /**
  * Information on a notification
  */
 interface NotificationInfo {
-  /**
-   */
+  /** */
   alert?: AlertInfo;
 
   /**
@@ -21,7 +20,7 @@ interface NotificationInfo {
   /**
    * Content availability
    */
-  'content-available'?: string;
+  "content-available"?: string;
 
   /**
    * Category of a message

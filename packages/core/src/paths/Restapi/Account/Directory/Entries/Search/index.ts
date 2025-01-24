@@ -1,7 +1,11 @@
-import type DirectoryResource from '../../../../../../definitions/DirectoryResource';
-import type SearchDirectoryEntriesParameters from '../../../../../../definitions/SearchDirectoryEntriesParameters';
-import type SearchDirectoryEntriesRequest from '../../../../../../definitions/SearchDirectoryEntriesRequest';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../types';
+import type DirectoryResource from "../../../../../../definitions/DirectoryResource";
+import type SearchDirectoryEntriesParameters from "../../../../../../definitions/SearchDirectoryEntriesParameters";
+import type SearchDirectoryEntriesRequest from "../../../../../../definitions/SearchDirectoryEntriesRequest";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;

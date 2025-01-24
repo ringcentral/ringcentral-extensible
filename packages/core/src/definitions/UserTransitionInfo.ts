@@ -1,6 +1,5 @@
 /**
  * For `NotActivated` extensions only. Welcome email settings
- *
  */
 interface UserTransitionInfo {
   /**

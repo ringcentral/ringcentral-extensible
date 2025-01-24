@@ -1,5 +1,5 @@
-import type ScimSchemaAttribute from './ScimSchemaAttribute';
-import type ScimMeta from './ScimMeta';
+import type ScimSchemaAttribute from "./ScimSchemaAttribute";
+import type ScimMeta from "./ScimMeta";
 
 interface ScimSchemaResponse {
   /**
@@ -18,12 +18,10 @@ interface ScimSchemaResponse {
    */
   description?: string;
 
-  /**
-   */
+  /** */
   attributes?: ScimSchemaAttribute[];
 
-  /**
-   */
+  /** */
   meta?: ScimMeta;
 }
 

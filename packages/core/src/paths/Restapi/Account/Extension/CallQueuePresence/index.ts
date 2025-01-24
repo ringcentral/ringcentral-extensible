@@ -1,7 +1,11 @@
-import type ExtensionCallQueueUpdatePresenceList from '../../../../../definitions/ExtensionCallQueueUpdatePresenceList';
-import type ExtensionCallQueuePresenceList from '../../../../../definitions/ExtensionCallQueuePresenceList';
-import type ReadExtensionCallQueuePresenceParameters from '../../../../../definitions/ReadExtensionCallQueuePresenceParameters';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import type ExtensionCallQueueUpdatePresenceList from "../../../../../definitions/ExtensionCallQueueUpdatePresenceList";
+import type ExtensionCallQueuePresenceList from "../../../../../definitions/ExtensionCallQueuePresenceList";
+import type ReadExtensionCallQueuePresenceParameters from "../../../../../definitions/ReadExtensionCallQueuePresenceParameters";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -25,7 +29,11 @@ class Index {
     queryParams?: ReadExtensionCallQueuePresenceParameters,
     restRequestConfig?: RestRequestConfig,
   ): Promise<ExtensionCallQueuePresenceList> {
-    const r = await this.rc.get<ExtensionCallQueuePresenceList>(this.path(), queryParams, restRequestConfig);
+    const r = await this.rc.get<ExtensionCallQueuePresenceList>(
+      this.path(),
+      queryParams,
+      restRequestConfig,
+    );
     return r.data;
   }
 

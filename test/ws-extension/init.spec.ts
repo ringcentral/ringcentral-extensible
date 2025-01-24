@@ -1,8 +1,8 @@
-import WebSocketExtension from '@rc-ex/ws';
-import ReusableRestClient from '../reusable-rest-client';
+import WebSocketExtension from "@rc-ex/ws";
+import ReusableRestClient from "../reusable-rest-client";
 
-describe('WebSocket', () => {
-  test('subscription', async () => {
+describe("WebSocket", () => {
+  test("subscription", async () => {
     const rc = await ReusableRestClient.getInstance();
     const webSocketExtension = new WebSocketExtension({});
     await rc.installExtension(webSocketExtension);

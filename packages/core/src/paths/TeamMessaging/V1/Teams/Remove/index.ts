@@ -1,5 +1,9 @@
-import type TMRemoveTeamMembersRequest from '../../../../../definitions/TMRemoveTeamMembersRequest';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import type TMRemoveTeamMembersRequest from "../../../../../definitions/TMRemoveTeamMembersRequest";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -23,7 +27,12 @@ class Index {
     tMRemoveTeamMembersRequest: TMRemoveTeamMembersRequest,
     restRequestConfig?: RestRequestConfig,
   ): Promise<string> {
-    const r = await this.rc.post<string>(this.path(), tMRemoveTeamMembersRequest, undefined, restRequestConfig);
+    const r = await this.rc.post<string>(
+      this.path(),
+      tMRemoveTeamMembersRequest,
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

@@ -1,6 +1,10 @@
-import type CallLogResponse from '../../../../../definitions/CallLogResponse';
-import type ListExtensionActiveCallsParameters from '../../../../../definitions/ListExtensionActiveCallsParameters';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import type CallLogResponse from "../../../../../definitions/CallLogResponse";
+import type ListExtensionActiveCallsParameters from "../../../../../definitions/ListExtensionActiveCallsParameters";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -27,7 +31,11 @@ class Index {
     queryParams?: ListExtensionActiveCallsParameters,
     restRequestConfig?: RestRequestConfig,
   ): Promise<CallLogResponse> {
-    const r = await this.rc.get<CallLogResponse>(this.path(), queryParams, restRequestConfig);
+    const r = await this.rc.get<CallLogResponse>(
+      this.path(),
+      queryParams,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

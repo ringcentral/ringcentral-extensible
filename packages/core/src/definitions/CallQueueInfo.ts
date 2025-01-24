@@ -1,4 +1,4 @@
-import type SiteBasicInfo from './SiteBasicInfo';
+import type SiteBasicInfo from "./SiteBasicInfo";
 
 interface CallQueueInfo {
   /**
@@ -25,15 +25,14 @@ interface CallQueueInfo {
   /**
    * Group extension status
    */
-  status?: 'Enabled' | 'Disabled' | 'NotActivated';
+  status?: "Enabled" | "Disabled" | "NotActivated";
 
   /**
    * Indicates whether it is an emergency call queue extension or not
    */
-  subType?: 'Emergency';
+  subType?: "Emergency";
 
-  /**
-   */
+  /** */
   site?: SiteBasicInfo;
 }
 

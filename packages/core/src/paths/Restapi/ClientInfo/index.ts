@@ -1,5 +1,5 @@
-import SipProvision from './SipProvision';
-import type { RingCentralInterface, ParentInterface } from '../../../types';
+import SipProvision from "./SipProvision";
+import type { ParentInterface, RingCentralInterface } from "../../../types";
 
 class Index {
   public rc: RingCentralInterface;

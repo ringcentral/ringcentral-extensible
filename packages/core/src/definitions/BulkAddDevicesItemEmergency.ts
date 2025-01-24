@@ -1,13 +1,11 @@
-import type PostalAddress from './PostalAddress';
-import type BulkAddDevicesItemEmergencyLocation from './BulkAddDevicesItemEmergencyLocation';
+import type PostalAddress from "./PostalAddress";
+import type BulkAddDevicesItemEmergencyLocation from "./BulkAddDevicesItemEmergencyLocation";
 
 interface BulkAddDevicesItemEmergency {
-  /**
-   */
+  /** */
   address?: PostalAddress;
 
-  /**
-   */
+  /** */
   location?: BulkAddDevicesItemEmergencyLocation;
 }
 

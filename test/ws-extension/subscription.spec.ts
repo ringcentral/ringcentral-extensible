@@ -1,13 +1,13 @@
-import WebSocketExtension from '@rc-ex/ws';
-import waitFor from 'wait-for-async';
-import ReusableRestClient from '../reusable-rest-client';
+import WebSocketExtension from "@rc-ex/ws";
+import waitFor from "wait-for-async";
+import ReusableRestClient from "../reusable-rest-client";
 // import path from 'path';
 // import dotenv from 'dotenv-override-true';
 
 // dotenv.config({path: path.join(__dirname, '..', '.env.lab')});
 
-describe('WebSocket', () => {
-  test('subscription', async () => {
+describe("WebSocket", () => {
+  test("subscription", async () => {
     // if (process.env.IS_LAB_ENV !== 'true') {
     //   return;
     // }
@@ -28,14 +28,16 @@ describe('WebSocket', () => {
     // );
 
     let messageEventCount = 0;
-    await webSocketExtension.subscribe(['/restapi/v1.0/account/~/extension/~/message-store'], (event) => {
+    await webSocketExtension.subscribe([
+      "/restapi/v1.0/account/~/extension/~/message-store",
+    ], (event) => {
       expect(event).toBeDefined();
       messageEventCount += 1;
     });
 
     await rc.restapi().account().extension().presence().put({
-      userStatus: 'Busy',
-      message: 'Hello world',
+      userStatus: "Busy",
+      message: "Hello world",
     });
 
     await rc
@@ -46,7 +48,7 @@ describe('WebSocket', () => {
       .post({
         from: { extensionId: rc.token!.owner_id! },
         to: [{ extensionId: rc.token!.owner_id! }], // send pager to oneself
-        text: 'Hello world',
+        text: "Hello world",
       });
 
     // const successful1 = await waitFor({

@@ -11,7 +11,7 @@ interface AuthorizeParameters {
   /**
    * Determines authorization flow type. The only supported value is `code` which corresponds to OAuth 2.0 "Authorization Code Flow"
    */
-  response_type?: 'code';
+  response_type?: "code";
 
   /**
    * This is the URI where the Authorization Server redirects the User Agent to at the end of the authorization flow.
@@ -37,7 +37,7 @@ interface AuthorizeParameters {
    * Specifies how the Authorization Server displays the authentication and consent user interface pages to the End-User.
    * Default: page
    */
-  display?: 'page' | 'popup' | 'touch' | 'mobile';
+  display?: "page" | "popup" | "touch" | "mobile";
 
   /**
    * Space-delimited, case-sensitive list of ASCII string values that specifies whether the Authorization Server prompts the End-User for
@@ -79,7 +79,7 @@ interface AuthorizeParameters {
    *  [RFC-7636 "Proof Key for Code Exchange by OAuth Public Clients"](https://datatracker.ietf.org/doc/html/rfc7636)
    * Default: plain
    */
-  code_challenge_method?: 'plain' | 'S256';
+  code_challenge_method?: "plain" | "S256";
 
   /**
    * String value used to associate a Client session with an ID Token, and to mitigate replay attacks. The value is passed through unmodified from the Authentication Request to the ID Token.

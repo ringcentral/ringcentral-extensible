@@ -18,21 +18,21 @@ interface ListDirectoryEntriesParameters {
    * Type of an extension. Please note that legacy 'Department' extension type corresponds to 'Call Queue' extensions in modern RingCentral product terminology
    */
   type?:
-    | 'User'
-    | 'Department'
-    | 'Announcement'
-    | 'Voicemail'
-    | 'SharedLinesGroup'
-    | 'PagingOnly'
-    | 'IvrMenu'
-    | 'ParkLocation'
-    | 'Limited'
-    | 'External';
+    | "User"
+    | "Department"
+    | "Announcement"
+    | "Voicemail"
+    | "SharedLinesGroup"
+    | "PagingOnly"
+    | "IvrMenu"
+    | "ParkLocation"
+    | "Limited"
+    | "External";
 
   /**
    * Type of extension group
    */
-  typeGroup?: 'User' | 'NonUser';
+  typeGroup?: "User" | "NonUser";
 
   /**
    * Page number
@@ -49,7 +49,7 @@ interface ListDirectoryEntriesParameters {
    * Format: int32
    * Default: 1000
    */
-  perPage?: 'max' | 'all';
+  perPage?: "max" | "all";
 
   /**
    * Internal identifier of the business site to which extensions belong

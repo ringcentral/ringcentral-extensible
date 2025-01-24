@@ -1,8 +1,7 @@
-import type AssistantResource from './AssistantResource';
+import type AssistantResource from "./AssistantResource";
 
 interface AssistantsResource {
-  /**
-   */
+  /** */
   records?: AssistantResource[];
 }
 

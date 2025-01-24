@@ -1,5 +1,8 @@
-import Sessions from './Sessions';
-import type { RingCentralInterface, ParentInterface } from '../../../../../types';
+import Sessions from "./Sessions";
+import type {
+  ParentInterface,
+  RingCentralInterface,
+} from "../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;

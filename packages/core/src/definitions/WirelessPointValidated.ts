@@ -1,4 +1,4 @@
-import type ValidationError from './ValidationError';
+import type ValidationError from "./ValidationError";
 
 interface WirelessPointValidated {
   /**
@@ -15,10 +15,9 @@ interface WirelessPointValidated {
   /**
    * Validation result status
    */
-  status?: 'Valid' | 'Invalid';
+  status?: "Valid" | "Invalid";
 
-  /**
-   */
+  /** */
   errors?: ValidationError[];
 }
 

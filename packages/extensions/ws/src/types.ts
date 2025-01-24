@@ -1,6 +1,10 @@
-import type RingCentral from '@rc-ex/core';
-import type { RestMethod, RestRequestConfig, RestResponse } from '@rc-ex/core/lib/types';
-import type WS from 'isomorphic-ws';
+import type RingCentral from "@rc-ex/core";
+import type {
+  RestMethod,
+  RestRequestConfig,
+  RestResponse,
+} from "@rc-ex/core/lib/types";
+import type WS from "isomorphic-ws";
 
 export interface WsToken {
   uri: string;
@@ -30,7 +34,12 @@ export interface Wsc {
 }
 
 export interface WsgMeta {
-  type: 'ClientRequest' | 'ServerNotification' | 'Error' | 'ConnectionDetails' | 'Heartbeat';
+  type:
+    | "ClientRequest"
+    | "ServerNotification"
+    | "Error"
+    | "ConnectionDetails"
+    | "Heartbeat";
   messageId: string;
   status: number;
   headers: {
@@ -52,7 +61,7 @@ export interface ConnectionDetails {
   idleTimeout: number;
   absoluteTimeout: number;
   maxActiveRequests: number;
-  recoveryState?: 'Successful' | 'Failed';
+  recoveryState?: "Successful" | "Failed";
   recoveryErrorCode?: string;
 }
 

@@ -1,8 +1,7 @@
-import type FavoriteContactResource from './FavoriteContactResource';
+import type FavoriteContactResource from "./FavoriteContactResource";
 
 interface FavoriteCollection {
-  /**
-   */
+  /** */
   records?: FavoriteContactResource[];
 }
 

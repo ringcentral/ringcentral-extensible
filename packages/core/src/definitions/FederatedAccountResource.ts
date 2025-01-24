@@ -1,8 +1,7 @@
-import type PhoneNumberResource from './PhoneNumberResource';
+import type PhoneNumberResource from "./PhoneNumberResource";
 
 interface FederatedAccountResource {
-  /**
-   */
+  /** */
   companyName?: string;
 
   /**
@@ -10,8 +9,7 @@ interface FederatedAccountResource {
    */
   conflictCount?: number;
 
-  /**
-   */
+  /** */
   federatedName?: string;
 
   /**
@@ -24,8 +22,7 @@ interface FederatedAccountResource {
    */
   linkCreationTime?: string;
 
-  /**
-   */
+  /** */
   mainNumber?: PhoneNumberResource;
 }
 

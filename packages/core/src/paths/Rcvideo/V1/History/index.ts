@@ -1,5 +1,5 @@
-import Meetings from './Meetings';
-import type { RingCentralInterface, ParentInterface } from '../../../../types';
+import Meetings from "./Meetings";
+import type { ParentInterface, RingCentralInterface } from "../../../../types";
 
 class Index {
   public rc: RingCentralInterface;

@@ -7,7 +7,7 @@ interface ReferenceInfo {
   /**
    * Type of external identifier
    */
-  type?: 'PartnerId' | 'CustomerDirectoryId';
+  type?: "PartnerId" | "CustomerDirectoryId";
 
   /**
    * Primary federation admin account identifier

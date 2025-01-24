@@ -1,4 +1,4 @@
-import type ExtensionFavoritesEventBody from './ExtensionFavoritesEventBody';
+import type ExtensionFavoritesEventBody from "./ExtensionFavoritesEventBody";
 
 interface ExtensionFavoritesEvent {
   /**
@@ -24,8 +24,7 @@ interface ExtensionFavoritesEvent {
    */
   subscriptionId?: string;
 
-  /**
-   */
+  /** */
   body?: ExtensionFavoritesEventBody;
 }
 

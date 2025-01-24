@@ -1,4 +1,4 @@
-import type CallQueuePresenceEventBody from './CallQueuePresenceEventBody';
+import type CallQueuePresenceEventBody from "./CallQueuePresenceEventBody";
 
 interface CallQueuePresenceEvent {
   /**
@@ -22,8 +22,7 @@ interface CallQueuePresenceEvent {
    */
   subscriptionId?: string;
 
-  /**
-   */
+  /** */
   body?: CallQueuePresenceEventBody;
 }
 

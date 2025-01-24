@@ -4,20 +4,16 @@ interface RolesTimezoneResource {
    */
   uri?: string;
 
-  /**
-   */
+  /** */
   id?: string;
 
-  /**
-   */
+  /** */
   name?: string;
 
-  /**
-   */
+  /** */
   description?: string;
 
-  /**
-   */
+  /** */
   bias?: string;
 }
 

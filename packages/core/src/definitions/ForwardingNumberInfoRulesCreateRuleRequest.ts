@@ -8,15 +8,15 @@ interface ForwardingNumberInfoRulesCreateRuleRequest {
    * Forwarding phone number type
    */
   type?:
-    | 'Home'
-    | 'Mobile'
-    | 'Work'
-    | 'PhoneLine'
-    | 'Outage'
-    | 'Other'
-    | 'BusinessMobilePhone'
-    | 'ExternalCarrier'
-    | 'ExtensionApps';
+    | "Home"
+    | "Mobile"
+    | "Work"
+    | "PhoneLine"
+    | "Outage"
+    | "Other"
+    | "BusinessMobilePhone"
+    | "ExternalCarrier"
+    | "ExtensionApps";
 
   /**
    * Forwarding/Call flip phone number

@@ -1,8 +1,7 @@
-import type SwitchValidated from './SwitchValidated';
+import type SwitchValidated from "./SwitchValidated";
 
 interface ValidateMultipleSwitchesResponse {
-  /**
-   */
+  /** */
   records?: SwitchValidated[];
 }
 

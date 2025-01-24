@@ -17,7 +17,7 @@ interface RcwHistoryListRecordingsParameters {
   /**
    * The status of the recording.
    */
-  status?: ('Processing' | 'Available' | 'Failed' | 'Purged')[];
+  status?: ("Processing" | "Available" | "Failed" | "Purged")[];
 
   /**
    * The number of items per page. If provided value in the request

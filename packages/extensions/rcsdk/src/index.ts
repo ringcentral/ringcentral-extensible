@@ -1,8 +1,12 @@
-import type RingCentral from '@rc-ex/core';
-import type { RestRequestConfig, RestResponse, RestMethod } from '@rc-ex/core/lib/types';
-import SdkExtension from '@rc-ex/core/lib/SdkExtension';
-import RestException from '@rc-ex/core/lib/RestException';
-import type SDK from '@ringcentral/sdk';
+import type RingCentral from "@rc-ex/core";
+import type {
+  RestMethod,
+  RestRequestConfig,
+  RestResponse,
+} from "@rc-ex/core/lib/types";
+import SdkExtension from "@rc-ex/core/lib/SdkExtension";
+import RestException from "@rc-ex/core/lib/RestException";
+import type SDK from "@ringcentral/sdk";
 
 export interface RcSdkOptions {
   rcSdk: SDK;
@@ -17,7 +21,7 @@ class RcSdkExtension extends SdkExtension {
   }
 
   public async install(rc: RingCentral) {
-    Object.defineProperty(rc, 'token', {
+    Object.defineProperty(rc, "token", {
       get: async () => this.options.rcSdk.platform().auth().data(),
     });
     const request = rc.request.bind(rc);

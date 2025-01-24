@@ -1,4 +1,4 @@
-import type LocationStateInfo from './LocationStateInfo';
+import type LocationStateInfo from "./LocationStateInfo";
 
 interface LocationInfo {
   /**
@@ -33,8 +33,7 @@ interface LocationInfo {
    */
   nxx?: string;
 
-  /**
-   */
+  /** */
   state?: LocationStateInfo;
 }
 

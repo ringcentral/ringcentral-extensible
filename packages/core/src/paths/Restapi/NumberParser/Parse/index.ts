@@ -1,7 +1,11 @@
-import type ParsePhoneNumberResponse from '../../../../definitions/ParsePhoneNumberResponse';
-import type ParsePhoneNumberParameters from '../../../../definitions/ParsePhoneNumberParameters';
-import type ParsePhoneNumberRequest from '../../../../definitions/ParsePhoneNumberRequest';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
+import type ParsePhoneNumberResponse from "../../../../definitions/ParsePhoneNumberResponse";
+import type ParsePhoneNumberParameters from "../../../../definitions/ParsePhoneNumberParameters";
+import type ParsePhoneNumberRequest from "../../../../definitions/ParsePhoneNumberRequest";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../types";
 
 class Index {
   public rc: RingCentralInterface;

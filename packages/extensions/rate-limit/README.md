@@ -1,6 +1,7 @@
 # Rate Limit Extension
 
-Rate limit extension handles rate limit automatically by delaying and retrying API calls.
+Rate limit extension handles rate limit automatically by delaying and retrying
+API calls.
 
 This extension is based on the [Retry Extension](../retry).
 
@@ -40,8 +41,10 @@ Default value is 3.
 
 ### rateLimitWindow
 
-`rateLimitWindow` defines the rate limit window. This parameter will only take effect when there is no `x-rate-limit-window` HTTP header available.
+`rateLimitWindow` defines the rate limit window. This parameter will only take
+effect when there is no `x-rate-limit-window` HTTP header available.
 
 Default value is 60 (seconds).
 
-Its value is used to determine the [retryInterval](https://github.com/ringcentral/ringcentral-extensible/tree/master/packages/extensions/retry#retryinterval).
+Its value is used to determine the
+[retryInterval](https://github.com/ringcentral/ringcentral-extensible/tree/master/packages/extensions/retry#retryinterval).

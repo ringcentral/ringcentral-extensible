@@ -1,12 +1,10 @@
-import type EmotionSegment from './EmotionSegment';
+import type EmotionSegment from "./EmotionSegment";
 
 interface EmotionApiResponse {
-  /**
-   */
-  status?: 'Success' | 'Fail';
+  /** */
+  status?: "Success" | "Fail";
 
-  /**
-   */
+  /** */
   response?: EmotionSegment[];
 }
 

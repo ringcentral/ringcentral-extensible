@@ -1,8 +1,7 @@
-import type RecordingExtendedModel from './RecordingExtendedModel';
+import type RecordingExtendedModel from "./RecordingExtendedModel";
 
 interface SessionRecordingExtendedModel {
-  /**
-   */
+  /** */
   recording?: RecordingExtendedModel;
 }
 

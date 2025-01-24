@@ -1,6 +1,10 @@
-import type ScimSchemaResponse from '../../../definitions/ScimSchemaResponse';
-import type ScimSchemaSearchResponse from '../../../definitions/ScimSchemaSearchResponse';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../types';
+import type ScimSchemaResponse from "../../../definitions/ScimSchemaResponse";
+import type ScimSchemaSearchResponse from "../../../definitions/ScimSchemaSearchResponse";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -25,8 +29,14 @@ class Index {
    * Rate Limit Group: Light
    * App Permission: ReadAccounts
    */
-  public async list(restRequestConfig?: RestRequestConfig): Promise<ScimSchemaSearchResponse> {
-    const r = await this.rc.get<ScimSchemaSearchResponse>(this.path(false), undefined, restRequestConfig);
+  public async list(
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<ScimSchemaSearchResponse> {
+    const r = await this.rc.get<ScimSchemaSearchResponse>(
+      this.path(false),
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -37,11 +47,17 @@ class Index {
    * Rate Limit Group: Light
    * App Permission: ReadAccounts
    */
-  public async get(restRequestConfig?: RestRequestConfig): Promise<ScimSchemaResponse> {
+  public async get(
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<ScimSchemaResponse> {
     if (this.uri === null) {
-      throw new Error('uri must be specified.');
+      throw new Error("uri must be specified.");
     }
-    const r = await this.rc.get<ScimSchemaResponse>(this.path(), undefined, restRequestConfig);
+    const r = await this.rc.get<ScimSchemaResponse>(
+      this.path(),
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

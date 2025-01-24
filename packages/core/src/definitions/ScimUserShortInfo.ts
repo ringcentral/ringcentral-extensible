@@ -1,8 +1,8 @@
-import type ScimEmail from './ScimEmail';
-import type ScimName from './ScimName';
-import type ScimPhoto from './ScimPhoto';
-import type ScimEnterpriseUser from './ScimEnterpriseUser';
-import type ScimMeta from './ScimMeta';
+import type ScimEmail from "./ScimEmail";
+import type ScimName from "./ScimName";
+import type ScimPhoto from "./ScimPhoto";
+import type ScimEnterpriseUser from "./ScimEnterpriseUser";
+import type ScimMeta from "./ScimMeta";
 
 interface ScimUserShortInfo {
   /**
@@ -30,23 +30,22 @@ interface ScimUserShortInfo {
    */
   name?: ScimName;
 
-  /**
-   */
+  /** */
   photos?: ScimPhoto[];
 
   /**
    * Required
    */
-  schemas?: 'urn:ietf:params:scim:schemas:core:2.0:User'[];
+  schemas?: "urn:ietf:params:scim:schemas:core:2.0:User"[];
 
   /**
    * User title
    */
   title?: string;
 
-  /**
-   */
-  'urn:ietf:params:scim:schemas:extension:enterprise:2.0:User'?: ScimEnterpriseUser;
+  /** */
+  "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User"?:
+    ScimEnterpriseUser;
 
   /**
    * MUST be same as work type email address
@@ -54,8 +53,7 @@ interface ScimUserShortInfo {
    */
   userName?: string;
 
-  /**
-   */
+  /** */
   meta?: ScimMeta;
 }
 

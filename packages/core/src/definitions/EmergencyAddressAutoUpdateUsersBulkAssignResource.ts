@@ -1,10 +1,8 @@
 interface EmergencyAddressAutoUpdateUsersBulkAssignResource {
-  /**
-   */
+  /** */
   enabledUserIds?: string[];
 
-  /**
-   */
+  /** */
   disabledUserIds?: string[];
 }
 

@@ -1,5 +1,5 @@
-import type TMConversationInfo from './TMConversationInfo';
-import type TMNavigationInfo from './TMNavigationInfo';
+import type TMConversationInfo from "./TMConversationInfo";
+import type TMNavigationInfo from "./TMNavigationInfo";
 
 interface TMConversationList {
   /**
@@ -8,8 +8,7 @@ interface TMConversationList {
    */
   records?: TMConversationInfo[];
 
-  /**
-   */
+  /** */
   navigation?: TMNavigationInfo;
 }
 

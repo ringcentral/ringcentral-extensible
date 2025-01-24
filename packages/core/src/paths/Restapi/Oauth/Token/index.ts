@@ -1,6 +1,10 @@
-import type TokenInfo from '../../../../definitions/TokenInfo';
-import type GetTokenRequest from '../../../../definitions/GetTokenRequest';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
+import type TokenInfo from "../../../../definitions/TokenInfo";
+import type GetTokenRequest from "../../../../definitions/GetTokenRequest";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -27,8 +31,16 @@ class Index {
    * Endpoint: /restapi/oauth/token
    * Rate Limit Group: Auth
    */
-  public async post(getTokenRequest: GetTokenRequest, restRequestConfig?: RestRequestConfig): Promise<TokenInfo> {
-    const r = await this.rc.post<TokenInfo>(this.path(), getTokenRequest, undefined, restRequestConfig);
+  public async post(
+    getTokenRequest: GetTokenRequest,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<TokenInfo> {
+    const r = await this.rc.post<TokenInfo>(
+      this.path(),
+      getTokenRequest,
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

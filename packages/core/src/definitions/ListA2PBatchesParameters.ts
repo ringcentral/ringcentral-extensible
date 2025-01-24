@@ -26,7 +26,7 @@ interface ListA2PBatchesParameters {
    * A list of batch statuses to filter the results
    * Example: Queued,Processing
    */
-  status?: ('Queued' | 'Processing' | 'Sent' | 'Completed')[];
+  status?: ("Queued" | "Processing" | "Sent" | "Completed")[];
 
   /**
    * The page token of the page to be retrieved

@@ -1,5 +1,5 @@
-import type AccountHistoryPublicRecord from './AccountHistoryPublicRecord';
-import type AccountHistoryPaging from './AccountHistoryPaging';
+import type AccountHistoryPublicRecord from "./AccountHistoryPublicRecord";
+import type AccountHistoryPaging from "./AccountHistoryPaging";
 
 interface AccountHistorySearchPublicResponse {
   /**
@@ -7,8 +7,7 @@ interface AccountHistorySearchPublicResponse {
    */
   records?: AccountHistoryPublicRecord[];
 
-  /**
-   */
+  /** */
   paging?: AccountHistoryPaging;
 }
 

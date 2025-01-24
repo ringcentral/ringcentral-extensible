@@ -1,4 +1,4 @@
-import type BusinessAddressInfo from './BusinessAddressInfo';
+import type BusinessAddressInfo from "./BusinessAddressInfo";
 
 interface ModifyAccountBusinessAddressRequest {
   /**
@@ -12,8 +12,7 @@ interface ModifyAccountBusinessAddressRequest {
    */
   email?: string;
 
-  /**
-   */
+  /** */
   businessAddress?: BusinessAddressInfo;
 
   /**

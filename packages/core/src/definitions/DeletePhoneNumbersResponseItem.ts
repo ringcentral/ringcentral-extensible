@@ -1,4 +1,4 @@
-import type ApiError from './ApiError';
+import type ApiError from "./ApiError";
 
 interface DeletePhoneNumbersResponseItem {
   /**

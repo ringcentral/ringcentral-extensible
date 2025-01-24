@@ -1,12 +1,16 @@
-import type { RestMethod, RestRequestConfig, RestResponse } from '@rc-ex/core/lib/types';
-import RestException from '@rc-ex/core/lib/RestException';
-import hyperid from 'hyperid';
-import { getReasonPhrase } from 'http-status-codes';
+import type {
+  RestMethod,
+  RestRequestConfig,
+  RestResponse,
+} from "@rc-ex/core/lib/types";
+import RestException from "@rc-ex/core/lib/RestException";
+import hyperid from "hyperid";
+import { getReasonPhrase } from "http-status-codes";
 
-import Utils from './utils';
-import type { WebSocketExtensionInterface } from './types';
+import Utils from "./utils";
+import type { WebSocketExtensionInterface } from "./types";
 
-const version = '0.16';
+const version = "0.16";
 
 const uuid = hyperid();
 
@@ -29,12 +33,14 @@ export async function request<T>(
   };
   newConfig.headers = {
     ...newConfig.headers,
-    'X-User-Agent': `${this.rc.rest!.appName}/${this.rc.rest!.appVersion} ringcentral-extensible/ws/${version}`,
+    "X-User-Agent": `${this.rc.rest!.appName}/${
+      this.rc.rest!.appVersion
+    } ringcentral-extensible/ws/${version}`,
   } as any;
   const messageId = uuid();
   const requestBody = [
     {
-      type: 'ClientRequest',
+      type: "ClientRequest",
       messageId,
       method: newConfig.method,
       path: newConfig.url,
@@ -46,7 +52,10 @@ export async function request<T>(
     requestBody.push(newConfig.data);
   }
   await this.ws.send(JSON.stringify(requestBody));
-  const [meta, body] = await Utils.waitForWebSocketMessage(this.ws, (_meta) => _meta.messageId === messageId);
+  const [meta, body] = await Utils.waitForWebSocketMessage(
+    this.ws,
+    (_meta) => _meta.messageId === messageId,
+  );
   const response: RestResponse = {
     data: body as T,
     status: meta.status,
@@ -54,7 +63,9 @@ export async function request<T>(
     headers: meta.headers,
     config: newConfig as any,
   };
-  if (meta.type === 'ClientRequest' && meta.status >= 200 && meta.status < 300) {
+  if (
+    meta.type === "ClientRequest" && meta.status >= 200 && meta.status < 300
+  ) {
     return response;
   }
   throw new RestException(response);

@@ -1,5 +1,9 @@
-import type ExtensionBulkUpdateTaskResource from '../../../../../definitions/ExtensionBulkUpdateTaskResource';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import type ExtensionBulkUpdateTaskResource from "../../../../../definitions/ExtensionBulkUpdateTaskResource";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -26,11 +30,17 @@ class Index {
    * App Permission: EditExtensions
    * User Permission: EditExtensionInfo
    */
-  public async get(restRequestConfig?: RestRequestConfig): Promise<ExtensionBulkUpdateTaskResource> {
+  public async get(
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<ExtensionBulkUpdateTaskResource> {
     if (this.taskId === null) {
-      throw new Error('taskId must be specified.');
+      throw new Error("taskId must be specified.");
     }
-    const r = await this.rc.get<ExtensionBulkUpdateTaskResource>(this.path(), undefined, restRequestConfig);
+    const r = await this.rc.get<ExtensionBulkUpdateTaskResource>(
+      this.path(),
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

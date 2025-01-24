@@ -1,8 +1,7 @@
-import type FederatedAccountResource from './FederatedAccountResource';
+import type FederatedAccountResource from "./FederatedAccountResource";
 
 interface FederationResource {
-  /**
-   */
+  /** */
   accounts?: FederatedAccountResource[];
 
   /**
@@ -10,12 +9,10 @@ interface FederationResource {
    */
   creationTime?: string;
 
-  /**
-   */
+  /** */
   displayName?: string;
 
-  /**
-   */
+  /** */
   id?: string;
 
   /**
@@ -26,7 +23,7 @@ interface FederationResource {
   /**
    * Federation type
    */
-  type?: 'Regular' | 'AdminOnly';
+  type?: "Regular" | "AdminOnly";
 }
 
 export default FederationResource;

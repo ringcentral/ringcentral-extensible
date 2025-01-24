@@ -1,5 +1,5 @@
-import type Attachment from './Attachment';
-import type GreetingAnsweringRuleId from './GreetingAnsweringRuleId';
+import type Attachment from "./Attachment";
+import type GreetingAnsweringRuleId from "./GreetingAnsweringRuleId";
 
 /**
  * Request body for operation createCustomUserGreeting
@@ -10,14 +10,14 @@ interface CreateCustomUserGreetingRequest {
    * Required
    */
   type?:
-    | 'Introductory'
-    | 'Announcement'
-    | 'ConnectingMessage'
-    | 'ConnectingAudio'
-    | 'Voicemail'
-    | 'Unavailable'
-    | 'HoldMusic'
-    | 'TemplateGreeting';
+    | "Introductory"
+    | "Announcement"
+    | "ConnectingMessage"
+    | "ConnectingAudio"
+    | "Voicemail"
+    | "Unavailable"
+    | "HoldMusic"
+    | "TemplateGreeting";
 
   /**
    * Media file to upload
@@ -25,8 +25,7 @@ interface CreateCustomUserGreetingRequest {
    */
   binary?: Attachment;
 
-  /**
-   */
+  /** */
   answeringRule?: GreetingAnsweringRuleId;
 }
 

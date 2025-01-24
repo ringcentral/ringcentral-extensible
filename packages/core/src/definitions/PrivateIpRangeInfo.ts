@@ -1,17 +1,14 @@
-import type CommonEmergencyLocationAddressInfo from './CommonEmergencyLocationAddressInfo';
-import type EmergencyLocationInfo from './EmergencyLocationInfo';
+import type CommonEmergencyLocationAddressInfo from "./CommonEmergencyLocationAddressInfo";
+import type EmergencyLocationInfo from "./EmergencyLocationInfo";
 
 interface PrivateIpRangeInfo {
-  /**
-   */
+  /** */
   id?: string;
 
-  /**
-   */
+  /** */
   startIp?: string;
 
-  /**
-   */
+  /** */
   endIp?: string;
 
   /**
@@ -19,8 +16,7 @@ interface PrivateIpRangeInfo {
    */
   name?: string;
 
-  /**
-   */
+  /** */
   emergencyAddress?: CommonEmergencyLocationAddressInfo;
 
   /**
@@ -30,12 +26,10 @@ interface PrivateIpRangeInfo {
    */
   emergencyLocationId?: string;
 
-  /**
-   */
+  /** */
   matched?: boolean;
 
-  /**
-   */
+  /** */
   emergencyLocation?: EmergencyLocationInfo;
 }
 

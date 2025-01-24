@@ -1,7 +1,11 @@
-import type AdaptiveCardShortInfo from '../../../../definitions/AdaptiveCardShortInfo';
-import type AdaptiveCardRequest from '../../../../definitions/AdaptiveCardRequest';
-import type AdaptiveCardInfo from '../../../../definitions/AdaptiveCardInfo';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
+import type AdaptiveCardShortInfo from "../../../../definitions/AdaptiveCardShortInfo";
+import type AdaptiveCardRequest from "../../../../definitions/AdaptiveCardRequest";
+import type AdaptiveCardInfo from "../../../../definitions/AdaptiveCardInfo";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -26,11 +30,17 @@ class Index {
    * Rate Limit Group: Medium
    * App Permission: TeamMessaging
    */
-  public async get(restRequestConfig?: RestRequestConfig): Promise<AdaptiveCardInfo> {
+  public async get(
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<AdaptiveCardInfo> {
     if (this.cardId === null) {
-      throw new Error('cardId must be specified.');
+      throw new Error("cardId must be specified.");
     }
-    const r = await this.rc.get<AdaptiveCardInfo>(this.path(), undefined, restRequestConfig);
+    const r = await this.rc.get<AdaptiveCardInfo>(
+      this.path(),
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -46,9 +56,14 @@ class Index {
     restRequestConfig?: RestRequestConfig,
   ): Promise<AdaptiveCardShortInfo> {
     if (this.cardId === null) {
-      throw new Error('cardId must be specified.');
+      throw new Error("cardId must be specified.");
     }
-    const r = await this.rc.put<AdaptiveCardShortInfo>(this.path(), adaptiveCardRequest, undefined, restRequestConfig);
+    const r = await this.rc.put<AdaptiveCardShortInfo>(
+      this.path(),
+      adaptiveCardRequest,
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -61,9 +76,14 @@ class Index {
    */
   public async delete(restRequestConfig?: RestRequestConfig): Promise<string> {
     if (this.cardId === null) {
-      throw new Error('cardId must be specified.');
+      throw new Error("cardId must be specified.");
     }
-    const r = await this.rc.delete<string>(this.path(), {}, undefined, restRequestConfig);
+    const r = await this.rc.delete<string>(
+      this.path(),
+      {},
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

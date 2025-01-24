@@ -1,13 +1,11 @@
-import type AddressBookBulkUploadResource from './AddressBookBulkUploadResource';
-import type ErrorEntity from './ErrorEntity';
+import type AddressBookBulkUploadResource from "./AddressBookBulkUploadResource";
+import type ErrorEntity from "./ErrorEntity";
 
 interface AddressBookBulkUploadTaskResult {
-  /**
-   */
+  /** */
   affectedItems?: AddressBookBulkUploadResource[];
 
-  /**
-   */
+  /** */
   errors?: ErrorEntity[];
 }
 

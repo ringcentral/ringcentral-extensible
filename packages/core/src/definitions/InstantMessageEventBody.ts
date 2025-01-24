@@ -1,7 +1,7 @@
-import type NotificationRecipientInfo from './NotificationRecipientInfo';
-import type SenderInfo from './SenderInfo';
-import type MessageAttachmentInfo from './MessageAttachmentInfo';
-import type ConversationInfo from './ConversationInfo';
+import type NotificationRecipientInfo from "./NotificationRecipientInfo";
+import type SenderInfo from "./SenderInfo";
+import type MessageAttachmentInfo from "./MessageAttachmentInfo";
+import type ConversationInfo from "./ConversationInfo";
 
 /**
  * Notification payload body
@@ -17,8 +17,7 @@ interface InstantMessageEventBody {
    */
   to?: NotificationRecipientInfo[];
 
-  /**
-   */
+  /** */
   from?: SenderInfo;
 
   /**
@@ -43,12 +42,12 @@ interface InstantMessageEventBody {
   /**
    * Message read status
    */
-  readStatus?: 'Read' | 'Unread';
+  readStatus?: "Read" | "Unread";
 
   /**
    * Message priority
    */
-  priority?: 'Normal' | 'High';
+  priority?: "Normal" | "High";
 
   /**
    * Message attachment data
@@ -60,7 +59,7 @@ interface InstantMessageEventBody {
    *  directions are allowed. For example voicemail messages can
    *  be only inbound
    */
-  direction?: 'Inbound' | 'Outbound';
+  direction?: "Inbound" | "Outbound";
 
   /**
    * Message availability status. Message in 'Deleted' state is still
@@ -68,7 +67,7 @@ interface InstantMessageEventBody {
    *  that all attachments are already deleted and the message itself is about
    *  to be physically deleted shortly
    */
-  availability?: 'Alive' | 'Deleted' | 'Purged';
+  availability?: "Alive" | "Deleted" | "Purged";
 
   /**
    * Message subject. It replicates message text which is also returned
@@ -84,7 +83,13 @@ interface InstantMessageEventBody {
    *  'SendingFailed', then the 'SendingFailed' value is returned. In other cases
    *  the 'Sent' status is returned
    */
-  messageStatus?: 'Queued' | 'Sent' | 'Delivered' | 'DeliveryFailed' | 'SendingFailed' | 'Received';
+  messageStatus?:
+    | "Queued"
+    | "Sent"
+    | "Delivered"
+    | "DeliveryFailed"
+    | "SendingFailed"
+    | "Received";
 
   /**
    * Deprecated. Identifier of a conversation the message belongs
@@ -92,8 +97,7 @@ interface InstantMessageEventBody {
    */
   conversationId?: string;
 
-  /**
-   */
+  /** */
   conversation?: ConversationInfo;
 
   /**

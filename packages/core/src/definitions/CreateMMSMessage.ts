@@ -1,6 +1,6 @@
-import type MessageStoreCallerInfoRequest from './MessageStoreCallerInfoRequest';
-import type SmsRequestCountryInfo from './SmsRequestCountryInfo';
-import type Attachment from './Attachment';
+import type MessageStoreCallerInfoRequest from "./MessageStoreCallerInfoRequest";
+import type SmsRequestCountryInfo from "./SmsRequestCountryInfo";
+import type Attachment from "./Attachment";
 
 interface CreateMMSMessage {
   /**
@@ -21,8 +21,7 @@ interface CreateMMSMessage {
    */
   text?: string;
 
-  /**
-   */
+  /** */
   country?: SmsRequestCountryInfo;
 
   /**

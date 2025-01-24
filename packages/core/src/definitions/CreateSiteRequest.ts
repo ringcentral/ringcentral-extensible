@@ -1,6 +1,6 @@
-import type ContactBusinessAddressInfo from './ContactBusinessAddressInfo';
-import type RegionalSettings from './RegionalSettings';
-import type SiteOperatorReference from './SiteOperatorReference';
+import type ContactBusinessAddressInfo from "./ContactBusinessAddressInfo";
+import type RegionalSettings from "./RegionalSettings";
+import type SiteOperatorReference from "./SiteOperatorReference";
 
 interface CreateSiteRequest {
   /**
@@ -25,25 +25,21 @@ interface CreateSiteRequest {
    */
   email?: string;
 
-  /**
-   */
+  /** */
   businessAddress?: ContactBusinessAddressInfo;
 
-  /**
-   */
+  /** */
   regionalSettings?: RegionalSettings;
 
-  /**
-   */
+  /** */
   operator?: SiteOperatorReference;
 
   /**
    * Site access status for cross-site limitation
    */
-  siteAccess?: 'Limited' | 'Unlimited';
+  siteAccess?: "Limited" | "Unlimited";
 
-  /**
-   */
+  /** */
   accessibleSiteIds?: string[];
 
   /**

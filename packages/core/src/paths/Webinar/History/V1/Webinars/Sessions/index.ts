@@ -1,14 +1,21 @@
-import Participants from './Participants';
-import Invitees from './Invitees';
-import type SessionResource from '../../../../../../definitions/SessionResource';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../types';
+import Participants from "./Participants";
+import Invitees from "./Invitees";
+import type SessionResource from "../../../../../../definitions/SessionResource";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
   public _parent: ParentInterface;
   public sessionId: string | null;
 
-  public constructor(_parent: ParentInterface, sessionId: string | null = null) {
+  public constructor(
+    _parent: ParentInterface,
+    sessionId: string | null = null,
+  ) {
     this._parent = _parent;
     this.rc = _parent.rc;
     this.sessionId = sessionId;
@@ -26,11 +33,17 @@ class Index {
    * Rate Limit Group: Heavy
    * App Permission: ReadWebinars
    */
-  public async get(restRequestConfig?: RestRequestConfig): Promise<SessionResource> {
+  public async get(
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<SessionResource> {
     if (this.sessionId === null) {
-      throw new Error('sessionId must be specified.');
+      throw new Error("sessionId must be specified.");
     }
-    const r = await this.rc.get<SessionResource>(this.path(), undefined, restRequestConfig);
+    const r = await this.rc.get<SessionResource>(
+      this.path(),
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 

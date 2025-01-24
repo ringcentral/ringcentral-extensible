@@ -1,5 +1,5 @@
-import type MakeCallOutCallerInfoRequestFrom from './MakeCallOutCallerInfoRequestFrom';
-import type MakeCallOutCallerInfoRequestTo from './MakeCallOutCallerInfoRequestTo';
+import type MakeCallOutCallerInfoRequestFrom from "./MakeCallOutCallerInfoRequestFrom";
+import type MakeCallOutCallerInfoRequestTo from "./MakeCallOutCallerInfoRequestTo";
 
 interface MakeCallOutRequest {
   /**

@@ -1,5 +1,5 @@
-import type PhoneNumberInfoIntId from './PhoneNumberInfoIntId';
-import type EmergencyAddress from './EmergencyAddress';
+import type PhoneNumberInfoIntId from "./PhoneNumberInfoIntId";
+import type EmergencyAddress from "./EmergencyAddress";
 
 interface PhoneLinesInfo {
   /**
@@ -10,14 +10,17 @@ interface PhoneLinesInfo {
   /**
    * The type of phone line
    */
-  lineType?: 'Unknown' | 'Standalone' | 'StandaloneFree' | 'BlaPrimary' | 'BlaSecondary';
+  lineType?:
+    | "Unknown"
+    | "Standalone"
+    | "StandaloneFree"
+    | "BlaPrimary"
+    | "BlaSecondary";
 
-  /**
-   */
+  /** */
   phoneInfo?: PhoneNumberInfoIntId;
 
-  /**
-   */
+  /** */
   emergencyAddress?: EmergencyAddress;
 }
 

@@ -1,7 +1,11 @@
-import BulkAssign from './BulkAssign';
-import type OptOutListResponse from '../../../../../definitions/OptOutListResponse';
-import type ReadA2PSMSOptOutsParameters from '../../../../../definitions/ReadA2PSMSOptOutsParameters';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import BulkAssign from "./BulkAssign";
+import type OptOutListResponse from "../../../../../definitions/OptOutListResponse";
+import type ReadA2PSMSOptOutsParameters from "../../../../../definitions/ReadA2PSMSOptOutsParameters";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -28,7 +32,11 @@ class Index {
     queryParams?: ReadA2PSMSOptOutsParameters,
     restRequestConfig?: RestRequestConfig,
   ): Promise<OptOutListResponse> {
-    const r = await this.rc.get<OptOutListResponse>(this.path(), queryParams, restRequestConfig);
+    const r = await this.rc.get<OptOutListResponse>(
+      this.path(),
+      queryParams,
+      restRequestConfig,
+    );
     return r.data;
   }
 

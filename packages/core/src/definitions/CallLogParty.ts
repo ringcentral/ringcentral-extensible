@@ -1,4 +1,4 @@
-import type CallLogRecordDeviceInfo from './CallLogRecordDeviceInfo';
+import type CallLogRecordDeviceInfo from "./CallLogRecordDeviceInfo";
 
 /**
  * Base schema for CallLogFromParty and CallLogToParty
@@ -29,8 +29,7 @@ interface CallLogParty {
    */
   location?: string;
 
-  /**
-   */
+  /** */
   device?: CallLogRecordDeviceInfo;
 }
 

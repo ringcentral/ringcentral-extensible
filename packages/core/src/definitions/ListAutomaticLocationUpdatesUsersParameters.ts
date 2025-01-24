@@ -5,7 +5,7 @@ interface ListAutomaticLocationUpdatesUsersParameters {
   /**
    * Extension type. Multiple values are supported
    */
-  type?: ('User' | 'Limited')[];
+  type?: ("User" | "Limited")[];
 
   /**
    * Filters entries containing the specified substring in user name,

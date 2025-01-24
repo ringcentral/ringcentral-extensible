@@ -1,9 +1,9 @@
-import type CallStatusInfo from './CallStatusInfo';
-import type ParkInfo from './ParkInfo';
-import type PartyInfo from './PartyInfo';
-import type OwnerInfo from './OwnerInfo';
-import type RecordingInfo from './RecordingInfo';
-import type MetaData from './MetaData';
+import type CallStatusInfo from "./CallStatusInfo";
+import type ParkInfo from "./ParkInfo";
+import type PartyInfo from "./PartyInfo";
+import type OwnerInfo from "./OwnerInfo";
+import type RecordingInfo from "./RecordingInfo";
+import type MetaData from "./MetaData";
 
 /**
  * Information on a party of a call session
@@ -14,8 +14,7 @@ interface CallParty {
    */
   id?: string;
 
-  /**
-   */
+  /** */
   status?: CallStatusInfo;
 
   /**
@@ -34,41 +33,37 @@ interface CallParty {
    */
   standAlone?: boolean;
 
-  /**
-   */
+  /** */
   park?: ParkInfo;
 
-  /**
-   */
+  /** */
   from?: PartyInfo;
 
-  /**
-   */
+  /** */
   to?: PartyInfo;
 
-  /**
-   */
+  /** */
   owner?: OwnerInfo;
 
   /**
    * Direction of a call
    */
-  direction?: 'Inbound' | 'Outbound';
+  direction?: "Inbound" | "Outbound";
 
   /**
    * A party's role in the conference scenarios. For calls of 'Conference' type only
    */
-  conferenceRole?: 'Host' | 'Participant';
+  conferenceRole?: "Host" | "Participant";
 
   /**
    * A party's role in 'Ring Me'/'RingOut' scenarios. For calls of 'Ringout' type only
    */
-  ringOutRole?: 'Initiator' | 'Target';
+  ringOutRole?: "Initiator" | "Target";
 
   /**
    * A party's role in 'Ring Me'/'RingOut' scenarios. For calls of 'Ringme' type only
    */
-  ringMeRole?: 'Initiator' | 'Target';
+  ringMeRole?: "Initiator" | "Target";
 
   /**
    * Active recordings list

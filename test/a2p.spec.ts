@@ -1,13 +1,13 @@
-import path from 'path';
-import dotenv from 'dotenv-override-true';
-import DebugExtension from '@rc-ex/debug';
-import ReusableRestClient from './reusable-rest-client';
+import path from "path";
+import dotenv from "dotenv-override-true";
+import DebugExtension from "@rc-ex/debug";
+import ReusableRestClient from "./reusable-rest-client";
 
-dotenv.config({ path: path.join(__dirname, '.env.a2p') });
+dotenv.config({ path: path.join(__dirname, ".env.a2p") });
 
-describe('SMS', () => {
-  test('send', async () => {
-    if (process.env.IS_A2P_ENV !== 'true') {
+describe("SMS", () => {
+  test("send", async () => {
+    if (process.env.IS_A2P_ENV !== "true") {
       return;
     }
     const rc = await ReusableRestClient.getInstance();
@@ -21,11 +21,11 @@ describe('SMS', () => {
       .batches()
       .post({
         from: process.env.RINGCENTRAL_FROM!,
-        text: 'hello world',
+        text: "hello world",
         messages: [
           {
             to: [process.env.RINGCENTRAL_TO!],
-            text: 'hello world 2', // override 'hello world'
+            text: "hello world 2", // override 'hello world'
           },
         ],
       });

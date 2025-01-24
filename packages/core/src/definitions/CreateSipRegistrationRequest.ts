@@ -1,9 +1,8 @@
-import type DeviceInfoRequest from './DeviceInfoRequest';
-import type SIPInfoRequest from './SIPInfoRequest';
+import type DeviceInfoRequest from "./DeviceInfoRequest";
+import type SIPInfoRequest from "./SIPInfoRequest";
 
 interface CreateSipRegistrationRequest {
-  /**
-   */
+  /** */
   device?: DeviceInfoRequest;
 
   /**
@@ -17,7 +16,7 @@ interface CreateSipRegistrationRequest {
    *  then SPR-131 error code will be returned.
    * Default: None
    */
-  softPhoneLineReassignment?: 'None' | 'Initialize' | 'Reassign';
+  softPhoneLineReassignment?: "None" | "Initialize" | "Reassign";
 }
 
 export default CreateSipRegistrationRequest;

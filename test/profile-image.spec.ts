@@ -1,16 +1,17 @@
-import fs from 'fs';
-import path from 'path';
-import ReusableRestClient from './reusable-rest-client';
+import fs from "fs";
+import path from "path";
+import ReusableRestClient from "./reusable-rest-client";
 
-describe('Profile image', () => {
-  test('download', async () => {
+describe("Profile image", () => {
+  test("download", async () => {
     const rc = await ReusableRestClient.getInstance();
-    const buffer = await rc.restapi().account().extension().profileImage().list();
-    expect(buffer.constructor.name).toBe('Buffer');
-    fs.writeFileSync(path.join(__dirname, 'temp.png'), buffer);
+    const buffer = await rc.restapi().account().extension().profileImage()
+      .list();
+    expect(buffer.constructor.name).toBe("Buffer");
+    fs.writeFileSync(path.join(__dirname, "temp.png"), buffer);
   });
 
-  test('upload', async () => {
+  test("upload", async () => {
     const rc = await ReusableRestClient.getInstance();
     await rc
       .restapi()
@@ -19,14 +20,14 @@ describe('Profile image', () => {
       .profileImage()
       .post({
         image: {
-          filename: 'rc.png',
-          contentType: 'image/png',
-          content: fs.readFileSync('./test.png'),
+          filename: "rc.png",
+          contentType: "image/png",
+          content: fs.readFileSync("./test.png"),
         },
       });
   });
 
-  test('download others', async () => {
+  test("download others", async () => {
     // const rc = new RingCentral({
     //   clientId: process.env.RINGCENTRAL_CLIENT_ID!,
     //   clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET!,

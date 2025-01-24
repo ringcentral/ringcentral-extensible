@@ -1,7 +1,11 @@
-import Utils from '../../../../../Utils';
-import type FaxResponse from '../../../../../definitions/FaxResponse';
-import type CreateFaxMessageRequest from '../../../../../definitions/CreateFaxMessageRequest';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import Utils from "../../../../../Utils";
+import type FaxResponse from "../../../../../definitions/FaxResponse";
+import type CreateFaxMessageRequest from "../../../../../definitions/CreateFaxMessageRequest";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -30,7 +34,12 @@ class Index {
     restRequestConfig?: RestRequestConfig,
   ): Promise<FaxResponse> {
     const formData = await Utils.getFormData(createFaxMessageRequest);
-    const r = await this.rc.post<FaxResponse>(this.path(), formData, undefined, restRequestConfig);
+    const r = await this.rc.post<FaxResponse>(
+      this.path(),
+      formData,
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

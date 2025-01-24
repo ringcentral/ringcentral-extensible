@@ -1,23 +1,20 @@
-import type UnifiedPresenceGlip from './UnifiedPresenceGlip';
-import type UnifiedPresenceTelephony from './UnifiedPresenceTelephony';
-import type UnifiedPresenceMeeting from './UnifiedPresenceMeeting';
+import type UnifiedPresenceGlip from "./UnifiedPresenceGlip";
+import type UnifiedPresenceTelephony from "./UnifiedPresenceTelephony";
+import type UnifiedPresenceMeeting from "./UnifiedPresenceMeeting";
 
 interface UnifiedPresence {
   /**
    * Aggregated presence status of the user
    */
-  status?: 'Available' | 'Offline' | 'DND' | 'Busy';
+  status?: "Available" | "Offline" | "DND" | "Busy";
 
-  /**
-   */
+  /** */
   glip?: UnifiedPresenceGlip;
 
-  /**
-   */
+  /** */
   telephony?: UnifiedPresenceTelephony;
 
-  /**
-   */
+  /** */
   meeting?: UnifiedPresenceMeeting;
 }
 

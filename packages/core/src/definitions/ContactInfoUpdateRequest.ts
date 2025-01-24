@@ -1,5 +1,5 @@
-import type ContactBusinessAddressInfo from './ContactBusinessAddressInfo';
-import type PronouncedNameInfo from './PronouncedNameInfo';
+import type ContactBusinessAddressInfo from "./ContactBusinessAddressInfo";
+import type PronouncedNameInfo from "./PronouncedNameInfo";
 
 interface ContactInfoUpdateRequest {
   /**
@@ -17,8 +17,7 @@ interface ContactInfoUpdateRequest {
    */
   company?: string;
 
-  /**
-   */
+  /** */
   jobTitle?: string;
 
   /**
@@ -41,8 +40,7 @@ interface ContactInfoUpdateRequest {
    */
   mobilePhone?: string;
 
-  /**
-   */
+  /** */
   businessAddress?: ContactBusinessAddressInfo;
 
   /**
@@ -52,8 +50,7 @@ interface ContactInfoUpdateRequest {
    */
   emailAsLoginName?: boolean;
 
-  /**
-   */
+  /** */
   pronouncedName?: PronouncedNameInfo;
 
   /**

@@ -1,6 +1,10 @@
-import type RecordingInsights from '../../../../../../../../../definitions/RecordingInsights';
-import type GetRecordingInsightsParameters from '../../../../../../../../../definitions/GetRecordingInsightsParameters';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../../../../types';
+import type RecordingInsights from "../../../../../../../../../definitions/RecordingInsights";
+import type GetRecordingInsightsParameters from "../../../../../../../../../definitions/GetRecordingInsightsParameters";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -24,7 +28,11 @@ class Index {
     queryParams?: GetRecordingInsightsParameters,
     restRequestConfig?: RestRequestConfig,
   ): Promise<RecordingInsights> {
-    const r = await this.rc.get<RecordingInsights>(this.path(), queryParams, restRequestConfig);
+    const r = await this.rc.get<RecordingInsights>(
+      this.path(),
+      queryParams,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

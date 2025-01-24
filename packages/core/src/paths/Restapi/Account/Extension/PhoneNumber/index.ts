@@ -1,6 +1,10 @@
-import type GetExtensionPhoneNumbersResponse from '../../../../../definitions/GetExtensionPhoneNumbersResponse';
-import type ListExtensionPhoneNumbersParameters from '../../../../../definitions/ListExtensionPhoneNumbersParameters';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import type GetExtensionPhoneNumbersResponse from "../../../../../definitions/GetExtensionPhoneNumbersResponse";
+import type ListExtensionPhoneNumbersParameters from "../../../../../definitions/ListExtensionPhoneNumbersParameters";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -30,7 +34,11 @@ class Index {
     queryParams?: ListExtensionPhoneNumbersParameters,
     restRequestConfig?: RestRequestConfig,
   ): Promise<GetExtensionPhoneNumbersResponse> {
-    const r = await this.rc.get<GetExtensionPhoneNumbersResponse>(this.path(), queryParams, restRequestConfig);
+    const r = await this.rc.get<GetExtensionPhoneNumbersResponse>(
+      this.path(),
+      queryParams,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

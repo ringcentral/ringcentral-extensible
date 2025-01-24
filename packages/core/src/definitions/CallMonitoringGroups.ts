@@ -1,6 +1,6 @@
-import type CallMonitoringGroup from './CallMonitoringGroup';
-import type PageNavigationModel from './PageNavigationModel';
-import type EnumeratedPagingModel from './EnumeratedPagingModel';
+import type CallMonitoringGroup from "./CallMonitoringGroup";
+import type PageNavigationModel from "./PageNavigationModel";
+import type EnumeratedPagingModel from "./EnumeratedPagingModel";
 
 interface CallMonitoringGroups {
   /**

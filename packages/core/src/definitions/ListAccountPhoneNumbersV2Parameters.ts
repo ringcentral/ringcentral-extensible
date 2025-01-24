@@ -26,28 +26,28 @@ interface ListAccountPhoneNumbersV2Parameters {
   /**
    * Types of phone numbers to be returned
    */
-  type?: ('VoiceFax' | 'VoiceOnly' | 'FaxOnly')[];
+  type?: ("VoiceFax" | "VoiceOnly" | "FaxOnly")[];
 
   /**
    * Usage type(s) of phone numbers to be returned
    */
   usageType?: (
-    | 'MainCompanyNumber'
-    | 'DirectNumber'
-    | 'Inventory'
-    | 'InventoryPartnerBusinessMobileNumber'
-    | 'PartnerBusinessMobileNumber'
-    | 'AdditionalCompanyNumber'
-    | 'CompanyNumber'
-    | 'PhoneLine'
-    | 'CompanyFaxNumber'
-    | 'ForwardedNumber'
-    | 'ForwardedCompanyNumber'
-    | 'ContactCenterNumber'
-    | 'ConferencingNumber'
-    | 'MeetingsNumber'
-    | 'BusinessMobileNumber'
-    | 'ELIN'
+    | "MainCompanyNumber"
+    | "DirectNumber"
+    | "Inventory"
+    | "InventoryPartnerBusinessMobileNumber"
+    | "PartnerBusinessMobileNumber"
+    | "AdditionalCompanyNumber"
+    | "CompanyNumber"
+    | "PhoneLine"
+    | "CompanyFaxNumber"
+    | "ForwardedNumber"
+    | "ForwardedCompanyNumber"
+    | "ContactCenterNumber"
+    | "ConferencingNumber"
+    | "MeetingsNumber"
+    | "BusinessMobileNumber"
+    | "ELIN"
   )[];
 
   /**
@@ -55,18 +55,23 @@ interface ListAccountPhoneNumbersV2Parameters {
    *  number is ready to be used. Otherwise, it is an external number not yet
    *  ported to RingCentral
    */
-  status?: 'Normal' | 'Pending' | 'PortedIn' | 'Temporary' | 'Unknown';
+  status?: "Normal" | "Pending" | "PortedIn" | "Temporary" | "Unknown";
 
   /**
    * Indicates if a number is toll or toll-free
    * Example: Toll
    */
-  tollType?: 'Toll' | 'TollFree';
+  tollType?: "Toll" | "TollFree";
 
   /**
    * Extension status
    */
-  extensionStatus?: 'Enabled' | 'Disabled' | 'Frozen' | 'NotActivated' | 'Unassigned';
+  extensionStatus?:
+    | "Enabled"
+    | "Disabled"
+    | "Frozen"
+    | "NotActivated"
+    | "Unassigned";
 
   /**
    * The parameter reflects whether this number is BYOC or not

@@ -1,11 +1,21 @@
-import type RingCentral from '@rc-ex/core';
-import type { RestRequestConfig, RestResponse, RestMethod } from '@rc-ex/core/lib/types';
-import SdkExtension from '@rc-ex/core/lib/SdkExtension';
-import RestException from '@rc-ex/core/lib/RestException';
-import waitFor from 'wait-for-async';
+import type RingCentral from "@rc-ex/core";
+import type {
+  RestMethod,
+  RestRequestConfig,
+  RestResponse,
+} from "@rc-ex/core/lib/types";
+import SdkExtension from "@rc-ex/core/lib/SdkExtension";
+import RestException from "@rc-ex/core/lib/RestException";
+import waitFor from "wait-for-async";
 
-export type ShouldRetry = (restException: RestException, retriesAttempted: number) => boolean;
-export type RetryInterval = (restException: RestException, retriesAttempted: number) => number;
+export type ShouldRetry = (
+  restException: RestException,
+  retriesAttempted: number,
+) => boolean;
+export type RetryInterval = (
+  restException: RestException,
+  retriesAttempted: number,
+) => number;
 export interface RetryOptions {
   shouldRetry?: ShouldRetry;
   retryInterval?: RetryInterval;
@@ -18,8 +28,10 @@ class RetryExtension extends SdkExtension {
     super();
     this.options = options;
     this.options.shouldRetry ??= (restException, retriesAttempted) =>
-      retriesAttempted < 3 && [429, 503].includes(restException.response.status);
-    this.options.retryInterval ??= (restException, retriesAttempted) => 60 * 1000 * 2 ** retriesAttempted; // exponential back off
+      retriesAttempted < 3 &&
+      [429, 503].includes(restException.response.status);
+    this.options.retryInterval ??= (restException, retriesAttempted) =>
+      60 * 1000 * 2 ** retriesAttempted; // exponential back off
   }
 
   public async install(rc: RingCentral) {
@@ -44,7 +56,14 @@ class RetryExtension extends SdkExtension {
             await waitFor({
               interval: this.options.retryInterval!(e, retriesAttempted),
             });
-            return await newRequest<T>(method, endpoint, content, queryParams, config, retriesAttempted + 1);
+            return await newRequest<T>(
+              method,
+              endpoint,
+              content,
+              queryParams,
+              config,
+              retriesAttempted + 1,
+            );
           }
         }
         throw e;

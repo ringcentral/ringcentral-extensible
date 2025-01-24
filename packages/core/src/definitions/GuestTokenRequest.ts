@@ -1,14 +1,13 @@
 /**
  * Token endpoint request parameters used in the "Guest" authorization flow
  * with the `guest` grant type
- *
  */
 interface GuestTokenRequest {
   /**
    * Grant type
    * Required
    */
-  grant_type?: 'guest';
+  grant_type?: "guest";
 
   /**
    * RingCentral Brand identifier.

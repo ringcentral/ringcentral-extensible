@@ -6,7 +6,13 @@ interface NotificationDeliveryMode {
    * The transport type for this subscription, or the channel by which an app should be notified of an event
    * Required
    */
-  transportType?: 'WebHook' | 'RC/APNS' | 'RC/GCM' | 'PubNub' | 'WebSocket' | 'Internal';
+  transportType?:
+    | "WebHook"
+    | "RC/APNS"
+    | "RC/GCM"
+    | "PubNub"
+    | "WebSocket"
+    | "Internal";
 
   /**
    * PubNub channel name
@@ -53,7 +59,7 @@ interface NotificationDeliveryMode {
    * (Only for a "PubNub" transport, returned only if `encryption` is `true`)
    *  Encryption algorithm used
    */
-  encryptionAlgorithm?: 'AES';
+  encryptionAlgorithm?: "AES";
 
   /**
    * (Only for a "PubNub" transport, returned only if `encryption` is `true`)

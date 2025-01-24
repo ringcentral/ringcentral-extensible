@@ -1,6 +1,10 @@
-import type FavoriteCollection from '../../../../../definitions/FavoriteCollection';
-import type FavoriteContactList from '../../../../../definitions/FavoriteContactList';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import type FavoriteCollection from "../../../../../definitions/FavoriteCollection";
+import type FavoriteContactList from "../../../../../definitions/FavoriteContactList";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -24,8 +28,14 @@ class Index {
    * App Permission: ReadContacts
    * User Permission: ReadPersonalContacts
    */
-  public async get(restRequestConfig?: RestRequestConfig): Promise<FavoriteContactList> {
-    const r = await this.rc.get<FavoriteContactList>(this.path(), undefined, restRequestConfig);
+  public async get(
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<FavoriteContactList> {
+    const r = await this.rc.get<FavoriteContactList>(
+      this.path(),
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -45,7 +55,12 @@ class Index {
     favoriteCollection: FavoriteCollection,
     restRequestConfig?: RestRequestConfig,
   ): Promise<FavoriteContactList> {
-    const r = await this.rc.put<FavoriteContactList>(this.path(), favoriteCollection, undefined, restRequestConfig);
+    const r = await this.rc.put<FavoriteContactList>(
+      this.path(),
+      favoriteCollection,
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

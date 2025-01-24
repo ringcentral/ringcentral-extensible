@@ -1,4 +1,4 @@
-import type AssignedRoleResource from './AssignedRoleResource';
+import type AssignedRoleResource from "./AssignedRoleResource";
 
 interface ExtensionWithRolesResource {
   /**
@@ -6,12 +6,10 @@ interface ExtensionWithRolesResource {
    */
   uri?: string;
 
-  /**
-   */
+  /** */
   extensionId?: string;
 
-  /**
-   */
+  /** */
   roles?: AssignedRoleResource[];
 }
 

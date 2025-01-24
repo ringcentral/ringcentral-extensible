@@ -1,9 +1,13 @@
-import Search from './Search';
-import type ContactResource from '../../../../../definitions/ContactResource';
-import type ReadDirectoryEntryParameters from '../../../../../definitions/ReadDirectoryEntryParameters';
-import type DirectoryResource from '../../../../../definitions/DirectoryResource';
-import type ListDirectoryEntriesParameters from '../../../../../definitions/ListDirectoryEntriesParameters';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import Search from "./Search";
+import type ContactResource from "../../../../../definitions/ContactResource";
+import type ReadDirectoryEntryParameters from "../../../../../definitions/ReadDirectoryEntryParameters";
+import type DirectoryResource from "../../../../../definitions/DirectoryResource";
+import type ListDirectoryEntriesParameters from "../../../../../definitions/ListDirectoryEntriesParameters";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -32,7 +36,11 @@ class Index {
     queryParams?: ListDirectoryEntriesParameters,
     restRequestConfig?: RestRequestConfig,
   ): Promise<DirectoryResource> {
-    const r = await this.rc.get<DirectoryResource>(this.path(false), queryParams, restRequestConfig);
+    const r = await this.rc.get<DirectoryResource>(
+      this.path(false),
+      queryParams,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -48,9 +56,13 @@ class Index {
     restRequestConfig?: RestRequestConfig,
   ): Promise<ContactResource> {
     if (this.entryId === null) {
-      throw new Error('entryId must be specified.');
+      throw new Error("entryId must be specified.");
     }
-    const r = await this.rc.get<ContactResource>(this.path(), queryParams, restRequestConfig);
+    const r = await this.rc.get<ContactResource>(
+      this.path(),
+      queryParams,
+      restRequestConfig,
+    );
     return r.data;
   }
 

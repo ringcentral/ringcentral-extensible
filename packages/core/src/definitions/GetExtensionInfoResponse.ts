@@ -1,18 +1,18 @@
-import type GetExtensionAccountInfo from './GetExtensionAccountInfo';
-import type ContactInfo from './ContactInfo';
-import type CostCenterInfo from './CostCenterInfo';
-import type CustomFieldInfo from './CustomFieldInfo';
-import type DepartmentInfo from './DepartmentInfo';
-import type ExtensionPermissions from './ExtensionPermissions';
-import type ProfileImageInfo from './ProfileImageInfo';
-import type ReferenceInfo from './ReferenceInfo';
-import type Roles from './Roles';
-import type RegionalSettings from './RegionalSettings';
-import type ExtensionServiceFeatureInfo from './ExtensionServiceFeatureInfo';
-import type ExtensionStatusInfo from './ExtensionStatusInfo';
-import type CallQueueExtensionInfo from './CallQueueExtensionInfo';
-import type ProvisioningSiteInfo from './ProvisioningSiteInfo';
-import type AssignedCountryInfo from './AssignedCountryInfo';
+import type GetExtensionAccountInfo from "./GetExtensionAccountInfo";
+import type ContactInfo from "./ContactInfo";
+import type CostCenterInfo from "./CostCenterInfo";
+import type CustomFieldInfo from "./CustomFieldInfo";
+import type DepartmentInfo from "./DepartmentInfo";
+import type ExtensionPermissions from "./ExtensionPermissions";
+import type ProfileImageInfo from "./ProfileImageInfo";
+import type ReferenceInfo from "./ReferenceInfo";
+import type Roles from "./Roles";
+import type RegionalSettings from "./RegionalSettings";
+import type ExtensionServiceFeatureInfo from "./ExtensionServiceFeatureInfo";
+import type ExtensionStatusInfo from "./ExtensionStatusInfo";
+import type CallQueueExtensionInfo from "./CallQueueExtensionInfo";
+import type ProvisioningSiteInfo from "./ProvisioningSiteInfo";
+import type AssignedCountryInfo from "./AssignedCountryInfo";
 
 interface GetExtensionInfoResponse {
   /**
@@ -27,20 +27,16 @@ interface GetExtensionInfoResponse {
    */
   uri?: string;
 
-  /**
-   */
+  /** */
   account?: GetExtensionAccountInfo;
 
-  /**
-   */
+  /** */
   contact?: ContactInfo;
 
-  /**
-   */
+  /** */
   costCenter?: CostCenterInfo;
 
-  /**
-   */
+  /** */
   customFields?: CustomFieldInfo[];
 
   /**
@@ -57,8 +53,7 @@ interface GetExtensionInfoResponse {
    */
   extensionNumber?: string;
 
-  /**
-   */
+  /** */
   extensionNumbers?: string[];
 
   /**
@@ -79,12 +74,10 @@ interface GetExtensionInfoResponse {
    */
   partnerId?: string;
 
-  /**
-   */
+  /** */
   permissions?: ExtensionPermissions;
 
-  /**
-   */
+  /** */
   profileImage?: ProfileImageInfo;
 
   /**
@@ -92,12 +85,10 @@ interface GetExtensionInfoResponse {
    */
   references?: ReferenceInfo[];
 
-  /**
-   */
+  /** */
   roles?: Roles[];
 
-  /**
-   */
+  /** */
   regionalSettings?: RegionalSettings;
 
   /**
@@ -111,15 +102,14 @@ interface GetExtensionInfoResponse {
    * Initial configuration wizard state
    * Default: NotStarted
    */
-  setupWizardState?: 'NotStarted' | 'Incomplete' | 'Completed';
+  setupWizardState?: "NotStarted" | "Incomplete" | "Completed";
 
   /**
    * Extension status
    */
-  status?: 'Enabled' | 'Disabled' | 'Frozen' | 'NotActivated' | 'Unassigned';
+  status?: "Enabled" | "Disabled" | "Frozen" | "NotActivated" | "Unassigned";
 
-  /**
-   */
+  /** */
   statusInfo?: ExtensionStatusInfo;
 
   /**
@@ -128,36 +118,40 @@ interface GetExtensionInfoResponse {
    *  terminology
    */
   type?:
-    | 'User'
-    | 'FaxUser'
-    | 'FlexibleUser'
-    | 'VirtualUser'
-    | 'DigitalUser'
-    | 'Department'
-    | 'Announcement'
-    | 'Voicemail'
-    | 'SharedLinesGroup'
-    | 'PagingOnly'
-    | 'IvrMenu'
-    | 'ApplicationExtension'
-    | 'ParkLocation'
-    | 'Bot'
-    | 'Room'
-    | 'RoomConnector'
-    | 'Limited'
-    | 'Site'
-    | 'ProxyAdmin'
-    | 'DelegatedLinesGroup'
-    | 'GroupCallPickup';
+    | "User"
+    | "FaxUser"
+    | "FlexibleUser"
+    | "VirtualUser"
+    | "DigitalUser"
+    | "Department"
+    | "Announcement"
+    | "Voicemail"
+    | "SharedLinesGroup"
+    | "PagingOnly"
+    | "IvrMenu"
+    | "ApplicationExtension"
+    | "ParkLocation"
+    | "Bot"
+    | "Room"
+    | "RoomConnector"
+    | "Limited"
+    | "Site"
+    | "ProxyAdmin"
+    | "DelegatedLinesGroup"
+    | "GroupCallPickup";
 
   /**
    * Extension subtype, if applicable. For any unsupported subtypes the
    *  `Unknown` value will be returned
    */
-  subType?: 'VideoPro' | 'VideoProPlus' | 'DigitalSignage' | 'Unknown' | 'Emergency';
+  subType?:
+    | "VideoPro"
+    | "VideoProPlus"
+    | "DigitalSignage"
+    | "Unknown"
+    | "Emergency";
 
-  /**
-   */
+  /** */
   callQueueInfo?: CallQueueExtensionInfo;
 
   /**
@@ -166,12 +160,10 @@ interface GetExtensionInfoResponse {
    */
   hidden?: boolean;
 
-  /**
-   */
+  /** */
   site?: ProvisioningSiteInfo;
 
-  /**
-   */
+  /** */
   assignedCountry?: AssignedCountryInfo;
 
   /**
@@ -184,7 +176,7 @@ interface GetExtensionInfoResponse {
   /**
    * Site access status for cross-site limitation
    */
-  siteAccess?: 'Limited' | 'Unlimited';
+  siteAccess?: "Limited" | "Unlimited";
 }
 
 export default GetExtensionInfoResponse;

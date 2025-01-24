@@ -1,7 +1,6 @@
 /**
  * Please note that the `Department` extension type corresponds to
  * 'Call Queue' extensions in modern RingCentral product terminology
- *
  */
 interface DepartmentInfo {
   /**

@@ -1,5 +1,8 @@
-import Replace from './Replace';
-import type { RingCentralInterface, ParentInterface } from '../../../../../../types';
+import Replace from "./Replace";
+import type {
+  ParentInterface,
+  RingCentralInterface,
+} from "../../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;

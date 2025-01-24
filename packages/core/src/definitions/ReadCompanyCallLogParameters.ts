@@ -20,19 +20,19 @@ interface ReadCompanyCallLogParameters {
    * The direction of call records to be included in the result. If omitted, both
    *  inbound and outbound calls are returned. Multiple values are supported
    */
-  direction?: ('Inbound' | 'Outbound')[];
+  direction?: ("Inbound" | "Outbound")[];
 
   /**
    * The type of call records to be included in the result.
    *  If omitted, all call types are returned. Multiple values are supported
    */
-  type?: ('Voice' | 'Fax')[];
+  type?: ("Voice" | "Fax")[];
 
   /**
    * Defines the level of details for returned call records
    * Default: Simple
    */
-  view?: 'Simple' | 'Detailed';
+  view?: "Simple" | "Detailed";
 
   /**
    * Deprecated, replaced with `recordingType` filter, still supported for compatibility reasons.
@@ -46,7 +46,7 @@ interface ReadCompanyCallLogParameters {
    * Indicates that call records with recordings of particular type should be returned.
    *  If omitted, then calls with and without recordings are returned
    */
-  recordingType?: 'Automatic' | 'OnDemand' | 'All';
+  recordingType?: "Automatic" | "OnDemand" | "All";
 
   /**
    * The beginning of the time range to return call records in ISO 8601 format including timezone,

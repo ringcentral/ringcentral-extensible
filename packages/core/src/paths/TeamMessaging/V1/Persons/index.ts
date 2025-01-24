@@ -1,5 +1,9 @@
-import type TMPersonInfo from '../../../../definitions/TMPersonInfo';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
+import type TMPersonInfo from "../../../../definitions/TMPersonInfo";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -26,11 +30,17 @@ class Index {
    * Rate Limit Group: Light
    * App Permission: TeamMessaging
    */
-  public async get(restRequestConfig?: RestRequestConfig): Promise<TMPersonInfo> {
+  public async get(
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<TMPersonInfo> {
     if (this.personId === null) {
-      throw new Error('personId must be specified.');
+      throw new Error("personId must be specified.");
     }
-    const r = await this.rc.get<TMPersonInfo>(this.path(), undefined, restRequestConfig);
+    const r = await this.rc.get<TMPersonInfo>(
+      this.path(),
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

@@ -2,24 +2,19 @@
  * Address for emergency cases. The same emergency address is assigned to all the numbers of one device
  */
 interface DeviceEmergencyServiceAddressResourceAu {
-  /**
-   */
+  /** */
   street?: string;
 
-  /**
-   */
+  /** */
   street2?: string;
 
-  /**
-   */
+  /** */
   city?: string;
 
-  /**
-   */
+  /** */
   zip?: string;
 
-  /**
-   */
+  /** */
   customerName?: string;
 
   /**

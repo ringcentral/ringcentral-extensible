@@ -1,13 +1,20 @@
-import type LanguageInfo from '../../../../definitions/LanguageInfo';
-import type LanguageList from '../../../../definitions/LanguageList';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
+import type LanguageInfo from "../../../../definitions/LanguageInfo";
+import type LanguageList from "../../../../definitions/LanguageList";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
   public _parent: ParentInterface;
   public languageId: string | null;
 
-  public constructor(_parent: ParentInterface, languageId: string | null = null) {
+  public constructor(
+    _parent: ParentInterface,
+    languageId: string | null = null,
+  ) {
     this._parent = _parent;
     this.rc = _parent.rc;
     this.languageId = languageId;
@@ -25,8 +32,14 @@ class Index {
    * Endpoint: /restapi/{apiVersion}/dictionary/language
    * Rate Limit Group: Light
    */
-  public async list(restRequestConfig?: RestRequestConfig): Promise<LanguageList> {
-    const r = await this.rc.get<LanguageList>(this.path(false), undefined, restRequestConfig);
+  public async list(
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<LanguageList> {
+    const r = await this.rc.get<LanguageList>(
+      this.path(false),
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -37,11 +50,17 @@ class Index {
    * Endpoint: /restapi/{apiVersion}/dictionary/language/{languageId}
    * Rate Limit Group: Light
    */
-  public async get(restRequestConfig?: RestRequestConfig): Promise<LanguageInfo> {
+  public async get(
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<LanguageInfo> {
     if (this.languageId === null) {
-      throw new Error('languageId must be specified.');
+      throw new Error("languageId must be specified.");
     }
-    const r = await this.rc.get<LanguageInfo>(this.path(), undefined, restRequestConfig);
+    const r = await this.rc.get<LanguageInfo>(
+      this.path(),
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

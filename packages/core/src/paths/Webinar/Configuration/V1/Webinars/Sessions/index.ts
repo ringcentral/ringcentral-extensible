@@ -1,14 +1,21 @@
-import Invitees from './Invitees';
-import type WcsSessionResource from '../../../../../../definitions/WcsSessionResource';
-import type WcsSessionWithLocaleCodeModel from '../../../../../../definitions/WcsSessionWithLocaleCodeModel';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../types';
+import Invitees from "./Invitees";
+import type WcsSessionResource from "../../../../../../definitions/WcsSessionResource";
+import type WcsSessionWithLocaleCodeModel from "../../../../../../definitions/WcsSessionWithLocaleCodeModel";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
   public _parent: ParentInterface;
   public sessionId: string | null;
 
-  public constructor(_parent: ParentInterface, sessionId: string | null = null) {
+  public constructor(
+    _parent: ParentInterface,
+    sessionId: string | null = null,
+  ) {
     this._parent = _parent;
     this.rc = _parent.rc;
     this.sessionId = sessionId;
@@ -46,11 +53,17 @@ class Index {
    * Rate Limit Group: Heavy
    * App Permission: ReadWebinars
    */
-  public async get(restRequestConfig?: RestRequestConfig): Promise<WcsSessionResource> {
+  public async get(
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<WcsSessionResource> {
     if (this.sessionId === null) {
-      throw new Error('sessionId must be specified.');
+      throw new Error("sessionId must be specified.");
     }
-    const r = await this.rc.get<WcsSessionResource>(this.path(), undefined, restRequestConfig);
+    const r = await this.rc.get<WcsSessionResource>(
+      this.path(),
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -65,9 +78,14 @@ class Index {
    */
   public async delete(restRequestConfig?: RestRequestConfig): Promise<string> {
     if (this.sessionId === null) {
-      throw new Error('sessionId must be specified.');
+      throw new Error("sessionId must be specified.");
     }
-    const r = await this.rc.delete<string>(this.path(), {}, undefined, restRequestConfig);
+    const r = await this.rc.delete<string>(
+      this.path(),
+      {},
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -87,7 +105,7 @@ class Index {
     restRequestConfig?: RestRequestConfig,
   ): Promise<WcsSessionResource> {
     if (this.sessionId === null) {
-      throw new Error('sessionId must be specified.');
+      throw new Error("sessionId must be specified.");
     }
     const r = await this.rc.patch<WcsSessionResource>(
       this.path(),

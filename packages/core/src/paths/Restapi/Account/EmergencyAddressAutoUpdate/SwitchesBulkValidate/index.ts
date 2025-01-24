@@ -1,6 +1,10 @@
-import type ValidateMultipleSwitchesResponse from '../../../../../definitions/ValidateMultipleSwitchesResponse';
-import type ValidateMultipleSwitchesRequest from '../../../../../definitions/ValidateMultipleSwitchesRequest';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import type ValidateMultipleSwitchesResponse from "../../../../../definitions/ValidateMultipleSwitchesResponse";
+import type ValidateMultipleSwitchesRequest from "../../../../../definitions/ValidateMultipleSwitchesRequest";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;

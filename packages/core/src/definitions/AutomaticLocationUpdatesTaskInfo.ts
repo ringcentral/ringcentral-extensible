@@ -1,4 +1,4 @@
-import type TaskResultInfo from './TaskResultInfo';
+import type TaskResultInfo from "./TaskResultInfo";
 
 interface AutomaticLocationUpdatesTaskInfo {
   /**
@@ -9,7 +9,7 @@ interface AutomaticLocationUpdatesTaskInfo {
   /**
    * Status of a task
    */
-  status?: 'Accepted' | 'InProgress' | 'Completed' | 'Failed';
+  status?: "Accepted" | "InProgress" | "Completed" | "Failed";
 
   /**
    * Task creation time
@@ -26,10 +26,13 @@ interface AutomaticLocationUpdatesTaskInfo {
   /**
    * Type of task
    */
-  type?: 'WirelessPointsBulkCreate' | 'WirelessPointsBulkUpdate' | 'SwitchesBulkCreate' | 'SwitchesBulkUpdate';
+  type?:
+    | "WirelessPointsBulkCreate"
+    | "WirelessPointsBulkUpdate"
+    | "SwitchesBulkCreate"
+    | "SwitchesBulkUpdate";
 
-  /**
-   */
+  /** */
   result?: TaskResultInfo;
 }
 

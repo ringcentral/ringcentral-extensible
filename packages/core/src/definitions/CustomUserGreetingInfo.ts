@@ -1,4 +1,4 @@
-import type CustomGreetingAnsweringRuleInfo from './CustomGreetingAnsweringRuleInfo';
+import type CustomGreetingAnsweringRuleInfo from "./CustomGreetingAnsweringRuleInfo";
 
 interface CustomUserGreetingInfo {
   /**
@@ -16,21 +16,21 @@ interface CustomUserGreetingInfo {
    * Type of custom user greeting
    */
   type?:
-    | 'Introductory'
-    | 'Announcement'
-    | 'InterruptPrompt'
-    | 'ConnectingAudio'
-    | 'ConnectingMessage'
-    | 'Voicemail'
-    | 'Unavailable'
-    | 'HoldMusic'
-    | 'PronouncedName'
-    | 'TemplateGreeting';
+    | "Introductory"
+    | "Announcement"
+    | "InterruptPrompt"
+    | "ConnectingAudio"
+    | "ConnectingMessage"
+    | "Voicemail"
+    | "Unavailable"
+    | "HoldMusic"
+    | "PronouncedName"
+    | "TemplateGreeting";
 
   /**
    * Content media type
    */
-  contentType?: 'audio/mpeg' | 'audio/wav';
+  contentType?: "audio/mpeg" | "audio/wav";
 
   /**
    * Link to a greeting content (audio file)
@@ -38,8 +38,7 @@ interface CustomUserGreetingInfo {
    */
   contentUri?: string;
 
-  /**
-   */
+  /** */
   answeringRule?: CustomGreetingAnsweringRuleInfo;
 }
 

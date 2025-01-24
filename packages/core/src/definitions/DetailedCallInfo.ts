@@ -1,14 +1,11 @@
 interface DetailedCallInfo {
-  /**
-   */
+  /** */
   callId?: string;
 
-  /**
-   */
+  /** */
   toTag?: string;
 
-  /**
-   */
+  /** */
   fromTag?: string;
 
   /**
@@ -21,8 +18,7 @@ interface DetailedCallInfo {
    */
   localUri?: string;
 
-  /**
-   */
+  /** */
   rcSessionId?: string;
 }
 

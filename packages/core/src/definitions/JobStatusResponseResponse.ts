@@ -1,8 +1,8 @@
-import type UtteranceObject from './UtteranceObject';
-import type WordSegment from './WordSegment';
-import type UtteranceInsightsObject from './UtteranceInsightsObject';
-import type SpeakerInsightsObject from './SpeakerInsightsObject';
-import type ConversationalInsightsUnit from './ConversationalInsightsUnit';
+import type UtteranceObject from "./UtteranceObject";
+import type WordSegment from "./WordSegment";
+import type UtteranceInsightsObject from "./UtteranceInsightsObject";
+import type SpeakerInsightsObject from "./SpeakerInsightsObject";
+import type ConversationalInsightsUnit from "./ConversationalInsightsUnit";
 
 interface JobStatusResponseResponse {
   /**
@@ -17,8 +17,7 @@ interface JobStatusResponseResponse {
    */
   utterances?: UtteranceObject[];
 
-  /**
-   */
+  /** */
   words?: WordSegment[];
 
   /**
@@ -32,16 +31,13 @@ interface JobStatusResponseResponse {
    */
   transcript?: string;
 
-  /**
-   */
+  /** */
   utteranceInsights?: UtteranceInsightsObject[];
 
-  /**
-   */
+  /** */
   speakerInsights?: SpeakerInsightsObject;
 
-  /**
-   */
+  /** */
   conversationalInsights?: ConversationalInsightsUnit[];
 }
 

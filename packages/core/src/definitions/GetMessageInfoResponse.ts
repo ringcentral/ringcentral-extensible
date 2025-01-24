@@ -1,8 +1,8 @@
-import type MessageAttachmentInfo from './MessageAttachmentInfo';
-import type ConversationInfo from './ConversationInfo';
-import type MessageStoreCallerInfoResponseFrom from './MessageStoreCallerInfoResponseFrom';
-import type MessageStoreCallerInfoResponseTo from './MessageStoreCallerInfoResponseTo';
-import type VoicemailOwnerResource from './VoicemailOwnerResource';
+import type MessageAttachmentInfo from "./MessageAttachmentInfo";
+import type ConversationInfo from "./ConversationInfo";
+import type MessageStoreCallerInfoResponseFrom from "./MessageStoreCallerInfoResponseFrom";
+import type MessageStoreCallerInfoResponseTo from "./MessageStoreCallerInfoResponseTo";
+import type VoicemailOwnerResource from "./VoicemailOwnerResource";
 
 interface GetMessageInfoResponse {
   /**
@@ -34,7 +34,7 @@ interface GetMessageInfoResponse {
    *  that all attachments are already deleted and the message itself is about
    *  to be physically deleted shortly
    */
-  availability?: 'Alive' | 'Deleted' | 'Purged';
+  availability?: "Alive" | "Deleted" | "Purged";
 
   /**
    * SMS and Pager only. Identifier of a conversation the message
@@ -43,8 +43,7 @@ interface GetMessageInfoResponse {
    */
   conversationId?: number;
 
-  /**
-   */
+  /** */
   conversation?: ConversationInfo;
 
   /**
@@ -59,7 +58,7 @@ interface GetMessageInfoResponse {
    *  directions are allowed. For example voicemail messages can
    *  be only inbound
    */
-  direction?: 'Inbound' | 'Outbound';
+  direction?: "Inbound" | "Outbound";
 
   /**
    * Fax only. Page count in a fax message
@@ -72,10 +71,9 @@ interface GetMessageInfoResponse {
    *  white image scanned at 200 dpi, 'Low' for black and white image scanned
    *  at 100 dpi
    */
-  faxResolution?: 'High' | 'Low';
+  faxResolution?: "High" | "Low";
 
-  /**
-   */
+  /** */
   from?: MessageStoreCallerInfoResponseFrom;
 
   /**
@@ -93,7 +91,13 @@ interface GetMessageInfoResponse {
    *  'SendingFailed', then the 'SendingFailed' value is returned. In other cases
    *  the 'Sent' status is returned
    */
-  messageStatus?: 'Queued' | 'Sent' | 'Delivered' | 'DeliveryFailed' | 'SendingFailed' | 'Received';
+  messageStatus?:
+    | "Queued"
+    | "Sent"
+    | "Delivered"
+    | "DeliveryFailed"
+    | "SendingFailed"
+    | "Received";
 
   /**
    * Pager only. `true` if at least one of the message recipients is
@@ -104,12 +108,12 @@ interface GetMessageInfoResponse {
   /**
    * Message priority
    */
-  priority?: 'Normal' | 'High';
+  priority?: "Normal" | "High";
 
   /**
    * Message read status
    */
-  readStatus?: 'Read' | 'Unread';
+  readStatus?: "Read" | "Unread";
 
   /**
    * SMS only. Date/time when outbound SMS was delivered to recipient's
@@ -141,7 +145,7 @@ interface GetMessageInfoResponse {
   /**
    * Message type
    */
-  type?: 'Fax' | 'SMS' | 'VoiceMail' | 'Pager' | 'Text';
+  type?: "Fax" | "SMS" | "VoiceMail" | "Pager" | "Text";
 
   /**
    * Voicemail only. Status of a voicemail to text transcription.
@@ -149,13 +153,13 @@ interface GetMessageInfoResponse {
    *  the 'NotAvailable' value is returned
    */
   vmTranscriptionStatus?:
-    | 'NotAvailable'
-    | 'InProgress'
-    | 'TimedOut'
-    | 'Completed'
-    | 'CompletedPartially'
-    | 'Failed'
-    | 'Unknown';
+    | "NotAvailable"
+    | "InProgress"
+    | "TimedOut"
+    | "Completed"
+    | "CompletedPartially"
+    | "Failed"
+    | "Unknown";
 
   /**
    * Cover page identifier. If coverIndex is set to '0' (zero) cover
@@ -173,8 +177,7 @@ interface GetMessageInfoResponse {
    */
   coverPageText?: string;
 
-  /**
-   */
+  /** */
   owner?: VoicemailOwnerResource;
 }
 

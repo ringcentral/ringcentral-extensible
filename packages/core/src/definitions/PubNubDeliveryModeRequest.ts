@@ -3,7 +3,7 @@ interface PubNubDeliveryModeRequest {
    * The transport type for this subscription, or the channel by which an app should be notified of an event
    * Required
    */
-  transportType?: 'PubNub';
+  transportType?: "PubNub";
 
   /**
    * Optional. Specifies if notification messages will be encrypted

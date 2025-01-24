@@ -4,8 +4,7 @@ interface ScimFilterSupported {
    */
   maxResults?: number;
 
-  /**
-   */
+  /** */
   supported?: boolean;
 }
 

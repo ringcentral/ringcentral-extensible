@@ -1,8 +1,8 @@
-import type User from './User';
-import type BridgePinsWithAliases from './BridgePinsWithAliases';
-import type BridgeResponseSecurity from './BridgeResponseSecurity';
-import type BridgePreferences from './BridgePreferences';
-import type BridgeDiscovery from './BridgeDiscovery';
+import type User from "./User";
+import type BridgePinsWithAliases from "./BridgePinsWithAliases";
+import type BridgeResponseSecurity from "./BridgeResponseSecurity";
+import type BridgePreferences from "./BridgePreferences";
+import type BridgeDiscovery from "./BridgeDiscovery";
 
 interface BridgeResponse {
   /**
@@ -27,26 +27,21 @@ interface BridgeResponse {
    *  from the system.
    * Example: Instant
    */
-  type?: 'Instant' | 'Scheduled' | 'PMI';
+  type?: "Instant" | "Scheduled" | "PMI";
 
-  /**
-   */
+  /** */
   host?: User;
 
-  /**
-   */
+  /** */
   pins?: BridgePinsWithAliases;
 
-  /**
-   */
+  /** */
   security?: BridgeResponseSecurity;
 
-  /**
-   */
+  /** */
   preferences?: BridgePreferences;
 
-  /**
-   */
+  /** */
   discovery?: BridgeDiscovery;
 }
 

@@ -1,10 +1,8 @@
 interface SyncInfo {
-  /**
-   */
-  syncType?: 'FSync' | 'ISync';
+  /** */
+  syncType?: "FSync" | "ISync";
 
-  /**
-   */
+  /** */
   syncToken?: string;
 
   /**
@@ -12,8 +10,7 @@ interface SyncInfo {
    */
   syncTime?: string;
 
-  /**
-   */
+  /** */
   olderRecordsExist?: boolean;
 }
 

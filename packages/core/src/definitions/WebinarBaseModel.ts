@@ -1,4 +1,4 @@
-import type WcsWebinarSettingsModel from './WcsWebinarSettingsModel';
+import type WcsWebinarSettingsModel from "./WcsWebinarSettingsModel";
 
 interface WebinarBaseModel {
   /**
@@ -13,8 +13,7 @@ interface WebinarBaseModel {
    */
   description?: string;
 
-  /**
-   */
+  /** */
   settings?: WcsWebinarSettingsModel;
 }
 

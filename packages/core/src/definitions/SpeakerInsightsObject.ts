@@ -1,4 +1,4 @@
-import type SpeakerInsightsUnit from './SpeakerInsightsUnit';
+import type SpeakerInsightsUnit from "./SpeakerInsightsUnit";
 
 interface SpeakerInsightsObject {
   /**
@@ -7,8 +7,7 @@ interface SpeakerInsightsObject {
    */
   speakerCount?: number;
 
-  /**
-   */
+  /** */
   insights?: SpeakerInsightsUnit[];
 }
 

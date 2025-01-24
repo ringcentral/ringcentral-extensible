@@ -1,15 +1,17 @@
-import type { RestResponse } from '@rc-ex/core/lib/types';
-import RestException from '@rc-ex/core/lib/RestException';
+import type { RestResponse } from "@rc-ex/core/lib/types";
+import RestException from "@rc-ex/core/lib/RestException";
 
-import ReusableRestClient from './reusable-rest-client';
+import ReusableRestClient from "./reusable-rest-client";
 
-describe('Exceptions', () => {
-  test('400', async () => {
+describe("Exceptions", () => {
+  test("400", async () => {
     const rc = await ReusableRestClient.getInstance();
     let exception = false;
     try {
       // no to number
-      await rc.restapi().account().extension().sms().post({ text: 'Hello world' });
+      await rc.restapi().account().extension().sms().post({
+        text: "Hello world",
+      });
     } catch (e) {
       exception = true;
       expect(e instanceof RestException).toBeTruthy();
@@ -20,11 +22,14 @@ describe('Exceptions', () => {
     }
   });
 
-  test('404', async () => {
+  test("404", async () => {
     const rc = await ReusableRestClient.getInstance();
     let exception = false;
     try {
-      await rc.post(`${rc.restapi().account().extension().path(true)}/does-not-exist`, { text: 'Hello world' });
+      await rc.post(
+        `${rc.restapi().account().extension().path(true)}/does-not-exist`,
+        { text: "Hello world" },
+      );
     } catch (e) {
       exception = true;
       expect(e instanceof RestException).toBeTruthy();

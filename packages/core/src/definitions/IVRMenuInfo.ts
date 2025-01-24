@@ -1,6 +1,6 @@
-import type IvrMenuSiteInfo from './IvrMenuSiteInfo';
-import type IvrMenuPromptInfo from './IvrMenuPromptInfo';
-import type IVRMenuActionsInfo from './IVRMenuActionsInfo';
+import type IvrMenuSiteInfo from "./IvrMenuSiteInfo";
+import type IvrMenuPromptInfo from "./IvrMenuPromptInfo";
+import type IVRMenuActionsInfo from "./IVRMenuActionsInfo";
 
 interface IVRMenuInfo {
   /**
@@ -24,12 +24,10 @@ interface IVRMenuInfo {
    */
   extensionNumber?: string;
 
-  /**
-   */
+  /** */
   site?: IvrMenuSiteInfo;
 
-  /**
-   */
+  /** */
   prompt?: IvrMenuPromptInfo;
 
   /**

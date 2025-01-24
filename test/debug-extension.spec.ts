@@ -1,9 +1,9 @@
-import DebugExtension from '@rc-ex/debug';
+import DebugExtension from "@rc-ex/debug";
 
-import ReusableRestClient from './reusable-rest-client';
+import ReusableRestClient from "./reusable-rest-client";
 
-describe('Debug Extension', () => {
-  test('default', async () => {
+describe("Debug Extension", () => {
+  test("default", async () => {
     const rc = await ReusableRestClient.getInstance();
     const debugExtension = new DebugExtension();
     await rc.installExtension(debugExtension);

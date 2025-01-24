@@ -1,17 +1,20 @@
 /* eslint-disable no-console */
-import type { MessageEvent } from 'isomorphic-ws';
-import type WS from 'isomorphic-ws';
+import type { MessageEvent } from "isomorphic-ws";
+import type WS from "isomorphic-ws";
 
-import type { WsgMeta, WsgEvent } from './types';
-import ClosedException from './exceptions/ClosedException';
-import TimeoutException from './exceptions/TimeoutException';
+import type { WsgEvent, WsgMeta } from "./types";
+import ClosedException from "./exceptions/ClosedException";
+import TimeoutException from "./exceptions/TimeoutException";
 
 class Utils {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   public static splitWsgData(wsgData: string): [WsgMeta, any] {
-    if (wsgData.includes(',--Boundary')) {
-      const index = wsgData.indexOf(',--Boundary');
-      return [JSON.parse(wsgData.substring(1, index)), wsgData.substring(index + 1, wsgData.length - 1)];
+    if (wsgData.includes(",--Boundary")) {
+      const index = wsgData.indexOf(",--Boundary");
+      return [
+        JSON.parse(wsgData.substring(1, index)),
+        wsgData.substring(index + 1, wsgData.length - 1),
+      ];
     }
     return JSON.parse(wsgData);
   }
@@ -27,7 +30,7 @@ ${JSON.stringify(JSON.parse(str), null, 2)}
 ******`,
       );
     };
-    ws.addEventListener('message', (mEvent: MessageEvent) => {
+    ws.addEventListener("message", (mEvent: MessageEvent) => {
       const event = mEvent as WsgEvent;
       console.debug(
         `*** WebSocket incoming message: ***
@@ -35,18 +38,22 @@ ${JSON.stringify(JSON.parse(event.data), null, 2)}
 ******`,
       );
     });
-    ws.addEventListener('open', (event) => {
-      console.debug('WebSocket open event:', event);
+    ws.addEventListener("open", (event) => {
+      console.debug("WebSocket open event:", event);
     });
-    ws.addEventListener('error', (event) => {
-      console.debug('WebSocket error event:', event);
+    ws.addEventListener("error", (event) => {
+      console.debug("WebSocket error event:", event);
     });
-    ws.addEventListener('close', (event) => {
-      console.debug('WebSocket close event:', event);
+    ws.addEventListener("close", (event) => {
+      console.debug("WebSocket close event:", event);
     });
   }
 
-  public static waitForWebSocketMessage(ws: WS, matchCondition: (meta: WsgMeta) => boolean, timeout = 60000) {
+  public static waitForWebSocketMessage(
+    ws: WS,
+    matchCondition: (meta: WsgMeta) => boolean,
+    timeout = 60000,
+  ) {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     return new Promise<[WsgMeta, any, WsgEvent]>((resolve, reject) => {
       const checkHandle = setInterval(() => {
@@ -57,7 +64,7 @@ ${JSON.stringify(JSON.parse(event.data), null, 2)}
       }, 1000);
       const timeoutHandle = setTimeout(() => {
         // eslint-disable-next-line @typescript-eslint/no-use-before-define
-        ws.removeEventListener('message', handler);
+        ws.removeEventListener("message", handler);
         clearInterval(checkHandle);
         reject(new TimeoutException());
       }, timeout);
@@ -65,13 +72,13 @@ ${JSON.stringify(JSON.parse(event.data), null, 2)}
         const event = mEvent as WsgEvent;
         const [meta, body] = Utils.splitWsgData(event.data);
         if (matchCondition(meta)) {
-          ws.removeEventListener('message', handler);
+          ws.removeEventListener("message", handler);
           clearInterval(checkHandle);
           clearTimeout(timeoutHandle);
           resolve([meta, body, event]);
         }
       };
-      ws.addEventListener('message', handler);
+      ws.addEventListener("message", handler);
     });
   }
 }

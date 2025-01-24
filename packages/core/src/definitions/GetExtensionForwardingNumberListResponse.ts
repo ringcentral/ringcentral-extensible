@@ -1,6 +1,6 @@
-import type ForwardingNumberInfo from './ForwardingNumberInfo';
-import type PageNavigationModel from './PageNavigationModel';
-import type EnumeratedPagingModel from './EnumeratedPagingModel';
+import type ForwardingNumberInfo from "./ForwardingNumberInfo";
+import type PageNavigationModel from "./PageNavigationModel";
+import type EnumeratedPagingModel from "./EnumeratedPagingModel";
 
 interface GetExtensionForwardingNumberListResponse {
   /**
@@ -14,12 +14,10 @@ interface GetExtensionForwardingNumberListResponse {
    */
   records?: ForwardingNumberInfo[];
 
-  /**
-   */
+  /** */
   navigation?: PageNavigationModel;
 
-  /**
-   */
+  /** */
   paging?: EnumeratedPagingModel;
 }
 

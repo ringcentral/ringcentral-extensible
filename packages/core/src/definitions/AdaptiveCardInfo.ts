@@ -1,8 +1,8 @@
-import type AdaptiveCardCreator from './AdaptiveCardCreator';
-import type AdaptiveCardInfoRequest from './AdaptiveCardInfoRequest';
-import type AdaptiveCardAction from './AdaptiveCardAction';
-import type AdaptiveCardSelectAction from './AdaptiveCardSelectAction';
-import type BackgroundImage from './BackgroundImage';
+import type AdaptiveCardCreator from "./AdaptiveCardCreator";
+import type AdaptiveCardInfoRequest from "./AdaptiveCardInfoRequest";
+import type AdaptiveCardAction from "./AdaptiveCardAction";
+import type AdaptiveCardSelectAction from "./AdaptiveCardSelectAction";
+import type BackgroundImage from "./BackgroundImage";
 
 interface AdaptiveCardInfo {
   /**
@@ -28,17 +28,15 @@ interface AdaptiveCardInfo {
    */
   $schema?: string;
 
-  /**
-   */
-  type?: 'AdaptiveCard';
+  /** */
+  type?: "AdaptiveCard";
 
   /**
    * Version of an adaptive card
    */
   version?: string;
 
-  /**
-   */
+  /** */
   creator?: AdaptiveCardCreator;
 
   /**
@@ -51,12 +49,10 @@ interface AdaptiveCardInfo {
    */
   body?: AdaptiveCardInfoRequest[];
 
-  /**
-   */
+  /** */
   actions?: AdaptiveCardAction[];
 
-  /**
-   */
+  /** */
   selectAction?: AdaptiveCardSelectAction;
 
   /**
@@ -83,12 +79,12 @@ interface AdaptiveCardInfo {
   /**
    * The 2-letter ISO-639-1 language used in the card. Used to localize any date/time functions
    */
-  lang?: 'en' | 'fr' | 'es';
+  lang?: "en" | "fr" | "es";
 
   /**
    * Defines how the content should be aligned vertically within the container. Only relevant for fixed-height cards, or cards with a `minHeight` specified
    */
-  verticalContentAlignment?: 'top' | 'center' | 'bottom';
+  verticalContentAlignment?: "top" | "center" | "bottom";
 }
 
 export default AdaptiveCardInfo;

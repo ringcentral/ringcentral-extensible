@@ -1,10 +1,9 @@
-import type BillingStatementCharges from './BillingStatementCharges';
-import type BillingStatementFees from './BillingStatementFees';
+import type BillingStatementCharges from "./BillingStatementCharges";
+import type BillingStatementFees from "./BillingStatementFees";
 
 /**
  * Billing information. Returned for device update request if `prestatement`
  * query parameter is set to 'true'
- *
  */
 interface BillingStatementInfo {
   /**
@@ -13,12 +12,10 @@ interface BillingStatementInfo {
    */
   currency?: string;
 
-  /**
-   */
+  /** */
   charges?: BillingStatementCharges[];
 
-  /**
-   */
+  /** */
   fees?: BillingStatementFees[];
 
   /**

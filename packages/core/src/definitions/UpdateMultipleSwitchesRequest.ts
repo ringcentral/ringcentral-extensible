@@ -1,8 +1,7 @@
-import type UpdateSwitchInfo from './UpdateSwitchInfo';
+import type UpdateSwitchInfo from "./UpdateSwitchInfo";
 
 interface UpdateMultipleSwitchesRequest {
-  /**
-   */
+  /** */
   records?: UpdateSwitchInfo[];
 }
 

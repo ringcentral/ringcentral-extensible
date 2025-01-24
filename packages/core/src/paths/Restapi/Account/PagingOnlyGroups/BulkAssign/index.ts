@@ -1,5 +1,9 @@
-import type EditPagingGroupRequest from '../../../../../definitions/EditPagingGroupRequest';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import type EditPagingGroupRequest from "../../../../../definitions/EditPagingGroupRequest";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -25,7 +29,12 @@ class Index {
     editPagingGroupRequest: EditPagingGroupRequest,
     restRequestConfig?: RestRequestConfig,
   ): Promise<string> {
-    const r = await this.rc.post<string>(this.path(), editPagingGroupRequest, undefined, restRequestConfig);
+    const r = await this.rc.post<string>(
+      this.path(),
+      editPagingGroupRequest,
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

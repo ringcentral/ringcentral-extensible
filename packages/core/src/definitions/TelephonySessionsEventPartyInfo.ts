@@ -1,9 +1,9 @@
-import type CallPartyInfo from './CallPartyInfo';
-import type RecordingInfo from './RecordingInfo';
-import type CallStatusInfo from './CallStatusInfo';
-import type ParkInfo from './ParkInfo';
-import type SipData from './SipData';
-import type UiCallInfo from './UiCallInfo';
+import type CallPartyInfo from "./CallPartyInfo";
+import type RecordingInfo from "./RecordingInfo";
+import type CallStatusInfo from "./CallStatusInfo";
+import type ParkInfo from "./ParkInfo";
+import type SipData from "./SipData";
+import type UiCallInfo from "./UiCallInfo";
 
 interface TelephonySessionsEventPartyInfo {
   /**
@@ -24,26 +24,21 @@ interface TelephonySessionsEventPartyInfo {
   /**
    * Call direction
    */
-  direction?: 'Inbound' | 'Outbound';
+  direction?: "Inbound" | "Outbound";
 
-  /**
-   */
+  /** */
   to?: CallPartyInfo;
 
-  /**
-   */
+  /** */
   from?: CallPartyInfo;
 
-  /**
-   */
+  /** */
   recordings?: RecordingInfo[];
 
-  /**
-   */
+  /** */
   status?: CallStatusInfo;
 
-  /**
-   */
+  /** */
   park?: ParkInfo;
 
   /**
@@ -75,14 +70,12 @@ interface TelephonySessionsEventPartyInfo {
   /**
    * Defines party role in Server Side Conference
    */
-  conferenceRole?: 'Host' | 'Participant';
+  conferenceRole?: "Host" | "Participant";
 
-  /**
-   */
+  /** */
   sipData?: SipData;
 
-  /**
-   */
+  /** */
   uiCallInfo?: UiCallInfo;
 }
 

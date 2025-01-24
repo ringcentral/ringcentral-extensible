@@ -1,6 +1,6 @@
-import type EmergencyAddressAutoUpdateSiteInfo from './EmergencyAddressAutoUpdateSiteInfo';
-import type EmergencyAddressInfo from './EmergencyAddressInfo';
-import type EmergencyLocationInfo from './EmergencyLocationInfo';
+import type EmergencyAddressAutoUpdateSiteInfo from "./EmergencyAddressAutoUpdateSiteInfo";
+import type EmergencyAddressInfo from "./EmergencyAddressInfo";
+import type EmergencyLocationInfo from "./EmergencyLocationInfo";
 
 interface CreateWirelessPoint {
   /**
@@ -15,16 +15,13 @@ interface CreateWirelessPoint {
    */
   name?: string;
 
-  /**
-   */
+  /** */
   site?: EmergencyAddressAutoUpdateSiteInfo;
 
-  /**
-   */
+  /** */
   emergencyAddress?: EmergencyAddressInfo;
 
-  /**
-   */
+  /** */
   emergencyLocation?: EmergencyLocationInfo;
 }
 

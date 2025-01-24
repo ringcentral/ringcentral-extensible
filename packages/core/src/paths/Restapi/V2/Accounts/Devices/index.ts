@@ -1,7 +1,11 @@
-import BulkAdd from './BulkAdd';
-import type RemoveLineResponse from '../../../../../definitions/RemoveLineResponse';
-import type RemoveLineRequest from '../../../../../definitions/RemoveLineRequest';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import BulkAdd from "./BulkAdd";
+import type RemoveLineResponse from "../../../../../definitions/RemoveLineResponse";
+import type RemoveLineRequest from "../../../../../definitions/RemoveLineRequest";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -38,9 +42,14 @@ class Index {
     restRequestConfig?: RestRequestConfig,
   ): Promise<RemoveLineResponse> {
     if (this.deviceId === null) {
-      throw new Error('deviceId must be specified.');
+      throw new Error("deviceId must be specified.");
     }
-    const r = await this.rc.delete<RemoveLineResponse>(this.path(), removeLineRequest, undefined, restRequestConfig);
+    const r = await this.rc.delete<RemoveLineResponse>(
+      this.path(),
+      removeLineRequest,
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 

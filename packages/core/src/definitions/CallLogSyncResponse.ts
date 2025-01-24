@@ -1,5 +1,5 @@
-import type CallLogRecord from './CallLogRecord';
-import type CallLogSyncInfo from './CallLogSyncInfo';
+import type CallLogRecord from "./CallLogRecord";
+import type CallLogSyncInfo from "./CallLogSyncInfo";
 
 interface CallLogSyncResponse {
   /**

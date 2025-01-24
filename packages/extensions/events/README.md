@@ -23,7 +23,8 @@ eventsExtension.eventEmitter.on(Events.requestSuccess, r => {
 })
 ```
 
-For a working sample, please check this [test case](../../../test/events-extension.spec.ts).
+For a working sample, please check this
+[test case](../../../test/events-extension.spec.ts).
 
 ## EventsOptions
 
@@ -41,22 +42,22 @@ type EventsOptions = {
 
 ```ts
 enum Events {
-  beforeRequest = 'beforeRequest',
-  requestSuccess = 'requestSuccess',
-  requestError = 'requestError',
+  beforeRequest = "beforeRequest",
+  requestSuccess = "requestSuccess",
+  requestError = "requestError",
 
   // enum values below are from
   // https://github.com/ringcentral/ringcentral-js/blob/master/sdk/src/platform/Platform.ts
-  beforeLogin = 'beforeLogin',
-  loginSuccess = 'loginSuccess',
-  loginError = 'loginError',
-  beforeRefresh = 'beforeRefresh',
-  refreshSuccess = 'refreshSuccess',
-  refreshError = 'refreshError',
-  beforeLogout = 'beforeLogout',
-  logoutSuccess = 'logoutSuccess',
-  logoutError = 'logoutError',
-  rateLimitError = 'rateLimitError',
+  beforeLogin = "beforeLogin",
+  loginSuccess = "loginSuccess",
+  loginError = "loginError",
+  beforeRefresh = "beforeRefresh",
+  refreshSuccess = "refreshSuccess",
+  refreshError = "refreshError",
+  beforeLogout = "beforeLogout",
+  logoutSuccess = "logoutSuccess",
+  logoutError = "logoutError",
+  rateLimitError = "rateLimitError",
 }
 ```
 

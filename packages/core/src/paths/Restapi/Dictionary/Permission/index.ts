@@ -1,14 +1,21 @@
-import type PermissionResource from '../../../../definitions/PermissionResource';
-import type PermissionCollectionResource from '../../../../definitions/PermissionCollectionResource';
-import type ListPermissionsParameters from '../../../../definitions/ListPermissionsParameters';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
+import type PermissionResource from "../../../../definitions/PermissionResource";
+import type PermissionCollectionResource from "../../../../definitions/PermissionCollectionResource";
+import type ListPermissionsParameters from "../../../../definitions/ListPermissionsParameters";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
   public _parent: ParentInterface;
   public permissionId: string | null;
 
-  public constructor(_parent: ParentInterface, permissionId: string | null = null) {
+  public constructor(
+    _parent: ParentInterface,
+    permissionId: string | null = null,
+  ) {
     this._parent = _parent;
     this.rc = _parent.rc;
     this.permissionId = permissionId;
@@ -29,7 +36,11 @@ class Index {
     queryParams?: ListPermissionsParameters,
     restRequestConfig?: RestRequestConfig,
   ): Promise<PermissionCollectionResource> {
-    const r = await this.rc.get<PermissionCollectionResource>(this.path(false), queryParams, restRequestConfig);
+    const r = await this.rc.get<PermissionCollectionResource>(
+      this.path(false),
+      queryParams,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -39,11 +50,17 @@ class Index {
    * Endpoint: /restapi/{apiVersion}/dictionary/permission/{permissionId}
    * Rate Limit Group: Light
    */
-  public async get(restRequestConfig?: RestRequestConfig): Promise<PermissionResource> {
+  public async get(
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<PermissionResource> {
     if (this.permissionId === null) {
-      throw new Error('permissionId must be specified.');
+      throw new Error("permissionId must be specified.");
     }
-    const r = await this.rc.get<PermissionResource>(this.path(), undefined, restRequestConfig);
+    const r = await this.rc.get<PermissionResource>(
+      this.path(),
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

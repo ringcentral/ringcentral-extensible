@@ -25,7 +25,7 @@ interface ListChatNotesNewParameters {
    * Status of notes to be fetched; if not specified all notes are
    *  fetched by default.
    */
-  status?: 'Active' | 'Draft';
+  status?: "Active" | "Draft";
 
   /**
    * Pagination token

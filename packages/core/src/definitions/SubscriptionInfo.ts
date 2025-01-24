@@ -1,6 +1,6 @@
-import type DisabledFilterInfo from './DisabledFilterInfo';
-import type NotificationDeliveryMode from './NotificationDeliveryMode';
-import type SubscriptionInfoBlacklistedData from './SubscriptionInfoBlacklistedData';
+import type DisabledFilterInfo from "./DisabledFilterInfo";
+import type NotificationDeliveryMode from "./NotificationDeliveryMode";
+import type SubscriptionInfoBlacklistedData from "./SubscriptionInfoBlacklistedData";
 
 interface SubscriptionInfo {
   /**
@@ -48,7 +48,7 @@ interface SubscriptionInfo {
    * Subscription status
    * Required
    */
-  status?: 'Active' | 'Blacklisted';
+  status?: "Active" | "Blacklisted";
 
   /**
    * Subscription creation time in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)

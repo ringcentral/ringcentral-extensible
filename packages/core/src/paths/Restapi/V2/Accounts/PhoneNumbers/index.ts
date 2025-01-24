@@ -1,19 +1,26 @@
-import BulkAdd from './BulkAdd';
-import Replace from './Replace';
-import type AccountPhoneNumberInfo from '../../../../../definitions/AccountPhoneNumberInfo';
-import type AssignPhoneNumberRequest from '../../../../../definitions/AssignPhoneNumberRequest';
-import type DeletePhoneNumbersResponse from '../../../../../definitions/DeletePhoneNumbersResponse';
-import type DeletePhoneNumbersRequest from '../../../../../definitions/DeletePhoneNumbersRequest';
-import type AccountPhoneNumberList from '../../../../../definitions/AccountPhoneNumberList';
-import type ListAccountPhoneNumbersV2Parameters from '../../../../../definitions/ListAccountPhoneNumbersV2Parameters';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import BulkAdd from "./BulkAdd";
+import Replace from "./Replace";
+import type AccountPhoneNumberInfo from "../../../../../definitions/AccountPhoneNumberInfo";
+import type AssignPhoneNumberRequest from "../../../../../definitions/AssignPhoneNumberRequest";
+import type DeletePhoneNumbersResponse from "../../../../../definitions/DeletePhoneNumbersResponse";
+import type DeletePhoneNumbersRequest from "../../../../../definitions/DeletePhoneNumbersRequest";
+import type AccountPhoneNumberList from "../../../../../definitions/AccountPhoneNumberList";
+import type ListAccountPhoneNumbersV2Parameters from "../../../../../definitions/ListAccountPhoneNumbersV2Parameters";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
   public _parent: ParentInterface;
   public phoneNumberId: string | null;
 
-  public constructor(_parent: ParentInterface, phoneNumberId: string | null = null) {
+  public constructor(
+    _parent: ParentInterface,
+    phoneNumberId: string | null = null,
+  ) {
     this._parent = _parent;
     this.rc = _parent.rc;
     this.phoneNumberId = phoneNumberId;
@@ -39,7 +46,11 @@ class Index {
     queryParams?: ListAccountPhoneNumbersV2Parameters,
     restRequestConfig?: RestRequestConfig,
   ): Promise<AccountPhoneNumberList> {
-    const r = await this.rc.get<AccountPhoneNumberList>(this.path(false), queryParams, restRequestConfig);
+    const r = await this.rc.get<AccountPhoneNumberList>(
+      this.path(false),
+      queryParams,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -95,7 +106,7 @@ class Index {
     restRequestConfig?: RestRequestConfig,
   ): Promise<AccountPhoneNumberInfo> {
     if (this.phoneNumberId === null) {
-      throw new Error('phoneNumberId must be specified.');
+      throw new Error("phoneNumberId must be specified.");
     }
     const r = await this.rc.patch<AccountPhoneNumberInfo>(
       this.path(),

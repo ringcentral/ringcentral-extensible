@@ -2,8 +2,7 @@
  * Query parameters for operation deleteMessageByFilter
  */
 interface DeleteMessageByFilterParameters {
-  /**
-   */
+  /** */
   conversationId?: string[];
 
   /**
@@ -17,7 +16,7 @@ interface DeleteMessageByFilterParameters {
    * Type of messages to be deleted
    * Default: All
    */
-  type?: 'Fax' | 'SMS' | 'VoiceMail' | 'Pager' | 'Text' | 'All';
+  type?: "Fax" | "SMS" | "VoiceMail" | "Pager" | "Text" | "All";
 }
 
 export default DeleteMessageByFilterParameters;

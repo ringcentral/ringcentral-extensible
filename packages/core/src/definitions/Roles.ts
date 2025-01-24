@@ -10,20 +10,16 @@ interface Roles {
    */
   id?: string;
 
-  /**
-   */
+  /** */
   autoAssigned?: boolean;
 
-  /**
-   */
+  /** */
   displayName?: string;
 
-  /**
-   */
+  /** */
   siteCompatible?: boolean;
 
-  /**
-   */
+  /** */
   siteRestricted?: boolean;
 }
 

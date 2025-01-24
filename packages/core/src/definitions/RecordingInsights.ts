@@ -1,4 +1,4 @@
-import type AIInsights from './AIInsights';
+import type AIInsights from "./AIInsights";
 
 interface RecordingInsights {
   /**
@@ -19,7 +19,7 @@ interface RecordingInsights {
    * Required
    * Example: pbx
    */
-  domain?: 'pbx';
+  domain?: "pbx";
 
   /**
    * Recording ID of the domain
@@ -39,7 +39,7 @@ interface RecordingInsights {
    * Optional call direction in case of phone call recording
    * Example: Inbound
    */
-  callDirection?: 'Inbound' | 'Outbound';
+  callDirection?: "Inbound" | "Outbound";
 
   /**
    * Extension id of the call recording owner

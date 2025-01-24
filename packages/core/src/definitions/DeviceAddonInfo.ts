@@ -1,10 +1,8 @@
 interface DeviceAddonInfo {
-  /**
-   */
+  /** */
   id?: string;
 
-  /**
-   */
+  /** */
   name?: string;
 
   /**

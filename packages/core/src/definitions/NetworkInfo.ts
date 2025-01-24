@@ -1,6 +1,6 @@
-import type AutomaticLocationUpdatesSiteInfo from './AutomaticLocationUpdatesSiteInfo';
-import type PublicIpRangeInfo from './PublicIpRangeInfo';
-import type PrivateIpRangeInfo from './PrivateIpRangeInfo';
+import type AutomaticLocationUpdatesSiteInfo from "./AutomaticLocationUpdatesSiteInfo";
+import type PublicIpRangeInfo from "./PublicIpRangeInfo";
+import type PrivateIpRangeInfo from "./PrivateIpRangeInfo";
 
 interface NetworkInfo {
   /**
@@ -14,20 +14,16 @@ interface NetworkInfo {
    */
   uri?: string;
 
-  /**
-   */
+  /** */
   name?: string;
 
-  /**
-   */
+  /** */
   site?: AutomaticLocationUpdatesSiteInfo;
 
-  /**
-   */
+  /** */
   publicIpRanges?: PublicIpRangeInfo[];
 
-  /**
-   */
+  /** */
   privateIpRanges?: PrivateIpRangeInfo[];
 }
 

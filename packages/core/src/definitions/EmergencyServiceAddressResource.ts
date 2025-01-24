@@ -1,27 +1,21 @@
 /**
  * Address for emergency cases. The same emergency address is assigned
  * to all the numbers of one device
- *
  */
 interface EmergencyServiceAddressResource {
-  /**
-   */
+  /** */
   street?: string;
 
-  /**
-   */
+  /** */
   street2?: string;
 
-  /**
-   */
+  /** */
   city?: string;
 
-  /**
-   */
+  /** */
   zip?: string;
 
-  /**
-   */
+  /** */
   customerName?: string;
 
   /**
@@ -74,7 +68,13 @@ interface EmergencyServiceAddressResource {
    * Resulting status of emergency address synchronization. Returned
    *  if `syncEmergencyAddress` parameter is set to `true`
    */
-  syncStatus?: 'Verified' | 'Updated' | 'Deleted' | 'NotRequired' | 'Unsupported' | 'Failed';
+  syncStatus?:
+    | "Verified"
+    | "Updated"
+    | "Deleted"
+    | "NotRequired"
+    | "Unsupported"
+    | "Failed";
 
   /**
    * Name of an additional contact person. Should be specified for
@@ -111,7 +111,7 @@ interface EmergencyServiceAddressResource {
   /**
    * Status of digital line provisioning
    */
-  lineProvisioningStatus?: 'Provisioning' | 'Valid' | 'Invalid';
+  lineProvisioningStatus?: "Provisioning" | "Valid" | "Invalid";
 
   /**
    * Internal identifier of a tax

@@ -19,14 +19,12 @@ interface ListEmergencyLocationsParameters {
   /**
    * Emergency address status
    */
-  addressStatus?: 'Valid' | 'Invalid' | 'Provisioning';
+  addressStatus?: "Valid" | "Invalid" | "Provisioning";
 
-  /**
-   */
-  usageStatus?: 'Active' | 'Inactive';
+  /** */
+  usageStatus?: "Active" | "Inactive";
 
-  /**
-   */
+  /** */
   domesticCountryId?: string;
 
   /**
@@ -35,16 +33,16 @@ interface ListEmergencyLocationsParameters {
    * Default: +address
    */
   orderBy?:
-    | '+name'
-    | '+siteName'
-    | '+address'
-    | '+addressStatus'
-    | '+usageStatus'
-    | '-name'
-    | '-siteName'
-    | '-address'
-    | '-addressStatus'
-    | '-usageStatus';
+    | "+name"
+    | "+siteName"
+    | "+address"
+    | "+addressStatus"
+    | "+usageStatus"
+    | "-name"
+    | "-siteName"
+    | "-address"
+    | "-addressStatus"
+    | "-usageStatus";
 
   /**
    * Indicates a page size (number of items). The values

@@ -1,5 +1,5 @@
-import type GetCountryInfoNumberParser from './GetCountryInfoNumberParser';
-import type PhoneNumberInfoNumberParser from './PhoneNumberInfoNumberParser';
+import type GetCountryInfoNumberParser from "./GetCountryInfoNumberParser";
+import type PhoneNumberInfoNumberParser from "./PhoneNumberInfoNumberParser";
 
 interface ParsePhoneNumberResponse {
   /**

@@ -5,7 +5,7 @@ interface ReadDirectoryFederationParameters {
   /**
    * Federation types for search
    */
-  types?: 'All' | 'Regular' | 'AdminOnly';
+  types?: "All" | "Regular" | "AdminOnly";
 }
 
 export default ReadDirectoryFederationParameters;

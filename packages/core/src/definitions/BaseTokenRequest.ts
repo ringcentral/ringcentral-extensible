@@ -4,18 +4,18 @@ interface BaseTokenRequest {
    * Required
    */
   grant_type?:
-    | 'authorization_code'
-    | 'password'
-    | 'refresh_token'
-    | 'client_credentials'
-    | 'urn:ietf:params:oauth:grant-type:jwt-bearer'
-    | 'urn:ietf:params:oauth:grant-type:device_code'
-    | 'device_certificate'
-    | 'partner_jwt'
-    | 'guest'
-    | 'personal_jwt'
-    | 'otp'
-    | 'ivr_pin';
+    | "authorization_code"
+    | "password"
+    | "refresh_token"
+    | "client_credentials"
+    | "urn:ietf:params:oauth:grant-type:jwt-bearer"
+    | "urn:ietf:params:oauth:grant-type:device_code"
+    | "device_certificate"
+    | "partner_jwt"
+    | "guest"
+    | "personal_jwt"
+    | "otp"
+    | "ivr_pin";
 
   /**
    * The list of application permissions (OAuth scopes) requested.

@@ -1,5 +1,8 @@
-import Contact from './Contact';
-import type { RingCentralInterface, ParentInterface } from '../../../../../types';
+import Contact from "./Contact";
+import type {
+  ParentInterface,
+  RingCentralInterface,
+} from "../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;

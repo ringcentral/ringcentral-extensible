@@ -1,14 +1,13 @@
 /**
  * Token endpoint request parameters used in the "Device Authorization" flow
  * with the `urn:ietf:params:oauth:grant-type:device_code` grant type
- *
  */
 interface DeviceCodeTokenRequest {
   /**
    * Grant type
    * Required
    */
-  grant_type?: 'urn:ietf:params:oauth:grant-type:device_code';
+  grant_type?: "urn:ietf:params:oauth:grant-type:device_code";
 
   /**
    * For `urn:ietf:params:oauth:grant-type:device_code` grant type only.

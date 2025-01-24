@@ -1,8 +1,12 @@
-import Utils from '../../../../Utils';
-import type TMAddFileRequest from '../../../../definitions/TMAddFileRequest';
-import type CreateGlipFileNewParameters from '../../../../definitions/CreateGlipFileNewParameters';
-import type CreateGlipFileNewRequest from '../../../../definitions/CreateGlipFileNewRequest';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
+import Utils from "../../../../Utils";
+import type TMAddFileRequest from "../../../../definitions/TMAddFileRequest";
+import type CreateGlipFileNewParameters from "../../../../definitions/CreateGlipFileNewParameters";
+import type CreateGlipFileNewRequest from "../../../../definitions/CreateGlipFileNewRequest";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -28,7 +32,12 @@ class Index {
     restRequestConfig?: RestRequestConfig,
   ): Promise<TMAddFileRequest> {
     const formData = await Utils.getFormData(createGlipFileNewRequest);
-    const r = await this.rc.post<TMAddFileRequest>(this.path(), formData, queryParams, restRequestConfig);
+    const r = await this.rc.post<TMAddFileRequest>(
+      this.path(),
+      formData,
+      queryParams,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

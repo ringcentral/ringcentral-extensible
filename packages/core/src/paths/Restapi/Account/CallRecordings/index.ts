@@ -1,5 +1,9 @@
-import type CallRecordingIds from '../../../../definitions/CallRecordingIds';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
+import type CallRecordingIds from "../../../../definitions/CallRecordingIds";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -22,8 +26,16 @@ class Index {
    * App Permission: EditCallLog
    * User Permission: EditCompanyCallRecordings
    */
-  public async delete(callRecordingIds: CallRecordingIds, restRequestConfig?: RestRequestConfig): Promise<string> {
-    const r = await this.rc.delete<string>(this.path(), callRecordingIds, undefined, restRequestConfig);
+  public async delete(
+    callRecordingIds: CallRecordingIds,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<string> {
+    const r = await this.rc.delete<string>(
+      this.path(),
+      callRecordingIds,
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

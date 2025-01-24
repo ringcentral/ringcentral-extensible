@@ -1,4 +1,4 @@
-import type ConferencePhoneNumberInfo from './ConferencePhoneNumberInfo';
+import type ConferencePhoneNumberInfo from "./ConferencePhoneNumberInfo";
 
 interface UpdateConferencingInfoRequest {
   /**

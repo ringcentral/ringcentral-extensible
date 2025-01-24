@@ -1,13 +1,20 @@
-import Sessions from './Sessions';
-import type WebinarResource from '../../../../../definitions/WebinarResource';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import Sessions from "./Sessions";
+import type WebinarResource from "../../../../../definitions/WebinarResource";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
   public _parent: ParentInterface;
   public webinarId: string | null;
 
-  public constructor(_parent: ParentInterface, webinarId: string | null = null) {
+  public constructor(
+    _parent: ParentInterface,
+    webinarId: string | null = null,
+  ) {
     this._parent = _parent;
     this.rc = _parent.rc;
     this.webinarId = webinarId;
@@ -25,11 +32,17 @@ class Index {
    * Rate Limit Group: Heavy
    * App Permission: ReadWebinars
    */
-  public async get(restRequestConfig?: RestRequestConfig): Promise<WebinarResource> {
+  public async get(
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<WebinarResource> {
     if (this.webinarId === null) {
-      throw new Error('webinarId must be specified.');
+      throw new Error("webinarId must be specified.");
     }
-    const r = await this.rc.get<WebinarResource>(this.path(), undefined, restRequestConfig);
+    const r = await this.rc.get<WebinarResource>(
+      this.path(),
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 

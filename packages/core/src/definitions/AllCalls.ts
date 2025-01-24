@@ -6,7 +6,7 @@ interface AllCalls {
    * Unit of the result value
    * Required
    */
-  valueType?: 'Percent' | 'Seconds' | 'Instances';
+  valueType?: "Percent" | "Seconds" | "Instances";
 
   /**
    * Value for all calls

@@ -8,7 +8,7 @@ interface OriginalRoleModel {
    * Required
    * Example: Panelist
    */
-  originalRole?: 'Panelist' | 'CoHost' | 'Host' | 'Attendee';
+  originalRole?: "Panelist" | "CoHost" | "Host" | "Attendee";
 }
 
 export default OriginalRoleModel;

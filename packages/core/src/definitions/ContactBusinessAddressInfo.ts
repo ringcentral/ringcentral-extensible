@@ -1,7 +1,6 @@
 /**
  * User's business address. The default is
  * Company (Auto-Receptionist) settings
- *
  */
 interface ContactBusinessAddressInfo {
   /**

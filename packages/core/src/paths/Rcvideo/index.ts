@@ -1,6 +1,6 @@
-import V2 from './V2';
-import V1 from './V1';
-import type { RingCentralInterface } from '../../types';
+import V2 from "./V2";
+import V1 from "./V1";
+import type { RingCentralInterface } from "../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -9,7 +9,7 @@ class Index {
     this.rc = rc;
   }
   public path(): string {
-    return '/rcvideo';
+    return "/rcvideo";
   }
 
   public v1(): V1 {

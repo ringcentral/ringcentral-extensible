@@ -17,9 +17,8 @@ interface ScimMeta {
    */
   location?: string;
 
-  /**
-   */
-  resourceType?: 'User' | 'Group' | 'ResourceType' | 'Schema';
+  /** */
+  resourceType?: "User" | "Group" | "ResourceType" | "Schema";
 }
 
 export default ScimMeta;

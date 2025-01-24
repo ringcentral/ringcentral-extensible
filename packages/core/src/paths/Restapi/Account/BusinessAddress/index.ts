@@ -1,6 +1,10 @@
-import type ModifyAccountBusinessAddressRequest from '../../../../definitions/ModifyAccountBusinessAddressRequest';
-import type AccountBusinessAddressResource from '../../../../definitions/AccountBusinessAddressResource';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
+import type ModifyAccountBusinessAddressRequest from "../../../../definitions/ModifyAccountBusinessAddressRequest";
+import type AccountBusinessAddressResource from "../../../../definitions/AccountBusinessAddressResource";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -22,8 +26,14 @@ class Index {
    * App Permission: ReadAccounts
    * User Permission: ReadCompanyInfo
    */
-  public async get(restRequestConfig?: RestRequestConfig): Promise<AccountBusinessAddressResource> {
-    const r = await this.rc.get<AccountBusinessAddressResource>(this.path(), undefined, restRequestConfig);
+  public async get(
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<AccountBusinessAddressResource> {
+    const r = await this.rc.get<AccountBusinessAddressResource>(
+      this.path(),
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 

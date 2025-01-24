@@ -1,8 +1,7 @@
-import type PartyUpdateInfo from './PartyUpdateInfo';
+import type PartyUpdateInfo from "./PartyUpdateInfo";
 
 interface PartyUpdateRequest {
-  /**
-   */
+  /** */
   party?: PartyUpdateInfo;
 }
 

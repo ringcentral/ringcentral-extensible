@@ -1,16 +1,13 @@
-import type CallMonitoringExtensionInfo from './CallMonitoringExtensionInfo';
+import type CallMonitoringExtensionInfo from "./CallMonitoringExtensionInfo";
 
 interface CallMonitoringBulkAssign {
-  /**
-   */
+  /** */
   addedExtensions?: CallMonitoringExtensionInfo[];
 
-  /**
-   */
+  /** */
   updatedExtensions?: CallMonitoringExtensionInfo[];
 
-  /**
-   */
+  /** */
   removedExtensions?: CallMonitoringExtensionInfo[];
 }
 

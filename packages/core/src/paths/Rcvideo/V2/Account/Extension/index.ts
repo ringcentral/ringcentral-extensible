@@ -1,12 +1,18 @@
-import Bridges from './Bridges';
-import type { RingCentralInterface, ParentInterface } from '../../../../../types';
+import Bridges from "./Bridges";
+import type {
+  ParentInterface,
+  RingCentralInterface,
+} from "../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
   public _parent: ParentInterface;
   public extensionId: string | null;
 
-  public constructor(_parent: ParentInterface, extensionId: string | null = null) {
+  public constructor(
+    _parent: ParentInterface,
+    extensionId: string | null = null,
+  ) {
     this._parent = _parent;
     this.rc = _parent.rc;
     this.extensionId = extensionId;

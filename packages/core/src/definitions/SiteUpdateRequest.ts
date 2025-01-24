@@ -1,6 +1,6 @@
-import type ContactBusinessAddressInfo from './ContactBusinessAddressInfo';
-import type RegionalSettings from './RegionalSettings';
-import type OperatorInfo from './OperatorInfo';
+import type ContactBusinessAddressInfo from "./ContactBusinessAddressInfo";
+import type RegionalSettings from "./RegionalSettings";
+import type OperatorInfo from "./OperatorInfo";
 
 interface SiteUpdateRequest {
   /**
@@ -26,25 +26,21 @@ interface SiteUpdateRequest {
    */
   email?: string;
 
-  /**
-   */
+  /** */
   businessAddress?: ContactBusinessAddressInfo;
 
-  /**
-   */
+  /** */
   regionalSettings?: RegionalSettings;
 
-  /**
-   */
+  /** */
   operator?: OperatorInfo;
 
   /**
    * Site access status for cross-site limitation
    */
-  siteAccess?: 'Limited' | 'Unlimited';
+  siteAccess?: "Limited" | "Unlimited";
 
-  /**
-   */
+  /** */
   accessibleSiteIds?: string[];
 }
 

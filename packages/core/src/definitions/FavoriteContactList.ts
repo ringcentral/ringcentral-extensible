@@ -1,4 +1,4 @@
-import type FavoriteContactResource from './FavoriteContactResource';
+import type FavoriteContactResource from "./FavoriteContactResource";
 
 interface FavoriteContactList {
   /**
@@ -6,8 +6,7 @@ interface FavoriteContactList {
    */
   uri?: string;
 
-  /**
-   */
+  /** */
   records?: FavoriteContactResource[];
 }
 

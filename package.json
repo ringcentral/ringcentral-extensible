@@ -11,20 +11,13 @@
   ],
   "scripts": {
     "compile": "lerna exec tsc --scope=@rc-ex/core && lerna exec tsc --no-private --ignore=@rc-ex/core",
-    "lint": "eslint --fix '**/*.{ts,tsx,js,jsx}' && prettier --write . && sort-package-json",
     "prepublishOnly": "yarn reset && yarn compile",
     "reset": "lerna exec 'rm -rf lib'",
     "test": "yarn workspace @rc-ex/test run jest -w 1 --detectOpenHandles -c jest.config.ts $t",
     "upgrade-all": "yarn-upgrade-all -W && yarn workspaces run yarn-upgrade-all && yarn install"
   },
   "devDependencies": {
-    "@types/node": "^22.10.7",
-    "@typescript-eslint/eslint-plugin": "^8.20.0",
-    "@typescript-eslint/parser": "^8.20.0",
-    "eslint": "^8.57.0",
-    "eslint-config-alloy": "^5.1.2",
-    "eslint-config-prettier": "^10.0.1",
-    "eslint-plugin-prettier": "^5.2.2",
+    "@types/node": "^22.10.10",
     "lerna": "^8.1.9",
     "prettier": "^3.4.2",
     "sort-package-json": "^2.14.0",
@@ -32,10 +25,5 @@
     "ttpt": "^0.13.0",
     "typescript": "^5.7.3",
     "yarn-upgrade-all": "^0.7.4"
-  },
-  "yarn-upgrade-all": {
-    "ignore": [
-      "eslint"
-    ]
   }
 }

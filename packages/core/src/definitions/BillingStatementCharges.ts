@@ -1,6 +1,5 @@
 interface BillingStatementCharges {
-  /**
-   */
+  /** */
   description?: string;
 
   /**
@@ -8,8 +7,7 @@ interface BillingStatementCharges {
    */
   amount?: number;
 
-  /**
-   */
+  /** */
   feature?: string;
 
   /**

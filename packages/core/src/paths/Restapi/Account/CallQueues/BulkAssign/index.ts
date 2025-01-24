@@ -1,5 +1,9 @@
-import type CallQueueBulkAssignResource from '../../../../../definitions/CallQueueBulkAssignResource';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import type CallQueueBulkAssignResource from "../../../../../definitions/CallQueueBulkAssignResource";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -25,7 +29,12 @@ class Index {
     callQueueBulkAssignResource: CallQueueBulkAssignResource,
     restRequestConfig?: RestRequestConfig,
   ): Promise<string> {
-    const r = await this.rc.post<string>(this.path(), callQueueBulkAssignResource, undefined, restRequestConfig);
+    const r = await this.rc.post<string>(
+      this.path(),
+      callQueueBulkAssignResource,
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

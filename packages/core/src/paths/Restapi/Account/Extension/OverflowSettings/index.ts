@@ -1,6 +1,10 @@
-import type CallQueueOverflowSettingsRequestResource from '../../../../../definitions/CallQueueOverflowSettingsRequestResource';
-import type CallQueueOverflowSettings from '../../../../../definitions/CallQueueOverflowSettings';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import type CallQueueOverflowSettingsRequestResource from "../../../../../definitions/CallQueueOverflowSettingsRequestResource";
+import type CallQueueOverflowSettings from "../../../../../definitions/CallQueueOverflowSettings";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -21,8 +25,14 @@ class Index {
    * App Permission: ReadAccounts
    * User Permission: CallQueueToCallQueue
    */
-  public async get(restRequestConfig?: RestRequestConfig): Promise<CallQueueOverflowSettings> {
-    const r = await this.rc.get<CallQueueOverflowSettings>(this.path(), undefined, restRequestConfig);
+  public async get(
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<CallQueueOverflowSettings> {
+    const r = await this.rc.get<CallQueueOverflowSettings>(
+      this.path(),
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -35,7 +45,8 @@ class Index {
    * User Permission: CallQueueToCallQueue
    */
   public async put(
-    callQueueOverflowSettingsRequestResource: CallQueueOverflowSettingsRequestResource,
+    callQueueOverflowSettingsRequestResource:
+      CallQueueOverflowSettingsRequestResource,
     restRequestConfig?: RestRequestConfig,
   ): Promise<CallQueueOverflowSettings> {
     const r = await this.rc.put<CallQueueOverflowSettings>(

@@ -1,16 +1,23 @@
-import type EnrollmentPatchInput from '../../../../../definitions/EnrollmentPatchInput';
-import type EnrollmentStatus from '../../../../../definitions/EnrollmentStatus';
-import type EnrollmentInput from '../../../../../definitions/EnrollmentInput';
-import type ListEnrolledSpeakers from '../../../../../definitions/ListEnrolledSpeakers';
-import type CaiEnrollmentsListParameters from '../../../../../definitions/CaiEnrollmentsListParameters';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import type EnrollmentPatchInput from "../../../../../definitions/EnrollmentPatchInput";
+import type EnrollmentStatus from "../../../../../definitions/EnrollmentStatus";
+import type EnrollmentInput from "../../../../../definitions/EnrollmentInput";
+import type ListEnrolledSpeakers from "../../../../../definitions/ListEnrolledSpeakers";
+import type CaiEnrollmentsListParameters from "../../../../../definitions/CaiEnrollmentsListParameters";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
   public _parent: ParentInterface;
   public speakerId: string | null;
 
-  public constructor(_parent: ParentInterface, speakerId: string | null = null) {
+  public constructor(
+    _parent: ParentInterface,
+    speakerId: string | null = null,
+  ) {
     this._parent = _parent;
     this.rc = _parent.rc;
     this.speakerId = speakerId;
@@ -32,7 +39,11 @@ class Index {
     queryParams?: CaiEnrollmentsListParameters,
     restRequestConfig?: RestRequestConfig,
   ): Promise<ListEnrolledSpeakers> {
-    const r = await this.rc.get<ListEnrolledSpeakers>(this.path(false), queryParams, restRequestConfig);
+    const r = await this.rc.get<ListEnrolledSpeakers>(
+      this.path(false),
+      queryParams,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -47,7 +58,12 @@ class Index {
     enrollmentInput: EnrollmentInput,
     restRequestConfig?: RestRequestConfig,
   ): Promise<EnrollmentStatus> {
-    const r = await this.rc.post<EnrollmentStatus>(this.path(false), enrollmentInput, undefined, restRequestConfig);
+    const r = await this.rc.post<EnrollmentStatus>(
+      this.path(false),
+      enrollmentInput,
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -58,11 +74,17 @@ class Index {
    * Rate Limit Group: Heavy
    * App Permission: AI
    */
-  public async get(restRequestConfig?: RestRequestConfig): Promise<EnrollmentStatus> {
+  public async get(
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<EnrollmentStatus> {
     if (this.speakerId === null) {
-      throw new Error('speakerId must be specified.');
+      throw new Error("speakerId must be specified.");
     }
-    const r = await this.rc.get<EnrollmentStatus>(this.path(), undefined, restRequestConfig);
+    const r = await this.rc.get<EnrollmentStatus>(
+      this.path(),
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -75,9 +97,14 @@ class Index {
    */
   public async delete(restRequestConfig?: RestRequestConfig): Promise<string> {
     if (this.speakerId === null) {
-      throw new Error('speakerId must be specified.');
+      throw new Error("speakerId must be specified.");
     }
-    const r = await this.rc.delete<string>(this.path(), {}, undefined, restRequestConfig);
+    const r = await this.rc.delete<string>(
+      this.path(),
+      {},
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -93,9 +120,14 @@ class Index {
     restRequestConfig?: RestRequestConfig,
   ): Promise<EnrollmentStatus> {
     if (this.speakerId === null) {
-      throw new Error('speakerId must be specified.');
+      throw new Error("speakerId must be specified.");
     }
-    const r = await this.rc.patch<EnrollmentStatus>(this.path(), enrollmentPatchInput, undefined, restRequestConfig);
+    const r = await this.rc.patch<EnrollmentStatus>(
+      this.path(),
+      enrollmentPatchInput,
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

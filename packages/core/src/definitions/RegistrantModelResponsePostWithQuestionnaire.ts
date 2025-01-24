@@ -1,4 +1,4 @@
-import type RegAnswerModel from './RegAnswerModel';
+import type RegAnswerModel from "./RegAnswerModel";
 
 interface RegistrantModelResponsePostWithQuestionnaire {
   /**

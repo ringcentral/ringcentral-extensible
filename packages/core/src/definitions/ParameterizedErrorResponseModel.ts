@@ -1,4 +1,4 @@
-import type ApiErrorWithParameter from './ApiErrorWithParameter';
+import type ApiErrorWithParameter from "./ApiErrorWithParameter";
 
 /**
  * Standard error response which may include parameterized errors

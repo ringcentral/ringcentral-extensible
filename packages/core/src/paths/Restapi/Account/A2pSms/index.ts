@@ -1,8 +1,8 @@
-import OptOuts from './OptOuts';
-import Statuses from './Statuses';
-import Messages from './Messages';
-import Batches from './Batches';
-import type { RingCentralInterface, ParentInterface } from '../../../../types';
+import OptOuts from "./OptOuts";
+import Statuses from "./Statuses";
+import Messages from "./Messages";
+import Batches from "./Batches";
+import type { ParentInterface, RingCentralInterface } from "../../../../types";
 
 class Index {
   public rc: RingCentralInterface;

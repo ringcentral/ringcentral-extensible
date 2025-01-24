@@ -11,7 +11,7 @@ interface ListContactsParameters {
   /**
    * Sorts results by the specified property
    */
-  sortBy?: ('FirstName' | 'LastName' | 'Company')[];
+  sortBy?: ("FirstName" | "LastName" | "Company")[];
 
   /**
    * The result set page number (1-indexed) to return

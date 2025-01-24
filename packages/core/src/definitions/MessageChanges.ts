@@ -2,7 +2,7 @@ interface MessageChanges {
   /**
    * Type of the message
    */
-  type?: 'Fax' | 'SMS' | 'VoiceMail' | 'Pager';
+  type?: "Fax" | "SMS" | "VoiceMail" | "Pager";
 
   /**
    * Number of new messages. Can be omitted if the value is zero

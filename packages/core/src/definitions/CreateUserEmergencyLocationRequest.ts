@@ -1,4 +1,4 @@
-import type CommonEmergencyLocationAddressInfo from './CommonEmergencyLocationAddressInfo';
+import type CommonEmergencyLocationAddressInfo from "./CommonEmergencyLocationAddressInfo";
 
 interface CreateUserEmergencyLocationRequest {
   /**
@@ -17,8 +17,7 @@ interface CreateUserEmergencyLocationRequest {
    */
   trusted?: boolean;
 
-  /**
-   */
+  /** */
   address?: CommonEmergencyLocationAddressInfo;
 }
 

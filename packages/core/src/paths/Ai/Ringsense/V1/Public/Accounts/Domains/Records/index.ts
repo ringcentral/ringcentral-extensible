@@ -1,12 +1,18 @@
-import Insights from './Insights';
-import type { RingCentralInterface, ParentInterface } from '../../../../../../../../types';
+import Insights from "./Insights";
+import type {
+  ParentInterface,
+  RingCentralInterface,
+} from "../../../../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
   public _parent: ParentInterface;
   public sourceRecordId: string | null;
 
-  public constructor(_parent: ParentInterface, sourceRecordId: string | null = null) {
+  public constructor(
+    _parent: ParentInterface,
+    sourceRecordId: string | null = null,
+  ) {
     this._parent = _parent;
     this.rc = _parent.rc;
     this.sourceRecordId = sourceRecordId;

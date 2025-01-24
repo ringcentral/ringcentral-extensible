@@ -1,6 +1,5 @@
 /**
  * Status information (reason, comment). Returned for `Disabled` extensions only
- *
  */
 interface ExtensionStatusInfo {
   /**
@@ -11,7 +10,7 @@ interface ExtensionStatusInfo {
   /**
    * Type of suspension
    */
-  reason?: 'Voluntarily' | 'Involuntarily';
+  reason?: "Voluntarily" | "Involuntarily";
 }
 
 export default ExtensionStatusInfo;

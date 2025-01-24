@@ -17,8 +17,7 @@ interface SipFlagsResponse {
    */
   outboundCallsEnabled?: boolean;
 
-  /**
-   */
+  /** */
   dscpEnabled?: boolean;
 
   /**

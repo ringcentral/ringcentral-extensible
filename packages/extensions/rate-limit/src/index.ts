@@ -1,4 +1,4 @@
-import RetryExtension from '@rc-ex/retry/src';
+import RetryExtension from "@rc-ex/retry/src";
 
 export interface RateLimitOptions {
   maxRetries?: number;
@@ -9,11 +9,15 @@ class RateLimitExtension extends RetryExtension {
   public constructor(options?: RateLimitOptions) {
     super({
       shouldRetry: (restException, retriesAttempted) =>
-        retriesAttempted < (options?.maxRetries ?? 3) && restException.response.status === 429,
+        retriesAttempted < (options?.maxRetries ?? 3) &&
+        restException.response.status === 429,
       retryInterval: (restException, retriesAttempted) => {
-        const rateLimitWindow = restException.response.headers['x-rate-limit-window'];
+        const rateLimitWindow =
+          restException.response.headers["x-rate-limit-window"];
         return (
-          (rateLimitWindow ? parseInt(rateLimitWindow, 10) : (options?.rateLimitWindow ?? 60)) *
+          (rateLimitWindow
+            ? parseInt(rateLimitWindow, 10)
+            : (options?.rateLimitWindow ?? 60)) *
           1000 *
           2 ** retriesAttempted // exponential back off
         );

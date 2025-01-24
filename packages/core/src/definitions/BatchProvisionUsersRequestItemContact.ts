@@ -1,4 +1,4 @@
-import type TransitionInfo from './TransitionInfo';
+import type TransitionInfo from "./TransitionInfo";
 
 interface BatchProvisionUsersRequestItemContact {
   /**
@@ -33,8 +33,7 @@ interface BatchProvisionUsersRequestItemContact {
    */
   emailAsLoginName?: boolean;
 
-  /**
-   */
+  /** */
   transition?: TransitionInfo;
 }
 

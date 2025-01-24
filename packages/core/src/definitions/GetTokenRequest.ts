@@ -1,7 +1,6 @@
 /**
  * Token endpoint request parameters used in the "Guest" authorization flow
  * with the `guest` grant type
- *
  */
 interface GetTokenRequest {
   /**
@@ -9,7 +8,8 @@ interface GetTokenRequest {
    *  as defined by [RFC-7523](https://datatracker.ietf.org/doc/html/rfc7523#section-2.2).
    *  This parameter is mandatory if the client authentication is required and a client decided to use one of these authentication types
    */
-  client_assertion_type?: 'urn:ietf:params:oauth:client-assertion-type:jwt-bearer';
+  client_assertion_type?:
+    "urn:ietf:params:oauth:client-assertion-type:jwt-bearer";
 
   /**
    * Client assertion (JWT) for the `client_secret_jwt` or `private_key_jwt` client authentication types,
@@ -23,18 +23,18 @@ interface GetTokenRequest {
    * Required
    */
   grant_type?:
-    | 'authorization_code'
-    | 'password'
-    | 'refresh_token'
-    | 'client_credentials'
-    | 'urn:ietf:params:oauth:grant-type:jwt-bearer'
-    | 'urn:ietf:params:oauth:grant-type:device_code'
-    | 'device_certificate'
-    | 'partner_jwt'
-    | 'guest'
-    | 'personal_jwt'
-    | 'otp'
-    | 'ivr_pin';
+    | "authorization_code"
+    | "password"
+    | "refresh_token"
+    | "client_credentials"
+    | "urn:ietf:params:oauth:grant-type:jwt-bearer"
+    | "urn:ietf:params:oauth:grant-type:device_code"
+    | "device_certificate"
+    | "partner_jwt"
+    | "guest"
+    | "personal_jwt"
+    | "otp"
+    | "ivr_pin";
 
   /**
    * The list of application permissions (OAuth scopes) requested.

@@ -3,7 +3,7 @@ interface DeviceDefinitionPhoneInfo {
    * Indicates if a number is toll or toll-free
    * Example: Toll
    */
-  tollType?: 'Toll' | 'TollFree';
+  tollType?: "Toll" | "TollFree";
 
   /**
    * Preferred area code to use if numbers available

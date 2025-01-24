@@ -1,4 +1,4 @@
-import type ActivePermissionResource from './ActivePermissionResource';
+import type ActivePermissionResource from "./ActivePermissionResource";
 
 interface AuthProfileCheckResource {
   /**
@@ -6,12 +6,10 @@ interface AuthProfileCheckResource {
    */
   uri?: string;
 
-  /**
-   */
+  /** */
   successful?: boolean;
 
-  /**
-   */
+  /** */
   details?: ActivePermissionResource;
 }
 

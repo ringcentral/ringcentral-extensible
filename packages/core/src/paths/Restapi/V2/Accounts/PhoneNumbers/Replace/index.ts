@@ -1,6 +1,10 @@
-import type AccountPhoneNumberInfo from '../../../../../../definitions/AccountPhoneNumberInfo';
-import type ReplacePhoneNumberRequest from '../../../../../../definitions/ReplacePhoneNumberRequest';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../types';
+import type AccountPhoneNumberInfo from "../../../../../../definitions/AccountPhoneNumberInfo";
+import type ReplacePhoneNumberRequest from "../../../../../../definitions/ReplacePhoneNumberRequest";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;

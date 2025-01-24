@@ -1,4 +1,4 @@
-import type ForwardingRuleCreateRequest from './ForwardingRuleCreateRequest';
+import type ForwardingRuleCreateRequest from "./ForwardingRuleCreateRequest";
 
 /**
  * Forwarding parameters. Returned if 'ForwardCalls' is specified in 'callHandlingAction'. These settings determine the forwarding numbers to which the call will be forwarded
@@ -29,7 +29,7 @@ interface ForwardingInfoCreateRuleRequest {
   /**
    * Specifies the order in which forwarding numbers ring. 'Sequentially' means that forwarding numbers are ringing one at a time, in order of priority. 'Simultaneously' means that forwarding numbers are ringing all at the same time. The default value is 'Sequentially'
    */
-  ringingMode?: 'Sequentially' | 'Simultaneously';
+  ringingMode?: "Sequentially" | "Simultaneously";
 
   /**
    * Information on a call forwarding rule

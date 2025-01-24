@@ -1,6 +1,6 @@
-import type PagingGroupExtensionInfo from './PagingGroupExtensionInfo';
-import type PageNavigationModel from './PageNavigationModel';
-import type EnumeratedPagingModel from './EnumeratedPagingModel';
+import type PagingGroupExtensionInfo from "./PagingGroupExtensionInfo";
+import type PageNavigationModel from "./PageNavigationModel";
+import type EnumeratedPagingModel from "./EnumeratedPagingModel";
 
 interface PagingOnlyGroupUsers {
   /**
@@ -14,12 +14,10 @@ interface PagingOnlyGroupUsers {
    */
   records?: PagingGroupExtensionInfo[];
 
-  /**
-   */
+  /** */
   navigation?: PageNavigationModel;
 
-  /**
-   */
+  /** */
   paging?: EnumeratedPagingModel;
 }
 

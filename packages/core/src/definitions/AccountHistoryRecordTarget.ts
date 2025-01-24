@@ -12,7 +12,7 @@ interface AccountHistoryRecordTarget {
    * Type of the entity.
    * Example: Extension
    */
-  objectType?: 'Extension' | 'Account' | 'Company' | 'Template';
+  objectType?: "Extension" | "Account" | "Company" | "Template";
 
   /**
    * Target extension name

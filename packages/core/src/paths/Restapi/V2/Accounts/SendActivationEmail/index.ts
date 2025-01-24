@@ -1,4 +1,8 @@
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -20,7 +24,12 @@ class Index {
    * User Permission: AccountAdministration
    */
   public async post(restRequestConfig?: RestRequestConfig): Promise<string> {
-    const r = await this.rc.post<string>(this.path(), {}, undefined, restRequestConfig);
+    const r = await this.rc.post<string>(
+      this.path(),
+      {},
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

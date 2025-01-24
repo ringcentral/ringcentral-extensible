@@ -1,7 +1,11 @@
-import type UserBusinessHoursUpdateResponse from '../../../../../definitions/UserBusinessHoursUpdateResponse';
-import type UserBusinessHoursUpdateRequest from '../../../../../definitions/UserBusinessHoursUpdateRequest';
-import type GetUserBusinessHoursResponse from '../../../../../definitions/GetUserBusinessHoursResponse';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import type UserBusinessHoursUpdateResponse from "../../../../../definitions/UserBusinessHoursUpdateResponse";
+import type UserBusinessHoursUpdateRequest from "../../../../../definitions/UserBusinessHoursUpdateRequest";
+import type GetUserBusinessHoursResponse from "../../../../../definitions/GetUserBusinessHoursResponse";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -22,8 +26,14 @@ class Index {
    * App Permission: ReadAccounts
    * User Permission: ReadExtensions
    */
-  public async get(restRequestConfig?: RestRequestConfig): Promise<GetUserBusinessHoursResponse> {
-    const r = await this.rc.get<GetUserBusinessHoursResponse>(this.path(), undefined, restRequestConfig);
+  public async get(
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<GetUserBusinessHoursResponse> {
+    const r = await this.rc.get<GetUserBusinessHoursResponse>(
+      this.path(),
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 

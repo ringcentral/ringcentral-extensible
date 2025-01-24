@@ -1,11 +1,15 @@
-import BulkAssign from './BulkAssign';
-import Members from './Members';
-import Ivr from './Ivr';
-import type SiteUpdateRequest from '../../../../definitions/SiteUpdateRequest';
-import type SiteInfo from '../../../../definitions/SiteInfo';
-import type CreateSiteRequest from '../../../../definitions/CreateSiteRequest';
-import type SitesList from '../../../../definitions/SitesList';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
+import BulkAssign from "./BulkAssign";
+import Members from "./Members";
+import Ivr from "./Ivr";
+import type SiteUpdateRequest from "../../../../definitions/SiteUpdateRequest";
+import type SiteInfo from "../../../../definitions/SiteInfo";
+import type CreateSiteRequest from "../../../../definitions/CreateSiteRequest";
+import type SitesList from "../../../../definitions/SitesList";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -33,7 +37,11 @@ class Index {
    * User Permission: ReadExtensions
    */
   public async list(restRequestConfig?: RestRequestConfig): Promise<SitesList> {
-    const r = await this.rc.get<SitesList>(this.path(false), undefined, restRequestConfig);
+    const r = await this.rc.get<SitesList>(
+      this.path(false),
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -45,8 +53,16 @@ class Index {
    * Rate Limit Group: Medium
    * App Permission: EditAccounts
    */
-  public async post(createSiteRequest: CreateSiteRequest, restRequestConfig?: RestRequestConfig): Promise<SiteInfo> {
-    const r = await this.rc.post<SiteInfo>(this.path(false), createSiteRequest, undefined, restRequestConfig);
+  public async post(
+    createSiteRequest: CreateSiteRequest,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<SiteInfo> {
+    const r = await this.rc.post<SiteInfo>(
+      this.path(false),
+      createSiteRequest,
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -61,9 +77,13 @@ class Index {
    */
   public async get(restRequestConfig?: RestRequestConfig): Promise<SiteInfo> {
     if (this.siteId === null) {
-      throw new Error('siteId must be specified.');
+      throw new Error("siteId must be specified.");
     }
-    const r = await this.rc.get<SiteInfo>(this.path(), undefined, restRequestConfig);
+    const r = await this.rc.get<SiteInfo>(
+      this.path(),
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -76,11 +96,19 @@ class Index {
    * App Permission: EditExtensions
    * User Permission: Sites
    */
-  public async put(siteUpdateRequest: SiteUpdateRequest, restRequestConfig?: RestRequestConfig): Promise<SiteInfo> {
+  public async put(
+    siteUpdateRequest: SiteUpdateRequest,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<SiteInfo> {
     if (this.siteId === null) {
-      throw new Error('siteId must be specified.');
+      throw new Error("siteId must be specified.");
     }
-    const r = await this.rc.put<SiteInfo>(this.path(), siteUpdateRequest, undefined, restRequestConfig);
+    const r = await this.rc.put<SiteInfo>(
+      this.path(),
+      siteUpdateRequest,
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -95,9 +123,14 @@ class Index {
    */
   public async delete(restRequestConfig?: RestRequestConfig): Promise<string> {
     if (this.siteId === null) {
-      throw new Error('siteId must be specified.');
+      throw new Error("siteId must be specified.");
     }
-    const r = await this.rc.delete<string>(this.path(), {}, undefined, restRequestConfig);
+    const r = await this.rc.delete<string>(
+      this.path(),
+      {},
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 

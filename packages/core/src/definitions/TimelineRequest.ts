@@ -1,7 +1,7 @@
-import type Grouping from './Grouping';
-import type TimeSettings from './TimeSettings';
-import type CallFilters from './CallFilters';
-import type TimelineResponseOptions from './TimelineResponseOptions';
+import type Grouping from "./Grouping";
+import type TimeSettings from "./TimeSettings";
+import type CallFilters from "./CallFilters";
+import type TimelineResponseOptions from "./TimelineResponseOptions";
 
 interface TimelineRequest {
   /**
@@ -14,8 +14,7 @@ interface TimelineRequest {
    */
   timeSettings?: TimeSettings;
 
-  /**
-   */
+  /** */
   callFilters?: CallFilters;
 
   /**

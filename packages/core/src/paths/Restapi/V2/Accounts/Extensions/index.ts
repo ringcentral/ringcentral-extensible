@@ -1,8 +1,12 @@
-import CallFlipNumbers from './CallFlipNumbers';
-import Devices from './Devices';
-import type BulkDeleteUsersResponse from '../../../../../definitions/BulkDeleteUsersResponse';
-import type BulkDeleteUsersRequest from '../../../../../definitions/BulkDeleteUsersRequest';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import CallFlipNumbers from "./CallFlipNumbers";
+import Devices from "./Devices";
+import type BulkDeleteUsersResponse from "../../../../../definitions/BulkDeleteUsersResponse";
+import type BulkDeleteUsersRequest from "../../../../../definitions/BulkDeleteUsersRequest";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;

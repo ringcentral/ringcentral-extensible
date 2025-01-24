@@ -1,5 +1,9 @@
-import type BridgeResponse from '../../../../../../../definitions/BridgeResponse';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../../types';
+import type BridgeResponse from "../../../../../../../definitions/BridgeResponse";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -21,8 +25,14 @@ class Index {
    * Rate Limit Group: Medium
    * App Permission: Video
    */
-  public async get(restRequestConfig?: RestRequestConfig): Promise<BridgeResponse> {
-    const r = await this.rc.get<BridgeResponse>(this.path(), undefined, restRequestConfig);
+  public async get(
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<BridgeResponse> {
+    const r = await this.rc.get<BridgeResponse>(
+      this.path(),
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

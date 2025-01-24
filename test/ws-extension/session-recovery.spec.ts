@@ -1,11 +1,11 @@
-import WebSocketExtension from '@rc-ex/ws';
-import waitFor from 'wait-for-async';
-import ReusableRestClient from '../reusable-rest-client';
+import WebSocketExtension from "@rc-ex/ws";
+import waitFor from "wait-for-async";
+import ReusableRestClient from "../reusable-rest-client";
 
 jest.setTimeout(99999999); // to test recover failed
 
-describe('WebSocket session recovery', () => {
-  test('default ', async () => {
+describe("WebSocket session recovery", () => {
+  test("default ", async () => {
     const rc = await ReusableRestClient.getInstance();
     const webSocketExtension = new WebSocketExtension({
       // debugMode: true,
@@ -14,7 +14,9 @@ describe('WebSocket session recovery', () => {
     await rc.installExtension(webSocketExtension);
     expect(webSocketExtension.connectionDetails.recoveryState).toBeUndefined();
     let eventCount = 0;
-    await webSocketExtension.subscribe(['/restapi/v1.0/account/~/extension/~/message-store'], (event: any) => {
+    await webSocketExtension.subscribe([
+      "/restapi/v1.0/account/~/extension/~/message-store",
+    ], (event: any) => {
       expect(event).toBeDefined();
       eventCount += 1;
     });
@@ -25,7 +27,9 @@ describe('WebSocket session recovery', () => {
     await webSocketExtension.recover();
     // sandbox doesn't support stickiness, so recovery may fail.
     expect(
-      ['Successful', 'Failed'].indexOf(webSocketExtension.connectionDetails.recoveryState ?? '') !== -1,
+      ["Successful", "Failed"].indexOf(
+        webSocketExtension.connectionDetails.recoveryState ?? "",
+      ) !== -1,
     ).toBeTruthy();
     // expect(webSocketExtension.connectionDetails.recoveryState).toBe(
     //   'Successful',
@@ -38,7 +42,7 @@ describe('WebSocket session recovery', () => {
       .post({
         from: { extensionId: rc.token!.owner_id! },
         to: [{ extensionId: rc.token!.owner_id! }], // send pager to oneself
-        text: 'Hello world',
+        text: "Hello world",
       });
     const successful = await waitFor({
       condition: () => eventCount > 0,
@@ -50,8 +54,8 @@ describe('WebSocket session recovery', () => {
     await webSocketExtension.revoke();
   });
 
-  test('connect but do not recover session ', async () => {
-    if (process.env.IS_LAB_ENV !== 'true') {
+  test("connect but do not recover session ", async () => {
+    if (process.env.IS_LAB_ENV !== "true") {
       return;
     }
     const rc = await ReusableRestClient.getInstance();
@@ -62,7 +66,9 @@ describe('WebSocket session recovery', () => {
     await rc.installExtension(webSocketExtension);
     expect(webSocketExtension.connectionDetails.recoveryState).toBeUndefined();
     let eventCount = 0;
-    await webSocketExtension.subscribe(['/restapi/v1.0/account/~/extension/~/message-store'], (event: any) => {
+    await webSocketExtension.subscribe([
+      "/restapi/v1.0/account/~/extension/~/message-store",
+    ], (event: any) => {
       expect(event).toBeDefined();
       eventCount += 1;
     });
@@ -80,7 +86,7 @@ describe('WebSocket session recovery', () => {
       .post({
         from: { extensionId: rc.token!.owner_id! },
         to: [{ extensionId: rc.token!.owner_id! }], // send pager to oneself
-        text: 'Hello world',
+        text: "Hello world",
       });
     const successful = await waitFor({
       condition: () => eventCount > 0,
@@ -92,8 +98,8 @@ describe('WebSocket session recovery', () => {
     await webSocketExtension.revoke();
   });
 
-  test('re-connect existing session', async () => {
-    if (process.env.IS_LAB_ENV !== 'true') {
+  test("re-connect existing session", async () => {
+    if (process.env.IS_LAB_ENV !== "true") {
       return;
     }
     const rc = await ReusableRestClient.getInstance();
@@ -103,7 +109,9 @@ describe('WebSocket session recovery', () => {
     await rc.installExtension(webSocketExtension);
     expect(webSocketExtension.connectionDetails.recoveryState).toBeUndefined();
     let eventCount = 0;
-    await webSocketExtension.subscribe(['/restapi/v1.0/account/~/extension/~/message-store'], (event: any) => {
+    await webSocketExtension.subscribe([
+      "/restapi/v1.0/account/~/extension/~/message-store",
+    ], (event: any) => {
       expect(event).toBeDefined();
       eventCount += 1;
     });
@@ -119,7 +127,7 @@ describe('WebSocket session recovery', () => {
       .post({
         from: { extensionId: rc.token!.owner_id! },
         to: [{ extensionId: rc.token!.owner_id! }], // send pager to oneself
-        text: 'Hello world',
+        text: "Hello world",
       });
     const successful = await waitFor({
       condition: () => eventCount > 0,

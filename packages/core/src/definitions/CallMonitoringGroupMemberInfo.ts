@@ -15,9 +15,8 @@ interface CallMonitoringGroupMemberInfo {
    */
   extensionNumber?: string;
 
-  /**
-   */
-  permissions?: ('Monitoring' | 'Monitored')[];
+  /** */
+  permissions?: ("Monitoring" | "Monitored")[];
 }
 
 export default CallMonitoringGroupMemberInfo;

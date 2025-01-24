@@ -1,4 +1,4 @@
-import type AccountPresenceEventBody from './AccountPresenceEventBody';
+import type AccountPresenceEventBody from "./AccountPresenceEventBody";
 
 interface AccountPresenceEvent {
   /**
@@ -22,8 +22,7 @@ interface AccountPresenceEvent {
    */
   subscriptionId?: string;
 
-  /**
-   */
+  /** */
   body?: AccountPresenceEventBody;
 }
 

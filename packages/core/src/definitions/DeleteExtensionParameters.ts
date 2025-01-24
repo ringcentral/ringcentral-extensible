@@ -2,8 +2,7 @@
  * Query parameters for operation deleteExtension
  */
 interface DeleteExtensionParameters {
-  /**
-   */
+  /** */
   savePhoneLines?: boolean;
 
   /**

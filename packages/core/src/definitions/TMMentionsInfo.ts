@@ -7,7 +7,15 @@ interface TMMentionsInfo {
   /**
    * Type of mention
    */
-  type?: 'Person' | 'Team' | 'File' | 'Link' | 'Event' | 'Task' | 'Note' | 'Card';
+  type?:
+    | "Person"
+    | "Team"
+    | "File"
+    | "Link"
+    | "Event"
+    | "Task"
+    | "Note"
+    | "Card";
 
   /**
    * Name of a user

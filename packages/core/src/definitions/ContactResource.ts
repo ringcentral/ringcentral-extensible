@@ -1,9 +1,9 @@
-import type AccountResource from './AccountResource';
-import type PhoneNumberResource from './PhoneNumberResource';
-import type AccountDirectoryProfileImageResource from './AccountDirectoryProfileImageResource';
-import type BusinessSiteResource from './BusinessSiteResource';
-import type CustomFieldResource from './CustomFieldResource';
-import type ExternalIntegrationResource from './ExternalIntegrationResource';
+import type AccountResource from "./AccountResource";
+import type PhoneNumberResource from "./PhoneNumberResource";
+import type AccountDirectoryProfileImageResource from "./AccountDirectoryProfileImageResource";
+import type BusinessSiteResource from "./BusinessSiteResource";
+import type CustomFieldResource from "./CustomFieldResource";
+import type ExternalIntegrationResource from "./ExternalIntegrationResource";
 
 interface ContactResource {
   /**
@@ -18,34 +18,39 @@ interface ContactResource {
    * Example: User
    */
   type?:
-    | 'User'
-    | 'Department'
-    | 'Announcement'
-    | 'Voicemail'
-    | 'SharedLinesGroup'
-    | 'PagingOnly'
-    | 'ParkLocation'
-    | 'IvrMenu'
-    | 'Limited'
-    | 'ApplicationExtension'
-    | 'Site'
-    | 'Bot'
-    | 'Room'
-    | 'ProxyAdmin'
-    | 'DelegatedLinesGroup'
-    | 'GroupCallPickup'
-    | 'External'
-    | 'RoomConnector'
-    | 'Unknown';
+    | "User"
+    | "Department"
+    | "Announcement"
+    | "Voicemail"
+    | "SharedLinesGroup"
+    | "PagingOnly"
+    | "ParkLocation"
+    | "IvrMenu"
+    | "Limited"
+    | "ApplicationExtension"
+    | "Site"
+    | "Bot"
+    | "Room"
+    | "ProxyAdmin"
+    | "DelegatedLinesGroup"
+    | "GroupCallPickup"
+    | "External"
+    | "RoomConnector"
+    | "Unknown";
 
   /**
    * Contact status
    * Example: Enabled
    */
-  status?: 'Enabled' | 'Disabled' | 'Frozen' | 'NotActivated' | 'Unassigned' | 'Unknown';
+  status?:
+    | "Enabled"
+    | "Disabled"
+    | "Frozen"
+    | "NotActivated"
+    | "Unassigned"
+    | "Unknown";
 
-  /**
-   */
+  /** */
   account?: AccountResource;
 
   /**
@@ -87,28 +92,22 @@ interface ContactResource {
    */
   jobTitle?: string;
 
-  /**
-   */
+  /** */
   phoneNumbers?: PhoneNumberResource[];
 
-  /**
-   */
+  /** */
   profileImage?: AccountDirectoryProfileImageResource;
 
-  /**
-   */
+  /** */
   site?: BusinessSiteResource;
 
-  /**
-   */
+  /** */
   hidden?: boolean;
 
-  /**
-   */
+  /** */
   customFields?: CustomFieldResource[];
 
-  /**
-   */
+  /** */
   integration?: ExternalIntegrationResource;
 }
 

@@ -5,7 +5,7 @@ interface UnifiedPresenceMeeting {
   /**
    * Meeting status calculated from all user`s meetings
    */
-  status?: 'NoMeeting' | 'InMeeting';
+  status?: "NoMeeting" | "InMeeting";
 }
 
 export default UnifiedPresenceMeeting;

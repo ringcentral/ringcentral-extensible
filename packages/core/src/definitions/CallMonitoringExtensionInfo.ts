@@ -10,7 +10,7 @@ interface CallMonitoringExtensionInfo {
    *  extension. In order to remove a specified extension from a call monitoring
    *  group use an empty value
    */
-  permissions?: ('Monitoring' | 'Monitored')[];
+  permissions?: ("Monitoring" | "Monitored")[];
 }
 
 export default CallMonitoringExtensionInfo;

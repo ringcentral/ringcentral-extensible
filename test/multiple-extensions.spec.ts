@@ -1,16 +1,16 @@
-import { SDK } from '@ringcentral/sdk';
-import waitFor from 'wait-for-async';
+import { SDK } from "@ringcentral/sdk";
+import waitFor from "wait-for-async";
 // import dotenv from 'dotenv-override-true';
 // import path from 'path';
 
-import RingCentral from '@rc-ex/core';
-import RcSdkExtension from '@rc-ex/rcsdk';
-import WebSocketExtension from '@rc-ex/ws';
+import RingCentral from "@rc-ex/core";
+import RcSdkExtension from "@rc-ex/rcsdk";
+import WebSocketExtension from "@rc-ex/ws";
 
 // dotenv.config({path: path.join(__dirname, '.env.lab')});
 
-describe('extensions', () => {
-  test('RingCentral Extension + WebSocket Extension', async () => {
+describe("extensions", () => {
+  test("RingCentral Extension + WebSocket Extension", async () => {
     // if (process.env.IS_LAB_ENV !== 'true') {
     //   return;
     // }
@@ -36,7 +36,9 @@ describe('extensions', () => {
 
     // setup subscription
     let eventCount = 0;
-    await webSocketExtension.subscribe(['/restapi/v1.0/account/~/extension/~/message-store'], (event) => {
+    await webSocketExtension.subscribe([
+      "/restapi/v1.0/account/~/extension/~/message-store",
+    ], (event) => {
       expect(event).toBeDefined();
       eventCount += 1;
     });
@@ -51,7 +53,7 @@ describe('extensions', () => {
       .post({
         from: { extensionId: token!.owner_id! },
         to: [{ extensionId: token!.owner_id! }], // send pager to oneself
-        text: 'Hello world',
+        text: "Hello world",
       });
 
     const successful = await waitFor({

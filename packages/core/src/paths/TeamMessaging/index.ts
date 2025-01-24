@@ -1,5 +1,5 @@
-import V1 from './V1';
-import type { RingCentralInterface } from '../../types';
+import V1 from "./V1";
+import type { RingCentralInterface } from "../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -8,7 +8,7 @@ class Index {
     this.rc = rc;
   }
   public path(): string {
-    return '/team-messaging';
+    return "/team-messaging";
   }
 
   public v1(): V1 {

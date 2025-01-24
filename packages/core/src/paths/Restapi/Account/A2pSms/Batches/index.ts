@@ -1,8 +1,12 @@
-import type MessageBatchResponse from '../../../../../definitions/MessageBatchResponse';
-import type MessageBatchCreateRequest from '../../../../../definitions/MessageBatchCreateRequest';
-import type BatchListResponse from '../../../../../definitions/BatchListResponse';
-import type ListA2PBatchesParameters from '../../../../../definitions/ListA2PBatchesParameters';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import type MessageBatchResponse from "../../../../../definitions/MessageBatchResponse";
+import type MessageBatchCreateRequest from "../../../../../definitions/MessageBatchCreateRequest";
+import type BatchListResponse from "../../../../../definitions/BatchListResponse";
+import type ListA2PBatchesParameters from "../../../../../definitions/ListA2PBatchesParameters";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -33,7 +37,11 @@ class Index {
     queryParams?: ListA2PBatchesParameters,
     restRequestConfig?: RestRequestConfig,
   ): Promise<BatchListResponse> {
-    const r = await this.rc.get<BatchListResponse>(this.path(false), queryParams, restRequestConfig);
+    const r = await this.rc.get<BatchListResponse>(
+      this.path(false),
+      queryParams,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -67,11 +75,17 @@ class Index {
    * Rate Limit Group: Light
    * App Permission: A2PSMS
    */
-  public async get(restRequestConfig?: RestRequestConfig): Promise<MessageBatchResponse> {
+  public async get(
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<MessageBatchResponse> {
     if (this.batchId === null) {
-      throw new Error('batchId must be specified.');
+      throw new Error("batchId must be specified.");
     }
-    const r = await this.rc.get<MessageBatchResponse>(this.path(), undefined, restRequestConfig);
+    const r = await this.rc.get<MessageBatchResponse>(
+      this.path(),
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

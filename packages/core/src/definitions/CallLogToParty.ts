@@ -1,4 +1,4 @@
-import type CallLogRecordDeviceInfo from './CallLogRecordDeviceInfo';
+import type CallLogRecordDeviceInfo from "./CallLogRecordDeviceInfo";
 
 /**
  * Target caller information
@@ -29,8 +29,7 @@ interface CallLogToParty {
    */
   location?: string;
 
-  /**
-   */
+  /** */
   device?: CallLogRecordDeviceInfo;
 
   /**

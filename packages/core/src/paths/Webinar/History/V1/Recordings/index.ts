@@ -1,15 +1,22 @@
-import Download from './Download';
-import type RecordingItemExtendedModel from '../../../../../definitions/RecordingItemExtendedModel';
-import type RecordingListResource from '../../../../../definitions/RecordingListResource';
-import type RcwHistoryListRecordingsParameters from '../../../../../definitions/RcwHistoryListRecordingsParameters';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import Download from "./Download";
+import type RecordingItemExtendedModel from "../../../../../definitions/RecordingItemExtendedModel";
+import type RecordingListResource from "../../../../../definitions/RecordingListResource";
+import type RcwHistoryListRecordingsParameters from "../../../../../definitions/RcwHistoryListRecordingsParameters";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
   public _parent: ParentInterface;
   public recordingId: string | null;
 
-  public constructor(_parent: ParentInterface, recordingId: string | null = null) {
+  public constructor(
+    _parent: ParentInterface,
+    recordingId: string | null = null,
+  ) {
     this._parent = _parent;
     this.rc = _parent.rc;
     this.recordingId = recordingId;
@@ -32,7 +39,11 @@ class Index {
     queryParams?: RcwHistoryListRecordingsParameters,
     restRequestConfig?: RestRequestConfig,
   ): Promise<RecordingListResource> {
-    const r = await this.rc.get<RecordingListResource>(this.path(false), queryParams, restRequestConfig);
+    const r = await this.rc.get<RecordingListResource>(
+      this.path(false),
+      queryParams,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -45,11 +56,17 @@ class Index {
    * Rate Limit Group: Heavy
    * App Permission: ReadWebinars
    */
-  public async get(restRequestConfig?: RestRequestConfig): Promise<RecordingItemExtendedModel> {
+  public async get(
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<RecordingItemExtendedModel> {
     if (this.recordingId === null) {
-      throw new Error('recordingId must be specified.');
+      throw new Error("recordingId must be specified.");
     }
-    const r = await this.rc.get<RecordingItemExtendedModel>(this.path(), undefined, restRequestConfig);
+    const r = await this.rc.get<RecordingItemExtendedModel>(
+      this.path(),
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 

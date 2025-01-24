@@ -1,5 +1,9 @@
-import type AccountServiceInfo from '../../../../definitions/AccountServiceInfo';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
+import type AccountServiceInfo from "../../../../definitions/AccountServiceInfo";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -22,8 +26,14 @@ class Index {
    * App Permission: ReadAccounts
    * User Permission: ReadCompanyInfo
    */
-  public async get(restRequestConfig?: RestRequestConfig): Promise<AccountServiceInfo> {
-    const r = await this.rc.get<AccountServiceInfo>(this.path(), undefined, restRequestConfig);
+  public async get(
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<AccountServiceInfo> {
+    const r = await this.rc.get<AccountServiceInfo>(
+      this.path(),
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

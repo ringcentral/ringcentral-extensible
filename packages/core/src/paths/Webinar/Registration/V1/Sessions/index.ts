@@ -1,13 +1,20 @@
-import Registrants from './Registrants';
-import type RegSessionModel from '../../../../../definitions/RegSessionModel';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import Registrants from "./Registrants";
+import type RegSessionModel from "../../../../../definitions/RegSessionModel";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
   public _parent: ParentInterface;
   public sessionId: string | null;
 
-  public constructor(_parent: ParentInterface, sessionId: string | null = null) {
+  public constructor(
+    _parent: ParentInterface,
+    sessionId: string | null = null,
+  ) {
     this._parent = _parent;
     this.rc = _parent.rc;
     this.sessionId = sessionId;
@@ -29,11 +36,17 @@ class Index {
    * Rate Limit Group: Heavy
    * App Permission: ReadWebinars
    */
-  public async get(restRequestConfig?: RestRequestConfig): Promise<RegSessionModel> {
+  public async get(
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<RegSessionModel> {
     if (this.sessionId === null) {
-      throw new Error('sessionId must be specified.');
+      throw new Error("sessionId must be specified.");
     }
-    const r = await this.rc.get<RegSessionModel>(this.path(), undefined, restRequestConfig);
+    const r = await this.rc.get<RegSessionModel>(
+      this.path(),
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -57,9 +70,14 @@ class Index {
     restRequestConfig?: RestRequestConfig,
   ): Promise<RegSessionModel> {
     if (this.sessionId === null) {
-      throw new Error('sessionId must be specified.');
+      throw new Error("sessionId must be specified.");
     }
-    const r = await this.rc.patch<RegSessionModel>(this.path(), regSessionModel, undefined, restRequestConfig);
+    const r = await this.rc.patch<RegSessionModel>(
+      this.path(),
+      regSessionModel,
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 

@@ -1,7 +1,11 @@
-import PhoneNumbers from './PhoneNumbers';
-import type CallerBlockingSettingsUpdate from '../../../../../definitions/CallerBlockingSettingsUpdate';
-import type CallerBlockingSettings from '../../../../../definitions/CallerBlockingSettings';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import PhoneNumbers from "./PhoneNumbers";
+import type CallerBlockingSettingsUpdate from "../../../../../definitions/CallerBlockingSettingsUpdate";
+import type CallerBlockingSettings from "../../../../../definitions/CallerBlockingSettings";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -22,8 +26,14 @@ class Index {
    * App Permission: ReadAccounts
    * User Permission: ReadBlockedNumbers
    */
-  public async get(restRequestConfig?: RestRequestConfig): Promise<CallerBlockingSettings> {
-    const r = await this.rc.get<CallerBlockingSettings>(this.path(), undefined, restRequestConfig);
+  public async get(
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<CallerBlockingSettings> {
+    const r = await this.rc.get<CallerBlockingSettings>(
+      this.path(),
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 

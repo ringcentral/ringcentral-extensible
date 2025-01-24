@@ -1,5 +1,8 @@
-import Records from './Records';
-import type { RingCentralInterface, ParentInterface } from '../../../../../../../types';
+import Records from "./Records";
+import type {
+  ParentInterface,
+  RingCentralInterface,
+} from "../../../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;

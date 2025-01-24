@@ -1,6 +1,6 @@
-import type GetMessageInfoResponse from './GetMessageInfoResponse';
-import type MessagingNavigationInfo from './MessagingNavigationInfo';
-import type MessagingPagingInfo from './MessagingPagingInfo';
+import type GetMessageInfoResponse from "./GetMessageInfoResponse";
+import type MessagingNavigationInfo from "./MessagingNavigationInfo";
+import type MessagingPagingInfo from "./MessagingPagingInfo";
 
 interface GetMessageList {
   /**

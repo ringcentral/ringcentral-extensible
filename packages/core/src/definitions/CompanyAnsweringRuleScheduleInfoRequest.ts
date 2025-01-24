@@ -1,12 +1,11 @@
-import type CompanyAnsweringRuleWeeklyScheduleInfoRequest from './CompanyAnsweringRuleWeeklyScheduleInfoRequest';
-import type RangesInfo from './RangesInfo';
+import type CompanyAnsweringRuleWeeklyScheduleInfoRequest from "./CompanyAnsweringRuleWeeklyScheduleInfoRequest";
+import type RangesInfo from "./RangesInfo";
 
 /**
  * Schedule when an answering rule should be applied
  */
 interface CompanyAnsweringRuleScheduleInfoRequest {
-  /**
-   */
+  /** */
   weeklyRanges?: CompanyAnsweringRuleWeeklyScheduleInfoRequest;
 
   /**
@@ -17,7 +16,7 @@ interface CompanyAnsweringRuleScheduleInfoRequest {
   /**
    * Reference to Business Hours or After Hours schedule
    */
-  ref?: 'BusinessHours' | 'AfterHours';
+  ref?: "BusinessHours" | "AfterHours";
 }
 
 export default CompanyAnsweringRuleScheduleInfoRequest;

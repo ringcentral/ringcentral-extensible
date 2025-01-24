@@ -4,16 +4,13 @@ interface MeetingsTimezoneResource {
    */
   uri?: string;
 
-  /**
-   */
+  /** */
   id?: string;
 
-  /**
-   */
+  /** */
   name?: string;
 
-  /**
-   */
+  /** */
   description?: string;
 }
 

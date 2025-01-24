@@ -2,7 +2,6 @@
  * Devices shipping method. It is required if devices are ordered.
  * Availability of different shipping methods depends on package
  * definition.
- *
  */
 interface ShippingMethodIdModel {
   /**
@@ -13,7 +12,7 @@ interface ShippingMethodIdModel {
    * Required
    * Default: 1
    */
-  id?: '1' | '2' | '3';
+  id?: "1" | "2" | "3";
 }
 
 export default ShippingMethodIdModel;

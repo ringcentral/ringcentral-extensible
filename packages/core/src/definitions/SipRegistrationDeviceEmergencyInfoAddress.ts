@@ -1,22 +1,17 @@
 interface SipRegistrationDeviceEmergencyInfoAddress {
-  /**
-   */
+  /** */
   street?: string;
 
-  /**
-   */
+  /** */
   street2?: string;
 
-  /**
-   */
+  /** */
   city?: string;
 
-  /**
-   */
+  /** */
   zip?: string;
 
-  /**
-   */
+  /** */
   customerName?: string;
 
   /**

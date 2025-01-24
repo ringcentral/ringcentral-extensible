@@ -1,20 +1,24 @@
-import SendActivationEmail from './SendActivationEmail';
-import SendWelcomeEmail from './SendWelcomeEmail';
-import BatchProvisioning from './BatchProvisioning';
-import DeviceInventory from './DeviceInventory';
-import PhoneNumbers from './PhoneNumbers';
-import CostCenters from './CostCenters';
-import Extensions from './Extensions';
-import Devices from './Devices';
-import type AccountInfo from '../../../../definitions/AccountInfo';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
+import SendActivationEmail from "./SendActivationEmail";
+import SendWelcomeEmail from "./SendWelcomeEmail";
+import BatchProvisioning from "./BatchProvisioning";
+import DeviceInventory from "./DeviceInventory";
+import PhoneNumbers from "./PhoneNumbers";
+import CostCenters from "./CostCenters";
+import Extensions from "./Extensions";
+import Devices from "./Devices";
+import type AccountInfo from "../../../../definitions/AccountInfo";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
   public _parent: ParentInterface;
   public accountId: string | null;
 
-  public constructor(_parent: ParentInterface, accountId: string | null = '~') {
+  public constructor(_parent: ParentInterface, accountId: string | null = "~") {
     this._parent = _parent;
     this.rc = _parent.rc;
     this.accountId = accountId;
@@ -33,11 +37,17 @@ class Index {
    * App Permission: ReadAccounts
    * User Permission: ReadCompanyInfo
    */
-  public async get(restRequestConfig?: RestRequestConfig): Promise<AccountInfo> {
+  public async get(
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<AccountInfo> {
     if (this.accountId === null) {
-      throw new Error('accountId must be specified.');
+      throw new Error("accountId must be specified.");
     }
-    const r = await this.rc.get<AccountInfo>(this.path(), undefined, restRequestConfig);
+    const r = await this.rc.get<AccountInfo>(
+      this.path(),
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 

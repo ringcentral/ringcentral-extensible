@@ -1,4 +1,4 @@
-import type ContactBusinessAddressInfo from './ContactBusinessAddressInfo';
+import type ContactBusinessAddressInfo from "./ContactBusinessAddressInfo";
 
 interface AccountBusinessAddressResource {
   /**
@@ -6,8 +6,7 @@ interface AccountBusinessAddressResource {
    */
   uri?: string;
 
-  /**
-   */
+  /** */
   businessAddress?: ContactBusinessAddressInfo;
 
   /**

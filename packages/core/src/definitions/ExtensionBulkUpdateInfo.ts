@@ -1,12 +1,12 @@
-import type ExtensionStatusInfo from './ExtensionStatusInfo';
-import type ContactInfoUpdateRequest from './ContactInfoUpdateRequest';
-import type ExtensionRegionalSettingRequest from './ExtensionRegionalSettingRequest';
-import type CallQueueInfoRequest from './CallQueueInfoRequest';
-import type UserTransitionInfo from './UserTransitionInfo';
-import type CostCenterInfo from './CostCenterInfo';
-import type CustomFieldInfo from './CustomFieldInfo';
-import type ProvisioningSiteInfo from './ProvisioningSiteInfo';
-import type ReferenceInfo from './ReferenceInfo';
+import type ExtensionStatusInfo from "./ExtensionStatusInfo";
+import type ContactInfoUpdateRequest from "./ContactInfoUpdateRequest";
+import type ExtensionRegionalSettingRequest from "./ExtensionRegionalSettingRequest";
+import type CallQueueInfoRequest from "./CallQueueInfoRequest";
+import type UserTransitionInfo from "./UserTransitionInfo";
+import type CostCenterInfo from "./CostCenterInfo";
+import type CustomFieldInfo from "./CustomFieldInfo";
+import type ProvisioningSiteInfo from "./ProvisioningSiteInfo";
+import type ReferenceInfo from "./ReferenceInfo";
 
 interface ExtensionBulkUpdateInfo {
   /**
@@ -17,10 +17,9 @@ interface ExtensionBulkUpdateInfo {
   /**
    * Extension status
    */
-  status?: 'Enabled' | 'Disabled' | 'Frozen' | 'NotActivated';
+  status?: "Enabled" | "Disabled" | "Frozen" | "NotActivated";
 
-  /**
-   */
+  /** */
   statusInfo?: ExtensionStatusInfo;
 
   /**
@@ -38,19 +37,17 @@ interface ExtensionBulkUpdateInfo {
    */
   extensionNumber?: string;
 
-  /**
-   */
+  /** */
   contact?: ContactInfoUpdateRequest;
 
-  /**
-   */
+  /** */
   regionalSettings?: ExtensionRegionalSettingRequest;
 
   /**
    * Initial configuration wizard state
    * Default: NotStarted
    */
-  setupWizardState?: 'NotStarted' | 'Incomplete' | 'Completed';
+  setupWizardState?: "NotStarted" | "Incomplete" | "Completed";
 
   /**
    * Additional extension identifier created by partner application
@@ -68,20 +65,16 @@ interface ExtensionBulkUpdateInfo {
    */
   password?: string;
 
-  /**
-   */
+  /** */
   callQueueInfo?: CallQueueInfoRequest;
 
-  /**
-   */
+  /** */
   transition?: UserTransitionInfo;
 
-  /**
-   */
+  /** */
   costCenter?: CostCenterInfo;
 
-  /**
-   */
+  /** */
   customFields?: CustomFieldInfo[];
 
   /**
@@ -89,8 +82,7 @@ interface ExtensionBulkUpdateInfo {
    */
   hidden?: boolean;
 
-  /**
-   */
+  /** */
   site?: ProvisioningSiteInfo;
 
   /**
@@ -99,19 +91,19 @@ interface ExtensionBulkUpdateInfo {
    *  product terminology
    */
   type?:
-    | 'User'
-    | 'FaxUser'
-    | 'VirtualUser'
-    | 'DigitalUser'
-    | 'Department'
-    | 'Announcement'
-    | 'Voicemail'
-    | 'SharedLinesGroup'
-    | 'PagingOnly'
-    | 'IvrMenu'
-    | 'ApplicationExtension'
-    | 'ParkLocation'
-    | 'DelegatedLinesGroup';
+    | "User"
+    | "FaxUser"
+    | "VirtualUser"
+    | "DigitalUser"
+    | "Department"
+    | "Announcement"
+    | "Voicemail"
+    | "SharedLinesGroup"
+    | "PagingOnly"
+    | "IvrMenu"
+    | "ApplicationExtension"
+    | "ParkLocation"
+    | "DelegatedLinesGroup";
 
   /**
    * List of non-RC internal identifiers assigned to an extension

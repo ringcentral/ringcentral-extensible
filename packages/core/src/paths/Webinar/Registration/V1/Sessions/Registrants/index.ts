@@ -1,17 +1,24 @@
-import type RegistrantModelWithQuestionnaire from '../../../../../../definitions/RegistrantModelWithQuestionnaire';
-import type RcwRegGetRegistrantParameters from '../../../../../../definitions/RcwRegGetRegistrantParameters';
-import type RegistrantModelResponsePostWithQuestionnaire from '../../../../../../definitions/RegistrantModelResponsePostWithQuestionnaire';
-import type RegistrantBaseModelWithQuestionnaire from '../../../../../../definitions/RegistrantBaseModelWithQuestionnaire';
-import type RegistrantListResource from '../../../../../../definitions/RegistrantListResource';
-import type RcwRegListRegistrantsParameters from '../../../../../../definitions/RcwRegListRegistrantsParameters';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../types';
+import type RegistrantModelWithQuestionnaire from "../../../../../../definitions/RegistrantModelWithQuestionnaire";
+import type RcwRegGetRegistrantParameters from "../../../../../../definitions/RcwRegGetRegistrantParameters";
+import type RegistrantModelResponsePostWithQuestionnaire from "../../../../../../definitions/RegistrantModelResponsePostWithQuestionnaire";
+import type RegistrantBaseModelWithQuestionnaire from "../../../../../../definitions/RegistrantBaseModelWithQuestionnaire";
+import type RegistrantListResource from "../../../../../../definitions/RegistrantListResource";
+import type RcwRegListRegistrantsParameters from "../../../../../../definitions/RcwRegListRegistrantsParameters";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
   public _parent: ParentInterface;
   public registrantId: string | null;
 
-  public constructor(_parent: ParentInterface, registrantId: string | null = null) {
+  public constructor(
+    _parent: ParentInterface,
+    registrantId: string | null = null,
+  ) {
     this._parent = _parent;
     this.rc = _parent.rc;
     this.registrantId = registrantId;
@@ -37,7 +44,11 @@ class Index {
     queryParams?: RcwRegListRegistrantsParameters,
     restRequestConfig?: RestRequestConfig,
   ): Promise<RegistrantListResource> {
-    const r = await this.rc.get<RegistrantListResource>(this.path(false), queryParams, restRequestConfig);
+    const r = await this.rc.get<RegistrantListResource>(
+      this.path(false),
+      queryParams,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -83,9 +94,13 @@ class Index {
     restRequestConfig?: RestRequestConfig,
   ): Promise<RegistrantModelWithQuestionnaire> {
     if (this.registrantId === null) {
-      throw new Error('registrantId must be specified.');
+      throw new Error("registrantId must be specified.");
     }
-    const r = await this.rc.get<RegistrantModelWithQuestionnaire>(this.path(), queryParams, restRequestConfig);
+    const r = await this.rc.get<RegistrantModelWithQuestionnaire>(
+      this.path(),
+      queryParams,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -104,9 +119,14 @@ class Index {
    */
   public async delete(restRequestConfig?: RestRequestConfig): Promise<string> {
     if (this.registrantId === null) {
-      throw new Error('registrantId must be specified.');
+      throw new Error("registrantId must be specified.");
     }
-    const r = await this.rc.delete<string>(this.path(), {}, undefined, restRequestConfig);
+    const r = await this.rc.delete<string>(
+      this.path(),
+      {},
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

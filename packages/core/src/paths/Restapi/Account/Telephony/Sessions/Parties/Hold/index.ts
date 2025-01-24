@@ -1,6 +1,10 @@
-import type CallParty from '../../../../../../../definitions/CallParty';
-import type HoldCallPartyRequest from '../../../../../../../definitions/HoldCallPartyRequest';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../../types';
+import type CallParty from "../../../../../../../definitions/CallParty";
+import type HoldCallPartyRequest from "../../../../../../../definitions/HoldCallPartyRequest";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -24,7 +28,12 @@ class Index {
     holdCallPartyRequest: HoldCallPartyRequest,
     restRequestConfig?: RestRequestConfig,
   ): Promise<CallParty> {
-    const r = await this.rc.post<CallParty>(this.path(), holdCallPartyRequest, undefined, restRequestConfig);
+    const r = await this.rc.post<CallParty>(
+      this.path(),
+      holdCallPartyRequest,
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

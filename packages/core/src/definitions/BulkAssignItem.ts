@@ -1,14 +1,11 @@
 interface BulkAssignItem {
-  /**
-   */
+  /** */
   departmentId?: string;
 
-  /**
-   */
+  /** */
   addedExtensionIds?: string[];
 
-  /**
-   */
+  /** */
   removedExtensionIds?: string[];
 }
 

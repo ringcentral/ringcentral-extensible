@@ -1,11 +1,15 @@
-import BulkAssign from './BulkAssign';
-import Default from './Default';
-import type DeleteCustomRoleParameters from '../../../../definitions/DeleteCustomRoleParameters';
-import type ReadUserRoleParameters from '../../../../definitions/ReadUserRoleParameters';
-import type RoleResource from '../../../../definitions/RoleResource';
-import type RolesCollectionResource from '../../../../definitions/RolesCollectionResource';
-import type ListUserRolesParameters from '../../../../definitions/ListUserRolesParameters';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
+import BulkAssign from "./BulkAssign";
+import Default from "./Default";
+import type DeleteCustomRoleParameters from "../../../../definitions/DeleteCustomRoleParameters";
+import type ReadUserRoleParameters from "../../../../definitions/ReadUserRoleParameters";
+import type RoleResource from "../../../../definitions/RoleResource";
+import type RolesCollectionResource from "../../../../definitions/RolesCollectionResource";
+import type ListUserRolesParameters from "../../../../definitions/ListUserRolesParameters";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -35,7 +39,11 @@ class Index {
     queryParams?: ListUserRolesParameters,
     restRequestConfig?: RestRequestConfig,
   ): Promise<RolesCollectionResource> {
-    const r = await this.rc.get<RolesCollectionResource>(this.path(false), queryParams, restRequestConfig);
+    const r = await this.rc.get<RolesCollectionResource>(
+      this.path(false),
+      queryParams,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -47,8 +55,16 @@ class Index {
    * App Permission: RoleManagement
    * User Permission: EditUserRoles
    */
-  public async post(roleResource: RoleResource, restRequestConfig?: RestRequestConfig): Promise<string> {
-    const r = await this.rc.post<string>(this.path(false), roleResource, undefined, restRequestConfig);
+  public async post(
+    roleResource: RoleResource,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<string> {
+    const r = await this.rc.post<string>(
+      this.path(false),
+      roleResource,
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -60,11 +76,18 @@ class Index {
    * App Permission: ReadAccounts
    * User Permission: ReadUserRoles
    */
-  public async get(queryParams?: ReadUserRoleParameters, restRequestConfig?: RestRequestConfig): Promise<RoleResource> {
+  public async get(
+    queryParams?: ReadUserRoleParameters,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<RoleResource> {
     if (this.roleId === null) {
-      throw new Error('roleId must be specified.');
+      throw new Error("roleId must be specified.");
     }
-    const r = await this.rc.get<RoleResource>(this.path(), queryParams, restRequestConfig);
+    const r = await this.rc.get<RoleResource>(
+      this.path(),
+      queryParams,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -76,11 +99,19 @@ class Index {
    * App Permission: RoleManagement
    * User Permission: EditUserRoles
    */
-  public async put(roleResource: RoleResource, restRequestConfig?: RestRequestConfig): Promise<RoleResource> {
+  public async put(
+    roleResource: RoleResource,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<RoleResource> {
     if (this.roleId === null) {
-      throw new Error('roleId must be specified.');
+      throw new Error("roleId must be specified.");
     }
-    const r = await this.rc.put<RoleResource>(this.path(), roleResource, undefined, restRequestConfig);
+    const r = await this.rc.put<RoleResource>(
+      this.path(),
+      roleResource,
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -97,9 +128,14 @@ class Index {
     restRequestConfig?: RestRequestConfig,
   ): Promise<string> {
     if (this.roleId === null) {
-      throw new Error('roleId must be specified.');
+      throw new Error("roleId must be specified.");
     }
-    const r = await this.rc.delete<string>(this.path(), {}, queryParams, restRequestConfig);
+    const r = await this.rc.delete<string>(
+      this.path(),
+      {},
+      queryParams,
+      restRequestConfig,
+    );
     return r.data;
   }
 

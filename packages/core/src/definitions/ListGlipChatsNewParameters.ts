@@ -5,7 +5,7 @@ interface ListGlipChatsNewParameters {
   /**
    * Type of chats to be fetched. By default, all type of chats will be fetched
    */
-  type?: ('Personal' | 'Direct' | 'Group' | 'Team' | 'Everyone')[];
+  type?: ("Personal" | "Direct" | "Group" | "Team" | "Everyone")[];
 
   /**
    * Number of chats to be fetched by one request. The maximum value is 250, by default - 30.

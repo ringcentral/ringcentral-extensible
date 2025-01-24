@@ -1,14 +1,11 @@
 interface GlobalDialInCountryResponse {
-  /**
-   */
+  /** */
   countryCode?: string;
 
-  /**
-   */
+  /** */
   countryName?: string;
 
-  /**
-   */
+  /** */
   checked?: boolean;
 
   /**

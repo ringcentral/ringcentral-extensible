@@ -1,4 +1,4 @@
-import type RcwDomainUserModel from './RcwDomainUserModel';
+import type RcwDomainUserModel from "./RcwDomainUserModel";
 
 /**
  * The attribute declaration to indicate webinar session participant/invitee role
@@ -49,8 +49,7 @@ interface InviteeBaseModel {
    */
   jobTitle?: string;
 
-  /**
-   */
+  /** */
   linkedUser?: RcwDomainUserModel;
 
   /**
@@ -59,13 +58,13 @@ interface InviteeBaseModel {
    * Required
    * Example: Panelist
    */
-  role?: 'Panelist' | 'CoHost' | 'Host' | 'Attendee';
+  role?: "Panelist" | "CoHost" | "Host" | "Attendee";
 
   /**
    * The type of the webinar invitee
    * Default: User
    */
-  type?: 'User' | 'Room';
+  type?: "User" | "Room";
 
   /**
    * Indicates if invite/cancellation emails have to be sent to this invitee.

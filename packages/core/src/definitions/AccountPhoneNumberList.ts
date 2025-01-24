@@ -1,5 +1,5 @@
-import type AccountPhoneNumberInfo from './AccountPhoneNumberInfo';
-import type EnumeratedPagingModel from './EnumeratedPagingModel';
+import type AccountPhoneNumberInfo from "./AccountPhoneNumberInfo";
+import type EnumeratedPagingModel from "./EnumeratedPagingModel";
 
 interface AccountPhoneNumberList {
   /**

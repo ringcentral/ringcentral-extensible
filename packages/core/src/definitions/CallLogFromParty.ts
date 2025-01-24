@@ -1,4 +1,4 @@
-import type CallLogRecordDeviceInfo from './CallLogRecordDeviceInfo';
+import type CallLogRecordDeviceInfo from "./CallLogRecordDeviceInfo";
 
 /**
  * Sender/initiator caller information
@@ -29,8 +29,7 @@ interface CallLogFromParty {
    */
   location?: string;
 
-  /**
-   */
+  /** */
   device?: CallLogRecordDeviceInfo;
 
   /**

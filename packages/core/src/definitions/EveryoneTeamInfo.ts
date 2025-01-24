@@ -7,7 +7,7 @@ interface EveryoneTeamInfo {
   /**
    * Type of chat
    */
-  type?: 'Everyone';
+  type?: "Everyone";
 
   /**
    * Chat name

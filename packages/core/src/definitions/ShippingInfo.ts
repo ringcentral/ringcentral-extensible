@@ -1,11 +1,10 @@
-import type ShippingMethodInfo from './ShippingMethodInfo';
-import type ShippingAddressInfo from './ShippingAddressInfo';
+import type ShippingMethodInfo from "./ShippingMethodInfo";
+import type ShippingAddressInfo from "./ShippingAddressInfo";
 
 /**
  * Shipping information, according to which devices (in case of HardPhone)
  * or e911 stickers (in case of SoftPhone and OtherPhone) will be delivered
  * to the customer
- *
  */
 interface ShippingInfo {
   /**
@@ -14,7 +13,7 @@ interface ShippingInfo {
    *  Finally, it is changed to `Shipped` which means that the distributor has shipped the device.
    * Example: Shipped
    */
-  status?: 'Initial' | 'Accepted' | 'Shipped' | "Won't ship";
+  status?: "Initial" | "Accepted" | "Shipped" | "Won't ship";
 
   /**
    * Shipping carrier name. Appears only if the device status is 'Shipped'
@@ -26,12 +25,10 @@ interface ShippingInfo {
    */
   trackingNumber?: string;
 
-  /**
-   */
+  /** */
   method?: ShippingMethodInfo;
 
-  /**
-   */
+  /** */
   address?: ShippingAddressInfo;
 }
 

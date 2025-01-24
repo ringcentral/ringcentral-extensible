@@ -7,7 +7,7 @@ interface SyncInfoMessages {
    *    - FSync -- full sync
    *    - ISync -- incremental sync
    */
-  syncType?: 'FSync' | 'ISync';
+  syncType?: "FSync" | "ISync";
 
   /**
    * Synchronization token
@@ -21,8 +21,7 @@ interface SyncInfoMessages {
    */
   syncTime?: string;
 
-  /**
-   */
+  /** */
   olderRecordsExist?: boolean;
 }
 

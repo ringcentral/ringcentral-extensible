@@ -1,6 +1,10 @@
-import type ExtensionCallerIdInfoRequest from '../../../../../definitions/ExtensionCallerIdInfoRequest';
-import type ExtensionCallerIdInfo from '../../../../../definitions/ExtensionCallerIdInfo';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import type ExtensionCallerIdInfoRequest from "../../../../../definitions/ExtensionCallerIdInfoRequest";
+import type ExtensionCallerIdInfo from "../../../../../definitions/ExtensionCallerIdInfo";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -22,8 +26,14 @@ class Index {
    * App Permission: ReadAccounts
    * User Permission: ReadCallerIDSettings
    */
-  public async get(restRequestConfig?: RestRequestConfig): Promise<ExtensionCallerIdInfo> {
-    const r = await this.rc.get<ExtensionCallerIdInfo>(this.path(), undefined, restRequestConfig);
+  public async get(
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<ExtensionCallerIdInfo> {
+    const r = await this.rc.get<ExtensionCallerIdInfo>(
+      this.path(),
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 

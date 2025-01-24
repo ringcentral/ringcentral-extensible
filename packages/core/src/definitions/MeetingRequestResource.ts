@@ -1,6 +1,6 @@
-import type MeetingScheduleResource from './MeetingScheduleResource';
-import type HostInfoRequest from './HostInfoRequest';
-import type RecurrenceInfo from './RecurrenceInfo';
+import type MeetingScheduleResource from "./MeetingScheduleResource";
+import type HostInfoRequest from "./HostInfoRequest";
+import type RecurrenceInfo from "./RecurrenceInfo";
 
 interface MeetingRequestResource {
   /**
@@ -8,12 +8,10 @@ interface MeetingRequestResource {
    */
   topic?: string;
 
-  /**
-   */
-  meetingType?: 'Instant' | 'Scheduled' | 'ScheduledRecurring' | 'Recurring';
+  /** */
+  meetingType?: "Instant" | "Scheduled" | "ScheduledRecurring" | "Recurring";
 
-  /**
-   */
+  /** */
   schedule?: MeetingScheduleResource;
 
   /**
@@ -22,16 +20,13 @@ interface MeetingRequestResource {
    */
   password?: string;
 
-  /**
-   */
+  /** */
   host?: HostInfoRequest;
 
-  /**
-   */
+  /** */
   allowJoinBeforeHost?: boolean;
 
-  /**
-   */
+  /** */
   startHostVideo?: boolean;
 
   /**
@@ -44,19 +39,17 @@ interface MeetingRequestResource {
    */
   usePersonalMeetingId?: boolean;
 
-  /**
-   */
-  audioOptions?: ('Phone' | 'ComputerAudio')[];
+  /** */
+  audioOptions?: ("Phone" | "ComputerAudio")[];
 
-  /**
-   */
+  /** */
   recurrence?: RecurrenceInfo;
 
   /**
    * Automatic record type
    * Default: none
    */
-  autoRecordType?: 'local' | 'cloud' | 'none';
+  autoRecordType?: "local" | "cloud" | "none";
 
   /**
    * If true, then only signed-in users can join this meeting
@@ -78,8 +71,7 @@ interface MeetingRequestResource {
    */
   globalDialInCountries?: string[];
 
-  /**
-   */
+  /** */
   alternativeHosts?: string;
 }
 

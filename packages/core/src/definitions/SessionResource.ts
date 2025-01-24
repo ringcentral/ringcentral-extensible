@@ -1,5 +1,5 @@
-import type RecordingExtendedModel from './RecordingExtendedModel';
-import type SessionLivestreamMinimalModel from './SessionLivestreamMinimalModel';
+import type RecordingExtendedModel from "./RecordingExtendedModel";
+import type SessionLivestreamMinimalModel from "./SessionLivestreamMinimalModel";
 
 interface SessionResource {
   /**
@@ -103,13 +103,19 @@ interface SessionResource {
    * Webinar session status
    * Example: Finished
    */
-  status?: 'Scheduled' | 'Active' | 'Finished';
+  status?: "Scheduled" | "Active" | "Finished";
 
   /**
    * Session runtime status (for 'Active' Sessions only).
    *  It is omitted (or null) if the status is not Active
    */
-  runtimeStatus?: 'Idle' | 'Practice' | 'GoingLive' | 'Live' | 'Break' | 'Debrief';
+  runtimeStatus?:
+    | "Idle"
+    | "Practice"
+    | "GoingLive"
+    | "Live"
+    | "Break"
+    | "Debrief";
 
   /**
    * The number of participants (of all roles) who joined the webinar
@@ -145,8 +151,7 @@ interface SessionResource {
    */
   videoBridgeId?: string;
 
-  /**
-   */
+  /** */
   recording?: RecordingExtendedModel;
 
   /**

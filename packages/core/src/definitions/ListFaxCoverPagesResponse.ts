@@ -1,6 +1,6 @@
-import type FaxCoverPageInfo from './FaxCoverPageInfo';
-import type PageNavigationModel from './PageNavigationModel';
-import type EnumeratedPagingModel from './EnumeratedPagingModel';
+import type FaxCoverPageInfo from "./FaxCoverPageInfo";
+import type PageNavigationModel from "./PageNavigationModel";
+import type EnumeratedPagingModel from "./EnumeratedPagingModel";
 
 interface ListFaxCoverPagesResponse {
   /**
@@ -8,16 +8,13 @@ interface ListFaxCoverPagesResponse {
    */
   uri?: string;
 
-  /**
-   */
+  /** */
   records?: FaxCoverPageInfo[];
 
-  /**
-   */
+  /** */
   navigation?: PageNavigationModel;
 
-  /**
-   */
+  /** */
   paging?: EnumeratedPagingModel;
 }
 

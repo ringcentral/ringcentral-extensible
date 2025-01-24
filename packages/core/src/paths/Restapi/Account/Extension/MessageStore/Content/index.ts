@@ -1,12 +1,19 @@
-import type ReadMessageContentParameters from '../../../../../../definitions/ReadMessageContentParameters';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../types';
+import type ReadMessageContentParameters from "../../../../../../definitions/ReadMessageContentParameters";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
   public _parent: ParentInterface;
   public attachmentId: string | null;
 
-  public constructor(_parent: ParentInterface, attachmentId: string | null = null) {
+  public constructor(
+    _parent: ParentInterface,
+    attachmentId: string | null = null,
+  ) {
     this._parent = _parent;
     this.rc = _parent.rc;
     this.attachmentId = attachmentId;
@@ -29,13 +36,16 @@ class Index {
    * Rate Limit Group: Medium
    * App Permission: ReadMessages
    */
-  public async get(queryParams?: ReadMessageContentParameters, restRequestConfig?: RestRequestConfig): Promise<Buffer> {
+  public async get(
+    queryParams?: ReadMessageContentParameters,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<Buffer> {
     if (this.attachmentId === null) {
-      throw new Error('attachmentId must be specified.');
+      throw new Error("attachmentId must be specified.");
     }
     const r = await this.rc.get<Buffer>(this.path(), queryParams, {
       ...restRequestConfig,
-      responseType: 'arraybuffer',
+      responseType: "arraybuffer",
     });
     return r.data;
   }

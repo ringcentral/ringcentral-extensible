@@ -15,9 +15,8 @@ interface TemplateInfo {
    */
   description?: string;
 
-  /**
-   */
-  type?: 'UserSettings' | 'CallHandling' | 'LimitedExtensions';
+  /** */
+  type?: "UserSettings" | "CallHandling" | "LimitedExtensions";
 
   /**
    * Name of a template

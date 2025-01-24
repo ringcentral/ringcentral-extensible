@@ -5,12 +5,12 @@ interface RcwHistoryListParticipantsParameters {
   /**
    * The role of the invitee/participant.
    */
-  role?: ('Panelist' | 'CoHost' | 'Host' | 'Attendee')[];
+  role?: ("Panelist" | "CoHost" | "Host" | "Attendee")[];
 
   /**
    * The original role of the invitee/participant.
    */
-  originalRole?: ('Panelist' | 'CoHost' | 'Host' | 'Attendee')[];
+  originalRole?: ("Panelist" | "CoHost" | "Host" | "Attendee")[];
 
   /**
    * The number of items per page. If provided value in the request

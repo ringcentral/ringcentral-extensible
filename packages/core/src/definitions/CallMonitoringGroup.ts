@@ -1,4 +1,4 @@
-import type CallMonitoringGroupSite from './CallMonitoringGroupSite';
+import type CallMonitoringGroupSite from "./CallMonitoringGroupSite";
 
 interface CallMonitoringGroup {
   /**
@@ -17,8 +17,7 @@ interface CallMonitoringGroup {
    */
   name?: string;
 
-  /**
-   */
+  /** */
   site?: CallMonitoringGroupSite;
 }
 

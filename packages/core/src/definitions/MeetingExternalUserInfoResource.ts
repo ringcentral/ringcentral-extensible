@@ -4,12 +4,10 @@ interface MeetingExternalUserInfoResource {
    */
   uri?: string;
 
-  /**
-   */
+  /** */
   userId?: string;
 
-  /**
-   */
+  /** */
   accountId?: string;
 
   /**
@@ -17,16 +15,13 @@ interface MeetingExternalUserInfoResource {
    */
   userType?: number;
 
-  /**
-   */
+  /** */
   userToken?: string;
 
-  /**
-   */
+  /** */
   hostKey?: string;
 
-  /**
-   */
+  /** */
   personalMeetingId?: string;
 
   /**
@@ -35,8 +30,7 @@ interface MeetingExternalUserInfoResource {
    */
   personalLink?: string;
 
-  /**
-   */
+  /** */
   personalLinkName?: string;
 
   /**

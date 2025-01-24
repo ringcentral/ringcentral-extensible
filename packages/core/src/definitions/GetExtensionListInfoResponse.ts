@@ -1,10 +1,10 @@
-import type ContactInfo from './ContactInfo';
-import type ExtensionPermissions from './ExtensionPermissions';
-import type ProfileImageInfo from './ProfileImageInfo';
-import type CallQueueExtensionInfo from './CallQueueExtensionInfo';
-import type ProvisioningSiteInfo from './ProvisioningSiteInfo';
-import type AssignedCountryInfo from './AssignedCountryInfo';
-import type CostCenterInfo from './CostCenterInfo';
+import type ContactInfo from "./ContactInfo";
+import type ExtensionPermissions from "./ExtensionPermissions";
+import type ProfileImageInfo from "./ProfileImageInfo";
+import type CallQueueExtensionInfo from "./CallQueueExtensionInfo";
+import type ProvisioningSiteInfo from "./ProvisioningSiteInfo";
+import type AssignedCountryInfo from "./AssignedCountryInfo";
+import type CostCenterInfo from "./CostCenterInfo";
 
 interface GetExtensionListInfoResponse {
   /**
@@ -19,8 +19,7 @@ interface GetExtensionListInfoResponse {
    */
   uri?: string;
 
-  /**
-   */
+  /** */
   contact?: ContactInfo;
 
   /**
@@ -34,18 +33,16 @@ interface GetExtensionListInfoResponse {
    */
   name?: string;
 
-  /**
-   */
+  /** */
   permissions?: ExtensionPermissions;
 
-  /**
-   */
+  /** */
   profileImage?: ProfileImageInfo;
 
   /**
    * Extension status
    */
-  status?: 'Enabled' | 'Disabled' | 'Frozen' | 'NotActivated' | 'Unassigned';
+  status?: "Enabled" | "Disabled" | "Frozen" | "NotActivated" | "Unassigned";
 
   /**
    * Extension type. Please note that legacy `Department` extension type
@@ -53,35 +50,39 @@ interface GetExtensionListInfoResponse {
    *  terminology
    */
   type?:
-    | 'User'
-    | 'FaxUser'
-    | 'FlexibleUser'
-    | 'VirtualUser'
-    | 'DigitalUser'
-    | 'Department'
-    | 'Announcement'
-    | 'Voicemail'
-    | 'SharedLinesGroup'
-    | 'PagingOnly'
-    | 'IvrMenu'
-    | 'ApplicationExtension'
-    | 'ParkLocation'
-    | 'Bot'
-    | 'Room'
-    | 'Limited'
-    | 'Site'
-    | 'ProxyAdmin'
-    | 'DelegatedLinesGroup'
-    | 'GroupCallPickup';
+    | "User"
+    | "FaxUser"
+    | "FlexibleUser"
+    | "VirtualUser"
+    | "DigitalUser"
+    | "Department"
+    | "Announcement"
+    | "Voicemail"
+    | "SharedLinesGroup"
+    | "PagingOnly"
+    | "IvrMenu"
+    | "ApplicationExtension"
+    | "ParkLocation"
+    | "Bot"
+    | "Room"
+    | "Limited"
+    | "Site"
+    | "ProxyAdmin"
+    | "DelegatedLinesGroup"
+    | "GroupCallPickup";
 
   /**
    * Extension subtype, if applicable. For any unsupported subtypes the
    *  `Unknown` value will be returned
    */
-  subType?: 'VideoPro' | 'VideoProPlus' | 'DigitalSignage' | 'Unknown' | 'Emergency';
+  subType?:
+    | "VideoPro"
+    | "VideoProPlus"
+    | "DigitalSignage"
+    | "Unknown"
+    | "Emergency";
 
-  /**
-   */
+  /** */
   callQueueInfo?: CallQueueExtensionInfo;
 
   /**
@@ -90,16 +91,13 @@ interface GetExtensionListInfoResponse {
    */
   hidden?: boolean;
 
-  /**
-   */
+  /** */
   site?: ProvisioningSiteInfo;
 
-  /**
-   */
+  /** */
   assignedCountry?: AssignedCountryInfo;
 
-  /**
-   */
+  /** */
   costCenter?: CostCenterInfo;
 
   /**

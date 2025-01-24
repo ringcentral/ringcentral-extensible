@@ -1,6 +1,10 @@
-import type UpdateMultipleSwitchesResponse from '../../../../../definitions/UpdateMultipleSwitchesResponse';
-import type UpdateMultipleSwitchesRequest from '../../../../../definitions/UpdateMultipleSwitchesRequest';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import type UpdateMultipleSwitchesResponse from "../../../../../definitions/UpdateMultipleSwitchesResponse";
+import type UpdateMultipleSwitchesRequest from "../../../../../definitions/UpdateMultipleSwitchesRequest";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;

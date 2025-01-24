@@ -1,5 +1,5 @@
-import type TMEventInfo from './TMEventInfo';
-import type TMNavigationInfo from './TMNavigationInfo';
+import type TMEventInfo from "./TMEventInfo";
+import type TMNavigationInfo from "./TMNavigationInfo";
 
 interface TMEventList {
   /**
@@ -7,8 +7,7 @@ interface TMEventList {
    */
   records?: TMEventInfo[];
 
-  /**
-   */
+  /** */
   navigation?: TMNavigationInfo;
 }
 

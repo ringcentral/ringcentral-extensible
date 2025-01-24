@@ -1,7 +1,11 @@
-import Check from './Check';
-import type AuthProfileResource from '../../../../../definitions/AuthProfileResource';
-import type ReadAuthorizationProfileParameters from '../../../../../definitions/ReadAuthorizationProfileParameters';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import Check from "./Check";
+import type AuthProfileResource from "../../../../../definitions/AuthProfileResource";
+import type ReadAuthorizationProfileParameters from "../../../../../definitions/ReadAuthorizationProfileParameters";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -26,7 +30,11 @@ class Index {
     queryParams?: ReadAuthorizationProfileParameters,
     restRequestConfig?: RestRequestConfig,
   ): Promise<AuthProfileResource> {
-    const r = await this.rc.get<AuthProfileResource>(this.path(), queryParams, restRequestConfig);
+    const r = await this.rc.get<AuthProfileResource>(
+      this.path(),
+      queryParams,
+      restRequestConfig,
+    );
     return r.data;
   }
 

@@ -1,4 +1,4 @@
-import type CountryInfoShortModel from './CountryInfoShortModel';
+import type CountryInfoShortModel from "./CountryInfoShortModel";
 
 /**
  * Information on account brand
@@ -14,8 +14,7 @@ interface BrandInfo {
    */
   name?: string;
 
-  /**
-   */
+  /** */
   homeCountry?: CountryInfoShortModel;
 }
 

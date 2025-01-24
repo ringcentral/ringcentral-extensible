@@ -1,4 +1,4 @@
-import type CallFlipNumberResource from './CallFlipNumberResource';
+import type CallFlipNumberResource from "./CallFlipNumberResource";
 
 interface CallFlipNumberListResource {
   /**

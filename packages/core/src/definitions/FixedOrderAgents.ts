@@ -1,8 +1,7 @@
-import type FixedOrderAgentsExtensionInfo from './FixedOrderAgentsExtensionInfo';
+import type FixedOrderAgentsExtensionInfo from "./FixedOrderAgentsExtensionInfo";
 
 interface FixedOrderAgents {
-  /**
-   */
+  /** */
   extension?: FixedOrderAgentsExtensionInfo;
 
   /**

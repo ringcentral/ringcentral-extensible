@@ -1,6 +1,10 @@
-import type PagingOnlyGroupDevices from '../../../../../definitions/PagingOnlyGroupDevices';
-import type ListPagingGroupDevicesParameters from '../../../../../definitions/ListPagingGroupDevicesParameters';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import type PagingOnlyGroupDevices from "../../../../../definitions/PagingOnlyGroupDevices";
+import type ListPagingGroupDevicesParameters from "../../../../../definitions/ListPagingGroupDevicesParameters";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -26,7 +30,11 @@ class Index {
     queryParams?: ListPagingGroupDevicesParameters,
     restRequestConfig?: RestRequestConfig,
   ): Promise<PagingOnlyGroupDevices> {
-    const r = await this.rc.get<PagingOnlyGroupDevices>(this.path(), queryParams, restRequestConfig);
+    const r = await this.rc.get<PagingOnlyGroupDevices>(
+      this.path(),
+      queryParams,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

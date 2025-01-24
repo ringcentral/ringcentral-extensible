@@ -1,10 +1,14 @@
-import BulkAssign from './BulkAssign';
-import Members from './Members';
-import type CallMonitoringGroup from '../../../../definitions/CallMonitoringGroup';
-import type CreateCallMonitoringGroupRequest from '../../../../definitions/CreateCallMonitoringGroupRequest';
-import type CallMonitoringGroups from '../../../../definitions/CallMonitoringGroups';
-import type ListCallMonitoringGroupsParameters from '../../../../definitions/ListCallMonitoringGroupsParameters';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
+import BulkAssign from "./BulkAssign";
+import Members from "./Members";
+import type CallMonitoringGroup from "../../../../definitions/CallMonitoringGroup";
+import type CreateCallMonitoringGroupRequest from "../../../../definitions/CreateCallMonitoringGroupRequest";
+import type CallMonitoringGroups from "../../../../definitions/CallMonitoringGroups";
+import type ListCallMonitoringGroupsParameters from "../../../../definitions/ListCallMonitoringGroupsParameters";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -35,7 +39,11 @@ class Index {
     queryParams?: ListCallMonitoringGroupsParameters,
     restRequestConfig?: RestRequestConfig,
   ): Promise<CallMonitoringGroups> {
-    const r = await this.rc.get<CallMonitoringGroups>(this.path(false), queryParams, restRequestConfig);
+    const r = await this.rc.get<CallMonitoringGroups>(
+      this.path(false),
+      queryParams,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -75,7 +83,7 @@ class Index {
     restRequestConfig?: RestRequestConfig,
   ): Promise<CallMonitoringGroup> {
     if (this.groupId === null) {
-      throw new Error('groupId must be specified.');
+      throw new Error("groupId must be specified.");
     }
     const r = await this.rc.put<CallMonitoringGroup>(
       this.path(),
@@ -97,9 +105,14 @@ class Index {
    */
   public async delete(restRequestConfig?: RestRequestConfig): Promise<string> {
     if (this.groupId === null) {
-      throw new Error('groupId must be specified.');
+      throw new Error("groupId must be specified.");
     }
-    const r = await this.rc.delete<string>(this.path(), {}, undefined, restRequestConfig);
+    const r = await this.rc.delete<string>(
+      this.path(),
+      {},
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 

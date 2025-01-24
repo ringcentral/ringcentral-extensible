@@ -39,7 +39,7 @@ interface TokenInfo {
    * Required
    * Example: bearer
    */
-  token_type?: 'bearer';
+  token_type?: "bearer";
 
   /**
    * Token owner's identifier. Contains RingCentral user (extension) ID

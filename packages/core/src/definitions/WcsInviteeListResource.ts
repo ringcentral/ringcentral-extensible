@@ -1,5 +1,5 @@
-import type InviteeResource from './InviteeResource';
-import type RcwPagingModel from './RcwPagingModel';
+import type InviteeResource from "./InviteeResource";
+import type RcwPagingModel from "./RcwPagingModel";
 
 interface WcsInviteeListResource {
   /**

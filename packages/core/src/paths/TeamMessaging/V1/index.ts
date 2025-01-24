@@ -1,20 +1,20 @@
-import AdaptiveCards from './AdaptiveCards';
-import Conversations from './Conversations';
-import DataExport from './DataExport';
-import Favorites from './Favorites';
-import Companies from './Companies';
-import Everyone from './Everyone';
-import Webhooks from './Webhooks';
-import Persons from './Persons';
-import Events from './Events';
-import Recent from './Recent';
-import Groups from './Groups';
-import Files from './Files';
-import Notes from './Notes';
-import Teams from './Teams';
-import Chats from './Chats';
-import Tasks from './Tasks';
-import type { RingCentralInterface, ParentInterface } from '../../../types';
+import AdaptiveCards from "./AdaptiveCards";
+import Conversations from "./Conversations";
+import DataExport from "./DataExport";
+import Favorites from "./Favorites";
+import Companies from "./Companies";
+import Everyone from "./Everyone";
+import Webhooks from "./Webhooks";
+import Persons from "./Persons";
+import Events from "./Events";
+import Recent from "./Recent";
+import Groups from "./Groups";
+import Files from "./Files";
+import Notes from "./Notes";
+import Teams from "./Teams";
+import Chats from "./Chats";
+import Tasks from "./Tasks";
+import type { ParentInterface, RingCentralInterface } from "../../../types";
 
 class Index {
   public rc: RingCentralInterface;

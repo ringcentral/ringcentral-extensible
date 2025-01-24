@@ -1,14 +1,14 @@
-import ServiceProviderConfig from './ServiceProviderConfig';
-import ResourceTypes from './ResourceTypes';
-import Schemas from './Schemas';
-import Users from './Users';
-import type { RingCentralInterface } from '../../types';
+import ServiceProviderConfig from "./ServiceProviderConfig";
+import ResourceTypes from "./ResourceTypes";
+import Schemas from "./Schemas";
+import Users from "./Users";
+import type { RingCentralInterface } from "../../types";
 
 class Index {
   public rc: RingCentralInterface;
   public version: string | null;
 
-  public constructor(rc: RingCentralInterface, version: string | null = 'v2') {
+  public constructor(rc: RingCentralInterface, version: string | null = "v2") {
     this.rc = rc;
     this.version = version;
   }
@@ -16,7 +16,7 @@ class Index {
     if (withParameter && this.version !== null) {
       return `/scim/${this.version}`;
     }
-    return '/scim';
+    return "/scim";
   }
 
   public users(scimUserId: string | null = null): Users {

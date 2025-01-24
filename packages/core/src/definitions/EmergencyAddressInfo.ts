@@ -91,7 +91,13 @@ interface EmergencyAddressInfo {
    *  for 'Get Device Info' request if `syncEmergencyAddress` parameter is set
    *  to `true`
    */
-  syncStatus?: 'Verified' | 'Updated' | 'Deleted' | 'NotRequired' | 'Unsupported' | 'Failed';
+  syncStatus?:
+    | "Verified"
+    | "Updated"
+    | "Deleted"
+    | "NotRequired"
+    | "Unsupported"
+    | "Failed";
 }
 
 export default EmergencyAddressInfo;

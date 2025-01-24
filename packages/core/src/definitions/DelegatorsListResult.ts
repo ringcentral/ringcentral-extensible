@@ -1,8 +1,7 @@
-import type Delegate from './Delegate';
+import type Delegate from "./Delegate";
 
 interface DelegatorsListResult {
-  /**
-   */
+  /** */
   items?: Delegate[];
 }
 

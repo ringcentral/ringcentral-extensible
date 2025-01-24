@@ -1,4 +1,4 @@
-import type PronouncedNamePromptInfo from './PronouncedNamePromptInfo';
+import type PronouncedNamePromptInfo from "./PronouncedNamePromptInfo";
 
 interface PronouncedNameInfo {
   /**
@@ -7,15 +7,14 @@ interface PronouncedNameInfo {
    *  - `TextToSpeech` - custom text specified by a user  pronounced using text-to-speech;
    *  - `Recorded` - custom audio uploaded by a user, the name recorded in user's own voice (supported only for extension retrieval).
    */
-  type?: 'Default' | 'TextToSpeech' | 'Recorded';
+  type?: "Default" | "TextToSpeech" | "Recorded";
 
   /**
    * Custom text (for `TextToSpeech` type only)
    */
   text?: string;
 
-  /**
-   */
+  /** */
   prompt?: PronouncedNamePromptInfo;
 }
 

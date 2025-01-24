@@ -1,8 +1,12 @@
-import type TMTaskInfo from '../../../../../definitions/TMTaskInfo';
-import type TMCreateTaskRequest from '../../../../../definitions/TMCreateTaskRequest';
-import type TMTaskList from '../../../../../definitions/TMTaskList';
-import type ListChatTasksNewParameters from '../../../../../definitions/ListChatTasksNewParameters';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import type TMTaskInfo from "../../../../../definitions/TMTaskInfo";
+import type TMCreateTaskRequest from "../../../../../definitions/TMCreateTaskRequest";
+import type TMTaskList from "../../../../../definitions/TMTaskList";
+import type ListChatTasksNewParameters from "../../../../../definitions/ListChatTasksNewParameters";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -26,7 +30,11 @@ class Index {
     queryParams?: ListChatTasksNewParameters,
     restRequestConfig?: RestRequestConfig,
   ): Promise<TMTaskList> {
-    const r = await this.rc.get<TMTaskList>(this.path(), queryParams, restRequestConfig);
+    const r = await this.rc.get<TMTaskList>(
+      this.path(),
+      queryParams,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -41,7 +49,12 @@ class Index {
     tMCreateTaskRequest: TMCreateTaskRequest,
     restRequestConfig?: RestRequestConfig,
   ): Promise<TMTaskInfo> {
-    const r = await this.rc.post<TMTaskInfo>(this.path(), tMCreateTaskRequest, undefined, restRequestConfig);
+    const r = await this.rc.post<TMTaskInfo>(
+      this.path(),
+      tMCreateTaskRequest,
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

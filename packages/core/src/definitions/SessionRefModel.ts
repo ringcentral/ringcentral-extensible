@@ -1,4 +1,4 @@
-import type WebinarRefModel from './WebinarRefModel';
+import type WebinarRefModel from "./WebinarRefModel";
 
 interface SessionRefModel {
   /**
@@ -38,8 +38,7 @@ interface SessionRefModel {
    */
   description?: string;
 
-  /**
-   */
+  /** */
   webinar?: WebinarRefModel;
 }
 

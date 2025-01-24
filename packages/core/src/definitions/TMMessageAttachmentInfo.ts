@@ -1,7 +1,7 @@
-import type TMAttachmentAuthorInfo from './TMAttachmentAuthorInfo';
-import type TMAttachmentFieldsInfo from './TMAttachmentFieldsInfo';
-import type TMAttachmentFootnoteInfo from './TMAttachmentFootnoteInfo';
-import type EventRecurrenceInfo from './EventRecurrenceInfo';
+import type TMAttachmentAuthorInfo from "./TMAttachmentAuthorInfo";
+import type TMAttachmentFieldsInfo from "./TMAttachmentFieldsInfo";
+import type TMAttachmentFootnoteInfo from "./TMAttachmentFootnoteInfo";
+import type EventRecurrenceInfo from "./EventRecurrenceInfo";
 
 interface TMMessageAttachmentInfo {
   /**
@@ -13,7 +13,7 @@ interface TMMessageAttachmentInfo {
    * Type of an attachment
    * Default: Card
    */
-  type?: 'Card' | 'Event' | 'File' | 'Note' | 'Task';
+  type?: "Card" | "Event" | "File" | "Note" | "Task";
 
   /**
    * Link to a binary content
@@ -36,8 +36,7 @@ interface TMMessageAttachmentInfo {
    */
   intro?: string;
 
-  /**
-   */
+  /** */
   author?: TMAttachmentAuthorInfo;
 
   /**
@@ -67,8 +66,7 @@ interface TMMessageAttachmentInfo {
    */
   fields?: TMAttachmentFieldsInfo[];
 
-  /**
-   */
+  /** */
   footnote?: TMAttachmentFootnoteInfo;
 
   /**
@@ -93,15 +91,22 @@ interface TMMessageAttachmentInfo {
    */
   allDay?: boolean;
 
-  /**
-   */
+  /** */
   recurrence?: EventRecurrenceInfo;
 
   /**
    * Color of Event title, including its presentation in Calendar; or the color of the side border of an interactive message of a Card
    * Default: Black
    */
-  color?: 'Black' | 'Red' | 'Orange' | 'Yellow' | 'Green' | 'Blue' | 'Purple' | 'Magenta';
+  color?:
+    | "Black"
+    | "Red"
+    | "Orange"
+    | "Yellow"
+    | "Green"
+    | "Blue"
+    | "Purple"
+    | "Magenta";
 
   /**
    * Event location

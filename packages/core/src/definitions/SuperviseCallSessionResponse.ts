@@ -1,20 +1,18 @@
-import type PartyInfo from './PartyInfo';
-import type OwnerInfo from './OwnerInfo';
-import type CallStatusInfo from './CallStatusInfo';
+import type PartyInfo from "./PartyInfo";
+import type OwnerInfo from "./OwnerInfo";
+import type CallStatusInfo from "./CallStatusInfo";
 
 interface SuperviseCallSessionResponse {
-  /**
-   */
+  /** */
   from?: PartyInfo;
 
-  /**
-   */
+  /** */
   to?: PartyInfo;
 
   /**
    * Direction of a call
    */
-  direction?: 'Outbound' | 'Inbound';
+  direction?: "Outbound" | "Inbound";
 
   /**
    * Internal identifier of a party that monitors a call
@@ -36,8 +34,7 @@ interface SuperviseCallSessionResponse {
    */
   muted?: boolean;
 
-  /**
-   */
+  /** */
   owner?: OwnerInfo;
 
   /**
@@ -45,8 +42,7 @@ interface SuperviseCallSessionResponse {
    */
   standAlone?: boolean;
 
-  /**
-   */
+  /** */
   status?: CallStatusInfo;
 }
 

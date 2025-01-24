@@ -1,6 +1,6 @@
-import type MeetingResponseResource from './MeetingResponseResource';
-import type EnumeratedPagingModel from './EnumeratedPagingModel';
-import type PageNavigationModel from './PageNavigationModel';
+import type MeetingResponseResource from "./MeetingResponseResource";
+import type EnumeratedPagingModel from "./EnumeratedPagingModel";
+import type PageNavigationModel from "./PageNavigationModel";
 
 interface MeetingsResource {
   /**
@@ -8,16 +8,13 @@ interface MeetingsResource {
    */
   uri?: string;
 
-  /**
-   */
+  /** */
   records?: MeetingResponseResource[];
 
-  /**
-   */
+  /** */
   paging?: EnumeratedPagingModel;
 
-  /**
-   */
+  /** */
   navigation?: PageNavigationModel;
 }
 

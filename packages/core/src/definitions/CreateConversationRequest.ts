@@ -1,4 +1,4 @@
-import type CreateConversationRequestMembers from './CreateConversationRequestMembers';
+import type CreateConversationRequestMembers from "./CreateConversationRequestMembers";
 
 interface CreateConversationRequest {
   /**

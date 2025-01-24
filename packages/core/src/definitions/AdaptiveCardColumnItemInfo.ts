@@ -1,6 +1,5 @@
 interface AdaptiveCardColumnItemInfo {
-  /**
-   */
+  /** */
   type?: string;
 
   /**
@@ -8,28 +7,22 @@ interface AdaptiveCardColumnItemInfo {
    */
   url?: string;
 
-  /**
-   */
+  /** */
   size?: string;
 
-  /**
-   */
+  /** */
   style?: string;
 
-  /**
-   */
+  /** */
   wrap?: boolean;
 
-  /**
-   */
+  /** */
   spacing?: string;
 
-  /**
-   */
+  /** */
   text?: string;
 
-  /**
-   */
+  /** */
   isSubtle?: boolean;
 }
 

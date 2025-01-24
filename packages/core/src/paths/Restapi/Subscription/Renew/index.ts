@@ -1,5 +1,9 @@
-import type SubscriptionInfo from '../../../../definitions/SubscriptionInfo';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
+import type SubscriptionInfo from "../../../../definitions/SubscriptionInfo";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -21,8 +25,15 @@ class Index {
    * Endpoint: /restapi/{apiVersion}/subscription/{subscriptionId}/renew
    * Rate Limit Group: Light
    */
-  public async post(restRequestConfig?: RestRequestConfig): Promise<SubscriptionInfo> {
-    const r = await this.rc.post<SubscriptionInfo>(this.path(), {}, undefined, restRequestConfig);
+  public async post(
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<SubscriptionInfo> {
+    const r = await this.rc.post<SubscriptionInfo>(
+      this.path(),
+      {},
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

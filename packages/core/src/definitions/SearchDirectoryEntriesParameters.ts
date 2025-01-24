@@ -37,27 +37,27 @@ interface SearchDirectoryEntriesParameters {
    * Example: User
    */
   extensionType?:
-    | 'User'
-    | 'Department'
-    | 'Announcement'
-    | 'Voicemail'
-    | 'DigitalUser'
-    | 'VirtualUser'
-    | 'FaxUser'
-    | 'PagingOnly'
-    | 'SharedLinesGroup'
-    | 'IvrMenu'
-    | 'ApplicationExtension'
-    | 'ParkLocation'
-    | 'Limited'
-    | 'Bot'
-    | 'Site'
-    | 'Room'
-    | 'ProxyAdmin'
-    | 'DelegatedLinesGroup'
-    | 'FlexibleUser'
-    | 'GroupCallPickup'
-    | 'RoomConnector';
+    | "User"
+    | "Department"
+    | "Announcement"
+    | "Voicemail"
+    | "DigitalUser"
+    | "VirtualUser"
+    | "FaxUser"
+    | "PagingOnly"
+    | "SharedLinesGroup"
+    | "IvrMenu"
+    | "ApplicationExtension"
+    | "ParkLocation"
+    | "Limited"
+    | "Bot"
+    | "Site"
+    | "Room"
+    | "ProxyAdmin"
+    | "DelegatedLinesGroup"
+    | "FlexibleUser"
+    | "GroupCallPickup"
+    | "RoomConnector";
 }
 
 export default SearchDirectoryEntriesParameters;

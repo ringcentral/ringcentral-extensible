@@ -1,5 +1,9 @@
-import type CallSession from '../../../../../definitions/CallSession';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import type CallSession from "../../../../../definitions/CallSession";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -19,8 +23,15 @@ class Index {
    * Rate Limit Group: Heavy
    * App Permission: CallControl
    */
-  public async post(restRequestConfig?: RestRequestConfig): Promise<CallSession> {
-    const r = await this.rc.post<CallSession>(this.path(), {}, undefined, restRequestConfig);
+  public async post(
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<CallSession> {
+    const r = await this.rc.post<CallSession>(
+      this.path(),
+      {},
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

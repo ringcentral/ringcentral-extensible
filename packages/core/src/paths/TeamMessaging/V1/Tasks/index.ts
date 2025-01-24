@@ -1,8 +1,12 @@
-import Complete from './Complete';
-import type TMTaskList from '../../../../definitions/TMTaskList';
-import type TMUpdateTaskRequest from '../../../../definitions/TMUpdateTaskRequest';
-import type TMTaskInfo from '../../../../definitions/TMTaskInfo';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
+import Complete from "./Complete";
+import type TMTaskList from "../../../../definitions/TMTaskList";
+import type TMUpdateTaskRequest from "../../../../definitions/TMUpdateTaskRequest";
+import type TMTaskInfo from "../../../../definitions/TMTaskInfo";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -29,9 +33,13 @@ class Index {
    */
   public async get(restRequestConfig?: RestRequestConfig): Promise<TMTaskInfo> {
     if (this.taskId === null) {
-      throw new Error('taskId must be specified.');
+      throw new Error("taskId must be specified.");
     }
-    const r = await this.rc.get<TMTaskInfo>(this.path(), undefined, restRequestConfig);
+    const r = await this.rc.get<TMTaskInfo>(
+      this.path(),
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -44,9 +52,14 @@ class Index {
    */
   public async delete(restRequestConfig?: RestRequestConfig): Promise<string> {
     if (this.taskId === null) {
-      throw new Error('taskId must be specified.');
+      throw new Error("taskId must be specified.");
     }
-    const r = await this.rc.delete<string>(this.path(), {}, undefined, restRequestConfig);
+    const r = await this.rc.delete<string>(
+      this.path(),
+      {},
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -62,9 +75,14 @@ class Index {
     restRequestConfig?: RestRequestConfig,
   ): Promise<TMTaskList> {
     if (this.taskId === null) {
-      throw new Error('taskId must be specified.');
+      throw new Error("taskId must be specified.");
     }
-    const r = await this.rc.patch<TMTaskList>(this.path(), tMUpdateTaskRequest, undefined, restRequestConfig);
+    const r = await this.rc.patch<TMTaskList>(
+      this.path(),
+      tMUpdateTaskRequest,
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 

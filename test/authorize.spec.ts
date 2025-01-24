@@ -1,7 +1,7 @@
-import ReusableRestClient from './reusable-rest-client';
+import ReusableRestClient from "./reusable-rest-client";
 
-describe('authorize', () => {
-  test('password flow', async () => {
+describe("authorize", () => {
+  test("password flow", async () => {
     // because password flow is deprecated, we don't test it
     // const rc = new RingCentral({
     //   clientId: process.env.RINGCENTRAL_CLIENT_ID!,
@@ -18,7 +18,7 @@ describe('authorize', () => {
     // await rc.revoke();
   });
 
-  test('refresh', async () => {
+  test("refresh", async () => {
     const rc = await ReusableRestClient.getInstance();
     const tokenInfo = rc.token!;
     const newTokenInfo = await rc.refresh();

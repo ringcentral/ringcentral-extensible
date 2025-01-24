@@ -1,11 +1,15 @@
-import type UpdateAnsweringRuleRequest from '../../../../../definitions/UpdateAnsweringRuleRequest';
-import type CallHandlingRuleInfo from '../../../../../definitions/CallHandlingRuleInfo';
-import type ReadAnsweringRuleParameters from '../../../../../definitions/ReadAnsweringRuleParameters';
-import type CustomAnsweringRuleInfo from '../../../../../definitions/CustomAnsweringRuleInfo';
-import type CreateAnsweringRuleRequest from '../../../../../definitions/CreateAnsweringRuleRequest';
-import type UserAnsweringRuleList from '../../../../../definitions/UserAnsweringRuleList';
-import type ListAnsweringRulesParameters from '../../../../../definitions/ListAnsweringRulesParameters';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import type UpdateAnsweringRuleRequest from "../../../../../definitions/UpdateAnsweringRuleRequest";
+import type CallHandlingRuleInfo from "../../../../../definitions/CallHandlingRuleInfo";
+import type ReadAnsweringRuleParameters from "../../../../../definitions/ReadAnsweringRuleParameters";
+import type CustomAnsweringRuleInfo from "../../../../../definitions/CustomAnsweringRuleInfo";
+import type CreateAnsweringRuleRequest from "../../../../../definitions/CreateAnsweringRuleRequest";
+import type UserAnsweringRuleList from "../../../../../definitions/UserAnsweringRuleList";
+import type ListAnsweringRulesParameters from "../../../../../definitions/ListAnsweringRulesParameters";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -35,7 +39,11 @@ class Index {
     queryParams?: ListAnsweringRulesParameters,
     restRequestConfig?: RestRequestConfig,
   ): Promise<UserAnsweringRuleList> {
-    const r = await this.rc.get<UserAnsweringRuleList>(this.path(false), queryParams, restRequestConfig);
+    const r = await this.rc.get<UserAnsweringRuleList>(
+      this.path(false),
+      queryParams,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -73,9 +81,13 @@ class Index {
     restRequestConfig?: RestRequestConfig,
   ): Promise<CallHandlingRuleInfo> {
     if (this.ruleId === null) {
-      throw new Error('ruleId must be specified.');
+      throw new Error("ruleId must be specified.");
     }
-    const r = await this.rc.get<CallHandlingRuleInfo>(this.path(), queryParams, restRequestConfig);
+    const r = await this.rc.get<CallHandlingRuleInfo>(
+      this.path(),
+      queryParams,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -92,7 +104,7 @@ class Index {
     restRequestConfig?: RestRequestConfig,
   ): Promise<CallHandlingRuleInfo> {
     if (this.ruleId === null) {
-      throw new Error('ruleId must be specified.');
+      throw new Error("ruleId must be specified.");
     }
     const r = await this.rc.put<CallHandlingRuleInfo>(
       this.path(),
@@ -113,9 +125,14 @@ class Index {
    */
   public async delete(restRequestConfig?: RestRequestConfig): Promise<string> {
     if (this.ruleId === null) {
-      throw new Error('ruleId must be specified.');
+      throw new Error("ruleId must be specified.");
     }
-    const r = await this.rc.delete<string>(this.path(), {}, undefined, restRequestConfig);
+    const r = await this.rc.delete<string>(
+      this.path(),
+      {},
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

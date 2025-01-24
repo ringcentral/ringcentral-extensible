@@ -2,7 +2,7 @@ interface UiCallInfoRecord {
   /**
    * UI call info type
    */
-  type?: 'QueueName' | 'CallerIdName';
+  type?: "QueueName" | "CallerIdName";
 
   /**
    * UI call info value

@@ -1,6 +1,6 @@
-import type PermissionResource from './PermissionResource';
-import type EnumeratedPagingModel from './EnumeratedPagingModel';
-import type PageNavigationModel from './PageNavigationModel';
+import type PermissionResource from "./PermissionResource";
+import type EnumeratedPagingModel from "./EnumeratedPagingModel";
+import type PageNavigationModel from "./PageNavigationModel";
 
 interface PermissionCollectionResource {
   /**
@@ -8,16 +8,13 @@ interface PermissionCollectionResource {
    */
   uri?: string;
 
-  /**
-   */
+  /** */
   records?: PermissionResource[];
 
-  /**
-   */
+  /** */
   paging?: EnumeratedPagingModel;
 
-  /**
-   */
+  /** */
   navigation?: PageNavigationModel;
 }
 

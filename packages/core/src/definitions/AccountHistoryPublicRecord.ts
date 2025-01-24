@@ -1,6 +1,6 @@
-import type AccountHistoryRecordPublicInitiator from './AccountHistoryRecordPublicInitiator';
-import type AccountHistoryRecordTarget from './AccountHistoryRecordTarget';
-import type AccountHistoryRecordPublicDetails from './AccountHistoryRecordPublicDetails';
+import type AccountHistoryRecordPublicInitiator from "./AccountHistoryRecordPublicInitiator";
+import type AccountHistoryRecordTarget from "./AccountHistoryRecordTarget";
+import type AccountHistoryRecordPublicDetails from "./AccountHistoryRecordPublicDetails";
 
 interface AccountHistoryPublicRecord {
   /**
@@ -15,8 +15,7 @@ interface AccountHistoryPublicRecord {
    */
   eventTime?: string;
 
-  /**
-   */
+  /** */
   initiator?: AccountHistoryRecordPublicInitiator;
 
   /**
@@ -43,8 +42,7 @@ interface AccountHistoryPublicRecord {
    */
   accountName?: string;
 
-  /**
-   */
+  /** */
   target?: AccountHistoryRecordTarget;
 
   /**
@@ -58,8 +56,7 @@ interface AccountHistoryPublicRecord {
    */
   comment?: string;
 
-  /**
-   */
+  /** */
   details?: AccountHistoryRecordPublicDetails;
 }
 

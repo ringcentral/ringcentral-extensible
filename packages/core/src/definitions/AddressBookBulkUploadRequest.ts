@@ -1,4 +1,4 @@
-import type AddressBookBulkUploadResource from './AddressBookBulkUploadResource';
+import type AddressBookBulkUploadResource from "./AddressBookBulkUploadResource";
 
 interface AddressBookBulkUploadRequest {
   /**

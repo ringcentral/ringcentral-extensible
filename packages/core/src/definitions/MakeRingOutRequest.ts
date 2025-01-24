@@ -1,7 +1,7 @@
-import type MakeRingOutCallerInfoRequestFrom from './MakeRingOutCallerInfoRequestFrom';
-import type MakeRingOutCallerInfoRequestTo from './MakeRingOutCallerInfoRequestTo';
-import type MakeRingOutCallerIdInfo from './MakeRingOutCallerIdInfo';
-import type MakeRingOutCountryInfo from './MakeRingOutCountryInfo';
+import type MakeRingOutCallerInfoRequestFrom from "./MakeRingOutCallerInfoRequestFrom";
+import type MakeRingOutCallerInfoRequestTo from "./MakeRingOutCallerInfoRequestTo";
+import type MakeRingOutCallerIdInfo from "./MakeRingOutCallerIdInfo";
+import type MakeRingOutCountryInfo from "./MakeRingOutCountryInfo";
 
 interface MakeRingOutRequest {
   /**
@@ -14,8 +14,7 @@ interface MakeRingOutRequest {
    */
   to?: MakeRingOutCallerInfoRequestTo;
 
-  /**
-   */
+  /** */
   callerId?: MakeRingOutCallerIdInfo;
 
   /**
@@ -24,8 +23,7 @@ interface MakeRingOutRequest {
    */
   playPrompt?: boolean;
 
-  /**
-   */
+  /** */
   country?: MakeRingOutCountryInfo;
 }
 

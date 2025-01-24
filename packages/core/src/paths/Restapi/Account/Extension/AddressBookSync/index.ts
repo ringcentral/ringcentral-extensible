@@ -1,6 +1,10 @@
-import type AddressBookSync from '../../../../../definitions/AddressBookSync';
-import type SyncAddressBookParameters from '../../../../../definitions/SyncAddressBookParameters';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import type AddressBookSync from "../../../../../definitions/AddressBookSync";
+import type SyncAddressBookParameters from "../../../../../definitions/SyncAddressBookParameters";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -26,7 +30,11 @@ class Index {
     queryParams?: SyncAddressBookParameters,
     restRequestConfig?: RestRequestConfig,
   ): Promise<AddressBookSync> {
-    const r = await this.rc.get<AddressBookSync>(this.path(), queryParams, restRequestConfig);
+    const r = await this.rc.get<AddressBookSync>(
+      this.path(),
+      queryParams,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

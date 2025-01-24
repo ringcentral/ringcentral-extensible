@@ -1,14 +1,13 @@
 /**
  * Token endpoint request parameters used in the "Password" (also known as "Resource Owner Password Credentials" - ROPC)
  * authorization flow with the `password` grant type
- *
  */
 interface RopcTokenRequest {
   /**
    * Grant type
    * Required
    */
-  grant_type?: 'password';
+  grant_type?: "password";
 
   /**
    * For `password` grant type only. User login name: email or phone number in E.164 format

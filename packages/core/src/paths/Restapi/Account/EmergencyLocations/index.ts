@@ -1,18 +1,25 @@
-import type DeleteEmergencyLocationParameters from '../../../../definitions/DeleteEmergencyLocationParameters';
-import type CommonEmergencyLocationResource from '../../../../definitions/CommonEmergencyLocationResource';
-import type ReadEmergencyLocationParameters from '../../../../definitions/ReadEmergencyLocationParameters';
-import type EmergencyLocationResponseResource from '../../../../definitions/EmergencyLocationResponseResource';
-import type EmergencyLocationRequestResource from '../../../../definitions/EmergencyLocationRequestResource';
-import type EmergencyLocationsResource from '../../../../definitions/EmergencyLocationsResource';
-import type ListEmergencyLocationsParameters from '../../../../definitions/ListEmergencyLocationsParameters';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
+import type DeleteEmergencyLocationParameters from "../../../../definitions/DeleteEmergencyLocationParameters";
+import type CommonEmergencyLocationResource from "../../../../definitions/CommonEmergencyLocationResource";
+import type ReadEmergencyLocationParameters from "../../../../definitions/ReadEmergencyLocationParameters";
+import type EmergencyLocationResponseResource from "../../../../definitions/EmergencyLocationResponseResource";
+import type EmergencyLocationRequestResource from "../../../../definitions/EmergencyLocationRequestResource";
+import type EmergencyLocationsResource from "../../../../definitions/EmergencyLocationsResource";
+import type ListEmergencyLocationsParameters from "../../../../definitions/ListEmergencyLocationsParameters";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
   public _parent: ParentInterface;
   public locationId: string | null;
 
-  public constructor(_parent: ParentInterface, locationId: string | null = null) {
+  public constructor(
+    _parent: ParentInterface,
+    locationId: string | null = null,
+  ) {
     this._parent = _parent;
     this.rc = _parent.rc;
     this.locationId = locationId;
@@ -35,7 +42,11 @@ class Index {
     queryParams?: ListEmergencyLocationsParameters,
     restRequestConfig?: RestRequestConfig,
   ): Promise<EmergencyLocationsResource> {
-    const r = await this.rc.get<EmergencyLocationsResource>(this.path(false), queryParams, restRequestConfig);
+    const r = await this.rc.get<EmergencyLocationsResource>(
+      this.path(false),
+      queryParams,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -73,9 +84,13 @@ class Index {
     restRequestConfig?: RestRequestConfig,
   ): Promise<CommonEmergencyLocationResource> {
     if (this.locationId === null) {
-      throw new Error('locationId must be specified.');
+      throw new Error("locationId must be specified.");
     }
-    const r = await this.rc.get<CommonEmergencyLocationResource>(this.path(), queryParams, restRequestConfig);
+    const r = await this.rc.get<CommonEmergencyLocationResource>(
+      this.path(),
+      queryParams,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -92,7 +107,7 @@ class Index {
     restRequestConfig?: RestRequestConfig,
   ): Promise<EmergencyLocationResponseResource> {
     if (this.locationId === null) {
-      throw new Error('locationId must be specified.');
+      throw new Error("locationId must be specified.");
     }
     const r = await this.rc.put<EmergencyLocationResponseResource>(
       this.path(),
@@ -116,9 +131,14 @@ class Index {
     restRequestConfig?: RestRequestConfig,
   ): Promise<string> {
     if (this.locationId === null) {
-      throw new Error('locationId must be specified.');
+      throw new Error("locationId must be specified.");
     }
-    const r = await this.rc.delete<string>(this.path(), {}, queryParams, restRequestConfig);
+    const r = await this.rc.delete<string>(
+      this.path(),
+      {},
+      queryParams,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

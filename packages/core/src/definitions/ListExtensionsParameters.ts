@@ -33,7 +33,8 @@ interface ListExtensionsParameters {
    *  is specified, then extensions without `extensionNumber` attribute are returned.
    *  If not specified, then all extensions are returned
    */
-  status?: ('Enabled' | 'Disabled' | 'Frozen' | 'NotActivated' | 'Unassigned')[];
+  status?:
+    ("Enabled" | "Disabled" | "Frozen" | "NotActivated" | "Unassigned")[];
 
   /**
    * Extension type. Multiple values are supported. Please note
@@ -41,24 +42,24 @@ interface ListExtensionsParameters {
    *  extensions in modern RingCentral product terminology
    */
   type?: (
-    | 'User'
-    | 'FaxUser'
-    | 'FlexibleUser'
-    | 'VirtualUser'
-    | 'DigitalUser'
-    | 'Department'
-    | 'Announcement'
-    | 'Voicemail'
-    | 'SharedLinesGroup'
-    | 'PagingOnly'
-    | 'IvrMenu'
-    | 'ApplicationExtension'
-    | 'ParkLocation'
-    | 'Limited'
-    | 'Bot'
-    | 'ProxyAdmin'
-    | 'DelegatedLinesGroup'
-    | 'Site'
+    | "User"
+    | "FaxUser"
+    | "FlexibleUser"
+    | "VirtualUser"
+    | "DigitalUser"
+    | "Department"
+    | "Announcement"
+    | "Voicemail"
+    | "SharedLinesGroup"
+    | "PagingOnly"
+    | "IvrMenu"
+    | "ApplicationExtension"
+    | "ParkLocation"
+    | "Limited"
+    | "Bot"
+    | "ProxyAdmin"
+    | "DelegatedLinesGroup"
+    | "Site"
   )[];
 }
 

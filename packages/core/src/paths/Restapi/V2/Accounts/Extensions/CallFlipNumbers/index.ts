@@ -1,5 +1,9 @@
-import type CallFlipNumberListResource from '../../../../../../definitions/CallFlipNumberListResource';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../types';
+import type CallFlipNumberListResource from "../../../../../../definitions/CallFlipNumberListResource";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -29,8 +33,14 @@ class Index {
    * Rate Limit Group: Light
    * App Permission: ReadAccounts
    */
-  public async get(restRequestConfig?: RestRequestConfig): Promise<CallFlipNumberListResource> {
-    const r = await this.rc.get<CallFlipNumberListResource>(this.path(), undefined, restRequestConfig);
+  public async get(
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<CallFlipNumberListResource> {
+    const r = await this.rc.get<CallFlipNumberListResource>(
+      this.path(),
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 

@@ -1,6 +1,10 @@
-import type AccountHistorySearchPublicResponse from '../../../../../definitions/AccountHistorySearchPublicResponse';
-import type AccountHistorySearchPublicRequest from '../../../../../definitions/AccountHistorySearchPublicRequest';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import type AccountHistorySearchPublicResponse from "../../../../../definitions/AccountHistorySearchPublicResponse";
+import type AccountHistorySearchPublicRequest from "../../../../../definitions/AccountHistorySearchPublicRequest";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;

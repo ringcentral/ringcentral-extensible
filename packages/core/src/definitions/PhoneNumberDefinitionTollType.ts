@@ -7,7 +7,7 @@ interface PhoneNumberDefinitionTollType {
    * Required
    * Example: Toll
    */
-  tollType?: 'Toll' | 'TollFree';
+  tollType?: "Toll" | "TollFree";
 }
 
 export default PhoneNumberDefinitionTollType;

@@ -1,7 +1,11 @@
-import type CaiAsyncApiResponse from '../../../../../../definitions/CaiAsyncApiResponse';
-import type CaiPunctuateParameters from '../../../../../../definitions/CaiPunctuateParameters';
-import type PunctuateInput from '../../../../../../definitions/PunctuateInput';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../types';
+import type CaiAsyncApiResponse from "../../../../../../definitions/CaiAsyncApiResponse";
+import type CaiPunctuateParameters from "../../../../../../definitions/CaiPunctuateParameters";
+import type PunctuateInput from "../../../../../../definitions/PunctuateInput";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -26,7 +30,12 @@ class Index {
     queryParams?: CaiPunctuateParameters,
     restRequestConfig?: RestRequestConfig,
   ): Promise<CaiAsyncApiResponse> {
-    const r = await this.rc.post<CaiAsyncApiResponse>(this.path(), punctuateInput, queryParams, restRequestConfig);
+    const r = await this.rc.post<CaiAsyncApiResponse>(
+      this.path(),
+      punctuateInput,
+      queryParams,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

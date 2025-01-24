@@ -1,6 +1,6 @@
-import type PostalAddress from './PostalAddress';
-import type ServiceInfoV2 from './ServiceInfoV2';
-import type SystemUserContactInfo from './SystemUserContactInfo';
+import type PostalAddress from "./PostalAddress";
+import type ServiceInfoV2 from "./ServiceInfoV2";
+import type SystemUserContactInfo from "./SystemUserContactInfo";
 
 interface AccountInfo {
   /**
@@ -27,7 +27,7 @@ interface AccountInfo {
    * Status of an account
    * Required
    */
-  status?: 'Initial' | 'Unconfirmed' | 'Confirmed' | 'Disabled';
+  status?: "Initial" | "Unconfirmed" | "Confirmed" | "Disabled";
 
   /**
    * Company name
@@ -35,8 +35,7 @@ interface AccountInfo {
    */
   companyName?: string;
 
-  /**
-   */
+  /** */
   companyAddress?: PostalAddress;
 
   /**
@@ -44,8 +43,7 @@ interface AccountInfo {
    */
   serviceInfo?: ServiceInfoV2;
 
-  /**
-   */
+  /** */
   contactInfo?: SystemUserContactInfo;
 
   /**

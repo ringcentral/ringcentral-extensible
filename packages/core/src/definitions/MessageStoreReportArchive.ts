@@ -1,8 +1,7 @@
-import type ArchiveInfo from './ArchiveInfo';
+import type ArchiveInfo from "./ArchiveInfo";
 
 interface MessageStoreReportArchive {
-  /**
-   */
+  /** */
   records?: ArchiveInfo[];
 }
 

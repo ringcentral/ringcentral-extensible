@@ -1,4 +1,4 @@
-import type TMChatMemberInfo from './TMChatMemberInfo';
+import type TMChatMemberInfo from "./TMChatMemberInfo";
 
 interface TMChatInfo {
   /**
@@ -9,7 +9,7 @@ interface TMChatInfo {
   /**
    * Type of chat
    */
-  type?: 'Everyone' | 'Team' | 'Group' | 'Direct' | 'Personal';
+  type?: "Everyone" | "Team" | "Group" | "Direct" | "Personal";
 
   /**
    * For 'Team' chat type only. Team access level.
@@ -29,7 +29,7 @@ interface TMChatInfo {
   /**
    * For 'Team' chat type only. Team status.
    */
-  status?: 'Active' | 'Archived';
+  status?: "Active" | "Archived";
 
   /**
    * Chat creation datetime in ISO 8601 format
@@ -43,8 +43,7 @@ interface TMChatInfo {
    */
   lastModifiedTime?: string;
 
-  /**
-   */
+  /** */
   members?: TMChatMemberInfo[];
 }
 

@@ -1,4 +1,4 @@
-import type MetaDataValues from './MetaDataValues';
+import type MetaDataValues from "./MetaDataValues";
 
 /**
  * Call metadata.

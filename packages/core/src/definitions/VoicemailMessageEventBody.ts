@@ -1,6 +1,6 @@
-import type NotificationRecipientInfo from './NotificationRecipientInfo';
-import type SenderInfo from './SenderInfo';
-import type MessageAttachmentInfo from './MessageAttachmentInfo';
+import type NotificationRecipientInfo from "./NotificationRecipientInfo";
+import type SenderInfo from "./SenderInfo";
+import type MessageAttachmentInfo from "./MessageAttachmentInfo";
 
 /**
  * Notification payload body
@@ -17,14 +17,13 @@ interface VoicemailMessageEventBody {
    */
   to?: NotificationRecipientInfo[];
 
-  /**
-   */
+  /** */
   from?: SenderInfo;
 
   /**
    * Type of message
    */
-  type?: 'Voicemail';
+  type?: "Voicemail";
 
   /**
    * Message creation date/time in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
@@ -43,12 +42,12 @@ interface VoicemailMessageEventBody {
   /**
    * Message read status
    */
-  readStatus?: 'Read' | 'Unread';
+  readStatus?: "Read" | "Unread";
 
   /**
    * Message priority
    */
-  priority?: 'Normal' | 'High';
+  priority?: "Normal" | "High";
 
   /**
    * Message attachment data
@@ -60,7 +59,7 @@ interface VoicemailMessageEventBody {
    *  directions are allowed. For example voicemail messages can
    *  be only inbound
    */
-  direction?: 'Inbound' | 'Outbound';
+  direction?: "Inbound" | "Outbound";
 
   /**
    * Message availability status. Message in 'Deleted' state is still
@@ -68,7 +67,7 @@ interface VoicemailMessageEventBody {
    *  that all attachments are already deleted and the message itself is about
    *  to be physically deleted shortly
    */
-  availability?: 'Alive' | 'Deleted' | 'Purged';
+  availability?: "Alive" | "Deleted" | "Purged";
 
   /**
    * Message subject. It replicates message text which is also returned as an attachment
@@ -83,20 +82,26 @@ interface VoicemailMessageEventBody {
    *  'SendingFailed', then the 'SendingFailed' value is returned. In other cases
    *  the 'Sent' status is returned
    */
-  messageStatus?: 'Queued' | 'Sent' | 'Delivered' | 'DeliveryFailed' | 'SendingFailed' | 'Received';
+  messageStatus?:
+    | "Queued"
+    | "Sent"
+    | "Delivered"
+    | "DeliveryFailed"
+    | "SendingFailed"
+    | "Received";
 
   /**
    * Status of a voicemail to text transcription. Specifies if a voicemail message transcription is already completed or not
    *  If 'VoicemailToText' feature is not activated for account, the 'NotAvailable' value is returned
    */
   vmTranscriptionStatus?:
-    | 'NotAvailable'
-    | 'InProgress'
-    | 'TimedOut'
-    | 'Completed'
-    | 'CompletedPartially'
-    | 'Failed'
-    | 'Unknown';
+    | "NotAvailable"
+    | "InProgress"
+    | "TimedOut"
+    | "Completed"
+    | "CompletedPartially"
+    | "Failed"
+    | "Unknown";
 }
 
 export default VoicemailMessageEventBody;

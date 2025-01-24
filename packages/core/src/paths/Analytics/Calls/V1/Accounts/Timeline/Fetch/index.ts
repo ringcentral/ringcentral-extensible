@@ -1,7 +1,11 @@
-import type TimelineResponse from '../../../../../../../definitions/TimelineResponse';
-import type AnalyticsCallsTimelineFetchParameters from '../../../../../../../definitions/AnalyticsCallsTimelineFetchParameters';
-import type TimelineRequest from '../../../../../../../definitions/TimelineRequest';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../../types';
+import type TimelineResponse from "../../../../../../../definitions/TimelineResponse";
+import type AnalyticsCallsTimelineFetchParameters from "../../../../../../../definitions/AnalyticsCallsTimelineFetchParameters";
+import type TimelineRequest from "../../../../../../../definitions/TimelineRequest";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -26,7 +30,12 @@ class Index {
     queryParams?: AnalyticsCallsTimelineFetchParameters,
     restRequestConfig?: RestRequestConfig,
   ): Promise<TimelineResponse> {
-    const r = await this.rc.post<TimelineResponse>(this.path(), timelineRequest, queryParams, restRequestConfig);
+    const r = await this.rc.post<TimelineResponse>(
+      this.path(),
+      timelineRequest,
+      queryParams,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

@@ -1,14 +1,12 @@
-import type DetailedCallInfo from './DetailedCallInfo';
-import type CallInfoCQ from './CallInfoCQ';
+import type DetailedCallInfo from "./DetailedCallInfo";
+import type CallInfoCQ from "./CallInfoCQ";
 
 interface ActiveCallInfo {
-  /**
-   */
+  /** */
   id?: string;
 
-  /**
-   */
-  direction?: 'Inbound' | 'Outbound';
+  /** */
+  direction?: "Inbound" | "Outbound";
 
   /**
    * Identifies if a call belongs to the call queue
@@ -44,14 +42,17 @@ interface ActiveCallInfo {
   /**
    * Telephony presence status
    */
-  telephonyStatus?: 'NoCall' | 'CallConnected' | 'Ringing' | 'OnHold' | 'ParkedCall';
+  telephonyStatus?:
+    | "NoCall"
+    | "CallConnected"
+    | "Ringing"
+    | "OnHold"
+    | "ParkedCall";
 
-  /**
-   */
+  /** */
   sipData?: DetailedCallInfo;
 
-  /**
-   */
+  /** */
   sessionId?: string;
 
   /**
@@ -69,12 +70,10 @@ interface ActiveCallInfo {
    */
   partyId?: string;
 
-  /**
-   */
+  /** */
   terminationType?: string;
 
-  /**
-   */
+  /** */
   callInfo?: CallInfoCQ;
 }
 

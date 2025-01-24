@@ -1,7 +1,11 @@
-import Default from './Default';
-import type BridgeResponse from '../../../../../../definitions/BridgeResponse';
-import type CreateBridgeRequest from '../../../../../../definitions/CreateBridgeRequest';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../types';
+import Default from "./Default";
+import type BridgeResponse from "../../../../../../definitions/BridgeResponse";
+import type CreateBridgeRequest from "../../../../../../definitions/CreateBridgeRequest";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -28,7 +32,12 @@ class Index {
     createBridgeRequest: CreateBridgeRequest,
     restRequestConfig?: RestRequestConfig,
   ): Promise<BridgeResponse> {
-    const r = await this.rc.post<BridgeResponse>(this.path(), createBridgeRequest, undefined, restRequestConfig);
+    const r = await this.rc.post<BridgeResponse>(
+      this.path(),
+      createBridgeRequest,
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 

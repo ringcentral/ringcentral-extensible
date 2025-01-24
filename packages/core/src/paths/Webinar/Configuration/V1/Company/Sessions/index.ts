@@ -1,6 +1,10 @@
-import type WcsSessionGlobalListResource from '../../../../../../definitions/WcsSessionGlobalListResource';
-import type RcwConfigListAllCompanySessionsParameters from '../../../../../../definitions/RcwConfigListAllCompanySessionsParameters';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../types';
+import type WcsSessionGlobalListResource from "../../../../../../definitions/WcsSessionGlobalListResource";
+import type RcwConfigListAllCompanySessionsParameters from "../../../../../../definitions/RcwConfigListAllCompanySessionsParameters";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -27,7 +31,11 @@ class Index {
     queryParams?: RcwConfigListAllCompanySessionsParameters,
     restRequestConfig?: RestRequestConfig,
   ): Promise<WcsSessionGlobalListResource> {
-    const r = await this.rc.get<WcsSessionGlobalListResource>(this.path(), queryParams, restRequestConfig);
+    const r = await this.rc.get<WcsSessionGlobalListResource>(
+      this.path(),
+      queryParams,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

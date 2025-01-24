@@ -1,18 +1,25 @@
-import type PatchContactParameters from '../../../../../../definitions/PatchContactParameters';
-import type UpdateContactParameters from '../../../../../../definitions/UpdateContactParameters';
-import type PersonalContactResource from '../../../../../../definitions/PersonalContactResource';
-import type CreateContactParameters from '../../../../../../definitions/CreateContactParameters';
-import type PersonalContactRequest from '../../../../../../definitions/PersonalContactRequest';
-import type ContactList from '../../../../../../definitions/ContactList';
-import type ListContactsParameters from '../../../../../../definitions/ListContactsParameters';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../types';
+import type PatchContactParameters from "../../../../../../definitions/PatchContactParameters";
+import type UpdateContactParameters from "../../../../../../definitions/UpdateContactParameters";
+import type PersonalContactResource from "../../../../../../definitions/PersonalContactResource";
+import type CreateContactParameters from "../../../../../../definitions/CreateContactParameters";
+import type PersonalContactRequest from "../../../../../../definitions/PersonalContactRequest";
+import type ContactList from "../../../../../../definitions/ContactList";
+import type ListContactsParameters from "../../../../../../definitions/ListContactsParameters";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
   public _parent: ParentInterface;
   public contactId: string | null;
 
-  public constructor(_parent: ParentInterface, contactId: string | null = null) {
+  public constructor(
+    _parent: ParentInterface,
+    contactId: string | null = null,
+  ) {
     this._parent = _parent;
     this.rc = _parent.rc;
     this.contactId = contactId;
@@ -32,8 +39,15 @@ class Index {
    * App Permission: ReadContacts
    * User Permission: ReadPersonalContacts
    */
-  public async list(queryParams?: ListContactsParameters, restRequestConfig?: RestRequestConfig): Promise<ContactList> {
-    const r = await this.rc.get<ContactList>(this.path(false), queryParams, restRequestConfig);
+  public async list(
+    queryParams?: ListContactsParameters,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<ContactList> {
+    const r = await this.rc.get<ContactList>(
+      this.path(false),
+      queryParams,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -70,11 +84,17 @@ class Index {
    * App Permission: ReadContacts
    * User Permission: ReadPersonalContacts
    */
-  public async get(restRequestConfig?: RestRequestConfig): Promise<PersonalContactResource> {
+  public async get(
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<PersonalContactResource> {
     if (this.contactId === null) {
-      throw new Error('contactId must be specified.');
+      throw new Error("contactId must be specified.");
     }
-    const r = await this.rc.get<PersonalContactResource>(this.path(), undefined, restRequestConfig);
+    const r = await this.rc.get<PersonalContactResource>(
+      this.path(),
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -94,7 +114,7 @@ class Index {
     restRequestConfig?: RestRequestConfig,
   ): Promise<PersonalContactResource> {
     if (this.contactId === null) {
-      throw new Error('contactId must be specified.');
+      throw new Error("contactId must be specified.");
     }
     const r = await this.rc.put<PersonalContactResource>(
       this.path(),
@@ -117,9 +137,14 @@ class Index {
    */
   public async delete(restRequestConfig?: RestRequestConfig): Promise<string> {
     if (this.contactId === null) {
-      throw new Error('contactId must be specified.');
+      throw new Error("contactId must be specified.");
     }
-    const r = await this.rc.delete<string>(this.path(), {}, undefined, restRequestConfig);
+    const r = await this.rc.delete<string>(
+      this.path(),
+      {},
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -139,7 +164,7 @@ class Index {
     restRequestConfig?: RestRequestConfig,
   ): Promise<PersonalContactResource> {
     if (this.contactId === null) {
-      throw new Error('contactId must be specified.');
+      throw new Error("contactId must be specified.");
     }
     const r = await this.rc.patch<PersonalContactResource>(
       this.path(),

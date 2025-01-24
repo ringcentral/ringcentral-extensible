@@ -9,8 +9,7 @@ interface ScimBulkSupported {
    */
   maxPayloadSize?: number;
 
-  /**
-   */
+  /** */
   supported?: boolean;
 }
 

@@ -13,12 +13,15 @@ interface AddPhoneNumberRequestItem {
    * Required
    * Default: Inventory
    */
-  usageType?: 'Inventory' | 'InventoryPartnerBusinessMobileNumber' | 'PartnerBusinessMobileNumber';
+  usageType?:
+    | "Inventory"
+    | "InventoryPartnerBusinessMobileNumber"
+    | "PartnerBusinessMobileNumber";
 
   /**
    * Phone number activation status. Determine whether phone number migration is completed on the partner side.
    */
-  activationStatus?: 'Active' | 'Inactive';
+  activationStatus?: "Active" | "Inactive";
 }
 
 export default AddPhoneNumberRequestItem;

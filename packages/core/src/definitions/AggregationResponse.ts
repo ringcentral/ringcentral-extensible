@@ -1,5 +1,5 @@
-import type ResponsePaging from './ResponsePaging';
-import type AggregationResponseData from './AggregationResponseData';
+import type ResponsePaging from "./ResponsePaging";
+import type AggregationResponseData from "./AggregationResponseData";
 
 interface AggregationResponse {
   /**

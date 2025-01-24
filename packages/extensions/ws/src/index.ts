@@ -1,20 +1,31 @@
 /* eslint-disable no-console */
-import type RingCentral from '@rc-ex/core';
-import type { RestMethod, RestRequestConfig, RestResponse } from '@rc-ex/core/lib/types';
-import SdkExtension from '@rc-ex/core/lib/SdkExtension';
-import type { MessageEvent } from 'isomorphic-ws';
-import WS from 'isomorphic-ws';
-import hyperid from 'hyperid';
-import { EventEmitter } from 'events';
-import waitFor from 'wait-for-async';
-import RestException from '@rc-ex/core/lib/RestException';
-import type SubscriptionInfo from '@rc-ex/core/lib/definitions/SubscriptionInfo';
+import type RingCentral from "@rc-ex/core";
+import type {
+  RestMethod,
+  RestRequestConfig,
+  RestResponse,
+} from "@rc-ex/core/lib/types";
+import SdkExtension from "@rc-ex/core/lib/SdkExtension";
+import type { MessageEvent } from "isomorphic-ws";
+import WS from "isomorphic-ws";
+import hyperid from "hyperid";
+import { EventEmitter } from "events";
+import waitFor from "wait-for-async";
+import RestException from "@rc-ex/core/lib/RestException";
+import type SubscriptionInfo from "@rc-ex/core/lib/definitions/SubscriptionInfo";
 
-import { request } from './rest';
-import type { WsToken, ConnectionDetails, WebSocketOptions, WsgEvent, Wsc, WebSocketExtensionInterface } from './types';
-import Subscription from './subscription';
-import ConnectionException from './exceptions/ConnectionException';
-import Utils from './utils';
+import { request } from "./rest";
+import type {
+  ConnectionDetails,
+  WebSocketExtensionInterface,
+  WebSocketOptions,
+  Wsc,
+  WsgEvent,
+  WsToken,
+} from "./types";
+import Subscription from "./subscription";
+import ConnectionException from "./exceptions/ConnectionException";
+import Utils from "./utils";
 
 const CONNECTING = 0;
 const OPEN = 1;
@@ -22,12 +33,12 @@ const OPEN = 1;
 const uuid = hyperid();
 
 export enum Events {
-  autoRecoverSuccess = 'autoRecoverSuccess',
-  autoRecoverFailed = 'autoRecoverFailed',
-  autoRecoverError = 'autoRecoverError',
-  newWebSocketObject = 'newWebSocketObject',
-  newWsc = 'newWsc',
-  connectionReady = 'connectionReady',
+  autoRecoverSuccess = "autoRecoverSuccess",
+  autoRecoverFailed = "autoRecoverFailed",
+  autoRecoverError = "autoRecoverError",
+  newWebSocketObject = "newWebSocketObject",
+  newWsc = "newWsc",
+  connectionReady = "connectionReady",
 }
 
 class WebSocketExtension extends SdkExtension {
@@ -101,9 +112,11 @@ class WebSocketExtension extends SdkExtension {
         }
         if (
           // the following cannot be done with WebSocket
-          config?.headers?.getContentType?.toString()?.includes('multipart/form-data') ||
-          config?.responseType === 'arraybuffer' ||
-          endpoint.startsWith('/restapi/oauth/') // token, revoke, wstoken
+          config?.headers?.getContentType?.toString()?.includes(
+            "multipart/form-data",
+          ) ||
+          config?.responseType === "arraybuffer" ||
+          endpoint.startsWith("/restapi/oauth/") // token, revoke, wstoken
         ) {
           return request(method, endpoint, content, queryParams, config);
         }
@@ -134,7 +147,7 @@ class WebSocketExtension extends SdkExtension {
         throw e; // such as InsufficientPermissions
       }
       if (this.options.debugMode) {
-        console.debug('Initial connect failed:', e);
+        console.debug("Initial connect failed:", e);
       }
     }
     let retriesAttempted = 0;
@@ -156,10 +169,12 @@ class WebSocketExtension extends SdkExtension {
           await this.recover();
           retriesAttempted = 0;
           if (this.options.debugMode) {
-            console.debug(`Auto recover done, recoveryState: ${this.connectionDetails.recoveryState}`);
+            console.debug(
+              `Auto recover done, recoveryState: ${this.connectionDetails.recoveryState}`,
+            );
           }
           this.eventEmitter.emit(
-            this.connectionDetails.recoveryState === 'Successful'
+            this.connectionDetails.recoveryState === "Successful"
               ? Events.autoRecoverSuccess
               : Events.autoRecoverFailed,
             this.ws,
@@ -170,25 +185,31 @@ class WebSocketExtension extends SdkExtension {
           }
           retriesAttempted += 1;
           if (this.options.debugMode) {
-            console.debug('Auto recover error:', e);
+            console.debug("Auto recover error:", e);
           }
           this.eventEmitter.emit(Events.autoRecoverError, e);
         }
-        this.intervalHandle = setInterval(check, this.options.autoRecover!.checkInterval!(retriesAttempted));
+        this.intervalHandle = setInterval(
+          check,
+          this.options.autoRecover!.checkInterval!(retriesAttempted),
+        );
       }
       checking = false;
     };
-    this.intervalHandle = setInterval(check, this.options.autoRecover!.checkInterval!(retriesAttempted));
+    this.intervalHandle = setInterval(
+      check,
+      this.options.autoRecover!.checkInterval!(retriesAttempted),
+    );
 
     // browser only code start
-    if (typeof window !== 'undefined' && window.addEventListener) {
-      window.addEventListener('offline', () => {
+    if (typeof window !== "undefined" && window.addEventListener) {
+      window.addEventListener("offline", () => {
         if (this.pingServerHandle) {
           clearTimeout(this.pingServerHandle);
         }
         this.ws?.close();
       });
-      window.addEventListener('online', () => {
+      window.addEventListener("online", () => {
         check();
       });
     }
@@ -221,15 +242,16 @@ class WebSocketExtension extends SdkExtension {
     }
     if (
       this.connectionDetails !== undefined &&
-      Date.now() - this.recoverTimestamp > this.connectionDetails.recoveryTimeout * 1000
+      Date.now() - this.recoverTimestamp >
+        this.connectionDetails.recoveryTimeout * 1000
     ) {
       if (this.options.debugMode) {
-        console.debug('connect to WSG but do not recover');
+        console.debug("connect to WSG but do not recover");
       }
       await this.connect(false); // connect to WSG but do not recover
     } else {
       if (this.options.debugMode) {
-        console.debug('connect to WSG and recover');
+        console.debug("connect to WSG and recover");
       }
       await this.connect(true); // connect to WSG and recover
     }
@@ -248,7 +270,7 @@ class WebSocketExtension extends SdkExtension {
       await this.ws.send(
         JSON.stringify([
           {
-            type: 'Heartbeat',
+            type: "Heartbeat",
             messageId: uuid(),
           },
         ]),
@@ -274,12 +296,14 @@ class WebSocketExtension extends SdkExtension {
 
   public async _connect(recoverSession = false) {
     if (!this.wsToken || Date.now() > this.wsTokenExpiresAt) {
-      const r = await this.rc.post('/restapi/oauth/wstoken');
+      const r = await this.rc.post("/restapi/oauth/wstoken");
       this.wsToken = r.data as WsToken;
       // `expires_in` default value is 600 seconds. That's why we `* 0.8`
       this.wsTokenExpiresAt = Date.now() + this.wsToken.expires_in * 0.8 * 1000;
     }
-    let wsUri = `${this.wsToken!.uri}?access_token=${this.wsToken!.ws_access_token}`;
+    let wsUri = `${this.wsToken!.uri}?access_token=${
+      this.wsToken!.ws_access_token
+    }`;
     if (recoverSession && this.wsc) {
       wsUri += `&wsc=${this.wsc.token}`;
     }
@@ -299,11 +323,14 @@ class WebSocketExtension extends SdkExtension {
     };
 
     if (this.options.autoRecover?.enabled) {
-      this.ws.addEventListener('message', () => {
+      this.ws.addEventListener("message", () => {
         if (this.pingServerHandle) {
           clearTimeout(this.pingServerHandle);
         }
-        this.pingServerHandle = setTimeout(() => this.pingServer(), this.options.autoRecover!.pingServerInterval);
+        this.pingServerHandle = setTimeout(
+          () => this.pingServer(),
+          this.options.autoRecover!.pingServerInterval,
+        );
       });
     }
 
@@ -313,13 +340,13 @@ class WebSocketExtension extends SdkExtension {
     }
 
     // listen for new wsc data
-    this.ws.addEventListener('message', (mEvent: MessageEvent) => {
+    this.ws.addEventListener("message", (mEvent: MessageEvent) => {
       const event = mEvent as WsgEvent;
       const [meta, body] = Utils.splitWsgData(event.data);
       if (
         meta.wsc &&
         (!this.wsc ||
-          (meta.type === 'ConnectionDetails' && body.recoveryState) ||
+          (meta.type === "ConnectionDetails" && body.recoveryState) ||
           this.wsc.sequence < meta.wsc.sequence)
       ) {
         this.wsc = meta.wsc;
@@ -330,9 +357,9 @@ class WebSocketExtension extends SdkExtension {
     // get initial ConnectionDetails data
     const [meta, body, event] = await Utils.waitForWebSocketMessage(
       this.ws,
-      (meta) => meta.type === 'ConnectionDetails' || meta.type === 'Error',
+      (meta) => meta.type === "ConnectionDetails" || meta.type === "Error",
     );
-    if (meta.type === 'Error') {
+    if (meta.type === "Error") {
       throw new ConnectionException(event);
     }
     this.connectionDetails = body;
@@ -344,7 +371,9 @@ class WebSocketExtension extends SdkExtension {
     if (this.subscription && this.subscription.enabled) {
       // because we have a new ws object
       this.subscription.setupWsEventListener();
-      if (!recoverSession || this.connectionDetails.recoveryState === 'Failed') {
+      if (
+        !recoverSession || this.connectionDetails.recoveryState === "Failed"
+      ) {
         // create new subscription if don't recover existing one
         await this.subscription.subscribe();
       }
@@ -373,7 +402,11 @@ class WebSocketExtension extends SdkExtension {
     callback: (event: {}) => void,
     cache: SubscriptionInfo | undefined | null = undefined,
   ) {
-    const subscription = new Subscription(this as WebSocketExtensionInterface, eventFilters, callback);
+    const subscription = new Subscription(
+      this as WebSocketExtensionInterface,
+      eventFilters,
+      callback,
+    );
     if (cache === undefined || cache === null) {
       await subscription.subscribe();
     } else {

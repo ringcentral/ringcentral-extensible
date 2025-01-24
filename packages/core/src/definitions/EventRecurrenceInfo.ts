@@ -4,12 +4,12 @@ interface EventRecurrenceInfo {
    *  is `None`. Must be greater or equal to event duration: 1- Day/Weekday;
    *  7 - Week; 28 - Month; 365 - Year
    */
-  schedule?: 'None' | 'Day' | 'Weekday' | 'Week' | 'Month' | 'Year';
+  schedule?: "None" | "Day" | "Weekday" | "Week" | "Month" | "Year";
 
   /**
    * Condition of ending an event
    */
-  endingCondition?: 'None' | 'Count' | 'Date';
+  endingCondition?: "None" | "Count" | "Date";
 
   /**
    * Count of event iterations. For periodic events only. Value range is 1 - 10.

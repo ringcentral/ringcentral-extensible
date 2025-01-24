@@ -1,9 +1,9 @@
-import type AccountOperatorInfo from './AccountOperatorInfo';
-import type ServiceInfo from './ServiceInfo';
-import type SignupInfoResource from './SignupInfoResource';
-import type AccountStatusInfo from './AccountStatusInfo';
-import type AccountRegionalSettings from './AccountRegionalSettings';
-import type AccountLimits from './AccountLimits';
+import type AccountOperatorInfo from "./AccountOperatorInfo";
+import type ServiceInfo from "./ServiceInfo";
+import type SignupInfoResource from "./SignupInfoResource";
+import type AccountStatusInfo from "./AccountStatusInfo";
+import type AccountRegionalSettings from "./AccountRegionalSettings";
+import type AccountLimits from "./AccountLimits";
 
 interface GetAccountInfoResponse {
   /**
@@ -28,8 +28,7 @@ interface GetAccountInfoResponse {
    */
   mainNumber?: string;
 
-  /**
-   */
+  /** */
   operator?: AccountOperatorInfo;
 
   /**
@@ -38,30 +37,26 @@ interface GetAccountInfoResponse {
    */
   partnerId?: string;
 
-  /**
-   */
+  /** */
   serviceInfo?: ServiceInfo;
 
   /**
    * Initial configuration wizard state
    */
-  setupWizardState?: 'NotStarted' | 'Incomplete' | 'Completed' | 'Unknown';
+  setupWizardState?: "NotStarted" | "Incomplete" | "Completed" | "Unknown";
 
-  /**
-   */
+  /** */
   signupInfo?: SignupInfoResource;
 
   /**
    * Status of an account
    */
-  status?: 'Initial' | 'Unconfirmed' | 'Confirmed' | 'Disabled';
+  status?: "Initial" | "Unconfirmed" | "Confirmed" | "Disabled";
 
-  /**
-   */
+  /** */
   statusInfo?: AccountStatusInfo;
 
-  /**
-   */
+  /** */
   regionalSettings?: AccountRegionalSettings;
 
   /**
@@ -85,8 +80,7 @@ interface GetAccountInfoResponse {
    */
   cfid?: string;
 
-  /**
-   */
+  /** */
   limits?: AccountLimits;
 }
 

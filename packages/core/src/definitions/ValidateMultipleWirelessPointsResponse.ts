@@ -1,8 +1,7 @@
-import type WirelessPointValidated from './WirelessPointValidated';
+import type WirelessPointValidated from "./WirelessPointValidated";
 
 interface ValidateMultipleWirelessPointsResponse {
-  /**
-   */
+  /** */
   records?: WirelessPointValidated[];
 }
 

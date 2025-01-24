@@ -1,10 +1,10 @@
-import type ScimUserAddress from './ScimUserAddress';
-import type ScimEmail from './ScimEmail';
-import type ScimName from './ScimName';
-import type ScimPhoneNumber from './ScimPhoneNumber';
-import type ScimPhoto from './ScimPhoto';
-import type ScimEnterpriseUser from './ScimEnterpriseUser';
-import type ScimMeta from './ScimMeta';
+import type ScimUserAddress from "./ScimUserAddress";
+import type ScimEmail from "./ScimEmail";
+import type ScimName from "./ScimName";
+import type ScimPhoneNumber from "./ScimPhoneNumber";
+import type ScimPhoto from "./ScimPhoto";
+import type ScimEnterpriseUser from "./ScimEnterpriseUser";
+import type ScimMeta from "./ScimMeta";
 
 interface ScimUserResponse {
   /**
@@ -12,8 +12,7 @@ interface ScimUserResponse {
    */
   active?: boolean;
 
-  /**
-   */
+  /** */
   addresses?: ScimUserAddress[];
 
   /**
@@ -36,27 +35,25 @@ interface ScimUserResponse {
    */
   name?: ScimName;
 
-  /**
-   */
+  /** */
   phoneNumbers?: ScimPhoneNumber[];
 
-  /**
-   */
+  /** */
   photos?: ScimPhoto[];
 
   /**
    * Required
    */
-  schemas?: 'urn:ietf:params:scim:schemas:core:2.0:User'[];
+  schemas?: "urn:ietf:params:scim:schemas:core:2.0:User"[];
 
   /**
    * User title
    */
   title?: string;
 
-  /**
-   */
-  'urn:ietf:params:scim:schemas:extension:enterprise:2.0:User'?: ScimEnterpriseUser;
+  /** */
+  "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User"?:
+    ScimEnterpriseUser;
 
   /**
    * MUST be same as work type email address
@@ -64,8 +61,7 @@ interface ScimUserResponse {
    */
   userName?: string;
 
-  /**
-   */
+  /** */
   meta?: ScimMeta;
 }
 

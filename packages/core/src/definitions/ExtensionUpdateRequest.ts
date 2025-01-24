@@ -1,20 +1,19 @@
-import type ExtensionStatusInfo from './ExtensionStatusInfo';
-import type ContactInfoUpdateRequest from './ContactInfoUpdateRequest';
-import type ExtensionRegionalSettingRequest from './ExtensionRegionalSettingRequest';
-import type CallQueueInfoRequest from './CallQueueInfoRequest';
-import type UserTransitionInfo from './UserTransitionInfo';
-import type CustomFieldInfo from './CustomFieldInfo';
-import type SiteReference from './SiteReference';
-import type ReferenceInfo from './ReferenceInfo';
+import type ExtensionStatusInfo from "./ExtensionStatusInfo";
+import type ContactInfoUpdateRequest from "./ContactInfoUpdateRequest";
+import type ExtensionRegionalSettingRequest from "./ExtensionRegionalSettingRequest";
+import type CallQueueInfoRequest from "./CallQueueInfoRequest";
+import type UserTransitionInfo from "./UserTransitionInfo";
+import type CustomFieldInfo from "./CustomFieldInfo";
+import type SiteReference from "./SiteReference";
+import type ReferenceInfo from "./ReferenceInfo";
 
 interface ExtensionUpdateRequest {
   /**
    * Extension status
    */
-  status?: 'Enabled' | 'Disabled' | 'Frozen' | 'NotActivated';
+  status?: "Enabled" | "Disabled" | "Frozen" | "NotActivated";
 
-  /**
-   */
+  /** */
   statusInfo?: ExtensionStatusInfo;
 
   /**
@@ -22,19 +21,17 @@ interface ExtensionUpdateRequest {
    */
   extensionNumber?: string;
 
-  /**
-   */
+  /** */
   contact?: ContactInfoUpdateRequest;
 
-  /**
-   */
+  /** */
   regionalSettings?: ExtensionRegionalSettingRequest;
 
   /**
    * Initial configuration wizard state
    * Default: NotStarted
    */
-  setupWizardState?: 'NotStarted' | 'Incomplete' | 'Completed';
+  setupWizardState?: "NotStarted" | "Incomplete" | "Completed";
 
   /**
    * Additional extension identifier, created by partner application
@@ -52,20 +49,16 @@ interface ExtensionUpdateRequest {
    */
   password?: string;
 
-  /**
-   */
+  /** */
   callQueueInfo?: CallQueueInfoRequest;
 
-  /**
-   */
+  /** */
   transition?: UserTransitionInfo;
 
-  /**
-   */
+  /** */
   customFields?: CustomFieldInfo[];
 
-  /**
-   */
+  /** */
   site?: SiteReference;
 
   /**
@@ -74,27 +67,32 @@ interface ExtensionUpdateRequest {
    *  product terminology
    */
   type?:
-    | 'User'
-    | 'FaxUser'
-    | 'FlexibleUser'
-    | 'VirtualUser'
-    | 'DigitalUser'
-    | 'Department'
-    | 'Announcement'
-    | 'Voicemail'
-    | 'SharedLinesGroup'
-    | 'PagingOnly'
-    | 'IvrMenu'
-    | 'ApplicationExtension'
-    | 'ParkLocation'
-    | 'DelegatedLinesGroup'
-    | 'GroupCallPickup';
+    | "User"
+    | "FaxUser"
+    | "FlexibleUser"
+    | "VirtualUser"
+    | "DigitalUser"
+    | "Department"
+    | "Announcement"
+    | "Voicemail"
+    | "SharedLinesGroup"
+    | "PagingOnly"
+    | "IvrMenu"
+    | "ApplicationExtension"
+    | "ParkLocation"
+    | "DelegatedLinesGroup"
+    | "GroupCallPickup";
 
   /**
    * Extension subtype, if applicable. For any unsupported subtypes
    *  the 'Unknown' value will be returned
    */
-  subType?: 'VideoPro' | 'VideoProPlus' | 'DigitalSignageOnlyRooms' | 'Unknown' | 'Emergency';
+  subType?:
+    | "VideoPro"
+    | "VideoProPlus"
+    | "DigitalSignageOnlyRooms"
+    | "Unknown"
+    | "Emergency";
 
   /**
    * List of non-RC internal identifiers assigned to an extension

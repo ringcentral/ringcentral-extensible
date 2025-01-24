@@ -4,24 +4,23 @@ interface ScimErrorResponse {
    */
   detail?: string;
 
-  /**
-   */
-  schemas?: 'urn:ietf:params:scim:api:messages:2.0:Error'[];
+  /** */
+  schemas?: "urn:ietf:params:scim:api:messages:2.0:Error"[];
 
   /**
    * Bad request type when status code is 400
    */
   scimType?:
-    | 'uniqueness'
-    | 'tooMany'
-    | 'mutability'
-    | 'sensitive'
-    | 'invalidSyntax'
-    | 'invalidFilter'
-    | 'invalidPath'
-    | 'invalidValue'
-    | 'invalidVers'
-    | 'noTarget';
+    | "uniqueness"
+    | "tooMany"
+    | "mutability"
+    | "sensitive"
+    | "invalidSyntax"
+    | "invalidFilter"
+    | "invalidPath"
+    | "invalidValue"
+    | "invalidVers"
+    | "noTarget";
 
   /**
    * Same as HTTP status code, e.g. 400, 401, etc.

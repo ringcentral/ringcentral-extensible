@@ -1,6 +1,6 @@
-import type TMUpdateTaskRequestAssignees from './TMUpdateTaskRequestAssignees';
-import type TaskRecurrenceInfo from './TaskRecurrenceInfo';
-import type TMAttachmentInfo from './TMAttachmentInfo';
+import type TMUpdateTaskRequestAssignees from "./TMUpdateTaskRequestAssignees";
+import type TaskRecurrenceInfo from "./TaskRecurrenceInfo";
+import type TMAttachmentInfo from "./TMAttachmentInfo";
 
 interface TMUpdateTaskRequest {
   /**
@@ -8,13 +8,11 @@ interface TMUpdateTaskRequest {
    */
   subject?: string;
 
-  /**
-   */
+  /** */
   assignees?: TMUpdateTaskRequestAssignees[];
 
-  /**
-   */
-  completenessCondition?: 'Simple' | 'AllAssignees' | 'Percentage';
+  /** */
+  completenessCondition?: "Simple" | "AllAssignees" | "Percentage";
 
   /**
    * Task start date in UTC time zone
@@ -28,9 +26,16 @@ interface TMUpdateTaskRequest {
    */
   dueDate?: string;
 
-  /**
-   */
-  color?: 'Black' | 'Red' | 'Orange' | 'Yellow' | 'Green' | 'Blue' | 'Purple' | 'Magenta';
+  /** */
+  color?:
+    | "Black"
+    | "Red"
+    | "Orange"
+    | "Yellow"
+    | "Green"
+    | "Blue"
+    | "Purple"
+    | "Magenta";
 
   /**
    * Task section to group / search by. Max allowed length is 100 characters.
@@ -42,12 +47,10 @@ interface TMUpdateTaskRequest {
    */
   description?: string;
 
-  /**
-   */
+  /** */
   recurrence?: TaskRecurrenceInfo;
 
-  /**
-   */
+  /** */
   attachments?: TMAttachmentInfo[];
 }
 

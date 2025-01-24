@@ -1,6 +1,10 @@
-import type SessionGlobalListResource from '../../../../../definitions/SessionGlobalListResource';
-import type RcwHistoryListAllSessionsParameters from '../../../../../definitions/RcwHistoryListAllSessionsParameters';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import type SessionGlobalListResource from "../../../../../definitions/SessionGlobalListResource";
+import type RcwHistoryListAllSessionsParameters from "../../../../../definitions/RcwHistoryListAllSessionsParameters";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -27,7 +31,11 @@ class Index {
     queryParams?: RcwHistoryListAllSessionsParameters,
     restRequestConfig?: RestRequestConfig,
   ): Promise<SessionGlobalListResource> {
-    const r = await this.rc.get<SessionGlobalListResource>(this.path(), queryParams, restRequestConfig);
+    const r = await this.rc.get<SessionGlobalListResource>(
+      this.path(),
+      queryParams,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

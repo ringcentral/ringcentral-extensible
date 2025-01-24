@@ -1,4 +1,4 @@
-import type TaxLocation from './TaxLocation';
+import type TaxLocation from "./TaxLocation";
 
 interface CostCenterItem {
   /**

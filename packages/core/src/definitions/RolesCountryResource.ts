@@ -4,12 +4,10 @@ interface RolesCountryResource {
    */
   uri?: string;
 
-  /**
-   */
+  /** */
   id?: string;
 
-  /**
-   */
+  /** */
   name?: string;
 
   /**
@@ -26,24 +24,19 @@ interface RolesCountryResource {
    */
   callingCode?: string;
 
-  /**
-   */
+  /** */
   emergencyCalling?: boolean;
 
-  /**
-   */
+  /** */
   numberSelling?: boolean;
 
-  /**
-   */
+  /** */
   loginAllowed?: boolean;
 
-  /**
-   */
+  /** */
   freeSoftphoneLine?: boolean;
 
-  /**
-   */
+  /** */
   signupAllowed?: boolean;
 }
 

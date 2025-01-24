@@ -35,13 +35,13 @@ interface BulkUpdateInviteesRequestUpdatedInvitees {
    *  See also: [Understanding Webinar Roles](https://support.ringcentral.com/webinar/getting-started/understanding-ringcentral-webinar-roles.html)
    * Example: Panelist
    */
-  role?: 'Panelist' | 'CoHost' | 'Host' | 'Attendee';
+  role?: "Panelist" | "CoHost" | "Host" | "Attendee";
 
   /**
    * The type of the webinar invitee
    * Default: User
    */
-  type?: 'User' | 'Room';
+  type?: "User" | "Room";
 
   /**
    * Indicates if invite/cancellation emails have to be sent to this invitee.

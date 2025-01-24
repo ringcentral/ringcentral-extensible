@@ -1,20 +1,19 @@
-import type ExtensionInfoCallLog from './ExtensionInfoCallLog';
-import type CallLogRecordTransferTarget from './CallLogRecordTransferTarget';
-import type CallLogRecordTransferee from './CallLogRecordTransferee';
-import type CallLogFromParty from './CallLogFromParty';
-import type CallLogToParty from './CallLogToParty';
-import type CallLogRecordMessage from './CallLogRecordMessage';
-import type CallLogDelegateInfo from './CallLogDelegateInfo';
-import type CallLogRecordingInfo from './CallLogRecordingInfo';
-import type BillingInfo from './BillingInfo';
-import type CallLogRecordLegInfo from './CallLogRecordLegInfo';
+import type ExtensionInfoCallLog from "./ExtensionInfoCallLog";
+import type CallLogRecordTransferTarget from "./CallLogRecordTransferTarget";
+import type CallLogRecordTransferee from "./CallLogRecordTransferee";
+import type CallLogFromParty from "./CallLogFromParty";
+import type CallLogToParty from "./CallLogToParty";
+import type CallLogRecordMessage from "./CallLogRecordMessage";
+import type CallLogDelegateInfo from "./CallLogDelegateInfo";
+import type CallLogRecordingInfo from "./CallLogRecordingInfo";
+import type BillingInfo from "./BillingInfo";
+import type CallLogRecordLegInfo from "./CallLogRecordLegInfo";
 
 /**
  * Call log record
  */
 interface CallLogRecord {
-  /**
-   */
+  /** */
   extension?: ExtensionInfoCallLog;
 
   /**
@@ -27,12 +26,10 @@ interface CallLogRecord {
    */
   sipUuidInfo?: string;
 
-  /**
-   */
+  /** */
   transferTarget?: CallLogRecordTransferTarget;
 
-  /**
-   */
+  /** */
   transferee?: CallLogRecordTransferee;
 
   /**
@@ -44,129 +41,125 @@ interface CallLogRecord {
    * The type of call transport. 'PSTN' indicates that a call leg was initiated
    *  from the PSTN network provider; 'VoIP' - from an RC phone.
    */
-  transport?: 'PSTN' | 'VoIP';
+  transport?: "PSTN" | "VoIP";
 
-  /**
-   */
+  /** */
   from?: CallLogFromParty;
 
-  /**
-   */
+  /** */
   to?: CallLogToParty;
 
   /**
    * The type of call
    * Required
    */
-  type?: 'Voice' | 'Fax';
+  type?: "Voice" | "Fax";
 
   /**
    * The direction of a call
    * Required
    */
-  direction?: 'Inbound' | 'Outbound';
+  direction?: "Inbound" | "Outbound";
 
-  /**
-   */
+  /** */
   message?: CallLogRecordMessage;
 
-  /**
-   */
+  /** */
   delegate?: CallLogDelegateInfo;
 
   /**
    * Call delegation type
    */
-  delegationType?: 'Coworker' | 'Unknown';
+  delegationType?: "Coworker" | "Unknown";
 
   /**
    * The internal action corresponding to the call operation
    * Required
    */
   action?:
-    | 'Accept Call'
-    | 'Barge In Call'
-    | 'Call Park'
-    | 'Call Return'
-    | 'CallOut-CallMe'
-    | 'Calling Card'
-    | 'Conference Call'
-    | 'E911 Update'
-    | 'Emergency'
-    | 'External Application'
-    | 'FindMe'
-    | 'FollowMe'
-    | 'FreeSPDL'
-    | 'Hunting'
-    | 'Incoming Fax'
-    | 'Monitoring'
-    | 'Move'
-    | 'Outgoing Fax'
-    | 'Paging'
-    | 'Park Location'
-    | 'Phone Call'
-    | 'Phone Login'
-    | 'Pickup'
-    | 'RC Meetings'
-    | 'Ring Directly'
-    | 'RingMe'
-    | 'RingOut Mobile'
-    | 'RingOut PC'
-    | 'RingOut Web'
-    | 'Sip Forwarding'
-    | 'Support'
-    | 'Text Relay'
-    | 'Transfer'
-    | 'Unknown'
-    | 'VoIP Call';
+    | "Accept Call"
+    | "Barge In Call"
+    | "Call Park"
+    | "Call Return"
+    | "CallOut-CallMe"
+    | "Calling Card"
+    | "Conference Call"
+    | "E911 Update"
+    | "Emergency"
+    | "External Application"
+    | "FindMe"
+    | "FollowMe"
+    | "FreeSPDL"
+    | "Hunting"
+    | "Incoming Fax"
+    | "Monitoring"
+    | "Move"
+    | "Outgoing Fax"
+    | "Paging"
+    | "Park Location"
+    | "Phone Call"
+    | "Phone Login"
+    | "Pickup"
+    | "RC Meetings"
+    | "Ring Directly"
+    | "RingMe"
+    | "RingOut Mobile"
+    | "RingOut PC"
+    | "RingOut Web"
+    | "Sip Forwarding"
+    | "Support"
+    | "Text Relay"
+    | "Transfer"
+    | "Unknown"
+    | "VoIP Call";
 
   /**
    * The result of the call operation
    */
   result?:
-    | '911'
-    | '933'
-    | 'Abandoned'
-    | 'Accepted'
-    | 'Answered Not Accepted'
-    | 'Blocked'
-    | 'Busy'
-    | 'Call Failed'
-    | 'Call Failure'
-    | 'Call connected'
-    | 'Carrier is not active'
-    | 'Declined'
-    | 'EDGE trunk misconfigured'
-    | 'Fax Not Sent'
-    | 'Fax Partially Sent'
-    | 'Fax Poor Line'
-    | 'Fax Receipt Error'
-    | 'Fax on Demand'
-    | 'Hang Up'
-    | 'IP Phone Offline'
-    | 'In Progress'
-    | 'Internal Error'
-    | 'International Disabled'
-    | 'International Restricted'
-    | 'Missed'
-    | 'No Answer'
-    | 'No Calling Credit'
-    | 'Not Allowed'
-    | 'Partial Receive'
-    | 'Phone Login'
-    | 'Receive Error'
-    | 'Received'
-    | 'Rejected'
-    | 'Reply'
-    | 'Restricted Number'
-    | 'Send Error'
-    | 'Sent'
-    | 'Sent to Voicemail'
-    | 'Stopped'
-    | 'Suspended account'
-    | 'Unknown'
-    | 'Voicemail'
-    | 'Wrong Number';
+    | "911"
+    | "933"
+    | "Abandoned"
+    | "Accepted"
+    | "Answered Not Accepted"
+    | "Blocked"
+    | "Busy"
+    | "Call Failed"
+    | "Call Failure"
+    | "Call connected"
+    | "Carrier is not active"
+    | "Declined"
+    | "EDGE trunk misconfigured"
+    | "Fax Not Sent"
+    | "Fax Partially Sent"
+    | "Fax Poor Line"
+    | "Fax Receipt Error"
+    | "Fax on Demand"
+    | "Hang Up"
+    | "IP Phone Offline"
+    | "In Progress"
+    | "Internal Error"
+    | "International Disabled"
+    | "International Restricted"
+    | "Missed"
+    | "No Answer"
+    | "No Calling Credit"
+    | "Not Allowed"
+    | "Partial Receive"
+    | "Phone Login"
+    | "Receive Error"
+    | "Received"
+    | "Rejected"
+    | "Reply"
+    | "Restricted Number"
+    | "Send Error"
+    | "Sent"
+    | "Sent to Voicemail"
+    | "Stopped"
+    | "Suspended account"
+    | "Unknown"
+    | "Voicemail"
+    | "Wrong Number";
 
   /**
    * The reason of the call result:
@@ -210,45 +203,45 @@ interface CallLogRecord {
    *    * `Receive Error` - Fax receive error
    */
   reason?:
-    | 'Accepted'
-    | 'Bad Number'
-    | 'Call Loop'
-    | 'Calls Not Accepted'
-    | 'Carrier is not active'
-    | 'Connected'
-    | 'Customer 611 Restricted'
-    | 'EDGE trunk misconfigured'
-    | 'Emergency Address not defined'
-    | 'Failed Try Again'
-    | 'Fax Not Received'
-    | 'Fax Not Sent'
-    | 'Fax Partially Sent'
-    | 'Fax Poor Line'
-    | 'Fax Prepare Error'
-    | 'Fax Save Error'
-    | 'Fax Send Error'
-    | 'Hang Up'
-    | 'Info 411 Restricted'
-    | 'Internal Call Error'
-    | 'Internal Error'
-    | 'International Disabled'
-    | 'International Restricted'
-    | 'Line Busy'
-    | 'Max Call Limit'
-    | 'No Answer'
-    | 'No Credit'
-    | 'No Digital Line'
-    | 'Not Answered'
-    | 'Number Blocked'
-    | 'Number Disabled'
-    | 'Number Not Allowed'
-    | 'Receive Error'
-    | 'Resource Error'
-    | 'Restricted Number'
-    | 'Stopped'
-    | 'Too Many Calls'
-    | 'Unknown'
-    | 'Wrong Number';
+    | "Accepted"
+    | "Bad Number"
+    | "Call Loop"
+    | "Calls Not Accepted"
+    | "Carrier is not active"
+    | "Connected"
+    | "Customer 611 Restricted"
+    | "EDGE trunk misconfigured"
+    | "Emergency Address not defined"
+    | "Failed Try Again"
+    | "Fax Not Received"
+    | "Fax Not Sent"
+    | "Fax Partially Sent"
+    | "Fax Poor Line"
+    | "Fax Prepare Error"
+    | "Fax Save Error"
+    | "Fax Send Error"
+    | "Hang Up"
+    | "Info 411 Restricted"
+    | "Internal Call Error"
+    | "Internal Error"
+    | "International Disabled"
+    | "International Restricted"
+    | "Line Busy"
+    | "Max Call Limit"
+    | "No Answer"
+    | "No Credit"
+    | "No Digital Line"
+    | "Not Answered"
+    | "Number Blocked"
+    | "Number Disabled"
+    | "Number Not Allowed"
+    | "Receive Error"
+    | "Resource Error"
+    | "Restricted Number"
+    | "Stopped"
+    | "Too Many Calls"
+    | "Unknown"
+    | "Wrong Number";
 
   /**
    * The detailed reason description of the call result
@@ -274,8 +267,7 @@ interface CallLogRecord {
    */
   durationMs?: number;
 
-  /**
-   */
+  /** */
   recording?: CallLogRecordingInfo;
 
   /**
@@ -283,28 +275,27 @@ interface CallLogRecord {
    */
   shortRecording?: boolean;
 
-  /**
-   */
+  /** */
   billing?: BillingInfo;
 
   /**
    * The internal type of the call
    */
   internalType?:
-    | 'Local'
-    | 'LongDistance'
-    | 'International'
-    | 'Sip'
-    | 'RingMe'
-    | 'RingOut'
-    | 'Usual'
-    | 'TollFreeNumber'
-    | 'VerificationNumber'
-    | 'Vma'
-    | 'LocalNumber'
-    | 'ImsOutgoing'
-    | 'ImsIncoming'
-    | 'Unknown';
+    | "Local"
+    | "LongDistance"
+    | "International"
+    | "Sip"
+    | "RingMe"
+    | "RingOut"
+    | "Usual"
+    | "TollFreeNumber"
+    | "VerificationNumber"
+    | "Vma"
+    | "LocalNumber"
+    | "ImsOutgoing"
+    | "ImsIncoming"
+    | "Unknown";
 
   /**
    * Internal identifier of a call log record

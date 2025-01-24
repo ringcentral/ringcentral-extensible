@@ -1,7 +1,6 @@
 /**
  * Unconditional forwarding parameters.
  * Returned if 'UnconditionalForwarding' value is specified for the `callHandlingAction` parameter
- *
  */
 interface UnconditionalForwardingInfo {
   /**
@@ -16,7 +15,7 @@ interface UnconditionalForwardingInfo {
   /**
    * Event that initiates forwarding to the specified phone number
    */
-  action?: 'HoldTimeExpiration' | 'MaxCallers' | 'NoAnswer';
+  action?: "HoldTimeExpiration" | "MaxCallers" | "NoAnswer";
 }
 
 export default UnconditionalForwardingInfo;

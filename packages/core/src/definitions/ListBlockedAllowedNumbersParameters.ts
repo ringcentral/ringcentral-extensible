@@ -27,7 +27,7 @@ interface ListBlockedAllowedNumbersParameters {
    * Status of a phone number
    * Default: Blocked
    */
-  status?: 'Blocked' | 'Allowed';
+  status?: "Blocked" | "Allowed";
 }
 
 export default ListBlockedAllowedNumbersParameters;

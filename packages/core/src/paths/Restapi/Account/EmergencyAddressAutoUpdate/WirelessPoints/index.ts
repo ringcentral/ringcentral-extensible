@@ -1,9 +1,13 @@
-import type UpdateWirelessPoint from '../../../../../definitions/UpdateWirelessPoint';
-import type WirelessPointInfo from '../../../../../definitions/WirelessPointInfo';
-import type CreateWirelessPoint from '../../../../../definitions/CreateWirelessPoint';
-import type WirelessPointsList from '../../../../../definitions/WirelessPointsList';
-import type ListWirelessPointsParameters from '../../../../../definitions/ListWirelessPointsParameters';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import type UpdateWirelessPoint from "../../../../../definitions/UpdateWirelessPoint";
+import type WirelessPointInfo from "../../../../../definitions/WirelessPointInfo";
+import type CreateWirelessPoint from "../../../../../definitions/CreateWirelessPoint";
+import type WirelessPointsList from "../../../../../definitions/WirelessPointsList";
+import type ListWirelessPointsParameters from "../../../../../definitions/ListWirelessPointsParameters";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -35,7 +39,11 @@ class Index {
     queryParams?: ListWirelessPointsParameters,
     restRequestConfig?: RestRequestConfig,
   ): Promise<WirelessPointsList> {
-    const r = await this.rc.get<WirelessPointsList>(this.path(false), queryParams, restRequestConfig);
+    const r = await this.rc.get<WirelessPointsList>(
+      this.path(false),
+      queryParams,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -72,11 +80,17 @@ class Index {
    * App Permission: EditAccounts
    * User Permission: ConfigureEmergencyMaps
    */
-  public async get(restRequestConfig?: RestRequestConfig): Promise<WirelessPointInfo> {
+  public async get(
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<WirelessPointInfo> {
     if (this.pointId === null) {
-      throw new Error('pointId must be specified.');
+      throw new Error("pointId must be specified.");
     }
-    const r = await this.rc.get<WirelessPointInfo>(this.path(), undefined, restRequestConfig);
+    const r = await this.rc.get<WirelessPointInfo>(
+      this.path(),
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -95,9 +109,14 @@ class Index {
     restRequestConfig?: RestRequestConfig,
   ): Promise<WirelessPointInfo> {
     if (this.pointId === null) {
-      throw new Error('pointId must be specified.');
+      throw new Error("pointId must be specified.");
     }
-    const r = await this.rc.put<WirelessPointInfo>(this.path(), updateWirelessPoint, undefined, restRequestConfig);
+    const r = await this.rc.put<WirelessPointInfo>(
+      this.path(),
+      updateWirelessPoint,
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -111,9 +130,14 @@ class Index {
    */
   public async delete(restRequestConfig?: RestRequestConfig): Promise<string> {
     if (this.pointId === null) {
-      throw new Error('pointId must be specified.');
+      throw new Error("pointId must be specified.");
     }
-    const r = await this.rc.delete<string>(this.path(), {}, undefined, restRequestConfig);
+    const r = await this.rc.delete<string>(
+      this.path(),
+      {},
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

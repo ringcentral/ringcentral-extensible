@@ -1,6 +1,6 @@
-import type BulkOperationExtensionReference from './BulkOperationExtensionReference';
-import type BulkAddDevicesItemEmergency from './BulkAddDevicesItemEmergency';
-import type BulkAddDevicesItemPhoneInfo from './BulkAddDevicesItemPhoneInfo';
+import type BulkOperationExtensionReference from "./BulkOperationExtensionReference";
+import type BulkAddDevicesItemEmergency from "./BulkAddDevicesItemEmergency";
+import type BulkAddDevicesItemPhoneInfo from "./BulkAddDevicesItemPhoneInfo";
 
 interface BulkAddDevicesItem {
   /**
@@ -18,7 +18,7 @@ interface BulkAddDevicesItem {
    * Device type. Only "OtherPhone" and "WebRTC" device types are supported at the moment
    * Required
    */
-  type?: 'OtherPhone' | 'WebRTC';
+  type?: "OtherPhone" | "WebRTC";
 
   /**
    * Only "address" is supported at the moment

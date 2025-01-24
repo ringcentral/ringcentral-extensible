@@ -1,5 +1,5 @@
-import type FaxReceiver from './FaxReceiver';
-import type Attachment from './Attachment';
+import type FaxReceiver from "./FaxReceiver";
+import type Attachment from "./Attachment";
 
 /**
  * Request body for operation createFaxMessage
@@ -10,7 +10,7 @@ interface CreateFaxMessageRequest {
    *  white image scanned at 200 dpi, 'Low' for black and white image scanned
    *  at 100 dpi
    */
-  faxResolution?: 'High' | 'Low';
+  faxResolution?: "High" | "Low";
 
   /**
    * Recipient's phone number(s)

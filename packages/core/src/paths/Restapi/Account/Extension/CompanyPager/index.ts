@@ -1,6 +1,10 @@
-import type GetInternalTextMessageInfoResponse from '../../../../../definitions/GetInternalTextMessageInfoResponse';
-import type CreateInternalTextMessageRequest from '../../../../../definitions/CreateInternalTextMessageRequest';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import type GetInternalTextMessageInfoResponse from "../../../../../definitions/GetInternalTextMessageInfoResponse";
+import type CreateInternalTextMessageRequest from "../../../../../definitions/CreateInternalTextMessageRequest";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;

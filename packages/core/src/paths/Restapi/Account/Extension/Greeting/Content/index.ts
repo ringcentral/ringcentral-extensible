@@ -1,5 +1,9 @@
-import type ReadGreetingContentParameters from '../../../../../../definitions/ReadGreetingContentParameters';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../types';
+import type ReadGreetingContentParameters from "../../../../../../definitions/ReadGreetingContentParameters";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -28,7 +32,7 @@ class Index {
   ): Promise<Buffer> {
     const r = await this.rc.get<Buffer>(this.path(), queryParams, {
       ...restRequestConfig,
-      responseType: 'arraybuffer',
+      responseType: "arraybuffer",
     });
     return r.data;
   }

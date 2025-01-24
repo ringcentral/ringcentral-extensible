@@ -1,7 +1,7 @@
-import type BatchProvisionUsersRequestItemContact from './BatchProvisionUsersRequestItemContact';
-import type BatchProvisionUsersRequestItemCostCenter from './BatchProvisionUsersRequestItemCostCenter';
-import type BatchProvisionUsersRequestItemRoles from './BatchProvisionUsersRequestItemRoles';
-import type BatchProvisionUsersRequestItemDevices from './BatchProvisionUsersRequestItemDevices';
+import type BatchProvisionUsersRequestItemContact from "./BatchProvisionUsersRequestItemContact";
+import type BatchProvisionUsersRequestItemCostCenter from "./BatchProvisionUsersRequestItemCostCenter";
+import type BatchProvisionUsersRequestItemRoles from "./BatchProvisionUsersRequestItemRoles";
+import type BatchProvisionUsersRequestItemDevices from "./BatchProvisionUsersRequestItemDevices";
 
 /**
  * Describes request for user extension provisioning
@@ -19,7 +19,7 @@ interface BatchProvisionUsersRequestItem {
    * Required
    * Default: Enabled
    */
-  status?: 'Enabled';
+  status?: "Enabled";
 
   /**
    * Personal contact information
@@ -27,16 +27,13 @@ interface BatchProvisionUsersRequestItem {
    */
   contact?: BatchProvisionUsersRequestItemContact;
 
-  /**
-   */
+  /** */
   costCenter?: BatchProvisionUsersRequestItemCostCenter;
 
-  /**
-   */
+  /** */
   roles?: BatchProvisionUsersRequestItemRoles[];
 
-  /**
-   */
+  /** */
   devices?: BatchProvisionUsersRequestItemDevices[];
 }
 

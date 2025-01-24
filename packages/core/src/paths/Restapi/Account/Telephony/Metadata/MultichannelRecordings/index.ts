@@ -1,12 +1,18 @@
-import Content from './Content';
-import type { RingCentralInterface, ParentInterface } from '../../../../../../types';
+import Content from "./Content";
+import type {
+  ParentInterface,
+  RingCentralInterface,
+} from "../../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
   public _parent: ParentInterface;
   public metadataId: string | null;
 
-  public constructor(_parent: ParentInterface, metadataId: string | null = null) {
+  public constructor(
+    _parent: ParentInterface,
+    metadataId: string | null = null,
+  ) {
     this._parent = _parent;
     this.rc = _parent.rc;
     this.metadataId = metadataId;

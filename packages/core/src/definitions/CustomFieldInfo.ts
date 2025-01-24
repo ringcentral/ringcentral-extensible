@@ -9,8 +9,7 @@ interface CustomFieldInfo {
    */
   value?: string;
 
-  /**
-   */
+  /** */
   displayName?: string;
 }
 

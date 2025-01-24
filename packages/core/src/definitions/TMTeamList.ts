@@ -1,5 +1,5 @@
-import type TMTeamInfo from './TMTeamInfo';
-import type TMNavigationInfo from './TMNavigationInfo';
+import type TMTeamInfo from "./TMTeamInfo";
+import type TMNavigationInfo from "./TMNavigationInfo";
 
 interface TMTeamList {
   /**
@@ -8,8 +8,7 @@ interface TMTeamList {
    */
   records?: TMTeamInfo[];
 
-  /**
-   */
+  /** */
   navigation?: TMNavigationInfo;
 }
 

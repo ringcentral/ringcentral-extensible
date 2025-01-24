@@ -1,8 +1,7 @@
-import type BridgePstnPins from './BridgePstnPins';
+import type BridgePstnPins from "./BridgePstnPins";
 
 interface BridgePinsWithAliases {
-  /**
-   */
+  /** */
   pstn?: BridgePstnPins;
 
   /**

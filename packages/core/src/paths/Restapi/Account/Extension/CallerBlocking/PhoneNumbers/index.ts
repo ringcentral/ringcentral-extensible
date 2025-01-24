@@ -1,15 +1,22 @@
-import type BlockedAllowedPhoneNumberInfo from '../../../../../../definitions/BlockedAllowedPhoneNumberInfo';
-import type AddBlockedAllowedPhoneNumber from '../../../../../../definitions/AddBlockedAllowedPhoneNumber';
-import type BlockedAllowedPhoneNumbersList from '../../../../../../definitions/BlockedAllowedPhoneNumbersList';
-import type ListBlockedAllowedNumbersParameters from '../../../../../../definitions/ListBlockedAllowedNumbersParameters';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../types';
+import type BlockedAllowedPhoneNumberInfo from "../../../../../../definitions/BlockedAllowedPhoneNumberInfo";
+import type AddBlockedAllowedPhoneNumber from "../../../../../../definitions/AddBlockedAllowedPhoneNumber";
+import type BlockedAllowedPhoneNumbersList from "../../../../../../definitions/BlockedAllowedPhoneNumbersList";
+import type ListBlockedAllowedNumbersParameters from "../../../../../../definitions/ListBlockedAllowedNumbersParameters";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
   public _parent: ParentInterface;
   public blockedNumberId: string | null;
 
-  public constructor(_parent: ParentInterface, blockedNumberId: string | null = null) {
+  public constructor(
+    _parent: ParentInterface,
+    blockedNumberId: string | null = null,
+  ) {
     this._parent = _parent;
     this.rc = _parent.rc;
     this.blockedNumberId = blockedNumberId;
@@ -32,7 +39,11 @@ class Index {
     queryParams?: ListBlockedAllowedNumbersParameters,
     restRequestConfig?: RestRequestConfig,
   ): Promise<BlockedAllowedPhoneNumbersList> {
-    const r = await this.rc.get<BlockedAllowedPhoneNumbersList>(this.path(false), queryParams, restRequestConfig);
+    const r = await this.rc.get<BlockedAllowedPhoneNumbersList>(
+      this.path(false),
+      queryParams,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -67,11 +78,17 @@ class Index {
    * App Permission: ReadAccounts
    * User Permission: ReadBlockedNumbers
    */
-  public async get(restRequestConfig?: RestRequestConfig): Promise<BlockedAllowedPhoneNumberInfo> {
+  public async get(
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<BlockedAllowedPhoneNumberInfo> {
     if (this.blockedNumberId === null) {
-      throw new Error('blockedNumberId must be specified.');
+      throw new Error("blockedNumberId must be specified.");
     }
-    const r = await this.rc.get<BlockedAllowedPhoneNumberInfo>(this.path(), undefined, restRequestConfig);
+    const r = await this.rc.get<BlockedAllowedPhoneNumberInfo>(
+      this.path(),
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -90,7 +107,7 @@ class Index {
     restRequestConfig?: RestRequestConfig,
   ): Promise<BlockedAllowedPhoneNumberInfo> {
     if (this.blockedNumberId === null) {
-      throw new Error('blockedNumberId must be specified.');
+      throw new Error("blockedNumberId must be specified.");
     }
     const r = await this.rc.put<BlockedAllowedPhoneNumberInfo>(
       this.path(),
@@ -113,9 +130,14 @@ class Index {
    */
   public async delete(restRequestConfig?: RestRequestConfig): Promise<string> {
     if (this.blockedNumberId === null) {
-      throw new Error('blockedNumberId must be specified.');
+      throw new Error("blockedNumberId must be specified.");
     }
-    const r = await this.rc.delete<string>(this.path(), {}, undefined, restRequestConfig);
+    const r = await this.rc.delete<string>(
+      this.path(),
+      {},
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

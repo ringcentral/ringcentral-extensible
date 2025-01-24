@@ -1,7 +1,11 @@
-import type AggregationResponse from '../../../../../../../definitions/AggregationResponse';
-import type AnalyticsCallsAggregationFetchParameters from '../../../../../../../definitions/AnalyticsCallsAggregationFetchParameters';
-import type AggregationRequest from '../../../../../../../definitions/AggregationRequest';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../../types';
+import type AggregationResponse from "../../../../../../../definitions/AggregationResponse";
+import type AnalyticsCallsAggregationFetchParameters from "../../../../../../../definitions/AnalyticsCallsAggregationFetchParameters";
+import type AggregationRequest from "../../../../../../../definitions/AggregationRequest";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -26,7 +30,12 @@ class Index {
     queryParams?: AnalyticsCallsAggregationFetchParameters,
     restRequestConfig?: RestRequestConfig,
   ): Promise<AggregationResponse> {
-    const r = await this.rc.post<AggregationResponse>(this.path(), aggregationRequest, queryParams, restRequestConfig);
+    const r = await this.rc.post<AggregationResponse>(
+      this.path(),
+      aggregationRequest,
+      queryParams,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

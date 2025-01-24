@@ -1,14 +1,14 @@
-import type AggregationResponseOptionsCountersAllCalls from './AggregationResponseOptionsCountersAllCalls';
-import type AggregationResponseOptionsCountersCallsByDirection from './AggregationResponseOptionsCountersCallsByDirection';
-import type AggregationResponseOptionsCountersCallsByOrigin from './AggregationResponseOptionsCountersCallsByOrigin';
-import type AggregationResponseOptionsCountersCallsByResponse from './AggregationResponseOptionsCountersCallsByResponse';
-import type AggregationResponseOptionsCountersCallsSegments from './AggregationResponseOptionsCountersCallsSegments';
-import type AggregationResponseOptionsCountersCallsByResult from './AggregationResponseOptionsCountersCallsByResult';
-import type AggregationResponseOptionsCountersCallsByCompanyHours from './AggregationResponseOptionsCountersCallsByCompanyHours';
-import type AggregationResponseOptionsCountersCallsByQueueSla from './AggregationResponseOptionsCountersCallsByQueueSla';
-import type AggregationResponseOptionsCountersCallsByActions from './AggregationResponseOptionsCountersCallsByActions';
-import type AggregationResponseOptionsCountersCallsByType from './AggregationResponseOptionsCountersCallsByType';
-import type AggregationResponseOptionsCountersQueueOpportunities from './AggregationResponseOptionsCountersQueueOpportunities';
+import type AggregationResponseOptionsCountersAllCalls from "./AggregationResponseOptionsCountersAllCalls";
+import type AggregationResponseOptionsCountersCallsByDirection from "./AggregationResponseOptionsCountersCallsByDirection";
+import type AggregationResponseOptionsCountersCallsByOrigin from "./AggregationResponseOptionsCountersCallsByOrigin";
+import type AggregationResponseOptionsCountersCallsByResponse from "./AggregationResponseOptionsCountersCallsByResponse";
+import type AggregationResponseOptionsCountersCallsSegments from "./AggregationResponseOptionsCountersCallsSegments";
+import type AggregationResponseOptionsCountersCallsByResult from "./AggregationResponseOptionsCountersCallsByResult";
+import type AggregationResponseOptionsCountersCallsByCompanyHours from "./AggregationResponseOptionsCountersCallsByCompanyHours";
+import type AggregationResponseOptionsCountersCallsByQueueSla from "./AggregationResponseOptionsCountersCallsByQueueSla";
+import type AggregationResponseOptionsCountersCallsByActions from "./AggregationResponseOptionsCountersCallsByActions";
+import type AggregationResponseOptionsCountersCallsByType from "./AggregationResponseOptionsCountersCallsByType";
+import type AggregationResponseOptionsCountersQueueOpportunities from "./AggregationResponseOptionsCountersQueueOpportunities";
 
 /**
  * The formula is defined by `aggregationType` and `aggregationInterval` for every counter individually.

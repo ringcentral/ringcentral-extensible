@@ -1,6 +1,6 @@
-import type NetworkInfo from './NetworkInfo';
-import type PageNavigationModel from './PageNavigationModel';
-import type EnumeratedPagingModel from './EnumeratedPagingModel';
+import type NetworkInfo from "./NetworkInfo";
+import type PageNavigationModel from "./PageNavigationModel";
+import type EnumeratedPagingModel from "./EnumeratedPagingModel";
 
 interface NetworksList {
   /**
@@ -9,16 +9,13 @@ interface NetworksList {
    */
   uri?: string;
 
-  /**
-   */
+  /** */
   records?: NetworkInfo[];
 
-  /**
-   */
+  /** */
   navigation?: PageNavigationModel;
 
-  /**
-   */
+  /** */
   paging?: EnumeratedPagingModel;
 }
 

@@ -1,4 +1,4 @@
-import type PhoneNumberResource from './PhoneNumberResource';
+import type PhoneNumberResource from "./PhoneNumberResource";
 
 interface AccountResource {
   /**
@@ -17,8 +17,7 @@ interface AccountResource {
    */
   id?: string;
 
-  /**
-   */
+  /** */
   mainNumber?: PhoneNumberResource;
 }
 

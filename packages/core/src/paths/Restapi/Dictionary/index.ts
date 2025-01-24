@@ -1,15 +1,15 @@
-import PermissionCategory from './PermissionCategory';
-import FaxCoverPage from './FaxCoverPage';
-import Permission from './Permission';
-import UserRole from './UserRole';
-import Location from './Location';
-import Timezone from './Timezone';
-import Greeting from './Greeting';
-import Language from './Language';
-import Country from './Country';
-import State from './State';
-import Brand from './Brand';
-import type { RingCentralInterface, ParentInterface } from '../../../types';
+import PermissionCategory from "./PermissionCategory";
+import FaxCoverPage from "./FaxCoverPage";
+import Permission from "./Permission";
+import UserRole from "./UserRole";
+import Location from "./Location";
+import Timezone from "./Timezone";
+import Greeting from "./Greeting";
+import Language from "./Language";
+import Country from "./Country";
+import State from "./State";
+import Brand from "./Brand";
+import type { ParentInterface, RingCentralInterface } from "../../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -63,7 +63,9 @@ class Index {
     return new FaxCoverPage(this);
   }
 
-  public permissionCategory(permissionCategoryId: string | null = null): PermissionCategory {
+  public permissionCategory(
+    permissionCategoryId: string | null = null,
+  ): PermissionCategory {
     return new PermissionCategory(this, permissionCategoryId);
   }
 }

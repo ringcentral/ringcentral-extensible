@@ -6,7 +6,7 @@ interface ListMessagesParameters {
    * Specifies the availability status for resulting messages.
    *  Multiple values are accepted
    */
-  availability?: ('Alive' | 'Deleted' | 'Purged')[];
+  availability?: ("Alive" | "Deleted" | "Purged")[];
 
   /**
    * Specifies a conversation identifier for the resulting messages
@@ -33,7 +33,7 @@ interface ListMessagesParameters {
    * Direction for resulting messages. If not specified, both
    *  inbound and outbound messages are returned. Multiple values are accepted
    */
-  direction?: ('Inbound' | 'Outbound')[];
+  direction?: ("Inbound" | "Outbound")[];
 
   /**
    * If `true`, then the latest messages per every conversation ID
@@ -45,13 +45,13 @@ interface ListMessagesParameters {
    * Type of resulting messages. If not specified, all messages
    *  without message type filtering are returned. Multiple values are accepted
    */
-  messageType?: ('Fax' | 'SMS' | 'VoiceMail' | 'Pager')[];
+  messageType?: ("Fax" | "SMS" | "VoiceMail" | "Pager")[];
 
   /**
    * Read status for resulting messages. Multiple values are
    *  accepted
    */
-  readStatus?: ('Read' | 'Unread')[];
+  readStatus?: ("Read" | "Unread")[];
 
   /**
    * Indicates a page number to retrieve. Only positive number values

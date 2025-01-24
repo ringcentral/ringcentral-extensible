@@ -1,14 +1,21 @@
-import type Meeting from '../../../../../definitions/Meeting';
-import type MeetingPage from '../../../../../definitions/MeetingPage';
-import type ListVideoMeetingsParameters from '../../../../../definitions/ListVideoMeetingsParameters';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import type Meeting from "../../../../../definitions/Meeting";
+import type MeetingPage from "../../../../../definitions/MeetingPage";
+import type ListVideoMeetingsParameters from "../../../../../definitions/ListVideoMeetingsParameters";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
   public _parent: ParentInterface;
   public meetingId: string | null;
 
-  public constructor(_parent: ParentInterface, meetingId: string | null = null) {
+  public constructor(
+    _parent: ParentInterface,
+    meetingId: string | null = null,
+  ) {
     this._parent = _parent;
     this.rc = _parent.rc;
     this.meetingId = meetingId;
@@ -30,7 +37,11 @@ class Index {
     queryParams?: ListVideoMeetingsParameters,
     restRequestConfig?: RestRequestConfig,
   ): Promise<MeetingPage> {
-    const r = await this.rc.get<MeetingPage>(this.path(false), queryParams, restRequestConfig);
+    const r = await this.rc.get<MeetingPage>(
+      this.path(false),
+      queryParams,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -43,9 +54,13 @@ class Index {
    */
   public async get(restRequestConfig?: RestRequestConfig): Promise<Meeting> {
     if (this.meetingId === null) {
-      throw new Error('meetingId must be specified.');
+      throw new Error("meetingId must be specified.");
     }
-    const r = await this.rc.get<Meeting>(this.path(), undefined, restRequestConfig);
+    const r = await this.rc.get<Meeting>(
+      this.path(),
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

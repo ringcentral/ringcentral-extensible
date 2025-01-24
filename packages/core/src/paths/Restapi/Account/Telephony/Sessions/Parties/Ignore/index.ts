@@ -1,5 +1,9 @@
-import type IgnoreRequestBody from '../../../../../../../definitions/IgnoreRequestBody';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../../types';
+import type IgnoreRequestBody from "../../../../../../../definitions/IgnoreRequestBody";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -19,8 +23,16 @@ class Index {
    * Rate Limit Group: Light
    * App Permission: CallControl
    */
-  public async post(ignoreRequestBody: IgnoreRequestBody, restRequestConfig?: RestRequestConfig): Promise<string> {
-    const r = await this.rc.post<string>(this.path(), ignoreRequestBody, undefined, restRequestConfig);
+  public async post(
+    ignoreRequestBody: IgnoreRequestBody,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<string> {
+    const r = await this.rc.post<string>(
+      this.path(),
+      ignoreRequestBody,
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

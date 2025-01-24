@@ -1,16 +1,13 @@
-import type AdaptiveCardColumnItemInfo from './AdaptiveCardColumnItemInfo';
+import type AdaptiveCardColumnItemInfo from "./AdaptiveCardColumnItemInfo";
 
 interface AdaptiveCardColumnInfo {
-  /**
-   */
+  /** */
   type?: string;
 
-  /**
-   */
+  /** */
   width?: string;
 
-  /**
-   */
+  /** */
   items?: AdaptiveCardColumnItemInfo[];
 }
 

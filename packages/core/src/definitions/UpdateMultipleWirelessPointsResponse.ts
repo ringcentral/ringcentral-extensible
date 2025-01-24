@@ -1,8 +1,7 @@
-import type BulkTaskInfo from './BulkTaskInfo';
+import type BulkTaskInfo from "./BulkTaskInfo";
 
 interface UpdateMultipleWirelessPointsResponse {
-  /**
-   */
+  /** */
   task?: BulkTaskInfo;
 }
 

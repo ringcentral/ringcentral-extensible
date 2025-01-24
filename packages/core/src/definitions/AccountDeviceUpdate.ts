@@ -1,23 +1,19 @@
-import type EmergencyServiceAddressResourceRequest from './EmergencyServiceAddressResourceRequest';
-import type DeviceEmergencyInfo from './DeviceEmergencyInfo';
-import type DeviceUpdateExtensionInfo from './DeviceUpdateExtensionInfo';
-import type DeviceUpdatePhoneLinesInfo from './DeviceUpdatePhoneLinesInfo';
+import type EmergencyServiceAddressResourceRequest from "./EmergencyServiceAddressResourceRequest";
+import type DeviceEmergencyInfo from "./DeviceEmergencyInfo";
+import type DeviceUpdateExtensionInfo from "./DeviceUpdateExtensionInfo";
+import type DeviceUpdatePhoneLinesInfo from "./DeviceUpdatePhoneLinesInfo";
 
 interface AccountDeviceUpdate {
-  /**
-   */
+  /** */
   emergencyServiceAddress?: EmergencyServiceAddressResourceRequest;
 
-  /**
-   */
+  /** */
   emergency?: DeviceEmergencyInfo;
 
-  /**
-   */
+  /** */
   extension?: DeviceUpdateExtensionInfo;
 
-  /**
-   */
+  /** */
   phoneLines?: DeviceUpdatePhoneLinesInfo;
 
   /**

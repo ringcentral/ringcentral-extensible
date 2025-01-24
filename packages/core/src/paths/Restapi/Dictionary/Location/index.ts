@@ -1,6 +1,10 @@
-import type GetLocationListResponse from '../../../../definitions/GetLocationListResponse';
-import type ListLocationsParameters from '../../../../definitions/ListLocationsParameters';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
+import type GetLocationListResponse from "../../../../definitions/GetLocationListResponse";
+import type ListLocationsParameters from "../../../../definitions/ListLocationsParameters";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -24,7 +28,11 @@ class Index {
     queryParams?: ListLocationsParameters,
     restRequestConfig?: RestRequestConfig,
   ): Promise<GetLocationListResponse> {
-    const r = await this.rc.get<GetLocationListResponse>(this.path(), queryParams, restRequestConfig);
+    const r = await this.rc.get<GetLocationListResponse>(
+      this.path(),
+      queryParams,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

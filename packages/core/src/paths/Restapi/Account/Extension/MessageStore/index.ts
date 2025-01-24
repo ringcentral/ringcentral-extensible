@@ -1,19 +1,26 @@
-import Content from './Content';
-import type PatchMessageRequest from '../../../../../definitions/PatchMessageRequest';
-import type DeleteMessageParameters from '../../../../../definitions/DeleteMessageParameters';
-import type UpdateMessageRequest from '../../../../../definitions/UpdateMessageRequest';
-import type GetMessageInfoResponse from '../../../../../definitions/GetMessageInfoResponse';
-import type DeleteMessageByFilterParameters from '../../../../../definitions/DeleteMessageByFilterParameters';
-import type GetMessageList from '../../../../../definitions/GetMessageList';
-import type ListMessagesParameters from '../../../../../definitions/ListMessagesParameters';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import Content from "./Content";
+import type PatchMessageRequest from "../../../../../definitions/PatchMessageRequest";
+import type DeleteMessageParameters from "../../../../../definitions/DeleteMessageParameters";
+import type UpdateMessageRequest from "../../../../../definitions/UpdateMessageRequest";
+import type GetMessageInfoResponse from "../../../../../definitions/GetMessageInfoResponse";
+import type DeleteMessageByFilterParameters from "../../../../../definitions/DeleteMessageByFilterParameters";
+import type GetMessageList from "../../../../../definitions/GetMessageList";
+import type ListMessagesParameters from "../../../../../definitions/ListMessagesParameters";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
   public _parent: ParentInterface;
   public messageId: string | null;
 
-  public constructor(_parent: ParentInterface, messageId: string | null = null) {
+  public constructor(
+    _parent: ParentInterface,
+    messageId: string | null = null,
+  ) {
     this._parent = _parent;
     this.rc = _parent.rc;
     this.messageId = messageId;
@@ -36,7 +43,11 @@ class Index {
     queryParams?: ListMessagesParameters,
     restRequestConfig?: RestRequestConfig,
   ): Promise<GetMessageList> {
-    const r = await this.rc.get<GetMessageList>(this.path(false), queryParams, restRequestConfig);
+    const r = await this.rc.get<GetMessageList>(
+      this.path(false),
+      queryParams,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -57,7 +68,12 @@ class Index {
     queryParams?: DeleteMessageByFilterParameters,
     restRequestConfig?: RestRequestConfig,
   ): Promise<string> {
-    const r = await this.rc.delete<string>(this.path(false), {}, queryParams, restRequestConfig);
+    const r = await this.rc.delete<string>(
+      this.path(false),
+      {},
+      queryParams,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -72,11 +88,17 @@ class Index {
    * App Permission: ReadMessages
    * User Permission: ReadMessages
    */
-  public async get(restRequestConfig?: RestRequestConfig): Promise<GetMessageInfoResponse> {
+  public async get(
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<GetMessageInfoResponse> {
     if (this.messageId === null) {
-      throw new Error('messageId must be specified.');
+      throw new Error("messageId must be specified.");
     }
-    const r = await this.rc.get<GetMessageInfoResponse>(this.path(), undefined, restRequestConfig);
+    const r = await this.rc.get<GetMessageInfoResponse>(
+      this.path(),
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -100,7 +122,7 @@ class Index {
     restRequestConfig?: RestRequestConfig,
   ): Promise<GetMessageInfoResponse> {
     if (this.messageId === null) {
-      throw new Error('messageId must be specified.');
+      throw new Error("messageId must be specified.");
     }
     const r = await this.rc.put<GetMessageInfoResponse>(
       this.path(),
@@ -130,9 +152,14 @@ class Index {
     restRequestConfig?: RestRequestConfig,
   ): Promise<string> {
     if (this.messageId === null) {
-      throw new Error('messageId must be specified.');
+      throw new Error("messageId must be specified.");
     }
-    const r = await this.rc.delete<string>(this.path(), deleteMessageBulkRequest, queryParams, restRequestConfig);
+    const r = await this.rc.delete<string>(
+      this.path(),
+      deleteMessageBulkRequest,
+      queryParams,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -158,7 +185,7 @@ class Index {
     restRequestConfig?: RestRequestConfig,
   ): Promise<GetMessageInfoResponse> {
     if (this.messageId === null) {
-      throw new Error('messageId must be specified.');
+      throw new Error("messageId must be specified.");
     }
     const r = await this.rc.patch<GetMessageInfoResponse>(
       this.path(),

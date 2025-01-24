@@ -1,11 +1,11 @@
 /* eslint-disable no-console */
-import type CreateSubscriptionRequest from '@rc-ex/core/lib/definitions/CreateSubscriptionRequest';
-import type SubscriptionInfo from '@rc-ex/core/lib/definitions/SubscriptionInfo';
-import type { RestResponse } from '@rc-ex/core/lib/types';
-import type { MessageEvent } from 'ws';
+import type CreateSubscriptionRequest from "@rc-ex/core/lib/definitions/CreateSubscriptionRequest";
+import type SubscriptionInfo from "@rc-ex/core/lib/definitions/SubscriptionInfo";
+import type { RestResponse } from "@rc-ex/core/lib/types";
+import type { MessageEvent } from "ws";
 
-import type { WsgEvent, WsgMeta, WebSocketExtensionInterface } from './types';
-import Utils from './utils';
+import type { WebSocketExtensionInterface, WsgEvent, WsgMeta } from "./types";
+import Utils from "./utils";
 
 class Subscription {
   public subscriptionInfo?: SubscriptionInfo;
@@ -20,13 +20,21 @@ class Subscription {
 
   public enabled = true;
 
-  public constructor(wse: WebSocketExtensionInterface, eventFilters: string[], callback: (event: {}) => void) {
+  public constructor(
+    wse: WebSocketExtensionInterface,
+    eventFilters: string[],
+    callback: (event: {}) => void,
+  ) {
     this.wse = wse;
     this.eventFilters = eventFilters;
     this.eventListener = (mEvent: MessageEvent) => {
       const event = mEvent as WsgEvent;
-      const [meta, body]: [WsgMeta, { subscriptionId: string }] = Utils.splitWsgData(event.data);
-      if (this.enabled && meta.type === 'ServerNotification' && body.subscriptionId === this.subscriptionInfo!.id) {
+      const [meta, body]: [WsgMeta, { subscriptionId: string }] = Utils
+        .splitWsgData(event.data);
+      if (
+        this.enabled && meta.type === "ServerNotification" &&
+        body.subscriptionId === this.subscriptionInfo!.id
+      ) {
         callback(body);
       }
     };
@@ -34,19 +42,23 @@ class Subscription {
   }
 
   public setupWsEventListener() {
-    this.wse.ws.addEventListener('message', this.eventListener);
+    this.wse.ws.addEventListener("message", this.eventListener);
   }
 
   public get requestBody(): CreateSubscriptionRequest {
     return {
-      deliveryMode: { transportType: 'WebSocket' as any }, // because WebSocket is not in spec
+      deliveryMode: { transportType: "WebSocket" as any }, // because WebSocket is not in spec
       eventFilters: this.eventFilters,
     };
   }
 
   public async subscribe() {
     this.subscriptionInfo = (
-      await this.wse.request<SubscriptionInfo>('POST', '/restapi/v1.0/subscription', this.requestBody)
+      await this.wse.request<SubscriptionInfo>(
+        "POST",
+        "/restapi/v1.0/subscription",
+        this.requestBody,
+      )
     ).data;
   }
 
@@ -57,7 +69,7 @@ class Subscription {
     try {
       this.subscriptionInfo = (
         await this.wse.request<SubscriptionInfo>(
-          'PUT',
+          "PUT",
           `/restapi/v1.0/subscription/${this.subscriptionInfo!.id}`,
           this.requestBody,
         )
@@ -76,18 +88,25 @@ class Subscription {
       return;
     }
     try {
-      await this.wse.request<SubscriptionInfo>('DELETE', `/restapi/v1.0/subscription/${this.subscriptionInfo!.id}`);
+      await this.wse.request<SubscriptionInfo>(
+        "DELETE",
+        `/restapi/v1.0/subscription/${this.subscriptionInfo!.id}`,
+      );
     } catch (e) {
       const re = e as { response: RestResponse };
       if (re.response && re.response.status === 404) {
         // ignore
         if (this.wse.options.debugMode) {
-          console.debug(`Subscription ${this.subscriptionInfo!.id} doesn't exist on server side`);
+          console.debug(
+            `Subscription ${
+              this.subscriptionInfo!.id
+            } doesn't exist on server side`,
+          );
         }
       } else if (re.response && re.response.status === 401) {
         // ignore
         if (this.wse.options.debugMode) {
-          console.debug('Token invalid when trying to revoke subscription');
+          console.debug("Token invalid when trying to revoke subscription");
         }
       } else {
         throw e;
@@ -104,7 +123,7 @@ class Subscription {
     this.enabled = false;
     this.subscriptionInfo = undefined;
     if (this.wse.ws) {
-      this.wse.ws.removeEventListener('message', this.eventListener);
+      this.wse.ws.removeEventListener("message", this.eventListener);
     }
     this.wse.subscription = undefined;
   }

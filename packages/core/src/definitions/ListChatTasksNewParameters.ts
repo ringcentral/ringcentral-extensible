@@ -23,12 +23,12 @@ interface ListChatTasksNewParameters {
   /**
    * Task execution status
    */
-  status?: ('Pending' | 'InProgress' | 'Completed')[];
+  status?: ("Pending" | "InProgress" | "Completed")[];
 
   /**
    * Task assignment status
    */
-  assignmentStatus?: 'Unassigned' | 'Assigned';
+  assignmentStatus?: "Unassigned" | "Assigned";
 
   /**
    * Internal identifier of a task assignee
@@ -38,7 +38,7 @@ interface ListChatTasksNewParameters {
   /**
    * Task execution status by assignee(-s) specified in assigneeId
    */
-  assigneeStatus?: 'Pending' | 'Completed';
+  assigneeStatus?: "Pending" | "Completed";
 
   /**
    * Token of the current page. If token is omitted then the first

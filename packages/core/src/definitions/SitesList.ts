@@ -1,6 +1,6 @@
-import type SiteInfo from './SiteInfo';
-import type PageNavigationModel from './PageNavigationModel';
-import type EnumeratedPagingModel from './EnumeratedPagingModel';
+import type SiteInfo from "./SiteInfo";
+import type PageNavigationModel from "./PageNavigationModel";
+import type EnumeratedPagingModel from "./EnumeratedPagingModel";
 
 interface SitesList {
   /**
@@ -9,16 +9,13 @@ interface SitesList {
    */
   uri?: string;
 
-  /**
-   */
+  /** */
   records?: SiteInfo[];
 
-  /**
-   */
+  /** */
   navigation?: PageNavigationModel;
 
-  /**
-   */
+  /** */
   paging?: EnumeratedPagingModel;
 }
 

@@ -1,8 +1,7 @@
-import type PagerCallerInfoRequest from './PagerCallerInfoRequest';
+import type PagerCallerInfoRequest from "./PagerCallerInfoRequest";
 
 interface CreateInternalTextMessageRequest {
-  /**
-   */
+  /** */
   from?: PagerCallerInfoRequest;
 
   /**

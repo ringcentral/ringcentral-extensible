@@ -1,5 +1,5 @@
-import type OptOutResponse from './OptOutResponse';
-import type NonEnumeratedPagingModel from './NonEnumeratedPagingModel';
+import type OptOutResponse from "./OptOutResponse";
+import type NonEnumeratedPagingModel from "./NonEnumeratedPagingModel";
 
 /**
  * The list of opt outs
@@ -10,8 +10,7 @@ interface OptOutListResponse {
    */
   records?: OptOutResponse[];
 
-  /**
-   */
+  /** */
   paging?: NonEnumeratedPagingModel;
 }
 

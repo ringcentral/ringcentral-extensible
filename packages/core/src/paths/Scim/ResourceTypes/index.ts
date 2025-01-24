@@ -1,6 +1,10 @@
-import type ScimResourceTypeResponse from '../../../definitions/ScimResourceTypeResponse';
-import type ScimResourceTypeSearchResponse from '../../../definitions/ScimResourceTypeSearchResponse';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../types';
+import type ScimResourceTypeResponse from "../../../definitions/ScimResourceTypeResponse";
+import type ScimResourceTypeSearchResponse from "../../../definitions/ScimResourceTypeSearchResponse";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -25,8 +29,14 @@ class Index {
    * Rate Limit Group: Light
    * App Permission: ReadAccounts
    */
-  public async list(restRequestConfig?: RestRequestConfig): Promise<ScimResourceTypeSearchResponse> {
-    const r = await this.rc.get<ScimResourceTypeSearchResponse>(this.path(false), undefined, restRequestConfig);
+  public async list(
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<ScimResourceTypeSearchResponse> {
+    const r = await this.rc.get<ScimResourceTypeSearchResponse>(
+      this.path(false),
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -37,11 +47,17 @@ class Index {
    * Rate Limit Group: Light
    * App Permission: ReadAccounts
    */
-  public async get(restRequestConfig?: RestRequestConfig): Promise<ScimResourceTypeResponse> {
+  public async get(
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<ScimResourceTypeResponse> {
     if (this.type === null) {
-      throw new Error('type must be specified.');
+      throw new Error("type must be specified.");
     }
-    const r = await this.rc.get<ScimResourceTypeResponse>(this.path(), undefined, restRequestConfig);
+    const r = await this.rc.get<ScimResourceTypeResponse>(
+      this.path(),
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

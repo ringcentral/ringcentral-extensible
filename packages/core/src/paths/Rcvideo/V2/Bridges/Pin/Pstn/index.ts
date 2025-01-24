@@ -1,6 +1,10 @@
-import type BridgeResponse from '../../../../../../definitions/BridgeResponse';
-import type GetBridgeByPstnPinParameters from '../../../../../../definitions/GetBridgeByPstnPinParameters';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../types';
+import type BridgeResponse from "../../../../../../definitions/BridgeResponse";
+import type GetBridgeByPstnPinParameters from "../../../../../../definitions/GetBridgeByPstnPinParameters";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -30,9 +34,13 @@ class Index {
     restRequestConfig?: RestRequestConfig,
   ): Promise<BridgeResponse> {
     if (this.pin === null) {
-      throw new Error('pin must be specified.');
+      throw new Error("pin must be specified.");
     }
-    const r = await this.rc.get<BridgeResponse>(this.path(), queryParams, restRequestConfig);
+    const r = await this.rc.get<BridgeResponse>(
+      this.path(),
+      queryParams,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

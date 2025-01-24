@@ -53,7 +53,7 @@ interface WcsSessionBaseModel {
    * Session status (for the purposes of Configuration service)
    * Example: Scheduled
    */
-  status?: 'Scheduled' | 'Active' | 'Finished';
+  status?: "Scheduled" | "Active" | "Finished";
 
   /**
    * The URI to join the webinar as a host

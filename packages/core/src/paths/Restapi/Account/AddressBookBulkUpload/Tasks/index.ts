@@ -1,5 +1,9 @@
-import type AddressBookBulkUploadResponse from '../../../../../definitions/AddressBookBulkUploadResponse';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import type AddressBookBulkUploadResponse from "../../../../../definitions/AddressBookBulkUploadResponse";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -26,11 +30,17 @@ class Index {
    * App Permission: Contacts
    * User Permission: EditPersonalContacts
    */
-  public async get(restRequestConfig?: RestRequestConfig): Promise<AddressBookBulkUploadResponse> {
+  public async get(
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<AddressBookBulkUploadResponse> {
     if (this.taskId === null) {
-      throw new Error('taskId must be specified.');
+      throw new Error("taskId must be specified.");
     }
-    const r = await this.rc.get<AddressBookBulkUploadResponse>(this.path(), undefined, restRequestConfig);
+    const r = await this.rc.get<AddressBookBulkUploadResponse>(
+      this.path(),
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

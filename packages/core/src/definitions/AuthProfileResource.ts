@@ -1,4 +1,4 @@
-import type ActivePermissionResource from './ActivePermissionResource';
+import type ActivePermissionResource from "./ActivePermissionResource";
 
 interface AuthProfileResource {
   /**
@@ -6,8 +6,7 @@ interface AuthProfileResource {
    */
   uri?: string;
 
-  /**
-   */
+  /** */
   permissions?: ActivePermissionResource[];
 }
 

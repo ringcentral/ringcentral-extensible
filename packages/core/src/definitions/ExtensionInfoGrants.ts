@@ -29,19 +29,19 @@ interface ExtensionInfoGrants {
    *  product terminology
    */
   type?:
-    | 'User'
-    | 'Fax User'
-    | 'VirtualUser'
-    | 'DigitalUser'
-    | 'Department'
-    | 'Announcement'
-    | 'Voicemail'
-    | 'SharedLinesGroup'
-    | 'PagingOnly'
-    | 'IvrMenu'
-    | 'ApplicationExtension'
-    | 'ParkLocation'
-    | 'DelegatedLinesGroup';
+    | "User"
+    | "Fax User"
+    | "VirtualUser"
+    | "DigitalUser"
+    | "Department"
+    | "Announcement"
+    | "Voicemail"
+    | "SharedLinesGroup"
+    | "PagingOnly"
+    | "IvrMenu"
+    | "ApplicationExtension"
+    | "ParkLocation"
+    | "DelegatedLinesGroup";
 }
 
 export default ExtensionInfoGrants;

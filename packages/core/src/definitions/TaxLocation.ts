@@ -1,4 +1,4 @@
-import type PostalAddress from './PostalAddress';
+import type PostalAddress from "./PostalAddress";
 
 interface TaxLocation {
   /**
@@ -21,7 +21,7 @@ interface TaxLocation {
    * Required
    * Example: TaxLocation
    */
-  type?: 'BillingAddress' | 'TaxLocation' | 'Site';
+  type?: "BillingAddress" | "TaxLocation" | "Site";
 
   /**
    * Unique identifier of a tax location in the partner's system

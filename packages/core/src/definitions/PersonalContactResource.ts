@@ -1,4 +1,4 @@
-import type ContactAddressInfo from './ContactAddressInfo';
+import type ContactAddressInfo from "./ContactAddressInfo";
 
 interface PersonalContactResource {
   /**
@@ -13,7 +13,7 @@ interface PersonalContactResource {
    *  (e.g. a contact can be `Deleted`). For simple contact list reading it
    *  has always the default value - `Alive`
    */
-  availability?: 'Alive' | 'Deleted' | 'Purged';
+  availability?: "Alive" | "Deleted" | "Purged";
 
   /**
    * Email of a contact
@@ -170,16 +170,13 @@ interface PersonalContactResource {
    */
   callbackPhone?: string;
 
-  /**
-   */
+  /** */
   businessAddress?: ContactAddressInfo;
 
-  /**
-   */
+  /** */
   homeAddress?: ContactAddressInfo;
 
-  /**
-   */
+  /** */
   otherAddress?: ContactAddressInfo;
 
   /**

@@ -1,9 +1,8 @@
-import type BridgeJoinPreferences from './BridgeJoinPreferences';
-import type RecordingsPreferences from './RecordingsPreferences';
+import type BridgeJoinPreferences from "./BridgeJoinPreferences";
+import type RecordingsPreferences from "./RecordingsPreferences";
 
 interface BridgePreferences {
-  /**
-   */
+  /** */
   join?: BridgeJoinPreferences;
 
   /**
@@ -14,7 +13,7 @@ interface BridgePreferences {
    *  4) EnterOnly - Only enter tones switched on.
    * Default: Off
    */
-  playTones?: 'On' | 'Off' | 'ExitOnly' | 'EnterOnly';
+  playTones?: "On" | "Off" | "ExitOnly" | "EnterOnly";
 
   /**
    * Specifies whether to play music on hold when alone
@@ -41,16 +40,15 @@ interface BridgePreferences {
    * Controls whether recordings are enabled automatically or by user decision
    * Example: User
    */
-  recordingsMode?: 'Auto' | 'ForceAuto' | 'User';
+  recordingsMode?: "Auto" | "ForceAuto" | "User";
 
   /**
    * Controls whether transcriptions are enabled automatically or by user decision
    * Example: User
    */
-  transcriptionsMode?: 'Auto' | 'ForceAuto' | 'User';
+  transcriptionsMode?: "Auto" | "ForceAuto" | "User";
 
-  /**
-   */
+  /** */
   recordings?: RecordingsPreferences;
 
   /**

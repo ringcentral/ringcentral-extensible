@@ -1,5 +1,9 @@
-import type TMCompleteTaskRequest from '../../../../../definitions/TMCompleteTaskRequest';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import type TMCompleteTaskRequest from "../../../../../definitions/TMCompleteTaskRequest";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -23,7 +27,12 @@ class Index {
     tMCompleteTaskRequest: TMCompleteTaskRequest,
     restRequestConfig?: RestRequestConfig,
   ): Promise<string> {
-    const r = await this.rc.post<string>(this.path(), tMCompleteTaskRequest, undefined, restRequestConfig);
+    const r = await this.rc.post<string>(
+      this.path(),
+      tMCompleteTaskRequest,
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

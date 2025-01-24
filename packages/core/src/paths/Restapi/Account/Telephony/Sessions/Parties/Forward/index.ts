@@ -1,6 +1,10 @@
-import type ForwardCallPartyResponse from '../../../../../../../definitions/ForwardCallPartyResponse';
-import type ForwardTarget from '../../../../../../../definitions/ForwardTarget';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../../types';
+import type ForwardCallPartyResponse from "../../../../../../../definitions/ForwardCallPartyResponse";
+import type ForwardTarget from "../../../../../../../definitions/ForwardTarget";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -24,7 +28,12 @@ class Index {
     forwardTarget: ForwardTarget,
     restRequestConfig?: RestRequestConfig,
   ): Promise<ForwardCallPartyResponse> {
-    const r = await this.rc.post<ForwardCallPartyResponse>(this.path(), forwardTarget, undefined, restRequestConfig);
+    const r = await this.rc.post<ForwardCallPartyResponse>(
+      this.path(),
+      forwardTarget,
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

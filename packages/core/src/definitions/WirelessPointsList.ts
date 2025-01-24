@@ -1,6 +1,6 @@
-import type WirelessPointInfo from './WirelessPointInfo';
-import type PageNavigationModel from './PageNavigationModel';
-import type EnumeratedPagingModel from './EnumeratedPagingModel';
+import type WirelessPointInfo from "./WirelessPointInfo";
+import type PageNavigationModel from "./PageNavigationModel";
+import type EnumeratedPagingModel from "./EnumeratedPagingModel";
 
 interface WirelessPointsList {
   /**
@@ -14,12 +14,10 @@ interface WirelessPointsList {
    */
   records?: WirelessPointInfo[];
 
-  /**
-   */
+  /** */
   navigation?: PageNavigationModel;
 
-  /**
-   */
+  /** */
   paging?: EnumeratedPagingModel;
 }
 

@@ -13,7 +13,7 @@ interface TMAttachmentFieldsInfo {
    * Style of width span applied to a field
    * Default: Short
    */
-  style?: 'Short' | 'Long';
+  style?: "Short" | "Long";
 }
 
 export default TMAttachmentFieldsInfo;

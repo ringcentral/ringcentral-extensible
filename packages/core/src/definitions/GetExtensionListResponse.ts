@@ -1,6 +1,6 @@
-import type GetExtensionListInfoResponse from './GetExtensionListInfoResponse';
-import type PageNavigationModel from './PageNavigationModel';
-import type EnumeratedPagingModel from './EnumeratedPagingModel';
+import type GetExtensionListInfoResponse from "./GetExtensionListInfoResponse";
+import type PageNavigationModel from "./PageNavigationModel";
+import type EnumeratedPagingModel from "./EnumeratedPagingModel";
 
 interface GetExtensionListResponse {
   /**
@@ -15,12 +15,10 @@ interface GetExtensionListResponse {
    */
   records?: GetExtensionListInfoResponse[];
 
-  /**
-   */
+  /** */
   navigation?: PageNavigationModel;
 
-  /**
-   */
+  /** */
   paging?: EnumeratedPagingModel;
 }
 

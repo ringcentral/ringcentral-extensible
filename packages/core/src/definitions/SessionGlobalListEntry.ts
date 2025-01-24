@@ -1,4 +1,4 @@
-import type WcsWebinarRefModel from './WcsWebinarRefModel';
+import type WcsWebinarRefModel from "./WcsWebinarRefModel";
 
 interface SessionGlobalListEntry {
   /**
@@ -80,7 +80,7 @@ interface SessionGlobalListEntry {
    * Session status (for the purposes of Configuration service)
    * Example: Scheduled
    */
-  status?: 'Scheduled' | 'Active' | 'Finished';
+  status?: "Scheduled" | "Active" | "Finished";
 
   /**
    * The URI to join the webinar as a host

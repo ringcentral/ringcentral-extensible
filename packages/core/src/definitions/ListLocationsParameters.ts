@@ -6,7 +6,7 @@ interface ListLocationsParameters {
    * Sorts results by the property specified
    * Default: City
    */
-  orderBy?: 'Npa' | 'City';
+  orderBy?: "Npa" | "City";
 
   /**
    * Indicates a page number to retrieve. Only positive number values

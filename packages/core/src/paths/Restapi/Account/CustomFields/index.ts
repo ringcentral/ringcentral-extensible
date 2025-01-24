@@ -1,8 +1,12 @@
-import type CustomFieldUpdateRequest from '../../../../definitions/CustomFieldUpdateRequest';
-import type CustomFieldModel from '../../../../definitions/CustomFieldModel';
-import type CustomFieldCreateRequest from '../../../../definitions/CustomFieldCreateRequest';
-import type CustomFieldList from '../../../../definitions/CustomFieldList';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
+import type CustomFieldUpdateRequest from "../../../../definitions/CustomFieldUpdateRequest";
+import type CustomFieldModel from "../../../../definitions/CustomFieldModel";
+import type CustomFieldCreateRequest from "../../../../definitions/CustomFieldCreateRequest";
+import type CustomFieldList from "../../../../definitions/CustomFieldList";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -28,8 +32,14 @@ class Index {
    * App Permission: ReadAccounts
    * User Permission: ReadUserInfo
    */
-  public async get(restRequestConfig?: RestRequestConfig): Promise<CustomFieldList> {
-    const r = await this.rc.get<CustomFieldList>(this.path(false), undefined, restRequestConfig);
+  public async get(
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<CustomFieldList> {
+    const r = await this.rc.get<CustomFieldList>(
+      this.path(false),
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -67,9 +77,14 @@ class Index {
     restRequestConfig?: RestRequestConfig,
   ): Promise<CustomFieldModel> {
     if (this.fieldId === null) {
-      throw new Error('fieldId must be specified.');
+      throw new Error("fieldId must be specified.");
     }
-    const r = await this.rc.put<CustomFieldModel>(this.path(), customFieldUpdateRequest, undefined, restRequestConfig);
+    const r = await this.rc.put<CustomFieldModel>(
+      this.path(),
+      customFieldUpdateRequest,
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -83,9 +98,14 @@ class Index {
    */
   public async delete(restRequestConfig?: RestRequestConfig): Promise<string> {
     if (this.fieldId === null) {
-      throw new Error('fieldId must be specified.');
+      throw new Error("fieldId must be specified.");
     }
-    const r = await this.rc.delete<string>(this.path(), {}, undefined, restRequestConfig);
+    const r = await this.rc.delete<string>(
+      this.path(),
+      {},
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

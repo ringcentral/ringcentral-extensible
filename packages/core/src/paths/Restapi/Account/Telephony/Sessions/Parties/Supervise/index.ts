@@ -1,6 +1,10 @@
-import type PartySuperviseResponse from '../../../../../../../definitions/PartySuperviseResponse';
-import type PartySuperviseRequest from '../../../../../../../definitions/PartySuperviseRequest';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../../types';
+import type PartySuperviseResponse from "../../../../../../../definitions/PartySuperviseResponse";
+import type PartySuperviseRequest from "../../../../../../../definitions/PartySuperviseRequest";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;

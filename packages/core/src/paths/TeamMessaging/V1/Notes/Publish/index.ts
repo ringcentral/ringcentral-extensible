@@ -1,5 +1,9 @@
-import type TMNoteInfo from '../../../../../definitions/TMNoteInfo';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import type TMNoteInfo from "../../../../../definitions/TMNoteInfo";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -19,8 +23,15 @@ class Index {
    * Rate Limit Group: Medium
    * App Permission: TeamMessaging
    */
-  public async post(restRequestConfig?: RestRequestConfig): Promise<TMNoteInfo> {
-    const r = await this.rc.post<TMNoteInfo>(this.path(), {}, undefined, restRequestConfig);
+  public async post(
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<TMNoteInfo> {
+    const r = await this.rc.post<TMNoteInfo>(
+      this.path(),
+      {},
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

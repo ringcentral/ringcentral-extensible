@@ -11,7 +11,7 @@ interface ListUserMessageTemplatesParameters {
   /**
    * Specifies if a template is available on a user (Personal) or a company (Company) level
    */
-  scope?: 'Company' | 'Personal';
+  scope?: "Company" | "Personal";
 }
 
 export default ListUserMessageTemplatesParameters;

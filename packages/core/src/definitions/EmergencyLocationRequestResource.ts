@@ -1,5 +1,5 @@
-import type CommonEmergencyLocationAddressInfo from './CommonEmergencyLocationAddressInfo';
-import type ShortSiteInfo from './ShortSiteInfo';
+import type CommonEmergencyLocationAddressInfo from "./CommonEmergencyLocationAddressInfo";
+import type ShortSiteInfo from "./ShortSiteInfo";
 
 interface EmergencyLocationRequestResource {
   /**
@@ -7,8 +7,7 @@ interface EmergencyLocationRequestResource {
    */
   id?: string;
 
-  /**
-   */
+  /** */
   address?: CommonEmergencyLocationAddressInfo;
 
   /**
@@ -16,19 +15,18 @@ interface EmergencyLocationRequestResource {
    */
   name?: string;
 
-  /**
-   */
+  /** */
   site?: ShortSiteInfo;
 
   /**
    * Emergency address status
    */
-  addressStatus?: 'Valid' | 'Invalid';
+  addressStatus?: "Valid" | "Invalid";
 
   /**
    * Status of an emergency response location usage.
    */
-  usageStatus?: 'Active' | 'Inactive';
+  usageStatus?: "Active" | "Inactive";
 
   /**
    * Address format ID
@@ -41,7 +39,7 @@ interface EmergencyLocationRequestResource {
    *  specified in `owners` array
    * Default: Public
    */
-  visibility?: 'Public';
+  visibility?: "Public";
 
   /**
    * Specifies emergency address validation during the ERL creation/update.

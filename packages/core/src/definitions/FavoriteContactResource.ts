@@ -4,16 +4,13 @@ interface FavoriteContactResource {
    */
   id?: number;
 
-  /**
-   */
+  /** */
   extensionId?: string;
 
-  /**
-   */
+  /** */
   accountId?: string;
 
-  /**
-   */
+  /** */
   contactId?: string;
 }
 

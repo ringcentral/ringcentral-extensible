@@ -1,8 +1,7 @@
-import type CaiErrorCodeResponse from './CaiErrorCodeResponse';
+import type CaiErrorCodeResponse from "./CaiErrorCodeResponse";
 
 interface CaiErrorResponse {
-  /**
-   */
+  /** */
   errors?: CaiErrorCodeResponse[];
 }
 

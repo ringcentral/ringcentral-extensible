@@ -1,5 +1,5 @@
-import type PersonalContactResource from './PersonalContactResource';
-import type SyncInfo from './SyncInfo';
+import type PersonalContactResource from "./PersonalContactResource";
+import type SyncInfo from "./SyncInfo";
 
 interface AddressBookSync {
   /**
@@ -7,12 +7,10 @@ interface AddressBookSync {
    */
   uri?: string;
 
-  /**
-   */
+  /** */
   records?: PersonalContactResource[];
 
-  /**
-   */
+  /** */
   syncInfo?: SyncInfo;
 
   /**

@@ -1,4 +1,4 @@
-import type CallerIdPhoneInfoRequest from './CallerIdPhoneInfoRequest';
+import type CallerIdPhoneInfoRequest from "./CallerIdPhoneInfoRequest";
 
 interface CallerIdByDeviceInfoRequest {
   /**
@@ -10,8 +10,7 @@ interface CallerIdByDeviceInfoRequest {
    */
   type?: string;
 
-  /**
-   */
+  /** */
   phoneInfo?: CallerIdPhoneInfoRequest;
 }
 

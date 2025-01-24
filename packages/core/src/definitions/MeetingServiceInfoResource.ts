@@ -1,5 +1,5 @@
-import type MeetingExternalUserInfoResource from './MeetingExternalUserInfoResource';
-import type DialInNumberResource from './DialInNumberResource';
+import type MeetingExternalUserInfoResource from "./MeetingExternalUserInfoResource";
+import type DialInNumberResource from "./DialInNumberResource";
 
 interface MeetingServiceInfoResource {
   /**
@@ -17,12 +17,10 @@ interface MeetingServiceInfoResource {
    */
   intlDialInNumbersUri?: string;
 
-  /**
-   */
+  /** */
   externalUserInfo?: MeetingExternalUserInfoResource;
 
-  /**
-   */
+  /** */
   dialInNumbers?: DialInNumberResource[];
 }
 

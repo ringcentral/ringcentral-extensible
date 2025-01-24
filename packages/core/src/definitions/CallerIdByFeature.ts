@@ -1,24 +1,22 @@
-import type CallerIdByFeatureInfo from './CallerIdByFeatureInfo';
+import type CallerIdByFeatureInfo from "./CallerIdByFeatureInfo";
 
 /**
  * Caller ID settings by feature
  */
 interface CallerIdByFeature {
-  /**
-   */
+  /** */
   feature?:
-    | 'RingOut'
-    | 'RingMe'
-    | 'CallFlip'
-    | 'FaxNumber'
-    | 'AdditionalSoftphone'
-    | 'Alternate'
-    | 'CommonPhone'
-    | 'MobileApp'
-    | 'Delegated';
+    | "RingOut"
+    | "RingMe"
+    | "CallFlip"
+    | "FaxNumber"
+    | "AdditionalSoftphone"
+    | "Alternate"
+    | "CommonPhone"
+    | "MobileApp"
+    | "Delegated";
 
-  /**
-   */
+  /** */
   callerId?: CallerIdByFeatureInfo;
 }
 

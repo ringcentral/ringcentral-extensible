@@ -1,6 +1,6 @@
-import type AutomaticLocationUpdatesUserInfo from './AutomaticLocationUpdatesUserInfo';
-import type PageNavigationModel from './PageNavigationModel';
-import type EnumeratedPagingModel from './EnumeratedPagingModel';
+import type AutomaticLocationUpdatesUserInfo from "./AutomaticLocationUpdatesUserInfo";
+import type PageNavigationModel from "./PageNavigationModel";
+import type EnumeratedPagingModel from "./EnumeratedPagingModel";
 
 interface AutomaticLocationUpdatesUserList {
   /**
@@ -9,16 +9,13 @@ interface AutomaticLocationUpdatesUserList {
    */
   uri?: string;
 
-  /**
-   */
+  /** */
   records?: AutomaticLocationUpdatesUserInfo[];
 
-  /**
-   */
+  /** */
   navigation?: PageNavigationModel;
 
-  /**
-   */
+  /** */
   paging?: EnumeratedPagingModel;
 }
 

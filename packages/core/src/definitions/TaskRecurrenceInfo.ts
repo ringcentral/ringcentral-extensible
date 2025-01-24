@@ -6,13 +6,13 @@ interface TaskRecurrenceInfo {
    * Recurrence settings of a task. None for non-periodic tasks
    * Default: None
    */
-  schedule?: 'None' | 'Daily' | 'Weekdays' | 'Weekly' | 'Monthly' | 'Yearly';
+  schedule?: "None" | "Daily" | "Weekdays" | "Weekly" | "Monthly" | "Yearly";
 
   /**
    * Ending condition of a task
    * Default: None
    */
-  endingCondition?: 'None' | 'Count' | 'Date';
+  endingCondition?: "None" | "Count" | "Date";
 
   /**
    * Count of iterations of periodic tasks

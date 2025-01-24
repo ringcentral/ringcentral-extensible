@@ -1,10 +1,10 @@
-import EventsExtension, { Events } from '@rc-ex/events';
-import Utils from '@rc-ex/core/lib/Utils';
+import EventsExtension, { Events } from "@rc-ex/events";
+import Utils from "@rc-ex/core/lib/Utils";
 
-import ReusableRestClient from './reusable-rest-client';
+import ReusableRestClient from "./reusable-rest-client";
 
-describe('Event Emitter Extension', () => {
-  test('default', async () => {
+describe("Event Emitter Extension", () => {
+  test("default", async () => {
     const rc = await ReusableRestClient.getInstance();
     const eventsExtension = new EventsExtension();
     await rc.installExtension(eventsExtension);

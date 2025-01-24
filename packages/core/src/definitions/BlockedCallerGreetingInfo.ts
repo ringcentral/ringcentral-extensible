@@ -1,4 +1,4 @@
-import type PresetInfo from './PresetInfo';
+import type PresetInfo from "./PresetInfo";
 
 interface BlockedCallerGreetingInfo {
   /**
@@ -6,8 +6,7 @@ interface BlockedCallerGreetingInfo {
    */
   type?: string;
 
-  /**
-   */
+  /** */
   preset?: PresetInfo;
 }
 

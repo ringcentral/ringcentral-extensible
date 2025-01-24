@@ -1,4 +1,4 @@
-import type SiteBasicInfo from './SiteBasicInfo';
+import type SiteBasicInfo from "./SiteBasicInfo";
 
 /**
  * Call queue member information
@@ -19,8 +19,7 @@ interface CallQueueMember {
    */
   extensionNumber?: string;
 
-  /**
-   */
+  /** */
   site?: SiteBasicInfo;
 }
 

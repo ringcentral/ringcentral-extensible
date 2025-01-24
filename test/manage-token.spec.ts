@@ -1,7 +1,7 @@
-import ReusableRestClient from './reusable-rest-client';
+import ReusableRestClient from "./reusable-rest-client";
 
-describe('manage token', () => {
-  test('get and set token', async () => {
+describe("manage token", () => {
+  test("get and set token", async () => {
     const rc = await ReusableRestClient.getInstance();
 
     // get token

@@ -1,6 +1,6 @@
-import type WebinarRefModel from './WebinarRefModel';
-import type RecordingModel from './RecordingModel';
-import type SessionLivestreamMinimalModel from './SessionLivestreamMinimalModel';
+import type WebinarRefModel from "./WebinarRefModel";
+import type RecordingModel from "./RecordingModel";
+import type SessionLivestreamMinimalModel from "./SessionLivestreamMinimalModel";
 
 interface SessionGlobalResource {
   /**
@@ -109,13 +109,19 @@ interface SessionGlobalResource {
    * Webinar session status
    * Example: Finished
    */
-  status?: 'Scheduled' | 'Active' | 'Finished';
+  status?: "Scheduled" | "Active" | "Finished";
 
   /**
    * Session runtime status (for 'Active' Sessions only).
    *  It is omitted (or null) if the status is not Active
    */
-  runtimeStatus?: 'Idle' | 'Practice' | 'GoingLive' | 'Live' | 'Break' | 'Debrief';
+  runtimeStatus?:
+    | "Idle"
+    | "Practice"
+    | "GoingLive"
+    | "Live"
+    | "Break"
+    | "Debrief";
 
   /**
    * The number of participants (of all roles) who joined the webinar
@@ -151,8 +157,7 @@ interface SessionGlobalResource {
    */
   videoBridgeId?: string;
 
-  /**
-   */
+  /** */
   recording?: RecordingModel;
 
   /**

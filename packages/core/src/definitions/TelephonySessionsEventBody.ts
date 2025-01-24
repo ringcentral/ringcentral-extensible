@@ -1,5 +1,5 @@
-import type OriginInfo from './OriginInfo';
-import type TelephonySessionsEventPartyInfo from './TelephonySessionsEventPartyInfo';
+import type OriginInfo from "./OriginInfo";
+import type TelephonySessionsEventPartyInfo from "./TelephonySessionsEventPartyInfo";
 
 /**
  * Notification payload body
@@ -32,8 +32,7 @@ interface TelephonySessionsEventBody {
    */
   eventTime?: string;
 
-  /**
-   */
+  /** */
   origin?: OriginInfo;
 
   /**

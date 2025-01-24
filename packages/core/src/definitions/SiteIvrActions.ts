@@ -1,12 +1,11 @@
-import type SiteIVRActionsExtensionInfo from './SiteIVRActionsExtensionInfo';
+import type SiteIVRActionsExtensionInfo from "./SiteIVRActionsExtensionInfo";
 
 /**
  * Keys handling settings
  */
 interface SiteIvrActions {
-  /**
-   */
-  input?: 'Star' | 'Hash' | 'NoInput';
+  /** */
+  input?: "Star" | "Hash" | "NoInput";
 
   /**
    * Key handling action:
@@ -17,16 +16,15 @@ interface SiteIvrActions {
    *  - Disconnect - end call, for NoInput only.
    */
   action?:
-    | 'Repeat'
-    | 'ReturnToRoot'
-    | 'ReturnToPrevious'
-    | 'ReturnToTopLevelMenu'
-    | 'Connect'
-    | 'Disconnect'
-    | 'DoNothing';
+    | "Repeat"
+    | "ReturnToRoot"
+    | "ReturnToPrevious"
+    | "ReturnToTopLevelMenu"
+    | "Connect"
+    | "Disconnect"
+    | "DoNothing";
 
-  /**
-   */
+  /** */
   extension?: SiteIVRActionsExtensionInfo;
 }
 

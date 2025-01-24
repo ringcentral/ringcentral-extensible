@@ -1,4 +1,4 @@
-import type PermissionIdResource from './PermissionIdResource';
+import type PermissionIdResource from "./PermissionIdResource";
 
 interface RoleResource {
   /**
@@ -38,17 +38,16 @@ interface RoleResource {
    * Specifies resource for permission
    */
   scope?:
-    | 'Account'
-    | 'AllExtensions'
-    | 'Federation'
-    | 'Group'
-    | 'NonUserExtensions'
-    | 'RoleBased'
-    | 'Self'
-    | 'UserExtensions';
+    | "Account"
+    | "AllExtensions"
+    | "Federation"
+    | "Group"
+    | "NonUserExtensions"
+    | "RoleBased"
+    | "Self"
+    | "UserExtensions";
 
-  /**
-   */
+  /** */
   hidden?: boolean;
 
   /**
@@ -56,8 +55,7 @@ interface RoleResource {
    */
   lastUpdated?: string;
 
-  /**
-   */
+  /** */
   permissions?: PermissionIdResource[];
 }
 

@@ -1,7 +1,11 @@
-import Archive from './Archive';
-import type MessageStoreReport from '../../../../definitions/MessageStoreReport';
-import type CreateMessageStoreReportRequest from '../../../../definitions/CreateMessageStoreReportRequest';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
+import Archive from "./Archive";
+import type MessageStoreReport from "../../../../definitions/MessageStoreReport";
+import type CreateMessageStoreReportRequest from "../../../../definitions/CreateMessageStoreReportRequest";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -50,11 +54,17 @@ class Index {
    * App Permission: ReadMessages
    * User Permission: Users
    */
-  public async get(restRequestConfig?: RestRequestConfig): Promise<MessageStoreReport> {
+  public async get(
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<MessageStoreReport> {
     if (this.taskId === null) {
-      throw new Error('taskId must be specified.');
+      throw new Error("taskId must be specified.");
     }
-    const r = await this.rc.get<MessageStoreReport>(this.path(), undefined, restRequestConfig);
+    const r = await this.rc.get<MessageStoreReport>(
+      this.path(),
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 

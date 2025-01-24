@@ -1,7 +1,11 @@
-import Tasks from './Tasks';
-import type AddressBookBulkUploadResponse from '../../../../definitions/AddressBookBulkUploadResponse';
-import type AddressBookBulkUploadRequest from '../../../../definitions/AddressBookBulkUploadRequest';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
+import Tasks from "./Tasks";
+import type AddressBookBulkUploadResponse from "../../../../definitions/AddressBookBulkUploadResponse";
+import type AddressBookBulkUploadRequest from "../../../../definitions/AddressBookBulkUploadRequest";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../types";
 
 class Index {
   public rc: RingCentralInterface;

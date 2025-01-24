@@ -1,15 +1,16 @@
-import ReusableRestClient from './reusable-rest-client';
+import ReusableRestClient from "./reusable-rest-client";
 
-describe('Address Book', () => {
-  test('contacts', async () => {
+describe("Address Book", () => {
+  test("contacts", async () => {
     const rc = await ReusableRestClient.getInstance();
-    const r = await rc.restapi().account().extension().addressBook().contact().list();
+    const r = await rc.restapi().account().extension().addressBook().contact()
+      .list();
     expect(r).toBeDefined();
     expect(r.records).toBeDefined();
     expect(r.records!.length).toBeGreaterThanOrEqual(0); // by default address book is empty
   });
 
-  test('extensions', async () => {
+  test("extensions", async () => {
     const rc = await ReusableRestClient.getInstance();
     const r = await rc
       .restapi()

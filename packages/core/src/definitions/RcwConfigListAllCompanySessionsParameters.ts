@@ -6,7 +6,7 @@ interface RcwConfigListAllCompanySessionsParameters {
    * Session status (for the purposes of Configuration service)
    * Example: Scheduled
    */
-  status?: 'Scheduled' | 'Active' | 'Finished';
+  status?: "Scheduled" | "Active" | "Finished";
 
   /**
    * The beginning of the time window by 'endTime' (it is calculated as scheduledStartTime+scheduledDuration)

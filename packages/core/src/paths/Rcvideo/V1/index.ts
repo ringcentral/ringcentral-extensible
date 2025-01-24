@@ -1,7 +1,7 @@
-import Accounts from './Accounts';
-import History from './History';
-import Account from './Account';
-import type { RingCentralInterface, ParentInterface } from '../../../types';
+import Accounts from "./Accounts";
+import History from "./History";
+import Account from "./Account";
+import type { ParentInterface, RingCentralInterface } from "../../../types";
 
 class Index {
   public rc: RingCentralInterface;

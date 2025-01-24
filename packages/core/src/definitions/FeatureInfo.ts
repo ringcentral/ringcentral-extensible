@@ -1,5 +1,5 @@
-import type ParamsInfo from './ParamsInfo';
-import type ReasonInfo from './ReasonInfo';
+import type ParamsInfo from "./ParamsInfo";
+import type ReasonInfo from "./ReasonInfo";
 
 interface FeatureInfo {
   /**
@@ -16,12 +16,10 @@ interface FeatureInfo {
    */
   available?: boolean;
 
-  /**
-   */
+  /** */
   params?: ParamsInfo[];
 
-  /**
-   */
+  /** */
   reason?: ReasonInfo;
 }
 

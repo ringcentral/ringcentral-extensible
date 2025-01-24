@@ -1,16 +1,23 @@
-import type MessageTemplateUpdateRequest from '../../../../../definitions/MessageTemplateUpdateRequest';
-import type MessageTemplateResponse from '../../../../../definitions/MessageTemplateResponse';
-import type MessageTemplateRequest from '../../../../../definitions/MessageTemplateRequest';
-import type MessageTemplatesListResponse from '../../../../../definitions/MessageTemplatesListResponse';
-import type ListUserMessageTemplatesParameters from '../../../../../definitions/ListUserMessageTemplatesParameters';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import type MessageTemplateUpdateRequest from "../../../../../definitions/MessageTemplateUpdateRequest";
+import type MessageTemplateResponse from "../../../../../definitions/MessageTemplateResponse";
+import type MessageTemplateRequest from "../../../../../definitions/MessageTemplateRequest";
+import type MessageTemplatesListResponse from "../../../../../definitions/MessageTemplatesListResponse";
+import type ListUserMessageTemplatesParameters from "../../../../../definitions/ListUserMessageTemplatesParameters";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
   public _parent: ParentInterface;
   public templateId: string | null;
 
-  public constructor(_parent: ParentInterface, templateId: string | null = null) {
+  public constructor(
+    _parent: ParentInterface,
+    templateId: string | null = null,
+  ) {
     this._parent = _parent;
     this.rc = _parent.rc;
     this.templateId = templateId;
@@ -32,7 +39,11 @@ class Index {
     queryParams?: ListUserMessageTemplatesParameters,
     restRequestConfig?: RestRequestConfig,
   ): Promise<MessageTemplatesListResponse> {
-    const r = await this.rc.get<MessageTemplatesListResponse>(this.path(false), queryParams, restRequestConfig);
+    const r = await this.rc.get<MessageTemplatesListResponse>(
+      this.path(false),
+      queryParams,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -66,11 +77,17 @@ class Index {
    * Rate Limit Group: Light
    * App Permission: ReadAccounts
    */
-  public async get(restRequestConfig?: RestRequestConfig): Promise<MessageTemplateResponse> {
+  public async get(
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<MessageTemplateResponse> {
     if (this.templateId === null) {
-      throw new Error('templateId must be specified.');
+      throw new Error("templateId must be specified.");
     }
-    const r = await this.rc.get<MessageTemplateResponse>(this.path(), undefined, restRequestConfig);
+    const r = await this.rc.get<MessageTemplateResponse>(
+      this.path(),
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -86,7 +103,7 @@ class Index {
     restRequestConfig?: RestRequestConfig,
   ): Promise<MessageTemplateResponse> {
     if (this.templateId === null) {
-      throw new Error('templateId must be specified.');
+      throw new Error("templateId must be specified.");
     }
     const r = await this.rc.put<MessageTemplateResponse>(
       this.path(),
@@ -106,9 +123,14 @@ class Index {
    */
   public async delete(restRequestConfig?: RestRequestConfig): Promise<string> {
     if (this.templateId === null) {
-      throw new Error('templateId must be specified.');
+      throw new Error("templateId must be specified.");
     }
-    const r = await this.rc.delete<string>(this.path(), {}, undefined, restRequestConfig);
+    const r = await this.rc.delete<string>(
+      this.path(),
+      {},
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

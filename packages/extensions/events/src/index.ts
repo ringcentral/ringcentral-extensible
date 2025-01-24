@@ -1,27 +1,31 @@
-import type RingCentral from '@rc-ex/core';
-import type { RestRequestConfig, RestResponse, RestMethod } from '@rc-ex/core/lib/types';
-import SdkExtension from '@rc-ex/core/lib/SdkExtension';
-import type GetTokenRequest from '@rc-ex/core/lib/definitions/GetTokenRequest';
-import RestException from '@rc-ex/core/lib/RestException';
-import { EventEmitter } from 'events';
+import type RingCentral from "@rc-ex/core";
+import type {
+  RestMethod,
+  RestRequestConfig,
+  RestResponse,
+} from "@rc-ex/core/lib/types";
+import SdkExtension from "@rc-ex/core/lib/SdkExtension";
+import type GetTokenRequest from "@rc-ex/core/lib/definitions/GetTokenRequest";
+import RestException from "@rc-ex/core/lib/RestException";
+import { EventEmitter } from "events";
 
 export enum Events {
-  beforeRequest = 'beforeRequest',
-  requestSuccess = 'requestSuccess',
-  requestError = 'requestError',
+  beforeRequest = "beforeRequest",
+  requestSuccess = "requestSuccess",
+  requestError = "requestError",
 
   // enum values below are from
   // https://github.com/ringcentral/ringcentral-js/blob/master/sdk/src/platform/Platform.ts
-  beforeLogin = 'beforeLogin',
-  loginSuccess = 'loginSuccess',
-  loginError = 'loginError',
-  beforeRefresh = 'beforeRefresh',
-  refreshSuccess = 'refreshSuccess',
-  refreshError = 'refreshError',
-  beforeLogout = 'beforeLogout',
-  logoutSuccess = 'logoutSuccess',
-  logoutError = 'logoutError',
-  rateLimitError = 'rateLimitError',
+  beforeLogin = "beforeLogin",
+  loginSuccess = "loginSuccess",
+  loginError = "loginError",
+  beforeRefresh = "beforeRefresh",
+  refreshSuccess = "refreshSuccess",
+  refreshError = "refreshError",
+  beforeLogout = "beforeLogout",
+  logoutSuccess = "logoutSuccess",
+  logoutError = "logoutError",
+  rateLimitError = "rateLimitError",
 }
 
 export interface EventsOptions {
@@ -40,7 +44,9 @@ class EventsExtension extends SdkExtension {
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   public emit(event: Events, data: any) {
-    if (!this.options.enabledEvents || this.options.enabledEvents.includes(event)) {
+    if (
+      !this.options.enabledEvents || this.options.enabledEvents.includes(event)
+    ) {
       this.eventEmitter.emit(event, data);
     }
   }
@@ -66,42 +72,48 @@ class EventsExtension extends SdkExtension {
         config,
       };
       this.emit(Events.beforeRequest, params);
-      if (method === 'POST') {
-        if (endpoint === '/restapi/oauth/token') {
-          if ((content as GetTokenRequest).grant_type === 'refresh_token') {
+      if (method === "POST") {
+        if (endpoint === "/restapi/oauth/token") {
+          if ((content as GetTokenRequest).grant_type === "refresh_token") {
             this.emit(Events.beforeRefresh, params);
           } else {
             this.emit(Events.beforeLogin, params);
           }
-        } else if (endpoint === '/restapi/oauth/revoke') {
+        } else if (endpoint === "/restapi/oauth/revoke") {
           this.emit(Events.beforeLogout, params);
         }
       }
       try {
-        const r = await request<T>(method, endpoint, content, queryParams, config);
+        const r = await request<T>(
+          method,
+          endpoint,
+          content,
+          queryParams,
+          config,
+        );
         this.emit(Events.requestSuccess, r);
-        if (method === 'POST') {
-          if (endpoint === '/restapi/oauth/token') {
-            if ((content as GetTokenRequest).grant_type === 'refresh_token') {
+        if (method === "POST") {
+          if (endpoint === "/restapi/oauth/token") {
+            if ((content as GetTokenRequest).grant_type === "refresh_token") {
               this.emit(Events.refreshSuccess, r);
             } else {
               this.emit(Events.loginSuccess, r);
             }
-          } else if (endpoint === '/restapi/oauth/revoke') {
+          } else if (endpoint === "/restapi/oauth/revoke") {
             this.emit(Events.logoutSuccess, r);
           }
         }
         return r;
       } catch (e) {
         this.emit(Events.requestError, e);
-        if (method === 'POST') {
-          if (endpoint === '/restapi/oauth/token') {
-            if ((content as GetTokenRequest).grant_type === 'refresh_token') {
+        if (method === "POST") {
+          if (endpoint === "/restapi/oauth/token") {
+            if ((content as GetTokenRequest).grant_type === "refresh_token") {
               this.emit(Events.refreshError, e);
             } else {
               this.emit(Events.loginError, e);
             }
-          } else if (endpoint === '/restapi/oauth/revoke') {
+          } else if (endpoint === "/restapi/oauth/revoke") {
             this.emit(Events.logoutError, e);
           }
         }

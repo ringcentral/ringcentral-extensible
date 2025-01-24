@@ -1,55 +1,62 @@
-import MessageStoreTemplates from './MessageStoreTemplates';
-import NotificationSettings from './NotificationSettings';
-import CallQueuePresence from './CallQueuePresence';
-import VideoConfiguration from './VideoConfiguration';
-import EmergencyLocations from './EmergencyLocations';
-import AdministeredSites from './AdministeredSites';
-import OverflowSettings from './OverflowSettings';
-import AddressBookSync from './AddressBookSync';
-import ForwardingNumber from './ForwardingNumber';
-import UnifiedPresence from './UnifiedPresence';
-import AssignableRoles from './AssignableRoles';
-import CallerBlocking from './CallerBlocking';
-import BusinessHours from './BusinessHours';
-import AnsweringRule from './AnsweringRule';
-import AssignedRole from './AssignedRole';
-import AuthzProfile from './AuthzProfile';
-import CompanyPager from './CompanyPager';
-import CallLogSync from './CallLogSync';
-import MessageStore from './MessageStore';
-import ProfileImage from './ProfileImage';
-import PhoneNumber from './PhoneNumber';
-import ActiveCalls from './ActiveCalls';
-import MessageSync from './MessageSync';
-import Conferencing from './Conferencing';
-import AddressBook from './AddressBook';
-import CallQueues from './CallQueues';
-import CallerId from './CallerId';
-import Features from './Features';
-import Presence from './Presence';
-import Favorite from './Favorite';
-import RingOut from './RingOut';
-import Greeting from './Greeting';
-import CallLog from './CallLog';
-import Device from './Device';
-import Grant from './Grant';
-import Mms from './Mms';
-import Sms from './Sms';
-import Fax from './Fax';
-import type ExtensionUpdateRequest from '../../../../definitions/ExtensionUpdateRequest';
-import type GetExtensionInfoResponse from '../../../../definitions/GetExtensionInfoResponse';
-import type ExtensionCreationResponse from '../../../../definitions/ExtensionCreationResponse';
-import type ExtensionCreationRequest from '../../../../definitions/ExtensionCreationRequest';
-import type GetExtensionListResponse from '../../../../definitions/GetExtensionListResponse';
-import type ListExtensionsParameters from '../../../../definitions/ListExtensionsParameters';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
+import MessageStoreTemplates from "./MessageStoreTemplates";
+import NotificationSettings from "./NotificationSettings";
+import CallQueuePresence from "./CallQueuePresence";
+import VideoConfiguration from "./VideoConfiguration";
+import EmergencyLocations from "./EmergencyLocations";
+import AdministeredSites from "./AdministeredSites";
+import OverflowSettings from "./OverflowSettings";
+import AddressBookSync from "./AddressBookSync";
+import ForwardingNumber from "./ForwardingNumber";
+import UnifiedPresence from "./UnifiedPresence";
+import AssignableRoles from "./AssignableRoles";
+import CallerBlocking from "./CallerBlocking";
+import BusinessHours from "./BusinessHours";
+import AnsweringRule from "./AnsweringRule";
+import AssignedRole from "./AssignedRole";
+import AuthzProfile from "./AuthzProfile";
+import CompanyPager from "./CompanyPager";
+import CallLogSync from "./CallLogSync";
+import MessageStore from "./MessageStore";
+import ProfileImage from "./ProfileImage";
+import PhoneNumber from "./PhoneNumber";
+import ActiveCalls from "./ActiveCalls";
+import MessageSync from "./MessageSync";
+import Conferencing from "./Conferencing";
+import AddressBook from "./AddressBook";
+import CallQueues from "./CallQueues";
+import CallerId from "./CallerId";
+import Features from "./Features";
+import Presence from "./Presence";
+import Favorite from "./Favorite";
+import RingOut from "./RingOut";
+import Greeting from "./Greeting";
+import CallLog from "./CallLog";
+import Device from "./Device";
+import Grant from "./Grant";
+import Mms from "./Mms";
+import Sms from "./Sms";
+import Fax from "./Fax";
+import type ExtensionUpdateRequest from "../../../../definitions/ExtensionUpdateRequest";
+import type GetExtensionInfoResponse from "../../../../definitions/GetExtensionInfoResponse";
+import type ExtensionCreationResponse from "../../../../definitions/ExtensionCreationResponse";
+import type ExtensionCreationRequest from "../../../../definitions/ExtensionCreationRequest";
+import type GetExtensionListResponse from "../../../../definitions/GetExtensionListResponse";
+import type ListExtensionsParameters from "../../../../definitions/ListExtensionsParameters";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
   public _parent: ParentInterface;
   public extensionId: string | null;
 
-  public constructor(_parent: ParentInterface, extensionId: string | null = '~') {
+  public constructor(
+    _parent: ParentInterface,
+    extensionId: string | null = "~",
+  ) {
     this._parent = _parent;
     this.rc = _parent.rc;
     this.extensionId = extensionId;
@@ -74,7 +81,11 @@ class Index {
     queryParams?: ListExtensionsParameters,
     restRequestConfig?: RestRequestConfig,
   ): Promise<GetExtensionListResponse> {
-    const r = await this.rc.get<GetExtensionListResponse>(this.path(false), queryParams, restRequestConfig);
+    const r = await this.rc.get<GetExtensionListResponse>(
+      this.path(false),
+      queryParams,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -109,11 +120,17 @@ class Index {
    * App Permission: ReadAccounts
    * User Permission: ReadExtensions
    */
-  public async get(restRequestConfig?: RestRequestConfig): Promise<GetExtensionInfoResponse> {
+  public async get(
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<GetExtensionInfoResponse> {
     if (this.extensionId === null) {
-      throw new Error('extensionId must be specified.');
+      throw new Error("extensionId must be specified.");
     }
-    const r = await this.rc.get<GetExtensionInfoResponse>(this.path(), undefined, restRequestConfig);
+    const r = await this.rc.get<GetExtensionInfoResponse>(
+      this.path(),
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -130,7 +147,7 @@ class Index {
     restRequestConfig?: RestRequestConfig,
   ): Promise<GetExtensionInfoResponse> {
     if (this.extensionId === null) {
-      throw new Error('extensionId must be specified.');
+      throw new Error("extensionId must be specified.");
     }
     const r = await this.rc.put<GetExtensionInfoResponse>(
       this.path(),
@@ -257,7 +274,9 @@ class Index {
     return new UnifiedPresence(this);
   }
 
-  public forwardingNumber(forwardingNumberId: string | null = null): ForwardingNumber {
+  public forwardingNumber(
+    forwardingNumberId: string | null = null,
+  ): ForwardingNumber {
     return new ForwardingNumber(this, forwardingNumberId);
   }
 
@@ -273,7 +292,9 @@ class Index {
     return new AdministeredSites(this);
   }
 
-  public emergencyLocations(locationId: string | null = null): EmergencyLocations {
+  public emergencyLocations(
+    locationId: string | null = null,
+  ): EmergencyLocations {
     return new EmergencyLocations(this, locationId);
   }
 
@@ -289,7 +310,9 @@ class Index {
     return new NotificationSettings(this);
   }
 
-  public messageStoreTemplates(templateId: string | null = null): MessageStoreTemplates {
+  public messageStoreTemplates(
+    templateId: string | null = null,
+  ): MessageStoreTemplates {
     return new MessageStoreTemplates(this, templateId);
   }
 }

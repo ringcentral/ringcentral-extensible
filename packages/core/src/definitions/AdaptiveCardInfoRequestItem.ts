@@ -1,24 +1,19 @@
-import type AdaptiveCardColumnInfo from './AdaptiveCardColumnInfo';
+import type AdaptiveCardColumnInfo from "./AdaptiveCardColumnInfo";
 
 interface AdaptiveCardInfoRequestItem {
-  /**
-   */
-  type?: 'TextBlock' | 'ColumnSet' | 'Column' | 'FactSet';
+  /** */
+  type?: "TextBlock" | "ColumnSet" | "Column" | "FactSet";
 
-  /**
-   */
+  /** */
   text?: string;
 
-  /**
-   */
+  /** */
   weight?: string;
 
-  /**
-   */
+  /** */
   size?: string;
 
-  /**
-   */
+  /** */
   columns?: AdaptiveCardColumnInfo[];
 }
 

@@ -1,10 +1,8 @@
 interface ActionCardBody {
-  /**
-   */
-  type?: 'Input.Text';
+  /** */
+  type?: "Input.Text";
 
-  /**
-   */
+  /** */
   id?: string;
 
   /**

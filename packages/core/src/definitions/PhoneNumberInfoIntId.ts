@@ -1,5 +1,5 @@
-import type PhoneNumberCountryInfo from './PhoneNumberCountryInfo';
-import type DeviceProvisioningExtensionInfo from './DeviceProvisioningExtensionInfo';
+import type PhoneNumberCountryInfo from "./PhoneNumberCountryInfo";
+import type DeviceProvisioningExtensionInfo from "./DeviceProvisioningExtensionInfo";
 
 /**
  * Phone number information
@@ -11,12 +11,10 @@ interface PhoneNumberInfoIntId {
    */
   id?: number;
 
-  /**
-   */
+  /** */
   country?: PhoneNumberCountryInfo;
 
-  /**
-   */
+  /** */
   extension?: DeviceProvisioningExtensionInfo;
 
   /**
@@ -33,7 +31,7 @@ interface PhoneNumberInfoIntId {
    * Payment type. 'External' is returned for forwarded numbers
    *  which are not terminated in the RingCentral phone system
    */
-  paymentType?: 'External' | 'Local';
+  paymentType?: "External" | "Local";
 
   /**
    * Phone number
@@ -50,20 +48,20 @@ interface PhoneNumberInfoIntId {
   /**
    * Type of a phone number
    */
-  type?: 'VoiceFax' | 'VoiceOnly' | 'FaxOnly';
+  type?: "VoiceFax" | "VoiceOnly" | "FaxOnly";
 
   /**
    * Usage type of the phone number
    */
   usageType?:
-    | 'MainCompanyNumber'
-    | 'AdditionalCompanyNumber'
-    | 'CompanyNumber'
-    | 'DirectNumber'
-    | 'CompanyFaxNumber'
-    | 'ForwardedNumber'
-    | 'ForwardedCompanyNumber'
-    | 'ContactCenterNumber';
+    | "MainCompanyNumber"
+    | "AdditionalCompanyNumber"
+    | "CompanyNumber"
+    | "DirectNumber"
+    | "CompanyFaxNumber"
+    | "ForwardedNumber"
+    | "ForwardedCompanyNumber"
+    | "ContactCenterNumber";
 }
 
 export default PhoneNumberInfoIntId;

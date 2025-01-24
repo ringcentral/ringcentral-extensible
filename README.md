@@ -2,12 +2,18 @@
 
 [![Build Status](https://github.com/ringcentral/ringcentral-extensible/actions/workflows/node.js.yml/badge.svg)](https://github.com/ringcentral/ringcentral-extensible/actions)
 
-RingCentral Extensible is a SDK with a tiny core and lots of extensions.
-It is an endeavour to get rid of bloated SDK. You install extensions on demand.
+RingCentral Extensible is a SDK with a tiny core and lots of extensions. It is
+an endeavour to get rid of bloated SDK. You install extensions on demand.
 
 ## Getting help and support
 
-If you are having difficulty using this SDK, or working with the RingCentral API, please visit our [developer community forums](https://community.ringcentral.com/spaces/144/) for help and to get quick answers to your questions. If you wish to contact the RingCentral Developer Support team directly, please [submit a help ticket](https://developers.ringcentral.com/support/create-case) from our developer website.
+If you are having difficulty using this SDK, or working with the RingCentral
+API, please visit our
+[developer community forums](https://community.ringcentral.com/spaces/144/) for
+help and to get quick answers to your questions. If you wish to contact the
+RingCentral Developer Support team directly, please
+[submit a help ticket](https://developers.ringcentral.com/support/create-case)
+from our developer website.
 
 ## Installation
 
@@ -18,7 +24,7 @@ yarn add @rc-ex/core
 Then you should be able to import the SDK like this:
 
 ```ts
-import RingCentral from '@rc-ex/core';
+import RingCentral from "@rc-ex/core";
 ```
 
 ## Usage
@@ -29,13 +35,15 @@ You can also find lots of useful code snippets from [test cases](./test).
 
 ## [Extensions](./packages/extensions)
 
-This SDK supports [extensions](./packages/extensions). You can enable features by installing extensions.
+This SDK supports [extensions](./packages/extensions). You can enable features
+by installing extensions.
 
 If you want to add features to this SDK, create an extension.
 
 ## Logging
 
-The logging implementation copies [AWS SDK logging](https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/logging-sdk-calls.html).
+The logging implementation copies
+[AWS SDK logging](https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/logging-sdk-calls.html).
 
 To enable logging:
 
@@ -46,7 +54,7 @@ RingCentral.config.logger = console;
 Or you could use a third-party logger:
 
 ```ts
-import winston from 'winston';
+import winston from "winston";
 
 const logger = winston.createLogger({
   transports: [
@@ -69,15 +77,19 @@ Sample log entries:
 
 ## Binary content downloading
 
-Some [sample code](./packages/core/src/samples.md) for binary content downloading may not work.
+Some [sample code](./packages/core/src/samples.md) for binary content
+downloading may not work.
 
-Because RingCentral is gradually migrating binary content to CDN such as `media.ringcentral.com`.
+Because RingCentral is gradually migrating binary content to CDN such as
+`media.ringcentral.com`.
 
 For example, to download the attachment of a fax:
 
 ```ts
 // `message` is the fax message object
-const r = await rc.get(message.attachments[0].uri, undefined, { responseType: 'arraybuffer' });
+const r = await rc.get(message.attachments[0].uri, undefined, {
+  responseType: "arraybuffer",
+});
 const content = r.data;
 ```
 
@@ -96,15 +108,17 @@ const content = await rc
 
 ### Rule of thumb
 
-But not all binary content has been migrated to CDN.
-If the resource to download provides you with a CDN uri, use that CDN uri.
-If there is no CDN uri provided, construct the uri as [sample code](./packages/core/src/samples.md) shows.
+But not all binary content has been migrated to CDN. If the resource to download
+provides you with a CDN uri, use that CDN uri. If there is no CDN uri provided,
+construct the uri as [sample code](./packages/core/src/samples.md) shows.
 
 ## For maintainers
 
 ### Regenerate code using latest swagger spec
 
-Please refer to the [RingCentral Code Generator](https://github.com/tylerlong/ringcentral-code-generator-typescript) project.
+Please refer to the
+[RingCentral Code Generator](https://github.com/tylerlong/ringcentral-code-generator-typescript)
+project.
 
 ### Test
 
@@ -133,7 +147,8 @@ As I just tried, it works without `from-package` option.
 
 ### NPM 2FA
 
-I don't know how to make it work with lerna and I have to disable it via npmjs.com GUI: I disabled "Require two-factor authentication for write actions".
+I don't know how to make it work with lerna and I have to disable it via
+npmjs.com GUI: I disabled "Require two-factor authentication for write actions".
 
 ## Add dependency
 

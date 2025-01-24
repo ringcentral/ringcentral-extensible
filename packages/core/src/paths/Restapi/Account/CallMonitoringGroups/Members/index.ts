@@ -1,6 +1,10 @@
-import type CallMonitoringGroupMemberList from '../../../../../definitions/CallMonitoringGroupMemberList';
-import type ListCallMonitoringGroupMembersParameters from '../../../../../definitions/ListCallMonitoringGroupMembersParameters';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import type CallMonitoringGroupMemberList from "../../../../../definitions/CallMonitoringGroupMemberList";
+import type ListCallMonitoringGroupMembersParameters from "../../../../../definitions/ListCallMonitoringGroupMembersParameters";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -26,7 +30,11 @@ class Index {
     queryParams?: ListCallMonitoringGroupMembersParameters,
     restRequestConfig?: RestRequestConfig,
   ): Promise<CallMonitoringGroupMemberList> {
-    const r = await this.rc.get<CallMonitoringGroupMemberList>(this.path(), queryParams, restRequestConfig);
+    const r = await this.rc.get<CallMonitoringGroupMemberList>(
+      this.path(),
+      queryParams,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

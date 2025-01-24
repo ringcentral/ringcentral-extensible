@@ -1,8 +1,7 @@
-import type CallQueueMemberPresence from './CallQueueMemberPresence';
+import type CallQueueMemberPresence from "./CallQueueMemberPresence";
 
 interface CallQueuePresence {
-  /**
-   */
+  /** */
   records?: CallQueueMemberPresence[];
 }
 

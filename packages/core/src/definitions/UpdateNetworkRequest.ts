@@ -1,6 +1,6 @@
-import type AutomaticLocationUpdatesSiteInfo from './AutomaticLocationUpdatesSiteInfo';
-import type PublicIpRangeInfo from './PublicIpRangeInfo';
-import type PrivateIpRangeInfoRequest from './PrivateIpRangeInfoRequest';
+import type AutomaticLocationUpdatesSiteInfo from "./AutomaticLocationUpdatesSiteInfo";
+import type PublicIpRangeInfo from "./PublicIpRangeInfo";
+import type PrivateIpRangeInfoRequest from "./PrivateIpRangeInfoRequest";
 
 interface UpdateNetworkRequest {
   /**
@@ -14,8 +14,7 @@ interface UpdateNetworkRequest {
    */
   name?: string;
 
-  /**
-   */
+  /** */
   site?: AutomaticLocationUpdatesSiteInfo;
 
   /**

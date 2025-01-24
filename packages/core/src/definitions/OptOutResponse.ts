@@ -17,11 +17,10 @@ interface OptOutResponse {
   /**
    * Status of a phone number
    */
-  status?: 'OptIn' | 'OptOut';
+  status?: "OptIn" | "OptOut";
 
-  /**
-   */
-  source?: 'Recipient' | 'Account' | 'Upstream' | 'Carrier';
+  /** */
+  source?: "Recipient" | "Account" | "Upstream" | "Carrier";
 }
 
 export default OptOutResponse;

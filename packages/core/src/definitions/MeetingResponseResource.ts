@@ -1,8 +1,8 @@
-import type MeetingLinks from './MeetingLinks';
-import type MeetingScheduleResource from './MeetingScheduleResource';
-import type HostInfoRequest from './HostInfoRequest';
-import type RecurrenceInfo from './RecurrenceInfo';
-import type MeetingOccurrenceInfo from './MeetingOccurrenceInfo';
+import type MeetingLinks from "./MeetingLinks";
+import type MeetingScheduleResource from "./MeetingScheduleResource";
+import type HostInfoRequest from "./HostInfoRequest";
+import type RecurrenceInfo from "./RecurrenceInfo";
+import type MeetingOccurrenceInfo from "./MeetingOccurrenceInfo";
 
 interface MeetingResponseResource {
   /**
@@ -26,17 +26,15 @@ interface MeetingResponseResource {
    */
   topic?: string;
 
-  /**
-   */
-  meetingType?: 'Instant' | 'Scheduled' | 'ScheduledRecurring' | 'Recurring';
+  /** */
+  meetingType?: "Instant" | "Scheduled" | "ScheduledRecurring" | "Recurring";
 
   /**
    * Meeting password
    */
   password?: string;
 
-  /**
-   */
+  /** */
   h323Password?: string;
 
   /**
@@ -44,16 +42,13 @@ interface MeetingResponseResource {
    */
   status?: string;
 
-  /**
-   */
+  /** */
   links?: MeetingLinks;
 
-  /**
-   */
+  /** */
   schedule?: MeetingScheduleResource;
 
-  /**
-   */
+  /** */
   host?: HostInfoRequest;
 
   /**
@@ -71,19 +66,17 @@ interface MeetingResponseResource {
    */
   startParticipantsVideo?: boolean;
 
-  /**
-   */
-  audioOptions?: ('Phone' | 'ComputerAudio')[];
+  /** */
+  audioOptions?: ("Phone" | "ComputerAudio")[];
 
-  /**
-   */
+  /** */
   recurrence?: RecurrenceInfo;
 
   /**
    * Automatic record type
    * Default: none
    */
-  autoRecordType?: 'local' | 'cloud' | 'none';
+  autoRecordType?: "local" | "cloud" | "none";
 
   /**
    * If true, then only signed-in users can join this meeting
@@ -95,8 +88,7 @@ interface MeetingResponseResource {
    */
   muteParticipantsOnEntry?: boolean;
 
-  /**
-   */
+  /** */
   occurrences?: MeetingOccurrenceInfo[];
 
   /**
@@ -109,8 +101,7 @@ interface MeetingResponseResource {
    */
   globalDialInCountries?: string[];
 
-  /**
-   */
+  /** */
   alternativeHosts?: string;
 }
 

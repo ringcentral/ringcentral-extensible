@@ -1,10 +1,10 @@
-import type DeviceModelInfo from './DeviceModelInfo';
-import type DeviceExtensionInfo from './DeviceExtensionInfo';
-import type DeviceEmergencyServiceAddressResourceDefault from './DeviceEmergencyServiceAddressResourceDefault';
-import type SipRegistrationDeviceEmergencyInfo from './SipRegistrationDeviceEmergencyInfo';
-import type ShippingInfo from './ShippingInfo';
-import type DevicePhoneLinesInfo from './DevicePhoneLinesInfo';
-import type DeviceSiteInfo from './DeviceSiteInfo';
+import type DeviceModelInfo from "./DeviceModelInfo";
+import type DeviceExtensionInfo from "./DeviceExtensionInfo";
+import type DeviceEmergencyServiceAddressResourceDefault from "./DeviceEmergencyServiceAddressResourceDefault";
+import type SipRegistrationDeviceEmergencyInfo from "./SipRegistrationDeviceEmergencyInfo";
+import type ShippingInfo from "./ShippingInfo";
+import type DevicePhoneLinesInfo from "./DevicePhoneLinesInfo";
+import type DeviceSiteInfo from "./DeviceSiteInfo";
 
 interface SipRegistrationDeviceInfo {
   /**
@@ -21,7 +21,13 @@ interface SipRegistrationDeviceInfo {
   /**
    * Device type
    */
-  type?: 'HardPhone' | 'SoftPhone' | 'OtherPhone' | 'Paging' | 'WebPhone' | 'Room';
+  type?:
+    | "HardPhone"
+    | "SoftPhone"
+    | "OtherPhone"
+    | "Paging"
+    | "WebPhone"
+    | "Room";
 
   /**
    * Device identification number (SKU, Stock Keeping Unit) in the format
@@ -31,9 +37,8 @@ interface SipRegistrationDeviceInfo {
    */
   sku?: string;
 
-  /**
-   */
-  status?: 'Online' | 'Offline';
+  /** */
+  status?: "Online" | "Offline";
 
   /**
    * Device name. Mandatory if ordering  SoftPhone or OtherPhone.
@@ -53,24 +58,19 @@ interface SipRegistrationDeviceInfo {
    */
   computerName?: string;
 
-  /**
-   */
+  /** */
   model?: DeviceModelInfo;
 
-  /**
-   */
+  /** */
   extension?: DeviceExtensionInfo;
 
-  /**
-   */
+  /** */
   emergencyServiceAddress?: DeviceEmergencyServiceAddressResourceDefault;
 
-  /**
-   */
+  /** */
   emergency?: SipRegistrationDeviceEmergencyInfo;
 
-  /**
-   */
+  /** */
   shipping?: ShippingInfo;
 
   /**
@@ -95,7 +95,7 @@ interface SipRegistrationDeviceInfo {
    *  - `Guest` - device with a linked phone line;
    *  - `None` - device without a phone line or with a specific line (free, BLA, etc.)
    */
-  linePooling?: 'Host' | 'Guest' | 'None';
+  linePooling?: "Host" | "Guest" | "None";
 
   /**
    * Network location status. `true` if the device is located in
@@ -105,8 +105,7 @@ interface SipRegistrationDeviceInfo {
    */
   inCompanyNet?: boolean;
 
-  /**
-   */
+  /** */
   site?: DeviceSiteInfo;
 
   /**

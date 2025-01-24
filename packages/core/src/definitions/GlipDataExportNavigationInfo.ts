@@ -1,20 +1,16 @@
-import type GlipDataExportNavigationInfoUri from './GlipDataExportNavigationInfoUri';
+import type GlipDataExportNavigationInfoUri from "./GlipDataExportNavigationInfoUri";
 
 interface GlipDataExportNavigationInfo {
-  /**
-   */
+  /** */
   firstPage?: GlipDataExportNavigationInfoUri;
 
-  /**
-   */
+  /** */
   nextPage?: GlipDataExportNavigationInfoUri;
 
-  /**
-   */
+  /** */
   previousPage?: GlipDataExportNavigationInfoUri;
 
-  /**
-   */
+  /** */
   lastPage?: GlipDataExportNavigationInfoUri;
 }
 

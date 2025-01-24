@@ -1,5 +1,5 @@
-import type SwitchSiteInfo from './SwitchSiteInfo';
-import type EmergencyAddressInfo from './EmergencyAddressInfo';
+import type SwitchSiteInfo from "./SwitchSiteInfo";
+import type EmergencyAddressInfo from "./EmergencyAddressInfo";
 
 interface UpdateSwitchInfo {
   /**
@@ -24,12 +24,10 @@ interface UpdateSwitchInfo {
    */
   name?: string;
 
-  /**
-   */
+  /** */
   site?: SwitchSiteInfo;
 
-  /**
-   */
+  /** */
   emergencyAddress?: EmergencyAddressInfo;
 }
 

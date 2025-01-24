@@ -1,5 +1,9 @@
-import type BulkRoleAssignResource from '../../../../../definitions/BulkRoleAssignResource';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import type BulkRoleAssignResource from "../../../../../definitions/BulkRoleAssignResource";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -24,7 +28,12 @@ class Index {
     bulkRoleAssignResource: BulkRoleAssignResource,
     restRequestConfig?: RestRequestConfig,
   ): Promise<string> {
-    const r = await this.rc.post<string>(this.path(), bulkRoleAssignResource, undefined, restRequestConfig);
+    const r = await this.rc.post<string>(
+      this.path(),
+      bulkRoleAssignResource,
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

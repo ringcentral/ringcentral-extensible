@@ -1,4 +1,4 @@
-import type AssignedRoleResource from './AssignedRoleResource';
+import type AssignedRoleResource from "./AssignedRoleResource";
 
 interface AssignedRolesResource {
   /**
@@ -6,8 +6,7 @@ interface AssignedRolesResource {
    */
   uri?: string;
 
-  /**
-   */
+  /** */
   records?: AssignedRoleResource[];
 }
 

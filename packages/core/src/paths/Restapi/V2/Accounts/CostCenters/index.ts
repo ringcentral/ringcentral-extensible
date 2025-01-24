@@ -1,5 +1,9 @@
-import type CostCenterList from '../../../../../definitions/CostCenterList';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import type CostCenterList from "../../../../../definitions/CostCenterList";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -20,8 +24,14 @@ class Index {
    * App Permission: ReadAccounts
    * User Permission: CostCenterManagement
    */
-  public async get(restRequestConfig?: RestRequestConfig): Promise<CostCenterList> {
-    const r = await this.rc.get<CostCenterList>(this.path(), undefined, restRequestConfig);
+  public async get(
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<CostCenterList> {
+    const r = await this.rc.get<CostCenterList>(
+      this.path(),
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

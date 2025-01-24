@@ -1,4 +1,4 @@
-import type ExtensionListEventBody from './ExtensionListEventBody';
+import type ExtensionListEventBody from "./ExtensionListEventBody";
 
 interface ExtensionListEvent {
   /**
@@ -23,8 +23,7 @@ interface ExtensionListEvent {
    */
   subscriptionId?: string;
 
-  /**
-   */
+  /** */
   body?: ExtensionListEventBody;
 }
 

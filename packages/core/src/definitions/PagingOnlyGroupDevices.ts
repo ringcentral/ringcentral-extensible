@@ -1,6 +1,6 @@
-import type PagingDeviceInfo from './PagingDeviceInfo';
-import type PageNavigationModel from './PageNavigationModel';
-import type EnumeratedPagingModel from './EnumeratedPagingModel';
+import type PagingDeviceInfo from "./PagingDeviceInfo";
+import type PageNavigationModel from "./PageNavigationModel";
+import type EnumeratedPagingModel from "./EnumeratedPagingModel";
 
 interface PagingOnlyGroupDevices {
   /**
@@ -14,12 +14,10 @@ interface PagingOnlyGroupDevices {
    */
   records?: PagingDeviceInfo[];
 
-  /**
-   */
+  /** */
   navigation?: PageNavigationModel;
 
-  /**
-   */
+  /** */
   paging?: EnumeratedPagingModel;
 }
 

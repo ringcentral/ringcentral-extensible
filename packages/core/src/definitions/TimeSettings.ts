@@ -1,5 +1,5 @@
-import type TimeRange from './TimeRange';
-import type AdvancedTimeSettings from './AdvancedTimeSettings';
+import type TimeRange from "./TimeRange";
+import type AdvancedTimeSettings from "./AdvancedTimeSettings";
 
 /**
  * Date-time range for the calls. The call is considered to be within time range if it started within time range. Both borders are inclusive
@@ -16,8 +16,7 @@ interface TimeSettings {
    */
   timeRange?: TimeRange;
 
-  /**
-   */
+  /** */
   advancedTimeSettings?: AdvancedTimeSettings;
 }
 

@@ -1,12 +1,12 @@
-import type AggregationResponseOptionsTimersAllCallsDuration from './AggregationResponseOptionsTimersAllCallsDuration';
-import type AggregationResponseOptionsTimersCallsDurationByDirection from './AggregationResponseOptionsTimersCallsDurationByDirection';
-import type AggregationResponseOptionsTimersCallsDurationByOrigin from './AggregationResponseOptionsTimersCallsDurationByOrigin';
-import type AggregationResponseOptionsTimersCallsDurationByResponse from './AggregationResponseOptionsTimersCallsDurationByResponse';
-import type AggregationResponseOptionsTimersCallsSegmentsDuration from './AggregationResponseOptionsTimersCallsSegmentsDuration';
-import type AggregationResponseOptionsTimersCallsDurationByResult from './AggregationResponseOptionsTimersCallsDurationByResult';
-import type AggregationResponseOptionsTimersCallsDurationByCompanyHours from './AggregationResponseOptionsTimersCallsDurationByCompanyHours';
-import type AggregationResponseOptionsTimersCallsDurationByQueueSla from './AggregationResponseOptionsTimersCallsDurationByQueueSla';
-import type AggregationResponseOptionsTimersCallsDurationByType from './AggregationResponseOptionsTimersCallsDurationByType';
+import type AggregationResponseOptionsTimersAllCallsDuration from "./AggregationResponseOptionsTimersAllCallsDuration";
+import type AggregationResponseOptionsTimersCallsDurationByDirection from "./AggregationResponseOptionsTimersCallsDurationByDirection";
+import type AggregationResponseOptionsTimersCallsDurationByOrigin from "./AggregationResponseOptionsTimersCallsDurationByOrigin";
+import type AggregationResponseOptionsTimersCallsDurationByResponse from "./AggregationResponseOptionsTimersCallsDurationByResponse";
+import type AggregationResponseOptionsTimersCallsSegmentsDuration from "./AggregationResponseOptionsTimersCallsSegmentsDuration";
+import type AggregationResponseOptionsTimersCallsDurationByResult from "./AggregationResponseOptionsTimersCallsDurationByResult";
+import type AggregationResponseOptionsTimersCallsDurationByCompanyHours from "./AggregationResponseOptionsTimersCallsDurationByCompanyHours";
+import type AggregationResponseOptionsTimersCallsDurationByQueueSla from "./AggregationResponseOptionsTimersCallsDurationByQueueSla";
+import type AggregationResponseOptionsTimersCallsDurationByType from "./AggregationResponseOptionsTimersCallsDurationByType";
 
 /**
  * The formula is defined by `aggregationType` and `aggregationInterval` for every timer individually.
@@ -23,7 +23,8 @@ interface AggregationResponseOptionsTimers {
   /**
    * Aggregation of calls duration by direction (Inbound, Outbound)
    */
-  callsDurationByDirection?: AggregationResponseOptionsTimersCallsDurationByDirection;
+  callsDurationByDirection?:
+    AggregationResponseOptionsTimersCallsDurationByDirection;
 
   /**
    * Aggregation of calls duration by origin (Internal, External)
@@ -33,7 +34,8 @@ interface AggregationResponseOptionsTimers {
   /**
    * Aggregation of calls duration by response (Answered, NotAnswered, Connected, NotConnected)
    */
-  callsDurationByResponse?: AggregationResponseOptionsTimersCallsDurationByResponse;
+  callsDurationByResponse?:
+    AggregationResponseOptionsTimersCallsDurationByResponse;
 
   /**
    * Aggregation of calls duration by segments (Ringing, LiveTalk, Hold, Park, Transfer, IvrPrompt, Voicemail, VmGreeting, Setup)
@@ -48,12 +50,14 @@ interface AggregationResponseOptionsTimers {
   /**
    * Aggregation of calls duration by company hours (BusinessHours, AfterHours)
    */
-  callsDurationByCompanyHours?: AggregationResponseOptionsTimersCallsDurationByCompanyHours;
+  callsDurationByCompanyHours?:
+    AggregationResponseOptionsTimersCallsDurationByCompanyHours;
 
   /**
    * Aggregation of calls duration by queue SLA (InSLA, OutSLA). This timer is only applicable to Queues grouping
    */
-  callsDurationByQueueSla?: AggregationResponseOptionsTimersCallsDurationByQueueSla;
+  callsDurationByQueueSla?:
+    AggregationResponseOptionsTimersCallsDurationByQueueSla;
 
   /**
    * Aggregation of calls duration by type (Direct, FromQueue, ParkRetrieval, Transferred, Outbound)

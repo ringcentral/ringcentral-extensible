@@ -1,5 +1,9 @@
-import type JobStatusResponse from '../../../../../definitions/JobStatusResponse';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import type JobStatusResponse from "../../../../../definitions/JobStatusResponse";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -24,11 +28,17 @@ class Index {
    * Rate Limit Group: Heavy
    * App Permission: AI
    */
-  public async get(restRequestConfig?: RestRequestConfig): Promise<JobStatusResponse> {
+  public async get(
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<JobStatusResponse> {
     if (this.jobId === null) {
-      throw new Error('jobId must be specified.');
+      throw new Error("jobId must be specified.");
     }
-    const r = await this.rc.get<JobStatusResponse>(this.path(), undefined, restRequestConfig);
+    const r = await this.rc.get<JobStatusResponse>(
+      this.path(),
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

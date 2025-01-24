@@ -1,6 +1,10 @@
-import type FeatureList from '../../../../../definitions/FeatureList';
-import type ReadExtensionFeaturesParameters from '../../../../../definitions/ReadExtensionFeaturesParameters';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import type FeatureList from "../../../../../definitions/FeatureList";
+import type ReadExtensionFeaturesParameters from "../../../../../definitions/ReadExtensionFeaturesParameters";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -53,7 +57,11 @@ class Index {
     queryParams?: ReadExtensionFeaturesParameters,
     restRequestConfig?: RestRequestConfig,
   ): Promise<FeatureList> {
-    const r = await this.rc.get<FeatureList>(this.path(), queryParams, restRequestConfig);
+    const r = await this.rc.get<FeatureList>(
+      this.path(),
+      queryParams,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

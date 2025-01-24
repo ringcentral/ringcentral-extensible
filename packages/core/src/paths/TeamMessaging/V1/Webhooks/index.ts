@@ -1,14 +1,21 @@
-import Activate from './Activate';
-import Suspend from './Suspend';
-import type TMWebhookList from '../../../../definitions/TMWebhookList';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
+import Activate from "./Activate";
+import Suspend from "./Suspend";
+import type TMWebhookList from "../../../../definitions/TMWebhookList";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
   public _parent: ParentInterface;
   public webhookId: string | null;
 
-  public constructor(_parent: ParentInterface, webhookId: string | null = null) {
+  public constructor(
+    _parent: ParentInterface,
+    webhookId: string | null = null,
+  ) {
     this._parent = _parent;
     this.rc = _parent.rc;
     this.webhookId = webhookId;
@@ -26,8 +33,14 @@ class Index {
    * Rate Limit Group: Medium
    * App Permission: TeamMessaging
    */
-  public async list(restRequestConfig?: RestRequestConfig): Promise<TMWebhookList> {
-    const r = await this.rc.get<TMWebhookList>(this.path(false), undefined, restRequestConfig);
+  public async list(
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<TMWebhookList> {
+    const r = await this.rc.get<TMWebhookList>(
+      this.path(false),
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -38,11 +51,17 @@ class Index {
    * Rate Limit Group: Medium
    * App Permission: TeamMessaging
    */
-  public async get(restRequestConfig?: RestRequestConfig): Promise<TMWebhookList> {
+  public async get(
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<TMWebhookList> {
     if (this.webhookId === null) {
-      throw new Error('webhookId must be specified.');
+      throw new Error("webhookId must be specified.");
     }
-    const r = await this.rc.get<TMWebhookList>(this.path(), undefined, restRequestConfig);
+    const r = await this.rc.get<TMWebhookList>(
+      this.path(),
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -55,9 +74,14 @@ class Index {
    */
   public async delete(restRequestConfig?: RestRequestConfig): Promise<string> {
     if (this.webhookId === null) {
-      throw new Error('webhookId must be specified.');
+      throw new Error("webhookId must be specified.");
     }
-    const r = await this.rc.delete<string>(this.path(), {}, undefined, restRequestConfig);
+    const r = await this.rc.delete<string>(
+      this.path(),
+      {},
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 

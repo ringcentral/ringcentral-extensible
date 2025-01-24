@@ -5,7 +5,7 @@ interface PatchMessageRequest {
   /**
    * Message read status
    */
-  readStatus?: 'Read' | 'Unread';
+  readStatus?: "Read" | "Unread";
 
   /**
    * Message availability status. Message in 'Deleted' state is still
@@ -13,7 +13,7 @@ interface PatchMessageRequest {
    *  that all attachments are already deleted and the message itself is about
    *  to be physically deleted shortly
    */
-  availability?: 'Alive' | 'Deleted' | 'Purged';
+  availability?: "Alive" | "Deleted" | "Purged";
 }
 
 export default PatchMessageRequest;

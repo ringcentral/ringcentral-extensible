@@ -1,5 +1,5 @@
-import type CreateForwardingNumberDeviceInfo from './CreateForwardingNumberDeviceInfo';
-import type ForwardingNumberInfoExtension from './ForwardingNumberInfoExtension';
+import type CreateForwardingNumberDeviceInfo from "./CreateForwardingNumberDeviceInfo";
+import type ForwardingNumberInfoExtension from "./ForwardingNumberInfoExtension";
 
 interface ForwardingNumberInfo {
   /**
@@ -26,30 +26,29 @@ interface ForwardingNumberInfo {
   /**
    * Type of option this phone number is used for. Multiple values are accepted
    */
-  features?: ('CallFlip' | 'CallForwarding')[];
+  features?: ("CallFlip" | "CallForwarding")[];
 
   /**
    * Number assigned to the call flip phone number, corresponds to the shortcut dial number
    */
   flipNumber?: string;
 
-  /**
-   */
+  /** */
   device?: CreateForwardingNumberDeviceInfo;
 
   /**
    * Forwarding phone number type
    */
   type?:
-    | 'Home'
-    | 'Mobile'
-    | 'Work'
-    | 'PhoneLine'
-    | 'Outage'
-    | 'Other'
-    | 'BusinessMobilePhone'
-    | 'ExternalCarrier'
-    | 'ExtensionApps';
+    | "Home"
+    | "Mobile"
+    | "Work"
+    | "PhoneLine"
+    | "Outage"
+    | "Other"
+    | "BusinessMobilePhone"
+    | "ExternalCarrier"
+    | "ExtensionApps";
 
   /**
    * Extension information. Returned only if extension type is 'ExtensionApps'

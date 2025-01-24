@@ -20,8 +20,7 @@ interface GetTimezoneInfoResponse {
    */
   description?: string;
 
-  /**
-   */
+  /** */
   bias?: string;
 }
 

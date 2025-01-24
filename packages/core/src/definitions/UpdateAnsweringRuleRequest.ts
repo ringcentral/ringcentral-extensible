@@ -1,13 +1,13 @@
-import type ForwardingInfoCreateRuleRequest from './ForwardingInfoCreateRuleRequest';
-import type CallersInfoRequest from './CallersInfoRequest';
-import type CalledNumberInfo from './CalledNumberInfo';
-import type ScheduleInfo from './ScheduleInfo';
-import type UnconditionalForwardingInfo from './UnconditionalForwardingInfo';
-import type QueueInfo from './QueueInfo';
-import type VoicemailInfo from './VoicemailInfo';
-import type MissedCallInfo from './MissedCallInfo';
-import type GreetingInfo from './GreetingInfo';
-import type TransferredExtensionInfo from './TransferredExtensionInfo';
+import type ForwardingInfoCreateRuleRequest from "./ForwardingInfoCreateRuleRequest";
+import type CallersInfoRequest from "./CallersInfoRequest";
+import type CalledNumberInfo from "./CalledNumberInfo";
+import type ScheduleInfo from "./ScheduleInfo";
+import type UnconditionalForwardingInfo from "./UnconditionalForwardingInfo";
+import type QueueInfo from "./QueueInfo";
+import type VoicemailInfo from "./VoicemailInfo";
+import type MissedCallInfo from "./MissedCallInfo";
+import type GreetingInfo from "./GreetingInfo";
+import type TransferredExtensionInfo from "./TransferredExtensionInfo";
 
 interface UpdateAnsweringRuleRequest {
   /**
@@ -15,8 +15,7 @@ interface UpdateAnsweringRuleRequest {
    */
   id?: string;
 
-  /**
-   */
+  /** */
   forwarding?: ForwardingInfoCreateRuleRequest;
 
   /**
@@ -39,41 +38,36 @@ interface UpdateAnsweringRuleRequest {
    */
   calledNumbers?: CalledNumberInfo[];
 
-  /**
-   */
+  /** */
   schedule?: ScheduleInfo;
 
   /**
    * Specifies how incoming calls are forwarded
    */
   callHandlingAction?:
-    | 'ForwardCalls'
-    | 'UnconditionalForwarding'
-    | 'AgentQueue'
-    | 'TransferToExtension'
-    | 'TakeMessagesOnly'
-    | 'PlayAnnouncementOnly'
-    | 'SharedLines';
+    | "ForwardCalls"
+    | "UnconditionalForwarding"
+    | "AgentQueue"
+    | "TransferToExtension"
+    | "TakeMessagesOnly"
+    | "PlayAnnouncementOnly"
+    | "SharedLines";
 
   /**
    * Type of an answering rule
    */
-  type?: 'BusinessHours' | 'AfterHours' | 'Custom';
+  type?: "BusinessHours" | "AfterHours" | "Custom";
 
-  /**
-   */
+  /** */
   unconditionalForwarding?: UnconditionalForwardingInfo;
 
-  /**
-   */
+  /** */
   queue?: QueueInfo;
 
-  /**
-   */
+  /** */
   voicemail?: VoicemailInfo;
 
-  /**
-   */
+  /** */
   missedCall?: MissedCallInfo;
 
   /**
@@ -91,15 +85,14 @@ interface UpdateAnsweringRuleRequest {
    *  value is 'Off'
    * Default: Off
    */
-  screening?: 'Off' | 'NoCallerId' | 'UnknownCallerId' | 'Always';
+  screening?: "Off" | "NoCallerId" | "UnknownCallerId" | "Always";
 
   /**
    * Indicates whether inactive numbers should be returned or not
    */
   showInactiveNumbers?: boolean;
 
-  /**
-   */
+  /** */
   transfer?: TransferredExtensionInfo;
 }
 

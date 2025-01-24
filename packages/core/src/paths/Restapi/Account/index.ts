@@ -1,49 +1,53 @@
-import EmergencyAddressAutoUpdate from './EmergencyAddressAutoUpdate';
-import MessageStoreConfiguration from './MessageStoreConfiguration';
-import AddressBookBulkUpload from './AddressBookBulkUpload';
-import MessageStoreTemplates from './MessageStoreTemplates';
-import CallMonitoringGroups from './CallMonitoringGroups';
-import ExtensionBulkUpdate from './ExtensionBulkUpdate';
-import MessageStoreReport from './MessageStoreReport';
-import EmergencyLocations from './EmergencyLocations';
-import PagingOnlyGroups from './PagingOnlyGroups';
-import ForwardAllCalls from './ForwardAllCalls';
-import BusinessAddress from './BusinessAddress';
-import CallRecordings from './CallRecordings';
-import CallRecording from './CallRecording';
-import BusinessHours from './BusinessHours';
-import AnsweringRule from './AnsweringRule';
-import AssignedRole from './AssignedRole';
-import CallLogSync from './CallLogSync';
-import CustomFields from './CustomFields';
-import ActiveCalls from './ActiveCalls';
-import ServiceInfo from './ServiceInfo';
-import PhoneNumber from './PhoneNumber';
-import CallQueues from './CallQueues';
-import IvrPrompts from './IvrPrompts';
-import AuditTrail from './AuditTrail';
-import UserRole from './UserRole';
-import IvrMenus from './IvrMenus';
-import Templates from './Templates';
-import Extension from './Extension';
-import Recording from './Recording';
-import Telephony from './Telephony';
-import Directory from './Directory';
-import Greeting from './Greeting';
-import Presence from './Presence';
-import CallLog from './CallLog';
-import A2pSms from './A2pSms';
-import Device from './Device';
-import Sites from './Sites';
-import type GetAccountInfoResponse from '../../../definitions/GetAccountInfoResponse';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../types';
+import EmergencyAddressAutoUpdate from "./EmergencyAddressAutoUpdate";
+import MessageStoreConfiguration from "./MessageStoreConfiguration";
+import AddressBookBulkUpload from "./AddressBookBulkUpload";
+import MessageStoreTemplates from "./MessageStoreTemplates";
+import CallMonitoringGroups from "./CallMonitoringGroups";
+import ExtensionBulkUpdate from "./ExtensionBulkUpdate";
+import MessageStoreReport from "./MessageStoreReport";
+import EmergencyLocations from "./EmergencyLocations";
+import PagingOnlyGroups from "./PagingOnlyGroups";
+import ForwardAllCalls from "./ForwardAllCalls";
+import BusinessAddress from "./BusinessAddress";
+import CallRecordings from "./CallRecordings";
+import CallRecording from "./CallRecording";
+import BusinessHours from "./BusinessHours";
+import AnsweringRule from "./AnsweringRule";
+import AssignedRole from "./AssignedRole";
+import CallLogSync from "./CallLogSync";
+import CustomFields from "./CustomFields";
+import ActiveCalls from "./ActiveCalls";
+import ServiceInfo from "./ServiceInfo";
+import PhoneNumber from "./PhoneNumber";
+import CallQueues from "./CallQueues";
+import IvrPrompts from "./IvrPrompts";
+import AuditTrail from "./AuditTrail";
+import UserRole from "./UserRole";
+import IvrMenus from "./IvrMenus";
+import Templates from "./Templates";
+import Extension from "./Extension";
+import Recording from "./Recording";
+import Telephony from "./Telephony";
+import Directory from "./Directory";
+import Greeting from "./Greeting";
+import Presence from "./Presence";
+import CallLog from "./CallLog";
+import A2pSms from "./A2pSms";
+import Device from "./Device";
+import Sites from "./Sites";
+import type GetAccountInfoResponse from "../../../definitions/GetAccountInfoResponse";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../types";
 
 class Index {
   public rc: RingCentralInterface;
   public _parent: ParentInterface;
   public accountId: string | null;
 
-  public constructor(_parent: ParentInterface, accountId: string | null = '~') {
+  public constructor(_parent: ParentInterface, accountId: string | null = "~") {
     this._parent = _parent;
     this.rc = _parent.rc;
     this.accountId = accountId;
@@ -63,11 +67,17 @@ class Index {
    * App Permission: ReadAccounts
    * User Permission: ReadCompanyInfo
    */
-  public async get(restRequestConfig?: RestRequestConfig): Promise<GetAccountInfoResponse> {
+  public async get(
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<GetAccountInfoResponse> {
     if (this.accountId === null) {
-      throw new Error('accountId must be specified.');
+      throw new Error("accountId must be specified.");
     }
-    const r = await this.rc.get<GetAccountInfoResponse>(this.path(), undefined, restRequestConfig);
+    const r = await this.rc.get<GetAccountInfoResponse>(
+      this.path(),
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -107,7 +117,7 @@ class Index {
     return new Recording(this, recordingId);
   }
 
-  public extension(extensionId: string | null = '~'): Extension {
+  public extension(extensionId: string | null = "~"): Extension {
     return new Extension(this, extensionId);
   }
 
@@ -183,11 +193,15 @@ class Index {
     return new ForwardAllCalls(this);
   }
 
-  public pagingOnlyGroups(pagingOnlyGroupId: string | null = null): PagingOnlyGroups {
+  public pagingOnlyGroups(
+    pagingOnlyGroupId: string | null = null,
+  ): PagingOnlyGroups {
     return new PagingOnlyGroups(this, pagingOnlyGroupId);
   }
 
-  public emergencyLocations(locationId: string | null = null): EmergencyLocations {
+  public emergencyLocations(
+    locationId: string | null = null,
+  ): EmergencyLocations {
     return new EmergencyLocations(this, locationId);
   }
 
@@ -199,11 +213,15 @@ class Index {
     return new ExtensionBulkUpdate(this);
   }
 
-  public callMonitoringGroups(groupId: string | null = null): CallMonitoringGroups {
+  public callMonitoringGroups(
+    groupId: string | null = null,
+  ): CallMonitoringGroups {
     return new CallMonitoringGroups(this, groupId);
   }
 
-  public messageStoreTemplates(templateId: string | null = null): MessageStoreTemplates {
+  public messageStoreTemplates(
+    templateId: string | null = null,
+  ): MessageStoreTemplates {
     return new MessageStoreTemplates(this, templateId);
   }
 

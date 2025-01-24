@@ -41,7 +41,7 @@ interface UserMeetingRecordingSetting {
    * Automatic recording (local/cloud/none) of meetings as they start
    * Default: local
    */
-  autoRecording?: 'local' | 'cloud' | 'none';
+  autoRecording?: "local" | "cloud" | "none";
 
   /**
    * Automatic deletion of cloud recordings

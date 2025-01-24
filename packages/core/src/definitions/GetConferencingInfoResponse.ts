@@ -1,4 +1,4 @@
-import type PhoneNumberInfoConferencing from './PhoneNumberInfoConferencing';
+import type PhoneNumberInfoConferencing from "./PhoneNumberInfoConferencing";
 
 interface GetConferencingInfoResponse {
   /**

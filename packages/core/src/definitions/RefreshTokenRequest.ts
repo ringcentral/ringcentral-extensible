@@ -1,14 +1,13 @@
 /**
  * Token endpoint request parameters used in the "Refresh Token" flow
  * with the `refresh_token` grant type
- *
  */
 interface RefreshTokenRequest {
   /**
    * Grant type
    * Required
    */
-  grant_type?: 'refresh_token';
+  grant_type?: "refresh_token";
 
   /**
    * For `refresh_token` grant type only. Previously issued refresh token.

@@ -3,7 +3,7 @@ interface InviteeSettingsModel {
    * The type of the webinar invitee
    * Default: User
    */
-  type?: 'User' | 'Room';
+  type?: "User" | "Room";
 
   /**
    * Indicates if invite/cancellation emails have to be sent to this invitee.

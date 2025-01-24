@@ -1,6 +1,10 @@
-import type PagingOnlyGroupUsers from '../../../../../definitions/PagingOnlyGroupUsers';
-import type ListPagingGroupUsersParameters from '../../../../../definitions/ListPagingGroupUsersParameters';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import type PagingOnlyGroupUsers from "../../../../../definitions/PagingOnlyGroupUsers";
+import type ListPagingGroupUsersParameters from "../../../../../definitions/ListPagingGroupUsersParameters";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -26,7 +30,11 @@ class Index {
     queryParams?: ListPagingGroupUsersParameters,
     restRequestConfig?: RestRequestConfig,
   ): Promise<PagingOnlyGroupUsers> {
-    const r = await this.rc.get<PagingOnlyGroupUsers>(this.path(), queryParams, restRequestConfig);
+    const r = await this.rc.get<PagingOnlyGroupUsers>(
+      this.path(),
+      queryParams,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

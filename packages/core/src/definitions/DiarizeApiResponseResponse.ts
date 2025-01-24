@@ -1,4 +1,4 @@
-import type DiarizeSegment from './DiarizeSegment';
+import type DiarizeSegment from "./DiarizeSegment";
 
 interface DiarizeApiResponseResponse {
   /**
@@ -7,8 +7,7 @@ interface DiarizeApiResponseResponse {
    */
   speakerCount?: number;
 
-  /**
-   */
+  /** */
   utterances?: DiarizeSegment[];
 }
 

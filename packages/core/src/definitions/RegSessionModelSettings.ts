@@ -35,7 +35,12 @@ interface RegSessionModelSettings {
    * Duration of on-demand webinar. The default value can only be used if the session is on demand.
    * Default: SixMonths
    */
-  onDemandDuration?: 'OneMonth' | 'TwoMonths' | 'ThreeMonths' | 'SixMonths' | 'OneYear';
+  onDemandDuration?:
+    | "OneMonth"
+    | "TwoMonths"
+    | "ThreeMonths"
+    | "SixMonths"
+    | "OneYear";
 
   /**
    * Indicates that recording exists for the session.

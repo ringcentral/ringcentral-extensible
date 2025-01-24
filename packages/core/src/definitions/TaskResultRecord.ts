@@ -1,4 +1,4 @@
-import type TaskResultRecordErrorsInfo from './TaskResultRecordErrorsInfo';
+import type TaskResultRecordErrorsInfo from "./TaskResultRecordErrorsInfo";
 
 interface TaskResultRecord {
   /**
@@ -26,8 +26,7 @@ interface TaskResultRecord {
    */
   status?: string;
 
-  /**
-   */
+  /** */
   errors?: TaskResultRecordErrorsInfo[];
 }
 

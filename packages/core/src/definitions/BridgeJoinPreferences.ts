@@ -1,4 +1,4 @@
-import type BridgeJoinPstnPreferences from './BridgeJoinPstnPreferences';
+import type BridgeJoinPstnPreferences from "./BridgeJoinPstnPreferences";
 
 interface BridgeJoinPreferences {
   /**
@@ -23,10 +23,9 @@ interface BridgeJoinPreferences {
    *  - Instant, Scheduled -> Nobody
    * Example: Nobody
    */
-  waitingRoomRequired?: 'Nobody' | 'Everybody' | 'GuestsOnly' | 'OtherAccount';
+  waitingRoomRequired?: "Nobody" | "Everybody" | "GuestsOnly" | "OtherAccount";
 
-  /**
-   */
+  /** */
   pstn?: BridgeJoinPstnPreferences;
 }
 

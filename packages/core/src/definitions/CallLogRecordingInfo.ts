@@ -19,7 +19,7 @@ interface CallLogRecordingInfo {
    * Indicates recording mode used
    * Required
    */
-  type?: 'Automatic' | 'OnDemand';
+  type?: "Automatic" | "OnDemand";
 
   /**
    * Link to a call recording binary content. Has to be retrieved with proper authorization

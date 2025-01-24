@@ -1,5 +1,5 @@
-import type SiteReference from './SiteReference';
-import type CallQueueServiceLevelSettings from './CallQueueServiceLevelSettings';
+import type SiteReference from "./SiteReference";
+import type CallQueueServiceLevelSettings from "./CallQueueServiceLevelSettings";
 
 interface CallQueueDetailsForUpdate {
   /**
@@ -15,19 +15,17 @@ interface CallQueueDetailsForUpdate {
   /**
    * Group extension status
    */
-  status?: 'Enabled' | 'Disabled' | 'NotActivated';
+  status?: "Enabled" | "Disabled" | "NotActivated";
 
   /**
    * Indicates whether it is an emergency call queue extension or not
    */
-  subType?: 'Emergency';
+  subType?: "Emergency";
 
-  /**
-   */
+  /** */
   site?: SiteReference;
 
-  /**
-   */
+  /** */
   serviceLevelSettings?: CallQueueServiceLevelSettings;
 
   /**

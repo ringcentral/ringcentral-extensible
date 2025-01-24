@@ -1,7 +1,7 @@
-import type PersonalContactResource from './PersonalContactResource';
-import type UserContactsNavigationInfo from './UserContactsNavigationInfo';
-import type UserContactsPagingInfo from './UserContactsPagingInfo';
-import type UserContactsGroupsInfo from './UserContactsGroupsInfo';
+import type PersonalContactResource from "./PersonalContactResource";
+import type UserContactsNavigationInfo from "./UserContactsNavigationInfo";
+import type UserContactsPagingInfo from "./UserContactsPagingInfo";
+import type UserContactsGroupsInfo from "./UserContactsGroupsInfo";
 
 interface ContactList {
   /**
@@ -15,16 +15,13 @@ interface ContactList {
    */
   records?: PersonalContactResource[];
 
-  /**
-   */
+  /** */
   navigation?: UserContactsNavigationInfo;
 
-  /**
-   */
+  /** */
   paging?: UserContactsPagingInfo;
 
-  /**
-   */
+  /** */
   groups?: UserContactsGroupsInfo;
 }
 

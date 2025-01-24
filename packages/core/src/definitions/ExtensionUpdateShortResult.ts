@@ -1,4 +1,4 @@
-import type ErrorEntity from './ErrorEntity';
+import type ErrorEntity from "./ErrorEntity";
 
 interface ExtensionUpdateShortResult {
   /**
@@ -9,10 +9,9 @@ interface ExtensionUpdateShortResult {
   /**
    * Extension update status
    */
-  status?: 'Fail' | 'Success';
+  status?: "Fail" | "Success";
 
-  /**
-   */
+  /** */
   errors?: ErrorEntity[];
 }
 

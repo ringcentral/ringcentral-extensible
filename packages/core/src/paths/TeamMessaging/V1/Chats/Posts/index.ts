@@ -1,9 +1,13 @@
-import type TMUpdatePostRequest from '../../../../../definitions/TMUpdatePostRequest';
-import type TMPostInfo from '../../../../../definitions/TMPostInfo';
-import type TMCreatePostRequest from '../../../../../definitions/TMCreatePostRequest';
-import type TMPostsList from '../../../../../definitions/TMPostsList';
-import type ReadGlipPostsNewParameters from '../../../../../definitions/ReadGlipPostsNewParameters';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import type TMUpdatePostRequest from "../../../../../definitions/TMUpdatePostRequest";
+import type TMPostInfo from "../../../../../definitions/TMPostInfo";
+import type TMCreatePostRequest from "../../../../../definitions/TMCreatePostRequest";
+import type TMPostsList from "../../../../../definitions/TMPostsList";
+import type ReadGlipPostsNewParameters from "../../../../../definitions/ReadGlipPostsNewParameters";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -32,7 +36,11 @@ class Index {
     queryParams?: ReadGlipPostsNewParameters,
     restRequestConfig?: RestRequestConfig,
   ): Promise<TMPostsList> {
-    const r = await this.rc.get<TMPostsList>(this.path(false), queryParams, restRequestConfig);
+    const r = await this.rc.get<TMPostsList>(
+      this.path(false),
+      queryParams,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -51,7 +59,12 @@ class Index {
     tMCreatePostRequest: TMCreatePostRequest,
     restRequestConfig?: RestRequestConfig,
   ): Promise<TMPostInfo> {
-    const r = await this.rc.post<TMPostInfo>(this.path(false), tMCreatePostRequest, undefined, restRequestConfig);
+    const r = await this.rc.post<TMPostInfo>(
+      this.path(false),
+      tMCreatePostRequest,
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -64,9 +77,13 @@ class Index {
    */
   public async get(restRequestConfig?: RestRequestConfig): Promise<TMPostInfo> {
     if (this.postId === null) {
-      throw new Error('postId must be specified.');
+      throw new Error("postId must be specified.");
     }
-    const r = await this.rc.get<TMPostInfo>(this.path(), undefined, restRequestConfig);
+    const r = await this.rc.get<TMPostInfo>(
+      this.path(),
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -79,9 +96,14 @@ class Index {
    */
   public async delete(restRequestConfig?: RestRequestConfig): Promise<string> {
     if (this.postId === null) {
-      throw new Error('postId must be specified.');
+      throw new Error("postId must be specified.");
     }
-    const r = await this.rc.delete<string>(this.path(), {}, undefined, restRequestConfig);
+    const r = await this.rc.delete<string>(
+      this.path(),
+      {},
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -97,9 +119,14 @@ class Index {
     restRequestConfig?: RestRequestConfig,
   ): Promise<TMPostInfo> {
     if (this.postId === null) {
-      throw new Error('postId must be specified.');
+      throw new Error("postId must be specified.");
     }
-    const r = await this.rc.patch<TMPostInfo>(this.path(), tMUpdatePostRequest, undefined, restRequestConfig);
+    const r = await this.rc.patch<TMPostInfo>(
+      this.path(),
+      tMUpdatePostRequest,
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

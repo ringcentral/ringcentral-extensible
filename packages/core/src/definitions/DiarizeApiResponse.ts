@@ -1,12 +1,10 @@
-import type DiarizeApiResponseResponse from './DiarizeApiResponseResponse';
+import type DiarizeApiResponseResponse from "./DiarizeApiResponseResponse";
 
 interface DiarizeApiResponse {
-  /**
-   */
-  status?: 'Success' | 'Fail';
+  /** */
+  status?: "Success" | "Fail";
 
-  /**
-   */
+  /** */
   response?: DiarizeApiResponseResponse;
 }
 

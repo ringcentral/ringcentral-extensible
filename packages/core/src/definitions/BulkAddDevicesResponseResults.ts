@@ -1,5 +1,5 @@
-import type BulkOperationExtensionReference from './BulkOperationExtensionReference';
-import type ApiErrorWithParameter from './ApiErrorWithParameter';
+import type BulkOperationExtensionReference from "./BulkOperationExtensionReference";
+import type ApiErrorWithParameter from "./ApiErrorWithParameter";
 
 interface BulkAddDevicesResponseResults {
   /**
@@ -13,8 +13,7 @@ interface BulkAddDevicesResponseResults {
    */
   id?: string;
 
-  /**
-   */
+  /** */
   extension?: BulkOperationExtensionReference;
 
   /**
@@ -23,8 +22,7 @@ interface BulkAddDevicesResponseResults {
    */
   phoneNumber?: string;
 
-  /**
-   */
+  /** */
   errors?: ApiErrorWithParameter[];
 }
 

@@ -1,4 +1,4 @@
-import type MessageTemplateResponse from './MessageTemplateResponse';
+import type MessageTemplateResponse from "./MessageTemplateResponse";
 
 interface MessageTemplatesListResponse {
   /**

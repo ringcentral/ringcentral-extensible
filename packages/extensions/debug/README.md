@@ -19,9 +19,11 @@ const debugExtension = new DebugExtension();
 await rc.installExtension(debugExtension);
 ```
 
-With this extension installed, details for every API request traffic will be printed using `console.debug`.
+With this extension installed, details for every API request traffic will be
+printed using `console.debug`.
 
-Below is sample output for `await rc.restapi().account().extension().messageStore().list()`:
+Below is sample output for
+`await rc.restapi().account().extension().messageStore().list()`:
 
 ```
 console.debug
@@ -80,11 +82,13 @@ Request:
 }
 ```
 
-For a working sample, please check this [test case](../../../test/debug-extension.spec.ts).
+For a working sample, please check this
+[test case](../../../test/debug-extension.spec.ts).
 
 ## loggingAction
 
-Optionally, you can specify a `loggingAction` function to the extension constructor.
+Optionally, you can specify a `loggingAction` function to the extension
+constructor.
 
 ```ts
 export type LoggingAction = (message: string) => void;
@@ -93,5 +97,5 @@ export type LoggingAction = (message: string) => void;
 `loggingAction` determines how debug messages are logged. By default it is:
 
 ```ts
-(message) => console.debug(message);
+((message) => console.debug(message));
 ```

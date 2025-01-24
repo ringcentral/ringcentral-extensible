@@ -1,4 +1,4 @@
-import type RcwLinkedUserModel from './RcwLinkedUserModel';
+import type RcwLinkedUserModel from "./RcwLinkedUserModel";
 
 interface WcsWebinarRefModel {
   /**
@@ -20,8 +20,7 @@ interface WcsWebinarRefModel {
    */
   description?: string;
 
-  /**
-   */
+  /** */
   host?: RcwLinkedUserModel;
 }
 

@@ -1,9 +1,9 @@
-import Ringsense from './Ringsense';
-import Insights from './Insights';
-import Status from './Status';
-import Audio from './Audio';
-import Text from './Text';
-import type { RingCentralInterface } from '../../types';
+import Ringsense from "./Ringsense";
+import Insights from "./Insights";
+import Status from "./Status";
+import Audio from "./Audio";
+import Text from "./Text";
+import type { RingCentralInterface } from "../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -12,7 +12,7 @@ class Index {
     this.rc = rc;
   }
   public path(): string {
-    return '/ai';
+    return "/ai";
   }
 
   public text(): Text {

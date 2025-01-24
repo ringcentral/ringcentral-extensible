@@ -1,6 +1,6 @@
-import type GetTimezoneInfoResponse from './GetTimezoneInfoResponse';
-import type PageNavigationModel from './PageNavigationModel';
-import type EnumeratedPagingModel from './EnumeratedPagingModel';
+import type GetTimezoneInfoResponse from "./GetTimezoneInfoResponse";
+import type PageNavigationModel from "./PageNavigationModel";
+import type EnumeratedPagingModel from "./EnumeratedPagingModel";
 
 interface GetTimezoneListResponse {
   /**

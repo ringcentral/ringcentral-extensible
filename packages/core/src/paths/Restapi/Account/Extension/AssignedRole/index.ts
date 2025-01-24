@@ -1,7 +1,11 @@
-import Default from './Default';
-import type AssignedRolesResource from '../../../../../definitions/AssignedRolesResource';
-import type ListUserAssignedRolesParameters from '../../../../../definitions/ListUserAssignedRolesParameters';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import Default from "./Default";
+import type AssignedRolesResource from "../../../../../definitions/AssignedRolesResource";
+import type ListUserAssignedRolesParameters from "../../../../../definitions/ListUserAssignedRolesParameters";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -26,7 +30,11 @@ class Index {
     queryParams?: ListUserAssignedRolesParameters,
     restRequestConfig?: RestRequestConfig,
   ): Promise<AssignedRolesResource> {
-    const r = await this.rc.get<AssignedRolesResource>(this.path(), queryParams, restRequestConfig);
+    const r = await this.rc.get<AssignedRolesResource>(
+      this.path(),
+      queryParams,
+      restRequestConfig,
+    );
     return r.data;
   }
 

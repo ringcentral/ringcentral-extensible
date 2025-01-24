@@ -1,6 +1,5 @@
 /**
  * Formatting language preferences for numbers, dates and currencies
- *
  */
 interface FormattingLocaleInfo {
   /**

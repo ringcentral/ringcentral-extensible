@@ -1,4 +1,4 @@
-import type APNSInfo from './APNSInfo';
+import type APNSInfo from "./APNSInfo";
 
 interface MissedCallEvent {
   /**
@@ -6,8 +6,7 @@ interface MissedCallEvent {
    */
   uuid?: string;
 
-  /**
-   */
+  /** */
   pn_apns?: APNSInfo;
 
   /**

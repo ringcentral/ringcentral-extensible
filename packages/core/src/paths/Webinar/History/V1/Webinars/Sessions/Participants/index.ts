@@ -1,7 +1,11 @@
-import Self from './Self';
-import type ParticipantListResource from '../../../../../../../definitions/ParticipantListResource';
-import type RcwHistoryListParticipantsParameters from '../../../../../../../definitions/RcwHistoryListParticipantsParameters';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../../types';
+import Self from "./Self";
+import type ParticipantListResource from "../../../../../../../definitions/ParticipantListResource";
+import type RcwHistoryListParticipantsParameters from "../../../../../../../definitions/RcwHistoryListParticipantsParameters";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -26,7 +30,11 @@ class Index {
     queryParams?: RcwHistoryListParticipantsParameters,
     restRequestConfig?: RestRequestConfig,
   ): Promise<ParticipantListResource> {
-    const r = await this.rc.get<ParticipantListResource>(this.path(), queryParams, restRequestConfig);
+    const r = await this.rc.get<ParticipantListResource>(
+      this.path(),
+      queryParams,
+      restRequestConfig,
+    );
     return r.data;
   }
 

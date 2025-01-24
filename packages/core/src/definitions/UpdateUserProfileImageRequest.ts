@@ -1,11 +1,10 @@
-import type Attachment from './Attachment';
+import type Attachment from "./Attachment";
 
 /**
  * Request body for operation updateUserProfileImage
  */
 interface UpdateUserProfileImageRequest {
-  /**
-   */
+  /** */
   image?: Attachment;
 }
 

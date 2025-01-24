@@ -1,4 +1,4 @@
-import type ReplyWithPattern from './ReplyWithPattern';
+import type ReplyWithPattern from "./ReplyWithPattern";
 
 interface CallPartyReply {
   /**
@@ -6,8 +6,7 @@ interface CallPartyReply {
    */
   replyWithText?: string;
 
-  /**
-   */
+  /** */
   replyWithPattern?: ReplyWithPattern;
 }
 

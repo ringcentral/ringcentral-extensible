@@ -1,14 +1,21 @@
-import type DictionaryGreetingInfo from '../../../../definitions/DictionaryGreetingInfo';
-import type DictionaryGreetingList from '../../../../definitions/DictionaryGreetingList';
-import type ListStandardGreetingsParameters from '../../../../definitions/ListStandardGreetingsParameters';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
+import type DictionaryGreetingInfo from "../../../../definitions/DictionaryGreetingInfo";
+import type DictionaryGreetingList from "../../../../definitions/DictionaryGreetingList";
+import type ListStandardGreetingsParameters from "../../../../definitions/ListStandardGreetingsParameters";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
   public _parent: ParentInterface;
   public greetingId: string | null;
 
-  public constructor(_parent: ParentInterface, greetingId: string | null = null) {
+  public constructor(
+    _parent: ParentInterface,
+    greetingId: string | null = null,
+  ) {
     this._parent = _parent;
     this.rc = _parent.rc;
     this.greetingId = greetingId;
@@ -32,7 +39,11 @@ class Index {
     queryParams?: ListStandardGreetingsParameters,
     restRequestConfig?: RestRequestConfig,
   ): Promise<DictionaryGreetingList> {
-    const r = await this.rc.get<DictionaryGreetingList>(this.path(false), queryParams, restRequestConfig);
+    const r = await this.rc.get<DictionaryGreetingList>(
+      this.path(false),
+      queryParams,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -42,11 +53,17 @@ class Index {
    * Endpoint: /restapi/{apiVersion}/dictionary/greeting/{greetingId}
    * Rate Limit Group: Medium
    */
-  public async get(restRequestConfig?: RestRequestConfig): Promise<DictionaryGreetingInfo> {
+  public async get(
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<DictionaryGreetingInfo> {
     if (this.greetingId === null) {
-      throw new Error('greetingId must be specified.');
+      throw new Error("greetingId must be specified.");
     }
-    const r = await this.rc.get<DictionaryGreetingInfo>(this.path(), undefined, restRequestConfig);
+    const r = await this.rc.get<DictionaryGreetingInfo>(
+      this.path(),
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

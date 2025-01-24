@@ -1,6 +1,6 @@
-import type GrantInfo from './GrantInfo';
-import type PageNavigationModel from './PageNavigationModel';
-import type EnumeratedPagingModel from './EnumeratedPagingModel';
+import type GrantInfo from "./GrantInfo";
+import type PageNavigationModel from "./PageNavigationModel";
+import type EnumeratedPagingModel from "./EnumeratedPagingModel";
 
 interface GetExtensionGrantListResponse {
   /**

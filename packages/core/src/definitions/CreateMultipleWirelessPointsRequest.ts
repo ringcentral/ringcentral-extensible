@@ -1,8 +1,7 @@
-import type CreateWirelessPoint from './CreateWirelessPoint';
+import type CreateWirelessPoint from "./CreateWirelessPoint";
 
 interface CreateMultipleWirelessPointsRequest {
-  /**
-   */
+  /** */
   records?: CreateWirelessPoint[];
 }
 

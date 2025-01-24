@@ -1,6 +1,6 @@
-import type CallRecordingExtensionInfo from './CallRecordingExtensionInfo';
-import type PageNavigationModel from './PageNavigationModel';
-import type EnumeratedPagingModel from './EnumeratedPagingModel';
+import type CallRecordingExtensionInfo from "./CallRecordingExtensionInfo";
+import type PageNavigationModel from "./PageNavigationModel";
+import type EnumeratedPagingModel from "./EnumeratedPagingModel";
 
 interface CallRecordingExtensions {
   /**
@@ -9,16 +9,13 @@ interface CallRecordingExtensions {
    */
   uri?: string;
 
-  /**
-   */
+  /** */
   records?: CallRecordingExtensionInfo[];
 
-  /**
-   */
+  /** */
   navigation?: PageNavigationModel;
 
-  /**
-   */
+  /** */
   paging?: EnumeratedPagingModel;
 }
 

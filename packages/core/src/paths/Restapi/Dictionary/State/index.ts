@@ -1,7 +1,11 @@
-import type GetStateInfoResponse from '../../../../definitions/GetStateInfoResponse';
-import type GetStateListResponse from '../../../../definitions/GetStateListResponse';
-import type ListStatesParameters from '../../../../definitions/ListStatesParameters';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
+import type GetStateInfoResponse from "../../../../definitions/GetStateInfoResponse";
+import type GetStateListResponse from "../../../../definitions/GetStateListResponse";
+import type ListStatesParameters from "../../../../definitions/ListStatesParameters";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -30,7 +34,11 @@ class Index {
     queryParams?: ListStatesParameters,
     restRequestConfig?: RestRequestConfig,
   ): Promise<GetStateListResponse> {
-    const r = await this.rc.get<GetStateListResponse>(this.path(false), queryParams, restRequestConfig);
+    const r = await this.rc.get<GetStateListResponse>(
+      this.path(false),
+      queryParams,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -41,11 +49,17 @@ class Index {
    * Endpoint: /restapi/{apiVersion}/dictionary/state/{stateId}
    * Rate Limit Group: Light
    */
-  public async get(restRequestConfig?: RestRequestConfig): Promise<GetStateInfoResponse> {
+  public async get(
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<GetStateInfoResponse> {
     if (this.stateId === null) {
-      throw new Error('stateId must be specified.');
+      throw new Error("stateId must be specified.");
     }
-    const r = await this.rc.get<GetStateInfoResponse>(this.path(), undefined, restRequestConfig);
+    const r = await this.rc.get<GetStateInfoResponse>(
+      this.path(),
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

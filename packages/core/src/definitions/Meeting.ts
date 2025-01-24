@@ -1,6 +1,6 @@
-import type Host from './Host';
-import type Participant from './Participant';
-import type Recording from './Recording';
+import type Host from "./Host";
+import type Participant from "./Participant";
+import type Recording from "./Recording";
 
 /**
  * Meeting information
@@ -48,13 +48,13 @@ interface Meeting {
    * Meeting type
    * Required
    */
-  type?: 'Meeting' | 'Call';
+  type?: "Meeting" | "Call";
 
   /**
    * Meeting status
    * Required
    */
-  status?: 'InProgress' | 'Done';
+  status?: "InProgress" | "Done";
 
   /**
    * Required
@@ -65,7 +65,7 @@ interface Meeting {
    * Describe access rights which has participants to meeting
    * Required
    */
-  rights?: ('delete' | 'download' | 'share')[];
+  rights?: ("delete" | "download" | "share")[];
 
   /**
    * During meeting AI team analyze code and after meeting finished generates text summary about this meeting

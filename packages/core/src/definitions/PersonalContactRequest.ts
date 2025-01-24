@@ -1,4 +1,4 @@
-import type ContactAddressInfo from './ContactAddressInfo';
+import type ContactAddressInfo from "./ContactAddressInfo";
 
 interface PersonalContactRequest {
   /**
@@ -149,16 +149,13 @@ interface PersonalContactRequest {
    */
   callbackPhone?: string;
 
-  /**
-   */
+  /** */
   homeAddress?: ContactAddressInfo;
 
-  /**
-   */
+  /** */
   businessAddress?: ContactAddressInfo;
 
-  /**
-   */
+  /** */
   otherAddress?: ContactAddressInfo;
 
   /**

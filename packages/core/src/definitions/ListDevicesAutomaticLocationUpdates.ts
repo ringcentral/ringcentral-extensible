@@ -1,6 +1,6 @@
-import type AutomaticLocationUpdatesDeviceInfo from './AutomaticLocationUpdatesDeviceInfo';
-import type PageNavigationModel from './PageNavigationModel';
-import type EnumeratedPagingModel from './EnumeratedPagingModel';
+import type AutomaticLocationUpdatesDeviceInfo from "./AutomaticLocationUpdatesDeviceInfo";
+import type PageNavigationModel from "./PageNavigationModel";
+import type EnumeratedPagingModel from "./EnumeratedPagingModel";
 
 interface ListDevicesAutomaticLocationUpdates {
   /**
@@ -15,12 +15,10 @@ interface ListDevicesAutomaticLocationUpdates {
    */
   records?: AutomaticLocationUpdatesDeviceInfo[];
 
-  /**
-   */
+  /** */
   navigation?: PageNavigationModel;
 
-  /**
-   */
+  /** */
   paging?: EnumeratedPagingModel;
 }
 

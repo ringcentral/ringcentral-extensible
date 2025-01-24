@@ -64,20 +64,29 @@ interface WcsWebinarSettingsModel {
    * Indicates if Panelists have to be authenticated users
    * Default: Guest
    */
-  panelistAuthentication?: 'Guest' | 'AuthenticatedUser' | 'AuthenticatedCoworker';
+  panelistAuthentication?:
+    | "Guest"
+    | "AuthenticatedUser"
+    | "AuthenticatedCoworker";
 
   /**
    * Indicates if attendees have to be authenticated users
    * Default: Guest
    */
-  attendeeAuthentication?: 'Guest' | 'AuthenticatedUser' | 'AuthenticatedCoworker';
+  attendeeAuthentication?:
+    | "Guest"
+    | "AuthenticatedUser"
+    | "AuthenticatedCoworker";
 
   /**
    * Indicates who can access webinar artifacts. Applies to recordings at present.
    *  Applicable to other artifacts such as Q&A, Polls in the future.
    * Default: AuthenticatedUser
    */
-  artifactsAccessAuthentication?: 'Guest' | 'AuthenticatedUser' | 'AuthenticatedCoworker';
+  artifactsAccessAuthentication?:
+    | "Guest"
+    | "AuthenticatedUser"
+    | "AuthenticatedCoworker";
 
   /**
    * Indicates if dial-in PSTN audio option is enabled for Panelists

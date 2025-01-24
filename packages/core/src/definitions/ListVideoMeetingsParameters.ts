@@ -27,7 +27,7 @@ interface ListVideoMeetingsParameters {
    *  `Shared` - access rights of meeting is equal to Alive AND requested acc/ext is in watcher list AND not HOST
    *  `Deleted` - access rights of meeting is equal to Delete and requested acc/ext is host OR deputy
    */
-  type?: 'All' | 'My' | 'Deleted' | 'Shared';
+  type?: "All" | "My" | "Deleted" | "Shared";
 
   /**
    * Unix timestamp in milliseconds (inclusive) indicates the start time of meetings which should be included in response

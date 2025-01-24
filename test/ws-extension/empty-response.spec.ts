@@ -1,8 +1,8 @@
-import WebSocketExtension from '@rc-ex/ws';
-import ReusableRestClient from '../reusable-rest-client';
+import WebSocketExtension from "@rc-ex/ws";
+import ReusableRestClient from "../reusable-rest-client";
 
-describe('WebSocket', () => {
-  test('empty response', async () => {
+describe("WebSocket", () => {
+  test("empty response", async () => {
     const rc = await ReusableRestClient.getInstance();
     const webSocketExtension = new WebSocketExtension({
       restOverWebSocket: true,

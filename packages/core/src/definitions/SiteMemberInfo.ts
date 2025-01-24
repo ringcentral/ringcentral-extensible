@@ -9,16 +9,13 @@ interface SiteMemberInfo {
    */
   uri?: string;
 
-  /**
-   */
+  /** */
   extensionNumber?: string;
 
-  /**
-   */
+  /** */
   type?: string;
 
-  /**
-   */
+  /** */
   name?: string;
 }
 

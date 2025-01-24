@@ -1,6 +1,5 @@
 interface PronouncedNamePromptInfo {
-  /**
-   */
+  /** */
   id?: string;
 
   /**
@@ -12,7 +11,7 @@ interface PronouncedNamePromptInfo {
   /**
    * Content media type
    */
-  contentType?: 'audio/mpeg' | 'audio/wav';
+  contentType?: "audio/mpeg" | "audio/wav";
 }
 
 export default PronouncedNamePromptInfo;

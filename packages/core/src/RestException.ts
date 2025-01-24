@@ -1,5 +1,5 @@
-import type { RestResponse } from './types';
-import Utils from './Utils';
+import type { RestResponse } from "./types";
+import Utils from "./Utils";
 
 class RestException extends Error {
   public response: RestResponse;

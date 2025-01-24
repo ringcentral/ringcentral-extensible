@@ -1,4 +1,4 @@
-import type OrderBy from './OrderBy';
+import type OrderBy from "./OrderBy";
 
 interface SearchDirectoryEntriesRequest {
   /**
@@ -12,14 +12,14 @@ interface SearchDirectoryEntriesRequest {
    * The list of field to be searched for
    */
   searchFields?: (
-    | 'firstName'
-    | 'lastName'
-    | 'extensionNumber'
-    | 'phoneNumber'
-    | 'email'
-    | 'jobTitle'
-    | 'department'
-    | 'customFieldValue'
+    | "firstName"
+    | "lastName"
+    | "extensionNumber"
+    | "phoneNumber"
+    | "email"
+    | "jobTitle"
+    | "department"
+    | "customFieldValue"
   )[];
 
   /**
@@ -37,22 +37,22 @@ interface SearchDirectoryEntriesRequest {
    * Example: User
    */
   extensionType?:
-    | 'User'
-    | 'Department'
-    | 'Announcement'
-    | 'Voicemail'
-    | 'SharedLinesGroup'
-    | 'PagingOnly'
-    | 'ParkLocation'
-    | 'IvrMenu'
-    | 'Limited'
-    | 'ApplicationExtension'
-    | 'Site'
-    | 'Bot'
-    | 'Room'
-    | 'DelegatedLinesGroup'
-    | 'GroupCallPickup'
-    | 'External';
+    | "User"
+    | "Department"
+    | "Announcement"
+    | "Voicemail"
+    | "SharedLinesGroup"
+    | "PagingOnly"
+    | "ParkLocation"
+    | "IvrMenu"
+    | "Limited"
+    | "ApplicationExtension"
+    | "Site"
+    | "Bot"
+    | "Room"
+    | "DelegatedLinesGroup"
+    | "GroupCallPickup"
+    | "External";
 
   /**
    * Internal identifier of the business site to which extensions belong
@@ -85,33 +85,33 @@ interface SearchDirectoryEntriesRequest {
   /**
    * Extension current state.
    */
-  extensionStatuses?: ('Enabled' | 'Disabled' | 'NotActivated')[];
+  extensionStatuses?: ("Enabled" | "Disabled" | "NotActivated")[];
 
   /**
    * Types of extension to filter the contacts
    */
   extensionTypes?: (
-    | 'User'
-    | 'Department'
-    | 'Announcement'
-    | 'Voicemail'
-    | 'DigitalUser'
-    | 'VirtualUser'
-    | 'FaxUser'
-    | 'PagingOnly'
-    | 'SharedLinesGroup'
-    | 'IvrMenu'
-    | 'ApplicationExtension'
-    | 'ParkLocation'
-    | 'Limited'
-    | 'Bot'
-    | 'Site'
-    | 'Room'
-    | 'ProxyAdmin'
-    | 'DelegatedLinesGroup'
-    | 'FlexibleUser'
-    | 'GroupCallPickup'
-    | 'RoomConnector'
+    | "User"
+    | "Department"
+    | "Announcement"
+    | "Voicemail"
+    | "DigitalUser"
+    | "VirtualUser"
+    | "FaxUser"
+    | "PagingOnly"
+    | "SharedLinesGroup"
+    | "IvrMenu"
+    | "ApplicationExtension"
+    | "ParkLocation"
+    | "Limited"
+    | "Bot"
+    | "Site"
+    | "Room"
+    | "ProxyAdmin"
+    | "DelegatedLinesGroup"
+    | "FlexibleUser"
+    | "GroupCallPickup"
+    | "RoomConnector"
   )[];
 
   /**

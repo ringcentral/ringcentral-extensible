@@ -1,8 +1,12 @@
-import type TMEventInfo from '../../../../definitions/TMEventInfo';
-import type TMCreateEventRequest from '../../../../definitions/TMCreateEventRequest';
-import type TMEventList from '../../../../definitions/TMEventList';
-import type ReadGlipEventsNewParameters from '../../../../definitions/ReadGlipEventsNewParameters';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
+import type TMEventInfo from "../../../../definitions/TMEventInfo";
+import type TMCreateEventRequest from "../../../../definitions/TMCreateEventRequest";
+import type TMEventList from "../../../../definitions/TMEventList";
+import type ReadGlipEventsNewParameters from "../../../../definitions/ReadGlipEventsNewParameters";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -31,7 +35,11 @@ class Index {
     queryParams?: ReadGlipEventsNewParameters,
     restRequestConfig?: RestRequestConfig,
   ): Promise<TMEventList> {
-    const r = await this.rc.get<TMEventList>(this.path(false), queryParams, restRequestConfig);
+    const r = await this.rc.get<TMEventList>(
+      this.path(false),
+      queryParams,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -46,7 +54,12 @@ class Index {
     tMCreateEventRequest: TMCreateEventRequest,
     restRequestConfig?: RestRequestConfig,
   ): Promise<TMEventInfo> {
-    const r = await this.rc.post<TMEventInfo>(this.path(false), tMCreateEventRequest, undefined, restRequestConfig);
+    const r = await this.rc.post<TMEventInfo>(
+      this.path(false),
+      tMCreateEventRequest,
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -57,11 +70,17 @@ class Index {
    * Rate Limit Group: Medium
    * App Permission: TeamMessaging
    */
-  public async get(restRequestConfig?: RestRequestConfig): Promise<TMEventInfo> {
+  public async get(
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<TMEventInfo> {
     if (this.eventId === null) {
-      throw new Error('eventId must be specified.');
+      throw new Error("eventId must be specified.");
     }
-    const r = await this.rc.get<TMEventInfo>(this.path(), undefined, restRequestConfig);
+    const r = await this.rc.get<TMEventInfo>(
+      this.path(),
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -77,9 +96,14 @@ class Index {
     restRequestConfig?: RestRequestConfig,
   ): Promise<TMEventInfo> {
     if (this.eventId === null) {
-      throw new Error('eventId must be specified.');
+      throw new Error("eventId must be specified.");
     }
-    const r = await this.rc.put<TMEventInfo>(this.path(), tMCreateEventRequest, undefined, restRequestConfig);
+    const r = await this.rc.put<TMEventInfo>(
+      this.path(),
+      tMCreateEventRequest,
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -92,9 +116,14 @@ class Index {
    */
   public async delete(restRequestConfig?: RestRequestConfig): Promise<string> {
     if (this.eventId === null) {
-      throw new Error('eventId must be specified.');
+      throw new Error("eventId must be specified.");
     }
-    const r = await this.rc.delete<string>(this.path(), {}, undefined, restRequestConfig);
+    const r = await this.rc.delete<string>(
+      this.path(),
+      {},
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

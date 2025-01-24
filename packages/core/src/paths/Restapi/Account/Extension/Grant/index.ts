@@ -1,6 +1,10 @@
-import type GetExtensionGrantListResponse from '../../../../../definitions/GetExtensionGrantListResponse';
-import type ListExtensionGrantsParameters from '../../../../../definitions/ListExtensionGrantsParameters';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import type GetExtensionGrantListResponse from "../../../../../definitions/GetExtensionGrantListResponse";
+import type ListExtensionGrantsParameters from "../../../../../definitions/ListExtensionGrantsParameters";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -29,7 +33,11 @@ class Index {
     queryParams?: ListExtensionGrantsParameters,
     restRequestConfig?: RestRequestConfig,
   ): Promise<GetExtensionGrantListResponse> {
-    const r = await this.rc.get<GetExtensionGrantListResponse>(this.path(), queryParams, restRequestConfig);
+    const r = await this.rc.get<GetExtensionGrantListResponse>(
+      this.path(),
+      queryParams,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

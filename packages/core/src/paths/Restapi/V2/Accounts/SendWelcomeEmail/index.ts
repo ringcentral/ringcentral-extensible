@@ -1,5 +1,9 @@
-import type SendWelcomeEmailV2Request from '../../../../../definitions/SendWelcomeEmailV2Request';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import type SendWelcomeEmailV2Request from "../../../../../definitions/SendWelcomeEmailV2Request";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -24,7 +28,12 @@ class Index {
     sendWelcomeEmailV2Request: SendWelcomeEmailV2Request,
     restRequestConfig?: RestRequestConfig,
   ): Promise<string> {
-    const r = await this.rc.post<string>(this.path(), sendWelcomeEmailV2Request, undefined, restRequestConfig);
+    const r = await this.rc.post<string>(
+      this.path(),
+      sendWelcomeEmailV2Request,
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

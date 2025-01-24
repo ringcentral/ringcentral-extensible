@@ -1,4 +1,4 @@
-import type TaskResultRecord from './TaskResultRecord';
+import type TaskResultRecord from "./TaskResultRecord";
 
 /**
  * Task detailed result. Returned for failed and completed tasks

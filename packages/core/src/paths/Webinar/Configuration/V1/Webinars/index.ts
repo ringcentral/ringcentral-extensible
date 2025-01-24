@@ -1,17 +1,24 @@
-import Sessions from './Sessions';
-import type WebinarBaseModel from '../../../../../definitions/WebinarBaseModel';
-import type WcsWebinarResource from '../../../../../definitions/WcsWebinarResource';
-import type WebinarCreationRequest from '../../../../../definitions/WebinarCreationRequest';
-import type WebinarListResource from '../../../../../definitions/WebinarListResource';
-import type RcwConfigListWebinarsParameters from '../../../../../definitions/RcwConfigListWebinarsParameters';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import Sessions from "./Sessions";
+import type WebinarBaseModel from "../../../../../definitions/WebinarBaseModel";
+import type WcsWebinarResource from "../../../../../definitions/WcsWebinarResource";
+import type WebinarCreationRequest from "../../../../../definitions/WebinarCreationRequest";
+import type WebinarListResource from "../../../../../definitions/WebinarListResource";
+import type RcwConfigListWebinarsParameters from "../../../../../definitions/RcwConfigListWebinarsParameters";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
   public _parent: ParentInterface;
   public webinarId: string | null;
 
-  public constructor(_parent: ParentInterface, webinarId: string | null = null) {
+  public constructor(
+    _parent: ParentInterface,
+    webinarId: string | null = null,
+  ) {
     this._parent = _parent;
     this.rc = _parent.rc;
     this.webinarId = webinarId;
@@ -34,7 +41,11 @@ class Index {
     queryParams?: RcwConfigListWebinarsParameters,
     restRequestConfig?: RestRequestConfig,
   ): Promise<WebinarListResource> {
-    const r = await this.rc.get<WebinarListResource>(this.path(false), queryParams, restRequestConfig);
+    const r = await this.rc.get<WebinarListResource>(
+      this.path(false),
+      queryParams,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -75,11 +86,17 @@ class Index {
    * Rate Limit Group: Heavy
    * App Permission: ReadWebinars
    */
-  public async get(restRequestConfig?: RestRequestConfig): Promise<WcsWebinarResource> {
+  public async get(
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<WcsWebinarResource> {
     if (this.webinarId === null) {
-      throw new Error('webinarId must be specified.');
+      throw new Error("webinarId must be specified.");
     }
-    const r = await this.rc.get<WcsWebinarResource>(this.path(), undefined, restRequestConfig);
+    const r = await this.rc.get<WcsWebinarResource>(
+      this.path(),
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -94,9 +111,14 @@ class Index {
    */
   public async delete(restRequestConfig?: RestRequestConfig): Promise<string> {
     if (this.webinarId === null) {
-      throw new Error('webinarId must be specified.');
+      throw new Error("webinarId must be specified.");
     }
-    const r = await this.rc.delete<string>(this.path(), {}, undefined, restRequestConfig);
+    const r = await this.rc.delete<string>(
+      this.path(),
+      {},
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -118,9 +140,14 @@ class Index {
     restRequestConfig?: RestRequestConfig,
   ): Promise<WcsWebinarResource> {
     if (this.webinarId === null) {
-      throw new Error('webinarId must be specified.');
+      throw new Error("webinarId must be specified.");
     }
-    const r = await this.rc.patch<WcsWebinarResource>(this.path(), webinarBaseModel, undefined, restRequestConfig);
+    const r = await this.rc.patch<WcsWebinarResource>(
+      this.path(),
+      webinarBaseModel,
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 

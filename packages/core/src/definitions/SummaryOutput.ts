@@ -1,8 +1,7 @@
-import type SummaryOutputUnit from './SummaryOutputUnit';
+import type SummaryOutputUnit from "./SummaryOutputUnit";
 
 interface SummaryOutput {
-  /**
-   */
+  /** */
   summaries?: SummaryOutputUnit[];
 }
 

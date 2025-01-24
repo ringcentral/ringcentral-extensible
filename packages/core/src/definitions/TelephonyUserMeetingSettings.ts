@@ -1,4 +1,4 @@
-import type GlobalDialInCountryResponse from './GlobalDialInCountryResponse';
+import type GlobalDialInCountryResponse from "./GlobalDialInCountryResponse";
 
 interface TelephonyUserMeetingSettings {
   /**
@@ -11,8 +11,7 @@ interface TelephonyUserMeetingSettings {
    */
   audioConferenceInfo?: boolean;
 
-  /**
-   */
+  /** */
   globalDialCountries?: GlobalDialInCountryResponse[];
 }
 

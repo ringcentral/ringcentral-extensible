@@ -1,5 +1,9 @@
-import type TMAddTeamMembersRequest from '../../../../../definitions/TMAddTeamMembersRequest';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import type TMAddTeamMembersRequest from "../../../../../definitions/TMAddTeamMembersRequest";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -23,7 +27,12 @@ class Index {
     tMAddTeamMembersRequest: TMAddTeamMembersRequest,
     restRequestConfig?: RestRequestConfig,
   ): Promise<string> {
-    const r = await this.rc.post<string>(this.path(), tMAddTeamMembersRequest, undefined, restRequestConfig);
+    const r = await this.rc.post<string>(
+      this.path(),
+      tMAddTeamMembersRequest,
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

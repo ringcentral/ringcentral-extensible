@@ -1,17 +1,24 @@
-import DotSearch from './DotSearch';
-import type ScimUserPatch from '../../../definitions/ScimUserPatch';
-import type ScimUserResponse from '../../../definitions/ScimUserResponse';
-import type ScimUser from '../../../definitions/ScimUser';
-import type ScimUserSearchResponse from '../../../definitions/ScimUserSearchResponse';
-import type ScimSearchViaGet2Parameters from '../../../definitions/ScimSearchViaGet2Parameters';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../types';
+import DotSearch from "./DotSearch";
+import type ScimUserPatch from "../../../definitions/ScimUserPatch";
+import type ScimUserResponse from "../../../definitions/ScimUserResponse";
+import type ScimUser from "../../../definitions/ScimUser";
+import type ScimUserSearchResponse from "../../../definitions/ScimUserSearchResponse";
+import type ScimSearchViaGet2Parameters from "../../../definitions/ScimSearchViaGet2Parameters";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../types";
 
 class Index {
   public rc: RingCentralInterface;
   public _parent: ParentInterface;
   public scimUserId: string | null;
 
-  public constructor(_parent: ParentInterface, scimUserId: string | null = null) {
+  public constructor(
+    _parent: ParentInterface,
+    scimUserId: string | null = null,
+  ) {
     this._parent = _parent;
     this.rc = _parent.rc;
     this.scimUserId = scimUserId;
@@ -33,7 +40,11 @@ class Index {
     queryParams?: ScimSearchViaGet2Parameters,
     restRequestConfig?: RestRequestConfig,
   ): Promise<ScimUserSearchResponse> {
-    const r = await this.rc.get<ScimUserSearchResponse>(this.path(false), queryParams, restRequestConfig);
+    const r = await this.rc.get<ScimUserSearchResponse>(
+      this.path(false),
+      queryParams,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -44,8 +55,16 @@ class Index {
    * Rate Limit Group: Heavy
    * App Permission: EditAccounts
    */
-  public async post(scimUser: ScimUser, restRequestConfig?: RestRequestConfig): Promise<ScimUserResponse> {
-    const r = await this.rc.post<ScimUserResponse>(this.path(false), scimUser, undefined, restRequestConfig);
+  public async post(
+    scimUser: ScimUser,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<ScimUserResponse> {
+    const r = await this.rc.post<ScimUserResponse>(
+      this.path(false),
+      scimUser,
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -56,11 +75,17 @@ class Index {
    * Rate Limit Group: Light
    * App Permission: ReadAccounts
    */
-  public async get(restRequestConfig?: RestRequestConfig): Promise<ScimUserResponse> {
+  public async get(
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<ScimUserResponse> {
     if (this.scimUserId === null) {
-      throw new Error('scimUserId must be specified.');
+      throw new Error("scimUserId must be specified.");
     }
-    const r = await this.rc.get<ScimUserResponse>(this.path(), undefined, restRequestConfig);
+    const r = await this.rc.get<ScimUserResponse>(
+      this.path(),
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -71,11 +96,19 @@ class Index {
    * Rate Limit Group: Heavy
    * App Permission: EditAccounts
    */
-  public async put(scimUser: ScimUser, restRequestConfig?: RestRequestConfig): Promise<ScimUserResponse> {
+  public async put(
+    scimUser: ScimUser,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<ScimUserResponse> {
     if (this.scimUserId === null) {
-      throw new Error('scimUserId must be specified.');
+      throw new Error("scimUserId must be specified.");
     }
-    const r = await this.rc.put<ScimUserResponse>(this.path(), scimUser, undefined, restRequestConfig);
+    const r = await this.rc.put<ScimUserResponse>(
+      this.path(),
+      scimUser,
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -88,9 +121,14 @@ class Index {
    */
   public async delete(restRequestConfig?: RestRequestConfig): Promise<string> {
     if (this.scimUserId === null) {
-      throw new Error('scimUserId must be specified.');
+      throw new Error("scimUserId must be specified.");
     }
-    const r = await this.rc.delete<string>(this.path(), {}, undefined, restRequestConfig);
+    const r = await this.rc.delete<string>(
+      this.path(),
+      {},
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -101,11 +139,19 @@ class Index {
    * Rate Limit Group: Heavy
    * App Permission: EditAccounts
    */
-  public async patch(scimUserPatch: ScimUserPatch, restRequestConfig?: RestRequestConfig): Promise<ScimUserResponse> {
+  public async patch(
+    scimUserPatch: ScimUserPatch,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<ScimUserResponse> {
     if (this.scimUserId === null) {
-      throw new Error('scimUserId must be specified.');
+      throw new Error("scimUserId must be specified.");
     }
-    const r = await this.rc.patch<ScimUserResponse>(this.path(), scimUserPatch, undefined, restRequestConfig);
+    const r = await this.rc.patch<ScimUserResponse>(
+      this.path(),
+      scimUserPatch,
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 

@@ -1,8 +1,12 @@
-import type PresenceInfoResponse from '../../../../../definitions/PresenceInfoResponse';
-import type PresenceInfoRequest from '../../../../../definitions/PresenceInfoRequest';
-import type GetPresenceInfo from '../../../../../definitions/GetPresenceInfo';
-import type ReadUserPresenceStatusParameters from '../../../../../definitions/ReadUserPresenceStatusParameters';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import type PresenceInfoResponse from "../../../../../definitions/PresenceInfoResponse";
+import type PresenceInfoRequest from "../../../../../definitions/PresenceInfoRequest";
+import type GetPresenceInfo from "../../../../../definitions/GetPresenceInfo";
+import type ReadUserPresenceStatusParameters from "../../../../../definitions/ReadUserPresenceStatusParameters";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -34,7 +38,11 @@ class Index {
     queryParams?: ReadUserPresenceStatusParameters,
     restRequestConfig?: RestRequestConfig,
   ): Promise<GetPresenceInfo> {
-    const r = await this.rc.get<GetPresenceInfo>(this.path(), queryParams, restRequestConfig);
+    const r = await this.rc.get<GetPresenceInfo>(
+      this.path(),
+      queryParams,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -49,7 +57,12 @@ class Index {
     presenceInfoRequest: PresenceInfoRequest,
     restRequestConfig?: RestRequestConfig,
   ): Promise<PresenceInfoResponse> {
-    const r = await this.rc.put<PresenceInfoResponse>(this.path(), presenceInfoRequest, undefined, restRequestConfig);
+    const r = await this.rc.put<PresenceInfoResponse>(
+      this.path(),
+      presenceInfoRequest,
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

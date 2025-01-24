@@ -1,8 +1,12 @@
-import CustomGreetings from './CustomGreetings';
-import BulkAssign from './BulkAssign';
-import Extensions from './Extensions';
-import type CallRecordingSettingsResource from '../../../../definitions/CallRecordingSettingsResource';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
+import CustomGreetings from "./CustomGreetings";
+import BulkAssign from "./BulkAssign";
+import Extensions from "./Extensions";
+import type CallRecordingSettingsResource from "../../../../definitions/CallRecordingSettingsResource";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -23,8 +27,14 @@ class Index {
    * App Permission: ReadAccounts
    * User Permission: ReadCompanyInfo
    */
-  public async get(restRequestConfig?: RestRequestConfig): Promise<CallRecordingSettingsResource> {
-    const r = await this.rc.get<CallRecordingSettingsResource>(this.path(), undefined, restRequestConfig);
+  public async get(
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<CallRecordingSettingsResource> {
+    const r = await this.rc.get<CallRecordingSettingsResource>(
+      this.path(),
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 

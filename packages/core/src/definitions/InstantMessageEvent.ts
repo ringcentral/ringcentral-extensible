@@ -1,4 +1,4 @@
-import type InstantMessageEventBody from './InstantMessageEventBody';
+import type InstantMessageEventBody from "./InstantMessageEventBody";
 
 interface InstantMessageEvent {
   /**
@@ -22,8 +22,7 @@ interface InstantMessageEvent {
    */
   subscriptionId?: string;
 
-  /**
-   */
+  /** */
   body?: InstantMessageEventBody;
 }
 

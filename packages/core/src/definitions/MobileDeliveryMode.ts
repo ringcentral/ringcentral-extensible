@@ -3,7 +3,7 @@ interface MobileDeliveryMode {
    * The transport type for this subscription, or the channel by which an app should be notified of an event
    * Required
    */
-  transportType?: 'RC/APNS' | 'RC/GCM';
+  transportType?: "RC/APNS" | "RC/GCM";
 
   /**
    * Certificate name for mobile notification transports

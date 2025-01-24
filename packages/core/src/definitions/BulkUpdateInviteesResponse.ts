@@ -1,17 +1,14 @@
-import type InviteeResource from './InviteeResource';
-import type RcwResourceIdModel from './RcwResourceIdModel';
+import type InviteeResource from "./InviteeResource";
+import type RcwResourceIdModel from "./RcwResourceIdModel";
 
 interface BulkUpdateInviteesResponse {
-  /**
-   */
+  /** */
   addedInvitees?: InviteeResource[];
 
-  /**
-   */
+  /** */
   updatedInvitees?: InviteeResource[];
 
-  /**
-   */
+  /** */
   deletedInvitees?: RcwResourceIdModel[];
 }
 

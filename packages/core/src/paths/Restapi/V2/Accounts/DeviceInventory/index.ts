@@ -1,8 +1,12 @@
-import type DeleteDeviceFromInventoryResponse from '../../../../../definitions/DeleteDeviceFromInventoryResponse';
-import type DeleteDeviceFromInventoryRequest from '../../../../../definitions/DeleteDeviceFromInventoryRequest';
-import type AddDeviceToInventoryResponse from '../../../../../definitions/AddDeviceToInventoryResponse';
-import type AddDeviceToInventoryRequest from '../../../../../definitions/AddDeviceToInventoryRequest';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import type DeleteDeviceFromInventoryResponse from "../../../../../definitions/DeleteDeviceFromInventoryResponse";
+import type DeleteDeviceFromInventoryRequest from "../../../../../definitions/DeleteDeviceFromInventoryRequest";
+import type AddDeviceToInventoryResponse from "../../../../../definitions/AddDeviceToInventoryResponse";
+import type AddDeviceToInventoryRequest from "../../../../../definitions/AddDeviceToInventoryRequest";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;

@@ -1,14 +1,13 @@
-import type BillingPlanInfo from './BillingPlanInfo';
-import type BrandInfo from './BrandInfo';
-import type ServicePlanInfo from './ServicePlanInfo';
-import type TargetServicePlanInfo from './TargetServicePlanInfo';
-import type CountryInfoShortModel from './CountryInfoShortModel';
-import type UBrandInfo from './UBrandInfo';
+import type BillingPlanInfo from "./BillingPlanInfo";
+import type BrandInfo from "./BrandInfo";
+import type ServicePlanInfo from "./ServicePlanInfo";
+import type TargetServicePlanInfo from "./TargetServicePlanInfo";
+import type CountryInfoShortModel from "./CountryInfoShortModel";
+import type UBrandInfo from "./UBrandInfo";
 
 /**
  * Account service information, including brand, sub-brand, service plan and
  * billing plan
- *
  */
 interface ServiceInfo {
   /**
@@ -17,28 +16,22 @@ interface ServiceInfo {
    */
   uri?: string;
 
-  /**
-   */
+  /** */
   billingPlan?: BillingPlanInfo;
 
-  /**
-   */
+  /** */
   brand?: BrandInfo;
 
-  /**
-   */
+  /** */
   servicePlan?: ServicePlanInfo;
 
-  /**
-   */
+  /** */
   targetServicePlan?: TargetServicePlanInfo;
 
-  /**
-   */
+  /** */
   contractedCountry?: CountryInfoShortModel;
 
-  /**
-   */
+  /** */
   uBrand?: UBrandInfo;
 }
 

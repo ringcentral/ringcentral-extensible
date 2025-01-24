@@ -1,4 +1,4 @@
-import type MessageEventBody from './MessageEventBody';
+import type MessageEventBody from "./MessageEventBody";
 
 interface MessageEvent {
   /**
@@ -22,8 +22,7 @@ interface MessageEvent {
    */
   subscriptionId?: string;
 
-  /**
-   */
+  /** */
   body?: MessageEventBody;
 }
 

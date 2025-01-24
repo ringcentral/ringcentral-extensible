@@ -23,7 +23,7 @@ interface RcwHistoryAdminListRecordingsParameters {
   /**
    * The status of the recording.
    */
-  status?: ('Processing' | 'Available' | 'Failed' | 'Purged')[];
+  status?: ("Processing" | "Available" | "Failed" | "Purged")[];
 
   /**
    * Identifier of the user who hosts a webinar (if omitted, webinars hosted by all company users will be returned)

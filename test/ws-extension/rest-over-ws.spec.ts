@@ -1,13 +1,13 @@
-import WebSocketExtension from '@rc-ex/ws';
+import WebSocketExtension from "@rc-ex/ws";
 
-import ReusableRestClient from '../reusable-rest-client';
+import ReusableRestClient from "../reusable-rest-client";
 // import path from 'path';
 // import dotenv from 'dotenv-override-true';
 
 // dotenv.config({path: path.join(__dirname, '..', '.env.lab')});
 
-describe('WebSocket', () => {
-  test('Rest API call via WebSocket', async () => {
+describe("WebSocket", () => {
+  test("Rest API call via WebSocket", async () => {
     // if (process.env.IS_LAB_ENV !== 'true') {
     //   return;
     // }

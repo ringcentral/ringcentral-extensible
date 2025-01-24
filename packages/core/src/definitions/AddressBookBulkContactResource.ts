@@ -1,4 +1,4 @@
-import type AddressBookBulkContactAddressInfo from './AddressBookBulkContactAddressInfo';
+import type AddressBookBulkContactAddressInfo from "./AddressBookBulkContactAddressInfo";
 
 interface AddressBookBulkContactResource {
   /**
@@ -148,16 +148,13 @@ interface AddressBookBulkContactResource {
    */
   callbackPhone?: string;
 
-  /**
-   */
+  /** */
   businessAddress?: AddressBookBulkContactAddressInfo;
 
-  /**
-   */
+  /** */
   homeAddress?: AddressBookBulkContactAddressInfo;
 
-  /**
-   */
+  /** */
   otherAddress?: AddressBookBulkContactAddressInfo;
 }
 

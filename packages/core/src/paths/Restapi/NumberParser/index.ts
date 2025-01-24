@@ -1,5 +1,5 @@
-import Parse from './Parse';
-import type { RingCentralInterface, ParentInterface } from '../../../types';
+import Parse from "./Parse";
+import type { ParentInterface, RingCentralInterface } from "../../../types";
 
 class Index {
   public rc: RingCentralInterface;

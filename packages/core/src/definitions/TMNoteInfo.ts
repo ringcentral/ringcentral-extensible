@@ -1,6 +1,6 @@
-import type TMCreatorInfo from './TMCreatorInfo';
-import type LastModifiedByInfo from './LastModifiedByInfo';
-import type LockedByInfo from './LockedByInfo';
+import type TMCreatorInfo from "./TMCreatorInfo";
+import type LastModifiedByInfo from "./LastModifiedByInfo";
+import type LockedByInfo from "./LockedByInfo";
 
 interface TMNoteInfo {
   /**
@@ -23,22 +23,19 @@ interface TMNoteInfo {
    */
   preview?: string;
 
-  /**
-   */
+  /** */
   creator?: TMCreatorInfo;
 
-  /**
-   */
+  /** */
   lastModifiedBy?: LastModifiedByInfo;
 
-  /**
-   */
+  /** */
   lockedBy?: LockedByInfo;
 
   /**
    * Note publishing status. Any note is created in 'Draft' status. After it is posted it becomes 'Active'
    */
-  status?: 'Active' | 'Draft';
+  status?: "Active" | "Draft";
 
   /**
    * Creation time
@@ -52,9 +49,8 @@ interface TMNoteInfo {
    */
   lastModifiedTime?: string;
 
-  /**
-   */
-  type?: 'Note';
+  /** */
+  type?: "Note";
 }
 
 export default TMNoteInfo;

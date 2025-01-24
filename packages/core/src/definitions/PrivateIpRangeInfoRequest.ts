@@ -1,17 +1,14 @@
-import type LocationUpdatesEmergencyAddressInfoRequest from './LocationUpdatesEmergencyAddressInfoRequest';
-import type ERLLocationInfo from './ERLLocationInfo';
+import type LocationUpdatesEmergencyAddressInfoRequest from "./LocationUpdatesEmergencyAddressInfoRequest";
+import type ERLLocationInfo from "./ERLLocationInfo";
 
 interface PrivateIpRangeInfoRequest {
-  /**
-   */
+  /** */
   id?: string;
 
-  /**
-   */
+  /** */
   startIp?: string;
 
-  /**
-   */
+  /** */
   endIp?: string;
 
   /**
@@ -19,8 +16,7 @@ interface PrivateIpRangeInfoRequest {
    */
   name?: string;
 
-  /**
-   */
+  /** */
   emergencyAddress?: LocationUpdatesEmergencyAddressInfoRequest;
 
   /**
@@ -30,8 +26,7 @@ interface PrivateIpRangeInfoRequest {
    */
   emergencyLocationId?: string;
 
-  /**
-   */
+  /** */
   emergencyLocation?: ERLLocationInfo;
 }
 

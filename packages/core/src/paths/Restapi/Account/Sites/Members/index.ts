@@ -1,5 +1,9 @@
-import type SiteMembersList from '../../../../../definitions/SiteMembersList';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import type SiteMembersList from "../../../../../definitions/SiteMembersList";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -21,8 +25,14 @@ class Index {
    * App Permission: ReadAccounts
    * User Permission: ReadExtensions
    */
-  public async get(restRequestConfig?: RestRequestConfig): Promise<SiteMembersList> {
-    const r = await this.rc.get<SiteMembersList>(this.path(), undefined, restRequestConfig);
+  public async get(
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<SiteMembersList> {
+    const r = await this.rc.get<SiteMembersList>(
+      this.path(),
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

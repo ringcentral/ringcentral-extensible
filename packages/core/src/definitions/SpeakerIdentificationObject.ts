@@ -1,4 +1,4 @@
-import type DiarizeSegment from './DiarizeSegment';
+import type DiarizeSegment from "./DiarizeSegment";
 
 interface SpeakerIdentificationObject {
   /**

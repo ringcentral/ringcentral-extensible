@@ -1,5 +1,5 @@
-import Jobs from './Jobs';
-import type { RingCentralInterface, ParentInterface } from '../../../../types';
+import Jobs from "./Jobs";
+import type { ParentInterface, RingCentralInterface } from "../../../../types";
 
 class Index {
   public rc: RingCentralInterface;

@@ -1,8 +1,7 @@
-import type MeetingExternalUserInfoResource from './MeetingExternalUserInfoResource';
+import type MeetingExternalUserInfoResource from "./MeetingExternalUserInfoResource";
 
 interface MeetingServiceInfoRequest {
-  /**
-   */
+  /** */
   externalUserInfo?: MeetingExternalUserInfoResource;
 }
 

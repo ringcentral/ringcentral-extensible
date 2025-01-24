@@ -1,8 +1,8 @@
-import RingCentral from '@rc-ex/core';
-import AuthorizeUriExtension from '@rc-ex/authorize-uri';
+import RingCentral from "@rc-ex/core";
+import AuthorizeUriExtension from "@rc-ex/authorize-uri";
 
-describe('Authorize URI Extension', () => {
-  test('default', async () => {
+describe("Authorize URI Extension", () => {
+  test("default", async () => {
     const rc = new RingCentral({
       clientId: process.env.RINGCENTRAL_CLIENT_ID!,
       clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET!,
@@ -11,11 +11,11 @@ describe('Authorize URI Extension', () => {
     const authorizeUriExtension = new AuthorizeUriExtension();
     await rc.installExtension(authorizeUriExtension);
     const authorizeUri = authorizeUriExtension.buildUri({
-      state: 'hello',
-      redirect_uri: 'https://example.com',
+      state: "hello",
+      redirect_uri: "https://example.com",
     });
     expect(authorizeUri).toBeDefined();
-    expect(authorizeUri.indexOf('state=hello')).not.toBe(-1);
+    expect(authorizeUri.indexOf("state=hello")).not.toBe(-1);
     expect(authorizeUri.startsWith(rc.rest.server)).toBeTruthy();
     await authorizeUriExtension.revoke();
   });

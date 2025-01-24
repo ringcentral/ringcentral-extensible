@@ -1,8 +1,7 @@
-import type UpdateWirelessPoint from './UpdateWirelessPoint';
+import type UpdateWirelessPoint from "./UpdateWirelessPoint";
 
 interface UpdateMultipleWirelessPointsRequest {
-  /**
-   */
+  /** */
   records?: UpdateWirelessPoint[];
 }
 

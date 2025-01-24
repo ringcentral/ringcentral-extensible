@@ -1,4 +1,4 @@
-import type ExtensionInfoEventBody from './ExtensionInfoEventBody';
+import type ExtensionInfoEventBody from "./ExtensionInfoEventBody";
 
 interface ExtensionInfoEvent {
   /**
@@ -23,8 +23,7 @@ interface ExtensionInfoEvent {
    */
   subscriptionId?: string;
 
-  /**
-   */
+  /** */
   body?: ExtensionInfoEventBody;
 }
 

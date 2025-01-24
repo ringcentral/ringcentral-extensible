@@ -1,23 +1,19 @@
-import type UserContactsNavigationInfoUri from './UserContactsNavigationInfoUri';
+import type UserContactsNavigationInfoUri from "./UserContactsNavigationInfoUri";
 
 /**
  * Information on navigation
  */
 interface UserContactsNavigationInfo {
-  /**
-   */
+  /** */
   firstPage?: UserContactsNavigationInfoUri;
 
-  /**
-   */
+  /** */
   nextPage?: UserContactsNavigationInfoUri;
 
-  /**
-   */
+  /** */
   previousPage?: UserContactsNavigationInfoUri;
 
-  /**
-   */
+  /** */
   lastPage?: UserContactsNavigationInfoUri;
 }
 

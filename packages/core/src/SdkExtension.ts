@@ -1,4 +1,4 @@
-import type { RingCentralInterface } from './types';
+import type { RingCentralInterface } from "./types";
 
 abstract class SdkExtension {
   public enabled = true;

@@ -7,8 +7,7 @@ interface MessageStoreCallerInfoResponseTo {
    */
   extensionNumber?: string;
 
-  /**
-   */
+  /** */
   extensionId?: string;
 
   /**
@@ -34,45 +33,50 @@ interface MessageStoreCallerInfoResponseTo {
    *  'SendingFailed', then the 'SendingFailed' value is returned. In other cases
    *  the 'Sent' status is returned
    */
-  messageStatus?: 'Queued' | 'Sent' | 'Delivered' | 'DeliveryFailed' | 'SendingFailed' | 'Received';
+  messageStatus?:
+    | "Queued"
+    | "Sent"
+    | "Delivered"
+    | "DeliveryFailed"
+    | "SendingFailed"
+    | "Received";
 
-  /**
-   */
+  /** */
   faxErrorCode?:
-    | 'AllLinesInUse'
-    | 'Undefined'
-    | 'NoFaxSendPermission'
-    | 'NoInternationalPermission'
-    | 'NoFaxMachine'
-    | 'NoAnswer'
-    | 'LineBusy'
-    | 'CallerHungUp'
-    | 'NotEnoughCredits'
-    | 'SentPartially'
-    | 'InternationalCallingDisabled'
-    | 'DestinationCountryDisabled'
-    | 'UnknownCountryCode'
-    | 'NotAccepted'
-    | 'InvalidNumber'
-    | 'CallDeclined'
-    | 'TooManyCallsPerLine'
-    | 'CallFailed'
-    | 'RenderingFailed'
-    | 'TooManyPages'
-    | 'ReturnToDBQueue'
-    | 'NoCallTime'
-    | 'WrongNumber'
-    | 'ProhibitedNumber'
-    | 'InternalError'
-    | 'FaxSendingProhibited'
-    | 'ThePhoneIsBlacklisted'
-    | 'UserNotFound'
-    | 'ConvertError'
-    | 'DBGeneralError'
-    | 'SkypeBillingFailed'
-    | 'AccountSuspended'
-    | 'ProhibitedDestination'
-    | 'InternationalDisabled';
+    | "AllLinesInUse"
+    | "Undefined"
+    | "NoFaxSendPermission"
+    | "NoInternationalPermission"
+    | "NoFaxMachine"
+    | "NoAnswer"
+    | "LineBusy"
+    | "CallerHungUp"
+    | "NotEnoughCredits"
+    | "SentPartially"
+    | "InternationalCallingDisabled"
+    | "DestinationCountryDisabled"
+    | "UnknownCountryCode"
+    | "NotAccepted"
+    | "InvalidNumber"
+    | "CallDeclined"
+    | "TooManyCallsPerLine"
+    | "CallFailed"
+    | "RenderingFailed"
+    | "TooManyPages"
+    | "ReturnToDBQueue"
+    | "NoCallTime"
+    | "WrongNumber"
+    | "ProhibitedNumber"
+    | "InternalError"
+    | "FaxSendingProhibited"
+    | "ThePhoneIsBlacklisted"
+    | "UserNotFound"
+    | "ConvertError"
+    | "DBGeneralError"
+    | "SkypeBillingFailed"
+    | "AccountSuspended"
+    | "ProhibitedDestination"
+    | "InternationalDisabled";
 
   /**
    * Symbolic name associated with a party. If the phone does not

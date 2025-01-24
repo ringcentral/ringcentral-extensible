@@ -1,11 +1,11 @@
-import type ModelInfo from './ModelInfo';
-import type ExtensionInfoIntId from './ExtensionInfoIntId';
-import type DeviceEmergencyInfo from './DeviceEmergencyInfo';
-import type EmergencyServiceAddressResource from './EmergencyServiceAddressResource';
-import type PhoneLinesInfo from './PhoneLinesInfo';
-import type ShippingInfo from './ShippingInfo';
-import type DeviceSiteInfo from './DeviceSiteInfo';
-import type BillingStatementInfo from './BillingStatementInfo';
+import type ModelInfo from "./ModelInfo";
+import type ExtensionInfoIntId from "./ExtensionInfoIntId";
+import type DeviceEmergencyInfo from "./DeviceEmergencyInfo";
+import type EmergencyServiceAddressResource from "./EmergencyServiceAddressResource";
+import type PhoneLinesInfo from "./PhoneLinesInfo";
+import type ShippingInfo from "./ShippingInfo";
+import type DeviceSiteInfo from "./DeviceSiteInfo";
+import type BillingStatementInfo from "./BillingStatementInfo";
 
 interface DeviceResource {
   /**
@@ -31,7 +31,15 @@ interface DeviceResource {
    * Device type
    * Default: HardPhone
    */
-  type?: 'BLA' | 'SoftPhone' | 'OtherPhone' | 'HardPhone' | 'WebPhone' | 'Paging' | 'Room' | 'WebRTC';
+  type?:
+    | "BLA"
+    | "SoftPhone"
+    | "OtherPhone"
+    | "HardPhone"
+    | "WebPhone"
+    | "Paging"
+    | "Room"
+    | "WebRTC";
 
   /**
    * Device name. Mandatory if ordering SoftPhone or OtherPhone.
@@ -50,27 +58,23 @@ interface DeviceResource {
   /**
    * Device status
    */
-  status?: 'Offline' | 'Online';
+  status?: "Offline" | "Online";
 
   /**
    * Computer name (for devices of `SoftPhone` type only)
    */
   computerName?: string;
 
-  /**
-   */
+  /** */
   model?: ModelInfo;
 
-  /**
-   */
+  /** */
   extension?: ExtensionInfoIntId;
 
-  /**
-   */
+  /** */
   emergency?: DeviceEmergencyInfo;
 
-  /**
-   */
+  /** */
   emergencyServiceAddress?: EmergencyServiceAddressResource;
 
   /**
@@ -78,8 +82,7 @@ interface DeviceResource {
    */
   phoneLines?: PhoneLinesInfo[];
 
-  /**
-   */
+  /** */
   shipping?: ShippingInfo;
 
   /**
@@ -110,8 +113,7 @@ interface DeviceResource {
    */
   inCompanyNet?: boolean;
 
-  /**
-   */
+  /** */
   site?: DeviceSiteInfo;
 
   /**
@@ -128,10 +130,9 @@ interface DeviceResource {
    *  - `Guest` - device with a linked phone line;
    *  - `None` - device without a phone line or with a specific line (free, BLA, etc.)
    */
-  linePooling?: 'Host' | 'Guest' | 'None';
+  linePooling?: "Host" | "Guest" | "None";
 
-  /**
-   */
+  /** */
   billingStatement?: BillingStatementInfo;
 
   /**

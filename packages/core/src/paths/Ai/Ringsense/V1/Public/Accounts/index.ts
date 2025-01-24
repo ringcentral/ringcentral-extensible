@@ -1,12 +1,18 @@
-import Domains from './Domains';
-import type { RingCentralInterface, ParentInterface } from '../../../../../../types';
+import Domains from "./Domains";
+import type {
+  ParentInterface,
+  RingCentralInterface,
+} from "../../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
   public _parent: ParentInterface;
   public accountId: string | null;
 
-  public constructor(_parent: ParentInterface, accountId: string | null = null) {
+  public constructor(
+    _parent: ParentInterface,
+    accountId: string | null = null,
+  ) {
     this._parent = _parent;
     this.rc = _parent.rc;
     this.accountId = accountId;

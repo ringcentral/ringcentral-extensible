@@ -1,13 +1,11 @@
-import type MeetingInfo from './MeetingInfo';
-import type MeetingRecordingInfo from './MeetingRecordingInfo';
+import type MeetingInfo from "./MeetingInfo";
+import type MeetingRecordingInfo from "./MeetingRecordingInfo";
 
 interface MeetingRecordings {
-  /**
-   */
+  /** */
   meeting?: MeetingInfo;
 
-  /**
-   */
+  /** */
   recordings?: MeetingRecordingInfo[];
 }
 

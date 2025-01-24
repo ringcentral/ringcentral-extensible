@@ -4,12 +4,10 @@ interface MeetingInfo {
    */
   uuid?: string;
 
-  /**
-   */
+  /** */
   id?: string;
 
-  /**
-   */
+  /** */
   topic?: string;
 
   /**

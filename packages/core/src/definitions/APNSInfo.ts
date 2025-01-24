@@ -1,11 +1,10 @@
-import type APSInfo from './APSInfo';
+import type APSInfo from "./APSInfo";
 
 /**
  * APNS (Apple Push Notification Service) information
  */
 interface APNSInfo {
-  /**
-   */
+  /** */
   aps?: APSInfo;
 }
 

@@ -1,6 +1,10 @@
-import type CallQueueMembers from '../../../../../definitions/CallQueueMembers';
-import type ListCallQueueMembersParameters from '../../../../../definitions/ListCallQueueMembersParameters';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import type CallQueueMembers from "../../../../../definitions/CallQueueMembers";
+import type ListCallQueueMembersParameters from "../../../../../definitions/ListCallQueueMembersParameters";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -26,7 +30,11 @@ class Index {
     queryParams?: ListCallQueueMembersParameters,
     restRequestConfig?: RestRequestConfig,
   ): Promise<CallQueueMembers> {
-    const r = await this.rc.get<CallQueueMembers>(this.path(), queryParams, restRequestConfig);
+    const r = await this.rc.get<CallQueueMembers>(
+      this.path(),
+      queryParams,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

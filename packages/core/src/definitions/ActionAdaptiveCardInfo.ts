@@ -1,12 +1,10 @@
-import type ActionCardBody from './ActionCardBody';
+import type ActionCardBody from "./ActionCardBody";
 
 interface ActionAdaptiveCardInfo {
-  /**
-   */
-  type?: 'AdaptiveCard';
+  /** */
+  type?: "AdaptiveCard";
 
-  /**
-   */
+  /** */
   body?: ActionCardBody[];
 }
 

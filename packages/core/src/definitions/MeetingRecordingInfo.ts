@@ -4,8 +4,7 @@ interface MeetingRecordingInfo {
    */
   uuid?: string;
 
-  /**
-   */
+  /** */
   id?: string;
 
   /**
@@ -14,9 +13,8 @@ interface MeetingRecordingInfo {
    */
   contentDownloadUri?: string;
 
-  /**
-   */
-  contentType?: 'video/mp4' | 'audio/m4a' | 'text/vtt';
+  /** */
+  contentType?: "video/mp4" | "audio/m4a" | "text/vtt";
 
   /**
    * Format: int32
@@ -35,9 +33,8 @@ interface MeetingRecordingInfo {
    */
   endTime?: string;
 
-  /**
-   */
-  status?: 'Completed' | 'Processing';
+  /** */
+  status?: "Completed" | "Processing";
 }
 
 export default MeetingRecordingInfo;

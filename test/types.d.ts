@@ -1,1 +1,1 @@
-declare module 'dotenv-override-true';
+declare module "dotenv-override-true";

@@ -1,6 +1,10 @@
-import type CallParty from '../../../../../../../definitions/CallParty';
-import type BridgeTargetRequest from '../../../../../../../definitions/BridgeTargetRequest';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../../types';
+import type CallParty from "../../../../../../../definitions/CallParty";
+import type BridgeTargetRequest from "../../../../../../../definitions/BridgeTargetRequest";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -29,7 +33,12 @@ class Index {
     bridgeTargetRequest: BridgeTargetRequest,
     restRequestConfig?: RestRequestConfig,
   ): Promise<CallParty> {
-    const r = await this.rc.post<CallParty>(this.path(), bridgeTargetRequest, undefined, restRequestConfig);
+    const r = await this.rc.post<CallParty>(
+      this.path(),
+      bridgeTargetRequest,
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

@@ -1,5 +1,9 @@
-import type CallRecordingExtensions from '../../../../../definitions/CallRecordingExtensions';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import type CallRecordingExtensions from "../../../../../definitions/CallRecordingExtensions";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -20,8 +24,14 @@ class Index {
    * App Permission: ReadAccounts
    * User Permission: ReadCompanyInfo
    */
-  public async get(restRequestConfig?: RestRequestConfig): Promise<CallRecordingExtensions> {
-    const r = await this.rc.get<CallRecordingExtensions>(this.path(), undefined, restRequestConfig);
+  public async get(
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<CallRecordingExtensions> {
+    const r = await this.rc.get<CallRecordingExtensions>(
+      this.path(),
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

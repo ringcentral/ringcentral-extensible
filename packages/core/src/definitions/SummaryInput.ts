@@ -1,4 +1,4 @@
-import type SummaryUnit from './SummaryUnit';
+import type SummaryUnit from "./SummaryUnit";
 
 interface SummaryInput {
   /**
@@ -6,7 +6,12 @@ interface SummaryInput {
    * Required
    * Example: AbstractiveShort
    */
-  summaryType?: 'Extractive' | 'AbstractiveShort' | 'AbstractiveLong' | 'AbstractiveAll' | 'All';
+  summaryType?:
+    | "Extractive"
+    | "AbstractiveShort"
+    | "AbstractiveLong"
+    | "AbstractiveAll"
+    | "All";
 
   /**
    * Required

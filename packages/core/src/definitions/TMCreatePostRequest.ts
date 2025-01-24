@@ -1,4 +1,4 @@
-import type TMAttachmentInfo from './TMAttachmentInfo';
+import type TMAttachmentInfo from "./TMAttachmentInfo";
 
 /**
  * Post data. At least one attribute should be provided (text or attachments)

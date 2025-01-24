@@ -1,4 +1,4 @@
-import type DeleteDeviceFromInventoryResponseRecords from './DeleteDeviceFromInventoryResponseRecords';
+import type DeleteDeviceFromInventoryResponseRecords from "./DeleteDeviceFromInventoryResponseRecords";
 
 interface DeleteDeviceFromInventoryResponse {
   /**

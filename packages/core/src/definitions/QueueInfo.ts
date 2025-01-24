@@ -1,17 +1,16 @@
-import type TransferInfo from './TransferInfo';
-import type FixedOrderAgents from './FixedOrderAgents';
-import type UnconditionalForwardingInfo from './UnconditionalForwardingInfo';
+import type TransferInfo from "./TransferInfo";
+import type FixedOrderAgents from "./FixedOrderAgents";
+import type UnconditionalForwardingInfo from "./UnconditionalForwardingInfo";
 
 /**
  * Queue settings applied for department (call queue) extension type,
  * with the 'AgentQueue' value specified as a call handling action
- *
  */
 interface QueueInfo {
   /**
    * Specifies how calls are transferred to group members
    */
-  transferMode?: 'Rotating' | 'Simultaneous' | 'FixedOrder';
+  transferMode?: "Rotating" | "Simultaneous" | "FixedOrder";
 
   /**
    * Call transfer information
@@ -25,11 +24,11 @@ interface QueueInfo {
    *  'WaitPrimaryMembers' and 'WaitPrimaryAndOverflowMembers' are supported
    */
   noAnswerAction?:
-    | 'WaitPrimaryMembers'
-    | 'WaitPrimaryAndOverflowMembers'
-    | 'Voicemail'
-    | 'TransferToExtension'
-    | 'UnconditionalForwarding';
+    | "WaitPrimaryMembers"
+    | "WaitPrimaryAndOverflowMembers"
+    | "Voicemail"
+    | "TransferToExtension"
+    | "UnconditionalForwarding";
 
   /**
    * Information on a call forwarding rule
@@ -39,7 +38,7 @@ interface QueueInfo {
   /**
    * Connecting audio interruption mode
    */
-  holdAudioInterruptionMode?: 'Never' | 'WhenMusicEnds' | 'Periodically';
+  holdAudioInterruptionMode?: "Never" | "WhenMusicEnds" | "Periodically";
 
   /**
    * Connecting audio interruption message period in seconds
@@ -54,7 +53,10 @@ interface QueueInfo {
    *  The default value is `Voicemail`
    * Default: Voicemail
    */
-  holdTimeExpirationAction?: 'TransferToExtension' | 'UnconditionalForwarding' | 'Voicemail';
+  holdTimeExpirationAction?:
+    | "TransferToExtension"
+    | "UnconditionalForwarding"
+    | "Voicemail";
 
   /**
    * Maximum time in seconds to wait for a call queue member before trying the next member
@@ -87,10 +89,13 @@ interface QueueInfo {
   /**
    * Specifies the type of action to be taken if count of callers on hold exceeds the supported maximum
    */
-  maxCallersAction?: 'Voicemail' | 'Announcement' | 'TransferToExtension' | 'UnconditionalForwarding';
+  maxCallersAction?:
+    | "Voicemail"
+    | "Announcement"
+    | "TransferToExtension"
+    | "UnconditionalForwarding";
 
-  /**
-   */
+  /** */
   unconditionalForwarding?: UnconditionalForwardingInfo[];
 }
 

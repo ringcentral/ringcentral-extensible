@@ -23,8 +23,7 @@ interface TimezoneInfo {
    */
   description?: string;
 
-  /**
-   */
+  /** */
   bias?: string;
 }
 

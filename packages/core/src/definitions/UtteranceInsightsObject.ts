@@ -1,5 +1,5 @@
-import type WordTimingsUnit from './WordTimingsUnit';
-import type UtteranceInsightsUnit from './UtteranceInsightsUnit';
+import type WordTimingsUnit from "./WordTimingsUnit";
+import type UtteranceInsightsUnit from "./UtteranceInsightsUnit";
 
 interface UtteranceInsightsObject {
   /**
@@ -33,12 +33,10 @@ interface UtteranceInsightsObject {
    */
   speakerId?: string;
 
-  /**
-   */
+  /** */
   wordTimings?: WordTimingsUnit[];
 
-  /**
-   */
+  /** */
   insights?: UtteranceInsightsUnit[];
 }
 

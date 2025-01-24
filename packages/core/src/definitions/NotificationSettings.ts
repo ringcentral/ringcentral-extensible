@@ -1,9 +1,9 @@
-import type EmailRecipientInfo from './EmailRecipientInfo';
-import type VoicemailsInfo from './VoicemailsInfo';
-import type InboundFaxesInfo from './InboundFaxesInfo';
-import type OutboundFaxesInfo from './OutboundFaxesInfo';
-import type InboundTextsInfo from './InboundTextsInfo';
-import type MissedCallsInfo from './MissedCallsInfo';
+import type EmailRecipientInfo from "./EmailRecipientInfo";
+import type VoicemailsInfo from "./VoicemailsInfo";
+import type InboundFaxesInfo from "./InboundFaxesInfo";
+import type OutboundFaxesInfo from "./OutboundFaxesInfo";
+import type InboundTextsInfo from "./InboundTextsInfo";
+import type MissedCallsInfo from "./MissedCallsInfo";
 
 interface NotificationSettings {
   /**
@@ -44,24 +44,19 @@ interface NotificationSettings {
    */
   advancedMode?: boolean;
 
-  /**
-   */
+  /** */
   voicemails?: VoicemailsInfo;
 
-  /**
-   */
+  /** */
   inboundFaxes?: InboundFaxesInfo;
 
-  /**
-   */
+  /** */
   outboundFaxes?: OutboundFaxesInfo;
 
-  /**
-   */
+  /** */
   inboundTexts?: InboundTextsInfo;
 
-  /**
-   */
+  /** */
   missedCalls?: MissedCallsInfo;
 }
 

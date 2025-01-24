@@ -1,4 +1,4 @@
-import type BatchProvisionUsersSuccessItemExtensionDevices from './BatchProvisionUsersSuccessItemExtensionDevices';
+import type BatchProvisionUsersSuccessItemExtensionDevices from "./BatchProvisionUsersSuccessItemExtensionDevices";
 
 interface BatchProvisionUsersSuccessItemExtension {
   /**
@@ -7,8 +7,7 @@ interface BatchProvisionUsersSuccessItemExtension {
    */
   id?: string;
 
-  /**
-   */
+  /** */
   devices?: BatchProvisionUsersSuccessItemExtensionDevices[];
 }
 

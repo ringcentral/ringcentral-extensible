@@ -1,4 +1,4 @@
-import type ApiVersionInfo from './ApiVersionInfo';
+import type ApiVersionInfo from "./ApiVersionInfo";
 
 interface ApiVersionsList {
   /**

@@ -1,6 +1,6 @@
-import type MessageStoreCallerInfoResponseFrom from './MessageStoreCallerInfoResponseFrom';
-import type FaxResponseTo from './FaxResponseTo';
-import type MessageAttachmentInfoIntId from './MessageAttachmentInfoIntId';
+import type MessageStoreCallerInfoResponseFrom from "./MessageStoreCallerInfoResponseFrom";
+import type FaxResponseTo from "./FaxResponseTo";
+import type MessageAttachmentInfoIntId from "./MessageAttachmentInfoIntId";
 
 interface FaxResponse {
   /**
@@ -18,10 +18,9 @@ interface FaxResponse {
   /**
    * Message type - 'Fax'
    */
-  type?: 'Fax';
+  type?: "Fax";
 
-  /**
-   */
+  /** */
   from?: MessageStoreCallerInfoResponseFrom;
 
   /**
@@ -39,12 +38,12 @@ interface FaxResponse {
   /**
    * Message read status
    */
-  readStatus?: 'Read' | 'Unread';
+  readStatus?: "Read" | "Unread";
 
   /**
    * Message priority
    */
-  priority?: 'Normal' | 'High';
+  priority?: "Normal" | "High";
 
   /**
    * List of message attachments
@@ -56,7 +55,7 @@ interface FaxResponse {
    *  directions are allowed. For example voicemail messages can
    *  be only inbound
    */
-  direction?: 'Inbound' | 'Outbound';
+  direction?: "Inbound" | "Outbound";
 
   /**
    * Message availability status. Message in 'Deleted' state is still
@@ -64,7 +63,7 @@ interface FaxResponse {
    *  that all attachments are already deleted and the message itself is about
    *  to be physically deleted shortly
    */
-  availability?: 'Alive' | 'Deleted' | 'Purged';
+  availability?: "Alive" | "Deleted" | "Purged";
 
   /**
    * Message status. Different message types may have different
@@ -74,14 +73,20 @@ interface FaxResponse {
    *  'SendingFailed', then the 'SendingFailed' value is returned. In other cases
    *  the 'Sent' status is returned
    */
-  messageStatus?: 'Queued' | 'Sent' | 'Delivered' | 'DeliveryFailed' | 'SendingFailed' | 'Received';
+  messageStatus?:
+    | "Queued"
+    | "Sent"
+    | "Delivered"
+    | "DeliveryFailed"
+    | "SendingFailed"
+    | "Received";
 
   /**
    * Fax only. Resolution of a fax message. 'High' for black and
    *  white image scanned at 200 dpi, 'Low' for black and white image scanned
    *  at 100 dpi
    */
-  faxResolution?: 'High' | 'Low';
+  faxResolution?: "High" | "Low";
 
   /**
    * Page count in a fax message

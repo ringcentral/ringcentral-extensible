@@ -5,7 +5,7 @@ interface AnalyticsCallsTimelineFetchParameters {
   /**
    * Aggregation interval
    */
-  interval?: 'Hour' | 'Day' | 'Week' | 'Month';
+  interval?: "Hour" | "Day" | "Week" | "Month";
 
   /**
    * The current page number (positive numbers only)

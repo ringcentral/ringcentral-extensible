@@ -16,8 +16,7 @@ interface GetExtensionEmergencyLocationsParameters {
    */
   searchString?: string;
 
-  /**
-   */
+  /** */
   domesticCountryId?: string;
 
   /**
@@ -27,18 +26,18 @@ interface GetExtensionEmergencyLocationsParameters {
    * Default: +visibility
    */
   orderBy?:
-    | '+name'
-    | '+siteName'
-    | '+address'
-    | '+addressStatus'
-    | '+usageStatus'
-    | '+visibility'
-    | '-name'
-    | '-siteName'
-    | '-address'
-    | '-addressStatus'
-    | '-usageStatus'
-    | '-visibility';
+    | "+name"
+    | "+siteName"
+    | "+address"
+    | "+addressStatus"
+    | "+usageStatus"
+    | "+visibility"
+    | "-name"
+    | "-siteName"
+    | "-address"
+    | "-addressStatus"
+    | "-usageStatus"
+    | "-visibility";
 
   /**
    * Indicates a page size (number of items). The values supported:
@@ -56,8 +55,7 @@ interface GetExtensionEmergencyLocationsParameters {
    */
   page?: number;
 
-  /**
-   */
+  /** */
   visibility?: string;
 }
 

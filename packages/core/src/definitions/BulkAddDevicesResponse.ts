@@ -1,4 +1,4 @@
-import type BulkAddDevicesResponseResults from './BulkAddDevicesResponseResults';
+import type BulkAddDevicesResponseResults from "./BulkAddDevicesResponseResults";
 
 interface BulkAddDevicesResponse {
   /**

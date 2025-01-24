@@ -1,4 +1,4 @@
-import type DataExportTaskContactInfo from './DataExportTaskContactInfo';
+import type DataExportTaskContactInfo from "./DataExportTaskContactInfo";
 
 /**
  * Information specified in request
@@ -16,8 +16,7 @@ interface SpecificInfo {
    */
   timeTo?: string;
 
-  /**
-   */
+  /** */
   contacts?: DataExportTaskContactInfo[];
 
   /**

@@ -3,7 +3,7 @@ interface PubNubDeliveryMode {
    * The transport type for this subscription, or the channel by which an app should be notified of an event
    * Required
    */
-  transportType?: 'PubNub';
+  transportType?: "PubNub";
 
   /**
    * Optional. Specifies if notification messages will be encrypted
@@ -36,7 +36,7 @@ interface PubNubDeliveryMode {
    * (Only for a "PubNub" transport, returned only if `encryption` is `true`)
    *  Encryption algorithm used
    */
-  encryptionAlgorithm?: 'AES';
+  encryptionAlgorithm?: "AES";
 
   /**
    * (Only for a "PubNub" transport, returned only if `encryption` is `true`)

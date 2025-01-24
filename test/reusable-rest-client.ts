@@ -1,4 +1,4 @@
-import RingCentral from '@rc-ex/core';
+import RingCentral from "@rc-ex/core";
 
 class ReusableRestClient {
   private static rc: RingCentral;

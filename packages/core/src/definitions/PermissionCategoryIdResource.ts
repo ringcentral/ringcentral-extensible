@@ -4,8 +4,7 @@ interface PermissionCategoryIdResource {
    */
   uri?: string;
 
-  /**
-   */
+  /** */
   id?: string;
 }
 

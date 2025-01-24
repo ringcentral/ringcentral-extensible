@@ -1,6 +1,6 @@
-import type EmergencyAddressAutoUpdateSiteInfo from './EmergencyAddressAutoUpdateSiteInfo';
-import type EmergencyAddressInfo from './EmergencyAddressInfo';
-import type ERLLocationInfo from './ERLLocationInfo';
+import type EmergencyAddressAutoUpdateSiteInfo from "./EmergencyAddressAutoUpdateSiteInfo";
+import type EmergencyAddressInfo from "./EmergencyAddressInfo";
+import type ERLLocationInfo from "./ERLLocationInfo";
 
 interface WirelessPointInfo {
   /**
@@ -26,8 +26,7 @@ interface WirelessPointInfo {
    */
   name?: string;
 
-  /**
-   */
+  /** */
   site?: EmergencyAddressAutoUpdateSiteInfo;
 
   /**
@@ -35,8 +34,7 @@ interface WirelessPointInfo {
    */
   emergencyAddress?: EmergencyAddressInfo;
 
-  /**
-   */
+  /** */
   emergencyLocation?: ERLLocationInfo;
 
   /**

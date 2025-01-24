@@ -1,5 +1,5 @@
-import Chats from './Chats';
-import type { RingCentralInterface, ParentInterface } from '../../../../types';
+import Chats from "./Chats";
+import type { ParentInterface, RingCentralInterface } from "../../../../types";
 
 class Index {
   public rc: RingCentralInterface;

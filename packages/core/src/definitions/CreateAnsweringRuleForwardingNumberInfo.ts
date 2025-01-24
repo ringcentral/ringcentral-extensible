@@ -24,15 +24,15 @@ interface CreateAnsweringRuleForwardingNumberInfo {
    * Type of forwarding number
    */
   type?:
-    | 'Home'
-    | 'Mobile'
-    | 'Work'
-    | 'PhoneLine'
-    | 'Outage'
-    | 'Other'
-    | 'BusinessMobilePhone'
-    | 'ExternalCarrier'
-    | 'ExtensionApps';
+    | "Home"
+    | "Mobile"
+    | "Work"
+    | "PhoneLine"
+    | "Outage"
+    | "Other"
+    | "BusinessMobilePhone"
+    | "ExternalCarrier"
+    | "ExtensionApps";
 }
 
 export default CreateAnsweringRuleForwardingNumberInfo;

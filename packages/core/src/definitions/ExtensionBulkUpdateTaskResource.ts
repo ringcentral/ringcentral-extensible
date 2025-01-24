@@ -1,8 +1,7 @@
-import type ExtensionBulkUpdateTaskResult from './ExtensionBulkUpdateTaskResult';
+import type ExtensionBulkUpdateTaskResult from "./ExtensionBulkUpdateTaskResult";
 
 /**
  * Information on a task for updating multiple extensions
- *
  */
 interface ExtensionBulkUpdateTaskResource {
   /**
@@ -22,7 +21,7 @@ interface ExtensionBulkUpdateTaskResource {
    * Task status
    * Required
    */
-  status?: 'Accepted' | 'InProgress' | 'Completed' | 'Failed';
+  status?: "Accepted" | "InProgress" | "Completed" | "Failed";
 
   /**
    * Task creation date/time
@@ -38,8 +37,7 @@ interface ExtensionBulkUpdateTaskResource {
    */
   lastModifiedTime?: string;
 
-  /**
-   */
+  /** */
   result?: ExtensionBulkUpdateTaskResult;
 }
 

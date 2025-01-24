@@ -1,6 +1,6 @@
-import type GetStateInfoResponse from './GetStateInfoResponse';
-import type PageNavigationModel from './PageNavigationModel';
-import type EnumeratedPagingModel from './EnumeratedPagingModel';
+import type GetStateInfoResponse from "./GetStateInfoResponse";
+import type PageNavigationModel from "./PageNavigationModel";
+import type EnumeratedPagingModel from "./EnumeratedPagingModel";
 
 interface GetStateListResponse {
   /**
@@ -14,12 +14,10 @@ interface GetStateListResponse {
    */
   records?: GetStateInfoResponse[];
 
-  /**
-   */
+  /** */
   navigation?: PageNavigationModel;
 
-  /**
-   */
+  /** */
   paging?: EnumeratedPagingModel;
 }
 

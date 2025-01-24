@@ -1,6 +1,6 @@
 class ClosedException extends Error {
   public constructor(message?: string) {
-    super(message ?? 'WebSocket has been closed');
+    super(message ?? "WebSocket has been closed");
   }
 }
 

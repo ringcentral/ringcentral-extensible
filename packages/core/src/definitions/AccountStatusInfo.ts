@@ -6,7 +6,11 @@ interface AccountStatusInfo {
    * Type of suspension, voluntarily or not
    * Example: CancelledVoluntarily
    */
-  reason?: 'SuspendedVoluntarily' | 'SuspendedInvoluntarily' | 'CancelledVoluntarily' | 'CancelledInvoluntarily';
+  reason?:
+    | "SuspendedVoluntarily"
+    | "SuspendedInvoluntarily"
+    | "CancelledVoluntarily"
+    | "CancelledInvoluntarily";
 
   /**
    * A meaningful description of the reason to change the status

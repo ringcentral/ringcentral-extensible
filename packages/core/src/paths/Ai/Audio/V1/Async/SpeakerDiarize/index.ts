@@ -1,7 +1,11 @@
-import type CaiAsyncApiResponse from '../../../../../../definitions/CaiAsyncApiResponse';
-import type CaiSpeakerDiarizeParameters from '../../../../../../definitions/CaiSpeakerDiarizeParameters';
-import type DiarizeInput from '../../../../../../definitions/DiarizeInput';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../types';
+import type CaiAsyncApiResponse from "../../../../../../definitions/CaiAsyncApiResponse";
+import type CaiSpeakerDiarizeParameters from "../../../../../../definitions/CaiSpeakerDiarizeParameters";
+import type DiarizeInput from "../../../../../../definitions/DiarizeInput";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -28,7 +32,12 @@ class Index {
     queryParams?: CaiSpeakerDiarizeParameters,
     restRequestConfig?: RestRequestConfig,
   ): Promise<CaiAsyncApiResponse> {
-    const r = await this.rc.post<CaiAsyncApiResponse>(this.path(), diarizeInput, queryParams, restRequestConfig);
+    const r = await this.rc.post<CaiAsyncApiResponse>(
+      this.path(),
+      diarizeInput,
+      queryParams,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

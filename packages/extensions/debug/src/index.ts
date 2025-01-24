@@ -1,7 +1,11 @@
-import type RingCentral from '@rc-ex/core';
-import type { RestRequestConfig, RestResponse, RestMethod } from '@rc-ex/core/lib/types';
-import Utils from '@rc-ex/core/lib/Utils';
-import SdkExtension from '@rc-ex/core/lib/SdkExtension';
+import type RingCentral from "@rc-ex/core";
+import type {
+  RestMethod,
+  RestRequestConfig,
+  RestResponse,
+} from "@rc-ex/core/lib/types";
+import Utils from "@rc-ex/core/lib/Utils";
+import SdkExtension from "@rc-ex/core/lib/SdkExtension";
 
 export interface DebugOptions {
   loggingAction?: (message: string) => void;
@@ -30,7 +34,13 @@ class DebugExtension extends SdkExtension {
       if (!this.enabled) {
         return request(method, endpoint, content, queryParams, config);
       }
-      const r = await request<T>(method, endpoint, content, queryParams, config);
+      const r = await request<T>(
+        method,
+        endpoint,
+        content,
+        queryParams,
+        config,
+      );
       this.options.loggingAction!(Utils.formatTraffic(r));
       return r;
     };

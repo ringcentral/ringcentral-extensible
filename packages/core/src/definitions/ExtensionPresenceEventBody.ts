@@ -8,7 +8,12 @@ interface ExtensionPresenceEventBody {
   /**
    * Telephony presence status. Returned if telephony status is changed.
    */
-  telephonyStatus?: 'NoCall' | 'CallConnected' | 'Ringing' | 'OnHold' | 'ParkedCall';
+  telephonyStatus?:
+    | "NoCall"
+    | "CallConnected"
+    | "Ringing"
+    | "OnHold"
+    | "ParkedCall";
 
   /**
    * Order number of a notification to state the chronology
@@ -19,17 +24,21 @@ interface ExtensionPresenceEventBody {
   /**
    * Aggregated presence status, calculated from a number of sources
    */
-  presenceStatus?: 'Offline' | 'Busy' | 'Available';
+  presenceStatus?: "Offline" | "Busy" | "Available";
 
   /**
    * User-defined presence status (as previously published by the user)
    */
-  userStatus?: 'Offline' | 'Busy' | 'Available';
+  userStatus?: "Offline" | "Busy" | "Available";
 
   /**
    * Extended DnD (Do not Disturb) status
    */
-  dndStatus?: 'TakeAllCalls' | 'DoNotAcceptAnyCalls' | 'DoNotAcceptDepartmentCalls' | 'TakeDepartmentCallsOnly';
+  dndStatus?:
+    | "TakeAllCalls"
+    | "DoNotAcceptAnyCalls"
+    | "DoNotAcceptDepartmentCalls"
+    | "TakeDepartmentCallsOnly";
 
   /**
    * If `true` enables other extensions to see the extension presence status

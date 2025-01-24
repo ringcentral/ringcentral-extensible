@@ -1,5 +1,9 @@
-import type SipInfoResource from '../../../../../definitions/SipInfoResource';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import type SipInfoResource from "../../../../../definitions/SipInfoResource";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -20,8 +24,14 @@ class Index {
    * App Permission: ReadAccounts
    * User Permission: ReadCompanyDevices
    */
-  public async get(restRequestConfig?: RestRequestConfig): Promise<SipInfoResource> {
-    const r = await this.rc.get<SipInfoResource>(this.path(), undefined, restRequestConfig);
+  public async get(
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<SipInfoResource> {
+    const r = await this.rc.get<SipInfoResource>(
+      this.path(),
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

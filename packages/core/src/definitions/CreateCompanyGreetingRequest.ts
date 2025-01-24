@@ -1,5 +1,5 @@
-import type Attachment from './Attachment';
-import type GreetingAnsweringRuleId from './GreetingAnsweringRuleId';
+import type Attachment from "./Attachment";
+import type GreetingAnsweringRuleId from "./GreetingAnsweringRuleId";
 
 /**
  * Request body for operation createCompanyGreeting
@@ -10,7 +10,12 @@ interface CreateCompanyGreetingRequest {
    *  is played.
    * Required
    */
-  type?: 'Company' | 'StartRecording' | 'StopRecording' | 'AutomaticRecording' | 'TemplateGreeting';
+  type?:
+    | "Company"
+    | "StartRecording"
+    | "StopRecording"
+    | "AutomaticRecording"
+    | "TemplateGreeting";
 
   /**
    * Internal identifier of a language. See Get Language
@@ -24,8 +29,7 @@ interface CreateCompanyGreetingRequest {
    */
   binary?: Attachment;
 
-  /**
-   */
+  /** */
   answeringRule?: GreetingAnsweringRuleId;
 }
 

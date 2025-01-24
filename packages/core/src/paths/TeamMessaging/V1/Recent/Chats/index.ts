@@ -1,6 +1,10 @@
-import type TMChatListWithoutNavigation from '../../../../../definitions/TMChatListWithoutNavigation';
-import type ListRecentChatsNewParameters from '../../../../../definitions/ListRecentChatsNewParameters';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import type TMChatListWithoutNavigation from "../../../../../definitions/TMChatListWithoutNavigation";
+import type ListRecentChatsNewParameters from "../../../../../definitions/ListRecentChatsNewParameters";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -24,7 +28,11 @@ class Index {
     queryParams?: ListRecentChatsNewParameters,
     restRequestConfig?: RestRequestConfig,
   ): Promise<TMChatListWithoutNavigation> {
-    const r = await this.rc.get<TMChatListWithoutNavigation>(this.path(), queryParams, restRequestConfig);
+    const r = await this.rc.get<TMChatListWithoutNavigation>(
+      this.path(),
+      queryParams,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

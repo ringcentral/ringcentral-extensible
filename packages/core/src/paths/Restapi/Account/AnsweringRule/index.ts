@@ -1,9 +1,13 @@
-import type CompanyAnsweringRuleUpdate from '../../../../definitions/CompanyAnsweringRuleUpdate';
-import type CompanyAnsweringRuleInfo from '../../../../definitions/CompanyAnsweringRuleInfo';
-import type CompanyAnsweringRuleRequest from '../../../../definitions/CompanyAnsweringRuleRequest';
-import type CompanyAnsweringRuleList from '../../../../definitions/CompanyAnsweringRuleList';
-import type ListCompanyAnsweringRulesParameters from '../../../../definitions/ListCompanyAnsweringRulesParameters';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
+import type CompanyAnsweringRuleUpdate from "../../../../definitions/CompanyAnsweringRuleUpdate";
+import type CompanyAnsweringRuleInfo from "../../../../definitions/CompanyAnsweringRuleInfo";
+import type CompanyAnsweringRuleRequest from "../../../../definitions/CompanyAnsweringRuleRequest";
+import type CompanyAnsweringRuleList from "../../../../definitions/CompanyAnsweringRuleList";
+import type ListCompanyAnsweringRulesParameters from "../../../../definitions/ListCompanyAnsweringRulesParameters";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -33,7 +37,11 @@ class Index {
     queryParams?: ListCompanyAnsweringRulesParameters,
     restRequestConfig?: RestRequestConfig,
   ): Promise<CompanyAnsweringRuleList> {
-    const r = await this.rc.get<CompanyAnsweringRuleList>(this.path(false), queryParams, restRequestConfig);
+    const r = await this.rc.get<CompanyAnsweringRuleList>(
+      this.path(false),
+      queryParams,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -66,11 +74,17 @@ class Index {
    * App Permission: ReadAccounts
    * User Permission: ReadCompanyAnsweringRules
    */
-  public async get(restRequestConfig?: RestRequestConfig): Promise<CompanyAnsweringRuleInfo> {
+  public async get(
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<CompanyAnsweringRuleInfo> {
     if (this.ruleId === null) {
-      throw new Error('ruleId must be specified.');
+      throw new Error("ruleId must be specified.");
     }
-    const r = await this.rc.get<CompanyAnsweringRuleInfo>(this.path(), undefined, restRequestConfig);
+    const r = await this.rc.get<CompanyAnsweringRuleInfo>(
+      this.path(),
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -87,7 +101,7 @@ class Index {
     restRequestConfig?: RestRequestConfig,
   ): Promise<CompanyAnsweringRuleInfo> {
     if (this.ruleId === null) {
-      throw new Error('ruleId must be specified.');
+      throw new Error("ruleId must be specified.");
     }
     const r = await this.rc.put<CompanyAnsweringRuleInfo>(
       this.path(),
@@ -108,9 +122,14 @@ class Index {
    */
   public async delete(restRequestConfig?: RestRequestConfig): Promise<string> {
     if (this.ruleId === null) {
-      throw new Error('ruleId must be specified.');
+      throw new Error("ruleId must be specified.");
     }
-    const r = await this.rc.delete<string>(this.path(), {}, undefined, restRequestConfig);
+    const r = await this.rc.delete<string>(
+      this.path(),
+      {},
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

@@ -1,6 +1,5 @@
 interface ScimEnterpriseUser {
-  /**
-   */
+  /** */
   department?: string;
 }
 

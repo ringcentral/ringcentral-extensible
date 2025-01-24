@@ -1,6 +1,10 @@
-import type CompanyBusinessHoursUpdateRequest from '../../../../definitions/CompanyBusinessHoursUpdateRequest';
-import type CompanyBusinessHours from '../../../../definitions/CompanyBusinessHours';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
+import type CompanyBusinessHoursUpdateRequest from "../../../../definitions/CompanyBusinessHoursUpdateRequest";
+import type CompanyBusinessHours from "../../../../definitions/CompanyBusinessHours";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -21,8 +25,14 @@ class Index {
    * App Permission: ReadAccounts
    * User Permission: ReadCompanyAnsweringRules
    */
-  public async get(restRequestConfig?: RestRequestConfig): Promise<CompanyBusinessHours> {
-    const r = await this.rc.get<CompanyBusinessHours>(this.path(), undefined, restRequestConfig);
+  public async get(
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<CompanyBusinessHours> {
+    const r = await this.rc.get<CompanyBusinessHours>(
+      this.path(),
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 

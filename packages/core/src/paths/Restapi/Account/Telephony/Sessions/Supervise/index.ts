@@ -1,6 +1,10 @@
-import type SuperviseCallSessionResponse from '../../../../../../definitions/SuperviseCallSessionResponse';
-import type SuperviseCallSessionRequest from '../../../../../../definitions/SuperviseCallSessionRequest';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../types';
+import type SuperviseCallSessionResponse from "../../../../../../definitions/SuperviseCallSessionResponse";
+import type SuperviseCallSessionRequest from "../../../../../../definitions/SuperviseCallSessionRequest";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;

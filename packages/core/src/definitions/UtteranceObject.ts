@@ -1,4 +1,4 @@
-import type WordTimingsUnit from './WordTimingsUnit';
+import type WordTimingsUnit from "./WordTimingsUnit";
 
 interface UtteranceObject {
   /**
@@ -32,8 +32,7 @@ interface UtteranceObject {
    */
   speakerId?: string;
 
-  /**
-   */
+  /** */
   wordTimings?: WordTimingsUnit[];
 }
 

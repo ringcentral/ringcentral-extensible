@@ -7,22 +7,22 @@ interface ListExtensionPhoneNumbersParameters {
    *  number is ready to be used. Otherwise, it is an external number not yet
    *  ported to RingCentral
    */
-  status?: 'Normal' | 'Pending' | 'PortedIn' | 'Temporary' | 'Unknown';
+  status?: "Normal" | "Pending" | "PortedIn" | "Temporary" | "Unknown";
 
   /**
    * Usage type of phone number
    */
   usageType?: (
-    | 'MainCompanyNumber'
-    | 'AdditionalCompanyNumber'
-    | 'CompanyNumber'
-    | 'DirectNumber'
-    | 'CompanyFaxNumber'
-    | 'ForwardedNumber'
-    | 'ForwardedCompanyNumber'
-    | 'BusinessMobileNumber'
-    | 'PartnerBusinessMobileNumber'
-    | 'IntegrationNumber'
+    | "MainCompanyNumber"
+    | "AdditionalCompanyNumber"
+    | "CompanyNumber"
+    | "DirectNumber"
+    | "CompanyFaxNumber"
+    | "ForwardedNumber"
+    | "ForwardedCompanyNumber"
+    | "BusinessMobileNumber"
+    | "PartnerBusinessMobileNumber"
+    | "IntegrationNumber"
   )[];
 
   /**

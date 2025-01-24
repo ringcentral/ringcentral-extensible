@@ -2,7 +2,6 @@
  * Site data. If multi-site feature is turned on for an account,
  * then ID of a site must be specified. In order to assign a wireless
  * point to the main site (company) the site ID should be set to `main-site`
- *
  */
 interface ProvisioningSiteInfo {
   /**

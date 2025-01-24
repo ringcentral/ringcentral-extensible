@@ -1,5 +1,5 @@
-import type GetPresenceExtensionInfo from './GetPresenceExtensionInfo';
-import type ActiveCallInfo from './ActiveCallInfo';
+import type GetPresenceExtensionInfo from "./GetPresenceExtensionInfo";
+import type ActiveCallInfo from "./ActiveCallInfo";
 
 interface GetPresenceInfo {
   /**
@@ -17,7 +17,7 @@ interface GetPresenceInfo {
    * Configures the user presence visibility. When the `allowSeeMyPresence` parameter is set to `true`,
    *  the following visibility options are supported via this parameter - All, None, PermittedUsers
    */
-  callerIdVisibility?: 'All' | 'None' | 'PermittedUsers';
+  callerIdVisibility?: "All" | "None" | "PermittedUsers";
 
   /**
    * Extended DnD (Do not Disturb) status. Cannot be set for Department/Announcement/Voicemail
@@ -29,10 +29,13 @@ interface GetPresenceInfo {
    *  status can be set through the old RingCentral user interface and is available
    *  for some migrated accounts only.
    */
-  dndStatus?: 'TakeAllCalls' | 'DoNotAcceptAnyCalls' | 'DoNotAcceptDepartmentCalls' | 'TakeDepartmentCallsOnly';
+  dndStatus?:
+    | "TakeAllCalls"
+    | "DoNotAcceptAnyCalls"
+    | "DoNotAcceptDepartmentCalls"
+    | "TakeDepartmentCallsOnly";
 
-  /**
-   */
+  /** */
   extension?: GetPresenceExtensionInfo;
 
   /**
@@ -48,7 +51,7 @@ interface GetPresenceInfo {
   /**
    * Aggregated presence status, calculated from a number of sources
    */
-  presenceStatus?: 'Offline' | 'Busy' | 'Available';
+  presenceStatus?: "Offline" | "Busy" | "Available";
 
   /**
    * If `true` enables to ring extension phone, if any user monitored by this extension is ringing
@@ -58,17 +61,22 @@ interface GetPresenceInfo {
   /**
    * Telephony presence status
    */
-  telephonyStatus?: 'NoCall' | 'CallConnected' | 'Ringing' | 'OnHold' | 'ParkedCall';
+  telephonyStatus?:
+    | "NoCall"
+    | "CallConnected"
+    | "Ringing"
+    | "OnHold"
+    | "ParkedCall";
 
   /**
    * User-defined presence status (as previously published by the user)
    */
-  userStatus?: 'Offline' | 'Busy' | 'Available';
+  userStatus?: "Offline" | "Busy" | "Available";
 
   /**
    * RingCentral Meetings presence
    */
-  meetingStatus?: 'Connected' | 'Disconnected';
+  meetingStatus?: "Connected" | "Disconnected";
 
   /**
    * Information on active calls

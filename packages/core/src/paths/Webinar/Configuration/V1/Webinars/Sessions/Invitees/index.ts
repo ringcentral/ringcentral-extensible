@@ -1,17 +1,24 @@
-import type UpdateInviteeRequest from '../../../../../../../definitions/UpdateInviteeRequest';
-import type InviteeResource from '../../../../../../../definitions/InviteeResource';
-import type BulkUpdateInviteesResponse from '../../../../../../../definitions/BulkUpdateInviteesResponse';
-import type BulkUpdateInviteesRequest from '../../../../../../../definitions/BulkUpdateInviteesRequest';
-import type WcsInviteeListResource from '../../../../../../../definitions/WcsInviteeListResource';
-import type RcwConfigListInviteesParameters from '../../../../../../../definitions/RcwConfigListInviteesParameters';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../../types';
+import type UpdateInviteeRequest from "../../../../../../../definitions/UpdateInviteeRequest";
+import type InviteeResource from "../../../../../../../definitions/InviteeResource";
+import type BulkUpdateInviteesResponse from "../../../../../../../definitions/BulkUpdateInviteesResponse";
+import type BulkUpdateInviteesRequest from "../../../../../../../definitions/BulkUpdateInviteesRequest";
+import type WcsInviteeListResource from "../../../../../../../definitions/WcsInviteeListResource";
+import type RcwConfigListInviteesParameters from "../../../../../../../definitions/RcwConfigListInviteesParameters";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
   public _parent: ParentInterface;
   public inviteeId: string | null;
 
-  public constructor(_parent: ParentInterface, inviteeId: string | null = null) {
+  public constructor(
+    _parent: ParentInterface,
+    inviteeId: string | null = null,
+  ) {
     this._parent = _parent;
     this.rc = _parent.rc;
     this.inviteeId = inviteeId;
@@ -36,7 +43,11 @@ class Index {
     queryParams?: RcwConfigListInviteesParameters,
     restRequestConfig?: RestRequestConfig,
   ): Promise<WcsInviteeListResource> {
-    const r = await this.rc.get<WcsInviteeListResource>(this.path(false), queryParams, restRequestConfig);
+    const r = await this.rc.get<WcsInviteeListResource>(
+      this.path(false),
+      queryParams,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -77,11 +88,17 @@ class Index {
    * Rate Limit Group: Heavy
    * App Permission: ReadWebinars
    */
-  public async get(restRequestConfig?: RestRequestConfig): Promise<InviteeResource> {
+  public async get(
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<InviteeResource> {
     if (this.inviteeId === null) {
-      throw new Error('inviteeId must be specified.');
+      throw new Error("inviteeId must be specified.");
     }
-    const r = await this.rc.get<InviteeResource>(this.path(), undefined, restRequestConfig);
+    const r = await this.rc.get<InviteeResource>(
+      this.path(),
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -102,9 +119,14 @@ class Index {
     restRequestConfig?: RestRequestConfig,
   ): Promise<InviteeResource> {
     if (this.inviteeId === null) {
-      throw new Error('inviteeId must be specified.');
+      throw new Error("inviteeId must be specified.");
     }
-    const r = await this.rc.put<InviteeResource>(this.path(), updateInviteeRequest, undefined, restRequestConfig);
+    const r = await this.rc.put<InviteeResource>(
+      this.path(),
+      updateInviteeRequest,
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -119,9 +141,14 @@ class Index {
    */
   public async delete(restRequestConfig?: RestRequestConfig): Promise<string> {
     if (this.inviteeId === null) {
-      throw new Error('inviteeId must be specified.');
+      throw new Error("inviteeId must be specified.");
     }
-    const r = await this.rc.delete<string>(this.path(), {}, undefined, restRequestConfig);
+    const r = await this.rc.delete<string>(
+      this.path(),
+      {},
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

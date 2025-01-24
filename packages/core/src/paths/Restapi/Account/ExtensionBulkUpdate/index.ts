@@ -1,7 +1,11 @@
-import Tasks from './Tasks';
-import type ExtensionBulkUpdateTaskResource from '../../../../definitions/ExtensionBulkUpdateTaskResource';
-import type ExtensionBulkUpdateRequest from '../../../../definitions/ExtensionBulkUpdateRequest';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
+import Tasks from "./Tasks";
+import type ExtensionBulkUpdateTaskResource from "../../../../definitions/ExtensionBulkUpdateTaskResource";
+import type ExtensionBulkUpdateRequest from "../../../../definitions/ExtensionBulkUpdateRequest";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../types";
 
 class Index {
   public rc: RingCentralInterface;

@@ -1,14 +1,13 @@
 /**
  * Token endpoint request parameters used in the "Authorization Code" and "Authorization code with PKCE" flows
  * with the `authorization_code` grant type
- *
  */
 interface AuthCodeTokenRequest {
   /**
    * Grant type
    * Required
    */
-  grant_type?: 'authorization_code';
+  grant_type?: "authorization_code";
 
   /**
    * For `authorization_code` grant type only. User's authorization code

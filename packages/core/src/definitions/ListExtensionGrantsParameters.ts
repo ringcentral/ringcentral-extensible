@@ -8,22 +8,22 @@ interface ListExtensionGrantsParameters {
    *  to 'Call Queue' extensions in modern RingCentral product terminology
    */
   extensionType?:
-    | 'User'
-    | 'FaxUser'
-    | 'VirtualUser'
-    | 'DigitalUser'
-    | 'Department'
-    | 'Announcement'
-    | 'Voicemail'
-    | 'SharedLinesGroup'
-    | 'PagingOnly'
-    | 'IvrMenu'
-    | 'ApplicationExtension'
-    | 'ParkLocation'
-    | 'Limited'
-    | 'Bot'
-    | 'Room'
-    | 'DelegatedLinesGroup';
+    | "User"
+    | "FaxUser"
+    | "VirtualUser"
+    | "DigitalUser"
+    | "Department"
+    | "Announcement"
+    | "Voicemail"
+    | "SharedLinesGroup"
+    | "PagingOnly"
+    | "IvrMenu"
+    | "ApplicationExtension"
+    | "ParkLocation"
+    | "Limited"
+    | "Bot"
+    | "Room"
+    | "DelegatedLinesGroup";
 
   /**
    * Indicates a page number to retrieve. Only positive number values

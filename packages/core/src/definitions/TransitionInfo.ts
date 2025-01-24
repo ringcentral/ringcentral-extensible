@@ -1,4 +1,4 @@
-import type ExtensionRegionalSettingRequest from './ExtensionRegionalSettingRequest';
+import type ExtensionRegionalSettingRequest from "./ExtensionRegionalSettingRequest";
 
 interface TransitionInfo {
   /**
@@ -8,8 +8,7 @@ interface TransitionInfo {
    */
   sendWelcomeEmail?: boolean;
 
-  /**
-   */
+  /** */
   regionalSettings?: ExtensionRegionalSettingRequest;
 }
 

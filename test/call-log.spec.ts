@@ -1,6 +1,6 @@
 // import winston from 'winston';
 
-import ReusableRestClient from './reusable-rest-client';
+import ReusableRestClient from "./reusable-rest-client";
 
 // const logger = winston.createLogger({
 //   transports: [
@@ -13,24 +13,26 @@ import ReusableRestClient from './reusable-rest-client';
 
 // RingCentral.config.logger = console;
 
-describe('call log', () => {
-  test('list call log', async () => {
+describe("call log", () => {
+  test("list call log", async () => {
     const rc = await ReusableRestClient.getInstance();
     const callLogs = await rc.restapi().account().extension().callLog().list({
-      dateFrom: '2020-06-08T15:41:00.000Z',
-      dateTo: '2020-06-08T16:12:00.000Z',
+      dateFrom: "2020-06-08T15:41:00.000Z",
+      dateTo: "2020-06-08T16:12:00.000Z",
     });
     expect(callLogs).not.toBeUndefined();
     expect(callLogs.records).not.toBeUndefined();
   });
 
-  test('call log sync', async () => {
+  test("call log sync", async () => {
     const rc = await ReusableRestClient.getInstance();
-    const callLogs = await rc.restapi().account().extension().callLogSync().get({
-      syncType: 'FSync',
-      dateFrom: '2020-06-08T15:41:00.000Z',
-      recordCount: 5,
-    });
+    const callLogs = await rc.restapi().account().extension().callLogSync().get(
+      {
+        syncType: "FSync",
+        dateFrom: "2020-06-08T15:41:00.000Z",
+        recordCount: 5,
+      },
+    );
     expect(callLogs).not.toBeUndefined();
     expect(callLogs.records).not.toBeUndefined();
 
@@ -40,7 +42,7 @@ describe('call log', () => {
       .extension()
       .callLogSync()
       .get({
-        syncType: 'ISync',
+        syncType: "ISync",
         recordCount: 5,
         syncToken: callLogs.syncInfo!.syncToken,
       });

@@ -1,6 +1,10 @@
-import type RecordingDownloadModel from '../../../../../../definitions/RecordingDownloadModel';
-import type RcwHistoryGetRecordingDownloadParameters from '../../../../../../definitions/RcwHistoryGetRecordingDownloadParameters';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../types';
+import type RecordingDownloadModel from "../../../../../../definitions/RecordingDownloadModel";
+import type RcwHistoryGetRecordingDownloadParameters from "../../../../../../definitions/RcwHistoryGetRecordingDownloadParameters";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -28,7 +32,11 @@ class Index {
     queryParams?: RcwHistoryGetRecordingDownloadParameters,
     restRequestConfig?: RestRequestConfig,
   ): Promise<RecordingDownloadModel> {
-    const r = await this.rc.get<RecordingDownloadModel>(this.path(), queryParams, restRequestConfig);
+    const r = await this.rc.get<RecordingDownloadModel>(
+      this.path(),
+      queryParams,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

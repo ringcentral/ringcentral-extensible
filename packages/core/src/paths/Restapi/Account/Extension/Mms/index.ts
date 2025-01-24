@@ -1,7 +1,11 @@
-import Utils from '../../../../../Utils';
-import type GetSMSMessageInfoResponse from '../../../../../definitions/GetSMSMessageInfoResponse';
-import type CreateMMSMessage from '../../../../../definitions/CreateMMSMessage';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import Utils from "../../../../../Utils";
+import type GetSMSMessageInfoResponse from "../../../../../definitions/GetSMSMessageInfoResponse";
+import type CreateMMSMessage from "../../../../../definitions/CreateMMSMessage";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -30,7 +34,12 @@ class Index {
     restRequestConfig?: RestRequestConfig,
   ): Promise<GetSMSMessageInfoResponse> {
     const formData = await Utils.getFormData(createMMSMessage);
-    const r = await this.rc.post<GetSMSMessageInfoResponse>(this.path(), formData, undefined, restRequestConfig);
+    const r = await this.rc.post<GetSMSMessageInfoResponse>(
+      this.path(),
+      formData,
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

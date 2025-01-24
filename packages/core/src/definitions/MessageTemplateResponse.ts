@@ -1,5 +1,5 @@
-import type MessageTemplateInfo from './MessageTemplateInfo';
-import type Site from './Site';
+import type MessageTemplateInfo from "./MessageTemplateInfo";
+import type Site from "./Site";
 
 interface MessageTemplateResponse {
   /**
@@ -12,17 +12,15 @@ interface MessageTemplateResponse {
    */
   displayName?: string;
 
-  /**
-   */
+  /** */
   body?: MessageTemplateInfo;
 
   /**
    * Specifies if a template is available on a user (Personal) or a company (Company) level
    */
-  scope?: 'Company' | 'Personal';
+  scope?: "Company" | "Personal";
 
-  /**
-   */
+  /** */
   site?: Site;
 }
 

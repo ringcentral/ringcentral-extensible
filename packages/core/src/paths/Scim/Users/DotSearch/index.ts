@@ -1,6 +1,10 @@
-import type ScimUserSearchResponse from '../../../../definitions/ScimUserSearchResponse';
-import type ScimSearchRequest from '../../../../definitions/ScimSearchRequest';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
+import type ScimUserSearchResponse from "../../../../definitions/ScimUserSearchResponse";
+import type ScimSearchRequest from "../../../../definitions/ScimSearchRequest";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -24,7 +28,12 @@ class Index {
     scimSearchRequest: ScimSearchRequest,
     restRequestConfig?: RestRequestConfig,
   ): Promise<ScimUserSearchResponse> {
-    const r = await this.rc.post<ScimUserSearchResponse>(this.path(), scimSearchRequest, undefined, restRequestConfig);
+    const r = await this.rc.post<ScimUserSearchResponse>(
+      this.path(),
+      scimSearchRequest,
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

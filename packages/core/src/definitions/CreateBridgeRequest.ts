@@ -1,6 +1,6 @@
-import type BridgePins from './BridgePins';
-import type BridgeRequestSecurity from './BridgeRequestSecurity';
-import type BridgePreferences from './BridgePreferences';
+import type BridgePins from "./BridgePins";
+import type BridgeRequestSecurity from "./BridgeRequestSecurity";
+import type BridgePreferences from "./BridgePreferences";
 
 interface CreateBridgeRequest {
   /**
@@ -19,18 +19,15 @@ interface CreateBridgeRequest {
    *  from the system.
    * Default: Instant
    */
-  type?: 'Instant' | 'Scheduled' | 'PMI';
+  type?: "Instant" | "Scheduled" | "PMI";
 
-  /**
-   */
+  /** */
   pins?: BridgePins;
 
-  /**
-   */
+  /** */
   security?: BridgeRequestSecurity;
 
-  /**
-   */
+  /** */
   preferences?: BridgePreferences;
 }
 

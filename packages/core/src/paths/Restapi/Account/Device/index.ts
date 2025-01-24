@@ -1,10 +1,14 @@
-import Emergency from './Emergency';
-import SipInfo from './SipInfo';
-import type UpdateDeviceParameters from '../../../../definitions/UpdateDeviceParameters';
-import type AccountDeviceUpdate from '../../../../definitions/AccountDeviceUpdate';
-import type DeviceResource from '../../../../definitions/DeviceResource';
-import type ReadDeviceParameters from '../../../../definitions/ReadDeviceParameters';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
+import Emergency from "./Emergency";
+import SipInfo from "./SipInfo";
+import type UpdateDeviceParameters from "../../../../definitions/UpdateDeviceParameters";
+import type AccountDeviceUpdate from "../../../../definitions/AccountDeviceUpdate";
+import type DeviceResource from "../../../../definitions/DeviceResource";
+import type ReadDeviceParameters from "../../../../definitions/ReadDeviceParameters";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -30,11 +34,18 @@ class Index {
    * App Permission: ReadAccounts
    * User Permission: ReadCompanyDevices
    */
-  public async get(queryParams?: ReadDeviceParameters, restRequestConfig?: RestRequestConfig): Promise<DeviceResource> {
+  public async get(
+    queryParams?: ReadDeviceParameters,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<DeviceResource> {
     if (this.deviceId === null) {
-      throw new Error('deviceId must be specified.');
+      throw new Error("deviceId must be specified.");
     }
-    const r = await this.rc.get<DeviceResource>(this.path(), queryParams, restRequestConfig);
+    const r = await this.rc.get<DeviceResource>(
+      this.path(),
+      queryParams,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -52,9 +63,14 @@ class Index {
     restRequestConfig?: RestRequestConfig,
   ): Promise<DeviceResource> {
     if (this.deviceId === null) {
-      throw new Error('deviceId must be specified.');
+      throw new Error("deviceId must be specified.");
     }
-    const r = await this.rc.put<DeviceResource>(this.path(), accountDeviceUpdate, queryParams, restRequestConfig);
+    const r = await this.rc.put<DeviceResource>(
+      this.path(),
+      accountDeviceUpdate,
+      queryParams,
+      restRequestConfig,
+    );
     return r.data;
   }
 

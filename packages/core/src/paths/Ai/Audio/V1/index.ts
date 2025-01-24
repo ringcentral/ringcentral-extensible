@@ -1,6 +1,6 @@
-import Enrollments from './Enrollments';
-import Async from './Async';
-import type { RingCentralInterface, ParentInterface } from '../../../../types';
+import Enrollments from "./Enrollments";
+import Async from "./Async";
+import type { ParentInterface, RingCentralInterface } from "../../../../types";
 
 class Index {
   public rc: RingCentralInterface;

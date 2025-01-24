@@ -1,4 +1,4 @@
-import type DetailedExtensionPresenceEventBody from './DetailedExtensionPresenceEventBody';
+import type DetailedExtensionPresenceEventBody from "./DetailedExtensionPresenceEventBody";
 
 interface DetailedExtensionPresenceEvent {
   /**
@@ -22,8 +22,7 @@ interface DetailedExtensionPresenceEvent {
    */
   subscriptionId?: string;
 
-  /**
-   */
+  /** */
   body?: DetailedExtensionPresenceEventBody;
 }
 

@@ -1,6 +1,6 @@
-import type SiteMemberInfo from './SiteMemberInfo';
-import type PageNavigationModel from './PageNavigationModel';
-import type EnumeratedPagingModel from './EnumeratedPagingModel';
+import type SiteMemberInfo from "./SiteMemberInfo";
+import type PageNavigationModel from "./PageNavigationModel";
+import type EnumeratedPagingModel from "./EnumeratedPagingModel";
 
 interface SiteMembersList {
   /**
@@ -9,16 +9,13 @@ interface SiteMembersList {
    */
   uri?: string;
 
-  /**
-   */
+  /** */
   records?: SiteMemberInfo[];
 
-  /**
-   */
+  /** */
   navigation?: PageNavigationModel;
 
-  /**
-   */
+  /** */
   paging?: EnumeratedPagingModel;
 }
 

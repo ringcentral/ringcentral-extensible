@@ -1,5 +1,5 @@
-import Calls from './Calls';
-import type { RingCentralInterface } from '../../types';
+import Calls from "./Calls";
+import type { RingCentralInterface } from "../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -8,7 +8,7 @@ class Index {
     this.rc = rc;
   }
   public path(): string {
-    return '/analytics';
+    return "/analytics";
   }
 
   public calls(): Calls {

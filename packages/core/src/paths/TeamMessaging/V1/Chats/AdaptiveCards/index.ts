@@ -1,6 +1,10 @@
-import type AdaptiveCardShortInfo from '../../../../../definitions/AdaptiveCardShortInfo';
-import type AdaptiveCardRequest from '../../../../../definitions/AdaptiveCardRequest';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import type AdaptiveCardShortInfo from "../../../../../definitions/AdaptiveCardShortInfo";
+import type AdaptiveCardRequest from "../../../../../definitions/AdaptiveCardRequest";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -24,7 +28,12 @@ class Index {
     adaptiveCardRequest: AdaptiveCardRequest,
     restRequestConfig?: RestRequestConfig,
   ): Promise<AdaptiveCardShortInfo> {
-    const r = await this.rc.post<AdaptiveCardShortInfo>(this.path(), adaptiveCardRequest, undefined, restRequestConfig);
+    const r = await this.rc.post<AdaptiveCardShortInfo>(
+      this.path(),
+      adaptiveCardRequest,
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

@@ -1,5 +1,9 @@
-import type MessageStoreReportArchive from '../../../../../definitions/MessageStoreReportArchive';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import type MessageStoreReportArchive from "../../../../../definitions/MessageStoreReportArchive";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -20,8 +24,14 @@ class Index {
    * App Permission: ReadMessages
    * User Permission: Users
    */
-  public async get(restRequestConfig?: RestRequestConfig): Promise<MessageStoreReportArchive> {
-    const r = await this.rc.get<MessageStoreReportArchive>(this.path(), undefined, restRequestConfig);
+  public async get(
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<MessageStoreReportArchive> {
+    const r = await this.rc.get<MessageStoreReportArchive>(
+      this.path(),
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

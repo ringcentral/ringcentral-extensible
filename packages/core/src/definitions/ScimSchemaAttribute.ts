@@ -8,10 +8,16 @@ interface ScimSchemaAttribute {
   /**
    * Required
    */
-  type?: 'string' | 'boolean' | 'decimal' | 'integer' | 'dateTime' | 'reference' | 'complex';
+  type?:
+    | "string"
+    | "boolean"
+    | "decimal"
+    | "integer"
+    | "dateTime"
+    | "reference"
+    | "complex";
 
-  /**
-   */
+  /** */
   subAttributes?: ScimSchemaAttribute[];
 
   /**
@@ -35,27 +41,26 @@ interface ScimSchemaAttribute {
    */
   canonicalValues?: string[];
 
-  /**
-   */
+  /** */
   caseExact?: boolean;
 
   /**
    * Indicates the circumstances under which the value of the attribute can be (re)defined
    * Required
    */
-  mutability?: 'readOnly' | 'readWrite' | 'immutable' | 'writeOnly';
+  mutability?: "readOnly" | "readWrite" | "immutable" | "writeOnly";
 
   /**
    * Indicates when an attribute and associated values are returned
    * Required
    */
-  returned?: 'always' | 'never' | 'default' | 'request';
+  returned?: "always" | "never" | "default" | "request";
 
   /**
    * Specifies how the service provider enforces uniqueness of attribute values
    * Required
    */
-  uniqueness?: 'none' | 'server' | 'global';
+  uniqueness?: "none" | "server" | "global";
 
   /**
    * Indicates the SCIM resource types that be referenced

@@ -1,4 +1,4 @@
-import type UnifiedPresence from './UnifiedPresence';
+import type UnifiedPresence from "./UnifiedPresence";
 
 interface UnifiedPresenceListEntry {
   /**
@@ -12,8 +12,7 @@ interface UnifiedPresenceListEntry {
    */
   status?: number;
 
-  /**
-   */
+  /** */
   body?: UnifiedPresence;
 }
 

@@ -1,6 +1,6 @@
-import type SwitchInfo from './SwitchInfo';
-import type PageNavigationModel from './PageNavigationModel';
-import type EnumeratedPagingModel from './EnumeratedPagingModel';
+import type SwitchInfo from "./SwitchInfo";
+import type PageNavigationModel from "./PageNavigationModel";
+import type EnumeratedPagingModel from "./EnumeratedPagingModel";
 
 interface SwitchesList {
   /**
@@ -8,12 +8,10 @@ interface SwitchesList {
    */
   records?: SwitchInfo[];
 
-  /**
-   */
+  /** */
   navigation?: PageNavigationModel;
 
-  /**
-   */
+  /** */
   paging?: EnumeratedPagingModel;
 }
 

@@ -1,9 +1,8 @@
-import type ContactCenterProvider from './ContactCenterProvider';
+import type ContactCenterProvider from "./ContactCenterProvider";
 
 /**
  * Information on the extension, to which the phone number is assigned.
  * Returned only for the request of Account phone number list
- *
  */
 interface UserPhoneNumberExtensionInfo {
   /**
@@ -40,22 +39,21 @@ interface UserPhoneNumberExtensionInfo {
    *  corresponds to 'Call Queue' extensions in modern RingCentral product terminology
    */
   type?:
-    | 'User'
-    | 'FaxUser'
-    | 'VirtualUser'
-    | 'DigitalUser'
-    | 'Department'
-    | 'Announcement'
-    | 'Voicemail'
-    | 'SharedLinesGroup'
-    | 'PagingOnly'
-    | 'IvrMenu'
-    | 'ApplicationExtension'
-    | 'ParkLocation'
-    | 'Site';
+    | "User"
+    | "FaxUser"
+    | "VirtualUser"
+    | "DigitalUser"
+    | "Department"
+    | "Announcement"
+    | "Voicemail"
+    | "SharedLinesGroup"
+    | "PagingOnly"
+    | "IvrMenu"
+    | "ApplicationExtension"
+    | "ParkLocation"
+    | "Site";
 
-  /**
-   */
+  /** */
   contactCenterProvider?: ContactCenterProvider;
 
   /**

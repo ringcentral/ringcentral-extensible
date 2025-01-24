@@ -1,7 +1,7 @@
-import ReusableRestClient from './reusable-rest-client';
+import ReusableRestClient from "./reusable-rest-client";
 
-describe('SMS', () => {
-  test('send', async () => {
+describe("SMS", () => {
+  test("send", async () => {
     const rc = await ReusableRestClient.getInstance();
     const messageInfo = await rc
       .restapi()
@@ -17,7 +17,7 @@ describe('SMS', () => {
             phoneNumber: process.env.RINGCENTRAL_RECEIVER,
           },
         ],
-        text: 'hello world',
+        text: "hello world",
       });
     expect(messageInfo).not.toBeUndefined();
     expect(messageInfo.id).not.toBeUndefined();

@@ -12,7 +12,7 @@ interface ListA2PSMSParameters {
    * Direction of the SMS message
    * Example: Inbound
    */
-  direction?: 'Inbound' | 'Outbound';
+  direction?: "Inbound" | "Outbound";
 
   /**
    * The end of the time range to filter the results in ISO 8601 format including timezone. Default is the 'dateTo' minus 24 hours
@@ -32,7 +32,7 @@ interface ListA2PSMSParameters {
    * Indicates if the response has to be detailed, includes text in the response if detailed
    * Default: Simple
    */
-  view?: 'Simple' | 'Detailed';
+  view?: "Simple" | "Detailed";
 
   /**
    * List of phone numbers (specified in 'to' or 'from' fields of a message) to filter the results. Maximum number of phone numbers allowed to be specified as filters is 15

@@ -1,4 +1,4 @@
-import type CountryInfoMinimalModel from './CountryInfoMinimalModel';
+import type CountryInfoMinimalModel from "./CountryInfoMinimalModel";
 
 interface GetStateInfoResponse {
   /**
@@ -12,8 +12,7 @@ interface GetStateInfoResponse {
    */
   uri?: string;
 
-  /**
-   */
+  /** */
   country?: CountryInfoMinimalModel;
 
   /**

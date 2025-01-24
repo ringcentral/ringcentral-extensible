@@ -1,8 +1,12 @@
-import type TMNoteInfo from '../../../../../definitions/TMNoteInfo';
-import type TMCreateNoteRequest from '../../../../../definitions/TMCreateNoteRequest';
-import type TMNoteList from '../../../../../definitions/TMNoteList';
-import type ListChatNotesNewParameters from '../../../../../definitions/ListChatNotesNewParameters';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import type TMNoteInfo from "../../../../../definitions/TMNoteInfo";
+import type TMCreateNoteRequest from "../../../../../definitions/TMCreateNoteRequest";
+import type TMNoteList from "../../../../../definitions/TMNoteList";
+import type ListChatNotesNewParameters from "../../../../../definitions/ListChatNotesNewParameters";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -26,7 +30,11 @@ class Index {
     queryParams?: ListChatNotesNewParameters,
     restRequestConfig?: RestRequestConfig,
   ): Promise<TMNoteList> {
-    const r = await this.rc.get<TMNoteList>(this.path(), queryParams, restRequestConfig);
+    const r = await this.rc.get<TMNoteList>(
+      this.path(),
+      queryParams,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -41,7 +49,12 @@ class Index {
     tMCreateNoteRequest: TMCreateNoteRequest,
     restRequestConfig?: RestRequestConfig,
   ): Promise<TMNoteInfo> {
-    const r = await this.rc.post<TMNoteInfo>(this.path(), tMCreateNoteRequest, undefined, restRequestConfig);
+    const r = await this.rc.post<TMNoteInfo>(
+      this.path(),
+      tMCreateNoteRequest,
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

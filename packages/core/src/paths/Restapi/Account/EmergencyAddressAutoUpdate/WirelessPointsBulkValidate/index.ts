@@ -1,6 +1,10 @@
-import type ValidateMultipleWirelessPointsResponse from '../../../../../definitions/ValidateMultipleWirelessPointsResponse';
-import type ValidateMultipleWirelessPointsRequest from '../../../../../definitions/ValidateMultipleWirelessPointsRequest';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import type ValidateMultipleWirelessPointsResponse from "../../../../../definitions/ValidateMultipleWirelessPointsResponse";
+import type ValidateMultipleWirelessPointsRequest from "../../../../../definitions/ValidateMultipleWirelessPointsRequest";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -24,7 +28,8 @@ class Index {
    * User Permission: ConfigureEmergencyMaps
    */
   public async post(
-    validateMultipleWirelessPointsRequest: ValidateMultipleWirelessPointsRequest,
+    validateMultipleWirelessPointsRequest:
+      ValidateMultipleWirelessPointsRequest,
     restRequestConfig?: RestRequestConfig,
   ): Promise<ValidateMultipleWirelessPointsResponse> {
     const r = await this.rc.post<ValidateMultipleWirelessPointsResponse>(

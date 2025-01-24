@@ -1,12 +1,14 @@
 # Extensions
 
-This folder contains features which are not considered to be the core of the SDK.
+This folder contains features which are not considered to be the core of the
+SDK.
 
 We provide them as extensions so you can install them on demand.
 
 ## Usage
 
-Here we provide general usage guidance for extensions. You need to read each extension's README page in case there are special instructions.
+Here we provide general usage guidance for extensions. You need to read each
+extension's README page in case there are special instructions.
 
 Let's say an extension's name is `AbcExtension`:
 
@@ -21,21 +23,25 @@ await rc.installExtension(abcExtension);
 
 ## Enable & Disable
 
-By default, an extension is enabled after installation. You can disable it by `abcExtension.disable();`.
+By default, an extension is enabled after installation. You can disable it by
+`abcExtension.disable();`.
 
 You can re-enabled it by `abcExtension.enable();`.
 
 ## [Debug Extension](./debug)
 
-Debug extension prints details about API traffic so you can inspect the request and response data.
+Debug extension prints details about API traffic so you can inspect the request
+and response data.
 
 ## [Retry Extension](./retry)
 
-Retry Extension auto retries API calls based on specified condition and interval.
+Retry Extension auto retries API calls based on specified condition and
+interval.
 
 ## [Rate Limit Extension](./rate-limit)
 
-Rate limit extension handles rate limit automatically by delaying and retrying API calls.
+Rate limit extension handles rate limit automatically by delaying and retrying
+API calls.
 
 ## [Events Extension](./events)
 
@@ -43,7 +49,9 @@ Events Extension emits API call related events.
 
 ## [RingCentral SDK Extension](./rcsdk)
 
-RingCentral Extension makes [@ringcentral/sdk](https://www.npmjs.com/package/@ringcentral/sdk) the HTTP engine.
+RingCentral Extension makes
+[@ringcentral/sdk](https://www.npmjs.com/package/@ringcentral/sdk) the HTTP
+engine.
 
 ## [WebSocket Extension](./ws)
 
@@ -55,4 +63,5 @@ Authorize URI Extension provides utility methods to easily build URIs for OAuth.
 
 ## [Auto Refresh Extension](./auto-refresh)
 
-Auto Refresh Extension automatically refreshes token every 30 minutes (configurable).
+Auto Refresh Extension automatically refreshes token every 30 minutes
+(configurable).

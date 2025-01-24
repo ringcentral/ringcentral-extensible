@@ -1,5 +1,5 @@
-import Subscriptions from './Subscriptions';
-import type { RingCentralInterface, ParentInterface } from '../../../../types';
+import Subscriptions from "./Subscriptions";
+import type { ParentInterface, RingCentralInterface } from "../../../../types";
 
 class Index {
   public rc: RingCentralInterface;

@@ -1,5 +1,5 @@
-import type WcsWebinarSettingsModel from './WcsWebinarSettingsModel';
-import type WcsHostModel from './WcsHostModel';
+import type WcsWebinarSettingsModel from "./WcsWebinarSettingsModel";
+import type WcsHostModel from "./WcsHostModel";
 
 interface WcsWebinarResource {
   /**
@@ -34,8 +34,7 @@ interface WcsWebinarResource {
    */
   description?: string;
 
-  /**
-   */
+  /** */
   settings?: WcsWebinarSettingsModel;
 
   /**

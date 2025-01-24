@@ -1,7 +1,11 @@
-import BulkAssign from './BulkAssign';
-import type ListDevicesAutomaticLocationUpdates from '../../../../../definitions/ListDevicesAutomaticLocationUpdates';
-import type ListDevicesAutomaticLocationUpdatesParameters from '../../../../../definitions/ListDevicesAutomaticLocationUpdatesParameters';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import BulkAssign from "./BulkAssign";
+import type ListDevicesAutomaticLocationUpdates from "../../../../../definitions/ListDevicesAutomaticLocationUpdates";
+import type ListDevicesAutomaticLocationUpdatesParameters from "../../../../../definitions/ListDevicesAutomaticLocationUpdatesParameters";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -28,7 +32,11 @@ class Index {
     queryParams?: ListDevicesAutomaticLocationUpdatesParameters,
     restRequestConfig?: RestRequestConfig,
   ): Promise<ListDevicesAutomaticLocationUpdates> {
-    const r = await this.rc.get<ListDevicesAutomaticLocationUpdates>(this.path(), queryParams, restRequestConfig);
+    const r = await this.rc.get<ListDevicesAutomaticLocationUpdates>(
+      this.path(),
+      queryParams,
+      restRequestConfig,
+    );
     return r.data;
   }
 

@@ -1,11 +1,11 @@
-import type SpeakerInsightsValuesItems from './SpeakerInsightsValuesItems';
+import type SpeakerInsightsValuesItems from "./SpeakerInsightsValuesItems";
 
 interface SpeakerInsightsUnit {
   /**
    * Required
    * Example: TalkToListenRatio
    */
-  name?: 'Energy' | 'Pace' | 'TalkToListenRatio' | 'QuestionsAsked';
+  name?: "Energy" | "Pace" | "TalkToListenRatio" | "QuestionsAsked";
 
   /**
    * Required

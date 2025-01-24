@@ -1,5 +1,9 @@
-import type ParticipantReducedModel from '../../../../../../../../definitions/ParticipantReducedModel';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../../../types';
+import type ParticipantReducedModel from "../../../../../../../../definitions/ParticipantReducedModel";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -21,8 +25,14 @@ class Index {
    * Rate Limit Group: Heavy
    * App Permission: ReadWebinars
    */
-  public async get(restRequestConfig?: RestRequestConfig): Promise<ParticipantReducedModel> {
-    const r = await this.rc.get<ParticipantReducedModel>(this.path(), undefined, restRequestConfig);
+  public async get(
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<ParticipantReducedModel> {
+    const r = await this.rc.get<ParticipantReducedModel>(
+      this.path(),
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

@@ -11,18 +11,18 @@ interface RemoveLineResponse {
    * Default: HardPhone
    */
   type?:
-    | 'HardPhone'
-    | 'SoftPhone'
-    | 'OtherPhone'
-    | 'MobileDevice'
-    | 'BLA'
-    | 'Paging'
-    | 'WebPhone'
-    | 'WebRTC'
-    | 'ZoomMobile'
-    | 'ZoomPhone'
-    | 'Room'
-    | 'Unknown';
+    | "HardPhone"
+    | "SoftPhone"
+    | "OtherPhone"
+    | "MobileDevice"
+    | "BLA"
+    | "Paging"
+    | "WebPhone"
+    | "WebRTC"
+    | "ZoomMobile"
+    | "ZoomPhone"
+    | "Room"
+    | "Unknown";
 
   /**
    * The display name of a source device

@@ -1,5 +1,5 @@
-import Search from './Search';
-import type { RingCentralInterface, ParentInterface } from '../../../../types';
+import Search from "./Search";
+import type { ParentInterface, RingCentralInterface } from "../../../../types";
 
 class Index {
   public rc: RingCentralInterface;

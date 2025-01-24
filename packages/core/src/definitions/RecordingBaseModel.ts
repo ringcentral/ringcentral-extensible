@@ -1,4 +1,4 @@
-import type ApiError from './ApiError';
+import type ApiError from "./ApiError";
 
 interface RecordingBaseModel {
   /**
@@ -6,10 +6,9 @@ interface RecordingBaseModel {
    * Required
    * Example: Available
    */
-  status?: 'Processing' | 'Available' | 'Failed' | 'Purged';
+  status?: "Processing" | "Available" | "Failed" | "Purged";
 
-  /**
-   */
+  /** */
   failureReason?: ApiError;
 
   /**

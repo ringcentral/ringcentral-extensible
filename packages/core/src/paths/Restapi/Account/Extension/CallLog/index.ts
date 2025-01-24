@@ -1,16 +1,23 @@
-import type CallLogRecord from '../../../../../definitions/CallLogRecord';
-import type ReadUserCallRecordParameters from '../../../../../definitions/ReadUserCallRecordParameters';
-import type DeleteUserCallLogParameters from '../../../../../definitions/DeleteUserCallLogParameters';
-import type CallLogResponse from '../../../../../definitions/CallLogResponse';
-import type ReadUserCallLogParameters from '../../../../../definitions/ReadUserCallLogParameters';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import type CallLogRecord from "../../../../../definitions/CallLogRecord";
+import type ReadUserCallRecordParameters from "../../../../../definitions/ReadUserCallRecordParameters";
+import type DeleteUserCallLogParameters from "../../../../../definitions/DeleteUserCallLogParameters";
+import type CallLogResponse from "../../../../../definitions/CallLogResponse";
+import type ReadUserCallLogParameters from "../../../../../definitions/ReadUserCallLogParameters";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
   public _parent: ParentInterface;
   public callRecordId: string | null;
 
-  public constructor(_parent: ParentInterface, callRecordId: string | null = null) {
+  public constructor(
+    _parent: ParentInterface,
+    callRecordId: string | null = null,
+  ) {
     this._parent = _parent;
     this.rc = _parent.rc;
     this.callRecordId = callRecordId;
@@ -33,7 +40,11 @@ class Index {
     queryParams?: ReadUserCallLogParameters,
     restRequestConfig?: RestRequestConfig,
   ): Promise<CallLogResponse> {
-    const r = await this.rc.get<CallLogResponse>(this.path(false), queryParams, restRequestConfig);
+    const r = await this.rc.get<CallLogResponse>(
+      this.path(false),
+      queryParams,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -49,7 +60,12 @@ class Index {
     queryParams?: DeleteUserCallLogParameters,
     restRequestConfig?: RestRequestConfig,
   ): Promise<string> {
-    const r = await this.rc.delete<string>(this.path(false), {}, queryParams, restRequestConfig);
+    const r = await this.rc.delete<string>(
+      this.path(false),
+      {},
+      queryParams,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -66,9 +82,13 @@ class Index {
     restRequestConfig?: RestRequestConfig,
   ): Promise<CallLogRecord> {
     if (this.callRecordId === null) {
-      throw new Error('callRecordId must be specified.');
+      throw new Error("callRecordId must be specified.");
     }
-    const r = await this.rc.get<CallLogRecord>(this.path(), queryParams, restRequestConfig);
+    const r = await this.rc.get<CallLogRecord>(
+      this.path(),
+      queryParams,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

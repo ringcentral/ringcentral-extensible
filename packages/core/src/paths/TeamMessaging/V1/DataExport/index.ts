@@ -1,8 +1,12 @@
-import type DataExportTask from '../../../../definitions/DataExportTask';
-import type CreateDataExportTaskRequest from '../../../../definitions/CreateDataExportTaskRequest';
-import type DataExportTaskList from '../../../../definitions/DataExportTaskList';
-import type ListDataExportTasksNewParameters from '../../../../definitions/ListDataExportTasksNewParameters';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
+import type DataExportTask from "../../../../definitions/DataExportTask";
+import type CreateDataExportTaskRequest from "../../../../definitions/CreateDataExportTaskRequest";
+import type DataExportTaskList from "../../../../definitions/DataExportTaskList";
+import type ListDataExportTasksNewParameters from "../../../../definitions/ListDataExportTasksNewParameters";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -32,7 +36,11 @@ class Index {
     queryParams?: ListDataExportTasksNewParameters,
     restRequestConfig?: RestRequestConfig,
   ): Promise<DataExportTaskList> {
-    const r = await this.rc.get<DataExportTaskList>(this.path(false), queryParams, restRequestConfig);
+    const r = await this.rc.get<DataExportTaskList>(
+      this.path(false),
+      queryParams,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -65,11 +73,17 @@ class Index {
    * App Permission: TeamMessaging
    * User Permission: Glip
    */
-  public async get(restRequestConfig?: RestRequestConfig): Promise<DataExportTask> {
+  public async get(
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<DataExportTask> {
     if (this.taskId === null) {
-      throw new Error('taskId must be specified.');
+      throw new Error("taskId must be specified.");
     }
-    const r = await this.rc.get<DataExportTask>(this.path(), undefined, restRequestConfig);
+    const r = await this.rc.get<DataExportTask>(
+      this.path(),
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

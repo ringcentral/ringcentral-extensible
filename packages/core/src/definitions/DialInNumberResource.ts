@@ -1,20 +1,16 @@
-import type MeetingsCountryResource from './MeetingsCountryResource';
+import type MeetingsCountryResource from "./MeetingsCountryResource";
 
 interface DialInNumberResource {
-  /**
-   */
+  /** */
   phoneNumber?: string;
 
-  /**
-   */
+  /** */
   formattedNumber?: string;
 
-  /**
-   */
+  /** */
   location?: string;
 
-  /**
-   */
+  /** */
   country?: MeetingsCountryResource;
 }
 

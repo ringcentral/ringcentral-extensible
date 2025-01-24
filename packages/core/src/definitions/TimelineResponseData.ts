@@ -1,4 +1,4 @@
-import type TimelineResponseRecord from './TimelineResponseRecord';
+import type TimelineResponseRecord from "./TimelineResponseRecord";
 
 /**
  * A list of time-value points of call data as per the grouping and filtering options specified in the request
@@ -9,15 +9,15 @@ interface TimelineResponseData {
    * Required
    */
   groupedBy?:
-    | 'Company'
-    | 'CompanyNumbers'
-    | 'Users'
-    | 'Queues'
-    | 'IVRs'
-    | 'SharedLines'
-    | 'UserGroups'
-    | 'Sites'
-    | 'Departments';
+    | "Company"
+    | "CompanyNumbers"
+    | "Users"
+    | "Queues"
+    | "IVRs"
+    | "SharedLines"
+    | "UserGroups"
+    | "Sites"
+    | "Departments";
 
   /**
    * List of call data as per the grouping and filtering options specified in the request

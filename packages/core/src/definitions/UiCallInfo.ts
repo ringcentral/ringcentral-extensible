@@ -1,15 +1,13 @@
-import type UiCallInfoRecord from './UiCallInfoRecord';
+import type UiCallInfoRecord from "./UiCallInfoRecord";
 
 /**
  * Call information on user interface
  */
 interface UiCallInfo {
-  /**
-   */
+  /** */
   primary?: UiCallInfoRecord;
 
-  /**
-   */
+  /** */
   additional?: UiCallInfoRecord;
 }
 

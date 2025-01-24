@@ -1,8 +1,7 @@
-import type ExtensionCallQueueUpdatePresence from './ExtensionCallQueueUpdatePresence';
+import type ExtensionCallQueueUpdatePresence from "./ExtensionCallQueueUpdatePresence";
 
 interface ExtensionCallQueueUpdatePresenceList {
-  /**
-   */
+  /** */
   records?: ExtensionCallQueueUpdatePresence[];
 }
 

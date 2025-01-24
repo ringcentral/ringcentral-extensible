@@ -1,8 +1,7 @@
-import type APSInfo from './APSInfo';
+import type APSInfo from "./APSInfo";
 
 interface IncomingCallEvent {
-  /**
-   */
+  /** */
   aps?: APSInfo;
 
   /**

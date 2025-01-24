@@ -15,7 +15,7 @@ interface AutomaticLocationUpdatesModelInfo {
   /**
    * Device feature or multiple features supported
    */
-  features?: ('BLA' | 'Intercom' | 'Paging' | 'HELD')[];
+  features?: ("BLA" | "Intercom" | "Paging" | "HELD")[];
 }
 
 export default AutomaticLocationUpdatesModelInfo;

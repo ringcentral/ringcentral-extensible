@@ -9,18 +9,16 @@ interface CallRecordingExtensionResource {
    */
   uri?: string;
 
-  /**
-   */
+  /** */
   extensionNumber?: string;
 
-  /**
-   */
+  /** */
   type?: string;
 
   /**
    * Direction of call
    */
-  callDirection?: 'Outbound' | 'Inbound' | 'All';
+  callDirection?: "Outbound" | "Inbound" | "All";
 }
 
 export default CallRecordingExtensionResource;

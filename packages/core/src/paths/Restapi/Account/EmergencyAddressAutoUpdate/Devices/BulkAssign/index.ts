@@ -1,5 +1,9 @@
-import type AssignMultipleDevicesAutomaticLocationUpdates from '../../../../../../definitions/AssignMultipleDevicesAutomaticLocationUpdates';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../types';
+import type AssignMultipleDevicesAutomaticLocationUpdates from "../../../../../../definitions/AssignMultipleDevicesAutomaticLocationUpdates";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -23,7 +27,8 @@ class Index {
    * User Permission: ConfigureEmergencyMaps
    */
   public async post(
-    assignMultipleDevicesAutomaticLocationUpdates: AssignMultipleDevicesAutomaticLocationUpdates,
+    assignMultipleDevicesAutomaticLocationUpdates:
+      AssignMultipleDevicesAutomaticLocationUpdates,
     restRequestConfig?: RestRequestConfig,
   ): Promise<string> {
     const r = await this.rc.post<string>(

@@ -1,12 +1,10 @@
-import type SpeakerIdentifyApiResponseResponse from './SpeakerIdentifyApiResponseResponse';
+import type SpeakerIdentifyApiResponseResponse from "./SpeakerIdentifyApiResponseResponse";
 
 interface SpeakerIdentifyApiResponse {
-  /**
-   */
-  status?: 'Success' | 'Fail';
+  /** */
+  status?: "Success" | "Fail";
 
-  /**
-   */
+  /** */
   response?: SpeakerIdentifyApiResponseResponse;
 }
 

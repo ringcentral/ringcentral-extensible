@@ -1,5 +1,5 @@
-import type Meeting from './Meeting';
-import type Paging from './Paging';
+import type Meeting from "./Meeting";
+import type Paging from "./Paging";
 
 /**
  * Meetings page

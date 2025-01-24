@@ -1,7 +1,7 @@
-import type Grouping from './Grouping';
-import type TimeSettings from './TimeSettings';
-import type CallFilters from './CallFilters';
-import type AggregationResponseOptions from './AggregationResponseOptions';
+import type Grouping from "./Grouping";
+import type TimeSettings from "./TimeSettings";
+import type CallFilters from "./CallFilters";
+import type AggregationResponseOptions from "./AggregationResponseOptions";
 
 interface AggregationRequest {
   /**
@@ -14,8 +14,7 @@ interface AggregationRequest {
    */
   timeSettings?: TimeSettings;
 
-  /**
-   */
+  /** */
   callFilters?: CallFilters;
 
   /**

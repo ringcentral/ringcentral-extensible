@@ -1,6 +1,5 @@
 /**
  * Top IVR Menu extension. Mandatory for MultiLevel mode
- *
  */
 interface SiteIVRTopMenu {
   /**

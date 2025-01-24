@@ -1,4 +1,4 @@
-import type ApiError from './ApiError';
+import type ApiError from "./ApiError";
 
 /**
  * Standard error response model which is returned in case of any unsuccessful operation

@@ -1,4 +1,4 @@
-import type CallQueueInfo from './CallQueueInfo';
+import type CallQueueInfo from "./CallQueueInfo";
 
 interface CallQueueOverflowSettings {
   /**
@@ -6,8 +6,7 @@ interface CallQueueOverflowSettings {
    */
   enabled?: boolean;
 
-  /**
-   */
+  /** */
   items?: CallQueueInfo[];
 }
 

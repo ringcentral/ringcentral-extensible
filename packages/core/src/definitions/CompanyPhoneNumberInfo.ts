@@ -1,7 +1,7 @@
-import type CountryInfoBasicModel from './CountryInfoBasicModel';
-import type ExtensionInfo from './ExtensionInfo';
-import type TemporaryNumberInfo from './TemporaryNumberInfo';
-import type ContactCenterProvider from './ContactCenterProvider';
+import type CountryInfoBasicModel from "./CountryInfoBasicModel";
+import type ExtensionInfo from "./ExtensionInfo";
+import type TemporaryNumberInfo from "./TemporaryNumberInfo";
+import type ContactCenterProvider from "./ContactCenterProvider";
 
 interface CompanyPhoneNumberInfo {
   /**
@@ -16,12 +16,10 @@ interface CompanyPhoneNumberInfo {
    */
   id?: number;
 
-  /**
-   */
+  /** */
   country?: CountryInfoBasicModel;
 
-  /**
-   */
+  /** */
   extension?: ExtensionInfo;
 
   /**
@@ -39,12 +37,12 @@ interface CompanyPhoneNumberInfo {
    *  which are not terminated in the RingCentral phone system
    */
   paymentType?:
-    | 'External'
-    | 'TollFree'
-    | 'Local'
-    | 'BusinessMobileNumberProvider'
-    | 'ExternalNumberProvider'
-    | 'ExternalNumberProviderTollFree';
+    | "External"
+    | "TollFree"
+    | "Local"
+    | "BusinessMobileNumberProvider"
+    | "ExternalNumberProvider"
+    | "ExternalNumberProviderTollFree";
 
   /**
    * Phone number
@@ -56,12 +54,12 @@ interface CompanyPhoneNumberInfo {
    *  number is ready to be used. Otherwise, it is an external number not yet
    *  ported to RingCentral
    */
-  status?: 'Normal' | 'Pending' | 'PortedIn' | 'Temporary' | 'Unknown';
+  status?: "Normal" | "Pending" | "PortedIn" | "Temporary" | "Unknown";
 
   /**
    * Type of a phone number
    */
-  type?: 'VoiceFax' | 'VoiceOnly' | 'FaxOnly';
+  type?: "VoiceFax" | "VoiceOnly" | "FaxOnly";
 
   /**
    * Usage type of phone number. Usage type of phone number.
@@ -69,27 +67,25 @@ interface CompanyPhoneNumberInfo {
    *  requests
    */
   usageType?:
-    | 'MainCompanyNumber'
-    | 'AdditionalCompanyNumber'
-    | 'CompanyNumber'
-    | 'DirectNumber'
-    | 'CompanyFaxNumber'
-    | 'ForwardedNumber'
-    | 'ForwardedCompanyNumber'
-    | 'ContactCenterNumber'
-    | 'ConferencingNumber'
-    | 'MeetingsNumber'
-    | 'NumberPool'
-    | 'BusinessMobileNumber'
-    | 'PartnerBusinessMobileNumber'
-    | 'IntegrationNumber';
+    | "MainCompanyNumber"
+    | "AdditionalCompanyNumber"
+    | "CompanyNumber"
+    | "DirectNumber"
+    | "CompanyFaxNumber"
+    | "ForwardedNumber"
+    | "ForwardedCompanyNumber"
+    | "ContactCenterNumber"
+    | "ConferencingNumber"
+    | "MeetingsNumber"
+    | "NumberPool"
+    | "BusinessMobileNumber"
+    | "PartnerBusinessMobileNumber"
+    | "IntegrationNumber";
 
-  /**
-   */
+  /** */
   temporaryNumber?: TemporaryNumberInfo;
 
-  /**
-   */
+  /** */
   contactCenterProvider?: ContactCenterProvider;
 
   /**
@@ -105,7 +101,7 @@ interface CompanyPhoneNumberInfo {
   /**
    * Phone number activation status. Determine whether phone number migration is completed on the partner side.
    */
-  activationStatus?: 'Active' | 'Inactive';
+  activationStatus?: "Active" | "Inactive";
 }
 
 export default CompanyPhoneNumberInfo;

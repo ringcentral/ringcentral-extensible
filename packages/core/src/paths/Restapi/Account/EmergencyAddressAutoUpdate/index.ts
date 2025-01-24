@@ -1,16 +1,16 @@
-import WirelessPointsBulkValidate from './WirelessPointsBulkValidate';
-import WirelessPointsBulkUpdate from './WirelessPointsBulkUpdate';
-import WirelessPointsBulkCreate from './WirelessPointsBulkCreate';
-import SwitchesBulkValidate from './SwitchesBulkValidate';
-import SwitchesBulkUpdate from './SwitchesBulkUpdate';
-import SwitchesBulkCreate from './SwitchesBulkCreate';
-import WirelessPoints from './WirelessPoints';
-import Switches from './Switches';
-import Networks from './Networks';
-import Devices from './Devices';
-import Users from './Users';
-import Tasks from './Tasks';
-import type { RingCentralInterface, ParentInterface } from '../../../../types';
+import WirelessPointsBulkValidate from "./WirelessPointsBulkValidate";
+import WirelessPointsBulkUpdate from "./WirelessPointsBulkUpdate";
+import WirelessPointsBulkCreate from "./WirelessPointsBulkCreate";
+import SwitchesBulkValidate from "./SwitchesBulkValidate";
+import SwitchesBulkUpdate from "./SwitchesBulkUpdate";
+import SwitchesBulkCreate from "./SwitchesBulkCreate";
+import WirelessPoints from "./WirelessPoints";
+import Switches from "./Switches";
+import Networks from "./Networks";
+import Devices from "./Devices";
+import Users from "./Users";
+import Tasks from "./Tasks";
+import type { ParentInterface, RingCentralInterface } from "../../../../types";
 
 class Index {
   public rc: RingCentralInterface;

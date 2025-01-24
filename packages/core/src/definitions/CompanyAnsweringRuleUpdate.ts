@@ -1,7 +1,7 @@
-import type CompanyAnsweringRuleCallersInfoRequest from './CompanyAnsweringRuleCallersInfoRequest';
-import type CompanyAnsweringRuleCalledNumberInfo from './CompanyAnsweringRuleCalledNumberInfo';
-import type CompanyAnsweringRuleScheduleInfoRequest from './CompanyAnsweringRuleScheduleInfoRequest';
-import type GreetingInfo from './GreetingInfo';
+import type CompanyAnsweringRuleCallersInfoRequest from "./CompanyAnsweringRuleCallersInfoRequest";
+import type CompanyAnsweringRuleCalledNumberInfo from "./CompanyAnsweringRuleCalledNumberInfo";
+import type CompanyAnsweringRuleScheduleInfoRequest from "./CompanyAnsweringRuleScheduleInfoRequest";
+import type GreetingInfo from "./GreetingInfo";
 
 interface CompanyAnsweringRuleUpdate {
   /**
@@ -28,23 +28,21 @@ interface CompanyAnsweringRuleUpdate {
    */
   calledNumbers?: CompanyAnsweringRuleCalledNumberInfo[];
 
-  /**
-   */
+  /** */
   schedule?: CompanyAnsweringRuleScheduleInfoRequest;
 
   /**
    * Specifies how incoming calls are forwarded. The default value is 'Operator' 'Operator' - play company greeting and forward to operator extension 'Disconnect' - play company greeting and disconnect 'Bypass' - bypass greeting to go to selected extension = ['Operator', 'Disconnect','Bypass']
    */
-  callHandlingAction?: 'Operator' | 'Disconnect' | 'Bypass';
+  callHandlingAction?: "Operator" | "Disconnect" | "Bypass";
 
   /**
    * Type of an answering rule
    * Default: Custom
    */
-  type?: 'BusinessHours' | 'AfterHours' | 'Custom';
+  type?: "BusinessHours" | "AfterHours" | "Custom";
 
-  /**
-   */
+  /** */
   extension?: CompanyAnsweringRuleCallersInfoRequest;
 
   /**

@@ -1,5 +1,5 @@
-import type BatchProvisionUsersResponseResultsExtension from './BatchProvisionUsersResponseResultsExtension';
-import type ApiErrorWithParameter from './ApiErrorWithParameter';
+import type BatchProvisionUsersResponseResultsExtension from "./BatchProvisionUsersResponseResultsExtension";
+import type ApiErrorWithParameter from "./ApiErrorWithParameter";
 
 interface BatchProvisionUsersResponseResults {
   /**
@@ -7,12 +7,10 @@ interface BatchProvisionUsersResponseResults {
    */
   successful?: boolean;
 
-  /**
-   */
+  /** */
   extension?: BatchProvisionUsersResponseResultsExtension;
 
-  /**
-   */
+  /** */
   errors?: ApiErrorWithParameter[];
 }
 

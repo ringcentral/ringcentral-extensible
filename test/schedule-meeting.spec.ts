@@ -8,8 +8,8 @@
 // import {createRingCentral} from './utils';
 
 // meetings has been replaced by RCV
-describe('schedule meeting', () => {
-  test('for myself', async () => {
+describe("schedule meeting", () => {
+  test("for myself", async () => {
     // const rc = await ReusableRestClient.getInstance();
     // // schedule a meeting
     // const meetingRequestResource = new MeetingRequestResource();
@@ -41,7 +41,7 @@ describe('schedule meeting', () => {
     // await rc.revoke();
   });
 
-  test('for others', async () => {
+  test("for others", async () => {
     // const rc = await ReusableRestClient.getInstance();
     // const rc2 = new RingCentral({
     //   clientId: process.env.RINGCENTRAL_CLIENT_ID!,

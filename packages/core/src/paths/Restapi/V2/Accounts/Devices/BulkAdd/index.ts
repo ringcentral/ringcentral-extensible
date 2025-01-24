@@ -1,6 +1,10 @@
-import type BulkAddDevicesResponse from '../../../../../../definitions/BulkAddDevicesResponse';
-import type BulkAddDevicesRequest from '../../../../../../definitions/BulkAddDevicesRequest';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../types';
+import type BulkAddDevicesResponse from "../../../../../../definitions/BulkAddDevicesResponse";
+import type BulkAddDevicesRequest from "../../../../../../definitions/BulkAddDevicesRequest";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;

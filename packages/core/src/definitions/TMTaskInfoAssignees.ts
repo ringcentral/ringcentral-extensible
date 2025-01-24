@@ -7,7 +7,7 @@ interface TMTaskInfoAssignees {
   /**
    * Task execution status by assignee
    */
-  status?: 'Pending' | 'Completed';
+  status?: "Pending" | "Completed";
 }
 
 export default TMTaskInfoAssignees;

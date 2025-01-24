@@ -1,46 +1,53 @@
-import type CreateFaxMessageRequest from '@rc-ex/core/lib/definitions/CreateFaxMessageRequest';
-import type Attachment from '@rc-ex/core/lib/definitions/Attachment';
-import type FaxResponse from '@rc-ex/core/lib/definitions/FaxResponse';
-import Utils from '@rc-ex/core/lib/Utils';
-import fs from 'fs';
-import path from 'path';
+import type CreateFaxMessageRequest from "@rc-ex/core/lib/definitions/CreateFaxMessageRequest";
+import type Attachment from "@rc-ex/core/lib/definitions/Attachment";
+import type FaxResponse from "@rc-ex/core/lib/definitions/FaxResponse";
+import Utils from "@rc-ex/core/lib/Utils";
+import fs from "fs";
+import path from "path";
 
-import ReusableRestClient from './reusable-rest-client';
+import ReusableRestClient from "./reusable-rest-client";
 
-describe('fax', () => {
-  test('send fax', async () => {
+describe("fax", () => {
+  test("send fax", async () => {
     const rc = await ReusableRestClient.getInstance();
     const createFaxMessageRequest: CreateFaxMessageRequest = {};
-    createFaxMessageRequest.to = [{ phoneNumber: process.env.RINGCENTRAL_RECEIVER }];
+    createFaxMessageRequest.to = [{
+      phoneNumber: process.env.RINGCENTRAL_RECEIVER,
+    }];
     const attachment1: Attachment = {};
-    attachment1.filename = 'text.txt';
-    attachment1.content = 'hello world';
-    attachment1.contentType = 'text/plain';
+    attachment1.filename = "text.txt";
+    attachment1.content = "hello world";
+    attachment1.contentType = "text/plain";
     const attachment2: Attachment = {};
-    attachment2.filename = 'text.png';
-    attachment2.content = fs.createReadStream(path.join(__dirname, 'test.png'));
-    attachment2.contentType = 'image/png';
+    attachment2.filename = "text.png";
+    attachment2.content = fs.createReadStream(path.join(__dirname, "test.png"));
+    attachment2.contentType = "image/png";
     createFaxMessageRequest.attachments = [attachment1, attachment2];
-    const messageInfo = await rc.restapi().account().extension().fax().post(createFaxMessageRequest);
+    const messageInfo = await rc.restapi().account().extension().fax().post(
+      createFaxMessageRequest,
+    );
     expect(messageInfo).not.toBeUndefined();
     expect(messageInfo.id).not.toBeUndefined();
   });
 
-  test('send fax - low level api', async () => {
+  test("send fax - low level api", async () => {
     const rc = await ReusableRestClient.getInstance();
     const attachment1: Attachment = {};
-    attachment1.filename = 'text.txt';
-    attachment1.content = 'hello world';
-    attachment1.contentType = 'text/plain';
+    attachment1.filename = "text.txt";
+    attachment1.content = "hello world";
+    attachment1.contentType = "text/plain";
     const attachment2: Attachment = {};
-    attachment2.filename = 'text.png';
-    attachment2.content = fs.createReadStream(path.join(__dirname, 'test.png'));
-    attachment2.contentType = 'image/png';
+    attachment2.filename = "text.png";
+    attachment2.content = fs.createReadStream(path.join(__dirname, "test.png"));
+    attachment2.contentType = "image/png";
     const formData = await Utils.getFormData({
       attachments: [attachment1, attachment2],
-      to: [{ phoneNumber: process.env.RINGCENTRAL_RECEIVER, name: 'To Name' }],
+      to: [{ phoneNumber: process.env.RINGCENTRAL_RECEIVER, name: "To Name" }],
     });
-    const r = await rc.post<FaxResponse>('/restapi/v1.0/account/~/extension/~/fax', formData);
+    const r = await rc.post<FaxResponse>(
+      "/restapi/v1.0/account/~/extension/~/fax",
+      formData,
+    );
     const messageInfo = r.data;
     expect(messageInfo).not.toBeUndefined();
     expect(messageInfo.id).not.toBeUndefined();

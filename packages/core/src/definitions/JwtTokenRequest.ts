@@ -1,14 +1,13 @@
 /**
  * Token endpoint request parameters used in the "Personal JWT", "JWT Bearer" and "Partner JWT" authorization flows
  * with the `urn:ietf:params:oauth:grant-type:jwt-bearer` and `partner_jwt` grant types
- *
  */
 interface JwtTokenRequest {
   /**
    * Grant type
    * Required
    */
-  grant_type?: 'urn:ietf:params:oauth:grant-type:jwt-bearer' | 'partner_jwt';
+  grant_type?: "urn:ietf:params:oauth:grant-type:jwt-bearer" | "partner_jwt";
 
   /**
    * For `urn:ietf:params:oauth:grant-type:jwt-bearer` or `partner_jwt` grant types only.

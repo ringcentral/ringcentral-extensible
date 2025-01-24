@@ -4,8 +4,7 @@ interface RoleIdResource {
    */
   uri?: string;
 
-  /**
-   */
+  /** */
   id?: string;
 }
 

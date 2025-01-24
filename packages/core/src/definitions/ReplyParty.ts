@@ -1,7 +1,7 @@
-import type CallStatusInfo from './CallStatusInfo';
-import type ParkInfo from './ParkInfo';
-import type PartyInfo from './PartyInfo';
-import type OwnerInfo from './OwnerInfo';
+import type CallStatusInfo from "./CallStatusInfo";
+import type ParkInfo from "./ParkInfo";
+import type PartyInfo from "./PartyInfo";
+import type OwnerInfo from "./OwnerInfo";
 
 interface ReplyParty {
   /**
@@ -9,8 +9,7 @@ interface ReplyParty {
    */
   id?: string;
 
-  /**
-   */
+  /** */
   status?: CallStatusInfo;
 
   /**
@@ -23,26 +22,22 @@ interface ReplyParty {
    */
   standAlone?: boolean;
 
-  /**
-   */
+  /** */
   park?: ParkInfo;
 
-  /**
-   */
+  /** */
   from?: PartyInfo;
 
-  /**
-   */
+  /** */
   to?: PartyInfo;
 
-  /**
-   */
+  /** */
   owner?: OwnerInfo;
 
   /**
    * Direction of a call
    */
-  direction?: 'Inbound' | 'Outbound';
+  direction?: "Inbound" | "Outbound";
 }
 
 export default ReplyParty;

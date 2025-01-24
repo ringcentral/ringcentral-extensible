@@ -1,5 +1,5 @@
-import type CloudRecording from './CloudRecording';
-import type Paging from './Paging';
+import type CloudRecording from "./CloudRecording";
+import type Paging from "./Paging";
 
 /**
  * Recordings page

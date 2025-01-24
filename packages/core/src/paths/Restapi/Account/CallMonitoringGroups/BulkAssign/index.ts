@@ -1,5 +1,9 @@
-import type CallMonitoringBulkAssign from '../../../../../definitions/CallMonitoringBulkAssign';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import type CallMonitoringBulkAssign from "../../../../../definitions/CallMonitoringBulkAssign";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -25,7 +29,12 @@ class Index {
     callMonitoringBulkAssign: CallMonitoringBulkAssign,
     restRequestConfig?: RestRequestConfig,
   ): Promise<string> {
-    const r = await this.rc.post<string>(this.path(), callMonitoringBulkAssign, undefined, restRequestConfig);
+    const r = await this.rc.post<string>(
+      this.path(),
+      callMonitoringBulkAssign,
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

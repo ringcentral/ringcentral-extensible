@@ -1,4 +1,4 @@
-import type TMCreateTeamRequestMembers from './TMCreateTeamRequestMembers';
+import type TMCreateTeamRequestMembers from "./TMCreateTeamRequestMembers";
 
 interface TMCreateTeamRequest {
   /**

@@ -1,8 +1,7 @@
-import type CreateSwitchInfo from './CreateSwitchInfo';
+import type CreateSwitchInfo from "./CreateSwitchInfo";
 
 interface CreateMultipleSwitchesRequest {
-  /**
-   */
+  /** */
   records?: CreateSwitchInfo[];
 }
 

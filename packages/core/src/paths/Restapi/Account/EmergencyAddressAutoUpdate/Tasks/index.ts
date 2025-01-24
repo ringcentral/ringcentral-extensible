@@ -1,5 +1,9 @@
-import type AutomaticLocationUpdatesTaskInfo from '../../../../../definitions/AutomaticLocationUpdatesTaskInfo';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import type AutomaticLocationUpdatesTaskInfo from "../../../../../definitions/AutomaticLocationUpdatesTaskInfo";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -29,11 +33,17 @@ class Index {
    * App Permission: EditAccounts
    * User Permission: ConfigureEmergencyMaps
    */
-  public async get(restRequestConfig?: RestRequestConfig): Promise<AutomaticLocationUpdatesTaskInfo> {
+  public async get(
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<AutomaticLocationUpdatesTaskInfo> {
     if (this.taskId === null) {
-      throw new Error('taskId must be specified.');
+      throw new Error("taskId must be specified.");
     }
-    const r = await this.rc.get<AutomaticLocationUpdatesTaskInfo>(this.path(), undefined, restRequestConfig);
+    const r = await this.rc.get<AutomaticLocationUpdatesTaskInfo>(
+      this.path(),
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

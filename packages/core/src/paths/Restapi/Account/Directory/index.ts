@@ -1,6 +1,6 @@
-import Federation from './Federation';
-import Entries from './Entries';
-import type { RingCentralInterface, ParentInterface } from '../../../../types';
+import Federation from "./Federation";
+import Entries from "./Entries";
+import type { ParentInterface, RingCentralInterface } from "../../../../types";
 
 class Index {
   public rc: RingCentralInterface;

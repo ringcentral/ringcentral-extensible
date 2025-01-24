@@ -1,8 +1,7 @@
-import type AssistedUserResource from './AssistedUserResource';
+import type AssistedUserResource from "./AssistedUserResource";
 
 interface AssistedUsersResource {
-  /**
-   */
+  /** */
   records?: AssistedUserResource[];
 }
 

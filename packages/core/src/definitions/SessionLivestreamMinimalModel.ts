@@ -1,4 +1,4 @@
-import type ApiError from './ApiError';
+import type ApiError from "./ApiError";
 
 interface SessionLivestreamMinimalModel {
   /**
@@ -23,16 +23,16 @@ interface SessionLivestreamMinimalModel {
    * Example: Initialized
    */
   livestreamStatus?:
-    | 'Initialized'
-    | 'Authorized'
-    | 'Configured'
-    | 'PublishSetup'
-    | 'Publishing'
-    | 'Paused'
-    | 'Error'
-    | 'Break'
-    | 'Deleted'
-    | 'Completed';
+    | "Initialized"
+    | "Authorized"
+    | "Configured"
+    | "PublishSetup"
+    | "Publishing"
+    | "Paused"
+    | "Error"
+    | "Break"
+    | "Deleted"
+    | "Completed";
 
   /**
    * Last known state of the livestream as notified by Webinar Livestreaming Controller Service (WLCS).
@@ -41,16 +41,16 @@ interface SessionLivestreamMinimalModel {
    * Example: Initialized
    */
   previousLivestreamStatus?:
-    | 'Initialized'
-    | 'Authorized'
-    | 'Configured'
-    | 'PublishSetup'
-    | 'Publishing'
-    | 'Paused'
-    | 'Error'
-    | 'Break'
-    | 'Deleted'
-    | 'Completed';
+    | "Initialized"
+    | "Authorized"
+    | "Configured"
+    | "PublishSetup"
+    | "Publishing"
+    | "Paused"
+    | "Error"
+    | "Break"
+    | "Deleted"
+    | "Completed";
 
   /**
    * Time at which the session started to publish media to livestream service provider.
@@ -58,8 +58,7 @@ interface SessionLivestreamMinimalModel {
    */
   livestreamStartTime?: string;
 
-  /**
-   */
+  /** */
   error?: ApiError;
 }
 

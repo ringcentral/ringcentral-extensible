@@ -1,8 +1,7 @@
-import type SwitchInfo from './SwitchInfo';
+import type SwitchInfo from "./SwitchInfo";
 
 interface ValidateMultipleSwitchesRequest {
-  /**
-   */
+  /** */
   records?: SwitchInfo[];
 }
 

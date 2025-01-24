@@ -1,13 +1,13 @@
-import type CallersInfoRequest from './CallersInfoRequest';
-import type CalledNumberInfo from './CalledNumberInfo';
-import type ScheduleInfo from './ScheduleInfo';
-import type ForwardingInfo from './ForwardingInfo';
-import type UnconditionalForwardingInfo from './UnconditionalForwardingInfo';
-import type QueueInfo from './QueueInfo';
-import type TransferredExtensionInfo from './TransferredExtensionInfo';
-import type VoicemailInfo from './VoicemailInfo';
-import type MissedCallInfo from './MissedCallInfo';
-import type GreetingInfo from './GreetingInfo';
+import type CallersInfoRequest from "./CallersInfoRequest";
+import type CalledNumberInfo from "./CalledNumberInfo";
+import type ScheduleInfo from "./ScheduleInfo";
+import type ForwardingInfo from "./ForwardingInfo";
+import type UnconditionalForwardingInfo from "./UnconditionalForwardingInfo";
+import type QueueInfo from "./QueueInfo";
+import type TransferredExtensionInfo from "./TransferredExtensionInfo";
+import type VoicemailInfo from "./VoicemailInfo";
+import type MissedCallInfo from "./MissedCallInfo";
+import type GreetingInfo from "./GreetingInfo";
 
 interface CreateAnsweringRuleRequest {
   /**
@@ -38,44 +38,37 @@ interface CreateAnsweringRuleRequest {
    */
   calledNumbers?: CalledNumberInfo[];
 
-  /**
-   */
+  /** */
   schedule?: ScheduleInfo;
 
   /**
    * Specifies how incoming calls are forwarded
    */
   callHandlingAction?:
-    | 'ForwardCalls'
-    | 'UnconditionalForwarding'
-    | 'AgentQueue'
-    | 'TransferToExtension'
-    | 'TakeMessagesOnly'
-    | 'PlayAnnouncementOnly'
-    | 'SharedLines';
+    | "ForwardCalls"
+    | "UnconditionalForwarding"
+    | "AgentQueue"
+    | "TransferToExtension"
+    | "TakeMessagesOnly"
+    | "PlayAnnouncementOnly"
+    | "SharedLines";
 
-  /**
-   */
+  /** */
   forwarding?: ForwardingInfo;
 
-  /**
-   */
+  /** */
   unconditionalForwarding?: UnconditionalForwardingInfo;
 
-  /**
-   */
+  /** */
   queue?: QueueInfo;
 
-  /**
-   */
+  /** */
   transfer?: TransferredExtensionInfo;
 
-  /**
-   */
+  /** */
   voicemail?: VoicemailInfo;
 
-  /**
-   */
+  /** */
   missedCall?: MissedCallInfo;
 
   /**
@@ -93,7 +86,7 @@ interface CreateAnsweringRuleRequest {
    *  value is 'Off'
    * Default: Off
    */
-  screening?: 'Off' | 'NoCallerId' | 'UnknownCallerId' | 'Always';
+  screening?: "Off" | "NoCallerId" | "UnknownCallerId" | "Always";
 }
 
 export default CreateAnsweringRuleRequest;

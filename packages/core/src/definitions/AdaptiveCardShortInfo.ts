@@ -1,4 +1,4 @@
-import type AdaptiveCardCreator from './AdaptiveCardCreator';
+import type AdaptiveCardCreator from "./AdaptiveCardCreator";
 
 interface AdaptiveCardShortInfo {
   /**
@@ -23,17 +23,15 @@ interface AdaptiveCardShortInfo {
    */
   $schema?: string;
 
-  /**
-   */
-  type?: 'AdaptiveCard';
+  /** */
+  type?: "AdaptiveCard";
 
   /**
    * Version of an adaptive card. Filled on server-side
    */
   version?: string;
 
-  /**
-   */
+  /** */
   creator?: AdaptiveCardCreator;
 
   /**

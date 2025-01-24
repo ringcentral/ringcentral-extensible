@@ -1,13 +1,17 @@
-import AdaptiveCards from './AdaptiveCards';
-import Unfavorite from './Unfavorite';
-import Favorite from './Favorite';
-import Notes from './Notes';
-import Tasks from './Tasks';
-import Posts from './Posts';
-import type TMChatInfo from '../../../../definitions/TMChatInfo';
-import type TMChatList from '../../../../definitions/TMChatList';
-import type ListGlipChatsNewParameters from '../../../../definitions/ListGlipChatsNewParameters';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
+import AdaptiveCards from "./AdaptiveCards";
+import Unfavorite from "./Unfavorite";
+import Favorite from "./Favorite";
+import Notes from "./Notes";
+import Tasks from "./Tasks";
+import Posts from "./Posts";
+import type TMChatInfo from "../../../../definitions/TMChatInfo";
+import type TMChatList from "../../../../definitions/TMChatList";
+import type ListGlipChatsNewParameters from "../../../../definitions/ListGlipChatsNewParameters";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -49,7 +53,11 @@ class Index {
     queryParams?: ListGlipChatsNewParameters,
     restRequestConfig?: RestRequestConfig,
   ): Promise<TMChatList> {
-    const r = await this.rc.get<TMChatList>(this.path(false), queryParams, restRequestConfig);
+    const r = await this.rc.get<TMChatList>(
+      this.path(false),
+      queryParams,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -65,9 +73,13 @@ class Index {
    */
   public async get(restRequestConfig?: RestRequestConfig): Promise<TMChatInfo> {
     if (this.chatId === null) {
-      throw new Error('chatId must be specified.');
+      throw new Error("chatId must be specified.");
     }
-    const r = await this.rc.get<TMChatInfo>(this.path(), undefined, restRequestConfig);
+    const r = await this.rc.get<TMChatInfo>(
+      this.path(),
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 

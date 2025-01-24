@@ -1,9 +1,13 @@
-import type UpdateSwitchInfo from '../../../../../definitions/UpdateSwitchInfo';
-import type SwitchInfo from '../../../../../definitions/SwitchInfo';
-import type CreateSwitchInfo from '../../../../../definitions/CreateSwitchInfo';
-import type SwitchesList from '../../../../../definitions/SwitchesList';
-import type ListAccountSwitchesParameters from '../../../../../definitions/ListAccountSwitchesParameters';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import type UpdateSwitchInfo from "../../../../../definitions/UpdateSwitchInfo";
+import type SwitchInfo from "../../../../../definitions/SwitchInfo";
+import type CreateSwitchInfo from "../../../../../definitions/CreateSwitchInfo";
+import type SwitchesList from "../../../../../definitions/SwitchesList";
+import type ListAccountSwitchesParameters from "../../../../../definitions/ListAccountSwitchesParameters";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -35,7 +39,11 @@ class Index {
     queryParams?: ListAccountSwitchesParameters,
     restRequestConfig?: RestRequestConfig,
   ): Promise<SwitchesList> {
-    const r = await this.rc.get<SwitchesList>(this.path(false), queryParams, restRequestConfig);
+    const r = await this.rc.get<SwitchesList>(
+      this.path(false),
+      queryParams,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -49,8 +57,16 @@ class Index {
    * App Permission: EditAccounts
    * User Permission: ConfigureEmergencyMaps
    */
-  public async post(createSwitchInfo: CreateSwitchInfo, restRequestConfig?: RestRequestConfig): Promise<SwitchInfo> {
-    const r = await this.rc.post<SwitchInfo>(this.path(false), createSwitchInfo, undefined, restRequestConfig);
+  public async post(
+    createSwitchInfo: CreateSwitchInfo,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<SwitchInfo> {
+    const r = await this.rc.post<SwitchInfo>(
+      this.path(false),
+      createSwitchInfo,
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -64,9 +80,13 @@ class Index {
    */
   public async get(restRequestConfig?: RestRequestConfig): Promise<SwitchInfo> {
     if (this.switchId === null) {
-      throw new Error('switchId must be specified.');
+      throw new Error("switchId must be specified.");
     }
-    const r = await this.rc.get<SwitchInfo>(this.path(), undefined, restRequestConfig);
+    const r = await this.rc.get<SwitchInfo>(
+      this.path(),
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -81,11 +101,19 @@ class Index {
    * App Permission: EditAccounts
    * User Permission: ConfigureEmergencyMaps
    */
-  public async put(updateSwitchInfo: UpdateSwitchInfo, restRequestConfig?: RestRequestConfig): Promise<SwitchInfo> {
+  public async put(
+    updateSwitchInfo: UpdateSwitchInfo,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<SwitchInfo> {
     if (this.switchId === null) {
-      throw new Error('switchId must be specified.');
+      throw new Error("switchId must be specified.");
     }
-    const r = await this.rc.put<SwitchInfo>(this.path(), updateSwitchInfo, undefined, restRequestConfig);
+    const r = await this.rc.put<SwitchInfo>(
+      this.path(),
+      updateSwitchInfo,
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -101,9 +129,14 @@ class Index {
    */
   public async delete(restRequestConfig?: RestRequestConfig): Promise<string> {
     if (this.switchId === null) {
-      throw new Error('switchId must be specified.');
+      throw new Error("switchId must be specified.");
     }
-    const r = await this.rc.delete<string>(this.path(), {}, undefined, restRequestConfig);
+    const r = await this.rc.delete<string>(
+      this.path(),
+      {},
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

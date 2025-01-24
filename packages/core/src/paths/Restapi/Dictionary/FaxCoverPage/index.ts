@@ -1,6 +1,10 @@
-import type ListFaxCoverPagesResponse from '../../../../definitions/ListFaxCoverPagesResponse';
-import type ListFaxCoverPagesParameters from '../../../../definitions/ListFaxCoverPagesParameters';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
+import type ListFaxCoverPagesResponse from "../../../../definitions/ListFaxCoverPagesResponse";
+import type ListFaxCoverPagesParameters from "../../../../definitions/ListFaxCoverPagesParameters";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -23,7 +27,11 @@ class Index {
     queryParams?: ListFaxCoverPagesParameters,
     restRequestConfig?: RestRequestConfig,
   ): Promise<ListFaxCoverPagesResponse> {
-    const r = await this.rc.get<ListFaxCoverPagesResponse>(this.path(), queryParams, restRequestConfig);
+    const r = await this.rc.get<ListFaxCoverPagesResponse>(
+      this.path(),
+      queryParams,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

@@ -1,4 +1,4 @@
-import type UserBusinessHoursScheduleInfo from './UserBusinessHoursScheduleInfo';
+import type UserBusinessHoursScheduleInfo from "./UserBusinessHoursScheduleInfo";
 
 interface UserBusinessHoursUpdateResponse {
   /**
@@ -7,8 +7,7 @@ interface UserBusinessHoursUpdateResponse {
    */
   uri?: string;
 
-  /**
-   */
+  /** */
   schedule?: UserBusinessHoursScheduleInfo;
 }
 

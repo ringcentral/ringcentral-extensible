@@ -1,5 +1,8 @@
-import MultichannelRecordings from './MultichannelRecordings';
-import type { RingCentralInterface, ParentInterface } from '../../../../../types';
+import MultichannelRecordings from "./MultichannelRecordings";
+import type {
+  ParentInterface,
+  RingCentralInterface,
+} from "../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -13,7 +16,9 @@ class Index {
     return `${this._parent.path(false)}/metadata`;
   }
 
-  public multichannelRecordings(metadataId: string | null = null): MultichannelRecordings {
+  public multichannelRecordings(
+    metadataId: string | null = null,
+  ): MultichannelRecordings {
     return new MultichannelRecordings(this, metadataId);
   }
 }

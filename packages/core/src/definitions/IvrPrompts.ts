@@ -1,6 +1,6 @@
-import type PromptInfo from './PromptInfo';
-import type PageNavigationModel from './PageNavigationModel';
-import type EnumeratedPagingModel from './EnumeratedPagingModel';
+import type PromptInfo from "./PromptInfo";
+import type PageNavigationModel from "./PageNavigationModel";
+import type EnumeratedPagingModel from "./EnumeratedPagingModel";
 
 interface IvrPrompts {
   /**
@@ -14,12 +14,10 @@ interface IvrPrompts {
    */
   records?: PromptInfo[];
 
-  /**
-   */
+  /** */
   navigation?: PageNavigationModel;
 
-  /**
-   */
+  /** */
   paging?: EnumeratedPagingModel;
 }
 

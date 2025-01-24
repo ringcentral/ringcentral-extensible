@@ -1,4 +1,4 @@
-import type DeviceAddonInfo from './DeviceAddonInfo';
+import type DeviceAddonInfo from "./DeviceAddonInfo";
 
 /**
  * HardPhone model information
@@ -23,7 +23,7 @@ interface DeviceModelInfo {
   /**
    * Device feature or multiple features supported
    */
-  features?: ('BLA' | 'Intercom' | 'Paging' | 'HELD')[];
+  features?: ("BLA" | "Intercom" | "Paging" | "HELD")[];
 }
 
 export default DeviceModelInfo;

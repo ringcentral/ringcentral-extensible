@@ -14,7 +14,14 @@ interface MessageStoreReport {
   /**
    * Status of a message store report task
    */
-  status?: 'Accepted' | 'Pending' | 'InProgress' | 'AttemptFailed' | 'Failed' | 'Completed' | 'Cancelled';
+  status?:
+    | "Accepted"
+    | "Pending"
+    | "InProgress"
+    | "AttemptFailed"
+    | "Failed"
+    | "Completed"
+    | "Cancelled";
 
   /**
    * Internal identifier of an account
@@ -54,7 +61,7 @@ interface MessageStoreReport {
    * Type of messages to be collected.
    * Example: Fax,VoiceMail
    */
-  messageTypes?: ('Fax' | 'SMS' | 'VoiceMail' | 'Pager')[];
+  messageTypes?: ("Fax" | "SMS" | "VoiceMail" | "Pager")[];
 }
 
 export default MessageStoreReport;

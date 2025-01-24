@@ -1,8 +1,7 @@
-import type FeatureInfo from './FeatureInfo';
+import type FeatureInfo from "./FeatureInfo";
 
 interface FeatureList {
-  /**
-   */
+  /** */
   records?: FeatureInfo[];
 }
 

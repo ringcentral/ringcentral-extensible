@@ -1,5 +1,5 @@
-import type OriginInfo from './OriginInfo';
-import type CallParty from './CallParty';
+import type OriginInfo from "./OriginInfo";
+import type CallParty from "./CallParty";
 
 /**
  * Call session information
@@ -10,8 +10,7 @@ interface CallSessionObject {
    */
   id?: string;
 
-  /**
-   */
+  /** */
   origin?: OriginInfo;
 
   /**
@@ -19,8 +18,7 @@ interface CallSessionObject {
    */
   voiceCallToken?: string;
 
-  /**
-   */
+  /** */
   parties?: CallParty[];
 
   /**

@@ -1,4 +1,4 @@
-import type AccountHistoryRecordDetailsParameters from './AccountHistoryRecordDetailsParameters';
+import type AccountHistoryRecordDetailsParameters from "./AccountHistoryRecordDetailsParameters";
 
 interface AccountHistoryRecordPublicDetails {
   /**

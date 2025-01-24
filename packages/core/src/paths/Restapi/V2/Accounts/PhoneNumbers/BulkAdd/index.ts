@@ -1,7 +1,11 @@
-import type GetBulkAddTaskResultsV2Response from '../../../../../../definitions/GetBulkAddTaskResultsV2Response';
-import type AddPhoneNumbersResponse from '../../../../../../definitions/AddPhoneNumbersResponse';
-import type AddPhoneNumbersRequest from '../../../../../../definitions/AddPhoneNumbersRequest';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../types';
+import type GetBulkAddTaskResultsV2Response from "../../../../../../definitions/GetBulkAddTaskResultsV2Response";
+import type AddPhoneNumbersResponse from "../../../../../../definitions/AddPhoneNumbersResponse";
+import type AddPhoneNumbersRequest from "../../../../../../definitions/AddPhoneNumbersRequest";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -51,11 +55,17 @@ class Index {
    * App Permission: EditAccounts
    * User Permission: EditCompanyPhoneNumbers
    */
-  public async get(restRequestConfig?: RestRequestConfig): Promise<GetBulkAddTaskResultsV2Response> {
+  public async get(
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<GetBulkAddTaskResultsV2Response> {
     if (this.taskId === null) {
-      throw new Error('taskId must be specified.');
+      throw new Error("taskId must be specified.");
     }
-    const r = await this.rc.get<GetBulkAddTaskResultsV2Response>(this.path(), undefined, restRequestConfig);
+    const r = await this.rc.get<GetBulkAddTaskResultsV2Response>(
+      this.path(),
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

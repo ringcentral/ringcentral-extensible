@@ -1,8 +1,7 @@
-import type NotificationInfo from './NotificationInfo';
+import type NotificationInfo from "./NotificationInfo";
 
 interface InboundMessageEvent {
-  /**
-   */
+  /** */
   aps?: NotificationInfo;
 
   /**

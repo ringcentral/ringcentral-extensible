@@ -1,4 +1,4 @@
-import type OptOutBulkAssignFailedEntry from './OptOutBulkAssignFailedEntry';
+import type OptOutBulkAssignFailedEntry from "./OptOutBulkAssignFailedEntry";
 
 interface OptOutBulkAssignResponseOptOuts {
   /**

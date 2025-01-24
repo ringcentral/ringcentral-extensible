@@ -2,7 +2,6 @@
  * For Call Queue extension type only. Please note that legacy 'Department'
  * extension type corresponds to 'Call Queue' extensions in modern RingCentral
  * product terminology
- *
  */
 interface CallQueueInfoRequest {
   /**
@@ -17,8 +16,7 @@ interface CallQueueInfoRequest {
    */
   slaThresholdSeconds?: number;
 
-  /**
-   */
+  /** */
   includeAbandonedCalls?: boolean;
 
   /**

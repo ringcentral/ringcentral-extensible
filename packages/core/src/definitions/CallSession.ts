@@ -1,8 +1,7 @@
-import type CallSessionObject from './CallSessionObject';
+import type CallSessionObject from "./CallSessionObject";
 
 interface CallSession {
-  /**
-   */
+  /** */
   session?: CallSessionObject;
 }
 

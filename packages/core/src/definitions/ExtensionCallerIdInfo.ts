@@ -1,5 +1,5 @@
-import type CallerIdByDevice from './CallerIdByDevice';
-import type CallerIdByFeature from './CallerIdByFeature';
+import type CallerIdByDevice from "./CallerIdByDevice";
+import type CallerIdByFeature from "./CallerIdByFeature";
 
 interface ExtensionCallerIdInfo {
   /**
@@ -8,12 +8,10 @@ interface ExtensionCallerIdInfo {
    */
   uri?: string;
 
-  /**
-   */
+  /** */
   byDevice?: CallerIdByDevice[];
 
-  /**
-   */
+  /** */
   byFeature?: CallerIdByFeature[];
 
   /**

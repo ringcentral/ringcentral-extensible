@@ -46,7 +46,7 @@ interface AccountHistorySearchPublicRequest {
    * List of action IDs (exact keys) to search for (alternatively "excludeActionIds" option can be used).
    * Example: CHANGE_SECRET_INFO,CHANGE_USER_INFO
    */
-  actionIds?: ('CHANGE_SECRET_INFO' | 'CHANGE_USER_INFO')[];
+  actionIds?: ("CHANGE_SECRET_INFO" | "CHANGE_USER_INFO")[];
 
   /**
    * The (sub)string to search, applied to the following fields:
@@ -65,7 +65,7 @@ interface AccountHistorySearchPublicRequest {
    * List of action IDs (exact keys) to exclude from your search (alternatively "actionIds" option can be used).
    * Example: CHANGE_SECRET_INFO,CHANGE_USER_INFO
    */
-  excludeActionIds?: ('CHANGE_SECRET_INFO' | 'CHANGE_USER_INFO')[];
+  excludeActionIds?: ("CHANGE_SECRET_INFO" | "CHANGE_USER_INFO")[];
 }
 
 export default AccountHistorySearchPublicRequest;

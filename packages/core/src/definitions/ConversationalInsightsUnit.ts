@@ -1,4 +1,4 @@
-import type ConversationalInsightsUnitValues from './ConversationalInsightsUnitValues';
+import type ConversationalInsightsUnitValues from "./ConversationalInsightsUnitValues";
 
 interface ConversationalInsightsUnit {
   /**
@@ -6,13 +6,13 @@ interface ConversationalInsightsUnit {
    * Example: KeyPhrases
    */
   name?:
-    | 'ExtractiveSummary'
-    | 'AbstractiveSummaryLong'
-    | 'AbstractiveSummaryShort'
-    | 'KeyPhrases'
-    | 'QuestionsAsked'
-    | 'OverallSentiment'
-    | 'Topics';
+    | "ExtractiveSummary"
+    | "AbstractiveSummaryLong"
+    | "AbstractiveSummaryShort"
+    | "KeyPhrases"
+    | "QuestionsAsked"
+    | "OverallSentiment"
+    | "Topics";
 
   /**
    * Required

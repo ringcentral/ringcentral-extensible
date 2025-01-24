@@ -13,7 +13,7 @@ interface SipInfoResponse {
   /**
    * Supported authorization types and their priority for clients
    */
-  authorizationTypes?: ('SipDigest' | 'BearerToken')[];
+  authorizationTypes?: ("SipDigest" | "BearerToken")[];
 
   /**
    * Identifier for SIP authorization
@@ -48,7 +48,7 @@ interface SipInfoResponse {
   /**
    * Preferred transport. SIP info will be returned for this transport if supported
    */
-  transport?: 'UDP' | 'TCP' | 'TLS' | 'WSS';
+  transport?: "UDP" | "TCP" | "TLS" | "WSS";
 
   /**
    * For TLS transport only, Base64 encoded certificate

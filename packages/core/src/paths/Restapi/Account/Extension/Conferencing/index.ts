@@ -1,7 +1,11 @@
-import type UpdateConferencingInfoRequest from '../../../../../definitions/UpdateConferencingInfoRequest';
-import type GetConferencingInfoResponse from '../../../../../definitions/GetConferencingInfoResponse';
-import type ReadConferencingSettingsParameters from '../../../../../definitions/ReadConferencingSettingsParameters';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import type UpdateConferencingInfoRequest from "../../../../../definitions/UpdateConferencingInfoRequest";
+import type GetConferencingInfoResponse from "../../../../../definitions/GetConferencingInfoResponse";
+import type ReadConferencingSettingsParameters from "../../../../../definitions/ReadConferencingSettingsParameters";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -28,7 +32,11 @@ class Index {
     queryParams?: ReadConferencingSettingsParameters,
     restRequestConfig?: RestRequestConfig,
   ): Promise<GetConferencingInfoResponse> {
-    const r = await this.rc.get<GetConferencingInfoResponse>(this.path(), queryParams, restRequestConfig);
+    const r = await this.rc.get<GetConferencingInfoResponse>(
+      this.path(),
+      queryParams,
+      restRequestConfig,
+    );
     return r.data;
   }
 

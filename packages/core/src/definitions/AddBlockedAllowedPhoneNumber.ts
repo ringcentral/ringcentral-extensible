@@ -16,7 +16,7 @@ interface AddBlockedAllowedPhoneNumber {
    * Status of a phone number
    * Default: Blocked
    */
-  status?: 'Blocked' | 'Allowed';
+  status?: "Blocked" | "Allowed";
 }
 
 export default AddBlockedAllowedPhoneNumber;

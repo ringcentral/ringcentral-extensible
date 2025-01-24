@@ -1,4 +1,4 @@
-import type RcwDomainUserModel from './RcwDomainUserModel';
+import type RcwDomainUserModel from "./RcwDomainUserModel";
 
 /**
  * The internal IDs of RC-authenticated users.
@@ -28,7 +28,7 @@ interface ParticipantBaseModel {
    * Required
    * Example: Panelist
    */
-  role?: 'Panelist' | 'CoHost' | 'Host' | 'Attendee';
+  role?: "Panelist" | "CoHost" | "Host" | "Attendee";
 
   /**
    * The role of the webinar session participant/invitee.
@@ -36,10 +36,9 @@ interface ParticipantBaseModel {
    * Required
    * Example: Panelist
    */
-  originalRole?: 'Panelist' | 'CoHost' | 'Host' | 'Attendee';
+  originalRole?: "Panelist" | "CoHost" | "Host" | "Attendee";
 
-  /**
-   */
+  /** */
   linkedUser?: RcwDomainUserModel;
 
   /**
@@ -53,7 +52,7 @@ interface ParticipantBaseModel {
    * Required
    * Default: User
    */
-  type?: 'User' | 'Room';
+  type?: "User" | "Room";
 
   /**
    * User's contact email

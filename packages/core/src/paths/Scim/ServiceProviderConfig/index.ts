@@ -1,5 +1,9 @@
-import type ScimProviderConfig from '../../../definitions/ScimProviderConfig';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../types';
+import type ScimProviderConfig from "../../../definitions/ScimProviderConfig";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -19,8 +23,14 @@ class Index {
    * Rate Limit Group: Light
    * App Permission: ReadAccounts
    */
-  public async get(restRequestConfig?: RestRequestConfig): Promise<ScimProviderConfig> {
-    const r = await this.rc.get<ScimProviderConfig>(this.path(), undefined, restRequestConfig);
+  public async get(
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<ScimProviderConfig> {
+    const r = await this.rc.get<ScimProviderConfig>(
+      this.path(),
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

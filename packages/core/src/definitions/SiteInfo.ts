@@ -1,6 +1,6 @@
-import type ContactBusinessAddressInfo from './ContactBusinessAddressInfo';
-import type RegionalSettings from './RegionalSettings';
-import type OperatorInfo from './OperatorInfo';
+import type ContactBusinessAddressInfo from "./ContactBusinessAddressInfo";
+import type RegionalSettings from "./RegionalSettings";
+import type OperatorInfo from "./OperatorInfo";
 
 interface SiteInfo {
   /**
@@ -36,21 +36,18 @@ interface SiteInfo {
    */
   email?: string;
 
-  /**
-   */
+  /** */
   businessAddress?: ContactBusinessAddressInfo;
 
-  /**
-   */
+  /** */
   regionalSettings?: RegionalSettings;
 
   /**
    * Site access status for cross-site limitation
    */
-  siteAccess?: 'Limited' | 'Unlimited';
+  siteAccess?: "Limited" | "Unlimited";
 
-  /**
-   */
+  /** */
   operator?: OperatorInfo;
 
   /**

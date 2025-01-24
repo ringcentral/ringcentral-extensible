@@ -7,15 +7,15 @@ interface DirectGrouping {
    * Required
    */
   groupBy?:
-    | 'Company'
-    | 'CompanyNumbers'
-    | 'Users'
-    | 'Queues'
-    | 'IVRs'
-    | 'SharedLines'
-    | 'UserGroups'
-    | 'Sites'
-    | 'Departments';
+    | "Company"
+    | "CompanyNumbers"
+    | "Users"
+    | "Queues"
+    | "IVRs"
+    | "SharedLines"
+    | "UserGroups"
+    | "Sites"
+    | "Departments";
 
   /**
    * This field can be used to specify unique identifiers of entities selected in `groupBy` field. The response data will be limited to these entities only

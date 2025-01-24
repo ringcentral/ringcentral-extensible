@@ -17,9 +17,8 @@ interface TargetServicePlanInfo {
    */
   edition?: string;
 
-  /**
-   */
-  freemiumProductType?: 'Freyja' | 'Phoenix';
+  /** */
+  freemiumProductType?: "Freyja" | "Phoenix";
 }
 
 export default TargetServicePlanInfo;

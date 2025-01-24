@@ -15,7 +15,7 @@ interface CallFlipNumberResource {
    * Flip number type
    * Example: PhoneLine
    */
-  type?: 'PhoneLine' | 'External';
+  type?: "PhoneLine" | "External";
 
   /**
    * Flip number label, device name for Digital Line case

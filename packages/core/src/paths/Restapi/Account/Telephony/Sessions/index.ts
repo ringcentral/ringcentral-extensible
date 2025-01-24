@@ -1,15 +1,22 @@
-import Supervise from './Supervise';
-import Parties from './Parties';
-import type CallSessionObject from '../../../../../definitions/CallSessionObject';
-import type ReadCallSessionStatusParameters from '../../../../../definitions/ReadCallSessionStatusParameters';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import Supervise from "./Supervise";
+import Parties from "./Parties";
+import type CallSessionObject from "../../../../../definitions/CallSessionObject";
+import type ReadCallSessionStatusParameters from "../../../../../definitions/ReadCallSessionStatusParameters";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
   public _parent: ParentInterface;
   public telephonySessionId: string | null;
 
-  public constructor(_parent: ParentInterface, telephonySessionId: string | null = null) {
+  public constructor(
+    _parent: ParentInterface,
+    telephonySessionId: string | null = null,
+  ) {
     this._parent = _parent;
     this.rc = _parent.rc;
     this.telephonySessionId = telephonySessionId;
@@ -32,9 +39,13 @@ class Index {
     restRequestConfig?: RestRequestConfig,
   ): Promise<CallSessionObject> {
     if (this.telephonySessionId === null) {
-      throw new Error('telephonySessionId must be specified.');
+      throw new Error("telephonySessionId must be specified.");
     }
-    const r = await this.rc.get<CallSessionObject>(this.path(), queryParams, restRequestConfig);
+    const r = await this.rc.get<CallSessionObject>(
+      this.path(),
+      queryParams,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -47,9 +58,14 @@ class Index {
    */
   public async delete(restRequestConfig?: RestRequestConfig): Promise<string> {
     if (this.telephonySessionId === null) {
-      throw new Error('telephonySessionId must be specified.');
+      throw new Error("telephonySessionId must be specified.");
     }
-    const r = await this.rc.delete<string>(this.path(), {}, undefined, restRequestConfig);
+    const r = await this.rc.delete<string>(
+      this.path(),
+      {},
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 

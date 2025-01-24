@@ -1,5 +1,9 @@
-import type ReadMultichannelCallRecordingContentParameters from '../../../../../../../definitions/ReadMultichannelCallRecordingContentParameters';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../../types';
+import type ReadMultichannelCallRecordingContentParameters from "../../../../../../../definitions/ReadMultichannelCallRecordingContentParameters";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -26,7 +30,11 @@ class Index {
     queryParams?: ReadMultichannelCallRecordingContentParameters,
     restRequestConfig?: RestRequestConfig,
   ): Promise<string> {
-    const r = await this.rc.get<string>(this.path(), queryParams, restRequestConfig);
+    const r = await this.rc.get<string>(
+      this.path(),
+      queryParams,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

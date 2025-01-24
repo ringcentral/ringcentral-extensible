@@ -1,4 +1,4 @@
-import type CreateCallMonitoringGroupRequestSite from './CreateCallMonitoringGroupRequestSite';
+import type CreateCallMonitoringGroupRequestSite from "./CreateCallMonitoringGroupRequestSite";
 
 interface CreateCallMonitoringGroupRequest {
   /**
@@ -7,8 +7,7 @@ interface CreateCallMonitoringGroupRequest {
    */
   name?: string;
 
-  /**
-   */
+  /** */
   site?: CreateCallMonitoringGroupRequestSite;
 }
 

@@ -1,11 +1,10 @@
-import type ExtensionInfo from './ExtensionInfo';
-import type PageNavigationModel from './PageNavigationModel';
-import type EnumeratedPagingModel from './EnumeratedPagingModel';
+import type ExtensionInfo from "./ExtensionInfo";
+import type PageNavigationModel from "./PageNavigationModel";
+import type EnumeratedPagingModel from "./EnumeratedPagingModel";
 
 /**
  * Please note that legacy 'Department' extension type corresponds to
  * 'Call Queue' extensions in modern RingCentral product terminology
- *
  */
 interface DepartmentMemberList {
   /**
@@ -19,12 +18,10 @@ interface DepartmentMemberList {
    */
   records?: ExtensionInfo[];
 
-  /**
-   */
+  /** */
   navigation?: PageNavigationModel;
 
-  /**
-   */
+  /** */
   paging?: EnumeratedPagingModel;
 }
 

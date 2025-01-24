@@ -1,8 +1,12 @@
-import type TMConversationInfo from '../../../../definitions/TMConversationInfo';
-import type CreateConversationRequest from '../../../../definitions/CreateConversationRequest';
-import type TMConversationList from '../../../../definitions/TMConversationList';
-import type ListGlipConversationsNewParameters from '../../../../definitions/ListGlipConversationsNewParameters';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
+import type TMConversationInfo from "../../../../definitions/TMConversationInfo";
+import type CreateConversationRequest from "../../../../definitions/CreateConversationRequest";
+import type TMConversationList from "../../../../definitions/TMConversationList";
+import type ListGlipConversationsNewParameters from "../../../../definitions/ListGlipConversationsNewParameters";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -31,7 +35,11 @@ class Index {
     queryParams?: ListGlipConversationsNewParameters,
     restRequestConfig?: RestRequestConfig,
   ): Promise<TMConversationList> {
-    const r = await this.rc.get<TMConversationList>(this.path(false), queryParams, restRequestConfig);
+    const r = await this.rc.get<TMConversationList>(
+      this.path(false),
+      queryParams,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -62,11 +70,17 @@ class Index {
    * Rate Limit Group: Light
    * App Permission: TeamMessaging
    */
-  public async get(restRequestConfig?: RestRequestConfig): Promise<TMConversationInfo> {
+  public async get(
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<TMConversationInfo> {
     if (this.chatId === null) {
-      throw new Error('chatId must be specified.');
+      throw new Error("chatId must be specified.");
     }
-    const r = await this.rc.get<TMConversationInfo>(this.path(), undefined, restRequestConfig);
+    const r = await this.rc.get<TMConversationInfo>(
+      this.path(),
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

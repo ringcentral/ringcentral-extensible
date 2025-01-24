@@ -1,8 +1,7 @@
-import type CompanyBusinessHoursScheduleInfo from './CompanyBusinessHoursScheduleInfo';
+import type CompanyBusinessHoursScheduleInfo from "./CompanyBusinessHoursScheduleInfo";
 
 interface CompanyBusinessHoursUpdateRequest {
-  /**
-   */
+  /** */
   schedule?: CompanyBusinessHoursScheduleInfo;
 }
 

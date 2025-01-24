@@ -1,4 +1,4 @@
-import type CostCenterItem from './CostCenterItem';
+import type CostCenterItem from "./CostCenterItem";
 
 interface CostCenterList {
   /**

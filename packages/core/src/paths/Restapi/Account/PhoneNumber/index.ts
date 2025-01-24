@@ -1,14 +1,21 @@
-import type CompanyPhoneNumberInfo from '../../../../definitions/CompanyPhoneNumberInfo';
-import type AccountPhoneNumbers from '../../../../definitions/AccountPhoneNumbers';
-import type ListAccountPhoneNumbersParameters from '../../../../definitions/ListAccountPhoneNumbersParameters';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
+import type CompanyPhoneNumberInfo from "../../../../definitions/CompanyPhoneNumberInfo";
+import type AccountPhoneNumbers from "../../../../definitions/AccountPhoneNumbers";
+import type ListAccountPhoneNumbersParameters from "../../../../definitions/ListAccountPhoneNumbersParameters";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
   public _parent: ParentInterface;
   public phoneNumberId: string | null;
 
-  public constructor(_parent: ParentInterface, phoneNumberId: string | null = null) {
+  public constructor(
+    _parent: ParentInterface,
+    phoneNumberId: string | null = null,
+  ) {
     this._parent = _parent;
     this.rc = _parent.rc;
     this.phoneNumberId = phoneNumberId;
@@ -33,7 +40,11 @@ class Index {
     queryParams?: ListAccountPhoneNumbersParameters,
     restRequestConfig?: RestRequestConfig,
   ): Promise<AccountPhoneNumbers> {
-    const r = await this.rc.get<AccountPhoneNumbers>(this.path(false), queryParams, restRequestConfig);
+    const r = await this.rc.get<AccountPhoneNumbers>(
+      this.path(false),
+      queryParams,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -47,11 +58,17 @@ class Index {
    * App Permission: ReadAccounts
    * User Permission: ReadCompanyPhoneNumbers
    */
-  public async get(restRequestConfig?: RestRequestConfig): Promise<CompanyPhoneNumberInfo> {
+  public async get(
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<CompanyPhoneNumberInfo> {
     if (this.phoneNumberId === null) {
-      throw new Error('phoneNumberId must be specified.');
+      throw new Error("phoneNumberId must be specified.");
     }
-    const r = await this.rc.get<CompanyPhoneNumberInfo>(this.path(), undefined, restRequestConfig);
+    const r = await this.rc.get<CompanyPhoneNumberInfo>(
+      this.path(),
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

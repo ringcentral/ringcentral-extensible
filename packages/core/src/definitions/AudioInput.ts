@@ -10,7 +10,7 @@ interface AudioInput {
    * Required
    * Example: Wav
    */
-  encoding?: 'Mpeg' | 'Mp4' | 'Wav' | 'Webm' | 'Webp' | 'Aac' | 'Avi' | 'Ogg';
+  encoding?: "Mpeg" | "Mp4" | "Wav" | "Webm" | "Webp" | "Aac" | "Avi" | "Ogg";
 
   /**
    * Language spoken in the audio file.
@@ -29,7 +29,13 @@ interface AudioInput {
    * Type of the audio
    * Example: CallCenter
    */
-  audioType?: 'CallCenter' | 'Meeting' | 'EarningsCalls' | 'Interview' | 'PressConference' | 'Voicemail';
+  audioType?:
+    | "CallCenter"
+    | "Meeting"
+    | "EarningsCalls"
+    | "Interview"
+    | "PressConference"
+    | "Voicemail";
 }
 
 export default AudioInput;

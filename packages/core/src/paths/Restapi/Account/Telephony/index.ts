@@ -1,8 +1,8 @@
-import Conference from './Conference';
-import CallOut from './CallOut';
-import Sessions from './Sessions';
-import Metadata from './Metadata';
-import type { RingCentralInterface, ParentInterface } from '../../../../types';
+import Conference from "./Conference";
+import CallOut from "./CallOut";
+import Sessions from "./Sessions";
+import Metadata from "./Metadata";
+import type { ParentInterface, RingCentralInterface } from "../../../../types";
 
 class Index {
   public rc: RingCentralInterface;

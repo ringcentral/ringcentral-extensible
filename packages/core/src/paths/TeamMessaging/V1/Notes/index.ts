@@ -1,11 +1,15 @@
-import Publish from './Publish';
-import Unlock from './Unlock';
-import Lock from './Lock';
-import type TMNoteInfo from '../../../../definitions/TMNoteInfo';
-import type PatchNoteNewParameters from '../../../../definitions/PatchNoteNewParameters';
-import type TMCreateNoteRequest from '../../../../definitions/TMCreateNoteRequest';
-import type TMNoteWithBodyInfo from '../../../../definitions/TMNoteWithBodyInfo';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
+import Publish from "./Publish";
+import Unlock from "./Unlock";
+import Lock from "./Lock";
+import type TMNoteInfo from "../../../../definitions/TMNoteInfo";
+import type PatchNoteNewParameters from "../../../../definitions/PatchNoteNewParameters";
+import type TMCreateNoteRequest from "../../../../definitions/TMCreateNoteRequest";
+import type TMNoteWithBodyInfo from "../../../../definitions/TMNoteWithBodyInfo";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -30,11 +34,17 @@ class Index {
    * Rate Limit Group: Medium
    * App Permission: TeamMessaging
    */
-  public async get(restRequestConfig?: RestRequestConfig): Promise<TMNoteWithBodyInfo> {
+  public async get(
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<TMNoteWithBodyInfo> {
     if (this.noteId === null) {
-      throw new Error('noteId must be specified.');
+      throw new Error("noteId must be specified.");
     }
-    const r = await this.rc.get<TMNoteWithBodyInfo>(this.path(), undefined, restRequestConfig);
+    const r = await this.rc.get<TMNoteWithBodyInfo>(
+      this.path(),
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -47,9 +57,14 @@ class Index {
    */
   public async delete(restRequestConfig?: RestRequestConfig): Promise<string> {
     if (this.noteId === null) {
-      throw new Error('noteId must be specified.');
+      throw new Error("noteId must be specified.");
     }
-    const r = await this.rc.delete<string>(this.path(), {}, undefined, restRequestConfig);
+    const r = await this.rc.delete<string>(
+      this.path(),
+      {},
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -66,9 +81,14 @@ class Index {
     restRequestConfig?: RestRequestConfig,
   ): Promise<TMNoteInfo> {
     if (this.noteId === null) {
-      throw new Error('noteId must be specified.');
+      throw new Error("noteId must be specified.");
     }
-    const r = await this.rc.patch<TMNoteInfo>(this.path(), tMCreateNoteRequest, queryParams, restRequestConfig);
+    const r = await this.rc.patch<TMNoteInfo>(
+      this.path(),
+      tMCreateNoteRequest,
+      queryParams,
+      restRequestConfig,
+    );
     return r.data;
   }
 

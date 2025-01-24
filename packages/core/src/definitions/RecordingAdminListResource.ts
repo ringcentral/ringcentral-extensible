@@ -1,5 +1,5 @@
-import type RecordingAdminModel from './RecordingAdminModel';
-import type RcwPagingModel from './RcwPagingModel';
+import type RecordingAdminModel from "./RecordingAdminModel";
+import type RcwPagingModel from "./RcwPagingModel";
 
 interface RecordingAdminListResource {
   /**

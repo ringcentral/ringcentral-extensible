@@ -5,7 +5,14 @@ interface GetRecordingInsightsParameters {
   /**
    * AI Insight Types
    */
-  insightTypes?: ('NextSteps' | 'Transcript' | 'Summary' | 'Highlights' | 'BulletedSummary' | 'AIScore')[];
+  insightTypes?: (
+    | "NextSteps"
+    | "Transcript"
+    | "Summary"
+    | "Highlights"
+    | "BulletedSummary"
+    | "AIScore"
+  )[];
 }
 
 export default GetRecordingInsightsParameters;

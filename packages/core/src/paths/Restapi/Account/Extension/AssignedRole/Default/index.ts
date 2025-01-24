@@ -1,5 +1,9 @@
-import type AssignedRolesResource from '../../../../../../definitions/AssignedRolesResource';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../types';
+import type AssignedRolesResource from "../../../../../../definitions/AssignedRolesResource";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -20,8 +24,15 @@ class Index {
    * App Permission: RoleManagement
    * User Permission: Users
    */
-  public async put(restRequestConfig?: RestRequestConfig): Promise<AssignedRolesResource> {
-    const r = await this.rc.put<AssignedRolesResource>(this.path(), {}, undefined, restRequestConfig);
+  public async put(
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<AssignedRolesResource> {
+    const r = await this.rc.put<AssignedRolesResource>(
+      this.path(),
+      {},
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

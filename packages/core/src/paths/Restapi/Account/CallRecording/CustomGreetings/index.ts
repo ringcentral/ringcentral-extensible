@@ -1,13 +1,20 @@
-import type CallRecordingCustomGreetings from '../../../../../definitions/CallRecordingCustomGreetings';
-import type ListCallRecordingCustomGreetingsParameters from '../../../../../definitions/ListCallRecordingCustomGreetingsParameters';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import type CallRecordingCustomGreetings from "../../../../../definitions/CallRecordingCustomGreetings";
+import type ListCallRecordingCustomGreetingsParameters from "../../../../../definitions/ListCallRecordingCustomGreetingsParameters";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
   public _parent: ParentInterface;
   public greetingId: string | null;
 
-  public constructor(_parent: ParentInterface, greetingId: string | null = null) {
+  public constructor(
+    _parent: ParentInterface,
+    greetingId: string | null = null,
+  ) {
     this._parent = _parent;
     this.rc = _parent.rc;
     this.greetingId = greetingId;
@@ -30,7 +37,11 @@ class Index {
     queryParams?: ListCallRecordingCustomGreetingsParameters,
     restRequestConfig?: RestRequestConfig,
   ): Promise<CallRecordingCustomGreetings> {
-    const r = await this.rc.get<CallRecordingCustomGreetings>(this.path(false), queryParams, restRequestConfig);
+    const r = await this.rc.get<CallRecordingCustomGreetings>(
+      this.path(false),
+      queryParams,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -42,8 +53,15 @@ class Index {
    * App Permission: EditAccounts
    * User Permission: EditCompanyInfo
    */
-  public async deleteAll(restRequestConfig?: RestRequestConfig): Promise<string> {
-    const r = await this.rc.delete<string>(this.path(false), {}, undefined, restRequestConfig);
+  public async deleteAll(
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<string> {
+    const r = await this.rc.delete<string>(
+      this.path(false),
+      {},
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -57,9 +75,14 @@ class Index {
    */
   public async delete(restRequestConfig?: RestRequestConfig): Promise<string> {
     if (this.greetingId === null) {
-      throw new Error('greetingId must be specified.');
+      throw new Error("greetingId must be specified.");
     }
-    const r = await this.rc.delete<string>(this.path(), {}, undefined, restRequestConfig);
+    const r = await this.rc.delete<string>(
+      this.path(),
+      {},
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

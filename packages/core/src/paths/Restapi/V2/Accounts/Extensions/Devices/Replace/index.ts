@@ -1,5 +1,9 @@
-import type SwapDeviceRequest from '../../../../../../../definitions/SwapDeviceRequest';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../../types';
+import type SwapDeviceRequest from "../../../../../../../definitions/SwapDeviceRequest";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -33,8 +37,16 @@ class Index {
    * App Permission: EditAccounts
    * User Permission: EditUserDevices
    */
-  public async post(swapDeviceRequest: SwapDeviceRequest, restRequestConfig?: RestRequestConfig): Promise<string> {
-    const r = await this.rc.post<string>(this.path(), swapDeviceRequest, undefined, restRequestConfig);
+  public async post(
+    swapDeviceRequest: SwapDeviceRequest,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<string> {
+    const r = await this.rc.post<string>(
+      this.path(),
+      swapDeviceRequest,
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

@@ -1,6 +1,6 @@
-import type BlockedAllowedPhoneNumberInfo from './BlockedAllowedPhoneNumberInfo';
-import type PageNavigationModel from './PageNavigationModel';
-import type EnumeratedPagingModel from './EnumeratedPagingModel';
+import type BlockedAllowedPhoneNumberInfo from "./BlockedAllowedPhoneNumberInfo";
+import type PageNavigationModel from "./PageNavigationModel";
+import type EnumeratedPagingModel from "./EnumeratedPagingModel";
 
 /**
  * List of blocked or allowed phone numbers
@@ -12,16 +12,13 @@ interface BlockedAllowedPhoneNumbersList {
    */
   uri?: string;
 
-  /**
-   */
+  /** */
   records?: BlockedAllowedPhoneNumberInfo[];
 
-  /**
-   */
+  /** */
   navigation?: PageNavigationModel;
 
-  /**
-   */
+  /** */
   paging?: EnumeratedPagingModel;
 }
 

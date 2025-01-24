@@ -20,7 +20,7 @@ interface ScheduleUserMeetingInfo {
   /**
    * Determines how participants can join the audio channel of a meeting
    */
-  audioOptions?: ('Phone' | 'ComputerAudio' | 'ThirdParty')[];
+  audioOptions?: ("Phone" | "ComputerAudio" | "ThirdParty")[];
 
   /**
    * Allows participants to join the meeting before the host arrives
@@ -60,7 +60,7 @@ interface ScheduleUserMeetingInfo {
   /**
    * Specifies whether to require a password for meetings using Personal Meeting ID (PMI). The supported values are: 'none', 'all' and 'jbhOnly' (joined before host only)
    */
-  requirePasswordForPmiMeetings?: 'all' | 'none' | 'jbhOnly';
+  requirePasswordForPmiMeetings?: "all" | "none" | "jbhOnly";
 
   /**
    * The default password for Personal Meeting ID (PMI) meetings
@@ -72,8 +72,7 @@ interface ScheduleUserMeetingInfo {
    */
   pstnPasswordProtected?: boolean;
 
-  /**
-   */
+  /** */
   muteParticipantsOnEntry?: boolean;
 }
 

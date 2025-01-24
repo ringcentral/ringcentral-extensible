@@ -1,8 +1,8 @@
-import type VoicemailsInfo from './VoicemailsInfo';
-import type InboundFaxesInfo from './InboundFaxesInfo';
-import type OutboundFaxesInfo from './OutboundFaxesInfo';
-import type InboundTextsInfo from './InboundTextsInfo';
-import type MissedCallsInfo from './MissedCallsInfo';
+import type VoicemailsInfo from "./VoicemailsInfo";
+import type InboundFaxesInfo from "./InboundFaxesInfo";
+import type OutboundFaxesInfo from "./OutboundFaxesInfo";
+import type InboundTextsInfo from "./InboundTextsInfo";
+import type MissedCallsInfo from "./MissedCallsInfo";
 
 interface NotificationSettingsUpdateRequest {
   /**
@@ -25,24 +25,19 @@ interface NotificationSettingsUpdateRequest {
    */
   advancedMode?: boolean;
 
-  /**
-   */
+  /** */
   voicemails?: VoicemailsInfo;
 
-  /**
-   */
+  /** */
   inboundFaxes?: InboundFaxesInfo;
 
-  /**
-   */
+  /** */
   outboundFaxes?: OutboundFaxesInfo;
 
-  /**
-   */
+  /** */
   inboundTexts?: InboundTextsInfo;
 
-  /**
-   */
+  /** */
   missedCalls?: MissedCallsInfo;
 
   /**

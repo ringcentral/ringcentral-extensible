@@ -1,10 +1,10 @@
-import WebSocketExtension, { Events } from '@rc-ex/ws';
-import waitFor from 'wait-for-async';
+import WebSocketExtension, { Events } from "@rc-ex/ws";
+import waitFor from "wait-for-async";
 
-import ReusableRestClient from '../reusable-rest-client';
+import ReusableRestClient from "../reusable-rest-client";
 
-describe('WebSocket', () => {
-  test('event emitter', async () => {
+describe("WebSocket", () => {
+  test("event emitter", async () => {
     const rc = await ReusableRestClient.getInstance();
     const webSocketExtension = new WebSocketExtension({
       autoRecover: {
@@ -16,7 +16,10 @@ describe('WebSocket', () => {
     await rc.installExtension(webSocketExtension);
 
     // must have at least 1 subscription, otherwise recoveryState = Failed
-    await webSocketExtension.subscribe(['/restapi/v1.0/account/~/extension/~'], () => {});
+    await webSocketExtension.subscribe(
+      ["/restapi/v1.0/account/~/extension/~"],
+      () => {},
+    );
 
     const oldWS = webSocketExtension.ws;
 

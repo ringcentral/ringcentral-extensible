@@ -1,18 +1,25 @@
-import type UpdateForwardingNumberRequest from '../../../../../definitions/UpdateForwardingNumberRequest';
-import type ForwardingNumberResource from '../../../../../definitions/ForwardingNumberResource';
-import type DeleteForwardingNumbersRequest from '../../../../../definitions/DeleteForwardingNumbersRequest';
-import type ForwardingNumberInfo from '../../../../../definitions/ForwardingNumberInfo';
-import type CreateForwardingNumberRequest from '../../../../../definitions/CreateForwardingNumberRequest';
-import type GetExtensionForwardingNumberListResponse from '../../../../../definitions/GetExtensionForwardingNumberListResponse';
-import type ListForwardingNumbersParameters from '../../../../../definitions/ListForwardingNumbersParameters';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types';
+import type UpdateForwardingNumberRequest from "../../../../../definitions/UpdateForwardingNumberRequest";
+import type ForwardingNumberResource from "../../../../../definitions/ForwardingNumberResource";
+import type DeleteForwardingNumbersRequest from "../../../../../definitions/DeleteForwardingNumbersRequest";
+import type ForwardingNumberInfo from "../../../../../definitions/ForwardingNumberInfo";
+import type CreateForwardingNumberRequest from "../../../../../definitions/CreateForwardingNumberRequest";
+import type GetExtensionForwardingNumberListResponse from "../../../../../definitions/GetExtensionForwardingNumberListResponse";
+import type ListForwardingNumbersParameters from "../../../../../definitions/ListForwardingNumbersParameters";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
   public _parent: ParentInterface;
   public forwardingNumberId: string | null;
 
-  public constructor(_parent: ParentInterface, forwardingNumberId: string | null = null) {
+  public constructor(
+    _parent: ParentInterface,
+    forwardingNumberId: string | null = null,
+  ) {
     this._parent = _parent;
     this.rc = _parent.rc;
     this.forwardingNumberId = forwardingNumberId;
@@ -96,11 +103,17 @@ class Index {
    * App Permission: ReadAccounts
    * User Permission: ReadUserForwardingFlipNumbers
    */
-  public async get(restRequestConfig?: RestRequestConfig): Promise<ForwardingNumberResource> {
+  public async get(
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<ForwardingNumberResource> {
     if (this.forwardingNumberId === null) {
-      throw new Error('forwardingNumberId must be specified.');
+      throw new Error("forwardingNumberId must be specified.");
     }
-    const r = await this.rc.get<ForwardingNumberResource>(this.path(), undefined, restRequestConfig);
+    const r = await this.rc.get<ForwardingNumberResource>(
+      this.path(),
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -117,7 +130,7 @@ class Index {
     restRequestConfig?: RestRequestConfig,
   ): Promise<ForwardingNumberInfo> {
     if (this.forwardingNumberId === null) {
-      throw new Error('forwardingNumberId must be specified.');
+      throw new Error("forwardingNumberId must be specified.");
     }
     const r = await this.rc.put<ForwardingNumberInfo>(
       this.path(),
@@ -138,9 +151,14 @@ class Index {
    */
   public async delete(restRequestConfig?: RestRequestConfig): Promise<string> {
     if (this.forwardingNumberId === null) {
-      throw new Error('forwardingNumberId must be specified.');
+      throw new Error("forwardingNumberId must be specified.");
     }
-    const r = await this.rc.delete<string>(this.path(), {}, undefined, restRequestConfig);
+    const r = await this.rc.delete<string>(
+      this.path(),
+      {},
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

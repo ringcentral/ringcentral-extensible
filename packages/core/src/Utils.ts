@@ -1,42 +1,49 @@
-import FormData from './FormData';
+import FormData from "./FormData";
 
-import type Attachment from './definitions/Attachment';
-import type { RestResponse } from './types';
+import type Attachment from "./definitions/Attachment";
+import type { RestResponse } from "./types";
 
 class Utils {
   public static formatTraffic(r: RestResponse): string {
-    return `HTTP ${r.status} ${r.statusText}${r.data.message ? ` - ${r.data.message}` : ''}
+    return `HTTP ${r.status} ${r.statusText}${
+      r.data.message ? ` - ${r.data.message}` : ""
+    }
 
     Response:
-    ${JSON.stringify(
-      {
-        data: r.data,
-        status: r.status,
-        statusText: r.statusText,
-        headers: r.headers,
-      },
-      null,
-      2,
-    )}
+    ${
+      JSON.stringify(
+        {
+          data: r.data,
+          status: r.status,
+          statusText: r.statusText,
+          headers: r.headers,
+        },
+        null,
+        2,
+      )
+    }
 
     Request:
-    ${JSON.stringify(
-      {
-        method: r.config.method,
-        baseURL: r.config.baseURL,
-        url: r.config.url,
-        params: r.config.params,
-        data: Buffer.isBuffer(r.config.data) ? '<Buffer>' : r.config.data,
-        headers: r.config.headers,
-      },
-      null,
-      2,
-    )}
+    ${
+      JSON.stringify(
+        {
+          method: r.config.method,
+          baseURL: r.config.baseURL,
+          url: r.config.url,
+          params: r.config.params,
+          data: Buffer.isBuffer(r.config.data) ? "<Buffer>" : r.config.data,
+          headers: r.config.headers,
+        },
+        null,
+        2,
+      )
+    }
     `;
   }
 
   public static isAttachment(obj: {}): boolean {
-    return typeof obj === 'object' && obj !== null && 'filename' in obj && 'content' in obj;
+    return typeof obj === "object" && obj !== null && "filename" in obj &&
+      "content" in obj;
   }
 
   public static getFormData(...objects: {}[]): Promise<Buffer> {
@@ -73,9 +80,9 @@ class Utils {
     }
     if (Object.keys(obj).length > 0) {
       formData.prepend({
-        name: 'request.json',
-        filename: 'request.json',
-        contentType: 'application/json',
+        name: "request.json",
+        filename: "request.json",
+        contentType: "application/json",
         content: JSON.stringify(obj),
       });
     }

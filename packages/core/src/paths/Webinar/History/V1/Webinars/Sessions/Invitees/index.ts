@@ -1,14 +1,21 @@
-import type InviteeModel from '../../../../../../../definitions/InviteeModel';
-import type InviteeListResource from '../../../../../../../definitions/InviteeListResource';
-import type RcwHistoryListInviteesParameters from '../../../../../../../definitions/RcwHistoryListInviteesParameters';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../../types';
+import type InviteeModel from "../../../../../../../definitions/InviteeModel";
+import type InviteeListResource from "../../../../../../../definitions/InviteeListResource";
+import type RcwHistoryListInviteesParameters from "../../../../../../../definitions/RcwHistoryListInviteesParameters";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
   public _parent: ParentInterface;
   public inviteeId: string | null;
 
-  public constructor(_parent: ParentInterface, inviteeId: string | null = null) {
+  public constructor(
+    _parent: ParentInterface,
+    inviteeId: string | null = null,
+  ) {
     this._parent = _parent;
     this.rc = _parent.rc;
     this.inviteeId = inviteeId;
@@ -32,7 +39,11 @@ class Index {
     queryParams?: RcwHistoryListInviteesParameters,
     restRequestConfig?: RestRequestConfig,
   ): Promise<InviteeListResource> {
-    const r = await this.rc.get<InviteeListResource>(this.path(false), queryParams, restRequestConfig);
+    const r = await this.rc.get<InviteeListResource>(
+      this.path(false),
+      queryParams,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -43,11 +54,17 @@ class Index {
    * Rate Limit Group: Heavy
    * App Permission: ReadWebinars
    */
-  public async get(restRequestConfig?: RestRequestConfig): Promise<InviteeModel> {
+  public async get(
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<InviteeModel> {
     if (this.inviteeId === null) {
-      throw new Error('inviteeId must be specified.');
+      throw new Error("inviteeId must be specified.");
     }
-    const r = await this.rc.get<InviteeModel>(this.path(), undefined, restRequestConfig);
+    const r = await this.rc.get<InviteeModel>(
+      this.path(),
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

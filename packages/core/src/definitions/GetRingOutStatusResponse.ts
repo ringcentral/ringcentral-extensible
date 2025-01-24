@@ -1,4 +1,4 @@
-import type RingOutStatusInfo from './RingOutStatusInfo';
+import type RingOutStatusInfo from "./RingOutStatusInfo";
 
 interface GetRingOutStatusResponse {
   /**
@@ -12,8 +12,7 @@ interface GetRingOutStatusResponse {
    */
   uri?: string;
 
-  /**
-   */
+  /** */
   status?: RingOutStatusInfo;
 }
 

@@ -1,6 +1,6 @@
-import type GetPresenceInfo from './GetPresenceInfo';
-import type PresenceNavigationInfo from './PresenceNavigationInfo';
-import type PresencePagingInfo from './PresencePagingInfo';
+import type GetPresenceInfo from "./GetPresenceInfo";
+import type PresenceNavigationInfo from "./PresenceNavigationInfo";
+import type PresencePagingInfo from "./PresencePagingInfo";
 
 interface AccountPresenceInfo {
   /**
@@ -14,12 +14,10 @@ interface AccountPresenceInfo {
    */
   records?: GetPresenceInfo[];
 
-  /**
-   */
+  /** */
   navigation?: PresenceNavigationInfo;
 
-  /**
-   */
+  /** */
   paging?: PresencePagingInfo;
 }
 

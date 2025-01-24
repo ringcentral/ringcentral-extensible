@@ -1,15 +1,19 @@
-import Unarchive from './Unarchive';
-import Archive from './Archive';
-import Remove from './Remove';
-import Leave from './Leave';
-import Join from './Join';
-import Add from './Add';
-import type TMUpdateTeamRequest from '../../../../definitions/TMUpdateTeamRequest';
-import type TMTeamInfo from '../../../../definitions/TMTeamInfo';
-import type TMCreateTeamRequest from '../../../../definitions/TMCreateTeamRequest';
-import type TMTeamList from '../../../../definitions/TMTeamList';
-import type ListGlipTeamsNewParameters from '../../../../definitions/ListGlipTeamsNewParameters';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
+import Unarchive from "./Unarchive";
+import Archive from "./Archive";
+import Remove from "./Remove";
+import Leave from "./Leave";
+import Join from "./Join";
+import Add from "./Add";
+import type TMUpdateTeamRequest from "../../../../definitions/TMUpdateTeamRequest";
+import type TMTeamInfo from "../../../../definitions/TMTeamInfo";
+import type TMCreateTeamRequest from "../../../../definitions/TMCreateTeamRequest";
+import type TMTeamList from "../../../../definitions/TMTeamList";
+import type ListGlipTeamsNewParameters from "../../../../definitions/ListGlipTeamsNewParameters";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -38,7 +42,11 @@ class Index {
     queryParams?: ListGlipTeamsNewParameters,
     restRequestConfig?: RestRequestConfig,
   ): Promise<TMTeamList> {
-    const r = await this.rc.get<TMTeamList>(this.path(false), queryParams, restRequestConfig);
+    const r = await this.rc.get<TMTeamList>(
+      this.path(false),
+      queryParams,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -53,7 +61,12 @@ class Index {
     tMCreateTeamRequest: TMCreateTeamRequest,
     restRequestConfig?: RestRequestConfig,
   ): Promise<TMTeamInfo> {
-    const r = await this.rc.post<TMTeamInfo>(this.path(false), tMCreateTeamRequest, undefined, restRequestConfig);
+    const r = await this.rc.post<TMTeamInfo>(
+      this.path(false),
+      tMCreateTeamRequest,
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -66,9 +79,13 @@ class Index {
    */
   public async get(restRequestConfig?: RestRequestConfig): Promise<TMTeamInfo> {
     if (this.chatId === null) {
-      throw new Error('chatId must be specified.');
+      throw new Error("chatId must be specified.");
     }
-    const r = await this.rc.get<TMTeamInfo>(this.path(), undefined, restRequestConfig);
+    const r = await this.rc.get<TMTeamInfo>(
+      this.path(),
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -81,9 +98,14 @@ class Index {
    */
   public async delete(restRequestConfig?: RestRequestConfig): Promise<string> {
     if (this.chatId === null) {
-      throw new Error('chatId must be specified.');
+      throw new Error("chatId must be specified.");
     }
-    const r = await this.rc.delete<string>(this.path(), {}, undefined, restRequestConfig);
+    const r = await this.rc.delete<string>(
+      this.path(),
+      {},
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -99,9 +121,14 @@ class Index {
     restRequestConfig?: RestRequestConfig,
   ): Promise<TMTeamInfo> {
     if (this.chatId === null) {
-      throw new Error('chatId must be specified.');
+      throw new Error("chatId must be specified.");
     }
-    const r = await this.rc.patch<TMTeamInfo>(this.path(), tMUpdateTeamRequest, undefined, restRequestConfig);
+    const r = await this.rc.patch<TMTeamInfo>(
+      this.path(),
+      tMUpdateTeamRequest,
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 

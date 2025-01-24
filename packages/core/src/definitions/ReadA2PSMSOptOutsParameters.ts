@@ -20,7 +20,7 @@ interface ReadA2PSMSOptOutsParameters {
    * Example: optout
    * Default: optout
    */
-  status?: 'optout' | 'optin' | 'all';
+  status?: "optout" | "optin" | "all";
 
   /**
    * The page token of the page to be retrieved

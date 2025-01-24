@@ -1,6 +1,10 @@
-import type RevokeTokenParameters from '../../../../definitions/RevokeTokenParameters';
-import type RevokeTokenRequest from '../../../../definitions/RevokeTokenRequest';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types';
+import type RevokeTokenParameters from "../../../../definitions/RevokeTokenParameters";
+import type RevokeTokenRequest from "../../../../definitions/RevokeTokenRequest";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -32,7 +36,12 @@ class Index {
     queryParams?: RevokeTokenParameters,
     restRequestConfig?: RestRequestConfig,
   ): Promise<string> {
-    const r = await this.rc.post<string>(this.path(), revokeTokenRequest, queryParams, restRequestConfig);
+    const r = await this.rc.post<string>(
+      this.path(),
+      revokeTokenRequest,
+      queryParams,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

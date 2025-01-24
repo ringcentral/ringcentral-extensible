@@ -1,4 +1,4 @@
-import type SpeechContextPhrasesInput from './SpeechContextPhrasesInput';
+import type SpeechContextPhrasesInput from "./SpeechContextPhrasesInput";
 
 interface InteractionInput {
   /**
@@ -12,7 +12,7 @@ interface InteractionInput {
    * Required
    * Example: Wav
    */
-  encoding?: 'Mpeg' | 'Mp4' | 'Wav' | 'Webm' | 'Webp' | 'Aac' | 'Avi' | 'Ogg';
+  encoding?: "Mpeg" | "Mp4" | "Wav" | "Webm" | "Webp" | "Aac" | "Avi" | "Ogg";
 
   /**
    * Language spoken in the audio file.
@@ -31,7 +31,13 @@ interface InteractionInput {
    * Type of the audio
    * Example: CallCenter
    */
-  audioType?: 'CallCenter' | 'Meeting' | 'EarningsCalls' | 'Interview' | 'PressConference' | 'Voicemail';
+  audioType?:
+    | "CallCenter"
+    | "Meeting"
+    | "EarningsCalls"
+    | "Interview"
+    | "PressConference"
+    | "Voicemail";
 
   /**
    * Set to True if the input audio is multi-channel and each channel has a separate speaker.
@@ -56,20 +62,19 @@ interface InteractionInput {
    */
   enableVoiceActivityDetection?: boolean;
 
-  /**
-   */
+  /** */
   insights?: (
-    | 'All'
-    | 'KeyPhrases'
-    | 'Emotion'
-    | 'AbstractiveSummaryLong'
-    | 'AbstractiveSummaryShort'
-    | 'ExtractiveSummary'
-    | 'Topics'
-    | 'TalkToListenRatio'
-    | 'Energy'
-    | 'Pace'
-    | 'QuestionsAsked'
+    | "All"
+    | "KeyPhrases"
+    | "Emotion"
+    | "AbstractiveSummaryLong"
+    | "AbstractiveSummaryShort"
+    | "ExtractiveSummary"
+    | "Topics"
+    | "TalkToListenRatio"
+    | "Energy"
+    | "Pace"
+    | "QuestionsAsked"
   )[];
 
   /**

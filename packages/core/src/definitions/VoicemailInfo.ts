@@ -1,4 +1,4 @@
-import type RecipientInfo from './RecipientInfo';
+import type RecipientInfo from "./RecipientInfo";
 
 /**
  * Specifies whether to take a voicemail and who should do it
@@ -9,8 +9,7 @@ interface VoicemailInfo {
    */
   enabled?: boolean;
 
-  /**
-   */
+  /** */
   recipient?: RecipientInfo;
 }
 

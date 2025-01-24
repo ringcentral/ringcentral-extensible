@@ -1,21 +1,25 @@
-import Recordings from './Recordings';
-import Supervise from './Supervise';
-import BringIn from './BringIn';
-import Transfer from './Transfer';
-import Forward from './Forward';
-import Pickup from './Pickup';
-import Answer from './Answer';
-import Reject from './Reject';
-import Ignore from './Ignore';
-import Bridge from './Bridge';
-import Unhold from './Unhold';
-import Reply from './Reply';
-import Hold from './Hold';
-import Flip from './Flip';
-import Park from './Park';
-import type PartyUpdateRequest from '../../../../../../definitions/PartyUpdateRequest';
-import type CallParty from '../../../../../../definitions/CallParty';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../types';
+import Recordings from "./Recordings";
+import Supervise from "./Supervise";
+import BringIn from "./BringIn";
+import Transfer from "./Transfer";
+import Forward from "./Forward";
+import Pickup from "./Pickup";
+import Answer from "./Answer";
+import Reject from "./Reject";
+import Ignore from "./Ignore";
+import Bridge from "./Bridge";
+import Unhold from "./Unhold";
+import Reply from "./Reply";
+import Hold from "./Hold";
+import Flip from "./Flip";
+import Park from "./Park";
+import type PartyUpdateRequest from "../../../../../../definitions/PartyUpdateRequest";
+import type CallParty from "../../../../../../definitions/CallParty";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
@@ -42,9 +46,13 @@ class Index {
    */
   public async get(restRequestConfig?: RestRequestConfig): Promise<CallParty> {
     if (this.partyId === null) {
-      throw new Error('partyId must be specified.');
+      throw new Error("partyId must be specified.");
     }
-    const r = await this.rc.get<CallParty>(this.path(), undefined, restRequestConfig);
+    const r = await this.rc.get<CallParty>(
+      this.path(),
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -57,9 +65,14 @@ class Index {
    */
   public async delete(restRequestConfig?: RestRequestConfig): Promise<string> {
     if (this.partyId === null) {
-      throw new Error('partyId must be specified.');
+      throw new Error("partyId must be specified.");
     }
-    const r = await this.rc.delete<string>(this.path(), {}, undefined, restRequestConfig);
+    const r = await this.rc.delete<string>(
+      this.path(),
+      {},
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -75,9 +88,14 @@ class Index {
     restRequestConfig?: RestRequestConfig,
   ): Promise<CallParty> {
     if (this.partyId === null) {
-      throw new Error('partyId must be specified.');
+      throw new Error("partyId must be specified.");
     }
-    const r = await this.rc.patch<CallParty>(this.path(), partyUpdateRequest, undefined, restRequestConfig);
+    const r = await this.rc.patch<CallParty>(
+      this.path(),
+      partyUpdateRequest,
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 

@@ -1,4 +1,4 @@
-import type ExtensionInfoGrants from './ExtensionInfoGrants';
+import type ExtensionInfoGrants from "./ExtensionInfoGrants";
 
 interface GrantInfo {
   /**
@@ -7,8 +7,7 @@ interface GrantInfo {
    */
   uri?: string;
 
-  /**
-   */
+  /** */
   extension?: ExtensionInfoGrants;
 
   /**

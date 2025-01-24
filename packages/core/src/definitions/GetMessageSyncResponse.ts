@@ -1,5 +1,5 @@
-import type GetMessageInfoResponse from './GetMessageInfoResponse';
-import type SyncInfoMessages from './SyncInfoMessages';
+import type GetMessageInfoResponse from "./GetMessageInfoResponse";
+import type SyncInfoMessages from "./SyncInfoMessages";
 
 interface GetMessageSyncResponse {
   /**

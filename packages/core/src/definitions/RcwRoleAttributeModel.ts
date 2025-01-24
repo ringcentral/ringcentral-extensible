@@ -8,7 +8,7 @@ interface RcwRoleAttributeModel {
    * Required
    * Example: Panelist
    */
-  role?: 'Panelist' | 'CoHost' | 'Host' | 'Attendee';
+  role?: "Panelist" | "CoHost" | "Host" | "Attendee";
 }
 
 export default RcwRoleAttributeModel;

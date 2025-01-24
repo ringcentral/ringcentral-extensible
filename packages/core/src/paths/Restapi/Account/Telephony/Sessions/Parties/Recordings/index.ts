@@ -1,14 +1,21 @@
-import type CallRecording from '../../../../../../../definitions/CallRecording';
-import type PauseResumeCallRecordingParameters from '../../../../../../../definitions/PauseResumeCallRecordingParameters';
-import type CallRecordingUpdate from '../../../../../../../definitions/CallRecordingUpdate';
-import type { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../../types';
+import type CallRecording from "../../../../../../../definitions/CallRecording";
+import type PauseResumeCallRecordingParameters from "../../../../../../../definitions/PauseResumeCallRecordingParameters";
+import type CallRecordingUpdate from "../../../../../../../definitions/CallRecordingUpdate";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
   public _parent: ParentInterface;
   public recordingId: string | null;
 
-  public constructor(_parent: ParentInterface, recordingId: string | null = null) {
+  public constructor(
+    _parent: ParentInterface,
+    recordingId: string | null = null,
+  ) {
     this._parent = _parent;
     this.rc = _parent.rc;
     this.recordingId = recordingId;
@@ -29,7 +36,12 @@ class Index {
    * App Permission: CallControl
    */
   public async post(restRequestConfig?: RestRequestConfig): Promise<string> {
-    const r = await this.rc.post<string>(this.path(false), {}, undefined, restRequestConfig);
+    const r = await this.rc.post<string>(
+      this.path(false),
+      {},
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -46,9 +58,14 @@ class Index {
     restRequestConfig?: RestRequestConfig,
   ): Promise<CallRecording> {
     if (this.recordingId === null) {
-      throw new Error('recordingId must be specified.');
+      throw new Error("recordingId must be specified.");
     }
-    const r = await this.rc.patch<CallRecording>(this.path(), callRecordingUpdate, queryParams, restRequestConfig);
+    const r = await this.rc.patch<CallRecording>(
+      this.path(),
+      callRecordingUpdate,
+      queryParams,
+      restRequestConfig,
+    );
     return r.data;
   }
 }
