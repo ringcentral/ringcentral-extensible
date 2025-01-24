@@ -3,9 +3,9 @@ import type {
   RestMethod,
   RestRequestConfig,
   RestResponse,
-} from "@rc-ex/core/lib/types";
-import Utils from "@rc-ex/core/lib/Utils";
-import SdkExtension from "@rc-ex/core/lib/SdkExtension";
+} from "@rc-ex/core/src/types";
+import Utils from "@rc-ex/core/src/Utils";
+import SdkExtension from "@rc-ex/core/src/SdkExtension";
 
 export interface DebugOptions {
   loggingAction?: (message: string) => void;
