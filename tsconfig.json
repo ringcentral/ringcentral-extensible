@@ -1,7 +1,6 @@
 {
   "compilerOptions": {
     "esModuleInterop": true,
-    "lib": ["DOM"],
     "declaration": true,
     "sourceMap": true
   }

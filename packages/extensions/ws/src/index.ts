@@ -200,14 +200,17 @@ class WebSocketExtension extends SdkExtension {
     );
 
     // browser only code start
-    if (typeof window !== "undefined" && window.addEventListener) {
-      window.addEventListener("offline", () => {
+    if (
+      typeof globalThis.window !== "undefined" &&
+      globalThis.window.addEventListener
+    ) {
+      globalThis.window.addEventListener("offline", () => {
         if (this.pingServerHandle) {
           clearTimeout(this.pingServerHandle);
         }
         this.ws?.close();
       });
-      window.addEventListener("online", () => {
+      globalThis.window.addEventListener("online", () => {
         check();
       });
     }
