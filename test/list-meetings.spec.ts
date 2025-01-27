@@ -1,4 +1,5 @@
 // import ReusableRestClient from './reusable-rest-client';
+import { describe, expect, test } from "vitest";
 
 describe("list meetings", () => {
   test("default", async () => {

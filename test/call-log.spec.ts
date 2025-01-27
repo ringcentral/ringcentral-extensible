@@ -1,4 +1,5 @@
 // import winston from 'winston';
+import { describe, expect, test } from "vitest";
 
 import ReusableRestClient from "./reusable-rest-client";
 

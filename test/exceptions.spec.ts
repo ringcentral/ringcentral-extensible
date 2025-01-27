@@ -1,5 +1,6 @@
 import type { RestResponse } from "@rc-ex/core/src/types";
 import RestException from "@rc-ex/core/src/RestException";
+import { describe, expect, test } from "vitest";
 
 import ReusableRestClient from "./reusable-rest-client";
 

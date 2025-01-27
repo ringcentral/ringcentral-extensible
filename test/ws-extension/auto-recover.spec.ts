@@ -1,5 +1,7 @@
 import WebSocketExtension from "@rc-ex/ws";
 import waitFor from "wait-for-async";
+import { describe, expect, test } from "vitest";
+
 import ReusableRestClient from "../reusable-rest-client";
 
 describe("WebSocket", () => {

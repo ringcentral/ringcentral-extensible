@@ -1,4 +1,5 @@
 import DebugExtension from "@rc-ex/debug";
+import { describe, expect, test } from "vitest";
 
 import ReusableRestClient from "./reusable-rest-client";
 

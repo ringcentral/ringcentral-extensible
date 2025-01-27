@@ -1,6 +1,8 @@
 import path from "path";
 import dotenv from "dotenv-override-true";
 import DebugExtension from "@rc-ex/debug";
+import { describe, expect, test } from "vitest";
+
 import ReusableRestClient from "./reusable-rest-client";
 
 dotenv.config({ path: path.join(__dirname, ".env.a2p") });

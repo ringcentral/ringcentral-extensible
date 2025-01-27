@@ -2,6 +2,8 @@ import type CreateMMSMessage from "@rc-ex/core/src/definitions/CreateMMSMessage"
 import type Attachment from "@rc-ex/core/src/definitions/Attachment";
 import fs from "fs";
 import path from "path";
+import { describe, expect, test } from "vitest";
+
 import ReusableRestClient from "./reusable-rest-client";
 
 describe("mms", () => {

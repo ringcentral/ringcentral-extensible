@@ -2,7 +2,6 @@ import { defineConfig } from "vitest/config";
 
 export default defineConfig({
   test: {
-    globals: true,
     environment: "node", // Test environment
     setupFiles: "dotenv-override-true/config", // Optional setup file
     maxWorkers: 1,

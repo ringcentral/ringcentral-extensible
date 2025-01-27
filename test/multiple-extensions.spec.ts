@@ -6,6 +6,7 @@ import waitFor from "wait-for-async";
 import RingCentral from "@rc-ex/core";
 import RcSdkExtension from "@rc-ex/rcsdk";
 import WebSocketExtension from "@rc-ex/ws";
+import { describe, expect, test } from "vitest";
 
 // dotenv.config({path: path.join(__dirname, '.env.lab')});
 

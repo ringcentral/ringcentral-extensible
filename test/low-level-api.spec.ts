@@ -3,6 +3,7 @@ import type FaxResponse from "@rc-ex/core/src/definitions/FaxResponse";
 import type GetSMSMessageInfoResponse from "@rc-ex/core/src/definitions/GetSMSMessageInfoResponse";
 import fs from "fs";
 import path from "path";
+import { describe, expect, test } from "vitest";
 
 import ReusableRestClient from "./reusable-rest-client";
 

@@ -1,5 +1,6 @@
 import EventsExtension, { Events } from "@rc-ex/events";
 import Utils from "@rc-ex/core/src/Utils";
+import { describe, expect, test } from "vitest";
 
 import ReusableRestClient from "./reusable-rest-client";
 

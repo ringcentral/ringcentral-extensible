@@ -1,6 +1,7 @@
 import RingCentral from "@rc-ex/core";
 import RcSdkExtension from "@rc-ex/rcsdk";
 import { SDK } from "@ringcentral/sdk";
+import { describe, expect, test } from "vitest";
 
 describe("RingCentral extension", () => {
   test("default", async () => {
