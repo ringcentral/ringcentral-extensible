@@ -1,7 +1,7 @@
 import type CreateFaxMessageRequest from "@rc-ex/core/src/definitions/CreateFaxMessageRequest";
 import type Attachment from "@rc-ex/core/src/definitions/Attachment";
 import type FaxResponse from "@rc-ex/core/src/definitions/FaxResponse";
-import Utils from "@rc-ex/core/src/Utils.js";
+import Utils from "@rc-ex/core/src/Utils";
 import fs from "fs";
 import path from "path";
 

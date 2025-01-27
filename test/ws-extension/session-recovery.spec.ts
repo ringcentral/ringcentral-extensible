@@ -2,8 +2,6 @@ import WebSocketExtension from "@rc-ex/ws";
 import waitFor from "wait-for-async";
 import ReusableRestClient from "../reusable-rest-client";
 
-jest.setTimeout(99999999); // to test recover failed
-
 describe("WebSocket session recovery", () => {
   test("default ", async () => {
     const rc = await ReusableRestClient.getInstance();

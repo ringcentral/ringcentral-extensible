@@ -1,4 +1,4 @@
-import Utils from "@rc-ex/core/src/Utils.js";
+import Utils from "@rc-ex/core/src/Utils";
 import type FaxResponse from "@rc-ex/core/src/definitions/FaxResponse";
 import type GetSMSMessageInfoResponse from "@rc-ex/core/src/definitions/GetSMSMessageInfoResponse";
 import fs from "fs";
