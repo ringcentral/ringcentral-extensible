@@ -10,7 +10,7 @@
     "test"
   ],
   "scripts": {
-    "compile": "lerna exec tsc --scope=@rc-ex/core && lerna exec tsc --no-private --ignore=@rc-ex/core && lerna exec 'cp -r src lib' --no-private",
+    "compile": "lerna exec tsc --no-private && lerna exec 'cp -r src lib' --no-private",
     "prepublishOnly": "yarn reset && yarn compile",
     "reset": "lerna exec 'rm -rf lib' && yarn delete-js",
     "test": "yarn workspace @rc-ex/test run vitest",

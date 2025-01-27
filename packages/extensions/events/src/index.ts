@@ -51,7 +51,7 @@ class EventsExtension extends SdkExtension {
   }
 
   public async install(rc: RingCentral) {
-    const request = rc.request.bind(rc);
+    const request: typeof rc.request = rc.request.bind(rc);
     rc.request = async <T>(
       method: RestMethod,
       endpoint: string,

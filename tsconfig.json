@@ -2,18 +2,7 @@
   "compilerOptions": {
     "esModuleInterop": true,
     "lib": ["DOM"],
-    "allowUnreachableCode": false,
-    "allowUnusedLabels": false,
     "declaration": true,
-    "forceConsistentCasingInFileNames": true,
-    "module": "commonjs",
-    "noEmitOnError": true,
-    "noFallthroughCasesInSwitch": true,
-    "noImplicitReturns": true,
-    "pretty": true,
-    "sourceMap": true,
-    "strict": true,
-    "target": "es2018"
-  },
-  "exclude": ["node_modules"]
+    "sourceMap": true
+  }
 }
