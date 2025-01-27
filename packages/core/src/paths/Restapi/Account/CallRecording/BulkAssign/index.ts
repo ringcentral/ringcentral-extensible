@@ -1,9 +1,9 @@
-import type BulkAccountCallRecordingsResource from "../../../../../definitions/BulkAccountCallRecordingsResource";
-import type {
+import BulkAccountCallRecordingsResource from "../../../../../definitions/BulkAccountCallRecordingsResource.js";
+import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../types";
+} from "../../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

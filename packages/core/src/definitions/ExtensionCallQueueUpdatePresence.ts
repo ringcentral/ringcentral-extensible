@@ -1,4 +1,4 @@
-import type CallQueueId from "./CallQueueId";
+import CallQueueId from "./CallQueueId.js";
 
 interface ExtensionCallQueueUpdatePresence {
   /** */

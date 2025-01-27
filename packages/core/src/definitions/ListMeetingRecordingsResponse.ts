@@ -1,6 +1,6 @@
-import type MeetingRecordings from "./MeetingRecordings";
-import type EnumeratedPagingModel from "./EnumeratedPagingModel";
-import type PageNavigationModel from "./PageNavigationModel";
+import MeetingRecordings from "./MeetingRecordings.js";
+import EnumeratedPagingModel from "./EnumeratedPagingModel.js";
+import PageNavigationModel from "./PageNavigationModel.js";
 
 interface ListMeetingRecordingsResponse {
   /** */

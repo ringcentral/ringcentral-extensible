@@ -1,10 +1,10 @@
-import type CallQueueUpdatePresence from "../../../../../definitions/CallQueueUpdatePresence";
-import type CallQueuePresence from "../../../../../definitions/CallQueuePresence";
-import type {
+import CallQueueUpdatePresence from "../../../../../definitions/CallQueueUpdatePresence.js";
+import CallQueuePresence from "../../../../../definitions/CallQueuePresence.js";
+import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../types";
+} from "../../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

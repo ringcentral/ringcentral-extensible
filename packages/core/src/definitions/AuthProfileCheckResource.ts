@@ -1,4 +1,4 @@
-import type ActivePermissionResource from "./ActivePermissionResource";
+import ActivePermissionResource from "./ActivePermissionResource.js";
 
 interface AuthProfileCheckResource {
   /**

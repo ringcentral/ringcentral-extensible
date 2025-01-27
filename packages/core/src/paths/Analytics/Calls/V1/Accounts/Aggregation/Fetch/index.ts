@@ -1,11 +1,11 @@
-import type AggregationResponse from "../../../../../../../definitions/AggregationResponse";
-import type AnalyticsCallsAggregationFetchParameters from "../../../../../../../definitions/AnalyticsCallsAggregationFetchParameters";
-import type AggregationRequest from "../../../../../../../definitions/AggregationRequest";
-import type {
+import AggregationResponse from "../../../../../../../definitions/AggregationResponse.js";
+import AnalyticsCallsAggregationFetchParameters from "../../../../../../../definitions/AnalyticsCallsAggregationFetchParameters.js";
+import AggregationRequest from "../../../../../../../definitions/AggregationRequest.js";
+import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../../../types";
+} from "../../../../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

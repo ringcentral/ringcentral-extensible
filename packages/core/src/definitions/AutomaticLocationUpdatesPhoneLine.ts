@@ -1,4 +1,4 @@
-import type AutomaticLocationUpdatesPhoneNumberInfo from "./AutomaticLocationUpdatesPhoneNumberInfo";
+import AutomaticLocationUpdatesPhoneNumberInfo from "./AutomaticLocationUpdatesPhoneNumberInfo.js";
 
 interface AutomaticLocationUpdatesPhoneLine {
   /** */

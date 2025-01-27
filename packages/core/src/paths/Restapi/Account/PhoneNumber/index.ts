@@ -1,11 +1,11 @@
-import type CompanyPhoneNumberInfo from "../../../../definitions/CompanyPhoneNumberInfo";
-import type AccountPhoneNumbers from "../../../../definitions/AccountPhoneNumbers";
-import type ListAccountPhoneNumbersParameters from "../../../../definitions/ListAccountPhoneNumbersParameters";
-import type {
+import CompanyPhoneNumberInfo from "../../../../definitions/CompanyPhoneNumberInfo.js";
+import AccountPhoneNumbers from "../../../../definitions/AccountPhoneNumbers.js";
+import ListAccountPhoneNumbersParameters from "../../../../definitions/ListAccountPhoneNumbersParameters.js";
+import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../types";
+} from "../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

@@ -1,10 +1,10 @@
-import type ForwardAllCompanyCallsRequest from "../../../../definitions/ForwardAllCompanyCallsRequest";
-import type ForwardAllCompanyCallsInfo from "../../../../definitions/ForwardAllCompanyCallsInfo";
-import type {
+import ForwardAllCompanyCallsRequest from "../../../../definitions/ForwardAllCompanyCallsRequest.js";
+import ForwardAllCompanyCallsInfo from "../../../../definitions/ForwardAllCompanyCallsInfo.js";
+import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../types";
+} from "../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

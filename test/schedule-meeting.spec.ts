@@ -3,7 +3,7 @@
 //   MeetingScheduleResource,
 //   MeetingsTimezoneResource,
 //   HostInfoRequest,
-// } from '@rc-ex/core/src/definitions';
+// } from '@rc-ex/core/lib/esm/definitions';
 
 // import {createRingCentral} from './utils';
 import { describe, expect, test } from "vitest";

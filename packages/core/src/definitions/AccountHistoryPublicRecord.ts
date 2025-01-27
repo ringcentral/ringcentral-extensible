@@ -1,6 +1,6 @@
-import type AccountHistoryRecordPublicInitiator from "./AccountHistoryRecordPublicInitiator";
-import type AccountHistoryRecordTarget from "./AccountHistoryRecordTarget";
-import type AccountHistoryRecordPublicDetails from "./AccountHistoryRecordPublicDetails";
+import AccountHistoryRecordPublicInitiator from "./AccountHistoryRecordPublicInitiator.js";
+import AccountHistoryRecordTarget from "./AccountHistoryRecordTarget.js";
+import AccountHistoryRecordPublicDetails from "./AccountHistoryRecordPublicDetails.js";
 
 interface AccountHistoryPublicRecord {
   /**

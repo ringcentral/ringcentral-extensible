@@ -1,5 +1,5 @@
-import type InviteeResource from "./InviteeResource";
-import type RcwPagingModel from "./RcwPagingModel";
+import InviteeResource from "./InviteeResource.js";
+import RcwPagingModel from "./RcwPagingModel.js";
 
 interface WcsInviteeListResource {
   /**

@@ -1,9 +1,9 @@
-import type BridgeResponse from "../../../../../../../definitions/BridgeResponse";
-import type {
+import BridgeResponse from "../../../../../../../definitions/BridgeResponse.js";
+import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../../../types";
+} from "../../../../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

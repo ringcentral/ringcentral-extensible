@@ -3,9 +3,9 @@ import type {
   RestMethod,
   RestRequestConfig,
   RestResponse,
-} from "@rc-ex/core/src/types";
-import Utils from "@rc-ex/core/src/Utils";
-import SdkExtension from "@rc-ex/core/src/SdkExtension";
+} from "@rc-ex/core/lib/esm/types.js";
+import Utils from "@rc-ex/core/lib/esm/Utils.js";
+import SdkExtension from "@rc-ex/core/lib/esm/SdkExtension.js";
 
 export interface DebugOptions {
   loggingAction?: (message: string) => void;

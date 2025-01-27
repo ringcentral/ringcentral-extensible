@@ -1,5 +1,5 @@
-import type SiteBasicInfo from "./SiteBasicInfo";
-import type CallQueueServiceLevelSettings from "./CallQueueServiceLevelSettings";
+import SiteBasicInfo from "./SiteBasicInfo.js";
+import CallQueueServiceLevelSettings from "./CallQueueServiceLevelSettings.js";
 
 interface CallQueueDetails {
   /**

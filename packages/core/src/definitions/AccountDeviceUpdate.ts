@@ -1,7 +1,7 @@
-import type EmergencyServiceAddressResourceRequest from "./EmergencyServiceAddressResourceRequest";
-import type DeviceEmergencyInfo from "./DeviceEmergencyInfo";
-import type DeviceUpdateExtensionInfo from "./DeviceUpdateExtensionInfo";
-import type DeviceUpdatePhoneLinesInfo from "./DeviceUpdatePhoneLinesInfo";
+import EmergencyServiceAddressResourceRequest from "./EmergencyServiceAddressResourceRequest.js";
+import DeviceEmergencyInfo from "./DeviceEmergencyInfo.js";
+import DeviceUpdateExtensionInfo from "./DeviceUpdateExtensionInfo.js";
+import DeviceUpdatePhoneLinesInfo from "./DeviceUpdatePhoneLinesInfo.js";
 
 interface AccountDeviceUpdate {
   /** */

@@ -1,5 +1,5 @@
-import type TMNoteInfo from "./TMNoteInfo";
-import type TMNavigationInfo from "./TMNavigationInfo";
+import TMNoteInfo from "./TMNoteInfo.js";
+import TMNavigationInfo from "./TMNavigationInfo.js";
 
 interface TMNoteList {
   /** */

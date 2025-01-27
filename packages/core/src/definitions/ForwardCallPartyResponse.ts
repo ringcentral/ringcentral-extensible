@@ -1,8 +1,8 @@
-import type CallStatusInfo from "./CallStatusInfo";
-import type ParkInfo from "./ParkInfo";
-import type PartyInfo from "./PartyInfo";
-import type OwnerInfo from "./OwnerInfo";
-import type RecordingInfo from "./RecordingInfo";
+import CallStatusInfo from "./CallStatusInfo.js";
+import ParkInfo from "./ParkInfo.js";
+import PartyInfo from "./PartyInfo.js";
+import OwnerInfo from "./OwnerInfo.js";
+import RecordingInfo from "./RecordingInfo.js";
 
 /**
  * Information on a party of a call session

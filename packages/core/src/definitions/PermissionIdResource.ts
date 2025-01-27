@@ -1,4 +1,4 @@
-import type PermissionsCapabilities from "./PermissionsCapabilities";
+import PermissionsCapabilities from "./PermissionsCapabilities.js";
 
 interface PermissionIdResource {
   /**

@@ -1,6 +1,6 @@
-import type MeetingResponseResource from "./MeetingResponseResource";
-import type EnumeratedPagingModel from "./EnumeratedPagingModel";
-import type PageNavigationModel from "./PageNavigationModel";
+import MeetingResponseResource from "./MeetingResponseResource.js";
+import EnumeratedPagingModel from "./EnumeratedPagingModel.js";
+import PageNavigationModel from "./PageNavigationModel.js";
 
 interface MeetingsResource {
   /**

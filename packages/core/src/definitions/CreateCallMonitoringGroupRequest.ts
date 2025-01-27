@@ -1,4 +1,4 @@
-import type CreateCallMonitoringGroupRequestSite from "./CreateCallMonitoringGroupRequestSite";
+import CreateCallMonitoringGroupRequestSite from "./CreateCallMonitoringGroupRequestSite.js";
 
 interface CreateCallMonitoringGroupRequest {
   /**

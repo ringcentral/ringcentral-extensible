@@ -1,6 +1,6 @@
-import type BasicExtensionInfoResource from "./BasicExtensionInfoResource";
-import type RolesRegionalSettingsResource from "./RolesRegionalSettingsResource";
-import type ContactAddressInfoResource from "./ContactAddressInfoResource";
+import BasicExtensionInfoResource from "./BasicExtensionInfoResource.js";
+import RolesRegionalSettingsResource from "./RolesRegionalSettingsResource.js";
+import ContactAddressInfoResource from "./ContactAddressInfoResource.js";
 
 interface RolesBusinessSiteResource {
   /**

@@ -1,7 +1,7 @@
-import BulkAssign from "./BulkAssign";
-import Devices from "./Devices";
-import Users from "./Users";
-import type { ParentInterface, RingCentralInterface } from "../../../../types";
+import BulkAssign from "./BulkAssign/index.js";
+import Devices from "./Devices/index.js";
+import Users from "./Users/index.js";
+import { ParentInterface, RingCentralInterface } from "../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

@@ -1,6 +1,6 @@
-import type ListCompanyAnsweringRuleInfo from "./ListCompanyAnsweringRuleInfo";
-import type EnumeratedPagingModel from "./EnumeratedPagingModel";
-import type PageNavigationModel from "./PageNavigationModel";
+import ListCompanyAnsweringRuleInfo from "./ListCompanyAnsweringRuleInfo.js";
+import EnumeratedPagingModel from "./EnumeratedPagingModel.js";
+import PageNavigationModel from "./PageNavigationModel.js";
 
 interface CompanyAnsweringRuleList {
   /**

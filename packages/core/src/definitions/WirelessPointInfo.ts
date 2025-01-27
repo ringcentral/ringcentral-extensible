@@ -1,6 +1,6 @@
-import type EmergencyAddressAutoUpdateSiteInfo from "./EmergencyAddressAutoUpdateSiteInfo";
-import type EmergencyAddressInfo from "./EmergencyAddressInfo";
-import type ERLLocationInfo from "./ERLLocationInfo";
+import EmergencyAddressAutoUpdateSiteInfo from "./EmergencyAddressAutoUpdateSiteInfo.js";
+import EmergencyAddressInfo from "./EmergencyAddressInfo.js";
+import ERLLocationInfo from "./ERLLocationInfo.js";
 
 interface WirelessPointInfo {
   /**

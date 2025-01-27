@@ -1,8 +1,5 @@
-import Contact from "./Contact";
-import type {
-  ParentInterface,
-  RingCentralInterface,
-} from "../../../../../types";
+import Contact from "./Contact/index.js";
+import { ParentInterface, RingCentralInterface } from "../../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

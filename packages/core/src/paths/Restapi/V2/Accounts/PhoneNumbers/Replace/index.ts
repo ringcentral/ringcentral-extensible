@@ -1,10 +1,10 @@
-import type AccountPhoneNumberInfo from "../../../../../../definitions/AccountPhoneNumberInfo";
-import type ReplacePhoneNumberRequest from "../../../../../../definitions/ReplacePhoneNumberRequest";
-import type {
+import AccountPhoneNumberInfo from "../../../../../../definitions/AccountPhoneNumberInfo.js";
+import ReplacePhoneNumberRequest from "../../../../../../definitions/ReplacePhoneNumberRequest.js";
+import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../../types";
+} from "../../../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

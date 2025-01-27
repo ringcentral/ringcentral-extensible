@@ -1,11 +1,11 @@
-import type GetStateInfoResponse from "../../../../definitions/GetStateInfoResponse";
-import type GetStateListResponse from "../../../../definitions/GetStateListResponse";
-import type ListStatesParameters from "../../../../definitions/ListStatesParameters";
-import type {
+import GetStateInfoResponse from "../../../../definitions/GetStateInfoResponse.js";
+import GetStateListResponse from "../../../../definitions/GetStateListResponse.js";
+import ListStatesParameters from "../../../../definitions/ListStatesParameters.js";
+import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../types";
+} from "../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

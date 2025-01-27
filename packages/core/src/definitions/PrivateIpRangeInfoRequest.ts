@@ -1,5 +1,5 @@
-import type LocationUpdatesEmergencyAddressInfoRequest from "./LocationUpdatesEmergencyAddressInfoRequest";
-import type ERLLocationInfo from "./ERLLocationInfo";
+import LocationUpdatesEmergencyAddressInfoRequest from "./LocationUpdatesEmergencyAddressInfoRequest.js";
+import ERLLocationInfo from "./ERLLocationInfo.js";
 
 interface PrivateIpRangeInfoRequest {
   /** */

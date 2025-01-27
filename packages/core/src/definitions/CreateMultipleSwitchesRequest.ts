@@ -1,4 +1,4 @@
-import type CreateSwitchInfo from "./CreateSwitchInfo";
+import CreateSwitchInfo from "./CreateSwitchInfo.js";
 
 interface CreateMultipleSwitchesRequest {
   /** */

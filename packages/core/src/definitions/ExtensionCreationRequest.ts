@@ -1,10 +1,10 @@
-import type ContactInfoCreationRequest from "./ContactInfoCreationRequest";
-import type CostCenterInfo from "./CostCenterInfo";
-import type CustomFieldInfo from "./CustomFieldInfo";
-import type ReferenceInfo from "./ReferenceInfo";
-import type RegionalSettings from "./RegionalSettings";
-import type SiteInfo from "./SiteInfo";
-import type ExtensionStatusInfo from "./ExtensionStatusInfo";
+import ContactInfoCreationRequest from "./ContactInfoCreationRequest.js";
+import CostCenterInfo from "./CostCenterInfo.js";
+import CustomFieldInfo from "./CustomFieldInfo.js";
+import ReferenceInfo from "./ReferenceInfo.js";
+import RegionalSettings from "./RegionalSettings.js";
+import SiteInfo from "./SiteInfo.js";
+import ExtensionStatusInfo from "./ExtensionStatusInfo.js";
 
 interface ExtensionCreationRequest {
   /** */

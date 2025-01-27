@@ -1,4 +1,4 @@
-import type ActiveCallInfoWithoutSIP from "./ActiveCallInfoWithoutSIP";
+import ActiveCallInfoWithoutSIP from "./ActiveCallInfoWithoutSIP.js";
 
 /**
  * Notification payload body

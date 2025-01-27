@@ -1,5 +1,5 @@
-import type PostalAddress from "./PostalAddress";
-import type DeviceDefinitionEmergencyLocation from "./DeviceDefinitionEmergencyLocation";
+import PostalAddress from "./PostalAddress.js";
+import DeviceDefinitionEmergencyLocation from "./DeviceDefinitionEmergencyLocation.js";
 
 interface DeviceDefinitionEmergency {
   /** */

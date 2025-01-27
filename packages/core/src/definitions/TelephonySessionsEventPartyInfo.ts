@@ -1,9 +1,9 @@
-import type CallPartyInfo from "./CallPartyInfo";
-import type RecordingInfo from "./RecordingInfo";
-import type CallStatusInfo from "./CallStatusInfo";
-import type ParkInfo from "./ParkInfo";
-import type SipData from "./SipData";
-import type UiCallInfo from "./UiCallInfo";
+import CallPartyInfo from "./CallPartyInfo.js";
+import RecordingInfo from "./RecordingInfo.js";
+import CallStatusInfo from "./CallStatusInfo.js";
+import ParkInfo from "./ParkInfo.js";
+import SipData from "./SipData.js";
+import UiCallInfo from "./UiCallInfo.js";
 
 interface TelephonySessionsEventPartyInfo {
   /**

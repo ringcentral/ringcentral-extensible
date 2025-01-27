@@ -1,16 +1,16 @@
-import Content from "./Content";
-import type PatchMessageRequest from "../../../../../definitions/PatchMessageRequest";
-import type DeleteMessageParameters from "../../../../../definitions/DeleteMessageParameters";
-import type UpdateMessageRequest from "../../../../../definitions/UpdateMessageRequest";
-import type GetMessageInfoResponse from "../../../../../definitions/GetMessageInfoResponse";
-import type DeleteMessageByFilterParameters from "../../../../../definitions/DeleteMessageByFilterParameters";
-import type GetMessageList from "../../../../../definitions/GetMessageList";
-import type ListMessagesParameters from "../../../../../definitions/ListMessagesParameters";
-import type {
+import Content from "./Content/index.js";
+import PatchMessageRequest from "../../../../../definitions/PatchMessageRequest.js";
+import DeleteMessageParameters from "../../../../../definitions/DeleteMessageParameters.js";
+import UpdateMessageRequest from "../../../../../definitions/UpdateMessageRequest.js";
+import GetMessageInfoResponse from "../../../../../definitions/GetMessageInfoResponse.js";
+import DeleteMessageByFilterParameters from "../../../../../definitions/DeleteMessageByFilterParameters.js";
+import GetMessageList from "../../../../../definitions/GetMessageList.js";
+import ListMessagesParameters from "../../../../../definitions/ListMessagesParameters.js";
+import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../types";
+} from "../../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

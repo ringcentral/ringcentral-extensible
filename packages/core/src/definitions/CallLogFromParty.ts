@@ -1,4 +1,4 @@
-import type CallLogRecordDeviceInfo from "./CallLogRecordDeviceInfo";
+import CallLogRecordDeviceInfo from "./CallLogRecordDeviceInfo.js";
 
 /**
  * Sender/initiator caller information

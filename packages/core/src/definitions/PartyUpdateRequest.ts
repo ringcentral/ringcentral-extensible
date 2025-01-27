@@ -1,4 +1,4 @@
-import type PartyUpdateInfo from "./PartyUpdateInfo";
+import PartyUpdateInfo from "./PartyUpdateInfo.js";
 
 interface PartyUpdateRequest {
   /** */

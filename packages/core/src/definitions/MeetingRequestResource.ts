@@ -1,6 +1,6 @@
-import type MeetingScheduleResource from "./MeetingScheduleResource";
-import type HostInfoRequest from "./HostInfoRequest";
-import type RecurrenceInfo from "./RecurrenceInfo";
+import MeetingScheduleResource from "./MeetingScheduleResource.js";
+import HostInfoRequest from "./HostInfoRequest.js";
+import RecurrenceInfo from "./RecurrenceInfo.js";
 
 interface MeetingRequestResource {
   /**

@@ -1,4 +1,4 @@
-import type CreateAnsweringRuleForwardingNumberInfo from "./CreateAnsweringRuleForwardingNumberInfo";
+import CreateAnsweringRuleForwardingNumberInfo from "./CreateAnsweringRuleForwardingNumberInfo.js";
 
 interface ForwardingRuleInfo {
   /**

@@ -1,5 +1,5 @@
-import type PermissionCategoryIdResource from "./PermissionCategoryIdResource";
-import type PermissionIdResource from "./PermissionIdResource";
+import PermissionCategoryIdResource from "./PermissionCategoryIdResource.js";
+import PermissionIdResource from "./PermissionIdResource.js";
 
 interface PermissionResource {
   /**

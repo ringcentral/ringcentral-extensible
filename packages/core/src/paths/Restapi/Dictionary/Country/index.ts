@@ -1,11 +1,11 @@
-import type CountryInfoDictionaryModel from "../../../../definitions/CountryInfoDictionaryModel";
-import type CountryListDictionaryModel from "../../../../definitions/CountryListDictionaryModel";
-import type ListCountriesParameters from "../../../../definitions/ListCountriesParameters";
-import type {
+import CountryInfoDictionaryModel from "../../../../definitions/CountryInfoDictionaryModel.js";
+import CountryListDictionaryModel from "../../../../definitions/CountryListDictionaryModel.js";
+import ListCountriesParameters from "../../../../definitions/ListCountriesParameters.js";
+import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../types";
+} from "../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

@@ -1,5 +1,5 @@
-import type UtteranceObject from "./UtteranceObject";
-import type WordSegment from "./WordSegment";
+import UtteranceObject from "./UtteranceObject.js";
+import WordSegment from "./WordSegment.js";
 
 interface TranscribedObject {
   /**

@@ -1,4 +1,4 @@
-import type RegAnswerModel from "./RegAnswerModel";
+import RegAnswerModel from "./RegAnswerModel.js";
 
 interface RegistrantModelWithQuestionnaire {
   /**

@@ -1,10 +1,10 @@
-import type CallSession from "../../../../../definitions/CallSession";
-import type MakeCallOutRequest from "../../../../../definitions/MakeCallOutRequest";
-import type {
+import CallSession from "../../../../../definitions/CallSession.js";
+import MakeCallOutRequest from "../../../../../definitions/MakeCallOutRequest.js";
+import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../types";
+} from "../../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

@@ -1,4 +1,4 @@
-import type GlobalDialInCountryResponse from "./GlobalDialInCountryResponse";
+import GlobalDialInCountryResponse from "./GlobalDialInCountryResponse.js";
 
 interface TelephonyUserMeetingSettings {
   /**

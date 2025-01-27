@@ -1,4 +1,4 @@
-import type PresenceNavigationInfoURI from "./PresenceNavigationInfoURI";
+import PresenceNavigationInfoURI from "./PresenceNavigationInfoURI.js";
 
 /**
  * Information on navigation

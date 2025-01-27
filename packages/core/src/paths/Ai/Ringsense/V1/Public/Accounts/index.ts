@@ -1,8 +1,8 @@
-import Domains from "./Domains";
-import type {
+import Domains from "./Domains/index.js";
+import {
   ParentInterface,
   RingCentralInterface,
-} from "../../../../../../types";
+} from "../../../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

@@ -1,4 +1,4 @@
-import type APSInfo from "./APSInfo";
+import APSInfo from "./APSInfo.js";
 
 interface IncomingCallEvent {
   /** */

@@ -1,6 +1,6 @@
-import type WebinarRefModel from "./WebinarRefModel";
-import type RecordingModel from "./RecordingModel";
-import type SessionLivestreamMinimalModel from "./SessionLivestreamMinimalModel";
+import WebinarRefModel from "./WebinarRefModel.js";
+import RecordingModel from "./RecordingModel.js";
+import SessionLivestreamMinimalModel from "./SessionLivestreamMinimalModel.js";
 
 interface SessionGlobalResource {
   /**

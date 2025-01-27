@@ -1,8 +1,8 @@
-import type UtteranceObject from "./UtteranceObject";
-import type WordSegment from "./WordSegment";
-import type UtteranceInsightsObject from "./UtteranceInsightsObject";
-import type SpeakerInsightsObject from "./SpeakerInsightsObject";
-import type ConversationalInsightsUnit from "./ConversationalInsightsUnit";
+import UtteranceObject from "./UtteranceObject.js";
+import WordSegment from "./WordSegment.js";
+import UtteranceInsightsObject from "./UtteranceInsightsObject.js";
+import SpeakerInsightsObject from "./SpeakerInsightsObject.js";
+import ConversationalInsightsUnit from "./ConversationalInsightsUnit.js";
 
 interface JobStatusResponseResponse {
   /**

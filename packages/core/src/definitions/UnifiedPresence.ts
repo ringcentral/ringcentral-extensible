@@ -1,6 +1,6 @@
-import type UnifiedPresenceGlip from "./UnifiedPresenceGlip";
-import type UnifiedPresenceTelephony from "./UnifiedPresenceTelephony";
-import type UnifiedPresenceMeeting from "./UnifiedPresenceMeeting";
+import UnifiedPresenceGlip from "./UnifiedPresenceGlip.js";
+import UnifiedPresenceTelephony from "./UnifiedPresenceTelephony.js";
+import UnifiedPresenceMeeting from "./UnifiedPresenceMeeting.js";
 
 interface UnifiedPresence {
   /**

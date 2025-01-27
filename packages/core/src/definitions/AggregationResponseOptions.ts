@@ -1,5 +1,5 @@
-import type AggregationResponseOptionsCounters from "./AggregationResponseOptionsCounters";
-import type AggregationResponseOptionsTimers from "./AggregationResponseOptionsTimers";
+import AggregationResponseOptionsCounters from "./AggregationResponseOptionsCounters.js";
+import AggregationResponseOptionsTimers from "./AggregationResponseOptionsTimers.js";
 
 /**
  * This field provides mapping of possible breakdown options for call aggregation and aggregation formula

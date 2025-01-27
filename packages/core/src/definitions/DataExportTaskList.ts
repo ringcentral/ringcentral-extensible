@@ -1,6 +1,6 @@
-import type DataExportTask from "./DataExportTask";
-import type GlipDataExportNavigationInfo from "./GlipDataExportNavigationInfo";
-import type GlipDataExportPagingInfo from "./GlipDataExportPagingInfo";
+import DataExportTask from "./DataExportTask.js";
+import GlipDataExportNavigationInfo from "./GlipDataExportNavigationInfo.js";
+import GlipDataExportPagingInfo from "./GlipDataExportPagingInfo.js";
 
 interface DataExportTaskList {
   /** */

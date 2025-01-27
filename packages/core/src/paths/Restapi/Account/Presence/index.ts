@@ -1,10 +1,10 @@
-import type AccountPresenceInfo from "../../../../definitions/AccountPresenceInfo";
-import type ReadAccountPresenceParameters from "../../../../definitions/ReadAccountPresenceParameters";
-import type {
+import AccountPresenceInfo from "../../../../definitions/AccountPresenceInfo.js";
+import ReadAccountPresenceParameters from "../../../../definitions/ReadAccountPresenceParameters.js";
+import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../types";
+} from "../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

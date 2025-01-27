@@ -1,6 +1,6 @@
-import type GetStateInfoResponse from "./GetStateInfoResponse";
-import type PageNavigationModel from "./PageNavigationModel";
-import type EnumeratedPagingModel from "./EnumeratedPagingModel";
+import GetStateInfoResponse from "./GetStateInfoResponse.js";
+import PageNavigationModel from "./PageNavigationModel.js";
+import EnumeratedPagingModel from "./EnumeratedPagingModel.js";
 
 interface GetStateListResponse {
   /**

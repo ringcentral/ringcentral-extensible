@@ -1,9 +1,9 @@
-import type ReadGreetingContentParameters from "../../../../../../definitions/ReadGreetingContentParameters";
-import type {
+import ReadGreetingContentParameters from "../../../../../../definitions/ReadGreetingContentParameters.js";
+import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../../types";
+} from "../../../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

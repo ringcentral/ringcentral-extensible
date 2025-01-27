@@ -1,15 +1,15 @@
-import type DeleteEmergencyLocationParameters from "../../../../definitions/DeleteEmergencyLocationParameters";
-import type CommonEmergencyLocationResource from "../../../../definitions/CommonEmergencyLocationResource";
-import type ReadEmergencyLocationParameters from "../../../../definitions/ReadEmergencyLocationParameters";
-import type EmergencyLocationResponseResource from "../../../../definitions/EmergencyLocationResponseResource";
-import type EmergencyLocationRequestResource from "../../../../definitions/EmergencyLocationRequestResource";
-import type EmergencyLocationsResource from "../../../../definitions/EmergencyLocationsResource";
-import type ListEmergencyLocationsParameters from "../../../../definitions/ListEmergencyLocationsParameters";
-import type {
+import DeleteEmergencyLocationParameters from "../../../../definitions/DeleteEmergencyLocationParameters.js";
+import CommonEmergencyLocationResource from "../../../../definitions/CommonEmergencyLocationResource.js";
+import ReadEmergencyLocationParameters from "../../../../definitions/ReadEmergencyLocationParameters.js";
+import EmergencyLocationResponseResource from "../../../../definitions/EmergencyLocationResponseResource.js";
+import EmergencyLocationRequestResource from "../../../../definitions/EmergencyLocationRequestResource.js";
+import EmergencyLocationsResource from "../../../../definitions/EmergencyLocationsResource.js";
+import ListEmergencyLocationsParameters from "../../../../definitions/ListEmergencyLocationsParameters.js";
+import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../types";
+} from "../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

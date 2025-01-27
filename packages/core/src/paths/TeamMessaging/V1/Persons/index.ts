@@ -1,9 +1,9 @@
-import type TMPersonInfo from "../../../../definitions/TMPersonInfo";
-import type {
+import TMPersonInfo from "../../../../definitions/TMPersonInfo.js";
+import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../types";
+} from "../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

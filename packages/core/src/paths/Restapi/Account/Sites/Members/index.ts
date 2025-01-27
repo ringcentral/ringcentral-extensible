@@ -1,9 +1,9 @@
-import type SiteMembersList from "../../../../../definitions/SiteMembersList";
-import type {
+import SiteMembersList from "../../../../../definitions/SiteMembersList.js";
+import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../types";
+} from "../../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

@@ -1,5 +1,5 @@
-import type PeerInfo from "./PeerInfo";
-import type MobilePickupData from "./MobilePickupData";
+import PeerInfo from "./PeerInfo.js";
+import MobilePickupData from "./MobilePickupData.js";
 
 /**
  * Status data of a call session

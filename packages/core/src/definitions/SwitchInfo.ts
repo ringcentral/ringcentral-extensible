@@ -1,6 +1,6 @@
-import type SwitchSiteInfo from "./SwitchSiteInfo";
-import type EmergencyAddressInfo from "./EmergencyAddressInfo";
-import type EmergencyLocationInfo from "./EmergencyLocationInfo";
+import SwitchSiteInfo from "./SwitchSiteInfo.js";
+import EmergencyAddressInfo from "./EmergencyAddressInfo.js";
+import EmergencyLocationInfo from "./EmergencyLocationInfo.js";
 
 interface SwitchInfo {
   /**

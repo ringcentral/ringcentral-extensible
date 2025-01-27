@@ -1,4 +1,4 @@
-import type RejectedRecipientResponseResource from "./RejectedRecipientResponseResource";
+import RejectedRecipientResponseResource from "./RejectedRecipientResponseResource.js";
 
 /**
  * Batch of A2P SMS messages. This object provides a specification

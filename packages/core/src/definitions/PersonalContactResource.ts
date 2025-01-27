@@ -1,4 +1,4 @@
-import type ContactAddressInfo from "./ContactAddressInfo";
+import ContactAddressInfo from "./ContactAddressInfo.js";
 
 interface PersonalContactResource {
   /**

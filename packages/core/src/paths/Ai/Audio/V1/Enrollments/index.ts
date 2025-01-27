@@ -1,13 +1,13 @@
-import type EnrollmentPatchInput from "../../../../../definitions/EnrollmentPatchInput";
-import type EnrollmentStatus from "../../../../../definitions/EnrollmentStatus";
-import type EnrollmentInput from "../../../../../definitions/EnrollmentInput";
-import type ListEnrolledSpeakers from "../../../../../definitions/ListEnrolledSpeakers";
-import type CaiEnrollmentsListParameters from "../../../../../definitions/CaiEnrollmentsListParameters";
-import type {
+import EnrollmentPatchInput from "../../../../../definitions/EnrollmentPatchInput.js";
+import EnrollmentStatus from "../../../../../definitions/EnrollmentStatus.js";
+import EnrollmentInput from "../../../../../definitions/EnrollmentInput.js";
+import ListEnrolledSpeakers from "../../../../../definitions/ListEnrolledSpeakers.js";
+import CaiEnrollmentsListParameters from "../../../../../definitions/CaiEnrollmentsListParameters.js";
+import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../types";
+} from "../../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

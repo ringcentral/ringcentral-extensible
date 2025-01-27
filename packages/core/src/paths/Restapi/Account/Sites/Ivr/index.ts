@@ -1,10 +1,10 @@
-import type SiteIVRSettingsUpdate from "../../../../../definitions/SiteIVRSettingsUpdate";
-import type SiteIVRSettings from "../../../../../definitions/SiteIVRSettings";
-import type {
+import SiteIVRSettingsUpdate from "../../../../../definitions/SiteIVRSettingsUpdate.js";
+import SiteIVRSettings from "../../../../../definitions/SiteIVRSettings.js";
+import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../types";
+} from "../../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

@@ -1,10 +1,10 @@
-import type CallQueueMembers from "../../../../../definitions/CallQueueMembers";
-import type ListCallQueueMembersParameters from "../../../../../definitions/ListCallQueueMembersParameters";
-import type {
+import CallQueueMembers from "../../../../../definitions/CallQueueMembers.js";
+import ListCallQueueMembersParameters from "../../../../../definitions/ListCallQueueMembersParameters.js";
+import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../types";
+} from "../../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

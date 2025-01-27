@@ -1,5 +1,5 @@
-import type PresetInfo from "./PresetInfo";
-import type CustomGreetingInfoRequest from "./CustomGreetingInfoRequest";
+import PresetInfo from "./PresetInfo.js";
+import CustomGreetingInfoRequest from "./CustomGreetingInfoRequest.js";
 
 interface GreetingInfo {
   /**

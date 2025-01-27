@@ -1,4 +1,4 @@
-import type AddDeviceToInventoryRequestSite from "./AddDeviceToInventoryRequestSite";
+import AddDeviceToInventoryRequestSite from "./AddDeviceToInventoryRequestSite.js";
 
 interface AddDeviceToInventoryRequest {
   /**

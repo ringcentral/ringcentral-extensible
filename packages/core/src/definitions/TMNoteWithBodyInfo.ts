@@ -1,6 +1,6 @@
-import type TMCreatorInfo from "./TMCreatorInfo";
-import type LastModifiedByInfo from "./LastModifiedByInfo";
-import type LockedByInfo from "./LockedByInfo";
+import TMCreatorInfo from "./TMCreatorInfo.js";
+import LastModifiedByInfo from "./LastModifiedByInfo.js";
+import LockedByInfo from "./LockedByInfo.js";
 
 interface TMNoteWithBodyInfo {
   /**

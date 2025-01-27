@@ -1,6 +1,6 @@
 import type { Stream } from "stream";
 
-import type { FormFile } from "./types";
+import type { FormFile } from "./types.js";
 
 async function stream2buffer(stream: Stream): Promise<Buffer> {
   return new Promise<Buffer>((resolve, reject) => {
@@ -38,12 +38,16 @@ class FormData {
       if (typeof formFile.content === "string") {
         fileBuffer = Buffer.from(`${formFile.content}\r\n`, "utf-8");
       } else if (Buffer.isBuffer(formFile.content)) {
-        fileBuffer = formFile.content;
+        fileBuffer = formFile.content as Buffer<ArrayBuffer>;
       } else if (formFile.content instanceof Blob) {
-        fileBuffer = Buffer.from(await formFile.content.arrayBuffer());
+        fileBuffer = Buffer.from(
+          await formFile.content.arrayBuffer(),
+        ) as Buffer<ArrayBuffer>;
       } else {
         // NodeJS.ReadableStream
-        fileBuffer = await stream2buffer(formFile.content as unknown as Stream);
+        fileBuffer = await stream2buffer(
+          formFile.content as unknown as Stream,
+        ) as Buffer<ArrayBuffer>;
       }
       buffer = Buffer.concat([buffer, fileBuffer]);
     }

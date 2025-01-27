@@ -1,4 +1,4 @@
-import type AddonInfo from "./AddonInfo";
+import AddonInfo from "./AddonInfo.js";
 
 /**
  * HardPhone model information

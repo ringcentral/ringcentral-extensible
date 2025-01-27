@@ -1,5 +1,5 @@
-import type CommonEmergencyLocationAddressInfo from "./CommonEmergencyLocationAddressInfo";
-import type EmergencyLocationInfo from "./EmergencyLocationInfo";
+import CommonEmergencyLocationAddressInfo from "./CommonEmergencyLocationAddressInfo.js";
+import EmergencyLocationInfo from "./EmergencyLocationInfo.js";
 
 interface PrivateIpRangeInfo {
   /** */

@@ -1,5 +1,5 @@
-import type { RestResponse } from "@rc-ex/core/src/types";
-import RestException from "@rc-ex/core/src/RestException";
+import type { RestResponse } from "@rc-ex/core/lib/esm/types.js";
+import RestException from "@rc-ex/core/lib/esm/RestException.js";
 import { describe, expect, test } from "vitest";
 
 import ReusableRestClient from "./reusable-rest-client";

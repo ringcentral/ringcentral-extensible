@@ -1,9 +1,9 @@
-import type AccountResource from "./AccountResource";
-import type PhoneNumberResource from "./PhoneNumberResource";
-import type AccountDirectoryProfileImageResource from "./AccountDirectoryProfileImageResource";
-import type BusinessSiteResource from "./BusinessSiteResource";
-import type CustomFieldResource from "./CustomFieldResource";
-import type ExternalIntegrationResource from "./ExternalIntegrationResource";
+import AccountResource from "./AccountResource.js";
+import PhoneNumberResource from "./PhoneNumberResource.js";
+import AccountDirectoryProfileImageResource from "./AccountDirectoryProfileImageResource.js";
+import BusinessSiteResource from "./BusinessSiteResource.js";
+import CustomFieldResource from "./CustomFieldResource.js";
+import ExternalIntegrationResource from "./ExternalIntegrationResource.js";
 
 interface ContactResource {
   /**

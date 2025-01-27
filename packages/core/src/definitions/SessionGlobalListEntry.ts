@@ -1,4 +1,4 @@
-import type WcsWebinarRefModel from "./WcsWebinarRefModel";
+import WcsWebinarRefModel from "./WcsWebinarRefModel.js";
 
 interface SessionGlobalListEntry {
   /**

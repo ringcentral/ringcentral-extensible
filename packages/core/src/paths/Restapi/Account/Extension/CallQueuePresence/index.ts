@@ -1,11 +1,11 @@
-import type ExtensionCallQueueUpdatePresenceList from "../../../../../definitions/ExtensionCallQueueUpdatePresenceList";
-import type ExtensionCallQueuePresenceList from "../../../../../definitions/ExtensionCallQueuePresenceList";
-import type ReadExtensionCallQueuePresenceParameters from "../../../../../definitions/ReadExtensionCallQueuePresenceParameters";
-import type {
+import ExtensionCallQueueUpdatePresenceList from "../../../../../definitions/ExtensionCallQueueUpdatePresenceList.js";
+import ExtensionCallQueuePresenceList from "../../../../../definitions/ExtensionCallQueuePresenceList.js";
+import ReadExtensionCallQueuePresenceParameters from "../../../../../definitions/ReadExtensionCallQueuePresenceParameters.js";
+import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../types";
+} from "../../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

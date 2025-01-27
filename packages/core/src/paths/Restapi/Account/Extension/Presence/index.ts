@@ -1,12 +1,12 @@
-import type PresenceInfoResponse from "../../../../../definitions/PresenceInfoResponse";
-import type PresenceInfoRequest from "../../../../../definitions/PresenceInfoRequest";
-import type GetPresenceInfo from "../../../../../definitions/GetPresenceInfo";
-import type ReadUserPresenceStatusParameters from "../../../../../definitions/ReadUserPresenceStatusParameters";
-import type {
+import PresenceInfoResponse from "../../../../../definitions/PresenceInfoResponse.js";
+import PresenceInfoRequest from "../../../../../definitions/PresenceInfoRequest.js";
+import GetPresenceInfo from "../../../../../definitions/GetPresenceInfo.js";
+import ReadUserPresenceStatusParameters from "../../../../../definitions/ReadUserPresenceStatusParameters.js";
+import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../types";
+} from "../../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

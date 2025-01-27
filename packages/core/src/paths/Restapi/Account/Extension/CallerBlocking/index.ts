@@ -1,11 +1,11 @@
-import PhoneNumbers from "./PhoneNumbers";
-import type CallerBlockingSettingsUpdate from "../../../../../definitions/CallerBlockingSettingsUpdate";
-import type CallerBlockingSettings from "../../../../../definitions/CallerBlockingSettings";
-import type {
+import PhoneNumbers from "./PhoneNumbers/index.js";
+import CallerBlockingSettingsUpdate from "../../../../../definitions/CallerBlockingSettingsUpdate.js";
+import CallerBlockingSettings from "../../../../../definitions/CallerBlockingSettings.js";
+import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../types";
+} from "../../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

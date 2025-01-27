@@ -1,4 +1,4 @@
-import type OutboundProxyInfo from "./OutboundProxyInfo";
+import OutboundProxyInfo from "./OutboundProxyInfo.js";
 
 interface SipInfoResource {
   /**

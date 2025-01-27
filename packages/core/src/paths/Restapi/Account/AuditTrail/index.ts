@@ -1,5 +1,5 @@
-import Search from "./Search";
-import type { ParentInterface, RingCentralInterface } from "../../../../types";
+import Search from "./Search/index.js";
+import { ParentInterface, RingCentralInterface } from "../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

@@ -3,10 +3,10 @@ import type {
   RestMethod,
   RestRequestConfig,
   RestResponse,
-} from "@rc-ex/core/src/types";
-import SdkExtension from "@rc-ex/core/src/SdkExtension";
-import RestException from "@rc-ex/core/src/RestException";
-import type SDK from "@ringcentral/sdk";
+} from "@rc-ex/core/lib/esm/types.js";
+import SdkExtension from "@rc-ex/core/lib/esm/SdkExtension.js";
+import RestException from "@rc-ex/core/lib/esm/RestException.js";
+import { SDK } from "@ringcentral/sdk";
 
 export interface RcSdkOptions {
   rcSdk: SDK;

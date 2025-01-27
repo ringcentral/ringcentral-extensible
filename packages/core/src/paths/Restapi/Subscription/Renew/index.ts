@@ -1,9 +1,9 @@
-import type SubscriptionInfo from "../../../../definitions/SubscriptionInfo";
-import type {
+import SubscriptionInfo from "../../../../definitions/SubscriptionInfo.js";
+import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../types";
+} from "../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

@@ -1,5 +1,5 @@
-import type GetPresenceExtensionInfo from "./GetPresenceExtensionInfo";
-import type ActiveCallInfo from "./ActiveCallInfo";
+import GetPresenceExtensionInfo from "./GetPresenceExtensionInfo.js";
+import ActiveCallInfo from "./ActiveCallInfo.js";
 
 interface GetPresenceInfo {
   /**

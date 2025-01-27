@@ -1,9 +1,9 @@
-import type TMNoteInfo from "../../../../../definitions/TMNoteInfo";
-import type {
+import TMNoteInfo from "../../../../../definitions/TMNoteInfo.js";
+import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../types";
+} from "../../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

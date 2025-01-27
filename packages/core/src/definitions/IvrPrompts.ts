@@ -1,6 +1,6 @@
-import type PromptInfo from "./PromptInfo";
-import type PageNavigationModel from "./PageNavigationModel";
-import type EnumeratedPagingModel from "./EnumeratedPagingModel";
+import PromptInfo from "./PromptInfo.js";
+import PageNavigationModel from "./PageNavigationModel.js";
+import EnumeratedPagingModel from "./EnumeratedPagingModel.js";
 
 interface IvrPrompts {
   /**

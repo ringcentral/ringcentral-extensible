@@ -1,10 +1,7 @@
-import SpeakerIdentify from "./SpeakerIdentify";
-import SpeakerDiarize from "./SpeakerDiarize";
-import SpeechToText from "./SpeechToText";
-import type {
-  ParentInterface,
-  RingCentralInterface,
-} from "../../../../../types";
+import SpeakerIdentify from "./SpeakerIdentify/index.js";
+import SpeakerDiarize from "./SpeakerDiarize/index.js";
+import SpeechToText from "./SpeechToText/index.js";
+import { ParentInterface, RingCentralInterface } from "../../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

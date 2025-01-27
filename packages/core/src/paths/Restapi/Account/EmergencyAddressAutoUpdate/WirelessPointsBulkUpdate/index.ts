@@ -1,10 +1,10 @@
-import type UpdateMultipleWirelessPointsResponse from "../../../../../definitions/UpdateMultipleWirelessPointsResponse";
-import type UpdateMultipleWirelessPointsRequest from "../../../../../definitions/UpdateMultipleWirelessPointsRequest";
-import type {
+import UpdateMultipleWirelessPointsResponse from "../../../../../definitions/UpdateMultipleWirelessPointsResponse.js";
+import UpdateMultipleWirelessPointsRequest from "../../../../../definitions/UpdateMultipleWirelessPointsRequest.js";
+import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../types";
+} from "../../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

@@ -1,5 +1,5 @@
-import type AddDeviceToInventoryResponseDevices from "./AddDeviceToInventoryResponseDevices";
-import type SiteBasicInfo from "./SiteBasicInfo";
+import AddDeviceToInventoryResponseDevices from "./AddDeviceToInventoryResponseDevices.js";
+import SiteBasicInfo from "./SiteBasicInfo.js";
 
 interface AddDeviceToInventoryResponse {
   /**

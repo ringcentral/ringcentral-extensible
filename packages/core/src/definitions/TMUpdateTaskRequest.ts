@@ -1,6 +1,6 @@
-import type TMUpdateTaskRequestAssignees from "./TMUpdateTaskRequestAssignees";
-import type TaskRecurrenceInfo from "./TaskRecurrenceInfo";
-import type TMAttachmentInfo from "./TMAttachmentInfo";
+import TMUpdateTaskRequestAssignees from "./TMUpdateTaskRequestAssignees.js";
+import TaskRecurrenceInfo from "./TaskRecurrenceInfo.js";
+import TMAttachmentInfo from "./TMAttachmentInfo.js";
 
 interface TMUpdateTaskRequest {
   /**

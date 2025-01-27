@@ -1,6 +1,6 @@
-import type AutomaticLocationUpdatesModelInfo from "./AutomaticLocationUpdatesModelInfo";
-import type AutomaticLocationUpdatesSiteInfo from "./AutomaticLocationUpdatesSiteInfo";
-import type AutomaticLocationUpdatesPhoneLine from "./AutomaticLocationUpdatesPhoneLine";
+import AutomaticLocationUpdatesModelInfo from "./AutomaticLocationUpdatesModelInfo.js";
+import AutomaticLocationUpdatesSiteInfo from "./AutomaticLocationUpdatesSiteInfo.js";
+import AutomaticLocationUpdatesPhoneLine from "./AutomaticLocationUpdatesPhoneLine.js";
 
 interface AutomaticLocationUpdatesDeviceInfo {
   /**

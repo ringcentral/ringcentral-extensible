@@ -1,5 +1,5 @@
-import type AssignPhoneNumberRequestExtension from "./AssignPhoneNumberRequestExtension";
-import type ContactCenterProvider from "./ContactCenterProvider";
+import AssignPhoneNumberRequestExtension from "./AssignPhoneNumberRequestExtension.js";
+import ContactCenterProvider from "./ContactCenterProvider.js";
 
 interface AssignPhoneNumberRequest {
   /**

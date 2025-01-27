@@ -1,6 +1,6 @@
-import type CallRecordingExtensionInfo from "./CallRecordingExtensionInfo";
-import type PageNavigationModel from "./PageNavigationModel";
-import type EnumeratedPagingModel from "./EnumeratedPagingModel";
+import CallRecordingExtensionInfo from "./CallRecordingExtensionInfo.js";
+import PageNavigationModel from "./PageNavigationModel.js";
+import EnumeratedPagingModel from "./EnumeratedPagingModel.js";
 
 interface CallRecordingExtensions {
   /**

@@ -1,4 +1,4 @@
-import type SummaryOutputUnit from "./SummaryOutputUnit";
+import SummaryOutputUnit from "./SummaryOutputUnit.js";
 
 interface SummaryOutput {
   /** */

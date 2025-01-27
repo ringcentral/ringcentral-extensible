@@ -10,7 +10,8 @@
     "test"
   ],
   "scripts": {
-    "compile": "lerna exec tsc --no-private && lerna exec 'cp -r src lib' --no-private",
+    "build:cjs": "lerna exec 'tsc --module CommonJS --outDir lib/cjs' --no-private",
+    "build:esm": "lerna exec 'tsc --module NodeNext --outDir lib/esm --declaration true' --no-private",
     "prepublishOnly": "yarn reset && yarn compile",
     "reset": "lerna exec 'rm -rf lib' && yarn delete-js",
     "test": "yarn workspace @rc-ex/test run vitest",

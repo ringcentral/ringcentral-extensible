@@ -1,4 +1,4 @@
-import type IVRMenuListInfo from "./IVRMenuListInfo";
+import IVRMenuListInfo from "./IVRMenuListInfo.js";
 
 interface IVRMenuList {
   /**

@@ -1,4 +1,4 @@
-import type AssignedRoleResource from "./AssignedRoleResource";
+import AssignedRoleResource from "./AssignedRoleResource.js";
 
 interface AssignedRolesResource {
   /**

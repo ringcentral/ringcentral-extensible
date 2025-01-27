@@ -5,8 +5,10 @@
   "author": "Tyler Liu <tyler.liu@ringcentral.com>",
   "homepage": "https://github.com/ringcentral/ringcentral-extensible/tree/master/packages/extensions/rcsdk",
   "license": "MIT",
-  "main": "src/index.js",
-  "types": "src/index.d.ts",
+  "type": "module",
+  "types": "./lib/esm/index.d.ts",
+  "main": "./lib/cjs/index.cjs",
+  "module": "./lib/esm/index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ringcentral/ringcentral-extensible.git"

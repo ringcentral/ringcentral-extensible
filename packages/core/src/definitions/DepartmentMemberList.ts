@@ -1,6 +1,6 @@
-import type ExtensionInfo from "./ExtensionInfo";
-import type PageNavigationModel from "./PageNavigationModel";
-import type EnumeratedPagingModel from "./EnumeratedPagingModel";
+import ExtensionInfo from "./ExtensionInfo.js";
+import PageNavigationModel from "./PageNavigationModel.js";
+import EnumeratedPagingModel from "./EnumeratedPagingModel.js";
 
 /**
  * Please note that legacy 'Department' extension type corresponds to

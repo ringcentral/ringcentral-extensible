@@ -1,4 +1,4 @@
-import type AIInsights from "./AIInsights";
+import AIInsights from "./AIInsights.js";
 
 interface RecordingInsights {
   /**

@@ -1,6 +1,6 @@
-import type OnDemandResource from "./OnDemandResource";
-import type AutomaticRecordingResource from "./AutomaticRecordingResource";
-import type CallRecordingGreetingResource from "./CallRecordingGreetingResource";
+import OnDemandResource from "./OnDemandResource.js";
+import AutomaticRecordingResource from "./AutomaticRecordingResource.js";
+import CallRecordingGreetingResource from "./CallRecordingGreetingResource.js";
 
 interface CallRecordingSettingsResource {
   /** */

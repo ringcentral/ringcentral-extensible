@@ -1,4 +1,4 @@
-import type MetaDataValues from "./MetaDataValues";
+import MetaDataValues from "./MetaDataValues.js";
 
 /**
  * Call metadata.

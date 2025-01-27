@@ -1,5 +1,5 @@
-import type CommonEmergencyLocationResource from "./CommonEmergencyLocationResource";
-import type EmergencyLocationsPaging from "./EmergencyLocationsPaging";
+import CommonEmergencyLocationResource from "./CommonEmergencyLocationResource.js";
+import EmergencyLocationsPaging from "./EmergencyLocationsPaging.js";
 
 interface EmergencyLocationsResource {
   /** */

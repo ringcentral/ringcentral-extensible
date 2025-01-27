@@ -1,12 +1,12 @@
-import type MessageBatchResponse from "../../../../../definitions/MessageBatchResponse";
-import type MessageBatchCreateRequest from "../../../../../definitions/MessageBatchCreateRequest";
-import type BatchListResponse from "../../../../../definitions/BatchListResponse";
-import type ListA2PBatchesParameters from "../../../../../definitions/ListA2PBatchesParameters";
-import type {
+import MessageBatchResponse from "../../../../../definitions/MessageBatchResponse.js";
+import MessageBatchCreateRequest from "../../../../../definitions/MessageBatchCreateRequest.js";
+import BatchListResponse from "../../../../../definitions/BatchListResponse.js";
+import ListA2PBatchesParameters from "../../../../../definitions/ListA2PBatchesParameters.js";
+import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../types";
+} from "../../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

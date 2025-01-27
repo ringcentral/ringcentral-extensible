@@ -1,6 +1,6 @@
-import type LanguageInfo from "./LanguageInfo";
-import type PageNavigationModel from "./PageNavigationModel";
-import type EnumeratedPagingModel from "./EnumeratedPagingModel";
+import LanguageInfo from "./LanguageInfo.js";
+import PageNavigationModel from "./PageNavigationModel.js";
+import EnumeratedPagingModel from "./EnumeratedPagingModel.js";
 
 interface LanguageList {
   /**

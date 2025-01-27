@@ -1,5 +1,5 @@
-import type Attachment from "./Attachment";
-import type GreetingAnsweringRuleId from "./GreetingAnsweringRuleId";
+import Attachment from "./Attachment.js";
+import GreetingAnsweringRuleId from "./GreetingAnsweringRuleId.js";
 
 /**
  * Request body for operation createCompanyGreeting

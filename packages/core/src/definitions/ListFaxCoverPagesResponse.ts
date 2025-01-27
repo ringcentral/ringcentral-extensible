@@ -1,6 +1,6 @@
-import type FaxCoverPageInfo from "./FaxCoverPageInfo";
-import type PageNavigationModel from "./PageNavigationModel";
-import type EnumeratedPagingModel from "./EnumeratedPagingModel";
+import FaxCoverPageInfo from "./FaxCoverPageInfo.js";
+import PageNavigationModel from "./PageNavigationModel.js";
+import EnumeratedPagingModel from "./EnumeratedPagingModel.js";
 
 interface ListFaxCoverPagesResponse {
   /**

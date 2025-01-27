@@ -1,15 +1,15 @@
-import BulkAssign from "./BulkAssign";
-import Default from "./Default";
-import type DeleteCustomRoleParameters from "../../../../definitions/DeleteCustomRoleParameters";
-import type ReadUserRoleParameters from "../../../../definitions/ReadUserRoleParameters";
-import type RoleResource from "../../../../definitions/RoleResource";
-import type RolesCollectionResource from "../../../../definitions/RolesCollectionResource";
-import type ListUserRolesParameters from "../../../../definitions/ListUserRolesParameters";
-import type {
+import BulkAssign from "./BulkAssign/index.js";
+import Default from "./Default/index.js";
+import DeleteCustomRoleParameters from "../../../../definitions/DeleteCustomRoleParameters.js";
+import ReadUserRoleParameters from "../../../../definitions/ReadUserRoleParameters.js";
+import RoleResource from "../../../../definitions/RoleResource.js";
+import RolesCollectionResource from "../../../../definitions/RolesCollectionResource.js";
+import ListUserRolesParameters from "../../../../definitions/ListUserRolesParameters.js";
+import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../types";
+} from "../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

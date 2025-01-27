@@ -1,9 +1,6 @@
-import Pstn from "./Pstn";
-import Web from "./Web";
-import type {
-  ParentInterface,
-  RingCentralInterface,
-} from "../../../../../types";
+import Pstn from "./Pstn/index.js";
+import Web from "./Web/index.js";
+import { ParentInterface, RingCentralInterface } from "../../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

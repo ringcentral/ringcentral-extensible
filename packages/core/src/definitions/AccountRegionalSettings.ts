@@ -1,9 +1,9 @@
-import type CountryInfoShortModel from "./CountryInfoShortModel";
-import type TimezoneInfo from "./TimezoneInfo";
-import type RegionalLanguageInfo from "./RegionalLanguageInfo";
-import type GreetingLanguageInfo from "./GreetingLanguageInfo";
-import type FormattingLocaleInfo from "./FormattingLocaleInfo";
-import type CurrencyInfo from "./CurrencyInfo";
+import CountryInfoShortModel from "./CountryInfoShortModel.js";
+import TimezoneInfo from "./TimezoneInfo.js";
+import RegionalLanguageInfo from "./RegionalLanguageInfo.js";
+import GreetingLanguageInfo from "./GreetingLanguageInfo.js";
+import FormattingLocaleInfo from "./FormattingLocaleInfo.js";
+import CurrencyInfo from "./CurrencyInfo.js";
 
 /**
  * Account level region data (web service Auto-Receptionist settings)

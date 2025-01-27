@@ -1,12 +1,12 @@
-import Supervise from "./Supervise";
-import Parties from "./Parties";
-import type CallSessionObject from "../../../../../definitions/CallSessionObject";
-import type ReadCallSessionStatusParameters from "../../../../../definitions/ReadCallSessionStatusParameters";
-import type {
+import Supervise from "./Supervise/index.js";
+import Parties from "./Parties/index.js";
+import CallSessionObject from "../../../../../definitions/CallSessionObject.js";
+import ReadCallSessionStatusParameters from "../../../../../definitions/ReadCallSessionStatusParameters.js";
+import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../types";
+} from "../../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

@@ -1,10 +1,10 @@
-import type RevokeTokenParameters from "../../../../definitions/RevokeTokenParameters";
-import type RevokeTokenRequest from "../../../../definitions/RevokeTokenRequest";
-import type {
+import RevokeTokenParameters from "../../../../definitions/RevokeTokenParameters.js";
+import RevokeTokenRequest from "../../../../definitions/RevokeTokenRequest.js";
+import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../types";
+} from "../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

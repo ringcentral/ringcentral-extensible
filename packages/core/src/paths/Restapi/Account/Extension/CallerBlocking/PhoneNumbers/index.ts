@@ -1,12 +1,12 @@
-import type BlockedAllowedPhoneNumberInfo from "../../../../../../definitions/BlockedAllowedPhoneNumberInfo";
-import type AddBlockedAllowedPhoneNumber from "../../../../../../definitions/AddBlockedAllowedPhoneNumber";
-import type BlockedAllowedPhoneNumbersList from "../../../../../../definitions/BlockedAllowedPhoneNumbersList";
-import type ListBlockedAllowedNumbersParameters from "../../../../../../definitions/ListBlockedAllowedNumbersParameters";
-import type {
+import BlockedAllowedPhoneNumberInfo from "../../../../../../definitions/BlockedAllowedPhoneNumberInfo.js";
+import AddBlockedAllowedPhoneNumber from "../../../../../../definitions/AddBlockedAllowedPhoneNumber.js";
+import BlockedAllowedPhoneNumbersList from "../../../../../../definitions/BlockedAllowedPhoneNumbersList.js";
+import ListBlockedAllowedNumbersParameters from "../../../../../../definitions/ListBlockedAllowedNumbersParameters.js";
+import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../../types";
+} from "../../../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

@@ -1,11 +1,11 @@
-import BulkAssign from "./BulkAssign";
-import type OptOutListResponse from "../../../../../definitions/OptOutListResponse";
-import type ReadA2PSMSOptOutsParameters from "../../../../../definitions/ReadA2PSMSOptOutsParameters";
-import type {
+import BulkAssign from "./BulkAssign/index.js";
+import OptOutListResponse from "../../../../../definitions/OptOutListResponse.js";
+import ReadA2PSMSOptOutsParameters from "../../../../../definitions/ReadA2PSMSOptOutsParameters.js";
+import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../types";
+} from "../../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

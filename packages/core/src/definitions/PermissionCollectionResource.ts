@@ -1,6 +1,6 @@
-import type PermissionResource from "./PermissionResource";
-import type EnumeratedPagingModel from "./EnumeratedPagingModel";
-import type PageNavigationModel from "./PageNavigationModel";
+import PermissionResource from "./PermissionResource.js";
+import EnumeratedPagingModel from "./EnumeratedPagingModel.js";
+import PageNavigationModel from "./PageNavigationModel.js";
 
 interface PermissionCollectionResource {
   /**

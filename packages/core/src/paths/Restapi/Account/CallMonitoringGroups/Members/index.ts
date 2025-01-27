@@ -1,10 +1,10 @@
-import type CallMonitoringGroupMemberList from "../../../../../definitions/CallMonitoringGroupMemberList";
-import type ListCallMonitoringGroupMembersParameters from "../../../../../definitions/ListCallMonitoringGroupMembersParameters";
-import type {
+import CallMonitoringGroupMemberList from "../../../../../definitions/CallMonitoringGroupMemberList.js";
+import ListCallMonitoringGroupMembersParameters from "../../../../../definitions/ListCallMonitoringGroupMembersParameters.js";
+import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../types";
+} from "../../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

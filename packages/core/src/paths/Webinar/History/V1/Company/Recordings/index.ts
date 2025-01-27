@@ -1,11 +1,11 @@
-import type RecordingAdminExtendedItemModel from "../../../../../../definitions/RecordingAdminExtendedItemModel";
-import type RecordingAdminListResource from "../../../../../../definitions/RecordingAdminListResource";
-import type RcwHistoryAdminListRecordingsParameters from "../../../../../../definitions/RcwHistoryAdminListRecordingsParameters";
-import type {
+import RecordingAdminExtendedItemModel from "../../../../../../definitions/RecordingAdminExtendedItemModel.js";
+import RecordingAdminListResource from "../../../../../../definitions/RecordingAdminListResource.js";
+import RcwHistoryAdminListRecordingsParameters from "../../../../../../definitions/RcwHistoryAdminListRecordingsParameters.js";
+import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../../types";
+} from "../../../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

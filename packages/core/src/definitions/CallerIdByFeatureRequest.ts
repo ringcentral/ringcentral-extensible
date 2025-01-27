@@ -1,4 +1,4 @@
-import type CallerIdByFeatureInfoRequest from "./CallerIdByFeatureInfoRequest";
+import CallerIdByFeatureInfoRequest from "./CallerIdByFeatureInfoRequest.js";
 
 /**
  * Caller ID settings by feature

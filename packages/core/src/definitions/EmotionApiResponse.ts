@@ -1,4 +1,4 @@
-import type EmotionSegment from "./EmotionSegment";
+import EmotionSegment from "./EmotionSegment.js";
 
 interface EmotionApiResponse {
   /** */

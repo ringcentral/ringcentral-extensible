@@ -1,6 +1,6 @@
-import type CommonEmergencyLocationAddressInfo from "./CommonEmergencyLocationAddressInfo";
-import type ShortSiteInfo from "./ShortSiteInfo";
-import type LocationOwnerInfo from "./LocationOwnerInfo";
+import CommonEmergencyLocationAddressInfo from "./CommonEmergencyLocationAddressInfo.js";
+import ShortSiteInfo from "./ShortSiteInfo.js";
+import LocationOwnerInfo from "./LocationOwnerInfo.js";
 
 /**
  * Company emergency response location details

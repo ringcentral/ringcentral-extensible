@@ -1,4 +1,4 @@
-import type CreateConversationRequestMembers from "./CreateConversationRequestMembers";
+import CreateConversationRequestMembers from "./CreateConversationRequestMembers.js";
 
 interface CreateConversationRequest {
   /**

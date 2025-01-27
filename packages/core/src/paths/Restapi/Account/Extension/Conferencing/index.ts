@@ -1,11 +1,11 @@
-import type UpdateConferencingInfoRequest from "../../../../../definitions/UpdateConferencingInfoRequest";
-import type GetConferencingInfoResponse from "../../../../../definitions/GetConferencingInfoResponse";
-import type ReadConferencingSettingsParameters from "../../../../../definitions/ReadConferencingSettingsParameters";
-import type {
+import UpdateConferencingInfoRequest from "../../../../../definitions/UpdateConferencingInfoRequest.js";
+import GetConferencingInfoResponse from "../../../../../definitions/GetConferencingInfoResponse.js";
+import ReadConferencingSettingsParameters from "../../../../../definitions/ReadConferencingSettingsParameters.js";
+import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../types";
+} from "../../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

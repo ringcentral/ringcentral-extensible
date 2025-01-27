@@ -1,4 +1,4 @@
-import type APNSInfo from "./APNSInfo";
+import APNSInfo from "./APNSInfo.js";
 
 interface MissedCallEvent {
   /**

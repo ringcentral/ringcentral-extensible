@@ -1,5 +1,5 @@
-import type DeviceInfoRequest from "./DeviceInfoRequest";
-import type SIPInfoRequest from "./SIPInfoRequest";
+import DeviceInfoRequest from "./DeviceInfoRequest.js";
+import SIPInfoRequest from "./SIPInfoRequest.js";
 
 interface CreateSipRegistrationRequest {
   /** */

@@ -1,4 +1,4 @@
-import type AddressBookBulkUploadTaskResult from "./AddressBookBulkUploadTaskResult";
+import AddressBookBulkUploadTaskResult from "./AddressBookBulkUploadTaskResult.js";
 
 /**
  * Information on a task for adding multiple contacts to multiple extensions

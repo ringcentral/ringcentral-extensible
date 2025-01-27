@@ -1,4 +1,4 @@
-import type TimeInterval from "./TimeInterval";
+import TimeInterval from "./TimeInterval.js";
 
 /**
  * Weekly schedule

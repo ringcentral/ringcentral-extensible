@@ -1,4 +1,4 @@
-import type EventRecurrenceInfo from "./EventRecurrenceInfo";
+import EventRecurrenceInfo from "./EventRecurrenceInfo.js";
 
 interface TMCreateEventRequest {
   /**

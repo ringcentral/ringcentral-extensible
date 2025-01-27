@@ -1,12 +1,12 @@
-import type ExtensionInfoCallLog from "./ExtensionInfoCallLog";
-import type BaseCallLogRecordTransferTarget from "./BaseCallLogRecordTransferTarget";
-import type BaseCallLogRecordTransferee from "./BaseCallLogRecordTransferee";
-import type CallLogFromParty from "./CallLogFromParty";
-import type CallLogToParty from "./CallLogToParty";
-import type CallLogRecordMessage from "./CallLogRecordMessage";
-import type CallLogDelegateInfo from "./CallLogDelegateInfo";
-import type CallLogRecordingInfo from "./CallLogRecordingInfo";
-import type BillingInfo from "./BillingInfo";
+import ExtensionInfoCallLog from "./ExtensionInfoCallLog.js";
+import BaseCallLogRecordTransferTarget from "./BaseCallLogRecordTransferTarget.js";
+import BaseCallLogRecordTransferee from "./BaseCallLogRecordTransferee.js";
+import CallLogFromParty from "./CallLogFromParty.js";
+import CallLogToParty from "./CallLogToParty.js";
+import CallLogRecordMessage from "./CallLogRecordMessage.js";
+import CallLogDelegateInfo from "./CallLogDelegateInfo.js";
+import CallLogRecordingInfo from "./CallLogRecordingInfo.js";
+import BillingInfo from "./BillingInfo.js";
 
 /**
  * Base schema for CallLogRecord and CallLogRecordLegInfo

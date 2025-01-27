@@ -1,4 +1,4 @@
-import type AssistantResource from "./AssistantResource";
+import AssistantResource from "./AssistantResource.js";
 
 interface AssistantsResource {
   /** */

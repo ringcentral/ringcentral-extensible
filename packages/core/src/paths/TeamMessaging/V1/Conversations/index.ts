@@ -1,12 +1,12 @@
-import type TMConversationInfo from "../../../../definitions/TMConversationInfo";
-import type CreateConversationRequest from "../../../../definitions/CreateConversationRequest";
-import type TMConversationList from "../../../../definitions/TMConversationList";
-import type ListGlipConversationsNewParameters from "../../../../definitions/ListGlipConversationsNewParameters";
-import type {
+import TMConversationInfo from "../../../../definitions/TMConversationInfo.js";
+import CreateConversationRequest from "../../../../definitions/CreateConversationRequest.js";
+import TMConversationList from "../../../../definitions/TMConversationList.js";
+import ListGlipConversationsNewParameters from "../../../../definitions/ListGlipConversationsNewParameters.js";
+import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../types";
+} from "../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

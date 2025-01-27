@@ -1,10 +1,10 @@
-import type TokenInfo from "../../../../definitions/TokenInfo";
-import type GetTokenRequest from "../../../../definitions/GetTokenRequest";
-import type {
+import TokenInfo from "../../../../definitions/TokenInfo.js";
+import GetTokenRequest from "../../../../definitions/GetTokenRequest.js";
+import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../types";
+} from "../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

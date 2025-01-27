@@ -1,4 +1,4 @@
-import type BulkAddDevicesItem from "./BulkAddDevicesItem";
+import BulkAddDevicesItem from "./BulkAddDevicesItem.js";
 
 interface BulkAddDevicesRequest {
   /**

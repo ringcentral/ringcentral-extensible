@@ -1,13 +1,13 @@
-import type MessageTemplateUpdateRequest from "../../../../definitions/MessageTemplateUpdateRequest";
-import type MessageTemplateResponse from "../../../../definitions/MessageTemplateResponse";
-import type MessageTemplateRequest from "../../../../definitions/MessageTemplateRequest";
-import type MessageTemplatesListResponse from "../../../../definitions/MessageTemplatesListResponse";
-import type ListCompanyMessageTemplatesParameters from "../../../../definitions/ListCompanyMessageTemplatesParameters";
-import type {
+import MessageTemplateUpdateRequest from "../../../../definitions/MessageTemplateUpdateRequest.js";
+import MessageTemplateResponse from "../../../../definitions/MessageTemplateResponse.js";
+import MessageTemplateRequest from "../../../../definitions/MessageTemplateRequest.js";
+import MessageTemplatesListResponse from "../../../../definitions/MessageTemplatesListResponse.js";
+import ListCompanyMessageTemplatesParameters from "../../../../definitions/ListCompanyMessageTemplatesParameters.js";
+import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../types";
+} from "../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

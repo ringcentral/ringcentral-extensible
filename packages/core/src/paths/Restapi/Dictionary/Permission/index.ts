@@ -1,11 +1,11 @@
-import type PermissionResource from "../../../../definitions/PermissionResource";
-import type PermissionCollectionResource from "../../../../definitions/PermissionCollectionResource";
-import type ListPermissionsParameters from "../../../../definitions/ListPermissionsParameters";
-import type {
+import PermissionResource from "../../../../definitions/PermissionResource.js";
+import PermissionCollectionResource from "../../../../definitions/PermissionCollectionResource.js";
+import ListPermissionsParameters from "../../../../definitions/ListPermissionsParameters.js";
+import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../types";
+} from "../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

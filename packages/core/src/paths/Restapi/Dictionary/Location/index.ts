@@ -1,10 +1,10 @@
-import type GetLocationListResponse from "../../../../definitions/GetLocationListResponse";
-import type ListLocationsParameters from "../../../../definitions/ListLocationsParameters";
-import type {
+import GetLocationListResponse from "../../../../definitions/GetLocationListResponse.js";
+import ListLocationsParameters from "../../../../definitions/ListLocationsParameters.js";
+import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../types";
+} from "../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

@@ -1,4 +1,4 @@
-import type SpeechContextPhrasesInput from "./SpeechContextPhrasesInput";
+import SpeechContextPhrasesInput from "./SpeechContextPhrasesInput.js";
 
 interface InteractionInput {
   /**

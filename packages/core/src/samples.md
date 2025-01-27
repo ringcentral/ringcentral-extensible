@@ -840,12 +840,8 @@ Search Audit Trail Data
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .auditTrail()
-  .search()
-  .post(accountHistorySearchPublicRequest);
+var result = await rc.restapi(apiVersion).account(accountId).auditTrail()
+  .search().post(accountHistorySearchPublicRequest);
 await rc.revoke();
 ```
 
@@ -874,12 +870,8 @@ List Call Queue Members
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .callQueues(groupId)
-  .members()
-  .get(listCallQueueMembersParameters);
+var result = await rc.restapi(apiVersion).account(accountId).callQueues(groupId)
+  .members().get(listCallQueueMembersParameters);
 await rc.revoke();
 ```
 
@@ -934,12 +926,8 @@ Update Call Queue Presence
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .callQueues(groupId)
-  .presence()
-  .put(callQueueUpdatePresence);
+var result = await rc.restapi(apiVersion).account(accountId).callQueues(groupId)
+  .presence().put(callQueueUpdatePresence);
 await rc.revoke();
 ```
 
@@ -996,10 +984,7 @@ Update Device
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .device(deviceId)
+var result = await rc.restapi(apiVersion).account(accountId).device(deviceId)
   .put(accountDeviceUpdate, updateDeviceParameters);
 await rc.revoke();
 ```
@@ -1059,12 +1044,8 @@ Get Corporate Directory Entry
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .directory()
-  .entries(entryId)
-  .get(readDirectoryEntryParameters);
+var result = await rc.restapi(apiVersion).account(accountId).directory()
+  .entries(entryId).get(readDirectoryEntryParameters);
 await rc.revoke();
 ```
 
@@ -1092,12 +1073,8 @@ Get Account Federation
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .directory()
-  .federation()
-  .get(readDirectoryFederationParameters);
+var result = await rc.restapi(apiVersion).account(accountId).directory()
+  .federation().get(readDirectoryFederationParameters);
 await rc.revoke();
 ```
 
@@ -1125,11 +1102,8 @@ List Emergency Locations
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .emergencyLocations()
-  .list(listEmergencyLocationsParameters);
+var result = await rc.restapi(apiVersion).account(accountId)
+  .emergencyLocations().list(listEmergencyLocationsParameters);
 await rc.revoke();
 ```
 
@@ -1158,11 +1132,8 @@ Add Emergency Location
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .emergencyLocations()
-  .post(emergencyLocationRequestResource);
+var result = await rc.restapi(apiVersion).account(accountId)
+  .emergencyLocations().post(emergencyLocationRequestResource);
 await rc.revoke();
 ```
 
@@ -1191,11 +1162,9 @@ Get Emergency Location
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .emergencyLocations(locationId)
-  .get(readEmergencyLocationParameters);
+var result = await rc.restapi(apiVersion).account(accountId).emergencyLocations(
+  locationId,
+).get(readEmergencyLocationParameters);
 await rc.revoke();
 ```
 
@@ -1224,11 +1193,9 @@ Update Emergency Location
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .emergencyLocations(locationId)
-  .put(emergencyLocationRequestResource);
+var result = await rc.restapi(apiVersion).account(accountId).emergencyLocations(
+  locationId,
+).put(emergencyLocationRequestResource);
 await rc.revoke();
 ```
 
@@ -1257,11 +1224,9 @@ Delete Emergency Location
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .emergencyLocations(locationId)
-  .delete(deleteEmergencyLocationParameters);
+var result = await rc.restapi(apiVersion).account(accountId).emergencyLocations(
+  locationId,
+).delete(deleteEmergencyLocationParameters);
 await rc.revoke();
 ```
 
@@ -1319,12 +1284,9 @@ List User Call Records
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .extension(extensionId)
-  .callLog()
-  .list(readUserCallLogParameters);
+var result = await rc.restapi(apiVersion).account(accountId).extension(
+  extensionId,
+).callLog().list(readUserCallLogParameters);
 await rc.revoke();
 ```
 
@@ -1353,12 +1315,9 @@ Delete User Call Records
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .extension(extensionId)
-  .callLog()
-  .delete(deleteUserCallLogParameters);
+var result = await rc.restapi(apiVersion).account(accountId).extension(
+  extensionId,
+).callLog().delete(deleteUserCallLogParameters);
 await rc.revoke();
 ```
 
@@ -1387,12 +1346,9 @@ Get User Call Record(s)
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .extension(extensionId)
-  .callLog(callRecordId)
-  .get(readUserCallRecordParameters);
+var result = await rc.restapi(apiVersion).account(accountId).extension(
+  extensionId,
+).callLog(callRecordId).get(readUserCallRecordParameters);
 await rc.revoke();
 ```
 
@@ -1481,12 +1437,9 @@ Update Extension Caller ID
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .extension(extensionId)
-  .callerId()
-  .put(extensionCallerIdInfoRequest);
+var result = await rc.restapi(apiVersion).account(accountId).extension(
+  extensionId,
+).callerId().put(extensionCallerIdInfoRequest);
 await rc.revoke();
 ```
 
@@ -1578,12 +1531,9 @@ Get User Features
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .extension(extensionId)
-  .features()
-  .get(readExtensionFeaturesParameters);
+var result = await rc.restapi(apiVersion).account(accountId).extension(
+  extensionId,
+).features().get(readExtensionFeaturesParameters);
 await rc.revoke();
 ```
 
@@ -1612,12 +1562,12 @@ Create Custom User Greeting
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .extension(extensionId)
-  .greeting()
-  .post(createCustomUserGreetingRequest, createCustomUserGreetingParameters);
+var result = await rc.restapi(apiVersion).account(accountId).extension(
+  extensionId,
+).greeting().post(
+  createCustomUserGreetingRequest,
+  createCustomUserGreetingParameters,
+);
 await rc.revoke();
 ```
 
@@ -1679,12 +1629,9 @@ Get User Presence Status
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .extension(extensionId)
-  .presence()
-  .get(readUserPresenceStatusParameters);
+var result = await rc.restapi(apiVersion).account(accountId).extension(
+  extensionId,
+).presence().get(readUserPresenceStatusParameters);
 await rc.revoke();
 ```
 
@@ -1894,12 +1841,9 @@ Get IVR Prompt Content
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .ivrPrompts(promptId)
-  .content()
-  .get(readIVRPromptContentParameters);
+var result = await rc.restapi(apiVersion).account(accountId).ivrPrompts(
+  promptId,
+).content().get(readIVRPromptContentParameters);
 await rc.revoke();
 ```
 
@@ -2214,12 +2158,8 @@ Get Call Session Status
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .telephony()
-  .sessions(telephonySessionId)
-  .get(readCallSessionStatusParameters);
+var result = await rc.restapi(apiVersion).account(accountId).telephony()
+  .sessions(telephonySessionId).get(readCallSessionStatusParameters);
 await rc.revoke();
 ```
 
@@ -4997,11 +4937,10 @@ Parse Phone Number(s)
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .numberParser()
-  .parse()
-  .post(parsePhoneNumberRequest, parsePhoneNumberParameters);
+var result = await rc.restapi(apiVersion).numberParser().parse().post(
+  parsePhoneNumberRequest,
+  parsePhoneNumberParameters,
+);
 await rc.revoke();
 ```
 
@@ -6654,12 +6593,9 @@ List Extension Devices
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .extension(extensionId)
-  .device()
-  .get(listExtensionDevicesParameters);
+var result = await rc.restapi(apiVersion).account(accountId).extension(
+  extensionId,
+).device().get(listExtensionDevicesParameters);
 await rc.revoke();
 ```
 
@@ -6689,12 +6625,9 @@ List Extension Grants
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .extension(extensionId)
-  .grant()
-  .get(listExtensionGrantsParameters);
+var result = await rc.restapi(apiVersion).account(accountId).extension(
+  extensionId,
+).grant().get(listExtensionGrantsParameters);
 await rc.revoke();
 ```
 
@@ -6724,12 +6657,9 @@ Get Account Greeting Media Content
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .greeting(greetingId)
-  .content()
-  .get(readAccountGreetingContentParameters);
+var result = await rc.restapi(apiVersion).account(accountId).greeting(
+  greetingId,
+).content().get(readAccountGreetingContentParameters);
 await rc.revoke();
 ```
 
@@ -6762,12 +6692,9 @@ Get Call Recording Content
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .recording(recordingId)
-  .content()
-  .get(readCallRecordingContentParameters);
+var result = await rc.restapi(apiVersion).account(accountId).recording(
+  recordingId,
+).content().get(readCallRecordingContentParameters);
 await rc.revoke();
 ```
 
@@ -7671,13 +7598,10 @@ Interaction Analytics
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .ai()
-  .insights()
-  .v1()
-  .async()
-  .analyzeInteraction()
-  .post(interactionInput, caiAnalyzeInteractionParameters);
+var result = await rc.ai().insights().v1().async().analyzeInteraction().post(
+  interactionInput,
+  caiAnalyzeInteractionParameters,
+);
 await rc.revoke();
 ```
 
@@ -7706,13 +7630,8 @@ List User Recordings
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .rcvideo()
-  .v1()
-  .account(accountId)
-  .extension(extensionId)
-  .recordings()
-  .get(getExtensionRecordingsParameters);
+var result = await rc.rcvideo().v1().account(accountId).extension(extensionId)
+  .recordings().get(getExtensionRecordingsParameters);
 await rc.revoke();
 ```
 
@@ -7766,13 +7685,9 @@ Replace Phone Number
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi()
-  .v2()
-  .accounts(accountId)
-  .phoneNumbers(phoneNumberId)
-  .replace()
-  .post(replacePhoneNumberRequest);
+var result = await rc.restapi().v2().accounts(accountId).phoneNumbers(
+  phoneNumberId,
+).replace().post(replacePhoneNumberRequest);
 await rc.revoke();
 ```
 
@@ -7881,11 +7796,8 @@ List Call Monitoring Groups
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .callMonitoringGroups()
-  .get(listCallMonitoringGroupsParameters);
+var result = await rc.restapi(apiVersion).account(accountId)
+  .callMonitoringGroups().get(listCallMonitoringGroupsParameters);
 await rc.revoke();
 ```
 
@@ -7914,11 +7826,8 @@ Create Call Monitoring Group
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .callMonitoringGroups()
-  .post(createCallMonitoringGroupRequest);
+var result = await rc.restapi(apiVersion).account(accountId)
+  .callMonitoringGroups().post(createCallMonitoringGroupRequest);
 await rc.revoke();
 ```
 
@@ -7947,11 +7856,8 @@ Update Call Monitoring Group
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .callMonitoringGroups(groupId)
-  .put(createCallMonitoringGroupRequest);
+var result = await rc.restapi(apiVersion).account(accountId)
+  .callMonitoringGroups(groupId).put(createCallMonitoringGroupRequest);
 await rc.revoke();
 ```
 
@@ -8007,12 +7913,8 @@ Assign Multiple Call Queue Members
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .callQueues(groupId)
-  .bulkAssign()
-  .post(callQueueBulkAssignResource);
+var result = await rc.restapi(apiVersion).account(accountId).callQueues(groupId)
+  .bulkAssign().post(callQueueBulkAssignResource);
 await rc.revoke();
 ```
 
@@ -8068,13 +7970,11 @@ Search Company Directory Entries
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .directory()
-  .entries()
-  .search()
-  .post(searchDirectoryEntriesRequest, searchDirectoryEntriesParameters);
+var result = await rc.restapi(apiVersion).account(accountId).directory()
+  .entries().search().post(
+    searchDirectoryEntriesRequest,
+    searchDirectoryEntriesParameters,
+  );
 await rc.revoke();
 ```
 
@@ -8104,12 +8004,9 @@ List User Active Calls
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .extension(extensionId)
-  .activeCalls()
-  .get(listExtensionActiveCallsParameters);
+var result = await rc.restapi(apiVersion).account(accountId).extension(
+  extensionId,
+).activeCalls().get(listExtensionActiveCallsParameters);
 await rc.revoke();
 ```
 
@@ -8138,12 +8035,9 @@ List Call Handling Rules
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .extension(extensionId)
-  .answeringRule()
-  .list(listAnsweringRulesParameters);
+var result = await rc.restapi(apiVersion).account(accountId).extension(
+  extensionId,
+).answeringRule().list(listAnsweringRulesParameters);
 await rc.revoke();
 ```
 
@@ -8173,12 +8067,9 @@ Create Call Handling Rule
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .extension(extensionId)
-  .answeringRule()
-  .post(createAnsweringRuleRequest);
+var result = await rc.restapi(apiVersion).account(accountId).extension(
+  extensionId,
+).answeringRule().post(createAnsweringRuleRequest);
 await rc.revoke();
 ```
 
@@ -8208,12 +8099,9 @@ Get Call Handling Rule
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .extension(extensionId)
-  .answeringRule(ruleId)
-  .get(readAnsweringRuleParameters);
+var result = await rc.restapi(apiVersion).account(accountId).extension(
+  extensionId,
+).answeringRule(ruleId).get(readAnsweringRuleParameters);
 await rc.revoke();
 ```
 
@@ -8243,12 +8131,9 @@ Update Call Handling Rule
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .extension(extensionId)
-  .answeringRule(ruleId)
-  .put(updateAnsweringRuleRequest);
+var result = await rc.restapi(apiVersion).account(accountId).extension(
+  extensionId,
+).answeringRule(ruleId).put(updateAnsweringRuleRequest);
 await rc.revoke();
 ```
 
@@ -8307,12 +8192,9 @@ List User Assigned Roles
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .extension(extensionId)
-  .assignedRole()
-  .get(listUserAssignedRolesParameters);
+var result = await rc.restapi(apiVersion).account(accountId).extension(
+  extensionId,
+).assignedRole().get(listUserAssignedRolesParameters);
 await rc.revoke();
 ```
 
@@ -8342,12 +8224,9 @@ Update User Assigned Roles
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .extension(extensionId)
-  .assignedRole()
-  .put(assignedRolesResource);
+var result = await rc.restapi(apiVersion).account(accountId).extension(
+  extensionId,
+).assignedRole().put(assignedRolesResource);
 await rc.revoke();
 ```
 
@@ -8377,12 +8256,9 @@ Get Authorization Profile
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .extension(extensionId)
-  .authzProfile()
-  .get(readAuthorizationProfileParameters);
+var result = await rc.restapi(apiVersion).account(accountId).extension(
+  extensionId,
+).authzProfile().get(readAuthorizationProfileParameters);
 await rc.revoke();
 ```
 
@@ -8442,12 +8318,9 @@ Update User Business Hours
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .extension(extensionId)
-  .businessHours()
-  .put(userBusinessHoursUpdateRequest);
+var result = await rc.restapi(apiVersion).account(accountId).extension(
+  extensionId,
+).businessHours().put(userBusinessHoursUpdateRequest);
 await rc.revoke();
 ```
 
@@ -8477,12 +8350,9 @@ Sync User Call Log
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .extension(extensionId)
-  .callLogSync()
-  .get(syncUserCallLogParameters);
+var result = await rc.restapi(apiVersion).account(accountId).extension(
+  extensionId,
+).callLogSync().get(syncUserCallLogParameters);
 await rc.revoke();
 ```
 
@@ -8542,12 +8412,9 @@ Update Caller Blocking Settings
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .extension(extensionId)
-  .callerBlocking()
-  .put(callerBlockingSettingsUpdate);
+var result = await rc.restapi(apiVersion).account(accountId).extension(
+  extensionId,
+).callerBlocking().put(callerBlockingSettingsUpdate);
 await rc.revoke();
 ```
 
@@ -8577,12 +8444,9 @@ Create Internal Text Message
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .extension(extensionId)
-  .companyPager()
-  .post(createInternalTextMessageRequest);
+var result = await rc.restapi(apiVersion).account(accountId).extension(
+  extensionId,
+).companyPager().post(createInternalTextMessageRequest);
 await rc.revoke();
 ```
 
@@ -8612,12 +8476,9 @@ Get User Conferencing Settings
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .extension(extensionId)
-  .conferencing()
-  .get(readConferencingSettingsParameters);
+var result = await rc.restapi(apiVersion).account(accountId).extension(
+  extensionId,
+).conferencing().get(readConferencingSettingsParameters);
 await rc.revoke();
 ```
 
@@ -8647,12 +8508,9 @@ Update User Conferencing Settings
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .extension(extensionId)
-  .conferencing()
-  .put(updateConferencingInfoRequest);
+var result = await rc.restapi(apiVersion).account(accountId).extension(
+  extensionId,
+).conferencing().put(updateConferencingInfoRequest);
 await rc.revoke();
 ```
 
@@ -8682,13 +8540,9 @@ Get Extension Greeting Media Content
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .extension(extensionId)
-  .greeting(greetingId)
-  .content()
-  .get(readGreetingContentParameters);
+var result = await rc.restapi(apiVersion).account(accountId).extension(
+  extensionId,
+).greeting(greetingId).content().get(readGreetingContentParameters);
 await rc.revoke();
 ```
 
@@ -8722,12 +8576,9 @@ List Messages
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .extension(extensionId)
-  .messageStore()
-  .list(listMessagesParameters);
+var result = await rc.restapi(apiVersion).account(accountId).extension(
+  extensionId,
+).messageStore().list(listMessagesParameters);
 await rc.revoke();
 ```
 
@@ -8756,12 +8607,9 @@ Delete Conversation
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .extension(extensionId)
-  .messageStore()
-  .deleteAll(deleteMessageByFilterParameters);
+var result = await rc.restapi(apiVersion).account(accountId).extension(
+  extensionId,
+).messageStore().deleteAll(deleteMessageByFilterParameters);
 await rc.revoke();
 ```
 
@@ -8820,12 +8668,9 @@ Update Message(s)
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .extension(extensionId)
-  .messageStore(messageId)
-  .put(updateMessageRequest);
+var result = await rc.restapi(apiVersion).account(accountId).extension(
+  extensionId,
+).messageStore(messageId).put(updateMessageRequest);
 await rc.revoke();
 ```
 
@@ -8855,12 +8700,12 @@ Delete Message
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .extension(extensionId)
-  .messageStore(messageId)
-  .delete(deleteMessageBulkRequest, deleteMessageParameters);
+var result = await rc.restapi(apiVersion).account(accountId).extension(
+  extensionId,
+).messageStore(messageId).delete(
+  deleteMessageBulkRequest,
+  deleteMessageParameters,
+);
 await rc.revoke();
 ```
 
@@ -8891,12 +8736,9 @@ Patch Message(s)
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .extension(extensionId)
-  .messageStore(messageId)
-  .patch(patchMessageRequest);
+var result = await rc.restapi(apiVersion).account(accountId).extension(
+  extensionId,
+).messageStore(messageId).patch(patchMessageRequest);
 await rc.revoke();
 ```
 
@@ -8926,12 +8768,9 @@ Sync Messages
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .extension(extensionId)
-  .messageSync()
-  .get(syncMessagesParameters);
+var result = await rc.restapi(apiVersion).account(accountId).extension(
+  extensionId,
+).messageSync().get(syncMessagesParameters);
 await rc.revoke();
 ```
 
@@ -8961,12 +8800,9 @@ Get Extension Phone Number List
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .extension(extensionId)
-  .phoneNumber()
-  .get(listExtensionPhoneNumbersParameters);
+var result = await rc.restapi(apiVersion).account(accountId).extension(
+  extensionId,
+).phoneNumber().get(listExtensionPhoneNumbersParameters);
 await rc.revoke();
 ```
 
@@ -9030,12 +8866,9 @@ Upload User Profile Image
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .extension(extensionId)
-  .profileImage()
-  .post(createUserProfileImageRequest);
+var result = await rc.restapi(apiVersion).account(accountId).extension(
+  extensionId,
+).profileImage().post(createUserProfileImageRequest);
 await rc.revoke();
 ```
 
@@ -9064,12 +8897,9 @@ Update User Profile Image
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .extension(extensionId)
-  .profileImage()
-  .put(updateUserProfileImageRequest);
+var result = await rc.restapi(apiVersion).account(accountId).extension(
+  extensionId,
+).profileImage().put(updateUserProfileImageRequest);
 await rc.revoke();
 ```
 
@@ -9127,12 +8957,9 @@ Get Scaled Profile Image
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .extension(extensionId)
-  .profileImage(scaleSize)
-  .get(readScaledProfileImageParameters);
+var result = await rc.restapi(apiVersion).account(accountId).extension(
+  extensionId,
+).profileImage(scaleSize).get(readScaledProfileImageParameters);
 await rc.revoke();
 ```
 
@@ -9166,11 +8993,8 @@ List Company Message Templates
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .messageStoreTemplates()
-  .list(listCompanyMessageTemplatesParameters);
+var result = await rc.restapi(apiVersion).account(accountId)
+  .messageStoreTemplates().list(listCompanyMessageTemplatesParameters);
 await rc.revoke();
 ```
 
@@ -9257,11 +9081,8 @@ Update Company Message Template
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .messageStoreTemplates(templateId)
-  .put(messageTemplateUpdateRequest);
+var result = await rc.restapi(apiVersion).account(accountId)
+  .messageStoreTemplates(templateId).put(messageTemplateUpdateRequest);
 await rc.revoke();
 ```
 
@@ -9317,12 +9138,9 @@ Get Paging Group Users
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .pagingOnlyGroups(pagingOnlyGroupId)
-  .users()
-  .get(listPagingGroupUsersParameters);
+var result = await rc.restapi(apiVersion).account(accountId).pagingOnlyGroups(
+  pagingOnlyGroupId,
+).users().get(listPagingGroupUsersParameters);
 await rc.revoke();
 ```
 
@@ -9351,13 +9169,8 @@ Get Call Party Status
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .telephony()
-  .sessions(telephonySessionId)
-  .parties(partyId)
-  .get();
+var result = await rc.restapi(apiVersion).account(accountId).telephony()
+  .sessions(telephonySessionId).parties(partyId).get();
 await rc.revoke();
 ```
 
@@ -9383,13 +9196,8 @@ Delete Call Party
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .telephony()
-  .sessions(telephonySessionId)
-  .parties(partyId)
-  .delete();
+var result = await rc.restapi(apiVersion).account(accountId).telephony()
+  .sessions(telephonySessionId).parties(partyId).delete();
 await rc.revoke();
 ```
 
@@ -9415,13 +9223,8 @@ Update Call Party
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .telephony()
-  .sessions(telephonySessionId)
-  .parties(partyId)
-  .patch(partyUpdateRequest);
+var result = await rc.restapi(apiVersion).account(accountId).telephony()
+  .sessions(telephonySessionId).parties(partyId).patch(partyUpdateRequest);
 await rc.revoke();
 ```
 
@@ -9535,13 +9338,9 @@ List Sessions across Multiple Webinars/Hosts
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .webinar()
-  .configuration()
-  .v1()
-  .company()
-  .sessions()
-  .get(rcwConfigListAllCompanySessionsParameters);
+var result = await rc.webinar().configuration().v1().company().sessions().get(
+  rcwConfigListAllCompanySessionsParameters,
+);
 await rc.revoke();
 ```
 
@@ -9568,13 +9367,8 @@ Get Webinar Recording Download Resource
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .webinar()
-  .history()
-  .v1()
-  .recordings(recordingId)
-  .download()
-  .get(rcwHistoryGetRecordingDownloadParameters);
+var result = await rc.webinar().history().v1().recordings(recordingId)
+  .download().get(rcwHistoryGetRecordingDownloadParameters);
 await rc.revoke();
 ```
 
@@ -9734,14 +9528,8 @@ Calls Aggregation Data
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .analytics()
-  .calls()
-  .v1()
-  .accounts(accountId)
-  .aggregation()
-  .fetch()
-  .post(aggregationRequest, analyticsCallsAggregationFetchParameters);
+var result = await rc.analytics().calls().v1().accounts(accountId).aggregation()
+  .fetch().post(aggregationRequest, analyticsCallsAggregationFetchParameters);
 await rc.revoke();
 ```
 
@@ -9770,14 +9558,8 @@ Calls Timeline Data
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .analytics()
-  .calls()
-  .v1()
-  .accounts(accountId)
-  .timeline()
-  .fetch()
-  .post(timelineRequest, analyticsCallsTimelineFetchParameters);
+var result = await rc.analytics().calls().v1().accounts(accountId).timeline()
+  .fetch().post(timelineRequest, analyticsCallsTimelineFetchParameters);
 await rc.revoke();
 ```
 
@@ -9860,14 +9642,8 @@ Swap Devices
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi()
-  .v2()
-  .accounts(accountId)
-  .extensions(extensionId)
-  .devices(deviceId)
-  .replace()
-  .post(swapDeviceRequest);
+var result = await rc.restapi().v2().accounts(accountId).extensions(extensionId)
+  .devices(deviceId).replace().post(swapDeviceRequest);
 await rc.revoke();
 ```
 
@@ -9948,13 +9724,8 @@ Add Opt-In/Out Numbers
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .a2pSms()
-  .optOuts()
-  .bulkAssign()
-  .post(optOutBulkAssignRequest);
+var result = await rc.restapi(apiVersion).account(accountId).a2pSms().optOuts()
+  .bulkAssign().post(optOutBulkAssignRequest);
 await rc.revoke();
 ```
 
@@ -10011,12 +9782,10 @@ List Call Monitoring Group Members
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .callMonitoringGroups(groupId)
-  .members()
-  .get(listCallMonitoringGroupMembersParameters);
+var result = await rc.restapi(apiVersion).account(accountId)
+  .callMonitoringGroups(groupId).members().get(
+    listCallMonitoringGroupMembersParameters,
+  );
 await rc.revoke();
 ```
 
@@ -10045,12 +9814,8 @@ Update Call Recording Extension List
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .callRecording()
-  .bulkAssign()
-  .post(bulkAccountCallRecordingsResource);
+var result = await rc.restapi(apiVersion).account(accountId).callRecording()
+  .bulkAssign().post(bulkAccountCallRecordingsResource);
 await rc.revoke();
 ```
 
@@ -10078,12 +9843,8 @@ Get Call Recording Custom Greeting List
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .callRecording()
-  .customGreetings()
-  .get(listCallRecordingCustomGreetingsParameters);
+var result = await rc.restapi(apiVersion).account(accountId).callRecording()
+  .customGreetings().get(listCallRecordingCustomGreetingsParameters);
 await rc.revoke();
 ```
 
@@ -10223,12 +9984,9 @@ Update Call Queue Overflow Settings
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .extension(callQueueId)
-  .overflowSettings()
-  .put(callQueueOverflowSettingsRequestResource);
+var result = await rc.restapi(apiVersion).account(accountId).extension(
+  callQueueId,
+).overflowSettings().put(callQueueOverflowSettingsRequestResource);
 await rc.revoke();
 ```
 
@@ -10257,12 +10015,9 @@ Address Book Synchronization
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .extension(extensionId)
-  .addressBookSync()
-  .get(syncAddressBookParameters);
+var result = await rc.restapi(apiVersion).account(accountId).extension(
+  extensionId,
+).addressBookSync().get(syncAddressBookParameters);
 await rc.revoke();
 ```
 
@@ -10291,13 +10046,9 @@ List Contacts
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .extension(extensionId)
-  .addressBook()
-  .contact()
-  .list(listContactsParameters);
+var result = await rc.restapi(apiVersion).account(accountId).extension(
+  extensionId,
+).addressBook().contact().list(listContactsParameters);
 await rc.revoke();
 ```
 
@@ -10326,13 +10077,9 @@ Create User Contact
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .extension(extensionId)
-  .addressBook()
-  .contact()
-  .post(personalContactRequest, createContactParameters);
+var result = await rc.restapi(apiVersion).account(accountId).extension(
+  extensionId,
+).addressBook().contact().post(personalContactRequest, createContactParameters);
 await rc.revoke();
 ```
 
@@ -10364,13 +10111,9 @@ Get User Contact(s)
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .extension(extensionId)
-  .addressBook()
-  .contact(contactId)
-  .get();
+var result = await rc.restapi(apiVersion).account(accountId).extension(
+  extensionId,
+).addressBook().contact(contactId).get();
 await rc.revoke();
 ```
 
@@ -10398,13 +10141,12 @@ Update User Contact(s)
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .extension(extensionId)
-  .addressBook()
-  .contact(contactId)
-  .put(personalContactRequest, updateContactParameters);
+var result = await rc.restapi(apiVersion).account(accountId).extension(
+  extensionId,
+).addressBook().contact(contactId).put(
+  personalContactRequest,
+  updateContactParameters,
+);
 await rc.revoke();
 ```
 
@@ -10436,13 +10178,9 @@ Delete User Contact(s)
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .extension(extensionId)
-  .addressBook()
-  .contact(contactId)
-  .delete();
+var result = await rc.restapi(apiVersion).account(accountId).extension(
+  extensionId,
+).addressBook().contact(contactId).delete();
 await rc.revoke();
 ```
 
@@ -10469,13 +10207,12 @@ Update Contact Attributes
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .extension(extensionId)
-  .addressBook()
-  .contact(contactId)
-  .patch(personalContactRequest, patchContactParameters);
+var result = await rc.restapi(apiVersion).account(accountId).extension(
+  extensionId,
+).addressBook().contact(contactId).patch(
+  personalContactRequest,
+  patchContactParameters,
+);
 await rc.revoke();
 ```
 
@@ -10537,12 +10274,9 @@ Update User Administered Sites
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .extension(extensionId)
-  .administeredSites()
-  .put(businessSiteCollectionRequest);
+var result = await rc.restapi(apiVersion).account(accountId).extension(
+  extensionId,
+).administeredSites().put(businessSiteCollectionRequest);
 await rc.revoke();
 ```
 
@@ -10572,12 +10306,9 @@ List Assignable Roles
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .extension(extensionId)
-  .assignableRoles()
-  .get(listOfAvailableForAssigningRolesParameters);
+var result = await rc.restapi(apiVersion).account(accountId).extension(
+  extensionId,
+).assignableRoles().get(listOfAvailableForAssigningRolesParameters);
 await rc.revoke();
 ```
 
@@ -10637,13 +10368,9 @@ Check User Permission
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .extension(extensionId)
-  .authzProfile()
-  .check()
-  .get(checkUserPermissionParameters);
+var result = await rc.restapi(apiVersion).account(accountId).extension(
+  extensionId,
+).authzProfile().check().get(checkUserPermissionParameters);
 await rc.revoke();
 ```
 
@@ -10673,12 +10400,9 @@ Get Agent’s Call Queue Presence
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .extension(extensionId)
-  .callQueuePresence()
-  .get(readExtensionCallQueuePresenceParameters);
+var result = await rc.restapi(apiVersion).account(accountId).extension(
+  extensionId,
+).callQueuePresence().get(readExtensionCallQueuePresenceParameters);
 await rc.revoke();
 ```
 
@@ -10708,12 +10432,9 @@ Update Call Queue Presence
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .extension(extensionId)
-  .callQueuePresence()
-  .put(extensionCallQueueUpdatePresenceList);
+var result = await rc.restapi(apiVersion).account(accountId).extension(
+  extensionId,
+).callQueuePresence().put(extensionCallQueueUpdatePresenceList);
 await rc.revoke();
 ```
 
@@ -10743,12 +10464,9 @@ List User Emergency Locations
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .extension(extensionId)
-  .emergencyLocations()
-  .list(getExtensionEmergencyLocationsParameters);
+var result = await rc.restapi(apiVersion).account(accountId).extension(
+  extensionId,
+).emergencyLocations().list(getExtensionEmergencyLocationsParameters);
 await rc.revoke();
 ```
 
@@ -10778,12 +10496,9 @@ Create User Emergency Location
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .extension(extensionId)
-  .emergencyLocations()
-  .post(createUserEmergencyLocationRequest);
+var result = await rc.restapi(apiVersion).account(accountId).extension(
+  extensionId,
+).emergencyLocations().post(createUserEmergencyLocationRequest);
 await rc.revoke();
 ```
 
@@ -10813,12 +10528,9 @@ Get User Emergency Location
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .extension(extensionId)
-  .emergencyLocations(locationId)
-  .get();
+var result = await rc.restapi(apiVersion).account(accountId).extension(
+  extensionId,
+).emergencyLocations(locationId).get();
 await rc.revoke();
 ```
 
@@ -10846,12 +10558,9 @@ Update User Emergency Location
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .extension(extensionId)
-  .emergencyLocations(locationId)
-  .put(emergencyLocationRequestResource);
+var result = await rc.restapi(apiVersion).account(accountId).extension(
+  extensionId,
+).emergencyLocations(locationId).put(emergencyLocationRequestResource);
 await rc.revoke();
 ```
 
@@ -10881,12 +10590,11 @@ Delete User Emergency Location
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .extension(extensionId)
-  .emergencyLocations(locationId)
-  .delete(deleteExtensionEmergencyLocationParameters);
+var result = await rc.restapi(apiVersion).account(accountId).extension(
+  extensionId,
+).emergencyLocations(locationId).delete(
+  deleteExtensionEmergencyLocationParameters,
+);
 await rc.revoke();
 ```
 
@@ -10915,12 +10623,9 @@ List Forwarding Numbers
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .extension(extensionId)
-  .forwardingNumber()
-  .list(listForwardingNumbersParameters);
+var result = await rc.restapi(apiVersion).account(accountId).extension(
+  extensionId,
+).forwardingNumber().list(listForwardingNumbersParameters);
 await rc.revoke();
 ```
 
@@ -10950,12 +10655,9 @@ Create Forwarding Number
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .extension(extensionId)
-  .forwardingNumber()
-  .post(createForwardingNumberRequest);
+var result = await rc.restapi(apiVersion).account(accountId).extension(
+  extensionId,
+).forwardingNumber().post(createForwardingNumberRequest);
 await rc.revoke();
 ```
 
@@ -10985,12 +10687,9 @@ Delete Forwarding Numbers
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .extension(extensionId)
-  .forwardingNumber()
-  .deleteAll(deleteForwardingNumbersRequest);
+var result = await rc.restapi(apiVersion).account(accountId).extension(
+  extensionId,
+).forwardingNumber().deleteAll(deleteForwardingNumbersRequest);
 await rc.revoke();
 ```
 
@@ -11019,12 +10718,9 @@ Get Forwarding Number
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .extension(extensionId)
-  .forwardingNumber(forwardingNumberId)
-  .get();
+var result = await rc.restapi(apiVersion).account(accountId).extension(
+  extensionId,
+).forwardingNumber(forwardingNumberId).get();
 await rc.revoke();
 ```
 
@@ -11052,12 +10748,9 @@ Update Forwarding Number
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .extension(extensionId)
-  .forwardingNumber(forwardingNumberId)
-  .put(updateForwardingNumberRequest);
+var result = await rc.restapi(apiVersion).account(accountId).extension(
+  extensionId,
+).forwardingNumber(forwardingNumberId).put(updateForwardingNumberRequest);
 await rc.revoke();
 ```
 
@@ -11087,12 +10780,9 @@ Delete Forwarding Number
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .extension(extensionId)
-  .forwardingNumber(forwardingNumberId)
-  .delete();
+var result = await rc.restapi(apiVersion).account(accountId).extension(
+  extensionId,
+).forwardingNumber(forwardingNumberId).delete();
 await rc.revoke();
 ```
 
@@ -11119,13 +10809,11 @@ Get Message Attachment Content
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .extension(extensionId)
-  .messageStore(messageId)
-  .content(attachmentId)
-  .get(readMessageContentParameters);
+var result = await rc.restapi(apiVersion).account(accountId).extension(
+  extensionId,
+).messageStore(messageId).content(attachmentId).get(
+  readMessageContentParameters,
+);
 await rc.revoke();
 ```
 
@@ -11189,12 +10877,9 @@ Update Notification Settings
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .extension(extensionId)
-  .notificationSettings()
-  .put(notificationSettingsUpdateRequest);
+var result = await rc.restapi(apiVersion).account(accountId).extension(
+  extensionId,
+).notificationSettings().put(notificationSettingsUpdateRequest);
 await rc.revoke();
 ```
 
@@ -11253,12 +10938,9 @@ Update Unified Presence
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .extension(extensionId)
-  .unifiedPresence()
-  .patch(updateUnifiedPresence);
+var result = await rc.restapi(apiVersion).account(accountId).extension(
+  extensionId,
+).unifiedPresence().patch(updateUnifiedPresence);
 await rc.revoke();
 ```
 
@@ -11404,12 +11086,9 @@ Assign Paging Group Users and Devices
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .pagingOnlyGroups(pagingOnlyGroupId)
-  .bulkAssign()
-  .post(editPagingGroupRequest);
+var result = await rc.restapi(apiVersion).account(accountId).pagingOnlyGroups(
+  pagingOnlyGroupId,
+).bulkAssign().post(editPagingGroupRequest);
 await rc.revoke();
 ```
 
@@ -11437,12 +11116,9 @@ Get Paging Group Devices
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .pagingOnlyGroups(pagingOnlyGroupId)
-  .devices()
-  .get(listPagingGroupDevicesParameters);
+var result = await rc.restapi(apiVersion).account(accountId).pagingOnlyGroups(
+  pagingOnlyGroupId,
+).devices().get(listPagingGroupDevicesParameters);
 await rc.revoke();
 ```
 
@@ -11471,14 +11147,8 @@ Call Flip on Party
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .telephony()
-  .sessions(telephonySessionId)
-  .parties(partyId)
-  .flip()
-  .post(callPartyFlip);
+var result = await rc.restapi(apiVersion).account(accountId).telephony()
+  .sessions(telephonySessionId).parties(partyId).flip().post(callPartyFlip);
 await rc.revoke();
 ```
 
@@ -11505,14 +11175,10 @@ Hold Call Party
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .telephony()
-  .sessions(telephonySessionId)
-  .parties(partyId)
-  .hold()
-  .post(holdCallPartyRequest);
+var result = await rc.restapi(apiVersion).account(accountId).telephony()
+  .sessions(telephonySessionId).parties(partyId).hold().post(
+    holdCallPartyRequest,
+  );
 await rc.revoke();
 ```
 
@@ -11540,14 +11206,8 @@ Call Park
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .telephony()
-  .sessions(telephonySessionId)
-  .parties(partyId)
-  .park()
-  .post();
+var result = await rc.restapi(apiVersion).account(accountId).telephony()
+  .sessions(telephonySessionId).parties(partyId).park().post();
 await rc.revoke();
 ```
 
@@ -11573,13 +11233,8 @@ Supervise Call Session
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .telephony()
-  .sessions(telephonySessionId)
-  .supervise()
-  .post(superviseCallSessionRequest);
+var result = await rc.restapi(apiVersion).account(accountId).telephony()
+  .sessions(telephonySessionId).supervise().post(superviseCallSessionRequest);
 await rc.revoke();
 ```
 
@@ -11635,12 +11290,8 @@ List Domestic Countries
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .dictionary()
-  .brand(brandId)
-  .contractedCountry(contractedCountryId)
-  .get(listDomesticCountriesParameters);
+var result = await rc.restapi(apiVersion).dictionary().brand(brandId)
+  .contractedCountry(contractedCountryId).get(listDomesticCountriesParameters);
 await rc.revoke();
 ```
 
@@ -11745,13 +11396,8 @@ Update Webinar Session
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .webinar()
-  .configuration()
-  .v1()
-  .webinars(webinarId)
-  .sessions(sessionId)
-  .patch(wcsSessionWithLocaleCodeModel);
+var result = await rc.webinar().configuration().v1().webinars(webinarId)
+  .sessions(sessionId).patch(wcsSessionWithLocaleCodeModel);
 await rc.revoke();
 ```
 
@@ -11777,14 +11423,9 @@ List Session Invitees
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .webinar()
-  .history()
-  .v1()
-  .webinars(webinarId)
-  .sessions(sessionId)
-  .invitees()
-  .list(rcwHistoryListInviteesParameters);
+var result = await rc.webinar().history().v1().webinars(webinarId).sessions(
+  sessionId,
+).invitees().list(rcwHistoryListInviteesParameters);
 await rc.revoke();
 ```
 
@@ -11863,13 +11504,8 @@ List Session Registrants
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .webinar()
-  .registration()
-  .v1()
-  .sessions(sessionId)
-  .registrants()
-  .list(rcwRegListRegistrantsParameters);
+var result = await rc.webinar().registration().v1().sessions(sessionId)
+  .registrants().list(rcwRegListRegistrantsParameters);
 await rc.revoke();
 ```
 
@@ -11896,13 +11532,8 @@ Create Registrant
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .webinar()
-  .registration()
-  .v1()
-  .sessions(sessionId)
-  .registrants()
-  .post(registrantBaseModelWithQuestionnaire);
+var result = await rc.webinar().registration().v1().sessions(sessionId)
+  .registrants().post(registrantBaseModelWithQuestionnaire);
 await rc.revoke();
 ```
 
@@ -11929,13 +11560,8 @@ Get Registrant
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .webinar()
-  .registration()
-  .v1()
-  .sessions(sessionId)
-  .registrants(registrantId)
-  .get(rcwRegGetRegistrantParameters);
+var result = await rc.webinar().registration().v1().sessions(sessionId)
+  .registrants(registrantId).get(rcwRegGetRegistrantParameters);
 await rc.revoke();
 ```
 
@@ -11987,16 +11613,10 @@ Get Recording Insights
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .ai()
-  .ringsense()
-  .v1()
-  .public()
-  .accounts(accountId)
-  .domains(domain)
-  .records(sourceRecordId)
-  .insights()
-  .get(getRecordingInsightsParameters);
+var result = await rc.ai().ringsense().v1().public().accounts(accountId)
+  .domains(domain).records(sourceRecordId).insights().get(
+    getRecordingInsightsParameters,
+  );
 await rc.revoke();
 ```
 
@@ -12048,13 +11668,8 @@ Update Call Flip Settings
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi()
-  .v2()
-  .accounts(accountId)
-  .extensions(extensionId)
-  .callFlipNumbers()
-  .put(callFlipNumberListResource);
+var result = await rc.restapi().v2().accounts(accountId).extensions(extensionId)
+  .callFlipNumbers().put(callFlipNumberListResource);
 await rc.revoke();
 ```
 
@@ -12081,12 +11696,8 @@ Update Call Monitoring Group List
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .callMonitoringGroups(groupId)
-  .bulkAssign()
-  .post(callMonitoringBulkAssign);
+var result = await rc.restapi(apiVersion).account(accountId)
+  .callMonitoringGroups(groupId).bulkAssign().post(callMonitoringBulkAssign);
 await rc.revoke();
 ```
 
@@ -12114,12 +11725,10 @@ List Devices
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .emergencyAddressAutoUpdate()
-  .devices()
-  .get(listDevicesAutomaticLocationUpdatesParameters);
+var result = await rc.restapi(apiVersion).account(accountId)
+  .emergencyAddressAutoUpdate().devices().get(
+    listDevicesAutomaticLocationUpdatesParameters,
+  );
 await rc.revoke();
 ```
 
@@ -12148,13 +11757,10 @@ Enable Automatic Location Updates Feature
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .emergencyAddressAutoUpdate()
-  .devices()
-  .bulkAssign()
-  .post(assignMultipleDevicesAutomaticLocationUpdates);
+var result = await rc.restapi(apiVersion).account(accountId)
+  .emergencyAddressAutoUpdate().devices().bulkAssign().post(
+    assignMultipleDevicesAutomaticLocationUpdates,
+  );
 await rc.revoke();
 ```
 
@@ -12182,12 +11788,8 @@ Get Network Map
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .emergencyAddressAutoUpdate()
-  .networks()
-  .list(listNetworksParameters);
+var result = await rc.restapi(apiVersion).account(accountId)
+  .emergencyAddressAutoUpdate().networks().list(listNetworksParameters);
 await rc.revoke();
 ```
 
@@ -12215,12 +11817,8 @@ Create Network
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .emergencyAddressAutoUpdate()
-  .networks()
-  .post(createNetworkRequest);
+var result = await rc.restapi(apiVersion).account(accountId)
+  .emergencyAddressAutoUpdate().networks().post(createNetworkRequest);
 await rc.revoke();
 ```
 
@@ -12275,12 +11873,8 @@ Update Network
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .emergencyAddressAutoUpdate()
-  .networks(networkId)
-  .put(updateNetworkRequest);
+var result = await rc.restapi(apiVersion).account(accountId)
+  .emergencyAddressAutoUpdate().networks(networkId).put(updateNetworkRequest);
 await rc.revoke();
 ```
 
@@ -12335,12 +11929,8 @@ List Account Switches
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .emergencyAddressAutoUpdate()
-  .switches()
-  .list(listAccountSwitchesParameters);
+var result = await rc.restapi(apiVersion).account(accountId)
+  .emergencyAddressAutoUpdate().switches().list(listAccountSwitchesParameters);
 await rc.revoke();
 ```
 
@@ -12368,12 +11958,8 @@ Create Switch
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .emergencyAddressAutoUpdate()
-  .switches()
-  .post(createSwitchInfo);
+var result = await rc.restapi(apiVersion).account(accountId)
+  .emergencyAddressAutoUpdate().switches().post(createSwitchInfo);
 await rc.revoke();
 ```
 
@@ -12428,12 +12014,8 @@ Update Switch
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .emergencyAddressAutoUpdate()
-  .switches(switchId)
-  .put(updateSwitchInfo);
+var result = await rc.restapi(apiVersion).account(accountId)
+  .emergencyAddressAutoUpdate().switches(switchId).put(updateSwitchInfo);
 await rc.revoke();
 ```
 
@@ -12488,12 +12070,10 @@ Create Multiple Switches
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .emergencyAddressAutoUpdate()
-  .switchesBulkCreate()
-  .post(createMultipleSwitchesRequest);
+var result = await rc.restapi(apiVersion).account(accountId)
+  .emergencyAddressAutoUpdate().switchesBulkCreate().post(
+    createMultipleSwitchesRequest,
+  );
 await rc.revoke();
 ```
 
@@ -12522,12 +12102,10 @@ Update Multiple Switches
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .emergencyAddressAutoUpdate()
-  .switchesBulkUpdate()
-  .post(updateMultipleSwitchesRequest);
+var result = await rc.restapi(apiVersion).account(accountId)
+  .emergencyAddressAutoUpdate().switchesBulkUpdate().post(
+    updateMultipleSwitchesRequest,
+  );
 await rc.revoke();
 ```
 
@@ -12556,12 +12134,10 @@ Validate Multiple Switches
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .emergencyAddressAutoUpdate()
-  .switchesBulkValidate()
-  .post(validateMultipleSwitchesRequest);
+var result = await rc.restapi(apiVersion).account(accountId)
+  .emergencyAddressAutoUpdate().switchesBulkValidate().post(
+    validateMultipleSwitchesRequest,
+  );
 await rc.revoke();
 ```
 
@@ -12618,12 +12194,10 @@ List Users
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .emergencyAddressAutoUpdate()
-  .users()
-  .get(listAutomaticLocationUpdatesUsersParameters);
+var result = await rc.restapi(apiVersion).account(accountId)
+  .emergencyAddressAutoUpdate().users().get(
+    listAutomaticLocationUpdatesUsersParameters,
+  );
 await rc.revoke();
 ```
 
@@ -12652,13 +12226,10 @@ Enable Automatic Location Updates for Users
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .emergencyAddressAutoUpdate()
-  .users()
-  .bulkAssign()
-  .post(emergencyAddressAutoUpdateUsersBulkAssignResource);
+var result = await rc.restapi(apiVersion).account(accountId)
+  .emergencyAddressAutoUpdate().users().bulkAssign().post(
+    emergencyAddressAutoUpdateUsersBulkAssignResource,
+  );
 await rc.revoke();
 ```
 
@@ -12686,12 +12257,10 @@ List Wireless Points
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .emergencyAddressAutoUpdate()
-  .wirelessPoints()
-  .list(listWirelessPointsParameters);
+var result = await rc.restapi(apiVersion).account(accountId)
+  .emergencyAddressAutoUpdate().wirelessPoints().list(
+    listWirelessPointsParameters,
+  );
 await rc.revoke();
 ```
 
@@ -12719,12 +12288,8 @@ Create Wireless Point
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .emergencyAddressAutoUpdate()
-  .wirelessPoints()
-  .post(createWirelessPoint);
+var result = await rc.restapi(apiVersion).account(accountId)
+  .emergencyAddressAutoUpdate().wirelessPoints().post(createWirelessPoint);
 await rc.revoke();
 ```
 
@@ -12779,12 +12344,10 @@ Update Wireless Point
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .emergencyAddressAutoUpdate()
-  .wirelessPoints(pointId)
-  .put(updateWirelessPoint);
+var result = await rc.restapi(apiVersion).account(accountId)
+  .emergencyAddressAutoUpdate().wirelessPoints(pointId).put(
+    updateWirelessPoint,
+  );
 await rc.revoke();
 ```
 
@@ -12812,12 +12375,8 @@ Delete Wireless Point
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .emergencyAddressAutoUpdate()
-  .wirelessPoints(pointId)
-  .delete();
+var result = await rc.restapi(apiVersion).account(accountId)
+  .emergencyAddressAutoUpdate().wirelessPoints(pointId).delete();
 await rc.revoke();
 ```
 
@@ -12843,12 +12402,10 @@ Create Multiple Wireless Points
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .emergencyAddressAutoUpdate()
-  .wirelessPointsBulkCreate()
-  .post(createMultipleWirelessPointsRequest);
+var result = await rc.restapi(apiVersion).account(accountId)
+  .emergencyAddressAutoUpdate().wirelessPointsBulkCreate().post(
+    createMultipleWirelessPointsRequest,
+  );
 await rc.revoke();
 ```
 
@@ -12877,12 +12434,10 @@ Update Multiple Wireless Points
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .emergencyAddressAutoUpdate()
-  .wirelessPointsBulkUpdate()
-  .post(updateMultipleWirelessPointsRequest);
+var result = await rc.restapi(apiVersion).account(accountId)
+  .emergencyAddressAutoUpdate().wirelessPointsBulkUpdate().post(
+    updateMultipleWirelessPointsRequest,
+  );
 await rc.revoke();
 ```
 
@@ -12911,12 +12466,10 @@ Validate Multiple Wireless Points
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .emergencyAddressAutoUpdate()
-  .wirelessPointsBulkValidate()
-  .post(validateMultipleWirelessPointsRequest);
+var result = await rc.restapi(apiVersion).account(accountId)
+  .emergencyAddressAutoUpdate().wirelessPointsBulkValidate().post(
+    validateMultipleWirelessPointsRequest,
+  );
 await rc.revoke();
 ```
 
@@ -12945,13 +12498,9 @@ List Blocked/Allowed Phone Numbers
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .extension(extensionId)
-  .callerBlocking()
-  .phoneNumbers()
-  .list(listBlockedAllowedNumbersParameters);
+var result = await rc.restapi(apiVersion).account(accountId).extension(
+  extensionId,
+).callerBlocking().phoneNumbers().list(listBlockedAllowedNumbersParameters);
 await rc.revoke();
 ```
 
@@ -12981,13 +12530,9 @@ Add Blocked/Allowed Number
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .extension(extensionId)
-  .callerBlocking()
-  .phoneNumbers()
-  .post(addBlockedAllowedPhoneNumber);
+var result = await rc.restapi(apiVersion).account(accountId).extension(
+  extensionId,
+).callerBlocking().phoneNumbers().post(addBlockedAllowedPhoneNumber);
 await rc.revoke();
 ```
 
@@ -13017,13 +12562,9 @@ Get Blocked/Allowed Number
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .extension(extensionId)
-  .callerBlocking()
-  .phoneNumbers(blockedNumberId)
-  .get();
+var result = await rc.restapi(apiVersion).account(accountId).extension(
+  extensionId,
+).callerBlocking().phoneNumbers(blockedNumberId).get();
 await rc.revoke();
 ```
 
@@ -13051,13 +12592,11 @@ Update Blocked/Allowed Number
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .extension(extensionId)
-  .callerBlocking()
-  .phoneNumbers(blockedNumberId)
-  .put(addBlockedAllowedPhoneNumber);
+var result = await rc.restapi(apiVersion).account(accountId).extension(
+  extensionId,
+).callerBlocking().phoneNumbers(blockedNumberId).put(
+  addBlockedAllowedPhoneNumber,
+);
 await rc.revoke();
 ```
 
@@ -13087,13 +12626,9 @@ Delete Blocked/Allowed Number
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .extension(extensionId)
-  .callerBlocking()
-  .phoneNumbers(blockedNumberId)
-  .delete();
+var result = await rc.restapi(apiVersion).account(accountId).extension(
+  extensionId,
+).callerBlocking().phoneNumbers(blockedNumberId).delete();
 await rc.revoke();
 ```
 
@@ -13120,12 +12655,9 @@ List User Message Templates
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .extension(extensionId)
-  .messageStoreTemplates()
-  .list(listUserMessageTemplatesParameters);
+var result = await rc.restapi(apiVersion).account(accountId).extension(
+  extensionId,
+).messageStoreTemplates().list(listUserMessageTemplatesParameters);
 await rc.revoke();
 ```
 
@@ -13155,12 +12687,9 @@ Create User Message Template
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .extension(extensionId)
-  .messageStoreTemplates()
-  .post(messageTemplateRequest);
+var result = await rc.restapi(apiVersion).account(accountId).extension(
+  extensionId,
+).messageStoreTemplates().post(messageTemplateRequest);
 await rc.revoke();
 ```
 
@@ -13190,12 +12719,9 @@ Get User Message Template
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .extension(extensionId)
-  .messageStoreTemplates(templateId)
-  .get();
+var result = await rc.restapi(apiVersion).account(accountId).extension(
+  extensionId,
+).messageStoreTemplates(templateId).get();
 await rc.revoke();
 ```
 
@@ -13223,12 +12749,9 @@ Update User Message Template
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .extension(extensionId)
-  .messageStoreTemplates(templateId)
-  .put(messageTemplateUpdateRequest);
+var result = await rc.restapi(apiVersion).account(accountId).extension(
+  extensionId,
+).messageStoreTemplates(templateId).put(messageTemplateUpdateRequest);
 await rc.revoke();
 ```
 
@@ -13258,12 +12781,9 @@ Delete User Message Template
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .extension(extensionId)
-  .messageStoreTemplates(templateId)
-  .delete();
+var result = await rc.restapi(apiVersion).account(accountId).extension(
+  extensionId,
+).messageStoreTemplates(templateId).delete();
 await rc.revoke();
 ```
 
@@ -13290,14 +12810,10 @@ Get Multichannel Call Recording Content
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .telephony()
-  .metadata()
-  .multichannelRecordings(metadataId)
-  .content()
-  .get(readMultichannelCallRecordingContentParameters);
+var result = await rc.restapi(apiVersion).account(accountId).telephony()
+  .metadata().multichannelRecordings(metadataId).content().get(
+    readMultichannelCallRecordingContentParameters,
+  );
 await rc.revoke();
 ```
 
@@ -13325,14 +12841,8 @@ Bring-In Call Party
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .telephony()
-  .sessions(telephonySessionId)
-  .parties()
-  .bringIn()
-  .post(addPartyRequest);
+var result = await rc.restapi(apiVersion).account(accountId).telephony()
+  .sessions(telephonySessionId).parties().bringIn().post(addPartyRequest);
 await rc.revoke();
 ```
 
@@ -13360,14 +12870,8 @@ Answer Call Party
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .telephony()
-  .sessions(telephonySessionId)
-  .parties(partyId)
-  .answer()
-  .post(answerTarget);
+var result = await rc.restapi(apiVersion).account(accountId).telephony()
+  .sessions(telephonySessionId).parties(partyId).answer().post(answerTarget);
 await rc.revoke();
 ```
 
@@ -13394,14 +12898,10 @@ Bridge Call Party
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .telephony()
-  .sessions(telephonySessionId)
-  .parties(partyId)
-  .bridge()
-  .post(bridgeTargetRequest);
+var result = await rc.restapi(apiVersion).account(accountId).telephony()
+  .sessions(telephonySessionId).parties(partyId).bridge().post(
+    bridgeTargetRequest,
+  );
 await rc.revoke();
 ```
 
@@ -13429,14 +12929,8 @@ Forward Call Party
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .telephony()
-  .sessions(telephonySessionId)
-  .parties(partyId)
-  .forward()
-  .post(forwardTarget);
+var result = await rc.restapi(apiVersion).account(accountId).telephony()
+  .sessions(telephonySessionId).parties(partyId).forward().post(forwardTarget);
 await rc.revoke();
 ```
 
@@ -13464,14 +12958,10 @@ Ignore Call in Queue
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .telephony()
-  .sessions(telephonySessionId)
-  .parties(partyId)
-  .ignore()
-  .post(ignoreRequestBody);
+var result = await rc.restapi(apiVersion).account(accountId).telephony()
+  .sessions(telephonySessionId).parties(partyId).ignore().post(
+    ignoreRequestBody,
+  );
 await rc.revoke();
 ```
 
@@ -13499,14 +12989,8 @@ Pickup Call
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .telephony()
-  .sessions(telephonySessionId)
-  .parties(partyId)
-  .pickup()
-  .post(pickupTarget);
+var result = await rc.restapi(apiVersion).account(accountId).telephony()
+  .sessions(telephonySessionId).parties(partyId).pickup().post(pickupTarget);
 await rc.revoke();
 ```
 
@@ -13533,14 +13017,8 @@ Create Recording
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .telephony()
-  .sessions(telephonySessionId)
-  .parties(partyId)
-  .recordings()
-  .post();
+var result = await rc.restapi(apiVersion).account(accountId).telephony()
+  .sessions(telephonySessionId).parties(partyId).recordings().post();
 await rc.revoke();
 ```
 
@@ -13566,14 +13044,11 @@ Pause/Resume Recording
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .telephony()
-  .sessions(telephonySessionId)
-  .parties(partyId)
-  .recordings(recordingId)
-  .patch(callRecordingUpdate, pauseResumeCallRecordingParameters);
+var result = await rc.restapi(apiVersion).account(accountId).telephony()
+  .sessions(telephonySessionId).parties(partyId).recordings(recordingId).patch(
+    callRecordingUpdate,
+    pauseResumeCallRecordingParameters,
+  );
 await rc.revoke();
 ```
 
@@ -13603,14 +13078,8 @@ Reject Call Party
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .telephony()
-  .sessions(telephonySessionId)
-  .parties(partyId)
-  .reject()
-  .post();
+var result = await rc.restapi(apiVersion).account(accountId).telephony()
+  .sessions(telephonySessionId).parties(partyId).reject().post();
 await rc.revoke();
 ```
 
@@ -13636,14 +13105,8 @@ Reply with Text
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .telephony()
-  .sessions(telephonySessionId)
-  .parties(partyId)
-  .reply()
-  .post(callPartyReply);
+var result = await rc.restapi(apiVersion).account(accountId).telephony()
+  .sessions(telephonySessionId).parties(partyId).reply().post(callPartyReply);
 await rc.revoke();
 ```
 
@@ -13670,14 +13133,10 @@ Supervise Call Party
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .telephony()
-  .sessions(telephonySessionId)
-  .parties(partyId)
-  .supervise()
-  .post(partySuperviseRequest);
+var result = await rc.restapi(apiVersion).account(accountId).telephony()
+  .sessions(telephonySessionId).parties(partyId).supervise().post(
+    partySuperviseRequest,
+  );
 await rc.revoke();
 ```
 
@@ -13706,14 +13165,10 @@ Transfer Call Party
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .telephony()
-  .sessions(telephonySessionId)
-  .parties(partyId)
-  .transfer()
-  .post(transferTarget);
+var result = await rc.restapi(apiVersion).account(accountId).telephony()
+  .sessions(telephonySessionId).parties(partyId).transfer().post(
+    transferTarget,
+  );
 await rc.revoke();
 ```
 
@@ -13740,14 +13195,8 @@ Un-hold Call Party
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .restapi(apiVersion)
-  .account(accountId)
-  .telephony()
-  .sessions(telephonySessionId)
-  .parties(partyId)
-  .unhold()
-  .post();
+var result = await rc.restapi(apiVersion).account(accountId).telephony()
+  .sessions(telephonySessionId).parties(partyId).unhold().post();
 await rc.revoke();
 ```
 
@@ -13773,14 +13222,8 @@ List Session Invitees
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .webinar()
-  .configuration()
-  .v1()
-  .webinars(webinarId)
-  .sessions(sessionId)
-  .invitees()
-  .list(rcwConfigListInviteesParameters);
+var result = await rc.webinar().configuration().v1().webinars(webinarId)
+  .sessions(sessionId).invitees().list(rcwConfigListInviteesParameters);
 await rc.revoke();
 ```
 
@@ -13807,14 +13250,8 @@ Bulk Add/Delete Session Invitees
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .webinar()
-  .configuration()
-  .v1()
-  .webinars(webinarId)
-  .sessions(sessionId)
-  .invitees()
-  .patch(bulkUpdateInviteesRequest);
+var result = await rc.webinar().configuration().v1().webinars(webinarId)
+  .sessions(sessionId).invitees().patch(bulkUpdateInviteesRequest);
 await rc.revoke();
 ```
 
@@ -13866,14 +13303,8 @@ Update Session Invitee
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .webinar()
-  .configuration()
-  .v1()
-  .webinars(webinarId)
-  .sessions(sessionId)
-  .invitees(inviteeId)
-  .put(updateInviteeRequest);
+var result = await rc.webinar().configuration().v1().webinars(webinarId)
+  .sessions(sessionId).invitees(inviteeId).put(updateInviteeRequest);
 await rc.revoke();
 ```
 
@@ -13899,14 +13330,8 @@ Delete Session Invitee
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .webinar()
-  .configuration()
-  .v1()
-  .webinars(webinarId)
-  .sessions(sessionId)
-  .invitees(inviteeId)
-  .delete();
+var result = await rc.webinar().configuration().v1().webinars(webinarId)
+  .sessions(sessionId).invitees(inviteeId).delete();
 await rc.revoke();
 ```
 
@@ -13930,14 +13355,9 @@ List Session Participants
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc
-  .webinar()
-  .history()
-  .v1()
-  .webinars(webinarId)
-  .sessions(sessionId)
-  .participants()
-  .get(rcwHistoryListParticipantsParameters);
+var result = await rc.webinar().history().v1().webinars(webinarId).sessions(
+  sessionId,
+).participants().get(rcwHistoryListParticipantsParameters);
 await rc.revoke();
 ```
 

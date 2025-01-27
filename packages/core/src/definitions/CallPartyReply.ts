@@ -1,4 +1,4 @@
-import type ReplyWithPattern from "./ReplyWithPattern";
+import ReplyWithPattern from "./ReplyWithPattern.js";
 
 interface CallPartyReply {
   /**

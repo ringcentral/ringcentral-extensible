@@ -1,11 +1,11 @@
-import type CaiAsyncApiResponse from "../../../../../../definitions/CaiAsyncApiResponse";
-import type CaiPunctuateParameters from "../../../../../../definitions/CaiPunctuateParameters";
-import type PunctuateInput from "../../../../../../definitions/PunctuateInput";
-import type {
+import CaiAsyncApiResponse from "../../../../../../definitions/CaiAsyncApiResponse.js";
+import CaiPunctuateParameters from "../../../../../../definitions/CaiPunctuateParameters.js";
+import PunctuateInput from "../../../../../../definitions/PunctuateInput.js";
+import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../../types";
+} from "../../../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

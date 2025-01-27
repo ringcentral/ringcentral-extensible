@@ -1,4 +1,4 @@
-import type RegSessionModelSettings from "./RegSessionModelSettings";
+import RegSessionModelSettings from "./RegSessionModelSettings.js";
 
 interface RegSessionModel {
   /**

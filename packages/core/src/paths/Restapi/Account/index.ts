@@ -1,46 +1,46 @@
-import EmergencyAddressAutoUpdate from "./EmergencyAddressAutoUpdate";
-import MessageStoreConfiguration from "./MessageStoreConfiguration";
-import AddressBookBulkUpload from "./AddressBookBulkUpload";
-import MessageStoreTemplates from "./MessageStoreTemplates";
-import CallMonitoringGroups from "./CallMonitoringGroups";
-import ExtensionBulkUpdate from "./ExtensionBulkUpdate";
-import MessageStoreReport from "./MessageStoreReport";
-import EmergencyLocations from "./EmergencyLocations";
-import PagingOnlyGroups from "./PagingOnlyGroups";
-import ForwardAllCalls from "./ForwardAllCalls";
-import BusinessAddress from "./BusinessAddress";
-import CallRecordings from "./CallRecordings";
-import CallRecording from "./CallRecording";
-import BusinessHours from "./BusinessHours";
-import AnsweringRule from "./AnsweringRule";
-import AssignedRole from "./AssignedRole";
-import CallLogSync from "./CallLogSync";
-import CustomFields from "./CustomFields";
-import ActiveCalls from "./ActiveCalls";
-import ServiceInfo from "./ServiceInfo";
-import PhoneNumber from "./PhoneNumber";
-import CallQueues from "./CallQueues";
-import IvrPrompts from "./IvrPrompts";
-import AuditTrail from "./AuditTrail";
-import UserRole from "./UserRole";
-import IvrMenus from "./IvrMenus";
-import Templates from "./Templates";
-import Extension from "./Extension";
-import Recording from "./Recording";
-import Telephony from "./Telephony";
-import Directory from "./Directory";
-import Greeting from "./Greeting";
-import Presence from "./Presence";
-import CallLog from "./CallLog";
-import A2pSms from "./A2pSms";
-import Device from "./Device";
-import Sites from "./Sites";
-import type GetAccountInfoResponse from "../../../definitions/GetAccountInfoResponse";
-import type {
+import EmergencyAddressAutoUpdate from "./EmergencyAddressAutoUpdate/index.js";
+import MessageStoreConfiguration from "./MessageStoreConfiguration/index.js";
+import AddressBookBulkUpload from "./AddressBookBulkUpload/index.js";
+import MessageStoreTemplates from "./MessageStoreTemplates/index.js";
+import CallMonitoringGroups from "./CallMonitoringGroups/index.js";
+import ExtensionBulkUpdate from "./ExtensionBulkUpdate/index.js";
+import MessageStoreReport from "./MessageStoreReport/index.js";
+import EmergencyLocations from "./EmergencyLocations/index.js";
+import PagingOnlyGroups from "./PagingOnlyGroups/index.js";
+import ForwardAllCalls from "./ForwardAllCalls/index.js";
+import BusinessAddress from "./BusinessAddress/index.js";
+import CallRecordings from "./CallRecordings/index.js";
+import CallRecording from "./CallRecording/index.js";
+import BusinessHours from "./BusinessHours/index.js";
+import AnsweringRule from "./AnsweringRule/index.js";
+import AssignedRole from "./AssignedRole/index.js";
+import CallLogSync from "./CallLogSync/index.js";
+import CustomFields from "./CustomFields/index.js";
+import ActiveCalls from "./ActiveCalls/index.js";
+import ServiceInfo from "./ServiceInfo/index.js";
+import PhoneNumber from "./PhoneNumber/index.js";
+import CallQueues from "./CallQueues/index.js";
+import IvrPrompts from "./IvrPrompts/index.js";
+import AuditTrail from "./AuditTrail/index.js";
+import UserRole from "./UserRole/index.js";
+import IvrMenus from "./IvrMenus/index.js";
+import Templates from "./Templates/index.js";
+import Extension from "./Extension/index.js";
+import Recording from "./Recording/index.js";
+import Telephony from "./Telephony/index.js";
+import Directory from "./Directory/index.js";
+import Greeting from "./Greeting/index.js";
+import Presence from "./Presence/index.js";
+import CallLog from "./CallLog/index.js";
+import A2pSms from "./A2pSms/index.js";
+import Device from "./Device/index.js";
+import Sites from "./Sites/index.js";
+import GetAccountInfoResponse from "../../../definitions/GetAccountInfoResponse.js";
+import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../types";
+} from "../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

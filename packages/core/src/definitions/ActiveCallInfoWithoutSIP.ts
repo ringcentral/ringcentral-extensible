@@ -1,4 +1,4 @@
-import type CallInfoCQ from "./CallInfoCQ";
+import CallInfoCQ from "./CallInfoCQ.js";
 
 interface ActiveCallInfoWithoutSIP {
   /**

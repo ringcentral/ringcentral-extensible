@@ -1,5 +1,5 @@
-import type CustomGreetingAnsweringRuleInfo from "./CustomGreetingAnsweringRuleInfo";
-import type CustomCompanyGreetingLanguageInfo from "./CustomCompanyGreetingLanguageInfo";
+import CustomGreetingAnsweringRuleInfo from "./CustomGreetingAnsweringRuleInfo.js";
+import CustomCompanyGreetingLanguageInfo from "./CustomCompanyGreetingLanguageInfo.js";
 
 interface CustomCompanyGreetingInfo {
   /**

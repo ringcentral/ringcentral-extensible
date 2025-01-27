@@ -1,8 +1,5 @@
-import Recordings from "./Recordings";
-import type {
-  ParentInterface,
-  RingCentralInterface,
-} from "../../../../../types";
+import Recordings from "./Recordings/index.js";
+import { ParentInterface, RingCentralInterface } from "../../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

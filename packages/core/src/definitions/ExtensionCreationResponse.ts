@@ -1,14 +1,14 @@
-import type ContactInfo from "./ContactInfo";
-import type CostCenterInfo from "./CostCenterInfo";
-import type CustomFieldInfo from "./CustomFieldInfo";
-import type ExtensionPermissions from "./ExtensionPermissions";
-import type ProfileImageInfo from "./ProfileImageInfo";
-import type ReferenceInfo from "./ReferenceInfo";
-import type RegionalSettings from "./RegionalSettings";
-import type ExtensionServiceFeatureInfo from "./ExtensionServiceFeatureInfo";
-import type ProvisioningSiteInfo from "./ProvisioningSiteInfo";
-import type ExtensionStatusInfo from "./ExtensionStatusInfo";
-import type AssignedCountryInfo from "./AssignedCountryInfo";
+import ContactInfo from "./ContactInfo.js";
+import CostCenterInfo from "./CostCenterInfo.js";
+import CustomFieldInfo from "./CustomFieldInfo.js";
+import ExtensionPermissions from "./ExtensionPermissions.js";
+import ProfileImageInfo from "./ProfileImageInfo.js";
+import ReferenceInfo from "./ReferenceInfo.js";
+import RegionalSettings from "./RegionalSettings.js";
+import ExtensionServiceFeatureInfo from "./ExtensionServiceFeatureInfo.js";
+import ProvisioningSiteInfo from "./ProvisioningSiteInfo.js";
+import ExtensionStatusInfo from "./ExtensionStatusInfo.js";
+import AssignedCountryInfo from "./AssignedCountryInfo.js";
 
 interface ExtensionCreationResponse {
   /**

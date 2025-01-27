@@ -1,5 +1,5 @@
-import type MakeCallOutCallerInfoRequestFrom from "./MakeCallOutCallerInfoRequestFrom";
-import type MakeCallOutCallerInfoRequestTo from "./MakeCallOutCallerInfoRequestTo";
+import MakeCallOutCallerInfoRequestFrom from "./MakeCallOutCallerInfoRequestFrom.js";
+import MakeCallOutCallerInfoRequestTo from "./MakeCallOutCallerInfoRequestTo.js";
 
 interface MakeCallOutRequest {
   /**

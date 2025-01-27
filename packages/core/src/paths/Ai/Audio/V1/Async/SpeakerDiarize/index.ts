@@ -1,11 +1,11 @@
-import type CaiAsyncApiResponse from "../../../../../../definitions/CaiAsyncApiResponse";
-import type CaiSpeakerDiarizeParameters from "../../../../../../definitions/CaiSpeakerDiarizeParameters";
-import type DiarizeInput from "../../../../../../definitions/DiarizeInput";
-import type {
+import CaiAsyncApiResponse from "../../../../../../definitions/CaiAsyncApiResponse.js";
+import CaiSpeakerDiarizeParameters from "../../../../../../definitions/CaiSpeakerDiarizeParameters.js";
+import DiarizeInput from "../../../../../../definitions/DiarizeInput.js";
+import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../../types";
+} from "../../../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

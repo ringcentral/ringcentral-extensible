@@ -1,6 +1,6 @@
-import type TemplateInfo from "./TemplateInfo";
-import type PageNavigationModel from "./PageNavigationModel";
-import type EnumeratedPagingModel from "./EnumeratedPagingModel";
+import TemplateInfo from "./TemplateInfo.js";
+import PageNavigationModel from "./PageNavigationModel.js";
+import EnumeratedPagingModel from "./EnumeratedPagingModel.js";
 
 interface UserTemplates {
   /**

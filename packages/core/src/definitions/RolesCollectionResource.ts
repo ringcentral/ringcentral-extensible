@@ -1,6 +1,6 @@
-import type RoleResource from "./RoleResource";
-import type EnumeratedPagingModel from "./EnumeratedPagingModel";
-import type PageNavigationModel from "./PageNavigationModel";
+import RoleResource from "./RoleResource.js";
+import EnumeratedPagingModel from "./EnumeratedPagingModel.js";
+import PageNavigationModel from "./PageNavigationModel.js";
 
 interface RolesCollectionResource {
   /**

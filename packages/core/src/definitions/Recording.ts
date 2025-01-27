@@ -1,4 +1,4 @@
-import type JsValue from "./JsValue";
+import JsValue from "./JsValue.js";
 
 /**
  * Recording information

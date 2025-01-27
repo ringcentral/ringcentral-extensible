@@ -1,11 +1,11 @@
-import type ModelInfo from "./ModelInfo";
-import type ExtensionInfoIntId from "./ExtensionInfoIntId";
-import type DeviceEmergencyInfo from "./DeviceEmergencyInfo";
-import type EmergencyServiceAddressResource from "./EmergencyServiceAddressResource";
-import type PhoneLinesInfo from "./PhoneLinesInfo";
-import type ShippingInfo from "./ShippingInfo";
-import type DeviceSiteInfo from "./DeviceSiteInfo";
-import type BillingStatementInfo from "./BillingStatementInfo";
+import ModelInfo from "./ModelInfo.js";
+import ExtensionInfoIntId from "./ExtensionInfoIntId.js";
+import DeviceEmergencyInfo from "./DeviceEmergencyInfo.js";
+import EmergencyServiceAddressResource from "./EmergencyServiceAddressResource.js";
+import PhoneLinesInfo from "./PhoneLinesInfo.js";
+import ShippingInfo from "./ShippingInfo.js";
+import DeviceSiteInfo from "./DeviceSiteInfo.js";
+import BillingStatementInfo from "./BillingStatementInfo.js";
 
 interface DeviceResource {
   /**

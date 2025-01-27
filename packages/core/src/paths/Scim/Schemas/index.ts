@@ -1,10 +1,10 @@
-import type ScimSchemaResponse from "../../../definitions/ScimSchemaResponse";
-import type ScimSchemaSearchResponse from "../../../definitions/ScimSchemaSearchResponse";
-import type {
+import ScimSchemaResponse from "../../../definitions/ScimSchemaResponse.js";
+import ScimSchemaSearchResponse from "../../../definitions/ScimSchemaSearchResponse.js";
+import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../types";
+} from "../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

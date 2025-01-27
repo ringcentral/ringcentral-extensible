@@ -1,4 +1,4 @@
-import type PhoneNumberResource from "./PhoneNumberResource";
+import PhoneNumberResource from "./PhoneNumberResource.js";
 
 interface AccountResource {
   /**

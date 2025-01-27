@@ -1,6 +1,6 @@
-import type CallQueueMemberInfo from "./CallQueueMemberInfo";
-import type PageNavigationModel from "./PageNavigationModel";
-import type EnumeratedPagingModel from "./EnumeratedPagingModel";
+import CallQueueMemberInfo from "./CallQueueMemberInfo.js";
+import PageNavigationModel from "./PageNavigationModel.js";
+import EnumeratedPagingModel from "./EnumeratedPagingModel.js";
 
 interface CallQueueMembers {
   /**

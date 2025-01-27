@@ -3,7 +3,7 @@ import type {
   RestMethod,
   RestRequestConfig,
   RestResponse,
-} from "@rc-ex/core/src/types";
+} from "@rc-ex/core/lib/esm/types.js";
 import type WS from "isomorphic-ws";
 
 export interface WsToken {

@@ -1,22 +1,22 @@
-import Rest from "./Rest";
-import type GetTokenRequest from "./definitions/GetTokenRequest";
-import type TokenInfo from "./definitions/TokenInfo";
-import Restapi from "./paths/Restapi";
-import Scim from "./paths/Scim";
-import type SdkExtension from "./SdkExtension";
-import Analytics from "./paths/Analytics";
-import Ai from "./paths/Ai";
-import Rcvideo from "./paths/Rcvideo";
-import Webinar from "./paths/Webinar";
-import type RestException from "./RestException";
+import Rest from "./Rest.js";
+import type GetTokenRequest from "./definitions/GetTokenRequest.js";
+import type TokenInfo from "./definitions/TokenInfo.js";
+import Restapi from "./paths/Restapi/index.js";
+import Scim from "./paths/Scim/index.js";
+import type SdkExtension from "./SdkExtension.js";
+import Analytics from "./paths/Analytics/index.js";
+import Ai from "./paths/Ai/index.js";
+import Rcvideo from "./paths/Rcvideo/index.js";
+import Webinar from "./paths/Webinar/index.js";
+import type RestException from "./RestException.js";
 import type {
   RestMethod,
   RestOptions,
   RestRequestConfig,
   RestResponse,
   RingCentralInterface,
-} from "./types";
-import TeamMessaging from "./paths/TeamMessaging";
+} from "./types.js";
+import TeamMessaging from "./paths/TeamMessaging/index.js";
 
 interface JwtFlowOptions {
   jwt: string;

@@ -1,4 +1,4 @@
-import type RcwDomainUserModel from "./RcwDomainUserModel";
+import RcwDomainUserModel from "./RcwDomainUserModel.js";
 
 /**
  * The attribute declaration to indicate webinar session participant/invitee role

@@ -1,7 +1,7 @@
-import Accounts from "./Accounts";
-import History from "./History";
-import Account from "./Account";
-import type { ParentInterface, RingCentralInterface } from "../../../types";
+import Accounts from "./Accounts/index.js";
+import History from "./History/index.js";
+import Account from "./Account/index.js";
+import { ParentInterface, RingCentralInterface } from "../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

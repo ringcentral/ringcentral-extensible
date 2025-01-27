@@ -1,4 +1,4 @@
-import type CountryInfoShortModel from "./CountryInfoShortModel";
+import CountryInfoShortModel from "./CountryInfoShortModel.js";
 
 /**
  * Information on account brand

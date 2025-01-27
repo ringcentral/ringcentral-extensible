@@ -1,5 +1,5 @@
-import type Meeting from "./Meeting";
-import type Paging from "./Paging";
+import Meeting from "./Meeting.js";
+import Paging from "./Paging.js";
 
 /**
  * Meetings page

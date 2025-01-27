@@ -1,4 +1,4 @@
-import type FederatedAccountResource from "./FederatedAccountResource";
+import FederatedAccountResource from "./FederatedAccountResource.js";
 
 interface FederationResource {
   /** */

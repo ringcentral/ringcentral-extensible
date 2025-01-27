@@ -1,9 +1,6 @@
-import Punctuate from "./Punctuate";
-import Summarize from "./Summarize";
-import type {
-  ParentInterface,
-  RingCentralInterface,
-} from "../../../../../types";
+import Punctuate from "./Punctuate/index.js";
+import Summarize from "./Summarize/index.js";
+import { ParentInterface, RingCentralInterface } from "../../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

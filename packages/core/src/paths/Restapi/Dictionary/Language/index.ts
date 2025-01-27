@@ -1,10 +1,10 @@
-import type LanguageInfo from "../../../../definitions/LanguageInfo";
-import type LanguageList from "../../../../definitions/LanguageList";
-import type {
+import LanguageInfo from "../../../../definitions/LanguageInfo.js";
+import LanguageList from "../../../../definitions/LanguageList.js";
+import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../types";
+} from "../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

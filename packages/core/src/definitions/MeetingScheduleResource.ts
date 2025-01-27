@@ -1,4 +1,4 @@
-import type MeetingsTimezoneResource from "./MeetingsTimezoneResource";
+import MeetingsTimezoneResource from "./MeetingsTimezoneResource.js";
 
 /**
  * Timing of a meeting

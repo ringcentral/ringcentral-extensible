@@ -1,4 +1,4 @@
-import type ValidationError from "./ValidationError";
+import ValidationError from "./ValidationError.js";
 
 interface SwitchValidated {
   /**

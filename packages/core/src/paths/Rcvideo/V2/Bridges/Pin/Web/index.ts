@@ -1,10 +1,10 @@
-import type BridgeResponse from "../../../../../../definitions/BridgeResponse";
-import type GetBridgeByWebPinParameters from "../../../../../../definitions/GetBridgeByWebPinParameters";
-import type {
+import BridgeResponse from "../../../../../../definitions/BridgeResponse.js";
+import GetBridgeByWebPinParameters from "../../../../../../definitions/GetBridgeByWebPinParameters.js";
+import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../../types";
+} from "../../../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

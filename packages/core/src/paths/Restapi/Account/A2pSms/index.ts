@@ -1,8 +1,8 @@
-import OptOuts from "./OptOuts";
-import Statuses from "./Statuses";
-import Messages from "./Messages";
-import Batches from "./Batches";
-import type { ParentInterface, RingCentralInterface } from "../../../../types";
+import OptOuts from "./OptOuts/index.js";
+import Statuses from "./Statuses/index.js";
+import Messages from "./Messages/index.js";
+import Batches from "./Batches/index.js";
+import { ParentInterface, RingCentralInterface } from "../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

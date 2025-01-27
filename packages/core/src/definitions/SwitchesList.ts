@@ -1,6 +1,6 @@
-import type SwitchInfo from "./SwitchInfo";
-import type PageNavigationModel from "./PageNavigationModel";
-import type EnumeratedPagingModel from "./EnumeratedPagingModel";
+import SwitchInfo from "./SwitchInfo.js";
+import PageNavigationModel from "./PageNavigationModel.js";
+import EnumeratedPagingModel from "./EnumeratedPagingModel.js";
 
 interface SwitchesList {
   /**

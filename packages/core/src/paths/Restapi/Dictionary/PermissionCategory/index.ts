@@ -1,11 +1,11 @@
-import type PermissionCategoryResource from "../../../../definitions/PermissionCategoryResource";
-import type PermissionCategoryCollectionResource from "../../../../definitions/PermissionCategoryCollectionResource";
-import type ListPermissionCategoriesParameters from "../../../../definitions/ListPermissionCategoriesParameters";
-import type {
+import PermissionCategoryResource from "../../../../definitions/PermissionCategoryResource.js";
+import PermissionCategoryCollectionResource from "../../../../definitions/PermissionCategoryCollectionResource.js";
+import ListPermissionCategoriesParameters from "../../../../definitions/ListPermissionCategoriesParameters.js";
+import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../types";
+} from "../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

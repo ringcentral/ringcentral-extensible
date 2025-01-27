@@ -1,8 +1,8 @@
-import type AdaptiveCardCreator from "./AdaptiveCardCreator";
-import type AdaptiveCardInfoRequest from "./AdaptiveCardInfoRequest";
-import type AdaptiveCardAction from "./AdaptiveCardAction";
-import type AdaptiveCardSelectAction from "./AdaptiveCardSelectAction";
-import type BackgroundImage from "./BackgroundImage";
+import AdaptiveCardCreator from "./AdaptiveCardCreator.js";
+import AdaptiveCardInfoRequest from "./AdaptiveCardInfoRequest.js";
+import AdaptiveCardAction from "./AdaptiveCardAction.js";
+import AdaptiveCardSelectAction from "./AdaptiveCardSelectAction.js";
+import BackgroundImage from "./BackgroundImage.js";
 
 interface AdaptiveCardInfo {
   /**

@@ -1,4 +1,4 @@
-import type ScimUserShortInfo from "./ScimUserShortInfo";
+import ScimUserShortInfo from "./ScimUserShortInfo.js";
 
 interface ScimUserSearchResponse {
   /**
@@ -12,7 +12,7 @@ interface ScimUserSearchResponse {
   itemsPerPage?: number;
 
   /** */
-  schemas?: "urn:ietf:params:scim:api:messages:2.0:ListResponse"[];
+  schemas?: ("urn:ietf:params:scim:api:messages:2.0:ListResponse")[];
 
   /**
    * Format: int64

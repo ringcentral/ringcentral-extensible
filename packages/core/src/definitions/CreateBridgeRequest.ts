@@ -1,6 +1,6 @@
-import type BridgePins from "./BridgePins";
-import type BridgeRequestSecurity from "./BridgeRequestSecurity";
-import type BridgePreferences from "./BridgePreferences";
+import BridgePins from "./BridgePins.js";
+import BridgeRequestSecurity from "./BridgeRequestSecurity.js";
+import BridgePreferences from "./BridgePreferences.js";
 
 interface CreateBridgeRequest {
   /**

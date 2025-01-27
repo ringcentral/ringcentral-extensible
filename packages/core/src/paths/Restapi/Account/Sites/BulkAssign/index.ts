@@ -1,9 +1,9 @@
-import type SiteMembersBulkUpdate from "../../../../../definitions/SiteMembersBulkUpdate";
-import type {
+import SiteMembersBulkUpdate from "../../../../../definitions/SiteMembersBulkUpdate.js";
+import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../types";
+} from "../../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

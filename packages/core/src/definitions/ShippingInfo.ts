@@ -1,5 +1,5 @@
-import type ShippingMethodInfo from "./ShippingMethodInfo";
-import type ShippingAddressInfo from "./ShippingAddressInfo";
+import ShippingMethodInfo from "./ShippingMethodInfo.js";
+import ShippingAddressInfo from "./ShippingAddressInfo.js";
 
 /**
  * Shipping information, according to which devices (in case of HardPhone)

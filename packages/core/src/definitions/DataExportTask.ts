@@ -1,6 +1,6 @@
-import type CreatorInfo from "./CreatorInfo";
-import type SpecificInfo from "./SpecificInfo";
-import type ExportTaskResultInfo from "./ExportTaskResultInfo";
+import CreatorInfo from "./CreatorInfo.js";
+import SpecificInfo from "./SpecificInfo.js";
+import ExportTaskResultInfo from "./ExportTaskResultInfo.js";
 
 interface DataExportTask {
   /**

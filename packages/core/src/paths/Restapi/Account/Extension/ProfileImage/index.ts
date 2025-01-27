@@ -1,12 +1,12 @@
-import Utils from "../../../../../Utils";
-import type ReadScaledProfileImageParameters from "../../../../../definitions/ReadScaledProfileImageParameters";
-import type UpdateUserProfileImageRequest from "../../../../../definitions/UpdateUserProfileImageRequest";
-import type CreateUserProfileImageRequest from "../../../../../definitions/CreateUserProfileImageRequest";
-import type {
+import Utils from "../../../../../Utils.js";
+import ReadScaledProfileImageParameters from "../../../../../definitions/ReadScaledProfileImageParameters.js";
+import UpdateUserProfileImageRequest from "../../../../../definitions/UpdateUserProfileImageRequest.js";
+import CreateUserProfileImageRequest from "../../../../../definitions/CreateUserProfileImageRequest.js";
+import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../types";
+} from "../../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

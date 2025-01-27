@@ -1,7 +1,7 @@
-import type Grouping from "./Grouping";
-import type TimeSettings from "./TimeSettings";
-import type CallFilters from "./CallFilters";
-import type AggregationResponseOptions from "./AggregationResponseOptions";
+import Grouping from "./Grouping.js";
+import TimeSettings from "./TimeSettings.js";
+import CallFilters from "./CallFilters.js";
+import AggregationResponseOptions from "./AggregationResponseOptions.js";
 
 interface AggregationRequest {
   /**

@@ -1,4 +1,4 @@
-import type MessageStatusCounts from "./MessageStatusCounts";
+import MessageStatusCounts from "./MessageStatusCounts.js";
 
 /**
  * The messages status object with details of each status

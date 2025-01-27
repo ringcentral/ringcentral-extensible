@@ -1,4 +1,4 @@
-import type UpdateSwitchInfo from "./UpdateSwitchInfo";
+import UpdateSwitchInfo from "./UpdateSwitchInfo.js";
 
 interface UpdateMultipleSwitchesRequest {
   /** */

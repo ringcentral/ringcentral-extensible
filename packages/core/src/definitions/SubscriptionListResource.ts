@@ -1,4 +1,4 @@
-import type SubscriptionInfo from "./SubscriptionInfo";
+import SubscriptionInfo from "./SubscriptionInfo.js";
 
 interface SubscriptionListResource {
   /**

@@ -1,8 +1,8 @@
-import type ScimEmail from "./ScimEmail";
-import type ScimName from "./ScimName";
-import type ScimPhoto from "./ScimPhoto";
-import type ScimEnterpriseUser from "./ScimEnterpriseUser";
-import type ScimMeta from "./ScimMeta";
+import ScimEmail from "./ScimEmail.js";
+import ScimName from "./ScimName.js";
+import ScimPhoto from "./ScimPhoto.js";
+import ScimEnterpriseUser from "./ScimEnterpriseUser.js";
+import ScimMeta from "./ScimMeta.js";
 
 interface ScimUserShortInfo {
   /**
@@ -36,7 +36,7 @@ interface ScimUserShortInfo {
   /**
    * Required
    */
-  schemas?: "urn:ietf:params:scim:schemas:core:2.0:User"[];
+  schemas?: ("urn:ietf:params:scim:schemas:core:2.0:User")[];
 
   /**
    * User title

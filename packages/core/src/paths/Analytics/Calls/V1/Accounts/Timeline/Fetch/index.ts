@@ -1,11 +1,11 @@
-import type TimelineResponse from "../../../../../../../definitions/TimelineResponse";
-import type AnalyticsCallsTimelineFetchParameters from "../../../../../../../definitions/AnalyticsCallsTimelineFetchParameters";
-import type TimelineRequest from "../../../../../../../definitions/TimelineRequest";
-import type {
+import TimelineResponse from "../../../../../../../definitions/TimelineResponse.js";
+import AnalyticsCallsTimelineFetchParameters from "../../../../../../../definitions/AnalyticsCallsTimelineFetchParameters.js";
+import TimelineRequest from "../../../../../../../definitions/TimelineRequest.js";
+import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../../../types";
+} from "../../../../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

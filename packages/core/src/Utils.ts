@@ -1,7 +1,7 @@
-import FormData from "./FormData";
+import FormData from "./FormData.js";
 
-import type Attachment from "./definitions/Attachment";
-import type { RestResponse } from "./types";
+import type Attachment from "./definitions/Attachment.js";
+import type { RestResponse } from "./types.js";
 
 class Utils {
   public static formatTraffic(r: RestResponse): string {

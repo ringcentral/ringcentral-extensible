@@ -1,5 +1,5 @@
-import type EnumeratedPagingModel from "./EnumeratedPagingModel";
-import type ContactResource from "./ContactResource";
+import EnumeratedPagingModel from "./EnumeratedPagingModel.js";
+import ContactResource from "./ContactResource.js";
 
 interface DirectoryResource {
   /**

@@ -1,5 +1,5 @@
-import type PermissionInfoAdmin from "./PermissionInfoAdmin";
-import type PermissionInfoInt from "./PermissionInfoInt";
+import PermissionInfoAdmin from "./PermissionInfoAdmin.js";
+import PermissionInfoInt from "./PermissionInfoInt.js";
 
 /**
  * Extension permissions, corresponding to the Service Web permissions

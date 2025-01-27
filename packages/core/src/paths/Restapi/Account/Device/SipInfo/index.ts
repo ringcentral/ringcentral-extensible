@@ -1,9 +1,9 @@
-import type SipInfoResource from "../../../../../definitions/SipInfoResource";
-import type {
+import SipInfoResource from "../../../../../definitions/SipInfoResource.js";
+import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../types";
+} from "../../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

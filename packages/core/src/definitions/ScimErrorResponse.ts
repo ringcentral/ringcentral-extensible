@@ -5,7 +5,7 @@ interface ScimErrorResponse {
   detail?: string;
 
   /** */
-  schemas?: "urn:ietf:params:scim:api:messages:2.0:Error"[];
+  schemas?: ("urn:ietf:params:scim:api:messages:2.0:Error")[];
 
   /**
    * Bad request type when status code is 400

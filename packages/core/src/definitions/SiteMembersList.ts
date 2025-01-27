@@ -1,6 +1,6 @@
-import type SiteMemberInfo from "./SiteMemberInfo";
-import type PageNavigationModel from "./PageNavigationModel";
-import type EnumeratedPagingModel from "./EnumeratedPagingModel";
+import SiteMemberInfo from "./SiteMemberInfo.js";
+import PageNavigationModel from "./PageNavigationModel.js";
+import EnumeratedPagingModel from "./EnumeratedPagingModel.js";
 
 interface SiteMembersList {
   /**

@@ -1,5 +1,5 @@
-import type BridgeJoinPreferences from "./BridgeJoinPreferences";
-import type RecordingsPreferences from "./RecordingsPreferences";
+import BridgeJoinPreferences from "./BridgeJoinPreferences.js";
+import RecordingsPreferences from "./RecordingsPreferences.js";
 
 interface BridgePreferences {
   /** */

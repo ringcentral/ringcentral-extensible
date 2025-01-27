@@ -1,11 +1,11 @@
-import type InviteeModel from "../../../../../../../definitions/InviteeModel";
-import type InviteeListResource from "../../../../../../../definitions/InviteeListResource";
-import type RcwHistoryListInviteesParameters from "../../../../../../../definitions/RcwHistoryListInviteesParameters";
-import type {
+import InviteeModel from "../../../../../../../definitions/InviteeModel.js";
+import InviteeListResource from "../../../../../../../definitions/InviteeListResource.js";
+import RcwHistoryListInviteesParameters from "../../../../../../../definitions/RcwHistoryListInviteesParameters.js";
+import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../../../types";
+} from "../../../../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

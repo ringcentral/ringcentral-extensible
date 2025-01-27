@@ -1,10 +1,10 @@
-import type DefaultUserRoleRequest from "../../../../../definitions/DefaultUserRoleRequest";
-import type DefaultUserRole from "../../../../../definitions/DefaultUserRole";
-import type {
+import DefaultUserRoleRequest from "../../../../../definitions/DefaultUserRoleRequest.js";
+import DefaultUserRole from "../../../../../definitions/DefaultUserRole.js";
+import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../types";
+} from "../../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

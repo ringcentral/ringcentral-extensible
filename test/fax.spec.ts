@@ -1,7 +1,7 @@
-import type CreateFaxMessageRequest from "@rc-ex/core/src/definitions/CreateFaxMessageRequest";
-import type Attachment from "@rc-ex/core/src/definitions/Attachment";
-import type FaxResponse from "@rc-ex/core/src/definitions/FaxResponse";
-import Utils from "@rc-ex/core/src/Utils";
+import type CreateFaxMessageRequest from "@rc-ex/core/lib/esm/definitions/CreateFaxMessageRequest";
+import type Attachment from "@rc-ex/core/lib/esm/definitions/Attachment";
+import type FaxResponse from "@rc-ex/core/lib/esm/definitions/FaxResponse";
+import Utils from "@rc-ex/core/lib/esm/Utils";
 import fs from "fs";
 import path from "path";
 import { describe, expect, test } from "vitest";

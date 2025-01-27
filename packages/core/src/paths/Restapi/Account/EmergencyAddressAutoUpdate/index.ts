@@ -1,16 +1,16 @@
-import WirelessPointsBulkValidate from "./WirelessPointsBulkValidate";
-import WirelessPointsBulkUpdate from "./WirelessPointsBulkUpdate";
-import WirelessPointsBulkCreate from "./WirelessPointsBulkCreate";
-import SwitchesBulkValidate from "./SwitchesBulkValidate";
-import SwitchesBulkUpdate from "./SwitchesBulkUpdate";
-import SwitchesBulkCreate from "./SwitchesBulkCreate";
-import WirelessPoints from "./WirelessPoints";
-import Switches from "./Switches";
-import Networks from "./Networks";
-import Devices from "./Devices";
-import Users from "./Users";
-import Tasks from "./Tasks";
-import type { ParentInterface, RingCentralInterface } from "../../../../types";
+import WirelessPointsBulkValidate from "./WirelessPointsBulkValidate/index.js";
+import WirelessPointsBulkUpdate from "./WirelessPointsBulkUpdate/index.js";
+import WirelessPointsBulkCreate from "./WirelessPointsBulkCreate/index.js";
+import SwitchesBulkValidate from "./SwitchesBulkValidate/index.js";
+import SwitchesBulkUpdate from "./SwitchesBulkUpdate/index.js";
+import SwitchesBulkCreate from "./SwitchesBulkCreate/index.js";
+import WirelessPoints from "./WirelessPoints/index.js";
+import Switches from "./Switches/index.js";
+import Networks from "./Networks/index.js";
+import Devices from "./Devices/index.js";
+import Users from "./Users/index.js";
+import Tasks from "./Tasks/index.js";
+import { ParentInterface, RingCentralInterface } from "../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

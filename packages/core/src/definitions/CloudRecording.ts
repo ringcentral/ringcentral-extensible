@@ -1,4 +1,4 @@
-import type Host from "./Host";
+import Host from "./Host.js";
 
 /**
  * Recording information

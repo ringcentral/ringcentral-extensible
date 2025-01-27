@@ -3,10 +3,10 @@ import type {
   RestMethod,
   RestRequestConfig,
   RestResponse,
-} from "@rc-ex/core/src/types";
-import SdkExtension from "@rc-ex/core/src/SdkExtension";
-import type GetTokenRequest from "@rc-ex/core/src/definitions/GetTokenRequest";
-import RestException from "@rc-ex/core/src/RestException";
+} from "@rc-ex/core/lib/esm/types.js";
+import SdkExtension from "@rc-ex/core/lib/esm/SdkExtension.js";
+import type GetTokenRequest from "@rc-ex/core/lib/esm/definitions/GetTokenRequest.js";
+import RestException from "@rc-ex/core/lib/esm/RestException.js";
 import { EventEmitter } from "events";
 
 export enum Events {

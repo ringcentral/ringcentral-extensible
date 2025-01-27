@@ -1,13 +1,13 @@
-import type UpdateWirelessPoint from "../../../../../definitions/UpdateWirelessPoint";
-import type WirelessPointInfo from "../../../../../definitions/WirelessPointInfo";
-import type CreateWirelessPoint from "../../../../../definitions/CreateWirelessPoint";
-import type WirelessPointsList from "../../../../../definitions/WirelessPointsList";
-import type ListWirelessPointsParameters from "../../../../../definitions/ListWirelessPointsParameters";
-import type {
+import UpdateWirelessPoint from "../../../../../definitions/UpdateWirelessPoint.js";
+import WirelessPointInfo from "../../../../../definitions/WirelessPointInfo.js";
+import CreateWirelessPoint from "../../../../../definitions/CreateWirelessPoint.js";
+import WirelessPointsList from "../../../../../definitions/WirelessPointsList.js";
+import ListWirelessPointsParameters from "../../../../../definitions/ListWirelessPointsParameters.js";
+import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../types";
+} from "../../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

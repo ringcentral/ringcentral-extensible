@@ -1,9 +1,9 @@
-import type AccountOperatorInfo from "./AccountOperatorInfo";
-import type ServiceInfo from "./ServiceInfo";
-import type SignupInfoResource from "./SignupInfoResource";
-import type AccountStatusInfo from "./AccountStatusInfo";
-import type AccountRegionalSettings from "./AccountRegionalSettings";
-import type AccountLimits from "./AccountLimits";
+import AccountOperatorInfo from "./AccountOperatorInfo.js";
+import ServiceInfo from "./ServiceInfo.js";
+import SignupInfoResource from "./SignupInfoResource.js";
+import AccountStatusInfo from "./AccountStatusInfo.js";
+import AccountRegionalSettings from "./AccountRegionalSettings.js";
+import AccountLimits from "./AccountLimits.js";
 
 interface GetAccountInfoResponse {
   /**

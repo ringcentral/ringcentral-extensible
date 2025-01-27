@@ -1,7 +1,7 @@
-import type TMAttachmentAuthorInfo from "./TMAttachmentAuthorInfo";
-import type TMAttachmentFieldsInfo from "./TMAttachmentFieldsInfo";
-import type TMAttachmentFootnoteInfo from "./TMAttachmentFootnoteInfo";
-import type EventRecurrenceInfo from "./EventRecurrenceInfo";
+import TMAttachmentAuthorInfo from "./TMAttachmentAuthorInfo.js";
+import TMAttachmentFieldsInfo from "./TMAttachmentFieldsInfo.js";
+import TMAttachmentFootnoteInfo from "./TMAttachmentFootnoteInfo.js";
+import EventRecurrenceInfo from "./EventRecurrenceInfo.js";
 
 interface TMMessageAttachmentInfo {
   /**

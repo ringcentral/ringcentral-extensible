@@ -1,10 +1,10 @@
-import type AuthorizeRequest from "../../../../definitions/AuthorizeRequest";
-import type AuthorizeParameters from "../../../../definitions/AuthorizeParameters";
-import type {
+import AuthorizeRequest from "../../../../definitions/AuthorizeRequest.js";
+import AuthorizeParameters from "../../../../definitions/AuthorizeParameters.js";
+import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../types";
+} from "../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

@@ -1,13 +1,13 @@
-import type ScheduleInfo from "./ScheduleInfo";
-import type CalledNumberInfo from "./CalledNumberInfo";
-import type CallersInfo from "./CallersInfo";
-import type ForwardingInfo from "./ForwardingInfo";
-import type UnconditionalForwardingInfo from "./UnconditionalForwardingInfo";
-import type QueueInfo from "./QueueInfo";
-import type TransferredExtensionInfo from "./TransferredExtensionInfo";
-import type VoicemailInfo from "./VoicemailInfo";
-import type GreetingInfo from "./GreetingInfo";
-import type SharedLinesInfo from "./SharedLinesInfo";
+import ScheduleInfo from "./ScheduleInfo.js";
+import CalledNumberInfo from "./CalledNumberInfo.js";
+import CallersInfo from "./CallersInfo.js";
+import ForwardingInfo from "./ForwardingInfo.js";
+import UnconditionalForwardingInfo from "./UnconditionalForwardingInfo.js";
+import QueueInfo from "./QueueInfo.js";
+import TransferredExtensionInfo from "./TransferredExtensionInfo.js";
+import VoicemailInfo from "./VoicemailInfo.js";
+import GreetingInfo from "./GreetingInfo.js";
+import SharedLinesInfo from "./SharedLinesInfo.js";
 
 interface CustomAnsweringRuleInfo {
   /**

@@ -1,10 +1,10 @@
-import type CloudRecordings from "../../../../../definitions/CloudRecordings";
-import type GetAccountRecordingsParameters from "../../../../../definitions/GetAccountRecordingsParameters";
-import type {
+import CloudRecordings from "../../../../../definitions/CloudRecordings.js";
+import GetAccountRecordingsParameters from "../../../../../definitions/GetAccountRecordingsParameters.js";
+import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../types";
+} from "../../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

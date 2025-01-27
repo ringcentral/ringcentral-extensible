@@ -1,7 +1,7 @@
-import type UserMeetingRecordingSetting from "./UserMeetingRecordingSetting";
-import type ScheduleUserMeetingInfo from "./ScheduleUserMeetingInfo";
-import type TelephonyUserMeetingSettings from "./TelephonyUserMeetingSettings";
-import type UserInMeetingResponse from "./UserInMeetingResponse";
+import UserMeetingRecordingSetting from "./UserMeetingRecordingSetting.js";
+import ScheduleUserMeetingInfo from "./ScheduleUserMeetingInfo.js";
+import TelephonyUserMeetingSettings from "./TelephonyUserMeetingSettings.js";
+import UserInMeetingResponse from "./UserInMeetingResponse.js";
 
 interface MeetingUserSettingsResponse {
   /** */

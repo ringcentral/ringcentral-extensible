@@ -1,4 +1,4 @@
-import type MessageChanges from "./MessageChanges";
+import MessageChanges from "./MessageChanges.js";
 
 /**
  * Notification payload body

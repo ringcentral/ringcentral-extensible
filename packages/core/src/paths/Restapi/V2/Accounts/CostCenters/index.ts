@@ -1,9 +1,9 @@
-import type CostCenterList from "../../../../../definitions/CostCenterList";
-import type {
+import CostCenterList from "../../../../../definitions/CostCenterList.js";
+import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../types";
+} from "../../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

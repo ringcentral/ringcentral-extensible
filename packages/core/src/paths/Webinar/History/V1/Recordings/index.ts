@@ -1,12 +1,12 @@
-import Download from "./Download";
-import type RecordingItemExtendedModel from "../../../../../definitions/RecordingItemExtendedModel";
-import type RecordingListResource from "../../../../../definitions/RecordingListResource";
-import type RcwHistoryListRecordingsParameters from "../../../../../definitions/RcwHistoryListRecordingsParameters";
-import type {
+import Download from "./Download/index.js";
+import RecordingItemExtendedModel from "../../../../../definitions/RecordingItemExtendedModel.js";
+import RecordingListResource from "../../../../../definitions/RecordingListResource.js";
+import RcwHistoryListRecordingsParameters from "../../../../../definitions/RcwHistoryListRecordingsParameters.js";
+import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../types";
+} from "../../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

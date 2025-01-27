@@ -1,6 +1,6 @@
-import type CountryInfoDictionaryModel from "./CountryInfoDictionaryModel";
-import type PageNavigationModel from "./PageNavigationModel";
-import type EnumeratedPagingModel from "./EnumeratedPagingModel";
+import CountryInfoDictionaryModel from "./CountryInfoDictionaryModel.js";
+import PageNavigationModel from "./PageNavigationModel.js";
+import EnumeratedPagingModel from "./EnumeratedPagingModel.js";
 
 interface CountryListDictionaryModel {
   /**

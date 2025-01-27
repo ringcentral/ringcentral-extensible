@@ -1,4 +1,4 @@
-import type PageNavigationUri from "./PageNavigationUri";
+import PageNavigationUri from "./PageNavigationUri.js";
 
 /**
  * Links to other pages of the current result set

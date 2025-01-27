@@ -1,11 +1,11 @@
-import type MessageDetailsResponse from "../../../../../definitions/MessageDetailsResponse";
-import type MessageListResponse from "../../../../../definitions/MessageListResponse";
-import type ListA2PSMSParameters from "../../../../../definitions/ListA2PSMSParameters";
-import type {
+import MessageDetailsResponse from "../../../../../definitions/MessageDetailsResponse.js";
+import MessageListResponse from "../../../../../definitions/MessageListResponse.js";
+import ListA2PSMSParameters from "../../../../../definitions/ListA2PSMSParameters.js";
+import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../types";
+} from "../../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

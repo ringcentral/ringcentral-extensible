@@ -1,4 +1,4 @@
-import type CallFlipNumberResource from "./CallFlipNumberResource";
+import CallFlipNumberResource from "./CallFlipNumberResource.js";
 
 interface CallFlipNumberListResource {
   /**

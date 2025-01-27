@@ -1,5 +1,5 @@
-import type WcsWebinarResource from "./WcsWebinarResource";
-import type RcwPagingModel from "./RcwPagingModel";
+import WcsWebinarResource from "./WcsWebinarResource.js";
+import RcwPagingModel from "./RcwPagingModel.js";
 
 interface WebinarListResource {
   /**

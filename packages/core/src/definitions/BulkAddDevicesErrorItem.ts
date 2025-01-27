@@ -1,4 +1,4 @@
-import type ApiErrorWithParameter from "./ApiErrorWithParameter";
+import ApiErrorWithParameter from "./ApiErrorWithParameter.js";
 
 interface BulkAddDevicesErrorItem {
   /**

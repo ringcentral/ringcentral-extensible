@@ -1,5 +1,5 @@
-import type DevicePhoneLinesEmergencyAddressInfo from "./DevicePhoneLinesEmergencyAddressInfo";
-import type DevicePhoneNumberInfo from "./DevicePhoneNumberInfo";
+import DevicePhoneLinesEmergencyAddressInfo from "./DevicePhoneLinesEmergencyAddressInfo.js";
+import DevicePhoneNumberInfo from "./DevicePhoneNumberInfo.js";
 
 interface DevicePhoneLinesInfo {
   /**

@@ -1,10 +1,10 @@
-import type ExtensionCallerIdInfoRequest from "../../../../../definitions/ExtensionCallerIdInfoRequest";
-import type ExtensionCallerIdInfo from "../../../../../definitions/ExtensionCallerIdInfo";
-import type {
+import ExtensionCallerIdInfoRequest from "../../../../../definitions/ExtensionCallerIdInfoRequest.js";
+import ExtensionCallerIdInfo from "../../../../../definitions/ExtensionCallerIdInfo.js";
+import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../types";
+} from "../../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

@@ -1,5 +1,5 @@
-import type CommonEmergencyLocationAddressInfoDefault from "./CommonEmergencyLocationAddressInfoDefault";
-import type DeviceEmergencyLocationInfo from "./DeviceEmergencyLocationInfo";
+import CommonEmergencyLocationAddressInfoDefault from "./CommonEmergencyLocationAddressInfoDefault.js";
+import DeviceEmergencyLocationInfo from "./DeviceEmergencyLocationInfo.js";
 
 /**
  * Device emergency settings
