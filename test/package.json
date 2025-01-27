@@ -1,6 +1,6 @@
 {
   "name": "@rc-ex/test",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "private": true,
   "license": "MIT",
   "devDependencies": {
@@ -13,8 +13,8 @@
     "@rc-ex/ws": "file:../packages/extensions/ws",
     "@ringcentral/sdk": "^5.0.3",
     "dotenv-override-true": "^6.2.2",
+    "vitest": "^3.0.4",
     "wait-for-async": "^0.7.9",
-    "winston": "^3.17.0",
-    "vitest": "^3.0.4"
+    "winston": "^3.17.0"
   }
 }
