@@ -3,15 +3,15 @@ import type {
   RestMethod,
   RestRequestConfig,
   RestResponse,
-} from "@rc-ex/core/lib/types";
-import SdkExtension from "@rc-ex/core/lib/SdkExtension";
+} from "@rc-ex/core/src/types";
+import SdkExtension from "@rc-ex/core/src/SdkExtension";
 import type { MessageEvent } from "isomorphic-ws";
 import WS from "isomorphic-ws";
 import hyperid from "hyperid";
 import { EventEmitter } from "events";
 import waitFor from "wait-for-async";
-import RestException from "@rc-ex/core/lib/RestException";
-import type SubscriptionInfo from "@rc-ex/core/lib/definitions/SubscriptionInfo";
+import RestException from "@rc-ex/core/src/RestException";
+import type SubscriptionInfo from "@rc-ex/core/src/definitions/SubscriptionInfo";
 
 import { request } from "./rest";
 import type {

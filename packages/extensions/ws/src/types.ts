@@ -3,7 +3,7 @@ import type {
   RestMethod,
   RestRequestConfig,
   RestResponse,
-} from "@rc-ex/core/lib/types";
+} from "@rc-ex/core/src/types";
 import type WS from "isomorphic-ws";
 
 export interface WsToken {

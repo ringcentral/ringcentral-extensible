@@ -1,6 +1,6 @@
-import type CreateSubscriptionRequest from "@rc-ex/core/lib/definitions/CreateSubscriptionRequest";
-import type SubscriptionInfo from "@rc-ex/core/lib/definitions/SubscriptionInfo";
-import type { RestResponse } from "@rc-ex/core/lib/types";
+import type CreateSubscriptionRequest from "@rc-ex/core/src/definitions/CreateSubscriptionRequest";
+import type SubscriptionInfo from "@rc-ex/core/src/definitions/SubscriptionInfo";
+import type { RestResponse } from "@rc-ex/core/src/types";
 import type { MessageEvent } from "ws";
 
 import type { WebSocketExtensionInterface, WsgEvent, WsgMeta } from "./types";

@@ -1,5 +1,5 @@
-import type CreateMMSMessage from "@rc-ex/core/lib/definitions/CreateMMSMessage";
-import type Attachment from "@rc-ex/core/lib/definitions/Attachment";
+import type CreateMMSMessage from "@rc-ex/core/src/definitions/CreateMMSMessage";
+import type Attachment from "@rc-ex/core/src/definitions/Attachment";
 import fs from "fs";
 import path from "path";
 import ReusableRestClient from "./reusable-rest-client";

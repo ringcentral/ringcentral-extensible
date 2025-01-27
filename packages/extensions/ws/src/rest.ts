@@ -2,8 +2,8 @@ import type {
   RestMethod,
   RestRequestConfig,
   RestResponse,
-} from "@rc-ex/core/lib/types";
-import RestException from "@rc-ex/core/lib/RestException";
+} from "@rc-ex/core/src/types";
+import RestException from "@rc-ex/core/src/RestException";
 import hyperid from "hyperid";
 import { getReasonPhrase } from "http-status-codes";
 

@@ -10,9 +10,9 @@
     "test"
   ],
   "scripts": {
-    "compile": "lerna exec tsc --scope=@rc-ex/core && lerna exec tsc --no-private --ignore=@rc-ex/core",
+    "compile": "lerna exec tsc --scope=@rc-ex/core && lerna exec tsc --no-private --ignore=@rc-ex/core && lerna exec 'cp -r src lib' --no-private",
     "prepublishOnly": "yarn reset && yarn compile",
-    "reset": "lerna exec 'rm -rf lib'",
+    "reset": "lerna exec 'rm -rf lib' && yarn delete-js",
     "test": "yarn workspace @rc-ex/test run jest -w 1 --detectOpenHandles -c jest.config.ts $t",
     "upgrade-all": "yarn-upgrade-all -W && yarn workspaces run yarn-upgrade-all && yarn install",
     "delete-js": "find . -type f \\( -name \"*.js\" -o -name \"*.d.ts\" -o -name \"*.js.map\" \\) -not -path \"*/node_modules/*\" -exec rm -f {} +"

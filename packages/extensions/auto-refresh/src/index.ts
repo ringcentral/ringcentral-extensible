@@ -1,5 +1,5 @@
 import type RingCentral from "@rc-ex/core";
-import SdkExtension from "@rc-ex/core/lib/SdkExtension";
+import SdkExtension from "@rc-ex/core/src/SdkExtension";
 
 export interface AutoRefreshOptions {
   interval: number;

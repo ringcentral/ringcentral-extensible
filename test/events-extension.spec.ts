@@ -1,5 +1,5 @@
 import EventsExtension, { Events } from "@rc-ex/events";
-import Utils from "@rc-ex/core/lib/Utils";
+import Utils from "@rc-ex/core/src/Utils.js";
 
 import ReusableRestClient from "./reusable-rest-client";
 

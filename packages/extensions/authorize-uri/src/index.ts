@@ -1,6 +1,6 @@
 import type RingCentral from "@rc-ex/core";
-import SdkExtension from "@rc-ex/core/lib/SdkExtension";
-import type AuthorizeRequest from "@rc-ex/core/lib/definitions/AuthorizeRequest";
+import SdkExtension from "@rc-ex/core/src/SdkExtension";
+import type AuthorizeRequest from "@rc-ex/core/src/definitions/AuthorizeRequest";
 import type { QueryDataMap } from "urijs";
 import URI from "urijs";
 import { createHash, randomBytes } from "crypto";

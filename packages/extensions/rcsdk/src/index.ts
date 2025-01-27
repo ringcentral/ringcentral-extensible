@@ -3,9 +3,9 @@ import type {
   RestMethod,
   RestRequestConfig,
   RestResponse,
-} from "@rc-ex/core/lib/types";
-import SdkExtension from "@rc-ex/core/lib/SdkExtension";
-import RestException from "@rc-ex/core/lib/RestException";
+} from "@rc-ex/core/src/types";
+import SdkExtension from "@rc-ex/core/src/SdkExtension";
+import RestException from "@rc-ex/core/src/RestException";
 import type SDK from "@ringcentral/sdk";
 
 export interface RcSdkOptions {

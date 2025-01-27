@@ -1,6 +1,6 @@
-import Utils from "@rc-ex/core/lib/Utils";
-import type FaxResponse from "@rc-ex/core/lib/definitions/FaxResponse";
-import type GetSMSMessageInfoResponse from "@rc-ex/core/lib/definitions/GetSMSMessageInfoResponse";
+import Utils from "@rc-ex/core/src/Utils.js";
+import type FaxResponse from "@rc-ex/core/src/definitions/FaxResponse";
+import type GetSMSMessageInfoResponse from "@rc-ex/core/src/definitions/GetSMSMessageInfoResponse";
 import fs from "fs";
 import path from "path";
 
