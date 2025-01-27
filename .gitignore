@@ -10,3 +10,6 @@ temp.*
 .DS_Store
 rcv.spec.ts
 test/local/
+*.js
+*.js.map
+*.d.ts

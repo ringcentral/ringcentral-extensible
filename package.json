@@ -14,7 +14,8 @@
     "prepublishOnly": "yarn reset && yarn compile",
     "reset": "lerna exec 'rm -rf lib'",
     "test": "yarn workspace @rc-ex/test run jest -w 1 --detectOpenHandles -c jest.config.ts $t",
-    "upgrade-all": "yarn-upgrade-all -W && yarn workspaces run yarn-upgrade-all && yarn install"
+    "upgrade-all": "yarn-upgrade-all -W && yarn workspaces run yarn-upgrade-all && yarn install",
+    "delete-js": "find . -type f \\( -name \"*.js\" -o -name \"*.d.ts\" -o -name \"*.js.map\" \\) -not -path \"*/node_modules/*\" -exec rm -f {} +"
   },
   "devDependencies": {
     "@types/node": "^22.10.10",
