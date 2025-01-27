@@ -7,7 +7,7 @@
   "license": "MIT",
   "type": "module",
   "types": "./lib/esm/index.d.ts",
-  "main": "./lib/cjs/index.cjs",
+  "main": "./lib/index.cjs",
   "module": "./lib/esm/index.js",
   "repository": {
     "type": "git",
@@ -25,5 +25,8 @@
   },
   "devDependencies": {
     "@rc-ex/core": "file:../../core"
+  },
+  "scripts": {
+    "rename-to-cjs": "find lib -type f -name '*.js' -exec sh -c 'mv \"$0\" \"${0%.js}.cjs\"' {} \\;"
   }
 }

@@ -10,13 +10,13 @@
     "test"
   ],
   "scripts": {
-    "build:cjs": "lerna exec 'tsc --module CommonJS --outDir lib/cjs' --no-private",
-    "build:esm": "lerna exec 'tsc --module NodeNext --outDir lib/esm --declaration true' --no-private",
+    "build:cjs": "lerna exec 'tsc --module CommonJS --outDir lib && yarn rename-to-cjs' --no-private",
+    "build:esm": "lerna exec 'tsc --module NodeNext --outDir lib/esm' --no-private",
+    "compile": "yarn build:cjs && yarn build:esm",
     "prepublishOnly": "yarn reset && yarn compile",
-    "reset": "lerna exec 'rm -rf lib' && yarn delete-js",
+    "reset": "lerna exec 'rm -rf lib'",
     "test": "yarn workspace @rc-ex/test run vitest",
-    "upgrade-all": "yarn-upgrade-all -W && yarn workspaces run yarn-upgrade-all && yarn install",
-    "delete-js": "find . -type f \\( -name \"*.js\" -o -name \"*.d.ts\" -o -name \"*.js.map\" \\) -not -path \"*/node_modules/*\" -exec rm -f {} +"
+    "upgrade-all": "yarn-upgrade-all -W && yarn workspaces run yarn-upgrade-all && yarn install"
   },
   "devDependencies": {
     "@types/node": "^22.10.10",
