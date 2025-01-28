@@ -848,38 +848,38 @@
   integrity sha512-+1VkjdD0QBLPodGrJUeqarH8VAIvQODIbwh9XpP5Syisf7YoQgsJKPNFoqqLQlu+VQ/tVSshMR6loPMn8U+dPg==
 
 "@rc-ex/authorize-uri@file:packages/extensions/authorize-uri":
-  version "1.2.1"
+  version "1.3.0"
   dependencies:
     "@types/urijs" "^1.19.25"
     urijs "^1.19.11"
 
 "@rc-ex/auto-refresh@file:packages/extensions/auto-refresh":
-  version "0.2.1"
+  version "0.3.0"
 
 "@rc-ex/core@file:packages/core":
-  version "1.5.1"
+  version "1.6.0"
   dependencies:
     "@types/qs" "^6.9.18"
     axios "^1.7.9"
     qs "^6.14.0"
 
 "@rc-ex/debug@file:packages/extensions/debug":
-  version "1.2.2"
+  version "1.3.0"
 
 "@rc-ex/events@file:packages/extensions/events":
-  version "1.2.1"
+  version "1.3.0"
 
 "@rc-ex/rcsdk@file:packages/extensions/rcsdk":
-  version "1.2.1"
+  version "1.3.0"
 
 "@rc-ex/ws@file:packages/extensions/ws":
-  version "1.2.1"
+  version "1.3.0"
   dependencies:
     "@types/ws" "^8.5.14"
     http-status-codes "^2.3.0"
     hyperid "^3.3.0"
     isomorphic-ws "^5.0.0"
-    wait-for-async "^0.7.9"
+    wait-for-async "^0.7.10"
     ws "^8.18.0"
 
 "@ringcentral/sdk@^5.0.3":
@@ -4633,10 +4633,10 @@ rimraf@^4.4.1:
   dependencies:
     glob "^9.2.0"
 
-ringcentral-code-generator@^0.7.2:
-  version "0.7.2"
-  resolved "https://registry.yarnpkg.com/ringcentral-code-generator/-/ringcentral-code-generator-0.7.2.tgz#6a82c9e4559a77a541cf83fa42d98a69ab285a17"
-  integrity sha512-eSh51gAO/vTuh8QPG75sMD9ecvVjxBEZdJ5w8nJGfSJ8p5SBzkdXcXCd1vd6QjqeRQN2kcXkLzkjtIsGRCUR8A==
+ringcentral-code-generator@^0.7.3:
+  version "0.7.3"
+  resolved "https://registry.yarnpkg.com/ringcentral-code-generator/-/ringcentral-code-generator-0.7.3.tgz#d5ac5839c6aab746e948efd5679fab6ff5dc719b"
+  integrity sha512-QepKo0Iuwk/ukkg5B7ShB28mTv3vdFUmvmbWpPRAYrQFTphuM+oMgQVi7twMPmGfeA5SoG0G5lTRhRFlLMGOrw==
   dependencies:
     "@types/js-yaml" "^4.0.9"
     "@types/ramda" "^0.30.2"
@@ -5520,10 +5520,10 @@ vitest@^3.0.4:
     vite-node "3.0.4"
     why-is-node-running "^2.3.0"
 
-wait-for-async@^0.7.9:
-  version "0.7.9"
-  resolved "https://registry.yarnpkg.com/wait-for-async/-/wait-for-async-0.7.9.tgz#f8c516880ce6b911738945739d8313d7f9b07ad9"
-  integrity sha512-DSo2ZTibu4O2rYNgEhcp3hvLvL4mJ3LosxAKa/QDeuOcaroNNZJs7jPKSpCVds8Lbu7RfawV9czelZuKc0GQtg==
+wait-for-async@^0.7.10:
+  version "0.7.10"
+  resolved "https://registry.yarnpkg.com/wait-for-async/-/wait-for-async-0.7.10.tgz#7b7cd62f6646f94e02ca1538dd7bc169e539ad72"
+  integrity sha512-bIrLNR2DcGurrCsblMc0HFGg3uTfeGwiaRTs7U6pMfcXN3PTKpjkGsnPf5kqElq6UfizKjfSRilR5j0FY28UqQ==
 
 walk-up-path@^3.0.1:
   version "3.0.1"

@@ -5,9 +5,8 @@
   "author": "Tyler Liu <tyler.liu@ringcentral.com>",
   "homepage": "https://github.com/ringcentral/ringcentral-extensible/tree/master/packages/extensions/auto-refresh",
   "license": "MIT",
-  "type": "module",
   "types": "./lib/esm/index.d.ts",
-  "main": "./lib/index.cjs",
+  "main": "./lib/index.js",
   "module": "./lib/esm/index.js",
   "repository": {
     "type": "git",

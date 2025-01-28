@@ -5,9 +5,8 @@
   "author": "Tyler Liu <tyler.liu@ringcentral.com>",
   "homepage": "https://github.com/ringcentral/ringcentral-extensible/tree/master/packages/core",
   "license": "MIT",
-  "type": "module",
   "types": "./lib/esm/index.d.ts",
-  "main": "./lib/index.cjs",
+  "main": "./lib/index.js",
   "module": "./lib/esm/index.js",
   "repository": {
     "type": "git",
@@ -26,7 +25,7 @@
   },
   "devDependencies": {
     "dotenv-override-true": "^6.2.2",
-    "ringcentral-code-generator": "^0.7.2",
+    "ringcentral-code-generator": "^0.7.3",
     "ts-node": "^10.9.2"
   },
   "scripts": {

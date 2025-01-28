@@ -10,13 +10,14 @@
     "test"
   ],
   "scripts": {
-    "build:cjs": "lerna exec 'tsc --module CommonJS --outDir lib && yarn rename-to-cjs' --no-private",
+    "build:cjs": "lerna exec 'tsc --module CommonJS --outDir lib' --no-private",
     "build:esm": "lerna exec 'tsc --module NodeNext --outDir lib/esm' --no-private",
     "compile": "yarn build:cjs && yarn build:esm",
     "prepublishOnly": "yarn reset && yarn compile",
     "reset": "lerna exec 'rm -rf lib'",
     "test": "yarn workspace @rc-ex/test run vitest",
-    "upgrade-all": "yarn-upgrade-all -W && yarn workspaces run yarn-upgrade-all && yarn install"
+    "upgrade-all": "yarn-upgrade-all -W && yarn workspaces run yarn-upgrade-all && yarn install",
+    "reinstall": "rm -rf node_modules && yarn lerna exec 'rm -rf node_modules' && yarn install"
   },
   "devDependencies": {
     "@types/node": "^22.10.10",
