@@ -137,6 +137,7 @@ t=auto-recover yarn test
 Update version number in `packages/core/src/Rest.ts`
 
 ```
+yarn compile
 yarn lerna publish from-package
 ```
 
