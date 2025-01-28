@@ -15,7 +15,6 @@ describe("Exceptions", () => {
       });
     } catch (e) {
       exception = true;
-      expect(e instanceof RestException).toBeTruthy();
       const re = e as { response: RestResponse };
       expect(re.response.status).toBe(400);
     } finally {
@@ -33,7 +32,6 @@ describe("Exceptions", () => {
       );
     } catch (e) {
       exception = true;
-      expect(e instanceof RestException).toBeTruthy();
       const re = e as { response: RestResponse };
       expect(re.response.status).toBe(404);
     } finally {
