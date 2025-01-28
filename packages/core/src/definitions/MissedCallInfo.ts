@@ -1,4 +1,4 @@
-import MissedCallExtensionInfo from "./MissedCallExtensionInfo.js";
+import MissedCallExtensionInfo from "./MissedCallExtensionInfo";
 
 /**
  * Specifies behavior for the missed call scenario. Returned only if `enabled` parameter of a voicemail is set to 'false'

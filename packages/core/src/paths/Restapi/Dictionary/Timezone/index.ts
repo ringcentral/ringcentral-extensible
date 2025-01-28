@@ -1,11 +1,11 @@
-import GetTimezoneInfoResponse from "../../../../definitions/GetTimezoneInfoResponse.js";
-import GetTimezoneListResponse from "../../../../definitions/GetTimezoneListResponse.js";
-import ListTimezonesParameters from "../../../../definitions/ListTimezonesParameters.js";
+import GetTimezoneInfoResponse from "../../../../definitions/GetTimezoneInfoResponse";
+import GetTimezoneListResponse from "../../../../definitions/GetTimezoneListResponse";
+import ListTimezonesParameters from "../../../../definitions/ListTimezonesParameters";
 import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../types.js";
+} from "../../../../types";
 
 class Index {
   public rc: RingCentralInterface;

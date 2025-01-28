@@ -1,7 +1,7 @@
-import RolesTimezoneResource from "./RolesTimezoneResource.js";
-import RolesCountryResource from "./RolesCountryResource.js";
-import RolesLanguageResource from "./RolesLanguageResource.js";
-import CurrencyResource from "./CurrencyResource.js";
+import RolesTimezoneResource from "./RolesTimezoneResource";
+import RolesCountryResource from "./RolesCountryResource";
+import RolesLanguageResource from "./RolesLanguageResource";
+import CurrencyResource from "./CurrencyResource";
 
 interface RolesRegionalSettingsResource {
   /** */

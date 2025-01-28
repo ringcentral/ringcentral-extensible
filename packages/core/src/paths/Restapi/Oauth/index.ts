@@ -1,7 +1,7 @@
-import Authorize from "./Authorize/index.js";
-import Revoke from "./Revoke/index.js";
-import Token from "./Token/index.js";
-import { ParentInterface, RingCentralInterface } from "../../../types.js";
+import Authorize from "./Authorize/index";
+import Revoke from "./Revoke/index";
+import Token from "./Token/index";
+import { ParentInterface, RingCentralInterface } from "../../../types";
 
 class Index {
   public rc: RingCentralInterface;

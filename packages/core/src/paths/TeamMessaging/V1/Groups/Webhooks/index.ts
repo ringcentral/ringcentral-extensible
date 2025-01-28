@@ -1,10 +1,10 @@
-import TMWebhookInfo from "../../../../../definitions/TMWebhookInfo.js";
-import TMWebhookList from "../../../../../definitions/TMWebhookList.js";
+import TMWebhookInfo from "../../../../../definitions/TMWebhookInfo";
+import TMWebhookList from "../../../../../definitions/TMWebhookList";
 import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../types.js";
+} from "../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;

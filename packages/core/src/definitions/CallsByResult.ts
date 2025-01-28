@@ -1,4 +1,4 @@
-import CallsByResultBreakdown from "./CallsByResultBreakdown.js";
+import CallsByResultBreakdown from "./CallsByResultBreakdown";
 
 /**
  * Data for calls with breakdown by result (Completed, Abandoned, Voicemail, Unknown, Missed, Accepted)

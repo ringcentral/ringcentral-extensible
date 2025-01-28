@@ -1,8 +1,8 @@
-import Records from "./Records/index.js";
+import Records from "./Records/index";
 import {
   ParentInterface,
   RingCentralInterface,
-} from "../../../../../../../types.js";
+} from "../../../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;

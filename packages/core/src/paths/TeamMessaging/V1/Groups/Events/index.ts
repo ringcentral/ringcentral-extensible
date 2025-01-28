@@ -1,10 +1,10 @@
-import TMCreateEventRequest from "../../../../../definitions/TMCreateEventRequest.js";
-import TMEventInfo from "../../../../../definitions/TMEventInfo.js";
+import TMCreateEventRequest from "../../../../../definitions/TMCreateEventRequest";
+import TMEventInfo from "../../../../../definitions/TMEventInfo";
 import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../types.js";
+} from "../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;

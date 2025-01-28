@@ -1,4 +1,4 @@
-import ADGError from "./ADGError.js";
+import ADGError from "./ADGError";
 
 /**
  * Format of response in case that any error occurred during request processing

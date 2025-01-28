@@ -1,5 +1,5 @@
-import SipProvision from "./SipProvision/index.js";
-import { ParentInterface, RingCentralInterface } from "../../../types.js";
+import SipProvision from "./SipProvision/index";
+import { ParentInterface, RingCentralInterface } from "../../../types";
 
 class Index {
   public rc: RingCentralInterface;

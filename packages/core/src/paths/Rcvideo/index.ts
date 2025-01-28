@@ -1,6 +1,6 @@
-import V2 from "./V2/index.js";
-import V1 from "./V1/index.js";
-import { RingCentralInterface } from "../../types.js";
+import V2 from "./V2/index";
+import V1 from "./V1/index";
+import { RingCentralInterface } from "../../types";
 
 class Index {
   public rc: RingCentralInterface;

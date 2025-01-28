@@ -1,6 +1,6 @@
-import GetExtensionListInfoResponse from "./GetExtensionListInfoResponse.js";
-import PageNavigationModel from "./PageNavigationModel.js";
-import EnumeratedPagingModel from "./EnumeratedPagingModel.js";
+import GetExtensionListInfoResponse from "./GetExtensionListInfoResponse";
+import PageNavigationModel from "./PageNavigationModel";
+import EnumeratedPagingModel from "./EnumeratedPagingModel";
 
 interface GetExtensionListResponse {
   /**

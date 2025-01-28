@@ -1,4 +1,4 @@
-import ErrorEntity from "./ErrorEntity.js";
+import ErrorEntity from "./ErrorEntity";
 
 interface ExtensionUpdateShortResult {
   /**

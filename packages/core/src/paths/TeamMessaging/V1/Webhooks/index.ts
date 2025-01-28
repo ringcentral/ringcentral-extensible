@@ -1,11 +1,11 @@
-import Activate from "./Activate/index.js";
-import Suspend from "./Suspend/index.js";
-import TMWebhookList from "../../../../definitions/TMWebhookList.js";
+import Activate from "./Activate/index";
+import Suspend from "./Suspend/index";
+import TMWebhookList from "../../../../definitions/TMWebhookList";
 import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../types.js";
+} from "../../../../types";
 
 class Index {
   public rc: RingCentralInterface;

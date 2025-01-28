@@ -1,4 +1,4 @@
-import SpeechContextPhrasesInput from "./SpeechContextPhrasesInput.js";
+import SpeechContextPhrasesInput from "./SpeechContextPhrasesInput";
 
 interface AsrInput {
   /**

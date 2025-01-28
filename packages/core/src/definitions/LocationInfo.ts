@@ -1,4 +1,4 @@
-import LocationStateInfo from "./LocationStateInfo.js";
+import LocationStateInfo from "./LocationStateInfo";
 
 interface LocationInfo {
   /**

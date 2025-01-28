@@ -1,4 +1,4 @@
-import UpdateDevicePhoneInfo from "./UpdateDevicePhoneInfo.js";
+import UpdateDevicePhoneInfo from "./UpdateDevicePhoneInfo";
 
 /**
  * Information on phone lines added to a device

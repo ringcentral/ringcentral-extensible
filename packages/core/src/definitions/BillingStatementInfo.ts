@@ -1,5 +1,5 @@
-import BillingStatementCharges from "./BillingStatementCharges.js";
-import BillingStatementFees from "./BillingStatementFees.js";
+import BillingStatementCharges from "./BillingStatementCharges";
+import BillingStatementFees from "./BillingStatementFees";
 
 /**
  * Billing information. Returned for device update request if `prestatement`

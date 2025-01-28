@@ -1,6 +1,6 @@
-import PagingGroupExtensionInfo from "./PagingGroupExtensionInfo.js";
-import PageNavigationModel from "./PageNavigationModel.js";
-import EnumeratedPagingModel from "./EnumeratedPagingModel.js";
+import PagingGroupExtensionInfo from "./PagingGroupExtensionInfo";
+import PageNavigationModel from "./PageNavigationModel";
+import EnumeratedPagingModel from "./EnumeratedPagingModel";
 
 interface PagingOnlyGroupUsers {
   /**

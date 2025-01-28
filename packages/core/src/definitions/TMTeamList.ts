@@ -1,5 +1,5 @@
-import TMTeamInfo from "./TMTeamInfo.js";
-import TMNavigationInfo from "./TMNavigationInfo.js";
+import TMTeamInfo from "./TMTeamInfo";
+import TMNavigationInfo from "./TMNavigationInfo";
 
 interface TMTeamList {
   /**

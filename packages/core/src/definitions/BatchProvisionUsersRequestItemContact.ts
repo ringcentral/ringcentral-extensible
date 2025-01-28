@@ -1,4 +1,4 @@
-import TransitionInfo from "./TransitionInfo.js";
+import TransitionInfo from "./TransitionInfo";
 
 interface BatchProvisionUsersRequestItemContact {
   /**

@@ -1,4 +1,4 @@
-import AdaptiveCardInfoRequestItem from "./AdaptiveCardInfoRequestItem.js";
+import AdaptiveCardInfoRequestItem from "./AdaptiveCardInfoRequestItem";
 
 interface AdaptiveCardInfoRequest {
   /** */

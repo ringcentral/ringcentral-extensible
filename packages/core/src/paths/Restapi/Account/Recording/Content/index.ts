@@ -1,9 +1,9 @@
-import ReadCallRecordingContentParameters from "../../../../../definitions/ReadCallRecordingContentParameters.js";
+import ReadCallRecordingContentParameters from "../../../../../definitions/ReadCallRecordingContentParameters";
 import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../types.js";
+} from "../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;

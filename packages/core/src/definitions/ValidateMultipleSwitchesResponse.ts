@@ -1,4 +1,4 @@
-import SwitchValidated from "./SwitchValidated.js";
+import SwitchValidated from "./SwitchValidated";
 
 interface ValidateMultipleSwitchesResponse {
   /** */

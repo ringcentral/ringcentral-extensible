@@ -1,4 +1,4 @@
-import TMAttachmentInfo from "./TMAttachmentInfo.js";
+import TMAttachmentInfo from "./TMAttachmentInfo";
 
 /**
  * Post data. At least one attribute should be provided (text or attachments)

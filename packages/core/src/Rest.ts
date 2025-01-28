@@ -1,16 +1,16 @@
 import type { AxiosInstance } from "axios";
 import axios from "axios";
 import qs from "qs";
-import { boundary } from "./FormData.js";
+import { boundary } from "./FormData";
 
-import RestException from "./RestException.js";
-import type TokenInfo from "./definitions/TokenInfo.js";
+import RestException from "./RestException";
+import type TokenInfo from "./definitions/TokenInfo";
 import type {
   RestMethod,
   RestOptions,
   RestRequestConfig,
   RestResponse,
-} from "./types.js";
+} from "./types";
 
 const version = "1.5.0";
 

@@ -1,7 +1,7 @@
-import PersonalContactResource from "./PersonalContactResource.js";
-import UserContactsNavigationInfo from "./UserContactsNavigationInfo.js";
-import UserContactsPagingInfo from "./UserContactsPagingInfo.js";
-import UserContactsGroupsInfo from "./UserContactsGroupsInfo.js";
+import PersonalContactResource from "./PersonalContactResource";
+import UserContactsNavigationInfo from "./UserContactsNavigationInfo";
+import UserContactsPagingInfo from "./UserContactsPagingInfo";
+import UserContactsGroupsInfo from "./UserContactsGroupsInfo";
 
 interface ContactList {
   /**

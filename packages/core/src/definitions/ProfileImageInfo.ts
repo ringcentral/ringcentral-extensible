@@ -1,4 +1,4 @@
-import ProfileImageInfoURI from "./ProfileImageInfoURI.js";
+import ProfileImageInfoURI from "./ProfileImageInfoURI";
 
 /**
  * Information on profile image

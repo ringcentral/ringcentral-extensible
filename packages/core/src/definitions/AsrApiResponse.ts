@@ -1,4 +1,4 @@
-import AsrApiResponseResponse from "./AsrApiResponseResponse.js";
+import AsrApiResponseResponse from "./AsrApiResponseResponse";
 
 interface AsrApiResponse {
   /** */

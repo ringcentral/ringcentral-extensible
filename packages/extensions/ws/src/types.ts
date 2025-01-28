@@ -1,9 +1,9 @@
-import type RingCentral from "@rc-ex/core";
+import type RingCentral from "@rc-ex/core/index";
 import type {
   RestMethod,
   RestRequestConfig,
   RestResponse,
-} from "@rc-ex/core/lib/esm/types.js";
+} from "@rc-ex/core/types";
 import type WS from "isomorphic-ws";
 
 export interface WsToken {

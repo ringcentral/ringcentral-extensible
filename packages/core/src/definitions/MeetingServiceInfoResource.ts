@@ -1,5 +1,5 @@
-import MeetingExternalUserInfoResource from "./MeetingExternalUserInfoResource.js";
-import DialInNumberResource from "./DialInNumberResource.js";
+import MeetingExternalUserInfoResource from "./MeetingExternalUserInfoResource";
+import DialInNumberResource from "./DialInNumberResource";
 
 interface MeetingServiceInfoResource {
   /**

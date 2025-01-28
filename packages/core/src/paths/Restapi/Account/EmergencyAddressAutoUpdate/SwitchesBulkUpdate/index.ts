@@ -1,10 +1,10 @@
-import UpdateMultipleSwitchesResponse from "../../../../../definitions/UpdateMultipleSwitchesResponse.js";
-import UpdateMultipleSwitchesRequest from "../../../../../definitions/UpdateMultipleSwitchesRequest.js";
+import UpdateMultipleSwitchesResponse from "../../../../../definitions/UpdateMultipleSwitchesResponse";
+import UpdateMultipleSwitchesRequest from "../../../../../definitions/UpdateMultipleSwitchesRequest";
 import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../types.js";
+} from "../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;

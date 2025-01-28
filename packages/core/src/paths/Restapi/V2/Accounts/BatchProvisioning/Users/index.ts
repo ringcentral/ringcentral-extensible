@@ -1,10 +1,10 @@
-import BatchProvisionUsersResponse from "../../../../../../definitions/BatchProvisionUsersResponse.js";
-import BatchProvisionUsersRequest from "../../../../../../definitions/BatchProvisionUsersRequest.js";
+import BatchProvisionUsersResponse from "../../../../../../definitions/BatchProvisionUsersResponse";
+import BatchProvisionUsersRequest from "../../../../../../definitions/BatchProvisionUsersRequest";
 import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../../types.js";
+} from "../../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;

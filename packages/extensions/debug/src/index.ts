@@ -1,11 +1,11 @@
-import type RingCentral from "@rc-ex/core";
+import type RingCentral from "@rc-ex/core/index";
 import type {
   RestMethod,
   RestRequestConfig,
   RestResponse,
-} from "@rc-ex/core/lib/esm/types.js";
-import Utils from "@rc-ex/core/lib/esm/Utils.js";
-import SdkExtension from "@rc-ex/core/lib/esm/SdkExtension.js";
+} from "@rc-ex/core/types";
+import Utils from "@rc-ex/core/Utils";
+import SdkExtension from "@rc-ex/core/SdkExtension";
 
 export interface DebugOptions {
   loggingAction?: (message: string) => void;

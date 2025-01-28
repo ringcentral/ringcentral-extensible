@@ -1,9 +1,9 @@
-import CallFlipNumberListResource from "../../../../../../definitions/CallFlipNumberListResource.js";
+import CallFlipNumberListResource from "../../../../../../definitions/CallFlipNumberListResource";
 import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../../types.js";
+} from "../../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;

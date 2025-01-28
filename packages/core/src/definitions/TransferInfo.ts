@@ -1,4 +1,4 @@
-import TransferExtensionInfo from "./TransferExtensionInfo.js";
+import TransferExtensionInfo from "./TransferExtensionInfo";
 
 interface TransferInfo {
   /** */

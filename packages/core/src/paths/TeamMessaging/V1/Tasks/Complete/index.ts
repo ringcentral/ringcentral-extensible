@@ -1,9 +1,9 @@
-import TMCompleteTaskRequest from "../../../../../definitions/TMCompleteTaskRequest.js";
+import TMCompleteTaskRequest from "../../../../../definitions/TMCompleteTaskRequest";
 import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../types.js";
+} from "../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;

@@ -1,4 +1,4 @@
-import ConversationalInsightsUnitValues from "./ConversationalInsightsUnitValues.js";
+import ConversationalInsightsUnitValues from "./ConversationalInsightsUnitValues";
 
 interface ConversationalInsightsUnit {
   /**

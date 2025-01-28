@@ -1,5 +1,5 @@
-import BatchProvisionUsersResponseResultsExtension from "./BatchProvisionUsersResponseResultsExtension.js";
-import ApiErrorWithParameter from "./ApiErrorWithParameter.js";
+import BatchProvisionUsersResponseResultsExtension from "./BatchProvisionUsersResponseResultsExtension";
+import ApiErrorWithParameter from "./ApiErrorWithParameter";
 
 interface BatchProvisionUsersResponseResults {
   /**

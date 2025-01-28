@@ -1,4 +1,4 @@
-import SiteIVRActionsExtensionInfo from "./SiteIVRActionsExtensionInfo.js";
+import SiteIVRActionsExtensionInfo from "./SiteIVRActionsExtensionInfo";
 
 /**
  * Keys handling settings

@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "module": "esnext",
+    "declaration": true,
+    "outDir": "./dist/esm",
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "paths": {
+      "@rc-ex/core/*": [
+        "../../core/dist/esm/*"
+      ],
+      "isomorphic-ws": [
+        "../../../node_modules/isomorphic-ws/node.js"
+      ],
+      "wait-for-async": [
+        "../../../node_modules/wait-for-async/dist/esm/index.js"
+      ],
+      "hyperid": [
+        "../../../node_modules/hyperid/hyperid.js"
+      ],
+      "http-status-codes": [
+        "../../../node_modules/http-status-codes/build/es/index.js"
+      ]
+    }
+  },
+  "include": ["src/**/*.ts"]
+}

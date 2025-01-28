@@ -1,8 +1,16 @@
 {
   "compilerOptions": {
     "esModuleInterop": true,
+    "module": "esnext",
+    "declaration": true,
+    "outDir": "./dist/esm",
+    "skipLibCheck": true,
     "sourceMap": true,
-    "declaration": true
+    "paths": {
+      "@rc-ex/retry": [
+        "../retry/dist/esm/index"
+      ]
+    }
   },
-  "include": ["src"]
+  "include": ["src/**/*.ts"]
 }

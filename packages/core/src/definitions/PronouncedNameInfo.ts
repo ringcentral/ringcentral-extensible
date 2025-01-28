@@ -1,4 +1,4 @@
-import PronouncedNamePromptInfo from "./PronouncedNamePromptInfo.js";
+import PronouncedNamePromptInfo from "./PronouncedNamePromptInfo";
 
 interface PronouncedNameInfo {
   /**

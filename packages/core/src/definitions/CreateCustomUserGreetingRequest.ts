@@ -1,5 +1,5 @@
-import Attachment from "./Attachment.js";
-import GreetingAnsweringRuleId from "./GreetingAnsweringRuleId.js";
+import Attachment from "./Attachment";
+import GreetingAnsweringRuleId from "./GreetingAnsweringRuleId";
 
 /**
  * Request body for operation createCustomUserGreeting

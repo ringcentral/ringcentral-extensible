@@ -1,20 +1,20 @@
-import AdaptiveCards from "./AdaptiveCards/index.js";
-import Conversations from "./Conversations/index.js";
-import DataExport from "./DataExport/index.js";
-import Favorites from "./Favorites/index.js";
-import Companies from "./Companies/index.js";
-import Everyone from "./Everyone/index.js";
-import Webhooks from "./Webhooks/index.js";
-import Persons from "./Persons/index.js";
-import Events from "./Events/index.js";
-import Recent from "./Recent/index.js";
-import Groups from "./Groups/index.js";
-import Files from "./Files/index.js";
-import Notes from "./Notes/index.js";
-import Teams from "./Teams/index.js";
-import Chats from "./Chats/index.js";
-import Tasks from "./Tasks/index.js";
-import { ParentInterface, RingCentralInterface } from "../../../types.js";
+import AdaptiveCards from "./AdaptiveCards/index";
+import Conversations from "./Conversations/index";
+import DataExport from "./DataExport/index";
+import Favorites from "./Favorites/index";
+import Companies from "./Companies/index";
+import Everyone from "./Everyone/index";
+import Webhooks from "./Webhooks/index";
+import Persons from "./Persons/index";
+import Events from "./Events/index";
+import Recent from "./Recent/index";
+import Groups from "./Groups/index";
+import Files from "./Files/index";
+import Notes from "./Notes/index";
+import Teams from "./Teams/index";
+import Chats from "./Chats/index";
+import Tasks from "./Tasks/index";
+import { ParentInterface, RingCentralInterface } from "../../../types";
 
 class Index {
   public rc: RingCentralInterface;

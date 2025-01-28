@@ -1,11 +1,11 @@
-import Utils from "../../../../../Utils.js";
-import FaxResponse from "../../../../../definitions/FaxResponse.js";
-import CreateFaxMessageRequest from "../../../../../definitions/CreateFaxMessageRequest.js";
+import Utils from "../../../../../Utils";
+import FaxResponse from "../../../../../definitions/FaxResponse";
+import CreateFaxMessageRequest from "../../../../../definitions/CreateFaxMessageRequest";
 import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../types.js";
+} from "../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;

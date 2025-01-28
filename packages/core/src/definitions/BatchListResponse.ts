@@ -1,5 +1,5 @@
-import MessageBatchResponse from "./MessageBatchResponse.js";
-import NonEnumeratedPagingModel from "./NonEnumeratedPagingModel.js";
+import MessageBatchResponse from "./MessageBatchResponse";
+import NonEnumeratedPagingModel from "./NonEnumeratedPagingModel";
 
 /**
  * The list of batches retrieved for an account and other filter criteria such as fromPhoneNumber, date specified in the request.

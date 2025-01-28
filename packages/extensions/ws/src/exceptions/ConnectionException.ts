@@ -1,5 +1,5 @@
-import type { WsgError, WsgEvent, WsgMeta } from "../types.js";
-import Utils from "../utils.js";
+import type { WsgError, WsgEvent, WsgMeta } from "../types";
+import Utils from "../utils";
 
 class ConnectionException extends Error {
   public wsgEvent: WsgEvent;

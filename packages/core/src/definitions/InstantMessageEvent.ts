@@ -1,4 +1,4 @@
-import InstantMessageEventBody from "./InstantMessageEventBody.js";
+import InstantMessageEventBody from "./InstantMessageEventBody";
 
 interface InstantMessageEvent {
   /**

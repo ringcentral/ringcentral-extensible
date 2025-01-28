@@ -1,8 +1,0 @@
-{
-  "compilerOptions": {
-    "esModuleInterop": true,
-    "sourceMap": true,
-    "declaration": true
-  },
-  "include": ["src"]
-}

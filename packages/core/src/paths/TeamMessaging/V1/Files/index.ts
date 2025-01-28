@@ -1,12 +1,12 @@
-import Utils from "../../../../Utils.js";
-import TMAddFileRequest from "../../../../definitions/TMAddFileRequest.js";
-import CreateGlipFileNewParameters from "../../../../definitions/CreateGlipFileNewParameters.js";
-import CreateGlipFileNewRequest from "../../../../definitions/CreateGlipFileNewRequest.js";
+import Utils from "../../../../Utils";
+import TMAddFileRequest from "../../../../definitions/TMAddFileRequest";
+import CreateGlipFileNewParameters from "../../../../definitions/CreateGlipFileNewParameters";
+import CreateGlipFileNewRequest from "../../../../definitions/CreateGlipFileNewRequest";
 import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../types.js";
+} from "../../../../types";
 
 class Index {
   public rc: RingCentralInterface;

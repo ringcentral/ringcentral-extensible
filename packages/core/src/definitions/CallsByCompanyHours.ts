@@ -1,4 +1,4 @@
-import CallsByCompanyHoursBreakdown from "./CallsByCompanyHoursBreakdown.js";
+import CallsByCompanyHoursBreakdown from "./CallsByCompanyHoursBreakdown";
 
 /**
  * Data for calls with breakdown by company hours (BusinessHours, AfterHours)

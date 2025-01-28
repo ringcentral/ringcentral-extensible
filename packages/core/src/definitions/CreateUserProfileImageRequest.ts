@@ -1,4 +1,4 @@
-import Attachment from "./Attachment.js";
+import Attachment from "./Attachment";
 
 /**
  * Request body for operation createUserProfileImage

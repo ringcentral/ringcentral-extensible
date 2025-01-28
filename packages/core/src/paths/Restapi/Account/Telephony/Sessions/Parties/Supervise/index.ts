@@ -1,10 +1,10 @@
-import PartySuperviseResponse from "../../../../../../../definitions/PartySuperviseResponse.js";
-import PartySuperviseRequest from "../../../../../../../definitions/PartySuperviseRequest.js";
+import PartySuperviseResponse from "../../../../../../../definitions/PartySuperviseResponse";
+import PartySuperviseRequest from "../../../../../../../definitions/PartySuperviseRequest";
 import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../../../types.js";
+} from "../../../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;

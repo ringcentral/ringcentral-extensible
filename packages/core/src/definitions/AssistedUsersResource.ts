@@ -1,4 +1,4 @@
-import AssistedUserResource from "./AssistedUserResource.js";
+import AssistedUserResource from "./AssistedUserResource";
 
 interface AssistedUsersResource {
   /** */

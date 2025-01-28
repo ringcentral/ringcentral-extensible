@@ -1,10 +1,10 @@
-import CreateMultipleWirelessPointsResponse from "../../../../../definitions/CreateMultipleWirelessPointsResponse.js";
-import CreateMultipleWirelessPointsRequest from "../../../../../definitions/CreateMultipleWirelessPointsRequest.js";
+import CreateMultipleWirelessPointsResponse from "../../../../../definitions/CreateMultipleWirelessPointsResponse";
+import CreateMultipleWirelessPointsRequest from "../../../../../definitions/CreateMultipleWirelessPointsRequest";
 import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../types.js";
+} from "../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;

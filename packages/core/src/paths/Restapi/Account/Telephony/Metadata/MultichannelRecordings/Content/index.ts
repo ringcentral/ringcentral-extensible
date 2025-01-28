@@ -1,9 +1,9 @@
-import ReadMultichannelCallRecordingContentParameters from "../../../../../../../definitions/ReadMultichannelCallRecordingContentParameters.js";
+import ReadMultichannelCallRecordingContentParameters from "../../../../../../../definitions/ReadMultichannelCallRecordingContentParameters";
 import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../../../types.js";
+} from "../../../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;

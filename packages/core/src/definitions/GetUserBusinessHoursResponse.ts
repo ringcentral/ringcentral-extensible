@@ -1,4 +1,4 @@
-import ScheduleInfoUserBusinessHours from "./ScheduleInfoUserBusinessHours.js";
+import ScheduleInfoUserBusinessHours from "./ScheduleInfoUserBusinessHours";
 
 interface GetUserBusinessHoursResponse {
   /**

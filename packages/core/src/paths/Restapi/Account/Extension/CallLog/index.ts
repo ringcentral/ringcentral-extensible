@@ -1,13 +1,13 @@
-import CallLogRecord from "../../../../../definitions/CallLogRecord.js";
-import ReadUserCallRecordParameters from "../../../../../definitions/ReadUserCallRecordParameters.js";
-import DeleteUserCallLogParameters from "../../../../../definitions/DeleteUserCallLogParameters.js";
-import CallLogResponse from "../../../../../definitions/CallLogResponse.js";
-import ReadUserCallLogParameters from "../../../../../definitions/ReadUserCallLogParameters.js";
+import CallLogRecord from "../../../../../definitions/CallLogRecord";
+import ReadUserCallRecordParameters from "../../../../../definitions/ReadUserCallRecordParameters";
+import DeleteUserCallLogParameters from "../../../../../definitions/DeleteUserCallLogParameters";
+import CallLogResponse from "../../../../../definitions/CallLogResponse";
+import ReadUserCallLogParameters from "../../../../../definitions/ReadUserCallLogParameters";
 import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../types.js";
+} from "../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;

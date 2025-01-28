@@ -1,13 +1,13 @@
-import NumberParser from "./NumberParser/index.js";
-import Subscription from "./Subscription/index.js";
-import ClientInfo from "./ClientInfo/index.js";
-import Dictionary from "./Dictionary/index.js";
-import Account from "./Account/index.js";
-import Oauth from "./Oauth/index.js";
-import V2 from "./V2/index.js";
-import ApiVersionInfo from "../../definitions/ApiVersionInfo.js";
-import ApiVersionsList from "../../definitions/ApiVersionsList.js";
-import { RestRequestConfig, RingCentralInterface } from "../../types.js";
+import NumberParser from "./NumberParser/index";
+import Subscription from "./Subscription/index";
+import ClientInfo from "./ClientInfo/index";
+import Dictionary from "./Dictionary/index";
+import Account from "./Account/index";
+import Oauth from "./Oauth/index";
+import V2 from "./V2/index";
+import ApiVersionInfo from "../../definitions/ApiVersionInfo";
+import ApiVersionsList from "../../definitions/ApiVersionsList";
+import { RestRequestConfig, RingCentralInterface } from "../../types";
 
 class Index {
   public rc: RingCentralInterface;

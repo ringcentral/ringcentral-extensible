@@ -1,15 +1,15 @@
-import UpdateForwardingNumberRequest from "../../../../../definitions/UpdateForwardingNumberRequest.js";
-import ForwardingNumberResource from "../../../../../definitions/ForwardingNumberResource.js";
-import DeleteForwardingNumbersRequest from "../../../../../definitions/DeleteForwardingNumbersRequest.js";
-import ForwardingNumberInfo from "../../../../../definitions/ForwardingNumberInfo.js";
-import CreateForwardingNumberRequest from "../../../../../definitions/CreateForwardingNumberRequest.js";
-import GetExtensionForwardingNumberListResponse from "../../../../../definitions/GetExtensionForwardingNumberListResponse.js";
-import ListForwardingNumbersParameters from "../../../../../definitions/ListForwardingNumbersParameters.js";
+import UpdateForwardingNumberRequest from "../../../../../definitions/UpdateForwardingNumberRequest";
+import ForwardingNumberResource from "../../../../../definitions/ForwardingNumberResource";
+import DeleteForwardingNumbersRequest from "../../../../../definitions/DeleteForwardingNumbersRequest";
+import ForwardingNumberInfo from "../../../../../definitions/ForwardingNumberInfo";
+import CreateForwardingNumberRequest from "../../../../../definitions/CreateForwardingNumberRequest";
+import GetExtensionForwardingNumberListResponse from "../../../../../definitions/GetExtensionForwardingNumberListResponse";
+import ListForwardingNumbersParameters from "../../../../../definitions/ListForwardingNumbersParameters";
 import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../types.js";
+} from "../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;

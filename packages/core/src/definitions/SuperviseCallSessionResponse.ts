@@ -1,6 +1,6 @@
-import PartyInfo from "./PartyInfo.js";
-import OwnerInfo from "./OwnerInfo.js";
-import CallStatusInfo from "./CallStatusInfo.js";
+import PartyInfo from "./PartyInfo";
+import OwnerInfo from "./OwnerInfo";
+import CallStatusInfo from "./CallStatusInfo";
 
 interface SuperviseCallSessionResponse {
   /** */

@@ -1,15 +1,15 @@
-import BulkAssign from "./BulkAssign/index.js";
-import Members from "./Members/index.js";
-import Ivr from "./Ivr/index.js";
-import SiteUpdateRequest from "../../../../definitions/SiteUpdateRequest.js";
-import SiteInfo from "../../../../definitions/SiteInfo.js";
-import CreateSiteRequest from "../../../../definitions/CreateSiteRequest.js";
-import SitesList from "../../../../definitions/SitesList.js";
+import BulkAssign from "./BulkAssign/index";
+import Members from "./Members/index";
+import Ivr from "./Ivr/index";
+import SiteUpdateRequest from "../../../../definitions/SiteUpdateRequest";
+import SiteInfo from "../../../../definitions/SiteInfo";
+import CreateSiteRequest from "../../../../definitions/CreateSiteRequest";
+import SitesList from "../../../../definitions/SitesList";
 import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../types.js";
+} from "../../../../types";
 
 class Index {
   public rc: RingCentralInterface;

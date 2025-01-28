@@ -1,4 +1,4 @@
-import MeetingExternalUserInfoResource from "./MeetingExternalUserInfoResource.js";
+import MeetingExternalUserInfoResource from "./MeetingExternalUserInfoResource";
 
 interface MeetingServiceInfoRequest {
   /** */

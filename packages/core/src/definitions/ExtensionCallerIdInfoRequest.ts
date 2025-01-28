@@ -1,5 +1,5 @@
-import CallerIdByDeviceRequest from "./CallerIdByDeviceRequest.js";
-import CallerIdByFeatureRequest from "./CallerIdByFeatureRequest.js";
+import CallerIdByDeviceRequest from "./CallerIdByDeviceRequest";
+import CallerIdByFeatureRequest from "./CallerIdByFeatureRequest";
 
 interface ExtensionCallerIdInfoRequest {
   /**

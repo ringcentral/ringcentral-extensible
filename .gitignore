@@ -13,3 +13,4 @@ test/local/
 *.js
 *.js.map
 *.d.ts
+dist/

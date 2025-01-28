@@ -1,5 +1,5 @@
-import PhoneNumberInfoIntId from "./PhoneNumberInfoIntId.js";
-import EmergencyAddress from "./EmergencyAddress.js";
+import PhoneNumberInfoIntId from "./PhoneNumberInfoIntId";
+import EmergencyAddress from "./EmergencyAddress";
 
 interface PhoneLinesInfo {
   /**

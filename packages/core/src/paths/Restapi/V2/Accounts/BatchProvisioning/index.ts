@@ -1,5 +1,5 @@
-import Users from "./Users/index.js";
-import { ParentInterface, RingCentralInterface } from "../../../../../types.js";
+import Users from "./Users/index";
+import { ParentInterface, RingCentralInterface } from "../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;

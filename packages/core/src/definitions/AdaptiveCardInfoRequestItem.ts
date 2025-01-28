@@ -1,4 +1,4 @@
-import AdaptiveCardColumnInfo from "./AdaptiveCardColumnInfo.js";
+import AdaptiveCardColumnInfo from "./AdaptiveCardColumnInfo";
 
 interface AdaptiveCardInfoRequestItem {
   /** */

@@ -1,6 +1,6 @@
-import NetworkInfo from "./NetworkInfo.js";
-import PageNavigationModel from "./PageNavigationModel.js";
-import EnumeratedPagingModel from "./EnumeratedPagingModel.js";
+import NetworkInfo from "./NetworkInfo";
+import PageNavigationModel from "./PageNavigationModel";
+import EnumeratedPagingModel from "./EnumeratedPagingModel";
 
 interface NetworksList {
   /**

@@ -1,9 +1,9 @@
-import EmergencyAddressAutoUpdateUsersBulkAssignResource from "../../../../../../definitions/EmergencyAddressAutoUpdateUsersBulkAssignResource.js";
+import EmergencyAddressAutoUpdateUsersBulkAssignResource from "../../../../../../definitions/EmergencyAddressAutoUpdateUsersBulkAssignResource";
 import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../../types.js";
+} from "../../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;

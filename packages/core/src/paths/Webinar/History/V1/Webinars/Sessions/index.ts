@@ -1,11 +1,11 @@
-import Participants from "./Participants/index.js";
-import Invitees from "./Invitees/index.js";
-import SessionResource from "../../../../../../definitions/SessionResource.js";
+import Participants from "./Participants/index";
+import Invitees from "./Invitees/index";
+import SessionResource from "../../../../../../definitions/SessionResource";
 import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../../types.js";
+} from "../../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;

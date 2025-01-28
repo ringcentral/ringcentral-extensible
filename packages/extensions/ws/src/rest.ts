@@ -2,13 +2,13 @@ import type {
   RestMethod,
   RestRequestConfig,
   RestResponse,
-} from "@rc-ex/core/lib/esm/types.js";
-import RestException from "@rc-ex/core/lib/esm/RestException.js";
+} from "@rc-ex/core/types";
+import RestException from "@rc-ex/core/RestException";
 import hyperid from "hyperid";
 import { getReasonPhrase } from "http-status-codes";
 
-import Utils from "./utils.js";
-import type { WebSocketExtensionInterface } from "./types.js";
+import Utils from "./utils";
+import type { WebSocketExtensionInterface } from "./types";
 
 const version = "0.16";
 

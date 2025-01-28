@@ -1,6 +1,6 @@
-import WirelessPointInfo from "./WirelessPointInfo.js";
-import PageNavigationModel from "./PageNavigationModel.js";
-import EnumeratedPagingModel from "./EnumeratedPagingModel.js";
+import WirelessPointInfo from "./WirelessPointInfo";
+import PageNavigationModel from "./PageNavigationModel";
+import EnumeratedPagingModel from "./EnumeratedPagingModel";
 
 interface WirelessPointsList {
   /**

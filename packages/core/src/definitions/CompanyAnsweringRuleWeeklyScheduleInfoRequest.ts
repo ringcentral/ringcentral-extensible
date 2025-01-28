@@ -1,4 +1,4 @@
-import CompanyAnsweringRuleTimeIntervalRequest from "./CompanyAnsweringRuleTimeIntervalRequest.js";
+import CompanyAnsweringRuleTimeIntervalRequest from "./CompanyAnsweringRuleTimeIntervalRequest";
 
 /**
  * Weekly schedule. If specified, ranges cannot be specified

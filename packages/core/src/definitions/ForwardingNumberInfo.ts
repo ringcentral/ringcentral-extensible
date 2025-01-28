@@ -1,5 +1,5 @@
-import CreateForwardingNumberDeviceInfo from "./CreateForwardingNumberDeviceInfo.js";
-import ForwardingNumberInfoExtension from "./ForwardingNumberInfoExtension.js";
+import CreateForwardingNumberDeviceInfo from "./CreateForwardingNumberDeviceInfo";
+import ForwardingNumberInfoExtension from "./ForwardingNumberInfoExtension";
 
 interface ForwardingNumberInfo {
   /**

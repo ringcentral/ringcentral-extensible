@@ -1,5 +1,5 @@
-import ExtensionBulkUpdateTaskResultAffectedItems from "./ExtensionBulkUpdateTaskResultAffectedItems.js";
-import ErrorEntity from "./ErrorEntity.js";
+import ExtensionBulkUpdateTaskResultAffectedItems from "./ExtensionBulkUpdateTaskResultAffectedItems";
+import ErrorEntity from "./ErrorEntity";
 
 /**
  * Resulting record of a task on multiple extensions update

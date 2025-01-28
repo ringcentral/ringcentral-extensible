@@ -1,5 +1,5 @@
-import DeviceDefinitionEmergency from "./DeviceDefinitionEmergency.js";
-import DeviceDefinitionPhoneInfo from "./DeviceDefinitionPhoneInfo.js";
+import DeviceDefinitionEmergency from "./DeviceDefinitionEmergency";
+import DeviceDefinitionPhoneInfo from "./DeviceDefinitionPhoneInfo";
 
 interface DeviceDefinition {
   /**

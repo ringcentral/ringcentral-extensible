@@ -1,5 +1,5 @@
-import PeerInfo from "./PeerInfo.js";
-import MobilePickupData from "./MobilePickupData.js";
+import PeerInfo from "./PeerInfo";
+import MobilePickupData from "./MobilePickupData";
 
 /**
  * Status data of a call session

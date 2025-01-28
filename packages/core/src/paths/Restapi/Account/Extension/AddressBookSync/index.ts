@@ -1,10 +1,10 @@
-import AddressBookSync from "../../../../../definitions/AddressBookSync.js";
-import SyncAddressBookParameters from "../../../../../definitions/SyncAddressBookParameters.js";
+import AddressBookSync from "../../../../../definitions/AddressBookSync";
+import SyncAddressBookParameters from "../../../../../definitions/SyncAddressBookParameters";
 import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../types.js";
+} from "../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;

@@ -1,5 +1,5 @@
-import InviteeResource from "./InviteeResource.js";
-import RcwResourceIdModel from "./RcwResourceIdModel.js";
+import InviteeResource from "./InviteeResource";
+import RcwResourceIdModel from "./RcwResourceIdModel";
 
 interface BulkUpdateInviteesResponse {
   /** */

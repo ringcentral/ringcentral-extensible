@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "module": "commonjs",
+    "declaration": true,
+    "outDir": "./dist/cjs",
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "paths": {
+      "@rc-ex/core/*": [
+        "../../core/dist/cjs/*"
+      ],
+      "wait-for-async": [
+        "../../../node_modules/wait-for-async/dist/cjs/index.js"
+      ]
+    }
+  },
+  "include": ["src/**/*.ts"]
+}

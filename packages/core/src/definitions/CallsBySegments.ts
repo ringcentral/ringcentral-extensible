@@ -1,4 +1,4 @@
-import CallsBySegmentsBreakdown from "./CallsBySegmentsBreakdown.js";
+import CallsBySegmentsBreakdown from "./CallsBySegmentsBreakdown";
 
 /**
  * Data for calls with breakdown by segments (Ringing, LiveTalk, Hold, Park, Transfer, IvrPrompt, Voicemail, VmGreeting, Setup)

@@ -1,9 +1,9 @@
-import BulkRoleAssignResource from "../../../../../definitions/BulkRoleAssignResource.js";
+import BulkRoleAssignResource from "../../../../../definitions/BulkRoleAssignResource";
 import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../types.js";
+} from "../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;

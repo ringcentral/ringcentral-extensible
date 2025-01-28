@@ -1,4 +1,4 @@
-import ExtensionBulkUpdateTaskResult from "./ExtensionBulkUpdateTaskResult.js";
+import ExtensionBulkUpdateTaskResult from "./ExtensionBulkUpdateTaskResult";
 
 /**
  * Information on a task for updating multiple extensions

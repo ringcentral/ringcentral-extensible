@@ -1,4 +1,4 @@
-import BatchProvisionUsersRequestItem from "./BatchProvisionUsersRequestItem.js";
+import BatchProvisionUsersRequestItem from "./BatchProvisionUsersRequestItem";
 
 /**
  * Describes request for user extension provisioning

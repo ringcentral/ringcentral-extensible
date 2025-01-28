@@ -1,4 +1,4 @@
-import SummaryOutputUnit from "./SummaryOutputUnit.js";
+import SummaryOutputUnit from "./SummaryOutputUnit";
 
 interface SummaryApiResponse {
   /** */

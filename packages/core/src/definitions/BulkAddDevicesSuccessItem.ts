@@ -1,4 +1,4 @@
-import BulkOperationExtensionReference from "./BulkOperationExtensionReference.js";
+import BulkOperationExtensionReference from "./BulkOperationExtensionReference";
 
 interface BulkAddDevicesSuccessItem {
   /**

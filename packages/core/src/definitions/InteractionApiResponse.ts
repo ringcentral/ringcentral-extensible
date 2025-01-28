@@ -1,4 +1,4 @@
-import InteractionApiResponseResponse from "./InteractionApiResponseResponse.js";
+import InteractionApiResponseResponse from "./InteractionApiResponseResponse";
 
 interface InteractionApiResponse {
   /** */

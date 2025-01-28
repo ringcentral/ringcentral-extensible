@@ -1,4 +1,4 @@
-import TMWebhookInfo from "./TMWebhookInfo.js";
+import TMWebhookInfo from "./TMWebhookInfo";
 
 interface TMWebhookList {
   /** */

@@ -1,9 +1,9 @@
-import Ringsense from "./Ringsense/index.js";
-import Insights from "./Insights/index.js";
-import Status from "./Status/index.js";
-import Audio from "./Audio/index.js";
-import Text from "./Text/index.js";
-import { RingCentralInterface } from "../../types.js";
+import Ringsense from "./Ringsense/index";
+import Insights from "./Insights/index";
+import Status from "./Status/index";
+import Audio from "./Audio/index";
+import Text from "./Text/index";
+import { RingCentralInterface } from "../../types";
 
 class Index {
   public rc: RingCentralInterface;

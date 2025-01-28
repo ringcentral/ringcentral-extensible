@@ -1,4 +1,4 @@
-import WordTimingsUnit from "./WordTimingsUnit.js";
+import WordTimingsUnit from "./WordTimingsUnit";
 
 interface UtteranceObject {
   /**

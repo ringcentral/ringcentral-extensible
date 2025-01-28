@@ -1,5 +1,5 @@
-import BulkOperationExtensionReference from "./BulkOperationExtensionReference.js";
-import ApiErrorWithParameter from "./ApiErrorWithParameter.js";
+import BulkOperationExtensionReference from "./BulkOperationExtensionReference";
+import ApiErrorWithParameter from "./ApiErrorWithParameter";
 
 interface BulkAddDevicesResponseResults {
   /**

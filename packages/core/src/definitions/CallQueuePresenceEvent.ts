@@ -1,4 +1,4 @@
-import CallQueuePresenceEventBody from "./CallQueuePresenceEventBody.js";
+import CallQueuePresenceEventBody from "./CallQueuePresenceEventBody";
 
 interface CallQueuePresenceEvent {
   /**

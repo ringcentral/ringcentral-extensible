@@ -1,4 +1,4 @@
-import CaiErrorCodeResponse from "./CaiErrorCodeResponse.js";
+import CaiErrorCodeResponse from "./CaiErrorCodeResponse";
 
 interface CaiErrorResponse {
   /** */

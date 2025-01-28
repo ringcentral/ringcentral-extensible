@@ -1,10 +1,10 @@
-import RolesCollectionResource from "../../../../../definitions/RolesCollectionResource.js";
-import ListOfAvailableForAssigningRolesParameters from "../../../../../definitions/ListOfAvailableForAssigningRolesParameters.js";
+import RolesCollectionResource from "../../../../../definitions/RolesCollectionResource";
+import ListOfAvailableForAssigningRolesParameters from "../../../../../definitions/ListOfAvailableForAssigningRolesParameters";
 import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../types.js";
+} from "../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;

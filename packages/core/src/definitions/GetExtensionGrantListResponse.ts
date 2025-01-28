@@ -1,6 +1,6 @@
-import GrantInfo from "./GrantInfo.js";
-import PageNavigationModel from "./PageNavigationModel.js";
-import EnumeratedPagingModel from "./EnumeratedPagingModel.js";
+import GrantInfo from "./GrantInfo";
+import PageNavigationModel from "./PageNavigationModel";
+import EnumeratedPagingModel from "./EnumeratedPagingModel";
 
 interface GetExtensionGrantListResponse {
   /**

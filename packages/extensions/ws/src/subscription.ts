@@ -1,14 +1,10 @@
-import type CreateSubscriptionRequest from "@rc-ex/core/lib/esm/definitions/CreateSubscriptionRequest.js";
-import type SubscriptionInfo from "@rc-ex/core/lib/esm/definitions/SubscriptionInfo.js";
-import type { RestResponse } from "@rc-ex/core/lib/esm/types.js";
+import type CreateSubscriptionRequest from "@rc-ex/core/definitions/CreateSubscriptionRequest";
+import type SubscriptionInfo from "@rc-ex/core/definitions/SubscriptionInfo";
+import type { RestResponse } from "@rc-ex/core/types";
 import type { MessageEvent } from "ws";
 
-import type {
-  WebSocketExtensionInterface,
-  WsgEvent,
-  WsgMeta,
-} from "./types.js";
-import Utils from "./utils.js";
+import type { WebSocketExtensionInterface, WsgEvent, WsgMeta } from "./types";
+import Utils from "./utils";
 
 class Subscription {
   public subscriptionInfo?: SubscriptionInfo;

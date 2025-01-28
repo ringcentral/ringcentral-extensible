@@ -1,19 +1,19 @@
-import type RingCentral from "@rc-ex/core";
+import type RingCentral from "@rc-ex/core/index";
 import type {
   RestMethod,
   RestRequestConfig,
   RestResponse,
-} from "@rc-ex/core/lib/esm/types.js";
-import SdkExtension from "@rc-ex/core/lib/esm/SdkExtension.js";
+} from "@rc-ex/core/types";
+import SdkExtension from "@rc-ex/core/SdkExtension";
 import type { MessageEvent } from "isomorphic-ws";
 import WS from "isomorphic-ws";
 import hyperid from "hyperid";
 import { EventEmitter } from "events";
 import waitFor from "wait-for-async";
-import RestException from "@rc-ex/core/lib/esm/RestException.js";
-import type SubscriptionInfo from "@rc-ex/core/lib/esm/definitions/SubscriptionInfo.js";
+import RestException from "@rc-ex/core/RestException";
+import type SubscriptionInfo from "@rc-ex/core/definitions/SubscriptionInfo";
 
-import { request } from "./rest.js";
+import { request } from "./rest";
 import type {
   ConnectionDetails,
   WebSocketExtensionInterface,
@@ -21,10 +21,10 @@ import type {
   Wsc,
   WsgEvent,
   WsToken,
-} from "./types.js";
-import Subscription from "./subscription.js";
-import ConnectionException from "./exceptions/ConnectionException.js";
-import Utils from "./utils.js";
+} from "./types";
+import Subscription from "./subscription";
+import ConnectionException from "./exceptions/ConnectionException";
+import Utils from "./utils";
 
 const CONNECTING = 0;
 const OPEN = 1;

@@ -1,4 +1,4 @@
-import SpeakerIdentifyApiResponseResponse from "./SpeakerIdentifyApiResponseResponse.js";
+import SpeakerIdentifyApiResponseResponse from "./SpeakerIdentifyApiResponseResponse";
 
 interface SpeakerIdentifyApiResponse {
   /** */

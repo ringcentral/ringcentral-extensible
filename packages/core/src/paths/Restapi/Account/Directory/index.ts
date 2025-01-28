@@ -1,6 +1,6 @@
-import Federation from "./Federation/index.js";
-import Entries from "./Entries/index.js";
-import { ParentInterface, RingCentralInterface } from "../../../../types.js";
+import Federation from "./Federation/index";
+import Entries from "./Entries/index";
+import { ParentInterface, RingCentralInterface } from "../../../../types";
 
 class Index {
   public rc: RingCentralInterface;

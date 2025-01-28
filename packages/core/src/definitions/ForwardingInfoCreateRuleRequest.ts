@@ -1,4 +1,4 @@
-import ForwardingRuleCreateRequest from "./ForwardingRuleCreateRequest.js";
+import ForwardingRuleCreateRequest from "./ForwardingRuleCreateRequest";
 
 /**
  * Forwarding parameters. Returned if 'ForwardCalls' is specified in 'callHandlingAction'. These settings determine the forwarding numbers to which the call will be forwarded

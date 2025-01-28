@@ -1,5 +1,5 @@
-import InviteeModel from "./InviteeModel.js";
-import RcwPagingModel from "./RcwPagingModel.js";
+import InviteeModel from "./InviteeModel";
+import RcwPagingModel from "./RcwPagingModel";
 
 interface InviteeListResource {
   /**

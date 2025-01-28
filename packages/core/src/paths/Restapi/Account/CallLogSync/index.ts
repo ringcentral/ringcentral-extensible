@@ -1,10 +1,10 @@
-import CallLogSyncResponse from "../../../../definitions/CallLogSyncResponse.js";
-import SyncAccountCallLogParameters from "../../../../definitions/SyncAccountCallLogParameters.js";
+import CallLogSyncResponse from "../../../../definitions/CallLogSyncResponse";
+import SyncAccountCallLogParameters from "../../../../definitions/SyncAccountCallLogParameters";
 import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../types.js";
+} from "../../../../types";
 
 class Index {
   public rc: RingCentralInterface;

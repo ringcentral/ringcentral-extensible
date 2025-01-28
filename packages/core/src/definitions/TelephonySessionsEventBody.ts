@@ -1,5 +1,5 @@
-import OriginInfo from "./OriginInfo.js";
-import TelephonySessionsEventPartyInfo from "./TelephonySessionsEventPartyInfo.js";
+import OriginInfo from "./OriginInfo";
+import TelephonySessionsEventPartyInfo from "./TelephonySessionsEventPartyInfo";
 
 /**
  * Notification payload body

@@ -1,4 +1,4 @@
-import CreateWirelessPoint from "./CreateWirelessPoint.js";
+import CreateWirelessPoint from "./CreateWirelessPoint";
 
 interface CreateMultipleWirelessPointsRequest {
   /** */

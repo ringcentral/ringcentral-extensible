@@ -1,6 +1,6 @@
-import TMCreateTaskRequestAssignees from "./TMCreateTaskRequestAssignees.js";
-import TaskRecurrenceInfo from "./TaskRecurrenceInfo.js";
-import TaskAttachment from "./TaskAttachment.js";
+import TMCreateTaskRequestAssignees from "./TMCreateTaskRequestAssignees";
+import TaskRecurrenceInfo from "./TaskRecurrenceInfo";
+import TaskAttachment from "./TaskAttachment";
 
 interface TMCreateTaskRequest {
   /**

@@ -1,6 +1,6 @@
-import GetTimezoneInfoResponse from "./GetTimezoneInfoResponse.js";
-import PageNavigationModel from "./PageNavigationModel.js";
-import EnumeratedPagingModel from "./EnumeratedPagingModel.js";
+import GetTimezoneInfoResponse from "./GetTimezoneInfoResponse";
+import PageNavigationModel from "./PageNavigationModel";
+import EnumeratedPagingModel from "./EnumeratedPagingModel";
 
 interface GetTimezoneListResponse {
   /**

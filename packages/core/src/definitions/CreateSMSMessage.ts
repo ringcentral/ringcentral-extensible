@@ -1,5 +1,5 @@
-import MessageStoreCallerInfoRequest from "./MessageStoreCallerInfoRequest.js";
-import SmsRequestCountryInfo from "./SmsRequestCountryInfo.js";
+import MessageStoreCallerInfoRequest from "./MessageStoreCallerInfoRequest";
+import SmsRequestCountryInfo from "./SmsRequestCountryInfo";
 
 interface CreateSMSMessage {
   /**

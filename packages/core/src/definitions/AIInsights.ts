@@ -1,9 +1,9 @@
-import TranscriptInsightUnit from "./TranscriptInsightUnit.js";
-import SummaryInsightUnit from "./SummaryInsightUnit.js";
-import HighlightsInsightUnit from "./HighlightsInsightUnit.js";
-import NextStepsInsightUnit from "./NextStepsInsightUnit.js";
-import BulletedSummaryInsightUnit from "./BulletedSummaryInsightUnit.js";
-import AIScoreInsightUnit from "./AIScoreInsightUnit.js";
+import TranscriptInsightUnit from "./TranscriptInsightUnit";
+import SummaryInsightUnit from "./SummaryInsightUnit";
+import HighlightsInsightUnit from "./HighlightsInsightUnit";
+import NextStepsInsightUnit from "./NextStepsInsightUnit";
+import BulletedSummaryInsightUnit from "./BulletedSummaryInsightUnit";
+import AIScoreInsightUnit from "./AIScoreInsightUnit";
 
 interface AIInsights {
   /** */

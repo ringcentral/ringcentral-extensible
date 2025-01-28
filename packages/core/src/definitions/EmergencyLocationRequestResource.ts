@@ -1,5 +1,5 @@
-import CommonEmergencyLocationAddressInfo from "./CommonEmergencyLocationAddressInfo.js";
-import ShortSiteInfo from "./ShortSiteInfo.js";
+import CommonEmergencyLocationAddressInfo from "./CommonEmergencyLocationAddressInfo";
+import ShortSiteInfo from "./ShortSiteInfo";
 
 interface EmergencyLocationRequestResource {
   /**

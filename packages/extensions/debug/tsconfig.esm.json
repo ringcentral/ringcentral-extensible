@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "module": "esnext",
+    "declaration": true,
+    "outDir": "./dist/esm",
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "paths": {
+      "@rc-ex/core/*": [
+        "../../core/dist/esm/*"
+      ]
+    }
+  },
+  "include": ["src/**/*.ts"]
+}

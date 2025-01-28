@@ -1,10 +1,10 @@
-import ModifyAccountBusinessAddressRequest from "../../../../definitions/ModifyAccountBusinessAddressRequest.js";
-import AccountBusinessAddressResource from "../../../../definitions/AccountBusinessAddressResource.js";
+import ModifyAccountBusinessAddressRequest from "../../../../definitions/ModifyAccountBusinessAddressRequest";
+import AccountBusinessAddressResource from "../../../../definitions/AccountBusinessAddressResource";
 import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../types.js";
+} from "../../../../types";
 
 class Index {
   public rc: RingCentralInterface;

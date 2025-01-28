@@ -1,5 +1,5 @@
-import PersonalContactResource from "./PersonalContactResource.js";
-import SyncInfo from "./SyncInfo.js";
+import PersonalContactResource from "./PersonalContactResource";
+import SyncInfo from "./SyncInfo";
 
 interface AddressBookSync {
   /**

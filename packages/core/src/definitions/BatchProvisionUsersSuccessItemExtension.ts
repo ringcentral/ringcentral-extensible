@@ -1,4 +1,4 @@
-import BatchProvisionUsersSuccessItemExtensionDevices from "./BatchProvisionUsersSuccessItemExtensionDevices.js";
+import BatchProvisionUsersSuccessItemExtensionDevices from "./BatchProvisionUsersSuccessItemExtensionDevices";
 
 interface BatchProvisionUsersSuccessItemExtension {
   /**

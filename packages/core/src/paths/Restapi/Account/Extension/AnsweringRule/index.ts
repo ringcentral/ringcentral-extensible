@@ -1,15 +1,15 @@
-import UpdateAnsweringRuleRequest from "../../../../../definitions/UpdateAnsweringRuleRequest.js";
-import CallHandlingRuleInfo from "../../../../../definitions/CallHandlingRuleInfo.js";
-import ReadAnsweringRuleParameters from "../../../../../definitions/ReadAnsweringRuleParameters.js";
-import CustomAnsweringRuleInfo from "../../../../../definitions/CustomAnsweringRuleInfo.js";
-import CreateAnsweringRuleRequest from "../../../../../definitions/CreateAnsweringRuleRequest.js";
-import UserAnsweringRuleList from "../../../../../definitions/UserAnsweringRuleList.js";
-import ListAnsweringRulesParameters from "../../../../../definitions/ListAnsweringRulesParameters.js";
+import UpdateAnsweringRuleRequest from "../../../../../definitions/UpdateAnsweringRuleRequest";
+import CallHandlingRuleInfo from "../../../../../definitions/CallHandlingRuleInfo";
+import ReadAnsweringRuleParameters from "../../../../../definitions/ReadAnsweringRuleParameters";
+import CustomAnsweringRuleInfo from "../../../../../definitions/CustomAnsweringRuleInfo";
+import CreateAnsweringRuleRequest from "../../../../../definitions/CreateAnsweringRuleRequest";
+import UserAnsweringRuleList from "../../../../../definitions/UserAnsweringRuleList";
+import ListAnsweringRulesParameters from "../../../../../definitions/ListAnsweringRulesParameters";
 import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../types.js";
+} from "../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;

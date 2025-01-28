@@ -1,4 +1,4 @@
-import PermissionIdResource from "./PermissionIdResource.js";
+import PermissionIdResource from "./PermissionIdResource";
 
 interface RoleResource {
   /**

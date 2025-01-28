@@ -1,11 +1,11 @@
-import Default from "./Default/index.js";
-import BridgeResponse from "../../../../../../definitions/BridgeResponse.js";
-import CreateBridgeRequest from "../../../../../../definitions/CreateBridgeRequest.js";
+import Default from "./Default/index";
+import BridgeResponse from "../../../../../../definitions/BridgeResponse";
+import CreateBridgeRequest from "../../../../../../definitions/CreateBridgeRequest";
 import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../../types.js";
+} from "../../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;

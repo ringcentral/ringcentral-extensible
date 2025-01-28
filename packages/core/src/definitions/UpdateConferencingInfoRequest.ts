@@ -1,4 +1,4 @@
-import ConferencePhoneNumberInfo from "./ConferencePhoneNumberInfo.js";
+import ConferencePhoneNumberInfo from "./ConferencePhoneNumberInfo";
 
 interface UpdateConferencingInfoRequest {
   /**

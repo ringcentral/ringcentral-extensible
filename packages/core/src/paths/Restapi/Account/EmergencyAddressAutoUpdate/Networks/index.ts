@@ -1,13 +1,13 @@
-import UpdateNetworkRequest from "../../../../../definitions/UpdateNetworkRequest.js";
-import NetworkInfo from "../../../../../definitions/NetworkInfo.js";
-import CreateNetworkRequest from "../../../../../definitions/CreateNetworkRequest.js";
-import NetworksList from "../../../../../definitions/NetworksList.js";
-import ListNetworksParameters from "../../../../../definitions/ListNetworksParameters.js";
+import UpdateNetworkRequest from "../../../../../definitions/UpdateNetworkRequest";
+import NetworkInfo from "../../../../../definitions/NetworkInfo";
+import CreateNetworkRequest from "../../../../../definitions/CreateNetworkRequest";
+import NetworksList from "../../../../../definitions/NetworksList";
+import ListNetworksParameters from "../../../../../definitions/ListNetworksParameters";
 import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../types.js";
+} from "../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;

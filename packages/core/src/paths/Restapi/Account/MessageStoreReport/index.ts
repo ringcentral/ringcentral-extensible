@@ -1,11 +1,11 @@
-import Archive from "./Archive/index.js";
-import MessageStoreReport from "../../../../definitions/MessageStoreReport.js";
-import CreateMessageStoreReportRequest from "../../../../definitions/CreateMessageStoreReportRequest.js";
+import Archive from "./Archive/index";
+import MessageStoreReport from "../../../../definitions/MessageStoreReport";
+import CreateMessageStoreReportRequest from "../../../../definitions/CreateMessageStoreReportRequest";
 import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../types.js";
+} from "../../../../types";
 
 class Index {
   public rc: RingCentralInterface;

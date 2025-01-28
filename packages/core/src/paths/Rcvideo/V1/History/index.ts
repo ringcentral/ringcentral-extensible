@@ -1,5 +1,5 @@
-import Meetings from "./Meetings/index.js";
-import { ParentInterface, RingCentralInterface } from "../../../../types.js";
+import Meetings from "./Meetings/index";
+import { ParentInterface, RingCentralInterface } from "../../../../types";
 
 class Index {
   public rc: RingCentralInterface;

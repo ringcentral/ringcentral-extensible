@@ -1,4 +1,4 @@
-import CallsByActionsBreakdown from "./CallsByActionsBreakdown.js";
+import CallsByActionsBreakdown from "./CallsByActionsBreakdown";
 
 /**
  * Data for calls with breakdown by action (HoldOff, HoldOn, ParkOn, ParkOff, BlindTransfer, WarmTransfer, DTMFTransfer)

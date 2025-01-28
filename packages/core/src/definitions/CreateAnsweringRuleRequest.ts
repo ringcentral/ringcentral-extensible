@@ -1,13 +1,13 @@
-import CallersInfoRequest from "./CallersInfoRequest.js";
-import CalledNumberInfo from "./CalledNumberInfo.js";
-import ScheduleInfo from "./ScheduleInfo.js";
-import ForwardingInfo from "./ForwardingInfo.js";
-import UnconditionalForwardingInfo from "./UnconditionalForwardingInfo.js";
-import QueueInfo from "./QueueInfo.js";
-import TransferredExtensionInfo from "./TransferredExtensionInfo.js";
-import VoicemailInfo from "./VoicemailInfo.js";
-import MissedCallInfo from "./MissedCallInfo.js";
-import GreetingInfo from "./GreetingInfo.js";
+import CallersInfoRequest from "./CallersInfoRequest";
+import CalledNumberInfo from "./CalledNumberInfo";
+import ScheduleInfo from "./ScheduleInfo";
+import ForwardingInfo from "./ForwardingInfo";
+import UnconditionalForwardingInfo from "./UnconditionalForwardingInfo";
+import QueueInfo from "./QueueInfo";
+import TransferredExtensionInfo from "./TransferredExtensionInfo";
+import VoicemailInfo from "./VoicemailInfo";
+import MissedCallInfo from "./MissedCallInfo";
+import GreetingInfo from "./GreetingInfo";
 
 interface CreateAnsweringRuleRequest {
   /**

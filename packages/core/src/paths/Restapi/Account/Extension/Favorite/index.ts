@@ -1,10 +1,10 @@
-import FavoriteCollection from "../../../../../definitions/FavoriteCollection.js";
-import FavoriteContactList from "../../../../../definitions/FavoriteContactList.js";
+import FavoriteCollection from "../../../../../definitions/FavoriteCollection";
+import FavoriteContactList from "../../../../../definitions/FavoriteContactList";
 import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../types.js";
+} from "../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;

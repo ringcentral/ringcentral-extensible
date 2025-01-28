@@ -1,10 +1,10 @@
-import MessageStatusesResponse from "../../../../../definitions/MessageStatusesResponse.js";
-import AggregateA2PSMSStatusesParameters from "../../../../../definitions/AggregateA2PSMSStatusesParameters.js";
+import MessageStatusesResponse from "../../../../../definitions/MessageStatusesResponse";
+import AggregateA2PSMSStatusesParameters from "../../../../../definitions/AggregateA2PSMSStatusesParameters";
 import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../types.js";
+} from "../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;

@@ -1,4 +1,4 @@
-import DeletePhoneNumbersResponseItem from "./DeletePhoneNumbersResponseItem.js";
+import DeletePhoneNumbersResponseItem from "./DeletePhoneNumbersResponseItem";
 
 interface DeletePhoneNumbersResponse {
   /**

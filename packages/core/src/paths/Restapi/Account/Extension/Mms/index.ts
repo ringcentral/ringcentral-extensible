@@ -1,11 +1,11 @@
-import Utils from "../../../../../Utils.js";
-import GetSMSMessageInfoResponse from "../../../../../definitions/GetSMSMessageInfoResponse.js";
-import CreateMMSMessage from "../../../../../definitions/CreateMMSMessage.js";
+import Utils from "../../../../../Utils";
+import GetSMSMessageInfoResponse from "../../../../../definitions/GetSMSMessageInfoResponse";
+import CreateMMSMessage from "../../../../../definitions/CreateMMSMessage";
 import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../types.js";
+} from "../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;

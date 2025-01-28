@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "module": "commonjs",
+    "declaration": true,
+    "outDir": "./dist/cjs",
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "paths": {
+      "@rc-ex/core/*": [
+        "../../core/dist/cjs/*"
+      ],
+      "isomorphic-ws": [
+        "../../../node_modules/isomorphic-ws/node.js"
+      ],
+      "wait-for-async": [
+        "../../../node_modules/wait-for-async/dist/cjs/index.js"
+      ],
+      "hyperid": [
+        "../../../node_modules/hyperid/hyperid.js"
+      ],
+      "http-status-codes": [
+        "../../../node_modules/http-status-codes/build/cjs/index.js"
+      ]
+    }
+  },
+  "include": ["src/**/*.ts"]
+}

@@ -1,4 +1,4 @@
-import DevicePhoneNumberCountryInfo from "./DevicePhoneNumberCountryInfo.js";
+import DevicePhoneNumberCountryInfo from "./DevicePhoneNumberCountryInfo";
 
 /**
  * Phone number information

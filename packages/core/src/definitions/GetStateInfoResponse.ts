@@ -1,4 +1,4 @@
-import CountryInfoMinimalModel from "./CountryInfoMinimalModel.js";
+import CountryInfoMinimalModel from "./CountryInfoMinimalModel";
 
 interface GetStateInfoResponse {
   /**

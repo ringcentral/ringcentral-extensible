@@ -1,5 +1,5 @@
-import Delegators from "./Delegators/index.js";
-import { ParentInterface, RingCentralInterface } from "../../../../../types.js";
+import Delegators from "./Delegators/index";
+import { ParentInterface, RingCentralInterface } from "../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;

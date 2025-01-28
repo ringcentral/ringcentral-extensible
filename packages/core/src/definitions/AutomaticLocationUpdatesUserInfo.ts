@@ -1,4 +1,4 @@
-import AutomaticLocationUpdatesSiteInfo from "./AutomaticLocationUpdatesSiteInfo.js";
+import AutomaticLocationUpdatesSiteInfo from "./AutomaticLocationUpdatesSiteInfo";
 
 interface AutomaticLocationUpdatesUserInfo {
   /**

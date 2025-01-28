@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "module": "commonjs",
+    "declaration": true,
+    "outDir": "./dist/cjs",
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "paths": {
+      "@rc-ex/core/*": [
+        "../../core/dist/cjs/*"
+      ],
+      "@ringcentral/sdk/lib/*": [
+        "../../../node_modules/@ringcentral/sdk/lib/*"
+      ]
+    }
+  },
+  "include": ["src/**/*.ts"]
+}

@@ -1,4 +1,4 @@
-import FixedOrderAgentsExtensionInfo from "./FixedOrderAgentsExtensionInfo.js";
+import FixedOrderAgentsExtensionInfo from "./FixedOrderAgentsExtensionInfo";
 
 interface FixedOrderAgents {
   /** */

@@ -1,6 +1,6 @@
-import PagingDeviceInfo from "./PagingDeviceInfo.js";
-import PageNavigationModel from "./PageNavigationModel.js";
-import EnumeratedPagingModel from "./EnumeratedPagingModel.js";
+import PagingDeviceInfo from "./PagingDeviceInfo";
+import PageNavigationModel from "./PageNavigationModel";
+import EnumeratedPagingModel from "./EnumeratedPagingModel";
 
 interface PagingOnlyGroupDevices {
   /**

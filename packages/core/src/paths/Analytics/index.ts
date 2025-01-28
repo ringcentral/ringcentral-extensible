@@ -1,5 +1,5 @@
-import Calls from "./Calls/index.js";
-import { RingCentralInterface } from "../../types.js";
+import Calls from "./Calls/index";
+import { RingCentralInterface } from "../../types";
 
 class Index {
   public rc: RingCentralInterface;

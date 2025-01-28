@@ -1,4 +1,4 @@
-import ScimSchemaResponse from "./ScimSchemaResponse.js";
+import ScimSchemaResponse from "./ScimSchemaResponse";
 
 interface ScimSchemaSearchResponse {
   /**

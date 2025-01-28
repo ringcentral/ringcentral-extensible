@@ -1,10 +1,10 @@
-import Content from "./Content/index.js";
-import GetCallRecordingResponse from "../../../../definitions/GetCallRecordingResponse.js";
+import Content from "./Content/index";
+import GetCallRecordingResponse from "../../../../definitions/GetCallRecordingResponse";
 import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../types.js";
+} from "../../../../types";
 
 class Index {
   public rc: RingCentralInterface;

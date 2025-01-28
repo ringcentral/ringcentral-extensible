@@ -1,5 +1,5 @@
-import CallerIdDeviceInfo from "./CallerIdDeviceInfo.js";
-import CallerIdByDeviceInfo from "./CallerIdByDeviceInfo.js";
+import CallerIdDeviceInfo from "./CallerIdDeviceInfo";
+import CallerIdByDeviceInfo from "./CallerIdByDeviceInfo";
 
 /**
  * Caller ID settings by device

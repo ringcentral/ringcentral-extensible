@@ -1,4 +1,4 @@
-import WeeklyScheduleInfo from "./WeeklyScheduleInfo.js";
+import WeeklyScheduleInfo from "./WeeklyScheduleInfo";
 
 /**
  * Schedule when an answering rule is applied

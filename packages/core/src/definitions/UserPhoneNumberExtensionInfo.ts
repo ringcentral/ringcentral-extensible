@@ -1,4 +1,4 @@
-import ContactCenterProvider from "./ContactCenterProvider.js";
+import ContactCenterProvider from "./ContactCenterProvider";
 
 /**
  * Information on the extension, to which the phone number is assigned.

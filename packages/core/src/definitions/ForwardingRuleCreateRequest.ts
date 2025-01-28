@@ -1,4 +1,4 @@
-import ForwardingNumberInfoRulesCreateRuleRequest from "./ForwardingNumberInfoRulesCreateRuleRequest.js";
+import ForwardingNumberInfoRulesCreateRuleRequest from "./ForwardingNumberInfoRulesCreateRuleRequest";
 
 interface ForwardingRuleCreateRequest {
   /**

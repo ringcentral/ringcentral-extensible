@@ -1,5 +1,5 @@
-import OptOutBulkAssignResponseOptIns from "./OptOutBulkAssignResponseOptIns.js";
-import OptOutBulkAssignResponseOptOuts from "./OptOutBulkAssignResponseOptOuts.js";
+import OptOutBulkAssignResponseOptIns from "./OptOutBulkAssignResponseOptIns";
+import OptOutBulkAssignResponseOptOuts from "./OptOutBulkAssignResponseOptOuts";
 
 /**
  * The results of adding opt-outs and opt-ins

@@ -1,4 +1,4 @@
-import EventRecurrenceInfo from "./EventRecurrenceInfo.js";
+import EventRecurrenceInfo from "./EventRecurrenceInfo";
 
 interface TMEventInfo {
   /**

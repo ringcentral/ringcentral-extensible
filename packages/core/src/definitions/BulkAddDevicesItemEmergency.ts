@@ -1,5 +1,5 @@
-import PostalAddress from "./PostalAddress.js";
-import BulkAddDevicesItemEmergencyLocation from "./BulkAddDevicesItemEmergencyLocation.js";
+import PostalAddress from "./PostalAddress";
+import BulkAddDevicesItemEmergencyLocation from "./BulkAddDevicesItemEmergencyLocation";
 
 interface BulkAddDevicesItemEmergency {
   /** */

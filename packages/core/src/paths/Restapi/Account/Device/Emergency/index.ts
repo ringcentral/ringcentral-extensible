@@ -1,10 +1,10 @@
-import DeviceResource from "../../../../../definitions/DeviceResource.js";
-import AccountDeviceUpdate from "../../../../../definitions/AccountDeviceUpdate.js";
+import DeviceResource from "../../../../../definitions/DeviceResource";
+import AccountDeviceUpdate from "../../../../../definitions/AccountDeviceUpdate";
 import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../types.js";
+} from "../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;

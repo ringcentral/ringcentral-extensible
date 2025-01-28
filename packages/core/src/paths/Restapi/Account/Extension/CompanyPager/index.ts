@@ -1,10 +1,10 @@
-import GetInternalTextMessageInfoResponse from "../../../../../definitions/GetInternalTextMessageInfoResponse.js";
-import CreateInternalTextMessageRequest from "../../../../../definitions/CreateInternalTextMessageRequest.js";
+import GetInternalTextMessageInfoResponse from "../../../../../definitions/GetInternalTextMessageInfoResponse";
+import CreateInternalTextMessageRequest from "../../../../../definitions/CreateInternalTextMessageRequest";
 import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../types.js";
+} from "../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;

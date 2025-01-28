@@ -1,4 +1,4 @@
-import CallRecordingExtensionResource from "./CallRecordingExtensionResource.js";
+import CallRecordingExtensionResource from "./CallRecordingExtensionResource";
 
 interface BulkAccountCallRecordingsResource {
   /** */

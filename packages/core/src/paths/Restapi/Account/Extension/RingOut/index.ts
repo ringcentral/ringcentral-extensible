@@ -1,10 +1,10 @@
-import GetRingOutStatusResponse from "../../../../../definitions/GetRingOutStatusResponse.js";
-import MakeRingOutRequest from "../../../../../definitions/MakeRingOutRequest.js";
+import GetRingOutStatusResponse from "../../../../../definitions/GetRingOutStatusResponse";
+import MakeRingOutRequest from "../../../../../definitions/MakeRingOutRequest";
 import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../types.js";
+} from "../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;

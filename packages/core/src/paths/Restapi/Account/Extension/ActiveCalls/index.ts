@@ -1,10 +1,10 @@
-import CallLogResponse from "../../../../../definitions/CallLogResponse.js";
-import ListExtensionActiveCallsParameters from "../../../../../definitions/ListExtensionActiveCallsParameters.js";
+import CallLogResponse from "../../../../../definitions/CallLogResponse";
+import ListExtensionActiveCallsParameters from "../../../../../definitions/ListExtensionActiveCallsParameters";
 import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../types.js";
+} from "../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;

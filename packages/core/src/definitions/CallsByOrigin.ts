@@ -1,4 +1,4 @@
-import CallsByOriginBreakdown from "./CallsByOriginBreakdown.js";
+import CallsByOriginBreakdown from "./CallsByOriginBreakdown";
 
 /**
  * Data for calls with breakdown by origin (Internal, External)

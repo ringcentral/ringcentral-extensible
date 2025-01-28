@@ -1,9 +1,9 @@
-import CallRecordingExtensions from "../../../../../definitions/CallRecordingExtensions.js";
+import CallRecordingExtensions from "../../../../../definitions/CallRecordingExtensions";
 import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../types.js";
+} from "../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;

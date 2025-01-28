@@ -1,4 +1,4 @@
-import TelephonySessionsEventBody from "./TelephonySessionsEventBody.js";
+import TelephonySessionsEventBody from "./TelephonySessionsEventBody";
 
 interface AccountTelephonySessionsEvent {
   /**

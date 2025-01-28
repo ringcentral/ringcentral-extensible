@@ -1,5 +1,5 @@
-import MeetingInfo from "./MeetingInfo.js";
-import MeetingRecordingInfo from "./MeetingRecordingInfo.js";
+import MeetingInfo from "./MeetingInfo";
+import MeetingRecordingInfo from "./MeetingRecordingInfo";
 
 interface MeetingRecordings {
   /** */

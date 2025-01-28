@@ -1,10 +1,10 @@
-import TMChatListWithoutNavigation from "../../../../definitions/TMChatListWithoutNavigation.js";
-import ListFavoriteChatsNewParameters from "../../../../definitions/ListFavoriteChatsNewParameters.js";
+import TMChatListWithoutNavigation from "../../../../definitions/TMChatListWithoutNavigation";
+import ListFavoriteChatsNewParameters from "../../../../definitions/ListFavoriteChatsNewParameters";
 import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../types.js";
+} from "../../../../types";
 
 class Index {
   public rc: RingCentralInterface;

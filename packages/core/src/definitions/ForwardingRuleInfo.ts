@@ -1,4 +1,4 @@
-import CreateAnsweringRuleForwardingNumberInfo from "./CreateAnsweringRuleForwardingNumberInfo.js";
+import CreateAnsweringRuleForwardingNumberInfo from "./CreateAnsweringRuleForwardingNumberInfo";
 
 interface ForwardingRuleInfo {
   /**

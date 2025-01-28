@@ -1,4 +1,4 @@
-import OrderBy from "./OrderBy.js";
+import OrderBy from "./OrderBy";
 
 interface SearchDirectoryEntriesRequest {
   /**

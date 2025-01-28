@@ -1,4 +1,4 @@
-import MessageEventBody from "./MessageEventBody.js";
+import MessageEventBody from "./MessageEventBody";
 
 interface MessageEvent {
   /**

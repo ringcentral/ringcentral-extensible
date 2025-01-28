@@ -1,4 +1,4 @@
-import OptOutBulkAssignFailedEntry from "./OptOutBulkAssignFailedEntry.js";
+import OptOutBulkAssignFailedEntry from "./OptOutBulkAssignFailedEntry";
 
 interface OptOutBulkAssignResponseOptIns {
   /**

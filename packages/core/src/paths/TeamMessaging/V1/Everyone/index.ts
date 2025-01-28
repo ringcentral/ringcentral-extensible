@@ -1,10 +1,10 @@
-import UpdateEveryoneTeamRequest from "../../../../definitions/UpdateEveryoneTeamRequest.js";
-import EveryoneTeamInfo from "../../../../definitions/EveryoneTeamInfo.js";
+import UpdateEveryoneTeamRequest from "../../../../definitions/UpdateEveryoneTeamRequest";
+import EveryoneTeamInfo from "../../../../definitions/EveryoneTeamInfo";
 import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../types.js";
+} from "../../../../types";
 
 class Index {
   public rc: RingCentralInterface;

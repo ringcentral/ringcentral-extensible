@@ -1,4 +1,4 @@
-import ApiError from "./ApiError.js";
+import ApiError from "./ApiError";
 
 /**
  * Standard error response model which is returned in case of any unsuccessful operation

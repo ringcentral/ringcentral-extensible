@@ -1,4 +1,4 @@
-import ApiErrorWithParameter from "./ApiErrorWithParameter.js";
+import ApiErrorWithParameter from "./ApiErrorWithParameter";
 
 /**
  * Standard error response which may include parameterized errors

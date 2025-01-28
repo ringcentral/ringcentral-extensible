@@ -1,5 +1,5 @@
-import PagingSchema from "./PagingSchema.js";
-import EnrollmentStatus from "./EnrollmentStatus.js";
+import PagingSchema from "./PagingSchema";
+import EnrollmentStatus from "./EnrollmentStatus";
 
 interface ListEnrolledSpeakers {
   /**

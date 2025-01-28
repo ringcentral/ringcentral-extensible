@@ -1,4 +1,4 @@
-import LocationDeletionErrorInfo from "./LocationDeletionErrorInfo.js";
+import LocationDeletionErrorInfo from "./LocationDeletionErrorInfo";
 
 interface LocationDeletionInfo {
   /** */

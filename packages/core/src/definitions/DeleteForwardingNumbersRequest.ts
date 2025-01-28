@@ -1,4 +1,4 @@
-import ForwardingNumberId from "./ForwardingNumberId.js";
+import ForwardingNumberId from "./ForwardingNumberId";
 
 interface DeleteForwardingNumbersRequest {
   /**

@@ -1,12 +1,12 @@
-import TMEventInfo from "../../../../definitions/TMEventInfo.js";
-import TMCreateEventRequest from "../../../../definitions/TMCreateEventRequest.js";
-import TMEventList from "../../../../definitions/TMEventList.js";
-import ReadGlipEventsNewParameters from "../../../../definitions/ReadGlipEventsNewParameters.js";
+import TMEventInfo from "../../../../definitions/TMEventInfo";
+import TMCreateEventRequest from "../../../../definitions/TMCreateEventRequest";
+import TMEventList from "../../../../definitions/TMEventList";
+import ReadGlipEventsNewParameters from "../../../../definitions/ReadGlipEventsNewParameters";
 import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../types.js";
+} from "../../../../types";
 
 class Index {
   public rc: RingCentralInterface;

@@ -1,4 +1,4 @@
-import CreateConversationRequestMembers from "./CreateConversationRequestMembers.js";
+import CreateConversationRequestMembers from "./CreateConversationRequestMembers";
 
 interface CreateConversationRequest {
   /**

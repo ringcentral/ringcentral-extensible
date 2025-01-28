@@ -1,10 +1,10 @@
-import PagingOnlyGroupUsers from "../../../../../definitions/PagingOnlyGroupUsers.js";
-import ListPagingGroupUsersParameters from "../../../../../definitions/ListPagingGroupUsersParameters.js";
+import PagingOnlyGroupUsers from "../../../../../definitions/PagingOnlyGroupUsers";
+import ListPagingGroupUsersParameters from "../../../../../definitions/ListPagingGroupUsersParameters";
 import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../types.js";
+} from "../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;

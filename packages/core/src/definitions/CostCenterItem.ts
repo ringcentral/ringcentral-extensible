@@ -1,4 +1,4 @@
-import TaxLocation from "./TaxLocation.js";
+import TaxLocation from "./TaxLocation";
 
 interface CostCenterItem {
   /**

@@ -1,4 +1,4 @@
-import SiteBasicInfo from "./SiteBasicInfo.js";
+import SiteBasicInfo from "./SiteBasicInfo";
 
 interface CallQueueInfo {
   /**

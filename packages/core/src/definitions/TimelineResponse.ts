@@ -1,5 +1,5 @@
-import ResponsePaging from "./ResponsePaging.js";
-import TimelineResponseData from "./TimelineResponseData.js";
+import ResponsePaging from "./ResponsePaging";
+import TimelineResponseData from "./TimelineResponseData";
 
 interface TimelineResponse {
   /**

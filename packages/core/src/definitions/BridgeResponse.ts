@@ -1,8 +1,8 @@
-import User from "./User.js";
-import BridgePinsWithAliases from "./BridgePinsWithAliases.js";
-import BridgeResponseSecurity from "./BridgeResponseSecurity.js";
-import BridgePreferences from "./BridgePreferences.js";
-import BridgeDiscovery from "./BridgeDiscovery.js";
+import User from "./User";
+import BridgePinsWithAliases from "./BridgePinsWithAliases";
+import BridgeResponseSecurity from "./BridgeResponseSecurity";
+import BridgePreferences from "./BridgePreferences";
+import BridgeDiscovery from "./BridgeDiscovery";
 
 interface BridgeResponse {
   /**

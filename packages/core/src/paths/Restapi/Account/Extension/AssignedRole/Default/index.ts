@@ -1,9 +1,9 @@
-import AssignedRolesResource from "../../../../../../definitions/AssignedRolesResource.js";
+import AssignedRolesResource from "../../../../../../definitions/AssignedRolesResource";
 import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../../types.js";
+} from "../../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;

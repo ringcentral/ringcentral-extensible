@@ -1,4 +1,4 @@
-import ExtensionInfoGrants from "./ExtensionInfoGrants.js";
+import ExtensionInfoGrants from "./ExtensionInfoGrants";
 
 interface GrantInfo {
   /**

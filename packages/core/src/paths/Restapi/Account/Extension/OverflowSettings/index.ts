@@ -1,10 +1,10 @@
-import CallQueueOverflowSettingsRequestResource from "../../../../../definitions/CallQueueOverflowSettingsRequestResource.js";
-import CallQueueOverflowSettings from "../../../../../definitions/CallQueueOverflowSettings.js";
+import CallQueueOverflowSettingsRequestResource from "../../../../../definitions/CallQueueOverflowSettingsRequestResource";
+import CallQueueOverflowSettings from "../../../../../definitions/CallQueueOverflowSettings";
 import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../types.js";
+} from "../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;

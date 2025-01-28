@@ -1,8 +1,8 @@
-import ServiceInfoPackage from "./ServiceInfoPackage.js";
-import ServiceInfoBrand from "./ServiceInfoBrand.js";
-import ServiceInfoContractedCountryId from "./ServiceInfoContractedCountryId.js";
-import ServiceInfoUBrand from "./ServiceInfoUBrand.js";
-import ServiceInfoPlanV2 from "./ServiceInfoPlanV2.js";
+import ServiceInfoPackage from "./ServiceInfoPackage";
+import ServiceInfoBrand from "./ServiceInfoBrand";
+import ServiceInfoContractedCountryId from "./ServiceInfoContractedCountryId";
+import ServiceInfoUBrand from "./ServiceInfoUBrand";
+import ServiceInfoPlanV2 from "./ServiceInfoPlanV2";
 
 /**
  * Service Plan information (billing package, brand, etc.)

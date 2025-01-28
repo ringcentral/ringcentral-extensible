@@ -1,4 +1,4 @@
-import SpeakerInsightsValuesItems from "./SpeakerInsightsValuesItems.js";
+import SpeakerInsightsValuesItems from "./SpeakerInsightsValuesItems";
 
 interface SpeakerInsightsUnit {
   /**

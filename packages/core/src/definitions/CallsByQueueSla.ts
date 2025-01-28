@@ -1,4 +1,4 @@
-import CallsByQueueSlaBreakdown from "./CallsByQueueSlaBreakdown.js";
+import CallsByQueueSlaBreakdown from "./CallsByQueueSlaBreakdown";
 
 /**
  * Data for calls with breakdown by queue SLA (InSLA, OutSLA). This counter is only applicable to Queues grouping

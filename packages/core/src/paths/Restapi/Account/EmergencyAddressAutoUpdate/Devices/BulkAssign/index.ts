@@ -1,9 +1,9 @@
-import AssignMultipleDevicesAutomaticLocationUpdates from "../../../../../../definitions/AssignMultipleDevicesAutomaticLocationUpdates.js";
+import AssignMultipleDevicesAutomaticLocationUpdates from "../../../../../../definitions/AssignMultipleDevicesAutomaticLocationUpdates";
 import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../../types.js";
+} from "../../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;

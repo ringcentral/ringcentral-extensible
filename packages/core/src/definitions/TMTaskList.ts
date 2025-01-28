@@ -1,5 +1,5 @@
-import TMTaskInfo from "./TMTaskInfo.js";
-import TMNavigationInfo from "./TMNavigationInfo.js";
+import TMTaskInfo from "./TMTaskInfo";
+import TMNavigationInfo from "./TMNavigationInfo";
 
 interface TMTaskList {
   /** */

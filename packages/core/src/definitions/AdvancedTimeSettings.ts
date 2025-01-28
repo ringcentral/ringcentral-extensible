@@ -1,4 +1,4 @@
-import HoursInterval from "./HoursInterval.js";
+import HoursInterval from "./HoursInterval";
 
 /**
  * Allows more granular control over time included in the report

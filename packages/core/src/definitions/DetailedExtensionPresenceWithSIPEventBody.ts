@@ -1,4 +1,4 @@
-import ActiveCallInfo from "./ActiveCallInfo.js";
+import ActiveCallInfo from "./ActiveCallInfo";
 
 /**
  * Notification payload body

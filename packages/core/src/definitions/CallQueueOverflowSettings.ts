@@ -1,4 +1,4 @@
-import CallQueueInfo from "./CallQueueInfo.js";
+import CallQueueInfo from "./CallQueueInfo";
 
 interface CallQueueOverflowSettings {
   /**

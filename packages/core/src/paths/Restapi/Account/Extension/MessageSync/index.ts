@@ -1,10 +1,10 @@
-import GetMessageSyncResponse from "../../../../../definitions/GetMessageSyncResponse.js";
-import SyncMessagesParameters from "../../../../../definitions/SyncMessagesParameters.js";
+import GetMessageSyncResponse from "../../../../../definitions/GetMessageSyncResponse";
+import SyncMessagesParameters from "../../../../../definitions/SyncMessagesParameters";
 import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../types.js";
+} from "../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;

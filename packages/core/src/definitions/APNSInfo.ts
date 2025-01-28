@@ -1,4 +1,4 @@
-import APSInfo from "./APSInfo.js";
+import APSInfo from "./APSInfo";
 
 /**
  * APNS (Apple Push Notification Service) information

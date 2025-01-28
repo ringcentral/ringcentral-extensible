@@ -1,4 +1,4 @@
-import ExtensionCallQueueUpdatePresence from "./ExtensionCallQueueUpdatePresence.js";
+import ExtensionCallQueueUpdatePresence from "./ExtensionCallQueueUpdatePresence";
 
 interface ExtensionCallQueueUpdatePresenceList {
   /** */

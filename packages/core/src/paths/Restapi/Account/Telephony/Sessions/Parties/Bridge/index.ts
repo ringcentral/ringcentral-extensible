@@ -1,10 +1,10 @@
-import CallParty from "../../../../../../../definitions/CallParty.js";
-import BridgeTargetRequest from "../../../../../../../definitions/BridgeTargetRequest.js";
+import CallParty from "../../../../../../../definitions/CallParty";
+import BridgeTargetRequest from "../../../../../../../definitions/BridgeTargetRequest";
 import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../../../types.js";
+} from "../../../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;

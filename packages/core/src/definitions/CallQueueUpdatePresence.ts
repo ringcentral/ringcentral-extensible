@@ -1,4 +1,4 @@
-import CallQueueUpdateMemberPresence from "./CallQueueUpdateMemberPresence.js";
+import CallQueueUpdateMemberPresence from "./CallQueueUpdateMemberPresence";
 
 interface CallQueueUpdatePresence {
   /** */

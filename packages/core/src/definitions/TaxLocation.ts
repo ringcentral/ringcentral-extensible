@@ -1,4 +1,4 @@
-import PostalAddress from "./PostalAddress.js";
+import PostalAddress from "./PostalAddress";
 
 interface TaxLocation {
   /**

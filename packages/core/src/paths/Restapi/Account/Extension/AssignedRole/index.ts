@@ -1,11 +1,11 @@
-import Default from "./Default/index.js";
-import AssignedRolesResource from "../../../../../definitions/AssignedRolesResource.js";
-import ListUserAssignedRolesParameters from "../../../../../definitions/ListUserAssignedRolesParameters.js";
+import Default from "./Default/index";
+import AssignedRolesResource from "../../../../../definitions/AssignedRolesResource";
+import ListUserAssignedRolesParameters from "../../../../../definitions/ListUserAssignedRolesParameters";
 import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../types.js";
+} from "../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;

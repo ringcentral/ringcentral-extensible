@@ -1,5 +1,5 @@
-import type RingCentral from "@rc-ex/core";
-import SdkExtension from "@rc-ex/core/lib/esm/SdkExtension.js";
+import type RingCentral from "@rc-ex/core/index";
+import SdkExtension from "@rc-ex/core/SdkExtension";
 
 export interface AutoRefreshOptions {
   interval: number;

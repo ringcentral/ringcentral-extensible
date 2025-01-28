@@ -1,4 +1,4 @@
-import ArchiveInfo from "./ArchiveInfo.js";
+import ArchiveInfo from "./ArchiveInfo";
 
 interface MessageStoreReportArchive {
   /** */

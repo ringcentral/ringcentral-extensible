@@ -1,9 +1,9 @@
-import ExtensionBulkUpdateTaskResource from "../../../../../definitions/ExtensionBulkUpdateTaskResource.js";
+import ExtensionBulkUpdateTaskResource from "../../../../../definitions/ExtensionBulkUpdateTaskResource";
 import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../types.js";
+} from "../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;

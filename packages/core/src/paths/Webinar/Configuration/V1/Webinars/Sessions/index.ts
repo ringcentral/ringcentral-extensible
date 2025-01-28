@@ -1,11 +1,11 @@
-import Invitees from "./Invitees/index.js";
-import WcsSessionResource from "../../../../../../definitions/WcsSessionResource.js";
-import WcsSessionWithLocaleCodeModel from "../../../../../../definitions/WcsSessionWithLocaleCodeModel.js";
+import Invitees from "./Invitees/index";
+import WcsSessionResource from "../../../../../../definitions/WcsSessionResource";
+import WcsSessionWithLocaleCodeModel from "../../../../../../definitions/WcsSessionWithLocaleCodeModel";
 import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../../types.js";
+} from "../../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;

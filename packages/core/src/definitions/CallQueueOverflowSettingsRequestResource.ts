@@ -1,4 +1,4 @@
-import CallQueueIdResource from "./CallQueueIdResource.js";
+import CallQueueIdResource from "./CallQueueIdResource";
 
 interface CallQueueOverflowSettingsRequestResource {
   /**

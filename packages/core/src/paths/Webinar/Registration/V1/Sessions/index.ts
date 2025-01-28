@@ -1,10 +1,10 @@
-import Registrants from "./Registrants/index.js";
-import RegSessionModel from "../../../../../definitions/RegSessionModel.js";
+import Registrants from "./Registrants/index";
+import RegSessionModel from "../../../../../definitions/RegSessionModel";
 import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../types.js";
+} from "../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;

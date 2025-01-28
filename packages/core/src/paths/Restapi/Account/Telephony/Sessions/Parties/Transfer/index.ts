@@ -1,10 +1,10 @@
-import CallParty from "../../../../../../../definitions/CallParty.js";
-import TransferTarget from "../../../../../../../definitions/TransferTarget.js";
+import CallParty from "../../../../../../../definitions/CallParty";
+import TransferTarget from "../../../../../../../definitions/TransferTarget";
 import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../../../types.js";
+} from "../../../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;

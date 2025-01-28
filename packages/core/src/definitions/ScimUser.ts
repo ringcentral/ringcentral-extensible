@@ -1,9 +1,9 @@
-import ScimUserAddress from "./ScimUserAddress.js";
-import ScimEmail from "./ScimEmail.js";
-import ScimName from "./ScimName.js";
-import ScimPhoneNumber from "./ScimPhoneNumber.js";
-import ScimPhoto from "./ScimPhoto.js";
-import ScimEnterpriseUser from "./ScimEnterpriseUser.js";
+import ScimUserAddress from "./ScimUserAddress";
+import ScimEmail from "./ScimEmail";
+import ScimName from "./ScimName";
+import ScimPhoneNumber from "./ScimPhoneNumber";
+import ScimPhoto from "./ScimPhoto";
+import ScimEnterpriseUser from "./ScimEnterpriseUser";
 
 interface ScimUser {
   /**

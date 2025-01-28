@@ -1,13 +1,13 @@
-import Content from "./Content/index.js";
-import Utils from "../../../../../Utils.js";
-import CustomUserGreetingInfo from "../../../../../definitions/CustomUserGreetingInfo.js";
-import CreateCustomUserGreetingParameters from "../../../../../definitions/CreateCustomUserGreetingParameters.js";
-import CreateCustomUserGreetingRequest from "../../../../../definitions/CreateCustomUserGreetingRequest.js";
+import Content from "./Content/index";
+import Utils from "../../../../../Utils";
+import CustomUserGreetingInfo from "../../../../../definitions/CustomUserGreetingInfo";
+import CreateCustomUserGreetingParameters from "../../../../../definitions/CreateCustomUserGreetingParameters";
+import CreateCustomUserGreetingRequest from "../../../../../definitions/CreateCustomUserGreetingRequest";
 import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../types.js";
+} from "../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;

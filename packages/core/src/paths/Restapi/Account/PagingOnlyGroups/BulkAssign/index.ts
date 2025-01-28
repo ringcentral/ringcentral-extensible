@@ -1,9 +1,9 @@
-import EditPagingGroupRequest from "../../../../../definitions/EditPagingGroupRequest.js";
+import EditPagingGroupRequest from "../../../../../definitions/EditPagingGroupRequest";
 import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../types.js";
+} from "../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;

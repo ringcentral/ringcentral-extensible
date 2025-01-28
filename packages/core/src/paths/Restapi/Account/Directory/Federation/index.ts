@@ -1,10 +1,10 @@
-import FederationResource from "../../../../../definitions/FederationResource.js";
-import ReadDirectoryFederationParameters from "../../../../../definitions/ReadDirectoryFederationParameters.js";
+import FederationResource from "../../../../../definitions/FederationResource";
+import ReadDirectoryFederationParameters from "../../../../../definitions/ReadDirectoryFederationParameters";
 import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../types.js";
+} from "../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;

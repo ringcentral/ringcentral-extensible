@@ -1,4 +1,4 @@
-import MessagingNavigationInfoURI from "./MessagingNavigationInfoURI.js";
+import MessagingNavigationInfoURI from "./MessagingNavigationInfoURI";
 
 /**
  * Information on navigation

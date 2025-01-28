@@ -1,5 +1,5 @@
-import ActiveCallInfo from "./ActiveCallInfo.js";
-import GetPresenceExtensionInfo from "./GetPresenceExtensionInfo.js";
+import ActiveCallInfo from "./ActiveCallInfo";
+import GetPresenceExtensionInfo from "./GetPresenceExtensionInfo";
 
 interface PresenceInfoResponse {
   /**

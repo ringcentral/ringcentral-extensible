@@ -1,4 +1,4 @@
-import TMRemoveTeamMembersRequestMembers from "./TMRemoveTeamMembersRequestMembers.js";
+import TMRemoveTeamMembersRequestMembers from "./TMRemoveTeamMembersRequestMembers";
 
 interface TMRemoveTeamMembersRequest {
   /**

@@ -1,10 +1,10 @@
-import ListFaxCoverPagesResponse from "../../../../definitions/ListFaxCoverPagesResponse.js";
-import ListFaxCoverPagesParameters from "../../../../definitions/ListFaxCoverPagesParameters.js";
+import ListFaxCoverPagesResponse from "../../../../definitions/ListFaxCoverPagesResponse";
+import ListFaxCoverPagesParameters from "../../../../definitions/ListFaxCoverPagesParameters";
 import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../types.js";
+} from "../../../../types";
 
 class Index {
   public rc: RingCentralInterface;

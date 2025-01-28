@@ -1,6 +1,6 @@
-import CallHandlingRuleInfo from "./CallHandlingRuleInfo.js";
-import EnumeratedPagingModel from "./EnumeratedPagingModel.js";
-import PageNavigationModel from "./PageNavigationModel.js";
+import CallHandlingRuleInfo from "./CallHandlingRuleInfo";
+import EnumeratedPagingModel from "./EnumeratedPagingModel";
+import PageNavigationModel from "./PageNavigationModel";
 
 interface UserAnsweringRuleList {
   /**

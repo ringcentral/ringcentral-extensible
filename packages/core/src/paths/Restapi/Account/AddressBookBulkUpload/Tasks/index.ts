@@ -1,9 +1,9 @@
-import AddressBookBulkUploadResponse from "../../../../../definitions/AddressBookBulkUploadResponse.js";
+import AddressBookBulkUploadResponse from "../../../../../definitions/AddressBookBulkUploadResponse";
 import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../types.js";
+} from "../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;

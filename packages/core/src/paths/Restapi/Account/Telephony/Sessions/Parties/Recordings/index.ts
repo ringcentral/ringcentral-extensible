@@ -1,11 +1,11 @@
-import CallRecording from "../../../../../../../definitions/CallRecording.js";
-import PauseResumeCallRecordingParameters from "../../../../../../../definitions/PauseResumeCallRecordingParameters.js";
-import CallRecordingUpdate from "../../../../../../../definitions/CallRecordingUpdate.js";
+import CallRecording from "../../../../../../../definitions/CallRecording";
+import PauseResumeCallRecordingParameters from "../../../../../../../definitions/PauseResumeCallRecordingParameters";
+import CallRecordingUpdate from "../../../../../../../definitions/CallRecordingUpdate";
 import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../../../types.js";
+} from "../../../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;

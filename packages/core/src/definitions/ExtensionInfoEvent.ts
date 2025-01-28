@@ -1,4 +1,4 @@
-import ExtensionInfoEventBody from "./ExtensionInfoEventBody.js";
+import ExtensionInfoEventBody from "./ExtensionInfoEventBody";
 
 interface ExtensionInfoEvent {
   /**

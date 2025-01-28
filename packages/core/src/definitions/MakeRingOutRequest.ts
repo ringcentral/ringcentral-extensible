@@ -1,7 +1,7 @@
-import MakeRingOutCallerInfoRequestFrom from "./MakeRingOutCallerInfoRequestFrom.js";
-import MakeRingOutCallerInfoRequestTo from "./MakeRingOutCallerInfoRequestTo.js";
-import MakeRingOutCallerIdInfo from "./MakeRingOutCallerIdInfo.js";
-import MakeRingOutCountryInfo from "./MakeRingOutCountryInfo.js";
+import MakeRingOutCallerInfoRequestFrom from "./MakeRingOutCallerInfoRequestFrom";
+import MakeRingOutCallerInfoRequestTo from "./MakeRingOutCallerInfoRequestTo";
+import MakeRingOutCallerIdInfo from "./MakeRingOutCallerIdInfo";
+import MakeRingOutCountryInfo from "./MakeRingOutCountryInfo";
 
 interface MakeRingOutRequest {
   /**

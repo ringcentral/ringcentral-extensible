@@ -1,10 +1,10 @@
-import GetExtensionDevicesResponse from "../../../../../definitions/GetExtensionDevicesResponse.js";
-import ListExtensionDevicesParameters from "../../../../../definitions/ListExtensionDevicesParameters.js";
+import GetExtensionDevicesResponse from "../../../../../definitions/GetExtensionDevicesResponse";
+import ListExtensionDevicesParameters from "../../../../../definitions/ListExtensionDevicesParameters";
 import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../types.js";
+} from "../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;

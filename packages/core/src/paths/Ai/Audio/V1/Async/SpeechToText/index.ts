@@ -1,11 +1,11 @@
-import CaiAsyncApiResponse from "../../../../../../definitions/CaiAsyncApiResponse.js";
-import CaiSpeechToTextParameters from "../../../../../../definitions/CaiSpeechToTextParameters.js";
-import AsrInput from "../../../../../../definitions/AsrInput.js";
+import CaiAsyncApiResponse from "../../../../../../definitions/CaiAsyncApiResponse";
+import CaiSpeechToTextParameters from "../../../../../../definitions/CaiSpeechToTextParameters";
+import AsrInput from "../../../../../../definitions/AsrInput";
 import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../../types.js";
+} from "../../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;

@@ -1,5 +1,5 @@
-import Async from "./Async/index.js";
-import { ParentInterface, RingCentralInterface } from "../../../../types.js";
+import Async from "./Async/index";
+import { ParentInterface, RingCentralInterface } from "../../../../types";
 
 class Index {
   public rc: RingCentralInterface;

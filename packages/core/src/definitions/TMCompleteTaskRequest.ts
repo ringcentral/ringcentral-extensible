@@ -1,4 +1,4 @@
-import TMCompleteTaskRequestAssignees from "./TMCompleteTaskRequestAssignees.js";
+import TMCompleteTaskRequestAssignees from "./TMCompleteTaskRequestAssignees";
 
 interface TMCompleteTaskRequest {
   /**

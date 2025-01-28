@@ -1,12 +1,12 @@
-import type RingCentral from "@rc-ex/core";
+import type RingCentral from "@rc-ex/core/index";
 import type {
   RestMethod,
   RestRequestConfig,
   RestResponse,
-} from "@rc-ex/core/lib/esm/types.js";
-import SdkExtension from "@rc-ex/core/lib/esm/SdkExtension.js";
-import type GetTokenRequest from "@rc-ex/core/lib/esm/definitions/GetTokenRequest.js";
-import RestException from "@rc-ex/core/lib/esm/RestException.js";
+} from "@rc-ex/core/types";
+import SdkExtension from "@rc-ex/core/SdkExtension";
+import type GetTokenRequest from "@rc-ex/core/definitions/GetTokenRequest";
+import RestException from "@rc-ex/core/RestException";
 import { EventEmitter } from "events";
 
 export enum Events {

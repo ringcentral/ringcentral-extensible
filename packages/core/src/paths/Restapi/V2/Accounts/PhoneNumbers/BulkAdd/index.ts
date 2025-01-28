@@ -1,11 +1,11 @@
-import GetBulkAddTaskResultsV2Response from "../../../../../../definitions/GetBulkAddTaskResultsV2Response.js";
-import AddPhoneNumbersResponse from "../../../../../../definitions/AddPhoneNumbersResponse.js";
-import AddPhoneNumbersRequest from "../../../../../../definitions/AddPhoneNumbersRequest.js";
+import GetBulkAddTaskResultsV2Response from "../../../../../../definitions/GetBulkAddTaskResultsV2Response";
+import AddPhoneNumbersResponse from "../../../../../../definitions/AddPhoneNumbersResponse";
+import AddPhoneNumbersRequest from "../../../../../../definitions/AddPhoneNumbersRequest";
 import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../../types.js";
+} from "../../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;

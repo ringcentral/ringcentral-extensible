@@ -1,4 +1,4 @@
-import TMAddTeamMembersRequestMembers from "./TMAddTeamMembersRequestMembers.js";
+import TMAddTeamMembersRequestMembers from "./TMAddTeamMembersRequestMembers";
 
 interface TMAddTeamMembersRequest {
   /**

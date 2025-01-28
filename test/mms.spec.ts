@@ -1,5 +1,5 @@
-import type CreateMMSMessage from "@rc-ex/core/lib/esm/definitions/CreateMMSMessage";
-import type Attachment from "@rc-ex/core/lib/esm/definitions/Attachment";
+import type CreateMMSMessage from "@rc-ex/core/definitions/CreateMMSMessage";
+import type Attachment from "@rc-ex/core/definitions/Attachment";
 import fs from "fs";
 import path from "path";
 import { describe, expect, test } from "vitest";

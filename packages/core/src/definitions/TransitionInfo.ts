@@ -1,4 +1,4 @@
-import ExtensionRegionalSettingRequest from "./ExtensionRegionalSettingRequest.js";
+import ExtensionRegionalSettingRequest from "./ExtensionRegionalSettingRequest";
 
 interface TransitionInfo {
   /**

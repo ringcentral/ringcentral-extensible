@@ -1,5 +1,5 @@
-import WcsWebinarSettingsModel from "./WcsWebinarSettingsModel.js";
-import RcwLinkedUserModel from "./RcwLinkedUserModel.js";
+import WcsWebinarSettingsModel from "./WcsWebinarSettingsModel";
+import RcwLinkedUserModel from "./RcwLinkedUserModel";
 
 interface WebinarCreationRequest {
   /**

@@ -1,6 +1,6 @@
-import Utils from "@rc-ex/core/lib/esm/Utils";
-import type FaxResponse from "@rc-ex/core/lib/esm/definitions/FaxResponse";
-import type GetSMSMessageInfoResponse from "@rc-ex/core/lib/esm/definitions/GetSMSMessageInfoResponse";
+import Utils from "@rc-ex/core/Utils";
+import type FaxResponse from "@rc-ex/core/definitions/FaxResponse";
+import type GetSMSMessageInfoResponse from "@rc-ex/core/definitions/GetSMSMessageInfoResponse";
 import fs from "fs";
 import path from "path";
 import { describe, expect, test } from "vitest";

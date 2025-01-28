@@ -1,10 +1,10 @@
-import OptOutBulkAssignResponse from "../../../../../../definitions/OptOutBulkAssignResponse.js";
-import OptOutBulkAssignRequest from "../../../../../../definitions/OptOutBulkAssignRequest.js";
+import OptOutBulkAssignResponse from "../../../../../../definitions/OptOutBulkAssignResponse";
+import OptOutBulkAssignRequest from "../../../../../../definitions/OptOutBulkAssignRequest";
 import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../../types.js";
+} from "../../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;

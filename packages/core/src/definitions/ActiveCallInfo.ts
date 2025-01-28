@@ -1,5 +1,5 @@
-import DetailedCallInfo from "./DetailedCallInfo.js";
-import CallInfoCQ from "./CallInfoCQ.js";
+import DetailedCallInfo from "./DetailedCallInfo";
+import CallInfoCQ from "./CallInfoCQ";
 
 interface ActiveCallInfo {
   /** */

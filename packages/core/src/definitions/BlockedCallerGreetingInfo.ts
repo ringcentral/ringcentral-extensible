@@ -1,4 +1,4 @@
-import PresetInfo from "./PresetInfo.js";
+import PresetInfo from "./PresetInfo";
 
 interface BlockedCallerGreetingInfo {
   /**

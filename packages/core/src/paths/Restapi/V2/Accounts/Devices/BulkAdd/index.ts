@@ -1,10 +1,10 @@
-import BulkAddDevicesResponse from "../../../../../../definitions/BulkAddDevicesResponse.js";
-import BulkAddDevicesRequest from "../../../../../../definitions/BulkAddDevicesRequest.js";
+import BulkAddDevicesResponse from "../../../../../../definitions/BulkAddDevicesResponse";
+import BulkAddDevicesRequest from "../../../../../../definitions/BulkAddDevicesRequest";
 import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../../types.js";
+} from "../../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;

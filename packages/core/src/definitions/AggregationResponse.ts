@@ -1,5 +1,5 @@
-import ResponsePaging from "./ResponsePaging.js";
-import AggregationResponseData from "./AggregationResponseData.js";
+import ResponsePaging from "./ResponsePaging";
+import AggregationResponseData from "./AggregationResponseData";
 
 interface AggregationResponse {
   /**

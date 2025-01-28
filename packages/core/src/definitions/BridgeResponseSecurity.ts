@@ -1,4 +1,4 @@
-import BridgeResponseSecurityPassword from "./BridgeResponseSecurityPassword.js";
+import BridgeResponseSecurityPassword from "./BridgeResponseSecurityPassword";
 
 interface BridgeResponseSecurity {
   /**

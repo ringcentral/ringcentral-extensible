@@ -1,9 +1,9 @@
-import UserVideoConfiguration from "../../../../../definitions/UserVideoConfiguration.js";
+import UserVideoConfiguration from "../../../../../definitions/UserVideoConfiguration";
 import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../types.js";
+} from "../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;

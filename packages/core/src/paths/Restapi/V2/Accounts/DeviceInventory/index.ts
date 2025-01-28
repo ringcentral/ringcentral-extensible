@@ -1,12 +1,12 @@
-import DeleteDeviceFromInventoryResponse from "../../../../../definitions/DeleteDeviceFromInventoryResponse.js";
-import DeleteDeviceFromInventoryRequest from "../../../../../definitions/DeleteDeviceFromInventoryRequest.js";
-import AddDeviceToInventoryResponse from "../../../../../definitions/AddDeviceToInventoryResponse.js";
-import AddDeviceToInventoryRequest from "../../../../../definitions/AddDeviceToInventoryRequest.js";
+import DeleteDeviceFromInventoryResponse from "../../../../../definitions/DeleteDeviceFromInventoryResponse";
+import DeleteDeviceFromInventoryRequest from "../../../../../definitions/DeleteDeviceFromInventoryRequest";
+import AddDeviceToInventoryResponse from "../../../../../definitions/AddDeviceToInventoryResponse";
+import AddDeviceToInventoryRequest from "../../../../../definitions/AddDeviceToInventoryRequest";
 import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../types.js";
+} from "../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;

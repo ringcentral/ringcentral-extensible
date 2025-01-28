@@ -1,10 +1,10 @@
-import ForwardCallPartyResponse from "../../../../../../../definitions/ForwardCallPartyResponse.js";
-import ForwardTarget from "../../../../../../../definitions/ForwardTarget.js";
+import ForwardCallPartyResponse from "../../../../../../../definitions/ForwardCallPartyResponse";
+import ForwardTarget from "../../../../../../../definitions/ForwardTarget";
 import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../../../types.js";
+} from "../../../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;

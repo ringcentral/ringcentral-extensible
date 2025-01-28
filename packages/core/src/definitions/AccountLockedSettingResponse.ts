@@ -1,5 +1,5 @@
-import ScheduleMeetingResponse from "./ScheduleMeetingResponse.js";
-import AccountLockSettingRecordResponse from "./AccountLockSettingRecordResponse.js";
+import ScheduleMeetingResponse from "./ScheduleMeetingResponse";
+import AccountLockSettingRecordResponse from "./AccountLockSettingRecordResponse";
 
 interface AccountLockedSettingResponse {
   /** */

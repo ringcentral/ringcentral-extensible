@@ -1,5 +1,5 @@
-import Accounts from "./Accounts/index.js";
-import { ParentInterface, RingCentralInterface } from "../../../../types.js";
+import Accounts from "./Accounts/index";
+import { ParentInterface, RingCentralInterface } from "../../../../types";
 
 class Index {
   public rc: RingCentralInterface;

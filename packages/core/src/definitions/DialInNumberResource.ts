@@ -1,4 +1,4 @@
-import MeetingsCountryResource from "./MeetingsCountryResource.js";
+import MeetingsCountryResource from "./MeetingsCountryResource";
 
 interface DialInNumberResource {
   /** */

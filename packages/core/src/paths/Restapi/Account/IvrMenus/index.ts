@@ -1,10 +1,10 @@
-import IVRMenuInfo from "../../../../definitions/IVRMenuInfo.js";
-import IVRMenuList from "../../../../definitions/IVRMenuList.js";
+import IVRMenuInfo from "../../../../definitions/IVRMenuInfo";
+import IVRMenuList from "../../../../definitions/IVRMenuList";
 import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../types.js";
+} from "../../../../types";
 
 class Index {
   public rc: RingCentralInterface;

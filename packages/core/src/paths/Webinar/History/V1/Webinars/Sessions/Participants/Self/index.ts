@@ -1,9 +1,9 @@
-import ParticipantReducedModel from "../../../../../../../../definitions/ParticipantReducedModel.js";
+import ParticipantReducedModel from "../../../../../../../../definitions/ParticipantReducedModel";
 import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../../../../types.js";
+} from "../../../../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;

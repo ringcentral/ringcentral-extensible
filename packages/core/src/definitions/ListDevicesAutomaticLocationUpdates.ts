@@ -1,6 +1,6 @@
-import AutomaticLocationUpdatesDeviceInfo from "./AutomaticLocationUpdatesDeviceInfo.js";
-import PageNavigationModel from "./PageNavigationModel.js";
-import EnumeratedPagingModel from "./EnumeratedPagingModel.js";
+import AutomaticLocationUpdatesDeviceInfo from "./AutomaticLocationUpdatesDeviceInfo";
+import PageNavigationModel from "./PageNavigationModel";
+import EnumeratedPagingModel from "./EnumeratedPagingModel";
 
 interface ListDevicesAutomaticLocationUpdates {
   /**

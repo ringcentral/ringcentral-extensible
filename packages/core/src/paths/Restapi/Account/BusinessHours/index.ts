@@ -1,10 +1,10 @@
-import CompanyBusinessHoursUpdateRequest from "../../../../definitions/CompanyBusinessHoursUpdateRequest.js";
-import CompanyBusinessHours from "../../../../definitions/CompanyBusinessHours.js";
+import CompanyBusinessHoursUpdateRequest from "../../../../definitions/CompanyBusinessHoursUpdateRequest";
+import CompanyBusinessHours from "../../../../definitions/CompanyBusinessHours";
 import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../types.js";
+} from "../../../../types";
 
 class Index {
   public rc: RingCentralInterface;

@@ -1,8 +1,8 @@
-import MeetingLinks from "./MeetingLinks.js";
-import MeetingScheduleResource from "./MeetingScheduleResource.js";
-import HostInfoRequest from "./HostInfoRequest.js";
-import RecurrenceInfo from "./RecurrenceInfo.js";
-import MeetingOccurrenceInfo from "./MeetingOccurrenceInfo.js";
+import MeetingLinks from "./MeetingLinks";
+import MeetingScheduleResource from "./MeetingScheduleResource";
+import HostInfoRequest from "./HostInfoRequest";
+import RecurrenceInfo from "./RecurrenceInfo";
+import MeetingOccurrenceInfo from "./MeetingOccurrenceInfo";
 
 interface MeetingResponseResource {
   /**

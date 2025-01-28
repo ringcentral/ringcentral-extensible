@@ -1,4 +1,4 @@
-import MessageStatusCounts from "./MessageStatusCounts.js";
+import MessageStatusCounts from "./MessageStatusCounts";
 
 /**
  * The messages status object with details of each status

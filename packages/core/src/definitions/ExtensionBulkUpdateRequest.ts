@@ -1,4 +1,4 @@
-import ExtensionBulkUpdateInfo from "./ExtensionBulkUpdateInfo.js";
+import ExtensionBulkUpdateInfo from "./ExtensionBulkUpdateInfo";
 
 /**
  * List of extensions to be updated

@@ -1,4 +1,4 @@
-import SwitchInfo from "./SwitchInfo.js";
+import SwitchInfo from "./SwitchInfo";
 
 interface ValidateMultipleSwitchesRequest {
   /** */

@@ -1,9 +1,9 @@
-import AutomaticLocationUpdatesTaskInfo from "../../../../../definitions/AutomaticLocationUpdatesTaskInfo.js";
+import AutomaticLocationUpdatesTaskInfo from "../../../../../definitions/AutomaticLocationUpdatesTaskInfo";
 import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../types.js";
+} from "../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;

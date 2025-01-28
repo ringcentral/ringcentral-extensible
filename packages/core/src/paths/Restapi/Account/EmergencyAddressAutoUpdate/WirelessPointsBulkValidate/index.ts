@@ -1,10 +1,10 @@
-import ValidateMultipleWirelessPointsResponse from "../../../../../definitions/ValidateMultipleWirelessPointsResponse.js";
-import ValidateMultipleWirelessPointsRequest from "../../../../../definitions/ValidateMultipleWirelessPointsRequest.js";
+import ValidateMultipleWirelessPointsResponse from "../../../../../definitions/ValidateMultipleWirelessPointsResponse";
+import ValidateMultipleWirelessPointsRequest from "../../../../../definitions/ValidateMultipleWirelessPointsRequest";
 import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../types.js";
+} from "../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;

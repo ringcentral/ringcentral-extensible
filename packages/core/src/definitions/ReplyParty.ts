@@ -1,7 +1,7 @@
-import CallStatusInfo from "./CallStatusInfo.js";
-import ParkInfo from "./ParkInfo.js";
-import PartyInfo from "./PartyInfo.js";
-import OwnerInfo from "./OwnerInfo.js";
+import CallStatusInfo from "./CallStatusInfo";
+import ParkInfo from "./ParkInfo";
+import PartyInfo from "./PartyInfo";
+import OwnerInfo from "./OwnerInfo";
 
 interface ReplyParty {
   /**

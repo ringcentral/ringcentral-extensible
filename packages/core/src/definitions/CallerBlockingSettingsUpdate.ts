@@ -1,4 +1,4 @@
-import BlockedCallerGreetingInfo from "./BlockedCallerGreetingInfo.js";
+import BlockedCallerGreetingInfo from "./BlockedCallerGreetingInfo";
 
 /**
  * Returns the lists of blocked and allowed phone numbers

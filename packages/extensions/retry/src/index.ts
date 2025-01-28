@@ -1,11 +1,11 @@
-import type RingCentral from "@rc-ex/core";
+import type RingCentral from "@rc-ex/core/index";
 import type {
   RestMethod,
   RestRequestConfig,
   RestResponse,
-} from "@rc-ex/core/lib/esm/types.js";
-import SdkExtension from "@rc-ex/core/lib/esm/SdkExtension.js";
-import RestException from "@rc-ex/core/lib/esm/RestException.js";
+} from "@rc-ex/core/types";
+import SdkExtension from "@rc-ex/core/SdkExtension";
+import RestException from "@rc-ex/core/RestException";
 import waitFor from "wait-for-async";
 
 export type ShouldRetry = (

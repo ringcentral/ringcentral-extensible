@@ -1,5 +1,5 @@
-import ApiError from "./ApiError.js";
-import SessionRefModel from "./SessionRefModel.js";
+import ApiError from "./ApiError";
+import SessionRefModel from "./SessionRefModel";
 
 interface RecordingItemExtendedModel {
   /**

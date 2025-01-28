@@ -1,4 +1,4 @@
-import ContactBusinessAddressInfo from "./ContactBusinessAddressInfo.js";
+import ContactBusinessAddressInfo from "./ContactBusinessAddressInfo";
 
 interface AccountBusinessAddressResource {
   /**

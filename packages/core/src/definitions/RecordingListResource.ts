@@ -1,5 +1,5 @@
-import RecordingItemModel from "./RecordingItemModel.js";
-import RcwPagingModel from "./RcwPagingModel.js";
+import RecordingItemModel from "./RecordingItemModel";
+import RcwPagingModel from "./RcwPagingModel";
 
 interface RecordingListResource {
   /**

@@ -1,5 +1,5 @@
-import MultichannelRecordings from "./MultichannelRecordings/index.js";
-import { ParentInterface, RingCentralInterface } from "../../../../../types.js";
+import MultichannelRecordings from "./MultichannelRecordings/index";
+import { ParentInterface, RingCentralInterface } from "../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;

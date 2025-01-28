@@ -1,5 +1,5 @@
-import AccountPhoneNumberInfo from "./AccountPhoneNumberInfo.js";
-import EnumeratedPagingModel from "./EnumeratedPagingModel.js";
+import AccountPhoneNumberInfo from "./AccountPhoneNumberInfo";
+import EnumeratedPagingModel from "./EnumeratedPagingModel";
 
 interface AccountPhoneNumberList {
   /**

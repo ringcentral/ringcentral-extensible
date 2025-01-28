@@ -1,4 +1,4 @@
-import UpdateWirelessPoint from "./UpdateWirelessPoint.js";
+import UpdateWirelessPoint from "./UpdateWirelessPoint";
 
 interface UpdateMultipleWirelessPointsRequest {
   /** */

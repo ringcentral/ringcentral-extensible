@@ -10,11 +10,9 @@
     "test"
   ],
   "scripts": {
-    "build:cjs": "lerna exec 'tsc --module CommonJS --target ES2022 --moduleResolution Node --outDir lib' --no-private",
-    "build:esm": "lerna exec 'tsc --module NodeNext --outDir lib/esm' --no-private",
-    "compile": "yarn build:cjs && yarn build:esm",
+    "compile": "lerna exec 'yarn build' --no-private",
     "prepublishOnly": "yarn reset && yarn compile",
-    "reset": "lerna exec 'rm -rf lib'",
+    "reset": "lerna exec 'rm -rf lib dist'",
     "test": "yarn workspace @rc-ex/test run vitest",
     "upgrade-all": "yarn-upgrade-all -W && yarn workspaces run yarn-upgrade-all && yarn install",
     "reinstall": "yarn lerna exec 'rm -rf node_modules' && rm -rf node_modules && yarn install"

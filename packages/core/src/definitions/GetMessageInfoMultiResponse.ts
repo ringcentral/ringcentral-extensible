@@ -1,4 +1,4 @@
-import GetMessageInfoResponse from "./GetMessageInfoResponse.js";
+import GetMessageInfoResponse from "./GetMessageInfoResponse";
 
 interface GetMessageInfoMultiResponse {
   /**

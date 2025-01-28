@@ -1,4 +1,4 @@
-import BulkTaskInfo from "./BulkTaskInfo.js";
+import BulkTaskInfo from "./BulkTaskInfo";
 
 /**
  * Information on a task for multiple switches creation

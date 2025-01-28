@@ -1,6 +1,6 @@
-import UtteranceInsightsObject from "./UtteranceInsightsObject.js";
-import SpeakerInsightsObject from "./SpeakerInsightsObject.js";
-import ConversationalInsightsUnit from "./ConversationalInsightsUnit.js";
+import UtteranceInsightsObject from "./UtteranceInsightsObject";
+import SpeakerInsightsObject from "./SpeakerInsightsObject";
+import ConversationalInsightsUnit from "./ConversationalInsightsUnit";
 
 interface InteractionApiResponseResponse {
   /** */

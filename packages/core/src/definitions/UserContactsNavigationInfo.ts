@@ -1,4 +1,4 @@
-import UserContactsNavigationInfoUri from "./UserContactsNavigationInfoUri.js";
+import UserContactsNavigationInfoUri from "./UserContactsNavigationInfoUri";
 
 /**
  * Information on navigation

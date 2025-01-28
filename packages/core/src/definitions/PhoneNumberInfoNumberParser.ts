@@ -1,4 +1,4 @@
-import GetCountryInfoNumberParser from "./GetCountryInfoNumberParser.js";
+import GetCountryInfoNumberParser from "./GetCountryInfoNumberParser";
 
 interface PhoneNumberInfoNumberParser {
   /**

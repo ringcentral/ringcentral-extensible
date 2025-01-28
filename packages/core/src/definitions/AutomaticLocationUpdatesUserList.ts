@@ -1,6 +1,6 @@
-import AutomaticLocationUpdatesUserInfo from "./AutomaticLocationUpdatesUserInfo.js";
-import PageNavigationModel from "./PageNavigationModel.js";
-import EnumeratedPagingModel from "./EnumeratedPagingModel.js";
+import AutomaticLocationUpdatesUserInfo from "./AutomaticLocationUpdatesUserInfo";
+import PageNavigationModel from "./PageNavigationModel";
+import EnumeratedPagingModel from "./EnumeratedPagingModel";
 
 interface AutomaticLocationUpdatesUserList {
   /**

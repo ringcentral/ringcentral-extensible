@@ -1,4 +1,4 @@
-import BulkAssignItem from "./BulkAssignItem.js";
+import BulkAssignItem from "./BulkAssignItem";
 
 /**
  * Please note that legacy 'Department' extension type corresponds to

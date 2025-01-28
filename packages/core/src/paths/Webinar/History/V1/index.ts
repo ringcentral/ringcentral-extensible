@@ -1,8 +1,8 @@
-import Recordings from "./Recordings/index.js";
-import Sessions from "./Sessions/index.js";
-import Webinars from "./Webinars/index.js";
-import Company from "./Company/index.js";
-import { ParentInterface, RingCentralInterface } from "../../../../types.js";
+import Recordings from "./Recordings/index";
+import Sessions from "./Sessions/index";
+import Webinars from "./Webinars/index";
+import Company from "./Company/index";
+import { ParentInterface, RingCentralInterface } from "../../../../types";
 
 class Index {
   public rc: RingCentralInterface;

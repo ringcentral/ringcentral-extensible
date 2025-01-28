@@ -1,11 +1,11 @@
-import Meeting from "../../../../../definitions/Meeting.js";
-import MeetingPage from "../../../../../definitions/MeetingPage.js";
-import ListVideoMeetingsParameters from "../../../../../definitions/ListVideoMeetingsParameters.js";
+import Meeting from "../../../../../definitions/Meeting";
+import MeetingPage from "../../../../../definitions/MeetingPage";
+import ListVideoMeetingsParameters from "../../../../../definitions/ListVideoMeetingsParameters";
 import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../types.js";
+} from "../../../../../types";
 
 class Index {
   public rc: RingCentralInterface;
