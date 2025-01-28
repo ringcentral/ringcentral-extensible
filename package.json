@@ -10,11 +10,11 @@
     "test"
   ],
   "scripts": {
-    "compile": "lerna exec 'yarn build' --no-private",
+    "compile": "lerna exec 'yarn build' --scope=@rc-ex/core && lerna exec 'yarn build' --no-private --ignore=@rc-ex/core",
     "reset": "lerna exec 'rm -rf lib dist'",
+    "prepublishOnly": "yarn reset && yarn compile && yarn test",
     "test": "yarn workspace @rc-ex/test run vitest",
-    "upgrade-all": "yarn-upgrade-all -W && yarn workspaces run yarn-upgrade-all && yarn install",
-    "reinstall": "yarn lerna exec 'rm -rf node_modules' && rm -rf node_modules && yarn install"
+    "upgrade-all": "yarn-upgrade-all -W && yarn workspaces run yarn-upgrade-all && yarn install"
   },
   "devDependencies": {
     "@types/node": "^22.10.10",
