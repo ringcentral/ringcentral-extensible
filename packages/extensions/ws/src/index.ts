@@ -13,7 +13,7 @@ import waitFor from "wait-for-async";
 import RestException from "@rc-ex/core/RestException";
 import type SubscriptionInfo from "@rc-ex/core/definitions/SubscriptionInfo";
 
-import { request } from "./rest";
+import { request } from "./rest.js";
 import type {
   ConnectionDetails,
   WebSocketExtensionInterface,
@@ -21,10 +21,10 @@ import type {
   Wsc,
   WsgEvent,
   WsToken,
-} from "./types";
-import Subscription from "./subscription";
-import ConnectionException from "./exceptions/ConnectionException";
-import Utils from "./utils";
+} from "./types.js";
+import Subscription from "./subscription.js";
+import ConnectionException from "./exceptions/ConnectionException.js";
+import Utils from "./utils.js";
 
 const CONNECTING = 0;
 const OPEN = 1;

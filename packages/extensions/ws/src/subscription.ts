@@ -3,8 +3,12 @@ import type SubscriptionInfo from "@rc-ex/core/definitions/SubscriptionInfo";
 import type { RestResponse } from "@rc-ex/core/types";
 import type { MessageEvent } from "ws";
 
-import type { WebSocketExtensionInterface, WsgEvent, WsgMeta } from "./types";
-import Utils from "./utils";
+import type {
+  WebSocketExtensionInterface,
+  WsgEvent,
+  WsgMeta,
+} from "./types.js";
+import Utils from "./utils.js";
 
 class Subscription {
   public subscriptionInfo?: SubscriptionInfo;

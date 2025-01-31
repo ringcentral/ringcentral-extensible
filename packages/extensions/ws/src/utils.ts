@@ -1,9 +1,9 @@
 import type { MessageEvent } from "isomorphic-ws";
 import type WS from "isomorphic-ws";
 
-import type { WsgEvent, WsgMeta } from "./types";
-import ClosedException from "./exceptions/ClosedException";
-import TimeoutException from "./exceptions/TimeoutException";
+import type { WsgEvent, WsgMeta } from "./types.js";
+import ClosedException from "./exceptions/ClosedException.js";
+import TimeoutException from "./exceptions/TimeoutException.js";
 
 class Utils {
   public static splitWsgData(wsgData: string): [WsgMeta, any] {
