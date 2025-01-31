@@ -1,4 +1,4 @@
-import BridgeJoinPstnPreferences from "./BridgeJoinPstnPreferences";
+import BridgeJoinPstnPreferences from "./BridgeJoinPstnPreferences.js";
 
 interface BridgeJoinPreferences {
   /**

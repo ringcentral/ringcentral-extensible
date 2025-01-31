@@ -1,4 +1,4 @@
-import ExtensionGrantListEventBody from "./ExtensionGrantListEventBody";
+import ExtensionGrantListEventBody from "./ExtensionGrantListEventBody.js";
 
 interface ExtensionGrantListEvent {
   /**

@@ -1,10 +1,10 @@
-import RecordingInsights from "../../../../../../../../../definitions/RecordingInsights";
-import GetRecordingInsightsParameters from "../../../../../../../../../definitions/GetRecordingInsightsParameters";
+import RecordingInsights from "../../../../../../../../../definitions/RecordingInsights.js";
+import GetRecordingInsightsParameters from "../../../../../../../../../definitions/GetRecordingInsightsParameters.js";
 import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../../../../../types";
+} from "../../../../../../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

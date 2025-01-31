@@ -1,9 +1,9 @@
-import AccountServiceInfo from "../../../../definitions/AccountServiceInfo";
+import AccountServiceInfo from "../../../../definitions/AccountServiceInfo.js";
 import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../types";
+} from "../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

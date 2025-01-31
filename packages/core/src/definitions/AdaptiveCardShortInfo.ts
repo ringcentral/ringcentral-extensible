@@ -1,4 +1,4 @@
-import AdaptiveCardCreator from "./AdaptiveCardCreator";
+import AdaptiveCardCreator from "./AdaptiveCardCreator.js";
 
 interface AdaptiveCardShortInfo {
   /**

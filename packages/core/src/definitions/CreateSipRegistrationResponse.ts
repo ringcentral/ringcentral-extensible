@@ -1,6 +1,6 @@
-import SipRegistrationDeviceInfo from "./SipRegistrationDeviceInfo";
-import SipInfoResponse from "./SipInfoResponse";
-import SipFlagsResponse from "./SipFlagsResponse";
+import SipRegistrationDeviceInfo from "./SipRegistrationDeviceInfo.js";
+import SipInfoResponse from "./SipInfoResponse.js";
+import SipFlagsResponse from "./SipFlagsResponse.js";
 
 interface CreateSipRegistrationResponse {
   /**

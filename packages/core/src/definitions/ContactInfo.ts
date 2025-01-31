@@ -1,5 +1,5 @@
-import ContactBusinessAddressInfo from "./ContactBusinessAddressInfo";
-import PronouncedNameInfo from "./PronouncedNameInfo";
+import ContactBusinessAddressInfo from "./ContactBusinessAddressInfo.js";
+import PronouncedNameInfo from "./PronouncedNameInfo.js";
 
 /**
  * Detailed contact information

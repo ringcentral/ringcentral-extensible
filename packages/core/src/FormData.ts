@@ -1,6 +1,6 @@
 import type { Stream } from "stream";
 
-import type { FormFile } from "./types";
+import type { FormFile } from "./types.js";
 
 async function stream2buffer(stream: Stream): Promise<Buffer> {
   return new Promise<Buffer>((resolve, reject) => {

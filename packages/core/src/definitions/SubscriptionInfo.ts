@@ -1,6 +1,6 @@
-import DisabledFilterInfo from "./DisabledFilterInfo";
-import NotificationDeliveryMode from "./NotificationDeliveryMode";
-import SubscriptionInfoBlacklistedData from "./SubscriptionInfoBlacklistedData";
+import DisabledFilterInfo from "./DisabledFilterInfo.js";
+import NotificationDeliveryMode from "./NotificationDeliveryMode.js";
+import SubscriptionInfoBlacklistedData from "./SubscriptionInfoBlacklistedData.js";
 
 interface SubscriptionInfo {
   /**

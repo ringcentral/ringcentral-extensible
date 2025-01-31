@@ -1,4 +1,4 @@
-import CallsByTypeBreakdown from "./CallsByTypeBreakdown";
+import CallsByTypeBreakdown from "./CallsByTypeBreakdown.js";
 
 /**
  * Data for calls with breakdown by type (Direct, FromQueue, ParkRetrieval, Transferred, Outbound, Overflow)

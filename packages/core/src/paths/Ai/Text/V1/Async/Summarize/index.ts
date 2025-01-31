@@ -1,11 +1,11 @@
-import CaiAsyncApiResponse from "../../../../../../definitions/CaiAsyncApiResponse";
-import CaiSummarizeParameters from "../../../../../../definitions/CaiSummarizeParameters";
-import SummaryInput from "../../../../../../definitions/SummaryInput";
+import CaiAsyncApiResponse from "../../../../../../definitions/CaiAsyncApiResponse.js";
+import CaiSummarizeParameters from "../../../../../../definitions/CaiSummarizeParameters.js";
+import SummaryInput from "../../../../../../definitions/SummaryInput.js";
 import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../../types";
+} from "../../../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

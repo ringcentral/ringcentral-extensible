@@ -1,6 +1,6 @@
-import ContactBusinessAddressInfo from "./ContactBusinessAddressInfo";
-import RegionalSettings from "./RegionalSettings";
-import OperatorInfo from "./OperatorInfo";
+import ContactBusinessAddressInfo from "./ContactBusinessAddressInfo.js";
+import RegionalSettings from "./RegionalSettings.js";
+import OperatorInfo from "./OperatorInfo.js";
 
 interface SiteUpdateRequest {
   /**

@@ -1,7 +1,7 @@
-import CountryInfoBasicModel from "./CountryInfoBasicModel";
-import ExtensionInfo from "./ExtensionInfo";
-import TemporaryNumberInfo from "./TemporaryNumberInfo";
-import ContactCenterProvider from "./ContactCenterProvider";
+import CountryInfoBasicModel from "./CountryInfoBasicModel.js";
+import ExtensionInfo from "./ExtensionInfo.js";
+import TemporaryNumberInfo from "./TemporaryNumberInfo.js";
+import ContactCenterProvider from "./ContactCenterProvider.js";
 
 interface CompanyPhoneNumberInfo {
   /**

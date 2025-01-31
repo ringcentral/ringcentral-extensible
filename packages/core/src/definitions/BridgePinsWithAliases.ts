@@ -1,4 +1,4 @@
-import BridgePstnPins from "./BridgePstnPins";
+import BridgePstnPins from "./BridgePstnPins.js";
 
 interface BridgePinsWithAliases {
   /** */

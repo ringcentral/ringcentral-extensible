@@ -1,14 +1,14 @@
-import Sessions from "./Sessions/index";
-import WebinarBaseModel from "../../../../../definitions/WebinarBaseModel";
-import WcsWebinarResource from "../../../../../definitions/WcsWebinarResource";
-import WebinarCreationRequest from "../../../../../definitions/WebinarCreationRequest";
-import WebinarListResource from "../../../../../definitions/WebinarListResource";
-import RcwConfigListWebinarsParameters from "../../../../../definitions/RcwConfigListWebinarsParameters";
+import Sessions from "./Sessions/index.js";
+import WebinarBaseModel from "../../../../../definitions/WebinarBaseModel.js";
+import WcsWebinarResource from "../../../../../definitions/WcsWebinarResource.js";
+import WebinarCreationRequest from "../../../../../definitions/WebinarCreationRequest.js";
+import WebinarListResource from "../../../../../definitions/WebinarListResource.js";
+import RcwConfigListWebinarsParameters from "../../../../../definitions/RcwConfigListWebinarsParameters.js";
 import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../types";
+} from "../../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

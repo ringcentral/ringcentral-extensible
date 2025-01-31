@@ -1,4 +1,4 @@
-import TaskResultRecord from "./TaskResultRecord";
+import TaskResultRecord from "./TaskResultRecord.js";
 
 /**
  * Task detailed result. Returned for failed and completed tasks

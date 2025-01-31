@@ -1,5 +1,5 @@
-import UpdateUnifiedPresenceGlip from "./UpdateUnifiedPresenceGlip";
-import UpdateUnifiedPresenceTelephony from "./UpdateUnifiedPresenceTelephony";
+import UpdateUnifiedPresenceGlip from "./UpdateUnifiedPresenceGlip.js";
+import UpdateUnifiedPresenceTelephony from "./UpdateUnifiedPresenceTelephony.js";
 
 interface UpdateUnifiedPresence {
   /** */

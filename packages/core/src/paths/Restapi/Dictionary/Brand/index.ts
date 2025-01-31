@@ -1,5 +1,5 @@
-import ContractedCountry from "./ContractedCountry/index";
-import { ParentInterface, RingCentralInterface } from "../../../../types";
+import ContractedCountry from "./ContractedCountry/index.js";
+import { ParentInterface, RingCentralInterface } from "../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

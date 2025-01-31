@@ -1,8 +1,8 @@
-import ServiceProviderConfig from "./ServiceProviderConfig/index";
-import ResourceTypes from "./ResourceTypes/index";
-import Schemas from "./Schemas/index";
-import Users from "./Users/index";
-import { RingCentralInterface } from "../../types";
+import ServiceProviderConfig from "./ServiceProviderConfig/index.js";
+import ResourceTypes from "./ResourceTypes/index.js";
+import Schemas from "./Schemas/index.js";
+import Users from "./Users/index.js";
+import { RingCentralInterface } from "../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

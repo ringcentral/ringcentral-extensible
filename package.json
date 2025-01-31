@@ -14,7 +14,8 @@
     "reset": "lerna exec 'rm -rf lib dist'",
     "prepublishOnly": "yarn reset && yarn compile && yarn test",
     "test": "yarn workspace @rc-ex/test run vitest",
-    "upgrade-all": "yarn-upgrade-all -W && yarn workspaces run yarn-upgrade-all && yarn install"
+    "upgrade-all": "yarn-upgrade-all -W && yarn workspaces run yarn-upgrade-all && yarn install",
+    "reinstall": "lerna exec 'rm -rf node_modules' && yarn install && lerna exec 'yarn install'"
   },
   "devDependencies": {
     "@types/node": "^22.10.10",

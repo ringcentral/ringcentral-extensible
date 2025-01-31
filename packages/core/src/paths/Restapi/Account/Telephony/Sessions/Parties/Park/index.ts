@@ -1,9 +1,9 @@
-import CallParty from "../../../../../../../definitions/CallParty";
+import CallParty from "../../../../../../../definitions/CallParty.js";
 import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../../../types";
+} from "../../../../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

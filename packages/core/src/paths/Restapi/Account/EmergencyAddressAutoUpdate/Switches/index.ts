@@ -1,13 +1,13 @@
-import UpdateSwitchInfo from "../../../../../definitions/UpdateSwitchInfo";
-import SwitchInfo from "../../../../../definitions/SwitchInfo";
-import CreateSwitchInfo from "../../../../../definitions/CreateSwitchInfo";
-import SwitchesList from "../../../../../definitions/SwitchesList";
-import ListAccountSwitchesParameters from "../../../../../definitions/ListAccountSwitchesParameters";
+import UpdateSwitchInfo from "../../../../../definitions/UpdateSwitchInfo.js";
+import SwitchInfo from "../../../../../definitions/SwitchInfo.js";
+import CreateSwitchInfo from "../../../../../definitions/CreateSwitchInfo.js";
+import SwitchesList from "../../../../../definitions/SwitchesList.js";
+import ListAccountSwitchesParameters from "../../../../../definitions/ListAccountSwitchesParameters.js";
 import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../types";
+} from "../../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

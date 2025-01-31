@@ -1,10 +1,10 @@
-import NotificationSettingsUpdateRequest from "../../../../../definitions/NotificationSettingsUpdateRequest";
-import NotificationSettings from "../../../../../definitions/NotificationSettings";
+import NotificationSettingsUpdateRequest from "../../../../../definitions/NotificationSettingsUpdateRequest.js";
+import NotificationSettings from "../../../../../definitions/NotificationSettings.js";
 import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../types";
+} from "../../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

@@ -1,8 +1,8 @@
-import ScimEmail from "./ScimEmail";
-import ScimName from "./ScimName";
-import ScimPhoto from "./ScimPhoto";
-import ScimEnterpriseUser from "./ScimEnterpriseUser";
-import ScimMeta from "./ScimMeta";
+import ScimEmail from "./ScimEmail.js";
+import ScimName from "./ScimName.js";
+import ScimPhoto from "./ScimPhoto.js";
+import ScimEnterpriseUser from "./ScimEnterpriseUser.js";
+import ScimMeta from "./ScimMeta.js";
 
 interface ScimUserShortInfo {
   /**

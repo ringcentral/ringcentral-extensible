@@ -1,4 +1,4 @@
-import CallSegmentLengthFilter from "./CallSegmentLengthFilter";
+import CallSegmentLengthFilter from "./CallSegmentLengthFilter.js";
 
 interface CallSegmentFilter {
   /**

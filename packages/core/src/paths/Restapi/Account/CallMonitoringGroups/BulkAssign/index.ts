@@ -1,9 +1,9 @@
-import CallMonitoringBulkAssign from "../../../../../definitions/CallMonitoringBulkAssign";
+import CallMonitoringBulkAssign from "../../../../../definitions/CallMonitoringBulkAssign.js";
 import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../types";
+} from "../../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

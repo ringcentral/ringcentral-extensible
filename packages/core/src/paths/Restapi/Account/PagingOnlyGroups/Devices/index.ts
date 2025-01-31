@@ -1,10 +1,10 @@
-import PagingOnlyGroupDevices from "../../../../../definitions/PagingOnlyGroupDevices";
-import ListPagingGroupDevicesParameters from "../../../../../definitions/ListPagingGroupDevicesParameters";
+import PagingOnlyGroupDevices from "../../../../../definitions/PagingOnlyGroupDevices.js";
+import ListPagingGroupDevicesParameters from "../../../../../definitions/ListPagingGroupDevicesParameters.js";
 import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../types";
+} from "../../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

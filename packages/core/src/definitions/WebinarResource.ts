@@ -1,5 +1,5 @@
-import WebinarSettingsModel from "./WebinarSettingsModel";
-import HostModel from "./HostModel";
+import WebinarSettingsModel from "./WebinarSettingsModel.js";
+import HostModel from "./HostModel.js";
 
 interface WebinarResource {
   /**

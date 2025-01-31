@@ -1,5 +1,5 @@
-import Jobs from "./Jobs/index";
-import { ParentInterface, RingCentralInterface } from "../../../../types";
+import Jobs from "./Jobs/index.js";
+import { ParentInterface, RingCentralInterface } from "../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

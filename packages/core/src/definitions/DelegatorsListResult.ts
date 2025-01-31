@@ -1,4 +1,4 @@
-import Delegate from "./Delegate";
+import Delegate from "./Delegate.js";
 
 interface DelegatorsListResult {
   /** */

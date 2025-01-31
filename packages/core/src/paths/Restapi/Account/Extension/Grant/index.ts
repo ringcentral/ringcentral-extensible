@@ -1,10 +1,10 @@
-import GetExtensionGrantListResponse from "../../../../../definitions/GetExtensionGrantListResponse";
-import ListExtensionGrantsParameters from "../../../../../definitions/ListExtensionGrantsParameters";
+import GetExtensionGrantListResponse from "../../../../../definitions/GetExtensionGrantListResponse.js";
+import ListExtensionGrantsParameters from "../../../../../definitions/ListExtensionGrantsParameters.js";
 import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../types";
+} from "../../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

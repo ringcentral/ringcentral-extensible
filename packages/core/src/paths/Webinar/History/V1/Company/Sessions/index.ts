@@ -1,10 +1,10 @@
-import SessionGlobalListResource from "../../../../../../definitions/SessionGlobalListResource";
-import RcwHistoryListAllCompanySessionsParameters from "../../../../../../definitions/RcwHistoryListAllCompanySessionsParameters";
+import SessionGlobalListResource from "../../../../../../definitions/SessionGlobalListResource.js";
+import RcwHistoryListAllCompanySessionsParameters from "../../../../../../definitions/RcwHistoryListAllCompanySessionsParameters.js";
 import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../../types";
+} from "../../../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

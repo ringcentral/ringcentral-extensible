@@ -1,11 +1,11 @@
-import DirectoryResource from "../../../../../../definitions/DirectoryResource";
-import SearchDirectoryEntriesParameters from "../../../../../../definitions/SearchDirectoryEntriesParameters";
-import SearchDirectoryEntriesRequest from "../../../../../../definitions/SearchDirectoryEntriesRequest";
+import DirectoryResource from "../../../../../../definitions/DirectoryResource.js";
+import SearchDirectoryEntriesParameters from "../../../../../../definitions/SearchDirectoryEntriesParameters.js";
+import SearchDirectoryEntriesRequest from "../../../../../../definitions/SearchDirectoryEntriesRequest.js";
 import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../../types";
+} from "../../../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

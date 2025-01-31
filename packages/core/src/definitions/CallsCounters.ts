@@ -1,14 +1,14 @@
-import AllCalls from "./AllCalls";
-import CallsByDirection from "./CallsByDirection";
-import CallsByOrigin from "./CallsByOrigin";
-import CallsByResponse from "./CallsByResponse";
-import CallsBySegments from "./CallsBySegments";
-import CallsByResult from "./CallsByResult";
-import CallsByActions from "./CallsByActions";
-import CallsByCompanyHours from "./CallsByCompanyHours";
-import CallsByQueueSla from "./CallsByQueueSla";
-import CallsByType from "./CallsByType";
-import QueueOpportunities from "./QueueOpportunities";
+import AllCalls from "./AllCalls.js";
+import CallsByDirection from "./CallsByDirection.js";
+import CallsByOrigin from "./CallsByOrigin.js";
+import CallsByResponse from "./CallsByResponse.js";
+import CallsBySegments from "./CallsBySegments.js";
+import CallsByResult from "./CallsByResult.js";
+import CallsByActions from "./CallsByActions.js";
+import CallsByCompanyHours from "./CallsByCompanyHours.js";
+import CallsByQueueSla from "./CallsByQueueSla.js";
+import CallsByType from "./CallsByType.js";
+import QueueOpportunities from "./QueueOpportunities.js";
 
 /**
  * Call volume data for the specified grouping

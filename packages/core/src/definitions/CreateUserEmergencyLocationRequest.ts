@@ -1,4 +1,4 @@
-import CommonEmergencyLocationAddressInfo from "./CommonEmergencyLocationAddressInfo";
+import CommonEmergencyLocationAddressInfo from "./CommonEmergencyLocationAddressInfo.js";
 
 interface CreateUserEmergencyLocationRequest {
   /**

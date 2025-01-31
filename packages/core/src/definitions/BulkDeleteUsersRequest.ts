@@ -1,4 +1,4 @@
-import BulkOperationExtensionReference from "./BulkOperationExtensionReference";
+import BulkOperationExtensionReference from "./BulkOperationExtensionReference.js";
 
 interface BulkDeleteUsersRequest {
   /**

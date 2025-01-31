@@ -1,4 +1,4 @@
-import MessageCreateRequest from "./MessageCreateRequest";
+import MessageCreateRequest from "./MessageCreateRequest.js";
 
 /**
  * Batch of A2P SMS messages. This object provides specification to

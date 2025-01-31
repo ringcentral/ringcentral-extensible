@@ -1,4 +1,4 @@
-import GlipDataExportNavigationInfoUri from "./GlipDataExportNavigationInfoUri";
+import GlipDataExportNavigationInfoUri from "./GlipDataExportNavigationInfoUri.js";
 
 interface GlipDataExportNavigationInfo {
   /** */

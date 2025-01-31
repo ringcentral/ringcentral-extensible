@@ -1,11 +1,11 @@
-import DictionaryGreetingInfo from "../../../../definitions/DictionaryGreetingInfo";
-import DictionaryGreetingList from "../../../../definitions/DictionaryGreetingList";
-import ListStandardGreetingsParameters from "../../../../definitions/ListStandardGreetingsParameters";
+import DictionaryGreetingInfo from "../../../../definitions/DictionaryGreetingInfo.js";
+import DictionaryGreetingList from "../../../../definitions/DictionaryGreetingList.js";
+import ListStandardGreetingsParameters from "../../../../definitions/ListStandardGreetingsParameters.js";
 import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../types";
+} from "../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

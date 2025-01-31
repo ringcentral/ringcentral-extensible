@@ -1,11 +1,11 @@
-import BulkAdd from "./BulkAdd/index";
-import RemoveLineResponse from "../../../../../definitions/RemoveLineResponse";
-import RemoveLineRequest from "../../../../../definitions/RemoveLineRequest";
+import BulkAdd from "./BulkAdd/index.js";
+import RemoveLineResponse from "../../../../../definitions/RemoveLineResponse.js";
+import RemoveLineRequest from "../../../../../definitions/RemoveLineRequest.js";
 import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../types";
+} from "../../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

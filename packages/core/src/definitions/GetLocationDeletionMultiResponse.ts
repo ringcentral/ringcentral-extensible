@@ -1,4 +1,4 @@
-import LocationDeletionInfo from "./LocationDeletionInfo";
+import LocationDeletionInfo from "./LocationDeletionInfo.js";
 
 interface GetLocationDeletionMultiResponse {
   /** */

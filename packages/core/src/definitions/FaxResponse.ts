@@ -1,6 +1,6 @@
-import MessageStoreCallerInfoResponseFrom from "./MessageStoreCallerInfoResponseFrom";
-import FaxResponseTo from "./FaxResponseTo";
-import MessageAttachmentInfoIntId from "./MessageAttachmentInfoIntId";
+import MessageStoreCallerInfoResponseFrom from "./MessageStoreCallerInfoResponseFrom.js";
+import FaxResponseTo from "./FaxResponseTo.js";
+import MessageAttachmentInfoIntId from "./MessageAttachmentInfoIntId.js";
 
 interface FaxResponse {
   /**

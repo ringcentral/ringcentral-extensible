@@ -1,5 +1,5 @@
-import WeeklyScheduleInfo from "./WeeklyScheduleInfo";
-import RangesInfo from "./RangesInfo";
+import WeeklyScheduleInfo from "./WeeklyScheduleInfo.js";
+import RangesInfo from "./RangesInfo.js";
 
 /**
  * Schedule when an answering rule should be applied

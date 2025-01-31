@@ -1,4 +1,4 @@
-import CallerIdPhoneInfoRequest from "./CallerIdPhoneInfoRequest";
+import CallerIdPhoneInfoRequest from "./CallerIdPhoneInfoRequest.js";
 
 interface CallerIdByFeatureInfoRequest {
   /**

@@ -1,4 +1,4 @@
-import CustomFieldModel from "./CustomFieldModel";
+import CustomFieldModel from "./CustomFieldModel.js";
 
 interface CustomFieldList {
   /** */

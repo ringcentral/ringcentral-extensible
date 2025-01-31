@@ -1,4 +1,4 @@
-import FavoriteContactResource from "./FavoriteContactResource";
+import FavoriteContactResource from "./FavoriteContactResource.js";
 
 interface FavoriteContactList {
   /**

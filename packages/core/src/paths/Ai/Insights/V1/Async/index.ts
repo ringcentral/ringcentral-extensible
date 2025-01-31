@@ -1,5 +1,5 @@
-import AnalyzeInteraction from "./AnalyzeInteraction/index";
-import { ParentInterface, RingCentralInterface } from "../../../../../types";
+import AnalyzeInteraction from "./AnalyzeInteraction/index.js";
+import { ParentInterface, RingCentralInterface } from "../../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

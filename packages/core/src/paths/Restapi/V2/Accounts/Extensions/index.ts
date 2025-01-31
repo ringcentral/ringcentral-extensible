@@ -1,12 +1,12 @@
-import CallFlipNumbers from "./CallFlipNumbers/index";
-import Devices from "./Devices/index";
-import BulkDeleteUsersResponse from "../../../../../definitions/BulkDeleteUsersResponse";
-import BulkDeleteUsersRequest from "../../../../../definitions/BulkDeleteUsersRequest";
+import CallFlipNumbers from "./CallFlipNumbers/index.js";
+import Devices from "./Devices/index.js";
+import BulkDeleteUsersResponse from "../../../../../definitions/BulkDeleteUsersResponse.js";
+import BulkDeleteUsersRequest from "../../../../../definitions/BulkDeleteUsersRequest.js";
 import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../types";
+} from "../../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

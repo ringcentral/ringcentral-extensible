@@ -1,9 +1,9 @@
-import SendWelcomeEmailV2Request from "../../../../../definitions/SendWelcomeEmailV2Request";
+import SendWelcomeEmailV2Request from "../../../../../definitions/SendWelcomeEmailV2Request.js";
 import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../types";
+} from "../../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

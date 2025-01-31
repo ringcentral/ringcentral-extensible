@@ -1,10 +1,10 @@
-import BusinessSiteCollectionRequest from "../../../../../definitions/BusinessSiteCollectionRequest";
-import BusinessSiteCollectionResource from "../../../../../definitions/BusinessSiteCollectionResource";
+import BusinessSiteCollectionRequest from "../../../../../definitions/BusinessSiteCollectionRequest.js";
+import BusinessSiteCollectionResource from "../../../../../definitions/BusinessSiteCollectionResource.js";
 import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../types";
+} from "../../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

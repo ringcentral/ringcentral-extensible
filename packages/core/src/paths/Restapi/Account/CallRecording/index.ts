@@ -1,12 +1,12 @@
-import CustomGreetings from "./CustomGreetings/index";
-import BulkAssign from "./BulkAssign/index";
-import Extensions from "./Extensions/index";
-import CallRecordingSettingsResource from "../../../../definitions/CallRecordingSettingsResource";
+import CustomGreetings from "./CustomGreetings/index.js";
+import BulkAssign from "./BulkAssign/index.js";
+import Extensions from "./Extensions/index.js";
+import CallRecordingSettingsResource from "../../../../definitions/CallRecordingSettingsResource.js";
 import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../types";
+} from "../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

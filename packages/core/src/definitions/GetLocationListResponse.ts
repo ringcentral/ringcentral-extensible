@@ -1,6 +1,6 @@
-import LocationInfo from "./LocationInfo";
-import PageNavigationModel from "./PageNavigationModel";
-import EnumeratedPagingModel from "./EnumeratedPagingModel";
+import LocationInfo from "./LocationInfo.js";
+import PageNavigationModel from "./PageNavigationModel.js";
+import EnumeratedPagingModel from "./EnumeratedPagingModel.js";
 
 interface GetLocationListResponse {
   /**

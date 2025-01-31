@@ -1,5 +1,5 @@
-import TMPostInfo from "./TMPostInfo";
-import TMNavigationInfo from "./TMNavigationInfo";
+import TMPostInfo from "./TMPostInfo.js";
+import TMNavigationInfo from "./TMNavigationInfo.js";
 
 interface TMPostsList {
   /**

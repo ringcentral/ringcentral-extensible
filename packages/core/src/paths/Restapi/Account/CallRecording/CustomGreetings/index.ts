@@ -1,10 +1,10 @@
-import CallRecordingCustomGreetings from "../../../../../definitions/CallRecordingCustomGreetings";
-import ListCallRecordingCustomGreetingsParameters from "../../../../../definitions/ListCallRecordingCustomGreetingsParameters";
+import CallRecordingCustomGreetings from "../../../../../definitions/CallRecordingCustomGreetings.js";
+import ListCallRecordingCustomGreetingsParameters from "../../../../../definitions/ListCallRecordingCustomGreetingsParameters.js";
 import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../types";
+} from "../../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

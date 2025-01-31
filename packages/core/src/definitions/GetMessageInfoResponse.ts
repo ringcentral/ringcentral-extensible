@@ -1,8 +1,8 @@
-import MessageAttachmentInfo from "./MessageAttachmentInfo";
-import ConversationInfo from "./ConversationInfo";
-import MessageStoreCallerInfoResponseFrom from "./MessageStoreCallerInfoResponseFrom";
-import MessageStoreCallerInfoResponseTo from "./MessageStoreCallerInfoResponseTo";
-import VoicemailOwnerResource from "./VoicemailOwnerResource";
+import MessageAttachmentInfo from "./MessageAttachmentInfo.js";
+import ConversationInfo from "./ConversationInfo.js";
+import MessageStoreCallerInfoResponseFrom from "./MessageStoreCallerInfoResponseFrom.js";
+import MessageStoreCallerInfoResponseTo from "./MessageStoreCallerInfoResponseTo.js";
+import VoicemailOwnerResource from "./VoicemailOwnerResource.js";
 
 interface GetMessageInfoResponse {
   /**

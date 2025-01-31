@@ -1,6 +1,6 @@
-import ExtensionWithRolesResource from "./ExtensionWithRolesResource";
-import EnumeratedPagingModel from "./EnumeratedPagingModel";
-import PageNavigationModel from "./PageNavigationModel";
+import ExtensionWithRolesResource from "./ExtensionWithRolesResource.js";
+import EnumeratedPagingModel from "./EnumeratedPagingModel.js";
+import PageNavigationModel from "./PageNavigationModel.js";
 
 interface ExtensionWithRolesCollectionResource {
   /**

@@ -1,4 +1,4 @@
-import SummaryUnit from "./SummaryUnit";
+import SummaryUnit from "./SummaryUnit.js";
 
 interface SummaryInput {
   /**

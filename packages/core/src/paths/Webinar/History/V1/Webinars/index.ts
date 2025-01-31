@@ -1,10 +1,10 @@
-import Sessions from "./Sessions/index";
-import WebinarResource from "../../../../../definitions/WebinarResource";
+import Sessions from "./Sessions/index.js";
+import WebinarResource from "../../../../../definitions/WebinarResource.js";
 import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../types";
+} from "../../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

@@ -1,5 +1,5 @@
-import TimelineResponseOptionsCounters from "./TimelineResponseOptionsCounters";
-import TimelineResponseOptionsTimers from "./TimelineResponseOptionsTimers";
+import TimelineResponseOptionsCounters from "./TimelineResponseOptionsCounters.js";
+import TimelineResponseOptionsTimers from "./TimelineResponseOptionsTimers.js";
 
 /**
  * Counters and timers options for calls breakdown

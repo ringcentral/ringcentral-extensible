@@ -1,11 +1,11 @@
-import CountryListDictionaryModel from "../../../../../definitions/CountryListDictionaryModel";
-import ListDomesticCountriesParameters from "../../../../../definitions/ListDomesticCountriesParameters";
-import ContractedCountryListResponse from "../../../../../definitions/ContractedCountryListResponse";
+import CountryListDictionaryModel from "../../../../../definitions/CountryListDictionaryModel.js";
+import ListDomesticCountriesParameters from "../../../../../definitions/ListDomesticCountriesParameters.js";
+import ContractedCountryListResponse from "../../../../../definitions/ContractedCountryListResponse.js";
 import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../types";
+} from "../../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

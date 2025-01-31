@@ -1,5 +1,5 @@
-import PhoneNumberCountryInfo from "./PhoneNumberCountryInfo";
-import DeviceProvisioningExtensionInfo from "./DeviceProvisioningExtensionInfo";
+import PhoneNumberCountryInfo from "./PhoneNumberCountryInfo.js";
+import DeviceProvisioningExtensionInfo from "./DeviceProvisioningExtensionInfo.js";
 
 /**
  * Phone number information

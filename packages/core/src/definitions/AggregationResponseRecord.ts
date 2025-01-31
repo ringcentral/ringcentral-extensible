@@ -1,6 +1,6 @@
-import KeyInfo from "./KeyInfo";
-import CallsTimers from "./CallsTimers";
-import CallsCounters from "./CallsCounters";
+import KeyInfo from "./KeyInfo.js";
+import CallsTimers from "./CallsTimers.js";
+import CallsCounters from "./CallsCounters.js";
 
 interface AggregationResponseRecord {
   /**

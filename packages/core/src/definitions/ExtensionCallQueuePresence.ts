@@ -1,4 +1,4 @@
-import PresenceCallQueueInfo from "./PresenceCallQueueInfo";
+import PresenceCallQueueInfo from "./PresenceCallQueueInfo.js";
 
 interface ExtensionCallQueuePresence {
   /** */

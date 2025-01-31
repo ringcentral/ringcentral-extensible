@@ -1,6 +1,6 @@
-import MessageStoreCallerInfoRequest from "./MessageStoreCallerInfoRequest";
-import SmsRequestCountryInfo from "./SmsRequestCountryInfo";
-import Attachment from "./Attachment";
+import MessageStoreCallerInfoRequest from "./MessageStoreCallerInfoRequest.js";
+import SmsRequestCountryInfo from "./SmsRequestCountryInfo.js";
+import Attachment from "./Attachment.js";
 
 interface CreateMMSMessage {
   /**

@@ -1,4 +1,4 @@
-import CallMonitoringGroupSite from "./CallMonitoringGroupSite";
+import CallMonitoringGroupSite from "./CallMonitoringGroupSite.js";
 
 interface CallMonitoringGroup {
   /**

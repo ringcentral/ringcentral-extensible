@@ -1,5 +1,5 @@
 import type { AxiosRequestConfig, AxiosResponse, Method } from "axios";
-import type TokenInfo from "./definitions/TokenInfo";
+import type TokenInfo from "./definitions/TokenInfo.js";
 
 export interface RingCentralInterface {
   get: <T>(

@@ -1,4 +1,4 @@
-import MessageTemplateResponse from "./MessageTemplateResponse";
+import MessageTemplateResponse from "./MessageTemplateResponse.js";
 
 interface MessageTemplatesListResponse {
   /**

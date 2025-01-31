@@ -1,6 +1,6 @@
-import PermissionCategoryResource from "./PermissionCategoryResource";
-import EnumeratedPagingModel from "./EnumeratedPagingModel";
-import PageNavigationModel from "./PageNavigationModel";
+import PermissionCategoryResource from "./PermissionCategoryResource.js";
+import EnumeratedPagingModel from "./EnumeratedPagingModel.js";
+import PageNavigationModel from "./PageNavigationModel.js";
 
 interface PermissionCategoryCollectionResource {
   /**

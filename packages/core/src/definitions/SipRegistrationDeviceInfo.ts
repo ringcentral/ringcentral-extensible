@@ -1,10 +1,10 @@
-import DeviceModelInfo from "./DeviceModelInfo";
-import DeviceExtensionInfo from "./DeviceExtensionInfo";
-import DeviceEmergencyServiceAddressResourceDefault from "./DeviceEmergencyServiceAddressResourceDefault";
-import SipRegistrationDeviceEmergencyInfo from "./SipRegistrationDeviceEmergencyInfo";
-import ShippingInfo from "./ShippingInfo";
-import DevicePhoneLinesInfo from "./DevicePhoneLinesInfo";
-import DeviceSiteInfo from "./DeviceSiteInfo";
+import DeviceModelInfo from "./DeviceModelInfo.js";
+import DeviceExtensionInfo from "./DeviceExtensionInfo.js";
+import DeviceEmergencyServiceAddressResourceDefault from "./DeviceEmergencyServiceAddressResourceDefault.js";
+import SipRegistrationDeviceEmergencyInfo from "./SipRegistrationDeviceEmergencyInfo.js";
+import ShippingInfo from "./ShippingInfo.js";
+import DevicePhoneLinesInfo from "./DevicePhoneLinesInfo.js";
+import DeviceSiteInfo from "./DeviceSiteInfo.js";
 
 interface SipRegistrationDeviceInfo {
   /**

@@ -1,5 +1,5 @@
-import CompanyAnsweringRuleWeeklyScheduleInfoRequest from "./CompanyAnsweringRuleWeeklyScheduleInfoRequest";
-import RangesInfo from "./RangesInfo";
+import CompanyAnsweringRuleWeeklyScheduleInfoRequest from "./CompanyAnsweringRuleWeeklyScheduleInfoRequest.js";
+import RangesInfo from "./RangesInfo.js";
 
 /**
  * Schedule when an answering rule should be applied

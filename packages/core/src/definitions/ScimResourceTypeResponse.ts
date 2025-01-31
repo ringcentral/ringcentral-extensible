@@ -1,5 +1,5 @@
-import ScimSchemaExtension from "./ScimSchemaExtension";
-import ScimMeta from "./ScimMeta";
+import ScimSchemaExtension from "./ScimSchemaExtension.js";
+import ScimMeta from "./ScimMeta.js";
 
 interface ScimResourceTypeResponse {
   /**

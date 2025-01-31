@@ -1,10 +1,10 @@
-import AdaptiveCardShortInfo from "../../../../../definitions/AdaptiveCardShortInfo";
-import AdaptiveCardRequest from "../../../../../definitions/AdaptiveCardRequest";
+import AdaptiveCardShortInfo from "../../../../../definitions/AdaptiveCardShortInfo.js";
+import AdaptiveCardRequest from "../../../../../definitions/AdaptiveCardRequest.js";
 import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../types";
+} from "../../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

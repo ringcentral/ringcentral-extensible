@@ -1,5 +1,5 @@
-import CallLogRecord from "./CallLogRecord";
-import CallLogSyncInfo from "./CallLogSyncInfo";
+import CallLogRecord from "./CallLogRecord.js";
+import CallLogSyncInfo from "./CallLogSyncInfo.js";
 
 interface CallLogSyncResponse {
   /**

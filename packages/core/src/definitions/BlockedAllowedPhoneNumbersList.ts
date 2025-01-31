@@ -1,6 +1,6 @@
-import BlockedAllowedPhoneNumberInfo from "./BlockedAllowedPhoneNumberInfo";
-import PageNavigationModel from "./PageNavigationModel";
-import EnumeratedPagingModel from "./EnumeratedPagingModel";
+import BlockedAllowedPhoneNumberInfo from "./BlockedAllowedPhoneNumberInfo.js";
+import PageNavigationModel from "./PageNavigationModel.js";
+import EnumeratedPagingModel from "./EnumeratedPagingModel.js";
 
 /**
  * List of blocked or allowed phone numbers

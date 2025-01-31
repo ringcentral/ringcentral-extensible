@@ -1,5 +1,5 @@
-import RegistrantModelWithQuestionnaire from "./RegistrantModelWithQuestionnaire";
-import RcwPagingForwardModel from "./RcwPagingForwardModel";
+import RegistrantModelWithQuestionnaire from "./RegistrantModelWithQuestionnaire.js";
+import RcwPagingForwardModel from "./RcwPagingForwardModel.js";
 
 interface RegistrantListResource {
   /**

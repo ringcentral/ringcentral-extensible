@@ -1,4 +1,4 @@
-import ActionCardBody from "./ActionCardBody";
+import ActionCardBody from "./ActionCardBody.js";
 
 interface ActionAdaptiveCardInfo {
   /** */

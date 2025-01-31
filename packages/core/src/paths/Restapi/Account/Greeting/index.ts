@@ -1,12 +1,12 @@
-import Content from "./Content/index";
-import Utils from "../../../../Utils";
-import CustomCompanyGreetingInfo from "../../../../definitions/CustomCompanyGreetingInfo";
-import CreateCompanyGreetingRequest from "../../../../definitions/CreateCompanyGreetingRequest";
+import Content from "./Content/index.js";
+import Utils from "../../../../Utils.js";
+import CustomCompanyGreetingInfo from "../../../../definitions/CustomCompanyGreetingInfo.js";
+import CreateCompanyGreetingRequest from "../../../../definitions/CreateCompanyGreetingRequest.js";
 import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../types";
+} from "../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

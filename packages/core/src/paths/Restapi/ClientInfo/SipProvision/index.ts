@@ -1,10 +1,10 @@
-import CreateSipRegistrationResponse from "../../../../definitions/CreateSipRegistrationResponse";
-import CreateSipRegistrationRequest from "../../../../definitions/CreateSipRegistrationRequest";
+import CreateSipRegistrationResponse from "../../../../definitions/CreateSipRegistrationResponse.js";
+import CreateSipRegistrationRequest from "../../../../definitions/CreateSipRegistrationRequest.js";
 import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../types";
+} from "../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

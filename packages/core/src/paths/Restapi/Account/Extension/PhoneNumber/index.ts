@@ -1,10 +1,10 @@
-import GetExtensionPhoneNumbersResponse from "../../../../../definitions/GetExtensionPhoneNumbersResponse";
-import ListExtensionPhoneNumbersParameters from "../../../../../definitions/ListExtensionPhoneNumbersParameters";
+import GetExtensionPhoneNumbersResponse from "../../../../../definitions/GetExtensionPhoneNumbersResponse.js";
+import ListExtensionPhoneNumbersParameters from "../../../../../definitions/ListExtensionPhoneNumbersParameters.js";
 import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../types";
+} from "../../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

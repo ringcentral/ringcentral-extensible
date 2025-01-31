@@ -1,11 +1,11 @@
-import Tasks from "./Tasks/index";
-import ExtensionBulkUpdateTaskResource from "../../../../definitions/ExtensionBulkUpdateTaskResource";
-import ExtensionBulkUpdateRequest from "../../../../definitions/ExtensionBulkUpdateRequest";
+import Tasks from "./Tasks/index.js";
+import ExtensionBulkUpdateTaskResource from "../../../../definitions/ExtensionBulkUpdateTaskResource.js";
+import ExtensionBulkUpdateRequest from "../../../../definitions/ExtensionBulkUpdateRequest.js";
 import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../types";
+} from "../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

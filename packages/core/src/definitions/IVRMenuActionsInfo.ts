@@ -1,4 +1,4 @@
-import IVRMenuExtensionInfo from "./IVRMenuExtensionInfo";
+import IVRMenuExtensionInfo from "./IVRMenuExtensionInfo.js";
 
 interface IVRMenuActionsInfo {
   /**

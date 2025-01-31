@@ -1,17 +1,17 @@
-import AdaptiveCards from "./AdaptiveCards/index";
-import Unfavorite from "./Unfavorite/index";
-import Favorite from "./Favorite/index";
-import Notes from "./Notes/index";
-import Tasks from "./Tasks/index";
-import Posts from "./Posts/index";
-import TMChatInfo from "../../../../definitions/TMChatInfo";
-import TMChatList from "../../../../definitions/TMChatList";
-import ListGlipChatsNewParameters from "../../../../definitions/ListGlipChatsNewParameters";
+import AdaptiveCards from "./AdaptiveCards/index.js";
+import Unfavorite from "./Unfavorite/index.js";
+import Favorite from "./Favorite/index.js";
+import Notes from "./Notes/index.js";
+import Tasks from "./Tasks/index.js";
+import Posts from "./Posts/index.js";
+import TMChatInfo from "../../../../definitions/TMChatInfo.js";
+import TMChatList from "../../../../definitions/TMChatList.js";
+import ListGlipChatsNewParameters from "../../../../definitions/ListGlipChatsNewParameters.js";
 import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../types";
+} from "../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

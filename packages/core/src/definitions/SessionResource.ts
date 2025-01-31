@@ -1,5 +1,5 @@
-import RecordingExtendedModel from "./RecordingExtendedModel";
-import SessionLivestreamMinimalModel from "./SessionLivestreamMinimalModel";
+import RecordingExtendedModel from "./RecordingExtendedModel.js";
+import SessionLivestreamMinimalModel from "./SessionLivestreamMinimalModel.js";
 
 interface SessionResource {
   /**

@@ -1,9 +1,9 @@
-import IgnoreRequestBody from "../../../../../../../definitions/IgnoreRequestBody";
+import IgnoreRequestBody from "../../../../../../../definitions/IgnoreRequestBody.js";
 import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../../../types";
+} from "../../../../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

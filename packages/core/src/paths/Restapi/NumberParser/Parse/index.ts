@@ -1,11 +1,11 @@
-import ParsePhoneNumberResponse from "../../../../definitions/ParsePhoneNumberResponse";
-import ParsePhoneNumberParameters from "../../../../definitions/ParsePhoneNumberParameters";
-import ParsePhoneNumberRequest from "../../../../definitions/ParsePhoneNumberRequest";
+import ParsePhoneNumberResponse from "../../../../definitions/ParsePhoneNumberResponse.js";
+import ParsePhoneNumberParameters from "../../../../definitions/ParsePhoneNumberParameters.js";
+import ParsePhoneNumberRequest from "../../../../definitions/ParsePhoneNumberRequest.js";
 import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../types";
+} from "../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

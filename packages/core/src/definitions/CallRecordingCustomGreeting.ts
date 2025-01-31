@@ -1,5 +1,5 @@
-import CallRecordingCustomGreetingData from "./CallRecordingCustomGreetingData";
-import CallRecordingCustomGreetingLanguage from "./CallRecordingCustomGreetingLanguage";
+import CallRecordingCustomGreetingData from "./CallRecordingCustomGreetingData.js";
+import CallRecordingCustomGreetingLanguage from "./CallRecordingCustomGreetingLanguage.js";
 
 interface CallRecordingCustomGreeting {
   /** */

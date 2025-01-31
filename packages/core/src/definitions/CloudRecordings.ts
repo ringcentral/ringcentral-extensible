@@ -1,5 +1,5 @@
-import CloudRecording from "./CloudRecording";
-import Paging from "./Paging";
+import CloudRecording from "./CloudRecording.js";
+import Paging from "./Paging.js";
 
 /**
  * Recordings page

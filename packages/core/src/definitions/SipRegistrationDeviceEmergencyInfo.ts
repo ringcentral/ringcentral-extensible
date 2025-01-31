@@ -1,5 +1,5 @@
-import SipRegistrationDeviceEmergencyInfoAddress from "./SipRegistrationDeviceEmergencyInfoAddress";
-import SipRegistrationDeviceLocationInfo from "./SipRegistrationDeviceLocationInfo";
+import SipRegistrationDeviceEmergencyInfoAddress from "./SipRegistrationDeviceEmergencyInfoAddress.js";
+import SipRegistrationDeviceLocationInfo from "./SipRegistrationDeviceLocationInfo.js";
 
 /**
  * Emergency response location settings of a device

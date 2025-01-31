@@ -1,5 +1,5 @@
-import PrimaryCQInfo from "./PrimaryCQInfo";
-import AdditionalCQInfo from "./AdditionalCQInfo";
+import PrimaryCQInfo from "./PrimaryCQInfo.js";
+import AdditionalCQInfo from "./AdditionalCQInfo.js";
 
 /**
  * Primary/additional CQ information

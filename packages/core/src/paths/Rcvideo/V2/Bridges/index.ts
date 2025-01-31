@@ -1,12 +1,12 @@
-import Pin from "./Pin/index";
-import UpdateBridgeRequest from "../../../../definitions/UpdateBridgeRequest";
-import BridgeResponse from "../../../../definitions/BridgeResponse";
-import GetBridgeParameters from "../../../../definitions/GetBridgeParameters";
+import Pin from "./Pin/index.js";
+import UpdateBridgeRequest from "../../../../definitions/UpdateBridgeRequest.js";
+import BridgeResponse from "../../../../definitions/BridgeResponse.js";
+import GetBridgeParameters from "../../../../definitions/GetBridgeParameters.js";
 import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../types";
+} from "../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

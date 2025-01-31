@@ -1,10 +1,10 @@
-import AccountHistorySearchPublicResponse from "../../../../../definitions/AccountHistorySearchPublicResponse";
-import AccountHistorySearchPublicRequest from "../../../../../definitions/AccountHistorySearchPublicRequest";
+import AccountHistorySearchPublicResponse from "../../../../../definitions/AccountHistorySearchPublicResponse.js";
+import AccountHistorySearchPublicRequest from "../../../../../definitions/AccountHistorySearchPublicRequest.js";
 import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../types";
+} from "../../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

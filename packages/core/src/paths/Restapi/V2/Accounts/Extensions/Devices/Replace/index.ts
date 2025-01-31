@@ -1,9 +1,9 @@
-import SwapDeviceRequest from "../../../../../../../definitions/SwapDeviceRequest";
+import SwapDeviceRequest from "../../../../../../../definitions/SwapDeviceRequest.js";
 import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../../../types";
+} from "../../../../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

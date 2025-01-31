@@ -1,11 +1,11 @@
-import UserBusinessHoursUpdateResponse from "../../../../../definitions/UserBusinessHoursUpdateResponse";
-import UserBusinessHoursUpdateRequest from "../../../../../definitions/UserBusinessHoursUpdateRequest";
-import GetUserBusinessHoursResponse from "../../../../../definitions/GetUserBusinessHoursResponse";
+import UserBusinessHoursUpdateResponse from "../../../../../definitions/UserBusinessHoursUpdateResponse.js";
+import UserBusinessHoursUpdateRequest from "../../../../../definitions/UserBusinessHoursUpdateRequest.js";
+import GetUserBusinessHoursResponse from "../../../../../definitions/GetUserBusinessHoursResponse.js";
 import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../types";
+} from "../../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

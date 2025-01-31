@@ -1,4 +1,4 @@
-import CallsByResponseBreakdown from "./CallsByResponseBreakdown";
+import CallsByResponseBreakdown from "./CallsByResponseBreakdown.js";
 
 /**
  * Data for calls with breakdown by response (Answered, NotAnswered, Connected, NotConnected)

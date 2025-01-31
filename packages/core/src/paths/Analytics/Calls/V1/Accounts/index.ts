@@ -1,6 +1,6 @@
-import Aggregation from "./Aggregation/index";
-import Timeline from "./Timeline/index";
-import { ParentInterface, RingCentralInterface } from "../../../../../types";
+import Aggregation from "./Aggregation/index.js";
+import Timeline from "./Timeline/index.js";
+import { ParentInterface, RingCentralInterface } from "../../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

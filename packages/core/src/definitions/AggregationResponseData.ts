@@ -1,4 +1,4 @@
-import AggregationResponseRecord from "./AggregationResponseRecord";
+import AggregationResponseRecord from "./AggregationResponseRecord.js";
 
 /**
  * Aggregation result

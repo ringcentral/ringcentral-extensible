@@ -1,4 +1,4 @@
-import CallLogRecordDeviceInfo from "./CallLogRecordDeviceInfo";
+import CallLogRecordDeviceInfo from "./CallLogRecordDeviceInfo.js";
 
 /**
  * Base schema for CallLogFromParty and CallLogToParty

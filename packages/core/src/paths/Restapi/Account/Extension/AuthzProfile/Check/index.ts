@@ -1,10 +1,10 @@
-import AuthProfileCheckResource from "../../../../../../definitions/AuthProfileCheckResource";
-import CheckUserPermissionParameters from "../../../../../../definitions/CheckUserPermissionParameters";
+import AuthProfileCheckResource from "../../../../../../definitions/AuthProfileCheckResource.js";
+import CheckUserPermissionParameters from "../../../../../../definitions/CheckUserPermissionParameters.js";
 import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../../types";
+} from "../../../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

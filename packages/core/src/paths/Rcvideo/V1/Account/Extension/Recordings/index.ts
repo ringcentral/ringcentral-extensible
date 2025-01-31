@@ -1,10 +1,10 @@
-import CloudRecordings from "../../../../../../definitions/CloudRecordings";
-import GetExtensionRecordingsParameters from "../../../../../../definitions/GetExtensionRecordingsParameters";
+import CloudRecordings from "../../../../../../definitions/CloudRecordings.js";
+import GetExtensionRecordingsParameters from "../../../../../../definitions/GetExtensionRecordingsParameters.js";
 import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../../types";
+} from "../../../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

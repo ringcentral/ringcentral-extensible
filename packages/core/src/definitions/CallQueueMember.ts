@@ -1,4 +1,4 @@
-import SiteBasicInfo from "./SiteBasicInfo";
+import SiteBasicInfo from "./SiteBasicInfo.js";
 
 /**
  * Call queue member information

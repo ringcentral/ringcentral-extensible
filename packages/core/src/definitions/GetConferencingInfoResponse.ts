@@ -1,4 +1,4 @@
-import PhoneNumberInfoConferencing from "./PhoneNumberInfoConferencing";
+import PhoneNumberInfoConferencing from "./PhoneNumberInfoConferencing.js";
 
 interface GetConferencingInfoResponse {
   /**

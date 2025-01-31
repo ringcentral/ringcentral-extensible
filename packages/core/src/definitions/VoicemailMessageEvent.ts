@@ -1,4 +1,4 @@
-import VoicemailMessageEventBody from "./VoicemailMessageEventBody";
+import VoicemailMessageEventBody from "./VoicemailMessageEventBody.js";
 
 interface VoicemailMessageEvent {
   /**

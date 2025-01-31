@@ -1,5 +1,5 @@
-import SiteReference from "./SiteReference";
-import CallQueueServiceLevelSettings from "./CallQueueServiceLevelSettings";
+import SiteReference from "./SiteReference.js";
+import CallQueueServiceLevelSettings from "./CallQueueServiceLevelSettings.js";
 
 interface CallQueueDetailsForUpdate {
   /**

@@ -1,5 +1,5 @@
-import Bridges from "./Bridges/index";
-import { ParentInterface, RingCentralInterface } from "../../../../../types";
+import Bridges from "./Bridges/index.js";
+import { ParentInterface, RingCentralInterface } from "../../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

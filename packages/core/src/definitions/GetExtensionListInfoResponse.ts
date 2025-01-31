@@ -1,10 +1,10 @@
-import ContactInfo from "./ContactInfo";
-import ExtensionPermissions from "./ExtensionPermissions";
-import ProfileImageInfo from "./ProfileImageInfo";
-import CallQueueExtensionInfo from "./CallQueueExtensionInfo";
-import ProvisioningSiteInfo from "./ProvisioningSiteInfo";
-import AssignedCountryInfo from "./AssignedCountryInfo";
-import CostCenterInfo from "./CostCenterInfo";
+import ContactInfo from "./ContactInfo.js";
+import ExtensionPermissions from "./ExtensionPermissions.js";
+import ProfileImageInfo from "./ProfileImageInfo.js";
+import CallQueueExtensionInfo from "./CallQueueExtensionInfo.js";
+import ProvisioningSiteInfo from "./ProvisioningSiteInfo.js";
+import AssignedCountryInfo from "./AssignedCountryInfo.js";
+import CostCenterInfo from "./CostCenterInfo.js";
 
 interface GetExtensionListInfoResponse {
   /**

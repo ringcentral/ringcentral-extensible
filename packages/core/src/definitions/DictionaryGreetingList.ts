@@ -1,6 +1,6 @@
-import DictionaryGreetingInfo from "./DictionaryGreetingInfo";
-import PageNavigationModel from "./PageNavigationModel";
-import EnumeratedPagingModel from "./EnumeratedPagingModel";
+import DictionaryGreetingInfo from "./DictionaryGreetingInfo.js";
+import PageNavigationModel from "./PageNavigationModel.js";
+import EnumeratedPagingModel from "./EnumeratedPagingModel.js";
 
 interface DictionaryGreetingList {
   /**

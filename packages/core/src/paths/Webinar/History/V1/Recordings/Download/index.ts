@@ -1,10 +1,10 @@
-import RecordingDownloadModel from "../../../../../../definitions/RecordingDownloadModel";
-import RcwHistoryGetRecordingDownloadParameters from "../../../../../../definitions/RcwHistoryGetRecordingDownloadParameters";
+import RecordingDownloadModel from "../../../../../../definitions/RecordingDownloadModel.js";
+import RcwHistoryGetRecordingDownloadParameters from "../../../../../../definitions/RcwHistoryGetRecordingDownloadParameters.js";
 import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../../types";
+} from "../../../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

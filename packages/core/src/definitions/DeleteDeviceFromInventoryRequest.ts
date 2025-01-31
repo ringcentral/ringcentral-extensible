@@ -1,4 +1,4 @@
-import DeleteDeviceFromInventoryRequestRecords from "./DeleteDeviceFromInventoryRequestRecords";
+import DeleteDeviceFromInventoryRequestRecords from "./DeleteDeviceFromInventoryRequestRecords.js";
 
 interface DeleteDeviceFromInventoryRequest {
   /**

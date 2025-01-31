@@ -1,6 +1,6 @@
-import TransferInfo from "./TransferInfo";
-import FixedOrderAgents from "./FixedOrderAgents";
-import UnconditionalForwardingInfo from "./UnconditionalForwardingInfo";
+import TransferInfo from "./TransferInfo.js";
+import FixedOrderAgents from "./FixedOrderAgents.js";
+import UnconditionalForwardingInfo from "./UnconditionalForwardingInfo.js";
 
 /**
  * Queue settings applied for department (call queue) extension type,

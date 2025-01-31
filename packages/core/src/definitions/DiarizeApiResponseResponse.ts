@@ -1,4 +1,4 @@
-import DiarizeSegment from "./DiarizeSegment";
+import DiarizeSegment from "./DiarizeSegment.js";
 
 interface DiarizeApiResponseResponse {
   /**

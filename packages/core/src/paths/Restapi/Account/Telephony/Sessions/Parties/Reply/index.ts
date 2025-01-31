@@ -1,10 +1,10 @@
-import ReplyParty from "../../../../../../../definitions/ReplyParty";
-import CallPartyReply from "../../../../../../../definitions/CallPartyReply";
+import ReplyParty from "../../../../../../../definitions/ReplyParty.js";
+import CallPartyReply from "../../../../../../../definitions/CallPartyReply.js";
 import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../../../types";
+} from "../../../../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

@@ -1,11 +1,11 @@
-import ExtensionStatusInfo from "./ExtensionStatusInfo";
-import ContactInfoUpdateRequest from "./ContactInfoUpdateRequest";
-import ExtensionRegionalSettingRequest from "./ExtensionRegionalSettingRequest";
-import CallQueueInfoRequest from "./CallQueueInfoRequest";
-import UserTransitionInfo from "./UserTransitionInfo";
-import CustomFieldInfo from "./CustomFieldInfo";
-import SiteReference from "./SiteReference";
-import ReferenceInfo from "./ReferenceInfo";
+import ExtensionStatusInfo from "./ExtensionStatusInfo.js";
+import ContactInfoUpdateRequest from "./ContactInfoUpdateRequest.js";
+import ExtensionRegionalSettingRequest from "./ExtensionRegionalSettingRequest.js";
+import CallQueueInfoRequest from "./CallQueueInfoRequest.js";
+import UserTransitionInfo from "./UserTransitionInfo.js";
+import CustomFieldInfo from "./CustomFieldInfo.js";
+import SiteReference from "./SiteReference.js";
+import ReferenceInfo from "./ReferenceInfo.js";
 
 interface ExtensionUpdateRequest {
   /**

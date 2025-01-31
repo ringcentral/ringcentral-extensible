@@ -1,7 +1,7 @@
-import TMTaskInfoCreator from "./TMTaskInfoCreator";
-import TMTaskInfoAssignees from "./TMTaskInfoAssignees";
-import TaskRecurrenceInfo from "./TaskRecurrenceInfo";
-import TaskAttachment from "./TaskAttachment";
+import TMTaskInfoCreator from "./TMTaskInfoCreator.js";
+import TMTaskInfoAssignees from "./TMTaskInfoAssignees.js";
+import TaskRecurrenceInfo from "./TaskRecurrenceInfo.js";
+import TaskAttachment from "./TaskAttachment.js";
 
 interface TMTaskInfo {
   /**

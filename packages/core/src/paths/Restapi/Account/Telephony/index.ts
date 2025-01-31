@@ -1,8 +1,8 @@
-import Conference from "./Conference/index";
-import CallOut from "./CallOut/index";
-import Sessions from "./Sessions/index";
-import Metadata from "./Metadata/index";
-import { ParentInterface, RingCentralInterface } from "../../../../types";
+import Conference from "./Conference/index.js";
+import CallOut from "./CallOut/index.js";
+import Sessions from "./Sessions/index.js";
+import Metadata from "./Metadata/index.js";
+import { ParentInterface, RingCentralInterface } from "../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

@@ -1,9 +1,9 @@
-import ExtensionCountryInfoRequest from "./ExtensionCountryInfoRequest";
-import ExtensionTimezoneInfoRequest from "./ExtensionTimezoneInfoRequest";
-import ExtensionLanguageInfoRequest from "./ExtensionLanguageInfoRequest";
-import ExtensionGreetingLanguageInfoRequest from "./ExtensionGreetingLanguageInfoRequest";
-import ExtensionFormattingLocaleInfoRequest from "./ExtensionFormattingLocaleInfoRequest";
-import ExtensionCurrencyInfoRequest from "./ExtensionCurrencyInfoRequest";
+import ExtensionCountryInfoRequest from "./ExtensionCountryInfoRequest.js";
+import ExtensionTimezoneInfoRequest from "./ExtensionTimezoneInfoRequest.js";
+import ExtensionLanguageInfoRequest from "./ExtensionLanguageInfoRequest.js";
+import ExtensionGreetingLanguageInfoRequest from "./ExtensionGreetingLanguageInfoRequest.js";
+import ExtensionFormattingLocaleInfoRequest from "./ExtensionFormattingLocaleInfoRequest.js";
+import ExtensionCurrencyInfoRequest from "./ExtensionCurrencyInfoRequest.js";
 
 /**
  * Regional data (timezone, home country, language) of an extension.

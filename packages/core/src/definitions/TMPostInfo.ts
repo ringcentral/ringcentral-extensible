@@ -1,5 +1,5 @@
-import TMMessageAttachmentInfo from "./TMMessageAttachmentInfo";
-import TMMentionsInfo from "./TMMentionsInfo";
+import TMMessageAttachmentInfo from "./TMMessageAttachmentInfo.js";
+import TMMentionsInfo from "./TMMentionsInfo.js";
 
 interface TMPostInfo {
   /**

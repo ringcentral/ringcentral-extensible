@@ -1,4 +1,4 @@
-import AssignedRoleResource from "./AssignedRoleResource";
+import AssignedRoleResource from "./AssignedRoleResource.js";
 
 interface ExtensionWithRolesResource {
   /**

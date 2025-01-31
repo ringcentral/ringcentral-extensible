@@ -1,6 +1,6 @@
-import CallMonitoringGroupMemberInfo from "./CallMonitoringGroupMemberInfo";
-import PageNavigationModel from "./PageNavigationModel";
-import EnumeratedPagingModel from "./EnumeratedPagingModel";
+import CallMonitoringGroupMemberInfo from "./CallMonitoringGroupMemberInfo.js";
+import PageNavigationModel from "./PageNavigationModel.js";
+import EnumeratedPagingModel from "./EnumeratedPagingModel.js";
 
 interface CallMonitoringGroupMemberList {
   /**

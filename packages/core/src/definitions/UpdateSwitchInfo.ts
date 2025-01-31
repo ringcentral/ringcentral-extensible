@@ -1,5 +1,5 @@
-import SwitchSiteInfo from "./SwitchSiteInfo";
-import EmergencyAddressInfo from "./EmergencyAddressInfo";
+import SwitchSiteInfo from "./SwitchSiteInfo.js";
+import EmergencyAddressInfo from "./EmergencyAddressInfo.js";
 
 interface UpdateSwitchInfo {
   /**

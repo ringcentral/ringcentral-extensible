@@ -1,10 +1,10 @@
-import UpdateUnifiedPresence from "../../../../../definitions/UpdateUnifiedPresence";
-import UnifiedPresence from "../../../../../definitions/UnifiedPresence";
+import UpdateUnifiedPresence from "../../../../../definitions/UpdateUnifiedPresence.js";
+import UnifiedPresence from "../../../../../definitions/UnifiedPresence.js";
 import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../types";
+} from "../../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

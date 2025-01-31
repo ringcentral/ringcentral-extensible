@@ -1,10 +1,10 @@
-import FeatureList from "../../../../../definitions/FeatureList";
-import ReadExtensionFeaturesParameters from "../../../../../definitions/ReadExtensionFeaturesParameters";
+import FeatureList from "../../../../../definitions/FeatureList.js";
+import ReadExtensionFeaturesParameters from "../../../../../definitions/ReadExtensionFeaturesParameters.js";
 import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../types";
+} from "../../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

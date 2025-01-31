@@ -1,4 +1,4 @@
-import TimelineResponseRecord from "./TimelineResponseRecord";
+import TimelineResponseRecord from "./TimelineResponseRecord.js";
 
 /**
  * A list of time-value points of call data as per the grouping and filtering options specified in the request

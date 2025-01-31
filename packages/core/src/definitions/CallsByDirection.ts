@@ -1,4 +1,4 @@
-import CallsByDirectionBreakdown from "./CallsByDirectionBreakdown";
+import CallsByDirectionBreakdown from "./CallsByDirectionBreakdown.js";
 
 /**
  * Data for calls with breakdown by direction (Inbound, Outbound)

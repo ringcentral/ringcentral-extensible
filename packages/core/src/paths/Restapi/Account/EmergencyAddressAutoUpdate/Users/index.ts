@@ -1,11 +1,11 @@
-import BulkAssign from "./BulkAssign/index";
-import AutomaticLocationUpdatesUserList from "../../../../../definitions/AutomaticLocationUpdatesUserList";
-import ListAutomaticLocationUpdatesUsersParameters from "../../../../../definitions/ListAutomaticLocationUpdatesUsersParameters";
+import BulkAssign from "./BulkAssign/index.js";
+import AutomaticLocationUpdatesUserList from "../../../../../definitions/AutomaticLocationUpdatesUserList.js";
+import ListAutomaticLocationUpdatesUsersParameters from "../../../../../definitions/ListAutomaticLocationUpdatesUsersParameters.js";
 import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../types";
+} from "../../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

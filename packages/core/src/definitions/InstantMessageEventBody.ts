@@ -1,7 +1,7 @@
-import NotificationRecipientInfo from "./NotificationRecipientInfo";
-import SenderInfo from "./SenderInfo";
-import MessageAttachmentInfo from "./MessageAttachmentInfo";
-import ConversationInfo from "./ConversationInfo";
+import NotificationRecipientInfo from "./NotificationRecipientInfo.js";
+import SenderInfo from "./SenderInfo.js";
+import MessageAttachmentInfo from "./MessageAttachmentInfo.js";
+import ConversationInfo from "./ConversationInfo.js";
 
 /**
  * Notification payload body

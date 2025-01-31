@@ -1,4 +1,4 @@
-import UiCallInfoRecord from "./UiCallInfoRecord";
+import UiCallInfoRecord from "./UiCallInfoRecord.js";
 
 /**
  * Call information on user interface

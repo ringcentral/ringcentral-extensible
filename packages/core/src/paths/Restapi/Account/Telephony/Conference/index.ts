@@ -1,9 +1,9 @@
-import CallSession from "../../../../../definitions/CallSession";
+import CallSession from "../../../../../definitions/CallSession.js";
 import {
   ParentInterface,
   RestRequestConfig,
   RingCentralInterface,
-} from "../../../../../types";
+} from "../../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

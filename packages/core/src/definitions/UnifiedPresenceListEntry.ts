@@ -1,4 +1,4 @@
-import UnifiedPresence from "./UnifiedPresence";
+import UnifiedPresence from "./UnifiedPresence.js";
 
 interface UnifiedPresenceListEntry {
   /**
