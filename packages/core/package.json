@@ -42,11 +42,9 @@
   },
   "devDependencies": {
     "dotenv-override-true": "^6.2.2",
-    "ringcentral-code-generator": "^0.7.3",
-    "ts-node": "^10.9.2"
+    "ringcentral-code-generator": "^0.7.3"
   },
   "scripts": {
-    "generate": "ts-node -r dotenv-override-true/config code-generator.ts",
     "build": "tsc -p tsconfig.cjs.json && tsc -p tsconfig.esm.json"
   }
 }
