@@ -29,6 +29,6 @@
     "access": "public"
   },
   "scripts": {
-    "build": "tsc -p tsconfig.cjs.json && tsc -p tsconfig.esm.json"
+    "build": "tsc -p tsconfig.esm.json && tsc -p tsconfig.cjs.json"
   }
 }

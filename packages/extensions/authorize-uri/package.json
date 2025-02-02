@@ -33,6 +33,6 @@
     "urijs": "^1.19.11"
   },
   "scripts": {
-    "build": "tsc -p tsconfig.cjs.json && tsc -p tsconfig.esm.json"
+    "build": "tsc -p tsconfig.esm.json && tsc -p tsconfig.cjs.json"
   }
 }
