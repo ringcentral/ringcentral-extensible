@@ -18,7 +18,7 @@
     "reinstall": "lerna exec 'rm -rf node_modules' && yarn install && lerna exec 'yarn install'"
   },
   "devDependencies": {
-    "@types/node": "^22.10.10",
+    "@types/node": "^22.13.0",
     "lerna": "^8.1.9",
     "prettier": "^3.4.2",
     "sort-package-json": "^2.14.0",
