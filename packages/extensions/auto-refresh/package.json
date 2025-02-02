@@ -1,6 +1,6 @@
 {
   "name": "@rc-ex/auto-refresh",
-  "version": "0.3.8",
+  "version": "0.3.9",
   "description": "Auto Refresh extension for ringcentral-extensible project",
   "author": "Tyler Liu <tyler.liu@ringcentral.com>",
   "homepage": "https://github.com/ringcentral/ringcentral-extensible/tree/master/packages/extensions/auto-refresh",
