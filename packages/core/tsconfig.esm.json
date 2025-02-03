@@ -2,10 +2,14 @@
   "compilerOptions": {
     "esModuleInterop": true,
     "module": "esnext",
-    "moduleResolution": "node",
     "declaration": true,
     "outDir": "./dist/esm",
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "paths": {
+      "axios": [
+        "../../node_modules/axios/index.js"
+      ]
+    }
   },
   "include": ["src/**/*.ts"]
 }
