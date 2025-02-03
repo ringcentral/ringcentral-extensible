@@ -8,9 +8,6 @@
     "paths": {
       "@rc-ex/core/*": [
         "../../core/dist/cjs/*"
-      ],
-      "@ringcentral/sdk/lib/*": [
-        "../../../node_modules/@ringcentral/sdk/lib/*"
       ]
     }
   },
