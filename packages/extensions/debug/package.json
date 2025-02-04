@@ -1,6 +1,6 @@
 {
   "name": "@rc-ex/debug",
-  "version": "1.3.10",
+  "version": "1.3.11",
   "description": "Debug extension for ringcentral-extensible project",
   "author": "Tyler Liu <tyler.liu@ringcentral.com>",
   "homepage": "https://github.com/ringcentral/ringcentral-extensible/tree/master/packages/extensions/debug",
