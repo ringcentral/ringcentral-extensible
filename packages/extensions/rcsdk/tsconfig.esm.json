@@ -1,16 +1,15 @@
 {
   "compilerOptions": {
     "esModuleInterop": true,
-    "module": "esnext",
+    "module": "NodeNext",
+    "moduleResolution": "nodenext",
+    "target": "ES2022",
     "declaration": true,
     "outDir": "./dist/esm",
     "skipLibCheck": true,
     "paths": {
       "@rc-ex/core/*": [
         "../../core/dist/esm/*"
-      ],
-      "@ringcentral/sdk/lib/*": [
-        "../../../node_modules/@ringcentral/sdk/lib/*"
       ]
     }
   },

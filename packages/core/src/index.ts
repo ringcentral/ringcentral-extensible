@@ -15,7 +15,7 @@ import type {
   RestRequestConfig,
   RestResponse,
   RingCentralInterface,
-} from "./types";
+} from "./types.js";
 import TeamMessaging from "./paths/TeamMessaging/index.js";
 
 interface JwtFlowOptions {

@@ -11,7 +11,7 @@
   ],
   "scripts": {
     "compile": "lerna exec 'yarn build' --scope=@rc-ex/core && lerna exec 'yarn build' --no-private --ignore=@rc-ex/core",
-    "reset": "lerna exec 'rm -rf lib dist'",
+    "reset": "lerna exec 'rm -rf dist'",
     "prepublishOnly": "yarn reset && yarn compile && yarn test",
     "test": "yarn workspace @rc-ex/test run vitest",
     "upgrade-all": "yarn-upgrade-all -W && yarn workspaces run yarn-upgrade-all && yarn install",

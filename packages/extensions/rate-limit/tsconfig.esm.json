@@ -1,15 +1,12 @@
 {
   "compilerOptions": {
     "esModuleInterop": true,
-    "module": "esnext",
+    "module": "NodeNext",
+    "moduleResolution": "nodenext",
+    "target": "ES2022",
     "declaration": true,
     "outDir": "./dist/esm",
-    "skipLibCheck": true,
-    "paths": {
-      "@rc-ex/retry": [
-        "../retry/dist/esm/index.js"
-      ]
-    }
+    "skipLibCheck": true
   },
   "include": ["src/**/*.ts"]
 }

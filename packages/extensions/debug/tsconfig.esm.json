@@ -1,7 +1,9 @@
 {
   "compilerOptions": {
     "esModuleInterop": true,
-    "module": "esnext",
+    "module": "NodeNext",
+    "moduleResolution": "nodenext",
+    "target": "ES2022",
     "declaration": true,
     "outDir": "./dist/esm",
     "skipLibCheck": true,
