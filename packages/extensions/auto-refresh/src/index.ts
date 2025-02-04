@@ -1,4 +1,4 @@
-import type RingCentral from "@rc-ex/core/index";
+import type RingCentral from "@rc-ex/core";
 import SdkExtension from "@rc-ex/core/SdkExtension";
 
 export interface AutoRefreshOptions {
