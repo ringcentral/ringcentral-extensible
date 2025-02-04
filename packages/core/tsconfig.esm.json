@@ -1,12 +1,16 @@
 {
   "compilerOptions": {
     "esModuleInterop": true,
-    "module": "NodeNext",
-    "moduleResolution": "nodenext",
-    "target": "ES2022",
+    "module": "ESNext",
+    "target": "ESNext",
     "declaration": true,
     "outDir": "./dist/esm",
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "paths": {
+      "axios": [
+        "../../node_modules/axios/dist/esm/axios.js"
+      ]
+    }
   },
   "include": ["src/**/*.ts"]
 }
