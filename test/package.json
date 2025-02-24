@@ -4,17 +4,17 @@
   "private": true,
   "license": "MIT",
   "devDependencies": {
-    "@rc-ex/authorize-uri": "./packages/extensions/authorize-uri",
-    "@rc-ex/auto-refresh": "./packages/extensions/auto-refresh",
-    "@rc-ex/core": "./packages/core",
-    "@rc-ex/debug": "./packages/extensions/debug",
-    "@rc-ex/events": "./packages/extensions/events",
-    "@rc-ex/rcsdk": "./packages/extensions/rcsdk",
-    "@rc-ex/ws": "./packages/extensions/ws",
+    "@rc-ex/authorize-uri": "^1.3.12",
+    "@rc-ex/auto-refresh": "^0.3.12",
+    "@rc-ex/core": "^1.6.16",
+    "@rc-ex/debug": "^1.3.12",
+    "@rc-ex/events": "^1.3.12",
+    "@rc-ex/rcsdk": "^1.3.13",
+    "@rc-ex/ws": "^1.3.16",
     "@ringcentral/sdk": "^5.0.3",
     "dotenv-override-true": "^6.2.2",
-    "vitest": "^3.0.5",
-    "wait-for-async": "^0.7.11",
+    "vitest": "^3.0.6",
+    "wait-for-async": "^0.7.13",
     "winston": "^3.17.0"
   }
 }

@@ -12,14 +12,15 @@
   "scripts": {
     "compile": "lerna exec 'yarn build' --scope=@rc-ex/core && lerna exec 'yarn build' --no-private --ignore=@rc-ex/core",
     "reset": "lerna exec 'rm -rf dist'",
+    "reinstall": "lerna exec 'rm -rf node_modules' && yarn install",
     "prepublishOnly": "yarn reset && yarn compile && yarn test",
     "test": "yarn workspace @rc-ex/test run vitest",
     "upgrade-all": "yarn-upgrade-all -W && yarn workspaces run yarn-upgrade-all && yarn install"
   },
   "devDependencies": {
-    "@types/node": "^22.13.1",
-    "lerna": "^8.1.9",
+    "@types/node": "^22.13.5",
+    "lerna": "^8.2.0",
     "typescript": "^5.7.3",
-    "yarn-upgrade-all": "^0.7.4"
+    "yarn-upgrade-all": "^0.7.5"
   }
 }
