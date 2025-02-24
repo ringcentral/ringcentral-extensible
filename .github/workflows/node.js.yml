@@ -20,7 +20,6 @@ jobs:
       - run: yarn reset
       - run: yarn compile
       - run: yarn test
-        working-directory: test
         env:
           RINGCENTRAL_SERVER_URL: ${{ secrets.RINGCENTRAL_SERVER_URL }}
           RINGCENTRAL_CLIENT_ID: ${{ secrets.RINGCENTRAL_CLIENT_ID }}
