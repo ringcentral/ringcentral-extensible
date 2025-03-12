@@ -12,7 +12,8 @@ interface ReasonInfo {
     | "ExtensionTypeLimitation"
     | "ExtensionLimitation"
     | "InsufficientPermissions"
-    | "ConfigurationLimitation";
+    | "ConfigurationLimitation"
+    | "PermissionLimitation";
 
   /**
    * Reason description

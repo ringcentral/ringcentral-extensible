@@ -28,7 +28,7 @@ interface EmailRecipientInfo {
   /**
    * Call queue manager permission
    */
-  permission?: "FullAccess" | "Messages" | "MemberManagement";
+  permission?: "FullAccess" | "Messages" | "MemberManagement" | "None";
 }
 
 export default EmailRecipientInfo;

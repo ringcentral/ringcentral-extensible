@@ -63,11 +63,46 @@ interface SyncMessagesParameters {
   syncType?: "FSync" | "ISync";
 
   /**
-   * Filters voicemail messages based on the owner extension. Supported if the 'SharedVoicemail'
+   * Deprecated. Filters voicemail messages based on the owner extension. Supported if the 'SharedVoicemail'
    *  feature is enabled.
    * Default: Personal
    */
   voicemailOwner?: string[];
+
+  /**
+   * Filters shared messages based on the owner extension. Supported if the 'SharedVoicemail' or 'CallQueueSmsRecipient'
+   *  feature is enabled.
+   * Default: Personal
+   */
+  owner?: string[];
+
+  /**
+   * Filters shared messages based on the owner extension type. Supported if "SharedVoicemail" or "CallQueueSmsRecipient"
+   *  feature is enabled.
+   */
+  ownerExtensionType?: (
+    | "User"
+    | "Department"
+    | "Announcement"
+    | "Voicemail"
+    | "DigitalUser"
+    | "VirtualUser"
+    | "FaxUser"
+    | "PagingOnly"
+    | "SharedLinesGroup"
+    | "DelegatedLinesGroup"
+    | "GroupCallPickup"
+    | "IvrMenu"
+    | "ApplicationExtension"
+    | "ProxyAdmin"
+    | "RoomConnector"
+    | "ParkLocation"
+    | "Limited"
+    | "Bot"
+    | "Site"
+    | "Room"
+    | "FlexibleUser"
+  )[];
 }
 
 export default SyncMessagesParameters;

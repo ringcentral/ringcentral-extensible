@@ -38,6 +38,11 @@ interface CallLogRecord {
   partyId?: string;
 
   /**
+   * List of metadata categories applied to the call
+   */
+  metadataCategories?: string[];
+
+  /**
    * The type of call transport. 'PSTN' indicates that a call leg was initiated
    *  from the PSTN network provider; 'VoIP' - from an RC phone.
    */

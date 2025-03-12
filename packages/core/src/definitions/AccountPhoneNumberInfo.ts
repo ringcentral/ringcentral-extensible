@@ -29,7 +29,7 @@ interface AccountPhoneNumberInfo {
   tollType?: "Toll" | "TollFree";
 
   /**
-   * Usage type of phone number
+   * Usage type of a phone number
    * Required
    */
   usageType?:
@@ -47,6 +47,7 @@ interface AccountPhoneNumberInfo {
     | "ContactCenterNumber"
     | "ConferencingNumber"
     | "MeetingsNumber"
+    | "NumberStorage"
     | "BusinessMobileNumber"
     | "ELIN";
 

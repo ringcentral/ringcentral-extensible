@@ -43,7 +43,7 @@ interface MessageBatchResponse {
    * Current status of a message batch
    * Example: Processing
    */
-  status?: "Processing" | "Completed";
+  status?: "Processing" | "Completed" | "Sent";
 
   /**
    * The time at which the batch was created

@@ -1,4 +1,5 @@
 import CommonEmergencyLocationAddressInfo from "./CommonEmergencyLocationAddressInfo.js";
+import ShortSiteInfo from "./ShortSiteInfo.js";
 
 interface CreateUserEmergencyLocationRequest {
   /**
@@ -19,6 +20,9 @@ interface CreateUserEmergencyLocationRequest {
 
   /** */
   address?: CommonEmergencyLocationAddressInfo;
+
+  /** */
+  site?: ShortSiteInfo;
 }
 
 export default CreateUserEmergencyLocationRequest;

@@ -9,34 +9,30 @@ interface SearchDirectoryEntriesParameters {
   accessibleSitesOnly?: boolean;
 
   /**
-   * A list of Account IDs
-   * Example: 400131426008
+   * A list of Account IDs. Deprecated, use the appropriate body field 'accountIds' instead.
    */
-  accountId?: string;
+  accountId?: string[];
 
   /**
-   * A list of department names
+   * Department name. Deprecated, use the appropriate body field 'department' instead.
    * Example: North office
    */
   department?: string;
 
   /**
-   * A list of Site IDs
-   * Example: 872781797006
+   * A list of Site IDs. Deprecated, use the appropriate body field 'siteIds' instead.
    */
-  siteId?: string;
+  siteId?: string[];
 
   /**
-   * Extension current state
-   * Example: Enabled
+   * List of extension current statuses. Deprecated, use the appropriate body field 'extensionStatuses' instead.
    */
-  extensionStatus?: string;
+  extensionStatus?: string[];
 
   /**
-   * Type of extension to filter the contacts
-   * Example: User
+   * Types of extension to filter the contacts
    */
-  extensionType?:
+  extensionType?: (
     | "User"
     | "Department"
     | "Announcement"
@@ -57,7 +53,8 @@ interface SearchDirectoryEntriesParameters {
     | "DelegatedLinesGroup"
     | "FlexibleUser"
     | "GroupCallPickup"
-    | "RoomConnector";
+    | "RoomConnector"
+  )[];
 }
 
 export default SearchDirectoryEntriesParameters;

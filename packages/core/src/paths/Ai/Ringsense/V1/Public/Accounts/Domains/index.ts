@@ -1,3 +1,4 @@
+import Sessions from "./Sessions/index.js";
 import Records from "./Records/index.js";
 import {
   ParentInterface,
@@ -23,6 +24,10 @@ class Index {
 
   public records(sourceRecordId: string | null = null): Records {
     return new Records(this, sourceRecordId);
+  }
+
+  public sessions(sourceSessionId: string | null = null): Sessions {
+    return new Sessions(this, sourceSessionId);
   }
 }
 export default Index;

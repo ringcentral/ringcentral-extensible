@@ -4,10 +4,10 @@
 interface ListExtensionGrantsParameters {
   /**
    * Type of extension to be returned. Multiple values are supported.
-   *  Please note that legacy 'Department' extension type corresponds
-   *  to 'Call Queue' extensions in modern RingCentral product terminology
+   *  **Please note that legacy 'Department' extension type corresponds
+   *  to 'Call Queue' extensions in modern RingCentral product terminology**
    */
-  extensionType?:
+  extensionType?: (
     | "User"
     | "FaxUser"
     | "VirtualUser"
@@ -23,7 +23,8 @@ interface ListExtensionGrantsParameters {
     | "Limited"
     | "Bot"
     | "Room"
-    | "DelegatedLinesGroup";
+    | "DelegatedLinesGroup"
+  )[];
 
   /**
    * Indicates a page number to retrieve. Only positive number values

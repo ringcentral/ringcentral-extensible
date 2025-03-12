@@ -15,7 +15,7 @@ interface CallQueueDetailsForUpdate {
   /**
    * Group extension status
    */
-  status?: "Enabled" | "Disabled" | "NotActivated";
+  status?: "Enabled" | "Disabled" | "NotActivated" | "Unassigned";
 
   /**
    * Indicates whether it is an emergency call queue extension or not

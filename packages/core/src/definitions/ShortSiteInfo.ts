@@ -1,6 +1,7 @@
 interface ShortSiteInfo {
   /**
    * Internal identifier of a site extension
+   * Example: main-site
    */
   id?: string;
 

@@ -2,23 +2,29 @@ import CreateForwardingNumberDeviceInfo from "./CreateForwardingNumberDeviceInfo
 
 interface CreateForwardingNumberRequest {
   /**
+   * Internal identifier of a forwarding/call flip phone number
+   */
+  id?: string;
+
+  /**
    * Number assigned to the call flip phone number, corresponds to the shortcut dial number
    * Format: int32
    */
   flipNumber?: number;
 
   /**
-   * Forwarding/Call flip phone number
+   * Forwarding/call flip phone number
    */
   phoneNumber?: string;
 
   /**
-   * Forwarding/Call flip number title
+   * Forwarding/call flip number title
    */
   label?: string;
 
   /**
-   * Forwarding/Call flip phone type. If specified, 'label' attribute value is ignored. The default value is 'Other'
+   * Forwarding/call flip phone type. If specified, 'label' attribute value is ignored
+   * Default: Other
    */
   type?: "PhoneLine" | "Home" | "Mobile" | "Work" | "Other";
 

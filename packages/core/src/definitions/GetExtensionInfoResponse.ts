@@ -177,6 +177,12 @@ interface GetExtensionInfoResponse {
    * Site access status for cross-site limitation
    */
   siteAccess?: "Limited" | "Unlimited";
+
+  /**
+   * Alert timer or pickup setting. Delay time in seconds before call queue group members are notified when calls are queued
+   * Format: int32
+   */
+  alertTimer?: number;
 }
 
 export default GetExtensionInfoResponse;

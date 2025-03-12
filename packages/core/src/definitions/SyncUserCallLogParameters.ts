@@ -60,6 +60,12 @@ interface SyncUserCallLogParameters {
    *  If omitted, then calls with and without recordings are returned
    */
   recordingType?: "Automatic" | "OnDemand" | "All";
+
+  /**
+   * Category of metadata to be returned. If omitted, all call records are returned.
+   *  Multiple values are supported
+   */
+  metadataCategory?: string[];
 }
 
 export default SyncUserCallLogParameters;

@@ -18,9 +18,8 @@ class Index {
     return `${this._parent.path()}/grant`;
   }
   /**
-   * Returns the list of extensions with information on grants
-   * given to the current extension regarding them. Currently the list of grants
-   * include: picking up a call, monitoring, calling or receiving a call on behalf
+   * Returns a list of extensions including information on grants given to the current extension towards them.
+   * Currently the list of grants includes: picking up a call, call monitoring, calling or receiving a call on behalf
    * of somebody, call delegation and calling paging groups.
    *
    * HTTP Method: get

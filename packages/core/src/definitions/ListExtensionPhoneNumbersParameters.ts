@@ -10,7 +10,7 @@ interface ListExtensionPhoneNumbersParameters {
   status?: "Normal" | "Pending" | "PortedIn" | "Temporary" | "Unknown";
 
   /**
-   * Usage type of phone number
+   * Usage type of a phone number
    */
   usageType?: (
     | "MainCompanyNumber"
@@ -20,6 +20,11 @@ interface ListExtensionPhoneNumbersParameters {
     | "CompanyFaxNumber"
     | "ForwardedNumber"
     | "ForwardedCompanyNumber"
+    | "ContactCenterNumber"
+    | "ConferencingNumber"
+    | "MeetingsNumber"
+    | "NumberPool"
+    | "NumberStorage"
     | "BusinessMobileNumber"
     | "PartnerBusinessMobileNumber"
     | "IntegrationNumber"

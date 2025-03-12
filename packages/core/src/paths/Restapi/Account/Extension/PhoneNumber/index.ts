@@ -1,3 +1,4 @@
+import SmsConfiguration from "./SmsConfiguration/index.js";
 import GetExtensionPhoneNumbersResponse from "../../../../../definitions/GetExtensionPhoneNumbersResponse.js";
 import ListExtensionPhoneNumbersParameters from "../../../../../definitions/ListExtensionPhoneNumbersParameters.js";
 import {
@@ -40,6 +41,10 @@ class Index {
       restRequestConfig,
     );
     return r.data;
+  }
+
+  public smsConfiguration(): SmsConfiguration {
+    return new SmsConfiguration(this);
   }
 }
 export default Index;

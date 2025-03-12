@@ -18,7 +18,7 @@ interface ListAccountPhoneNumbersParameters {
   perPage?: number;
 
   /**
-   * Usage type of phone number
+   * Usage type of a phone number
    */
   usageType?: (
     | "MainCompanyNumber"
@@ -31,6 +31,8 @@ interface ListAccountPhoneNumbersParameters {
     | "ContactCenterNumber"
     | "ConferencingNumber"
     | "MeetingsNumber"
+    | "NumberPool"
+    | "NumberStorage"
     | "BusinessMobileNumber"
     | "PartnerBusinessMobileNumber"
     | "IntegrationNumber"

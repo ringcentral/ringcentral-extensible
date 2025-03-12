@@ -73,6 +73,46 @@ interface ListMessagesParameters {
    *  particular phone number only
    */
   phoneNumber?: string;
+
+  /**
+   * Deprecated. Filters voicemail messages based on the owner extension. Supported if the 'SharedVoicemail'
+   *  feature is enabled.
+   */
+  voicemailOwner?: string[];
+
+  /**
+   * Filters shared messages based on the owner extension. Supported if the 'SharedVoicemail' or 'CallQueueSmsRecipient'
+   *  feature is enabled.
+   */
+  owner?: string[];
+
+  /**
+   * Filters shared messages based on the owner extension type. Supported if "SharedVoicemail" or "CallQueueSmsRecipient"
+   *  feature is enabled.
+   */
+  ownerExtensionType?: (
+    | "User"
+    | "Department"
+    | "Announcement"
+    | "Voicemail"
+    | "DigitalUser"
+    | "VirtualUser"
+    | "FaxUser"
+    | "PagingOnly"
+    | "SharedLinesGroup"
+    | "DelegatedLinesGroup"
+    | "GroupCallPickup"
+    | "IvrMenu"
+    | "ApplicationExtension"
+    | "ProxyAdmin"
+    | "RoomConnector"
+    | "ParkLocation"
+    | "Limited"
+    | "Bot"
+    | "Site"
+    | "Room"
+    | "FlexibleUser"
+  )[];
 }
 
 export default ListMessagesParameters;

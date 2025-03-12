@@ -4,6 +4,7 @@ import HighlightsInsightUnit from "./HighlightsInsightUnit.js";
 import NextStepsInsightUnit from "./NextStepsInsightUnit.js";
 import BulletedSummaryInsightUnit from "./BulletedSummaryInsightUnit.js";
 import AIScoreInsightUnit from "./AIScoreInsightUnit.js";
+import CallNotesInsightUnit from "./CallNotesInsightUnit.js";
 
 interface AIInsights {
   /** */
@@ -23,6 +24,9 @@ interface AIInsights {
 
   /** */
   AIScore?: AIScoreInsightUnit[];
+
+  /** */
+  CallNotes?: CallNotesInsightUnit[];
 }
 
 export default AIInsights;

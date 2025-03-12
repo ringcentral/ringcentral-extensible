@@ -9,10 +9,11 @@ interface ListA2PSMSParameters {
   batchId?: string;
 
   /**
-   * Direction of the SMS message
+   * Direction of a message to filter the message list result.
+   *  By default, there is no filter applied - both Inbound and Outbound messages are returned
    * Example: Inbound
    */
-  direction?: "Inbound" | "Outbound";
+  direction?: ("Inbound" | "Outbound")[];
 
   /**
    * The end of the time range to filter the results in ISO 8601 format including timezone. Default is the 'dateTo' minus 24 hours

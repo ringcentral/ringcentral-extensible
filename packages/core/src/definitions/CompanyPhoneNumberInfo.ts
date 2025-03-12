@@ -1,4 +1,3 @@
-import CountryInfoBasicModel from "./CountryInfoBasicModel.js";
 import ExtensionInfo from "./ExtensionInfo.js";
 import TemporaryNumberInfo from "./TemporaryNumberInfo.js";
 import ContactCenterProvider from "./ContactCenterProvider.js";
@@ -15,9 +14,6 @@ interface CompanyPhoneNumberInfo {
    * Format: int64
    */
   id?: number;
-
-  /** */
-  country?: CountryInfoBasicModel;
 
   /** */
   extension?: ExtensionInfo;
@@ -62,9 +58,8 @@ interface CompanyPhoneNumberInfo {
   type?: "VoiceFax" | "VoiceOnly" | "FaxOnly";
 
   /**
-   * Usage type of phone number. Usage type of phone number.
-   *  Numbers of 'NumberPool' type are not returned in phone number list
-   *  requests
+   * Usage type of a phone number. Numbers of 'NumberPool' and 'NumberStorage' type are not returned in
+   *  phone number list requests
    */
   usageType?:
     | "MainCompanyNumber"
@@ -78,6 +73,7 @@ interface CompanyPhoneNumberInfo {
     | "ConferencingNumber"
     | "MeetingsNumber"
     | "NumberPool"
+    | "NumberStorage"
     | "BusinessMobileNumber"
     | "PartnerBusinessMobileNumber"
     | "IntegrationNumber";

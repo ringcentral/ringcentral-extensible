@@ -1,9 +1,7 @@
-import ErrorEntry from "./ErrorEntry.js";
-
 /**
- * Error response
+ * Single (of potential multply) error entry in an ASG error response
  */
-interface ASGErrorResponse {
+interface ErrorEntry {
   /**
    * Error code
    * Required
@@ -17,9 +15,6 @@ interface ASGErrorResponse {
    * Example: AccountId 1234 is invalid
    */
   message?: string;
-
-  /** */
-  errors?: ErrorEntry[];
 }
 
-export default ASGErrorResponse;
+export default ErrorEntry;

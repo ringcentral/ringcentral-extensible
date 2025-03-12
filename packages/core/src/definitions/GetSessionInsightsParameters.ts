@@ -1,7 +1,7 @@
 /**
- * Query parameters for operation getRecordingInsights
+ * Query parameters for operation getSessionInsights
  */
-interface GetRecordingInsightsParameters {
+interface GetSessionInsightsParameters {
   /**
    * AI Insight Types
    */
@@ -16,4 +16,4 @@ interface GetRecordingInsightsParameters {
   )[];
 }
 
-export default GetRecordingInsightsParameters;
+export default GetSessionInsightsParameters;

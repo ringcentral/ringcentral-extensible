@@ -35,12 +35,12 @@ interface ListAutomaticLocationUpdatesUsersParameters {
   featureEnabled?: boolean;
 
   /**
-   * Comma-separated list of fields to order results prefixed by
-   *  plus sign '+' (ascending order) or minus sign '-' (descending order).
+   * Comma-separated list of fields to order results prefixed by plus sign '+' (ascending order),
+   *  or minus sign '-' (descending order).
    *  Supported values: 'name', 'modelName', 'siteName', 'featureEnabled'.
    *  The default sorting is by `name`
    */
-  orderBy?: string;
+  orderBy?: string[];
 
   /**
    * Indicates a page size (number of items). The values supported:

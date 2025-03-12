@@ -79,7 +79,8 @@ interface UserPhoneNumberInfo {
     | "Emergency";
 
   /**
-   * Usage type of phone number. Numbers of 'NumberPool' type will not be returned for phone number list requests
+   * Usage type of a phone number. Numbers of 'NumberPool' and 'NumberStorage' type are not returned in
+   *  phone number list requests
    */
   usageType?:
     | "MainCompanyNumber"
@@ -91,7 +92,9 @@ interface UserPhoneNumberInfo {
     | "ForwardedCompanyNumber"
     | "ContactCenterNumber"
     | "ConferencingNumber"
+    | "MeetingsNumber"
     | "NumberPool"
+    | "NumberStorage"
     | "BusinessMobileNumber"
     | "PartnerBusinessMobileNumber"
     | "IntegrationNumber";

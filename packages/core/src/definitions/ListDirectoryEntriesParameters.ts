@@ -27,7 +27,8 @@ interface ListDirectoryEntriesParameters {
     | "IvrMenu"
     | "ParkLocation"
     | "Limited"
-    | "External";
+    | "External"
+    | "DelegatedLinesGroup";
 
   /**
    * Type of extension group

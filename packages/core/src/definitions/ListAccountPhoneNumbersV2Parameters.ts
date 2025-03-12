@@ -46,6 +46,7 @@ interface ListAccountPhoneNumbersV2Parameters {
     | "ContactCenterNumber"
     | "ConferencingNumber"
     | "MeetingsNumber"
+    | "NumberStorage"
     | "BusinessMobileNumber"
     | "ELIN"
   )[];

@@ -2,7 +2,7 @@ import MessageAttachmentInfo from "./MessageAttachmentInfo.js";
 import ConversationInfo from "./ConversationInfo.js";
 import MessageStoreCallerInfoResponseFrom from "./MessageStoreCallerInfoResponseFrom.js";
 import MessageStoreCallerInfoResponseTo from "./MessageStoreCallerInfoResponseTo.js";
-import VoicemailOwnerResource from "./VoicemailOwnerResource.js";
+import OwnerResource from "./OwnerResource.js";
 
 interface GetMessageInfoResponse {
   /**
@@ -178,7 +178,7 @@ interface GetMessageInfoResponse {
   coverPageText?: string;
 
   /** */
-  owner?: VoicemailOwnerResource;
+  owner?: OwnerResource;
 }
 
 export default GetMessageInfoResponse;

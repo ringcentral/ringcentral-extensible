@@ -11627,6 +11627,36 @@ await rc.revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#RingSense-getRecordingInsights)
 in API Explorer.
 
+## getSessionInsights
+
+Get Session Insights
+
+| Name             | Value                                                                                               |
+| ---------------- | --------------------------------------------------------------------------------------------------- |
+| HTTP Method      | `GET`                                                                                               |
+| Endpoint         | `/ai/ringsense/v1/public/accounts/{accountId}/domains/{domain}/sessions/{sourceSessionId}/insights` |
+| Rate Limit Group | `Light`                                                                                             |
+| App Permission   | `RingSense`                                                                                         |
+| User Permission  | `N/A`                                                                                               |
+
+```ts
+const rc = new RingCentral({ clientId, clientSecret, server });
+await rc.authorize({ jwt });
+var result = await rc.ai().ringsense().v1().public().accounts(accountId)
+  .domains(domain).sessions(sourceSessionId).insights().get(
+    getSessionInsightsParameters,
+  );
+await rc.revoke();
+```
+
+- `getSessionInsightsParameters` is of type
+  [GetSessionInsightsParameters](./definitions/GetSessionInsightsParameters.ts)
+- `result` is of type
+  [GetSessionInsightsResponse](./definitions/GetSessionInsightsResponse.ts)
+
+[Try it out](https://developer.ringcentral.com/api-reference#RingSense-getSessionInsights)
+in API Explorer.
+
 ## readCallFlipSettings
 
 Get Call Flip Settings
@@ -12793,6 +12823,36 @@ await rc.revoke();
 - `result` is an empty string
 
 [Try it out](https://developer.ringcentral.com/api-reference#SMS-Templates-deleteUserMessageTemplate)
+in API Explorer.
+
+## smsConfigurationInfo
+
+Get SMS Configuration
+
+| Name             | Value                                                                                                              |
+| ---------------- | ------------------------------------------------------------------------------------------------------------------ |
+| HTTP Method      | `GET`                                                                                                              |
+| Endpoint         | `/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/phone-number/{phoneNumberId}/sms-configuration` |
+| Rate Limit Group | `Light`                                                                                                            |
+| App Permission   | `ReadAccounts`                                                                                                     |
+| User Permission  | `N/A`                                                                                                              |
+
+```ts
+const rc = new RingCentral({ clientId, clientSecret, server });
+await rc.authorize({ jwt });
+var result = await rc.restapi(apiVersion).account(accountId).extension(
+  extensionId,
+).phoneNumber(phoneNumberId).smsConfiguration().get();
+await rc.revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- Parameter `extensionId` is optional with default value `~`
+- `result` is of type
+  [SmsConfigurationResource](./definitions/SmsConfigurationResource.ts)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Phone-Numbers-smsConfigurationInfo)
 in API Explorer.
 
 ## readMultichannelCallRecordingContent

@@ -28,7 +28,8 @@ interface PhoneNumberResource {
     | "MobileNumber"
     | "ContactNumber"
     | "DirectNumber"
-    | "ForwardedNumber";
+    | "ForwardedNumber"
+    | "PartnerBusinessMobileNumber";
 
   /**
    * Specifies if a phone number should be hidden or not

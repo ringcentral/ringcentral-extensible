@@ -73,6 +73,12 @@ interface ReadCompanyCallLogParameters {
   telephonySessionId?: string;
 
   /**
+   * Category of metadata to be returned. If omitted, all call records are returned.
+   *  Multiple values are supported
+   */
+  metadataCategory?: string[];
+
+  /**
    * Indicates the page number to retrieve. Only positive number values are accepted
    * Minimum: 1
    * Format: int32
