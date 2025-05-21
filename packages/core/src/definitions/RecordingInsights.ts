@@ -19,7 +19,13 @@ interface RecordingInsights {
    * Required
    * Example: pbx
    */
-  domain?: "pbx";
+  domain?:
+    | "pbx"
+    | "rcv"
+    | "rcx"
+    | "connect-and-sell"
+    | "nice-incontact"
+    | "ms-teams";
 
   /**
    * Recording ID of the domain

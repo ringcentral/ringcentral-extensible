@@ -8,9 +8,7 @@ interface ParsePhoneNumberResponse {
    */
   uri?: string;
 
-  /**
-   * Required
-   */
+  /** */
   homeCountry?: GetCountryInfoNumberParser;
 
   /**

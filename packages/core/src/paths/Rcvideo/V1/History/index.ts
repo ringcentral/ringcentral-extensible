@@ -1,4 +1,5 @@
 import Meetings from "./Meetings/index.js";
+import Account from "./Account/index.js";
 import { ParentInterface, RingCentralInterface } from "../../../../types.js";
 
 class Index {
@@ -11,6 +12,10 @@ class Index {
   }
   public path(): string {
     return `${this._parent.path(false)}/history`;
+  }
+
+  public account(accountId: string | null = null): Account {
+    return new Account(this, accountId);
   }
 
   public meetings(meetingId: string | null = null): Meetings {

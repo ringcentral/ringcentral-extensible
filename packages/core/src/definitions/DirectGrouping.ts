@@ -12,6 +12,7 @@ interface DirectGrouping {
     | "Users"
     | "Queues"
     | "IVRs"
+    | "IVAs"
     | "SharedLines"
     | "UserGroups"
     | "Sites"

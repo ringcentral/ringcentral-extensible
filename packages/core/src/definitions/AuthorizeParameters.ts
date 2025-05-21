@@ -43,12 +43,12 @@ interface AuthorizeParameters {
    * Space-delimited, case-sensitive list of ASCII string values that specifies whether the Authorization Server prompts the End-User for
    *  re-authentication and consent. The defined values are:
    *
-   *  - `login` - RingCentral native login form,
-   *  - `sso` - Single Sign-On login form,
-   *  - `consent` - form to show the requested scope and prompt user for consent.
-   *
-   *  Either `login` or `sso` (or both) must be specified. The default
-   *  value is `login sso`
+   *  - `login` - RingCentral native login form;
+   *  - `sso` - Single Sign-On login form;
+   *  - `consent` - form to show the requested scope and prompt user for consent;
+   *  - `none` - indicates that non-interactive authorization is requested
+   *    (the flow will succeed only if the user has been already authenticated within the same browser session).
+   *    Cannot be combined with any other prompt option.
    * Default: login sso
    */
   prompt?: string;
@@ -56,17 +56,9 @@ interface AuthorizeParameters {
   /**
    * End-User's preferred languages and scripts for the user interface, represented as a space-separated list of
    *  [RFC-5646](https://datatracker.ietf.org/doc/html/rfc5646) language tag values, ordered by preference.
-   *
-   *  If this parameter is provided, its value overrides 'Accept-Language' header value and 'localeId' parameter value (if any)
    * Example: en-US
    */
   ui_locales?: string;
-
-  /**
-   * DEPRECATED: `ui_locales` parameter should be used instead
-   * Example: en-US
-   */
-  localeId?: string;
 
   /**
    * The code challenge value as defined by the PKCE specification -
@@ -82,14 +74,11 @@ interface AuthorizeParameters {
   code_challenge_method?: "plain" | "S256";
 
   /**
-   * String value used to associate a Client session with an ID Token, and to mitigate replay attacks. The value is passed through unmodified from the Authentication Request to the ID Token.
+   * String value used to associate a Client session with an ID Token, and to mitigate replay attacks.
+   *  The value is passed through unmodified from the Authentication Request to the ID Token.
+   *  (This parameter is defined in OpenID Connect 1.0 specification)
    */
   nonce?: string;
-
-  /**
-   * Login form user interface options (space-separated). By default, the UI options that are registered for this client application will be used
-   */
-  ui_options?: string;
 
   /**
    * Hint to the Authorization Server about the login identifier the End-User might use to log in.

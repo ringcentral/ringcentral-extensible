@@ -1,4 +1,4 @@
-import PhoneNumberResource from "./PhoneNumberResource.js";
+import AdgPhoneNumberResource from "./AdgPhoneNumberResource.js";
 
 interface AccountResource {
   /**
@@ -18,7 +18,7 @@ interface AccountResource {
   id?: string;
 
   /** */
-  mainNumber?: PhoneNumberResource;
+  mainNumber?: AdgPhoneNumberResource;
 }
 
 export default AccountResource;

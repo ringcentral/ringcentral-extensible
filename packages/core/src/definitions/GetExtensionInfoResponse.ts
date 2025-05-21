@@ -113,36 +113,37 @@ interface GetExtensionInfoResponse {
   statusInfo?: ExtensionStatusInfo;
 
   /**
-   * Extension type. Please note that legacy 'Department' extension type
-   *  corresponds to 'Call Queue' extensions in modern RingCentral product
-   *  terminology
+   * Type of the extension.
+   *  For unrecognized types the `Unknown` value is returned
+   * Example: User
    */
   type?:
     | "User"
-    | "FaxUser"
-    | "FlexibleUser"
-    | "VirtualUser"
-    | "DigitalUser"
     | "Department"
     | "Announcement"
     | "Voicemail"
-    | "SharedLinesGroup"
+    | "DigitalUser"
+    | "VirtualUser"
+    | "FaxUser"
     | "PagingOnly"
+    | "SharedLinesGroup"
+    | "DelegatedLinesGroup"
+    | "GroupCallPickup"
     | "IvrMenu"
     | "ApplicationExtension"
-    | "ParkLocation"
-    | "Bot"
-    | "Room"
-    | "RoomConnector"
-    | "Limited"
-    | "Site"
     | "ProxyAdmin"
-    | "DelegatedLinesGroup"
-    | "GroupCallPickup";
+    | "RoomConnector"
+    | "ParkLocation"
+    | "Limited"
+    | "Bot"
+    | "Site"
+    | "Room"
+    | "FlexibleUser"
+    | "Unknown";
 
   /**
-   * Extension subtype, if applicable. For any unsupported subtypes the
-   *  `Unknown` value will be returned
+   * Extension subtype, if applicable.
+   *  For unrecognized subtypes the `Unknown` value is returned
    */
   subType?:
     | "VideoPro"
@@ -169,7 +170,7 @@ interface GetExtensionInfoResponse {
   /**
    * Extension creation date/time, in ISO 8601 format
    * Format: date-time
-   * Example: 2024-06-06T07:01:14.123Z
+   * Example: Thu Jun 06 2024 00:01:14 GMT-0700 (Pacific Daylight Time)
    */
   creationTime?: string;
 

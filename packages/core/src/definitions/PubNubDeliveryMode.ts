@@ -1,6 +1,6 @@
 interface PubNubDeliveryMode {
   /**
-   * The transport type for this subscription, or the channel by which an app should be notified of an event
+   * The transport type for this subscription
    * Required
    */
   transportType?: "PubNub";
@@ -21,25 +21,27 @@ interface PubNubDeliveryMode {
   address?: string;
 
   /**
-   * PubNub credential required to subscribe to the channel
+   * (Only for a `PubNub` transport)
+   *  PubNub credential required to subscribe to the channel
    * Required
    */
   subscriberKey?: string;
 
   /**
-   * PubNub credential required to subscribe to the channel
+   * (Only for a `PubNub` transport)
+   *  PubNub credential required to subscribe to the channel
    * Required
    */
   secretKey?: string;
 
   /**
-   * (Only for a "PubNub" transport, returned only if `encryption` is `true`)
+   * (Only for a `PubNub` transport, returned only if `encryption` is `true`)
    *  Encryption algorithm used
    */
   encryptionAlgorithm?: "AES";
 
   /**
-   * (Only for a "PubNub" transport, returned only if `encryption` is `true`)
+   * (Only for a `PubNub` transport, returned only if `encryption` is `true`)
    *  Cryptographic key to decrypt PubNub notification messages
    */
   encryptionKey?: string;

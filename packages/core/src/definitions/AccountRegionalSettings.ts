@@ -1,19 +1,20 @@
-import CountryInfoShortModel from "./CountryInfoShortModel.js";
-import TimezoneInfo from "./TimezoneInfo.js";
+import CountryInfoShortModelV2 from "./CountryInfoShortModelV2.js";
+import TimezoneInfoBase from "./TimezoneInfoBase.js";
 import RegionalLanguageInfo from "./RegionalLanguageInfo.js";
 import GreetingLanguageInfo from "./GreetingLanguageInfo.js";
 import FormattingLocaleInfo from "./FormattingLocaleInfo.js";
 import CurrencyInfo from "./CurrencyInfo.js";
 
 /**
- * Account level region data (web service Auto-Receptionist settings)
+ * Regional data (timezone, home country, language) of an extension/account.
+ * The default is Company (Auto-Receptionist) settings
  */
 interface AccountRegionalSettings {
   /** */
-  homeCountry?: CountryInfoShortModel;
+  homeCountry?: CountryInfoShortModelV2;
 
   /** */
-  timezone?: TimezoneInfo;
+  timezone?: TimezoneInfoBase;
 
   /** */
   language?: RegionalLanguageInfo;

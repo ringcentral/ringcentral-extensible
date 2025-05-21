@@ -1,7 +1,6 @@
 import BillingPlanInfo from "./BillingPlanInfo.js";
 import BrandInfo from "./BrandInfo.js";
 import ServicePlanInfo from "./ServicePlanInfo.js";
-import TargetServicePlanInfo from "./TargetServicePlanInfo.js";
 import CountryInfoShortModel from "./CountryInfoShortModel.js";
 import UBrandInfo from "./UBrandInfo.js";
 
@@ -26,7 +25,7 @@ interface ServiceInfo {
   servicePlan?: ServicePlanInfo;
 
   /** */
-  targetServicePlan?: TargetServicePlanInfo;
+  targetServicePlan?: ServicePlanInfo;
 
   /** */
   contractedCountry?: CountryInfoShortModel;

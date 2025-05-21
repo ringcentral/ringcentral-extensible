@@ -112,6 +112,7 @@ interface ListMessagesParameters {
     | "Site"
     | "Room"
     | "FlexibleUser"
+    | "Unknown"
   )[];
 }
 

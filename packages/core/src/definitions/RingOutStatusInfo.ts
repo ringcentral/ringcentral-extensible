@@ -3,7 +3,7 @@
  */
 interface RingOutStatusInfo {
   /**
-   * Status of a call
+   * Status of a call and calling/called party
    */
   callStatus?:
     | "Invalid"
@@ -17,10 +17,11 @@ interface RingOutStatusInfo {
     | "InternationalDisabled"
     | "DestinationBlocked"
     | "NotEnoughFunds"
-    | "NoSuchUser";
+    | "NoSuchUser"
+    | "Error";
 
   /**
-   * Status of a calling party
+   * Status of a call and calling/called party
    */
   callerStatus?:
     | "Invalid"
@@ -34,10 +35,11 @@ interface RingOutStatusInfo {
     | "InternationalDisabled"
     | "DestinationBlocked"
     | "NotEnoughFunds"
-    | "NoSuchUser";
+    | "NoSuchUser"
+    | "Error";
 
   /**
-   * Status of a called party
+   * Status of a call and calling/called party
    */
   calleeStatus?:
     | "Invalid"
@@ -51,7 +53,8 @@ interface RingOutStatusInfo {
     | "InternationalDisabled"
     | "DestinationBlocked"
     | "NotEnoughFunds"
-    | "NoSuchUser";
+    | "NoSuchUser"
+    | "Error";
 }
 
 export default RingOutStatusInfo;

@@ -4,6 +4,7 @@ import ReasonInfo from "./ReasonInfo.js";
 interface FeatureInfo {
   /**
    * Internal identifier of a feature
+   * Required
    */
   id?: string;
 
@@ -13,6 +14,7 @@ interface FeatureInfo {
    *  permissions of the extension. If the authorized user gets features of
    *  the other extension, only features that can be delegated are returned
    *  (such as configuration by administrators).
+   * Required
    */
   available?: boolean;
 

@@ -6,6 +6,12 @@ import MissedCallsInfo from "./MissedCallsInfo.js";
 
 interface NotificationSettingsUpdateRequest {
   /**
+   * Canonical URI of notifications settings resource
+   * Format: uri
+   */
+  uri?: string;
+
+  /**
    * List of notification recipient email addresses. Should not be empty
    *  if 'includeManagers' parameter is set to false
    */

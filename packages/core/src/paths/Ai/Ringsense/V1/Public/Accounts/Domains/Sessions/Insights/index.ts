@@ -1,4 +1,4 @@
-import GetSessionInsightsResponse from "../../../../../../../../../definitions/GetSessionInsightsResponse.js";
+import SessionsInsightsResource from "../../../../../../../../../definitions/SessionsInsightsResource.js";
 import GetSessionInsightsParameters from "../../../../../../../../../definitions/GetSessionInsightsParameters.js";
 import {
   ParentInterface,
@@ -27,8 +27,8 @@ class Index {
   public async get(
     queryParams?: GetSessionInsightsParameters,
     restRequestConfig?: RestRequestConfig,
-  ): Promise<GetSessionInsightsResponse> {
-    const r = await this.rc.get<GetSessionInsightsResponse>(
+  ): Promise<SessionsInsightsResource> {
+    const r = await this.rc.get<SessionsInsightsResource>(
       this.path(),
       queryParams,
       restRequestConfig,

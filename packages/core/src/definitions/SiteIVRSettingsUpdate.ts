@@ -1,12 +1,12 @@
 import SiteIVRTopMenuUpdate from "./SiteIVRTopMenuUpdate.js";
-import SiteIvrActionsUpdate from "./SiteIvrActionsUpdate.js";
+import SiteIvrActions from "./SiteIvrActions.js";
 
 interface SiteIVRSettingsUpdate {
   /** */
   topMenu?: SiteIVRTopMenuUpdate;
 
   /** */
-  actions?: SiteIvrActionsUpdate[];
+  actions?: SiteIvrActions[];
 }
 
 export default SiteIVRSettingsUpdate;

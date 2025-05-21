@@ -9,9 +9,9 @@ interface ListExtensionsParameters {
 
   /**
    * Extension email address. Multiple values are accepted
-   * Example: alice.smith@example.com&email=bob.johnson@example.com
+   * Example: alice.smith@example.com,bob.johnson@example.com
    */
-  email?: string;
+  email?: string[];
 
   /**
    * Indicates a page number to retrieve. Only positive number values
@@ -37,29 +37,33 @@ interface ListExtensionsParameters {
     ("Enabled" | "Disabled" | "Frozen" | "NotActivated" | "Unassigned")[];
 
   /**
-   * Extension type. Multiple values are supported. Please note
+   * Extension type. Please note
    *  that legacy 'Department' extension type corresponds to 'Call Queue'
    *  extensions in modern RingCentral product terminology
    */
   type?: (
     | "User"
-    | "FaxUser"
-    | "FlexibleUser"
-    | "VirtualUser"
-    | "DigitalUser"
     | "Department"
     | "Announcement"
     | "Voicemail"
-    | "SharedLinesGroup"
+    | "DigitalUser"
+    | "VirtualUser"
+    | "FaxUser"
     | "PagingOnly"
+    | "SharedLinesGroup"
+    | "DelegatedLinesGroup"
+    | "GroupCallPickup"
     | "IvrMenu"
     | "ApplicationExtension"
+    | "ProxyAdmin"
+    | "RoomConnector"
     | "ParkLocation"
     | "Limited"
     | "Bot"
-    | "ProxyAdmin"
-    | "DelegatedLinesGroup"
     | "Site"
+    | "Room"
+    | "FlexibleUser"
+    | "Unknown"
   )[];
 }
 

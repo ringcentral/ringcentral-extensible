@@ -1,5 +1,5 @@
 import CloudRecording from "./CloudRecording.js";
-import Paging from "./Paging.js";
+import BasicPaging from "./BasicPaging.js";
 
 /**
  * Recordings page
@@ -14,7 +14,7 @@ interface CloudRecordings {
   /**
    * Required
    */
-  paging?: Paging;
+  paging?: BasicPaging;
 }
 
 export default CloudRecordings;

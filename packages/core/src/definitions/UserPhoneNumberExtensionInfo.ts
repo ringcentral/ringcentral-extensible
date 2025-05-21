@@ -39,19 +39,20 @@ interface UserPhoneNumberExtensionInfo {
    *  corresponds to 'Call Queue' extensions in modern RingCentral product terminology
    */
   type?:
-    | "User"
-    | "FaxUser"
-    | "VirtualUser"
-    | "DigitalUser"
-    | "Department"
     | "Announcement"
-    | "Voicemail"
-    | "SharedLinesGroup"
-    | "PagingOnly"
-    | "IvrMenu"
     | "ApplicationExtension"
+    | "DigitalUser"
+    | "DelegatedLinesGroup"
+    | "Department"
+    | "FaxUser"
+    | "IvrMenu"
+    | "PagingOnly"
     | "ParkLocation"
-    | "Site";
+    | "SharedLinesGroup"
+    | "Site"
+    | "User"
+    | "VirtualUser"
+    | "Voicemail";
 
   /** */
   contactCenterProvider?: ContactCenterProvider;

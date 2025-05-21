@@ -1,11 +1,13 @@
 import SendActivationEmail from "./SendActivationEmail/index.js";
 import SendWelcomeEmail from "./SendWelcomeEmail/index.js";
 import BatchProvisioning from "./BatchProvisioning/index.js";
+import RegionalSettings from "./RegionalSettings/index.js";
 import DeviceInventory from "./DeviceInventory/index.js";
 import PhoneNumbers from "./PhoneNumbers/index.js";
 import CostCenters from "./CostCenters/index.js";
 import Extensions from "./Extensions/index.js";
 import Devices from "./Devices/index.js";
+import Sms from "./Sms/index.js";
 import AccountInfo from "../../../../definitions/AccountInfo.js";
 import {
   ParentInterface,
@@ -51,6 +53,10 @@ class Index {
     return r.data;
   }
 
+  public sms(): Sms {
+    return new Sms(this);
+  }
+
   public devices(deviceId: string | null = null): Devices {
     return new Devices(this, deviceId);
   }
@@ -69,6 +75,10 @@ class Index {
 
   public deviceInventory(): DeviceInventory {
     return new DeviceInventory(this);
+  }
+
+  public regionalSettings(): RegionalSettings {
+    return new RegionalSettings(this);
   }
 
   public batchProvisioning(): BatchProvisioning {

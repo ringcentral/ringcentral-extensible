@@ -1,38 +1,31 @@
 /**
- * Participant information
+ * Basic participant information
  */
 interface Participant {
+  /**
+   * Required
+   */
+  id?: string;
+
+  /** */
+  accountId?: string;
+
+  /** */
+  extensionId?: string;
+
+  /** */
+  displayName?: string;
+
+  /**
+   * Non empty if user joined by phone
+   */
+  callerId?: string;
+
   /**
    * Participant type
    * Required
    */
   type?: string;
-
-  /**
-   * id
-   * Required
-   */
-  id?: string;
-
-  /**
-   * Account id
-   */
-  accountId?: string;
-
-  /**
-   * Extension id
-   */
-  extensionId?: string;
-
-  /**
-   * Display name
-   */
-  displayName?: string;
-
-  /**
-   * Caller id
-   */
-  callerId?: string;
 
   /**
    * Pass-thru parameter in join url

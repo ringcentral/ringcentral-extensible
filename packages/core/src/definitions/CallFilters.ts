@@ -45,6 +45,10 @@ interface CallFilters {
     | "Unknown"
     | "Missed"
     | "Accepted"
+    | "Transferred"
+    | "PickedUp"
+    | "Forwarded"
+    | "AnsweredElsewhere"
   )[];
 
   /**
@@ -91,7 +95,13 @@ interface CallFilters {
     | "Transferred"
     | "Outbound"
     | "Overflow"
+    | "QueueCallPickup"
   )[];
+
+  /**
+   * Filtering of calls based on the party that ended that call (joined via OR)
+   */
+  endingParties?: ("Caller" | "Callee" | "System")[];
 }
 
 export default CallFilters;

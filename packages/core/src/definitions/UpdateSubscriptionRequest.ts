@@ -12,7 +12,6 @@ interface UpdateSubscriptionRequest {
    *  | ------------------- | ------------------------------ |
    *  | `WebHook`           | 315360000 seconds (10 years)   |
    *  | `RC/APNS`, `RC/GSM` | 7776000 seconds (90 days)      |
-   *  | `PubNub`            | 900 seconds (15 minutes)       |
    *  | `WebSocket`         | n/a (the parameter is ignored) |
    * Minimum: 1
    * Format: int32

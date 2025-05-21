@@ -1,6 +1,6 @@
 import Participants from "./Participants/index.js";
 import Invitees from "./Invitees/index.js";
-import SessionResource from "../../../../../../definitions/SessionResource.js";
+import HistorySessionResource from "../../../../../../definitions/HistorySessionResource.js";
 import {
   ParentInterface,
   RestRequestConfig,
@@ -35,11 +35,11 @@ class Index {
    */
   public async get(
     restRequestConfig?: RestRequestConfig,
-  ): Promise<SessionResource> {
+  ): Promise<HistorySessionResource> {
     if (this.sessionId === null) {
       throw new Error("sessionId must be specified.");
     }
-    const r = await this.rc.get<SessionResource>(
+    const r = await this.rc.get<HistorySessionResource>(
       this.path(),
       undefined,
       restRequestConfig,

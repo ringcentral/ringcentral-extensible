@@ -31,7 +31,7 @@ interface CallQueueDetails {
   /**
    * Indicates whether it is an emergency call queue extension or not
    */
-  subType?: "Emergency";
+  subType?: "Emergency" | "Unknown";
 
   /** */
   site?: SiteBasicInfo;

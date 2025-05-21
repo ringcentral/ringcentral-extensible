@@ -17,7 +17,8 @@ interface CompanyAnsweringRuleRequest {
   enabled?: boolean;
 
   /**
-   * Type of an answering rule, the default value is 'Custom' = ['BusinessHours', 'AfterHours', 'Custom']
+   * Type of an answering rule
+   * Default: Custom
    */
   type?: "BusinessHours" | "AfterHours" | "Custom";
 

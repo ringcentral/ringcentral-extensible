@@ -1,5 +1,5 @@
 import AccountResource from "./AccountResource.js";
-import PhoneNumberResource from "./PhoneNumberResource.js";
+import AdgPhoneNumberResource from "./AdgPhoneNumberResource.js";
 import AccountDirectoryProfileImageResource from "./AccountDirectoryProfileImageResource.js";
 import BusinessSiteResource from "./BusinessSiteResource.js";
 import CustomFieldResource from "./CustomFieldResource.js";
@@ -93,7 +93,7 @@ interface ContactResource {
   jobTitle?: string;
 
   /** */
-  phoneNumbers?: PhoneNumberResource[];
+  phoneNumbers?: AdgPhoneNumberResource[];
 
   /** */
   profileImage?: AccountDirectoryProfileImageResource;

@@ -47,13 +47,15 @@ interface DetailedExtensionPresenceWithSIPEventBody {
   meetingStatus?: "Connected" | "Disconnected";
 
   /**
-   * Extended DnD (Do not Disturb) status
+   * Do Not Disturb status. Not applicable for User extensions
+   *  if the new communication handling service is activated on account
    */
   dndStatus?:
     | "TakeAllCalls"
-    | "DoNotAcceptAnyCalls"
     | "DoNotAcceptDepartmentCalls"
-    | "TakeDepartmentCallsOnly";
+    | "TakeDepartmentCallsOnly"
+    | "DoNotAcceptAnyCalls"
+    | "Unknown";
 
   /**
    * If `true` enables other extensions to see the extension presence status
@@ -61,7 +63,8 @@ interface DetailedExtensionPresenceWithSIPEventBody {
   allowSeeMyPresence?: boolean;
 
   /**
-   * If `true` enables to ring extension phone, if any user monitored by this extension is ringing
+   * If `true` enables to ring extension phone, if any user monitored
+   *  by this extension is ringing
    */
   ringOnMonitoredCall?: boolean;
 

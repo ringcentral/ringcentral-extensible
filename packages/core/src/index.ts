@@ -161,15 +161,7 @@ class RingCentral implements RingCentralInterface {
     options: PasswordFlowOptions | AuthCodeFlowOptions | JwtFlowOptions,
   ): Promise<TokenInfo> {
     const getTokenRequest: GetTokenRequest = {};
-    if ("username" in options) {
-      console.warn(
-        "Username/password authentication is deprecated. Please migrate to the JWT grant type.",
-      );
-      getTokenRequest.grant_type = "password";
-      getTokenRequest.username = options.username;
-      getTokenRequest.extension = options.extension;
-      getTokenRequest.password = options.password;
-    } else if ("code" in options) {
+    if ("code" in options) {
       getTokenRequest.grant_type = "authorization_code";
       getTokenRequest.code = options.code;
       getTokenRequest.redirect_uri = options.redirect_uri;

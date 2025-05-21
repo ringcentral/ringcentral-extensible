@@ -1,9 +1,17 @@
 interface RevokeTokenRequest {
   /**
-   * Access or refresh token to be revoked (along with the entire OAuth session)
-   * Required
+   * Access or refresh token to be revoked (along with the entire OAuth session).
+   *  Required, unless it is passed via the `token` query parameter
    */
   token?: string;
+
+  /**
+   * The registered identifier of a client application.
+   *  Used to identify a client ONLY if the client authentication is not required and
+   *  corresponding credentials are not provided with this request
+   * Example: AZwEVwGEcfGet2PCouA7K6
+   */
+  client_id?: string;
 
   /**
    * Client assertion type for the `client_secret_jwt` or `private_key_jwt` client authentication types,

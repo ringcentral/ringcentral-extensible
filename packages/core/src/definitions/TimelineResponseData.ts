@@ -14,6 +14,7 @@ interface TimelineResponseData {
     | "Users"
     | "Queues"
     | "IVRs"
+    | "IVAs"
     | "SharedLines"
     | "UserGroups"
     | "Sites"

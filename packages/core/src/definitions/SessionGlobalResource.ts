@@ -113,7 +113,9 @@ interface SessionGlobalResource {
 
   /**
    * Session runtime status (for 'Active' Sessions only).
-   *  It is omitted (or null) if the status is not Active
+   *  Please note that 'Idle' status shouldn't be returned in the API
+   *  (but can be delivered in an event)
+   * Example: Live
    */
   runtimeStatus?:
     | "Idle"

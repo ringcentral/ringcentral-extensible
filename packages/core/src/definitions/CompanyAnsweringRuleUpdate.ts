@@ -5,6 +5,11 @@ import GreetingInfo from "./GreetingInfo.js";
 
 interface CompanyAnsweringRuleUpdate {
   /**
+   * Identifier of an answering rule
+   */
+  id?: string;
+
+  /**
    * Specifies if a rule is active or inactive. The default value is `true`
    * Default: true
    */

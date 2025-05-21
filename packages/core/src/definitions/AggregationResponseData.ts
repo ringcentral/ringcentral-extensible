@@ -14,6 +14,7 @@ interface AggregationResponseData {
     | "Users"
     | "Queues"
     | "IVRs"
+    | "IVAs"
     | "SharedLines"
     | "UserGroups"
     | "Sites"

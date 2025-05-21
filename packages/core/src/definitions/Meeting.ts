@@ -7,22 +7,22 @@ import Recording from "./Recording.js";
  */
 interface Meeting {
   /**
-   * Call id
+   * Meeting id
    * Required
    */
   id?: string;
-
-  /**
-   * Bridge id
-   * Required
-   */
-  bridgeId?: string;
 
   /**
    * Short bridge id
    * Required
    */
   shortId?: string;
+
+  /**
+   * Bridge id
+   * Required
+   */
+  bridgeId?: string;
 
   /**
    * Start time ISO 8601
@@ -32,17 +32,22 @@ interface Meeting {
   startTime?: string;
 
   /**
-   * Duration second
+   * Meeting name
+   * Required
+   */
+  displayName?: string;
+
+  /**
+   * Required
+   */
+  hostInfo?: Host;
+
+  /**
+   * Meeting duration in seconds
    * Format: int32
    * Example: 36
    */
   duration?: number;
-
-  /**
-   * Meetings name
-   * Required
-   */
-  displayName?: string;
 
   /**
    * Meeting type
@@ -55,11 +60,6 @@ interface Meeting {
    * Required
    */
   status?: "InProgress" | "Done";
-
-  /**
-   * Required
-   */
-  hostInfo?: Host;
 
   /**
    * Describe access rights which has participants to meeting

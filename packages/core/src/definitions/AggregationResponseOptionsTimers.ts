@@ -7,6 +7,7 @@ import AggregationResponseOptionsTimersCallsDurationByResult from "./Aggregation
 import AggregationResponseOptionsTimersCallsDurationByCompanyHours from "./AggregationResponseOptionsTimersCallsDurationByCompanyHours.js";
 import AggregationResponseOptionsTimersCallsDurationByQueueSla from "./AggregationResponseOptionsTimersCallsDurationByQueueSla.js";
 import AggregationResponseOptionsTimersCallsDurationByType from "./AggregationResponseOptionsTimersCallsDurationByType.js";
+import AggregationResponseOptionsTimersCallsDurationByEndingParty from "./AggregationResponseOptionsTimersCallsDurationByEndingParty.js";
 
 /**
  * The formula is defined by `aggregationType` and `aggregationInterval` for every timer individually.
@@ -43,7 +44,7 @@ interface AggregationResponseOptionsTimers {
   callsSegmentsDuration?: AggregationResponseOptionsTimersCallsSegmentsDuration;
 
   /**
-   * Aggregation of calls duration by result (Completed, Abandoned, Voicemail, Unknown, Missed, Accepted)
+   * Aggregation of calls duration by result (Completed, Abandoned, Voicemail, Unknown, Missed, Accepted, Transferred, PickedUp, AnsweredElsewhere)
    */
   callsDurationByResult?: AggregationResponseOptionsTimersCallsDurationByResult;
 
@@ -60,9 +61,15 @@ interface AggregationResponseOptionsTimers {
     AggregationResponseOptionsTimersCallsDurationByQueueSla;
 
   /**
-   * Aggregation of calls duration by type (Direct, FromQueue, ParkRetrieval, Transferred, Outbound)
+   * Aggregation of calls duration by type (Direct, FromQueue, ParkRetrieval, Transferred, Outbound, QueueCallPickup)
    */
   callsDurationByType?: AggregationResponseOptionsTimersCallsDurationByType;
+
+  /**
+   * Aggregation of calls duration by party that ended the call (Callee, Caller, System)
+   */
+  callsDurationByEndingParty?:
+    AggregationResponseOptionsTimersCallsDurationByEndingParty;
 }
 
 export default AggregationResponseOptionsTimers;

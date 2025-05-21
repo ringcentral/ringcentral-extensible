@@ -18,7 +18,7 @@ interface ServicePlanInfo {
   edition?: string;
 
   /** */
-  freemiumProductType?: "Freyja" | "Phoenix";
+  freemiumProductType?: "Freyja" | "Phoenix" | "PbxBasic";
 }
 
 export default ServicePlanInfo;

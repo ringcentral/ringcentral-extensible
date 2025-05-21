@@ -3,6 +3,7 @@ import MessageStoreConfiguration from "./MessageStoreConfiguration/index.js";
 import AddressBookBulkUpload from "./AddressBookBulkUpload/index.js";
 import MessageStoreTemplates from "./MessageStoreTemplates/index.js";
 import CallMonitoringGroups from "./CallMonitoringGroups/index.js";
+import CallLogExtractSync from "./CallLogExtractSync/index.js";
 import ExtensionBulkUpdate from "./ExtensionBulkUpdate/index.js";
 import MessageStoreReport from "./MessageStoreReport/index.js";
 import EmergencyLocations from "./EmergencyLocations/index.js";
@@ -211,6 +212,10 @@ class Index {
 
   public extensionBulkUpdate(): ExtensionBulkUpdate {
     return new ExtensionBulkUpdate(this);
+  }
+
+  public callLogExtractSync(): CallLogExtractSync {
+    return new CallLogExtractSync(this);
   }
 
   public callMonitoringGroups(

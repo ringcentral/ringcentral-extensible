@@ -1,4 +1,5 @@
 import CallFlipNumbers from "./CallFlipNumbers/index.js";
+import CommHandling from "./CommHandling/index.js";
 import Devices from "./Devices/index.js";
 import BulkDeleteUsersResponse from "../../../../../definitions/BulkDeleteUsersResponse.js";
 import BulkDeleteUsersRequest from "../../../../../definitions/BulkDeleteUsersRequest.js";
@@ -20,8 +21,9 @@ class Index {
     return `${this._parent.path()}/extensions`;
   }
   /**
-   * Deletes user extension(s) and either keeps or destroys the assets - numbers and devices.
-   * Multiple extensions can be deleted with a single API call.
+   * Deletes extension(s) of User and Limited types, and depending on device type either keeps or destroys
+   * the assets - numbers and devices. If a device is rented or bought in RC, it will be moved to the inventory.
+   * A BYOD (Other Phone) device will be deleted. Multiple extensions can be deleted by a single API call.
    *
    * HTTP Method: delete
    * Endpoint: /restapi/v2/accounts/{accountId}/extensions
@@ -44,6 +46,10 @@ class Index {
 
   public devices(deviceId: string | null = null): Devices {
     return new Devices(this, deviceId);
+  }
+
+  public commHandling(): CommHandling {
+    return new CommHandling(this);
   }
 
   public callFlipNumbers(): CallFlipNumbers {

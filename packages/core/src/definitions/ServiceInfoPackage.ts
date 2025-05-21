@@ -12,8 +12,9 @@ interface ServiceInfoPackage {
   /**
    * Billing package version
    * Required
+   * Example: 1
    */
-  version?: "1";
+  version?: string;
 }
 
 export default ServiceInfoPackage;

@@ -69,7 +69,8 @@ interface UserPhoneNumberInfo {
   type?: "VoiceFax" | "VoiceOnly" | "FaxOnly";
 
   /**
-   * Extension subtype, if applicable. For any unsupported subtypes the 'Unknown' value will be returned
+   * Extension subtype, if applicable.
+   *  For unrecognized subtypes the `Unknown` value is returned
    */
   subType?:
     | "VideoPro"

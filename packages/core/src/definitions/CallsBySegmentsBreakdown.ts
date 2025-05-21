@@ -64,6 +64,13 @@ interface CallsBySegmentsBreakdown {
    * Format: double
    */
   setup?: number;
+
+  /**
+   * Value for Forwarding segment
+   * Required
+   * Format: double
+   */
+  forwarding?: number;
 }
 
 export default CallsBySegmentsBreakdown;

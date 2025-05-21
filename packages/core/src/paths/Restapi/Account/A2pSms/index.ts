@@ -1,4 +1,3 @@
-import OptOuts from "./OptOuts/index.js";
 import Statuses from "./Statuses/index.js";
 import Messages from "./Messages/index.js";
 import Batches from "./Batches/index.js";
@@ -26,10 +25,6 @@ class Index {
 
   public statuses(): Statuses {
     return new Statuses(this);
-  }
-
-  public optOuts(): OptOuts {
-    return new OptOuts(this);
   }
 }
 export default Index;

@@ -1,7 +1,6 @@
 import BrandInfo from "./BrandInfo.js";
 import CountryInfoShortModel from "./CountryInfoShortModel.js";
 import ServicePlanInfo from "./ServicePlanInfo.js";
-import TargetServicePlanInfo from "./TargetServicePlanInfo.js";
 import BillingPlanInfo from "./BillingPlanInfo.js";
 import ServiceFeatureInfo from "./ServiceFeatureInfo.js";
 import AccountLimits from "./AccountLimits.js";
@@ -33,7 +32,7 @@ interface AccountServiceInfo {
   servicePlan?: ServicePlanInfo;
 
   /** */
-  targetServicePlan?: TargetServicePlanInfo;
+  targetServicePlan?: ServicePlanInfo;
 
   /** */
   billingPlan?: BillingPlanInfo;

@@ -8,6 +8,7 @@ import AggregationResponseOptionsCountersCallsByCompanyHours from "./Aggregation
 import AggregationResponseOptionsCountersCallsByQueueSla from "./AggregationResponseOptionsCountersCallsByQueueSla.js";
 import AggregationResponseOptionsCountersCallsByActions from "./AggregationResponseOptionsCountersCallsByActions.js";
 import AggregationResponseOptionsCountersCallsByType from "./AggregationResponseOptionsCountersCallsByType.js";
+import AggregationResponseOptionsCountersCallsByEndingParty from "./AggregationResponseOptionsCountersCallsByEndingParty.js";
 import AggregationResponseOptionsCountersQueueOpportunities from "./AggregationResponseOptionsCountersQueueOpportunities.js";
 
 /**
@@ -42,7 +43,7 @@ interface AggregationResponseOptionsCounters {
   callsSegments?: AggregationResponseOptionsCountersCallsSegments;
 
   /**
-   * Aggregation of calls count by result (Completed, Abandoned, Voicemail, Unknown, Missed, Accepted)
+   * Aggregation of calls count by result (Completed, Abandoned, Voicemail, Unknown, Missed, Accepted, Transferred, PickedUp, AnsweredElsewhere)
    */
   callsByResult?: AggregationResponseOptionsCountersCallsByResult;
 
@@ -62,9 +63,14 @@ interface AggregationResponseOptionsCounters {
   callsByActions?: AggregationResponseOptionsCountersCallsByActions;
 
   /**
-   * Aggregation of calls count by type (Direct, FromQueue, ParkRetrieval, Transferred, Outbound)
+   * Aggregation of calls count by type (Direct, FromQueue, ParkRetrieval, Transferred, Outbound, QueueCallPickup)
    */
   callsByType?: AggregationResponseOptionsCountersCallsByType;
+
+  /**
+   * Aggregation of calls count by party that ended the call (Caller, Callee, System)
+   */
+  callsByEndingParty?: AggregationResponseOptionsCountersCallsByEndingParty;
 
   /**
    * Aggregation of calls count by the total number of times a Queue call was presented to the user. It is limited to `groupBy` Users and `groupByMembers` (Department, Queue, Site, UserGroup) grouping. Only the listed below options for call filters are applicable to `queueOpportunities` and provide meaningful results: `queues` (selected queue extension ids), `callResults` (Missed, Abandoned), `callResponses` (Answered, NotAnswered), `origins` (Internal, External)

@@ -14,7 +14,8 @@ interface CallSegmentFilter {
     | "IvrPrompt"
     | "Voicemail"
     | "VmGreeting"
-    | "Setup";
+    | "Setup"
+    | "Forwarding";
 
   /** */
   length?: CallSegmentLengthFilter;

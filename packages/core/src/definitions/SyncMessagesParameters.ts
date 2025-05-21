@@ -102,6 +102,7 @@ interface SyncMessagesParameters {
     | "Site"
     | "Room"
     | "FlexibleUser"
+    | "Unknown"
   )[];
 }
 

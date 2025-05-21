@@ -1,4 +1,4 @@
-import PhoneNumberResource from "./PhoneNumberResource.js";
+import AdgPhoneNumberResource from "./AdgPhoneNumberResource.js";
 
 interface FederatedAccountResource {
   /** */
@@ -23,7 +23,7 @@ interface FederatedAccountResource {
   linkCreationTime?: string;
 
   /** */
-  mainNumber?: PhoneNumberResource;
+  mainNumber?: AdgPhoneNumberResource;
 }
 
 export default FederatedAccountResource;

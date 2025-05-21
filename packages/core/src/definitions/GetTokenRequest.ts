@@ -1,8 +1,16 @@
 /**
- * Token endpoint request parameters used in the "Guest" authorization flow
- * with the `guest` grant type
+ * Token endpoint request parameters used in the "Refresh Token" flow
+ * with the `refresh_token` grant type
  */
 interface GetTokenRequest {
+  /**
+   * The registered identifier of a client application.
+   *  Used to identify a client ONLY if the client authentication is not required and
+   *  corresponding credentials are not provided with this request
+   * Example: AZwEVwGEcfGet2PCouA7K6
+   */
+  client_id?: string;
+
   /**
    * Client assertion type for the `client_secret_jwt` or `private_key_jwt` client authentication types,
    *  as defined by [RFC-7523](https://datatracker.ietf.org/doc/html/rfc7523#section-2.2).
@@ -19,37 +27,11 @@ interface GetTokenRequest {
   client_assertion?: string;
 
   /**
-   * Grant type
-   * Required
-   */
-  grant_type?:
-    | "authorization_code"
-    | "password"
-    | "refresh_token"
-    | "client_credentials"
-    | "urn:ietf:params:oauth:grant-type:jwt-bearer"
-    | "urn:ietf:params:oauth:grant-type:device_code"
-    | "device_certificate"
-    | "partner_jwt"
-    | "guest"
-    | "personal_jwt"
-    | "otp"
-    | "ivr_pin";
-
-  /**
    * The list of application permissions (OAuth scopes) requested.
    *  By default, it includes all permissions configured on
    *  the client application registration
    */
   scope?: string;
-
-  /**
-   * The registered identifier of a client application.
-   *  Used to identify a client ONLY if the client authentication is not required and
-   *  corresponding credentials are not provided with this request
-   * Example: AZwEVwGEcfGet2PCouA7K6
-   */
-  client_id?: string;
 
   /**
    * The unique identifier of a client application instance. If not
@@ -75,8 +57,17 @@ interface GetTokenRequest {
   refresh_token_ttl?: number;
 
   /**
-   * For `otp` grant type only.
-   *  One-time password code
+   * Grant type
+   * Required
+   */
+  grant_type?:
+    | "authorization_code"
+    | "urn:ietf:params:oauth:grant-type:jwt-bearer"
+    | "partner_jwt"
+    | "refresh_token";
+
+  /**
+   * For `authorization_code` grant type only. User's authorization code
    * Required
    */
   code?: string;
@@ -97,35 +88,6 @@ interface GetTokenRequest {
   code_verifier?: string;
 
   /**
-   * For `password` grant type only. User login name: email or phone number in E.164 format
-   * Required
-   */
-  username?: string;
-
-  /**
-   * For `password` grant type only. User's password
-   * Required
-   * Format: password
-   */
-  password?: string;
-
-  /**
-   * For `password` grant type only. Optional. Extension short number. If a company number
-   *  is specified as a username, and extension is not specified, the
-   *  server will attempt to authenticate client as main company administrator
-   *
-   *  DEPRECATED: use extension number embedded into username string like `+16501234567*101`
-   */
-  extension?: string;
-
-  /**
-   * IVR pin for pin-based authentication.
-   *
-   *  DEPRECATED: use a dedicated `ivr_pin` grant type instead
-   */
-  pin?: string;
-
-  /**
    * For `urn:ietf:params:oauth:grant-type:jwt-bearer` or `partner_jwt` grant types only.
    *  Authorization grant assertion (JWT)
    *  as defined by [RFC-7523](https://datatracker.ietf.org/doc/html/rfc7523#section-2.1).
@@ -138,49 +100,6 @@ interface GetTokenRequest {
    * Required
    */
   refresh_token?: string;
-
-  /**
-   * For `ivr_pin` grant type only. User's IVR pin.
-   * Required
-   */
-  ivr_pin?: string;
-
-  /**
-   * For `urn:ietf:params:oauth:grant-type:device_code` grant type only.
-   *  The device verification code as defined by [RFC-8628](https://datatracker.ietf.org/doc/html/rfc8628#section-3.4)
-   * Required
-   */
-  device_code?: string;
-
-  /**
-   * RingCentral Brand identifier.
-   * Required
-   */
-  brand_id?: string;
-
-  /**
-   * RingCentral internal account ID
-   * Required
-   */
-  account_id?: string;
-
-  /**
-   * The ID of the account on RingCentral partner's side
-   * Required
-   */
-  partner_account_id?: string;
-
-  /**
-   * Resource type for the guest access.
-   * Required
-   */
-  resource_type?: string;
-
-  /**
-   * Resource URL for the guest access.
-   * Required
-   */
-  resource?: string;
 }
 
 export default GetTokenRequest;

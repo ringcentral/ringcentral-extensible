@@ -3,6 +3,11 @@ import AccountPhoneNumberInfoExtension from "./AccountPhoneNumberInfoExtension.j
 
 interface AccountPhoneNumberInfo {
   /**
+   * Phone number activation status. Determine whether phone number migration is completed on the partner side.
+   */
+  activationStatus?: "Active" | "Inactive";
+
+  /**
    * Internal unique identifier of a phone number
    * Required
    * Example: 1162820004

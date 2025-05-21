@@ -7,10 +7,10 @@ interface BridgePreferences {
 
   /**
    * Specifies enter and exit tones mode.
-   *  1) On - Enter and exit tones switched on.
-   *  2) Off - Enter and exit tones switched off.
-   *  3) ExitOnly - Only exit tones switched on.
-   *  4) EnterOnly - Only enter tones switched on.
+   *  1) `On` - Enter and exit tones switched on.
+   *  2) `Off` - Enter and exit tones switched off.
+   *  3) `ExitOnly` - Only exit tones switched on.
+   *  4) `EnterOnly` - Only enter tones switched on.
    * Default: Off
    */
   playTones?: "On" | "Off" | "ExitOnly" | "EnterOnly";

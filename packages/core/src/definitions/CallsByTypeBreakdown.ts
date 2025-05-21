@@ -43,6 +43,13 @@ interface CallsByTypeBreakdown {
    * Format: double
    */
   overflow?: number;
+
+  /**
+   * Value for QueueCallPickup type
+   * Required
+   * Format: double
+   */
+  queueCallPickup?: number;
 }
 
 export default CallsByTypeBreakdown;

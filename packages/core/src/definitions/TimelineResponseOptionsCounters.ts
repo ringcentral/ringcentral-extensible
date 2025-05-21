@@ -33,6 +33,11 @@ interface TimelineResponseOptionsCounters {
   callsByResult?: boolean;
 
   /**
+   * Include breakdown of calls count by party that ended the call (Caller, Callee, System)
+   */
+  callsByEndingParty?: boolean;
+
+  /**
    * Include breakdown of calls count by company hours (BusinessHours, AfterHours)
    */
   callsByCompanyHours?: boolean;

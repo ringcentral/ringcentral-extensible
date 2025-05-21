@@ -30,7 +30,7 @@ interface ListStandardUserRoleParameters {
 
   /**
    * Specifies whether to return advanced permissions capabilities within `permissionsCapabilities` resource.
-   *  The default value is false.
+   *  The default value is false
    */
   advancedPermissions?: boolean;
 }

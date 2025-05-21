@@ -3,7 +3,7 @@
  */
 interface SyncAccountCallLogParameters {
   /**
-   * Type of call log synchronization request: full or incremental sync
+   * Type of call log synchronization request - full or incremental sync
    * Default: FSync
    */
   syncType?: "FSync" | "ISync";

@@ -1,5 +1,5 @@
 import CommonEmergencyLocationAddressInfo from "./CommonEmergencyLocationAddressInfo.js";
-import ShortSiteInfo from "./ShortSiteInfo.js";
+import SiteBasicInfo from "./SiteBasicInfo.js";
 import LocationOwnerInfo from "./LocationOwnerInfo.js";
 
 /**
@@ -20,7 +20,7 @@ interface CommonEmergencyLocationResource {
   name?: string;
 
   /** */
-  site?: ShortSiteInfo;
+  site?: SiteBasicInfo;
 
   /**
    * Emergency address status

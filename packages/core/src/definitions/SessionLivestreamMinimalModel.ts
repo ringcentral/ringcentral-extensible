@@ -11,16 +11,14 @@ interface SessionLivestreamMinimalModel {
   /**
    * Name of the livestreaming service provider
    * Required
-   * Example: YoutTube
+   * Example: YouTube
    */
   serviceProvider?: string;
 
   /**
-   * Last known state of the livestream as notified by Webinar Livestreaming Controller Service (WLCS).
-   *  Value may not be consistent with latest state, especially for livestream associated with OAuth2.0 based service providers.
-   *  Thus, state must be obtained directly from WLCS
+   * Livestream status
    * Required
-   * Example: Initialized
+   * Example: Configured
    */
   livestreamStatus?:
     | "Initialized"
@@ -28,17 +26,15 @@ interface SessionLivestreamMinimalModel {
     | "Configured"
     | "PublishSetup"
     | "Publishing"
-    | "Paused"
     | "Error"
+    | "Paused"
     | "Break"
     | "Deleted"
     | "Completed";
 
   /**
-   * Last known state of the livestream as notified by Webinar Livestreaming Controller Service (WLCS).
-   *  Value may not be consistent with latest state, especially for livestream associated with OAuth2.0 based service providers.
-   *  Thus, state must be obtained directly from WLCS
-   * Example: Initialized
+   * Livestream status
+   * Example: Configured
    */
   previousLivestreamStatus?:
     | "Initialized"
@@ -46,8 +42,8 @@ interface SessionLivestreamMinimalModel {
     | "Configured"
     | "PublishSetup"
     | "Publishing"
-    | "Paused"
     | "Error"
+    | "Paused"
     | "Break"
     | "Deleted"
     | "Completed";

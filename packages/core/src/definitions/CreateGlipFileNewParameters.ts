@@ -3,7 +3,8 @@
  */
 interface CreateGlipFileNewParameters {
   /**
-   * Internal identifier of a group to which the post with attachment will be added to
+   * Internal identifier of a group to which the post with attachment
+   *  will be added to
    * Format: int64
    */
   groupId?: number;

@@ -1,5 +1,5 @@
 import Utils from "../../../../Utils.js";
-import TMAddFileRequest from "../../../../definitions/TMAddFileRequest.js";
+import TMAddFile from "../../../../definitions/TMAddFile.js";
 import CreateGlipFileNewParameters from "../../../../definitions/CreateGlipFileNewParameters.js";
 import CreateGlipFileNewRequest from "../../../../definitions/CreateGlipFileNewRequest.js";
 import {
@@ -20,7 +20,7 @@ class Index {
     return `${this._parent.path()}/files`;
   }
   /**
-   * Posts a file.
+   * Posts a file or multiple files.
    * HTTP Method: post
    * Endpoint: /team-messaging/v1/files
    * Rate Limit Group: Heavy
@@ -30,9 +30,9 @@ class Index {
     createGlipFileNewRequest: CreateGlipFileNewRequest,
     queryParams?: CreateGlipFileNewParameters,
     restRequestConfig?: RestRequestConfig,
-  ): Promise<TMAddFileRequest> {
+  ): Promise<TMAddFile[]> {
     const formData = await Utils.getFormData(createGlipFileNewRequest);
-    const r = await this.rc.post<TMAddFileRequest>(
+    const r = await this.rc.post<TMAddFile[]>(
       this.path(),
       formData,
       queryParams,

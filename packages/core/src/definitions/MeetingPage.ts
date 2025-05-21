@@ -1,5 +1,5 @@
 import Meeting from "./Meeting.js";
-import Paging from "./Paging.js";
+import BasicPaging from "./BasicPaging.js";
 
 /**
  * Meetings page
@@ -14,7 +14,7 @@ interface MeetingPage {
   /**
    * Required
    */
-  paging?: Paging;
+  paging?: BasicPaging;
 }
 
 export default MeetingPage;

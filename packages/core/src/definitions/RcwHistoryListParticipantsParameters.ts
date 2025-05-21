@@ -3,7 +3,7 @@
  */
 interface RcwHistoryListParticipantsParameters {
   /**
-   * The role of the invitee/participant.
+   * The role of the participant.
    */
   role?: ("Panelist" | "CoHost" | "Host" | "Attendee")[];
 

@@ -1,5 +1,5 @@
 import Sessions from "./Sessions/index.js";
-import WebinarResource from "../../../../../definitions/WebinarResource.js";
+import HistoryWebinarResource from "../../../../../definitions/HistoryWebinarResource.js";
 import {
   ParentInterface,
   RestRequestConfig,
@@ -34,11 +34,11 @@ class Index {
    */
   public async get(
     restRequestConfig?: RestRequestConfig,
-  ): Promise<WebinarResource> {
+  ): Promise<HistoryWebinarResource> {
     if (this.webinarId === null) {
       throw new Error("webinarId must be specified.");
     }
-    const r = await this.rc.get<WebinarResource>(
+    const r = await this.rc.get<HistoryWebinarResource>(
       this.path(),
       undefined,
       restRequestConfig,

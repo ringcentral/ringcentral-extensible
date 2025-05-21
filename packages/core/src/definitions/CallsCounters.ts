@@ -4,6 +4,7 @@ import CallsByOrigin from "./CallsByOrigin.js";
 import CallsByResponse from "./CallsByResponse.js";
 import CallsBySegments from "./CallsBySegments.js";
 import CallsByResult from "./CallsByResult.js";
+import CallsByEndingParty from "./CallsByEndingParty.js";
 import CallsByActions from "./CallsByActions.js";
 import CallsByCompanyHours from "./CallsByCompanyHours.js";
 import CallsByQueueSla from "./CallsByQueueSla.js";
@@ -31,6 +32,9 @@ interface CallsCounters {
 
   /** */
   callsByResult?: CallsByResult;
+
+  /** */
+  callsByEndingParty?: CallsByEndingParty;
 
   /** */
   callsActions?: CallsByActions;

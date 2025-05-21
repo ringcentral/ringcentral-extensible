@@ -43,6 +43,34 @@ interface CallsByResultBreakdown {
    * Format: double
    */
   unknown?: number;
+
+  /**
+   * Value for Transferred result
+   * Required
+   * Format: double
+   */
+  transferred?: number;
+
+  /**
+   * Value for PickedUp result
+   * Required
+   * Format: double
+   */
+  pickedUp?: number;
+
+  /**
+   * Value for AnsweredElsewhere result
+   * Required
+   * Format: double
+   */
+  answeredElsewhere?: number;
+
+  /**
+   * Value for Forwarded result
+   * Required
+   * Format: double
+   */
+  forwarded?: number;
 }
 
 export default CallsByResultBreakdown;

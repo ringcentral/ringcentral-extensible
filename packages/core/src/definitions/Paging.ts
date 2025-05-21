@@ -12,6 +12,13 @@ interface Paging {
    * Next page offset token
    */
   nextPageToken?: string;
+
+  /**
+   * Number of records returned
+   * Required
+   * Format: int32
+   */
+  perPage?: number;
 }
 
 export default Paging;

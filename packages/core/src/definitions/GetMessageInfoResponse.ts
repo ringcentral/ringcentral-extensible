@@ -54,6 +54,11 @@ interface GetMessageInfoResponse {
   creationTime?: string;
 
   /**
+   * SMS only. Delivery error code returned by gateway
+   */
+  deliveryErrorCode?: string;
+
+  /**
    * Text message direction. Note that for some message types not all
    *  directions are allowed. For example voicemail messages can
    *  be only inbound

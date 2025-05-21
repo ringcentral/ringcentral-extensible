@@ -8,7 +8,9 @@ interface OwnerResource {
   name?: string;
 
   /**
-   * ExtensionType
+   * Type of the extension.
+   *  For unrecognized types the `Unknown` value is returned
+   * Example: User
    */
   extensionType?:
     | "User"
@@ -31,7 +33,8 @@ interface OwnerResource {
     | "Bot"
     | "Site"
     | "Room"
-    | "FlexibleUser";
+    | "FlexibleUser"
+    | "Unknown";
 
   /**
    * Internal identifier of an extension

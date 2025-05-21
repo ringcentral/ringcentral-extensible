@@ -1,11 +1,11 @@
 import Host from "./Host.js";
 
 /**
- * Recording information
+ * Meeting information
  */
 interface CloudRecording {
   /**
-   * Call id
+   * Meeting id
    * Required
    */
   id?: string;
@@ -17,18 +17,16 @@ interface CloudRecording {
   shortId?: string;
 
   /**
+   * Bridge id
+   */
+  bridgeId?: string;
+
+  /**
    * Start time ISO 8601
    * Required
    * Format: date-time
    */
   startTime?: string;
-
-  /**
-   * Meeting duration in seconds
-   * Format: int32
-   * Example: 36
-   */
-  duration?: number;
 
   /**
    * Meeting name
@@ -40,6 +38,13 @@ interface CloudRecording {
    * Required
    */
   hostInfo?: Host;
+
+  /**
+   * Meeting duration in seconds
+   * Format: int32
+   * Example: 36
+   */
+  duration?: number;
 
   /**
    * Link to the recording file. Not used anymore by Web team

@@ -55,6 +55,7 @@ interface UpdateAnsweringRuleRequest {
 
   /**
    * Type of an answering rule
+   * Default: Custom
    */
   type?: "BusinessHours" | "AfterHours" | "Custom";
 

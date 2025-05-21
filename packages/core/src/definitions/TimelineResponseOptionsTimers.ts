@@ -33,6 +33,11 @@ interface TimelineResponseOptionsTimers {
   callsDurationByResult?: boolean;
 
   /**
+   * Include breakdown of calls duration by party that ended the call (Caller, Callee, System)
+   */
+  callsDurationByEndingParty?: boolean;
+
+  /**
    * Include breakdown of calls duration by company hours (BusinessHours, AfterHours)
    */
   callsDurationByCompanyHours?: boolean;

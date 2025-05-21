@@ -1,4 +1,4 @@
-import CallRecordingExtensionInfo from "./CallRecordingExtensionInfo.js";
+import CallRecordingExtensionResource from "./CallRecordingExtensionResource.js";
 import PageNavigationModel from "./PageNavigationModel.js";
 import EnumeratedPagingModel from "./EnumeratedPagingModel.js";
 
@@ -10,7 +10,7 @@ interface CallRecordingExtensions {
   uri?: string;
 
   /** */
-  records?: CallRecordingExtensionInfo[];
+  records?: CallRecordingExtensionResource[];
 
   /** */
   navigation?: PageNavigationModel;

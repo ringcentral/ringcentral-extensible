@@ -3,9 +3,9 @@
  */
 interface ListAnsweringRulesParameters {
   /**
-   * Filters custom call handling rules of the extension
+   * Type of an answering rule. Multiple values are supported
    */
-  type?: "Custom";
+  type?: ("BusinessHours" | "AfterHours" | "Custom")[];
 
   /**
    * Default: Simple

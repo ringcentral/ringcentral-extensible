@@ -9,7 +9,7 @@ interface GetPresenceInfo {
   uri?: string;
 
   /**
-   * If set to `true` - enables other extensions to see the extension presence status
+   * If set to `true` enables other extensions to see the extension presence status
    */
   allowSeeMyPresence?: boolean;
 
@@ -20,20 +20,28 @@ interface GetPresenceInfo {
   callerIdVisibility?: "All" | "None" | "PermittedUsers";
 
   /**
-   * Extended DnD (Do not Disturb) status. Cannot be set for Department/Announcement/Voicemail
+   * Do Not Disturb status. Cannot be set for Department/Announcement/Voicemail
    *  (Take Messages Only)/Fax User/Shared Lines Group/Paging Only Group/IVR
    *  Menu/Application Extension/Park Location extensions. The 'DoNotAcceptDepartmentCalls'
    *  and 'TakeDepartmentCallsOnly' values are applicable only for extensions
    *  - members of a Department; if these values are set for department outsiders,
    *  the 400 Bad Request error code is returned. The 'TakeDepartmentCallsOnly'
    *  status can be set through the old RingCentral user interface and is available
-   *  for some migrated accounts only.
+   *  for some migrated accounts only. Not applicable for User extensions
+   *  if the new communication handling service is activated on account
    */
   dndStatus?:
     | "TakeAllCalls"
-    | "DoNotAcceptAnyCalls"
     | "DoNotAcceptDepartmentCalls"
-    | "TakeDepartmentCallsOnly";
+    | "TakeDepartmentCallsOnly"
+    | "DoNotAcceptAnyCalls"
+    | "Unknown";
+
+  /**
+   * Do Not Disturb status of a User extension. Applicable for User extensions
+   *  if the new communication handling service is activated on account
+   */
+  dndStatusPersonal?: "TakeAllCalls" | "DoNotAcceptAnyCalls" | "Unknown";
 
   /** */
   extension?: GetPresenceExtensionInfo;
@@ -82,6 +90,13 @@ interface GetPresenceInfo {
    * Information on active calls
    */
   activeCalls?: ActiveCallInfo[];
+
+  /**
+   * Specifies if a Call Queue member extension will be able to receive Call Queue calls.
+   *  Applicable for User extensions if the new communication handling service is activated on account.
+   *  Used for Agent state type
+   */
+  acceptCallQueueCalls?: boolean;
 }
 
 export default GetPresenceInfo;

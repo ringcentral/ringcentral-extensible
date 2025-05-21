@@ -18,6 +18,16 @@ interface ListAccountPhoneNumbersParameters {
   perPage?: number;
 
   /**
+   * Extension status
+   */
+  extensionStatus?:
+    | "Enabled"
+    | "Disabled"
+    | "Frozen"
+    | "NotActivated"
+    | "Unassigned";
+
+  /**
    * Usage type of a phone number
    */
   usageType?: (
@@ -39,16 +49,16 @@ interface ListAccountPhoneNumbersParameters {
   )[];
 
   /**
-   * Payment type. 'External' is returned for forwarded numbers
-   *  which are not terminated in the RingCentral phone system
+   * Payment type of a phone number. Multiple values are supported
    */
-  paymentType?:
+  paymentType?: (
     | "External"
     | "TollFree"
     | "Local"
     | "BusinessMobileNumberProvider"
     | "ExternalNumberProvider"
-    | "ExternalNumberProviderTollFree";
+    | "ExternalNumberProviderTollFree"
+  )[];
 
   /**
    * Status of a phone number. If the value is `Normal`, the phone

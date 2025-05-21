@@ -7,6 +7,12 @@ interface DeleteMessageParameters {
    *  with all the attachments
    */
   purge?: boolean;
+
+  /**
+   * Type of messages to be deleted
+   * Default: All
+   */
+  type?: "Fax" | "SMS" | "VoiceMail" | "Pager" | "Text" | "All";
 }
 
 export default DeleteMessageParameters;

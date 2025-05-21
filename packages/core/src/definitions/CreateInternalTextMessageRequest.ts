@@ -6,7 +6,7 @@ interface CreateInternalTextMessageRequest {
 
   /**
    * Internal identifier of a message this message replies to
-   * Format: int32
+   * Format: int64
    */
   replyOn?: number;
 

@@ -1,7 +1,9 @@
 import BulkAssign from "./BulkAssign/index.js";
 import Default from "./Default/index.js";
 import DeleteCustomRoleParameters from "../../../../definitions/DeleteCustomRoleParameters.js";
+import UpdateUserRoleParameters from "../../../../definitions/UpdateUserRoleParameters.js";
 import ReadUserRoleParameters from "../../../../definitions/ReadUserRoleParameters.js";
+import CreateCustomRoleParameters from "../../../../definitions/CreateCustomRoleParameters.js";
 import RoleResource from "../../../../definitions/RoleResource.js";
 import RolesCollectionResource from "../../../../definitions/RolesCollectionResource.js";
 import ListUserRolesParameters from "../../../../definitions/ListUserRolesParameters.js";
@@ -57,12 +59,13 @@ class Index {
    */
   public async post(
     roleResource: RoleResource,
+    queryParams?: CreateCustomRoleParameters,
     restRequestConfig?: RestRequestConfig,
   ): Promise<string> {
     const r = await this.rc.post<string>(
       this.path(false),
       roleResource,
-      undefined,
+      queryParams,
       restRequestConfig,
     );
     return r.data;
@@ -101,6 +104,7 @@ class Index {
    */
   public async put(
     roleResource: RoleResource,
+    queryParams?: UpdateUserRoleParameters,
     restRequestConfig?: RestRequestConfig,
   ): Promise<RoleResource> {
     if (this.roleId === null) {
@@ -109,7 +113,7 @@ class Index {
     const r = await this.rc.put<RoleResource>(
       this.path(),
       roleResource,
-      undefined,
+      queryParams,
       restRequestConfig,
     );
     return r.data;

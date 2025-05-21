@@ -84,13 +84,13 @@ interface ExtensionUpdateRequest {
     | "GroupCallPickup";
 
   /**
-   * Extension subtype, if applicable. For any unsupported subtypes
-   *  the 'Unknown' value will be returned
+   * Extension subtype, if applicable.
+   *  For unrecognized subtypes the `Unknown` value is returned
    */
   subType?:
     | "VideoPro"
     | "VideoProPlus"
-    | "DigitalSignageOnlyRooms"
+    | "DigitalSignage"
     | "Unknown"
     | "Emergency";
 

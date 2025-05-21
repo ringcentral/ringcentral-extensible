@@ -12,6 +12,7 @@ interface Grouping {
     | "Users"
     | "Queues"
     | "IVRs"
+    | "IVAs"
     | "SharedLines"
     | "UserGroups"
     | "Sites"
