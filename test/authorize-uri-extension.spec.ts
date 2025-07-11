@@ -11,7 +11,7 @@ describe("Authorize URI Extension", () => {
     });
     const authorizeUriExtension = new AuthorizeUriExtension();
     await rc.installExtension(authorizeUriExtension);
-    const authorizeUri = authorizeUriExtension.buildUri({
+    const authorizeUri = await authorizeUriExtension.buildUri({
       state: "hello",
       redirect_uri: "https://example.com",
     });

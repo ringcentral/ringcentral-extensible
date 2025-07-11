@@ -3,7 +3,6 @@ import SdkExtension from "@rc-ex/core/SdkExtension";
 // import type AuthorizeRequest from "@rc-ex/core/definitions/AuthorizeRequest";
 import type { QueryDataMap } from "urijs";
 import URI from "urijs";
-// import { createHash, randomBytes } from "crypto";
 
 export interface AuthorizeUriOptions {
   baseUri?: string;
