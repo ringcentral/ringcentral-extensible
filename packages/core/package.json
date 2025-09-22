@@ -40,12 +40,12 @@
   },
   "dependencies": {
     "@types/qs": "^6.14.0",
-    "axios": "^1.9.0",
+    "axios": "^1.12.2",
     "qs": "^6.14.0"
   },
   "devDependencies": {
     "dotenv-override-true": "^6.2.2",
-    "ringcentral-code-generator": "^0.7.3"
+    "ringcentral-code-generator": "^0.7.5"
   },
   "scripts": {
     "build": "tsc -p tsconfig.esm.json && tsc -p tsconfig.cjs.json"

@@ -44,7 +44,7 @@
     "hyperid": "^3.3.0",
     "isomorphic-ws": "^5.0.0",
     "wait-for-async": "^0.7.13",
-    "ws": "^8.18.2"
+    "ws": "^8.18.3"
   },
   "scripts": {
     "build": "tsc -p tsconfig.esm.json && tsc -p tsconfig.cjs.json"
