@@ -10,6 +10,7 @@ import AggregationResponseOptionsCountersCallsByActions from "./AggregationRespo
 import AggregationResponseOptionsCountersCallsByType from "./AggregationResponseOptionsCountersCallsByType.js";
 import AggregationResponseOptionsCountersCallsByEndingParty from "./AggregationResponseOptionsCountersCallsByEndingParty.js";
 import AggregationResponseOptionsCountersQueueOpportunities from "./AggregationResponseOptionsCountersQueueOpportunities.js";
+import AggregationResponseOptionsCountersCallsByQueueHours from "./AggregationResponseOptionsCountersCallsByQueueHours.js";
 
 /**
  * The formula is defined by `aggregationType` and `aggregationInterval` for every counter individually.
@@ -76,6 +77,11 @@ interface AggregationResponseOptionsCounters {
    * Aggregation of calls count by the total number of times a Queue call was presented to the user. It is limited to `groupBy` Users and `groupByMembers` (Department, Queue, Site, UserGroup) grouping. Only the listed below options for call filters are applicable to `queueOpportunities` and provide meaningful results: `queues` (selected queue extension ids), `callResults` (Missed, Abandoned), `callResponses` (Answered, NotAnswered), `origins` (Internal, External)
    */
   queueOpportunities?: AggregationResponseOptionsCountersQueueOpportunities;
+
+  /**
+   * Aggregation of calls count by queue hours (BusinessHours, AfterHours)
+   */
+  callsByQueueHours?: AggregationResponseOptionsCountersCallsByQueueHours;
 }
 
 export default AggregationResponseOptionsCounters;

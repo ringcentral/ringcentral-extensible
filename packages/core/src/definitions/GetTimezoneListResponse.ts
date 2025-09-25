@@ -1,4 +1,4 @@
-import GetTimezoneInfoResponse from "./GetTimezoneInfoResponse.js";
+import TimezoneInfoBase from "./TimezoneInfoBase.js";
 import PageNavigationModel from "./PageNavigationModel.js";
 import EnumeratedPagingModel from "./EnumeratedPagingModel.js";
 
@@ -13,7 +13,7 @@ interface GetTimezoneListResponse {
    * List of timezones
    * Required
    */
-  records?: GetTimezoneInfoResponse[];
+  records?: TimezoneInfoBase[];
 
   /**
    * Required

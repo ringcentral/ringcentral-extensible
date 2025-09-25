@@ -1,4 +1,4 @@
-import CountryInfoShortModelV2 from "./CountryInfoShortModelV2.js";
+import CountryInfoShortModel from "./CountryInfoShortModel.js";
 import TimezoneInfoBase from "./TimezoneInfoBase.js";
 import RegionalLanguageInfo from "./RegionalLanguageInfo.js";
 import GreetingLanguageInfo from "./GreetingLanguageInfo.js";
@@ -11,7 +11,7 @@ import CurrencyInfo from "./CurrencyInfo.js";
  */
 interface AccountRegionalSettings {
   /** */
-  homeCountry?: CountryInfoShortModelV2;
+  homeCountry?: CountryInfoShortModel;
 
   /** */
   timezone?: TimezoneInfoBase;

@@ -1,8 +1,8 @@
 import AdaptiveCards from "./AdaptiveCards/index.js";
 import Unfavorite from "./Unfavorite/index.js";
 import Favorite from "./Favorite/index.js";
-import Notes from "./Notes/index.js";
 import Tasks from "./Tasks/index.js";
+import Notes from "./Notes/index.js";
 import Posts from "./Posts/index.js";
 import TMChatInfo from "../../../../definitions/TMChatInfo.js";
 import TMChatList from "../../../../definitions/TMChatList.js";
@@ -87,12 +87,12 @@ class Index {
     return new Posts(this, postId);
   }
 
-  public tasks(): Tasks {
-    return new Tasks(this);
-  }
-
   public notes(): Notes {
     return new Notes(this);
+  }
+
+  public tasks(): Tasks {
+    return new Tasks(this);
   }
 
   public favorite(): Favorite {

@@ -162,6 +162,11 @@ interface PersonalContactRequest {
    * Contact ringtone. Max number of symbols is 64
    */
   ringtoneIndex?: string;
+
+  /**
+   * Source of the contact. Up to 64 symbols
+   */
+  appInfo?: string;
 }
 
 export default PersonalContactRequest;

@@ -12,15 +12,10 @@ interface NotificationSettingsUpdateRequest {
   uri?: string;
 
   /**
-   * List of notification recipient email addresses. Should not be empty
-   *  if 'includeManagers' parameter is set to false
+   * The parameter contains the list of phone Numbers which should be used for SMS notifications sending
+   *  (if advanced mode disabled)
    */
-  emailAddresses?: string[];
-
-  /**
-   * List of notification recipient email addresses
-   */
-  smsEmailAddresses?: string[];
+  smsPhoneNumbers?: string[];
 
   /**
    * Specifies notifications settings mode. If `true` then advanced
@@ -45,6 +40,17 @@ interface NotificationSettingsUpdateRequest {
 
   /** */
   missedCalls?: MissedCallsInfo;
+
+  /**
+   * List of notification recipient email addresses. Should not be empty
+   *  if 'includeManagers' parameter is set to false
+   */
+  emailAddresses?: string[];
+
+  /**
+   * List of notification recipient email addresses
+   */
+  smsEmailAddresses?: string[];
 
   /**
    * Specifies if managers' emails are included in the list of emails to

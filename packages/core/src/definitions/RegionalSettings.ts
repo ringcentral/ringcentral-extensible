@@ -1,4 +1,4 @@
-import CountryInfoShortModelV2 from "./CountryInfoShortModelV2.js";
+import CountryInfoShortModel from "./CountryInfoShortModel.js";
 import TimezoneInfoBase from "./TimezoneInfoBase.js";
 import RegionalLanguageInfo from "./RegionalLanguageInfo.js";
 import GreetingLanguageInfo from "./GreetingLanguageInfo.js";
@@ -10,7 +10,7 @@ import FormattingLocaleInfo from "./FormattingLocaleInfo.js";
  */
 interface RegionalSettings {
   /** */
-  homeCountry?: CountryInfoShortModelV2;
+  homeCountry?: CountryInfoShortModel;
 
   /** */
   timezone?: TimezoneInfoBase;

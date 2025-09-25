@@ -12,8 +12,7 @@ interface CommTerminatingTargetResource {
     | "ExtensionTerminatingTarget"
     | "PhoneNumberTerminatingTarget"
     | "PlayAnnouncementTerminatingTarget"
-    | "VoiceMailTerminatingTarget"
-    | "ImsVoiceMailTerminatingTarget";
+    | "VoiceMailTerminatingTarget";
 }
 
 export default CommTerminatingTargetResource;

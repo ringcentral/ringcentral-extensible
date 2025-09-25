@@ -61,6 +61,11 @@ interface TimelineResponseOptionsCounters {
    * Include breakdown of calls count by the total number of times a Queue call was presented to the user. It is limited to `groupBy` Users and `groupByMembers` (Department, Queue, Site, UserGroup) grouping. Only the listed below options for call filters are applicable to `queueOpportunities` and provide meaningful results: `queues` (selected queue extension ids), `callResults` (Missed, Abandoned), `callResponses` (Answered, NotAnswered), `origins` (Internal, External)
    */
   queueOpportunities?: boolean;
+
+  /**
+   * Include breakdown of calls count by queue hours (BusinessHours, AfterHours)
+   */
+  callsByQueueHours?: boolean;
 }
 
 export default TimelineResponseOptionsCounters;

@@ -7,8 +7,7 @@ interface CommTerminatingTargetRequest {
     | "ExtensionTerminatingTarget"
     | "PhoneNumberTerminatingTarget"
     | "PlayAnnouncementTerminatingTarget"
-    | "VoiceMailTerminatingTarget"
-    | "ImsVoiceMailTerminatingTarget";
+    | "VoiceMailTerminatingTarget";
 }
 
 export default CommTerminatingTargetRequest;

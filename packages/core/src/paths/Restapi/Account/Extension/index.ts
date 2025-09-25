@@ -12,21 +12,21 @@ import AssignableRoles from "./AssignableRoles/index.js";
 import CallerBlocking from "./CallerBlocking/index.js";
 import BusinessHours from "./BusinessHours/index.js";
 import AnsweringRule from "./AnsweringRule/index.js";
-import AssignedRole from "./AssignedRole/index.js";
-import AuthzProfile from "./AuthzProfile/index.js";
 import CompanyPager from "./CompanyPager/index.js";
 import CallLogSync from "./CallLogSync/index.js";
+import AssignedRole from "./AssignedRole/index.js";
+import AuthzProfile from "./AuthzProfile/index.js";
 import MessageStore from "./MessageStore/index.js";
 import ProfileImage from "./ProfileImage/index.js";
-import PhoneNumber from "./PhoneNumber/index.js";
-import ActiveCalls from "./ActiveCalls/index.js";
 import MessageSync from "./MessageSync/index.js";
+import ActiveCalls from "./ActiveCalls/index.js";
 import Conferencing from "./Conferencing/index.js";
+import PhoneNumber from "./PhoneNumber/index.js";
 import AddressBook from "./AddressBook/index.js";
 import CallQueues from "./CallQueues/index.js";
 import CallerId from "./CallerId/index.js";
-import Features from "./Features/index.js";
 import Presence from "./Presence/index.js";
+import Features from "./Features/index.js";
 import Favorite from "./Favorite/index.js";
 import RingOut from "./RingOut/index.js";
 import Greeting from "./Greeting/index.js";
@@ -194,12 +194,12 @@ class Index {
     return new Favorite(this);
   }
 
-  public presence(): Presence {
-    return new Presence(this);
-  }
-
   public features(): Features {
     return new Features(this);
+  }
+
+  public presence(): Presence {
+    return new Presence(this);
   }
 
   public callerId(): CallerId {
@@ -214,20 +214,20 @@ class Index {
     return new AddressBook(this);
   }
 
-  public conferencing(): Conferencing {
-    return new Conferencing(this);
+  public phoneNumber(): PhoneNumber {
+    return new PhoneNumber(this);
   }
 
-  public messageSync(): MessageSync {
-    return new MessageSync(this);
+  public conferencing(): Conferencing {
+    return new Conferencing(this);
   }
 
   public activeCalls(): ActiveCalls {
     return new ActiveCalls(this);
   }
 
-  public phoneNumber(): PhoneNumber {
-    return new PhoneNumber(this);
+  public messageSync(): MessageSync {
+    return new MessageSync(this);
   }
 
   public profileImage(scaleSize: string | null = null): ProfileImage {
@@ -238,20 +238,20 @@ class Index {
     return new MessageStore(this, messageId);
   }
 
-  public callLogSync(): CallLogSync {
-    return new CallLogSync(this);
-  }
-
-  public companyPager(): CompanyPager {
-    return new CompanyPager(this);
-  }
-
   public authzProfile(): AuthzProfile {
     return new AuthzProfile(this);
   }
 
   public assignedRole(): AssignedRole {
     return new AssignedRole(this);
+  }
+
+  public callLogSync(): CallLogSync {
+    return new CallLogSync(this);
+  }
+
+  public companyPager(): CompanyPager {
+    return new CompanyPager(this);
   }
 
   public answeringRule(ruleId: string | null = null): AnsweringRule {

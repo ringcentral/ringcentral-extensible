@@ -24,7 +24,7 @@ interface BlockedAllowedPhoneNumberInfo {
   label?: string;
 
   /**
-   * Status of a phone number
+   * Status of a phone number blocking
    * Default: Blocked
    */
   status?: "Blocked" | "Allowed";

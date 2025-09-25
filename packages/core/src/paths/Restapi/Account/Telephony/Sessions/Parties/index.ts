@@ -5,14 +5,14 @@ import Transfer from "./Transfer/index.js";
 import Forward from "./Forward/index.js";
 import Pickup from "./Pickup/index.js";
 import Answer from "./Answer/index.js";
-import Reject from "./Reject/index.js";
-import Ignore from "./Ignore/index.js";
 import Bridge from "./Bridge/index.js";
+import Ignore from "./Ignore/index.js";
+import Reject from "./Reject/index.js";
 import Unhold from "./Unhold/index.js";
 import Reply from "./Reply/index.js";
-import Hold from "./Hold/index.js";
-import Flip from "./Flip/index.js";
 import Park from "./Park/index.js";
+import Flip from "./Flip/index.js";
+import Hold from "./Hold/index.js";
 import PartyUpdateRequest from "../../../../../../definitions/PartyUpdateRequest.js";
 import CallParty from "../../../../../../definitions/CallParty.js";
 import {
@@ -99,16 +99,16 @@ class Index {
     return r.data;
   }
 
-  public park(): Park {
-    return new Park(this);
+  public hold(): Hold {
+    return new Hold(this);
   }
 
   public flip(): Flip {
     return new Flip(this);
   }
 
-  public hold(): Hold {
-    return new Hold(this);
+  public park(): Park {
+    return new Park(this);
   }
 
   public reply(): Reply {
@@ -119,16 +119,16 @@ class Index {
     return new Unhold(this);
   }
 
-  public bridge(): Bridge {
-    return new Bridge(this);
+  public reject(): Reject {
+    return new Reject(this);
   }
 
   public ignore(): Ignore {
     return new Ignore(this);
   }
 
-  public reject(): Reject {
-    return new Reject(this);
+  public bridge(): Bridge {
+    return new Bridge(this);
   }
 
   public answer(): Answer {

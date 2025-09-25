@@ -10,6 +10,11 @@ interface OutboundFaxesInfo {
   notifyBySms?: boolean;
 
   /**
+   * The parameter contains the list of phone Numbers which should be used for SMS notifications sending (if advanced mode enabled)
+   */
+  advancedSmsPhoneNumbers?: string[];
+
+  /**
    * List of recipient email addresses for outbound fax notifications.
    *  Returned if specified, in both modes (advanced/basic). Applied in advanced
    *  mode only

@@ -3,7 +3,7 @@ import ServiceInfo from "./ServiceInfo.js";
 import SignupInfoResource from "./SignupInfoResource.js";
 import AccountStatusInfo from "./AccountStatusInfo.js";
 import AccountRegionalSettings from "./AccountRegionalSettings.js";
-import AccountLimits from "./AccountLimits.js";
+import AccountLimitsInfo from "./AccountLimitsInfo.js";
 
 interface GetAccountInfoResponse {
   /**
@@ -81,7 +81,7 @@ interface GetAccountInfoResponse {
   cfid?: string;
 
   /** */
-  limits?: AccountLimits;
+  limits?: AccountLimitsInfo;
 }
 
 export default GetAccountInfoResponse;

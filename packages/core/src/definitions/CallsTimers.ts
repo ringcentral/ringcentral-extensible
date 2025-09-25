@@ -8,6 +8,7 @@ import CallsByEndingParty from "./CallsByEndingParty.js";
 import CallsByCompanyHours from "./CallsByCompanyHours.js";
 import CallsByQueueSla from "./CallsByQueueSla.js";
 import CallsByType from "./CallsByType.js";
+import CallsByQueueHours from "./CallsByQueueHours.js";
 
 /**
  * Call length data for the specified grouping
@@ -42,6 +43,9 @@ interface CallsTimers {
 
   /** */
   callsByType?: CallsByType;
+
+  /** */
+  callsByQueueHours?: CallsByQueueHours;
 }
 
 export default CallsTimers;

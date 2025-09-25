@@ -2,13 +2,17 @@ interface ScimAuthenticationScheme {
   /** */
   description?: string;
 
-  /** */
+  /**
+   * Format: uri
+   */
   documentationUri?: string;
 
   /** */
   name?: string;
 
-  /** */
+  /**
+   * Format: uri
+   */
   specUri?: string;
 
   /** */

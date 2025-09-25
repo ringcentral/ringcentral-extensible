@@ -51,6 +51,11 @@ interface TimelineResponseOptionsTimers {
    * Include breakdown of calls duration by type (Direct, FromQueue, ParkRetrieval, Transferred, Outbound)
    */
   callsDurationByType?: boolean;
+
+  /**
+   * Include breakdown of calls duration by queue hours (BusinessHours, AfterHours)
+   */
+  callsDurationByQueueHours?: boolean;
 }
 
 export default TimelineResponseOptionsTimers;

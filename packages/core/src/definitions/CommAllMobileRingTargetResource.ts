@@ -24,9 +24,7 @@ interface CommAllMobileRingTargetResource {
     | "IntegrationRingTarget"
     | "PhoneNumberRingTarget";
 
-  /**
-   * Required
-   */
+  /** */
   extension?: CommReferencedExtensionResource;
 }
 

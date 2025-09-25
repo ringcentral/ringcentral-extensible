@@ -8,6 +8,7 @@ interface ListAnsweringRulesParameters {
   type?: ("BusinessHours" | "AfterHours" | "Custom")[];
 
   /**
+   * The level of details to be returned about each answering rule
    * Default: Simple
    */
   view?: "Detailed" | "Simple";

@@ -102,6 +102,11 @@ interface CallFilters {
    * Filtering of calls based on the party that ended that call (joined via OR)
    */
   endingParties?: ("Caller" | "Callee" | "System")[];
+
+  /**
+   * Filtering of calls by queue's business hours or after hours (joined via OR). Only applicable to Queues grouping
+   */
+  queueHours?: ("BusinessHours" | "AfterHours")[];
 }
 
 export default CallFilters;

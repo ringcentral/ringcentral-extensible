@@ -4,10 +4,13 @@ import CommReferencedExtensionResource from "./CommReferencedExtensionResource.j
  * All Mobile Ring target
  */
 interface CommAllMobileTargetResource {
+  /** */
+  extension?: CommReferencedExtensionResource;
+
   /**
    * Required
    */
-  extension?: CommReferencedExtensionResource;
+  name?: string;
 
   /**
    * Example: AllMobileRingTarget

@@ -34,13 +34,13 @@ interface MessageListMessageResponse {
   creationTime?: string;
 
   /**
-   * The time at which the messages was last updated
+   * The time at which the message was last updated
    * Format: date-time
    */
   lastModifiedTime?: string;
 
   /**
-   * Current status of a message
+   * Status of the message
    * Example: Queued
    */
   messageStatus?:
@@ -58,7 +58,7 @@ interface MessageListMessageResponse {
   segmentCount?: number;
 
   /**
-   * Text of a message. Returned if the `view` parameter is set to 'Detailed'
+   * Text of a message. Returned if the `view` parameter is set to `Detailed`
    */
   text?: string;
 
@@ -70,7 +70,7 @@ interface MessageListMessageResponse {
   cost?: number;
 
   /**
-   * Direction of the SMS message
+   * Message direction (inbound or outbound)
    */
   direction?: "Inbound" | "Outbound";
 

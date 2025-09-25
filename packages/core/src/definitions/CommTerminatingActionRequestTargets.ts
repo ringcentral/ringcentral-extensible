@@ -5,14 +5,13 @@ import CommPhoneNumberResource from "./CommPhoneNumberResource.js";
 interface CommTerminatingActionRequestTargets {
   /**
    * Terminating target type
-   * Example: ImsVoiceMailTerminatingTarget
+   * Example: ExtensionTerminatingTarget
    */
   type?:
     | "ExtensionTerminatingTarget"
     | "PhoneNumberTerminatingTarget"
     | "PlayAnnouncementTerminatingTarget"
-    | "VoiceMailTerminatingTarget"
-    | "ImsVoiceMailTerminatingTarget";
+    | "VoiceMailTerminatingTarget";
 
   /** */
   extension?: CommReferencedExtensionResource;

@@ -4,8 +4,8 @@ import Permission from "./Permission/index.js";
 import UserRole from "./UserRole/index.js";
 import Location from "./Location/index.js";
 import Timezone from "./Timezone/index.js";
-import Greeting from "./Greeting/index.js";
 import Language from "./Language/index.js";
+import Greeting from "./Greeting/index.js";
 import Country from "./Country/index.js";
 import State from "./State/index.js";
 import Brand from "./Brand/index.js";
@@ -35,12 +35,12 @@ class Index {
     return new Country(this, countryId);
   }
 
-  public language(languageId: string | null = null): Language {
-    return new Language(this, languageId);
-  }
-
   public greeting(greetingId: string | null = null): Greeting {
     return new Greeting(this, greetingId);
+  }
+
+  public language(languageId: string | null = null): Language {
+    return new Language(this, languageId);
   }
 
   public timezone(timezoneId: string | null = null): Timezone {

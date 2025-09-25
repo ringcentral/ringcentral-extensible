@@ -14,8 +14,8 @@ import CallRecordings from "./CallRecordings/index.js";
 import CallRecording from "./CallRecording/index.js";
 import BusinessHours from "./BusinessHours/index.js";
 import AnsweringRule from "./AnsweringRule/index.js";
-import AssignedRole from "./AssignedRole/index.js";
 import CallLogSync from "./CallLogSync/index.js";
+import AssignedRole from "./AssignedRole/index.js";
 import CustomFields from "./CustomFields/index.js";
 import ActiveCalls from "./ActiveCalls/index.js";
 import ServiceInfo from "./ServiceInfo/index.js";
@@ -26,12 +26,12 @@ import AuditTrail from "./AuditTrail/index.js";
 import UserRole from "./UserRole/index.js";
 import IvrMenus from "./IvrMenus/index.js";
 import Templates from "./Templates/index.js";
-import Extension from "./Extension/index.js";
 import Recording from "./Recording/index.js";
+import Extension from "./Extension/index.js";
 import Telephony from "./Telephony/index.js";
 import Directory from "./Directory/index.js";
-import Greeting from "./Greeting/index.js";
 import Presence from "./Presence/index.js";
+import Greeting from "./Greeting/index.js";
 import CallLog from "./CallLog/index.js";
 import A2pSms from "./A2pSms/index.js";
 import Device from "./Device/index.js";
@@ -98,12 +98,12 @@ class Index {
     return new CallLog(this, callRecordId);
   }
 
-  public presence(): Presence {
-    return new Presence(this);
-  }
-
   public greeting(): Greeting {
     return new Greeting(this);
+  }
+
+  public presence(): Presence {
+    return new Presence(this);
   }
 
   public directory(): Directory {
@@ -114,12 +114,12 @@ class Index {
     return new Telephony(this);
   }
 
-  public recording(recordingId: string | null = null): Recording {
-    return new Recording(this, recordingId);
-  }
-
   public extension(extensionId: string | null = "~"): Extension {
     return new Extension(this, extensionId);
+  }
+
+  public recording(recordingId: string | null = null): Recording {
+    return new Recording(this, recordingId);
   }
 
   public templates(templateId: string | null = null): Templates {
@@ -162,12 +162,12 @@ class Index {
     return new CustomFields(this, fieldId);
   }
 
-  public callLogSync(): CallLogSync {
-    return new CallLogSync(this);
-  }
-
   public assignedRole(): AssignedRole {
     return new AssignedRole(this);
+  }
+
+  public callLogSync(): CallLogSync {
+    return new CallLogSync(this);
   }
 
   public answeringRule(ruleId: string | null = null): AnsweringRule {

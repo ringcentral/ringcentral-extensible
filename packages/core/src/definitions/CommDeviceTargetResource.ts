@@ -7,9 +7,7 @@ interface CommDeviceTargetResource {
    */
   device?: CommDeviceResource;
 
-  /**
-   * Required
-   */
+  /** */
   extension?: CommReferencedExtensionResource;
 
   /**

@@ -16,7 +16,9 @@ interface GetExtensionEmergencyLocationsParameters {
    */
   searchString?: string;
 
-  /** */
+  /**
+   * Domestic country ID to filter results by
+   */
   domesticCountryId?: string;
 
   /**
@@ -55,8 +57,11 @@ interface GetExtensionEmergencyLocationsParameters {
    */
   page?: number;
 
-  /** */
-  visibility?: string;
+  /**
+   * Visibility of emergency location to filter results by
+   * Default: Public
+   */
+  visibility?: "Public";
 }
 
 export default GetExtensionEmergencyLocationsParameters;

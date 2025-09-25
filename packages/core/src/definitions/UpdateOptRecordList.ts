@@ -1,7 +1,7 @@
 import UpdateSmsOptRecord from "./UpdateSmsOptRecord.js";
 
 /**
- * The list of records to update opt statuses of phone numbers
+ * A list of records for updating SMS consents
  */
 interface UpdateOptRecordList {
   /**

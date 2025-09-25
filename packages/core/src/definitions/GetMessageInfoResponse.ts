@@ -29,8 +29,8 @@ interface GetMessageInfoResponse {
   attachments?: MessageAttachmentInfo[];
 
   /**
-   * Message availability status. Message in 'Deleted' state is still
-   *  preserved with all its attachments and can be restored. 'Purged' means
+   * Message availability status. Message in `Deleted` state is still
+   *  preserved with all its attachments and can be restored. `Purged` means
    *  that all attachments are already deleted and the message itself is about
    *  to be physically deleted shortly
    */
@@ -59,9 +59,13 @@ interface GetMessageInfoResponse {
   deliveryErrorCode?: string;
 
   /**
-   * Text message direction. Note that for some message types not all
-   *  directions are allowed. For example voicemail messages can
-   *  be only inbound
+   * SMS size in segments
+   * Format: int32
+   */
+  segmentCount?: number;
+
+  /**
+   * Message direction (inbound or outbound)
    */
   direction?: "Inbound" | "Outbound";
 
@@ -91,10 +95,11 @@ interface GetMessageInfoResponse {
   /**
    * Message status. Different message types may have different
    *  allowed status values. For outbound faxes the aggregated message status
-   *  is returned. If, for outbound message, a status for at least one recipient is 'Queued', then
-   *  the 'Queued' value is returned. If a status for at least one recipient is
-   *  'SendingFailed', then the 'SendingFailed' value is returned. In other cases
-   *  the 'Sent' status is returned
+   *  is returned. If, for multi-recipient outbound message, a status for
+   *  at least one recipient is `Queued`, then the `Queued` value is returned.
+   *  If a status for at least one recipient is `SendingFailed`,
+   *  then the 'SendingFailed' value is returned. In other cases,
+   *  the `Sent` status is returned
    */
   messageStatus?:
     | "Queued"

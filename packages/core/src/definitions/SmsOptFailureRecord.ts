@@ -2,7 +2,7 @@ import ApiError from "./ApiError.js";
 
 interface SmsOptFailureRecord {
   /**
-   * The wildcard meaning that all account numbers should be opted out/in
+   * The wildcard ('*') indicating that all account numbers should be opted out or opted in
    * Required
    * Example: +16501234567
    */
@@ -16,16 +16,16 @@ interface SmsOptFailureRecord {
   to?: string;
 
   /**
-   * Opt status of a recipient's phone number:
-   *  - `OptOut` - the number is opted out for SMS;
-   *  - `OptIn` - the number is opted in for SMS (if it was previously opted-out).
+   * Consent status of a recipient's phone number:
+   *  - `OptOut` - The number is opted out of receiving SMS.
+   *  - `OptIn` - The number is opted in to receiving SMS (if it was previously opted out).
    * Required
    * Example: OptOut
    */
   optStatus?: "OptOut" | "OptIn";
 
   /**
-   * The source of opt record
+   * The source of the consent record
    * Required
    */
   source?: "Recipient" | "Api" | "Upstream" | "Carrier";

@@ -4,10 +4,13 @@ import CommReferencedExtensionResource from "./CommReferencedExtensionResource.j
  * All Desktop Ring target
  */
 interface CommAllDesktopTargetResource {
+  /** */
+  extension?: CommReferencedExtensionResource;
+
   /**
    * Required
    */
-  extension?: CommReferencedExtensionResource;
+  name?: string;
 
   /**
    * Example: AllDesktopRingTarget

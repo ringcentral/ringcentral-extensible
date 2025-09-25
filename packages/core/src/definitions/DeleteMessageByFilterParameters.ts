@@ -2,7 +2,9 @@
  * Query parameters for operation deleteMessageByFilter
  */
 interface DeleteMessageByFilterParameters {
-  /** */
+  /**
+   * ID(s) of a conversation to delete
+   */
   conversationId?: string[];
 
   /**

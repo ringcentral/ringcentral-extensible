@@ -1,4 +1,4 @@
-import OptOuts from "./OptOuts/index.js";
+import Consents from "./Consents/index.js";
 import { ParentInterface, RingCentralInterface } from "../../../../../types.js";
 
 class Index {
@@ -13,8 +13,8 @@ class Index {
     return `${this._parent.path()}/sms`;
   }
 
-  public optOuts(): OptOuts {
-    return new OptOuts(this);
+  public consents(): Consents {
+    return new Consents(this);
   }
 }
 export default Index;

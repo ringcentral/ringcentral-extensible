@@ -10,6 +10,7 @@ import CallsByCompanyHours from "./CallsByCompanyHours.js";
 import CallsByQueueSla from "./CallsByQueueSla.js";
 import CallsByType from "./CallsByType.js";
 import QueueOpportunities from "./QueueOpportunities.js";
+import CallsByQueueHours from "./CallsByQueueHours.js";
 
 /**
  * Call volume data for the specified grouping
@@ -50,6 +51,9 @@ interface CallsCounters {
 
   /** */
   queueOpportunities?: QueueOpportunities;
+
+  /** */
+  callsByQueueHours?: CallsByQueueHours;
 }
 
 export default CallsCounters;

@@ -13,7 +13,7 @@ interface RoleResource {
   id?: string;
 
   /**
-   * Dispayed name of a role
+   * Display name of a role
    * Example: Super Admin
    */
   displayName?: string;

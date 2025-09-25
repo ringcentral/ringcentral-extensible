@@ -8,6 +8,7 @@ import AggregationResponseOptionsTimersCallsDurationByCompanyHours from "./Aggre
 import AggregationResponseOptionsTimersCallsDurationByQueueSla from "./AggregationResponseOptionsTimersCallsDurationByQueueSla.js";
 import AggregationResponseOptionsTimersCallsDurationByType from "./AggregationResponseOptionsTimersCallsDurationByType.js";
 import AggregationResponseOptionsTimersCallsDurationByEndingParty from "./AggregationResponseOptionsTimersCallsDurationByEndingParty.js";
+import AggregationResponseOptionsTimersCallsDurationByQueueHours from "./AggregationResponseOptionsTimersCallsDurationByQueueHours.js";
 
 /**
  * The formula is defined by `aggregationType` and `aggregationInterval` for every timer individually.
@@ -70,6 +71,12 @@ interface AggregationResponseOptionsTimers {
    */
   callsDurationByEndingParty?:
     AggregationResponseOptionsTimersCallsDurationByEndingParty;
+
+  /**
+   * Aggregation of calls duration by queue hours (BusinessHours, AfterHours)
+   */
+  callsDurationByQueueHours?:
+    AggregationResponseOptionsTimersCallsDurationByQueueHours;
 }
 
 export default AggregationResponseOptionsTimers;

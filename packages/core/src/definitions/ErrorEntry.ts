@@ -1,5 +1,5 @@
 /**
- * Single (of potential multply) error entry in an ASG error response
+ * Single (of potential multiple) error entry in an ASG error response
  */
 interface ErrorEntry {
   /**

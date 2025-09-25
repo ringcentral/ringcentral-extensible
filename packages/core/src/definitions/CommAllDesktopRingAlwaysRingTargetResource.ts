@@ -17,9 +17,7 @@ interface CommAllDesktopRingAlwaysRingTargetResource {
    */
   type?: "AllDesktopRingTarget" | "AllMobileRingTarget";
 
-  /**
-   * Required
-   */
+  /** */
   extension?: CommReferencedExtensionResource;
 }
 

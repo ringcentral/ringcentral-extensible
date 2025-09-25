@@ -3,6 +3,12 @@
  */
 interface TimezoneInfoBase {
   /**
+   * Canonical URI of a timezone
+   * Format: uri
+   */
+  uri?: string;
+
+  /**
    * Internal identifier of a timezone
    */
   id?: string;
@@ -18,7 +24,8 @@ interface TimezoneInfoBase {
   description?: string;
 
   /**
-   * Time difference (offset) in minutes from Coordinated Universal Time (UTC) that a specific locale follows
+   * Time difference (offset) in minutes from Coordinated Universal Time (UTC)
+   *  that a specific locale follows
    */
   bias?: string;
 }

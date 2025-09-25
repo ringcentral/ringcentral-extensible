@@ -27,9 +27,7 @@ interface CommDeviceRingTargetResource {
    */
   device?: CommDeviceResource;
 
-  /**
-   * Required
-   */
+  /** */
   extension?: CommReferencedExtensionResource;
 }
 

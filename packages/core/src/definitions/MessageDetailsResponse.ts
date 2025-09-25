@@ -9,13 +9,15 @@ interface MessageDetailsResponse {
   id?: string;
 
   /**
-   * Phone number in [E.164](https://www.itu.int/rec/T-REC-E.164-201011-I) format from which the message was sent
+   * Phone number in [E.164](https://www.itu.int/rec/T-REC-E.164-201011-I)
+   *  format from which the message was sent
    * Example: +15551234567
    */
   from?: string;
 
   /**
-   * List of phone numbers in [E.164](https://www.itu.int/rec/T-REC-E.164-201011-I) format to which the message was sent
+   * List of phone numbers in [E.164](https://www.itu.int/rec/T-REC-E.164-201011-I)
+   *  format to which the message was sent
    * Example: +15551234567
    */
   to?: string[];
@@ -27,7 +29,7 @@ interface MessageDetailsResponse {
   text?: string;
 
   /**
-   * The time when this is message was created.
+   * The time when this message was created.
    * Format: date-time
    */
   creationTime?: string;
@@ -39,7 +41,7 @@ interface MessageDetailsResponse {
   lastModifiedTime?: string;
 
   /**
-   * Current status of a message
+   * Status of the message
    * Example: Queued
    */
   messageStatus?:
@@ -70,7 +72,7 @@ interface MessageDetailsResponse {
   batchId?: string;
 
   /**
-   * Direction of the SMS message
+   * Message direction (inbound or outbound)
    */
   direction?: "Inbound" | "Outbound";
 

@@ -114,6 +114,12 @@ construct the uri as [sample code](./packages/core/src/samples.md) shows.
 
 ## For maintainers
 
+### Code format
+
+```
+deno fmt
+```
+
 ### Regenerate code using latest swagger spec
 
 Please refer to the

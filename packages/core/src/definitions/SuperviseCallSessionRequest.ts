@@ -14,12 +14,6 @@ interface SuperviseCallSessionRequest {
   supervisorDeviceId?: string;
 
   /**
-   * Extension identifier of the user that will be monitored
-   * Example: 400378008008
-   */
-  agentExtensionId?: string;
-
-  /**
    * Specifies if auto-answer SIP header should be sent. If auto-answer is set to `true`, the call is automatically answered by the supervising party, if set to `false` - then the supervising party has to accept or decline the monitored call
    * Default: true
    */
@@ -29,6 +23,20 @@ interface SuperviseCallSessionRequest {
    * Specifies session description protocol setting
    */
   mediaSDP?: "sendOnly" | "sendRecv";
+
+  /**
+   * Extension number of the user that will be monitored
+   * Required
+   * Example: 105
+   */
+  agentExtensionNumber?: string;
+
+  /**
+   * Extension identifier of the user that will be monitored
+   * Required
+   * Example: 400378008008
+   */
+  agentExtensionId?: string;
 }
 
 export default SuperviseCallSessionRequest;

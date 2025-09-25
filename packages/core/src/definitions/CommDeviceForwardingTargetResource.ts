@@ -23,9 +23,7 @@ interface CommDeviceForwardingTargetResource {
    */
   device?: CommDeviceResource;
 
-  /**
-   * Required
-   */
+  /** */
   extension?: CommReferencedExtensionResource;
 }
 

@@ -3,7 +3,7 @@ import CountryInfoShortModel from "./CountryInfoShortModel.js";
 import ServicePlanInfo from "./ServicePlanInfo.js";
 import BillingPlanInfo from "./BillingPlanInfo.js";
 import ServiceFeatureInfo from "./ServiceFeatureInfo.js";
-import AccountLimits from "./AccountLimits.js";
+import AccountLimitsInfo from "./AccountLimitsInfo.js";
 import BillingPackageInfo from "./BillingPackageInfo.js";
 
 /**
@@ -42,7 +42,7 @@ interface AccountServiceInfoRequest {
   serviceFeatures?: ServiceFeatureInfo[];
 
   /** */
-  limits?: AccountLimits;
+  limits?: AccountLimitsInfo;
 
   /** */
   package?: BillingPackageInfo;

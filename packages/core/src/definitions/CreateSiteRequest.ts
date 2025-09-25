@@ -1,6 +1,7 @@
 import ContactBusinessAddressInfo from "./ContactBusinessAddressInfo.js";
 import RegionalSettings from "./RegionalSettings.js";
 import SiteOperatorReference from "./SiteOperatorReference.js";
+import CostCenterInfo from "./CostCenterInfo.js";
 
 interface CreateSiteRequest {
   /**
@@ -51,6 +52,9 @@ interface CreateSiteRequest {
    * Site code value
    */
   code?: string;
+
+  /** */
+  costCenter?: CostCenterInfo;
 }
 
 export default CreateSiteRequest;

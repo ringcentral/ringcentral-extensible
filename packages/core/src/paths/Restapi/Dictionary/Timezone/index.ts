@@ -1,4 +1,4 @@
-import GetTimezoneInfoResponse from "../../../../definitions/GetTimezoneInfoResponse.js";
+import TimezoneInfoBase from "../../../../definitions/TimezoneInfoBase.js";
 import GetTimezoneListResponse from "../../../../definitions/GetTimezoneListResponse.js";
 import ListTimezonesParameters from "../../../../definitions/ListTimezonesParameters.js";
 import {
@@ -54,11 +54,11 @@ class Index {
    */
   public async get(
     restRequestConfig?: RestRequestConfig,
-  ): Promise<GetTimezoneInfoResponse> {
+  ): Promise<TimezoneInfoBase> {
     if (this.timezoneId === null) {
       throw new Error("timezoneId must be specified.");
     }
-    const r = await this.rc.get<GetTimezoneInfoResponse>(
+    const r = await this.rc.get<TimezoneInfoBase>(
       this.path(),
       undefined,
       restRequestConfig,

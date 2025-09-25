@@ -1,4 +1,4 @@
-import CallPartyInfo from "./CallPartyInfo.js";
+import CallPartyShortInfo from "./CallPartyShortInfo.js";
 import RecordingInfo from "./RecordingInfo.js";
 import CallStatusInfo from "./CallStatusInfo.js";
 import ParkInfo from "./ParkInfo.js";
@@ -27,10 +27,10 @@ interface TelephonySessionsEventPartyInfo {
   direction?: "Inbound" | "Outbound";
 
   /** */
-  to?: CallPartyInfo;
+  to?: CallPartyShortInfo;
 
   /** */
-  from?: CallPartyInfo;
+  from?: CallPartyShortInfo;
 
   /** */
   recordings?: RecordingInfo[];

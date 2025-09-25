@@ -17,7 +17,7 @@ class Index {
     return `${this._parent.path()}/send-welcome-email`;
   }
   /**
-   * Sends/resends welcome email to the system user of confirmed account
+   * Sends or re-sends welcome email to the system user of confirmed account
    * HTTP Method: post
    * Endpoint: /restapi/v2/accounts/{accountId}/send-welcome-email
    * Rate Limit Group: Medium

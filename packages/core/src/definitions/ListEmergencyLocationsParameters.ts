@@ -21,10 +21,14 @@ interface ListEmergencyLocationsParameters {
    */
   addressStatus?: "Valid" | "Invalid" | "Provisioning";
 
-  /** */
+  /**
+   * Status of emergency location to filter results by
+   */
   usageStatus?: "Active" | "Inactive";
 
-  /** */
+  /**
+   * Domestic country ID to filter results by
+   */
   domesticCountryId?: string;
 
   /**

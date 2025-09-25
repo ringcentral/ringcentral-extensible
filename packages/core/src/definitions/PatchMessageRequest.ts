@@ -8,8 +8,8 @@ interface PatchMessageRequest {
   readStatus?: "Read" | "Unread";
 
   /**
-   * Message availability status. Message in 'Deleted' state is still
-   *  preserved with all its attachments and can be restored. 'Purged' means
+   * Message availability status. Message in `Deleted` state is still
+   *  preserved with all its attachments and can be restored. `Purged` means
    *  that all attachments are already deleted and the message itself is about
    *  to be physically deleted shortly
    */

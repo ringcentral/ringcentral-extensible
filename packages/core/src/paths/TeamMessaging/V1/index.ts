@@ -10,10 +10,10 @@ import Events from "./Events/index.js";
 import Recent from "./Recent/index.js";
 import Groups from "./Groups/index.js";
 import Files from "./Files/index.js";
+import Tasks from "./Tasks/index.js";
 import Notes from "./Notes/index.js";
 import Teams from "./Teams/index.js";
 import Chats from "./Chats/index.js";
-import Tasks from "./Tasks/index.js";
 import { ParentInterface, RingCentralInterface } from "../../../types.js";
 
 class Index {
@@ -28,10 +28,6 @@ class Index {
     return `${this._parent.path(false)}/v1`;
   }
 
-  public tasks(taskId: string | null = null): Tasks {
-    return new Tasks(this, taskId);
-  }
-
   public chats(chatId: string | null = null): Chats {
     return new Chats(this, chatId);
   }
@@ -42,6 +38,10 @@ class Index {
 
   public notes(noteId: string | null = null): Notes {
     return new Notes(this, noteId);
+  }
+
+  public tasks(taskId: string | null = null): Tasks {
+    return new Tasks(this, taskId);
   }
 
   public files(): Files {

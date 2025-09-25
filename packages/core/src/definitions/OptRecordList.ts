@@ -2,7 +2,7 @@ import SmsOptRecord from "./SmsOptRecord.js";
 import NonEnumeratedPagingModel from "./NonEnumeratedPagingModel.js";
 
 /**
- * The list of records with opt statuses
+ * A list of SMS consent records
  */
 interface OptRecordList {
   /**

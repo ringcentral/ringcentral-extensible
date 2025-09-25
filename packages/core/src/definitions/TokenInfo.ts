@@ -86,6 +86,13 @@ interface TokenInfo {
    * Format: int32
    */
   session_idle_timeout?: number;
+
+  /**
+   * The websocket access token to be used when connecting to the Websocket Gateway.
+   *  Returned only if the client application is granted with the "WebSocket" scope
+   * Example: QU1TMDJQMDFQQVMwMHxBQURBVTZWZHZfWmRvVWxLREQtSzh
+   */
+  ws_access_token?: string;
 }
 
 export default TokenInfo;

@@ -58,9 +58,23 @@ interface DetailedExtensionPresenceEventBody {
     | "Unknown";
 
   /**
+   * Do Not Disturb status of a User extension. Connected to the DND State type.
+   *  Applicable for User extensions if the new communication handling service is
+   *  activated on account.
+   */
+  dndStatusPersonal?: "TakeAllCalls" | "DoNotAcceptAnyCalls" | "Unknown";
+
+  /**
    * If `true` enables other extensions to see the extension presence status
    */
   allowSeeMyPresence?: boolean;
+
+  /**
+   * Specifies if a Call Queue member extension will be able to receive Call Queue calls.
+   *  Used for the Agent state type. Applicable for User extensions if the new communication
+   *  handling service is activated on account
+   */
+  acceptCallQueueCalls?: boolean;
 
   /**
    * If `true` enables to ring extension phone, if any user monitored

@@ -8,14 +8,13 @@ interface CommTerminatingActionResourceTargets {
 
   /**
    * Terminating target type
-   * Example: ImsVoiceMailTerminatingTarget
+   * Example: ExtensionTerminatingTarget
    */
   type?:
     | "ExtensionTerminatingTarget"
     | "PhoneNumberTerminatingTarget"
     | "PlayAnnouncementTerminatingTarget"
-    | "VoiceMailTerminatingTarget"
-    | "ImsVoiceMailTerminatingTarget";
+    | "VoiceMailTerminatingTarget";
 
   /** */
   extension?: CommReferencedExtensionResource;

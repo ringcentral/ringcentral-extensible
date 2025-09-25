@@ -24,7 +24,7 @@ interface AuthorizeParameters {
   /**
    * An opaque value used by the client to maintain state between the request and callback.
    *  The authorization server includes this value when redirecting the User Agent back
-   *  to the client. The parameter SHOULD be used for preventing cross-site request forgery attacks.
+   *  to the client. Using this parameter is strongly recommended to prevent cross-site request forgery attacks.
    */
   state?: string;
 
@@ -68,7 +68,8 @@ interface AuthorizeParameters {
 
   /**
    * The code challenge method as defined by the PKCE specification -
-   *  [RFC-7636 "Proof Key for Code Exchange by OAuth Public Clients"](https://datatracker.ietf.org/doc/html/rfc7636)
+   *  [RFC-7636 "Proof Key for Code Exchange by OAuth Public Clients"](https://datatracker.ietf.org/doc/html/rfc7636).
+   *  This parameter is mandatory when the `code_challenge` is provided
    * Default: plain
    */
   code_challenge_method?: "plain" | "S256";

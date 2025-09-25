@@ -1,3 +1,4 @@
+import Attributes from "./Attributes.js";
 import CallStatusInfo from "./CallStatusInfo.js";
 import ParkInfo from "./ParkInfo.js";
 import PartyInfo from "./PartyInfo.js";
@@ -13,6 +14,19 @@ interface CallParty {
    * Internal identifier of a party
    */
   id?: string;
+
+  /**
+   * Internal identifier of an account
+   */
+  accountId?: string;
+
+  /**
+   * Internal identifier of an extension
+   */
+  extensionId?: string;
+
+  /** */
+  attributes?: Attributes;
 
   /** */
   status?: CallStatusInfo;

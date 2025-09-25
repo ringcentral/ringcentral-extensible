@@ -19,7 +19,9 @@ interface OptOutResponse {
    */
   status?: "OptIn" | "OptOut";
 
-  /** */
+  /**
+   * The source of the opt-out record
+   */
   source?: "Recipient" | "Account" | "Upstream" | "Carrier";
 }
 

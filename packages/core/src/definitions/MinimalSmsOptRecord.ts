@@ -1,6 +1,6 @@
 interface MinimalSmsOptRecord {
   /**
-   * The wildcard meaning that all account numbers should be opted out/in
+   * The wildcard ('*') indicating that all account numbers should be opted out or opted in
    * Required
    * Example: +16501234567
    */

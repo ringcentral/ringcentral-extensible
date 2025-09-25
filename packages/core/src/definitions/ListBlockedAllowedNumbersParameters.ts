@@ -24,7 +24,7 @@ interface ListBlockedAllowedNumbersParameters {
   perPage?: number;
 
   /**
-   * Status of a phone number
+   * Status of a phone number blocking
    * Default: Blocked
    */
   status?: "Blocked" | "Allowed";

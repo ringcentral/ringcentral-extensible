@@ -6,21 +6,76 @@ interface NotificationDeliveryMode {
    * The transport type for this subscription
    * Required
    */
-  transportType?: "WebHook" | "WebSocket";
+  transportType?:
+    | "WebHook"
+    | "WebSocket"
+    | "RC/APNS"
+    | "RC/GCM"
+    | "PubNub"
+    | "Internal";
 
   /**
-   * The URL to which notifications should be delivered. This is only applicable for the `WebHook` transport type, for which it is a required field.
+   * PubNub channel name
    * Required
    * Format: uri
-   * Example: https://acme.com/myservice/webhook
+   * Example: 54770517599294_6dda849e
    */
   address?: string;
 
   /**
-   * Specifies if notification messages will be encrypted or not.
+   * Optional. Specifies if notification messages will be encrypted
+   *  or not. Please note that for some event filters (e.g. presence) encryption is mandatory and
+   *  `false` value provided by caller will be ignored.
    * Required
    */
   encryption?: boolean;
+
+  /**
+   * Certificate name for mobile notification transports
+   * Required
+   */
+  certificateName?: string;
+
+  /**
+   * Device instance ID for mobile notification transports
+   * Required
+   * Example: 38b062ae-85f8-4dcc-8734-04d3f7393d42
+   */
+  registrationId?: string;
+
+  /**
+   * (Only for a `PubNub` transport)
+   *  PubNub credential required to subscribe to the channel
+   * Required
+   */
+  subscriberKey?: string;
+
+  /**
+   * (Only for a `PubNub` transport)
+   *  PubNub credential required to subscribe to the channel
+   * Required
+   */
+  secretKey?: string;
+
+  /**
+   * (Only for a `PubNub` transport, returned only if `encryption` is `true`)
+   *  Encryption algorithm used
+   */
+  encryptionAlgorithm?: "AES";
+
+  /**
+   * (Only for a `PubNub` transport, returned only if `encryption` is `true`)
+   *  Cryptographic key to decrypt PubNub notification messages
+   */
+  encryptionKey?: string;
+
+  /**
+   * (Only for an `Internal` transport)
+   *  The name of internal channel (defined in the backend service configuration) to deliver notifications through.
+   * Required
+   * Example: my-server-channel
+   */
+  configName?: string;
 }
 
 export default NotificationDeliveryMode;
