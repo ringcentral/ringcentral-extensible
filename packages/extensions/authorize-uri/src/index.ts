@@ -1,23 +1,12 @@
 import type RingCentral from "@rc-ex/core";
 import SdkExtension from "@rc-ex/core/SdkExtension";
-// import type AuthorizeRequest from "@rc-ex/core/definitions/AuthorizeRequest";
+import type AuthorizeRequest from "@rc-ex/core/definitions/AuthorizeRequest";
 import type { QueryDataMap } from "urijs";
 import URI from "urijs";
 
 export interface AuthorizeUriOptions {
   baseUri?: string;
 }
-
-// todo: remove this type when spec updated
-type AuthorizeRequest = {
-  response_type?: string;
-  client_id?: string;
-  code_challenge?: string;
-  code_challenge_method?: string;
-  redirect_uri?: string;
-  state?: string;
-  ui_options?: string;
-};
 
 function isNode() {
   return typeof process !== "undefined" &&

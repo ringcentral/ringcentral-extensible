@@ -231,7 +231,7 @@ class RingCentral implements RingCentralInterface {
     await this.restapi(null)
       .oauth()
       .revoke()
-      .post({ token: temp, client_id: this.rest.clientId } as any); // todo: spec doesn't allow client_id
+      .post({ token: temp, client_id: this.rest.clientId });
     this.token = undefined;
   }
 
