@@ -8,43 +8,23 @@ export interface AuthorizeUriOptions {
   baseUri?: string;
 }
 
-function isNode() {
-  return typeof process !== "undefined" &&
-    process.versions?.node != null &&
-    typeof window === "undefined";
-}
-
 async function generateCodeVerifier(): Promise<string> {
-  const length = 32;
-  if (isNode()) {
-    const { randomBytes } = await import("crypto");
-    return randomBytes(length).toString("base64")
-      .replace(/\+/g, "-").replace(/\//g, "_").replace(/=/g, "");
-  } else {
-    const array = new Uint8Array(length);
-    crypto.getRandomValues(array);
-    return btoa(String.fromCharCode(...array))
-      .replace(/\+/g, "-").replace(/\//g, "_").replace(/=/g, "");
-  }
+  const array = new Uint8Array(32);
+  crypto.getRandomValues(array);
+  return btoa(String.fromCharCode(...array))
+    .replace(/\+/g, "-").replace(/\//g, "_").replace(/=/g, "");
 }
 
 async function generateCodeChallenge(verifier: string): Promise<string> {
-  if (isNode()) {
-    const { createHash } = await import("crypto");
-    const hash = createHash("sha256").update(verifier).digest();
-    return hash.toString("base64").replace(/\+/g, "-").replace(/\//g, "_")
-      .replace(/=/g, "");
-  } else {
-    const encoder = new TextEncoder();
-    const data = encoder.encode(verifier);
-    const hashBuffer = await crypto.subtle.digest("SHA-256", data);
-    const hashArray = Array.from(new Uint8Array(hashBuffer));
-    const hashStr = String.fromCharCode(...hashArray);
-    return btoa(hashStr).replace(/\+/g, "-").replace(/\//g, "_").replace(
-      /=/g,
-      "",
-    );
-  }
+  const encoder = new TextEncoder();
+  const data = encoder.encode(verifier);
+  const hashBuffer = await crypto.subtle.digest("SHA-256", data);
+  const hashArray = Array.from(new Uint8Array(hashBuffer));
+  const hashStr = String.fromCharCode(...hashArray);
+  return btoa(hashStr).replace(/\+/g, "-").replace(/\//g, "_").replace(
+    /=/g,
+    "",
+  );
 }
 
 class AuthorizeUriExtension extends SdkExtension {
