@@ -18,9 +18,9 @@
     "upgrade-all": "yarn-upgrade-all -W && yarn workspaces run yarn-upgrade-all && yarn install"
   },
   "devDependencies": {
-    "@types/node": "^24.5.2",
-    "lerna": "^8.2.4",
-    "typescript": "^5.9.2",
+    "@types/node": "^25.0.3",
+    "lerna": "^9.0.3",
+    "typescript": "^5.9.3",
     "yarn-upgrade-all": "^0.7.5"
   },
   "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"

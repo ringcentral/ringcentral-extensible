@@ -29,7 +29,7 @@
     "access": "public"
   },
   "devDependencies": {
-    "@ringcentral/sdk": "^5.0.5"
+    "@ringcentral/sdk": "^5.0.6"
   },
   "scripts": {
     "build": "tsc -p tsconfig.esm.json && tsc -p tsconfig.cjs.json"

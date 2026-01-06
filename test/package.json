@@ -11,10 +11,10 @@
     "@rc-ex/events": "^1.3.12",
     "@rc-ex/rcsdk": "^1.4.1",
     "@rc-ex/ws": "^1.4.1",
-    "@ringcentral/sdk": "^5.0.5",
+    "@ringcentral/sdk": "^5.0.6",
     "dotenv-override-true": "^6.2.2",
-    "vitest": "^3.2.4",
-    "wait-for-async": "^0.7.13",
-    "winston": "^3.17.0"
+    "vitest": "^4.0.16",
+    "wait-for-async": "^0.8.0",
+    "winston": "^3.19.0"
   }
 }

@@ -29,7 +29,7 @@
     "access": "public"
   },
   "dependencies": {
-    "@types/urijs": "^1.19.25",
+    "@types/urijs": "^1.19.26",
     "urijs": "^1.19.11"
   },
   "scripts": {
