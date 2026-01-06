@@ -78,15 +78,6 @@ class AuthorizeUriExtension extends SdkExtension {
       authorizeRequest.code_challenge = await generateCodeChallenge(
         this.codeVerifier,
       );
-      // this.codeVerifier = randomBytes(32).toString("base64").replace(/\+/g, "-")
-      //   .replace(/\//g, "_").replace(/=/g, "");
-      // authorizeRequest.code_challenge = createHash("sha256")
-      //   .update(this.codeVerifier)
-      //   .digest()
-      //   .toString("base64")
-      //   .replace(/\+/g, "-")
-      //   .replace(/\//g, "_")
-      //   .replace(/=/g, "");
     }
 
     let uri;
