@@ -150,7 +150,8 @@ yarn lerna publish from-package
 By default lerna check git tag to determine which packages to publish.
 `from-package` will make lerna check npmjs.com instead.
 
-As I just tried, it works without `from-package` option.
+Most of the time, it works without `from-package` option. But if the repo is in
+a "half-published" state, you will need this option to publish.
 
 ### NPM 2FA
 
