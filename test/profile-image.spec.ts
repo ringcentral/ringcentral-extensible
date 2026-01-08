@@ -9,7 +9,7 @@ describe("Profile image", () => {
     const rc = await ReusableRestClient.getInstance();
     const buffer = await rc.restapi().account().extension().profileImage()
       .list();
-    expect(buffer.constructor.name).toBe("Buffer");
+    expect(buffer instanceof Uint8Array).toBe(true);
     fs.writeFileSync(path.join(__dirname, "temp.png"), buffer);
   });
 

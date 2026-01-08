@@ -29,8 +29,8 @@ class Index {
   public async get(
     queryParams?: ReadIVRPromptContentParameters,
     restRequestConfig?: RestRequestConfig,
-  ): Promise<Buffer> {
-    const r = await this.rc.get<Buffer>(this.path(), queryParams, {
+  ): Promise<Uint8Array> {
+    const r = await this.rc.get<Uint8Array>(this.path(), queryParams, {
       ...restRequestConfig,
       responseType: "arraybuffer",
     });

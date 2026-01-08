@@ -15,7 +15,7 @@ Get API Versions
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi().list();
+const result = await rc.restapi().list();
 await rc.revoke();
 ```
 
@@ -39,7 +39,7 @@ Get Version Info
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).get();
+const result = await rc.restapi(apiVersion).get();
 await rc.revoke();
 ```
 
@@ -64,7 +64,7 @@ Search/List Users
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.scim(version).users().list(scimSearchViaGet2Parameters);
+const result = await rc.scim(version).users().list(scimSearchViaGet2Parameters);
 await rc.revoke();
 ```
 
@@ -92,7 +92,7 @@ Create User
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.scim(version).users().post(scimUser);
+const result = await rc.scim(version).users().post(scimUser);
 await rc.revoke();
 ```
 
@@ -118,7 +118,7 @@ Get User
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.scim(version).users(scimUserId).get();
+const result = await rc.scim(version).users(scimUserId).get();
 await rc.revoke();
 ```
 
@@ -143,7 +143,7 @@ Update/Replace User
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.scim(version).users(scimUserId).put(scimUser);
+const result = await rc.scim(version).users(scimUserId).put(scimUser);
 await rc.revoke();
 ```
 
@@ -169,7 +169,7 @@ Delete User
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.scim(version).users(scimUserId).delete();
+const result = await rc.scim(version).users(scimUserId).delete();
 await rc.revoke();
 ```
 
@@ -194,7 +194,7 @@ Update/Patch User
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.scim(version).users(scimUserId).patch(scimUserPatch);
+const result = await rc.scim(version).users(scimUserId).patch(scimUserPatch);
 await rc.revoke();
 ```
 
@@ -220,7 +220,7 @@ JSON Web Key Set (JWKS)
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi().oauth().jwks().get();
+const result = await rc.restapi().oauth().jwks().get();
 await rc.revoke();
 ```
 
@@ -244,7 +244,7 @@ List Schemas
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.scim(version).schemas().list();
+const result = await rc.scim(version).schemas().list();
 await rc.revoke();
 ```
 
@@ -270,7 +270,7 @@ Get Schema
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.scim(version).schemas(uri).get();
+const result = await rc.scim(version).schemas(uri).get();
 await rc.revoke();
 ```
 
@@ -295,7 +295,7 @@ Speaker Diarization
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.ai().audio().v1().async().speakerDiarize().post(
+const result = await rc.ai().audio().v1().async().speakerDiarize().post(
   diarizeInput,
   caiSpeakerDiarizeParameters,
 );
@@ -326,7 +326,7 @@ Speaker Identification
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.ai().audio().v1().async().speakerIdentify().post(
+const result = await rc.ai().audio().v1().async().speakerIdentify().post(
   identifyInput,
   caiSpeakerIdentifyParameters,
 );
@@ -357,7 +357,7 @@ List Account Video Meetings
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.rcvideo().v1().history().account(accountId).meetings()
+const result = await rc.rcvideo().v1().history().account(accountId).meetings()
   .get(listAccountMeetingsParameters);
 await rc.revoke();
 ```
@@ -386,7 +386,7 @@ Create Bridge
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.rcvideo().v2().account(accountId).extension(extensionId)
+const result = await rc.rcvideo().v2().account(accountId).extension(extensionId)
   .bridges().post(createBridgeRequest);
 await rc.revoke();
 ```
@@ -415,9 +415,8 @@ Add Phone to Inventory
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi().v2().accounts(accountId).deviceInventory().post(
-  addDeviceToInventoryRequest,
-);
+const result = await rc.restapi().v2().accounts(accountId).deviceInventory()
+  .post(addDeviceToInventoryRequest);
 await rc.revoke();
 ```
 
@@ -444,7 +443,7 @@ Delete Device from Inventory
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi().v2().accounts(accountId).deviceInventory()
+const result = await rc.restapi().v2().accounts(accountId).deviceInventory()
   .delete(deleteDeviceFromInventoryRequest);
 await rc.revoke();
 ```
@@ -472,7 +471,7 @@ Add BYOD Devices
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi().v2().accounts(accountId).devices().bulkAdd()
+const result = await rc.restapi().v2().accounts(accountId).devices().bulkAdd()
   .post(bulkAddDevicesRequest);
 await rc.revoke();
 ```
@@ -500,7 +499,7 @@ Get Account Regional Settings
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi().v2().accounts(accountId).regionalSettings()
+const result = await rc.restapi().v2().accounts(accountId).regionalSettings()
   .get();
 await rc.revoke();
 ```
@@ -525,7 +524,7 @@ Update Account Regional Settings
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi().v2().accounts(accountId).regionalSettings()
+const result = await rc.restapi().v2().accounts(accountId).regionalSettings()
   .patch(accountRegionalSettingRequest);
 await rc.revoke();
 ```
@@ -552,7 +551,7 @@ Get Account Info
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).get();
+const result = await rc.restapi(apiVersion).account(accountId).get();
 await rc.revoke();
 ```
 
@@ -579,7 +578,7 @@ Get Async Task Status
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.ai().status().v1().jobs(jobId).get();
+const result = await rc.ai().status().v1().jobs(jobId).get();
 await rc.revoke();
 ```
 
@@ -603,7 +602,9 @@ Get Bridge
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.rcvideo().v2().bridges(bridgeId).get(getBridgeParameters);
+const result = await rc.rcvideo().v2().bridges(bridgeId).get(
+  getBridgeParameters,
+);
 await rc.revoke();
 ```
 
@@ -629,7 +630,7 @@ Delete Bridge
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.rcvideo().v2().bridges(bridgeId).delete();
+const result = await rc.rcvideo().v2().bridges(bridgeId).delete();
 await rc.revoke();
 ```
 
@@ -653,7 +654,7 @@ Update Bridge
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.rcvideo().v2().bridges(bridgeId).patch(
+const result = await rc.rcvideo().v2().bridges(bridgeId).patch(
   updateBridgeRequest,
 );
 await rc.revoke();
@@ -681,7 +682,7 @@ List Resource Types
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.scim(version).resourceTypes().list();
+const result = await rc.scim(version).resourceTypes().list();
 await rc.revoke();
 ```
 
@@ -707,7 +708,7 @@ Get Resource Type
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.scim(version).resourceTypes(type).get();
+const result = await rc.scim(version).resourceTypes(type).get();
 await rc.revoke();
 ```
 
@@ -733,7 +734,7 @@ OAuth Token
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi().oauth().token().post(getTokenRequest);
+const result = await rc.restapi().oauth().token().post(getTokenRequest);
 await rc.revoke();
 ```
 
@@ -759,7 +760,7 @@ List Enrolled Speakers
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.ai().audio().v1().enrollments().list(
+const result = await rc.ai().audio().v1().enrollments().list(
   caiEnrollmentsListParameters,
 );
 await rc.revoke();
@@ -788,7 +789,7 @@ Create Speaker Enrollment
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.ai().audio().v1().enrollments().post(enrollmentInput);
+const result = await rc.ai().audio().v1().enrollments().post(enrollmentInput);
 await rc.revoke();
 ```
 
@@ -814,7 +815,7 @@ Get Speaker Enrollment Status
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.ai().audio().v1().enrollments(speakerId).get();
+const result = await rc.ai().audio().v1().enrollments(speakerId).get();
 await rc.revoke();
 ```
 
@@ -838,7 +839,7 @@ Delete Speaker Enrollment
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.ai().audio().v1().enrollments(speakerId).delete();
+const result = await rc.ai().audio().v1().enrollments(speakerId).delete();
 await rc.revoke();
 ```
 
@@ -862,7 +863,7 @@ Update Speaker Enrollment
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.ai().audio().v1().enrollments(speakerId).patch(
+const result = await rc.ai().audio().v1().enrollments(speakerId).patch(
   enrollmentPatchInput,
 );
 await rc.revoke();
@@ -890,7 +891,7 @@ OAuth Revoke
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi().oauth().revoke().post(
+const result = await rc.restapi().oauth().revoke().post(
   revokeTokenRequest,
   revokeTokenParameters,
 );
@@ -921,7 +922,7 @@ OIDC User Info
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi().oauth().userinfo().get();
+const result = await rc.restapi().oauth().userinfo().get();
 await rc.revoke();
 ```
 
@@ -945,7 +946,7 @@ WebSocket Token
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi().oauth().wstoken().post();
+const result = await rc.restapi().oauth().wstoken().post();
 await rc.revoke();
 ```
 
@@ -969,7 +970,7 @@ Get Account Info
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi().v2().accounts(accountId).get();
+const result = await rc.restapi().v2().accounts(accountId).get();
 await rc.revoke();
 ```
 
@@ -993,7 +994,7 @@ Get Device
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).device(deviceId)
+const result = await rc.restapi(apiVersion).account(accountId).device(deviceId)
   .get(readDeviceParameters);
 await rc.revoke();
 ```
@@ -1022,7 +1023,7 @@ Update Device
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).device(deviceId)
+const result = await rc.restapi(apiVersion).account(accountId).device(deviceId)
   .put(accountDeviceUpdate, updateDeviceParameters);
 await rc.revoke();
 ```
@@ -1053,7 +1054,7 @@ List Sites
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).sites().list();
+const result = await rc.restapi(apiVersion).account(accountId).sites().list();
 await rc.revoke();
 ```
 
@@ -1079,7 +1080,7 @@ Create Site
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).sites().post(
+const result = await rc.restapi(apiVersion).account(accountId).sites().post(
   createSiteRequest,
 );
 await rc.revoke();
@@ -1109,7 +1110,7 @@ Get Site
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).sites(siteId)
+const result = await rc.restapi(apiVersion).account(accountId).sites(siteId)
   .get();
 await rc.revoke();
 ```
@@ -1136,9 +1137,8 @@ Update Site
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).sites(siteId).put(
-  siteUpdateRequest,
-);
+const result = await rc.restapi(apiVersion).account(accountId).sites(siteId)
+  .put(siteUpdateRequest);
 await rc.revoke();
 ```
 
@@ -1166,7 +1166,7 @@ Delete Site
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).sites(siteId)
+const result = await rc.restapi(apiVersion).account(accountId).sites(siteId)
   .delete();
 await rc.revoke();
 ```
@@ -1193,7 +1193,7 @@ List Subscriptions
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).subscription().list();
+const result = await rc.restapi(apiVersion).subscription().list();
 await rc.revoke();
 ```
 
@@ -1219,7 +1219,7 @@ Create Subscription
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).subscription().post(
+const result = await rc.restapi(apiVersion).subscription().post(
   createSubscriptionRequest,
 );
 await rc.revoke();
@@ -1248,7 +1248,7 @@ Get Subscription
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).subscription(subscriptionId).get();
+const result = await rc.restapi(apiVersion).subscription(subscriptionId).get();
 await rc.revoke();
 ```
 
@@ -1273,7 +1273,7 @@ Update Subscription
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).subscription(subscriptionId).put(
+const result = await rc.restapi(apiVersion).subscription(subscriptionId).put(
   updateSubscriptionRequest,
 );
 await rc.revoke();
@@ -1302,7 +1302,8 @@ Cancel Subscription
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).subscription(subscriptionId).delete();
+const result = await rc.restapi(apiVersion).subscription(subscriptionId)
+  .delete();
 await rc.revoke();
 ```
 
@@ -1327,7 +1328,9 @@ Search/List Users
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.scim(version).users().dotSearch().post(scimSearchRequest);
+const result = await rc.scim(version).users().dotSearch().post(
+  scimSearchRequest,
+);
 await rc.revoke();
 ```
 
@@ -1355,7 +1358,7 @@ OAuth Authorization
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi().oauth().authorize().get(authorizeParameters);
+const result = await rc.restapi().oauth().authorize().get(authorizeParameters);
 await rc.revoke();
 ```
 
@@ -1381,7 +1384,7 @@ OAuth Authorization (POST)
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi().oauth().authorize().post(authorizeRequest);
+const result = await rc.restapi().oauth().authorize().post(authorizeRequest);
 await rc.revoke();
 ```
 
@@ -1407,7 +1410,7 @@ List Company Call Records
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).callLog().list(
+const result = await rc.restapi(apiVersion).account(accountId).callLog().list(
   readCompanyCallLogParameters,
 );
 await rc.revoke();
@@ -1437,7 +1440,7 @@ Get Company Call Record(s)
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).callLog(
+const result = await rc.restapi(apiVersion).account(accountId).callLog(
   callRecordId,
 ).get(readCompanyCallRecordParameters);
 await rc.revoke();
@@ -1467,7 +1470,7 @@ List Extensions
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).extension().list(
+const result = await rc.restapi(apiVersion).account(accountId).extension().list(
   listExtensionsParameters,
 );
 await rc.revoke();
@@ -1498,7 +1501,7 @@ Create Extension
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).extension().post(
+const result = await rc.restapi(apiVersion).account(accountId).extension().post(
   extensionCreationRequest,
 );
 await rc.revoke();
@@ -1529,7 +1532,7 @@ Get Extension
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).extension(
+const result = await rc.restapi(apiVersion).account(accountId).extension(
   extensionId,
 ).get();
 await rc.revoke();
@@ -1559,7 +1562,7 @@ Update Extension
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).extension(
+const result = await rc.restapi(apiVersion).account(accountId).extension(
   extensionId,
 ).put(extensionUpdateRequest);
 await rc.revoke();
@@ -1591,7 +1594,7 @@ Create Company Greeting
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).greeting().post(
+const result = await rc.restapi(apiVersion).account(accountId).greeting().post(
   createCompanyGreetingRequest,
 );
 await rc.revoke();
@@ -1622,7 +1625,8 @@ List IVR Menus
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).ivrMenus().list();
+const result = await rc.restapi(apiVersion).account(accountId).ivrMenus()
+  .list();
 await rc.revoke();
 ```
 
@@ -1648,7 +1652,7 @@ Create IVR Menu
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).ivrMenus().post(
+const result = await rc.restapi(apiVersion).account(accountId).ivrMenus().post(
   iVRMenuInfo,
 );
 await rc.revoke();
@@ -1677,8 +1681,9 @@ Get IVR Menu
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).ivrMenus(ivrMenuId)
-  .get();
+const result = await rc.restapi(apiVersion).account(accountId).ivrMenus(
+  ivrMenuId,
+).get();
 await rc.revoke();
 ```
 
@@ -1704,8 +1709,9 @@ Update IVR Menu
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).ivrMenus(ivrMenuId)
-  .put(iVRMenuInfo);
+const result = await rc.restapi(apiVersion).account(accountId).ivrMenus(
+  ivrMenuId,
+).put(iVRMenuInfo);
 await rc.revoke();
 ```
 
@@ -1732,7 +1738,7 @@ Get User Presence Status List
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).presence().get(
+const result = await rc.restapi(apiVersion).account(accountId).presence().get(
   readAccountPresenceParameters,
 );
 await rc.revoke();
@@ -1763,7 +1769,7 @@ Get Call Recording
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).recording(
+const result = await rc.restapi(apiVersion).account(accountId).recording(
   recordingId,
 ).get();
 await rc.revoke();
@@ -1792,8 +1798,8 @@ Get Site IVR Settings
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).sites(siteId).ivr()
-  .get();
+const result = await rc.restapi(apiVersion).account(accountId).sites(siteId)
+  .ivr().get();
 await rc.revoke();
 ```
 
@@ -1819,8 +1825,8 @@ Update Site IVR Settings
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).sites(siteId).ivr()
-  .put(siteIVRSettingsUpdate);
+const result = await rc.restapi(apiVersion).account(accountId).sites(siteId)
+  .ivr().put(siteIVRSettingsUpdate);
 await rc.revoke();
 ```
 
@@ -1848,7 +1854,7 @@ List User Templates
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).templates().list(
+const result = await rc.restapi(apiVersion).account(accountId).templates().list(
   listUserTemplatesParameters,
 );
 await rc.revoke();
@@ -1878,7 +1884,7 @@ Get User Template
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).templates(
+const result = await rc.restapi(apiVersion).account(accountId).templates(
   templateId,
 ).get();
 await rc.revoke();
@@ -1906,7 +1912,7 @@ List Company User Roles
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).userRole().list(
+const result = await rc.restapi(apiVersion).account(accountId).userRole().list(
   listUserRolesParameters,
 );
 await rc.revoke();
@@ -1937,7 +1943,7 @@ Create Custom Role
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).userRole().post(
+const result = await rc.restapi(apiVersion).account(accountId).userRole().post(
   roleResource,
   createCustomRoleParameters,
 );
@@ -1969,7 +1975,7 @@ Get User Role
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).userRole(roleId)
+const result = await rc.restapi(apiVersion).account(accountId).userRole(roleId)
   .get(readUserRoleParameters);
 await rc.revoke();
 ```
@@ -1998,7 +2004,7 @@ Update User Role
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).userRole(roleId)
+const result = await rc.restapi(apiVersion).account(accountId).userRole(roleId)
   .put(roleResource, updateUserRoleParameters);
 await rc.revoke();
 ```
@@ -2028,7 +2034,7 @@ Delete Custom Role
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).userRole(roleId)
+const result = await rc.restapi(apiVersion).account(accountId).userRole(roleId)
   .delete(deleteCustomRoleParameters);
 await rc.revoke();
 ```
@@ -2057,7 +2063,7 @@ List States
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).dictionary().state().list(
+const result = await rc.restapi(apiVersion).dictionary().state().list(
   listStatesParameters,
 );
 await rc.revoke();
@@ -2087,7 +2093,7 @@ Get State
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).dictionary().state(stateId).get();
+const result = await rc.restapi(apiVersion).dictionary().state(stateId).get();
 await rc.revoke();
 ```
 
@@ -2113,7 +2119,7 @@ List Chats
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.teamMessaging().v1().chats().list(
+const result = await rc.teamMessaging().v1().chats().list(
   listGlipChatsNewParameters,
 );
 await rc.revoke();
@@ -2141,7 +2147,7 @@ Get Chat
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.teamMessaging().v1().chats(chatId).get();
+const result = await rc.teamMessaging().v1().chats(chatId).get();
 await rc.revoke();
 ```
 
@@ -2165,7 +2171,7 @@ List User Events
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.teamMessaging().v1().events().list(
+const result = await rc.teamMessaging().v1().events().list(
   readGlipEventsNewParameters,
 );
 await rc.revoke();
@@ -2193,7 +2199,9 @@ Create Event
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.teamMessaging().v1().events().post(tMCreateEventRequest);
+const result = await rc.teamMessaging().v1().events().post(
+  tMCreateEventRequest,
+);
 await rc.revoke();
 ```
 
@@ -2219,7 +2227,7 @@ Get Event
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.teamMessaging().v1().events(eventId).get();
+const result = await rc.teamMessaging().v1().events(eventId).get();
 await rc.revoke();
 ```
 
@@ -2243,7 +2251,7 @@ Update Event
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.teamMessaging().v1().events(eventId).put(
+const result = await rc.teamMessaging().v1().events(eventId).put(
   tMCreateEventRequest,
 );
 await rc.revoke();
@@ -2271,7 +2279,7 @@ Delete Event
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.teamMessaging().v1().events(eventId).delete();
+const result = await rc.teamMessaging().v1().events(eventId).delete();
 await rc.revoke();
 ```
 
@@ -2295,7 +2303,7 @@ Upload File
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.teamMessaging().v1().files().post(
+const result = await rc.teamMessaging().v1().files().post(
   createGlipFileNewRequest,
   createGlipFileNewParameters,
 );
@@ -2326,7 +2334,7 @@ Get Note
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.teamMessaging().v1().notes(noteId).get();
+const result = await rc.teamMessaging().v1().notes(noteId).get();
 await rc.revoke();
 ```
 
@@ -2350,7 +2358,7 @@ Delete Note
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.teamMessaging().v1().notes(noteId).delete();
+const result = await rc.teamMessaging().v1().notes(noteId).delete();
 await rc.revoke();
 ```
 
@@ -2374,7 +2382,7 @@ Update Note
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.teamMessaging().v1().notes(noteId).patch(
+const result = await rc.teamMessaging().v1().notes(noteId).patch(
   tMCreateNoteRequest,
   patchNoteNewParameters,
 );
@@ -2405,7 +2413,7 @@ Get Task
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.teamMessaging().v1().tasks(taskId).get();
+const result = await rc.teamMessaging().v1().tasks(taskId).get();
 await rc.revoke();
 ```
 
@@ -2429,7 +2437,7 @@ Delete Task
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.teamMessaging().v1().tasks(taskId).delete();
+const result = await rc.teamMessaging().v1().tasks(taskId).delete();
 await rc.revoke();
 ```
 
@@ -2453,7 +2461,7 @@ Update Task
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.teamMessaging().v1().tasks(taskId).patch(
+const result = await rc.teamMessaging().v1().tasks(taskId).patch(
   tMUpdateTaskRequest,
 );
 await rc.revoke();
@@ -2481,7 +2489,7 @@ List Teams
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.teamMessaging().v1().teams().list(
+const result = await rc.teamMessaging().v1().teams().list(
   listGlipTeamsNewParameters,
 );
 await rc.revoke();
@@ -2509,7 +2517,7 @@ Create Team
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.teamMessaging().v1().teams().post(tMCreateTeamRequest);
+const result = await rc.teamMessaging().v1().teams().post(tMCreateTeamRequest);
 await rc.revoke();
 ```
 
@@ -2535,7 +2543,7 @@ Get Team
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.teamMessaging().v1().teams(chatId).get();
+const result = await rc.teamMessaging().v1().teams(chatId).get();
 await rc.revoke();
 ```
 
@@ -2559,7 +2567,7 @@ Delete Team
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.teamMessaging().v1().teams(chatId).delete();
+const result = await rc.teamMessaging().v1().teams(chatId).delete();
 await rc.revoke();
 ```
 
@@ -2583,7 +2591,7 @@ Update Team
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.teamMessaging().v1().teams(chatId).patch(
+const result = await rc.teamMessaging().v1().teams(chatId).patch(
   tMUpdateTeamRequest,
 );
 await rc.revoke();
@@ -2611,7 +2619,7 @@ Get Person
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.teamMessaging().v1().persons(personId).get();
+const result = await rc.teamMessaging().v1().persons(personId).get();
 await rc.revoke();
 ```
 
@@ -2635,7 +2643,7 @@ Smart Punctuation
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.ai().text().v1().async().punctuate().post(
+const result = await rc.ai().text().v1().async().punctuate().post(
   punctuateInput,
   caiPunctuateParameters,
 );
@@ -2666,7 +2674,7 @@ Conversational Summarization
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.ai().text().v1().async().summarize().post(
+const result = await rc.ai().text().v1().async().summarize().post(
   summaryInput,
   caiSummarizeParameters,
 );
@@ -2697,7 +2705,7 @@ List Video Meetings
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.rcvideo().v1().history().meetings().list(
+const result = await rc.rcvideo().v1().history().meetings().list(
   listVideoMeetingsParameters,
 );
 await rc.revoke();
@@ -2725,7 +2733,7 @@ Get Video Meeting
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.rcvideo().v1().history().meetings(meetingId).get();
+const result = await rc.rcvideo().v1().history().meetings(meetingId).get();
 await rc.revoke();
 ```
 
@@ -2749,7 +2757,7 @@ Search Bridge by PSTN PIN
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.rcvideo().v2().bridges().pin().pstn(pin).get(
+const result = await rc.rcvideo().v2().bridges().pin().pstn(pin).get(
   getBridgeByPstnPinParameters,
 );
 await rc.revoke();
@@ -2777,7 +2785,7 @@ Search Bridge by Web PIN
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.rcvideo().v2().bridges().pin().web(pin).get(
+const result = await rc.rcvideo().v2().bridges().pin().web(pin).get(
   getBridgeByWebPinParameters,
 );
 await rc.revoke();
@@ -2805,7 +2813,7 @@ Remove Phone Line
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi().v2().accounts(accountId).devices(deviceId)
+const result = await rc.restapi().v2().accounts(accountId).devices(deviceId)
   .delete(removeLineRequest);
 await rc.revoke();
 ```
@@ -2832,9 +2840,8 @@ List Company Active Calls
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).activeCalls().get(
-  listCompanyActiveCallsParameters,
-);
+const result = await rc.restapi(apiVersion).account(accountId).activeCalls()
+  .get(listCompanyActiveCallsParameters);
 await rc.revoke();
 ```
 
@@ -2862,9 +2869,8 @@ List Call Queues
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).callQueues().list(
-  listCallQueuesParameters,
-);
+const result = await rc.restapi(apiVersion).account(accountId).callQueues()
+  .list(listCallQueuesParameters);
 await rc.revoke();
 ```
 
@@ -2892,8 +2898,9 @@ Get Call Queue
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).callQueues(groupId)
-  .get();
+const result = await rc.restapi(apiVersion).account(accountId).callQueues(
+  groupId,
+).get();
 await rc.revoke();
 ```
 
@@ -2919,8 +2926,9 @@ Update Call Queue
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).callQueues(groupId)
-  .put(callQueueDetailsForUpdate);
+const result = await rc.restapi(apiVersion).account(accountId).callQueues(
+  groupId,
+).put(callQueueDetailsForUpdate);
 await rc.revoke();
 ```
 
@@ -2948,7 +2956,7 @@ Get Custom Field List
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).customFields()
+const result = await rc.restapi(apiVersion).account(accountId).customFields()
   .get();
 await rc.revoke();
 ```
@@ -2975,7 +2983,7 @@ Create Custom Field
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).customFields()
+const result = await rc.restapi(apiVersion).account(accountId).customFields()
   .post(customFieldCreateRequest);
 await rc.revoke();
 ```
@@ -3004,7 +3012,7 @@ Update Custom Field
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).customFields(
+const result = await rc.restapi(apiVersion).account(accountId).customFields(
   fieldId,
 ).put(customFieldUpdateRequest);
 await rc.revoke();
@@ -3034,7 +3042,7 @@ Delete Custom Field
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).customFields(
+const result = await rc.restapi(apiVersion).account(accountId).customFields(
   fieldId,
 ).delete();
 await rc.revoke();
@@ -3062,7 +3070,7 @@ Create Fax Message
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).extension(
+const result = await rc.restapi(apiVersion).account(accountId).extension(
   extensionId,
 ).fax().post(createFaxMessageRequest);
 await rc.revoke();
@@ -3093,7 +3101,7 @@ Send MMS
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).extension(
+const result = await rc.restapi(apiVersion).account(accountId).extension(
   extensionId,
 ).mms().post(createMMSMessage);
 await rc.revoke();
@@ -3125,7 +3133,7 @@ Send SMS
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).extension(
+const result = await rc.restapi(apiVersion).account(accountId).extension(
   extensionId,
 ).sms().post(createSMSMessage);
 await rc.revoke();
@@ -3157,7 +3165,7 @@ List IVR Prompts
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).ivrPrompts()
+const result = await rc.restapi(apiVersion).account(accountId).ivrPrompts()
   .list();
 await rc.revoke();
 ```
@@ -3184,9 +3192,8 @@ Create IVR Prompts
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).ivrPrompts().post(
-  createIVRPromptRequest,
-);
+const result = await rc.restapi(apiVersion).account(accountId).ivrPrompts()
+  .post(createIVRPromptRequest);
 await rc.revoke();
 ```
 
@@ -3214,7 +3221,7 @@ Get IVR Prompt
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).ivrPrompts(
+const result = await rc.restapi(apiVersion).account(accountId).ivrPrompts(
   promptId,
 ).get();
 await rc.revoke();
@@ -3242,7 +3249,7 @@ Update IVR Prompt
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).ivrPrompts(
+const result = await rc.restapi(apiVersion).account(accountId).ivrPrompts(
   promptId,
 ).put(updateIVRPromptRequest);
 await rc.revoke();
@@ -3272,7 +3279,7 @@ Delete IVR Prompt
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).ivrPrompts(
+const result = await rc.restapi(apiVersion).account(accountId).ivrPrompts(
   promptId,
 ).delete();
 await rc.revoke();
@@ -3300,9 +3307,8 @@ List Company Phone Numbers
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).phoneNumber().list(
-  listAccountPhoneNumbersParameters,
-);
+const result = await rc.restapi(apiVersion).account(accountId).phoneNumber()
+  .list(listAccountPhoneNumbersParameters);
 await rc.revoke();
 ```
 
@@ -3331,7 +3337,7 @@ Get Phone Number
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).phoneNumber(
+const result = await rc.restapi(apiVersion).account(accountId).phoneNumber(
   phoneNumberId,
 ).get();
 await rc.revoke();
@@ -3360,7 +3366,7 @@ Get Account Service Info
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).serviceInfo()
+const result = await rc.restapi(apiVersion).account(accountId).serviceInfo()
   .get();
 await rc.revoke();
 ```
@@ -3387,7 +3393,7 @@ List Site Members
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).sites(siteId)
+const result = await rc.restapi(apiVersion).account(accountId).sites(siteId)
   .members().get();
 await rc.revoke();
 ```
@@ -3414,7 +3420,7 @@ List Countries
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).dictionary().country().list(
+const result = await rc.restapi(apiVersion).dictionary().country().list(
   listCountriesParameters,
 );
 await rc.revoke();
@@ -3444,7 +3450,8 @@ Get Country
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).dictionary().country(countryId).get();
+const result = await rc.restapi(apiVersion).dictionary().country(countryId)
+  .get();
 await rc.revoke();
 ```
 
@@ -3470,7 +3477,7 @@ List Standard Greetings
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).dictionary().greeting().list(
+const result = await rc.restapi(apiVersion).dictionary().greeting().list(
   listStandardGreetingsParameters,
 );
 await rc.revoke();
@@ -3500,7 +3507,7 @@ Get Standard Greeting
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).dictionary().greeting(greetingId)
+const result = await rc.restapi(apiVersion).dictionary().greeting(greetingId)
   .get();
 await rc.revoke();
 ```
@@ -3527,7 +3534,7 @@ List Languages
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).dictionary().language().list();
+const result = await rc.restapi(apiVersion).dictionary().language().list();
 await rc.revoke();
 ```
 
@@ -3552,7 +3559,7 @@ Get Language
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).dictionary().language(languageId)
+const result = await rc.restapi(apiVersion).dictionary().language(languageId)
   .get();
 await rc.revoke();
 ```
@@ -3578,7 +3585,7 @@ List Locations
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).dictionary().location().get(
+const result = await rc.restapi(apiVersion).dictionary().location().get(
   listLocationsParameters,
 );
 await rc.revoke();
@@ -3608,7 +3615,7 @@ List Permissions
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).dictionary().permission().list(
+const result = await rc.restapi(apiVersion).dictionary().permission().list(
   listPermissionsParameters,
 );
 await rc.revoke();
@@ -3638,8 +3645,9 @@ Get Permission
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).dictionary().permission(permissionId)
-  .get();
+const result = await rc.restapi(apiVersion).dictionary().permission(
+  permissionId,
+).get();
 await rc.revoke();
 ```
 
@@ -3664,7 +3672,7 @@ List Timezones
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).dictionary().timezone().list(
+const result = await rc.restapi(apiVersion).dictionary().timezone().list(
   listTimezonesParameters,
 );
 await rc.revoke();
@@ -3694,7 +3702,7 @@ Get Timezone
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).dictionary().timezone(timezoneId)
+const result = await rc.restapi(apiVersion).dictionary().timezone(timezoneId)
   .get();
 await rc.revoke();
 ```
@@ -3720,7 +3728,7 @@ List Standard User Roles
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).dictionary().userRole().list(
+const result = await rc.restapi(apiVersion).dictionary().userRole().list(
   listStandardUserRoleParameters,
 );
 await rc.revoke();
@@ -3750,7 +3758,7 @@ Get Standard User Role
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).dictionary().userRole(roleId).get();
+const result = await rc.restapi(apiVersion).dictionary().userRole(roleId).get();
 await rc.revoke();
 ```
 
@@ -3775,7 +3783,7 @@ Parse Phone Number(s)
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).numberParser().parse().post(
+const result = await rc.restapi(apiVersion).numberParser().parse().post(
   parsePhoneNumberRequest,
   parsePhoneNumberParameters,
 );
@@ -3808,7 +3816,7 @@ Renew Subscription
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).subscription(subscriptionId).renew()
+const result = await rc.restapi(apiVersion).subscription(subscriptionId).renew()
   .post();
 await rc.revoke();
 ```
@@ -3834,7 +3842,7 @@ Get Provider Config
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.scim(version).serviceProviderConfig().get();
+const result = await rc.scim(version).serviceProviderConfig().get();
 await rc.revoke();
 ```
 
@@ -3859,7 +3867,7 @@ List Posts
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.teamMessaging().v1().chats(chatId).posts().list(
+const result = await rc.teamMessaging().v1().chats(chatId).posts().list(
   readGlipPostsNewParameters,
 );
 await rc.revoke();
@@ -3887,7 +3895,7 @@ Create Post
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.teamMessaging().v1().chats(chatId).posts().post(
+const result = await rc.teamMessaging().v1().chats(chatId).posts().post(
   tMCreatePostRequest,
 );
 await rc.revoke();
@@ -3915,7 +3923,7 @@ Get Post
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.teamMessaging().v1().chats(chatId).posts(postId).get();
+const result = await rc.teamMessaging().v1().chats(chatId).posts(postId).get();
 await rc.revoke();
 ```
 
@@ -3939,7 +3947,8 @@ Delete Post
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.teamMessaging().v1().chats(chatId).posts(postId).delete();
+const result = await rc.teamMessaging().v1().chats(chatId).posts(postId)
+  .delete();
 await rc.revoke();
 ```
 
@@ -3963,7 +3972,7 @@ Update Post
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.teamMessaging().v1().chats(chatId).posts(postId).patch(
+const result = await rc.teamMessaging().v1().chats(chatId).posts(postId).patch(
   tMUpdatePostRequest,
 );
 await rc.revoke();
@@ -3991,7 +4000,7 @@ Get Everyone Chat
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.teamMessaging().v1().everyone().get();
+const result = await rc.teamMessaging().v1().everyone().get();
 await rc.revoke();
 ```
 
@@ -4015,7 +4024,7 @@ Update Everyone Chat
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.teamMessaging().v1().everyone().patch(
+const result = await rc.teamMessaging().v1().everyone().patch(
   updateEveryoneTeamRequest,
 );
 await rc.revoke();
@@ -4043,7 +4052,7 @@ List Favorite Chats
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.teamMessaging().v1().favorites().get(
+const result = await rc.teamMessaging().v1().favorites().get(
   listFavoriteChatsNewParameters,
 );
 await rc.revoke();
@@ -4072,7 +4081,7 @@ Lock Note
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.teamMessaging().v1().notes(noteId).lock().post();
+const result = await rc.teamMessaging().v1().notes(noteId).lock().post();
 await rc.revoke();
 ```
 
@@ -4096,7 +4105,7 @@ Add Team Members
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.teamMessaging().v1().teams(chatId).add().post(
+const result = await rc.teamMessaging().v1().teams(chatId).add().post(
   tMAddTeamMembersRequest,
 );
 await rc.revoke();
@@ -4124,7 +4133,7 @@ Join Team
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.teamMessaging().v1().teams(chatId).join().post();
+const result = await rc.teamMessaging().v1().teams(chatId).join().post();
 await rc.revoke();
 ```
 
@@ -4148,7 +4157,7 @@ List Webhooks
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.teamMessaging().v1().webhooks().list();
+const result = await rc.teamMessaging().v1().webhooks().list();
 await rc.revoke();
 ```
 
@@ -4172,7 +4181,7 @@ Get Webhook
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.teamMessaging().v1().webhooks(webhookId).get();
+const result = await rc.teamMessaging().v1().webhooks(webhookId).get();
 await rc.revoke();
 ```
 
@@ -4196,7 +4205,7 @@ Delete Webhook
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.teamMessaging().v1().webhooks(webhookId).delete();
+const result = await rc.teamMessaging().v1().webhooks(webhookId).delete();
 await rc.revoke();
 ```
 
@@ -4220,7 +4229,7 @@ Get Company Info
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.teamMessaging().v1().companies(companyId).get();
+const result = await rc.teamMessaging().v1().companies(companyId).get();
 await rc.revoke();
 ```
 
@@ -4244,7 +4253,7 @@ List Historical Webinar Sessions across Multiple Webinars
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.webinar().history().v1().sessions().get(
+const result = await rc.webinar().history().v1().sessions().get(
   rcwHistoryListAllSessionsParameters,
 );
 await rc.revoke();
@@ -4273,7 +4282,7 @@ Get Historical Webinar
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.webinar().history().v1().webinars(webinarId).get();
+const result = await rc.webinar().history().v1().webinars(webinarId).get();
 await rc.revoke();
 ```
 
@@ -4298,7 +4307,7 @@ OIDC Provider Configuration
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.wellKnown().openidConfiguration().get();
+const result = await rc.wellKnown().openidConfiguration().get();
 await rc.revoke();
 ```
 
@@ -4322,7 +4331,7 @@ Speech to Text Conversion
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.ai().audio().v1().async().speechToText().post(
+const result = await rc.ai().audio().v1().async().speechToText().post(
   asrInput,
   caiSpeechToTextParameters,
 );
@@ -4353,7 +4362,7 @@ List Account Recordings
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.rcvideo().v1().account(accountId).recordings().get(
+const result = await rc.rcvideo().v1().account(accountId).recordings().get(
   getAccountRecordingsParameters,
 );
 await rc.revoke();
@@ -4382,7 +4391,7 @@ List Cost Centers
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi().v2().accounts(accountId).costCenters().get();
+const result = await rc.restapi().v2().accounts(accountId).costCenters().get();
 await rc.revoke();
 ```
 
@@ -4406,7 +4415,7 @@ Delete Multiple Extensions
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi().v2().accounts(accountId).extensions().delete(
+const result = await rc.restapi().v2().accounts(accountId).extensions().delete(
   bulkDeleteUsersRequest,
 );
 await rc.revoke();
@@ -4435,7 +4444,7 @@ List Account Phone Numbers
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi().v2().accounts(accountId).phoneNumbers().get(
+const result = await rc.restapi().v2().accounts(accountId).phoneNumbers().get(
   listAccountPhoneNumbersV2Parameters,
 );
 await rc.revoke();
@@ -4464,9 +4473,8 @@ Delete Numbers from Inventory
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi().v2().accounts(accountId).phoneNumbers().delete(
-  deletePhoneNumbersRequest,
-);
+const result = await rc.restapi().v2().accounts(accountId).phoneNumbers()
+  .delete(deletePhoneNumbersRequest);
 await rc.revoke();
 ```
 
@@ -4493,7 +4501,7 @@ Assign Phone Number
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi().v2().accounts(accountId).phoneNumbers(
+const result = await rc.restapi().v2().accounts(accountId).phoneNumbers(
   phoneNumberId,
 ).patch(assignPhoneNumberRequest);
 await rc.revoke();
@@ -4522,7 +4530,7 @@ List SMS Consent Records
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi().v2().accounts(accountId).sms().consents().get(
+const result = await rc.restapi().v2().accounts(accountId).sms().consents().get(
   listSmsConsentRecordsParameters,
 );
 await rc.revoke();
@@ -4550,7 +4558,7 @@ Delete SMS Consent Records
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi().v2().accounts(accountId).sms().consents()
+const result = await rc.restapi().v2().accounts(accountId).sms().consents()
   .delete(deleteOptRecordList);
 await rc.revoke();
 ```
@@ -4578,9 +4586,8 @@ Add/Update SMS Consent Records
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi().v2().accounts(accountId).sms().consents().patch(
-  updateOptRecordList,
-);
+const result = await rc.restapi().v2().accounts(accountId).sms().consents()
+  .patch(updateOptRecordList);
 await rc.revoke();
 ```
 
@@ -4607,8 +4614,8 @@ List A2P SMS Batches
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).a2pSms().batches()
-  .list(listA2PBatchesParameters);
+const result = await rc.restapi(apiVersion).account(accountId).a2pSms()
+  .batches().list(listA2PBatchesParameters);
 await rc.revoke();
 ```
 
@@ -4636,8 +4643,8 @@ Send A2P SMS
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).a2pSms().batches()
-  .post(messageBatchCreateRequest);
+const result = await rc.restapi(apiVersion).account(accountId).a2pSms()
+  .batches().post(messageBatchCreateRequest);
 await rc.revoke();
 ```
 
@@ -4666,7 +4673,7 @@ Get A2P SMS Batch
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).a2pSms().batches(
+const result = await rc.restapi(apiVersion).account(accountId).a2pSms().batches(
   batchId,
 ).get();
 await rc.revoke();
@@ -4695,8 +4702,8 @@ List A2P SMS Messages
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).a2pSms().messages()
-  .list(listA2PSMSParameters);
+const result = await rc.restapi(apiVersion).account(accountId).a2pSms()
+  .messages().list(listA2PSMSParameters);
 await rc.revoke();
 ```
 
@@ -4725,9 +4732,8 @@ Get A2P SMS
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).a2pSms().messages(
-  messageId,
-).get();
+const result = await rc.restapi(apiVersion).account(accountId).a2pSms()
+  .messages(messageId).get();
 await rc.revoke();
 ```
 
@@ -4754,8 +4760,8 @@ List A2P SMS Statuses
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).a2pSms().statuses()
-  .get(aggregateA2PSMSStatusesParameters);
+const result = await rc.restapi(apiVersion).account(accountId).a2pSms()
+  .statuses().get(aggregateA2PSMSStatusesParameters);
 await rc.revoke();
 ```
 
@@ -4784,7 +4790,7 @@ List Company Call Handling Rules
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).answeringRule()
+const result = await rc.restapi(apiVersion).account(accountId).answeringRule()
   .list(listCompanyAnsweringRulesParameters);
 await rc.revoke();
 ```
@@ -4814,7 +4820,7 @@ Create Company Call Handling Rule
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).answeringRule()
+const result = await rc.restapi(apiVersion).account(accountId).answeringRule()
   .post(companyAnsweringRuleRequest);
 await rc.revoke();
 ```
@@ -4844,7 +4850,7 @@ Get Company Call Handling Rule
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).answeringRule(
+const result = await rc.restapi(apiVersion).account(accountId).answeringRule(
   ruleId,
 ).get();
 await rc.revoke();
@@ -4873,7 +4879,7 @@ Update Company Call Handling Rule
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).answeringRule(
+const result = await rc.restapi(apiVersion).account(accountId).answeringRule(
   ruleId,
 ).put(companyAnsweringRuleUpdate);
 await rc.revoke();
@@ -4904,7 +4910,7 @@ Delete Company Call Handling Rule
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).answeringRule(
+const result = await rc.restapi(apiVersion).account(accountId).answeringRule(
   ruleId,
 ).delete();
 await rc.revoke();
@@ -4932,9 +4938,8 @@ List Company Assigned Roles
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).assignedRole().get(
-  listAssignedRolesParameters,
-);
+const result = await rc.restapi(apiVersion).account(accountId).assignedRole()
+  .get(listAssignedRolesParameters);
 await rc.revoke();
 ```
 
@@ -4963,7 +4968,7 @@ Search Audit Trail Data
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).auditTrail()
+const result = await rc.restapi(apiVersion).account(accountId).auditTrail()
   .search().post(accountHistorySearchPublicRequest);
 await rc.revoke();
 ```
@@ -4993,7 +4998,7 @@ Get Account Business Address
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).businessAddress()
+const result = await rc.restapi(apiVersion).account(accountId).businessAddress()
   .get();
 await rc.revoke();
 ```
@@ -5021,7 +5026,7 @@ Update Company Business Address
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).businessAddress()
+const result = await rc.restapi(apiVersion).account(accountId).businessAddress()
   .put(modifyAccountBusinessAddressRequest);
 await rc.revoke();
 ```
@@ -5051,7 +5056,7 @@ Get Company Business Hours
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).businessHours()
+const result = await rc.restapi(apiVersion).account(accountId).businessHours()
   .get();
 await rc.revoke();
 ```
@@ -5079,7 +5084,7 @@ Update Company Business Hours
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).businessHours()
+const result = await rc.restapi(apiVersion).account(accountId).businessHours()
   .put(companyBusinessHoursUpdateRequest);
 await rc.revoke();
 ```
@@ -5109,7 +5114,7 @@ Extract Sync Company Call Log
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId)
+const result = await rc.restapi(apiVersion).account(accountId)
   .callLogExtractSync().get(extractSyncAccountCallLogParameters);
 await rc.revoke();
 ```
@@ -5139,9 +5144,8 @@ Sync Company Call Log
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).callLogSync().get(
-  syncAccountCallLogParameters,
-);
+const result = await rc.restapi(apiVersion).account(accountId).callLogSync()
+  .get(syncAccountCallLogParameters);
 await rc.revoke();
 ```
 
@@ -5170,8 +5174,9 @@ List Call Queue Members
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).callQueues(groupId)
-  .members().get(listCallQueueMembersParameters);
+const result = await rc.restapi(apiVersion).account(accountId).callQueues(
+  groupId,
+).members().get(listCallQueueMembersParameters);
 await rc.revoke();
 ```
 
@@ -5199,8 +5204,9 @@ Get Call Queue Presence
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).callQueues(groupId)
-  .presence().get();
+const result = await rc.restapi(apiVersion).account(accountId).callQueues(
+  groupId,
+).presence().get();
 await rc.revoke();
 ```
 
@@ -5226,8 +5232,9 @@ Update Call Queue Presence
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).callQueues(groupId)
-  .presence().put(callQueueUpdatePresence);
+const result = await rc.restapi(apiVersion).account(accountId).callQueues(
+  groupId,
+).presence().put(callQueueUpdatePresence);
 await rc.revoke();
 ```
 
@@ -5255,7 +5262,7 @@ Get Call Recording Settings
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).callRecording()
+const result = await rc.restapi(apiVersion).account(accountId).callRecording()
   .get();
 await rc.revoke();
 ```
@@ -5283,7 +5290,7 @@ Update Call Recording Settings
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).callRecording()
+const result = await rc.restapi(apiVersion).account(accountId).callRecording()
   .put(callRecordingSettingsResource);
 await rc.revoke();
 ```
@@ -5313,7 +5320,7 @@ Delete Company Call Recordings
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).callRecordings()
+const result = await rc.restapi(apiVersion).account(accountId).callRecordings()
   .delete(callRecordingIds);
 await rc.revoke();
 ```
@@ -5342,7 +5349,7 @@ Update Device Emergency Info
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).device(deviceId)
+const result = await rc.restapi(apiVersion).account(accountId).device(deviceId)
   .emergency().put(accountDeviceUpdate);
 await rc.revoke();
 ```
@@ -5371,7 +5378,7 @@ Get Device SIP Info
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).device(deviceId)
+const result = await rc.restapi(apiVersion).account(accountId).device(deviceId)
   .sipInfo().get();
 await rc.revoke();
 ```
@@ -5398,7 +5405,7 @@ Get Company Directory Entries
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).directory()
+const result = await rc.restapi(apiVersion).account(accountId).directory()
   .entries().list(listDirectoryEntriesParameters);
 await rc.revoke();
 ```
@@ -5427,7 +5434,7 @@ Get Corporate Directory Entry
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).directory()
+const result = await rc.restapi(apiVersion).account(accountId).directory()
   .entries(entryId).get(readDirectoryEntryParameters);
 await rc.revoke();
 ```
@@ -5456,7 +5463,7 @@ Get Account Federation
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).directory()
+const result = await rc.restapi(apiVersion).account(accountId).directory()
   .federation().get(readDirectoryFederationParameters);
 await rc.revoke();
 ```
@@ -5485,7 +5492,7 @@ List Emergency Locations
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId)
+const result = await rc.restapi(apiVersion).account(accountId)
   .emergencyLocations().list(listEmergencyLocationsParameters);
 await rc.revoke();
 ```
@@ -5515,7 +5522,7 @@ Add Emergency Location
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId)
+const result = await rc.restapi(apiVersion).account(accountId)
   .emergencyLocations().post(emergencyLocationRequestResource);
 await rc.revoke();
 ```
@@ -5545,9 +5552,8 @@ Get Emergency Location
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).emergencyLocations(
-  locationId,
-).get(readEmergencyLocationParameters);
+const result = await rc.restapi(apiVersion).account(accountId)
+  .emergencyLocations(locationId).get(readEmergencyLocationParameters);
 await rc.revoke();
 ```
 
@@ -5576,9 +5582,8 @@ Update Emergency Location
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).emergencyLocations(
-  locationId,
-).put(emergencyLocationRequestResource);
+const result = await rc.restapi(apiVersion).account(accountId)
+  .emergencyLocations(locationId).put(emergencyLocationRequestResource);
 await rc.revoke();
 ```
 
@@ -5607,9 +5612,8 @@ Delete Emergency Location
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).emergencyLocations(
-  locationId,
-).delete(deleteEmergencyLocationParameters);
+const result = await rc.restapi(apiVersion).account(accountId)
+  .emergencyLocations(locationId).delete(deleteEmergencyLocationParameters);
 await rc.revoke();
 ```
 
@@ -5637,7 +5641,7 @@ Update Multiple Extensions
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId)
+const result = await rc.restapi(apiVersion).account(accountId)
   .extensionBulkUpdate().post(extensionBulkUpdateRequest);
 await rc.revoke();
 ```
@@ -5667,7 +5671,7 @@ List User Call Records
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).extension(
+const result = await rc.restapi(apiVersion).account(accountId).extension(
   extensionId,
 ).callLog().list(readUserCallLogParameters);
 await rc.revoke();
@@ -5698,7 +5702,7 @@ Delete User Call Records
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).extension(
+const result = await rc.restapi(apiVersion).account(accountId).extension(
   extensionId,
 ).callLog().delete(deleteUserCallLogParameters);
 await rc.revoke();
@@ -5729,7 +5733,7 @@ Get User Call Record(s)
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).extension(
+const result = await rc.restapi(apiVersion).account(accountId).extension(
   extensionId,
 ).callLog(callRecordId).get(readUserCallRecordParameters);
 await rc.revoke();
@@ -5760,7 +5764,7 @@ Update User Call Queues
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).extension(
+const result = await rc.restapi(apiVersion).account(accountId).extension(
   extensionId,
 ).callQueues().put(userCallQueues);
 await rc.revoke();
@@ -5790,7 +5794,7 @@ Get Extension Caller ID
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).extension(
+const result = await rc.restapi(apiVersion).account(accountId).extension(
   extensionId,
 ).callerId().get();
 await rc.revoke();
@@ -5820,7 +5824,7 @@ Update Extension Caller ID
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).extension(
+const result = await rc.restapi(apiVersion).account(accountId).extension(
   extensionId,
 ).callerId().put(extensionCallerIdInfoRequest);
 await rc.revoke();
@@ -5852,7 +5856,7 @@ List Extension Devices
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).extension(
+const result = await rc.restapi(apiVersion).account(accountId).extension(
   extensionId,
 ).device().get(listExtensionDevicesParameters);
 await rc.revoke();
@@ -5884,7 +5888,7 @@ List Favorite Contacts
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).extension(
+const result = await rc.restapi(apiVersion).account(accountId).extension(
   extensionId,
 ).favorite().get();
 await rc.revoke();
@@ -5914,7 +5918,7 @@ Update Favorite Contact List
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).extension(
+const result = await rc.restapi(apiVersion).account(accountId).extension(
   extensionId,
 ).favorite().put(favoriteCollection);
 await rc.revoke();
@@ -5946,7 +5950,7 @@ Get User Features
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).extension(
+const result = await rc.restapi(apiVersion).account(accountId).extension(
   extensionId,
 ).features().get(readExtensionFeaturesParameters);
 await rc.revoke();
@@ -5977,7 +5981,7 @@ List Extension Grants
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).extension(
+const result = await rc.restapi(apiVersion).account(accountId).extension(
   extensionId,
 ).grant().get(listExtensionGrantsParameters);
 await rc.revoke();
@@ -6009,7 +6013,7 @@ Create Custom User Greeting
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).extension(
+const result = await rc.restapi(apiVersion).account(accountId).extension(
   extensionId,
 ).greeting().post(
   createCustomUserGreetingRequest,
@@ -6046,7 +6050,7 @@ Get Custom Greeting
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).extension(
+const result = await rc.restapi(apiVersion).account(accountId).extension(
   extensionId,
 ).greeting(greetingId).get();
 await rc.revoke();
@@ -6076,7 +6080,7 @@ Get User Presence Status
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).extension(
+const result = await rc.restapi(apiVersion).account(accountId).extension(
   extensionId,
 ).presence().get(readUserPresenceStatusParameters);
 await rc.revoke();
@@ -6107,7 +6111,7 @@ Update User Presence Status
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).extension(
+const result = await rc.restapi(apiVersion).account(accountId).extension(
   extensionId,
 ).presence().put(presenceInfoRequest);
 await rc.revoke();
@@ -6139,7 +6143,7 @@ Make RingOut Call
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).extension(
+const result = await rc.restapi(apiVersion).account(accountId).extension(
   extensionId,
 ).ringOut().post(makeRingOutRequest);
 await rc.revoke();
@@ -6171,7 +6175,7 @@ Get RingOut Call Status
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).extension(
+const result = await rc.restapi(apiVersion).account(accountId).extension(
   extensionId,
 ).ringOut(ringoutId).get();
 await rc.revoke();
@@ -6201,7 +6205,7 @@ Cancel RingOut Call
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).extension(
+const result = await rc.restapi(apiVersion).account(accountId).extension(
   extensionId,
 ).ringOut(ringoutId).delete();
 await rc.revoke();
@@ -6230,7 +6234,7 @@ Get Forward All Company Calls
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).forwardAllCalls()
+const result = await rc.restapi(apiVersion).account(accountId).forwardAllCalls()
   .get();
 await rc.revoke();
 ```
@@ -6258,7 +6262,7 @@ Update Forward All Company Calls
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).forwardAllCalls()
+const result = await rc.restapi(apiVersion).account(accountId).forwardAllCalls()
   .patch(forwardAllCompanyCallsRequest);
 await rc.revoke();
 ```
@@ -6288,7 +6292,7 @@ Get Account Greeting Media Content
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).greeting(
+const result = await rc.restapi(apiVersion).account(accountId).greeting(
   greetingId,
 ).content().get(readAccountGreetingContentParameters);
 await rc.revoke();
@@ -6323,7 +6327,7 @@ Get IVR Prompt Content
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).ivrPrompts(
+const result = await rc.restapi(apiVersion).account(accountId).ivrPrompts(
   promptId,
 ).content().get(readIVRPromptContentParameters);
 await rc.revoke();
@@ -6358,7 +6362,7 @@ Create Message Store Report
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId)
+const result = await rc.restapi(apiVersion).account(accountId)
   .messageStoreReport().post(createMessageStoreReportRequest);
 await rc.revoke();
 ```
@@ -6387,9 +6391,8 @@ Get Message Store Report Task
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).messageStoreReport(
-  taskId,
-).get();
+const result = await rc.restapi(apiVersion).account(accountId)
+  .messageStoreReport(taskId).get();
 await rc.revoke();
 ```
 
@@ -6415,7 +6418,7 @@ Get Call Recording Content
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).recording(
+const result = await rc.restapi(apiVersion).account(accountId).recording(
   recordingId,
 ).content().get(readCallRecordingContentParameters);
 await rc.revoke();
@@ -6450,7 +6453,7 @@ Edit Sites
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).sites(siteId)
+const result = await rc.restapi(apiVersion).account(accountId).sites(siteId)
   .bulkAssign().post(siteMembersBulkUpdate);
 await rc.revoke();
 ```
@@ -6479,7 +6482,7 @@ Make CallOut
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).telephony()
+const result = await rc.restapi(apiVersion).account(accountId).telephony()
   .callOut().post(makeCallOutRequest);
 await rc.revoke();
 ```
@@ -6508,7 +6511,7 @@ Start Conference Call Session
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).telephony()
+const result = await rc.restapi(apiVersion).account(accountId).telephony()
   .conference().post();
 await rc.revoke();
 ```
@@ -6535,7 +6538,7 @@ Get Call Session Status
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).telephony()
+const result = await rc.restapi(apiVersion).account(accountId).telephony()
   .sessions(telephonySessionId).get(readCallSessionStatusParameters);
 await rc.revoke();
 ```
@@ -6564,7 +6567,7 @@ Drop Call Session
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).telephony()
+const result = await rc.restapi(apiVersion).account(accountId).telephony()
   .sessions(telephonySessionId).delete();
 await rc.revoke();
 ```
@@ -6591,7 +6594,7 @@ Get Default User Role
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).userRole()
+const result = await rc.restapi(apiVersion).account(accountId).userRole()
   .default().get();
 await rc.revoke();
 ```
@@ -6618,7 +6621,7 @@ Set Default User Role
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).userRole()
+const result = await rc.restapi(apiVersion).account(accountId).userRole()
   .default().put(defaultUserRoleRequest);
 await rc.revoke();
 ```
@@ -6647,7 +6650,7 @@ Assign Multiple User Roles
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).userRole(roleId)
+const result = await rc.restapi(apiVersion).account(accountId).userRole(roleId)
   .bulkAssign().post(bulkRoleAssignResource);
 await rc.revoke();
 ```
@@ -6676,7 +6679,7 @@ Register Device
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).clientInfo().sipProvision().post(
+const result = await rc.restapi(apiVersion).clientInfo().sipProvision().post(
   createSipRegistrationRequest,
 );
 await rc.revoke();
@@ -6706,7 +6709,7 @@ List Fax Cover Pages
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).dictionary().faxCoverPage().get(
+const result = await rc.restapi(apiVersion).dictionary().faxCoverPage().get(
   listFaxCoverPagesParameters,
 );
 await rc.revoke();
@@ -6736,7 +6739,7 @@ Get Adaptive Card
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.teamMessaging().v1().adaptiveCards(cardId).get();
+const result = await rc.teamMessaging().v1().adaptiveCards(cardId).get();
 await rc.revoke();
 ```
 
@@ -6760,7 +6763,7 @@ Update Adaptive Card
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.teamMessaging().v1().adaptiveCards(cardId).put(
+const result = await rc.teamMessaging().v1().adaptiveCards(cardId).put(
   adaptiveCardRequest,
 );
 await rc.revoke();
@@ -6789,7 +6792,7 @@ Delete Adaptive Card
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.teamMessaging().v1().adaptiveCards(cardId).delete();
+const result = await rc.teamMessaging().v1().adaptiveCards(cardId).delete();
 await rc.revoke();
 ```
 
@@ -6813,7 +6816,7 @@ Add Chat to Favorites
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.teamMessaging().v1().chats(chatId).favorite().post();
+const result = await rc.teamMessaging().v1().chats(chatId).favorite().post();
 await rc.revoke();
 ```
 
@@ -6837,7 +6840,7 @@ List Notes
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.teamMessaging().v1().chats(chatId).notes().get(
+const result = await rc.teamMessaging().v1().chats(chatId).notes().get(
   listChatNotesNewParameters,
 );
 await rc.revoke();
@@ -6865,7 +6868,7 @@ Create Note
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.teamMessaging().v1().chats(chatId).notes().post(
+const result = await rc.teamMessaging().v1().chats(chatId).notes().post(
   tMCreateNoteRequest,
 );
 await rc.revoke();
@@ -6893,7 +6896,7 @@ List Chat Tasks
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.teamMessaging().v1().chats(chatId).tasks().get(
+const result = await rc.teamMessaging().v1().chats(chatId).tasks().get(
   listChatTasksNewParameters,
 );
 await rc.revoke();
@@ -6921,7 +6924,7 @@ Create Task
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.teamMessaging().v1().chats(chatId).tasks().post(
+const result = await rc.teamMessaging().v1().chats(chatId).tasks().post(
   tMCreateTaskRequest,
 );
 await rc.revoke();
@@ -6949,7 +6952,7 @@ Remove Chat from Favorites
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.teamMessaging().v1().chats(chatId).unfavorite().post();
+const result = await rc.teamMessaging().v1().chats(chatId).unfavorite().post();
 await rc.revoke();
 ```
 
@@ -6973,7 +6976,7 @@ List Conversations
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.teamMessaging().v1().conversations().list(
+const result = await rc.teamMessaging().v1().conversations().list(
   listGlipConversationsNewParameters,
 );
 await rc.revoke();
@@ -7001,7 +7004,7 @@ Create/Open Conversation
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.teamMessaging().v1().conversations().post(
+const result = await rc.teamMessaging().v1().conversations().post(
   createConversationRequest,
 );
 await rc.revoke();
@@ -7029,7 +7032,7 @@ Get Conversation
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.teamMessaging().v1().conversations(chatId).get();
+const result = await rc.teamMessaging().v1().conversations(chatId).get();
 await rc.revoke();
 ```
 
@@ -7053,7 +7056,7 @@ List Data Export Tasks
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.teamMessaging().v1().dataExport().list(
+const result = await rc.teamMessaging().v1().dataExport().list(
   listDataExportTasksNewParameters,
 );
 await rc.revoke();
@@ -7081,7 +7084,7 @@ Create Data Export Task
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.teamMessaging().v1().dataExport().post(
+const result = await rc.teamMessaging().v1().dataExport().post(
   createDataExportTaskRequest,
 );
 await rc.revoke();
@@ -7109,7 +7112,7 @@ Get Data Export Task
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.teamMessaging().v1().dataExport(taskId).get();
+const result = await rc.teamMessaging().v1().dataExport(taskId).get();
 await rc.revoke();
 ```
 
@@ -7133,7 +7136,7 @@ List Group Events
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.teamMessaging().v1().groups(groupId).events().get();
+const result = await rc.teamMessaging().v1().groups(groupId).events().get();
 await rc.revoke();
 ```
 
@@ -7157,7 +7160,7 @@ Create Event by Group ID
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.teamMessaging().v1().groups(groupId).events().post(
+const result = await rc.teamMessaging().v1().groups(groupId).events().post(
   tMCreateEventRequest,
 );
 await rc.revoke();
@@ -7185,7 +7188,7 @@ List Webhooks in Group
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.teamMessaging().v1().groups(groupId).webhooks().get();
+const result = await rc.teamMessaging().v1().groups(groupId).webhooks().get();
 await rc.revoke();
 ```
 
@@ -7209,7 +7212,7 @@ Create Webhook in Group
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.teamMessaging().v1().groups(groupId).webhooks().post();
+const result = await rc.teamMessaging().v1().groups(groupId).webhooks().post();
 await rc.revoke();
 ```
 
@@ -7233,7 +7236,7 @@ Publish Note
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.teamMessaging().v1().notes(noteId).publish().post();
+const result = await rc.teamMessaging().v1().notes(noteId).publish().post();
 await rc.revoke();
 ```
 
@@ -7257,7 +7260,7 @@ Unlock Note
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.teamMessaging().v1().notes(noteId).unlock().post();
+const result = await rc.teamMessaging().v1().notes(noteId).unlock().post();
 await rc.revoke();
 ```
 
@@ -7281,7 +7284,7 @@ List Recent Chats
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.teamMessaging().v1().recent().chats().get(
+const result = await rc.teamMessaging().v1().recent().chats().get(
   listRecentChatsNewParameters,
 );
 await rc.revoke();
@@ -7310,7 +7313,7 @@ Leave Team
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.teamMessaging().v1().teams(chatId).leave().post();
+const result = await rc.teamMessaging().v1().teams(chatId).leave().post();
 await rc.revoke();
 ```
 
@@ -7334,7 +7337,7 @@ Unarchive Team
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.teamMessaging().v1().teams(chatId).unarchive().post();
+const result = await rc.teamMessaging().v1().teams(chatId).unarchive().post();
 await rc.revoke();
 ```
 
@@ -7358,7 +7361,7 @@ Activate Webhook
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.teamMessaging().v1().webhooks(webhookId).activate()
+const result = await rc.teamMessaging().v1().webhooks(webhookId).activate()
   .post();
 await rc.revoke();
 ```
@@ -7383,7 +7386,8 @@ Suspend Webhook
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.teamMessaging().v1().webhooks(webhookId).suspend().post();
+const result = await rc.teamMessaging().v1().webhooks(webhookId).suspend()
+  .post();
 await rc.revoke();
 ```
 
@@ -7407,7 +7411,7 @@ List Sessions across Multiple Webinars
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.webinar().configuration().v1().sessions().get(
+const result = await rc.webinar().configuration().v1().sessions().get(
   rcwConfigListAllSessionsParameters,
 );
 await rc.revoke();
@@ -7436,7 +7440,7 @@ List User's Webinars
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.webinar().configuration().v1().webinars().list(
+const result = await rc.webinar().configuration().v1().webinars().list(
   rcwConfigListWebinarsParameters,
 );
 await rc.revoke();
@@ -7465,7 +7469,7 @@ Create Webinar
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.webinar().configuration().v1().webinars().post(
+const result = await rc.webinar().configuration().v1().webinars().post(
   webinarCreationRequest,
 );
 await rc.revoke();
@@ -7493,7 +7497,8 @@ Get Webinar
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.webinar().configuration().v1().webinars(webinarId).get();
+const result = await rc.webinar().configuration().v1().webinars(webinarId)
+  .get();
 await rc.revoke();
 ```
 
@@ -7517,7 +7522,7 @@ Delete Webinar
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.webinar().configuration().v1().webinars(webinarId)
+const result = await rc.webinar().configuration().v1().webinars(webinarId)
   .delete();
 await rc.revoke();
 ```
@@ -7542,9 +7547,8 @@ Update Webinar
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.webinar().configuration().v1().webinars(webinarId).patch(
-  webinarBaseModel,
-);
+const result = await rc.webinar().configuration().v1().webinars(webinarId)
+  .patch(webinarBaseModel);
 await rc.revoke();
 ```
 
@@ -7570,7 +7574,7 @@ List Webinar Recordings
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.webinar().history().v1().recordings().list(
+const result = await rc.webinar().history().v1().recordings().list(
   rcwHistoryListRecordingsParameters,
 );
 await rc.revoke();
@@ -7599,7 +7603,7 @@ Get Webinar Recording
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.webinar().history().v1().recordings(recordingId).get();
+const result = await rc.webinar().history().v1().recordings(recordingId).get();
 await rc.revoke();
 ```
 
@@ -7624,7 +7628,7 @@ Remove Team Members
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.teamMessaging().v1().teams(chatId).remove().post(
+const result = await rc.teamMessaging().v1().teams(chatId).remove().post(
   tMRemoveTeamMembersRequest,
 );
 await rc.revoke();
@@ -7652,7 +7656,7 @@ Archive Team
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.teamMessaging().v1().teams(chatId).archive().post();
+const result = await rc.teamMessaging().v1().teams(chatId).archive().post();
 await rc.revoke();
 ```
 
@@ -7676,7 +7680,7 @@ Complete Task
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.teamMessaging().v1().tasks(taskId).complete().post(
+const result = await rc.teamMessaging().v1().tasks(taskId).complete().post(
   tMCompleteTaskRequest,
 );
 await rc.revoke();
@@ -7704,7 +7708,7 @@ List Webinar Recordings (Admin)
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.webinar().history().v1().company().recordings().list(
+const result = await rc.webinar().history().v1().company().recordings().list(
   rcwHistoryAdminListRecordingsParameters,
 );
 await rc.revoke();
@@ -7733,8 +7737,9 @@ Get Webinar Recording (Admin)
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.webinar().history().v1().company().recordings(recordingId)
-  .get();
+const result = await rc.webinar().history().v1().company().recordings(
+  recordingId,
+).get();
 await rc.revoke();
 ```
 
@@ -7759,7 +7764,7 @@ List Historical Webinar Sessions across Multiple Webinars / Hosts
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.webinar().history().v1().company().sessions().get(
+const result = await rc.webinar().history().v1().company().sessions().get(
   rcwHistoryListAllCompanySessionsParameters,
 );
 await rc.revoke();
@@ -7788,7 +7793,7 @@ Get Historical Webinar Session
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.webinar().history().v1().webinars(webinarId).sessions(
+const result = await rc.webinar().history().v1().webinars(webinarId).sessions(
   sessionId,
 ).get();
 await rc.revoke();
@@ -7815,7 +7820,7 @@ Interaction Analytics
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.ai().insights().v1().async().analyzeInteraction().post(
+const result = await rc.ai().insights().v1().async().analyzeInteraction().post(
   interactionInput,
   caiAnalyzeInteractionParameters,
 );
@@ -7847,7 +7852,7 @@ List User Recordings
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.rcvideo().v1().account(accountId).extension(extensionId)
+const result = await rc.rcvideo().v1().account(accountId).extension(extensionId)
   .recordings().get(getExtensionRecordingsParameters);
 await rc.revoke();
 ```
@@ -7876,8 +7881,9 @@ List Delegators
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.rcvideo().v1().accounts(accountId).extensions(extensionId)
-  .delegators().get();
+const result = await rc.rcvideo().v1().accounts(accountId).extensions(
+  extensionId,
+).delegators().get();
 await rc.revoke();
 ```
 
@@ -7902,7 +7908,7 @@ Replace Phone Number
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi().v2().accounts(accountId).phoneNumbers(
+const result = await rc.restapi().v2().accounts(accountId).phoneNumbers(
   phoneNumberId,
 ).replace().post(replacePhoneNumberRequest);
 await rc.revoke();
@@ -7931,7 +7937,7 @@ Send/Resend Activation Email
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi().v2().accounts(accountId).sendActivationEmail()
+const result = await rc.restapi().v2().accounts(accountId).sendActivationEmail()
   .post();
 await rc.revoke();
 ```
@@ -7956,7 +7962,7 @@ Send Welcome Email
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi().v2().accounts(accountId).sendWelcomeEmail()
+const result = await rc.restapi().v2().accounts(accountId).sendWelcomeEmail()
   .post(sendWelcomeEmailV2Request);
 await rc.revoke();
 ```
@@ -7983,7 +7989,7 @@ Export SMS Consent Records
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi().v2().accounts(accountId).sms().consents()
+const result = await rc.restapi().v2().accounts(accountId).sms().consents()
   .export().get();
 await rc.revoke();
 ```
@@ -8008,7 +8014,7 @@ Upload Multiple User Contacts
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId)
+const result = await rc.restapi(apiVersion).account(accountId)
   .addressBookBulkUpload().post(addressBookBulkUploadRequest);
 await rc.revoke();
 ```
@@ -8038,7 +8044,7 @@ List Call Monitoring Groups
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId)
+const result = await rc.restapi(apiVersion).account(accountId)
   .callMonitoringGroups().get(listCallMonitoringGroupsParameters);
 await rc.revoke();
 ```
@@ -8068,7 +8074,7 @@ Create Call Monitoring Group
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId)
+const result = await rc.restapi(apiVersion).account(accountId)
   .callMonitoringGroups().post(createCallMonitoringGroupRequest);
 await rc.revoke();
 ```
@@ -8098,7 +8104,7 @@ Update Call Monitoring Group
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId)
+const result = await rc.restapi(apiVersion).account(accountId)
   .callMonitoringGroups(groupId).put(createCallMonitoringGroupRequest);
 await rc.revoke();
 ```
@@ -8128,7 +8134,7 @@ Delete Call Monitoring Group
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId)
+const result = await rc.restapi(apiVersion).account(accountId)
   .callMonitoringGroups(groupId).delete();
 await rc.revoke();
 ```
@@ -8155,8 +8161,9 @@ Assign Multiple Call Queue Members
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).callQueues(groupId)
-  .bulkAssign().post(callQueueBulkAssignResource);
+const result = await rc.restapi(apiVersion).account(accountId).callQueues(
+  groupId,
+).bulkAssign().post(callQueueBulkAssignResource);
 await rc.revoke();
 ```
 
@@ -8184,7 +8191,7 @@ Get Call Recording Extension List
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).callRecording()
+const result = await rc.restapi(apiVersion).account(accountId).callRecording()
   .extensions().get();
 await rc.revoke();
 ```
@@ -8212,7 +8219,7 @@ Search Company Directory Entries
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).directory()
+const result = await rc.restapi(apiVersion).account(accountId).directory()
   .entries().search().post(
     searchDirectoryEntriesRequest,
     searchDirectoryEntriesParameters,
@@ -8246,7 +8253,7 @@ List User Active Calls
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).extension(
+const result = await rc.restapi(apiVersion).account(accountId).extension(
   extensionId,
 ).activeCalls().get(listExtensionActiveCallsParameters);
 await rc.revoke();
@@ -8277,7 +8284,7 @@ List Call Handling Rules
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).extension(
+const result = await rc.restapi(apiVersion).account(accountId).extension(
   extensionId,
 ).answeringRule().list(listAnsweringRulesParameters);
 await rc.revoke();
@@ -8309,7 +8316,7 @@ Create Call Handling Rule
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).extension(
+const result = await rc.restapi(apiVersion).account(accountId).extension(
   extensionId,
 ).answeringRule().post(createAnsweringRuleRequest);
 await rc.revoke();
@@ -8341,7 +8348,7 @@ Get Call Handling Rule
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).extension(
+const result = await rc.restapi(apiVersion).account(accountId).extension(
   extensionId,
 ).answeringRule(ruleId).get(readAnsweringRuleParameters);
 await rc.revoke();
@@ -8373,7 +8380,7 @@ Update Call Handling Rule
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).extension(
+const result = await rc.restapi(apiVersion).account(accountId).extension(
   extensionId,
 ).answeringRule(ruleId).put(updateAnsweringRuleRequest);
 await rc.revoke();
@@ -8405,7 +8412,7 @@ Delete Call Handling Rule
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).extension(
+const result = await rc.restapi(apiVersion).account(accountId).extension(
   extensionId,
 ).answeringRule(ruleId).delete();
 await rc.revoke();
@@ -8434,7 +8441,7 @@ List Assignable Roles
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).extension(
+const result = await rc.restapi(apiVersion).account(accountId).extension(
   extensionId,
 ).assignableRoles().get(listOfAvailableForAssigningRolesParameters);
 await rc.revoke();
@@ -8466,7 +8473,7 @@ List User Assigned Roles
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).extension(
+const result = await rc.restapi(apiVersion).account(accountId).extension(
   extensionId,
 ).assignedRole().get(listUserAssignedRolesParameters);
 await rc.revoke();
@@ -8498,7 +8505,7 @@ Update User Assigned Roles
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).extension(
+const result = await rc.restapi(apiVersion).account(accountId).extension(
   extensionId,
 ).assignedRole().put(assignedRolesResource);
 await rc.revoke();
@@ -8530,7 +8537,7 @@ Get Authorization Profile
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).extension(
+const result = await rc.restapi(apiVersion).account(accountId).extension(
   extensionId,
 ).authzProfile().get(readAuthorizationProfileParameters);
 await rc.revoke();
@@ -8562,7 +8569,7 @@ Get User Business Hours
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).extension(
+const result = await rc.restapi(apiVersion).account(accountId).extension(
   extensionId,
 ).businessHours().get();
 await rc.revoke();
@@ -8592,7 +8599,7 @@ Update User Business Hours
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).extension(
+const result = await rc.restapi(apiVersion).account(accountId).extension(
   extensionId,
 ).businessHours().put(userBusinessHoursUpdateRequest);
 await rc.revoke();
@@ -8624,7 +8631,7 @@ Sync User Call Log
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).extension(
+const result = await rc.restapi(apiVersion).account(accountId).extension(
   extensionId,
 ).callLogSync().get(syncUserCallLogParameters);
 await rc.revoke();
@@ -8656,7 +8663,7 @@ Get Caller Blocking Settings
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).extension(
+const result = await rc.restapi(apiVersion).account(accountId).extension(
   extensionId,
 ).callerBlocking().get();
 await rc.revoke();
@@ -8686,7 +8693,7 @@ Update Caller Blocking Settings
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).extension(
+const result = await rc.restapi(apiVersion).account(accountId).extension(
   extensionId,
 ).callerBlocking().put(callerBlockingSettingsUpdate);
 await rc.revoke();
@@ -8718,7 +8725,7 @@ Create Internal Text Message
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).extension(
+const result = await rc.restapi(apiVersion).account(accountId).extension(
   extensionId,
 ).companyPager().post(createInternalTextMessageRequest);
 await rc.revoke();
@@ -8750,7 +8757,7 @@ Get User Conferencing Settings
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).extension(
+const result = await rc.restapi(apiVersion).account(accountId).extension(
   extensionId,
 ).conferencing().get(readConferencingSettingsParameters);
 await rc.revoke();
@@ -8782,7 +8789,7 @@ Update User Conferencing Settings
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).extension(
+const result = await rc.restapi(apiVersion).account(accountId).extension(
   extensionId,
 ).conferencing().put(updateConferencingInfoRequest);
 await rc.revoke();
@@ -8814,7 +8821,7 @@ Get Extension Greeting Media Content
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).extension(
+const result = await rc.restapi(apiVersion).account(accountId).extension(
   extensionId,
 ).greeting(greetingId).content().get(readGreetingContentParameters);
 await rc.revoke();
@@ -8850,7 +8857,7 @@ List Messages
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).extension(
+const result = await rc.restapi(apiVersion).account(accountId).extension(
   extensionId,
 ).messageStore().list(listMessagesParameters);
 await rc.revoke();
@@ -8881,7 +8888,7 @@ Delete Conversation
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).extension(
+const result = await rc.restapi(apiVersion).account(accountId).extension(
   extensionId,
 ).messageStore().deleteAll(deleteMessageByFilterParameters);
 await rc.revoke();
@@ -8912,7 +8919,7 @@ Get Message(s)
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).extension(
+const result = await rc.restapi(apiVersion).account(accountId).extension(
   extensionId,
 ).messageStore(messageId).get();
 await rc.revoke();
@@ -8942,7 +8949,7 @@ Update Message(s)
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).extension(
+const result = await rc.restapi(apiVersion).account(accountId).extension(
   extensionId,
 ).messageStore(messageId).put(updateMessageRequest);
 await rc.revoke();
@@ -8974,7 +8981,7 @@ Delete Message
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).extension(
+const result = await rc.restapi(apiVersion).account(accountId).extension(
   extensionId,
 ).messageStore(messageId).delete(
   deleteMessageBulkRequest,
@@ -9010,7 +9017,7 @@ Patch Message(s)
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).extension(
+const result = await rc.restapi(apiVersion).account(accountId).extension(
   extensionId,
 ).messageStore(messageId).patch(patchMessageRequest);
 await rc.revoke();
@@ -9042,7 +9049,7 @@ Sync Messages
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).extension(
+const result = await rc.restapi(apiVersion).account(accountId).extension(
   extensionId,
 ).messageSync().get(syncMessagesParameters);
 await rc.revoke();
@@ -9074,7 +9081,7 @@ Get Extension Phone Number List
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).extension(
+const result = await rc.restapi(apiVersion).account(accountId).extension(
   extensionId,
 ).phoneNumber().get(listExtensionPhoneNumbersParameters);
 await rc.revoke();
@@ -9106,7 +9113,7 @@ Get User Profile Image
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).extension(
+const result = await rc.restapi(apiVersion).account(accountId).extension(
   extensionId,
 ).profileImage().list();
 await rc.revoke();
@@ -9140,7 +9147,7 @@ Upload User Profile Image
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).extension(
+const result = await rc.restapi(apiVersion).account(accountId).extension(
   extensionId,
 ).profileImage().post(createUserProfileImageRequest);
 await rc.revoke();
@@ -9171,7 +9178,7 @@ Update User Profile Image
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).extension(
+const result = await rc.restapi(apiVersion).account(accountId).extension(
   extensionId,
 ).profileImage().put(updateUserProfileImageRequest);
 await rc.revoke();
@@ -9202,7 +9209,7 @@ Delete User Profile Image
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).extension(
+const result = await rc.restapi(apiVersion).account(accountId).extension(
   extensionId,
 ).profileImage().delete();
 await rc.revoke();
@@ -9231,7 +9238,7 @@ Get Scaled Profile Image
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).extension(
+const result = await rc.restapi(apiVersion).account(accountId).extension(
   extensionId,
 ).profileImage(scaleSize).get(readScaledProfileImageParameters);
 await rc.revoke();
@@ -9267,7 +9274,7 @@ List Company Message Templates
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId)
+const result = await rc.restapi(apiVersion).account(accountId)
   .messageStoreTemplates().list(listCompanyMessageTemplatesParameters);
 await rc.revoke();
 ```
@@ -9297,7 +9304,7 @@ Create Company Message Template
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId)
+const result = await rc.restapi(apiVersion).account(accountId)
   .messageStoreTemplates().post(messageTemplateRequest);
 await rc.revoke();
 ```
@@ -9327,7 +9334,7 @@ Get Company Message Template
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId)
+const result = await rc.restapi(apiVersion).account(accountId)
   .messageStoreTemplates(templateId).get();
 await rc.revoke();
 ```
@@ -9355,7 +9362,7 @@ Update Company Message Template
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId)
+const result = await rc.restapi(apiVersion).account(accountId)
   .messageStoreTemplates(templateId).put(messageTemplateUpdateRequest);
 await rc.revoke();
 ```
@@ -9385,7 +9392,7 @@ Delete Company Message Template
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId)
+const result = await rc.restapi(apiVersion).account(accountId)
   .messageStoreTemplates(templateId).delete();
 await rc.revoke();
 ```
@@ -9412,7 +9419,7 @@ Get Paging Group Devices
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).pagingOnlyGroups(
+const result = await rc.restapi(apiVersion).account(accountId).pagingOnlyGroups(
   pagingOnlyGroupId,
 ).devices().get(listPagingGroupDevicesParameters);
 await rc.revoke();
@@ -9443,7 +9450,7 @@ Get Paging Group Users
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).pagingOnlyGroups(
+const result = await rc.restapi(apiVersion).account(accountId).pagingOnlyGroups(
   pagingOnlyGroupId,
 ).users().get(listPagingGroupUsersParameters);
 await rc.revoke();
@@ -9474,7 +9481,7 @@ Get Call Party Status
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).telephony()
+const result = await rc.restapi(apiVersion).account(accountId).telephony()
   .sessions(telephonySessionId).parties(partyId).get();
 await rc.revoke();
 ```
@@ -9501,7 +9508,7 @@ Delete Call Party
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).telephony()
+const result = await rc.restapi(apiVersion).account(accountId).telephony()
   .sessions(telephonySessionId).parties(partyId).delete();
 await rc.revoke();
 ```
@@ -9528,7 +9535,7 @@ Update Call Party
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).telephony()
+const result = await rc.restapi(apiVersion).account(accountId).telephony()
   .sessions(telephonySessionId).parties(partyId).patch(partyUpdateRequest);
 await rc.revoke();
 ```
@@ -9557,7 +9564,7 @@ List Permission Categories
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).dictionary().permissionCategory()
+const result = await rc.restapi(apiVersion).dictionary().permissionCategory()
   .list(listPermissionCategoriesParameters);
 await rc.revoke();
 ```
@@ -9586,7 +9593,7 @@ Get Permission Category
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).dictionary().permissionCategory(
+const result = await rc.restapi(apiVersion).dictionary().permissionCategory(
   permissionCategoryId,
 ).get();
 await rc.revoke();
@@ -9614,7 +9621,7 @@ Create Adaptive Card
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.teamMessaging().v1().chats(chatId).adaptiveCards().post(
+const result = await rc.teamMessaging().v1().chats(chatId).adaptiveCards().post(
   adaptiveCardRequest,
 );
 await rc.revoke();
@@ -9643,7 +9650,7 @@ List Sessions across Multiple Webinars/Hosts
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.webinar().configuration().v1().company().sessions().get(
+const result = await rc.webinar().configuration().v1().company().sessions().get(
   rcwConfigListAllCompanySessionsParameters,
 );
 await rc.revoke();
@@ -9672,7 +9679,7 @@ Get Webinar Recording Download Resource
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.webinar().history().v1().recordings(recordingId)
+const result = await rc.webinar().history().v1().recordings(recordingId)
   .download().get(rcwHistoryGetRecordingDownloadParameters);
 await rc.revoke();
 ```
@@ -9700,7 +9707,7 @@ List Webinar Subscriptions
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.webinar().notifications().v1().subscriptions().list();
+const result = await rc.webinar().notifications().v1().subscriptions().list();
 await rc.revoke();
 ```
 
@@ -9725,7 +9732,7 @@ Create Webinar Subscription
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.webinar().notifications().v1().subscriptions().post(
+const result = await rc.webinar().notifications().v1().subscriptions().post(
   createWebhookSubscriptionRequest,
 );
 await rc.revoke();
@@ -9753,7 +9760,7 @@ Get Webinar Subscription
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.webinar().notifications().v1().subscriptions(
+const result = await rc.webinar().notifications().v1().subscriptions(
   subscriptionId,
 ).get();
 await rc.revoke();
@@ -9779,7 +9786,7 @@ Update Webinar Subscription
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.webinar().notifications().v1().subscriptions(
+const result = await rc.webinar().notifications().v1().subscriptions(
   subscriptionId,
 ).put(updateSubscriptionRequest);
 await rc.revoke();
@@ -9807,7 +9814,7 @@ Cancel Webinar Subscription
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.webinar().notifications().v1().subscriptions(
+const result = await rc.webinar().notifications().v1().subscriptions(
   subscriptionId,
 ).delete();
 await rc.revoke();
@@ -9833,8 +9840,11 @@ Calls Aggregation Data
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.analytics().calls().v1().accounts(accountId).aggregation()
-  .fetch().post(aggregationRequest, analyticsCallsAggregationFetchParameters);
+const result = await rc.analytics().calls().v1().accounts(accountId)
+  .aggregation().fetch().post(
+    aggregationRequest,
+    analyticsCallsAggregationFetchParameters,
+  );
 await rc.revoke();
 ```
 
@@ -9863,7 +9873,7 @@ Calls Timeline Data
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.analytics().calls().v1().accounts(accountId).timeline()
+const result = await rc.analytics().calls().v1().accounts(accountId).timeline()
   .fetch().post(timelineRequest, analyticsCallsTimelineFetchParameters);
 await rc.revoke();
 ```
@@ -9892,7 +9902,7 @@ Get User's Default Bridge
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.rcvideo().v2().account(accountId).extension(extensionId)
+const result = await rc.rcvideo().v2().account(accountId).extension(extensionId)
   .bridges().default().get();
 await rc.revoke();
 ```
@@ -9919,7 +9929,7 @@ Create Multiple User Extensions
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi().v2().accounts(accountId).batchProvisioning()
+const result = await rc.restapi().v2().accounts(accountId).batchProvisioning()
   .users().post(batchProvisionUsersRequest);
 await rc.revoke();
 ```
@@ -9947,8 +9957,9 @@ Get Call Flip Settings
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi().v2().accounts(accountId).extensions(extensionId)
-  .callFlipNumbers().get();
+const result = await rc.restapi().v2().accounts(accountId).extensions(
+  extensionId,
+).callFlipNumbers().get();
 await rc.revoke();
 ```
 
@@ -9973,8 +9984,9 @@ Update Call Flip Settings
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi().v2().accounts(accountId).extensions(extensionId)
-  .callFlipNumbers().put(callFlipNumberListResource);
+const result = await rc.restapi().v2().accounts(accountId).extensions(
+  extensionId,
+).callFlipNumbers().put(callFlipNumberListResource);
 await rc.revoke();
 ```
 
@@ -10001,8 +10013,9 @@ Swap Devices
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi().v2().accounts(accountId).extensions(extensionId)
-  .devices(deviceId).replace().post(swapDeviceRequest);
+const result = await rc.restapi().v2().accounts(accountId).extensions(
+  extensionId,
+).devices(deviceId).replace().post(swapDeviceRequest);
 await rc.revoke();
 ```
 
@@ -10028,7 +10041,7 @@ Add Numbers to Inventory
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi().v2().accounts(accountId).phoneNumbers()
+const result = await rc.restapi().v2().accounts(accountId).phoneNumbers()
   .bulkAdd().post(addPhoneNumbersRequest);
 await rc.revoke();
 ```
@@ -10056,9 +10069,8 @@ Get Add Numbers Task Results
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi().v2().accounts(accountId).phoneNumbers().bulkAdd(
-  taskId,
-).get();
+const result = await rc.restapi().v2().accounts(accountId).phoneNumbers()
+  .bulkAdd(taskId).get();
 await rc.revoke();
 ```
 
@@ -10083,7 +10095,7 @@ Get Contacts Upload Task
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId)
+const result = await rc.restapi(apiVersion).account(accountId)
   .addressBookBulkUpload().tasks(taskId).get();
 await rc.revoke();
 ```
@@ -10111,7 +10123,7 @@ List Call Monitoring Group Members
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId)
+const result = await rc.restapi(apiVersion).account(accountId)
   .callMonitoringGroups(groupId).members().get(
     listCallMonitoringGroupMembersParameters,
   );
@@ -10143,7 +10155,7 @@ Update Call Recording Extension List
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).callRecording()
+const result = await rc.restapi(apiVersion).account(accountId).callRecording()
   .bulkAssign().post(bulkAccountCallRecordingsResource);
 await rc.revoke();
 ```
@@ -10172,7 +10184,7 @@ Get Call Recording Custom Greeting List
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).callRecording()
+const result = await rc.restapi(apiVersion).account(accountId).callRecording()
   .customGreetings().get(listCallRecordingCustomGreetingsParameters);
 await rc.revoke();
 ```
@@ -10202,7 +10214,7 @@ Delete Call Recording Custom Greeting List
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).callRecording()
+const result = await rc.restapi(apiVersion).account(accountId).callRecording()
   .customGreetings().deleteAll();
 await rc.revoke();
 ```
@@ -10229,7 +10241,7 @@ Delete Call Recording Custom Greeting
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).callRecording()
+const result = await rc.restapi(apiVersion).account(accountId).callRecording()
   .customGreetings(greetingId).delete();
 await rc.revoke();
 ```
@@ -10256,7 +10268,7 @@ Get Extension Update Task Status
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId)
+const result = await rc.restapi(apiVersion).account(accountId)
   .extensionBulkUpdate().tasks(taskId).get();
 await rc.revoke();
 ```
@@ -10284,7 +10296,7 @@ Get Call Queue Overflow Settings
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).extension(
+const result = await rc.restapi(apiVersion).account(accountId).extension(
   callQueueId,
 ).overflowSettings().get();
 await rc.revoke();
@@ -10313,7 +10325,7 @@ Update Call Queue Overflow Settings
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).extension(
+const result = await rc.restapi(apiVersion).account(accountId).extension(
   callQueueId,
 ).overflowSettings().put(callQueueOverflowSettingsRequestResource);
 await rc.revoke();
@@ -10344,7 +10356,7 @@ Address Book Synchronization
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).extension(
+const result = await rc.restapi(apiVersion).account(accountId).extension(
   extensionId,
 ).addressBookSync().get(syncAddressBookParameters);
 await rc.revoke();
@@ -10375,7 +10387,7 @@ List Contacts
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).extension(
+const result = await rc.restapi(apiVersion).account(accountId).extension(
   extensionId,
 ).addressBook().contact().list(listContactsParameters);
 await rc.revoke();
@@ -10406,7 +10418,7 @@ Create User Contact
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).extension(
+const result = await rc.restapi(apiVersion).account(accountId).extension(
   extensionId,
 ).addressBook().contact().post(personalContactRequest, createContactParameters);
 await rc.revoke();
@@ -10440,7 +10452,7 @@ Get User Contact(s)
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).extension(
+const result = await rc.restapi(apiVersion).account(accountId).extension(
   extensionId,
 ).addressBook().contact(contactId).get();
 await rc.revoke();
@@ -10470,7 +10482,7 @@ Update User Contact(s)
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).extension(
+const result = await rc.restapi(apiVersion).account(accountId).extension(
   extensionId,
 ).addressBook().contact(contactId).put(
   personalContactRequest,
@@ -10507,7 +10519,7 @@ Delete User Contact(s)
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).extension(
+const result = await rc.restapi(apiVersion).account(accountId).extension(
   extensionId,
 ).addressBook().contact(contactId).delete();
 await rc.revoke();
@@ -10536,7 +10548,7 @@ Update Contact Attributes
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).extension(
+const result = await rc.restapi(apiVersion).account(accountId).extension(
   extensionId,
 ).addressBook().contact(contactId).patch(
   personalContactRequest,
@@ -10573,7 +10585,7 @@ List User Administered Sites
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).extension(
+const result = await rc.restapi(apiVersion).account(accountId).extension(
   extensionId,
 ).administeredSites().get();
 await rc.revoke();
@@ -10603,7 +10615,7 @@ Update User Administered Sites
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).extension(
+const result = await rc.restapi(apiVersion).account(accountId).extension(
   extensionId,
 ).administeredSites().put(businessSiteCollectionRequest);
 await rc.revoke();
@@ -10635,7 +10647,7 @@ Assign Default Role
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).extension(
+const result = await rc.restapi(apiVersion).account(accountId).extension(
   extensionId,
 ).assignedRole().default().put();
 await rc.revoke();
@@ -10665,7 +10677,7 @@ Check User Permission
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).extension(
+const result = await rc.restapi(apiVersion).account(accountId).extension(
   extensionId,
 ).authzProfile().check().get(checkUserPermissionParameters);
 await rc.revoke();
@@ -10697,7 +10709,7 @@ Get Agent’s Call Queue Presence
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).extension(
+const result = await rc.restapi(apiVersion).account(accountId).extension(
   extensionId,
 ).callQueuePresence().get(readExtensionCallQueuePresenceParameters);
 await rc.revoke();
@@ -10729,7 +10741,7 @@ Update Call Queue Presence
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).extension(
+const result = await rc.restapi(apiVersion).account(accountId).extension(
   extensionId,
 ).callQueuePresence().put(extensionCallQueueUpdatePresenceList);
 await rc.revoke();
@@ -10761,7 +10773,7 @@ List User Emergency Locations
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).extension(
+const result = await rc.restapi(apiVersion).account(accountId).extension(
   extensionId,
 ).emergencyLocations().list(getExtensionEmergencyLocationsParameters);
 await rc.revoke();
@@ -10793,7 +10805,7 @@ Create User Emergency Location
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).extension(
+const result = await rc.restapi(apiVersion).account(accountId).extension(
   extensionId,
 ).emergencyLocations().post(createUserEmergencyLocationRequest);
 await rc.revoke();
@@ -10825,7 +10837,7 @@ Get User Emergency Location
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).extension(
+const result = await rc.restapi(apiVersion).account(accountId).extension(
   extensionId,
 ).emergencyLocations(locationId).get();
 await rc.revoke();
@@ -10855,7 +10867,7 @@ Update User Emergency Location
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).extension(
+const result = await rc.restapi(apiVersion).account(accountId).extension(
   extensionId,
 ).emergencyLocations(locationId).put(emergencyLocationRequestResource);
 await rc.revoke();
@@ -10887,7 +10899,7 @@ Delete User Emergency Location
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).extension(
+const result = await rc.restapi(apiVersion).account(accountId).extension(
   extensionId,
 ).emergencyLocations(locationId).delete(
   deleteExtensionEmergencyLocationParameters,
@@ -10920,7 +10932,7 @@ List Forwarding Numbers
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).extension(
+const result = await rc.restapi(apiVersion).account(accountId).extension(
   extensionId,
 ).forwardingNumber().list(listForwardingNumbersParameters);
 await rc.revoke();
@@ -10952,7 +10964,7 @@ Create Forwarding Number
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).extension(
+const result = await rc.restapi(apiVersion).account(accountId).extension(
   extensionId,
 ).forwardingNumber().post(createForwardingNumberRequest);
 await rc.revoke();
@@ -10984,7 +10996,7 @@ Delete Forwarding Numbers
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).extension(
+const result = await rc.restapi(apiVersion).account(accountId).extension(
   extensionId,
 ).forwardingNumber().deleteAll(deleteForwardingNumbersRequest);
 await rc.revoke();
@@ -11015,7 +11027,7 @@ Get Forwarding Number
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).extension(
+const result = await rc.restapi(apiVersion).account(accountId).extension(
   extensionId,
 ).forwardingNumber(forwardingNumberId).get();
 await rc.revoke();
@@ -11045,7 +11057,7 @@ Update Forwarding Number
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).extension(
+const result = await rc.restapi(apiVersion).account(accountId).extension(
   extensionId,
 ).forwardingNumber(forwardingNumberId).put(updateForwardingNumberRequest);
 await rc.revoke();
@@ -11077,7 +11089,7 @@ Delete Forwarding Number
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).extension(
+const result = await rc.restapi(apiVersion).account(accountId).extension(
   extensionId,
 ).forwardingNumber(forwardingNumberId).delete();
 await rc.revoke();
@@ -11106,7 +11118,7 @@ Get Message Attachment Content
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).extension(
+const result = await rc.restapi(apiVersion).account(accountId).extension(
   extensionId,
 ).messageStore(messageId).content(attachmentId).get(
   readMessageContentParameters,
@@ -11144,7 +11156,7 @@ Get Notification Settings
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).extension(
+const result = await rc.restapi(apiVersion).account(accountId).extension(
   extensionId,
 ).notificationSettings().get();
 await rc.revoke();
@@ -11174,7 +11186,7 @@ Update Notification Settings
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).extension(
+const result = await rc.restapi(apiVersion).account(accountId).extension(
   extensionId,
 ).notificationSettings().put(notificationSettingsUpdateRequest);
 await rc.revoke();
@@ -11206,7 +11218,7 @@ Get Unified Presence
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).extension(
+const result = await rc.restapi(apiVersion).account(accountId).extension(
   extensionId,
 ).unifiedPresence().get();
 await rc.revoke();
@@ -11235,7 +11247,7 @@ Update Unified Presence
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).extension(
+const result = await rc.restapi(apiVersion).account(accountId).extension(
   extensionId,
 ).unifiedPresence().patch(updateUnifiedPresence);
 await rc.revoke();
@@ -11266,7 +11278,7 @@ Get User Video Configuration
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).extension(
+const result = await rc.restapi(apiVersion).account(accountId).extension(
   extensionId,
 ).videoConfiguration().get();
 await rc.revoke();
@@ -11296,7 +11308,7 @@ Get Message Store Configuration
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId)
+const result = await rc.restapi(apiVersion).account(accountId)
   .messageStoreConfiguration().get();
 await rc.revoke();
 ```
@@ -11324,7 +11336,7 @@ Update Message Store Configuration
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId)
+const result = await rc.restapi(apiVersion).account(accountId)
   .messageStoreConfiguration().put(messageStoreConfiguration);
 await rc.revoke();
 ```
@@ -11354,9 +11366,8 @@ Get Message Store Report Archive
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).messageStoreReport(
-  taskId,
-).archive().get();
+const result = await rc.restapi(apiVersion).account(accountId)
+  .messageStoreReport(taskId).archive().get();
 await rc.revoke();
 ```
 
@@ -11383,7 +11394,7 @@ Assign Paging Group Users and Devices
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).pagingOnlyGroups(
+const result = await rc.restapi(apiVersion).account(accountId).pagingOnlyGroups(
   pagingOnlyGroupId,
 ).bulkAssign().post(editPagingGroupRequest);
 await rc.revoke();
@@ -11413,7 +11424,7 @@ Call Flip on Party
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).telephony()
+const result = await rc.restapi(apiVersion).account(accountId).telephony()
   .sessions(telephonySessionId).parties(partyId).flip().post(callPartyFlip);
 await rc.revoke();
 ```
@@ -11441,7 +11452,7 @@ Hold Call Party
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).telephony()
+const result = await rc.restapi(apiVersion).account(accountId).telephony()
   .sessions(telephonySessionId).parties(partyId).hold().post(
     holdCallPartyRequest,
   );
@@ -11472,7 +11483,7 @@ Call Park
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).telephony()
+const result = await rc.restapi(apiVersion).account(accountId).telephony()
   .sessions(telephonySessionId).parties(partyId).park().post();
 await rc.revoke();
 ```
@@ -11499,7 +11510,7 @@ Reply with Text
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).telephony()
+const result = await rc.restapi(apiVersion).account(accountId).telephony()
   .sessions(telephonySessionId).parties(partyId).reply().post(callPartyReply);
 await rc.revoke();
 ```
@@ -11527,7 +11538,7 @@ Un-hold Call Party
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).telephony()
+const result = await rc.restapi(apiVersion).account(accountId).telephony()
   .sessions(telephonySessionId).parties(partyId).unhold().post();
 await rc.revoke();
 ```
@@ -11554,7 +11565,7 @@ Supervise Call Session
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).telephony()
+const result = await rc.restapi(apiVersion).account(accountId).telephony()
   .sessions(telephonySessionId).supervise().post(superviseCallSessionRequest);
 await rc.revoke();
 ```
@@ -11584,7 +11595,7 @@ List Contracted Countries
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).dictionary().brand(brandId)
+const result = await rc.restapi(apiVersion).dictionary().brand(brandId)
   .contractedCountry().list();
 await rc.revoke();
 ```
@@ -11611,7 +11622,7 @@ List Domestic Countries
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).dictionary().brand(brandId)
+const result = await rc.restapi(apiVersion).dictionary().brand(brandId)
   .contractedCountry(contractedCountryId).get(listDomesticCountriesParameters);
 await rc.revoke();
 ```
@@ -11640,7 +11651,7 @@ Create Webinar Session
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.webinar().configuration().v1().webinars(webinarId)
+const result = await rc.webinar().configuration().v1().webinars(webinarId)
   .sessions().post(wcsSessionWithLocaleCodeModel);
 await rc.revoke();
 ```
@@ -11667,7 +11678,7 @@ Get Webinar Session
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.webinar().configuration().v1().webinars(webinarId)
+const result = await rc.webinar().configuration().v1().webinars(webinarId)
   .sessions(sessionId).get();
 await rc.revoke();
 ```
@@ -11692,7 +11703,7 @@ Delete Webinar Session
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.webinar().configuration().v1().webinars(webinarId)
+const result = await rc.webinar().configuration().v1().webinars(webinarId)
   .sessions(sessionId).delete();
 await rc.revoke();
 ```
@@ -11717,7 +11728,7 @@ Update Webinar Session
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.webinar().configuration().v1().webinars(webinarId)
+const result = await rc.webinar().configuration().v1().webinars(webinarId)
   .sessions(sessionId).patch(wcsSessionWithLocaleCodeModel);
 await rc.revoke();
 ```
@@ -11744,7 +11755,7 @@ List Session Invitees
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.webinar().history().v1().webinars(webinarId).sessions(
+const result = await rc.webinar().history().v1().webinars(webinarId).sessions(
   sessionId,
 ).invitees().list(rcwHistoryListInviteesParameters);
 await rc.revoke();
@@ -11773,7 +11784,7 @@ Get Session Invitee
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.webinar().history().v1().webinars(webinarId).sessions(
+const result = await rc.webinar().history().v1().webinars(webinarId).sessions(
   sessionId,
 ).invitees(inviteeId).get();
 await rc.revoke();
@@ -11799,7 +11810,7 @@ Renew Webinar Subscription
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.webinar().notifications().v1().subscriptions(
+const result = await rc.webinar().notifications().v1().subscriptions(
   subscriptionId,
 ).renew().post();
 await rc.revoke();
@@ -11825,7 +11836,7 @@ List Session Registrants
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.webinar().registration().v1().sessions(sessionId)
+const result = await rc.webinar().registration().v1().sessions(sessionId)
   .registrants().list(rcwRegListRegistrantsParameters);
 await rc.revoke();
 ```
@@ -11853,7 +11864,7 @@ Create Registrant
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.webinar().registration().v1().sessions(sessionId)
+const result = await rc.webinar().registration().v1().sessions(sessionId)
   .registrants().post(registrantBaseModelWithQuestionnaire);
 await rc.revoke();
 ```
@@ -11881,7 +11892,7 @@ Get Registrant
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.webinar().registration().v1().sessions(sessionId)
+const result = await rc.webinar().registration().v1().sessions(sessionId)
   .registrants(registrantId).get(rcwRegGetRegistrantParameters);
 await rc.revoke();
 ```
@@ -11909,7 +11920,7 @@ Delete Registrant
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.webinar().registration().v1().sessions(sessionId)
+const result = await rc.webinar().registration().v1().sessions(sessionId)
   .registrants(registrantId).delete();
 await rc.revoke();
 ```
@@ -11934,7 +11945,7 @@ Get Recording Insights
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.ai().ringsense().v1().public().accounts(accountId)
+const result = await rc.ai().ringsense().v1().public().accounts(accountId)
   .domains(domain).records(sourceRecordId).insights().get(
     getRecordingInsightsParameters,
   );
@@ -11963,7 +11974,7 @@ Get Session Insights
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.ai().ringsense().v1().public().accounts(accountId)
+const result = await rc.ai().ringsense().v1().public().accounts(accountId)
   .domains(domain).sessions(sourceSessionId).insights().get(
     getSessionInsightsParameters,
   );
@@ -11993,8 +12004,9 @@ List Comm Handling States
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi().v2().accounts(accountId).extensions(extensionId)
-  .commHandling().states().list(listCicStatesParameters);
+const result = await rc.restapi().v2().accounts(accountId).extensions(
+  extensionId,
+).commHandling().states().list(listCicStatesParameters);
 await rc.revoke();
 ```
 
@@ -12020,8 +12032,9 @@ Comm Handling State
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi().v2().accounts(accountId).extensions(extensionId)
-  .commHandling().states(stateId).get();
+const result = await rc.restapi().v2().accounts(accountId).extensions(
+  extensionId,
+).commHandling().states(stateId).get();
 await rc.revoke();
 ```
 
@@ -12045,8 +12058,9 @@ Update Comm Handling State
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi().v2().accounts(accountId).extensions(extensionId)
-  .commHandling().states(stateId).patch(commStateUpdateRequest);
+const result = await rc.restapi().v2().accounts(accountId).extensions(
+  extensionId,
+).commHandling().states(stateId).patch(commStateUpdateRequest);
 await rc.revoke();
 ```
 
@@ -12072,10 +12086,11 @@ Get Forwarding Targets
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi().v2().accounts(accountId).extensions(extensionId)
-  .commHandling().voice().forwardingTargets().get(
-    readForwardingTargetsParameters,
-  );
+const result = await rc.restapi().v2().accounts(accountId).extensions(
+  extensionId,
+).commHandling().voice().forwardingTargets().get(
+  readForwardingTargetsParameters,
+);
 await rc.revoke();
 ```
 
@@ -12102,10 +12117,11 @@ Delete Forwarding Targets
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi().v2().accounts(accountId).extensions(extensionId)
-  .commHandling().voice().forwardingTargets().delete(
-    commRemoveForwardingTargetsRequest,
-  );
+const result = await rc.restapi().v2().accounts(accountId).extensions(
+  extensionId,
+).commHandling().voice().forwardingTargets().delete(
+  commRemoveForwardingTargetsRequest,
+);
 await rc.revoke();
 ```
 
@@ -12132,8 +12148,9 @@ List Extensions Using Forwarding Device Target
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi().v2().accounts(accountId).extensions(extensionId)
-  .commHandling().voice().forwardingTargets().devices(deviceId).extensions()
+const result = await rc.restapi().v2().accounts(accountId).extensions(
+  extensionId,
+).commHandling().voice().forwardingTargets().devices(deviceId).extensions()
   .get();
 await rc.revoke();
 ```
@@ -12159,10 +12176,11 @@ List Interaction Rules
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi().v2().accounts(accountId).extensions(extensionId)
-  .commHandling().voice().interactionRules().list(
-    listVoiceInteractionRulesParameters,
-  );
+const result = await rc.restapi().v2().accounts(accountId).extensions(
+  extensionId,
+).commHandling().voice().interactionRules().list(
+  listVoiceInteractionRulesParameters,
+);
 await rc.revoke();
 ```
 
@@ -12189,10 +12207,11 @@ Create Interaction Rule
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi().v2().accounts(accountId).extensions(extensionId)
-  .commHandling().voice().interactionRules().post(
-    commInteractionRuleCreateRequest,
-  );
+const result = await rc.restapi().v2().accounts(accountId).extensions(
+  extensionId,
+).commHandling().voice().interactionRules().post(
+  commInteractionRuleCreateRequest,
+);
 await rc.revoke();
 ```
 
@@ -12219,8 +12238,9 @@ Get Interaction Rule
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi().v2().accounts(accountId).extensions(extensionId)
-  .commHandling().voice().interactionRules(ruleId).get();
+const result = await rc.restapi().v2().accounts(accountId).extensions(
+  extensionId,
+).commHandling().voice().interactionRules(ruleId).get();
 await rc.revoke();
 ```
 
@@ -12245,8 +12265,9 @@ Delete Interaction Rule
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi().v2().accounts(accountId).extensions(extensionId)
-  .commHandling().voice().interactionRules(ruleId).delete();
+const result = await rc.restapi().v2().accounts(accountId).extensions(
+  extensionId,
+).commHandling().voice().interactionRules(ruleId).delete();
 await rc.revoke();
 ```
 
@@ -12270,10 +12291,11 @@ Update Interaction Rule
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi().v2().accounts(accountId).extensions(extensionId)
-  .commHandling().voice().interactionRules(ruleId).patch(
-    commInteractionRuleUpdateRequest,
-  );
+const result = await rc.restapi().v2().accounts(accountId).extensions(
+  extensionId,
+).commHandling().voice().interactionRules(ruleId).patch(
+  commInteractionRuleUpdateRequest,
+);
 await rc.revoke();
 ```
 
@@ -12300,8 +12322,9 @@ List State-based Rules
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi().v2().accounts(accountId).extensions(extensionId)
-  .commHandling().voice().stateRules().list(listVoiceStateBasedRulesParameters);
+const result = await rc.restapi().v2().accounts(accountId).extensions(
+  extensionId,
+).commHandling().voice().stateRules().list(listVoiceStateBasedRulesParameters);
 await rc.revoke();
 ```
 
@@ -12328,8 +12351,9 @@ Get State-based Rule
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi().v2().accounts(accountId).extensions(extensionId)
-  .commHandling().voice().stateRules(stateId).get();
+const result = await rc.restapi().v2().accounts(accountId).extensions(
+  extensionId,
+).commHandling().voice().stateRules(stateId).get();
 await rc.revoke();
 ```
 
@@ -12354,10 +12378,11 @@ Update State-based Rule
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi().v2().accounts(accountId).extensions(extensionId)
-  .commHandling().voice().stateRules(stateId).patch(
-    commStateBasedRuleUpdateRequest,
-  );
+const result = await rc.restapi().v2().accounts(accountId).extensions(
+  extensionId,
+).commHandling().voice().stateRules(stateId).patch(
+  commStateBasedRuleUpdateRequest,
+);
 await rc.revoke();
 ```
 
@@ -12384,7 +12409,7 @@ Update Call Monitoring Group List
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId)
+const result = await rc.restapi(apiVersion).account(accountId)
   .callMonitoringGroups(groupId).bulkAssign().post(callMonitoringBulkAssign);
 await rc.revoke();
 ```
@@ -12413,7 +12438,7 @@ List Devices
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId)
+const result = await rc.restapi(apiVersion).account(accountId)
   .emergencyAddressAutoUpdate().devices().get(
     listDevicesAutomaticLocationUpdatesParameters,
   );
@@ -12445,7 +12470,7 @@ Enable Automatic Location Updates Feature
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId)
+const result = await rc.restapi(apiVersion).account(accountId)
   .emergencyAddressAutoUpdate().devices().bulkAssign().post(
     assignMultipleDevicesAutomaticLocationUpdates,
   );
@@ -12476,7 +12501,7 @@ Get Network Map
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId)
+const result = await rc.restapi(apiVersion).account(accountId)
   .emergencyAddressAutoUpdate().networks().list(listNetworksParameters);
 await rc.revoke();
 ```
@@ -12505,7 +12530,7 @@ Create Network
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId)
+const result = await rc.restapi(apiVersion).account(accountId)
   .emergencyAddressAutoUpdate().networks().post(createNetworkRequest);
 await rc.revoke();
 ```
@@ -12534,7 +12559,7 @@ Get Network
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId)
+const result = await rc.restapi(apiVersion).account(accountId)
   .emergencyAddressAutoUpdate().networks(networkId).get();
 await rc.revoke();
 ```
@@ -12561,7 +12586,7 @@ Update Network
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId)
+const result = await rc.restapi(apiVersion).account(accountId)
   .emergencyAddressAutoUpdate().networks(networkId).put(updateNetworkRequest);
 await rc.revoke();
 ```
@@ -12590,7 +12615,7 @@ Delete Network
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId)
+const result = await rc.restapi(apiVersion).account(accountId)
   .emergencyAddressAutoUpdate().networks(networkId).delete();
 await rc.revoke();
 ```
@@ -12617,7 +12642,7 @@ List Account Switches
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId)
+const result = await rc.restapi(apiVersion).account(accountId)
   .emergencyAddressAutoUpdate().switches().list(listAccountSwitchesParameters);
 await rc.revoke();
 ```
@@ -12646,7 +12671,7 @@ Create Switch
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId)
+const result = await rc.restapi(apiVersion).account(accountId)
   .emergencyAddressAutoUpdate().switches().post(createSwitchInfo);
 await rc.revoke();
 ```
@@ -12675,7 +12700,7 @@ Get Switch
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId)
+const result = await rc.restapi(apiVersion).account(accountId)
   .emergencyAddressAutoUpdate().switches(switchId).get();
 await rc.revoke();
 ```
@@ -12702,7 +12727,7 @@ Update Switch
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId)
+const result = await rc.restapi(apiVersion).account(accountId)
   .emergencyAddressAutoUpdate().switches(switchId).put(updateSwitchInfo);
 await rc.revoke();
 ```
@@ -12731,7 +12756,7 @@ Delete Switch
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId)
+const result = await rc.restapi(apiVersion).account(accountId)
   .emergencyAddressAutoUpdate().switches(switchId).delete();
 await rc.revoke();
 ```
@@ -12758,7 +12783,7 @@ Create Multiple Switches
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId)
+const result = await rc.restapi(apiVersion).account(accountId)
   .emergencyAddressAutoUpdate().switchesBulkCreate().post(
     createMultipleSwitchesRequest,
   );
@@ -12790,7 +12815,7 @@ Update Multiple Switches
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId)
+const result = await rc.restapi(apiVersion).account(accountId)
   .emergencyAddressAutoUpdate().switchesBulkUpdate().post(
     updateMultipleSwitchesRequest,
   );
@@ -12822,7 +12847,7 @@ Validate Multiple Switches
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId)
+const result = await rc.restapi(apiVersion).account(accountId)
   .emergencyAddressAutoUpdate().switchesBulkValidate().post(
     validateMultipleSwitchesRequest,
   );
@@ -12854,7 +12879,7 @@ Get Emergency Map Configuration Task
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId)
+const result = await rc.restapi(apiVersion).account(accountId)
   .emergencyAddressAutoUpdate().tasks(taskId).get();
 await rc.revoke();
 ```
@@ -12882,7 +12907,7 @@ List Users
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId)
+const result = await rc.restapi(apiVersion).account(accountId)
   .emergencyAddressAutoUpdate().users().get(
     listAutomaticLocationUpdatesUsersParameters,
   );
@@ -12914,7 +12939,7 @@ Enable Automatic Location Updates for Users
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId)
+const result = await rc.restapi(apiVersion).account(accountId)
   .emergencyAddressAutoUpdate().users().bulkAssign().post(
     emergencyAddressAutoUpdateUsersBulkAssignResource,
   );
@@ -12945,7 +12970,7 @@ List Wireless Points
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId)
+const result = await rc.restapi(apiVersion).account(accountId)
   .emergencyAddressAutoUpdate().wirelessPoints().list(
     listWirelessPointsParameters,
   );
@@ -12976,7 +13001,7 @@ Create Wireless Point
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId)
+const result = await rc.restapi(apiVersion).account(accountId)
   .emergencyAddressAutoUpdate().wirelessPoints().post(createWirelessPoint);
 await rc.revoke();
 ```
@@ -13005,7 +13030,7 @@ Get Wireless Point
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId)
+const result = await rc.restapi(apiVersion).account(accountId)
   .emergencyAddressAutoUpdate().wirelessPoints(pointId).get();
 await rc.revoke();
 ```
@@ -13032,7 +13057,7 @@ Update Wireless Point
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId)
+const result = await rc.restapi(apiVersion).account(accountId)
   .emergencyAddressAutoUpdate().wirelessPoints(pointId).put(
     updateWirelessPoint,
   );
@@ -13063,7 +13088,7 @@ Delete Wireless Point
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId)
+const result = await rc.restapi(apiVersion).account(accountId)
   .emergencyAddressAutoUpdate().wirelessPoints(pointId).delete();
 await rc.revoke();
 ```
@@ -13090,7 +13115,7 @@ Create Multiple Wireless Points
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId)
+const result = await rc.restapi(apiVersion).account(accountId)
   .emergencyAddressAutoUpdate().wirelessPointsBulkCreate().post(
     createMultipleWirelessPointsRequest,
   );
@@ -13122,7 +13147,7 @@ Update Multiple Wireless Points
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId)
+const result = await rc.restapi(apiVersion).account(accountId)
   .emergencyAddressAutoUpdate().wirelessPointsBulkUpdate().post(
     updateMultipleWirelessPointsRequest,
   );
@@ -13154,7 +13179,7 @@ Validate Multiple Wireless Points
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId)
+const result = await rc.restapi(apiVersion).account(accountId)
   .emergencyAddressAutoUpdate().wirelessPointsBulkValidate().post(
     validateMultipleWirelessPointsRequest,
   );
@@ -13186,7 +13211,7 @@ List Blocked/Allowed Phone Numbers
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).extension(
+const result = await rc.restapi(apiVersion).account(accountId).extension(
   extensionId,
 ).callerBlocking().phoneNumbers().list(listBlockedAllowedNumbersParameters);
 await rc.revoke();
@@ -13218,7 +13243,7 @@ Add Blocked/Allowed Number
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).extension(
+const result = await rc.restapi(apiVersion).account(accountId).extension(
   extensionId,
 ).callerBlocking().phoneNumbers().post(addBlockedAllowedPhoneNumber);
 await rc.revoke();
@@ -13250,7 +13275,7 @@ Get Blocked/Allowed Number
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).extension(
+const result = await rc.restapi(apiVersion).account(accountId).extension(
   extensionId,
 ).callerBlocking().phoneNumbers(blockedNumberId).get();
 await rc.revoke();
@@ -13280,7 +13305,7 @@ Update Blocked/Allowed Number
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).extension(
+const result = await rc.restapi(apiVersion).account(accountId).extension(
   extensionId,
 ).callerBlocking().phoneNumbers(blockedNumberId).put(
   addBlockedAllowedPhoneNumber,
@@ -13314,7 +13339,7 @@ Delete Blocked/Allowed Number
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).extension(
+const result = await rc.restapi(apiVersion).account(accountId).extension(
   extensionId,
 ).callerBlocking().phoneNumbers(blockedNumberId).delete();
 await rc.revoke();
@@ -13343,7 +13368,7 @@ List User Message Templates
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).extension(
+const result = await rc.restapi(apiVersion).account(accountId).extension(
   extensionId,
 ).messageStoreTemplates().list(listUserMessageTemplatesParameters);
 await rc.revoke();
@@ -13375,7 +13400,7 @@ Create User Message Template
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).extension(
+const result = await rc.restapi(apiVersion).account(accountId).extension(
   extensionId,
 ).messageStoreTemplates().post(messageTemplateRequest);
 await rc.revoke();
@@ -13407,7 +13432,7 @@ Get User Message Template
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).extension(
+const result = await rc.restapi(apiVersion).account(accountId).extension(
   extensionId,
 ).messageStoreTemplates(templateId).get();
 await rc.revoke();
@@ -13437,7 +13462,7 @@ Update User Message Template
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).extension(
+const result = await rc.restapi(apiVersion).account(accountId).extension(
   extensionId,
 ).messageStoreTemplates(templateId).put(messageTemplateUpdateRequest);
 await rc.revoke();
@@ -13469,7 +13494,7 @@ Delete User Message Template
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).extension(
+const result = await rc.restapi(apiVersion).account(accountId).extension(
   extensionId,
 ).messageStoreTemplates(templateId).delete();
 await rc.revoke();
@@ -13498,7 +13523,7 @@ Get SMS Configuration
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).extension(
+const result = await rc.restapi(apiVersion).account(accountId).extension(
   extensionId,
 ).phoneNumber(phoneNumberId).smsConfiguration().get();
 await rc.revoke();
@@ -13528,7 +13553,7 @@ Bring-In Call Party
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).telephony()
+const result = await rc.restapi(apiVersion).account(accountId).telephony()
   .sessions(telephonySessionId).parties().bringIn().post(addPartyRequest);
 await rc.revoke();
 ```
@@ -13557,7 +13582,7 @@ Answer Call Party
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).telephony()
+const result = await rc.restapi(apiVersion).account(accountId).telephony()
   .sessions(telephonySessionId).parties(partyId).answer().post(answerTarget);
 await rc.revoke();
 ```
@@ -13585,7 +13610,7 @@ Bridge Call Party
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).telephony()
+const result = await rc.restapi(apiVersion).account(accountId).telephony()
   .sessions(telephonySessionId).parties(partyId).bridge().post(
     bridgeTargetRequest,
   );
@@ -13616,7 +13641,7 @@ Forward Call Party
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).telephony()
+const result = await rc.restapi(apiVersion).account(accountId).telephony()
   .sessions(telephonySessionId).parties(partyId).forward().post(forwardTarget);
 await rc.revoke();
 ```
@@ -13645,7 +13670,7 @@ Ignore Call in Queue
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).telephony()
+const result = await rc.restapi(apiVersion).account(accountId).telephony()
   .sessions(telephonySessionId).parties(partyId).ignore().post(
     ignoreRequestBody,
   );
@@ -13676,7 +13701,7 @@ Pickup Call
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).telephony()
+const result = await rc.restapi(apiVersion).account(accountId).telephony()
   .sessions(telephonySessionId).parties(partyId).pickup().post(pickupTarget);
 await rc.revoke();
 ```
@@ -13704,7 +13729,7 @@ Create Recording
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).telephony()
+const result = await rc.restapi(apiVersion).account(accountId).telephony()
   .sessions(telephonySessionId).parties(partyId).recordings().post();
 await rc.revoke();
 ```
@@ -13731,7 +13756,7 @@ Pause/Resume Recording
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).telephony()
+const result = await rc.restapi(apiVersion).account(accountId).telephony()
   .sessions(telephonySessionId).parties(partyId).recordings(recordingId).patch(
     callRecordingUpdate,
     pauseResumeCallRecordingParameters,
@@ -13765,7 +13790,7 @@ Reject Call Party
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).telephony()
+const result = await rc.restapi(apiVersion).account(accountId).telephony()
   .sessions(telephonySessionId).parties(partyId).reject().post();
 await rc.revoke();
 ```
@@ -13792,7 +13817,7 @@ Supervise Call Party
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).telephony()
+const result = await rc.restapi(apiVersion).account(accountId).telephony()
   .sessions(telephonySessionId).parties(partyId).supervise().post(
     partySuperviseRequest,
   );
@@ -13824,7 +13849,7 @@ Transfer Call Party
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.restapi(apiVersion).account(accountId).telephony()
+const result = await rc.restapi(apiVersion).account(accountId).telephony()
   .sessions(telephonySessionId).parties(partyId).transfer().post(
     transferTarget,
   );
@@ -13854,7 +13879,7 @@ List Session Participants
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.webinar().history().v1().webinars(webinarId).sessions(
+const result = await rc.webinar().history().v1().webinars(webinarId).sessions(
   sessionId,
 ).participants().get(rcwHistoryListParticipantsParameters);
 await rc.revoke();
@@ -13883,7 +13908,7 @@ List Session Invitees
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.webinar().configuration().v1().webinars(webinarId)
+const result = await rc.webinar().configuration().v1().webinars(webinarId)
   .sessions(sessionId).invitees().list(rcwConfigListInviteesParameters);
 await rc.revoke();
 ```
@@ -13911,7 +13936,7 @@ Bulk Add/Delete Session Invitees
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.webinar().configuration().v1().webinars(webinarId)
+const result = await rc.webinar().configuration().v1().webinars(webinarId)
   .sessions(sessionId).invitees().patch(bulkUpdateInviteesRequest);
 await rc.revoke();
 ```
@@ -13939,7 +13964,7 @@ Get Session Invitee
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.webinar().configuration().v1().webinars(webinarId)
+const result = await rc.webinar().configuration().v1().webinars(webinarId)
   .sessions(sessionId).invitees(inviteeId).get();
 await rc.revoke();
 ```
@@ -13964,7 +13989,7 @@ Update Session Invitee
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.webinar().configuration().v1().webinars(webinarId)
+const result = await rc.webinar().configuration().v1().webinars(webinarId)
   .sessions(sessionId).invitees(inviteeId).put(updateInviteeRequest);
 await rc.revoke();
 ```
@@ -13991,7 +14016,7 @@ Delete Session Invitee
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.webinar().configuration().v1().webinars(webinarId)
+const result = await rc.webinar().configuration().v1().webinars(webinarId)
   .sessions(sessionId).invitees(inviteeId).delete();
 await rc.revoke();
 ```
@@ -14016,7 +14041,7 @@ Get Participant Information
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.webinar().history().v1().webinars(webinarId).sessions(
+const result = await rc.webinar().history().v1().webinars(webinarId).sessions(
   sessionId,
 ).participants().self().get();
 await rc.revoke();
@@ -14043,7 +14068,7 @@ Get Registration Session Info
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.webinar().registration().v1().sessions(sessionId).get();
+const result = await rc.webinar().registration().v1().sessions(sessionId).get();
 await rc.revoke();
 ```
 
@@ -14067,7 +14092,7 @@ Update Registration Session
 ```ts
 const rc = new RingCentral({ clientId, clientSecret, server });
 await rc.authorize({ jwt });
-var result = await rc.webinar().registration().v1().sessions(sessionId).patch(
+const result = await rc.webinar().registration().v1().sessions(sessionId).patch(
   regSessionModel,
 );
 await rc.revoke();

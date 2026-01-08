@@ -20,7 +20,7 @@ describe("fax", () => {
     if (faxMessages.records?.length === 0) {
       return;
     }
-    const r = await rc.get<Buffer>(
+    const r = await rc.get<Uint8Array>(
       faxMessages.records?.[0].attachments?.[0].uri ?? "",
       undefined,
       {

@@ -39,11 +39,11 @@ class Index {
   public async get(
     queryParams?: ReadMessageContentParameters,
     restRequestConfig?: RestRequestConfig,
-  ): Promise<Buffer> {
+  ): Promise<Uint8Array> {
     if (this.attachmentId === null) {
       throw new Error("attachmentId must be specified.");
     }
-    const r = await this.rc.get<Buffer>(this.path(), queryParams, {
+    const r = await this.rc.get<Uint8Array>(this.path(), queryParams, {
       ...restRequestConfig,
       responseType: "arraybuffer",
     });

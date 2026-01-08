@@ -36,8 +36,10 @@ class Index {
    * App Permission: ReadAccounts
    * User Permission: ReadExtensions
    */
-  public async list(restRequestConfig?: RestRequestConfig): Promise<Buffer> {
-    const r = await this.rc.get<Buffer>(this.path(false), undefined, {
+  public async list(
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<Uint8Array> {
+    const r = await this.rc.get<Uint8Array>(this.path(false), undefined, {
       ...restRequestConfig,
       responseType: "arraybuffer",
     });
@@ -122,11 +124,11 @@ class Index {
   public async get(
     queryParams?: ReadScaledProfileImageParameters,
     restRequestConfig?: RestRequestConfig,
-  ): Promise<Buffer> {
+  ): Promise<Uint8Array> {
     if (this.scaleSize === null) {
       throw new Error("scaleSize must be specified.");
     }
-    const r = await this.rc.get<Buffer>(this.path(), queryParams, {
+    const r = await this.rc.get<Uint8Array>(this.path(), queryParams, {
       ...restRequestConfig,
       responseType: "arraybuffer",
     });
