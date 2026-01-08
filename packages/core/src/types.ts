@@ -61,5 +61,5 @@ export interface FormFile {
   name: string;
   filename: string;
   contentType: string;
-  content: string | Buffer | Blob | NodeJS.ReadableStream;
+  content: string | Uint8Array | Blob | AsyncIterable<Uint8Array>;
 }

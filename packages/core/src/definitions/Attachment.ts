@@ -11,7 +11,7 @@ interface Attachment {
    * Binary content of the file
    * Required
    */
-  content?: string | Buffer | Blob | NodeJS.ReadableStream;
+  content?: string | Uint8Array | Blob | AsyncIterable<Uint8Array>;
 
   /**
    * Content type of the file, such as "image/png"
