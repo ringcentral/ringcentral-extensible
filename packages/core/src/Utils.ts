@@ -30,7 +30,9 @@ class Utils {
           baseURL: r.config.baseURL,
           url: r.config.url,
           params: r.config.params,
-          data: Buffer.isBuffer(r.config.data) ? "<Buffer>" : r.config.data,
+          data: r.config.data instanceof Uint8Array
+            ? "<Binary>"
+            : r.config.data,
           headers: r.config.headers,
         },
         null,
@@ -45,7 +47,7 @@ class Utils {
       "content" in obj;
   }
 
-  public static getFormData(...objects: {}[]): Promise<Buffer> {
+  public static getFormData(...objects: {}[]): Promise<Uint8Array> {
     const formData = new FormData();
     const obj = Object.assign({}, ...objects);
     for (const key of Object.keys(obj)) {

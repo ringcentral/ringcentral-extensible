@@ -1,17 +1,27 @@
-import type { Stream } from "stream";
-
 import type { FormFile } from "./types.js";
 
-async function stream2buffer(stream: Stream): Promise<Buffer> {
-  return new Promise<Buffer>((resolve, reject) => {
-    const buf = Array<any>();
-    stream.on("data", (chunk) => buf.push(chunk));
-    stream.on("end", () => resolve(Buffer.concat(buf)));
-    stream.on(
-      "error",
-      (err) => reject(new Error(`error converting stream - ${err}`)),
-    );
-  });
+function concat(arrays: Uint8Array[]): Uint8Array {
+  let totalLength = 0;
+  for (const arr of arrays) {
+    totalLength += arr.length;
+  }
+  const result = new Uint8Array(totalLength);
+  let offset = 0;
+  for (const arr of arrays) {
+    result.set(arr, offset);
+    offset += arr.length;
+  }
+  return result;
+}
+
+async function stream2Uint8Array(
+  stream: AsyncIterable<Uint8Array>,
+): Promise<Uint8Array> {
+  const chunks: Uint8Array[] = [];
+  for await (const chunk of stream) {
+    chunks.push(chunk);
+  }
+  return concat(chunks);
 }
 
 export const boundary = "ad05fc42-a66d-4a94-b807-f1c91136c17b";
@@ -27,34 +37,34 @@ class FormData {
   }
 
   public async getBody() {
-    let buffer = Buffer.alloc(0);
+    let buffer: Uint8Array = new Uint8Array(0);
+    const encoder = new TextEncoder();
     for (const formFile of this.files) {
       if (buffer.length > 0) {
-        buffer = Buffer.concat([buffer, Buffer.from("\r\n", "utf-8")]);
+        buffer = concat([buffer, encoder.encode("\r\n")]);
       }
       let temp = `--${boundary}\r\n`;
       temp += `Content-Type: ${formFile.contentType}\r\n`;
       temp +=
         `Content-Disposition: form-data; name="${formFile.name}"; filename="${formFile.filename}"\r\n\r\n`;
-      buffer = Buffer.concat([buffer, Buffer.from(temp, "utf-8")]);
-      let fileBuffer: Buffer;
+      buffer = concat([buffer, encoder.encode(temp)]);
+      let fileBuffer: Uint8Array;
       if (typeof formFile.content === "string") {
-        fileBuffer = Buffer.from(formFile.content, "utf-8");
-      } else if (Buffer.isBuffer(formFile.content)) {
+        fileBuffer = encoder.encode(formFile.content);
+      } else if (formFile.content instanceof Uint8Array) {
         fileBuffer = formFile.content;
       } else if (formFile.content instanceof Blob) {
-        fileBuffer = Buffer.from(await formFile.content.arrayBuffer());
+        fileBuffer = new Uint8Array(await formFile.content.arrayBuffer());
       } else {
-        // NodeJS.ReadableStream
-        fileBuffer = await stream2buffer(
-          formFile.content as unknown as Stream,
+        fileBuffer = await stream2Uint8Array(
+          formFile.content as AsyncIterable<Uint8Array>,
         );
       }
-      buffer = Buffer.concat([buffer, fileBuffer]);
+      buffer = concat([buffer, fileBuffer]);
     }
-    return Buffer.concat([
+    return concat([
       buffer,
-      Buffer.from(`\r\n--${boundary}--\r\n`, "utf8"),
+      encoder.encode(`\r\n--${boundary}--\r\n`),
     ]);
   }
 }

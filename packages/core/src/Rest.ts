@@ -53,7 +53,7 @@ export default class Rest {
     });
 
     this.httpClient.interceptors.request.use((config) => {
-      if (Buffer.isBuffer(config.data)) {
+      if (config.data instanceof Uint8Array) {
         return {
           ...config,
           headers: {
