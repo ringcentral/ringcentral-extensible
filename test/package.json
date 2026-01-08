@@ -1,12 +1,12 @@
 {
   "name": "@rc-ex/test",
-  "version": "1.4.5",
+  "version": "1.4.6",
   "private": true,
   "license": "MIT",
   "devDependencies": {
     "@rc-ex/authorize-uri": "^2.0.2",
     "@rc-ex/auto-refresh": "^0.3.12",
-    "@rc-ex/core": "^1.7.3",
+    "@rc-ex/core": "^1.7.4",
     "@rc-ex/debug": "^1.3.12",
     "@rc-ex/events": "^1.3.12",
     "@rc-ex/rcsdk": "^1.4.2",
