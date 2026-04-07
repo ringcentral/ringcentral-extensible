@@ -16,5 +16,6 @@
     "vitest": "^4.0.16",
     "wait-for-async": "^0.8.0",
     "winston": "^3.19.0"
-  }
+  },
+  "type": "module"
 }

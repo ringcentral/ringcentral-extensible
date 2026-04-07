@@ -1,10 +1,13 @@
 import fs from "node:fs";
 import path from "node:path";
+import { fileURLToPath } from "node:url";
 import type Attachment from "@rc-ex/core/definitions/Attachment";
 import type CreateMMSMessage from "@rc-ex/core/definitions/CreateMMSMessage";
 import { describe, expect, test } from "vitest";
 
 import ReusableRestClient from "./reusable-rest-client";
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 describe("mms", () => {
   test("send mms", async () => {

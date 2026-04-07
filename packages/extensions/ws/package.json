@@ -9,23 +9,20 @@
     "dist"
   ],
   "types": "./dist/esm/index.d.ts",
-  "main": "./dist/cjs/index.js",
+  "main": "./dist/esm/index.js",
   "module": "./dist/esm/index.js",
   "exports": {
     ".": {
       "types": "./dist/esm/index.d.ts",
-      "import": "./dist/esm/index.js",
-      "require": "./dist/cjs/index.js"
+      "import": "./dist/esm/index.js"
     },
     "./lib/*": {
       "types": "./dist/esm/*.d.ts",
-      "import": "./dist/esm/*.js",
-      "require": "./dist/cjs/*.js"
+      "import": "./dist/esm/*.js"
     },
     "./*": {
       "types": "./dist/esm/*.d.ts",
-      "import": "./dist/esm/*.js",
-      "require": "./dist/cjs/*.js"
+      "import": "./dist/esm/*.js"
     }
   },
   "repository": {
@@ -47,6 +44,7 @@
     "ws": "^8.19.0"
   },
   "scripts": {
-    "build": "tsc -p tsconfig.esm.json && tsc -p tsconfig.cjs.json"
-  }
+    "build": "tsc -p tsconfig.esm.json"
+  },
+  "type": "module"
 }

@@ -1,9 +1,12 @@
 import path from "node:path";
+import { fileURLToPath } from "node:url";
 import DebugExtension from "@rc-ex/debug";
 import dotenv from "dotenv-override-true";
 import { describe, expect, test } from "vitest";
 
 import ReusableRestClient from "./reusable-rest-client";
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 dotenv.config({ path: path.join(__dirname, ".env.a2p") });
 

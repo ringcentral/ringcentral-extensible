@@ -1,11 +1,14 @@
 import fs from "node:fs";
 import path from "node:path";
+import { fileURLToPath } from "node:url";
 import type FaxResponse from "@rc-ex/core/definitions/FaxResponse";
 import type GetSMSMessageInfoResponse from "@rc-ex/core/definitions/GetSMSMessageInfoResponse";
 import Utils from "@rc-ex/core/Utils";
 import { describe, expect, test } from "vitest";
 
 import ReusableRestClient from "./reusable-rest-client";
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 describe("low level API", () => {
   test("sms", async () => {

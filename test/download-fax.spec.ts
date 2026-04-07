@@ -1,8 +1,11 @@
 import fs from "node:fs";
 import path from "node:path";
+import { fileURLToPath } from "node:url";
 import { describe, expect, test } from "vitest";
 
 import ReusableRestClient from "./reusable-rest-client";
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 describe("fax", () => {
   test("download fax", async () => {
